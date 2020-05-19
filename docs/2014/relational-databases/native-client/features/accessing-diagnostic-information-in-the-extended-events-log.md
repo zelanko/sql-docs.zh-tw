@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ddb50c8993de72230e97cdde729416258272bb1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10ef11bf8d2620148f88392306aca4dbaace6f58
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046365"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704364"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴展事件記錄檔中的診斷資訊
-  從開始[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和資料存取追蹤（[資料存取追蹤](https://go.microsoft.com/fwlink/?LinkId=125805)）已更新，可讓您更輕鬆地從連接信號緩衝區取得連接失敗的診斷資訊，以及擴充事件記錄檔中的應用程式效能資訊。  
+  從開始 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和資料存取追蹤（[資料存取追蹤](https://go.microsoft.com/fwlink/?LinkId=125805)）已更新，可讓您更輕鬆地從連接信號緩衝區取得連接失敗的診斷資訊，以及擴充事件記錄檔中的應用程式效能資訊。  
   
  如需讀取擴充事件記錄檔的資訊，請參閱[檢視事件工作階段資料](../../../database-engine/view-event-session-data.md)。  
   
@@ -26,9 +26,9 @@ ms.locfileid: "63046365"
 >  此功能僅供疑難排解及診斷使用，可能不適用稽核或安全性。  
   
 ## <a name="remarks"></a>備註  
- 針對連接作業，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會傳送用戶端連接識別碼。 如果連線失敗，您可以存取連線性信號緩衝區（[使用連線信號緩衝區 SQL Server 2008 中的連線能力疑難排解](https://go.microsoft.com/fwlink/?LinkId=207752)）並尋找`ClientConnectionID`欄位，並取得有關連線失敗的診斷資訊。 僅在發生錯誤時，才會在信號緩衝區中記錄用戶端連接識別碼。 （如果連接在傳送預先登入封包之前失敗，將不會產生用戶端連線識別碼）。用戶端連接識別碼是16位元組的 GUID。 如果在擴充的事件工作階段中，將 `client_connection_id` 動作加入至事件，您也可以在擴充的事件輸出目標中找到用戶端連接識別碼。 如果您需要進一步的診斷協助，您可以啟用資料存取追蹤並重新執行連接命令，然後觀察資料存取追蹤的 `ClientConnectionID` 欄位中是否有失敗的作業。  
+ 針對連接作業，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會傳送用戶端連接識別碼。 如果連線失敗，您可以存取連線性信號緩衝區（[使用連線信號緩衝區 SQL Server 2008 中的連線能力疑難排解](https://go.microsoft.com/fwlink/?LinkId=207752)）並尋找 `ClientConnectionID` 欄位，並取得有關連線失敗的診斷資訊。 僅在發生錯誤時，才會在信號緩衝區中記錄用戶端連接識別碼。 （如果連接在傳送預先登入封包之前失敗，將不會產生用戶端連線識別碼）。用戶端連接識別碼是16位元組的 GUID。 如果在擴充的事件工作階段中，將 `client_connection_id` 動作加入至事件，您也可以在擴充的事件輸出目標中找到用戶端連接識別碼。 如果您需要進一步的診斷協助，您可以啟用資料存取追蹤並重新執行連接命令，然後觀察資料存取追蹤的 `ClientConnectionID` 欄位中是否有失敗的作業。  
   
- 如果您在 Native Client 中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 ODBC，而連接成功，則可以使用`SQL_COPT_SS_CLIENT_CONNECTION_ID`屬性搭配[SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md)來取得用戶端連接識別碼。  
+ 如果您在 Native Client 中使用 ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，而連接成功，則可以使用屬性搭配 SQLGetConnectAttr 來取得用戶端連接識別碼 `SQL_COPT_SS_CLIENT_CONNECTION_ID` 。 [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md)  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 也會傳送執行緒專屬的活動識別碼。 如果已啟動工作階段並啟用 TRACK_CAUSAILITY 選項，即可在擴充的事件工作階段中擷取活動識別碼。 如需與使用中連接相關的效能問題，您可以從用戶端的資料存取追蹤 (`ActivityID` 欄位) 取得活動識別碼，然後在擴充的事件輸出中尋找此活動識別碼。 擴充事件中的活動識別碼為 16 位元組的 GUID (與用戶端連接識別碼的 GUID 不同)，後面附加 4 位元組的序號。 此序號表示執行緒內要求的順序，並指出執行緒的批次和 RPC 陳述式的相對排序。 啟用資料存取追蹤，並開啟資料存取追蹤組態中的 18 位元時，會選擇性地針對 SQL 批次陳述式和 RPC 要求傳送 `ActivityID`。  
   

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - IRowsetFind comparability [ODBC]
 ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9aa8cb118a84bca1d37bdd409055b21d1d11552
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46391974a8c1a3b9e915330b3ce86d86f005aea7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63233024"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705075"
 ---
 # <a name="comparability-for-irowsetfind"></a>IRowsetFind 的相容性
   IRowsetFind 僅針對日期/時間類型，支援下列比較：  

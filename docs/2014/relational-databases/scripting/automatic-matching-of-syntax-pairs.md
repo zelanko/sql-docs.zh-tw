@@ -10,15 +10,15 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
 - IntelliSense [SQL Server], syntax pair matching
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4359a546c350c666190331ab6a8484ca9a99a83
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244803"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704096"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>語法組的自動比對
   語法組的自動比對會提供有關必須成對編碼的語法元素是否正確配對的立即回應給您。 這就是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中的分隔符號比對、Analysis Services XMLA 查詢編輯器中的大括號比對，以及 MDX 和 DMX 編輯器中的括號比對。  

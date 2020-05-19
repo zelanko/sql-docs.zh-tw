@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (OLE DB)
 ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 27ae90e05784c18d85f84daa9955818d3133ad07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87dcc1df096d72610be680013776748aca1a11ca
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046502"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704606"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB 資料表值參數類型支援
   本主題描述資料表值參數的 OLE DB 類型支援。  

@@ -13,18 +13,18 @@ topic_type:
 helpviewer_keywords:
 - ISSCommandWithParameters interface
 ms.assetid: 3419b7f3-36a3-4863-816e-e641e4e90496
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4de7c6a99afcbd7db7c6e233fb737f129b536b8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c55af9d21c669bd452de2bac9db56d158febc449
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209761"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704805"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
-  **ISSCommandWithParameters**會公開對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 和使用者定義類型（UDT）的支援。 這是選擇性的介面，繼承自核心 OLE DB 介面**ICommandWithParameters**。 除了繼承自**ICommandWithParameters**的三個方法以外，**GetParameterInfo**、 **MapParameterNames**和**SetParameterInfo**;**ISSCommandWithParameters**提供兩種新的方法，可用來處理伺服器特定的資料類型。  
+  **ISSCommandWithParameters**會公開對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 和使用者定義類型（UDT）的支援。 這是選擇性的介面，繼承自核心 OLE DB 介面**ICommandWithParameters**。 除了繼承自**ICommandWithParameters**的三個方法以外，**GetParameterInfo**、 **MapParameterNames**和**SetParameterInfo**;**ISSCommandWithParameters**提供兩種新的方法，可用來處理伺服器特定的資料類型。  
   
 > [!NOTE]  
 >  使用服務元件時，可以使用**ISSCommandWithParameters**介面，但服務元件本身不會使用此介面。  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 443ff4762fe653850af8ba23166bd880298bae52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 092c06c2f790c5f62901fd805dc7fd8d76d3a464
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242033"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703797"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>開啟編輯器 (SQL Server Management Studio)
   此主題描述如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查詢、MDX、DMX 或 XML/A 編輯器。 開啟時，每個編輯器視窗都會顯示為 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]之中央面板中的索引標籤。  

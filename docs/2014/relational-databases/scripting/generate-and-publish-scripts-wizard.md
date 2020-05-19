@@ -39,18 +39,18 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b378eb5e4a68f07aee179e52552017578b0b33d4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242114"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703928"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>[產生和發佈指令碼]
-  您可以使用 [產生和發佈指令碼精靈] 建立指令碼，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 執行個體之間傳送資料庫。 您可以針對區域網路上 Database Engine 執行個體的資料庫產生指令碼，或是從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]產生指令碼。 產生的指令碼可以在另一個 Database Engine 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行個體上執行。 您也可以使用此精靈，將資料庫內容直接發行到使用資料庫發行服務所建立的 Web 服務。 您可以針對整個資料庫建立指令碼，或將它限制為特定物件。  
+  您可以使用 [產生和發佈指令碼精靈]  建立指令碼，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 執行個體之間傳送資料庫。 您可以針對區域網路上 Database Engine 執行個體的資料庫產生指令碼，或是從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]產生指令碼。 產生的指令碼可以在另一個 Database Engine 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行個體上執行。 您也可以使用此精靈，將資料庫內容直接發行到使用資料庫發行服務所建立的 Web 服務。 您可以針對整個資料庫建立指令碼，或將它限制為特定物件。  
   
 1.  **開始之前：**  [發佈到託管服務](#PubHostSvc)、[權限](#Permissions)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "75242114"
 ###  <a name="introduction-page"></a><a name="Introduction"></a> 簡介頁面  
  此頁面描述用於產生或發佈指令碼的步驟。  
   
- [不要再顯示此頁面] - 下次啟動 [產生和發佈指令碼精靈] 時會略過此頁面。  
+ [不要再顯示此頁面]  - 下次啟動 [產生和發佈指令碼精靈]  時會略過此頁面。  
   
  **下一步 >** - 繼續進行至 [選擇方法]**** 頁面。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "75242114"
 ###  <a name="set-scripting-options-page"></a><a name="SetScriptOpt"></a> 設定指令碼編寫選項頁面  
  您可以使用這個頁面來指定要讓精靈將指令碼儲存至所選擇的位置，還是使用這些指令碼，將資料庫物件發行至遠端 Web 主控提供者。 若要發行，您必須能夠存取使用資料庫發行服務 Web 服務所安裝的 Web 服務。  
   
- **選項** ：如果您想要讓精靈將指令碼儲存至所選擇的位置，請選取 **[將指令碼儲存至特定位置]**。 您之後可以針對 Database Engine 執行個體或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行指令碼。 如果您想要讓精靈將資料庫物件發行至遠端 Web 主控提供者，請選取 **[發佈到 Web 服務]**。  
+ **選項** ：如果您想要讓精靈將指令碼儲存至所選擇的位置，請選取 **[將指令碼儲存至特定位置]** 。 您之後可以針對 Database Engine 執行個體或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行指令碼。 如果您想要讓精靈將資料庫物件發行至遠端 Web 主控提供者，請選取 **[發佈到 Web 服務]** 。  
   
  **將腳本儲存至特定位置**-儲存一或多個。Transact-sql 腳本檔案到您指定的位置。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "75242114"
   
  **一般**：下列選項適用於整個指令碼。  
   
--   **ANSI 填補**-包含`ANSI PADDING ON`在腳本中。 預設值為 **True**。  
+-   **ANSI 填補**-包含 `ANSI PADDING ON` 在腳本中。 預設值為 **True**。  
   
 -   **附加至檔案** ：設定為 **[True]** 時，這個指令碼會加入至 **[設定指令碼編寫選項]** 頁面上所指定的現有指令碼底部。 設定為 **[False]** 時，新的指令碼就會覆寫先前的指令碼。 預設值為 **False**。  
   
@@ -172,11 +172,11 @@ ms.locfileid: "75242114"
   
 -   **指令碼繫結** ：產生用於繫結預設物件和規則物件的指令碼。 預設值為 **False**。 如需詳細資訊，請參閱 [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) 和 [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql)。  
   
--   [指令碼定序] - 在指令碼中包含定序資訊。 預設值為 **False**。 如需詳細資訊，請參閱 [Collation and Unicode Support](../collations/collation-and-unicode-support.md)。  
+-   [指令碼定序]  - 在指令碼中包含定序資訊。 預設值為 **False**。 如需詳細資訊，請參閱 [Collation and Unicode Support](../collations/collation-and-unicode-support.md)。  
   
 -   **編寫預設值的指令碼** ：包含用來在資料表資料行中設定預設值的預設物件。 預設值為 **True**。 如需詳細資訊，請參閱 [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql)。  
   
--   [編寫 DROP 和 CREATE 的指令碼] - 設定為 [編寫 CREATE 指令碼] 時，會包含建立物件的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式。 設定為 **[編寫 DROP 指令碼]** 時，就會包含卸除物件的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式。 設定為 **[編寫 DROP 和 CREATE 的指令碼]** 時，就會針對每個編寫指令碼的物件，在指令碼中包含 [!INCLUDE[tsql](../../../includes/tsql-md.md)] DROP 陳述式，後面接著 CREATE 陳述式。 預設值為 **編寫 CREATE 指令碼**。  
+-   [編寫 DROP 和 CREATE 的指令碼]  - 設定為 [編寫 CREATE 指令碼]  時，會包含建立物件的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式。 設定為 **[編寫 DROP 指令碼]** 時，就會包含卸除物件的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式。 設定為 **[編寫 DROP 和 CREATE 的指令碼]** 時，就會針對每個編寫指令碼的物件，在指令碼中包含 [!INCLUDE[tsql](../../../includes/tsql-md.md)] DROP 陳述式，後面接著 CREATE 陳述式。 預設值為 **編寫 CREATE 指令碼**。  
   
 -   **編寫擴充屬性的指令碼** - 物件具有擴充屬性時，在指令碼中包含擴充屬性。 預設值為 **True**。  
   
@@ -188,19 +188,19 @@ ms.locfileid: "75242114"
   
 -   **編寫物件層級權限的指令碼** ：包含於資料庫的物件上設定權限的指令碼。 預設值為 **False**。  
   
--   **編寫統計資料的腳本**：設定為 [**編寫統計資料的腳本]** 時，這個選項會包含在物件上重新建立統計資料的`CREATE STATISTICS`語句。 **[編寫統計資料和長條圖的指令碼]** 選項也會建立長條圖資訊。 預設值為 **[不要編寫統計資料的指令碼]**。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。  
+-   **編寫統計資料的腳本**：設定為 [**編寫統計資料的腳本]** 時，這個選項會包含在 `CREATE STATISTICS` 物件上重新建立統計資料的語句。 **[編寫統計資料和長條圖的指令碼]** 選項也會建立長條圖資訊。 預設值為 **[不要編寫統計資料的指令碼]** 。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
--   **編寫 USE DATABASE 的腳本**： `USE DATABASE`將語句加入至腳本。 若要確保在正確的資料庫中建立資料庫物件，請包含 `USE DATABASE` 陳述式。 當腳本預期會用於不同的資料庫時，請選取**False**以省略`USE DATABASE`語句。 預設值為 **True**。 如需詳細資訊，請參閱 [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)。  
+-   **編寫 USE DATABASE 的腳本**：將 `USE DATABASE` 語句加入至腳本。 若要確保在正確的資料庫中建立資料庫物件，請包含 `USE DATABASE` 陳述式。 當腳本預期會用於不同的資料庫時，請選取**False**以省略 `USE DATABASE` 語句。 預設值為 **True**。 如需詳細資訊，請參閱 [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)。  
   
--   **要撰寫指令碼的資料類型** - 選取應撰寫為指令碼的內容：[僅限資料]，[僅限結構描述]，或兩者。 預設值為 **[僅限結構描述]**。  
+-   **要撰寫指令碼的資料類型** - 選取應撰寫為指令碼的內容：[僅限資料]  ，[僅限結構描述]  ，或兩者。 預設值為 **[僅限結構描述]** 。  
   
  **資料表/檢視表選項** ：下列選項只適用於資料表或檢視表的指令碼。  
   
 -   **編寫變更追蹤的指令碼** ：如果來源資料庫或來源資料庫中的資料表已啟用變更追蹤，則會編寫變更追蹤的指令碼。 預設值為 **False**。 如需詳細資訊，請參閱[關於變更追蹤 &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)。  
   
--   **編寫 check 條件約束**的`CHECK`腳本：將條件約束加入至腳本。 預設值為 **True**。 `CHECK` 條件約束會要求輸入資料表的資料必須符合某些指定的條件。 如需詳細資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
+-   **編寫 check 條件約束的腳本**：將 `CHECK` 條件約束加入至腳本。 預設值為 **True**。 `CHECK` 條件約束會要求輸入資料表的資料必須符合某些指定的條件。 如需詳細資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
--   [編寫資料壓縮選項的指令碼] - 如果來源資料庫或來源資料庫中的資料表已設定資料壓縮選項，則會編寫資料壓縮選項的指令碼。 如需詳細資訊，請參閱 [Data Compression](../data-compression/data-compression.md)。 預設值為 **False**。  
+-   [編寫資料壓縮選項的指令碼]  - 如果來源資料庫或來源資料庫中的資料表已設定資料壓縮選項，則會編寫資料壓縮選項的指令碼。 如需詳細資訊，請參閱 [Data Compression](../data-compression/data-compression.md)。 預設值為 **False**。  
   
 -   **編寫外部索引鍵的指令碼** ：將外部索引鍵加入至指令碼。 預設值為 **True**。 外部索引鍵指出並強制執行資料表之間的關聯性。  
   
@@ -252,9 +252,9 @@ ms.locfileid: "75242114"
   
 7.  **發佈物件層級權限** ：包含資料庫中所選取物件的權限。 預設值為 **False**。  
   
-8.  **發行統計資料**-設定為 [**發佈統計資料]** 時，會包含在物件上重新建立統計資料的`CREATE STATISTICS`語句。 **[發行統計資料和長條圖]** 選項也會建立長條圖資訊。 預設值為 **不要發行統計資料**。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。  
+8.  **發行統計資料**-設定為 [**發佈統計資料]** 時，會包含在 `CREATE STATISTICS` 物件上重新建立統計資料的語句。 **[發行統計資料和長條圖]** 選項也會建立長條圖資訊。 預設值為 **不要發行統計資料**。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
-9. **發佈 vardecimal 選項**-在源`vardecimal`資料庫資料表上啟用資料表格式時，會在目標資料庫資料表上啟用它。 預設值為 **True**。  
+9. **發佈 vardecimal 選項**-在 `vardecimal` 源資料庫資料表上啟用資料表格式時，會在目標資料庫資料表上啟用它。 預設值為 **True**。  
   
 10. **結構描述會限定物件名稱** - 在所建立物件的名稱中包含結構描述名稱。 預設值為 **True**。  
   
@@ -268,7 +268,7 @@ ms.locfileid: "75242114"
   
  **資料表/檢視表選項** ：下列選項只適用於資料表或檢視表。  
   
-1.  **發行 check 條件約束**：在發佈程式`CHECK`中包含建立條件約束。 預設值為 **True**。 `CHECK` 條件約束會要求輸入資料表的資料必須符合某些指定的條件。 如需詳細資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
+1.  **發行 check 條件約束**：在發佈程式 `CHECK` 中包含建立條件約束。 預設值為 **True**。 `CHECK` 條件約束會要求輸入資料表的資料必須符合某些指定的條件。 如需詳細資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
 2.  **發佈外部索引鍵** ：在發佈程序中包含建立外部索引鍵的程序。 預設值為 **True**。 外部索引鍵指出並強制執行資料表之間的關聯性。 如需詳細資訊，請參閱 [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md)。  
   

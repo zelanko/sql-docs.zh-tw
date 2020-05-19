@@ -16,20 +16,20 @@ helpviewer_keywords:
 - annotated XSD schemas, CDATA sections
 - sql:use-cdata
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cddde2ed1e40b2ea21cf4ebff75bea3beed8f2ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f1442011ddbdb010e5f498dbf3b42fa9ba333ea
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014005"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703654"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>使用 sql:use-cdata 建立 CDATA 區段 (SQLXML 4.0)
   在 XML 中，CDATA 區段可用來逸出包含字元的文字區塊，否則這些字元會被辨識為標記字元。  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的資料庫有時會包含 XML 剖析器視為標記字元的字元;例如，角括弧（\<和 >）、小於或等於符號（<=）和連字號（&）會被視為標記字元。 但是，您可以將這類型的特殊字元包裝在 CDATA 區段內，以免被視為標記字元。 XML 剖析器會將 CDATA 區段內的文字視為純文字。  
+ Microsoft 中的資料庫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有時可以包含 XML 剖析器視為標記字元的字元; 例如，角括弧（ \< 和 >）、小於或等於符號（<=），而連字號（&）會被視為標記字元。 但是，您可以將這類型的特殊字元包裝在 CDATA 區段內，以免被視為標記字元。 XML 剖析器會將 CDATA 區段內的文字視為純文字。  
   
  `sql:use-cdata` 註解是用來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所傳回的資料應該包裝在 CDATA 區段內 (也就是說，它會指出 `sql:field` 指定之資料行中的值是否應該包含在 CDATA 區段內)。 `sql:use-cdata` 註解只能在對應至資料庫資料行的元素上指定。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66014005"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 在元素上指定 sql:use-cdata  
- 在下列架構中， `sql:use-cdata`會在** \<Address>** 元素內，將** \<AddressLine1>** 設為1（True）。 因此，資料會在 CDATA 區段內傳回。  
+ 在下列架構中， `sql:use-cdata` 會在** \< Address>** 元素內，將** \< AddressLine1>** 設為1（True）。 因此，資料會在 CDATA 區段內傳回。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

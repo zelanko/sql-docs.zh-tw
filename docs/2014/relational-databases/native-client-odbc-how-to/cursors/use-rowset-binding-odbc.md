@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - rowset binding [ODBC]
 ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b416d9f7fdd07613f684fb2b27ac058b60d5b3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5939d97f518dd88f6eaa48fde259d6b4eab54ae
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200437"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705228"
 ---
 # <a name="use-rowset-binding-odbc"></a>使用資料列集繫結 (ODBC)
     

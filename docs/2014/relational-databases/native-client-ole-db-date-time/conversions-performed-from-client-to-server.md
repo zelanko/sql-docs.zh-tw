@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f09cf15479060e455811fa4b3ffe6df4f9bd14cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85d152274847abb46ee14a9a878be8bdef5b80b3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63237960"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705049"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>從用戶端到伺服器執行的轉換
   本主題描述在以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 撰寫之用戶端應用程式和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 之間執行的日期/時間轉換。  
@@ -25,7 +25,7 @@ ms.locfileid: "63237960"
 ## <a name="conversions"></a>轉換  
  本主題描述針對用戶端所進行的轉換。 如果用戶端針對參數所指定的小數秒有效位數與伺服器上所定義的小數秒有效位數不同，在伺服器允許作業成功的情況下，用戶端轉換可能會造成失敗。 特別是，用戶端會將任何截斷的小數秒視為錯誤，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將時間值捨去為最接近的整秒。  
   
- 如果未呼叫 ICommandWithParameters：： SetParameterInfo，DBTYPE_DBTIMESTAMP 系結的轉換方式就像是`datetime2`一樣。  
+ 如果未呼叫 ICommandWithParameters：： SetParameterInfo，DBTYPE_DBTIMESTAMP 系結的轉換方式就像是一樣 `datetime2` 。  
   
 |目標 -><br /><br /> 從|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
@@ -36,19 +36,19 @@ ms.locfileid: "63237960"
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
-|BYTES|-|-|-|-|-|-|-|不適用|N/A|N/A|  
-|VARIANT|1|1|1|1,10|1,10|1,10|1,10|不適用|N/A|1,10|  
-|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|不適用|N/A|1,16|  
-|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不適用|N/A|N/A|  
-|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不適用|N/A|N/A|  
-|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不適用|N/A|N/A|  
+|BYTES|-|-|-|-|-|-|-|N/A|N/A|N/A|  
+|VARIANT|1|1|1|1,10|1,10|1,10|1,10|N/A|N/A|1,10|  
+|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|N/A|N/A|1,16|  
+|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|N/A|N/A|N/A|  
+|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|N/A|N/A|N/A|  
+|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|N/A|N/A|N/A|  
   
 ## <a name="key-to-symbols"></a>符號的索引鍵  
   
 |符號|意義|  
 |------------|-------------|  
 |-|不支援轉換。 如果繫結在呼叫 IAccessor::CreateAccessor 時通過驗證，則會在 *rgStatus* 中傳回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 當存取子驗證延遲時，會設定 DBSTATUS_E_BADACCESSOR。|  
-|不適用|不適用。|  
+|N/A|不適用。|  
 |1|如果提供的資料無效，則會設定 DBSTATUS_E_CANTCONVERTVALUE。 輸入資料會在套用轉換之前進行驗證，因此，即使在後續轉換忽略元件時，該資料仍然必須有效，轉換才會成功。|  
 |2|忽略時間欄位。|  
 |3|小數秒必須為，否則會設定 DBSTATUS_E_DATAOVERFLOW。|  

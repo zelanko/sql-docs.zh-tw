@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df59c3a49715791e2f525e4bc5a69ff8991cac44
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144302"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704278"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 使用者定義型別 (ODBC)
   本主題討論 SQL Server Native Client 中 ODBC 的變更，以支援大型 Common Language Runtime (CLR) 使用者定義型別 (UDT)。  
@@ -42,7 +42,7 @@ ms.locfileid: "63144302"
   
 |SQL 資料類型|記憶體配置|C 資料類型|值 (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * （不帶\*正負號的字元）|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * （不帶正負號的字元 \* ）|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>參數的描述項欄位  
  IPD 欄位中傳回的資訊如下所示：  

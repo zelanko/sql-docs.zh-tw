@@ -12,15 +12,15 @@ helpviewer_keywords:
 - applications [SQL Server Native Client]
 - SQL Server Native Client, building applications
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a040993001a60c410cc1da83f8efae2a4d163162
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b33680ea08c130a01a944878609f57d8aba9e3e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175421"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704465"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>使用 SQL Server Native Client 建立應用程式
   當您開發使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 程式庫的應用程式時，會遇到一些問題。 本章節的主題將討論其中的許多問題，包括從 MDAC 升級到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 標頭檔和程式庫檔案)，以及可搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用的各種連接字串概觀。  
@@ -56,6 +56,6 @@ ms.locfileid: "70175421"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 程式設計](../sql-server-native-client-programming.md)   
  [ODBC 的使用說明主題](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
- [OLE DB how to 主題](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB 的使用說明主題](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

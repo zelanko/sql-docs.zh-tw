@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec7c5f8db1d8d1f3c675b267adb8345d086d0b80
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689411"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705283"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
   建立包含目前大量複製資料檔格式之描述的格式檔。  
@@ -49,7 +49,7 @@ szFormatFile
  *szFormatFile*  
  這是用來接收資料檔格式值之使用者檔案的路徑和檔案名稱。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
@@ -60,7 +60,7 @@ szFormatFile
  若要載入儲存的格式檔案，請使用[bcp_readfmt](bcp-readfmt.md)。  
   
 > [!NOTE]  
->  只有與7.0 版和更新版本一起[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]散發的**bcp**公用程式版本才支援**bcp_writefmt**所產生的格式檔案。  
+>  只有與7.0 版和更新版本一起散發的**bcp**公用程式版本才支援**bcp_writefmt**所產生的格式檔案 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="example"></a>範例  
   

@@ -13,18 +13,18 @@ helpviewer_keywords:
 - messages [ODBC], native error numbers
 - errors [ODBC], native error numbers
 ms.assetid: 77cbc826-f47f-4803-8e7a-223d6df069b1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e7cd24a3eb1ccdeea1b6e6cbb97e2d0f222193f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9612fbd7dd50ffeec812532e25a63eecca26571
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223494"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705357"
 ---
 # <a name="native-error-numbers"></a>原生錯誤號碼
-  對於發生在資料來源中的錯誤（由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回）， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client ODBC 驅動程式會傳回由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回的原生錯誤號碼。 對於驅動程式所偵測到的錯誤[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，NATIVE Client ODBC 驅動程式會傳回原生錯誤號碼0。 如需原生錯誤號碼清單的詳細資訊，請參閱中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **master**資料庫內**sysmessages**系統資料表的 error 資料行。  
+  對於發生在資料來源中的錯誤（由傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會傳回由傳回的原生錯誤號碼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 對於驅動程式所偵測到的錯誤， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式會傳回原生錯誤號碼0。 如需原生錯誤號碼清單的詳細資訊，請參閱中**master**資料庫內**sysmessages**系統資料表的 error 資料行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  如需狀態錯誤碼的詳細資訊，請參閱[SQLSTATE &#40;ODBC 錯誤碼&#41;](sqlstate-odbc-error-codes.md)。 對於網路程式庫所傳回的錯誤，自發性錯誤號碼來自於基礎網路軟體。  
   

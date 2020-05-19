@@ -12,15 +12,15 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], Quick Info
 - identifier declarations [IntelliSense]
 ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7f3c1e58fb99e23682df63903553b9167c74a82e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29eae1af8b741a3243d2966cedc45a38d620df58
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243731"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703763"
 ---
 # <a name="quick-info-intellisense"></a>快速資訊 (IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 的 **[快速資訊]** 選項會顯示程式碼中之任何識別碼的完整宣告。 當您將滑鼠指標移到識別碼上方時，系統就會在黃色的快顯視窗中顯示它的宣告。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，資料庫引擎和 XML 查詢編輯器中會提供 **[快速諮詢]** 。  

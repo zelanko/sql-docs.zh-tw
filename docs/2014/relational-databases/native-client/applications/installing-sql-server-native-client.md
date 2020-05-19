@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], installing SQL Server Native Client
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f832c4b55c8a039de440b08e6d2ed3350175e2a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a9f440f32b0bbcc314893b8abe6a183ac8b0738
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231805"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704423"
 ---
 # <a name="installing-sql-server-native-client"></a>安裝 SQL Server Native Client
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 會在您安裝 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 時安裝。 沒有 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client。 如需詳細資訊，請參閱[SQL Server Native Client 的新功能](../sql-server-native-client.md)。 您也可以從 SQL Server 2012 功能套件網頁取得 sqlncli.msi。 若要下載最新版本的 SQL Server Native Client，請移至[Microsoft？SQL Server？？2012 SP2 功能套件](https://www.microsoft.com/download/details.aspx?id=43339)。 如果電腦上也安裝了早於 SQL Server 2012 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client，則 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 會與舊版本並存安裝。  
@@ -48,7 +48,7 @@ ms.locfileid: "75231805"
   
  x64 和 Itanium 版本的 sqlncli.msi 會安裝 32 位元版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 如果應用程式的目標使用平台與當初開發時的平台不同，您可以從 Microsoft 下載中心下載 x64、Itanium 和 x86 版本的 sqlncli.msi。  
   
- 當您叫用 sqlncli.msi 時，依預設會安裝用戶端元件。 用戶端元件是支援執行使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client 開發之應用程式的檔案。 如果也要安裝 SDK 元件，請在命令列上指定 `ADDLOCAL=All`。 例如：  
+ 當您叫用 sqlncli.msi 時，依預設會安裝用戶端元件。 用戶端元件是支援執行使用 Native Client 開發之應用程式的檔案 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 如果也要安裝 SDK 元件，請在命令列上指定 `ADDLOCAL=All`。 例如：  
   
  `msiexec /i sqlncli.msi ADDLOCAL=ALL APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75231805"
  如果您搭配 msiexec 使用 /passive、/qn、/qb 或 /qr 選項，則也必須指定 IACCEPTSQLNCLILICENSETERMS=YES，以明確指出您接受使用者授權條款。 此選項必須以全部大寫的字母指定。  
   
 ## <a name="uninstalling-sql-server-native-client"></a>解除安裝 SQL Server Native Client  
- 因為[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]伺服器和工具之類的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]應用程式相依于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client，所以在卸載所有相依的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]應用程式之前，請務必不要卸載 native client。 若要提供應用程式相依于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的警告給使用者，請使用 MSI 中的 APPGUID 安裝選項，如下所示：  
+ 因為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 伺服器和工具之類的應用程式相依 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client，所以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 卸載所有相依的應用程式之前，請務必不要卸載 native client。 若要提供應用程式相依于 Native Client 的警告給使用者 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請使用 MSI 中的 APPGUID 安裝選項，如下所示：  
   
  `msiexec /i sqlncli.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   

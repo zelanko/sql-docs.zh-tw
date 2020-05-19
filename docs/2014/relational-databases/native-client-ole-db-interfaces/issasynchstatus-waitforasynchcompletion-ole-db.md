@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - WaitForAsynchCompletion method
 ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: af77f5f5519a49e2d9a744dceca2857cc88ce8e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8091d9ca86dc66763aee3fe08efa5cabeb2f7459
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192324"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704818"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
   等到非同步執行的作業完成或發生逾時為止。  

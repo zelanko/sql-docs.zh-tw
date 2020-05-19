@@ -12,15 +12,15 @@ helpviewer_keywords:
 - text completion [IntelliSense]
 - Complete Word option [IntelliSense]
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e9606d85d18418df94501a91ddfb888915302788
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f321d8c048697652055723773c0a9868c5a29b1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244923"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704017"
 ---
 # <a name="complete-word-intellisense"></a>自動完成文字 (IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 的 [自動完成文字] 選項會在您輸入的字元足以找出單一的變數、命令或函數名稱之後，輸入該字詞的其餘部分。  

@@ -10,22 +10,22 @@ helpviewer_keywords:
 - LINKEDSERVERS rowset
 - enumerating data sources [OLE DB]
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cba1d6b4c9fb116d90bc68925c8f27d446c73c54
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62667333"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704224"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>LINKEDSERVERS 資料列集 (OLE DB)
   **LINKEDSERVERS** 資料列集會列舉可以參與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散式查詢的組織資料來源。  
   
  **LINKEDSERVERS** 資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|描述|  
+|資料行名稱|類型指標|說明|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|連結伺服器的名稱。|  
 |SVR_PRODUCT|DBTYPE_WSTR|製造商或是識別由連結伺服器名稱表示之資料存放區類型的其他名稱。|  

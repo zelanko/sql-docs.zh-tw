@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 - SQL Server Management Studio Help [SQL Server], bookmarks
 ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7375b1fb5e76efae9feea1fa5f3a7384fc39b003
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72d3091d9d247dbe1faa7e94d6c6f66ec164409c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244791"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704077"
 ---
 # <a name="bookmarks-f1-help"></a>書籤 F1 說明
 

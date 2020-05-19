@@ -13,18 +13,18 @@ helpviewer_keywords:
 - CoCreateInstance method
 - OLE DB data sources [SQL Server Native Client]
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 263728218fd032c0814d73197cde56fc2d661e9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c4d9ba6fb3a28bd54e51c4e87946919f0dae286
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183744"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704747"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>建立資料來源的連接
-  若要存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，取用者必須先呼叫**CoCreateInstance**方法來建立資料來源物件的實例。 唯一類別識別項 (CLSID) 會識別每個 OLE DB 提供者。 針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，類別識別碼為 CLSID_SQLNCLI10。 您也可以使用符號 SQLNCLI_CLSID，解析為您所參考[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 SQLNCLI 中所使用的 Native Client OLE DB 提供者。  
+  若要存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，取用者必須先呼叫**CoCreateInstance**方法來建立資料來源物件的實例。 唯一類別識別項 (CLSID) 會識別每個 OLE DB 提供者。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，類別識別碼為 CLSID_SQLNCLI10。 您也可以使用符號 SQLNCLI_CLSID，解析為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您所參考的 SQLNCLI 中所使用的 Native Client OLE DB 提供者。  
   
  資料來源物件會公開 **IDBProperties** 介面，取用者可以使用這個介面來提供基本驗證資訊；例如，伺服器名稱、資料庫名稱、使用者識別碼和密碼。 呼叫 **IDBProperties::SetProperties** 方法可設定這些屬性。  
   

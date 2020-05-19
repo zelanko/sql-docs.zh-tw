@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - GetParameterProperties method
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d492a64b6d8a4e8ddf7de27067f1f0bcfef205e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebc423dd019b5a161fd767d7b9ca8eaac8d8e335
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638080"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704816"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
   傳回 SSPARAMPROPS 屬性集結構的陣列，而且每個 UDT 或 XML 參數使用一個 SSPARAMPROPS 屬性集。  
@@ -60,7 +60,7 @@ SSPARAMPROPS **prgParamProperties);
   
  `};`  
   
-|member|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |*iOrdinal*|所傳遞參數的序數。|  
 |*cPropertySets*|*rgPropertySets* 中的 DBPROPSET 結構數目。|  

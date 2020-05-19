@@ -13,18 +13,18 @@ topic_type:
 helpviewer_keywords:
 - ISSAsynchStatus interface
 ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aeb6c6c789bfe1ca2af5616fb0a1ef9785700224
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4ea32cc0b36f1151c68b06af8f5445d4d46267b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127762"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704833"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
-  **ISSAsynchStatus**會公開對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]非同步作業的支援。 這是選擇性的介面，繼承自核心 OLE DB 介面**IDBAsynchStatus**。 除了繼承自 **IDBAsynchStatus** 的 **Abort** 和 **GetStatus** 方法之外，**ISSAsynchStatus** 還提供一個新方法，用來等到非同步作業完成或發生逾時。  
+  **ISSAsynchStatus**會公開對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非同步作業的支援。 這是選擇性的介面，繼承自核心 OLE DB 介面**IDBAsynchStatus**。 除了繼承自 **IDBAsynchStatus** 的 **Abort** 和 **GetStatus** 方法之外，**ISSAsynchStatus** 還提供一個新方法，用來等到非同步作業完成或發生逾時。  
   
 |方法|描述|  
 |------------|-----------------|  

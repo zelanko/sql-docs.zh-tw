@@ -13,20 +13,20 @@ helpviewer_keywords:
 - encryption [SQL Server Native Client]
 - SQL Server Native Client, encryption
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 443c6e0c556a7e69510796b1d58ab0f7b2567e6e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1fbea13b0ad9744e1cbe6240c9084f8fda6dc2e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225488"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704309"
 ---
 # <a name="using-encryption-without-validation"></a>使用加密而不需驗證
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一律會加密與登入有關的網路封包。 如果當它啟動時未在伺服器上提供任何憑證，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會產生自行簽署的憑證，該憑證會用來加密登入封包。  
   
- 應用程式也可要求加密所有網路流量，其方式是使用連接字串關鍵字或連接屬性。 當搭配**IDbInitialize：： Initialize**使用提供者字串時，關鍵字為 "Encrypt OLE DB"，或在搭配使用初始化字串與**IDataInitialize**時，使用 ADO 和 OLE DB 的 "Encryption for Data"。 這也可以透過使用 [ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **強制通訊協定加密**] 選項 Configuration Manager 來設定。 根據預設，加密連接的所有網路流量會要求在伺服器上提供憑證。  
+ 應用程式也可要求加密所有網路流量，其方式是使用連接字串關鍵字或連接屬性。 當搭配**IDbInitialize：： Initialize**使用提供者字串時，關鍵字為 "Encrypt OLE DB"，或在搭配使用初始化字串與**IDataInitialize**時，使用 ADO 和 OLE DB 的 "Encryption for Data"。 這也可以透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 [**強制通訊協定加密**] 選項 Configuration Manager 來設定。 根據預設，加密連接的所有網路流量會要求在伺服器上提供憑證。  
   
  如需連接字串關鍵字的詳細資訊，請參閱搭配[使用連接字串關鍵字與 SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
@@ -36,21 +36,21 @@ ms.locfileid: "63225488"
   
 |強制通訊協定加密用戶端設定|信任伺服器憑證用戶端設定|資料的連接字串/連接屬性加密/使用加密|連接字串/連接屬性信任伺服器憑證|結果|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|否|不適用|無 (預設值)|忽略|不發生任何加密。|  
-|否|不適用|是|無 (預設值)|只有當有可驗證的伺服器憑證時才會發生加密，否則連接嘗試會失敗。|  
-|否|不適用|是|是|加密一定會發生，但是可能會使用自行簽署的伺服器憑證。|  
+|否|N/A|無 (預設值)|忽略|不發生任何加密。|  
+|否|N/A|是|無 (預設值)|只有當有可驗證的伺服器憑證時才會發生加密，否則連接嘗試會失敗。|  
+|否|N/A|是|是|加密一定會發生，但是可能會使用自行簽署的伺服器憑證。|  
 |是|否|忽略|忽略|只有當有可驗證的伺服器憑證時才會發生加密，否則連接嘗試會失敗。|  
 |是|是|無 (預設值)|忽略|加密一定會發生，但是可能會使用自行簽署的伺服器憑證。|  
 |是|是|是|無 (預設值)|只有當有可驗證的伺服器憑證時才會發生加密，否則連接嘗試會失敗。|  
 |是|是|是|是|加密一定會發生，但是可能會使用自行簽署的伺服器憑證。|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 提供者  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者透過新增 SSPROP_INIT_TRUST_SERVER_CERTIFICATE 資料來源初始化屬性（在 DBPROPSET_SQLSERVERDBINIT 屬性集內執行），而不需驗證，即可支援加密。 此外，也已經加入新的連接字串關鍵字 "TrustServerCertificate"。 它可接受 yes 或 no 值；預設值是 no。 當使用服務元件時，它可接受 true 或 false 值；false 是預設值。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者透過新增 SSPROP_INIT_TRUST_SERVER_CERTIFICATE 資料來源初始化屬性（在 DBPROPSET_SQLSERVERDBINIT 屬性集內執行），而不需驗證，即可支援加密。 此外，也已經加入新的連接字串關鍵字 "TrustServerCertificate"。 它可接受 yes 或 no 值；預設值是 no。 當使用服務元件時，它可接受 true 或 false 值；false 是預設值。  
   
  如需對 DBPROPSET_SQLSERVERDBINIT 屬性集所做之增強功能的詳細資訊，請參閱[初始化和授權屬性](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驅動程式  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式透過[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md)函式的新增功能，支援加密而不進行驗證。 已經加入 SQL_COPT_SS_TRUST_SERVER_CERTIFICATE 來接受 SQL_TRUST_SERVER_CERTIFICATE_YES 或 SQL_TRUST_SERVER_CERTIFICATE_NO，預設值為 SQL_TRUST_SERVER_CERTIFICATE_NO。 此外，也已經加入新的連接字串關鍵字 "TrustServerCertificate"。 它可接受 yes 或 no 值；預設值是 "no"。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式透過[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md)函式的新增功能，支援加密而不進行驗證。 已經加入 SQL_COPT_SS_TRUST_SERVER_CERTIFICATE 來接受 SQL_TRUST_SERVER_CERTIFICATE_YES 或 SQL_TRUST_SERVER_CERTIFICATE_NO，預設值為 SQL_TRUST_SERVER_CERTIFICATE_NO。 此外，也已經加入新的連接字串關鍵字 "TrustServerCertificate"。 它可接受 yes 或 no 值；預設值是 "no"。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](sql-server-native-client-features.md)  

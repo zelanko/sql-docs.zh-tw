@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 351ce45247fcc4fb76228ab792a97f4e1f915989
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c88949dd81ccfd438c9403a1b640bc9c78b03a1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874579"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704923"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>變更 SQL Server 驗證使用者密碼 (OLE DB)
   此範例顯示如何使用 OLE DB 變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證下，使用者帳戶的密碼。  

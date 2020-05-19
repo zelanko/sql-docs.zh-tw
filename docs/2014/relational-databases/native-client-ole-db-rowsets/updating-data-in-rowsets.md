@@ -14,22 +14,22 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, data updates
 - data updates [SQL Server], OLE DB
 ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f68e4f2be641d6c6aeaf8bbbfcc8cad81ab1a39a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d1c1e70e704c50b619a34b28a899ce10316d446
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938679"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704713"
 ---
 # <a name="updating-data-in-rowsets"></a>更新資料列集中的資料
-  當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取用者更新包含該[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料的可修改資料列集時，Native Client OLE DB 提供者會更新資料。 當取用者要求 **IRowsetChange** 或 **IRowsetUpdate** 介面的支援時，就會建立可修改的資料列集。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當取用者更新包含該資料的可修改資料列集時，Native Client OLE DB 提供者會更新資料。 當取用者要求 **IRowsetChange** 或 **IRowsetUpdate** 介面的支援時，就會建立可修改的資料列集。  
   
- 所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者可修改的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料列集使用資料指標來支援資料列集。 資料列集屬性 DBPROP_LOCKMODE 會改變資料指標中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並行控制行為，並且決定可更新資料列集中的資料列集資料列擷取以及資料完整性錯誤產生的行為。  
+ 所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者可修改的資料列集使用資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指標來支援資料列集。 資料列集屬性 DBPROP_LOCKMODE 會改變資料指標中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並行控制行為，並且決定可更新資料列集中的資料列集資料列擷取以及資料完整性錯誤產生的行為。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援更新前後的資料列同步處理。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者支援更新前後的資料列同步處理。  
   
 > [!NOTE]  
 >  IRowChange::SetColumns 可用來設定資料列物件的一或多個具名資料行的值。  

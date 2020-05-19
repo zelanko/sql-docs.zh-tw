@@ -15,22 +15,22 @@ topic_type:
 helpviewer_keywords:
 - bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 682d5d8cfe8a3c5e1e5de5286e5079d2e9856a11
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226237"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705287"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
   **Bcp_setcolfmt**函式會取代[bcp_colfmt](bcp-colfmt.md)。 在指定資料行定序時，必須使用**bcp_setcolfmt**函數。 [bcp_setbulkmode](bcp-setbulkmode.md)可以用來指定一個以上的資料行格式。  
   
  此函數會提供彈性的方法來指定大量複製作業中的資料行格式。 它會用來設定個別的資料行格式屬性。 **Bcp_setcolfmt**的每個呼叫都會設定一個資料行格式屬性。  
   
- **Bcp_setcolfmt**函數會指定使用者檔案中資料的來源或目標格式。 當做來源格式使用時， **bcp_setcolfmt**會將當做大量複製中資料來源使用之現有資料檔案的格式，指定為中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料表。 當做目標格式使用時，會使用以**bcp_setcolfmt**指定的資料行格式建立資料檔案。  
+ **Bcp_setcolfmt**函數會指定使用者檔案中資料的來源或目標格式。 當做來源格式使用時， **bcp_setcolfmt**會將當做大量複製中資料來源使用之現有資料檔案的格式，指定為中的資料表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當做目標格式使用時，會使用以**bcp_setcolfmt**指定的資料行格式建立資料檔案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,7 +65,7 @@ cbValue
  *property*  
  這是其中一個屬性常數。 屬性常數會在這個資料表中定義。  
   
-|屬性|值|描述|  
+|屬性|值|說明|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|這是使用者檔案中，此資料行的資料類型。 如果與資料庫資料表中，對應資料行的資料類型不同，大量複製就會轉換資料 (如果可能的話)。<br /><br /> BCP_FMT_TYPE 參數是透過 sqlncli.h 中的 SQL Server 資料類型 Token，而非透過 ODBC C 資料類型列舉值列舉。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLCHARACTER 來指定字元字串 ODBC type SQL_C_CHAR。<br /><br /> 若要指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的預設資料表示法，將此參數設定為 0。<br /><br /> 若要從 SQL Server 大量複製到檔案，當 BCP_FMT_TYPE 為 SQLDECIMAL 或 SQLNUMERIC 時：<br /><br /> -如果來源資料行不是**decimal**或**numeric**，就會使用預設的有效位數和小數位數。<br />-如果來源資料行是**小數**或**數值**，則會使用來源資料行的有效位數和小數位數。|  
 |BCP_FMT_INDICATOR_LEN|INT|這是指標 (前置詞) 的位元組長度。<br /><br /> 這是資料行資料內，長度/null 指標的長度 (以位元組為單位)。 有效的指標長度值為 0 (不使用指標時)、1、2 或 4。<br /><br /> 若要指定預設大量複製指標使用率，將此參數設定為 SQL_VARLEN_DATA。<br /><br /> 這些指標會出現在任何資料正前方的記憶體中，以及所套用之資料正前方的資料檔案中。<br /><br /> 如果使用多種指定資料檔案資料行長度的方式 (例如指標和最大資料行長度，或指標和結束字元順序)，大量複製會選擇導致複製最少量資料的方式。<br /><br /> 大量複製在不透過使用者操作來調整資料格式時所產生的資料檔案，會在資料行資料長度可以改變，或資料行可以當做值接受 NULL 時包含指標。|  
@@ -80,7 +80,7 @@ cbValue
  *cbvalue*  
  這是屬性緩衝區的長度 (以位元組為單位)。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  

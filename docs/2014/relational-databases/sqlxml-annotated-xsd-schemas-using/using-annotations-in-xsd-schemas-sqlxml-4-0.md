@@ -14,15 +14,15 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - mapping schema [SQLXML], scenarios for using
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c62357496d0b143fcd8736bc61117d43c6a0fac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56a8d0daaa7eb64600c7e3a06f4121c45ce25a23
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013594"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703504"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>在 XSD 結構描述中使用註釋 (SQLXML 4.0)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 中，XSD 結構描述語言以類似 XML-Data Reduced (XDR) 結構描述語言所推出之註解的方式支援註解。 在 XSD 中有 XDR 不支援的其他註解。  

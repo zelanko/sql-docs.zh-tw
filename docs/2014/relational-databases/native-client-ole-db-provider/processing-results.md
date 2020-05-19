@@ -12,15 +12,15 @@ helpviewer_keywords:
 - rowsets [SQL Server], results processing
 - results [SQL Server Native Client]
 ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9fdc66899f7d863cbfb3ae04ad0796614717a734
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ce44134cac69b1d869c1e4ef86d77a49c23d385
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209668"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704745"
 ---
 # <a name="processing-results"></a>處理結果
   如果資料列集物件是由命令的執行所產生或是直接從提供者產生資料列集物件而產生，則取用者需要擷取及存取此資料列集中的資料。  
@@ -43,6 +43,6 @@ ms.locfileid: "63209668"
   
 ## <a name="see-also"></a>另請參閱  
  [建立 SQL Server Native Client OLE DB 提供者應用程式](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [OLE DB how to 主題](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB 的使用說明主題](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Query Editor [Database Engine], SQLCMD scripts
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 224fcd5f6b4c15a492be6aa6d893a4a4e5625b08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 365a20848416e73e96731722abecfd6d94ebbfc5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245175"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703954"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>使用查詢編輯器編輯 SQLCMD 指令碼
   您可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器，以 SQLCMD 指令碼撰寫和編輯查詢。 當您必須在相同的指令碼中處理 Windows 系統命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，就可以使用 SQLCMD 指令碼。  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - language references [SQL Server]
 - IntelliSense [SQL Server], Parameter Info option
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b842f35c2852ce6ed607e943199bb322823651b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b50c09f27b458fcb2d940a639bee9cb76c1c0044
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242011"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703784"
 ---
 # <a name="parameter-info-intellisense"></a>參數資訊 (IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 的 [參數資訊]  選項會開啟一個參數清單，為您提供函數或預存程序所需之參數數目、名稱和類型的相關資訊。 粗體的參數表示當您輸入函數或預存程序時所需的下一個參數。  

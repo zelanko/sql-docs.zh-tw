@@ -12,18 +12,18 @@ helpviewer_keywords:
 - data types [OLE DB]
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b29121aa91dc6d237c0d5809d04e557fb766084
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062136"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705109"
 ---
 # <a name="data-types-ole-db"></a>資料類型 (OLE DB)
-  若要[!INCLUDE[tsql](../../includes/tsql-md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供者來執行語句並處理結果，您必須知道[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供者在系結[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料列集中的參數或資料行時，如何將資料類型對應到 OLE DB 的資料類型，以及當它使用**ITableDefinition**介面[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在中建立資料表時。  
+  若要 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用 Native client OLE DB 提供者來執行語句並處理結果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您必須知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供者在系結 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料列集中的參數或資料行時，如何將資料類型對應到 OLE DB 的資料類型，以及當它使用**ITableDefinition**介面在中建立資料表時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="in-this-section"></a>本節內容  
   

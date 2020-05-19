@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, executing commands containing
 ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ae08a79bcfe1e4befcad8559e82bdfba5b347fc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5c6bbdf0d26002af350293a6526ed46bb71fd3e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228562"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704655"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>執行包含資料表值參數的命令
   執行包含資料表值參數的命令需要兩個階段：  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c3d96670edc599a1f16456b862922dc6378b1362
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d65ec8de3e45632548a813024223eb72314acc2b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245148"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703923"
 ---
 # <a name="find-and-replace"></a>尋找和取代
   使用 **[尋找和取代]** 對話方塊尋找檔案內的文字，並選擇性地取代。 **[尋找和取代]** 對話方塊的版本不同，選項也會有些微差異，視對話方塊以何種方式開啟而定。 在 **[編輯]** 功能表上，指向 **[尋找和取代]** ，然後按一下 **[快速尋找]** 以開啟有尋找選項，但沒有取代選項的對話方塊。 在 **[編輯]** 功能表上，指向 **[尋找和取代]** ，然後按一下 **[快速取代]** 以開啟同時具有尋找和取代選項的對話方塊。  

@@ -9,20 +9,20 @@ ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fb6c943e237e791ff4febed0ab3273eb9324662
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199259"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704263"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 使用者定義型別 (OLE DB)
   本主題討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中 OLE DB 的變更，以支援大型 Common Language Runtime (CLR) 使用者定義型別 (UDT)。  
   
- 如需 Native Client 中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]大型 clr udt 支援的詳細資訊，請參閱[大型 Clr 使用者定義類型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。 如需範例，請參閱[使用大型 CLR UDT &#40;OLE DB&#41;](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
+ 如需 Native Client 中大型 CLR Udt 支援的詳細資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請參閱[大型 Clr 使用者定義類型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。 如需範例，請參閱[使用大型 CLR UDT &#40;OLE DB&#41;](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
   
 ## <a name="data-format"></a>資料格式  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用 ~0 來代表大型物件 (LOB) 類型的無限制大小的值長度。 ~0 也代表大於 8,000 個位元組的 CLR UDT 大小。  
@@ -42,7 +42,7 @@ ms.locfileid: "63199259"
  DBPROPSET_SQLSERVERCOLUMN 屬性集會透過 OLE DB 支援資料表的建立。 如需詳細資訊，請參閱[使用使用者定義型別](../features/using-user-defined-types.md)。  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的資料類型對應  
- 當需要 UDT 資料行時`DBCOLUMNDESC` ，下列資訊會用於 ITableDefinition：： CreateTable 所使用的結構中：  
+ 當需要 UDT 資料行時，下列資訊會用於 `DBCOLUMNDESC` ITableDefinition：： CreateTable 所使用的結構中：  
   
 |OLE DB 資料類型 (*wType*)|*pwszTypeName*|SQL Server 資料類型|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "63199259"
 |參數類型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|"DBTYPE_UDT"|*n*|未定義|未定義|clear|  
-|DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|"DBTYPE_UDT"|~0|未定義|未定義|設定|  
+|DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|"DBTYPE_UDT"|~0|未定義|未定義|set|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  以 DBPARAMBINDINFO 結構所提供的資訊必須與下列相符：  
@@ -77,7 +77,7 @@ ms.locfileid: "63199259"
   
  下列資料行也會針對 UDT 而定義：  
   
-|資料行識別碼|類型|描述|  
+|資料行識別碼|類型|說明|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之目錄的名稱。|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之結構描述的名稱。|  
@@ -102,7 +102,7 @@ ms.locfileid: "63199259"
   
  下列其他資料行也會針對 UDT 而定義：  
   
-|資料行識別碼|類型|描述|  
+|資料行識別碼|類型|說明|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之目錄的名稱。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之結構描述的名稱。|  
@@ -118,13 +118,13 @@ ms.locfileid: "63199259"
 |繫結資料類型|UDT 到伺服器|非 UDT 到伺服器|從伺服器中的 UDT|從伺服器中的非 UDT|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|支援 (5)|錯誤 (1)|支援 (5)|錯誤 (4)|  
-|DBTYPE_BYTES|支援 (5)|不適用|支援 (5)|不適用|  
-|DBTYPE_WSTR|支援 (2)、(5)|不適用|支援 (3)、(5)、(6)|不適用|  
-|DBTYPE_BSTR|支援 (2)、(5)|不適用|支援 (3)、(5)|不適用|  
-|DBTYPE_STR|支援 (2)、(5)|不適用|支援 (3)、(5)|不適用|  
-|DBTYPE_IUNKNOWN|支援 (6)|不適用|支援 (6)|不適用|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支援 (5)|不適用|支援 (3)、(5)|不適用|  
-|DBTYPE_VARIANT (VT_BSTR)|支援 (2)、(5)|不適用|N/A|N/A|  
+|DBTYPE_BYTES|支援 (5)|N/A|支援 (5)|N/A|  
+|DBTYPE_WSTR|支援 (2)、(5)|N/A|支援 (3)、(5)、(6)|N/A|  
+|DBTYPE_BSTR|支援 (2)、(5)|N/A|支援 (3)、(5)|N/A|  
+|DBTYPE_STR|支援 (2)、(5)|N/A|支援 (3)、(5)|N/A|  
+|DBTYPE_IUNKNOWN|支援 (6)|N/A|支援 (6)|N/A|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支援 (5)|N/A|支援 (3)、(5)|N/A|  
+|DBTYPE_VARIANT (VT_BSTR)|支援 (2)、(5)|N/A|N/A|N/A|  
   
 ### <a name="key-to-symbols"></a>符號的索引鍵  
   

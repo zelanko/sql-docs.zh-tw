@@ -22,15 +22,15 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 - queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd16879f512bf1529bec8dab6679880cd0a6b8dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c3e064358b58844726daa6499dc6c2ed0eeedd1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243332"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703787"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查詢與文字編輯器 (SQL Server Management Studio)
   您可以使用其中一個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 編輯器，以互動方式編輯及測試 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 或 XML/A 指令碼，或者編輯 XML 或純文字檔。 每個編輯器都會得到一項特定語言專用服務的支援，會將關鍵字著上顏色，且會進行語法和用法錯誤的檢查。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器含有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具，可讓您用來協助修正 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的問題。  

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44f1c1673e761425969558ecb911f8df92601274
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206799"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705256"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>使用資料執行中參數 (ODBC)
     
@@ -25,7 +25,7 @@ ms.locfileid: "68206799"
   
 1.  當呼叫 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 將程式緩衝區繫結至陳述式參數時：  
   
-    -   針對最後一個參數，使用 SQL_LEN_DATA_AT_EXEC （*長度*），其中*length*是`text`、 `ntext`或`image`參數資料的總長度（以位元組為單位）。  
+    -   針對最後一個參數，使用 SQL_LEN_DATA_AT_EXEC （*長度*），其中*length*是 `text` 、或參數資料的總長度（ `ntext` `image` 以位元組為單位）。  
   
     -   使用程式定義之參數識別碼的 `rgbValue` (第八個參數)。  
   

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - bcp_setbulkmode function
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53a89baa1fc13759bd24d6c12190bce509f6dfce
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688789"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705276"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode 可讓您在大量複製作業中指定資料行格式，在單一函數呼叫中設定所有資料行屬性。  
@@ -67,7 +67,7 @@ cbRow
  *cbRow*  
  資料列結束字元值的長度 (以位元組為單位)。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL  
   
 ## <a name="remarks"></a>備註  
@@ -77,12 +77,12 @@ cbRow
   
  下表將列出 *property* 參數的常數。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP 中的-c 選項。EXE，並將`BCP_FMT_TYPE`屬性設定為`SQLCHARACTER`bcp_setcolfmt。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP 中的-w 選項。將`BCP_FMT_TYPE`屬性設定為`SQLNCHAR`的 EXE 和 bcp_setcolfmt。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應至 BCP 中的-N 選項。如果資料行類型`BCP_FMT_TYPE`是字串， `SQLNCHAR`則為 EXE 和 bcp_setcolfmt，並將屬性設定為（如果不是字串，則為預設值）。|  
-|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應至 BCP 中的-n 選項。將`BCP_FMT_TYPE`屬性設定為預設值的 EXE 和 bcp_setcolfmt。|  
+|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP 中的-c 選項。EXE，並將 `BCP_FMT_TYPE` 屬性設定為 bcp_setcolfmt `SQLCHARACTER` 。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP 中的-w 選項。`BCP_FMT_TYPE`將屬性設定為的 EXE 和 bcp_setcolfmt `SQLNCHAR` 。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應至 BCP 中的-N 選項。如果資料行類型是字串，則為 EXE 和 bcp_setcolfmt，並 `BCP_FMT_TYPE` 將屬性設定為 `SQLNCHAR` （如果不是字串，則為預設值）。|  
+|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應至 BCP 中的-n 選項。`BCP_FMT_TYPE`將屬性設定為預設值的 EXE 和 bcp_setcolfmt。|  
   
  您不應將 bcp_setbulkmode 與包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函式呼叫順序搭配使用。 例如，您不應該呼叫 bcp_control （BCPTEXTFILE）和 bcp_setbulkmode。  
   

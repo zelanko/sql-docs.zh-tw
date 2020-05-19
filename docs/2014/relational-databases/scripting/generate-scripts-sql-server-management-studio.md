@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9f97b1682fa8a2e04b5f1afcc2a552a326a9e43
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 91d00367c0ae8cc0541c4bd9dbec2c508010bb90
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242096"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703897"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>產生指令碼 (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供兩種產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼的機制。 您可以使用 [**產生和發佈腳本] Wizard**來建立多個物件的腳本。 您也可以使用**物件總管**中的 [編寫組件的指令碼為] 功能表，為個別物件或多個物件產生指令碼。  

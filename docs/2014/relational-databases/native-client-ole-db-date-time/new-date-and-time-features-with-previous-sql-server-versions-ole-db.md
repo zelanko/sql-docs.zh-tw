@@ -9,41 +9,41 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], enhanced behavior with earlier SQL Server versions
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df9e157431a8330aed8357231c3b28d12cb4fbc1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63233072"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705015"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>舊版 SQL Server 的新日期和時間功能 (OLE DB)
-  本主題描述當使用增強型日期和時間功能的用戶端應用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的版本進行通訊時，以及使用早于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的 Native client 版本所編譯的用戶端將命令傳送到支援增強型日期和時間功能的伺服器時的預期行為。  
+  本主題描述當使用增強型日期和時間功能的用戶端應用程式與早于的版本進行通訊時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ，以及使用早于的 Native client 版本所編譯的用戶端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 將命令傳送到支援增強型日期和時間功能的伺服器時的預期行為。  
   
 ## <a name="down-level-client-behavior"></a>下層用戶端行為  
- 使用早于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的 Native client 版本的用戶端應用程式，請將新的日期/ `nvarchar`時間類型視為資料行。 資料行內容是常值表示法。 如需詳細資訊，請參閱資料類型支援的「資料格式：字串和常值」一節，[以取得 OLE DB 的日期和時間改善](data-type-support-for-ole-db-date-and-time-improvements.md)。 資料行大小是針對資料行指定之有效位數的最大常值長度。  
+ 使用早于的 Native Client 版本的用戶端應用程式， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 請將新的日期/時間類型視為資料 `nvarchar` 行。 資料行內容是常值表示法。 如需詳細資訊，請參閱資料類型支援的「資料格式：字串和常值」一節，[以取得 OLE DB 的日期和時間改善](data-type-support-for-ole-db-date-and-time-improvements.md)。 資料行大小是針對資料行指定之有效位數的最大常值長度。  
   
  資料庫目錄 API 將會傳回與傳回到用戶端之下層資料類型程式碼一致的中繼資料 (例如，`nvarchar`)，以及相關聯的下層表示法 (例如，適當的常值格式)。 不過，傳回的資料類型名稱將會是實際的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 類型名稱。  
   
- 當下層用戶端應用程式針對已建立日期[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] /時間類型的架構變更的（或更新版本）伺服器執行時，預期的行為如下所示：  
+ 當下層用戶端應用程式針對 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 已建立日期/時間類型的架構變更的（或更新版本）伺服器執行時，預期的行為如下所示：  
   
 |OLE DB 用戶端類型|SQL Server 2005 類型|SQL Server 2008 (或更新版本) 類型|結果轉換 (伺服器到用戶端)|參數轉換 (用戶端到伺服器)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|日期|[確定]|[確定]|  
+|DBTYPE_DBDATE|Datetime|日期|確定|確定|  
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果時間欄位不是零，IRowsetChange 將會因為字串截斷而失敗。|  
-|DBTYPE_DBTIME||Time(0)|[確定]|[確定]|  
+|DBTYPE_DBTIME||Time(0)|確定|確定|  
 |DBTYPE_DBTIMESTAMP|||日期欄位設定為目前的日期。|如果小數秒不是零，IRowsetChange 將會因為字串截斷而失敗。<br /><br /> 忽略日期。|  
-|DBTYPE_DBTIME||Time(7)|失敗-不正確時間常值。|[確定]|  
-|DBTYPE_DBTIMESTAMP|||失敗-不正確時間常值。|[確定]|  
-|DBTYPE_DBTIMESTAMP||Datetime2 （3）|[確定]|[確定]|  
-|DBTYPE_DBTIMESTAMP||Datetime2 （7）|[確定]|[確定]|  
-|DBTYPE_DBDATE|Smalldatetime|日期|[確定]|[確定]|  
+|DBTYPE_DBTIME||Time(7)|失敗-不正確時間常值。|確定|  
+|DBTYPE_DBTIMESTAMP|||失敗-不正確時間常值。|確定|  
+|DBTYPE_DBTIMESTAMP||Datetime2 （3）|確定|確定|  
+|DBTYPE_DBTIMESTAMP||Datetime2 （7）|確定|確定|  
+|DBTYPE_DBDATE|Smalldatetime|日期|確定|確定|  
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果時間欄位不是零，IRowsetChange 將會因為字串截斷而失敗。|  
-|DBTYPE_DBTIME||Time(0)|[確定]|[確定]|  
+|DBTYPE_DBTIME||Time(0)|確定|確定|  
 |DBTYPE_DBTIMESTAMP|||日期欄位設定為目前的日期。|如果小數秒不是零，IRowsetChange 將會因為字串截斷而失敗。<br /><br /> 忽略日期。|  
-|DBTYPE_DBTIMESTAMP||Datetime2(0)|[確定]|[確定]|  
+|DBTYPE_DBTIMESTAMP||Datetime2(0)|確定|確定|  
   
  OK 表示，如果它使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，則應該繼續使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本)。  
   
@@ -55,10 +55,10 @@ ms.locfileid: "63233072"
   
 -   切換到 `datetime2`，因為這是適用於日期和時間的慣用資料類型。  
   
- 使用透過 ICommandWithParameters：： GetParameterInfo 或架構資料列集取得之伺服器中繼資料的應用程式，透過 ICommandWithParameters：： SetParameterInfo 來設定參數類型資訊時，將會在用戶端轉換期間失敗，而來源類型的字串表示會大於目的地類型的字串標記法。 例如，如果用戶端系結使用 DBTYPE_DBTIMESTAMP 而伺服器資料行是日期， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client 會將值轉換為 "yyyy-mm-dd hh： mm： ss. fff"，但是伺服器中繼資料將會當做傳回`nvarchar(10)`。 產生的溢位會造成 DBSTATUS_E_CATCONVERTVALUE。 IRowsetChange 的資料轉換會引發類似的問題，因為資料列集中繼資料是從結果集中繼資料設定而來。  
+ 使用透過 ICommandWithParameters：： GetParameterInfo 或架構資料列集取得之伺服器中繼資料的應用程式，透過 ICommandWithParameters：： SetParameterInfo 來設定參數類型資訊時，將會在用戶端轉換期間失敗，而來源類型的字串表示會大於目的地類型的字串標記法。 例如，如果用戶端系結使用 DBTYPE_DBTIMESTAMP 而伺服器資料行是日期， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client 會將值轉換為 "yyyy-mm-dd hh： mm： ss. fff"，但是伺服器中繼資料將會當做傳回 `nvarchar(10)` 。 產生的溢位會造成 DBSTATUS_E_CATCONVERTVALUE。 IRowsetChange 的資料轉換會引發類似的問題，因為資料列集中繼資料是從結果集中繼資料設定而來。  
   
 ### <a name="parameter-and-rowset-metadata"></a>參數和資料列集中繼資料  
- 本節針對以早于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的 Native Client 版本編譯的用戶端，描述參數、結果資料行和架構資料列集的中繼資料。  
+ 本節針對以早于的 Native Client 版本編譯的用戶端，描述參數、結果資料行和架構資料列集的中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。  
   
 #### <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  DBPARAMINFO 結構會透過*prgparaminfo 以*參數傳回下列資訊：  
@@ -99,7 +99,7 @@ ms.locfileid: "63233072"
 |datetimeoffset|DBTYPE_WSTR|26，28. 34|~0|~0|  
   
 ### <a name="schema-rowsets"></a>結構描述資料列集  
- 本節討論參數中繼資料、結果資料行，以及新資料類型的結構描述資料列集。 如果您的用戶端提供者是使用早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client 的工具所開發，這種資訊就很有用。  
+ 本節討論參數中繼資料、結果資料行，以及新資料類型的結構描述資料列集。 如果您的用戶端提供者是使用早于 Native Client 的工具所開發，這種資訊就很有用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="columns-rowset"></a>COLUMNS 資料列集  
  系統會傳回日期/時間類型的下列資料行值：  
@@ -153,7 +153,7 @@ ms.locfileid: "63233072"
 |IS_FIXEDLENGTH|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
   
 ## <a name="down-level-server-behavior"></a>下層伺服器行為  
- 當連接到比[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]更早版本的伺服器時，任何嘗試使用新伺服器類型名稱的程式（例如，with ICommandWithParameters：： SetParameterInfo 或 ITableDefinition：： CreateTable）都會導致 DB_E_BADTYPENAME。  
+ 當連接到比更早版本的伺服器時 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ，任何嘗試使用新伺服器類型名稱的程式（例如，With ICommandWithParameters：： SetParameterInfo 或 ITableDefinition：： CreateTable）都會導致 DB_E_BADTYPENAME。  
   
  如果針對參數或結果繫結新類型，而不使用類型名稱，並將新類型用於隱含地指定伺服器類型，或者從伺服器類型到用戶端類型沒有有效的轉換，則會傳回 DB_E_ERRORSOCCURRED，而且會將 DBBINDSTATUS_UNSUPPORTED_CONVERSION 設定為執行時所使用之存取子的繫結狀態。  
   

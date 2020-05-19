@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ports [SQL Server], Transact-SQL debugger
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a5710ab5a74adc34601790c134a4553b8b01604
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245194"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704042"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>設定 Transact-SQL 偵錯工具
   當連接的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行個體與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器在不同的電腦上執行時，就必須設定 Windows 防火牆規則才能啟用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵錯。  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - navigating code
 - Go To command
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b44319856c2604791290768516ab1eb4c190a66b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a1842dab8f50ea99327ae3264622e319e6e5d1c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241995"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703809"
 ---
 # <a name="navigate-code-and-text"></a>導覽程式碼與文字
   您可以利用下列方式在文字間移動：  

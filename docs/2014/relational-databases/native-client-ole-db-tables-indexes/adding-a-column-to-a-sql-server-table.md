@@ -12,20 +12,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, columns
 - adding columns
 ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 32e78feae791788e0aad87079546ea8c7d49e734
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a145f97a8eb848f604833d1afe8e0afd27a50776
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046493"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704576"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>將資料行加入至 SQL Server 資料表
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**ITableDefinition：： AddColumn**函數。 如此可讓取用者將資料行加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會公開**ITableDefinition：： AddColumn**函數。 如此可讓取用者將資料行加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。  
   
- 當您將資料行加入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者取用者的限制如下：  
+ 當您將資料行加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者取用者的限制如下：  
   
 -   如果 DBPROP_COL_AUTOINCREMENT 是 VARIANT_TRUE，DBPROP_COL_NULLABLE 就必須是 VARIANT_FALSE。  
   

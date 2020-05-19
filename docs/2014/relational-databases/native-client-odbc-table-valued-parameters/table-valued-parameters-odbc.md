@@ -10,15 +10,15 @@ helpviewer_keywords:
 - table-valued parameters (ODBC)
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 31ed60f10f12bbc11037a64caa50802360b919de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e22b65aab9b9775889a3a03fe3ba90a84aafc9f0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62467298"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705157"
 ---
 # <a name="table-valued-parameters-odbc"></a>資料表值參數 (ODBC)
   ODBC 對資料表值參數的支援可讓用戶端應用程式有效率地將參數化資料傳送給伺服器，其方式是使用一個呼叫來傳送多個資料列給伺服器。  

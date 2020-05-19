@@ -14,18 +14,18 @@ helpviewer_keywords:
 - sql:mapped
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4878ff0bc8e284af1515d5ea0d531c3a7471a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b0fda8000105573a11c1ca6a460e47a100bc885
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013480"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703433"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  XML 大量載入會如`sql:mapped`預期般處理 XSD 架構中的注釋，也就是說，如果對應架構指定`sql:mapped="false"`了任何元素或屬性，則 xml 大量載入不會嘗試將相關聯的資料儲存在對應的資料行中。  
+  XML 大量載入 `sql:mapped` 會如預期般處理 XSD 架構中的注釋，也就是說，如果對應架構指定 `sql:mapped="false"` 了任何元素或屬性，則 Xml 大量載入不會嘗試將相關聯的資料儲存在對應的資料行中。  
   
  XML 大量載入會忽略未對應的元素和屬性 (因為沒有在結構描述中描述它們，或者因為它們在 XSD 結構描述中使用 `sql:mapped="false"` 進行註解)。 如果使用 `sql:overflow-field` 指定此種資料行，所有未對應的資料都會移入溢位資料行。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66013480"
 </xsd:schema>  
 ```  
   
- 因為**HomePhone**屬性指定`sql:mapped="false"`，所以 XML 大量載入不會將此屬性對應到對應的資料行。 XSD 架構會識別一個溢位資料行（**OverflowColumn**），其中 XML 大量載入會儲存此未耗用的資料。  
+ 因為**HomePhone**屬性指定 `sql:mapped="false"` ，所以 XML 大量載入不會將此屬性對應到對應的資料行。 XSD 架構會識別一個溢位資料行（**OverflowColumn**），其中 XML 大量載入會儲存此未耗用的資料。  
   
 ### <a name="to-test-a-working-sample"></a>測試工作範例  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 8801f091-2241-4085-87b7-33e031328c9c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0cadab8c51000270d218bea890d2c4e7077daae9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2815db225d75e724ee579bd1e1eaf858577d283
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938646"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704867"
 ---
 # <a name="filestream-and-ole-db"></a>資料流及 OLE DB
   本節包含四個範例，這些範例會示範如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 搭配 Filestream 功能：  

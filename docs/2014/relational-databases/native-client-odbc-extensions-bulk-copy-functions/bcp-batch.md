@@ -15,18 +15,18 @@ topic_type:
 helpviewer_keywords:
 - bcp_batch function
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c41e8d90adc8ff6eb2058feebe3f33c10edbfa92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a37bafc9bac2601e3914455f431c639bce385f48
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62631382"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705354"
 ---
 # <a name="bcp_batch"></a>bcp_batch
-  認可先前從程式變數大量複製並由[bcp_sendrow](bcp-sendrow.md)傳送至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有資料列。  
+  認可先前從程式變數大量複製並由 bcp_sendrow 傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的[bcp_sendrow](bcp-sendrow.md)所有資料列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +42,7 @@ hdbc
  *hdbc*  
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  最後一次呼叫**bcp_batch**之後所儲存的資料列數，如果發生錯誤，則為-1。  
   
 ## <a name="remarks"></a>備註  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ISequentialStream interface, samples
 - GetColumns method
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86d2627354fcf3ec6ed80675abeb552f3ff888da
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62467581"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704883"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns (或 IRow::Open) 和 ISequentialStream 來提取資料行
   您可以使用 `ISequentialStream` 介面來繫結或擷取大型資料。 若為繫結資料行，狀態旗標 DBSTATUS_S_TRUNCATED 會指出資料是否遭到截斷。  
@@ -37,7 +37,7 @@ ms.locfileid: "62467581"
   
     -   `IRow::Open()` 可用來開啟資料列的 `ISequentialStream`。 指定 DBGUID_STREAM，表示資料行包含二進位資料的資料流 (然後 `IStream` 或 `ISequentialStream` 就可用來讀取資料行中的資料)。  
   
-    -   如果`IRow::GetColumns()`使用了，DBCOLUMNACCESS 結構的**pData**元素會設定為指向資料流程物件。  
+    -   如果 `IRow::GetColumns()` 使用了，DBCOLUMNACCESS 結構的**pData**元素會設定為指向資料流程物件。  
   
 4.  重複使用 **ISequentialStream::Read()**，將指定的位元組數目讀入取用者緩衝區中。  
   
@@ -670,6 +670,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB how to 主題](ole-db-how-to-topics.md)  
+ [OLE DB 的使用說明主題](ole-db-how-to-topics.md)  
   
   

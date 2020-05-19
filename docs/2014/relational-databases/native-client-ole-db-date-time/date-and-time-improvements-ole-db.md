@@ -10,27 +10,27 @@ helpviewer_keywords:
 - date/time [OLE DB]
 - OLE DB, date/time improvements
 ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1dec9e1281d2ff61dcab9312cdf5a7ad1ecb8da3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d206de44f9408e932d91a0097c1228b112b05ba
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62866830"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705037"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>日期和時間改善 (OLE DB)
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了新的日期和時間資料類型。 本章節描述如何將這些新類型公開為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的延伸模組。 如需有關新日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和時間資料類型之 Native Client 支援的總覽，請參閱[日期和時間改善](../native-client/features/date-and-time-improvements.md)。 如需範例，請參閱[使用增強型日期和時間功能 &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)。  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了新的日期和時間資料類型。 本章節描述如何將這些新類型公開為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的延伸模組。 如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新日期和時間資料類型之 Native Client 支援的總覽，請參閱[日期和時間改善](../native-client/features/date-and-time-improvements.md)。 如需範例，請參閱[使用增強型日期和時間功能 &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)。  
   
  如需更多日期和時間資料類型的一般資訊，請參閱 [datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [對 OLE DB 日期和時間改善的資料類型支援](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
- 提供支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期和時間[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型之 OLE DB （Native Client）類型的相關資訊。  
+ 提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和時間資料類型之 OLE DB （Native Client）類型的相關資訊。  
   
  [中繼資料 &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
- 包含 DBBINDING 結構`ICommandWithParameters::GetParameterInfo`、、 `ICommandWithParameters::SetParameterInfo`、 `IColumnsRowset::GetColumnsRowset`和 I`ColumnsInfo::GetColumnInfo`的相關資訊。也提供 OLE DB 架構資料列集之更新的相關資訊。  
+ 包含 DBBINDING 結構、、 `ICommandWithParameters::GetParameterInfo` `ICommandWithParameters::SetParameterInfo` 、 `IColumnsRowset::GetColumnsRowset` 和 I 的相關資訊 `ColumnsInfo::GetColumnInfo` 。也提供 OLE DB 架構資料列集之更新的相關資訊。  
   
  [繫結和轉換 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  描述在伺服器和用戶端之間，針對現有日期類型和新日期類型進行轉換的規則。  

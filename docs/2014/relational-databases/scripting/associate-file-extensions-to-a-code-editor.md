@@ -11,15 +11,15 @@ helpviewer_keywords:
 - associating file extensions [SQL Server]
 - Query Editor [SQL Server Management Studio], associating file extensions
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6554cbcc79fdfc22c552821d518571873b2d826a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2147ebbe269de97a43aa4366315daf2e0df8d4fa
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244807"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704111"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>使副檔名與程式碼編輯器相關聯
   使副檔名與特定程式碼編輯器相關聯，可讓您在 Windows 檔案總管中按兩下檔案時，能以適當的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 程式碼編輯器開啟檔案。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]一般使用的副檔名 (例如 .sql 和 .mdx) 會在安裝期間產生關聯。 新的副檔名也必須在檔案系統中與 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 相關聯。 您可以使用此功能，開啟以其他編輯器建立的檔案，或開啟已重新命名的檔案，例如重新命名為 .bak 的 .sql 檔案備份。  

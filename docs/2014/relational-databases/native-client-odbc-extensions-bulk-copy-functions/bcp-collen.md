@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_collen function
 ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a66a88a61a581dff262fb8585b5cf32830f8eeed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e46f3c241d44033194c484b8955389fba972fd22
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62718095"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705317"
 ---
 # <a name="bcp_collen"></a>bcp_collen
   設定目前大量複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之程式變數中的資料長度。  
@@ -55,11 +55,11 @@ idxServerCol
  *idxServerCol*  
  這是資料表中要將資料複製到其中之資料行的序數位置。 第一個資料行是 1。 資料行的序數位置是由[SQLColumns](../native-client-odbc-api/sqlcolumns.md)所報告。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- **Bcp_collen**函數可讓您在使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [bcp_sendrow](bcp-sendrow.md)將資料複製到時，變更特定資料行之程式變數中的資料長度。  
+ **Bcp_collen**函數可讓您在使用 bcp_sendrow 將資料複製到時，變更特定資料行之程式變數中的資料長度 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [bcp_sendrow](bcp-sendrow.md)  
   
  一開始，資料長度是在呼叫[bcp_bind](bcp-bind.md)時決定。 如果**bcp_sendrow**的呼叫之間的資料長度變更，且未使用長度前置詞或結束字元，您可以呼叫**bcp_collen**以重設長度。 下一次呼叫**bcp_sendrow**會使用**bcp_collen**的呼叫所設定的長度。  
   

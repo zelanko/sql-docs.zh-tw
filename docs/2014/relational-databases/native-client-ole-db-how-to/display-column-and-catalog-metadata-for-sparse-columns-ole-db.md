@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3150dd7c37564429f5f31205bdf733fe134baf5d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1259ef4b320e097998f2a631367b2e52e7c789e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874567"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704912"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>顯示資料行與疏鬆資料行的目錄中繼資料 (OLE DB)
   此範例會建立包含三個資料行的資料表：疏鬆資料行、非疏鬆資料行的資料行，以及資料行集資料行。 接著，範例會顯示 OLE DB 旗標以顯示非疏鬆資料行和資料行集資料行的資料行和目錄中繼資料。  

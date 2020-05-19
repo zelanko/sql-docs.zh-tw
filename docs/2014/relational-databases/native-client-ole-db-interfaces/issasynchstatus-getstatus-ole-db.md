@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12013ae253680621d154d7a6af87005aedbd92a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0df2930d17d8d99fd52aef3fcca7e9e92ca6638
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62511448"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704846"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
   傳回以非同步方式執行作業的狀態。  

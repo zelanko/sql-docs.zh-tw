@@ -15,22 +15,22 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4328c284d23313cf737c5cf8b39751359e568b4f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033553"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704186"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是用於存取資料的低階 COM API。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建議將 Native Client OLE DB 提供者用於開發工具、公用程式或需要高效能的低階元件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是原生、高效能的提供者，會直接存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格式資料流 (TDS) 通訊協定。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會對連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的應用程式提供 OLE DB 支援。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是 OLE DB 版本2.0 相容提供者。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者是 OLE DB 版本2.0 相容提供者。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63033553"
   
 -   [資料列集](../../native-client-ole-db-rowsets/rowsets.md)  
   
--   [預存程式](stored-procedures.md)  
+-   [預存程序](stored-procedures.md)  
   
 -   [BLOB 與 OLE 物件](../../native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63033553"
   
 -   [FILESTREAM 支援 &#40;OLE DB&#41;](filestream-support-ole-db.md)  
   
--   [異動](../../native-client-ole-db-transactions/transactions.md)  
+-   [交易](../../native-client-ole-db-transactions/transactions.md)  
   
 -   [錯誤](../../native-client-ole-db-errors/errors.md)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63033553"
   
 -   [SQL Server Native Client &#40;OLE DB&#41; 參考](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [OLE DB how to 主題](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+-   [OLE DB 的使用說明主題](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 程式設計](../sql-server-native-client-programming.md)  

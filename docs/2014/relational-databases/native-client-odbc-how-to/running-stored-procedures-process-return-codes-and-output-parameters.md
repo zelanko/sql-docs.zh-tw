@@ -10,15 +10,15 @@ helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 38918636fa569b5f9b43e1f93698879863429fb0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205571"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705217"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>處理傳回碼和輸出參數 (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數會在來自伺服器的最後一個封包中傳送，而且在[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)傳回 SQL_NO_DATA 之前，都無法供應用程式使用。 如果從預存程式傳回錯誤，請呼叫 SQLMoreResults 以前進到下一個結果，直到傳回 SQL_NO_DATA 為止。  

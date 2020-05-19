@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Replace in Files dialog box
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5d2881ed683a067a65b3ccc068223460dd89f3f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd79bd7e486db052391efd631c101321ff9c8157
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243684"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703737"
 ---
 # <a name="replace-in-files"></a>檔案中取代
   [尋找和取代] 視窗的 [檔案中取代]  索引標籤，可以讓您在指定檔案集的程式碼中搜尋字串或運算式，並變更部分或所有找到的相符結果。 找到的相符結果與採取的動作會列在 [結果選項]  所選取的 [尋找結果] 視窗中。  

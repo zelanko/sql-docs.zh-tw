@@ -12,15 +12,15 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine]
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48f749da0acc21e990954a1198d868c0786d2a72
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244955"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703986"
 ---
 # <a name="database-engine-scripting"></a>Database Engine 指令碼
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 支援使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell 指令碼環境來管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體和執行個體中的物件。 此外，您也可以在與指令碼環境非常相似的環境中，建立並執行含有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 XQuery 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。  
@@ -30,7 +30,7 @@ ms.locfileid: "75244955"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者，以便將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件模型階層公開成與檔案系統路徑相似的 PowerShell 路徑。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件模型類別來管理以路徑之每個節點表示的物件。  
   
--   一組實作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令程式。 其中一個 Cmdlet 是 **Invoke-Sqlcmd**。 這是用來執行[!INCLUDE[ssDE](../../includes/ssde-md.md)]要與`sqlcmd`公用程式一起執行的查詢腳本。  
+-   一組實作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令程式。 其中一個 Cmdlet 是 **Invoke-Sqlcmd**。 這是用來執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 要與公用程式一起執行的查詢腳本 `sqlcmd` 。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了用來執行 PowerShell 的以下功能：  
   
@@ -47,19 +47,19 @@ ms.locfileid: "75244955"
   
 -   XQuery 語言陳述式。  
   
--   公用程式的`sqlcmd`命令和變數。  
+-   公用程式的命令和變數 `sqlcmd` 。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了三種建立和執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢的環境：  
   
 -   在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中，您可以用互動方式執行並偵錯 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查詢。 您可以在單一工作階段中編寫許多陳述式的程式碼並進行偵錯，然後將所有陳述式都儲存在單一指令碼檔案中。  
   
--   `sqlcmd`命令提示字元公用程式可讓您[!INCLUDE[ssDE](../../includes/ssde-md.md)]以互動方式執行查詢， [!INCLUDE[ssDE](../../includes/ssde-md.md)]也可以執行現有的查詢腳本檔案。  
+-   `sqlcmd`命令提示字元公用程式可讓您以互動方式執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢，也可以執行現有的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢腳本檔案。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 您通常會使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器，以互動方式在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中編寫查詢指令碼檔案的程式碼。 然後，您就可以在下列其中一個環境內開啟此檔案：  
   
 -   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]  /[開啟]  功能表，以在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [查詢編輯器] 視窗中開啟此檔案。  
   
--   使用 **-i**_input_file_參數，透過`sqlcmd`公用程式來執行檔案。  
+-   使用 **-i**_input_file_參數，透過公用程式來執行檔案 `sqlcmd` 。  
   
 -   使用 **-QueryFromFile** 參數搭配 **PowerShell 指令碼中的** Invoke-Sqlcmd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cmdlet 來執行此檔案。  
   

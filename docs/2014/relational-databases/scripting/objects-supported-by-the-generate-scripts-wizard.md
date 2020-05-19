@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c266cf82a6f790d20cec3b3ec94f3c5e42b74b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1cfee492433da4a9812a6961d34b741cf8bff089
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241985"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703826"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>指令碼產生精靈支援的物件
   [產生和發佈指令碼精靈] 支援 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]支援的物件子集。  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08ba399bd9ebe4a8ba4c064aa2e0bce39b82d533
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243274"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703675"
 ---
 # <a name="start-the-sqlcmd-utility"></a>啟動 sqlcmd 公用程式
   若要開始使用 `sqlcmd`，您必須先啟動該公用程式並連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 您可以連接到預設或具名執行個體。 啟動 `sqlcmd` 公用程式是第一個步驟。  
@@ -38,17 +38,17 @@ ms.locfileid: "75243274"
   
      現在，您已經有了信任連接，連接了電腦上所執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體。  
   
-     **1>** 是指定`sqlcmd`行號的提示。 每按一次 ENTER 鍵，這個號碼就會增加 1。  
+     **1>** 是 `sqlcmd` 指定行號的提示。 每按一次 ENTER 鍵，這個號碼就會增加 1。  
   
-4.  若要結束`sqlcmd`會話，請`EXIT`在`sqlcmd`提示字元中輸入。  
+4.  若要結束 `sqlcmd` 會話，請 `EXIT` 在提示字元中輸入 `sqlcmd` 。  
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>啟動 sqlcmd 公用程式並連接到 SQL Server 的具名執行個體  
   
-1.  開啟 [命令提示字元] 視窗， `sqlcmd -S`然後輸入*myServer\instanceName*。 以要連接的電腦名稱和 *的執行個體來取代* myServer\instanceName [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+1.  開啟 [命令提示字元] 視窗，然後輸入 `sqlcmd -S` *myServer\instanceName*。 以要連接的電腦名稱和 *的執行個體來取代* myServer\instanceName [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 2.  按 ENTER 鍵。  
   
-     [ `sqlcmd`提示（1>）] 表示您已連接到指定的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例。  
+     [ `sqlcmd` 提示（1>）] 表示您已連接到指定的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
     > [!NOTE]  
     >  輸入的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會儲存在緩衝區。 當遇到 GO 命令時，這些陳述式會當做批次來執行。  

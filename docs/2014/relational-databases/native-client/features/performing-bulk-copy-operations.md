@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client, bulk copy operations
 - SQLNCLI, bulk copy operations
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c33c5adeb748f3a714112faf7410684413cf0cd5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aaaf53a546ccef646c9c53a30c09196d113b738f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225630"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704346"
 ---
 # <a name="performing-bulk-copy-operations"></a>執行大量複製作業
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製功能支援將大量資料傳送進出 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表或檢視。 資料也可以藉由指定 SELECT 陳述式而向外傳送。 您可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和作業系統資料檔 (例如 ASCII 檔) 之間移動。 資料檔可能具有不同的格式；您可將格式定義為以格式檔來大量複製。 或者，也可以使用大量複製函數和方法，將資料載入程式變數，然後傳送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
@@ -53,10 +53,10 @@ ms.locfileid: "63225630"
  請勿將 SET FMTONLY OFF 用於大量複製作業。 SET FMTONLY OFF 可能會導致大量複製作業失敗或提供未預期的結果。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 提供者  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會針對使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫執行大量複製作業的兩個方法進行實施。 第一個方法涉及使用 [IRowsetFastLoad](../../native-client-ole-db-interfaces/irowsetfastload-ole-db.md) 介面進行以記憶體為基礎的大量複製作業；第二個方法則涉及使用 [IBCPSession](../../native-client-ole-db-interfaces/ibcpsession-ole-db.md) 介面進行以檔案為基礎的大量複製作業。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會針對使用資料庫執行大量複製作業的兩個方法進行實施 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 第一個方法涉及使用 [IRowsetFastLoad](../../native-client-ole-db-interfaces/irowsetfastload-ole-db.md) 介面進行以記憶體為基礎的大量複製作業；第二個方法則涉及使用 [IBCPSession](../../native-client-ole-db-interfaces/ibcpsession-ole-db.md) 介面進行以檔案為基礎的大量複製作業。  
   
 ### <a name="using-memory-based-bulk-copy-operations"></a>使用以記憶體為基礎的大量複製作業  
- Native Client OLE DB 提供者會執行**IRowsetFastLoad**介面，以公開對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以記憶體為基礎之大量複製作業的支援。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **IRowsetFastLoad** 介面會實作 [IRowsetFastLoad::Commit](../../native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 和 [IRowsetFastLoad::InsertRow](../../native-client-ole-db-interfaces/irowsetfastload-insertrow-ole-db.md) 方法。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會執行**IRowsetFastLoad**介面，以公開對以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 記憶體為基礎之大量複製作業的支援。 **IRowsetFastLoad** 介面會實作 [IRowsetFastLoad::Commit](../../native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 和 [IRowsetFastLoad::InsertRow](../../native-client-ole-db-interfaces/irowsetfastload-insertrow-ole-db.md) 方法。  
   
 #### <a name="enabling-a-session-for-irowsetfastload"></a>針對 IRowsetFastLoad 啟用工作階段  
  取用者會將其大量複製的需求通知 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，方法是將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者特定的資料來源屬性 SSPROP_ENABLEFASTLOAD 設定為 VARIANT_TRUE。 在資料來源上設定該屬性後，取用者會建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者工作階段。 新的工作階段可以讓取用者存取 **IRowsetFastLoad** 介面。  
@@ -99,19 +99,19 @@ ms.locfileid: "63225630"
   
 |屬性識別碼|描述|  
 |-----------------|-----------------|  
-|SSPROP_FASTLOADKEEPIDENTITY|資料行：否<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：維護取用者所提供的識別值。<br /><br /> VARIANT_FALSE：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表中識別資料行的值是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 產生。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會忽略為資料行所系結的任何值。<br /><br /> VARIANT_TRUE：取用者會繫結為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別資料行提供值的存取子。 在接受 NULL 的資料行上不提供識別屬性，所以取用者會在每個 **IRowsetFastLoad::Insert** 呼叫上提供唯一值。|  
-|SSPROP_FASTLOADKEEPNULLS|資料行：否<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：針對具有 DEFAULT 條件約束的資料行維護 NULL。 只對接受 NULL 且套用 DEFAULT 條件約束的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料行造成影響。<br /><br /> VARIANT_FALSE：當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者取用者插入的資料列包含資料行要用的 NULL 時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會插入資料行的預設值。<br /><br /> VARIANT_TRUE：當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者取用者插入的資料列包含資料行要用的 NULL 時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會插入 NULL 做為資料行值。|  
-|SSPROP_FASTLOADOPTIONS|資料行：否<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_BSTR<br /><br /> 預設值：無<br /><br /> 描述：這個屬性與 **bcp** 公用程式的 **-h** "*hint*[,...*n*]" 選項相同。 將資料大量複製到資料表時，可使用下列字串做為選項。<br /><br /> **ORDER**(*column*[**ASC** &#124; **DESC**][,...*n*])：資料在資料檔案中的排序次序。 如果載入的資料檔是依照資料表的叢集索引來排序，將可增進大量複製的效能。<br /><br /> **ROWS_PER_BATCH** = *bb*：每個批次的資料列數（以*bb*為單位）。 伺服器根據 *bb*值，將大量載入最佳化。 根據預設， **ROWS_PER_BATCH**是未知的。<br /><br /> **KILOBYTES_PER_BATCH** = *cc*：每個批次的資料 kb 數（作為 cc）。 根據預設， **KILOBYTES_PER_BATCH**是未知的。<br /><br /> **TABLOCK**：在大量複製作業期間取得資料表層級鎖定。 這個選項會大幅提升效能，因為只在大量複製作業期間保留鎖定，會減少競爭資料表鎖定的情況。 如果資料表沒有索引，且指定了 **TABLOCK**，多個用戶端便可以同時載入這份資料表。 根據預設，鎖定行為由資料表選項 **table lock on bulk load** (大量載入時鎖定資料表) 來決定。<br /><br /> **CHECK_CONSTRAINTS**：在大量複製作業期間會檢查 *table_name* 上的任何條件約束。 依預設，會忽略條件約束。<br /><br /> **FIRE_TRIGGER**： [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用觸發程式的資料列版本設定，並將資料列版本儲存在**tempdb**的版本存放區中。 因此，即使啟用了觸發程序，也可以使用記錄最佳化。 在觸發程序啟用的情況下，您可能需要先擴充 **tempdb** 的大小，然後才能大量匯入具有大量資料列的批次。|  
+|SSPROP_FASTLOADKEEPIDENTITY|資料行：否<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：維護取用者所提供的識別值。<br /><br /> VARIANT_FALSE：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表中識別資料行的值是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 產生。 Native Client OLE DB 提供者會忽略為資料行所系結的任何值 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。<br /><br /> VARIANT_TRUE：取用者會繫結為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別資料行提供值的存取子。 在接受 NULL 的資料行上不提供識別屬性，所以取用者會在每個 **IRowsetFastLoad::Insert** 呼叫上提供唯一值。|  
+|SSPROP_FASTLOADKEEPNULLS|資料行：否<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：針對具有 DEFAULT 條件約束的資料行維護 NULL。 只對接受 NULL 且套用 DEFAULT 條件約束的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料行造成影響。<br /><br /> VARIANT_FALSE：當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者取用者插入的資料列包含資料行要用的 NULL 時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會插入資料行的預設值。<br /><br /> VARIANT_TRUE：當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者取用者插入的資料列包含資料行要用的 NULL 時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會插入 NULL 做為資料行值。|  
+|SSPROP_FASTLOADOPTIONS|資料行：否<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_BSTR<br /><br /> 預設值：無<br /><br /> 描述：這個屬性與 **bcp** 公用程式的 **-h** "*hint*[,...*n*]" 選項相同。 將資料大量複製到資料表時，可使用下列字串做為選項。<br /><br /> **ORDER**(*column*[**ASC** &#124; **DESC**][,...*n*]):資料檔案中資料的排序次序。 如果載入的資料檔是依照資料表的叢集索引來排序，將可增進大量複製的效能。<br /><br /> **ROWS_PER_BATCH** = *bb*：每一批資料的資料列數目 (如 *bb*)。 伺服器根據 *bb*值，將大量載入最佳化。 根據預設，**ROWS_PER_BATCH** 是未知的。<br /><br /> **KILOBYTES_PER_BATCH** = *cc*：每一批資料的 KB 數目 (如 cc)。 根據預設，**KILOBYTES_PER_BATCH** 是未知的。<br /><br /> **TABLOCK**：在大量複製作業期間必須使用資料表層級鎖定。 這個選項會大幅提升效能，因為只在大量複製作業期間保留鎖定，會減少競爭資料表鎖定的情況。 如果資料表沒有索引，且指定了 **TABLOCK**，多個用戶端便可以同時載入這份資料表。 根據預設，鎖定行為由資料表選項 **table lock on bulk load** (大量載入時鎖定資料表) 來決定。<br /><br /> **CHECK_CONSTRAINTS**：在大量複製作業期間會檢查 *table_name* 上的任何條件約束。 依預設，會忽略條件約束。<br /><br /> **FIRE_TRIGGER**：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將資料列版本設定用於觸發程序，並將資料列版本儲存在 **tempdb** 的版本存放區內。 因此，即使啟用了觸發程序，也可以使用記錄最佳化。 在觸發程序啟用的情況下，您可能需要先擴充 **tempdb** 的大小，然後才能大量匯入具有大量資料列的批次。|  
   
 ### <a name="using-file-based-bulk-copy-operations"></a>使用以檔案為基礎的大量複製作業  
- Native Client OLE DB 提供者會執行**IBCPSession**介面，以公開對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以檔案為基礎之大量複製作業的支援。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **IBCPSession** 介面會實作 [IBCPSession::BCPColFmt](../../native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)、[IBCPSession::BCPColumns](../../native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)、[IBCPSession::BCPControl](../../native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)、[IBCPSession::BCPDone](../../native-client-ole-db-interfaces/ibcpsession-bcpdone-ole-db.md)[IBCPSession::BCPExec](../../native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)、[IBCPSession::BCPInit](../../native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)、[IBCPSession::BCPReadFmt](../../native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 和 [IBCPSession::BCPWriteFmt](../../native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 方法。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會執行**IBCPSession**介面，以公開對以檔案為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基礎之大量複製作業的支援。 **IBCPSession** 介面會實作 [IBCPSession::BCPColFmt](../../native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)、[IBCPSession::BCPColumns](../../native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)、[IBCPSession::BCPControl](../../native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)、[IBCPSession::BCPDone](../../native-client-ole-db-interfaces/ibcpsession-bcpdone-ole-db.md)[IBCPSession::BCPExec](../../native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)、[IBCPSession::BCPInit](../../native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)、[IBCPSession::BCPReadFmt](../../native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 和 [IBCPSession::BCPWriteFmt](../../native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 方法。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驅動程式  
- 對於屬於舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC 驅動程式的大量複製作業，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式仍維持相同的支援。 如需有關使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式進行大量複製作業的詳細資訊，請參閱[&#40;ODBC&#41;執行大量複製作業](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 對於屬於舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC 驅動程式的大量複製作業，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式仍維持相同的支援。 如需有關使用 Native Client ODBC 驅動程式進行大量複製作業的詳細資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請參閱[&#40;ODBC&#41;執行大量複製作業](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](sql-server-native-client-features.md)   
- [&#40;OLE DB 的資料來源屬性&#41;](../../native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)   
+ [資料來源屬性 &#40;OLE DB&#41;](../../native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)   
  [資料的大量匯入及匯出 &#40;SQL Server&#41;](../../import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/ibcpsession-ole-db.md)   

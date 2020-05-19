@@ -13,15 +13,15 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d257b6eee1fb3adc0ba611f58a1d5eea5adf3f86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 782b352402e9469fbdb0ce06153d2d80eb9dc84e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013385"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703367"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 大量載入簡介 (SQLXML 4.0) 
   XML 大量載入是獨立的 COM 物件，可讓您將半結構化的 XML 資料載入至 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。  
@@ -45,7 +45,7 @@ ms.locfileid: "66013385"
 ## <a name="streaming-of-xml-data"></a>XML 資料的資料流  
  因為來源 XML 文件可能很大，所以不會將整個文件讀入記憶體來進行大量載入處理， 而是由 XML 大量載入以資料流的方式解譯 XML 資料，再加以讀取。 此公用程式讀取資料時會識別資料庫資料表，從 XML 資料來源產生適當的記錄，然後再將記錄傳送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 進行插入。  
   
- 例如，下列來源 XML 檔是由** \<Customer>** 元素和** \<Order>** 子項目所組成：  
+ 例如，下列來源 XML 檔是由** \< Customer>** 元素和** \< Order>** 子項目所組成：  
   
 ```  
 <Customer ...>  
@@ -56,7 +56,7 @@ ms.locfileid: "66013385"
 ...  
 ```  
   
- 當 XML 大量載入讀取** \<Customer>** 元素時，它會產生 Customertable 的記錄。 當它讀取** \</Customer>** 結束標記時，XML 大量載入會將該記錄插入中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的資料表。 同樣地，當它讀取** \<Order>** 元素時，XML 大量載入會產生 Ordertable 的記錄，然後在讀取** \</order>** 結束標記時，將[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]該記錄插入資料表中。  
+ 當 XML 大量載入讀取** \< Customer>** 元素時，它會產生 Customertable 的記錄。 當它讀取** \< /Customer>** 結束標記時，XML 大量載入會將該記錄插入中的資料表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 同樣地，當它讀取** \< Order>** 元素時，XML 大量載入會產生 Ordertable 的記錄，然後 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在讀取** \< /order>** 結束標記時，將該記錄插入資料表中。  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>交易和非交易 XML 大量載入作業  
  XML 大量載入可以在交易或非交易模式中操作。 如果您是在非交易模式中大量載入，效能通常是最佳的：也就是說，Transaction 屬性設定為 FALSE），而下列其中一項條件成立：  

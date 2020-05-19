@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client, system requirements
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85b00f00e2c557f31a7343a99e1f2592741a6b59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4bc3c47ea6d356279c5502eaf45abc09c307e7cd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637790"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704133"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client 的系統需求
   若要使用 MARS 這類 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料存取功能，您必須已經安裝下列軟體：  
@@ -35,7 +35,7 @@ ms.locfileid: "73637790"
 >  在安裝此軟體之前，請確定已使用管理員權限登入。  
   
 ## <a name="operating-system-requirements"></a>作業系統需求  
- 如需支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的作業系統清單，請參閱[SQL Server Native Client 的支援原則](applications/support-policies-for-sql-server-native-client.md)。  
+ 如需支援 Native Client 的作業系統清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server Native Client 的支援原則](applications/support-policies-for-sql-server-native-client.md)。  
   
 ## <a name="sql-server-requirements"></a>SQL Server 需求  
  若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料，您必須已經安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
@@ -62,7 +62,7 @@ ms.locfileid: "73637790"
   
  沒有 ODBC 的 `DataTypeCompatibility` 控制項。  
   
- IDBInfo：： GetKeywords 一律會傳回對應至連接上之伺服器版本的關鍵字清單，而且不會受到的`DataTypeCompatibility`影響。  
+ IDBInfo：： GetKeywords 一律會傳回對應至連接上之伺服器版本的關鍵字清單，而且不會受到的影響 `DataTypeCompatibility` 。  
   
 |資料類型|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components、MDAC 和<br /><br /> DataTypeCompatibility=80 的 SQL Server Native Client OLE DB 應用程式|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  

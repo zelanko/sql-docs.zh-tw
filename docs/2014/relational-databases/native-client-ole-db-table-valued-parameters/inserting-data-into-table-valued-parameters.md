@@ -9,18 +9,18 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, inserting data into
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c195d2bba2bacfe5ee05ed423dcc2bea1b7581e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f89e074e8431d9d421b9168e43522412c152e55f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231788"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704636"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>將資料插入至資料表值參數
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援兩種模型，供取用者指定資料表值參數資料列的資料：推送模型和提取模型。 您可使用示範提取模型的範例，請參閱 [SQL Server 資料程式設計範例](https://msftdpprodsamples.codeplex.com/)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者支援兩種模型，供取用者指定資料表值參數資料列的資料：推送模型和提取模型。 您可使用示範提取模型的範例，請參閱 [SQL Server 資料程式設計範例](https://msftdpprodsamples.codeplex.com/)。  
   
 > [!NOTE]  
 >  資料表值參數資料行在所有資料列中都必須有非預設值，或在所有資料列中都必須有預設值。 在某些資料列中有預設值，而在其他資料列中則沒有預設值是不可能的。 因此，在資料表值參數繫結中，資料表值參數資料列集資料行資料所允許的唯一狀態值為 DBSTATUS_S_ISNULL 和 DBSTATUS_S_OK。 DBSTATUS_S_DEFAULT 將會導致失敗，而繫結的狀態值將會設定為 DBSTATUS_E_BADSTATUS。  
@@ -34,7 +34,7 @@ ms.locfileid: "75231788"
   
  如果使用 IColumnsRowset::GetColumnsRowset，則會在產生之資料行的資料列集物件上，進行 IRowset::GetNextRows、IRowset::GetData 和 IRowset::ReleaseRows 方法的後續呼叫。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者開始執行命令之後，就會從這個資料表值參數資料列集物件提取資料表值參數值，並將其傳送至伺服器。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者開始執行命令之後，就會從這個資料表值參數資料列集物件提取資料表值參數值，並將其傳送至伺服器。  
   
  發送模型需要取用者的最少工作，但是使用的記憶體比提取模型更多，因為所有資料表值參數資料在執行時間都必須位於記憶體中。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "75231788"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會從取用者資料列集物件一次讀取一或多個資料列，以支援資料表值參數中的資料流行為。 例如，使用者在磁碟 (不在記憶體) 上可能有資料表值參數資料列集資料，而且可能會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者需要時，從磁碟實作功能來讀取資料。  
   
- 取用者會在資料表值參數資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列集物件上使用 IAccessor：： CreateAccessor，將其資料格式傳達給 Native Client OLE DB 提供者。 從取用者緩衝區讀取資料時，提供者會確認透過至少一個存取子控制代碼可以取得所有可寫入，而且非預設的資料行，並使用對應的控制代碼來讀取資料行資料。 為避免模稜兩可的情況，在資料表值參數資料列集資料行和繫結之間應該有一對一的對應。 相同資料行的重複繫結將會導致錯誤。 同時，每個存取子依序都應該有 DBBindings 的 *iOrdinal* 成員。 IRowset::GetData 的呼叫將會與每個資料列的存取子數目一樣多，而且呼叫的順序將會以 *iOrdinal* 值的順序為基礎 (從低到高)。  
+ 取用者會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在資料表值參數資料列集物件上使用 IAccessor：： CreateAccessor，將其資料格式傳達給 Native Client OLE DB 提供者。 從取用者緩衝區讀取資料時，提供者會確認透過至少一個存取子控制代碼可以取得所有可寫入，而且非預設的資料行，並使用對應的控制代碼來讀取資料行資料。 為避免模稜兩可的情況，在資料表值參數資料列集資料行和繫結之間應該有一對一的對應。 相同資料行的重複繫結將會導致錯誤。 同時，每個存取子依序都應該有 DBBindings 的 *iOrdinal* 成員。 IRowset::GetData 的呼叫將會與每個資料列的存取子數目一樣多，而且呼叫的順序將會以 *iOrdinal* 值的順序為基礎 (從低到高)。  
   
  提供者應該實作透過資料表值參數資料列集物件所公開的大部分介面。 取用者將會以最少的介面 (IRowset) 實作資料列集物件。 由於未公開彙總的緣故，剩餘的強制資料列集物件介面將會透過資料表值參數資料列集物件實作。  
   
