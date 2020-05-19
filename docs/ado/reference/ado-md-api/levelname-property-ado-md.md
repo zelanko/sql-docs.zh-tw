@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - LevelName property [ADO MD]
 ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e50793691db8a67eb0008dc186945ec82935efec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 65905444e291a602e0ff0d1d76f4208bbe436a79
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949582"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753419"
 ---
 # <a name="levelname-property-ado-md"></a>LevelName 屬性 (ADO MD)
 表示[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)的層級名稱。  

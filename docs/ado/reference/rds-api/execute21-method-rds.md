@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8434345dcc4436865e4981a19ef1164d35a852f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e7f006d0a833b8c370e6d80045a873c4ca2b16b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964206"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752641"
 ---
 # <a name="execute21-method-rds"></a>Execute21 方法 (RDS)
 執行要求，並建立 ADO 記錄以用於 ADO 2.1。  
@@ -41,7 +41,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  字串會識別要與此執行搭配使用的處理常式。 此字串包含兩個部分。 第一個部分包含要使用之處理常式的名稱（ProgID）。 字串的第二個部分包含要傳遞至處理常式的引數。 引數字串的解讀方式是處理常式特有的。 這兩個部分會以字串中的第一個逗號實例分隔（雖然引數字串可以包含其他逗號）。 引數是選擇性的。  
   
  *QueryString*  
- 在連接字串中識別的 OLE DB 提供者所支援之命令語言中的命令。 對於以 SQL 為基礎的提供者，它[!INCLUDE[tsql](../../../includes/tsql-md.md)]可能包含 command 語句，但對於非 SQL 提供者（例如 MSDataShape），這可能不是[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢語句。  
+ 在連接字串中識別的 OLE DB 提供者所支援之命令語言中的命令。 對於以 SQL 為基礎的提供者，它可能包含 [!INCLUDE[tsql](../../../includes/tsql-md.md)] command 語句，但對於非 SQL 提供者（例如 MSDataShape），這可能不是 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢語句。  
   
  此外，如果正在使用處理程式（而且強烈建議使用處理程式），則處理常式可以改變或取代此處所指定的值。 例如，處理常式通常會以其 .ini 檔案中的查詢字串來取代*QueryString* 。 預設會使用 Msdfmap .ini 檔案。  
   

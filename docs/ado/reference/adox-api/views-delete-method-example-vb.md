@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Delete method [ADOX]
 ms.assetid: 17df2a83-4166-4df8-8c17-0a33aaac8582
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8077e22b2bdbd9fe55cca1ea7306443ee9d61ce7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 14328c2db8bf15f98a751cd6a43d31e7489a6c63
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964747"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752951"
 ---
 # <a name="views-delete-method-example-vb"></a>Views Delete 方法範例 (VB)
 下列程式碼顯示如何使用[delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法，從目錄中刪除視圖。  

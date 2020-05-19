@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Users collection [ADOX]
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a6146a942e572e28692ceaafd77d6958cdab9dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4befb68c861edee0f5c1423e86ee1fb21067c2a5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964956"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753174"
 ---
 # <a name="users-collection-adox"></a>Users 集合 (ADOX)
 包含[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)或[群組](../../../ado/reference/adox-api/group-object-adox.md)的所有預存[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件。  

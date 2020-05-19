@@ -13,14 +13,14 @@ helpviewer_keywords:
 - FetchOptions property [ADO], VBScript example
 - ExecuteOptions property [ADO]
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 782b76ca40418cd7fb8313c2b22da3a6ddd3978a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c1aae50a774818c5d2cc4c719a41760a486888bb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964196"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752552"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 和 FetchOptions 屬性範例 (VBScript)
 > [!IMPORTANT]

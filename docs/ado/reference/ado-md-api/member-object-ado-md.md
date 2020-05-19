@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Member object [ADO MD], members
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d4d512d651c8162124c935ffdb260c4abe4ecb14
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949491"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753202"
 ---
 # <a name="member-object-ado-md"></a>Member 物件 (ADO MD)
 代表 cube 中層級的成員、層級成員的子系，或沿著資料格集軸之位置的成員。  
@@ -68,7 +68,7 @@ ms.locfileid: "67949491"
   
  **Properties**集合包含提供者提供的屬性。 下表列出可能可用的屬性。 實際的屬性清單可能會根據提供者的執行而有所不同。 如需可用屬性的完整清單，請參閱提供者的檔。  
   
-|名稱|描述|  
+|Name|描述|  
 |----------|-----------------|  
 |CatalogName|這個 cube 所屬的目錄名稱。|  
 |ChildrenCardinality|成員擁有的子系數目。|  

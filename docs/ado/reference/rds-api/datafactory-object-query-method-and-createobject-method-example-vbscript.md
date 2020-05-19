@@ -14,20 +14,20 @@ helpviewer_keywords:
 - CreateObject method [ADO], VBScript example
 - Query method [ADO], VBScript example
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 909406b39a8acdd5e598b56b300124abf7bb1170
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fa54e59af5187bf9b4daaa898bbaabfa614a4286
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964370"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752643"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory 物件、Query 方法和 CreateObject 方法範例 (VBScript)
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 這個範例會使用 RDS 的[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法來建立[RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件[。[空間](../../../ado/reference/rds-api/dataspace-object-rds.md)物件]。 若要測試此範例，請將\<此程式碼剪下並貼\<到本文>，並在一般 HTML 檔案中/Body> 標記，並將其命名為**DataFactoryVBS. asp**。 ASP 腳本會識別您的伺服器。  
+ 這個範例會使用 RDS 的[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法來建立[RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件[。[空間](../../../ado/reference/rds-api/dataspace-object-rds.md)物件]。 若要測試此範例，請將此程式碼剪下並貼到本文>，並 \< \< 在一般 HTML 檔案中/Body> 標記，並將其命名為**DataFactoryVBS. asp**。 ASP 腳本會識別您的伺服器。  
   
 ```  
 <!-- BeginDataFactoryVBS -->  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Cancel method [ADO], VBScript example
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 764a99faf40450bfd550dfe3f96789e705e8624a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7c71b52508861560571131e812e14393b10339ea
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964722"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752902"
 ---
 # <a name="cancel-method-example-vbscript"></a>Cancel 方法範例 (VBScript)
 > [!IMPORTANT]

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - LevelDepth property [ADO MD]
 ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a1e62432f5d5d91cbce2079eb161a152773ed1af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1daadfc3839bffdfcfd6f085e2cf4900b8251044
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949594"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753448"
 ---
 # <a name="leveldepth-property-ado-md"></a>LevelDepth 屬性 (ADO MD)
 指出階層根和[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)之間的層級數目。  

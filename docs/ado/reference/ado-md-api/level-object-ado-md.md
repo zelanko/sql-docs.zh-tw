@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Level object [ADO MD]
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e1ee7ad05f05d2eb77d7d705200c52ddf3f01146
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949606"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753851"
 ---
 # <a name="level-object-ado-md"></a>Level 物件 (ADO MD)
 包含一組成員，其中每一個都在階層內具有相同的次序。  
@@ -42,7 +42,7 @@ ms.locfileid: "67949606"
   
  **Properties**集合包含提供者提供的屬性。 下表列出可能可用的屬性。 實際的屬性清單可能會根據提供者的執行而有所不同。 如需可用屬性的完整清單，請參閱提供者的檔。  
   
-|名稱|描述|  
+|Name|描述|  
 |----------|-----------------|  
 |CatalogName|這個 cube 所屬的目錄名稱。|  
 |CubeName|Cube 的名稱。|  
