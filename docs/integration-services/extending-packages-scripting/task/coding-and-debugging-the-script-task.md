@@ -38,7 +38,7 @@ ms.locfileid: "71296921"
 ## <a name="script-task-development-environment"></a>指令碼工作開發環境  
  指令碼工作使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 作為指令碼本身的開發環境。  
   
- 指令碼是以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 撰寫。 您可以在 [指令碼工作編輯器]  中設定 [ScriptLanguage]  屬性來指定指令碼語言。 如果想要使用其他的程式語言，可以用您所選的語言開發自訂組件，然後在指令碼工作中，從程式碼呼叫其功能。  
+ 指令碼是以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 撰寫。 您可以在 [指令碼工作編輯器] 中設定 [ScriptLanguage] 屬性來指定指令碼語言。 如果想要使用其他的程式語言，可以用您所選的語言開發自訂組件，然後在指令碼工作中，從程式碼呼叫其功能。  
   
  您在指令碼工作中建立的指令碼會儲存在封裝定義中， 而沒有個別的指令碼檔案。 因此，使用指令碼工作並不會影響封裝部署。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "71296921"
   
 -   當為 [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] 程式語言設定指令碼工作時，**ScriptMain** 類別具有公用副程式：**Main**。 **ScriptMain.Main** 副程式是執行階段在您執行指令碼工作時所呼叫的方法。  
   
-     在新指令碼的 **Main** 副程式中的唯一程式碼預設是 `Dts.TaskResult = ScriptResults.Success` 這一行。 這行會通知執行階段，工作的作業已成功。 **從指令碼工作中傳回結果**會討論 [Dts.TaskResult](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md) 屬性。  
+     在新指令碼的 **Main** 副程式中的唯一程式碼預設是 `Dts.TaskResult = ScriptResults.Success` 這一行。 這行會通知執行階段，工作的作業已成功。 [從指令碼工作中傳回結果](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)會討論 **Dts.TaskResult** 屬性。  
   
 -   針對 Visual C# 程式設計語言設定指令碼工作時，**ScriptMain** 類別具有公用方法 **Main**。 此方法是在指令碼工作執行時呼叫。  
   

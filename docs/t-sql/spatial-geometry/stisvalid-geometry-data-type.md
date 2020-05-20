@@ -42,7 +42,7 @@ ms.locfileid: "68030869"
  CLR 傳回類型：**SqlBoolean**  
   
 ## <a name="remarks"></a>備註  
- 可以叫用 **STGeometryType()** 來判斷 [geometry](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) 執行個體的 OGC 類型。  
+ 可以叫用 [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) 來判斷 **geometry** 執行個體的 OGC 類型。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只會產生有效的 **geometry** 執行個體，但是允許儲存和擷取無效的執行個體。 可以使用 `MakeValid()` 方法來擷取表示任何無效例項之相同點組的有效例項。  
   

@@ -126,7 +126,7 @@ ms.locfileid: "74056104"
   
  **若要使用 Transact-SQL 將屬性加入至搜尋屬性清單**  
   
- 搭配您以[尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼](../../t-sql/statements/alter-search-property-list-transact-sql.md)一文中描述的其中一種方法所取得的值，使用 [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md) 陳述式。  
+ 搭配您以[尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)一文中描述的其中一種方法所取得的值，使用 [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) 陳述式。  
   
  下列範例會示範將屬性加入至搜尋屬性清單時，這些值的使用方式：  
   
@@ -139,7 +139,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **若要在 Management Studio 中將屬性加入至搜尋屬性清單**  
   
- 使用 [搜尋屬性清單屬性]  對話方塊即可加入或移除搜尋屬性。 您可以在 [物件總管] 中相關資料庫的 [儲存體]  節點底下找到 [搜尋屬性清單]  。  
+ 使用 [搜尋屬性清單屬性]  對話方塊即可加入或移除搜尋屬性。 您可以在 [物件總管] 中相關資料庫的 [儲存體] 節點底下找到 [搜尋屬性清單]。  
   
 ###  <a name="associating-a-search-property-list-with-a-full-text-index"></a><a name="associating"></a> 將搜尋屬性清單與全文檢索索引產生關聯  
  若要讓全文檢索索引支援針對已在搜尋屬性清單中註冊的屬性進行屬性搜尋，您必須將搜尋屬性清單與索引產生關聯，然後重新擴展索引。 重新擴展全文檢索索引會針對每個註冊屬性中的搜尋詞彙建立屬性特有的索引項目。  
@@ -154,7 +154,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **若要使用 Management Studio 讓搜尋屬性清單與全文檢索索引產生關聯**  
   
- 在 [全文檢索索引屬性]  對話方塊的 [一般]  頁面上，指定 [搜尋屬性清單]  的值。  
+ 在 [全文檢索索引屬性] 對話方塊的 [一般] 頁面上，指定 [搜尋屬性清單] 的值。  
   
 ##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a> 使用 CONTAINS 查詢搜索屬性  
  屬性範圍之全文檢索查詢的基本 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 語法如下：  

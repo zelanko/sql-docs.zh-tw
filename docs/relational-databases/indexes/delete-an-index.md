@@ -85,7 +85,7 @@ ms.locfileid: "68107198"
   
 7.  按一下 [關閉]  。  
   
-8.  在 [檔案]  功能表上，選取 [儲存 **table_name**]  。  
+8.  在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

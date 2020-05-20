@@ -20,7 +20,7 @@ ms.locfileid: "75306789"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 屬性 (服務索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  您可以使用 [MSSQLSERVER 屬性]  對話方塊的 [服務]  索引標籤來檢視或指定下列選項。  
+  您可以使用 [MSSQLSERVER 屬性] 對話方塊的 [服務] 索引標籤來檢視或指定下列選項。  
   
 ## <a name="options"></a>選項。  
  **二進位路徑**  

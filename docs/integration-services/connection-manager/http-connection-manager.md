@@ -56,7 +56,7 @@ ms.locfileid: "71294414"
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>。  
   
 ## <a name="http-connection-manager-editor-server-page"></a>HTTP 連接管理員編輯器 (伺服器頁面)
-  使用 [HTTP 連接管理員編輯器]  對話方塊的 [伺服器]  索引標籤指定各項屬性，例如 URL 和安全性認證，以設定 HTTP 連接管理員。 HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。 設定 HTTP 連接管理員之後，可以同時測試連接。  
+  使用 [HTTP 連接管理員編輯器] 對話方塊的 [伺服器] 索引標籤指定各項屬性，例如 URL 和安全性認證，以設定 HTTP 連接管理員。 HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。 設定 HTTP 連接管理員之後，可以同時測試連接。  
   
 > [!IMPORTANT]  
 >  HTTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
@@ -67,7 +67,7 @@ ms.locfileid: "71294414"
  **伺服器 URL**  
  輸入伺服器的 URL。  
   
- 如果您計劃使用 [Web 服務工作編輯器]  中 [一般]  頁面上的 [下載 WSDL]  按鈕來下載 WSDL 檔案，請輸入 WSDL 檔案的 URL。 這個 URL 需以 "?wsdl" 結尾。  
+ 如果您計劃使用 [Web 服務工作編輯器] 中 [一般] 頁面上的 [下載 WSDL] 按鈕來下載 WSDL 檔案，請輸入 WSDL 檔案的 URL。 這個 URL 需以 "?wsdl" 結尾。  
   
  **使用認證**  
  指定 HTTP 連接管理員是否使用使用者的安全性認證進行驗證。  

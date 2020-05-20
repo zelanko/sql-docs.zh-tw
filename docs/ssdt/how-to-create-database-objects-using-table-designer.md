@@ -22,7 +22,7 @@ ms.locfileid: "75241497"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>如何：使用資料表設計工具建立資料庫物件
 
-[SQL Server 物件總管]  中新的 [SQL Server]  節點不僅看上去非常類似於 SSMS，還能讓您透過作用有如 SSMS 對應介面的關聯式功能表建立新物件。  
+[SQL Server 物件總管] 中新的 [SQL Server] 節點不僅看上去非常類似於 SSMS，還能讓您透過作用有如 SSMS 對應介面的關聯式功能表建立新物件。  
   
 例如，您可以在 [資料庫]  節點底下建立新的資料庫。 您也可以選取特定的資料庫，然後使用新的資料表設計工具，快速建立或編輯資料表定義及其相關的程式設計物件。 從資料表設計工具中，您可以切換到指令碼窗格，讓您能夠直接編輯定義這個資料表的指令碼。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "75241497"
     CREATE TABLE [dbo].[Suppliers]  
     ```  
   
-4.  在資料行格線中按一下空的資料列，將新的資料列加入資料表中。  分別為 [名稱]  和 [資料類型]  欄位輸入 **CompanyName** 和 **nvarchar (128)** ，並取消選取 [允許 Null]  欄位。 請注意，按 TAB 離開欄位時指令碼窗格會隨即更新。  
+4.  在資料行格線中按一下空的資料列，將新的資料列加入資料表中。  分別為 [名稱] 和 [資料類型] 欄位輸入 **CompanyName** 和 **nvarchar (128)** ，並取消選取 [允許 Null] 欄位。 請注意，按 TAB 離開欄位時指令碼窗格會隨即更新。  
   
-5.  加入其他新的資料行。 分別為 [名稱]  和 [資料類型]  欄位輸入 **Address** 和 **nvarchar (MAX)** ，並取消選取 [允許 Null]  欄位。  
+5.  加入其他新的資料行。 分別為 [名稱] 和 [資料類型] 欄位輸入 **Address** 和 **nvarchar (MAX)** ，並取消選取 [允許 Null] 欄位。  
   
     > [!WARNING]  
     > 從連接的資料庫編輯物件時，請不要將這些物件儲存到本機磁碟機。 若要將您的變更正確地儲存到資料庫，請遵循後續程序[如何：使用 Power Buffer 更新連接的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)中的步驟。  

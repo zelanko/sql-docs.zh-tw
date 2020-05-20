@@ -34,7 +34,7 @@ ms.locfileid: "78335752"
 
 - 若要解除安裝 SQL Server，您必須是具備以服務登入權限的本機管理員。 
 - 若您的電腦有「最低」  實體記憶體需求，請將分頁檔增加至實體記憶體的兩倍。 虛擬記憶體不足可能會造成 SQL Server 移除不完全。 
-- 在具備多個 SQL Server 執行個體的系統上，SQL Server 瀏覽器服務只會在移除最後一個 SQL Server 執行個體時解除安裝一次。 SQL Server 瀏覽器服務可以在 [控制台]  中的 [程式和功能]  中手動移除。 
+- 在具備多個 SQL Server 執行個體的系統上，SQL Server 瀏覽器服務只會在移除最後一個 SQL Server 執行個體時解除安裝一次。 SQL Server 瀏覽器服務可以在 [控制台] 中的 [程式和功能] 中手動移除。 
 - 解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會刪除在安裝程序期間所新增的 tempdb 資料檔案。 如果系統資料庫目錄中有名稱模式為 tempdb_mssql_*.ndf 的檔案，則會刪除這些檔案。 
   
 

@@ -45,7 +45,7 @@ ms.locfileid: "71286852"
   
 1.  建立名為 `PrinterList` 且類型為 **Object** 的變數。  
   
-2.  在 [指令碼工作編輯器]  的 [指令碼]  頁面上，將此變數加入 ReadWriteVariables 屬性。  
+2.  在 [指令碼工作編輯器] 的 [指令碼] 頁面上，將此變數加入 ReadWriteVariables 屬性。  
   
 3.  在指令碼專案中，加入 **System.Drawing** 命名空間的參考。  
   

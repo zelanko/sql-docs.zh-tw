@@ -51,7 +51,7 @@ GO
 ## <a name="configuring"></a>進行設定  
  設為 1 時， **default trace enabled** 選項會啟用 **「預設的追蹤」** 功能。 這個選項的預設值是 1 (ON)。 設為 0 則會關閉追蹤功能。  
   
- **default trace enabled** 屬於進階選項。 如果您要使用 **sp_configure** 系統預存程序來變更設定，只有在 [顯示進階選項]  設定為 1 時，才能變更 [預設追蹤已啟用]  選項。 設定會立即生效，伺服器不必重新啟動。  
+ **default trace enabled** 屬於進階選項。 如果您要使用 **sp_configure** 系統預存程序來變更設定，只有在 [顯示進階選項] 設定為 1 時，才能變更 [預設追蹤已啟用] 選項。 設定會立即生效，伺服器不必重新啟動。  
   
 ## <a name="see-also"></a>另請參閱  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   

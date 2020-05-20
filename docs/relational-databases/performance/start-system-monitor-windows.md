@@ -26,7 +26,7 @@ ms.locfileid: "68113306"
   
 ## <a name="start-system-monitor-in-windows"></a>在 Windows 中啟動系統監視器  
   
-在 [開始]  功能表中指向 [執行]  ，在 [執行]  對話方塊中鍵入 **perfmon**，然後選取 [確定]  。  
+在 [開始] 功能表中指向 [執行]，在 [執行] 對話方塊中鍵入 **perfmon**，然後選取 [確定]。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行系統監視器](../../relational-databases/performance-monitor/run-system-monitor.md)  

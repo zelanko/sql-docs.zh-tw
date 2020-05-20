@@ -143,7 +143,7 @@ ms.locfileid: "71291199"
  使用 [ [設定錯誤輸出](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ] 對話方塊，即可指定造成錯誤之資料列的錯誤處理選項。  
   
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>詞彙查閱轉換編輯器 (進階索引標籤)
-  使用 [詞彙查閱轉換編輯器]  對話方塊的 [進階]  索引標籤，即可指定查閱是否應區分大小寫。  
+  使用 [詞彙查閱轉換編輯器] 對話方塊的 [進階] 索引標籤，即可指定查閱是否應區分大小寫。  
   
 ### <a name="options"></a>選項。  
  **使用區分大小寫的詞彙查閱**  

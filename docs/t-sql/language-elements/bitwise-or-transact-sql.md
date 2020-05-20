@@ -45,7 +45,7 @@ expression | expression
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 這是整數資料類型類別目錄或是 [bit](../../t-sql/language-elements/expressions-transact-sql.md)、**binary** 或 **varbinary** 資料類型的任何有效**運算式**。 *expression* 會被視為適用於位元運算的二進位數字。  
+ 這是整數資料類型類別目錄或是 **bit**、**binary** 或 **varbinary** 資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *expression* 會被視為適用於位元運算的二進位數字。  
   
 > [!NOTE]  
 >  在位元運算中，只能有一個 *expression* 是 **binary** 或 **varbinary** 資料類型。  

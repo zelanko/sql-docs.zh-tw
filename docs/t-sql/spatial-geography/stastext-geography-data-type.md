@@ -44,7 +44,7 @@ ms.locfileid: "68042505"
  CLR 傳回類型：**SqlChars**  
   
 ## <a name="remarks"></a>備註  
- 可以叫用 **STGeometryType()** 來判斷 [geography](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 執行個體的 OGC 型別。  
+ 可以叫用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 來判斷 **geography** 執行個體的 OGC 型別。  
   
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，伺服器上傳回的可能結果集已擴充到 **FullGlobe** 執行個體。  
   

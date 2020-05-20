@@ -47,7 +47,7 @@ ms.locfileid: "75558108"
   
 1.  在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體、執行個體物件、資料庫或資料庫物件，然後按一下 [Facet]  。  
   
-2.  在 [檢視 Facet - **物件名稱**]  對話方塊的 [Facet]  清單中，選取要檢視其屬性的 Facet。 如需有關此對話方塊可用之選項的詳細資訊，請參閱＜ [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md)＞。  
+2.  在 [檢視 Facet - _物件名稱_] 對話方塊的 [Facet] 清單中，選取要檢視其屬性的 Facet。 如需有關此對話方塊可用之選項的詳細資訊，請參閱＜ [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md)＞。  
   
 3.  完成後，請按一下 **[確定]** 。  
   

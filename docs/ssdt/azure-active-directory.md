@@ -29,7 +29,7 @@ SQL Server Data Tools (SSDT) 提供數個 [Azure Active Directory (Azure AD)](ht
 
 #### <a name="which-azure-sql-products"></a>哪些 Azure SQL 產品？
 
-本文討論 [Azure 雲端](https://azure.microsoft.com/)中適用於下列「Azure SQL 產品」  清單的 Azure AD：
+本文討論 [Azure 雲端](https://azure.microsoft.com/)中適用於下列「Azure SQL 產品」清單的 Azure AD：
 
 - Azure SQL Database
 - Azure SQL 資料倉儲
@@ -78,7 +78,7 @@ MFA 強制執行是由 Azure AD 透過此額外的 MFA 快顯視窗來提供。
 ## <a name="known-issues-and-limitations"></a>已知問題和限制
 
 - 只有在連線到本文開頭所列的 Azure SQL 產品時，才支援「Active Directory 互動式驗證」  。 SQL Server (內部部署或 VM 上) 不提供支援。
-- [伺服器總管]  的連線對話方塊中不支援「Active Directory 互動式驗證」  。 您必須搭配使用 SSDT 和 [SQL Server 物件總管]  來連線。
+- [伺服器總管] 的連線對話方塊中不支援「Active Directory 互動式驗證」。 您必須搭配使用 SSDT 和 [SQL Server 物件總管]  來連線。
 - 與目前登入 Visual Studio 帳戶的單一登入整合不支援 SSDT。
 - 在 Visual Studio 安裝期間安裝到 Extensions 目錄的 SQLPackage.exe，並不是要從該位置使用。 若要以 Azure AD 使用 SQLPackage.exe，請前往 [https://www.microsoft.com/download/details.aspx?id=55088](https://www.microsoft.com/download/details.aspx?id=55088) 
 - Azure AD 驗證不支援 SSDT 資料比較。  

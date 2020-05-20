@@ -134,7 +134,7 @@ ms.locfileid: "77081677"
 ##  <a name="parameters"></a><a name="Parameters"></a> 參數  
  系統不會分析查詢來識別參數。  
   
- 若要加入參數，您必須透過 [[資料集屬性](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)] 對話方塊上的 [參數]  頁面手動建立參數。  
+ 若要加入參數，您必須透過 [[資料集屬性](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)] 對話方塊上的 [參數] 頁面手動建立參數。  
   
 ##  <a name="remarks"></a><a name="Remarks"></a> 備註  
  XML 資料延伸模組支援從表格式而非階層式 XML 資料進行報告的功能。 如需詳細資訊，請參閱[從外部資料來源新增資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)。  

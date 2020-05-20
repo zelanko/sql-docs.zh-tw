@@ -28,7 +28,7 @@ SQL Server Agent 延伸模組 (預覽) 是用於管理 SQL Agent 作業和設定
 
 ## <a name="install-the-sql-server-agent-extension"></a>安裝 SQL Server Agent 延伸模組
 
-1. 若要開啟延伸模組管理員並存取可用的延伸模組，請選取延伸模組圖示，或選取 [檢視]  功能表中的 [延伸模組]  。
+1. 若要開啟延伸模組管理員並存取可用的延伸模組，請選取延伸模組圖示，或選取 [檢視] 功能表中的 [延伸模組]。
 2. 選取可用的延伸模組，檢視詳細資料。
 
    ![安裝代理程式](media/extensions/sql-server-agent-extension/install-sql-agent.png)

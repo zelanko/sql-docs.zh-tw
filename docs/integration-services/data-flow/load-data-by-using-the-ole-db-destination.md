@@ -40,7 +40,7 @@ ms.locfileid: "71292347"
   
 5.  按兩下 OLE DB 目的地。  
   
-6.  在 [連接管理員]  頁面的 [OLE DB 目的地編輯器]  對話方塊中，選取現有的 OLE DB 連接管理員，或按一下 [新增]  以新建連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+6.  在 [連接管理員] 頁面的 [OLE DB 目的地編輯器] 對話方塊中，選取現有的 OLE DB 連接管理員，或按一下 [新增] 以新建連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
 7.  選取資料存取方法：  
   

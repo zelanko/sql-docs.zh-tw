@@ -82,7 +82,7 @@ ms.locfileid: "67909518"
   
 7.  按一下 [關閉]  。  
   
-8.  在 [檔案]  功能表上，選取 [儲存 **table_name**]  。  
+8.  在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>使用物件總管指定索引的填滿因數  
   

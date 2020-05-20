@@ -29,7 +29,7 @@ ms.locfileid: "75755824"
   
 1.  在 Visual Studio 中，請確定已開啟 [SQL Server 物件總管]  。 如果沒有開啟，請按一下 [檢視]  功能表，然後選取 [SQL Server 物件總管]  。  
   
-2.  以滑鼠右鍵按一下 [SQL Server 物件總管]  中的 [SQL Server]  節點，然後選取 [加入 SQL Server]  。  
+2.  以滑鼠右鍵按一下 [SQL Server 物件總管] 中的 [SQL Server] 節點，然後選取 [加入 SQL Server]。  
   
 3.  在 **[連接至伺服器]** 對話方塊的 **[伺服器名稱]** 方塊中，輸入要連接的伺服器執行個體名稱，提供您的認證，然後按一下 **[連接]** 。  
   

@@ -192,7 +192,7 @@ GO
  FileTable 所採用的大部分鎖定都會對應至應用程式所開啟的檔案。  
   
  **識別開啟的檔案和相關聯的鎖定**  
- 您可以將 **sys.dm_tran_locks &#40;Transact-SQL&#41;** 動態管理檢視中的 [request_owner_id](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) 欄位與 **sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;** 中的 [fcb_id](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) 欄位聯結。 在某些情況下，鎖定不會對應至單一開啟檔案控制代碼。  
+ 您可以將 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) 動態管理檢視中的 **request_owner_id** 欄位與 [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) 中的 **fcb_id** 欄位聯結。 在某些情況下，鎖定不會對應至單一開啟檔案控制代碼。  
   
 ```sql  
 SELECT opened_file_name  

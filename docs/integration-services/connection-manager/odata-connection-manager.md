@@ -30,7 +30,7 @@ ms.locfileid: "74542178"
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>將 OData 連接管理員加入 SSIS 封裝中  
  您可以使用三種方式，將新的 OData 連線管理員新增至 SSIS 套件：  
   
--   按一下 [OData 來源編輯器]  中的 [新增...]  按鈕  
+-   按一下 [OData 來源編輯器] 中的 [新增...] 按鈕  
   
 -   在 **方案總管** 中，以滑鼠右鍵按一下 [連線管理員]  資料夾，然後按一下 [新增連線管理員]  。 針對 [連線管理員類型]  選取 [ODATA]  。  
   

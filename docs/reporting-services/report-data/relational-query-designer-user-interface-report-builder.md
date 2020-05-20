@@ -85,7 +85,7 @@ ms.locfileid: "73593383"
 #### <a name="group-and-aggregate"></a>群組和彙總  
  查詢包含大型資料表的資料庫可能會傳回對報表而言並不實用的大量資料列，並且對傳輸大量資料的網路以及處理報表的報表伺服器造成效能上的影響。 若要限制資料列的數目，查詢中可以包含 SQL 彙總，用來摘要資料庫伺服器上的資料。 SQL 彙總與用戶端彙總不同，後者是在轉譯報表時套用。  
   
- 彙總會提供資料摘要，而資料會進行分組，以支援傳遞摘要資料的彙總。 當您在查詢中使用彙總時，查詢傳回的其他欄位會自動分組，且查詢會包含 SQL GROUP BY 子句。 您可以僅使用 [群組和彙總]  清單中的 [群組依據]  選項摘要資料，而不新增彙總。 許多彙總會包含使用 DISTINCT 關鍵字的版本。 包含 DISTINCT 可消除重複的值。  
+ 彙總會提供資料摘要，而資料會進行分組，以支援傳遞摘要資料的彙總。 當您在查詢中使用彙總時，查詢傳回的其他欄位會自動分組，且查詢會包含 SQL GROUP BY 子句。 您可以僅使用 [群組和彙總] 清單中的 [群組依據] 選項摘要資料，而不新增彙總。 許多彙總會包含使用 DISTINCT 關鍵字的版本。 包含 DISTINCT 可消除重複的值。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，而 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 使用 [!INCLUDE[DWsql](../../includes/dwsql-md.md)]。 SQL 語言的這兩種方言都支援查詢設計工具提供的子句、關鍵字和彙總。  
   

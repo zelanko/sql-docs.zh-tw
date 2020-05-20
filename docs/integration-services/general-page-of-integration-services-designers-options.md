@@ -24,7 +24,7 @@ ms.locfileid: "71286300"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  在 [選項]  對話方塊上使用 [Integration Services 設計師]  頁面上的 [一般]  頁面，指定用來載入、顯示及升級封裝的選項。  
+  在 [選項] 對話方塊上使用 [Integration Services 設計師] 頁面上的 [一般] 頁面，指定用來載入、顯示及升級封裝的選項。  
   
  若要開啟 [一般]  頁面，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [工具]  功能表上按一下 [選項]  ，然後展開 [商業智慧設計師]  ，再選取 [Integration Services 設計師]  。  
   

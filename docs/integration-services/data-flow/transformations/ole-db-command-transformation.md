@@ -70,7 +70,7 @@ ms.locfileid: "71291241"
   
 6.  在 **[連接管理員]** 索引標籤上，選取 **[連接管理員]** 清單中的 OLE DB 連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
-7.  按一下 [元件屬性]  索引標籤，然後按一下 [SqlCommand]  方塊中的省略符號按鈕 **(...)** 。  
+7.  按一下 [元件屬性] 索引標籤，然後按一下 [SqlCommand] 方塊中的省略符號按鈕 **(...)** 。  
   
 8.  在 [字串值編輯器]  中，輸入參數化 SQL 陳述式，並使用問號 (?) 作為每個參數的參數標記。  
   

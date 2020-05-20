@@ -26,7 +26,7 @@ SQL Server 2017 引進可在 Kubernetes 上部署的 Docker 映像。 您可以�
 
 ## <a name="container-with-sql-server-instance-on-kubernetes"></a>在 Kubernetes 上具有 SQL Server 執行個體的容器
 
-Kubernetes 1.6 和更新版本支援[儲存體類別  ](https://kubernetes.io/docs/concepts/storage/storage-classes/)、[持續性磁碟區宣告  ](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)，以及[Azure 磁片磁碟區類型  ](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)。 
+Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs/concepts/storage/storage-classes/)、[持續性磁碟區宣告](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)，以及[Azure 磁片磁碟區類型](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)。 
 
 在此設定中，Kubernetes 扮演容器協調者的角色。 
 

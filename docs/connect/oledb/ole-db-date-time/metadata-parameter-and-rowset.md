@@ -68,7 +68,7 @@ ms.locfileid: "67995093"
   
  已忽略 *bPrecision* 參數。  
   
- 當傳送資料到伺服器時，"DBPARAMFLAGS_SS_ISVARIABLESCALE" 會被忽略。 應用程式可以使用提供者特定的類型名稱 "**datetime**" 和 "**smalldatetime**" 來強制使用舊版的表格式資料流 (TDS) 類型。 當連接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (或更新版本) 伺服器時，會使用 "**datetime2**" 格式，而且當類型名稱為 "**datetime2**" 或 "DBTYPE_DBTIMESTAMP" 時，會發生隱含的伺服器轉換 (如有必要)。 如果使用了提供者特定的類型名稱 "*datetime*" 或 "**smalldatetime**"，就會忽略 **bScale**。 否則，應用程式必須確保 *bScale* 的設定正確。 從 MDAC 升級的應用程式和從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 升級的 OLE DB Driver for SQL Server 如果會使用 "DBTYPE_DBTIMESTAMP"，但未正確設定 *bScale*，就會失敗。 連接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前版本的伺服器執行個體時，*bScale* 值如果不是 0 或 3 且具有 "DBTYPE_DBTIMESTAMP"，便是錯誤且會傳回 E_FAIL。  
+ 當傳送資料到伺服器時，"DBPARAMFLAGS_SS_ISVARIABLESCALE" 會被忽略。 應用程式可以使用提供者特定的類型名稱 "**datetime**" 和 "**smalldatetime**" 來強制使用舊版的表格式資料流 (TDS) 類型。 當連接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (或更新版本) 伺服器時，會使用 "**datetime2**" 格式，而且當類型名稱為 "**datetime2**" 或 "DBTYPE_DBTIMESTAMP" 時，會發生隱含的伺服器轉換 (如有必要)。 如果使用了提供者特定的類型名稱 "**datetime**" 或 "**smalldatetime**"，就會忽略 *bScale*。 否則，應用程式必須確保 *bScale* 的設定正確。 從 MDAC 升級的應用程式和從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 升級的 OLE DB Driver for SQL Server 如果會使用 "DBTYPE_DBTIMESTAMP"，但未正確設定 *bScale*，就會失敗。 連接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前版本的伺服器執行個體時，*bScale* 值如果不是 0 或 3 且具有 "DBTYPE_DBTIMESTAMP"，便是錯誤且會傳回 E_FAIL。  
   
  未呼叫 ICommandWithParameters::SetParameterInfo 時，提供者就會根據 IAccessor::CreateAccessor 中指定的繫結類型來表示伺服器類型，如下所示：  
   

@@ -42,7 +42,7 @@ ms.locfileid: "68140894"
   
  如 [XML 資料類型和資料行 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md) 中所描述的，您可以建立 **xml** 類型的變數及資料行，並將 XML 文件或片段指派給它們。 若要修改或更新這些 XML 執行個體，請執行下列動作：  
   
--   使用 [xml](../../t-sql/xml/modify-method-xml-data-type.md) 資料類型的 **modify() 方法 (xml 資料類型)** 。  
+-   使用 **xml** 資料類型的 [modify() 方法 (xml 資料類型)](../../t-sql/xml/modify-method-xml-data-type.md)。  
   
 -   在 **modify()** 方法內指定適當的 XML DML 陳述式。  
   

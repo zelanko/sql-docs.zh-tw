@@ -49,7 +49,7 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  當值為 1 時，屬性為敏感值，而且會在儲存時加密。 當值為 0 時，屬性不是敏感值，而且會儲存為純文字。 *sensitive* 引數是 **bit**。  
   
 ## <a name="remarks"></a>備註  
- 這個程序會與 [執行封裝]  對話方塊之 [進階]  索引標籤中的 [屬性覆寫]  區段執行相同的功能。 屬性的路徑衍生自封裝工作的 [封裝路徑]  屬性。  
+ 這個程序會與 [執行封裝] 對話方塊之 [進階] 索引標籤中的 [屬性覆寫] 區段執行相同的功能。 屬性的路徑衍生自封裝工作的 [封裝路徑]  屬性。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

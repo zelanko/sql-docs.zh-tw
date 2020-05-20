@@ -61,7 +61,7 @@ ms.locfileid: "71296923"
 ## <a name="view-events"></a>檢視事件
   目前有兩個工具可讓您用來檢視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的事件：  
   
--   **中的** [記錄檔檢視器] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]對話方塊。 **[記錄檔檢視器]** 對話方塊包括匯出、篩選和搜尋記錄檔的選項。 如需 [記錄檔檢視器]  中選項的詳細資訊，請參閱[記錄檔檢視器 F1 說明](../../relational-databases/logs/log-file-viewer-f1-help.md)。  
+-   **中的** [記錄檔檢視器] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]對話方塊。 **[記錄檔檢視器]** 對話方塊包括匯出、篩選和搜尋記錄檔的選項。 如需 [記錄檔檢視器][**中選項的詳細資訊，請參閱**記錄檔檢視器 F1 說明](../../relational-databases/logs/log-file-viewer-f1-help.md)。  
   
 -   Windows 事件檢視器。  
   

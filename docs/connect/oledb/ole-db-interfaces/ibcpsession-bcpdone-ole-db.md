@@ -37,7 +37,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>備註  
- 呼叫 [BCPDone](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) 方法之後，您就無法針對 **IBCPSession** 介面呼叫任何其他作業。 唯一的可能性是呼叫 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法來起始新的大量複製作業。 這就類似於呼叫 [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
+ 呼叫 **BCPDone** 方法之後，您就無法針對 [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) 介面呼叫任何其他作業。 唯一的可能性是呼叫 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法來起始新的大量複製作業。 這就類似於呼叫 [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  S_OK  

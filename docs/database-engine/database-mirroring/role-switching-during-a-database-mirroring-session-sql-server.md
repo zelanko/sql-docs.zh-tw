@@ -109,7 +109,7 @@ ms.locfileid: "75252787"
 2.  鏡像伺服器會將從主體伺服器接收到最後一筆記錄的記錄序號 (LSN) 記錄下來，做為容錯移轉 LSN。  
   
     > [!NOTE]  
-    >  若要檢視此 LSN，請從 **sys.database_mirroring &#40;Transact-SQL&#41;** 選取 [mirroring_failover_lsn](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 資料行。  
+    >  若要檢視此 LSN，請從 [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 選取 **mirroring_failover_lsn** 資料行。  
   
 3.  如果在重做佇列中有任何記錄正在等待，則鏡像伺服器會完成鏡像資料庫的向前復原。 所需時間取決於系統的速度、最近的工作負載，以及重做佇列中的記錄量。 針對同步處理作業模式，容錯移轉時間可以藉由限制重做佇列的大小來調節。 但是，這可能會造成主體伺服器變慢，以便鏡像伺服器能夠跟上。  
   

@@ -75,9 +75,9 @@ ms.locfileid: "68012725"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>設定 SQL Server Database Engine 接聽其他 TCP 通訊埠。  
   
-1.  在 SQL Server 組態管理員中，展開 [SQL Server 網路組態]  ，然後按一下 [<執行個體名稱>  的通訊協定]  。  
+1.  在 SQL Server 組態管理員中，展開 [SQL Server 網路組態]，然後按一下 [<執行個體名稱> 的通訊協定]。  
   
-2.  展開 [<執行個體名稱>  的通訊協定]  ，然後按一下 [TCP/IP]  。  
+2.  展開 [<執行個體名稱> 的通訊協定]，然後按一下 [TCP/IP]。  
   
 3.  在右窗格中，以滑鼠右鍵按一下您要啟用之已停用的 IP 位址，然後按一下 [啟用]  。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68012725"
   
 6.  在左窗格中，按一下 **[SQL Server 服務]** 。  
   
-7.  在右窗格中，以滑鼠右鍵按一下 [SQL Server <執行個體名稱>  ]  ，然後按一下 [重新啟動]  。  
+7.  在右窗格中，以滑鼠右鍵按一下 [SQL Server <執行個體名稱>]，然後按一下 [重新啟動]。  
   
      當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 重新啟動時，錯誤記錄檔將會列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在接聽的通訊埠。  
   

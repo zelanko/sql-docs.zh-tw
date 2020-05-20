@@ -28,7 +28,7 @@ ms.locfileid: "71326132"
   
  當資料表中的資料行數目很大，而且個別操作資料行很麻煩時，您應該考慮使用資料行集。 當應用程式在擁有許多資料行的資料表上使用資料行集來選取及插入資料時，可能會看到一些效能上的改善。 但是，當資料表中的資料行上定義許多索引時，資料行集的效能可能會降低。 這是因為執行計畫所需的記憶體數量增加的緣故。  
   
- 若要定義資料行集，請在 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 陳述式中使用 <資料行集名稱>  FOR ALL_SPARSE_COLUMNS 關鍵字。  
+ 若要定義資料行集，請在 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 陳述式中使用 <資料行集名稱> FOR ALL_SPARSE_COLUMNS 關鍵字。  
   
 ## <a name="guidelines-for-using-column-sets"></a>使用資料行集的指導方針  
  使用資料行集時，請考慮下列指導方針：  

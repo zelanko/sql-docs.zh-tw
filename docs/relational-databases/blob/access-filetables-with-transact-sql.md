@@ -30,7 +30,7 @@ ms.locfileid: "68018887"
   
 -   若 INSERT 陳述式設定 **name**、**path_locator**、**parent_path_locator** 或檔案屬性，則會強制執行系統定義的條件約束。  
   
--   提供 **GetPathLocator &#40;Transact-SQL&#41;** 函數的檔案系統路徑，應用程式就可以取得檔案或目錄的 [path_locator](../../relational-databases/system-functions/getpathlocator-transact-sql.md)。  
+-   提供 [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 函數的檔案系統路徑，應用程式就可以取得檔案或目錄的 **path_locator**。  
   
 ##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> FileTable 上的 UPDATE 作業  
  下列考量適用於 FileTable 上的 **UPDATE** 作業：  

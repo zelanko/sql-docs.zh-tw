@@ -62,7 +62,7 @@ _relative_
 CLR 傳回類型：**SqlGeography**  
   
 ## <a name="remarks"></a>備註  
-如果 **distance** 不是數字 (NAN)，或如果 _distance_ 是正或負的無限值，則這個方法會擲回 _ArgumentException_。  如果 **tolerance** 是零 (0) 而不是數字 (NaN) 或正的或負的無限值，則這個方法也會擲回 _ArgumentException_。  
+如果 _distance_ 不是數字 (NAN)，或如果 _distance_ 是正或負的無限值，則這個方法會擲回 **ArgumentException**。  如果 _tolerance_ 是零 (0) 而不是數字 (NaN) 或正的或負的無限值，則這個方法也會擲回 **ArgumentException**。  
   
 在某些情況下，`STBuffer()` 會傳回 **FullGlobe** 執行個體，例如，當緩衝距離大於兩極至赤道距離時，`STBuffer()` 會在兩極傳回 **FullGlobe** 執行個體。  
   

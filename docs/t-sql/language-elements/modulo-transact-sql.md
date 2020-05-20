@@ -47,7 +47,7 @@ dividend % divisor
   
 ## <a name="arguments"></a>引數  
  *dividend*  
- 要執行除法的數值運算式。 *dividend* 必須是整數與貨幣資料類型類別目錄中任何一個資料類型，或是 [numeric](../../t-sql/language-elements/expressions-transact-sql.md) 資料類型的有效**運算式**。  
+ 要執行除法的數值運算式。 *dividend* 必須是整數與貨幣資料類型類別目錄中任何一個資料類型，或是 **numeric** 資料類型的有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *divisor*  
  要除以被除數的數值運算式。 *divisor* 必須是整數與貨幣資料類型類別目錄中任何一個資料類型，或是 **numeric** 資料類型的任何有效運算式。  

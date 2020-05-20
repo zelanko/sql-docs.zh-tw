@@ -34,7 +34,7 @@ ms.locfileid: "63218982"
   
          ![從 [參數] 窗格新增參數](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "從 [參數] 窗格新增參數")  
   
-    -   在 [報表資料]  窗格中以滑鼠右鍵按一下 [參數]  ，然後按一下 [加入參數]  。  
+    -   在 [報表資料] 窗格中以滑鼠右鍵按一下 [參數]，然後按一下 [加入參數]。  
   
 3.  若要將參數移到參數窗格中的新位置，請將參數拖曳到窗格中的不同資料格。  
   

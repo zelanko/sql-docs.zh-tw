@@ -105,7 +105,7 @@ ms.locfileid: "69028888"
    
    ![PBI_SSMRP_KPI_DatasetField](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpi-datasetfield.png)  
    
-3. 按一下 [挑選資料集欄位]  方塊中的省略符號 ( **...** )，並選取上一個步驟的資料集。  
+3. 按一下 [挑選資料集欄位] 方塊中的省略符號 ( **...** )，並選取上一個步驟的資料集。  
    
    ![PBI_SSMRP_KPIPickDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipickdataset.png)  
    

@@ -21,7 +21,7 @@ ms.locfileid: "71285356"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]  或 [選擇目的地]  頁面，連接到 **Azure Blob 儲存體**資料來源。
+本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連接到 **Azure Blob 儲存體**資料來源。
 
 > [!NOTE]
 > 若要使用 Azure Blob 來源或目的地，您必須安裝適用於 SQL Server Integration Services 的 Azure Feature Pack。

@@ -72,7 +72,7 @@ ms.locfileid: "72906673"
   
 5.  在查詢視窗中，對 ALTER FUNCTION 陳述式進行必要的變更。  
   
-6.  在 [檔案]  功能表上，按一下 [儲存 **function_name**]  。  
+6.  在 [檔案] 功能表上，按一下 [儲存 _function_name_]。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -80,7 +80,7 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>分散式 R 計算
 
-sparklyr 的其中一項功能，就是能夠使用 [spark_apply](https://spark.rstudio.com/guides/distributed-r/) 來[散發 R 計算](https://spark.rstudio.com/reference/spark_apply/)。
+sparklyr 的其中一項功能，就是能夠使用 [spark_apply](https://spark.rstudio.com/reference/spark_apply/) 來[散發 R 計算](https://spark.rstudio.com/guides/distributed-r/)。
 
 因為巨量資料叢集使用 Livy 連線，所以您必須將呼叫中的 `packages = FALSE` 設定為 **spark_apply**。 如需詳細資訊，請參閱分散式 R 計算相關 sparklyr 文件的 [Livy 一節](https://spark.rstudio.com/guides/distributed-r/#livy)。 使用此設定時，您只能在要傳遞給 **spark_apply** 的 R 程式碼中使用 Spark 叢集上所安裝 R 套件。 下列範例示範此功能：
 

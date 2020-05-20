@@ -90,7 +90,7 @@ ms.locfileid: "71285210"
 ## <a name="step-6---pick-the-table-to-copy"></a>步驟 6 - 挑選要複製的資料表
 在下一個 [選取來源資料表和檢視]  頁面上，您可以挑選想要從資料來源複製的資料表。 接著，您可以將每個選取的來源資料表對應至新的或現有目的地資料表。
 
-在此範例中，精靈預設已將 [來源]  資料行中的 **WizardWalkthrough$** 工作表對應至 SQL Server 目的地上同名的新資料表 (Excel 活頁簿只包含單一工作表)。
+在此範例中，精靈預設已將 [來源] 資料行中的 **WizardWalkthrough$** 工作表對應至 SQL Server 目的地上同名的新資料表 (Excel 活頁簿只包含單一工作表)。
 -   來源資料表名稱上的貨幣符號 ($) 指出是 Excel 工作表 (Excel 中的具名範圍是單獨以其名稱呈現)。
 -   目的地資料表圖示上的爆炸指出精靈即將建立新的目的地資料表。
 
@@ -124,14 +124,14 @@ ms.locfileid: "71285210"
 如需精靈之這個頁面的詳細資訊，請參閱[預覽資料](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-10---yes-you-want-to-run-the-import-export-operation"></a>步驟 10 - 是，您想要執行匯入/匯出作業
-在下一個 [儲存並執行套件]  頁面上，您可以啟用 [立即執行]  在按下一個頁面上的 [完成]  時盡快複製資料。 或者，您可以按一下 [儲存並執行套件]  頁面上的 [完成]  ，跳過下一個頁面。
+在下一個 [儲存並執行套件]  頁面上，您可以啟用 [立即執行]  在按下一個頁面上的 [完成]  時盡快複製資料。 或者，您可以按一下 [儲存並執行套件] 頁面上的 [完成]，跳過下一個頁面。
 
 ![執行封裝](../../integration-services/import-export-data/media/run-the-package.jpg)
 
 如需精靈之這個頁面的詳細資訊，請參閱[儲存並執行套件](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-11---finish-the-wizard-and-run-the-import-export-operation"></a>步驟 11 - 完成精靈並執行匯入/匯出作業
-如果您按一下 [下一步]  ，而不是 [儲存並執行套件]  頁面上的 [完成]  ，則在下一個 [完成精靈]  頁面上，您會看到精靈將執行作業的摘要。 按一下 [完成]  執行匯入/匯出作業。
+如果您按一下 [下一步]，而不是 [儲存並執行套件] 頁面上的 [完成]，則在下一個 [完成精靈] 頁面上，您會看到精靈將執行作業的摘要。 按一下 [完成]  執行匯入/匯出作業。
 
 ![完成精靈](../../integration-services/import-export-data/media/complete-the-wizard.jpg)
 

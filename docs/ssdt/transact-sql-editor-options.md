@@ -36,7 +36,7 @@ ms.locfileid: "75256325"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 編輯器選項
 
-本主題包含 Transact-SQL 編輯器部分選項的相關資訊。 若要設定這些選項，請透過 [工具\選項]  功能表巡覽至 [選項]  對話方塊。  
+本主題包含 Transact-SQL 編輯器部分選項的相關資訊。 若要設定這些選項，請透過 [工具\選項] 功能表巡覽至 [選項] 對話方塊。  
   
 [查詢執行](#QueryExecution)  
   

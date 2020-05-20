@@ -38,7 +38,7 @@ FILESTREAM 提供透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.
 ## <a name="querying-for-filestream-columns"></a>查詢是否有 FILESTREAM 資料行  
 OLE DB 中的結構描述資料列集將不會報告某個資料行是否為 FILESTREAM 資料行。 OLE DB 中的 ITableDefinition 不能用來建立 FILESTREAM 資料行。    
   
-若要建立 FILESTREAM 資料行或是偵測哪些現有資料行為 FILESTREAM 資料行，您可以使用 **sys.columns** 目錄檢視的 [is_filestream](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 資料行。  
+若要建立 FILESTREAM 資料行或是偵測哪些現有資料行為 FILESTREAM 資料行，您可以使用 [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 目錄檢視的 **is_filestream** 資料行。  
   
 以下是一個範例：  
   
@@ -63,7 +63,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ## <a name="comments"></a>註解
 - 若要傳送與接收大於 2 GB 的 **varbinary(max)** 值，應用程式會在參數和結果繫結中使用 **DBTYPE_IUNKNOWN**。 若是參數，提供者必須針對 ISequentialStream 和傳回 ISequentialStream 的結果，呼叫 IUnknown::QueryInterface。  
 
--  若是 OLE DB，將會放寬與 ISequentialStream 值相關的檢查。 當 *wType* 在 **DBBINDING** 結構中為 **DBTYPE_IUNKNOWN** 時，可以從 **dwPart** 中省略 *DBPART_LENGTH*，或將資料長度 (在資料緩衝區中的位移 *obLength*) 設定為 ~ 0，以停用長度檢查。 在此情況下，提供者將不會檢查值的長度，而且將會透過資料流要求並傳回所有可用的資料。 這項變更將會套用到所有大型物件 (LOB) 類型與 XML，但是只會在連接到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (或更新版本) 伺服器時才會套用。 這將會提供開發人員更大的彈性，同時維持現有應用程式與下層伺服器的一致性與回溯相容性。  此變更會影響傳輸資料的所有介面，主要是 IRowset::GetData、ICommand::Execute 和 IRowsetFastLoad::InsertRow。
+-  若是 OLE DB，將會放寬與 ISequentialStream 值相關的檢查。 當 *wType* 在 **DBBINDING** 結構中為 **DBTYPE_IUNKNOWN** 時，可以從 *dwPart* 中省略 **DBPART_LENGTH**，或將資料長度 (在資料緩衝區中的位移 *obLength*) 設定為 ~ 0，以停用長度檢查。 在此情況下，提供者將不會檢查值的長度，而且將會透過資料流要求並傳回所有可用的資料。 這項變更將會套用到所有大型物件 (LOB) 類型與 XML，但是只會在連接到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (或更新版本) 伺服器時才會套用。 這將會提供開發人員更大的彈性，同時維持現有應用程式與下層伺服器的一致性與回溯相容性。  此變更會影響傳輸資料的所有介面，主要是 IRowset::GetData、ICommand::Execute 和 IRowsetFastLoad::InsertRow。
  
 
 ## <a name="see-also"></a>另請參閱  

@@ -30,7 +30,7 @@ ms.locfileid: "71283759"
   
 2.  在 [檔案]  功能表上，指向 [開新檔案]  ，然後按一下 [專案]  建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
-3.  在 [新增專案]  對話方塊中，選取 [範本]  窗格中的 [Integration Services 專案]  。  
+3.  在 [新增專案] 對話方塊中，選取 [範本] 窗格中的 [Integration Services 專案]。  
   
 4.  在 [名稱]  方塊中，將預設名稱變更為**部署教學課程**。 您可以選擇性地清除 **[建立方案的目錄]** 核取方塊。  
   

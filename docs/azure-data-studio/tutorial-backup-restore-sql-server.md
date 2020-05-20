@@ -39,7 +39,7 @@ ms.locfileid: "79287212"
 
 1. 開啟 TutorialDB 資料庫儀表板 (開啟 [伺服器]  提要欄位 (**CTRL+G**)，展開 [資料庫]  ，以滑鼠右鍵按一下 [TutorialDB]  ，然後選取 [管理]  )。
 
-2. 開啟 [備份資料庫]  對話方塊 (按一下 [工作]  小工具中的 [備份]  )。
+2. 開啟 [備份資料庫] 對話方塊 (按一下 [工作] 小工具中的 [備份])。
 
    ![[工作] 小工具](./media/tutorial-backup-restore-sql-server/tasks.png)
 
@@ -62,15 +62,15 @@ ms.locfileid: "79287212"
 
 1. 開啟 [伺服器]  提要欄位 (**CTRL+G**)，以滑鼠右鍵按一下您的伺服器，然後選取 [管理]  。
 
-2. 開啟 [還原資料庫]  對話方塊 (按一下 [工作]  小工具中的 [還原]  )。
+2. 開啟 [還原資料庫] 對話方塊 (按一下 [工作] 小工具中的 [還原])。
 
    ![還原工作](media/tutorial-backup-restore-sql-server/tasks-restore.png)
 
-3. 在 [還原來源]  欄位中選取 [備份檔案]  。
+3. 在 [還原來源] 欄位中選取 [備份檔案]。
 
 4. 按一下 [備份檔案路徑]  欄位中的省略符號 (...)，然後選取 *TutorialDB* 的最新備份檔案。
 
-5. 在 [目的地]  區段的 [目標資料庫]  欄位中鍵入 **TutorialDB_Restored**，將備份檔案還原到新的資料庫。 然後選取 [還原]  。
+5. 在 [目的地] 區段的 [目標資料庫] 欄位中鍵入 **TutorialDB_Restored**，將備份檔案還原到新的資料庫。 然後選取 [還原]  。
 
    ![還原](./media/tutorial-backup-restore-sql-server/restore.png)
 

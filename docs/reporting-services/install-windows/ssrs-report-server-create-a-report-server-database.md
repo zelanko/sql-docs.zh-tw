@@ -49,7 +49,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
  ### <a name="native-mode"></a>原生模式
  您可以利用下列方式建立原生模式報表伺服器資料庫：  
   
-- **自動**： 如果您選擇預設設定選項來進行安裝，就會使用 [SQL Server 安裝精靈]。 在 [SQL Server 安裝精靈] 中，這個選項會是 [報表伺服器安裝選項]  頁面中的 [安裝和設定]  。 如果您選擇了 [僅安裝]  選項，就必須使用 Reporting Services 組態管理員建立資料庫。  
+- **自動**： 如果您選擇預設設定選項來進行安裝，就會使用 [SQL Server 安裝精靈]。 在 [SQL Server 安裝精靈] 中，這個選項會是 [報表伺服器安裝選項] 頁面中的 [安裝和設定]。 如果您選擇了 [僅安裝]  選項，就必須使用 Reporting Services 組態管理員建立資料庫。  
   
 - **手動**： 使用 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。 如果您要使用遠端 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 來裝載報表伺服器資料庫，就必須手動建立資料庫。 如需詳細資訊，請參閱[建立原生模式報表伺服器資料庫](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
 
@@ -58,7 +58,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 ### <a name="sharepoint-mode"></a>SharePoint 模式 
 [報表伺服器安裝選項]  頁面只有一個用於 SharePoint 模式的選項：[僅安裝]  。 這個選項會安裝所有 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案及 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務。 下一步是透過下列其中一種方式建立至少一個 SSRS 服務應用程式：  
   
-- 前往 SharePoint Server 的管理中心建立 SSRS 服務應用程式。 如需詳細資訊，請參閱**在 SharePoint 模式中安裝第一部報表伺服器**的[建立服務應用程式](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)章節。  
+- 前往 SharePoint Server 的管理中心建立 SSRS 服務應用程式。 如需詳細資訊，請參閱[在 SharePoint 模式中安裝第一部報表伺服器](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)的**建立服務應用程式**章節。  
   
 - 使用 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell 指令程式建立服務應用程式和報表伺服器資料庫。 如需詳細資訊，請參閱 [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) 主題中的建立服務應用程式範例。  
 
@@ -96,7 +96,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
   
 ## <a name="edition-requirements-for-a-database-server"></a>資料庫伺服器版本需求 
 
- 建立報表伺服器資料庫時，並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可以用來裝載資料庫。 如需詳細資訊，請參閱 [SQL Server 版本所支援的 Reporting Services 功能](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#edition-requirements-for-the-report-server-database)的[報表伺服器資料庫伺服器版本需求](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。  
+ 建立報表伺服器資料庫時，並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可以用來裝載資料庫。 如需詳細資訊，請參閱 [SQL Server 版本所支援的 Reporting Services 功能](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)的[報表伺服器資料庫伺服器版本需求](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#edition-requirements-for-the-report-server-database)。  
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -54,7 +54,7 @@ ms.locfileid: "73843754"
 ## <a name="historical-note"></a>歷史備註
 Stretch Database Advisor 之前是 SQL Server 2016 Upgrade Advisor 的一個元件。 在當時，您必須另外選取並執行 Stretch Database Advisor。
 
-發行 Data Migration Assistant 以取代並擴充 Upgrade Advisor 之後，Stretch Database Advisor 的功能會併入這項新工具。 您不需要選取任何選項，即可取得 Stretch Database 的相關建議。 當您在 Data Migration Assistant 中執行評量時，Stretch Database 的相關結果會出現在 [Feature recommendations ] (功能建議)  的 [Storage] (儲存體)  索引標籤中。
+發行 Data Migration Assistant 以取代並擴充 Upgrade Advisor 之後，Stretch Database Advisor 的功能會併入這項新工具。 您不需要選取任何選項，即可取得 Stretch Database 的相關建議。 當您在 Data Migration Assistant 中執行評量時，Stretch Database 的相關結果會出現在 [Feature recommendations ] (功能建議) 的 [Storage] (儲存體) 索引標籤中。
   
 ## <a name="next-step"></a>後續步驟  
  啟用 Stretch Database。  

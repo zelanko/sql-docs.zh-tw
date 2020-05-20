@@ -26,7 +26,7 @@ SQL Server 匯入延伸模組 (預覽) 會將 .txt 和 .csv 檔案轉換成 SQL 
 
 ## <a name="install-the-sql-server-import-extension"></a>安裝 SQL Server 匯入延伸模組
 
-1. 若要開啟延伸模組管理員並存取可用的延伸模組，請選取延伸模組圖示，或選取 [檢視]  功能表中的 [延伸模組]  。
+1. 若要開啟延伸模組管理員並存取可用的延伸模組，請選取延伸模組圖示，或選取 [檢視] 功能表中的 [延伸模組]。
 2. 選取可用的延伸模組，檢視詳細資料。
 
    ![匯入延伸模組管理員](media/sql-server-import-extension/import-wizard-install.png)

@@ -72,7 +72,7 @@ ms.locfileid: "72907270"
   
 5.  按一下 [關閉]  。  
   
-6.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
+6.  在 [檔案]  功能表上，按一下 [儲存「資料表名稱」]。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改檢查條件約束**  

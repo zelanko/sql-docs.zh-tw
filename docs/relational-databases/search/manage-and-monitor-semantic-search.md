@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>全文檢索目錄的全文檢索索引與語意索引的總大小為何？  
- 查詢 **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** 中繼資料函數的 [IndexSize](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 屬性。  
+ 查詢 [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 中繼資料函數的 **IndexSize** 屬性。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>全文檢索目錄的全文檢索索引和語意索引中建立了多少項目的索引？  
- 查詢 **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** 中繼資料函數的 [ItemCount](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 屬性。  
+ 查詢 [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 中繼資料函數的 **ItemCount** 屬性。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  

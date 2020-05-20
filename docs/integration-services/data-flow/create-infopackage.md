@@ -24,7 +24,7 @@ ms.locfileid: "71293206"
 
   使用 [建立 InfoPackage]  對話方塊可以在 SAP Netweaver BW 系統中建立新的 InfoPackage。  
   
- 您可以從 [SAP BW 目的地編輯器]  的 [連線管理員]  頁面開啟 [建立 InfoPackage]  對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
+ 您可以從 [SAP BW 目的地編輯器] 的 [連線管理員] 頁面開啟 [建立 InfoPackage] 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  

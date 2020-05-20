@@ -29,13 +29,13 @@ ms.locfileid: "75226764"
   
 ### <a name="to-edit-data-in-a-table-visually-using-the-data-editor"></a>若要使用資料編輯器，以視覺化方式編輯資料表  
   
-1.  以滑鼠右鍵按一下 [SQL Server 物件總管]  中的 [Products]  資料表，再選取 [檢視資料]  。  
+1.  以滑鼠右鍵按一下 [SQL Server 物件總管] 中的 [Products] 資料表，再選取 [檢視資料]。  
   
 2.  資料編輯器隨即啟動。 請注意，我們在先前的程序加入資料表中的資料列。  
   
 3.  以滑鼠右鍵按一下 [SQL Server 物件總管] 中的 [Fruits]  資料表，再選取 [檢視資料]  。  
   
-4.  在資料編輯器中，分別為 [Id]  和 [Perishable]  輸入 **1** 和 **True**，然後按 ENTER 或 TAB 將焦點移離新資料列，以便加以認可到資料庫。  
+4.  在資料編輯器中，分別為 [Id] 和 [Perishable] 輸入 **1** 和 **True**，然後按 ENTER 或 TAB 將焦點移離新資料列，以便加以認可到資料庫。  
   
 5.  重複前面的步驟，將 **2**、**False** 和 **3**、**False** 輸入到資料表。  
   
@@ -43,5 +43,5 @@ ms.locfileid: "75226764"
   
 6.  您可以按一下工具列上的 [指令碼]  按鈕，檢視編輯內容。 或者，您也可以使用 [編寫指令碼至檔案]  按鈕將編輯內容儲存到 .sql 指令碼檔案，等以後再執行。  
   
-7.  以滑鼠右鍵按一下 [SQL Server 物件總管]  中的 [Trade]  資料庫，再選取 [新增查詢]  。 在編輯器中，輸入 `select * from dbo.PerishableFruits`，然後按 [執行查詢]  按鈕傳回 `PerishableFruits` 檢視表所呈現的資料。  
+7.  以滑鼠右鍵按一下 [SQL Server 物件總管] 中的 [Trade] 資料庫，再選取 [新增查詢]。 在編輯器中，輸入 `select * from dbo.PerishableFruits`，然後按 [執行查詢]  按鈕傳回 `PerishableFruits` 檢視表所呈現的資料。  
   

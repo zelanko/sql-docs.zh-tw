@@ -44,7 +44,7 @@ HRESULT BCPReadFmt(
   
  若要儲存格式檔案，請呼叫 [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 方法。 **BCPReadFmt** 方法的呼叫可以參考已儲存的格式。 另外，大量複製公用程式 (**bcp**) 可以將使用者定義的資料格式儲存在由 **BCPReadFmt** 方法參考的檔案中。  
   
- **IBCPSession::BCPControl** 之 *eOption* 參數的 [BCP_OPTION_DELAYREADFMT](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 值會修改 IBCPSession::BCPReadFmt 的行為。  
+ [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 之 *eOption* 參數的 **BCP_OPTION_DELAYREADFMT** 值會修改 IBCPSession::BCPReadFmt 的行為。  
   
 ## <a name="arguments"></a>引數  
  *pwszFormatFile*[in]  

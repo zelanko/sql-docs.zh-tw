@@ -26,7 +26,7 @@ ms.locfileid: "68038826"
 # <a name="transform-noise-words-server-configuration-option"></a>轉換非搜尋字伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  如果屬於[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)的非搜尋字造成全文檢索查詢的布林運算傳回零個資料列，請使用 [轉換非搜尋字]  伺服器組態選項來隱藏錯誤訊息。 若全文檢索查詢使用的 CONTAINS 述詞中，布林運算或 NEAR 運算有包括非搜尋字，則這個選項很有幫助。 下表說明可能的值。  
+  如果屬於[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)的非搜尋字造成全文檢索查詢的布林運算傳回零個資料列，請使用 [轉換非搜尋字] 伺服器組態選項來隱藏錯誤訊息。 若全文檢索查詢使用的 CONTAINS 述詞中，布林運算或 NEAR 運算有包括非搜尋字，則這個選項很有幫助。 下表說明可能的值。  
   
 |值|描述|  
 |-----------|-----------------|  

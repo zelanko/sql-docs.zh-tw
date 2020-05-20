@@ -19,7 +19,7 @@ ms.locfileid: "75252917"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>檢視物件總管中的空間資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  除了以方格格式顯示在 [結果]  視窗中的資料以外，查詢編輯器中的 [空間結果]  視窗還會提供檢視空間資料結果的視覺化對應工具。 若要在 [空間結果]  視窗中顯示空間資料，您的查詢結果至少必須包含一個具有幾何或地理位置資料的空間資料行。  
+  除了以方格格式顯示在 [結果] 視窗中的資料以外，查詢編輯器中的 [空間結果] 視窗還會提供檢視空間資料結果的視覺化對應工具。 若要在 [空間結果]  視窗中顯示空間資料，您的查詢結果至少必須包含一個具有幾何或地理位置資料的空間資料行。  
   
 ### <a name="to-view-spatial-data-in-the-spatial-results-window"></a>在空間結果視窗中檢視空間資料  
   

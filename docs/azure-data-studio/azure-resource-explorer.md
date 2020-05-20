@@ -31,7 +31,7 @@ ms.locfileid: "73801140"
 
 若要檢視與 Azure 帳戶相關聯的 SQL 資源，您必須先將帳戶新增至 [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]。
 
-1. 透過左下方的帳戶管理圖示，或透過 Azure 資源總管中的 [登入 Azure...]  連結，開啟 [連結的帳戶]  對話方塊。
+1. 透過左下方的帳戶管理圖示，或透過 Azure 資源總管中的 [登入 Azure...] 連結，開啟 [連結的帳戶] 對話方塊。
 
     ![登入 Azure](media/azure-resource-explorer/sign-in-to-azure.png)
 

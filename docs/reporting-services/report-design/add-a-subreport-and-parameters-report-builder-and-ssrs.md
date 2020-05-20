@@ -40,7 +40,7 @@ ms.locfileid: "77080675"
   
 5.  在 **[將此報表當成子報表]** 方塊中，按一下 **[瀏覽]** ，或輸入報表的名稱。 建議您按一下 **[瀏覽]** ，因為系統將自動指定子報表的路徑。 您可以透過幾種方式指定報表。 如需詳細資訊，請參閱[指定外部項目的路徑 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
-6.  (選用) 如果子報表橫跨多頁，針對 [省略分頁符號上的框線]  按一下 [是]  ，就不會在子報表中轉譯框線。  
+6.  (選用) 如果子報表橫跨多頁，針對 [省略分頁符號上的框線] 按一下 [是]，就不會在子報表中轉譯框線。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

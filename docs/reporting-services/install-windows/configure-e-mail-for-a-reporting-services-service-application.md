@@ -32,7 +32,7 @@ ms.locfileid: "68221640"
   
 3.  在 **[名稱]** 清單中，按一下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的名稱。  
   
-4.  在 [管理 Reporting Services 應用程式]  頁面上，按一下 [電子郵件設定]  。  
+4.  在 [管理 Reporting Services 應用程式] 頁面上，按一下 [電子郵件設定]。  
   
 5.  選取 **[使用 SMTP 伺服器]** 。  
   

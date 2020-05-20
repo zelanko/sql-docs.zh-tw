@@ -79,7 +79,7 @@ ms.locfileid: "75247301"
 
      ![壓縮檔案](media/scripting-ssms/shrinkfiles.png)
 
-2. 從 [檔案類型]  下拉式清單方塊選取 [記錄]  ：
+2. 從 [檔案類型] 下拉式清單方塊選取 [記錄]：
 
     ![壓縮交易記錄](media/scripting-ssms/shrinktlog.png)
 
@@ -146,11 +146,11 @@ ms.locfileid: "75247301"
    ![編寫物件的指令碼](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > 當您針對 [要編寫指令碼的資料類型]  選項選取 [結構描述及資料]  時，便可以為資料庫的資料編寫指令碼。 不過，這並不適用於大型資料庫。 此工作所需的記憶體，會比 SSMS 所能配置的還要多。 這項限制並不會影響小型資料庫。 如果您想要移動更大型資料庫的資料，請使用 [[匯入和匯出精靈]](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
+   > 當您針對 [要編寫指令碼的資料類型] 選項選取 [結構描述及資料] 時，便可以為資料庫的資料編寫指令碼。 不過，這並不適用於大型資料庫。 此工作所需的記憶體，會比 SSMS 所能配置的還要多。 這項限制並不會影響小型資料庫。 如果您想要移動更大型資料庫的資料，請使用 [[匯入和匯出精靈]](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
 
 6. 依序選取 [確定]  和 [下一步]  。
 
-7. 在 [摘要]  上選取 [下一步]  。 然後再次選取 [下一步]  以在 [新增查詢]  視窗中產生指令碼。
+7. 在 [摘要] 上選取 [下一步]。 然後再次選取 [下一步]  以在 [新增查詢]  視窗中產生指令碼。
 
 8. 在鍵盤上，開啟 [尋找]  對話方塊 (Ctrl+F)。 選取向下箭號以開啟 [取代]  選項。 在上方的 [尋找]  行中，輸入 *AdventureWorks2016*。 在下方的 [取代]  行中，輸入 *AdventureWorks2016b*。
 
@@ -215,7 +215,7 @@ ms.locfileid: "75247301"
 
 6. 在 [新增查詢編輯器視窗]  中，將工作階段的名稱從 *system_health* 修改為 *system_health2*。 選取 [執行]  來執行查詢。
 
-7. 以滑鼠右鍵按一下 [物件總管]  中的 [工作階段]  。 選取 [重新整理]  來查看新的擴充事件工作階段。 工作階段旁邊的綠色圖示表示工作階段正在執行中。 紅色圖示表示工作階段已停止。
+7. 以滑鼠右鍵按一下 [物件總管] 中的 [工作階段]。 選取 [重新整理]  來查看新的擴充事件工作階段。 工作階段旁邊的綠色圖示表示工作階段正在執行中。 紅色圖示表示工作階段已停止。
 
     ![新的擴充事件工作階段](media/scripting-ssms/newxevent.png)
 

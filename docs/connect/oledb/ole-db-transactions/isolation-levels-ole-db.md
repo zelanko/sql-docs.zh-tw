@@ -33,9 +33,9 @@ ms.locfileid: "67993969"
   
      等級的 OLE DB Driver for SQL Server 預設值是 DBPROPVAL_TI_READCOMMITTED。  
   
--   適用於本機手動認可交易之 *ITransactionLocal::StartTransaction* 方法的 **isoLevel** 參數。  
+-   適用於本機手動認可交易之 **ITransactionLocal::StartTransaction** 方法的 *isoLevel* 參數。  
   
--   適用於 MS DTC 協調分散式交易之 *ITransactionDispenser::BeginTransaction* 方法的 **isoLevel** 參數。  
+-   適用於 MS DTC 協調分散式交易之 **ITransactionDispenser::BeginTransaction** 方法的 *isoLevel* 參數。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允許中途讀取隔離等級的唯讀存取。 其他所有等級藉由將鎖定套用至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 物件以限制並行存取。 由於用戶端需要更高的並行存取等級，因此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會對資料並行存取套用更大的限制。 若要維持資料並行存取的最高等級，OLE DB Driver for SQL Server 取用者應該以智慧方式控制它對特定並行存取等級的要求。  
   

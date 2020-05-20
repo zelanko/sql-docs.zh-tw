@@ -34,7 +34,7 @@ ms.locfileid: "67997958"
   
  啟用 OLE Automation 程序時，對 **sp_OACreate** 的呼叫會啟動 OLE 共用執行環境。  
   
- 您可以使用 **sp_configure** 系統預存程序來檢視和變更 [OLE Automation 程序]  選項目前的值。  
+ 您可以使用 **sp_configure** 系統預存程序來檢視和變更 [OLE Automation 程序] 選項目前的值。  
   
 ## <a name="examples"></a>範例  
  下列範例顯示如何檢視 OLE Automation Procedures 的目前設定。  

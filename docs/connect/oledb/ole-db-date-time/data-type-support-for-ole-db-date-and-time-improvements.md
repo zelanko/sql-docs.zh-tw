@@ -181,7 +181,7 @@ enum SQLVARENUM {
 |DBTYPE_DBTIME2|**time**(p)|OLE DB Driver for SQL Server 會檢查 DBCOLUMDESC *bScale* 成員來判斷毫秒精確度。|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|OLE DB Driver for SQL Server 會檢查 DBCOLUMDESC *bScale* 成員來判斷毫秒精確度。|  
   
- 當應用程式在 *wType* 中指定 DBTYPE_DBTIMESTAMP 時，其可在 **pwszTypeName** 中提供一個類型名稱，藉以將對應覆寫到 *datetime2*。 如果指定了 **datetime**，*bScale* 必須是 3。 如果指定了 **smalldatetime**，*bScale* 必須是 0。 如果 *bScale* 與 *wType* 和 *pwszTypeName* 不一致，則會傳回 DB_E_BADSCALE。  
+ 當應用程式在 *wType* 中指定 DBTYPE_DBTIMESTAMP 時，其可在 *pwszTypeName* 中提供一個類型名稱，藉以將對應覆寫到 **datetime2**。 如果指定了 **datetime**，*bScale* 必須是 3。 如果指定了 **smalldatetime**，*bScale* 必須是 0。 如果 *bScale* 與 *wType* 和 *pwszTypeName* 不一致，則會傳回 DB_E_BADSCALE。  
   
 ## <a name="see-also"></a>另請參閱  
  [日期和時間改善 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

@@ -53,7 +53,7 @@ ms.locfileid: "75558089"
   
 4.  按一下加號展開 **[Facet]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要檢視其屬性的 Facet，然後選取 [屬性]  。 如需有關 [Facet 屬性 - **Facet 名稱**]  對話方塊中可用選項的詳細資訊，請參閱 [Facet 屬性對話方塊，一般頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)、[Facet 屬性對話方塊，相依原則頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)和 [Facet 屬性對話方塊，相依條件頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)。  
+5.  以滑鼠右鍵按一下您想要檢視其屬性的 Facet，然後選取 [屬性]  。 如需有關 [Facet 屬性 - _Facet 名稱_] 對話方塊中可用選項的詳細資訊，請參閱 [Facet 屬性對話方塊，一般頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)、[Facet 屬性對話方塊，相依原則頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)和 [Facet 屬性對話方塊，相依條件頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)。  
   
 6.  完成後，請按一下 **[關閉]** 。  
 

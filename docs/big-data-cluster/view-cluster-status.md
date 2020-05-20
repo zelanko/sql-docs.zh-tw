@@ -24,7 +24,7 @@ ms.locfileid: "73531596"
 
 ## <a name="use-azure-data-studio"></a><a id="datastudio"></a> 使用 Azure Data Studio
 
-下載 **Azure Data Studio** 的最新[測試人員組建](https://aka.ms/getazuredatastudio)之後，您可以使用 SQL Server 巨量資料叢集儀表板來檢視服務端點和巨量資料叢集的狀態。 以下部分功能僅先在 Azure Data Studio 的測試人員組建中提供。
+下載 [Azure Data Studio](https://aka.ms/getazuredatastudio) 的最新**測試人員組建**之後，您可以使用 SQL Server 巨量資料叢集儀表板來檢視服務端點和巨量資料叢集的狀態。 以下部分功能僅先在 Azure Data Studio 的測試人員組建中提供。
 
 1. 首先，在 Azure Data Studio 中建立與您巨量資料叢集的連線。 如需詳細資訊，請參閱[使用 Azure Data Studio 連線至 SQL Server 巨量資料叢集](connect-to-big-data-cluster.md)。
 

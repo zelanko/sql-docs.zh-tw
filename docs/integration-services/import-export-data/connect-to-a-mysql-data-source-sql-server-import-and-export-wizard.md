@@ -21,7 +21,7 @@ ms.locfileid: "71285687"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]  或 [選擇目的地]  頁面，連線至 **MySQL** 資料來源。 您可以使用數個資料提供者來連線至 MySQL。
+本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至 **MySQL** 資料來源。 您可以使用數個資料提供者來連線至 MySQL。
 
 > [!IMPORTANT]
 > 這一篇 Microsoft 文章範圍未涵蓋連線至 MySQL 資料庫的詳細需求和必要條件。 本文假設您已安裝 MySQL 用戶端軟體，並已成功連線至目標 MySQL 資料庫。 如需詳細資訊，請參閱 MySQL 資料庫管理員或 MySQL 文件。
@@ -30,7 +30,7 @@ ms.locfileid: "71285687"
 從 [MySQL 連接器](https://dev.mysql.com/downloads/connector/)頁面下載本主題中所述的提供者和驅動程式。
 
 ## <a name="connect-to-mysql-with-the-net-framework-data-provider-for-mysql"></a>使用 .NET Framework Data Provider for MySQL 連線至 MySQL
-當您在精靈的 [選擇資料來源]  或 [選擇目的地]  頁面上選取 [.NET Framework Data Provider for MySQL]  之後，頁面會顯示提供者的分組選項清單。 其中有許多是不易記的名稱和不熟悉的設定。 不過別擔心，因為您只需要提供一些資訊即可。 您可以忽略其他設定的預設值。
+當您在精靈的 [選擇資料來源] 或 [選擇目的地] 頁面上選取 [.NET Framework Data Provider for MySQL] 之後，頁面會顯示提供者的分組選項清單。 其中有許多是不易記的名稱和不熟悉的設定。 不過別擔心，因為您只需要提供一些資訊即可。 您可以忽略其他設定的預設值。
 
 > [!NOTE]
 > 不論 MySQL 是您的來源還是目的地，此資料提供者的連線選項都會相同。 也就是，您在精靈的 [選擇資料來源]  和 [選擇目的地]  頁面上看到的選項會相同。
@@ -48,7 +48,7 @@ ms.locfileid: "71285687"
 ![使用 .NET 提供者連線至 MySQL，2 / 2](../../integration-services/import-export-data/media/connect-to-mysql-with-the-net-provider-2-of-2.png)
 
 ## <a name="connect-to-mysql-with-the-mysql-odbc-driver"></a>使用 MySQL ODBC 驅動程式連線至 MySQL
-ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源]  或 [選擇目的地]  頁面上，將 [.NET Framework Data Provider for ODBC]  選取為資料來源。 此提供者作用為 ODBC 驅動程式的包裝函式。
+ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源] 或 [選擇目的地] 頁面上，將 [.NET Framework Data Provider for ODBC] 選取為資料來源。 此提供者作用為 ODBC 驅動程式的包裝函式。
 
 以下是您選取 .NET Framework Data Provider for ODBC 之後立即看到的一般畫面。
 
@@ -84,7 +84,7 @@ MySQL 伺服器的名稱。
     ```
 
 ### <a name="enter-the-connection-string"></a>輸入連接字串
-在 [選擇資料來源]  或 [選擇目的地]  頁面上，於 [ConnectionString]  欄位中輸入連接字串，或在 [Dsn]  欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和屬性值。
+在 [選擇資料來源] 或 [選擇目的地] 頁面上，於 [ConnectionString] 欄位中輸入連接字串，或在 [Dsn] 欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和屬性值。
 
 下列範例使用此連接字串。
 

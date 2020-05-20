@@ -31,7 +31,7 @@ ms.locfileid: "71292440"
  ![HDFS 檔案來源編輯器](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS 檔案來源編輯器")  
   
 ## <a name="options"></a>選項。  
- 在 [Hadoop File Source Editor (Hadoop 檔案來源編輯器)]  對話方塊的 [一般]  索引標籤上，設定下列選項。  
+ 在 [Hadoop File Source Editor (Hadoop 檔案來源編輯器)] 對話方塊的 [一般] 索引標籤上，設定下列選項。  
   
 |欄位|描述|  
 |-----------|-----------------|  

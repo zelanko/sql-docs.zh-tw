@@ -26,7 +26,7 @@ ms.locfileid: "72166731"
 
 ## <a name="add-azure-data-studio-extensions"></a>新增 Azure Data Studio 延伸模組
 
-1. 透過選取 [延伸模組] 圖示或透過選取 [檢視]  功能表中的 [延伸模組]  ，以存取可用的延伸模組。
+1. 透過選取 [延伸模組] 圖示或透過選取 [檢視] 功能表中的 [延伸模組]，以存取可用的延伸模組。
 
     ![延伸模組管理員圖示](media/extensions/extension-manager-icon.png)
 

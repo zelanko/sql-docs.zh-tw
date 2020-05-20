@@ -21,7 +21,7 @@ ms.locfileid: "71285570"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本文示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]  或 [選擇目的地]  頁面中連線至 **Microsoft Excel** 資料來源。
+本文示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面中連線至 **Microsoft Excel** 資料來源。
 
 下列螢幕擷取畫面顯示 Microsoft Excel 活頁簿的連接範例。
 

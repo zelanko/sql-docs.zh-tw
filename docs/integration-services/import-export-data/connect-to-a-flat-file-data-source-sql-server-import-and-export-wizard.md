@@ -21,7 +21,7 @@ ms.locfileid: "71296361"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]  或 [選擇目的地]  頁面，連線至**一般檔案** (文字檔) 資料來源。 針對一般檔案，精靈的這兩個頁面會呈現不同的選項集，因此，本主題會分別描述一般檔案來源和一般檔案目的地。
+本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至**一般檔案** (文字檔) 資料來源。 針對一般檔案，精靈的這兩個頁面會呈現不同的選項集，因此，本主題會分別描述一般檔案來源和一般檔案目的地。
 
 ## <a name="an-alternative-for-simple-text-import"></a>簡單文字匯入的替代方式
 如果您需要將文字檔匯入至 SQL Server，但不需要使用 [匯入和匯出精靈] 中的所有設定選項，則請考慮使用 SQL Server Management Studio (SSMS) 中的 [匯入一般檔案精靈]  。 如需詳細資訊，請參閱下列文章：

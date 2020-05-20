@@ -28,7 +28,7 @@ ms.locfileid: "62651274"
   
     這樣會啟動 [報表精靈]。  
   
-4.  在 [資料集屬性]  頁面的 [資料來源]  方塊中，選取您在下列課程中建立的 [DataSet1]  ：[第 2 課：定義父報表的資料連線和資料表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。  
+4.  在 [資料集屬性] 頁面的 [資料來源] 方塊中，選取您在[第 2 課：定義父報表的資料連線和資料表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)中建立的 [DataSet1]。  
   
     [可用資料集]  方塊會自動更新為您如上所建立的 **DataTable**。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62651274"
   
 6.  在 [排列欄位]  頁面中執行下列操作：  
   
-    1.  從 [可用欄位]  將 **ProductID**、**Name**、**ProductNumber**、**SafetyStockLevel** 和 **ReorderLevel** 拖曳至 [值]  方塊。  
+    1.  從 [可用欄位] 將 **ProductID**、**Name**、**ProductNumber**、**SafetyStockLevel** 和 **ReorderLevel** 拖曳至 [值] 方塊。  
   
     2.  按一下 **Sum(ProductID)** 、 **Sum(SafetyStockLevel)** 、 **Sum(ReorderLevel)** 旁的箭頭，並清除 **Sum** 選項。  
   

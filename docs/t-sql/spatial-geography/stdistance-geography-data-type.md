@@ -50,7 +50,7 @@ ms.locfileid: "74200501"
   
 ## <a name="remarks"></a>備註  
  表達結果的測量單位是由空間資料的[空間參考識別碼 &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) 定義。
-如果 *geography* 執行個體的空間參考識別碼 (SRID) 不相符，STDistance() 一定會傳回 **null**。  
+如果 **geography** 執行個體的空間參考識別碼 (SRID) 不相符，STDistance() 一定會傳回 *null*。  
   
 > [!NOTE]  
 >  **geography** 資料型別上計算區域或距離的方法將會根據此方法中使用之執行個體的 SRID，而傳回不同的結果。 如需有關 SRID 的詳細資訊，請參閱[空間參考識別碼 &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  

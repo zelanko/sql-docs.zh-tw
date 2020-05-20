@@ -178,7 +178,7 @@ ms.locfileid: "73637951"
   
 -   technet.microsoft.com 上的技術文件： [Integration Services：效能微調技術](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
--   [BI 和分析的 SQLCAT 指南](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)中的技術文件：_將同步轉換分割為多個工作來增加管線的輸送量_
+-   _BI 和分析的 SQLCAT 指南_中的技術文件：[將同步轉換分割為多個工作來增加管線的輸送量](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)
   
 -   msdn.microsoft.com 上的技術文章： [資料載入效能指南](https://go.microsoft.com/fwlink/?LinkId=220816)。  
   

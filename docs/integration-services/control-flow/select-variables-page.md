@@ -29,7 +29,7 @@ ms.locfileid: "71293946"
 
   使用 [選取變數]  對話方塊，可在您設定指令碼工作或指令碼元件時，為 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性選取一或多個變數。  
   
- 若要開啟 [選取變數]  對話方塊，請在 [指令碼轉換編輯器]  對話方塊的 [指令碼]  頁面上，於 [自訂屬性]  底下尋找 [ReadOnlyVariables]  或 [ReadWriteVariables]  屬性，然後按一下與該屬性相關聯的省略符號 ([...]) 按鈕。  
+ 若要開啟 [選取變數] 對話方塊，請在 [指令碼轉換編輯器] 對話方塊的 [指令碼] 頁面上，於 [自訂屬性] 底下尋找 [ReadOnlyVariables] 或 [ReadWriteVariables] 屬性，然後按一下與該屬性相關聯的省略符號 ([...]) 按鈕。  
   
 ## <a name="options"></a>選項。  
  選取方塊  

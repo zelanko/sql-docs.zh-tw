@@ -50,7 +50,7 @@ ms.locfileid: "77079614"
 
 ### <a name="custom-headers"></a>自訂標頭
 
-設定所有符合指定 regex 模式的 URL 標頭值。 使用者可以使用有效的 XML 來更新自訂標頭值，以設定所選要求 URL 的標頭值。 系統管理員可以在 XML 中新增任意數量的標頭。 請參閱＜伺服器屬性進階頁面＞  一文中的[自訂標頭](tools/server-properties-advanced-page-reporting-services.md#customheaders)以取得詳細資料。
+設定所有符合指定 regex 模式的 URL 標頭值。 使用者可以使用有效的 XML 來更新自訂標頭值，以設定所選要求 URL 的標頭值。 系統管理員可以在 XML 中新增任意數量的標頭。 請參閱＜伺服器屬性進階頁面＞一文中的[自訂標頭](tools/server-properties-advanced-page-reporting-services.md#customheaders)以取得詳細資料。
 
 ### <a name="transparent-database-encryption"></a>透明資料庫加密
 

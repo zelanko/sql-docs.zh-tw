@@ -29,14 +29,14 @@ ms.locfileid: "71285139"
 > 如果您必須複製多個 SQL Server 資料庫，或資料表和檢視以外的 SQL Server 資料庫物件，請使用 [複製資料庫精靈]，而非 [匯入和匯出精靈]。 如需詳細資訊，請參閱 [使用複製資料庫精靈](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
 ## <a name="screen-shot---if-youre-going-to-copy-tables"></a>螢幕擷取畫面 - 如果您即將複製資料表  
- 下列螢幕擷取畫面顯示在您事先選取 [指定資料表複製或查詢]  頁面上的 [從一或多個資料表或檢視表複製資料]  選項時，精靈的 [選取來源資料表和檢視]  頁面範例。 在清單中，您會看到資料來源中所有可用的資料表和檢視表。
+ 下列螢幕擷取畫面顯示在您事先選取 [指定資料表複製或查詢] 頁面上的 [從一或多個資料表或檢視表複製資料] 選項時，精靈的 [選取來源資料表和檢視] 頁面範例。 在清單中，您會看到資料來源中所有可用的資料表和檢視表。
  
 在此範例中，[來源]  清單包含 AdventureWorks 範例資料庫中的所有資料表。 選取的資料列顯示使用者想要將 **Sales.Customer** 資料表從來源複製至目的地的新 **Sales.CustomerNew** 資料表。 
    
  ![[匯入和匯出精靈] 的 [選取資料表] 頁面](../../integration-services/import-export-data/media/select-tables1.png "[匯入和匯出精靈] 的 [選取資料表] 頁面")
   
 ## <a name="screen-shot---if-you-provided-a-query"></a>螢幕擷取畫面 - 如果您已提供查詢  
- 下列螢幕擷取畫面顯示在您事先選取 [指定資料表複製或查詢]  頁面上的 [寫入查詢來指定要傳送的資料]  選項時，精靈的 [選取來源資料表和檢視]  頁面範例。 [來源]  清單只會包含單一資料列，其中名為 `[Query]` 的項目代表您在 [提供來源查詢]  頁面上提供的查詢。
+ 下列螢幕擷取畫面顯示在您事先選取 [指定資料表複製或查詢] 頁面上的 [寫入查詢來指定要傳送的資料] 選項時，精靈的 [選取來源資料表和檢視] 頁面範例。 [來源]  清單只會包含單一資料列，其中名為 `[Query]` 的項目代表您在 [提供來源查詢]  頁面上提供的查詢。
  
 在此範例中，使用者想要將查詢結果從來源複製至目的地的 **Sales.CustomerNew** 資料表。  
     
@@ -63,7 +63,7 @@ ms.locfileid: "71285139"
 如需詳細資訊，請參閱 [資料行對應](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。  
 
 **預覽**  
-在 [預覽資料]  對話方塊中，選擇性地按一下 [預覽]  預覽最多 200 個取樣資料列。 這會確認精靈即將複製您想要複製的資料。 如需詳細資訊，請參閱 [預覽資料](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)。  
+在 [預覽資料] 對話方塊中，選擇性地按一下 [預覽] 預覽最多 200 個取樣資料列。 這會確認精靈即將複製您想要複製的資料。 如需詳細資訊，請參閱 [預覽資料](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)。  
   
 在您預覽資料之後，可能會想要變更已在精靈的先前頁面上選取的選項。 若要執行這些變更，請返回 [選取來源資料表和檢視表]  頁面，然後按一下 [上一步]  回到可以變更選取項目的頁面。  
 

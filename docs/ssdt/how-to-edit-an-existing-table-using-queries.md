@@ -26,11 +26,11 @@ ms.locfileid: "75241408"
   
 ### <a name="to-edit-the-definition-of-an-existing-table"></a>若要編輯現有資料表的定義  
   
-1.  在 [SQL Server 物件總管]  中，展開 [Trade]  資料庫的 [資料表]  節點，然後以滑鼠右鍵按一下 [dbo.Suppliers]  。  
+1.  在 [SQL Server 物件總管] 中，展開 [Trade] 資料庫的 [資料表] 節點，然後以滑鼠右鍵按一下 [dbo.Suppliers]。  
   
 2.  選取 [檢視設計工具]  在資料表設計工具中檢視資料表結構描述。  
   
-3.  選取 [Address]  資料行的 [允許 Null]  方塊。 請注意，指令碼窗格中對應的程式碼會立即變更為 `NULL`。  
+3.  選取 [Address] 資料行的 [允許 Null] 方塊。 請注意，指令碼窗格中對應的程式碼會立即變更為 `NULL`。  
   
 4.  遵循[如何：使用 Power Buffer 更新連接的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)主題中的步驟更新資料庫。  
   

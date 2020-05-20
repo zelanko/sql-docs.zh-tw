@@ -43,7 +43,7 @@ HRESULT GetParameterProperties(
  記憶體的指標，其中包含在 *prgParamProperties* 中傳回的 SSPARAMPROPS 結構數目。  
   
  *prgParamProperties*[out]  
- 藉其傳回 SSPARAMPROPS 結構陣列的記憶體指標。 提供者會配置用於結構的記憶體，並將地址傳回此記憶體；當它不再需要該結構時，取用者會使用 **IMalloc::Free** 釋放此記憶體。 針對 **prgParamProperties** 呼叫 *IMalloc::Free* 之前，取用者也必須針對每個 DBPROP 結構的 **vValue** 屬性呼叫 *VariantClear*，才能在變數包含參考型別 (例如 BSTR) 時防止記憶體流失。 如果輸出時 *pcParams* 為零，或者發生 DB_E_ERRORSOCCURRED 之外的錯誤，提供者就不會配置任何記憶體，也無法確保輸出時，*prgParamProperties* 為 Null 指標。  
+ 藉其傳回 SSPARAMPROPS 結構陣列的記憶體指標。 提供者會配置用於結構的記憶體，並將地址傳回此記憶體；當它不再需要該結構時，取用者會使用 **IMalloc::Free** 釋放此記憶體。 針對 *prgParamProperties* 呼叫 **IMalloc::Free** 之前，取用者也必須針對每個 DBPROP 結構的 *vValue* 屬性呼叫 **VariantClear**，才能在變數包含參考型別 (例如 BSTR) 時防止記憶體流失。 如果輸出時 *pcParams* 為零，或者發生 DB_E_ERRORSOCCURRED 之外的錯誤，提供者就不會配置任何記憶體，也無法確保輸出時，*prgParamProperties* 為 Null 指標。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  除了無法引發 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED 之外，**GetParameterProperties** 方法會傳回與核心 OLE DB **ICommandProperties::GetProperties** 方法相同的錯誤碼。  

@@ -45,7 +45,7 @@ ms.locfileid: "72251291"
   
 -   查詢存放區會在編譯期間，利用來自記憶體內部 OLTP 的計劃產生機制，來擷取查詢執行計劃。 預存的計劃在語意上相當於使用 `SET SHOWPLAN_XML ON` 取得的計劃，但有一點不同︰查詢存放區中的計劃會依據個別的陳述式進行分割和儲存。  
     
--   當您在含有混合工作負載的資料庫中執行查詢存放區時，則可從 **sys.query_store_plan &#40;Transact-SQL&#41;** 使用 [is_natively_compiled](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 欄位，快速找到原生程式碼編譯所產生的查詢計劃。  
+-   當您在含有混合工作負載的資料庫中執行查詢存放區時，則可從 [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 使用 **is_natively_compiled** 欄位，快速找到原生程式碼編譯所產生的查詢計劃。  
   
 -   查詢存放區擷取模式 (*ALTER TABLE* 陳述式中的 **QUERY_CAPTURE_MODE** 參數) 不會影響來自原生編譯模組的查詢，因為不論組態值為何，一律會擷取它們。 這包括 `QUERY_CAPTURE_MODE = NONE`設定。  
   

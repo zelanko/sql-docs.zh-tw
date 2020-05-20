@@ -22,11 +22,11 @@ ms.locfileid: "62512533"
   
 1.  在**方案總管**中，以滑鼠右鍵按一下 **Default.aspx**，然後按一下 [檢視表設計師]  。  
   
-2.  如果 default.aspx 中已具備 ReportViewer 控制項，請跳至 **步驟 4**。 從 [工具箱]  視窗的 [AJAX 延伸模組]  群組中，將 **ScriptManager** 控制項拖曳至設計介面。  
+2.  如果 default.aspx 中已具備 ReportViewer 控制項，請跳至 **步驟 4**。 從 [工具箱] 視窗的 [AJAX 延伸模組] 群組中，將 **ScriptManager** 控制項拖曳至設計介面。  
   
 3.  從 [報表]  群組，將 **ReportViewer** 控制項拖曳至設計介面上的 **ScriptManager** 控制項下方。  
   
-4.  按一下 **ReportViewer** 控制項右上角的箭頭，開啟 [ReportViewer 工作]  視窗。  
+4.  按一下 **ReportViewer** 控制項右上角的箭頭，開啟 [ReportViewer 工作] 視窗。  
   
 5.  在 [選擇報表]  方塊中，選取您建立的父報表。  
   

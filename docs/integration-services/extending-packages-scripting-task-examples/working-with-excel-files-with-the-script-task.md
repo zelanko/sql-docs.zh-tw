@@ -67,7 +67,7 @@ ms.locfileid: "71286579"
   
 4.  **參考**。 從 Excel 檔案讀取結構描述資訊的程式碼範例，在指令碼專案中需要有 **System.Xml** 命名空間的參考。  
   
-5.  請使用 [選項]  對話方塊中 [一般]  頁面上的 [指令碼語言]  選項，為指令碼元件設定預設的指令碼語言。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
+5.  請使用 [選項] 對話方塊中 [一般] 頁面上的 [指令碼語言] 選項，為指令碼元件設定預設的指令碼語言。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
 ##  <a name="example-1-description-check-whether-an-excel-file-exists"></a><a name="example1"></a> 範例 1 描述：檢查 Excel 檔案是否存在  
  此範例會判斷 `ExcelFile` 變數中指定的 Excel 活頁簿檔案是否存在，然後將 `ExcelFileExists` 變數的布林值設定為結果。 您可以為封裝工作流程中的分支使用此布林值。  
@@ -253,7 +253,7 @@ public class ScriptMain
   
 1.  將新指令碼工作新增至套件，並將其名稱變更為 **GetExcelFiles**。  
   
-2.  開啟 [指令碼工作編輯器]  的 [指令碼]  索引標籤，並按一下 **ReadOnlyVariables**，然後使用下列其中一項方法輸入屬性值：  
+2.  開啟 [指令碼工作編輯器] 的 [指令碼] 索引標籤，並按一下 **ReadOnlyVariables**，然後使用下列其中一項方法輸入屬性值：  
   
     -   鍵入 **ExcelFolder**  
   
@@ -328,7 +328,7 @@ public class ScriptMain
   
 1.  將新指令碼工作新增至套件，並將其名稱變更為 **GetExcelTables**。  
   
-2.  開啟 [指令碼工作編輯器]  的 [指令碼]  索引標籤，並按一下 **ReadOnlyVariables**，然後使用下列其中一項方法輸入屬性值：  
+2.  開啟 [指令碼工作編輯器] 的 [指令碼] 索引標籤，並按一下 **ReadOnlyVariables**，然後使用下列其中一項方法輸入屬性值：  
   
     -   鍵入 **ExcelFile**。  
   
@@ -439,7 +439,7 @@ public class ScriptMain
   
 2.  依序連線這四個範例指令碼工作，好讓每個工作在前一個工作順利完成之後接著執行，然後將第四個範例工作連線至 **DisplayResults** 工作。  
   
-3.  開啟 [指令碼工作編輯器]  中的 **DisplayResults** 工作。  
+3.  開啟 [指令碼工作編輯器] 中的 **DisplayResults** 工作。  
   
 4.  在 [指令碼]  索引標籤上，按一下 **ReadOnlyVariables** 並使用下列其中一個方法，新增[設定套件以測試範例](#configuring)中的所有七個變數：  
   

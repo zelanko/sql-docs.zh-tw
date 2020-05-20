@@ -91,7 +91,7 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
 ## <a name="run-the-t-sql-code"></a>執行 T-SQL 程式碼
 執行下列 Transact-SQL 程式碼來執行 SSIS 套件。
 
-1. 在 [編輯器]  視窗中，於空白查詢視窗中輸入下列查詢 (此程式碼是 SSMS 中 [執行套件]  對話方塊的 [指令碼]  選項所產生的程式碼。)
+1. 在 [編輯器]  視窗中，於空白查詢視窗中輸入下列查詢 (此程式碼是 SSMS 中 [執行套件] 對話方塊的 [指令碼] 選項所產生的程式碼。)
 
 2. 更新 `catalog.create_execution` 預存程序中您系統的參數值。
 

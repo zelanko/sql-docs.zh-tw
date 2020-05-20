@@ -149,7 +149,7 @@ ms.locfileid: "77081799"
 |欄位|來自查詢命令的欄位<br /><br /> 導出欄位不屬於資料集定義的一部分|檢視欄位，但是無法變更欄位<br /><br /> 根據您將共用資料集加入至報表時的查詢，欄位集合是靜態的。 若要更新，請按一下 **[資料集屬性]** 對話方塊中的 **[重新整理欄位]** 。 實際的欄位集合是定義中目前的查詢所傳回的任何內容。<br /><br /> 加入導出欄位|  
 |資料集|資料選項，例如區分大小寫|覆寫執行個體中的資料選項|  
   
- 如需建立資料集的詳細資訊，請參閱 [Reporting Services 文件](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)的 [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/tools/reporting-services-tools.md) (建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;) 和 [Reporting Services Tools](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) (Reporting Services 工具)。  
+ 如需建立資料集的詳細資訊，請參閱 [Reporting Services 文件](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)的 [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) (建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;) 和 [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md) (Reporting Services 工具)。  
   
 ##  <a name="filtering-sorting-and-grouping-data-in-a-dataset"></a><a name="SortGroupFilter"></a> 篩選、排序及分組資料集中的資料  
  資料集中的資料是在外部資料來源上執行查詢命令而產生的。 資料延伸模組的查詢命令語法會決定是否可以排序或分組資料。 排序與分組要在擷取報表的資料前，於查詢中進行。 篩選則在擷取報表的資料之後進行。  

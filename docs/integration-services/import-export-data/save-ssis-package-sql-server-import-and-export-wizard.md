@@ -46,7 +46,7 @@ ms.locfileid: "71296252"
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>螢幕擷取畫面 - 將套件儲存在 SQL Server
 
- 下列螢幕擷取畫面會在您於 [儲存並執行套件]  頁面上選取 [SQL Server]  選項時，顯示精靈的 [儲存 SSIS 套件]  頁面。 
+ 下列螢幕擷取畫面會在您於 [儲存並執行套件] 頁面上選取 [SQL Server] 選項時，顯示精靈的 [儲存 SSIS 套件] 頁面。 
   
 ![[匯入和匯出精靈] 的 [儲存 SSIS 套件] 頁面](../../integration-services/import-export-data/media/save-package2.png "[匯入和匯出精靈] 的 [儲存 SSIS 套件] 頁面")  
 
@@ -72,7 +72,7 @@ ms.locfileid: "71296252"
     
 ## <a name="screen-shot---save-the-package-in-the-file-system"></a>螢幕擷取畫面 - 將套件儲存在檔案系統
  
-下列螢幕擷取畫面會在您於 [儲存並執行套件]  頁面上選取 [檔案系統]  選項時，顯示精靈的 [儲存 SSIS 套件]  頁面。 
+下列螢幕擷取畫面會在您於 [儲存並執行套件] 頁面上選取 [檔案系統] 選項時，顯示精靈的 [儲存 SSIS 套件] 頁面。 
   
 ![[匯入和匯出精靈] 的 [儲存 SSIS 套件] 頁面](../../integration-services/import-export-data/media/save-package1.png "[匯入和匯出精靈] 的 [儲存 SSIS 套件] 頁面")  
 

@@ -21,7 +21,7 @@ ms.locfileid: "71296299"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本主題示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]  或 [選擇目的地]  頁面中連線至 **Microsoft Access** 資料來源。
+本主題示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面中連線至 **Microsoft Access** 資料來源。
 
 下列螢幕擷取畫面顯示 Microsoft Access 資料庫的連接範例。 在此範例中，您不需要輸入使用者名稱和密碼，因為目標資料庫不會使用工作群組資訊檔案。
 
@@ -97,7 +97,7 @@ ms.locfileid: "71296299"
 6.  按一下每個對話方塊中的 [確定]  返回精靈的 [選擇資料來源]  或 [選擇目的地]  頁面，並繼續。
 
 ## <a name="keep-your-autonumber-values-when-you-export-from-access"></a>從 Access 匯出時保留自動編號值
-若要允許將來源資料中的現有識別值插入目的地資料表中的識別資料行，請選擇 [資料行對應]  對話方塊的 [啟用識別插入]  選項。 目的地識別欄位一般預設不允許您插入現有值。 若要顯示 [資料行對應]  對話方塊，請在到達精靈的 [選取來源資料表和檢視]  頁面時選取 [編輯對應]  。 若要查看這些頁面，請參閱[選取來源資料表和檢視](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)和[資料行對應](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。
+若要允許將來源資料中的現有識別值插入目的地資料表中的識別資料行，請選擇 [資料行對應] 對話方塊的 [啟用識別插入] 選項。 目的地識別欄位一般預設不允許您插入現有值。 若要顯示 [資料行對應] 對話方塊，請在到達精靈的 [選取來源資料表和檢視] 頁面時選取 [編輯對應]。 若要查看這些頁面，請參閱[選取來源資料表和檢視](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)和[資料行對應](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。
 
 如果您現有的主索引鍵位於識別資料行、autonumber 資料行或對等項目內，您通常必須選取此選項來保留現有的主索引鍵值。 否則目的地識別欄位通常會指派新值。
 

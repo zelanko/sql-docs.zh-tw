@@ -35,7 +35,7 @@ ms.locfileid: "67994306"
   
 -   DBID *uName* 成員必須將現有基底資料表或檢視表的名稱指定為 Unicode 字元字串。  
   
--   *OpenRowset* 的 **pIndexID** 參數必須為 NULL。  
+-   **OpenRowset** 的 *pIndexID* 參數必須為 NULL。  
   
  **IOpenRowset::OpenRowset** 的結果集包含單一資料列集。 包含單一資料列集的結果集可受到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標的支援。 資料指標支援可讓開發人員使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 並行機制。  
   

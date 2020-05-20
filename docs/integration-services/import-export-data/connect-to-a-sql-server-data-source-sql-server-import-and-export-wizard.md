@@ -21,13 +21,13 @@ ms.locfileid: "79288372"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本主題示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]  或 [選擇目的地]  頁面中連線至 **Microsoft SQL Server** 資料來源。 您可以使用數個資料提供者來連線至 SQL Server。
+本主題示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面中連線至 **Microsoft SQL Server** 資料來源。 您可以使用數個資料提供者來連線至 SQL Server。
 
 > [!TIP]
 > 如果您的網路具有多部伺服器，則輸入伺服器名稱會比展開伺服器下拉式清單更為簡單。 如果您按一下下拉式清單，查詢網路中所有可用的伺服器可能需要很多時間。
 
 ## <a name="connect-to-sql-server-with-the-net-framework-data-provider-for-sql-server"></a>使用 .NET Framework Data Provider for SQL Server 連接到 SQL Server 
-在您選取精靈的 [選擇資料來源]  或 [選擇目的地]  頁面上的 [.NET Framework Data Provider for SQL Server]  之後，頁面會顯示提供者的分組選項清單。 其中有許多是不易記的名稱和不熟悉的設定。 幸運的是，若要連線至任何企業資料庫，您通常只需要提供幾項資訊。 您可以忽略其他設定的預設值。
+在您選取精靈的 [選擇資料來源] 或 [選擇目的地] 頁面上的 [.NET Framework Data Provider for SQL Server] 之後，頁面會顯示提供者的分組選項清單。 其中有許多是不易記的名稱和不熟悉的設定。 幸運的是，若要連線至任何企業資料庫，您通常只需要提供幾項資訊。 您可以忽略其他設定的預設值。
 
 > [!NOTE]
 > 不論 SQL Server 是您的來源還是目的地，此資料提供者的連線選項都會相同。 也就是，您在精靈的 [選擇資料來源]  和 [選擇目的地]  頁面上看到的選項會相同。
@@ -105,7 +105,7 @@ SQL Server 的名稱。
      `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
 
 ### <a name="enter-the-connection-string"></a>輸入連接字串
-在 [選擇資料來源]  或 [選擇目的地]  頁面上，於 [ConnectionString]  欄位中輸入連接字串，或在 [Dsn]  欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和屬性值。
+在 [選擇資料來源] 或 [選擇目的地] 頁面上，於 [ConnectionString] 欄位中輸入連接字串，或在 [Dsn] 欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和屬性值。
 
 下列範例使用此連接字串。
 

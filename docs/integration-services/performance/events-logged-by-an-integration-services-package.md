@@ -88,7 +88,7 @@ ms.locfileid: "71282502"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 **[SSIS]** 功能表上，按一下 **記錄事件**。 您可以將 View.LogEvents 命令對應到您在 [選項]  對話方塊的 [鍵盤]  頁面中所選擇的組合鍵，以選擇性地顯示 [記錄事件]  視窗。  
+2.  在 **[SSIS]** 功能表上，按一下 **記錄事件**。 您可以將 View.LogEvents 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [記錄事件] 視窗。  
   
 3.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]** 。  
   

@@ -37,7 +37,7 @@ ms.locfileid: "67991055"
 ## <a name="installing-replication-by-using-setup"></a>使用安裝程式安裝複寫  
 **在安裝新執行個體時安裝複寫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
-- 若要安裝複寫元件 (包括 Replication Management Objects (RMO))，請在安裝精靈的 [特徵選取]  頁面上選取 [SQL Server 複寫]  。  
+- 若要安裝複寫元件 (包括 Replication Management Objects (RMO))，請在安裝精靈的 [特徵選取] 頁面上選取 [SQL Server 複寫]。  
   
 ## <a name="installing-replication-from-the-command-prompt"></a>從命令提示字元安裝複寫  
  **在安裝新執行個體時安裝複寫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  

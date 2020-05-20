@@ -75,7 +75,7 @@ ms.locfileid: "72906376"
   
 8.  按一下 [關閉]  。  
   
-9. 在 [檔案]  功能表上，選取 [儲存 **table_name**]  。  
+9. 在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
 
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>若要在物件總管中將現有的索引移到不同的檔案群組  
   
