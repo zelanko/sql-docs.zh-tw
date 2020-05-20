@@ -13,14 +13,14 @@ helpviewer_keywords:
 - DefaultDatabase property [ADO], Visual Basic example
 - provider property [ADO], Visual Basic example
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 46486167ab5e8bd1b063928d4ba3f6f73c893784
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d1c72fd2e84bfe8c39570181a7f975c70140d91c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931510"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759924"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 和 DefaultDatabase 屬性範例（VB）
 這個範例會使用不同的提供者開啟三個[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，以示範[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性。 它也會使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)屬性來設定 Microsoft ODBC 提供者的預設資料庫。  

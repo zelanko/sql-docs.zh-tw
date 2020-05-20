@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetChildren method [ADO]
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 84f1a2f7a80e17571f1b8ad3e63db640fb58dc19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 605fb2e2afbd73a8a5509102ae98f348aad90bcb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932501"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760064"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren 方法 (ADO)
 傳回[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，其資料列代表集合[記錄](../../../ado/reference/ado-api/record-object-ado.md)的子系。  

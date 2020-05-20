@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2d6b03137e920be036d1dd47cb4612076247fa3f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925647"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761094"
 ---
 # <a name="data-section"></a>資料區段
 Data 區段會定義資料列集的資料，以及任何暫止的更新、插入或刪除。 Data 區段可以包含零個或多個資料列。 它只能包含一個資料列集的資料，其中的資料列是由架構所定義。 此外，如先前所述，可以省略沒有任何資料的資料行。 如果在 data 區段中使用屬性或子項目，而且架構區段中尚未定義該結構，則會以無訊息方式略過。  
@@ -29,7 +29,7 @@ Data 區段會定義資料列集的資料，以及任何暫止的更新、插入
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- 下列字元會保留在 XML 中，而且必須取代成字元實體： {'，"，&，\<，>}。  
+ 下列字元會保留在 XML 中，而且必須取代成字元實體： {'，"，&， \< ，>}。  
   
 ## <a name="binary"></a>Binary  
  二進位資料為 bin。以十六進位編碼（也就是一個位元組對應到兩個字元，每個半位元組一個字元）。  

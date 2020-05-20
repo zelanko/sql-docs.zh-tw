@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Getrows method [ADO], Visual Basic example
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fedde638e343281c5d3810cc80c9ba8db820e839
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 72c6a4755b05399605828e73f69bca7b8da632eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918467"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760014"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows 方法範例 (VB)
 這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法，從[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)取出指定數目的資料列，並在陣列中填入產生的資料。 在兩種情況下， **getrows**方法會傳回少於所需的資料列數目：如果已達到[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ，或如果**GetRows**嘗試抓取由另一位使用者刪除的記錄，則為。 只有在發生第二個案例時，函數才會傳回**False** 。 需要 GetRowsOK 函數才能執行此程式。  

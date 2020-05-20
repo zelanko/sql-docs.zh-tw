@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetChunk method [ADO]
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43c5fef08d22364b9842c58fc82d46ba4bfa00bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8f41cd6a590c318f3268eb5292b2086685a36848
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918558"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760054"
 ---
 # <a name="getchunk-method-ado"></a>GetChunk 方法 (ADO)
 傳回大型文字或二進位資料[欄位](../../../ado/reference/ado-api/field-object.md)物件的所有或部分內容。  

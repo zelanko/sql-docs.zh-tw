@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XML DOM object [ADO], saving to
 ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe4790fa7fc1a2859013500f44dcd4a266719f39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2360d9886fa718034bdf3fcc4ed1cacd459b2788
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924316"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760904"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>儲存到 XML DOM 物件
 您可以將 XML 格式的記錄集儲存至 MSXML DOM 物件的實例，如下列 Visual Basic 程式碼所示：  

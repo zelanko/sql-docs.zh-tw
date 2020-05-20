@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - StreamReadEnum enumeration [ADO]
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7700fc1ddc3cc619db224ac46006370898af1d62
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 33cb0b24806b0b4568a1d7eabc5a55aab4a9872b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928666"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759604"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 指定是否應從[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件讀取整個資料流程或下一行。  

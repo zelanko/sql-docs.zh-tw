@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTimeout property [ADO]
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7c8c6b10e63e4cacce0124eb11102db796168d9b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b771c5b8dc54bb312893885aea9c9c151feef3e3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919704"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760384"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout 屬性 (ADO)
 表示在終止嘗試並產生錯誤之前，執行命令時要等候的時間長度。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**long**值，指出等候命令執行多久的時間（以秒為單位）。 預設值為 30。  
+ 設定或傳回**long**值，指出等候命令執行多久的時間（以秒為單位）。 預設為 30。  
   
 ## <a name="remarks"></a>備註  
  請在[Connection](../../../ado/reference/ado-api/connection-object-ado.md)物件或[Command](../../../ado/reference/ado-api/command-object-ado.md)物件上使用**CommandTimeout**屬性，以允許取消[執行](../../../ado/reference/ado-api/execute-method-ado-command.md)方法呼叫，因為網路流量或伺服器使用繁重的延遲。 如果在**CommandTimeout**屬性中設定的間隔在命令完成執行之前已過期，則會發生錯誤，而且 ADO 會取消命令。 如果您將屬性設定為零，ADO 會無限期地等候，直到執行完成為止。 請確定您撰寫程式碼的提供者和資料來源支援**CommandTimeout**功能。  

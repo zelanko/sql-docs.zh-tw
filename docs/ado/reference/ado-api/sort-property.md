@@ -19,14 +19,14 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 946314f7be9f6c39d47a3f26b577e10834064dab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3dc6f7799e28fff65a1b6e60329ba9fb94d84824
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930949"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759834"
 ---
 # <a name="sort-property"></a>Sort 屬性
 表示排序[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的一或多個功能變數名稱，以及每個欄位是否以遞增或遞減順序排序。  
@@ -45,7 +45,7 @@ ms.locfileid: "67930949"
   
  將**排序**屬性設定為空字串，會將資料列重設為其原始順序，並刪除暫存索引。 將不會刪除現有的索引。  
   
- 假設**記錄集**包含三個名*為 firstName*、 *middleInitial*和*lastName*的欄位。 將**Sort**屬性設定為字串 "`lastName DESC, firstName ASC`"，這會依姓氏以遞減順序排序**記錄集**，然後依名字以遞增順序排列。 會忽略中間的初始。  
+ 假設**記錄集**包含三個名*為 firstName*、 *middleInitial*和*lastName*的欄位。 將**Sort**屬性設定為字串 " `lastName DESC, firstName ASC` "，這會依姓氏以遞減順序排序**記錄集**，然後依名字以遞增順序排列。 會忽略中間的初始。  
   
  欄位不能命名為 "ASC" 或 "DESC"，因為這些名稱會與關鍵字**ASC**和**DESC**衝突。 您可以在傳回**記錄集**的查詢中，使用**AS**關鍵字來建立具有衝突名稱之欄位的別名。  
   

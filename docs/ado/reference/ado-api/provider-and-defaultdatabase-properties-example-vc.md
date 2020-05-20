@@ -13,14 +13,14 @@ helpviewer_keywords:
 - provider property [ADO], VC++ example
 - DefaultDatabase property [ADO], VC++ example
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 20226c4c9c8d25541cee7fac786b85af5c12859f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bc0f81b24eba92e3962c14e42774a139e420b080
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931489"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759914"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider 和 DefaultDatabase 屬性範例 (VC++)
 這個範例會使用不同的提供者開啟三個[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，以示範[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性。 它也會使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)屬性來設定 Microsoft ODBC 提供者的預設資料庫。  

@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ad89d806f8a6774cb0fe2de056e30fd274a517c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c6aaf4d87e4e01e6f32e1d681d93e5a2291c3999
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924089"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760814"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>步驟 2：初始化 [主要] 清單方塊
 若要宣告全域記錄和記錄集物件，請將下列程式碼插入 Form1 的（一般）（宣告）：  
@@ -45,9 +45,9 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- 此程式碼會具現化全域記錄和記錄集物件。 記錄物件`grec`是以指定為 ACTIVECONNECTION 的 URL 開啟。 如果 URL 存在，則會開啟;如果尚未存在，則會建立它。 請注意，您應該將<https://servername/foldername/>"" 取代為您環境中的有效 URL。  
+ 此程式碼會具現化全域記錄和記錄集物件。 記錄物件是以 `grec` 指定為 ActiveConnection 的 URL 開啟。 如果 URL 存在，則會開啟;如果尚未存在，則會建立它。 請注意，您應該將 "" 取代為 <https://servername/foldername/> 您環境中的有效 URL。  
   
- 記錄集物件`grs`會在記錄的子系上開啟`grec`。 然後`lstMain`會使用發佈至 URL 的資源檔名來填入。  
+ 記錄集物件 `grs` 會在記錄的子系上開啟 `grec` 。 然後 `lstMain` 會使用發佈至 URL 的資源檔名來填入。  
   
 ## <a name="see-also"></a>另請參閱  
  [網際網路發佈案例](../../../ado/guide/data/internet-publishing-scenario.md)   

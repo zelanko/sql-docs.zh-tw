@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Update Resync property [ADO]
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ed0e3ad8027c31a351ddb4506d3b420aa3a1124d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e9d000150cc86a8c838ac5dea827b5c376f3a79f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938801"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759484"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>更新重新同步動態屬性 (ADO)
 指定[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法後面是否接著隱含的重新[同步](../../../ado/reference/ado-api/resync-method.md)處理方法作業，如果是，則為該作業的範圍。  

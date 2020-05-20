@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924186"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760864"
 ---
 # <a name="shape-append-clause"></a>Shape APPEND 子句
 Shape 命令 APPEND 子句會將一個或多個資料行附加至**記錄集**。 這些資料行通常是參考子**記錄集**的章節資料行。  
@@ -36,7 +36,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *parent-命令*  
  零或下列其中一項（您可以完全省略*父命令*）：  
   
--   以大括弧（"{}"）括住的提供者命令，會傳回**記錄集**物件。 此命令會發出給基礎資料提供者，且其語法取決於該提供者的需求。 雖然 ADO 不需要任何特定的查詢語言，但這通常會是 SQL 語言。  
+-   以大括弧（""）括住的提供者命令 {} ，會傳回**記錄集**物件。 此命令會發出給基礎資料提供者，且其語法取決於該提供者的需求。 雖然 ADO 不需要任何特定的查詢語言，但這通常會是 SQL 語言。  
   
 -   內嵌在括弧中的另一個圖形命令。  
   
@@ -66,7 +66,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>備註  
  *子記錄集*  
- -   以大括弧（"{}"）括住的提供者命令，會傳回**記錄集**物件。 此命令會發出給基礎資料提供者，且其語法取決於該提供者的需求。 雖然 ADO 不需要任何特定的查詢語言，但這通常會是 SQL 語言。  
+ -   以大括弧（""）括住的提供者命令 {} ，會傳回**記錄集**物件。 此命令會發出給基礎資料提供者，且其語法取決於該提供者的需求。 雖然 ADO 不需要任何特定的查詢語言，但這通常會是 SQL 語言。  
   
 -   內嵌在括弧中的另一個圖形命令。  
   
@@ -102,13 +102,13 @@ SHAPE [parent-command [[AS] parent-alias]]
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- SHAPE 會執行兩個命令`select * from t1` ：和`select * from t2 RELATE k1 TO k2)`（。 如果使用者提供的複合命令包含以分號分隔的多個提供者命令，SHAPE 就無法區分兩者的差異。 因此，在下列圖形命令中，  
+ SHAPE 會執行兩個命令： `select * from t1` 和（ `select * from t2 RELATE k1 TO k2)` 。 如果使用者提供的複合命令包含以分號分隔的多個提供者命令，SHAPE 就無法區分兩者的差異。 因此，在下列圖形命令中，  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- SHAPE `drop table t1`會`select * from t1; drop table t1`執行和`select * from t2 RELATE k1 TO k2),` （不會發現，這是個別的，在此案例中是危險的提供者命令。 應用程式必須一律驗證使用者輸入，以避免發生這類可能的駭客攻擊。  
+ SHAPE `select * from t1; drop table t1` 會執行和（ `select * from t2 RELATE k1 TO k2),` 不會發現， `drop table t1` 這是個別的，在此案例中是危險的提供者命令。 應用程式必須一律驗證使用者輸入，以避免發生這類可能的駭客攻擊。  
   
  此章節包含下列主題。  
   

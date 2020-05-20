@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80a373196f98a964bc3e522cc9329907a3392b95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 813b7e108f375fdbd22ba10761678907aea912f6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923909"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759054"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>適用於網際網路發佈的 OLE DB 提供者
 ADO[記錄](../../../ado/reference/ado-api/record-object-ado.md)和[串流](../../../ado/reference/ado-api/stream-object-ado.md)物件可與 Microsoft OLE DB Provider For Internet 發行（網際網路發佈提供者）搭配使用，以存取和操作 microsoft FrontPage 所提供的資源，例如 Web 資料夾或檔案。 使用 ADO，您可以將**記錄**、**資料流程**或[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的來源指定為 URL。 然後您可以上傳、下載、移動、複製和刪除資源，或直接操作資源屬性。  

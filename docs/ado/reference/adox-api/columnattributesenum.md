@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ColumnAttributesEnum enumeration [ADOX]
 ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc20ff68e90d504a6eed69d4845cacc0e3e687be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0c590e0f5dd94713c84a858063a81c680e4a0029
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966886"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759364"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
 指定資料[行](../../../ado/reference/adox-api/column-object-adox.md)的特性。  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8222b697fec7d0dd5bd1f32425cf48761f25308e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924295"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760894"
 ---
 # <a name="schema-section"></a>結構描述區段
 需要架構區段。 如前一個範例所示，ADO 會寫出每個資料行的詳細中繼資料，以盡可能保留資料值的語義以進行更新。 不過，若要在 XML 中載入，ADO 只需要資料行的名稱和它們所屬的資料列集。 以下是基本架構的範例：  
@@ -95,7 +95,7 @@ ms.locfileid: "67924295"
 </rs:data>  
 ```  
   
- 同樣地，因為在上一個範例中`CompanyName`沒有定義的別名， `CompanyName`所以必須在整個檔中一致使用。  
+ 同樣地，因為 `CompanyName` 在上一個範例中沒有定義的別名，所以 `CompanyName` 必須在整個檔中一致使用。  
   
 ## <a name="data-types"></a>資料類型  
  您可以將資料類型套用至具有 dt： type 屬性的資料行。 如需允許之 XML 類型的最終指南，請參閱[W3C Xml 資料規格](http://www.w3.org/TR/1998/NOTE-XML-data/)的資料類型一節。 您可以透過兩種方式來指定資料類型：直接在資料行定義本身上指定 dt： type 屬性，或使用 s:datatype 結構做為資料行定義的嵌套元素。 例如，  
@@ -152,13 +152,13 @@ ms.locfileid: "67924295"
 </s:AttributeType>  
 ```  
   
- 定義允許`CompanyName` null，但`ShipperID`不能包含 null 值。 如果 data 區段包含下列資料`CompanyName`列，持續性提供者會將資料行的資料狀態設定為 OLE DB 狀態常數 DBSTATUS_S_ISNull：  
+ 定義允許 `CompanyName` null，但 `ShipperID` 不能包含 null 值。 如果 data 區段包含下列資料列，持續性提供者會將資料行的資料狀態設定 `CompanyName` 為 OLE DB 狀態常數 DBSTATUS_S_ISNull：  
   
 ```  
 <z:row ShipperID="1"/>  
 ```  
   
- 如果資料列完全是空的，如下所示，持續性提供者會傳回 DBSTATUS_E_UNAVAILABLE 的`ShipperID` OLE DB 狀態，並 DBSTATUS_S_ISNull 的名稱。  
+ 如果資料列完全是空的，如下所示，持續性提供者會傳回 DBSTATUS_E_UNAVAILABLE 的 OLE DB 狀態， `ShipperID` 並 DBSTATUS_S_ISNull 的名稱。  
   
 ```  
 <z:row/>   

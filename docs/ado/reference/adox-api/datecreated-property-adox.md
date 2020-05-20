@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - DateCreated property [ADOX]
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0151b6388a19fc95227cbfa55a571e0a797d0acc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 566e815350bd59effc4802495bda4846e9a77691
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966578"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759214"
 ---
 # <a name="datecreated-property-adox"></a>DateCreated 屬性 (ADOX)
 表示建立物件的日期。  

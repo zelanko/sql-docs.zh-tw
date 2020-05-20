@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Command collection [ADO], ADO/WFC syntax
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4722316cc92567000294c57089afd8840bea1bcd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 61b5a54778bb680b68e923d198831d770973d1a7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919820"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760444"
 ---
 # <a name="command-ado---wfc-syntax"></a>Command (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 .com. wfc. 資料  

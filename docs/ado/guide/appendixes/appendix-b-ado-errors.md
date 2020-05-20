@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO], types
 ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 52a1968250f58102089b353e35e93689db653240
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1edc3625e23f9515a4ef817f21c65c6a3e261509
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926952"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760534"
 ---
 # <a name="appendix-b-ado-error-codes"></a>附錄 B： ADO 錯誤碼
 如需特定錯誤訊息的詳細資訊，請參閱下列主題：

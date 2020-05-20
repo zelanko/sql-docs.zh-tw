@@ -11,14 +11,14 @@ helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1882c5298d92e17a7ddaa165288fddfab7fdb02b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f0f712c6c1604f96d5d66d5ded712ae6efe54edb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924301"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760914"
 ---
 # <a name="sample-recordset-for-examining-data"></a>用於檢查資料的範例資料錄集
 首先，讓我們使用下列 SQL 查詢（針對 Microsoft SQL Server 中的 Northwind 範例資料基底來執行），查看傳回的**記錄集**物件。  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 29ad7f3aa9347af77080b04fb309f8b50b95dbe4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0935fa2b45d0ab496072f4f3a9619c821afc8383
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925870"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761183"
 ---
 # <a name="command-object-parameters"></a>Command 物件參數
 上一個主題討論了如何[建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)。 下一個範例會顯示更有趣的[命令](../../../ado/reference/ado-api/command-object-ado.md)物件用法，其中 SQL 命令已參數化。 這項修改可讓您重複使用命令，每次傳遞不同的參數值。 因為**命令**物件上的 [備妥的[屬性](../../../ado/reference/ado-api/prepared-property-ado.md)] 屬性設定為**true**，所以 ADO 會要求提供者先編譯[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)中指定的命令，然後才第一次執行。 它也會將已編譯的命令保留在記憶體中。 這會在第一次執行命令時稍微減緩執行，因為準備它需要額外負荷，但是之後每次呼叫命令時，效能就會提升。 因此，只有在使用超過一次的情況下，才應該準備命令。  

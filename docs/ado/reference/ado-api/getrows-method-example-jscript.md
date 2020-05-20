@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Getrows method [ADO], JScript example
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ae1a96f2f5a72f354e376faa3e9e7370f9fcb92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8ba091ff7db668cc049c50eeb26492a2c9ee3422
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932475"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760024"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows 方法範例 (JScript)
 這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法，從[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)取出*Custiomers*資料表的所有資料列，並在陣列中填入產生的資料。 在兩種情況下， **getrows**方法會傳回少於所需的資料列數目：如果已達到[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ，或如果**GetRows**嘗試抓取由另一位使用者刪除的記錄，則為。 只有在發生第二個案例時，函數才會傳回**False** 。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**GetRowsJS。**  

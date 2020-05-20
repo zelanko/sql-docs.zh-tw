@@ -13,14 +13,14 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e663ac5cdcf85fc1d050e0f066b597d29141ebfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7f5e960aa4ccc71079b8c06690665af74cffd0ab
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923896"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759064"
 ---
 # <a name="the-significance-of-cursor-location"></a>資料指標位置的精確度
 每個資料指標都會使用暫存資源來保存其資料。 這些資源可以是記憶體、磁片分頁檔案、暫存磁片檔案，甚至是資料庫中的暫存儲存體。 當這些資源位於用戶端電腦上時，資料指標稱為*用戶端*資料指標。 當這些資源位於伺服器時，資料指標稱為*伺服器端*資料指標。  

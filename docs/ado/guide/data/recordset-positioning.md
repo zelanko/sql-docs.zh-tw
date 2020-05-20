@@ -13,14 +13,14 @@ helpviewer_keywords:
 - repositioning record [ADO]
 - AbsolutePosition property [ADO]
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cdce4c7b08a8b15cdb0a9ee1111a216aeef005bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e48c80c59a51b007832b8c68c8e27c66333f57dc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924436"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760974"
 ---
 # <a name="recordset-positioning"></a>資料錄集定位
 您可以使用**AbsolutePosition**屬性，根據記錄**集**物件中的序數位置，或判斷目前記錄的序數位置，來移至記錄。 提供者必須支援適當的功能，才能使用此屬性。  

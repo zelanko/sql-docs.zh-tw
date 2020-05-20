@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63323fd8ed18f57a68633dce0525d1d37e4978ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 60b3a9e036bb199b72373055b299f262862a5d16
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924701"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759114"
 ---
 # <a name="persisting-data"></a>保存資料
 可攜的運算（例如，使用膝上型電腦）已產生應用程式的需求，這項功能可同時在連線和中斷連接的狀態下執行。 ADO 已藉由讓開發人員能夠將用戶端資料指標**記錄集**儲存至磁片，並于稍後重載，而增加了這項功能的支援。  

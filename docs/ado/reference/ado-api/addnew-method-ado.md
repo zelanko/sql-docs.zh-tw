@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6359d1b9f69963120e9446c47aa5473beedd127
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921320"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760724"
 ---
 # <a name="addnew-method-ado"></a>AddNew 方法 (ADO)
 建立可更新之[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的新記錄。  
@@ -40,7 +40,7 @@ recordset.AddNew FieldList, Values
  *FieldList*  
  選擇性。 單一名稱，或是新記錄中欄位的名稱陣列或序數位置。  
   
- *值*  
+ *閾值*  
  選擇性。 單一值，或新記錄中欄位的值陣列。 如果*Fieldlist*是陣列，*值*也必須是具有相同成員數目的陣列;否則，就會發生錯誤。 功能變數名稱的順序必須符合每個陣列中域值的順序。  
   
 ## <a name="remarks"></a>備註  

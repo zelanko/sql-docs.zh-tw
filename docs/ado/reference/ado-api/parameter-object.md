@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Parameter object [ADO]
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15df27e3dc48decf743a78dd4d147a22dc7cf276
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 22af5fadda96adbe67c1c03aaa5cde3527df1113
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931669"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759994"
 ---
 # <a name="parameter-object"></a>Parameter 物件
 根據參數化查詢或預存程式，表示與[命令](../../../ado/reference/ado-api/command-object-ado.md)物件相關聯的參數或引數。  

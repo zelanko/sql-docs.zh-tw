@@ -13,14 +13,14 @@ helpviewer_keywords:
 - updating data [ADO], transaction processing
 - nested transactions [ADO]
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cab6638704856baf873274807c0e2eff9a1f92d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 33e78f7a278623c5990a22a638c5a8e693b9a3e1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923866"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759074"
 ---
 # <a name="transaction-processing"></a>交易處理
 *交易*會分隔在連接上執行的一系列資料存取作業的開始和結束。 取決於資料來源的交易式功能， **Connection**物件也可讓您建立和管理交易。 例如，使用適用于 SQL Server 的 Microsoft OLE DB 提供者存取 Microsoft SQL Server 上的資料庫時，您可以為執行的命令建立多個嵌套的交易。  

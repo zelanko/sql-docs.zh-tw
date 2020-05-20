@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - 'Command collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad88bd09f82863586694ce1ea1eda7720a8d3af8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dfde0a07bee9f169fea3c0041afe0ac4d490a292
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919773"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760454"
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>命令（使用 #import Visual C++ 語法索引）
 ## <a name="methods"></a>方法  

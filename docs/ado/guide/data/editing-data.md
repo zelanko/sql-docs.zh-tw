@@ -12,14 +12,14 @@ helpviewer_keywords:
 - AdUseClient [ADO]
 - editing data [ADO]
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e8fd90849b8e046a7f4fe5d158d4594e612c91f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cc80c8ad9985efc21e2f583d8ca72751e21c1a2b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925496"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761034"
 ---
 # <a name="editing-data"></a>編輯資料
 我們已說明如何使用 ADO 連接到資料來源、執行命令、取得**記錄集**物件中的結果，以及在**記錄集中**流覽。 本節著重于下一個基本 ADO 作業：編輯資料。  

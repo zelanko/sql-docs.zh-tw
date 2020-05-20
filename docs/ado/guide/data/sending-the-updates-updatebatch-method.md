@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abb0051ef336a145b2da75906831d7adc168e6e3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924250"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760884"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>傳送更新：UpdateBatch 方法
 下列程式碼會將 LockType 屬性設為 adLockBatchOptimistic，並將 CursorLocation 設定為 adUseClient，以在批次模式中開啟記錄集。 它會加入兩個新的記錄，並變更現有記錄中的欄位值、儲存原始值，然後呼叫 UpdateBatch 將變更傳回資料來源。  

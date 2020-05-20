@@ -12,14 +12,14 @@ helpviewer_keywords:
 - query results into stream [ADO]
 - retrieving results into stream [ADO]
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2f0c76a668c7191467e9f66ba48c486aceea16df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b20363f3ffae96750046ab98bd623ea44d68a8e2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924340"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760924"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>將結果集擷取為資料流
 ADO 不會在傳統的**記錄集**物件中接收結果，而是改為將查詢結果抓取到資料流程中。 ADO **Stream**物件（或其他支援 COM **IStream**介面的物件，例如 ASP **Request**和**Response**物件）可以用來包含這些結果。 這項功能的其中一項用途是以 XML 格式抓取結果。 例如，使用 SQL Server 時，可以透過多種方式傳回 XML 結果，例如使用 FOR XML 子句搭配 SQL SELECT 查詢或使用 XPath 查詢。  

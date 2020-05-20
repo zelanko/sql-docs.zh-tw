@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CursorLocation property [ADO]
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: afee71d4f37e2b3a27247fbeacf51dab66cc1e23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1b38b11917bf5d8a3248a6c9c0a64518109d7c83
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933281"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760184"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 屬性 (ADO)
 表示資料指標服務的位置。  

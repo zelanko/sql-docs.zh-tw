@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - component services in RDS [ADO]
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 87eab0ac5611b437f6e0cbe1957a4d6e8652c4b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f13e876cb5707b7e906235c5b12e5f019f7b5d60
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922272"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758994"
 ---
 # <a name="running-business-objects-in-component-services"></a>在 Component Services 中執行商務物件
 > [!IMPORTANT]

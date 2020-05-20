@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], static
 - static cursors [ADO]
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 520c484bdaaa6eb59488900208993a607c5b0f7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4baacc48beffda2d83a23ce24d3a31c314da5841
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924111"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760824"
 ---
 # <a name="static-cursors"></a>靜態資料指標
 靜態資料指標一律會顯示第一次開啟資料指標時的結果集。 視執行而定，靜態資料指標為唯讀或讀取/寫入，並提供向前和向後滾動。 靜態資料指標通常不會在開啟資料指標之後，偵測對結果集的成員資格、順序或值所做的變更。 雖然不需要執行這項操作，但靜態資料指標可能會偵測自己的更新、刪除和插入。  

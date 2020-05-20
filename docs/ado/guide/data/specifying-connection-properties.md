@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connection properties [ADO]
 - connections [ADO]
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5aee5946f3087956a0117b88f4044ef8a6c9bd9f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6fee9745bca206f00603b32a6c4cd29faab34eca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924132"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760834"
 ---
 # <a name="specifying-connection-properties"></a>指定連線屬性
 您可以在開啟連接之前設定**連接**物件的屬性，藉以提供[連接字串](../../../ado/guide/data/creating-a-connection-string.md)所指定的許多資訊。 例如，您可以使用下列程式碼，達到與[建立連接字串](../../../ado/guide/data/creating-a-connection-string.md)中所討論的連接字串相同的效果。  

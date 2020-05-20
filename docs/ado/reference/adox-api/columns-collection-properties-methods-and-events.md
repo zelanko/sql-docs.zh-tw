@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Columns collection [ADOX], members
 ms.assetid: 3d9ec89a-cc85-4091-b6f0-2bb6a6826d5e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c692a9a1ab7e3d412925affab0f6d1df18fd6dc1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: db712b4f5779f421188863c51f5b4c014a768dd1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966818"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759324"
 ---
 # <a name="columns-collection-properties-methods-and-events"></a>Columns 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

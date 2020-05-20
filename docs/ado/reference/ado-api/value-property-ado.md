@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Value property [ADO]
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e35dd93e6d90a81934d8f272ea79c5eb7c8a97c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6648fcabe8890ef653558636738735a4f5e4012f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67913927"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759444"
 ---
 # <a name="value-property-ado"></a>Value 屬性 (ADO)
 
@@ -50,5 +50,5 @@ ADO 允許使用**Value**屬性來設定和傳回長二進位資料。
   
 ## <a name="see-also"></a>另請參閱
 
-[Value 屬性範例（VB）](../../../ado/reference/ado-api/value-property-example-vb.md)
-[value 屬性範例（VC + +）](../../../ado/reference/ado-api/value-property-example-vc.md) 
+[Value 屬性範例（VB）](../../../ado/reference/ado-api/value-property-example-vb.md) 
+[Value 屬性範例（VC + +）](../../../ado/reference/ado-api/value-property-example-vc.md) 

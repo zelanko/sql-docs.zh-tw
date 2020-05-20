@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], dynamic
 - dynamic cursors [ADO]
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 86e51b7880004117e8efc96bd310c6de705d43a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4a2b251e23c2408e75acd77debbc0876fd3f9c98
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925501"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761044"
 ---
 # <a name="dynamic-cursors"></a>動態資料指標
 動態資料指標會偵測對結果集中的資料列所做的所有變更，不論變更是從資料指標內部或資料指標以外的其他使用者進行。 所有使用者所做的所有 insert、update 和 delete 語句，都是透過資料指標來顯示。 動態資料指標可以在開啟資料指標之後，偵測結果集中對資料列、順序和值所做的任何變更。 除非資料指標交易隔離等級設定為「未認可」，否則不會顯示在資料指標外部進行的更新。  

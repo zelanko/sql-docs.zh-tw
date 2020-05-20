@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_ASYNCTHREADPRIORITY_ENUM [ADO]
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22a8cd4bb8d1bdddbaaa68e92349d9c728557ac0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ecdc80a2f1e1ace36170a9b4527ba01f0b02ee11
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921460"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760654"
 ---
 # <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 對於 RDS[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，指定抓取資料之非同步執行緒的執行優先權。  

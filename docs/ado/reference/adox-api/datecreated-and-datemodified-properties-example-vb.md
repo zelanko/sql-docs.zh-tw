@@ -13,14 +13,14 @@ helpviewer_keywords:
 - DateCreated property [ADOX], Visual Basic example
 - DateModified property [ADOX], Visual Basic example
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 96ca853100baddd94d29331416215278d493388f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c78010e98c82f5c43484fe39bbbec506c77b45e6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966590"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759234"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated 和 DateModified 屬性範例 (VB)
 這個範例會示範[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)和[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)屬性，方法是將新的資料[行](../../../ado/reference/adox-api/column-object-adox.md)加入現有的[資料表](../../../ado/reference/adox-api/table-object-adox.md)，並建立新的**資料表**。 此範例需要 DateOutput 程式才能執行。  

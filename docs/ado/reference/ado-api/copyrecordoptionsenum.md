@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CopyRecordOptionsEnum enumeration [ADO]
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6692125b7323bedc7a416e51555c373ef850ce0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8dc32a3cfad89e479b2541819b7ff6ad1bb1a4ed
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919375"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760254"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
 指定[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)方法的行為。  

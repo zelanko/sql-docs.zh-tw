@@ -13,14 +13,14 @@ helpviewer_keywords:
 - DefinedSize property [ADO], Visual Basic example
 - ActualSize property [ADO], Visual Basic example
 ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4aa9738232eae175c78596f741d3f1bcce0910b6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e8694873320659b69ef127a7cd3056185fc1b9f9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887383"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760665"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vb"></a>ActualSize 和 DefinedSize 屬性範例（VB）
 這個範例會使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)和[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)屬性，顯示欄位的定義大小和實際大小。  

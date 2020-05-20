@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Create method [ADOX]
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aafcab3ad379dc25a2681a5d4f0d3f5e8d6eab5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 15ea5cf8b565a943f4905a890cb08ba0afed202f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966679"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759264"
 ---
 # <a name="create-method-adox"></a>Create 方法 (ADOX)
 建立新的目錄。  

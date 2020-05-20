@@ -13,14 +13,14 @@ helpviewer_keywords:
 - UpdateBatch method [ADO]
 - CancelBatch method [ADO]
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a487ce96f20f574d5b3996e9e3948e423601cb10
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8e467e41d77012d3366ded54c7e20b01121bec8d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942911"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759464"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch 和 CancelBatch 方法範例 (VC++)
 這個範例會將[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法與[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法一起示範。  

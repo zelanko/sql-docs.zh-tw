@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e6be0edf100501762f6d4eada735ff90caa84df4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 73ba054b583fb9930cc62d18ff9e8e28a20720e9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932520"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760094"
 ---
 # <a name="find-method-example-vc"></a>Find 方法範例 (VC++)
 這個範例會使用[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[Find](../../../ado/reference/ado-api/find-method-ado.md)方法，找出並計算**Pubs**資料庫中的商務標題數目。 此範例假設基礎提供者不支援類似的功能。  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], members
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cd8992acf5652d4fad1e4e14a67c847bb30c6d34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 51cf4c6d8c9f2b96e7fb718fda244d3a05eed0f0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919819"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760399"
 ---
 # <a name="command-object-properties-methods-and-events"></a>Command 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

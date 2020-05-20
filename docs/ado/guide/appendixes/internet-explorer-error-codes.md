@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Internet Explorer errors [ADO]
 - errors [ADO], Internet Explorer
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d7c3364dba94f6b106509e2646821391bd01df1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8b50d56cca411af0a9a6a3999cdc1d891da2569f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81219267"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760504"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>遠端資料服務的 Internet Explorer 錯誤碼
 下表列出與遠端資料服務使用方式相關的 Microsoft® Internet Explorer 錯誤碼。 低2個位元組的正十進位轉譯、完整錯誤碼的負十進位轉譯和十六進位值會顯示出來。
 
-|Internet Explorer （Wininet）錯誤|Number|描述|
+|Internet Explorer （Wininet）錯誤|數字|說明|
 |------------------------------------------|------------|-----------------|
 |**IDS_WinInet_CantConnect**|8195-2146820093 0x800A2003|網際網路用戶端錯誤：無法連接到伺服器。|
 |**IDS_WinInet_ ConnectionReset**|12031-2146816257 0x800A2EFF|網際網路用戶端錯誤：連接重設。|

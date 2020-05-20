@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], VC++ example
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09b33331607678d20e2e7fff6cb487f100d29d84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7a3e1b9eed98ba310498706c9708cb47ee8d6680
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67940082"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759504"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Update 和 CancelUpdate 方法範例 (VC++)
 這個範例會示範如何搭配使用[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法的[Update](../../../ado/reference/ado-api/update-method.md)方法。  

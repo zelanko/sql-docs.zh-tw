@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], types
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4953b0509cade52a8badd8d578c9fa13f0c2b42b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923851"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759044"
 ---
 # <a name="types-of-cursors-ado"></a>資料指標的類型 (ADO)
 一般的規則是，您的應用程式應該使用最簡單的資料指標，以提供所需的資料存取權。 除了基本概念（順向、唯讀、靜態、滾動、無緩衝）以外的每個額外資料指標特性，都有一個價格，包括用戶端記憶體、網路負載或效能。 在許多情況下，預設資料指標選項會產生比應用程式實際所需更複雜的資料指標。  

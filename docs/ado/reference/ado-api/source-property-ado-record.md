@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b1870d8cd8253e1b6de74ce093d51ca6e33c5c6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 32b329d8365370560f51503129ac2c8d85517527
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930939"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759814"
 ---
 # <a name="source-property-ado-record"></a>Source 屬性 (ADO Record)
 表示[記錄](../../../ado/reference/ado-api/record-object-ado.md)所代表的資料來源或物件。  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Clear method [ADO], Visual Basic example
 - Execute method [ADO], Visual Basic example
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eff8b97d1248acaae23f5bcd21e050da61cf4346
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0ac9a84c9b4780ad149d3c614b9e3c52494ace8b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932880"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760164"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Execute、Requery 和 Clear 方法範例（VB）
 這個範例會示範從[Command](../../../ado/reference/ado-api/command-object-ado.md)物件和[Connection](../../../ado/reference/ado-api/connection-object-ado.md)物件執行時的**Execute**方法。 它也會使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法來抓取[記錄集中](../../../ado/reference/ado-api/recordset-object-ado.md)的目前資料，而[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法則會清除[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合的內容。 （**錯誤**集合是透過[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)之[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)屬性的**Connection**物件來存取）。需要有 ExecuteCommand 和 PrintOutput 程式，才能執行此程式。  

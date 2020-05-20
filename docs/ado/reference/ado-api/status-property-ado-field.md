@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Status property [ADO Field]
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d90eff53ef998a009aecd4d82fc3b502a487c01d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b2880c63e42c1d64526db053a61f2824e6ac8305
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930839"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759714"
 ---
 # <a name="status-property-ado-field"></a>Status 屬性 (ADO Field)
 指出[欄位](../../../ado/reference/ado-api/field-object.md)物件的狀態。  

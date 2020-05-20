@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Skipline method [ADO]
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8439f7d8fabc5675e43fca5bba006b22574b992
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f983646fd87be27fe9861f3a37b0e852a05ba06b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931040"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759874"
 ---
 # <a name="skipline-method"></a>SkipLine 方法
 讀取文字[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)時，略過一行整行。  

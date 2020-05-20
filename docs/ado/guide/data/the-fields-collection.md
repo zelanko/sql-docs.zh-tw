@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Field object [ADO], fields collection
 - Fields collection [ADO]
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 197a57b8a9b9ea2927a057733992a02c731a335a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0e249d22657718899c7838aa55a23a543389dc5a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923931"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760774"
 ---
 # <a name="the-fields-collection"></a>Fields 集合
 **Fields**集合是 ADO 的內部集合之一。 集合是一組已排序的專案，可以稱為「單位」（unit）。 如需 ADO 集合的詳細資訊，請參閱[Ado 物件模型](../../../ado/guide/data/ado-objects-and-collections.md)。  
@@ -66,7 +66,7 @@ objField = objRecordset.Fields.Item(0)
 objField = objRecordset.Fields(0)  
 ```  
   
- 如果這些方法是相等的，這是最佳的做法？ 視情況而定。 使用索引從集合中抓取**欄位**的速度較快，因為它會直接存取**欄位**，而不需要執行字串查閱。 另一方面，集合中的**欄位**順序必須是已知的，而且如果順序變更，則**欄位**索引的參考就必須在其發生的位置變更。 雖然稍微慢一點，但使用**欄位**的名稱會更有彈性，因為它不會相依于集合中的**欄位**順序。  
+ 如果這些方法是相等的，這是最佳的做法？ 要看情況而定。 使用索引從集合中抓取**欄位**的速度較快，因為它會直接存取**欄位**，而不需要執行字串查閱。 另一方面，集合中的**欄位**順序必須是已知的，而且如果順序變更，則**欄位**索引的參考就必須在其發生的位置變更。 雖然稍微慢一點，但使用**欄位**的名稱會更有彈性，因為它不會相依于集合中的**欄位**順序。  
   
 ## <a name="using-the-refresh-method"></a>使用 Refresh 方法  
  不同于其他 ADO 集合，在**Fields**集合上使用**Refresh**方法不會顯示任何效果。 若要從基礎資料庫結構中抓取變更，您必須使用**Requery**方法，或者，如果**記錄集**物件不支援書簽，則**MoveFirst**方法會導致再次對提供者執行命令。  

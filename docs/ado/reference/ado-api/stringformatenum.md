@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - StringFormatEnum enumeration [ADO]
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85bef64902f014e7b5269d6df328128bc8fe8d6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 67814e1236bc10e9b008d1684586796dd62950b4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937886"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759554"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 指定以字串形式抓取[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)時的格式。  

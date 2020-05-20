@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Source property [ADO], VC++ example
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da0bfacc4ab64929bcd37051efa9d36944871253
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0d7d5fb516e1ec8ed5eb68f3fccdc834e0a06259
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930881"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759784"
 ---
 # <a name="source-property-example-vc"></a>Source 屬性範例 (VC++)
 這個範例會根據不同的資料來源開啟三個[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，以示範[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)屬性。  

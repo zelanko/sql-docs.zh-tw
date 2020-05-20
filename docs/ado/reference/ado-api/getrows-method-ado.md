@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Getrows method [ADO]
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e468e24506425d995320a8729272f87ac64943b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918454"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760034"
 ---
 # <a name="getrows-method-ado"></a>GetRows 方法 (ADO)
 將[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的多個記錄捕獲到陣列中。  
@@ -40,7 +40,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *資料列*  
  選擇性。 [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)值，表示要取得的記錄數目。 預設值為**adGetRowsRest**。  
   
- *啟動*  
+ *開始*  
  選擇性。 **字串**值或**Variant** ，會評估為要從中開始**GetRows**作業之記錄的書簽。 您也可以使用[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)值。  
   
  *欄位*  

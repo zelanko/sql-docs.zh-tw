@@ -11,14 +11,14 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3b3a9f4c5482d0171c59a734aa6139bc2239c55
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925569"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761084"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>偵測並解決衝突
 如果您是以即時模式處理記錄集，則會有更少的機率發生並行問題。 另一方面，如果您的應用程式使用批次模式更新，則在儲存另一位使用者編輯相同記錄所做的變更之前，可能會有一位使用者變更記錄的可能性很好。 在這種情況下，您會想要讓應用程式正常地處理衝突。 您可能想要讓最後一個人將更新傳送至伺服器「獲勝」。 或者，您可能會想要讓使用者可以選擇兩個衝突的值，以決定應優先進行哪些更新。  

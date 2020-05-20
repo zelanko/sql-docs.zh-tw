@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - 'Property collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2175b8b07fcea8dc61ab0c47a4d85fcdb94dd7d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: de7aa9f867e723099e7b6a7cc9177bf6d152cce8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931587"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759944"
 ---
 # <a name="property-visual-c-syntax-index-with-import"></a>屬性（使用 #import Visual C++ 語法索引）
 ## <a name="properties"></a>屬性  

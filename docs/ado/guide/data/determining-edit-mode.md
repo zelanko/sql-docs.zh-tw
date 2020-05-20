@@ -11,21 +11,21 @@ helpviewer_keywords:
 - editing data [ADO], edit mode
 - ADO, editing data
 ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22e63bad49586bbbc1a5616114055779cd3ea041
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6df3765b8dd9461349937fc14f6edebcaab3fbfb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925540"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761074"
 ---
 # <a name="determining-edit-mode"></a>判斷編輯模式
 ADO 會維護與目前記錄相關聯的編輯緩衝區。 **EditMode**屬性會指出是否已對此緩衝區進行變更，或是否已建立新的記錄。 使用**EditMode**來判斷目前記錄的編輯狀態。 如果編輯進程已中斷，您可以測試暫止的變更，並判斷您是否需要使用**Update**或**CancelUpdate**方法。  
   
  **EditMode**會傳回下表所列的其中一個**EditModeEnum**常數。  
   
-|持續性|描述|  
+|持續性|說明|  
 |--------------|-----------------|  
 |**adEditNone**|表示沒有正在進行的編輯作業。|  
 |**adEditInProgress**|指出目前記錄中的資料已修改但未儲存。|  

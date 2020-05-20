@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Connection collection [ADO], ADO/WFC syntax
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64647d577170a79b1f600b7162a0338ea19c572e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b8602b170d4c067744fd002a98c949b8d0836d2e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919530"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760304"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 .com. wfc. 資料  

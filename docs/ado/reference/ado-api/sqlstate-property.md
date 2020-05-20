@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLState property
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e43ace17f3f2b709c327f185a189a107b6b73065
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9b40c35730b02352f1e8667941aa4c220a7ad4df
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916878"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759764"
 ---
 # <a name="sqlstate-property"></a>SQLState 屬性
 指出給定[錯誤](../../../ado/reference/ado-api/error-object.md)物件的 SQL 狀態。  

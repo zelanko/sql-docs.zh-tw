@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Create method [ADOX], Visual Basic example
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 622b2ab47793fe55d2ecf6bbe65c0b9ccf544589
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7fc6ab5b6b5edf0e3e168a1a1fa47f27a99927a6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966653"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759254"
 ---
 # <a name="create-method-example-vb"></a>Create 方法範例 (VB)
 下列程式碼顯示如何使用[create](../../../ado/reference/adox-api/create-method-adox.md)方法建立新的 Microsoft Jet 資料庫。  

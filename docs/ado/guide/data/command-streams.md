@@ -11,14 +11,14 @@ helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd0c2273739a3651c7fdd4c424ce0cb47d39dd5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0bf95d202d842a656ec4b42bc2277b8eb9a76689
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925849"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761204"
 ---
 # <a name="command-streams"></a>命令資料流
 ADO 一律支援以**CommandText**屬性指定之字串格式的命令輸入。 或者，使用 ADO 2.7 或更新版本，您也可以藉由將資料流程指派給**CommandStream**屬性，來使用命令輸入的資訊資料流程。 您可以指派 ADO**資料流程**物件，或任何支援 COM **IStream**介面的物件。  
@@ -40,7 +40,7 @@ adoStreamQuery.Open
   
  查詢資料流程的內容將會是 XML 範本查詢。  
   
- 範本查詢需要\<sql： query> 標記的 sql： prefix 所識別的 XML 命名空間參考。 SQL SELECT 語句會當做 XML 範本的內容包含，並指派給字串變數，如下所示：  
+ 範本查詢需要 \< sql： query> 標記的 sql： prefix 所識別的 XML 命名空間參考。 SQL SELECT 語句會當做 XML 範本的內容包含，並指派給字串變數，如下所示：  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  

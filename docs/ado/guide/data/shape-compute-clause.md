@@ -12,14 +12,14 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924149"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760844"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 子句
 Shape COMPUTE 子句會產生父**記錄集**，其資料行是由子**記錄集**的參考所組成;選擇性資料行，其內容為章節、新的或匯出資料行，或是在子**記錄集**或先前已塑造的**記錄集**上執行彙總函式的結果;以及選擇性 BY 子句中所列之子**記錄集**的任何資料行。  
@@ -38,7 +38,7 @@ SHAPE child-command [AS] child-alias
  *child-command*  
  包含下列其中一項：  
   
--   大括弧（"{}"）內的查詢命令，會傳回子**記錄集**物件。 此命令會發出給基礎資料提供者，且其語法取決於該提供者的需求。 雖然 ADO 不需要任何特定的查詢語言，但這通常會是 SQL 語言。  
+-   大括弧（""）內的查詢命令 {} ，會傳回子**記錄集**物件。 此命令會發出給基礎資料提供者，且其語法取決於該提供者的需求。 雖然 ADO 不需要任何特定的查詢語言，但這通常會是 SQL 語言。  
   
 -   現有的形狀**記錄集**名稱。  
   
@@ -76,15 +76,15 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  例如，假設您有一個名為人口統計的資料表，其中包含 [州]、[縣（市）] 和 [人口] 欄位。 （資料表中的人口資料僅作為範例提供）。  
   
-|State|City|母體|  
+|州|City|母體|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|或者|Medford|200,000|  
-|或者|Portland|400,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
 |WA|Tacoma|500,000|  
-|或者|Corvallis|300,000|  
+|OR|Corvallis|300,000|  
   
  現在，請發出此圖形命令：  
   
@@ -94,7 +94,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- 此命令會開啟具有兩個層級的形狀**記錄集**。 父層級是產生的**記錄集**，其中包含匯總`SUM(rs.population)`資料行（）、參考子**記錄集**（`rs`）的資料行，以及用於分組子**記錄集**（`state`）的資料行。 子層級是查詢命令所傳回的**記錄集**（`select * from demographics`）。  
+ 此命令會開啟具有兩個層級的形狀**記錄集**。 父層級是產生的**記錄集**，其中包含匯總資料行（ `SUM(rs.population)` ）、參考子**記錄集**（）的資料行 `rs` ，以及用於分組子**記錄集**（）的資料行 `state` 。 子層級是查詢命令所傳回的**記錄集**（ `select * from demographics` ）。  
   
  子**記錄集**詳細資料列將會依狀態分組，否則不會以特定順序進行排序。 也就是，群組不會以字母或數位順序排序。 如果您想要排序父**記錄集**，您可以使用**記錄集排序**方法來排序父**記錄集**。  
   
@@ -104,33 +104,33 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ### <a name="parent"></a>父系  
   
-|SUM （rs。人數|rs|State|  
+|SUM （rs。人數|rs|州|  
 |---------------------------|--------|-----------|  
 |1,300,000|Child1 的參考|CA|  
 |1,200,000|Child2 的參考|WA|  
-|1,100,000|Child3 的參考|或者|  
+|1,100,000|Child3 的參考|OR|  
   
 ## <a name="child1"></a>Child1  
   
-|State|City|母體|  
+|州|City|母體|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
   
 ## <a name="child2"></a>Child2  
   
-|State|City|母體|  
+|州|City|母體|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|City|母體|  
+|州|City|母體|  
 |-----------|----------|----------------|  
-|或者|Medford|200,000|  
-|或者|Portland|400,000|  
-|或者|Corvallis|300,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
+|OR|Corvallis|300,000|  
   
 ## <a name="see-also"></a>另請參閱  
  [存取階層式記錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

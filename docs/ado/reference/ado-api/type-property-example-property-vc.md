@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Type property [property] [ADO], VC++ example
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e13079d18c8887aa0cdba8e5ae06f86eebca897c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 16f3e7152c939567b6fdcccf670a7df26334d588
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938869"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759544"
 ---
 # <a name="type-property-example-property-vc"></a>Type 屬性範例 (Property) (VC++)
 這個範例會示範[Type](../../../ado/reference/ado-api/type-property-ado.md)屬性。 它是公用程式的模型，用來列出集合的名稱和類型，例如[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)、[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)等等。  

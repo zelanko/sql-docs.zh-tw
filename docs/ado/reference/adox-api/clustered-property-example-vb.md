@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Clustered property [ADOX], Visual Basic example
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f2eb5e19e166a468a9ee30758da79d503f1b9932
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 91f2f3bc8793a82cd7fd7eee16e259868bdad915
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966959"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759404"
 ---
 # <a name="clustered-property-example-vb"></a>Clustered 屬性範例 (VB)
 這個範例會示範[索引](../../../ado/reference/adox-api/index-object-adox.md)[的叢集屬性。](../../../ado/reference/adox-api/clustered-property-adox.md) 請注意，Microsoft Jet 資料庫不支援叢集索引，因此這個範例會針對**Northwind**資料庫中所有**索引的叢集屬性傳回** **False** 。  

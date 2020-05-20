@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - AddNew method [ADO], VC++ example
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5962d04ddae54f2455a99eb29587d3dc98d69420
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8d47003a392ade09b1ba4d83c5dccfb1538364f1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921251"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760604"
 ---
 # <a name="addnew-method-example-vc"></a>AddNew 方法範例 (VC++)
 這個範例會使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法，以指定的名稱建立新的記錄。  

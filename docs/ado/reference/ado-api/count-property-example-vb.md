@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5be99b4f43669a14f948cf10ee0b91028907ec0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8adf469970b6bfb75d4abe75694c99424768353b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933366"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760224"
 ---
 # <a name="count-property-example-vb"></a>Count 屬性範例 (VB)
-這個範例會示範在***Employee***資料庫中具有兩個集合的[Count](../../../ado/reference/ado-api/count-property-ado.md)屬性。 屬性會取得每個集合中的物件數目，並設定列舉這些集合之迴圈的上限。 另一個列舉這些集合而不使用**Count**屬性的方法，就是`For Each...Next`使用語句。  
+這個範例會示範在***Employee***資料庫中具有兩個集合的[Count](../../../ado/reference/ado-api/count-property-ado.md)屬性。 屬性會取得每個集合中的物件數目，並設定列舉這些集合之迴圈的上限。 另一個列舉這些集合而不使用**Count**屬性的方法，就是使用 `For Each...Next` 語句。  
   
 ```  
 'BeginCountVB  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - get_OLEDBCommand method [ADO]
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d32d79b0a0481d2ade05a78c80d72587817a04b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 043e432bfef39f90fbeb5b147487272c4d284bdb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918576"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760074"
 ---
 # <a name="get_oledbcommand-method"></a>get_OLEDBCommand 方法
 傳回基礎 OLE DB 命令，先將 ADO 命令上設定的任何參數資訊傳播至 OLE DB 命令。  

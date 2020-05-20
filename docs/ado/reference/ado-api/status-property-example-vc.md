@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Status property [ADO], VC++ example
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 708120992341b0e184cc42d13ebe1f461ecf861a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d477b23b384bcc8e059afb94e72a3f6fc12fa724
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916787"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759684"
 ---
 # <a name="status-property-example-vc"></a>Status 屬性範例 (VC++)
 這個範例會使用[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性，在批次更新發生之前，顯示批次作業中已修改的記錄。  

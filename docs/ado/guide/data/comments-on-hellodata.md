@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - hellodata sample application [ADO]
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2c4897f82ff8562c031ec3522f47cddebfb56eb2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3836d577ab9230e425f42a52b53ed82d3354d72a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925801"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761174"
 ---
 # <a name="comments-on-hellodata"></a>HelloData 的註解
 HelloData 應用程式會逐步解說一般 ADO 應用程式的基本作業：取得、檢查、編輯和更新資料。 當您啟動應用程式時，請按一下第一個按鈕 [**取得資料**]。 這會**執行 [，** ] 副程式。  
@@ -27,9 +27,9 @@ HelloData 應用程式會逐步解說一般 ADO 應用程式的基本作業：�
   
  使用 Visual Basic **OnError**語句來指派錯誤處理常式。 如需 ADO 中錯誤處理的詳細資訊，請參閱[錯誤處理](../../../ado/guide/data/error-handling.md)。 隨即建立新的**連接**物件，而且**CursorLocation**屬性會設定為**adUseClient** ，因為 HelloData 範例會建立*中斷連接的記錄集*。 這表示一旦從資料來源提取資料，與資料來源的實體連接就會中斷，但您仍然可以使用在**記錄集**物件本機快取的資料。  
   
- 在開啟連接之後，將 SQL 字串指派給變數（sSQL）。 然後建立新**記錄集**物件的實例`m_oRecordset1`。 在下一行程式碼中，透過現有的**連接**開啟**記錄集**，並傳入`sSQL`做為**記錄集**的來源。 您可以協助 ADO 判斷做為**記錄集**來源而傳遞的 SQL 字串是命令的文字定義，其方式是將最後一個引數中的**AdCmdText**傳遞至**記錄集的 Open**方法。 這一行也會設定與**記錄集**相關聯的**LockType**和**CursorType** 。  
+ 在開啟連接之後，將 SQL 字串指派給變數（sSQL）。 然後建立新**記錄集**物件的實例 `m_oRecordset1` 。 在下一行程式碼中，透過現有的**連接**開啟**記錄集**，並傳入 `sSQL` 做為**記錄集**的來源。 您可以協助 ADO 判斷做為**記錄集**來源而傳遞的 SQL 字串是命令的文字定義，其方式是將最後一個引數中的**AdCmdText**傳遞至**記錄集的 Open**方法。 這一行也會設定與**記錄集**相關聯的**LockType**和**CursorType** 。  
   
- 下一行程式碼會將**MarshalOptions**屬性設定為等於**adMarshalModifiedOnly**。 **MarshalOptions**指出哪些記錄應該封送處理至仲介層（或 Web 服務器）。 如需封送處理的詳細資訊，請參閱 COM 檔。 當您使用**adMarshalModifiedOnly**搭配用戶端資料指標（[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**）時，只會將用戶端上已修改的記錄寫回中介層。 將**MarshalOptions**設定為**adMarshalModifiedOnly**可改善效能，因為封送處理的資料列較少。  
+ 下一行程式碼會將**MarshalOptions**屬性設定為等於**adMarshalModifiedOnly**。 **MarshalOptions**指出哪些記錄應該封送處理至仲介層（或 Web 服務器）。 如需封送處理的詳細資訊，請參閱 COM 檔。 當您使用**adMarshalModifiedOnly**搭配用戶端資料指標（[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  =  **adUseClient**）時，只會將用戶端上已修改的記錄寫回中介層。 將**MarshalOptions**設定為**adMarshalModifiedOnly**可改善效能，因為封送處理的資料列較少。  
   
  接下來，將**記錄集**的**ActiveConnection**屬性設定為等於 [**無**]，將它中斷連接。 如需詳細資訊，請參閱[更新和保存資料](../../../ado/guide/data/updating-and-persisting-data.md)中的「中斷連接和重新連接記錄集」一節。  
   
@@ -58,7 +58,7 @@ HelloData 應用程式會逐步解說一般 ADO 應用程式的基本作業：�
  除非您按一下第四個按鈕 [**更新資料**]，否則不會在資料來源上進行變更。 這會執行**UpdateData**副程式。  
   
 ## <a name="updatedata"></a>UpdateData  
- UpdateData 會先移除已套用至**記錄集**的篩選。 程式碼會移除並`m_oRecordset1`重設為表單上 Microsoft 系結 DataGrid 的**資料來源**，讓未篩選的**記錄集**出現在方格中。  
+ UpdateData 會先移除已套用至**記錄集**的篩選。 程式碼會移除並重設 `m_oRecordset1` 為表單上 Microsoft 系結 DataGrid 的**資料來源**，讓未篩選的**記錄集**出現在方格中。  
   
  然後，程式碼會使用**支援**方法搭配**adMovePrevious**引數，以查看您是否可以在**記錄集中**移動後置。  
   
@@ -66,7 +66,7 @@ HelloData 應用程式會逐步解說一般 ADO 應用程式的基本作業：�
   
  接下來，會建立新的**連接**物件，並用來重新建立資料來源的連接。 將**記錄集**重新連接至資料來源，方法是將新的**連接**設定為**記錄集**的**ActiveConnection** 。 為了將更新傳送至伺服器，程式碼會在**記錄集**上呼叫**UpdateBatch** 。  
   
- 如果批次更新成功，模組層級的旗標變數`m_flgPriceUpdated`會設定為 True。 這會提醒您稍後清除對資料庫所做的所有變更。  
+ 如果批次更新成功，模組層級的旗標變數 `m_flgPriceUpdated` 會設定為 True。 這會提醒您稍後清除對資料庫所做的所有變更。  
   
  最後，程式碼會移回**記錄集**內的第一筆記錄，並顯示原始和目前的值。 呼叫**UpdateBatch**之後，值會相同。  
   

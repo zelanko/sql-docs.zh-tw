@@ -13,14 +13,14 @@ helpviewer_keywords:
 - JScript programming in ADO
 - ADO, JScript programming
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d07759405dc337667cc8971ce7795af428a0cfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7b9fe403c0d51d53e79d978ff573556b73f5aec7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926807"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760494"
 ---
 # <a name="jscript-ado-programming"></a>JScript ADO 程式設計
 ## <a name="creating-an-ado-project"></a>建立 ADO 專案  

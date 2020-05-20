@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - command object [ADO]
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef68a36f64fbaf72f18af9fba6f2e2781422574c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0048765d3a5f5cb57419f9dbd755790c9931e218
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925851"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761194"
 ---
 # <a name="command-object-overview"></a>Command 物件概觀
 使用**Command**物件，您可以執行下列動作：  

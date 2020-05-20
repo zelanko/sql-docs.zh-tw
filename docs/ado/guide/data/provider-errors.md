@@ -14,14 +14,14 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924540"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760994"
 ---
 # <a name="provider-errors"></a>提供者錯誤
 當提供者發生錯誤時，會傳回-2147467259 的執行階段錯誤。 當您收到此錯誤時，請檢查使用中**連接**物件的**errors**集合，其中會包含一或多個描述發生問題的錯誤。  
@@ -64,9 +64,9 @@ End Function
 ## <a name="the-error-object"></a>Error 物件  
  藉由檢查**錯誤**物件，您可以判斷發生的錯誤，以及更重要的是哪一個應用程式或哪個物件造成錯誤。 **錯誤**物件具有下列屬性：  
   
-|屬性名稱|描述|  
+|屬性名稱|說明|  
 |-------------------|-----------------|  
-|**說明**|發生之錯誤的文字描述。|  
+|**描述**|發生之錯誤的文字描述。|  
 |**HelpCoNtext，説明**|指的是包含所發生錯誤描述的說明主題和說明檔。|  
 |**NativeError**|提供者特定的錯誤號碼。|  
 |**項數**|長整數，表示所發生之錯誤的數目（在**ErrorValueEnum**中列出）。|  

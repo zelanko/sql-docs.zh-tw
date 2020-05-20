@@ -14,14 +14,14 @@ helpviewer_keywords:
 - service providers [ADO]
 - service components [ADO]
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 39e1670d9d37b1404e65ecb50f09dc214abdaaff
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926974"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760544"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>附錄 A：資料和服務提供者
 本節說明三種提供者：資料提供者、服務提供者和服務元件。 提供者分成兩個類別：提供資料和提供服務的人員。 *資料提供者*擁有自己的資料，並以表格式形式將它公開給您的應用程式。 *服務提供者*會藉由產生和取用資料，在您的 ADO 應用程式中擴充功能來封裝服務。 服務提供者也可以進一步定義為*服務元件*，這必須與其他服務提供者或元件搭配使用。
@@ -70,7 +70,7 @@ ms.locfileid: "67926974"
  如需有關 OLE DB 提供者的詳細資訊，請參閱[Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)。
 
 ## <a name="provider-commands"></a>提供者命令
- 針對此處所列的每個提供者，如果您的應用程式允許使用者輸入 SQL 語句做為提供者命令，您必須一律驗證使用者輸入，並使用可能危險的 SQL 語句（例如`DROP TABLE t1`）做為使用者輸入的一部分，以預防可能的駭客攻擊。
+ 針對此處所列的每個提供者，如果您的應用程式允許使用者輸入 SQL 語句做為提供者命令，您必須一律驗證使用者輸入，並使用可能危險的 SQL 語句（例如 `DROP TABLE t1` ）做為使用者輸入的一部分，以預防可能的駭客攻擊。
 
 ## <a name="see-also"></a>另請參閱
  [Command 物件（ado）](../../../ado/reference/ado-api/command-object-ado.md) [連線物件（ado）](../../../ado/reference/ado-api/connection-object-ado.md) [Microsoft OLE DB provider For Internet 發行](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [microsoft OLE DB Provider for microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [Microsoft OLE DB PROVIDER for microsoft 索引服務 microsoft](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [MICROSOFT OLE DB provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) for [microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties Collection （ado）](../../../ado/reference/ado-api/properties-collection-ado.md) [記錄集物件（ado](../../../ado/reference/ado-api/recordset-object-ado.md) ） [Refresh 方法（RDS）](../../../ado/reference/rds-api/refresh-method-rds.md)

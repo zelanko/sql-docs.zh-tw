@@ -1,10 +1,8 @@
 ---
 title: 資料庫測試助理的總覽
 description: 資料庫測試助理概觀
-ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
-ms.prod_service: dea
 ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
@@ -12,12 +10,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.custom: seo-lt-2019
+ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247117"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759154"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>資料庫測試助理概觀
 
@@ -94,7 +93,7 @@ DEA 會使用 Windows 驗證連接到資料庫伺服器。 請確定執行 DEA �
 
 ## <a name="set-up-telemetry"></a>設定遙測
 
-DEA 具有已啟用網際網路的功能，可將遙測資訊傳送給 Microsoft，以用於增強產品體驗。 收集的資訊也會儲存在您的電腦上進行本機審核，因此您一律可以查看所收集的內容。 所有 DEA 記錄檔都儲存在% temp%\\DEA 資料夾中。
+DEA 具有已啟用網際網路的功能，可將遙測資訊傳送給 Microsoft，以用於增強產品體驗。 收集的資訊也會儲存在您的電腦上進行本機審核，因此您一律可以查看所收集的內容。 所有 DEA 記錄檔都儲存在% temp% \\ DEA 資料夾中。
 
 可以在四種類型的事件上收集遙測資料：
 
@@ -105,7 +104,7 @@ DEA 具有已啟用網際網路的功能，可將遙測資訊傳送給 Microsoft
 
 收集和傳送遙測資料是選擇性的。 若要指定要收集哪些事件，以及是否要將收集的事件傳送至 Microsoft，請使用下列步驟：
 
-1. 移至安裝 DEA 的位置（例如，C：\\Program Files （x86）\\Microsoft Corporation\\資料庫測試助理）。
+1. 移至安裝 DEA 的位置（例如，C： \\ Program Files （x86） \\ Microsoft Corporation \\ 資料庫測試助理）。
 2. 開啟並修改 .config 檔案**DEA** （適用于應用程式）和**DEACmd** （適用于 CLI），以適當地處理您的案例：
     - 若要停止收集事件種類，請將*事件*的值（例如， **TraceEvent**）設定為**false**。 若要再次開始收集事件，請將值設定為**true**。
     - 若要停止儲存事件的本機複本，請將**TraceLoggerEnabled**的值設定為**false**。 若要再次開始儲存本機複本，請將值設定為**true**。

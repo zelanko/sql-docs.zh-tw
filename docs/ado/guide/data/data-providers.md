@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 40506ec971782c5e9108a34fd240faabcc2756b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6dfb672b57b95224cf6ff056c3298c7c8a437d2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925650"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761104"
 ---
 # <a name="data-providers"></a>資料提供者
 資料提供者代表各種不同的資料來源，例如 SQL 資料庫、索引順序檔案、試算表、檔存放區和郵件檔案。 提供者會使用稱為資料列集的通用抽象概念來一致地公開資料。  

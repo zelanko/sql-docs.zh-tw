@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_AUTORECALC_ENUM [ADO]
 ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 738f4cece8cf2355c12c0de4ac42314152c6370a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7b00d507a2ddbe596311e16d51a302f4b0dc0dc5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921446"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760714"
 ---
 # <a name="adcprop_autorecalc_enum"></a>ADCPROP_AUTORECALC_ENUM
 指定[MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)提供者在階層式記錄集中重新計算匯總和計算結果欄的時機。  

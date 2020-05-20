@@ -11,14 +11,14 @@ helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3512b484425749ed027f6533dab7398765c1af2e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d69ff29f0baabc770da8a62b56962bdc44619b1e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924742"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759124"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>非參數化命令的作業
 針對非參數化命令，會執行所有提供者命令，並在命令執行期間建立**記錄集**。 如果命令是以同步方式執行，則會完整填入所有的**記錄集**。 如果選取了非同步擴展模式，則**記錄集**的填入狀態將取決於填入模式和**記錄集**的大小。  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - BookMarkEnum enumeration [ADO]
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69bce043f7c5ce72de37e6e085e57baccd8c4864
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 43fc33ea851f86bc159b98a6d10991bda42dbbad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920351"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758924"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 指定表示作業應開始之位置的書簽。  

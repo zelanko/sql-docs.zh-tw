@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Column object [ADOX], members
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a7ccfe887f870bc6a517913dd49848a434572994
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5905bbee711d63d86ddc2988799ee8ab5e5c9e79
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966892"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759374"
 ---
 # <a name="column-object-properties-methods-and-events"></a>Column 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

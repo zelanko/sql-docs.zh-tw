@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Update method [ADO]
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c0d75e8f9fb6d11315e327edd6f7d064c13e063
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938846"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759494"
 ---
 # <a name="update-method"></a>Update 方法
 儲存您對[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的目前資料列或[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件的[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合所做的任何變更。  
@@ -37,7 +37,7 @@ record.Fields.Update
  *欄位*  
  選擇性。 表示單一名稱的**variant**或**variant**陣列，表示您想要修改之欄位或欄位的名稱或序數位置。  
   
- *值*  
+ *閾值*  
  選擇性。 表示單一值的**variant**或**variant**陣列，表示新記錄中的欄位或欄位的值。  
   
 ## <a name="remarks"></a>備註  

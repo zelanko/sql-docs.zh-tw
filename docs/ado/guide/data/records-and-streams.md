@@ -12,14 +12,14 @@ helpviewer_keywords:
 - streams [ADO], about streams
 - records [ADO]
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4636df1451ba946b9a7bfb62e3d6775c35b1d6f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ec87974499edabb2c5a5ae503d90f9f739694c41
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924491"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760984"
 ---
 # <a name="records-and-streams"></a>記錄和資料流
 ADO 目前提供[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件做為存取資料來源（例如關係資料庫）中資訊的主要方法。 不過，某些提供者會支援[記錄](../../../ado/reference/ado-api/record-object-ado.md)和[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件做為替代物件或互補物件，並可從提供者運算元據。 如需**記錄**行為的詳細資訊，請參閱提供者的檔。  

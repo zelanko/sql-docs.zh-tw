@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - CompareBookmarks method [ADO], Visual Basic example
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f14ad9d6605747b78109e517636e5864847881f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3d2eb2d5db5fe7c1803e32413fd214993444e494
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919600"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760354"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks 方法範例 (VB)
 這個範例示範[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)方法。 除非特定的書簽是特殊的，否則不需要書簽的相對值。  

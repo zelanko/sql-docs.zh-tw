@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editing data [ADO], existing records
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ce8679c0c7b20dfaa641918f0447a2f77bfd474a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 71d8b825766ca94984ca2dc0b51577488178920f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925447"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761024"
 ---
 # <a name="editing-existing-records"></a>編輯現有的記錄
 若要編輯現有的記錄，請移至您想要編輯的資料列，並變更您想要變更之欄位的**Value**屬性。 如需**欄位**物件之**Value**屬性的詳細資訊，請參閱[檢查資料](../../../ado/guide/data/examining-data.md)。 視您的資料指標類型而定，您將使用**Update**或**UpdateBatch**將變更傳送回資料來源。 如需詳細資訊，請參閱[更新和保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Stream object [ADO], members
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c79f2b1e35b263c61f9af5b3e309b9b72a930d53
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930672"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759624"
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Stream 物件屬性、方法和事件
 ## <a name="properties"></a>屬性  

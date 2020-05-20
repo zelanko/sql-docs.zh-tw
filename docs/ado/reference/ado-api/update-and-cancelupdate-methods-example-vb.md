@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], Visual Basic example
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef4017cce110c9217111df40b833eaf294d52521
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 92c65ce30010c4e1bc6943ba60dd1eee84478aa9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937838"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759534"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Update 和 CancelUpdate 方法範例 (VB)
 這個範例會示範如何搭配使用[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法的[Update](../../../ado/reference/ado-api/update-method.md)方法。  

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - errors [ADO], DataControl
 - DataControl errors [ADO]
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b59f0f98122d37447e2e702304a31c44073bacfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 90501e24a9d4ec3dd5a68f641bf25c3adade1a62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926848"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760514"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 物件錯誤碼
 下表列出[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件錯誤碼。 低2個位元組的正十進位轉譯、完整錯誤碼的負十進位轉譯和十六進位值會顯示出來。
 
-|句.DataControl 錯誤碼|Number|描述|
+|句.DataControl 錯誤碼|數字|說明|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107-2146824175 0x800A1011|非同步作業暫止時無法執行作業。|
 |**IDS_BadInlineTablegram**|4105-2146824183 0x800A1009|錯誤的內嵌 tablegram。|

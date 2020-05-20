@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - State property [ADO]
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c45b9331ddd538cdf23a57eaf39b6efb71bccc4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68a0e6fe0c595a79447cbf79155914606415df89
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930856"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759754"
 ---
 # <a name="state-property-ado"></a>State 屬性 (ADO)
 指出物件的狀態為開啟或關閉時，所有適用的物件。 如果物件正在執行非同步方法，則會指出物件的目前狀態為 [正在連接]、[執行中] 或 [正在抓取]。  

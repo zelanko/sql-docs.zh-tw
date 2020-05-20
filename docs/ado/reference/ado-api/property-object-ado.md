@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Property object [ADO]
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43bfa816a9ca8a93cdc1188a98e54d3e0d9111b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d2f4a8b6cdeabcbab0802a0052ed697af70ef45a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917548"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759964"
 ---
 # <a name="property-object-ado"></a>Property 物件 (ADO)
 表示由提供者定義之 ADO 物件的動態特性。  
@@ -28,9 +28,9 @@ ms.locfileid: "67917548"
 ## <a name="remarks"></a>備註  
  ADO 物件有兩種屬性類型：內建和動態。  
   
- 內建屬性是在 ADO 中實和使用`MyObject.Property`語法立即提供給任何新物件的屬性。 它們不會在物件的[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合中顯示為**屬性**物件，因此，雖然您可以變更其值，但無法修改其特性。  
+ 內建屬性是在 ADO 中實和使用語法立即提供給任何新物件的屬性 `MyObject.Property` 。 它們不會在物件的[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合中顯示為**屬性**物件，因此，雖然您可以變更其值，但無法修改其特性。  
   
- 動態屬性是由基礎資料提供者所定義，而且會出現在適當 ADO 物件的**properties**集合中。 例如，提供者特定的屬性可能會指出[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件是否支援交易或更新。 這些額外的屬性會以**屬性**物件的形式顯示在該**記錄集**物件的**properties**集合中。 只能透過集合使用`MyObject.Properties(0)`或`MyObject.Properties("Name")`語法來參考動態屬性。  
+ 動態屬性是由基礎資料提供者所定義，而且會出現在適當 ADO 物件的**properties**集合中。 例如，提供者特定的屬性可能會指出[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件是否支援交易或更新。 這些額外的屬性會以**屬性**物件的形式顯示在該**記錄集**物件的**properties**集合中。 只能透過集合使用或語法來參考動態屬性 `MyObject.Properties(0)` `MyObject.Properties("Name")` 。  
   
  您不能刪除任何一種屬性。  
   

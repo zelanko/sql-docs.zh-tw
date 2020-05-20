@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 000302715e7ce7d3a8ae53f06d61f54e98cbd883
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1ef641bbfb94b8fde5f12af6cadd03f13fbfa91f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925792"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761164"
 ---
 # <a name="connecting-to-data-sources"></a>連接到資料來源
 ADO **Connection**物件代表資料來源的唯一會話，包括 DBMS、檔案存放區或逗號分隔的文字檔。 在用戶端/伺服器資料庫系統的情況下，ADO 連接可以是與伺服器的實際網路連接。  

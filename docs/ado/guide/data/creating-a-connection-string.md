@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connections [ADO]
 - connection strings [ADO]
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b58dc19097d01630fa1ab1c2707e8be379ae83cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925768"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761144"
 ---
 # <a name="creating-a-connection-string"></a>建立連接字串
 連接字串是由引數/值組的清單（也就是參數）所組成，並以分號分隔。 例如：  
@@ -48,7 +48,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
   
- 在此連接字串中，ADO 只會`"Provider=SQLOLEDB"`辨識參數，以將 SQL Server 的 Microsoft OLE DB 提供者指定為 ADO 資料來源。 其餘的引數/值`"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`組會逐字傳遞給此提供者。 這類參數的類型和有效性是提供者特有的。 如需可在連接字串中傳遞之有效參數的相關資訊，請參閱個別提供者的檔。  
+ 在此連接字串中，ADO 只會辨識 `"Provider=SQLOLEDB"` 參數，以將 SQL Server 的 Microsoft OLE DB 提供者指定為 ADO 資料來源。 其餘的引數/值組 `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"` 會逐字傳遞給此提供者。 這類參數的類型和有效性是提供者特有的。 如需可在連接字串中傳遞之有效參數的相關資訊，請參閱個別提供者的檔。  
   
  根據 SQL Server 檔的 OLE DB 提供者，您可以將*資料來源*參數和 "Database" 的 "Server" 取代為*初始目錄*參數。 因此，下列連接字串會產生與上方相同的結果：  
   

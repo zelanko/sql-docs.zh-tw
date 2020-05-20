@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Properties collection [ADO]
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 01c2ea6b885ed2619b79413beb09ca4bf2835162
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9d3d6d019d00f683826a417aa73c216e8fca9565
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917569"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759984"
 ---
 # <a name="properties-collection-ado"></a>Properties 集合 (ADO)
 包含物件之特定實例的所有[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件。  

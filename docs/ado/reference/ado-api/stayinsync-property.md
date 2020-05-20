@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - StayInSync property
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18d17e0a761fe03053ba90b8ff1ef87f3067df76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f36eace18280cd810341c5eeeec1fb294999e6ec
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930741"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759634"
 ---
 # <a name="stayinsync-property"></a>StayInSync 屬性
 指出階層式[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件中，當父資料列位置變更時，基礎子記錄（也就是*章節*）的參考是否會變更。  
