@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_catalog
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b51e4e38b7587074a39f850c2e56dbd8c09ed6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a180f10f0b0ac4bb1836d529ac437d917b559e16
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72005967"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820525"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,20 +52,20 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 > [!NOTE]  
 >  您可以依照需要來建立、卸除和修改全文檢索目錄。 不過，請避免同時變更多個目錄的結構描述。 您可以使用**sp_fulltext_table**預存程式來執行這些動作，這是建議的方法。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**建立**|在檔案系統中建立空白的新全文檢索目錄，並在**sysfulltextcatalogs**中加入關聯的資料列，其中包含*fulltext_catalog_name*和*root_directory*（如果有的話）。 *fulltext_catalog_name*在資料庫中必須是唯一的。|  
 |**下拉式**|卸載*fulltext_catalog_name* ，方法是將它從檔案系統中移除，並刪除**sysfulltextcatalogs**中的相關資料列。 如果這個目錄包含一個或多個資料表的索引，這個動作便會失敗。 **sp_fulltext_table**應該執行 '*table_name*'、' drop ' 來卸載目錄中的資料表。<br /><br /> 如果目錄不存在，就會出現錯誤。|  
 |**start_incremental**|啟動*fulltext_catalog_name*的增量擴展。 如果目錄不存在，就會出現錯誤。 如果全文檢索索引擴展已在使用中，便會顯示一則警告，但不會進行任何擴展動作。 若為全文檢索索引，則會抓取已變更的資料列，但前提是資料表中有一個**時間戳記**資料行，且已建立全文檢索索引。|  
 |**start_full**|開始*fulltext_catalog_name*的完整擴展。 此時會針對全文檢索索引擷取與這份全文檢索目錄相關聯之每份資料表的每個資料列，即使它們已建立索引也一樣。|  
 |**停止**|停止*fulltext_catalog_name*的索引填入。 如果目錄不存在，就會出現錯誤。 如果母體擴展已停止，便不會顯示任何警告。|  
-|**重構**|重建*fulltext_catalog_name*。 重建目錄時，會刪除現有的目錄，並就地建立新的目錄。 具有全文檢索索引參考的所有資料表都會與新目錄產生關聯。 重建會重設資料庫系統資料表中的全文檢索中繼資料。<br /><br /> 如果變更追蹤為 OFF，重建並不會重新擴展新建的全文檢索目錄。 在此情況下，若要重新擴展，請使用**start_full**或**start_incremental**動作來執行**sp_fulltext_catalog** 。|  
+|**重建**|重建*fulltext_catalog_name*。 重建目錄時，會刪除現有的目錄，並就地建立新的目錄。 具有全文檢索索引參考的所有資料表都會與新目錄產生關聯。 重建會重設資料庫系統資料表中的全文檢索中繼資料。<br /><br /> 如果變更追蹤為 OFF，重建並不會重新擴展新建的全文檢索目錄。 在此情況下，若要重新擴展，請使用**start_full**或**start_incremental**動作來執行**sp_fulltext_catalog** 。|  
   
 `[ @path = ] 'root_directory'`這是**create**動作的根目錄（不是完整的實體路徑）。 *root_directory*是**Nvarchar （100）** ，預設值是 Null，表示使用安裝時所指定的預設位置。 這是 Mssql 目錄中的 Ftdata 子目錄;例如，C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\MSSQL\FTData. 指定的根目錄必須在相同電腦的磁碟機中，它不只是磁碟機代號，也不能是相對路徑。 網路磁碟機、卸除式磁碟機、磁碟片及 UNC 路徑都不在支援範圍內。 全文檢索目錄必須建立在與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相關聯的本機硬碟中。  
   
- 只有在**建立***動作*時，路徑才有效。 ** \@ ** 對於**create** （**stop**， **rebuild**等等）以外的動作， ** \@path**必須是 Null 或省略。  
+ 只有在**建立***動作*時， ** \@ 路徑**才有效。 對於**create** （**stop**， **rebuild**等等）以外的動作， ** \@ path**必須是 Null 或省略。  
   
- 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體是叢集中的虛擬伺服器，指定的全文檢索目錄之目錄就必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源所依賴的共用硬碟中。 如果@path未指定，則預設目錄目錄的位置會位於共用磁片磁碟機上，也就是安裝虛擬伺服器時所指定的目錄中。  
+ 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體是叢集中的虛擬伺服器，指定的全文檢索目錄之目錄就必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源所依賴的共用硬碟中。 如果 @path 未指定，則預設目錄目錄的位置會位於共用磁片磁碟機上，也就是安裝虛擬伺服器時所指定的目錄中。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -76,7 +76,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="remarks"></a>備註  
  **Start_full**動作是用來建立*fulltext_catalog_name*中全文檢索資料的完整快照集。 **Start_incremental**動作是用來重新編制資料庫中已變更資料列的索引。 只有當資料表具有**timestamp**類型的資料行時，才可以套用累加式擴展。 如果全文檢索目錄中的資料表並未包含**timestamp**類型的資料行，則資料表會經歷完整擴展。  
   
- 全文檢索目錄和索引資料會儲存在全文檢索目錄之目錄下所建立的檔案中。 如果** \@ ** **未指定 path，全文檢索目錄目錄就會建立為 path 或 server default 全文檢索目錄目錄中所指定目錄的子目錄。 \@ ** 全文檢索目錄之目錄名稱的建立方式，必須確保它在伺服器中是唯一的。 因此，伺服器中所有全文檢索目錄之目錄都可以共用相同的路徑。  
+ 全文檢索目錄和索引資料會儲存在全文檢索目錄之目錄下所建立的檔案中。 如果未指定** \@ path** ，全文檢索目錄目錄就會建立為** \@ path**或 server default 全文檢索目錄目錄中所指定目錄的子目錄。 全文檢索目錄之目錄名稱的建立方式，必須確保它在伺服器中是唯一的。 因此，伺服器中所有全文檢索目錄之目錄都可以共用相同的路徑。  
   
 ## <a name="permissions"></a>權限  
  呼叫端必須是**db_owner**角色的成員。 根據所要求的動作而定，在目標全文檢索目錄上，呼叫端不應被拒絕 ALTER 或 CONTROL 許可權（ **db_owner** ）。  

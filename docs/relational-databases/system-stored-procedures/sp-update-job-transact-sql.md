@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_job
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 35653ce883733b7e1b3c2969fc4e62c61ad12eb9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084889"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820184"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshotdeliveryprogress system table
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 638bea3db68712300ad2284e50676bf1df67c9ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ad7f4e11e2c796ed5ec8e20e5a601c3484591ddf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139805"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820980"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

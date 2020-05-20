@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64832f713153e6eaed126e30a2a0fd56c38a4bc6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313754"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820363"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ sp_purge_jobhistory
 > [!NOTE]  
 >  **系統管理員（sysadmin** ）固定伺服器角色的成員或**SQLAgentOperatorRole**固定資料庫角色的成員，可以在不指定*job_name*或*job_id*的情況下執行**sp_purge_jobhistory** 。 當**系統管理員（sysadmin** ）使用者未指定這些引數時，會在*oldest_date*所指定的時間內刪除所有本機和多伺服器作業的作業歷程記錄。 當**SQLAgentOperatorRole**使用者未指定這些引數時，會在*oldest_date*所指定的時間內刪除所有本機作業的作業歷程記錄。  
   
-`[ @job_id = ] job_id`要刪除的記錄之作業的作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 Null。 必須指定*job_id*或*job_name* ，但不能同時指定兩者。 如需**系統管理員（sysadmin** ）或**SQLAgentOperatorRole**使用者如何使用此引數的相關資訊，請參閱** \@job_name**描述中的附注。  
+`[ @job_id = ] job_id`要刪除的記錄之作業的作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 Null。 必須指定*job_id*或*job_name* ，但不能同時指定兩者。 如需**系統管理員（sysadmin** ）或**SQLAgentOperatorRole**使用者如何使用此引數的相關資訊，請參閱** \@ job_name**描述中的附注。  
   
 `[ @oldest_date = ] oldest_date`要保留在歷程記錄中的最舊記錄。 *oldest_date*是**datetime**，預設值是 Null。 當指定*oldest_date*時， **sp_purge_jobhistory**只會移除早于指定值的記錄。  
   

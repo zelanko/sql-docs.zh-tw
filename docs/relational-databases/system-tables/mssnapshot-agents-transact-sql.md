@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshot_agents system table
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2d57700abecccf3dae55289b49d4fd6c1af3e537
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4fcbbe40247742a1a5a1eda5e6f501aae279a12a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079959"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821067"
 ---
 # <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68079959"
 |**profile_id**|**int**|[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)資料表中的設定識別碼。|  
 |**dynamic_filter_login**|**sysname**|在定義資料分割的參數化篩選中，用來評估[SUSER_SNAME &#40;transact-sql&#41;](../../t-sql/functions/suser-sname-transact-sql.md)函數的值。 這個資料行供資料分割快照集使用。|  
 |**dynamic_filter_hostname**|**sysname**|在定義資料分割的參數化篩選中，用來評估[HOST_NAME &#40;transact-sql&#41;](../../t-sql/functions/host-name-transact-sql.md)函數的值。 這個資料行供資料分割快照集使用。|  
-|**publisher_security_mode**|**smallint**|連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]驗證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1**  =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
+|**publisher_security_mode**|**smallint**|連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
 |**publisher_login**|**sysname**|連接到發行者時所用的登入。|  
 |**publisher_password**|**Nvarchar （524）**|連接到發行者時，所用之密碼的加密值。|  
 |**job_step_uid**|**uniqueidentifier**|用來啟動代理程式之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的唯一識別碼。|  

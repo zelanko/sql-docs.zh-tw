@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fkeys
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cee63720a743de8e2aed496bf3f7f3e791780575
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124395"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820526"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,30 +44,30 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @pktable_name=]'*pktable_name*'  
+ [ @pktable_name =] '*pktable_name*'  
  這是用來傳回目錄資訊的資料表名稱，含主索引鍵。 *pktable_name*是**sysname**，預設值是 Null。 不支援萬用字元的模式比對。 必須提供這個參數或*fktable_name*參數（或兩者）。  
   
- [ @pktable_owner=]'*pktable_owner*'  
+ [ @pktable_owner =] '*pktable_owner*'  
  這是用來傳回目錄資訊之資料表（含主鍵）的擁有者名稱。 *pktable_owner*是**sysname**，預設值是 Null。 不支援萬用字元的模式比對。 如果未指定*pktable_owner* ，就會套用基礎 DBMS 的預設資料表可見度規則。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果未指定*pktable_owner* ，而且目前的使用者並未擁有具有指定*pktable_name*的資料表，則程式會尋找資料庫擁有者所擁有之指定*pktable_name*的資料表。 如果資料表存在，就會傳回它的資料行。  
   
- [ @pktable_qualifier =]'*pktable_qualifier*'  
+ [ @pktable_qualifier =] '*pktable_qualifier*'  
  這是資料表 (含主索引鍵) 限定詞的名稱。 *pktable_qualifier*是 sysname，預設值是 Null。 各種 DBMS 產品都支援三部分的資料表命名（*qualifier.owner.name*）。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個限定詞代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
- [ @fktable_name=]'*fktable_name*'  
+ [ @fktable_name =] '*fktable_name*'  
  這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的名稱。 *fktable_name*是 sysname，預設值是 Null。 不支援萬用字元的模式比對。 必須提供這個參數或*pktable_name*參數（或兩者）。  
   
- [ @fktable_owner =]'*fktable_owner*'  
+ [ @fktable_owner =] '*fktable_owner*'  
  這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的擁有者名稱。 *fktable_owner*是**sysname**，預設值是 Null。 不支援萬用字元的模式比對。 如果未指定*fktable_owner* ，就會套用基礎 DBMS 的預設資料表可見度規則。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果未指定*fktable_owner* ，而且目前的使用者並未擁有具有指定*fktable_name*的資料表，則程式會尋找資料庫擁有者所擁有之指定*fktable_name*的資料表。 如果資料表存在，就會傳回它的資料行。  
   
- [ @fktable_qualifier= ]'*fktable_qualifier*'  
+ [ @fktable_qualifier =] '*fktable_qualifier*'  
  這是資料表 (含外部索引鍵) 限定詞的名稱。 *fktable_qualifier*是**sysname**，預設值是 Null。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個限定詞代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -101,7 +101,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 sp_fkeys 預存程序相當於 ODBC 中的 SQLForeignKeys。  
   
 ## <a name="permissions"></a>權限  
- 需要`SELECT`架構的許可權。  
+ 需要 `SELECT` 架構的許可權。  
   
 ## <a name="examples"></a>範例  
  下列範例會擷取 `HumanResources.Department` 資料庫之 `AdventureWorks2012` 資料表的外部索引鍵清單。  
@@ -114,7 +114,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會擷取 `DimDate` 資料庫之 `AdventureWorksPDW2012` 資料表的外部索引鍵清單。 不會傳回任何資料[!INCLUDE[ssDW](../../includes/ssdw-md.md)]列，因為不支援外鍵。  
+ 下列範例會擷取 `DimDate` 資料庫之 `AdventureWorksPDW2012` 資料表的外部索引鍵清單。 不會傳回任何資料列，因為 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 不支援外鍵。  
   
 ```sql  
 EXEC sp_fkeys @pktable_name = N'DimDate;  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_sproc_columns
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24263a7e2428c0399fb7b655e9cb5d86e130e85d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032820"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820288"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 `[ @fUsePattern = ] 'fUsePattern'`決定是否將底線（_）、百分比（%）和方括弧（[]）字元視為萬用字元。 有效值是 0 (關閉模式比對) 和 1 (開啟模式比對)。 *fUsePattern*是**bit**，預設值是1。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -77,7 +77,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**精密**|**int**|有效位數的數目。 **PRECISION**資料行的傳回值以基底10為底數。|  
 |**LENGTH**|**int**|資料的傳送大小。|  
 |**尺度**|**smallint**|小數點右側的位數。|  
-|**RADIX**|**smallint**|這是數值類型的基底。|  
+|**基**|**smallint**|這是數值類型的基底。|  
 |**Null**|**smallint**|指定 Null 屬性：<br /><br /> 1 = 資料類型可以建立成允許 Null 值。<br /><br /> 0 = 不允許 Null 值。|  
 |**備註**|**Varchar （** 254 **）**|程序資料行的描述。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
 |**COLUMN_DEF**|**Nvarchar （** 4000 **）**|資料行的預設值。|  

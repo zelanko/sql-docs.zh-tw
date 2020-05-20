@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_groups catalog view
 ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7c822d5f405b353a9c07902fc1ef8f9272ad4353
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b2c4815c87ba4c122efa9794294798c376cd79f1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68109487"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821705"
 ---
 # <a name="sysconversation_groups-transact-sql"></a>sys.conversation_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_statistics
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3cdde96f57f813dbc25434867ed78ff884c2e7ab
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032744"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820286"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,14 +72,14 @@ sp_statistics [ @table_name = ] 'table_name'
 |**TABLE_OWNER**|**sysname**|資料表擁有者名稱。 這個資料行一律會傳回值。|  
 |**TABLE_NAME**|**sysname**|資料表名稱。 這個資料行一律會傳回值。|  
 |**NON_UNIQUE**|**smallint**|NOT NULL。<br /><br /> 0 = 唯一<br /><br /> 1 = 不是唯一|  
-|**INDEX_QUALIFIER**|**sysname**|索引擁有者名稱。 部分 DBMS 產品允許資料表擁有者以外的使用者建立索引。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，這個資料行一律與**TABLE_NAME**相同。|  
+|**INDEX_QUALIFIER**|**sysname**|索引擁有者名稱。 部分 DBMS 產品允許資料表擁有者以外的使用者建立索引。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這個資料行一律與**TABLE_NAME**相同。|  
 |**INDEX_NAME**|**sysname**|這是索引的名稱。 這個資料行一律會傳回值。|  
 |**類型**|**smallint**|這個資料行一律會傳回值：<br /><br /> 0 = 資料表的統計資料<br /><br /> 1 = 叢集<br /><br /> 2 = 雜湊<br /><br /> 3 = 非叢集|  
 |**SEQ_IN_INDEX**|**smallint**|索引內資料行的位置。|  
 |**COLUMN_NAME**|**sysname**|傳回**TABLE_NAME**之每個資料行的資料行名稱。 這個資料行一律會傳回值。|  
 |**定序**|**char （1）**|定序中使用的順序。 可為以下項目：<br /><br /> A = 遞增<br /><br /> D = 遞減<br /><br /> NULL = 不適用|  
 |**基數**|**int**|資料表中的資料列數，或索引中的唯一值數目。|  
-|**PAGES**|**int**|用來儲存索引或資料表的頁數。|  
+|**頁面**|**int**|用來儲存索引或資料表的頁數。|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -88,7 +88,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>備註  
  結果集中的索引會依資料行**NON_UNIQUE**、**類型**、 **INDEX_NAME**和**SEQ_IN_INDEX**以遞增順序顯示。  
   
- 叢集化的索引類型會參考依照索引順序來儲存資料表資料的索引。 這對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]于叢集索引。  
+ 叢集化的索引類型會參考依照索引順序來儲存資料表資料的索引。 這對應于叢集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引。  
   
  雜湊的索引類型接受完全相符或範圍搜尋，但模式比對搜尋不會使用索引。  
   
@@ -97,8 +97,8 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>權限  
  需要結構描述的 SELECT 權限。  
   
-## <a name="example-sssdwfull-and-sspdw"></a>範例： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會傳回資料表的`DimEmployee`相關資訊。  
+## <a name="example-sssdwfull-and-sspdw"></a>範例： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下列範例會傳回資料表的相關資訊 `DimEmployee` 。  
   
 ```  
 -- Uses AdventureWorks  

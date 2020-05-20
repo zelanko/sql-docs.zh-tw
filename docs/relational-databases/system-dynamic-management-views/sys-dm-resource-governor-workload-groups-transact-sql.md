@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups dynamic management view
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73da0ee5a47cf5b1c7443729e2a9b71dc01d18a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dcd93a0c74d8fc12af14809c8ca66bf59275dee
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982298"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821046"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "73982298"
   傳回工作負載群組統計資料以及工作負載群組的目前記憶體中組態。 這個檢視可以使用 sys.dm_resource_governor_resource_pools 加入，以取得資源集區名稱。  
   
 > [!NOTE]  
->  若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_resource_governor_workload_groups**的名稱。  
+>  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_resource_governor_workload_groups**的名稱。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|工作負載群組的識別碼。 不可為 Null。|  
-|NAME|**sysname**|工作負載群組的名稱。 不可為 Null。|  
+|name|**sysname**|工作負載群組的名稱。 不可為 Null。|  
 |pool_id|**int**|資源集區的識別碼。 不可為 Null。|  
 |external_pool_id|**int**|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。<br /><br /> 外部資源集區的識別碼。 不可為 Null。|  
 |statistics_start_time|**datetime**|針對工作負載群組重設之統計資料集合的時間。 不可為 Null。|  
@@ -63,7 +63,7 @@ ms.locfileid: "73982298"
 |request_memory_grant_timeout_sec|**int**|單一要求記憶體授與逾時的目前設定 (以秒為單位)。 不可為 Null。|  
 |group_max_requests|**int**|並行要求之最大數目的目前設定。 不可為 Null。|  
 |max_dop|**int**|工作負載群組之平行處理原則的最大程度。 預設值為 0 時，使用全域設定。 不可為 Null。|  
-|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="remarks"></a>備註  
  這個動態管理檢視會顯示記憶體中組態。 若要查看儲存的組態中繼資料，請使用 sys.resource_governor_workload_groups 目錄檢視。  

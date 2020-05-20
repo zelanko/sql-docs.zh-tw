@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - cdc.change_tables
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 52f7a58c854d7081c13cfad606f71044361a02ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 585ebf4a2a01160eec18c4af8f6d25ec4480ddb7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73962453"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820065"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

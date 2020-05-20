@@ -11,14 +11,14 @@ f1_keywords:
 - sp_get_redirected_publisher_TSQL
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a3972d2d92274c3454f8add9fb7b92a001dda359
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55a0c2509a52bb77a4f8ea9779210dac27bc86db
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124051"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820417"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

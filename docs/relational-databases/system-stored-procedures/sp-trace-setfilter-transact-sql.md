@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095943"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820261"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="arguments"></a>引數  
 `[ @traceid = ] trace_id`這是設定篩選的追蹤識別碼。 *trace_id*是**int**，沒有預設值。 使用者會利用這個*trace_id*值來識別、修改和控制追蹤。  
   
-`[ @columnid = ] column_id`這是套用篩選之資料行的識別碼。 *column_id*是**int**，沒有預設值。 如果*column_id*為 Null， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]則會清除指定之追蹤的所有篩選。  
+`[ @columnid = ] column_id`這是套用篩選之資料行的識別碼。 *column_id*是**int**，沒有預設值。 如果*column_id*為 Null， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則會清除指定之追蹤的所有篩選。  
   
 `[ @logical_operator = ] logical_operator`指定是否套用 AND （**0**）或 or （**1**）運算子。 *logical_operator*是**int**，沒有預設值。  
   
@@ -92,7 +92,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |16|函數對於這項追蹤無效。|  
   
 ## <a name="remarks"></a>備註  
- **sp_trace_setfilter**是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程式，它會執行先前版本中提供的擴充預存程式所執行的許多[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]動作。 使用**sp_trace_setfilter** ，而不**是\*xp_trace_set 篩選**擴充預存程式，來建立、套用、移除或操作追蹤的篩選。 如需詳細資訊，請參閱[篩選追蹤](../../relational-databases/sql-trace/filter-a-trace.md)。  
+ **sp_trace_setfilter**是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程式，它會執行先前版本中提供的擴充預存程式所執行的許多動作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用**sp_trace_setfilter** ，而不是**xp_trace_set \* 篩選**擴充預存程式，來建立、套用、移除或操作追蹤的篩選。 如需詳細資訊，請參閱[篩選追蹤](../../relational-databases/sql-trace/filter-a-trace.md)。  
   
  特定資料行的所有篩選都必須在**sp_trace_setfilter**的一次執行時一起啟用。 例如，如果使用者想要在應用程式名稱資料行上套用兩個篩選，並在使用者名稱資料行上套用一個篩選，則使用者必須依序指定應用程式名稱的篩選。 如果使用者嘗試在一個預存程序呼叫中指定應用程式名稱的篩選，後面接著使用者名稱的篩選，以及應用程式名稱的另一個篩選，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
   

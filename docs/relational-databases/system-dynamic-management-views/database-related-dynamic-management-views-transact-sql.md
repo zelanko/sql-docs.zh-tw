@@ -12,19 +12,19 @@ helpviewer_keywords:
 - database dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], database
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c51f22a66344c0ae72daf7ca662285e1fdde5b5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2bdc377c87ce84ec6e44bd06bc905426aeaba231
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090884"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819488"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>資料庫相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  本節說明中[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]的下列動態管理物件，有時會在 SQL Database 中。  
+  本節說明中的下列動態管理物件 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，有時會在 SQL Database 中。  
   
 |||  
 |-|-|  

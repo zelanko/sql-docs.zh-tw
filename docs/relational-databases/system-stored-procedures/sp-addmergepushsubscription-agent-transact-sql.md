@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepushsubscription_agent
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fb74cc0887d68ea01fabe7f6168c0d23275d8f4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2f0a3edd44f7795fd57fab1cf640e7ab95d59ee2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68769165"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820737"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,16 +68,16 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'`這是訂閱資料庫的名稱。 *subscriber_db*是**sysname**，預設值是 Null。  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`這是在同步處理時，連接到訂閱者時所要使用的安全性模式。 *subscriber_security_mode*是**int**，預設值是1。 如果為**0**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]則指定驗證。 如果是**1**，則指定 Windows 驗證。  
+`[ @subscriber_security_mode = ] subscriber_security_mode`這是在同步處理時，連接到訂閱者時所要使用的安全性模式。 *subscriber_security_mode*是**int**，預設值是1。 如果為**0**，則指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 如果是**1**，則指定 Windows 驗證。  
   
 `[ @subscriber_login = ] 'subscriber_login'`這是在同步處理時，用來連接訂閱者的訂閱者登入。 如果*subscriber_security_mode*設定為**0**，則需要*subscriber_login* 。 *subscriber_login*是**sysname**，預設值是 Null。  
   
-`[ @subscriber_password = ] 'subscriber_password'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證的訂閱者密碼。 如果*subscriber_security_mode*設定為**0**，則需要*subscriber_password* 。 *subscriber_password*是**sysname**，預設值是 Null。 如果使用訂閱者密碼，它會自動加密。  
+`[ @subscriber_password = ] 'subscriber_password'`這是驗證的訂閱者密碼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果*subscriber_security_mode*設定為**0**，則需要*subscriber_password* 。 *subscriber_password*是**sysname**，預設值是 Null。 如果使用訂閱者密碼，它會自動加密。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`這是在同步處理時，連接到發行者時所使用的安全性模式。 *publisher_security_mode*是**int**，預設值是1。 如果為**0**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]則指定驗證。 如果是**1**，則指定 Windows 驗證。  
+`[ @publisher_security_mode = ] publisher_security_mode`這是在同步處理時，連接到發行者時所使用的安全性模式。 *publisher_security_mode*是**int**，預設值是1。 如果為**0**，則指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 如果是**1**，則指定 Windows 驗證。  
   
 `[ @publisher_login = ] 'publisher_login'`這是在同步處理時，用來連接到發行者的登入。 *publisher_login*是**sysname**，預設值是 Null。  
   
@@ -123,7 +123,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**5**|Thursday|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|Day|  
+|**8**|天|  
 |**9**|工作日|  
 |**10**|週末|  
 |NULL (預設值)||  
@@ -148,7 +148,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**1**|單次|  
 |**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小時|  
 |NULL (預設值)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是 Null。  
@@ -161,7 +161,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @active_end_date = ] active_end_date`這是排程停止合併代理程式的日期，格式為 YYYYMMDD。 *active_end_date*是**int**，預設值是 Null。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`指定是否可以透過 Windows 同步處理管理員來同步處理訂閱。 *enabled_for_syncmgr*是**Nvarchar （5）**，預設值是 FALSE。 如果**為 false**，則表示訂閱未向同步處理管理員註冊。 若**為 true**，則會使用同步處理管理員註冊訂閱，而且可以在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]不啟動的情況下進行同步處理。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`指定是否可以透過 Windows 同步處理管理員來同步處理訂閱。 *enabled_for_syncmgr*是**Nvarchar （5）**，預設值是 FALSE。 如果**為 false**，則表示訂閱未向同步處理管理員註冊。 若**為 true**，則會使用同步處理管理員註冊訂閱，而且可以在不啟動的情況下進行同步處理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5e6e7232d718d5cf6cb1791783f105f31dc2f4ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3ae6596579942a3292c3467f4d3489346eb4aa42
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769104"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820668"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,16 +97,16 @@ sp_addpublication [ @publication = ] 'publication'
 |**字母**|產生所有資料表的字元模式大量複製程式輸出。 若是_Oracle 發行者，_ **字元**_僅適用于快照_式複寫。|  
 |**位**|產生所有資料表的原生模式大量複製程式輸出，但在快照集期間，不鎖定資料表。 只支援交易式發行集使用這個項目。 *不支援 Oracle 發行者*。|  
 |**concurrent_c**|產生所有資料表的字元模式大量複製程式輸出，但在快照集期間，不鎖定資料表。 只支援交易式發行集使用這個項目。|  
-|**資料庫快照集**|從資料庫快照集產生所有資料表的原生模式大量複製程式輸出。 並非所有版本[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都可使用資料庫快照集。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
-|**database snapshot character**|從資料庫快照集產生所有資料表的字元模式大量複製程式輸出。 並非所有版本[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都可使用資料庫快照集。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
-|NULL (預設值)|發行者的**native** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預設值為 native。 若為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，則當*repl_freq*的值為**Snapshot**時，預設為**character** ，而如果是所有其他案例則會**concurrent_c** 。|  
+|**資料庫快照集**|從資料庫快照集產生所有資料表的原生模式大量複製程式輸出。 並非所有版本都可使用資料庫快照集 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
+|**database snapshot character**|從資料庫快照集產生所有資料表的字元模式大量複製程式輸出。 並非所有版本都可使用資料庫快照集 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
+|NULL (預設值)|發行者的預設值為**native** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 若為非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者，則當*repl_freq*的值為**Snapshot**時，預設為**character** ，而如果是所有其他案例則會**concurrent_c** 。|  
   
 `[ \@repl_freq = ] 'repl_freq'`這是複寫頻率的類型， *repl_freq*是**Nvarchar （10）**，而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**連續**（預設值）|發行者會提供所有記錄式交易的輸出。 若為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，必須將*sync_method*設定為**concurrent_c**。|  
-|**快照集**|發行者只會產生已排程的同步處理事件。 若為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，必須將*sync_method*設為**character**。|  
+|**連續**（預設值）|發行者會提供所有記錄式交易的輸出。 若為非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者，必須將*sync_method*設定為**concurrent_c**。|  
+|**快照集**|發行者只會產生已排程的同步處理事件。 若為非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者，必須將*sync_method*設為**character**。|  
   
 `[ \@description = ] 'description'`這是發行集的選擇性描述。 *description*是**Nvarchar （255）**，預設值是 Null。  
   
@@ -114,7 +114,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|**作用中**|訂閱者可以立即使用發行集資料。|  
+|**active**|訂閱者可以立即使用發行集資料。|  
 |**非**使用中（預設值）|在最初建立發行集時，訂閱者無法使用發行集資料 (它們可以訂閱，但不會處理這些訂閱)。|  
   
  *不支援 Oracle 發行者*。  
@@ -148,7 +148,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_queued_tran = ] 'allow_queued_updating'`啟用或停用訂閱者端的變更佇列，直到可以套用至發行者為止。 *allow_queued_updating*是**Nvarchar （5）** ，預設值是 FALSE。 如果**為 false**，則訂閱者端的變更不會排入佇列。 *Oracle 發行者不支援* **true** 。  
   
-`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'`指定是否將快照集檔案儲存在預設資料夾中。 *snapshot_in_default_folder*是**Nvarchar （5）** ，預設值為 TRUE。 若**為 true**，則可以在預設資料夾中找到快照集檔案。 如果**為 false**，則表示快照集檔案儲存在*alternate_snapshot_folder*所指定的替代位置中。 替代位置可以在另一部伺服器、網路磁碟機或抽取式媒體 (如 CD-ROM 或抽取式磁碟) 中。 另外，您也可以將快照集檔案儲存在 FTP 站台中，供訂閱者以後擷取它們。 請注意，這個參數可以是 true，而且在** \@alt_snapshot_folder**參數中仍有位置。 這個組合會指定將快照集檔案同時儲存在預設位置和替代位置中。  
+`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'`指定是否將快照集檔案儲存在預設資料夾中。 *snapshot_in_default_folder*是**Nvarchar （5）** ，預設值為 TRUE。 若**為 true**，則可以在預設資料夾中找到快照集檔案。 如果**為 false**，則表示快照集檔案儲存在*alternate_snapshot_folder*所指定的替代位置中。 替代位置可以在另一部伺服器、網路磁碟機或抽取式媒體 (如 CD-ROM 或抽取式磁碟) 中。 另外，您也可以將快照集檔案儲存在 FTP 站台中，供訂閱者以後擷取它們。 請注意，這個參數可以是 true，而且在** \@ alt_snapshot_folder**參數中仍有位置。 這個組合會指定將快照集檔案同時儲存在預設位置和替代位置中。  
   
 `[ \@alt_snapshot_folder = ] 'alternate_snapshot_folder'`指定快照集替代資料夾的位置。 *alternate_snapshot_folder*是**Nvarchar （255）** ，預設值是 Null。  
   
@@ -156,7 +156,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@post_snapshot_script = ] 'post_snapshot_script'`指定 **.sql**檔案位置的指標。 *post_snapshot_script*是**Nvarchar （255）**，預設值是 Null。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在散發代理程式所用的安全性內容中執行。  
   
-`[ \@compress_snapshot = ] 'compress_snapshot'`指定要將寫入** \@alt_snapshot_folder**位置的快照集壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。 *compress_snapshot*是**Nvarchar （5）**，預設值是 FALSE。 **false**指定不壓縮快照集;**true**指定將壓縮快照集。 超出 2 GB 的快照集檔案無法壓縮。 壓縮的快照集檔案是在執行散發代理程式的位置進行解壓縮；提取訂閱通常會搭配使用壓縮的快照集，因此，會在訂閱者端將檔案解壓縮。 預設資料夾中的快照集無法壓縮。  
+`[ \@compress_snapshot = ] 'compress_snapshot'`指定要將寫入** \@ alt_snapshot_folder**位置的快照集壓縮成 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。 *compress_snapshot*是**Nvarchar （5）**，預設值是 FALSE。 **false**指定不壓縮快照集;**true**指定將壓縮快照集。 超出 2 GB 的快照集檔案無法壓縮。 壓縮的快照集檔案是在執行散發代理程式的位置進行解壓縮；提取訂閱通常會搭配使用壓縮的快照集，因此，會在訂閱者端將檔案解壓縮。 預設資料夾中的快照集無法壓縮。  
   
 `[ \@ftp_address = ] 'ftp_address'`這是散發者之 FTP 服務的網路位址。 *ftp_address*是**sysname**，預設值是 Null。 指定發行集快照集檔案所在的位置，以便訂閱者的散發代理程式或合併代理程式能夠加以收取。 由於每個發行集都會儲存這個屬性，因此每個發行集都可以有不同的*ftp_address*。 發行集必須支援利用 FTP 來傳播快照集。  
   
@@ -194,7 +194,7 @@ sp_addpublication [ @publication = ] 'publication'
 |值|描述|  
 |-----------|-----------------|  
 |**server**|利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存交易。|  
-|NULL (預設值)|預設為**sql**，指定用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。|  
+|NULL (預設值)|預設為**sql**，指定用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存交易。|  
   
 > [!NOTE]  
 >  已不再支援使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing。 指定**msmq**的值將會產生警告，而複寫會自動將值設定為**sql**。  
@@ -207,10 +207,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@qreader_job_name = ] 'queue_reader_agent_name'`這是現有代理程式作業的名稱。 *queue_reader_agent_name*是**sysname**，預設值是 Null。 只有在佇列讀取器代理程式將使用現有的作業，而不建立新的作業時，才指定這個參數。  
   
-`[ \@publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ \@publisher = ] 'publisher'`指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  *publisher*將發行集加入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者時，不應使用 publisher。  
+>  將發行集加入至發行者時，不應使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'`指出訂閱者是否可以從備份（而不是初始快照集）初始化此發行集的訂閱。 *allow_initialize_from_backup*是**Nvarchar （5）**，它可以是下列其中一個值：  
   
@@ -225,13 +225,13 @@ sp_addpublication [ @publication = ] 'publication'
 > [!WARNING]  
 >  為了避免遺漏訂閱者資料，當您使用 **sp_addpublication** 搭配 `@allow_initialize_from_backup = N'true'`時，請一律使用 `@immediate_sync = N'true'`。  
   
-`[ \@replicate_ddl = ] replicate_ddl`指出是否支援發行集的架構複寫。 *replicate_ddl*是**int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，發行者的預設值是**1** ，非**0** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者則為0。 **1**表示複寫在發行者端執行的資料定義語言（ddl）語句， **0**表示不復寫 DDL 語句。 *不支援 Oracle 發行者使用結構描述複寫。* 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+`[ \@replicate_ddl = ] replicate_ddl`指出是否支援發行集的架構複寫。 *replicate_ddl*是**int**，發行者的預設值是**1** ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非發行者則為**0** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **1**表示複寫在發行者端執行的資料定義語言（ddl）語句， **0**表示不復寫 DDL 語句。 *不支援 Oracle 發行者使用結構描述複寫。* 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
- 當* \@ * ddl 語句加入資料行時，就會接受 replicate_ddl 參數。 當* \@ * ddl 語句因下列原因而改變或卸載資料行時，會忽略 replicate_ddl 參數。  
+ 當 DDL 語句加入資料行時，就會接受* \@ replicate_ddl*參數。 當 DDL 語句因下列原因而改變或卸載資料行時，會忽略* \@ replicate_ddl*參數。  
   
--   當卸除資料行時必須更新 sysarticlecolumns，以免新的 DML 陳述式包含造成散發代理程式失敗的已卸除資料行。 因為複寫必須一律複寫架構變更，所以會忽略* \@replicate_ddl*參數。  
+-   當卸除資料行時必須更新 sysarticlecolumns，以免新的 DML 陳述式包含造成散發代理程式失敗的已卸除資料行。 因為複寫必須一律複寫架構變更，所以會忽略* \@ replicate_ddl*參數。  
   
--   當更改資料行時，來源資料類型或 Null 屬性可能已變更，造成 DML 陳述式包含的值可能與散發者端的資料表不相容。 這類 DML 陳述式可能會造成散發代理程式失敗。 因為複寫必須一律複寫架構變更，所以會忽略* \@replicate_ddl*參數。  
+-   當更改資料行時，來源資料類型或 Null 屬性可能已變更，造成 DML 陳述式包含的值可能與散發者端的資料表不相容。 這類 DML 陳述式可能會造成散發代理程式失敗。 因為複寫必須一律複寫架構變更，所以會忽略* \@ replicate_ddl*參數。  
   
 -   當 DDL 陳述式加入新的資料行時，sysarticlecolumns 不包括新的資料行。 DML 陳述式不會嘗試複寫新資料行的資料。 接受此參數是因為可接受複寫或不複寫 DDL。  
   
@@ -259,7 +259,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@publish_local_changes_only = ] 'publish_local_changes_only'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ \@enabled_for_het_sub = ] 'enabled_for_het_sub'`讓發行集支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。 *enabled_for_het_sub*是**Nvarchar （5）** ，預設值為 FALSE。 值為**true**表示發行集支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。 當*enabled_for_het_sub*為**true**時，適用下列限制：  
+`[ \@enabled_for_het_sub = ] 'enabled_for_het_sub'`讓發行集支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 *enabled_for_het_sub*是**Nvarchar （5）** ，預設值為 FALSE。 值為**true**表示發行集支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 當*enabled_for_het_sub*為**true**時，適用下列限制：  
   
 -   *allow_initialize_from_backup*必須為**false**。  
   
@@ -321,7 +321,7 @@ sp_addpublication [ @publication = ] 'publication'
   
  如果有多個發行集發行相同的資料庫物件，只有*replicate_ddl*值為**1**的發行集，才會複寫 ALTER TABLE、ALTER VIEW、ALTER PROCEDURE、ALTER FUNCTION 和 ALTER TRIGGER ddl 語句。 不過，所有發行已卸除之資料行的發行集都會複寫 ALTER TABLE DROP COLUMN DDL 陳述式。  
   
- 在啟用發行集的 ddl 複寫（*replicate_ddl* = **1**）時，為了進行發行集的非複寫 ddl 變更，必須先執行[sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) ，將*replicate_ddl*設定為**0**。 在發出非複寫 DDL 語句之後，您可以再次執行[sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)來重新開啟 DDL 複寫。  
+ 在啟用發行集的 DDL 複寫（*replicate_ddl*  =  **1**）時，為了進行發行集的非複寫 ddl 變更，必須先執行[sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) ，將*replicate_ddl*設定為**0**。 在發出非複寫 DDL 語句之後，您可以再次執行[sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)來重新開啟 DDL 複寫。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addpublication-transa_1.sql)]  

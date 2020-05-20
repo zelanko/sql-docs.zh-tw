@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 865e86976a6da117d41ba2f22020f7137dee5038
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68702780"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820270"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   目前資料庫中的 **dbo** 結構描述。  
   
-`[ @qualifier = ] 'qualifier'`這是程式限定詞的名稱。 *限定詞*是**sysname**，預設值是 Null。 各種 DBMS 產品都支援三部分的資料表命名，格式為（辨識_符號_**。**_架構_**。**_名稱_。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，*限定詞*代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+`[ @qualifier = ] 'qualifier'`這是程式限定詞的名稱。 *限定詞*是**sysname**，預設值是 Null。 各種 DBMS 產品都支援三部分的資料表命名，格式為（辨識_符號_**。**_架構_**。**_名稱_。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，*限定詞*代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
 `[ @fUsePattern = ] 'fUsePattern'`決定是否將底線（_）、百分比（%）或方括弧 []）視為萬用字元。 *fUsePattern*是**bit**，預設值是1。  
   
@@ -64,7 +64,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
  **1** = 已開啟模式比對。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   

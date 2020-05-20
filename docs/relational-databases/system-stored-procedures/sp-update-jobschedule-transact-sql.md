@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobschedule
 ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ebdaa23db8602b608498b4012ffd71367bb99a0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6aa385b753dcdb2ceefce47950be9d41c8074770
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084906"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820177"
 ---
 # <a name="sp_update_jobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

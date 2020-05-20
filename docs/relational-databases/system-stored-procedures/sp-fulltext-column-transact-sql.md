@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 724c3b71012014d6858554614fbed9239bbfeddc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124343"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820449"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -58,10 +58,10 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 |值|描述|  
 |-----------|-----------------|  
-|**add**|將*qualified_table_name*的*column_name*加入至資料表的非使用中全文檢索索引。 這個動作會啟用全文檢索索引的資料行。|  
+|**新增**|將*qualified_table_name*的*column_name*加入至資料表的非使用中全文檢索索引。 這個動作會啟用全文檢索索引的資料行。|  
 |**下拉式**|從資料表的非使用中全文檢索索引中移除*qualified_table_name*的*column_name* 。|  
   
-`[ @language = ] 'language_term'`這是儲存在資料行中之資料的語言。 如需所包含的語言清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
+`[ @language = ] 'language_term'`這是儲存在資料行中之資料的語言。 如需所包含的語言清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[Fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
   
 > [!NOTE]  
 >  當資料行包含的資料有多種語言或不受支援的語言時，請使用「中性」語言。 [預設全文檢索語言] 組態選項指定這個預設值。  

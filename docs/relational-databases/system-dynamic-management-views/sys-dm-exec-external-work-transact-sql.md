@@ -19,15 +19,15 @@ helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0ba7eecc8e117e429f6992622d0c7bb2073f86a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8348ebacb68f2df122b73d6ad3480cadedd27c1b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74834328"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821101"
 ---
 # <a name="sysdm_exec_external_work-transact-sql"></a>sys.databases dm_exec_external_work （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "74834328"
   
  查詢 dm_exec_external_work sys.databases，以識別要與外部資料源（例如 Hadoop 或外部 SQL Server）進行通訊的工作。  
   
-|資料行名稱|資料類型|描述|範圍|  
+|資料行名稱|資料類型|說明|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|相關聯的 PolyBase 查詢的唯一識別碼。|請參閱[dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的*request_ID* 。|  
 |step_index|`int`|此工作者正在執行的要求。|請參閱[dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的*step_index* 。|  
 |dms_step_index|`int`|此工作者正在執行之 DMS 計畫中的步驟。|請參閱[dm_exec_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)。|  
 |compute_node_id|`int`|正在執行背景工作的節點。|請參閱[dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
-|type|`nvarchar(60)`|外部工作的類型。|「檔案分割」|  
+|類型|`nvarchar(60)`|外部工作的類型。|「檔案分割」|  
 |work_id|`int`|實際分割的識別碼。|大於或等於0。|  
 |input_name|`nvarchar(4000)`|要讀取的輸入名稱|使用 Hadoop 時的檔案名。|  
 |read_location|`bigint`|位移或讀取位置。|要讀取之檔案的位移。|  

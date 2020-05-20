@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc0ad8fcdf8c72e1b91df651a75227975d18294e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a2535aff30c0a3071b641889f5e4a3f1433f88b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061807"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823966"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,19 +43,19 @@ sp_column_privileges [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @table_name= ]'*table_name*'  
+ [ @table_name =] '*table_name*'  
  這是用來傳回目錄資訊的資料表。 *table_name*是**sysname**，沒有預設值。 不支援萬用字元的模式比對。  
   
- [ @table_owner= ]'*table_owner*'  
+ [ @table_owner =] '*table_owner*'  
  這是用來傳回目錄資訊之資料表的擁有者。 *table_owner*是**sysname**，預設值是 Null。 不支援萬用字元的模式比對。 如果未指定*table_owner* ，則會套用基礎資料庫管理系統（DBMS）的預設資料表可見度規則。  
   
  如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果未指定*table_owner* ，而且目前使用者並未擁有具有指定*table_name*的資料表，sp_column 許可權就會尋找資料庫擁有者所擁有之指定*table_name*的資料表。 如果資料表存在，就會傳回它的資料行。  
   
- [ @table_qualifier= ]'*table_qualifier*'  
- 這是資料表限定詞的名稱。 *table_qualifier*是*sysname*，預設值是 Null。 各種 DBMS 產品都支援三部分的資料表命名（辨識_符號_**。**_擁有_者 **。**_名稱_）。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ [ @table_qualifier =] '*table_qualifier*'  
+ 這是資料表限定詞的名稱。 *table_qualifier*是*sysname*，預設值是 Null。 各種 DBMS 產品都支援三部分的資料表命名（辨識_符號_**。**_擁有_者 **。**_名稱_）。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
- [ @column_name= ]' 資料*行*'  
- 這是個單一資料行，當只取得一個目錄資訊資料行時，便使用這個單一資料行。 資料*行*是**Nvarchar （** 384 **）**，預設值是 Null。 如果未指定資料*行*，則會傳回所有資料行。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，資料*行*代表 sys.databases 資料表中所列的資料行名稱。 資料*行*可以包含使用基礎 DBMS 萬用字元比對模式的萬用字元。 若要有最大交互操作能力，閘道用戶端應該只採用 ISO 標準模式比對 (% 和 _ 萬用字元)。  
+ [ @column_name =] ' 資料*行*'  
+ 這是個單一資料行，當只取得一個目錄資訊資料行時，便使用這個單一資料行。 資料*行*是**Nvarchar （** 384 **）**，預設值是 Null。 如果未指定資料*行*，則會傳回所有資料行。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，資料*行*代表 sys.databases 資料表中所列的資料行名稱。 資料*行*可以包含使用基礎 DBMS 萬用字元比對模式的萬用字元。 若要有最大交互操作能力，閘道用戶端應該只採用 ISO 標準模式比對 (% 和 _ 萬用字元)。  
   
 ## <a name="result-sets"></a>結果集  
  sp_column_privileges 相當於 ODBC 中的 SQLColumnPrivileges。 傳回的結果依 TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME、COLUMN_NAME 和 PRIVILEGE 來排序。  

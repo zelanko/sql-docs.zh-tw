@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.trace_categories catalog view
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c9685b9733c1d13b79ef2a19ee2f19bbe3130426
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4898bdb8e05c2b2fce20ca30ef7f056107a4befa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106667"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821265"
 ---
 # <a name="systrace_categories-transact-sql"></a>sys.trace_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

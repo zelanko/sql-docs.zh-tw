@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.server_event_session_targets catalog view
 - xe
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d9d3000b38f8cc59ef1349a1e0cd9219a3eb385f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 707060599513e765e702755251015899eb6732d7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133185"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821710"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "68133185"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的識別碼。 不可為 Null。|  
 |target_id|**int**|目標的識別碼。 這個識別碼在事件工作階段物件中是唯一的。 不可為 Null。|  
-|NAME|**sysname**|事件目標的名稱。 不可為 Null。|  
+|name|**sysname**|事件目標的名稱。 不可為 Null。|  
 |套件|**sysname**|包含此事件目標之事件封裝的名稱。 不可為 Null。|  
-|module|**sysname**|包含此事件目標之模組的名稱。 不可為 Null。|  
+|name|**sysname**|包含此事件目標之模組的名稱。 不可為 Null。|  
   
 ## <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  

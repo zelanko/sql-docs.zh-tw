@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05ec724effbabfeec11d113e46fd11c4daec0688
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74097868"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821066"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.databases dm_exec_input_buffer （Transact-sql）
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-傳回已提交至實例之語句的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相關資訊。
+傳回已提交至實例之語句的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
 
 ## <a name="syntax"></a>語法
 
@@ -59,12 +59,12 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="permissions"></a>權限
 
-在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上，如果使用者擁有 VIEW SERVER STATE 許可權，使用者會看到實例上所有執行中的會話[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];否則，使用者只會看到目前的會話。
+在上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，如果使用者擁有 VIEW SERVER STATE 許可權，使用者會看到實例上所有執行中的會話 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; 否則，使用者只會看到目前的會話。
 
 > [!IMPORTANT]
 > 如果沒有 VIEW SERVER STATE 許可權（例如觸發程式、預存程式或函式），則在 SQL Server SQL Server Management Studio 外部執行此 DMV，會在 master 資料庫上擲回許可權錯誤。
 
-在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]上，如果使用者是資料庫擁有者，則使用者會在上看到所有執行中[!INCLUDE[ssSDS](../../includes/sssds-md.md)]的會話;否則，使用者只會看到目前的會話。
+在上 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，如果使用者是資料庫擁有者，則使用者會在上看到所有執行中的會話 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ; 否則，使用者只會看到目前的會話。
 
 > [!IMPORTANT]
 > 若沒有擁有者許可權（例如在觸發程式、預存程式或函數中）的 Azure SQL Database，在 SQL Server Management Studio 外部執行此 DMV，會在 master 資料庫上擲回許可權錯誤。

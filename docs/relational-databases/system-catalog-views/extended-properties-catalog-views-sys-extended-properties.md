@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.extended_properties catalog view
 ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e60ba9faf4cf666b431d251cadd5c075a8559d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb36dddcab514692a7d6b59dee969846430d75b5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388578"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823434"
 ---
 # <a name="extended-properties-catalog-views---sysextended_properties"></a>擴充屬性目錄 Views-sys. extended_properties
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "81388578"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|Class - 類別|**tinyint**|可識別內容所在的項目類別。 可以是下列其中一項：<br /><br /> 0 = 資料庫<br /><br /> 1 = 物件或資料行<br /><br /> 2 = 參數<br /><br /> 3 = 結構描述<br /><br /> 4 = 資料庫主體<br /><br /> 5 = 組件<br /><br /> 6 = 類型<br /><br /> 7 = 索引<br /><br /> 10 = XML 結構描述集合<br /><br /> 15 = 訊息類型<br /><br /> 16 = 服務合約<br /><br /> 17 = 服務<br /><br /> 18 = 遠端服務繫結<br /><br /> 19 = 路由<br /><br /> 20 = 資料空間 (檔案群組或資料分割配置)<br /><br /> 21 = 資料分割函數<br /><br /> 22 = 資料庫檔案<br /><br /> 27 = 計畫指南|  
+|class|**tinyint**|可識別內容所在的項目類別。 可以是下列其中一項：<br /><br /> 0 = 資料庫<br /><br /> 1 = 物件或資料行<br /><br /> 2 = 參數<br /><br /> 3 = 結構描述<br /><br /> 4 = 資料庫主體<br /><br /> 5 = 組件<br /><br /> 6 = 類型<br /><br /> 7 = 索引<br /><br /> 10 = XML 結構描述集合<br /><br /> 15 = 訊息類型<br /><br /> 16 = 服務合約<br /><br /> 17 = 服務<br /><br /> 18 = 遠端服務繫結<br /><br /> 19 = 路由<br /><br /> 20 = 資料空間 (檔案群組或資料分割配置)<br /><br /> 21 = 資料分割函數<br /><br /> 22 = 資料庫檔案<br /><br /> 27 = 計畫指南|  
 |class_desc|**nvarchar(60)**|擴充屬性所在的類別的描述。 可以是下列其中一項：<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> 參數<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
 |major_id|**int**|擴充屬性所在的項目識別碼，它是根據其類別加以解譯的。 對大部分的項目來說，這是套用至類別代表的識別碼。 下面是非標準主要識別碼的解譯：<br /><br /> 如果 class 是 0，則 major_id 一律為 0。<br /><br /> 如果 class 是 1、2 或 7，則 major_id 就是 object_id。|  
 |minor_id|**int**|擴充屬性所在項目的次要識別碼，它是根據其類別加以解譯的。 對於大部分的項目來說，這個值為 0；如果不是，則識別碼如下：<br /><br /> 如果 class = 1， minor_id 就是 column_id (資料行)，否則就是 0 (物件)。<br /><br /> 如果 class = 2，minor_id 就是 parameter_id。<br /><br /> 如果 class = 7，minor_id 就是 index_id。|  
-|NAME|**sysname**|內容名稱，另外加上的 class、major_id 和 minor_id，使它成為唯一名稱。|  
+|name|**sysname**|內容名稱，另外加上的 class、major_id 和 minor_id，使它成為唯一名稱。|  
 |value|**sql_variant**|擴充屬性的值。|  
   
 ## <a name="permissions"></a>權限  

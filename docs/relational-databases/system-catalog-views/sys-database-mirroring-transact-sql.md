@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_mirroring catalog view
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 515f3dad1f07535a5d0c8e590adadce0923180db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 549c60eff284c4302f3695786bc87074c9b0d617
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022754"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821681"
 ---
 # <a name="sysdatabase_mirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

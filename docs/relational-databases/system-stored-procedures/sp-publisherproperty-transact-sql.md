@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publisherproperty
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0d3ba6552861f162a8ba0755dc37e30bc965e2a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cf03396170972cf1e0c44a7a668e3651385579fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73962383"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820373"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  顯示或變更非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者的發行者屬性。 這個預存程序執行於散發者端。  
+  顯示或變更非發行者的發行者屬性 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 這個預存程序執行於散發者端。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +65,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_publisherproperty**用於非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者的異動複寫中。  
+ **sp_publisherproperty**用於非發行者的異動複寫中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  只有在指定 *[發行者]* 時，結果集會包含所有可設定之屬性的目前設定。  
   

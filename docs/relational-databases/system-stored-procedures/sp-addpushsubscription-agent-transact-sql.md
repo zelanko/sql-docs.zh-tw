@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpushsubscription_agent
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 740437178b6d9ab444cabdbda3e37febc65b3897
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68894046"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820694"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'`這是訂閱資料庫的名稱。 *subscriber_db*是**sysname**，預設值是 Null。 若為非 SQL Server 的訂閱者，請為*subscriber_db*指定 **（預設目的地）** 值。  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`這是在同步處理時，連接到訂閱者時所要使用的安全性模式。 *subscriber_security_mode*是**int**，預設值是1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 **1**指定 Windows 驗證。  
+`[ @subscriber_security_mode = ] subscriber_security_mode`這是在同步處理時，連接到訂閱者時所要使用的安全性模式。 *subscriber_security_mode*是**int**，預設值是1。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 **1**指定 Windows 驗證。  
   
 > [!IMPORTANT]  
 >  對於佇列更新訂閱，請利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來連接訂閱者，以及指定不同的連接帳戶給每個訂閱者。 對於其他所有訂閱，請使用 Windows 驗證。  
@@ -116,7 +116,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`這是散發代理程式的日期。 當*frequency_type*設定為**32** （每月相對）時，會使用這個參數。 *frequency_relative_interval*是**int**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**1** (預設值)|First|  
 |**2**|Second|  
@@ -133,7 +133,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**1**|單次|  
 |**2**|Second|  
 |**4** （預設值）|Minute|  
-|**8**|Hour|  
+|**8**|小時|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是5。  
   
@@ -154,21 +154,21 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @dts_package_location = ] 'dts_package_location'`指定封裝位置。 *dts_package_location*是**Nvarchar （12）**，預設值是「散發者」。 封裝的位置**可以是「** 散發者」或「**訂閱者**」。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`這是指是否可以透過[!INCLUDE[msCoName](../../includes/msconame-md.md)]同步處理管理員來同步處理訂閱。 *enabled_for_syncmgr*是**Nvarchar （5）**，預設值是 FALSE。 如果**為 false**，則表示訂閱未向同步處理管理員註冊。 若**為 true**，則會使用同步處理管理員註冊訂閱，而且可以在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]不啟動的情況下進行同步處理。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`這是指是否可以透過同步處理管理員來同步處理訂閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 *enabled_for_syncmgr*是**Nvarchar （5）**，預設值是 FALSE。 如果**為 false**，則表示訂閱未向同步處理管理員註冊。 若**為 true**，則會使用同步處理管理員註冊訂閱，而且可以在不啟動的情況下進行同步處理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 `[ @distribution_job_name = ] 'distribution_job_name'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是 Null。  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`這是用來註冊非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源之 OLE DB 提供者的唯一程式設計識別碼（PROGID）。 *subscriber_provider*是**sysname**，預設值是 Null。 針對散發者上所安裝的 OLE DB 提供者， *subscriber_provider*必須是唯一的。 *subscriber_provider*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_provider。  
+`[ @subscriber_provider = ] 'subscriber_provider'`這是用來註冊非資料來源之 OLE DB 提供者的唯一程式設計識別碼（PROGID） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *subscriber_provider*是**sysname**，預設值是 Null。 針對散發者上所安裝的 OLE DB 提供者， *subscriber_provider*必須是唯一的。 *subscriber_provider*只有非訂閱者才支援 subscriber_provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-`[ @subscriber_datasrc = ] 'subscriber_datasrc'`這是 OLE DB 提供者所瞭解的資料來源名稱。 *subscriber_datasrc*是**Nvarchar （4000）**，預設值是 Null。 *subscriber_datasrc*會當做 DBPROP_INIT_DATASOURCE 屬性傳遞，以初始化 OLE DB 提供者。 *subscriber_datasrc*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_datasrc。  
+`[ @subscriber_datasrc = ] 'subscriber_datasrc'`這是 OLE DB 提供者所瞭解的資料來源名稱。 *subscriber_datasrc*是**Nvarchar （4000）**，預設值是 Null。 *subscriber_datasrc*會當做 DBPROP_INIT_DATASOURCE 屬性傳遞，以初始化 OLE DB 提供者。 *subscriber_datasrc*只有非訂閱者才支援 subscriber_datasrc [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-`[ @subscriber_location = ] 'subscriber_location'`這是 OLE DB 提供者所瞭解的資料庫位置。 *subscriber_location*是**Nvarchar （4000）**，預設值是 Null。 *subscriber_location*會當做 DBPROP_INIT_LOCATION 屬性傳遞，以初始化 OLE DB 提供者。 *subscriber_location*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_location。  
+`[ @subscriber_location = ] 'subscriber_location'`這是 OLE DB 提供者所瞭解的資料庫位置。 *subscriber_location*是**Nvarchar （4000）**，預設值是 Null。 *subscriber_location*會當做 DBPROP_INIT_LOCATION 屬性傳遞，以初始化 OLE DB 提供者。 *subscriber_location*只有非訂閱者才支援 subscriber_location [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-`[ @subscriber_provider_string = ] 'subscriber_provider_string'`這是用來識別資料來源的 OLE DB 提供者特定的連接字串。 *subscriber_provider_string*是**Nvarchar （4000）**，預設值是 Null。 *subscriber_provider_string*會傳遞至 IDataInitialize 或設定為 DBPROP_INIT_PROVIDERSTRING 屬性，以初始化 OLE DB 提供者。 *subscriber_provider_string*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_provider_string。  
+`[ @subscriber_provider_string = ] 'subscriber_provider_string'`這是用來識別資料來源的 OLE DB 提供者特定的連接字串。 *subscriber_provider_string*是**Nvarchar （4000）**，預設值是 Null。 *subscriber_provider_string*會傳遞至 IDataInitialize 或設定為 DBPROP_INIT_PROVIDERSTRING 屬性，以初始化 OLE DB 提供者。 *subscriber_provider_string*只有非訂閱者才支援 subscriber_provider_string [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-`[ @subscriber_catalog = ] 'subscriber_catalog'`這是連接到 OLE DB 提供者時所要使用的目錄。 *subscriber_catalog*是**sysname**，預設值是 Null。 *subscriber_catalog*會當做 DBPROP_INIT_CATALOG 屬性傳遞，以初始化 OLE DB 提供者。 *subscriber_catalog*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_catalog。  
+`[ @subscriber_catalog = ] 'subscriber_catalog'`這是連接到 OLE DB 提供者時所要使用的目錄。 *subscriber_catalog*是**sysname**，預設值是 Null。 *subscriber_catalog*會當做 DBPROP_INIT_CATALOG 屬性傳遞，以初始化 OLE DB 提供者。 *subscriber_catalog*只有非訂閱者才支援 subscriber_catalog [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

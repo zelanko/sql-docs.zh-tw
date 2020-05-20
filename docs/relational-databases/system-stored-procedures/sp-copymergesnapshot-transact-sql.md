@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copymergesnapshot
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d51f29399487ee156210e96fe598c38288755913
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8658790dc80ecdae843104f5ed1dd8be2684963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381706"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820620"
 ---
 # <a name="sp_copymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  將指定發行集的快照集資料夾複製到** \@destination_folder**中列出的資料夾。 這個預存程序執行於發行集資料庫的發行者端。  
+  將指定發行集的快照集資料夾複製到** \@ destination_folder**中列出的資料夾。 這個預存程序執行於發行集資料庫的發行者端。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
  **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_copymergesnapshot**用於合併式複寫中。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行7.0 版和更早版本的訂閱者無法使用替代快照集位置。  
+ **sp_copymergesnapshot**用於合併式複寫中。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行7.0 版和更早版本的訂閱者無法使用替代快照集位置。  
   
 ## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_copymergesnapshot**。  

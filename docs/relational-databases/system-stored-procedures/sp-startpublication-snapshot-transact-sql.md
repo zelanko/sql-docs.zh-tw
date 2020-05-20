@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_startpublication_snapshot
 ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ab1b3487c3a1affe7a0dc40f62d241d19b29186b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 70423377372a4ff41b5bd90487bd2080fec96edc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032765"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820308"
 ---
 # <a name="sp_startpublication_snapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @publisher = ] 'publisher'`這是非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者的名稱。 *publisher*是**sysname**，預設值是 Null。 您不應該將這個參數指定給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。  
+`[ @publisher = ] 'publisher'`這是非發行者的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *publisher*是**sysname**，預設值是 Null。 您不應該將這個參數指定給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -48,7 +48,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ## <a name="remarks"></a>備註  
  **sp_startpublication_snapshot**用於所有類型的複寫。  
   
- 若是非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，這個預存程式會在散發資料庫的「散發者」端執行。  
+ 若是非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者，這個預存程式會在散發資料庫的「散發者」端執行。  
   
 ## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_startpublication_snapshot**。  

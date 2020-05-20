@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2b473019a20a962a41c44aade08e4a1daa2a765
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004892"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820850"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="arguments"></a>引數    
  *database_id* |Null |0 |預設    
- 資料庫的識別碼。 *database_id*為**Smallint**。 有效的輸入為資料庫的識別碼、NULL、0 或 DEFAULT。 預設值為 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
+ 資料庫的識別碼。 *database_id*為**Smallint**。 有效的輸入為資料庫的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
     
  請指定 NULL 來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中之所有資料庫的資訊。 如果您為*database_id*指定 null，則也必須為*object_id*、 *index_id*和*partition_number*指定 null。    
     
@@ -62,7 +62,7 @@ sys.dm_db_index_operational_stats (
  *object_id* |Null |0 |預設    
  索引所在之資料表或檢視表的物件識別碼。 *@object_id* 是 **int**。    
     
- 有效的輸入為資料表和檢視表的識別碼、NULL、0 或 DEFAULT。 預設值為 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
+ 有效的輸入為資料表和檢視表的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
     
  請指定 NULL 來傳回指定之資料庫中所有資料表和檢視表的快取資訊。 如果您為*object_id*指定 null，也必須為*index_id*和*partition_number*指定 null。    
     
@@ -72,7 +72,7 @@ sys.dm_db_index_operational_stats (
  請指定 NULL 來傳回基底資料表或檢視表所有索引的快取資訊。 如果您為*index_id*指定 null，則也必須為*partition_number*指定 null。    
     
  *partition_number* |Null |0 |預設    
- 物件的分割區編號。 *partition_number*為**int**。有效的輸入為索引或堆積的*partion_number* 、Null、0或 DEFAULT。 預設值為 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
+ 物件的分割區編號。 *partition_number*為**int**。有效的輸入為索引或堆積的*partion_number* 、Null、0或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
     
  請指定 NULL 來傳回索引或堆積之所有分割區的快取資訊。    
     
@@ -86,7 +86,7 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|資料表或檢視表的識別碼。|    
 |**index_id**|**int**|索引或堆積的識別碼。<br /><br /> 0 = 堆積| 
 |**partition_number**|**int**|在索引或堆積內，以 1 為基底的資料分割編號。| 
-|**hobt_id**|**bigint**|**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 追蹤資料行存放區索引之內部資料的資料堆積或 B 型樹狀結構資料列集的識別碼。<br /><br /> Null-這不是內部資料行存放區資料列集。<br /><br /> 如需詳細資訊，請參閱[internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**hobt_id**|**bigint**|**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 追蹤資料行存放區索引之內部資料的資料堆積或 B 型樹狀結構資料列集的識別碼。<br /><br /> Null-這不是內部資料行存放區資料列集。<br /><br /> 如需詳細資訊，請參閱[internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|分葉層級插入的累計計數。|    
 |**leaf_delete_count**|**bigint**|分葉層級刪除的累計計數。 只有未標示為「准刪除」的已刪除記錄才會遞增 leaf_delete_count。 若為先刪除的記錄，則會改為遞增**leaf_ghost_count** 。|    
 |**leaf_update_count**|**bigint**|分葉層級更新的累計計數。|    
@@ -180,7 +180,7 @@ sys.dm_db_index_operational_stats (
  每當堆積或索引的中繼資料被引進中繼資料快取時，每個資料行的值都會設為零，而且統計資料也會累計，直到快取物件從中繼資料快取移除為止。 因此，使用中堆積或索引的中繼資料可能會一直存放在快取中，而且累加計數也會反映自從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上次啟動以來的活動。 比較不使用的堆積或索引中繼資料，則會在使用時移入和移出快取。 因此，它不見得會有可用的值。 卸除索引會使對應的統計資料從記憶體移除，不會再由該函數報告。 對索引進行的其他 DDL 作業，可能會使統計資料值重設為零。    
     
 ## <a name="using-system-functions-to-specify-parameter-values"></a>使用系統函數指定參數值    
- [!INCLUDE[tsql](../../includes/tsql-md.md)]您可以使用[DB_ID](../../t-sql/functions/db-id-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)函數來指定*database_id*和*object_id*參數的值。 不過，傳遞對這些函數無效的值可能會造成意料之外的結果。 使用 DB_ID 或 OBJECT_ID 時，請務必確定傳回的是有效的識別碼。 如需詳細資訊，請參閱[dm_db_index_physical_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)中的「備註」一節。    
+ 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [DB_ID](../../t-sql/functions/db-id-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)函數來指定*database_id*和*object_id*參數的值。 不過，傳遞對這些函數無效的值可能會造成意料之外的結果。 使用 DB_ID 或 OBJECT_ID 時，請務必確定傳回的是有效的識別碼。 如需詳細資訊，請參閱[dm_db_index_physical_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)中的「備註」一節。    
     
 ## <a name="permissions"></a>權限    
  需要下列權限：    

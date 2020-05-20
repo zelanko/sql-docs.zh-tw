@@ -16,19 +16,19 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4290d2ecff4b76675f464c5e2a396703e7fc370c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032630"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824281"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  建立資料收集器的收集器型別。 收集器型別是[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝周圍的邏輯包裝函式，可提供實際機制來收集資料，並將它上傳到管理資料倉儲。  
+  建立資料收集器的收集器型別。 收集器型別是封裝周圍的邏輯包裝函式 [!INCLUDE[ssIS](../../includes/ssis-md.md)] ，可提供實際機制來收集資料，並將它上傳到管理資料倉儲。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,22 +46,22 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @collector_type_uid = ]'*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  這是收集器類型的 GUID。 *collector_type_uid*是**uniqueidentifier** ，而且如果是 Null，則會自動建立並當做輸出傳回。  
   
- [ @name = ]'*name*'  
+ [ @name =] '*name*'  
  這是收集器類型的名稱。 *名稱*是**sysname** ，必須指定。  
   
- [ @parameter_schema = ]'*parameter_schema*'  
+ [ @parameter_schema =] '*parameter_schema*'  
  這是此收集器類型的 XML 結構描述。 *parameter_schema*是**xml** ，預設值是 Null。  
   
- [ @parameter_formatter = ]'*parameter_formatter*'  
+ [ @parameter_formatter =] '*parameter_formatter*'  
  這是用來轉換 XML，以用於收集組屬性頁中的範本。 *parameter_formatter*是**xml** ，預設值是 Null。  
   
- [@collection_package_id = ]*collection_package_id*  
+ [ @collection_package_id =] *collection_package_id*  
  這是指向收集組所使用之 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集封裝的本機唯一識別碼。 *collection_package_id*是**uniqueidentifier** ，而且是必要的。  
   
- [@upload_package_id = ]*upload_package_id*  
+ [ @upload_package_id =] *upload_package_id*  
  這是指向收集組所使用之 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 上傳封裝的本機唯一識別碼。 *upload_package_id*是**uniqueidentifier** ，而且是必要的。  
   
 ## <a name="return-code-values"></a>傳回碼值  

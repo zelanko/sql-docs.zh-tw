@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_response system table
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c930a5eeae8bfdb7d952610fadc0b7d779033435
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a1be9d2d5420e3a105249b43195eba63eb273f81
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026668"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821017"
 ---
 # <a name="mspeer_response-transact-sql"></a>MSpeer_response (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_operator
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e6568b15a12949180ca0e2df41063c100abc3290
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c41a8f1bb7e1083bdb80eca875331e0ce8c92ab1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085303"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820430"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

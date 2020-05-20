@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_unregister_custom_scripting
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fe6bfe4c93ccabfaaec27739f7a1fd0e09348526
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d54530c7cf6588a6ae07e1e504e3c53e86f8fa5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017906"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820226"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  這個預存程式會移除使用者定義的自訂預[!INCLUDE[tsql](../../includes/tsql-md.md)]存程式或腳本檔案，該檔案是藉由執行[sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)來註冊。 這個預存程序執行於發行集資料庫的發行者端。  
+  這個預存程式會移除使用者定義的自訂預存 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式或腳本檔案，該檔案是藉由執行[sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)來註冊。 這個預存程序執行於發行集資料庫的發行者端。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 |值|描述|  
 |-----------|-----------------|  
 |**插入**|註冊的自訂預存程序或指令碼，是在複寫 INSERT 陳述式時執行。|  
-|**更新**|註冊的自訂預存程序或指令碼，是在複寫 UPDATE 陳述式時執行。|  
+|**update**|註冊的自訂預存程序或指令碼，是在複寫 UPDATE 陳述式時執行。|  
 |**delete**|註冊的自訂預存程序或指令碼，是在複寫 DELETE 陳述式時執行。|  
 |**custom_script**|註冊的自訂預存程序或指令碼，是在資料定義語言 (DDL) 觸發程序結尾執行。|  
   

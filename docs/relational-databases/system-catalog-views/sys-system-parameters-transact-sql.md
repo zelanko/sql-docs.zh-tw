@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.system_parameters catalog view
 ms.assetid: 0d135c5f-68b5-4009-a0da-35e6abfee0ff
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da8d2bb7be2c3da502065d9ee210c4c1ef8c2094
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc4c95926f066fbf99bd6975b80c99c1438d8396
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108815"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821317"
 ---
 # <a name="syssystem_parameters-transact-sql"></a>sys.system_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68108815"
 |**scale**|**tinyint**|如果是以數值為基礎，便是參數的小數位數；否則，便是 0。|  
 |**is_output**|**bit**|1 = 參數是輸出 (或傳回)；否則，便是 0。|  
 |**is_cursor_ref**|**bit**|1 = 參數是一個資料指標參考參數。|  
-|**has_default_value**|**bit**|1 = 參數有預設值。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只會在此目錄檢視中保留 CLR 物件的預設值；因此，對於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 物件，此資料行的值一定為 0。 若要在[!INCLUDE[tsql](../../includes/tsql-md.md)]物件中查看參數的預設值，請查詢[sys.databases sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目錄檢視的 [**定義**] 資料行，或使用[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)系統函數。|  
+|**has_default_value**|**bit**|1 = 參數有預設值。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只會在此目錄檢視中保留 CLR 物件的預設值；因此，對於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 物件，此資料行的值一定為 0。 若要在物件中查看參數的預設值 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，請查詢[sys.databases sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目錄檢視的 [**定義**] 資料行，或使用[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)系統函數。|  
 |**is_xml_document**|**bit**|1 = 內容是完整的 XML 文件集。<br /><br /> 0 = 內容是檔片段，或者資料行的資料類型不是**xml**。|  
 |**default_value**|**sql_variant**|如果**has_default_value**是1，這個資料行的值就是參數的預設值。否則為 Null。|  
 |**xml_collection_id**|**int**|如果參數的資料類型是**xml** ，而且 xml 為類型，則為非零。 這個值是包含參數的驗證 XML 結構描述命名空間之集合的識別碼。<br /><br /> 0 = 沒有 XML 結構描述集合。|  

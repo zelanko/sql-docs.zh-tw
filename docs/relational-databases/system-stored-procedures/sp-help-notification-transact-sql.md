@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dbba9ea2f9df7e9a9fd154193c8f52fe904899c7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906100"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820437"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_help_notification
   
 `[ @notification_method = ] notification_method`數值，決定要傳回的通知方法資料行。 *notification_method*是**Tinyint**，它可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**1**|電子郵件：只傳回**use_email**的資料行。|  
 |**2**|呼機：只傳回**use_pager**資料行。|  

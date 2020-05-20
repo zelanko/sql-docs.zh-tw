@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108567"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820595"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68108567"
   
 ||  
 |-|  
-|**適用**于： SQL Server （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
+|**適用**于： SQL Server （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -125,7 +125,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="value-parameter"></a>value 參數  
  如先前在引數一節中所述，使用*值*的規則有兩個替代方案：  
   
-1.  您可以針對任何已命名的\@*值*參數，使用已預先暫止的名稱，做為選取清單中的資料行名稱。 這個替代方案的一個優點是可能不需要轉換資料。  
+1.  您可以針對任何已命名的值參數，使用已預先暫止的名稱，做 \@ 為選取清單中的資料行*value*名稱。 這個替代方案的一個優點是可能不需要轉換資料。  
   
 2.  請使用參數來提交完整的 UPDATE 或 INSERT 語句，或是使用多個參數來提交 UPDATE 或 INSERT 語句的部分，SQL Server 將會建立到完整的語句中。 這部分的範例可以在本主題稍後的＜範例＞一節找到。  
   
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  如果指定\<了更新資料表名稱>，將會忽略為*table*參數指定的任何值。  
+>  如果 \< 指定了更新資料表名稱>，將會忽略為*table*參數指定的任何值。  
   
  當使用多個參數時，第一個參數必須是以下格式的字串：  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- 在此情況下， \<在已建立的 update 語句中，資料表名稱> 是*資料表*參數所指定或預設的。  
+ 在此情況下，在已建立的 \< update 語句中，資料表名稱> 是*資料表*參數所指定或預設的。  
   
  如果是 INSERT：  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  如果指定了 INSERT * \<table name>* ，將會忽略為*table*參數指定的任何值。  
+>  如果指定了 INSERT * \< table name>* ，將會忽略為*table*參數指定的任何值。  
   
  當使用多個參數時，第一個參數必須是以下格式的字串：  
   
@@ -168,7 +168,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- 除非在指定 VALUES 的情況下，此時最後一個運算式後面必須有尾端 ")"。 在此情況下，在已建立的 UPDATE 語句中， * \<資料表名稱>* 是*資料表*參數所指定或預設的。  
+ 除非在指定 VALUES 的情況下，此時最後一個運算式後面必須有尾端 ")"。 在此情況下，在已建立的 UPDATE 語句中， * \< 資料表名稱>* 是*資料表*參數所指定或預設的。  
   
 > [!NOTE]  
 >  可以將一個參數當做具名參數來提交，也就是 "`@VALUES`"。 在此情況下，無法使用其他具名參數。  

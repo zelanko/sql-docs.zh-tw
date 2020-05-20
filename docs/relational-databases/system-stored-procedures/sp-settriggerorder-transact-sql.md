@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad5239e2761ed1cc788f7826a054ac0e038d9e79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982236"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824293"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,19 +53,19 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |值|描述|  
 |-----------|-----------------|  
 |**頭**|最先引發觸發程序。|  
-|**次**|最後引發觸發程序。|  
-|**None**|觸發程序的引發，沒有任何既定順序。|  
+|**Last**|最後引發觸發程序。|  
+|**無**|觸發程序的引發，沒有任何既定順序。|  
   
-`[ @stmttype = ] 'statement_type'`指定引發觸發程式的 SQL 語句。 *statement_type*為**Varchar （50）** ，而且可以是 INSERT、UPDATE、DELETE、LOGON，或[!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 事件](../../relational-databases/triggers/ddl-events.md)中所列的任何語句事件。 您不能指定事件群組。  
+`[ @stmttype = ] 'statement_type'`指定引發觸發程式的 SQL 語句。 *statement_type*為**Varchar （50）** ，而且可以是 INSERT、UPDATE、DELETE、LOGON，或 [!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 事件](../../relational-databases/triggers/ddl-events.md)中所列的任何語句事件。 您不能指定事件群組。  
   
- 只有在該觸發程式已定義為該語句類型的觸發程式之後，才可以將觸發程式指定為語句類型的**第一個**或**最後一個**觸發程式。 例如，如果將**TR1**定義為 insert 觸發程式，就可以**先**針對資料表**T1**上的 insert 指定觸發程式**TR1** 。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)] **TR1**（已定義為 INSERT 觸發程式）已設定為 UPDATE 語句的**第一個**或**最後**一個觸發程式，則會傳回錯誤。 如需詳細資訊，請參閱＜備註＞一節。  
+ 只有在該觸發程式已定義為該語句類型的觸發程式之後，才可以將觸發程式指定為語句類型的**第一個**或**最後一個**觸發程式。 例如，如果將**TR1**定義為 insert 觸發程式，就可以**先**針對資料表**T1**上的 insert 指定觸發程式**TR1** 。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]如果**TR1**（已定義為 INSERT 觸發程式）已設定為 UPDATE 語句的**第一個**或**最後**一個觸發程式，則會傳回錯誤。 如需詳細資訊，請參閱＜備註＞一節。  
   
- 命名空間 = { **' 資料庫 '** | **' 伺服器 '** | ** \@ **Null  
- 當*triggername*是 DDL 觸發程式時， ** \@namespace**會指定是否使用資料庫範圍或伺服器範圍來建立*triggername* 。 如果*triggername*是登入觸發程式，則必須指定伺服器。 如需 DDL 觸發程式範圍的詳細資訊，請參閱[Ddl 觸發](../../relational-databases/triggers/ddl-triggers.md)程式。 如果未指定，或指定了 Null， *triggername*就是 DML 觸發程式。  
+ ** \@ 命名空間 =** { **' 資料庫 '**  |  **' 伺服器 '** |Null  
+ 當*triggername*是 DDL 觸發程式時， ** \@ namespace**會指定是否使用資料庫範圍或伺服器範圍來建立*triggername* 。 如果*triggername*是登入觸發程式，則必須指定伺服器。 如需 DDL 觸發程式範圍的詳細資訊，請參閱[Ddl 觸發](../../relational-databases/triggers/ddl-triggers.md)程式。 如果未指定，或指定了 Null， *triggername*就是 DML 觸發程式。  
   
 ||  
 |-|  
-|伺服器適用于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。|  
+|伺服器適用于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 和 1 (失敗)  

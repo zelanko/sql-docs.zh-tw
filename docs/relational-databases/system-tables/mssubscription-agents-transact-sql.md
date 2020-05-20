@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_agents system table
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3354f69f92cbbbaa9d60ae8ed6352a0b3be6ab52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 42b29858ff276b65a30b9f465d38407b606cb792
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139790"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823363"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "68139790"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|資料列的識別碼。|  
-|**發行者**|**sysname**|發行者的名稱。|  
+|**publisher**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行集資料庫的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
 |**subscription_type**|**int**|訂閱類型：<br /><br /> 0 = 發送。<br /><br /> 1 = 提取<br /><br /> 2 = 提取匿名。|  
-|**queue_id**|**sysname**|發行者端的[!INCLUDE[msCoName](../../includes/msconame-md.md)]訊息佇列識別碼。 針對以 SQL 為基礎的佇列更新， *queue_id*設定為**sql** 。|  
+|**queue_id**|**sysname**|發行者端的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 訊息佇列識別碼。 針對以 SQL 為基礎的佇列更新， *queue_id*設定為**sql** 。|  
 |**update_mode**|**tinyint**|更新的類型：<br /><br /> **0** = 唯讀。<br /><br /> **1** = 立即更新。<br /><br /> **2** = 使用訊息佇列的佇列更新。<br /><br /> **3** = 具有佇列更新的立即更新會使用訊息佇列進行容錯移轉。<br /><br /> **4** = 使用 SQL Server 佇列進行佇列更新。<br /><br /> **5** = 使用 SQL Server 佇列的立即更新與佇列更新容錯移轉。|  
 |**failover_mode**|**bit**|如果選取了更新的容錯移轉類型，這就是所選的容錯移轉類型：<br /><br /> **0** = 正在使用立即更新。 不啟用容錯移轉。<br /><br /> **1** = 正在使用佇列更新。 啟用容錯移轉。 用於容錯移轉的佇列是在*update_mode*值中指定。|  
 |**spid**|**int**|目前在執行或剛執行的散發代理程式所用之連接的系統處理序識別碼。|  

@@ -19,12 +19,12 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 143ed8e5487772a39e4e98c92f8f07d78de7f370
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73980307"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823369"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys.databases index_resumable_operations （Transact-sql）
 

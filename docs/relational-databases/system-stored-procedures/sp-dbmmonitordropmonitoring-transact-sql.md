@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_dbmmonitordropmonitoring
 - database mirroring [SQL Server], monitoring
 ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd9c138cd574e22d1ce658c4749f2a61c34d8e73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a20f943801989490fa8769644d4b45c09f404f7f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108070"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820496"
 ---
 # <a name="sp_dbmmonitordropmonitoring-transact-sql"></a>sp_dbmmonitordropmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_dbmmonitordropmonitoring
 ```  
   
 ## <a name="arguments"></a>引數  
- None  
+ 無  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
  None  

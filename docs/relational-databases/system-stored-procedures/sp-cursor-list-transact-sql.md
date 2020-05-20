@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e214f2247009af8e43aefd9cb3274ea59332bcd5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108583"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820548"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @cursor_return= ]*cursor_variable_name*輸出  
+ [ @cursor_return =] *cursor_variable_name*輸出  
  這是宣告資料指標變數的名稱。 *cursor_variable_name*是**cursor**，沒有預設值。 資料指標是一個可捲動的動態唯讀資料指標。  
   
- [ @cursor_scope= ]*cursor_scope*  
+ [ @cursor_scope =] *cursor_scope*  
  指定要報告的資料指標層級。 *cursor_scope*為**int**，沒有預設值，而且可以是下列其中一個值。  
   
 |值|說明|  
@@ -54,7 +54,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |3|報告本機和全域資料指標。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="cursors-returned"></a>傳回的資料指標  
  sp_cursor_list 會將它的報表當作一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料指標輸出參數傳回，而不是作為一份結果集傳回。 這會使 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、預存程序和觸發程序能夠使用輸出，每次一個資料列。 另外，它也表示無法直接從資料庫 API 函數呼叫程序。 cursor 輸出參數必須繫結於程式變數，但資料庫 API 並不支援繫結資料指標參數或變數。  
@@ -64,17 +64,17 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|用來參考資料指標的名稱。 如果是利用 DECLARE CURSOR 陳述式所提供的名稱來參考資料指標，參考名稱就與資料指標名稱相同。 如果是利用變數來參考資料指標，參考名稱就是資料指標變數的名稱。|  
-|cursor_name|**sysname**|DECLARE CURSOR 陳述式的資料指標名稱。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，如果資料指標是藉由將資料指標變數設定為數據指標來建立， **cursor_name**會傳回資料指標變數的名稱。  在舊版中，這個輸出資料行會傳回系統產生的名稱。|  
+|cursor_name|**sysname**|DECLARE CURSOR 陳述式的資料指標名稱。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，如果資料指標是藉由將資料指標變數設定為數據指標來建立， **cursor_name**會傳回資料指標變數的名稱。  在舊版中，這個輸出資料行會傳回系統產生的名稱。|  
 |cursor_scope|**smallint**|1 = LOCAL <br /><br /> 2 = GLOBAL|  
 |status|**smallint**|與 CURSOR_STATUS 系統函數所報告相同的值：<br /><br /> 1 = 資料指標名稱或變數所參考的資料指標是開啟的。 如果資料指標是不區分、靜態或索引鍵集，它至少會有一個資料列。 如果資料指標是動態的，結果集就會有零或多個資料列。<br /><br /> 0 = 資料指標名稱或變數所參考的資料指標是開啟的，但沒有資料列。 動態資料指標永不傳回這個值。<br /><br /> -1 = 資料指標名稱或變數所參考的資料指標是關閉的。<br /><br /> -2 = 只適用於資料指標變數。 沒有指派給變數的資料指標。 可能是 OUTPUT 參數將資料指標指派給變數，但傳回之前，預存程序便關閉了資料指標。<br /><br /> -3 = 含指定名稱的資料指標或資料指標變數不存在，或資料指標變數還沒有配置資料指標。|  
-|模型|**smallint**|1 = 不區分 (或靜態)<br /><br /> 2 = 索引鍵集<br /><br /> 3 = 動態<br /><br /> 4 = 向前快轉|  
+|model|**smallint**|1 = 不區分 (或靜態)<br /><br /> 2 = 索引鍵集<br /><br /> 3 = 動態<br /><br /> 4 = 向前快轉|  
 |並行|**smallint**|1 = 唯讀<br /><br /> 2 = 捲動鎖定<br /><br /> 3 = 開放式|  
 |scrollable|**smallint**|0 = 順向<br /><br /> 1 = 可捲動|  
 |open_status|**smallint**|0 = 已關閉<br /><br /> 1 = 開啟|  
-|cursor_rows|**int**|結果集中符合的資料列數目。 如需詳細資訊，請參閱[@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md)。|  
-|fetch_status|**smallint**|這個資料指標上次提取的狀態。 如需詳細資訊，請參閱[@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md)：<br /><br /> 0 = 順利提取。<br /><br /> -1 = 提取失敗，或超出資料指標界限。<br /><br /> -2 = 遺漏要求的資料列。<br /><br /> -9 = 資料指標尚無任何提取動作。|  
+|cursor_rows|**int**|結果集中符合的資料列數目。 如需詳細資訊，請參閱[@ @CURSOR_ROWS ](../../t-sql/functions/cursor-rows-transact-sql.md)。|  
+|fetch_status|**smallint**|這個資料指標上次提取的狀態。 如需詳細資訊，請參閱[@ @FETCH_STATUS ](../../t-sql/functions/fetch-status-transact-sql.md)：<br /><br /> 0 = 順利提取。<br /><br /> -1 = 提取失敗，或超出資料指標界限。<br /><br /> -2 = 遺漏要求的資料列。<br /><br /> -9 = 資料指標尚無任何提取動作。|  
 |column_count|**smallint**|資料指標結果集中的資料行數目。|  
-|row_count|**smallint**|資料指標上次作業所影響的資料列數。 如需詳細資訊，請參閱[@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md)。|  
+|row_count|**smallint**|資料指標上次作業所影響的資料列數。 如需詳細資訊，請參閱[@ @ROWCOUNT ](../../t-sql/functions/rowcount-transact-sql.md)。|  
 |last_operation|**smallint**|上次在資料指標上執行的作業：<br /><br /> 0 = 未在資料指標上執行任何作業。<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = 插入<br /><br /> 4 = UPDATE<br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|在伺服器範圍內用來識別資料指標的唯一值。|  
   

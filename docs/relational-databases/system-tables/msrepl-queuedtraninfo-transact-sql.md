@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_queuedtraninfo system table
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a94163e2fe4a1ed5be77dd4ae99f43d03cc35121
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f3cb1ebaea169e36a158a50db24eee747f49363c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079173"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820038"
 ---
 # <a name="msrepl_queuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68079173"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**發行者**|**sysname**|發行者的名稱。|  
+|**publisher**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行集資料庫的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
 |**tranid**|**sysname**|執行佇列命令所用的交易識別碼。|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e55b45cf43e34982033d941ad9626f75afdec554
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60a3b1d27b483bac16cf2f51ab3ac9222e8e9053
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75688230"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820600"
 ---
 # <a name="sp_create_plan_guide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,45 +50,45 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ \@name =]N '*plan_guide_name*'  
+ [ \@ name =] N '*plan_guide_name*'  
  計畫指南的名稱。 計畫指南名稱僅限於目前的資料庫。 *plan_guide_name*必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且開頭不能是數位記號（#）。 *Plan_guide_name*的最大長度是124個字元。  
   
- [ \@stmt =]N '*statement_text*'  
- 這是建立計畫指南所針對的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]查詢最佳化工具辨識出符合*statement_text*的查詢時， *plan_guide_name*就會生效。 若要成功建立計劃指南， *statement_text*必須出現在\@type、 \@module_or_batch 和\@params 參數所指定的內容中。  
+ [ \@ stmt =] N '*statement_text*'  
+ 這是建立計畫指南所針對的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具辨識出符合*statement_text*的查詢時， *plan_guide_name*就會生效。 若要成功建立計劃指南， *statement_text*必須出現在 \@ type、 \@ module_or_batch 和 params 參數所指定的內容中 \@ 。  
   
- 必須提供*statement_text* ，讓查詢最佳化工具能夠將它與\@module_or_batch 和\@params 所識別之批次或模組內提供的對應語句進行比對。 如需詳細資訊，請參閱＜備註＞一節。 *Statement_text*的大小只受限於伺服器的可用記憶體。  
+ 必須提供*statement_text* ，讓查詢最佳化工具能夠將它與 \@ module_or_batch 和 params 所識別之批次或模組內提供的對應語句進行比對 \@ 。 如需詳細資訊，請參閱＜備註＞一節。 *Statement_text*的大小只受限於伺服器的可用記憶體。  
   
- [\@類型 =]N ' {OBJECT |SQL |範本} '  
+ [ \@ 類型 =] N ' {物件 |SQL |範本} '  
  這是*statement_text*出現之實體的類型。 這會指定要*plan_guide_name*的相符*statement_text*內容。  
   
  OBJECT  
- 表示*statement_text*會出現在目前資料庫中[!INCLUDE[tsql](../../includes/tsql-md.md)]的預存程式、純量函數、多重語句資料表值[!INCLUDE[tsql](../../includes/tsql-md.md)]函數或 DML 觸發程式的內容中。  
+ 表示*statement_text*會出現在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 目前資料庫中的預存程式、純量函數、多重語句資料表值函數或 DML 觸發程式的內容中 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  SQL  
- 表示*statement_text*會出現在獨立語句或批次的內容中，可透過任何機制提交[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]給。 [!INCLUDE[tsql](../../includes/tsql-md.md)]由 common language runtime （CLR）物件或擴充預存程式所提交的語句，或使用 EXEC N '*sql_string*' 的語句，在伺服器上會當做批次來處理，因此\@， **=** 應該識別為類型 ' sql '。 如果指定 SQL，則查詢提示參數化 {強制 |SIMPLE} 不能在\@提示參數中指定。  
+ 表示*statement_text*會出現在獨立語句或批次的內容中，可 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 透過任何機制提交給。 [!INCLUDE[tsql](../../includes/tsql-md.md)]由 common language runtime （CLR）物件或擴充預存程式所提交的語句，或使用 EXEC N '*sql_string*' 的語句，在伺服器上會當做批次來處理，因此，應該識別為 \@ 類型 **=** ' sql '。 如果指定 SQL，則查詢提示參數化 {強制 |SIMPLE} 不能在 \@ 提示參數中指定。  
   
  TEMPLATE  
- 表示計劃指南適用于參數化至*statement_text*中所指定表單的任何查詢。 如果指定了 TEMPLATE，只有參數化 {強制 |SIMPLE} 查詢提示可以在\@提示參數中指定。 如需範本計劃指南的詳細資訊，請參閱[使用計劃指南指定查詢參數化行為](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。  
+ 表示計劃指南適用于參數化至*statement_text*中所指定表單的任何查詢。 如果指定了 TEMPLATE，只有參數化 {強制 |SIMPLE} 查詢提示可以在 \@ 提示參數中指定。 如需範本計劃指南的詳細資訊，請參閱[使用計劃指南指定查詢參數化行為](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。  
   
- [\@module_or_batch =]{N ' [ *schema_name*。 ] *object_name*' |N '*batch_text*' |Null  
+ [ \@ module_or_batch =] {N ' [ *schema_name*。 ] *object_name*' |N '*batch_text*' |Null  
  指定顯示*statement_text*的物件名稱，或*statement_text*出現的批次文字。 批次文字不能包含 USE*database*語句。  
   
- 若要讓計劃指南符合從應用程式提交的批次，則必須以與字元相同的格式提供*batch_tex*t，因為它已提交至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不會執行內部轉換來簡化這個比對作業。 如需詳細資訊，請參閱＜備註＞一節。  
+ 若要讓計劃指南符合從應用程式提交的批次，則必須以與字元相同的格式提供*batch_tex*t，因為它已提交至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不會執行內部轉換來簡化這個比對作業。 如需詳細資訊，請參閱＜備註＞一節。  
   
- [*schema_name*]。*object_name*指定包含[!INCLUDE[tsql](../../includes/tsql-md.md)] *statement_text*之預存程式、純量函數、多重語句資料表值函數或[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 觸發程式的名稱。 如果未指定*schema_name* ， *schema_name*會使用目前使用者的架構。 如果指定 Null 且\@類型 = ' SQL '， \@module_or_batch 的值會設定為\@stmt 的值。如果\@type = ' TEMPLATE**\'**， \@module_or_batch 必須是 Null。  
+ [*schema_name*]。*object_name*指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 包含 statement_text 之預存程式、純量函數、多重語句資料表值函數或 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 觸發程式的*statement_text*名稱。 如果未指定*schema_name* ， *schema_name*會使用目前使用者的架構。 如果指定 Null 且 \@ 類型 = ' SQL '，module_or_batch 的值 \@ 會設定為 stmt 的值 \@ 。如果 \@ type = ' TEMPLATE **\'** ， \@ MODULE_OR_BATCH 必須是 Null。  
   
- [ \@params =]{N '*\@parameter_name data_type* [，*.。。n* ] ' |Null  
+ [ \@ params =] {N '* \@ parameter_name data_type* [，*.。。n* ] ' |Null  
  指定內嵌在*statement_text*中之所有參數的定義。 \@只有在下列其中一項為真時，params 才適用：  
   
--   \@輸入 = ' SQL ' 或 ' TEMPLATE '。 如果 ' TEMPLATE '， \@params 不得為 Null。  
+-   \@輸入 = ' SQL ' 或 ' TEMPLATE '。 如果 ' TEMPLATE '， \@ params 不得為 Null。  
   
--   *statement_text*是使用 sp_executesql 提交，並指定\@params 參數的值，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在將它參數化之後，于內部提交語句。 來自資料庫 API (包括 ODBC、OLE DB 及 ADO.NET) 參數化查詢的提交對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而言，視同對 sp_executesql 或對 API 伺服器資料指標常式的呼叫；因此，也可以由 SQL 或 TEMPLATE 計畫指南進行比對。  
+-   *statement_text*是使用 sp_executesql 提交，並 \@ 指定 params 參數的值，或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在將它參數化之後，于內部提交語句。 來自資料庫 API (包括 ODBC、OLE DB 及 ADO.NET) 參數化查詢的提交對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而言，視同對 sp_executesql 或對 API 伺服器資料指標常式的呼叫；因此，也可以由 SQL 或 TEMPLATE 計畫指南進行比對。  
   
- parameter_name data_type 必須以提交至的格式完全相同，方法是使用 sp_executesql [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或在參數化之後于內部提交。 * \@ * 如需詳細資訊，請參閱＜備註＞一節。 如果批次不包含參數，就必須指定 NULL。 \@Params 的大小只受限於可用的伺服器記憶體。  
+ * \@ parameter_name data_type*必須以提交至的格式完全相同， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 方法是使用 sp_executesql，或在參數化之後于內部提交。 如需詳細資訊，請參閱＜備註＞一節。 如果批次不包含參數，就必須指定 NULL。 Params 的大小 \@ 只受限於可用的伺服器記憶體。  
   
- [\@提示 =]{N'OPTION （*query_hint* [，*.。。n* ]） ' |N '*XML_showplan*' |Null  
+ [ \@ 提示 =] {N'OPTION （*query_hint* [，*.。。n* ]） ' |N '*XML_showplan*' |Null  
  N'OPTION （*query_hint* [，*.。。n* ]）  
- 指定要附加至符合\@stmt 之查詢的 OPTION 子句。 \@提示的語法必須與 SELECT 語句中的 OPTION 子句相同，而且可以包含任何有效的查詢提示順序。  
+ 指定要附加至符合 stmt 之查詢的 OPTION 子句 \@ 。 \@提示在語法上必須與 SELECT 語句中的 OPTION 子句相同，而且可以包含任何有效的查詢提示順序。  
   
  N '*XML_showplan*'  
  要套用為提示之 XML 格式的查詢計畫。  
@@ -99,11 +99,11 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  表示在查詢之 OPTION 子句中指定的任何現有提示沒有套用到查詢中。 如需詳細資訊，請參閱[OPTION 子句 &#40;transact-sql&#41;](../../t-sql/queries/option-clause-transact-sql.md)。  
   
 ## <a name="remarks"></a>備註  
- sp_create_plan_guide 的引數必須依照顯示順序提供。 當您提供 **sp_create_plan_guide**的參數值時，必須明確指定所有的參數名稱，或是完全不指定。 例如，如果** \@指定 name =** ，則** \@** 也必須指定 stmt =、 ** \@type =** 等等。 同樣地，如果** \@省略 name =** ，而且只提供參數值，則也必須省略其餘的參數名稱，並只提供它們的值。 引數名稱僅供描述用途，以協助您了解語法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會驗證指定的參數名稱是否與使用該名稱之位置中的參數名稱相符。  
+ sp_create_plan_guide 的引數必須依照顯示順序提供。 當您提供 **sp_create_plan_guide**的參數值時，必須明確指定所有的參數名稱，或是完全不指定。 例如，如果指定** \@ name =** ，則也必須指定** \@ stmt =** 、 ** \@ type =** 等等。 同樣地，如果省略** \@ name =** ，而且只提供參數值，則也必須省略其餘的參數名稱，並只提供它們的值。 引數名稱僅供描述用途，以協助您了解語法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會驗證指定的參數名稱是否與使用該名稱之位置中的參數名稱相符。  
   
  您可以針對相同的查詢和批次或模組，建立一個以上的 OBJECT 或 SQL 計畫指南。 但是，在任何指定的時間內，只能啟用一個計畫指南。  
   
- 無法針對參考指定 WITH ENCRYPTION 子句的預存\@程式、函數或 DML 觸發程式的 module_or_batch 值建立 OBJECT 類型的計劃指南，或是暫時的。  
+ 無法針對 \@ 參考指定 WITH ENCRYPTION 子句的預存程式、函數或 DML 觸發程式的 module_or_batch 值建立 OBJECT 類型的計劃指南，或是暫時的。  
   
  試圖卸除或修改計畫指南所參考的函數、預存程序或 DML 觸發程序，不論是已啟用或已停用，都會造成錯誤。 嘗試卸除定義了觸發程序且被計畫指南參考的資料表也會造成錯誤。  
   
@@ -111,19 +111,19 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 > 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用計劃指南。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 在任何版本中都可以看到計畫指南。 您也可以將包含計畫指南的資料庫附加到任何版本中。 當您將資料庫還原或附加至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的升級版本時，計畫指南仍維持不變。 您應該在執行伺服器升級後確認每個資料庫中計畫指南的符合度。  
   
 ## <a name="plan-guide-matching-requirements"></a>計劃指南符合需求  
- \@若要讓指定 type = ' SQL ' 或\@type = ' TEMPLATE ' 的計劃指南成功符合查詢， *batch_text*和* \@parameter_name*的值 data_type [，*.。。n* ] 必須以與應用程式所提交之對應專案完全相同的格式提供。 這表示您提供的批次文字必須和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 編譯器所收到的完全相同。 若要擷取實際的批次和參數文字，您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 如需詳細資訊，請參閱[使用 SQL Server Profiler 建立及測試計劃指南](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)。  
+ \@若要讓指定 type = ' SQL ' 或 \@ type = ' TEMPLATE ' 的計劃指南成功符合查詢， *batch_text*和 parameter_name 的值* \@ data_type* [，*.。。n* ] 必須以與應用程式所提交之對應專案完全相同的格式提供。 這表示您提供的批次文字必須和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 編譯器所收到的完全相同。 若要擷取實際的批次和參數文字，您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 如需詳細資訊，請參閱[使用 SQL Server Profiler 建立及測試計劃指南](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)。  
   
- 當\@type = ' SQL ' 且\@module_or_batch 設定為 Null 時， \@module_or_batch 的值會設定為\@stmt 的值。這表示*statement_text*的值必須與提交給[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的格式完全相同，並以字元為字元提供。 不會執行內部轉換來簡化這個比對作業。  
+ 當 \@ type = ' SQL ' 且 \@ module_or_batch 設定為 Null 時，module_or_batch 的值 \@ 會設定為 stmt 的值 \@ 。這表示*statement_text*的值必須與提交給的格式完全相同，並以字元為字元提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不會執行內部轉換來簡化這個比對作業。  
   
- 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]符合*statement_text*的值為*batch_text*並* \@parameter_name data_type* [，*.。。n* ]，或如果\@type = **\'** OBJECT ' 到*object_name*內對應查詢的文字，則不會考慮下列字串元素：  
+ 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 符合*statement_text*的值為*batch_text*並* \@ parameter_name data_type* [，*.。。n* ]，或如果 \@ type = **\'** OBJECT ' 到*object_name*內對應查詢的文字，則不會考慮下列字串元素：  
   
 -   字串內部的空白字元 (定位字元、空格字元、歸位字元或換行字元)。  
   
--   批註（**--** ** / \*或\*    **）。  
+-   批註（ **--** 或 **/\*   \*/** ）。  
   
 -   行尾的分號。  
   
- 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以將*statement_text*字串`N'SELECT * FROM T WHERE a = 10'`符合下列*batch_text*：  
+ 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以將*statement_text*字串符合 `N'SELECT * FROM T WHERE a = 10'` 下列*batch_text*：  
   
  ```
  N'SELECT *
@@ -141,7 +141,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  針對某個模組建立計畫指南時，就會從計畫快取中移除該模組的查詢計畫。 針對某個批次建立 OBJECT 或 SQL 類型的計畫指南時，就會移除具有相同雜湊值之批次的查詢計畫。 建立 TEMPLATE 類型的計畫指南時，就會從該資料庫內部的計畫快取中移除所有單一陳述式批次。  
   
 ## <a name="permissions"></a>權限  
- 若要建立 OBJECT 類型的計劃指南，需要`ALTER`所參考物件的許可權。 若要建立類型為 SQL 或 TEMPLATE 的計劃指南， `ALTER`需要目前資料庫的許可權。  
+ 若要建立 OBJECT 類型的計劃指南，需要所 `ALTER` 參考物件的許可權。 若要建立類型為 SQL 或 TEMPLATE 的計劃指南，需要 `ALTER` 目前資料庫的許可權。  
   
 ## <a name="examples"></a>範例  
   

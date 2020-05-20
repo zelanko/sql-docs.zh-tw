@@ -14,14 +14,14 @@ helpviewer_keywords:
 - hobt [SQL Server]
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5ac374b9222f9bd592312f79173859691b495276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1e436807a5738a1ad844a07b3403eb99d1a5cf18
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531196"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819807"
 ---
 # <a name="system-base-tables"></a>系統基底資料表
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ ms.locfileid: "80531196"
 |基底資料表|描述|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|存在於每個資料庫中。 每一個資料列都代表資料庫中的一個物件。|  
-|**sys.sysbinobjs**|存在於每個資料庫中。 資料庫中的每個 Service Broker 實體都包含一個資料列。 Service Broker 實體包括下列各項：<br /><br /> 訊息類型<br /><br /> 服務合約<br /><br /> Service<br /><br /> 名稱和類型會使用修復過的二進位定序。|  
-|**sys.sysclsobjs**|存在於每個資料庫中。 每個分類的實體都包含一個資料列，該實體會共用相同的通用屬性，包括：<br /><br /> Assembly<br /><br /> 備份裝置<br /><br /> 全文檢索目錄<br /><br /> 分割區函數<br /><br /> 分割區配置<br /><br /> 檔案群組<br /><br /> 模糊化索引鍵|  
+|**sys.sysbinobjs**|存在於每個資料庫中。 資料庫中的每個 Service Broker 實體都包含一個資料列。 Service Broker 實體包括下列各項：<br /><br /> 訊息類型<br /><br /> 服務合約<br /><br /> 服務<br /><br /> 名稱和類型會使用修復過的二進位定序。|  
+|**sys.sysclsobjs**|存在於每個資料庫中。 每個分類的實體都包含一個資料列，該實體會共用相同的通用屬性，包括：<br /><br /> 組件<br /><br /> 備份裝置<br /><br /> 全文檢索目錄<br /><br /> 分割區函數<br /><br /> 分割區配置<br /><br /> 檔案群組<br /><br /> 模糊化索引鍵|  
 |**sys.sysnsobjs**|存在於每個資料庫中。 每個命名空間範圍的實體都包含一個資料列。 此資料表用於儲存 XML 集合實體。|  
 |**sys.syscolpars**|存在於每個資料庫中。 資料表、檢視或資料表值函數中的每個資料行都包含一個資料列。 對於程序或函數的每個參數，它也包含資料列。|  
 |**sys.systypedsubobjs**|存在於每個資料庫中。 每個輸入的子實體都包含一個資料列。 只有資料分割函數的參數屬於這個類別目錄。|  
