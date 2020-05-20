@@ -143,7 +143,7 @@ ms.locfileid: "79287802"
   
 -   插入或附加新資料時，在 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式中使用 `.WRITE` 子句，對大數值資料類型執行的部分更新。 請注意，更新現有值時不使用最低限度記錄。 如需有關大數值資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
   
--   將新的資料插入或附加至[nUPDATETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [nUPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **UPDATETEXT**, **nUPDATETEXT**, 、 **UPDATETEXT** 陳述式。 請注意，更新現有值時不使用最低限度記錄。  
+-   將新的資料插入或附加至[WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **text**, **ntext**, 、 **image** 陳述式。 請注意，更新現有值時不使用最低限度記錄。  
   
     > [!WARNING]
     > `WRITETEXT` 與 `UPDATETEXT` 陳述式**已被取代**，所以您應該避免在新的應用程式中加以使用。  
