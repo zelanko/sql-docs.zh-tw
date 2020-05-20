@@ -115,7 +115,7 @@ ms.locfileid: "76287605"
 ## <a name="publishing-views"></a>發行檢視表  
  所有類型的複寫都可讓您複寫檢視。 檢視 (及其隨附的索引，如果它是索引檢視表的話) 可被複製到「訂閱者」，但必須同時複寫基底資料表。  
   
- 對於索引檢視表，異動複寫也可讓您以資料表而不是檢視複寫索引檢視表，不需要複寫基底資料表。 若要執行此操作，請為 *sp_addarticle &#40;Transact-SQL&#41;\@ 的* [type](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 參數指定 "indexed view logbased" 選項之一。 如需使用 **sp_addarticle** 的詳細資訊，請參閱[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
+ 對於索引檢視表，異動複寫也可讓您以資料表而不是檢視複寫索引檢視表，不需要複寫基底資料表。 若要執行此操作，請為 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 的 *\@type* 參數指定 "indexed view logbased" 選項之一。 如需使用 **sp_addarticle** 的詳細資訊，請參閱[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 ## <a name="publishing-user-defined-functions"></a>發行使用者自訂函數  
  CLR 函數和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函數的 CREATE FUNCTION 陳述式會複製到每一個訂閱者。 如果使用 CLR 函數，還將複製相關組件。 對函數所作的變更會被複寫到「訂閱者」；而對相關組件所作的變更則不會。  
@@ -153,7 +153,7 @@ ms.locfileid: "76287605"
 -   如果您發行的資料庫物件相依於一或多個其他資料庫物件，就必須發行所有參考物件。 例如，如果您發行相依於資料表的檢視表，同時也必須發行該資料表。  
   
     > [!NOTE]  
-    >  如果您將發行項新增至合併式發行集且現有某發行項相依於新的發行項，則您必須使用 **sp_addmergearticle\@ 和** sp_changemergearticle[ 的 ](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)[processing_order](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 參數來指定兩個發行項的處理順序。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函式新增至發行集時：請將 **sp_addmergearticle** 的 **\@processing_order** 參數值指定為 **1**；並將 **sp_changemergearticle** 的 **\@processing_order** 參數值指定為 **2**，指定 **\@article** 參數的資料表名稱。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
+    >  如果您將發行項新增至合併式發行集且現有某發行項相依於新的發行項，則您必須使用 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 和 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 的 **\@processing_order** 參數來指定兩個發行項的處理順序。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函式新增至發行集時：請將 **sp_addmergearticle** 的 **\@processing_order** 參數值指定為 **1**；並將 **sp_changemergearticle** 的 **\@processing_order** 參數值指定為 **2**，指定 **\@article** 參數的資料表名稱。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
   
 -   發行集名稱不能包含下列字元：% * [ ] | : " ? \ / < >.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "76287605"
   
 -   不會複寫使用 [sp_bindefault &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) 建立的繫結預設值 (繫結預設值已經棄用，以支援使用 ALTER TABLE 或 CREATE TABLE 的 DEFAULT 關鍵字建立的預設值)。  
   
--   因為散發代理程式傳遞順序的關係，索引檢視表上含有 **NOEXPAND** 提示的函數，不能發行在與參考資料表和索引檢視表相同的發行集中。 若要解決此問題，請將資料表和索引檢視表的建立放在第一個發行集中，然後再將索引檢視表上含有 **NOEXPAND** 提示的函數加入在第一個發行集完成後發行的第二個發行集。 或者，使用 *sp_addpublication\@ 的* **post_snapshot_script** 參數，為這些函式建立指令碼並傳遞指令碼。  
+-   因為散發代理程式傳遞順序的關係，索引檢視表上含有 **NOEXPAND** 提示的函數，不能發行在與參考資料表和索引檢視表相同的發行集中。 若要解決此問題，請將資料表和索引檢視表的建立放在第一個發行集中，然後再將索引檢視表上含有 **NOEXPAND** 提示的函數加入在第一個發行集完成後發行的第二個發行集。 或者，使用 **sp_addpublication** 的 *\@post_snapshot_script* 參數，為這些函式建立指令碼並傳遞指令碼。  
   
 ### <a name="schemas-and-object-ownership"></a>結構描述和物件擁有權  
  針對結構描述和物件擁有權，複寫在新增複寫精靈中具有下列預設行為：  

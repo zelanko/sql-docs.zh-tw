@@ -32,7 +32,7 @@ ms.locfileid: "71295759"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  您可以使用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]執行套件[中所述的方法，視需要或是依預定的次數執行 ](../packages/run-integration-services-ssis-packages.md) 套件。 然而，只需要幾行的程式碼，您就可以從 Windows Form 應用程式、主控台應用程式、ASP.NET Web 表單或 Web 服務，或是 Windows 服務等自訂應用程式執行封裝。  
+  您可以使用[執行套件](../packages/run-integration-services-ssis-packages.md)中所述的方法，視需要或是依預定的次數執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。 然而，只需要幾行的程式碼，您就可以從 Windows Form 應用程式、主控台應用程式、ASP.NET Web 表單或 Web 服務，或是 Windows 服務等自訂應用程式執行封裝。  
   
  此主題會討論：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71295759"
   
 -   以程式設計方式執行封裝  
   
- 本主題中用來載入和執行套件的所有方法，都需要 **Microsoft.SqlServer.ManagedDTS** 組件的參考。 在新專案中新增參考之後，請使用 <xref:Microsoft.SqlServer.Dts.Runtime>using**或**Imports**陳述式匯入** 命名空間。  
+ 本主題中用來載入和執行套件的所有方法，都需要 **Microsoft.SqlServer.ManagedDTS** 組件的參考。 在新專案中新增參考之後，請使用 **using** 或 **Imports** 陳述式匯入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空間。  
   
 ## <a name="loading-a-package-programmatically"></a>以程式設計方式載入封裝  
  無論封裝儲存在本機或遠端，如果要在本機電腦上以程式設計方式載入封裝，請呼叫下列其中一種方法：  
@@ -68,7 +68,7 @@ ms.locfileid: "71295759"
 4.  在主常式中加入下列程式碼。 完成的主控台應用程式應類似下列範例。  
   
     > [!NOTE]  
-    >  範例程式碼會透過使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 方法示範從檔案系統載入封裝。 不過，您也可以呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 方法從 MSDB 資料庫載入封裝，或是呼叫 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 方法從 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 封裝存放區載入封裝。  
+    >  範例程式碼會透過使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 方法示範從檔案系統載入封裝。 不過，您也可以呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 方法從 MSDB 資料庫載入封裝，或是呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 方法從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝存放區載入封裝。  
   
 5.  執行專案。 範例程式碼會執行隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範例安裝的 CalculatedColumns 範例封裝。 封裝執行的結果會顯示在主控台視窗中。  
   

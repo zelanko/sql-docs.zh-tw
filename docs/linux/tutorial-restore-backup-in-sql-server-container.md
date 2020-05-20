@@ -407,7 +407,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ## <a name="use-the-persisted-data"></a>使用保存的資料
 
-除了使用資料庫備份來保護您的資料之外，您也可以使用資料磁碟區容器。 本教學課程一開始已使用 **參數建立**sql1`-v sql1data:/var/opt/mssql` 容器。 **sql1data** 資料磁碟區容器即使在該容器被移除後，也會保存 **/var/opt/mssql** 資料。 下列步驟會將 **sql1** 容器完全移除，然後使用保存的資料來建立新容器 **sql2**。
+除了使用資料庫備份來保護您的資料之外，您也可以使用資料磁碟區容器。 本教學課程一開始已使用 `-v sql1data:/var/opt/mssql` 參數建立 **sql1** 容器。 **sql1data** 資料磁碟區容器即使在該容器被移除後，也會保存 **/var/opt/mssql** 資料。 下列步驟會將 **sql1** 容器完全移除，然後使用保存的資料來建立新容器 **sql2**。
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

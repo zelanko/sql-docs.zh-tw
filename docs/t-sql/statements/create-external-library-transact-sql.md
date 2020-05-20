@@ -273,7 +273,7 @@ EXEC sp_execute_external_script
 + `packageA` 具有 `packageB` 相依性
 + `packageB` 具有 `packageC` 相依性
 
-若要成功安裝 `packageA`，您必須在將 `packageB` 新增至 SQL Server 時，為 `packageC` 和 `packageA` 建立程式庫。 請務必一併檢查所需的套件版本。
+若要成功安裝 `packageA`，您必須在將 `packageA` 新增至 SQL Server 時，為 `packageB` 和 `packageC` 建立程式庫。 請務必一併檢查所需的套件版本。
 
 實際上，常用套件的套件相依性通常比這個簡單範例複雜許多。 例如，**ggplot2** 可能需要超過 30 個套件，而這些套件可能需要伺服器上所未提供的額外套件。 任何套件遺失或套件版本錯誤都可能造成安裝失敗。
 
@@ -302,7 +302,7 @@ EXEC sp_execute_external_script
 
     如果已經將必要套件上傳至執行個體，就無須再次新增。 只要確認現有套件的版本是否正確即可。 
     
-    第一次執行 `packageC` 來安裝套件 `packageB` 時，會依照正確順序安裝必要套件 `sp_execute_external_script` 和 `packageA`。
+    第一次執行 `sp_execute_external_script` 來安裝套件 `packageA` 時，會依照正確順序安裝必要套件 `packageC` 和 `packageB`。
 
     不過，如果有任何必要套件無法供使用，安裝目標套件 `packageA` 時就會失敗。
 

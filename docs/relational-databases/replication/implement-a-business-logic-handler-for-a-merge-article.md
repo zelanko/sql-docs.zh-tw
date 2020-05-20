@@ -101,7 +101,7 @@ ms.locfileid: "75322145"
   
 1.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，以確定此組件尚未註冊為商務邏輯處理常式。  
   
-2.  在散發者上執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)，為 **\@article_resolver** 指定商務邏輯處理常式的易記名稱、為  is_dotnet_assembly **指定 \@true** 值、為 **\@dotnet_assembly_name** 指定組件名稱，並為 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>**dotnet_class_name\@ 指定覆寫**  的類別完整名稱。  
+2.  在散發者上執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)，為 **\@article_resolver** 指定商務邏輯處理常式的易記名稱、為 **\@is_dotnet_assembly** 指定 **true** 值、為 **\@dotnet_assembly_name** 指定組件名稱，並為 **\@dotnet_class_name** 指定覆寫 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 的類別完整名稱。  
   
     > [!NOTE]  
     >  如果此組件未部署在合併代理程式可執行檔的相同目錄中、同步啟動合併代理程式的應用程式相同目錄中，或是全域組件快取 (GAC) 中，您就必須將 **\@dotnet_assembly_name** 指定為包含組件名稱的完整路徑。 當您正在使用 Web 同步處理時，必須指定組件在 Web 伺服器上的位置。  
@@ -112,7 +112,7 @@ ms.locfileid: "75322145"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>搭配現有的資料表發行項使用商務邏輯處理常式  
   
-1.  執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，為 **\@property** 指定 **\@publication**、  article **以及 \@article_resolver** 值，並將 **\@value** 指定為步驟 1 中商務邏輯處理常式的易記名稱。  
+1.  執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，為 **\@property** 指定 **\@publication**、**\@article** 以及 **article_resolver** 值，並將 **\@value** 指定為步驟 1 中商務邏輯處理常式的易記名稱。  
   
 ###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> 範例 (複寫程式設計)  
  這個範例會示範建立稽核記錄的商務邏輯處理常式。  

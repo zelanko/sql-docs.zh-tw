@@ -53,7 +53,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  在查詢的參數化格式上建立計畫指南，以指定 PARAMETERIZATION FORCED 查詢提示。  
 
     > [!IMPORTANT]  
-    >  在參數化查詢時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指派資料類型給取代常值的參數，端視常值的值與大小而定。 同樣的程序也會發生在傳遞給 **sp_get_query_template\@ 的** **stmt** 輸出參數之常數常值上。 由於 **sp_create_plan_guide\@ 的** **params** 引數中所指定的資料類型，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]參數化該查詢時必須符合查詢的資料類型，因此您必須建立一個或多個計畫指南以涵蓋完整範圍的查詢可能參數值。  
+    >  在參數化查詢時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指派資料類型給取代常值的參數，端視常值的值與大小而定。 同樣的程序也會發生在傳遞給 **sp_get_query_template** 的 **\@stmt** 輸出參數之常數常值上。 由於 **sp_create_plan_guide** 的 **\@params** 引數中所指定的資料類型，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]參數化該查詢時必須符合查詢的資料類型，因此您必須建立一個或多個計畫指南以涵蓋完整範圍的查詢可能參數值。  
 
 下列指令碼可用以擷取參數化查詢，並在該查詢上建立計畫指南：  
   

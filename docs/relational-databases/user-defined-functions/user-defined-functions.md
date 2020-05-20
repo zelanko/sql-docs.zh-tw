@@ -115,7 +115,7 @@ ms.locfileid: "78370541"
 ##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a> 結構描述繫結的函式  
  `CREATE FUNCTION` 支援 `SCHEMABINDING` 子句，它可將函式與其參考的任何物件結構描述繫結在一起，例如資料表、檢視及其他使用者定義函式。 嘗試更改或卸除任何被結構描述繫結函數所參考的物件將會失敗。  
   
- 必須滿足以下條件，您才可以在 `SCHEMABINDING`CREATE FUNCTION[ 中指定 ](../../t-sql/statements/create-function-transact-sql.md)：  
+ 必須滿足以下條件，您才可以在 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 中指定 `SCHEMABINDING`：  
   
 -   函數所參考的所有檢視及使用者自訂函數，都必須是結構描述繫結的。  
   

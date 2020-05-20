@@ -80,7 +80,7 @@ ms.locfileid: "76287855"
   
 1.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)。 這會針對所有使用此「散發者」的訂閱，傳回有關「合併代理程式」工作階段的監視資訊，包括 **Session_id**。 您也可以藉由查詢 **MSmerge_sessions** 系統資料表來取得 [Session_id](../../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) 。  
   
-2.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)。 針對  session_id **指定步驟 1 的 \@Session_id** 值。 這會顯示有關工作階段的詳細監視資訊。  
+2.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)。 針對 **\@session_id** 指定步驟 1 的 **Session_id** 值。 這會顯示有關工作階段的詳細監視資訊。  
   
 3.  針對每個感興趣的工作階段重複步驟 2。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "76287855"
   
 1.  在訂閱資料庫的「訂閱者」端，執行 [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)。 針對給定的訂閱指定 **\@publisher**、 **\@publication**，及 **\@publisher_db** 的發行集資料庫名稱。 這會傳回此訂閱最後五個「合併代理程式」工作階段的監視資訊。 請注意結果集中感興趣之工作階段的 **Session_id** 值。  
   
-2.  在訂閱資料庫的「訂閱者」端，執行 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)。 針對  session_id **指定步驟 1 的 \@Session_id** 值。 這會顯示有關工作階段的詳細監視資訊。  
+2.  在訂閱資料庫的「訂閱者」端，執行 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)。 針對 **\@session_id** 指定步驟 1 的 **Session_id** 值。 這會顯示有關工作階段的詳細監視資訊。  
   
 3.  針對每個感興趣的工作階段重複步驟 2。  
   
@@ -98,13 +98,13 @@ ms.locfileid: "76287855"
   
 2.  在散發資料庫的「散發者」端，執行 [sp_replmonitorchangepublicationthreshold](../../../relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql.md)。 視需要指定下列項目：  
   
-    -   針對  metric_id **指定在步驟 1 中取得的 \@Metric_id** 值。  
+    -   針對 **\@metric_id** 指定在步驟 1 中取得的 **Metric_id** 值。  
   
     -   針對 **\@value** 指定監視臨界值標準的新值。  
   
-    -   針對  shouldalert **，指定 \@1** 的值以在達到此臨界值時記錄警示，或者如果不需要警示，則指定 **0** 的值。  
+    -   針對 **\@shouldalert**，指定 **1** 的值以在達到此臨界值時記錄警示，或者如果不需要警示，則指定 **0** 的值。  
   
-    -   針對  mode **，指定 \@1** 的值以啟用監視臨界值標準；或指定 **2** 的值加以停用。  
+    -   針對 **\@mode**，指定 **1** 的值以啟用監視臨界值標準；或指定 **2** 的值加以停用。  
   
 ##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> Replication Management Objects (RMO)  
   

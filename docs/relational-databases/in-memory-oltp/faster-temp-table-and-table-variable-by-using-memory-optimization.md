@@ -57,7 +57,7 @@ ms.locfileid: "74412683"
 - 記憶體最佳化資料表變數  
   - 必須分兩個步驟 (而非內嵌) 宣告：  
     - `CREATE TYPE my_type AS TABLE ...;` ，則  
-    - `DECLARE @mytablevariable my_type;`第 1 課：建立 Windows Azure 儲存體物件{2}。  
+    - `DECLARE @mytablevariable my_type;`第 1 課：建立 Windows Azure 儲存體物件`DECLARE @mytablevariable my_type;`。  
   
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. 案例︰取代全域 tempdb &#x23;&#x23;table  

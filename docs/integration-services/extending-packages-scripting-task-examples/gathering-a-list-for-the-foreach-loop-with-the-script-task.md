@@ -44,7 +44,7 @@ ms.locfileid: "71297017"
   
 1.  建立名為 `FileAge` 且類型為整數的封裝孌數，並輸入正整數值或負整數值。 當值為正數時，程式碼會搜尋比指定天數還要新的檔案，當值為負數時，會搜尋比指定的天數還要舊的檔案。  
   
-2.  建立類型為 `FileList`Object**且名為** 的變數，以接收指令碼工作蒐集的檔案清單，以便稍後供 Variable 列舉值的 Foreach 使用。  
+2.  建立類型為 **Object** 且名為 `FileList` 的變數，以接收指令碼工作蒐集的檔案清單，以便稍後供 Variable 列舉值的 Foreach 使用。  
   
 3.  將 `FileAge` 變數加入指令碼工作的 **ReadOnlyVariables** 屬性，然後將 `FileList` 變數加入 **ReadWriteVariables** 屬性。  
   

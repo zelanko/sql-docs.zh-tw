@@ -115,7 +115,7 @@ ms.locfileid: "80243408"
 ## <a name="considerations"></a>考量  
  如果在稽核起始期間發生失敗，伺服器將不會啟動。 在此情況下，可以在命令列上使用 **-f** 選項來啟動伺服器。  
   
- 當稽核失敗造成伺服器關閉，或是因為已針對稽核指定 ON_FAILURE=SHUTDOWN 而造成伺服器無法啟動時，MSG_AUDIT_FORCED_SHUTDOWN 事件將會寫入記錄檔中。 由於關閉將發生在初次遇到此設定時，所以此事件將會寫入一次。 當稽核的失敗訊息造成伺服器關閉之後，將會寫入此事件。 管理員可藉由使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-m **旗標在單一使用者模式下啟動**，以略過稽核所導致的關閉。 如果您在單一使用者模式下啟動，您會將指定 ON_FAILURE=SHUTDOWN 於該工作階段執行的任何稽核降級為 ON_FAILURE=CONTINUE。 當使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-m**旗標啟動** 時，MSG_AUDIT_SHUTDOWN_BYPASSED 訊息將會寫入到錯誤記錄檔。  
+ 當稽核失敗造成伺服器關閉，或是因為已針對稽核指定 ON_FAILURE=SHUTDOWN 而造成伺服器無法啟動時，MSG_AUDIT_FORCED_SHUTDOWN 事件將會寫入記錄檔中。 由於關閉將發生在初次遇到此設定時，所以此事件將會寫入一次。 當稽核的失敗訊息造成伺服器關閉之後，將會寫入此事件。 管理員可藉由使用 **-m** 旗標在單一使用者模式下啟動[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，以略過稽核所導致的關閉。 如果您在單一使用者模式下啟動，您會將指定 ON_FAILURE=SHUTDOWN 於該工作階段執行的任何稽核降級為 ON_FAILURE=CONTINUE。 當使用 **-m** 旗標啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，MSG_AUDIT_SHUTDOWN_BYPASSED 訊息將會寫入到錯誤記錄檔。  
   
  如需服務啟動選項的詳細資訊，請參閱 [Database Engine 服務啟動選項](../../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   

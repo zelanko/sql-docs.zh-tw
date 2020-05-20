@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-然後可以使用下列的範例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，在更新期間將開放式並行存取控制項實作於 `MyTest` 資料表。 指令碼會使用 `<myRv>` 代表上次讀取資料列時的 **rowversion** 值。 請以實際的 **rowversion** 值取代此值。 **是實際**rowversion`0x00000000000007D3` 值的範例。
+然後可以使用下列的範例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，在更新期間將開放式並行存取控制項實作於 `MyTest` 資料表。 指令碼會使用 `<myRv>` 代表上次讀取資料列時的 **rowversion** 值。 請以實際的 **rowversion** 值取代此值。 `0x00000000000007D3` 是實際 **rowversion** 值的範例。
   
 ```sql
 DECLARE @t TABLE (myKey int);  
@@ -103,7 +103,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
 
 您也可以將範例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式放入交易中。 您可以透過在交易的範圍中查詢 `@t` 變數來擷取資料表已更新的 `myKey` 資料行，而不必重新查詢 `MyTest` 資料表。
 
-下列為使用**時間戳記**語法的相同範例。 以實際的`<myTS>`時間戳記**取代** 。
+下列為使用**時間戳記**語法的相同範例。 以實際的**時間戳記**取代 `<myTS>`。
 
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  

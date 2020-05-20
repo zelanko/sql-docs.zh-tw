@@ -38,19 +38,19 @@ ms.locfileid: "72908162"
   
 #### <a name="on-the-properties-tab-of-the-article-properties"></a>在 [發行項屬性] 的 [屬性] 索引標籤上  
   
-1.  在 [新增發行集精靈] 的 [發行項]  頁面上，或是在 [發行集屬性 - **發行集>]\<** 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]  。    
+1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]。    
 2.  按一下 **[設定反白顯示資料表發行項的屬性]** 或 **[設定所有資料表發行項的屬性]** 。  
   
-3.  在 [發行項屬性 - **發行項>]** **對話方塊之 [屬性]** **索引標籤的 [目的地物件]\<** 區段中，指定 [同步處理方向]  的下列其中一個值：    
+3.  在 [發行項屬性 - \<發行項>] 對話方塊之 [屬性] 索引標籤的 [目的地物件] 區段中，指定 [同步處理方向] 的下列其中一個值：    
     -   **[下載至訂閱者，禁止訂閱者變更]**    
     -   **[下載至訂閱者，允許訂閱者變更]**    
-4.  如果您在 [發行集屬性 - **發行集>]\<** 對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
+4.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
 
 ###  <a name="use-transact-sql"></a>使用 Transact-SQL  
   
 #### <a name="new-article"></a>新發行項  
   
-1.  執行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)，針對 **參數指定**1**或**2`@subscriber_upload_options` 的值。 這些數字對應到下列行為：  
+1.  執行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)，針對 `@subscriber_upload_options` 參數指定 **1** 或 **2** 的值。 這些數字對應到下列行為：  
   
     -   **0** - 無限制 (預設值)。 在訂閱者端進行的變更會上傳到發行者    
     -   **1** - 允許在訂閱者端進行變更，但變更不會上傳到發行者。    
@@ -63,7 +63,7 @@ ms.locfileid: "72908162"
   
 1.  若要判斷發行項是否為僅能下載的發行項，請執行 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)，然後確認結果集內發行項的 **upload_options**值。 
   
-2.  如果步驟 1 中傳回的值為 **0**，請執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，針對 **指定**subscriber_upload_options`@property` 的值、針對 **和** 指定 `@force_invalidate_snapshot`1`@force_reinit_subscription` 的值，並針對 **指定**1**或**2`@value` 的值，該值會對應到下列行為：  
+2.  如果步驟 1 中傳回的值為 **0**，請執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，針對 `@property` 指定 **subscriber_upload_options** 的值、針對 `@force_invalidate_snapshot` 和 `@force_reinit_subscription` 指定 **1** 的值，並針對 `@value` 指定 **1** 或 **2** 的值，該值會對應到下列行為：  
   
     -   **1** - 允許在訂閱者端進行變更，但變更不會上傳到發行者。    
     -   **2** - 不允許在訂閱者端進行變更。  
@@ -84,16 +84,16 @@ ms.locfileid: "72908162"
   
 #### <a name="enable-interactive-conflict-resolution-for-an-article"></a>為發行項啟用互動式衝突解決  
   
-1.  在 [新增發行集精靈] 的 [發行項]  頁面上，或是在 [發行集屬性 - **發行集>]\<** 對話方塊中，選取一個資料表。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。   
+1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。   
 2.  按一下 **[發行項屬性]** ，然後按一下 **[設定反白顯示資料表發行項的屬性]** 或 **[設定所有資料表發行項的屬性]** 。    
-3.  在 [發行項屬性 - **發行項>]\<** 或 [發行項屬性 - **發行項類型>]\<** 頁面上，按一下 [解析程式]  索引標籤。    
+3.  在 [發行項屬性 - \<發行項>] 或 [發行項屬性 - \<發行項類型>] 頁面上，按一下 [解析程式] 索引標籤。    
 4.  選取 **[允許訂閱者在依要求同步期間，以互動方式解決衝突]** 。    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
-6.  如果您在 [發行集屬性 - **發行集>]\<** 對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
+6.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
   
 #### <a name="specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>指定訂閱應使用互動式衝突解決  
   
-1.  在 [訂閱屬性 - **訂閱者>: \<訂閱資料庫>]\<** 對話方塊方塊中，將 [以互動方式解決衝突]  選項的值指定為 **True**。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) ＞與＜ [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)＞。   
+1.  在 [訂閱屬性 - \<訂閱者>: \<訂閱資料庫>] 對話方塊方塊中，將 [以互動方式解決衝突] 選項的值指定為 **True**。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) ＞與＜ [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)＞。   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ###  <a name="use-transact-sql"></a>使用 Transact-SQL  
@@ -103,18 +103,18 @@ ms.locfileid: "72908162"
   
 1.  在發行集資料庫的發行者端，執行 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)，並指定 `@publication`。 請記下結果集中每一個發行項的 **allow_interactive_resolver** 值 (互動式解決器將針對它來使用)。   
     -   如果這個值是 **1**，將會使用互動式解決器。    
-    -   如果這個值是 **0**，您必須先針對每一個發行項啟用互動式解決器。 若要這樣做，請執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 `@publication`、`@article`，針對 **指定**allow_interactive_resolver`@property` 的值，並針對 **指定**true`@value` 的值。    
+    -   如果這個值是 **0**，您必須先針對每一個發行項啟用互動式解決器。 若要這樣做，請執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 `@publication`、`@article`，針對 `@property` 指定 **allow_interactive_resolver** 的值，並針對 `@value` 指定 **true** 的值。    
 2.  在訂閱資料庫的訂閱者上，執行 [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 如需詳細資訊，請參閱 [建立提取訂閱](../../../relational-databases/replication/create-a-pull-subscription.md)。    
 3.  在訂閱資料庫的訂閱者上，執行 [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)並指定下列參數：    
     -   `@publisher`、`@publisher_db` (發行的資料庫) 及 `@publication`。    
-    -   針對 **指定**true`@enabled_for_syncmgr` 的值。    
-    -   針對 **指定**true`@use_interactive_resolver` 的值。    
+    -   針對 `@enabled_for_syncmgr` 指定 **true** 的值。    
+    -   針對 `@use_interactive_resolver` 指定 **true** 的值。    
     -   合併代理程式所需的安全性帳戶資訊。 如需詳細資訊，請參閱 [建立提取訂閱](../../../relational-databases/replication/create-a-pull-subscription.md)。    
 4.  在發行集資料庫的發行者上，執行 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。  
   
 #### <a name="define-an-article-that-supports-the-interactive-resolver"></a>定義支援互動解析程式的發行項  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 針對 `@publication` 指定發行項所屬發行集名稱、針對 `@article` 指定發行項名稱、針對 `@source_object` 指定正在發行的資料庫物件，並針對 **指定**true`@allow_interactive_resolver` 的值。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
+1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 針對 `@publication` 指定發行項所屬發行集名稱、針對 `@article` 指定發行項名稱、針對 `@source_object` 指定正在發行的資料庫物件，並針對 `@allow_interactive_resolver` 指定 **true** 的值。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
  
 ## <a name="conflict-tracking-and-resolution-level-for-merge-articles"></a>合併發行項的衝突追蹤與解決層級
 本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中針對合併發行項指定衝突追蹤和解析層級。  
@@ -127,14 +127,14 @@ ms.locfileid: "72908162"
 -   若使用資料列層級追蹤和資料行層級追蹤，則衝突解決始終在資料列層級執行：優先資料列會覆寫失敗資料列。 合併式複寫還允許您指定在邏輯記錄層級追蹤並解決衝突，但是 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中並未提供這些選項。 如需這些設定複寫預存程序之選項的詳細資訊，請參閱＜ [定義合併資料表發行項之間的邏輯記錄關聯性](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)＞。  
   
 ### <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio  
- 在 [發行項屬性]  對話方塊的 [屬性]  索引標籤上，指定合併發行項的資料列層級追蹤或資料行層級追蹤，[新增發行集精靈] 和 [發行集屬性 - **發行集>]\<** 對話方塊皆提供此對話方塊。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在 [發行項屬性] 對話方塊的 [屬性] 索引標籤上，指定合併發行項的資料列層級追蹤或資料行層級追蹤，[新增發行集精靈] 和 [發行集屬性 - \<發行集>] 對話方塊皆提供此對話方塊。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="specify-row--or-column-level-tracking"></a>指定資料列層級或資料行層級的追蹤  
   
-1.  在 [新增發行集精靈] 的 [發行項]  頁面上，或是在 [發行集屬性 - **發行集>]\<** 對話方塊中，選取一個資料表。  
+1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表。  
 2.  按一下 **[發行項屬性]** ，然後按一下 **[設定反白顯示資料表發行項的屬性]** 或 **[設定所有資料表發行項的屬性]** 。   
-3.  在 [發行項屬性 **發行項>]** **對話方塊的 [屬性]\<** 索引標籤上，針對 [追蹤層級]  屬性選取下列其中一個值：[資料列層級追蹤]  或 [資料行層級追蹤]  。   
-4.  如果您在 [發行集屬性 - **發行集>]\<** 對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
+3.  在 [發行項屬性 \<發行項>] 對話方塊的 [屬性] 索引標籤上，針對 [追蹤層級] 屬性選取下列其中一個值：[資料列層級追蹤] 或 [資料行層級追蹤]。   
+4.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
   
 ### <a name="use-transact-sql"></a>使用 Transact-SQL  
   
@@ -148,12 +148,12 @@ ms.locfileid: "72908162"
 #### <a name="change-conflict-tracking-options-for-a-merge-article"></a>為合併發行項變更衝突追蹤選項  
   
 1.  若要為合併發行項判斷衝突追蹤選項，請執行 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)。 請注意結果集中發行項的 **column_tracking** 選項值。 **1** 的值表示使用資料行層級追蹤， **0** 的值表示使用資料列層級追蹤。    
-2.  在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 針對 **指定**column_tracking`@property` 的值，並針對 `@value` 指定下列其中一個值：  
+2.  在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 針對 `@property` 指定 **column_tracking** 的值，並針對 `@value` 指定下列其中一個值：  
   
     -   **true** - 針對發行項使用資料行層級追蹤。    
     -   **false** - 使用資料列層級追蹤，這是預設值。  
   
-     針對 **和** 指定 `@force_invalidate_snapshot`1`@force_reinit_subscription` 的值。 
+     針對 `@force_invalidate_snapshot` 和 `@force_reinit_subscription` 指定 **1** 的值。 
 
 ## <a name="manage-tracking--deletes"></a>管理追蹤刪除
     
@@ -167,7 +167,7 @@ ms.locfileid: "72908162"
   
 ### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>指定針對新的合併發行項忽略刪除  
   
-在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 針對 **指定**false`@delete_tracking` 的值。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。
+在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 針對 `@delete_tracking` 指定 **false** 的值。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。
   
     > [!NOTE]  
     >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
@@ -176,7 +176,7 @@ ms.locfileid: "72908162"
   
 1.  若要判斷是否已針對發行項啟用錯誤補償，請執行 [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)，並記下結果集中的 **delete_tracking** 值。 如果這個值是 **0**，就表示已經忽略刪除。  
   
-2.  如果步驟 1 的值是 **1**，請在發行集資料庫的發行者端執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 針對 `delete_tracking` 指定 `@property` 的值，並針對 **指定**false`@value` 的值。  
+2.  如果步驟 1 的值是 **1**，請在發行集資料庫的發行者端執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 針對 `@property` 指定 `delete_tracking` 的值，並針對 `@value` 指定 **false** 的值。  
   
     > [!NOTE]  
     >  如果發行項的來源資料表已在另一個發行集中發行，則兩個發行項的 **delete_tracking** 值必須相同。  
@@ -204,7 +204,7 @@ ms.locfileid: "72908162"
 ### <a name="existing-article"></a>現有發行項
   
 1.  若要決定發行項的處理順序，請執行 [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)，並記下結果集中的 **processing_order** 值。   
-2.  在發行集資料庫的發行者端，執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 針對 **指定**processing_order`@property` 的值，並針對 `@value` 指定代表處理順序的整數值。  
+2.  在發行集資料庫的發行者端，執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 針對 `@property` 指定 **processing_order** 的值，並針對 `@value` 指定代表處理順序的整數值。  
 
 
 ## <a name="see-also"></a>另請參閱  

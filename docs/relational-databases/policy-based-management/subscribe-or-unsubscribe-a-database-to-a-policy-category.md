@@ -22,7 +22,7 @@ ms.locfileid: "75558223"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>讓資料庫訂閱或取消訂閱原則類別目錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題說明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中讓資料庫訂閱或取消訂閱原則類別目錄。  
+  本主題說明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中讓資料庫訂閱或取消訂閱原則類別目錄。  
   
  **本主題內容**  
   

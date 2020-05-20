@@ -44,9 +44,9 @@ ms.locfileid: "71297000"
     FORMATNAME:DIRECT=OS:<computername>\private$\<queuename>  
     ```  
   
-2.  建立類型為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]String**且名為**MessageText**的** 變數，以將訊息文字傳遞至指令碼中。 輸入預設訊息做為變數值。  
+2.  建立類型為 **String** 且名為 **MessageText** 的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 變數，以將訊息文字傳遞至指令碼中。 輸入預設訊息做為變數值。  
   
-3.  將指令碼工作加入設計介面並編輯它。 在 [指令碼工作編輯器]  的 [指令碼]  索引標籤上，將 `MessageText` 變數加入 **ReadOnlyVariables** 屬性，以便在指令碼中使用此變數。  
+3.  將指令碼工作加入設計介面並編輯它。 在 [指令碼工作編輯器] 的 [指令碼] 索引標籤上，將 `MessageText` 變數加入 **ReadOnlyVariables** 屬性，以便在指令碼中使用此變數。  
   
 4.  按一下 [編輯指令碼]  以開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 指令碼編輯器。  
   

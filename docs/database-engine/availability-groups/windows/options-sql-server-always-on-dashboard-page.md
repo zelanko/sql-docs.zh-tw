@@ -22,7 +22,7 @@ ms.locfileid: "74822539"
 # <a name="options-sql-server-always-on-dashboard-page"></a>選項 (SQL Server AlwaysOn、儀表板頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  您可以使用  **[選項]** [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 對話方塊的 [SQL Server AlwaysOn 儀表板]  頁面來設定 AlwaysOn 儀表板。  
+  您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] [選項] 對話方塊的 [SQL Server AlwaysOn 儀表板] 頁面來設定 AlwaysOn 儀表板。  
   
  **若要存取此頁面：**  
   

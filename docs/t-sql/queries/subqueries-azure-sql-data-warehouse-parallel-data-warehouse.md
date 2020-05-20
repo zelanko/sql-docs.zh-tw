@@ -115,7 +115,7 @@ SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;
 ```  
   
 ### <a name="i-using-in-with-a-correlated-subquery"></a>I. 搭配相互關聯子查詢使用 IN  
- 下列範例在相關或重複的子查詢中使用 `IN`。 這是一項相依於外部查詢來取得其值的查詢。 內部查詢會重複執行，針對外部查詢可能選取的每個資料列各執行一次。 這個查詢會擷取一個 `EmployeeKey` 執行個體，再加上 `OrderQuantity` 資料表中 `FactResellerSales` 為 `5` 且員工識別碼在 `DimEmployee` 和 `FactResellerSales` 資料表中相符之每位員工的名字和姓氏。  
+ 下列範例在相關或重複的子查詢中使用 `IN`。 這是一項相依於外部查詢來取得其值的查詢。 內部查詢會重複執行，針對外部查詢可能選取的每個資料列各執行一次。 這個查詢會擷取一個 `EmployeeKey` 執行個體，再加上 `FactResellerSales` 資料表中 `OrderQuantity` 為 `5` 且員工識別碼在 `DimEmployee` 和 `FactResellerSales` 資料表中相符之每位員工的名字和姓氏。  
   
 ```  
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   

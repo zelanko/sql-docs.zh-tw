@@ -25,7 +25,7 @@ ms.locfileid: "74412585"
  您可以在 SSIS 封裝中設定上述來源和目的地元件從記憶體最佳化資料表和檢視讀取或寫入其中，方式就如同讀寫其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表和檢視。 不過，使用原生編譯預存程序時，需要注意下一節的重點。  
   
 ## <a name="invoking-a-natively-compiled-stored-procedure-from-an-ssis-package"></a>從 SSIS 封裝叫用原生編譯預存程序  
- 若要從 SSIS 套件叫用原生編譯預存程序，建議您使用 ODBC 來源或 ODBC 目的地與下述格式的 SQL 陳述式：不含 **EXEC\< 關鍵字的** **程序名稱>** 。 如果您在 SQL 陳述式中使用 EXEC 關鍵字，則會看見錯誤訊息，因為 ODBC 連接管理員會將 SQL 命令文字解譯為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式而非預存程序，且將使用執行原生編譯的預存程序時不支援的資料指標。 連接管理員會將不含 EXEC 關鍵字的 SQL 陳述式視為預存程序呼叫，而且不會使用資料指標。  
+ 若要從 SSIS 套件叫用原生編譯預存程序，建議您使用 ODBC 來源或 ODBC 目的地與下述格式的 SQL 陳述式：不含 **EXEC** 關鍵字的 **\<程序名稱>**。 如果您在 SQL 陳述式中使用 EXEC 關鍵字，則會看見錯誤訊息，因為 ODBC 連接管理員會將 SQL 命令文字解譯為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式而非預存程序，且將使用執行原生編譯的預存程序時不支援的資料指標。 連接管理員會將不含 EXEC 關鍵字的 SQL 陳述式視為預存程序呼叫，而且不會使用資料指標。  
   
  您也可以使用 ADO .NET 來源和 OLE DB 來源叫用原生編譯預存程序，不過我們建議您使用 ODBC 來源。 如果您設定由 ADO .NET 來源執行原生編譯的預存程序，則會看見錯誤訊息，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 的資料提供者 (其為 ADO .NET 來源預設使用) 不支援執行原生編譯的預存程序。 您可以將 ADO .NET 來源設定為使用 ODBC 資料提供者、OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。 不過，請注意，ODBC 來源的執行效能比使用 ODBC 資料提供者的 ADO .NET 來源更佳。  
   

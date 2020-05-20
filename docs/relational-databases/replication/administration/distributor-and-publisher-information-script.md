@@ -27,7 +27,7 @@ ms.locfileid: "76288193"
   
 -   變更 `use AdventureWorks2012` 行以使用您的發行集資料庫之名稱。  
   
--   從 `--` 行移除註解 (`exec sp_helparticle @publication='<PublicationName>'`)，並使用發行集的名稱取代 \<發行集名稱>。  
+-   從 `exec sp_helparticle @publication='<PublicationName>'` 行移除註解 (`--`)，並使用發行集的名稱取代 \<發行集名稱>。  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  
