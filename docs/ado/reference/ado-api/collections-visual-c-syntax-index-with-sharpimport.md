@@ -16,14 +16,14 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 77a45203c50555168d2cd163c8b97406b8377694
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9142282c2ee2cda5a2b545a3ef164581403ccba3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919890"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758814"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>集合（Visual C++ #import 的語法索引）
 知道集合會繼承特定的一般方法和屬性，是非常有用的。  

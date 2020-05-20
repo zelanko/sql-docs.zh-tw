@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Dialect property
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3b5c5709a63183bf4c92963dafecb2cf234e2d92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b09f6d254bab0d7829042bdbb80a0bf9beca1b5d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918988"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757184"
 ---
 # <a name="dialect-property"></a>Dialect 屬性
 表示[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)屬性的方言。 方言會定義提供者用來剖析字串或資料流程的語法和一般規則。  

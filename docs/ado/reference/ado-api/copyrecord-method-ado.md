@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CopyRecord method [ADO]
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5fc8cfec5752f88909214301931c69dddfe89dc5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933410"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758794"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 方法 (ADO)
 將[記錄](../../../ado/reference/ado-api/record-object-ado.md)所代表的實體複製到另一個位置。  
@@ -37,7 +37,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *來源*  
  選擇性。 **字串**值，其中包含指定要複製之實體的 URL （例如，檔案或目錄）。 如果省略*Source*或指定空字串，則會複製目前[記錄](../../../ado/reference/ado-api/record-object-ado.md)所代表的檔案或目錄。  
   
- *Destination*  
+ *位置*  
  選擇性。 **字串**值，其中包含指定要複製*來源*之位置的 URL。  
   
  *UserName*  

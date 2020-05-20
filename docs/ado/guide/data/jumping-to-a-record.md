@@ -11,14 +11,14 @@ helpviewer_keywords:
 - record jumping [ADO]
 - jumping to record [ADO]
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cead84eed4e7689d6b5df907b6a61ef07ab74e8a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eca1d1646721ea34d4ce075a882bde95b3c407a3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924938"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757764"
 ---
 # <a name="jumping-to-a-record"></a>跳至記錄
 [Move](../../../ado/reference/ado-api/move-method-ado.md)方法可讓您使用下列語法，在**記錄集中**向前或向後移動指定的記錄數目：  

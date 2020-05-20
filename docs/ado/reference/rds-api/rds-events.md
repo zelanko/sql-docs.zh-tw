@@ -11,14 +11,14 @@ helpviewer_keywords:
 - events [ADO], RDS
 - RDS events [ADO]
 ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 23ef18b438f309ff8cf6ed641a3bdcb6b375a3cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 409e6d43a6fe98a0c7d15d662d71ead6a50ad70d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963691"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758554"
 ---
 # <a name="rds-events"></a>RDS 事件
 > [!IMPORTANT]

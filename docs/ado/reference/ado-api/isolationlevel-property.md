@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevel property
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dc360bc91e977228a6f9139089a7bfa87d912e1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ea8d538dbd5c4c06cb770a983a2733bb2f27e6b2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918445"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758654"
 ---
 # <a name="isolationlevel-property"></a>IsolationLevel 屬性
 表示[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的隔離層級。  

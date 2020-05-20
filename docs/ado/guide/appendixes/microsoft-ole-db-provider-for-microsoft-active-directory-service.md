@@ -13,14 +13,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 837f5fbcbb6c7730cdfcbe08e532a73c5faad06f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926670"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758324"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory 服務
 Active Directory 服務介面（ADSI）提供者可讓 ADO 透過 ADSI 連接到異類目錄服務。 這可讓 ADO 應用程式除了任何與 LDAP 相容的目錄服務和 Novell 目錄服務之外，也能夠唯讀存取 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目錄服務。 ADSI 本身是以提供者模型為基礎，因此，如果有新的提供者可存取另一個目錄，則 ADO 應用程式將能夠順暢地存取它。 ADSI 提供者是無限制執行緒且已啟用 Unicode。  
@@ -95,7 +95,7 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|讀取/寫入|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|唯讀|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|唯讀|  
-|[書簽](../../../ado/reference/ado-api/bookmark-property-ado.md)|讀取/寫入|  
+|[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)|讀取/寫入|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|讀取/寫入|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|一律**adUseServer**|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|一律**adOpenStatic**|  

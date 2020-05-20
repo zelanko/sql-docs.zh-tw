@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - DefinedSize property [ADO]
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4bfb0db701801f1853009594b9d6d24aeb41c629
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 08a7842a2fbfb2bd34f02ad2e45871132111a68f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933217"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757394"
 ---
 # <a name="definedsize-property"></a>DefinedSize 屬性
 指出[欄位](../../../ado/reference/ado-api/field-object.md)物件的資料容量。  

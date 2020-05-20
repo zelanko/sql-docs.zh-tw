@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - filtering for updated records [ADO]
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0b5afe84664719da5a1dbc7777aef524be28c459
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8dae572da8f87051a58415929657f77be6c91d14
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925331"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758264"
 ---
 # <a name="filtering-for-updated-records"></a>篩選更新的記錄
 在您呼叫 UpdateBatch 之前，您可以使用 [記錄集篩選] 屬性，只查看自從記錄集開啟或上次呼叫 UpdateBatch 之後已經變更的記錄。 若要這麼做，請將 Filter 設定為等於 adFilterPendingRecords，以判斷將更新多少記錄，如下一節的程式碼範例所示。  

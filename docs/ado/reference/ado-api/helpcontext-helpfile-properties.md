@@ -19,14 +19,14 @@ helpviewer_keywords:
 - HelpContext property [ADO]
 - HelpFile property [ADO]
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba441a52958e423308e648f15dd36e14d6d1d895
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13fb3f0b5bf55ac9acb525183eba6d8645f4de62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918471"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758714"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext、HelpFile 屬性
 指出與[錯誤](../../../ado/reference/ado-api/error-object.md)物件相關聯的說明檔和主題。  

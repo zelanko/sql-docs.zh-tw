@@ -11,14 +11,14 @@ helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 18f9f0cd227a258b1d2d9cd2d201527f614bcc49
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925132"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758824"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData：簡易 ADO 應用程式
 這個簡單的應用程式會逐步解說四個主要 ADO 作業：取得、檢查、編輯和更新資料。 這些作業會針對 Microsoft® SQL Server 隨附的 Northwind 範例資料庫執行。 為了專注于 ADO 的基本概念，並防止程式碼雜亂，範例中的錯誤處理是最小的。  
@@ -44,17 +44,17 @@ ms.locfileid: "67925132"
   
 |控制項類型|屬性|值|  
 |------------------|--------------|-----------|  
-|表單|名稱|Form1|  
+|表單|Name|Form1|  
 ||高度|6500|  
 ||寬度|6500|  
-|MS DataGrid|名稱|grdDisplay1|  
-|TextBox|名稱|txtDisplay1|  
+|MS DataGrid|Name|grdDisplay1|  
+|TextBox|Name|txtDisplay1|  
 ||多行|true|  
-|命令按鈕|名稱|cmdGetData|  
+|命令按鈕|Name|cmdGetData|  
 ||Caption|取得資料|  
-|命令按鈕|名稱|cmdExamineData|  
+|命令按鈕|Name|cmdExamineData|  
 ||Caption|檢查資料|  
-|命令按鈕|名稱|cmdEditData|  
+|命令按鈕|Name|cmdEditData|  
 ||Caption| 編輯資料|  
-|命令按鈕|名稱|cmdUpdateData|  
+|命令按鈕|Name|cmdUpdateData|  
 ||Caption|更新資料|

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - updates [ADO], dealing with failed updates
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d442a9c397ad184658f9101343e139697c9b3756
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dbd8346c481fc4fdfddb7aa6260bd5b8422b941a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925630"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758287"
 ---
 # <a name="dealing-with-failed-updates"></a>處理失敗的更新
 當更新結束並出現錯誤時，解決錯誤的方式取決於錯誤的本質和嚴重性，以及應用程式的邏輯。 不過，如果資料庫與其他使用者共用，通常會發生錯誤，那就是其他人在執行之前修改了欄位。 這種類型的錯誤稱為「衝突」。 ADO 會偵測到這種情況並報告錯誤。  

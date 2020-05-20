@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, getting data
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72e24c8c68a8042cda83c6fa5e448fafcaed1607
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 56bcbc1bc1ba5f46fb02ca7520f98320586d70e2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925254"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758154"
 ---
 # <a name="getting-data"></a>取得資料
 [ADO 基本](../../../ado/guide/data/ado-fundamentals.md)概念和[HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md)範例特別介紹了建立 ADO 應用程式所牽涉到的四項主要作業：取得資料、檢查資料、編輯資料，以及更新資料。 本節討論如何更詳細地取得資料。  

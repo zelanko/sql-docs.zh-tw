@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RecordStatusEnum enumeration [ADO]
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 233b2f84b6a60c7b5162edce6c1b76b63946ae81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f84f43a90479064c2a95d407b7f816fd48c1c679
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931289"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756758"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 指定有關批次更新和其他大量作業的記錄[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)。  
   
-|持續性|值|描述|  
+|持續性|值|說明|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|表示未儲存記錄，因為作業已取消。|  
 |**adRecCantRelease**|0x400|表示未儲存新的記錄，因為現有的記錄已鎖定。|  

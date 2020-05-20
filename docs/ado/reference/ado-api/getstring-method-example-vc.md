@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - GetString method [ADO], VC++ example
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 501b58a0d4e69ba7ea843441d866f8580858ea5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a1b01ef4a6cbb0b8cdc3d00d86302eababfac34a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932442"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758724"
 ---
 # <a name="getstring-method-example-vc"></a>GetString 方法範例 (VC++)
 這個範例示範[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  

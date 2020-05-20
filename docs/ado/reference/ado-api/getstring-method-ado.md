@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetString method [ADO]
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72526eca57d08152d7eaa773be50d68d4b3688e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 166bfad93d994a4b85bdb944a5d5505987182044
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932464"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758744"
 ---
 # <a name="getstring-method-ado"></a>GetString 方法 (ADO)
 以字串形式傳回[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

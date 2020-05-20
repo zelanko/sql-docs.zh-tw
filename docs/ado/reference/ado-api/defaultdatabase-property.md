@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - DefaultDatabase property
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c78dfdc476dc9dcf599fcfe7cb87bd5e1a39d281
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5a68a41985515e63e6e8520c30fc662c69e1ced6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919158"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757444"
 ---
 # <a name="defaultdatabase-property"></a>DefaultDatabase 屬性
 表示[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的預設資料庫。  

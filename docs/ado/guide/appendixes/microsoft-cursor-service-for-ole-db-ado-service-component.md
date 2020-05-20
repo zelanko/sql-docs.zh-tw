@@ -11,14 +11,14 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b0b4a3773f0de637458384e8819a7b913da3e40
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926799"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758504"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>適用于 OLE DB 的 Microsoft 資料指標服務總覽
 適用于 OLE DB 的 Microsoft 資料指標服務會補充資料提供者的資料指標支援功能。 如此一來，使用者就能從所有資料提供者感知相當一致的功能。
@@ -56,14 +56,14 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  資料指標服務不支援動態屬性 DBPROP_SERVERDATAONINSERT，即使基礎資料提供者支援它亦然。
 
-|屬性名稱|描述|
+|屬性名稱|說明|
 |-------------------|-----------------|
 |自動重新計算（DBPROP_ADC_AUTORECALC）|對於使用資料成形服務建立的記錄集，這個值會指出計算計算和匯總資料行的頻率。 每當資料成形服務判斷值已變更時，預設值（value = 1）就會重新計算。 如果值為0，則只有在一開始建立階層時，才會計算計算或匯總資料行。|
 |批次大小（DBPROP_ADC_BATCHSIZE）|指出在傳送至資料存放區之前，可以批次處理的 update 語句數目。 批次中的語句越多，資料存放區的來回行程就越少。|
 |快取子資料列（DBPROP_ADC_CACHECHILDROWS）|對於使用資料成形服務所建立的記錄集，這個值會指出子記錄集是否儲存在快取中供稍後使用。|
 |資料指標引擎版本（DBPROP_ADC_CEVER）|指出所使用的資料指標服務版本。|
 |維護變更狀態（DBPROP_ADC_MAINTAINCHANGESTATUS）|表示用來在多個資料表聯結中重新同步處理一或多個資料列的命令文字。|
-|[最優化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|指出是否應該建立索引。 設定為**True**時，會授權暫時建立索引，以改善特定作業的執行。|
+|[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|指出是否應該建立索引。 設定為**True**時，會授權暫時建立索引，以改善特定作業的執行。|
 |[重新調整名稱](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|指出**記錄集**的名稱。 可以在目前或後續的資料成形命令內參考。|
 |[重新同步命令](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|表示當[Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)屬性生效時， [Resync](../../../ado/reference/ado-api/resync-method.md)方法所使用的自訂命令字串。|
 |[唯一目錄](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|指出包含 [**唯一資料表**] 屬性所參考之資料表的資料庫名稱。|
@@ -82,7 +82,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>內建屬性行為
  OLE DB 的資料指標服務也會影響特定內建屬性的行為。
 
-|屬性名稱|描述|
+|屬性名稱|說明|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|補充適用于**記錄集**的資料指標類型。|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|補充適用于**記錄集**的鎖定類型。 啟用批次更新。|

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], forward-only
 - forward-only cursors [ADO]
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e84fbf2b8fda2fa2b14088af1e0830d8109aba8a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8943e97e8ce246732f0153a53f8be8d80d4fa88f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925301"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758194"
 ---
 # <a name="forward-only-cursors"></a>順向資料指標
 典型的預設資料指標類型，稱為順向（或不可滾動）資料指標，只能透過結果集向前移動。 順向資料指標不支援滾動（在結果集中向前和向後移動的能力）;它只支援從結果集開頭到結尾的提取資料列。 使用某些順向資料指標（例如與 SQL Server 資料指標程式庫）時，會在提取資料列時，看到由目前使用者（或由其他使用者認可）所做的所有 insert、update 和 delete 語句。 不過，由於無法反向捲動資料指標，因此擷取資料列之後對資料庫中資料列所進行的變更，都無法經由資料指標看見。  

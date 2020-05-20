@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevelEnum enumeration [ADO]
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15ae2aac2851c496b6cac9e47d37fe5fa26b8e34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 864938729153a1cd3f8f31f2e4ba04b075d2f713
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918368"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758644"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 指定[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的交易隔離層級。  

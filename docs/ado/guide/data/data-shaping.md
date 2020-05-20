@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO]
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1811d46bb99b7cdb38bf6508d709826167f787f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7108db5b16b47b8e53b8bddb7f16ad132dcc98fd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925609"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758314"
 ---
 # <a name="data-shaping"></a>資料成形
 此章節包含下列主題。  

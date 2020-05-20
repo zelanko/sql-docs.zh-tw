@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 583e6de7dc8c3ea05d61dda53c3e630d05e4d5f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a1c4167b033163c8106a31070a83d044eb8e8fe7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918754"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757074"
 ---
 # <a name="field-ado---wfc-syntax"></a>Field (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 .com. wfc. 資料  

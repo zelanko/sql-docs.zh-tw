@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO], members
 ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 556ac82e9f588183effe2abe2e4b15e279258a3d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8225c3903fc0b7dddb5c91c592bc73fa662e2bcd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932768"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756857"
 ---
 # <a name="field-object-properties-methods-and-events"></a>Field 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

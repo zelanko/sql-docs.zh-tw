@@ -12,14 +12,14 @@ helpviewer_keywords:
 - immediate mode [ADO]
 - updating data [ADO], immediate mode
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3952ef502bf79d6704cbaea80b9a825a3c70981b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d036b2fa33c2f9fd5696eeb2984d07d4217eff6e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925018"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757904"
 ---
 # <a name="immediate-mode"></a>即時模式
 當**LockType**屬性設定為**adLockOptimistic**或**adLockPessimistic**時，立即模式就會生效。 在 [即時] 模式中，對記錄所做的變更會在您藉由呼叫**Update**方法，在資料列上宣告工作完成後，立即傳播至資料來源。  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ea1fc2d8347df28e983b412976c545327456ad8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918661"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756812"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定[欄位物件](../../../ado/reference/ado-api/field-object.md)的[狀態](../../../ado/reference/ado-api/status-property-ado-field.md)。  
   
- **AdFieldPending\* **值表示導致狀態設定的作業，而且可能會與其他狀態值結合。  
+ **AdFieldPending \* **值表示導致狀態設定的作業，而且可能會與其他狀態值結合。  
   
 |持續性|值|描述|  
 |--------------|-----------|-----------------|  

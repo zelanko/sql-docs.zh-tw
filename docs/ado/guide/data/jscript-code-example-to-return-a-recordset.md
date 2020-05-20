@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1c195b3f9897d0bc71ab9e03e69153a66cdd80ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0bffe36980f06bc187bdaf819b373cdb547ecc92
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924924"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757794"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>可傳回資料錄集的 JScript 程式碼範例
 ## <a name="jscript-code-rsjs"></a>JScript 程式碼（rs .js）  
@@ -85,4 +85,4 @@ function alert(str)
   
 2.  開啟命令提示字元，並將它安裝到您已儲存 JScript 檔案的目錄（rs .js）。  
   
-3.  從`CScript rs.js`命令提示字元輸入。
+3.  `CScript rs.js`從命令提示字元輸入。

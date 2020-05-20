@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS methods [ADO]
 - methods [ADO], RDS
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d045858ddd0cde818eedb983f10527fe7e94a2fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 97af6e8394ac8371f2ddd1baff2363079c898f84
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963688"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758544"
 ---
 # <a name="rds-methods"></a>RDS 方法
 > [!IMPORTANT]

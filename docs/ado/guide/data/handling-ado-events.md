@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ADO, events
 - event handlers [ADO]
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 452259b6e4e406d7a406211a9e9b42ebbf60da53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0628c0af52473c3b7eb7200cb4a06bfc45123a10
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925229"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758874"
 ---
 # <a name="handling-ado-events"></a>處理 ADO 事件
 ADO 事件模型支援在作業開始之前或完成之後，發出*事件*或通知的特定同步和非同步 ADO 作業。 事件實際上是呼叫您在應用程式中定義的事件處理常式常式。  

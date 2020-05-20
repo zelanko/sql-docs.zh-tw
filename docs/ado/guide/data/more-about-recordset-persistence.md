@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bee7d185d5f598a2f0a086bb7e3bea49ddfff88c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c45f457cdf633cc16052ed2945f71da176efe472
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924919"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757584"
 ---
 # <a name="more-about-recordset-persistence"></a>深入了解資料錄集的保存
 ADO 記錄集物件支援使用其[Save](../../../ado/reference/ado-api/save-method.md)方法，將**記錄集**物件的內容儲存在檔案中。 永久儲存的檔案可能會存在於本機磁片磁碟機或伺服器上，或作為網站上的 URL。 之後，您可以使用**Recordset**物件的[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法或[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法來還原檔案。  

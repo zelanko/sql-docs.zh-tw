@@ -12,14 +12,14 @@ helpviewer_keywords:
 - COMPUTE clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c3a5694613d3830b057204c89d2173eea4375519
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4db8d9be4bb797bffd4fc3b033dfc7e5693c1f88
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924959"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757814"
 ---
 # <a name="intervening-shape-compute-clauses"></a>中介 Shape COMPUTE 子句
 將一個或多個計運算元句內嵌在參數化圖形命令的父系和子系中是有效的，如下列範例所示：  

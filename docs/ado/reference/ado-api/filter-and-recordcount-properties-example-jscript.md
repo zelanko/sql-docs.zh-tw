@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RecordCount property [ADO], JScript example
 - Filter property [ADO], JScript example
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0832ddbbb16c54ee62c8fcec8749aeadb4f98449
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 339a605e926b88dae5cee515af9579152613692c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932651"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756800"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Filter 和 RecordCount 屬性範例（JScript）
 這個範例會在 Northwind 資料庫的 [公司] 資料表上開啟**記錄集**，然後使用 [[篩選](../../../ado/reference/ado-api/filter-property.md)] 屬性來限制 [公司名稱] 欄位以字母 D 開頭的記錄，並將下列程式碼貼入 [記事本] 或其他文字編輯器，並將其儲存為**FilterJS。**  

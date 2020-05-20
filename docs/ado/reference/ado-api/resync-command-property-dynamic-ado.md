@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 916afef294a76e62702dbbd7cc413a0540484f62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917140"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756472"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command 動態屬性 (ADO)
 指定使用者提供的命令字串，重新[同步](../../../ado/reference/ado-api/resync-method.md)處理方法會發出此錯誤，以重新整理[唯一資料表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)動態屬性中名為的資料表中的資料。  
@@ -33,7 +33,7 @@ ms.locfileid: "67917140"
   
  以下是以 SQL 為基礎的兩個範例：  
   
- 1\) **記錄集**是由命令定義的：  
+ 1 \) **記錄集**是由命令定義的：  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -54,7 +54,7 @@ WHERE Orders.OrderID = ?"
   
  **唯一資料表**是*訂單*，而其主要*金鑰（即訂單）* 已參數化。 子選取提供簡單的方式，以程式設計方式確保相同的資料行數目和順序會由原始命令傳回。  
   
- 2\) **記錄集**是由預存程式所定義：  
+ 2 \) **記錄集**是由預存程式所定義：  
   
 ```  
 CREATE PROC Custorders @CustomerID char(5) AS   

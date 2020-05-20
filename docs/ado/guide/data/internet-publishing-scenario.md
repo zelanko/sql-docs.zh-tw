@@ -12,14 +12,14 @@ helpviewer_keywords:
 - publishing to Internet [ADO]
 - Internet publishing [ADO]
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 00f470bef5026a6f91c43478b3d745446130d081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4f157fd1058e3807d83b9e4d6612b2f88039f11a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924961"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757854"
 ---
 # <a name="internet-publishing-scenario"></a>網際網路發佈案例
 這個程式碼範例示範如何搭配使用 ADO 與 Microsoft OLE DB 提供者進行網際網路發佈。 在此案例中，您將建立一個使用**記錄集**、**記錄**和**串流**物件的 Visual Basic 應用程式，以顯示網際網路發行提供者所發佈的資源內容。  

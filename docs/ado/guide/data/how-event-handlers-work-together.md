@@ -15,14 +15,14 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 98144b1dacb406de4f57f9d051547640edd09397
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925046"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758104"
 ---
 # <a name="how-event-handlers-work-together"></a>事件處理常式如何協同運作
 除非您是在 Visual Basic 中進行程式設計，否則必須執行**連接**和**記錄集**事件的所有事件處理常式，不論您是否實際處理所有的事件。 您必須執行的實做工作數量取決於您的程式設計語言。 如需詳細資訊，請參閱[依語言的 ADO 事件](../../../ado/guide/data/ado-event-instantiation-by-language.md)具現化。  
@@ -45,7 +45,7 @@ ms.locfileid: "67925046"
   
  單一**完整**事件處理常式適用于管理非同步作業。 每個非同步作業都有適當的**完整**事件。  
   
- 例如，填入大型[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件可能需要很長的時間。 如果您的應用程式已適當寫入，您可以`Recordset.Open(...,adAsyncExecute)`啟動作業並繼續進行其他處理。 當**ExecuteComplete**事件填入**記錄集**時，最後會通知您。  
+ 例如，填入大型[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件可能需要很長的時間。 如果您的應用程式已適當寫入，您可以啟動作業 `Recordset.Open(...,adAsyncExecute)` 並繼續進行其他處理。 當**ExecuteComplete**事件填入**記錄集**時，最後會通知您。  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>單一事件處理常式和多個物件  
  程式設計語言（如 Microsoft Visual C++®）的彈性可讓您讓一個事件處理常式處理來自多個物件的事件。 例如，您可能有多個**連接**物件的一個**中斷連接**事件處理常式事件。 如果其中一個連接結束，則會呼叫**中斷連接**事件處理常式。 您可以分辨哪個連接造成事件，因為事件處理常式物件參數會設定為對應的**連接**物件。  
