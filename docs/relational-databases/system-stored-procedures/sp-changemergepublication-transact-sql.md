@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097677"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829593"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|衝突記錄會儲存在衝突解決中失敗的伺服器。 如果您變更這個屬性，就必須重新初始化現有的訂閱者。|  
 |**compress_snapshot**|**true**|替代快照集資料夾中的快照集會壓縮成 CAB 格式。 預設快照集資料夾中的快照集無法壓縮。 變更這個屬性需要新的快照集。|  
 ||**false**|預設不會壓縮快照集。 變更這個屬性需要新的快照集。|  
-|**conflict_logging**|**發行者**|衝突記錄會儲存在發行者端。|  
+|**conflict_logging**|**publisher**|衝突記錄會儲存在發行者端。|  
 ||**預訂**|衝突記錄會儲存在造成衝突的訂閱者端。 [!INCLUDE[ssEW](../../includes/ssew-md.md)]訂閱者不支援 *。*|  
 ||**既**|衝突記錄會儲存在發行者端和訂閱者端。|  
 |**conflict_retention**||**Int** ，指定保留衝突的保留期限（以天為單位）。 將*conflict_retention*設定為**0** ，表示不需要清除衝突。|  
@@ -110,7 +110,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|快照集檔案會儲存在*alt_snapshot_folder*所指定的替代位置中。 這個組合會指定將快照集檔案同時儲存在預設位置和替代位置中。|  
 |**snapshot_ready**|**true**|可以使用發行集的快照集。|  
 ||**false**|無法使用發行集的快照集。|  
-|**status**|**作用中**|發行集在使用狀態中。|  
+|**status**|**active**|發行集在使用狀態中。|  
 ||**非使用**|發行集在非使用狀態中。|  
 |**sync_mode**|**原生**或<br /><br /> **bcp native**|所有資料表的原生模式大量複製程式輸出會用在初始快照集上。|  
 ||**字母**<br /><br /> 或**bcp 字元**|所有資料表的字元模式大量複製程式輸出會用在初始快照集上，所有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者也需要如此。|  
@@ -178,7 +178,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 -   **validate_subscriber_info**  
   
- 若要使用*publish_to_active_directory*來列出要 Active Directory 的發行集物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，物件必須已在 Active Directory 中建立。  
+ 若要使用*publish_to_active_directory*來列出要 Active Directory 的發行集物件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件必須已在 Active Directory 中建立。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  

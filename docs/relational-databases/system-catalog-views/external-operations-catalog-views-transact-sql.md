@@ -10,14 +10,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 9abc595c-346d-42dc-a227-a73cd0a356eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 10a934dc922b21bec8f0df12d4970ce6ddc81576
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c50aa211af4a359357ae2d3aa9b892e9fc51983f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016630"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823439"
 ---
 # <a name="external-operations-catalog-views-transact-sql"></a>外部作業目錄檢視（Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

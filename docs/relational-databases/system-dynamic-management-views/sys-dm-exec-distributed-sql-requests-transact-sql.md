@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.dm_exec_distributed_requests management view
 - dm_exec_distributed_requests management view
 ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a63d8a331163283598dd50a418f0dd32f9ac5edd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bfaaa65c08155263c15a1e4e4ddf17c20913e66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097793"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827972"
 ---
 # <a name="sysdm_exec_distributed_sql_requests-transact-sql"></a>sys.databases dm_exec_distributed_sql_requests （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]

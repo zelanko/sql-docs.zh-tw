@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_recovery_status catalog view
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0e78b5a8640918291fc68e5b4882448b94a1b9d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 712ee7d1f4f841de507ee56095cb47307b05b45b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079518"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829082"
 ---
 # <a name="sysdatabase_recovery_status-transact-sql"></a>sys.database_recovery_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68079518"
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [資料庫和檔案目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [RESTORE HEADERONLY &#40;Transact-sql&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [查詢 SQL Server 系統目錄 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

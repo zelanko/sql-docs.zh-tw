@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8275ed39d49c8fdb64c1d2f26cc1d218c525500c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900172"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830506"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys.databases dm_os_host_info （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ ms.locfileid: "67900172"
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
-根據`SELECT`預設， `sys.dm_os_host_info`上的許可權會`public`授與角色。 若已撤銷， `VIEW SERVER STATE`則需要伺服器的許可權。   
+`SELECT`根據預設，上的許可權 `sys.dm_os_host_info` 會授與 `public` 角色。 若已撤銷，則需要 `VIEW SERVER STATE` 伺服器的許可權。   
  
 > [!CAUTION]
->  從[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]版本 CTP 1.3 開始， [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]第17版`SELECT`需要的`sys.dm_os_host_info`許可權，才能連接到[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。 如果`SELECT`從`public`撤銷許可權，只有具有`VIEW SERVER STATE`許可權的登入可以與最新版本的 SSMS 連接。 （其他工具（例如） `sqlcmd.exe`可以在沒有`SELECT`許可權的`sys.dm_os_host_info`情況下連接）。
+>  從版本 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3 開始，第 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 17 版需要的許可權，才能 `SELECT` `sys.dm_os_host_info` 連接到 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 。 如果 `SELECT` 從撤銷許可權 `public` ，只有具有許可權的登入 `VIEW SERVER STATE` 可以與最新版本的 SSMS 連接。 （其他工具（例如 `sqlcmd.exe` ）可以在沒有 `SELECT` 許可權的情況下連接 `sys.dm_os_host_info` ）。
 
   
 ## <a name="examples"></a>範例  

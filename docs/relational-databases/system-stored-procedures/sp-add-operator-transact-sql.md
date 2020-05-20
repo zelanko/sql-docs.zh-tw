@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 080933e13c2f72deef536885b9d3b5c1c4c7593b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "74095505"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821074"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'`操作員（通知收件者）的名稱。 這個名稱必須是唯一的，而且不能包含**%** 百分比（）字元。 *名稱*是**sysname**，沒有預設值。  
+`[ @name = ] 'name'`操作員（通知收件者）的名稱。 這個名稱必須是唯一的，而且不能包含百分比（ **%** ）字元。 *名稱*是**sysname**，沒有預設值。  
   
 `[ @enabled = ] enabled`指出操作員的目前狀態。 [*已啟用*] 是**Tinyint**，預設值是**1** （已啟用）。 如果為**0**，則不會啟用操作員，也不會收到通知。  
   
@@ -60,14 +60,14 @@ sp_add_operator [ @name = ] 'name'
   
  您可以指定*email_address*的實體電子郵件地址或別名。 例如：  
   
- '**jdoe**' 或 '**jdoe\@xyz.com**'  
+ '**jdoe**' 或 '**jdoe \@ xyz.com**'  
   
 > [!NOTE]  
 >  您必須針對 Database Mail 使用電子郵件地址。  
   
 `[ @pager_address = ] 'pager_address'`操作員的呼叫者位址。 這個字串會直接傳遞至電子郵件系統。 *pager_address*是**Nvarchar （100）**，預設值是 Null。  
   
-`[ @weekday_pager_start_time = ] weekday_pager_start_time`這[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]段時間之後，Agent 會從星期一到星期五的工作日，將呼叫者通知傳送給指定的操作員。 *weekday_pager_start_time*是**int**，預設值是**090000**，表示 9:00 A.M。 必須用 HHMMSS 格式來輸入。  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time`這段時間之後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Agent 會從星期一到星期五的工作日，將呼叫者通知傳送給指定的操作員。 *weekday_pager_start_time*是**int**，預設值是**090000**，表示 9:00 A.M。 必須用 HHMMSS 格式來輸入。  
   
 `[ @weekday_pager_end_time = ] weekday_pager_end_time`這段時間之後， **SQLServerAgent**服務就不會再從星期一到星期五的工作日，將傳呼通知傳送給指定的操作員。 *weekday_pager_end_time*是**int**，預設值是180000，表示 6:00 P.M。 必須用 HHMMSS 格式來輸入。  
   
@@ -79,7 +79,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @sunday_pager_end_time = ] sunday_pager_end_time`這段時間之後， **SQLServerAgent**服務就不會再將呼機通知傳送給星期日上指定的操作員。 *sunday_pager_end_time*是**int**，預設值是**180000**，表示 6:00 P.M。 必須用 HHMMSS 格式來輸入。  
   
-`[ @pager_days = ] pager_days`這是一個數位，表示操作員可供頁面使用的天數（受限於指定的開始/結束時間）。 *pager_days*是**Tinyint**，預設值是**0** ，表示操作員永遠無法用於接收頁面。 有效的值為**0**到**127**。 *pager_days*的計算方式是新增所需天數的個別值。 例如，從星期一到星期五是**2**+**4**+**8**+**16**+**32** = **62**。 下表列出一星期中各天的值。  
+`[ @pager_days = ] pager_days`這是一個數位，表示操作員可供頁面使用的天數（受限於指定的開始/結束時間）。 *pager_days*是**Tinyint**，預設值是**0** ，表示操作員永遠無法用於接收頁面。 有效的值為**0**到**127**。 *pager_days*的計算方式是新增所需天數的個別值。 例如，從星期一到星期五是**2** + **4** + **8** + **16** + **32**  =  **62**。 下表列出一星期中各天的值。  
   
 |值|描述|  
 |-----------|-----------------|  

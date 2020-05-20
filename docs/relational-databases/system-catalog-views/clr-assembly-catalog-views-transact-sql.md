@@ -14,14 +14,14 @@ helpviewer_keywords:
 - assemblies [CLR integration], catalog views
 - CLR assembly catalog views
 ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b57221daa18d23d3dd88794e851d67712704f76c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2ae1a2b8a7a7469c8dd1b779f17880032924c2ac
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68050847"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823646"
 ---
 # <a name="clr-assembly-catalog-views-transact-sql"></a>CLR 組件目錄檢視 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

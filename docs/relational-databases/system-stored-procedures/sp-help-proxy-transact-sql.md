@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085282"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828407"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_help_proxy
 |-----------|-----------------|  
 |ActiveScripting|ActiveX Script|  
 |CmdExec|作業系統 (CmdExec)|  
-|快照式|複寫快照集代理程式|  
+|快照集|複寫快照集代理程式|  
 |LogReader|複寫記錄讀取器代理程式|  
 |散發|複寫散發代理程式|  
 |合併|Replication Merge Agent|  
@@ -65,7 +65,7 @@ sp_help_proxy
 |Dts|SSIS 封裝執行|  
 |PowerShell|PowerShell 指令碼|  
   
-`[ @name = ] 'name'`要列出 proxy 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入名稱。 名稱是**Nvarchar （256）**，預設值是 Null。 當指定*name*時，也必須指定*subsystem_name* 。  
+`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要列出 proxy 的登入名稱。 名稱是**Nvarchar （256）**，預設值是 Null。 當指定*name*時，也必須指定*subsystem_name* 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

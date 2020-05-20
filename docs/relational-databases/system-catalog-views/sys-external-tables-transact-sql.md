@@ -8,15 +8,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c26dbafb76ecf318fa497e11ccac09e800691900
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c8920361fafe9ecd26ff401110d4661c278de88
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054309"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828145"
 ---
 # <a name="sysexternal_tables-transact-sql"></a>sys.databases external_tables （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

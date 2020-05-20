@@ -15,19 +15,19 @@ helpviewer_keywords:
 - e-mail [SQL Server], stored procedures
 - system stored procedures [SQL Server], mail
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 13c8c9c7c14cdd4cd6a3c15d3c6216614b38a518
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b8f81d6839346de07eb84ed5250bb5986dbd2fff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70211316"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826345"
 ---
 # <a name="database-mail-stored-procedures-transact-sql"></a>Database Mail 預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援下列用來在實例內執行電子郵件作業的系統預存程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援下列用來在實例內執行電子郵件作業的系統預存程式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="database-mail-procedures"></a>Database Mail 程序  
   

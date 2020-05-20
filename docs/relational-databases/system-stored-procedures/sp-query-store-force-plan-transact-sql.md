@@ -18,22 +18,22 @@ helpviewer_keywords:
 - sys.sp_query_store_force_plan
 - sp_query_store_force_plan
 ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b34cf94a2ab6cfec601d41b02bf32b00f0eb3b41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 880cdae24004936b1d27321499ceac759b554ea3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71207719"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824383"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   針對特定查詢啟用強制特定計劃。  
   
- 針對特定查詢強制執行計畫時，每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遇到查詢時，它會嘗試在查詢最佳化工具中強制計畫。 如果計畫強制失敗，則會引發擴充事件，並指示查詢最佳化工具以正常方式進行優化。  
+ 針對特定查詢強制執行計畫時，每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遇到查詢時，它會嘗試在查詢最佳化工具中強制計畫。 如果計畫強制失敗，則會引發擴充事件，並指示查詢最佳化工具以正常方式進行優化。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

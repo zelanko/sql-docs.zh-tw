@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helptrigger
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c01290f0f95a7e240931a9398ab7acea1b287be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048225"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824400"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,8 +48,8 @@ sp_helptrigger [ @tabname = ] 'table'
 |值|說明|  
 |-----------|-----------------|  
 |**DELETE**|傳回 DELETE 觸發程序資訊。|  
-|**插入**|傳回 INSERT 觸發程序資訊。|  
-|**更新**|傳回 UPDATE 觸發程序資訊。|  
+|**INSERT**|傳回 INSERT 觸發程序資訊。|  
+|**UPDATE**|傳回 UPDATE 觸發程序資訊。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - PolyBase
 - dm_exec_distributed_sql_requests management view
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37fd17f17d8b6aa1a30f48d75258d27f4a45561a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 52a1ee453d0a516bc2dc1fd42dcd4439272d844c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097800"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821131"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys.databases dm_exec_distributed_requests （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68097800"
   
  根據會話和要求識別碼，使用者可以接著取出產生要執行的實際分散式要求-透過 sys. dm_exec_distributed_requests。 例如，涉及一般 SQL 和外部 SQL 資料表的查詢，將會分解成各種不同計算節點上執行的各種語句/要求。 為了追蹤所有計算節點上的分散式步驟，我們引進了「全域」執行識別碼，可用來分別追蹤與某個特定要求和運算子相關聯之計算節點上的所有作業。  
   
-|資料行名稱|資料類型|描述|範圍|  
+|資料行名稱|資料類型|說明|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|此視圖的索引鍵。 與要求相關聯的唯一數值識別碼。|在系統的所有要求中都是唯一的。|  
 |execution_id|**Nvarchar （32**|與執行此查詢的會話相關聯的唯一數值識別碼。||  

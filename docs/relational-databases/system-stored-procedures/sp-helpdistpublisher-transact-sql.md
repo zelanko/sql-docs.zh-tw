@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistpublisher
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a47a81b2b19ceccf76a031e298ab60cf4a6f8c9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a0e6ab6c9c633181d72c6916f92606a9c71b177a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770955"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824541"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'`這是要傳回屬性的發行者。 *publisher*是**sysname**，預設值是**%**。  
+`[ @publisher = ] 'publisher'`這是要傳回屬性的發行者。 *publisher*是**sysname**，預設值是 **%** 。  
   
 `[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -48,13 +48,13 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|發行者的名稱。|  
 |**distribution_db**|**sysname**|指定之發行者的散發資料庫。|  
-|**security_mode**|**int**|安全性模式只供複寫代理程式用來連接佇列更新訂閱的發行者，或連接非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
-|**login**|**sysname**|登入名稱只供複寫代理程式用來連接佇列更新訂閱的發行者，或連接非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。|  
+|**security_mode**|**int**|安全性模式只供複寫代理程式用來連接佇列更新訂閱的發行者，或連接非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證<br /><br /> **1** = Windows 驗證|  
+|**登入**|**sysname**|登入名稱只供複寫代理程式用來連接佇列更新訂閱的發行者，或連接非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。|  
 |**password**|**Nvarchar （524）**|傳回的密碼 (以簡單加密形式)。 **系統管理員（sysadmin**）以外的使用者的密碼為 Null。|  
-|**作用中**|**bit**|遠端發行者是否利用本機伺服器來作為散發者：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
+|**active**|**bit**|遠端發行者是否利用本機伺服器來作為散發者：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
 |**working_directory**|**nvarchar(255)**|工作目錄的名稱。|  
-|**trusted**|**bit**|當發行者連接到散發者時，是否需要密碼。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]在和更新版本中，這應該一律傳回**0**，表示需要密碼。|  
-|**thirdparty_flag**|**bit**|發行集是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟用，或由協力廠商應用程式啟用：<br /><br /> **0**  = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、oracle 或 oracle 閘道發行者。<br /><br /> **1** = 發行者已與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用協力廠商應用程式整合。|  
+|**trusted**|**bit**|當發行者連接到散發者時，是否需要密碼。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 在和更新版本中，這應該一律傳回**0**，表示需要密碼。|  
+|**thirdparty_flag**|**bit**|發行集是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟用，或由協力廠商應用程式啟用：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、oracle 或 oracle 閘道發行者。<br /><br /> **1** = 發行者已與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用協力廠商應用程式整合。|  
 |**publisher_type**|**sysname**|發行者的類型；它可以是下列項目之一：<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar(4000)**|發行者之 OLE DB 資料來源的名稱。|  
 |**storage_connection_string**|**nvarchar(4000)**|Azure SQL Database 中的散發者或發行者時，工作目錄的儲存體存取金鑰。|  

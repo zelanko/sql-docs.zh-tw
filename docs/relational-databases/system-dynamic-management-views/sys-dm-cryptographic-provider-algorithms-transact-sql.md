@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_algorithms dynamic management function
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 49748a98ac221af17f7ce5a197bf24a08d1269a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d465515d6446c16fc9186b03eafc9a287571bc5e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68121005"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824673"
 ---
 # <a name="sysdm_cryptographic_provider_algorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

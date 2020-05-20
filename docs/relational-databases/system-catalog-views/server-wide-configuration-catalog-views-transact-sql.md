@@ -13,14 +13,14 @@ helpviewer_keywords:
 - catalog views [SQL Server], server-wide configuration
 - server-wide configuration catalog views [SQL Server]
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9f9c089e1e0c0c9b8788922ad566a1ee6bcd9c6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 191fa023b1ee22607f5634f3855e0e2a5abd503a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018277"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825266"
 ---
 # <a name="server-wide-configuration-catalog-views-transact-sql"></a>伺服器範圍組態目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

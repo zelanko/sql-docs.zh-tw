@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fc35a4c163642f711810f49a816e6c553855b6d9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899164"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826145"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ sp_dbmmonitorresults database_name
  1 = 在計算結果之前，藉由呼叫**sp_dbmmonitorupdate**來更新資料庫的狀態。 不過，如果狀態資料表在前15秒內已更新，或使用者不是**系統管理員（sysadmin** ）固定伺服器角色的成員，則**sp_dbmmonitorresults**執行而不更新狀態。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
  針對指定的資料庫傳回所要求的記錄狀態資料列數目。 每個資料列都包含下列資訊：  

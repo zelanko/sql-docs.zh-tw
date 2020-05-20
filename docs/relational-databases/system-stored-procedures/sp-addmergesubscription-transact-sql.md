@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769129"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820697"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**5**|Thursday|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|Day|  
+|**8**|天|  
 |**9**|工作日|  
 |**10**|週末|  
 |NULL (預設值)||  
@@ -136,7 +136,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**1**|單次|  
 |**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小時|  
 |NULL (預設值)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是每次合併之間*frequency_subday*發生的頻率。 *frequency_subday_interval*是**int**，預設值是 Null。  
@@ -153,7 +153,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @description = ] 'description'`這是此合併訂閱的簡要描述。 *description*是**Nvarchar （255）**，預設值是 Null。 複寫監視器會在 [**易記名稱**] 資料行中顯示這個值，這可以用來排序受監視發行集的訂閱。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`指定是否可以透過[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同步處理管理員來同步處理訂閱。 *enabled_for_syncmgr*是**Nvarchar （5）**，預設值是 FALSE。 如果**為 false**，則表示訂閱未向同步處理管理員註冊。 若**為 true**，則會使用同步處理管理員註冊訂閱，而且可以在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]不啟動的情況下進行同步處理。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`指定是否可以透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同步處理管理員來同步處理訂閱。 *enabled_for_syncmgr*是**Nvarchar （5）**，預設值是 FALSE。 如果**為 false**，則表示訂閱未向同步處理管理員註冊。 若**為 true**，則會使用同步處理管理員註冊訂閱，而且可以在不啟動的情況下進行同步處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 `[ @offloadagent = ] remote_agent_activation`指定可以從遠端啟用代理程式。 *remote_agent_activation*是**bit** ，預設值是**0**。  
   
@@ -164,7 +164,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @use_interactive_resolver = ] 'use_interactive_resolver'`允許針對允許互動式解決的所有發行項，以互動方式解決衝突。 *use_interactive_resolver*是**Nvarchar （5）**，預設值是 FALSE。  
   
-`[ @merge_job_name = ] 'merge_job_name'`Merge_job_name 參數已被取代，無法設定。 * \@ * *merge_job_name*是**sysname**，預設值是 Null。  
+`[ @merge_job_name = ] 'merge_job_name'`* \@ Merge_job_name*參數已被取代，無法設定。 *merge_job_name*是**sysname**，預設值是 Null。  
   
 `[ @hostname = ] 'hostname'`當在參數化篩選的 WHERE 子句中使用這個函數時，覆寫[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)所傳回的值。 *Hostname*是**sysname**，預設值是 Null。  
   
@@ -177,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>備註  
  **sp_addmergesubscription**用於合併式複寫中。  
   
- 當**sp_addmergesubscription**由**系統管理員（sysadmin** ）固定伺服器角色的成員執行時，若要建立發送訂閱，合併代理程式作業會以隱含方式建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並在 Agent 服務帳戶之下執行。 我們建議您執行[sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) ，並指定不同的代理程式特定 Windows 帳戶的認證，以供** \@job_login**和** \@job_password**。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+ 當**sp_addmergesubscription**由**系統管理員（sysadmin** ）固定伺服器角色的成員執行時，若要建立發送訂閱，合併代理程式作業會以隱含方式建立，並在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶之下執行。 我們建議您執行[sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) ，並指定不同的代理程式特定 Windows 帳戶的認證，以供** \@ job_login**和** \@ job_password**。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

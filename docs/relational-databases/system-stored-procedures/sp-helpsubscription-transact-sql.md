@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771575"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824430"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是相關聯發行集的名稱。 *發行*集是**sysname**，預設值是**%**，它會傳回此伺服器的所有訂閱資訊。  
+`[ @publication = ] 'publication'`這是相關聯發行集的名稱。 *發行*集是**sysname**，預設值是 **%** ，它會傳回此伺服器的所有訂閱資訊。  
   
-`[ @article = ] 'article'`這是發行項的名稱。 發行項**sysname** **%** 是 sysname，預設值是，它會傳回所選發行集和訂閱者的所有訂閱資訊。 *article* 如果是**all**，發行集的完整訂閱只會傳回一個專案。  
+`[ @article = ] 'article'`這是發行項的名稱。 發行項是**sysname**，預設值是，它*會傳回*所選發行集 **%** 和訂閱者的所有訂閱資訊。 如果是**all**，發行集的完整訂閱只會傳回一個專案。  
   
-`[ @subscriber = ] 'subscriber'`這是要取得訂用帳戶資訊的訂閱者名稱。 *訂閱者*是**sysname**，預設值是**%**，它會傳回所選發行集和發行項的所有訂閱資訊。  
+`[ @subscriber = ] 'subscriber'`這是要取得訂用帳戶資訊的訂閱者名稱。 *訂閱者*是**sysname**，預設值是，它會傳回所選發行集和發行項的 **%** 所有訂閱資訊。  
   
-`[ @destination_db = ] 'destination_db'`這是目的地資料庫的名稱。 *destination_db*是**sysname**，預設值是**%**。  
+`[ @destination_db = ] 'destination_db'`這是目的地資料庫的名稱。 *destination_db*是**sysname**，預設值是 **%** 。  
   
 `[ @found = ] 'found'OUTPUT`這是表示傳回資料列的旗標。 *找到*的是**int**和 OUTPUT 參數，預設值是23456。  
   
@@ -81,7 +81,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**offload_server**|**sysname**|啟用遠端代理程式啟動的伺服器名稱。 如果是 Null，則會使用[MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md)資料表中所列的目前 offload_server。|  
 |**dts_package_name**|**sysname**|指定 Data Transformation Services (DTS) 封裝的名稱。|  
 |**dts_package_location**|**int**|如果訂閱指派了 DTS 封裝，便是這項封裝的位置。 如果有封裝，值為**0**會指定散發**者上的封裝位置。** 值為**1**時，指定**訂閱者**。|  
-|**subscriber_security_mode**|**smallint**|這是訂閱者端的安全性模式， **1**表示 Windows 驗證， **0**表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
+|**subscriber_security_mode**|**smallint**|這是訂閱者端的安全性模式， **1**表示 Windows 驗證， **0**表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  
 |**subscriber_login**|**sysname**|這是在訂閱者端的登入名稱。|  
 |**subscriber_password**||永遠不傳回實際的訂閱者密碼。 結果會以 "**&#42;&#42;&#42;&#42;&#42;&#42;**" 字串遮罩。|  
 |**job_login**|**sysname**|用來執行散發代理程式之 Windows 帳戶的名稱。|  

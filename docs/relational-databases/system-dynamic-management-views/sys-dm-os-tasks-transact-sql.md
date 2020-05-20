@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_tasks dynamic management view
 ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 086065aa79ca6fba7ad84e5b7e7f99f6f462f7dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2bea6efbfe3f3703df80325a08ccbcf617aea54f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74164904"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829286"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "74164904"
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的每一個作用中的工作，各傳回一個資料列。 「工作」（task）是 SQL Server 中的基本執行單位。 工作的範例包括查詢、登入、登出和系統工作，例如准刪除清除活動、檢查點活動、記錄寫入器、平行重做活動。 如需有關工作的詳細資訊，請參閱[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
   
 > [!NOTE]  
-> 若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_os_tasks**的名稱。  
+> 若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_os_tasks**的名稱。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -50,16 +50,16 @@ ms.locfileid: "74164904"
 |**worker_address**|**varbinary(8)**|執行工作之工作者的記憶體位址。<br /><br /> NULL = 工作正等待工作者執行，或工作剛執行完畢。<br /><br /> 如需詳細資訊，請參閱[dm_os_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
 |**host_address**|**varbinary(8)**|主機的記憶體位址。<br /><br /> 0 = 不會利用主控作業來建立工作。 這可幫助您識別用來建立這項工作的主機。<br /><br /> 如需詳細資訊，請參閱[dm_os_hosts &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)。|  
 |**parent_task_address**|**varbinary(8)**|做為物件之父系的工作記憶體位址。|  
-|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="permissions"></a>權限
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
+在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
 
 ## <a name="examples"></a>範例  
   
 ### <a name="a-monitoring-parallel-requests"></a>A. 監視平行要求  
- 對於平行執行的要求，您會看到多個資料列的相同組合（\<**session_id**>， \< **request_id**>）。 使用下列查詢來尋找所有使用中要求的 [設定平行處理原則的[最大程度] 伺服器設定選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 對於平行執行的要求，您會看到多個資料列的相同組合（ \< **session_id**>， \< **request_id**>）。 使用下列查詢來尋找所有使用中要求的 [設定平行處理原則的[最大程度] 伺服器設定選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
 > [!NOTE]  
 >  **Request_id**在會話內是唯一的。  

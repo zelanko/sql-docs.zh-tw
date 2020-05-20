@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitsubscription
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee9af1ee7057b7a64a62e0ead12ba7e386839587
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762534"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828239"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
 `[ @for_schema_change = ] 'for_schema_change'`指出是否因發行集資料庫的架構變更而發生重新初始化。 *for_schema_change*是**bit**，預設值是0。 如果是**0**，只要重新初始化整個發行集，而不只是部分發行項，就會重新開機允許立即更新之發行集的使用中訂閱。 這表示會因結構描述變更而重新初始化。 如果是**1**，則在快照集代理程式執行之前，不會重新開機使用中的訂閱。  
   
-`[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  *發行者*不應用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
+>  *發行者*不應用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。  
   
 `[ @ignore_distributor_failure = ] ignore_distributor_failure`即使散發者不存在或已離線，也允許重新初始化。 *ignore_distributor_failure*是**bit**，預設值是0。 如果是**0**，當散發者不存在或離線時重新初始化就會失敗。  
   

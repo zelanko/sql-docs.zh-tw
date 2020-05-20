@@ -17,14 +17,14 @@ helpviewer_keywords:
 - dm_resource_governor_resource_pool_affinity
 - sys.dm_resource_governor_resource_pool_affinity
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3b51cd98cd9ef0e6adc3d17d2b1263a62604ab52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7738b79c85c8a36eab671799ebf01797b67a3080
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053276"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830433"
 ---
 # <a name="sysdm_resource_governor_resource_pool_affinity-transact-sql"></a>sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

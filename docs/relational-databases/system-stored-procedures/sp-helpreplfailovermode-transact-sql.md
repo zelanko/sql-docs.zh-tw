@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplfailovermode
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b998a11acd71175e8868b669d9491822f60d2b33
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 93793b697ea2e59f4725cf61d2d3fcec4ebdf579
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632756"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824445"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

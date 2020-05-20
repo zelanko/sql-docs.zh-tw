@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_filestream_options catalog view
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 95d9c980927d565b907d666af1317e883126087e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4c9ec7c14bf192891e547c68ca85b5b055eb6815
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67915030"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823490"
 ---
 # <a name="sysdatabase_filestream_options-transact-sql"></a>sys.database_filestream_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "67915030"
  如需有關 FileTable 的詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
   
   
-|資料行|類型|描述|  
+|資料行|類型|說明|  
 |------------|----------|-----------------|  
 |**database_id**|**int**|資料庫的識別碼。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內，這個值是唯一的。|  
 |**directory_name**|**nvarchar(255)**|所有 FileTable 命名空間的資料庫層級目錄。|  

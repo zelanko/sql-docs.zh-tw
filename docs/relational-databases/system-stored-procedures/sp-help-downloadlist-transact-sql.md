@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9dd52e6d2e4bf8a1a099ea2391a2c6ce2d6decdc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055187"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827722"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |-----------|-----------------|  
 |**包裝箱**|要求目標伺服器脫離主要**SQLServerAgent**服務的伺服器操作。|  
 |**DELETE**|移除整項作業的作業動作。|  
-|**插入**|插入整項作業或重新整理現有作業的作業動作。 適當的話，這個動作包括所有作業步驟和排程。|  
+|**INSERT**|插入整項作業或重新整理現有作業的作業動作。 適當的話，這個動作包括所有作業步驟和排程。|  
 |**RE-ENLIST**|使目標伺服器將編列資訊 (包括輪詢間隔和時區) 重新傳送到多伺服器網域的伺服器作業。 目標伺服器也會 redownloads **MSXOperator**詳細資料。|  
 |**SET-POLL**|設定目標伺服器輪詢多伺服器網域的間隔 (以秒為單位) 之伺服器作業。 如果指定，*值*會被視為所需的間隔值，而且可以是從**10**到**28800**的值。|  
 |**「**|要求開始執行作業的作業動作。|  
 |**停止**|要求停止執行作業的作業動作。|  
 |**SYNC-TIME**|使目標伺服器將它的系統時鐘和多伺服器網域同步化的伺服器作業。 由於這項作業成本很高，因此，請盡量不要太常執行這項作業。|  
-|**更新**|作業只會更新作業的**sysjobs**資訊，而不是作業步驟或排程。 **Sp_update_job**會自動呼叫。|  
+|**UPDATE**|作業只會更新作業的**sysjobs**資訊，而不是作業步驟或排程。 **Sp_update_job**會自動呼叫。|  
   
 `[ @object_type = ] 'object_type'`指定之作業的物件類型。 *object_type*是**Varchar （64）**，預設值是 Null。 *object_type*可以是 [作業] 或 [伺服器]。 如需有效*object_type*值的詳細資訊，請參閱[sp_add_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)。  
   
@@ -87,7 +87,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|指示的唯一整數識別碼。|  
-|**source_server**|**nvarchar(30)**|指示的來源伺服器電腦名稱。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版中，這一律是主伺服器（MSX）的電腦名稱稱。|  
+|**source_server**|**nvarchar(30)**|指示的來源伺服器電腦名稱。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版中，這一律是主伺服器（MSX）的電腦名稱稱。|  
 |**operation_code**|**nvarchar(4000)**|指示的作業碼。|  
 |**object_name**|**sysname**|指示所影響的物件。|  
 |**object_id**|**uniqueidentifier**|受指令影響的物件識別碼（工作物件的**job_id** ，或伺服器物件的0x00），或**operation_code**特定的資料值。|  

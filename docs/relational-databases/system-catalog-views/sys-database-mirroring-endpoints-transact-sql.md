@@ -20,14 +20,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], catalog views
 - sys.database_mirroring_endpoints catalog view
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: bcbe9d23bab18e47b69f82812f604a94d4c5ce9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dc4f44e1b1d935f1abbd49532149edf078f7d1f7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022758"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823501"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68022758"
 |-----------------|---------------|-----------------|  
 |**\<繼承的資料行>**|-|從**sys.databases**繼承資料行（如需詳細資訊，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)）。|  
 |**role**|**tinyint**|鏡像角色，它有下列幾種：<br /><br /> **0** = 無<br /><br /> **1** = 合作夥伴<br /><br /> **2** = 見證<br /><br /> **3** = 全部<br /><br /> 注意：此值僅與資料庫鏡像相關。|  
-|**role_desc**|**nvarchar(60)**|鏡像角色的描述，它有下列幾種：<br /><br /> **無**<br /><br /> **搭檔**<br /><br /> **證明**<br /><br /> **ALL**<br /><br /> 注意：此值僅與資料庫鏡像相關。|  
+|**role_desc**|**nvarchar(60)**|鏡像角色的描述，它有下列幾種：<br /><br /> **NONE**<br /><br /> **搭檔**<br /><br /> **證明**<br /><br /> **ALL**<br /><br /> 注意：此值僅與資料庫鏡像相關。|  
 |**is_encryption_enabled**|**bit**|**1**表示加密已啟用。<br /><br /> **0**表示已停用加密。|  
 |**connection_auth**|**tinyint**|與這個端點連接所需的連接驗證類型，它有下列幾種：<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -NEGOTIATE<br /><br /> **4** -憑證<br /><br /> **5** -NTLM、憑證<br /><br /> **6** -KERBEROS、憑證<br /><br /> **7** -NEGOTIATE，憑證<br /><br /> **8** -憑證、NTLM<br /><br /> **9** -憑證、KERBEROS<br /><br /> **10** -CERTIFICATE、NEGOTIATE|  
 |**connection_auth_desc**|**Nvarchar (60)**|與這個端點連接所需之驗證類型的描述，它有下列幾種：<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE|  

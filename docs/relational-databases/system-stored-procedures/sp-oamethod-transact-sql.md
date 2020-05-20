@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98a8b4ce231c907231646379a3730ab0c1c535db
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252199"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828262"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,13 +68,13 @@ sp_OAMethod objecttoken , methodname
   
  若要取得輸出參數的傳回值，*參數*必須是適當資料類型的本機變數，而且必須指定**output** 。 如果指定了常數參數，或未指定**output** ，則會忽略來自輸出參數的任何傳回值。  
   
- 如果指定， *parametername*必須是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]已具名引數的名稱。 請注意**@**，_parametername_is 不[!INCLUDE[tsql](../../includes/tsql-md.md)]是本機變數。 會移除 @ 符號**@**（），並將*PARAMETERNAME*傳遞至 OLE 物件做為參數名稱。 您必須在指定好所有位置性參數之後，指定所有具名參數。  
+ 如果指定， *parametername*必須是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 已具名引數的名稱。 請注意， **@** _parametername_is 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 本機變數。 會移除 @ 符號（ **@** ），並將*parametername*傳遞至 OLE 物件做為參數名稱。 您必須在指定好所有位置性參數之後，指定所有具名參數。  
   
  *n*  
  這是一個預留位置，表示可以指定多個參數。  
   
 > [!NOTE]
->  parametername 可以是已命名的參數，因為它是指定方法的一部分，而且會傳遞至物件。 * \@ * 這個預存程序的其他參數是依照位置來指定，而不是名稱。  
+>  * \@ parametername*可以是已命名的參數，因為它是指定方法的一部分，而且會傳遞至物件。 這個預存程序的其他參數是依照位置來指定，而不是名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)，這個數字是 OLE Automation 物件所傳回之 HRESULT 的整數值。  
@@ -110,7 +110,7 @@ sp_OAMethod objecttoken , methodname
 ## <a name="examples"></a>範例  
   
 ### <a name="a-calling-a-method"></a>A. 呼叫方法  
- 下列範例會呼叫先前`Connect`建立之**SQLServer**物件的方法。  
+ 下列範例會呼叫 `Connect` 先前建立之**SQLServer**物件的方法。  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -123,7 +123,7 @@ END;
 ```  
   
 ### <a name="b-getting-a-property"></a>B. 取得屬性  
- 下列範例會取得`HostName`屬性（先前建立的**SQLServer**物件），並將它儲存在本機變數中。  
+ 下列範例 `HostName` 會取得屬性（先前建立的**SQLServer**物件），並將它儲存在本機變數中。  
   
 ```  
 DECLARE @property varchar(255);  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2182e922599e81a2333fcbf4da5970b55d7e5bc4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090855"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823468"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'`這是指定之屬性的新值。 *value*是**Nvarchar （255）**，它可以是資料表中的其中一個值。  
   
-|屬性|值|描述|  
+|屬性|值|說明|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||當位置不是預設位置，或在預設位置之外還有其他位置時，快照集資料夾的儲存位置。|  
 |**描述**||這個合併提取訂閱的描述。|  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbc724b9178ec867768fde3dc3d9ff58add554e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070349"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826266"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,14 +51,14 @@ sp_columns [ @table_name = ] object
   
  如果目前使用者擁有一個含有指定名稱的物件，就會傳回該物件的資料行。 如果未指定*owner* ，且目前使用者並未擁有具有指定之*物件*的物件， **sp_columns**會尋找具有資料庫擁有者所擁有之指定*物件*的物件。 如果存在，就會傳回該物件的資料行。  
   
-`[ \@table_qualifier = ] qualifier`這是物件辨識符號的名稱。 *限定詞*是**sysname**，預設值是 Null。 各種 DBMS 產品都支援三部分的物件命名（辨識_符號_**。**_擁有_者 **。**_名稱_）。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，這個資料行代表資料庫名稱。 在某些產品中，它代表物件之資料庫環境的伺服器名稱。  
+`[ \@table_qualifier = ] qualifier`這是物件辨識符號的名稱。 *限定詞*是**sysname**，預設值是 Null。 各種 DBMS 產品都支援三部分的物件命名（辨識_符號_**。**_擁有_者 **。**_名稱_）。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這個資料行代表資料庫名稱。 在某些產品中，它代表物件之資料庫環境的伺服器名稱。  
   
-`[ \@column_name = ] column`是單一資料行，而且只有在目錄資訊的一個資料行需要時才會使用。 資料*行*是**Nvarchar （384）**，預設值是 Null。 如果未指定資料*行*，則會傳回所有資料行。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，資料*行*代表**syscolumns**資料表中所列出的資料行名稱。 支援萬用字元的模式比對。 若要有最大交互操作能力，閘道用戶端應該只採用 SQL-92 標準模式比對 (% 和 _ 萬用字元)。  
+`[ \@column_name = ] column`是單一資料行，而且只有在目錄資訊的一個資料行需要時才會使用。 資料*行*是**Nvarchar （384）**，預設值是 Null。 如果未指定資料*行*，則會傳回所有資料行。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，資料*行*代表**syscolumns**資料表中所列出的資料行名稱。 支援萬用字元的模式比對。 若要有最大交互操作能力，閘道用戶端應該只採用 SQL-92 標準模式比對 (% 和 _ 萬用字元)。  
   
 `[ \@ODBCVer = ] ODBCVer`這是正在使用的 ODBC 版本。 *ODBCVer*是**int**，預設值是2。 這表示 ODBC 2。 有效值是 2 或 3。 如需版本2和3之間的行為差異，請參閱 ODBC **SQLColumns**規格。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
  **Sp_columns**目錄預存程式相當於 ODBC 中的**SQLColumns** 。 傳回的結果會依**TABLE_QUALIFIER**、 **TABLE_OWNER**和**TABLE_NAME**排序。  
@@ -74,7 +74,7 @@ sp_columns [ @table_name = ] object
 |**精密**|**int**|有效位數的數目。 **PRECISION**資料行的傳回值以基底10為底數。|  
 |**LENGTH**|**int**|資料的傳輸大小。<sup>1</sup>|  
 |**尺度**|**smallint**|小數點右側的位數。|  
-|**RADIX**|**smallint**|數值資料類型的基底。|  
+|**基**|**smallint**|數值資料類型的基底。|  
 |**Null**|**smallint**|指定 Null 屬性。<br /><br /> 1 = 可能是 NULL。<br /><br /> 0 = 非 NULL。|  
 |**備註**|**Varchar （254）**|這個欄位一律會傳回 NULL。|  
 |**COLUMN_DEF**|**nvarchar(4000)**|資料行的預設值。|  

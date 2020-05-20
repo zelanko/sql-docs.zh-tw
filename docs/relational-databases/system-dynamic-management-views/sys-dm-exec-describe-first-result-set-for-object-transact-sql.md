@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9bf2dff5e5d7a3cb1581de9c0b15ff8a58dc6be7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199340"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827985"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  這個動態管理函數會採用@object_id做為參數，並描述具有該識別碼之模組的第一個結果中繼資料。 指定@object_id的可以是[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程式或[!INCLUDE[tsql](../../includes/tsql-md.md)]觸發程式的識別碼。 如果是任何其他物件 (例如檢視表、資料表、函數或 CLR 程序) 的識別碼，結果的錯誤資料行中會指定錯誤。  
+  這個動態管理函數會採用 @object_id 做為參數，並描述具有該識別碼之模組的第一個結果中繼資料。 @object_id指定的可以是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程式或觸發程式的識別碼 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 如果是任何其他物件 (例如檢視表、資料表、函數或 CLR 程序) 的識別碼，結果的錯誤資料行中會指定錯誤。  
   
  **dm_exec_describe_first_result_set_for_object**與 sys.databases 具有相同的結果集定義， [dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) ，而且類似[sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>引數  
  *\@object_id*  
- 預存程式或[!INCLUDE[tsql](../../includes/tsql-md.md)]觸發程式的。 @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] @object_id 的類型為 **int**。  
+ @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程式或觸發程式的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 @object_id 的類型為 **int**。  
   
  *\@include_browse_information*  
  @include_browse_information為類型**位**。 如果設定為 1，就會分析每個查詢，如同查詢上有 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
@@ -114,11 +114,11 @@ sys.dm_exec_describe_first_result_set_for_object
 |9|RECURSION|因為批次包含遞迴陳述式，無法判定結果。|  
 |10|TEMPORARY_TABLE|因為批次包含暫存資料表且不受 **sp_describe_first_result_set** 支援，無法判定結果。|  
 |11|UNSUPPORTED_STATEMENT|因為批次包含 **sp_describe_first_result_set** 不支援的陳述式 (例如，FETCH、REVERT 等)，無法判定結果。|  
-|12|OBJECT_ID_NOT_SUPPORTED|不@object_id支援傳遞至函數的（亦即不是預存程式）|  
-|13|OBJECT_ID_DOES_NOT_EXIST|在@object_id系統目錄中找不到傳遞至函數的。|  
+|12|OBJECT_ID_NOT_SUPPORTED|@object_id不支援傳遞至函數的（亦即不是預存程式）|  
+|13|OBJECT_ID_DOES_NOT_EXIST|在 @object_id 系統目錄中找不到傳遞至函數的。|  
   
 ## <a name="permissions"></a>權限  
- 需要執行引數的@tsql許可權。  
+ 需要執行 @tsql 引數的許可權。  
   
 ## <a name="examples"></a>範例  
   
@@ -138,7 +138,7 @@ GO
 ```  
   
 ### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. 結合 sys.dm_exec_describe_first_result_set_for_object 函數與資料表或檢視表  
- 下列範例會使用 sys.databases 系統目錄檢視和**sys.databases dm_exec_describe_first_result_set_for_object**函數來顯示[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫中所有預存程式之結果集的中繼資料。  
+ 下列範例會使用 sys.databases 系統目錄檢視和**sys.databases dm_exec_describe_first_result_set_for_object**函數來顯示資料庫中所有預存程式之結果集的中繼資料 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
   
 ```  
 USE AdventureWorks2012;  

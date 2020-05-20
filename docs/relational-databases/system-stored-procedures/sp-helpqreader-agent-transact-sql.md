@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpqreader_agent
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ea01bd3eb765a0a5f7a85245090b79579f347b3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b1162939039470cdf8e7283950c342e1555c5c78
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771416"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824458"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 |**id**|**int**|代理程式的識別碼。|  
 |**name**|**Nvarchar （100）**|代理程式的名稱。|  
 |**job_id**|**uniqueidentifier**|代理程式作業的唯一識別碼。|  
-|**job_login**|**nvarchar(512)**|這是用來執行散發代理程式的 Windows 帳戶，傳回的格式為*DOMAIN*\\*username*。|  
-|**job_password**|**sysname**|** \* \* \* \* \* \* \* \* \* **基於安全性理由，一律會傳回的值。|  
+|**job_login**|**nvarchar(512)**|這是用來執行散發代理程式的 Windows 帳戶，傳回的格式為*DOMAIN* \\ *username*。|  
+|**job_password**|**sysname**|基於安全性理由， **\*\*\*\*\*\*\*\*\*\*** 一律會傳回的值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

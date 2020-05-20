@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindrule
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76d1572e1f99162c8daebeafadb0c8d75a53a4d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c89b2cb803df80872d82f18b5f26b207e9e4bc38
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046034"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828467"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. 將規則繫結到別名資料類型  
- 假設有一個名稱為 `rule_ssn` 的規則及名稱為 `ssn` 別名資料類型存在，下列範例會將 `rule_ssn` 繫結到 `ssn`。 在 CREATE TABLE 陳述式中，`ssn` 類型的資料行會繼承 `rule_ssn` 規則。 類型`ssn`的現有資料行也會`rule_ssn`繼承規則，除非*futureonly_flag*指定`ssn` **futureonly** ，或直接系結規則。 繫結到資料行的規則，一律優先於繫結到資料類型的規則。  
+ 假設有一個名稱為 `rule_ssn` 的規則及名稱為 `ssn` 別名資料類型存在，下列範例會將 `rule_ssn` 繫結到 `ssn`。 在 CREATE TABLE 陳述式中，`ssn` 類型的資料行會繼承 `rule_ssn` 規則。 類型的現有資料行 `ssn` 也 `rule_ssn` 會繼承規則，除非*futureonly_flag*指定**futureonly** ，或直接系結 `ssn` 規則。 繫結到資料行的規則，一律優先於繫結到資料類型的規則。  
   
 ```  
 USE master;  

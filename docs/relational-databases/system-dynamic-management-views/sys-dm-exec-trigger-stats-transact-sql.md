@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_trigger_stats dynamic management function
 ms.assetid: 863498b4-849c-434d-b748-837411458738
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65e54b90fa036e738f2e1e6a28498559051011a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65072bd42e1e1f85189afe8bb832a2b0811417e2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262206"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824548"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ ms.locfileid: "68262206"
 |**last_elapsed_time**|**bigint**|這個觸發程序最近完成執行經歷的時間 (以微秒為單位)。|  
 |**min_elapsed_time**|**bigint**|此觸發程式完成執行所經歷的最小時間（以微秒為單位）。|  
 |**max_elapsed_time**|**bigint**|此觸發程式已完成執行的最大耗用時間（以微秒為單位）。| 
-|**total_spills**|**bigint**|此觸發程式在編譯以來執行所溢出的總頁數。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**last_spills**|**bigint**|上次執行觸發程式時所溢出的頁面數目。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**min_spills**|**bigint**|此觸發程式在單次執行期間曾發生的最小頁數。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**max_spills**|**bigint**|此觸發程式在單次執行期間曾溢出的最大頁面數目。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**total_spills**|**bigint**|此觸發程式在編譯以來執行所溢出的總頁數。<br /><br /> **適用于**：從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**last_spills**|**bigint**|上次執行觸發程式時所溢出的頁面數目。<br /><br /> **適用于**：從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**min_spills**|**bigint**|此觸發程式在單次執行期間曾發生的最小頁數。<br /><br /> **適用于**：從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**max_spills**|**bigint**|此觸發程式在單次執行期間曾溢出的最大頁面數目。<br /><br /> **適用于**：從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
 |**total_page_server_reads**|**bigint**|這個觸發程式在編譯以來執行所執行的頁面伺服器讀取總數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
 |**last_page_server_reads**|**bigint**|上次執行觸發程式時所執行的頁面伺服器讀取數目。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
 |**min_page_server_reads**|**bigint**|此觸發程式在單次執行期間曾執行的最小頁面伺服器讀取數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
@@ -80,8 +80,8 @@ ms.locfileid: "68262206"
   
 ## <a name="permissions"></a>權限  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
+在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
   
 ## <a name="examples"></a>範例  
  下列範例會傳回平均經過時間所識別之前五項觸發程序的相關資訊。  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droplogin
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: de01ffe595a636356bf5b82ed2c5540cc3f5a092
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 07a91b923ffedb2c76cc1140ae3b5a4ee33a8553
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056497"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830112"
 ---
 # <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @loginame = ] 'login'`這是要移除的登入。 *login*是**sysname**，沒有預設值。 *登*入必須已經存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]于中。  
+`[ @loginame = ] 'login'`這是要移除的登入。 *login*是**sysname**，沒有預設值。 *登*入必須已經存在於中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

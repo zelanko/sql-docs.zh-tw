@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_targetsvrgrp_member
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cf0feb3b7747f7488c8688c902760e90cbe66838
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb35ca1a700390b51776333e5a62280d5de842ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68033018"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826279"
 ---
 # <a name="sp_add_targetsvrgrp_member-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

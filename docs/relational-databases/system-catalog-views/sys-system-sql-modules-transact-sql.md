@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.system_sql_modules catalog view
 ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe249cd389e71fa5565e2877fba46b47cf0a4f38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd6f6d995fd1bbf4378525c2e767e0ce05bd908a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108777"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821335"
 ---
 # <a name="syssystem_sql_modules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

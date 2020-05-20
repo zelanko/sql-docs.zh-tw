@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 64621f1d675fc7cd4e64b690b1e440a1dbad2d1c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045935"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826645"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   將資料檔案群組標示為唯讀，以便將這些檔案複製到唯讀媒體中。  
   
- 系統管理員必須是資料庫和所有資料庫物件的擁有者。 系統管理員是存在於所有執行之伺服器[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的已知使用者，而且在稍後散發和安裝資料庫時，它可能會存在。  
+ 系統管理員必須是資料庫和所有資料庫物件的擁有者。 系統管理員是存在於所有執行之伺服器上的已知使用者， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而且在稍後散發和安裝資料庫時，它可能會存在。  
   
  如果您在沒有**自動**值的情況下執行**sp_certify_removable** ，它會傳回下列任何條件的相關資訊：  
   
@@ -73,7 +73,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  您可以利用下列方式來更正這些狀況：  
   
--   使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工具和程式，然後再次執行**sp_certify_removable** 。  
+-   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和程式，然後再次執行**sp_certify_removable** 。  
   
 -   只要使用**auto**值來執行**sp_certify_removable** 。  
   

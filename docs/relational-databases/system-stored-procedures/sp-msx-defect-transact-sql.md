@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_defect
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c8f2e34d15f7cca4443680b2d8b8a9fa2c7c6199
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1bc6139afdf99fad7a6abcf5134e3341e7a8082c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67952312"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828802"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

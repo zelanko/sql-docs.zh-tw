@@ -17,14 +17,14 @@ helpviewer_keywords:
 - extended events [SQL Server], views
 - sys.dm_xe_session_event_actions dynamic management view
 ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c10ef9265ef659985d667632e864e55f58ef4911
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9ff9864f3d94909cba5acc20123f00caef6bfa3a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090256"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829040"
 ---
 # <a name="sysdm_xe_session_event_actions-transact-sql"></a>sys.dm_xe_session_event_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

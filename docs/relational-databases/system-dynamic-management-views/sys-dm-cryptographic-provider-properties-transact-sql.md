@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_properties dynamic management view
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cc1e0915fb48b42429bb2821476f98154ac39451
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0b08159d666fb18cc92feb88f087168b249ff523
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005108"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824689"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68005108"
 |provider_id|**int**|密碼編譯提供者的識別碼。|  
 |guid|**uniqueidentifier**|唯一的提供者 GUID。|  
 |provider_version|**nvarchar(256)**|提供者的版本，格式為 '*aa.bb.cccc.dd*'。|  
-|sqlcrypt_version|**nvarchar(256)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]密碼編譯 API 的主要版本，格式為 '*aa.bb.cccc.dd*'。|  
+|sqlcrypt_version|**nvarchar(256)**|密碼編譯 API 的主要版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，格式為 '*aa.bb.cccc.dd*'。|  
 |friendly_name|**nvarchar(2048)**|提供者所提供的名稱。|  
 |authentication_type|**nvarchar(256)**|WINDOWS、BASIC 或 OTHER。|  
 |symmetric_key_support|**tinyint**|0 (不支援)<br /><br /> 1 (支援)|  

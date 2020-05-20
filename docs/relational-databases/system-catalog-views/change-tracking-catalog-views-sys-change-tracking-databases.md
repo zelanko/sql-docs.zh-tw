@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.change_tracking_databases
 - change tracking [SQL Server], sys.change_tracking_databases
 ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d3f2f92e9be7b6d4f38edff7cb36aa67e055788
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d4ba41b2dc85bc9e5560ae9911bde7fb54abc3c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68136543"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823663"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>變更追蹤目錄 Views-sys. change_tracking_databases
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68136543"
 |database_id|**int**|資料庫的識別碼。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內，這是唯一的。|  
 |is_auto_cleanup_on|**bit**|指出在經過指定的保留週期後，是否要自動清除變更追蹤資料：<br /><br /> 0 = Off<br /><br /> 1 = On|  
 |retention_period|**int**|如果正在使用自動清除，保留週期會指定變更追蹤資料保留在資料庫中的時間。|  
-|retention_period_units_desc|**nvarchar(60)**|指定保留週期的描述：<br /><br /> 分鐘<br /><br /> 小時<br /><br /> Days|  
+|retention_period_units_desc|**nvarchar(60)**|指定保留週期的描述：<br /><br /> 分鐘<br /><br /> 小時<br /><br /> 天|  
 |retention_period_units|**tinyint**|保留週期之時間的單位：<br /><br /> 1 = 分鐘<br /><br /> 2 = 小時<br /><br /> 3 = 日|  
   
 ## <a name="permissions"></a>權限  

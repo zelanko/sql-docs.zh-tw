@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergeconflictrows
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b6963d3a2b28ba103c731f015fd352ff105cfb95
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137766"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828912"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是**%**。 如果指定發行集的話，就會傳回發行集所限定的所有衝突。 例如，如果**MSmerge_conflict_Customers**資料表有**WA**和**CA**發行集的衝突資料列，傳入發行集名稱**CA**會抓取與**ca**發行集相關的衝突。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是 **%** 。 如果指定發行集的話，就會傳回發行集所限定的所有衝突。 例如，如果**MSmerge_conflict_Customers**資料表有**WA**和**CA**發行集的衝突資料列，傳入發行集名稱**CA**會抓取與**ca**發行集相關的衝突。  
   
-`[ @conflict_table = ] 'conflict_table'`這是衝突資料表的名稱。 *conflict_table*是**sysname**，沒有預設值。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新的版本中，衝突資料表會使用格式名稱與**MSmerge_conflict\_發行\_** 項一文來命名，其中每個已發行的文章都有一個資料表。  
+`[ @conflict_table = ] 'conflict_table'`這是衝突資料表的名稱。 *conflict_table*是**sysname**，沒有預設值。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新的版本中，衝突資料表會使用格式名稱與**MSmerge_conflict \_ _發行 \_ _** 項一文來命名，其中每個已發行的文章都有一個資料表。  
   
 `[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是 Null。  
   

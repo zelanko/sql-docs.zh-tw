@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_stop_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3e09efe938dabb031e1c57020f051cd5ab03e55a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6385f4dd17f4b3f04d145db7ce5a59169dbc4ccb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010575"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828218"
 ---
 # <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_syscollector_stop_collection_set
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @collection_set_id = ]*collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  這是收集組的唯一本機識別碼。 *collection_set_id*是**int** ，預設值為 Null。 如果*name*為 Null， *collection_set_id*必須有值。  
   
- [ @name = ]'*name*'  
+ [ @name =] '*name*'  
  這是收集組的名稱。 *名稱*是**sysname** ，預設值是 Null。 如果*collection_set_id*為 Null，*名稱*就必須有值。  
   
- [ @stop_collection_job = ]*stop_collection_job*  
+ [ @stop_collection_job =] *stop_collection_job*  
  如果收集組的收集作業正在執行，則指定將它停止。 *stop_collection_job*是**bit** ，預設值是1。  
   
  *stop_collection_job*僅適用于收集模式設定為快取的收集組。 如需詳細資訊，請參閱[sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  

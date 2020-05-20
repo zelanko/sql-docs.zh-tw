@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cycle_errorlog
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c15a36678bf0bd1ff5fc933eb79bff96b6780b60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 59f21f3ce4c69bf9cb0df0d2fbd078c7614bd1a7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108342"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826222"
 ---
 # <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_cycle_errorlog
  None  
   
 ## <a name="remarks"></a>備註  
- 每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟動時，目前的錯誤記錄檔都會重新命名為錯誤記錄檔 **。 1**;**錯誤**記錄檔。1變成錯誤記錄檔 **。 2**，錯誤記錄檔。 **2**會變成錯誤記錄檔 **。 3**，依此類推。 **sp_cycle_errorlog**可讓您迴圈錯誤記錄檔，而不需要停止和啟動伺服器。  
+ 每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時，目前的錯誤記錄檔都會重新命名為錯誤記錄檔 **。 1**;**錯誤**記錄檔。1變成錯誤記錄檔 **。 2**，錯誤記錄檔。 **2**會變成錯誤記錄檔 **。 3**，依此類推。 **sp_cycle_errorlog**可讓您迴圈錯誤記錄檔，而不需要停止和啟動伺服器。  
   
 ## <a name="permissions"></a>權限  
  **Sp_cycle_errorlog**的執行許可權僅限於**系統管理員（sysadmin** ）固定伺服器角色的成員。  

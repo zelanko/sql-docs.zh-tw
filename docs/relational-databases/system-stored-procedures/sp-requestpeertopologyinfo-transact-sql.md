@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_requestpeertopologyinfo
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d137706da49f666ce66abea52249796a0094c7e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 61439aeb9fd4a58d8b003473a4e55fa19ca06a36
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129656"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824324"
 ---
 # <a name="sp_requestpeertopologyinfo-transact-sql"></a>sp_requestpeertopologyinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @publication= ]「*發行*集」  
+ [ @publication =] '*發行*'  
  這是執行全拓撲狀態要求所針對的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
   
- [ @request_id= ]*request_id*  
+ [ @request_id =] *request_id*  
  這是指派給拓撲狀態要求的識別碼。 *request_id*是**int**，預設值是 Null。 [Sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)可以使用此識別碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  

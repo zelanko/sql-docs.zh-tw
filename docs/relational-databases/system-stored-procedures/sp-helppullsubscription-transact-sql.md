@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppullsubscription
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ce6fe81cc037e8e704758155aa302c61418ce65b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771439"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824483"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'`這是遠端伺服器的名稱。 *publisher*是**sysname**，預設值是**%**，它會傳回所有發行者的資訊。  
+`[ @publisher = ] 'publisher'`這是遠端伺服器的名稱。 *publisher*是**sysname**，預設值是 **%** ，它會傳回所有發行者的資訊。  
   
-`[ @publisher_db = ] 'publisher_db'`這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是**%**，它會傳回所有發行者資料庫。  
+`[ @publisher_db = ] 'publisher_db'`這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是 **%** ，它會傳回所有發行者資料庫。  
   
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是**%**，它會傳回所有發行集。 如果此參數等於 ALL，則只會傳回 independent_agent = **0**的提取訂閱。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是 **%** ，它會傳回所有發行集。 如果此參數等於 ALL，則只會傳回 independent_agent = **0**的提取訂閱。  
   
 `[ @show_push = ] 'show_push'`這是指是否要傳回所有發送訂閱。 *show_push*是**Nvarchar （5）**，預設值是 FALSE，不會傳回發送訂閱。  
   
@@ -52,7 +52,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**發行者**|**sysname**|發行者的名稱。|  
+|**publisher**|**sysname**|發行者的名稱。|  
 |**發行者資料庫**|**sysname**|發行者資料庫的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
 |**independent_agent**|**bit**|指出這個發行集是否有獨立的散發代理程式。|  
@@ -65,16 +65,16 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**update mode**|**tinyint**|允許的更新類型。|  
 |**distribution agent job_id**|**int**|散發代理程式的作業識別碼。|  
 |**enabled_for_synmgr**|**int**|是否能夠利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronization Manager 同步處理訂閱。|  
-|**subscription guid**|**binary(16)**|發行集訂閱版本的全域識別碼。|  
+|**訂用帳戶 guid**|**binary(16)**|發行集訂閱版本的全域識別碼。|  
 |**subid**|**binary(16)**|匿名訂閱的全域識別碼。|  
 |**immediate_sync**|**bit**|每次執行快照集代理程式時，是否要建立或重新建立同步處理檔案。|  
 |**發行者登入**|**sysname**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**發行者密碼**|**Nvarchar （524）**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
-|**publisher security_mode**|**int**|在發行者端實作的安全性模式：<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證<br /><br /> **2** = 同步處理觸發程式會使用靜態**sysservers**專案來執行遠端程序呼叫（RPC），而且必須在**sysservers**資料表中將*發行者*定義為遠端伺服器或連結的伺服器。|  
+|**publisher security_mode**|**int**|在發行者端實作的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證<br /><br /> **1** = Windows 驗證<br /><br /> **2** = 同步處理觸發程式會使用靜態**sysservers**專案來執行遠端程序呼叫（RPC），而且必須在**sysservers**資料表中將*發行者*定義為遠端伺服器或連結的伺服器。|  
 |**伺服器**|**sysname**|散發者的名稱。|  
 |**distributor_login**|**sysname**|用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**distributor_password**|**Nvarchar （524）**|用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
-|**distributor_security_mode**|**int**|在散發者端實作的安全性模式：<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
+|**distributor_security_mode**|**int**|在散發者端實作的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證<br /><br /> **1** = Windows 驗證|  
 |**ftp_address**|**sysname**|只是為了與舊版相容。|  
 |**ftp_port**|**int**|只是為了與舊版相容。|  
 |**ftp_login**|**sysname**|只是為了與舊版相容。|  
@@ -90,8 +90,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**last_sync_status**|**int**|訂閱狀態：<br /><br /> **0** = 所有作業都在等候啟動<br /><br /> **1** = 一或多個作業正在啟動<br /><br /> **2** = 所有作業都已成功執行<br /><br /> **3** = 至少有一項作業正在執行<br /><br /> **4** = 所有作業都已排程且閒置<br /><br /> **5** = 在上一次失敗之後，至少有一個作業嘗試執行<br /><br /> **6** = 至少有一項作業無法成功執行|  
 |**last_sync_summary**|**sysname**|上次同步處理結果的描述。|  
 |**last_sync_time**|**datetime**|更新訂閱資訊的時間。 這是 ISO 日期 (114) + ODBC 時間 (121) 的 UNICODE 字串。 格式為 yyyymmdd hh:mi:sss.mmm，其中 'yyyy' 是年份，'mm' 是月份，'dd' 是日期，'hh' 是小時，'mi' 是分鐘，'sss' 是秒鐘，'mmm' 是毫秒。|  
-|**job_login**|**nvarchar(512)**|這是用來執行散發代理程式的 Windows 帳戶，傳回的格式為*domain*\\*username*。|  
-|**job_password**|**sysname**|基於安全性理由，一律會傳回**\*\*\*\*\*\*\*\*"\***" 的值。|  
+|**job_login**|**nvarchar(512)**|這是用來執行散發代理程式的 Windows 帳戶，傳回的格式為*domain* \\ *username*。|  
+|**job_password**|**sysname**|基於安全性理由， **\*\*\*\*\*\*\*\*\*\*** 一律會傳回 "" 的值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

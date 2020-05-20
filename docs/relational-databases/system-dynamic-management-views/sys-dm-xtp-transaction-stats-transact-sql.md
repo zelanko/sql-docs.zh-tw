@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_transaction_stats dynamic management view
 ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 755b5f836b833512a122ad92e5cedbd7e938a4e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3e272d66fef1a6426e13cc6ab8ea72d3912003d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090067"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829004"
 ---
 # <a name="sysdm_xtp_transaction_stats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

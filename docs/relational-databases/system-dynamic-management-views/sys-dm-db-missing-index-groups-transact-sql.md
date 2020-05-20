@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_groups dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_groups dynamic management view
 ms.assetid: 9cc00acd-d83d-49f8-be72-5b2aebed246b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b0f075d32e366765e9491c8d03649fe54be7fdc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c92162cb78043b078e38dac63e22a3ca3267251c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096304"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828070"
 ---
 # <a name="sysdm_db_missing_index_groups-transact-sql"></a>sys.dm_db_missing_index_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

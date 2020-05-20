@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_namespaces catalog view
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ec58d18c874f8b0060aadb753330976aad259b3b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dde823a82557789f1f2c9142fcf91ca2335d8b6d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060443"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828076"
 ---
 # <a name="sysxml_schema_namespaces-transact-sql"></a>sys.xml_schema_namespaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

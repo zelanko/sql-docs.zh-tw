@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_threads dynamic management view
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8eeeaaf59934d6c3307641b6c93f110ab5738f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a95bd2d98f84c288662838e030961bd4a753cff3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982535"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829296"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "73982535"
   傳回在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之下執行的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業系統執行緒的清單。  
   
 > [!NOTE]  
->  若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_os_threads**的名稱。  
+>  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_os_threads**的名稱。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -51,8 +51,8 @@ ms.locfileid: "73982535"
 |stack_bytes_used|**int**|執行緒目前使用的位元組數。|  
 |affinity|**bigint**|這個執行緒正在執行的 CPU 遮罩。 這取決於**ALTER SERVER CONFIGURATION SET 進程親和性**語句所設定的值。 若是軟相似性，可能與排程器不同。|  
 |優先順序|**int**|這個執行緒的優先權值。|  
-|Locale|**int**|執行緒的快取地區設定 LCID。|  
-|Token|**varbinary(8)**|執行緒的快取模擬 Token 控制代碼。|  
+|地區設定|**int**|執行緒的快取地區設定 LCID。|  
+|權杖|**varbinary(8)**|執行緒的快取模擬 Token 控制代碼。|  
 |is_impersonating|**int**|指出這個執行緒是否使用 Win32 模擬。<br /><br /> 1 = 執行緒使用不同於處理序預設值的安全性認證。 這指出執行緒模擬的實體不是建立處理序的實體。|  
 |is_waiting_on_loader_lock|**int**|執行緒是否在等待載入程式鎖定的作業系統狀態。|  
 |fiber_data|**varbinary(8)**|在執行緒上執行的目前 Win32 Fiber。 這只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為輕量型共用的情況。|  
@@ -63,24 +63,24 @@ ms.locfileid: "73982535"
 |fiber_context_address|**varbinary(8)**|內部 Fiber 內容位址。 這只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為輕量型共用的情況。|  
 |self_address|**varbinary(8)**|內部一致性指標。|  
 |processor_group|**smallint**|**適用對象**：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更新版本。<br /><br /> 處理器群組識別碼。|  
-|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="permissions"></a>權限
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
+在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
 
 ## <a name="notes-on-linux-version"></a>Linux 版本的注意事項
 
-由於 SQL 引擎在 Linux 中的運作方式，部分資訊與 Linux 診斷資料並不相符。 例如`os_thread_id` ，不符合類似`ps` `top`或 procfs （/proc/`pid`）等工具的結果。  這是因為平臺抽象層（SQLPAL），是 SQL Server 元件與作業系統之間的一層。
+由於 SQL 引擎在 Linux 中的運作方式，部分資訊與 Linux 診斷資料並不相符。 例如，不 `os_thread_id` 符合類似 `ps` `top` 或 procfs （/proc/）等工具的結果 `pid` 。  這是因為平臺抽象層（SQLPAL），是 SQL Server 元件與作業系統之間的一層。
 
 ## <a name="examples"></a>範例  
- 在啟動時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會啟動執行緒，然後使工作者與這些執行緒產生關聯。 不過，外部元件 (例如擴充預存程序) 可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之下啟動執行緒。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並沒有這些執行緒的控制權。 dm_os_threads 可以提供在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]進程中取用資源之惡意執行緒的相關資訊。  
+ 在啟動時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會啟動執行緒，然後使工作者與這些執行緒產生關聯。 不過，外部元件 (例如擴充預存程序) 可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之下啟動執行緒。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並沒有這些執行緒的控制權。 dm_os_threads 可以提供在進程中取用資源之惡意執行緒的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  下列查詢可用來尋找正在執行不是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動之執行緒的工作者，以及執行使用的時間。  
   
 > [!NOTE]
->  為求精簡，下列查詢在 `*` 陳述式中使用星號 (`SELECT`)。 您應該避免使用星號 (*)，特別是針對目錄檢視、動態管理檢視以及系統資料表值函式。 未來的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]升級和版本可能會新增資料行，並將資料行順序變更為這些 views 和函數。 這些變更可能會中斷應用程式所預期的特定順序和資料行數目。  
+>  為求精簡，下列查詢在 `*` 陳述式中使用星號 (`SELECT`)。 您應該避免使用星號 (*)，特別是針對目錄檢視、動態管理檢視以及系統資料表值函式。 未來的升級和版本 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會新增資料行，並將資料行順序變更為這些 views 和函數。 這些變更可能會中斷應用程式所預期的特定順序和資料行數目。  
   
 ```  
 SELECT *  

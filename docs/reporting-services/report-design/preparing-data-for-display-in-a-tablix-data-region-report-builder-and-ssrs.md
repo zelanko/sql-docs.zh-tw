@@ -30,7 +30,7 @@ ms.locfileid: "77082397"
 =IIF(Fields!Size.Value IS NOTHING,"Null",Fields!Size.Value)  
 ```  
   
- 如需使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料來源擷取資料前排除資料中 Null 值的詳細資訊，請參閱 [NULL 和 UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)。  
+ 如需使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源擷取資料前排除資料中 Null 值的詳細資訊，請參閱 [NULL 和 UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)。  
   
 ## <a name="handling-null-field-names"></a>處理 Null 欄位名稱  
  只要欄位本身存在於查詢結果集中，就可以在運算式中測試 Null 值。 您可以從自訂程式碼中，測試欄位本身是否出現在執行階段從資料來源傳回的集合欄位中。 如需詳細資訊，請參閱[資料集 Fields 集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)。  

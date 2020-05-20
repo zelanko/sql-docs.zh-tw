@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistributor_password
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3715bfacd1a94f588992d7e6832814f50c076d1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0261465c04ad7f56dc14ca7e5530e23d8eac4a54
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768896"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829640"
 ---
 # <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

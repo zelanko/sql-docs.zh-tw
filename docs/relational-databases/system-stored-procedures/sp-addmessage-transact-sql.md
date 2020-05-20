@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d040fa0ccfe9b962f8847db0a841b95a534326fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c046d562164e47ed72580801196756714547755e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531038"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820710"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 `[ @lang = ] 'language'`這是此訊息的語言。 *language*是**sysname** ，預設值是 Null。 因為多個語言可以安裝在同一部伺服器上，所以*language*會指定要在其中寫入每個訊息的語言。 省略*language*時，語言是會話的預設語言。  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }`這是指訊息發生時是否要寫入 Windows 應用程式記錄檔。 with_log 是**Varchar （5）** ，預設值是 FALSE。 ** \@ ** 如果是 TRUE，錯誤一律會寫入 Windows 應用程式記錄檔中。 如果是 FALSE，錯誤就不一定會寫入 Windows 應用程式記錄檔中，但隨著錯誤的產生方式而不同，也可能會寫入。 只有**系統管理員（sysadmin** ）伺服器角色的成員可以使用此選項。  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }`這是指訊息發生時是否要寫入 Windows 應用程式記錄檔。 ** \@ with_log**是**Varchar （5）** ，預設值是 FALSE。 如果是 TRUE，錯誤一律會寫入 Windows 應用程式記錄檔中。 如果是 FALSE，錯誤就不一定會寫入 Windows 應用程式記錄檔中，但隨著錯誤的產生方式而不同，也可能會寫入。 只有**系統管理員（sysadmin** ）伺服器角色的成員可以使用此選項。  
   
 > [!NOTE]  
 >  如果訊息寫入 Windows 應用程式記錄檔中，它也會寫入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤記錄檔中。  

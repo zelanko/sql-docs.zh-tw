@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_properties
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 274e801bfb8e627564f5586574c16ecd916e9859
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21007e66d8f193ce8e2a166e1615619be409cb9d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910717"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828012"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |rows_sampled|**bigint**|針對統計資料計算進行取樣的資料列總數。|  
 |steps|**int**|長條圖中的步驟數。 如需詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。|  
 |unfiltered_rows|**bigint**|套用篩選運算式 (針對篩選的統計資料) 之前，資料表中的資料列總數。 如果統計資料未經過篩選，unfiltered_row 就會等於 rows 資料行中傳回的值。|  
-|modification_counter|**bigint**|自從上次更新統計資料以來，前端統計資料資料行 (用以建置長條圖的資料行) 的總修改次數。<br /><br /> 記憶體優化資料表：啟動[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和在此[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]資料行中包含：自從上次更新統計資料或重新開機資料庫之後，資料表的修改總數。|  
+|modification_counter|**bigint**|自從上次更新統計資料以來，前端統計資料資料行 (用以建置長條圖的資料行) 的總修改次數。<br /><br /> 記憶體優化資料表：啟動 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 此資料行中包含：自從上次更新統計資料或重新開機資料庫之後，資料表的修改總數。|  
 |persisted_sample_percent|**float**|使用於未明確指定取樣百分比之統計資料更新的保存取樣百分比。 如果值為零，表示這個統計資料未設定保存取樣百分比。<br /><br /> **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="remarks"></a><a name="Remarks"></a>備註  
@@ -77,7 +77,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
 ## <a name="examples"></a>範例  
 
 ### <a name="a-simple-example"></a>A. 簡單範例
-下列範例會傳回 AdventureWorks 資料庫中`Person.Person`資料表的統計資料。
+下列範例會傳回 `Person.Person` AdventureWorks 資料庫中資料表的統計資料。
 
 ```sql
 SELECT * FROM sys.dm_db_stats_properties (object_id('Person.Person'), 1);

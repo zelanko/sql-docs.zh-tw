@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpullsubscription_agent
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ea558eafb665538b90cc4d9e41d16166dd9475c5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028947"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820709"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`這是在同步處理時，連接到訂閱者時所要使用的安全性模式。 *subscriber_security_mode*是**int，** 預設值是 Null。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 **1**指定 Windows 驗證。  
+`[ @subscriber_security_mode = ] subscriber_security_mode`這是在同步處理時，連接到訂閱者時所要使用的安全性模式。 *subscriber_security_mode*是**int，** 預設值是 Null。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 **1**指定 Windows 驗證。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 散發代理程式一律是利用 Windows 驗證來連接到本機訂閱者。 如果為這個參數指定了 Null 或**1**以外的值，則會傳回警告訊息。  
@@ -114,7 +114,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @distribution_db = ] 'distribution_db'`這是散發資料庫的名稱。 *distribution_db*是**sysname**，預設值是 Null。  
   
-`[ @distributor_security_mode = ] distributor_security_mode`這是在同步處理時，連接到散發者時所要使用的安全性模式。 *distributor_security_mode*是**int**，預設值是**1**。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 **1**指定 Windows 驗證。  
+`[ @distributor_security_mode = ] distributor_security_mode`這是在同步處理時，連接到散發者時所要使用的安全性模式。 *distributor_security_mode*是**int**，預設值是**1**。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 **1**指定 Windows 驗證。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -165,7 +165,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**1** (預設值)|單次|  
 |**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小時|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是**1**。  
   
@@ -181,7 +181,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password`已不再支援設定*encrypted_distributor_password* 。 嘗試將此**位**參數設定為**1**將會導致錯誤。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`這是指是否可以透過[!INCLUDE[msCoName](../../includes/msconame-md.md)]同步處理管理員來同步處理訂閱。 *enabled_for_syncmgr*是**Nvarchar （5）**，預設值是 FALSE。 如果**為 false**，則表示訂閱未向同步處理管理員註冊。 若**為 true**，則會使用同步處理管理員註冊訂閱，而且可以在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]不啟動的情況下進行同步處理。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`這是指是否可以透過同步處理管理員來同步處理訂閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 *enabled_for_syncmgr*是**Nvarchar （5）**，預設值是 FALSE。 如果**為 false**，則表示訂閱未向同步處理管理員註冊。 若**為 true**，則會使用同步處理管理員註冊訂閱，而且可以在不啟動的情況下進行同步處理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 `[ @ftp_address = ] 'ftp_address'`僅供回溯相容性之用。  
   

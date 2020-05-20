@@ -19,22 +19,22 @@ helpviewer_keywords:
 - sys.dm_exec_external_operations management view
 - dm_exec_external_operations management view
 ms.assetid: d268217a-85b8-4b7f-9cd1-87865eba2be1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d410afc256f0a1c12694f826bc73570cfee84172
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b45bbaad37807e7ead860a9993648ee1e8c87315
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097782"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821223"
 ---
 # <a name="sysdm_exec_external_operations-transact-sql"></a>sys.databases dm_exec_external_operations （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   捕捉外部 PolyBase 作業的相關資訊。  
   
-|資料行名稱|資料類型|描述|範圍|  
+|資料行名稱|資料類型|說明|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|與 PolyBase 查詢相關聯的唯一查詢識別碼|請參閱[dm_exec_requests &#40;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的識別碼&#41;|  
 |step_index|**int**|查詢步驟的索引|請參閱 sys.databases 中的 step_index [dm_exec_distributed_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  

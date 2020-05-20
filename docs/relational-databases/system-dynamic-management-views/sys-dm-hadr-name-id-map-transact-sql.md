@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_name_id_map dynamic management view
 ms.assetid: e07bb8a9-37de-4a39-a257-950d7c3ae8fb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4fc446efc410ff13d5697c7ab195e3e3895b4839
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ef571a14c0d4679930f04ed0353231ba5a0c44aa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900426"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827936"
 ---
 # <a name="sysdm_hadr_name_id_map-transact-sql"></a>sys.dm_hadr_name_id_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  顯示目前實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已聯結至三個唯一識別碼之 Always On 可用性群組的對應：可用性群組識別碼、WSFC 資源識別碼和 WSFC 群組識別碼。 此對應的目的是要處理重新命名 WSFC 資源/群組的案例。  
+  顯示目前實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已聯結至三個唯一識別碼之 Always On 可用性群組的對應：可用性群組識別碼、wsfc 資源識別碼和 Wsfc 群組識別碼。 此對應的目的是要處理重新命名 WSFC 資源/群組的案例。  
    
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

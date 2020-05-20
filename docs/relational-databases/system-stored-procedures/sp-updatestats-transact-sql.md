@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatestats
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c00bdd453bc4d1bf467b37aca3639eb43f55e022
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e28564c44dc226054f0b08e8ba75fe36509cf064
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085795"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808919"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-針對`UPDATE STATISTICS`目前資料庫中的所有使用者定義和內部資料表執行。  
+`UPDATE STATISTICS`針對目前資料庫中的所有使用者定義和內部資料表執行。  
   
-如需的詳細`UPDATE STATISTICS`資訊，請參閱[&#40;TRANSACT-SQL&#41;更新統計資料](../../t-sql/statements/update-statistics-transact-sql.md)。 如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
+如需的詳細資訊 `UPDATE STATISTICS` ，請參閱[&#40;Transact-sql&#41;更新統計資料](../../t-sql/statements/update-statistics-transact-sql.md)。 如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
     
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 `[ @resample = ] 'resample'`指定**sp_updatestats**將使用[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)語句的 [重新取樣] 選項。 如果未指定 [重新**取樣**]， **sp_updatestats**會使用預設取樣來更新統計資料。 重新**取樣**是**Varchar （8）** ，預設值是 NO。  
   
 ## <a name="remarks"></a>備註  
- **sp_updatestats**會`UPDATE STATISTICS`藉由在資料庫`ALL`中的所有使用者定義和內部資料表上指定關鍵字來執行。 sp_updatestats 會顯示指出其進度的訊息。 當更新完成時，它會報告已更新所有資料表的統計資料。  
+ **sp_updatestats**會藉 `UPDATE STATISTICS` 由 `ALL` 在資料庫中的所有使用者定義和內部資料表上指定關鍵字來執行。 sp_updatestats 會顯示指出其進度的訊息。 當更新完成時，它會報告已更新所有資料表的統計資料。  
   
 sp_updatestats 會針對停用的非叢集索引更新統計資料，但不會針對停用的叢集索引更新統計資料。  
   
@@ -73,7 +73,7 @@ EXEC sp_updatestats;
 利用[自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解決方案，為一或多個資料庫自動管理索引重組以及統計資料更新。 這項程序會根據索引分散程度與其他參數，自動選擇要進行重建或是重新組織索引，並以線性閾值更新統計資料。
 
 ## <a name="see-also"></a>另請參閱  
- [ALTER DATABASE SET 選項 &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [&#40;Transact-sql&#41;建立統計資料](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   

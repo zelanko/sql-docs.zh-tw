@@ -17,14 +17,14 @@ helpviewer_keywords:
 - xe
 - sys.dm_xe_session_object_columns dynamic management view
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 039c3b0be4feab53215bae22836b7fd5be4ecfb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 980aa0c4c7d82fcf7b58d88fd6e9f068627d9dca
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090227"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829033"
 ---
 # <a name="sysdm_xe_session_object_columns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

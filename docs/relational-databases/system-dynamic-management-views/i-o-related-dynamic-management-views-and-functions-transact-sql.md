@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dynamic management views [SQL Server]
 - dynamic management objects [SQL Server], I/O
 ms.assetid: f876d32b-c07f-4ccc-a691-5e580bc50c40
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b864d98ce3c50c0cf858eb1ede9adb5dc389ee9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6a6cf76aa0d08d72cef9aef0943a467c1f97e66d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130704"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829464"
 ---
 # <a name="io-related-dynamic-management-views-and-functions-transact-sql"></a>I/O 相關的動態管理檢視和函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

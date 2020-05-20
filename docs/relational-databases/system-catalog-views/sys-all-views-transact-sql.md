@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.all_views catalog view
 ms.assetid: d8829213-fce2-41c6-9ab2-aaab5836c941
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8931b3885df642fc4fbd076b18c4375a48c2b32b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 202bc71241082047a2f406a9575ada8601cf09c2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001307"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821991"
 ---
 # <a name="sysall_views-transact-sql"></a>sys.all_views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

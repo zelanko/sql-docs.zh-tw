@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771332"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824053"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,23 +64,23 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是**%**。 如果未指定發行集，則會影響所有*發行*集。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是 **%** 。 如果未指定發行集，則會影響所有*發行*集。  
   
-`[ @article = ] 'article'`這是發行項的名稱。 對發行集而言，它必須是唯一的。 *article*發行項**sysname** **%** 是 sysname，預設值是。 如果未指定發行項 *，則會*影響所有發行項。  
+`[ @article = ] 'article'`這是發行項的名稱。 對發行集而言，它必須是唯一的。 發行*項是* **sysname**，預設值是 **%** 。 如果未指定發行項 *，則會*影響所有發行項。  
   
-`[ @subscriber = ] 'subscriber'`這是要變更狀態的訂閱者名稱。 *訂閱者*是**sysname**，預設值是**%**。 如果未指定「*訂閱者*」，則會針對指定之發行項的所有訂閱者變更狀態。  
+`[ @subscriber = ] 'subscriber'`這是要變更狀態的訂閱者名稱。 *訂閱者*是**sysname**，預設值是 **%** 。 如果未指定「*訂閱者*」，則會針對指定之發行項的所有訂閱者變更狀態。  
   
 `[ @status = ] 'status'`這是**syssubscriptions**資料表中的訂用帳戶狀態。 *狀態*為**sysname**，沒有預設值，而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**作用中**|已同步處理訂閱者，正在接收資料。|  
+|**active**|已同步處理訂閱者，正在接收資料。|  
 |**非使用**|訂閱者項目存在，但不含訂閱。|  
 |**subscribed**|訂閱者在要求資料，但尚未同步處理。|  
   
 `[ @previous_status = ] 'previous_status'`這是訂用帳戶的先前狀態。 *previous_status*是**sysname**，預設值是 Null。 這個參數可讓您變更目前具有該狀態的任何訂用帳戶，藉此允許一組特定訂用帳戶的群組函式（例如，將所有作用中的訂閱設定回**訂閱**）。  
   
-`[ @destination_db = ] 'destination_db'`這是目的地資料庫的名稱。 *destination_db*是**sysname**，預設值是**%**。  
+`[ @destination_db = ] 'destination_db'`這是目的地資料庫的名稱。 *destination_db*是**sysname**，預設值是 **%** 。  
   
 `[ @frequency_type = ] frequency_type`這是散發工作的排程頻率。 *frequency_type*是**int**，預設值是 Null。  
   
@@ -106,7 +106,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**1**|單次|  
 |**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小時|  
 |NULL (預設值)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是 Null。  
@@ -135,7 +135,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  遠端代理程式啟用已被取代，不再受到支援。 支援這個參數的目的，只是為了與舊版的指令碼相容。 將*remote_agent_server_name*設定為任何非 Null 值都會產生錯誤。  
   
-`[ @dts_package_name = ] 'dts_package_name'`指定資料轉換服務（DTS）封裝的名稱。 *dts_package_name*是**sysname**，預設值是 Null。 例如，針對名為**DTSPub_Package**的封裝，您會`@dts_package_name = N'DTSPub_Package'`指定。  
+`[ @dts_package_name = ] 'dts_package_name'`指定資料轉換服務（DTS）封裝的名稱。 *dts_package_name*是**sysname**，預設值是 Null。 例如，針對名為**DTSPub_Package**的封裝，您會指定 `@dts_package_name = N'DTSPub_Package'` 。  
   
 `[ @dts_package_password = ] 'dts_package_password'`指定封裝上的密碼。 *dts_package_password*是**sysname** ，預設值是 Null，它會指定 password 屬性保持不變。  
   
@@ -148,10 +148,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @distribution_job_name = ] 'distribution_job_name'`這是散發作業的名稱。 *distribution_job_name*是**sysname**，預設值是 Null。  
   
-`[ @publisher = ] 'publisher'`指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者上變更發行項屬性時，不應使用「發行者」。  
+>  在發行者上變更發行項屬性時，不應使用「*發行者*」 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

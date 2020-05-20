@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 67aeb7243b52ef4675b9effea27d3c81c1078538
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768952"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829618"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**5**|Thursday|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|Day|  
+|**8**|天|  
 |**9**|工作日|  
 |**10**|週末|  
 |NULL (預設值)||  
@@ -94,7 +94,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**1**|單次|  
 |**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小時|  
 |NULL (預設值)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是 Null。  
@@ -120,7 +120,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day`這是排程停止合併代理程式的當日時間，格式為 HHMMSS。 *active_end_time_of_day*是**int**，預設值是 Null。  
   
-`[ @job_login = ] 'job_login'`這是[!INCLUDE[msCoName](../../includes/msconame-md.md)]使用參數化資料列篩選器來產生訂閱的快照集時，用來執行快照集代理程式的 Windows 帳戶。 *job_login*是**Nvarchar （257）**，預設值是 Null。  
+`[ @job_login = ] 'job_login'`這是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 使用參數化資料列篩選器來產生訂閱的快照集時，用來執行快照集代理程式的 Windows 帳戶。 *job_login*是**Nvarchar （257）**，預設值是 Null。  
   
 `[ @job_password = ] 'job_password'`這是使用參數化資料列篩選器來產生訂閱的快照集時，用來執行快照集代理程式之 Windows 帳戶的密碼。 *job_password*是**Nvarchar （257）**，預設值是 Null。  
   

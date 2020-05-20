@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setstatus
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1e6d3ed9c31307fb032d4ccc3cc950565c39c52c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98eaa39475b58c7fad5b20c4f6a65101d33b103d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095928"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809672"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 |**9**|指定的追蹤控制代碼無效。|  
 |**十三**|記憶體用完。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
   
- 如果追蹤已在指定的狀態中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]則會傳回**0**。  
+ 如果追蹤已在指定的狀態中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則會傳回**0**。  
   
 ## <a name="remarks"></a>備註  
  所有 SQL 追蹤預存程式的參數（**sp_trace_xx**）都是嚴格類型。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 56468767e60d49d0fc92864cd613a4f36e84132a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 65ec62997eb25564e19696a8df2895b980d728be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67950521"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827487"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  指定使用於 OPENXML 中之資料列和資料行 XPath 運算式中的命名空間宣告。 *xpath_namespaces*是文字參數： **char**、 **Nchar**、 **Varchar**、 **Nvarchar**、 **text**、 **Ntext**或**xml**。  
   
- 預設值為** \<root xmlns： mp = "urn：架構-microsoft-com： xml-xml-metaprop" >**。 *xpath_namespaces*會藉由格式正確的 XML 檔，提供 OPENXML 中 xpath 運算式中使用之前置詞的命名空間 uri。 *xpath_namespaces*宣告必須用來參考命名空間**urn：架構-microsoft-com： xml-xml-metaprop**; 的前置詞。這會提供有關已剖析之 XML 元素的中繼資料。 雖然您可以使用這個技巧來重新定義中繼屬性命名空間的命名空間前置詞，但不會失去這個命名空間。 前置詞**mp**仍然適用于**urn：架構-microsoft-com： xml-xml-metaprop** ，即使*xpath_namespaces*不含這類宣告。  
+ 預設值為** \< root xmlns： mp = "urn：架構-microsoft-com： xml-xml-metaprop" >**。 *xpath_namespaces*會藉由格式正確的 XML 檔，提供 OPENXML 中 xpath 運算式中使用之前置詞的命名空間 uri。 *xpath_namespaces*宣告必須用來參考命名空間**urn：架構-microsoft-com： xml-xml-metaprop**; 的前置詞。這會提供有關已剖析之 XML 元素的中繼資料。 雖然您可以使用這個技巧來重新定義中繼屬性命名空間的命名空間前置詞，但不會失去這個命名空間。 前置詞**mp**仍然適用于**urn：架構-microsoft-com： xml-xml-metaprop** ，即使*xpath_namespaces*不含這類宣告。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0（成功）或 >0 （失敗）  
@@ -127,7 +127,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 ```  
   
 ### <a name="c-specifying-a-namespace-uri"></a>C. 指定命名空間 URI  
- 下列範例會傳回以輸入形式提供之 XML 文件新建內部表示法的控制代碼。 的呼叫會`sp_xml_preparedocument`保留中繼`mp`屬性命名空間對應的前置詞，並`xyz`將對應前置詞加入`urn:MyNamespace`命名空間。  
+ 下列範例會傳回以輸入形式提供之 XML 文件新建內部表示法的控制代碼。 的呼叫會 `sp_xml_preparedocument` 保留中繼屬性 `mp` 命名空間對應的前置詞，並將 `xyz` 對應前置詞加入命名空間 `urn:MyNamespace` 。  
   
 ```  
 DECLARE @hdoc int;  

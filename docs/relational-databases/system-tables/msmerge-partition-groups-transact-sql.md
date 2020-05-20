@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_partition_groups system table
 ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 362735d33f835c7b66e4f0994fd5c4ff6f084f15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 36dcdf9fbe003daa110c38a9e3f10650af422075
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68102187"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827226"
 ---
 # <a name="msmerge_partition_groups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

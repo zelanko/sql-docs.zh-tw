@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.databases catalog view
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b9b5147621fb459e419a29e0a31f9ad9381eb77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0cc6509f3bdd5a7ca64dc739bf4db24dc96c709
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77147396"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828174"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "77147396"
 
 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的每個資料庫，各包含一個資料列。  
   
-如果資料庫`ONLINE`不是， `AUTO_CLOSE`或設定為`ON` ，且資料庫已關閉，則某些資料行的值可能是。 `NULL` 如果資料庫為`OFFLINE`，低許可權的使用者就看不到對應的資料列。 若要在資料庫為`OFFLINE`時查看對應的資料列，使用者至少必須擁有`ALTER ANY DATABASE`伺服器層級許可權，或`CREATE DATABASE` `master`資料庫中的許可權。  
+如果資料庫不是 `ONLINE` ，或 `AUTO_CLOSE` 設定為， `ON` 且資料庫已關閉，則某些資料行的值可能是 `NULL` 。 如果資料庫為 `OFFLINE` ，低許可權的使用者就看不到對應的資料列。 若要在資料庫為時查看對應的資料列 `OFFLINE` ，使用者至少必須擁有 `ALTER ANY DATABASE` 伺服器層級許可權，或 `CREATE DATABASE` 資料庫中的許可權 `master` 。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -42,14 +42,14 @@ ms.locfileid: "77147396"
 |**source_database_id**|**int**|Non-NULL = 這個資料庫快照集的來源資料庫識別碼。<br /> NULL = 不是資料庫快照集。|  
 |**owner_sid**|**Varbinary （85）**|資料庫外部擁有者的 SID (安全性識別碼)，亦即在伺服器註冊所用的識別碼。 如需有關誰可以擁有資料庫的詳細資訊，請參閱[ALTER authorization](../../t-sql/statements/alter-authorization-transact-sql.md)的**alter authorization for** database 一節。|  
 |**create_date**|**datetime**|資料庫建立或重新命名的日期。 對於**tempdb**，此值會在每次伺服器重新開機時變更。|  
-|**compatibility_level**|**tinyint**|對應於與行為相容之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的整數：<br /> **值**&#124;**適用**于<br /> 70 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 80 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 90 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /> 100 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 110 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 120 &#124; [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]和更新版本和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 130 &#124; [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更新版本<br /> 140 &#124; [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]和更新版本 <br /> 150 &#124;[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]  |  
+|**compatibility_level**|**tinyint**|對應於與行為相容之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的整數：<br /> **值**&#124;**適用**于<br /> 70 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 80 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 90 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /> 100 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 110 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 120 &#124; [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 130 &#124; [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本<br /> 140 &#124; [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和更新版本 <br /> 150 &#124;[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]  |  
 |**collation_name**|**sysname**|資料庫的定序。 它是資料庫中的預設定序。<br /> NULL = 資料庫不在線上，或者 AUTO_CLOSE 設為 ON 且資料庫已關閉。|  
 |**user_access**|**tinyint**|使用者存取設定：<br /> 0 = 指定了 MULTI_USER<br /> 1 = 指定了 SINGLE_USER<br /> 2 = 指定了 RESTRICTED_USER|  
 |**user_access_desc**|**nvarchar(60)**|使用者存取設定的描述。|  
 |**is_read_only**|**bit**|1 = 資料庫是 READ_ONLY<br /> 0 = 資料庫是 READ_WRITE|  
 |**is_auto_close_on**|**bit**|1 = AUTO_CLOSE 是 ON<br /> 0 = AUTO_CLOSE 是 OFF|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK 是 ON<br /> 0 = AUTO_SHRINK 是 OFF|  
-|**state**|**tinyint**|**值 &#124; 適用于**<br /> 0 = ONLINE  <br /> 1 = RESTORING <br /> 2 = 復原 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本<br /> 3 = RECOVERY_PENDING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本<br /> 4 = SUSPECT <br /> 5 = 緊急 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本<br /> 6 = 離線 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本<br /> 7 = 複製 &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **注意：** 針對 Always On 資料庫，請查詢`database_state` sys.databases `database_state_desc`的或資料行[dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。|  
+|**state**|**tinyint**|**值 &#124; 適用于**<br /> 0 = ONLINE  <br /> 1 = RESTORING <br /> 2 = 復原 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本<br /> 3 = RECOVERY_PENDING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本<br /> 4 = SUSPECT <br /> 5 = 緊急 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本<br /> 6 = 離線 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本<br /> 7 = 複製 &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **注意：** 針對 Always On 資料庫，請查詢 `database_state` sys.databases 的或資料 `database_state_desc` 行[dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。|  
 |**state_desc**|**nvarchar(60)**|資料庫狀態的描述。 請參閱 state。|  
 |**is_in_standby**|**bit**|還原記錄的資料庫是唯讀資料庫。|  
 |**is_cleanly_shutdown**|**bit**|1 = 資料庫完全關閉；不必在啟動時復原<br /> 0 = 資料庫並未完全關閉；必須在啟動時復原|  
@@ -89,23 +89,23 @@ ms.locfileid: "77147396"
 |**is_sync_with_backup**|**bit**|1 = 資料庫是標示為利用備份進行複寫同步處理<br /> 0 = 不是標示為利用備份進行複寫同步處理|  
 |**service_broker_guid**|**uniqueidentifier**|這個資料庫的 Service Broker 識別碼。 它是作為路由表中目標的 **broker_instance**。|  
 |**is_broker_enabled**|**bit**|1 = 這個資料庫中的 Broker，目前正在收送訊息。<br /> 0 = 所有傳送的訊息，都會停留在傳輸佇列中，而收到的訊息並不會置於這個資料庫的佇列中。<br /> 依預設，還原或附加的資料庫都會停用 Broker。 但資料庫鏡像例外，它會在容錯移轉之後啟用 Broker。|  
-|**log_reuse_wait**|**tinyint**|交易記錄檔空間的重複使用目前正在等候最後一個檢查點的下列其中一項。 如需這些值的詳細說明，請參閱[交易記錄](../../relational-databases/logs/the-transaction-log-sql-server.md)。<br /> **值 &#124; 適用于**<br /> 0 = 無<br />   1 = 檢查點（當資料庫使用復原模式且具有記憶體優化資料檔案群組時，您應該會看到資料`log_reuse_wait`行指出檢查點或 xtp_checkpoint） &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本<br />  2 = 記錄備份 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本<br />  3 = Active backup 或 restore &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本<br />  4 = 使用中交易[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] &#124; 和更新版本<br />  5 = 資料庫鏡像 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本<br />  6 = 複寫 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本<br />  7 = &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本建立資料庫快照集<br />  8 = 記錄掃描 <br />  9 = Always On 可用性群組次要複本正在將這個資料庫的交易記錄檔記錄套用到對應的次要資料庫。 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本<br />  9 = 其他（暫時性） &#124; 最多，包括[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]<br />  10 = 僅供內部使用 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本<br />  11 = 僅供內部使用 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本<br /> 12 = 僅供內部使用 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本<br />13 = 最舊的[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]頁面 &#124; 和更新版本<br /> 14 = 其他 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本<br />  16 = XTP_CHECKPOINT （當資料庫使用復原模式而且具有記憶體優化資料檔案群組時，您應該會看到 [log_reuse_wait] 欄指出檢查點或 xtp_checkpoint。） &#124; [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]和更新版本|  
+|**log_reuse_wait**|**tinyint**|交易記錄檔空間的重複使用目前正在等候最後一個檢查點的下列其中一項。 如需這些值的詳細說明，請參閱[交易記錄](../../relational-databases/logs/the-transaction-log-sql-server.md)。<br /> **值 &#124; 適用于**<br /> 0 = 無<br />   1 = 檢查點（當資料庫使用復原模式且具有記憶體優化資料檔案群組時，您應該會看到資料 `log_reuse_wait` 行指出檢查點或 xtp_checkpoint） &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本<br />  2 = 記錄備份 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本<br />  3 = Active backup 或 restore &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本<br />  4 = 使用中交易 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本<br />  5 = 資料庫鏡像 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本<br />  6 = 複寫 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本<br />  7 = &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本建立資料庫快照集<br />  8 = 記錄掃描 <br />  9 = Always On 可用性群組次要複本正在將這個資料庫的交易記錄檔記錄套用到對應的次要資料庫。 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本<br />  9 = 其他（暫時性） &#124; 最多，包括[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]<br />  10 = 僅供內部使用 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本<br />  11 = 僅供內部使用 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本<br /> 12 = 僅供內部使用 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本<br />13 = 最舊的頁面 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本<br /> 14 = 其他 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本<br />  16 = XTP_CHECKPOINT （當資料庫使用復原模式而且具有記憶體優化資料檔案群組時，您應該會看到 [log_reuse_wait] 欄指出檢查點或 xtp_checkpoint。） &#124; [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本|  
 |**log_reuse_wait_desc**|**nvarchar(60)**|描述交易記錄空間的重複利用正等待最後一個檢查點。|  
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION 是 ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION 是 OFF|  
 |**is_cdc_enabled**|**bit**|1 = 資料庫已啟用異動資料擷取。 如需詳細資訊，請參閱[sp_cdc_enable_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)。|  
-|**is_encrypted**|**bit**|指出資料庫是否已加密（反映上次使用`ALTER DATABASE SET ENCRYPTION`子句所設定的狀態）。 可以是下列值之一：<br /> 1 = 已加密<br /> 0 = 未加密<br /> 如需資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。<br /> 如果資料庫正在進行解密， `is_encrypted`會顯示值為0。 您可以使用 [ [dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)動態管理] 視圖來查看加密程式的狀態。|  
-|**is_honor_broker_priority_on**|**bit**|指出資料庫是否接受交談優先權（反映上次使用`ALTER DATABASE SET HONOR_BROKER_PRIORITY`子句所設定的狀態）。 可以是下列值之一：<br /> 1 = HONOR_BROKER_PRIORITY 為 ON<br /> 0 = HONOR_BROKER_PRIORITY 為 OFF<br /> 根據預設，還原或附加的資料庫會有 broker 優先權。|  
+|**is_encrypted**|**bit**|指出資料庫是否已加密（反映上次使用子句所設定的狀態 `ALTER DATABASE SET ENCRYPTION` ）。 可以是下列值之一：<br /> 1 = 已加密<br /> 0 = 未加密<br /> 如需資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。<br /> 如果資料庫正在進行解密，會 `is_encrypted` 顯示值為0。 您可以使用 [ [dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)動態管理] 視圖來查看加密程式的狀態。|  
+|**is_honor_broker_priority_on**|**bit**|指出資料庫是否接受交談優先權（反映上次使用子句所設定的狀態 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` ）。 可以是下列值之一：<br /> 1 = HONOR_BROKER_PRIORITY 為 ON<br /> 0 = HONOR_BROKER_PRIORITY 為 OFF<br /> 根據預設，還原或附加的資料庫會有 broker 優先權。|  
 |**replica_id**|**uniqueidentifier**|資料庫正在參與之可用性群組 (如果有) 的本機 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]可用性複本的唯一識別碼。<br /> NULL = 資料庫不是可用性群組中可用性複本的一部分。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|資料庫正在參與之 Always On 可用性群組（如果有的話）內資料庫的唯一識別碼。 對於主要複本上的這個資料庫和資料庫已加入可用性群組的每個次要複本而言， **group_database_id**都相同。<br /> NULL = 資料庫不是任何可用性群組中可用性複本的一部分。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|對應到這個資料庫之資源集區的識別碼。 這個資源集區會控制可供這個資料庫中記憶體最佳化資料表使用的記憶體總量。<br /> **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本|  
-|**default_language_lcid**|**smallint**|表示自主資料庫預設語言的地區設定識別碼 (LCID)。<br /> **注意：** 做為的 [[設定預設語言伺服器] 設定選項](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)的`sp_configure`功能。 非自主資料庫的這個值是**null** 。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**default_language_lcid**|**smallint**|表示自主資料庫預設語言的地區設定識別碼 (LCID)。<br /> **注意：** 做為的 [[設定預設語言伺服器] 設定選項](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)的功能 `sp_configure` 。 非自主資料庫的這個值是**null** 。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_language_name**|**nvarchar(128)**|表示自主資料庫的預設語言。<br /> 非自主資料庫的這個值是**null** 。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**default_fulltext_language_lcid**|**int**|表示自主資料庫預設全文檢索語言的地區設定識別碼（lcid）。<br /> **注意：** 函式做為預設[的 [設定的預設全文檢索語言伺服器設定選項](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)] `sp_configure`。 非自主資料庫的這個值是**null** 。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**default_fulltext_language_lcid**|**int**|表示自主資料庫預設全文檢索語言的地區設定識別碼（lcid）。<br /> **注意：** 函式做為預設[的 [設定的預設全文檢索語言伺服器設定選項](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)] `sp_configure` 。 非自主資料庫的這個值是**null** 。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_fulltext_language_name**|**nvarchar(128)**|表示自主資料庫的預設全文檢索語言。<br /> 非自主資料庫的這個值是**null** 。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**is_nested_triggers_on**|**bit**|指出自主資料庫是否允許巢狀觸發程序。<br /> 0 = 不允許巢狀觸發程序。<br /> 1 = 允許巢狀觸發程序。<br /> **注意：** 做為的 [[設定嵌套的觸發程式] 伺服器設定選項](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) `sp_configure`。 非自主資料庫的這個值是**null** 。 如需詳細資訊，請參閱[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)的設定。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**is_transform_noise_words_on**|**bit**|指出自主資料庫中是否應該轉換非搜尋字。<br /> 0 = 不應該轉換非搜尋字。<br /> 1 = 應該轉換非搜尋字。<br /> **注意：** 當做「轉換非搜尋[字」伺服器](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)設定選項`sp_configure`的函數。 非自主資料庫的這個值是**null** 。 如需詳細資訊，請參閱[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)的設定。<br /> **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本|  
-|**two_digit_year_cutoff**|**smallint**|表示 1753 與 9999 之間的數值，代表將二位數年份解譯為四位數年份時的截斷年份 (Cutoff Year)。<br /> **注意：** 做為`sp_configure`的[設定兩位數年份的截止伺服器設定選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。 非自主資料庫的這個值是**null** 。 如需詳細資訊，請參閱[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)的設定。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**抑制**|**Tinyint not null**|指示資料庫的內含項目狀態。<br />  0 = 資料庫內含項目已關閉。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 1 = 資料庫位於部分內含專案中**適用**于[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ：和更新版本|  
+|**is_nested_triggers_on**|**bit**|指出自主資料庫是否允許巢狀觸發程序。<br /> 0 = 不允許巢狀觸發程序。<br /> 1 = 允許巢狀觸發程序。<br /> **注意：** 做為的 [[設定嵌套的觸發程式] 伺服器設定選項](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) `sp_configure` 。 非自主資料庫的這個值是**null** 。 如需詳細資訊，請參閱[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)的設定。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**is_transform_noise_words_on**|**bit**|指出自主資料庫中是否應該轉換非搜尋字。<br /> 0 = 不應該轉換非搜尋字。<br /> 1 = 應該轉換非搜尋字。<br /> **注意：** 當做「轉換非搜尋[字」伺服器設定選項](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)的函數 `sp_configure` 。 非自主資料庫的這個值是**null** 。 如需詳細資訊，請參閱[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)的設定。<br /> **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本|  
+|**two_digit_year_cutoff**|**smallint**|表示 1753 與 9999 之間的數值，代表將二位數年份解譯為四位數年份時的截斷年份 (Cutoff Year)。<br /> **注意：** 做為的[設定兩位數年份的截止伺服器設定選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) `sp_configure` 。 非自主資料庫的這個值是**null** 。 如需詳細資訊，請參閱[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)的設定。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**抑制**|**Tinyint not null**|指示資料庫的內含項目狀態。<br />  0 = 資料庫內含項目已關閉。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 1 = 資料庫位於部分內含專案中**適用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本|  
 |**containment_desc**|**Nvarchar （60） not null**|指示資料庫的內含項目狀態。<br /> NONE = 舊版資料庫 (零個內含項目)<br /> PARTIAL = 部分自主資料庫<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**target_recovery_time_in_seconds**|**int**|復原資料庫的預估時間 (以秒為單位)。 可為 Null。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**delayed_durability**|**int**|延遲的持久性設定：<br /> 0 = 已停用<br /> 1 = 允許<br /> 2 = 強制<br /> 如需詳細資訊，請參閱[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
@@ -122,22 +122,22 @@ ms.locfileid: "77147396"
   
 ## <a name="permissions"></a>權限
 
- 如果的呼叫端`sys.databases`不是資料庫的擁有者，而且資料庫不是`master`或`tempdb`，則查看對應`ALTER ANY DATABASE` `VIEW ANY DATABASE` `CREATE DATABASE` `master`資料列所需的最小許可權是或伺服器層級許可權，或是資料庫中的許可權。 呼叫端所連接的資料庫，一律可以在中`sys.databases`查看。  
+ 如果的呼叫端 `sys.databases` 不是資料庫的擁有者，而且資料庫不是 `master` 或 `tempdb` ，則查看對應資料列所需的最小許可權是 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 伺服器層級許可權，或是 `CREATE DATABASE` 資料庫中的許可權 `master` 。 呼叫端所連接的資料庫，一律可以在中查看 `sys.databases` 。  
   
 > [!IMPORTANT]  
-> 根據預設，public 角色具有`VIEW ANY DATABASE`許可權，允許所有登入查看資料庫資訊。 封鎖登入，使其無法偵測`REVOKE`資料庫、的`VIEW ANY DATABASE`許可權`public`，或`DENY`個別登入的`VIEW ANY DATABASE`許可權。  
+> 根據預設，public 角色具有 `VIEW ANY DATABASE` 許可權，允許所有登入查看資料庫資訊。 封鎖登入，使其無法偵測資料庫、 `REVOKE` 的 `VIEW ANY DATABASE` 許可權 `public` ，或個別登入 `DENY` 的 `VIEW ANY DATABASE` 許可權。  
   
 ## <a name="azure-sql-database-remarks"></a>Azure SQL Database 備註
 
-在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]此視圖中， `master`資料庫和使用者資料庫中都有提供。 在`master`資料庫中，這個視圖會傳回`master`資料庫和伺服器上所有使用者資料庫的資訊。 在使用者資料庫中，這個檢視只會傳回有關目前資料庫和 master 資料庫的資訊。  
+在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 此視圖中， `master` 資料庫和使用者資料庫中都有提供。 在 `master` 資料庫中，這個視圖會傳回 `master` 資料庫和伺服器上所有使用者資料庫的資訊。 在使用者資料庫中，這個檢視只會傳回有關目前資料庫和 master 資料庫的資訊。  
   
- 使用建立新資料庫所在的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 伺服器上 `master` 資料庫中的 `sys.databases` 檢視。 資料庫複製開始之後，您可以從目的地伺服器`sys.databases`的`master`資料庫`sys.dm_database_copies`查詢和視圖，以取得有關複製進度的詳細資訊。  
+ 使用建立新資料庫所在的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 伺服器上 `master` 資料庫中的 `sys.databases` 檢視。 資料庫複製開始之後，您可以 `sys.databases` `sys.dm_database_copies` 從目的地伺服器的資料庫查詢和視圖， `master` 以取得有關複製進度的詳細資訊。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-query-the-sysdatabases-view"></a>A. 查詢 sys.databases 檢視
 
-下列範例會傳回在此`sys.databases`視圖中可用的幾個資料行。  
+下列範例會傳回在此視圖中可用的幾個資料行 `sys.databases` 。  
   
 ```sql  
 SELECT name, user_access_desc, is_read_only, state_desc, recovery_model_desc  
@@ -146,7 +146,7 @@ FROM sys.databases;
   
 ### <a name="b-check-the-copying-status-in-sssds"></a>B. 檢查 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的複製狀態
 
-下列範例會查詢`sys.databases`和`sys.dm_database_copies` views，以傳回資料庫複製作業的相關資訊。  
+下列範例會查詢 `sys.databases` 和 `sys.dm_database_copies` views，以傳回資料庫複製作業的相關資訊。  
   
 **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
@@ -160,7 +160,7 @@ WHERE a.state = 7;
 
 ### <a name="c-check-the-temporal-retention-policy-status-in-sssds"></a>C. 檢查中的時態性保留原則狀態[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
 
-下列範例會查詢`sys.databases`以傳回信息，指出是否已啟用時態性保留清除工作。 請注意，還原作業之後，時態性保留預設為停用。 使用`ALTER DATABASE`來明確加以啟用。
+下列範例會查詢 `sys.databases` 以傳回信息，指出是否已啟用時態性保留清除工作。 請注意，還原作業之後，時態性保留預設為停用。 使用 `ALTER DATABASE` 來明確加以啟用。
   
 **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68255604"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829439"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="permissions"></a>權限  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
+在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
 
 ## <a name="remarks"></a>備註  
   
@@ -111,7 +111,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> 表示當編譯計畫時，PARAMETERIZATION 資料庫選項設為 FORCED。|131072|  
-|ROWCOUNT|**適用于：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**適用物件：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]自[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>資料指標  
  非使用中的資料指標會快取在編譯的計畫中，讓用來儲存資料指標的記憶體可供資料指標的並行使用者重複使用。 例如，假設有個批次宣告並使用資料指標，但沒有取消配置。 如果有兩個使用者執行相同的批次，會有兩個使用中的資料指標。 一旦資料指標取消配置 (可能在不同的批次中)，用來儲存資料指標的記憶體就會快取，而不會釋出。 非使用中資料指標的清單會保留在編譯的計畫中。 等到下次使用者執行批次時，會重複使用快取的資料指標記憶體，並適當地初始化為使用中資料指標。  
@@ -121,7 +121,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |選項|值|  
 |------------|-----------|  
-|None|0|  
+|無|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysubscription
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5d3f67794eb2825c10b822ce719459b563f046d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b3a2a2405b4ca22f780576135c66ee32d058ed10
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304829"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826262"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_copysubscription [ @filename = ] 'file_name'
 ## <a name="arguments"></a>引數  
 `[ @filename = ] 'file_name'`這是指定儲存資料檔案（.mdf）複本的完整路徑（包括檔案名）的字串。 [*檔案名*] 是**Nvarchar （260）**，沒有預設值。  
   
-`[ @temp_dir = ] 'temp_dir'`這是包含暫存檔案的目錄名稱。 *temp_dir*是**Nvarchar （260）**，預設值是 Null。 如果是 Null， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]則會使用預設資料目錄。 目錄應該有足夠的空間來存放組合了所有訂閱者資料庫檔案的檔案大小。  
+`[ @temp_dir = ] 'temp_dir'`這是包含暫存檔案的目錄名稱。 *temp_dir*是**Nvarchar （260）**，預設值是 Null。 如果是 Null，則 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用預設資料目錄。 目錄應該有足夠的空間來存放組合了所有訂閱者資料庫檔案的檔案大小。  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'`這是一個選擇性的布林值旗標，它會指定是否要覆寫** \@filename**中指定之相同名稱的現有檔案。 *overwrite_existing_file*是**bit**，預設值是**0**。 如果是**1**，則會覆寫** \@filename**所指定的檔案（如果存在的話）。 如果是**0**，如果檔案存在，則預存程式會失敗，而且不會覆寫檔案。  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`這是一個選擇性的布林值旗標，它會指定是否要覆寫** \@ filename**中指定之相同名稱的現有檔案。 *overwrite_existing_file*是**bit**，預設值是**0**。 如果是**1**，則會覆寫** \@ filename**所指定的檔案（如果存在的話）。 如果是**0**，如果檔案存在，則預存程式會失敗，而且不會覆寫檔案。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
