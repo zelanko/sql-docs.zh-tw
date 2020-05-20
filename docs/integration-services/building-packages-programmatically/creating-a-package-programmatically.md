@@ -67,7 +67,7 @@ Module Module1
 End Module  
 ```  
   
- 若要編譯和執行範例，請在 Visual Studio 中按 F5。 若要使用 C# 編譯器 **csc.exe** 建置程式碼，請在要編譯的命令提示字元之下，使用下列命令與檔案參考，以 .cs 或 .vb 檔案的名稱取代 *filename>\<* ，並提供您所選擇的 *\<outputfilename>* 。  
+ 若要編譯和執行範例，請在 Visual Studio 中按 F5。 若要使用 C# 編譯器 **csc.exe** 建置程式碼，請在要編譯的命令提示字元之下，使用下列命令與檔案參考，以 .cs 或 .vb 檔案的名稱取代 \<filename>，並提供您所選擇的*\<outputfilename>*。  
   
  **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   

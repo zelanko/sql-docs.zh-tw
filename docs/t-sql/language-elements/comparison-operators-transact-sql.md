@@ -47,7 +47,7 @@ ms.locfileid: "68140262"
 ## <a name="boolean-data-type"></a>布林資料類型  
  比較運算子的結果具有 **Boolean** 資料類型。 它有三個值：TRUE、FALSE 和 UNKNOWN。 傳回 **Boolean** 資料類型的運算式稱為布林運算式。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Boolean**資料類型和其他** 資料類型不同，不能將它指定為資料表資料行或變數的資料類型，且無法在結果集中傳回。  
+ **Boolean** 資料類型和其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型不同，不能將它指定為資料表資料行或變數的資料類型，且無法在結果集中傳回。  
   
  當 SET ANSI_NULLS 是 ON 時，有一或兩個 NULL 運算式的運算子會傳回 UNKNOWN。 當 SET ANSI_NULLS 是 OFF 時，會套用相同的規則，但等於 (=) 和不等於 (<>) 運算子除外。 當 SET ANSI_NULLS 是 OFF 時，這些運算子會將 NULL 視為已知值，等同於任何其他 NULL，並且只會傳回 TRUE 或 FALSE (絶不會是 UNKNOWN)。  
   

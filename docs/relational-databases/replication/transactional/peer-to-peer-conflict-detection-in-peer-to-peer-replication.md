@@ -87,7 +87,7 @@ ms.locfileid: "68041087"
   
 -   透過讓散發代理程式繼續套用變更，嘗試再次同步處理節點：  
   
-    1.  執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：針對 @property 參數指定 'p2p_continue_onconflict' 而針對 **參數指定**true@value。  
+    1.  執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：針對 @property 參數指定 'p2p_continue_onconflict' 而針對 @value 參數指定 **true**。  
   
     2.  重新啟動散發代理程式。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68041087"
         > [!NOTE]  
         >  如果進行這個步驟之後資料出現不一致，您就必須手動更新具有最高優先權之節點上的資料列，然後讓變更從這個節點傳播。 如果拓撲中沒有其他進一步的衝突變更，所有節點都會處於一致狀態。  
   
-    5.  執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：針對 @property 參數指定 'p2p_continue_onconflict' 而針對 **參數指定**false@value。  
+    5.  執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：針對 @property 參數指定 'p2p_continue_onconflict' 而針對 @value 參數指定 **false**。  
   
 ## <a name="see-also"></a>另請參閱  
  [@loopback_detection](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  

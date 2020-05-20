@@ -50,7 +50,7 @@ ms.locfileid: "72903799"
   
 2.  展開 **[稽核]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您想要檢視的稽核記錄，然後選取 **[檢視稽核記錄]** 。 這會開啟 [記錄檔檢視器 -**伺服器**名稱 _]\__ 對話方塊。 如需詳細資訊，請參閱 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)。  
+3.  以滑鼠右鍵按一下您想要檢視的稽核記錄，然後選取 **[檢視稽核記錄]** 。 這會開啟 [記錄檔檢視器 -_伺服器\_名稱_] 對話方塊。 如需詳細資訊，請參閱 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)。  
   
 4.  完成後，請按一下 **[關閉]** 。  
 

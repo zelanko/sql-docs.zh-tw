@@ -35,7 +35,7 @@ ms.locfileid: "68120848"
   
 ## <a name="arguments"></a>引數  
  *other_geography*  
- 這是要與叫用 **所在之執行個體相比較的另一個**geography`STOverlaps()` 執行個體。  
+ 這是要與叫用 `STOverlaps()` 所在之執行個體相比較的另一個 **geography** 執行個體。  
   
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  

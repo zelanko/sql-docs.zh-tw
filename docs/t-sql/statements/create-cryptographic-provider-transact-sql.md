@@ -68,7 +68,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  需要 CONTROL SERVER 權限或 **sysadmin** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會從 `SecurityProvider` 的 .dll 檔中，建立名稱為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的密碼編譯提供者。 .dll 檔案的名稱為 `c:\SecurityProvider\SecurityProvider_v1.dll`，並會安裝在伺服器上。 您必須先將提供者的憑證安裝在伺服器上。  
+ 下列範例會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 .dll 檔中，建立名稱為 `SecurityProvider` 的密碼編譯提供者。 .dll 檔案的名稱為 `c:\SecurityProvider\SecurityProvider_v1.dll`，並會安裝在伺服器上。 您必須先將提供者的憑證安裝在伺服器上。  
   
 ```  
 -- Install the provider  

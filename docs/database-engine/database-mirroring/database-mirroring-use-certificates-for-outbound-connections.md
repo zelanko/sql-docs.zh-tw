@@ -64,7 +64,7 @@ ms.locfileid: "70846657"
      例如，建立 HOST_A 系統的憑證。  
   
     > [!IMPORTANT]  
-    >  如果您想要使用此憑證一年以上，請在 CREATE CERTIFICATE 陳述式中使用 EXPIRY_DATE 選項來指定 UTC 時間格式的到期日。 此外，我們建議您使用 SQL Server Management Studio 建立原則式管理規則，在您的憑證即將過期時通知您。 使用 [原則管理] 的 [建立新條件]  對話方塊，在 [憑證] **\@ Facet 的** **ExpirationDate** 欄位上建立這個規則。 如需詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 和 [保護 SQL Server 的安全](../../relational-databases/security/securing-sql-server.md)。  
+    >  如果您想要使用此憑證一年以上，請在 CREATE CERTIFICATE 陳述式中使用 EXPIRY_DATE 選項來指定 UTC 時間格式的到期日。 此外，我們建議您使用 SQL Server Management Studio 建立原則式管理規則，在您的憑證即將過期時通知您。 使用 [原則管理] 的 [建立新條件] 對話方塊，在 [憑證] Facet 的 **\@ExpirationDate** 欄位上建立這個規則。 如需詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 和 [保護 SQL Server 的安全](../../relational-databases/security/securing-sql-server.md)。  
   
     ```  
     USE master;  

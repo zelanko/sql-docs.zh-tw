@@ -52,7 +52,7 @@ ms.locfileid: "71293944"
      例如，如果「時序」容器包括兩項相關的工作，其中一項工作為刪除資料表中的資料，而另一項工作會將資料插入資料表中，則可設定交易，以確認刪除動作會在插入動作失敗時回復。 如需詳細資訊，請參閱 [Integration Services 交易](../../integration-services/integration-services-transactions.md)。  
   
 ## <a name="configuration-of-the-sequence-container"></a>設定時序容器  
- 「時序」容器沒有自訂使用者介面，而且您只能在  **的 [屬性]** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 視窗中或利用撰寫程式的方式進行設定。  
+ 「時序」容器沒有自訂使用者介面，而且您只能在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中或利用撰寫程式的方式進行設定。  
   
  如需以程式設計方式設定這些屬性的詳細資訊，請參閱《開發人員指南》中 **T:Microsoft.SqlServer.Dts.Runtime.Sequence** 類別的文件。  
   

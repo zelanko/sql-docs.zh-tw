@@ -27,10 +27,10 @@ ms.locfileid: "71286286"
 
   此程序描述如何在用於指令碼工作和指令碼元件的指令碼中設定中斷點。  
   
- 在指令碼中設定中斷點後，[設定中斷點 - **物件名稱>]\<** 對話方塊會列出中斷點與內建的中斷點。  
+ 在指令碼中設定中斷點後，[設定中斷點 - \<物件名稱>] 對話方塊會列出中斷點與內建的中斷點。  
   
 > [!IMPORTANT]  
->  在某些情況下，會忽略指令碼工作和指令碼元件的中斷點。 如需詳細資訊，請參閱**指令碼工作的程式碼撰寫和偵錯**中的[偵錯指令碼工作](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)一節和**指令碼元件的程式碼撰寫和偵錯**中的[偵錯指令碼元件](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)一節。  
+>  在某些情況下，會忽略指令碼工作和指令碼元件的中斷點。 如需詳細資訊，請參閱[指令碼工作的程式碼撰寫和偵錯](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)中的**偵錯指令碼工作**一節和[指令碼元件的程式碼撰寫和偵錯](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)中的**偵錯指令碼元件**一節。  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>在指令碼中設定中斷點  
   
@@ -52,6 +52,6 @@ ms.locfileid: "71286286"
   
 8.  按一下 [確定]  。  
   
-9. 若要儲存封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
+9. 若要儲存封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
   
   

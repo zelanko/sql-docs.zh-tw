@@ -59,7 +59,7 @@ ms.locfileid: "67934086"
   
 5.  以滑鼠右鍵按一下要更新的統計資料物件，然後選取 [屬性]  。  
   
-6.  在 [統計資料屬性 -**statistics**name _]\__ 對話方塊中，選取 [更新這些資料行的統計資料]  核取方塊，然後按一下 [確定]  。  
+6.  在 [統計資料屬性 -_statistics\_name_] 對話方塊中，選取 [更新這些資料行的統計資料] 核取方塊，然後按一下 [確定]。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

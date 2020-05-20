@@ -29,9 +29,9 @@ ms.locfileid: "71952716"
   
 ### <a name="to-delete-a-trace"></a>若要刪除追蹤  
   
-1.  指定 **，執行** sp_trace_setstatus`@status = 0` 以停止追蹤。  
+1.  指定 `@status = 0`，執行 **sp_trace_setstatus** 以停止追蹤。  
   
-2.  指定 **，執行** sp_trace_setstatus`@status = 2` 以關閉追蹤，並將其資訊從伺服器中刪除。  
+2.  指定 `@status = 2`，執行 **sp_trace_setstatus** 以關閉追蹤，並將其資訊從伺服器中刪除。  
   
 > [!NOTE]  
 >  您必須先關閉追蹤，才能將它刪除。  

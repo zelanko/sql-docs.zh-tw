@@ -22,12 +22,12 @@ ms.locfileid: "68113160"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
-[ 中的](../../relational-databases/performance/how-query-store-collects-data.md)查詢存放區[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能可自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並將這項資訊保存在資料庫中。 [Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) 支援新選項，可使用查詢存放區自動選取適當的工作負載以進行調整。 對於許多使用者而言，這可消除明確收集工作負載進行調整的需要。 只有已開啟「查詢存放區」功能的資料庫才能使用這項功能。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的[查詢存放區](../../relational-databases/performance/how-query-store-collects-data.md)功能可自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並將這項資訊保存在資料庫中。 [Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) 支援新選項，可使用查詢存放區自動選取適當的工作負載以進行調整。 對於許多使用者而言，這可消除明確收集工作負載進行調整的需要。 只有已開啟「查詢存放區」功能的資料庫才能使用這項功能。 
   
 此功能可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **v16.4** 或更高版本中取得。 
   
 ## <a name="how-to-tune-a-workload-from-query-store-in-database-engine-tuning-advisor-gui"></a>如何在 Database Engine Tuning Advisor GUI 中調整查詢存放區的工作負載
-從 DTA GUI 中，選取 [一般]  窗格中的 [查詢存放區]  選項按鈕，即可啟用此功能 (請參閱下圖)。
+從 DTA GUI 中，選取 [一般]窗格中的 [查詢存放區] 選項按鈕，即可啟用此功能 (請參閱下圖)。
 
 ![查詢存放區的 DTA 工作負載](../../relational-databases/performance/media/dta-workload-from-query-store.gif)
  

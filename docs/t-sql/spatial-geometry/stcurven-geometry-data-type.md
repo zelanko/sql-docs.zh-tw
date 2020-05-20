@@ -97,7 +97,7 @@ ms.locfileid: "67930136"
  請注意，前三個範例的結果都相同。 無論使用何種 WKT (Well-known Text) 格式來輸入相同的曲線順序，使用 `STCurveN()` 執行個體時，`CompoundCurve` 所傳回的結果都相同。  
   
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D. 呼叫 STCurveN() 之前，先驗證參數  
- 下列範例示範如何在呼叫 `@n`方法之前先確認 `STCurveN()` 有效：  
+ 下列範例示範如何在呼叫 `STCurveN()`方法之前先確認 `@n` 有效：  
   
 ```
  DECLARE @g geometry;  

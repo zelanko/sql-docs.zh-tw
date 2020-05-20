@@ -27,10 +27,10 @@ ms.locfileid: "71297163"
 
   在您已覆寫可提供自訂功能的基底類別之屬性與方法的實作之後，可能會想要針對 Foreach 列舉值建立自訂使用者介面。 如果您未建立自訂使用者介面，使用者可以使用 [屬性] 視窗來設定新的自訂 Foreach 列舉值。  
   
- 在自訂的使用者介面專案或是組件中，您可以建立可實作 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI> 的類別。 這個類別衍生自 System.Windows.Forms.UserControl，通常它是用於建立複合控制項，以主控其他的 Windows Form 控制項。 在 **Foreach 迴圈編輯器**中，您建立的控制項是顯示在 [集合]  索引標籤的 [列舉值設定]  區域中。  
+ 在自訂的使用者介面專案或是組件中，您可以建立可實作 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI> 的類別。 這個類別衍生自 System.Windows.Forms.UserControl，通常它是用於建立複合控制項，以主控其他的 Windows Form 控制項。 在 **Foreach 迴圈編輯器**中，您建立的控制項是顯示在 [集合] 索引標籤的 [列舉值設定] 區域中。  
   
 > [!IMPORTANT]  
->  在簽署和組建自訂使用者介面，以及在全域組件快取中安裝它之後 (如[建立、部署和偵錯自訂物件](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)所述)，請記得在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 屬性中提供這個類別的完整名稱。  
+>  在簽署和組建自訂使用者介面，以及在全域組件快取中安裝它之後 (如[建立、部署和偵錯自訂物件](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)所述)，請記得在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 屬性中提供這個類別的完整名稱。  
   
 ## <a name="coding-the-user-interface-control-class"></a>撰寫使用者介面控制項類別的程式碼  
   

@@ -52,7 +52,7 @@ ConvexHullAggregate ( geography_operand )
 >  如果所有輸入的值都為 **null**，此方法就會傳回 **null**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回包含 `GeometryCollection`geography**物件集的** 執行個體。  
+ 下列範例會傳回包含 **geography** 物件集的 `GeometryCollection` 執行個體。  
   
  ```
  USE AdventureWorks2012  

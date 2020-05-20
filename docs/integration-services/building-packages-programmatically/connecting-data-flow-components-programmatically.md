@@ -33,7 +33,7 @@ ms.locfileid: "71294908"
   在將元件加入資料流程工作後，就可以連接元件以建立執行樹狀目錄，以代表從來源經過轉換到目的地的資料流程。 您使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 物件以連接資料流程中的元件。  
   
 ## <a name="creating-a-path"></a>建立路徑  
- 呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> 介面中 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> 屬性的 New 方法，以建立新路徑並將它新增資料流程工作中的路徑集合。 此方法會傳回中斷連接的新 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 物件，您可用以連接兩個元件。  
+ 呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> 介面中 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> 屬性的 New 方法，以建立新路徑並將它新增資料流程工作中的路徑集合。 此方法會傳回中斷連接的新 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 物件，您可用以連接兩個元件。  
   
  呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100.AttachPathAndPropagateNotifications%2A> 方法以連接路徑並通知元件參與已連接它們的路徑。 這個方法會以參數的方式接受上游元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>以及下游元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>。 依預設，呼叫元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 方法會為具有輸入的元件建立單一輸入，並為具有輸出的元件建立單一輸出。 下列範例使用目的地之來源與輸入的這個預設輸出。  
   

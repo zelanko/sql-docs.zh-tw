@@ -35,7 +35,7 @@ ms.locfileid: "70846818"
   
 -   完成查詢最佳化。  
   
- 當您指定預存程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_trace_create **中 \@** tracefile **引數的路徑與檔案名稱時，** 會將追蹤結果儲存到檔案。  
+ 當您指定預存程序 **sp_trace_create** 中 **\@tracefile** 引數的路徑與檔案名稱時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將追蹤結果儲存到檔案。  
   
 > [!NOTE]  
 >  若要將路徑指定到 **sp_trace_create** 預存程序以儲存追蹤檔案，則其必須是伺服器可存取的目錄。 另請注意，若要在 **sp_trace_create**指定本機目錄，此目錄必須是伺服器電腦上的本機目錄。  

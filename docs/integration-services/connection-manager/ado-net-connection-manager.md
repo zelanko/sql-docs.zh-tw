@@ -132,7 +132,7 @@ ms.locfileid: "74687269"
     
 - **在設計階段設定。** 在 [SSIS 設計工具] 中，以滑鼠右鍵按一下 [ADO.NET 連線管理員]，然後選取 [屬性]  。 將 `ConnectUsingManagedIdentity` 屬性更新為 `True`。
     > [!NOTE]
-    >  目前，當您在 SSIS 設計工具中或 `ConnectUsingManagedIdentity` SQL Server 中執行 SSIS 套件時，連線管理員的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 屬性不會生效 (表示受控識別驗證無法運作)。
+    >  目前，當您在 SSIS 設計工具中或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 中執行 SSIS 套件時，連線管理員的 `ConnectUsingManagedIdentity` 屬性不會生效 (表示受控識別驗證無法運作)。
     
 - **在執行階段設定。** 當您透過 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) 或 [Azure Data Factory 執行 SSIS 套件活動](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity) \(部分機器翻譯\) 來執行套件時，請尋找 ADO.NET 連線管理員。 將其屬性 `ConnectUsingManagedIdentity` 更新為 `True`。
     > [!NOTE]

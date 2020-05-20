@@ -46,7 +46,7 @@ ms.locfileid: "67930361"
  CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="remarks"></a>備註  
- `STBuffer()` 會指定 [tolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) = distance *.001 且*relative\*  false =  來計算緩衝，此計算方式與 **BufferWithTolerance** 類似。  
+ `STBuffer()` 會指定 *tolerance* = distance \* .001 且 *relative* = **false** 來計算緩衝，此計算方式與 [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) 類似。  
   
  當 *distance* > 0 時，會傳回 **Polygon** 或 **MultiPolygon** 執行個體。  
   

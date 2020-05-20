@@ -62,7 +62,7 @@ ms.locfileid: "71290732"
 
 - 範例資料、完成的套件、組態和讀我檔案。 若要將範例資料與課程套件下載為 ZIP 檔案，請參閱 [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827) (SQL Server Integration Services 教學課程檔案)。 ZIP 檔案中的檔案大部分都是唯讀，以避免不小心變更。 若要將輸出寫入至檔案或變更它，您可能必須關閉檔案屬性中的唯讀屬性。
 
--   **AdventureWorks2014** 範例資料庫。 若要下載 **AdventureWorks2014** 資料庫，請從 `AdventureWorks2014.bak`AdventureWorks 範例資料庫[下載 ](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)，並還原備份。  
+-   **AdventureWorks2014** 範例資料庫。 若要下載 **AdventureWorks2014** 資料庫，請從 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)下載 `AdventureWorks2014.bak`，並還原備份。  
 
 -   您必須具有在 AdventureWorks 資料庫中建立和卸除資料表的權限。
     
@@ -76,7 +76,7 @@ ms.locfileid: "71290732"
 
 - 範例資料、完成的套件、組態和讀我檔案。 若要將範例資料與課程套件下載為 ZIP 檔案，請參閱 [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827) (SQL Server Integration Services 教學課程檔案)。 ZIP 檔案中的檔案大部分都是唯讀，以避免不小心變更。 若要將輸出寫入至檔案或變更它，您可能必須關閉檔案屬性中的唯讀屬性。
 
--   **AdventureWorks2014** 範例資料庫。 若要下載 **AdventureWorks2014** 資料庫，請從 `AdventureWorks2014.bak`AdventureWorks 範例資料庫[下載 ](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)，並還原備份。  
+-   **AdventureWorks2014** 範例資料庫。 若要下載 **AdventureWorks2014** 資料庫，請從 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)下載 `AdventureWorks2014.bak`，並還原備份。  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。    
     

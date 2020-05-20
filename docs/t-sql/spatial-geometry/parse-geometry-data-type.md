@@ -43,7 +43,7 @@ Parse ( 'geometry_tagged_text' )
  CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="remarks"></a>備註  
- **所傳回之**geometry`Parse()` 執行個體的 OGC 類型會設定為對應的 WKT 輸入。  
+ `Parse()` 所傳回之 **geometry** 執行個體的 OGC 類型會設定為對應的 WKT 輸入。  
   
  'Null' 字串將會解譯為 Null **geometry** 執行個體。  
   

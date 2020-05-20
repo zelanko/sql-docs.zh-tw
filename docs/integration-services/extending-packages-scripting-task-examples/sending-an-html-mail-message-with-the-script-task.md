@@ -60,7 +60,7 @@ ms.locfileid: "71286740"
   
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>若要使用 SMTP 連接管理員來設定這個指令碼工作範例  
   
-1.  透過從 `HtmlEmailServer`ReadOnlyVariables**清單中移除** 變數，以修改之前設定的指令碼工作。  
+1.  透過從 **ReadOnlyVariables** 清單中移除 `HtmlEmailServer` 變數，以修改之前設定的指令碼工作。  
   
 2.  取代用以取得伺服器名稱的程式碼行：  
   

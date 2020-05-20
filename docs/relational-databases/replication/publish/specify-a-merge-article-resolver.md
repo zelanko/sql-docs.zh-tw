@@ -45,15 +45,15 @@ ms.locfileid: "70846566"
     -   使用 Web 同步處理來提取訂閱的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 註冊解析程式之後，您可以指定發行項應該使用 [發行項屬性 - **發行項>]** **對話方塊之 [解析程式]\<** 索引標籤上的解析程式，此對話方塊位於 [新增發行集精靈] 和 [發行集屬性 - **發行集>]\<** 對話方塊中。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 註冊解析程式之後，您可以指定發行項應該使用 [發行項屬性 - \<發行項>] 對話方塊之 [解析程式] 索引標籤上的解析程式，此對話方塊位於 [新增發行集精靈] 和 [發行集屬性 - \<發行集>] 對話方塊中。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-a-resolver"></a>若要指定解決器  
   
-1.  在 [新增發行集精靈] 的 [發行項]  頁面上，或是在 [發行集屬性 - **發行集>]\<** 對話方塊中，選取一個資料表。  
+1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表。  
   
 2.  按一下 **[發行項屬性]** ，然後按一下 **[設定反白顯示資料表發行項的屬性]** 。  
   
-3.  在 [發行項屬性 - **發行項>]\<** 頁面上，按一下 [解析程式]  索引標籤。  
+3.  在 [發行項屬性 - \<發行項>] 頁面上，按一下 [解析程式] 索引標籤。  
   
 4.  選取 **[使用自訂解決器 (已在散發者註冊)]** ，然後在清單中按一下解決器。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "70846566"
   
 2.  若要判斷是否已經註冊想要的解決程式，請在任何資料庫的發行者端執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)。 這樣會顯示自訂解決器的描述以及在散發者上註冊之每一個以 COM 為基礎之解決器的類別識別碼 (CLSID)，或是在散發者上註冊之每一個商務邏輯處理常式的 Managed 組件相關資訊。  
   
-3.  如果尚未註冊所要的自訂解析程式，請在散發者端執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)。 為 **\@article_resolver** 指定解析程式名稱；對於商務邏輯處理常式而言，這是組件的易記名稱。 若是 COM 解析程式，請將 **\@resolver_clsid** 指定為 DLL 的 CLSID，然後為商務邏輯處理常式，將  is_dotnet_assembly **指定為 \@true** 值、將 **\@dotnet_assembly_name** 指定為組件的名稱，並將 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>**dotnet_class_name\@ 指定為覆寫**  的類別完整名稱。  
+3.  如果尚未註冊所要的自訂解析程式，請在散發者端執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)。 為 **\@article_resolver** 指定解析程式名稱；對於商務邏輯處理常式而言，這是組件的易記名稱。 若是 COM 解析程式，請將 **\@resolver_clsid** 指定為 DLL 的 CLSID，然後為商務邏輯處理常式，將 **\@is_dotnet_assembly** 指定為 **true** 值、將 **\@dotnet_assembly_name** 指定為組件的名稱，並將 **\@dotnet_class_name** 指定為覆寫 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 的類別完整名稱。  
   
     > [!NOTE]  
     >  如果商務邏輯處理常式組件未部署在合併代理程式可執行檔的相同目錄中、同步啟動合併代理程式的應用程式相同目錄中，或是全域組件快取 (GAC) 中，您就必須將 **\@dotnet_assembly_name** 指定為包含組件名稱的完整路徑。  
@@ -112,9 +112,9 @@ ms.locfileid: "70846566"
   
 2.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，並記下結果集中 [value]  欄位內所需的自訂解析程式名稱。  
   
-3.  在發行集資料庫的發行者端，執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 為  property **指定 \@article_resolver** 值，包括商務邏輯處理常式的完整路徑，並為 **\@value** 指定步驟 2 中所需的自訂解析程式名稱。  
+3.  在發行集資料庫的發行者端，執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 為 **\@property** 指定 **article_resolver** 值，包括商務邏輯處理常式的完整路徑，並為 **\@value** 指定步驟 2 中所需的自訂解析程式名稱。  
   
-4.  若要變更自訂解析程式的任何必要輸入，請再次執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 為  property **指定 \@resolver_info** 值，並為 **\@value** 指定自訂解析程式的任何必要輸入。 如果是以預存程序為基礎的自訂解析程式， **\@resolver_info** 會是預存程序的名稱。 如需必要輸入的詳細資訊，請參閱 [Microsoft 以 COM 為基礎的解析程式](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
+4.  若要變更自訂解析程式的任何必要輸入，請再次執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 為 **\@property** 指定 **resolver_info** 值，並為 **\@value** 指定自訂解析程式的任何必要輸入。 如果是以預存程序為基礎的自訂解析程式， **\@resolver_info** 會是預存程序的名稱。 如需必要輸入的詳細資訊，請參閱 [Microsoft 以 COM 為基礎的解析程式](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
 ## <a name="unregister-a-custom-conflict-resolver"></a>將自訂衝突解析程式取消註冊  
   

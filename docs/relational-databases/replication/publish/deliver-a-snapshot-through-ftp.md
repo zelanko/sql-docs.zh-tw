@@ -47,11 +47,11 @@ ms.locfileid: "71710996"
  可能的話，會在執行階段提示使用者輸入其認證。 如果將認證儲存在指令碼檔案中，您必須維護此檔案的安全。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 設定 FTP 伺服器之後，請在 [發行集屬性 **發行集>]\<** 對話方塊中，指定此伺服器的目錄和安全性資訊。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+ 設定 FTP 伺服器之後，請在 [發行集屬性 \<發行集>] 對話方塊中，指定此伺服器的目錄和安全性資訊。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 #### <a name="to-specify-ftp-information"></a>若要指定 FTP 資訊  
   
-1.  從以下頁面之一的 [發行集屬性 - **發行集>] \<** 對話方塊中，選取 [允許訂閱者使用 FTP 下載快照集檔案]  ：  
+1.  從以下頁面之一的 [發行集屬性 - \<發行集>]  對話方塊中，選取 [允許訂閱者使用 FTP 下載快照集檔案]：  
   
     -   [FTP 快照集]  頁面，適用於快照式和交易式發行集，以及執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前版本的「發行者」所用合併式發行集。  
   
@@ -76,13 +76,13 @@ ms.locfileid: "71710996"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>針對快照式或交易式發行集啟用 FTP 快照集傳遞  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 指定 `@publication`、**的**true`@enabled_for_internet` 值，以及下列參數的適當值：  
+1.  在發行集資料庫的發行者上，執行 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 指定 `@publication`、`@enabled_for_internet` 的 **true** 值，以及下列參數的適當值：  
   
     -   `@ftp_address` - 用於傳遞快照集之 FTP 伺服器的位址。  
   
     -   (選擇性) `@ftp_port` - FTP 伺服器所使用的通訊埠。  
   
-    -   (選擇性) `@ftp_subdirectory` - 指派給 FTP 登入的預設 FTP 目錄子目錄。 例如，若 FTP 伺服器根目錄為 \\\ftpserver\home，而您想將快照集儲存在 \\\ftpserver\home\snapshots，則請為 **指定**\snapshots\ftp`@ftp_subdirectory` (複寫會在建立快照集檔案時，在快照集資料夾路徑後加上 'ftp')。  
+    -   (選擇性) `@ftp_subdirectory` - 指派給 FTP 登入的預設 FTP 目錄子目錄。 例如，若 FTP 伺服器根目錄為 \\\ftpserver\home，而您想將快照集儲存在 \\\ftpserver\home\snapshots，則請為 `@ftp_subdirectory` 指定 **\snapshots\ftp** (複寫會在建立快照集檔案時，在快照集資料夾路徑後加上 'ftp')。  
   
     -   (選擇性) `@ftp_login` - 連接到 FTP 伺服器時所使用的登入帳戶。  
   
@@ -92,13 +92,13 @@ ms.locfileid: "71710996"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>針對合併式發行集啟用 FTP 快照集傳遞  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 指定 `@publication`、針對 **的**true`@enabled_for_internet` 值，以及下列參數的適當值：  
+1.  在發行集資料庫的發行者上，執行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 指定 `@publication`、針對 `@enabled_for_internet` 的 **true** 值，以及下列參數的適當值：  
   
     -   `@ftp_address` - 用於傳遞快照集之 FTP 伺服器的位址。  
   
     -   (選擇性) `@ftp_port` - FTP 伺服器所使用的通訊埠。  
   
-    -   (選擇性) `@ftp_subdirectory` - 指派給 FTP 登入的預設 FTP 目錄子目錄。 例如，若 FTP 伺服器根目錄為 \\\ftpserver\home，而您想將快照集儲存在 \\\ftpserver\home\snapshots，則請為 **指定**\snapshots\ftp`@ftp_subdirectory` (複寫會在建立快照集檔案時，在快照集資料夾路徑後加上 'ftp')。  
+    -   (選擇性) `@ftp_subdirectory` - 指派給 FTP 登入的預設 FTP 目錄子目錄。 例如，若 FTP 伺服器根目錄為 \\\ftpserver\home，而您想將快照集儲存在 \\\ftpserver\home\snapshots，則請為 `@ftp_subdirectory` 指定 **\snapshots\ftp** (複寫會在建立快照集檔案時，在快照集資料夾路徑後加上 'ftp')。  
   
     -   (選擇性) `@ftp_login` - 連接到 FTP 伺服器時所使用的登入帳戶。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "71710996"
   
 1.  在訂閱資料庫的訂閱者上，執行 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)。 指定 `@publisher` 和 `@publication`。  
   
-    -   在訂閱資料庫的訂閱者上，執行 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 `@publisher`、`@publisher_db`、`@publication`、針對 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 和 `@job_login` 的 `@job_password` Windows 認證 (散發代理程式在訂閱者端執行時會使用此認證)，以及針對 **指定**true`@use_ftp` 的值。  
+    -   在訂閱資料庫的訂閱者上，執行 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 `@publisher`、`@publisher_db`、`@publication`、針對 `@job_login` 和 `@job_password` 的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 認證 (散發代理程式在訂閱者端執行時會使用此認證)，以及針對 `@use_ftp` 指定 **true** 的值。  
   
 2.  在發行集資料庫的發行者上，執行 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) ，以註冊提取訂閱。 如需詳細資訊，請參閱 [建立提取訂閱](../../../relational-databases/replication/create-a-pull-subscription.md)。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "71710996"
   
 1.  在訂閱資料庫的訂閱者上，執行 [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 指定 `@publisher` 和 `@publication`。  
   
-2.  在訂閱資料庫的訂閱者上，執行 [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)。 指定 `@publisher`、`@publisher_db`、`@publication`、針對 `@job_login` 和 `@job_password` 的 Windows 認證 (散發代理程式在訂閱者上執行時會使用此認證)，以及針對 `true` 指定 `@use_ftp` 的值。  
+2.  在訂閱資料庫的訂閱者上，執行 [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)。 指定 `@publisher`、`@publisher_db`、`@publication`、針對 `@job_login` 和 `@job_password` 的 Windows 認證 (散發代理程式在訂閱者上執行時會使用此認證)，以及針對 `@use_ftp` 指定 `true` 的值。  
   
 3.  在發行集資料庫的發行者上，執行 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) ，以註冊提取訂閱。 如需詳細資訊，請參閱 [建立提取訂閱](../../../relational-databases/replication/create-a-pull-subscription.md)。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "71710996"
   
 2.  (選擇性) 針對變更的每一個 FTP 設定重複步驟 1。  
   
-3.  (選擇性) 若要停用 FTP 快照集傳遞，請在發行集資料庫的發行者上執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 。 針對 `enabled_for_internet` 指定 `@property` 的值，並為 `false` 指定 `@value` 的值。  
+3.  (選擇性) 若要停用 FTP 快照集傳遞，請在發行集資料庫的發行者上執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 。 針對 `@property` 指定 `enabled_for_internet` 的值，並為 `@value` 指定 `false` 的值。  
   
 #### <a name="to-change-ftp-snapshot-delivery-settings-for-a-merge-publication"></a>針對合併式發行集變更 FTP 快照集傳遞設定  
   
@@ -156,7 +156,7 @@ ms.locfileid: "71710996"
   
 2.  (選擇性) 針對變更的每一個 FTP 設定重複步驟 1。  
   
-3.  (選擇性) 若要停用 FTP 快照集傳遞，請在發行集資料庫的發行者上執行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 。 針對 `enabled_for_internet` 指定 `@property` 的值，並為 `false` 指定 `@value` 的值。  
+3.  (選擇性) 若要停用 FTP 快照集傳遞，請在發行集資料庫的發行者上執行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 。 針對 `@property` 指定 `enabled_for_internet` 的值，並為 `@value` 指定 `false` 的值。  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  下列範例會建立允許訂閱者的合併式發行集，以使用 FTP 存取快照集資料。 當訂閱者存取 FTP 共用位置時，應該使用安全 VPN 連接。 **sqlcmd** 指令碼變數是用來提供登入和密碼值。 如需詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  

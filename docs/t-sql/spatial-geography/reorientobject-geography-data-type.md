@@ -40,7 +40,7 @@ ms.locfileid: "68101747"
   
 ## <a name="arguments"></a>引數  
 _地理位置_  
-這是叫用 **所在的另一個**geography`ReorientObject()` 執行個體。  
+這是叫用 `ReorientObject()` 所在的另一個 **geography** 執行個體。  
   
 ## <a name="return-value"></a>傳回值  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  

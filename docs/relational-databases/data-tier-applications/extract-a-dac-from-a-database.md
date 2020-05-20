@@ -86,9 +86,9 @@ ms.locfileid: "68134787"
   
  **名稱** ：此名稱會識別 DAC。 它可能與 DAC 封裝檔案的名稱不同，而且應該會描述您的應用程式。 例如，如果此資料庫用於財務應用程式，您可能會想要命名為 DAC Finance。  
   
- **版本 (使用 xx.xx.xx.xx，其中 x 是數字)** ：識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 部署 DAC 時，此版本會儲存在 **msdb** 資料庫中，而且您之後可以在  **的 [資料層應用程式]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 節點底下檢視此版本。  
+ **版本 (使用 xx.xx.xx.xx，其中 x 是數字)** ：識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 部署 DAC 時，此版本會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [資料層應用程式] 節點底下檢視此版本。  
   
- **描述** ：選擇性。 描述此 DAC。 部署 DAC 時，此描述會儲存在 **msdb** 資料庫中，而且您之後可以在  **的 [資料層應用程式]** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 節點底下檢視此描述。  
+ **描述** ：選擇性。 描述此 DAC。 部署 DAC 時，此描述會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 [資料層應用程式] 節點底下檢視此描述。  
   
  **儲存至 DAC 封裝檔案 (檔案名稱包含 .dacpac 副檔名)** ：將 DAC 儲存至副檔名為 .dacpac 的 DAC 封裝檔案。 按一下 **[瀏覽]** 按鈕，即可指定檔案的名稱和位置。  
   

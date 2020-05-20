@@ -49,7 +49,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
  CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="remarks"></a>備註  
- **所傳回之**geometry`STGeomCollFromText()` 執行個體的 OGC 類型會設定為對應的 WKT 輸入。  
+ `STGeomCollFromText()` 所傳回之 **geometry** 執行個體的 OGC 類型會設定為對應的 WKT 輸入。  
   
  如果輸入無效，這個方法將會擲回例外狀況。  
   

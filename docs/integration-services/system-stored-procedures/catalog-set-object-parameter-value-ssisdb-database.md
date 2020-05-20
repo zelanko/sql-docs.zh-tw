@@ -90,12 +90,12 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 ## <a name="remarks"></a>備註  
   
--   如果沒有指定 *value_type*，預設會使用 *parameter_value* 的常值。 使用常值時，*object_parameters* 檢視中的 [value_set](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 會設定為 `1`。 不允許 NULL 參數值。  
+-   如果沒有指定 *value_type*，預設會使用 *parameter_value* 的常值。 使用常值時，[object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 檢視中的 *value_set* 會設定為 `1`。 不允許 NULL 參數值。  
   
 -   如果 *value_type* 包含字元 `R` (表示受參考的值)，*parameter_value* 就會參考環境變數的名稱。  
   
--   `20`object_type*可以使用* 值表示專案參數。 在這個情況下，就不需要 *object_name* 的值，而且為 *object_name* 指定的任何值都會遭到忽略。 當使用者想要設定專案參數時，可以使用這個值。  
+-   *object_type* 可以使用 `20` 值表示專案參數。 在這個情況下，就不需要 *object_name* 的值，而且為 *object_name* 指定的任何值都會遭到忽略。 當使用者想要設定專案參數時，可以使用這個值。  
   
--   `30`object_type*可以使用* 值表示套件參數。 在這個情況下，*object_name* 的值會用來表示對應的套件。 如果未指定 *object_name*，則預存程序會傳回錯誤並結束。  
+-   *object_type* 可以使用 `30` 值表示套件參數。 在這個情況下，*object_name* 的值會用來表示對應的套件。 如果未指定 *object_name*，則預存程序會傳回錯誤並結束。  
   
   

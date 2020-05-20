@@ -62,9 +62,9 @@ ms.locfileid: "71296218"
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 應用程式開發介面與 COM 指令碼語言 (如 VBScript) 不相容。  
   
 ## <a name="locating-assemblies"></a>尋找組件  
- 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 組件已經升級至 .NET 4.0。 .NET 4 有個別的全域組件快取，位於 *磁碟機>\<* :\Windows\Microsoft.NET\assembly。 您可以在此路徑底下 (通常在 GAC_MSIL 資料夾中) 找到所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 組件。  
+ 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 組件已經升級至 .NET 4.0。 .NET 4 有個別的全域組件快取，位於 \<磁碟機>:\Windows\Microsoft.NET\assembly。 您可以在此路徑底下 (通常在 GAC_MSIL 資料夾中) 找到所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 組件。  
   
- 如同舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，核心 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 擴充性 .dll 檔案也位於 *磁碟機>\<* :\Program Files\Microsoft SQL Server\100\SDK\Assemblies。  
+ 如同舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，核心 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 擴充性 .dll 檔案也位於 \<磁碟機>:\Program Files\Microsoft SQL Server\100\SDK\Assemblies。  
   
 ## <a name="commonly-used-assemblies"></a>常用的組件  
  下表列出在使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 開發 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 程式時經常使用的組件。  

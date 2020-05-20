@@ -76,7 +76,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  需要密碼編譯提供者的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會在 `SecurityProvider` 中，將稱為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的密碼編譯提供者更改為更新版的 .dll 檔案。 這個新的版本命名為 `c:\SecurityProvider\SecurityProvider_v2.dll`，而且會安裝在伺服器上。 您必須將提供者的憑證安裝在伺服器上。  
+ 下列範例會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，將稱為 `SecurityProvider` 的密碼編譯提供者更改為更新版的 .dll 檔案。 這個新的版本命名為 `c:\SecurityProvider\SecurityProvider_v2.dll`，而且會安裝在伺服器上。 您必須將提供者的憑證安裝在伺服器上。  
   
 1. 停用提供者以執行升級。 這將會終止所有開啟的密碼編譯工作階段。  
 ```  

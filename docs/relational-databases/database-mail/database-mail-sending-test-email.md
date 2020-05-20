@@ -32,7 +32,7 @@ ms.locfileid: "72906065"
 ## <a name="procedure"></a>程序
 
 1. 在 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 中使用 [物件總管]，連接到已設定 Database Mail 的 SQL Server 資料庫引擎執行個體，展開 [管理]，以滑鼠右鍵按一下 [Database Mail]，然後選取 [傳送測試電子郵件]。 如果 Database Mail 設定檔不存在，會出現一個對話方塊提示使用者建立設定檔，並開啟 [Database Mail 設定精靈]。
-1. 從 [ **] 對話方塊的 [傳送測試電子郵件]** <instance name> 中，在 [Database Mail 設定檔] 方塊中選取您要測試的設定檔。
+1. 從 [<instance name>] 對話方塊的 [傳送測試電子郵件] 中，在 [Database Mail 設定檔] 方塊中選取您要測試的設定檔。
 1. 在 [收件者]  方塊中，鍵入測試電子郵件的收件者電子郵件名稱。
 1. 在 [主旨]  方塊中，鍵入測試電子郵件的主旨列。 變更預設的主旨，以便識別您的電子郵件來進行疑難排解。
 1. 在 [本文]  方塊中，鍵入測試電子郵件的本文。 變更預設的主旨，以便識別您的電子郵件來進行疑難排解。

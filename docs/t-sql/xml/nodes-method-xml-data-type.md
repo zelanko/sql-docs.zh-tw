@@ -71,7 +71,7 @@ T (ProductModelID int, Instructions xml)
 </root>  
 ```  
   
-含有查詢運算式 `nodes()` 的 `/root/Location` 方法引動過程會傳回含有三個資料列的資料列集，每個資料列都含有原始 XML 文件的邏輯複本，且其內容項目會設成其中一個 `<Location>` 節點：  
+含有查詢運算式 `/root/Location` 的 `nodes()` 方法引動過程會傳回含有三個資料列的資料列集，每個資料列都含有原始 XML 文件的邏輯複本，且其內容項目會設成其中一個 `<Location>` 節點：  
   
 ```sql
 Product  
@@ -201,9 +201,9 @@ go
 ### <a name="specifying-the-nodes-method-against-a-column-of-xml-type"></a>針對 xml 類型的資料行來指定 nodes() 方法  
 此範例使用自行車製造指示，並將其儲存在 **ProductModel** 資料表的 Instructions **xml** 類型資料行中。  
   
-在下列範例中，會針對 `nodes()` 資料表中 `Instructions`xml**類型的** 資料行來指定 `ProductModel` 方法。  
+在下列範例中，會針對 `ProductModel` 資料表中 **xml** 類型的 `Instructions` 資料行來指定 `nodes()` 方法。  
   
-`nodes()` 方法藉由指定 `Location` 路徑，將 <`/MI:root/MI:Location`> 元素設為內容節點。 結果資料列集包含原始文件的邏輯複本 (文件中的每個 <`Location`> 節點各有一個複本)，且其內容節點會設為 <`Location`> 元素。 因此，`nodes()` 函式會提供一組 <`Location`> 內容節點。  
+`nodes()` 方法藉由指定 `/MI:root/MI:Location` 路徑，將 <`Location`> 元素設為內容節點。 結果資料列集包含原始文件的邏輯複本 (文件中的每個 <`Location`> 節點各有一個複本)，且其內容節點會設為 <`Location`> 元素。 因此，`nodes()` 函式會提供一組 <`Location`> 內容節點。  
   
 根據此資料列集的 `query()` 方法會要求 `self::node`，且會傳回每個資料列的 `<Location>` 項目。  
   
@@ -211,7 +211,7 @@ go
   
 - 尋找每個 <`Location`> 中的 Location ID  
   
-- 擷取每個 <`step``Location` 中的製造步驟 (<>> 子元素)  
+- 擷取每個 <`Location`> 中的製造步驟 (<`step`> 子元素)  
   
 此查詢會傳回內容項目，其中在 `'.'` 方法中指定了 `self::node()` 的 `query()` 縮寫語法。  
   

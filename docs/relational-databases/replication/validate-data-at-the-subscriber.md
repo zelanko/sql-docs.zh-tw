@@ -46,7 +46,7 @@ ms.locfileid: "71710759"
 
  驗證資料是一個三部份式的處理：  
   
-1.  *「標示」* 要驗證之發行集的單個或所有訂閱。 在 [驗證單一訂閱]  、[驗證多個訂閱]  和 [驗證所有訂閱]  對話方塊 (位於  的 [本機發行集]  資料夾和 [本機訂閱][!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]資料夾) 中標示要驗證的訂閱。 您也可以從複寫監視器中的 **[所有訂閱]** 索引標籤、 **[訂閱監看清單]** 索引標籤和發行集節點標示訂閱。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+1.  *「標示」* 要驗證之發行集的單個或所有訂閱。 在 [驗證單一訂閱] 、[驗證多個訂閱] 和 [驗證所有訂閱]  對話方塊 (位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [本機發行集]資料夾和 [本機訂閱]資料夾) 中標示要驗證的訂閱。 您也可以從複寫監視器中的 **[所有訂閱]** 索引標籤、 **[訂閱監看清單]** 索引標籤和發行集節點標示訂閱。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 2.  在下一次由「散發代理程式」(用於異動複寫) 或「合併代理程式」(用於合併式複寫) 進行同步時，將對訂閱進行驗證。 「散發代理程式」通常連續執行，此時可立即進行驗證；「合併代理程式」通常視需要執行，此時驗證將在執行代理程式後進行。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "71710759"
 
 #### <a name="all-articles"></a>所有發行項 
   
-1.  在發行集資料庫的發行者端，執行 [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)。 針對 `@publication` 指定 `@rowcount_only` 和下列其中一個值：  
+1.  在發行集資料庫的發行者端，執行 [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)。 針對 `@rowcount_only` 指定 `@publication` 和下列其中一個值：  
   
     -   **1** - 只限列數檢查 (預設值)    
     -   **2** - 列數及二進位總和檢查碼。  
@@ -241,7 +241,7 @@ ms.locfileid: "71710759"
     3.  在 **[同步處理記錄]** 索引標籤上的 **[所選取工作階段的最後訊息]** 測試區域中檢視資訊。 
   
 ### <a name="using-transact-sql"></a>使用 TRANSACT-SQL
-1.  在發行集資料庫的發行者端，執行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 針對 `@publication` 指定 `@level` 和下列其中一個值：    
+1.  在發行集資料庫的發行者端，執行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 針對 `@level` 指定 `@publication` 和下列其中一個值：    
     -   **1** - 只驗證列數。   
     -   **3** - 驗證列數二進位總和檢查碼。  
   

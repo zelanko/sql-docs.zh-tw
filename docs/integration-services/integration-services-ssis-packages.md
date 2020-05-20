@@ -95,7 +95,7 @@ ms.locfileid: "71296190"
 |**Diagnostic**|提供影響封裝執行之系統組態的相關資訊，例如可以同時執行的可執行檔數目。|  
   
 ## <a name="set-the-properties-of-a-package"></a>設定套件的屬性  
- 您可以在  **的 [屬性]** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 視窗中，或以程式設計方式設定屬性。  
+ 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，或以程式設計方式設定屬性。  
   
  如需如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]來設定這些屬性的詳細資訊，請參閱 [設定封裝屬性](../integration-services/set-package-properties.md)。  
   

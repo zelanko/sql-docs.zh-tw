@@ -55,7 +55,7 @@ ms.locfileid: "68012807"
 2.  在 **[啟用的通訊協定]** 方塊中，按一下 **[上移]** 或 **[下移]** ，來變更要連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時使用通訊協定的順序。 **[啟用的通訊協定]** 方塊裡最上方的通訊協定，是預設通訊協定。  
   
     > [!IMPORTANT]  
-    >  「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」會為伺服器別名組態與預設用戶端網路程式庫建立登錄項目。 然而，應用程式並不會安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端網路程式庫或網路通訊協定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端網路程式庫是在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時安裝；網路通訊協定是在安裝 Microsoft Windows 時安裝 (或透過 [控制台]  中的 [網路]  安裝)。 某些特定網路通訊協定可能不會隨 Windows 安裝。 如需有關安裝這些網路通訊協定的詳細資訊，請參閱供應商說明文件。  
+    >  「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」會為伺服器別名組態與預設用戶端網路程式庫建立登錄項目。 然而，應用程式並不會安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端網路程式庫或網路通訊協定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端網路程式庫是在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時安裝；網路通訊協定是在安裝 Microsoft Windows 時安裝 (或透過 [控制台] 中的 [網路] 安裝)。 某些特定網路通訊協定可能不會隨 Windows 安裝。 如需有關安裝這些網路通訊協定的詳細資訊，請參閱供應商說明文件。  
   
 ###  <a name="to-configure-a-client-to-use-tcpip"></a><a name="Configure"></a> 設定用戶端使用 TCP/IP  
   

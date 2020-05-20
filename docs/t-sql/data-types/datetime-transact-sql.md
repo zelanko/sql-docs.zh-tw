@@ -78,7 +78,7 @@ ms.locfileid: "68113718"
   
 |ODBC|描述|  
 |---|---|
-|{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|ODBC API 定義了逸出序列來代表日期和時間值，供 ODBC 呼叫時間戳記資料。 由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 提供者所支援的 OLE DB 語言定義 (DBGUID-SQL) 也支援 ODBC 時間戳記格式。 使用 ADO、OLE DB 與 ODBC 架構 API 的應用程式都可以使用這個 ODBC 時間戳記格式來代表日期和時間值。<br /><br /> ODBC 時間戳記逸出序列的格式如下：{ *literal_type* '*constant_value*' }：<br /><br /> <br /><br /> - *literal_type* 會指定逸出序列的類型。 時間戳記有三個 *literal_type* 規範：<br />1) d = 只有日期<br />2) t = 只有時間<br />3) ts = 時間戳記 (時間 + 日期)<br /><br /> <br /><br /> - '*constant_value*' 是逸出序列的值。 對於各個 *literal_type*，*constant_value* 都必須遵循這些格式。<br />d：yyyy-mm-dd<br />t：hh:mm:ss[.fff]<br />ts：yyyy-mm-dd hh:mm:ss[.fff]|  
+|{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|ODBC API 定義了逸出序列來代表日期和時間值，供 ODBC 呼叫時間戳記資料。 由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB 提供者所支援的 OLE DB 語言定義 (DBGUID-SQL) 也支援 ODBC 時間戳記格式。 使用 ADO、OLE DB 與 ODBC 架構 API 的應用程式都可以使用這個 ODBC 時間戳記格式來代表日期和時間值。<br /><br /> ODBC 時間戳記逸出序列的格式如下：{ *literal_type* '*constant_value*' }：<br /><br /> <br /><br /> - *literal_type* 會指定逸出序列的類型。 時間戳記有三個 *literal_type* 規範：<br />1) d = 只有日期<br />2) t = 只有時間<br />3) ts = 時間戳記 (時間 + 日期)<br /><br /> <br /><br /> - '*constant_value*' 是逸出序列的值。 對於各個 *literal_type*，*constant_value* 都必須遵循這些格式。<br />d：yyyy-mm-dd<br />t：hh:mm:ss[.fff]<br />ts：yyyy-mm-dd hh:mm:ss[.fff]|  
   
 ## <a name="rounding-of-datetime-fractional-second-precision"></a>datetime 小數秒數有效位數的四捨五入  
 **datetime** 值會捨入到 .000、.003 或 .007 秒的遞增，如下表所示。

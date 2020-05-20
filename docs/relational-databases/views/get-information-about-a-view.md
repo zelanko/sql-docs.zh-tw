@@ -31,7 +31,7 @@ ms.locfileid: "72909886"
 ---
 # <a name="get-information-about-a-view"></a>取得檢視的資訊
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-  您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，取得 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中檢視定義或屬性的相關資訊。 您可能需要查看檢視的定義才能了解如何從來源資料表衍生出資料；或是查看檢視所定義的資料。  
+  您可以透過使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，取得 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視定義或屬性的相關資訊。 您可能需要查看檢視的定義才能了解如何從來源資料表衍生出資料；或是查看檢視所定義的資料。  
   
 > [!IMPORTANT]  
 >  如果變更檢視所參考的物件名稱，就必須修改檢視，使其文字反映新的名稱。 因此，在重新命名物件前，應先顯示物件的相依性，以判斷是否有任何檢視會受預期的變更所影響。  

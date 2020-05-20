@@ -38,7 +38,7 @@ ms.locfileid: "68140920"
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是要與叫用 **所在之執行個體相比較的另一個**geometry`STOverlaps()` 執行個體。  
+ 這是要與叫用 `STOverlaps()` 所在之執行個體相比較的另一個 **geometry** 執行個體。  
   
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
@@ -48,7 +48,7 @@ ms.locfileid: "68140920"
 ## <a name="remarks"></a>備註  
  兩個 **geometry** 執行個體重疊的條件是：代表其交集的區域與這兩個執行個體的維度相同，而且區域不等於任一個執行個體。  
   
- 如果 `STOverlaps()`geometry **執行個體相交的點不是相同的維度，** 一律會傳回 0。  
+ 如果 **geometry** 執行個體相交的點不是相同的維度，`STOverlaps()` 一律會傳回 0。  
   
  如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一律會傳回 Null。  
   

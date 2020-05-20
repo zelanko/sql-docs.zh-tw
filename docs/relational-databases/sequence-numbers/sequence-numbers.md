@@ -391,7 +391,7 @@ GO
   
 ```  
   
- 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的 `SELECT *` 陳述式將收到新的資料行做為最後一個資料行，而非第一個資料行。 如果這是無法接受的資料行，您就必須建立全新的資料表、將資料移入其中，然後重新建立新資料表的權限。  
+ 使用 `SELECT *` 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式將收到新的資料行做為最後一個資料行，而非第一個資料行。 如果這是無法接受的資料行，您就必須建立全新的資料表、將資料移入其中，然後重新建立新資料表的權限。  
   
 ## <a name="related-content"></a>相關內容  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  

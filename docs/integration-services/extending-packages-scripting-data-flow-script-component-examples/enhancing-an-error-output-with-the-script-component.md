@@ -29,7 +29,7 @@ ms.locfileid: "71297073"
 
   根據預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤輸出中的兩個額外資料行 ErrorCode 和 ErrorColumn 只包含數字碼，代表錯誤號碼及發生錯誤之資料行的識別碼。 這些數值若無對應的錯誤描述和資料行名稱，則用途有限。  
   
- 此主題描述如何使用指令碼元件，將錯誤描述和資料行名稱新增至資料流程現有的錯誤輸出資料。 此範例使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 方法 (可透過指令碼元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 屬性取得)，加入對應至特定預先定義的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 錯誤碼之錯誤描述。 然後，本例會使用相同介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法新增資料行名稱，此名稱對應至擷取的歷程識別碼。  
+ 此主題描述如何使用指令碼元件，將錯誤描述和資料行名稱新增至資料流程現有的錯誤輸出資料。 此範例使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法 (可透過指令碼元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 屬性取得)，加入對應至特定預先定義的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤碼之錯誤描述。 然後，本例會使用相同介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法新增資料行名稱，此名稱對應至擷取的歷程識別碼。  
   
 > [!NOTE]  
 >  如果您要建立可以更輕鬆地在多個資料流程工作與多個封裝之間重複使用的元件，請考慮使用這個指令碼元件範例中的程式碼，做為自訂資料流程元件的起點。 如需詳細資訊，請參閱 [開發自訂資料流程元件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  

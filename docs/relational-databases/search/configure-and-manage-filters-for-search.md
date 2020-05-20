@@ -37,7 +37,7 @@ ms.locfileid: "68093297"
 >  根據篩選的實作方式，篩選可能會處理父物件中內嵌的物件。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會將篩選設定成遵循其他物件的連結。  
 
 ## <a name="installed-filters"></a>安裝的篩選 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會安裝其自有的 XML 和 HTML 篩選。 此外，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 也會載入已安裝在作業系統上之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬格式 (.doc、.xdoc、.ppt 等) 的篩選。 若要識別目前載入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上的篩選，請使用 [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) 預存程序，如下所示：  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會安裝其自有的 XML 和 HTML 篩選。 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會載入已安裝在作業系統上之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 專屬格式 (.doc、.xdoc、.ppt 等) 的篩選。 若要識別目前載入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上的篩選，請使用 [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) 預存程序，如下所示：  
 
 ```sql
 EXEC sp_help_fulltext_system_components 'filter';   

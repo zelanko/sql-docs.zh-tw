@@ -70,7 +70,7 @@ End Sub
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 介面對於 **Object** 類型的屬性值之支援有限。 您可以儲存為自訂屬性值的唯一物件是簡單類型的陣列，例如字串或是整數。  
   
- 您可以將自訂屬性的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> 屬性值設定成 **列舉的**CPET_NOTIFY<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType>，藉此指出自訂屬性支援屬性運算式，如下列範例所示。 您不必加入任何程式碼以處理或是驗證使用者所輸入的屬性運算式。 您可以為屬性設定預設值、驗證其值，以及正常地讀取和使用其值。  
+ 您可以將自訂屬性的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> 屬性值設定成 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType> 列舉的 **CPET_NOTIFY**，藉此指出自訂屬性支援屬性運算式，如下列範例所示。 您不必加入任何程式碼以處理或是驗證使用者所輸入的屬性運算式。 您可以為屬性設定預設值、驗證其值，以及正常地讀取和使用其值。  
   
 ```csharp  
 IDTSCustomProperty100 myCustomProperty;  

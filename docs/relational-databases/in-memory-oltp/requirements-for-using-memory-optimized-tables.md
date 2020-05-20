@@ -52,7 +52,7 @@ ms.locfileid: "68109610"
 > [!NOTE]
 > 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 起，Standard 和 Express 版本皆支援記憶體內部 OLTP，但會用到在指定資料庫用於記憶體最佳化資料表的記憶體數量的配額。 Standard 版本是每個資料庫 32 GB，Express 版本是每個資料庫 352 MB。 
   
--   如果您建立一或多個具有記憶體最佳化資料表的資料庫，即應將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SE_MANAGE_VOLUME_NAME*使用者權利授與* 服務啟動帳戶，以啟用檔案立即初始化 (IFI)。 如果沒有 IFI，記憶體最佳化儲存體檔案 (資料與差異檔案) 將會在建立時進行初始化，而如此可能會對工作負載的效能產生負面的影響。 如需 IFI 的詳細資訊及啟用方式，請參閱[資料庫檔案立即初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
+-   如果您建立一或多個具有記憶體最佳化資料表的資料庫，即應將 *SE_MANAGE_VOLUME_NAME* 使用者權利授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動帳戶，以啟用檔案立即初始化 (IFI)。 如果沒有 IFI，記憶體最佳化儲存體檔案 (資料與差異檔案) 將會在建立時進行初始化，而如此可能會對工作負載的效能產生負面的影響。 如需 IFI 的詳細資訊及啟用方式，請參閱[資料庫檔案立即初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

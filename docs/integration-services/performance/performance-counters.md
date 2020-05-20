@@ -99,7 +99,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 6.  按一下 [使用本機電腦計數器]  ，以記錄本機電腦上的效能計數器，或按一下 [從下列電腦選取計數器]  ，然後從清單選取電腦，以記錄指定之電腦上的效能計數器。  
   
-7.  在 [加入計數器]  對話方塊中，選取 [效能物件]  清單中的 [SQL Server:SSIS Pipeline]  。  
+7.  在 [加入計數器] 對話方塊中，選取 [效能物件] 清單中的 [SQL Server:SSIS Pipeline]。  
   
 8.  若要選取效能計數器，請執行下列其中之一：  
   

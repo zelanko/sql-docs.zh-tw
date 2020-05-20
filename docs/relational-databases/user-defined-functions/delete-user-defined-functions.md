@@ -70,7 +70,7 @@ ms.locfileid: "72906871"
 5.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
 
     > [!IMPORTANT]  
-    >  在 [刪除物件]  對話方塊中按一下 [顯示相依性]  ，開啟 [_function\_name_ 相依性]  對話方塊。 這就會顯示相依於函數的所有物件以及函數所相依的所有物件。  
+    >  在 [刪除物件] 對話方塊中按一下 [顯示相依性]，開啟 [_function\_name_ 相依性] 對話方塊。 這就會顯示相依於函數的所有物件以及函數所相依的所有物件。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

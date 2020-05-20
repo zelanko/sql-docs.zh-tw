@@ -38,7 +38,7 @@ ms.locfileid: "68107753"
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是要與叫用 **所在之執行個體相比較的另一個**geometry`STEquals()` 執行個體。  
+ 這是要與叫用 `STEquals()` 所在之執行個體相比較的另一個 **geometry** 執行個體。  
   
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  

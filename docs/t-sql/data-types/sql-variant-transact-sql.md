@@ -115,7 +115,7 @@ ODBC 不完全支援 **sql_variant**。 因此，當您使用 Microsoft OLE DB P
 ## <a name="examples"></a>範例  
 
 ### <a name="a-using-a-sql_variant-in-a-table"></a>A. 在資料表中使用 sql_variant  
- 下列範例會使用 sql_variant 資料類型建立資料表。 接著範例會擷取有關 `SQL_VARIANT_PROPERTY` 值 `colA` 的 `46279.1` 資訊，如果 `colB` 有  = 和 `1689` 類型的 `tableA`，則 `colA``sql_variant``colB`。  
+ 下列範例會使用 sql_variant 資料類型建立資料表。 接著範例會擷取有關 `colA` 值 `46279.1` 的 `SQL_VARIANT_PROPERTY` 資訊，如果 `tableA` 有 `colB` 和 `sql_variant` 類型的 `colA`，則 `colB` =`1689`。  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -138,7 +138,7 @@ decimal      8           2
 ```  
   
 ### <a name="b-using-a-sql_variant-as-a-variable"></a>B. 使用 sql_variant 作為變數   
- 下列範例會使用 sql_variant 資料類型建立變數，然後擷取關於名為 `SQL_VARIANT_PROPERTY` 之變數的 @v1 資訊。  
+ 下列範例會使用 sql_variant 資料類型建立變數，然後擷取關於名為 @v1 之變數的 `SQL_VARIANT_PROPERTY` 資訊。  
   
 ```sql    
 DECLARE @v1 sql_variant;  

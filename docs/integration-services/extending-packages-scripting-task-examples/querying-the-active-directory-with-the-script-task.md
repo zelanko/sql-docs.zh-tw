@@ -41,7 +41,7 @@ ms.locfileid: "71286822"
   
 1.  建立三個字串變數 `email`、`name` 和 `title`。 輸入有效的公司電子郵件地址做為 `email` 變數值。  
   
-2.  在 [指令碼工作編輯器]  的 [指令碼]  頁面上，將 `email` 變數加入 **ReadOnlyVariables** 屬性。  
+2.  在 [指令碼工作編輯器] 的 [指令碼] 頁面上，將 `email` 變數加入 **ReadOnlyVariables** 屬性。  
   
 3.  將 `name` 和 `title` 變數加入 **ReadWriteVariables** 屬性。  
   

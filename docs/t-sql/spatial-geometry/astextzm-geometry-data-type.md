@@ -46,7 +46,7 @@ ms.locfileid: "68027646"
 ## <a name="remarks"></a>備註  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立一個包含 `Point`Z **(高度) 和**M **(測量) 值的** 執行個體。 `STAsText()` 會選取 WKT 值 (1 2)；`AsTextZM()` 會選取相同的 WKT 值，並且也傳回 **Z** 和 **M** 的值，產生 (1 2 3 4)。  
+ 下列範例會建立一個包含 **Z** (高度) 和 **M** (測量) 值的 `Point` 執行個體。 `STAsText()` 會選取 WKT 值 (1 2)；`AsTextZM()` 會選取相同的 WKT 值，並且也傳回 **Z** 和 **M** 的值，產生 (1 2 3 4)。  
   
 ```  
 DECLARE @g geometry;  

@@ -78,7 +78,7 @@ DROP ROLE role_name
  需要資料庫的 **ALTER ANY ROLE** 權限、角色的 **CONTROL** 權限，或 **db_securityadmin** 的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會從 `purchasing` 資料庫卸除資料庫角色 `AdventureWorks2012`。  
+ 下列範例會從 `AdventureWorks2012` 資料庫卸除資料庫角色 `purchasing`。  
   
 ```  
 DROP ROLE purchasing;  

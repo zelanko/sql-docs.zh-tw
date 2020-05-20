@@ -29,7 +29,7 @@ ms.locfileid: "68101009"
 
   平面空間資料類型 **geometry** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中是實作為通用語言執行平台 (CLR) 資料類型。 此類型代表以 Euclidean (平面) 座標系統表示的資料。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援一組 **geometry** 空間資料類型方法。 這些方法包括「開放地理空間協會」(OGC) 標準及該標準的一組 **延伸模組所定義的**geometry[!INCLUDE[msCoName](../../includes/msconame-md.md)] 相關方法。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援一組 **geometry** 空間資料類型方法。 這些方法包括「開放地理空間協會」(OGC) 標準及該標準的一組 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 延伸模組所定義的 **geometry** 相關方法。  
  
  geometry 方法的誤差容許範圍可以大到 1.0e-7 *。 範圍指的是 **geometry** 物件的點之間大致的最大距離。
   

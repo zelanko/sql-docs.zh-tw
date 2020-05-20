@@ -48,7 +48,7 @@ ms.locfileid: "71281885"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 若要安裝 SQL Server 和 SSIS，請參閱[安裝 Integration Services](install-windows/install-integration-services.md)。
 
--   **AdventureWorksDW2012 範例資料庫**。 若要下載 **AdventureWorksDW2012** 資料庫，請從 `AdventureWorksDW2012.bak`AdventureWorks 範例資料庫[下載 ](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)，並還原備份。  
+-   **AdventureWorksDW2012 範例資料庫**。 若要下載 **AdventureWorksDW2012** 資料庫，請從 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)下載 `AdventureWorksDW2012.bak`，並還原備份。  
 
 -   **範例資料**檔案。 範例資料隨附在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 課程封裝中。 若要將範例資料與課程套件下載為 ZIP 檔案，請參閱 [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827) (SQL Server Integration Services 教學課程檔案)。
 

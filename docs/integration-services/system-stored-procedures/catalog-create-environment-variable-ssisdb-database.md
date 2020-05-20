@@ -90,7 +90,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  預存程序會驗證變數的資料類型，以確定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄可支援該變數。  
   
 > [!TIP]  
->  請考慮使用 **中的**Int16[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，而非使用不受支援的 **Sbyte** 資料類型。  
+>  請考慮使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 **Int16** 資料類型，而非使用不受支援的 **Sbyte** 資料類型。  
   
  根據下表，傳遞到這個具有 *value* 參數之預存程序的值，將會從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型轉換為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型：  
   

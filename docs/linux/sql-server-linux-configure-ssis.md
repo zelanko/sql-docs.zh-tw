@@ -32,7 +32,7 @@ ms.locfileid: "68077527"
 
 ## <a name="run-ssis-conf"></a>執行 ssis-conf
 
-本文中的範例是藉由指定完整路徑：`ssis-conf` 來執行 `/opt/ssis/bin/ssis-conf`。 如果您在執行 `ssis-conf` 之前巡覽至該位置，則您可以在目前目錄的內容中執行公用程式：`./ssis-conf`。
+本文中的範例是藉由指定完整路徑：`/opt/ssis/bin/ssis-conf` 來執行 `ssis-conf`。 如果您在執行 `ssis-conf` 之前巡覽至該位置，則您可以在目前目錄的內容中執行公用程式：`./ssis-conf`。
 
 請務必使用根權限來執行本文中所述命令。 例如，執行 `sudo /opt/ssis/bin/ssis-conf setup` 而不是 `/opt/ssis/bin/ssis-conf setup`。
 

@@ -65,7 +65,7 @@ ms.locfileid: "71294056"
 |**ForcedExecutionValueType**|**ForcedExecutionValue**的資料類型。 此屬性的預設值為 **Int32**。|  
 |**ForceExecutionResult**|指定執行封裝或容器之強制結果的值。 可能的值為 **None**、 **Success**、 **Failure**和 **Completion**。 這個屬性的預設值為 **None**。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>。|  
 |**ForceExecutionValue**|布林值，指定是否應該強制執行容器的選擇性執行值以包含特定值。 此屬性的預設值為 **False**。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>。|  
-|**識別碼**|在建立封裝時所指派的容器 GUID。 這個屬性是唯讀的。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>第 1 課：建立 Windows Azure 儲存體物件{2}。|  
+|**識別碼**|在建立封裝時所指派的容器 GUID。 這個屬性是唯讀的。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>第 1 課：建立 Windows Azure 儲存體物件<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>。|  
 |**IsolationLevel**|容器交易的隔離等級。 可能的值為 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**和 **Snapshot**。 此屬性的預設值為 **Serializable**。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
 |**LocaleID**|Microsoft Win32 地區設定。 此屬性的預設值為本機電腦作業系統的地區設定。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>。|  
 |**LoggingMode**|指定容器記錄行為的值。 這些值為 **Disabled**、 **Enabled**和 **UseParentSetting**。 此屬性的預設值為 **UseParentSetting**。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>。|  

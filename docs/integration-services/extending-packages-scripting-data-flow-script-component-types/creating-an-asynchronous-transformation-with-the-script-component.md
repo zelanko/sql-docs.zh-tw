@@ -40,26 +40,26 @@ ms.locfileid: "71297052"
 ## <a name="configuring-an-asynchronous-transformation-component-in-metadata-design-mode"></a>在中繼資料設計模式中設定非同步轉換元件  
  在您選取可建立轉換元件的選項之後，請使用 [指令碼轉換編輯器]  來設定元件。 如需詳細資訊，請參閱[在指令碼元件編輯器中設定指令碼元件](../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  
   
- 若要選取指令碼元件將要使用的指令碼語言，請在 [指令碼轉換編輯器]  對話方塊的 [指令碼]  頁面上設定 [ScriptLanguage]  屬性。  
+ 若要選取指令碼元件將要使用的指令碼語言，請在 [指令碼轉換編輯器] 對話方塊的 [指令碼] 頁面上設定 [ScriptLanguage] 屬性。  
   
 > [!NOTE]  
->  若要為指令碼元件設定預設的指令碼語言，請使用 [選項]  對話方塊中 [一般]  頁面上的 [指令碼語言]  選項。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
+>  若要為指令碼元件設定預設的指令碼語言，請使用 [選項] 對話方塊中 [一般] 頁面上的 [指令碼語言] 選項。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
  資料流程轉換元件有一個輸入，而且支援一或多個輸出。 設定元件的輸入與輸出是您必須在中繼資料設計模式下完成的其中一個步驟，方法是在撰寫自訂指令碼之前先使用 [指令碼轉換編輯器]  。  
   
 ### <a name="configuring-input-columns"></a>設定輸入資料行  
  使用指令碼元件建立的轉換元件具有單一輸入。  
   
- 在 [指令碼轉換編輯器]  的 [輸入資料行]  頁面上，資料行清單會從資料流程中的上游元件輸出顯示可用的資料行。 選取要轉換或通過的資料行。 將任何您要就地轉換的資料行標示成「讀取/寫入」。  
+ 在 [指令碼轉換編輯器] 的 [輸入資料行] 頁面上，資料行清單會從資料流程中的上游元件輸出顯示可用的資料行。 選取要轉換或通過的資料行。 將任何您要就地轉換的資料行標示成「讀取/寫入」。  
   
- 如需 [指令碼轉換編輯器]  的 [輸入資料行]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入資料行頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)。  
+ 如需 [指令碼轉換編輯器] 的 [輸入資料行] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入資料行頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)。  
   
 ### <a name="configuring-inputs-outputs-and-output-columns"></a>設定輸入、輸出及輸出資料行  
  轉換元件支援一或多個輸出。  
   
  通常具有非同步輸出的轉換有兩個輸出。 例如，當您計算位於特定城市的位址數時，您可能會想要將此位址資料傳遞給某個輸出，而將彙總的結果傳送給另一個輸出。 彙總輸出也需要新的輸出資料行。  
   
- 在 [指令碼轉換編輯器]  的 [輸入及輸出]  頁面上，您會看到預設已建立單一輸出，但是尚未建立輸出資料行。 在編輯器的這個頁面上，您可設定下列項目：  
+ 在 [指令碼轉換編輯器] 的 [輸入及輸出] 頁面上，您會看到預設已建立單一輸出，但是尚未建立輸出資料行。 在編輯器的這個頁面上，您可設定下列項目：  
   
 -   您可能會想要建立一或多個其他輸出，例如彙總結果的輸出。 使用 [新增輸出]  和 [移除輸出]  按鈕管理非同步轉換元件的輸出。 將每一個輸出的 **SynchronousInputID** 屬性設定為零，指出輸出不會只是通過上游元件中的資料，或是在現有的資料列和資料行中就地轉換它。 這項設定會讓輸出與輸入不同步。  
   
@@ -69,19 +69,19 @@ ms.locfileid: "71297052"
   
 -   您可能會想要加入更多的資料行來包含其他資訊。 您必須撰寫自己的程式碼，才能用資料填滿其他資料行。 如需重新產生標準錯誤輸出之行為的資訊，請參閱[模擬指令碼元件的錯誤輸出](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)。  
   
- 如需 [指令碼轉換編輯器]  之 [輸入及輸出]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
+ 如需 [指令碼轉換編輯器] 之 [輸入及輸出] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
   
 ### <a name="adding-variables"></a>加入變數  
- 如果有任何要在指令碼中使用其值的現有變數，則可以在 [指令碼轉換編輯器]  的 [指令碼]  頁面上，將它們新增至 ReadOnlyVariables 和 ReadWriteVariables 屬性欄位中。  
+ 如果有任何要在指令碼中使用其值的現有變數，則可以在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，將它們新增至 ReadOnlyVariables 和 ReadWriteVariables 屬性欄位中。  
   
- 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以按一下 [ReadOnlyVariables]  和 [ReadWriteVariables]  屬性欄位旁邊的省略符號 ([...]  ) 按鈕，然後在 [選取變數]  對話方塊中選取變數，來選取多個變數。  
+ 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以按一下 [ReadOnlyVariables] 和 [ReadWriteVariables] 屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取變數，來選取多個變數。  
   
  如需如何利用指令碼元件使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
- 如需 [指令碼轉換編輯器]  的 [指令碼]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
+ 如需 [指令碼轉換編輯器] 的 [指令碼] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
   
 ## <a name="scripting-an-asynchronous-transformation-component-in-code-design-mode"></a>在程式碼設計模式中編寫非同步轉換元件的指令碼  
- 在您設定好元件的所有中繼資料之後，便可撰寫自訂指令碼。 在 [指令碼轉換編輯器]  的 [指令碼]  頁面上，按一下 [編輯指令碼]  來開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 以新增自訂指令碼。 所使用的指令碼語言取決於您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 還是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作為 [指令碼]  頁面上 **ScriptLanguage** 屬性的指令碼語言。  
+ 在您設定好元件的所有中繼資料之後，便可撰寫自訂指令碼。 在 [指令碼轉換編輯器]  的 [指令碼]  頁面上，按一下 [編輯指令碼]  來開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 以新增自訂指令碼。 所使用的指令碼語言取決於您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 還是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作為 [指令碼] 頁面上 **ScriptLanguage** 屬性的指令碼語言。  
   
  如需使用指令碼元件所建立之各種元件都適用的重要資訊，請參閱[編碼和偵錯指令碼元件](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "71297052"
   
  如果您開啟 VSTA [專案總管]  視窗，則可以看到指令碼元件也會產生唯讀的 **BufferWrapper** 和 **ComponentWrapper** 專案項目。 ScriptMain 類別繼承自 **ComponentWrapper** 專案項目中的 UserComponent 類別。  
   
- 在執行階段，資料流程引擎會呼叫 **UserComponent** 類別中的 PrimeOutput 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PrimeOutput%2A> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 PrimeOutput 方法接著會呼叫 CreateNewOutputRows 方法。  
+ 在執行階段，資料流程引擎會呼叫 **UserComponent** 類別中的 PrimeOutput 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PrimeOutput%2A> 方法。 PrimeOutput 方法接著會呼叫 CreateNewOutputRows 方法。  
   
- 接下來，資料流程引擎會叫用 UserComponent 類別中的 ProcessInput 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 ProcessInput 方法接著會在輸入緩衝區的資料列中執行迴圈，並為每個資料列呼叫一次 ProcessInputRow 方法。  
+ 接下來，資料流程引擎會叫用 UserComponent 類別中的 ProcessInput 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 方法。 ProcessInput 方法接著會在輸入緩衝區的資料列中執行迴圈，並為每個資料列呼叫一次 ProcessInputRow 方法。  
   
 ### <a name="writing-your-custom-code"></a>撰寫您的自訂程式碼  
  若要完成自訂非同步轉換元件的建立，您必須使用覆寫的 ProcessInputRow 方法來處理輸入緩衝區之每個資料列中的資料。 因為輸出與輸入不同步，所以您必須將資料列明確寫入輸出中。  
@@ -128,7 +128,7 @@ ms.locfileid: "71297052"
   
 6.  在 [指令碼]  頁面上，按一下 [編輯指令碼]  ，並輸入以下指令碼。 然後關閉指令碼開發環境以及 [指令碼轉換編輯器]  。  
   
-7.  針對第一個輸出建立及設定需要 **AddressID** 和 **City** 資料行的目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將轉換的第一個輸出 **MyAddressOutput** 連線至目的地元件。 您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)]AdventureWorks**資料庫中執行下列** 命令，以建立目的地資料表：  
+7.  針對第一個輸出建立及設定需要 **AddressID** 和 **City** 資料行的目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將轉換的第一個輸出 **MyAddressOutput** 連線至目的地元件。 您可以在 **AdventureWorks** 資料庫中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以建立目的地資料表：  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  

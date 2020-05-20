@@ -28,7 +28,7 @@ ms.locfileid: "71295096"
 
   您可以撰寫指令碼工作和指令碼元件在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中使用的指令碼。  
   
- 您可以在 VSTA 中設定中斷點和編寫中斷點指令碼。 您可以在 VSTA 中管理中斷點，但您也可以使用「 **設計師」提供的 [設定中斷點]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 對話方塊管理中斷點。 如需詳細資訊，請參閱 [偵錯控制流程](../../integration-services/troubleshooting/debugging-control-flow.md)。  
+ 您可以在 VSTA 中設定中斷點和編寫中斷點指令碼。 您可以在 VSTA 中管理中斷點，但您也可以使用「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供的 [設定中斷點] 對話方塊管理中斷點。 如需詳細資訊，請參閱 [偵錯控制流程](../../integration-services/troubleshooting/debugging-control-flow.md)。  
   
  [設定中斷點]  對話方塊包含指令碼中斷點。 這些中斷點出現在中斷點清單的底部，並顯示中斷點所在之函數的行號和名稱。 您可以從 [設定中斷點]  對話方塊刪除指令碼中斷點。  
   

@@ -58,7 +58,7 @@ ms.locfileid: "71293113"
   
 ### <a name="options"></a>選項。  
  **[ODBC 目的地編輯器]**  
- 從現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接清單中進行選取，或使用 [新增][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**按鈕建立新的** 連接，如下所述。  
+ 從現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接清單中進行選取，或使用 [新增] 按鈕建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接，如下所述。  
   
  **新增**  
  使用 [加入 Analysis Services 連接管理員]  對話方塊來建立新的連接。  

@@ -24,7 +24,7 @@ ms.locfileid: "71295509"
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  導致執行中的封裝暫停，並建立傾印檔案。 此檔案儲存於 *磁碟機>\<* :\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps 資料夾。  
+  導致執行中的封裝暫停，並建立傾印檔案。 此檔案儲存於 \<磁碟機>:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps 資料夾。  
   
 ## <a name="syntax"></a>語法  
   

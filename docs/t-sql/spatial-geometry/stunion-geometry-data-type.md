@@ -38,7 +38,7 @@ ms.locfileid: "68066224"
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是要與進行 **叫用的執行個體形成聯集的另一個**geometry`STUnion()` 執行個體。  
+ 這是要與進行 `STUnion()` 叫用的執行個體形成聯集的另一個 **geometry** 執行個體。  
   
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  

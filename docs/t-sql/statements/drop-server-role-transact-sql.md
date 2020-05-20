@@ -68,7 +68,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>B. 若要檢視角色成員資格  
- 若要檢視角色成員資格，請使用  **的**伺服器角色 (成員)[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 頁面，或執行下列查詢：  
+ 若要檢視角色成員資格，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的**伺服器角色 (成員)** 頁面，或執行下列查詢：  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

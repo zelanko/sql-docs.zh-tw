@@ -28,7 +28,7 @@ ms.locfileid: "67930735"
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-在提供了地理標記語言 (GML) **子集中的表示法時，建構**geography[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。
+在提供了地理標記語言 (GML) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 子集中的表示法時，建構 **geography** 執行個體。
   
 如需有關 GML 的詳細資訊，請參閱以下開放地理空間協會規格：[OGC 規格，地理標記語言](https://go.microsoft.com/fwlink/?LinkId=93629) \(英文\)
   

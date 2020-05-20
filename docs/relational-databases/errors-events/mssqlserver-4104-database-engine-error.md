@@ -79,7 +79,7 @@ ms.locfileid: "68120586"
     SELECT a.c2 FROM a, b;   
     ```  
   
-    假設 UDT `myudt2` 沒有名為 `c2` 的屬性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法判斷識別碼 `a.c2` 會參考資料表 `c2` 中的資料行 `a`，還是資料表 `a` 中屬性 `c2` 的資料行 `b`。  
+    假設 UDT `myudt2` 沒有名為 `c2` 的屬性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法判斷識別碼 `a.c2` 會參考資料表 `a` 中的資料行 `c2`，還是資料表 `b` 中屬性 `c2` 的資料行 `a`。  
   
 ## <a name="user-action"></a>使用者動作  
   

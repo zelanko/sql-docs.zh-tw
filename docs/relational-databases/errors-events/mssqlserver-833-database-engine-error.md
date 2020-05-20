@@ -49,7 +49,7 @@ ms.locfileid: "68129236"
   
 -   **Current Disk Queue Length**  
   
-例如，在執行  **的電腦上，** Average Disk Sec/Transfer[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時間通常少於 15 毫秒。 如果 **Average Disk Sec/Transfer** 值增加，表示 I/O 子系統並未以最佳的方式應付 I/O 需要。  
+例如，在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦上，**Average Disk Sec/Transfer** 時間通常少於 15 毫秒。 如果 **Average Disk Sec/Transfer** 值增加，表示 I/O 子系統並未以最佳的方式應付 I/O 需要。  
   
 > [!NOTE]  
 > 防毒程式可能會降低磁碟存取的速度。 若要加快存取速度，請從使用中的病毒掃描排除錯誤訊息中所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料檔案。  
