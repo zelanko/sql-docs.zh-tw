@@ -14,14 +14,14 @@ helpviewer_keywords:
 - EditMode property [ADO], VC++ example
 - CursorType property [ADO], VC++ example
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: be094e6886cceb8e6f4e42e3b60f9e7355df7592
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 26124aa4259ffa145cdbf0c42a559e89a5e2b766
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933250"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763509"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、LockType 和 EditMode 屬性範例（VC + +）
 這個範例示範如何在開啟[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)之前，先設定[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)屬性。 它也會在各種情況下顯示[EditMode](../../../ado/reference/ado-api/editmode-property.md)屬性的值。 需要 EditModeOutput 函數才能執行此程式。  

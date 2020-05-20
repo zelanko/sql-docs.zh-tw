@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Visual Basic example of data shaping[ADO], about data shaping
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a21eda26bab7f5bc5d678c6763c803323ffcff8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1c370f09ada37f67e32231e58c70d2bb0bfd4c51
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923500"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763019"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Visual Basic 的資料成形範例
 ```  

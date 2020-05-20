@@ -45,10 +45,10 @@ ms.locfileid: "68042258"
  CLR 傳回類型：**SqlGeography**  
   
 ## <a name="remarks"></a>備註  
- 如果參數大於 [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) 的結果，這個方法會傳回 null；如果 **expression** 參數小於 1，將會擲回 *ArgumentOutOfRangeException*。  
+ 如果參數大於 [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) 的結果，這個方法會傳回 null；如果 *expression* 參數小於 1，將會擲回 **ArgumentOutOfRangeException**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立 `MultiPoint``geography` 執行個體，並使用 `STGeometryN()` 來尋找 `geography`GeometryCollection**的第二個** 執行個體。  
+ 下列範例會建立 `MultiPoint``geography` 執行個體，並使用 `STGeometryN()` 來尋找 **GeometryCollection** 的第二個 `geography` 執行個體。  
   
 ```  
 DECLARE @g geography;  

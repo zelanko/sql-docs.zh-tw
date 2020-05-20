@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - PrimaryKey property [ADOX]
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: afd6ad45295ab5a888c3b392adb0019197710e15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dc9c4e847ff75b12e3d0c2b69db7dfc47a6b4877
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965546"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763699"
 ---
 # <a name="primarykey-property-adox"></a>PrimaryKey 屬性 (ADOX)
 指出索引是否代表資料表的主鍵。  

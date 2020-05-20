@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - 'Parameter collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad717081698efcc3c976376a8f1f1f3cab604e54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0b998aa20df1110c6708bf857d39e679ed871e68
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917767"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763419"
 ---
 # <a name="parameter-visual-c-syntax-index-with-import"></a>參數（Visual C++ #import 的語法索引）
 ## <a name="methods"></a>方法  

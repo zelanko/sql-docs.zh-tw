@@ -141,20 +141,20 @@ ms.locfileid: "71293837"
  輸入傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件工作的描述。  
   
 ## <a name="transfer-sql-server-objects-task-editor-objects-page"></a>傳送 SQL Server 物件工作編輯器 (物件頁面)
-  使用 [傳送 SQL Server 物件工作編輯器]  對話方塊的 [物件]  頁面，即可指定用於從某個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體將一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件複製到另一個執行個體的屬性。 資料表、檢視、預存程序和使用者自訂函數是您可以複製的一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件範例。  
+  使用 [傳送 SQL Server 物件工作編輯器] 對話方塊的 [物件] 頁面，即可指定用於從某個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體將一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件複製到另一個執行個體的屬性。 資料表、檢視、預存程序和使用者自訂函數是您可以複製的一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件範例。  
   
 > [!NOTE]  
 >  建立傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件工作的使用者必須具有來源伺服器物件的足夠權限，才能選取它們以進行複製，也要具有存取會從該處傳送物件之目的地伺服器資料庫的權限。  
   
 ### <a name="static-options"></a>靜態選項  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下 [**新增連線...>]\<** 建立來源伺服器的新連線。  
+ 在清單中選取 SMO 連線管理員，或按一下 [\<新增連線...>] 建立來源伺服器的新連線。  
   
  **SourceDatabase**  
  在來源伺服器上選取會從中複製物件的資料庫。  
   
  **DestinationConnection**  
- 在清單中選取一個 SMO 連線管理員，或按一下 [**新增連線...>]\<** ，以建立目的地伺服器的新連線。  
+ 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連線...>]，以建立目的地伺服器的新連線。  
   
  **DestinationDatabase**  
  在目的地伺服器上選取物件會被複製到的資料庫。  
@@ -177,7 +177,7 @@ ms.locfileid: "71293837"
 |**Append**|從來源伺服器複製的資料會附加至目的地伺服器上的現有資料。|  
   
 > [!NOTE]  
->  只有 [CopyData]  設定為 [True]  時，才能使用 [ExistingData]  選項。  
+>  只有 [CopyData] 設定為 [True] 時，才能使用 [ExistingData] 選項。  
   
  **CopySchema**  
  選取在傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件工作期間是否複製結構描述。  

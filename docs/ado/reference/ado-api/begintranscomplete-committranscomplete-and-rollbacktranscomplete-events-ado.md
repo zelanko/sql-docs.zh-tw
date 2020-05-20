@@ -20,14 +20,14 @@ helpviewer_keywords:
 - RollbackTransComplete event [ADO]
 - BeginTransComplete event [ADO]
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 750e89e97eb916c7db23e71475b753a57a4d90e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b5e005485fd2ebef3d9454286584bba03267201
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920441"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762859"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、CommitTransComplete 和 RollbackTransComplete 事件（ADO）
 當[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件上的相關聯作業完成執行之後，就會呼叫這些事件。  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Attributes property [ADO], VC++ example
 - Name property [ADO], VC++ example
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 218103d24bc7fb35e8432743f543ad7bb9558479
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b639cafe2f37b365c733f4aabc269f5f09c27918
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920530"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762916"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Attributes 和 Name 屬性範例（VC + +）
 這個範例會顯示[Connection](../../../ado/reference/ado-api/connection-object-ado.md)、 [Field](../../../ado/reference/ado-api/field-object.md)和[property](../../../ado/reference/ado-api/property-object-ado.md)物件的[Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)屬性值。 它會使用[name](../../../ado/reference/ado-api/name-property-ado.md)屬性來顯示每個**欄位**和**屬性**物件的名稱。  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - CacheSize property [ADO], VC++ example
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98670a6f63392a3f208eb7719b0be52a9422d59a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68cea9dc78bbb2fa895dc8fb697404e462c1bc07
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920250"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762835"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize 屬性範例 (VC++)
 這個範例會使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)屬性來顯示使用和不含30筆記錄快取所執行之作業的效能差異。  

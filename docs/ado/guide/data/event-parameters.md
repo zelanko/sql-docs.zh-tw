@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 32e3cd177089fb99009490b82941928e091ab7c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925360"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763189"
 ---
 # <a name="event-parameters"></a>事件參數
 每個事件處理常式都有一個控制事件處理常式的 status 參數。 針對完整事件，這個參數也會用來指出產生事件之作業的成功或失敗。 大部分的完整事件也會有錯誤參數，以提供可能發生之任何錯誤的相關資訊，以及參考用來執行作業之 ADO 物件的一或多個物件參數。 例如， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)事件包含與事件相關聯之**命令**、**記錄集**和**連接**物件的物件參數。 在下列 Microsoft® Visual Basic®範例中，您可以看到 pCommand、pRecordset 和 pConnection 物件，其中代表**Execute**方法所使用的**命令**、**記錄集**和**連接**物件。  
@@ -43,7 +43,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>Status 參數  
  呼叫事件處理常式常式時， *Status*參數會設定為下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**adStatusOK**|同時傳遞給會和 Complete 事件。 此值表示導致事件成功完成的作業。|  
 |**adStatusErrorsOccurred**|僅傳遞至完整的事件。 此值表示導致事件的作業不成功，或將事件取消作業。 請檢查*錯誤*參數以取得詳細資料。|  
@@ -53,7 +53,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  如果您不想再處理事件，您可以將*狀態*設定為**adStatusUnwantedEvent** ，您的應用程式就不會再收到該事件的通知。 不過，請記住，某些事件可能會因為一個以上的原因而引發。 在這種情況下，您必須針對每個可能的原因指定**adStatusUnwantedEvent** 。 例如，若要停止接收暫止**RecordChange**事件的通知，您必須在**adRsnAddNew**、 **adRsnDelete**、 **adRsnUpdate**、adRsnUndoUpdate、 **AdRsnUndoAddNew**、 **AdRsnUndoDelete**和**adRsnFirstChange**發生**時，將** *Status*參數設定為**adStatusUnwantedEvent** 。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|要求此事件處理常式不會再收到任何通知。|  
 |**adStatusCancel**|要求取消即將發生的作業。|  

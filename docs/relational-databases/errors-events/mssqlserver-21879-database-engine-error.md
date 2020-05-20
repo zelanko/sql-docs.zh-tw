@@ -52,7 +52,7 @@ ms.locfileid: "68056715"
   
 如果複寫代理程式是在散發者以外的節點上執行 (例如在訂閱者端執行的合併代理程式)，當其起始的 **sp_get_redirected_publisher** 呼叫傳回錯誤 21879 時，就會存在一些特殊考量。 如果 Windows 驗證用於重新導向發行者的連接，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就必須設定為 Kerberos 驗證，才能成功建立連接。 當您使用 Windows 驗證而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並未設定為 Kerberos 驗證時，在訂閱者端執行的合併代理程式就會收到表示 'NT AUTHORITY\ANONYMOUS LOGON' 登入失敗的錯誤 18456。 可解決此問題的方式有三種：  
   
--   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為 Kerberos 驗證。 請參閱 **線上叢書中的**Kerberos 驗證和 SQL Server[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為 Kerberos 驗證。 請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書中的 **Kerberos 驗證和 SQL Server**。  
   
 -   使用 **sp_changedistpublisher** 來變更與 MSdistpublishers 中之原始發行者相關聯的安全性模式，並且指定要用於連接的登入和密碼。  
   

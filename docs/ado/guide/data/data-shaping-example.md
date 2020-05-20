@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], about data shaping
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a946329ad95a2b226f186e571152268baa5f37c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0f5f4095cc8c6d3d70bdb5d1e388532cefb7e76a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925661"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763629"
 ---
 # <a name="data-shaping-example"></a>資料成形範例
 下列資料成形命令示範如何在 Northwind 資料庫的**Customers**和**Orders**資料表中建立階層式**記錄集**。  

@@ -115,7 +115,7 @@ ms.locfileid: "70846512"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>重新初始化合併式發行集的提取訂閱  
   
-1.  在訂閱資料庫的訂閱者端，執行 [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md)。 指定 **\@publisher**、 **\@publisher_db** 和 **\@publication**。 若要在重新初始化發生之前從訂閱者上傳變更，請為  upload_first **指定 \@true** 值。 這樣會標示此訂閱，在下次執行合併代理程式時重新初始化。  
+1.  在訂閱資料庫的訂閱者端，執行 [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md)。 指定 **\@publisher**、 **\@publisher_db** 和 **\@publication**。 若要在重新初始化發生之前從訂閱者上傳變更，請為 **\@upload_first** 指定 **true** 值。 這樣會標示此訂閱，在下次執行合併代理程式時重新初始化。  
   
     > [!IMPORTANT]  
     >  如果您新增、卸除或變更參數化篩選，在重新初始化期間，便無法將訂閱者的暫止變更上傳到發行者。 如果您要上傳暫止變更，請在變更篩選之前，同步處理所有訂閱。  
@@ -124,7 +124,7 @@ ms.locfileid: "70846512"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>重新初始化合併式發行集的發送訂閱  
   
-1.  在發行者端，執行 [sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber** 和 **\@subscriber_db**。 若要在重新初始化發生之前從訂閱者上傳變更，請為  upload_first **指定 \@true** 值。 這樣會標示此訂閱，在下次執行散發代理程式時重新初始化。  
+1.  在發行者端，執行 [sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber** 和 **\@subscriber_db**。 若要在重新初始化發生之前從訂閱者上傳變更，請為 **\@upload_first** 指定 **true** 值。 這樣會標示此訂閱，在下次執行散發代理程式時重新初始化。  
   
     > [!IMPORTANT]  
     >  如果您新增、卸除或變更參數化篩選，在重新初始化期間，便無法將訂閱者的暫止變更上傳到發行者。 如果您要上傳暫止變更，請在變更篩選之前，同步處理所有訂閱。  
@@ -146,7 +146,7 @@ ms.locfileid: "70846512"
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>針對現有的合併式發行集變更重新初始化原則  
   
-1.  在發行集資料庫的發行者上，執行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，為  property **指定 \@automatic_reinitialization_policy**，並為 **\@value** 指定下列其中一個值：  
+1.  在發行集資料庫的發行者上，執行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，為 **\@property** 指定 **automatic_reinitialization_policy**，並為 **\@value** 指定下列其中一個值：  
   
     -   **1** - 在發行集的變更需要自動重新初始化訂閱之前，從訂閱者上傳變更。  
   

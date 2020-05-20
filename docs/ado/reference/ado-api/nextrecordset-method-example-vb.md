@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - NextRecordset method [ADO], Visual Basic example
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 28a16d531cceb7147c5d4971d662797cb57242e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 78480bd71a1d96f5c5447022e3c7748814003bea
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918014"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762379"
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset 方法範例 (VB)
 這個範例會使用[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法來查看記錄集中的資料，其中使用由三個不同**SELECT**語句所組成的複合命令語句。  

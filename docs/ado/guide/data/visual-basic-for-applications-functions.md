@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 155eda8cf8361abff080d52db9a226fa9237b2eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923466"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763009"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 函式
 下列 Visual Basic for Applications 函數可以用於資料成形計算機運算式中：  
@@ -30,20 +30,20 @@ ms.locfileid: "67923466"
 |Abs|Asc|Atn|CBool|CByte|CCur|  
 |CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|Date|Date$|DateAdd|  
-|DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
-|錯誤|Error$|Exp|修正|[格式]|Format$|  
-|FV|Hex|Hex$|Hour|IIF|InStr|  
+|Cvar|CVDate|CVErr|日期|Date$|DateAdd|  
+|DateDiff|DatePart|DateSerial|DateValue|天|DDB|  
+|Error|Error$|Exp|修正|格式|Format$|  
+|FV|Hex|Hex$|小時|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
-|LeftB|Left$|LeftB $|Len|Log|LTrim|  
+|LeftB|Left$|LeftB $|Len|記錄檔|LTrim|  
 |LTrim$|Mid|Mid$|Minute|MIRR|Month|  
 |Now|NPer|NPV|Oct|Oct$|Pmt|  
 |PPmt|PV|QBColor|費率|RGB|Right|  
 |RightB|Right$|RightB $|Rnd|RTrim|RTrim $|  
 |Second|Sgn|Sin|SLN|Space|Space$|  
 |Sqr|Str|Str$|StrComp|StrConv|String|  
-|String$|SYD|Tan|時間|Time$|計時器|  
+|String$|SYD|Tan|Time|Time$|計時器|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Weekday|Year||  
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Precision property [ADO]
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26da0367e494bd74253b904393a2dad62308a608
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f3a72234a6d5e5cbb8e0dc9f5d625b93f15f437f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931633"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763329"
 ---
 # <a name="precision-property-ado"></a>Precision 屬性 (ADO)
 表示[參數](../../../ado/reference/ado-api/parameter-object.md)物件或數值[欄位](../../../ado/reference/ado-api/field-object.md)物件中數值的有效位數程度。  

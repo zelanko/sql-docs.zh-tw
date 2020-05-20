@@ -74,7 +74,7 @@ ms.locfileid: "70059289"
   
 3. 以滑鼠右鍵按一下 [區域訂閱]  資料夾，然後選取 [新增訂閱]  。  
   
-4. 在 [新增訂閱精靈] 的 [發行集]  頁面上，從 [發行者] **\< 下拉式清單中選取 [** 尋找 SQL Server 發行者>] **\< 或 [** 尋找 Oracle 發行者>]  。  
+4. 在 [新增訂閱精靈] 的 [發行集] 頁面上，從 [發行者] 下拉式清單中選取 [\<尋找 SQL Server 發行者>] 或 [\<尋找 Oracle 發行者>]。  
   
 5. 連接到 **[連接到伺服器]** 對話方塊中的發行者。  
   
@@ -94,9 +94,9 @@ ms.locfileid: "70059289"
   
    - 如果 **allow_push** 的值為 **1**，則發送訂閱受到支援。  
   
-   - 如果 **allow_push** 的值為 **0**，請執行 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 針對  property **指定 \@allow_push**，並針對  value **指定\@true**。  
+   - 如果 **allow_push** 的值為 **0**，請執行 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 針對 **\@property** 指定 **allow_push**，並針對 **\@value** 指定**true**。  
   
-2. 在發行集資料庫的發行者上，執行 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber** 和 **\@destination_db**。 將  subscription_type **的值指定為 \@push**。 如需如何更新訂閱的資訊，請參閱[建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
+2. 在發行集資料庫的發行者上，執行 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber** 和 **\@destination_db**。 將 **\@subscription_type** 的值指定為 **push**。 如需如何更新訂閱的資訊，請參閱[建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 3. 在發行集資料庫的發行者上，執行 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定下列項目：  
   
@@ -120,7 +120,7 @@ ms.locfileid: "70059289"
   
    - 如果 **allow_push** 的值為 **1**，則發行集支援發送訂閱。  
   
-   - 如果 **allow_push** 的值不為 **1**，請執行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 針對  property **指定 \@allow_push**，並針對  value **指定\@true**。  
+   - 如果 **allow_push** 的值不為 **1**，請執行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 針對 **\@property** 指定 **allow_push**，並針對 **\@value** 指定**true**。  
   
 2. 在發行集資料庫的發行者上，執行 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定下列參數：  
   
@@ -141,9 +141,9 @@ ms.locfileid: "70059289"
      > [!NOTE]
      > 透過 Windows 整合式驗證進行的連線，一律使用由 **\@job_login** 和 **\@job_password** 指定的 Windows 認證。 合併代理程式一律使用 Windows 整合式驗證來建立到散發者的本機連線。 根據預設，代理程式會使用 Windows 整合式驗證連線至訂閱者。  
   
-   - (選擇性)  subscriber_security_mode **的值 \@0**，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**subscriber_login\@ 和** **subscriber_password\@ 的**  登入資訊。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
+   - (選擇性) **\@subscriber_security_mode** 的值 **0**，以及 **\@subscriber_login** 和 **\@subscriber_password** 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
   
-   - (選擇性)  publisher_security_mode **的值 \@0**，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**publisher_login\@ 和** **publisher_password\@ 的**  登入資訊。 如果您在連接到「發行者」時需要使用「SQL Server 驗證」，請指定這些值。  
+   - (選擇性) **\@publisher_security_mode** 的值 **0**，以及 **\@publisher_login** 和 **\@publisher_password** 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊。 如果您在連接到「發行者」時需要使用「SQL Server 驗證」，請指定這些值。  
   
    - 此訂閱之「合併代理程式」作業的排程。 如需詳細資訊，請參閱[指定同步處理排程](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "70059289"
  您可以使用 Replication Management Objects (RMO) 以程式設計的方式建立發送訂閱。 用於建立發送訂閱的 RMO 類別，依該訂閱所屬的發行集類型而定。  
   
 > [!IMPORTANT]
-> 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [ Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733)密碼編譯服務[!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
+> 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework 提供的[密碼編譯服務](https://go.microsoft.com/fwlink/?LinkId=34733)。  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>若要建立快照式或交易式發行集的發送訂閱  
   
@@ -194,7 +194,7 @@ ms.locfileid: "70059289"
    - 將 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> ，並將 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> (或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> ) 欄位，為「散發代理程式」在「散發者」上執行時所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶提供認證。 此帳戶用於建立到散發者的本機連線，並使用 Windows 驗證建立遠端連線。  
   
      > [!NOTE]
-     > 當訂用帳戶是由 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>sysadmin**固定伺服器角色的成員所建立時，則不需要設定**，但我們還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱[複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+     > 當訂用帳戶是由 **sysadmin** 固定伺服器角色的成員所建立時，則不需要設定 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，但我們還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱[複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
    - (選擇性) **@value** 的 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 值 (預設值)，以建立用於同步處理訂閱的代理程式作業。 如果指定 **false**，則只能以程式設計的方式同步處理訂閱。  
   
@@ -232,7 +232,7 @@ ms.locfileid: "70059289"
    - 將 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> ，並將 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> (或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> ) 欄位，為「散發代理程式」在「散發者」上執行時所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶提供認證。 此帳戶用於建立對散發者的本機連線，並使用 Windows 驗證建立遠端連線。  
   
      > [!NOTE]
-     > 當訂用帳戶是由 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>sysadmin**固定伺服器角色的成員所建立時，則不需要設定**，但我們還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱[複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+     > 當訂用帳戶是由 **sysadmin** 固定伺服器角色的成員所建立時，則不需要設定 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，但我們還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱[複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
    - (選擇性) **@value** 的 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 值 (預設值)，以建立用於同步處理訂閱的代理程式作業。 如果指定 **false**，則只能以程式設計的方式同步處理訂閱。  
   

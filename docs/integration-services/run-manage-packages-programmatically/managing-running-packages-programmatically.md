@@ -29,7 +29,7 @@ ms.locfileid: "71281965"
   
  如需監視封裝的詳細資訊，請參閱[封裝管理 &#40;SSIS 服務&#41;](../../integration-services/service/package-management-ssis-service.md)。  
   
- 本主題中討論的所有方法都需要 **Microsoft.SqlServer.ManagedDTS** 組件的參考。 在新專案中新增參考之後，請使用 <xref:Microsoft.SqlServer.Dts.Runtime>using**或**Imports**陳述式匯入** 命名空間。  
+ 本主題中討論的所有方法都需要 **Microsoft.SqlServer.ManagedDTS** 組件的參考。 在新專案中新增參考之後，請使用 **using** 或 **Imports** 陳述式匯入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空間。  
   
 > [!IMPORTANT]  
 >  用以搭配 SSIS 封裝存放區使用的 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 類別之方法，僅支援 "."、localhost 或是本機伺服器的伺服器名稱。 您無法使用 "(local)"。  

@@ -54,7 +54,7 @@ IDENT_SEED ( 'table_or_view' )
 ## <a name="examples"></a>範例  
   
 ### <a name="a-returning-the-seed-value-from-a-specified-table"></a>A. 傳回指定資料表的初始值  
- 下列範例會傳回 `Person.Address` 資料庫中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表的初始值。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Person.Address` 資料表的初始值。  
   
 ```sql  
 USE AdventureWorks2012;  

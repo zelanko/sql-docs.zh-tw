@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCreateOptionsEnum enumeration [ADO]
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f76d7773df443a76597184ecdabd5f27aea0bb7e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917347"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761906"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 指定是否應該開啟現有的**記錄**，或針對[Record](../../../ado/reference/ado-api/record-object-ado.md)物件[Open](../../../ado/reference/ado-api/open-method-ado-record.md)方法所建立的新**記錄**。 這些值可以與 AND 運算子結合。  
   
-|持續性|值|描述|  
+|持續性|值|說明|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|在*來源*參數所指定的節點上建立新的**記錄**，而不是開啟現有的**記錄**。 如果來源指向現有的節點，則會發生執行階段錯誤，除非**adCreateCollection**是與**adOpenIfExists**或**adCreateOverwrite**結合。|  
 |**adCreateNonCollection**|0|建立[adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md)類型的新**記錄**。|  

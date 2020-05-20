@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Recordset collection [ADO], ADO/WFX syntax
 ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 58e0cde8798f73257a54be5cc95f64474334a153
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ab3bdd34945eb83b375b4c77968dc9408ed0f448
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931383"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761876"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Recordset (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 .com. wfc. 資料  

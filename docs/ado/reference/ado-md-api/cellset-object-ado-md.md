@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9524e9801f284d3dff3125b850cdd1fd32a361a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e50fb60fbde205171c066380a2c2023d485a5a09
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928640"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761766"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset 物件 (ADO MD)
 表示多維度查詢的結果。 這是從 cube 或其他資料格集中選取的資料格集合。  
   
 ## <a name="remarks"></a>備註  
- 資料**格集**內的資料會使用直接、類似陣列的存取來抓取。 您可以向下切入到特定的成員，以取得該成員的相關資料。 例如，下列程式碼會傳回名為`cst`之集格第一個軸上第一個位置的第一個成員的標題：  
+ 資料**格集**內的資料會使用直接、類似陣列的存取來抓取。 您可以向下切入到特定的成員，以取得該成員的相關資料。 例如，下列程式碼會傳回名為之集格第一個軸上第一個位置的第一個成員的標題 `cst` ：  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  

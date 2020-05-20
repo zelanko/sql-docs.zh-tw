@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO]
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38846bcb832df7cc535d35d8f07fb636f2db37f7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918028"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762419"
 ---
 # <a name="name-property-ado"></a>Name 屬性 (ADO)
 指出物件的名稱。  
@@ -38,7 +38,7 @@ ms.locfileid: "67918028"
   
  對於尚未附加至[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合的**參數**物件， **Name**屬性是讀取/寫入。 對於附加的**參數**物件和所有其他物件而言， **Name**屬性是唯讀的。 名稱在集合中不需要是唯一的。  
   
- 您可以使用序數參考抓取物件的**Name**屬性，之後您就可以直接依名稱參考該物件。 例如，如果`rstMain.Properties(20).Name`產生`Updatability`，您之後就可以將這個屬性稱為。 `rstMain.Properties("Updatability")`  
+ 您可以使用序數參考抓取物件的**Name**屬性，之後您就可以直接依名稱參考該物件。 例如，如果 `rstMain.Properties(20).Name` 產生 `Updatability` ，您之後就可以將這個屬性稱為 `rstMain.Properties("Updatability")` 。  
   
 ## <a name="applies-to"></a>套用至  
   

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - User object [ADOX], members
 ms.assetid: becd590c-0db7-485c-8bf4-fa3456e4ba20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9a7b7f3939ff617ab67589d7566cdbf28719731
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1e993688a7ac1c0dfe8e03f875d4cd91153debc2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964961"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762689"
 ---
 # <a name="user-object-properties-methods-and-events"></a>User 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

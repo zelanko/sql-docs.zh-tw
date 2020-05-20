@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07b58be0aed59707266f86b5e5074e82da80220b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923988"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763089"
 ---
 # <a name="the-field-object"></a>Field 物件
 每個**Field**物件通常會對應至資料庫資料表中的資料行。 不過，**欄位**也可以代表指向另一個**記錄集**的指標，稱為「章節」。 本指南稍後將會涵蓋如章節專欄的例外狀況。  
@@ -68,9 +68,9 @@ ms.locfileid: "67923988"
 ### <a name="getting-more-field-information"></a>取得更多欄位資訊  
  ADO 物件有兩種屬性類型：內建和動態。 到目前為止，只討論**Field**物件的內建屬性。  
   
- 內建屬性是在 ADO 中實和使用`MyObject.Property`語法立即提供給任何新物件的屬性。 它們不會在物件的**Properties**集合中顯示為**屬性**物件。  
+ 內建屬性是在 ADO 中實和使用語法立即提供給任何新物件的屬性 `MyObject.Property` 。 它們不會在物件的**Properties**集合中顯示為**屬性**物件。  
   
- 動態屬性是由基礎資料提供者所定義，而且會出現在適當 ADO 物件的**properties**集合中。 例如，提供者特定的屬性可能會指出**記錄集**物件是否支援交易或更新。 這些額外的屬性會以**屬性**物件的形式顯示在該**記錄集**物件的**properties**集合中。 只能透過集合使用語法`MyObject.Properties(0)`或`MyObject.Properties("Name")`來參考動態屬性。  
+ 動態屬性是由基礎資料提供者所定義，而且會出現在適當 ADO 物件的**properties**集合中。 例如，提供者特定的屬性可能會指出**記錄集**物件是否支援交易或更新。 這些額外的屬性會以**屬性**物件的形式顯示在該**記錄集**物件的**properties**集合中。 只能透過集合使用語法或來參考動態屬性 `MyObject.Properties(0)` `MyObject.Properties("Name")` 。  
   
  您不能刪除任何一種屬性。  
   

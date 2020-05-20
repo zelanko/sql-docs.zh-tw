@@ -96,7 +96,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. 建立空白屬性清單，並將它與索引建立關聯  
- 下列範例會建立名為 `DocumentPropertyList` 的新搜尋屬性清單。 然後此範例使用 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 陳述式，將新屬性清單與 `Production.Document` 資料庫中 `AdventureWorks` 資料表的全文檢索索引建立關聯，但不啟動母體擴展。  
+ 下列範例會建立名為 `DocumentPropertyList` 的新搜尋屬性清單。 然後此範例使用 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 陳述式，將新屬性清單與 `AdventureWorks` 資料庫中 `Production.Document` 資料表的全文檢索索引建立關聯，但不啟動母體擴展。  
   
 > [!NOTE]  
 >  如需將數個預先定義的已知搜尋屬性新增至這個搜尋屬性清單的範例，請參閱 [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)。 在將搜尋屬性加入至清單之後，資料庫管理員需要使用另一個 ALTER FULLTEXT INDEX 陳述式搭配 START FULL POPULATION 子句。  

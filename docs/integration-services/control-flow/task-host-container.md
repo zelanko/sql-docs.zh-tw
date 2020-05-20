@@ -32,7 +32,7 @@ ms.locfileid: "71293888"
  此容器會將變數與事件處理常式的使用延伸至工作層級。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 事件處理常式](../../integration-services/integration-services-ssis-event-handlers.md)和 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)。  
   
 ## <a name="configuration-of-the-task-host"></a>設定工作主機  
- 您可以在  **的 [屬性]** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 視窗中，或以程式設計方式設定屬性。  
+ 您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，或以程式設計方式設定屬性。  
   
  如需在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中設定這些屬性的相關資訊，請參閱 [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   

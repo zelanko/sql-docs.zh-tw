@@ -115,7 +115,7 @@ GO
 ```  
   
 ### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 建立新的語意索引  
- 您可以針對想要建立語意索引的每個資料行執行 [全文檢索索引精靈]，並在 [選取資料表資料行]  頁面上啟用 [統計語意]  。 如需詳細資訊，包含如何啟動 [全文檢索索引精靈] 的相關資訊，請參閱 [使用全文檢索索引精靈](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
+ 您可以針對想要建立語意索引的每個資料行執行 [全文檢索索引精靈]，並在 [選取資料表資料行] 頁面上啟用 [統計語意]。 如需詳細資訊，包含如何啟動 [全文檢索索引精靈] 的相關資訊，請參閱 [使用全文檢索索引精靈](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
   
 ##  <a name="create-a-semantic-index-when-there-is-an-existing-full-text-index"></a><a name="HowToEnableAlter"></a> 在具有現有全文檢索索引時建立語意索引  
  當您使用 **ALTER FULLTEXT INDEX** 陳述式來改變現有的全文檢索索引時，可以加入語意索引。 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的各種對話方塊來加入語意索引。  
@@ -144,7 +144,7 @@ GO
 ```  
   
 ### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 加入語意索引  
- 您可以在 [全文檢索索引屬性]  對話方塊的 [全文檢索索引資料行]  頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 您可以在 [全文檢索索引屬性] 對話方塊的 [全文檢索索引資料行] 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
 
 ## <a name="alter-a-semantic-index"></a>改變語意索引
   
@@ -158,7 +158,7 @@ GO
 當您使用 **ALTER FULLTEXT INDEX** 陳述式來改變現有的全文檢索索引時，可以卸除語意索引。 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的各種對話方塊來卸除語意索引。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 卸除語意索引  
-若只要從一或多個資料行卸除語意索引，請使用 **ALTER COLUMN** **column**name _\_DROP STATISTICAL_SEMANTICS_ 選項呼叫 **ALTER FULLTEXT INDEX** 陳述式。 在單一 **ALTER** 陳述式中，您可以從多個資料行中卸除索引。  
+若只要從一或多個資料行卸除語意索引，請使用 **ALTER COLUMN**_column\_name_**DROP STATISTICAL_SEMANTICS** 選項呼叫 **ALTER FULLTEXT INDEX** 陳述式。 在單一 **ALTER** 陳述式中，您可以從多個資料行中卸除索引。  
   
 ```sql  
 USE database_name  
@@ -170,7 +170,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-若要從某個資料行同時卸除全文檢索和語意索引，請使用 **ALTER COLUMN** **column**name _\_DROP_ 選項呼叫 **ALTER FULLTEXT INDEX** 陳述式。  
+若要從某個資料行同時卸除全文檢索和語意索引，請使用 **ALTER COLUMN**_column\_name_**DROP** 選項呼叫 **ALTER FULLTEXT INDEX** 陳述式。  
   
 ```sql  
 USE database_name  
@@ -183,7 +183,7 @@ GO
 ```  
   
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 卸除語意索引  
- 您可以在 [全文檢索索引屬性]  對話方塊的 [全文檢索索引資料行]  頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 您可以在 [全文檢索索引屬性] 對話方塊的 [全文檢索索引資料行] 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
   
 ###  <a name="requirements-and-restrictions-for-dropping-a-semantic-index"></a><a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
   
@@ -194,7 +194,7 @@ GO
 ## <a name="check-whether-semantic-search-is-enabled-on-database-objects"></a>檢查資料庫物件上是否啟用語意搜尋  
 ### <a name="is-semantic-search-enabled-for-a-database"></a>是否已針對資料庫啟用語意搜尋？
   
- 查詢 **DATABASEPROPERTYEX &#40;Transact-SQL&#41;** 中繼資料函數的 [IsFullTextEnabled](../../t-sql/functions/databasepropertyex-transact-sql.md) 屬性。  
+ 查詢 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 中繼資料函數的 **IsFullTextEnabled** 屬性。  
   
  傳回值 1 表示已針對資料庫啟用全文檢索搜尋和語意搜尋，傳回值 0 表示未啟用這兩個搜尋。  
   
@@ -205,7 +205,7 @@ GO
   
 ### <a name="is-semantic-search-enabled-for-a-table"></a>是否已針對資料表啟用語意搜尋？  
  
- 查詢 **OBJECTPROPERTYEX &#40;Transact-SQL&#41;** 中繼資料函數的 [TableFullTextSemanticExtraction](../../t-sql/functions/objectpropertyex-transact-sql.md) 屬性。  
+ 查詢 [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md) 中繼資料函數的 **TableFullTextSemanticExtraction** 屬性。  
   
  傳回值 1 表示已針對資料表啟用語意搜尋，傳回值 0 表示未啟用此搜尋。  
   
@@ -218,7 +218,7 @@ GO
    
  若要判斷是否已針對特定資料行啟用語意搜尋：  
   
--   查詢 **COLUMNPROPERTY &#40;Transact-SQL&#41;** 中繼資料函數的 [StatisticalSemantics](../../t-sql/functions/columnproperty-transact-sql.md) 屬性。  
+-   查詢 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md) 中繼資料函數的 **StatisticalSemantics** 屬性。  
   
      傳回值 1 表示已針對資料行啟用語意搜尋，傳回值 0 表示未啟用此搜尋。  
   

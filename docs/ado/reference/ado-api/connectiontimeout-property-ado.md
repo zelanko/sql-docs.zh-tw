@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionTimeout property [ADO]
 ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 03d3de2c4aabaf4ad8cbc45d9900b33883ff9a48
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 252707003d3471d611ffafb637250009da20504f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933469"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762619"
 ---
 # <a name="connectiontimeout-property-ado"></a>ConnectionTimeout 屬性 (ADO)
 表示在終止嘗試並產生錯誤之前，建立連接之前要等候的時間長度。  

@@ -24,7 +24,7 @@ ms.locfileid: "68123751"
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-此文章說明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立外部索引鍵關聯性。 當想要將一個資料表的資料列，與其他資料表的資料列建立相關時，可以建立兩者間的關聯性。
+此文章說明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立外部索引鍵關聯性。 當想要將一個資料表的資料列，與其他資料表的資料列建立相關時，可以建立兩者間的關聯性。
 
 ## <a name="before-you-begin-limits-and-restrictions"></a><a name="BeforeYouBegin"></a> 開始之前！ 限制事項
 
@@ -73,7 +73,7 @@ ms.locfileid: "68123751"
 
 ### <a name="using-transact-sql"></a>使用 TRANSACT-SQL
 
-下列範例會建立資料表並在 `TempID` 資料行上定義外部索引鍵條件約束，而此資料行會參考 AdventureWorks 資料庫 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用來確定對 `Sales.SalesReason` 資料表所做的變更會自動傳播至 `Sales.TempSalesReason` 資料表。    
+下列範例會建立資料表並在 `TempID` 資料行上定義外部索引鍵條件約束，而此資料行會參考 AdventureWorks 資料庫 `Sales.SalesReason` 資料表中的 `SalesReasonID` 資料行。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用來確定對 `Sales.SalesReason` 資料表所做的變更會自動傳播至 `Sales.TempSalesReason` 資料表。    
 
 ```sql
 CREATE TABLE Sales.TempSalesReason 
@@ -91,7 +91,7 @@ CREATE TABLE Sales.TempSalesReason
 ## <a name="create-a-foreign-key-in-an-existing-table"></a>在現有的資料表建立外部索引鍵
 
 ### <a name="using-transact-sql"></a>使用 TRANSACT-SQL
-下列範例會在 `TempID` 資料行上建立外部索引鍵，並參考 AdventureWorks 資料庫 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。
+下列範例會在 `TempID` 資料行上建立外部索引鍵，並參考 AdventureWorks 資料庫 `Sales.SalesReason` 資料表中的 `SalesReasonID` 資料行。
 
 ```sql
 ALTER TABLE Sales.TempSalesReason

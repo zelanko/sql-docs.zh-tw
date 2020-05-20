@@ -90,7 +90,7 @@ ms.locfileid: "71284712"
 2.  在此精靈的 [選取封裝管理選項]  頁面上，選取 [備份原始封裝]  選項。  
   
     > [!WARNING]  
-    >  當您在 **中開啟** 或更新版本的專案時，不會顯示 [備份原始封裝][!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 選項，而是會自動啟動精靈。  
+    >  當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中開啟 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更新版本的專案時，不會顯示 [備份原始封裝] 選項，而是會自動啟動精靈。  
   
 3.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，執行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈。  
   

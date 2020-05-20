@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO]
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 541c92cd34b9cbaecdd1001be29dbab8d9b194a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f646bd95e3ae9cb809f04c2ef66c47386fbde6c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922417"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762979"
 ---
 # <a name="rds-tutorial"></a>RDS 教學課程
 本教學課程說明如何使用 RDS 程式設計模型來查詢和更新資料來源。 首先，它會說明完成這項工作所需的步驟。 然後，本教學課程會在 Microsoft® Visual Basic Scripting Edition 中重複（採用適用于 Windows Foundation 類別的 ADO （ADO/WFC））。  

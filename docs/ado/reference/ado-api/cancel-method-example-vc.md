@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Cancel method [ADO], VC++ example
 ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 88d211c825bd9d1c3aa0c76dc26778f18108ff07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0d09659e486d58aec60609395f9a16cecfad8177
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920170"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763179"
 ---
 # <a name="cancel-method-example-vc"></a>Cancel 方法範例 (VC++)
 這個範例會使用[cancel](../../../ado/reference/ado-api/cancel-method-ado.md)方法來取消在連線物件上執行的命令（[如果連接忙碌](../../../ado/reference/ado-api/connection-object-ado.md)中）。  

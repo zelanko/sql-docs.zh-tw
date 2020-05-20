@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ParameterDirectionEnum enumeration [ADO]
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 88754f7dbd0064c765314d88b0fcc0d06f05bbb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917745"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763399"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 指定[參數](../../../ado/reference/ado-api/parameter-object.md)是否代表輸入參數、輸出參數、輸入和輸出參數，或預存程式的傳回值。  
   
-|持續性|值|描述|  
+|持續性|值|說明|  
 |--------------|-----------|-----------------|  
 |**adParamInput**|1|預設值。 表示參數代表輸入參數。|  
 |**adParamInputOutput**|3|表示參數同時代表輸入和輸出參數。|  

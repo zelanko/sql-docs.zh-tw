@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a091a606cf3049c055794bc16cc51db78a40978
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931909"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762176"
 ---
 # <a name="open-method-ado-recordset"></a>Open 方法 (ADO Recordset)
 在[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件上開啟資料指標。  
@@ -60,7 +60,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  在**記錄集**物件上使用**Open**方法會開啟一個資料指標，代表基表的記錄、查詢的結果，或先前儲存的**記錄集**。  
   
- 使用選擇性的*來源*引數，以使用下列其中一種方法來指定資料來源：**命令**物件變數、SQL 語句、預存程式、資料表名稱、URL 或完整的檔案路徑名稱。 如果*Source*是檔案路徑名稱，它可以是完整路徑（"c:\dir\file.rst"），也就是相對路徑（".。\file.rst "）或 URL （"<https://files/file.rst>"）。  
+ 使用選擇性的*來源*引數，以使用下列其中一種方法來指定資料來源：**命令**物件變數、SQL 語句、預存程式、資料表名稱、URL 或完整的檔案路徑名稱。 如果*Source*是檔案路徑名稱，它可以是完整路徑（"c:\dir\file.rst"），也就是相對路徑（".。\file.rst "）或 URL （" <https://files/file.rst> "）。  
   
  使用**Open**方法的*Source*引數來執行不會傳回記錄的動作查詢並不是個好主意，因為沒有簡單的方法可以判斷呼叫是否成功。 這類查詢所傳回的**記錄集**將會關閉。 若要執行不會傳回記錄的查詢（例如 SQL INSERT 語句），請改為呼叫**命令**物件的[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法或[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的[execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法。  
   

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Cancel method [ADO], Visual Basic example
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4274c51be7bc2d94ca26312b246176bd58d197f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 614fd4adfd531ca7d47b7b7ffdfa912c141e06c5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920189"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763549"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel 方法範例 (VB)
 這個範例會使用[cancel](../../../ado/reference/ado-api/cancel-method-ado.md)方法來取消在連線物件上執行的命令（[如果連接忙碌](../../../ado/reference/ado-api/connection-object-ado.md)中）。  

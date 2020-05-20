@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - RDS tutorial [ADO], VBScript
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d45347bcdf212158fb6a0ee9f4599e1e1b00ff54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1fc60383f0862c845ee70be11a051b9da48b36a2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922420"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763569"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS 教學課程 (VBScript)
 這是以 Microsoft Visual Basic Scripting Edition 撰寫的 RDS 教學課程。 如需本教學課程用途的說明，請參閱[RDS 教學](../../../ado/guide/remote-data-service/rds-tutorial.md)課程。  
@@ -27,7 +27,7 @@ ms.locfileid: "67922420"
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 在本教學課程中， [RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)和[RDS。](../../../ado/reference/rds-api/dataspace-object-rds.md)系統會在設計階段建立「空間」，也就是使用物件標記來定義，如下`<OBJECT>...</OBJECT>`所示：。 或者，您也可以在執行時間使用[CreateObject 方法（RDS）](../../../ado/reference/rds-api/createobject-method-rds.md)方法來建立它們。 例如， **RDS。** 可能會建立 DataControl 物件，如下所示：  
+ 在本教學課程中， [RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)和[RDS。](../../../ado/reference/rds-api/dataspace-object-rds.md)系統會在設計階段建立「空間」，也就是使用物件標記來定義，如下所示： `<OBJECT>...</OBJECT>` 。 或者，您也可以在執行時間使用[CreateObject 方法（RDS）](../../../ado/reference/rds-api/createobject-method-rds.md)方法來建立它們。 例如， **RDS。** 可能會建立 DataControl 物件，如下所示：  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  

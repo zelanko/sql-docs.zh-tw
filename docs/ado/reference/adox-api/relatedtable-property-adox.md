@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - RelatedTable property [ADOX]
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 885d643bd6d75bfd20310dd450e09d772a105f51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 43fa9707f4bda0974211fbba5f74ec10c14cf961
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965341"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762821"
 ---
 # <a name="relatedtable-property-adox"></a>RelatedTable 屬性 (ADOX)
 表示相關資料表的名稱。  

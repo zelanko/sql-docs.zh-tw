@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - group object [ADOX]
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b4b3de5f445ddd09bf7d069b0b93d82c6f8de978
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b0cd75780abe01edc6f2e90258cc7d24f5eae016
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966219"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763319"
 ---
 # <a name="group-object-adox"></a>Group 物件 (ADOX)
 代表在安全資料庫中具有存取權限的群組帳戶。  

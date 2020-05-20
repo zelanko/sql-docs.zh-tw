@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Filter property
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bcc1b02671d73e9056babb417ba2fa22a4d6cf0e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918634"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762539"
 ---
 # <a name="filter-property"></a>Filter 屬性
 表示[記錄集中](../../../ado/reference/ado-api/recordset-object-ado.md)資料的篩選。  
@@ -39,16 +39,16 @@ ms.locfileid: "67918634"
 
 使用 [**篩選**] 屬性可選擇性地在**記錄集**物件中顯示記錄。 篩選後的**記錄集會**成為目前的資料指標。 根據目前資料**指標**傳回值的其他屬性會受到影響，例如[ABSOLUTEPOSITION 屬性（ado）](../../../ado/reference/ado-api/absoluteposition-property-ado.md)、 [AbsolutePage 屬性（ado）](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [RecordCount 屬性（ado）](../../../ado/reference/ado-api/recordcount-property-ado.md)和[PageCount 屬性（ado）](../../../ado/reference/ado-api/pagecount-property-ado.md)。 將**篩選**屬性設定為特定的新值，會將目前的記錄移至符合新值的第一筆記錄。
   
-準則字串是由子句所組成，其格式為*FieldName-Operator-Value* （例如`"LastName = 'Smith'"`）。 您可以串連個別子句與**和**（例如`"LastName = 'Smith' AND FirstName = 'John'"`）或**或**（例如， `"LastName = 'Smith' OR LastName = 'Jones'"`）來建立複合子句。 針對準則字串，請使用下列指導方針：
+準則字串是由子句所組成，其格式為*FieldName-Operator-Value* （例如 `"LastName = 'Smith'"` ）。 您可以串連個別子句與**和**（例如 `"LastName = 'Smith' AND FirstName = 'John'"` ）或**或**（例如，）來建立複合子句 `"LastName = 'Smith' OR LastName = 'Jones'"` 。 針對準則字串，請使用下列指導方針：
 
 -   *FieldName*必須是**記錄集**的有效功能變數名稱。 如果功能變數名稱包含空格，您必須將名稱括在方括弧中。  
   
--   運算子必須是下列其中一項： \<、>、 \<=、>=、 <>、= 或**LIKE**。  
+-   運算子必須是下列其中一項： \< 、>、 \< =、>=、 <>、= 或**LIKE**。  
   
 -   Value 是您將用來比較域值的值（例如，' Smith '、#8/24/95 #、12.345 或 $50.00）。 使用單引號搭配字串和井字型大小（#）來搭配日期。 若為數字，您可以使用小數點、貨幣符號和科學標記法。 如果運算子是**LIKE**，則值可以使用萬用字元。 只有星號（*）和百分比符號（%）允許使用萬用字元，而且必須是字串中的最後一個字元。 值不可以是 null。  
   
 > [!NOTE]
->  若要在篩選值中加入單引號（'），請使用兩個單引號來表示一個。 例如，若要篩選 O'Malley，準則字串應該是`"col1 = 'O''Malley'"`。 若要在篩選值的開頭和結尾加上單引號，請以井字型大小（#）括住字串。 例如，若要篩選 ' 1 '，準則字串應該是`"col1 = #'1'#"`。  
+>  若要在篩選值中加入單引號（'），請使用兩個單引號來表示一個。 例如，若要篩選 O'Malley，準則字串應該是 `"col1 = 'O''Malley'"` 。 若要在篩選值的開頭和結尾加上單引號，請以井字型大小（#）括住字串。 例如，若要篩選 ' 1 '，準則字串應該是 `"col1 = #'1'#"` 。  
   
 -   和和或之間沒有任何優先順序。 子句可以在括弧內分組。 不過，您無法將或所聯結的子句分組，然後使用和將群組加入另一個子句，如下列程式碼片段所示：  
  `(LastName = 'Smith' OR LastName = 'Jones') AND FirstName = 'John'`  
@@ -56,7 +56,7 @@ ms.locfileid: "67918634"
 -   相反地，您會將此篩選器視為  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   在**LIKE**子句中，您可以在模式的開頭和結尾使用萬用字元。 例如，您可以使用 `LastName Like '*mit*'`。 或者，使用**LIKE**時，只能在模式的結尾使用萬用字元。 例如，`LastName Like 'Smit*'`。  
+-   在**LIKE**子句中，您可以在模式的開頭和結尾使用萬用字元。 例如，您可以使用 `LastName Like '*mit*'`。 或者，使用**LIKE**時，只能在模式的結尾使用萬用字元。 例如：`LastName Like 'Smit*'`。  
   
  篩選常數可讓您只查看在最後一個[UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)方法呼叫期間受到影響的記錄，讓您更容易在批次更新模式中解決個別的記錄衝突。  
   
@@ -69,13 +69,13 @@ ms.locfileid: "67918634"
 假設**記錄集**是根據某種 variant 類型的欄位進行篩選，例如類型 SQL_variant。 當欄位的子類型和準則字串中使用的篩選值不相符時，就會發生錯誤（DISP_E_TYPEMISMATCH 或80020005）。 例如，假設：
 
 - **記錄集**物件（rs）包含 SQL_variant 類型的資料行（C）。
-- 而這個資料行的欄位已獲指派 I4 類型的1值。 準則字串在欄位上設定`rs.Filter = "C='A'"`為。
+- 而這個資料行的欄位已獲指派 I4 類型的1值。 準則字串在 `rs.Filter = "C='A'"` 欄位上設定為。
 
-此設定會在執行時間產生錯誤。 不過， `rs.Filter = "C=2"`套用於相同的欄位不會產生任何錯誤。 而且此欄位已從目前的記錄集篩選掉。
+此設定會在執行時間產生錯誤。 不過，套用於 `rs.Filter = "C=2"` 相同的欄位不會產生任何錯誤。 而且此欄位已從目前的記錄集篩選掉。
 
 如需書簽值的說明，您可以從中建立要與 Filter 屬性搭配使用的陣列，請參閱[Bookmark 屬性（ADO）](../../../ado/reference/ado-api/bookmark-property-ado.md)屬性。
 
-只有條件字串形式的篩選會影響持續性**記錄集**的內容。 準則字串的範例是`OrderDate > '12/31/1999'`。 以書簽陣列建立的篩選，或使用**FilterGroupEnum**的值，不會影響保存之**記錄集**的內容。 這些規則適用于以用戶端或伺服器端資料指標建立的記錄集。
+只有條件字串形式的篩選會影響持續性**記錄集**的內容。 準則字串的範例是 `OrderDate > '12/31/1999'` 。 以書簽陣列建立的篩選，或使用**FilterGroupEnum**的值，不會影響保存之**記錄集**的內容。 這些規則適用于以用戶端或伺服器端資料指標建立的記錄集。
   
 > [!NOTE]
 >  當您將 adFilterPendingRecords 旗標套用至批次更新模式中已篩選和已修改的**記錄集**時，如果篩選是以單一索引資料表的索引鍵欄位為基礎，而且已對索引鍵域值進行修改，則結果**記錄集**會是空的。 如果下列其中一個語句為 true，則產生的**記錄集**不會是空的：  
@@ -93,8 +93,8 @@ ms.locfileid: "67918634"
 ||非索引鍵|單一索引鍵|多個金鑰|
 |-|--------------|----------------|-------------------|
 |**非索引鍵**|+|+|+|
-|**單一索引鍵**|+|-|不適用|
-|**多個金鑰**|+|不適用|+|
+|**單一索引鍵**|+|-|N/A|
+|**多個金鑰**|+|N/A|+|
 |||||
   
 ## <a name="applies-to"></a>套用至
@@ -103,7 +103,7 @@ ms.locfileid: "67918634"
   
 ## <a name="see-also"></a>另請參閱
 
-[Filter 和 RecordCount 屬性範例（VB）](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
-[Filter 和 RecordCount 屬性範例（VC + +）](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)
-[Clear 方法（ado）](../../../ado/reference/ado-api/clear-method-ado.md)
+[Filter 和 RecordCount 屬性範例（VB）](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md) 
+[Filter 和 RecordCount 屬性範例（VC + +）](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md) 
+[Clear 方法（ADO）](../../../ado/reference/ado-api/clear-method-ado.md) 
 [優化屬性-動態（ADO）](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

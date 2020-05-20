@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectOptionEnum enumeration [ADO]
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 819fb89d7f8c43e76ba9260a72fafa68084bf880
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fa372f05a80290e907298a0969d9eb9f14355f90
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933442"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762599"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
 指定[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的[開啟](../../../ado/reference/ado-api/open-method-ado-connection.md)方法是否應在建立連接（同步）或之前（非同步）後傳回。  
   
-|持續性|值|描述|  
+|持續性|值|說明|  
 |--------------|-----------|-----------------|  
 |**adAsyncConnect**|16|會以非同步方式開啟連接。 [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)事件可以用來判斷連接何時可用。|  
 |**adConnectUnspecified**|-1|預設值。 會以同步方式開啟連接。|  

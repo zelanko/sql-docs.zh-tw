@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Table object [ADOX], members
 ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c52e65ffe7d258b3707927b1f996be3a3a5f3dd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fc0ccdc8747b69cff4e9b57ae27c030dbdb9be16
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965170"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763289"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Table 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - editing data [ADO], Delete method
 - Delete method [ADO]
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a862a244f06c64767f41529b4fff36881895a0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a8da01b9c92aeec9c01527370e19c8edfb751da9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925551"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763619"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>使用 Delete 方法刪除記錄
 使用**Delete**方法會將目前的記錄或記錄**集**物件中的一組記錄標記為要刪除。 如果**記錄集**物件不允許刪除記錄，就會發生錯誤。 如果您處於立即更新模式，則會立即在資料庫中進行刪除。 如果無法成功刪除記錄（例如，由於資料庫完整性違規），記錄將會在呼叫更新之後維持在編輯模式 **。** 這表示您必須先使用[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)取消更新，然後再移出目前的記錄（例如，使用[Close](../../../ado/reference/ado-api/close-method-ado.md)、 [Move](../../../ado/reference/ado-api/move-method-ado.md)或[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)）。  

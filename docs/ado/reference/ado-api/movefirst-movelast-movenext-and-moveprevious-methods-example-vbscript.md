@@ -15,14 +15,14 @@ helpviewer_keywords:
 - MovePrevious method [ADO], VBScript example
 - MoveFirst method [ADO], VBScript example
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9da7517ece0961e5139df4be44ddf575c41c9abe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a1abb3ffd43a18df869385ddbbd374992a3f715
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918120"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762459"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法範例（VBScript）
 這個範例使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)和[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法，根據提供的命令移動記錄[集](../../../ado/reference/ado-api/recordset-object-ado.md)的記錄指標。  

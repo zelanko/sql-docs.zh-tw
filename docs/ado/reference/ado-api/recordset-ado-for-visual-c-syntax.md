@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Recordset collection [ADO], ADO for Visual C++ syntax
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3a8c377ee920122a18f6a848923605c7007c6f25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13a094c5cbbc6af8e61bd221f06ff197a00d2524
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931370"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761886"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>Recordset (ADO for Visual C++ 語法)
 ## <a name="methods"></a>方法  

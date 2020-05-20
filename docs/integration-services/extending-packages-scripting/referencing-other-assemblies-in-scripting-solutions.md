@@ -39,7 +39,7 @@ ms.locfileid: "71286270"
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別庫提供指令碼開發人員一組強大的工具，以實作 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件中的自訂功能。 指令碼工作和指令碼元件也可以使用自訂 Managed 組件。  
   
 > [!NOTE]
->  若要讓您的封裝能夠使用 Web 服務中的物件和方法，請使用  Tools for Applications (VSTA) 所提供的 [加入 Web 參考][!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令。 在舊版的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，您必須產生 Proxy 類別以使用 Web 服務。  
+>  若要讓您的封裝能夠使用 Web 服務中的物件和方法，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 所提供的 [加入 Web 參考] 命令。 在舊版的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，您必須產生 Proxy 類別以使用 Web 服務。  
   
 ## <a name="using-a-managed-assembly"></a>使用 Managed 組件  
  若要讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在設計階段尋找 Managed 組件，您必須執行下列步驟：  

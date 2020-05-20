@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Cell object [ADO MD]
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d309ba98c1e50d8eb6fbe47fb9452f8ea7df35ba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947740"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761796"
 ---
 # <a name="cell-object-ado-md"></a>Cell 物件 (ADO MD)
 代表資料格集內所包含之軸座標交集處的資料。  
@@ -42,7 +42,7 @@ ms.locfileid: "67947740"
   
  **Properties**集合包含提供者提供的屬性。 下表列出可能可用的屬性。 實際的屬性清單可能會根據提供者的執行而有所不同。 如需可用屬性的完整清單，請參閱提供者的檔。  
   
-|名稱|描述|  
+|Name|說明|  
 |----------|-----------------|  
 |BackColor|顯示儲存格時使用的背景色彩。|  
 |FontFlags|位元遮罩詳述字型的效果。|  

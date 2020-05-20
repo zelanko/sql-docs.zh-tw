@@ -46,7 +46,7 @@ ms.locfileid: "68107806"
  CLR 傳回類型：**SqlDouble**  
   
 ## <a name="remarks"></a>備註  
- 如果 `STDistance()`geometry **執行個體的空間參考識別碼 (SRID) 不相符，** 一定會傳回 Null。  
+ 如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，`STDistance()` 一定會傳回 Null。  
   
 ## <a name="examples"></a>範例  
   

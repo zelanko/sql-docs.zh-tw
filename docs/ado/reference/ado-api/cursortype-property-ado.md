@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CursorType property [ADO]
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5bf0790307ec8f8f739d3975620967a8671c3fcb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919249"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763499"
 ---
 # <a name="cursortype-property-ado"></a>CursorType 屬性 (ADO)
 表示[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件中使用的資料指標類型。  

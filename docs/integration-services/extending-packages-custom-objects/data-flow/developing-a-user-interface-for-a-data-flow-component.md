@@ -91,7 +91,7 @@ End Class
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 方法的傳回值會決定對元件所做的變更是會保存下來還是捨棄。 當這個方法傳回 **false** 時，所有的變更都會被捨棄；**true** 會保存對此元件所做的變更，並將此套件標示為需要儲存。  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>使用 SSIS 設計師的服務  
- **方法的**IServiceProvider<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 參數會提供對下列 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工作服務的存取權：  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 方法的 **IServiceProvider** 參數會提供對下列 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工作服務的存取權：  
   
 |服務|描述|  
 |-------------|-----------------|  

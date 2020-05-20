@@ -48,7 +48,7 @@ ms.locfileid: "71287418"
 -   將版本中繼資料設定成元件的目前版本。  
   
 > [!NOTE]  
->  資料流程引擎會在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A>pipelineVersion*參數中將自己的版本號碼傳遞至* 方法。 此參數在 1.0 版的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中沒有用處，但是在後續版本中可能會變成有用。  
+>  資料流程引擎會在 *pipelineVersion* 參數中將自己的版本號碼傳遞至 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> 方法。 此參數在 1.0 版的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中沒有用處，但是在後續版本中可能會變成有用。  
   
  範例程式碼只會使用兩個列舉值，以直接對應至自訂屬性之前的布林值。 使用者可以透過元件的自訂使用者介面、在 [進階編輯器] 中或是以程式設計方式，選取其他可用的列舉值。 如需有關在 [進階編輯器] 中顯示自訂屬性之列舉值的資訊，請參閱[資料流程元件的設計階段方法](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)中的＜建立自訂屬性＞。  
   

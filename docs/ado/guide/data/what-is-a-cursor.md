@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], about cursors
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d903b2a5f971d0b6c7114a9e5229bff6133d743
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e2761a716981a5d22fd7f7347f7b757013cccc5d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923451"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762999"
 ---
 # <a name="what-is-a-cursor"></a>什麼是資料指標？
 關聯式資料庫中的作業會針對完整的資料列集運作。 由 SELECT 陳述式所傳回的資料列集包括所有滿足陳述式 WHERE 子句之條件的資料列。 由陳述式傳回的完整資料列稱為結果集。 應用程式（特別是互動式和線上）不一定能有效地將整個結果集當做一個單位來運作。 這些應用程式需要一個機制，一次運用一個資料列或小型資料列區塊。 資料指標就是一種結果集的擴充，提供此種機制。  

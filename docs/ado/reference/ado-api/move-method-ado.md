@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Move method [ADO]
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d76f239094185af7a3e940201b3f99132c0194a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 527e8c4f2f4c7c18163346f76029be539d1581d2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918189"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762499"
 ---
 # <a name="move-method-ado"></a>Move 方法 (ADO)
 移動[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件中目前記錄的位置。  
@@ -37,7 +37,7 @@ recordset.Move NumRecords, Start
  *NumRecords*  
  此為帶正負號的**長**運算式，指定目前記錄位置移動的記錄數目。  
   
- *啟動*  
+ *開始*  
  選擇性。 評估為書簽的**字串**值或**Variant** 。 您也可以使用[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)值。  
   
 ## <a name="remarks"></a>備註  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - OpenSchema method [ADO], Visual Basic example
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a16979e7993fd1ac86679d054508b837a0a08c68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 26a1a1af2430b3136114a7ba7929fa1fe566c449
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931897"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762141"
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema 方法範例 (VB)
 這個範例會使用[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法來顯示***Pubs***資料庫中每個資料表的名稱和類型。  

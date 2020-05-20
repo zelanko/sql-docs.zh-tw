@@ -33,7 +33,7 @@ ms.locfileid: "71680979"
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件位在專案中。 若要建立及使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，您必須安裝 [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。 如需詳細資訊，請參閱[安裝 Integration Services](../integration-services/install-windows/install-integration-services.md)。  
   
- 當您在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立新的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 專案時，[新增專案]  對話方塊將包含 [Integration Services 專案]  範本。 此專案範本會建立包含單一封裝的新專案。
+ 當您在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案時，[新增專案] 對話方塊將包含 [Integration Services 專案] 範本。 此專案範本會建立包含單一封裝的新專案。
   
 ## <a name="projects-and-solutions"></a>專案和方案  
  專案會儲存在方案中。 您可以先建立方案，然後將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案加入方案。 如果沒有方案存在， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會在您第一次建立專案時自動為您建立一個方案。 方案可以包含多個不同類型的專案。  
@@ -115,13 +115,13 @@ ms.locfileid: "71680979"
   
 7.  如果原始檔控制軟體是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe，則 **[Visual SourceSafe 登入]** 對話方塊會開啟。 請在 **[Visual SourceSafe 登入]** 中，提供使用者名稱、密碼，以及 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 資料庫的名稱。 按一下 **[瀏覽]** 找出資料庫。  
   
-    > **注意**：若要檢視和變更選取的原始檔控制外掛程式，以及設定原始檔控制環境，請按一下 [工具]  功能表上的 [選項]  ，然後展開 [原始檔控制]  節點。  
+    > **注意**：若要檢視和變更選取的原始檔控制外掛程式，以及設定原始檔控制環境，請按一下 [工具] 功能表上的 [選項]，然後展開 [原始檔控制] 節點。  
   
 8.  按一下 [確定]  ，將方案加入 **方案總管** 中，並將專案加入方案中。  
 
 ## <a name="import-an-existing-project-with-the-import-project-wizard"></a>使用匯入專案精靈匯入現有專案
   
-1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中，按一下 [檔案]  功能表上的 [新增] >   [專案]  。  
+1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中，按一下 [檔案] 功能表上的 [新增] > [專案]。  
   
 2.  在 **[新增專案]** 視窗的 **[已安裝的範本]** 區域中，展開 **[Business Intelligence]** ，然後按一下 **[Integration Services]** 。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "71680979"
   
     -   在 [檔案]  功能表上，指向 [加入]  ，然後按一下 [新增專案]  。  
   
-2.  在 [加入新專案]  對話方塊中，按一下 [範本]  窗格內的 [Integration Services 專案]  。  
+2.  在 [加入新專案] 對話方塊中，按一下 [範本] 窗格內的 [Integration Services 專案]。  
   
 3.  (選擇性) 編輯專案名稱及位置。  
   
@@ -195,7 +195,7 @@ ms.locfileid: "71680979"
   
 2.  在方案總管中，以滑鼠右鍵按一下專案，指向 [加入]  ，然後執行下列其中之一：  
   
-    -   按一下 [新增項目]  ，然後從 [加入新項目]  對話方塊的 [範本]  窗格中選取範本。  
+    -   按一下 [新增項目]，然後從 [加入新項目] 對話方塊的 [範本] 窗格中選取範本。  
   
     -   按一下 [現有項目]  ，在 [加入現有項目]  對話方塊中瀏覽，以找到您要加入專案的項目，然後按一下 [加入]  。  
   

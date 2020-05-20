@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ConvertToString method [ADO], Visual Basic example
 ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cd23acb0f966ec04c4a2f3e6da48d21d33fb915
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 90472a43cefe87fdc255d9794f16fa32ca0aff16
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933428"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762579"
 ---
 # <a name="converttostring-method-example-vb"></a>ConvertToString 方法範例 (VB)
 ```  

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Precision property [ADOX]
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d1416842f3c122e9e5e5e28b8a14310b679697cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 67512b74e4c2b869cb7b1f9397462ce5566557a8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965566"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763719"
 ---
 # <a name="precision-property-adox"></a>Precision 屬性 (ADOX)
 指出資料[行](../../../ado/reference/adox-api/column-object-adox.md)中資料值的最大有效位數。  

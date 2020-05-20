@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS objects [ADO], object model summary
 - RDS object model [ADO]
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6c455d816b3ba5a9606d09e3b05e54583e11ca41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 95ddd84bfd755e044d97a6043f295014933ae18c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922536"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763589"
 ---
 # <a name="rds-object-model-summary"></a>RDS 物件模型摘要
 > [!IMPORTANT]

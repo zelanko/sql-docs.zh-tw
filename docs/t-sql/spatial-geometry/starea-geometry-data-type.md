@@ -42,7 +42,7 @@ ms.locfileid: "68100996"
  CLR 傳回類型：**SqlDouble**  
   
 ## <a name="remarks"></a>備註  
- 如果 `STArea()`geometry **執行個體只包含 0 維度和 1 維度的圖形，或它是空的，** 會傳回 0。 如果 `STArea()`geometry **執行個體尚未初始化，** 會傳回 **NULL**。  
+ 如果 **geometry** 執行個體只包含 0 維度和 1 維度的圖形，或它是空的，`STArea()` 會傳回 0。 如果 **geometry** 執行個體尚未初始化，`STArea()` 會傳回 **NULL**。  
   
 ## <a name="examples"></a>範例  
   

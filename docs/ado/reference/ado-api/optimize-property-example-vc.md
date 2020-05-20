@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bc8268f65e8bd7206ff0be1423785e1862147bed
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931832"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762071"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize 屬性範例 (VC++)
 這個範例會示範[Field](../../../ado/reference/ado-api/field-object.md)物件 dynamic **Optimize**屬性。 在**Pubs**資料庫中，**作者**資料表的**zip**欄位未編制索引。 將**zip**欄位上的[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性設定為**True** ，會授權 ADO 建立索引，以提升[Find](../../../ado/reference/ado-api/find-method-ado.md)方法的效能。  

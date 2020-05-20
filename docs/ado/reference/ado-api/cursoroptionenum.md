@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CursorOptionEnum enumeration [ADO]
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1d5cc44950754c4b63e644d2d9210edcc94bd9ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d7ac2825c5b700c7c9855f554cdd76cfd28547bd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933268"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763517"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 指定[支援](../../../ado/reference/ado-api/supports-method.md)方法應測試的功能。  
   
-|持續性|值|描述|  
+|持續性|值|說明|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|支援[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法來加入新的記錄。|  
 |**adApproxPosition**|0x4000|支援[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)和[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)屬性。|  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Cellset object [ADO MD], members
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ccee0a1b6f31bf9cb54272387e2d7363d2324530
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 15b599884fffff5e9d6c289165b21a1d6f40b7a6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911545"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761756"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Cellset 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

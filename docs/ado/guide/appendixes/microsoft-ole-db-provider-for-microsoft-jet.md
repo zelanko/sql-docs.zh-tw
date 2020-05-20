@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 204aca25a330dd912e1a9354adc92bbb7c58f847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926640"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763209"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet 總覽
 適用于 Microsoft Jet 的 OLE DB 提供者可讓 ADO 存取 Microsoft Jet 資料庫。
@@ -45,8 +45,8 @@ Microsoft.Jet.OLEDB.4.0
 |關鍵字|描述|
 |-------------|-----------------|
 |**提供者**|指定 Microsoft Jet 的 OLE DB 提供者。|
-|**資料來源**|指定資料庫路徑和檔案名（例如， `c:\Northwind.mdb`）。|
-|**使用者識別碼**|指定使用者名稱。 如果未指定此關鍵字，則預設會使用字串`admin`""。|
+|**資料來源**|指定資料庫路徑和檔案名（例如， `c:\Northwind.mdb` ）。|
+|**使用者識別碼**|指定使用者名稱。 如果未指定此關鍵字，則 `admin` 預設會使用字串 ""。|
 |**密碼**|指定使用者密碼。 如果未指定此關鍵字，則預設會使用空字串（""）。|
 
 > [!NOTE]
@@ -91,7 +91,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>提供者特定的記錄集和命令屬性
  Jet 提供者也支援數個提供者特定的**記錄集**和**命令**屬性。 這些屬性是透過**記錄集**或**命令**物件的**properties**集合來存取和設定。 資料表會列出 ADO 屬性名稱及其對應的 OLE DB 屬性名稱（以括弧括住）。
 
-|屬性名稱|描述|
+|屬性名稱|說明|
 |-------------------|-----------------|
 |Jet OLEDB：大量交易（DBPROP_JETOLEDB_BULKNOTRANSACTIONS）|指出 SQL 大量作業是否已交易。 由於資源延遲，大型大量作業可能會在交易時失敗。|
 |Jet OLEDB：啟用 Fat 資料指標（DBPROP_JETOLEDB_ENABLEFATCURSOR）|指出當填入遠端資料列來源的記錄集時，Jet 是否應快取多個資料列。|
@@ -146,7 +146,7 @@ Microsoft.Jet.OLEDB.4.0
 |最大資料列大小|DBPROP_MAXROWSIZE|
 |最大資料列大小包含 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |SELECT 中的資料表上限|DBPROP_MAXTABLESINSELECT|
-|[模式]|DBPROP_INIT_MODE|
+|模式|DBPROP_INIT_MODE|
 |多個參數集|DBPROP_MULTIPLEPARAMSETS|
 |多個結果|DBPROP_MULTIPLERESULTS|
 |多個儲存物件|DBPROP_MULTIPLESTORAGEOBJECTS|

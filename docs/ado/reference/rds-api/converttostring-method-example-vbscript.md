@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ConvertToString method [ADO], VBScript example
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1feada03927b1c2359babf7d68d6c9a8ffcba2b6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abfaba4a4ef4a67bb4b5970bf347674814caab13
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964552"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762679"
 ---
 # <a name="converttostring-method-example-vbscript"></a>ConvertToString 方法範例 (VBScript)
 > [!IMPORTANT]

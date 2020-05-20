@@ -40,7 +40,7 @@ ms.locfileid: "71282163"
   
 -   [以程式設計方式使用 Web 服務或遠端元件執行遠端套件](#service)  
   
- 本主題中用來載入和儲存套件的所有方法，幾乎都需要 **Microsoft.SqlServer.ManagedDTS** 組件的參考。 唯一的例外是本主題中示範之執行 **sp_start_job** 預存程序的 ADO.NET 方法，只需要 **System.Data** 的參考。 在新專案中新增 **Microsoft.SqlServer.ManagedDTS** 組件的參考之後，請使用 <xref:Microsoft.SqlServer.Dts.Runtime>using**或**Imports**陳述式匯入** 命名空間。  
+ 本主題中用來載入和儲存套件的所有方法，幾乎都需要 **Microsoft.SqlServer.ManagedDTS** 組件的參考。 唯一的例外是本主題中示範之執行 **sp_start_job** 預存程序的 ADO.NET 方法，只需要 **System.Data** 的參考。 在新專案中新增 **Microsoft.SqlServer.ManagedDTS** 組件的參考之後，請使用 **using** 或 **Imports** 陳述式匯入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空間。  
   
 ###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> 以程式設計方式使用 SQL Server Agent 在伺服器上執行遠端套件  
  下列程式碼範例示範如何以程式設計方式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，在伺服器上執行遠端封裝。 程式碼範例會呼叫系統預存程序 **sp_start_job**，它將會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 程序所啟動的作業其名稱為 `RunSSISPackage`，而且此作業是在遠端電腦上。 `RunSSISPackage` 作業接著會在遠端電腦上執行封裝。  

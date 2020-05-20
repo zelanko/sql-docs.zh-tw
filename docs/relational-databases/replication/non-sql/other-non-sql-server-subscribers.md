@@ -21,7 +21,7 @@ ms.locfileid: "68110959"
 ---
 # <a name="other-non-sql-server-subscribers"></a>其他非 SQL Server 訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的非 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 訂閱者清單，請參閱[非 SQL Server 訂閱者](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。 本主題包含 ODBC 驅動程式和 OLE DB 提供者需求的資訊。  
+  如需 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 支援的非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者清單，請參閱[非 SQL Server 訂閱者](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。 本主題包含 ODBC 驅動程式和 OLE DB 提供者需求的資訊。  
   
 ## <a name="odbc-driver-requirements"></a>ODBC 驅動程式需求  
  ODBC 驅動程式：  

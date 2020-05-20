@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecordOptionsEnum enumeration [ADO]
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dcdb825073b267c3e3351001ecc7b11c969582e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 849f3720d831c17b6b9d6d2829ae0b28f19992de
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932040"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762439"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 指定[Record](../../../ado/reference/ado-api/record-object-ado.md)物件[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)方法的行為。  
   
-|持續性|值|描述|  
+|持續性|值|說明|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|預設值。 執行預設的移動作業：如果目的地檔案或目錄已經存在，作業就會失敗，而且作業會更新超文字連結。|  
 |**adMoveOverWrite**|1|覆寫目的地檔案或目錄，即使它已經存在。|  

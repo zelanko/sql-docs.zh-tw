@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADOX]
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e1cab50c2aa784c77fbd4a51bc3d72daf115620c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 73035f65699f1a8e44ca55703ce88b7bfdf2b5dc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965016"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763239"
 ---
 # <a name="type-property-table-adox"></a>Type 屬性 (Table) (ADOX)
 表示資料表的類型。  

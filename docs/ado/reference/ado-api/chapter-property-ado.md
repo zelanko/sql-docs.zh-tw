@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Chapter property [ADO]
 ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2791bc1a89f8cec1362ab1f00c3be739f7d56b96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 04991b5246b338b89008e0188463dee580f81e3e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920100"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763149"
 ---
 # <a name="chapter-property-ado"></a>Chapter 屬性 (ADO)
 取得或設定[ADORecordsetConstruction 介面](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)物件上/的 OLE DB**章節**物件。 當您使用**put_Chapter**設定**章節**物件時，會將資料列的子集轉換成 ADO[記錄集物件](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 這會設定資料列**集**物件的目前章節。 這是可讀寫的屬性。  

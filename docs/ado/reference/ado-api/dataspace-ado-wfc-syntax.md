@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - DataSpace collection [ADO], ADO/WFC syntax
 ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 569944991c029c091f0f17be4e5d943a893333a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c736dc38949945a6e62e5121c4edf4b98dfbc7fc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919191"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763449"
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO - WFC 語法)
 「**空間**」類別的**createObject**方法會指定商務物件來處理用戶端應用程式要求（*progid*）和通訊協定和伺服器（*連接*）。 **createObject**會傳回代表伺服器的[ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)物件。  

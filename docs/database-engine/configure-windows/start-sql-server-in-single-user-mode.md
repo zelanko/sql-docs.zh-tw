@@ -37,7 +37,7 @@ ms.locfileid: "68037160"
   
 以單一使用者模式啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的物件總管可能會失敗，因為它需要一個以上的連接才能進行某些作業。 若要在單一使用者模式下管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，僅透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的查詢編輯器連接來執行 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，或使用 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。  
   
-當您搭配 **SQLCMD** 或 **使用**-m[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 選項時，您可以限制指定用戶端應用程式的連線。 
+當您搭配 **SQLCMD** 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 使用 **-m** 選項時，您可以限制指定用戶端應用程式的連線。 
 
 > [!NOTE]
 > 在 Linux 上，**SQLCMD** 必須大寫，如此處所示。

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bd58cb2ec579586b25365abab9d6ff8b2b9c6617
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965194"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762769"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 屬性範例 (VB)
 這個範例會示範已附加至[索引](../../../ado/reference/adox-api/index-object-adox.md)之資料[行](../../../ado/reference/adox-api/columns-collection-adox.md)集合的資料[行](../../../ado/reference/adox-api/column-object-adox.md)的[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)屬性。 此程式碼會將遞增索引附加至**Employees**資料表中的 Country 資料行，然後顯示記錄。 然後，程式碼會將遞減索引附加至**employee 資料表的**Country 資料行，然後再次顯示記錄。 會顯示遞增和遞減索引之間的差異。  

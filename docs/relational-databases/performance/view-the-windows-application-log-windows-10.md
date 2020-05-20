@@ -35,7 +35,7 @@ ms.locfileid: "67986622"
   
 2. 在 [事件檢視器]  中，開啟 [應用程式及服務記錄檔]  。
 
-3. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件是以 [來源]  資料行的 **MSSQLSERVER** 項目識別 (具名執行個體則是以 _MSSQL$_ **<執行個體名稱>** 識別)。 SQL Server Agent 事件由 SQLSERVERAGENT 項目識別 (對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的具名執行個體，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 事件是由 **SQLAgent$** \<*執行個體名稱*> 加以識別)。 Microsoft Search 服務事件則以 **Microsoft Search**項目識別。  
+3. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件是以 [來源] 資料行的 **MSSQLSERVER** 項目識別 (具名執行個體則是以 **MSSQL$**_<執行個體名稱>_ 識別)。 SQL Server Agent 事件由 SQLSERVERAGENT 項目識別 (對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的具名執行個體，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 事件是由 **SQLAgent$** \<*執行個體名稱*> 加以識別)。 Microsoft Search 服務事件則以 **Microsoft Search**項目識別。  
   
 4. 若要檢視不同電腦的記錄檔，請以滑鼠右鍵按一下 [事件檢視器 (本機)]  。 選取 [連線至其他電腦]  ，然後填入欄位以完成 [選取電腦]  對話方塊。  
   

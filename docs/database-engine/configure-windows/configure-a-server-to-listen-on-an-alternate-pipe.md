@@ -46,7 +46,7 @@ ms.locfileid: "68012915"
   
 4.  在主控台窗格中，按一下 [SQL Server 服務]  。  
   
-5.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (**執行個體名稱>)]** \<  ，然後按一下 [重新啟動]  ，以停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+5.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]，然後按一下 [重新啟動]，以停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接聽替代管道時，有三種方式可利用用戶端應用程式連接到特定的具名管道：  
   

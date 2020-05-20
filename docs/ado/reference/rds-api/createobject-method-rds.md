@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b8cf7f5629158ccd1bdd74e30b7ba9bc5bb6942
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964549"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762669"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 建立目標商務物件的 proxy，並傳回它的指標。 Proxy 會封裝資料，並將其封送處理至伺服器端存根，以便與商務物件通訊，以透過網際網路傳送要求和資料。 對於同進程元件物件，不會使用任何 proxy，只會提供物件的指標。  
@@ -31,19 +31,19 @@ ms.locfileid: "67964549"
   
 |通訊協定|語法|  
 |--------------|------------|  
-|HTTP|Set object = CreateObject （"ProgId"，"HTTPs\://awebsrvr"）|  
-|HTTPS|Set object = CreateObject （"ProgId"，"HTTPs\://awebsrvr"）|  
+|HTTP|Set object = CreateObject （"ProgId"，"HTTPs \: //awebsrvr"）|  
+|HTTPS|Set object = CreateObject （"ProgId"，"HTTPs \: //awebsrvr"）|  
 |DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
 |內含式|Set object = DataSpace.CreateObject("ProgId", "")|  
   
 ## <a name="parameters"></a>參數  
- *Object*  
+ *目標*  
  評估為*ProgID*中所指定類型之物件的物件變數。  
   
  *DataSpace*  
  代表 RDS 的物件變數[。](../../../ado/reference/rds-api/dataspace-object-rds.md)用來建立新物件實例的空間物件。  
   
- *ProgID*  
+ *進程*  
  **字串**值，其中包含指定用來執行應用程式之商務規則的伺服器端商務物件的程式設計識別碼。  
   
  *awebsrvr*或*computername*  

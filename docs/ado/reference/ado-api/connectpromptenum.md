@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectPromptEnum enumeration [ADO]
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: afd5d9ca0de6b8d2ffba75f862e6ca0afb594848
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 61a66866f8206f2df4cbdeb3f2144e0ac12ac695
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919448"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762589"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 指定在開啟資料來源的連接時，是否應該顯示對話方塊，以提示遺漏參數。  
   
-|持續性|值|描述|  
+|持續性|值|說明|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|一律會出現提示。|  
 |**adPromptComplete**|2|如果需要詳細資訊，則提示。|  

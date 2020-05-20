@@ -26,7 +26,7 @@ ms.locfileid: "71294203"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  您可以使用 [資料分析工作編輯器]  的 [一般]  頁面來設定下列選項：  
+  您可以使用 [資料分析工作編輯器] 的 [一般] 頁面來設定下列選項：  
   
 -   指定設定檔輸出的目的地。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "71294203"
  開啟資料設定檔檢視器。 獨立資料設定檔檢視器會顯示資料分析工作的資料設定檔輸出。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部執行資料分析工作並計算資料設定檔後，您可以檢視資料設定檔輸出。  
   
 > [!NOTE]  
->  您也可以藉由執行 *磁碟機>\<* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中的 DataProfileViewer.exe，開啟資料設定檔檢視器。  
+>  您也可以藉由執行 \<磁碟機>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中的 DataProfileViewer.exe，開啟資料設定檔檢視器。  
   
 ## <a name="see-also"></a>另請參閱  
  [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   

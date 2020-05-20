@@ -44,7 +44,7 @@ ms.locfileid: "67930176"
  開放地理空間協會 (OGC) 類型：**Point**  
   
 ## <a name="remarks"></a>備註  
- 如果 `STCentroid()`geometry**執行個體不是**Polygon, CurvePolygon**或**MultiPolygon **型別，** 會傳回 null。  
+ 如果 **geometry** 執行個體不是 **Polygon, CurvePolygon** 或 **MultiPolygon** 型別，`STCentroid()` 會傳回 null。  
   
 ## <a name="examples"></a>範例  
   

@@ -36,7 +36,7 @@ ms.locfileid: "67934829"
 > -   在執行任何升級之前備份您的資料庫。  
 > -   升級程序會重新建立預存程序，並升級 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]使用的資料表。 您對這些元件所做的任何自訂可能會遺失。  
 > -   模型部署封裝只能在之前建立這些封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中使用。 您不能將在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中建立的模型部署封裝部署到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。  
-> -   將 Data Quality Services 和 Master Data Services 升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，所有適用於 Excel 的舊版 Master Data Services 增益集將無法再繼續運作。 您可以從[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]適用於 Microsoft Excel 的 Master Data Services 增益集[下載適用於 Excel 的 ](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md) Master Data Services 增益集。  
+> -   將 Data Quality Services 和 Master Data Services 升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，所有適用於 Excel 的舊版 Master Data Services 增益集將無法再繼續運作。 您可以從[適用於 Microsoft Excel 的 Master Data Services 增益集](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)下載適用於 Excel 的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Master Data Services 增益集。  
   
 ##  <a name="file-location"></a><a name="fileLocation"></a> 檔案位置  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67934829"
   
     3.  按一下右窗格中的 [新增 SQL Server 獨立安裝或將功能加入至現有安裝]  。  
   
-    4.  在 [功能選擇]  頁面上，選取 [ **][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 以及您想要安裝的其他任何功能。  
+    4.  在 [功能選擇] 頁面上，選取 [[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]] 以及您想要安裝的其他任何功能。  
   
     5.  完成精靈。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "67934829"
         -   [建立新的網站]  。 建立網站時，便會自動建立新的 Web 應用程式。  
   
         > [!IMPORTANT]  
-        >  在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版的 Master Data Services 組態管理員中，可讓您選取您在舊版 SQL Server ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 中的現有 MDS Web 應用程式。 您絕不能選取現有的 Web 應用程式，而是必須建立 MDS 的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web 應用程式。 否則，當您嘗試將 Web 應用程式與升級的 MDS 資料庫建立關聯時，將會收到錯誤，說明因為該頁面的相關組態資料無效，所以無法存取所要求的頁面。  
+        >  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 Master Data Services 組態管理員中，可讓您選取您在舊版 SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 中的現有 MDS Web 應用程式。 您絕不能選取現有的 Web 應用程式，而是必須建立 MDS 的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web 應用程式。 否則，當您嘗試將 Web 應用程式與升級的 MDS 資料庫建立關聯時，將會收到錯誤，說明因為該頁面的相關組態資料無效，所以無法存取所要求的頁面。  
         >   
         >  如果您要為 MDS Web 應用程式使用相同的名稱 (別名) 作為現有 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) Web 應用程式，則必須先從 IIS 刪除 Web 應用程式和相關聯的應用程式集區，然後使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版的 Master Data Services 組態管理員，以相同的名稱建立 Web 應用程式。 如需從 IIS 移除 Web 應用程式和應用程式集區的資訊，請參閱 [移除應用程式 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 和 [移除應用程式集區 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "67934829"
   
     3.  按一下右窗格中的 [新增 SQL Server 獨立安裝或將功能加入至現有安裝]  。  
   
-    4.  在 [功能選擇]  頁面上，選取 [ **][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 以及您想要安裝的其他任何功能。  
+    4.  在 [功能選擇] 頁面上，選取 [[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]] 以及您想要安裝的其他任何功能。  
   
     5.  完成精靈。  
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - AbsolutePage property [ADO]
 - PageCount property [ADO]
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d697fa5b411d9000c03a700f6b4fe0e4b39aa5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6542cb23deef9f10979e3bdb90c0820d84c0f150
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923516"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763029"
 ---
 # <a name="using-pages"></a>使用頁面
 使用**PageCount**屬性來判斷**記錄集**物件中的資料頁數目。 *頁面*是一組記錄，其大小等於**PageSize**屬性設定。 即使最後一頁不完整，因為記錄數目比**PageSize**值少，因此會計算為**PageCount**值中的額外頁面。 如果**記錄集**物件不支援此屬性，則**PageCount**會是-1，表示**PageCount**為未知深度。  

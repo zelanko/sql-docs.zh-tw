@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], locking
 - locks [ADO], about locking
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c1607c9434e6c30ffd317277aadab27af96868fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: df46dd1ba112dfc592dee34bc37e50c5b727fed7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923446"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762989"
 ---
 # <a name="what-is-a-lock"></a>什麼是鎖定？
 鎖定是 DBMS 在多使用者環境中限制資料列存取權的進程。 獨佔鎖定資料列或資料行時，除非釋放鎖定，否則不允許其他使用者存取鎖定的資料。 這可確保兩個使用者無法同時更新資料列中的相同資料行。  

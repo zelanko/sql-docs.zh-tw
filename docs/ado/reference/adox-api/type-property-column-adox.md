@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADOX]
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 190d60fc5724286118a2209a60f8bee1d0835a37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c819d5b58f0153db84a624c79cef829605e54df8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965022"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763259"
 ---
 # <a name="type-property-column-adox"></a>Type 屬性 (Column) (ADOX)
 表示資料行的資料類型。  

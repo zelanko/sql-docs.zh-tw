@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecord method [ADO]
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5e5c63bbd29bef1d7b0b7d7650c32fcfe2245f7a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918068"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762429"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 方法 (ADO)
 將[記錄](../../../ado/reference/ado-api/record-object-ado.md)所代表的實體移動到另一個位置。  
@@ -37,7 +37,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *來源*  
  選擇性。 **字串**值，包含可識別要移動之**記錄**的 URL。 如果省略*Source*或指定空字串，則會移動此**記錄**所代表的物件。 例如，如果**記錄**代表檔案，則檔案的內容會移至*目的地*所指定的位置。  
   
- *Destination*  
+ *位置*  
  選擇性。 包含 URL 的**字串**值，指定將移動*來源*的位置。  
   
  *UserName*  

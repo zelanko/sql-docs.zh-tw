@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - PersistFormatEnum enumeration [ADO]
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a26fd370e80cb288ee62b0fc53ed6670300172e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 909fd5a292f5f071ec287aba9c8e3f6dc3881ef3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917610"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763359"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 指定用來儲存[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的格式。  
   
-|持續性|值|描述|  
+|持續性|值|說明|  
 |--------------|-----------|-----------------|  
 |**adPersistADTG**|0|表示 Microsoft Advanced Data TableGram （ADTG）格式。|  
 |**adPersistADO**|1|表示將使用 ADO 本身的可延伸標記語言 (XML) （XML）格式。 這個值與 adPersistXML 相同，而且包含在回溯相容性中。|  

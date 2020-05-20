@@ -24,7 +24,7 @@ ms.locfileid: "68082559"
 
 [!INCLUDE[tsql-appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-計算資料行是一個虛擬資料行，除非資料行標示了 PERSISTED，否則，並未實際儲存在資料表中。 計算資料行運算式可以使用來自其他資料行的資料來計算其所屬資料行的值。 您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中指定計算資料行的運算式。
+計算資料行是一個虛擬資料行，除非資料行標示了 PERSISTED，否則，並未實際儲存在資料表中。 計算資料行運算式可以使用來自其他資料行的資料來計算其所屬資料行的值。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中指定計算資料行的運算式。
 
 **本主題內容**
 

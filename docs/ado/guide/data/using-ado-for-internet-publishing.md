@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - urls [ADO]
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b95700d30337363091815763a5e9fbf1547902e6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923607"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763059"
 ---
 # <a name="using-ado-for-internet-publishing"></a>使用 ADO 進行網際網路發佈
 [網際網路發佈的 OLE DB 提供者](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)會顯示使用 ADO 存取異質資料的特定範例。 雖然本節中的範例僅適用于使用網際網路發行提供者，但在將 ADO 與其他提供者搭配使用異質資料（例如電子郵件存放區的提供者）時，所示範的原則應該類似。  

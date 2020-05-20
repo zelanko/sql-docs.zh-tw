@@ -64,7 +64,7 @@ ms.locfileid: "68054631"
 
 ## <a name="run-a-package-with-script-or-code"></a><a name="script"></a> 使用指令碼或程式碼執行套件
 
-在您可以呼叫受控 API 的任何開發環境中，您可以藉由呼叫 `Execute` 命名空間中 `Package` 物件的 `Microsoft.SQLServer.Management.IntegrationServices` 方法來執行套件。
+在您可以呼叫受控 API 的任何開發環境中，您可以藉由呼叫 `Microsoft.SQLServer.Management.IntegrationServices` 命名空間中 `Package` 物件的 `Execute` 方法來執行套件。
 
 如需詳細資訊，請參閱下列範例：
 

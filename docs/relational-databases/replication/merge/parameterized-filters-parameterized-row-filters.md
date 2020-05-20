@@ -48,7 +48,7 @@ ms.locfileid: "71711061"
   
      也可以使用「訂閱者」或「散發者」名稱之外的其他值覆寫此函數。 通常，應用程式會使用更有意義的值覆寫此函數，例如業務員的姓名或識別碼。 如需詳細資訊，請參閱本主題中的＜覆寫 HOST_NAME() 值＞一節。  
   
- 系統函數傳回的值會與要篩選之資料表中所指定的資料行加以比較，並且適當的資料也會下載到「訂閱者」。 此比較在初始化訂閱 (如此便只有適當的資料才會包含在初始快照集中) 以及每次同步處理訂閱時執行。 根據預設，如果發行者端的變更導致資料列從資料分割中移出，則該資料列會在訂閱者端刪除 (此行為可透過使用 `@allow_partition_realignment`sp_addmergepublication &#40;Transact-SQL&#41;[ 的 ](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 參數來控制)。  
+ 系統函數傳回的值會與要篩選之資料表中所指定的資料行加以比較，並且適當的資料也會下載到「訂閱者」。 此比較在初始化訂閱 (如此便只有適當的資料才會包含在初始快照集中) 以及每次同步處理訂閱時執行。 根據預設，如果發行者端的變更導致資料列從資料分割中移出，則該資料列會在訂閱者端刪除 (此行為可透過使用 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@allow_partition_realignment` 參數來控制)。  
   
 > [!NOTE]  
 >  當為參數化篩選執行比較時，會始終使用資料庫定序。 例如，如果資料庫定序不區分大小寫，但資料表或資料行定序區分大小寫，則比較將不區分大小寫。  
@@ -95,15 +95,15 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  例如，Pamela Ansman-Wolfe 的員工識別碼已被指派為 280。 當您為此員工建立訂閱時，請將 HOST_NAME() 值指定成員工識別碼的值 (此範例中為 280)。 「合併代理程式」連接到發行者端時，它會將 HOST_NAME() 傳回的值與資料表中的值相比較，並僅下載在 **EmployeeID** 資料行中包含值 280 的資料列。  
   
 > [!IMPORTANT]
->  HOST_NAME() 函數會傳回一個 **nchar** 值，因此，如果篩選子句中的資料行為數值資料類型 (如上述範例)，您必須使用 CONVERT。 基於效能的考量，建議您不要在參數化資料列篩選器子句中的資料行名稱套用函數，例如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`。 反之，建議您使用範例中顯示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用於 `@subset_filterclause`sp_addmergearticle[ 的 ](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 參數，但通常無法在 [新增發行集精靈] 中使用 (此精靈會執行篩選子句來驗證它，但是因為電腦名稱不能轉換為 **int** 而失敗)。 如果您使用「新增發行集精靈」，建議在此精靈中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然後在建立發行集的快照集之前，使用 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) ，將該子句變更為 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
+>  HOST_NAME() 函數會傳回一個 **nchar** 值，因此，如果篩選子句中的資料行為數值資料類型 (如上述範例)，您必須使用 CONVERT。 基於效能的考量，建議您不要在參數化資料列篩選器子句中的資料行名稱套用函數，例如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`。 反之，建議您使用範例中顯示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用於 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 `@subset_filterclause` 參數，但通常無法在 [新增發行集精靈] 中使用 (此精靈會執行篩選子句來驗證它，但是因為電腦名稱不能轉換為 **int** 而失敗)。 如果您使用「新增發行集精靈」，建議在此精靈中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然後在建立發行集的快照集之前，使用 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) ，將該子句變更為 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
   
  **覆寫 HOST_NAME() 值**  
   
  使用下列方法其中一之來覆寫 HOST_NAME() 值：  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在 [新增訂閱精靈] 的 [HOST**NAME\_\( 值]\)** 頁面上指定一個值。 如需建立訂閱的詳細資訊，請參閱[訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)。  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在 [新增訂閱精靈] 的 [HOST\_NAME\(\) 值] 頁面上指定一個值。 如需建立訂閱的詳細資訊，請參閱[訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)。  
   
--   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計︰指定 `@hostname`sp_addmergesubscription &#40;Transact-SQL&#41;[ (適用於發送訂閱) 或 ](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)sp_addmergepullsubscription_agent&#40;Transact-SQL&#41;[ (適用於提取訂閱) 的 ](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) 參數值。  
+-   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計︰指定 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (適用於發送訂閱) 或 [sp_addmergepullsubscription_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (適用於提取訂閱) 的 `@hostname` 參數值。  
   
 -   合併代理程式：在命令列中或透過代理程式設定檔為 **-Hostname** 參數指定一個值。 如需「合併代理程式」的詳細資訊，請參閱＜ [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)＞。 如需代理程式設定檔的詳細資訊，請參閱＜ [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)＞。  
   

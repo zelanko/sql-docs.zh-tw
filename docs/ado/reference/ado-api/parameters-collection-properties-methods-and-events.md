@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Parameters collection [ADO], members
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bffb3dfc89f07169bdbedc0d8960325e3f780085
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b0bfbb7129cd4937052e919f4282e3303a29de29
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931682"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763379"
 ---
 # <a name="parameters-collection-properties-methods-and-events"></a>Parameters 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

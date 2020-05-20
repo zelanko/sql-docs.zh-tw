@@ -28,7 +28,7 @@ ms.locfileid: "68024676"
 ---
 # <a name="scm-services---configure-server-startup-options"></a>SCM 服務 - 設定伺服器啟動選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration Manager，設定每次 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中啟動時要使用的啟動選項。 如需啟動選項的清單，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
+  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager，設定每次 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中啟動時要使用的啟動選項。 如需啟動選項的清單，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68024676"
   
 2.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，按一下 **[SQL Server 服務]** 。  
   
-3.  在右窗格中，以滑鼠右鍵按一下 [SQL Server ( **<instance_name>** _)_ ]  ，然後按一下 [屬性]  。  
+3.  在右窗格中，以滑鼠右鍵按一下 [SQL Server (_<instance_name>_**)**]，然後按一下 [屬性]。  
   
 4.  在 **[啟動參數]** 索引標籤的 **[指定啟動參數]** 方塊中輸入參數，然後按一下 **[加入]** 。  
   

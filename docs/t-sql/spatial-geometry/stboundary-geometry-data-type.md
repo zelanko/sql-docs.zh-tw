@@ -42,7 +42,7 @@ ms.locfileid: "67930389"
  CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="remarks"></a>備註  
- 當 `STBoundary()`LineString **、** CircularString**或**CompoundCurve **執行個體的端點相同時，** 會傳回空的 **GeometryCollection**。  
+ 當 **LineString**、**CircularString** 或 **CompoundCurve** 執行個體的端點相同時，`STBoundary()` 會傳回空的 **GeometryCollection**。  
   
 ## <a name="examples"></a>範例  
   

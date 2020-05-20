@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ParentCatalog property [ADOX], VC++ example
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f01656c93d6699403657e970034076200255d0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9fde13dc2182f5c1258f43c1ec887dd300b2c008
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76928012"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763739"
 ---
 # <a name="parentcatalog-property-example-vc"></a>ParentCatalog 屬性範例 (VC++)
 下列程式碼示範如何在將資料表附加至目錄之前，使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)屬性來存取提供者特定的屬性。 屬性為**自動遞增**，這會在 Microsoft Jet 資料庫中建立自動遞增欄位。  

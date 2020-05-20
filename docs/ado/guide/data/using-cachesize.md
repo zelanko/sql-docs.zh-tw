@@ -11,14 +11,14 @@ helpviewer_keywords:
 - locks [ADO], CacheSize property
 - CacheSize property [ADO]
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2e3a67e9ad0f1f26f804ecb38e960041863fad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8014fc2b3a1d1614bc9b704b8838f0918f46c946
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923572"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763039"
 ---
 # <a name="using-cachesize"></a>使用 CacheSize
 您可以使用**CacheSize**屬性來控制要一次從提供者取得本機記憶體中的多少筆記錄。 例如，如果**CacheSize**是10，則在第一次開啟**記錄集**物件之後，提供者會將前10筆記錄抓取到本機記憶體。 當您在**記錄集**物件上移動時，提供者會傳回本機記憶體緩衝區中的資料。 當您移至快取中的最後一筆記錄之後，此提供者就會從資料來源將接下來10筆記錄抓取至快取中。  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3afbec77df9a80ab7e304d2e3101e795b939eef2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924598"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763609"
 ---
 # <a name="persisting-records-in-xml-format"></a>以 XML 格式保存記錄
 就像 ADTG 格式一樣，XML 格式的**記錄集**持續性是使用 Microsoft OLE DB 持續性提供者來執行。 此提供者會從儲存的 XML 檔案或資料流程產生順向、唯讀的資料列集，其中包含 ADO 所產生的架構資訊。 同樣地，它可以採用 ADO**記錄集**、產生 XML，然後將它儲存到檔案或任何可執行 COM **IStream**介面的物件。 （事實上，檔案只是支援**IStream**之物件的另一個範例）。若是2.5 和更新版本，ADO 會依賴 Microsoft XML 剖析器（MSXML）將 XML 載入至**記錄集**。因此，必須要有 msxml .dll。  
@@ -59,7 +59,7 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO 一律會保存整個**記錄集**物件。 如果您想要保存**記錄集**物件的資料列子集，請使用**Filter**方法來縮小資料列的範圍，或變更您的選擇子句。 不過，您必須使用用戶端資料指標（**CursorLocation** = **adUseClient**）開啟**記錄集**物件，以使用**篩選**方法來儲存資料列的子集。 例如，若要取出以字母 "b" 為開頭的標題，您可以將篩選套用至開啟的**記錄集**物件：  
+ ADO 一律會保存整個**記錄集**物件。 如果您想要保存**記錄集**物件的資料列子集，請使用**Filter**方法來縮小資料列的範圍，或變更您的選擇子句。 不過，您必須使用用戶端資料指標（**CursorLocation**adUseClient）開啟**記錄集**物件，  =  **adUseClient**以使用**篩選**方法來儲存資料列的子集。 例如，若要取出以字母 "b" 為開頭的標題，您可以將篩選套用至開啟的**記錄集**物件：  
   
 ```  
 rs.Filter "title_id like 'B*'"  

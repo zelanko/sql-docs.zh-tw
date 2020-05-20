@@ -92,7 +92,7 @@ GO
 最後的結果是 `57921`，不是 `123457`。
   
 > [!NOTE]  
->  於不同 **版本中在任何資料類型與**binary[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型之間轉換，不保證結果都會一樣。  
+>  於不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中在任何資料類型與 **binary** 資料類型之間轉換，不保證結果都會一樣。  
   
 ## <a name="see-also"></a>另請參閱
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  

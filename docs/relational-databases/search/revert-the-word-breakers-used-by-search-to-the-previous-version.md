@@ -46,7 +46,7 @@ ms.locfileid: "74055189"
 > [!WARNING]  
 >  如果您以其他版本取代目前版本的 NaturalLanguage6.dll 檔案，則使用此檔案的所有語言的行為都會受到影響。  
   
- 本文描述的檔案是安裝在 `MSSQL\Binn` 執行個體之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料夾中的 DLL 檔案。 完整路徑通常是以下路徑：  
+ 本文描述的檔案是安裝在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 `MSSQL\Binn` 資料夾中的 DLL 檔案。 完整路徑通常是以下路徑：  
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   

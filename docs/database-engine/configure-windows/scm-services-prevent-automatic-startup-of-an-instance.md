@@ -46,9 +46,9 @@ ms.locfileid: "68025659"
   
 3.  在 [詳細資料] 窗格中，以滑鼠右鍵按一下 [MSSQLServer]  ，然後按一下 [屬性]  。  
   
-4.  在 [SQL Server **執行個體名稱\<** > 屬性]   對話方塊之 [服務]  索引標籤的 [一般]  方塊中，將 [啟動模式]  的值設定為 [手動]  。  
+4.  在 [SQL Server \<執行個體名稱> 屬性] 對話方塊之 [服務] 索引標籤的 [一般] 方塊中，將 [啟動模式] 的值設定為 [手動]。  
   
-5.  按一下 [確定]  關閉 [SQL Server **執行個體名稱> 屬性]\<**   對話方塊，然後關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
+5.  按一下 [確定] 關閉 [SQL Server \<執行個體名稱> 屬性] 對話方塊，然後關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

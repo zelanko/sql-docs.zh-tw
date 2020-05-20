@@ -58,7 +58,7 @@ ms.locfileid: "67938187"
 >  盡可能使用 Windows 驗證。  
   
 ### <a name="remote-server-security-example"></a>遠端伺服器安全性的範例  
- 請考量這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝： **serverSend** 和 **serverReceive**。 **serverReceive** 的設定是將來自 **serverSend** 的內送登入 (稱為 **Sales_Mary**) 對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]serverReceive**中的** 驗證登入 (稱為 **Alice**)。 另一個來自 **serverSend** 的內送登入 (稱為 **Joe**)，則會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]serverReceive**中的** 驗證登入 (稱為 _Joe_)  。  
+ 請考量這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝： **serverSend** 和 **serverReceive**。 **serverReceive** 的設定是將來自 **serverSend** 的內送登入 (稱為 **Sales_Mary**) 對應到 **serverReceive** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 (稱為 **Alice**)。 另一個來自 **serverSend** 的內送登入 (稱為 **Joe**)，則會對應到 **serverReceive** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 (稱為 **Joe**)。  
   
  下列的 Transact-SQL 程式碼範例會將 `serverSend` 設定為對 `serverReceive` 執行 RPC。  
   

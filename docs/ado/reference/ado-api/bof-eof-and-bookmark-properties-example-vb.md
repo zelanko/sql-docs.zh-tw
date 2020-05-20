@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Bookmark property [ADO], Visual Basic example
 - EOF property [ADO], Visual Basic example
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9ab332d7d4144d62dd3a0cee1d3585820bf77e77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b0fafe895daecc4cfd7345299904c46ff7a1d5c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920433"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762845"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、EOF 和 Bookmark 屬性範例 (VB)
 這個範例會使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性，在使用者嘗試移動超過[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的第一個或最後一筆記錄時，顯示訊息。 它會使用 [[書簽](../../../ado/reference/ado-api/bookmark-property-ado.md)] 屬性，讓使用者在記錄**集**內將記錄加上旗標，並于稍後返回。  

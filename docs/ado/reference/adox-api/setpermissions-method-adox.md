@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - SetPermissions method [ADOX]
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 94cc5b07c97bd5c8d7c7ae6c30c179e2555b95d5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965221"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762779"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 方法 (ADOX)
 指定物件上[群組](../../../ado/reference/adox-api/group-object-adox.md)或[使用者](../../../ado/reference/adox-api/user-object-adox.md)的許可權。  

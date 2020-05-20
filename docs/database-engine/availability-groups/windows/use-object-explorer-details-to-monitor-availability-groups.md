@@ -24,7 +24,7 @@ ms.locfileid: "68013636"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用物件總管詳細資料監視可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此主題描述如何使用  **的 [物件總管詳細資料]** [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 窗格來監視及管理現有的 AlwaysOn 可用性群組、可用性複本和可用性資料庫。  
+  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [物件總管詳細資料] 窗格來監視及管理現有的 AlwaysOn 可用性群組、可用性複本和可用性資料庫。  
   
 > [!NOTE]  
 >  如需使用 [物件總管詳細資料] 窗格的詳細資訊，請參閱 [物件總管詳細資料窗格](../../../ssms/object/object-explorer-details-pane.md)。  

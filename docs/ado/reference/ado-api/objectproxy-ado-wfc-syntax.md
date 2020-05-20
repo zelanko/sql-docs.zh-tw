@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ObjectProxy collection [ADO]
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 485d011fa6762acd04cad54ff7fffc8d8136e063
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ff9cd79b4ac787987ef44ea3f73cbd9fb102ae43
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917949"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762317"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO - WFC 語法)
 **ObjectProxy**物件代表伺服器，而且是由量[空間](../../../ado/reference/rds-api/dataspace-object-rds.md)物件的**createObject**方法所傳回。 ObjectProxy 類別有一個方法 call，它可以**叫**用伺服器上的方法，並傳回該調用所產生的物件。  
@@ -37,7 +37,7 @@ public Object ObjectProxy.( String method )
 public Object ObjectProxy.( String method, Object[] args)  
 ```  
   
-#### <a name="returns"></a>傳回值  
+#### <a name="returns"></a>傳回  
  Object  
  叫用方法所產生的物件。  
   

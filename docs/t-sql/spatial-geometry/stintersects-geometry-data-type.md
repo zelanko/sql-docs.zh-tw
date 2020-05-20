@@ -38,7 +38,7 @@ ms.locfileid: "67950122"
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是要與叫用 **所在之執行個體相比較的另一個**geometry`STIntersects()` 執行個體。  
+ 這是要與叫用 `STIntersects()` 所在之執行個體相比較的另一個 **geometry** 執行個體。  
   
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  

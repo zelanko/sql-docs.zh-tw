@@ -13,14 +13,14 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], VC++ example
 - OriginalValue property [ADO]
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b4950634f473ca70c26b7b2b2c8159fb9a75fb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 142688ccbbd4e086592d419970a1c543e2211abc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931820"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762041"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 和 UnderlyingValue 屬性範例（VC + +）
 這個範例會示範[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)和[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)屬性，方法是在記錄[集](../../../ado/reference/ado-api/recordset-object-ado.md)批次更新期間，當記錄的基礎資料變更時顯示訊息。  

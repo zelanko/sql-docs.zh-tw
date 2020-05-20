@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - LockTypeEnum enumeration [ADO]
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ae822794b1b06a975e1cc3cd397b5a5f00036dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3fd3c1ffea99abf859a4a328e21da288bc9378a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918250"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762529"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 指定在編輯期間放置在記錄上的鎖定類型。  
   
-|持續性|值|描述|  
+|持續性|值|說明|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|表示開放式批次更新。 批次更新模式的必要參數。|  
 |**adLockOptimistic**|3|表示開放式鎖定，依記錄記錄。 提供者會使用開放式鎖定，只有在您呼叫[Update](../../../ado/reference/ado-api/update-method.md)方法時，才會鎖定記錄。|  

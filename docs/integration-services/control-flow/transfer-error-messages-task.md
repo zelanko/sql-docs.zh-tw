@@ -83,7 +83,7 @@ ms.locfileid: "71293876"
 -   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="transfer-error-messages-task-editor-general-page"></a>傳送錯誤訊息工作編輯器 (一般頁面)
-  使用 [傳送錯誤訊息工作編輯器]  對話方塊的 [一般]  頁面，即可命名和描述傳送錯誤訊息工作。 [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者自訂的錯誤訊息。   
+  使用 [傳送錯誤訊息工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送錯誤訊息工作。 [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者自訂的錯誤訊息。   
   
 ### <a name="options"></a>選項。  
  **名稱**  
@@ -96,14 +96,14 @@ ms.locfileid: "71293876"
  輸入傳送錯誤訊息工作的描述。  
   
 ## <a name="transfer-error-messages-task-editor-messages-page"></a>傳送錯誤訊息工作編輯器 (訊息頁面)
-  使用 [傳送錯誤訊息工作編輯器]  對話方塊的 [訊息]  頁面，即可指定屬性用來將一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者自訂錯誤訊息，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個。 
+  使用 [傳送錯誤訊息工作編輯器] 對話方塊的 [訊息] 頁面，即可指定屬性用來將一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者自訂錯誤訊息，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個。 
   
 ### <a name="options"></a>選項。  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下 [**新增連線...>]\<** 建立來源伺服器的新連線。  
+ 在清單中選取 SMO 連線管理員，或按一下 [\<新增連線...>] 建立來源伺服器的新連線。  
   
  **DestinationConnection**  
- 在清單中選取一個 SMO 連線管理員，或按一下 [**新增連線...>]\<** ，以建立目的地伺服器的新連線。  
+ 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連線...>]，以建立目的地伺服器的新連線。  
   
  **IfObjectExists**  
  如果有相同名稱的錯誤訊息已存在於目的地伺服器上，選取工作應覆寫現有使用者自訂錯誤訊息、略過現有訊息，或是失敗。  

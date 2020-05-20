@@ -384,7 +384,7 @@ ms.locfileid: "68024898"
   
 #### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>若要判斷分割資料表的分割區資料行  
   
-1.  下列查詢會傳回資料表之分割區資料行的名稱。 `PartitionTable`第 1 課：建立 Windows Azure 儲存體物件{2}。  
+1.  下列查詢會傳回資料表之分割區資料行的名稱。 `PartitionTable`第 1 課：建立 Windows Azure 儲存體物件`PartitionTable`。  
   
     ```  
     SELECT   

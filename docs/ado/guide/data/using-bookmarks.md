@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ebf38cb9afaabef6d1af4e941cf02df1947c7b73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923615"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763049"
 ---
 # <a name="using-bookmarks"></a>使用書籤
 在**記錄集**內移動之後直接返回特定記錄，而不需要逐一查看每一筆記錄和比較值，通常會很有用。 例如，如果您嘗試使用**Find**方法搜尋記錄，但搜尋未傳回任何記錄，則會自動放在**記錄集**的任一端。 如果您的提供者支援這些專案，您可以使用書簽來標示您的位置，然後再使用**Find**方法，讓您可以回到您的位置。 書簽是一種**Variant**類型值，可唯一識別記錄**集**物件中的記錄。  

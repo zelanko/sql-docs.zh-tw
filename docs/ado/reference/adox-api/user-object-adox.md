@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - User object [ADOX]
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cf454e28e7a823eb643b5bbd92b0396fac15a028
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 55315ab64f87c6aba1c988c752c4e21811fef35c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964970"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762709"
 ---
 # <a name="user-object-adox"></a>User 物件 (ADOX)
 代表在受保護資料庫中具有存取權限的使用者帳戶。  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 716eec332690d1a6e9df1f16d67d82afc1a30985
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931867"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762099"
 ---
 # <a name="openschema-method"></a>OpenSchema 方法
 從提供者取得資料庫架構資訊。  
@@ -40,7 +40,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  *QueryType*  
  代表要執行之架構查詢類型的任何[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)值。  
   
- *指標*  
+ *準則*  
  選擇性。 每個*QueryType*選項的查詢準則約束陣列，如[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)中所列。  
   
  *SchemaID*  

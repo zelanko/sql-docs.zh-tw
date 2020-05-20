@@ -13,14 +13,14 @@ helpviewer_keywords:
 - NumericScale property [ADO], VC++ example
 - Precision property [ADO], VC++ example
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70a751db424cec07a0ac617b3620316a07936400
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 35df19bc706e1844e7f6c9e5f3004614c1df5bd2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917970"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762307"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale 和 Precision 屬性範例 (VC++)
 這個範例會使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[Precision](../../../ado/reference/ado-api/precision-property-ado.md)屬性，在***Pubs***資料庫的***折扣***資料表中顯示欄位的數值小數位數和有效位數。  

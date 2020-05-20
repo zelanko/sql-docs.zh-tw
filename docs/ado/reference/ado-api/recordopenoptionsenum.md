@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RecordOpenOptionsEnum enumeration [ADO]
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba165d51dde5224dac65467061eac0d38aeefc7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4d97a8cdf2f77f323f0897d7977a2c6945b46b87
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931429"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761896"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 指定用於開啟[記錄](../../../ado/reference/ado-api/record-object-ado.md)的選項。 這些值可能會使用或結合。  
   
-|持續性|值|描述|  
+|持續性|值|說明|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|向提供者指出與**記錄**相關聯的欄位不需要一開始就取得，但可在第一次嘗試存取欄位時抓取。 預設行為（由不存在此旗標表示）是抓取所有**記錄**物件欄位。|  
 |**adDelayFetchStream**|0x4000|向提供者指出與**記錄**相關聯的預設資料流程一開始不需要抓取。 預設行為（由不存在此旗標表示）是抓取與**Record**物件相關聯的預設資料流程。|  

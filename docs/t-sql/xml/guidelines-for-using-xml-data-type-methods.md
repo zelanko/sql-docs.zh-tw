@@ -73,7 +73,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 ### <a name="example-known-singleton"></a>範例：已知的單一性
 
-在此範例中，**nodes()** 方法會為每個 `<book>` 元素各產生一列。 在 **節點上評估的**value()`<book>` 方法會擷取 `@genre` 的值，而且因為是屬性，所以會是 singleton。
+在此範例中，**nodes()** 方法會為每個 `<book>` 元素各產生一列。 在 `<book>` 節點上評估的 **value()** 方法會擷取 `@genre` 的值，而且因為是屬性，所以會是 singleton。
 
 ```sql
 SELECT nref.value('@genre', 'varchar(max)') LastName

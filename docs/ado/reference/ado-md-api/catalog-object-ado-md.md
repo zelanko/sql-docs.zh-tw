@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADO MD]
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b791803b828852a1861e55dd8ec6ef189ea6e84b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5ef77f61703178bfe30fc4ce823d7c56be48836f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930379"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761816"
 ---
 # <a name="catalog-object-ado-md"></a>Catalog 物件 (ADO MD)
 包含多維度資料提供者（MDP）特有的多維度架構資訊（也就是 cube 和基礎維度、階層、層級和成員）。  

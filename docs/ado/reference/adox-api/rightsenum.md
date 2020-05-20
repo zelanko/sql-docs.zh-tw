@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RightsEnum enumeration [ADOX]
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6db3d1fecd8a2670a81fb239cb1a100389be21a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 343d5ec73a9720085f450cde3f35a187cf4b7302
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965276"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762809"
 ---
 # <a name="rightsenum"></a>RightsEnum
 指定物件上群組或使用者的許可權。  
   
-|持續性|值|描述|  
+|持續性|值|說明|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384（&H4000）|使用者或群組有權建立此類型的新物件。|  
 |**adRightDelete**|65536（&H 10000）|使用者或群組具有從物件刪除資料的許可權。 對於**資料表**之類的物件，使用者有權從記錄中刪除資料值。|  

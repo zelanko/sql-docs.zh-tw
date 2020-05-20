@@ -135,7 +135,7 @@ SELECT @notastring + '1'
 |**datetime**、**smalldatetime**|**日期**|  
 |設成 NULL 的任何類型|**Variant** 設為 Null|  
   
-所有單一的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值皆會轉換成單一的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值，但不包括 **binary**、**varbinary** 及 **image** 值。 這些值會在 **中轉換成一維的**Byte()[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 陣列。 此陣列的範圍為 **Byte(** 0 到 _length_ 1 **)** ，其中 *length* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**、**varbinary** 或 **image** 值中的位元組數目。
+所有單一的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值皆會轉換成單一的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值，但不包括 **binary**、**varbinary** 及 **image** 值。 這些值會在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中轉換成一維的 **Byte()** 陣列。 此陣列的範圍為 **Byte(** 0 到 _length_ 1 **)** ，其中 *length* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**、**varbinary** 或 **image** 值中的位元組數目。
   
 這些轉換是從 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 資料類型到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。
   

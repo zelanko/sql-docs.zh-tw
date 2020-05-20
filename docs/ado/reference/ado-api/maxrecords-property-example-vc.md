@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 16c837d37dc51c5f5203c1404b9c9a6bf9d8e95d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932240"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762519"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 屬性範例 (VC++)
 這個範例會使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)屬性來開啟包含***標題***資料表中10個最昂貴標題的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

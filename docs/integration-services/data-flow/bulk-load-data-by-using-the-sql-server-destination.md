@@ -36,13 +36,13 @@ ms.locfileid: "71293472"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 [資料流程]  索引標籤，然後將  **目的地從 [工具箱]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拖曳到設計介面。  
+3.  按一下 [資料流程] 索引標籤，然後將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地從 [工具箱] 拖曳到設計介面。  
   
 4.  將連接子拖曳到目的地，以便將目的地連接到資料流程中的來源或前一個轉換。  
   
 5.  按兩下目的地。  
   
-6.  在 [連線管理員]  頁面上的 [SQL Server 目的地編輯器]  中，選取現有的 OLE DB 連線管理員，或按一下 [新增]  以新建連線管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+6.  在 [連線管理員] 頁面上的 [SQL Server 目的地編輯器] 中，選取現有的 OLE DB 連線管理員，或按一下 [新增] 以新建連線管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
 7.  若要指定載入資料的資料表或檢視，請執行下列其中之一：  
   

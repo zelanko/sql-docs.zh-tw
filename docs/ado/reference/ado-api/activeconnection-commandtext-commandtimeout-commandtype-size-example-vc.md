@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Direction property [ADO], VC++ example
 - ActiveConnection property [ADO], VC++ example
 ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ff30099e951ec5b461b9f0e22c21164e7258ccc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7d22f2cb5500522ee525a778f9333be527d3f86e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921623"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762969"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 屬性範例（VC + +）
 這個範例會使用[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)、 [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)、 [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)和[Direction](../../../ado/reference/ado-api/direction-property.md)屬性來執行預存程式。  

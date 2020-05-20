@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Clear method [ADO]
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 96bd13f130966b1830d07e49633842e4154b52b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 187000a648ca2e5e28ba09f10e3dfe55fea51b1d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920068"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763129"
 ---
 # <a name="clear-method-ado"></a>Clear 方法 (ADO)
 從[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)集合中移除所有[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  
