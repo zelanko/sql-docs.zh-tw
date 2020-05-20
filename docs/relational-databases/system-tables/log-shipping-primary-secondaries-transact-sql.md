@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_primary_secondaries system table
 ms.assetid: 4b315c70-7265-4acd-b35b-a4dbb7881d98
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6bf9b02afe0312a2be1a057ee19a594c9c488675
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 61a7bd0550a5f61aa8b3c1d15687aa4ba4b012b6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095848"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82806092"
 ---
 # <a name="log_shipping_primary_secondaries-transact-sql"></a>log_shipping_primary_secondaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68095848"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**primary_id**|**uniqueidentifier**|記錄傳送組態之主要資料庫的識別碼。|  
-|**secondary_server**|**sysname**|記錄傳送設定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中之次要實例的名稱。|  
+|**secondary_server**|**sysname**|記錄傳送設定中之次要實例的名稱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。|  
 |**secondary_database**|**sysname**|記錄傳送組態中之次要資料庫的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  

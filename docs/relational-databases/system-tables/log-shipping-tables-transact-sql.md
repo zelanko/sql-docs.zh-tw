@@ -13,14 +13,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], system tables
 - system tables [SQL Server], log shipping
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f36b2f6f52b87fb844bbe9ccb5604f2c4056b15d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0631825c8d6320ca5dd868869764c2d06e00d638
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095746"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82805790"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>記錄傳送資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

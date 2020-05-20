@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHindextypes system table
 ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4c7c1bca0f400085ad55ac69b692e5a5fc1ec4c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6a448e118fcc6c6401f8e3632dc035b53209655e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67990366"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82806089"
 ---
 # <a name="ihindextypes-transact-sql"></a>IHindextypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

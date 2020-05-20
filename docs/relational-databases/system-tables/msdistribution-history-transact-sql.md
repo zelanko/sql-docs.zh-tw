@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_history system table
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1053181486dba8c8119f9160d9c08cb8d2bbe56b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 979175ee4495f885f77600d530c57800ff69e624
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907397"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82805479"
 ---
 # <a name="msdistribution_history-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

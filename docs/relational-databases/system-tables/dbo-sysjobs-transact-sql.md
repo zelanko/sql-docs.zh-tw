@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobs system table
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3ea2b3196e159b19a1baaa032c622a4cf9132402
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8fe374a81fc88b6591da8fb0303d5ea490cccac0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097606"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82806938"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

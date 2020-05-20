@@ -9,12 +9,12 @@ ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 302291ae42fa5fbb2f7dea94ccdb9f659379f5bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 668948af95fd33c57414b50aa888e185b3e4d089
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165822"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807313"
 ---
 # <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys.databases sp_cleanup_temporal_history （Transact-sql）
 

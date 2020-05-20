@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_sessions system table
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 041b8a9123781ca270c3970a04c620b691e85230
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c87de2327918c383b57e4baef7f4948d43ddd85e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106348"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82805219"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

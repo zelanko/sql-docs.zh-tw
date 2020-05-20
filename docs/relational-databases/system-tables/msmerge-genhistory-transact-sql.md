@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_genhistory system table
 ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bf9c38fe71c1282b19b947fc1771714dd138c45a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d79f0c0cc71b2295dbea6340c515afb5e2c899c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017698"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82805337"
 ---
 # <a name="msmerge_genhistory-transact-sql"></a>MSmerge_genhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

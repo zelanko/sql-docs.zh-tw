@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobservers system table
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03a4457cb5dd087639a439e9e9bb883eaf924366
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 50bc55ab39f61e8c1588770b3b1a0adec82d6f53
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70026199"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82806895"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "70026199"
 |last_outcome_ message|**nvarchar(1024)**|關聯的訊息 (如果有的話)，包含 last_run_outcome 資料行。|  
 |last_run_date|**int**|上次執行作業的日期。|  
 |last_run_time|**int**|前次執行作業的時間。|  
-|last_run_duration|**int**|此作業執行的持續時間 (以時、分和秒為單位)。 使用公式來計算：（*小時*\*10000） + （*分鐘*\*100） +*秒*。|  
+|last_run_duration|**int**|此作業執行的持續時間 (以時、分和秒為單位)。 使用公式來計算：（*小時* \* 10000） + （*分鐘* \* 100） +*秒*。|  
 
 
 ## <a name="remarks"></a>備註
