@@ -22,7 +22,7 @@ ms.locfileid: "68115664"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>維護計畫 (子計畫屬性)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 [維護計畫 (子計畫屬性)]  對話方塊可指定維護計畫子計畫的名稱、描述和排程。 按一下維護計畫 [設計]  索引標籤上的 [子計畫屬性]  ，或按兩下設計工具方格中的子計畫，來顯示這個對話方塊。  
+  使用 [維護計畫 (子計畫屬性)]  對話方塊可指定維護計畫子計畫的名稱、描述和排程。 按一下維護計畫 [設計] 索引標籤上的 [子計畫屬性]，或按兩下設計工具方格中的子計畫，來顯示這個對話方塊。  
   
 ## <a name="options"></a>選項。  
  **名稱**  

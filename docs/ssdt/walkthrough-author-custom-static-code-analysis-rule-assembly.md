@@ -33,7 +33,7 @@ ms.locfileid: "75257033"
   
 5. 驗證新的程式碼分析規則是否就定位。  
   
-**必要條件**
+**先決條件**
   
 您需要下列元件才能完成這個逐步解說：  
   
@@ -54,13 +54,13 @@ ms.locfileid: "75257033"
   
 2. 將檔案 Class1.cs 重新命名為 AvoidWaitForDelayRule.cs。  
   
-3. 在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]  。  
+3. 在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]。  
   
 4. 選取 [Framework] 索引標籤上的 [System.ComponentModel.Composition]。  
   
-5. 按一下 [瀏覽]  並巡覽至 C:\Program Files (x86)\\Microsoft SQL Server\120\SDK\Assemblies 目錄，選取 Microsoft.SqlServer.TransactSql.ScriptDom.dll，然後按一下 [確定]。  
+5. 按一下 [瀏覽] 並巡覽至 C:\Program Files (x86)\\Microsoft SQL Server\120\SDK\Assemblies 目錄，選取 Microsoft.SqlServer.TransactSql.ScriptDom.dll，然後按一下 [確定]。  
   
-6. 接下來，安裝必要的 DACFx 參考。 按一下 [瀏覽]  並巡覽至 <Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120 目錄。 選擇 Microsoft.SqlServer.Dac.dll、Microsoft.SqlServer.Dac.Extensions.dll 和 Microsoft.Data.Tools.Schema.Sql.dll 項目，按一下 [加入]  ，然後按一下 [確定]  。  
+6. 接下來，安裝必要的 DACFx 參考。 按一下 [瀏覽] 並巡覽至 <Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120 目錄。 選擇 Microsoft.SqlServer.Dac.dll、Microsoft.SqlServer.Dac.Extensions.dll 和 Microsoft.Data.Tools.Schema.Sql.dll 項目，按一下 [加入]，然後按一下 [確定]。  
   
     DACFx 二進位檔現在會安裝在 Visual Studio 安裝目錄內。 針對 Visual Studio 2012，<Visual Studio Install Dir> 通常是 C:\Program Files (x86)\\MicrosoftVisual Studio 11.0。 針對 Visual Studio 2013，這通常是 C:\Program Files (x86)\\MicrosoftVisual Studio 12.0。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "75257033"
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>定義 WaitForDelayVisitor 類別  
   
-1. 在 [方案總管]  中，選取 SampleRules 專案。  
+1. 在 [方案總管] 中，選取 SampleRules 專案。  
   
-2. 在 [專案]  功能表上，選取 [新增類別]  。 [加入新項目]  對話方塊隨即出現。  
+2. 在 [專案] 功能表上，選取 [新增類別]。 [加入新項目]  對話方塊隨即出現。  
   
-3. 在 [名稱]  文字方塊中鍵入 WaitForDelayVisitor.cs，然後按一下 [新增]  按鈕。 WaitForDelayVisitor.cs 檔案隨即新增到 [方案總管]  中的專案。  
+3. 在 [名稱] 文字方塊中鍵入 WaitForDelayVisitor.cs，然後按一下 [新增] 按鈕。 WaitForDelayVisitor.cs 檔案隨即新增到 [方案總管] 中的專案。  
   
 4. 開啟 WaitForDelayVisitor.cs 檔案並更新內容，以符合下列程式碼：  
   
@@ -122,17 +122,17 @@ ms.locfileid: "75257033"
   
     此方法會造訪模型中的 WAITFOR 陳述式，並將那些已指定 DELAY 選項的陳述式加入至 WAITFOR DELAY 陳述式的清單。 這裡參考的索引鍵類別為 [WaitForStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx)。  
   
-9. 在 [檔案]  功能表上，按一下 [儲存]  。  
+9. 在 [檔案] 功能表上，按一下 [儲存]。  
   
 第二個類別為 LocalizedExportCodeAnalysisRuleAttribute.cs。 這是架構所提供之內建 Microsoft.SqlServer.Dac.CodeAnalysis.ExportCodeAnalysisRuleAttribute 的延伸模組，並支援從資源檔讀取您的規則所使用的 DisplayName 和 Description。 如果您曾經想要以多種語言使用規則，則這是有用的類別。  
   
 ### <a name="defining-the-localizedexportcodeanalysisruleattribute-class"></a>定義 Localizedexportcodeanalysisruleattribute.cs 類別  
   
-1. 在 [方案總管]  中，選取 SampleRules 專案。  
+1. 在 [方案總管] 中，選取 SampleRules 專案。  
   
-2. 在 [專案]  功能表上，選取 [新增類別]  。 [加入新項目]  對話方塊隨即出現。  
+2. 在 [專案] 功能表上，選取 [新增類別]。 [加入新項目]  對話方塊隨即出現。  
   
-3. 在 [名稱]  文字方塊中鍵入 LocalizedExportCodeAnalysisRuleAttribute.cs，然後按一下 [新增]  按鈕。 檔案隨即新增到 [方案總管]  中的專案。  
+3. 在 [名稱] 文字方塊中鍵入 LocalizedExportCodeAnalysisRuleAttribute.cs，然後按一下 [新增] 按鈕。 檔案隨即新增到 [方案總管] 中的專案。  
   
 4. 開啟檔案並更新內容，以符合下列程式碼：  
   
@@ -240,15 +240,15 @@ ms.locfileid: "75257033"
   
 ### <a name="to-add-a-resource-file-and-three-resource-strings"></a>若要加入一個資源檔和三個資源字串  
   
-1. 在 [方案總管]  中，選取 SampleRules 專案。  
+1. 在 [方案總管] 中，選取 SampleRules 專案。  
   
-2. 在 [專案]  功能表上，選取 [新增項目]  。 [加入新項目]  對話方塊隨即出現。  
+2. 在 [專案] 功能表上，選取 [新增項目]。 [加入新項目]  對話方塊隨即出現。  
   
-3. 在 [已安裝的範本]  清單中，按一下 [一般]  。  
+3. 在 [已安裝的範本] 清單中，按一下 [一般]。  
   
-4. 在詳細資料窗格中，按一下 [資源檔]  。  
+4. 在詳細資料窗格中，按一下 [資源檔]。  
   
-5. 在 [名稱]  中，鍵入 RuleResources.resx。 資源編輯器隨即出現，沒有已定義的資源。  
+5. 在 [名稱] 中，鍵入 RuleResources.resx。 資源編輯器隨即出現，沒有已定義的資源。  
   
 6. 定義四個資源字串，如下所示：  
   
@@ -259,17 +259,17 @@ ms.locfileid: "75257033"
     |CategorySamples|SamplesCategory|  
     |CannotCreateResourceManager|無法從 {1} 建立 {0} 的 ResourceManager。|  
   
-7. 按一下 [檔案]  功能表上的 [儲存 RuleResources.resx]  。  
+7. 按一下 [檔案] 功能表上的 [儲存 RuleResources.resx]。  
   
 接下來，定義一個參考資源檔中資源的類別，Visual Studio 使用這些資源在使用者介面顯示規則的相關資訊。  
   
 ### <a name="defining-the-sampleconstants-class"></a>定義 SampleConstants 類別  
   
-1. 在 [方案總管]  中，選取 SampleRules 專案。  
+1. 在 [方案總管] 中，選取 SampleRules 專案。  
   
-2. 在 [專案]  功能表上，選取 [新增類別]  。 [加入新項目]  對話方塊隨即出現。  
+2. 在 [專案] 功能表上，選取 [新增類別]。 [加入新項目]  對話方塊隨即出現。  
   
-3. 在 [名稱]  文字方塊中鍵入 SampleRuleConstants.cs，然後按一下 [新增]  按鈕。 SampleRuleConstants.cs 檔案隨即新增到 [方案總管]  中的專案。  
+3. 在 [名稱] 文字方塊中鍵入 SampleRuleConstants.cs，然後按一下 [新增] 按鈕。 SampleRuleConstants.cs 檔案隨即新增到 [方案總管] 中的專案。  
   
 4. 開啟 SampleRuleConstants.cs 檔案，然後將下列 Using 陳述式新增到檔案：  
   
@@ -305,7 +305,7 @@ ms.locfileid: "75257033"
     }  
     ```  
   
-5. 按一下 [檔案]   > [儲存]  。  
+5. 按一下 [檔案] > [儲存]。  
   
 ## <a name="creating-the-custom-code-analysis-rule-class"></a>建立自訂程式碼分析規則類別
 
@@ -313,11 +313,11 @@ ms.locfileid: "75257033"
   
 ### <a name="creating-the-avoidwaitfordelayrule-class"></a>建立 AvoidWaitForDelayRule 類別  
   
-1. 在 [方案總管]  中，選取 SampleRules 專案。  
+1. 在 [方案總管] 中，選取 SampleRules 專案。  
   
-2. 在 [專案]  功能表上，選取 [新增類別]  。 [加入新項目]  對話方塊隨即出現。  
+2. 在 [專案] 功能表上，選取 [新增類別]。 [加入新項目]  對話方塊隨即出現。  
   
-3. 在 [名稱]  文字方塊中鍵入 AvoidWaitForDelayRule.cs，然後按一下 [新增]  。 AvoidWaitForDelayRule.cs 檔案隨即新增到 [方案總管]  中的專案。  
+3. 在 [名稱] 文字方塊中鍵入 AvoidWaitForDelayRule.cs，然後按一下 [新增]。 AvoidWaitForDelayRule.cs 檔案隨即新增到 [方案總管] 中的專案。  
   
 4. 開啟 AvoidWaitForDelayRule.cs 檔案，然後將下列 Using 陳述式新增到檔案：  
   
@@ -488,27 +488,27 @@ ms.locfileid: "75257033"
     }  
     ```  
   
-10. 按一下 [檔案]   > [儲存]  。  
+10. 按一下 [檔案] > [儲存]。  
   
 ### <a name="building-the-class-library"></a>建置類別庫  
   
-1. 在 [專案]  功能表上，按一下 [SampleRules 屬性]  。  
+1. 在 [專案] 功能表上，按一下 [SampleRules 屬性]。  
   
 2. 按一下 [ **簽署** ] 索引標籤。  
   
 3. 按一下 [ **簽署組件**]。  
   
-4. 在 [選擇強式名稱金鑰檔案]  中，按一下 **<New>** 。  
+4. 在 [選擇強式名稱金鑰檔案] 中，按一下 **<New>** 。  
   
-5. 在 [建立強式名稱金鑰]  對話方塊中的 [金鑰檔案名稱]  ，鍵入 MyRefKey。  
+5. 在 [建立強式名稱金鑰] 對話方塊中的 [金鑰檔案名稱]，鍵入 MyRefKey。  
   
 6. (選擇性) 您可以為強式名稱金鑰檔指定密碼。  
   
-7. 按一下 [確定]  。  
+7. 按一下 [確定]。  
   
 8. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
-9. 在 [建置]  功能表上，按一下 [建置方案]  。  
+9. 在 [建置] 功能表上，按一下 [建置方案]。  
   
 下一步，您必須安裝組件，以便在建置及部署 SQL Server 專案時將其載入。  
   
@@ -530,21 +530,21 @@ ms.locfileid: "75257033"
   
 1. 啟動第二個 Visual Studio 工作階段。  
   
-2. 按一下 [檔案]   > [新增]   > [專案]  。  
+2. 按一下 [檔案] > [新增] > [專案]。  
   
-3. 在 [新增專案]  對話方塊的 [已安裝的範本]  清單中，展開 **SQL Server** 節點，然後按一下 [SQL Server 資料庫專案]  。  
+3. 在 [新增專案] 對話方塊的 [已安裝的範本] 清單中，展開 **SQL Server** 節點，然後按一下 [SQL Server 資料庫專案]。  
   
-4. 在 [名稱]  文字方塊中鍵入 SampleRulesDB，然後按一下 [確定]  。  
+4. 在 [名稱] 文字方塊中鍵入 SampleRulesDB，然後按一下 [確定]。  
   
 最後，您會看到新的規則顯示在 SQL Server 專案中。 若要檢視新的 AvoidWaitForRule 程式碼分析規則：  
   
-1. 在 [方案總管]  中，選取 SampleRules 專案。  
+1. 在 [方案總管] 中，選取 SampleRules 專案。  
   
-2. 按一下 [專案]  功能表上的 [屬性]  。 隨即顯示 SampleRulesDB 屬性頁面。  
+2. 按一下 [專案] 功能表上的 [屬性]。 隨即顯示 SampleRulesDB 屬性頁面。  
   
-3. 按一下 [程式碼分析]  。 您應該看到名稱為 RuleSamples.CategorySamples 的新分類。  
+3. 按一下 [程式碼分析]。 您應該看到名稱為 RuleSamples.CategorySamples 的新分類。  
   
-4. 展開 RuleSamples.CategorySamples。 您應該看到 SR1004：避免在預存程序、觸發程序和函數中使用 WAITFOR DELAY 陳述式。  
+4. 展開 RuleSamples.CategorySamples。 您應該會看到 SR1004：避免在預存程序、觸發程序和函式中使用 WAITFOR DELAY 陳述式。  
   
 ## <a name="see-also"></a>另請參閱
 

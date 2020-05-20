@@ -24,26 +24,26 @@ ms.locfileid: "75251078"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用此頁面設定指定碼選項，以在**物件總管**之物件操作功能表的下列命令中使用：  
   
--   使用者資料表與檢視的 [編輯]  命令。  
+-   使用者資料表與檢視的 [編輯] 命令。  
   
--   使用者建立之物件的 [編寫 <object>。  
+-   使用者建立之物件的 編寫 <object>。  
   
--   使用者建立之物件的 [修改]  命令。  
+-   使用者建立之物件的 [修改] 命令。  
   
--   此頁面也可設定 [產生 SQL Server 指令碼精靈]  的編寫指令碼選項預設值。  
+-   此頁面也可設定 [產生 SQL Server 指令碼精靈] 的編寫指令碼選項預設值。  
   
 ## <a name="remarks"></a>備註  
-即使選項設定相同，[編輯] 與 [修改] 命令所產生的結果，可能會與 [編寫 <object>命令所產生的結果不同。 [編輯]  與 [修改]  命令的設計讓您可以在查詢編輯器工作階段期間，修改目前資料庫中的物件。 [編寫 <object> 指令碼為] 命令的設計則在讓您產生指令碼，供日後建立物件之用。  
+即使選項設定相同，編輯 與 修改 命令所產生的結果，可能會與 編寫 <object>命令所產生的結果不同。 [編輯] 與 [修改] 命令的設計讓您可以在查詢編輯器工作階段期間，修改目前資料庫中的物件。 [編寫 <object> 指令碼為] 命令的設計則在讓您產生指令碼，供日後建立物件之用。  
   
 ## <a name="options"></a>選項。  
 在每個選項右方的清單中選取可用的設定，即可指定指令碼選項。
 
 > [!NOTE]
-> 列出的預設設定僅適用於 [編寫整個資料庫和所有資料庫物件的指令碼]  選項，而且在使用 [選取特定資料庫物件]  選項時可能會有所不同。
+> 列出的預設設定僅適用於 [編寫整個資料庫和所有資料庫物件的指令碼] 選項，而且在使用 [選取特定資料庫物件] 選項時可能會有所不同。
   
 ### <a name="general-scripting-options"></a>一般指令碼選項  
 **分隔個別陳述式**  
-使用批次分隔符號來分隔個別 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 若要變更**查詢編輯器**的預設批次分隔符號，請選取 工具  /選項  /查詢執行  /SQL Server  /一般  /批次分隔符號  。 預設值是 False。 如需詳細資訊，請參閱 [GO (TRANSACT-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738)。  
+使用批次分隔符號來分隔個別 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 若要變更**查詢編輯器**的預設批次分隔符號，請選取 工具/選項/查詢執行/SQL Server/一般/批次分隔符號。 預設值是 False。 如需詳細資訊，請參閱 [GO (TRANSACT-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738)。  
   
 **包含描述性標頭**  
 透過將每個物件的指令碼分隔成區段，在指令碼中加入描述性註解。 預設值是 True。 如需詳細資訊，請參閱 [/ *...* / (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c)。  
@@ -62,7 +62,7 @@ ms.locfileid: "75251078"
   
 ### <a name="object-scripting-options"></a>物件指令碼選項  
 
- ：在卸除或改變前檢查給定名稱的物件是否存在，或在建立前檢查給定名稱的物件是否不存在。 如需詳細資訊，請參閱 [IF...ELSE (Transact-SQL)](https://msdn.microsoft.com/676c881f-dee1-417a-bc51-55da62398e81) and [EXISTS (Transact-SQL)](https://msdn.microsoft.com/b6510a65-ac38-4296-a3d5-640db0c27631)。
+：在卸除或改變前檢查給定名稱的物件是否存在，或在建立前檢查給定名稱的物件是否不存在。 如需詳細資訊，請參閱 [IF...ELSE (Transact-SQL)](https://msdn.microsoft.com/676c881f-dee1-417a-bc51-55da62398e81) and [EXISTS (Transact-SQL)](https://msdn.microsoft.com/b6510a65-ac38-4296-a3d5-640db0c27631)。
 
 **產生相依物件的指令碼**  
 針對執行選取物件之指令碼時所需的其他物件，產生指令碼。 預設值是 False。  

@@ -33,7 +33,7 @@ ms.locfileid: "71298640"
   
     ![SSIS-AzureSubscriptionConnectionManager](../../integration-services/connection-manager/media/ssis-azuresubscriptionconnectionmanager.png)
   
-2.  在 [Azure 訂用帳戶識別碼]  輸入可唯一識別 Azure 訂用帳戶的 Azure 訂用帳戶識別碼。  可以在 [設定]  頁面下的 [Azure 管理入口網站](https://manage.windowsazure.com)找到此值：  
+2.  在 [Azure 訂用帳戶識別碼]  輸入可唯一識別 Azure 訂用帳戶的 Azure 訂用帳戶識別碼。  可以在 [設定] 頁面下的 [Azure 管理入口網站](https://manage.windowsazure.com)找到此值：  
   
     ![SSIS-AzureSettings-SubscriptionID](../../integration-services/connection-manager/media/ssis-azuresettings-subscriptionid.png "SSIS-AzureSettings-SubscriptionID")  
   

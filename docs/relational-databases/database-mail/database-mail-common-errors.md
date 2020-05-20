@@ -88,7 +88,7 @@ ALTER DATABASE msdb SET ENABLE_BROKER ;
 GO
 ``` 
 
-Database Mail 仰賴許多內部預存程序。 為降低介面區，安裝新的 SQL Server 時會停用這些預存程序。 若要啟用這些預存程序，請使用 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 系統預存程序的 **Database Mail XP 選項**，如下例所示：
+Database Mail 仰賴許多內部預存程序。 為降低介面區，安裝新的 SQL Server 時會停用這些預存程序。 若要啟用這些預存程序，請使用 **sp_configure** 系統預存程序的 [Database Mail XP 選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)，如下例所示：
 
 ```sql
 EXEC sp_configure 'show advanced options', 1;  

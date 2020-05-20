@@ -46,15 +46,15 @@ ms.locfileid: "68054598"
 
     ![選取要排程的套件。](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image1-schedule.png)
 
-2. [新增排程]  對話方塊會隨即開啟。 在 [新增排程]  對話方塊的 [一般]  頁面上，提供新排程工作的名稱和描述。
+2. [新增排程]  對話方塊會隨即開啟。 在 [新增排程] 對話方塊的 [一般] 頁面上，提供新排程工作的名稱和描述。
 
     ![[新增排程] 對話方塊的 [一般] 頁面](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image2-new-schedule.png)
 
-3. 在 [新增排程]  對話方塊的 [套件]  頁面上，選取選擇性執行階段設定和執行階段環境。
+3. 在 [新增排程] 對話方塊的 [套件] 頁面上，選取選擇性執行階段設定和執行階段環境。
 
     ![[新增排程] 對話方塊的 [套件] 頁面](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image3-new-schedule2.png)
 
-4. 在 [新增排程]  對話方塊的 [排程]  頁面上，提供排程設定，例如頻率、一天當中的時間和持續時間。
+4. 在 [新增排程] 對話方塊的 [排程] 頁面上，提供排程設定，例如頻率、一天當中的時間和持續時間。
 
     ![[新增排程] 對話方塊的 [排程] 頁面](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image4-new-schedule3.png)
 
@@ -62,7 +62,7 @@ ms.locfileid: "68054598"
 
     ![新排程確認](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image5-confirmation.png)
 
-6. 若要自訂排程觸發程序，請從 [觸發程序]  功能表選取 [新增/編輯]  。
+6. 若要自訂排程觸發程序，請從 [觸發程序] 功能表選取 [新增/編輯]。
 
     ![選擇性編輯新管線](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image6-edit.png)
 

@@ -49,7 +49,7 @@ catalog.restore_project [ @folder_name = ] folder_name
  0 (成功)  
   
 ## <a name="result-sets"></a>結果集  
- 如果找不到 **project_name**，專案詳細資料會以 *varbinary(MAX)* 的方式傳回，當作結果集的一部分。  
+ 如果找不到 *project_name*，專案詳細資料會以 **varbinary(MAX)** 的方式傳回，當作結果集的一部分。  
   
  如果專案無法還原到指定的資料夾，就會傳回 **NO RESULT SET**。  
   

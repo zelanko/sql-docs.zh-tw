@@ -21,7 +21,7 @@ ms.locfileid: "71296304"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]  或 [選擇目的地]  頁面，連線至 **PostgreSQL** 資料來源。 
+本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至 **PostgreSQL** 資料來源。 
 
 > [!IMPORTANT]
 > 這一篇 Microsoft 文章範圍未涵蓋連線至 PostgreSQL 資料庫的詳細需求和必要條件。 本文假設您已安裝 PostgreSQL 用戶端軟體，並已成功連線至目標 PostgreSQL 資料庫。 如需詳細資訊，請參閱 PostgreSQL 資料庫管理員或 PostgreSQL 文件。
@@ -37,7 +37,7 @@ ms.locfileid: "71296304"
 或者，直接從下列 FTP 網站，下載適用於最新版 PostgreSQL ODBC 驅動程式 (psqlODBC) 的 Windows 安裝程式：[https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/)。 從 .zip 檔解壓縮檔案，並執行 .msi 檔案。
 
 ## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>使用 PostgreSQL ODBC 驅動程式 (psqlODBC) 連線至 PostgreSQL
-ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源]  或 [選擇目的地]  頁面上，將 [.NET Framework Data Provider for ODBC]  選取為資料來源。 此提供者作用為 ODBC 驅動程式的包裝函式。
+ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源] 或 [選擇目的地] 頁面上，將 [.NET Framework Data Provider for ODBC] 選取為資料來源。 此提供者作用為 ODBC 驅動程式的包裝函式。
 
 以下是您選取 .NET Framework Data Provider for ODBC 之後立即看到的一般畫面。
 
@@ -76,7 +76,7 @@ PostgreSQL 資料庫的名稱。
     ```
 
 ### <a name="enter-the-connection-string"></a>輸入連接字串
-在 [選擇資料來源]  或 [選擇目的地]  頁面上，於 [ConnectionString]  欄位中輸入連接字串，或在 [Dsn]  欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和屬性值。
+在 [選擇資料來源] 或 [選擇目的地] 頁面上，於 [ConnectionString] 欄位中輸入連接字串，或在 [Dsn] 欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和屬性值。
 
 下列範例使用此連接字串。
 

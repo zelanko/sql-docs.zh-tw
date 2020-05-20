@@ -28,7 +28,7 @@ ms.locfileid: "68051327"
 # <a name="binding-relational-data-inside-xml-data"></a>在 XML 資料中繫結關聯式資料
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  您可以針對 [xml](../../t-sql/xml/xml-data-type-methods.md) 資料類型變數或資料行指定 **xml 資料類型方法**。 例如，[query&#40;&#41; 方法 &#40;xml 資料類型&#41;](../../t-sql/xml/query-method-xml-data-type.md) 會針對 XML 執行個體來執行所指定的 XQuery。 當您以這種方式來建構 XML 時，可能會想要引用非 XML 類型資料行或 Transact-SQL 變數中的值。 此程序就稱為：在 XML 資料中繫結關聯式資料。  
+  您可以針對 **xml** 資料類型變數或資料行指定 [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)。 例如，[query&#40;&#41; 方法 &#40;xml 資料類型&#41;](../../t-sql/xml/query-method-xml-data-type.md) 會針對 XML 執行個體來執行所指定的 XQuery。 當您以這種方式來建構 XML 時，可能會想要引用非 XML 類型資料行或 Transact-SQL 變數中的值。 此程序就稱為：在 XML 資料中繫結關聯式資料。  
   
  為了在 XML 中繫結非 XML 的關聯式資料，SQL Server Database Engine 提供了下列虛擬函數：  
   

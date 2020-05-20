@@ -123,7 +123,7 @@ ms.locfileid: "79287802"
 |16|XTP_CHECKPOINT|必須執行記憶體內部 OLTP 檢查點。針對經記憶體最佳化的資料表，當交易記錄檔自上一個檢查點之後變得大於 1.5 GB (同時包含磁碟型和經記憶體最佳化的資料表) 時，就會執行自動檢查點<br /> 如需詳細資訊，請參閱[經記憶體最佳化的資料表的檢查點作業](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md)與 [記憶體內部最佳化資料表的記錄和檢查點處理] (https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
 ##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> 可以進行最低限度記錄的作業  
-「最低限度記錄」  包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄 [復原模式](../backup-restore/recovery-models-sql-server.md) 下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
+「最低限度記錄」 包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄 [復原模式](../backup-restore/recovery-models-sql-server.md) 下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
   
 > [!NOTE]
 > 記憶體最佳化資料表不支援最低限度記錄。  
@@ -133,7 +133,7 @@ ms.locfileid: "79287802"
   
  下列作業 (在完整復原模式下會完整記錄) 在簡單和大量記錄復原模式下會進行最低限度記錄：  
   
--   大量匯入作業 ([bcp](../../tools/bcp-utility.md)、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)及 [INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md))。 如需何時大量匯入至資料表會採用最低限度記錄的詳細資訊，請參閱＜ [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)＞。  
+-   大量匯入作業 ([bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 及 [INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md))。 如需何時大量匯入至資料表會採用最低限度記錄的詳細資訊，請參閱＜ [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)＞。  
   
 啟用異動複寫時，即使在大量記錄復原模式下也會完整記錄 `BULK INSERT`作業。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "79287802"
   
 -   插入或附加新資料時，在 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式中使用 `.WRITE` 子句，對大數值資料類型執行的部分更新。 請注意，更新現有值時不使用最低限度記錄。 如需有關大數值資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
   
--   將新的資料插入或附加至[nUPDATETEXT{11} 、 [nUPDATETEXT{12} 和 UPDATETEXT, nUPDATETEXT, 、 UPDATETEXT 陳述式。 請注意，更新現有值時不使用最低限度記錄。  
+-   將新的資料插入或附加至[nUPDATETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [nUPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **UPDATETEXT**, **nUPDATETEXT**, 、 **UPDATETEXT** 陳述式。 請注意，更新現有值時不使用最低限度記錄。  
   
     > [!WARNING]
     > `WRITETEXT` 與 `UPDATETEXT` 陳述式**已被取代**，所以您應該避免在新的應用程式中加以使用。  

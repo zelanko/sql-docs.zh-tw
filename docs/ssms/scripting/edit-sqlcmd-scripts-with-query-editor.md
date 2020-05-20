@@ -29,7 +29,7 @@ ms.locfileid: "75253907"
   您可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器，以 SQLCMD 指令碼撰寫和編輯查詢。 當您必須在相同的指令碼中處理 Windows 系統命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，就可以使用 SQLCMD 指令碼。  
   
 ## <a name="sqlcmd-mode"></a>SQLCMD 模式  
- 若要使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器來撰寫或編輯 SQLCMD 指令碼，您必須啟用 SQLCMD 指令碼模式。 根據預設，查詢編輯器不會啟用 SQLCMD 模式。 您可以按一下工具列上的 **SQLCMD 模式**圖示，或從 [查詢]  功能表中選取 [SQLCMD 模式]  啟用指令碼模式。  
+ 若要使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器來撰寫或編輯 SQLCMD 指令碼，您必須啟用 SQLCMD 指令碼模式。 根據預設，查詢編輯器不會啟用 SQLCMD 模式。 您可以按一下工具列上的 **SQLCMD 模式**圖示，或從 [查詢] 功能表中選取 [SQLCMD 模式]啟用指令碼模式。  
   
 > [!NOTE]  
 >  啟用 SQLCMD 模式就會關閉 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器中的 IntelliSense 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵錯工具。  

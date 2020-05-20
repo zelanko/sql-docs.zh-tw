@@ -24,7 +24,7 @@ ms.locfileid: "71298083"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  使用 [SAP BW 來源編輯器]  的 [進階]  頁面可以指定字串轉換規則和逾時期限，也可以重設特定要求識別碼的狀態。  
+  使用 [SAP BW 來源編輯器] 的 [進階] 頁面可以指定字串轉換規則和逾時期限，也可以重設特定要求識別碼的狀態。  
   
  若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 來源元件，請參閱 [SAP BW 來源](../../integration-services/data-flow/sap-bw-source.md)。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71298083"
  指定來源應該等候的秒數上限。  
   
 > [!NOTE]  
->  只有當您已經在編輯器的 [連接管理員]  頁面上，選取 [W - 等候通知]  作為 [執行模式]  的值時，這個選項才有效。 如需詳細資訊，請參閱 [SAP BW 來源編輯器 &#40;連接管理員頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)。  
+>  只有當您已經在編輯器的 [連接管理員] 頁面上，選取 [W - 等候通知] 作為 [執行模式] 的值時，這個選項才有效。 如需詳細資訊，請參閱 [SAP BW 來源編輯器 &#40;連接管理員頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)。  
   
  **要求識別碼**  
  指定您想要在按一下 [重設]  時將其狀態重設成「G - 綠色」的要求識別碼。  

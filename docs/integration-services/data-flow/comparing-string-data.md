@@ -82,7 +82,7 @@ ms.locfileid: "71293242"
   
  「排序」、「彙總」「模糊群組」和「模糊查閱」轉換包含這些用於比較資料的選項。  
   
- 「模糊群組」和「模糊查閱」轉換的 [進階編輯器]  對話方塊中會顯示 **FullySensitive** 比較旗標。 選取 [FullySensitive]  比較旗標表示會套用所有的比較選項。  
+ 「模糊群組」和「模糊查閱」轉換的 [進階編輯器] 對話方塊中會顯示 **FullySensitive** 比較旗標。 選取 [FullySensitive]  比較旗標表示會套用所有的比較選項。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)   

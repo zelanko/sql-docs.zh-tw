@@ -65,7 +65,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |[格式]|描述|  
 |------------|-----------------|  
-|String|*language_term* 會對應到 **sys.syslanguages (Transact-SQL)** 相容性檢視中的 [alias](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 資料行值。 字串必須以單引號括住，如 **'***language_term***'** 。|  
+|String|*language_term* 會對應到 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 相容性檢視中的 **alias** 資料行值。 字串必須以單引號括住，如 **'***language_term***'** 。|  
 |整數|*language_term* 是語言的 LCID。|  
 |十六進位|*language_term* 是 0x 後接 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。 如果這個值是雙位元組字集 (DBCS) 格式，SQL Server 會將它轉換成 Unicode。|  
   
