@@ -10,15 +10,15 @@ helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 530e620be1a1c0f9d457eb23712c5228a3883d45
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 418cdbb85781cd99d3febc2371ed69751d29f588
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175916"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922104"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (記憶體中最佳化)
 
@@ -26,7 +26,7 @@ ms.locfileid: "78175916"
 
 |||
 |-|-|
-|![Azure 虛擬機器](../../master-data-services/media/azure-virtual-machine.png "Azure 虛擬機器")|您要試用 SQL Server 2016 嗎？ 註冊 Microsoft Azure，然後前往**[這裡](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 啟動已安裝 SQL Server 2016 的虛擬機器。 當您完成時，可以刪除虛擬機器。|
+|![Azure 虛擬機器](../../master-data-services/media/azure-virtual-machine.png "Azure 虛擬機器")|您要試用 SQL Server 2016 嗎？ 註冊 Microsoft Azure，然後前往**[這裡](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** 啟動已安裝 SQL Server 2016 的虛擬機器。 當您完成時，可以刪除虛擬機器。|
 
  若要使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]，您可將經常存取的資料表定義為記憶體最佳化。 記憶體最佳化資料表是可完全交易且持久的，並能利用與以磁碟為基礎的資料表一樣的方式使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 來存取。 查詢可以參考記憶體最佳化資料表和以磁碟為基礎的資料表。 交易可以更新記憶體最佳化資料表和以磁碟為基礎的資料表中的資料。 僅參考記憶體最佳化資料表的預存程序可原生編譯為機器碼，以進一步提升效能。 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎的設計目的是，在衍生自高度向外擴充中間層的 OLTP 類型交易發生極高的工作階段並行處理時使用。 為達成此目的，它使用了不需閂鎖的資料結構，以及開放式、多版本的並行控制。 結果是可針對資料庫交易進行線性比例調整來產生可預期、亞毫秒低延遲及高輸送量。 實際效能獲益取決於許多因素，但通常可以獲得 5 到 20 倍的效能提升。
 
@@ -40,7 +40,7 @@ ms.locfileid: "78175916"
 |低度延遲。|要求一般資料庫解決方案無法達成的低度延遲商務交易。|排除競爭。<br /><br /> 將程式碼執行時間縮到最短。<br /><br /> 低度延遲的程式碼執行。<br /><br /> 有效率的資料擷取。|
 |工作階段狀態管理。|經常性插入、更新及點查閱。<br /><br /> 從許多無狀態的 Web 伺服器大範圍載入。|排除競爭。<br /><br /> 有效率的資料擷取。<br /><br /> 使用非持久性的資料表時，選擇性地減少或移除 IO|
 
- 如需[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]將產生最佳效能提升之案例的詳細資訊，請參閱[記憶體內部 OLTP-一般工作負載模式和遷移考慮](https://msdn.microsoft.com/library/dn673538.aspx)。
+ 如需 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 將產生最佳效能提升之案例的詳細資訊，請參閱[記憶體內部 OLTP-一般工作負載模式和遷移考慮](https://msdn.microsoft.com/library/dn673538.aspx)。
 
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 對於執行短期交易的 OLTP 效能改善效果最好。
 
@@ -66,12 +66,12 @@ ms.locfileid: "78175916"
 ## <a name="in-this-section"></a>本節內容
  本節提供下列概念的相關資訊：
 
-|主題|描述|
+|主題|說明|
 |-----------|-----------------|
 |[使用記憶體最佳化資料表的需求](memory-optimized-tables.md)|討論有關使用記憶體最佳化資料表的硬體和軟體需求以及方針。|
 |[在 VM 環境使用記憶體中的 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|涵蓋在虛擬化環境中使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 。|
 |[記憶體內部 OLTP 程式碼範例](in-memory-oltp-code-samples.md)|包含程式碼範例，示範如何建立及使用記憶體最佳化資料表。|
-|[記憶體優化資料表](memory-optimized-tables.md)|介紹記憶體最佳化的資料表。|
+|[記憶體最佳化資料表](memory-optimized-tables.md)|介紹記憶體最佳化的資料表。|
 |[記憶體優化資料表變數](../../database-engine/memory-optimized-table-variables.md)|程式碼範例，示範如何使用記憶體最佳化的資料表變數取代傳統資料表變數，以減少 tempdb 的使用量。|
 |[記憶體最佳化資料表上的索引](../../database-engine/indexes-on-memory-optimized-tables.md)|介紹記憶體最佳化索引。|
 |[原生編譯的預存程式](natively-compiled-stored-procedures.md)|介紹原生編譯的預存程序。|
@@ -87,7 +87,7 @@ ms.locfileid: "78175916"
 
 -   [Microsoft？SQL Server？？2014產品指南](https://www.microsoft.com/download/confirmation.aspx?id=39269)
 
--   [In-Memory OLTP 部落格](https://go.microsoft.com/fwlink/?LinkId=311696)
+-   [In-Memory OLTP 部落格](https://cloudblogs.microsoft.com/sqlserver/2013/06/26/sql-server-2014-in-memory-technologies-blog-series-introduction/)
 
 -   [記憶體內部 OLTP-一般工作負載模式和遷移考慮](https://msdn.microsoft.com/library/dn673538.aspx)
 
