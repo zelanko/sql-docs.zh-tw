@@ -13,14 +13,14 @@ helpviewer_keywords:
 - editing data [ADO], AddNew method
 - editing data [ADO], adding data
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1f4ec0934fbf75de18f460abae84b8117e99f452
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c3dbcdf4ab089968741a4d0b08b7b02d1324f26d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926268"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761394"
 ---
 # <a name="adding-records-to-a-recordset"></a>將記錄加入至記錄集
 使用**AddNew**方法來建立和初始化現有**記錄集中**的新記錄。 您可以使用**CursorOptionEnum**值為**adAddNew**的**支援**方法，以確認是否可以將記錄加入至目前的**記錄集**物件。

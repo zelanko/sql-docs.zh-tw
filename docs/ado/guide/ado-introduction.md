@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 42bae7f340f7f46bb5a57498b1c846f6d532ff20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 811d850127b215e69c3710e7680f655714773f57
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927132"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761696"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 總覽和優點
 ActiveX Data Objects （ADO）是一種高階、容易使用的介面，可 OLE DB。 OLE DB 是各種資料存放區的低層級高效能介面。 ADO 和 OLE DB 都可以使用關聯式（表格式）和非關聯式（階層式或資料流程）資料。

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e956ca5486485c3dde8079f6b9067a8fef7e2f3a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926626"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761636"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 總覽
 > [!IMPORTANT]
@@ -67,7 +67,7 @@ MSDAORA
 |**視窗控制代碼**|表示用來提示提供其他資訊的視窗控制碼。|
 |**地區設定識別碼**|表示唯一32位數位（例如1033），指定與使用者語言相關的喜好設定。 這些喜好設定會指出日期和時間的格式化方式、專案會依字母順序排序、比較字串等等。|
 |**OLE DB 服務**|表示指定要啟用或停用 OLE DB 服務的位元遮罩。|
-|**Prompt**|指出是否要在建立連接時提示使用者。|
+|**提示**|指出是否要在建立連接時提示使用者。|
 |**擴充屬性**|字串，包含提供者特定的延伸連接資訊。 此屬性僅適用于無法透過屬性機制描述的提供者特定連接資訊。|
 
 ## <a name="see-also"></a>另請參閱

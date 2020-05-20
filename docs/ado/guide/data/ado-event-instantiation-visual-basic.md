@@ -10,14 +10,14 @@ ms.topic: conceptual
 dev_langs:
 - VB
 ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ead713a37d4ecf8bdfecd0d6c485684d1ad0777f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dba3be9c80160dca2773c63b2ed7f7c706678625
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926073"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761314"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>ADO 事件具現化：Visual Basic
 為了處理 Microsoft® Visual Basic®中的 ADO 事件，您必須使用**WithEvents**關鍵字來宣告模組層級變數。 變數只能宣告為類別模組的一部分，而且必須在模組層級宣告。 但這並不嚴格，因為 Visual Basic **Form**物件也是類別。 處理 ADO 事件最簡單的方式，就是使用**WithEvents**宣告變數。 下列範例會處理**連接**物件的**ConnectComplete**事件：  

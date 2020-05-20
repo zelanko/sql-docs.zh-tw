@@ -8,14 +8,14 @@ ms.date: 02/15/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7dbbbf92c751093d2a7333b7ac1f76888d41d345
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 86c48e9cb3d34eb4ac499ff5f58df77367faeec0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70212337"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761354"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 事件具現化：ADO 和 WFC
 ADO for Windows Foundation 類別（ADO/WFC）是以 ADO 事件模型為基礎，並提供簡化的應用程式開發介面。 一般來說，ADO/WFC 會攔截 ADO 事件、將事件參數合併成單一事件類別，然後再呼叫您的事件處理常式。  

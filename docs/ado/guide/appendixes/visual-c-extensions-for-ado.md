@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions for ADO
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db11e86ab479ad0df4224d59c3408729fa9903ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f623bd3eb0c0c4cdde47c6fea7e7cd8af2ad0de6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926379"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761516"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Visual C++ Extensions for ADO
 採用 Visual C++ 的 ADO 程式設計的慣用方法是使用 **#import**指示詞，如[Microsoft Visual C++ ADO 程式設計](../../../ado/guide/appendixes/visual-c-ado-programming.md)中所述。 不過，舊版 ADO 隨附另一個使用 Visual C++ 的程式設計方法： Visual C++ 延伸模組。 本節會針對必須維護 Visual C++ 延伸模組程式碼的人員記載這項功能，但新的 ADO 程式碼應使用 #**import**來撰寫。

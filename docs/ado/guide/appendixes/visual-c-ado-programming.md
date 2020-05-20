@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3c7b428e1127ac2431f6e0988774315c12ebd74f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926427"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761526"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 程式設計
 ADO API 參考會使用類似于 Microsoft Visual Basic 的語法來描述 ADO 應用程式開發介面（API）的功能。 雖然目標物件是所有使用者，但 ADO 程式設計人員會採用各種語言，例如 Visual Basic、Visual C++ （不論是否使用 **#import**指示詞）和 Visual j + + （使用 ADO/WFC 類別套件）。  
@@ -64,7 +64,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- 編譯器會根據所宣告的替代語法，以及是否要讀取或寫入屬性，來產生適當的**Get**_-_、 **Put**或**PutRef**_屬性_呼叫。  
+ 編譯器會根據所宣告**Get** _-_ 的替代語法，以及是否要讀取或寫入屬性，來產生適當的 Get、 **Put**或**PutRef**_屬性_呼叫。  
   
  **__Declspec （屬性 ...）** 編譯器指示詞只能宣告**get**、 **put**或**get**和**put**函數的替代語法。 唯讀作業只有**get**宣告;僅限寫入的作業只有**put**宣告;同時為讀取和寫入的作業都有**get**和**put**宣告。  
   
@@ -84,7 +84,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- 例如，將值指派給名為**_rs_** 之**記錄集**物件的欄位，衍生自**pubs**資料庫的**作者**資料表。 使用**Item （）** 屬性存取**記錄集**物件**欄位**集合的第三個**欄位**（集合會從零編制索引，假設第三個欄位命名**_為\_au fname_**）。 然後在**Field**物件上呼叫**Value （）** 方法來指派字串值。  
+ 例如，將值指派給名為**_rs_** 之**記錄集**物件的欄位，衍生自**pubs**資料庫的**作者**資料表。 使用**Item （）** 屬性存取**記錄集**物件**欄位**集合的第三個**欄位**（集合會從零編制索引，假設第三個欄位命名為**_au \_ fname_**）。 然後在**Field**物件上呼叫**Value （）** 方法來指派字串值。  
   
  這可以使用下列四種方式以 Visual Basic 表示（最後兩個表單對 Visual Basic 而言是唯一的，而其他語言則沒有對等專案）：  
   
@@ -148,18 +148,18 @@ rs->Fields->Item["au_fname"]->Value = "value";
         long Options );  
 ```
   
- 引數會取得 **_variant_t**的參考，您可以將其編碼為連接字串或開啟連線物件的指標。 **Connection** `ActiveConnection`  
+ `ActiveConnection`引數會取得 **_variant_t**的參考，您可以將其編碼為連接字串或開啟**連接**物件的指標。  
   
- 如果您 **_variant_t**傳遞 "`DSN=pubs;uid=MyUserName;pwd=MyPassword;`" 之類的字串或指標（例如 "`(IDispatch *) pConn`"），則會隱含地建立正確的 _variant_t。  
+ 如果您 **_variant_t**傳遞 "" 之類的字串 `DSN=pubs;uid=MyUserName;pwd=MyPassword;` 或指標（例如 ""），則會隱含地建立正確的 _variant_t `(IDispatch *) pConn` 。  
   
 > [!NOTE]
 >  如果您要連接到支援 Windows 驗證的資料來源提供者，您應該在連接字串中指定**Trusted_Connection = yes**或**整合式安全性 = SSPI** ，而不是使用者識別碼和密碼資訊。  
   
- 或者，您可以明確地將包含指標的 **_variant_t**程式碼`_variant_t((IDispatch *) pConn, true)`，例如 ""。 轉型會`(IDispatch *)`使用另一個接受 IUnknown 介面指標的函式來解析不明確的。  
+ 或者，您可以明確地將包含指標的 **_variant_t**程式碼，例如 " `_variant_t((IDispatch *) pConn, true)` "。 `(IDispatch *)`轉型會使用另一個接受 IUnknown 介面指標的函式來解析不明確的。  
   
  這是很重要的，但是很少提到，ADO 是 IDispatch 介面。 每當 ADO 物件的指標必須以**Variant**形式傳遞時，該指標必須轉換成 IDispatch 介面的指標。  
   
- 最後一個案例會使用的選擇性預設值，以明確的方式，將此函式`true`的第二個布林引數編碼。 這個引數會使**Variant**函式呼叫其**AddRef**（）方法，這會在 ado 方法或屬性呼叫完成時，補償 ado 自動呼叫 **_variant_t：： Release**（）方法。  
+ 最後一個案例會使用的選擇性預設值，以明確的方式，將此函式的第二個布林引數編碼 `true` 。 這個引數會使**Variant**函式呼叫其**AddRef**（）方法，這會在 ado 方法或屬性呼叫完成時，補償 ado 自動呼叫 **_variant_t：： Release**（）方法。  
   
 ### <a name="safearray"></a>SafeArray  
  **SafeArray**是結構化資料類型，其中包含其他資料類型的陣列。 **SafeArray**稱為「*安全*」，因為它包含每個陣列維度之界限的相關資訊，並限制對這些界限內陣列元素的存取。  
@@ -187,7 +187,7 @@ _RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * Record
   
  參數（ *RecordsAffected*和*參數*）是**Variant**的指標。 *參數*是一個輸入參數，它會指定包含單一參數的**Variant**位址，或將修改所執行之命令的參數陣列。 *RecordsAffected*是一個輸出參數，可指定**Variant**的位址，其中會傳回受方法影響的資料列數目。  
   
- 在**命令**物件**Execute**方法中，將*參數*設定為`&vtMissing` （建議選項）或 null 指標（也就是**null**或零（0）），以指出未指定任何參數。 如果將*參數*設定為 null 指標，此方法會在內部替代**vtMissing**的對等，然後完成作業。  
+ 在**命令**物件**Execute**方法中，將*參數*設定為 `&vtMissing` （建議選項）或 null 指標（也就是**null**或零（0）），以指出未指定任何參數。 如果將*參數*設定為 null 指標，此方法會在內部替代**vtMissing**的對等，然後完成作業。  
   
  在所有方法中，將*RecordsAffected*設定為 null 指標，表示不應傳回受影響的記錄數目。 在此情況下，null 指標不會造成太多遺漏的參數，因為這表示方法應該捨棄受影響的記錄數目。  
   
@@ -200,7 +200,7 @@ pRecordset->NextRecordset(NULL);
 ```
   
 ## <a name="error-handling"></a>錯誤處理  
- 在 COM 中，大部分的作業會傳回 HRESULT 傳回碼，指出函數是否已順利完成。 **#Import**指示詞會針對每個「原始」方法或屬性產生包裝函式程式碼，並檢查傳回的 HRESULT。 如果 HRESULT 指出失敗，包裝函式程式碼會呼叫 _com_issue_errorex （）並以 HRESULT 傳回碼做為引數，以擲回 COM 錯誤。 在**try**-**catch**區塊中可以攔截 COM 錯誤物件。 （為了提高效率，請攔截 **_com_error**物件的參考）。  
+ 在 COM 中，大部分的作業會傳回 HRESULT 傳回碼，指出函數是否已順利完成。 **#Import**指示詞會針對每個「原始」方法或屬性產生包裝函式程式碼，並檢查傳回的 HRESULT。 如果 HRESULT 指出失敗，包裝函式程式碼會呼叫 _com_issue_errorex （）並以 HRESULT 傳回碼做為引數，以擲回 COM 錯誤。 在**try** - **catch**區塊中可以攔截 COM 錯誤物件。 （為了提高效率，請攔截 **_com_error**物件的參考）。  
   
  請記住，這些是 ADO 錯誤：這是因為 ADO 作業失敗所造成。 基礎提供者所傳回的錯誤會顯示為**連接**物件**錯誤**集合中的**錯誤**物件。  
   
@@ -216,7 +216,7 @@ pRecordset->NextRecordset(NULL);
 Dim rst As ADODB.Recordset  
 ```
   
- 子句 "`ADODB.Recordset`" 是**記錄**檔物件的 ProgID，如登錄中所定義。 **記錄**物件的新實例會宣告如下：  
+ 子句 " `ADODB.Recordset` " 是**記錄**檔物件的 ProgID，如登錄中所定義。 **記錄**物件的新實例會宣告如下：  
   
 ```vb
 Dim rst As New ADODB.Recordset  
@@ -261,9 +261,9 @@ rs.CreateInstance(__uuidof(_Recordset));
 rs->Open(...);  
 ```
   
- 請注意，在其中一種情況`.`下，會使用 "" 運算子，如同變數是類別的實例（`rs.CreateInstance`），而在另一種情況下`->`，則會使用 "" 運算子，如同變數是介面的指標（`rs->Open`）。  
+ 請注意，在其中一種情況下， `.` 會使用 "" 運算子，如同變數是類別的實例（ `rs.CreateInstance` ），而在另一種情況下，則 `->` 會使用 "" 運算子，如同變數是介面的指標（ `rs->Open` ）。  
   
- 有兩種方式可以使用一個變數，因為 "`->`" 運算子會多載，讓類別的實例行為就像介面的指標。 執行個體變數的私用類別成員包含 **_Recordset**介面的指標;"`->`" 運算子會傳回該指標;而傳回的指標會存取 **_Recordset**物件的成員。  
+ 有兩種方式可以使用一個變數，因為 " `->` " 運算子會多載，讓類別的實例行為就像介面的指標。 執行個體變數的私用類別成員包含 **_Recordset**介面的指標;" `->` " 運算子會傳回該指標，而傳回的指標會存取 **_Recordset**物件的成員。  
   
 ### <a name="coding-a-missing-parameter---string"></a>編碼遺失的參數-字串  
  當您需要在 Visual Basic 中撰寫遺漏**字串**運算元的程式碼時，您只會省略運算元。 您必須在 Visual C++ 中指定運算元。 以空字串做為值的 **_bstr_t**程式碼。  
@@ -326,7 +326,7 @@ End Sub
   
  下列 Visual C++ 範例示範如何使用搭配 **_variant_t**使用的**SafeArray** 。  
   
-#### <a name="notes"></a>注意  
+#### <a name="notes"></a>備忘稿  
  下列附注對應至程式碼範例中的批註區段。  
   
 1.  同樣地，TESTHR （）內嵌函式的定義，是要利用現有的錯誤處理機制。  
@@ -344,7 +344,7 @@ End Sub
   
      傳回的**記錄集**是由數個數據行所組成，其中的子集是條件約束資料行。 每個傳回之資料列的條件約束資料行值，必須與對應的條件約束值相同。  
   
-4.  熟悉**safearray**的人可能會驚訝，在結束之前不會呼叫**SafeArrayDestroy**（）。 事實上，在此情況下呼叫**SafeArrayDestroy**（）會導致執行時間例外狀況。 原因是當 **_variant_t**超出範圍時`vtCriteria` ，的析構函式會呼叫**VariantClear**（），這將會釋放**SafeArray**。 呼叫**SafeArrayDestroy**，而不手動清除 **_variant_t**，會導致析構函式嘗試清除不正確**SafeArray**指標。  
+4.  熟悉**safearray**的人可能會驚訝，在結束之前不會呼叫**SafeArrayDestroy**（）。 事實上，在此情況下呼叫**SafeArrayDestroy**（）會導致執行時間例外狀況。 原因是 `vtCriteria` 當 **_variant_t**超出範圍時，的析構函式會呼叫**VariantClear**（），這將會釋放**SafeArray**。 呼叫**SafeArrayDestroy**，而不手動清除 **_variant_t**，會導致析構函式嘗試清除不正確**SafeArray**指標。  
   
      如果呼叫**SafeArrayDestroy** ，程式碼看起來會像這樣：  
   
@@ -433,14 +433,14 @@ cn.Close
 End Sub  
 ```
   
- 此 Visual C++ 範例示範**Get**/**Put**/**PutRef**_屬性_。  
+ 此 Visual C++ 範例示範**Get** / **Put** / **PutRef**_屬性_。  
   
-#### <a name="notes"></a>注意  
+#### <a name="notes"></a>備忘稿  
  下列附注對應至程式碼範例中的批註區段。  
   
 1.  這個範例使用兩種形式的遺漏字串引數：明確常數、 **strMissing**，以及編譯器將用來建立可在**Open**方法範圍記憶體在之暫時 **_bstr_t**的字串。  
   
-2.  您不需要將的運算元轉換`rs->PutRefActiveConnection(cn)`為`(IDispatch *)` ，因為運算元的類型已經`(IDispatch *)`是。  
+2.  您不需要將的運算元轉換為， `rs->PutRefActiveConnection(cn)` `(IDispatch *)` 因為運算元的類型已經是 `(IDispatch *)` 。  
   
 ```cpp
 // Visual_CPP_ado_prog_2.cpp  
@@ -554,14 +554,14 @@ void main() {
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>使用將 ADO 物件指標轉換成（IDispatch *）  
  下列 Visual C++ 範例示範如何使用（IDispatch *）來轉換 ADO 物件指標。  
   
-#### <a name="notes"></a>注意  
+#### <a name="notes"></a>備忘稿  
  下列附注對應至程式碼範例中的批註區段。  
   
-1.  以明確編碼的**Variant**指定開啟的**連接**物件。 將它轉型為\*（IDispatch），以叫用正確的函式。 此外，將第二個 **_variant_t**參數明確設定為預設值**true**，因此當**記錄集：： Open**作業結束時，物件參考計數會是正確的。  
+1.  以明確編碼的**Variant**指定開啟的**連接**物件。 將它轉型為（IDispatch），以叫用 \* 正確的函式。 此外，將第二個 **_variant_t**參數明確設定為預設值**true**，因此當**記錄集：： Open**作業結束時，物件參考計數會是正確的。  
   
-2.  運算式`(_bstr_t)`不是轉換，而是 **_variant_t**運算子，會從**Value**傳回的**variant**中解壓縮 **_bstr_t**的字串。  
+2.  運算式不是 `(_bstr_t)` 轉換，而是 **_variant_t**運算子，會從**Value**傳回的**variant**中解壓縮 **_bstr_t**的字串。  
   
- 運算式`(char*)`不是轉換，而是 **_bstr_t**運算子，會將指標解壓縮到 **_bstr_t**物件中的封裝字串。  
+ 運算式不是 `(char*)` 轉換，而是 **_bstr_t**運算子，會將指標解壓縮到 **_bstr_t**物件中的封裝字串。  
   
  這段程式碼會示範 **_variant_t**和 **_bstr_t**運算子的一些有用行為。  
   

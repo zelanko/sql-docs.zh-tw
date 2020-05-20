@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5c60567da677564c168f0601625686bdfb8b3d67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3ad2ebe195bdcdf97548f040f3ef7dcc1fb1a38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926592"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761606"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 遠端處理提供者總覽
 Microsoft OLE DB 遠端處理提供者可讓用戶端電腦上的本機使用者叫用遠端電腦上的資料提供者。 如果您是遠端電腦上的本機使用者，請指定遠端電腦的資料提供者參數。 然後指定遠端處理提供者用來存取遠端電腦的參數。 然後您就可以存取遠端電腦，就像是本機使用者一樣。
@@ -44,7 +44,7 @@ Microsoft OLE DB 遠端處理提供者可讓用戶端電腦上的本機使用者
 ## <a name="dynamic-properties"></a>動態屬性
  叫用此服務提供者時，會將下列動態屬性加入至[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的[properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合中。
 
-|動態屬性名稱|描述|
+|動態屬性名稱|說明|
 |---------------------------|-----------------|
 |**DFMode**|表示 DataFactory 模式。 字串，指定伺服器上所需的[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件版本。 請在開啟連接之前設定此屬性，以要求特定版本的**DataFactory**。 如果要求的版本無法使用，則會嘗試使用先前的版本。 如果沒有先前的版本，將會發生錯誤。 如果**DFMode**小於可用的版本，就會發生錯誤。 這個屬性在建立連接之後是唯讀的。<br /><br /> 可以是下列其中一個有效的字串值：<br /><br /> -"25"-版本2.5 （預設值）<br />-"21"-版本2。1<br />-"20"-版本2。0<br />-"15"-版本1。5|
 |**命令屬性**|指出將加入 MS 遠端提供者傳送至伺服器之命令（資料列集）屬性字串的值。 這個字串的預設值為 vt_empty。|

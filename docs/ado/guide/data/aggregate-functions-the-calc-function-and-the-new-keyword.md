@@ -13,21 +13,21 @@ helpviewer_keywords:
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7bda85bae42b294fa63c67adfe51d8c60c5b56af
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926002"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761274"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>彙總函式、CALC 函式和 NEW 關鍵字
 資料成形支援下列函數。 指派給包含要操作之資料行之章節的名稱是*章節別名*。  
   
  章節別名可以是完整格式，由每個章節的資料行名稱組成，其中包含資料行*名稱，* 並以句號分隔。 例如，如果父系章節 chap1 包含一個子章節 chap2，其中具有金額資料行 amt，則限定名稱會是 chap1. chap2 amt。  
   
-|彙總函式|描述|  
+|彙總函式|說明|  
 |-------------------------|-----------------|  
 |總和（*章節-別名）*。*資料行名稱*）|計算指定之資料行中所有值的總和。|  
 |AVG （*章節-別名）*。*資料行名稱*）|計算指定資料行中所有值的平均值。|  
@@ -37,11 +37,11 @@ ms.locfileid: "67926002"
 |STDEV （*章節-別名*。*資料行名稱*）|計算指定之資料行中的標準差。|  
 |任何（*章節-別名*。*資料行名稱*）|指定之資料行的值。 只有當章節中的所有資料列的資料行值都相同時，ANY 才會有可預測的值。<br /><br /> **注意**如果資料行在章節中的所有資料列都未包含相同的值，則 SHAPE 命令會任意傳回其中一個值，以做為 ANY 函數的值。|  
   
-|計算運算式|描述|  
+|計算運算式|說明|  
 |---------------------------|-----------------|  
 |CALC （*expression*）|計算任意運算式，但僅限於包含 CALC 函數的**記錄集**資料列。 允許使用這些[Visual Basic for Applications （VBA）函數](../../../ado/guide/data/visual-basic-for-applications-functions.md)的任何運算式。|  
   
-|NEW 關鍵字|描述|  
+|NEW 關鍵字|說明|  
 |-----------------|-----------------|  
 |新*的欄位類型*[（*寬度*&#124;*小*數位數 &#124;*精確度*&#124;*錯誤*[，*調整*&#124;*錯誤*]）]|將指定類型的空白資料行加入至**記錄集**。|  
   

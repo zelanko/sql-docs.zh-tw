@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, VBScript
 - VBScript [ADO]
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f242a3596735a4bc43256d05b87100e71295a3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2029b6d661e520a4ed18631c611ed9e283e4aa7c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926432"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761536"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript ADO 程式設計
 ## <a name="creating-an-ado-project"></a>建立 ADO 專案  
@@ -81,6 +81,6 @@ Response.Write("Success!")
   
 -   VBScript 僅支援 Variant 資料類型，它可以保存不同類型的資料。 您可以將所需的資料儲存在 Variant 資料類型中，而且資料會因為 VBScript 所執行的轉換而適當地運作。 它會辨識 ADO 所需的類型，並據以轉換變數中的值。  
   
--   您不能**在 VBScript 中\<使用 on error goto 標籤>** 。  
+-   您不能在 VBScript 中使用**on error goto \< 標籤>** 。  
   
 -   VBScript 支援一些內建的 Visual Basic 功能，例如**Msgbox**、 **Date**和**IsNumeric**。 不過，因為 VBScript 是 Visual Basic 的子集，所以不支援所有的內建函數。 例如，VBScript 不支援**Format**函式和 file i/o 函數。

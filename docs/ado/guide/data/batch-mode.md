@@ -12,14 +12,14 @@ helpviewer_keywords:
 - batch mode [ADO]
 - updating data [ADO], batch mode
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7e4ce2e8928ac7b4225ae58b25c6610c64832f7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925959"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761244"
 ---
 # <a name="batch-mode"></a>批次模式
 當**LockType**屬性設定為**adLockBatchOptimistic** ，且提供者支援批次更新時，批次模式就會生效。 某些鎖定類型設定無法使用，視游標位置而定。 例如，當**CursorLocation**設定為**adUseClient**時，無法使用封閉式鎖定類型。 相反地，當資料指標位置在伺服器上時，提供者無法支援批次開放式鎖定。 您應該只使用索引鍵集或靜態資料指標來進行批次更新。  

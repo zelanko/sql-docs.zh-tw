@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADO, using with Visual C++
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 65a015888223fc94f5bf427b1d0b560d5e888ac5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 952bfcc5359d088e9e3e2557b990f803a4c3aafd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926537"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761576"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>搭配使用 ADO 與 Microsoft Visual C++
 如需搭配 Visual C++ 使用 ADO 的詳細資訊，請參閱下列各節：  

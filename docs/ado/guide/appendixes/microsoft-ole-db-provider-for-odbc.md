@@ -11,14 +11,14 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b84ce6679071cc3ea90ce23b4dcd9f8e1894bb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926631"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761626"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 總覽
 對 ADO 或 RDS 程式設計人員來說，理想的世界就是每個資料來源都會公開一個 OLE DB 介面，讓 ADO 可以直接呼叫資料來源。 雖然越來越多的資料庫廠商正在執行 OLE DB 介面，但有些資料來源尚未以這種方式公開。 不過，現今使用的大部分 DBMS 系統都可以透過 ODBC 來存取。
@@ -92,7 +92,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>提供者特定的連接屬性
  ODBC 的 OLE DB 提供者會將數個屬性加入至**Connection**物件的[properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合中。 下表列出這些屬性，並在括弧中加上對應的 OLE DB 屬性名稱。
 
-|屬性名稱|描述|
+|屬性名稱|說明|
 |-------------------|-----------------|
 |可存取的程式（KAGPROP_ACCESSIBLEPROCEDURES）|指出使用者是否有預存程式的存取權。|
 |可存取的資料表（KAGPROP_ACCESSIBLETABLES）|指出使用者是否擁有對資料庫資料表執行 SELECT 語句的許可權。|
@@ -119,7 +119,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>提供者特定的記錄集和命令屬性
  ODBC 的 OLE DB 提供者會將數個屬性加入至**記錄集**和**命令**物件的**properties**集合中。 下表列出這些屬性，並在括弧中加上對應的 OLE DB 屬性名稱。
 
-|屬性名稱|描述|
+|屬性名稱|說明|
 |-------------------|-----------------|
 |以查詢為基礎的更新/刪除/插入（KAGPROP_QUERYBASEDUPDATES）|指出是否可以使用 SQL 查詢來執行更新、刪除和插入。|
 |ODBC 並行類型（KAGPROP_CONCURRENCY）|表示用來減少兩個使用者同時嘗試從資料來源存取相同資料所造成潛在問題的方法。|
@@ -178,7 +178,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|無法使用|無法使用|讀取/寫入|讀取/寫入|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|唯讀|唯讀|唯讀|唯讀|
-|[書簽](../../../ado/reference/ado-api/bookmark-property-ado.md)|無法使用|無法使用|讀取/寫入|讀取/寫入|
+|[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)|無法使用|無法使用|讀取/寫入|讀取/寫入|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
@@ -260,7 +260,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |最大資料列大小|DBPROP_MAXROWSIZE|
 |最大資料列大小包含 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |SELECT 中的資料表上限|DBPROP_MAXTABLESINSELECT|
-|[模式]|DBPROP_INIT_MODE|
+|模式|DBPROP_INIT_MODE|
 |多個參數集|DBPROP_MULTIPLEPARAMSETS|
 |多個結果|DBPROP_MULTIPLERESULTS|
 |多個儲存物件|DBPROP_MULTIPLESTORAGEOBJECTS|

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e73b2ca96cc5e7eb7683b72aa19fd59a318b8596
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2eacfa8122589dbf594040f3279d466ef9c113cd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926350"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761486"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>存取階層式記錄集中的資料列（範例）
 下列範例顯示存取階層式[記錄集中](../../../ado/reference/ado-api/recordset-object-ado.md)的資料列所需的步驟：

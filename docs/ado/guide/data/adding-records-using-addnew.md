@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 36f6bad9a8f0d74a81d02ce64c78d7a91ddc0fa8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abdd3bf7e23c74624a7eaa70c102112593fd3648
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926287"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761404"
 ---
 # <a name="adding-records-using-addnew-method"></a>使用 AddNew 方法加入記錄
 這是**AddNew**方法的基本語法：

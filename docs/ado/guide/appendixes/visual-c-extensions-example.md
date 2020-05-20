@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions example
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d3517f40b15081ca2ee4621d07455cc13bb577d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d48315598c17b9462e9a42de58bd54313a4fd794
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926396"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761506"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ Extensions 範例
 此程式會顯示如何從欄位中抓取值，並將其轉換成 C/c + + 變數。  
   
- 這個範例也會利用「智慧型指標」，它會自動處理`QueryInterface` **IADORecordBinding**介面呼叫和參考計數的 COM 特定詳細資料。  
+ 這個範例也會利用「智慧型指標」，它會自動處理 `QueryInterface` **IADORecordBinding**介面呼叫和參考計數的 COM 特定詳細資料。  
   
  如果沒有智慧型指標，您可以撰寫程式碼：  
   
@@ -38,7 +38,7 @@ TESTHR(pRs->QueryInterface(
 if (picRs) picRs->Release();  
 ```  
   
- 使用智慧型指標，您可以使用`IADORecordBindingPtr`下列語句從`IADORecordBinding`介面衍生型別：  
+ 使用智慧型指標，您可以 `IADORecordBindingPtr` 使用下列語句從介面衍生型別 `IADORecordBinding` ：  
   
 ```cpp
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
@@ -50,7 +50,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- 由於 Visual C++ 延伸模組是由**Recordset**物件所執行，因此智慧型指標`picRs`的函式會接受 _`RecordsetPtr`指標。 `pRs` 此函式`QueryInterface`會`pRs`使用來呼叫`IADORecordBinding`來尋找介面。  
+ 由於 Visual C++ 延伸模組是由**Recordset**物件所執行，因此智慧型指標的函式會 `picRs` 接受 _ `RecordsetPtr` 指標 `pRs` 。 此函式會 `QueryInterface` 使用 `pRs` 來呼叫來尋找 `IADORecordBinding` 介面。  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  

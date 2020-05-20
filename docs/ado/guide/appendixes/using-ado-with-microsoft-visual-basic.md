@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual Basic
 - Visual Basic [ADO]
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22286cbe571420475cf273ca377d16e79610fc3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e86bc925313a24a390dffc8f4e2d9e91e4db1c61
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926561"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761586"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>搭配使用 ADO 與 Microsoft Visual Basic 和 Visual Basic for Applications
 無論您使用 Visual Basic 或 Visual Basic for Applications，設定 ADO 專案和撰寫 ADO 程式碼都很類似。 本主題說明如何搭配 Visual Basic 和 Visual Basic for Applications 使用 ADO，並注意任何差異。
@@ -80,7 +80,7 @@ Set conn = New ADODB.Connection
 ```
 
 > [!NOTE]
->  如果您已正確參考專案中的`ADODB` ADO 程式庫，則不需要明確地使用 progid 語句搭配**Dim**語句。 不過，使用它可確保您不會有與其他程式庫的命名衝突。
+>  `ADODB`如果您已正確參考專案中的 ADO 程式庫，則不需要明確地使用 progid 語句搭配**Dim**語句。 不過，使用它可確保您不會有與其他程式庫的命名衝突。
 
 > [!NOTE]
 >  例如，如果您在相同的專案中同時包含 ADO 和 DAO 的參考，您應該包含辨識符號來指定具現化**記錄集**物件時所要使用的物件模型，如下列程式碼所示：

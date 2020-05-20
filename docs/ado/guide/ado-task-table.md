@@ -11,19 +11,19 @@ helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 79ba71c38f6ccff4e5a55471839df09252344c68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cfae068fdac58f7e6e6d1320b301aa9c52701dd4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927021"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761666"
 ---
 # <a name="ado-programming-task-table"></a>ADO 程式設計工作表
 下表列出 ADO 程式設計*人員指南*中包含的程式設計工作，並提供每項工作的參考。 這些參考可以是文字描述或程式碼範例，您可以在其中找到執行此工作之 ADO 功能的相關資訊。
 
-|ADO 工作|參考|
+|ADO 工作|參考資料|
 |--------------|----------------|
 |連接到資料提供者|[連接到資料來源](../../ado/guide/data/connecting-to-data-sources.md)|
 |執行命令或呼叫預存程式|[準備和執行命令](../../ado/guide/data/preparing-and-executing-commands.md)|
@@ -35,7 +35,7 @@ ms.locfileid: "67927021"
 |修改資料和變更值|[編輯現有的記錄](../../ado/guide/data/editing-existing-records.md)|
 |加入新資料|[新增記錄](../../ado/guide/data/adding-records.md)|
 |刪除或移除資料|[使用 Delete 方法刪除記錄](../../ado/guide/data/deleting-records-using-the-delete-method.md)|
-|將變更張貼至資料來源|[更新資料](../../ado/guide/data/updating-data.md)|
+|將變更張貼至資料來源|[正在更新資料](../../ado/guide/data/updating-data.md)|
 |開始、認可和回復交易|[交易處理](../../ado/guide/data/transaction-processing.md)|
 |將記錄儲存至檔案（XML 或二進位）|[保存資料](../../ado/guide/data/persisting-data.md)|
 |處理錯誤|[ADO 錯誤](../../ado/guide/data/ado-errors.md)|

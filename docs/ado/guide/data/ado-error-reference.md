@@ -12,19 +12,19 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 774a1c17f579c9274b700e4e1fea682cc462ed29
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926249"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761384"
 ---
 # <a name="ado-errors"></a>ADO 錯誤
 **ErrorValueEnum**常數描述 ADO 錯誤值。 如需這些列舉常數的完整清單（包括值），請參閱[附錄 B： ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本節將檢查一些較有趣的錯誤，並說明一些可能引發問題的特定情況，或是解決問題的解決方案。 **ErrorValueEnum**常數和簡短的正十進位數都會列出。
 
-|Number|ErrorValueEnum 常數|描述/可能的原因|
+|數字|ErrorValueEnum 常數|描述/可能的原因|
 |------------|-----------------------------|----------------------------------|
 |**3000**|**adErrProviderFailed**|提供者無法執行要求的作業。|
 |**3001**|**adErrInvalidArgument**|引數的類型錯誤、超出可接受的範圍，或是彼此衝突。 此錯誤通常是因為 SQL SELECT 語句中的印刷錯誤所造成。 例如，拼錯的功能變數名稱或資料表名稱可能會產生此錯誤。 當 SELECT 語句中名為的欄位或資料表不存在於資料存放區時，也可能會發生此錯誤。|
@@ -63,7 +63,7 @@ ms.locfileid: "67926249"
 |**3724**|**adErrCantConvertvalue**|因為符號不相符或資料溢位以外的原因，所以無法轉換資料值。 例如，轉換會有截斷的資料。|
 |**3725**|**adErrCantCreate**|因為欄位資料類型未知，或提供者的資源不足，無法執行作業，所以無法設定或抓取資料值。|
 |**3726**|**adErrColumnNotOnThisRow**|記錄不包含此欄位。 指定了不正確的功能變數名稱，或參考了目前記錄之**Fields**集合中的欄位。|
-|**3727**|**adErrURLDoesNotExist**|來源 URL 或目的地 URL 的父系不存在。 來源或目的地 URL 中有打字錯誤。 您可能會`https://mysite/photo/myphoto.jpg`想要改為實際`https://mysite/photos/myphoto.jpg`擁有。 父 URL 中的印刷錯誤（在此案例中為*相片*而不是*相片*）導致錯誤。|
+|**3727**|**adErrURLDoesNotExist**|來源 URL 或目的地 URL 的父系不存在。 來源或目的地 URL 中有打字錯誤。 您可能會想要 `https://mysite/photo/myphoto.jpg` 改為實際擁有 `https://mysite/photos/myphoto.jpg` 。 父 URL 中的印刷錯誤（在此案例中為*相片*而不是*相片*）導致錯誤。|
 |**3728**|**adErrTreePermissionDenied**|許可權不足以存取樹狀目錄或子樹。 連接字串中所指定的使用者沒有適當的許可權。|
 |**3729**|**adErrInvalidURL**|URL 包含不正確字元。 請確定已正確輸入 URL。 URL 會遵循向目前提供者註冊的配置（例如，針對 HTTP 註冊網際網路發行提供者）。|
 |**3730**|**adErrResourceLocked**|由指定 URL 所表示的物件已由一或多個其他進程鎖定。 請等候進程完成，然後再次嘗試操作。 您嘗試存取的物件已由另一位使用者或您應用程式中的另一個進程鎖定。 這最有可能發生在多使用者的環境中。|

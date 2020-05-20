@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2c5b4e7a3bc960882830fa447f58f74e6728a559
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926381"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761496"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ Extensions 標題
 下列標頭**icrsint**詳述的介面，可讓用戶端將**記錄集**的欄位，抓取至衍生自**CADORecordBinding**的類別中所定義的變數。 您必須為您想要存取的每個欄位指定 ADO 系結宏。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Java (Microsoft SDK for)
 - Microsoft SDK for Java [ADO]
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0e6c5f2eb5ad792141e77122ff9e132d97f62ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926461"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761556"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>使用 Microsoft SDK for Java
 
@@ -29,7 +29,7 @@ Microsoft SDK for JAVA 是 Microsoft Internet Explorer 環境的開發人員套�
   
  Jactivex 公用程式會從類型程式庫產生類別，但只能在命令列上叫用。 這項功能並未與 Visual c + + 開發環境整合。 不同于 JAVA 類型程式庫 Wizard 所產生的類別，您可以逐步執行 SDK 所建立的類別包裝函式。 這適用于偵錯工具代碼使用 ADO 包裝函式類別的方式。  
   
- 此機制會讀取 ADO 類型程式庫，並產生您可以在應用程式中具現化的類別。 它會在下列位置產生這些類別： \\<windows 目錄\>\JAVA\trustlib\msado15。  
+ 此機制會讀取 ADO 類型程式庫，並產生您可以在應用程式中具現化的類別。 它會在下列位置產生這些類別： \\<windows 目錄 \> \JAVA\trustlib\msado15。  
   
  使用適用于 JAVA 的 Microsoft SDK，在 JAVA 中建立 ADO 應用程式基本上完全相同，從原始程式碼的觀點，到使用 JAVA 類型程式庫 Wizard。 如需範例程式碼，請參閱[ADO JAVA 類別包裝](../../../ado/guide/appendixes/ado-java-class-wrappers.md)函式。 唯一的真正差異在於，您會在第一個位置產生包裝函式類別，如下列步驟所示。  
   

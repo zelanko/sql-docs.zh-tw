@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB simple provider
 - OLE DB simple provider [ADO]
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6e36648fe42024502316d65e3cf27412b907ffc2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926600"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761596"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 簡單提供者總覽
 Microsoft OLE DB Simple Provider （OSP）可讓 ADO 存取已使用[OLE DB Simple provider （osp）工具](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)組撰寫提供者的任何資料。 簡單提供者的目的是要存取只需要基本 OLE DB 支援的資料來源，例如記憶體內部陣列或 XML 檔。

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Groups collection [ADOX], members
 ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3e3b7147593cc6d6f1654ccdb0f9d362bd7b421
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 424a57e47b9e9f788126680a2090071f517abeeb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966160"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761716"
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Groups 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

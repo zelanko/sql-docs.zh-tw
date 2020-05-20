@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e260ba5e9bfa4cc0d55187dff09072dd5842828
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0e0fb8e559dcf98f39b5f3783e3e43d5d10671cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927019"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761656"
 ---
 # <a name="products-and-technologies-table"></a>產品和技術資料表
 下表列出 ADO 程式設計人員指南中所討論的 Microsoft 產品、工具和技術。 它會盡可能提供連結至指南中的相關主題。
 
-|Microsoft 產品或技術|參考|
+|Microsoft 產品或技術|參考資料|
 |-------------------------------------|----------------|
 |Access/Jet|[使用資料錄集](../../ado/guide/data/working-with-recordsets.md)<br /><br /> [ADOX 基礎](../../ado/guide/extensions/adox-fundamentals.md)<br /><br /> [適用于 Microsoft Jet 的 microsoft OLE DB 提供者](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Active Directory 服務介面 (ADSI)|[Microsoft OLE DB Provider for Microsoft Active Directory 服務](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|

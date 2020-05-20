@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32f1013ef0aa9c8f02e19ec98234418480bc5f22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 998bda7d2c940b16f298fdfe436a2d60b27f09ba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925869"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761214"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>使用命令呼叫預存程序
 您可以使用命令來呼叫預存程式。 本主題結尾的程式碼範例會參考 Northwind 範例資料庫中的預存程式，稱為 CustOrdersOrders，其定義如下。  
@@ -40,7 +40,7 @@ ORDER BY OrderID
   
  下列程式碼範例與[命令物件參數](../../../ado/guide/data/command-object-parameters.md)中的程式碼之間有其他重要的差異，其中參數是以手動方式輸入。 首先，此程式碼不會將**備**妥的屬性設定為**True** ，因為它是一個 SQL Server 的預存程式，而且是由定義先行編譯。 其次，在第二個範例中，**命令**物件的**CommandType**屬性已變更為**adCmdStoredProc** ，以通知 ADO 該命令為預存程式。  
   
- 最後，在第二個範例中，設定值時，參數必須參考索引，因為您在設計階段可能不知道參數的名稱。 如果您知道參數的名稱，您可以將**Command**物件的 new [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)屬性設為 True，並參考屬性的名稱。 您可能會想知道預存程式（@CustomerID）中所提及第一個參數的位置為何是1，而`objCmd(1) = "ALFKI"`不是0（）。 這是因為參數0包含來自 SQL Server 預存程式的傳回值。  
+ 最後，在第二個範例中，設定值時，參數必須參考索引，因為您在設計階段可能不知道參數的名稱。 如果您知道參數的名稱，您可以將**Command**物件的 new [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)屬性設為 True，並參考屬性的名稱。 您可能會想知道預存程式（）中所提及第一個參數的位置為何 @CustomerID 是1，而不是0（ `objCmd(1) = "ALFKI"` ）。 這是因為參數0包含來自 SQL Server 預存程式的傳回值。  
   
 ```  
 'BeginAutoParamCmd  

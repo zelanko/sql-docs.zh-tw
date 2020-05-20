@@ -12,14 +12,14 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926368"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761476"
 ---
 # <a name="absolute-and-relative-urls"></a>絕對和相對 URL
 URL 會指定儲存在本機或網路電腦上之目標的位置。 目標可以是檔案、目錄、HTML 網頁、影像、程式等等。  
@@ -41,7 +41,7 @@ URL 會指定儲存在本機或網路電腦上之目標的位置。 目標可以
  *path*  
  指定通向目標的目錄順序。 如果省略*資源*，目標就是*path*中的最後一個目錄。  
   
- *resource*  
+ *資源*  
  如果包含，*資源*就是目標，而通常是檔案的名稱。 它可能是簡單的檔案 *，* 其中包含單一二進位位元組資料流程或*結構化檔，* 其中包含一或多個儲存體和位元組資料流程。  
   
 ## <a name="url-scheme-registration"></a>URL 配置註冊  
@@ -70,13 +70,13 @@ URL 會指定儲存在本機或網路電腦上之目標的位置。 目標可以
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
- 連接字串中的絕對 URL 會指定伺服器（`YourServer`）和路徑（`Winnt`）。 此 URL 也會定義內容。  
+ 連接字串中的絕對 URL 會指定伺服器（ `YourServer` ）和路徑（ `Winnt` ）。 此 URL 也會定義內容。  
   
- 命令文字中的相對 URL 會使用絕對 URL 做為起點，並指定路徑的其餘部分（`system32`）和要開啟的檔案（`Readme25.txt`）。  
+ 命令文字中的相對 URL 會使用絕對 URL 做為起點，並指定路徑的其餘部分（ `system32` ）和要開啟的檔案（ `Readme25.txt` ）。  
   
- [選項] 欄位`adCmdTableDirect`（）表示命令類型是相對 URL。  
+ [選項] 欄位（ `adCmdTableDirect` ）表示命令類型是相對 URL。  
   
- 另一個範例是，下列程式碼會開啟`Winnt`目錄內容的**記錄集**：  
+ 另一個範例是，下列程式碼會開啟目錄內容的**記錄集** `Winnt` ：  
   
 ```  
 recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  

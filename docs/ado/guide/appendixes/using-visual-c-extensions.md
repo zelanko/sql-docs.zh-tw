@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a051329efa32a155cc368d3d01c38b40593b8898
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926456"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761546"
 ---
 # <a name="visual-c-extensions"></a>Visual C++ 延伸模組
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 介面
@@ -110,7 +110,7 @@ Update(CADORecordBinding *binding)
 ### <a name="end-binding-entries"></a>結束系結專案
  **END_ADO_BINDING**()
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*類別*|定義系結專案和 C/c + + 變數的類別。|
 |*序數*|與 C/c + + 變數對應之**記錄集**欄位的序數（從1開始計算）。|
@@ -120,7 +120,7 @@ Update(CADORecordBinding *binding)
 |*狀態*|變數的名稱，指出*緩衝區*的內容是否有效，以及是否成功地將欄位轉換為*DataType* 。<br /><br /> 這個變數的兩個最重要的值是**adFldOK**，這表示轉換成功;和**adFldNull**，這表示欄位的值會是 VT_Null 類型的變體，而不只是空的。<br /><br /> 下表「狀態值」中會列出*狀態*的可能值。|
 |*修改*|布林值旗標;若為 TRUE，表示可以使用包含在*Buffer*中的值來更新對應的**記錄集**欄位。<br /><br /> 將 [布林值*修改*] 參數設定為 [TRUE]，讓 ADO 更新系結欄位，如果您想要檢查欄位但不加以變更，則為 FALSE。|
 |*有效位數*|數值變數中可以表示的位數。|
-|*調整*|數值變數中的小數位數。|
+|*縮放比例*|數值變數中的小數位數。|
 |*長度*|四個位元組的變數名稱，其中將包含*緩衝區*中的實際資料長度。|
 
 ## <a name="status-values"></a>狀態值
@@ -128,7 +128,7 @@ Update(CADORecordBinding *binding)
 
  設定資料時， *Status*可能會設定為**adFldNull** ，以指示**記錄集**欄位應設定為 null。
 
-|持續性|值|描述|
+|持續性|值|說明|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|傳回非 null 的域值。|
 |**adFldBadAccessor**|1|系結無效。|
