@@ -59,7 +59,7 @@ CLR 傳回類型：**SqlGeography**
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. 在 CircularString 執行個體上使用不同的容錯值  
-下列範例示範設定容錯如何影響從 `LineString` 執行個體傳回的 `CircularString` 執行個體：  
+下列範例示範設定容錯如何影響從 `CircularString` 執行個體傳回的 `LineString` 執行個體：  
   
 ```
 DECLARE @g geography;  
@@ -86,7 +86,7 @@ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
 ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 為叫用 CurvePolygon 執行個體，將 relative 設為 true  
-下列範例使用 `CurvePolygon` 執行個體，在 `CurveToLineWithTolerance()`relative*設為 true 時呼叫*：  
+下列範例使用 `CurvePolygon` 執行個體，在 *relative* 設為 true 時呼叫 `CurveToLineWithTolerance()`：  
   
 ```
 DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  

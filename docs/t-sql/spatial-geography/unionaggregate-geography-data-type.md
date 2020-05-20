@@ -52,7 +52,7 @@ UnionAggregate ( geography_operand )
 >  如果所有輸入的值都為 **null**，此方法就會傳回 **null**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會在城市內的一組 `UnionAggregate`geography**位置點上執行**。  
+ 下列範例會在城市內的一組 **geography** 位置點上執行 `UnionAggregate`。  
   
  ```
  USE AdventureWorks2012  

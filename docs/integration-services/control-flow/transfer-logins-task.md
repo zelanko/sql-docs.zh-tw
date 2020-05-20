@@ -99,17 +99,17 @@ ms.locfileid: "71293856"
  輸入傳送登入工作的描述。  
   
 ## <a name="transfer-logins-task-editor-logins-page"></a>傳送登入工作編輯器 (登入頁面)
-  使用 [傳送登入工作編輯器]  對話方塊的 [登入]  頁面，即可指定屬性將一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個執行個體。  
+  使用 [傳送登入工作編輯器] 對話方塊的 [登入] 頁面，即可指定屬性將一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個執行個體。  
   
 > [!IMPORTANT]  
 >  執行傳送登入工作時，目的地伺服器上會建立具隨機密碼的登入，且會停用這些密碼。 若要使用這些登入， **系統管理員** 固定伺服器角色的成員就必須變更密碼，然後啟用密碼。 無法傳送 **sa** 登入。  
   
 ### <a name="options"></a>選項。  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下 [**新增連線...>]\<** 建立來源伺服器的新連線。  
+ 在清單中選取 SMO 連線管理員，或按一下 [\<新增連線...>] 建立來源伺服器的新連線。  
   
  **DestinationConnection**  
- 在清單中選取一個 SMO 連線管理員，或按一下 [**新增連線...>]\<** ，以建立目的地伺服器的新連線。  
+ 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連線...>]，以建立目的地伺服器的新連線。  
   
  **LoginsToTransfer**  
  選取要從來源複製到目的地伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 此屬性具有下表所列的選項：  
@@ -121,10 +121,10 @@ ms.locfileid: "71293856"
 |**AllLoginsFromSelectedDatabases**|使用 **DatabasesList** 指定之資料庫中的所有登入，都會複製到目的地伺服器。|  
   
  **LoginsList**  
- 選取來源伺服器上要複製到目的地伺服器的登入。 唯有針對 [LoginsToTransfer]  選取了 [SelectedLogins]  時，才能使用此選項。  
+ 選取來源伺服器上要複製到目的地伺服器的登入。 唯有針對 [LoginsToTransfer] 選取了 [SelectedLogins] 時，才能使用此選項。  
   
  **DatabasesList**  
- 選取來源伺服器上的資料庫，其中包含要複製到目的地伺服器的登入。 唯有針對 [LoginsToTransfer]  選取了 [AllLoginsFromSelectedDatabases]  時，才能使用此選項。  
+ 選取來源伺服器上的資料庫，其中包含要複製到目的地伺服器的登入。 唯有針對 [LoginsToTransfer] 選取了 [AllLoginsFromSelectedDatabases] 時，才能使用此選項。  
   
  **IfObjectExists**  
  選取工作應如何處理已經存在於目的地伺服器上，且具有相同名稱的登入。  

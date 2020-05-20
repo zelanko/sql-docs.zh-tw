@@ -39,7 +39,7 @@ ms.locfileid: "68042475"
  CLR 傳回類型：**SqlGeography**  
   
 ## <a name="remarks"></a>備註  
- 針對封套角度大於 90 度的 `FullGlobe`geography**執行個體傳回** 物件。  
+ 針對封套角度大於 90 度的 **geography** 執行個體傳回 `FullGlobe` 物件。  
   
  針對空白 **geography** 執行個體傳回空白 **geography** 集合。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68042475"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. 在未初始化的 geography 執行個體上使用 STConvexHull()  
- 下列範例會在未初始化的 `STConvexHull()`geography**執行個體上使用**。  
+ 下列範例會在未初始化的 **geography** 執行個體上使用 `STConvexHull()`。  
   
 ```
  DECLARE @g geography;  
@@ -73,7 +73,7 @@ ms.locfileid: "68042475"
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D. 尋找封套角度大於 90 度之 geography 執行個體上的凸面  
- 下列範例會在封套角度大於 90 度的 `STConvexHull()`geography**執行個體上使用**。  
+ 下列範例會在封套角度大於 90 度的 **geography** 執行個體上使用 `STConvexHull()`。  
   
 ```
  DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  

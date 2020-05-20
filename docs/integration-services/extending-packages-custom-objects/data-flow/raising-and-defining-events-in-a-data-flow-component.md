@@ -35,7 +35,7 @@ ms.locfileid: "71287569"
   元件開發人員可以引發 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面中定義的事件子集，其方式是呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 屬性上所公開的方法。 您也可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A> 集合來定義自訂事件，然後在執行期間使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> 方法來引發這些事件。 本章節描述如何建立及引發事件，並提供有關您在設計階段的何時應該引發事件的指引。  
   
 ## <a name="raising-events"></a>引發事件  
- 元件會使用  **介面的 \<Fire**X><xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法來引發事件。 您可以在元件的設計和執行期間引發事件。 一般在元件設計期間，<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> 方法會在驗證期間呼叫。 這些事件會在  **的 [錯誤清單]** [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 窗格內顯示訊息，並在元件設定不正確時提供意見給元件的使用者。  
+ 元件會使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面的 **Fire\<X>** 方法來引發事件。 您可以在元件的設計和執行期間引發事件。 一般在元件設計期間，<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> 方法會在驗證期間呼叫。 這些事件會在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的 [錯誤清單] 窗格內顯示訊息，並在元件設定不正確時提供意見給元件的使用者。  
   
  元件也可以在執行期間的任何時間點引發事件。 事件可讓元件開發人員在執行元件時，提供意見給此元件的使用者。 在執行期間呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> 方法很可能會讓封裝失敗。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "71287569"
   
  元件的自訂事件不會保存在封裝 XML 中。 因此，設計和執行期間會呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A> 方法，好讓此元件定義它所引發的事件。  
   
- *方法的*allowEventHandlers<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> 參數會指定此元件是否允許針對此事件建立 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 物件。 請注意，<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> 是同步的。 因此，要等到附加至自訂事件的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 已經完成執行以後，此元件才會繼續執行。 如果 *allowEventHandlers* 參數為 **true**，則此事件的每一個參數都會透過 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行階段所自動建立及擴展變數，自動提供給任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件使用。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> 方法的 *allowEventHandlers* 參數會指定此元件是否允許針對此事件建立 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 物件。 請注意，<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> 是同步的。 因此，要等到附加至自訂事件的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 已經完成執行以後，此元件才會繼續執行。 如果 *allowEventHandlers* 參數為 **true**，則此事件的每一個參數都會透過 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行階段所自動建立及擴展變數，自動提供給任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件使用。  
   
 ### <a name="raising-a-custom-event"></a>引發自訂事件  
  元件引發自訂事件的方式，是藉由呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> 方法及提供此事件的名稱、文字和參數。 如果 *allowEventHandlers* 參數為 **true**，針對自訂事件所建立的任何 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> 都會由 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 執行階段引擎所執行。  

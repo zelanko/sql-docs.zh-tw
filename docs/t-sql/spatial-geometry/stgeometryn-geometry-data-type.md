@@ -46,7 +46,7 @@ ms.locfileid: "67950202"
  CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="remarks"></a>備註  
- 如果參數大於 **的結果，這個方法會傳回**null`STNumGeometries()`；如果 **expression** 參數小於 1，將會擲回 *ArgumentOutOfRangeException*。  
+ 如果參數大於 `STNumGeometries()` 的結果，這個方法會傳回 **null**；如果 *expression* 參數小於 1，將會擲回 **ArgumentOutOfRangeException**。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立 `MultiPoint``geometry collection` 並使用 `STGeometryN()` 來尋找集合的第二個 `geometry` 執行個體。  

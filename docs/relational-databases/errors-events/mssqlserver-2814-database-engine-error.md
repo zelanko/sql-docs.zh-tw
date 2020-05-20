@@ -53,7 +53,7 @@ ms.locfileid: "68001970"
   
 ## <a name="user-action"></a>使用者動作  
   
-1.  您可以執行下列查詢來檢視導致重新編譯的陳述式。 請將 *sql_handle*、*starting_offset*、*ending_offset* 和 *plan_handle* 預留位置取代成錯誤訊息中指定的值。 針對隨選和備妥的  **陳述式，** database_name**和**object_name[!INCLUDE[tsql](../../includes/tsql-md.md)] 資料行為 NULL。  
+1.  您可以執行下列查詢來檢視導致重新編譯的陳述式。 請將 *sql_handle*、*starting_offset*、*ending_offset* 和 *plan_handle* 預留位置取代成錯誤訊息中指定的值。 針對隨選和備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，**database_name** 和 **object_name** 資料行為 NULL。  
   
     ```sql   
     SELECT DB_NAME(st.dbid) AS database_name,  

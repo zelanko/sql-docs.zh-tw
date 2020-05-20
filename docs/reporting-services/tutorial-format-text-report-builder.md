@@ -34,7 +34,7 @@ ms.locfileid: "63042951"
   
 ### <a name="to-create-a-blank-report"></a>建立空白報表  
   
-1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
+1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "63042951"
   
 8.  按一下 **[設計]** 返回 [設計] 檢視。  
   
-9. 選取 [LinkText]  資料行中的 [Total]  資料格，然後按住 SHIFT 鍵並選取其右邊的兩個資料格：[Product]  資料行中的空白資料格，以及 [Sales]`[Sum(Sales)]`**資料行中的** 資料格。  
+9. 選取 [LinkText] 資料行中的 [Total] 資料格，然後按住 SHIFT 鍵並選取其右邊的兩個資料格：[Product] 資料行中的空白資料格，以及 [Sales] 資料行中的 `[Sum(Sales)]` 資料格。  
   
 11. 在選取這三個資料格之後，以滑鼠右鍵按一下其中一個資料格，然後按一下 [刪除資料列]  。  
 

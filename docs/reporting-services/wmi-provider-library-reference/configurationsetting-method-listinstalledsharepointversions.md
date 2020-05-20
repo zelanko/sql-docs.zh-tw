@@ -52,7 +52,7 @@ public void ListReportServersInDatabase (out string[] VersionTokens,
   
 |**版本 Token**|**說明**|  
 |------------------------|---------------------|  
-|WSS_V2_Compatible|已安裝與 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 相容的 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]、[!INCLUDE[offSPServ](../../includes/offspserv-md.md)]、[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 或 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 安裝。|  
+|WSS_V2_Compatible|已安裝與 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 相容的 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]、[!INCLUDE[winSPServ](../../includes/winspserv-md.md)]、[!INCLUDE[offSPServ](../../includes/offspserv-md.md)]、[!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 安裝。|  
 |WSS_V3_Compatible|安裝了與 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]3.0 相容的 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]、 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]、 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 或 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 安裝。|  
 |WSS_V4_Compatible|安裝了與 Office 14 相容的 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 安裝。|  
   

@@ -84,7 +84,7 @@ ms.locfileid: "71293851"
 -   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="transfer-master-stored-procedures-task-editor-general-page"></a>傳送主要預存程序工作編輯器 (一般頁面)
-  使用 [傳送主要預存程序工作編輯器]  對話方塊的 [一般]  頁面，即可命名和描述傳送主要預存程序工作。  
+  使用 [傳送主要預存程序工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送主要預存程序工作。  
   
 > [!NOTE]  
 >  此工作只會從來源伺服器上的 **master** 資料庫，將 **dbo** 擁有的使用者定義預存程序，傳送到目的地伺服器上的 **master** 資料庫。 使用者必須有目的地伺服器上之 **master** 資料庫的 CREATE PROCEDURE 權限，或是目的地伺服器上之 **sysadmin** 固定伺服器角色的成員，才能在目的地伺服器建立預存程序。  
@@ -100,17 +100,17 @@ ms.locfileid: "71293851"
  輸入傳送主要預存程序工作的描述。  
   
 ## <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>傳送主要預存程序工作編輯器 (預存程序頁面)
-  使用 [傳送主要預存程序工作編輯器]  對話方塊的 [預存程序]  頁面，即可指定屬性，以將一個或多個使用者定義預存程序從 **執行個體之某個執行個體的**master[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，複製到 **之另一個執行個體的**master[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中。  
+  使用 [傳送主要預存程序工作編輯器] 對話方塊的 [預存程序] 頁面，即可指定屬性，以將一個或多個使用者定義預存程序從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之某個執行個體的 **master** 資料庫，複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之另一個執行個體的 **master** 資料庫中。  
   
 > [!NOTE]  
 >  此工作只會從來源伺服器上的 **master** 資料庫，將 **dbo** 擁有的使用者定義預存程序，傳送到目的地伺服器上的 **master** 資料庫。 使用者必須有目的地伺服器上之 **master** 資料庫的 CREATE PROCEDURE 權限，或是目的地伺服器上之 **sysadmin** 固定伺服器角色的成員，才能在目的地伺服器建立預存程序。  
   
 ### <a name="options"></a>選項。  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下 [**新增連線...>]\<** 建立來源伺服器的新連線。  
+ 在清單中選取 SMO 連線管理員，或按一下 [\<新增連線...>] 建立來源伺服器的新連線。  
   
  **DestinationConnection**  
- 在清單中選取一個 SMO 連線管理員，或按一下 [**新增連線...>]\<** ，以建立目的地伺服器的新連線。  
+ 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連線...>]，以建立目的地伺服器的新連線。  
   
  **IfObjectExists**  
  選取工作應如何處理在目的地伺服器上的 **master** 資料庫中已經存在有相同名稱的使用者定義預存程序。  

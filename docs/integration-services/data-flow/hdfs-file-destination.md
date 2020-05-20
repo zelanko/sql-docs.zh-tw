@@ -31,7 +31,7 @@ ms.locfileid: "71292368"
  ![HDFS 檔案目的地編輯器](../../integration-services/data-flow/media/hdfs-file-dest.png "HDFS 檔案目的地編輯器")
 
 ## <a name="options"></a>選項。
- 在 [Hadoop File Destination Editor (Hadoop 檔案目的地編輯器)]  對話方塊的 [一般]  索引標籤上，設定下列選項。
+ 在 [Hadoop File Destination Editor (Hadoop 檔案目的地編輯器)] 對話方塊的 [一般] 索引標籤上，設定下列選項。
 
 |欄位|描述|
 |-----------|-----------------|
@@ -58,7 +58,7 @@ JAVA 組建架構 (32/64 位元) 應該符合所要使用的 SSIS 執行階段�
 2. 從命令提示字元中，執行 `sysdm.cpl`。
 3. 在 [進階]  索引標籤上，選取 [環境變數]  。
 4. 在 [系統變數]  區段底下，選取 [新增]  。
-5. 針對 [變數名稱]`JAVA_HOME`**輸入**。
+5. 針對 [變數名稱] 輸入 `JAVA_HOME`。
 6. 選取 [瀏覽目錄]  ，巡覽至解壓縮的資料夾，然後選取 `jre` 子資料夾。
    然後選取 [確定]  ，系統會自動填入 [變數值]  。
 7. 選取 [確定]  以關閉 [新增系統變數]  對話方塊。

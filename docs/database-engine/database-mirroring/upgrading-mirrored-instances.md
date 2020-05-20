@@ -82,7 +82,7 @@ ms.locfileid: "68050627"
     > [!IMPORTANT]  
     >  如果鏡像伺服器與主體伺服器之間的地理位置遙遠，輪流升級可能不適合。  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性]  對話方塊的[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式]  選項變更為 [不具有自動容錯移轉的高安全性 (同步)]  。 如需如何存取此頁面的資訊，請參閱[啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
+    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性] 對話方塊的[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式] 選項變更為 [不具有自動容錯移轉的高安全性 (同步)]。 如需如何存取此頁面的資訊，請參閱[啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
   
     -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中：將交易安全性設定為 FULL。 如需詳細資訊，請參閱[在資料庫鏡像工作階段中變更交易安全性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
@@ -139,7 +139,7 @@ ms.locfileid: "68050627"
   
 1.  您可以選擇使用下列其中一個方法來回到高效能模式：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性]  對話方塊的[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式]  選項變更為 [高效能 (非同步)]  。  
+    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性] 對話方塊的[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式] 選項變更為 [高效能 (非同步)]。  
   
     -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中：使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) 將交易安全性設定為 OFF。  
   

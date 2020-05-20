@@ -61,7 +61,7 @@ WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
 為下列指令碼上方的變數提供適當的值，然後執行指令碼以執行 SSIS 套件。
 
 > [!NOTE]
-> 下列範例使用 Windows 驗證。 若要使用 SQL Server 驗證，請使用 `Integrated Security=SSPI;` 取代 `User ID=<user name>;Password=<password>;` 引數。 如果要連線至 Azure SQL Database 伺服器，您無法使用 Windows 驗證。 
+> 下列範例使用 Windows 驗證。 若要使用 SQL Server 驗證，請使用 `User ID=<user name>;Password=<password>;` 取代 `Integrated Security=SSPI;` 引數。 如果要連線至 Azure SQL Database 伺服器，您無法使用 Windows 驗證。 
 
 ```powershell
 # Variables

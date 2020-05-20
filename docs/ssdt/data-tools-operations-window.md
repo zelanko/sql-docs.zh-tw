@@ -32,7 +32,7 @@ ms.locfileid: "75241666"
   
 -   在 [SQL Server 物件總管]  中展開資料庫。 此作業會起始匯入資料庫模型。  
   
--   透過 Transact**SQL 編輯器上的 [更新資料庫]** \- 按鈕，認可資料庫的變更或產生指令碼。 如需詳細資訊，請參閱[如何：使用 Power Buffer 更新連接的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)。  
+-   透過 Transact\-SQL 編輯器上的 [更新資料庫] 按鈕，認可資料庫的變更或產生指令碼。 如需詳細資訊，請參閱[如何：使用 Power Buffer 更新連接的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)。  
   
 -   從 [SQL Server 物件總管]  中刪除物件。 如需詳細資訊，請參閱[如何：刪除物件及解析依存性](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)。  
   

@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  傳回資料點選的識別碼。 *data_tap_id* 是 **bigint**。  
   
 ## <a name="example"></a>範例  
- 下列範例會在資料流程工作 `'Paths[OLE DB Source.OLE DB Source Output]` 中的資料流程路徑 `\Package\Data Flow Task` 上建立資料點選。 點選的資料會儲存在 DataDumps 資料夾 (`output0.txt`磁碟機\< *>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps) 的*  檔案中。  
+ 下列範例會在資料流程工作 `'Paths[OLE DB Source.OLE DB Source Output]` 中的資料流程路徑 `\Package\Data Flow Task` 上建立資料點選。 點選的資料會儲存在 DataDumps 資料夾 (\<磁碟機>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps) 的 `output0.txt` 檔案中。  
   
 ```sql
 Declare @execution_id bigint  
@@ -81,7 +81,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ```  
   
 ## <a name="remarks"></a>備註  
- 若要新增資料點選，執行的執行個體必須處於已建立狀態 (**catalog.operations &#40;SSISDB 資料庫&#41;** 檢視之[狀態](../../integration-services/system-views/catalog-operations-ssisdb-database.md)資料行中的值為 1)。 狀態值會在您進行執行時變更。 您可以呼叫 [catalog.create_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) 來建立執行。  
+ 若要新增資料點選，執行的執行個體必須處於已建立狀態 ([catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視之**狀態**資料行中的值為 1)。 狀態值會在您進行執行時變更。 您可以呼叫 [catalog.create_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) 來建立執行。  
   
  以下是 add_data_tap 預存程序的考量事項。  
   

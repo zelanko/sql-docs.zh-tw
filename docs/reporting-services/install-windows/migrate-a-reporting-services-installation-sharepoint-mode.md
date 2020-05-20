@@ -42,7 +42,7 @@ ms.locfileid: "65570928"
 -   [在 SharePoint 2013 中移動內容資料庫](https://technet.microsoft.com/library/cc262792.aspx)。
   
 ##  <a name="migrate-from-reporting-services-sharepoint-mode-versions-prior-to-sql-server-2012"></a><a name="bkmk_prior_versions"></a> 從 SQL Server 2012 之前的 Reporting Services SharePoint 模式版本移轉  
- 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中變更的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 模式架構，包括服務應用程式資料庫結構描述。 如果您想要從 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 之前的版本移轉到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 模式，請先安裝 SharePoint 和 SQL Server 2016 Reporting Services SharePoint 模式來建立新的 SharePoint 環境。 如需詳細資訊，請參閱 [安裝 Reporting Services SharePoint 模式](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
+ 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中變更的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 模式架構，包括服務應用程式資料庫結構描述。 如果您想要從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的版本移轉到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]SharePoint 模式，請先安裝 SharePoint 和 SQL Server 2016 Reporting Services SharePoint 模式來建立新的 SharePoint 環境。 如需詳細資訊，請參閱 [安裝 Reporting Services SharePoint 模式](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
   
  新的 SharePoint 環境開始執行之後，可以在包含內容資料庫的資料庫層級選擇僅限內容移轉或完整移轉。  
   

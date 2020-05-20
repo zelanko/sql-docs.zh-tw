@@ -170,7 +170,7 @@ ms.locfileid: "68100466"
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  以滑鼠右鍵按一下執行個體名稱並選擇 [停止][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **，即可停止**  的執行個體。  
+6.  以滑鼠右鍵按一下執行個體名稱並選擇 [停止]，即可停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
 7.  將 master.mdf 和 mastlog.ldf 檔移至新位置。  
   

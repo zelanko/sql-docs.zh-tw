@@ -27,7 +27,7 @@ ms.locfileid: "67994168"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 僅支援 **資料指標支援之資料列集上的**IRowsetResynch[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 **IRowsetResynch** 無法視需要提供。 取用者必須在開啟資料列集前要求此介面。  
+  OLE DB Driver for SQL Server 僅支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標支援之資料列集上的 **IRowsetResynch**。 **IRowsetResynch** 無法視需要提供。 取用者必須在開啟資料列集前要求此介面。  
   
 ## <a name="see-also"></a>另請參閱  
  [更新資料列集中的資料](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  

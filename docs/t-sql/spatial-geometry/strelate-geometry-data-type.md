@@ -38,7 +38,7 @@ ms.locfileid: "68066315"
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是要與叫用 **所在之執行個體相比較的另一個**geometry`STRelate()` 執行個體。  
+ 這是要與叫用 `STRelate()` 所在之執行個體相比較的另一個 **geometry** 執行個體。  
   
  *intersection_pattern_matrix*  
  這是兩個 **geometry** 執行個體之間 DE-9IM 模式矩陣裝置的 **nchar(9)** 類型編碼可接受值字串。  

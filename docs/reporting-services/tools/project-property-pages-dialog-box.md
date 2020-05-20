@@ -21,7 +21,7 @@ ms.locfileid: "65578232"
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
 
-  使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 專案  功能表按一下 _報表專案名稱>\<_ 屬性  。  
+  使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 [專案] 功能表按一下 \<報表專案名稱>屬性]。  
   
  在您定義組態屬性之後，可以從工具列的 [方案組態]  下拉式清單中選取組態。  
 
@@ -78,7 +78,7 @@ ms.locfileid: "65578232"
  發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 若未指定網站，則會使用預設的最上層網站。 例如： 
 + `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
-+ `http:\\<servername>\<site>\<subsite>`第 1 課：建立 Windows Azure 儲存體物件{2}。  
++ `http:\\<servername>\<site>\<subsite>`第 1 課：建立 Windows Azure 儲存體物件`http:\\<servername>\<site>\<subsite>`。  
 
 ## <a name="next-steps"></a>後續步驟
 

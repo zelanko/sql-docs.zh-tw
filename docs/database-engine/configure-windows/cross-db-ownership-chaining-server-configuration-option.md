@@ -34,7 +34,7 @@ ms.locfileid: "68012038"
   
 -   您可以使用 ALTER DATABASE 陳述式的 SET 子句，來設定個別資料庫的跨資料庫擁有權鏈結。 若您要建立新的資料庫，您可以使用 CREATE DATABASE 陳述式，來為新的資料庫設定跨資料庫擁有權鏈結選項。  
   
-     除非  **執行個體所裝載的資料庫都必須參與跨資料庫擁有權鏈結，而且您了解此設定的安全性含意，否則不建議將 [跨資料庫擁有權鏈結]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為 1。  
+     除非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所裝載的資料庫都必須參與跨資料庫擁有權鏈結，而且您了解此設定的安全性含意，否則不建議將 [跨資料庫擁有權鏈結] 設定為 1。  
 
 若要判斷跨資料庫擁有權鏈結的目前狀態，請執行下列查詢：  
 ```sql
@@ -49,9 +49,9 @@ SELECT is_db_chaining_on, name FROM sys.databases;
   
 -   在產品伺服器上關閉跨資料庫擁有權鏈結，請完整測試所有的應用程式 (包含協力廠商應用程式)，才能確定變更不會影響應用程式功能。  
   
--   若您以 **sp_configure** 來指定 RECONFIGURE，當伺服器執行時，您可以變更 [跨資料庫擁有權鏈結]  選項。  
+-   若您以 **sp_configure** 來指定 RECONFIGURE，當伺服器執行時，您可以變更 [跨資料庫擁有權鏈結] 選項。  
   
--   若您有資料庫需要跨資料庫擁有權鏈結，建議您使用 **sp_configure** 來關閉執行個體的 [跨資料庫擁有權鏈結]  選項，再使用 ALTER DATABASE 陳述式來為有需要的個別資料庫，開啟跨資料庫擁有權鏈結。  
+-   若您有資料庫需要跨資料庫擁有權鏈結，建議您使用 **sp_configure** 來關閉執行個體的 [跨資料庫擁有權鏈結] 選項，再使用 ALTER DATABASE 陳述式來為有需要的個別資料庫，開啟跨資料庫擁有權鏈結。  
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

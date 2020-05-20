@@ -77,7 +77,7 @@ ms.locfileid: "67994183"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 此資料列集只支援順向捲動。 支援相對資料列定位。 如果參考的資料行上有索引存在，命令文字可以包含 ORDER BY 子句。<br /><br /> 只有當資料列集可以顯示其他工作階段上的命令所插入或其他使用者所插入的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料列時，才能在資料列集中使用 DBPROP_IMMOBILEROWS。 嘗試在 DBPROP_OTHERINSERT 不能是 VARIANT_TRUE 的任何資料列集上開啟此屬性設定為 VARIANT_FALSE 的資料列集時，將會產生錯誤。|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 此資料列集只支援順向捲動。 支援相對資料列定位。 命令文字可以包含 ORDER BY 子句 (除非由另一個屬性所限制)。|  
   
- 可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]IOpenRowset::OpenRowset**方法，輕鬆地在** 基底資料表或檢視表上建立伺服器資料指標所支援的 OLE DB Driver for SQL Server 資料列集。 依據名稱指定資料表或檢視表，在 *rgPropertySets* 參數內傳遞必要的資料列集屬性集。  
+ 可以使用 **IOpenRowset::OpenRowset** 方法，輕鬆地在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基底資料表或檢視表上建立伺服器資料指標所支援的 OLE DB Driver for SQL Server 資料列集。 依據名稱指定資料表或檢視表，在 *rgPropertySets* 參數內傳遞必要的資料列集屬性集。  
   
  當取用者要求伺服器資料指標支援資料列集時，建立此資料列集的命令文字會受到限制。 具體而言，命令文字會受限為傳回單一資料列集結果的單一 SELECT 陳述式，或是實作單一 SELECT 陳述式來傳回單一資料列集結果的預存程序。  
   

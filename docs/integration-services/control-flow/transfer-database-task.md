@@ -104,14 +104,14 @@ ms.locfileid: "71293901"
  輸入傳送資料庫工作的描述。  
   
 ## <a name="transfer-database-task-editor-databases-page"></a>傳送資料庫工作編輯器 (資料庫頁面)
-  使用 [傳送資料庫工作編輯器]  對話方塊的 [資料庫]  頁面，即可指定傳送資料庫工作中所含之來源和目的地資料庫的屬性。 傳送資料庫工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的兩個執行個體間，複製或移動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。 這項工作也可用來在同一部伺服器內複製資料庫。  
+  使用 [傳送資料庫工作編輯器] 對話方塊的 [資料庫] 頁面，即可指定傳送資料庫工作中所含之來源和目的地資料庫的屬性。 傳送資料庫工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的兩個執行個體間，複製或移動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。 這項工作也可用來在同一部伺服器內複製資料庫。  
   
 ### <a name="options"></a>選項。  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下 [**新增連線...>]\<** 建立來源伺服器的新連線。  
+ 在清單中選取 SMO 連線管理員，或按一下 [\<新增連線...>] 建立來源伺服器的新連線。  
   
  **DestinationConnection**  
- 在清單中選取一個 SMO 連線管理員，或按一下 [**新增連線...>]\<** ，以建立目的地伺服器的新連線。  
+ 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連線...>]，以建立目的地伺服器的新連線。  
   
  **DestinationDatabaseName**  
  指定目的地伺服器上之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的名稱。  

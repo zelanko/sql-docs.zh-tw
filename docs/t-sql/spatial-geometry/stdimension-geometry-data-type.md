@@ -42,7 +42,7 @@ ms.locfileid: "68107843"
  CLR 傳回類型：**SqlInt32**  
   
 ## <a name="remarks"></a>備註  
- 如果 `STDimension()`geometry **執行個體是空的，** 會傳回 -1。  
+ 如果 **geometry** 執行個體是空的，`STDimension()` 會傳回 -1。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立資料表變數來保存 **geometry** 執行個體，並插入 `Point`、`LineString` 和 `Polygon`。  然後使用 `STDimension()` 傳回每一個 **geometry** 執行個體的維度。  

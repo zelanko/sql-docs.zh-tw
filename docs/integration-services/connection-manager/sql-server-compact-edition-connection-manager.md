@@ -63,7 +63,7 @@ ms.locfileid: "71294346"
  輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的路徑與檔名。  
   
  **瀏覽**  
- 使用 [選取 SQL Server Compact Edition 資料庫][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**對話方塊，尋找所要的** Compact 資料庫檔案。  
+ 使用 [選取 SQL Server Compact Edition 資料庫] 對話方塊，尋找所要的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫檔案。  
   
  **輸入資料庫密碼**  
  輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的密碼。  

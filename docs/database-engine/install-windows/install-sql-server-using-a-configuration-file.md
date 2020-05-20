@@ -82,17 +82,17 @@ FEATURES=SQL,Tools
   
 1. 若要在同一部電腦上準備一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體並進行設定。 
   
-    - 從安裝中心的 [進階] **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面執行 [準備**  獨立執行個體的映像]  ，並擷取備妥的映像組態檔。 
+    - 從安裝中心的 [進階] 頁面執行 [準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]，並擷取備妥的映像組態檔。 
   
     - 使用相同的準備映像組態檔當做範本，以便準備其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 
   
-    - 從 [安裝中心] 的 [進階] **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面執行 [完成備妥的**  獨立執行個體的映像]  ，在電腦上設定備妥的執行個體。 
+    - 從 [安裝中心] 的 [進階] 頁面執行 [完成備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]，在電腦上設定備妥的執行個體。 
   
 2. 若要使用 Windows SysPrep 工具來準備作業系統的映像，包括未設定的已備妥 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 
   
-    -   從 [安裝中心] 的 [進階] 頁面執行 [準備  **獨立執行個體的映像][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ，並擷取備妥的映像組態檔。 
+    -   從 [安裝中心] 的 [進階] 頁面執行 [準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]，並擷取備妥的映像組態檔。 
   
-    -   從 [安裝中心] 的 [進階] **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面執行 [完成備妥的**  獨立執行個體的映像]  ，但在擷取完成的組態檔之後，在 [準備開始完成]  頁面上取消它。 
+    -   從 [安裝中心] 的 [進階] 頁面執行 [完成備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]，但在擷取完成的組態檔之後，在 [準備開始完成] 頁面上取消它。 
   
     -   完成映像組態檔可以與 Windows 映像儲存在一起，以便自動化已備妥執行個體的組態設定作業。 
   

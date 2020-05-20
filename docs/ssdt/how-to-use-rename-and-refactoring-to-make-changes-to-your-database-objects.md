@@ -32,7 +32,7 @@ Transact\-SQL 編輯器的 [重構] 關聯式功能表可讓您重新命名物�
   
 ### <a name="to-rename-a-type"></a>若要重新命名類型  
   
-1.  以滑鼠右鍵按一下 [方案總管]  中的 [Products]  資料表 (Products.sql)，再選取 [檢視程式碼]  ，在 Transact\-SQL 編輯器中開啟指令碼。  
+1.  以滑鼠右鍵按一下 [方案總管] 中的 [Products] 資料表 (Products.sql)，再選取 [檢視程式碼]，在 Transact\-SQL 編輯器中開啟指令碼。  
   
 2.  以滑鼠右鍵按一下指令碼中的 `[Products]`，再依序選取 [重構]  和 [重新命名]  。  
   
@@ -44,11 +44,11 @@ Transact\-SQL 編輯器的 [重構] 關聯式功能表可讓您重新命名物�
   
 6.  請注意，針對已在資料表設計工具或 Transact\-SQL 編輯器中開啟的指令碼檔案，Transact\-SQL 編輯器已經以左邊綠色列反白顯示發生變更的位置。  
   
-7.  請注意，[方案總管]  中加入的 [TradeDev.refactorlog]  。 按兩下將它開啟。 它包含這個工作階段中所有變更的 XML 表示。  
+7.  請注意，[方案總管] 中加入的 [TradeDev.refactorlog]。 按兩下將它開啟。 它包含這個工作階段中所有變更的 XML 表示。  
   
 8.  按 F5 建置並部署專案至本機資料庫。  
   
-9. 以滑鼠右鍵按一下 [SQL Server 物件總管]  中 [本機]  下的 [TradeDev]  資料庫，然後選取 [重新整理]  。  
+9. 以滑鼠右鍵按一下 [SQL Server 物件總管] 中 [本機] 下的 [TradeDev] 資料庫，然後選取 [重新整理]。  
   
 10. 展開 [資料表]  ，並注意 [Products]  資料表已經重新命名。  
   
@@ -56,7 +56,7 @@ Transact\-SQL 編輯器的 [重構] 關聯式功能表可讓您重新命名物�
   
 ### <a name="to-expand-wildcards"></a>若要展開萬用字元  
   
-1.  展開 [方案總管]  中的 [函式]  節點，然後按兩下 [GetProductsBySupplier.sql]  。  
+1.  展開 [方案總管] 中的 [函式] 節點，然後按兩下 [GetProductsBySupplier.sql]。  
   
 2.  將游標放在這一行的星號上，然後按一下滑鼠右鍵。 選取 [重構]  和 [展開萬用字元]  。  
   
@@ -84,7 +84,7 @@ Transact\-SQL 編輯器的 [重構] 關聯式功能表可讓您重新命名物�
     SELECT [Id], [Name], [ShelfLife], [SupplierId], [CustomerId] from Product p  
     ```  
   
-3.  按一下 [預覽變更]  對話方塊中的 [套用]  按鈕。  請注意，所有物件參考已經更新為包含物件的結構描述名稱，但是如果物件有父物件，則為父物件的名稱。  
+3.  按一下 [預覽變更] 對話方塊中的 [套用] 按鈕。  請注意，所有物件參考已經更新為包含物件的結構描述名稱，但是如果物件有父物件，則為父物件的名稱。  
   
     ```  
     SELECT [p].[Id], [p].[Name], [p].[ShelfLife], [p].[SupplierId], [p].[CustomerId] from [dbo].[Product] p  

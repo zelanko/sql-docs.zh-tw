@@ -38,7 +38,7 @@ ms.locfileid: "75241571"
   
 1.  在 [方案總管]  中，以滑鼠右鍵按一下單元測試專案，然後按一下 [SQL Server 測試組態]  。  
   
-    [SQL Server 測試組態 -' **']<projectname>** 對話方塊隨即出現。  
+    [SQL Server 測試組態 -'<projectname>'] 對話方塊隨即出現。  
   
 2.  在 [資料庫連接]  底下，您可以執行下列動作：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75241571"
   
     這個步驟會建立 `ExecutionContext` 連接字串，用來執行單元測試中的測試指令碼。 如果您也指定了次要連接，也會建立 `PrivilegedContext` 連接字串。 這個連接會在單元測試的測試指令碼以外，測試與資料庫的互動。 如需詳細資訊，請參閱[連接字串和權限概觀](../ssdt/overview-of-connection-strings-and-permissions.md)。  
   
-3.  按一下 [確定]  ，關閉 [SQL Server 測試組態 -' **']<projectname>** 對話方塊。  
+3.  按一下 [確定]，關閉 [SQL Server 測試組態 -'<projectname>'] 對話方塊。  
   
 4.  重建測試專案來套用組態變更。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75241571"
   
 3.  在 [方案總管]  中，以滑鼠右鍵按一下單元測試專案，然後按一下 [SQL Server 測試組態]  。  
   
-    [SQL Server 測試組態 -' **']<projectname>** 對話方塊隨即出現。  
+    [SQL Server 測試組態 -'<projectname>'] 對話方塊隨即出現。  
   
 4.  在 [部署]  底下，您可以執行下列動作：  
   
@@ -76,7 +76,7 @@ ms.locfileid: "75241571"
   
     -   在 [部署組態]  底下，按一下要部署的目標專案組態。 選項包括 [偵錯]  、[預設]  或 [發行]  。 不過，如果您建立單元測試的組態，該組態也會顯示為其中一個選項。  
   
-5.  按一下 [確定]  ，關閉 [SQL Server 測試組態 -' **']<projectname>** 對話方塊。  
+5.  按一下 [確定]，關閉 [SQL Server 測試組態 -'<projectname>'] 對話方塊。  
   
     在測試回合開始時，系統會執行步驟 1 中所產生的 Transact\-SQL 指令碼。 這個動作會將結構描述部署到目標資料庫。  
   

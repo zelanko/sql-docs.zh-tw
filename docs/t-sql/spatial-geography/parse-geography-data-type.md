@@ -46,7 +46,7 @@ Parse ( 'geography_tagged_text' )
  CLR 傳回類型：**SqlGeography**  
   
 ## <a name="remarks"></a>備註  
- **傳回之**geography`Parse()` 執行個體的 OGC 型別會設定為對應的 WKT 輸入。  
+ `Parse()` 傳回之 **geography** 執行個體的 OGC 型別會設定為對應的 WKT 輸入。  
   
  'Null' 字串將會解譯為 null **geography** 執行個體。  
   

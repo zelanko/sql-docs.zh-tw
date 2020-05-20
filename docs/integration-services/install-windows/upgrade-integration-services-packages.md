@@ -64,9 +64,9 @@ ms.locfileid: "68262785"
  如果要使用這些封裝搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本執行階段所建置的應用程式，必須在可執行檔的 *.exe.config 檔案的組態區段中包含重新導向規則。 規則會將執行階段組件重新導向至 13.0.0.0 版 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 如需組件版本重新導向的詳細資訊，請參閱 [\<runtime> 的 \<assemblyBinding> 元素](https://msdn.microsoft.com/library/twy1dw1e.aspx)。  
   
 ### <a name="locating-the-assemblies"></a>尋找組件  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件已經升級至 .NET 4.0。 .NET 4 有個別的全域組件快取，位於 *磁碟機>\<* :\Windows\Microsoft.NET\assembly。 您可以在此路徑底下 (通常在 GAC_MSIL 資料夾中) 找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件已經升級至 .NET 4.0。 .NET 4 有個別的全域組件快取，位於 \<磁碟機>:\Windows\Microsoft.NET\assembly。 您可以在此路徑底下 (通常在 GAC_MSIL 資料夾中) 找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件。  
   
- 如同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的舊版，核心 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 擴充性 .dll 檔案也位於 *磁碟機>\<* :\Program Files\Microsoft SQL Server\130\SDK\Assemblies。  
+ 如同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的舊版，核心 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 擴充性 .dll 檔案也位於 \<磁碟機>:\Program Files\Microsoft SQL Server\130\SDK\Assemblies。  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>了解 SQL Server 封裝升級結果  
  升級封裝期間， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 封裝中的大多數元件及功能皆會順利地轉換成目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的對應項目。 不過，其中有許多元件和功能不會升級，或者具有您應該注意的升級結果。 下表將識別這些元件和功能。  

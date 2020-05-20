@@ -54,7 +54,7 @@ IDENT_INCR ( 'table_or_view' )
 ## <a name="examples"></a>範例  
   
 ### <a name="a-returning-the-increment-value-for-a-specified-table"></a>A. 傳回指定資料表的遞增值  
- 下列範例會傳回 `Person.Address` 資料庫中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表的遞增值。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Person.Address` 資料表的遞增值。  
   
 ```sql  
 USE AdventureWorks2012;  

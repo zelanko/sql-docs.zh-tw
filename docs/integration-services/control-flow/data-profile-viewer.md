@@ -35,9 +35,9 @@ ms.locfileid: "71294220"
 ## <a name="data-profiles"></a>資料設定檔  
  若要檢視資料設定檔，您可以設定「資料分析」工作，將其輸出傳送到檔案，然後使用獨立的「資料設定檔檢視器」即可。 若要開啟資料設定檔檢視器，請執行下列其中一項操作。  
   
--   以滑鼠右鍵按一下  **設計師中的 [資料分析]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工作，然後按一下 [編輯]  。 在 [資料分析工作編輯器]  的 [一般]  頁面上按一下 [開啟設定檔檢視器]  。  
+-   以滑鼠右鍵按一下 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的 [資料分析] 工作，然後按一下 [編輯]。 在 [資料分析工作編輯器] 的 [一般] 頁面上按一下 [開啟設定檔檢視器]。  
   
--   在 *磁碟機>\<* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中，執行 DataProfileViewer.exe。  
+-   在 \<磁碟機>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中，執行 DataProfileViewer.exe。  
   
  此檢視器可使用多個窗格，顯示您所要求與計算之結果的設定檔以及選擇性的詳細資料與向下鑽研能力：  
   

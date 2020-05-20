@@ -66,7 +66,7 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
   
 -   使用者未具備適當的權限  
   
--   已使用 `A`reference_location*參數中的* 字元指定了絕對參考，但是並未使用 *environment_folder_name* 參數指定資料夾名稱。  
+-   已使用 *reference_location* 參數中的 `A` 字元指定了絕對參考，但是並未使用 *environment_folder_name* 參數指定資料夾名稱。  
   
 ## <a name="remarks"></a>備註  
  專案可以具有相對或絕對的環境參考。 相對參考會依名稱參考環境，並且需要位於與專案相同的資料夾中。 絕對參考會依名稱和資料夾參考環境，且可以參考位於與專案不同資料夾中的環境。 專案可以參考多個環境。  

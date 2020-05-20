@@ -38,7 +38,7 @@ ms.locfileid: "67930150"
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是要與叫用 **所在之執行個體相比較的另一個**geometry`STContains()` 執行個體。  
+ 這是要與叫用 `STContains()` 所在之執行個體相比較的另一個 **geometry** 執行個體。  
   
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
@@ -46,7 +46,7 @@ ms.locfileid: "67930150"
  CLR 傳回類型：**SqlBoolean**  
   
 ## <a name="remarks"></a>備註  
- 如果 `STContains()`geometry **執行個體的空間參考識別碼 (SRID) 不相符，** 一定會傳回 Null。  
+ 如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，`STContains()` 一定會傳回 Null。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `STContains()` 來測試兩個 `geometry` 執行個體，看看第一個執行個體是否包含第二個執行個體。  

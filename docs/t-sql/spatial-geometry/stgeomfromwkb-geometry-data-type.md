@@ -49,7 +49,7 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
  CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="remarks"></a>備註  
- **所傳回之**geometry`STGeomFromText()` 執行個體的 OGC 類型會設定為對應的 WKB 輸入。  
+ `STGeomFromText()` 所傳回之 **geometry** 執行個體的 OGC 類型會設定為對應的 WKB 輸入。  
   
  如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  
   

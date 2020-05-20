@@ -25,6 +25,6 @@ ms.locfileid: "75254500"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本節包含  **中，[物件總管] 之 [警示]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 節點的 F1 說明。  
+本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，[物件總管] 之 [警示] 節點的 F1 說明。  
   
 

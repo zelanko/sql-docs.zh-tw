@@ -39,7 +39,7 @@ ms.locfileid: "68042084"
   
 ## <a name="arguments"></a>引數  
  *other_geography*  
- 這是要與 **叫用所在的執行個體相比較的另一個**geography`STIntersects()` 執行個體。  
+ 這是要與 `STIntersects()` 叫用所在的執行個體相比較的另一個 **geography** 執行個體。  
   
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  

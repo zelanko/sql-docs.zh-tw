@@ -56,9 +56,9 @@ ms.locfileid: "68024736"
   
 2.  在 [SQL Server 組態管理員] 中，按一下 **[SQL Server 服務]** 。  
   
-3.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (**執行個體名稱>)]** \<  ，然後按一下 [屬性]  。  
+3.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]，然後按一下 [屬性]。  
   
-4.  在 [SQL Server (**執行個體名稱>) 屬性]** \<  對話方塊的 [登入] 索引標籤上，針對列於 [帳戶名稱]  方塊的帳戶，在 [密碼]  和 [確認密碼]  方塊中鍵入新密碼，然後按一下 [確定]  。  
+4.  在 [SQL Server (\<執行個體名稱>) 屬性] 對話方塊的 [登入] 索引標籤上，針對列於 [帳戶名稱] 方塊的帳戶，在 [密碼] 和 [確認密碼] 方塊中鍵入新密碼，然後按一下 [確定]。  
   
      密碼會立即生效，不需重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -68,9 +68,9 @@ ms.locfileid: "68024736"
   
 2.  在 [SQL Server 組態管理員] 中，按一下 **[SQL Server 服務]** 。  
   
-3.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server Agent (**執行個體名稱>)]** \<  ，然後按一下 [屬性]  。  
+3.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server Agent (\<執行個體名稱>)]，然後按一下 [屬性]。  
   
-4.  在 [SQL Server Agent (**執行個體名稱>) 屬性]** \<  對話方塊的 [登入] 索引標籤上，針對列於 [帳戶名稱]  方塊的帳戶，在 [密碼]  和 [確認密碼]  方塊中鍵入新密碼，然後按一下 [確定]  。  
+4.  在 [SQL Server Agent (\<執行個體名稱>) 屬性] 對話方塊的 [登入] 索引標籤上，針對列於 [帳戶名稱] 方塊的帳戶，在 [密碼] 和 [確認密碼] 方塊中鍵入新密碼，然後按一下 [確定]。  
   
      在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]獨立執行個體上，密碼會立即生效，不需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在叢集執行個體上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源離線，而且需要重新啟動。  
   

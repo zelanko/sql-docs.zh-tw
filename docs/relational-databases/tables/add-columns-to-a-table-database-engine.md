@@ -26,7 +26,7 @@ ms.locfileid: "68094737"
 
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-此文章說明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中將新的資料行加入至資料表。
+此文章說明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中將新的資料行加入至資料表。
 
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前
 
@@ -52,7 +52,7 @@ ms.locfileid: "68094737"
    此為必要值。若未加以選擇，將會指派預設值。
 
    > [!NOTE]
-   > 您可以在 [資料庫工具]  的 [選項]  對話方塊中變更預設值。
+   > 您可以在 [資料庫工具] 的 [選項] 對話方塊中變更預設值。
 
 5. 在 [ **資料行屬性** ] 索引標籤中繼續定義其他任何的資料行屬性。
 

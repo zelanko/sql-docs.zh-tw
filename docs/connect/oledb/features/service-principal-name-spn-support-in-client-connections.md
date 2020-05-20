@@ -69,7 +69,7 @@ ms.locfileid: "74056674"
  新的連接行為會由用戶端實作，因此，該行為對於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本而言不是專屬的。  
   
 ## <a name="linked-servers-and-delegation"></a>連結的伺服器與委派  
- 建立連結的伺服器時，可以使用 **sp_addlinkedserver\@ 的** [provstr](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 參數來指定伺服器和容錯移轉夥伴 SPN。 這麼做的優點與在用戶端連接字串中指定 SPN 相同：建立使用 Kerberos 驗證的連接更簡單，而且更可靠。  
+ 建立連結的伺服器時，可以使用 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 的 **\@provstr** 參數來指定伺服器和容錯移轉夥伴 SPN。 這麼做的優點與在用戶端連接字串中指定 SPN 相同：建立使用 Kerberos 驗證的連接更簡單，而且更可靠。  
   
  利用連結的伺服器委派需要 Kerberos 驗證。  
   

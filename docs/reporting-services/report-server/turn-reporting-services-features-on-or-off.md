@@ -21,7 +21,7 @@ ms.locfileid: "67140375"
 # <a name="turn-reporting-services-features-on-or-off"></a>開啟或關閉 Reporting Services 功能
   您可以關閉鎖定策略中未使用的報表伺服器功能，以減少實際執行報表伺服器的攻擊面。 在大多數情況下，您會想要同時執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能，以便能夠使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所提供的所有功能。 不過，根據部署模型而定，您可以停用不需要的功能。 例如，如果所有報表處理都設定為排程的作業，您就可以只啟用背景處理。 同樣地，如果只想要視需要執行的互動式報表，可以只執行報表伺服器 Web 服務。  
   
- 本文中的程序將示範如何關閉原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 您可以透過不同的方式來設定功能，例如直接編輯 `RsReportServer.config` 檔案，或是在  **中，使用以原則為基礎之管理的 [Reporting Services 的介面區設定]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Facet。 使用下列連結即可找到說明如何開啟或關閉功能的程序：  
+ 本文中的程序將示範如何關閉原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 您可以透過不同的方式來設定功能，例如直接編輯 `RsReportServer.config` 檔案，或是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，使用以原則為基礎之管理的 [Reporting Services 的介面區設定] Facet。 使用下列連結即可找到說明如何開啟或關閉功能的程序：  
   
 -   [報表伺服器 Web 服務](#RSWebSvc)  
   

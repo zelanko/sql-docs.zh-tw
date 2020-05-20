@@ -100,7 +100,7 @@ ms.locfileid: "71290994"
   
 #### <a name="to-configure-the-data-flow-and-the-recordset-destination"></a>設定資料流程和資料錄集目的地  
   
-1.  在  **設計師的 [控制流程]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤上，將資料流程工作加入設計介面。  
+1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程] 索引標籤上，將資料流程工作加入設計介面。  
   
 2.  在 [資料流程]  索引標籤上，將 OLE DB 來源加入至資料流程工作，然後開啟 OLE DB 來源編輯器  。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "71290994"
   
 #### <a name="to-configure-the-foreach-loop-container-and-run-the-package"></a>設定 Foreach 迴圈容器並執行封裝  
   
-1.  在  **設計師的 [控制流程]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤上，加入 Foreach 迴圈容器，並將此容器連接在資料流程工作之後。  
+1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程] 索引標籤上，加入 Foreach 迴圈容器，並將此容器連接在資料流程工作之後。  
   
 2.  開啟 Foreach 迴圈編輯器  ，依照下列設定來設定容器：  
   

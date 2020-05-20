@@ -84,7 +84,7 @@ ms.locfileid: "68344603"
  這些主體帳戶沒有系統管理員可以變更的密碼，因為它們是以發行到 Microsoft 的憑證為基礎。
   
 ## <a name="the-guest-user"></a>guest 使用者  
- 每個資料庫都包括 `guest`不同的一項行為變更。 具有資料庫存取權但在資料庫中沒有使用者帳戶的使用者，將繼承授與 `guest` 使用者的權限。 無法卸除 `guest` 使用者，但可透過撤銷其 CONNECT 權限予以停用。 在任何資料庫 (不含 `REVOKE CONNECT FROM GUEST;` 或 `master`) 內執行 `tempdb`，即可撤銷 CONNECT 權限。  
+ 每個資料庫都包括 `guest`不同的一項行為變更。 具有資料庫存取權但在資料庫中沒有使用者帳戶的使用者，將繼承授與 `guest` 使用者的權限。 無法卸除 `guest` 使用者，但可透過撤銷其 CONNECT 權限予以停用。 在任何資料庫 (不含 `master` 或 `tempdb`) 內執行 `REVOKE CONNECT FROM GUEST;`，即可撤銷 CONNECT 權限。  
   
   
 ## <a name="related-tasks"></a>相關工作  
