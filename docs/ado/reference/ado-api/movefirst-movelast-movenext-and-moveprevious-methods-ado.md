@@ -23,14 +23,14 @@ helpviewer_keywords:
 - MoveFirst method [ADO]
 - MovePrevious method [ADO]
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5f0cdacc6e0d7e5512dbc259815e5b9562c9b68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4acdf777429e879ed22b99ea5a0f07775bc3798c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918114"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764499"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法（ADO）
 移至指定之[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件中的第一個、最後一個、下一個或上一個記錄，並將該記錄設為目前的記錄。  

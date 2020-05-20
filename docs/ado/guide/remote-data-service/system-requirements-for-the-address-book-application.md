@@ -11,14 +11,14 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2450cc97229a6629d4c2895f3960e3033d129789
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8aec1ebbb5d83829431e1045e746c99f1569dc48
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922030"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764629"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>通訊錄應用程式的系統需求
 若要設定通訊錄範例應用程式，您必須符合下列軟體和資料庫需求：  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - EOS property
 ms.assetid: 57e08c5f-f3ed-4ecd-8c66-50b83b1031d1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a19856c957ee0c003e934ff8b2632aa28e32d33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9199563f2a5d6ce594b88577cfb69766cf311492
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918920"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765529"
 ---
 # <a name="eos-property"></a>EOS 屬性
 指出目前的位置是否在[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)的結尾。  

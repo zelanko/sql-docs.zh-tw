@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Errors collection [ADO], members
 ms.assetid: 606f2b92-3821-4d11-a207-4c22f6f35619
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 37f6f109a53ad576a3849b4d8977c457ee3cbef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a910f0c86603a257b37fe4a27b1d2d9e57fdcb07
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918900"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765479"
 ---
 # <a name="errors-collection-properties-methods-and-events"></a>Errors 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

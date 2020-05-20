@@ -11,14 +11,14 @@ helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 928ac3b1d3cd753ded0bcf4337f10a654c9a3dc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b630d589cf20039a72091fb526302d3652f8ed31
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924829"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765609"
 ---
 # <a name="named-commands"></a>具名命令
 [建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)會顯示執行命令的一種方式。 還有另一種方式：您可以將它命名為命令，然後直接在**Connection**物件（指派給**Command**物件的**ActiveConnection**屬性）上呼叫這個名為的命令。 命名命令表示將名稱指派給**命令**物件的**name**屬性。 例如，  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Axis object [ADO MD]
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bf2b072acfda34ebdcafc1af82cd90c6be5d2537
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c251355637c5d57729a7d4aa737f2face1c9ace2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67939963"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765179"
 ---
 # <a name="axis-object-ado-md"></a>Axis 物件 (ADO MD)
 表示儲存格集的位置或篩選軸，其中包含一或多個維度的選取成員。  

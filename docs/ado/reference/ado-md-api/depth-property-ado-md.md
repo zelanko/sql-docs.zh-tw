@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Depth property [ADO MD]
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 249ab4a4a4f82e5fd6eebfd326c71971f401bcc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 146e845e7f0867f19ccd90e4260dd3abf01ba3ac
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67952191"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764319"
 ---
 # <a name="depth-property-ado-md"></a>Depth 屬性 (ADO MD)
 指出層級和階層根之間的層[級](../../../ado/reference/ado-md-api/level-object-ado-md.md)數目。  

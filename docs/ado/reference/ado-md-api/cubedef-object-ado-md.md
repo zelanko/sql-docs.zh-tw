@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61795a8cb10fb0b469f89012d52dfb4723aa0a89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 25dd4d6a9c8a5518c8c2b637af63b39e7b992557
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949791"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764349"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 物件 (ADO MD)
 代表多維架構中的 cube，其中包含一組相關維度。  
@@ -38,7 +38,7 @@ ms.locfileid: "67949791"
   
  **Properties**集合包含提供者提供的屬性。 下表列出可能可用的屬性。 實際的屬性清單可能會根據提供者的執行而有所不同。 如需可用屬性的完整清單，請參閱提供者的檔。  
   
-|名稱|描述|  
+|Name|描述|  
 |----------|-----------------|  
 |CatalogName|這個 cube 所屬的目錄名稱。|  
 |CreatedOn|建立 cube 的日期和時間。|  

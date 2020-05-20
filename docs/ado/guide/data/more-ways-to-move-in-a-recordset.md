@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ea83f40c6d6e595277a173c181c24f33e382393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3d68fb018e3b72e193127f8f49160813c06a1332
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924882"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764809"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>更多可以在資料錄集中移動的方法
 下列四種方法可用來在**記錄集**內四處移動或滾動： [MoveFirst、MoveLast、MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)。 （其中有些方法在順向資料指標上無法使用）。  
@@ -46,7 +46,7 @@ If oRs.BOF Then oRs.MoveFirst
 . . .  
 ```  
   
- 如果**記錄集**已經過篩選或排序，而且目前記錄的資料已變更，則位置也可能會變更。 在這種情況下， **MoveNext**方法會正常運作，但請注意，位置會從新位置向前移動一筆記錄，而非舊位置。 例如，變更目前記錄中的資料，使記錄移至已排序**記錄集**的結尾，這表示呼叫**MoveNext**會在 ADO 中將目前的記錄設定為**記錄集**內最後一筆記錄之後的位置（**EOF** = **True**）。  
+ 如果**記錄集**已經過篩選或排序，而且目前記錄的資料已變更，則位置也可能會變更。 在這種情況下， **MoveNext**方法會正常運作，但請注意，位置會從新位置向前移動一筆記錄，而非舊位置。 例如，變更目前記錄中的資料，使記錄移至已排序**記錄集**的結尾，這表示呼叫**MoveNext**會在 ADO 中將目前的記錄設定為**記錄集**內最後一筆記錄之後的位置（**EOF**  =  **True**）。  
   
  **記錄集**物件之各種 Move 方法的行為，在**記錄集**內的資料上會有某種程度的相依。 加入至**記錄集**的新記錄一開始會以特定順序加入，這是由資料來源所定義，而且可能會隱含或明確地相依于新記錄中的資料。 例如，如果在填入**記錄集**的查詢中進行排序或聯結，則會將新的記錄插入**記錄集**內的適當位置。 如果在建立**記錄集**時未明確指定排序，則資料來源執行中的變更可能會導致傳回的資料列順序不小心變更。 此外，**記錄集**的排序、篩選和編輯功能可能會影響順序，而且記錄集內的資料列可能會顯示。  
   

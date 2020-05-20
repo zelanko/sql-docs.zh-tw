@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS scenarios [ADO], navigation buttons
 - address book application scenario [ADO], navigation buttons
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 158b9084ebe9aac28a2ec05c18938338c1bc90ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fcb9ef043f27cd36c57b35605c8bf8257613af5d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922962"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764709"
 ---
 # <a name="address-book-navigation-buttons"></a>通訊錄導覽按鈕
 通訊錄應用程式會在網頁底部顯示瀏覽按鈕。 您可以使用導覽按鈕，藉由選取資料的第一個或最後一列或目前選取範圍旁的資料列，流覽 HTML 方格顯示中的資料。  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Parameter object [ADO], members
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e20cb08ccfedbc2fa60b703279f8494d0f3f53c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7dec9eb2213bef6b2ba34ff1022c3aa6a2ef145a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917780"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765439"
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>Parameter 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Children property [ADO MD]
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cbec9733044127d23e75364697a41ccd7e8910e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7e52923ae428ab7b0e633049594781bd4456f9df
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911524"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764389"
 ---
 # <a name="children-property-ado-md"></a>Children 屬性 (ADO MD)
 傳回[成員](../../../ado/reference/ado-md-api/members-collection-ado-md.md)集合，其中目前[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)是階層中的父系。  

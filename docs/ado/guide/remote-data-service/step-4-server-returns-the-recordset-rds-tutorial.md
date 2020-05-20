@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], server returns Recordset
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bd243b21b7003c524c3483f5b8d7bb92be1e18d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ce53c987a43ed208a4d7120fb3655b3a3acd5083
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922065"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764659"
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>步驟 4：伺服器傳回資料錄集 (RDS 教學課程)
 > [!IMPORTANT]

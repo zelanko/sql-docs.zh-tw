@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Parameter collection [ADO], ADO for Visual C++ syntax
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b97aebefa2176d3569b818751cd3b8ff039bfc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 60d0c572386d31daa2a4ac4e3af1961c4436f399
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931775"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765459"
 ---
 # <a name="parameter-ado-for-visual-c-syntax"></a>Parameter (ADO for Visual C++ 語法)
 ## <a name="methods"></a>方法  

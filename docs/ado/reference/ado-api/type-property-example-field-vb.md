@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Type property [field] [ADO], Visual Basic example
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ab43149a0e938be4359203b0da750b04a82b545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1d3f13b0f76884f4b5e0077bdebef0c009d7b546
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936686"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765349"
 ---
 # <a name="type-property-example-field-vb"></a>Type 屬性範例 (Field) (VB)
 這個範例會示範[type](../../../ado/reference/ado-api/type-property-ado.md)屬性，方法是顯示常數的名稱，其對應至***Employees***資料表中所有[Field](../../../ado/reference/ado-api/field-object.md)物件的[Type](../../../ado/reference/ado-api/type-property-ado.md)屬性值。 需要 FieldType 函數才能執行此程式。  

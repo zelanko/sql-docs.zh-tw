@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 71b1897830c4a5382e6903f5e05aa29d1ce37d1b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922978"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764729"
 ---
 # <a name="address-book-data-binding-object"></a>通訊錄資料繫結物件
 通訊錄應用程式會使用[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件，可在應用程式的用戶端 HTML 網頁中，將資料從 SQL Server 資料庫系結至視覺物件（在此案例中為 DHTML 資料表）。 事件驅動的 VBScript 程式邏輯會使用[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)至：  
@@ -60,7 +60,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |參數|描述|  
 |---------------|-----------------|  
-|[伺服器](../../../ado/reference/rds-api/server-property-rds.md)|如果您使用的是 HTTP，此值會是前面加上的伺服器電腦`https://`名稱。|  
+|[伺服器](../../../ado/reference/rds-api/server-property-rds.md)|如果您使用的是 HTTP，此值會是前面加上的伺服器電腦名稱稱 `https://` 。|  
 |[到](../../../ado/reference/rds-api/connect-property-rds.md)|提供 RDS 的必要連接資訊 **。DataControl**以連接到 SQL Server。|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|設定或傳回用來抓取[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的查詢字串。|  
   

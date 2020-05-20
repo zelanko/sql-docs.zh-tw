@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO MD]
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 089fad427989c26ed1ed22ec3e9267297a29b820
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c0469bef1bce402efe143fbaa1ac760e3465d630
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949381"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765091"
 ---
 # <a name="open-method-ado-md"></a>Open 方法 (ADO MD)
 抓取多維度查詢的結果，並將結果傳回到[集格](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  

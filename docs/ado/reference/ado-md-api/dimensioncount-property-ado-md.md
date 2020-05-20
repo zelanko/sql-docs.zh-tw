@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - DimensionCount property [ADO MD]
 ms.assetid: 87929cbc-9c38-491a-8616-62d45c51e299
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ccb2ae99761ecfa1fc52cef44e4cf35a5600531
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bc7916ee2ccaea4875b4021b559d9d22eb8f9c77
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938491"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764279"
 ---
 # <a name="dimensioncount-property-ado-md"></a>DimensionCount 屬性 (ADO MD)
 指出[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)上的維度數目。  

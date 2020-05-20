@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Seek method [ADO], Visual Basic example
 - index property [ADO]
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc39677c9d3c847a87c5ef510fffbd776acf8e7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a9d82cda586f5694b9f7644ca01eff781ea3e79d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931129"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765419"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Seek 方法和 Index 屬性範例（VB）
 這個範例會使用[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[Seek](../../../ado/reference/ado-api/seek-method.md)方法和[Index](../../../ado/reference/ado-api/index-property.md)屬性搭配指定的***員工識別碼***，以在 Nwind 的***Employees***資料表中找出員工的名稱。  

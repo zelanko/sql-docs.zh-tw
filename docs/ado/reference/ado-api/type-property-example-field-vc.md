@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b3f957e4ed81eeb1853689162f61b1945d26730b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936651"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765329"
 ---
 # <a name="type-property-example-field-vc"></a>Type 屬性範例 (Field) (VC++)
 這個範例會示範[type](../../../ado/reference/ado-api/type-property-ado.md)屬性，方法是顯示常數的名稱，其對應至***Employees***資料表中所有[Field](../../../ado/reference/ado-api/field-object.md)物件的**Type**屬性值。 需要 FieldType 函數才能執行此程式。  

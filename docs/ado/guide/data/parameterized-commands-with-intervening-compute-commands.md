@@ -13,14 +13,14 @@ helpviewer_keywords:
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb6bc2b9f7e53caf28f44daf39815850940b9d3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f66bde29a5036ed671f9af17bf5aab1df4acbca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924729"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764779"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>參數化命令與中介 COMPUTE 命令
 一般參數化圖形 APPEND 命令有一個子句，它會使用查詢命令建立父**記錄集**，而另一個子句會使用參數化查詢命令建立子**記錄集**，也就是包含參數預留位置的命令（問號，"？"）。 產生的成形**記錄集**有兩個層級，其中父代會佔用上層，而子系會佔用較低的層級。  

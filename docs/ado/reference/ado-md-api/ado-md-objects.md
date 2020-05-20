@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 01a35a38812d105a1e26454022321e57448efadd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930579"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765249"
 ---
 # <a name="ado-md-objects"></a>ADO MD 物件
 
@@ -33,7 +33,7 @@ ms.locfileid: "67930579"
 |[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|表示維度成員可以匯總或「匯總」的一種方式。 維度可以沿著一或多個階層匯總。|  
 |[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|包含一組成員，其中每一個都在階層內具有相同的次序。|  
 |[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)|代表 cube 中層級的成員、層級成員的子系，或沿著資料格集軸之位置的成員。|  
-|[移動](../../../ado/reference/ado-md-api/position-object-ado-md.md)|代表一組不同維度的一或多個成員，定義沿著軸的點。|  
+|[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)|代表一組不同維度的一或多個成員，定義沿著軸的點。|  
   
  此外，**目錄**物件也會連接到包含在標準 ado 程式庫中的 ado**連接**物件：  
   

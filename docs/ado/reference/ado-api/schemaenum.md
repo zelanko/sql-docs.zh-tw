@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cb004c33ae413c93506bc1c90b331494b7e56adc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931116"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765429"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法所抓取之架構**記錄集**的類型。  

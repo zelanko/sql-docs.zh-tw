@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], specifying server program
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6cecddfe127bba43852412b6d804254f35103def
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7856a6a77720b4988c4a15afd86f24ff0070b28
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922112"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764689"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>步驟 1：指定伺服器程式 (RDS 教學課程)
 在最常見的情況下，請使用[RDS。](../../../ado/reference/rds-api/dataspace-object-rds.md)[使用者空間] 物件[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法，指定預設伺服器程式、 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)或您自己的自訂伺服器程式（商務物件）。 伺服器程式會在伺服器上具現化，並傳回伺服器程式或*proxy*的參考。  

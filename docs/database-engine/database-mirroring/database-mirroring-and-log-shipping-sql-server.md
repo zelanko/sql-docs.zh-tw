@@ -103,7 +103,7 @@ ms.locfileid: "68006469"
   
      您必須使用與步驟 4 中相同的備份共用。  
   
-     **中的 [交易記錄傳送]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 介面，在每個記錄傳送設定中只支援一個主要資料庫。 因此，您必須使用預存程序，將新的主體資料庫設定為主要資料庫。  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [交易記錄傳送] 介面，在每個記錄傳送設定中只支援一個主要資料庫。 因此，您必須使用預存程序，將新的主體資料庫設定為主要資料庫。  
   
 7.  執行另一個手動容錯移轉作業，在錯誤後回復至原始主體資料庫。  
   

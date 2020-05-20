@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD, methods
 - methods [ADO MD]
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9aa722813994ec950516c513c7e0e673b83b0c73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44cdaf1ea526a85816ddee18157a4a11052fa040
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67939994"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765219"
 ---
 # <a name="ado-md-methods"></a>ADO MD 方法
 

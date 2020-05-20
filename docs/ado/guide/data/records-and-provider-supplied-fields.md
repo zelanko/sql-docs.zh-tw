@@ -11,14 +11,14 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abfa226c5bc6c94613a5d45c48a351811235455f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924510"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764789"
 ---
 # <a name="records-and-provider-supplied-fields"></a>記錄和提供者提供的欄位
 當[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件開啟時，其來源可以是開啟之[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的目前資料列、絕對 URL，或與開啟的[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件結合的相對 URL。  
@@ -63,7 +63,7 @@ ms.locfileid: "67924510"
 |RESOURCE_ISHIDDEN|AdBoolean|如果資源已隱藏，則為 True。 除非建立資料列集的命令明確地選取 RESOURCE_ISHIDDEN 為 True 的資料列，否則不會傳回任何資料列。|  
 |RESOURCE_ISREADONLY|AdBoolean|如果資源是唯讀的，則為 True。 嘗試使用 DBBINDFLAG_WRITE 開啟此資源，將會失敗並出現 DB_E_READONLY。 即使資源只有開啟以供讀取，此屬性也可以進行編輯。|  
 |RESOURCE_CONTENTTYPE|AdVarWChar|指出可能使用檔的情況，例如律師的簡短。 這可能會對應到用來建立檔的 Office 範本。|  
-|RESOURCE_CONTENTCLASS|AdVarWChar|表示檔的 MIME 類型，表示 "`text/html`" 之類的格式。|  
+|RESOURCE_CONTENTCLASS|AdVarWChar|表示檔的 MIME 類型，表示 "" 之類的格式 `text/html` 。|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|表示用來儲存內容的語言。|  
 |RESOURCE_CREATIONTIME|adFileTime|唯讀。 表示 FILETIME 結構，其中包含資源的建立時間。 時間是以國際標準時間（UTC）格式來報告。|  
 |RESOURCE_LASTACCESSTIME|AdFileTime|唯讀。 表示 FILETIME 結構，其中包含上次存取資源的時間。 時間是 UTC 格式。 如果提供者不支援這個時間成員，FILETIME 成員就會是零。|  

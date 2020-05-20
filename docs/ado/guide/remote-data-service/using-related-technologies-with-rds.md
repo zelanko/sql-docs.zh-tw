@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS related technologies [ADO]
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ca2a49e1a0eb9d69baa875d8ee956a5ec1ccb374
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 616a30e96664727248dbe852c6c73288808f670b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921891"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764589"
 ---
 # <a name="using-related-technologies-with-rds"></a>搭配 RDS 使用相關技術
 此章節包含下列主題。  

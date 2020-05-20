@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD collections
 - collections [ADO MD]
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8b4e8d3c36054cd4e9dc49e940e60df51f17ddc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5e3b3d1cc3884c7febc396e4af3918c156859762
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67940017"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765239"
 ---
 # <a name="ado-md-collections"></a>ADO MD 集合
 

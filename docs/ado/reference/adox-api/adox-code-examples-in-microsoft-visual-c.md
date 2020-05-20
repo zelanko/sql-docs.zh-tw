@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADOX code examples, Visual C++
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d8ee6ac768cc7cb0225f78602754c64e0363786f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ab7c47857ac8a25b50567660ca8fbcc0ed51994c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67952122"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764169"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++ 中的 ADOX 程式碼範例
 這些主題提供範例程式碼，可協助您瞭解如何使用 ADOX。 所有程式碼範例都是使用 Microsoft Visual C++ 來撰寫。  

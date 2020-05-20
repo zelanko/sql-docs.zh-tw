@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3bcea9183d44b02e5f45b7bdb977573f283815b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e5b9fd4327a25af3faf87b966c510d1d4016c89d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911701"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765379"
 ---
 # <a name="supports-method-example-vb"></a>Supports 方法範例 (VB)
 這個範例會使用[支援](../../../ado/reference/ado-api/supports-method.md)方法，顯示以不同資料指標類型開啟的記錄集所支援的選項。 執行此程式時需要 DisplaySupport 程式。  

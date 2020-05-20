@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADO MD code examples, VBScript
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 345b87539452a974b054b3aec07c648a3c2b6fad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 53e27109028204739a9de245d28909405cf939e4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947385"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765189"
 ---
 # <a name="axis-example-vbscript"></a>Axis 範例 (VBScript)
 此 [Active Server] 頁面會顯示 MDX 查詢字串中的 OLAP 資料，並將產生的資料格集寫入 HTML 資料表結構。  

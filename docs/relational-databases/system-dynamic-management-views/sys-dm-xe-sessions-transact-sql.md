@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_xe_sessions dynamic management view
 - extended events [SQL Server], views
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9b42a6808d9cab6a3431a68bff9e29e83354a2af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0ed8dc099113822741d3d67df4797ef89bbbe682
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090208"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802848"
 ---
 # <a name="sysdm_xe_sessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68090208"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |address|**varbinary(8)**|工作階段的記憶體位址。 位址在本機系統中是唯一的。 不可為 Null。|  
-|NAME|**nvarchar(256)**|工作階段的名稱。 名稱在本機系統中是唯一的。 不可為 Null。|  
+|name|**nvarchar(256)**|工作階段的名稱。 名稱在本機系統中是唯一的。 不可為 Null。|  
 |pending_buffers|**int**|正在暫止處理的完整緩衝區數目。 不可為 Null。|  
 |total_regular_buffers|**int**|與工作階段有關的一般緩衝區總數。 不可為 Null。<br /><br /> 注意：通常會使用一般緩衝區。 這些緩衝區有足夠的大小可以容納許多事件。 每個工作階段通常有三或多個緩衝區。 伺服器會根據透過 MEMORY_PARTITION_MODE 選項設定的記憶體資料分割，自動決定一般緩衝區的數目。 一般緩衝區的大小等於除以緩衝區數目之 MAX_MEMORY 選項的值 (預設為 4 MB)。 如需 MEMORY_PARTITION_MODE 和 MAX_MEMORY 選項的詳細資訊，請參閱[CREATE EVENT SESSION &#40;transact-sql&#41;](../../t-sql/statements/create-event-session-transact-sql.md)。|  
 |regular_buffer_size|**bigint**|一般緩衝區的大小 (以位元組為單位)。 不可為 Null。|  

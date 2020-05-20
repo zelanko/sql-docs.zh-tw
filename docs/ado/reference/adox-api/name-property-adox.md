@@ -39,14 +39,14 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADOX]
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 52808cf9e90c6779efb9f95e385f8df501bae870
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68e9625b1e5acb7ef0d7b8d1389895d8a96dcbef
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965754"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763819"
 ---
 # <a name="name-property-adox"></a>Name 屬性 (ADOX)
 指出物件的名稱。  

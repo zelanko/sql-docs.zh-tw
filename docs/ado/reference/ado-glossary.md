@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0b6bd1cb1f5b0461236c0604bb5818d9dcbadd2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76925593"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765299"
 ---
 # <a name="ado-glossary"></a>ADO 詞彙
 本主題定義 ADO 的相關詞彙。  
@@ -49,7 +49,7 @@ ms.locfileid: "76925593"
  資料表中的欄位與變數之間的對應。 在 ADO Visual C++ 延伸模組中，**記錄集**欄位會對應至 c/c + + 變數。  
   
  特  
- 一個數值，適用于與其他數值的位元速率比較，通常是在參數或傳回值中加上旗標選項。 通常這項比較是使用位邏輯運算子來完成，例如**和**和，**或**在**&** Visual Basic 中，在 c + + 中 **&#124;** 。  
+ 一個數值，適用于與其他數值的位元速率比較，通常是在參數或傳回值中加上旗標選項。 通常這項比較是使用位邏輯運算子來完成，例如**和**和，**或**在 Visual Basic 中，在 **&** c + + 中 **&#124;** 。  
   
  例如，ADO **FieldAttributeEnum**值可以用來做為位元遮罩，以決定欄位的屬性。 假設您想要判斷欄位是否可更新。 您可以在 Visual Basic 中使用下列運算式來測試此項：`Field.Attributes AND adFldUpdatable`  
   
@@ -100,7 +100,7 @@ ms.locfileid: "76925593"
  比較運算子  
  比較兩個運算式並傳回布林值的運算子。  
   
- 可以表示為 ">" （大於）、"\<" （小於）、"=" （等於）、">=" （大於或等於）、"<=" （小於或等於）、"<>" （不等於）或 "like" （模式比對）的準則參數。  
+ 可以表示為 ">" （大於）、" \< " （小於）、"=" （等於）、">=" （大於或等於）、"<=" （小於或等於）、"<>" （不等於）或 "like" （模式比對）的準則參數。  
   
  component  
  封裝資料和程式碼的物件，並提供一組妥善指定的公開可用服務。  
@@ -186,7 +186,7 @@ ms.locfileid: "76925593"
  ISAPI （網際網路伺服器應用程式開發介面）  
  一組適用于網際網路伺服器的功能，例如執行 Microsoft® Internet Information Services （IIS）的 Windows NT® Server/Windows 2000 伺服器。  
   
- Key  
+ 答案  
  唯一識別資料列的資料表中的一個或多個資料行;通常用來編制資料表索引。  
   
 ## <a name="m"></a>M  
@@ -206,7 +206,7 @@ ms.locfileid: "76925593"
  階層式樹狀結構中的元素。 節點可以是根，或另一個節點的子系。 節點也可以是多個子系的父系。 另請參閱階層、樹狀結構、根、子系、父系。  
   
  物件變數  
- 包含對物件之參考的變數。 例如， `objCustomObject`是指向 CustomObject 類型物件的變數：`Set objCustomObject = CreateObject(adodb.Recordset)`  
+ 包含對物件之參考的變數。 例如， `objCustomObject` 是指向 CustomObject 類型物件的變數：`Set objCustomObject = CreateObject(adodb.Recordset)`  
   
  ODBC (開放式資料庫連接)  
  一種標準的程式設計語言介面，用來連接到各種不同的資料來源。 這通常是透過 [控制台] 來存取，其中的資料來源名稱（Dsn）可指派為使用特定的 ODBC 驅動程式。  
@@ -263,7 +263,7 @@ ms.locfileid: "76925593"
  來自資料來源的一組資料列，全都具有相同的欄位架構。 資料列集可以代表資料表中的所有或部分欄位。 資料列集也可以代表由查詢或聯結兩個或多個資料表所建立的虛擬資料表。 在 ADO 中，資料列集是由**Recordset**物件所表示。  
   
 ## <a name="s"></a>S  
- 影響範圍  
+ 領域  
  物件或變數的參考範圍，或是視圖或資料表中的記錄範圍。 例如，本機變數只能在其定義所在的程式內參考。 公用變數可從應用程式中的任何位置存取。 如目前資料庫的物件位於定義的搜尋路徑中，則會在範圍中。 您可以在許多命令中使用 Scope 子句來指定記錄範圍。  
   
  服務提供者  

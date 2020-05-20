@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO]
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 448510f237fc4ce56368d7f2d74b72f63de87c61
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921517"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764569"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 屬性 (ADO)
 指出指定的[命令](../../../ado/reference/ado-api/command-object-ado.md)、[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)或[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件目前所屬的[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
@@ -33,7 +33,7 @@ ms.locfileid: "67921517"
 ## <a name="remarks"></a>備註  
  使用**ActiveConnection**屬性來判斷指定的**命令**物件將會執行的**連接**物件，或指定的**記錄集**將會開啟。  
   
-## <a name="command"></a>Command  
+## <a name="command"></a>命令  
  對於**命令**物件， **ActiveConnection**屬性是可讀寫的。  
   
  如果您嘗試在**命令**物件上呼叫[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法，再將此屬性設定為開啟的**連接**物件或有效的連接字串，則會發生錯誤。  

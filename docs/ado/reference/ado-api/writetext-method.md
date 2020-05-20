@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64b7d8fd3f2220562e3695d6e31c83261daa2e60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3ee7f4b99b40b6aec3e384f9f5739f8f5d2280f4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947490"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764409"
 ---
 # <a name="writetext-method"></a>WriteText 方法
 將指定的文字字串寫入[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

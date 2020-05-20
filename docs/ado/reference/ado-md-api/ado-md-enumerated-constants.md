@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADO MD]
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32c1905ffa7466da8c053cfb23a22cbc5d1a382e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 450f1d8748b6f9300a353892f3ca321c82732602
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67939984"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765259"
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD 列舉常數
 為了協助進行偵錯工具，ADO MD 列舉常數會列出每個常數的值。 不過，這個值純粹是諮詢，而且可能會從 ADO MD 的某個版本變更為另一個。 您的程式碼應該只取決於列舉常數的名稱，而不是實際的值。  

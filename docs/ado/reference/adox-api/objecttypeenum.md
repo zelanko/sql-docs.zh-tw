@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectTypeEnum enumeration [ADOX]
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04c7b1d1cb5d07a300b82d13a7e80158498bbd5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d493218f31965c04b5a64321c4a1bf87a2518f6f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965659"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763789"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 指定要設定其許可權或擁有權的資料庫物件類型。  
   
-|持續性|值|描述|  
+|持續性|值|說明|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|物件是資料行。|  
 |**adPermObjDatabase**|3|物件是資料庫。|  

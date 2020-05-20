@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SetObjectOwner method [ADOX], Visual Basic example
 - GetObjectOwner method [ADOX], Visual Basic example
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 03850fdaef19ece963bb7b196ab14edccd290fde
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2cc708ed86c9fd06997ce21c2be8f6ab836c1725
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966383"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764929"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner 和 SetObjectOwner 方法範例 (VB)
 這個範例示範[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)和[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)方法。 此程式碼假設群組會計存在（請參閱[群組和使用者附加、ChangePassword 方法範例（VB））](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) ，以瞭解如何將此群組新增至系統。 Category 資料表的擁有者已設定為會計。  

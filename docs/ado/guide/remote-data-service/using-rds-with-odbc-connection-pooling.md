@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling in RDS [ADO]
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2ffcc64cb9d0e45d371e927cd1c15be51cd917c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0e94670162c1d9c120786bfc08ed8d5f8cf59972
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921930"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764599"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>搭配 ODBC 連線集區使用 RDS
 如果您使用的是 ODBC 資料來源，您可以使用 Internet Information Services （IIS）中的 [連接共用] 選項，以達成用戶端負載的高效能處理。 連接共用是連接的資源管理員，可維護常用連線的開啟狀態。  

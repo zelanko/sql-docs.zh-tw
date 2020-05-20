@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - Description property [ADO MD]
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5636b5f4e49ff9a5bbe46937a8d7b972e61b4502
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 05efe4c1e31f1ee9c7b7abd130a9d9c810ab12f4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938579"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764309"
 ---
 # <a name="description-property-ado-md"></a>Description 屬性 (ADO MD)
 傳回目前物件的文字說明。  

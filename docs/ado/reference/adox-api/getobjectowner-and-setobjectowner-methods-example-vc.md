@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SetObjectOwner method [ADOX], VC++ example
 - GetObjectOwner method [ADOX], VC++ example
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c16536becfcea826d9cb6e6ea251517d40ad3ded
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 04c8a84da02d31314146b4f54b93cc0edf7bb30e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76934643"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764917"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner 和 SetObjectOwner 方法範例 (VC++)
 這個範例示範[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)和[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)方法。 此程式碼假設群組會計存在（請參閱[群組和使用者附加、ChangePassword 方法範例（VC + +））](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) ，以瞭解如何將此群組新增至系統。 Category 資料表的擁有者已設定為會計。  

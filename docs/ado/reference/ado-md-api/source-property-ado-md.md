@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO MD]
 ms.assetid: 875a99ea-7f1a-4570-87b1-5ecbebbcf845
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0af28306ebc8aa1c10d33f3c96d7871e67144ca7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 16fa17ff537aa8330643e724f06954152267f06d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949147"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764989"
 ---
 # <a name="source-property-ado-md"></a>Source 屬性 (ADO MD)
 表示資料[格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)內資料的來源。  

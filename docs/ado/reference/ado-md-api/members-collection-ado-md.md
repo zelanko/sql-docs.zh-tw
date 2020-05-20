@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Members collection [ADO MD]
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 79394abee5b12bb10f34a34e882d2ac0562722fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e8337bfd2e7fb8ece226709f86c3b57ef746baca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949436"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765093"
 ---
 # <a name="members-collection-ado-md"></a>Members 集合 (ADO MD)
 包含來自層級的[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件或沿著軸的位置。  

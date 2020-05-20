@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADOX]
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ff18386cb9da4edbeaa8930d138ba9951965ee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 84a03af49152bc305f62aceb149d904ef0acf9a0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928558"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764139"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 列舉常數
 為協助進行偵錯工具，ADOX 列舉常數會列出每個常數的值。 不過，此值純粹是諮詢，而且可能會從一個 ADOX 版本變更為另一個。 您的程式碼應該只取決於列舉常數的名稱，而不是實際的值。  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, object model
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 68a4b4a11c8662cfdd3df19aa99cdc2e749f1de9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 69536f73c26a51debe4e53ea123c8b73fcd0488e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930597"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765269"
 ---
 # <a name="ado-md-object-model"></a>ADO MD 物件模型
 本主題描述如何在 ADO MD 中表示和關聯物件。  

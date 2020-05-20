@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e413913d3064b4302d4673098b82d220acc23aa1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920891"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764559"
 ---
 # <a name="ado-properties"></a>ADO 屬性
 
@@ -31,7 +31,7 @@ ms.locfileid: "67920891"
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|表示域值的實際長度。|  
 |[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)|表示物件的一或多個特性。|  
 |[BOF 和 EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF**表示目前的記錄位置在記錄集物件中的第一筆記錄之前。<br /><br /> **EOF**表示目前的記錄位置是在記錄集物件中的最後一筆記錄之後。|  
-|[書簽](../../../ado/reference/ado-api/bookmark-property-ado.md)|表示可唯一識別**記錄集**物件中目前記錄的書簽，或將**記錄集**物件中的目前記錄設定為有效書簽所識別的記錄。|  
+|[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)|表示可唯一識別**記錄集**物件中目前記錄的書簽，或將**記錄集**物件中的目前記錄設定為有效書簽所識別的記錄。|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|指示記錄**集**物件中，從本機快取到記憶體中的記錄數目。|  
 |[章節](../../../ado/reference/ado-api/chapter-property-ado.md)|取得或設定**ADORecordsetConstruction**物件上/的 OLE DB**章節**物件。|  
 |[字元集](../../../ado/reference/ado-api/charset-property-ado.md)|表示文字**資料流程**內容應轉譯成的字元集。|  
@@ -45,10 +45,10 @@ ms.locfileid: "67920891"
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|表示資料指標服務的位置。|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|表示**記錄集**物件中使用的資料指標類型。|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|指出將從**DataSource**屬性所參考之物件中抓取的資料成員名稱。|  
-|[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|表示物件，其中包含要表示為**記錄集**物件的資料。|  
+|[源](../../../ado/reference/ado-api/datasource-property-ado.md)|表示物件，其中包含要表示為**記錄集**物件的資料。|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|表示**連接**物件的預設資料庫。|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|指出**欄位**物件的資料容量。|  
-|[說明](../../../ado/reference/ado-api/description-property.md)|描述**錯誤**物件。|  
+|[描述](../../../ado/reference/ado-api/description-property.md)|描述**錯誤**物件。|  
 |[專用](../../../ado/reference/ado-api/dialect-property.md)|指出提供者將用來剖析**CommandText**或**CommandStream**屬性的語法和一般規則。|  
 |[方向](../../../ado/reference/ado-api/direction-property.md)|指出**參數**是否代表輸入參數、輸出參數或兩者，如果參數是預存程式的傳回值，則為。|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|指出目前記錄的編輯狀態。|  
@@ -72,7 +72,7 @@ ms.locfileid: "67920891"
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|指出有多少記錄代表**記錄集中**的一個頁面。|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|設定**ADORecordConstruction**物件上 OLE DB **row**物件的容器，以便將資料列的父系轉換成 ADO **Record**物件。|  
 |[ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)|表示指向目前**記錄**物件之父**記錄**的絕對 URL 字串。|  
-|[移動](../../../ado/reference/ado-api/position-property-ado.md)|表示**資料流程**物件中目前的位置。|  
+|[位置](../../../ado/reference/ado-api/position-property-ado.md)|表示**資料流程**物件中目前的位置。|  
 |[有效位數](../../../ado/reference/ado-api/precision-property-ado.md)|表示**參數**物件或數值**欄位**物件中數值的有效位數程度。|  
 |[Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)|指出是否要在執行之前儲存已編譯版本的命令。|  
 |[提供者](../../../ado/reference/ado-api/provider-property-ado.md)|表示**連接**物件之提供者的名稱。|  
@@ -93,7 +93,7 @@ ms.locfileid: "67920891"
 |[類型](../../../ado/reference/ado-api/type-property-ado.md)|表示**參數**、**欄位**或**屬性**物件的操作類型或資料類型。|  
 |[類型（ADO 資料流程）](../../../ado/reference/ado-api/type-property-ado-stream.md)|表示**資料流程**中包含的資料類型（二進位或文字）。|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|指出**欄位**物件在資料庫中的目前值。|  
-|[ReplTest1](../../../ado/reference/ado-api/value-property-ado.md)|指出指派給**欄位**、**參數**或**屬性**物件的值。|  
+|[值](../../../ado/reference/ado-api/value-property-ado.md)|指出指派給**欄位**、**參數**或**屬性**物件的值。|  
 |[版本](../../../ado/reference/ado-api/version-property-ado.md)|表示 ADO 版本號碼。|  
   
 ## <a name="see-also"></a>另請參閱  

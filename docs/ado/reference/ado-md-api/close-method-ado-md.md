@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Close method [ADO MD]
 ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09e83fd8645a5c0ab604a640478c4cced4870742
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a0c2b9236ba60902fe53727be722723e7138aba0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949816"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764379"
 ---
 # <a name="close-method-ado-md"></a>Close 方法 (ADO MD)
 關閉開啟的儲存格集。  

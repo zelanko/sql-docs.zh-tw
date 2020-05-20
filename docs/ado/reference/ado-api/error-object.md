@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - error object [ADO]
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5018dc921267663d64037024ef21c82ac6e3f7c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 717a3af4bec62725cc4cf5da8621163f24c2ab3f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932967"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764529"
 ---
 # <a name="error-object"></a>Error 物件
 包含有關與提供者的單一作業相關之資料存取錯誤的詳細資訊。  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADO MD code examples [ADO MD], VBScript
 ms.assetid: 4d72a912-ef53-4989-9fca-214937574116
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d17bd016470e7b6f6f6b5452ed049168b977e10
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ef0828d9bc67db5856b5299d03a8970b83c251ef
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938666"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764369"
 ---
 # <a name="cubedef-example-vbscript"></a>CubeDef 範例 (VBScript)
 這個範例會在網頁上顯示 cube 中繼資料。  

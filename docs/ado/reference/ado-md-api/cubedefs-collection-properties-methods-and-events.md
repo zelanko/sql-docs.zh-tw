@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - CubeDefs collection [ADO MD], members
 ms.assetid: bf2d1108-ba3c-4830-9c49-78e833ff37b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e80c7ae85b32bde70f863181b808256f91302917
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b55d9108f842be191ddb585f757a032629d13c3a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938597"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764329"
 ---
 # <a name="cubedefs-collection-properties-methods-and-events"></a>CubeDefs 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

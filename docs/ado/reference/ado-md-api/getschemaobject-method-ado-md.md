@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetSchemaObject method [ADO MD]
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 690c81a46c62c8844780e82b5c82a0ff7301105d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a8853e967a75a67aadccc7e48d684ab92819a71d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949768"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764209"
 ---
 # <a name="getschemaobject-method-ado-md"></a>GetSchemaObject 方法 (ADO MD)
 依[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)，抓取 ADO MD 架構物件（[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) [、階層、](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)或[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)）。  

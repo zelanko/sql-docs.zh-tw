@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 17d2d282eddcd358d8b3efe90ffda2d40e9e1574
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924730"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764799"
 ---
 # <a name="operation-of-parameterized-commands"></a>參數化命令的作業
 如果您使用的是大型子**記錄集**，特別是與父**記錄集**的大小相比較，但只需要存取一些子章節，您可能會發現使用參數化命令會更有效率。  
@@ -86,7 +86,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
  這個範例會利用 SQL WHERE 子句的更大彈性來取得您所需的結果。  
   
 > [!NOTE]
->  使用 WHERE 子句時，參數無法使用 text、Ntext 和 image 的 SQL 資料類型，否則會產生包含下列描述的錯誤： `Invalid operator for data type`。  
+>  使用 WHERE 子句時，參數無法使用 text、Ntext 和 image 的 SQL 資料類型，否則會產生包含下列描述的錯誤： `Invalid operator for data type` 。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   

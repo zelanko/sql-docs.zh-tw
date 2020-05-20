@@ -21,7 +21,7 @@ ms.locfileid: "67990938"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相關的安裝動作可以透過安裝中心來存取。 **[安裝中心]** 的 **[進階]** 頁面包含兩個選項 - 準備 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]獨立執行個體的映像** 及 完成備妥的 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]獨立執行個體的映像**。 [準備](#prepare) 和 [完成](#complete) 章節會詳細說明安裝程序。 如需詳細資訊，請參閱＜ [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)＞。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相關的安裝動作可以透過安裝中心來存取。 **[安裝中心]** 的 **[進階]** 頁面包含兩個選項 - 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**獨立執行個體的映像** 及 完成備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**獨立執行個體的映像**。 [準備](#prepare) 和 [完成](#complete) 章節會詳細說明安裝程序。 如需詳細資訊，請參閱＜ [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)＞。 
   
 您也可以使用命令提示字元或組態檔，準備及完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如需詳細資訊，請參閱  
   
@@ -83,19 +83,19 @@ ms.locfileid: "67990938"
   
 1. 插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 Setup.exe。 若要從網路共用進行安裝，請找出共用上的根資料夾，然後按兩下 Setup.exe。 
   
-2. 安裝精靈會執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請在 [進階] **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面上，按一下 準備**  獨立執行個體的映像  。 
+2. 安裝精靈會執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請在 [進階] 頁面上，按一下 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像。 
   
 3. 系統組態檢查會在電腦上執行探索作業。 若要繼續進行，請按一下 **[確定]** 。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
-4. 最新可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新會隨即顯示在 [產品更新] 頁面上。 如果不想包含更新，請清除 包含  **產品更新程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 核取方塊。 如果未偵測到任何產品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將不會顯示此頁面，而會自動前往 **[安裝安裝程式檔案]** 頁面。 
+4. 最新可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新會隨即顯示在 [產品更新] 頁面上。 如果不想包含更新，請清除 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新程式 核取方塊。 如果未偵測到任何產品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將不會顯示此頁面，而會自動前往 **[安裝安裝程式檔案]** 頁面。 
   
 5. 安裝程式會在 [安裝安裝程式檔案] 頁面上，顯示下載、擷取及安裝安裝程式檔案的進度。 如有找到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的更新，並指定要包含該更新，將會一併安裝。 
   
 6. 系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
-7. 在 [準備映像類型]  頁面上，選取 準備新的  **執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 。 
+7. 在 [準備映像類型] 頁面上，選取 準備新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 
   
-     只有當您的電腦上已經有尚未設定但備妥的  **執行個體時，才會顯示 [準備映像類型]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面。 您可以選擇準備新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或是將 sysprep 支援的功能加入至電腦上現有的已備妥 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需有關如何將功能加入至已備妥之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的詳細資訊，請參閱 [將功能加入至已備妥的執行個體](#AddFeatures)。 
+     只有當您的電腦上已經有尚未設定但備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，才會顯示 [準備映像類型] 頁面。 您可以選擇準備新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或是將 sysprep 支援的功能加入至電腦上現有的已備妥 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需有關如何將功能加入至已備妥之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的詳細資訊，請參閱 [將功能加入至已備妥的執行個體](#AddFeatures)。 
   
 8. 在 **[授權條款]** 頁面上，閱讀授權條款，然後選取要接受授權條款和條件的核取方塊。 若要協助提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 
   
@@ -139,7 +139,7 @@ ms.locfileid: "67990938"
   
 ### <a name="complete-a-prepared-instance-of-ssnoversion"></a>完成備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1. 如果您電腦上的映像中已經包含備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，您將會在 [開始] 功能表中看到一個捷徑。 您也可以啟動安裝中心，並按一下 [進階]  頁面上的 [完成備妥的獨立執行個體的映像]  。 
+1. 如果您電腦上的映像中已經包含備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，您將會在 [開始] 功能表中看到一個捷徑。 您也可以啟動安裝中心，並按一下 [進階] 頁面上的 [完成備妥的獨立執行個體的映像]。 
   
 2. 系統組態檢查會在電腦上執行探索作業。 若要繼續進行，請按一下 **[確定]** 。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
@@ -225,13 +225,13 @@ ms.locfileid: "67990938"
   
 1. 插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 Setup.exe。 若要從網路共用進行安裝，請找出共用上的根資料夾，然後按兩下 Setup.exe。 
   
-2. 安裝精靈會執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要將功能加入備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請在 [進階] **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面上，按一下 準備**  [獨立執行個體的映像]  。 
+2. 安裝精靈會執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要將功能加入備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請在 [進階] 頁面上，按一下 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [獨立執行個體的映像]。 
   
 3. 系統組態檢查會在電腦上執行探索作業。 若要繼續進行，請按一下 **[確定]** 。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
 4. 在 [安裝程式支援檔案] 頁面上，按一下 **[安裝]** ，即可安裝安裝程式支援檔案。 
   
-5. 在 [準備映像類型]  頁面上，選取 將功能加入到現有備妥的  **[執行個體][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 選項。 從備妥的可用執行個體的下拉式清單中，選取您想要加入功能之特定的備妥執行個體。 
+5. 在 [準備映像類型] 頁面上，選取 將功能加入到現有備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [執行個體] 選項。 從備妥的可用執行個體的下拉式清單中，選取您想要加入功能之特定的備妥執行個體。 
   
 6. 在 **[特徵選取]** 頁面上，指定您想要加入至備妥執行個體的功能。 
   

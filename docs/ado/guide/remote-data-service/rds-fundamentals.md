@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS [ADO]
 - remote data service [ADO]
 ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85851159f02c6d1fee02d1beac8bd71d04f36a6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c164ea2b4f54f78a416eea4ae5ca282f6c390484
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922567"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764719"
 ---
 # <a name="rds-fundamentals"></a>RDS 基本概念
 > [!IMPORTANT]

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 980ecd00a07e1119a64552a3f4c903434fd09029
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c1c4d976d97dee95e09a053525a14df632cd7e62
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106437"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82803021"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "68106437"
 |**offload_enabled**|**bit**|指定是否能從遠端啟動代理程式。<br /><br /> **0**指定不能從遠端啟用代理程式。<br /><br /> **1**指定將從遠端啟動代理程式，並在 offload_server 屬性中指定的遠端電腦上啟用。|  
 |**offload_server**|**sysname**|指定將用來啟用遠端代理程式之伺服器的網路名稱。|  
 |**sid**|**Varbinary （85）**|散發代理程式或合併代理程式在第一次執行期間的安全性識別碼 (SID)。|  
-|**subscriber_security_mode**|**smallint**|當連接到訂閱者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]驗證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> **1**  =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
+|**subscriber_security_mode**|**smallint**|當連接到訂閱者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
 |**subscriber_login**|**sysname**|連接到訂閱者時所用的登入。|  
 |**subscriber_password**|**Nvarchar （524）**|連接到訂閱者時，所用之密碼的加密值。|  
-|**publisher_security_mode**|**smallint**|連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]驗證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> **1**  =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
+|**publisher_security_mode**|**smallint**|連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
 |**publisher_login**|**sysname**|連接到發行者時所用的登入。|  
 |**publisher_password**|**Nvarchar （524）**|連接到發行者時，所用之密碼的加密值。|  
 |**job_step_uid**|**uniqueidentifier**|用來啟動代理程式之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的唯一識別碼。|  

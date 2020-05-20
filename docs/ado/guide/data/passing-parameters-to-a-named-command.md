@@ -11,14 +11,14 @@ helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO], passing parameters to a named command
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: afa230584bd7ee93d56f814a998c886e433a9417
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924696"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764769"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>傳遞參數給具名命令
 就像是將命令的結果當做已命名命令的*out*變數傳遞，參數化命令的參數可以*當做變數傳入*至指名的命令。  

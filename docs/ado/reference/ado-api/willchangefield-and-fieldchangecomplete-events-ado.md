@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WillChangeField event [ADO]
 - fieldchangecomplete event [ADO]
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7484e2a57925cc22c83456c244dc67aded5cefd2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e4a4fb74e95bf0e1ba9dc9d0001b3d653f9294c1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67945886"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764489"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField 和 FieldChangeComplete 事件 (ADO)
 在暫止的作業變更[記錄集中](../../../ado/reference/ado-api/recordset-object-ado.md)一個或多個[欄位](../../../ado/reference/ado-api/field-object.md)物件的值之前，會呼叫**WillChangeField**事件。 **FieldChangeComplete**事件會在一或多個**欄位**物件的值變更後呼叫。  

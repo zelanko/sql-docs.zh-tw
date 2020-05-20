@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22f9d928cf008396346067a3e166fa281be4093d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5c3d60374102b92249062cbc705dc55c6d217537
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931719"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765449"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 .com. wfc. 資料  

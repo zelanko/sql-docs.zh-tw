@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Groups collection [ADOX]
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e2b6e7b7669e0976cf47e5b4d5d2c827a824f919
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966184"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764849"
 ---
 # <a name="groups-collection-adox"></a>Groups 集合 (ADOX)
 包含目錄或使用者的所有儲存的[群組](../../../ado/reference/adox-api/group-object-adox.md)物件。  

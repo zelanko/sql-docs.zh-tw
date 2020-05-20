@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADO Stream]
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9b996ba4bedbb4ccf1ccb0453e4da33e09206a18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: de61f4877dc6adcdfaa9644f5f266cd827a1d096
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938233"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765339"
 ---
 # <a name="type-property-ado-stream"></a>Type 屬性 (ADO Stream)
 表示[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)中包含的資料類型（二進位或文字）。  

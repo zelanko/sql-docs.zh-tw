@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2edcfaaae08da97eccfe7b9a570716a2dfedfc2c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921963"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764609"
 ---
 # <a name="understanding-the-customization-file"></a>了解自訂檔案
 自訂檔案中的每個區段標頭都是由包含型別和參數的方括弧（**[]**）所組成。 四個區段類型會以常值字串**connect**、 **sql**、 **userlist**或**logs**來表示。 參數是文字字串、預設值、使用者指定的識別碼，或不是任何內容。  
@@ -48,7 +48,7 @@ identifier
 |**userlist**|修改特定使用者存取權限的常值字串。|  
 |**退出**|指定記錄檔記錄操作錯誤的常值字串。|  
 |**預設**|如果未指定或找不到識別碼，則會使用常值字串。|  
-|*標識*|字串，符合**connect**或**命令**字串中的字串。<br /><br /> -如果區段標頭包含**connect** ，而且在連接字串中找到識別碼字串，請使用此區段。<br />-如果區段標頭包含**sql** ，而且在命令字串中找到識別碼字串，請使用此區段。<br />-如果區段標頭包含**userlist** ，而且識別碼字串符合**connect**區段識別碼，請使用此區段。|  
+|*識別碼 (identifier)*|字串，符合**connect**或**命令**字串中的字串。<br /><br /> -如果區段標頭包含**connect** ，而且在連接字串中找到識別碼字串，請使用此區段。<br />-如果區段標頭包含**sql** ，而且在命令字串中找到識別碼字串，請使用此區段。<br />-如果區段標頭包含**userlist** ，而且識別碼字串符合**connect**區段識別碼，請使用此區段。|  
   
  **DataFactory**會呼叫處理常式，並傳遞用戶端參數。 處理常式會在用戶端參數中搜尋與適當區段標頭中的識別碼相符的整個字串。 如果找到相符的，該區段的內容就會套用至用戶端參數。  
   
