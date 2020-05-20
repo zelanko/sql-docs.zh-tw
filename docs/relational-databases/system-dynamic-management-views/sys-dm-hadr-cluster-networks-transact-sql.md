@@ -18,30 +18,30 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_cluster_networks dynamic management view
 ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0b2475a3881cb73d9dd82ee7fc311e7288aa4738
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dd37e1f39291e12bd313b03b556506eb51eb131d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900652"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829356"
 ---
 # <a name="sysdm_hadr_cluster_networks-transact-sql"></a>sys.dm_hadr_cluster_networks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對參與可用性群組之子網路組態的每個 WSFC 叢集成員，各傳回一個資料列。 您可以使用此動態管理檢視來驗證為每個可用性複本所設定的網路虛擬 IP。  
   
- 主要金鑰： **member_name** + **network_subnet_IP** + **network_subnet_prefix_length**  
+ 主要金鑰： **member_name**  +  **network_subnet_IP**  +  **network_subnet_prefix_length**  
   
  > [!TIP]
- > 從開始[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，這個動態管理檢視除了 Always On 可用性群組之外，還支援 Always On 容錯移轉叢集實例。  
+ > 從開始 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ，這個動態管理檢視除了 Always On 可用性群組之外，還支援 Always On 容錯移轉叢集實例。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**member_name**|**nvarchar(128)**|WSFC 叢集中節點的電腦名稱。|  
 |**network_subnet_ip**|**Nvarchar （48）**|此電腦所屬之子網路的網路 IP 位址。 這可以是 IPv4 或 IPv6 位址。|  
-|**network_subnet_ipv4_mask**|**Nvarchar （45）**|網路的子網路遮罩，可指定此 IP 位址所屬的子網路。 **network_subnet_ipv4_mask**在[CREATE AVAILABILITY group](../../t-sql/statements/create-availability-group-transact-sql.md)或[ALTER AVAILABILITY group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]語句的 WITH DHCP 子句中，指定 dhcp <network_subnet_option> 選項。<br /><br /> NULL = IPv6 子網路。|  
+|**network_subnet_ipv4_mask**|**Nvarchar （45）**|網路的子網路遮罩，可指定此 IP 位址所屬的子網路。 **network_subnet_ipv4_mask**在[CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)或[ALTER AVAILABILITY group](../../t-sql/statements/alter-availability-group-transact-sql.md)語句的 WITH DHCP 子句中，指定 dhcp <network_subnet_option> 選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。<br /><br /> NULL = IPv6 子網路。|  
 ||||  
 |**network_subnet_prefix_length**|**int**|網路 IP 前置長度，可指定此電腦所屬的子網路。|  
 |**is_public**|**bit**|網路在 WSFC 叢集上為公用或私用，可為下列其中一個值：<br /><br /> 0 = 私用<br /><br /> 1 = 公用|  

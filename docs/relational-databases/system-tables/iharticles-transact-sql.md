@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHarticles system table
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 45278a6d9501b75b624e11bbeb11d24d10e482c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e5ccf91f17022ccf910c840c1af2abb7a4048dfb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056208"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829889"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68056208"
 |**objid**|**int**|此資料行不會使用，而且只包含來使**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章（[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)）的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  
 |**sync_objid**|**int**|此資料行不會使用，而且只包含來使**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章（[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)）的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  
 |**描述**|**nvarchar(255)**|發行項的描述性項目。|  
-|**publisher_status**|**int**|這是用來指出是否已藉由呼叫[sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)來定義定義已發行文章的視圖。<br /><br /> **已呼叫 0** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 。<br /><br /> **尚未呼叫 1** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 。|  
+|**publisher_status**|**int**|這是用來指出是否已藉由呼叫[sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)來定義定義已發行文章的視圖。<br /><br /> **0**  = 已呼叫[sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 。<br /><br /> **1**  = 尚未呼叫[sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 。|  
 |**article_view_owner**|**nvarchar(255)**|記錄讀取器代理程式所用的發行者之同步處理物件的擁有者。|  
 |**article_view**|**nvarchar(255)**|記錄讀取器代理程式所用的發行者之同步處理物件。|  
 |**ins_scripting_proc**|**int**|此資料行不會使用，而且只包含來使**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章（[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)）的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  

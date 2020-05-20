@@ -12,14 +12,14 @@ helpviewer_keywords:
 - dynamic management objects [SQL Server], execution
 - execution-related dynamic management objects [SQL Server]
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eaab973d2554e22d9fc7244850dcfbc0e8f3d4e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46db1a37a7ee05dfe85d1fcbedc3400ef6ffcf24
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130827"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829527"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>執行相關的動態管理檢視和函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

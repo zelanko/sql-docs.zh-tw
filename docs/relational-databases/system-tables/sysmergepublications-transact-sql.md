@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepublications system table
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 96708a8109594e0978757a163840d605d09cb522
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029786"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829815"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68029786"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**發行者**|**sysname**|預設伺服器的名稱。|  
+|**publisher**|**sysname**|預設伺服器的名稱。|  
 |**publisher_db**|**sysname**|預設發行者資料庫的名稱。|  
 |**name**|**sysname**|發行集的名稱。|  
 |**描述**|**nvarchar(255)**|發行集的簡要描述。|  
@@ -53,7 +53,7 @@ ms.locfileid: "68029786"
 |**alt_snapshot_folder**|**nvarchar(255)**|快照集替代資料夾的位置。|  
 |**pre_snapshot_script**|**nvarchar(255)**|的指標。在訂閱者端套用快照集時，合併代理程式在任何複寫物件腳本之前執行的**sql**檔案。|  
 |**post_snapshot_script**|**nvarchar(255)**|的指標。在初始同步處理期間套用所有其他複寫物件腳本和資料之後，合併代理程式執行的**sql**檔案。|  
-|**compress_snapshot**|**bit**|指定寫入**alt_snapshot_folder**位置的快照集是否壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。 **0**指定不壓縮檔案。|  
+|**compress_snapshot**|**bit**|指定寫入**alt_snapshot_folder**位置的快照集是否壓縮成 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。 **0**指定不壓縮檔案。|  
 |**ftp_address**|**sysname**|散發者的檔案傳輸通訊協定 (FTP) 服務的網路位址。 指定發行集快照集檔案所在的位置，以便在啟用 FTP 的情況下，合併代理程式能夠加以收取。|  
 |**ftp_port**|**int**|散發者的 FTP 服務通訊埠編號。|  
 |**ftp_subdirectory**|**nvarchar(255)**|合併代理程式能夠從中收取快照集檔案的子目錄。|  
@@ -65,7 +65,7 @@ ms.locfileid: "68029786"
 |**allow_synctoalternate**|**bit**|指定是否允許替代的同步處理夥伴與這個發行者同步。 **0**表示不允許同步處理夥伴。|  
 |**validate_subscriber_info**|**Nvarchar （500）**|列出用於擷取訂閱者資訊以及驗證訂閱者參數化資料列篩選器準則的函數。|  
 |**ad_guidname**|**sysname**|指定發行集是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行。 有效的 GUID 會指定發行集在 Active Directory 中發行，而 GUID 則是對應的 Active Directory 發行集物件**objectGUID**。 如果是 NULL，發行集就不會發行在 Active Directory 中。|  
-|**backward_comp_level**|**int**|資料庫相容性層級。 可以是下列值之一：<br /><br /> **90**  = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **100**  = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。|  
+|**backward_comp_level**|**int**|資料庫相容性層級。 可以是下列值之一：<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。|  
 |**max_concurrent_merge**|**int**|允許使用的最大並行合併處理序數目。 這個屬性的值為**0**時，表示在任何給定時間執行的並行合併進程數目沒有限制。 這個屬性會設定能夠針對合併式發行集來同時執行的並行合併處理序的數目限制。 如果排程同時執行的快照集處理序數目超出允許執行的值，超出的作業便會放在佇列中，等到目前在執行中的合併處理序完成為止。|  
 |**max_concurrent_dynamic_snapshots**|**int**|允許針對合併式發行集來執行的最大並行已篩選資料快照集工作階段數目。 如果是**0**，在任何指定時間，可以同時針對發行集執行的並行已篩選資料快照集會話數目上限不受限制。 這個屬性會設定能夠針對合併式發行集來同時執行的並行快照集處理序的數目限制。 如果排程同時執行的快照集處理序數目超出允許執行的值，超出的作業便會放在佇列中，等到目前在執行中的合併處理序完成為止。|  
 |**use_partition_groups**|**smallint**|指定發行集是否使用預先計算的資料分割。|  

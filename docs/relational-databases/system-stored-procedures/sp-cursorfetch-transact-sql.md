@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108515"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831772"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>引數  
  *cursor*  
- 這是由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所產生並由 sp_cursoropen 傳回的*控制碼*值。 *cursor*是針對**int**輸入值呼叫的必要參數。 如需詳細資訊，請參閱本主題稍後的＜備註＞一節。  
+ 這是由所產生並由 sp_cursoropen 傳回的*控制碼*值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *cursor*是針對**int**輸入值呼叫的必要參數。 如需詳細資訊，請參閱本主題稍後的＜備註＞一節。  
   
  *fetchtype*  
  指定要提取的資料指標緩衝區。 *fetchtype*是選擇性參數，它需要下列其中一個整數輸入值。  
   
-|值|名稱|描述|  
+|值|名稱|說明|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|提取*nrows*資料列的第一個緩衝區。 如果*nrows*等於0，資料指標就會放在結果集之前，而且不會傳回任何資料列。|  
 |0x0002|NEXT|提取*nrows*資料列的下一個緩衝區。|  
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  RPC 狀態參數會設定為下表所示的其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |0|已成功執行程序。|  
 |0x0001|程序失敗。|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  資料列當做一般結果集傳回，也就是資料行格式 (0x2a)、資料列 (0xd1)，後面接著完成 (0xfd)。 中繼資料 Token 的傳送格式與針對 sp_cursoropen 指定的格式相同，也就是：適用於 SQL Server 7.0 使用者的 0x81、0xa5 和 0xa4，依此類推。 資料列狀態指標會當做隱藏資料行傳送，類似於 BROWSE 模式，也就是在每一個資料列結尾，包含資料行名稱 rowstat 和資料類型 INT4。 這個 rowstat 資料行具有下表所列的其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

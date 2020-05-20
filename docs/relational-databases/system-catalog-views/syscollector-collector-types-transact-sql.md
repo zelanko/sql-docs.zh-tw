@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collector_types view
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f1d232d602f2496fff03ed050a8faf11b53e718b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 05f09d6c94c17cb54f92d6d5f786515dc229b86c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124915"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830918"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

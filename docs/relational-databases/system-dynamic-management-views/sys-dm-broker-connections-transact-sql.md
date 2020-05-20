@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_connections dynamic management view
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2df4786147a5301e4e9167cbe121b9151e72190f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 43f5c110aaf9b492d70eb7220b6eccc249222609
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099166"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830895"
 ---
 # <a name="sysdm_broker_connections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68099166"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|連接的識別碼。 NULLABLE。|  
-|**transport_stream_id**|**uniqueidentifier**|此連接用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tcp/ip 通訊的網路介面（SNI）連接識別碼。 NULLABLE。|  
+|**transport_stream_id**|**uniqueidentifier**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]此連接用於 tcp/ip 通訊的網路介面（SNI）連接識別碼。 NULLABLE。|  
 |**state**|**smallint**|連接的目前狀態。 NULLABLE。 可能的值：<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 已關閉|  
 |**state_desc**|**nvarchar(60)**|連接的目前狀態。 NULLABLE。 可能的值：<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|開啟連接的日期與時間。 NULLABLE。|  

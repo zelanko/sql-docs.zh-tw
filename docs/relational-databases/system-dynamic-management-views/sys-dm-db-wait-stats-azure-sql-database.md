@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56dd563d63518c18db6448d2c86f21e6ad676144
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090869"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830852"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -74,11 +74,11 @@ ms.locfileid: "68090869"
   
  雖然執行緒已經不在等候中，執行緒也不必立即開始執行。 因為這類執行緒會先置於可執行之工作者的佇列上，而且必須等候排程器執行某個配量才行。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]等候時間計數器中是**Bigint**值，因此不容易在舊版中做為對等計數器的計數器變換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等候時間計數器中是**Bigint**值，因此不容易在舊版中做為對等計數器的計數器變換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  下表列出工作會遇到的等候類型。  
   
-|等候類型|描述|  
+|等候類型|說明|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|在組件載入的獨佔存取期間發生。|  

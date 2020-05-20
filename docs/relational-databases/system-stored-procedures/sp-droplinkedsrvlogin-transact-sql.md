@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droplinkedsrvlogin
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3040f585e10816d4f8664566be8af1523048db88
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097660"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830122"
 ---
 # <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @rmtsrvname = ] 'rmtsrvname'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入對應所套用的連結伺服器名稱。 *rmtsrvname*是**sysname**，沒有預設值。 *rmtsrvname*必須已經存在。  
+`[ @rmtsrvname = ] 'rmtsrvname'`這是登入對應所套用的連結伺服器名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *rmtsrvname*是**sysname**，沒有預設值。 *rmtsrvname*必須已經存在。  
   
-`[ @locallogin = ] 'locallogin'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機伺服器上的登入，其對應至連結的伺服器*rmtsrvname*。 *locallogin*是**sysname**，沒有預設值。 *Locallogin*至*rmtsrvname*的對應必須已經存在。 如果是 Null，則會刪除**sp_addlinkedserver**所建立的預設對應（將本機伺服器上的所有登入對應到連結伺服器上的登入）。  
+`[ @locallogin = ] 'locallogin'`這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機伺服器上的登入，其對應至連結的伺服器*rmtsrvname*。 *locallogin*是**sysname**，沒有預設值。 *Locallogin*至*rmtsrvname*的對應必須已經存在。 如果是 Null，則會刪除**sp_addlinkedserver**所建立的預設對應（將本機伺服器上的所有登入對應到連結伺服器上的登入）。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

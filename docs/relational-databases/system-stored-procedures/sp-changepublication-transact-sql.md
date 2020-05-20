@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1e5b128a38fc32b16cca9d0a8e59f09aef88676c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d5c08e0a844348210ae011e395c04de5b4cdcdd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762422"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829562"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -88,13 +88,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|只有在新訂閱存在時，才會建立同步處理檔案。 在訂閱之後，快照集代理程式啟動和完成之前，訂閱者無法接收同步處理檔案。|  
 |**independent_agent**|**true**|發行集有它自己專用的散發代理程式。|  
 ||**false**|發行集使用共用的散發代理程式，每一組發行者/訂閱資料庫都有共用的代理程式。|  
-|**p2p_continue_onconflict**|**true**|散發代理程式會在偵測到衝突時繼續處理變更。<br /> **注意：** 我們建議您使用的預設值`FALSE`。 當此選項設定為`TRUE`時，散發代理程式會嘗試藉由套用具有最高訂閱者識別碼之節點的衝突資料列，來聚合拓撲中的資料。 但是，這個方法無法保證聚合。 您應該確定在偵測到衝突之後，拓撲是一致的。 如需詳細資訊，請參閱＜ [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)＞中的「處理衝突」。|  
+|**p2p_continue_onconflict**|**true**|散發代理程式會在偵測到衝突時繼續處理變更。<br /> **注意：** 我們建議您使用的預設值 `FALSE` 。 當此選項設定為時 `TRUE` ，散發代理程式會嘗試藉由套用具有最高訂閱者識別碼之節點的衝突資料列，來聚合拓撲中的資料。 但是，這個方法無法保證聚合。 您應該確定在偵測到衝突之後，拓撲是一致的。 如需詳細資訊，請參閱＜ [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)＞中的「處理衝突」。|  
 ||**false**|散發代理程式會在偵測到衝突時停止處理變更。|  
 |**post_snapshot_script**||指定在初始同步處理期間，套用所有其他複寫的物件指令碼和資料之後，散發代理程式所執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案的位置。|  
 |**pre_snapshot_script**||指定在初始同步處理期間，套用所有其他複寫的物件指令碼和資料之前，散發代理程式所執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案的位置。|  
 |**publish_to_ActiveDirectory**|**true**|這個參數已被取代，支援它的目的，只是為了與舊版的指令碼相容。 您不能再將發行集資訊加入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中。|  
 ||**false**|從 Active Directory 中移除發行集資訊。|  
-|**queue_type**|**server**|利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存交易。 只有在沒有使用中的訂閱時，才能改變這個屬性。<br /><br /> 注意：已中止使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]訊息佇列的支援。 為*值*指定**msmq**的值會導致錯誤。|  
+|**queue_type**|**server**|利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存交易。 只有在沒有使用中的訂閱時，才能改變這個屬性。<br /><br /> 注意：已中止使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 訊息佇列的支援。 為*值*指定**msmq**的值會導致錯誤。|  
 |**repl_freq**|**系列**|發行所有記錄式交易的輸出。|  
 ||**快照集**|只發行已排程的同步處理事件。|  
 |**replicate_ddl**|**1**|複寫在發行者端執行的資料定義語言 (DDL) 陳述式。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
@@ -104,15 +104,15 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**保存**||**int** ，代表訂用帳戶活動的保留期限（以小時為單位）。 如果在保留期限內，訂閱不在使用中，就會移除它。|  
 |**snapshot_in_defaultfolder**|**true**|快照集檔案儲存在預設快照集資料夾中。 如果也指定了*alt_snapshot_folder*，快照集檔案就會同時儲存在預設和替代位置中。|  
 ||**false**|快照集檔案會儲存在*alt_snapshot_folder*所指定的替代位置中。|  
-|**status**|**作用中**|當建立發行集時，訂閱者可以立即使用發行集資料。 不支援 Oracle 發行者使用這個值。|  
+|**status**|**active**|當建立發行集時，訂閱者可以立即使用發行集資料。 不支援 Oracle 發行者使用這個值。|  
 ||**非使用**|當建立發行集時，訂閱者無法使用發行集資料。 不支援 Oracle 發行者使用這個值。|  
 |**sync_method**|**native**|當同步處理訂閱時，使用所有資料表的原生模式大量複製輸出。|  
 ||**字母**|當同步處理訂閱時，使用所有資料表的字元模式大量複製輸出。|  
 ||**位**|使用所有資料表的原生模式大量複製程式輸出，但在快照集的產生程序中，不鎖定資料表。 這個項目對快照式複寫無效。|  
 ||**concurrent_c**|使用所有資料表的字元模式大量複製程式輸出，但在快照集的產生程序中，不鎖定資料表。 這個項目對快照式複寫無效。|  
 |**taskid**||這個屬性已被取代，不再受到支援。|  
-|**allow_drop**|**true**|針對`DROP TABLE`屬於異動複寫一部分的發行項啟用 DLL 支援。 支援的最低版本[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ： Service pack 2 （或[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以上）和 service pack 1 （或以上）。 其他參考： [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
-||**false**|停`DROP TABLE`用屬於異動複寫一部分之發行項的 DLL 支援。 這是此屬性的**預設**值。|
+|**allow_drop**|**true**|`DROP TABLE`針對屬於異動複寫一部分的發行項啟用 DLL 支援。 支援的最低版本： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service pack 2 （或以上）和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] service pack 1 （或以上）。 其他參考： [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+||**false**|停用屬於 `DROP TABLE` 異動複寫一部分之發行項的 DLL 支援。 這是此屬性的**預設**值。|
 |**Null** （預設值）||傳回*屬性*的支援值清單。|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`認可這個預存程式所採取的動作可能會使現有的快照集失效。 *force_invalidate_snapshot*是**bit**，預設值是**0**。  
@@ -120,15 +120,15 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **1**指定發行項的變更可能會導致快照集無效。 如果有現有的訂閱需要新的快照集，這個值會提供要標示為已棄用之現有快照集的權限，此時會產生新的快照集。   
 請參閱＜備註＞一節，以了解在變更時需要產生新快照集的屬性。  
   
-[**@force_reinit_subscription =** ]*force_reinit_subscription*  
+[** @force_reinit_subscription =** ] *force_reinit_subscription*  
  認可這個預存程序所採取的動作可能需要重新初始化現有的訂閱。 *force_reinit_subscription*是**位**，預設值是**0**。  
   - **0**指定發行項的變更不會使訂閱重新初始化。 如果預存程序偵測到變更需要重新初始化現有的訂閱，就會發生錯誤，且不會進行任何變更。  
   - **1**指定發行項的變更會使現有的訂閱重新初始化，並提供將發生之訂閱重新初始化的許可權。  
   
-`[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
   
   > [!NOTE]  
-  >  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者上變更發行項屬性時，不應使用「發行者」。  
+  >  在發行者上變更發行項屬性時，不應使用「*發行者*」 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -150,7 +150,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 -   **snapshot_in_defaultfolder**  
 -   **sync_mode**  
   
-若要使用**publish_to_active_directory**參數列出 Active Directory 中的發行集物件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件必須已在 Active Directory 中建立。  
+若要使用**publish_to_active_directory**參數列出 Active Directory 中的發行集物件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件必須已在 Active Directory 中建立。  
   
 ## <a name="impact-of-immediate-sync"></a>立即同步的影響  
  當立即同步開啟時，即使沒有任何訂閱，系統也會在產生初始快照集之後，立即追蹤記錄中的所有變更。 當客戶使用備份來加入新的對等節點時，會使用記錄的變更。 還原備份之後，對等會與備份執行之後發生的任何其他變更同步處理。 由於命令會在散發資料庫中追蹤，因此同步處理邏輯可以查看上次備份的 LSN，並使用此做為起點，瞭解如果備份是在最大保留期限內進行的，則會提供命令。 （最小保留期限的預設值為0小時，而最大保留期限為24小時）。  

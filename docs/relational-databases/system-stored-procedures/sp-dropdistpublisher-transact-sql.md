@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistpublisher
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a15162774d3814e574735d8e1d5fd5e6b769327f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 060b3b793adf53ab988cbba8b82ae683dac1e40a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278122"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830182"
 ---
 # <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
  如果為**0**，則複寫會確認遠端發行者是否已將本機伺服器卸載為散發者。 如果發行者在本機，複寫會確認本機伺服器中沒有其餘發行集或散發物件。  
   
- 如果是**1**，即使無法連線到遠端發行者，也會卸載與散發發行者相關聯的所有複寫物件。 這麼做之後，遠端發行者必須使用** \@ignore_distributor** = **1**的[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)來卸載複寫。  
+ 如果是**1**，即使無法連線到遠端發行者，也會卸載與散發發行者相關聯的所有複寫物件。 這麼做之後，遠端發行者必須使用** \@ ignore_distributor**1 的[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)來卸載複寫  =  ** **。  
   
 `[ @ignore_distributor = ] ignore_distributor`指定當移除發行者時，散發物件是否留在散發者端。 *ignore_distributor*是**bit** ，而且可以是下列其中一個值：  
   

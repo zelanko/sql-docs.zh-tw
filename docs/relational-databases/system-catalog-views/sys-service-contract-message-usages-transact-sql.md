@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_contract_message_usages catalog view
 ms.assetid: f783e662-126c-4595-8e22-f9d05191f5d0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bca839c61a59c69a7f6cf7e659ad940864fcee37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7a958bf38af003fdbc76ebe3b33b5faabf8e5d11
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132926"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831342"
 ---
 # <a name="sysservice_contract_message_usages-transact-sql"></a>sys.service_contract_message_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

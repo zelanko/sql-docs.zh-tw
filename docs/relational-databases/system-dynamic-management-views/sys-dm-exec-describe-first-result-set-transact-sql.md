@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 523a94718f123fab9d501de9497ca5ecc2b09c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1591c84de006308e96a3b8079ea05ef9ad6802b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097807"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830610"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  這個動態管理函數會接受[!INCLUDE[tsql](../../includes/tsql-md.md)]語句做為參數，並描述語句第一個結果集的中繼資料。  
+  這個動態管理函數會接受 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句做為參數，並描述語句第一個結果集的中繼資料。  
   
  **dm_exec_describe_first_result_set**與 sys.databases 具有相同的結果集定義， [dm_exec_describe_first_result_set_for_object &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) ，而且類似[sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
@@ -46,10 +46,10 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  *\@t q*  
  一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *交易 SQL_batch*可以是**Nvarchar （***n***）** 或**Nvarchar （max）**。  
   
- *\@化*  
- \@params 會提供[!INCLUDE[tsql](../../includes/tsql-md.md)]批次參數的宣告字串，類似于 sp_executesql。 參數可以是**Nvarchar （n）** 或**Nvarchar （max）**。  
+ *\@params*  
+ \@params 會提供批次參數的宣告字串 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，類似于 sp_executesql。 參數可以是**Nvarchar （n）** 或**Nvarchar （max）**。  
   
- 這是一個字串，其中包含已內嵌在[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*中之所有參數的定義。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 Stmt 中指定的每個參數都必須\@在 params 中定義。 如果語句[!INCLUDE[tsql](../../includes/tsql-md.md)]中的語句或批次不包含參數， \@則不需要 params。 這個參數的預設值是 NULL。  
+ 這是一個字串，其中包含已內嵌在 _batch 中之所有參數的定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] * *。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 Stmt 中指定的每個參數都必須在 params 中定義 \@ 。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句中的語句或批次不包含參數， \@ 則不需要 params。 這個參數的預設值是 NULL。  
   
  *\@include_browse_information*  
  如果設定為 1，就會分析每個查詢，如同查詢上有 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
@@ -106,7 +106,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
  下表列出錯誤類型及其說明。  
   
-|error_type|error_type|描述|  
+|error_type|error_type|說明|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|未說明的所有錯誤。|  
 |2|SYNTAX|批次發生語法錯誤。|  
@@ -119,11 +119,11 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |9|RECURSION|因為批次包含遞迴陳述式，無法判定結果。|  
 |10|TEMPORARY_TABLE|因為批次包含暫存資料表且不受 **sp_describe_first_result_set** 支援，無法判定結果。|  
 |11|UNSUPPORTED_STATEMENT|因為批次包含 **sp_describe_first_result_set** 不支援的陳述式 (例如，FETCH、REVERT 等)，無法判定結果。|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|不\@支援傳遞至函數的 object_id （亦即不是預存程式）|  
-|13|OBJECT_DOES_NOT_EXIST|在\@系統目錄中找不到傳遞至函數的 object_id。|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|\@不支援傳遞至函數的 object_id （亦即不是預存程式）|  
+|13|OBJECT_DOES_NOT_EXIST|在 \@ 系統目錄中找不到傳遞至函數的 object_id。|  
   
 ## <a name="permissions"></a>權限  
- 需要執行\@tsql 引數的許可權。  
+ 需要執行 \@ tsql 引數的許可權。  
   
 ## <a name="examples"></a>範例  
  [Sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)主題中的其他範例可以調整為使用**sys.databases dm_exec_describe_first_result_set**。  

@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_audit_class_type_map dynamic management view
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ae1c39d5c3ddc36f4ca3007cf9e17c2543055b85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7ed2102562b16be51f70abf22d7a18aeba010806
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099206"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830917"
 ---
 # <a name="sysdm_audit_class_type_map-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  傳回一個資料表，它會將稽核記錄檔中的 class_type 欄位對應到 sys.dm_audit_actions 中的 class_desc 欄位。 如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 的詳細資訊，請參閱[SQL Server audit &#40;資料庫引擎&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+  傳回一個資料表，它會將稽核記錄檔中的 class_type 欄位對應到 sys.dm_audit_actions 中的 class_desc 欄位。 如需有關 Audit 的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server audit &#40;資料庫引擎&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

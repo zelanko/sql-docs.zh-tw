@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165908"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831708"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  *prepared_handle*接著會提供給 sp_cursorexecute 程式，以便開啟資料指標。 一旦建立控制代碼之後，在您登出或是透過 sp_cursorunprepare 程序明確將它移除之前，它都會存在。  
   
- *化*  
+ *params*  
  識別參數化的陳述式。 變數的*params*定義會取代語句中的參數標記。 *params*是針對**Ntext**、 **Nchar**或**Nvarchar**輸入值呼叫的必要參數。 如果陳述式未參數化，則輸入 NULL 值。  
   
 > [!NOTE]  
@@ -61,14 +61,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *options*  
  傳回資料指標結果集資料行描述的選擇性參數。 *選項*需要下列**int**輸入值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  捲動選項。 *scrollopt*是需要下列其中一個**int**輸入值的選擇性參數。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,7 +90,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  並行控制選項。 *ccopt*是需要下列其中一個**int**輸入值的選擇性參數。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (之前稱為 LOCKCC)|  
@@ -104,14 +104,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- 如同*scrollpt*， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以從要求的值中指派不同的值。  
+ 如同*scrollpt*， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以從要求的值中指派不同的值。  
   
 ## <a name="remarks"></a>備註  
  RPC 狀態參數是下列其中一項：  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|0|成功|  
+|0|Success|  
 |0x0001|失敗|  
 |1FF6|無法傳回中繼資料。<br /><br /> 注意：這是因為語句不會產生結果集。例如，它是 INSERT 或 DDL 語句。|  
   
@@ -144,7 +144,7 @@ exec sp_cursorclose @p2
  
  當*stmt*參數化，且*scrollopt* PARAMETERIZED_STMT 值為 ON 時，字串的格式如下所示：  
   
- { * \<本機變數名稱> * *\<資料類型>* }[ ,...*n* ]  
+ { * \< 本機變數名稱> * * \< 資料類型>* } [,.。。*n* ]  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_cursorexecute &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

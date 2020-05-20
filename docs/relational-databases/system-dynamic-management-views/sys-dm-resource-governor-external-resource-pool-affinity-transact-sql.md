@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_resource_governor_external_resource_pool_affinity
 - dm_resource_governor_external_resource_pool_affinity
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 77d0d322139be1f1c6086622855600a7c24fc4c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3f3b22b1889380be3aeeacc70877987f080ac766
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80664326"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830462"
 ---
 # <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>sys.databases dm_resource_governor_external_resource_pool_affinity （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "80664326"
   
 ## <a name="remarks"></a>備註
 
-使用的親和性`AUTO`建立的集區不會出現在此視圖中，因為它們沒有相似性。 如需詳細資訊，請參閱[建立外部資源集區 &#40;transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)和[ALTER external Resource pool &#40;transact-sql&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)語句。
+使用的親和性建立的集區 `AUTO` 不會出現在此視圖中，因為它們沒有相似性。 如需詳細資訊，請參閱[建立外部資源集區 &#40;transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)和[ALTER external Resource pool &#40;transact-sql&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)語句。
 
 ## <a name="permissions"></a>權限
 

@@ -14,23 +14,23 @@ helpviewer_keywords:
 - SQL OS dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], SQL OS
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 862f54351eb67d2170d8e9806347eb8608178c23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5ea0bbe308e3b0e49f6250dd02d2c6c1f636751c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71342044"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830905"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>SQL Server 作業系統相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-本節記載與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作業系統（SQLOS）相關聯的動態管理檢視（DMV）。 SQLOS 負責管理特定的作業系統資源[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+本節記載與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業系統（SQLOS）相關聯的動態管理檢視（DMV）。 SQLOS 負責管理特定的作業系統資源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
 
-SQLOS Dmv 會列在目錄中。 其中大部分和都會命名為`sys.dm_os_<description>`。
+SQLOS Dmv 會列在目錄中。 其中大部分和都會命名為 `sys.dm_os_<description>` 。
 
- 下列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與作業系統相關的動態管理檢視為[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]。  
+ 下列與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業系統相關的動態管理檢視為 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 。  
   
 |||  
 |-|-|  

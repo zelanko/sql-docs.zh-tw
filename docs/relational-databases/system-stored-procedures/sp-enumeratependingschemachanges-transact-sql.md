@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_enumeratependingschemachanges
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: da5579c52d1ffe1400e3b4c8c01210ca5856597b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4f1e6d9b7f9bce06a8003b56fc6767c992636957
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124584"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831082"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

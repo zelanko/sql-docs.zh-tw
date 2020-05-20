@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_columns dynamic management function
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b917a22efd85cf1dcc83f358d334683c579ee6d4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002657"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829457"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|資料行的識別碼。|  
 |**column_name**|**sysname**|資料表資料行的名稱。|  
-|**column_usage**|**Varchar （20）**|查詢使用資料行的方式。 可能的值和其描述如下：<br /><br /> 相等：資料行會提供給表示相等的述詞，格式為： <br />                        *資料表。資料行* = *constant_value*<br /><br /> 不等：資料行會提供給表示不相等的述詞，例如，下列格式的述詞： *table. Column* > *constant_value*。 "=" 以外的其他任何比較運算子都可表示不相等。<br /><br /> INCLUDE：資料行不是用來評估述詞，而是用於其他原因，例如，用來涵蓋查詢。|  
+|**column_usage**|**Varchar （20）**|查詢使用資料行的方式。 可能的值和其描述如下：<br /><br /> 相等：資料行會提供給表示相等的述詞，格式為： <br />                        *資料表。資料行*  = *constant_value*<br /><br /> 不等：資料行會提供給表示不相等的述詞，例如，下列格式的述詞： *table. Column*  >  *constant_value*。 "=" 以外的其他任何比較運算子都可表示不相等。<br /><br /> INCLUDE：資料行不是用來評估述詞，而是用於其他原因，例如，用來涵蓋查詢。|  
   
 ## <a name="remarks"></a>備註  
  **sys.dm_db_missing_index_columns** 傳回的資訊會在查詢最佳化工具最佳化查詢時更新，而不會一直保存。 遺漏索引資訊只會保留到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動為止。 如果資料庫管理員想要在伺服器回收之後保留遺漏索引資訊，應該定期製作該項資訊的備份副本。  

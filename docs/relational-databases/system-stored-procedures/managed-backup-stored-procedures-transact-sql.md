@@ -10,19 +10,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: bc9d5273-b47d-4c32-a3af-839d963e0548
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4300a76b7325029cb2126bb988efb6f7d401e511
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e5ba6557f90143f06b9a3d92e1e2595e280044fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942001"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830343"
 ---
 # <a name="managed-backup-stored-procedures-transact-sql"></a>受管理的備份預存程式（Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  下列預存程式可以用來設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
+  下列預存程式可以用來設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
   
 ## <a name="in-this-section"></a>本節內容  
  [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)  
@@ -40,6 +40,6 @@ ms.locfileid: "67942001"
  [managed_backup.sp_backup_on_demand &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 受管理的備份至 Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [SQL Server 受控備份到 Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

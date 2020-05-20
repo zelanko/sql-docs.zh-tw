@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropuser
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42628ab49e30a4c6dada2eafb505435b8b389de6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d4f4b08f21d29fead3f2cebf477be69cfaf766ad
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124717"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831132"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  從目前資料庫移除資料庫使用者。 **sp_dropuser**提供與舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相容性。  
+  從目前資料庫移除資料庫使用者。 **sp_dropuser**提供與舊版的相容性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[DROP USER](../../t-sql/statements/drop-user-transact-sql.md) 。  
@@ -54,7 +54,7 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  移除資料庫使用者時，也會一併移除該使用者的任何別名。 如果該使用者擁有與該使用者同名的空結構描述，則會卸除結構描述。 如果該使用者擁有資料庫中任何其他安全性實體，則不會卸除使用者。 物件的擁有權必須先傳送到另一個主體。 如需詳細資訊，請參閱 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)。 移除資料庫使用者時，也會自動移除與該使用者相關聯的權限，並且從它所屬的任何資料庫角色移除該使用者。  
   
- **sp_dropuser**不能用來移除**master**或**tempdb**資料庫中的資料庫擁有者（**dbo**） **INFORMATION_SCHEMA**使用者或**來賓**使用者。 在非系統資料庫`EXEC sp_dropuser 'guest'`中，將會撤銷使用者**來賓**的 CONNECT 許可權。 但是使用者本身不會被卸除。  
+ **sp_dropuser**不能用來移除**master**或**tempdb**資料庫中的資料庫擁有者（**dbo**） **INFORMATION_SCHEMA**使用者或**來賓**使用者。 在非系統資料庫中， `EXEC sp_dropuser 'guest'` 將會撤銷使用者**來賓**的 CONNECT 許可權。 但是使用者本身不會被卸除。  
   
  **sp_dropuser**不能在使用者自訂交易內執行。  
   

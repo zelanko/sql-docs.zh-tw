@@ -18,14 +18,14 @@ helpviewer_keywords:
 - removing maintenance plan
 - disassociating maintenance plan
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4843eb9de8badced7e446f20a997a530478c2756
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3f7f148104b6bfce09e7f16a2aa0b3638821787d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056526"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831216"
 ---
 # <a name="sp_delete_maintenance_plan_db-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

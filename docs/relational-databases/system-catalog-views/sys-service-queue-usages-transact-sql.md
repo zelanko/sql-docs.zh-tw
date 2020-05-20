@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_queue_usages catalog view
 ms.assetid: d58dcdaf-f82d-43d9-941b-f520581442bf
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8b1cd1c1688922404b882069d9e100504dfbcb14
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: da3fa2b141714dc4efce5977719c08332538a506
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078710"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831336"
 ---
 # <a name="sysservice_queue_usages-transact-sql"></a>sys.service_queue_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

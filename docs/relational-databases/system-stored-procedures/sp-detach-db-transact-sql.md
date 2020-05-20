@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 25d292ed7f45d921d2fc9eafbc1d2d5fe5912dbe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278186"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830222"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`指定在資料庫卸離作業期間，將不會卸載與要卸離之資料庫相關聯的全文檢索索引檔案。 *KeepFulltextIndexFile*是**Nvarchar （10）** 值，預設值是**true**。 如果*KeepFulltextIndexFile*為**false**，則會卸載與資料庫相關聯的所有全文檢索索引檔案和全文檢索索引的中繼資料，除非資料庫是唯讀的。 如果為 Null 或**true**，則會保留全文檢索相關的中繼資料。  
   
 > [!IMPORTANT]
->  在** \@** 的未來版本中，將會移除 keepfulltextindexfile 參數[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請勿在新的開發工作中使用此參數，並且盡快修改使用此參數的應用程式。  
+>  在的未來版本中，將會移除** \@ keepfulltextindexfile**參數 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 請勿在新的開發工作中使用此參數，並且盡快修改使用此參數的應用程式。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  將資料庫設為 SINGLE_USER 之前，請先確定 AUTO_UPDATE_STATISTICS_ASYNC 選項是否設為 OFF。 此選項設為 ON 時，更新統計資料的背景執行緒會取得資料庫連接，而您就無法以單一使用者模式存取資料庫。 如需詳細資訊，請參閱[將資料庫設定為單一使用者模式](../databases/set-a-database-to-single-user-mode.md)。
 
- 例如，下列`ALTER DATABASE`語句會在所有目前的使用者中斷[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]與資料庫的連線之後，取得資料庫的獨佔存取權。  
+ 例如，下列語句會在所有目前的使用者中斷與資料庫的連線之後，取得 `ALTER DATABASE` 資料庫的獨佔存取權 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 。  
   
 ```  
 USE master;  
@@ -121,7 +121,7 @@ GO
  需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格，或資料庫之**db_owner**角色的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會將[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] *skipchecks*設定為 true 的資料庫卸離。  
+ 下列範例會 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 將*skipchecks*設定為 true 的資料庫卸離。  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  

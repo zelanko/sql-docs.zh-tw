@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropextendedproperty
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 560cecf8b6cc0aff5b503602c521e503e7cc7fcf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2b581c09345b3eba21d53cbf0993b541e3b9422f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67934016"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830131"
 ---
 # <a name="sp_dropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_dropextendedproperty
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @name= ]{'*property_name*'}  
+ [ @name =] {'*property_name*'}  
  這是要卸除的屬性名稱。 *property_name*是**sysname** ，不能是 Null。  
   
- [ @level0type= ]{'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  這是所指定之層級 0 物件類型的名稱。 *level0_object_type*是**Varchar （128）**，預設值是 Null。  
   
  有效輸入如下：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE 和 NULL。  
@@ -61,19 +61,19 @@ sp_dropextendedproperty
 > [!IMPORTANT]  
 >  在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，會移除層級 0 類型的 USER 和 TYPE。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。 請改用 SCHEMA 來當做層級 0 類型，而不是使用 USER。 如果是 TYPE，請使用 SCHEMA 當做層級 0 類型，並使用 TYPE 當做層級 1 類型。  
   
- [ @level0name= ]{'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  這是所指定之層級 0 物件類型的名稱。 *level0_object_name*是**sysname** ，預設值是 Null。  
   
- [ @level1type= ]{'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  這是層級 1 物件的類型。 *level1_object_type*是**Varchar （128）** ，預設值是 Null。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
- [ @level1name= ]{'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  這是所指定之層級 1 物件類型的名稱。 *level1_object_name*是**sysname** ，預設值是 Null。  
   
- [ @level2type= ]{'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  這是層級 2 物件的類型。 *level2_object_type*是**Varchar （128）** ，預設值是 Null。 有效輸入如下：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
- [ @level2name= ]{'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  這是所指定之層級 2 物件類型的名稱。 *level2_object_name*是**sysname** ，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -121,7 +121,7 @@ GO
 ```  
   
 ### <a name="b-dropping-an-extended-property-on-a-database"></a>B. 卸除資料庫的擴充屬性  
- 下列範例會從`MS_Description` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]範例資料庫中移除名為的屬性。 由於此屬性位於資料庫本身，因此未指定任何物件類型和名稱。  
+ 下列範例會 `MS_Description` 從範例資料庫中移除名為的屬性 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。 由於此屬性位於資料庫本身，因此未指定任何物件類型和名稱。  
   
 ```  
 USE AdventureWorks2012;  

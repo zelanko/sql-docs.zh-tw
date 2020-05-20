@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletepeerrequesthistory
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1af3aad1f66f3de7dd2fce44990718980018d3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 986fd717ede9d8fb81bfb42a818921cf3d1b553e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68111939"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830249"
 ---
 # <a name="sp_deletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

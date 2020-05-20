@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropsubscription
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d324d5f26f847488af8cec480cce6c699a5f473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2f800ef185145e63a17db3855989bebde91b48bc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70212282"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831152"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

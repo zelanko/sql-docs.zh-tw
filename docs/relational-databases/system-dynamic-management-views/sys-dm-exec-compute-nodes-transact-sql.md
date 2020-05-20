@@ -19,15 +19,15 @@ helpviewer_keywords:
 - PolyBase management views
 - dm_exec_compute_nodes management view
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44664805dc9b728ecbd48acbf38c4565601c631a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8b7148904df1a9c59bb6b12fd521945b70e2f4d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71326150"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830653"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.databases dm_exec_compute_nodes （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "71326150"
   
  使用此 DMV 查看相應放大叢集中的所有節點清單及其角色、名稱和 IP 位址。  
   
-|資料行名稱|資料類型|描述|範圍|  
+|資料行名稱|資料類型|說明|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|與節點相關聯的唯一數值識別碼。 此視圖的索引鍵。|跨向外延展叢集（不論類型為何）都是唯一的。|  
-|type|**nvarchar(32)**|節點的類型。|「計算」、「HEAD」|  
-|NAME|**nvarchar(32)**|節點的邏輯名稱。|適當長度的任何字串。|  
+|類型|**nvarchar(32)**|節點的類型。|「計算」、「HEAD」|  
+|name|**nvarchar(32)**|節點的邏輯名稱。|適當長度的任何字串。|  
 |address|**nvarchar(32)**|此節點的 IP 位址。|IP 位址範圍|  
   
 ## <a name="see-also"></a>另請參閱  

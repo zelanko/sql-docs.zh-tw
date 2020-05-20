@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_handle catalog view
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e5be48c81dc5851ee43668ef8ca141409acecd7d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103303"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830602"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   顯示命名空間擁有者 (NSO) 所知道的檔案控制代碼。 此視圖會顯示使用**OpenSqlFilestream**的 Filestream 控制碼。  
   
-|資料行|類型|描述|  
+|資料行|類型|說明|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary(8)**|顯示與用戶端控制碼相關聯之內部 NSO 結構的位址。 可為 Null。|  
 |**creation_request_id**|**int**|從用來建立此控制代碼的 REQ_PRE_CREATE I/O 要求顯示欄位。 不可為 Null。|  

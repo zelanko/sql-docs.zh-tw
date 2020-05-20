@@ -16,14 +16,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cbf1658fd1567d9cdd3c35e02195435b6e86adcc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942289"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830393"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_filestream_force_garbage_collection
   
 |||  
 |-|-|  
-|值|描述|  
+|值|說明|  
 |0|作業成功|  
 |1|作業失敗|  
   
 ## <a name="result-sets"></a>結果集  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |*file_name*|指出 FILESTREAM 容器名稱|  
 |*num_collected_items*|指出在這個容器中已進行記憶體回收 (已刪除) 的 FILESTREAM 項目 (檔案/目錄) 的數目。|  
@@ -79,7 +79,7 @@ sp_filestream_force_garbage_collection
 
 由於2個階段的作業，應該執行兩次預存程式，以實際刪除基礎 Filestream 檔案。  
 
-垃圾收集（GC）依賴記錄截斷。 因此，如果最近使用完整復原模式在資料庫上刪除檔案，只有在取得這些交易記錄部分的記錄備份，且記錄部分標示為非作用中時，才會成為 GC。 在使用簡單復原模式的資料庫上，對資料庫發出之後`CHECKPOINT` ，會發生記錄截斷。  
+垃圾收集（GC）依賴記錄截斷。 因此，如果最近使用完整復原模式在資料庫上刪除檔案，只有在取得這些交易記錄部分的記錄備份，且記錄部分標示為非作用中時，才會成為 GC。 在使用簡單復原模式的資料庫上，對資料庫發出之後，會發生記錄截斷 `CHECKPOINT` 。  
 
 
 ## <a name="permissions"></a>權限  
@@ -106,7 +106,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[Filestream](../../relational-databases/blob/filestream-sql-server.md)
+[檔案資料流](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream 及 FileTable 動態管理檢視 (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Filestream 和 FileTable 目錄檢視 (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)

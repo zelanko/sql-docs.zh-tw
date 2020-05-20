@@ -13,14 +13,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], stored procedures
 - system stored procedures [SQL Server], log shipping
 ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0a081fd1d3cebb7d5d83362d2cf5af700f75da09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f93be0c72dcd5e8f555cd6610ccf3caeb64790c2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942176"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830400"
 ---
 # <a name="log-shipping-stored-procedures-transact-sql"></a>記錄傳送預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

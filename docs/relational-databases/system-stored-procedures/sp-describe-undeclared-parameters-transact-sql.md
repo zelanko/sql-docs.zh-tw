@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3745f00e8e2e6d7ed0386a128ee6bcec2adebea
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180123"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831165"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
 
-  傳回結果集，其中包含[!INCLUDE[tsql](../../includes/tsql-md.md)]批次中未宣告之參數的中繼資料。 會考慮** \@tsql**批次中使用的每個參數，但不會在** \@params**中宣告。 傳回的結果集中，針對每一個這類參數包含一個資料列，內含該參數的推算類型資訊。 如果** \@tsql**輸入批次除了在** \@params**中宣告的參數以外，則會傳回空的結果集。  
+  傳回結果集，其中包含批次中未宣告之參數的中繼資料 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 會考慮** \@ tsql**批次中使用的每個參數，但不會在** \@ params**中宣告。 傳回的結果集中，針對每一個這類參數包含一個資料列，內含該參數的推算類型資訊。 如果** \@ tsql**輸入批次除了在** \@ params**中宣告的參數以外，則會傳回空的結果集。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,11 +45,11 @@ sp_describe_undeclared_parameters
 > 若要在 Azure Synapse Analytics （先前稱為 SQL DW）中使用此預存程式，資料庫的相容性層級必須大於10。 
 
 ## <a name="arguments"></a>引數  
-`[ \@tsql = ] 'Transact-SQL\_batch'`一或多[!INCLUDE[tsql](../../includes/tsql-md.md)]個語句。 *交易 SQL_batch*可以是**Nvarchar （**_n_**）** 或**Nvarchar （max）**。  
+`[ \@tsql = ] 'Transact-SQL\_batch'`一或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句。 *交易 SQL_batch*可以是**Nvarchar （**_n_**）** 或**Nvarchar （max）**。  
   
-`[ \@params = ] N'parameters'`\@params 會提供[!INCLUDE[tsql](../../includes/tsql-md.md)]批次參數的宣告字串，類似于 sp_executesql 的運作方式。 *參數*可以是**Nvarchar （**_n_**）** 或**Nvarchar （max）**。  
+`[ \@params = ] N'parameters'`\@params 會提供批次參數的宣告字串 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，類似于 sp_executesql 的運作方式。 *參數*可以是**Nvarchar （**_n_**）** 或**Nvarchar （max）**。  
   
- 這是一個字串，其中包含已內嵌在*交易 SQL_batch*中的所有參數的定義。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 n 是指出其他參數定義的預留位置。 如果語句中的 Transact-sql 語句或批次不包含參數， \@則不需要 params。 這個參數的預設值是 NULL。  
+ 這是一個字串，其中包含已內嵌在*交易 SQL_batch*中的所有參數的定義。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 n 是指出其他參數定義的預留位置。 如果語句中的 Transact-sql 語句或批次不包含參數， \@ 則不需要 params。 這個參數的預設值是 NULL。  
   
  資料類型  
  參數的資料類型。  
@@ -96,17 +96,17 @@ sp_describe_undeclared_parameters
   
  **sp_describe_undeclared_parameters**在下列任何情況下都會傳回錯誤。  
   
--   如果輸入\@tsql 不是有效[!INCLUDE[tsql](../../includes/tsql-md.md)]的批次。 有效性是藉由剖析和分析[!INCLUDE[tsql](../../includes/tsql-md.md)]批次來判斷。 判斷[!INCLUDE[tsql](../../includes/tsql-md.md)]批次是否有效時，批次在查詢優化期間或執行期間所造成的任何錯誤都不會列入考慮。  
+-   如果輸入 \@ tsql 不是有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次。 有效性是藉由剖析和分析 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次來判斷。 判斷批次是否有效時，批次在查詢優化期間或執行期間所造成的任何錯誤都不會列入考慮 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
--   如果\@params 不是 Null，而且包含的字串不是語法有效的參數宣告字串，或包含的字串會宣告任何參數一次以上，則為。  
+-   如果 \@ params 不是 Null，而且包含的字串不是語法有效的參數宣告字串，或包含的字串會宣告任何參數一次以上，則為。  
   
--   如果輸入[!INCLUDE[tsql](../../includes/tsql-md.md)]批次宣告的區域變數與 params 中\@宣告的參數名稱相同。  
+-   如果輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次宣告的區域變數與 params 中宣告的參數名稱相同 \@ 。  
   
 - 如果語句參考臨時表，則為。
 
 - 查詢包含建立隨後要查詢的永久資料表。
   
- 如果\@tsql 沒有參數（在 params 中\@宣告的參數除外），則程式會傳回空的結果集。  
+ 如果 \@ tsql 沒有參數（在 params 中宣告的參數除外 \@ ），則程式會傳回空的結果集。  
   
 ## <a name="parameter-selection-algorithm"></a>參數選取演算法  
  針對具有未宣告之參數的查詢，在三個步驟中進行未宣告之參數的資料類型推算。  
@@ -121,7 +121,7 @@ sp_describe_undeclared_parameters
   
 -   資料類型不相依於所有輸入中未宣告的參數之運算式。  
   
- 例如，請考量 `SELECT dbo.tbl(@p1) + c1 FROM t1 WHERE c2 = @p2 + 2` 查詢。 運算式 dbo.tbl （\@p1） + c1 和 c2 具有資料類型，而運算式\@p1 和\@p2 + 2 則否。  
+ 例如，請考量 `SELECT dbo.tbl(@p1) + c1 FROM t1 WHERE c2 = @p2 + 2` 查詢。 運算式 dbo.tbl （ \@ p1） + c1 和 c2 具有資料類型，而運算式 \@ p1 和 \@ p2 + 2 則否。  
   
  在此步驟之後，如果任何運算式 (UDF 呼叫以外) 有兩個不含資料類型的引數，類型推算會失敗並出現錯誤。 例如，下列範例都會產生錯誤：  
   
@@ -139,7 +139,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  **步驟 2**  
   
- 針對指定的未宣告\@參數 p，類型推算演算法會尋找包含\@ \@p 且為下列其中一項的最內層運算式 E （p）：  
+ 針對指定的未宣告參數 \@ p，類型推算演算法 \@ 會尋找包含 \@ p 且為下列其中一項的最內層運算式 E （p）：  
   
 -   比較或指派運算子的引數。  
   
@@ -149,7 +149,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   **CAST**或**CONVERT**的引數。  
   
- 類型推算演算法會尋找 E （\@\@p）的目標資料類型 TT （p）。 上述範例的目標資料類型如下所示：  
+ 類型推算演算法會尋找 E （p）的目標資料類型 TT （ \@ p） \@ 。 上述範例的目標資料類型如下所示：  
   
 -   比較或指派另一端的資料類型。  
   
@@ -159,32 +159,32 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   陳述式轉型或轉換成的資料類型。  
   
- 例如，請考量 `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)` 查詢。 然後，E\@（p1） \@= p1，e\@（p2） \@= p2 + c1，tt\@（P1）是宣告的傳回資料類型 dbo.tbl，tt （\@p2）是 dbo.tbl 的宣告參數資料類型。  
+ 例如，請考量 `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)` 查詢。 然後，E （ \@ p1） = \@ P1，e （ \@ p2） = \@ P2 + c1，tt （p1）是宣告的傳回 \@ 資料類型 dbo.tbl，tt （ \@ p2）是 dbo.tbl 的宣告參數資料類型。  
   
- 如果\@p 不包含在步驟2開頭所列的任何運算式中，則類型推算演算法會判斷 e\@（p）是包含\@p 的最大純量運算式，而類型推算演算法不會計算 e （\@\@p）的目標資料類型 TT （p）。 例如，如果查詢為`@p + 2` SELECT，則 E （\@p） = \@p + 2，而且沒有 TT （\@p）。  
+ 如果 \@ p 不包含在步驟2開頭所列的任何運算式中，則類型推算演算法會判斷 e （ \@ p）是包含 p 的最大純量運算式， \@ 而類型推算演算法不會計算 e （p）的目標資料類型 TT （ \@ p） \@ 。 例如，如果查詢為 SELECT， `@p + 2` 則 E （ \@ p） = \@ p + 2，而且沒有 TT （ \@ p）。  
   
  **步驟 3**  
   
- 既然已識別 E\@（p）和 TT\@（p），類型推算演算法會以下列兩種方式的\@其中一種來會推算 p 的資料類型：  
+ 既然 \@ 已識別 E （p）和 TT （ \@ p），類型推算演算法會 \@ 以下列兩種方式的其中一種來會推算 p 的資料類型：  
   
 -   簡單推算  
   
-     如果 E （\@p） = \@p 和 TT （\@p）存在，亦即，如果\@p 直接是步驟2開頭所列之其中一個運算式的引數，則類型推算演算法會將\@p 的資料類型會推算為 TT （\@p）。 例如：  
+     如果 E （ \@ p） = \@ p 和 TT （ \@ p）存在，亦即，如果 \@ p 直接是步驟2開頭所列之其中一個運算式的引數，則類型推算演算法會將 p 的資料類型會推算 \@ 為 TT （ \@ p）。 例如：  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
     ```  
   
-     \@P1、 \@p2 和\@p3 的資料類型會分別是 c1 的資料類型、dbo.tbl 的傳回資料類型，以及 dbo.tbl 的參數資料類型。  
+     \@P1、 \@ p2 和 p3 的資料類型 \@ 會分別是 c1 的資料類型、dbo.tbl 的傳回資料類型，以及 dbo.tbl 的參數資料類型。  
   
-     在特殊情況下，如果\@p 是\<、>、 \<= 或 >= 運算子的引數，則不適用簡單的推算規則。 類型推算演算法會使用下一節所述的一般推算規則。 例如，如果 c1 是資料類型 char(30) 的資料行，請考慮下列兩個查詢：  
+     在特殊情況下，如果 \@ p 是 \< 、>、 \< = 或 >= 運算子的引數，則不適用簡單的推算規則。 類型推算演算法會使用下一節所述的一般推算規則。 例如，如果 c1 是資料類型 char(30) 的資料行，請考慮下列兩個查詢：  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p  
     SELECT * FROM t WHERE c1 > @p  
     ```  
   
-     在第一個案例中，類型推算演算法會會推算**char （30）** 做為\@p 的資料類型，如本主題稍早的規則所述。 在第二個案例中，類型推算演算法會根據下一節中的一般推算規則來會推算**Varchar （8000）** 。  
+     在第一個案例中，類型推算演算法會會推算**char （30）** 做為 p 的資料類型， \@ 如本主題稍早的規則所述。 在第二個案例中，類型推算演算法會根據下一節中的一般推算規則來會推算**Varchar （8000）** 。  
   
 -   一般推算  
   
@@ -215,7 +215,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 ### <a name="selection-criteria"></a>選取準則  
  在候選資料類型中，會導致查詢失效的任何資料類型都會遭到拒絕。 在剩餘的候選資料類型中，類型推算演算法會根據下列規則來選取其中一個資料類型。  
   
-1.  選取的資料類型會在 E （\@p）中，產生最小的隱含轉換數目。 如果特定資料類型\@針對 e （p）產生與 TT （\@p）不同的資料類型，則類型推算演算法會將此視為從 E （\@p）的資料類型到 tt （\@p）的額外隱含轉換。  
+1.  選取的資料類型會在 E （p）中，產生最小的隱含轉換數目 \@ 。 如果特定資料類型針對 E （p）產生與 \@ TT （p）不同的資料類型 \@ ，則類型推算演算法會將此視為從 E （p）的資料類型 \@ 到 tt （p）的額外隱含轉換 \@ 。  
   
      例如：  
   
@@ -223,7 +223,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
     ```  
   
-     在此情況下，E\@（p）是 Col_Int \@+ p，TT\@（p）是**Int**。**int**已為\@p 選擇 int，因為它不會產生隱含轉換。 任何其他資料類型選擇會產生至少一個隱含轉換。  
+     在此情況下，E （ \@ p）是 Col_Int + \@ p，TT （ \@ p）是**Int**。已為 p 選擇**int** ， \@ 因為它不會產生隱含轉換。 任何其他資料類型選擇會產生至少一個隱含轉換。  
   
 2.  如果多個資料類型有相同的最小轉換數目，則會使用具有較高優先順序的資料類型。 例如  
   
@@ -231,9 +231,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     在此情況下， **int**和**Smallint**會產生一個轉換。 所有其他的資料類型都會產生一個以上的轉換。 因為**int**的優先順序高於**Smallint**， **int**所以會將 int \@用於 p。 如需資料類型優先順序的詳細資訊，請參閱[&#40;transact-sql&#41;的資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
+     在此情況下， **int**和**Smallint**會產生一個轉換。 所有其他的資料類型都會產生一個以上的轉換。 因為**int**的優先順序高於**Smallint**，所以會將**int**用於 \@ p。 如需資料類型優先順序的詳細資訊，請參閱[&#40;transact-sql&#41;的資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-     只有在依據規則 1 每個候選資格相同的資料類型與具有最高優先順序的資料類型之間發生隱含轉換時，才會套用此規則。 如果沒有隱含轉換，資料類型推算會失敗並出現錯誤。 例如，在查詢`SELECT @p FROM t`中，資料類型推算會失敗，因為 p 的\@任何資料類型都同樣好用。 例如，沒有從**int**到**xml**的隱含轉換。  
+     只有在依據規則 1 每個候選資格相同的資料類型與具有最高優先順序的資料類型之間發生隱含轉換時，才會套用此規則。 如果沒有隱含轉換，資料類型推算會失敗並出現錯誤。 例如，在查詢中 `SELECT @p FROM t` ，資料類型推算會失敗，因為 p 的任何資料類型都 \@ 同樣好用。 例如，沒有從**int**到**xml**的隱含轉換。  
   
 3.  如果兩個類似的資料類型系結在規則1下（例如**Varchar （8000）** 和**Varchar （max）**），則會選擇較小的資料類型（**Varchar （8000）**）。 相同的原則也適用于**Nvarchar**和**Varbinary**資料類型。  
   
@@ -247,12 +247,12 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     4.  任何其他轉換。  
   
- 例如，針對查詢`SELECT * FROM t WHERE [Col_varchar(30)] > @p`，會選擇**Varchar （8000）** ，因為轉換（a）是最佳的。 針對查詢`SELECT * FROM t WHERE [Col_char(30)] > @p`，仍然會選擇**Varchar （8000）** ，因為它會導致類型（b）轉換，而且因為另一個選擇（例如**Varchar （4000）**）會導致類型（d）轉換。  
+ 例如，針對查詢 `SELECT * FROM t WHERE [Col_varchar(30)] > @p` ，會選擇**Varchar （8000）** ，因為轉換（a）是最佳的。 針對查詢 `SELECT * FROM t WHERE [Col_char(30)] > @p` ，仍然會選擇**Varchar （8000）** ，因為它會導致類型（b）轉換，而且因為另一個選擇（例如**Varchar （4000）**）會導致類型（d）轉換。  
   
- 最後一個範例是在給定查詢`SELECT NULL + @p`的情況下，為\@p 選擇**int** ，因為它會產生類型（c）轉換。  
+ 最後一個範例是在給定查詢的 `SELECT NULL + @p` 情況下，為 p 選擇**int** ， \@ 因為它會產生類型（c）轉換。  
   
 ## <a name="permissions"></a>權限  
- 需要執行\@tsql 引數的許可權。  
+ 需要執行 \@ tsql 引數的許可權。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回未宣告之 `@id` 和 `@name` 參數的預期資料類型相關資訊。  

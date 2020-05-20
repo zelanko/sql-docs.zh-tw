@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_database_backuphistory
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff85b52e0b0ed6715b64287f0c0e5abd5a0ae9c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a4eae137065cc83f5a467068ea70e128af89de5c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085807"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831223"
 ---
 # <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8f439fa61b8bfecfba9d03589af0d09ff737f3bc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108477"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831756"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  開啟資料指標。 sp_cursoropen 會定義與資料指標和資料指標選項相關聯的 SQL 語句，然後填入資料指標。 sp_cursoropen 相當於[!INCLUDE[tsql](../../includes/tsql-md.md)]語句 DECLARE_CURSOR 和 OPEN 的組合。 這個程序的叫用方式是在表格式資料流 (TDS) 封包中指定 ID = 2。  
+  開啟資料指標。 sp_cursoropen 會定義與資料指標和資料指標選項相關聯的 SQL 語句，然後填入資料指標。 sp_cursoropen 相當於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句 DECLARE_CURSOR 和 OPEN 的組合。 這個程序的叫用方式是在表格式資料流 (TDS) 封包中指定 ID = 2。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  捲動選項。 *scrollopt*是需要下列其中一個**int**輸入值的選擇性參數。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,7 +74,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  並行控制選項。 *ccopt*是需要下列其中一個**int**輸入值的選擇性參數。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (之前稱為 LOCKCC)|  
@@ -88,7 +88,7 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- 如同*scrollopt*， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以覆寫要求的*ccopt*值。  
+ 如同*scrollopt*， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以覆寫要求的*ccopt*值。  
   
  *計數*  
  要搭配 AUTO_FETCH 使用的提取緩衝區資料列數目。 預設為 20 個資料列。 指派為輸入值與傳回值時，資料列*計數*的行為會有所不同。  
@@ -154,7 +154,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  *Stmt*參數允許的內容取決於*ccopt* ALLOW_DIRECT 傳回值是否已由或*ccopt*值的其餘部分所連結，例如：  
   
--   如果未指定 ALLOW_DIRECT，則必須使用[!INCLUDE[tsql](../../includes/tsql-md.md)]針對包含單一 SELECT 語句的預存程式呼叫的 SELECT 或 EXECUTE 語句。 此外，SELECT 陳述式必須符合資料指標的資格，也就是說，它不得包含關鍵字 SELECT INTO 或 FOR BROWSE。  
+-   如果未指定 ALLOW_DIRECT，則 [!INCLUDE[tsql](../../includes/tsql-md.md)] 必須使用針對包含單一 SELECT 語句的預存程式呼叫的 SELECT 或 EXECUTE 語句。 此外，SELECT 陳述式必須符合資料指標的資格，也就是說，它不得包含關鍵字 SELECT INTO 或 FOR BROWSE。  
   
 -   如果指定了 ALLOW_DIRECT，這可能會產生一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，包括之後搭配多個陳述式執行其他預存程序的那些陳述式。 非 SELECT 陳述式或包含關鍵字 SELECT INTO 或 FOR BROWSE 的任何 SELECT 陳述式將只會執行，而不會建立資料指標。 包括在多個陳述式批次內的任何 SELECT 陳述式也是相同的情況。 如果 SELECT 陳述式包含只與資料指標有關的子句，將會忽略這些子句。 例如，當*ccopt*的值為0x2002 時，這就是的要求：  
   
@@ -169,7 +169,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  AUTO_FETCH 和 AUTO_CLOSE 可以透過 OR 連結到 FAST_FORWARD。  
   
- 如果 CHECK_ACCEPTED_TYPES 是 ON，則最後五個*scrollopt*值（KEYSET_ACCEPTABLE`,` DYNAMIC_ACCEPTABLE、FORWARD_ONLY_ACCEPTABLE、STATIC_ACCEPTABLE 或 FAST_FORWARD_ACCEPTABLE）中至少必須有一個。  
+ 如果 CHECK_ACCEPTED_TYPES 是 ON，則最後五個*scrollopt*值（KEYSET_ACCEPTABLE `,` DYNAMIC_ACCEPTABLE、FORWARD_ONLY_ACCEPTABLE、STATIC_ACCEPTABLE 或 FAST_FORWARD_ACCEPTABLE）中至少必須有一個。  
   
  STATIC 資料指標永遠都會當做 READ_ONLY 開啟。 這表示基礎資料表無法透過這個資料指標來更新。  
   

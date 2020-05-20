@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_monitordata system table
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 886240176188fdcea0c104ca366ec5451528312a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 118602eadf5dc1f23aa811d9a295fae351f54f36
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079146"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829860"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68079146"
 |**lastrefresh**|**datetime**|重新整理監視資料的日期和時間。|  
 |**computetime**|**int**|這是計算監視資料所花的時間 (以秒為單位)。|  
 |**publication_id**|**int**|發行集識別碼。|  
-|**發行者**|**sysname**|發行者的名稱。|  
+|**publisher**|**sysname**|發行者的名稱。|  
 |**publisher_srvid**|**int**|發行者的伺服器識別碼。|  
 |**publisher_db**|**sysname**|發行集資料庫的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  

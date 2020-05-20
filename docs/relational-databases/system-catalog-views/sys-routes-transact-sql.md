@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.routes catalog view
 ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bfdd322107da1a08edb3933aee9d5b79b6c2b47a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2769fcd0ec6dde419c9ebba2f3cfb0017cf74b0b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67904425"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831384"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cached_plans dynamic management view
 ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe53a1d912ce03ab2eedb66b72b4de947466b313
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd09fde00399dc2e96dc67334a0446ca9f618c3e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68263944"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830722"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68263944"
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 為避免公開此資訊，包含不屬於連接租使用者之資料的每個資料列都會被篩選掉。此外，資料行**memory_object_address**和**pool_id**中的值會進行篩選;資料行值設定為 Null。  
   
 > [!NOTE]  
->  若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_exec_cached_plans**的名稱。  
+>  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_exec_cached_plans**的名稱。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -45,17 +45,17 @@ ms.locfileid: "68263944"
 |size_in_bytes|**int**|快取物件所耗用的位元組數目。|  
 |memory_object_address|**varbinary(8)**|快取項目的記憶體位址。 這個值可以與 [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) 一起使用，以取得快取計畫的記憶體細分，也可以與 [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md) 一起使用，以取得快取項目的成本。|  
 |cacheobjtype|**Nvarchar （34）**|快取中的物件類型。 這個值可以是下列值之一：<br /><br /> 編譯的計畫<br /><br /> 已編譯計畫虛設常式<br /><br /> 剖析樹狀結構<br /><br /> 擴充程序<br /><br /> CLR 編譯的函數<br /><br /> CLR 編譯的程序|  
-|objtype|**Nvarchar （16）**|物件的類型。 以下是可能的值及其對應的描述。<br /><br /> Proc：預存程式<br />備妥：備妥的語句<br />臨機操作：特定查詢。 指的[!INCLUDE[tsql](../../includes/tsql-md.md)]是使用**osql**或**sqlcmd** （而非遠端程序呼叫）提交為語言事件。<br />ReplProc：複寫-篩選器-程式<br />觸發程式：觸發程式<br />View： View<br />預設值：預設值<br />UsrTab：使用者資料表<br />SysTab：系統資料表<br />檢查：檢查條件約束<br />規則：規則|  
+|objtype|**Nvarchar （16）**|物件的類型。 以下是可能的值及其對應的描述。<br /><br /> Proc：預存程式<br />備妥：備妥的語句<br />臨機操作：特定查詢。 指 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的是使用**osql**或**sqlcmd** （而非遠端程序呼叫）提交為語言事件。<br />ReplProc：複寫-篩選器-程式<br />觸發程式：觸發程式<br />View： View<br />預設值：預設值<br />UsrTab：使用者資料表<br />SysTab：系統資料表<br />檢查：檢查條件約束<br />規則：規則|  
 |plan_handle|**varbinary(64)**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 這個值可以與下列動態管理函數一起使用：<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|計算此計畫記憶體使用量代表之資源集區的識別碼。|  
-|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
  <sup>1</sup>  
   
 ## <a name="permissions"></a>權限
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
+在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
 
 ## <a name="examples"></a>範例  
   
@@ -83,7 +83,7 @@ GO
 ```  
   
 ### <a name="c-returning-the-set-options-with-which-the-plan-was-compiled"></a>C. 傳回編譯計畫所用的 SET 選項  
- 下列範例會傳回編譯計畫所用的 SET 選項。 也`sql_handle`會傳回計畫的。 PIVOT 運算子可用來將`set_options`和屬性當做資料`sql_handle`行來輸出，而不是做為資料列。 如需有關中`set_options`所傳回之值的詳細資訊，請參閱[dm_exec_plan_attributes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)。  
+ 下列範例會傳回編譯計畫所用的 SET 選項。 `sql_handle`也會傳回計畫的。 PIVOT 運算子可用來將和屬性當做資料行來輸出 `set_options` ， `sql_handle` 而不是做為資料列。 如需有關中所傳回之值的詳細資訊 `set_options` ，請參閱[Dm_exec_plan_attributes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)。  
   
 ```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  

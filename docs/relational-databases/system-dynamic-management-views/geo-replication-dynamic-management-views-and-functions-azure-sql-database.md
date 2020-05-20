@@ -16,12 +16,12 @@ ms.assetid: c98a06f6-c205-42f0-9f2a-4668c6103bc8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b849b6c1edaea011311ed2faf90b5c550c26bd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11edc45464e53a1713b414cb870a25b0ae856cdd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130736"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829489"
 ---
 # <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>異地複寫動態管理的查看和功能（Azure SQL Database）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

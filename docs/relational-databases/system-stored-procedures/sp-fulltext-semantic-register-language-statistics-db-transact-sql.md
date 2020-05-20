@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_register_language_statistics_db
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 59cf70574a73827887542221f556e65e46090395
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 263ea7b2bb0da7822554bbdcad934ef20ec54d3b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124206"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830031"
 ---
 # <a name="sp_fulltext_semantic_register_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ GO
 ```  
   
 ##  <a name="arguments"></a><a name="Arguments"></a>參量  
- [ @dbname = ]'*database_name*'  
+ [ @dbname =] '*database_name*'  
  這是要在目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中註冊的語義語言統計資料庫名稱。 資料庫必須已附加。 *database_name*是**sysname**，而且不可以是 Null。  
   
 ## <a name="return-code-value"></a>傳回碼值  
@@ -73,7 +73,7 @@ GO
  如需詳細資訊，請參閱 [安裝及設定語意搜尋](../../relational-databases/search/install-and-configure-semantic-search.md)。  
   
 ## <a name="metadata"></a>中繼資料  
- 如需有關在實例上安裝之語意語言統計資料資料庫的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]詳細資訊，請查詢目錄檢視[Sys.databases fulltext_semantic_language_statistics_database &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
+ 如需有關在實例上安裝之語意語言統計資料資料庫的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請查詢目錄檢視[sys.databases Fulltext_semantic_language_statistics_database &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
   
 ## <a name="security"></a>安全性  
   

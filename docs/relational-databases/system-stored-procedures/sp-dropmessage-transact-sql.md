@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropmessage
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fa242b7adf46269402b28d459eace429fd247bc1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933862"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830006"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="examples"></a>範例  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. 卸除使用者自訂訊息  
- 下列範例會從**sys.databases**中卸載使用者定義的訊息`50001`（數位）。  
+ 下列範例會從 sys.databases 中卸載使用者定義的訊息（數位 `50001` ）。 **sys.messages**  
   
 ```  
 USE master;  
@@ -134,7 +134,7 @@ GO
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_altermessage &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [FORMATMESSAGE &#40;Transact-sql&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

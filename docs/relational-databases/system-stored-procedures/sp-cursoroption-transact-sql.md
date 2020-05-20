@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 560c425c5bda4ee1f9dd7ecf454c65d3ba7eab1e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108450"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831719"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +40,15 @@ sp_cursoroption cursor, code, value
   
 ## <a name="arguments"></a>引數  
  *cursor*  
- 這是由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所產生並由 sp_cursoropen 預存程式所傳回的*控制碼*值。 資料*指標*需要**int**輸入值才能執行。  
+ 這是*handle*由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所產生並由 sp_cursoropen 預存程式所傳回的控制碼值。 資料*指標*需要**int**輸入值才能執行。  
   
  *code*  
  用來保證資料指標的各種因數一定會傳回值。 程式*代碼*需要下列其中一個**int**輸入值：  
   
-|值|名稱|描述|  
+|值|名稱|說明|  
 |-----------|----------|-----------------|  
-|0x0001|TEXTPTR_ONLY|針對某些指定的 text 或 image 資料行傳回文字指標，而不是實際的資料。<br /><br /> TEXTPTR_ONLY 允許使用文字指標做為 blob 物件的*控制碼*，稍後可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]或 DBLIB 設施（例如[!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT 或 DBLIB DBWRITETEXT）選擇性地抓取或更新它們。<br /><br /> 如果指派 "0" 值，選取清單中的所有 text 和 image 資料行將會傳回文字指標，而不是資料。|  
-|0x0002|CURSOR_NAME|將 [*值*] 中指定的名稱指派給資料指標。 接著，這可讓 ODBC 在透過 sp_cursoropen [!INCLUDE[tsql](../../includes/tsql-md.md)]開啟的資料指標上使用定位 UPDATE/DELETE 子句。<br /><br /> 此字串可以指定為任何字元或 Unicode 資料類型。<br /><br /> 由於[!INCLUDE[tsql](../../includes/tsql-md.md)]定位的 UPDATE/delete 語句預設會在 fat 資料指標的第一個資料列上運作，因此在發出定位的 UPDATE/delete 語句之前，應該先使用 sp_cursor SETPOSITION 來定位資料指標。|  
+|0x0001|TEXTPTR_ONLY|針對某些指定的 text 或 image 資料行傳回文字指標，而不是實際的資料。<br /><br /> TEXTPTR_ONLY 允許使用文字指標做為 blob 物件的*控制碼*，稍後可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 DBLIB 設施（例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT 或 DBLIB DBWRITETEXT）選擇性地抓取或更新它們。<br /><br /> 如果指派 "0" 值，選取清單中的所有 text 和 image 資料行將會傳回文字指標，而不是資料。|  
+|0x0002|CURSOR_NAME|將 [*值*] 中指定的名稱指派給資料指標。 接著，這可讓 ODBC [!INCLUDE[tsql](../../includes/tsql-md.md)] 在透過 sp_cursoropen 開啟的資料指標上使用定位 UPDATE/DELETE 子句。<br /><br /> 此字串可以指定為任何字元或 Unicode 資料類型。<br /><br /> 由於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定位的 update/delete 語句預設會在 fat 資料指標的第一個資料列上運作，因此在發出定位的 update/delete 語句之前，應該先使用 SP_CURSOR SETPOSITION 來定位資料指標。|  
 |0x0003|TEXTDATA|在後續的提取上，針對某些 text 或 image 資料行傳回實際資料，而不是文字指標 (也就是說，這樣會復原 TEXTPTR_ONLY 的作用)。<br /><br /> 如果針對特定的資料行啟用 TEXTDATA，將會重新提取或重新整理資料列，而且可以設定回 TEXTPTR_ONLY。 如果是 TEXTPTR_ONLY，值參數是一個指定資料行編號的整數，以及傳回所有 text 或 image 資料行的零值。|  
 |0x0004|SCROLLOPT|捲動選項。 如需詳細資訊，請參閱這個主題稍後的「傳回碼值」。|  
 |0x0005|CCOPT|並行控制選項。 如需詳細資訊，請參閱這個主題稍後的「傳回碼值」。|  
@@ -63,7 +63,7 @@ sp_cursoroption cursor, code, value
 ## <a name="return-code-values"></a>傳回碼值  
  *Value*參數可能會傳回下列其中一個程式*代碼*值。  
   
-|傳回值|描述|  
+|傳回值|說明|  
 |------------------|-----------------|  
 |0x0004|SCROLLOPT|  
 |0X0005|CCOPT|  
@@ -71,7 +71,7 @@ sp_cursoroption cursor, code, value
   
  *Value*參數會傳回下列其中一個 SCROLLOPT 值。  
   
-|傳回值|描述|  
+|傳回值|說明|  
 |------------------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -80,7 +80,7 @@ sp_cursoroption cursor, code, value
   
  *Value*參數會傳回下列其中一個 CCOPT 值。  
   
-|傳回值|描述|  
+|傳回值|說明|  
 |------------------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS|  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7fe788192aac7f7bd3e4723b615391c5d8c6e86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97339050b2bb6b81945b6bc7604befdfd45f360b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811525"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829513"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="arguments"></a>引數  
  *database_id* |Null |0 |預設  
- 資料庫的識別碼。 *database_id*為**Smallint**。 有效的輸入為資料庫的識別碼、NULL、0 或 DEFAULT。 預設值為 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。  
+ 資料庫的識別碼。 *database_id*為**Smallint**。 有效的輸入為資料庫的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。  
   
  請指定 NULL 來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中之所有資料庫的資訊。 如果您為*database_id*指定 null，則也必須為*object_id*、 *index_id*和*partition_number*指定 null。  
   
@@ -65,7 +65,7 @@ sys.dm_db_index_physical_stats (
  *object_id* |Null |0 |預設  
  這是索引所在之資料表或檢視表的物件識別碼。 *@object_id* 是 **int**。  
   
- 有效的輸入為資料表和檢視表的識別碼、NULL、0 或 DEFAULT。 預設值為 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。 從到[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，有效的輸入也包括 service broker 佇列名稱或佇列內部資料表名稱。 套用預設參數時（亦即所有物件、所有索引等等），所有佇列的片段資訊都會包含在結果集中。  
+ 有效的輸入為資料表和檢視表的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。 從到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ，有效的輸入也包括 service broker 佇列名稱或佇列內部資料表名稱。 套用預設參數時（亦即所有物件、所有索引等等），所有佇列的片段資訊都會包含在結果集中。  
   
  請指定 NULL 來傳回指定之資料庫中所有資料表和檢視表的相關資訊。 如果您為*object_id*指定 null，也必須為*index_id*和*partition_number*指定 null。  
   
@@ -75,7 +75,7 @@ sys.dm_db_index_physical_stats (
  請指定 NULL 來傳回基底資料表或檢視表的所有索引資訊。 如果您為*index_id*指定 null，則也必須為*partition_number*指定 null。  
   
  *partition_number* |Null |0 |預設  
- 這是物件的分割區編號。 *partition_number*為**int**。有效的輸入為索引或堆積的*partion_number* 、Null、0或 DEFAULT。 預設值為 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。  
+ 這是物件的分割區編號。 *partition_number*為**int**。有效的輸入為索引或堆積的*partion_number* 、Null、0或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。  
   
  請指定 NULL 來傳回主控物件之所有分割區的相關資訊。  
   
@@ -102,7 +102,7 @@ sys.dm_db_index_physical_stats (
 |avg_fragment_size_in_pages|**float**|IN_ROW_DATA 配置單位的分葉層級中，一個片段的平均頁數。<br /><br /> 如果是索引的非分葉層級，以及 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為 NULL。<br /><br /> 當*mode* = 取樣時，會針對堆積傳回 Null。|  
 |page_count|**bigint**|索引或資料頁總數。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中，B 型樹狀目錄目前層級的總索引頁數。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的總資料頁數。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為配置單位中的總頁數。|  
 |avg_page_space_used_in_percent|**float**|所有頁面所用之可用資料儲存空間的平均百分比。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中 B 型樹狀目錄目前層級的平均數。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中所有資料頁的平均數。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW DATA 配置單位，則為配置單位中所有頁面的平均數。<br /><br /> 當*mode* = 有限時，則為 Null。|  
-|record_count|**bigint**|總記錄數。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中，B 型樹狀目錄目前層級的總記錄數。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的總記錄數。<br /><br /> **注意：** 若為堆積，從此函數傳回的記錄數目可能與針對堆積執行 SELECT COUNT （\*）所傳回的資料列數目不符。 這是因為一個資料列可能包含數筆記錄。 例如，在某些更新情況下，單一的堆積資料列可能有一筆轉送記錄以及一筆當做更新作業結果的轉送記錄。 同時，在 LOB_DATA 儲存體中，會將多數大型的 LOB 資料列分割為多筆記錄。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為完整配置單位中的總記錄數。<br /><br /> 當*mode* = 有限時，則為 Null。|  
+|record_count|**bigint**|總記錄數。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中，B 型樹狀目錄目前層級的總記錄數。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的總記錄數。<br /><br /> **注意：** 若為堆積，從此函數傳回的記錄數目可能與針對堆積執行 SELECT COUNT （）所傳回的資料列數目不符 \* 。 這是因為一個資料列可能包含數筆記錄。 例如，在某些更新情況下，單一的堆積資料列可能有一筆轉送記錄以及一筆當做更新作業結果的轉送記錄。 同時，在 LOB_DATA 儲存體中，會將多數大型的 LOB 資料列分割為多筆記錄。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為完整配置單位中的總記錄數。<br /><br /> 當*mode* = 有限時，則為 Null。|  
 |ghost_record_count|**bigint**|配置單位中，準刪除清除工作準備要移除的準刪除記錄數。<br /><br /> 如果是 IN_ROW_DATA 配置單位中索引的非分葉層級，則為 0。<br /><br /> 當*mode* = 有限時，則為 Null。|  
 |version_ghost_record_count|**bigint**|配置單位中未完成之快照集隔離交易所保留的準刪除記錄數。<br /><br /> 如果是 IN_ROW_DATA 配置單位中索引的非分葉層級，則為 0。<br /><br /> 當*mode* = 有限時，則為 Null。|  
 |min_record_size_in_bytes|**int**|記錄大小下限 (以位元組為單位)。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中 B 型樹狀目錄目前層級的記錄大小下限。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的記錄大小下限。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為完整配置單位中的記錄大小下限。<br /><br /> 當*mode* = 有限時，則為 Null。|  
@@ -110,9 +110,9 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|記錄大小平均值 (以位元組為單位)。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中 B 型樹狀目錄目前層級的平均記錄大小。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的平均記錄大小。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為完整配置單位中的平均記錄大小。<br /><br /> 當*mode* = 有限時，則為 Null。|  
 |forwarded_record_count|**bigint**|在堆積中，有指向另一個資料位置之轉送指標的記錄數目 (此狀態發生於更新期間，原始位置的空間不足以儲存新資料列時)。<br /><br /> 如果是 IN_ROW_DATA 配置單位以外的任何堆積配置單位，則為 NULL。<br /><br /> 當*mode* = 有限時，則為 Null。|  
 |compressed_page_count|**bigint**|壓縮的頁面數。<br /><br /> 如果是堆積，新配置的頁面不會使用 PAGE 壓縮方式。 堆積會在兩個特殊情況下使用 PAGE 壓縮方式：大量匯入資料或是重建堆積時。 造成頁面配置的一般 DML 作業將不會使用 PAGE 壓縮方式。 當 compressed_page_count 值成長到大於您要的臨界值時，重建堆積。<br /><br /> 如果是具有叢集索引的資料表，compressed_page_count 值會指示 PAGE 壓縮的效能。|  
-|hobt_id|BIGINT|**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 僅適用于資料行存放區索引，這是資料列集的識別碼，用來追蹤資料分割的內部資料行存放區資料。 資料列集會儲存為數據堆積或二進位樹狀結構。 它們具有與父資料行存放區索引相同的索引識別碼。 如需詳細資訊，請參閱[internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 如果為，則為 Null|  
-|column_store_delete_buffer_state|TINYINT|**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 清空<br /><br /> 3 = 排清<br /><br /> 4 = 淘汰<br /><br /> 5 = 就緒|  
-|column_store_delete_buff_state_desc||**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 無效-父索引不是資料行存放區索引。<br /><br /> Deleters 和掃描器會使用此。<br /><br /> 清空-deleters 會清空，但掃描器仍會使用它。<br /><br /> 清除緩衝區已關閉，緩衝區中的資料列會寫入至刪除點陣圖。<br /><br /> 正在淘汰-關閉的刪除緩衝區中的資料列已寫入刪除點陣圖，但緩衝區並未被截斷，因為掃描器仍在使用它。 新的掃描器不需要使用淘汰緩衝區，因為開啟的緩衝區已足夠。<br /><br /> 就緒-此刪除緩衝區已準備好可供使用。|  
+|hobt_id|BIGINT|**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 僅適用于資料行存放區索引，這是資料列集的識別碼，用來追蹤資料分割的內部資料行存放區資料。 資料列集會儲存為數據堆積或二進位樹狀結構。 它們具有與父資料行存放區索引相同的索引識別碼。 如需詳細資訊，請參閱[internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 如果為，則為 Null|  
+|column_store_delete_buffer_state|TINYINT|**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 清空<br /><br /> 3 = 排清<br /><br /> 4 = 淘汰<br /><br /> 5 = 就緒|  
+|column_store_delete_buff_state_desc||**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 無效-父索引不是資料行存放區索引。<br /><br /> Deleters 和掃描器會使用此。<br /><br /> 清空-deleters 會清空，但掃描器仍會使用它。<br /><br /> 清除緩衝區已關閉，緩衝區中的資料列會寫入至刪除點陣圖。<br /><br /> 正在淘汰-關閉的刪除緩衝區中的資料列已寫入刪除點陣圖，但緩衝區並未被截斷，因為掃描器仍在使用它。 新的掃描器不需要使用淘汰緩衝區，因為開啟的緩衝區已足夠。<br /><br /> 就緒-此刪除緩衝區已準備好可供使用。|  
   
 ## <a name="remarks"></a>備註  
  sys.dm_db_index_physical_stats 動態管理函數會取代 DBCC SHOWCONTIG 陳述式。  
@@ -129,7 +129,7 @@ sys.dm_db_index_physical_stats (
  從 LIMITED 到 DETAILED 的模式會愈來愈慢，因為每個模式執行的工作愈來愈多。 若要快速測量資料表或索引的大小或片段層級，請使用 LIMITED 模式。 它是最快速的模式，而且不會針對索引的 IN_ROW_DATA 配置單位中每個非分葉層級，各傳回一個資料列。  
   
 ## <a name="using-system-functions-to-specify-parameter-values"></a>使用系統函數指定參數值  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]您可以使用[DB_ID](../../t-sql/functions/db-id-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)函數來指定*database_id*和*object_id*參數的值。 不過，傳遞對這些函數無效的值可能會造成意料之外的結果。 例如，如果找不到資料庫或物件名稱 (因為不存在或是拼法不正確)，這兩個函數都會傳回 NULL。 sys.dm_db_index_physical_stats 函數會將 NULL 解譯為萬用字元值，指定所有的資料庫或物件。  
+ 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [DB_ID](../../t-sql/functions/db-id-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)函數來指定*database_id*和*object_id*參數的值。 不過，傳遞對這些函數無效的值可能會造成意料之外的結果。 例如，如果找不到資料庫或物件名稱 (因為不存在或是拼法不正確)，這兩個函數都會傳回 NULL。 sys.dm_db_index_physical_stats 函數會將 NULL 解譯為萬用字元值，指定所有的資料庫或物件。  
   
  此外，OBJECT_ID 函式會在呼叫 dm_db_index_physical_stats 函數之前處理，因此會在目前資料庫的內容中進行評估，而不是在*database_id*中指定的資料庫中進行評估。 這個行為可能會讓 OBJECT_ID 函數傳回 NULL 值；如果物件名稱同時存在於目前的資料庫內容和指定的資料庫中，則可能會傳回錯誤訊息。 下列範例示範這些意料之外的結果。  
   
@@ -168,7 +168,7 @@ GO
 ```  
   
 ### <a name="best-practice"></a>最佳做法  
- 使用 DB_ID 或 OBJECT_ID 時，請務必確定傳回的是有效的識別碼。 例如，當您使用 OBJECT_ID 時，請指定三部分的名稱（例如`OBJECT_ID(N'AdventureWorks2012.Person.Address')`），或先測試函式所傳回的值，然後再于 dm_db_index_physical_stats 函數中使用它們。 下面的範例 A 和 B 示範指定資料庫和物件識別碼的安全方法。  
+ 使用 DB_ID 或 OBJECT_ID 時，請務必確定傳回的是有效的識別碼。 例如，當您使用 OBJECT_ID 時，請指定三部分的名稱（例如 `OBJECT_ID(N'AdventureWorks2012.Person.Address')` ），或先測試函式所傳回的值，然後再于 dm_db_index_physical_stats 函數中使用它們。 下面的範例 A 和 B 示範指定資料庫和物件識別碼的安全方法。  
   
 ## <a name="detecting-fragmentation"></a>偵測片段  
  片段是經由針對資料表建立的資料修改程序 (INSERT、UPDATE 和 DELETE 陳述式) 而產生，因此會產生到資料表上定義的索引。 由於這些修改通常不會平均散發在資料表和索引的各個資料列上，因此，各頁面的飽和度可能會隨著時間而不同。 如果查詢要掃描部分或全部的資料表索引，這類資料表片段可能會造成額外的頁面讀取。 這會防礙資料的平行掃描。  

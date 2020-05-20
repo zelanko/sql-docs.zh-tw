@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053109"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830227"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,17 +63,17 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>結果集  
  **sp_depends**會顯示兩個結果集。  
   
- 下列結果集會顯示* \<物件>* 所相依的物件。  
+ 下列結果集會顯示* \< 物件>* 所相依的物件。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**Nvarchar （257** **）**|相依性存在的項目名稱。|  
 |**type**|**Nvarchar （16）**|項目的類型。|  
-|**已**|**Nvarchar （7）**|是否更新項目。|  
+|**已更新**|**Nvarchar （7）**|是否更新項目。|  
 |**處於**|**nvarchar(8)**|是否在 SELECT 陳述式中使用這個項目。|  
-|**排**|**sysname**|存在相依性的資料行或參數。|  
+|**column**|**sysname**|存在相依性的資料行或參數。|  
   
- 下列結果集會顯示相依于* \<物件>* 的物件。  
+ 下列結果集會顯示相依于* \< 物件>* 的物件。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

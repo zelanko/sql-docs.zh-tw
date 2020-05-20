@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3998211b12b942df15ebb4e7978c1e989486e013
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032645"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830949"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_syscollector_create_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration`這是收集的資料儲存在管理資料倉儲中的天數。 *days_until_expiration*是**Smallint** ，預設值為730（兩年）。 *days_until_expiration*必須是0或正整數。  
   
-`[ @proxy_id = ] proxy_id`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy 帳戶的唯一識別碼。 *proxy_id*是**int** ，預設值為 Null。 如果指定， *proxy_name*必須是 Null。 若要取得*proxy_id*，請查詢 sysproxies 系統資料表。 dc_admin 固定資料庫角色必須具有存取此 Proxy 的權限。 如需詳細資訊，請參閱[建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
+`[ @proxy_id = ] proxy_id`這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy 帳戶的唯一識別碼。 *proxy_id*是**int** ，預設值為 Null。 如果指定， *proxy_name*必須是 Null。 若要取得*proxy_id*，請查詢 sysproxies 系統資料表。 dc_admin 固定資料庫角色必須具有存取此 Proxy 的權限。 如需詳細資訊，請參閱[建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
 `[ @proxy_name = ] 'proxy_name'`這是 proxy 帳戶的名稱。 *proxy_name*是**sysname** ，預設值是 Null。 如果指定， *proxy_id*必須是 Null。 若要取得*proxy_name*，請查詢 sysproxies 系統資料表。  
   

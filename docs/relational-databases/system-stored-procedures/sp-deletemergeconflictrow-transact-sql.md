@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletemergeconflictrow
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a315bc147cf86df40cf6fa216b8c45eeb1fcccca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d778a90adf2579ca136603847762b2577a5155f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68111963"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830275"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @conflict_table = ] 'conflict_table'`這是衝突資料表的名稱。 *conflict_table*是**sysname**，預設值是**%**。 如果*conflict_table*指定為 Null 或**%**，則會假設衝突是刪除衝突，而且會從[MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)資料表中刪除符合*rowguid*和*origin_datasource*和*source_object*的資料列。  
+`[ @conflict_table = ] 'conflict_table'`這是衝突資料表的名稱。 *conflict_table*是**sysname**，預設值是 **%** 。 如果*conflict_table*指定為 Null 或 **%** ，則會假設衝突是刪除衝突，而且會從[MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)資料表中刪除符合*rowguid*和*origin_datasource*和*source_object*的資料列。  
   
 `[ @source_object = ] 'source_object'`這是來源資料表的名稱。 *source_object*是**Nvarchar （386）**，預設值是 Null。  
   

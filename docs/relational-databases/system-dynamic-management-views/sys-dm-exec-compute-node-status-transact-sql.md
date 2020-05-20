@@ -18,22 +18,22 @@ helpviewer_keywords:
 - dm_exec_compute_node_status
 - sys.dm_exec_compute_node_status management view
 ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11883f7744aad3f8d483e808922a7170c8fe5391
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 604b7cc86ecd0bc191de50bb07baa0690c16ca57
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73532757"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830670"
 ---
 # <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys.databases dm_exec_compute_node_status （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   保存所有 PolyBase 節點的效能和狀態的其他相關資訊。 列出每個節點一個資料列。  
   
-|資料行名稱|資料類型|描述|範圍|  
+|資料行名稱|資料類型|說明|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|`int`|與節點相關聯的唯一數值識別碼。|跨向外延展叢集（不論類型為何）都是唯一的。|  
 |process_id|`int`|||  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistributor
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a82a3bedf78eb69dfc4a1736e212164341077601
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55ebb2b9c42c0690bcffe409cbc6a5bf5bf68fc0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304972"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830147"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>備註  
  **sp_dropdistributor**用於所有類型的複寫中。  
   
- 如果伺服器上有其他發行者或散發物件存在，除非** \@no_checks**設定為**1**，否則**sp_dropdistributor**會失敗。  
+ 如果伺服器上有其他發行者或散發物件存在，除非** \@ no_checks**設定為**1**，否則**sp_dropdistributor**會失敗。  
   
  這個預存程式必須在卸載散發資料庫之後，藉由執行**sp_dropdistributiondb**來執行。  
   

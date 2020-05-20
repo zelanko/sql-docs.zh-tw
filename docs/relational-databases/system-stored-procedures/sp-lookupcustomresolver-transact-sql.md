@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_lookupcustomresolver
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 274276a55a7b3e91ff85330a0810f01786a5a080
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: eba554a2472a17f67d0b03faceb8d546da4996c3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937909"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831055"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
   
 `[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT`這是實作為商務邏輯處理常式的元件名稱。 *dotnet_assembly_name*是**Nvarchar （255）**，預設值是 Null。  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT`這是覆寫<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>來實行商務邏輯處理常式的類別名稱。 *dotnet_class_name*是**Nvarchar （255）**，預設值是 Null。  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT`這是覆寫 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 來實行商務邏輯處理常式的類別名稱。 *dotnet_class_name*是**Nvarchar （255）**，預設值是 Null。  
   
 `[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是 Null。 當並未從發行者呼叫預存程序時，請使用這個參數。 若未指定，就假設本機伺服器是發行者。  
   

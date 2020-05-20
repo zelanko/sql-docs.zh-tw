@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorprepexec
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e82a82df5f532df05ad0f04a14c95b24850484bd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69652430"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831666"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,12 +42,12 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
   
 ## <a name="arguments"></a>引數  
  *備妥的控制碼*  
- 是產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已備妥*控制碼*識別碼。 需要備妥的*控制碼*，並傳回**int**。  
+ 是產生的已 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備妥*控制碼*識別碼。 需要備妥的*控制碼*，並傳回**int**。  
   
  *cursor*  
  這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的資料指標識別碼。 資料*指標*是必要的參數，必須在所有作用於此資料指標的後續程式上提供，例如 sp_cursorfetch。  
   
- *化*  
+ *params*  
  識別參數化的陳述式。 變數的*params*定義會取代語句中的參數標記。 *params*是針對**Ntext**、 **Nchar**或**Nvarchar**輸入值呼叫的必要參數。  
   
 > [!NOTE]  
@@ -62,14 +62,14 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *options*  
  傳回資料指標結果集資料行描述的選擇性參數。 * 選項需要下列**int**輸入值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  捲動選項。 *scrollopt*是需要下列其中一個**int**輸入值的選擇性參數。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -86,12 +86,12 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 因為要求的選項不適合* \<stmt>* 所定義的資料指標，所以這個參數會同時做為輸入和輸出。 在這類情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指派適合的類型並修改這個值。  
+ 因為要求的選項不適合* \< stmt>* 所定義的資料指標，所以這個參數會同時做為輸入和輸出。 在這類情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指派適合的類型並修改這個值。  
   
  *ccopt*  
  並行控制選項。 *ccopt*是需要下列其中一個**int**輸入值的選擇性參數。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (之前稱為 LOCKCC)|  
@@ -105,7 +105,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- 如同*scrollpt*， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以指派與要求的值不同的值。  
+ 如同*scrollpt*， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以指派與要求的值不同的值。  
   
  *計數*  
  這是選擇性參數，表示要搭配 AUTO_FETCH 使用的提取緩衝區資料列數目。 預設為 20 個資料列。 指派為輸入值與傳回值時，資料列*計數*的行為會有所不同。  

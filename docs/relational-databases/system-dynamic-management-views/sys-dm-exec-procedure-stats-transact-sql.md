@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_procedure_stats dynamic management view
 ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ff5a1f816d0ade76ed6e39db3e8cfc3048ba632
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3620efe22d2a285aed7f78f6573bdc2280be47f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68742906"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829422"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68742906"
   
 > [!NOTE]
 > **Dm_exec_procedure_stats**的結果可能會隨著每次執行而不同，因為資料只會反映完成的查詢，而不是仍在進行中的查詢。
-> 若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_exec_procedure_stats**的名稱。 
+> 若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_exec_procedure_stats**的名稱。 
 
   
 |資料行名稱|資料類型|描述|  
@@ -70,11 +70,11 @@ ms.locfileid: "68742906"
 |**last_elapsed_time**|**bigint**|這個預存程式最近完成執行所經過的時間（以微秒為單位）。|  
 |**min_elapsed_time**|**bigint**|這個預存程式已完成執行的最小經過時間（以微秒為單位）。|  
 |**max_elapsed_time**|**bigint**|這個預存程式已完成執行的最大經過時間（以微秒為單位）。|  
-|**total_spills**|**bigint**|這個預存程式在編譯以來執行所溢出的總頁數。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**last_spills**|**bigint**|上次執行預存程式時所溢出的頁面數目。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**min_spills**|**bigint**|這個預存程式在單次執行期間曾溢出的最小頁數。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**max_spills**|**bigint**|這個預存程式在單次執行期間曾發生過的最大頁面數目。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**pdw_node_id**|**int**|此散發所在節點的識別碼。<br /><br />**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_spills**|**bigint**|這個預存程式在編譯以來執行所溢出的總頁數。<br /><br /> **適用于**：從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**last_spills**|**bigint**|上次執行預存程式時所溢出的頁面數目。<br /><br /> **適用于**：從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**min_spills**|**bigint**|這個預存程式在單次執行期間曾溢出的最小頁數。<br /><br /> **適用于**：從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**max_spills**|**bigint**|這個預存程式在單次執行期間曾發生過的最大頁面數目。<br /><br /> **適用于**：從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**pdw_node_id**|**int**|此散發所在節點的識別碼。<br /><br />**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
 |**total_page_server_reads**|**bigint**|這個預存程式在編譯以來執行所執行的頁面伺服器讀取總數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
 |**last_page_server_reads**|**bigint**|上次執行預存程式時，所執行的頁面伺服器讀取數目。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
 |**min_page_server_reads**|**bigint**|這個預存程式在單次執行期間曾執行的頁面伺服器讀取次數下限。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
@@ -84,8 +84,8 @@ ms.locfileid: "68742906"
   
 ## <a name="permissions"></a>權限  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
+在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
    
 ## <a name="remarks"></a>備註  
  預存程序執行完成時，就會更新檢視中的統計資料。  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 20967420eeb22a1c6418d06a9be3fc728106c141
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078164"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830992"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`這是發行集中的發行項名稱。 *文章*是**sysname**，沒有預設值。  
   
-`[ @column = ] 'column'`識別要在其上建立垂直資料分割的資料行。 資料*行*是**sysname**，預設值是 Null。 如果是 NULL 和 `@operation = N'add'`，依預設，會將來源資料表中所有的資料行加入至發行項。 當*operation*設定為**drop**時，資料*行*不可以是 Null。 若要從發行項中排除資料**sp_mergearticlecolumn**行，請執行 sp_mergearticlecolumn `@operation = N'drop'`並指定資料*行*，並將每個資料行從指定的發行*項中移除。*  
+`[ @column = ] 'column'`識別要在其上建立垂直資料分割的資料行。 資料*行*是**sysname**，預設值是 Null。 如果是 NULL 和 `@operation = N'add'`，依預設，會將來源資料表中所有的資料行加入至發行項。 當*operation*設定為**drop**時，資料*行*不可以是 Null。 若要從發行項中排除資料行，請執行**sp_mergearticlecolumn**並指定資料*行*，並將 `@operation = N'drop'` 每個*article*資料行從指定的發行項中移除。  
   
 `[ @operation = ] 'operation'`這是複寫狀態。 *operation*是**Nvarchar （4）**，預設值是 ADD。 [**加入**] 會標示要複寫的資料行。 **drop**會清除資料行。  
   

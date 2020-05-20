@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_enumdsn
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d84d366483cd5a887eb299b0f8d9208998e835c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 151b0f504080523e99fad839c17e02b786b619c0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124594"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831098"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +44,12 @@ sp_enumdsn
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**資料來源名稱**|**sysname**|資料來源的名稱。|  
-|**說明**|**varchar(255)**|資料來源的描述。|  
+|**描述**|**varchar(255)**|資料來源的描述。|  
 |**類型**|**int**|資料來源的類型：<br /><br /> **1** = ODBC DSN<br /><br /> **3** = OLE DB 資料來源|  
 |**提供者名稱**|**varchar(255)**|OLE DB 提供者的名稱。 ODBC DSN 的這個值是 NULL。|  
   
 ## <a name="remarks"></a>備註  
- 每[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]個服務都有一個使用者內容。 使用者內容是一組登錄項目，其中包括使用者 ODBC 資料來源的定義。 使用者內容由執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者名稱提供。  
+ 每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務都有一個使用者內容。 使用者內容是一組登錄項目，其中包括使用者 ODBC 資料來源的定義。 使用者內容由執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者名稱提供。  
   
  例如，如果伺服器是利用系統帳戶使用者內容來執行的，傳回的資料來源名稱 (DSN) 便全為系統帳戶所關聯的系統 DSN。 如果是以私用使用者帳戶來執行伺服器，則只會傳回這位使用者的私用帳戶所定義之 DSN。  
   

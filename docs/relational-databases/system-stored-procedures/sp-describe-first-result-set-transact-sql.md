@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053055"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831178"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  傳回[!INCLUDE[tsql](../../includes/tsql-md.md)]批次第一個可能結果集的中繼資料。 如果批次沒有傳回任何結果，就會傳回空的結果集。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]無法判斷第一個查詢的中繼資料（藉由執行靜態分析來執行），就會引發錯誤。 動態管理檢視[sys.databases dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)會傳回相同的資訊。  
+  傳回批次第一個可能結果集的中繼資料 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 如果批次沒有傳回任何結果，就會傳回空的結果集。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 無法判斷第一個查詢的中繼資料（藉由執行靜態分析來執行），就會引發錯誤。 動態管理檢視[sys.databases dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)會傳回相同的資訊。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ \@tsql = ] 'Transact-SQL_batch'`一或多[!INCLUDE[tsql](../../includes/tsql-md.md)]個語句。 *交易 SQL_batch*可以是**Nvarchar （***n***）** 或**Nvarchar （max）**。  
+`[ \@tsql = ] 'Transact-SQL_batch'`一或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句。 *交易 SQL_batch*可以是**Nvarchar （***n***）** 或**Nvarchar （max）**。  
   
-`[ \@params = ] N'parameters'`\@params 會提供[!INCLUDE[tsql](../../includes/tsql-md.md)]批次參數的宣告字串，類似于 sp_executesql。 參數可以是**Nvarchar （n）** 或**Nvarchar （max）**。  
+`[ \@params = ] N'parameters'`\@params 會提供批次參數的宣告字串 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，類似于 sp_executesql。 參數可以是**Nvarchar （n）** 或**Nvarchar （max）**。  
   
- 這是一個字串，其中包含已內嵌在[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*中之所有參數的定義。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 語句中指定的每個參數都必須在\@params 中定義。 如果語句[!INCLUDE[tsql](../../includes/tsql-md.md)]中的語句或批次不包含參數， \@則不需要 params。 這個參數的預設值是 NULL。  
+ 這是一個字串，其中包含已內嵌在 _batch 中之所有參數的定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] * *。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 語句中指定的每個參數都必須在 \@ params 中定義。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句中的語句或批次不包含參數， \@ 則不需要 params。 這個參數的預設值是 NULL。  
   
 `[ \@browse_information_mode = ] tinyint`指定是否傳回其他索引鍵資料行和來源資料表資訊。 如果設定為 1，就會分析每個查詢，如同查詢上包含 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
   
@@ -113,17 +113,17 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set**在下列任何情況下都會傳回錯誤。  
   
--   如果輸入\@tsql 不是有效[!INCLUDE[tsql](../../includes/tsql-md.md)]的批次。 有效性是藉由剖析和分析[!INCLUDE[tsql](../../includes/tsql-md.md)]批次來判斷。 判斷[!INCLUDE[tsql](../../includes/tsql-md.md)]批次是否有效時，批次在查詢優化期間或執行期間所造成的任何錯誤都不會列入考慮。  
+-   如果輸入 \@ tsql 不是有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次。 有效性是藉由剖析和分析 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次來判斷。 判斷批次是否有效時，批次在查詢優化期間或執行期間所造成的任何錯誤都不會列入考慮 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
--   如果\@params 不是 Null，而且包含的字串不是語法有效的參數宣告字串，或包含的字串會宣告任何參數一次以上，則為。  
+-   如果 \@ params 不是 Null，而且包含的字串不是語法有效的參數宣告字串，或包含的字串會宣告任何參數一次以上，則為。  
   
--   如果輸入[!INCLUDE[tsql](../../includes/tsql-md.md)]批次宣告的區域變數與 params 中\@宣告的參數名稱相同。  
+-   如果輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次宣告的區域變數與 params 中宣告的參數名稱相同 \@ 。  
   
 -   如果陳述式使用暫存資料表。  
   
 -   查詢包含建立隨後要查詢的永久資料表。  
   
- 如果其他所有檢查已成功，就會將輸入批次內所有可能的控制流程路徑列入考量。 這會將所有控制流程語句納入考慮（GOTO、IF/ELSE、WHILE 和[!INCLUDE[tsql](../../includes/tsql-md.md)] TRY/CATCH 區塊），以及由 EXEC 語句從輸入[!INCLUDE[tsql](../../includes/tsql-md.md)]批次叫用的任何程式、動態批次或觸發程式、導致 ddl 觸發程式引發的 ddl 語句，或是導致在目標資料表上引發觸發程式的 DML 語句，或因為外鍵條件約束的串聯動作而修改的資料表。 在具有許多可能的控制路徑之情況下，有時候，演算將會停止。  
+ 如果其他所有檢查已成功，就會將輸入批次內所有可能的控制流程路徑列入考量。 這會將所有控制流程語句納入考慮（GOTO、IF/ELSE、WHILE 和 [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY/CATCH 區塊） [!INCLUDE[tsql](../../includes/tsql-md.md)] ，以及由 EXEC 語句從輸入批次叫用的任何程式、動態批次或觸發程式、導致 ddl 觸發程式引發的 ddl 語句，或是導致在目標資料表上引發觸發程式的 DML 語句，或因為外鍵條件約束的串聯動作而修改的資料表。 在具有許多可能的控制路徑之情況下，有時候，演算將會停止。  
   
  針對每個控制流程路徑，傳回結果集的第一個語句（如果有的話）取決於**sp_describe_first_result_set**。  
   
@@ -152,7 +152,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set**不支援間接遞迴。  
   
 ## <a name="permissions"></a>權限  
- 需要執行\@tsql 引數的許可權。  
+ 需要執行 \@ tsql 引數的許可權。  
   
 ## <a name="examples"></a>範例  
   
@@ -190,7 +190,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
@@ -203,7 +203,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
@@ -216,7 +216,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- 結果： \<未知的資料行名稱> **Varchar （20） Null**  
+ 結果： \< 未知的資料行名稱> **Varchar （20） Null**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>透過別名強制資料行名稱必須相同  
  與先前相同，但是資料行透過資料行別名而具有相同名稱。  

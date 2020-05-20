@@ -18,15 +18,15 @@ helpviewer_keywords:
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_details dynamic management view
 - sys.dm_db_missing_index_details dynamic management view
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8218ff5c92613b0f152c699a81314cb6a3530885
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 77b3faae57764a936e6115d22ac00ca855d3acb9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68263793"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829432"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "68263793"
 |**index_handle**|**int**|識別特定的遺漏索引。 此識別碼在伺服器中是唯一的。 **index_handle**是此資料表的索引鍵。|  
 |**database_id**|**smallint**|識別具有遺漏索引之資料表的資料庫。|  
 |**object_id**|**int**|識別遺漏索引所在的資料表。|  
-|**equality_columns**|**nvarchar(4000)**|作為相等述詞之資料行的逗號分隔清單，述詞格式如下：<br /><br /> *資料表。資料行* =*constant_value*|  
-|**inequality_columns**|**nvarchar(4000)**|作為不相等述詞之資料行的逗號分隔清單，例如，格式如下的述詞：<br /><br /> *資料表。資料行* > *constant_value*<br /><br /> "=" 以外的其他任何比較運算子都可表示不相等。|  
+|**equality_columns**|**nvarchar(4000)**|作為相等述詞之資料行的逗號分隔清單，述詞格式如下：<br /><br /> *資料表。資料行*  =*constant_value*|  
+|**inequality_columns**|**nvarchar(4000)**|作為不相等述詞之資料行的逗號分隔清單，例如，格式如下的述詞：<br /><br /> *資料表。資料行*  > *constant_value*<br /><br /> "=" 以外的其他任何比較運算子都可表示不相等。|  
 |**included_columns**|**nvarchar(4000)**|可作為查詢所需涵蓋資料行之資料行的逗號分隔清單。 如需涵蓋或包含之資料行的詳細資訊，請參閱[使用內含資料行建立索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。<br /><br /> 若為記憶體優化索引（雜湊和記憶體優化非叢集），請忽略**included_columns**。 每個記憶體最佳化的索引都包含資料表的所有資料行。|  
 |**句**|**nvarchar(4000)**|遺漏索引所在之資料表的名稱。|  
   
@@ -64,8 +64,8 @@ ms.locfileid: "68263793"
   
 ## <a name="permissions"></a>權限
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
+在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
 
 ## <a name="see-also"></a>另請參閱  
  [dm_db_missing_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

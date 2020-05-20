@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_queue system table
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 914cf3ad65c881383a6d625c07d4fb5ed028b36a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7763f7406f865194743c43a6d182466767799b41
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68080010"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829825"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68080010"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**發行者**|**sysname**|發行者的名稱。|  
+|**publisher**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行集資料庫的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
 |**tranid**|**sysname**|執行佇列命令所用的交易識別碼。|  

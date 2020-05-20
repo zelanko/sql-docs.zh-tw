@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletetracertokenhistory
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cf591964e5dfef0536c79b0b35e5918d4f46d972
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6be1b5454fd134cd6c5de0473d404ec38cddedf3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771145"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830274"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
@@ -55,7 +55,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 這是發行者的名稱。 資料類型為**sysname**。 預設值為 *null*。
 
 > [!NOTE]
-> 只有在非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者或從散發者執行預存程式時，才應該指定這個參數。
+> 只有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在非發行者或從散發者執行預存程式時，才應該指定這個參數。
 
 `[ @publisher_db= ] 'publisher_db'`  
 這是發行集資料庫的名稱。 資料類型為**sysname**。 預設值是 NULL。 如果預存程序執行於發行者端，則會忽略這個參數。

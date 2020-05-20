@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergearticle
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6c59b4ba84981ff4cb1240d78e1d6d472be61289
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104516"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829635"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +64,10 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**column_tracking**|**true**|開啟資料行層級追蹤。 只適用於資料表發行項。<br /><br /> 注意：發行具有超過246個數據行的資料表時，不能使用資料行層級追蹤。|  
 ||**false**|關閉資料行層級追蹤，將衝突偵測保留在資料列層級。 只適用於資料表發行項。|  
 |**compensate_for_errors**|**true**|在同步處理期間，當發生錯誤時，執行補償動作。 如需詳細資訊，請參閱[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
-||**false**|不執行補償動作，這是預設行為。 如需詳細資訊，請參閱[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。<br /><br /> ** \* \*重要\*事項**雖然受影響資料列中的資料可能會在您解決任何錯誤時出現不一致的情況，但是您可以套用變更並將資料聚合。 如果發行項的來源資料表已經在另一個發行集中發行，則這兩篇文章的*compensate_for_errors*值都必須相同。|  
+||**false**|不執行補償動作，這是預設行為。 如需詳細資訊，請參閱[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。<br /><br /> 重要：雖然受影響資料列中的資料可能會在您解決任何錯誤時出現不一致的情況，但是可以套用變更並將資料聚合。 ** \* \* \* \* ** 如果發行項的來源資料表已經在另一個發行集中發行，則這兩篇文章的*compensate_for_errors*值都必須相同。|  
 |**creation_script**||在訂閱資料庫中，用來建立發行項的選擇性發行項結構描述指令碼的路徑和名稱。|  
 |**delete_tracking**|**true**|複寫 DELETE 陳述式，這是預設行為。|  
-||**false**|不複寫 DELETE 陳述式。<br /><br /> ** \* \*重要\*事項**將**delete_tracking**設定為**false**會導致無法聚合，而且已刪除的資料列必須手動移除。|  
+||**false**|不複寫 DELETE 陳述式。<br /><br /> ** \* \* 重要 \* 設定 \* ** **delete_tracking**為**false**會導致無法聚合，而且已刪除的資料列必須以手動方式移除。|  
 |**描述**||發行項的描述項目。|  
 |**destination_owner**||訂閱資料庫中物件的擁有者名稱（如果不是**dbo**）。|  
 |**identity_range**||當發行項的**identityrangemanagementoption**設為**auto** ，或**auto_identity_range**設定為**true**時，指定指派新識別值時所要使用之範圍大小的**Bigint** 。 只適用於資料表發行項。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
@@ -118,28 +118,28 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x4000000**|複寫**xml**資料行的索引。|  
 ||**0x8000000**|建立訂閱者目前還沒有的任何結構描述。|  
 ||**0x10000000**|將**xml**資料行轉換為訂閱者上的**Ntext** 。|  
-||**0x20000000**|將中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]引進的大型物件資料類型（ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] **Nvarchar （max）**、 **Varchar （** max）和**Varbinary （max）**）轉換成所支援的資料類型。|  
+||**0x20000000**|將中引進的大型物件資料類型（**Nvarchar （max）**、 **Varchar （** max）和**Varbinary （max）**）轉換 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 成所支援的資料類型 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。|  
 ||**0x40000000**|複寫權限。|  
 ||**0x80000000**|嘗試卸除對於不在發行集中之任何物件的相依性。|  
-||**0x100000000**|如果 FILESTREAM 屬性是在**Varbinary （max）** 資料行上指定，請使用此選項來進行複寫。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 不論如何設定此架構選項， [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]都不支援將含有 FILESTREAM 資料行的資料表複寫至訂閱者。 請參閱相關的選項**0x800000000**。|  
-||**0x200000000**|將中導[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]入的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和 datetime2）轉換成舊版所支援的資料類型。 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+||**0x100000000**|如果 FILESTREAM 屬性是在**Varbinary （max）** 資料行上指定，請使用此選項來進行複寫。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不論如何設定此架構選項，都不支援將含有 FILESTREAM 資料行的資料表複寫至訂閱者。 請參閱相關的選項**0x800000000**。|  
+||**0x200000000**|將中導入的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和**datetime2**）轉換 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 成舊版所支援的資料類型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 ||**0x400000000**|複寫資料與索引的壓縮選項。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 ||**0x800000000**|設定這個選項即可將 FILESTREAM 資料儲存在訂閱者端的檔案群組中。 如果沒有設定這個選項，FILESTREAM 資料就會儲存在預設檔案群組中。 複寫不會建立檔案群組。因此，如果您設定這個選項，就必須先建立檔案群組，然後再於訂閱者端套用快照集。 如需如何在套用快照集之前建立物件的詳細資訊，請參閱[在套用快照集之前和之後執行腳本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 請參閱相關的選項**0x100000000**。|  
-||**0x1000000000**|將 common language runtime （CLR）使用者定義型別（Udt）轉換成**Varbinary （max）** ，以便將 UDT 類型的資料行複寫至正在執行的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]訂閱者。|  
-||**0x2000000000**|將**hierarchyid**資料類型轉換成**Varbinary （max）** ，使**hierarchyid**類型的資料行可以複寫至正在執行的訂閱[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]者。 如需如何在複寫資料表中使用**hierarchyid**資料行的詳細資訊，請參閱[hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
+||**0x1000000000**|將 common language runtime （CLR）使用者定義型別（Udt）轉換成**Varbinary （max）** ，以便將 UDT 類型的資料行複寫至正在執行的訂閱者 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
+||**0x2000000000**|將**hierarchyid**資料類型轉換成**Varbinary （max）** ，使**hierarchyid**類型的資料行可以複寫至正在執行的訂閱者 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 如需如何在複寫資料表中使用**hierarchyid**資料行的詳細資訊，請參閱[hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
 ||**0x4000000000**|複寫資料表上任何已篩選的索引。 如需篩選索引的詳細資訊，請參閱[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)。|  
-||**0x8000000000**|將**geography**和**geometry**資料類型轉換成**Varbinary （max）** ，以便將這些型別的資料行複寫至正在執行的訂閱[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]者。|  
+||**0x8000000000**|將**geography**和**geometry**資料類型轉換成**Varbinary （max）** ，以便將這些型別的資料行複寫至正在執行的訂閱者 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
 ||**0x10000000000**|複寫**geography**和**geometry**類型之資料行上的索引。|  
 ||NULL|系統會自動產生發行項的有效結構描述選項。|  
-|**status**|**作用中**|發行資料表的初始處理指令碼在執行中。|  
+|**status**|**active**|發行資料表的初始處理指令碼在執行中。|  
 ||**unsynced**|在下次執行快照集代理程式時，執行發行資料表的初始處理指令碼。|  
-|**stream_blob_columns**|**true**|當複寫二進位大型物件資料行時，使用資料流最佳化。 不過，特定合併式複寫功能，如邏輯記錄，仍能夠防止使用資料流最佳化。 啟用 FILESTREAM 時， *stream_blob_columns*設定為 true。 這可讓 FILESTREAM 資料的複寫能以最理想的方式執行，並減少記憶體使用量。 若要強制 FILESTREAM 資料表發行項不使用 blob 資料流程，請將*stream_blob_columns*設定為 false。<br /><br /> ** \* \*重要\*事項**啟用這個記憶體優化可能會在同步處理期間損害合併代理程式的效能。 只有在複寫包含數 MB 資料的資料行時，才應該使用這個選項。|  
+|**stream_blob_columns**|**true**|當複寫二進位大型物件資料行時，使用資料流最佳化。 不過，特定合併式複寫功能，如邏輯記錄，仍能夠防止使用資料流最佳化。 啟用 FILESTREAM 時， *stream_blob_columns*設定為 true。 這可讓 FILESTREAM 資料的複寫能以最理想的方式執行，並減少記憶體使用量。 若要強制 FILESTREAM 資料表發行項不使用 blob 資料流程，請將*stream_blob_columns*設定為 false。<br /><br /> ** \* \* 重要 \* ： \* **啟用此記憶體優化可能會在同步處理期間損害合併代理程式的效能。 只有在複寫包含數 MB 資料的資料行時，才應該使用這個選項。|  
 ||**false**|當複寫二進位大型物件資料行時，不使用最佳化。|  
 |**subscriber_upload_options**|**0**|客訂閱在訂閱者端進行的更新沒有任何限制；變更會上傳到發行者。 變更這個屬性可能需要重新初始化現有的訂閱者。|  
 ||**1**|允許客訂閱在訂閱者端進行變更；但它們不會上傳到發行者。|  
 ||**2**|不允許客訂閱在訂閱者端進行變更。|  
-|**subset_filterclause**||指定水平篩選的 WHERE 子句。 只適用於資料表發行項。<br /><br /> ** \* \*重要\*事項**基於效能考慮，我們建議您不要在參數化資料列篩選器子句（例如）中，將`LEFT([MyColumn]) = SUSER_SNAME()`函數套用至資料行名稱。 如果您在篩選子句中使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)並覆寫 HOST_NAME 值，您可能必須使用[convert](../../t-sql/functions/cast-and-convert-transact-sql.md)來轉換資料類型。 如需有關此案例之最佳做法的詳細資訊，請參閱[參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的「覆寫 HOST_NAME （）值」一節。|  
-|**閾值**||執行[!INCLUDE[ssEW](../../includes/ssew-md.md)]或舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者所使用的百分比值。 當合併代理程式指派新的識別範圍時，**臨界值**控制。 當使用 threshold 指定的百分比值，合併代理程式會建立新的識別範圍。 當**identityrangemanagementoption**設定為**auto**或**auto_identity_range**設定為**true**時使用。 只適用於資料表發行項。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
+|**subset_filterclause**||指定水平篩選的 WHERE 子句。 只適用於資料表發行項。<br /><br /> ** \* \* 重要 \* 事項 \* ** ：基於效能考慮，建議您不要在參數化資料列篩選器子句（例如）中，將函數套用至資料行名稱 `LEFT([MyColumn]) = SUSER_SNAME()` 。 如果您在篩選子句中使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)並覆寫 HOST_NAME 值，您可能必須使用[convert](../../t-sql/functions/cast-and-convert-transact-sql.md)來轉換資料類型。 如需有關此案例之最佳做法的詳細資訊，請參閱[參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的「覆寫 HOST_NAME （）值」一節。|  
+|**閾值**||執行或舊版的訂閱者所使用的百分比值 [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當合併代理程式指派新的識別範圍時，**臨界值**控制。 當使用 threshold 指定的百分比值，合併代理程式會建立新的識別範圍。 當**identityrangemanagementoption**設定為**auto**或**auto_identity_range**設定為**true**時使用。 只適用於資料表發行項。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
 |**verify_resolver_signature**|**1**|驗證自訂解析程式的數位簽章來判斷它是否來自信任來源。|  
 ||**0**|不驗證自訂解析程式的數位簽章來判斷它是否來自信任來源。|  
 |NULL (預設值)||傳回*屬性*的支援值清單。|  

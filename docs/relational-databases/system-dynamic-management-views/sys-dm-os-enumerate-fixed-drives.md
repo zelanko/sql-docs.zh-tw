@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_enumerate_fixed_drives dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fa5834c14bfb1fafe3123c28a60359d64d059dfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c45db91b29c85d6ffced4e31e01fb8f24f338c16
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71342513"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830519"
 ---
 # <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys.databases dm_os_enumerate_fixed_drives （Transact-sql）
 
@@ -29,18 +29,18 @@ ms.locfileid: "71342513"
 
 SQL Server 2019 中引進。
 
-列舉掛接到磁碟機號的磁片`C:\`區，例如。
+列舉掛接到磁碟機號的磁片區，例如 `C:\` 。
 
 |資料行名稱|資料類型|描述|
 |-----------------|---------------|-----------------|  
-|`fixed_drive_path`|`nvarchar(512)`|磁片區的路徑，例如`C:\`。|  
-|`drive_type`|`int`|磁片磁碟機類型的程式碼。 請[ `GetDriveTypeW`參閱](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)函式。|
-|`drive_type_desc`|`nvarchar(512)`|磁片磁碟機類型的描述。 請[ `GetDriveTypeW`參閱](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)函式。|
+|`fixed_drive_path`|`nvarchar(512)`|磁片區的路徑，例如 `C:\` 。|  
+|`drive_type`|`int`|磁片磁碟機類型的程式碼。 請[ `GetDriveTypeW` 參閱](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)函式。|
+|`drive_type_desc`|`nvarchar(512)`|磁片磁碟機類型的描述。 請[ `GetDriveTypeW` 參閱](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)函式。|
 |`free_space_in_bytes`|`bigint`|磁片可用空間（以位元組為單位）。|
 
 ## <a name="permissions"></a>權限
 
-使用者必須具有`VIEW SERVER STATE`伺服器的許可權。
+使用者必須具有 `VIEW SERVER STATE` 伺服器的許可權。
 
 ## <a name="see-also"></a>另請參閱  
 

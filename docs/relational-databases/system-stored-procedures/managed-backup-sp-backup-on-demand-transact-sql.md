@@ -18,21 +18,21 @@ helpviewer_keywords:
 - smart_admin.sp_backup_on_demand
 - sp_backup_on_demand
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bb2bda2d58504033469e8ed0f6455784efb113b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155394"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830437"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   要求[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]執行指定資料庫的備份。  
   
- 使用此預存程序可執行以[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]設定之資料庫的隨選備份。 這可防止備份鏈和[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]進程中的任何中斷，並將備份儲存在相同的 Azure Blob 儲存體容器中。  
+ 使用此預存程序可執行以[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]設定之資料庫的隨選備份。 這可防止備份鏈和進程中的任何中斷， [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 並將備份儲存在相同的 Azure Blob 儲存體容器中。  
   
  成功完成備份時，會傳回完整備份檔案路徑。 此路徑包含備份作業所產生之新備份檔案的名稱和位置。  
   

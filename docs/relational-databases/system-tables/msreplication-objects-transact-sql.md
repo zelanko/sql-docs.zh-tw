@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_objects system table
 ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 058e1948fa79ed2ba250a4f4d504f95201d1e254
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d09ff7f8a1be28c39345ecd56084ae6392ca66d8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079085"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829867"
 ---
 # <a name="msreplication_objects-transact-sql"></a>MSreplication_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68079085"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**發行者**|**sysname**|發行者的名稱。|  
+|**publisher**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
 |**object_name**|**sysname**|物件的名稱。|  

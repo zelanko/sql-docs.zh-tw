@@ -18,19 +18,19 @@ helpviewer_keywords:
 - sp_backup_config_optional
 - managed_backup.sp_backup_config_optional
 ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0178d4df6a5941b8896e6ff530802fd4c6bc6909
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4ccb6e35354629391aecddbdfaa968adf743645b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77652947"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830377"
 ---
 # <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup. sp_backup_config_advanced （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  設定的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]advanced 設定。  
+  設定的 advanced 設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ EXEC managed_backup.sp_backup_config_advanced
  在特定資料庫上啟用受管理備份的資料庫名稱。 如果是 Null 或 *，則此受管理的備份會套用至伺服器上的所有資料庫。  
   
  @encryption_algorithm  
- 備份期間用來加密備份檔案的加密演算法名稱。 @encryption_algorithm為**SYSNAME**。 第一次設定資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]時為必要參數。 如果您不想要加密備份檔案，請指定**NO_ENCRYPTION** 。 變更[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]設定時，此參數是選擇性的，如果未指定參數，則會保留現有的設定值。 此參數允許的值為：  
+ 備份期間用來加密備份檔案的加密演算法名稱。 @encryption_algorithm為**SYSNAME**。 第一次設定資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]時為必要參數。 如果您不想要加密備份檔案，請指定**NO_ENCRYPTION** 。 變更設定時 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，此參數是選擇性的，如果未指定參數，則會保留現有的設定值。 此參數允許的值為：  
   
 -   AES_128  
   
@@ -65,10 +65,10 @@ EXEC managed_backup.sp_backup_config_advanced
  如需有關加密演算法的詳細資訊，請參閱＜ [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)＞。  
   
  @encryptor_type  
- 加密子的類型，可以是「憑證」或「ASYMMETRIC_KEY」。 @encryptor_type是**Nvarchar （32）**。 如果您為@encryption_algorithm參數指定 NO_ENCRYPTION，此參數是選擇性的。  
+ 加密子的類型，可以是「憑證」或「ASYMMETRIC_KEY」。 @encryptor_type是**Nvarchar （32）**。 如果您為參數指定 NO_ENCRYPTION，此參數是選擇性的 @encryption_algorithm 。  
   
  @encryptor_name  
- 用來加密備份之現有憑證或非對稱金鑰的名稱。 @encryptor_name為**SYSNAME**。 如果使用非對稱金鑰，則必須透過可延伸金鑰管理 (EKM) 設定。 如果您為@encryption_algorithm參數指定 NO_ENCRYPTION，此參數是選擇性的。  
+ 用來加密備份之現有憑證或非對稱金鑰的名稱。 @encryptor_name為**SYSNAME**。 如果使用非對稱金鑰，則必須透過可延伸金鑰管理 (EKM) 設定。 如果您為參數指定 NO_ENCRYPTION，此參數是選擇性的 @encryption_algorithm 。  
   
  如需詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
@@ -84,7 +84,7 @@ EXEC managed_backup.sp_backup_config_advanced
  需要**db_backupoperator**資料庫角色中的成員資格、具有**ALTER ANY CREDENTIAL**許可權，以及**Sp_delete_backuphistory**預存程式的**EXECUTE**許可權。  
   
 ## <a name="examples"></a>範例  
- 下列範例會[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]針對 SQL Server 的實例，設定的 advanced configuration 選項。  
+ 下列範例會針對 SQL Server 的實例，設定的 advanced configuration 選項 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
   
 ```sql
 Use msdb;  

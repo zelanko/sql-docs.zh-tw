@@ -16,14 +16,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitoraddmonitoring
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4b8ddf9753578f6d73cd6baf7511c73d90377e1a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108156"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831644"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 >  如果更新週期的設定值過低，則用戶端的回應時間可能會增加。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
  None  
@@ -55,7 +55,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="remarks"></a>備註  
  這項程序要求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 必須能在伺服器執行個體上執行，而且若要執行資料庫鏡像監視作業，就必須執行代理程式。  
   
- 如果從[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]啟動資料庫鏡像，則會自動執行**sp_dbmmonitoraddmonitoring**程式。 如果您使用 ALTER DATABASE 語句來手動啟動鏡像，以監視伺服器實例上的鏡像資料庫，您必須手動執行**sp_dbmmonitoraddmonitoring** 。  
+ 如果從啟動資料庫鏡像 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，則會自動執行**sp_dbmmonitoraddmonitoring**程式。 如果您使用 ALTER DATABASE 語句來手動啟動鏡像，以監視伺服器實例上的鏡像資料庫，您必須手動執行**sp_dbmmonitoraddmonitoring** 。  
   
 > [!NOTE]  
 >  如果您在設定資料庫鏡像之前執行**sp_dbmmonitoraddmonitoring** ，監視作業將會執行，但不會更新儲存資料庫鏡像監視器記錄的狀態資料表。  

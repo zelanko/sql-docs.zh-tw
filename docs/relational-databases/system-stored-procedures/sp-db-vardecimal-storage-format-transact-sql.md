@@ -20,14 +20,14 @@ helpviewer_keywords:
 - database compression [SQL Server]
 - table compression [SQL Server]
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 91667feca7974f66233b7549af9f75838d2ce32d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108218"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831702"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @dbname= ]'*database_name*'  
+ [ @dbname =] '*database_name*'  
  這是即將變更儲存格式之資料庫的名稱。 *database_name*是**sysname**，沒有預設值。 如果省略資料庫名稱，就會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中所有資料庫的 Vardecimal 儲存格式狀態。  
   
- [ @vardecimal_storage_format= ]{' 在 ' | ' 上OFF '}  
+ [ @vardecimal_storage_format =] {' 在 ' | ' 上OFF '}  
  指定是否啟用 Vardecimal 儲存格式。 @vardecimal_storage_format 可以是 ON 或 OFF。 參數為**Varchar （3）**，沒有預設值。 如果提供了資料庫名稱，但省略 @vardecimal_storage_format，就會傳回指定之資料庫的目前設定。 這個引數對於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本沒有任何作用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -59,7 +59,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ## <a name="result-sets"></a>結果集  
  如果無法變更資料庫儲存格式，sp_db_vardecimal_storage_format 就會傳回錯誤。 如果資料庫已經處於指定的狀態，此預存程序就沒有任何作用。  
   
- 如果未@vardecimal_storage_format提供引數，則會傳回資料行資料庫名稱和 Vardecimal 狀態。  
+ 如果 @vardecimal_storage_format 未提供引數，則會傳回資料行資料庫名稱和 Vardecimal 狀態。  
   
 ## <a name="remarks"></a>備註  
  sp_db_vardecimal_storage_format 會傳回 Vardecimal 狀態，但是無法變更 Vardecimal 狀態。  

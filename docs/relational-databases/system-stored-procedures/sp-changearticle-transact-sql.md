@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771405"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829696"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -103,17 +103,17 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|複寫**xml**資料行的索引。|  
 ||**0x8000000**|建立訂閱者目前還沒有的任何結構描述。|  
 ||**0x10000000**|將**xml**資料行轉換為訂閱者上的**Ntext** 。|  
-||**0x20000000**|將中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]引進的大型物件資料類型（ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] **Nvarchar （max）**、 **Varchar （** max）和**Varbinary （max）**）轉換成所支援的資料類型。|  
+||**0x20000000**|將中引進的大型物件資料類型（**Nvarchar （max）**、 **Varchar （** max）和**Varbinary （max）**）轉換 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 成所支援的資料類型 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。|  
 ||**0x40000000**|複寫權限。|  
 ||**0x80000000**|嘗試卸除對於不在發行集中之任何物件的相依性。|  
-||**0x100000000**|如果 FILESTREAM 屬性是在**Varbinary （max）** 資料行上指定，請使用此選項來進行複寫。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 不論如何設定此架構選項， [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]都不支援將含有 FILESTREAM 資料行的資料表複寫至訂閱者。<br /><br /> 請參閱相關的選項**0x800000000**。|  
-||**0x200000000**|將中導[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]入的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和 datetime2）轉換成舊版所支援的資料類型。 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+||**0x100000000**|如果 FILESTREAM 屬性是在**Varbinary （max）** 資料行上指定，請使用此選項來進行複寫。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不論如何設定此架構選項，都不支援將含有 FILESTREAM 資料行的資料表複寫至訂閱者。<br /><br /> 請參閱相關的選項**0x800000000**。|  
+||**0x200000000**|將中導入的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和**datetime2**）轉換 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 成舊版所支援的資料類型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 ||**0x400000000**|複寫資料與索引的壓縮選項。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 ||**0x800000000**|設定這個選項即可將 FILESTREAM 資料儲存在訂閱者端的檔案群組中。 如果沒有設定這個選項，FILESTREAM 資料就會儲存在預設檔案群組中。 複寫不會建立檔案群組。因此，如果您設定這個選項，就必須先建立檔案群組，然後再於訂閱者端套用快照集。 如需如何在套用快照集之前建立物件的詳細資訊，請參閱[在套用快照集之前和之後執行腳本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 請參閱相關的選項**0x100000000**。|  
-||**0x1000000000**|將大於8000個位元組的 common language runtime （CLR）使用者定義型別（Udt）轉換成**Varbinary （max）** ，以便將 UDT 類型的資料行複寫至正在執行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的訂閱者。|  
-||**0x2000000000**|將**hierarchyid**資料類型轉換成**Varbinary （max）** ，使**hierarchyid**類型的資料行可以複寫至正在執行的訂閱[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]者。 如需如何在複寫資料表中使用**hierarchyid**資料行的詳細資訊，請參閱[hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
+||**0x1000000000**|將大於8000個位元組的 common language runtime （CLR）使用者定義型別（Udt）轉換成**Varbinary （max）** ，以便將 UDT 類型的資料行複寫至正在執行的訂閱者 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
+||**0x2000000000**|將**hierarchyid**資料類型轉換成**Varbinary （max）** ，使**hierarchyid**類型的資料行可以複寫至正在執行的訂閱者 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 如需如何在複寫資料表中使用**hierarchyid**資料行的詳細資訊，請參閱[hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
 ||**0x4000000000**|複寫資料表上任何已篩選的索引。 如需篩選索引的詳細資訊，請參閱[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)。|  
-||**0x8000000000**|將**geography**和**geometry**資料類型轉換成**Varbinary （max）** ，以便將這些型別的資料行複寫至正在執行的訂閱[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]者。|  
+||**0x8000000000**|將**geography**和**geometry**資料類型轉換成**Varbinary （max）** ，以便將這些型別的資料行複寫至正在執行的訂閱者 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
 ||**0x10000000000**|複寫**geography**和**geometry**類型之資料行上的索引。|  
 ||**0x20000000000**|複寫資料行的 SPARSE 屬性。 如需這個屬性的詳細資訊，請參閱[使用稀疏資料行](../../relational-databases/tables/use-sparse-columns.md)。|  
 ||**0x40000000000**|啟用「快照集代理程式」的腳本，以在「訂閱者」上建立記憶體優化資料表。|  
@@ -157,10 +157,10 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  請參閱＜備註＞一節，以了解在變更時需要重新初始化所有現有的訂閱之屬性。  
   
-`[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者上變更發行項屬性時，不應使用「發行者」。  
+>  在發行者上變更發行項屬性時，不應使用「*發行者*」 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -212,7 +212,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 |發行項類型|複寫類型||  
 |------------------|----------------------|------|  
-||交易式|快照式|  
+||交易式|快照集|  
 |**logbased**|所有選項|所有選項，但**0x02**|  
 |**logbased manualfilter**|所有選項|所有選項，但**0x02**|  
 |**logbased manualview**|所有選項|所有選項，但**0x02**|  
@@ -228,7 +228,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**indexed view schema only**|**0x01**、 **0x010**、 **0x020**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x40000000**和**0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x40000000**和**0x80000000**|  
   
 > [!NOTE]
->  若為佇列更新發行集，則必須啟用**0x80**的*schema_option*值。 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行集支援的*schema_option*值為： **0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000**和**0x4000**。  
+>  若為佇列更新發行集，則必須啟用**0x80**的*schema_option*值。 非發行集支援的*schema_option*值為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ： **0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000**和**0x4000**。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

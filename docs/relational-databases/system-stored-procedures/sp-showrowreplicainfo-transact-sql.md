@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032889"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830942"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|建立這個項目的資料庫名稱。|  
 |**db_nickname**|**binary(6)**|建立這個項目的資料庫暱稱。|  
 |**version**|**int**|項目的版本。|  
-|**current_state**|**Nvarchar （9）**|傳回資料列目前狀態的相關資訊。<br /><br /> **y** -row 資料代表資料列的目前狀態。<br /><br /> **n** -row 資料不代表資料列的目前狀態。<br /><br /> n/a>-不適用。 ** \< **<br /><br /> 未知的>-無法判斷目前的狀態。 ** \< **|  
+|**current_state**|**Nvarchar （9）**|傳回資料列目前狀態的相關資訊。<br /><br /> **y** -row 資料代表資料列的目前狀態。<br /><br /> **n** -row 資料不代表資料列的目前狀態。<br /><br /> ** \< n/a>** -不適用。<br /><br /> ** \< 未知的>** -無法判斷目前的狀態。|  
 |**rowversion_table**|**Nchar （17）**|指出資料列版本是否儲存在[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)資料表或[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)資料表中。|  
 |**加以**|**nvarchar(255)**|這個資料列版本項目的其他相關資訊。 這個欄位通常是空的。|  
   

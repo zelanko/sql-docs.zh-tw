@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.query_context_settings catalog view
 ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7736c0001c8e22b6cc7c72b2e721e31519d035b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d39fe1b573e038459853857496c651e9ad2af83b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68068059"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831465"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>sys.databases query_coNtext_settings （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  包含影響與查詢相關聯之內容設定之語義的相關資訊。 有一些內容設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會影響查詢的語義（定義正確的查詢結果）。 在不同設定下編譯的相同查詢文字，可能會產生不同的結果（視基礎資料而定）。  
+  包含影響與查詢相關聯之內容設定之語義的相關資訊。 有一些內容設定會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 影響查詢的語義（定義正確的查詢結果）。 在不同設定下編譯的相同查詢文字，可能會產生不同的結果（視基礎資料而定）。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "68068059"
  [query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [query_store_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢存放區預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  

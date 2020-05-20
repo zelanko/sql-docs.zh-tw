@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_generation_partition_mappings system table
 ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a43f4b3fac5f237904d0160ccfbde4b88f9a3616
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c53f1f39ebd4517f6b0c7b75b7844825e513ed6f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75322105"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829252"
 ---
 # <a name="msmerge_generation_partition_mappings-transact-sql"></a>MSmerge_generation_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

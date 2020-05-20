@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_marksubscriptionvalidation
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bb8c38d24fbf6c96c61a7b2e83874d15218797c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6ea2b5a6120395ad287a372b9d0edb3de7cb2b71
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68092668"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831020"
 ---
 # <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'`這是目的地資料庫的名稱。 *destination_db*是**sysname**，沒有預設值。  
   
-`[ @publisher = ] 'publisher'`指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  *發行者*不應用於屬於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者的發行集。  
+>  *發行者*不應用於屬於發行者的發行集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -57,9 +57,9 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ## <a name="remarks"></a>備註  
  **sp_marksubscriptionvalidation**用於異動複寫中。  
   
- **sp_marksubscriptionvalidation**不支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。  
+ **sp_marksubscriptionvalidation**不支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。  
   
- 對於非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，您無法從明確交易內執行**sp_marksubscriptionvalidation** 。 這是因為在用來存取發行者的連結伺服器連接上，不支援使用明確的交易。  
+ 對於非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者，您無法從明確交易內執行**sp_marksubscriptionvalidation** 。 這是因為在用來存取發行者的連結伺服器連接上，不支援使用明確的交易。  
   
  **sp_marksubscriptionvalidation**必須與[sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)一起使用，針對*subscription_level*指定**1**的值，而且**可以與其他**呼叫一起使用，以對其他訂閱者標記目前開啟的交易。  
   

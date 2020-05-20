@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_usage_stats dynamic management view
 ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 491ec37d96cf6bdb2b074efb42a54406beb1fd20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bdacbebf64e372e757de6f2ba268404773f9c96
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264399"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830867"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68264399"
 >  **dm_db_index_usage_stats**不會傳回記憶體優化索引的相關資訊。 如需記憶體優化索引使用的詳細資訊，請參閱[sys.databases &#40;transact-sql&#41;dm_db_xtp_index_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)。  
   
 > [!NOTE]  
->  若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此視圖，請使用**sys.databases dm_pdw_nodes_db_index_usage_stats**。  
+>  若要從或呼叫此視圖 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**sys.databases dm_pdw_nodes_db_index_usage_stats**。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -61,7 +61,7 @@ ms.locfileid: "68264399"
 |**last_system_scan**|**datetime**|上次系統掃描的時間。|  
 |**last_system_lookup**|**datetime**|上次系統查閱的時間。|  
 |**last_system_update**|**datetime**|上次系統更新的時間。|  
-|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="remarks"></a>備註  
  在指定索引上由一項查詢執行所進行的每個個別搜尋、掃描、查閱或更新，在這份檢視都被當作使用一次該索引，並且累加對應的計數器。 它會針對由使用者提交之查詢所導致的作業，以及由內部產生之查詢所導致的作業 (例如，掃描以收集統計資料)，來報告資訊。  
@@ -72,11 +72,11 @@ ms.locfileid: "68264399"
   
  使用索引時，如果索引的資料列不存在，則會將資料列加入 **sys.dm_db_index_usage_stats** 中。 加入資料列後，其計數器的初始設定為零。  
   
- 在升級至[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]時，會移除 sys.databases 中的專案 dm_db_index_usage_stats。 從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，會依照之前的方式保留專案[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。  
+ 在升級至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或時 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ，會移除 sys.databases 中的專案 dm_db_index_usage_stats。 從開始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ，會依照之前的方式保留專案 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。  
   
 ## <a name="permissions"></a>權限  
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。  
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
+在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。  
   
 ## <a name="see-also"></a>另請參閱  
 

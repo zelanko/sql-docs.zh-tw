@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f82fc9006012d55902f1b5b3260dc7012fd6640a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 417f2c7d63b129fda187068325702b9ff9768895
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053071"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831193"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,28 +47,28 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @cursor_return= ]*output_cursor_variable*輸出  
+ [ @cursor_return =] *output_cursor_variable*輸出  
  這是用來接收資料指標輸出之宣告資料指標變數的名稱。 *output_cursor_variable*是**cursor**，沒有預設值，而且在呼叫 sp_describe_cursor 時，不能與任何資料指標產生關聯。 傳回的資料指標是一個可捲動的動態唯讀資料指標。  
   
- [ @cursor_source= ]{N'local ' |N'global ' |N'variable' }  
+ [ @cursor_source =] {N'local ' |N'global ' |N'variable' }  
  指定報告的資料指標是利用本機資料指標、全域資料指標或資料指標變數的名稱來指定。 參數是**Nvarchar （30）**。  
   
- [ @cursor_identity= ]N '*local_cursor_name*']  
+ [ @cursor_identity =] N '*local_cursor_name*']  
  這是具有 LOCAL 關鍵字或預設為 LOCAL 之 DECLARE CURSOR 陳述式所建立的資料指標名稱。 *local_cursor_name*為**Nvarchar （128）**。  
   
- [ @cursor_identity= ]N '*global_cursor_name*']  
+ [ @cursor_identity =] N '*global_cursor_name*']  
  這是具有 GLOBAL 關鍵字或預設為 GLOBAL 的 DECLARE CURSOR 陳述式所建立之資料指標的名稱。 *global_cursor_name*為**Nvarchar （128）**。  
   
  *global_cursor_name*也可以是 ODBC 應用程式所開啟，然後藉由呼叫 SQLSetCursorName 來命名的 API 伺服器資料指標名稱。  
   
- [ @cursor_identity= ]N '*input_cursor_variable*']  
+ [ @cursor_identity =] N '*input_cursor_variable*']  
  這是與開啟的資料指標相關聯的資料指標變數名稱。 *input_cursor_variable*為**Nvarchar （128）**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="cursors-returned"></a>傳回的資料指標  
- sp_describe_cursor 會將其結果集封裝[!INCLUDE[tsql](../../includes/tsql-md.md)]在**cursor**輸出參數中。 這樣 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、預存程序和觸發程序就能夠一次處理一個資料列的輸出。 另外，這也表示無法直接從資料庫 API 函數呼叫程序。 **Cursor** output 參數必須系結至程式變數，但資料庫 api 並不支援系結資料**指標**參數或變數。  
+ sp_describe_cursor 會將其結果集封裝在 [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor**輸出參數中。 這樣 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、預存程序和觸發程序就能夠一次處理一個資料列的輸出。 另外，這也表示無法直接從資料庫 API 函數呼叫程序。 **Cursor** output 參數必須系結至程式變數，但資料庫 api 並不支援系結資料**指標**參數或變數。  
   
  下表顯示利用 sp_describe_cursor 所傳回的資料指標格式。 資料指標的格式與利用 sp_cursor_list 所傳回的格式相同。  
   
@@ -78,7 +78,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |cursor_name|**sysname**|DECLARE CURSOR 陳述式的資料指標名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果是設定指向資料指標的資料指標變數來建立資料指標，cursor_name 就會傳回資料指標變數的名稱。 在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個輸出資料行會傳回系統產生的名稱。|  
 |cursor_scope|**tinyint**|1 = LOCAL <br /><br /> 2 = GLOBAL|  
 |status|**int**|與 CURSOR_STATUS 系統函數所報告相同的值：<br /><br /> 1 = 資料指標名稱或變數所參考的資料指標是開啟的。 如果資料指標是不區分、靜態或索引鍵集，它至少會有一個資料列。 如果資料指標是動態的，結果集就會有零或多個資料列。<br /><br /> 0 = 資料指標名稱或變數所參考的資料指標是開啟的，但沒有資料列。 動態資料指標永不傳回這個值。<br /><br /> -1 = 資料指標名稱或變數所參考的資料指標是關閉的。<br /><br /> -2 = 只適用於資料指標變數。 沒有指派給變數的資料指標。 可能是 OUTPUT 參數將資料指標指派給變數，但傳回之前，預存程序便關閉了資料指標。<br /><br /> -3 = 含指定名稱的資料指標或資料指標變數不存在，或資料指標變數還沒有配置資料指標。|  
-|模型|**tinyint**|1 = 不區分 (或靜態)<br /><br /> 2 = 索引鍵集<br /><br /> 3 = 動態<br /><br /> 4 = 向前快轉|  
+|model|**tinyint**|1 = 不區分 (或靜態)<br /><br /> 2 = 索引鍵集<br /><br /> 3 = 動態<br /><br /> 4 = 向前快轉|  
 |並行|**tinyint**|1 = 唯讀<br /><br /> 2 = 捲動鎖定<br /><br /> 3 = 開放式|  
 |scrollable|**tinyint**|0 = 順向<br /><br /> 1 = 可捲動|  
 |open_status|**tinyint**|0 = 已關閉<br /><br /> 1 = 開啟|  

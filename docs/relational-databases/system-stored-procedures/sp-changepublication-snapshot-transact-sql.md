@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication_snapshot
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8d7252f0335e2fc83c5b8e5e27f5e41535fdc7bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ef9a2fd87ac283ee2a7072cfccac838df7f16d04
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762259"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829568"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**5**|Thursday|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|Day|  
+|**8**|天|  
 |**9**|工作日|  
 |**10**|週末|  
 |NULL (預設值)||  
@@ -96,7 +96,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**1**|單次|  
 |**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小時|  
 |NULL (預設值)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是 Null。  
@@ -115,7 +115,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @snapshot_job_name = ] 'snapshot_agent_name'`如果正在使用現有的作業，則為現有快照集代理程式作業名稱的名稱。 *snapshot_agent_name*是**Nvarchar （100）** ，預設值為 Null。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`這是連接到發行者時，代理程式所使用的安全性模式。 *publisher_security_mode*是**Smallint**，預設值是 Null。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證， **1**指定 Windows 驗證。 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者必須指定**0**的值。  
+`[ @publisher_security_mode = ] publisher_security_mode`這是連接到發行者時，代理程式所使用的安全性模式。 *publisher_security_mode*是**Smallint**，預設值是 Null。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證， **1**指定 Windows 驗證。 非發行者必須指定**0**的值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -127,17 +127,17 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
-`[ @job_login = ] 'job_login'`這是用來執行代理程式之 Windows 帳戶的登入。 *job_login*是**Nvarchar （257）**，預設值是 Null。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。 您必須在建立新的快照集代理程式作業時，提供這個參數。 這無法針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者進行變更。  
+`[ @job_login = ] 'job_login'`這是用來執行代理程式之 Windows 帳戶的登入。 *job_login*是**Nvarchar （257）**，預設值是 Null。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。 您必須在建立新的快照集代理程式作業時，提供這個參數。 這無法針對非發行者進行變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ @job_password = ] 'job_password'`這是執行代理程式之 Windows 帳戶的密碼。 *job_password*是**sysname**，預設值是 Null。 您必須在建立新的快照集代理程式作業時，提供這個參數。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
-`[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者端建立快照集代理程式時，不應使用 publisher。  
+>  *publisher*在發行者端建立快照集代理程式時，不應使用 publisher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

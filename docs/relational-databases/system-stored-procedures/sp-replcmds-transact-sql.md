@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771012"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829975"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  嘗試在相同資料庫內執行**sp_replcmds**的用戶端會收到錯誤18752，直到第一個用戶端中斷連線為止。 第一個用戶端中斷連線之後，另一個用戶端可以執行**sp_replcmds**，並成為新的記錄讀取器。  
   
- 如果 sp_replcmds 無法複寫文字命令，則會在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤記錄檔和[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄**sp_replcmds**檔中加入警告訊息編號18759，因為不會在相同的交易中抓取文字指標。  
+ 如果 sp_replcmds 無法複寫文字命令，則會在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔和 Windows 應用程式記錄檔中加入警告訊息編號18759， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 因為不會在相同的交易中抓取文字指標。 **sp_replcmds**  
   
 ## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_replcmds**。  

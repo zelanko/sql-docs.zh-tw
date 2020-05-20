@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changelogreader_agent
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bf2a18543f6f5db30e36965c9e399968402292e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3fda7373aba20102a7842ba955d1275bae8e842
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768876"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829633"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_login = ] 'job_login'`這是用來執行代理程式之帳戶的登入。 *job_login*是**Nvarchar （257）**，預設值是 Null。 在 Azure SQL Database 受控執行個體上，使用 SQL Server 帳戶。 *這無法針對非*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *發行者*進行變更。  
+`[ @job_login = ] 'job_login'`這是用來執行代理程式之帳戶的登入。 *job_login*是**Nvarchar （257）**，預設值是 Null。 在 Azure SQL Database 受控執行個體上，使用 SQL Server 帳戶。 *這不能變更為非* [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*發行者。*  
   
 `[ @job_password = ] 'job_password'`這是用來執行代理程式之帳戶的密碼。 *job_password*是**sysname**，預設值是 Null。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`這是連接到發行者時，代理程式所使用的安全性模式。 *publisher_security_mode*是**Smallint**，預設值是 Null。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證， **1**指定 Windows 驗證。  
+`[ @publisher_security_mode = ] publisher_security_mode`這是連接到發行者時，代理程式所使用的安全性模式。 *publisher_security_mode*是**Smallint**，預設值是 Null。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證， **1**指定 Windows 驗證。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  

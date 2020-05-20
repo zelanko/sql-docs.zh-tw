@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 79959d61b1753d833523e0618a41eef89dcb5e58
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097846"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830637"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ dm_exec_cursors (session_id | 0 )
 |**is_open**|**bit**|指定資料指標是否開啟。|  
 |**is_async_population**|**bit**|指定背景執行緒是否仍非同步擴展 KEYSET 或 STATIC 資料指標。|  
 |**is_close_on_commit**|**bit**|指定資料指標是否使用 CURSOR_CLOSE_ON_COMMIT 宣告。<br /><br /> 1 = 當交易結束時資料指標會關閉。|  
-|**fetch_status**|**int**|傳回資料指標的上次提取狀態。 這是最後傳回的 @@FETCH_STATUS value。|  
+|**fetch_status**|**int**|傳回資料指標的上次提取狀態。 這是最後傳回的 @ @FETCH_STATUS value。|  
 |**fetch_buffer_size**|**int**|傳回有關提取緩衝區大小的資訊。<br /><br /> 1 = Transact-SQL 資料指標。 這可設為 API 資料指標的較高值。|  
 |**fetch_buffer_start**|**int**|如果是 FAST_FORWARD 和 DYNAMIC 資料指標，如果該資料指標未開啟，或是位於第一個資料列前面，它會傳回 0。 否則，它會傳回 -1。<br /><br /> 如果是 STATIC 和 KEYSET 資料指標，如果該資料指標未開啟，它會傳回 0，如果資料指標位於最後一個資料列後面，它會傳回 -1。<br /><br /> 否則，它會傳回其所在位置的資料列號碼。|  
 |**ansi_position**|**int**|提取緩衝區內的資料指標位置。|  
@@ -85,12 +85,12 @@ dm_exec_cursors (session_id | 0 )
 |----------|-----------------|  
 |索引鍵集|資料指標宣告為索引鍵集。|  
 |動態|資料指標宣告為動態。|  
-|快照式|資料指標宣告為快照集或靜態。|  
+|快照集|資料指標宣告為快照集或靜態。|  
 |Fast_Forward|資料指標宣告為向前快轉。|  
   
  下表提供有關資料指標並行的資訊，並包括屬性資料行的可能值。  
   
-|並行|描述|  
+|並行|說明|  
 |-----------------|-----------------|  
 |唯讀|資料指標宣告為唯讀。|  
 |捲動鎖定|資料指標使用捲動鎖定。|  
@@ -101,7 +101,7 @@ dm_exec_cursors (session_id | 0 )
 |影響範圍|描述|  
 |-----------|-----------------|  
 |本機|指定已建立資料指標的批次、預存程序或觸發程序，其資料指標的範圍為本機範圍。|  
-|全域|指定連接的資料指標範圍為全域。|  
+|全球|指定連接的資料指標範圍為全域。|  
   
 ## <a name="examples"></a>範例  
   

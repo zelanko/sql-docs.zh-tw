@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_audit_actions dynamic management view
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5e6a6c91cb31c9c3036bc95239f0aff9c75fda7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 10558ea4d489ad39fe762f360affdaae372ddee6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936970"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830894"
 ---
 # <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  傳回稽核記錄檔中可報告的每一個稽核動作及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 中可設定之每一個稽核動作群組的資料列。 如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 的詳細資訊，請參閱[SQL Server audit &#40;資料庫引擎&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+  傳回稽核記錄檔中可報告的每一個稽核動作及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 中可設定之每一個稽核動作群組的資料列。 如需有關 Audit 的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server audit &#40;資料庫引擎&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

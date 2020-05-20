@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbcmptlevel
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0f6ffcb7a43fbfc2a840cbbbeb95de4bbb875cbe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 69b98f779a30e15a83e7ce6eed681f8c7c0df04b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108213"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831665"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="arguments"></a>引數  
 `[ @dbname = ] name`這是要變更其相容性層級的資料庫名稱。 資料庫名稱必須符合識別碼的規則。 *name*是**sysname**，預設值是 Null。  
   
-`[ @new_cmptlevel = ] version`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用來使資料庫相容的版本。 *version*是**Tinyint**，預設值是 Null。 此值必須是下列其中之一：  
+`[ @new_cmptlevel = ] version`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]這是用來使資料庫相容的版本。 *version*是**Tinyint**，預設值是 Null。 此值必須是下列其中之一：  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -63,7 +63,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="result-sets"></a>結果集  
  如果未指定任何參數，或未指定*name*參數， **sp_dbcmptlevel**會傳回錯誤。  
   
- 如果指定了*name* ， *version*而沒有版本[!INCLUDE[ssDE](../../includes/ssde-md.md)] ，會傳回訊息，顯示指定之資料庫的目前相容性層級。  
+ 如果指定了*name* ，而沒有*版本*，會傳回 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 訊息，顯示指定之資料庫的目前相容性層級。  
   
 ## <a name="remarks"></a>備註  
  如需相容性層級的說明，請參閱[ALTER Database 相容性層級 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  

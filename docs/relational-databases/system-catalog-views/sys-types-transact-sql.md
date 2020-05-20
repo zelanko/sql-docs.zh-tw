@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.types catalog view
 - table-valued parameters,sys.types
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff4cd58fcd7d11679cf410c9f379b101d42ce4bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc3072c78ed74324345832daeb709fc6090b8763
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095575"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831288"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68095575"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|類型的名稱。 在結構描述中，這是唯一的。|  
 |**system_type_id**|**tinyint**|類型的內部系統類型識別碼。|  
-|**user_type_id**|**int**|類型的識別碼。 在資料庫中，這是唯一的。 對於系統資料類型， **user_type_id** = **system_type_id**。|  
+|**user_type_id**|**int**|類型的識別碼。 在資料庫中，這是唯一的。 對於系統資料類型， **user_type_id**  =  **system_type_id**。|  
 |**schema_id**|**int**|類型所屬的結構描述識別碼。|  
 |**principal_id**|**int**|個別擁有者的識別碼 (如果與結構描述擁有者不同的話)。 依預設，結構描述包含的物件就是結構描述擁有者所擁有的物件。 不過，您也可以利用 ALTER AUTHORIZATION 陳述式來變更擁有權，指定替代的擁有者。<br /><br /> NULL (如果沒有替代的個別擁有者)。|  
 |**max_length**|**smallint**|類型的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**Varchar （max）**、 **Nvarchar （max）**、 **Varbinary （max）** 或**xml**。<br /><br /> 若為**文字**資料行， **max_length**值會是16。|  

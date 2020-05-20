@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_can_tlog_be_applied
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 279492503ba8ce31e3c5d4027d8fd184c4a81587
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 660e0d836a10ef248f2afa3f44b9aa3451f5d572
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045966"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831753"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

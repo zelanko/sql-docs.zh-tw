@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_message_types catalog view
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 560ee8a4ccc03f747df2b475394af092db589e7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d5c2b7a1ca52a22a189395164544ff6fb8adb687
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078743"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831326"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

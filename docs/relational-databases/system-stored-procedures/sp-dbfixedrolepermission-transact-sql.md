@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbfixedrolepermission
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fe4c8864856ef9b324a5f44b4811cfff4e8de218
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180110"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831677"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  顯示固定資料庫角色的權限。 **sp_dbfixedrolepermission**會在中傳回[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]正確的資訊。 輸出不會反映 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中實作的權限階層變更。 如需詳細資訊，請參閱[資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)，這會顯示固定資料庫角色的清單及其對應的許可權。  
+  顯示固定資料庫角色的權限。 **sp_dbfixedrolepermission**會在中傳回正確的資訊 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。 輸出不會反映 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中實作的權限階層變更。 如需詳細資訊，請參閱[資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)，這會顯示固定資料庫角色的清單及其對應的許可權。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -42,7 +42,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @rolename = ] 'role'`這是有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的固定資料庫角色的名稱。 *role*是**sysname**，預設值是 Null。 如果未指定*role* ，則會顯示所有固定資料庫角色的許可權。  
+`[ @rolename = ] 'role'`這是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定資料庫角色的名稱。 *role*是**sysname**，預設值是 Null。 如果未指定*role* ，則會顯示所有固定資料庫角色的許可權。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
