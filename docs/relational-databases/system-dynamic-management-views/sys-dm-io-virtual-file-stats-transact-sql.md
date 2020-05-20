@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ad2d38c031f97e46ef36f33f5e7a0fc82bcb5e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f74fcfb00286d79699eed1e40c3dc36f907026ec
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412835"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811780"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "74412835"
   傳回資料和記錄檔的 I/O 統計資料。 這個動態管理檢視會取代[fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)函數。  
   
 > [!NOTE]  
->  若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]呼叫此，請使用**dm_pdw_nodes_io_virtual_file_stats**的名稱。 
+>  若要從呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ，請使用**dm_pdw_nodes_io_virtual_file_stats**的名稱。 
 
 ## <a name="syntax"></a>語法  
   
@@ -78,7 +78,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**database_name**|**sysname**|資料庫名稱。</br></br>針對 SQL 資料倉儲，這是儲存在節點上的資料庫名稱，由 pdw_node_id 所識別。 每個節點都有一個具有13個檔案的 tempdb 資料庫。 每個節點在每個散發中也有一個資料庫，而每個散發資料庫都有5個檔案。 例如，如果每個節點都包含4個散發，則結果會顯示每個 pdw_node_id 20 個散發資料庫檔案。 
 |**database_id**|**smallint**|資料庫的識別碼。|  
 |**file_id**|**smallint**|檔案的識別碼。|  
-|**sample_ms**|**bigint**|自電腦啟動之後的毫秒數。 這個資料行可用來比較這個函數的不同輸出。</br></br>資料類型是透過的**int** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|自電腦啟動之後的毫秒數。 這個資料行可用來比較這個函數的不同輸出。</br></br>資料類型是透過**int**的 int [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|對檔案發出的讀取數。|  
 |**num_of_bytes_read**|**bigint**|這個檔案讀取的總位元組數。|  
 |**io_stall_read_ms**|**bigint**|使用者等候在檔案發出讀取的總時間 (以毫秒為單位)。|  
@@ -88,9 +88,9 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|使用者等候檔案完成 I/O 的總時間 (以毫秒為單位)。|  
 |**size_on_disk_bytes**|**bigint**|該檔案在磁碟上所用的位元組數。 如果是疏鬆檔案，這個數字就是資料庫快照集在磁碟上所用的實際位元組數。|  
 |**file_handle**|**varbinary**|這個檔案的 Windows 檔案控制代碼。|  
-|**io_stall_queued_read_ms**|**bigint**|不**適用于：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至。 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]<br /><br /> IO 資源管理針對讀取導入的總 IO 延遲。 不可為 Null。 如需詳細資訊，請參閱[dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
-|**io_stall_queued_write_ms**|**bigint**|不**適用于：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至。 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]<br /><br />  IO 資源管理針對寫入導入的總 IO 延遲。 不可為 Null。|
-|**pdw_node_id**|**int**|**適用於：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>散發的節點識別碼。
+|**io_stall_queued_read_ms**|**bigint**|不**適用于：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> IO 資源管理針對讀取導入的總 IO 延遲。 不可為 Null。 如需詳細資訊，請參閱[dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
+|**io_stall_queued_write_ms**|**bigint**|不**適用于：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br />  IO 資源管理針對寫入導入的總 IO 延遲。 不可為 Null。|
+|**pdw_node_id**|**int**|**適用對象：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>散發的節點識別碼。
  
 ## <a name="remarks"></a>備註
 每當啟動 SQL Server （MSSQLSERVER）服務時，計數器就會初始化為空的。

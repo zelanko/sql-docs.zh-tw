@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_waiting_tasks dynamic management view
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0a89a48fa960812ee955cd3b7ecb30069161f61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0efa4a5b5c8144807c27014a96b3fa90ed77971
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72260386"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811748"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "72260386"
   傳回有關等候某項資源的工作等候佇列資訊。 如需有關工作的詳細資訊，請參閱[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
    
 > [!NOTE]  
->  若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_os_waiting_tasks**的名稱。  
+>  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_os_waiting_tasks**的名稱。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -47,18 +47,18 @@ ms.locfileid: "72260386"
 |**blocking_session_id**|**smallint**|封鎖要求之工作階段的識別碼。 如果這個資料行是 NULL，表示要求沒有被封鎖，或者封鎖工作階段的工作階段資訊無法使用 (或無法識別)。<br /><br /> -2 = 封鎖資源是由被遺棄的分散式交易所擁有。<br /><br /> -3 = 封鎖資源是由延遲的復原交易所擁有。<br /><br /> -4 = 由於內部閂鎖狀態轉換，而無法判斷封鎖閂鎖擁有者的工作階段識別碼。|  
 |**blocking_exec_context_id**|**int**|封鎖工作的執行內容識別碼。|  
 |**resource_description**|**Nvarchar （3072）**|正在耗用的資源描述。 如需詳細資訊，請參閱以下清單。|  
-|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="resource_description-column"></a>resource_description 資料行  
  resource_description 資料行具有以下的可能值。  
   
  **執行緒集區資源擁有者：**  
   
--   threadpool id = 排程\<器十六進位-位址>  
+-   threadpool id = 排程器 \< 十六進位-位址>  
   
  **平行查詢資源擁有者：**  
   
--   exchangeEvent id = {Port |管道}\<十六進位-位址> WaitType =\<exchange-等候類型> 節點識別碼 =\<exchange 節點識別碼>  
+-   exchangeEvent id = {Port |管道} \< 十六進位-位址> WaitType = \< exchange-等候類型> 節點識別碼 = \< exchange 節點識別碼>  
   
  **Exchange-wait-type：**  
   
@@ -78,31 +78,31 @@ ms.locfileid: "72260386"
   
  **鎖定資源擁有者：**  
   
--   \<類型特定-描述> 識別碼 = 鎖定\<鎖定-十六進位位址> 模式 =\<模式> associatedObjectId =\<相關聯的 obj 識別碼>  
+-   \<類型特定-描述> 識別碼 = 鎖定 \< 鎖定-十六進位位址> 模式 = \< 模式> associatedObjectId = \< 相關聯的 obj 識別碼>  
   
      **\<類型特定-描述> 可以是：**  
   
-    -   針對資料庫： databaselock subresource =\<databaselock-subresource> dbid =\<db-id>  
+    -   針對資料庫： databaselock subresource = \< databaselock-subresource> dbid = \< db-id>  
   
-    -   針對 FILE： k fileid =\<file-id> subresource =\<k-subresource> dbid =\<db-id>  
+    -   針對 FILE： k fileid = \< file-id> subresource = \< k-subresource> dbid = \< db-id>  
   
-    -   針對物件： objectlock lockPartition =\<lock-partition-id> objid =\<obj-id> subresource =\<objectlock-subresource> dbid =\<db 識別碼>  
+    -   針對物件： objectlock lockPartition = \< lock-partition-id> objid = \< obj-id> subresource = \< objectlock-subresource> dbid = \< db 識別碼>  
   
-    -   針對頁面： pagelock fileid =\<file-id> pageid =\<PAGE id> dbid =\<db-id> subresource =\<pagelock-subresource>  
+    -   針對頁面： pagelock fileid = \< file-id> pageid = \< PAGE id> dbid = \< db-id> subresource = \< pagelock-subresource>  
   
-    -   針對索引鍵：機碼\<hobtid = hobt-id>\<dbid = db 識別碼>  
+    -   針對索引鍵：機碼 hobtid = \< hobt-id> dbid = \< db 識別碼>  
   
-    -   針對範圍： extentlock fileid =\<file-id> pageid =\<page id> dbid =\<db-id>  
+    -   針對範圍： extentlock fileid = \< file-id> pageid = \< page id> dbid = \< db-id>  
   
-    -   針對 RID： ridlock fileid =\<file-id> pageid =\<page id> dbid =\<db-id>  
+    -   針對 RID： ridlock fileid = \< file-id> pageid = \< page id> dbid = \< db-id>  
   
-    -   針對應用程式： applicationlock hash\<= Hash> databasePrincipalId\<= role-id> dbid\<= db-id>  
+    -   針對應用程式： applicationlock hash = \< hash> databasePrincipalId = \< role-id> dbid = \< db-id>  
   
-    -   針對中繼資料： metadatalock subresource\<= metadata-subresource> classid\<= metadatalock-description> dbid\<= db-id>  
+    -   針對中繼資料： metadatalock subresource = \< metadata-subresource> classid = \< metadatalock-description> dbid = \< db-id>  
   
-    -   針對 HOBT： hobtlock hobtid =\<HOBT-id> subresource =\<HOBT-subresource> dbid =\<db 識別碼>  
+    -   針對 HOBT： hobtlock hobtid = \< HOBT-id> subresource = \< HOBT-subresource> dbid = \< db 識別碼>  
   
-    -   針對 ALLOCATION_UNIT： allocunitlock hobtid =\<hobt-id> subresource =\<配置-UNIT-subresource> dbid =\<db 識別碼>  
+    -   針對 ALLOCATION_UNIT： allocunitlock hobtid = \< hobt-id> subresource = 配置 \< -UNIT-subresource> dbid = \< db 識別碼>  
   
      **\<模式> 可以是：**  
   
@@ -110,11 +110,11 @@ ms.locfileid: "72260386"
   
  **外部資源擁有者：**  
   
--   External ExternalResource =\<wait-類型>  
+-   External ExternalResource = \< wait-類型>  
   
  **一般資源擁有者：**  
   
--   TransactionMutex TransactionInfo Workspace =\<工作區識別碼>  
+-   TransactionMutex TransactionInfo Workspace = \< 工作區識別碼>  
   
 -   Mutex  
   
@@ -128,19 +128,19 @@ ms.locfileid: "72260386"
   
  **閂鎖資源擁有者：**  
   
--   \<資料庫識別碼>：\<檔案識別碼>：\<分頁檔>  
+-   \<資料庫識別碼>：檔案 \< 識別碼>： \< 分頁檔>  
   
 -   \<GUID>  
   
--   \<閂鎖類別> （\<閂鎖-位址>）  
+-   \<閂鎖類別> （ \< 閂鎖-位址>）  
   
 ## <a name="permissions"></a>權限
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
+在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
  
 ## <a name="example"></a>範例
-這個範例會識別已封鎖的會話。 在中[!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行查詢。
+這個範例會識別已封鎖的會話。 [!INCLUDE[tsql](../../includes/tsql-md.md)]在中執行查詢 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。
 
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 

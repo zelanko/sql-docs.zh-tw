@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublications system table
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 112d237781ecbe257ef0b9d8c3f4bdee37ca5bc4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67990329"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813530"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67990329"
 |**alt_snapshot_folder**|**Nvarchar （510）**|指定快照集替代資料夾的位置。|  
 |**pre_snapshot_script**|**Nvarchar （510）**|指定 **.sql**檔案位置的指標。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。|  
 |**post_snapshot_script**|**Nvarchar （510）**|指定 **.sql**檔案位置的指標。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。|  
-|**compress_snapshot**|**bit**|指定要將寫入*alt_snapshot_folder*位置的快照集壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。 **0**指定不壓縮快照集。|  
+|**compress_snapshot**|**bit**|指定要將寫入*alt_snapshot_folder*位置的快照集壓縮成 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。 **0**指定不壓縮快照集。|  
 |**ftp_address**|**sysname**|散發者之 FTP 服務的網路位址。 指定發行集快照集檔案所在的位置，以便散發代理程式能夠加以收取。|  
 |**ftp_port**|**int**|散發者的 FTP 服務通訊埠編號。 指定發行集快照集檔案所在的位置，以便散發代理程式能夠加以收取|  
 |**ftp_subdirectory**|**Nvarchar （510）**|指定在發行集支援利用 FTP 來傳播快照集時，散發代理程式能夠從中收取快照集檔案的位置。|  
@@ -57,9 +57,9 @@ ms.locfileid: "67990329"
 |**centralized_conflicts**|**bit**|指定是否將衝突記錄儲存在發行者端：<br /><br /> **0** = 衝突記錄會同時儲存在發行者端和造成衝突的訂閱者端。<br /><br /> **1** = 衝突記錄儲存在發行者端。<br /><br /> *不支援非 SQL 發行者使用這個項目。*|  
 |**conflict_retention**|**int**|指定衝突保留週期 (以天為單位)。 *不支援非 SQL 發行者使用這個項目。*|  
 |**conflict_policy**|**int**|指定使用佇列更新訂閱者選項時，所遵照的衝突解決原則。 它可以是下列值之一：<br /><br /> **1** = 發行者在衝突中獲勝。<br /><br /> **2** = 訂閱者在衝突中獲勝。<br /><br /> **3** = 重新初始化訂閱。<br /><br /> *不支援非 SQL 發行者使用這個項目。*|  
-|**queue_type**|**int**|指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **1** = msmq，使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]訊息佇列來儲存交易。<br /><br /> **2** = sql，用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。<br /><br /> 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者不使用這個資料行。<br /><br /> 注意：使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]訊息佇列已被取代，不再受到支援。<br /><br /> *非 SQL 發行者不支援此資料行。*|  
-|**ad_guidname**|**sysname**|指定發行集是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行。 有效的全域唯一識別碼（GUID）會指定在[!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行發行集，而 GUID 是對應的 Active Directory 發行集物件**objectGUID**。 如果是 NULL，發行集就不會發行在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中。 *不支援非 SQL 發行者使用這個項目。*|  
-|**backward_comp_level**|**int**|資料庫相容性層級，它可以是下列值之一：<br /><br /> **90**  = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **100**  = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。<br /><br /> *不支援非 SQL 發行者使用這個項目。*|  
+|**queue_type**|**int**|指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **1** = msmq，使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 訊息佇列來儲存交易。<br /><br /> **2** = sql，用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存交易。<br /><br /> 非發行者不使用這個資料行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 注意：使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 訊息佇列已被取代，不再受到支援。<br /><br /> *非 SQL 發行者不支援此資料行。*|  
+|**ad_guidname**|**sysname**|指定發行集是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行。 有效的全域唯一識別碼（GUID）會指定在 Active Directory 中發行發行集 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ，而 GUID 是對應的 Active Directory 發行集物件**objectGUID**。 如果是 NULL，發行集就不會發行在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中。 *不支援非 SQL 發行者使用這個項目。*|  
+|**backward_comp_level**|**int**|資料庫相容性層級，它可以是下列值之一：<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。<br /><br /> *不支援非 SQL 發行者使用這個項目。*|  
 |**描述**|**nvarchar(255)**|發行集的描述項目。|  
 |**independent_agent**|**bit**|指定這個發行集是否有獨立的散發代理程式。<br /><br /> **0** = 發行集使用共用的散發代理程式，而且每個發行者資料庫/訂閱者資料庫配對都有單一的共用代理程式。<br /><br /> **1** = 此發行集有一個獨立的散發代理程式。|  
 |**immediate_sync**|**bit**|指出每次執行快照集代理程式時，是否要建立或重新建立同步處理檔案， **1**表示每次執行代理程式時都會建立它們。|  

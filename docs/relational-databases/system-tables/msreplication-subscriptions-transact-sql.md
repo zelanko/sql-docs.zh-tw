@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a7164afe24d15abf195ebff96e4e96a82877deae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 37114a42cd7e9c64872ff42848bb916b21c1d941
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079987"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812362"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "68079987"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**發行者**|**sysname**|發行者的名稱。|  
+|**publisher**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
 |**independent_agent**|**bit**|指出這個發行集是否有獨立的散發代理程式。|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> 0 = 發送。<br /><br /> 1 = 提取。<br /><br /> 2 = 匿名。|  
 |**distribution_agent**|**sysname**|散發代理程式的名稱。|  
-|**階段**|**smalldatetime**|前次由散發代理程式更新的時間。|  
+|**Time**|**smalldatetime**|前次由散發代理程式更新的時間。|  
 |**描述**|**nvarchar(255)**|訂閱的描述。|  
 |**transaction_timestamp**|**varbinary(16)**|僅供內部使用。|  
 |**update_mode**|**tinyint**|更新的類型。|  

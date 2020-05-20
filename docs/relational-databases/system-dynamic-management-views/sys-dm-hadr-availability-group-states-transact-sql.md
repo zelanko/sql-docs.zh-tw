@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_group_states dynamic management view
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 91efefbdc28480cf2a3b3fb579dba0946dba8a2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bace0824a7c8411e267186c3e9919ba2eb4be15c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900771"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811988"
 ---
 # <a name="sysdm_hadr_availability_group_states-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  針對擁有本機實例之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可用性複本的每個 Always On 可用性群組，各傳回一個資料列。 每個資料列會顯示定義給定之可用性群組健全狀況的狀態。  
+  針對擁有本機實例之可用性複本的每個 Always On 可用性群組，各傳回一個資料列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 每個資料列會顯示定義給定之可用性群組健全狀況的狀態。  
   
 > [!NOTE]  
 >  若要取得的完整清單，請查詢[sys.databases availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)目錄檢視。  

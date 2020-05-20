@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_plan dynamic management function
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d4ccd016c32e197c75026c1039e5ff4c21eef32
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4cc8fd7a20da6d0bf56d68b690bf35341cb6a63e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135181"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812113"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,21 +73,21 @@ sys.dm_exec_query_plan(plan_handle)
   
 -   尚未快取某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，如大量作業陳述式或包含大小超出 8 KB 字串文字的陳述式。 您無法利用 **sys.dm_exec_query_plan** 來擷取這些陳述式的 XML 顯示計畫，因為它們不在快取中，除非批次正在執行。  
   
--   如果[!INCLUDE[tsql](../../includes/tsql-md.md)]批次或預存套裝程式含對使用者自訂函數的呼叫或動態 SQL 的呼叫（例如使用 EXEC （*string*）），則使用者定義函數的已編譯 XML 執行程式表不會包含在**dm_exec_query_plan**的批次或預存程式中。 相反地，您必須針對對應至使用者定義函數的計畫控制碼，個別呼叫**sys.databases dm_exec_query_plan。**  
+-   如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次或預存套裝程式含對使用者自訂函數的呼叫或動態 SQL 的呼叫（例如使用 EXEC （*string*）），則使用者定義函數的已編譯 XML 執行程式表不會包含在**dm_exec_query_plan**的批次或預存程式中。 相反地，您必須針對對應至使用者定義函數的計畫控制碼，個別呼叫**sys.databases dm_exec_query_plan。**  
   
  當隨選查詢使用簡單或強制參數化時，**query_plan** 資料行只會包含陳述式文字，而非實際查詢計畫。 若要傳回查詢計畫，請呼叫 **sys.dm_exec_query_plan** 來取得準備參數化查詢的計畫控制代碼。 您可以藉由參考 [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 檢視的 **sql** 資料行，或 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 動態管理檢視的文字資料行，判斷查詢是否參數化。  
   
 > [!NOTE] 
-> 由於**xml**資料類型所允許的嵌套層級數目有限制，因此**dm_exec_query_plan**無法傳回符合或超過128個嵌套元素層級的查詢計劃。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這會讓查詢計畫無法傳回並產生錯誤 6335。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 和更新版本中， **query_plan**資料行傳回 Null。   
+> 由於**xml**資料類型所允許的嵌套層級數目有限制，因此**dm_exec_query_plan**無法傳回符合或超過128個嵌套元素層級的查詢計劃。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這會讓查詢計畫無法傳回並產生錯誤 6335。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 和更新版本中， **query_plan**資料行傳回 Null。   
 > 您可以使用[dm_exec_text_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)動態管理函數，以文字格式傳回查詢計劃的輸出。  
   
 ## <a name="permissions"></a>權限  
- 若要執行**dm_exec_query_plan**，使用者必須是**系統管理員（sysadmin** ）固定伺服器角色的成員，或具有`VIEW SERVER STATE`伺服器的許可權。  
+ 若要執行**dm_exec_query_plan**，使用者必須是**系統管理員（sysadmin** ）固定伺服器角色的成員，或具有 `VIEW SERVER STATE` 伺服器的許可權。  
   
 ## <a name="examples"></a>範例  
  下列範例會顯示如何使用 **sys.dm_exec_query_plan** 動態管理檢視。  
   
- 若要檢視 XML 顯示計畫，請利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查詢編輯器來執行下列查詢，之後，在 **sys.dm_exec_query_plan** 傳回的資料表中，按一下 **query_plan** 資料行中的 **[ShowPlanXML]**。 此時 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 摘要窗格會顯示 XML 顯示計畫。 若要將 XML 執行程式表儲存至檔案，請以滑鼠右鍵按一下 [ **query_plan** ] 欄中的 [ **ShowPlanXML** ]，按一下 [**將結果儲存為**]，以\< *file_name*>. .sqlplan; 格式將檔案命名為。例如，Myxmlshowplan.sqlplan. .sqlplan。  
+ 若要檢視 XML 顯示計畫，請利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查詢編輯器來執行下列查詢，之後，在 **sys.dm_exec_query_plan** 傳回的資料表中，按一下 **query_plan** 資料行中的 **[ShowPlanXML]**。 此時 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 摘要窗格會顯示 XML 顯示計畫。 若要將 XML 執行程式表儲存至檔案，請以滑鼠右鍵按一下 [ **query_plan** ] 欄中的 [ **ShowPlanXML** ]，然後按一下 [**將結果儲存為**]，將檔案命名為 \< *file_name*>. .sqlplan; 例如 myxmlshowplan.sqlplan. .sqlplan。  
   
 ### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. 擷取執行緩慢的 Transact-SQL 查詢或批次之快取查詢計畫  
  各類型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次的查詢計畫，如特定批次、預存程序和使用者自訂函數，都會快取在稱為計畫快取的記憶體區域中。 每個快取的查詢計畫都用一個稱為計畫控制代碼的唯一識別碼來識別。 您可以利用 **sys.dm_exec_query_plan** 動態管理檢視來指定這個計畫控制代碼，以擷取特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或批次的執行計畫。  
@@ -116,7 +116,7 @@ WHERE session_id = 54;
 GO  
 ```  
   
- **Dm_exec_requests sys**所傳回的資料表會指出執行緩慢的查詢或批次的計畫控制碼為`0x06000100A27E7C1FA821B10600`，您可以使用`sys.dm_exec_query_plan`將其指定為的*plan_handle*引數，如下所示取得 XML 格式的執行計畫。 執行緩慢的查詢或批次之 XML 格式執行計畫，儲存在 `sys.dm_exec_query_plan` 傳回的資料表之 **query_plan** 資料行中。  
+ **Dm_exec_requests sys**所傳回的資料表會指出執行緩慢的查詢或批次的計畫控制碼為 `0x06000100A27E7C1FA821B10600` ，您可以使用將其指定為的*plan_handle*引數，如下所示 `sys.dm_exec_query_plan` 取得 XML 格式的執行計畫。 執行緩慢的查詢或批次之 XML 格式執行計畫，儲存在 `sys.dm_exec_query_plan` 傳回的資料表之 **query_plan** 資料行中。  
   
 ```sql  
 USE master;  

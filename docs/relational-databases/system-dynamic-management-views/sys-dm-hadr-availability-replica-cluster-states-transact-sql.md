@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_availability_replica_cluster_states dynamic management view
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e3e2fccaed2b3c001fdcc8a0d7938f0a75a8f10d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cdc5edf1c752478c96cd0f7e4cb3eef441bd078c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246346"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811902"
 ---
 # <a name="sysdm_hadr_availability_replica_cluster_states-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

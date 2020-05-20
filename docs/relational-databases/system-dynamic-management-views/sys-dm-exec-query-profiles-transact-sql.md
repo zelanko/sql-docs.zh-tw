@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd30a6c07bccde04bb38189fab00f688dd763356
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8a060195e5fba5ae5e97e2ded6afb51c1636687
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165500"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812010"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "74165500"
 監視查詢執行時的即時查詢進度。 例如，使用此 DMV 判斷查詢的哪個部份執行得很慢。 使用描述欄位中識別的資料行可將此 DMV 與其他系統 DMV 聯結。 或者，使用時間戳記資料行，將此 DMV 與其他效能計數器 (例如效能監視器 xperf) 聯結在一起。  
   
 ## <a name="table-returned"></a>傳回的資料表  
-傳回的計數器是以每個執行緒的每個運算子為基礎。 結果是動態的，而且不符合現有選項的結果，例如`SET STATISTICS XML ON` ，當查詢完成時，只會建立輸出。  
+傳回的計數器是以每個執行緒的每個運算子為基礎。 結果是動態的，而且不符合現有選項的結果，例如， `SET STATISTICS XML ON` 當查詢完成時，只會建立輸出。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -72,28 +72,28 @@ ms.locfileid: "74165500"
 |segment_read_count|**int**|目前為止的區段預先讀取數目。|  
 |segment_skip_count|**int**|目前為止略過的區段數目。| 
 |actual_read_row_count|**bigint**|套用剩餘述詞之前，由運算子讀取的資料列數目。| 
-|estimated_read_row_count|**bigint**|**適用物件：** 從[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 開始。 <br/>在套用剩餘述詞之前，由運算子讀取的估計資料列數目。|  
+|estimated_read_row_count|**bigint**|**適用物件：** 從 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 開始。 <br/>在套用剩餘述詞之前，由運算子讀取的估計資料列數目。|  
   
 ## <a name="general-remarks"></a>一般備註  
  如果 [查詢計劃] 節點沒有任何 i/o，所有 i/o 相關的計數器都會設定為 Null。  
   
- 這個 DMV 所報告的 i/o 相關計數器，會比透過下列兩種方式的報告`SET STATISTICS IO`更為精細：  
+ 這個 DMV 所報告的 i/o 相關計數器，會比透過 `SET STATISTICS IO` 下列兩種方式的報告更為精細：  
   
 -   `SET STATISTICS IO`將所有 i/o 的計數器一起分組到指定的資料表。 使用此 DMV 時，會針對查詢計劃中的每個節點，取得對資料表執行 i/o 的個別計數器。  
   
 -   如果有平行掃描，此 DMV 會針對掃描上運作的每個平行執行緒報告計數器。
  
-從[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，*標準查詢執行統計資料分析基礎結構*會與*輕量查詢執行統計資料分析基礎結構*並存存在。 `SET STATISTICS XML ON`和`SET STATISTICS PROFILE ON`一律使用*標準查詢執行統計資料分析基礎結構*。 `sys.dm_exec_query_profiles`若要填入，必須啟用其中一個查詢分析基礎結構。 如需詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。    
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，*標準查詢執行統計資料分析基礎結構*會與*輕量查詢執行統計資料分析基礎結構*並存存在。 `SET STATISTICS XML ON`和 `SET STATISTICS PROFILE ON` 一律使用*標準查詢執行統計資料分析基礎結構*。 `sys.dm_exec_query_profiles`若要填入，必須啟用其中一個查詢分析基礎結構。 如需詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。    
 
 >[!NOTE]
-> 調查中的查詢必須在啟用查詢分析基礎結構**之後**啟動，在`sys.dm_exec_query_profiles`查詢開始之後啟用它將不會產生結果。 如需如何啟用查詢分析基礎結構的詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
+> 調查中的查詢必須在啟用查詢分析基礎結構**之後**啟動，在查詢開始之後啟用它將不會產生結果 `sys.dm_exec_query_profiles` 。 如需如何啟用查詢分析基礎結構的詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
 
 ## <a name="permissions"></a>權限  
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]受控實例上， `VIEW DATABASE STATE`需要`db_owner`資料庫角色的許可權和成員資格。   
-在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 受控實例上，需要 `VIEW DATABASE STATE` 資料庫角色的許可權和成員資格 `db_owner` 。   
+在高階 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
    
 ## <a name="examples"></a>範例  
- 步驟1：登入您打算執行查詢的會話，您將使用`sys.dm_exec_query_profiles`分析。 若要設定查詢以進行分析`SET STATISTICS PROFILE ON`，請使用。 在此相同工作階段中執行查詢。  
+ 步驟1：登入您打算執行查詢的會話，您將流量分析 `sys.dm_exec_query_profiles` 。 若要設定查詢以進行分析，請使用 `SET STATISTICS PROFILE ON` 。 在此相同工作階段中執行查詢。  
   
 ```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  

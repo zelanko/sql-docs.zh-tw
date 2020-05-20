@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdbms system table
 ms.assetid: 2be631bf-de09-4e7a-9ccb-d6c37b81c237
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2cd44c5154668513d695071c23619e650497c8a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2cdb9fe7fa8ef3432340145afc7a70faa3a574e7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907480"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813052"
 ---
 # <a name="msdbms-transact-sql"></a>MSdbms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

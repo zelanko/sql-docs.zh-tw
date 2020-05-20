@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - syscategories system table
 ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 27056917d828313eaa97ad204d0297cec0fb7995
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fc4d6f55ca4e131abef21772911da923b854c81b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084676"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813866"
 ---
 # <a name="dbosyscategories-transact-sql"></a>dbo.syscategories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

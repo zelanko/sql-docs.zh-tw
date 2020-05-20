@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_primary_databases system table
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9c1dfefbc309e9ccc0f170461795c00a117247e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 28e32289763b6b191e8eb160e06f8c961dd5f437
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304982"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813199"
 ---
 # <a name="log_shipping_primary_databases-transact-sql"></a>log_shipping_primary_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "72304982"
 |**backup_retention_period**|**int**|在刪除記錄備份檔之前，將它保留在備份目錄中的時間長度 (以分鐘為單位)。|  
 |**backup_job_id**|**uniqueidentifier**|與主要伺服器上之備份作業相關聯的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業識別碼。|  
 |**monitor_server**|**sysname**|在記錄傳送組態中，用於做為監視伺服器之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體的名稱。|  
-|**monitor_server_security_mode**|**bit**|用於連接到監視伺服器的安全性模式。<br /><br /> 1 = Windows 驗證。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
+|**monitor_server_security_mode**|**bit**|用於連接到監視伺服器的安全性模式。<br /><br /> 1 = Windows 驗證。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  
 |**last_backup_file**|**Nvarchar （500）**|最近之交易記錄備份的絕對路徑。|  
 |**last_backup_date**|**datetime**|最後一項記錄備份作業的日期和時間。|  
-|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database**和**sp_help_log_shipping_secondary_primary**使用此資料行控制中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]監視設定的顯示。<br /><br /> 0 = 叫用這兩個預存程式之一時，使用者並未指定** \@monitor_server**參數的明確值。<br /><br /> 1 = 使用者已指定明確值。|  
+|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database**和**sp_help_log_shipping_secondary_primary**使用此資料行控制中監視設定的顯示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。<br /><br /> 0 = 叫用這兩個預存程式之一時，使用者並未指定** \@ monitor_server**參數的明確值。<br /><br /> 1 = 使用者已指定明確值。|  
 |**backup_compression**|**tinyint**|指出記錄傳送組態是否會覆寫伺服器層級的備份壓縮行為。<br /><br /> 0 = 已停用。 不論伺服器設定的備份壓縮設定為何，永遠都不會壓縮記錄備份。<br /><br /> 1 = 已啟用。 不論伺服器設定的備份壓縮設定為何，永遠都會壓縮記錄備份。<br /><br /> 2 = 針對 View 使用伺服器設定，[或設定備份壓縮預設伺服器設定選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)伺服器-configuration 選項。 這是預設值。<br /><br /> 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 才支援備份壓縮。|  
   
 ## <a name="see-also"></a>另請參閱  
