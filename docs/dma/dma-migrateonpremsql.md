@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 00d27decc533d33056a7cc0cb19c2584fea564fb
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056528"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885866"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>使用 Data Migration Assistant 升級 SQL Server
 
@@ -78,7 +78,7 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
    ![將資料庫備份複製到不同位置的選項](../dma/media/CopyDatabaseDifferentLocation.png)
 
-5. 選取 [下一步]  。
+5. 選取 [下一步] 。
 
 Data Migration Assistant 會在備份檔案夾、資料和記錄檔位置上執行驗證。 如果驗證失敗，請修正選項，然後選取 **[下一步]**。
 

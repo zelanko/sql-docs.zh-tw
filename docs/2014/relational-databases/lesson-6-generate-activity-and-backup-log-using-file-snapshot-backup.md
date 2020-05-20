@@ -10,17 +10,17 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e31789b1f2cf5b2206af400c7c7798f7761f1e6c
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175461"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922075"
 ---
 # <a name="lesson-7-move-your-data-files-to-azure-storage"></a>第 7 課：將資料檔案移至 Azure 儲存體
   在這一課，您將學習如何將資料檔案移至 Azure 儲存體（而不是您的 SQL Server 實例）。 進行這一課並不需要完成第 4、5 和 6 課。  
   
- 若要將資料檔案移至 Azure 儲存體，您可以使用`ALTER DATABASE`語句，因為它可協助您變更資料檔案的位置。  
+ 若要將資料檔案移至 Azure 儲存體，您可以使用 `ALTER DATABASE` 語句，因為它可協助您變更資料檔案的位置。  
   
  這個課程假設您已完成下列步驟：  
   
@@ -74,7 +74,7 @@ ms.locfileid: "70175461"
   
     ```  
   
-5.  現在，您必須使用下列其中一種方法，將資料檔案複製到 Azure 儲存體： [AzCopy 工具](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)、 [Put 頁面](https://msdn.microsoft.com/library/azure/ee691975.aspx)、[儲存體用戶端程式庫參考](https://msdn.microsoft.com/library/azure/dn261237.aspx)，或協力廠商儲存體瀏覽器工具。  
+5.  現在，您必須使用下列其中一種方法，將資料檔案複製到 Azure 儲存體： [AzCopy 工具](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs)、 [Put 頁面](https://msdn.microsoft.com/library/azure/ee691975.aspx)、[儲存體用戶端程式庫參考](https://msdn.microsoft.com/library/azure/dn261237.aspx)，或協力廠商儲存體瀏覽器工具。  
   
      **重要事項：** 使用這項新的增強功能時，請務必確定您建立的是分頁 Blob，而不是區塊 Blob。  
   

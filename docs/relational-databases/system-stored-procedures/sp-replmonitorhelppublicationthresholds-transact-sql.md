@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublicationthresholds
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d351db8ca696263f294f5a52f364d42ac48bad24
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ef69c7a4b9c0284772204981e8d01c793a683e19
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75320772"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834265"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`如果發行集的類型，則為。 *publication_type*是**int**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**0**|交易式發行集。|  
 |**1**|快照式發行集。|  

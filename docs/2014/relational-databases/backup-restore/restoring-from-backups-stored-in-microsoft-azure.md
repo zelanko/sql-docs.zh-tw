@@ -10,12 +10,12 @@ ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1ba9d2e6e607bbfae4ff1232af897145132c9370
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54fc088cd867e9ed250835ca821e5cac8e598e85
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154706"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922026"
 ---
 # <a name="restoring-from-backups-stored-in-azure"></a>從儲存在 Azure 中的備份還原
   本主題概要說明使用儲存在 Azure Blob 儲存體服務中的備份來還原資料庫時，所應注意的事項。 本文適用於使用 SQL Server 備份至 URL 備份或 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所建立的備份。  
@@ -38,9 +38,9 @@ ms.locfileid: "70154706"
 ### <a name="optimizing-restores"></a>最佳化還原  
  若要減少還原寫入時間，請將 [執行磁碟區維護工作]  使用者權限加入至 SQL Server 使用者帳戶。 如需詳細資訊，請參閱 [資料庫檔案初始化](https://go.microsoft.com/fwlink/?LinkId=271622)。 如果開啟立即檔案初始化功能之後，還原速度仍然很慢，請查看資料庫備份所在之執行個體上的記錄檔大小。 如果記錄檔大小很大 (數以 GB)，還原速度應該就會很慢。 在還原期間，記錄檔必須歸零，因此需要大量時間。  
   
- 若要減少還原時間，建議您使用壓縮的備份。  如果備份大小超過 25 GB，請使用 [AzCopy 公用程式](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) 下載到本機磁碟機，然後執行還原。 如需其他備份最佳做法與建議，請參閱 [SQL Server 備份至 URL 的最佳做法和疑難排解](sql-server-backup-to-url-best-practices-and-troubleshooting.md)。  
+ 若要減少還原時間，建議您使用壓縮的備份。  如果備份大小超過 25 GB，請使用 [AzCopy 公用程式](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) 下載到本機磁碟機，然後執行還原。 如需其他備份最佳做法與建議，請參閱 [SQL Server 備份至 URL 的最佳做法和疑難排解](sql-server-backup-to-url-best-practices-and-troubleshooting.md)。  
   
- 當您執行還原時，也可以開啟追蹤旗標 3051，以產生詳細的記錄檔。 此記錄檔會置於記錄檔目錄中，並使用下列格式命名：BackupToUrl-\<執行個體>-\<資料庫名稱>-action-\<PID>.log。 此記錄檔包含對 Azure 儲存體之每個來回行程的相關資訊 (包括時間點)，有助於診斷問題。  
+ 當您執行還原時，也可以開啟追蹤旗標 3051，以產生詳細的記錄檔。 此記錄檔位於記錄目錄中，且使用下列格式命名：BackupToUrl-\<執行個體名稱>-\<資料庫名稱>-action-\<PID>.log。 此記錄檔包含對 Azure 儲存體之每個來回行程的相關資訊 (包括時間點)，有助於診斷問題。  
   
 ### <a name="topics-on-performing-restore-operations"></a>關於執行還原作業的主題  
   

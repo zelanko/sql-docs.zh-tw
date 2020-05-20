@@ -12,18 +12,18 @@ ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7fb33e6ccb5afbdee1bf6c3673a24548d6fe9961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 952690e4f37be304d80a542e38d461ef92ce2c21
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66102125"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886435"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>在原生模式報表伺服器上設定 SSL 連接
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式會使用 HTTP SSL (安全通訊端層) 服務來建立與報表伺服器的加密連接。 如果您在報表伺服器電腦的本機憑證存放區內有安裝憑證 (.cer) 檔案，您可以將此憑證繫結到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留項目，以便透過加密通道支援報表伺服器連接。  
   
 > [!TIP]  
->  如果您正在使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式，請參閱 SharePoint 文件集取得詳細資訊。 例如，[如何在 SharePoint 2010 web 應用程式上啟用 SSL (https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)。  
+>  如果您正在使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式，請參閱 SharePoint 文件集取得詳細資訊。 例如，[如何在 SharePoint 2010 web 應用程式上啟用 SSL (https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application)](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application)。  
   
  由於 Internet Information Services (IIS) 也使用 HTTP SSL，所以如果您在同一部電腦上執行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，將必須負責解決重要的互通性問題。 請務必檢閱「與 IIS 的互通性問題」一節，以取得如何對付這些問題的指引。  
   

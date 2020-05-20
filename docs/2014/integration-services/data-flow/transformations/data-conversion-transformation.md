@@ -16,12 +16,12 @@ ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 762bf6b25fec66f5281d32ca9c5d15aa6e64ce31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b72841d03023efacf4f8217aea8f6cdd383fbdd
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770434"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921553"
 ---
 # <a name="data-conversion-transformation"></a>資料轉換
   「資料轉換」會將輸入資料行中的資料轉換成不同的資料類型，然後將它複製到新的輸出資料行。 例如，封裝可從多個來源擷取資料，然後使用此轉換將資料行轉換成目的地資料存放區所需的資料類型。 您可以對單一輸入資料行套用多項轉換。  
@@ -48,7 +48,7 @@ ms.locfileid: "62770434"
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。 如需在 SSIS 設計師中使用「資料轉換」的相關資訊，請參閱 [使用資料轉換將資料轉換至不同的資料類型](data-conversion-transformation.md) 和 [資料轉換編輯器](../../data-conversion-transformation-editor.md)。 如需以程式設計方式設定此轉換屬性的詳細資訊，請參閱 [通用屬性](../../common-properties.md) 和 [轉換自訂屬性](transformation-custom-properties.md)。  
   
 ## <a name="related-content"></a>相關內容  
- blogs.msdn.com 上的部落格文章： [SSIS 2008 中各種資料類型轉換技術的效能比較](https://go.microsoft.com/fwlink/?LinkId=220823)。  
+ blogs.msdn.com 上的部落格文章： [SSIS 2008 中各種資料類型轉換技術的效能比較](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)。  
   
 ## <a name="see-also"></a>另請參閱  
  [快速剖析](../../fast-parse.md)   

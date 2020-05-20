@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e790d110fc45708c7aa2be76db3890c8d1bc7f13
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002638"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834444"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +43,15 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是**%**。 發行集必須已存在，且符合識別碼的規則。 如果是 Null **%** 或，則會傳回目前資料庫中所有合併式發行集和訂閱的相關資訊。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是 **%** 。 發行集必須已存在，且符合識別碼的規則。 如果是 Null 或 **%** ，則會傳回目前資料庫中所有合併式發行集和訂閱的相關資訊。  
   
-`[ @subscriber = ] 'subscriber'`這是訂閱者的名稱。 *訂閱者*是**sysname**，預設值是**%**。 如果是 NULL 或 %，就會傳回給定發行集之所有訂閱的相關資訊。  
+`[ @subscriber = ] 'subscriber'`這是訂閱者的名稱。 *訂閱者*是**sysname**，預設值是 **%** 。 如果是 NULL 或 %，就會傳回給定發行集之所有訂閱的相關資訊。  
   
-`[ @subscriber_db = ] 'subscriber_db'`這是訂閱資料庫的名稱。 *subscriber_db*是**sysname**，預設值是**%**，它會傳回所有訂閱資料庫的相關資訊。  
+`[ @subscriber_db = ] 'subscriber_db'`這是訂閱資料庫的名稱。 *subscriber_db*是**sysname**，預設值是 **%** ，它會傳回所有訂閱資料庫的相關資訊。  
   
-`[ @publisher = ] 'publisher'`這是發行者的名稱。 發行者必須是有效伺服器。 *publisher*是**sysname**，預設值是**%**，它會傳回所有發行者的相關資訊。  
+`[ @publisher = ] 'publisher'`這是發行者的名稱。 發行者必須是有效伺服器。 *publisher*是**sysname**，預設值是 **%** ，它會傳回所有發行者的相關資訊。  
   
-`[ @publisher_db = ] 'publisher_db'`這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是**%**，它會傳回所有發行者資料庫的相關資訊。  
+`[ @publisher_db = ] 'publisher_db'`這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是 **%** ，它會傳回所有發行者資料庫的相關資訊。  
   
 `[ @subscription_type = ] 'subscription_type'`這是訂用帳戶的類型。 *subscription_type*是**Nvarchar （15）**，而且可以是下列其中一個值。  
   
@@ -69,7 +69,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|訂閱的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
-|**發行者**|**sysname**|發行者的名稱。|  
+|**publisher**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
 |**預訂**|**sysname**|訂閱者的名稱。|  
 |**subscriber_db**|**sysname**|訂閱資料庫的名稱。|  
@@ -85,9 +85,9 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**offload_server**|**sysname**|執行代理程式的伺服器名稱。|  
 |**use_interactive_resolver**|**int**|傳回是否在重新調整期間使用互動式解析程式。 如果是**0**，則不會使用互動式解析程式。|  
 |**hostname**|**sysname**|當訂閱依據[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函數的值進行篩選時所提供的值。|  
-|**subscriber_security_mode**|**smallint**|這是訂閱者端的安全性模式， **1**表示 Windows 驗證， **0**表示[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
+|**subscriber_security_mode**|**smallint**|這是訂閱者端的安全性模式， **1**表示 Windows 驗證， **0**表示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  
 |**subscriber_login**|**sysname**|這是在訂閱者端的登入名稱。|  
-|**subscriber_password**|**sysname**|永遠不傳回實際的訂閱者密碼。 結果會以**\*\*\*\*"\***" 字串遮罩。|  
+|**subscriber_password**|**sysname**|永遠不傳回實際的訂閱者密碼。 結果會以 " **\*\*\*\*\*\*** " 字串遮罩。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

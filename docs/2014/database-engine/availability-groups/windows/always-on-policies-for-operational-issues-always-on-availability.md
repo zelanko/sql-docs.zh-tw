@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 090ad6a9651a01532af528f5f78316eeadb9798d
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815749"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922007"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 健全狀況模型會評估一組預先定義的原則式管理 (PBM) 原則。 您可以使用這些原則，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中檢視可用性群組及其可用性複本和資料庫的健全狀況。  
@@ -48,15 +48,15 @@ ms.locfileid: "62815749"
   
 |原則名稱|問題|Category**<sup>*</sup>**|Facet|  
 |-----------------|-----------|------------------------------|-----------|  
-|WSFC 叢集狀態|[WSFC 叢集服務已離線](wsfc-cluster-service-is-offline.md)。|重大|SQL Server 的執行個體|  
-|可用性群組線上狀態|[可用性群組已離線](availability-group-is-offline.md)。|重大|可用性群組|  
-|可用性群組自動容錯移轉整備|[可用性群組尚未準備進行自動容錯移轉](availability-group-is-not-ready-for-automatic-failover.md)。|重大|可用性群組|  
+|WSFC 叢集狀態|[WSFC 叢集服務已離線](wsfc-cluster-service-is-offline.md)。|重要|SQL Server 的執行個體|  
+|可用性群組線上狀態|[可用性群組已離線](availability-group-is-offline.md)。|重要|可用性群組|  
+|可用性群組自動容錯移轉整備|[可用性群組尚未準備進行自動容錯移轉](availability-group-is-not-ready-for-automatic-failover.md)。|重要|可用性群組|  
 |可用性複本資料同步處理狀態|[某些可用性複本並未同步處理資料](some-availability-replicas-are-not-synchronizing-data.md)。|警告|可用性群組|  
 |同步複本的資料同步處理狀態|[某些同步複本不會同步](some-synchronous-replicas-are-not-synchronized.md)處理。|警告|可用性群組|  
 |可用性複本角色狀態|[某些可用性複本沒有狀況良好的角色](some-availability-replicas-do-not-have-a-healthy-role.md)。|警告|可用性群組|  
 |可用性複本連接狀態|[某些可用性複本已中斷連接](some-availability-replicas-are-disconnected.md)。|警告|可用性群組|  
-|可用性複本的角色狀態|[可用性複本沒有狀況良好的角色](availability-replica-does-not-have-a-healthy-role.md)。|重大|可用性複本|  
-|可用性複本連接狀態|[可用性複本已中斷連接](availability-replica-is-disconnected.md)。|重大|可用性複本|  
+|可用性複本的角色狀態|[可用性複本沒有狀況良好的角色](availability-replica-does-not-have-a-healthy-role.md)。|重要|可用性複本|  
+|可用性複本連接狀態|[可用性複本已中斷連接](availability-replica-is-disconnected.md)。|重要|可用性複本|  
 |可用性複本聯結狀態|[可用性複本未聯結](availability-replica-is-not-joined.md)。|警告|可用性複本|  
 |可用性複本資料同步處理狀態|[某些可用性資料庫的資料同步處理狀態狀況](data-synchronization-state-of-some-availability-database-is-not-healthy.md)不良。|警告|可用性複本|  
 |可用性資料庫暫停狀態|[可用性資料庫已暫停](availability-database-is-suspended.md)。|警告|可用性資料庫|  
@@ -86,7 +86,7 @@ ms.locfileid: "62815749"
   
  使用者定義的原則可以使用任何可用的 PBM Facet，包括 AlwaysOn 預先定義的原則所使用的 Facet (請參閱本主題稍早的[預先定義的原則和問題](#AlwaysOnPBM))。 伺服器 Facet 會提供用來監控 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 健全狀況的以下屬性：(`IsHadrEnabled` 和 `HadrManagerStatus`)。 伺服器 Facet 也會提供用來監控 WSFC 叢集組態的以下原則：`ClusterQuorumType` 和 `ClusterQuorumState`。  
   
- 如需詳細資訊，請參閱 [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (AlwaysOn 健全狀況模型第 2 部 -- 擴充健全狀況模型) (SQL Server AlwaysOn 團隊部落格)。  
+ 如需詳細資訊，請參閱 [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (AlwaysOn 健全狀況模型第 2 部 -- 擴充健全狀況模型) (SQL Server AlwaysOn 團隊部落格)。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
@@ -104,9 +104,9 @@ ms.locfileid: "62815749"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
--   [AlwaysOn 健全狀況模型第 1 部 -- 健全狀況模型架構](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn 健全狀況模型第 1 部 -- 健全狀況模型架構](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
--   [AlwaysOn 健全狀況模型第 2 部 -- 擴充健全狀況模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn 健全狀況模型第 2 部 -- 擴充健全狀況模型](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
 -   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

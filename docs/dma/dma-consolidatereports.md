@@ -11,21 +11,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 456d71e2abccdddb4b14c06dc2ad9b2e4ce9a032
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056654"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886165"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 評估企業及整合評估報告
 
 下列逐步指示可協助您使用 Data Migration Assistant 來執行成功調整規模的評估，以升級內部部署 SQL Server 或 Azure Vm 上執行的 SQL Server，或遷移至 Azure SQL Database。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - 指定您網路上將從中起始 DMA 的工具電腦。 確定這部電腦可連線到您的 SQL Server 目標。
 - 下載與安裝：
@@ -113,7 +113,7 @@ ms.locfileid: "74056654"
 
 下表說明與 dmaDataCollector 函數相關聯的參數。
 
-|參數  |描述 |
+|參數  |說明 |
 |---------|---------|
 |**getServerListFrom** | 您的清查。 可能的值為**SqlServer**和**CSV**。<br/>如需詳細資訊，請參閱[建立 SQL server 的清查](#create-inventory)。 |
 |**csvPath** | CSV 清查檔案的路徑。  只有在**getServerListFrom**設定為**CSV**時才會使用。 |
@@ -136,7 +136,7 @@ ms.locfileid: "74056654"
 
 下表說明與 dmaProcessor 函數相關聯的參數。
 
-|參數  |描述 |
+|參數  |說明 |
 |---------|---------|
 |**processTo** | 將處理 JSON 檔案的位置。 可能的值為**SQLServer**和**AzureSQLDatabase**。 |
 |**serverName** | 將處理資料的 SQL Server 實例。  如果您針對**processTo**參數指定**AzureSQLDatabase** ，則只會包含 SQL Server 名稱（不包括 database.windows.net）。 當您以 Azure SQL Database 為目標時，系統會提示您輸入兩次登入;第一個是您的 Azure 租使用者認證，而第二個則是 Azure SQL Server 的系統管理員登入。 |

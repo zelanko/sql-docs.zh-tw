@@ -13,19 +13,19 @@ ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0beb45070e9f6c0294dc18d966f3100263f7d852
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ac1acb47c6345bb2b746b2e3a3e1817b63a3e75
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176027"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886375"
 ---
 # <a name="master-data-services-overview"></a>Master Data Services 概觀
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，此模型是您主要資料結構中的最上層容器。 您可以建立模型來管理各種類似資料分類，例如管理線上產品資料組。 模型包含一或多個實體，而實體又包含成員，亦即資料記錄。
 
 |||
 |-|-|
-|![Azure 虛擬機器](../../2014/master-data-services/media/azure-virtual-machine.png "Azure 虛擬機器")|您要試用 SQL Server 2016 嗎？ 註冊 Microsoft Azure，然後前往 **[這裡](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 啟動安裝有 SQL Server 2016 的虛擬機器。 當您完成時，可以刪除虛擬機器。|
+|![Azure 虛擬機器](../../2014/master-data-services/media/azure-virtual-machine.png "Azure 虛擬機器")|您要試用 SQL Server 2016 嗎？ 註冊 Microsoft Azure，然後前往 **[這裡](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** 啟動安裝有 SQL Server 2016 的虛擬機器。 當您完成時，可以刪除虛擬機器。|
 
  例如，您的線上產品模型可能包含產品、色彩及樣式等實體。 色彩實體可能包含紅色、銀色及黑色等色彩成員。
 

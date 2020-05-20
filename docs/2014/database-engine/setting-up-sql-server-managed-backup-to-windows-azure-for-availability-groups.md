@@ -1,5 +1,6 @@
 ---
 title: 針對可用性群組設定 SQL Server 受控備份至 Azure |Microsoft Docs
+description: 本教學課程說明如何針對參與 Always On 可用性群組的資料庫，設定 SQL Server Managed 備份至 Microsoft Azure。
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75ab1892641fa3bf805d52c649a8526e256d14b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228198"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849526"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>針對可用性群組設定 SQL Server Managed Backup 到 Azure
   本主題是設定參與 AlwaysOn 可用性群組之資料庫的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]之教學課程。  
@@ -30,13 +31,13 @@ ms.locfileid: "75228198"
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>設定可用性資料庫的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。  
  **無權**  
   
--   需要**db_backupoperator**資料庫角色中的成員資格、具有**ALTER ANY CREDENTIAL**許可權`EXECUTE` ，以及**sp_delete_backuphistory**預存程式的許可權。  
+-   需要**db_backupoperator**資料庫角色中的成員資格、具有**ALTER ANY CREDENTIAL**許可權，以及 `EXECUTE` **sp_delete_backuphistory**預存程式的許可權。  
   
 -   需要**smart_admin. fn_get_current_xevent_settings**函數的**SELECT**許可權。  
   
--   需要`EXECUTE` smart_admin 的許可權 **。 sp_get_backup_diagnostics**預存程式。 除此之外，因為它會從內部呼叫其他需要此權限的系統物件，所以還需要 `VIEW SERVER STATE` 權限。  
+-   需要 `EXECUTE` smart_admin 的許可權 **。 sp_get_backup_diagnostics**預存程式。 除此之外，因為它會從內部呼叫其他需要此權限的系統物件，所以還需要 `VIEW SERVER STATE` 權限。  
   
--   需要`EXECUTE`和`smart_admin.sp_backup_master_switch`預存`smart_admin.sp_set_instance_backup`程式的許可權。  
+-   需要 `EXECUTE` `smart_admin.sp_set_instance_backup` 和 `smart_admin.sp_backup_master_switch` 預存程式的許可權。  
   
  以下是使用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]設定 AlwaysOn 可用性群組的基本步驟。 本主題稍後將說明詳細的逐步教學課程。  
   
@@ -46,9 +47,9 @@ ms.locfileid: "75228198"
   
 3.  指定備份複本。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會使用慣用的備份複本設定來決定用於排程備份的資料庫。  若要判斷目前的複本是否為慣用的備份複本，請使用[fn_hadr_backup_is_preferred_replica &#40;transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)函數。  
   
-4.  在每個複本[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]上，使用**智慧型-admin. sp_set_db_backup**預存程式來執行資料庫的設定。  
+4.  在每個複本上 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ，使用**智慧型-admin. sp_set_db_backup**預存程式來執行資料庫的設定。  
   
-     **容錯移轉後的行為：將會繼續運作，並在容錯移轉事件之後維護備份副本和復原能力。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 在容錯移轉之後，不需要採取特定的動作。  
+     ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 容錯移轉後的行為：** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 將會繼續運作，並在容錯移轉事件之後維護備份副本和復原能力。 在容錯移轉之後，不需要採取特定的動作。  
   
 #### <a name="considerations-and-requirements"></a>考量和需求：  
  針對參與 AlwaysOn 可用性群組的資料庫設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]需要進行特定考量並符合特定需求。 以下是考量與需求清單：  
@@ -78,7 +79,7 @@ ms.locfileid: "75228198"
   
 5.  **建立要在備份期間用於加密的憑證或非對稱金鑰：** 在第一個節點節點1上建立憑證，然後使用備份憑證將它匯出至檔案[&#40;transact-sql&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)。 在 Node2 上，使用從 Node1 匯出的檔案建立憑證。 如需從檔案建立憑證的詳細資訊，請參閱[CREATE certificate &#40;transact-sql&#41;](/sql/t-sql/statements/create-certificate-transact-sql)中的範例。  
   
-6.  **針對節點 1 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]上的 AGTestDB 啟用和設定：** 啟動 SQL Server Management Studio，然後連接到已安裝可用性資料庫之節點上的實例。 在您根據需求修改資料庫名稱、儲存體 URL、SQL 認證和保留週期的值之後，從查詢視窗執行下列陳述式：  
+6.  **啟用和設定 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 節點1上的 AGTestDB：** Start SQL Server Management Studio 並連接至已安裝可用性資料庫之節點上的實例。 在您根據需求修改資料庫名稱、儲存體 URL、SQL 認證和保留週期的值之後，從查詢視窗執行下列陳述式：  
   
     ```  
     Use msdb;  
@@ -97,7 +98,7 @@ ms.locfileid: "75228198"
   
      如需建立憑證以進行加密的詳細資訊，請參閱[建立加密備份](../relational-databases/backup-restore/create-an-encrypted-backup.md)中的**建立備份憑證**步驟。  
   
-7.  **在節點 2 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]上啟用和設定 AGTestDB：** 啟動 SQL Server Management Studio，並連接到已安裝可用性資料庫之節點2上的實例。 在您根據需求修改資料庫名稱、儲存體 URL、SQL 認證和保留週期的值之後，從查詢視窗執行下列陳述式：  
+7.  ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 在節點2上啟用和設定 AGTestDB：** Start SQL Server Management Studio 並連接至已安裝可用性資料庫之節點2上的實例。 在您根據需求修改資料庫名稱、儲存體 URL、SQL 認證和保留週期的值之後，從查詢視窗執行下列陳述式：  
   
     ```  
     Use msdb;  
@@ -116,7 +117,7 @@ ms.locfileid: "75228198"
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 已在您指定的資料庫上啟用。 資料庫上的備份作業可能需要 15 分鐘才會開始執行。 此備份會在慣用的備份複本上進行。  
   
-8.  **審查擴充事件的預設設定：** 在用來排程備份的複本[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]上執行下列 transact-sql 語句，以檢查擴充事件設定。 這通常是資料庫所屬之可用性群組的慣用備份複本設定。  
+8.  **審查擴充事件的預設設定：** 在用來排程備份的複本上執行下列 transact-sql 語句，以檢查擴充事件設定 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 。 這通常是資料庫所屬之可用性群組的慣用備份複本設定。  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
@@ -130,7 +131,7 @@ ms.locfileid: "75228198"
   
     2.  設定 SQL Server Agent 通知使用 Database Mail。 如需詳細資訊，請參閱 [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
   
-    3.  **啟用電子郵件通知，以接收備份錯誤及警告：** 在查詢視窗中，執行下列 Transact-SQL 陳述式：  
+    3.  **啟用電子郵件通知接收備份錯誤和警告：** 從 [查詢] 視窗中，執行下列 Transact-SQL 陳述式：  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -143,7 +144,7 @@ ms.locfileid: "75228198"
   
 10. **查看 Azure 儲存體帳戶中的備份檔案：** 從 SQL Server Management Studio 或 Azure 管理入口網站連接到儲存體帳戶。 您會看到裝載設定為使用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的資料庫之 SQL Server 執行個體的容器。 您也會在啟用資料庫之 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的 15 分鐘內，看到資料庫和記錄備份。  
   
-11. **監視健全狀態：**  您可以透過先前設定的電子郵件通知進行監視，或主動監視記錄的事件。 以下是用於檢視事件的一些 Transact-SQL 陳述式範例：  
+11. **監視健康狀態：** 您可以透過先前設定的電子郵件通知進行監視，或主動監視記錄的事件。 以下是用於檢視事件的一些 Transact-SQL 陳述式範例：  
   
     ```  
     --  view all admin events  

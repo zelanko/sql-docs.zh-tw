@@ -10,12 +10,12 @@ ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8db507966f9b3323e415ca7f2abfe4a12601c1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae7f6128f14db0e1ccc423b5433744de7d3dc5d4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798024"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922055"
 ---
 # <a name="create-the-ssis-catalog"></a>建立 SSIS 目錄
   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中設計和測試封裝之後，可以將包含封裝的專案，部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 在您將專案部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器之前，該伺服器必須包含 `SSISDB` 目錄。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的安裝程式不會自動建立目錄，您必須依照下列指示手動建立目錄。  
@@ -67,7 +67,7 @@ ms.locfileid: "72798024"
     $catalog.Create()
     ```  
   
-     如需如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間的其他範例，請參閱 blogs.msdn.com 上的部落格文章：[SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。 如需此命名空間的概觀和程式碼範例，請參閱 blogs.msdn.com 上的部落格文章： [SSIS 目錄管理物件模型初探](https://go.microsoft.com/fwlink/?LinkId=254267)。  
+     如需如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間的其他範例，請參閱 blogs.msdn.com 上的部落格文章：[SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。 如需此命名空間的概觀和程式碼範例，請參閱 blogs.msdn.com 上的部落格文章： [SSIS 目錄管理物件模型初探](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SSIS 目錄](catalog/ssis-catalog.md)   

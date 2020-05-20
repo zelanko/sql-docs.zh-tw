@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppeerresponses
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a3ce46249670f9c290a07418b78c7c3296d7855b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f9303801527b3154585034e1097623ce073fb91f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137617"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834388"
 ---
 # <a name="sp_helppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

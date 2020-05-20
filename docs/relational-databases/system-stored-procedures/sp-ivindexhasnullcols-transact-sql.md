@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_ivindexhasnullcols
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 27ebcdf656effb97529bea42972be96f9a993cfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6f83837e6676cfd99f2403b4bfecd301915d263a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139907"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834377"
 ---
 # <a name="sp_ivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_link_publication
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0948b01e404b5eca475b344390ff105d4e094cce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139902"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834376"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68139902"
 >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
 > 
 > [!IMPORTANT]
->  在某些情況下，如果訂閱者執行的是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 或更新版本，且發行者執行的是舊版，此預存程式可能會失敗。 如果在此情況下預存程序失敗，請將「發行者」升級為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 或更新版本。  
+>  在某些情況下，如果訂閱者執行的是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 或更新版本，且發行者執行的是舊版，此預存程式可能會失敗。 如果在此情況下預存程序失敗，請將「發行者」升級為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 或更新版本。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |值|描述|  
 |-----------|-----------------|  
-|**0**|會[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用驗證，並以此預存程式中指定的登入作為*登*入和*密碼*。<br /><br /> 注意：在舊版中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個選項是用來指定動態遠端程序呼叫（RPC）。|  
+|**0**|會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，並以此預存程式中指定的登入作為*登*入和*密碼*。<br /><br /> 注意：在舊版中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這個選項是用來指定動態遠端程序呼叫（RPC）。|  
 |**1**|使用在訂閱者端進行變更之使用者的安全性內容 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證或 Windows 驗證)。<br /><br /> 注意：此帳戶也必須存在於具有足夠許可權的發行者端。 當使用 Windows 驗證時，必須支援安全性帳戶的委派。|  
 |**2**|使用以**sp_link_publication**建立的現有使用者定義連結伺服器登入。|  
   
@@ -79,7 +79,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
  針對發送訂閱，可以藉由[sp_subscription_cleanup &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)來清除專案。 對於提取訂閱，可以藉由[sp_droppullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)或[sp_subscription_cleanup &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)來清除專案。 您也可以使用 Null 密碼來呼叫**sp_link_publication** ，以清除[MSsubscription_properties &#40;transact-sql&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)系統資料表中的專案，以取得安全性考慮。  
   
- 立即更新訂閱者連接到發行者時所用的預設模式，不允許連接使用 Windows 驗證。 若要利用 Windows 驗證模式來連接，則必須設定發行者的連結伺服器，當更新訂閱者時，立即更新訂閱者應該使用這個連接。 這需要使用*security_mode* = **2**來執行**sp_link_publication** 。 當使用 Windows 驗證時，必須支援安全性帳戶的委派。  
+ 立即更新訂閱者連接到發行者時所用的預設模式，不允許連接使用 Windows 驗證。 若要利用 Windows 驗證模式來連接，則必須設定發行者的連結伺服器，當更新訂閱者時，立即更新訂閱者應該使用這個連接。 這需要使用**sp_link_publication** *security_mode*  =  **2**來執行 sp_link_publication。 當使用 Windows 驗證時，必須支援安全性帳戶的委派。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent_failover](../../relational-databases/replication/codesnippet/tsql/sp-link-publication-tran_1.sql)]  

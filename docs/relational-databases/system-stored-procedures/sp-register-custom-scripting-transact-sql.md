@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d57f3098a69e499392af502d2d3a6d94840bde21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075752"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834338"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  複寫可讓使用者自訂的自訂預存程序，取代異動複寫所用的一個或多個預設程序。 當複寫資料表變更結構描述時，就會重新建立這些預存程序。 **sp_register_custom_scripting**註冊一個預存程式[!INCLUDE[tsql](../../includes/tsql-md.md)]或腳本檔案，該檔案會在發生架構變更時執行，以編寫新使用者定義自訂預存程式的定義腳本。 這個新的使用者自訂之自訂預存程序，應該要反映該資料表的新結構描述。 **sp_register_custom_scripting**是在發行集資料庫的發行者端執行，而註冊的腳本檔案或預存程式則是在發生架構變更時于訂閱者端執行。  
+  複寫可讓使用者自訂的自訂預存程序，取代異動複寫所用的一個或多個預設程序。 當複寫資料表變更結構描述時，就會重新建立這些預存程序。 **sp_register_custom_scripting**註冊一個預存 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式或腳本檔案，該檔案會在發生架構變更時執行，以編寫新使用者定義自訂預存程式的定義腳本。 這個新的使用者自訂之自訂預存程序，應該要反映該資料表的新結構描述。 **sp_register_custom_scripting**是在發行集資料庫的發行者端執行，而註冊的腳本檔案或預存程式則是在發生架構變更時于訂閱者端執行。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,19 +42,19 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>引數  
 `[ @type = ] 'type'`這是要註冊之自訂預存程式或腳本的類型。 *類型*為**Varchar （16）**，沒有預設值，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**插入**|註冊的自訂預存程序是在複寫 INSERT 陳述式時執行。|  
-|**更新**|註冊的自訂預存程序是在複寫 UPDATE 陳述式時執行。|  
+|**update**|註冊的自訂預存程序是在複寫 UPDATE 陳述式時執行。|  
 |**delete**|註冊的自訂預存程序是在複寫 DELETE 陳述式時執行。|  
 |**custom_script**|指令碼是在資料定義語言 (DDL) 觸發程序結尾執行。|  
   
-`[ @value = ] 'value'`預存程式的名稱，或是要註冊之[!INCLUDE[tsql](../../includes/tsql-md.md)]腳本檔案的名稱和完整路徑。 *value*是**Nvarchar （1024）**，沒有預設值。  
+`[ @value = ] 'value'`預存程式的名稱，或是要註冊之腳本檔案的名稱和完整路徑 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *value*是**Nvarchar （1024）**，沒有預設值。  
   
 > [!NOTE]  
 >  為*value*參數指定 Null 將會取消註冊先前註冊的腳本，這與執行[sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)相同。  
   
- 當*類型*的值是**custom_script**時，就應該要有[!INCLUDE[tsql](../../includes/tsql-md.md)]腳本檔案的名稱和完整路徑。 否則， *value*必須是已註冊之預存程式的名稱。  
+ 當*類型*的值是**custom_script**時，就應該要有腳本檔案的名稱和完整路徑 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 否則， *value*必須是已註冊之預存程式的名稱。  
   
 `[ @publication = ] 'publication'`要註冊其自訂預存程式或腳本的發行集名稱。 *發行*集是**sysname**，預設值是**Null**。  
   

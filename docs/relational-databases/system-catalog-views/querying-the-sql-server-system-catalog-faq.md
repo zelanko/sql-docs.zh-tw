@@ -16,14 +16,14 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c16bc1e0c8d8d6b5a62e2823aa011b58520b1d00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 30b325dcd012defe3755f769c74ec2fc5d57522e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018361"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834495"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>查詢 SQL Server 系統目錄 FAQ
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "68018361"
   
 -   [如何找到授與或拒絕指定主體的權限？](#_FAQ18)  
   
-## <a name="answers"></a>答案  
+## <a name="answers"></a>回答  
   
 ###  <a name="how-do-i-find-all-the-tables-that-do-not-have-a-clustered-index-in-a-specified-database"></a><a name="_FAQ1"></a>如何? 在指定的資料庫中找不到叢集索引的所有資料表嗎？  
  在您執行下列查詢之前，請使用有效的資料庫名稱取代 `<database_name>`。  
@@ -616,7 +616,7 @@ GO
  [頂端](#_TOP)  
   
 ###  <a name="how-do-i-determine-if-a-column-is-used-in-a-computed-column-expression"></a><a name="_FAQ20"></a>如何? 判斷是否在計算資料行運算式中使用資料行？  
- 在您執行下列查詢之前，請`<database_name>`使用`<schema_name.table_name>`有效的`<column_name`名稱取代、和>。  
+ 在您執行下列查詢之前，請 `<database_name>` `<schema_name.table_name>` `<column_name` 使用有效的名稱取代、和>。  
   
 ```  
 USE <database_name>;  
@@ -660,7 +660,7 @@ GO
  [頂端](#_TOP)  
   
 ###  <a name="how-do-i-find-the-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ22"></a>如何? 尋找相依于指定 CLR 使用者定義型別或別名型別的資料行？  
- 在您執行下列查詢之前，請`<database_name>`使用有效的名稱取代`<schema_name.data_type_name>` ，並使用有效的架構限定 CLR 使用者定義型別或架構限定的別名型別名稱。 下列查詢需要**db_owner**角色的成員資格或許可權，才能查看資料庫中的所有相依資料行和計算資料行中繼資料。  
+ 在您執行下列查詢之前，請 `<database_name>` 使用有效的名稱取代，並 `<schema_name.data_type_name>` 使用有效的架構限定 CLR 使用者定義型別或架構限定的別名型別名稱。 下列查詢需要**db_owner**角色的成員資格或許可權，才能查看資料庫中的所有相依資料行和計算資料行中繼資料。  
   
 ```  
 USE <database_name>;  
@@ -757,7 +757,7 @@ GO
  [頂端](#_TOP)  
   
 ###  <a name="how-do-i-find-the-check-constraints-that-depend-on-a-specified-clr-user-defined-type"></a><a name="_FAQ25"></a>如何? 尋找相依于指定 CLR 使用者定義型別的檢查條件約束？  
- 在您執行下列查詢之前，請`<database_name>`使用有效的名稱取代`<schema_name.data_type_name>` ，並使用有效的架構限定 CLR 使用者定義型別名稱。  
+ 在您執行下列查詢之前，請 `<database_name>` 使用有效的名稱取代，並 `<schema_name.data_type_name>` 使用有效的架構限定 CLR 使用者定義型別名稱。  
   
 ```  
 USE <database_name>;  
@@ -870,7 +870,7 @@ GO
   
 ```  
   
- Or  
+ 或  
   
 ```  
 USE <database_name>;  

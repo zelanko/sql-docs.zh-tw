@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80ffd207d44f8c53bed0fe7fb5f7efb4ed54ebc8
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727785"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886225"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 的新功能
 
@@ -29,9 +29,9 @@ ms.locfileid: "73727785"
   
  **下載**  
   
--   若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**。  
+-   若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 。  
   
--   有 Azure 帳戶嗎？  然後前往**[這裡](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 來加速[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]已安裝的虛擬機器。  
+-   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** ，來加速已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虛擬機器。  
   
 ##  <a name="improved-performance"></a>改良的效能  
   

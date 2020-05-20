@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: ad6bf673fb9bfe435d517dfd9e2dcf71774191a1
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632857"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885795"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant 總覽
 
@@ -44,7 +44,7 @@ Data Migration Assistant （DMA）會偵測可能影響新版本 SQL Server 或 
 
   - 重大變更
   - 行為變更
-  - 即將淘汰的功能
+  - 已淘汰的功能
 
 - 探索目標 SQL Server 平臺中，資料庫在升級後可受益的新功能。 這些會描述為功能建議，並以下列類別進行組織：
 
@@ -67,7 +67,7 @@ Data Migration Assistant （DMA）會偵測可能影響新版本 SQL Server 或 
 
   - 資訊問題：偵測在來源套件中使用的部分支援或已淘汰的功能。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 若要執行評量，您必須是 SQL Server**系統管理員（sysadmin** ）角色的成員。
 

@@ -10,12 +10,12 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ecbaa54a723fae6a3c5fd11363bf42f1f2a57da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 077460ed71e42cdbecb6ac67b3e6bb1a3b49860c
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766823"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922062"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>以程式設計方式執行及管理封裝
   如果您需要在開發環境以外的地方管理和執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，可以使用程式設計方式操作封裝。 在這種方法中，您有許多的選擇：  
@@ -35,7 +35,7 @@ ms.locfileid: "62766823"
 ## <a name="running-packages-on-the-integration-services-server"></a>在 Integration Services 伺服器上執行封裝  
  當您將封裝部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器時，可以使用 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間，以程式設計方式執行封裝。 Microsoft.SqlServer.Management.IntegrationServices 組件是使用 .NET Framework 3.5 編譯的。 如果您要建置 .NET Framework 4.0 應用程式，可能需要將組件參考直接加入至專案檔案。  
   
- 您也可以使用此命名空間，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上部署和管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。 如需命名空間的概觀和程式碼片段，請參閱 blogs.msdn.com 上的部落格文章：[SSIS 目錄管理物件模型初探](https://go.microsoft.com/fwlink/?LinkId=253122)。  
+ 您也可以使用此命名空間，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上部署和管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。 如需命名空間的概觀和程式碼片段，請參閱 blogs.msdn.com 上的部落格文章：[SSIS 目錄管理物件模型初探](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [了解本機和遠端執行之間的差異](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  

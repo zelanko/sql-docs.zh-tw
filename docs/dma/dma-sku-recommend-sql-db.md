@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72586741"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885826"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>識別您內部部署資料庫的正確 Azure SQL Database/受控執行個體 SKU
 
@@ -38,10 +38,10 @@ ms.locfileid: "72586741"
 
 下列指示可協助您判斷 Azure SQL Database SKU 建議，並使用 DMA 在 Azure 中布建對應的單一資料庫或受控實例。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - 下載並安裝最新版本的[DMA](https://aka.ms/get-dma)。 如果您已有舊版工具，請將它開啟，系統會提示您升級 DMA。
-- 請確定您的電腦具有[PowerShell 5.1 版](https://www.microsoft.com/download/details.aspx?id=54616)或更新版本，這是執行所有腳本的必要參數。 如需有關 findoug 電腦上所安裝之 PowerShell 版本的詳細資訊，請參閱[下載並安裝 Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)一文。
+- 請確定您的電腦具有[PowerShell 5.1 版](https://www.microsoft.com/download/details.aspx?id=54616)或更新版本，這是執行所有腳本的必要參數。 如需如何找出電腦上所安裝之 PowerShell 版本的相關資訊，請參閱[下載並安裝 Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)一文。
 - 請確定您的電腦已安裝 Azure Powershell 模組。 如需詳細資訊，請參閱[安裝 Azure PowerShell 模組](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0)一文。
 - 確認要收集效能計數器所需的 PowerShell 檔案**SkuRecommendationDataCollectionScript**已安裝在 DMA 資料夾中。
 - 確定您要執行此程式的電腦具有裝載資料庫之電腦的系統管理員許可權。

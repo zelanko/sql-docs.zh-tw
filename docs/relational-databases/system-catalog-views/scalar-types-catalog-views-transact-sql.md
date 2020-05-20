@@ -13,14 +13,14 @@ helpviewer_keywords:
 - scalar types catalog views
 - catalog views [SQL Server], scalar types
 ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b73a3de04b90a91cb66d060c6559088a7d0e8855
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 22a14a4719bc802117fd0a9007d13d573aa30352
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018350"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834453"
 ---
 # <a name="scalar-types-catalog-views-transact-sql"></a>純量類型目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

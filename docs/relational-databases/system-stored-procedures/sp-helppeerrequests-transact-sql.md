@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppeerrequests
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5b9e2a370c9acc9c22dac7e5e60ceb10e08e46ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8aa3fc831b81827d230274b95bf3cbfbe0d5a560
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137616"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834422"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'`這是傳送狀態要求的點對點拓撲中的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @description = ] 'description'`可以用來識別個別狀態要求的值，這可讓您根據在呼叫[sp_requestpeerresponse &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)時所提供的使用者定義資訊，篩選傳回的回應。 *描述*是**Nvarchar （4000）**，預設值是**%**。 依預設，它會傳回所有的發行集狀態要求。 這個參數是用來傳回狀態要求，其描述項合*描述*中提供的值，其中的字元字串會使用[LIKE &#40;transact-sql&#41;](../../t-sql/language-elements/like-transact-sql.md)子句進行比對。  
+`[ @description = ] 'description'`可以用來識別個別狀態要求的值，這可讓您根據在呼叫[sp_requestpeerresponse &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)時所提供的使用者定義資訊，篩選傳回的回應。 *描述*是**Nvarchar （4000）**，預設值是 **%** 。 依預設，它會傳回所有的發行集狀態要求。 這個參數是用來傳回狀態要求，其描述項合*描述*中提供的值，其中的字元字串會使用[LIKE &#40;transact-sql&#41;](../../t-sql/language-elements/like-transact-sql.md)子句進行比對。  
   
 ## <a name="result-sets"></a>結果集  
   

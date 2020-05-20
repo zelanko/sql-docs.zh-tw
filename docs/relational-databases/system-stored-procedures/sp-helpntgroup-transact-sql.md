@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpntgroup
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fcc4a42307ccb11923460bb9c01c5cf7bdd8f8df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 76da15896b5947d0fb66c717fcaeadcab045326e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133681"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834427"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |**HasDbAccess**|**int**|1 = Windows 群組具有資料庫的存取權限。|  
   
 ## <a name="remarks"></a>備註  
- 若要查看目前資料庫中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的角色清單，請使用**sp_helprole**。  
+ 若要查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前資料庫中的角色清單，請使用**sp_helprole**。  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  

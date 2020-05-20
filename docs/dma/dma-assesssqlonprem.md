@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 59dc8c96ebda5ac66fb6701d480cb6d633e83158
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f45a598c9e96d33f1edcc41c748a6751df712391
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80809746"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886105"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>使用 Data Migration Assistant 來執行 SQL Server 移轉評估
 

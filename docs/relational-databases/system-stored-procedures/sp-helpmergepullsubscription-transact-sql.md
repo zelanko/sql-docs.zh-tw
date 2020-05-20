@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af38463c5104da636d04f961b0cee5210369e38d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137706"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834494"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>引數  
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是**%**。 如果*發行*集**%** 為，則會傳回目前資料庫中所有合併式發行集和訂閱的相關資訊。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是 **%** 。 如果*發行*集為 **%** ，則會傳回目前資料庫中所有合併式發行集和訂閱的相關資訊。  
   
-`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是**%**。  
+`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是 **%** 。  
   
-`[ @publisher_db = ] 'publisher_db'`這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是**%**。  
+`[ @publisher_db = ] 'publisher_db'`這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是 **%** 。  
   
 `[ @subscription_type = ] 'subscription_type'`這是指是否要顯示提取訂閱。 *subscription_type*是**Nvarchar （10）**，預設值是 **' pull '**。 有效的值為 **' push '**、 **' pull '** 或 **' both '**。  
   
@@ -54,7 +54,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**nvarchar(1000)**|訂閱的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
-|**發行者**|**sysname**|發行者的名稱。|  
+|**publisher**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
 |**預訂**|**sysname**|訂閱者的名稱。|  
 |**subscription_db**|**sysname**|訂閱資料庫的名稱。|  
@@ -69,11 +69,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**last_updated**|**Nvarchar （26）**|合併代理程式上次成功進行訂閱同步處理的時間。|  
 |**publisher_login**|**sysname**|發行者的登入名稱。|  
 |**publisher_password**|**sysname**|發行者密碼。|  
-|**publisher_security_mode**|**int**|指定發行者的安全性模式。<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
+|**publisher_security_mode**|**int**|指定發行者的安全性模式。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證<br /><br /> **1** = Windows 驗證|  
 |**伺服器**|**sysname**|散發者的名稱。|  
 |**distributor_login**|**sysname**|散發者的登入名稱。|  
 |**distributor_password**|**sysname**|散發者密碼。|  
-|**distributor_security_mode**|**int**|指定散發者的安全性模式。<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
+|**distributor_security_mode**|**int**|指定散發者的安全性模式。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證<br /><br /> **1** = Windows 驗證|  
 |**ftp_address**|**sysname**|使用這個項目的目的，只是為了與舊版相容。 這是散發者的檔案傳輸通訊協定 (FTP) 服務的網路位址。|  
 |**ftp_port**|**int**|使用這個項目的目的，只是為了與舊版相容。 這是散發者的 FTP 服務通訊埠編號。|  
 |**ftp_login**|**sysname**|使用這個項目的目的，只是為了與舊版相容。 這是用於連接到 FTP 服務的使用者名稱。|  
@@ -92,11 +92,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_url**|**nvarchar(260)**|代表 Web 同步處理之複寫接聽程式位置的 URL。|  
 |**internet_login**|**nvarchar(128)**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入。|  
 |**internet_password**|**Nvarchar （524）**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入密碼。|  
-|**internet_security_mode**|**int**|當連接到主控 Web 同步處理的 Web 伺服器時，使用驗證模式。 值為**1**表示 Windows 驗證，值為**0**表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
+|**internet_security_mode**|**int**|當連接到主控 Web 同步處理的 Web 伺服器時，使用驗證模式。 值為**1**表示 Windows 驗證，值為**0**表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  
 |**internet_timeout**|**int**|Web 同步處理要求到期之前的時間長度 (以秒為單位)。|  
 |**hostname**|**nvarchar(128)**|指定在參數化資料列篩選的 WHERE 子句中使用這個函數時， [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)的多載值。|  
-|**job_login**|**nvarchar(512)**|這是用來執行合併代理程式的 Windows 帳戶，傳回的格式為*domain*\\*username*。|  
-|**job_password**|**sysname**|基於安全性理由，一律會傳回**\*\*\*\*\*\*\*\*"\***" 的值。|  
+|**job_login**|**nvarchar(512)**|這是用來執行合併代理程式的 Windows 帳戶，傳回的格式為*domain* \\ *username*。|  
+|**job_password**|**sysname**|基於安全性理由， **\*\*\*\*\*\*\*\*\*\*** 一律會傳回 "" 的值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

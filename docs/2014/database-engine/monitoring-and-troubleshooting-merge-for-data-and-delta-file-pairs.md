@@ -10,12 +10,12 @@ ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a13345da45d7e6c31a53bc51371306da444a96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3498032da616658785d2ff33262ed57fa5736f1
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228175"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921827"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>對資料檔案和差異檔案組的合併進行監視和疑難排解
   記憶體中 OLTP 會使用合併原則自動合併相鄰資料及差異檔案組。 您無法停用合併活動。  
@@ -47,7 +47,7 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
   
  假設有三個資料和差異檔案組，每一組各有 15,836 個資料列及 5,279 個已刪除的資料列。 合併之後，新資料檔案的資料列數變為 31,872，已刪除的資料列變為 0。 新資料檔案的大小可能遠大於最初所配置的 128MB。 這是因為手動合併會覆寫合併原則，並強制合併所要求的檔案。  
   
- [具有記憶體優化資料表之資料庫中檢查點](https://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx)檔案的 Blog 狀態轉換說明從開始到垃圾收集的資料和差異檔案組的狀態轉換。  
+ [具有記憶體優化資料表之資料庫中檢查點](https://cloudblogs.microsoft.com/sqlserver/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables/)檔案的 Blog 狀態轉換說明從開始到垃圾收集的資料和差異檔案組的狀態轉換。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立及管理記憶體最佳化物件的儲存體](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

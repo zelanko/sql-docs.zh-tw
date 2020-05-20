@@ -21,12 +21,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 908a90bee1ac484358a10fc8d17812a15c4b177a
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782111"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886393"
 ---
 # <a name="logging-in-to-sql-server"></a>登入 SQL Server
   您可以使用任何圖形化管理工具，或是從命令提示字元登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
@@ -49,7 +49,7 @@ ms.locfileid: "62782111"
 |使用預設通訊協定連接至具名執行個體 (這是具名執行個體的建議項目)。|APPHOST\SQLEXPRESS|  
 |使用句號連接至同一部電腦上的預設執行個體，指出執行個體是在本機電腦上執行。|.|  
 |使用句號連接至同一部電腦上的具名執行個體，指出執行個體是在本機電腦上執行。|.\SQLEXPRESS|  
-|使用 localhost 連接至同一部電腦上的預設執行個體，指出執行個體是在本機電腦上執行。|localhost|  
+|使用 localhost 連接至同一部電腦上的預設執行個體，指出執行個體是在本機電腦上執行。|本機主機|  
 |使用 localhost 連接至同一部電腦上的具名執行個體，指出執行個體是在本機電腦上執行。|localhost\SQLEXPRESS|  
 |使用 (local) 連接至同一部電腦上的預設執行個體，指出執行個體是在本機電腦上執行。|(local)|  
 |使用 (local) 連接至同一部電腦上的具名執行個體，指出執行個體是在本機電腦上執行。|(local)\SQLEXPRESS|  
@@ -84,7 +84,7 @@ WHERE session_id = @@SPID;
   
 -   [如何疑難排解與 SQL Server Database Engine 的連接](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
--   [疑難排解 SQL 連接性問題的步驟](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [疑難排解 SQL 連接性問題的步驟](https://docs.microsoft.com/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
   
 ## <a name="related-content"></a>相關內容  
  [選擇驗證模式](../../relational-databases/security/choose-an-authentication-mode.md)  

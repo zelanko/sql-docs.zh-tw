@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublication
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8dc952f03ea2538412c864e1a9e9b228bf3ca877
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8651f7ff86a8e8fdeed07358d0b97be8b01be145
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771215"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834297"
 ---
 # <a name="sp_replmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`如果發行集的類型，則為。 *publication_type*是**int**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**0**|交易式發行集。|  
 |**1**|快照式發行集。|  
@@ -84,7 +84,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**best_runspeedPerf**|**int**|這是合併式發行集的最短同步處理時間。|  
 |**average_runspeedPerf**|**int**|這是合併式發行集的平均同步處理時間。|  
 |**retention_period_unit**|**int**|這是用來表示*保留*的單位。|  
-|**發行者**|**sysname**|發行發行集之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|  
+|**publisher**|**sysname**|發行發行集之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

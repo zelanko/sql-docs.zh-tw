@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication_snapshot
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d8909396e7a7da39ed2ae27c475a154c58bad090
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bf93b6f3045a9eb48c64e50c789e0ce79dec7f4c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771496"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834394"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  將*發行*項加入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者時，不應使用「發行者」。  
+>  將發行項加入發行者時，不應使用「*發行者*」 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -51,12 +51,12 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**id**|**int**|快照集代理程式的識別碼。|  
 |**name**|**Nvarchar （100）**|快照集代理程式的名稱。|  
-|**publisher_security_mode**|**smallint**|這是連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證。|  
+|**publisher_security_mode**|**smallint**|這是連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證<br /><br /> **1** = Windows 驗證。|  
 |**publisher_login**|**sysname**|當連接到發行者時所用的登入。|  
-|**publisher_password**|**Nvarchar （524）**|** \* \* \* \* \* \* \* \* \* **基於安全性理由，一律會傳回的值。|  
+|**publisher_password**|**Nvarchar （524）**|基於安全性理由， **\*\*\*\*\*\*\*\*\*\*** 一律會傳回的值。|  
 |**job_id**|**uniqueidentifier**|代理程式作業的唯一識別碼。|  
-|**job_login**|**nvarchar(512)**|這是用來執行快照集代理程式的 Windows 帳戶，其傳回的格式為*DOMAIN*\\*username*。|  
-|**job_password**|**sysname**|** \* \* \* \* \* \* \* \* \* **基於安全性理由，一律會傳回的值。|  
+|**job_login**|**nvarchar(512)**|這是用來執行快照集代理程式的 Windows 帳戶，其傳回的格式為*DOMAIN* \\ *username*。|  
+|**job_password**|**sysname**|基於安全性理由， **\*\*\*\*\*\*\*\*\*\*** 一律會傳回的值。|  
 |**schedule_name**|**sysname**|這個代理程式作業所用的排程名稱。|  
 |**frequency_type**|**int**|這是排程執行代理程式的頻率，它可以是下列值之一。<br /><br /> **1** = 一次<br /><br /> **2** = 視需要<br /><br /> **4** = 每天<br /><br /> **8** = 每週<br /><br /> **16** = 每月<br /><br /> **32** = 每月相對<br /><br /> **64** = 自動啟動<br /><br /> **128** = 週期性|  
 |**frequency_interval**|**int**|代理程式執行的天數，它可以是下列值之一。<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **3** = 星期二<br /><br /> **4** = 星期三<br /><br /> **5** = 星期四<br /><br /> **6** = 星期五<br /><br /> **7** = 星期六<br /><br /> **8** = 日<br /><br /> **9** = 工作日<br /><br /> **10** = 週末|  

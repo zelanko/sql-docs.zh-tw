@@ -13,12 +13,12 @@ ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1793032a72ae1dd150caa5ddd1739f7f5620bce1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f1da20eb1c23176036dad0847d5b420a498e83e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62790191"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922005"
 ---
 # <a name="monitoring-of-availability-groups-sql-server"></a>監視可用性群組 (SQL Server)
   若要監視 AlwaysOn 可用性群組的屬性和狀態，您可以使用以下工具。  
@@ -36,19 +36,19 @@ ms.locfileid: "62790191"
   
 -   **部落格：**  
   
-     [AlwaysOn 健全狀況模型第 1 部 -- 健全狀況模型架構](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)  
+     [AlwaysOn 健全狀況模型第 1 部 -- 健全狀況模型架構](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)  
   
-     [AlwaysOn 健全狀況模型第 2 部 -- 擴充健全狀況模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+     [AlwaysOn 健全狀況模型第 2 部 -- 擴充健全狀況模型](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
-     [使用 PowerShell 監視 AlwaysOn 健全狀況 - 第 1 部：基本指令程式概觀](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
+     [使用 PowerShell 監視 AlwaysOn 健全狀況 - 第 1 部：基本指令程式概觀](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
-     [使用 PowerShell 監視 AlwaysOn 健全狀況 - 第 2 部：進階指令程式使用](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+     [使用 PowerShell 監視 AlwaysOn 健全狀況 - 第 2 部：進階指令程式使用](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)  
   
-     [使用 PowerShell 監視 AlwaysOn 健全狀況 - 第 3 部：簡單監控應用程式](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+     [使用 PowerShell 監視 AlwaysOn 健全狀況 - 第 3 部：簡單監控應用程式](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)  
   
-     [使用 PowerShell 監視 AlwaysOn 健全狀況 - 第 4 部：與 SQL Server Agent 整合](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
+     [使用 PowerShell 監視 AlwaysOn 健全狀況 - 第 4 部：與 SQL Server Agent 整合](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)  
   
-     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://docs.microsoft.com/archive/blogs/sqlalwayson/)  
   
      [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55b69995dc6fb639acad84c561ce3530af991c6e
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017990"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872734"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>變更資料捕獲-sys. dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,9 +67,9 @@ ms.locfileid: "68017990"
 ```  
 USE AdventureWorks2012;  
 GO  
-SELECT session_id, start_time, end_time, duration, scan_phase  
-    error_count, start_lsn, current_lsn, end_lsn, tran_count  
-    last_commit_lsn, last_commit_time, log_record_count, schema_change_count  
+SELECT session_id, start_time, end_time, duration, scan_phase,  
+    error_count, start_lsn, current_lsn, end_lsn, tran_count,  
+    last_commit_lsn, last_commit_time, log_record_count, schema_change_count,  
     command_count, first_begin_cdc_lsn, last_commit_cdc_lsn,   
     last_commit_cdc_time, latency, empty_scan_count, failed_sessions_count  
 FROM sys.dm_cdc_log_scan_sessions  

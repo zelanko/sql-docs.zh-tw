@@ -18,12 +18,12 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c03333e715483f8da32703636373ef0115c3a1c0
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902436"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921602"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 資料類型
   當資料輸入封裝中的資料流程時，擷取資料的來源會將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 數值資料會指派為數值資料類型、字串資料指派為字元資料類型，而日期則是指派為日期資料類型。 其他資料，例如 GUID 和「二進位大型物件區塊 (BLOB)」也都會被指派適當的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 如果資料的資料類型不能轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，則會發生錯誤。  
@@ -62,7 +62,7 @@ ms.locfileid: "62902436"
 |DT_WSTR|最大長度為 4000 字元，以 Null 終止的 Unicode 字元字串。 如果資料行值包含額外的 Null 結束字元，字串就會在第一個 Null 出現時被截斷。|  
 |DT_IMAGE|大小上限為 2<sup>31</sup>-1 （2147483647）個位元組的二進位值。 。|  
 |DT_NTEXT|最大長度為 2<sup>30</sup> -1 （1073741823）個字元的 Unicode 字元字串。|  
-|DT_TEXT|最[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]大長度為 2<sup>31</sup>-1 （2147483647）個字元的/MBCS 字元字串。|  
+|DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]最大長度為 2<sup>31</sup>-1 （2147483647）個字元的/MBCS 字元字串。|  
   
 ## <a name="conversion-of-data-types"></a>資料類型的轉換  
  如果資料行中的資料不需要來源資料類型配置的全形字元，您可能需要變更該資料行的資料類型。 在傳送資料時，每個資料列愈窄愈有助於最佳化效能，因為每個資料列愈窄，資料從來源移動到目的地的速度就會愈快。  
@@ -253,7 +253,7 @@ ms.locfileid: "62902436"
  如需資料流程中對應資料類型的資訊，請參閱 [使用資料流程中的資料類型](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
   
 ## <a name="related-content"></a>相關內容  
- blogs.msdn.com 上的部落格文章： [SSIS 2008 中各種資料類型轉換技術的效能比較](https://go.microsoft.com/fwlink/?LinkId=220823)。  
+ blogs.msdn.com 上的部落格文章： [SSIS 2008 中各種資料類型轉換技術的效能比較](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程中的資料](data-in-data-flows.md)  

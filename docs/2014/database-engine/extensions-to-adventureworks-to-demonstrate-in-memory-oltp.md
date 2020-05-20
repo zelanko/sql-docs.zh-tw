@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f1b28766eab6ecd5035dd8a58e88abaccc97c5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228471"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921736"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>示範記憶體中 OLTP 的 AdventureWorks 延伸模組
     
@@ -35,7 +35,7 @@ ms.locfileid: "75228471"
   
 -   [安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
   
--   [範例資料表和程式的描述](#Descriptionofthesampletablesandprocedures)-這包括[!INCLUDE[hek_2](../includes/hek-2-md.md)]範例中新增至 AdventureWorks 之資料表和程式的描述，以及將一些原始 AdventureWorks 資料表遷移至記憶體優化的考慮。  
+-   [範例資料表和程式的描述](#Descriptionofthesampletablesandprocedures)-這包括範例中新增至 AdventureWorks 之資料表和程式的描述，以及將 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 一些原始 AdventureWorks 資料表遷移至記憶體優化的考慮。  
   
 -   執行 [使用工作負載示範的效能度量](#PerformanceMeasurementsusingtheDemoWorkload) 之指示 - 包括安裝及執行 ostress (用於驅動工作負載的工具) 的指示，以及執行工作負載示範本身的指示  
   
@@ -45,14 +45,14 @@ ms.locfileid: "75228471"
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-評估版、開發人員或企業版  
   
--   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 您應為此特定範例準備至少 16GB 的記憶體供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用。 如需硬體的[!INCLUDE[hek_2](../includes/hek-2-md.md)]一般指導方針，請參閱下列 blog 文章：[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 您應為此特定範例準備至少 16GB 的記憶體供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用。 如需硬體的一般指導方針 [!INCLUDE[hek_2](../includes/hek-2-md.md)] ，請參閱下列 blog 文章：[https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/](https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/)  
   
-##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>安裝以[!INCLUDE[hek_2](../includes/hek-2-md.md)] AdventureWorks 為基礎的範例  
+##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>安裝以 [!INCLUDE[hek_2](../includes/hek-2-md.md)] AdventureWorks 為基礎的範例  
  請遵循下列步驟來安裝範例：  
   
 1.  下載 AdventureWorks2014 資料庫的完整備份封存：  
   
-    1.  開啟下列內容： [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661)。  
+    1.  開啟下列內容： [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) 。  
   
     2.  提示將檔案儲存至本機資料夾時。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "75228471"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  從[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [SQL Server 2014 RTM 記憶體內部 OLTP 範例](https://go.microsoft.com/fwlink/?LinkID=396372)中，將範例腳本「rtm [!INCLUDE[hek_2](../includes/hek-2-md.md)]範例」下載到本機資料夾。  
+5.  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[hek_2](../includes/hek-2-md.md)] 從[SQL Server 2014 RTM 記憶體內部 OLTP 範例](https://go.microsoft.com/fwlink/?LinkID=396372)中，將範例腳本「rtm 範例」下載到本機資料夾。  
   
-6.  更新腳本 '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample .sql ' 中變數 ' checkpoint_files_location ' 的值，以指向[!INCLUDE[hek_2](../includes/hek-2-md.md)]檢查點檔案的目標位置。 檢查點檔案應該置於具有適當循序 IO 效能的磁碟機上。  
+6.  更新腳本 ' RTM Sample .sql ' 中變數 ' checkpoint_files_location ' 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 值 [!INCLUDE[hek_2](../includes/hek-2-md.md)] ，以指向檢查點檔案的目標位置 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 。 檢查點檔案應該置於具有適當循序 IO 效能的磁碟機上。  
   
      更新變數 'database_name' 的值，使其指向 AdventureWorks2014 資料庫。  
   
-    1.  請務必包含反斜線 '\'做為路徑名稱的一部分  
+    1.  請務必包含反斜線 ' \' 做為路徑名稱的一部分  
   
     2.  範例：  
   
@@ -113,7 +113,7 @@ ms.locfileid: "75228471"
   
     2.  使用 Management Studio：  
   
-        1.  在查詢視窗中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]開啟[!INCLUDE[hek_2](../includes/hek-2-md.md)]腳本 ' RTM 範例 .sql '  
+        1.  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[hek_2](../includes/hek-2-md.md)] 在查詢視窗中開啟腳本 ' RTM 範例 .sql '  
   
         2.  連接至包含 AdventureWorks2014 資料庫的目標伺服器  
   
@@ -223,7 +223,7 @@ ms.locfileid: "75228471"
   
 -   *別名 UDT* - 原始資料表使用使用者定義資料類型 dbo.Flag，相當於系統資料類型 bit。 移轉的資料表會改用 bit 資料類型。  
   
--   *BIN2 定序*-資料行名稱和 ProductNumber 會包含在索引鍵中，因此必須在中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]具有 BIN2 定序。 此處的假設是應用程式不依賴定序規格，例如區分大小寫。  
+-   *BIN2 定序*-資料行名稱和 ProductNumber 會包含在索引鍵中，因此必須在中具有 BIN2 定序 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 。 此處的假設是應用程式不依賴定序規格，例如區分大小寫。  
   
 -   *Rowguid* - Rowguid 資料行會遭到省略。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
   
@@ -412,7 +412,7 @@ ms.locfileid: "75228471"
   
 -   -S 要連接之 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱  
   
--   -E 使用 Windows 驗證來連接（預設值）;如果您使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證，請分別使用-您和-P 選項來指定使用者名稱和密碼  
+-   -E 使用 Windows 驗證來連接（預設值）;如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，請分別使用-您和-P 選項來指定使用者名稱和密碼  
   
 -   -d：資料庫的名稱，在此範例中為 AdventureWorks2014  
   
@@ -462,7 +462,7 @@ END
  我們將在數個並行連接下，使用 ostress 工具執行這些指令碼。 我們將使用參數 '-n' 來控制連接數目，並使用參數 'r' 來控制每個連接上執行指令碼的次數。  
   
 #### <a name="functional-validation-of-the-workload"></a>工作負載的功能驗證  
- 若要確認所有專案都能正常運作，我們將從範例測試開始，使用10個並行連接和5次反覆運算，插入\*總計 10 * 5 20 = 1000 銷售訂單。  
+ 若要確認所有專案都能正常運作，我們將從範例測試開始，使用10個並行連接和5次反覆運算，插入總計 10 * 5 \* 20 = 1000 銷售訂單。  
   
  在下列命令中，我們假設使用本機電腦上的預設執行個體。 如果您使用具名執行個體或使用遠端伺服器，請使用 -S 參數據以變更伺服器名稱。  
   
@@ -519,7 +519,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
   
  在具有總數 8 個實體 (16 個邏輯) 核心的測試伺服器上，此作業需要 41 分 25 秒。 在具有 24 個實體 (48 個邏輯) 核心的第二部測試伺服器上，此作業需要 52 分 16 秒。  
   
- 在此測試中，記憶體最佳化資料表與磁碟資料表之間出現效能差異的主要因素，是使用磁碟資料表時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法充分運用 CPU。 原因在於閂鎖競爭：並行交易嘗試寫入相同的資料頁面，使用閂鎖可確保一次只有一筆交易可以寫入頁面。 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 引擎不需閂鎖，且資料列不是以頁面方式組織。 因此，並行交易不會封鎖彼此的插入，因此可讓[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]充分利用 CPU。  
+ 在此測試中，記憶體最佳化資料表與磁碟資料表之間出現效能差異的主要因素，是使用磁碟資料表時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法充分運用 CPU。 原因在於閂鎖競爭：並行交易嘗試寫入相同的資料頁面，使用閂鎖可確保一次只有一筆交易可以寫入頁面。 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 引擎不需閂鎖，且資料列不是以頁面方式組織。 因此，並行交易不會封鎖彼此的插入，因此可讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 充分利用 CPU。  
   
  您可以觀察執行工作負載時的 CPU 使用率，例如使用工作管理員。 您會看到磁碟資料表的 CPU 使用率遠低於 100%。 在具有 16 個邏輯處理器的測試組態中，使用率保持在 24% 左右。  
   

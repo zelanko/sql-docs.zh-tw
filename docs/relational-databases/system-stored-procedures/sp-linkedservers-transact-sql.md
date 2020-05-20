@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_linkedservers
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 675707453fbc79f3f9c578469ed5e78b73d2fbfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 28655ec647e2d98dceb76f3ecdaa60fc67d44b2e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139834"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834347"
 ---
 # <a name="sp_linkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

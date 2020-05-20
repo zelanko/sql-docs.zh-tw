@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 995b6b131d9e65ca7a91ce9053583a036fd80fbb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02a6d49202ad2607d862246eee232e599788244a
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75840517"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885855"
 ---
 # <a name="save-and-load-assessments-with-data-migration-assistant"></a>使用 Data Migration Assistant 儲存和載入評量
 

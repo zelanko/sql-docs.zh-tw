@@ -1,5 +1,6 @@
 ---
 title: 監視 SQL Server 受控備份至 Azure |Microsoft Docs
+description: 本文說明的工具可讓您使用 SQL Server 受控備份至 Azure 來判斷備份的整體健全狀況，並找出錯誤。
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,18 +11,18 @@ ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ed32927e38f67c718031930023bd246048e2db5
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798044"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849607"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>監視 SQL Server Managed Backup 到 Azure
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]有內建的測量工具，可用於找出備份程序中的問題和錯誤，並在可能時施以更正動作加以矯正。  不過有某些狀況需要使用者介入。 本主題描述可用於判斷備份之整體健康情況的工具，並找出需要處理的所有錯誤。  
   
 ## <a name="overview-of-ss_smartbackup-built-in-debugging"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]內建偵錯概觀  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會定期檢閱排程的備份，並嘗試重新排程所有失敗的備份。 它會定期輪詢儲存體帳戶，找出記錄檔鏈結中，影響資料庫復原能力的中斷點，然後據此排程新的備份。 它也會將 Azure 節流原則納入考慮，並具有可管理多個資料庫備份的機制。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會使用擴充事件追蹤所有的活動。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]代理程式所使用的擴充事件通道包含管理、作業、分析和偵錯。 屬於管理類別的事件通常和錯誤有關，而且需要使用者的介入，並且預設為啟動。 分析事件也預設為開啟，不過通常和需要使用者介入的錯誤無關。 作業事件通常做為參考用。 例如，「操作事件」包括排程備份、成功完成備份等。Debug 是最詳細的資訊，可在內部用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]來判斷問題，並在必要時加以更正。  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會定期檢閱排程的備份，並嘗試重新排程所有失敗的備份。 它會定期輪詢儲存體帳戶，找出記錄檔鏈結中，影響資料庫復原能力的中斷點，然後據此排程新的備份。 它也會將 Azure 節流原則納入考慮，並具有可管理多個資料庫備份的機制。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會使用擴充事件追蹤所有的活動。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]代理程式所使用的擴充事件通道包含管理、作業、分析和偵錯。 屬於管理類別的事件通常和錯誤有關，而且需要使用者的介入，並且預設為啟動。 分析事件也預設為開啟，不過通常和需要使用者介入的錯誤無關。 作業事件通常做為參考用。 例如，「操作事件」包括排程備份、成功完成備份等。Debug 是最詳細的資訊，可在內部用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 來判斷問題，並在必要時加以更正。  
   
 ### <a name="configure-monitoring-parameters-for-ss_smartbackup"></a>設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的監視參數  
  **Smart_admin sp_set_parameter**系統預存程式可讓您指定監視設定。 下列章節將逐步討論啟用擴充事件的程序，以及啟用錯誤和警告的電子郵件通知。  
@@ -32,7 +33,7 @@ ms.locfileid: "72798044"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 這樣會傳回擴充事件的現有組態，以及電子郵件通知。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 這樣會傳回擴充事件的現有組態，以及電子郵件通知。  
   
 ```sql
 Use msdb  
@@ -108,13 +109,13 @@ GO
     ```  
   
 ### <a name="aggregated-error-countshealth-status"></a>彙總錯誤計數/健康情況  
- **Smart_admin fn_get_health_status**函式會傳回每個分類的匯總錯誤計數資料表，可用來監視的健全狀況狀態[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。 系統也使用相同的功能設定本主題稍後所述的電子郵件通知機制。   
+ **Smart_admin fn_get_health_status**函式會傳回每個分類的匯總錯誤計數資料表，可用來監視的健全狀況狀態 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 。 系統也使用相同的功能設定本主題稍後所述的電子郵件通知機制。   
 這些彙總計算可用來監視系統健全狀況。 例如，如果 number_ of_retention_loops 資料行在 30 分鐘內為 0，則保留管理可能需要耗費長時間運作，或甚至運作不正確。 非零的錯誤資料行可能表示出現問題，應檢查擴充事件記錄來發現此問題。 或者，呼叫**smart_admin. sp_get_backup_diagnostics**預存程式來尋找錯誤的詳細資料。  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>使用代理程式通知以評估備份狀態和健全狀況  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]包含使用 SQL Server 原則式管理原則的通知機制。  
   
- **要求**  
+ **必要條件：**  
   
 -   需要 Database Mail 使用這項功能。 如需有關如何為 SQL Server 的實例啟用 DB Mail 的詳細資訊，請參閱[設定 Database Mail](../relational-databases/database-mail/configure-database-mail.md)。  
   
@@ -203,7 +204,7 @@ $policyResults = Get-SqlSmartAdmin | Test-SqlSmartAdmin -AllowUserPolicies
 $policyResults.PolicyEvaluationDetails | Select Name, Category, Expression, Result, Exception | fl
 ```  
   
- 下列腳本會傳回預設實例（`\SQL\COMPUTER\DEFAULT`）之錯誤和警告的詳細報告：  
+ 下列腳本會傳回預設實例（）之錯誤和警告的詳細報告 `\SQL\COMPUTER\DEFAULT` ：  
   
 ```powershell
 (Get-SqlSmartAdmin ).EnumHealthStatus()  
@@ -248,8 +249,8 @@ smart_backup_files;
   
 -   **複製失敗-F：** 類似于複製進行中，這是可用性群組資料庫的特定。 如果複製程序失敗，狀態會標示成 F。  
   
--   **損毀-C：** 如果[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]無法藉由執行還原 HEADER_ONLY 命令來驗證儲存體中的備份檔案，即使在多次嘗試之後，它也會將此檔案標示為已損毀。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會排程備份，以確保損毀的檔案不會導致備份鏈結中斷。  
+-   **損毀-C：** 如果 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 無法藉由執行還原 HEADER_ONLY 命令來驗證儲存體中的備份檔案，即使在多次嘗試之後，它也會將此檔案標示為已損毀。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會排程備份，以確保損毀的檔案不會導致備份鏈結中斷。  
   
 -   **已刪除-D：** 在 Azure 儲存體中找不到對應的檔案。 如果已刪除的檔案造成備份鏈結中斷，[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]將會排程備份。  
   
--   **未知-U：** 此狀態表示[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]尚未能夠驗證 Azure 儲存體中的檔案是否存在及其屬性。 下次執行此程序時 (大約每隔 15 分鐘執行一次)，將會更新此狀態。  
+-   **未知-U：** 此狀態表示尚未 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 能夠驗證 Azure 儲存體中的檔案是否存在及其屬性。 下次執行此程序時 (大約每隔 15 分鐘執行一次)，將會更新此狀態。  

@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056545"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885995"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>設定 Data Migration Assistant 的設定
 
@@ -29,11 +29,11 @@ ms.locfileid: "74056545"
 
 - 桌面應用程式
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\cmd.exe .config
+  % ProgramFiles% \\ Microsoft Data Migration Assistant \\ cmd.exe .config
 
 - 命令列公用程式
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\dmacmd 
+  % ProgramFiles% \\ Microsoft Data Migration Assistant \\ dmacmd 
 
 請務必先儲存原始設定檔案的複本，再進行任何修改。 進行變更之後，請重新開機 Data Migration Assistant，新的設定值才會生效。
 
@@ -82,7 +82,7 @@ Data Migration Assistant 在遷移登入之前，平行遷移多個資料庫。 
 在評估期間，Data Migration Assistant 會將資料層應用程式（dacpac）解壓縮，以瞭解資料庫架構。 這種作業可能會因為非常大型的資料庫而失敗，或伺服器是否處於負載中。 從資料移轉 v1.0 開始，您可以修改下列設定值，以避免發生錯誤。 
 
 > [!NOTE]
-> 根據預設&lt;，&gt;整個 dacfx 專案都會加上批註。 移除批註，然後視需要修改值。
+> &lt;根據預設，整個 dacfx &gt; 專案都會加上批註。 移除批註，然後視需要修改值。
 
 - commandTimeout
 
@@ -90,7 +90,7 @@ Data Migration Assistant 在遷移登入之前，平行遷移多個資料庫。 
 
 - databaseLockTimeout
 
-   這個參數相當於[設定鎖定\_超時時間\_長度](../t-sql/statements/set-lock-timeout-transact-sql.md)（以*毫秒為單位）*。（預設值 = 5000）
+   這個參數相當於[設定鎖定 \_ 超時時間 \_ 長度](../t-sql/statements/set-lock-timeout-transact-sql.md)（以*毫秒為單位）*。（預設值 = 5000）
 
 - maxDataReaderDegreeOfParallelism
 

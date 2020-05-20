@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OASetProperty
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ecbfba038b1954565839a3d931ef96431b77f50b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 680a21141e459656e0bec19ca8417483a9024088
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008945"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834346"
 ---
 # <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  需要**系統管理員（sysadmin** ）固定伺服器角色的成員資格，或直接在這個預存程式上執行許可權。 `Ole Automation Procedures`必須**啟用**設定，才能使用與 OLE Automation 相關的任何系統程式。  
   
 ## <a name="examples"></a>範例  
- 下列範例會將`HostName`屬性（先前建立的**SQLServer**物件）設定為新的值。  
+ 下列範例會將 `HostName` 屬性（先前建立的**SQLServer**物件）設定為新的值。  
   
 ```  
 EXEC @hr = sp_OASetProperty @object, 'HostName', 'Gizmo';  
