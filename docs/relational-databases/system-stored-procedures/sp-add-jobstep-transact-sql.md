@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d9f68c1e3b4f0bec4ba338af12fb1f24c5ff204
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412852"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833679"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "74412852"
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > 在[Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大部分（但不是全部） SQL Server Agent 作業類型都受到支援。 如需詳細資訊，請參閱[Azure SQL Database 受控執行個體與 SQL Server 的 t-sql 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+  > 在[Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大部分（但不是全部） SQL Server Agent 作業類型都受到支援。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
   
 ## <a name="syntax"></a>語法  
   
@@ -73,11 +73,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @step_name = ] 'step_name'`步驟的名稱。 *step_name*是**sysname**，沒有預設值。  
   
-`[ @subsystem = ] 'subsystem'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務用來執行*命令*的子系統。 *子系統*是**Nvarchar （40）**，而且可以是下列其中一個值。  
+`[ @subsystem = ] 'subsystem'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 服務用來執行*命令*的子系統。 *子系統*是**Nvarchar （40）**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|Active Script<br /><br /> ** \* \*重要\*事項**[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**ACTIVESCRIPTING**'|Active Script<br /><br /> ** \* \* 重要 \* 事項 \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|作業系統命令或可執行的程式|  
 |'**散發**'|複寫散發代理程式作業|  
 |「**快照**集」|複寫快照集代理程式作業|  
@@ -104,7 +104,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >   
 >  如果需要使用這些 Token，請先確定只有受信任的 Windows 安全性群組的成員 (例如 Administrators 群組) 才對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在電腦的事件記錄檔具有寫入權限。 然後以滑鼠右鍵按一下物件總管中的 [SQL Server Agent]****、選取 [屬性]****，然後在 [警示系統]**** 頁面上選取 [取代回應警示之所有作業的 Token]****，以啟用這些 Token。  
   
-`[ @additional_parameters = ] 'parameters'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *參數*是**Ntext**，預設值是 Null。  
+`[ @additional_parameters = ] 'parameters'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*參數*是**Ntext**，預設值是 Null。  
   
 `[ @cmdexec_success_code = ] code`**CmdExec**子系統命令傳回的值，表示已成功執行*命令*。 *code*是**int**，預設值是**0**。  
   
@@ -130,11 +130,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_fail_step_id = ] fail_step_id`如果步驟失敗且*fail_action*為**4**時，此作業中要執行之步驟的識別碼。 *fail_step_id*是**int**，預設值是**0**。  
   
-`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *伺服器*是**Nvarchar （30）**，預設值是 Null。  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*伺服器*是**Nvarchar （30）**，預設值是 Null。  
   
-`[ @database_name = ] 'database'`要在其中執行[!INCLUDE[tsql](../../includes/tsql-md.md)]步驟的資料庫名稱。 *資料庫*是**sysname**，預設值是 Null，在此情況下會使用**master**資料庫。 不允許以括號 ([ ]) 括住的名稱。 若為 ActiveX 作業步驟，*資料庫*就是步驟所使用的指令碼語言名稱。  
+`[ @database_name = ] 'database'`要在其中執行步驟的資料庫名稱 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *資料庫*是**sysname**，預設值是 Null，在此情況下會使用**master**資料庫。 不允許以括號 ([ ]) 括住的名稱。 若為 ActiveX 作業步驟，*資料庫*就是步驟所使用的指令碼語言名稱。  
   
-`[ @database_user_name = ] 'user'`執行[!INCLUDE[tsql](../../includes/tsql-md.md)]步驟時要使用的使用者帳戶名稱。 *user*是**sysname**，預設值是 Null。 當*user*為 Null 時，此步驟會在工作擁有者在*資料庫*上的使用者內容中執行。  只有在作業擁有者為 SQL Server 系統管理員 (sysadmin) 時，SQL Server Agent 才會包含此參數。 在此情況下，指定的 Transact-SQL 步驟會在指定的 SQL Server 使用者名稱內容中執行。 如果作業擁有者不是 SQL Server 系統管理員（sysadmin），則 Transact-sql 步驟一律會在擁有此作業的登入內容中執行，且會忽略@database_user_name參數。  
+`[ @database_user_name = ] 'user'`執行步驟時要使用的使用者帳戶名稱 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *user*是**sysname**，預設值是 Null。 當*user*為 Null 時，此步驟會在工作擁有者在*資料庫*上的使用者內容中執行。  只有在作業擁有者為 SQL Server 系統管理員 (sysadmin) 時，SQL Server Agent 才會包含此參數。 在此情況下，指定的 Transact-SQL 步驟會在指定的 SQL Server 使用者名稱內容中執行。 如果作業擁有者不是 SQL Server 系統管理員（sysadmin），則 Transact-sql 步驟一律會在擁有此作業的登入內容中執行，且 @database_user_name 會忽略參數。  
   
 `[ @retry_attempts = ] retry_attempts`此步驟失敗時所要使用的重試次數。 *retry_attempts*是**int**，預設值是**0**，表示不會嘗試重試。  
   
@@ -142,7 +142,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @os_run_priority = ] run_priority`留.  
   
-`[ @output_file_name = ] 'file_name'`儲存此步驟之輸出的檔案名。 *file_name*是**Nvarchar （200）**，預設值是 Null。 *file_name*可以包含 [*命令*] 底下所列的一或多個權杖。 此參數只[!INCLUDE[tsql](../../includes/tsql-md.md)]適用于在、 **CmdExec**、 **PowerShell**、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]子系統上執行的命令。  
+`[ @output_file_name = ] 'file_name'`儲存此步驟之輸出的檔案名。 *file_name*是**Nvarchar （200）**，預設值是 Null。 *file_name*可以包含 [*命令*] 底下所列的一或多個權杖。 此參數只適用于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、 **CmdExec**、 **PowerShell**、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或子系統上執行的命令 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
   
 `[ @flags = ] flags`是控制行為的選項。 *旗標*是**int**，而且可以是下列其中一個值。  
   
@@ -156,9 +156,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**32**|將所有輸出寫入作業記錄|  
 |**64**|建立 Windows 事件以做為 CMD 工作步驟要中止的訊號|  
   
-`[ @proxy_id = ] proxy_id`執行作業步驟之 proxy 的 id 編號。 *proxy_id*的類型為**int**，預設值為 Null。 如果未指定任何*proxy_id* 、未指定任何*proxy_name* ，而且未指定任何*user_name* ，則作業步驟會以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的服務帳戶執行。  
+`[ @proxy_id = ] proxy_id`執行作業步驟之 proxy 的 id 編號。 *proxy_id*的類型為**int**，預設值為 Null。 如果未指定任何*proxy_id* 、未指定任何*proxy_name* ，而且未指定任何*user_name* ，則作業步驟會以 Agent 的服務帳戶執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-`[ @proxy_name = ] 'proxy_name'`執行作業步驟的 proxy 名稱。 *proxy_name*的類型為**sysname**，預設值為 Null。 如果未指定任何*proxy_id* 、未指定任何*proxy_name* ，而且未指定任何*user_name* ，則作業步驟會以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的服務帳戶執行。  
+`[ @proxy_name = ] 'proxy_name'`執行作業步驟的 proxy 名稱。 *proxy_name*的類型為**sysname**，預設值為 Null。 如果未指定任何*proxy_id* 、未指定任何*proxy_name* ，而且未指定任何*user_name* ，則作業步驟會以 Agent 的服務帳戶執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -171,7 +171,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  SQL Server Management Studio 提供易用的作業管理圖形介面，是建立及管理作業基礎結構的建議方式。  
   
- 根據預設，除非指定另一個 proxy，否則作業步驟會[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當做 Agent 的服務帳戶執行。 此帳戶的需求是**系統管理員（sysadmin** ）固定安全性角色的成員。
+ 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 除非指定另一個 proxy，否則作業步驟會當做 Agent 的服務帳戶執行。 此帳戶的需求是**系統管理員（sysadmin** ）固定安全性角色的成員。
   
  Proxy 可透過*proxy_name*或*proxy_id*來識別。  
   

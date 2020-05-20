@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepare
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e5875d4160ca3bb3e06670d02426e7b3cfe097c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085800"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832573"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-準備參數化[!INCLUDE[tsql](../../includes/tsql-md.md)]語句並傳回執行的語句*控制碼*。  `sp_prepare` 的叫用方式是在表格式資料流 (TDS) 封包中指定 ID = 11。  
+準備參數化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句並傳回執行的語句*控制碼*。  `sp_prepare` 的叫用方式是在表格式資料流 (TDS) 封包中指定 ID = 11。  
   
  ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +42,7 @@ sp_prepare handle OUTPUT, params, stmt, options
  *圖*  
  這是 SQL Server 產生的*備妥控制碼*識別碼。 *handle*是具有**int**傳回值的必要參數。  
   
- *化*  
+ *params*  
  識別參數化的陳述式。 變數的*params*定義會取代語句中的參數標記。 *params*是針對**Ntext**、 **Nchar**或**Nvarchar**輸入值呼叫的必要參數。 如果陳述式未參數化，則輸入 NULL 值。  
   
  *把*  
@@ -51,7 +51,7 @@ sp_prepare handle OUTPUT, params, stmt, options
  *options*  
  傳回資料指標結果集資料行描述的選擇性參數。 *選項*需要下列 int 輸入值：  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   

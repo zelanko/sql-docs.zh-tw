@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80f5bc86498bc33e0cb04e8ca54154b96307c480
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124075"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833224"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_get_query_template
   
 ## <a name="arguments"></a>引數  
  '*query_text*'  
- 這是要產生參數化版本的查詢。 '*query_text*' 必須以單引號括住，且前面加上 N Unicode 規範。 N '*query_text*' 是指派給@querytext參數的值。 這是**Nvarchar （max）** 類型。  
+ 這是要產生參數化版本的查詢。 '*query_text*' 必須以單引號括住，且前面加上 N Unicode 規範。 N '*query_text*' 是指派給參數的值 @querytext 。 這是**Nvarchar （max）** 類型。  
   
  @templatetext  
  是**Nvarchar （max）** 類型的輸出參數，如所示，以字串常值的形式接收*query_text*的參數化格式。  
   
  @parameters  
- 是**Nvarchar （max）** 類型的輸出參數，如所示，用來接收已參數化之參數名稱和資料類型的字串常值@templatetext。  
+ 是**Nvarchar （max）** 類型的輸出參數，如所示，用來接收已參數化之參數名稱和資料類型的字串常值 @templatetext 。  
   
 ## <a name="remarks"></a>備註  
  當發生下列情況時，sp_get_query_template 會傳回錯誤：  
@@ -58,7 +58,7 @@ sp_get_query_template
   
 -   *query_text*為 Null，而不是 Unicode 字串、語法無效或無法編譯。  
   
- 如果 sp_get_query_template 傳回錯誤，則不會修改@templatetext和@parameters輸出參數的值。  
+ 如果 sp_get_query_template 傳回錯誤，則不會修改 @templatetext 和 @parameters 輸出參數的值。  
   
 ## <a name="permissions"></a>權限  
  需要 public 資料庫角色中的成員資格。  

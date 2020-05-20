@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a9163e6d34a0de6200eafd413d163bb6d92fd4a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7ba2cebf6c4b779119696f19ee78b7ce8ec1cf66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "72174009"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831880"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,13 +75,13 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'`這是包含發行項的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @article = ] 'article'`這是發行項的名稱。 這個名稱在發行集內必須是唯一的。 *文章*是**sysname**，沒有預設值。 發行*項必須在*執行的本機電腦[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上，而且必須符合識別碼的規則。  
+`[ @article = ] 'article'`這是發行項的名稱。 這個名稱在發行集內必須是唯一的。 *文章*是**sysname**，沒有預設值。 發行*項必須在*執行的本機電腦上 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，而且必須符合識別碼的規則。  
   
 `[ @source_object = ] 'source_object'`這是要發行的資料庫物件。 *source_object*是**sysname**，沒有預設值。 如需可以使用合併式複寫來發行之物件類型的詳細資訊，請參閱[發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
   
 `[ @type = ] 'type'`這是發行項的類型。 *類型*是**sysname**，預設值是**table**，它可以是下列值之一。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**table** （預設值）|含結構描述和資料的資料表。 複寫會監視資料表來判斷要複寫的資料。|  
 |**func schema only**|只含結構描述的函數。|  
@@ -101,7 +101,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`指定當套用快照集時，如果資料表存在於訂閱者，系統要執行的動作。 *pre_creation_cmd*是**Nvarchar （10）**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**無**|如果訂閱者端已有資料表，就不會採取任何動作。|  
 |**delete**|根據子集篩選中的 WHERE 子句來發出一項刪除。|  
@@ -115,7 +115,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option`這是給定發行項之架構產生選項的點陣圖。 *schema_option*是**binary （8）**，而且可以是[|（位 OR）](../../t-sql/language-elements/bitwise-or-transact-sql.md)一或多個這些值的乘積。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**0x00**|停用快照集代理程式的腳本，並使用*creation_script*中定義的提供的架構 precreation 腳本。|  
 |**0x01**|產生物件的建立作業 (CREATE TABLE、CREATE PROCEDURE 等)。 這是預存程序發行項的預設值。|  
@@ -144,17 +144,17 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x4000000**|複寫**xml**資料行的索引。|  
 |**0x8000000**|建立訂閱者上目前還沒有的任何結構描述。|  
 |**0x10000000**|將**xml**資料行轉換為訂閱者上的**Ntext** 。|  
-|**0x20000000**|將中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]引進的大型物件資料類型（**Nvarchar （max）**、 **Varchar （max）** 和**Varbinary （max）**）轉換成所支援的資料類型[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。|  
+|**0x20000000**|將中引進的大型物件資料類型（**Nvarchar （max）**、 **Varchar （max）** 和**Varbinary （max）**）轉換 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 成所支援的資料類型 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。|  
 |**0x40000000**|複寫權限。|  
 |**0x80000000**|試圖卸除對於不在發行集中之任何物件的相依性。|  
-|**0x100000000**|如果 FILESTREAM 屬性是在**Varbinary （max）** 資料行上指定，請使用此選項來進行複寫。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 不論如何設定此架構選項， [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]都不支援將含有 FILESTREAM 資料行的資料表複寫至訂閱者。 請參閱相關的選項**0x800000000**。|  
-|**0x200000000**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]將中引進的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和 datetime2）轉換成舊版所支援的資料類型。 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**0x100000000**|如果 FILESTREAM 屬性是在**Varbinary （max）** 資料行上指定，請使用此選項來進行複寫。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不論如何設定此架構選項，都不支援將含有 FILESTREAM 資料行的資料表複寫至訂閱者。 請參閱相關的選項**0x800000000**。|  
+|**0x200000000**|將中引進的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和**datetime2**）轉換 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 成舊版所支援的資料類型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**0x400000000**|複寫資料與索引的壓縮選項。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 |**0x800000000**|設定這個選項即可將 FILESTREAM 資料儲存在訂閱者端的檔案群組中。 如果沒有設定這個選項，FILESTREAM 資料就會儲存在預設檔案群組中。 複寫不會建立檔案群組。因此，如果您設定這個選項，就必須先建立檔案群組，然後再於訂閱者端套用快照集。 如需如何在套用快照集之前建立物件的詳細資訊，請參閱[在套用快照集之前和之後執行腳本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 請參閱相關的選項**0x100000000**。|  
-|**0x1000000000**|將 common language runtime （CLR）使用者定義型別（Udt）轉換成**Varbinary （max）** ，以便將 UDT 類型的資料行複寫至正在執行的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]訂閱者。|  
-|**0x2000000000**|將**hierarchyid**資料類型轉換成**Varbinary （max）** ，使**hierarchyid**類型的資料行可以複寫至正在執行的訂閱[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]者。 如需如何在複寫資料表中使用**hierarchyid**資料行的詳細資訊，請參閱[hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
+|**0x1000000000**|將 common language runtime （CLR）使用者定義型別（Udt）轉換成**Varbinary （max）** ，以便將 UDT 類型的資料行複寫至正在執行的訂閱者 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
+|**0x2000000000**|將**hierarchyid**資料類型轉換成**Varbinary （max）** ，使**hierarchyid**類型的資料行可以複寫至正在執行的訂閱者 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 如需如何在複寫資料表中使用**hierarchyid**資料行的詳細資訊，請參閱[hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
 |**0x4000000000**|複寫資料表上任何已篩選的索引。 如需篩選索引的詳細資訊，請參閱[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)。|  
-|**0x8000000000**|將**geography**和**geometry**資料類型轉換成**Varbinary （max）** ，以便將這些型別的資料行複寫至正在執行的訂閱[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]者。|  
+|**0x8000000000**|將**geography**和**geometry**資料類型轉換成**Varbinary （max）** ，以便將這些型別的資料行複寫至正在執行的訂閱者 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
 |**0x10000000000**|複寫**geography**和**geometry**類型之資料行上的索引。|  
   
  如果這個值是 NULL，系統會自動產生發行項的有效結構描述選項。 [備註] 區段中的**預設架構選項**表會顯示根據發行項類型而選擇的值。 此外，並非所有的*schema_option*值都適用于每種類型的複寫和發行項類型。 [備註] 中提供的**有效架構選項**表會顯示指定之發行項類型的選項。  
@@ -191,7 +191,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 `[ @identity_range = ] identity_range`控制使用自動識別範圍管理時，配置給「發行者」和「訂閱者」的識別範圍大小。 *identity_range*是**Bigint**，預設值是 Null。 如果*identityrangemanagementoption*是**auto**或*auto_identity_range*為**true**，您就必須指定這個參數。  
   
 > [!NOTE]  
->  *identity_range*使用舊版，控制重新發行訂閱者端的識別範圍[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大小。  
+>  *identity_range*使用舊版，控制重新發行訂閱者端的識別範圍大小 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ @threshold = ] threshold`控制合併代理程式指派新識別範圍的百分比值。 使用 [*臨界*值] 中指定的百分比時，合併代理程式會建立新的識別範圍。 *閾值*是**int**，預設值是 Null。 如果*identityrangemanagementoption*是**auto**或*auto_identity_range*為**true**，您就必須指定這個參數。  
   
@@ -201,7 +201,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1**指定將會驗證簽章，以查看它是否來自信任的來源。  
   
-`[ @destination_object = ] 'destination_object'`這是訂閱資料庫中的物件名稱。 *destination_object*是**sysname**，預設值為** \@source_object**中的內容。 只有在這個發行項是僅限結構描述的發行項 (如預存程序、檢視和 UDF) 時，才能指定這個參數。 如果指定的發行項是資料表發行項，中*@source_object*的值會覆寫*destination_object*中的值。  
+`[ @destination_object = ] 'destination_object'`這是訂閱資料庫中的物件名稱。 *destination_object*是**sysname**，預設值為** \@ source_object**中的內容。 只有在這個發行項是僅限結構描述的發行項 (如預存程序、檢視和 UDF) 時，才能指定這個參數。 如果指定的發行項是資料表發行項，中的值會 *@source_object* 覆寫*destination_object*中的值。  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`啟用或停用發行項的互動式解析程式。 *allow_interactive_resolver*是**Nvarchar （5）**，預設值是 FALSE。 **true**可讓您在發行項上使用互動式解析程式;**false**會停用它。  
   
@@ -212,7 +212,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions`這是當合併代理程式將變更套用至發行者時，所驗證之資料表層級許可權的點陣圖。 如果合併處理序所使用的發行者登入/使用者帳戶並沒有正確的資料表權限，就會將無效的變更記錄為衝突。 *check_permissions*是**int**，而且可以是[|（位 OR）](../../t-sql/language-elements/bitwise-or-transact-sql.md)下列一個或多個值的乘積。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**0x00** （預設值）|不檢查權限。|  
 |**0x10**|先在發行者端檢查權限，之後才能上傳在訂閱者端進行的插入作業。|  
@@ -240,7 +240,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **false**指定使用預設衝突偵測，如*column_tracking*所指定。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   
 > [!NOTE]  
->  因為[!INCLUDE[ssEW](../../includes/ssew-md.md)]訂閱者不支援邏輯記錄，所以您必須為*logical_record_level_conflict_detection*指定**false**的值，以支援這些訂閱者。  
+>  因為訂閱者不支援邏輯記錄 [!INCLUDE[ssEW](../../includes/ssew-md.md)] ，所以您必須為*logical_record_level_conflict_detection*指定**false**的值，以支援這些訂閱者。  
   
 `[ @logical_record_level_conflict_resolution = ] 'logical_record_level_conflict_resolution'`指定屬於邏輯記錄成員的發行項之衝突解決層級。 *logical_record_level_conflict_resolution*是**Nvarchar （5）**，預設值是 FALSE。  
   
@@ -249,7 +249,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **false**指定獲勝資料列不限於邏輯記錄。 如果*logical_record_level_conflict_detection*為**true**，則*logical_record_level_conflict_resolution*也必須設定為**true**。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   
 > [!NOTE]  
->  因為[!INCLUDE[ssEW](../../includes/ssew-md.md)]訂閱者不支援邏輯記錄，所以您必須為*logical_record_level_conflict_resolution*指定**false**的值，以支援這些訂閱者。  
+>  因為訂閱者不支援邏輯記錄 [!INCLUDE[ssEW](../../includes/ssew-md.md)] ，所以您必須為*logical_record_level_conflict_resolution*指定**false**的值，以支援這些訂閱者。  
   
 `[ @partition_options = ] partition_options`定義發行項中資料分割的方式，這可在所有資料列只屬於一個資料分割或單一訂用帳戶時，讓效能優化。 *partition_options*是**Tinyint**，它可以是下列其中一個值。  
   
@@ -280,11 +280,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`指定如何處理髮行項的識別範圍管理。 *identityrangemanagementoption*是**Nvarchar （10）**，它可以是下列值之一。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**無**|停用識別範圍的管理。|  
 |**手動**|利用 NOT FOR REPLICATION 來標示識別欄位，以啟用手動的識別範圍處理。|  
-|**自動**|指定自動管理識別範圍。|  
+|**auto**|指定自動管理識別範圍。|  
 |Null （預設值）|當*auto_identity_range*的值不是**true**時，預設值為**none**。|  
   
  為了與舊版相容，當*identityrangemanagementoption*的值為 Null 時，會檢查*auto_identity_range*的值。 不過，當*identityrangemanagementoption*的值不是 Null 時，就會忽略*auto_identity_range*的值。 如需詳細資訊，請參閱[複寫識別資料欄](../../relational-databases/replication/publish/replicate-identity-columns.md)。  
@@ -334,11 +334,11 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**|  
 |**indexed view schema only**|**0x01**|  
 |**proc schema only**|**0x01**|  
-|**table**|**0x0C034FD1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]使用原生模式快照集的0x0C034FD1 和更新版本相容發行集。<br /><br /> **0x08034FF1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]使用字元模式快照集的0x08034FF1 和更新版本相容發行集。|  
+|**table**|**0x0C034FD1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 使用原生模式快照集的0x0C034FD1 和更新版本相容發行集。<br /><br /> **0x08034FF1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 使用字元模式快照集的0x08034FF1 和更新版本相容發行集。|  
 |**view schema only**|**0x01**|  
   
 > [!NOTE]  
->  如果發行集支援舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則**資料表**的預設架構選項為**0x30034FF1**。  
+>  如果發行集支援舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則**資料表**的預設架構選項為**0x30034FF1**。  
   
 ## <a name="valid-schema-option-table"></a>有效的結構描述選項表  
  下表描述根據發行項類型*schema_option*的允許值。  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 300b988ce74a22dad3384920bb93fd45191128e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809899"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832618"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>空間資料-sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -113,7 +113,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>停用物件的行為  
  **索引**  
   
- 如果叢集索引已停用，或強制非叢集索引，則會引發下列錯誤：「查詢處理器無法產生計畫，因為索引 '%。\*在資料表或視圖 '% 上的 ls '。\*ls ' 已停用」。 若要重新啟用這些物件，請在升級之後藉由呼叫**ALTER INDEX ON ... 來重建索引。REBUILD**。  
+ 如果叢集索引已停用，或強制非叢集索引，則會引發下列錯誤：「查詢處理器無法產生計畫，因為索引 '%。 \*在資料表或視圖 '% 上的 ls '。 \*ls ' 已停用」。 若要重新啟用這些物件，請在升級之後藉由呼叫**ALTER INDEX ON ... 來重建索引。REBUILD**。  
   
  **堆積**  
   

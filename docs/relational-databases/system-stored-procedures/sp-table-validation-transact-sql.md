@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72173549"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834207"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @rowcount_only = ] type_of_check_requested`指定要執行的總和檢查碼或資料列計數類型。 *type_of_check_requested*是**Smallint**，預設值是**1**。  
   
- 如果是**0**，則執行資料列[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]計數和7.0 相容的總和檢查碼。  
+ 如果是**0**，則執行資料列計數和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 相容的總和檢查碼。  
   
  如果是**1**，則只執行資料列計數檢查。  
   
@@ -71,7 +71,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent`如果散發代理程式是**sp_table_validation**執行，則指定是否要在驗證完成時立即關閉散發代理程式。 *shutdown_agent*是**bit**，預設值是**0**。 如果是**0**，就不會關閉複寫代理程式。 如果是**1**，就會引發錯誤20578，並將複寫代理程式發出信號關閉。 當使用者直接執行**sp_table_validation**時，就會忽略這個參數。  
   
-`[ @table_name = ] table_name`這是用於輸出訊息之視圖的資料表名稱。 *table_name*是**sysname**，預設值是** \@table**。  
+`[ @table_name = ] table_name`這是用於輸出訊息之視圖的資料表名稱。 *table_name*是**sysname**，預設值是** \@ table**。  
   
 `[ @column_list = ] 'column_list'`這是總和檢查碼函數中應該使用的資料行清單。 *column_list*是**Nvarchar （4000）**，預設值是 Null。 啟用合併發行項驗證來指定排除計算和時間戳記資料行的資料行清單。  
   
@@ -87,7 +87,7 @@ sp_table_validation [ @table = ] 'table'
   
  當執行總和檢查碼時，兩部伺服器的資料表結構必須相同；也就是說，資料表必須有相同順序、資料類型和長度，以及 NULL/NOT NULL 狀況的相同資料行。 例如，如果發行者執行 CREATE TABLE，再執行 ALTER TABLE 來加入資料行，但訂閱者端所套用的指令碼是簡單 CREATE 資料表，結構就不同。 如果您不確定這兩個數據表的結構完全相同，請查看[syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) ，並確認每個資料表中的位移都相同。  
   
- 如果使用了字元模式**bcp** ，則浮點值可能會產生總和檢查碼差異，如果發行集具有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者，則為這種情況。 這些是在轉換成字元模式，或從字元模式轉換時，因有效位數的次要和無法避免的差異所造成的。  
+ 如果使用了字元模式**bcp** ，則浮點值可能會產生總和檢查碼差異，如果發行集具有非訂閱者，則為這種情況 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 這些是在轉換成字元模式，或從字元模式轉換時，因有效位數的次要和無法避免的差異所造成的。  
   
 ## <a name="permissions"></a>權限  
  若要執行**sp_table_validation**，您必須具有要驗證之資料表的 SELECT 許可權。  

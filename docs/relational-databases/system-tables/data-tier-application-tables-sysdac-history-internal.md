@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 025c11a6d04f61378080c303a4935ce98e64f164
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084757"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833105"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>資料層應用程式資料表 - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "68084757"
 |**sequence_id**|**int**|識別動作中的步驟。|  
 |**instance_id**|**uniqueidentifier**|DAC 執行個體的識別碼。 此資料行可以聯結在[dbo. sysdac_instances &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)的**instance_id**資料行上。|  
 |**action_type**|**tinyint**|動作類型的識別碼：<br /><br /> **0** = 部署<br /><br /> **1** = 建立<br /><br /> **2** = 重新命名<br /><br /> **3** = 卸離<br /><br /> **4** = 刪除|  
-|**action_type_name**|**Varchar （19）**|動作類型的名稱：<br /><br /> **將**<br /><br /> **建立**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
+|**action_type_name**|**Varchar （19）**|動作類型的名稱：<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|受到動作影響之物件類型的識別碼：<br /><br /> **0** = dacpac<br /><br /> **1** = 登入<br /><br /> **2** = 資料庫|  
-|**dac_object_type_name**|**Varchar （8）**|受到動作影響之物件類型的名稱：<br /><br /> **dacpac** = DAC 實例<br /><br /> **login**<br /><br /> **database**|  
+|**dac_object_type_name**|**Varchar （8）**|受到動作影響之物件類型的名稱：<br /><br /> **dacpac** = DAC 實例<br /><br /> **登入**<br /><br /> **database**|  
 |**action_status**|**tinyint**|識別動作目前狀態的代碼：<br /><br /> **0** = 暫止<br /><br /> **1** = 成功<br /><br /> **2** = 失敗|  
-|**action_status_name**|**Varchar （11）**|動作的目前狀態：<br /><br /> **正在**<br /><br /> **success**<br /><br /> **無法**|  
+|**action_status_name**|**Varchar （11）**|動作的目前狀態：<br /><br /> **暫止**<br /><br /> **success**<br /><br /> **無法**|  
 |**必要**|**bit**|在回復 DAC 作業時，由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用。|  
 |**dac_object_name_pretran**|**sysname**|認可包含動作之交易前的物件名稱。 僅用於資料庫與登入。|  
 |**dac_object_name_posttran**|**sysname**|認可包含動作之交易後的物件名稱。 僅用於資料庫與登入。|  
@@ -74,7 +74,7 @@ WHERE instance_id NOT IN
  刪除使用中 DAC 的資料列不會影響 DAC 作業；唯一的影響是，您將無法報告 DAC 的完整記錄。  
   
 > [!NOTE]  
->  目前，沒有任何機制可刪除上**sysdac_history_internal**的[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]資料列。  
+>  目前，沒有任何機制可刪除上**sysdac_history_internal**的資料列 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  
   
 ## <a name="permissions"></a>權限  
  需要系統管理員 (sysadmin) 固定伺服器角色中的成員資格。 此視圖的唯讀存取權可供所有具有連接到 master 資料庫之許可權的使用者使用。  

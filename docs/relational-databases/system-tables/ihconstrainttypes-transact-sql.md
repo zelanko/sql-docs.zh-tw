@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHconstrainttypes system table
 ms.assetid: 955d6fa9-0b31-4335-a3cd-e4c4d90ad308
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e4d24c94cc4c6dca00fc0e3fd9cd93626da6e4fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cc87e363596a419960155f75356bbfcce5f21300
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68076448"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832434"
 ---
 # <a name="ihconstrainttypes-transact-sql"></a>IHconstrainttypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

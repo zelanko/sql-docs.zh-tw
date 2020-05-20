@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47f622c287eb0e32e1c5db2d33b64af2de3e379b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002458"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833133"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>引數
 
-`[ @name = ] 'module_name'`這是預存程式、使用者定義函數、view、DML 觸發程式、資料庫層級 DDL 觸發程式或伺服器層級 DDL 觸發程式的名稱。 *module_name*不可以是 common language RUNTIME （CLR）預存程式或 CLR 函數。 *module_name*不可以是架構系結。 *module_name*是`nvarchar`，沒有預設值。 *module_name*可以是多部分的識別碼，但只能參考目前資料庫中的物件。
+`[ @name = ] 'module_name'`這是預存程式、使用者定義函數、view、DML 觸發程式、資料庫層級 DDL 觸發程式或伺服器層級 DDL 觸發程式的名稱。 *module_name*不可以是 common language RUNTIME （CLR）預存程式或 CLR 函數。 *module_name*不可以是架構系結。 *module_name*是 `nvarchar` ，沒有預設值。 *module_name*可以是多部分的識別碼，但只能參考目前資料庫中的物件。
 
-`[ @namespace = ] ' < class > '`這是指定之模組的類別。 當*module_name*是 DDL 觸發程式時`<class>` ，則為必要。 `<class>` 為 `nvarchar(20)`。 有效的輸入`DATABASE_DDL_TRIGGER`為`SERVER_DDL_TRIGGER`和。    
+`[ @namespace = ] ' < class > '`這是指定之模組的類別。 當*module_name*是 DDL 觸發程式時， `<class>` 則為必要。 `<class>` 為 `nvarchar(20)`。 有效的輸入為 `DATABASE_DDL_TRIGGER` 和 `SERVER_DDL_TRIGGER` 。    
 
 ## <a name="return-code-values"></a>傳回碼值  
 
@@ -61,28 +61,28 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 * 模組參考之資料表中資料行的加密屬性已更新。 例如，已經卸載資料行，而且已新增不同的加密類型、加密金鑰或加密演算法的新資料行。  
 * 模組參考了具有過期參數加密中繼資料的另一個模組。  
 
-修改資料表的加密屬性時， `sp_refresh_parameter_encryption`應該直接或間接參考該資料表的任何模組執行。 這個預存程式可以依任何順序在那些模組上呼叫，而不需要使用者先重新整理內部模組，再移至其呼叫端。
+修改資料表的加密屬性時， `sp_refresh_parameter_encryption` 應該直接或間接參考該資料表的任何模組執行。 這個預存程式可以依任何順序在那些模組上呼叫，而不需要使用者先重新整理內部模組，再移至其呼叫端。
 
-`sp_refresh_parameter_encryption`不會影響與物件相關聯的任何許可權`SET` 、擴充屬性或選項。 
+`sp_refresh_parameter_encryption`不會影響與物件相關聯的任何許可權、擴充屬性或 `SET` 選項。 
 
 若要重新整理伺服器層級 DDL 觸發程序，請從任何資料庫的內容執行此預存程序。
 
 > [!NOTE]
->  當您執行`sp_refresh_parameter_encryption`時，會卸載與物件相關聯的任何簽章。
+>  當您執行時，會卸載與物件相關聯的任何簽章 `sp_refresh_parameter_encryption` 。
 
 ## <a name="permissions"></a>權限
 
-需要`ALTER`模組的許可權，以及`REFERENCES`物件所參考之任何 CLR 使用者自訂類型和 XML 架構集合的許可權。   
+需要 `ALTER` 模組的許可權，以及 `REFERENCES` 物件所參考之任何 CLR 使用者自訂類型和 XML 架構集合的許可權。   
 
-當指定的模組是資料庫層級 DDL 觸發程式時， `ALTER ANY DATABASE DDL TRIGGER`需要目前資料庫的許可權。    
+當指定的模組是資料庫層級 DDL 觸發程式時，需要 `ALTER ANY DATABASE DDL TRIGGER` 目前資料庫的許可權。    
 
-當指定的模組是伺服器層級 DDL 觸發程式時， `CONTROL SERVER`需要許可權。
+當指定的模組是伺服器層級 DDL 觸發程式時，需要 `CONTROL SERVER` 許可權。
 
-對於以`EXECUTE AS`子句定義的模組， `IMPERSONATE`指定的主體上必須有許可權。 一般而言，重新整理物件並不會變更`EXECUTE AS`其主體，除非模組是使用`EXECUTE AS USER`所定義，而且主體的使用者名稱現在會解析為與建立模組時不同的使用者。
+對於以子句定義的模組 `EXECUTE AS` ， `IMPERSONATE` 指定的主體上必須有許可權。 一般而言，重新整理物件並不會變更其 `EXECUTE AS` 主體，除非模組是使用所定義， `EXECUTE AS USER` 而且主體的使用者名稱現在會解析為與建立模組時不同的使用者。
  
 ## <a name="examples"></a>範例
 
-下列範例會建立資料表和參考資料表的程式，設定 Always Encrypted，然後示範如何改變數據表並`sp_refresh_parameter_encryption`執行程式。  
+下列範例會建立資料表和參考資料表的程式，設定 Always Encrypted，然後示範如何改變數據表並執行程式 `sp_refresh_parameter_encryption` 。  
 
 首先，建立初始資料表和參考資料表的預存程式。
 ```sql
@@ -135,7 +135,7 @@ GO
 ```
 
 
-最後，我們會將 SSN 資料行取代為加密的資料行， `sp_refresh_parameter_encryption`然後執行程式來更新 Always Encrypted 的元件。
+最後，我們會將 SSN 資料行取代為加密的資料行，然後執行程式 `sp_refresh_parameter_encryption` 來更新 Always Encrypted 的元件。
 ```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO

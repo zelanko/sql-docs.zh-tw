@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_altermessage
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4949307cdaf2cc712e56525e872381c2af8256fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 804e5723732f4879451c885a0aa719d6822925a1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304800"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833556"
 ---
 # <a name="sp_altermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +41,15 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ```  
   
 ## <a name="arguments"></a>引數  
- [**@message_id =** ]*message_number*  
+ [** @message_id =** ] *message_number*  
  這是要從**sys.databases**改變之訊息的錯誤號碼。 *message_number*是**int** ，沒有預設值。  
   
-`[ @parameter = ] 'write\_to\_log_'`會與** \@parameter_value**搭配使用，以指出要將訊息寫入[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔。 *write_to_log*是**sysname** ，沒有預設值。 *write_to_log*必須設定為 WITH_LOG 或 Null。 如果*write_to_log*設定為 WITH_LOG 或 Null，且** \@parameter_value**的值為**true**，則訊息會寫入 Windows 應用程式記錄檔。 如果*write_to_log*設定為 WITH_LOG 或 Null，而** \@parameter_value**的值為**false**，則訊息不一定會寫入 Windows 應用程式記錄檔，但可能會根據錯誤的產生方式來寫入。 如果指定了*write_to_log* ，也必須指定** \@parameter_value**的值。  
+`[ @parameter = ] 'write\_to\_log_'`會與** \@ parameter_value**搭配使用，以指出要將訊息寫入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔。 *write_to_log*是**sysname** ，沒有預設值。 *write_to_log*必須設定為 WITH_LOG 或 Null。 如果*write_to_log*設定為 WITH_LOG 或 Null，且** \@ parameter_value**的值為**True**，則訊息會寫入 Windows 應用程式記錄檔。 如果*write_to_log*設定為 WITH_LOG 或 Null，而** \@ parameter_value**的值為**false**，則訊息不一定會寫入 Windows 應用程式記錄檔，但可能會根據錯誤的產生方式來寫入。 如果指定了*write_to_log* ，也必須指定** \@ parameter_value**的值。  
   
 > [!NOTE]  
 >  如果訊息寫入 Windows 應用程式記錄檔中，它也會寫入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤記錄檔中。  
   
-`[ @parameter_value = ]'value_'`會與** \@參數**搭配使用，表示錯誤要寫入[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔。 *值*為**Varchar （5）**，沒有預設值。 若**為 true**，則錯誤一律會寫入 Windows 應用程式記錄檔。 如果**為 false**，則不一定會將錯誤寫入 Windows 應用程式記錄檔，但可能會根據錯誤的產生方式來寫入。 如果指定了*value* ，則也必須指定*write_to_log*的** \@參數**。  
+`[ @parameter_value = ]'value_'`會與** \@ 參數**搭配使用，表示錯誤要寫入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔。 *值*為**Varchar （5）**，沒有預設值。 若**為 true**，則錯誤一律會寫入 Windows 應用程式記錄檔。 如果**為 false**，則不一定會將錯誤寫入 Windows 應用程式記錄檔，但可能會根據錯誤的產生方式來寫入。 如果指定了*value* ，則也必須指定*write_to_log*的** \@ 參數**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762784"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833392"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="arguments"></a>引數  
 `[ @subscriber = ] 'subscriber'`這是要變更選項之訂閱者的名稱。 *訂閱者*是**sysname**，沒有預設值。  
   
-`[ @type = ] type`這是訂閱者類型。 *類型*是**Tinyint**，預設值是 Null。 **0**表示[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。 **1**指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或其他 ODBC 資料來源伺服器訂閱者。  
+`[ @type = ] type`這是訂閱者類型。 *類型*是**Tinyint**，預設值是 Null。 **0**表示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 **1**指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其他 ODBC 資料來源伺服器訂閱者。  
   
-`[ @login = ] 'login'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入識別碼。 *login* 是預設值為 NULL 的 **sysname**。  
+`[ @login = ] 'login'`這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入識別碼。 *login* 是預設值為 NULL 的 **sysname**。  
   
-`[ @password = ] 'password'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證密碼。 *password*是**sysname**，預設值是**%**。 **%** 表示密碼屬性沒有任何變更。  
+`[ @password = ] 'password'`這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證密碼。 *password*是**sysname**，預設值是 **%** 。 **%** 表示密碼屬性沒有任何變更。  
   
 `[ @commit_batch_size = ] commit_batch_size`僅支援回溯相容性。  
   
@@ -104,7 +104,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|單次|  
 |**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小時|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequence_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是 Null。  
   
@@ -120,15 +120,15 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @security_mode = ] security_mode`是實作為安全性模式。 *security_mode*是**int**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證|  
 |**1**|Windows 驗證|  
   
-`[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者上變更發行項屬性時，不應使用「發行者」。  
+>  在發行者上變更發行項屬性時，不應使用「*發行者*」 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

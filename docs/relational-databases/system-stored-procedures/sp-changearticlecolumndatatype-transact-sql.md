@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f101d9081c7eb898d43c461a3bd64eca0c043b64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa069ffe0d4ce677542ac714b19475aa3930f290
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67995521"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833444"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,19 +53,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
   
 `[ @column = ] 'column'`這是要變更資料類型對應的資料行名稱。 資料*行*是**sysname**，沒有預設值。  
   
-`[ @type = ] 'type'`這是目的地[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料行中的資料類型名稱。 *類型*是**sysname**，預設值是 Null。  
+`[ @type = ] 'type'`這是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地資料行中的資料類型名稱。 *類型*是**sysname**，預設值是 Null。  
   
-`[ @length = ] length`這是目的地[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料行中的資料類型長度。 *長度*是**Bigint**，預設值是 Null。  
+`[ @length = ] length`這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地資料行中的資料類型長度。 *長度*是**Bigint**，預設值是 Null。  
   
-`[ @precision = ] precision`這是目的地[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料行中資料類型的有效位數。 *precision*是**Bigint**，預設值是 Null。  
+`[ @precision = ] precision`這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地資料行中資料類型的有效位數。 *precision*是**Bigint**，預設值是 Null。  
   
-`[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **Sp_changearticlecolumndatatype**可用來覆寫支援的發行者類型（Oracle 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）之間的預設資料類型對應。 若要查看這些預設資料類型對應，請執行[sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)。  
+ **Sp_changearticlecolumndatatype**可用來覆寫支援的發行者類型（Oracle 和）之間的預設資料類型對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 若要查看這些預設資料類型對應，請執行[sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)。  
   
  只有 Oracle 發行者才支援**sp_changearticlecolumndatatype** 。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集執行這個預存程序會發生錯誤。  
   

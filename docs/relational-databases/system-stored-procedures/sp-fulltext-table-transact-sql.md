@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a906f17e655775308d72d04ed8917ca67b205b6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124140"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833225"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_fulltext_table
   
 `[ @action = ] 'action'`這是要執行的動作。 *動作*是**Nvarchar （50）**，沒有預設值，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**建立**|為*qualified_table_name*所參考的資料表建立全文檢索索引的中繼資料，並指定此資料表的全文檢索索引資料應位於*fulltext_catalog_name*中。 這個動作也會指定使用*unique_index_name*做為全文檢索索引鍵資料行。 這個唯一索引必須已經存在，且必須在資料表的某個資料行中定義。<br /><br /> 在擴展全文檢索目錄之前，您無法執行這份資料表的全文檢索搜尋。|  
 |**下拉式**|卸載*qualified_table_name*之全文檢索索引的中繼資料。 如果全文檢索索引在使用中，在卸除之後，也會自動停用。 在卸除全文檢索索引之前，不需要移除資料行。|  
@@ -79,7 +79,7 @@ sp_fulltext_table
  None  
   
 ## <a name="remarks"></a>備註  
- 在停用特定資料表的全文檢索索引之後，現有的全文檢索索引會保留在原處，直到下一次完整擴展為止;不過，因為會封鎖已停用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表上的查詢，所以不會使用這個索引。  
+ 在停用特定資料表的全文檢索索引之後，現有的全文檢索索引會保留在原處，直到下一次完整擴展為止;不過，因為會 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封鎖已停用資料表上的查詢，所以不會使用這個索引。  
   
  如果重新啟動資料表，且沒有重新擴展索引，任何其餘啟用全文檢索的非新增資料行的查詢，仍可以使用舊索引。 在指定全部全文檢索資料行搜尋的查詢中，會符合已刪除的資料行之資料。  
   

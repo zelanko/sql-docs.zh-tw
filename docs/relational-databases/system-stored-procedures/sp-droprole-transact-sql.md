@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droprole
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2573019948a326c9171fc83d62428e7e2f888eb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: df28493f6229a28b0f10d53bebad8bf031e63822
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933813"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833314"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67933813"
   從目前資料庫移除資料庫角色。  
   
 > [!IMPORTANT]  
->  在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中， **sp_droprole**已由 DROP ROLE 語句所取代。 **sp_droprole**僅隨附于與舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相容性，而在未來的版本中可能不受支援。  
+>  在中 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ， **sp_droprole**已由 DROP ROLE 語句所取代。 **sp_droprole**僅隨附于與舊版的相容性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，而在未來的版本中可能不受支援。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

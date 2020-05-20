@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sp_fulltext_keymappings
 - full-text indexes [SQL Server], troubleshooting
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc68be51382b72dee1b143a3535d631ae93dbb7c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124235"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833271"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -62,7 +62,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|這是對應至索引鍵值的內部文件識別碼 (DocId) 資料行。|  
-|Key|*|這是來自指定資料表的全文檢索索引鍵值。<br /><br /> 如果對應資料表中沒有任何的全文檢索索引鍵，就會傳回空白的資料列集。|  
+|答案|*|這是來自指定資料表的全文檢索索引鍵值。<br /><br /> 如果對應資料表中沒有任何的全文檢索索引鍵，就會傳回空白的資料列集。|  
   
  <sup>*</sup>索引鍵的資料類型與基表中全文檢索索引鍵資料行的資料類型相同。  
   
@@ -89,10 +89,10 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="examples"></a>範例  
   
 > [!NOTE]  
->  本節中的範例會使用 `Production.ProductReview` 範例資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表。 您可以藉由執行`ProductReview` [CREATE 全文檢索索引 &#40;transact-sql&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)中針對資料表所提供的範例，來建立此索引。  
+>  本節中的範例會使用 `Production.ProductReview` 範例資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表。 您可以藉由執行 `ProductReview` [CREATE 全文檢索索引 &#40;transact-sql&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)中針對資料表所提供的範例，來建立此索引。  
   
 ### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. 取得所有索引鍵和 DocId 值  
- 下列範例會使用[DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md)語句來建立區域變數， `@table_id`以及指派`ProductReview`資料表的識別碼做為其值。 此範例會**sp_fulltext_keymappings**執行 sp_fulltext_keymappings `@table_id`指定*table_id*參數的。  
+ 下列範例會使用[DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md)語句來建立區域變數， `@table_id` 以及指派資料表的識別碼 `ProductReview` 做為其值。 此範例會執行**sp_fulltext_keymappings**指定 `@table_id` *table_id*參數的。  
   
 > [!NOTE]  
 >  僅使用*table_id*參數的**sp_fulltext_keymappings**適用于小型資料表。  
@@ -117,7 +117,7 @@ GO
 |`4`|`4`|`4`|  
   
 ### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>B. 取得特定索引鍵值的 DocId 值  
- 下列範例會使用 DECLARE 陳述式來建立區域變數 `@table_id`，以及指派 `ProductReview` 資料表的識別碼當做其值。 此範例會**sp_fulltext_keymappings**執行 sp_fulltext_keymappings `@table_id`指定*table_id*參數、 *docid*參數為 Null，而索引*鍵*參數為4。  
+ 下列範例會使用 DECLARE 陳述式來建立區域變數 `@table_id`，以及指派 `ProductReview` 資料表的識別碼當做其值。 此範例會執行**sp_fulltext_keymappings**指定 `@table_id` *table_id*參數、 *docid*參數為 Null，而索引*鍵*參數為4。  
   
 > [!NOTE]  
 >  僅搭配適用于小型資料表的*table_id* parameteris 使用**sp_fulltext_keymappings** 。  

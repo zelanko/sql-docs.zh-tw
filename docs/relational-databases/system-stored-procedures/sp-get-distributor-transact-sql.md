@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_get_distributor
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 63916a86757877dc6ae601c798ba7a987256580c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0e714018ed35a7b6c12c0c00bd8eeffda5630b67
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124122"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833248"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_get_distributor
 |**具有遠端散發發行者**|**int**|**0** = 否;**1** = 是|  
   
 ## <a name="remarks"></a>備註  
- **sp_get_distributor**主要[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]是在快照式、交易式和合併式複寫中使用。  
+ **sp_get_distributor**主要是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在快照式、交易式和合併式複寫中使用。  
   
 ## <a name="permissions"></a>權限  
  任何使用者都可以執行**sp_get_distributor**。 當這個預存程式是由散發資料庫上的**db_owner**或**replmonitor**固定資料庫角色的成員執行時，或是至少一個已發行資料庫上**db_owner**固定資料庫角色的成員，就會傳回非 Null 的結果集。 當這個預存程式是由至少一個已發行資料庫之發行集存取清單（PAL）中的使用者執行時，也會傳回非 Null 結果集，而非 SQL Server 發行者的散發資料庫 PAL 也可以執行**sp_get_distributor**。  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - query_store_runtime_stats catalog view
 - sys.query_store_runtime_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bd7f1870a88ae2050445050565e0f268f4d9b0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e90e93d0c56d96cc88b5be0eeed8680bf29c83cf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148283"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834106"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys.databases query_store_runtime_stats （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -93,11 +93,11 @@ ms.locfileid: "70148283"
 |**min_log_bytes_used**|**bigint**|查詢計劃所使用的資料庫記錄檔中的最小位元組數目，在匯總間隔內。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**max_log_bytes_used**|**bigint**|查詢計劃所使用的資料庫記錄檔中的最大位元組數目（在匯總間隔內）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**stdev_log_bytes_used**|**float**|查詢計劃所使用之資料庫記錄中的位元組數目標準差（在匯總間隔內）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
-|**avg_tempdb_space_used**|**float**|匯總間隔內查詢計劃的平均分頁讀取數。 （以讀取的8KB 頁數表示）。<br><br/>**適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從起[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**last_tempdb_space_used**|**bigint**|匯總間隔內查詢計劃的最後頁面讀取數目。 （以讀取的8KB 頁數表示）。<br><br/>**適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從起[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**min_tempdb_space_used**|**bigint**|匯總間隔內查詢計劃的頁面讀取數目下限。 （以讀取的8KB 頁數表示）。<br><br/>**適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從起[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**max_tempdb_space_used**|**bigint**|匯總間隔內查詢計劃的頁面讀取數目上限。（以讀取的8KB 頁數表示）。<br><br/>**適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從起[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**stdev_tempdb_space_used**|**float**|分頁數目會在匯總間隔內讀取查詢計劃的標準差。 （以讀取的8KB 頁數表示）。<br><br/>**適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從起[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**avg_tempdb_space_used**|**float**|匯總間隔內查詢計劃的平均分頁讀取數。 （以讀取的8KB 頁數表示）。<br><br/>**適用物件：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（從開始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
+|**last_tempdb_space_used**|**bigint**|匯總間隔內查詢計劃的最後頁面讀取數目。 （以讀取的8KB 頁數表示）。<br><br/>**適用物件：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（從開始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
+|**min_tempdb_space_used**|**bigint**|匯總間隔內查詢計劃的頁面讀取數目下限。 （以讀取的8KB 頁數表示）。<br><br/>**適用物件：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（從開始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
+|**max_tempdb_space_used**|**bigint**|匯總間隔內查詢計劃的頁面讀取數目上限。（以讀取的8KB 頁數表示）。<br><br/>**適用物件：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（從開始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
+|**stdev_tempdb_space_used**|**float**|分頁數目會在匯總間隔內讀取查詢計劃的標準差。 （以讀取的8KB 頁數表示）。<br><br/>**適用物件：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（從開始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
 |**avg_page_server_io_reads**|**float**|匯總間隔內查詢計劃的頁面伺服器 i/o 讀取平均數目。 （以讀取的8KB 頁數表示）。<br><br/>**適用物件：** Azure SQL Database 超大規模資料庫</br>**注意：** Azure SQL 資料倉儲，Azure SQL DB，MI （非超大規模資料庫）一律會傳回零（0）。|
 |**last_page_server_io_reads**|**bigint**|匯總間隔內查詢計劃的最後頁面伺服器 i/o 讀取數。 （以讀取的8KB 頁數表示）。<br><br/>**適用物件：** Azure SQL Database 超大規模資料庫</br>**注意：** Azure SQL 資料倉儲，Azure SQL DB，MI （非超大規模資料庫）一律會傳回零（0）。|
 |**min_page_server_io_reads**|**bigint**|匯總間隔內查詢計劃的頁面伺服器 i/o 讀取次數下限。 （以讀取的8KB 頁數表示）。<br><br/>**適用物件：** Azure SQL Database 超大規模資料庫</br>**注意：** Azure SQL 資料倉儲，Azure SQL DB，MI （非超大規模資料庫）一律會傳回零（0）。|
@@ -115,7 +115,7 @@ ms.locfileid: "70148283"
  [query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢存放區預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
  [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)   

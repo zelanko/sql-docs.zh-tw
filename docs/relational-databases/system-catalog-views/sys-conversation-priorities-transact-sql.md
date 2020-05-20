@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Service Broker, conversations
 - sys.conversation_priorities catalog view
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8a1278426b6774c8f5c2d9bb13577e1499930c13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9398862ba3c86496ce235efc53b750d2c5f91ccf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68109474"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832772"
 ---
 # <a name="sysconversation_priorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68109474"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |Priority_id|**int**|用來唯一識別交談優先權的號碼。 不是 NULLABLE。|  
-|NAME|**sysname**|交談優先權的名稱。 不是 NULLABLE。|  
+|name|**sysname**|交談優先權的名稱。 不是 NULLABLE。|  
 |service_contract_id|**int**|為此交談優先權指定之合約的識別碼。 這可以在 sys.service_contracts 中的 service_contract_id 資料行上繫結。 NULLABLE。|  
 |local_service_id|**int**|針對此交談優先權指定為本機服務之服務的識別碼。 此資料行可以在 sys.services 中的 service_contract_id 資料行上繫結。 NULLABLE。|  
 |remote_service_name|**nvarchar(256)**|針對此交談優先權指定為遠端服務之服務的名稱。 NULLABLE。|  
@@ -66,7 +66,7 @@ ORDER BY priority_name, contract_name,
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER BROKER PRIORITY &#40;Transact-sql&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [CREATE BROKER PRIORITY &#40;Transact-sql&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-sql&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [sys. services &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)   
  [service_contracts &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)  

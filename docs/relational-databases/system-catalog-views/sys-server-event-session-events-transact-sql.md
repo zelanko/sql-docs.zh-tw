@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.server_event_session_events catalog view
 - xe
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ac3c2bd13b5f89ea8d87336e579e196e3754c5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b15a38ac2b0bc18d1c0bcf101d0636436ffce111
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133234"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834026"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "68133234"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的識別碼。 不可為 Null。|  
 |event_id|**int**|事件的識別碼。 這個識別碼在事件工作階段物件中是唯一的。 不可為 Null。|  
-|NAME|**sysname**|事件的名稱。 不可為 Null。|  
+|name|**sysname**|事件的名稱。 不可為 Null。|  
 |套件|**sysname**|包含此事件之事件封裝的名稱。 不可為 Null。|  
-|module|**sysname**|包含此事件之模組的名稱。 不可為 Null。|  
+|name|**sysname**|包含此事件之模組的名稱。 不可為 Null。|  
 |predicate|**Nvarchar （3000）**|套用至事件的述詞運算式。 可為 Null。|  
 |predicate_xml|**Nvarchar （3000）**|套用至事件的 XML 述詞運算式。 可為 Null。|  
   

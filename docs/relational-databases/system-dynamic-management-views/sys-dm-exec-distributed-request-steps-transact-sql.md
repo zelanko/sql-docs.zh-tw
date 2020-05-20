@@ -19,22 +19,22 @@ helpviewer_keywords:
 - dm_exec_distributed_request_steps
 - sys.dm_exec_distributed_request_steps management view
 ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5c40ce6d1c7b7ef85f24fc8032559e000d89be1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e5b2dcf0cf62d9fe6157284409d96bec8f105b4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097826"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833759"
 ---
 # <a name="sysdm_exec_distributed_request_steps-transact-sql"></a>sys.databases dm_exec_distributed_request_steps （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   保存組成指定的 PolyBase 要求或查詢之所有步驟的相關資訊。 它會針對每個查詢步驟列出一個資料列。  
   
-|資料行名稱|資料類型|描述|範圍|  
+|資料行名稱|資料類型|說明|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|execution_id 和 step_index 組成此視圖的索引鍵。 與要求相關聯的唯一數值識別碼。|請參閱[dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的識別碼。|  
 |step_index|**int**|此步驟在組成要求的步驟順序中的位置。|0到（n-1），代表具有 n 個步驟的要求。|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa6a12a45a5c0609b4b717ccdf90af63ea53776b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084882"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833111"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,11 +99,11 @@ sp_update_jobstep
   
 `[ @on_fail_step_id = ] fail_step_id`如果步驟失敗且*fail_action*為**4**時，此作業中要執行之步驟的識別碼。 *fail_step_id*是**int**，預設值是 Null。  
   
-`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *伺服器*是**Nvarchar （128）**，預設值是 Null。  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*伺服器*是**Nvarchar （128）**，預設值是 Null。  
   
-`[ @database_name = ] 'database'`要在其中執行[!INCLUDE[tsql](../../includes/tsql-md.md)]步驟的資料庫名稱。 *資料庫*為**sysname**。 不允許以括號 ([ ]) 括住的名稱。 預設值是 NULL。  
+`[ @database_name = ] 'database'`要在其中執行步驟的資料庫名稱 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *資料庫*為**sysname**。 不允許以括號 ([ ]) 括住的名稱。 預設值是 NULL。  
   
-`[ @database_user_name = ] 'user'`執行[!INCLUDE[tsql](../../includes/tsql-md.md)]步驟時要使用的使用者帳戶名稱。 *user*是**sysname**，預設值是 Null。  
+`[ @database_user_name = ] 'user'`執行步驟時要使用的使用者帳戶名稱 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *user*是**sysname**，預設值是 Null。  
   
 `[ @retry_attempts = ] retry_attempts`此步驟失敗時所要使用的重試次數。 *retry_attempts*是**int**，預設值是 Null。  
   
@@ -127,9 +127,9 @@ sp_update_jobstep
 |**8**|將記錄寫入資料表 (覆寫現有的記錄)。|  
 |**1600**|將記錄寫入資料表 (附加至現有的記錄)。|  
   
-`[ @proxy_id = ] proxy_id`執行作業步驟之 proxy 的 ID 編號。 *proxy_id*的類型為**int**，預設值為 Null。 如果未指定任何*proxy_id* 、未指定任何*proxy_name* ，而且未指定任何*user_name* ，則作業步驟會以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的服務帳戶執行。  
+`[ @proxy_id = ] proxy_id`執行作業步驟之 proxy 的 ID 編號。 *proxy_id*的類型為**int**，預設值為 Null。 如果未指定任何*proxy_id* 、未指定任何*proxy_name* ，而且未指定任何*user_name* ，則作業步驟會以 Agent 的服務帳戶執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-`[ @proxy_name = ] 'proxy_name'`執行作業步驟的 proxy 名稱。 *proxy_name*的類型為**sysname**，預設值為 Null。 如果未指定任何*proxy_id* 、未指定任何*proxy_name* ，而且未指定任何*user_name* ，則作業步驟會以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的服務帳戶執行。  
+`[ @proxy_name = ] 'proxy_name'`執行作業步驟的 proxy 名稱。 *proxy_name*的類型為**sysname**，預設值為 Null。 如果未指定任何*proxy_id* 、未指定任何*proxy_name* ，而且未指定任何*user_name* ，則作業步驟會以 Agent 的服務帳戶執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -152,7 +152,7 @@ sp_update_jobstep
   
  只有**系統管理員（sysadmin** ）的成員可以更新另一位使用者所擁有的作業步驟。  
   
- 如果作業步驟需要存取 Proxy，作業步驟的建立者必須有權存取作業步驟的 Proxy。 除了 Transact-SQL，所有子系統都需要 Proxy 帳戶。 **系統管理員（sysadmin** ）的成員具有所有 proxy 的存取權[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，而且可以使用代理程式服務帳戶來取得 proxy。  
+ 如果作業步驟需要存取 Proxy，作業步驟的建立者必須有權存取作業步驟的 Proxy。 除了 Transact-SQL，所有子系統都需要 Proxy 帳戶。 **系統管理員（sysadmin** ）的成員具有所有 proxy 的存取權，而且可以使用代理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式服務帳戶來取得 proxy。  
   
 ## <a name="examples"></a>範例  
  下列範例會變更 `Weekly Sales Data Backup` 作業之第一個步驟的重試次數。 執行這個範例之後，重試次數是 `10`。  

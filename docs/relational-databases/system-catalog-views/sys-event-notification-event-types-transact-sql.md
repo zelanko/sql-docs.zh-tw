@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.event_notification_event_types catalog view
 ms.assetid: 73dae456-7044-4b00-b0bd-990ef810b356
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b113044f46a09b54ed8c9d6f0fafdab2ec5b06c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 83a69d893040dbe2dc33aca05dada8fac9bd0d8e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061394"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831964"
 ---
 # <a name="sysevent_notification_event_types-transact-sql"></a>sys.event_notification_event_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

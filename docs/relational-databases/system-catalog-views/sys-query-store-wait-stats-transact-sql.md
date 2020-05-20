@@ -19,12 +19,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bff80fbe2b5022e12eca58de42192a3a1bb18d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c94f7f23697539b000c9c76dc1d0970a56a96d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74190365"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834088"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys.databases query_store_wait_stats （Transact-sql）
 
@@ -41,11 +41,11 @@ ms.locfileid: "74190365"
 |**wait_category_desc**|**nvarchar(128)**|如需 [等候類別目錄] 欄位的文字描述，請參閱下表。|
 |**execution_type**|**tinyint**|決定查詢執行的類型：<br /><br /> 0-正常執行（成功完成）<br /><br /> 3-用戶端起始的中止執行<br /><br /> 4-例外狀況已中止執行|  
 |**execution_type_desc**|**nvarchar(128)**|執行類型欄位的文字描述：<br /><br /> 0-一般<br /><br /> 3-已中止<br /><br /> 4-例外狀況|  
-|**total_query_wait_time_ms**|**bigint**|匯總`CPU wait`間隔和等候類別中查詢計劃的總時間（以毫秒為單位來報告）。|
+|**total_query_wait_time_ms**|**bigint**|匯總 `CPU wait` 間隔和等候類別中查詢計劃的總時間（以毫秒為單位來報告）。|
 |**avg_query_wait_time_ms**|**float**|在匯總間隔和等候類別中，每次執行查詢計劃的平均等候持續時間（以毫秒為單位來報告）。|
 |**last_query_wait_time_ms**|**bigint**|匯總間隔和等候類別中查詢計劃的最後等候持續時間（以毫秒為單位來報告）。|
-|**min_query_wait_time_ms**|**bigint**|匯總`CPU wait`間隔和等候類別中查詢計劃的最小時間（以毫秒為單位來報告）。|
-|**max_query_wait_time_ms**|**bigint**|匯總`CPU wait`間隔和等候類別中查詢計劃的最長時間（以毫秒為單位來報告）。|
+|**min_query_wait_time_ms**|**bigint**|`CPU wait`匯總間隔和等候類別中查詢計劃的最小時間（以毫秒為單位來報告）。|
+|**max_query_wait_time_ms**|**bigint**|`CPU wait`匯總間隔和等候類別中查詢計劃的最長時間（以毫秒為單位來報告）。|
 |**stdev_query_wait_time_ms**|**float**|`Query wait`匯總間隔和等候類別中查詢計劃的持續時間標準差（以毫秒為單位來報告）。|
 
 ## <a name="wait-categories-mapping-table"></a>等候類別對應表
@@ -54,8 +54,8 @@ ms.locfileid: "74190365"
   
 |整數值|等候類別|等候類型包含在類別中|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unknown**|Unknown |  
-|**1**|**使用率**|SOS_SCHEDULER_YIELD|
+|**0**|**未知**|Unknown |  
+|**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**背景工作執行緒**|THREADPOOL|
 |**3**|**狀**|LCK_M_%|
 |**4**|**插銷**|LATCH_%|
@@ -65,7 +65,7 @@ ms.locfileid: "74190365"
 |**8**|**SQL CLR**|CLR%、SQLCLR%|
 |**9**|**鏡像**|DBMIRROR%|
 |**10**|**事務**|交易%、DTC%、TRAN_MARKLATCH_%、MSQL_XACT_%、TRANSACTION_MUTEX|
-|**11**|**Idle**|SLEEP_%、LAZYWRITER_SLEEP、SQLTRACE_BUFFER_FLUSH、SQLTRACE_INCREMENTAL_FLUSH_SLEEP、SQLTRACE_WAIT_ENTRIES、FT_IFTS_SCHEDULER_IDLE_WAIT、XE_DISPATCHER_WAIT、REQUEST_FOR_DEADLOCK_SEARCH、LOGMGR_QUEUE、ONDEMAND_TASK_QUEUE、CHECKPOINT_QUEUE、XE_TIMER_EVENT|
+|**11**|**閒置**|SLEEP_%、LAZYWRITER_SLEEP、SQLTRACE_BUFFER_FLUSH、SQLTRACE_INCREMENTAL_FLUSH_SLEEP、SQLTRACE_WAIT_ENTRIES、FT_IFTS_SCHEDULER_IDLE_WAIT、XE_DISPATCHER_WAIT、REQUEST_FOR_DEADLOCK_SEARCH、LOGMGR_QUEUE、ONDEMAND_TASK_QUEUE、CHECKPOINT_QUEUE、XE_TIMER_EVENT|
 |**12**|**防患於未然**|PREEMPTIVE_%|
 |**十三**|**Service Broker**|BROKER_% **（但不是 BROKER_RECEIVE_WAITFOR）**|
 |**14**|**事務記錄 IO**|LOGMGR、LOGBUFFER、LOGMGR_RESERVE_APPEND、LOGMGR_FLUSH、LOGMGR_PMM_LOG、CHKPT、WRITELOG|

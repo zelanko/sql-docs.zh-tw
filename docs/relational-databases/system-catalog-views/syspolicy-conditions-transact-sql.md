@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_conditions view
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ee0f269fcfda93733d36a0b7396fd72d16bc01d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2f047007397eb302859f80bb5efe4b106a33ae61
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68121174"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833805"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68121174"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |condition_id|**int**|此條件的識別碼。 每一個條件都代表一或多個條件運算式的集合。|  
-|NAME|**sysname**|此條件的名稱。|  
+|name|**sysname**|此條件的名稱。|  
 |date_created|**datetime**|建立此條件的日期和時間。|  
 |description|**nvarchar(max)**|此條件的描述 描述資料行為選擇性，而且可為 NULL。|  
 |created_by|**sysname**|建立此條件的登入。|  
@@ -40,7 +40,7 @@ ms.locfileid: "68121174"
 |date_modified|**datetime**|建立此條件的日期和時間。 如果從未修改過，則為 NULL。|  
 |is_name_condition|**smallint**|指定條件是否為命名條件。<br /><br /> 0 = 條件運算式不包含 @Name 變數。<br /><br /> 1 = 條件運算式包含 @@Name 變數。|  
 |facet|**nvarchar(max)**|此條件所根據之 Facet 的名稱。|  
-|運算是|**nvarchar(max)**|Facet 狀態的運算式。|  
+|運算式|**nvarchar(max)**|Facet 狀態的運算式。|  
 |obj_name|**sysname**|如果條件運算式包含 @Name 變數，則為指派給此變數的物件名稱。|  
   
 ## <a name="remarks"></a>備註  

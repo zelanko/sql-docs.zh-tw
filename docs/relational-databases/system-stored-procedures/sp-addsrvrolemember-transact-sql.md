@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addsrvrolemember
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab49a6572bfe8b2879b832642eeb1cf692177bb6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022421"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833642"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,8 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @loginame **=** ] **[**_登_**'** 入]  
- 這是加入至固定伺服器角色的登入名稱。 *login*是**sysname**，沒有預設值。 *登*入可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 登入。 如果 Windows 登入尚未獲得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權，會自動授與其存取權。  
+ [ @loginame **=** ] ** **[_登_**'** 入]  
+ 這是加入至固定伺服器角色的登入名稱。 *login*是**sysname**，沒有預設值。 *登*入可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 登入。 如果 Windows 登入尚未獲得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權，會自動授與其存取權。  
   
  [ @rolename **=** ] **'**_角色_**'**  
  這是要加入登入的固定伺服器角色名稱。 *role*是**sysname**，預設值是 Null，而且必須是下列其中一個值：  
@@ -81,7 +81,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
  需要加入新成員之角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會將 Windows 登`Corporate\HelenS`入加入至`sysadmin`固定伺服器角色。  
+ 下列範例會將 Windows 登入加入 `Corporate\HelenS` 至 `sysadmin` 固定伺服器角色。  
   
 ```  
 EXEC sp_addsrvrolemember 'Corporate\HelenS', 'sysadmin';  

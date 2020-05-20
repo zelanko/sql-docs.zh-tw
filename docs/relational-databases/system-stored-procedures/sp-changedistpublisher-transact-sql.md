@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistpublisher
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb90ec6a3d5413d22f4721491d3b151a7e28ac05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771358"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833419"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |屬性|值|描述|  
 |--------------|------------|-----------------|  
-|**作用中**|**true**|啟動發行者。|  
+|**active**|**true**|啟動發行者。|  
 ||**false**|停用發行者|  
 |**distribution_db**||散發資料庫的名稱。|  
-|**login**||登入名稱。|  
+|**登入**||登入名稱。|  
 |**password**||提供之登入的增強式密碼。|  
-|**security_mode**|**1**|當連接到發行者時，使用 Windows 驗證。 *這無法針對非*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *發行者*進行變更。|  
-||**0**|當連接到發行者時，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 *這無法針對非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *發行者*進行變更。|  
+|**security_mode**|**1**|當連接到發行者時，使用 Windows 驗證。 *這不能變更為非* [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*發行者。*|  
+||**0**|當連接到發行者時，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 *這不能變更為非* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*發行者。*|  
 |**working_directory**||用來儲存發行集資料和結構描述檔案的工作目錄。|  
 |NULL (預設值)||所有可用的*屬性*選項都會列印出來。| 
 |**storage_connection_string**| 存取金鑰 | 當資料庫 Azure SQL Database 受控執行個體時，工作目錄的存取金鑰。 

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c49e4e01dd8ddaf0667546a8cc221a7918f42c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911208"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833754"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
 
@@ -32,7 +32,7 @@ ms.locfileid: "70911208"
 
   傳回 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 伺服器中的資料庫上所執行之作業的相關資訊。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|說明|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|作業的識別碼。 非 Null。|  
 |resource_type|**int**|表示執行作業所在資源的類型。 非 Null。 在目前的版本中，這個檢視只會追蹤 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上所執行的作業，對應的整數值為 0。|  
@@ -54,7 +54,7 @@ ms.locfileid: "70911208"
  此視圖僅適用于**master**資料庫中的伺服器層級主體登入。  
   
 ## <a name="remarks"></a>備註  
- 若要使用此視圖，您必須連接到**master**資料庫。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]使用伺服器`sys.dm_operation_status`的 master 資料庫中的 view 來追蹤在上執行之下列作業的狀態： **master** [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ 若要使用此視圖，您必須連接到**master**資料庫。 使用 `sys.dm_operation_status` 伺服器的**master**資料庫中的 view [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 來追蹤在上執行之下列作業的狀態 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ：  
   
 -   建立資料庫  
   

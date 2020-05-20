@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 098d027ff74bad7b4215a96044f4044fda9ee98e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084845"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832516"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,41 +53,41 @@ sp_update_operator
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @name=]'*name*'  
+ [ @name =] '*name*'  
  要修改的操作員名稱。 *名稱*是**sysname**，沒有預設值。  
   
- [ @new_name=]'*new_name*'  
+ [ @new_name =] '*new_name*'  
  操作員的新名稱。 這個名稱必須是唯一的。 *new_name*是**sysname**，預設值是 Null。  
   
- [ @enabled=]*已啟用*  
+ [ @enabled =]*已啟用*  
  指出操作員目前狀態的數位（如果目前已啟用，則為**1** ，否則為**0** ）。 *enabled*是**Tinyint**，預設值是 Null。 如果未啟用，操作員不會收到警示通知。  
   
- [ @email_address=]'*email_address*'  
+ [ @email_address =] '*email_address*'  
  操作員的電子郵件地址。 這個字串會直接傳遞至電子郵件系統。 *email_address*是**Nvarchar （100）**，預設值是 Null。  
   
- [ @pager_address=]'*pager_number*'  
+ [ @pager_address =] '*pager_number*'  
  操作員的呼叫器號碼。 這個字串會直接傳遞至電子郵件系統。 *pager_number*是**Nvarchar （100）**，預設值是 Null。  
   
- [ @weekday_pager_start_time=]*weekday_pager_start_time*  
+ [ @weekday_pager_start_time =] *weekday_pager_start_time*  
  指定從星期一到星期五，在什麼時間之後，可以將呼叫器通知傳給這位操作員。 *weekday_pager_start_time*是**int**，預設值是 Null，而且必須以 HHMMSS 形式輸入，以用於24小時制。  
   
- [ @weekday_pager_end_time=]*weekday_pager_end_time*  
+ [ @weekday_pager_end_time =] *weekday_pager_end_time*  
  指定從星期一到星期五，在什麼時間之後，不能將呼叫器通知傳給指定的操作員。 *weekday_pager_end_time*是**int**，預設值是 Null，而且必須以 HHMMSS 形式輸入，以用於24小時制。  
   
- [ @saturday_pager_start_time=]*saturday_pager_start_time*  
+ [ @saturday_pager_start_time =] *saturday_pager_start_time*  
  指定在星期六的什麼時間之後，可以將呼叫器通知傳給指定的操作員。 *saturday_pager_start_time*是**int**，預設值是 Null，而且必須以 HHMMSS 形式輸入，以用於24小時制。  
   
- [ @saturday_pager_end_time=]*saturday_pager_end_time*  
+ [ @saturday_pager_end_time =] *saturday_pager_end_time*  
  指定在星期六的什麼時間之後，不能將呼叫器通知傳給指定的操作員。 *saturday_pager_end_time*是**int**，預設值是 Null，而且必須以 HHMMSS 形式輸入，以用於24小時制。  
   
- [ @sunday_pager_start_time=]*sunday_pager_start_time*  
+ [ @sunday_pager_start_time =] *sunday_pager_start_time*  
  指定在星期日的什麼時間之後，可以將呼叫器通知傳給指定的操作員。 *sunday_pager_start_time*是**int**，預設值是 Null，而且必須以 HHMMSS 形式輸入，以用於24小時制。  
   
- [ @sunday_pager_end_time=]*sunday_pager_end_time*  
+ [ @sunday_pager_end_time =] *sunday_pager_end_time*  
  指定在星期日的什麼時間之後，不能將呼叫器通知傳給指定的操作員。 *sunday_pager_end_time*是**int**，預設值是 Null，而且必須以 HHMMSS 形式輸入，以用於24小時制。  
   
- [ @pager_days=]*pager_days*  
- 指定操作員能夠接收呼叫的日子 (遵照指定的開始/結束時間)。 *pager_days*是**Tinyint**，預設值是 Null，而且必須是介於**0**到**127**之間的值。 *pager_days*的計算方式是新增所需天數的個別值。 例如，從星期一到星期五是**2**+**4**+**8**+**16**+**32** = **64**。  
+ [ @pager_days =] *pager_days*  
+ 指定操作員能夠接收呼叫的日子 (遵照指定的開始/結束時間)。 *pager_days*是**Tinyint**，預設值是 Null，而且必須是介於**0**到**127**之間的值。 *pager_days*的計算方式是新增所需天數的個別值。 例如，從星期一到星期五是**2** + **4** + **8** + **16** + **32**  =  **64**。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -99,10 +99,10 @@ sp_update_operator
 |**32**|星期五|  
 |**64**|星期六|  
   
- [ @netsend_address=]'*netsend_address*'  
+ [ @netsend_address =] '*netsend_address*'  
  要傳送網路訊息的目標操作員網路位址。 *netsend_address*是**Nvarchar （100）**，預設值是 Null。  
   
- [ @category_name=]'*category*'  
+ [ @category_name =] '*category*'  
  這個警示的類別目錄名稱。 *category*是**sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  

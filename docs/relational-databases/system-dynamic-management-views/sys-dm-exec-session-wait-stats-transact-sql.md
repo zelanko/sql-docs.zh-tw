@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_session_wait_stats
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6fc51bec78cf01522e6731648bdb7870ea7d9fb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4d668fbabc20ef6e7acf8b38064378f74a3b15c6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982614"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833761"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>sys.databases dm_exec_session_wait_stats （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  傳回針對每個會話執行之執行緒所遇到之所有等候的相關資訊。 您可以使用此視圖來診斷[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會話的效能問題，以及特定查詢和批次。  此視圖會傳回與針對 sys.databases 所匯總的相同資訊[dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)但也會提供**session_id**號碼。  
+  傳回針對每個會話執行之執行緒所遇到之所有等候的相關資訊。 您可以使用此視圖來診斷會話的效能問題 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以及特定查詢和批次。  此視圖會傳回與針對 sys.databases 所匯總的相同資訊[dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)但也會提供**session_id**號碼。  
   
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73982614"
  如需等候類型的詳細資訊，請參閱[dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。  
   
 ## <a name="permissions"></a>權限  
- 如果使用者具有伺服器的**VIEW SERVER STATE**許可權，使用者會看到實例上所有執行中的會話[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];否則，使用者只會看到目前的會話。  
+ 如果使用者具有伺服器的**VIEW SERVER STATE**許可權，使用者會看到實例上所有執行中的會話 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; 否則，使用者只會看到目前的會話。  
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

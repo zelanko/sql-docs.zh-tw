@@ -13,14 +13,14 @@ helpviewer_keywords:
 - system tables [SQL Server], replication
 - replication [SQL Server], system tables
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 58fb3b54989dec45a56c057cb472e1107e9e4e48
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910231"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834163"
 ---
 # <a name="replication-tables-transact-sql"></a>複寫資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "67910231"
 |[MSqreader_history](msqreader-history-transact-sql.md)            ||
 | &nbsp; | &nbsp; |
   
- 散發資料庫中的這些資料表是用來從非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者複寫資料。 如需詳細資訊，請參閱[非 SQL Server 的發行者](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)。  
+ 散發資料庫中的這些資料表是用來從非發行者複寫資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需詳細資訊，請參閱[非 SQL Server 的發行者](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)。  
   
 |||  
 |-|-|  
@@ -91,7 +91,7 @@ ms.locfileid: "67910231"
  
 |||  
 |-|-|  
-|[conflict_\<架構>_\<資料表>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_ \< 架構>_ \< 資料表>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  

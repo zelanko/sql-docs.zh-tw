@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_change_job
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 0c2c39363ca1b0824b27645df8c8501931b674a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c0cc477647150a11fc644378196f97cfc21007ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056760"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832508"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +63,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  當*連續*= 0 時， **sp_cdc_scan**作業會執行到記錄檔的*max_scans*掃描，處理每次掃描期間的*max_trans*交易，然後結束。  
   
- 如果** \@連續**從1變更為0， ** \@則 pollinginterval**會自動設定為0。 為0指定的** \@pollinginterval**以外的值會被忽略。  
+ 如果** \@ 連續**從1變更為0，則** \@ pollinginterval**會自動設定為0。 為0指定的** \@ pollinginterval**以外的值會被忽略。  
   
- 如果** \@** 省略 [連續] 或明確設定為 Null，而且** \@pollinginterval**明確設定為大於0的值， ** \@** 則 [連續] 會自動設為1。  
+ 如果省略 [ ** \@ 連續**] 或明確設定為 Null，而且** \@ pollinginterval**明確設定為大於0的值，則 [ ** \@ 連續**] 會自動設為1。  
   
  「*連續*」只對「捕獲」作業有效。  
   
@@ -98,7 +98,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>範例  
   
 ### <a name="a-changing-a-capture-job"></a>A. 變更擷取作業  
- 下列`@job_type`範例會更新`@maxscans` `@maxtrans` `AdventureWorks2012`資料庫中 capture 作業的、和參數。 擷取作業其他有效的參數 (`@continuous` 和 `@pollinginterval`) 被省略，而且其值不會進行修改。  
+ 下列範例會更新 `@job_type` `@maxscans` `@maxtrans` 資料庫中 capture 作業的、和參數 `AdventureWorks2012` 。 擷取作業其他有效的參數 (`@continuous` 和 `@pollinginterval`) 被省略，而且其值不會進行修改。  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. 變更清除作業  
- 下列範例會在 `AdventureWorks2012` 資料庫中更新清除作業。 系統會指定此作業類型的所有有效參數（[ ** \@臨界值**] 除外）。 [ ** \@閾值**] 的值不會修改。  
+ 下列範例會在 `AdventureWorks2012` 資料庫中更新清除作業。 系統會指定此作業類型的所有有效參數（[ ** \@ 臨界值**] 除外）。 [ ** \@ 閾值**] 的值不會修改。  
   
 ```  
 USE AdventureWorks2012;  

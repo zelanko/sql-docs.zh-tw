@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergearticles system table
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d712f462ebe504df20ded93d6a9730ce31e4d0db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8328c332fe35b8e157c8631d90b8de67c6e96e17
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251942"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831929"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +69,8 @@ ms.locfileid: "72251942"
 |**gen_cur**|**int**|發行項基底資料表的本機變更產生數目。|  
 |**vertical_partition**|**int**|指定是否啟用資料表發行項的資料行篩選。 **0**表示沒有垂直篩選，而且會發行所有資料行。|  
 |**identity_support**|**int**|指定是否啟用自動識別範圍處理。 **1**表示已啟用識別範圍處理， **0**表示不支援識別範圍。|  
-|**before_image_objid**|**int**|追蹤資料表物件識別碼。 當建立發行集時，追蹤資料表包含特定索引鍵資料行值， * \@keep_partition_changes* = **為 true**。|  
-|**before_view_objid**|**int**|檢視資料表的物件識別碼。 檢視所在的資料表會追蹤是否刪除或更新了在它之前屬於特定訂閱者的資料列。 只有在以* \@keep_partition_changes* = **true**建立發行集時才適用。|  
+|**before_image_objid**|**int**|追蹤資料表物件識別碼。 當建立發行集時，追蹤資料表包含特定索引鍵資料行值， * \@ keep_partition_changes*  =  **為 true**。|  
+|**before_view_objid**|**int**|檢視資料表的物件識別碼。 檢視所在的資料表會追蹤是否刪除或更新了在它之前屬於特定訂閱者的資料列。 只有在以* \@ keep_partition_changes*true 建立發行集時才適用  =  **。**|  
 |**verify_resolver_signature**|**int**|指定在合併式複寫中使用解析程式之前，是否要驗證數位簽章：<br /><br /> **0** = 未驗證簽章。<br /><br /> **1** = 已驗證簽章，以查看它是否來自信任的來源。|  
 |**allow_interactive_resolver**|**bit**|指定是否啟用發行項的互動式解析程式。 **1**指定在發行項上使用互動式解析程式。|  
 |**fast_multicol_updateproc**|**bit**|指定是否已啟用合併代理程式，以在 UPDATE 陳述式中，將變更套用相同資料列的多個資料行中。<br /><br /> **0** = 針對每個變更的資料行發出個別的更新。<br /><br /> **1** = 發出 UPDATE 語句，使一個語句中的多個資料行發生更新。|  

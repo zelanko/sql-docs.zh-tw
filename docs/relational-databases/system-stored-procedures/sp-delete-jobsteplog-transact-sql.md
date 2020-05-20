@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobsteplog
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 66b353c7fc79b49cb9cd3fb9fe228075f3a0d473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e56f2c544f168dbcedc0424f26818aad2e3c2c79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305095"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833339"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +49,15 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 > **注意：** 必須指定*job_id*或*job_name* ，但不能同時指定兩者。  
   
-`[ @step_id = ] step_id`作業中要刪除作業步驟記錄之步驟的識別碼。 如果未包含，則會刪除作業中的所有作業步驟記錄** \@ ** ，除非已指定 older_than 或** \@larger_than** 。 *step_id*是**int**，預設值是 Null。  
+`[ @step_id = ] step_id`作業中要刪除作業步驟記錄之步驟的識別碼。 如果未包含，則會刪除作業中的所有作業步驟記錄，除非已指定** \@ older_than**或** \@ larger_than** 。 *step_id*是**int**，預設值是 Null。  
   
 `[ @step_name = ] 'step_name'`作業中要刪除作業步驟記錄之步驟的名稱。 *step_name*是**sysname**，預設值是 Null。  
   
 > **注意：** 可以指定*step_id*或*step_name* ，但不能同時指定兩者。  
   
-`[ @older_than = ] 'date'`您想要保留的最舊作業步驟記錄的日期和時間。 在這個日期和時間之前的所有作業步驟記錄都會被移除。 *date*是**datetime**，預設值是 Null。 可以** \@** 同時指定 older_than 和** \@larger_than** 。  
+`[ @older_than = ] 'date'`您想要保留的最舊作業步驟記錄的日期和時間。 在這個日期和時間之前的所有作業步驟記錄都會被移除。 *date*是**datetime**，預設值是 Null。 可以同時指定** \@ older_than**和** \@ larger_than** 。  
   
-`[ @larger_than = ] 'size_in_bytes'`您想要保留的最大作業步驟記錄大小（以位元組為單位）。 所有超出這個大小的作業步驟記錄都會被移除。 可以** \@** 同時指定 larger_than 和** \@older_than** 。  
+`[ @larger_than = ] 'size_in_bytes'`您想要保留的最大作業步驟記錄大小（以位元組為單位）。 所有超出這個大小的作業步驟記錄都會被移除。 可以同時指定** \@ larger_than**和** \@ older_than** 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -68,7 +68,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>備註  
  **sp_delete_jobsteplog**是在**msdb**資料庫中。  
   
- 如果未指定** \@job_id**或** \@job_name**以外的任何引數，則會刪除指定之作業的所有作業步驟記錄。  
+ 如果未指定** \@ job_id**或** \@ job_name**以外的任何引數，則會刪除指定之作業的所有作業步驟記錄。  
   
 ## <a name="permissions"></a>權限  
  依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  

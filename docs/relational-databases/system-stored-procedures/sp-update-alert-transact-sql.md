@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69890839"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832542"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,17 +70,17 @@ sp_update_alert
   
 `[ @message_id = ] message_id`警示定義的新訊息或錯誤號碼。 一般來說， *message_id*會對應至**sysmessages**資料表中的錯誤號碼。 *message_id*是**int**，預設值是 Null。 只有當警示的嚴重性層級設定為**0**時，才可以使用訊息識別碼。  
   
-`[ @severity = ] severity`警示定義的新嚴重性層級（從**1**到**25**）。 任何[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳送至 Windows 應用程式記錄檔且具有指定嚴重性的訊息都會啟動警示。 *嚴重性*是**int**，預設值是 Null。 只有在警示的訊息識別碼設定為**0**時，才能使用嚴重性層級。  
+`[ @severity = ] severity`警示定義的新嚴重性層級（從**1**到**25**）。 任何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳送至 Windows 應用程式記錄檔且具有指定嚴重性的訊息都會啟動警示。 *嚴重性*是**int**，預設值是 Null。 只有在警示的訊息識別碼設定為**0**時，才能使用嚴重性層級。  
   
 `[ @delay_between_responses = ] delay_between_responses`警示回應之間的新等待期間（以秒為單位）。 *delay_between_responses*是**int**，預設值是 Null。  
   
 `[ @notification_message = ] 'notification_message'`在電子郵件、 **net send**或呼機通知中，傳送至操作員之其他訊息的修訂文字。 *notification_message*是**Nvarchar （512）**，預設值是 Null。  
   
-`[ @include_event_description_in = ] include_event_description_in`指定是否應該將 Windows 應用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程式記錄檔中的錯誤描述包含在通知訊息中。 *include_event_description_in*是**Tinyint**，預設值是 Null，它可以是下列其中一個或多個值。  
+`[ @include_event_description_in = ] include_event_description_in`指定是否 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該將 Windows 應用程式記錄檔中的錯誤描述包含在通知訊息中。 *include_event_description_in*是**Tinyint**，預設值是 Null，它可以是下列其中一個或多個值。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**0**|None|  
+|**0**|無|  
 |**1**|電子郵件|  
 |**2**|呼叫器|  
 |**4**|**net send**|  
@@ -112,11 +112,11 @@ sp_update_alert
   
 `[ @performance_condition = ] 'performance_condition'`以 **'**_itemcomparatorvalue_**'** 格式表示的值。 *performance_condition*是**Nvarchar （512）**，預設值是 Null，且由這些元素組成。  
   
-|格式元素|描述|  
+|格式元素|說明|  
 |--------------------|-----------------|  
 |*項目*|計數器的效能物件、效能計數器或具名執行個體|  
-|*比較子*|下列其中一個運算子： **>**、 **<**、**=**|  
-|*ReplTest1*|計數器的數值|  
+|*比較子*|下列其中一個運算子： **>** 、 **<** 、**=**|  
+|*值*|計數器的數值|  
   
 `[ @category_name = ] 'category'`警示類別目錄的名稱。 *category*是**sysname** ，預設值是 Null。  
   
@@ -128,7 +128,7 @@ sp_update_alert
  **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- 只有**sysmessages**寫入 Windows 應用程式[!INCLUDE[msCoName](../../includes/msconame-md.md)]記錄檔的 sysmessages 才會引發警示。  
+ 只有**sysmessages**寫入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔的 sysmessages 才會引發警示。  
   
  **sp_update_alert**只會變更提供參數值的警示設定。 如果省略某個參數，就會保留目前的設定。  
   

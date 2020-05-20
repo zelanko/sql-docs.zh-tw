@@ -1,5 +1,5 @@
 ---
-title: cdc.&lt;capture_instance&gt;_CT （transact-sql） |Microsoft Docs
+title: cdc。 &lt;capture_instance &gt; _CT （transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 02f08a02236195d02f36c0b8e24b792adf46933e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72908400"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833089"
 ---
-# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc.&lt;capture_instance&gt;_CT （transact-sql）
+# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc。 &lt;capture_instance &gt; _CT （transact-sql）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   這是在來源資料表啟用異動資料擷取時所建立的變更資料表。 此資料表會針對在來源資料表上執行的每個插入和刪除作業傳回一個資料列，而且會針對在來源資料表上執行的每個更新作業傳回兩個資料列。 如果在啟用來源資料表時沒有指定變更資料表的名稱，就會衍生此名稱。 名稱的格式為 cdc。*capture_instance*_CT，其中*capture_instance*是來源資料表的架構名稱，以及格式*schema_table*的來源資料表名稱。 例如，如果已針對變更資料捕獲啟用**AdventureWorks**範例資料庫中的資料表**Person** ，則衍生的變更資料表名稱會是**cdc。Person_Address_CT**。  
@@ -45,7 +45,7 @@ ms.locfileid: "72908400"
   
 ## <a name="remarks"></a>備註  
 
-資料`__$command_id`行是在版本2012到2016的累計更新中引進的資料行。 如需版本及下載資訊，請參閱知識庫文章3030352，網址為[：在您啟用 Microsoft SQL Server 資料庫的變更資料捕獲後，已更新的資料列排序變更資料表的順序不正確](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)。  如需詳細資訊，請參閱[在升級至最新的 CU 以取得 SQL Server 2012、2014和2016之後，CDC 功能可能會中斷](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)。
+資料行是 `__$command_id` 在版本2012到2016的累計更新中引進的資料行。 如需版本及下載資訊，請參閱知識庫文章3030352，網址為[：在您啟用 Microsoft SQL Server 資料庫的變更資料捕獲後，已更新的資料列排序變更資料表的順序不正確](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)。  如需詳細資訊，請參閱[在升級至最新的 CU 以取得 SQL Server 2012、2014和2016之後，CDC 功能可能會中斷](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)。
 
 ## <a name="captured-column-data-types"></a>擷取資料行資料類型  
  包含在這個資料表中的擷取資料行與對應的來源資料行具有相同的資料類型和值，但下列情況除外：  
@@ -57,7 +57,7 @@ ms.locfileid: "72908400"
  不過，這些資料行中的值與來源資料行的值相同。  
   
 ### <a name="large-object-data-types"></a>大型物件資料類型  
- 當 __ $ operation = 1 \_ \_或 $operation = 3 時，資料類型為**image**、 **text**和**Ntext**的資料行一律會被指派**Null**值。 \_ \_除非資料行在更新期間變更，否則在 $operation = 3 的情況下，將會為**Varbinary （max）**、 **Varchar （max）** 或**Nvarchar （max）** 資料類型的資料行指派**Null**值。 當\_ \_$operation = 1 時，這些資料行會在刪除時指派其值。 包含在 capture 實例中的計算資料行一律會有**Null**值。  
+ 當 __ $ operation = 1 **text**或**image** **ntext** **NULL** \_ \_ $operation = 3 時，資料類型為 image、Text 和 Ntext 的資料行一律會被指派 Null 值。 除非資料行**NULL**在更新期間變更，否則在 $operation = 3 的情況下，將會為**Varbinary （max）**、 **Varchar （max）** 或**Nvarchar （max）** 資料類型的資料行指派 Null 值 \_ \_ 。 當 \_ \_ $operation = 1 時，這些資料行會在刪除時指派其值。 包含在 capture 實例中的計算資料行一律會有**Null**值。  
   
  根據預設，在單一 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 陳述式中可加入至擷取資料行的大小上限為 65,536 個位元組或 64 KB。 若要增加此大小以支援更大的 LOB 資料，請使用[設定最大文字複寫大小伺服器設定選項](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)，以指定較大的大小上限。 如需詳細資訊，請參閱 [設定 max text repl size 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)。  
   

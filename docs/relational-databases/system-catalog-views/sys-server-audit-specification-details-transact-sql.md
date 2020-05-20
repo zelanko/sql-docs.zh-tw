@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_audit_specification_details catalog view
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 43f5a4ca7dbad88fe98734576fd23368cc280fa2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 68283872613baf6cb64546ef79a9f03996815439
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125024"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834061"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68125024"
 |server_specification_id|**int**|稽核伺服器規格的識別碼。|  
 |audit_action_id|**int**|稽核動作的識別碼|  
 |audit_action_name|**sysname**|稽核動作的群組名稱或名稱|  
-|Class - 類別|**tinyint**|Reserved|  
+|class|**tinyint**|Reserved|  
 |class_desc|**nvarchar(60)**|Reserved|  
 |major_id|**int**|Reserved|  
 |minor_id|**int**|Reserved|  

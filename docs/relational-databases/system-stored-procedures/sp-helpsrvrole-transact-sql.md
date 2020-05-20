@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrole
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a632e6923ab3127a363650c63533fa548d1acc12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9abcbec940d9afa7b5aeb36183610b471bb3a3df
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006125"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833172"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ## <a name="arguments"></a>引數  
 `[ @srvrolename = ] 'role'`這是固定伺服器角色的名稱。 *role*是**sysname**，預設值是 Null。 *role*可以是下列其中一個值。  
   
-|固定伺服器角色|描述|  
+|固定伺服器角色|說明|  
 |-----------------------|-----------------|  
 |系統管理員 (sysadmin)|系統管理員|  
 |securityadmin|安全性管理員|  
@@ -60,14 +60,14 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|伺服器角色的名稱|  
-|描述|**sysname**|ServerRole 的描述|  
+|說明|**sysname**|ServerRole 的描述|  
   
 ## <a name="remarks"></a>備註  
  固定伺服器角色定義於伺服器層級，具有執行特定伺服器層級管理活動的權限。 固定伺服器角色無法加入、移除或變更。  
   
  若要加入或移除伺服器角色的成員，請參閱[ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)。  
   
- 所有登入都是公用的成員。 sp_helpsrvrole 無法辨識 public 角色，因為在內部， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並不會將 public 當做角色來執行。  
+ 所有登入都是公用的成員。 sp_helpsrvrole 無法辨識 public 角色，因為在內部， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會將 public 當做角色來執行。  
   
  sp_helpsrvrole 不會採用使用者定義的伺服器角色做為引數。 若要列出使用者定義的伺服器角色，請參閱[ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)中的範例。  
   

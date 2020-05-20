@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.servers catalog view
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b9cb03b97660bedc9c8e86cc72ae2bf9ebdd56d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132954"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832700"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68132954"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|連結伺服器的本機識別碼。|  
 |**name**|**sysname**|當**server_id** = 0 時，傳回的值就是伺服器名稱。<br /><br /> 當**server_id** > 0 時，傳回的值就是連結伺服器的本機名稱。|  
-|**product**|**sysname**|連結伺服器的產品名稱。 "SQL Server" 的值表示的另一個實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**基礎**|**sysname**|連結伺服器的產品名稱。 "SQL Server" 的值表示的另一個實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**那裡**|**sysname**|連接連結伺服器所用的 OLE DB 提供者名稱。|  
 |**data_source**|**nvarchar(4000)**|OLE DB 資料來源連接屬性。|  
 |**location**|**nvarchar(4000)**|OLE DB 位置連接屬性。 如果沒有，則為 NULL。|  
@@ -65,7 +65,7 @@ ms.locfileid: "68132954"
   
  不需要許可權就能查看本機伺服器（**server_id** = 0）。  
   
- 當您建立連結或遠端伺服器時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會建立**公用**伺服器角色的預設登入對應。 [預設登入對應] 表示所有登入都可以查看所有連結和遠端伺服器。 若要限制這些伺服器的可見度，請執行[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)並為*LOCALLOGIN*參數指定 Null，以移除預設的登入對應。  
+ 當您建立連結或遠端伺服器時，會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立**公用**伺服器角色的預設登入對應。 [預設登入對應] 表示所有登入都可以查看所有連結和遠端伺服器。 若要限制這些伺服器的可見度，請執行[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)並為*LOCALLOGIN*參數指定 Null，以移除預設的登入對應。  
   
  如果刪除預設登入對應，則只有已明確加入成為連結登入或遠端登入的使用者可以檢視他們所擁有之登入的連結伺服器或遠端伺服器。  需要下列許可權，才能在預設登入對應之後，查看所有連結和遠端伺服器：  
   

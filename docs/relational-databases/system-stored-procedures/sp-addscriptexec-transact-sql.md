@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6e3c380f5508897a25327be20e05b22984d3bd4e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022455"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833671"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_addscriptexec [ @publication = ] publication
   
  **1** = 代理程式會繼續執行腳本，並忽略錯誤。  
   
-`[ @publisher = ] 'publisher'`指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  *publisher*從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者發行時，不應使用「發行者」。  
+>  從發行者發行時，不應使用「*發行者*」 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -63,16 +63,16 @@ sp_addscriptexec [ @publication = ] publication
   
  **sp_addscriptexec**不會用於快照式複寫。  
   
- 若要使用**sp_addscriptexec**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶必須具有快照集位置的 [讀取] 和 [寫入] 許可權，以及儲存任何腳本之位置的 [讀取] 許可權。  
+ 若要使用**sp_addscriptexec**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶必須具有快照集位置的 [讀取] 和 [寫入] 許可權，以及儲存任何腳本之位置的 [讀取] 許可權。  
   
- [Sqlcmd 公用程式](../../tools/sqlcmd-utility.md)是用來在訂閱者端執行腳本，而腳本則是在連接到訂閱資料庫時，在散發代理程式或合併代理程式所使用的安全性內容中執行。 當代理程式在舊版上執行時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，會使用[osql 公用程式](../../tools/osql-utility.md)，而不是[sqlcmd](../../tools/sqlcmd-utility.md)。  
+ [Sqlcmd 公用程式](../../tools/sqlcmd-utility.md)是用來在訂閱者端執行腳本，而腳本則是在連接到訂閱資料庫時，在散發代理程式或合併代理程式所使用的安全性內容中執行。 當代理程式在舊版上執行時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，會使用[osql 公用程式](../../tools/osql-utility.md)，而不是[sqlcmd](../../tools/sqlcmd-utility.md)。  
   
  **sp_addscriptexec**適用于將腳本套用至「訂閱者」，並使用[sqlcmd](../../tools/sqlcmd-utility.md)將腳本的內容套用至「訂閱者」。 不過，由於訂閱者組態可能會不同，因此，在公佈到發行者之前測試的指令碼仍可能在訂閱者中造成錯誤。 *skiperror*提供散發代理程式或合併代理程式忽略錯誤並繼續執行的功能。 在執行**sp_addscriptexec**之前，請先使用[sqlcmd](../../tools/sqlcmd-utility.md)測試腳本。  
   
 > [!NOTE]  
 >  略過的錯誤會繼續記錄到代理程式記錄中，以便參考。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)]只有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援使用**sp_addscriptexec** ，為使用 FTP 的發行集張貼腳本檔案以進行快照集傳遞。  
+ 只有訂閱者才支援使用**sp_addscriptexec** ，為使用 FTP 的發行集張貼腳本檔案以進行快照集傳遞 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_addscriptexec**。  

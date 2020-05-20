@@ -17,28 +17,28 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6eb1173bf191ae319dc257c42199f02a05c9455
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061380"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831996"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  傳回成功[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的資料庫連接、連接失敗和鎖死。 您可以使用這項資訊追蹤 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的資料庫活動或進行疑難排解。  
+  傳回成功 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的資料庫連接、連接失敗和鎖死。 您可以使用這項資訊追蹤 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的資料庫活動或進行疑難排解。  
   
 > [!CAUTION]  
 > 針對具有大量資料庫或大量登入的安裝，sys 中的活動 event_log 可能會造成效能的限制、高 CPU 使用量，而且可能會導致登入失敗。 Event_log 的查詢可能會導致此問題。 Microsoft 正致力於解決此問題。 同時，若要降低此問題的影響，請限制 sys.databases 的查詢 event_log。 NewRelic SQL Server 外掛程式的使用者應流覽[Microsoft Azure SQL Database 外掛程式微調 & 效能調整](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729)，以取得其他設定資訊。  
   
  `sys.event_log` 檢視包含以下資料行。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|說明|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|資料庫的名稱。 如果連接失敗且使用者未指定資料庫名稱，則這個資料行會是空白。|  
 |**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 對於彙總的事件，這個時間永遠是 5 分鐘的倍數。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -76,7 +76,7 @@ ms.locfileid: "68061380"
 |**技術**|**connection_failed**|9|**—**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 連接失敗，因為資料庫當時正在進行重新組態。|  
 |**技術**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 連接已閒置超過系統定義的臨界值。|  
 |**技術**|**connection_terminated**|1|**—**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 由於資料庫重新設定，已終止工作階段。|  
-|**技術**|**調節**|*\<原因代碼>*|**reason_code**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 要求已節流。  節流原因代碼： * \<原因代碼>*。 如需詳細資訊，請參閱[引擎節流](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
+|**技術**|**調節**|*\<原因代碼>*|**reason_code**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 要求已節流。  節流原因代碼： * \< 原因代碼>*。 如需詳細資訊，請參閱[引擎節流](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
 |**技術**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 工作階段已終止，因為您有長時間執行的交易。 請嘗試縮短您的交易。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**技術**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它取得太多鎖定。 請嘗試在單一交易中讀取或修改較少的資料列。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**技術**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用 TEMPDB。 請嘗試修改查詢，減少使用暫存資料表空間。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
@@ -124,8 +124,8 @@ start_time                    end_time
 
  這個檢視可能不會包括所有連接和錯誤資訊：  
   
-- 此視圖不包括所有[!INCLUDE[ssSDS](../../includes/sssds-md.md)]可能發生的資料庫錯誤，只包含在本主題的[事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)中指定的錯誤。  
-- 如果[!INCLUDE[ssSDS](../../includes/sssds-md.md)]資料中心內發生機器故障，事件資料表可能會遺失少量的資料。  
+- 此視圖不包括所有 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 可能發生的資料庫錯誤，只包含在本主題的[事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)中指定的錯誤。  
+- 如果資料中心內發生機器故障 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，事件資料表可能會遺失少量的資料。  
 - 如果已透過 DoSGuard 封鎖 IP 位址，則來自該 IP 位址的連接嘗試事件就無法收集，也不會出現在這個檢視中。  
   
 ## <a name="examples"></a>範例  

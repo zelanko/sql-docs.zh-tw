@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_batch_params
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e9a7cb410a1e520ee05b7f93263dcc46750dfb87
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001815"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833453"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回資料列集，其中包含[!INCLUDE[tsql](../../includes/tsql-md.md)]批次中所包含之參數的相關資訊。 **sp_batch_params**只會剖析指定的批次，並傳回內嵌參數值的相關資訊。 它不會執行批次或修改執行環境。  
+  傳回資料列集，其中包含批次中所包含之參數的相關資訊 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 **sp_batch_params**只會剖析指定的批次，並傳回內嵌參數值的相關資訊。 它不會執行批次或修改執行環境。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,10 +39,10 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @tsqlbatch = ] 'tsqlbatch'`這是一個 Unicode 字串，其中[!INCLUDE[tsql](../../includes/tsql-md.md)]包含您想要的參數資訊所屬的語句或批次。 *tsqlbatch*是**Nvarchar （max）** 或可隱含轉換為**Nvarchar （max）**。  
+`[ @tsqlbatch = ] 'tsqlbatch'`這是一個 Unicode 字串，其中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 您想要的參數資訊所屬的語句或批次。 *tsqlbatch*是**Nvarchar （max）** 或可隱含轉換為**Nvarchar （max）**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -55,7 +55,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**精密**|**int**|有效位數的數目。 **PRECISION**資料行的傳回值以基底10為底數。|  
 |**LENGTH**|**int**|資料的傳送大小。 這個值是 NULL。|  
 |**尺度**|**smallint**|小數點右側的位數。 這個值是 NULL。|  
-|**RADIX**|**smallint**|這是數值類型的基底。 這個值是 NULL。|  
+|**基**|**smallint**|這是數值類型的基底。 這個值是 NULL。|  
 |**Null**|**smallint**|指定 Null 屬性：<br /><br /> 1 = 參數資料類型可以建立成允許 Null 值。<br /><br /> 0 = 不允許 Null 值。<br /><br /> 這個值是 NULL。|  
 |**SQL_DATA_TYPE**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型出現在描述子 TYPE 欄位時的值。 除了**datetime**和 ISO **interval**資料類型之外，這個資料行與**DATA_TYPE**資料行相同。 這個資料行一律會傳回值。 這個值是 NULL。|  
 |**SQL_DATETIME_SUB**|**smallint**|如果**SQL_DATA_TYPE**的值為 SQL_DATETIME 或 SQL_INTERVAL，則為**datetime**或 ISO **interval**子代碼。 如果是 **datetime** 和 ISO **interval** 以外的資料類型，這個資料行便是 NULL。 這個值是 NULL。|  

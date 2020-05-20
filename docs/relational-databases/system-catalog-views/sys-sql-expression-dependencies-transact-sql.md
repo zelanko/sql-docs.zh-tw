@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69561132"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833952"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  針對在目前資料庫中使用者自訂實體的每個依據名稱相依性，各包含一個資料列。 這包括原生編譯的純量使用者定義函數和其他[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]模組之間的相依性。 當一個實體（稱為受*參考的實體*）以名稱出現在另一個實體的持續性 SQL 運算式中（稱為「*參考實體*」）時，就會建立兩個實體之間的相依性。 例如，在某個檢視的定義中參考資料表時，該檢視 (參考實體) 就會相依於資料表 (受參考的實體)。 如果資料表遭卸除，檢視便無法使用。  
+  針對在目前資料庫中使用者自訂實體的每個依據名稱相依性，各包含一個資料列。 這包括原生編譯的純量使用者定義函數和其他模組之間的相依性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當一個實體（稱為受*參考的實體*）以名稱出現在另一個實體的持續性 SQL 運算式中（稱為「*參考實體*」）時，就會建立兩個實體之間的相依性。 例如，在某個檢視的定義中參考資料表時，該檢視 (參考實體) 就會相依於資料表 (受參考的實體)。 如果資料表遭卸除，檢視便無法使用。  
   
  如需詳細資訊，請參閱[記憶體內部 OLTP 的純量使用者定義函數](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "69561132"
   
 |實體類型|參考實體|受參考的實體|  
 |-----------------|------------------------|-----------------------|  
-|Table|是*|是|  
+|資料表|是*|是|  
 |檢視|是|是|  
 |已篩選的索引|是**|否|  
 |篩選的統計資料|是**|否|  
@@ -91,7 +91,7 @@ ms.locfileid: "69561132"
 |XML 結構描述集合|否|是|  
 |分割區函數|否|是|  
   
- \*只有當資料表參考計算資料行、CHECK 條件約束或 DEFAULT [!INCLUDE[tsql](../../includes/tsql-md.md)]條件約束的定義中的模組、使用者定義型別或 XML 架構集合時，才會將它當做參考實體進行追蹤。  
+ \*只有當資料表參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 計算資料行、CHECK 條件約束或 DEFAULT 條件約束的定義中的模組、使用者定義型別或 XML 架構集合時，才會將它當做參考實體進行追蹤。  
   
  ** 篩選述詞中使用的每一個資料行都會當做參考實體來追蹤。  
   

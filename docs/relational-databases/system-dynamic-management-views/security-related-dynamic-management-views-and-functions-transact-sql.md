@@ -11,14 +11,14 @@ dev_langs:
 helpviewer_keywords:
 - security dynamic management views
 ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d4f2eccae414ec8ad12a5677052e5fd90519c24d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a2b6d8ad8bc374c30e6fcd7b14b8d0762e66251
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061889"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832652"
 ---
 # <a name="security-related-dynamic-management-views-and-functions-transact-sql"></a>安全性相關的動態管理檢視和函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
