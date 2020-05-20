@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4134e34cc494185ec384bd9900ba578e9fa3034d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931179"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755864"
 ---
 # <a name="save-method"></a>Save 方法
 將[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)儲存在檔案或[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件中。  
@@ -34,7 +34,7 @@ recordset.Save Destination, PersistFormat
 ```  
   
 #### <a name="parameters"></a>參數  
- *Destination*  
+ *位置*  
  選擇性。 **Variant** ，代表要儲存**記錄集**之檔案的完整路徑名稱，或**資料流程**物件的參考。  
   
  *PersistFormat*  

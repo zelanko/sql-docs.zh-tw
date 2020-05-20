@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Type property [property] [ADO], Visual Basic example
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a8def5c7089be85c9b6eb7700a8a5bcdaeebe99e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b2308d02f5e220a315cfa97d3b24172fccc5d5bf
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937853"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755598"
 ---
 # <a name="type-property-example-property-vb"></a>Type 屬性範例 (Property) (VB)
 這個範例會示範[Type](../../../ado/reference/ado-api/type-property-ado.md)屬性。 它是公用程式的模型，用來列出集合的名稱和類型，例如[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)、[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)等等。  

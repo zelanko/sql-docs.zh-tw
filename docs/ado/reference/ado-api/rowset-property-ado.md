@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Rowset property [ADO]
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 922f6690679d86bdb6cdafb721e3a5ed6bb674ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3eb383bb0e5cadf557ff67a1e97d1b6b5a6bf988
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917126"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755999"
 ---
 # <a name="rowset-property-ado"></a>Rowset 屬性 (ADO)
 取得或設定**ADORecordsetConstruction**物件上/的 OLE DB 資料列**集**物件。 當您使用 put_Rowset 時，會將資料列集轉換成 ADO**記錄集**物件。  

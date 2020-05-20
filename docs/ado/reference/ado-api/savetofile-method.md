@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - SaveToFile method [ADO]
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c8434841442ee61b31d021e5f2c46f57f1d2b147
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917028"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755831"
 ---
 # <a name="savetofile-method"></a>SaveToFile 方法
 將[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)的二進位內容儲存至檔案。  

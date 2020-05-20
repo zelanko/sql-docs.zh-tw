@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ReadyState property [ADO], VBScript example
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b27a26eede798b8a8f8df9d76451125f042510a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7a3d39355a95b46170ab3f7a5b24cd43582ecac3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963602"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755521"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState 屬性範例 (VBScript)
 > [!IMPORTANT]
@@ -27,7 +27,7 @@ ms.locfileid: "67963602"
   
  下列範例顯示如何讀取 RDS 的[ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)屬性[。](../../../ado/reference/rds-api/datacontrol-object-rds.md)在 VBScript 程式碼中，于執行時間 DataControl 物件。 **ReadyState**是唯讀屬性。  
   
- 若要測試此範例，請將\<此程式碼剪下並貼\<到本文>，並在一般 HTML 檔案中/Body> 標記，並將其命名為**RDSReadySt. asp**。 使用 [**尋找**] 找出 Adovbs 檔案，並將它放在您打算使用的目錄中。 ASP 腳本會識別您的伺服器。  
+ 若要測試此範例，請將此程式碼剪下並貼到本文>，並 \< \< 在一般 HTML 檔案中/Body> 標記，並將其命名為**RDSReadySt. asp**。 使用 [**尋找**] 找出 Adovbs 檔案，並將它放在您打算使用的目錄中。 ASP 腳本會識別您的伺服器。  
   
 ```  
 <!-- BeginReadyStateVBS -->  

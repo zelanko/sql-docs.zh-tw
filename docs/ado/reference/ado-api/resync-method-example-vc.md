@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Resync method [ADO], VC++ example
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6a13e09895a25ac095888b42097bf47cbe27b369
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7f777d3b7af34fe29e9794bb470ba90e71b8b9dd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931230"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756350"
 ---
 # <a name="resync-method-example-vc"></a>Resync 方法範例 (VC++)
 這個範例示範如何使用[Resync](../../../ado/reference/ado-api/resync-method.md)方法來重新整理靜態記錄集中的資料。  
