@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e0efc86400b0858e387a83e8ea765f0058e30459
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770927"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824493"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @database = ] 'database_name'`這是傳回屬性的資料庫名稱。 *database_name*是**sysname**，所有與散發者**%** 相關聯且使用者有許可權的資料庫，其預設值為。  
+`[ @database = ] 'database_name'`這是傳回屬性的資料庫名稱。 *database_name*是**sysname**，所有與散發者 **%** 相關聯且使用者有許可權的資料庫，其預設值為。  
   
 ## <a name="result-sets"></a>結果集  
   

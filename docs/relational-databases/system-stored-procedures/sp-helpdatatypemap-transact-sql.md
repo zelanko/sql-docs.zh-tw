@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fcf2bbd2d6c1ab7c9b73c1e122c746e56814c4fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771065"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824521"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  傳回和非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫管理系統（DBMS）之間定義之資料類型對應的資訊。 這個預存程序執行於任何資料庫中的散發者端。  
+  傳回 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫管理系統（DBMS）之間定義之資料類型對應的資訊。 這個預存程序執行於任何資料庫中的散發者端。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>引數  
 `[ @source_dbms = ] 'source_dbms'`這是對應資料類型的來源 DBMS 名稱。 *source_dbms*是**sysname**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|來源是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
 |**ORACLE**|來源是一個 Oracle 資料庫。|  
@@ -56,7 +56,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'`這是目的地 DBMS 的名稱。 *destination_dbms*是**sysname**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|目的地是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
 |**ORACLE**|目的地是一個 Oracle 資料庫。|  
@@ -84,7 +84,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_helpdatatypemap**會定義從非 SQL Server 發行者和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者到非「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者」的資料類型對應。  
+ **sp_helpdatatypemap**會定義從非 SQL Server 發行者和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者到非「訂閱者」的資料類型對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  當不支援指定的來源和目的地 DBMS 組合時， **sp_helpdatatypemap**會傳回空的結果集。  
   

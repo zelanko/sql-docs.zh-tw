@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repltrans
 ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 40477973efebac9a484e89e7627f0996285b430b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9338d427a3a957a531456d9ea29448a2148b56e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770856"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824390"
 ---
 # <a name="sp_repltrans-transact-sql"></a>sp_repltrans (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_repltrans
 ## <a name="remarks"></a>備註  
  **sp_repltrans**用於異動複寫中。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)]非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者不支援**sp_repltrans** 。  
+ 非發行者不支援**sp_repltrans** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_repltrans**。  

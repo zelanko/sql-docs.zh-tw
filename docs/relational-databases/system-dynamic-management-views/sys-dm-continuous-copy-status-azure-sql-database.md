@@ -16,16 +16,16 @@ helpviewer_keywords:
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6d0bda2d1851d7ec7900a23ad6203d4f85beb73f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98d71c76b927e0dcb7cfdf87459f15eb82ef3c9e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844496"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824663"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "73844496"
 如果您使用 SQL Database V12，您應該使用[sys.databases dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) （因為*dm_continuous_copy_status sys.databases*僅適用于 V11）。
 
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|說明|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|複本資料庫的唯一識別碼。|  
 |**partner_server**|**sysname**|連結的 SQL Database 伺服器的名稱。|  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_registercustomresolver
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0d003cccfa6fdedd0610ea34f15acb6ee1833e5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cfced9a7fa554149b491f8ff350ca81723c81d20
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075730"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824350"
 ---
 # <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
   
 `[ @dotnet_assembly_name = ] 'dotnet_assembly_name'`這是實作為商務邏輯處理常式的元件名稱。 *dotnet_assembly_name*是**Nvarchar （255）**，預設值是 Null。 如果組件未部署在合併代理程式可執行檔的相同目錄、同步啟動合併代理程式之應用程式的相同目錄，或全域組件快取 (GAC) 中，您就必須指定組件的完整路徑。  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name'`這是覆寫<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>來實行商務邏輯處理常式的類別名稱。 名稱應該以**Namespace. Classname**格式來指定。 *dotnet_class_name*是**Nvarchar （255）**，預設值是 Null。  
+`[ @dotnet_class_name = ] 'dotnet_class_name'`這是覆寫 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 來實行商務邏輯處理常式的類別名稱。 名稱應該以**Namespace. Classname**格式來指定。 *dotnet_class_name*是**Nvarchar （255）**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

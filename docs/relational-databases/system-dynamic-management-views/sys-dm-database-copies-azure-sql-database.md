@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_database_copies
 - sys.dm_database_copies
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0654bd9d15591d994b05ab2c01d9912bc0c56117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f63469fb4955895b1eb1e3e8466dfbce6306e502
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005079"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824621"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68005079"
 若要傳回異地複寫連結的相關資訊，請使用[geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)或[sys.databases dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) views （可在 SQL Database V12 中取得）。
   
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|說明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|`sys.databases` 檢視中目前資料庫的識別碼。|  
 |**start_date**|**datetimeoffset**|起始資料庫複製作業時，區域性 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料中心的 UTC 時間。|  
@@ -59,6 +59,6 @@ ms.locfileid: "68005079"
  此視圖僅適用于**master**資料庫中的伺服器層級主體登入。  
   
 ## <a name="remarks"></a>備註  
- 您可以在來源或目標[!INCLUDE[ssSDS](../../includes/sssds-md.md)]伺服器的**master**資料庫中，使用 [ **sys.databases] dm_database_copies**視圖。 當資料庫複製順利完成，且新的資料庫變成上線時，會自動移除**sys. dm_database_copies** view 中的資料列。  
+ 您可以在來源或目標伺服器的**master**資料庫中，使用 [ **sys.databases] dm_database_copies**視圖 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 當資料庫複製順利完成，且新的資料庫變成上線時，會自動移除**sys. dm_database_copies** view 中的資料列。  
   
   

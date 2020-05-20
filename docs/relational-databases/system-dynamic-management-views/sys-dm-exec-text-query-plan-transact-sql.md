@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d23813078c2a90b18af0a1df48079b571e77a13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 082de052d40cc41a81ea7a0963b2e3174338b8a5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983136"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824562"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73983136"
 -   查詢計畫的輸出沒有大小限制。  
 -   可以指定批次內的個別陳述式。  
   
-**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本） [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、。
+**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -100,7 +100,7 @@ sys.dm_exec_text_query_plan
   
 -   尚未快取某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，如大量作業陳述式或包含大小超出 8 KB 字串文字的陳述式。 您無法利用 **sys.dm_exec_text_query_plan** 來擷取這些陳述式的 XML 顯示計畫，因為它們不在快取中。  
   
--   如果[!INCLUDE[tsql](../../includes/tsql-md.md)]批次或預存套裝程式含對使用者自訂函數的呼叫或動態 SQL 的呼叫（例如使用 EXEC （*string*）），則使用者定義函數的已編譯 XML 執行程式表不會包含在**dm_exec_text_query_plan**的批次或預存程式中。 相反地，您必須針對對應至使用者定義函數的*plan_handle* ，個別呼叫**dm_exec_text_query_plan** 。  
+-   如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次或預存套裝程式含對使用者自訂函數的呼叫或動態 SQL 的呼叫（例如使用 EXEC （*string*）），則使用者定義函數的已編譯 XML 執行程式表不會包含在**dm_exec_text_query_plan**的批次或預存程式中。 相反地，您必須針對對應至使用者定義函數的*plan_handle* ，個別呼叫**dm_exec_text_query_plan** 。  
   
 當臨機操作查詢使用[簡單](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)或[強制參數](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)化時，[ **query_plan** ] 資料行只會包含語句文字，而非實際的查詢計劃。 若要傳回查詢計畫，請呼叫 **sys.dm_exec_text_query_plan**，以取得準備參數化查詢的計畫控制代碼。 您可以藉由參考 [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 檢視的 **sql** 資料行，或 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 動態管理檢視的文字資料行，判斷查詢是否參數化。  
   
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. 從計畫快取中擷取每份查詢計畫  
- 若要擷取計畫快取中所有查詢計畫的快照集，請查詢 `sys.dm_exec_cached_plans` 動態管理檢視，來擷取快取中所有查詢計畫的計畫控制代碼。 計畫控制代碼會儲存在 `plan_handle` 的 `sys.dm_exec_cached_plans` 資料行中。 之後，請依照下列方式，利用 CROSS APPLY 運算子，將計畫控制代碼傳給 `sys.dm_exec_text_query_plan`。 目前在計畫快取中的每個計畫的顯示計畫輸出`query_plan` ，都是在傳回之資料表的資料行中。  
+ 若要擷取計畫快取中所有查詢計畫的快照集，請查詢 `sys.dm_exec_cached_plans` 動態管理檢視，來擷取快取中所有查詢計畫的計畫控制代碼。 計畫控制代碼會儲存在 `plan_handle` 的 `sys.dm_exec_cached_plans` 資料行中。 之後，請依照下列方式，利用 CROSS APPLY 運算子，將計畫控制代碼傳給 `sys.dm_exec_text_query_plan`。 目前在計畫快取中的每個計畫的顯示計畫輸出，都是在 `query_plan` 傳回之資料表的資料行中。  
   
 ```sql  
 USE master;  
