@@ -19,7 +19,7 @@ ms.locfileid: "75257128"
 ---
 # <a name="open-and-configure-object-explorer"></a>開啟和設定物件總管
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-在  **中使用 [檢視]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能表來開啟物件總管。 使用 [工具]  功能表上的 [選項]  來設定物件總管選項。  
+在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用 [檢視] 功能表來開啟物件總管。 使用 [工具]  功能表上的 [選項]  來設定物件總管選項。  
   
 ## <a name="viewing-object-explorer"></a>檢視物件總管  
 依預設，您可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中看到物件總管。 如果您看不到物件總管，請在 [檢視]  功能表上，按一下 [物件總管]  。  

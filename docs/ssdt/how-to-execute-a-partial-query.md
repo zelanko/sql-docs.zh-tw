@@ -26,7 +26,7 @@ Transact\-SQL 編輯器可讓您反白顯示指令碼的特定區段，並且將
   
 ## <a name="to-partially-execute-a-query"></a>若要部分執行查詢  
   
-1. 在 [SQL Server 物件總管]  中，按兩下 [檢視表]  下的 **PerishableFruits**，在 Transact\-SQL 編輯器中打開它。  
+1. 在 [SQL Server 物件總管] 中，按兩下 [檢視表] 下的 **PerishableFruits**，在 Transact\-SQL 編輯器中打開它。  
   
 2. 反白顯示程式碼中的 `SELECT p.Id, p.Name FROM dbo.Product p` 區段，按一下滑鼠右鍵選取 [執行查詢]  。  
   

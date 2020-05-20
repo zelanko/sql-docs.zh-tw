@@ -94,7 +94,7 @@ Microsoft Windows 使用數值優先權系統，從 1 到 31 的範圍來排程�
 ## <a name="best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus"></a>在具備超過 64 顆 CPU 之電腦上執行 SQL Server 的最佳做法
 
 ### <a name="assigning-hardware-threads-with-cpus"></a>使用 CPU 指派硬體執行緒
-請勿使用 affinity mask 和 affinity64 mask 伺服器組態選項，將處理器繫結至特定執行緒。 這些選項僅限於 64 個 CPU。 改為使用 `SET PROCESS AFFINITY`ALTER SERVER CONFIGURATION[ 的 ](../t-sql/statements/alter-server-configuration-transact-sql.md) 選項。
+請勿使用 affinity mask 和 affinity64 mask 伺服器組態選項，將處理器繫結至特定執行緒。 這些選項僅限於 64 個 CPU。 改為使用 [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) 的 `SET PROCESS AFFINITY` 選項。
 
 ### <a name="managing-the-transaction-log-file-size"></a>管理交易記錄檔大小
 請勿仰賴自動成長來增加交易記錄檔的大小。 增加交易記錄必須是序列處理序。 擴充記錄可避免在記錄擴充完成之前繼續進行交易寫入作業。 不過，您可以將檔案大小設定為夠大的值來支援環境中的典型工作負載，藉此為所有記錄檔預先配置空間。

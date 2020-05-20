@@ -37,7 +37,7 @@ ms.locfileid: "75258480"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理整個警示系統，建議您利用這個方式來設定警示基礎結構。  
   
--   **xp_logevent** 產生的事件出現在 master 資料庫中。 因此，除非警示的  database_name **是 \@'master'** 或 NULL，否則，**xp_logevent** 不會觸發警示。  
+-   **xp_logevent** 產生的事件出現在 master 資料庫中。 因此，除非警示的 **\@database_name** 是 **'master'** 或 NULL，否則，**xp_logevent** 不會觸發警示。  
   
 ### <a name="security"></a><a name="Security"></a>安全性  
   

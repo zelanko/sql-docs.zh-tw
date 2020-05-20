@@ -43,13 +43,13 @@ output: #output parameter the app expects and the type
   result: int
 ```
 
-控制器會檢查 `runtime` 檔案中指定的 `spec.yaml`，並呼叫對應的執行階段處理常式。 執行階段處理常式會建立應用程式。 首先，會建立包含一或多個 Pod 的 Kubernetes 複本集，其中每個 Pod 都包含要部署的應用程式。 Pod 數目是由應用程式 `replicas` 檔案中設定的 `spec.yaml` 參數所定義。 每個 Pod 都可以具有一個以上的集區。 集區數目是由 `poolsize` 檔案中設定的 `spec.yaml` 參數所定義。
+控制器會檢查 `spec.yaml` 檔案中指定的 `runtime`，並呼叫對應的執行階段處理常式。 執行階段處理常式會建立應用程式。 首先，會建立包含一或多個 Pod 的 Kubernetes 複本集，其中每個 Pod 都包含要部署的應用程式。 Pod 數目是由應用程式 `spec.yaml` 檔案中設定的 `replicas` 參數所定義。 每個 Pod 都可以具有一個以上的集區。 集區數目是由 `spec.yaml` 檔案中設定的 `poolsize` 參數所定義。
 
 這些設定會影響部署可以平行處理的要求數目。 一個特定時間的要求數目上限等於 `replicas` 乘上 `poolsize`。 如果您有 5 個複本，每個複本有 2 個集區，則部署可以平行處理 10 個要求。 下圖為 `replicas` 和 `poolsize` 的圖形表示：
 
 ![集區大小和複本](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
-建立複本集並啟動 Pod 之後，即會建立 cron 作業 (如果已在 `schedule` 檔案中設定 `spec.yaml` )。 最後，會建立可用於管理與執行應用程式的 Kubernetes 服務 (請參閱下方)。
+建立複本集並啟動 Pod 之後，即會建立 cron 作業 (如果已在 `spec.yaml` 檔案中設定 `schedule` )。 最後，會建立可用於管理與執行應用程式的 Kubernetes 服務 (請參閱下方)。
 
 執行應用程式時，應用程式的 Kubernetes 服務會將要求傳送給複本並傳回結果。
 

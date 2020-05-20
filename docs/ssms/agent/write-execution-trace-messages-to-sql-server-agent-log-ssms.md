@@ -63,7 +63,7 @@ ms.locfileid: "75243965"
   
 2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後選取 [屬性]  。  
   
-3.  在 [SQL Server Agent 屬性 -**server**name _]\__ 對話方塊中，於 [一般]  頁面的 [錯誤記錄檔]  下，選取 [包含執行追蹤訊息]  核取方塊。  
+3.  在 [SQL Server Agent 屬性 -_server\_name_] 對話方塊中，於 [一般] 頁面的 [錯誤記錄檔] 下，選取 [包含執行追蹤訊息] 核取方塊。  
   
 4.  按一下 [確定]  。  
   

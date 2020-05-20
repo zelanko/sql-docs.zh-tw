@@ -104,7 +104,7 @@ RECEIVE * FROM MyQueue
 
 如果佇列是空的，這個陳述式會立即傳回空的結果集。 否則會傳回所有佇列通知。
 
-如果 `SSPROP_QP_NOTIFICATION_MSGTEXT` 和 `SSPROP_QP_NOTIFICATION_OPTIONS` 為非 Null 且非空白，則會將包含以上定義的三個屬性的查詢通知 TDS 標頭傳送至伺服器。 每次執行命令時，就會發生這種情況。 如果其中一個屬性為 Null (或空白)，則不會傳送標頭並引發 `DB_E_ERRORSOCCURRED` (如果屬性同時標示為選擇性，則會引發 `DB_S_ERRORSOCCURRED`)。 接著，狀態值會設為 `DBPROPSTATUS_BADVALUE`。 在執行和準備時會進行驗證。 同樣地，當針對 `DB_S_ERRORSOCCURED` 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本連線設定查詢通知屬性時，會引發 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 此案例中的狀態值為 `DBPROPSTATUS_NOTSUPPORTED`。
+如果 `SSPROP_QP_NOTIFICATION_MSGTEXT` 和 `SSPROP_QP_NOTIFICATION_OPTIONS` 為非 Null 且非空白，則會將包含以上定義的三個屬性的查詢通知 TDS 標頭傳送至伺服器。 每次執行命令時，就會發生這種情況。 如果其中一個屬性為 Null (或空白)，則不會傳送標頭並引發 `DB_E_ERRORSOCCURRED` (如果屬性同時標示為選擇性，則會引發 `DB_S_ERRORSOCCURRED`)。 接著，狀態值會設為 `DBPROPSTATUS_BADVALUE`。 在執行和準備時會進行驗證。 同樣地，當針對 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本連線設定查詢通知屬性時，會引發 `DB_S_ERRORSOCCURED`。 此案例中的狀態值為 `DBPROPSTATUS_NOTSUPPORTED`。
 
 初始化訂閱並不保證後續的訊息能成功傳遞。 此外，系統也不會檢查所指定服務名稱的有效性。
 

@@ -67,9 +67,9 @@ ms.locfileid: "75244455"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>判斷使用的 IP 位址和連接埠 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  按一下 [開始]  並依序指向 [所有程式]  、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]  ，然後按一下 [ **組態管理員][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 。  
+1.  按一下 [開始] 並依序指向 [所有程式]、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]，然後按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員]。  
   
-2.  在 [ **組態管理員][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 的主控台窗格中，展開 [ **網路組態][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ，再展開 [**執行個體名稱> 的通訊協定]\<** ，然後按兩下 [TCP/IP]  。  
+2.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員] 的主控台窗格中，展開 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 網路組態]，再展開 [\<執行個體名稱> 的通訊協定]，然後按兩下 [TCP/IP]。  
   
 3.  在 [TCP/IP 內容]  對話方塊的 [IP 位址]  索引標籤上會出現數個 IP 位址，這些 IP 位址的格式是 **IP1**、**IP2** 到 **IPAll**。 其中一個是供回送介面卡的 IP 位址 127.0.0.1 使用。 此時會出現額外的 IP 位址，代表電腦上設定的每個 IP 位址。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "75244455"
   
 #### <a name="to-configure-the-firewall-rule-for-a-specific-ip-addresses"></a>若要針對特定的 IP 位址設定防火牆規則  
   
-1.  在 [具有進階安全性的 Windows 防火牆]  的 [輸入規則]  頁面上，以滑鼠右鍵按一下您剛建立的規則，然後按一下 [內容]  。  
+1.  在 [具有進階安全性的 Windows 防火牆] 的 [輸入規則] 頁面上，以滑鼠右鍵按一下您剛建立的規則，然後按一下 [內容]。  
   
 2.  在 [規則內容]  對話方塊中，選取 [範圍]  索引標籤。  
   

@@ -27,7 +27,7 @@ ms.locfileid: "78261887"
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-本節包含  **中，[連接到伺服器]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊頁面的 F1 說明。  
+本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，[連接到伺服器] 對話方塊頁面的 F1 說明。  
   
 [瀏覽伺服器 &#40;本機伺服器&#41;](../../ssms/f1-help/browse-for-servers-local-servers.md)  
   

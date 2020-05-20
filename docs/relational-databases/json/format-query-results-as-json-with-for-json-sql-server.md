@@ -77,7 +77,7 @@ FOR JSON AUTO;
 
 下列 `SELECT...FOR JSON AUTO` 範例會顯示當已 `JOIN` 的資料表資料間有 1:Many 關聯性時，JSON 結果的外觀。
 
-也會示範傳回的 JSON 中沒有 Null 值。 不過，您可以在 `INCLUDE_NULL_VALUES` 子句中使用 `FOR` 關鍵字來覆寫此預設行為。
+也會示範傳回的 JSON 中沒有 Null 值。 不過，您可以在 `FOR` 子句中使用 `INCLUDE_NULL_VALUES` 關鍵字來覆寫此預設行為。
 
 ```sql
 go

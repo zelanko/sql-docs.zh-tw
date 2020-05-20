@@ -69,13 +69,13 @@ ms.locfileid: "76284665"
   
 1.  在訂閱資料庫的訂閱者端，執行 [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)。 指定 **\@publication**、 **\@publisher** 和 **\@publisher_db**。  
   
-2.  在發行集資料庫的發行者端，執行 [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 指定 **\@publication** 和 **\@subscriber**。 為  article **指定 \@all** 值。 (選擇性) 如果無法存取散發者，請為  ignore_distributor **指定 \@1** 值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
+2.  在發行集資料庫的發行者端，執行 [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 指定 **\@publication** 和 **\@subscriber**。 為 **\@article** 指定 **all** 值。 (選擇性) 如果無法存取散發者，請為 **\@ignore_distributor** 指定 **1** 值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>刪除合併式發行集的提取訂閱  
   
 1.  在訂閱資料庫的訂閱者端，執行 [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)。 指定 **\@publication**、 **\@publisher** 和 **\@publisher_db**。  
   
-2.  在發行集資料庫的發行者端，執行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber** 和 **\@subscriber_db**。 為  subscription_type **指定 \@pull** 的值。 (選擇性) 如果無法存取散發者，請為  ignore_distributor **指定 \@1** 值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
+2.  在發行集資料庫的發行者端，執行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber** 和 **\@subscriber_db**。 為 **\@subscription_type** 指定 **pull** 的值。 (選擇性) 如果無法存取散發者，請為 **\@ignore_distributor** 指定 **1** 值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  下列範例會刪除交易式發行集的提取訂閱。 第一批次是在「訂閱者」上執行，而第二批次是在「發行者」上執行。  

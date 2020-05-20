@@ -68,7 +68,7 @@ ms.locfileid: "74095407"
   
 -   [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 函數會傳回在指定的間隔中發生的所有變更。 系統一定會產生這個函數。 傳回的項目一律會經過排序 (先依據變更的交易認可 LSN，然後再依據變更在交易內部排列順序的值)。 根據選擇的資料列篩選選項，系統會在更新時傳回最後一個資料列 (資料列篩選選項 "all") 或在更新時傳回全新和舊的值 (資料列篩選選項 "all update old")。  
   
--   啟用來源資料表時，如果將參數 [ 設定為 1，則會產生函式 ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)cdc.fn_cdc_get_net_changes_<擷取執行個體>@supports_net_changes。  
+-   啟用來源資料表時，如果將參數 @supports_net_changes 設定為 1，則會產生函式 [cdc.fn_cdc_get_net_changes_<擷取執行個體>](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。  
   
     > [!NOTE]  
     >  只有當來源資料表具有已定義的主索引鍵，或者 @index_name 參數已經用來識別唯一的索引時，才支援這個選項。  

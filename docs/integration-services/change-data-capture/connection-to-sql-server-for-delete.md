@@ -36,7 +36,7 @@ ms.locfileid: "71298901"
   
 -   **Windows 驗證**  
   
--   **SQL Server 驗證**：如果您選取這個選項，您必須針對您所連接之  **中的使用者輸入 [登入]** **和 [密碼]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   **SQL Server 驗證**：如果您選取這個選項，您必須針對您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入 [登入] 和 [密碼]。  
   
  **選項**  
  按一下箭頭即可檢視要設定的可用選項。 您可以選擇保留這些選項的預設值。 可用的選項如下：  

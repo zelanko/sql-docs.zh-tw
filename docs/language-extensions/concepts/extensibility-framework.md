@@ -58,7 +58,7 @@ The following diagram visually describes opportunities and benefits of the exten
 |-------------------|-----------|---------------------|
 | 適用於 Java 的 JavaLauncher.dll | Java 延伸模組 | SQL Server 2019 |
 
-[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務會以使用 **AppContainers** 執行隔離的 [SQLRUserGroup](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 執行。
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務會以使用 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 執行隔離的 **SQLRUserGroup** 執行。
 
 系統會針對您已新增 SQL Server 機器學習語言延伸模組的每個資料庫引擎執行個體，建立個別的 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務。 每個資料庫引擎執行個體都有一個啟動控制板服務，因此如果您有多個支援外部指令碼的執行個體，就會每個都有一個啟動控制板服務。 資料庫引擎執行個體會繫結至為它建立的啟動控制板。 預存程序或 T-SQL 中的所有外部指令碼叫用，都會導致 SQL Server 服務呼叫為相同執行個體建立的啟動控制板服務。
 

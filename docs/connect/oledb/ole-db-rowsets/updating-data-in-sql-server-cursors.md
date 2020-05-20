@@ -38,7 +38,7 @@ ms.locfileid: "67994156"
 ## <a name="immediate-and-delayed-update-modes"></a>立即和延遲更新模式  
  在立即更新模式下，**IRowsetChange::SetData** 的每個呼叫會造成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的往返。 如果取用者對單一資料列進行多個變更，利用單一 **SetData** 呼叫提交所有變更會更有效率。  
   
- 在延遲更新模式下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的往返是針對 *IRowsetUpdate::Update* 之 *cRows* 和 **rghRows** 參數中指示的每個資料列進行。  
+ 在延遲更新模式下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的往返是針對 **IRowsetUpdate::Update** 之 *cRows* 和 *rghRows* 參數中指示的每個資料列進行。  
   
  在任一種模式下，當資料列集沒有開啟任何交易物件時，往返代表不同的交易。  
   

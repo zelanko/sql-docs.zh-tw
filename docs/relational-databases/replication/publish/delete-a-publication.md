@@ -60,10 +60,10 @@ ms.locfileid: "76287641"
   
     -   若要刪除單一發行集，請在發行集資料庫的發行者上執行 [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) 。  
   
-    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 為  type **指定 \@tran** 值。 (選擇性) 如果無法存取散發者，或是資料庫的狀態為可疑或離線，請為  force **指定 \@1** 值。 (選擇性) 如果未在發行集資料庫上執行 **sp_removedbreplication\@，請為** [dbname](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 指定資料庫的名稱。  
+    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 為 **\@type** 指定 **tran** 值。 (選擇性) 如果無法存取散發者，或是資料庫的狀態為可疑或離線，請為 **\@force** 指定 **1** 值。 (選擇性) 如果未在發行集資料庫上執行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)，請為 **\@dbname** 指定資料庫的名稱。  
   
         > [!NOTE]  
-        >  為  force **指定 \@1** 值時，可能會將與複寫有關的發行物件留在資料庫中。  
+        >  為 **\@force** 指定 **1** 值時，可能會將與複寫有關的發行物件留在資料庫中。  
   
 2.  (選擇性) 如果此資料庫沒有任何其他發行集，請執行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)，以便使用快照式或異動複寫來停用目前資料庫的發行集。  
   
@@ -75,10 +75,10 @@ ms.locfileid: "76287641"
   
     -   若要刪除單一發行集，請在發行集資料庫的發行者端執行 [sp_dropmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)。  
   
-    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 為  type **指定 \@merge** 值。 (選擇性) 如果無法存取散發者，或是資料庫的狀態為可疑或離線，請為  force **指定 \@1** 值。 (選擇性) 如果未在發行集資料庫上執行 **sp_removedbreplication\@，請為** [dbname](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 指定資料庫的名稱。  
+    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 為 **\@type** 指定 **merge** 值。 (選擇性) 如果無法存取散發者，或是資料庫的狀態為可疑或離線，請為 **\@force** 指定 **1** 值。 (選擇性) 如果未在發行集資料庫上執行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)，請為 **\@dbname** 指定資料庫的名稱。  
   
         > [!NOTE]  
-        >  為  force **指定 \@1** 值時，可能會將與複寫有關的發行物件留在資料庫中。  
+        >  為 **\@force** 指定 **1** 值時，可能會將與複寫有關的發行物件留在資料庫中。  
   
 2.  (選擇性) 如果此資料庫沒有任何其他發行集，請執行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)，以便使用合併式複寫來停用目前資料庫的發行集。  
   

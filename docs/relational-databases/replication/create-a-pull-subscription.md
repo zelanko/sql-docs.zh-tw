@@ -81,7 +81,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 3.  以滑鼠右鍵按一下 **[區域訂閱]** 資料夾，然後按一下 **[新增訂閱]** 。  
   
-4.  在 [新增訂閱精靈] 的 [發行集]  頁面上，從 [發行者] **\< 下拉式清單中選取 [** 尋找 SQL Server 發行者>] **\< 或 [** 尋找 Oracle 發行者>]  。  
+4.  在 [新增訂閱精靈] 的 [發行集] 頁面上，從 [發行者] 下拉式清單中選取 [\<尋找 SQL Server 發行者>] 或 [\<尋找 Oracle 發行者>]。  
   
 5.  連接到 **[連接到伺服器]** 對話方塊中的發行者。  
   
@@ -98,7 +98,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
     -   如果結果集中 **allow_pull** 的值為 **1**，則發行集支援提取訂閱。  
   
-    -   如果 **allow_pull** 的值為 **0**，請執行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，並將  property **指定為 \@allow_pull**，以及將  value **指定為 \@true**。  
+    -   如果 **allow_pull** 的值為 **0**，請執行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，並將 **\@property** 指定為 **allow_pull**，以及將 **\@value** 指定為 **true**。  
   
 2.  在訂閱者端，執行 [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)。 指定 **\@publisher** 和 **\@publication**。 如需有關更新訂閱的詳細資訊，請參閱＜ [建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)＞。   
   
@@ -111,11 +111,11 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
         > [!NOTE]  
         >  使用「Windows 整合式驗證」進行的連線一律使用由 **\@job_login** 和 **\@job_password** 所指定 Windows 認證。 散發代理程式一律使用「Windows 整合式驗證」建立與訂閱者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到「散發者」。  
   
-    -   (選擇性)  distributor_security_mode **的值 \@0**，以及 **\@distributor_login** 和 **\@distributor_password** 的 SQL Server 登入資訊 (如果您在連線至散發者時需要使用「SQL Server 驗證」)。  
+    -   (選擇性) **\@distributor_security_mode** 的值 **0**，以及 **\@distributor_login** 和 **\@distributor_password** 的 SQL Server 登入資訊 (如果您在連線至散發者時需要使用「SQL Server 驗證」)。  
   
     -   此訂閱之散發代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
-4.  在發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 來註冊提取訂閱。 指定 **\@publication**、 **\@subscriber** 和 **\@destination_db**。 為  subscription_type **指定 \@pull** 的值。  
+4.  在發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 來註冊提取訂閱。 指定 **\@publication**、 **\@subscriber** 和 **\@destination_db**。 為 **\@subscription_type** 指定 **pull** 的值。  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>若要建立合併式發行集的提取訂閱  
   
@@ -123,7 +123,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
     -   如果結果集中 **allow_pull** 的值為 **1**，則發行集支援提取訂閱。  
   
-    -   如果 **allow_pull** 的值為 **0**，請執行 [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，並將  property **指定為 \@allow_pull**，以及將  value **指定為 \@true**。  
+    -   如果 **allow_pull** 的值為 **0**，請執行 [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，並將 **\@property** 指定為 **allow_pull**，以及將 **\@value** 指定為 **true**。  
   
 2.  在訂閱者端，執行 [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 指定 **\@publisher**、 **\@publisher_db**、 **\@publication** 和下列參數：  
   
@@ -142,13 +142,13 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
         > [!NOTE]  
         >  使用「Windows 整合式驗證」進行的連線一律使用由 **\@job_login** 和 **\@job_password** 所指定 Windows 認證。 「合併代理程式」一律使用「Windows 整合式驗證」建立到「訂閱者」的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到「發行者」。  
   
-    -   (選擇性)  distributor_security_mode **的值 \@0**，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**distributor_login\@ 和** **distributor_password\@ 的**  登入資訊 (如果您在連線至散發者時需要使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」)。  
+    -   (選擇性) **\@distributor_security_mode** 的值 **0**，以及 **\@distributor_login** 和 **\@distributor_password** 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊 (如果您在連線至散發者時需要使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」)。  
   
-    -   (選擇性)  publisher_security_mode **的值 \@0**，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**publisher_login\@ 和** **publisher_password\@ 的**  登入資訊 (如果您在連線到「發行者」時需要使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」)。  
+    -   (選擇性) **\@publisher_security_mode** 的值 **0**，以及 **\@publisher_login** 和 **\@publisher_password** 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊 (如果您在連線到「發行者」時需要使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」)。  
   
     -   此訂閱之「合併代理程式」作業的排程。 如需詳細資訊，請參閱 [建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
-4.  在發行者端，執行 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber**、 **\@subscriber_db**，以及為  subscription_type **指定 \@pull** 值。 如此會註冊提取訂閱。  
+4.  在發行者端，執行 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定 **\@publication**、**\@subscriber**、**\@subscriber_db**，以及為 **\@subscription_type** 指定 **pull** 值。 如此會註冊提取訂閱。  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  下列範例會建立交易式發行集的提取訂閱。 第一批次在「訂閱者」上執行，而第二批次在「發行者」上執行。 登入和密碼值是在執行階段使用 sqlcmd 指令碼變數提供的。  

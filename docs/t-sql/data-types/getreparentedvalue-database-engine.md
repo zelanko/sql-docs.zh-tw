@@ -59,7 +59,7 @@ _newRoot_
 ## <a name="examples"></a>範例  
   
 ### <a name="a-comparing-two-node-locations"></a>A. 比較兩個節點位置  
-下列範例會顯示某個節點的目前 hierarchyid。 此外，它也會顯示如果您移動此節點來成為  NewParent **節點的子系，則該節點的 \@hierarchyid** 會是什麼。 它會使用 `ToString()` 方法來顯示階層式關聯性。
+下列範例會顯示某個節點的目前 hierarchyid。 此外，它也會顯示如果您移動此節點來成為 **\@NewParent** 節點的子系，則該節點的 **hierarchyid** 會是什麼。 它會使用 `ToString()` 方法來顯示階層式關聯性。
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  

@@ -57,7 +57,7 @@ ms.locfileid: "65619696"
   
 3.  按一下 **[系統設定]** 。  
   
-4.  選取 [記錄]  區段中的 [啟用執行記錄]  。  
+4.  選取 [記錄] 區段中的 [啟用執行記錄]。  
   
 5.  按一下 [確定]  。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65619696"
   
  您必須依照先前步驟的說明啟用記錄，然後完成下列步驟：  
   
-1.  在  **服務應用程式的 [系統設定]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面中，尋找 [使用者定義]  區段。  
+1.  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的 [系統設定] 頁面中，尋找 [使用者定義] 區段。  
   
 2.  將 [ExecutionLogLevel]  變更為 [verbose]  。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose]  和 [normal]  。  
   

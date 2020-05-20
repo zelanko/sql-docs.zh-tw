@@ -26,7 +26,7 @@ ms.locfileid: "75258887"
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
 
-從功能表，巡覽至 [檢視] **[已註冊的伺服器]\\** 開啟 [已註冊的伺服器]  窗格。
+從功能表，巡覽至 [檢視]\\[已註冊的伺服器] 開啟 [已註冊的伺服器] 窗格。
 
 ### <a name="to-change-the-name-of-a-server"></a>變更伺服器的名稱
 

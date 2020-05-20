@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: b846ff31d4acbc9d87f66a76a19f688384c88982
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f66891393527b12f859d1a0aa6447470473a4d49
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106465"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808419"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ sys.sp_cdc_enable_table
   
  一個來源資料表最多可以有兩個擷取執行個體。 如需詳細資訊，請參閱[sp_cdc_help_change_data_capture &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)。  
   
-`[ @supports_net_changes = ] supports_net_changes`指出是否要針對此 capture 實例啟用查詢淨變更的支援。 如果資料表**bit**有主鍵，或資料表具有使用@index_name參數識別的唯一索引， *supports_net_changes*是 bit，預設值是1。 否則，此參數的預設值是 0。  
+`[ @supports_net_changes = ] supports_net_changes`指出是否要針對此 capture 實例啟用查詢淨變更的支援。 如果資料表有主鍵，或資料表具有使用參數識別的唯一索引， *supports_net_changes*是**bit** ，預設值是 1 @index_name 。 否則，此參數的預設值是 0。  
   
  如果為 0，就只會產生查詢所有變更的支援函數。  
   

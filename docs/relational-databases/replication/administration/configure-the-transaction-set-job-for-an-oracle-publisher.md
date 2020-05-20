@@ -31,11 +31,11 @@ ms.locfileid: "75322048"
   
 1.  在「Oracle 發行者」端，將 **job_queue_processes** 初始化參數設定為足夠的值，以允許 Xactset 作業執行。 如需有關此參數的詳細資訊，請參閱「Oracle 發行者」的資料庫文件。  
   
-2.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **\@publisher** 指定 Oracle 發行者名稱、針對  propertyname **指定 \@xactsetbatching** 值，並針對  propertyvalue **指定 \@enabled** 值。  
+2.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **\@publisher** 指定 Oracle 發行者名稱、針對 **\@propertyname** 指定 **xactsetbatching** 值，並針對 **\@propertyvalue** 指定 **enabled** 值。  
   
-3.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **\@publisher** 指定 Oracle 發行者名稱、針對  propertyname **指定 \@xactsetjobinterval** 值，並針對 **\@propertyvalue** 指定作業間隔 (以分鐘計)。  
+3.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **\@publisher** 指定 Oracle 發行者名稱、針對 **\@propertyname** 指定 **xactsetjobinterval** 值，並針對 **\@propertyvalue** 指定作業間隔 (以分鐘計)。  
   
-4.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **\@publisher** 指定 Oracle 發行者名稱、針對  propertyname **指定 \@xactsetjob** 值，並針對  propertyvalue **指定 \@enabled** 值。  
+4.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **\@publisher** 指定 Oracle 發行者名稱、針對 **\@propertyname** 指定 **xactsetjob** 值，並針對 **\@propertyvalue** 指定 **enabled** 值。  
   
 ### <a name="to-configure-the-transaction-set-job"></a>若要設定交易集作業  
   
@@ -51,7 +51,7 @@ ms.locfileid: "75322048"
   
 ### <a name="to-disable-the-transaction-set-job"></a>若要停用交易集作業  
   
-1.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **\@publisher** 指定 Oracle 發行者名稱、針對  propertyname **指定 \@xactsetjob** 值，並針對  propertyvalue **指定 \@disabled** 值。  
+1.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **\@publisher** 指定 Oracle 發行者名稱、針對 **\@propertyname** 指定 **xactsetjob** 值，並針對 **\@propertyvalue** 指定 **disabled** 值。  
   
 ## <a name="example"></a>範例  
  下列範例會啟用 `Xactset` 作業，並在執行之間設定三分鐘的間隔。  

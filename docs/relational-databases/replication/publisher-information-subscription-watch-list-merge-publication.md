@@ -74,7 +74,7 @@ ms.locfileid: "75320617"
  每一個訂閱名稱的格式為：*SubscriberName: SubscriptionDatabaseName*。  
   
  **易記名稱**  
- 每一個訂閱的描述。 此描述輸入於 [訂閱屬性]  對話方塊中或以 `@description`sp_addmergesubscription[ 的 ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 參數或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 來指定。 使用者通常使用描述作為訂閱的「易記名稱」或暱稱。  
+ 每一個訂閱的描述。 此描述輸入於 [訂閱屬性]  對話方塊中或以 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 的 `@description` 參數或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 來指定。 使用者通常使用描述作為訂閱的「易記名稱」或暱稱。  
   
  **發行集**  
  與訂閱同步處理的發行集名稱，格式如下： *PublicationDatabaseName: PublicationName*。  

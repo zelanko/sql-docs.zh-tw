@@ -42,7 +42,7 @@ SQL Server Agent 所使用的模組沒有任何變更。 因此，PowerShell 類
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者，可啟用類似於檔案系統路徑的簡單導覽機制。 您可以建立類似於檔案系統路徑的路徑，其中的磁碟機與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件模型有關聯，而且節點是根據物件模型類別。 然後，您可以使用熟悉的命令 (例如 **cd** 和 **dir** ) 來巡覽路徑，其方式類似於在命令提示字元視窗中巡覽資料夾。 您可以使用其他命令 (例如 **ren** 或 **del**)，在路徑中的節點上執行動作。  
   
--   一組 Cmdlet，可支援一些動作，例如執行包含 **或 XQuery 陳述式的**sqlcmd[!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼。  
+-   一組 Cmdlet，可支援一些動作，例如執行包含 [!INCLUDE[tsql](../includes/tsql-md.md)] 或 XQuery 陳述式的 **sqlcmd** 指令碼。  
   
   
 ## <a name="sql-server-versions"></a>SQL Server 版本  

@@ -39,7 +39,7 @@ ms.locfileid: "63295770"
   
 ### <a name="to-create-a-table-report"></a>建立資料表報表  
   
-1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
+1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -448,7 +448,7 @@ ms.locfileid: "63295770"
   
 1.  以滑鼠右鍵按一下指標，按一下 [指標屬性]  ，然後按一下 [值和狀態]  。  
   
-2.  按一下 [值]  文字方塊旁邊的 [運算式 fx]  按鈕。  
+2.  按一下 [值] 文字方塊旁邊的 [運算式 fx] 按鈕。  
   
 3.  在 [運算式]  對話方塊中，展開 [一般函數]  ，並按一下 [數學]  。  
   
@@ -470,7 +470,7 @@ ms.locfileid: "63295770"
   
 16. 在 [狀態度量單位]  方塊中，選取 [數值]  。  
   
-17. 在具有向下鍵的資料列中，按一下 [開始]  值的文字方塊右邊的 **fx** 按鈕。  
+17. 在具有向下鍵的資料列中，按一下 [開始] 值的文字方塊右邊的 **fx** 按鈕。  
 
     ![report-builder-expression-tutorial-indicator-start](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
   
@@ -502,7 +502,7 @@ ms.locfileid: "63295770"
   
 33. 在具有向上鍵的資料列中，於 [開始]  方塊中輸入 **0**。  
   
-34. 按一下 [結束]  值的文字方塊右邊的 **fx** 按鈕。  
+34. 按一下 [結束] 值的文字方塊右邊的 **fx** 按鈕。  
   
 35. 在 [運算式]  對話方塊中，刪除 **100** 然後建立運算式：`=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
@@ -521,7 +521,7 @@ ms.locfileid: "63295770"
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
-2.  在 [報表資料]  窗格中，以滑鼠右鍵按一下 [參數]  ，然後按一下 [加入參數]  。  
+2.  在 [報表資料] 窗格中，以滑鼠右鍵按一下 [參數]，然後按一下 [加入參數]。  
 
     ![report-builder-expression-tutorial-add-parameter](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
   

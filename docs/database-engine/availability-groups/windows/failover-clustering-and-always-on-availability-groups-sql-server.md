@@ -74,7 +74,7 @@ ms.locfileid: "74822249"
  **可用性群組的容錯移轉原則設定適用於所有複本，無論複本裝載於獨立執行個體或 FCI 執行個體。  
   
 > [!NOTE]  
->  如需 **版本的 FCI 和**Always On 可用性群組**內**節點數目[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
+>  如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的 FCI 和 **Always On 可用性群組**內**節點數目**的詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 裝載可用性複本的考量  
   

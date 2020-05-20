@@ -35,7 +35,7 @@ ms.locfileid: "75321712"
   
 2.  將指令碼檔案儲存到可由發行集之快照集代理程式存取的位置。  
   
-3.  在發行集資料庫的發行者上，執行 [sp_addscriptexec &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md)。 針對 `@publication` 指定步驟 2 中建立之具有完整 UNC 路徑的指令碼檔案名稱 `@scriptfile`，並針對 `@skiperror` 指定下列其中一個值：  
+3.  在發行集資料庫的發行者上，執行 [sp_addscriptexec &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md)。 針對 `@scriptfile` 指定步驟 2 中建立之具有完整 UNC 路徑的指令碼檔案名稱 `@publication`，並針對 `@skiperror` 指定下列其中一個值：  
   
     -   **0** - 如果遇到錯誤，代理程式將會停止執行指令碼。  
   

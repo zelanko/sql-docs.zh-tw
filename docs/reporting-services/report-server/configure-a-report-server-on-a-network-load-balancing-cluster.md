@@ -70,7 +70,7 @@ ms.locfileid: "75244395"
   
 4. 針對向外延展部署中的每個報表伺服器重複以上步驟。  
   
-5. 確認 \Reporting Services\Reportserver 資料夾中的所有 Web.Config 檔案在 <`machineKey`> 區段中包含相同的 <`system.web`> 項目。  
+5. 確認 \Reporting Services\Reportserver 資料夾中的所有 Web.Config 檔案在 <`system.web`> 區段中包含相同的 <`machineKey`> 項目。  
 
 ::: moniker-end
 

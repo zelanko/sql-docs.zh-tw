@@ -31,7 +31,7 @@ ms.locfileid: "75254232"
   
 -   您使用相同資料表的多個執行個體 (例如自我聯結)，然後需要參考到一個或另外一個執行個體的方式。  
   
-例如，您可以針對資料表名稱 `"e"` 建立別名 `employee_information`，然後在整個查詢的其他部分以 `"e"` 的方式參考資料表。  
+例如，您可以針對資料表名稱 `employee_information` 建立別名 `"e"`，然後在整個查詢的其他部分以 `"e"` 的方式參考資料表。  
   
 ### <a name="to-create-an-alias-for-a-table-or-table-valued-object"></a>若要建立資料表或資料表值物件的別名  
   

@@ -244,9 +244,9 @@ int main(int argc, char **argv)
 ```
 
 ## <a name="supported-version"></a><a name="bkmk-version"></a>支援的版本
-如果將 `SQLGetDescField` 設定為 `FieldIdentifier` (1237)，Microsoft ODBC Driver 17.2 就允許透過 `SQL_CA_SS_DATA_CLASSIFICATION` 擷取資料分類資訊。 
+如果將 `FieldIdentifier` 設定為 `SQL_CA_SS_DATA_CLASSIFICATION` (1237)，Microsoft ODBC Driver 17.2 就允許透過 `SQLGetDescField` 擷取資料分類資訊。 
 
-從 Microsoft ODBC Driver 17.4.1.1 開始，您可以使用 `SQLGetDescField` (1238) 欄位識別碼，透過 `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` 來擷取伺服器所支援的資料分類版本。 在 17.4.1.1 中，會將支援的資料分類版本設定為 "2"。
+從 Microsoft ODBC Driver 17.4.1.1 開始，您可以使用 `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238) 欄位識別碼，透過 `SQLGetDescField` 來擷取伺服器所支援的資料分類版本。 在 17.4.1.1 中，會將支援的資料分類版本設定為 "2"。
 
  
 

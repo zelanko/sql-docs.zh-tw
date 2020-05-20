@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8a29933568cec147dc27ff7c9b5f026d62856e5b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056166"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807719"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @parameter_name = ] 'parameter_name'`要抓取之設定的名稱。 當指定時，會在** \@parameter_value** OUTPUT 參數中傳回 configuration 設定的值。 當未指定任何** \@parameter_name**時，這個預存程式會傳回包含實例中所有 Database Mail 設定的結果集。  
+`[ @parameter_name = ] 'parameter_name'`要抓取之設定的名稱。 當指定時，會在** \@ parameter_value** OUTPUT 參數中傳回 configuration 設定的值。 當未指定任何** \@ parameter_name**時，這個預存程式會傳回包含實例中所有 Database Mail 設定的結果集。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 若未** \@指定 parameter_name** ，會傳回具有下列資料行的結果集。  
+ 若未指定** \@ parameter_name** ，會傳回具有下列資料行的結果集。  
   
 ||||  
 |-|-|-|  
@@ -57,7 +57,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>備註  
  預存程式**sysmail_help_configure_sp**列出實例目前的 Database Mail 設定。  
   
- 當指定了** \@parameter_name** ，但沒有為** \@parameter_value**提供輸出參數時，這個預存程式不會產生任何輸出。  
+ 當指定了** \@ parameter_name** ，但沒有為** \@ parameter_value**提供輸出參數時，這個預存程式不會產生任何輸出。  
   
  預存程式**sysmail_help_configure_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱叫用此程式。  
   

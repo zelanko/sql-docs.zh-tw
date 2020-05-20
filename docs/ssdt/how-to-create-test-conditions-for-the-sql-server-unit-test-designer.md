@@ -36,7 +36,7 @@ ms.locfileid: "75241484"
   
 6.  按一下 [專案]  功能表上的 [卸載專案]  。  
   
-7.  在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選擇 [編輯 **.csproj]<project name>** 。  
+7.  在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選擇 [編輯 <project name>.csproj]。  
   
 8.  匯入 Microsoft.CSharp.targets 之後，加入下列 Import 陳述式：  
   

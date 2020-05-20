@@ -86,7 +86,7 @@ ms.locfileid: "75230481"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝媒體，然後在根資料夾中，按兩下 Setup.exe。 若要從網路共用區進行安裝，請瀏覽到共用區上的根資料夾，然後按兩下 Setup.exe。 如需有關如何安裝必要元件的詳細資訊，請參閱＜ [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)＞。  
   
-2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要建立新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集安裝，請在安裝頁面上按一下 新的  **[容錯移轉叢集安裝][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** 。  
+2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要建立新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集安裝，請在安裝頁面上按一下 新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [容錯移轉叢集安裝]。  
   
 3.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
@@ -301,7 +301,7 @@ ms.locfileid: "75230481"
   
 16. 使用 [伺服器組態 - 定序]  索引標籤，為 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 指定非預設的定序。  
   
-17. 使用 [Server Configuration - Filestream (伺服器組態 - Filestream)]  可針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體啟用 FILESTREAM。  選取 [下一步]  以繼續操作。  
+17. 使用 [Server Configuration - Filestream (伺服器組態 - Filestream)]**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可針對 ** 的執行個體啟用 FILESTREAM。  選取 [下一步]  以繼續操作。  
   
 18. 使用[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [組態] 頁面來指定要建立的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安裝類型。 如果是容錯移轉叢集安裝，此選項會設定為未設定的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安裝。 在您完成安裝之後，必須設定 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務。  
    

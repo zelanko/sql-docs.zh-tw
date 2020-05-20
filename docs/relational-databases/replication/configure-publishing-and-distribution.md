@@ -32,7 +32,7 @@ ms.locfileid: "76284940"
 如需詳細資訊，請參閱[檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。
 
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio 
-使用「新增發行集精靈」或「設定散發精靈」來設定散發。 設定散發者之後，請檢視並修改 [散發者屬性 - **散發者]\<** 對話方塊中的屬性。 如果您想設定「散發者」讓 `db_owner`固定資料庫角色的成員可以建立發行集，或者因為您想設定非「發行者」的遠端「散發者」，則請使用「設定散發精靈」。
+使用「新增發行集精靈」或「設定散發精靈」來設定散發。 設定散發者之後，請檢視並修改 [散發者屬性 - \<散發者] 對話方塊中的屬性。 如果您想設定「散發者」讓 `db_owner`固定資料庫角色的成員可以建立發行集，或者因為您想設定非「發行者」的遠端「散發者」，則請使用「設定散發精靈」。
 
 #### <a name="to-configure-distribution"></a>若要設定散發 
 
@@ -67,7 +67,7 @@ ms.locfileid: "76284940"
 
    若是 SQL Database 受控執行個體上的散發者，請為 `@working_directory` 使用 Azure 儲存體帳戶，並為 `@storage_connection_string` 使用儲存體存取金鑰。 
 
-3. 在發行者上，執行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 針對 `@dbname` 指定發行的資料庫、針對 `@optname` 指定複寫的類型，並針對 `true` 指定 `@value` 的值。
+3. 在發行者上，執行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 針對 `@dbname` 指定發行的資料庫、針對 `@optname` 指定複寫的類型，並針對 `@value` 指定 `true` 的值。
 
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>使用遠端散發者設定發行 
 

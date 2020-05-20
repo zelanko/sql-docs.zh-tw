@@ -85,7 +85,7 @@ FOR JSON PATH
   
  FOR JSON 查詢傳回的文字似乎會逸出為純文字。 僅在指定 WITHOUT_ARRAY_WRAPPER 時才會發生此情況。 為何不會將它視為 JSON 物件，並將它以未逸出方式包含在結果中？  
   
- **答：** 如果您在內部 `WITHOUT_ARRAY_WRAPPER` 中指定 `FOR JSON` 選項，產生的 JSON 文字不一定是有效的 JSON。 因此，外部 `FOR JSON` 會假定此為純文字並逸出字串。 若您確定 JSON 輸出有效，請使用 `JSON_QUERY` 函數將其包裝以升級為正確格式的 JSON，如下列範例所示。  
+ **答：** 如果您在內部 `FOR JSON` 中指定 `WITHOUT_ARRAY_WRAPPER` 選項，產生的 JSON 文字不一定是有效的 JSON。 因此，外部 `FOR JSON` 會假定此為純文字並逸出字串。 若您確定 JSON 輸出有效，請使用 `JSON_QUERY` 函數將其包裝以升級為正確格式的 JSON，如下列範例所示。  
   
 ```sql  
 SELECT 'Text' as myText,  

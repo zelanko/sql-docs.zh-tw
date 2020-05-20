@@ -38,7 +38,7 @@ ms.locfileid: "75255561"
   
 6.  新增群組或使用者至 [群組或使用者名稱]  方塊，然後選取此新增項目。  
   
-7.  在 [  _的權限]<group or user>_ 方塊中，針對想要遠端偵測其服務狀態的使用者，選取 [遠端啟用]  權限的 [允許]  資料行。  
+7.  在 [_<group or user>_ 的權限] 方塊中，針對想要遠端偵測其服務狀態的使用者，選取 [遠端啟用] 權限的 [允許] 資料行。  
   
 ## <a name="see-also"></a>另請參閱  
 [啟動、停止或暫停 SQL Server Agent 服務](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

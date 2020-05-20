@@ -28,11 +28,11 @@ ms.locfileid: "75243932"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體。  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]。  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
 雖然 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您在沒有先建立資料來源連接的情況下，直接使用查詢，但大部分其他工作都需要連接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供 [連接到伺服器]  對話方塊，可讓您設定對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的連線屬性。 當 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 啟動時，便會開啟 [連接到伺服器]  對話方塊，提示您連線到伺服器。 [連接到伺服器]  對話方塊會保留上次使用的連線設定。  
   

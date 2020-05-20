@@ -77,7 +77,7 @@ ms.locfileid: "71296873"
   
 1.  按一下 **[開始]** ，依序指向 **[所有程式]** 和 **[Microsoft SQL Server]** ，然後按一下 **[SQL Server Management Studio]** 。  
   
-2.  在 [連接到伺服器]  對話方塊中，選取 [伺服器類型]  清單中的 [Integration Services]  ，在 [伺服器名稱]  方塊中提供伺服器名稱，然後按一下 [連接]  。  
+2.  在 [連接到伺服器] 對話方塊中，選取 [伺服器類型] 清單中的 [Integration Services]，在 [伺服器名稱] 方塊中提供伺服器名稱，然後按一下 [連接]。  
   
     > [!IMPORTANT]  
     >  如果您無法連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務目前可能沒有執行。 若要了解此服務的狀態，請按一下 **[開始]** ，依序指向 **[所有程式]** 、 **[Microsoft SQL Server]** 和 **[組態工具]** ，然後按一下 **[SQL Server 組態管理員]** 。 在左窗格中，按一下 **[SQL Server 服務]** 。 在右窗格中，尋找 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 如果此服務尚未執行，請將它啟動。  
@@ -130,7 +130,7 @@ ms.locfileid: "71296873"
   
     -   在 [伺服器類型]  方塊中，選取 [Integration Services]  。  
   
-    -   在 [伺服器名稱]  方塊中提供伺服器名稱，或按一下 [**瀏覽其他...>]\<** ，並尋找要使用的伺服器。  
+    -   在 [伺服器名稱] 方塊中提供伺服器名稱，或按一下 [\<瀏覽其他...>]，並尋找要使用的伺服器。  
   
 3.  如果物件總管尚未開啟，請在 [檢視]  功能表上，按一下物件總管  。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "71296873"
   
     -   在 [伺服器類型]  方塊中，選取 [Integration Services]  。  
   
-    -   在 [伺服器名稱]  方塊中提供伺服器名稱，或按一下 [**瀏覽其他...>]\<** ，並尋找要使用的伺服器。  
+    -   在 [伺服器名稱] 方塊中提供伺服器名稱，或按一下 [\<瀏覽其他...>]，並尋找要使用的伺服器。  
   
 3.  如果物件總管尚未開啟，請在 [檢視]  功能表上，按一下物件總管  。  
   

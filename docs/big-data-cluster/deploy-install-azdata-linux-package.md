@@ -20,7 +20,7 @@ ms.locfileid: "75728579"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明如何在 Linux 上安裝適用於 SQL Server 2019 巨量資料叢集的 `azdata`。 您必須先使用 `azdata` 安裝 `pip`，才能開始使用這些套件管理員。
+本文說明如何在 Linux 上安裝適用於 SQL Server 2019 巨量資料叢集的 `azdata`。 您必須先使用 `pip` 安裝 `azdata`，才能開始使用這些套件管理員。
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 

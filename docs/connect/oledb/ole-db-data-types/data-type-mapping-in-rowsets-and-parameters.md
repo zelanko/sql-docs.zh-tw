@@ -33,7 +33,7 @@ ms.locfileid: "77558380"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  在資料列集和參數值中，OLE DB Driver for SQL Server 會藉由使用下列 OLE DB 定義的資料類型 (在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]IColumnsInfo::GetColumnInfo**和**ICommandWithParameters::GetParameterInfo**函數中報告的) 來代表** 資料。  
+  在資料列集和參數值中，OLE DB Driver for SQL Server 會藉由使用下列 OLE DB 定義的資料類型 (在 **IColumnsInfo::GetColumnInfo** 和 **ICommandWithParameters::GetParameterInfo** 函數中報告的) 來代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。  
   
 |SQL Server 資料類型|OLE DB 資料類型|  
 |--------------------------|----------------------|  

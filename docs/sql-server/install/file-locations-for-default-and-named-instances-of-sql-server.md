@@ -58,11 +58,11 @@ ms.locfileid: "75253485"
   
  此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的預設執行個體識別碼範例如下：  
   
--   \{ 預設執行個體的 MSSQL[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nn}.MSSQLSERVER。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 預設執行個體的 MSSQL\{nn}.MSSQLSERVER。  
   
--   \{ Analysis Services 預設執行個體的 MSAS[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nn}.MSSQLSERVER。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 預設執行個體的 MSAS\{nn}.MSSQLSERVER。  
   
--   名為 "MyInstance" \{ 具名執行個體的 MSSQL[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nn}.MyInstance。  
+-   名為 "MyInstance" [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 具名執行個體的 MSSQL\{nn}.MyInstance。  
   
 
  包含 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 而且已安裝到預設目錄之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]具名執行個體 "MyInstance" 的目錄結構將會如下所示：  
@@ -73,7 +73,7 @@ ms.locfileid: "75253485"
   
  您可以為執行個體識別碼指定任何值，但是請避免特殊字元和保留關鍵字。  
   
- 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間指定非預設的執行個體識別碼。 如果使用者選擇變更預設安裝目錄，則可以改用 \\自訂路徑>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而不使用 \<{Program Files}\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請注意，不支援以底線 (_) 為開頭或是包含數字符號 (#) 或貨幣符號 ($) 的執行個體識別碼。  
+ 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間指定非預設的執行個體識別碼。 如果使用者選擇變更預設安裝目錄，則可以改用 \<自訂路徑>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而不使用 \\{Program Files}\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請注意，不支援以底線 (_) 為開頭或是包含數字符號 (#) 或貨幣符號 ($) 的執行個體識別碼。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和用戶端元件都不會感知執行個體，因此，也不會被指派執行個體識別碼。 根據預設，系統會將非執行個體感知的元件安裝到單一目錄： [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]。 變更某個共用元件的安裝路徑也會變更其他共用元件的安裝路徑。 後續安裝會將非執行個體感知的元件安裝到與原始安裝相同的目錄。  

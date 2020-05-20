@@ -143,7 +143,7 @@ ms.locfileid: "76285956"
     ```  
   
 ## <a name="connecting-to-a-replication-server"></a>連接至複寫伺服器  
- RMO 程式設計物件需要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 類別的執行個體，來建立 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 執行個體的連接。 這個伺服器連接會獨立於任何 RMO 程式設計物件之外建立。 接著會在執行個體建立期間將它傳遞到 RMO 物件，或是將它指派到物件的 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 屬性。 以此方式，就可以個別建立和管理 RMO 程式設計物件與連接物件執行個體，而且多個 RMO 程式設計物件可以重複使用單一連接物件。 下列規則適用於應用程式伺服器的連接：  
+ RMO 程式設計物件需要使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體，來建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。 這個伺服器連接會獨立於任何 RMO 程式設計物件之外建立。 接著會在執行個體建立期間將它傳遞到 RMO 物件，或是將它指派到物件的 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 屬性。 以此方式，就可以個別建立和管理 RMO 程式設計物件與連接物件執行個體，而且多個 RMO 程式設計物件可以重複使用單一連接物件。 下列規則適用於應用程式伺服器的連接：  
   
 -   連接的所有屬性是針對指定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件所定義。  
   

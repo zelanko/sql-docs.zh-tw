@@ -38,7 +38,7 @@ ms.locfileid: "63041232"
 在本節中，您可以使用 [圖表精靈] 建立內嵌資料集，並選擇共用資料來源，然後建立圓形圖。  
 
   
-1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
+1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "63041232"
 6.  若要以百分比顯示值，UseValueAsLabel 屬性必須為 False。 如果系統提示您在 [確認動作]  對話方塊中設定這個值，請按一下 [是]  。  
   
     > [!NOTE]  
-    > 當您格式化百分比時，[數列標籤屬性]  對話方塊中的 [數字格式]  沒有任何作用。 這會將標籤格式化成百分比，但是不會計算每個配量所代表的圓形圖百分比。  
+    > 當您格式化百分比時，[數列標籤屬性] 對話方塊中的 [數字格式] 沒有任何作用。 這會將標籤格式化成百分比，但是不會計算每個配量所代表的圓形圖百分比。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

@@ -116,7 +116,7 @@ ms.locfileid: "76288175"
   
 **–SubscriptionStreams** 參數可大幅提升彙總複寫輸送量。 它允許至「訂閱者」的多個連接平行套用批次變更，同時在使用單一執行緒時維護現有的許多交易特性。 如果有一個連接無法執行或認可，則所有連接都將中止目前批次，且代理程式將使用單一資料流重試失敗的批次。 在此重試階段完成之前，「訂閱者」端可能會出現暫時的交易不一致性。 成功認可失敗的批次後，「訂閱者」將返回交易一致性的狀態。  
   
-此代理程式參數值可以使用 `@subscriptionstreams`sp_addsubscription &#40;Transact-SQL&#41;[ 的 ](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 來指定。  
+此代理程式參數值可以使用 [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 的 `@subscriptionstreams` 來指定。  
 
 如需有關實作訂用帳戶資料流的詳細資訊，請參閱[瀏覽 SQL 複寫 subscriptionStream 設定](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting) \(英文\)。
   

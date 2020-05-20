@@ -134,7 +134,7 @@ ms.locfileid: "77080889"
   
  **若要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** 角色屬性和角色指派，好讓您不必每次都使用更高權限啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ：  
   
--   在 [開始]  功能表中，以滑鼠右鍵按一下 [Microsoft SQL Server **][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** ，然後按一下 [以系統管理員身分執行]  。  
+-   在 [開始] 功能表中，以滑鼠右鍵按一下 [Microsoft SQL Server [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]]，然後按一下 [以系統管理員身分執行]。  
   
 -   連接到本機 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器。  
   

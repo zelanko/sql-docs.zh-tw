@@ -22,7 +22,7 @@ ms.locfileid: "75306601"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 使用 [**Alias name> Properties (<別名名稱> 內容)]** **\<** 對話方塊的 [別名]  頁面來指定別名的連接字串元素。
+別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 使用 [\<Alias name> Properties (<別名名稱> 內容)] 對話方塊的 [別名] 頁面來指定別名的連接字串元素。
 
 ## <a name="options"></a>選項。
 

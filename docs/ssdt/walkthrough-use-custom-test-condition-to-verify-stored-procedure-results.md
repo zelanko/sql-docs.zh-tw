@@ -54,7 +54,7 @@ ms.locfileid: "79286592"
   
 2.  在 [簽署]  索引標籤上，選取 [簽署組件]  核取方塊。  
   
-3.  在 [選擇強式名稱金鑰檔]  方塊中，按一下 [**新增...>]\<** 。  
+3.  在 [選擇強式名稱金鑰檔] 方塊中，按一下 [\<新增...>]。  
   
     [建立強式名稱金鑰]  對話方塊隨即出現。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "79286592"
   
 6.  按一下 [專案]  功能表上的 [卸載專案]  。  
   
-7.  在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選擇 [編輯 **.csproj]<project name>** 。  
+7.  在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選擇 [編輯 <project name>.csproj]。  
   
 8.  匯入 **Microsoft.CSharp.targets** 之後，新增下列 Import 陳述式：  
   
@@ -92,7 +92,7 @@ ms.locfileid: "79286592"
   
 9. 儲存並關閉檔案。 在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選擇 [重新載入專案]  。  
   
-    在 [方案總管]  中專案的 [參考]  節點底下，會顯示必要的參考。  
+    在 [方案總管] 中專案的 [參考] 節點底下，會顯示必要的參考。  
   
 ## <a name="creating-the-resultsetcolumncountcondition-class"></a>建立 ResultSetColumnCountCondition 類別  
 現在，將 **Class1** 命名為 **ResultSetColumnCountCondition**，並從 [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 來加以衍生。 **ResultSetColumnCountCondition** 類別是簡單的測試條件，可驗證 ResultSet 中所傳回資料行的數目。 您可以使用這個條件，確定預存程序的合約是否正確。  
@@ -375,7 +375,7 @@ namespace ColumnCountCondition
   
 3.  在 [測試名稱]  中，輸入 **SampleUnitTest**。  
   
-4.  在 [加入至測試專案]  ，按一下 [建立新的 Visual C **測試專案]\#** 。 然後按一下 [確定]  以顯示 [新增測試專案]  對話方塊。  
+4.  在 [加入至測試專案]，按一下 [建立新的 Visual C\# 測試專案]。 然後按一下 [確定]  以顯示 [新增測試專案]  對話方塊。  
   
 5.  輸入 **SampleUnitTest** 作為專案名稱。  
   

@@ -22,7 +22,7 @@ ms.locfileid: "75245719"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>選項對話方塊 F1 說明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-此章節包含在  **中按一下 [工具]** **功能表上的 [選項]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 時，可用之對話方塊的 F1 說明。  
+此章節包含在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中按一下 [工具] 功能表上的 [選項] 時，可用之對話方塊的 F1 說明。  
   
 [選項 &#40;設計工具 - Analysis Services 設計工具 - 一般&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

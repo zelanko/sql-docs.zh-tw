@@ -36,7 +36,7 @@ ms.locfileid: "75247487"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     其中 *資料庫>\<* 是鏡像資料庫的名稱。  
+     其中 \<資料庫> 是鏡像資料庫的名稱。  
   
 ### <a name="to-turn-off-transaction-safety"></a>關閉交易安全性  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75247487"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     其中 *資料庫>\<* 是鏡像資料庫。  
+     其中 \<資料庫> 是鏡像資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE 資料庫鏡像 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   

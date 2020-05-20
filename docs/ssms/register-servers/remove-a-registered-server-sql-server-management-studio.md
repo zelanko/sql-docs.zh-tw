@@ -26,7 +26,7 @@ ms.locfileid: "75256207"
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [已註冊的伺服器] 移除伺服器。
+本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 [已註冊的伺服器] 移除伺服器。
 
 ## <a name="SSMSProcedure"></a>
 

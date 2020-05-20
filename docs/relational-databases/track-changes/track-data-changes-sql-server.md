@@ -65,7 +65,7 @@ ms.locfileid: "74095422"
 ##  <a name="change-data-capture"></a><a name="Capture"></a> 異動資料擷取  
  異動資料擷取會透過擷取進行 DML 變更的事實以及變更的實際資料，提供使用者資料表的歷程記錄變更資訊。 這些變更是使用讀取交易記錄而且對系統影響很小的非同步處理序擷取的。  
   
- 如下圖所示，對使用者資料表所做的變更會擷取在對應的變更資料表中。 這些變更資料表會提供一段時間內變更的歷程記錄檢視。 [ 所提供的](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)異動資料擷取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]函數可讓您方便且有系統地取用異動資料。  
+ 如下圖所示，對使用者資料表所做的變更會擷取在對應的變更資料表中。 這些變更資料表會提供一段時間內變更的歷程記錄檢視。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所提供的[異動資料擷取](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)函數可讓您方便且有系統地取用異動資料。  
   
  ![異動資料擷取的概念圖例](../../relational-databases/track-changes/media/cdcart1.gif "異動資料擷取的概念圖例")  
   

@@ -43,11 +43,11 @@ ms.locfileid: "74191081"
   本主題提供使用 [SELECT](../../t-sql/queries/select-transact-sql.md) 陳述式的範例。  
   
 ## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. 使用 SELECT 擷取資料列和資料行  
- 下列範例會顯示三個程式碼範例。 第一個程式碼範例會從 `*` 資料庫的 `Product` 資料表中，傳回所有資料列 (未指定 WHERE 子句) 和所有資料行 (使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)])。  
+ 下列範例會顯示三個程式碼範例。 第一個程式碼範例會從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的 `*` 資料表中，傳回所有資料列 (未指定 WHERE 子句) 和所有資料行 (使用 `Product`)。  
   
  [!code-sql[Select#SelectExamples1](../../t-sql/queries/codesnippet/tsql/select-examples-transact_1.sql)]  
   
- 這個範例會從 `Name` 資料庫的 `ProductNumber` 資料表中，傳回所有資料列 (未指定 WHERE 子句)，但只傳回資料行子集 (`ListPrice`、`Product`、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)])。 另外，也會加入一個資料行標題。  
+ 這個範例會從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的 `Name` 資料表中，傳回所有資料列 (未指定 WHERE 子句)，但只傳回資料行子集 (`ProductNumber`、`ListPrice`、`Product`)。 另外，也會加入一個資料行標題。  
   
  [!code-sql[Select#SelectExamples2](../../t-sql/queries/codesnippet/tsql/select-examples-transact_2.sql)]  
   

@@ -30,7 +30,7 @@ ms.locfileid: "73594332"
 
 若要使用 Microsoft Windows Installer 安裝 `azdata`，
 
-1. 如果 `azdata` 是使用 `pip` 來進行安裝，請將其移除。 如果 `azdata` 是使用 Windows Installer 來進行安裝，請繼續進行下一個步驟。
+1. 如果 `pip` 是使用 `azdata` 來進行安裝，請將其移除。 如果 `azdata` 是使用 Windows Installer 來進行安裝，請繼續進行下一個步驟。
 1. 使用 Windows Installer 來安裝 `azdata`。
 
 ### <a name="uninstall-if-previous-installation-done-with-pip"></a>如果先前使用 `pip` 來進行安裝，請解除安裝

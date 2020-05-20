@@ -20,7 +20,7 @@ ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193459"
 ---
 # <a name="removing-a-rendering-extension"></a>移除轉譯延伸模組
-  若要移除 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 轉譯延伸模組，只要從 rsreportserver.config 檔案 (位於 **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.** 執行個體名稱>\Reporting Services\ReportServer **資料夾) 中移除轉譯延伸模組的 \<Extension** 項目即可。 如果您已經為報表設計師以及報表伺服器建立項目，請同時從 **RSReportDesigner 設定檔**中移除 [Extension](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md) 項目。 在移除組態資訊之後，轉譯延伸模組將無法再供元件使用。  
+  若要移除 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 轉譯延伸模組，只要從 rsreportserver.config 檔案 (位於 **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer** 資料夾) 中移除轉譯延伸模組的 **Extension** 項目即可。 如果您已經為報表設計師以及報表伺服器建立項目，請同時從 [RSReportDesigner 設定檔](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md)中移除 **Extension** 項目。 在移除組態資訊之後，轉譯延伸模組將無法再供元件使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態檔](../../../reporting-services/report-server/reporting-services-configuration-files.md)   

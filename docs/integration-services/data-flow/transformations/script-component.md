@@ -121,7 +121,7 @@ ms.locfileid: "71297874"
  選擇 **[來源]** 、 **[目的地]** 或 **[轉換]** ，會影響 [指令碼轉換] 的組態和指令碼轉換編輯器的頁面。  
   
 ## <a name="script-transformation-editor-connection-managers-page"></a>指令碼轉換編輯器 (連接管理員頁面)
-  使用 [指令碼轉換編輯器]  的 [連線管理員]  頁面，即可指定指令碼將要使用的任何連接。  
+  使用 [指令碼轉換編輯器] 的 [連線管理員] 頁面，即可指定指令碼將要使用的任何連接。  
   
  若要深入了解指令碼元件，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "71297874"
  輸入連接的唯一和描述性名稱。  
   
  **連線管理員**  
- 從可用的連線管理員清單中選取，或選取 [**新增連線>]\<** 以開啟 [新增 SSIS 連線管理員]  對話方塊。  
+ 從可用的連線管理員清單中選取，或選取 [\<新增連線>] 以開啟 [新增 SSIS 連線管理員] 對話方塊。  
   
  **說明**  
  輸入連接的描述。  
@@ -145,7 +145,7 @@ ms.locfileid: "71297874"
  從 [連線管理員]  中移除選取的連接。  
   
 ## <a name="script-transformation-editor-input-columns-page"></a>指令碼轉換編輯器 (輸入資料行頁面)
-  使用 [指令碼轉換編輯器]  對話方塊的 [輸入資料行]  頁面，對輸入資料行設定屬性。  
+  使用 [指令碼轉換編輯器] 對話方塊的 [輸入資料行] 頁面，對輸入資料行設定屬性。  
   
 > [!NOTE]  
 >  針對來源元件不會顯示 [輸入資料行]  頁面，因為來源元件只有輸出沒有輸入。  

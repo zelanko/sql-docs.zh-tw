@@ -525,7 +525,7 @@ ms.locfileid: "75242694"
   
 1.  在 Visual Studio 中，以滑鼠右鍵按一下專案並選取 [重建]。 這會重建專案，而且您應該會看見產生的模型統計資料，其輸出包含在建置輸出中並儲存至 ModelStatistics.xml。 請注意，您可能需要在方案總管中選取 [顯示所有檔案] 才能看得到 xml 檔案。  
   
-2.  開啟 Visual Studio 命令提示字元：在 [開始]  功能表上，依序按一下 [所有程式]  、[Microsoft Visual Studio **]<Visual Studio Version>** 、[Visual Studio Tools]  ，然後按一下 [Visual Studio 命令提示字元 ( **)]<Visual Studio Version>** 。  
+2.  開啟 Visual Studio 命令提示字元：在 [開始] 功能表上，依序按一下 [所有程式]、[Microsoft Visual Studio <Visual Studio Version>]、[Visual Studio Tools]，然後按一下 [Visual Studio 命令提示字元 (<Visual Studio Version>)]。  
   
 3.  在命令提示字元中，巡覽至包含 SQL 專案的資料夾。  
   

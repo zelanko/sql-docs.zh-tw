@@ -246,7 +246,7 @@ ms.locfileid: "75244285"
   
 3.  在巡覽列中，按一下 [組建預設值]  。  
   
-4.  在 [將組建輸出複製到下列置放資料夾 (UNC 路徑，例如 **\server\share)]\\** 中，指定要包含組建輸出的資料夾。  
+4.  在 [將組建輸出複製到下列置放資料夾 (UNC 路徑，例如 \\\server\share)] 中，指定要包含組建輸出的資料夾。  
   
     您可以指定本機電腦上的共用資料夾或是組建處理序將擁有權限的任何網路位置。  
   
@@ -274,13 +274,13 @@ ms.locfileid: "75244285"
   
 1.  在 [Team 總管] 中，展開 Team 專案節點、展開 [組建] 節點、以滑鼠右鍵按一下您想要執行的組建定義，然後按一下 [佇列新組建]。  
   
-    [佇列組建 {**TeamProjectName**}]   對話方塊隨即出現，並列出所有現有的組建類型。  
+    [佇列組建 {_TeamProjectName_}] 對話方塊隨即出現，並列出所有現有的組建類型。  
   
 2.  必要時，請在 [組建定義]  中按一下您的新組建定義。  
   
 3.  確認 [組建定義]  、[組建代理程式]  和 [此組建的置放資料夾]  欄位中的值都正確無誤，然後按一下 [佇列]  。  
   
-    [Build 總管]  的 [已佇列]  索引標籤隨即出現。 如需詳細資訊，請參閱[管理和檢視已完成的組建 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) 或[在 Build 總管中管理您的組建 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)。  
+    [Build 總管] 的 [已佇列] 索引標籤隨即出現。 如需詳細資訊，請參閱[管理和檢視已完成的組建 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) 或[在 Build 總管中管理您的組建 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SQL Server 單元測試](../ssdt/running-sql-server-unit-tests.md)  

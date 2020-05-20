@@ -71,7 +71,7 @@ ms.locfileid: "75321404"
  每一個訂閱名稱的格式為：*SubscriberName: SubscriptionDatabaseName*。  
   
  **易記名稱**  
- 僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 每一個訂閱的描述。 此描述輸入於 [訂閱屬性]  對話方塊中或以 `@description`sp_addmergesubscription[ 的 ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 參數或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 來指定。 使用者通常使用描述作為訂閱的「易記名稱」或暱稱。  
+ 僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 每一個訂閱的描述。 此描述輸入於 [訂閱屬性]  對話方塊中或以 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 的 `@description` 參數或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 來指定。 使用者通常使用描述作為訂閱的「易記名稱」或暱稱。  
   
  **效能**  
  僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 每一個訂閱的效能評比，是以複寫監視器所測量之傳遞速率的最新數據為基礎。 評比會根據相同連接類型 (撥號或 LAN) 的發行集訂閱，進行個別訂閱效能和平均記錄效能的比較來決定。 在相同連接類型上發生過五次同步處理，且每次同步處理都具有 50 或更多個變更之後，複寫監視器才會顯示值。 如果具有 50 或更多個變更的同步處理少於五次，或者最近的同步處理少於 50 個變更，則此資料行為空白。  

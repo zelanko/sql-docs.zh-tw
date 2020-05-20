@@ -27,7 +27,7 @@ ms.locfileid: "75558043"
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 進行可延伸金鑰管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure 金鑰保存庫的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 連接器可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密使用 Azure 金鑰保存庫服務作為[可延伸金鑰管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md) 提供者，以保護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密金鑰。  
+  適用於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure 金鑰保存庫的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密使用 Azure 金鑰保存庫服務作為[可延伸金鑰管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md) 提供者，以保護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密金鑰。  
   
  本主題描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器。 [使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)、[搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)和 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)中提供其他資訊。  
   

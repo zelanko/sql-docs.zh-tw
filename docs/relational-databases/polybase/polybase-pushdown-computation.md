@@ -65,7 +65,7 @@ SQL Server 允許述詞下推的下列基本運算式和運算子。
 
 可能會下推 BETWEEN、NOT、IN 和 LIKE 運算子。 實際的行為取決於查詢最佳化工具如何將運算子運算式重新編寫為一系列使用基本關係運算子的陳述式。
 
-此範例中的查詢有多個可下推到 Hadoop 的述詞。 SQL Server 可以將 map-reduce 工作推送到 Hadoop，以執行 `customer.account_balance <= 200000` 述詞。 `BETWEEN 92656 and 92677` 運算式也是由可推送到 Hadoop 的二進位和邏輯作業組成。 **中的邏輯**AND`customer.account_balance and customer.zipcode` 是最終運算式。
+此範例中的查詢有多個可下推到 Hadoop 的述詞。 SQL Server 可以將 map-reduce 工作推送到 Hadoop，以執行 `customer.account_balance <= 200000` 述詞。 `BETWEEN 92656 and 92677` 運算式也是由可推送到 Hadoop 的二進位和邏輯作業組成。 `customer.account_balance and customer.zipcode` 中的邏輯 **AND** 是最終運算式。
 
 藉由這樣的述詞組合，map-reduce 工作就可以執行所有 WHERE 子句。 只有符合 SELECT 準則的資料會複製回 SQL Server PDW。
 

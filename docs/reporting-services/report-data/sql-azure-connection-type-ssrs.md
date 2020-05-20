@@ -61,7 +61,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 ## <a name="queries"></a><a name="Query"></a> 查詢
 
-查詢會指定要為報表資料集擷取的資料。 查詢結果集中的資料行會填入資料集的欄位集合。 如果查詢傳回多個結果集，報表只會處理查詢擷取的第一個結果集。 雖然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]之間有些許差異 (例如支援的資料庫大小)，但是依據 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]撰寫查詢的方式類似於依據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫撰寫查詢的方式。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中不支援部分 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 陳述式 (例如 BACKUP)，但是您不會在報表查詢中使用這些陳述式。 如需詳細資訊，請參閱 [SQL Server 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)。  
+查詢會指定要為報表資料集擷取的資料。 查詢結果集中的資料行會填入資料集的欄位集合。 如果查詢傳回多個結果集，報表只會處理查詢擷取的第一個結果集。 雖然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]之間有些許差異 (例如支援的資料庫大小)，但是依據 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]撰寫查詢的方式類似於依據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫撰寫查詢的方式。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中不支援部分 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (例如 BACKUP)，但是您不會在報表查詢中使用這些陳述式。 如需詳細資訊，請參閱 [SQL Server 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)。  
   
 根據預設，如果您建立新查詢或開啟現有查詢，而查詢可在圖形化查詢設計工具中表示，就可使用關聯式查詢設計工具。 您可以利用下列方式指定查詢：  
   

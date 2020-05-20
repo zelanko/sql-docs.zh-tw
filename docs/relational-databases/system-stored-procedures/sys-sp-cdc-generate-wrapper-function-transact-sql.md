@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1f29541162381923faa6baa4ca6ce8d362a0f27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083748"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808180"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sys.sp_cdc_generate_wrapper_function
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @capture_instance= ]'*capture_instance*'  
+ [ @capture_instance =] '*capture_instance*'  
  這是即將產生指令碼的擷取執行個體。 *capture_instance*為**sysname** ，且預設值為 Null。 如果您省略了此值或將它明確設定為 NULL，系統就會針對所有擷取執行個體產生包裝函數指令碼。  
   
- [ @closed_high_end_point= ]*high_end_pt_flag*  
+ [ @closed_high_end_point =] *high_end_pt_flag*  
  這是旗標位元，它會指出認可時間等於高端點的變更是否要由產生的程序包含在擷取間隔中。 *high_end_pt_flag*是**bit** ，預設值是1，表示應該包含端點。 值為 0 表示所有認可時間都將確實小於高端點。  
   
- [ @column_list= ]'*column_list*'  
+ [ @column_list =] '*column_list*'  
  這是即將包含在包裝函數所傳回之結果集中的已擷取資料行清單。 *column_list*是**Nvarchar （max）** ，且預設值為 Null。 當您指定了 NULL 時，就會包含所有已擷取的資料行。  
   
- [ @update_flag_list= ]'*update_flag_list*'  
+ [ @update_flag_list =] '*update_flag_list*'  
  這是更新旗標包含在包裝函數所傳回之結果集中的已包含資料行清單。 *update_flag_list*是**Nvarchar （max）** ，且預設值為 Null。 當您指定了 NULL 時，就不會包含任何更新旗標。  
   
 ## <a name="return-code-values"></a>傳回碼值  

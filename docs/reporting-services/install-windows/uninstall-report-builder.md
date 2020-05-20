@@ -28,7 +28,7 @@ ms.locfileid: "65502647"
   
 2.  在 [控制台] 中，按一下 **[程式和功能]** 。  
   
-3.  在 [名稱][!INCLUDE[msCoName](../../includes/msconame-md.md)]**清單中找出** SQL Server 報表產生器，然後按一下它。  
+3.  在 [名稱] 清單中找出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 報表產生器，然後按一下它。  
   
 4.  按一下 **[解除安裝]** 。  
   

@@ -49,13 +49,13 @@ ms.locfileid: "75238081"
   
 4.  以滑鼠右鍵按一下您想要修改步驟的作業，然後選取 [屬性]  。  
   
-5.  在 [作業屬性 - **job**name _]\__ 對話方塊的 [選取頁面]  下，選取 [步驟]  。  
+5.  在 [作業屬性 - _job\_name_] 對話方塊的 [選取頁面] 下，選取 [步驟]。  
   
-6.  按一下 [編輯]  開啟 [作業步驟屬性 - **job**step_name\_]\__ 對話方塊。 如需此對話方塊中可用選項的詳細資訊，請參閱[作業步驟屬性 - 新增作業步驟 &#40;一般頁面&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) 和[作業步驟屬性 - 新增作業步驟 &#40;進階頁面&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)。  
+6.  按一下 [編輯] 開啟 [作業步驟屬性 - _job\_step\_name_] 對話方塊。 如需此對話方塊中可用選項的詳細資訊，請參閱[作業步驟屬性 - 新增作業步驟 &#40;一般頁面&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) 和[作業步驟屬性 - 新增作業步驟 &#40;進階頁面&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)。  
   
 7.  完成後，請按一下 **[確定]** 。  
   
-8.  在 [作業屬性 - **job**name _]\__ 對話方塊中，按一下 [確定]  。  
+8.  在 [作業屬性 - _job\_name_] 對話方塊中，按一下 [確定]。  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>使用 Transact-SQL  
   

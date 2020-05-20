@@ -37,7 +37,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
  
 ### <a name="to-create-a-table-with-an-embedded-dataset"></a>若要建立含內嵌資料集的資料表  
   
-1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
+1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -184,7 +184,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
     
     ![report-builder-text-box-properties](../reporting-services/media/report-builder-text-box-properties.png)
   
-2.  在 [填滿]  索引標籤上，按一下 [填滿色彩]  旁的 [fx]  按鈕，然後在 [設定運算式對象: BackgroundColor]  欄位中輸入下列運算式：  
+2.  在 [填滿] 索引標籤上，按一下 [填滿色彩] 旁的 [fx] 按鈕，然後在 [設定運算式對象: BackgroundColor] 欄位中輸入下列運算式：  
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -278,7 +278,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 9. 在 [Values and States (值和狀態)]  索引標籤的 [值]  方塊中，選取 [Sum(Sales)]  。 請不要變更任何其他選項。  
   
-    根據預設，整個資料區域會進行資料同步處理，而您會在 [同步處理範圍]  方塊中看到值 **Tablix1**，這是報表中的資料表資料區域的名稱。  
+    根據預設，整個資料區域會進行資料同步處理，而您會在 [同步處理範圍] 方塊中看到值 **Tablix1**，這是報表中的資料表資料區域的名稱。  
   
     在此報表中，您也可以變更子類別小計資料格中放置之指標的範圍，以同步處理 [SalesDate] 欄位。  
   

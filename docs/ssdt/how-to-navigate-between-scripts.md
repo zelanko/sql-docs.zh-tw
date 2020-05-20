@@ -28,7 +28,7 @@ ms.locfileid: "75241376"
   
 ### <a name="to-navigate-between-scripts"></a>若要在指令碼之間巡覽  
   
-1.  展開 [方案總管]  中的 [函數]  資料夾，然後按兩下 [GetProductsBySupplier.sql]  。  
+1.  展開 [方案總管] 中的 [函數] 資料夾，然後按兩下 [GetProductsBySupplier.sql]。  
   
 2.  以滑鼠右鍵按一下這行程式碼中的 `Products`，然後選取 [移至定義]   
   
@@ -38,5 +38,5 @@ ms.locfileid: "75241376"
   
 3.  Products.sql 隨即自動開啟，顯示 `Products` 類型定義的位置。  
   
-4.  回到 GetProductsBySupplier.sql。 這次為  **選取關聯式功能表中的 [尋找所有參考]** `Products`。 在 [尋找符號結果]  窗格中，您會看到 `Products` 資料表參考的位置清單。 按兩下任何的搜尋結果，會將您帶到參考的位置。  
+4.  回到 GetProductsBySupplier.sql。 這次為 `Products` 選取關聯式功能表中的 [尋找所有參考]。 在 [尋找符號結果]  窗格中，您會看到 `Products` 資料表參考的位置清單。 按兩下任何的搜尋結果，會將您帶到參考的位置。  
   

@@ -24,7 +24,7 @@ ms.locfileid: "75246435"
 ---
 # <a name="bookmarks-f1-help"></a>書籤 F1 說明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  此章節包含  **中 [書籤]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 頁面的 F1 說明。  
+  此章節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [書籤] 頁面的 F1 說明。  
   
  [管理書籤](../../relational-databases/scripting/manage-bookmarks.md)  
   

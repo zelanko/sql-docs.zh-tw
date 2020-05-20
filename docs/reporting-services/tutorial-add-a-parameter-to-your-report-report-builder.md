@@ -38,7 +38,7 @@ ms.locfileid: "72252134"
   
 ### <a name="to-create-a-new-matrix-report"></a>若要建立新的矩陣報表  
   
-1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
+1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "72252134"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  按一下 **[執行]** 預覽報表。 報表檢視器會針對  StoreID *顯示 [商店識別碼？]\@* 提示。  
+6.  按一下 **[執行]** 預覽報表。 報表檢視器會針對 *\@StoreID* 顯示 [商店識別碼？] 提示。  
   
 7.  在報表檢視器工具列上，就在 Store ID 旁，輸入 **200**，然後按一下 **[檢視報表]** 。  
   

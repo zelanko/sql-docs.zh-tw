@@ -82,7 +82,7 @@ ms.locfileid: "79287802"
 ##  <a name="transaction-log-truncation"></a><a name="Truncation"></a> 交易記錄截斷  
 記錄截斷會釋出記錄檔中的空間，以供交易記錄重複使用。 您必須定期截斷交易記錄，以防止它填滿所分配的空間。 有數種因素會延遲記錄的截斷，所以監控記錄大小很重要。 某些作業可使用最低限度記錄，以減少其對交易記錄大小的影響。  
  
-記錄截斷會從 [ 資料庫的邏輯交易記錄中刪除非使用中的](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)虛擬記錄檔 (VLF)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，釋出邏輯記錄中的空間以供實體交易記錄重複使用。 如果永遠都不截斷交易記錄，最終將會填滿分配給實體記錄檔的所有磁碟空間。  
+記錄截斷會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的邏輯交易記錄中刪除非使用中的[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)，釋出邏輯記錄中的空間以供實體交易記錄重複使用。 如果永遠都不截斷交易記錄，最終將會填滿分配給實體記錄檔的所有磁碟空間。  
   
 為了避免用盡空間，除非記錄截斷因為某個原因而延遲，否則將在以下事件後自動進行截斷：  
   
@@ -101,7 +101,7 @@ ms.locfileid: "79287802"
 > [!IMPORTANT]
 > 如需如何對應寫滿交易記錄的相關資訊，請參閱 [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
   
- 實際上，記錄截斷可能會因為各種原因而延遲。 查詢 **sys.databases** 目錄檢視的 **log_reuse_wait** 和 [log_reuse_wait_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行，了解是否有任何原因導致無法進行記錄截斷。 下表描述這些資料行的值。  
+ 實際上，記錄截斷可能會因為各種原因而延遲。 查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視的 **log_reuse_wait** 和 **log_reuse_wait_desc** 資料行，了解是否有任何原因導致無法進行記錄截斷。 下表描述這些資料行的值。  
   
 |log_reuse_wait 值|log_reuse_wait_desc 值|描述|  
 |----------------------------|----------------------------------|-----------------|  
@@ -141,9 +141,9 @@ ms.locfileid: "79287802"
   
 啟用異動複寫時，即使在大量記錄復原模式下也會完整記錄 `SELECT INTO`作業。  
   
--   插入或附加新資料時，在 `.WRITE`UPDATE[ 陳述式中使用 ](../../t-sql/queries/update-transact-sql.md) 子句，對大數值資料類型執行的部分更新。 請注意，更新現有值時不使用最低限度記錄。 如需有關大數值資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
+-   插入或附加新資料時，在 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式中使用 `.WRITE` 子句，對大數值資料類型執行的部分更新。 請注意，更新現有值時不使用最低限度記錄。 如需有關大數值資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
   
--   將新的資料插入或附加至[nUPDATETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [nUPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **UPDATETEXT**, **nUPDATETEXT**, 、 **UPDATETEXT** 陳述式。 請注意，更新現有值時不使用最低限度記錄。  
+-   將新的資料插入或附加至[nUPDATETEXT{11} 、 [nUPDATETEXT{12} 和 UPDATETEXT, nUPDATETEXT, 、 UPDATETEXT 陳述式。 請注意，更新現有值時不使用最低限度記錄。  
   
     > [!WARNING]
     > `WRITETEXT` 與 `UPDATETEXT` 陳述式**已被取代**，所以您應該避免在新的應用程式中加以使用。  

@@ -107,14 +107,14 @@ ORDER BY s.name;
 #### <a name="auto_update_statistics-option"></a>AUTO_UPDATE_STATISTICS 選項  
  開啟自動更新統計資料選項 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 時，查詢最佳化工具會判斷統計資料何時過期，然後在查詢使用統計資料時加以更新。 當插入、更新、刪除或合併作業變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並將修改次數與某個臨界值比較，藉以判斷統計資料是否可能已經過期。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。  
   
-* [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (截至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 會使用變更資料列的百分比作為臨界值。 與資料表中的資料列數無關。 臨界值是：
+* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (截至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 會使用變更資料列的百分比作為臨界值。 與資料表中的資料列數無關。 臨界值是：
     * 若資料表基數在評估統計資料時為 500 或更小的數值，將會在每 500 次修改之後更新。
     * 若資料表基數在評估統計資料時為超過 500 的數值，將會在每 500 + 20% 的修改次數之後更新。
 
 * 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始並 在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 之下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用降低、動態的統計資料更新臨界值。此臨界值會根據資料表中的資料列數目來做出調整。 這是以 1000 乘以目前資料表基數的平方根來計算。 例如，如果您的資料表包含 2 百萬個資料列，則計算結果是 sqrt (1000 * 2000000) = 44721.359。 透過這項變更，大型資料表上的統計資料會經常更新。 不過，如果資料庫的相容性層級低於 130，便會套用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 臨界值。 ?
 
 > [!IMPORTANT]
-> 從 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或是在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]資料庫相容性層級[低於 130 的 ](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 中，使用[追蹤旗標 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會使用降低的動態統計資料更新閾值。此閾值會根據資料表中的資料列數目來進行調整。
+> 從 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或是在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)低於 130 的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，使用[追蹤旗標 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會使用降低的動態統計資料更新閾值。此閾值會根據資料表中的資料列數目來進行調整。
   
 在編譯查詢及執行快取查詢計劃之前，查詢最佳化工具會檢查是否有過期的統計資料。 在編譯查詢之前，查詢最佳化工具會使用查詢述詞中的資料行、資料表和索引檢視表來判斷哪些統計資料可能已過期。 在執行快取查詢計劃之前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會確認查詢計劃是否參考最新的統計資料。  
   
@@ -126,7 +126,7 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物
  非同步統計資料更新選項 [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) 會決定查詢最佳化工具要使用同步或非同步統計資料更新。 根據預設，非同步統計資料更新選項會處於關閉狀態，而查詢最佳化工具會以同步方式更新統計資料。 AUTO_UPDATE_STATISTICS_ASYNC 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式所建立的統計資料。  
  
  > [!NOTE]
- > 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中設定非同步統計資料更新選項，請在 [資料庫屬性]  視窗的 [選項]  頁面中，將 [自動更新統計資料]  和 [自動非同步更新統計資料]  選項設定為 [True]  。
+ > 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中設定非同步統計資料更新選項，請在 [資料庫屬性] 視窗的 [選項] 頁面中，將 [自動更新統計資料] 和 [自動非同步更新統計資料] 選項設定為 [True]。
   
  統計資料更新可以是同步 (預設值) 或非同步。 使用同步統計資料更新時，查詢一律會使用最新的統計資料進行編譯和執行。如果統計資料已過期，查詢最佳化工具就會先等候更新的統計資料，然後再編譯並執行查詢。 使用非同步統計資料更新時，查詢就會使用現有的統計資料進行編譯，即使現有的統計資料已過期也一樣。如果統計資料在查詢進行編譯時是過期的，查詢最佳化工具可能會選擇到次佳的查詢計劃。 在非同步更新完成之後進行編譯的查詢將會從使用更新的統計資料中獲益。  
   
@@ -161,7 +161,7 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物
 1.  建立索引時，查詢最佳化工具就會針對資料表或檢視表的索引建立統計資料。 這些統計資料是針對索引的索引鍵資料行所建立的。 如果索引是篩選的索引，查詢最佳化工具就會在針對篩選索引所指定的相同資料列子集上建立篩選的統計資料。 如需篩選索引的詳細資訊，請參閱[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)和 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
 
     > [!NOTE]
-    > 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始，並不會在建立或重建資料分割索引後，掃描資料表中的所有資料列來建立統計資料。 反之，查詢最佳化工具會使用預設的取樣演算法來產生統計資料。 升級具有分割區索引的資料庫之後，可能會注意到這些索引之長條圖資料的差異。 此行為變更可能不會影響查詢效能。 若要在掃描資料表中所有資料列時取得分割區索引的統計資料，使用子句 `CREATE STATISTICS` 時請使用 `UPDATE STATISTICS` 或 `FULLSCAN`。 
+    > 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始，並不會在建立或重建資料分割索引後，掃描資料表中的所有資料列來建立統計資料。 反之，查詢最佳化工具會使用預設的取樣演算法來產生統計資料。 升級具有分割區索引的資料庫之後，可能會注意到這些索引之長條圖資料的差異。 此行為變更可能不會影響查詢效能。 若要在掃描資料表中所有資料列時取得分割區索引的統計資料，使用子句 `FULLSCAN` 時請使用 `CREATE STATISTICS` 或 `UPDATE STATISTICS`。 
   
 2.  開啟 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 時，查詢最佳化工具會針對查詢述詞中的單一資料行建立統計資料。  
 
@@ -225,7 +225,7 @@ GO
 ### <a name="query-identifies-missing-statistics"></a>查詢會識別遺失的統計資料  
 如果有錯誤或其他事件讓查詢最佳化工具無法建立統計資料，查詢最佳化工具會在不使用統計資料的情況下建立查詢計劃。 查詢最佳化工具會將統計資料標示為遺失，並且嘗試在下一次執行查詢時重新產生統計資料。  
   
-當查詢的執行計畫是利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]以圖形顯示時，遺失的統計資料就會表示成警告 (資料表名稱為紅色)。 此外，使用 **來監視**Missing Column Statistics[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 事件類別會指出統計資料遺失的時間。 如需詳細資訊，請參閱[錯誤和警告事件類別目錄 &#40;Database Engine&#41;](../../relational-databases/event-classes/errors-and-warnings-event-category-database-engine.md)。  
+當查詢的執行計畫是利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]以圖形顯示時，遺失的統計資料就會表示成警告 (資料表名稱為紅色)。 此外，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來監視 **Missing Column Statistics** 事件類別會指出統計資料遺失的時間。 如需詳細資訊，請參閱[錯誤和警告事件類別目錄 &#40;Database Engine&#41;](../../relational-databases/event-classes/errors-and-warnings-event-category-database-engine.md)。  
   
  如果統計資料已遺失，請執行下列步驟：  
   
@@ -351,7 +351,7 @@ GO
 ### <a name="improving-cardinality-estimates-with-query-hints"></a>使用查詢提示來改善基數估計值  
  若要改善區域變數的基數估計值，您可以使用 `OPTIMIZE FOR <value>` 或 `OPTIMIZE FOR UNKNOWN` 查詢提示搭配 RECOMPILE。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
- 對於某些應用程式而言，每次執行查詢都重新編譯查詢可能會花費太多時間。 即使您沒有使用 `OPTIMIZE FOR` 選項，`RECOMPILE` 查詢提示仍然有所幫助。 例如，您可以將 `OPTIMIZE FOR` 選項加入至預存程序 Sales.GetRecentSales，以便指定特定日期。 下列範例會將 `OPTIMIZE FOR` 選項加入至 Sales.GetRecentSales 程序。  
+ 對於某些應用程式而言，每次執行查詢都重新編譯查詢可能會花費太多時間。 即使您沒有使用 `RECOMPILE` 選項，`OPTIMIZE FOR` 查詢提示仍然有所幫助。 例如，您可以將 `OPTIMIZE FOR` 選項加入至預存程序 Sales.GetRecentSales，以便指定特定日期。 下列範例會將 `OPTIMIZE FOR` 選項加入至 Sales.GetRecentSales 程序。  
   
 ```sql  
 USE AdventureWorks2012;  

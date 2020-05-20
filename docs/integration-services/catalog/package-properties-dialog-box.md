@@ -63,7 +63,7 @@ ms.locfileid: "71298974"
  **進入點**  
  [True]  值表示封裝是直接啟動。 [False]  值表示封裝是使用「執行封裝」工作，由另一個封裝啟動。 預設值為 **True**。  
   
- 以滑鼠右鍵按一下方案總管中的封裝，然後按一下 [進入點封裝][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **，就可以在**  中為父封裝和子封裝設定此屬性。  
+ 以滑鼠右鍵按一下方案總管中的封裝，然後按一下 [進入點封裝]，就可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中為父封裝和子封裝設定此屬性。  
   
  **說明**  
  顯示封裝的選擇性描述。  

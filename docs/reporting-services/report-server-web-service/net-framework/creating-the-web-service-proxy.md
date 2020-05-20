@@ -96,7 +96,7 @@ ReportingService2010 service = new ReportingService2010();
   
 6.  選取 [新增參考]  按鈕，在應用程式中建立對 Web 服務的參考。  
   
-     [Web 參考名稱]  欄位中所指定名稱的新參考，將出現於**方案總管**中使用中專案的 [Web 參考] 節點之下。  
+     [Web 參考名稱] 欄位中所指定名稱的新參考，將出現於**方案總管**中使用中專案的 [Web 參考] 節點之下。  
   
 7.  在**方案總管**中，展開 [Web 參考] 資料夾，以寫下在專案中項目的可用 Web 參考類別之命名空間。  
   
@@ -117,7 +117,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials;
   
 ```  
   
- 您也可以將 **using** (在  **中為**匯入[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 指示詞新增報表伺服器 Web 服務參考。 如果您使用這個指示詞，就不需要完全符合命名空間的類型。 若要這樣做，請將下列程式碼加入檔案中：  
+ 您也可以將 **using** (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為**匯入**) 指示詞新增報表伺服器 Web 服務參考。 如果您使用這個指示詞，就不需要完全符合命名空間的類型。 若要這樣做，請將下列程式碼加入檔案中：  
   
 ```vb  
 Import myNamespace.myReferenceName  

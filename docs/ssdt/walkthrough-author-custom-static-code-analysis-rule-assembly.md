@@ -257,7 +257,7 @@ ms.locfileid: "75257033"
     |AvoidWaitForDelay_ProblemDescription|已在 {0} 找到 WAITFOR DELAY 陳述式。|  
     |AvoidWaitForDelay_RuleName|避免在預存程序、函數和觸發程序中使用 WaitFor Delay 陳述式。|  
     |CategorySamples|SamplesCategory|  
-    |CannotCreateResourceManager|無法從 {0} 建立 {1} 的 ResourceManager。|  
+    |CannotCreateResourceManager|無法從 {1} 建立 {0} 的 ResourceManager。|  
   
 7. 按一下 [檔案]  功能表上的 [儲存 RuleResources.resx]  。  
   

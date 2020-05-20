@@ -158,7 +158,7 @@ RDL (報表定義語言) 沙箱功能可在多個租用戶使用報表伺服器�
   
 ### <a name="working-with-operators-and-new"></a>使用運算子及 New
 
- 依預設，一定會允許 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework 語言運算子，但是 **New**除外。 **New** 運算子是由  Allow> **項目上的 \<AllowNew** 屬性所控制。 其他語言運算子，例如預設集合存取子運算子 **!** 以及像是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] CInt  .NET Framework 轉換巨集，都一律允許。  
+ 依預設，一定會允許 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework 語言運算子，但是 **New**除外。 **New** 運算子是由 **\<Allow>** 項目上的 **AllowNew** 屬性所控制。 其他語言運算子，例如預設集合存取子運算子 **!** 以及像是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] CInt  .NET Framework 轉換巨集，都一律允許。  
   
  不支援將運算子加入至封鎖清單中，包括自訂運算子。 若要排除某個類型的運算子，您必須執行下列動作：  
   

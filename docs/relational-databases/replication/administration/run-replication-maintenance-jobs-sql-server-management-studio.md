@@ -37,7 +37,7 @@ ms.locfileid: "76288336"
   
 -   **清除已過期的訂閱**  
   
- 從   的 [作業][!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 資料夾，以及從複寫監視器的 [代理程式]  索引標籤啟動和停止這些作業。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 在 [作業屬性 - **作業>]\<** 對話方塊中檢視及修改各作業的屬性，該對話方塊位於相同的資料夾和索引標籤中。  
+ 從   的 [作業][!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 資料夾，以及從複寫監視器的 [代理程式]  索引標籤啟動和停止這些作業。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 在 [作業屬性 - \<作業>] 對話方塊中檢視及修改各作業的屬性，該對話方塊位於相同的資料夾和索引標籤中。  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-management-studio"></a>在 Management Studio 中啟動或停止複寫維護作業  
   
@@ -63,7 +63,7 @@ ms.locfileid: "76288336"
   
 3.  以滑鼠右鍵按一下作業，然後按一下 **[屬性]** 。  
   
-4.  在 [作業屬性 - **作業>]\<** 對話方塊中，視需要修改任何屬性，然後按一下 [確定]  。  
+4.  在 [作業屬性 - \<作業>] 對話方塊中，視需要修改任何屬性，然後按一下 [確定]。  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>在複寫監視器中檢視及修改複寫維護作業的屬性  
   
@@ -73,7 +73,7 @@ ms.locfileid: "76288336"
   
 3.  以滑鼠右鍵按一下方格中的作業，再按一下 **[屬性]** 。  
   
-4.  在 [作業屬性 - **作業>]\<** 對話方塊中，視需要修改任何屬性，然後按一下 [確定]  。  
+4.  在 [作業屬性 - \<作業>] 對話方塊中，視需要修改任何屬性，然後按一下 [確定]。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   

@@ -25,7 +25,7 @@ ms.locfileid: "62651707"
 1.  以系統管理員權限瀏覽至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 入口網站，例如以滑鼠右鍵按一下 Internet Explorer 的圖示，然後按一下 [以系統管理員​​身分執行​​]  。  
  
 2.    瀏覽至入口網站 URL。  例如：   
-    `https://<server name>/reports`第 1 課：建立 Windows Azure 儲存體物件{2}。  
+    `https://<server name>/reports`第 1 課：建立 Windows Azure 儲存體物件`https://<server name>/reports`。  
     `https://localhost/reports`
  **注意︰** 「入口網站」  URL 是 "Reports"，而非 "Reportserver" 的報表「伺服器」  URL。  
 3.  瀏覽到包含 **Sales Orders** 報表的資料夾，然後在報表的內容功能表中，按一下 **[管理]** 。  

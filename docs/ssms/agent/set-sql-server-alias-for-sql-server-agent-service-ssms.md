@@ -62,7 +62,7 @@ ms.locfileid: "75239234"
   
 2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後按一下 [屬性]  。  
   
-3.  在 [SQL Server Agent 屬性 **server**name _]\__ 對話方塊的 [選取頁面]  底下，選取 [連線]  ，然後  
+3.  在 [SQL Server Agent 屬性 _server\_name_] 對話方塊的 [選取頁面] 底下，選取 [連線]，然後  
   
 4.  在 **[別名本機主機伺服器]** 方塊中，輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要連接之伺服器的別名。  
   

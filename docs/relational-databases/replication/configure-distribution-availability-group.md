@@ -98,7 +98,7 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 透過下列機制引進 AG 中�
 
 ### <a name="distributors-workflow"></a>散發者工作流程
 
-1. 使用 `sp_adddistributor @@servername`，將 DIST1、DIST2、DIST3 設定為散發者。 透過 `distributor_admin`，指定 `@password` 的密碼。 DIST1、DIST2 和 DIST3 的 `@password` 應該相同。
+1. 使用 `sp_adddistributor @@servername`，將 DIST1、DIST2、DIST3 設定為散發者。 透過 `@password`，指定 `distributor_admin` 的密碼。 DIST1、DIST2 和 DIST3 的 `@password` 應該相同。
 2. 使用 `sp_adddistributiondb` 在 DIST1 上建立散發資料庫。 散發資料庫的名稱是 `distribution`。 將 `distribution` 資料庫的復原模式從簡單變更為完整。
 3. 使用 DIST1、DIST2 和 DIST3 上的複本，建立 `distribution` 資料庫的 AG。 最好所有複本都同步。 設定可供讀取或允許讀取的次要複本。 此時，散發資料庫是 AG、DIST1 是主要複本，而 DIST2 和 DIST3 是次要複本。
 4. 針對 AG，設定名為 `DISTLISTENER` 的接聽程式。
@@ -188,7 +188,7 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 透過下列機制引進 AG 中�
 
 ### <a name="distributors-workflow"></a>散發者工作流程
 
-1. DIST3 應該透過 `sp_adddistributor @@servername` 設定為散發者。 應該透過 `distributor_admin` 參數指定 @password 的密碼。 密碼應該與針對 DIST1 和 DIST2 所指定的密碼相同。
+1. DIST3 應該透過 `sp_adddistributor @@servername` 設定為散發者。 應該透過 @password 參數指定 `distributor_admin` 的密碼。 密碼應該與針對 DIST1 和 DIST2 所指定的密碼相同。
 2. 將 DIST3 新增至目前散發資料庫的 AG。
 3. 在 DIST3 上，執行：
 
@@ -286,7 +286,7 @@ DIST1 是 `distribution` 資料庫 AG 的目前主要複本。
 
 ### <a name="subscriber-workflow"></a>訂閱者工作流程
 
-若要使用 AG 中的散發資料庫新增發行集的提取訂閱，請使用 `@distributor` 之 `sp_addpullsubscription_agent` 參數中的 AG 接聽程式名稱。
+若要使用 AG 中的散發資料庫新增發行集的提取訂閱，請使用 `sp_addpullsubscription_agent` 之 `@distributor` 參數中的 AG 接聽程式名稱。
 
 ## <a name="sample-t-sql-create-distribution-db-in-ag"></a>AG 中的範例 T-SQL 建立散發資料庫
 

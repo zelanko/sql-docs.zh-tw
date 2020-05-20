@@ -103,11 +103,11 @@ WITH (
  GO
 ```
 
-於 `SEEDING_MODE` 陳述式執行期間在主要複本上設定 `CREATE AVAILABILITY GROUP` 沒有效用，因為主要複本已經包含資料庫的主要讀取/寫入複本。 只有將另一個複本變成主要，而且新增資料庫時，才會套用 `SEEDING_MODE`。 您可於稍後變更植入模式，請參閱[變更複本的植入模式](#change-the-seeding-mode-of-a-replica)。
+於 `CREATE AVAILABILITY GROUP` 陳述式執行期間在主要複本上設定 `SEEDING_MODE` 沒有效用，因為主要複本已經包含資料庫的主要讀取/寫入複本。 只有將另一個複本變成主要，而且新增資料庫時，才會套用 `SEEDING_MODE`。 您可於稍後變更植入模式，請參閱[變更複本的植入模式](#change-the-seeding-mode-of-a-replica)。
 
 在變成次要複本的執行個體上，一旦加入該執行個體，下列訊息就會新增至 SQL Server 記錄檔：
 
->可用性群組 'AGName' 的本機可用性複本並未被授與建立資料庫的權限，但有 `SEEDING_MODE` 的 `AUTOMATIC`。 使用 `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` 命令可建立主要可用性複本植入的資料庫。
+>可用性群組 'AGName' 的本機可用性複本並未被授與建立資料庫的權限，但有 `AUTOMATIC` 的 `SEEDING_MODE`。 使用 `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` 命令可建立主要可用性複本植入的資料庫。
 
 ### <a name="grant-create-database-permission-on-secondary-replica-to-availability-group"></a><a name = "grantCreate"></a> 授與可用性群組在次要複本上建立資料庫的權限
 

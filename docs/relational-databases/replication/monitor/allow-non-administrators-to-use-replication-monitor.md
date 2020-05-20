@@ -76,14 +76,14 @@ ms.locfileid: "76287738"
   
 1.  在散發資料庫的「散發者」端，執行 [sp_helpuser &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)。 如果使用者未列於結果集中的 **UserName**，則必須使用 [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) 陳述式，授與使用者散發資料庫的存取權。  
   
-2.  在散發資料庫的散發者端執行 [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)，並針對 **參數指定**replmonitor`@rolename` 的值。 如果使用者列於結果集中的 **MemberName** ，則該使用者已屬於此角色。  
+2.  在散發資料庫的散發者端執行 [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)，並針對 `@rolename` 參數指定 **replmonitor** 的值。 如果使用者列於結果集中的 **MemberName** ，則該使用者已屬於此角色。  
   
-3.  如果使用者不屬於 **replmonitor** 角色，請在散發資料庫的「散發者」端執行 [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)。 針對 **指定**replmonitor`@rolename` 的值和資料庫使用者的名稱，或為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 新增 `@membername` Windows 登入。  
+3.  如果使用者不屬於 **replmonitor** 角色，請在散發資料庫的「散發者」端執行 [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)。 針對 `@rolename` 指定 **replmonitor** 的值和資料庫使用者的名稱，或為 `@membername` 新增 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 登入。  
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>若要從 replmonitor 固定資料庫角色移除使用者  
   
-1.  若要確認使用者屬於 **replmonitor** 角色，請在散發資料庫的散發者端執行 [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)，並針對 **指定**replmonitor`@rolename` 的值。 如果使用者未列於結果集中的 **MemberName** ，則該使用者目前不屬於此角色。  
+1.  若要確認使用者屬於 **replmonitor** 角色，請在散發資料庫的散發者端執行 [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)，並針對 `@rolename` 指定 **replmonitor** 的值。 如果使用者未列於結果集中的 **MemberName** ，則該使用者目前不屬於此角色。  
   
-2.  如果使用者屬於 **replmonitor** 角色，請在散發資料庫的「散發者」端執行 [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)。 針對 **指定**replmonitor`@rolename` 的值和資料庫使用者名稱，或針對 `@membername` 指定正在移除的 Windows 登入。 
+2.  如果使用者屬於 **replmonitor** 角色，請在散發資料庫的「散發者」端執行 [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)。 針對 `@rolename` 指定 **replmonitor** 的值和資料庫使用者名稱，或針對 `@membername` 指定正在移除的 Windows 登入。 
   
   

@@ -43,7 +43,7 @@ ms.locfileid: "63041305"
   
 ### <a name="to-create-a-chart-report"></a>建立圖表報表  
   
-1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
+1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "63041305"
   
 5.  以滑鼠右鍵按一下垂直軸 > [垂直軸屬性]  。  
   
-6.  在 [數字]  索引標籤上，請注意，[類別目錄]  方塊中已選取 [貨幣]  ，而且 [小數位數]  已經是 [0]  (零)。  
+6.  在 [數字] 索引標籤上，請注意，[類別目錄] 方塊中已選取 [貨幣]，而且 [小數位數] 已經是 [0] (零)。  
   
 7.  核取 [值的顯示單位]  。 已選取 [千]  。  
   
@@ -243,7 +243,7 @@ ms.locfileid: "63041305"
   
 2.  按兩下圖表以顯示 [圖表資料]  窗格。  
   
-3.  以滑鼠右鍵按一下 [值]  區域中的 [Sum(Sales)]  欄位，然後按一下 [新增導出數列]  。  
+3.  以滑鼠右鍵按一下 [值] 區域中的 [Sum(Sales)] 欄位，然後按一下 [新增導出數列]。  
 
      ![report-builder-column-chart-add-calculated-series](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
   

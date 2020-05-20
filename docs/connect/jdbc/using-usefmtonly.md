@@ -34,7 +34,7 @@ ms.locfileid: "69025499"
   
 -   對檢視執行 
   
-  這些使用案例的建議解決方案是針對參數和資料表目標剖析使用者的 SQL 查詢，然後執行已啟用 `SELECT` 的 `FMTONLY` 查詢。 下列程式碼片段有助於將功能視覺化。
+  這些使用案例的建議解決方案是針對參數和資料表目標剖析使用者的 SQL 查詢，然後執行已啟用 `FMTONLY` 的 `SELECT` 查詢。 下列程式碼片段有助於將功能視覺化。
   
 ```sql
 --create a normal table 'Foo' and a temporary table 'Bar'

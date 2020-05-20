@@ -25,7 +25,7 @@ ms.locfileid: "74412716"
 
 如需暫存資料表和資料表變數案例之記憶體最佳化的詳細資訊，請參閱 [使用記憶體最佳化加快暫存資料表與資料表變數的速度](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)。
   
-  下列範例示範如何使用 **dbo.OrderQuantityByProduct\@ 類型的** **OrderQuantityByProduct** 資料表變數取代暫存資料表 (其具有 id、ProductID、Quantity 這三個資料行)：  
+  下列範例示範如何使用 **dbo.OrderQuantityByProduct** 類型的 **\@OrderQuantityByProduct** 資料表變數取代暫存資料表 (其具有 id、ProductID、Quantity 這三個資料行)：  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

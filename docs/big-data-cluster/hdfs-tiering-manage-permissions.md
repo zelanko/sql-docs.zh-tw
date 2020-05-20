@@ -31,7 +31,7 @@ ms.locfileid: "73531968"
   
 ## <a name="hdfs-shell"></a>HDFS 殼層
 
-`hdfs` 中的 `azdata` 殼層功能可讓您直接在殼層中發出命令，以管理 HDFS 檔案和目錄權限。 其基礎機制使用 WebHdfs 呼叫來發出命令
+`azdata` 中的 `hdfs` 殼層功能可讓您直接在殼層中發出命令，以管理 HDFS 檔案和目錄權限。 其基礎機制使用 WebHdfs 呼叫來發出命令
 
 下列命令會開啟殼層。
 
@@ -74,7 +74,7 @@ acl modify: Change completed.
 
 ## <a name="create-a-directory-in-hdfs-using-azdata"></a>使用 `azdata` 在 HDFS 中建立目錄
 
-在路徑 `data` 中建立名為 `/sales` 的目錄。
+在路徑 `/sales` 中建立名為 `data` 的目錄。
 
 ```bash
 azdata bdc hdfs mkdir --path '/sales/data'
@@ -102,7 +102,7 @@ azdata bdc hdfs chmod --permission 775 --path /sales/data/file.txt
 
 ## <a name="set-sticky-bit-on-directories"></a>在目錄上設定黏性位元 (Sticky Bit)
 
-在目錄上設定黏性位元可防止意外刪除或重新配置檔案。 黏性位元會限制超級使用者、目錄擁有者或檔案擁有者才有權刪除或移動檔案。 此設定不會影響檔案。 下列範例藉由在權限前面加上 `users`，以在目錄 `1` 上設定黏性位元。
+在目錄上設定黏性位元可防止意外刪除或重新配置檔案。 黏性位元會限制超級使用者、目錄擁有者或檔案擁有者才有權刪除或移動檔案。 此設定不會影響檔案。 下列範例藉由在權限前面加上 `1`，以在目錄 `users` 上設定黏性位元。
 
 ```bash
 azdata bdc hdfs chmod --path /sales/users --permission 1750

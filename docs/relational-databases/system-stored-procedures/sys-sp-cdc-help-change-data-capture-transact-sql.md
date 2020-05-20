@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b5ceaaa02d07e34e1e93789d2c72f80a3459a472
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905168"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807959"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,14 @@ sys.sp_cdc_help_change_data_capture
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @source_schema = ]'*source_schema*'  
+ [ @source_schema =] '*source_schema*'  
  這是來源資料表所屬的結構描述名稱。 *source_schema*是**sysname**，預設值是 Null。 當指定*source_schema*時，也必須指定*source_name* 。  
   
  如果非 Null， *source_schema*必須存在於目前的資料庫中。  
   
  如果*source_schema*為非 null， *source_name*也必須是非 null。  
   
- [ @source_name = ]'*source_name*'  
+ [ @source_name =] '*source_name*'  
  這是來源資料表的名稱。 *source_name*是**sysname**，預設值是 Null。 當指定*source_name*時，也必須指定*source_schema* 。  
   
  如果非 Null， *source_name*必須存在於目前的資料庫中。  

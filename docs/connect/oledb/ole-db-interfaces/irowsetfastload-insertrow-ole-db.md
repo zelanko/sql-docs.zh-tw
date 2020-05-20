@@ -68,9 +68,9 @@ HRESULT InsertRow(
  指定的存取子不是資料列存取子，或未指定取用者所擁有的記憶體。  
   
 ## <a name="remarks"></a>備註  
- 將取用者資料轉換成資料行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型時發生的錯誤會導致 OLE DB Driver for SQL Server 傳回 E_FAIL。 您可在任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]InsertRow**方法或僅在**Commit**方法上將資料傳輸至**。 取用者應用程式可能會在使用錯誤的資料呼叫 **InsertRow** 方法很多次後，才收到發生了資料類型轉換錯誤的通知。 因為 **Commit** 方法會確保所有資料都由取用者正確指定，所以取用者可依需要適當地使用 **Commit** 方法來驗證資料。  
+ 將取用者資料轉換成資料行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型時發生的錯誤會導致 OLE DB Driver for SQL Server 傳回 E_FAIL。 您可在任何 **InsertRow** 方法或僅在 **Commit** 方法上將資料傳輸至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 取用者應用程式可能會在使用錯誤的資料呼叫 **InsertRow** 方法很多次後，才收到發生了資料類型轉換錯誤的通知。 因為 **Commit** 方法會確保所有資料都由取用者正確指定，所以取用者可依需要適當地使用 **Commit** 方法來驗證資料。  
   
- OLE DB Driver for SQL Server 大量複製資料列集是唯寫的。 OLE DB Driver for SQL Server 沒有公開任何允許取用者查詢資料列集的方法。 若要終止處理，取用者可以不必呼叫 [Commit](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) 方法，即釋放它在 **IRowsetFastLoad** 介面上的參考。 沒有功能可用來存取資料列集中取用者插入的資料列並變更其值，或將該資料列從資料列集個別地移除。  
+ OLE DB Driver for SQL Server 大量複製資料列集是唯寫的。 OLE DB Driver for SQL Server 沒有公開任何允許取用者查詢資料列集的方法。 若要終止處理，取用者可以不必呼叫 **Commit** 方法，即釋放它在 [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) 介面上的參考。 沒有功能可用來存取資料列集中取用者插入的資料列並變更其值，或將該資料列從資料列集個別地移除。  
   
  大量複製的資料列會在伺服器上針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 設定格式。 資料列格式會受到已針對連接或工作階段所設定之任何選項 (例如 ANSI_PADDING) 的影響。 根據預設，針對透過 OLE DB Driver for SQL Server 所建立的任何連線，此選項皆設定為開啟。  
   

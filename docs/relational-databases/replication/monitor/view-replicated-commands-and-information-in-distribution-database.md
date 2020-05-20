@@ -38,7 +38,7 @@ ms.locfileid: "76286329"
   
 1.  (選擇性) 在發行集資料庫的「發行者」端，執行 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)。 指定 `@publication` 和 `@article`。 請注意結果集中 **article id** 的值。  
   
-2.  在散發資料庫的「散發者」端，執行 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)。 (選擇性) 針對 `@article_id` 指定步驟 2 的發行項識別碼。 (選擇性) 針對 `@publisher_database_id` 指定發行集資料庫的識別碼，此識別碼可從 **sys.databases** 目錄檢視的 [database_id](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行取得。  
+2.  在散發資料庫的「散發者」端，執行 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)。 (選擇性) 針對 `@article_id` 指定步驟 2 的發行項識別碼。 (選擇性) 針對 `@publisher_database_id` 指定發行集資料庫的識別碼，此識別碼可從 [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視的 **database_id** 資料行取得。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式監視複寫](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

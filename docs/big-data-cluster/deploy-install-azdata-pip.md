@@ -16,11 +16,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/29/2020
 ms.locfileid: "75726945"
 ---
-# <a name="install-azdata-with-pip"></a>使用 `azdata` 安裝 `pip`
+# <a name="install-azdata-with-pip"></a>使用 `pip` 安裝 `azdata`
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文描述如何使用 `azdata` 在 Windows 或 Linux 上 安裝 `pip`。
+本文描述如何使用 `pip` 在 Windows 或 Linux 上 安裝 `azdata`。
 
 對於 Windows 與 Linux (Ubuntu 發行版本)，使用[套件管理員](./deploy-install-azdata-installer.md)安裝比較容易。
 

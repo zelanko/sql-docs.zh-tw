@@ -107,9 +107,9 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
   
 4. 在主控台樹狀目錄中，於 Server Core 電腦的 [電腦管理]  底下按一下 [服務與應用程式]  。  
   
-5. 按兩下 [ **組態管理員][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 。  
+5. 按兩下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員]。  
   
-6. 在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員**中，按一下 [ **服務][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ，以滑鼠右鍵按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<執行個體名稱>)，這裡的 \<執行個體名稱> 是您想要啟用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 [屬性]。  
+6. 在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員**中，按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務]，以滑鼠右鍵按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<執行個體名稱>)，這裡的 \<執行個體名稱> 是您想要啟用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 [屬性]。  
   
 7. 選取 **[AlwaysOn 高可用性]** 索引標籤。  
   
@@ -181,7 +181,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
 2.  在 [應用程式]  索引標籤上，按一下 [新工作]  。  
   
-3.  在 [建立新工作]  對話方塊的 [開啟]  欄位中輸入 **sqlps.exe**，然後按一下 [確定]  。 隨即開啟 [**Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**] 視窗。  
+3.  在 [建立新工作] 對話方塊的 [開啟] 欄位中輸入 **sqlps.exe**，然後按一下 [確定]。 隨即開啟 [**Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**] 視窗。  
   
 4.  在 [**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**] 視窗中，執行下列指令碼以啟用 TCP/IP 通訊協定：  
   

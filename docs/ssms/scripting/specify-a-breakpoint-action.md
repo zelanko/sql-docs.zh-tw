@@ -31,11 +31,11 @@ ms.locfileid: "75253655"
   
 ##  <a name="action-considerations"></a><a name="BKMK_ActionConsiderations"></a> 動作考量因素
 
-中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 **偵錯工具中 [叫用時]** [!INCLUDE[tsql](../../includes/tsql-md.md)] 動作的主要用法是透過指定列印訊息，將資訊列印至偵錯工具 [輸出]  視窗。  
+中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具中 [叫用時] 動作的主要用法是透過指定列印訊息，將資訊列印至偵錯工具 [輸出] 視窗。  
   
 列印訊息是在 [列印訊息]  選項中指定，並指定為文字字串，其中的運算式包含來自偵錯中 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的資訊。 運算式包含：  
   
--   以大括號 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 括住的 {} 運算式。 運算式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數和內建函數。 範例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY('ProcessID')}。  
+-   以大括號 ({}) 括住的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 運算式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數和內建函數。 範例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY('ProcessID')}。  
   
 -   下列其中一個關鍵字：  
   

@@ -51,11 +51,11 @@ ms.locfileid: "68016112"
 -   將應用程式編碼成呼叫 **ICommandWithParameters::GetParameterInfo**，如此提供者就可以用動態方式取得參數的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。 請注意，這可能會導致與伺服器之間的額外網路往返。  
   
 > [!NOTE]  
->  在下列情況下，提供者不支援呼叫 **ICommandWithParameters::GetParameterInfo**：包含 FROM 子句的任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UPDATE 或 DELETE 陳述式、相依於包含參數之子查詢的任何 SQL 陳述式、在比較 (like) 或定量述詞的運算式中都包含參數標記的 SQL 陳述式，或是其中一個參數為函式參數的任何查詢。 在處理 SQL 陳述式批次時，提供者也不支援針對批次內第一個陳述式之後的陳述式中的參數標記呼叫 **ICommandWithParameters::GetParameterInfo**。 不允許在 \* 命令中使用註解 (/* [!INCLUDE[tsql](../../../includes/tsql-md.md)]/)。  
+>  在下列情況下，提供者不支援呼叫 **ICommandWithParameters::GetParameterInfo**：包含 FROM 子句的任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UPDATE 或 DELETE 陳述式、相依於包含參數之子查詢的任何 SQL 陳述式、在比較 (like) 或定量述詞的運算式中都包含參數標記的 SQL 陳述式，或是其中一個參數為函式參數的任何查詢。 在處理 SQL 陳述式批次時，提供者也不支援針對批次內第一個陳述式之後的陳述式中的參數標記呼叫 **ICommandWithParameters::GetParameterInfo**。 不允許在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 命令中使用註解 (/* \*/)。  
   
  OLE DB Driver for SQL Server 支援 SQL 陳述式命令中的輸入參數。 在程序呼叫命令中，OLE DB Driver for SQL Server 支援輸入、輸出及輸入/輸出參數。 在執行 (只有在沒有傳回任何資料列集時) 或應用程式已用盡所有傳回的資料列集時，輸出參數值就會傳回應用程式。 若要確保傳回的值有效，請使用 **IMultipleResults** 來強制資料列集取用。  
   
- 您不需要在 DBPARAMBINDINFO 結構中指定預存程序參數的名稱。 您可以使用 NULL 當作 *pwszName* 成員的值，表示 OLE DB Driver for SQL Server 應該忽略參數名稱，而且僅使用 *ICommandWithParameters::SetParameterInfo* 之 **rgParamOrdinals** 成員中指定的序數。 如果命令文字同時包含已命名和未命名的參數，您就必須在任何已命名的參數前面指定所有未命名的參數。  
+ 您不需要在 DBPARAMBINDINFO 結構中指定預存程序參數的名稱。 您可以使用 NULL 當作 *pwszName* 成員的值，表示 OLE DB Driver for SQL Server 應該忽略參數名稱，而且僅使用 **ICommandWithParameters::SetParameterInfo** 之 *rgParamOrdinals* 成員中指定的序數。 如果命令文字同時包含已命名和未命名的參數，您就必須在任何已命名的參數前面指定所有未命名的參數。  
   
  如果指定預存程序參數的名稱，OLE DB Driver for SQL Server 就會檢查名稱，以便確保它是否有效。 當 OLE DB Driver for SQL Server 從取用者接收到錯誤的參數名稱時，就會傳回錯誤。  
   

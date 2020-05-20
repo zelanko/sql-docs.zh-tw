@@ -56,7 +56,7 @@ ms.locfileid: "75243374"
 顯示 [中斷]  。
 
 **語言**  
-顯示  **的 [Transact-SQL]** [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的 [Transact-SQL]。  
 
 **Function**  
 顯示設定中斷點的行號。  

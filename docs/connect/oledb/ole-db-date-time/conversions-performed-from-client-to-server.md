@@ -66,8 +66,8 @@ ms.locfileid: "67995141"
 |11|根據下表，小數秒的位數 (小數位數) 會從目的地資料行的大小決定。 對於大於資料表中範圍的資料行大小，會隱含小數位數 9。 此轉換應該最多允許九個小數秒位數，也就是 OLE DB 所允許的最大值。<br /><br /> 不過，如果來源類型為 DBTIMESTAMP 而且小數秒為零，則不會產生任何小數秒位數或小數點。 此行為可確保使用舊版 OLE DB 提供者所開發之應用程式的回溯相容性。<br /><br /> 資料行大小 ~0 在 OLE DB 中隱含為大小無限制 (除非 DBTIMESTAMP 套用 3 位數規則，否則為 9 位數)。|  
 |12|系統會針對 DBTYPE_DATE 維護 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的轉換語意。 小數秒會截斷到零。|  
 |13|系統會針對 DBTYPE_FILETIME 維護 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的轉換語意。 如果您使用 Windows FileTimeToSystemTime API，小數秒有效位數會限制為 1 毫秒。|  
-|14|系統會針對 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]smalldatetime**維護** 之前的轉換語意。 秒數會設定為零。|  
-|15|系統會針對 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]datetime**維護** 之前的轉換語意。 描述會捨去為第 300 個最接近的秒數。|  
+|14|系統會針對 **smalldatetime** 維護 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的轉換語意。 秒數會設定為零。|  
+|15|系統會針對 **datetime** 維護 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的轉換語意。 描述會捨去為第 300 個最接近的秒數。|  
 |16|內嵌在 SSVARIANT 用戶端架構中之值 (屬於給定類型) 的轉換行為與未內嵌在 SSVARIANT 用戶端架構時之值和類型的行為相同。|  
   
 ||||  

@@ -70,7 +70,7 @@ rsconfig {-?}
   
 -   設定特殊帳戶，供報表伺服器在無法使用其他認證時，用來登入遠端資料庫伺服器。  
   
-您可以在  **的本機或遠端執行個體上執行**rsconfig[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 公用程式。 您無法使用 **rsconfig** 公用程式解密及檢視已設定的值。  
+您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的本機或遠端執行個體上執行**rsconfig** 公用程式。 您無法使用 **rsconfig** 公用程式解密及檢視已設定的值。  
   
 在執行這個公用程式之前，您必須先將 Windows Management Instrumentation (WMI) 安裝在您要設定的電腦中。  
   

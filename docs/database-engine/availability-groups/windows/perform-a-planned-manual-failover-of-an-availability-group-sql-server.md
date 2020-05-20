@@ -24,7 +24,7 @@ ms.locfileid: "79287202"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>執行 Always On 可用性群組的已規劃手動容錯移轉 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主題描述如何使用 *、* 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 PowerShell，在不遺失資料的情況下針對 AlwaysOn 可用性群組執行手動容錯移轉 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]「已規劃的手動容錯移轉」[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](Planned Manual Failover))。 可用性群組會在可用性複本層級容錯移轉。 規劃的手動容錯移轉和任何一個 AlwaysOn 可用性群組容錯移轉一樣，會將次要複本轉為主要角色。 同時，容錯移轉也會將先前的主要複本轉成次要角色。  
+本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，在不遺失資料的情況下針對 AlwaysOn 可用性群組執行手動容錯移轉 (*「已規劃的手動容錯移轉」*(Planned Manual Failover))。 可用性群組會在可用性複本層級容錯移轉。 規劃的手動容錯移轉和任何一個 AlwaysOn 可用性群組容錯移轉一樣，會將次要複本轉為主要角色。 同時，容錯移轉也會將先前的主要複本轉成次要角色。  
   
 只有在主要複本和目標次要複本正在以同步認可模式執行且目前已同步時，才會支援規劃的手動容錯移轉。 規劃的手動容錯移轉會保留聯結至目標次要複本上可用性群組的次要資料庫中的所有資料。 之前的主要複本轉成次要角色之後，其資料庫會變成次要資料庫。 接著，這些資料庫會開始與新的主要資料庫同步。 在將它們全部轉換成 SYNCHRONIZED 狀態之後，新的次要複本就會變成有資格當做未來已規劃之手動容錯移轉的目標。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "79287202"
 -   目標次要複本目前必須與主要複本同步。 該次要複本上的所有次要資料庫皆必須聯結至可用性群組。 其也必須與其對應的主要資料庫同步 (亦即，本機次要資料庫必須為 SYNCHRONIZED)。 
   
     > [!TIP] 
-    >  若要判斷次要複本的容錯移轉整備，請查詢 **sys.dm_hadr_database_replica_cluster_states** 動態管理檢視中的 [is_failover_ready](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 資料行。 或者，您可以查看 **AlwaysOn 群組儀表板**的[容錯移轉整備](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)資料行。 
+    >  若要判斷次要複本的容錯移轉整備，請查詢 [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 動態管理檢視中的 **is_failover_ready** 資料行。 或者，您可以查看 [AlwaysOn 群組儀表板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)的**容錯移轉整備**資料行。 
 -   只有在目標次要複本上才支援這個工作。 您必須連接到裝載目標次要複本的伺服器執行個體。 
   
 ###  <a name="security"></a><a name="Security"></a> Security 

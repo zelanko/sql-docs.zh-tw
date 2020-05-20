@@ -38,7 +38,7 @@ ms.locfileid: "77051678"
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是除了 **叫用所在的執行個體之外的另一個**geometry`STSymDifference()` 執行個體。  
+ 這是除了 `STSymDifference()` 叫用所在的執行個體之外的另一個 **geometry** 執行個體。  
   
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  

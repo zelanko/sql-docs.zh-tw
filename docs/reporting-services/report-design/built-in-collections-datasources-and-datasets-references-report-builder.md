@@ -26,7 +26,7 @@ ms.locfileid: "77081464"
   
 |**變數**|**型別**|**說明**|  
 |------------------|--------------|---------------------|  
-|**DataSourceReference**|**String**|報表伺服器上資料來源定義的完整路徑。 例如，您可以包含報表用來做為報表記錄一部分的所有資料來源的清單。 以下範例將示範名為 AdventureWorks2012 的資料來源完整路徑：<br /><br /> `/DataSources/AdventureWorks2012`第 1 課：建立 Windows Azure 儲存體物件{2}。|  
+|**DataSourceReference**|**String**|報表伺服器上資料來源定義的完整路徑。 例如，您可以包含報表用來做為報表記錄一部分的所有資料來源的清單。 以下範例將示範名為 AdventureWorks2012 的資料來源完整路徑：<br /><br /> `/DataSources/AdventureWorks2012`第 1 課：建立 Windows Azure 儲存體物件`/DataSources/AdventureWorks2012`。|  
 |**型別**|**String**|資料來源的資料提供者類型。 例如： `SQL` 。|  
   
 ## <a name="datasets"></a>DataSets  

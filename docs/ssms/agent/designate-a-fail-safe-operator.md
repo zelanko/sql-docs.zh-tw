@@ -55,7 +55,7 @@ ms.locfileid: "75242454"
   
 2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後選取 [屬性]  。  
   
-3.  在 [SQL Server Agent 屬性 - **server**name _]\__ 對話方塊的 [選取頁面]  下，選取 [警示系統]  。  
+3.  在 [SQL Server Agent 屬性 - _server\_name_] 對話方塊的 [選取頁面] 下，選取 [警示系統]。  
   
 4.  在 [保全操作員]  下方，選取 [啟用保全操作員]  。  
   

@@ -17,7 +17,7 @@ ms.locfileid: "68265637"
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-**組態管理員中的 [Power BI 整合]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面是用來向所需的 Azure Active Directory (AD) 受管理租用戶註冊報表伺服器，以允許報表伺服器的使用者將支援的報表項目釘選到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板。 如需您可以釘選的支援項目清單，請參閱 [將 Reporting Services 項目釘選到 Power BI 儀表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員中的 [Power BI 整合] 頁面是用來向所需的 Azure Active Directory (AD) 受管理租用戶註冊報表伺服器，以允許報表伺服器的使用者將支援的報表項目釘選到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板。 如需您可以釘選的支援項目清單，請參閱 [將 Reporting Services 項目釘選到 Power BI 儀表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。
 
 ## <a name="requirements-for-power-bi-integration"></a><a name="bkmk_requirements"></a> Power BI 整合的需求
 
@@ -58,7 +58,7 @@ ms.locfileid: "68265637"
 
 4. 註冊完成之後，[Power BI 註冊詳細資料]  區段將記下 Azure 租用戶識別碼和重新導向 URL。  在 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板登入和通訊過程中會使用這些 URL，來向後與已註冊的報表伺服器通訊。
 
-5. 在 [結果]  視窗中選取 [複製]  按鈕，將註冊詳細資料複製到 Windows 剪貼簿，以便您加以儲存供日後參考。
+5. 在 [結果] 視窗中選取 [複製] 按鈕，將註冊詳細資料複製到 Windows 剪貼簿，以便您加以儲存供日後參考。
 
 ## <a name="unregister-with-power-bi"></a><a name="bkmk_unregister"></a> 取消註冊 Power BI
 

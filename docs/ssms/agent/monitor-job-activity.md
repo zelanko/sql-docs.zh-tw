@@ -56,7 +56,7 @@ ms.locfileid: "75252363"
   
 當您想要了解有哪些作業已排程執行、目前工作階段期間已執行作業的最後結果，以及找出哪些作業目前執行中或閒置時，便可使用「作業活動監視器」。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務異常失敗，您可以查看「作業活動監視器」中的先前工作階段，判斷哪些作業原本正在執行中。  
   
-若要開啟「作業活動監視器」，請展開「 **物件總管」中的 [SQL Server Agent]** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、以滑鼠右鍵按一下 [作業活動監視器]  ，然後按一下 [檢視作業活動]  。  
+若要開啟「作業活動監視器」，請展開「[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 物件總管」中的 [SQL Server Agent]、以滑鼠右鍵按一下 [作業活動監視器]，然後按一下 [檢視作業活動]。  
   
 您也可以使用預存程序 **sp_help_jobactivity**來檢視目前工作階段的作業活動。  
   

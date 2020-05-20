@@ -89,7 +89,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 1.  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 建立新的 Windows 應用程式。  
   
-2.  在 [工具箱]<xref:System.Windows.Forms.WebBrowser>**對話方塊中找出** 控制項。  
+2.  在 [工具箱] 對話方塊中找出 <xref:System.Windows.Forms.WebBrowser> 控制項。  
   
      如果看不到 [工具箱]  ，可以按一下 [檢視]  功能表項目，並選取 [工具箱]  來存取。  
   
@@ -97,7 +97,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
      名為 webBrowser1 的 <xref:System.Windows.Forms.WebBrowser> 控制項會新增至 Form  
   
- 您可以呼叫其 <xref:System.Windows.Forms.WebBrowser>Navigate**方法，將** 控制項導向 URL。 您可以在執行階段將特定的 URL 存取字串指派到 <xref:System.Windows.Forms.WebBrowser> 控制項，如下列範例所示。  
+ 您可以呼叫其 **Navigate** 方法，將 <xref:System.Windows.Forms.WebBrowser> 控制項導向 URL。 您可以在執行階段將特定的 URL 存取字串指派到 <xref:System.Windows.Forms.WebBrowser> 控制項，如下列範例所示。  
   
 ```vb  
 Dim url As String = "https://localhost/reportserver?/" & _  

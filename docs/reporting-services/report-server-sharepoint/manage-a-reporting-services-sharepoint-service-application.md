@@ -146,7 +146,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  選取此項目來指定帳戶。  
   
  **帳戶**  
- 輸入 Windows 網域使用者帳戶。 請使用此格式：*網域\<<使用者帳戶\\\>* 。  
+ 輸入 Windows 網域使用者帳戶。 請使用此格式：\<網域\\<使用者帳戶\>。  
   
  **密碼**  
  輸入密碼。  

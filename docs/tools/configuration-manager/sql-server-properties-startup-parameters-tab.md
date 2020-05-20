@@ -53,7 +53,7 @@ ms.locfileid: "75306777"
  如需有關如何移動 master 資料庫的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜移動系統資料庫＞主題。  
   
 ## <a name="optional-parameters"></a>選擇性參數  
- 《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動選項＞主題描述了所有支援的啟動參數。 啟動參數 -T*trace#* 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體應該使用作用中的指定追蹤旗標 (*trace#* ) 來啟動。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需有關追蹤旗標的詳細資訊，請參閱《[!INCLUDE[tsql](../../includes/tsql-md.md)] 線上叢書》中的＜追蹤旗標 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])＞主題。  
+ 《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動選項＞主題描述了所有支援的啟動參數。 啟動參數 -T*trace#* 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體應該使用作用中的指定追蹤旗標 (*trace#* ) 來啟動。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需有關追蹤旗標的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜追蹤旗標 ([!INCLUDE[tsql](../../includes/tsql-md.md)])＞主題。  
   
 > [!CAUTION]  
 >  您可能會在網際網路上看到其他未記載的啟動參數和追蹤旗標描述。 未記載的啟動參數和追蹤旗標是用來處理不常見的問題或強制執行測試所需的特定條件。 使用未記載的啟動參數可能會產生非預期的結果。 除非 Microsoft 客戶支援服務建議使用未記載的參數，否則請勿使用這些參數。  

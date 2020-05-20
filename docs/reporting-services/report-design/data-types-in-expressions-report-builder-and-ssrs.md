@@ -66,7 +66,7 @@ ms.locfileid: "77080535"
 -   檢查您所使用的資料處理延伸模組是否包含擷取預先格式化資料的中繼資料。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查詢包含在處理 Cube 時已經格式化的 Cube 值 FORMATTED_VALUE 擴充屬性。 如需詳細資訊，請參閱 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
 ## <a name="understanding-parameter-data-types"></a>了解參數資料類型  
- 報表參數必須屬於下列其中一種資料類型：Boolean、DateTime、Integer、Float 或 Text (也稱為 String)。 當資料集查詢包含查詢參數時，系統就會自動建立報表參數並將它們連結至查詢參數。 報表參數的預設資料類型為 String。 若要變更報表參數的預設資料類型，請在 [報表參數屬性]  對話方塊的 [一般]  頁面上，從 [資料類型]  下拉式清單中選取正確的值。  
+ 報表參數必須屬於下列其中一種資料類型：Boolean、DateTime、Integer、Float 或 Text (也稱為 String)。 當資料集查詢包含查詢參數時，系統就會自動建立報表參數並將它們連結至查詢參數。 報表參數的預設資料類型為 String。 若要變更報表參數的預設資料類型，請在 [報表參數屬性] 對話方塊的 [一般] 頁面上，從 [資料類型] 下拉式清單中選取正確的值。  
   
 > [!NOTE]  
 >  屬於 DateTime 資料類型的報表參數不支援毫秒。 雖然您可以根據包含毫秒的值建立參數，但是無法從包含毫秒之日期或時間值的可用值下拉式清單中選取值。  
@@ -102,7 +102,7 @@ ms.locfileid: "77080535"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- 這個範例會顯示日期 (2008 年 7 月 1 日)、接著 7 位數精確度的時間 (上午 6:05:07.9999999)，然後接著以小時和分鐘為單位的 UTC 時區時差 (加上 8 小時，0 分)。 在下列範例中，這個值已經放置於稱為  **的 [字串]** `MyDateTime.Value` 欄位中。  
+ 這個範例會顯示日期 (2008 年 7 月 1 日)、接著 7 位數精確度的時間 (上午 6:05:07.9999999)，然後接著以小時和分鐘為單位的 UTC 時區時差 (加上 8 小時，0 分)。 在下列範例中，這個值已經放置於稱為 `MyDateTime.Value` 的 [字串] 欄位中。  
   
  您可以使用下列其中一種策略，將這項資料轉換成一個或多個 CLR 值：  
   

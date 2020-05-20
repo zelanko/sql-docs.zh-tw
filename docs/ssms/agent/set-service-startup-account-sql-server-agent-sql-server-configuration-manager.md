@@ -69,14 +69,14 @@ ms.locfileid: "75239210"
   
 5.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的主控台窗格中，選取 **[SQL Server 服務]** 。  
   
-6.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server Agent **(server**name) _]\__ ，其中 *server_name* 是您要變更服務啟動帳戶之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行個體的名稱，然後選取 [屬性]  。  
+6.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server Agent _(server\_name)_]，其中 *server_name* 是您要變更服務啟動帳戶之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行個體的名稱，然後選取 [屬性]。  
   
 7.  在 [SQL Server Agent **(server**name) _屬性]\__  對話方塊的 [登入]  索引標籤中，選取 [登入身分]  下的下列其中一個選項：  
   
     -   **內建帳戶**：如果您的作業僅需來自本機伺服器的資源，請選取此選項。 如需有關如何選擇 Windows 內建帳戶類型的詳細資訊，請參閱 [選取 SQL Server Agent 服務的帳戶](https://msdn.microsoft.com/library/ms191543.aspx)。  
   
         > [!IMPORTANT]  
-        > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務不支援  **中的 [本機服務]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 帳戶。  
+        > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務不支援 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [本機服務] 帳戶。  
   
     -   **這個帳戶**：如果您的作業需要網路上的資源 (包括應用程式資源)，或想要將事件轉寄給其他 Windows 應用程式記錄檔，又或者想要透過電子郵件或呼叫器來通知操作員，請選取此選項。  
   

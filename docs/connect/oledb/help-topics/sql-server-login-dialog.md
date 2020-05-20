@@ -39,7 +39,7 @@ ms.locfileid: "72381750"
 |伺服器 SPN|如果您使用了信任連接，就可以指定伺服器的服務主要名稱 (SPN)。|
 |登入識別碼|指定要針對連線使用的登入識別碼。 只有當 `Authentication Mode` 設定為 `SQL Server Authentication`、`Active Directory - Password` 或 `Active Directory - Universal with MFA support` 時，才會啟用 [登入識別碼] 文字方塊。|
 |密碼|指定要針對連線使用的密碼。 只有當 `Authentication Mode` 設定為 `SQL Server Authentication` 或 `Active Directory - Password` 時，才會啟用 [密碼] 文字方塊。|
-|選項。|顯示或隱藏 [選項]  群組。 如果 [伺服器]  具有值，即會啟用 [選項]  按鈕。|
+|選項。|顯示或隱藏 [選項]  群組。 如果 [伺服器] 具有值，即會啟用 [選項] 按鈕。|
 |變更密碼|核取時，會啟用 [新密碼]  和 [確認新密碼]  文字方塊。|
 |新密碼|指定新的密碼。|
 |確認新密碼|再次指定新密碼，以進行確認。|
@@ -53,7 +53,7 @@ ms.locfileid: "72381750"
 |信任伺服器憑證|核取時，將會驗證伺服器的憑證。 伺服器的憑證必須具有伺服器的正確主機名稱，且由信任的憑證授權單位所發出。|
 
 > [!NOTE]  
-> 使用 `Windows Authentication` 或 `SQL Server Authentication` 模式時，只有在啟用 [為資料使用增強式加密]  選項時，才會考慮使用**信任伺服器憑證**。
+> 使用 `Windows Authentication` 或 `SQL Server Authentication` 模式時，只有在啟用 [為資料使用增強式加密] 選項時，才會考慮使用**信任伺服器憑證**。
 
 ## <a name="next-steps"></a>後續步驟
 - 使用 OLE DB 驅動程式[向 Azure Active Directory 進行驗證](../features/using-azure-active-directory.md)。

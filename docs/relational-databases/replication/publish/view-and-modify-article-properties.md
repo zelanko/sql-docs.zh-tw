@@ -84,20 +84,20 @@ ms.locfileid: "76287515"
   
 #### <a name="to-view-and-modify-article-properties"></a>若要檢視和修改發行項屬性  
   
-1.  在 [發行集屬性 - **發行集>]**  **對話方塊的 [發行項]\<** 頁面上，選取一個發行項，然後按一下 [發行項屬性]  。  
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [發行項] 頁面上，選取一個發行項，然後按一下 [發行項屬性]。  
   
 2.  選取應套用發行項屬性變更的物件︰  
   
-    -   按一下 [設定反白顯示 **物件類型> 發行項的屬性] \<** 啟動 [發行項屬性 - **物件名稱>]\<** 對話方塊；在這個對話方塊中所做的屬性變更，只會套用至 [發行項]  頁面的物件窗格中反白顯示的物件。  
+    -   按一下 [設定反白顯示 \<物件類型> 發行項的屬性]  啟動 [發行項屬性 - \<物件名稱>] 對話方塊；在這個對話方塊中所做的屬性變更，只會套用至 [發行項] 頁面的物件窗格中反白顯示的物件。  
   
-    -   按一下 [設定所有 **物件類型> 發行項的屬性]\<** 啟動 [所有 **物件類型> 發行項的屬性]\<** 對話方塊；在這個對話方塊中所做的屬性變更，會套用至 [發行項]  頁面的物件窗格中屬於該類型的所有物件，包括尚未選取發行的物件。  
+    -   按一下 [設定所有 \<物件類型> 發行項的屬性] 啟動 [所有 \<物件類型> 發行項的屬性] 對話方塊；在這個對話方塊中所做的屬性變更，會套用至 [發行項] 頁面的物件窗格中屬於該類型的所有物件，包括尚未選取發行的物件。  
   
         > [!NOTE]  
-        >  在 [所有 **物件類型> 發行項的屬性]\<** 對話方塊中所做的屬性變更，會覆寫之前在 [發行項屬性 - **物件名稱>]\<** 對話方塊中所做的任何變更。 例如，若要設定所有屬於某物件類型之發行項的一些預設值，但同時要設定個別物件的某些屬性，則請先設定所有發行項的預設值， 然後再設定個別物件的屬性。  
+        >  在 [所有 \<物件類型> 發行項的屬性] 對話方塊中所做的屬性變更，會覆寫之前在 [發行項屬性 - \<物件名稱>] 對話方塊中所做的任何變更。 例如，若要設定所有屬於某物件類型之發行項的一些預設值，但同時要設定個別物件的某些屬性，則請先設定所有發行項的預設值， 然後再設定個別物件的屬性。  
   
 3.  必要時修改任何屬性，然後按一下 **[確定]** 。  
   
-4.  在 [發行集屬性 - **發行集>]** **對話方塊上，按一下 [確定]\<** 。  
+4.  在 [發行集屬性 - \<發行集>] 對話方塊上，按一下 [確定]。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序來以程式設計的方式修改發行項及傳回其屬性。 使用哪些預存程序要依發行項所屬的發行集類型而定。  
@@ -113,7 +113,7 @@ ms.locfileid: "76287515"
 1.  執行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)，在 `@property` 參數中指定變更的發行項屬性，並在 `@value` 參數指定此屬性的新值。  
   
     > [!NOTE]  
-    >  如果此變更需要產生新的快照集，您也必須針對 `1` 指定 `@force_invalidate_snapshot` 的值，且如果此變更需要重新初始化訂閱者，您也必須針對 `1` 指定 `@force_reinit_subscription` 的值。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果此變更需要產生新的快照集，您也必須針對 `@force_invalidate_snapshot` 指定 `1` 的值，且如果此變更需要重新初始化訂閱者，您也必須針對 `@force_reinit_subscription` 指定 `1` 的值。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>檢視屬於合併式發行集之發行項的屬性  
   
@@ -126,7 +126,7 @@ ms.locfileid: "76287515"
 1.  執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，在 `@property` 參數中指定正在變更的發行項屬性，並在 `@value` 參數指定此屬性的新值。  
   
     > [!NOTE]  
-    >  如果此變更需要產生新的快照集，您也必須針對 `1` 指定 `@force_invalidate_snapshot` 的值，且如果此變更需要重新初始化訂閱者，您也必須針對 `1` 指定 `@force_reinit_subscription` 的值。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果此變更需要產生新的快照集，您也必須針對 `@force_invalidate_snapshot` 指定 `1` 的值，且如果此變更需要重新初始化訂閱者，您也必須針對 `@force_reinit_subscription` 指定 `1` 的值。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  這個異動複寫範例會傳回已發行之發行項的屬性。  

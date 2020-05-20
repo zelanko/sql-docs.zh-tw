@@ -30,7 +30,7 @@ REST API 可透過程式設計方式存取 SQL Server 2017 Reporting Services �
 
 REST API 要求/回應配對可分成五個元件：
 
-* 由  **所組成的**要求 URI`{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`。 雖然要求 URI 包含在要求訊息標頭中，但由於大多數語言或架構要求您將它與要求訊息分開傳遞，因此我們會另外呼叫它。
+* 由 `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}` 所組成的**要求 URI**。 雖然要求 URI 包含在要求訊息標頭中，但由於大多數語言或架構要求您將它與要求訊息分開傳遞，因此我們會另外呼叫它。
 
     * URI 配置：表示用來傳輸要求的通訊協定。 例如，`http` 或 `https`。
     * URI 主機：指定裝載 REST 服務端點之伺服器的網域名稱或 IP 位址，例如 `myserver.contoso.com`。

@@ -59,9 +59,9 @@ ms.locfileid: "79287982"
 ### <a name="logical-and-physical-file-names"></a>邏輯與實體檔案名稱
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案有兩個檔案名稱類型： 
 
-**logical_file_name：**  logical_file_name 是用來在所有 Transact-SQL 陳述式中指稱實體檔案的名稱。 邏輯檔案名稱必須遵守 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼的規則，而且在資料庫的邏輯檔案名稱之間必須是唯一的。 這是由 `NAME` 中的 `ALTER DATABASE` 引數所設定。 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
+**logical_file_name：**  logical_file_name 是用來在所有 Transact-SQL 陳述式中指稱實體檔案的名稱。 邏輯檔案名稱必須遵守 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼的規則，而且在資料庫的邏輯檔案名稱之間必須是唯一的。 這是由 `ALTER DATABASE` 中的 `NAME` 引數所設定。 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
-**os_file_name：** os_file_name 是包含目錄路徑的實體檔案名稱。 它必須遵循作業系統檔案名稱的規則。 這是由 `FILENAME` 中的 `ALTER DATABASE` 引數所設定。 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
+**os_file_name：** os_file_name 是包含目錄路徑的實體檔案名稱。 它必須遵循作業系統檔案名稱的規則。 這是由 `ALTER DATABASE` 中的 `FILENAME` 引數所設定。 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料及記錄檔可以放在 FAT 或 NTFS 檔案系統， 在 Windows 系統上，因為 NTFS 安全性層面，我們建議使用 NTFS 檔案系統。 
@@ -84,7 +84,7 @@ ms.locfileid: "79287982"
 
 也可為每個檔案指定最大的大小。 若並未指定最大的大小，檔案將持續成長，直到它用完磁碟中所有可用的空間為止。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是用做應用程式中內嵌的資料庫，而且使用者不是那麼容易聯繫到系統管理員時，此項功能會特別有用。 使用者可以讓檔案依需要自動成長，以減輕監視資料庫中可用空間以及手動配置額外空間的管理負擔。  
 
-如果已針對 [ 啟用](../../relational-databases/databases/database-instant-file-initialization.md)立即檔案初始化 (IFI)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，配置資料檔案的新空間時額外負荷會最少。
+如果已針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟用[立即檔案初始化 (IFI)](../../relational-databases/databases/database-instant-file-initialization.md)，配置資料檔案的新空間時額外負荷會最少。
 
 如需交易記錄檔管理的詳細資訊，請參閱[管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)。   
 

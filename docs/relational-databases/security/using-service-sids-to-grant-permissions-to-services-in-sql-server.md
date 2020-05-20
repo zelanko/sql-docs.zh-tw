@@ -42,7 +42,7 @@ SQL Server 會使用[個別服務安全性識別碼 (SID)](https://support.micro
 
 系統帳戶在過去是藉由為 [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190) ([en-us 的 NT AUTHORITY\SYSTEM](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) 或[NetworkService](/windows/desktop/Services/networkservice-account) ([en-us 的 NT AUTHORITY\NETWORK SERVICE](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) 帳戶建立登入並授與這些登入權限而獲得授與權限。 這個方法會授與任何處理序或服務對以系統帳戶執行的 SQL 權限。
 
-使用服務 SID，可容許授與對特定服務的權限。 服務只有在執行時，才能存取它已獲得授與權限的資源。 例如，如果 `HealthService` 以 `LocalSystem` 身分執行，且獲得授與 `View Server State`，則 `LocalSystem` 帳戶只有在 `View Server State` 的內容中執行時才具有 `HealthService` 的權限。 如果任何其他處理序嘗試以 `LocalSystem` 身分存取 SQL 的伺服器狀態，它們將會遭到拒絕存取。
+使用服務 SID，可容許授與對特定服務的權限。 服務只有在執行時，才能存取它已獲得授與權限的資源。 例如，如果 `HealthService` 以 `LocalSystem` 身分執行，且獲得授與 `View Server State`，則 `LocalSystem` 帳戶只有在 `HealthService` 的內容中執行時才具有 `View Server State` 的權限。 如果任何其他處理序嘗試以 `LocalSystem` 身分存取 SQL 的伺服器狀態，它們將會遭到拒絕存取。
 
 ## <a name="examples"></a>範例
 

@@ -34,19 +34,19 @@ ms.locfileid: "75241593"
   
 3.  將新的資料庫重新命名為 **TradeDev**。  
   
-4.  以滑鼠右鍵按一下 [SQL Server 物件總管]  中的 [Trade]  資料庫，再選取 [結構描述比較]  。 遵循[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)主題中的步驟，選擇原始的 **Trade** 資料庫做為來源，新的 **TradeDev** 資料庫做為目標。 這會以 **Trade** 的結構描述來更新 **TradeDev**。  
+4.  以滑鼠右鍵按一下 [SQL Server 物件總管] 中的 [Trade] 資料庫，再選取 [結構描述比較]。 遵循[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)主題中的步驟，選擇原始的 **Trade** 資料庫做為來源，新的 **TradeDev** 資料庫做為目標。 這會以 **Trade** 的結構描述來更新 **TradeDev**。  
   
 ### <a name="to-replicate-data"></a>若要複寫資料  
   
 1.  上一個步驟只複製生產資料庫的結構描述至開發資料庫。 在這個程序中，您將複製生產資料至開發資料庫。  
   
-    以滑鼠右鍵按一下 [Trade]  資料庫中的 [Suppliers]  資料表，再選取 [檢視資料]  。 資料編輯器隨即開啟。  
+    以滑鼠右鍵按一下 [Trade] 資料庫中的 [Suppliers] 資料表，再選取 [檢視資料]。 資料編輯器隨即開啟。  
   
-2.  按一下工具列上 [最大資料列]  旁邊的 [指令碼]  按鈕。  
+2.  按一下工具列上 [最大資料列] 旁邊的 [指令碼] 按鈕。  
   
 3.  當指令碼視窗開啟時，請確認在 Transact\-SQL 指令碼窗格下方的狀態列中顯示「已連接」。 如果顯示「已中斷連接」，請按一下 [連接]  按鈕 (工具列上最左邊的按鈕)，然後輸入您的伺服器資訊和認證。  
   
-4.  在 [連接]  **[中斷連接]** / 按鈕旁邊的 [資料庫]  下拉式功能表中，選取 [TradeDev]  。 這類似於 Transact\-SQL`USE` 陳述式，而且將確保程式碼編輯器中的指令碼的執行對象會是 **TradeDev** 資料庫。  
+4.  在 [連接]/[中斷連接] 按鈕旁邊的 [資料庫] 下拉式功能表中，選取 [TradeDev]。 這類似於 Transact\-SQL`USE` 陳述式，而且將確保程式碼編輯器中的指令碼的執行對象會是 **TradeDev** 資料庫。  
   
 5.  按一下 [執行查詢]  按鈕執行 `INSERT` 陳述式。 這會將 `Suppliers` 資料庫的 `Trade` 資料表中的所有資料列插入 `Suppliers` 資料庫的 `TradeDev` 資料表。  
   

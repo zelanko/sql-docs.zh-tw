@@ -170,7 +170,7 @@ SQL Server 的備份與還原功能是將資料庫從 Windows 上的 SQL Server 
    Directory lookup for the file "Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf" failed with the operating system error 2(The system cannot find the file specified.).
    ```
    
-   在此情況下，資料庫包含次要檔案。 如果未在 `MOVE` 的 `RESTORE DATABASE` 子句中指定這些檔案，還原程式會嘗試在與原始伺服器相同的路徑中建立這些檔案。 
+   在此情況下，資料庫包含次要檔案。 如果未在 `RESTORE DATABASE` 的 `MOVE` 子句中指定這些檔案，還原程式會嘗試在與原始伺服器相同的路徑中建立這些檔案。 
 
    您可以列出備份中包含的所有檔案：
    ```sql

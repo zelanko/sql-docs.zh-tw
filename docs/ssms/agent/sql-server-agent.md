@@ -108,7 +108,7 @@ ms.locfileid: "75257927"
 > 若要使用 **net send**來傳送通知，則必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所在的電腦上啟動 Windows Messenger 服務。  
   
 > [!IMPORTANT]  
-> [呼叫器] 和 [Net Send]  選項會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未來版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 移除。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
+> [呼叫器] 和 [Net Send] 選項會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未來版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 移除。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
   
 若要使用電子郵件或呼叫器來傳送通知給操作員，則必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 以使用 Database Mail。 如需詳細資訊，請參閱 [Database Mail](../../relational-databases/database-mail/database-mail.md)。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "75257927"
   
 |子系統名稱|描述|  
 |--------------|-----------|  
-|Microsoft ActiveX Script|執行 ActiveX Scripting 作業步驟。<br /><br />**警告**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame_md.md)] 之後的版本會將 ActiveX Scripting 子系統從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
+|Microsoft ActiveX Script|執行 ActiveX Scripting 作業步驟。<br /><br />**警告**[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後的版本會將 ActiveX Scripting 子系統從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
 |作業系統 (**CmdExec**)|執行可執行的程式。|  
 |PowerShell|執行 PowerShell 指令碼作業步驟。|  
 |複寫散發者|執行可啟動複寫「散發代理程式」的作業步驟。|  

@@ -75,7 +75,7 @@ ms.locfileid: "74908713"
         
     如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。 如需詳細資訊，請參閱[修改資料行 (資料庫引擎)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如需詳細資訊，請參閱[修改資料行 (資料庫引擎)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure)。  
   
 -   使用 **管理物件 (SMO) 中的** Column.Collation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 屬性。  
   

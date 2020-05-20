@@ -24,7 +24,7 @@ ms.locfileid: "67989254"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本主題討論自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client 起，OLE DB Driver for SQL Server 中的重大變更。  
+  本主題討論自 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 起，OLE DB Driver for SQL Server 中的重大變更。  
 
  當您從 Microsoft Data Access Components (MDAC) 升級為 OLE DB Driver for SQL Server 時，可能也會看見一些行為差異。 如需詳細資訊，請參閱[將應用程式從 MDAC 更新為 OLE DB Driver for SQL Server](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)。  
 

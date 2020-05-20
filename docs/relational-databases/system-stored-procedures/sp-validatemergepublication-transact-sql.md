@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validatemergepublication
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 02ffdd0facfedd1b9eb6d8eee083f819566d818d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6a0ca36329c8ddb68c9727fe1b9d2cf17674c93a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72006097"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808807"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [**\@發行集 =**]**「***發行***** 集」  
+ [** \@ 發行集 =**] **'***發行***'**  
  這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
   
 `[ @level = ] level`這是要執行的驗證類型。 *層級*是**Tinyint**，沒有預設值。 層級可以是下列值之一。  
@@ -46,7 +46,7 @@ sp_validatemergepublication [@publication=] 'publication'
 |層級值|描述|  
 |-----------------|-----------------|  
 |**1**|僅驗證資料列計數。|  
-|**2**|資料列計數及總和檢查碼驗證。 若[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]為訂閱者，這會自動設為**3**。|  
+|**2**|資料列計數及總和檢查碼驗證。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 若為訂閱者，這會自動設為**3**。|  
 |**3**|這是建議值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  

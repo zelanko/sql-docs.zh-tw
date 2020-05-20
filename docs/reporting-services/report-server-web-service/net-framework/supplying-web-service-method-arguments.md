@@ -25,7 +25,7 @@ ms.locfileid: "79198545"
   報表伺服器 Web 服務方法會透過 HTTP 使用 SOAP 在指定的 URL 傳送要求給服務。 服務會接收要求、處理要求，然後傳回回應。 這些要求和回應是 XML 文件的形式。  
   
 ## <a name="optional-parameters"></a>選擇性參數  
- 在某些情況下，Web 服務方法可以有選擇性的輸入參數。 即使 Web 服務方法的輸入參數為選擇性，仍然必須包括它，並將參數值設定為 **null** (**中為**Nothing[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)])。 將參數值設定為 **null**，會將 SOAP 要求中該參數的項目值設定為 **null**。  
+ 在某些情況下，Web 服務方法可以有選擇性的輸入參數。 即使 Web 服務方法的輸入參數為選擇性，仍然必須包括它，並將參數值設定為 **null** ([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 **Nothing**)。 將參數值設定為 **null**，會將 SOAP 要求中該參數的項目值設定為 **null**。  
   
  下列範例會使用 <xref:ReportService2010.ReportingService2010.CreateFolder%2A> 方法在 Sales 資料夾中建立名為 Product Sales 的新資料夾。 透過為資料夾屬性提供 **null** 值，就不會為資料夾提供使用者特定屬性：  
   

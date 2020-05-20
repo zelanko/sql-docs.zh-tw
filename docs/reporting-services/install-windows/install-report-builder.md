@@ -31,7 +31,7 @@ ms.locfileid: "76971379"
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
   
- 您可以從 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web 入口網站或整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SharePoint 網站來啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如需資訊，請參閱 [啟動報表產生器](../../reporting-services/report-builder/start-report-builder.md)。  
+ 您可以從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 入口網站或整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SharePoint 網站來啟動 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]。 如需資訊，請參閱 [啟動報表產生器](../../reporting-services/report-builder/start-report-builder.md)。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -65,7 +65,7 @@ ms.locfileid: "76971379"
 4.  在 **[預設的目標伺服器]** 頁面上，選擇性地提供目標報表伺服器的 URL (如果它與預設值不同的話)。 按 [下一步]  。  
   
     > [!NOTE]  
-    >  如果您計畫在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]連線至報表伺服器時使用它，此時提供伺服器的 URL 比較方便。 您也可以透過  **的 [選項]** [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 對話方塊執行此作業。  
+    >  如果您計畫在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]連線至報表伺服器時使用它，此時提供伺服器的 URL 比較方便。 您也可以透過 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的 [選項] 對話方塊執行此作業。  
   
 5.  按一下 [安裝]  完成 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的安裝程序。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "76971379"
   
 -   按一下 [報表產生器]  。  
   
-     若您在現有伺服器清單中沒有看到報表伺服器，請關閉 [開啟報表]  對話方塊，然後按一下  **底部的 [連線]** [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，以連線至伺服器。  
+     若您在現有伺服器清單中沒有看到報表伺服器，請關閉 [開啟報表] 對話方塊，然後按一下 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 底部的 [連線]，以連線至伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動報表產生器](../../reporting-services/report-builder/start-report-builder.md)   

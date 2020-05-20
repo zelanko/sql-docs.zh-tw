@@ -109,7 +109,7 @@ ms.locfileid: "79433755"
     ```  
   
     > [!NOTE]  
-    >  您應該在容錯移轉前於所有可能的容錯移轉目標上建立這些作業，並且將它們標示為停用，直到主機上的可用性複本變成新的主要複本為止。 當本機資料庫變成次要資料庫時，在舊主要資料庫上執行的 CDC 作業也應該停用。 若要停用和啟用作業，請使用 *sp_update_job &#40;Transact-SQL&#41;\@ 的* [enabled](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) 選項。 如需有關建立 CDC 作業的詳細資訊，請參閱 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。  
+    >  您應該在容錯移轉前於所有可能的容錯移轉目標上建立這些作業，並且將它們標示為停用，直到主機上的可用性複本變成新的主要複本為止。 當本機資料庫變成次要資料庫時，在舊主要資料庫上執行的 CDC 作業也應該停用。 若要停用和啟用作業，請使用 [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) 的 *\@enabled* 選項。 如需有關建立 CDC 作業的詳細資訊，請參閱 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。  
   
 -   **將 CDC 角色加入 AlwaysOn 主要資料庫複本中**  
   

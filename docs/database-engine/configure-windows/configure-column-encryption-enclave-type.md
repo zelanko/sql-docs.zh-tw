@@ -30,7 +30,7 @@ ms.locfileid: "73593825"
 |1|**虛擬化型安全性 (VBS)** 。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將嘗試初始化虛擬式安全性 (VBS) 記憶體保護區。
 
 > [!IMPORTANT]
-> 除非您重新啟動  **執行個體，否則 [資料行加密記憶體保護區類型]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的變更不會生效。
+> 除非您重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，否則 [資料行加密記憶體保護區類型] 的變更不會生效。
    
 您可以使用 [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 檢視，檢查已設定記憶體保護區類型值和目前作用中的記憶體保護區類型值。 
 

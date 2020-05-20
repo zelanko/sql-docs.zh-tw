@@ -32,7 +32,7 @@ ms.locfileid: "67989037"
 > 增加連接逾時並實作連接重試邏輯可提高應用程式連接到可用性群組的機率。 此外，因為連接可能會由於可用性群組容錯移轉而失敗，所以您應該實作連接重試邏輯，並重試失敗的連接，直到重新連接為止。  
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 進行連接  
- 當連線到 SQL Server Always On 可用性群組接聽程式或 **容錯移轉叢集執行個體時，永遠指定**MultiSubnetFailover=Yes[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 **MultiSubnetFailover** 可讓所有 Always On 可用性群組和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的容錯移轉叢集執行個體容錯移轉得更快，並大幅縮短單一和多重子網路 Always On 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網路容錯移轉期間，OLE DB Driver for SQL Server 將會重試 TCP 連線。  
+ 當連線到 SQL Server Always On 可用性群組接聽程式或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體時，永遠指定 **MultiSubnetFailover=Yes**。 **MultiSubnetFailover** 可讓所有 Always On 可用性群組和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的容錯移轉叢集執行個體容錯移轉得更快，並大幅縮短單一和多重子網路 Always On 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網路容錯移轉期間，OLE DB Driver for SQL Server 將會重試 TCP 連線。  
   
  **MultiSubnetFailover** 連線屬性表示正在可用性群組或容錯移轉叢集執行個體中部署應用程式，OLE DB Driver for SQL Server 將會嘗試連線到所有 IP 位址，以試著連線到主要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上的資料庫。 為連接指定 **MultiSubnetFailover=Yes** 時，用戶端會重試 TCP 連接，其速度比作業系統的預設 TCP 重新傳輸間隔更快。 在 Always On 可用性群組或容錯移轉叢集執行個體容錯移轉後，這可加快重新連線的速度，且同時適用於單一和多重子網路可用性群組和容錯移轉叢集執行個體。  
   

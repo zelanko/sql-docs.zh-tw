@@ -58,11 +58,11 @@ ms.locfileid: "75321247"
   
     -   如果您不確定發行的資料庫是否有記錄讀取器代理程式作業存在，請在發行集資料庫的發行者端執行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)。 如果結果集是空的，就必須建立記錄讀取器代理程式作業。  
   
-    -   在發行者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]**job_name\@ 和** **password\@ 指定執行代理程式所使用的**  Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為  publisher_security_mode **指定 \@0** 值，並為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]publisher_login **和 \@** publisher_password**指定 \@**  的登入資訊。  
+    -   在發行者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 為 **\@job_name** 和 **\@password** 指定執行代理程式所使用的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為  publisher_security_mode **指定 \@0** 值，並為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]publisher_login **和 \@** publisher_password**指定 \@**  的登入資訊。  
   
-2.  執行 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)，為  allow_sync_tran **參數指定 \@true** 值。  
+2.  執行 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)，為 **\@allow_sync_tran** 參數指定 **true** 值。  
   
-3.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 為 **\@publication** 指定步驟 2 中所使用的發行集名稱，並為 **\@job_name** 和 **\@password** 指定快照集代理程式執行時所使用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為  publisher_security_mode **指定 \@0** 值，並為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ 和** **publisher_password\@ 指定**  的登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
+3.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 為 **\@publication** 指定步驟 2 中所使用的發行集名稱，並為 **\@job_name** 和 **\@password** 指定快照集代理程式執行時所使用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為 **\@publisher_security_mode** 指定 **0** 值，並為 **\@publisher_login** 和 **\@publisher_password** 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
   
 4.  將發行項加入至發行集。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "75321247"
   
     -   如果您不確定發行的資料庫是否有記錄讀取器代理程式作業存在，請在發行集資料庫的發行者端執行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)。 如果結果集是空的，就必須建立記錄讀取器代理程式作業。  
   
-    -   在發行者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 為 **\@job_name** 和 **\@password** 指定執行代理程式所使用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為  publisher_security_mode **指定 \@0** 值，並為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ 和** **publisher_password\@ 指定**  的登入資訊。  
+    -   在發行者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 為 **\@job_name** 和 **\@password** 指定執行代理程式所使用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為 **\@publisher_security_mode** 指定 **0** 值，並為 **\@publisher_login** 和 **\@publisher_password** 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入資訊。  
   
 2.  必要時，請為散發者建立佇列讀取器代理程式作業。  
   
@@ -86,9 +86,9 @@ ms.locfileid: "75321247"
   
     -   在散發者端，執行 [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)。 為 **\@job_name** 和 **\@password** 指定執行代理程式所使用的 Windows 認證。 當佇列讀取器代理程式連接到發行者和訂閱者時，會使用這些認證。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
-3.  執行 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)，並為  allow_queued_tran **參數指定 \@true** 值，以及為  conflict_policy**指定**pub wins **、** sub reinit **或 \@sub wins** 值。  
+3.  執行 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)，並為 **\@allow_queued_tran** 參數指定 **true** 值，以及為 **\@conflict_policy** 指定 **pub wins**、**sub reinit** 或 **sub wins** 值。  
   
-4.  在發行者端，執行 [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 為 **\@publication** 指定步驟 3 中所使用的發行集名稱，並為 **\@snapshot_job_name** 和 **\@password** 指定快照集代理程式執行時所使用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為  publisher_security_mode **指定 \@0** 值，並為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ 和** **publisher_password\@ 指定**  的登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
+4.  在發行者端，執行 [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 為 **\@publication** 指定步驟 3 中所使用的發行集名稱，並為 **\@snapshot_job_name** 和 **\@password** 指定快照集代理程式執行時所使用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為 **\@publisher_security_mode** 指定 **0** 值，並為 **\@publisher_login** 和 **\@publisher_password** 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
   
 5.  將發行項加入至發行集。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "75321247"
   
 #### <a name="to-change-the-conflict-policy-for-a-publication-that-allows-queued-updating-subscriptions"></a>針對允許佇列更新訂閱的發行集變更衝突原則  
   
-1.  在發行集資料庫的發行者端，執行 [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 為  property **指定 \@conflict_policy** 的值，並為  value**指定**pub wins **、** sub reinit **或 \@sub wins** 所需的衝突原則模式。  
+1.  在發行集資料庫的發行者端，執行 [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 為 **\@property** 指定 **conflict_policy** 的值，並為 **\@value** 指定 **pub wins**、**sub reinit** 或 **sub wins** 所需的衝突原則模式。  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  此範例會建立一個發行集，它同時支援立即訂閱和佇列更新提取訂閱。  

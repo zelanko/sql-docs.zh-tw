@@ -63,7 +63,7 @@ ms.locfileid: "75239193"
   
 2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後選取 [屬性]  。  
   
-3.  在 [SQL Server Agent 屬性 - **server**name _]\__ 對話方塊 [一般]  頁面的 [錯誤記錄檔]  下，於 [Net Send 收件者]  方塊中鍵入要傳送錯誤訊息的目標使用者名稱或電腦名稱。  
+3.  在 [SQL Server Agent 屬性 - _server\_name_] 對話方塊 [一般] 頁面的 [錯誤記錄檔] 下，於 [Net Send 收件者] 方塊中鍵入要傳送錯誤訊息的目標使用者名稱或電腦名稱。  
   
 4.  按一下 [確定]  。  
   

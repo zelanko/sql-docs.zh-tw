@@ -18,7 +18,7 @@ ms.locfileid: "74190917"
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  若要在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 編頁報表中包含資料，您必須先建立「資料來源」  的「連接字串」  。 本文說明如何建立資料連接字串，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 如需詳細的背景資料，請參閱 [SQL Server Reporting Services 中的報表資料簡介 (SSRS)](report-data-ssrs.md)。
+  若要在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 編頁報表中包含資料，您必須先建立「資料來源」的「連接字串」。 本文說明如何建立資料連接字串，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 如需詳細的背景資料，請參閱 [SQL Server Reporting Services 中的報表資料簡介 (SSRS)](report-data-ssrs.md)。
   
 ##  <a name="built-in-data-extensions"></a><a name="bkmk_DataConnections"></a> 內建的資料延伸模組  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的預設資料延伸模組包括 Microsoft SQL Server、Microsoft Azure SQL Database 和 Microsoft SQL Server Analysis Services。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援之資料來源與版本的完整清單，請參閱 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "74190917"
  如需連線到這些資料來源類型所需組態的詳細資訊，請參閱[從外部資料來源新增資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 或 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 下特定資料連線文章。  
   
 ##  <a name="special-characters-in-a-password"></a><a name="bkmk_special_password_characters"></a> 密碼中的特殊字元  
- 如果您設定 ODBC 或 SQL 資料來源以提示密碼或將密碼包含在連接字串中，則當使用者輸入含有特殊字元 (例如：標點符號) 的密碼時，某些基礎資料來源驅動程式無法驗證這些特殊字元。 當您處理報表時，訊息「不是有效密碼」可能會指出此問題。 如果無法變更密碼，您可以洽詢資料庫管理員，將適當的認證儲存在伺服器上，做為系統 ODBC 資料來源名稱 (DSN) 的一部分。 如需詳細資訊，請參閱 [ 文件中的 ](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring)OdbcConnection.ConnectionString[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。  
+ 如果您設定 ODBC 或 SQL 資料來源以提示密碼或將密碼包含在連接字串中，則當使用者輸入含有特殊字元 (例如：標點符號) 的密碼時，某些基礎資料來源驅動程式無法驗證這些特殊字元。 當您處理報表時，訊息「不是有效密碼」可能會指出此問題。 如果無法變更密碼，您可以洽詢資料庫管理員，將適當的認證儲存在伺服器上，做為系統 ODBC 資料來源名稱 (DSN) 的一部分。 如需詳細資訊，請參閱 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文件中的 [OdbcConnection.ConnectionString](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring)。  
   
 ##  <a name="expression-based-connection-strings"></a><a name="bkmk_Expressions_in_connection_strings"></a> 以運算式為基礎的連接字串  
  以運算式為基礎的連接字串是在執行階段進行評估。 例如，您可以將資料來源指定為參數，包括連接字串中的參數參考，並允許使用者選擇報表的資料來源。 例如，假設有一家跨國企業，在許多國家 (地區) 有資料伺服器。 執行銷售報表的使用者可以在執行報表之前，使用以運算式為基礎的連接字串，來選取特定國家 (地區) 的資料來源。  

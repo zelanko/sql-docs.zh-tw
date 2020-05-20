@@ -35,7 +35,7 @@ ms.locfileid: "68045764"
  本文描述從本機電腦解除安裝及移除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 的程序。  
   
  [移除 Data Quality Server 物件](../../sql-server/install/remove-data-quality-server-objects.md)  
- 本文描述如何在解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 或只解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DQS) 中的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 元件之後，手動移除 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] 物件。  
+ 本文描述如何在解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或只解除安裝 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 中的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 元件之後，手動移除 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 物件。  
   
 ## <a name="related-sections"></a>相關章節  
   

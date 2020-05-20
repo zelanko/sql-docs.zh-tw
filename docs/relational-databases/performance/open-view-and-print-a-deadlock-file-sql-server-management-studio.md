@@ -30,13 +30,13 @@ ms.locfileid: "74165763"
   
 ## <a name="open-and-view-a-deadlock-file"></a>開啟和檢視死結檔案  
   
-1. 在  **的 [檔案]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能表上，指向 [開啟]  ，然後選取 [檔案]  。  
+1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案] 功能表上，指向 [開啟]，然後選取 [檔案]。  
   
 2. 在 [開啟檔案]  對話方塊中，從 [檔案類型]  方塊中選取 .xdl 檔案類型。 您現在會有一份只有死結檔案的篩選清單。  
   
 ## <a name="print-a-deadlock-file"></a>列印死結檔案  
   
-1. 在  **的 [檔案]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能表上，指向 [開啟]  ，然後選取 [檔案]  。  
+1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案] 功能表上，指向 [開啟]，然後選取 [檔案]。  
   
 2. 在 [開啟檔案]  對話方塊中，從 [檔案類型]  方塊中選取 .xdl 檔案類型。 您現在會有一份只有死結檔案的篩選清單。  
   

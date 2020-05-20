@@ -72,7 +72,7 @@ ms.locfileid: "75243381"
  如果是頂端列以外的所有列， **LineNumber** 表示模組中呼叫此框架的那一行。 如果是頂端列， **LineNumber** 表示偵錯工具目前焦點所在的那一行。  
   
  **語言**  
- 顯示  **的 [Transact-SQL]** [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+ 顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的 [Transact-SQL]。  
   
 ## <a name="see-also"></a>另請參閱
 

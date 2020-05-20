@@ -24,7 +24,7 @@ ms.locfileid: "65579422"
 
 ## <a name="modifying-the-rsreportserverconfig-file"></a>修改 RSReportServer.Config 檔
 
-您可以將 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]\<PassThroughCookies **> 項目新增至 RSReportServer.config 檔中的入口網站組態設定，藉以讓**  將其他 Cookie 傳送至報表伺服器。 當單一登入驗證方案不僅需要報表伺服器驗證 Cookie，同時也需要協力廠商驗證系統提供的 Cookie 時，傳送其他 Cookie 這項功能就顯得非常有用。
+您可以將 \<**PassThroughCookies**> 項目新增至 RSReportServer.config 檔中的入口網站組態設定，藉以讓 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 將其他 Cookie 傳送至報表伺服器。 當單一登入驗證方案不僅需要報表伺服器驗證 Cookie，同時也需要協力廠商驗證系統提供的 Cookie 時，傳送其他 Cookie 這項功能就顯得非常有用。
 
 使用入口網站時，若要能夠透過 HTTP 要求來傳送其他 Cookie，則必須在 RSReportServer.config 檔中設定下列項目：
   

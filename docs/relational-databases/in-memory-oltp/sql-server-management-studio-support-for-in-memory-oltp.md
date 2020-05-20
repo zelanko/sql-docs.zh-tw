@@ -44,7 +44,7 @@ ms.locfileid: "74412525"
   
      隨即顯示建立記憶體最佳化資料表的範本。  
   
-2.  若要取代範本參數，請在 [查詢]  功能表上，按一下 [指定範本參數的值]  。  
+2.  若要取代範本參數，請在 [查詢] 功能表上，按一下 [指定範本參數的值]。  
   
      如需有關如何使用範本的詳細資訊，請參閱[範本總管](../../ssms/template/template-explorer.md)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74412525"
   
      建立原生編譯預存程序的範本會顯示。  
   
-2.  若要取代範本參數，請在 [查詢]  功能表上，按一下 [指定範本參數的值]   
+2.  若要取代範本參數，請在 [查詢] 功能表上，按一下 [指定範本參數的值]  
   
      如需有關如何建立新的預存程序的詳細資訊，請參閱[建立預存程序](../../relational-databases/stored-procedures/create-a-stored-procedure.md)。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74412525"
   
      建立使用者定義的記憶體最佳化資料表類型的範本隨即顯示。  
   
-2.  若要取代範本參數，請在 [查詢]  功能表上，按一下 [指定範本參數的值]  。  
+2.  若要取代範本參數，請在 [查詢] 功能表上，按一下 [指定範本參數的值]。  
   
      如需有關如何建立新的預存程序的詳細資訊，請參閱 [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "74412525"
   
         -   產生指令碼。  
   
-             在 [產生和發佈指令碼精靈]  中，[檢查物件是否存在]  指令碼選項的預設值為 FALSE。 如果精靈的 [設定指令碼編寫選項]  畫面將 [檢查物件是否存在]  指令碼選項的值設為 TRUE，則產生的指令碼會包含 "CREATE PROCEDURE <procedure_name> AS" 和 "ALTER PROCEDURE <procedure_name> <procedure_definition>"。 在執行時，產生的指令碼將傳回錯誤，因為原生編譯預存程序不支援 ALTER PROCEDURE。  
+             在 [產生和發佈指令碼精靈]  中，[檢查物件是否存在]  指令碼選項的預設值為 FALSE。 如果精靈的 [設定指令碼編寫選項] 畫面將 [檢查物件是否存在] 指令碼選項的值設為 TRUE，則產生的指令碼會包含 "CREATE PROCEDURE <procedure_name> AS" 和 "ALTER PROCEDURE <procedure_name> <procedure_definition>"。 在執行時，產生的指令碼將傳回錯誤，因為原生編譯預存程序不支援 ALTER PROCEDURE。  
   
              若要變更每一個原生編譯預存程序其產生的指令碼：  
   
@@ -138,9 +138,9 @@ ms.locfileid: "74412525"
   
         -   複製資料庫。 對於具有記憶體最佳化之物件的資料庫，交易時不會在目的伺服器上建立資料庫及傳送資料。  
   
-        -   匯入和匯出資料。 使用 [**匯入和匯出精靈] 的 [從一個或多個資料表或檢視表複製資料][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 選項。 如果目的地資料表是不存在於目的地資料庫中的記憶體最佳化資料表：  
+        -   匯入和匯出資料。 使用 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈] 的 [從一個或多個資料表或檢視表複製資料] 選項。 如果目的地資料表是不存在於目的地資料庫中的記憶體最佳化資料表：  
   
-            1.  在 [**匯入和匯出精靈][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 的 [指定資料表複製或查詢]  畫面，選取 [從一個或多個資料表或檢視表複製資料]  。 然後按一下 [下一步]  。  
+            1.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈] 的 [指定資料表複製或查詢] 畫面，選取 [從一個或多個資料表或檢視表複製資料]。 然後按一下 [下一步]  。  
   
             2.  按一下 [編輯對應]  。 然後選取 [建立目的資料表]  並按一下 [編輯 SQL]  。 輸入 CREATE TABLE 語法，在目的地資料庫上建立記憶體最佳化的資料表。 按一下 [確定]  並完成此精靈中的其餘步驟。  
   

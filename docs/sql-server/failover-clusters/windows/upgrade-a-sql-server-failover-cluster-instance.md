@@ -46,7 +46,7 @@ ms.locfileid: "74822021"
 ## <a name="prerequisites"></a>Prerequisites  
  在開始之前，請檢閱以下重要資訊：  
   
--   [支援的版本和版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)︰確認您可從 Windows 作業系統版本和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 版本升級至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 例如，您無法直接從 SQL Server 2005 容錯移轉叢集執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，也無法升級在 [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] 上執行的容錯移轉叢集。  
+-   [支援的版本和版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)︰確認您可從 Windows 作業系統版本和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 例如，您無法直接從 SQL Server 2005 容錯移轉叢集執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，也無法升級在 [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] 上執行的容錯移轉叢集。  
   
 -   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)︰根據您檢閱的支援版本與版本升級，選取適當的升級方法和步驟，此外亦根據作業環境中安裝的其他元件，依正確順序升級元件。  
   

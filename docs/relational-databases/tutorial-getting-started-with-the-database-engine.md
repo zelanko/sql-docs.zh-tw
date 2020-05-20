@@ -45,7 +45,7 @@ ms.locfileid: "74095713"
   
 您的系統必須已經安裝下列項目，才能使用這個教學課程：  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。 若要安裝 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，請參閱[下載 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 若要安裝 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，請參閱[下載 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [教學課程：SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

@@ -157,7 +157,7 @@ ms.locfileid: "79286172"
   
      ![ssRS-2016-setup-configuration](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
   
-13. 如果您停在此頁面上，請檢閱任何警告，然後選取 [功能設定規則]  頁面上的 [下一步]  。  
+13. 如果您停在此頁面上，請檢閱任何警告，然後選取 [功能設定規則] 頁面上的 [下一步]。  
   
 14. 在 [準備安裝]  頁面上，檢閱安裝摘要。 此摘要將包括其值顯示為 **[SharePointFilesOnlyMode]** 的 **[Reporting Services SharePoint 模式]** 子節點。 選取 [安裝]  。  
   
@@ -301,7 +301,7 @@ ms.locfileid: "79286172"
   
 -   更新服務應用程式的 **-DatabaseServer** 參數。 這個參數是 Database Engine 執行個體  
   
--   更新您想要啟用 **功能之網站的**-url[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 參數。  
+-   更新您想要啟用 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 功能之網站的 **-url** 參數。  
   
  **若要使用指令碼：**  
   

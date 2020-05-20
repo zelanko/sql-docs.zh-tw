@@ -78,7 +78,7 @@ HRESULT BCPColFmt(
  使用者的資料檔案中的欄位索引。  
   
  *eUserDataType*[in]  
- 使用者的資料檔案中欄位的資料類型。 可用的資料類型會列在 OLE DB Driver for SQL Server 標頭檔 (msoledbsql.h)，且格式為 BCP_TYPE_XXX，例如 BCP_TYPE_SQLINT4。 如果指定了 BCP_TYPE_DEFAULT 值，提供者會嘗試使用與資料表或檢視表資料行類型相同的類型。 當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eUserDataType**引數為 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 時，要從** 進行大量複製作業，並複製到檔案中：  
+ 使用者的資料檔案中欄位的資料類型。 可用的資料類型會列在 OLE DB Driver for SQL Server 標頭檔 (msoledbsql.h)，且格式為 BCP_TYPE_XXX，例如 BCP_TYPE_SQLINT4。 如果指定了 BCP_TYPE_DEFAULT 值，提供者會嘗試使用與資料表或檢視表資料行類型相同的類型。 當 **eUserDataType** 引數為 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 時，要從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 進行大量複製作業，並複製到檔案中：  
   
 -   如果來源資料行不是小數或數值，便會使用預設的有效位數和小數位數。  
   

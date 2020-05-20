@@ -41,7 +41,7 @@ ms.locfileid: "63041573"
   
 ### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>使用新報表中的地圖精靈加入地圖  
   
-1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
+1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63041573"
   
 4.  在 [選擇空間資料的來源]  頁面上，驗證已選取 [地圖庫]  。  
   
-6.  在 [地圖庫] 方塊中，展開 [美國]  下的 [States by County]  (依郡顯示的州)，然後按一下 [紐約]  。  
+6.  在 [地圖庫] 方塊中，展開 [美國] 下的 [States by County] (依郡顯示的州)，然後按一下 [紐約]。  
   
     [地圖預覽] 窗格會顯示紐約郡的地圖。  
     
@@ -215,7 +215,7 @@ ms.locfileid: "63041573"
 
     ![report-builder-map-point-properties-font](../reporting-services/media/report-builder-map-point-properties-font.png)
   
-23. 在 [一般]  索引標籤上，針對 [位置]  選取 [下方]  。
+23. 在 [一般] 索引標籤上，針對 [位置] 選取 [下方]。
 
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -471,7 +471,7 @@ ms.locfileid: "63041573"
 
     ![report-builder-map-custom-point-general](../reporting-services/media/report-builder-map-custom-point-general.png)
   
-8.  在 [標記]  索引標籤上，選取 [星形]  作為 [標記類型]  。  
+8.  在 [標記] 索引標籤上，選取 [星形] 作為 [標記類型]。  
 
 10. 將 [標記大小]  變更為 **18pt**。
   

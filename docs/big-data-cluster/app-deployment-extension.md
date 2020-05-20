@@ -95,7 +95,7 @@ azdata bdc endpoint list
 
 您必須在 Visual Studio Code 中「開啟工作區」  ，這是您將儲存應用程式成品的位置。
 
-若要利用我們的其中一個範本來部署新的應用程式，請按一下 `New App Template` 窗格上的 `App Specifications` 按鈕；系統將會提示您輸入名稱、執行階段，以及您想要在本機電腦上放置新應用程式的位置。 您所提供的名稱與版本應該是 DNS-1035 標籤，且必須包含小寫英數字元或 '-'、以字母字元開頭，並以英數字元結尾。
+若要利用我們的其中一個範本來部署新的應用程式，請按一下 `App Specifications` 窗格上的 `New App Template` 按鈕；系統將會提示您輸入名稱、執行階段，以及您想要在本機電腦上放置新應用程式的位置。 您所提供的名稱與版本應該是 DNS-1035 標籤，且必須包含小寫英數字元或 '-'、以字母字元開頭，並以英數字元結尾。
 
 建議您將它置於目前的 Visual Studio Code 工作區中，以便使用延伸模組的完整功能，但您可以將它置於本機檔案系統中的任何位置。
 
@@ -115,14 +115,14 @@ azdata bdc endpoint list
 應用程式的原始程式碼會在 [工作區] 資料夾中。
 
 - **來源檔案名稱**
-   - 這是您的原始程式碼檔案，如 `src` 中的 `spec.yaml` 所指定
-   - 它具有稱為 `handler` 的單一函式，其會被視為應用程式的 `entrypoint`，如 `spec.yaml` 中所示。 它會接受名為 `msg` 的字串輸入，並會傳回名為 `out` 的字串輸出。 這些是在 `inputs` 的 `outputs` 和 `spec.yaml` 中指定。
+   - 這是您的原始程式碼檔案，如 `spec.yaml` 中的 `src` 所指定
+   - 它具有稱為 `handler` 的單一函式，其會被視為應用程式的 `entrypoint`，如 `spec.yaml` 中所示。 它會接受名為 `msg` 的字串輸入，並會傳回名為 `out` 的字串輸出。 這些是在 `spec.yaml` 的 `inputs` 和 `outputs` 中指定。
 
-如果您不想要已進行 Scaffold 的範本，且只想要 `spec.yaml` 來部署您已建置的應用程式，請按一下 `New Deploy Spec` 按鈕旁邊的 `New App Template` 按鈕，然後完成相同的程序；在此情況下，您只會接收到 `spec.yaml`，其可供您視需要修改。
+如果您不想要已進行 Scaffold 的範本，且只想要 `spec.yaml` 來部署您已建置的應用程式，請按一下 `New App Template` 按鈕旁邊的 `New Deploy Spec` 按鈕，然後完成相同的程序；在此情況下，您只會接收到 `spec.yaml`，其可供您視需要修改。
 
 ### <a name="deploy-app"></a>部署應用程式
 
-您可以透過 `Deploy App` 中的 CodeLens `spec.yaml`，或是按下 [應用程式規格] 功能表中位於 `spec.yaml` 檔案旁邊的閃電資料夾按鈕，來立即部署此應用程式。 擴充功能會將 `spec.yaml` 所在目錄中的所有檔案壓縮，並將應用程式部署到叢集。 
+您可以透過 `spec.yaml` 中的 CodeLens `Deploy App`，或是按下 [應用程式規格] 功能表中位於 `spec.yaml` 檔案旁邊的閃電資料夾按鈕，來立即部署此應用程式。 擴充功能會將 `spec.yaml` 所在目錄中的所有檔案壓縮，並將應用程式部署到叢集。 
 
 >[!NOTE]
 >請確定所有的應用程式檔案都位於和 `spec.yaml` 相同的目錄中。 `spec.yaml` 必須位於您應用程式原始程式碼目錄的根層級。 

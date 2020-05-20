@@ -29,7 +29,7 @@ ms.locfileid: "65571408"
  4. 以滑鼠右鍵按一下共用的排程，然後選取 [屬性]  。
  5. 按一下 [報表]  。  
   
-  您也可以從  **入口網站的 [網站設定]** [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 管理共用的排程。
+  您也可以從 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 入口網站的 [網站設定] 管理共用的排程。
   
 > [!NOTE]  
 >  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供此功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 的版本及支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  

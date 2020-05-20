@@ -34,7 +34,7 @@ ms.locfileid: "79285802"
 - Azure Active Directory MSI 驗證
 
 > [!NOTE]
-> `DataTypeCompatibility`不`80`支援在 **(或其對應的屬性) 設定為** 的情況下使用下列驗證模式：
+> **不**支援在 `DataTypeCompatibility` (或其對應的屬性) 設定為 `80` 的情況下使用下列驗證模式：
 > - 使用登入識別碼和密碼進行 Azure Active Directory 驗證
 > - 使用存取權杖進行 Azure Active Directory 驗證
 > - Azure Active Directory 整合式驗證
@@ -60,13 +60,13 @@ ms.locfileid: "79285802"
 為提升安全性，使用新的連接屬性/關鍵字時，驅動程式會將加密值設定為 `yes` 來覆寫預設值。 在資料來源物件初始化時會發生覆寫。 如果在以任何方式初始化之前設定加密，則會遵守且不會覆寫值。
 
 > [!NOTE]   
-> 在 ADO 應用程式中，以及在透過 `IDBInitialize` 取得 `IDataInitialize::GetDataSource` 介面的應用程式中，實作介面的核心元件會將加密明確地設定為其 `no` 預設值。 因此，新的驗證屬性/關鍵字會遵守此設定，而加密值**不會**遭到覆寫。 因此，**建議**這些應用程式明確地設定 `Use Encryption for Data=true` 以覆寫預設值。
+> 在 ADO 應用程式中，以及在透過 `IDataInitialize::GetDataSource` 取得 `IDBInitialize` 介面的應用程式中，實作介面的核心元件會將加密明確地設定為其 `no` 預設值。 因此，新的驗證屬性/關鍵字會遵守此設定，而加密值**不會**遭到覆寫。 因此，**建議**這些應用程式明確地設定 `Use Encryption for Data=true` 以覆寫預設值。
 
 ### <a name="certificate-validation"></a>憑證驗證
 為提升安全性，新的連接屬性/關鍵字會遵守 `TrustServerCertificate` 設定 (及其對應的連接字串關鍵字/屬性)，**而不管用戶端加密設定**。 因此，預設會驗證伺服器憑證。
 
 > [!NOTE]   
-> 憑證驗證也可以透過 `Value` 登錄項目的 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` 欄位控制。 有效值為 `0` 或 `1`。 OLE DB 驅動程式會在登錄和連接屬性/關鍵字設定之間選擇最安全的選項。 也就是說，只要至少其中一個登錄/連線設定啟用伺服器憑證驗證，驅動程式就會驗證伺服器憑證。
+> 憑證驗證也可以透過 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` 登錄項目的 `Value` 欄位控制。 有效值為 `0` 或 `1`。 OLE DB 驅動程式會在登錄和連接屬性/關鍵字設定之間選擇最安全的選項。 也就是說，只要至少其中一個登錄/連線設定啟用伺服器憑證驗證，驅動程式就會驗證伺服器憑證。
 
 ## <a name="gui-additions"></a>GUI 新增項目
 驅動程式圖形化使用者介面已經過增強，可允許 Azure Active Directory 驗證。 如需詳細資訊，請參閱

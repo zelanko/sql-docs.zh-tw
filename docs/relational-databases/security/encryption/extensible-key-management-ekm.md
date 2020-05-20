@@ -23,7 +23,7 @@ ms.locfileid: "74957393"
 ---
 # <a name="extensible-key-management-ekm"></a>可延伸金鑰管理 (EKM)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會針對加密和金鑰產生使用「Microsoft 密碼編譯 API」  (MSCAPI) 提供者，藉以提供加密功能以及「可延伸金鑰管理」  (EKM)。 用於資料和金鑰加密的加密金鑰會建立於暫時性金鑰容器中，而且您必須先從提供者中匯出這些金鑰，然後再將它們儲存於資料庫中。 這個方法會讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]處理金鑰管理 (包括加密金鑰階層和金鑰備份)。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會針對加密和金鑰產生使用「Microsoft 密碼編譯 API」(MSCAPI) 提供者，藉以提供加密功能以及「可延伸金鑰管理」(EKM)。 用於資料和金鑰加密的加密金鑰會建立於暫時性金鑰容器中，而且您必須先從提供者中匯出這些金鑰，然後再將它們儲存於資料庫中。 這個方法會讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]處理金鑰管理 (包括加密金鑰階層和金鑰備份)。  
   
  隨著法規相符的需求和資料隱私權的考量逐漸增加，許多組織便運用加密技術來提供「深度防護」解決方案。 這種方法通常不實用，因為它僅使用資料庫加密管理工具。 硬體廠商會提供使用「硬體安全模組」  (HSM) 來處理企業金鑰管理的產品。 HSM 裝置會將加密金鑰儲存在硬體或軟體模組上。 這是較安全的解決方案，因為加密金鑰不會與加密資料一起存放。  
   
