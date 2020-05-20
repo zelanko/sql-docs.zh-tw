@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.availability_group_listeners catalog view
 - Availability Groups [SQL Server], listeners
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b363e410f35eb7880933520dd1dbf47f258b651e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5e4ae93cfcb4df935b3b006413ab8d8c884090ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041065"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829110"
 ---
 # <a name="sysavailability_group_listeners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "68041065"
 |**group_id**|**uniqueidentifier**|[Sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)的可用性群組識別碼（**group_id**）。|  
 |**listener_id**|**Nvarchar （36）**|叢集資源識別碼中的 GUID。|  
 |**dns_name**|**Nvarchar （63）**|可用性群組接聽程式的已設定網路名稱 (主機名稱)。|  
-|**移植**|**int**|為可用性群組接聽程式設定的 TCP 通訊埠編號。<br /><br /> NULL = 接聽程式已在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外面設定，而且其通訊埠編號尚未加入至可用性群組。 若要加入埠，請 pleaseuse [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]語句的 MODIFY 接聽程式選項。|  
-|**is_conformant**|**bit**|此 IP 組態是否符合標準，可為下列其中一個值：<br /><br /> 1 = 接聽程式符合標準。 只有 "OR" 關聯性存在於其網際網路通訊協定（IP）位址之間。 *一致*包含[CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]語句所建立的每個 IP 設定。 此外，如果已在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外面建立 IP 組態 (例如，藉由使用 WSFC 容錯移轉叢集管理員)，但是可由 ALTER AVAILABILITY GROUP tsql 陳述式加以修改，則表示 IP 組態符合標準。<br /><br /> 0 = 接聽程式不符合標準。 一般來說，這表示 IP 位址無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令加以設定，但是已直接在 WSFC 叢集中定義。|  
+|**移植**|**int**|為可用性群組接聽程式設定的 TCP 通訊埠編號。<br /><br /> NULL = 接聽程式已在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外面設定，而且其通訊埠編號尚未加入至可用性群組。 若要加入埠，請 pleaseuse [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)語句的 MODIFY 接聽程式選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
+|**is_conformant**|**bit**|此 IP 組態是否符合標準，可為下列其中一個值：<br /><br /> 1 = 接聽程式符合標準。 只有 "OR" 關聯性存在於其網際網路通訊協定（IP）位址之間。 *一致*包含[CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)語句所建立的每個 IP 設定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 此外，如果已在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外面建立 IP 組態 (例如，藉由使用 WSFC 容錯移轉叢集管理員)，但是可由 ALTER AVAILABILITY GROUP tsql 陳述式加以修改，則表示 IP 組態符合標準。<br /><br /> 0 = 接聽程式不符合標準。 一般來說，這表示 IP 位址無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令加以設定，但是已直接在 WSFC 叢集中定義。|  
 |**ip_configuration_string_from_cluster**|**nvarchar(max)**|此接聽程式的叢集 IP 組態字串 (如果有的話)。 NULL = 接聽程式沒有虛擬 IP 位址。 例如：<br /><br /> IPv4 位址：`65.55.39.10`。<br /><br /> IPv6 位址：`2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   
 ## <a name="security"></a>安全性  

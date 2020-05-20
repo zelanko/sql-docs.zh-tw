@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdbfixedrole
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dc461bcd1b5adbbc64b2eadaa4bb55af690ea88a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0d5c34cba36e4427c2f0def227b0641fa2f2fa84
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123833"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828927"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定資料庫角色的名稱。|  
-|**說明**|**Nvarchar （70）**|DbFixedRole 的描述 **。**|  
+|**描述**|**Nvarchar （70）**|DbFixedRole 的描述 **。**|  
   
 ## <a name="remarks"></a>備註  
  固定資料庫角色 (如下表所示) 是在資料庫層級定義的，且擁有執行特定資料庫層級管理活動的權限。 您無法加入或移除固定資料庫角色， 且無法變更對固定資料庫角色授與的權限。  

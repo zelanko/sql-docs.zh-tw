@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.assembly_modules catalog view
 ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68e91d6935549bc8dd421361c092c3ad1fb01905
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 967626693c52cc31bacddf88735224f3e191e6a6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68118166"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829177"
 ---
 # <a name="sysassembly_modules-transact-sql"></a>sys.assembly_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68118166"
 |**assembly_class**|**sysname**|定義這個模組之組件內的類別名稱。|  
 |**assembly_method**|**sysname**|定義此模組之**assembly_class**中的方法名稱。<br /><br /> 如果是彙總函式 (AF)，則為 NULL。|  
 |**null_on_null_input**|**bit**|模組宣告的目的不是為了因應任何 NULL 輸入而產生 NULL 輸出。|  
-|**execute_as_principal_id**|**int**|執行內容所用的資料庫主體識別碼，由 CLR 函數、預存程序或觸發程序的 EXECUTE AS 子句所指定。<br /><br /> NULL = EXECUTE AS CALLER。 這是預設值。<br /><br /> 指定之資料庫主體 = EXECUTE AS SELF、EXECUTE AS *user_name*或 execute as *login_name*的識別碼。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**int**|執行內容所用的資料庫主體識別碼，由 CLR 函數、預存程序或觸發程序的 EXECUTE AS 子句所指定。<br /><br /> NULL = EXECUTE AS CALLER。 此為預設值。<br /><br /> 指定之資料庫主體 = EXECUTE AS SELF、EXECUTE AS *user_name*或 execute as *login_name*的識別碼。<br /><br /> -2 = EXECUTE AS OWNER。|  
   
 ## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

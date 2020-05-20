@@ -19,21 +19,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - sys.availability_group_listener_ip_addresses catalog view
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a9c66e12ec326ba5021de0829b0d7cc479f858c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 49f7322dc32634631a991d76bab58394a26c491e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997591"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829123"
 ---
 # <a name="sysavailability_group_listener_ip_addresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對 Windows Server 容錯移轉叢集 (WSFC) 叢集中與任何 Always On 可用性群組接聽程式相關聯的每一個 IP 位址，各傳回一個資料列。  
   
- 主要金鑰： **listener_id** + **ip_address** + **ip_sub_mask**  
+ 主要金鑰： **listener_id**  +  **ip_address**  +  **ip_sub_mask**  
   
   
 |資料行名稱|資料類型|描述|  
@@ -44,7 +44,7 @@ ms.locfileid: "67997591"
 |**is_dhcp**|**bit**|IP 位址是否由 DHCP 設定，可為下列其中一個值：<br /><br /> 0 = IP 位址不是由 DHCP 設定。<br /><br /> 1 = IP 位址是由 DHCP 設定。|  
 |**network_subnet_ip**|**Nvarchar （48）**|網路的子網路 IP 位址，可指定此 IP 位址所屬的子網路。|  
 |**network_subnet_prefix_length**|**int**|此 IP 位址所屬之子網路的網路子網路前置長度。|  
-|**network_subnet_ipv4_mask**|**Nvarchar （45）**|此 IP 位址所屬之子網路的網路子網路遮罩。 **network_subnet_ipv4_mask**在[CREATE AVAILABILITY group](../../t-sql/statements/create-availability-group-transact-sql.md)或[ALTER AVAILABILITY group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]語句的 WITH DHCP 子句中，指定 dhcp <network_subnet_option> 選項。<br /><br /> NULL = IPv6 子網路|  
+|**network_subnet_ipv4_mask**|**Nvarchar （45）**|此 IP 位址所屬之子網路的網路子網路遮罩。 **network_subnet_ipv4_mask**在[CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)或[ALTER AVAILABILITY group](../../t-sql/statements/alter-availability-group-transact-sql.md)語句的 WITH DHCP 子句中，指定 dhcp <network_subnet_option> 選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。<br /><br /> NULL = IPv6 子網路|  
 |**state**|**tinyint**|WSFC 叢集中 IP 資源的 ONLINE/OFFLINE 狀態，可為下列其中一個值：<br /><br /> 1 = 線上。 IP 資源在線上。<br /><br /> 0 = 離線。 IP 資源離線。<br /><br /> 2 = 線上暫止。 IP 資源已離線，但是正在連線。<br /><br /> 3 = 失敗。 IP 資源已在連線，但卻失敗。|  
 |**state_desc**|**nvarchar(60)**|**狀態**的描述，以下其中一個：<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
   

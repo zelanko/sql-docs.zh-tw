@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_conflictdetectionconfigurerequest
 ms.assetid: 83afa0ca-707e-4468-a888-228268ed4e10
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 090236bd5e0bd0429985ff9c54039a576950ec84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3fa3f6ead24faff78fd37eeb4e7cd9d427346d00
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75322091"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829202"
 ---
 # <a name="mspeer_conflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "75322091"
 |sent_date|**datetime**|起始衝突組態要求的日期和時間。|  
 |timeout|**int**|程序應該等候所有對等項目傳回衝突資訊的時間量。|  
 |modified_date|**datetime**|完成階段的日期和時間。|  
-|progress_phase|**nvarchar(32)**|使用下列其中一個值，識別處理的目前階段：<br /><br /> Started<br /><br /> 瀏覽拓撲<br /><br /> 正在收集狀態<br /><br /> 已收集狀態|  
+|progress_phase|**nvarchar(32)**|使用下列其中一個值，識別處理的目前階段：<br /><br /> 已開始<br /><br /> 瀏覽拓撲<br /><br /> 正在收集狀態<br /><br /> 已收集狀態|  
 |phase_timed_out|**bit**|指出目前階段是否已逾時。|  
   
 ## <a name="see-also"></a>另請參閱  

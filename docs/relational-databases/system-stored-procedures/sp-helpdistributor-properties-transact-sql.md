@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributor_properties
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e4cacb78e797583dbd45954f09c89a774c381966
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c3c044f9cd63f5942fdc212b2321628ac1b2c21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770925"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828925"
 ---
 # <a name="sp_helpdistributor_properties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

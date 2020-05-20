@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_settingshistory system table
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d8cb78229ea20d5b4c1b01b17c9fef1d85ca83b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9ac532e5212f32e5ee3bda029a2a7fb5a1231974
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106326"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829222"
 ---
 # <a name="msmerge_settingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

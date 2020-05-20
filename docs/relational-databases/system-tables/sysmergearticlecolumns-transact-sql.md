@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergearticlecolumns system table
 ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2edf9a5656eaf9dd3f18adff28562e279db892e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e15f6a424a4fc13b4aaf1ad8240fa43cf7708b42
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029960"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829162"
 ---
 # <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

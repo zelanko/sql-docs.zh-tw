@@ -11,14 +11,14 @@ dev_langs:
 helpviewer_keywords:
 - dynamic management objects [SQL Server], transactions
 ms.assetid: 4db9f715-995e-4e71-9544-26eb59e9fae0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 39426b7e49a29b2ada6f075102db7eda10bf9692
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ba61ecbaa985e81260bb443f875858248400e2dd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68043184"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828963"
 ---
 # <a name="transaction-related-dynamic-management-views-and-functions-transact-sql"></a>交易相關的動態管理檢視和函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

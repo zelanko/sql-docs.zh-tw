@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpublications system table
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 31f7d9c3e5d297a39fd0278c51014793a4b8dbd0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67939016"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829232"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67939016"
 |**發行集**|**sysname**|發行集的名稱。|  
 |**publication_id**|**int**|發行集的識別碼。|  
 |**publication_type**|**int**|發行集類型：<br /><br /> **0** = 交易式。<br /><br /> **1** = 快照集。<br /><br /> **2** = Merge。|  
-|**thirdparty_flag**|**bit**|指出發行集是否為[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫：<br /><br /> **0**  = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> **1** = 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料來源。|  
+|**thirdparty_flag**|**bit**|指出發行集是否為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> **1** = 以外的資料來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**independent_agent**|**bit**|指出這個發行集是否有獨立的散發代理程式。|  
 |**immediate_sync**|**bit**|指出每次執行快照集代理程式時，是否要建立或重新建立同步處理檔案。|  
 |**allow_push**|**bit**|指出是否能夠建立給定發行集的發送訂閱。|  
@@ -47,7 +47,7 @@ ms.locfileid: "67939016"
 |**保存**|**int**|發行集的保留期限 (以小時為單位)。|  
 |**sync_method**|**int**|同步處理方法：<br /><br /> **0** = 原生（產生所有資料表的原生模式大量複製輸出）。<br /><br /> **1** = 字元（產生所有資料表的字元模式大量複製輸出）。<br /><br /> **3** = 並行（產生所有資料表的原生模式大量複製輸出，但在快照集期間，不會鎖定資料表）。<br /><br /> **4** = Concurrent_c （產生所有資料表的字元模式大量複製輸出，但不會在快照集期間鎖定資料表）<br /><br /> **3**和**4**值適用于異動複寫和合併式複寫，但不適用於快照式複寫。|  
 |**allow_subscription_copy**|**bit**|啟用或停用複製訂閱這個發行集之訂閱資料庫的能力。 **0**表示已停用複製， **1**表示已啟用。|  
-|**thirdparty_options**|**int**|指定是否隱藏在的 Replication 資料夾[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中顯示發行集：<br /><br /> **0** = 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 Replication 資料夾中顯示異類發行集。<br /><br /> **1** = 隱藏在的 Replication 資料夾中顯示異類發行集[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。|  
+|**thirdparty_options**|**int**|指定是否隱藏在的 Replication 資料夾中顯示發行集 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ：<br /><br /> **0** = 在的 Replication 資料夾中顯示異類發行集 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。<br /><br /> **1** = 隱藏在的 Replication 資料夾中顯示異類發行集 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。|  
 |**allow_queued_tran**|**bit**|指定發行集是否允許佇列更新：<br /><br /> **0 =** 發行集未排入佇列。<br /><br /> **1** = 發行集已排入佇列。|  
 |**options**|**int**|這個版本沒有可用的資訊。|  
   

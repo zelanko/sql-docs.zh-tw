@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_xe_packages dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 15a7b6a0fd05821e652160606002c1cef8edc717
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090264"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829069"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
