@@ -1,6 +1,7 @@
 ---
 title: 重新執行追蹤資料
 titleSuffix: SQL Server Distributed Replay
+description: 使用 SQL Server Distributed Replay 功能時，請使用管理工具的重新執行選項來起始分散式重新執行的事件重新執行階段。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4438724a57b374ef298ce4eca7acd9d6009bbbb5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d03afc892fcdadbdaa346366096bec184707e70b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306985"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152190"
 ---
 # <a name="replay-trace-data"></a>重新執行追蹤資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,17 +34,17 @@ ms.locfileid: "75306985"
   
 ### <a name="to-replay-the-trace"></a>若要重新執行追蹤  
   
-1.  **(選擇性) 修改重新執行組態設定：** 如果您想要修改重新執行組態設定 (例如順序模式和各種調整值)，您必須修改以 XML 為基礎之重新執行組態檔 `<ReplayOptions>` 的 `DReplay.exe.replay.config`元素。 此外，您也可以修改 `<OutputOptions>` 元素來指定輸出設定，例如是否要記錄資料列計數。 如果您要修改重新執行組態檔，我們建議您修改複本，而不是原始版本。 若要修改設定，請執行下列步驟：  
+1.  **(選擇性) 修改重新執行組態設定**：如果您想要修改重新執行組態設定 (例如順序模式和各種調整值)，您必須修改以 XML 為基礎之重新執行組態檔 `DReplay.exe.replay.config` 的 `<ReplayOptions>` 元素。 此外，您也可以修改 `<OutputOptions>` 元素來指定輸出設定，例如是否要記錄資料列計數。 如果您要修改重新執行組態檔，我們建議您修改複本，而不是原始版本。 若要修改設定，請執行下列步驟：  
   
     1.  建立預設重新執行組態檔 `DReplay.exe.replay.config`的複本，並重新命名新的檔案。 預設重新執行組態檔位於管理工具的安裝資料夾。  
   
     2.  修改新組態檔中的重新執行組態設定。  
   
-    3.  當起始事件重新執行階段 (下一步) 時，使用 [重新執行]  選項的 **config_file** 參數指定已修改組態檔的位置。  
+    3.  當起始事件重新執行階段 (下一步) 時，使用 [重新執行] 選項的 *config_file* 參數指定已修改組態檔的位置。  
   
      如需重新執行組態檔的詳細資訊，請參閱 [設定 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)。  
   
-2.  **起始事件重新執行階段**：若要啟動 Distributed Replay，您必須以 [重新執行]  選項執行系統管理工具。 如需詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
+2.  **開始事件重新執行階段**：若要啟動 Distributed Replay，您必須透過 [重新執行] 選項執行系統管理工具。 如需詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
   
     1.  開啟 Windows 命令提示字元公用程式 (**CMD.exe**)，並巡覽至 Distributed Replay 管理工具 (**DReplay.exe**) 的安裝位置。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "75306985"
   
     5.  (選擇性) 使用 *target_server* 參數 **-s**，指定 Distributed Replay Client 應該重新執行追蹤工作負載所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果您使用了 `<Server>` 元素，在重新執行組態檔的 `<ReplayOptions>` 元素中指定目標伺服器，就不需要這個參數。  
   
-    6.  使用 *clients* 參數 **-w**，指定應該參與重新執行的 Distributed Replay Client。 然後，列出用戶端電腦名稱 (以逗號隔開)。 注意：不允許 IP 位址。  
+    6.  使用 *clients* 參數 **-w**，指定應該參與重新執行的 Distributed Replay Client。 然後，列出用戶端電腦名稱 (以逗號隔開)。 注意:不允許 IP 位址。  
   
     7.  (選擇性) 使用 *config_file* 參數 **-c**，指定重新執行組態檔的位置。 如果已修改預設重新執行組態檔的複本，請使用此參數指向新的組態檔。  
   

@@ -1,6 +1,7 @@
 ---
 title: SQL Server Distributed Replay
 titleSuffix: SQL Server Distributed Replay
+description: SQL Server Distributed Replay 功能可協助您評估未來 SQL Server、硬體與作業系統的升級，以及 SQL Server 調整的影響。
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual
@@ -10,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d19e8906ba6e1d5d517d1d176f6edb2b3e4fb50e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 856a1440c816555c0d03526bbbfcde9363c6a73f
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746360"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152174"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
 
@@ -43,7 +44,7 @@ Distributed Replay 提供比 SQL Server Profiler 更容易調整的解決方案�
 
 |工具|使用時機...|
 |----------|---------------|
-| SQL Server Profiler | 您想要在單一電腦上使用傳統的重新執行機制。 尤其，您需要逐行偵錯功能，例如 [步驟]  、[執行至資料指標處]  及 [切換中斷點]  命令。<br /><br /> 您想要重新執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 追蹤。 |
+| SQL Server Profiler | 您想要在單一電腦上使用傳統的重新執行機制。 尤其，您需要逐行偵錯功能，例如 [步驟]、[執行至資料指標處] 及 [切換中斷點] 命令。<br /><br /> 您想要重新執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 追蹤。 |
 | Distributed Replay |您想要評估應用程式相容性。 例如，您想要測試 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和作業系統升級狀況、硬體升級或索引微調。<br /><br /> 擷取追蹤中的並行過高，導致單一重新執行用戶端無法充分進行模擬。|  
 
 ## <a name="distributed-replay-concepts"></a>Distributed Replay 概念

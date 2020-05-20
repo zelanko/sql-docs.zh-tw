@@ -1,5 +1,6 @@
 ---
 title: 相容性憑證 | Microsoft Docs
+description: 相容性憑證會消除應用程式相容性的風險，讓您得以升級在內部部署和雲端中的 SQL Server 資料庫。
 ms.custom: ''
 ms.date: 08/26/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2b993647898865d0b67c25c1ab6040b9b7eedaf1
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73632939"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606470"
 ---
 # <a name="compatibility-certification"></a>相容性認證
 
@@ -83,7 +84,7 @@ ms.locfileid: "73632939"
 >
 > 升級相容性層級低於所允許層級的資料庫 (例如 90，這是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中的預設值) 時，會將資料庫設定為允許的最低相容性層級 (100)。
 >
-> 若要判斷目前的相容性層級，請查詢 **sys.databases** 的 [compatibility_level](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行。
+> 若要判斷目前的相容性層級，請查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 的 **compatibility_level** 資料行。
 
 ## <a name="compatibility-levels-and-database-engine-upgrades"></a>相容性層級和資料庫引擎升級
 若要將 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 升級至最新版本，同時維護升級前已存在的資料庫相容性層級及其可支援性狀態，建議使用 [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) 工具 (DMA)，執行資料庫 (可程式性物件，例如預存程序、函數、觸發程序等) 及應用程式 (使用擷取應用程式所傳送動態程式碼的工作負載追蹤) 中應用程式程式碼的靜態功能介面區驗證。 在 DMA 工具輸出中，由於沒有關於遺失或不相容功能的錯誤，因此可防止應用程式在新的目標版本上出現任何功能迴歸的情況。 如需詳細資訊，請參閱 [Data Migration Assistant 的概觀](../../dma/dma-overview.md)。
@@ -98,7 +99,7 @@ ms.locfileid: "73632939"
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] 會在下列情況下提供查詢計畫圖形保護：
 >
 > - 新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (目標) 執行所在的硬體，相當於舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (來源) 執行所在的硬體。
-> - 目標 [ 和來源 ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) 上使用相同的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]受支援資料庫相容性層級[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+> - 目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上使用相同的[受支援資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats)。
 >
 > 上述情況中所發生的任何查詢計劃圖形迴歸 (相較於來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 都會予以解決。 如果發生這種情況，請連絡 Microsoft 客戶支援。
   

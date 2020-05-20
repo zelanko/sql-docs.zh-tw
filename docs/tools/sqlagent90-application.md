@@ -1,5 +1,6 @@
 ---
 title: sqlagent90 應用程式
+description: sqlagent90 應用程式可從命令提示字元啟動 SQL Server Agent。 在診斷 SQL Server Agent 或收到您的支援提供者的指示時，請加以使用。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c75d932356d24bd5a268eb27d50deee91a6329f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9012e40eacdb1bd2b242021a0855f3ed36a5a4b1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307759"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151631"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ sqlagent90
  指出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 執行詳細模式，且將診斷資訊寫入命令提示字元視窗中。 診斷資訊與寫入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 錯誤記錄的資訊相同。  
   
  **-i** *instance_name*  
- 指出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 連接到 <執行個體名稱>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]*所指定的具名* 執行個體。  
+ 指出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 連接到 <執行個體名稱> 所指定的具名 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。  
   
 ## <a name="remarks"></a>備註  
  顯示著作權訊息之後，只有在指定了 **-v** 參數的情況下， **sqlagent90** 才會在命令提示字元視窗中顯示輸出。 若要停止 **sqlagent90**，請在命令提示字元按 CTRL+C。 在停止 **sqlagent90**之前，請勿關閉命令提示字元視窗。  

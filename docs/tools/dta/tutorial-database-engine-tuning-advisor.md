@@ -1,5 +1,6 @@
 ---
 title: 教學課程：Database Engine Tuning Advisor
+description: Database Engine Tuning Advisor 會檢查查詢的處理方式，並建議如何透過修改資料庫結構來改善查詢處理效能。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -14,12 +15,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a6fea0bbb9c9471885f76f3f6f44a86b50718d3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ad92ad29414afcf849ef0dd8a1ade0463748af35
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304699"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151483"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>教學課程：Database Engine Tuning Advisor
 
@@ -32,13 +33,13 @@ Database Engine Tuning Advisor 提供兩個使用者介面：圖形化使用者�
 ## <a name="what-you-will-learn"></a>學習內容  
 這個教學課程將告訴您如何導覽 Database Engine Tuning Advisor GUI，以及如何利用這個 GUI 和 **dta** 公用程式來執行某些基本工作。 它包含下列課程：  
   
-[課程 1：Database Engine Tuning Advisor 中的基本導覽](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[第 1 課：Database Engine Tuning Advisor 中的基本導覽](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
 在這個課程中，您將熟悉新的 Database Engine Tuning Advisor GUI，以及學習如何設定顯示選項和配置。  
   
-[課程 2：使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[第 2 課：使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
 在這個課程中，您將學會如何使用 Database Engine Tuning Advisor GUI 來執行基本微調工作。  
   
-[課程 3：使用 dta 命令提示字元公用程式](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[第 3 課：使用 dta 命令提示字元公用程式](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
 在這個課程中，您將學習如何啟動 **DTA** 命令提示字元公用程式，以及如何執行簡單的微調命令。  
   
 ## <a name="requirements"></a>需求  
@@ -54,7 +55,7 @@ Database Engine Tuning Advisor 提供兩個使用者介面：圖形化使用者�
 -   ＜[dta Utility](../../tools/dta/dta-utility.md) ＞提供有關命令提示字元公用程式的參考資料，以及可用來控制公用程式作業的選擇性 XML 檔案。  
   
 ## <a name="next-lesson"></a>下一課  
-[課程 1：Database Engine Tuning Advisor 中的基本導覽](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[第 1 課：Database Engine Tuning Advisor 中的基本導覽](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
   
   
   

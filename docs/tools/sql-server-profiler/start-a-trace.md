@@ -1,6 +1,7 @@
 ---
 title: 啟動追蹤
 titleSuffix: SQL Server Profiler
+description: 了解如何在 SQL Server Profiler 中，在定義新追蹤或建立範本之後，啟動追蹤並尋找其資料。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: b7e2432d728b487fe0ea55a1e03c84f613c270d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a5f93237a6a52c4a9695e0bd940dd7d712a6e5b3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307799"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151743"
 ---
 # <a name="start-a-trace"></a>啟動追蹤
 

@@ -1,5 +1,6 @@
 ---
 title: 建立資料庫與 web 應用程式的關聯
+description: 在 SQL Server 中，您可以將主資料管理員 web 應用程式與 Master Data Services 資料庫產生關聯，以指定要用於 web 作業的資料庫。
 ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d82bee5e275365b72adb3700cae8c11e6e67c9e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 685758e8671455103c0510db254381eecefaf676
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253077"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606760"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>建立 Master Data Services 資料庫與 Web 應用程式的關聯
 
@@ -23,7 +24,7 @@ ms.locfileid: "75253077"
 
   將 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫產生關聯，以指定要用於 Web 作業的資料庫。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
   
 -   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 必須安裝在本機電腦上。 如需詳細資訊，請參閱 [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)。  
   

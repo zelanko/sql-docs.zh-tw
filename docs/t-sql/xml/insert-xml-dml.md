@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 84f502edda64fef31acfad4747e669843602e4cb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c005ad315a3bcbeb1048d16cb10e30035512ac6c
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632449"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606630"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -211,7 +211,7 @@ GO
 ```  
   
 ### <a name="f-inserting-data-using-a-cdata-section"></a>F. 使用 CDATA 區段來插入資料  
- 當您所插入文字中包含對 XML 無效的字元 (例如 < 或 >)，您可以使用 CDATA 區段來插入資料，如下列查詢所示。 此查詢會指定 CDATA 區段，但區段會加入為文字節點，且任何無效字元都會轉換成實體。 例如，'<' 會另存為 &lt;。  
+ 當您所插入文字中包含對 XML 無效的字元 (例如 < 或 >)，您可以使用 CDATA 區段來插入資料，如下列查詢所示。 此查詢會指定 CDATA 區段，但區段會加入為文字節點，且任何無效字元都會轉換成實體。 例如，`<` 會另存為 `&lt;`。  
   
 ```  
 USE AdventureWorks;  
@@ -236,7 +236,7 @@ GO
 ```  
 <Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
-<Features> <notxml> as text </notxml> or cdata </Features>  
+<Features> &lt;notxml@gt; as text &lt;/notxml&gt; or cdata </Features>  
 </ProductDescription>  
 </Root>       
 ```  

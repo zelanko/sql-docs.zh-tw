@@ -1,6 +1,7 @@
 ---
 title: 重新執行追蹤的考量
 titleSuffix: SQL Server Profiler
+description: 找出哪些作業、預存程式、範本與記錄活動會防止 SQL Server Profiler 重新執行追蹤。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
-ms.openlocfilehash: a8a4288d4810ca137d8e6397188ada0e69b945bd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a12b6101cde482d38ef9573cb236cc7eba002aab
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307342"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151912"
 ---
 # <a name="considerations-for-replaying-traces-sql-server-profiler"></a>重新執行追蹤的考量 (SQL Server Profiler)
 

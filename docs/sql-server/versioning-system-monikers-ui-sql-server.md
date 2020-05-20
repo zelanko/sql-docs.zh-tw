@@ -1,5 +1,5 @@
 ---
-title: 版本設定系統 SQL 文件 | Microsoft Docs
+title: 版本設定系統 SQL 文件
 ms.date: 10/15/2019
 ms.prod: sql
 ms.technology: ''
@@ -9,24 +9,24 @@ ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b343f34e0d7fdc30e2549095f5731d93e863414c
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73049912"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150601"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 版本設定系統文件
 
 [!INCLUDE[includes_appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-本文解釋我們的 SQL「版本設定系統」  文件。 版本設定系統了解產品及其版本。 系統可讓您選擇您有興趣的產品和版本。 系統接著會顯示適當的文件。
+本文解釋我們的 SQL「版本設定系統」文件。 版本設定系統了解產品及其版本。 系統可讓您選擇您有興趣的產品和版本。 系統接著會顯示適當的文件。
 
 ## <a name="applies-to-products"></a>適用對象產品
 
-大多數的 SQL Server 文章都會在其標題下方包含**適用對象**文字。 在同一行上，接著會列出方便使用的 SQL「產品」  清單，指出文章是否與該產品相關。 例如，SQL Server 產品可能會標記為相關，但同時 Azure SQL Database 則可能會標記為與文章無關。
+大多數的 SQL Server 文章都會在其標題下方包含**適用對象**文字。 在同一行上，接著會列出方便使用的 SQL「產品」清單，指出文章是否與該產品相關。 例如，SQL Server 產品可能會標記為相關，但同時 Azure SQL Database 則可能會標記為與文章無關。
 
-**適用對象**一行不了解產品的「版本」  。 我們會努力避免**適用對象**一行和我們版本設定系統設定產品面之間的不一致。
+**適用對象**一行不了解產品的「版本」。 我們會努力避免**適用對象**一行和我們版本設定系統設定產品面之間的不一致。
 
 ## <a name="history-of-separate-file-sets"></a>個別檔案集歷程記錄
 
@@ -36,7 +36,7 @@ ms.locfileid: "73049912"
 
 ## <a name="multiple-versions-in-the-same-files"></a>相同檔案中的多個版本
 
-基於此原因和其他因素，SQL Server 2016 的文件檔案也適用於 2017、2019，且可能適用於 \<vNext\>。 這項合併相當實用，因為我們現在會將「版本設定 moniker」  指派給我們的 SQL Server 文件檔案。 版本設定 moniker 會根據每個指定文件檔案合理的細微性程度進行指派或明確內嵌。
+基於此原因和其他因素，SQL Server 2016 的文件檔案也適用於 2017、2019，且可能適用於 \<vNext\>。 這項合併相當實用，因為我們現在會將「版本設定 moniker」指派給我們的 SQL Server 文件檔案。 版本設定 moniker 會根據每個指定文件檔案合理的細微性程度進行指派或明確內嵌。
 
 ## <a name="versioning-control-in-the-ui"></a>UI 中的版本設定控制
 
@@ -52,13 +52,13 @@ ms.locfileid: "73049912"
 
 每個網址開頭是 `https://docs.microsoft.com/sql/` 之文章都會在其網址上附加名為 `?view=` 的參數。 此參數值是版本控制 moniker 程式碼。
 
-`https` 網址中的 moniker「程式碼」  一律會和版本設定控制項中顯示的 moniker「名稱」  相符。
+`https` 網址中的 moniker「程式碼」一律會和版本設定控制項中顯示的 moniker「名稱」相符。
 
 ## <a name="products-not-editions"></a>產品，並非版本
 
 ### <a name="editions"></a>版本
 
-在 1990 到 2000 年代間，Microsoft SQL Server 只有一個產品。 每個 SQL Server 版本都有各種「版本」  ，例如 SQL Server 2008 的 _Developer_ 和 _Enterprise_ 版本。 版本會包含稍微不同的功能集，但核心產品都是相同的。 新的 SQL Server 版本仍然可能會有各種版本。
+在 1990 到 2000 年代間，Microsoft SQL Server 只有一個產品。 每個 SQL Server 版本都有各種「版本」，例如 SQL Server 2008 的 _Developer_ 和 _Enterprise_ 版本。 版本會包含稍微不同的功能集，但核心產品都是相同的。 新的 SQL Server 版本仍然可能會有各種版本。
 
 ### <a name="products"></a>Products
 
@@ -92,7 +92,7 @@ ms.locfileid: "73049912"
 5. 您再次變更 moniker，但這一次是變更為 **SQL Server 2019**。
 6. 您會察覺您正在閱讀的 2017 區段已重新顯示。
 
-在上述案例中，新的 2017 功能區段可能會以「moniker 範圍」  進行標記，其中可能包含下列 moniker 程式碼：
+在上述案例中，新的 2017 功能區段可能會以「moniker 範圍」進行標記，其中可能包含下列 moniker 程式碼：
 
 - `>=sql-server-2017`
 
@@ -124,7 +124,7 @@ ms.locfileid: "73049912"
 
 | `?view=` 的值 | `https` 位址導覽的行為 |
 | :---------------- | :------------------------------ |
-| (無參數。)  | 版本設定系統會嘗試其預設的 moniker 值。 通常我們會將此設為最新的 SQL Server 非預覽版本。<br/><br/>SQL Server 2017 或 2019 的預設會滿足屬性 `>= sql-server-2017`。<br/><br/>系統會將參數附加到 `https` 位址 (也許是 `?view=sql-server-2017`)。<br/>版本設定下拉式清單控制項接著會設為相符的 moniker 名稱。 |
+| (無參數。) | 版本設定系統會嘗試其預設的 moniker 值。 通常我們會將此設為最新的 SQL Server 非預覽版本。<br/><br/>SQL Server 2017 或 2019 的預設會滿足屬性 `>= sql-server-2017`。<br/><br/>系統會將參數附加到 `https` 位址 (也許是 `?view=sql-server-2017`)。<br/>版本設定下拉式清單控制項接著會設為相符的 moniker 名稱。 |
 | `sql-server-2016` | 版本設定系統會了解到文章的 moniker 範圍不包含版本 2016。<br/><br/>系統接著會選擇其中一個滿足範圍的 moniker。<br/><br/>然後正如同版本 2016 的案例，會附加 `?view=` 參數，且控制項名稱會和參數值相符。 |
 | `sql-server-2017` | 版本設定系統了解參數值包含在文章的 moniker 範圍內。<br/><br/>版本設定控制項會設為與參數值相符。 |
 | `sql-server-2019` | 這也適用於值為 `sql-server-2017` 的案例，差別僅在參數和控制項會設為 2019。 |
@@ -142,7 +142,7 @@ ms.locfileid: "73049912"
 
 1. 目前的版本設定 moniker 為 **SQL Server 2017**。
 2. 您正在閱讀與 SQL Server 2017 相關的文章。
-    - 文章與 Azure SQL Database 產品「無關」  。
+    - 文章與 Azure SQL Database 產品「無關」。
 3. 您嘗試將 moniker 變更為 **Azure SQL Database - 目前**。
 4. 您會看到您的嘗試遭到拒絕，且顯示一個訊息。
 
@@ -150,7 +150,7 @@ ms.locfileid: "73049912"
 
 > 所要求的頁面無法提供 Azure SQL Database - 目前使用。 您已重新導向到此頁面適用的最新產品版本。
 
-「最新」  版本可能會排除尚未完全發行，且處於「預覽」  狀態的版本。
+「最新」版本可能會排除尚未完全發行，且處於「預覽」狀態的版本。
 
 ![media_versioning-control-30-viewfallbackfrom.png](media/versioning-control-30-viewfallbackfrom.png)
 
@@ -158,14 +158,14 @@ ms.locfileid: "73049912"
 
 版本設定系統已為 SQL Server 2016 版本之後的版本完全實作。
 
-- 2012 及較舊版本：  &nbsp; SQL Server 2012 及較舊的版本並未使用版本設定系統。
+- 2012 及較舊版本：&nbsp; SQL Server 2012 及較舊的版本並未使用版本設定系統。
     - **SQL Server - 舊版**的特殊 moniker 旨在隱藏幾乎所有文章。 少見的例外狀況是舊版客戶可能一次只需要幾篇文章。
     - [SQL Server 的先前版本，2012-2005](../toc/previous-versions-sql-server.md)
 
-- 2014：  &nbsp; 版本設定系統已為 SQL Server 2014 實作一半。 您可以在版本設定控制項中選擇 SQL Server 2014，它會正常運作。 但是在內部，2014 的檔案仍僅專屬於 2014，也就是和 2008 的檔案僅專屬於 2008 相同。
+- 2014：&nbsp; 版本設定系統已為 SQL Server 2014 實作一半。 您可以在版本設定控制項中選擇 SQL Server 2014，它會正常運作。 但是在內部，2014 的檔案仍僅專屬於 2014，也就是和 2008 的檔案僅專屬於 2008 相同。
     - [SQL Server 2014 文件](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
 
-- 2016 及更新版本：  &nbsp; 版本設定系統已為 SQL Server 2016 及更新版本完全實作。
+- 2016 及更新版本：&nbsp; 版本設定系統已為 SQL Server 2016 及更新版本完全實作。
     - [歡迎使用 SQL Server 文件 2016 及更新版本](/sql/sql-server/?view=sql-server-2016)
 
 ## <a name="see-also"></a>另請參閱

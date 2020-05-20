@@ -1,5 +1,6 @@
 ---
 title: osql 公用程式
+description: 在 SQL Server 中，osql 公用程式可讓您輸入 Transact-SQL 陳述式、系統程序與指令檔。 Osql 使用 ODBC 來與伺服器通訊。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -25,12 +26,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: dbc103ea44027056541dada86451c757a27619ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a6b04e904088ce78d46f692b9f29207d54f14c99
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307368"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151360"
 ---
 # <a name="osql-utility"></a>osql 公用程式
 

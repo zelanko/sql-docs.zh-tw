@@ -32,12 +32,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fee0e8af2e4d556e388fc72086286d4a21184a8
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 03690af5e9ec4ce835372378ca3bdf13eff3073a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220713"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152037"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>藉由重新組織或重建索引來解決索引片段
 
@@ -223,6 +223,7 @@ object_id   TableName                   index_id    IndexName                   
 重新組織索引所用的系統資源最少，且為線上作業。 這表示不會保留長期封鎖的資料表鎖定，而且在 `ALTER INDEX REORGANIZE` 交易期間，可以繼續查詢或更新基礎資料表。
 
 - 針對[資料列存放區索引](clustered-and-nonclustered-indexes-described.md)，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會實際重新排序分葉層級的頁面，使這些頁面符合分葉節點的邏輯順序 (由左至右)，以重組資料表與檢視表上叢集與非叢集索引的分葉層級。 重新組織也會根據索引的填滿因數值來壓縮索引頁面。 若要檢視填滿因數設定，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。 如需語法範例，請參閱[範例：資料列存放區重新組織](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes)。
+
 - 使用[資料行存放區索引](columnstore-indexes-overview.md)時，在一段時間內插入、更新及刪除資料之後，差異存放區最後可能會有多個小型資料列群組。 重新組織資料行存放區索引會強制將所有資料列群組存放至資料行存放區，然後將資料列群組合併成具有較多資料列的較少資料列群組。 重新組織作業也會移除已從資料行存放區刪除的資料列。 重新組織一開始會需要額外的 CPU 資源來壓縮資料，這可能會拖慢整體系統效能。 不過，在壓縮完資料後，查詢效能就會改善。 如需語法範例，請參閱[範例：資料行存放區重新組織](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes)。
 
 ### <a name="rebuild-an-index"></a>重建索引
@@ -230,7 +231,13 @@ object_id   TableName                   index_id    IndexName                   
 重建索引會卸除和重新建立索引。 視索引類型和 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 版本而定，重建作業可能可以在線上或離線完成。 如需 T-SQL 語法，請參閱 [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)
 
 - 針對[資料列存放區](clustered-and-nonclustered-indexes-described.md)索引，重建會移除片段，根據所指定或現有的填滿因數設定壓縮頁面來收回磁碟空間，然後重新排序連續頁面中的索引資料列。 指定 `ALL` 時，會在單一交易中卸除資料表的所有索引，然後加以重建。 不需要事先卸除外部索引鍵條件約束。 當重建含有 128 個或更多範圍的索引時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會延遲取消配置實際的頁面，也會延遲其關聯鎖定，直到認可交易之後。 如需語法範例，請參閱[範例：資料列存放區重新組織](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes)。
-- 針對[資料行存放區](columnstore-indexes-overview.md)索引，重建會移除片段，將所有資料列移至資料行存放區，然後透過將已從資料表上以邏輯方式刪除的資料列實體刪除來回收磁碟空間。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，通常無須重建資料行存放區索引，這是因為 `REORGANIZE` 會在背景以線上作業方式執行必要的重建作業。 如需語法範例，請參閱[範例：資料行存放區重新組織](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes)。
+
+- 針對[資料行存放區](columnstore-indexes-overview.md)索引，重建會移除片段，將所有資料列移至資料行存放區，然後透過將已從資料表上以邏輯方式刪除的資料列實體刪除來回收磁碟空間。 
+  
+  > [!TIP]
+  > 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，通常無須重建資料行存放區索引，這是因為 `REORGANIZE` 會在背景以線上作業方式執行必要的重建作業。 
+  
+  如需語法範例，請參閱[範例：資料行存放區重建](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes)。
 
 ### <a name="permissions"></a><a name="Permissions"></a> 權限
 
@@ -253,10 +260,7 @@ object_id   TableName                   index_id    IndexName                   
 5. 以滑鼠右鍵按一下您要重新組織的索引，然後選取 **[重新組織]** 。
 6. 在 **[重新組織索引]** 對話方塊中，確認 **[要重新組織的索引]** 方格中有正確索引，然後按一下 **[確定]** 。
 7. 選取 **[壓縮大型物件資料行資料]** 核取方塊，可指定一併壓縮包含大型物件 (LOB) 資料的所有頁面。
-8. 按一下 [確定]  。
-
-> [!NOTE]
-> 使用 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 來重新組織資料行存放區索引會將 `COMPRESSED` 資料列群組組合在一起，但不會強制將所有資料列群組壓縮到資料行存放區。 系統會壓縮 CLOSED 資料列群組，但不會將 OPEN 資料列群組壓縮到資料行存放區。 若要壓縮所有資料列群組，請使用[下列](#TsqlProcedureReorg)[!INCLUDE[tsql](../../includes/tsql-md.md)] 範例。
+8. 按一下 [確定]。
 
 #### <a name="to-reorganize-all-indexes-in-a-table"></a>若要重新組織資料表中的所有索引
 
@@ -266,7 +270,7 @@ object_id   TableName                   index_id    IndexName                   
 4. 以滑鼠右鍵按一下 **[索引]** 資料夾，並選取 **[全部重新組織]** 。
 5. 在 **[重新組織索引]** 對話方塊中，確認 **[要重新組織的索引]** 方格中有正確索引。 若要從 **[要重新組織的索引]** 方格中移除索引，請選取索引，然後按下 DELETE 鍵。
 6. 選取 **[壓縮大型物件資料行資料]** 核取方塊，可指定一併壓縮包含大型物件 (LOB) 資料的所有頁面。
-7. 按一下 [確定]  。
+7. 按一下 [確定]。
 
 #### <a name="to-rebuild-an-index"></a>若要重建索引
 
@@ -274,10 +278,10 @@ object_id   TableName                   index_id    IndexName                   
 2. 展開 **[資料表]** 資料夾。
 3. 展開您要重新組織其索引的資料表。
 4. 展開 **[索引]** 資料夾。
-5. 以滑鼠右鍵按一下您要重新組織的索引，並選取 [重建]  。
+5. 以滑鼠右鍵按一下您要重新組織的索引，並選取 [重建]。
 6. 在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]** 。
 7. 選取 **[壓縮大型物件資料行資料]** 核取方塊，可指定一併壓縮包含大型物件 (LOB) 資料的所有頁面。
-8. 按一下 [確定]  。
+8. 按一下 [確定]。
 
 ### <a name="remove-fragmentation-using-tsql"></a><a name="TsqlProcedureReorg"></a> 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 移除片段
 
@@ -357,6 +361,13 @@ ALTER INDEX ALL ON HumanResources.Employee
 
 重建資料行存放區索引時，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會從原始資料行存放區索引讀取所有資料，包括差異存放區。 這會將資料合併成新的資料列群組，並將資料列群組壓縮到資料行存放區。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會透過實際刪除已經以邏輯方式從資料表刪除的資料列，以重組資料行存放區。 已刪除的位元組會在磁碟上回收。
 
+> [!NOTE]
+> 使用 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 來重新組織資料行存放區索引會將 COMPRESSED 資料列群組合併在一起，但不會強制將所有資料列群組壓縮到資料行存放區。 系統會壓縮 CLOSED 資料列群組，但不會將 OPEN 資料列群組壓縮到資料行存放區。 若要強制壓縮所有資料列群組，請使用[下面](#TsqlProcedureReorg)的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例。
+
+> [!NOTE]
+> 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，Tuple Mover 會由背景合併工作協助，該工作會自動壓縮已存在一段時間的較小 OPEN 差異資料列群組 (由內部閾值決定)，或合併已刪除大量資料列的 COMPRESSED 資料列群組。 這可改善一段時間的資料行存放區索引品質。    
+> 如需資料行存放區詞彙與概念的詳細資訊，請參閱[資料行存放區索引：概觀](../../relational-databases/indexes/columnstore-indexes-overview.md)。
+
 ### <a name="rebuild-a-partition-instead-of-the-entire-table"></a>重建分割區，而非整個資料表
 
 - 如果索引很大，重建整個資料表將花上很長的時間，而且需要足夠的磁碟空間來存放重建期間額外的索引副本。 通常只需要重建最近使用的分割區。
@@ -375,7 +386,9 @@ ALTER INDEX ALL ON HumanResources.Employee
 重新組織資料行存放區索引時，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會以壓縮資料列群組的方式，將每個 CLOSED 差異資料列群組壓縮至資料行存放區中。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始且在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，`REORGANIZE` 命令會在線上執行以下額外的重組最佳化：
 
 - 當 10% 或更多資料列已經以邏輯方式刪除時，會實際將資料列從資料列群組移除。 已刪除的位元組會在實體媒體上回收。 例如，如果在包含 1 百萬個資料列的壓縮資料列群組中刪除 10 萬個資料列，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會移除刪除的資料列，並重新壓縮包含 90 萬個資料列的資料列群組。 將刪除的資料列移除可以節省儲存空間。
+
 - 可合併一或多個壓縮的資料列群組，將每個資料列群組的資料列數目最多提高至 1,048,576 個資料列的上限。 例如，如果您大量匯入 5 個批次的 102,400 個資料列，就會有 5 個壓縮的資料列群組。 如果執行 REORGANIZE，這些資料列群組將會合併成 1 個包含 512,000 個資料列的壓縮資料列群組。 這是假設沒有任何目錄大小或記憶體限制的情況。
+
 - 對於已透過邏輯方式刪除 10% 或更多資料列的資料列群組，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會嘗試把這個資料列群組與一或多個資料列群組合併。 例如，資料列群組 1 壓縮了 500,000 個資料列，而資料列群組 21 則壓縮了達到數目上限的 1,048,576 個資料列。 資料列群組 21 中刪除了 60% 的資料列，剩下 409,830 個資料列。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會優先合併這兩個資料列群組，以壓縮成一個包含 909,830 個資料列的新資料列群組。
 
 執行資料負載後，您在差異存放區中可能有多個小型的資料列群組。 您可使用 `ALTER INDEX REORGANIZE` 強制將所有資料列群組存放至資料行存放區，然後再將資料列群組合併成較少資料列的資料列群組。 重新組織作業也會移除已從資料行存放區刪除的資料列。
@@ -389,7 +402,7 @@ ALTER INDEX ALL ON HumanResources.Employee
 > [!WARNING]
 > 您可以對包含超過 1,000 個分割區的資料表，建立及重建不以資料表為準的索引，但不予支援。 此做法可能會導致在作業期間效能降低或耗用過多記憶體。 Microsoft 建議當分割區數超過 1,000 個時，才使用[對齊的索引](../partitions/partitioned-tables-and-indexes.md#aligned-index)。
 
-如果索引所在的檔案群組**離線**或設定為 [唯讀]  ，便無法重新組織或重建該索引。 當指定 `ALL` 關鍵字，且有一或多個索引在離線或唯讀檔案群組中時，陳述式會失敗。
+如果索引所在的檔案群組**離線**或設定為 [唯讀]，便無法重新組織或重建該索引。 當指定 `ALL` 關鍵字，且有一或多個索引在離線或唯讀檔案群組中時，陳述式會失敗。
 
 統計：
 
@@ -400,11 +413,11 @@ ALTER INDEX ALL ON HumanResources.Employee
 當 `ALLOW_PAGE_LOCKS` 設定為 OFF 時，無法重新組織索引。
 
 在 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 與更舊版本中，重建叢集資料行存放區索引為離線作業。 在進行重建時，資料庫引擎必須取得資料表或分割區上的獨佔鎖定。 在重建期間，資料將會離線且無法使用，即便是使用 `NOLOCK`、讀取認可快照隔離 (RCSI) 或快照隔離也一樣。
-從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，叢集資料行存放區索引可以使用 `ONLINE=ON` 選項來重建。
+從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，叢集資料行存放區索引可以使用 `ONLINE = ON` 選項來重建。
 
-針對具有已排序叢集資料行存放區索引的 Azure Synapse Analytics (先前稱為 Azure SQL 資料倉儲) 資料表，`ALTER INDEX REBUILD` 將會使用 TempDB 重新排序資料。 在重建作業期間監視 TempDB。 如果您需要更多 TempDB 空間，請擴大資料倉儲。 當索引重建完成之後，請相應減少回來。
+針對具有已排序叢集資料行存放區索引的 Azure Synapse Analytics (先前稱為 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]) 資料表，`ALTER INDEX REBUILD` 將會使用 TempDB 將資料重新排序。 在重建作業期間監視 TempDB。 如果您需要更多 TempDB 空間，請擴大資料倉儲。 當索引重建完成之後，請相應減少回來。
 
-針對具有已排序叢集資料行存放區索引的 Azure Synapse Analytics (先前稱為 Azure SQL 資料倉儲) 資料表，`ALTER INDEX REORGANIZE` 不會重新排序資料。 若要重新排序資料，請使用 `ALTER INDEX REBUILD`。
+針對具有已排序叢集資料行存放區索引的 Azure Synapse Analytics (先前稱為 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]) 資料表，`ALTER INDEX REORGANIZE` 不會將資料重新排序。 若要重新排序資料，請使用 `ALTER INDEX REBUILD`。
 
 ## <a name="using-index-rebuild-to-recover-from-hardware-failures"></a>使用索引重建從硬體故障中復原
 

@@ -1,6 +1,7 @@
 ---
 title: 前置處理選項
 titleSuffix: SQL Server Distributed Replay
+description: Microsoft SQL Server Distributed Replay 工具 (DReplay.exe) 是命令列工具，可用於與分散式重新執行控制器通訊。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,20 +12,20 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 1b003bf2441e3cffc2e21557497695f92df50135
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7baf79900fb89903c9d398dfb1e7b72c3600f1e0
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307025"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152197"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>前置處理選項 (Distributed Replay 管理工具)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具**DReplay.exe** 為命令列工具，可用於與 Distributed Replay Controller 通訊。 本主題描述 **preprocess** 命令列選項與對應的語法。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 **DReplay.exe** 為命令列工具，可用於與 Distributed Replay Controller 通訊。 本主題描述 **preprocess** 命令列選項與對應的語法。  
   
  **preprocess** 選項會起始前置處理階段。 在這個階段中，控制器會準備輸入追蹤資料，以便對目標伺服器重新執行。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") 如需管理工具語法所使用之語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示")如需管理工具語法所使用之語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>語法  
   

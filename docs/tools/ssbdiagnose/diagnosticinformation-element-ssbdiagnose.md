@@ -1,5 +1,6 @@
 ---
 title: DiagnosticInformation 項目
+description: 在 SQL Server 中，DiagnosticInformation 元素是 ssbdiagnostic XML 輸出檔的根元素。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 06d67e0a20067390c14837221725fd4b27c8c337
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5e5e0b4e43a108b971b8982db91cb32b23e8e89
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257787"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150581"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation 元素 (ssbdiagnose)
 

@@ -1,5 +1,6 @@
 ---
 title: sqlservr 應用程式
+description: Sqlservr 應用程式可從命令提示字元啟動、停止、暫停和繼續執行 SQL Server 的執行個體。
 ms.custom: seo-lt-2019
 ms.date: 08/01/2019
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4a35081f52ddc6f6e75c4bfa8ff56e1020cb0c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 56498901eb6f7eed8fa58f73bae58daddb36f874
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75305780"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150569"
 ---
 # <a name="sqlservr-application"></a>sqlservr 應用程式
 

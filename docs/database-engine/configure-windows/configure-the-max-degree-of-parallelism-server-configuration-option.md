@@ -1,6 +1,5 @@
 ---
 title: 設定 max degree of parallelism 伺服器組態選項 | Microsoft Docs
-ms.custom: ''
 ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,20 +15,21 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 94f8c87e0b996be0b9485cbe5a43038e33420fe0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: contperfq4
+ms.openlocfilehash: 41c65a001047a32e51580633bd82366b7783a2aa
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288722"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606800"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>設定 max degree of parallelism 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本主題描述如何使用 **或**，在 SQL Server 中設定 [平行處理原則的最大程度 (MAXDOP)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器組態選項。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在具有多個微處理器或 CPU 的電腦上執行時，會偵測平行處理原則的程度，也就是說，針對每一個平行計畫的執行，執行單一陳述式所要採用的處理器個數。 您可以使用 **max degree of parallelism** 選項來限制要用於平行計畫執行的處理器數目。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對查詢、索引資料定義語言 (DDL) 作業、平行插入、線上改變資料行、平行收集統計資料，以及靜態和索引鍵集驅動資料指標擴展，考慮平行執行計畫。
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 SQL Server 中設定 [平行處理原則的最大程度 (MAXDOP)] 伺服器組態選項。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在具有多個微處理器或 CPU 的電腦上執行時，會偵測平行處理原則的程度，也就是說，針對每一個平行計畫的執行，執行單一陳述式所要採用的處理器個數。 您可以使用 **max degree of parallelism** 選項來限制要用於平行計畫執行的處理器數目。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對查詢、索引資料定義語言 (DDL) 作業、平行插入、線上改變資料行、平行收集統計資料，以及靜態和索引鍵集驅動資料指標擴展，考慮平行執行計畫。
 
 > [!NOTE]
-> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 引入自動建議，於安裝過程設定 MAXDOP 伺服器設定選項時提供。 安裝程式使用者介面可讓您接受建議的設定，或輸入您自己的值。 如需詳細資訊，請參閱[資料庫引擎設定 - MaxDOP 頁面](../../sql-server/install/instance-configuration.md#maxdop)。
+> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 引入自動建議，於安裝過程中設定 MAXDOP 伺服器設定選項時提供。 安裝程式使用者介面可讓您接受建議的設定，或輸入您自己的值。 如需詳細資訊，請參閱[資料庫引擎定 - MaxDOP 頁面](../../sql-server/install/instance-configuration.md#maxdop)。
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
@@ -121,14 +121,12 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="follow-up-after-you-configure-the-max-degree-of-parallelism-option"></a><a name="FollowUp"></a> 待處理：設定 max degree of parallelism 選項之後  
+##  <a name="follow-up-after-you-configure-the-max-degree-of-parallelism-option"></a><a name="FollowUp"></a> 後續操作：在您設定完最大平行處理程度的選項後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)      
- [SQL Server 中 [平行處理原則最大程度] 設定選項的建議和指導方針](https://support.microsoft.com/help/2806535)     
- [affinity mask 伺服器組態選項](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)   
- [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)        
+ [affinity mask 伺服器組態選項](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)      
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#DOP)       
@@ -136,3 +134,8 @@ GO
  [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)    
  [查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)     
  [設定索引選項](../../relational-databases/indexes/set-index-options.md)     
+
+## <a name="next-steps"></a>後續步驟
+
+[RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
+[效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0ca9c22cb54c54441f848ecbf367e92e30c1fd83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18b9a6590ce777402456c8e9f8c8f28807ec5670
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921874"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606610"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
-ADO 是在 c + + 程式中用來連接到 SQL Server。 當然，它也適用于連接到雲端中的 Azure SQL Database。
+ActiveX Data Objects 是一種程式設計模型，這表示它不會相依于任何指定的後端引擎。 不過，目前唯一支援 ADO 模型的引擎是 OLE-DB。 有許多原生 OLE DB 提供者，以及適用于 ODBC 的 OLE DB 提供者。 ADO 用於 c + + 和 Visual Basic 程式，以連接到 SQL Server 和其他資料庫。 當然，它也適用于連接到雲端中的 Azure SQL Database。
 
 本文中的每一節都將說明 ADO 的元件。
 

@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: a96eb5b8d50102c09ed6343c0f067db5a5bdb6e2
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: 1b4de199e96497f32039614a39aabb4b1e8fe5d0
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588225"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151892"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安裝 SQL Server 機器學習服務 (Python 和 R)
 
@@ -28,11 +28,11 @@ ms.locfileid: "82588225"
 
 + 針對商務持續性，機器學習服務支援 [AlwaysOn 可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。 在每個節點上安裝機器學習服務，並設定套件。
 
-+ 「不支援」  在 SQL Server 2017 中的 [Always On 容錯移轉叢集執行個體 (FCI)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 上安裝機器學習服務。 但 SQL Server 2019 和更新版本支援。
++ 「不支援」在 SQL Server 2017 中的 [Always On 容錯移轉叢集執行個體 (FCI)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 上安裝機器學習服務。 但 SQL Server 2019 和更新版本支援。
  
 + 請勿在網域控制站上安裝機器學習服務。 安裝程式的機器學習服務部分將會失敗。
 
-+ 不要在執行資料庫執行個體的同一部電腦上安裝 [共用功能]   > [Machine Learning 伺服器 (獨立式)]  。 獨立伺服器將會競爭相同資源，因而降低了這兩個安裝的效能。
++ 不要在執行資料庫執行個體的同一部電腦上安裝 [共用功能] > [Machine Learning 伺服器 (獨立式)]。 獨立伺服器將會競爭相同資源，因而降低了這兩個安裝的效能。
 
 + 支援與其他 Python 和 R 版本並存安裝，但建議不要這樣做。 支援的原因是因為 SQL Server 執行個體使用自己的開放原始碼 R 和 Anaconda 發行版本複本。 建議不要這樣做，因為在 SQL Server 外部的 SQL Server 電腦上執行使用 Python 與 R 的程式碼，可能會導致各種問題：
     
@@ -65,7 +65,7 @@ ms.locfileid: "82588225"
 
 1. 啟動 SQL Server 的安裝精靈。
   
-1. 在 [安裝]  索引標籤上，選取 [新增 SQL Server 獨立安裝或將功能加入至現有安裝]  。
+1. 在 [安裝] 索引標籤上，選取 [新增 SQL Server 獨立安裝或將功能加入至現有安裝]。
 
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
    ![新的 SQL Server 獨立安裝](media/2017setup-installation-page-mlsvcs.png)
@@ -123,23 +123,23 @@ ms.locfileid: "82588225"
    
    > [!NOTE]
    > 
-   > 請勿選取 [Machine Learning 伺服器 (獨立式)]  的選項。 在**共用功能**下安裝 Machine Learning Server 的選項，旨在不同的電腦上使用。
+   > 請勿選取 [Machine Learning 伺服器 (獨立式)] 的選項。 在**共用功能**下安裝 Machine Learning Server 的選項，旨在不同的電腦上使用。
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 
-4. 在 [同意安裝 Microsoft R Open]  頁面上，選取 [接受]  ，然後 [下一步]  。 
+4. 在 [同意安裝 Microsoft R Open] 頁面上，選取 [接受]，然後 [下一步]。 
 
 授權合約涵蓋：
 + Microsoft R Open
 + 開放原始碼 R 基底套件與工具
 + Microsoft 開發小組所提供的增強型 R 套件與連線提供者。
 
-1. 在 [同意安裝 Python]  頁面上，選取 [接受]  ，然後 [下一步]  。 Python 開放原始碼授權合約也涵蓋 Anaconda 和相關工具，以及 Microsoft 開發小組的一些新 Python 程式庫。
+1. 在 [同意安裝 Python] 頁面上，選取 [接受]，然後 [下一步]。 Python 開放原始碼授權合約也涵蓋 Anaconda 和相關工具，以及 Microsoft 開發小組的一些新 Python 程式庫。
 
    > [!NOTE]
    >  如果您使用的電腦無法存取網際網路，您可以在此時暫停安裝，以便個別下載安裝程式。 如需詳細資訊，請參閱[在沒有網際網路存取的情況下安裝機器學習元件](../install/sql-ml-component-install-without-internet-access.md)。
 
-1. 在 [準備安裝]  頁面上，確認包含這些選項，然後選取 [安裝]  。
+1. 在 [準備安裝] 頁面上，確認包含這些選項，然後選取 [安裝]。
   
    + Database Engine 服務
    + Machine Learning 服務 (資料庫內)
@@ -153,11 +153,11 @@ ms.locfileid: "82588225"
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 
-1. 在 [同意安裝 Microsoft R Open]  頁面上，選取 [接受]  ，然後 [下一步]  。 本授權合約涵蓋 Microsoft R Open，其中包含開放原始碼 R 基底套件和工具的散發套件，以及來自 Microsoft 開發小組的增強型 R 套件和連接提供者。
+1. 在 [同意安裝 Microsoft R Open] 頁面上，選取 [接受]，然後 [下一步]。 本授權合約涵蓋 Microsoft R Open，其中包含開放原始碼 R 基底套件和工具的散發套件，以及來自 Microsoft 開發小組的增強型 R 套件和連接提供者。
 
-2. 在 [同意安裝 Python]  頁面上，選取 [接受]  ，然後 [下一步]  。 Python 開放原始碼授權合約也涵蓋 Anaconda 和相關工具，以及 Microsoft 開發小組的一些新 Python 程式庫。
+2. 在 [同意安裝 Python] 頁面上，選取 [接受]，然後 [下一步]。 Python 開放原始碼授權合約也涵蓋 Anaconda 和相關工具，以及 Microsoft 開發小組的一些新 Python 程式庫。
 
-3. 在 [準備安裝]  頁面上，確認包含這些選項，然後選取 [安裝]  。
+3. 在 [準備安裝] 頁面上，確認包含這些選項，然後選取 [安裝]。
   
    + Database Engine 服務
    + Machine Learning 服務 (資料庫內)
@@ -173,7 +173,7 @@ ms.locfileid: "82588225"
 
 僅針對 R 功能整合，您應該設定 **MKL_CBWR** 環境變數，以確保來自 Intel Math Kernel Library (MKL) 計算的輸出[會保持一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) \(英文\)。
 
-1. 在 [控制台] 中，按一下 [系統及安全性]   > [系統]   > [進階系統設定]   > [環境變數]  。
+1. 在 [控制台] 中，按一下 [系統及安全性] > [系統] > [進階系統設定] > [環境變數]。
 
 2. 建立新的使用者或系統變數。 
 
@@ -193,7 +193,7 @@ ms.locfileid: "82588225"
     > 
     > 您也可以使用 [Azure Data Studio](../../azure-data-studio/what-is.md)，它支援針對 SQL Server 的系統管理工作與查詢。
   
-2. 連線到您安裝機器學習服務的執行個體，按一下 [新增查詢]  開啟查詢視窗，然後執行下列命令：
+2. 連線到您安裝機器學習服務的執行個體，按一下 [新增查詢] 開啟查詢視窗，然後執行下列命令：
 
     ```sql
     sp_configure
@@ -212,11 +212,11 @@ ms.locfileid: "82588225"
 
 ## <a name="restart-the-service"></a>重新啟動服務
 
-當安裝完成時，請先重新啟動資料庫引擎，然後再繼續執行下一步，以啟用指令碼執行。
+安裝完成後，請重新啟動資料庫引擎。
 
 重新啟動服務也會自動重新啟動相關的 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 服務。
 
-您可以針對 SSMS 中的執行個體，使用滑鼠右鍵按一下 [重新啟動]  命令，或使用 [控制台] 中的 [服務]  面板，或使用 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)來重新啟動服務。
+您可以針對 SSMS 中的執行個體，使用滑鼠右鍵按一下 [重新啟動] 命令，或使用 [控制台] 中的 [服務] 面板，或使用 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)來重新啟動服務。
 
 ## <a name="verify-installation"></a>確認安裝
 
@@ -230,11 +230,11 @@ ms.locfileid: "82588225"
 
    將 **run_value** 設定為 1。
     
-2. 開啟 [服務]  面板或 SQL Server 組態管理員，並確認 **SQL Server Launchpad 服務**正在執行。 您應該為每個安裝 R 或 Python 的資料庫引擎執行個體都提供一個服務。 如需服務的詳細資訊，請參閱[擴充性架構](../concepts/extensibility-framework.md)。 
+2. 開啟 [服務] 面板或 SQL Server 組態管理員，並確認 **SQL Server Launchpad 服務**正在執行。 您應該為每個安裝 R 或 Python 的資料庫引擎執行個體都提供一個服務。 如需服務的詳細資訊，請參閱[擴充性架構](../concepts/extensibility-framework.md)。 
    
 3. 如果啟動控制板正在執行，您就能執行簡單的 Python 與 R 指令碼，以確認外部指令碼執行階段可以與 SQL Server 通訊。
 
-   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中開啟新的 [查詢]  視窗，然後執行如下的指令碼：
+   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中開啟新的 [查詢] 視窗，然後執行如下的指令碼：
    + 適用於 R
    
      ```sql

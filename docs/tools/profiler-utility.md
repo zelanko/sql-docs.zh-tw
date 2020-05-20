@@ -1,5 +1,6 @@
 ---
 title: Profiler 公用程式
+description: profiler 公用程式會啟動 SQL Server Profiler 工具。 選擇性引數可讓您控制應用程式的啟動方式。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9ed207e5fa854dc25a07edfff49a75aad9d370ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08c37d53b0ab9bd9d02ca3574edfcc6061cf8218
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307390"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151307"
 ---
 # <a name="profiler-utility"></a>Profiler 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ profiler
  這是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證的使用者登入識別碼。 登入識別碼會區分大小寫。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
+>  第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]。  
   
  **/P** *password*  
  指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證之使用者指定的密碼。  
@@ -82,7 +83,7 @@ profiler
  指定啟動 Profiler 時所載入的追蹤資料表。 您必須指定資料庫、使用者或結構描述，以及資料表。  
   
  **/T"** *template_name* **"**  
- 指定將載入來設定追蹤的範本。 範本名稱必須用引號括住。 範本名稱必須在系統範本目錄中，或在使用者範本目錄中。 如果兩個目錄中有同名的兩個範本存在，就會載入系統目錄中的範本。 如果沒有含指定名稱的範本，便會載入標準範本。 請注意，在 <範本名稱>  中，不應指定範本的副檔名 (.tdf)。 例如：  
+ 指定將載入來設定追蹤的範本。 範本名稱必須用引號括住。 範本名稱必須在系統範本目錄中，或在使用者範本目錄中。 如果兩個目錄中有同名的兩個範本存在，就會載入系統目錄中的範本。 如果沒有含指定名稱的範本，便會載入標準範本。 請注意，在 <範本名稱> 中，不應指定範本的副檔名 (.tdf)。 例如：  
   
 ```  
 /T "standard"  
@@ -110,7 +111,7 @@ profiler
 |ss|兩位數的秒鐘|  
   
 > [!NOTE]  
->  只有當  **中已啟用 [使用地區設定顯示日期與時間值]** [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 選項時，才能使用 "MM-DD-YY hh:mm:ss" 格式。 如果這個選項未啟用，您必須使用 "YYYY-MM-DD hh:mm:ss" 日期和時間格式。  
+>  只有當 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中已啟用 [使用地區設定顯示日期與時間值] 選項時，才能使用 "MM-DD-YY hh:mm:ss" 格式。 如果這個選項未啟用，您必須使用 "YYYY-MM-DD hh:mm:ss" 日期和時間格式。  
   
  **/R**  
  啟用追蹤檔的換用。  

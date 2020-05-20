@@ -1,5 +1,6 @@
 ---
 title: XML 輸出檔案格式
+description: 在 SQL Server 中，ssbdiagnose 公用程式可以將其輸出當做 XML 檔案來傳遞。 建立應用程式來分析或報告錯誤，或在 XML 編輯器中加以檢視。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -14,12 +15,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 50d1c8467c3ec7d51325b1a2beaad8f9216f0dbc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b039d5441ed39c85a8cf1e9468eddfe165aad1c
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254176"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150501"
 ---
 # <a name="xml-output-file-format-ssbdiagnose"></a>XML 輸出檔格式 (ssbdiagnose)
 

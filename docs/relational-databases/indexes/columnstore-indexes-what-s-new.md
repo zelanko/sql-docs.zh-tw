@@ -1,7 +1,7 @@
 ---
 title: 資料行存放區索引 - 新功能 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2018
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 690455f8dba76b45643ac4971c988059c56e33f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0728c62f3c866a75a88702b7fdd2f7e8cea557dc
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70009428"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269443"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>資料行存放區索引 - 新功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,6 +49,12 @@ ms.locfileid: "70009428"
 |資料行存放區索引可以具有非保存的計算資料行||||是|||   
   
  <sup>1</sup> 若要建立唯讀的非叢集資料行存放區索引，請將索引儲存在唯讀的檔案群組中。  
+
+## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+ [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 新增這些新功能。
+
+### <a name="functional"></a>函數
+- 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，Tuple Mover 會由背景合併工作協助，該工作會自動壓縮已存在一段時間的較小 OPEN 差異資料列群組 (由內部閾值決定)，或合併已刪除大量資料列的 COMPRESSED 資料列群組。 之前，需要進行索引重新組織作業，才能合併包含部分刪除之資料的資料列群組。 這可改善一段時間的資料行存放區索引品質。 
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 新增這些新功能。

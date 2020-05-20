@@ -1,6 +1,7 @@
 ---
 title: 執行 SQL Server Profiler
 titleSuffix: SQL Server Profiler
+description: 了解您可以從中啟動 SQL Server Profiler 的程式與功能表，以及搭配追蹤輸出使用的連線內容、範本與篩選。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,39 +12,39 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 89089c07a3b13ee7764770df3d582ba449b65f53
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7bfe84350449d1de600699c7bb73348bf5a1b069
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307790"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151667"
 ---
 # <a name="run-sql-server-profiler"></a>執行 SQL Server Profiler
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-您可以使用多種不同的方式來執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，以支援在各種狀況中收集追蹤輸出。 您可以從 Windows 10 的 [開始][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **功能表、** Tuning Advisor 的 [工具]  功能表，以及 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的數個位置啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+您可以使用多種不同的方式來執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，以支援在各種狀況中收集追蹤輸出。 您可以從 Windows 10 的 [開始] 功能表、[!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的 [工具] 功能表，以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的數個位置啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
   
-當您第一次啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，且從 [檔案]  功能表中選取 [新增追蹤]  時，應用程式會顯示一個 [連線到伺服器]  對話方塊，您可在此指定要連線的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+當您第一次啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，且從 [檔案] 功能表中選取 [新增追蹤] 時，應用程式會顯示一個 [連線到伺服器] 對話方塊，您可在此指定要連線的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>從 Windows 10 的 [開始] 功能表啟動 SQL Server Profiler  
--  按一下 Windows **開始**圖示或按 Windows 鍵，然後鍵入 "SQL Server Profiler 17"。 按一下出現的 [SQL Server Profiler 17]  磚。   
+-  按一下 Windows **開始**圖示或按 Windows 鍵，然後鍵入 "SQL Server Profiler 17"。 按一下出現的 [SQL Server Profiler 17] 磚。   
 
 ## <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>在 Database Engine Tuning Advisor 中啟動 SQL Server Profiler  
 -  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的 **[工具]** 功能表上，按一下 **[SQL Server Profiler]** 。  
 
 ## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中啟動 SQL Server Profiler  
- 您可以從 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中的數個位置啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 當 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 啟動時，它會載入連線內容、追蹤範本及其啟動點的篩選內容。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會在自己的執行個體中啟動每個 SQL Server Profiler 工作階段，即便在您關閉 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 後 Profiler 仍會繼續執行。  
+ 您可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的數個位置啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 當 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 啟動時，它會載入連線內容、追蹤範本及其啟動點的篩選內容。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會在自己的執行個體中啟動每個 SQL Server Profiler 工作階段，即便在您關閉 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 後 Profiler 仍會繼續執行。  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>從工具功能表啟動 SQL Server Profiler  
--  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [工具]  功能表中，按一下 [SQL Server Profiler]  。  
+-  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [工具] 功能表中，按一下 [SQL Server Profiler]。  
 
 ### <a name="to-start-sql-server-profiler-from-the-query-editor"></a>從查詢編輯器啟動 SQL Server Profiler  
-- 在查詢編輯器中按一下滑鼠右鍵，然後選取 [在 SQL Server Profiler 中追蹤查詢]  。  
+- 在查詢編輯器中按一下滑鼠右鍵，然後選取 [在 SQL Server Profiler 中追蹤查詢]。  
 
   > [!NOTE]  
   >  連接內容是編輯器連接、追蹤範本為 TSQL_SPs，而套用的篩選為 SPID = 查詢視窗 SPID。  
     
 ### <a name="to-start-sql-server-profiler-from-activity-monitor"></a>若要從活動監視器啟動 SQL Server Profiler  
-- 在活動監視器中按一下 [處理序]  窗格，以滑鼠右鍵按一下您要分析的處理序，然後按一下 [在 SQL Server Profiler 中追蹤處理序]  。  
+- 在活動監視器中按一下 [處理序] 窗格，以滑鼠右鍵按一下您要分析的處理序，然後按一下 [在 SQL Server Profiler 中追蹤處理序]。  
 
     > [!NOTE]  
     >  選取處理序時，如果有開啟 [活動監視器]，則連接內容為 [物件總管] 連接。 追蹤範本是以伺服器類型為基礎的預設值，而且 SPID 等於所選處理序的 SPID。  

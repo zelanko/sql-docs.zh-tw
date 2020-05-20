@@ -1,5 +1,6 @@
 ---
 title: 建立主資料管理員 web 應用程式
+description: 主資料管理員 web 應用程式會提供介面，讓使用者使用主要資料，並讓系統管理員設定及管理 MDS。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5617adb01ffc566319905942376ecaa9b78065bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4df60a40ff57ee7d51b7a34a2452815239ab491
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728509"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606650"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>建立主資料管理員 web 應用程式（Master Data Services）
 
@@ -33,7 +34,7 @@ ms.locfileid: "81728509"
   
  建立 Web 應用程式之後，將它與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫產生關聯。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
   
 -   如需主控此 Web 應用程式之電腦需求的資訊，請參閱 [Web 應用程式需求 &#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)。  
   
@@ -78,7 +79,7 @@ ms.locfileid: "81728509"
   
 -   將此 Web 應用程式關聯至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。 如需詳細資訊，請參閱 [將 Master Data Services 資料庫與 Web 應用程式產生關聯](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)。  
   
--   （選擇性）如果您想要使用[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]傳輸層安全性（TLS）加密內容（先前稱為安全通訊端層（SSL）），請將裝載 web 應用程式的網站設定為使用 HTTPS 系結。 您必須使用 Internet Information Services （IIS）工具（例如 IIS 管理員）來設定 web 伺服器的伺服器憑證，以及設定 HTTPS 系結和網站的 TLS 設定。 如需詳細資訊，請參閱 [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)。  
+-   （選擇性） [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 如果您想要使用傳輸層安全性（TLS）加密內容（先前稱為安全通訊端層（SSL）），請將裝載 web 應用程式的網站設定為使用 HTTPS 系結。 您必須使用 Internet Information Services （IIS）工具（例如 IIS 管理員）來設定 web 伺服器的伺服器憑證，以及設定 HTTPS 系結和網站的 TLS 設定。 如需詳細資訊，請參閱 [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  

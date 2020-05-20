@@ -1,7 +1,7 @@
 ---
-title: 資料行存放區索引：概觀 | Microsoft Docs
+title: 資料行存放區索引：概觀 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 05/08/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,17 +18,17 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48139f3da39cb280a95ccff8ab9aca2efc67a13b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70009399"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269481"
 ---
-# <a name="columnstore-indexes-overview"></a>資料行存放區索引；概觀
+# <a name="columnstore-indexes-overview"></a>資料行存放區索引：概觀
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-「資料行存放區索引」是儲存和查詢大型資料倉儲事實資料表的標準。 此索引使用以資料行為基礎的資料儲存和查詢處理，相較於傳統的資料列導向儲存，最高可在您的資料倉儲中達到 **10 倍查詢效能**改善。 相較於未壓縮的資料，您最高也可以達到 **10 倍資料壓縮**改善。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，資料行存放區索引可使用作業分析，這是對交易式工作負載執行高效能即時分析的功能。  
+「資料行存放區索引」是儲存和查詢大型資料倉儲事實資料表的標準。 此索引使用以資料行為基礎的資料儲存和查詢處理，相較於傳統的資料列導向儲存，最高可在您的資料倉儲中達到 10 倍的查詢效能改善。 相較於未壓縮的資料大小，您也可以將資料壓縮提升高達 10 倍。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，資料行存放區索引可啟用作業分析：在交易式工作負載上執行高效能即時分析的能力。  
   
 深入了解相關案例：  
   
@@ -55,6 +55,16 @@ ms.locfileid: "70009399"
   
 為達到高效能和高壓縮率，資料行存放區索引會將資料表切割為資料列群組，然後以資料行取向的方式壓縮每個資料列群組。 資料列群組中的資料列數目必須多到足以改善壓縮率，並且少到足以獲益於記憶體中作業。    
 
+資料列群組，其中所有資料都已從 COMPRESSED 轉換成 TOMBSTONE 狀態，並在稍後由名為 Tuple Mover 的背景處理序移除。 如需有關資料列群組狀態的詳細資訊，請參閱 [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)。
+
+> [!TIP]
+> 太多小型資料列群組會降低資料行存放區索引的品質。 在 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 之前，需要遵循內部閾值原則來進行重新組織作業，以合併較小的 COMPRESSED 資料列群組，該內部閾值原則會決定如何移除已刪除的資料列以及合併已壓縮的資料列群組。    
+> 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，背景合併工作也適用於合併已刪除大量資料列的 COMPRESSED 資料列群組。     
+> 合併較小的資料列群組之後，索引品質應該會改善。 
+
+> [!NOTE]
+> 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，Tuple Mover 會由背景合併工作協助，該工作會自動壓縮已存在一段時間的較小 OPEN 差異資料列群組 (由內部閾值決定)，或合併已刪除大量資料列的 COMPRESSED 資料列群組。 這可改善一段時間的資料行存放區索引品質。         
+
 #### <a name="column-segment"></a>資料行區段
 資料行區段是指資料列群組內部的資料行。  
   
@@ -71,9 +81,16 @@ ms.locfileid: "70009399"
 為降低資料行區段的分散程度並提升效能，資料行存放區索引可能會暫時將一些資料儲存到叢集索引 (稱為*差異存放區*)，並儲存已刪除資料列識別碼的 BTree 清單。 差異存放區作業將由幕後處理。 為了能傳回正確的查詢結果，叢集資料行存放區索引會結合資料行存放區和差異存放區兩方面的查詢結果。  
   
 #### <a name="delta-rowgroup"></a>差異資料列群組
-差異資料列群組是僅能搭配資料行存放區索引使用的叢集索引。 它可藉由儲存資料列，直到資料列數達到臨界值後移入資料行存放區，以改善資料行存放區的壓縮和效能。  
+差異資料列群組是僅能搭配資料行存放區索引使用的叢集 B 型樹狀結構索引。 其可藉由儲存資料列，直到資料列數達到閾值 (1,048,576 個資料列) 後移入資料行存放區，以改善資料行存放區的壓縮與效能。  
 
-差異資料列群組一旦達到資料列數目上限，就會隨即關閉。 Tuple Mover 處理序將檢查是否有資料列群組已關閉。 如果處理序發現已關閉的資料列群組，便會壓縮資料列群組，並將其儲存至資料行存放區中。  
+差異資料列群組一旦達到資料列數目上限，就會從 OPEN 轉換為 CLOSED 狀態。 名為 Tuple Mover 的背景處理序會檢查已關閉的資料列群組。 如果處理序發現已關閉的資料列群組，便會壓縮差異資料列群組，並將其儲存至資料行存放區中作為 COMPRESSED 資料列群組。 
+
+當差異資料列群組已壓縮時，現有的差異資料列群組會轉換成 TOMBSTONE 狀態，供 Tuple Mover 稍後在其沒有參考時移除。 
+
+如需有關資料列群組狀態的詳細資訊，請參閱 [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)。 
+
+> [!NOTE]
+> 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，Tuple Mover 會由背景合併工作協助，該工作會自動壓縮已存在一段時間的較小 OPEN 差異資料列群組 (由內部閾值決定)，或合併已刪除大量資料列的 COMPRESSED 資料列群組。 這可改善一段時間的資料行存放區索引品質。         
   
 #### <a name="deltastore"></a>差異存放區
 資料行存放區索引可以有多個差異資料列群組。 所有差異資料列群組統稱為差異存放區。   
@@ -134,7 +151,7 @@ ms.locfileid: "70009399"
 |[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
 ## <a name="related-tasks"></a>相關工作  
-所有關聯式資料表都會使用資料列存放區作為基礎資料格式，除非您將其指定為叢集資料行存放區索引。 除非您指定 `CREATE TABLE` 選項，否則 `WITH CLUSTERED COLUMNSTORE INDEX` 會建立資料列存放區資料表。  
+所有關聯式資料表都會使用資料列存放區作為基礎資料格式，除非您將其指定為叢集資料行存放區索引。 除非您指定 `WITH CLUSTERED COLUMNSTORE INDEX` 選項，否則 `CREATE TABLE` 會建立資料列存放區資料表。  
   
 當您使用 `CREATE TABLE` 陳述式建立資料表時，可以指定 `WITH CLUSTERED COLUMNSTORE INDEX` 選項，將資料表建立為資料行存放區。 如果您已經有一個資料列存放區資料表，並想要將它轉換成資料行存放區，則可以使用 `CREATE COLUMNSTORE INDEX` 陳述式。  
   

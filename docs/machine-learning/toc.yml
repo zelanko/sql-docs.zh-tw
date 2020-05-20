@@ -1,7 +1,7 @@
-- name: SQL Server 機器學習服務文件
+- name: SQL 機器學習文件
   href: ../machine-learning/index.yml
-- name: SQL Server 文件 >
-  href: ../sql-server/index.yml
+- name: Microsoft SQL 文件 >
+  href: ../index.yml
 - name: 概觀
   expanded: true
   items:
@@ -113,6 +113,26 @@
       items:
         - name: R 教學課程
           href: ../machine-learning/tutorials/r-tutorials.md
+        - name: 滑雪板出租 (決策樹)
+          items:
+            - name: 1 - 簡介
+              href: ../machine-learning/tutorials/r-predictive-model-introduction.md
+            - name: 2 - 準備資料
+              href: ../machine-learning/tutorials/r-predictive-model-prepare-data.md
+            - name: 3 - 訓練模型
+              href: ../machine-learning/tutorials/r-predictive-model-train.md
+            - name: 4 - 部署模型
+              href: ../machine-learning/tutorials/r-predictive-model-deploy.md
+        - name: 將客戶分類 (k-means 叢集)
+          items:
+            - name: 1 - 簡介
+              href: ../machine-learning/tutorials/r-clustering-model-introduction.md
+            - name: 2 - 準備資料
+              href: ../machine-learning/tutorials/r-clustering-model-prepare-data.md
+            - name: 3 - 建立模型
+              href: ../machine-learning/tutorials/r-clustering-model-build.md
+            - name: 4 - 部署模型
+              href: ../machine-learning/tutorials/r-clustering-model-deploy.md
         - name: 建立資料分割型模型
           href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
         - name: 在 T-SQL 中使用 R

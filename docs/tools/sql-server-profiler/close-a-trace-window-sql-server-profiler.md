@@ -1,6 +1,7 @@
 ---
 title: 關閉追蹤視窗
 titleSuffix: SQL Server Profiler
+description: 探索如何在擷取事件資料的 SQL Server Profiler 中關閉追蹤視窗。 了解如何在追蹤期間或完成之後加以關閉。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ ms.author: maghan
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 8f601af41c0a78af0f49a98d97f559b47de237f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 92bf90cf51bc380a1c1cd61d72fb5ebcca68dbd1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74957652"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151926"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>關閉追蹤視窗 (SQL Server Profiler)
 

@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92aaf7c04d7a5e176fce4448b9d4f6172b541647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce461246f0afef31ab4b60b772f92aeeb479a4cb
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75755845"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606871"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -26,7 +26,7 @@ Microsoft Connector for Oracle 能讓您以 SSIS 套件將資料從 Oracle 資�
 
 Microsoft Connector for Oracle 支援下列 Microsoft SQL Server 產品：
 
-- 自 SQL Server 2019 起
+- 自 SQL Server 2019 CU1 起
 - 從 15.9.3 版開始的 SQL Server Data Tools (SSDT)
 
 以下是支援的資料來源 Oracle 資料庫版本：

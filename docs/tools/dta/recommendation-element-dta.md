@@ -1,5 +1,6 @@
 ---
 title: Recommendation 元素 (DTA)
+description: 在 dta 公用程式中，Recommendation 元素包含屬於使用者指定設定之一部分的假設性索引的相關資訊。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a6ad8f298dc633959a3da16376c3e2a486ee807c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ffcd156a3379a341188622142205575a3209a11
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306035"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151830"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation 元素 (DTA)
 

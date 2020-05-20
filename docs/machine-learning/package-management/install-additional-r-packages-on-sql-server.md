@@ -3,19 +3,19 @@ title: 安裝新的 R 套件
 description: 了解如何使用 sqlmlutils，在 SQL Server 機器學習服務執行個體上安裝新的 R 套件。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/20/2019
+ms.date: 05/11/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ecfeeafd90d2fd7449ed99c5bacbdff05dff2784
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2b2c561791b88340fd0a77977843f582fa60c648
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746331"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269427"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝新的 R 套件
 
@@ -51,54 +51,59 @@ ms.locfileid: "82746331"
 
 若用戶端電腦可以存取網際網路，您可以在線上下載並安裝 **sqlmlutils** 與其相依套件。
 
-1. 從 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 將最新的 **sqlmlutils** ZIP 檔案下載到用戶端電腦。 請勿解壓縮檔案。
+1. 從 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist \(英文\) 將最新的 **sqlmlutils** 檔案 (`.zip` 適用於 Windows，`.tar.gz` 適用於 Linux) 下載到用戶端電腦。 不要展開檔案。
 
-1. 開啟 [命令提示字元]  並執行下列命令，以安裝 **sqlmlutils** 與 **RODBCext** 套件。 取代為您下載之 **sqlmlutils** ZIP 檔案的完整路徑 (此範例假設該檔案位於您的 [文件] 資料夾中)。 會在線上找到 **RODBCext** 套件並安裝。
+1. 開啟 [命令提示字元] 並執行下列命令，以安裝 **RODBCext** 與 **sqlmlutils** 套件。 將路徑取代為您下載之 **sqlmlutils** 檔案的路徑。 會在線上找到 **RODBCext** 套件並安裝。
 
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```console
-   R -e "install.packages('RODBCext', repos='https://cran.microsoft.com')"
-   R CMD INSTALL %UserProfile%\Documents\sqlmlutils_0.7.1.zip
+   R -e "install.packages('RODBCext', repos='https://mran.microsoft.com/snapshot/2019-02-01/')"
+   R CMD INSTALL sqlmlutils_0.7.1.zip
    ```
+   ::: moniker-end
+
+   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   ```console
+   R -e "install.packages('RODBCext', repos='https://mran.microsoft.com/snapshot/2019-02-01/')"
+   R CMD INSTALL sqlmlutils_0.7.1.tar.gz
+   ```
+   ::: moniker-end
 
 ### <a name="install-sqlmlutils-offline"></a>離線安裝 sqlmlutils
 
-若用戶端電腦沒有網際網路連線，您必須使用可存取網際網路的電腦事先下載 **sqlmlutils** 與 **RODBCext** 套件。 接著，您可以將檔案複製到用戶端電腦上的資料夾，並離線安裝套件。
+若用戶端電腦沒有網際網路連線，您必須使用可存取網際網路的電腦事先下載 **RODBCext** 與 **sqlmlutils** 套件。 接著，您可以將檔案複製到用戶端電腦上的資料夾，並離線安裝套件。
 
 **RODBCext** 套件有數個相依套件，而識別套件的所有相依性會變得複雜。 建議您使用 [**miniCRAN**](https://andrie.github.io/miniCRAN/)，為包括所有相依套件的套件建立本機存放庫資料夾。
 如需詳細資訊，請參閱[使用 miniCRAN 建立本機 R 套件存放庫](create-a-local-package-repository-using-minicran.md)。
 
-**sqlmlutils** 套件是由您複製到用戶端電腦並安裝的單一 ZIP 檔案所組成。
+**sqlmlutils** 套件包含單一檔案，您可以將該檔案複製到用戶端電腦並安裝。
 
 在可以存取網際網路的電腦上：
 
 1. 安裝 **miniCRAN**。 如需詳細資訊，請參閱 [安裝 miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran)。
 
-1. 在 RStudio 中，執行下列 R 指令碼，以建立套件 **RODBCext** 的本機存放庫。 此範例會在 `c:\downloads\rodbcext` 資料夾中建立存放庫。
+1. 在 RStudio 中，執行下列 R 指令碼，以建立套件 **RODBCext** 的本機存放庫。 此範例假設存放庫將會在 `rodbcext` 資料夾中建立。
 
-   ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
-
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
-   local_repo <- "c:/downloads/rodbcext"
+   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
+   local_repo <- "rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
-
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
-   local_repo <- "c:/downloads/rodbcext"
+   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
+   local_repo <- "rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "source", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
    針對 `Rversion` 值，請使用 SQL Server 上安裝的 R 版本。 若要確認已安裝的版本，請使用下列 T-SQL 命令。
@@ -108,16 +113,29 @@ ms.locfileid: "82746331"
     , @script = N'print(R.version)'
    ```
 
-1. 從 [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) 下載最新的 **sqlmlutils** ZIP 檔案 (不要解壓縮該檔案)。 例如，將檔案下載到 `c:\downloads\sqlmlutils_0.7.1.zip`。
+1. 從 [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) \(英文\) 下載最新的 **sqlmlutils** 檔案 (`.zip` 適用於 Windows，`.tar.gz` 適用於 Linux)。 不要展開檔案。
 
-1. 將整個 **RODBCext** 存放庫資料夾 (`c:\downloads\rodbcext`) 與 **sqlmlutils** ZIP 檔案 (`c:\downloads\sqlmlutils_0.7.1.zip`) 複製到用戶端電腦。 例如，將它們複製到用戶端電腦上的 `c:\temp\packages` 資料夾。
+1. 將整個 [RODBCext] 存放庫資料夾與 **sqlmlutils** 檔案複製到用戶端電腦。
 
-在您用來連線到 SQL Server 的用戶端電腦上，開啟命令提示字元，然後執行下列命令以安裝 **RODBCext**，然後安裝 **sqlmlutils**。
+在用來連線到 SQL Server 的用戶端電腦上：
 
-```console
-R -e "install.packages('RODBCext', repos='c:\temp\packages\rodbcext')"
-R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
-```
+1. 開啟命令提示字元。
+
+1. 執行下列命令以安裝 **RODBCext**，然後安裝 **sqlmlutils**。 將完整路徑取代為 [RODBCext] 存放庫資料夾，以及您複製到此電腦之 **sqlmlutils** 檔案的完整路徑。
+
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+   ```console
+   R -e "install.packages('RODBCext', repos='rodbcext')"
+   R CMD INSTALL sqlmlutils_0.7.1.zip
+   ```
+   ::: moniker-end
+
+   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   ```console
+   R -e "install.packages('RODBCext', repos='rodbcext')"
+   R CMD INSTALL sqlmlutils_0.7.1.tar.gz
+   ```
+   ::: moniker-end
 
 ## <a name="add-an-r-package-on-sql-server"></a>在 SQL Server 上新增 R 套件
 
@@ -154,8 +172,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
 1. 執行下列 R 指令碼，以建立 **glue** 的本機存放庫。 此範例會在 `c:\downloads\glue` 中建立存放庫資料夾。
 
-   ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
-
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"
@@ -164,11 +181,9 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
-
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"
@@ -177,7 +192,6 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "source", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
 

@@ -1,5 +1,6 @@
 ---
 title: SqlLocalDB 公用程式
+description: SqlLocalDB 公用程式命令列工具可讓使用者與開發人員建立及管理 SQL Server Express LocalDB 的執行個體。
 ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c829c9adce95dd1a4a84d5fd6fc7b88abdece96a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b171f587e54948b2a8d70c804d47362e97b61bb9
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306673"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151607"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +45,8 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **create** | **c** ] *執行個體名稱>\<* *\<* 執行個體版本> [ **-s** ]  
- 建立 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 的新執行個體。 **SqlLocalDB** 會使用 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]*執行個體版本>\< 引數所指定之*  二進位檔的版本。 使用至少一個十進位數的數字格式指定版本號碼。 次要版本號碼 (Service Pack) 為選擇性。 例如，下列兩個版本號碼都可接受：11.0 或 11.0.1186。 電腦上必須安裝指定的版本。 如果未指定，版本號碼會預設為 **SqlLocalDB** 公用程式的版本。 加入 **-s** 會啟動新的 **LocalDB** 執行個體。  
+ [ **create** | **c** ] \<執行個體名稱> \<執行個體版本> [ **-s** ]  
+ 建立 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 的新執行個體。 **SqlLocalDB** 會使用 *\<執行個體版本>* 引數所指定之 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 二進位檔的版本。 使用至少一個十進位數的數字格式指定版本號碼。 次要版本號碼 (Service Pack) 為選擇性。 例如，下列兩個版本號碼都可接受：11.0 或 11.0.1186。 電腦上必須安裝指定的版本。 如果未指定，版本號碼會預設為 **SqlLocalDB** 公用程式的版本。 加入 **-s** 會啟動新的 **LocalDB** 執行個體。  
   
  [ **share** | **h** ]  
  使用指定的共用名稱來共用指定的 **LocalDB** 私用執行個體。 如果省略使用者 SID 或帳戶名稱，會預設為目前的使用者。  
@@ -74,7 +75,7 @@ SqlLocalDB.exe
  傳回每一個 **SqlLocalDB** 選項的簡短描述。  
   
 ## <a name="remarks"></a>備註  
- <執行個體名稱>  引數必須遵循 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼的規則，或者必須以雙引號括住。  
+ <執行個體名稱> 引數必須遵循 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼的規則，或者必須以雙引號括住。  
   
  不使用任何引數執行 SqlLocalDB 會傳回說明文字。  
   

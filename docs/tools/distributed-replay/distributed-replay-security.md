@@ -1,6 +1,7 @@
 ---
 title: Distributed Replay 安全性
 titleSuffix: SQL Server Distributed Replay
+description: 此文章說明 SQL Server Distributed Replay 的安全性設定步驟，以及資料保護與移除步驟的重要考量。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a9d29f7c546064d6069caa3770e1ddc1e7ebe53f
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 25bc62c6ea0785cf9abb05909fdc2f2563932b07
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087439"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151101"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 安全性
 
@@ -51,13 +52,13 @@ ms.locfileid: "82087439"
   
 1.  請根據作業系統執行下列其中一項作業：  
   
-    -   按一下 [開始]  、在 [搜尋]  方塊中輸入 **services.msc**，然後按下 ENTER。  
+    -   按一下 [開始]、在 [搜尋] 方塊中輸入 **services.msc**，然後按下 ENTER。  
   
-    -   按一下 [開始]  、按一下 [執行]  、輸入 **services.msc**，然後按下 ENTER。  
+    -   按一下 [開始]、按一下 [執行]、輸入 **services.msc**，然後按下 ENTER。  
   
-2.  在 [服務]  對話方塊中，以滑鼠右鍵按一下您想要設定的服務，然後按一下 [內容]  。  
+2.  在 [服務] 對話方塊中，以滑鼠右鍵按一下您想要設定的服務，然後按一下 [內容]。  
   
-3.  在 [登入]  索引標籤上，按一下 [This account (這個帳戶)]  。  
+3.  在 [登入] 索引標籤上，按一下 [This account (這個帳戶)]。  
   
 4.  設定您想要使用的使用者帳戶。  
   
@@ -76,9 +77,9 @@ ms.locfileid: "82087439"
   
 1.  **開啟 dcomcnfg.exe，[元件服務] 嵌入式管理單元**：此為用來設定 DCOM 權限的工具。  
   
-    1.  在 Controller 電腦上，按一下 [開始]  。  
+    1.  在 Controller 電腦上，按一下 [開始]。  
   
-    2.  在 [搜尋]  方塊中，輸入 **dcomcnfg.exe**。  
+    2.  在 [搜尋] 方塊中，輸入 **dcomcnfg.exe**。  
   
     3.  按 ENTER 鍵。  
   

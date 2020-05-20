@@ -2,7 +2,7 @@
 title: 使用 ODBC 連線
 description: 了解如何使用 Microsoft ODBC Driver for SQL Server，從 Linux 或 macOS 建立與資料庫的連線。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b99479883fd1cc74008d62a9c322226ed587244
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2a17f9a69adae4bc785560ac3e06b8025a34089a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632800"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152041"
 ---
 # <a name="connecting-to-sql-server"></a>連線到 SQL Server
+
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 本主題討論如何建立與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫之間的連線。  
@@ -36,34 +37,40 @@ ms.locfileid: "81632800"
   
 傳遞至**驅動程式**關鍵字的值可以是下列其中之一：  
   
--   安裝驅動程式時所使用的名稱。
+- 安裝驅動程式時所使用的名稱。
 
--   驅動程式庫的路徑，指定於用來安裝驅動程序的範本 .ini 檔案中。  
+- 驅動程式庫的路徑，指定於用來安裝驅動程序的範本 .ini 檔案中。  
 
-若要建立 DSN，請建立 (如有必要) 並編輯檔案 **~/.odbc.ini** (主目錄中的 `.odbc.ini`)，以取得僅供目前使用者存取的使用者 DSN，或編輯 `/etc/odbc.ini` 以取得系統 DSN (需要系統管理權限)。以下是範例檔案，其中顯示 DSN 的最低必要項目：  
+DSN 是選擇性的。 您可以使用 DSN 在 `DSN` 名稱下定義連接字串關鍵字，然後您就可在連接字串中加以參考。 若要建立 DSN，請建立 (如有必要) 並編輯檔案 **~/.odbc.ini** (主目錄中的 `.odbc.ini`)，以取得僅供目前使用者存取的使用者 DSN，或編輯 `/etc/odbc.ini` 以取得系統 DSN (需要系統管理權限)。以下是範例檔案，其中顯示 DSN 的最低必要項目：  
 
-```  
+```ini
+# [DSN name]
 [MSSQLTest]  
-Driver = ODBC Driver 13 for SQL Server  
-Server = [protocol:]server[,port]  
-#   
+Driver = ODBC Driver 17 for SQL Server  
+# Server = [protocol:]server[,port]  
+Server = tcp:localhost,1433
+#
 # Note:  
 # Port is not a valid keyword in the odbc.ini file  
 # for the Microsoft ODBC driver on Linux or macOS
 #  
 ```  
 
+若要在連接字串中使用上述 DSN 進行連線，您可以指定 `DSN` 關鍵字，例如：`DSN=MSSQLTest;UID=my_username;PWD=my_password`  
+上述連接字串相當於指定不含 `DSN` 關鍵字的連接字串，例如：`Driver=ODBC Driver 17 for SQL Server;Server=tcp:localhost,1433;UID=my_username;PWD=my_password`
+
 您可以選擇性地指定用以連接到伺服器的通訊協定和連接埠。 例如，**Server=tcp:** _servername_ **,12345**。 請注意，Linux 和 macOS 驅動程式所支援的唯一通訊協定是 `tcp`。
 
-若要在靜態連接埠上連線到具名執行個體，請使用 <b>Server=</b>伺服器名稱  ,**port_number**。 在 17.4 版之前，不支援連線到動態連接埠。
+若要在靜態連接埠上連線到具名執行個體，請使用 <b>Server=</b>伺服器名稱,**port_number**。 在 17.4 版之前，不支援連線到動態連接埠。
 
 或者，您可將 DSN 資訊新增至範本檔案，並執行下列命令將其新增至 `~/.odbc.ini`：
  - **odbcinst -i -s -f** _template_file_  
- 
+
 您可以使用 `isql` 測試連接，以確認您的驅動程式可運作，或者您可以使用下列命令：
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
 ## <a name="using-tlsssl"></a>使用 TLS/SSL  
+
 您可使用傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 來加密對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的連線。 TLS 會保護網路上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者名稱和密碼。 TLS 也會驗證伺服器的身分識別，以防止攔截式 (MITM) 攻擊。  
 
 啟用加密可提高安全性，但會犧牲效能。
@@ -79,7 +86,7 @@ Server = [protocol:]server[,port]
 
 根據預設，加密的連線一律會驗證伺服器的憑證。 不過，如果您連接到具有自我簽署憑證的伺服器，也請新增 `TrustServerCertificate` 選項，以略過檢查憑證是否符合受信任憑證授權單位的清單：  
 
-```  
+```
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   

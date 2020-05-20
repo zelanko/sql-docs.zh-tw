@@ -1,6 +1,7 @@
 ---
 title: 系統管理工具中的重新執行選項
 titleSuffix: SQL Server Distributed Replay
+description: 此文章說明 SQL Server Distributed Replay 管理工具的重新執行命令列選項與語法，其可起始事件重新執行階段。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a41c619bd2d14fdc5438669d5ada239a88125c5a
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 7c012d88065a6a2958411aa1c0849002e9c0436a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925109"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152159"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重新執行選項 (Distributed Replay 管理工具)
 
@@ -93,7 +94,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
 -   **-d** 參數會指定控制器上中繼檔案的位置， `c:\WorkingDir`。  
   
--   **-o** 參數會指定每個指定的用戶端擷取重新執行活動，並將其儲存至結果追蹤檔案。 注意：組態檔中的 `<ResultTrace>` 元素，可用以指定是否應記錄資料列計數與結果集。  
+-   **-o** 參數會指定每個指定的用戶端擷取重新執行活動，並將其儲存至結果追蹤檔案。 注意:設定檔中的 `<ResultTrace>` 元素可用來指定是否要記錄資料列計數和結果集。  
   
 -   **-w** 參數會指定 `client1` 到 `client4` 的電腦，參與為分散式重新執行中的用戶端。  
   

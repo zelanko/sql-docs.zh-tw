@@ -1,5 +1,6 @@
 ---
 title: sqlcmd 公用程式
+description: Sqlcmd 公用程式可讓您使用不同模式輸入 Transact-SQL 陳述式、系統程序與指令檔，以及使用 ODBC 來執行 Transact-SQL 批次。
 ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
@@ -27,12 +28,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b4274b0c724ca86608bf35c9398b3edd199d55a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77544932"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151619"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "77544932"
  **sqlcmd** 公用程式可讓您透過下列各種可用的模式，在命令列提示字元中輸入 Transact-SQL 陳述式、系統程序和指令碼檔案：
 
 - 在命令提示字元中。
-- 在 [查詢編輯器]  中的 SQLCMD 模式中。
+- 在 [查詢編輯器] 中的 SQLCMD 模式中。
 - 在 Windows 指令碼檔案中。
 - 在 SQL Server Agent 作業的作業系統(Cmd.exe) 作業步驟中。
 
@@ -81,7 +82,7 @@ ms.locfileid: "77544932"
   若要在 SSMS 中執行 sqlcmd 陳述式，請從上方導覽 [查詢] 功能表的下拉式清單中選取 [SQLCMD 模式]。  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) 使用 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient，在 [查詢編輯器]  中執行正規和 SQLCMD 模式。 從命令列執行 **sqlcmd** 時，**sqlcmd** 會使用 ODBC 驅動程式。 因為可能會套用不同的預設選項，因此，以 SQLCMD 模式在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] 中以及在 **sqlcmd** 公用程式中執行相同的查詢時，可能會看到不同的行為。  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) 使用 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient，在 [查詢編輯器] 中執行正規和 SQLCMD 模式。 從命令列執行 **sqlcmd** 時，**sqlcmd** 會使用 ODBC 驅動程式。 因為可能會套用不同的預設選項，因此，以 SQLCMD 模式在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] 中以及在 **sqlcmd** 公用程式中執行相同的查詢時，可能會看到不同的行為。  
 >   
   
  目前， **sqlcmd** 不需要在命令列選項與值之間保留一個空格。 但是在未來的版本中，可能會需要在命令列選項與值之間空一個空格。  
@@ -413,7 +414,7 @@ sqlcmd
 >  實際逾時值可能與指定的 *time_out* 值之間有幾秒的差異。  
   
  **-vvar =**  _value_[ **var =** _value_...]  
- 建立 **sqlcmd**指令碼中所能使用的 **sqlcmd** 指令碼變數。 如果值包含空格，請用引號括住該值。 您可以指定多個 _**var**_ = **"** _values_ **"** 值。 如果指定的任何值發生錯誤， **sqlcmd** 會產生一則錯誤訊息，並結束作業。  
+ 建立 **sqlcmd**指令碼中所能使用的 **sqlcmd** 指令碼變數。 如果值包含空格，請用引號括住該值。 您可以指定多個 _**var**_= **"** _values_ **"** 值。 如果指定的任何值發生錯誤， **sqlcmd** 會產生一則錯誤訊息，並結束作業。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -570,7 +571,7 @@ sqlcmd
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要檢視環境變數，請在 [控制台]  中開啟 [系統]  ，然後按一下 [進階]  索引標籤。  
+>  若要檢視環境變數，請在 [控制台] 中開啟 [系統] ，然後按一下 [進階]  索引標籤。  
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 指令碼變數  
   
@@ -689,7 +690,7 @@ sqlcmd
  **STDOUT**  
  將錯誤輸出切換到 **stdout** 資料流。 如果它已重新導向，資料流所重新導向的目標會接收這個錯誤輸出。  
   
- **:Out \<** 檔案名稱  **>** | **STDERR**| **STDOUT**  
+ **:Out \<** 檔案名稱 **>** | **STDERR**| **STDOUT**  
  建立並將所有查詢結果重新導向至 *filename*所指定的檔案、 **stderr** 或 **stdout**。 根據預設，輸出會傳送到 **stdout**。 如果檔案已經存在，它會截斷成零位元組。 在指令碼中， **Out** 命令可以重複出現。  
   
  **:Perftrace \<** _檔案名稱_ **>** | **STDERR**| **STDOUT**  
@@ -755,7 +756,7 @@ sqlcmd
  GO 會發出批次結束及執行任何快取的 Transact-SQL 陳述式的信號。 該批次會作為個別批次執行數次。 您無法在單一批次中宣告變數超過一次。
   
  **其他命令**  
-  **:r \<** 檔案名稱  **>**  
+  **:r \<** 檔案名稱 **>**  
  將 **\<** _filename_ **>** 所指定檔案中的其他 Transact-SQL 陳述式與 **sqlcmd** 命令，剖析至陳述式快取中。  
   
  如果檔案包含的 Transact-SQL 陳述式後面沒有緊接著 **GO**，您必須在 **:r** 之後的一行輸入 **GO**。  

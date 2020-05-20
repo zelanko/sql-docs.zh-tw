@@ -1,5 +1,6 @@
 ---
 title: Server 元素 (DTA)
+description: 在 dta 公用程式中，Server 元素包含您要調整的資料庫所在之伺服器的識別資訊。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 23609b4054b456eed8c95659a3984d3f2f03aec3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3485f4c4179726eafccb51496003c1c02cc2b4c6
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307878"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151809"
 ---
 # <a name="server-element-dta"></a>Server 元素 (DTA)
 

@@ -1,7 +1,7 @@
 ---
 title: UPDATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2019
+ms.date: 05/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 405071c6f4752ab3aebc9f96d23dd2b5734fb39a
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: da8b8b87eceba11f6a39a10527ef90046232676a
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872772"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606804"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "82872772"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -103,8 +103,29 @@ UPDATE
     table_or_view_name}  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql 
+-- Syntax for Azure Synapse Analysis (formerly SQL Data Warehouse) 
+
+[ WITH <common_table_expression> [ ,...n ] ]
+UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name
+SET { column_name = { expression | NULL } } [ ,...n ]  
+FROM [ database_name . [ schema_name ] . | schema_name . ] table_name   
+JOIN {<join_table_source>}[ ,...n ] 
+ON <join_condition>
+[ WHERE <search_condition> ]   
+[ OPTION ( LABEL = label_name ) ]  
+[;]  
+
+<join_table_source> ::=   
+{  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [ <tablesample_clause>]  
+    | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
+}  
+```
+
+```syntaxsql
+-- Syntax for Parallel Data Warehouse
 
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 SET { column_name = { expression | NULL } } [ ,...n ]  
@@ -1136,85 +1157,33 @@ WHERE Year=2004;
 SELECT * FROM YearlyTotalSales;   
 ```  
 
-### <a name="ah-ansi-join-replacement-for-update-statements"></a>AH. 更新陳述式的 ANSI 聯結取代
-假設您有一個複雜更新，其中使用 ANSI 聯結語法將兩個以上的資料表聯結起來，以執行 UPDATE 或 DELETE。  
-
-想像您必須更新這個資料表：  
+### <a name="ah-ansi-join-for-update-statements"></a>AH. 更新陳述式的 ANSI 聯結
+這個範例示範如何根據聯結另一個資料表的結果來更新資料。
 
 ```sql
-CREATE TABLE [dbo].[AnnualCategorySales]
-(   [EnglishProductCategoryName]    NVARCHAR(50)    NOT NULL
-,   [CalendarYear]                  SMALLINT        NOT NULL
-,   [TotalSalesAmount]              MONEY           NOT NULL
-)
-WITH
-(
-    DISTRIBUTION = ROUND_ROBIN
-)
-;  
+CREATE TABLE dbo.Table1   
+    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+
+CREATE TABLE dbo.Table2   
+    (ColA int PRIMARY KEY NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+INSERT INTO dbo.Table1 VALUES(1, 10.0), (1, 20.0);  
+INSERT INTO dbo.Table2 VALUES(1, 0.0);  
+GO  
+
+UPDATE dbo.Table2   
+SET dbo.Table2.ColB = dbo.Table2.ColB + dbo.Table1.ColB  
+FROM dbo.Table2   
+    INNER JOIN dbo.Table1   
+    ON (dbo.Table2.ColA = dbo.Table1.ColA);  
+GO  
+
+SELECT ColA, ColB   
+FROM dbo.Table2;
+GO
 ```
 
-原始查詢可能看起來像這個樣子：  
-
-```
-UPDATE  acs
-SET     [TotalSalesAmount] = [fis].[TotalSalesAmount]
-FROM    [dbo].[AnnualCategorySales]     AS acs
-JOIN    (
-        SELECT  [EnglishProductCategoryName]
-        ,       [CalendarYear]
-        ,       SUM([SalesAmount])              AS [TotalSalesAmount]
-        FROM    [dbo].[FactInternetSales]       AS s
-        JOIN    [dbo].[DimDate]                 AS d    ON s.[OrderDateKey]             = d.[DateKey]
-        JOIN    [dbo].[DimProduct]              AS p    ON s.[ProductKey]               = p.[ProductKey]
-        JOIN    [dbo].[DimProductSubCategory]   AS u    ON p.[ProductSubcategoryKey]    = u.[ProductSubcategoryKey]
-        JOIN    [dbo].[DimProductCategory]      AS c    ON u.[ProductCategoryKey]       = c.[ProductCategoryKey]
-        WHERE   [CalendarYear] = 2004
-        GROUP BY
-                [EnglishProductCategoryName]
-        ,       [CalendarYear]
-        ) AS fis
-ON  [acs].[EnglishProductCategoryName]  = [fis].[EnglishProductCategoryName]
-AND [acs].[CalendarYear]                = [fis].[CalendarYear]
-;  
-```
-
-因為 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 不支援 UPDATE 陳述式 FROM 子句中的 ANSI 聯結，因此您必須微幅修改這個程式碼，否則無法使用。  
-
-您可以使用 CTAS 和隱含聯結的組合來取代此程式碼：  
-
-```sql
--- Create an interim table
-CREATE TABLE CTAS_acs
-WITH (DISTRIBUTION = ROUND_ROBIN)
-AS
-SELECT  ISNULL(CAST([EnglishProductCategoryName] AS NVARCHAR(50)),0)    AS [EnglishProductCategoryName]
-,       ISNULL(CAST([CalendarYear] AS SMALLINT),0)                      AS [CalendarYear]
-,       ISNULL(CAST(SUM([SalesAmount]) AS MONEY),0)                     AS [TotalSalesAmount]
-FROM    [dbo].[FactInternetSales]       AS s
-JOIN    [dbo].[DimDate]                 AS d    ON s.[OrderDateKey]             = d.[DateKey]
-JOIN    [dbo].[DimProduct]              AS p    ON s.[ProductKey]               = p.[ProductKey]
-JOIN    [dbo].[DimProductSubCategory]   AS u    ON p.[ProductSubcategoryKey]    = u.[ProductSubcategoryKey]
-JOIN    [dbo].[DimProductCategory]      AS c    ON u.[ProductCategoryKey]       = c.[ProductCategoryKey]
-WHERE   [CalendarYear] = 2004
-GROUP BY
-        [EnglishProductCategoryName]
-,       [CalendarYear]
-;
-
--- Use an implicit join to perform the update
-UPDATE  AnnualCategorySales
-SET     AnnualCategorySales.TotalSalesAmount = CTAS_ACS.TotalSalesAmount
-FROM    CTAS_acs
-WHERE   CTAS_acs.[EnglishProductCategoryName] = AnnualCategorySales.[EnglishProductCategoryName]
-AND     CTAS_acs.[CalendarYear]               = AnnualCategorySales.[CalendarYear]
-;
-
---Drop the interim table
-DROP TABLE CTAS_acs
-;
-```
-  
 ## <a name="see-also"></a>另請參閱  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

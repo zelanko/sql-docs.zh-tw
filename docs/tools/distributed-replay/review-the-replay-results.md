@@ -1,6 +1,7 @@
 ---
 title: 檢閱重新執行結果
 titleSuffix: SQL Server Distributed Replay
+description: 在 SQL Server Distributed Replay 功能完成分散式重新執行之後，即可將每個用戶端的重新執行活動儲存在每個用戶端的追蹤檔案中。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 03c6f6e0bcb58037e362ffd4b3ad20914fd9c328
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e36130f4901b0f5bcbdba7ab82b512c0075e25b1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306948"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152142"
 ---
 # <a name="review-the-replay-results"></a>檢閱重新執行結果
 
@@ -68,7 +69,7 @@ ms.locfileid: "75306948"
 |TextData|**ntext**|TextData 的內容取決於 EventClass。<br /><br /> 針對 Audit Login 和 ExistingConnection，這是連接的設定選項。<br /><br /> 針對 SQL:BatchStarting，這是批次要求的主體。<br /><br /> 針對 RPC:Starting，這是呼叫的預存程序。<br /><br /> 針對 Replay Settings Event，此資料行包含重新執行組態檔中所定義的設定。<br /><br /> 針對 Replay Statistics Event，這包含下列資訊：<br /><br /> -重新執行目標 SQL Server<br /><br /> -可重新執行的事件總數<br /><br /> -提供者錯誤數目<br /><br /> -內部錯誤數目<br /><br /> -內部警告<br /><br /> -錯誤總數<br /><br /> -整體成功率<br /><br /> -重新執行時間 (HH:MM:SS:MMM)<br /><br /> 針對 Replay Result Set Event，這會顯示傳回結果資料行標頭的清單。<br /><br /> 針對 Replay Result Row Event，這會顯示該資料列所有資料行的傳回值。<br /><br /> 針對 Replay Internal Warning 和 Replay Provider Error，此資料行包含提供者警告或錯誤。|4|  
 |Attention|**bigint**|事件的注意事項持續期間 (毫秒)。 這是從擷取追蹤的注意事項事件計算出來。 如果沒有指定事件的查詢逾時，此資料行不會擴展 (Null)。|5|  
 |SubmitTime|**datetime**|事件提交至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的時間。|6|  
-|IsSuccessful|**int**|布林旗標，指出特定事件是否已成功執行，而且結果集傳回至用戶端。<br /><br /> 產生警告的事件 (例如因為注意事項或使用者指定逾時而取消事件時) 會被視為成功。<br /><br /> IsSuccessful 可以是下列其中一個值：<br /><br /> 1 = 成功<br /><br /> 0 = 失敗|7|  
+|IsSuccessful|**int**|布林旗標，指出特定事件是否已成功執行，而且結果集傳回至用戶端。<br /><br /> 系統會將產生警告的事件 (例如因為注意事項或使用者指定逾時而取消事件時) 視為成功。<br /><br /> IsSuccessful 可以是下列其中一個值：<br /><br /> 1 = 成功<br /><br /> 0 = 失敗|7|  
 |Duration [microsec]|**bigint**|事件的回應持續期間 (毫秒)。 從登入/登出/RPC/語言事件提交至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時開始測量。<br /><br /> 如果事件成功，則會在已耗用完整的結果集時結束測量。<br /><br /> 如果事件不成功，則會在事件失敗或取消時結束測量。|8|  
 |RowCount|**bigint**|依據重新執行組態檔中 `<RecordRowCount>` 的值而擴展：<br /><br /> 如果 `<RecordRowCount>` 等於 Yes，此資料格包含結果集中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所傳回的資料列數目。<br /><br /> 如果 `<RecordRowCount>` 等於 No，此儲存格不會擴展 (Null)。|9|  
 |CaptureSPID|**int**|事件的擷取工作階段識別碼。|10|  

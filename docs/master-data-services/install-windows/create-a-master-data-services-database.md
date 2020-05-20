@@ -1,5 +1,6 @@
 ---
 title: 建立 Master Data Services 資料庫
+description: 當您需要新的資料庫來支援主資料管理員 web 應用程式和 Master Data Services web 服務時，請建立 Master Data Services 資料庫。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0bef34cdd61393e8aaf8ad312428e51affba892c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3e3993816d0811f7e23563b758ab2169240dc48
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728113"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606830"
 ---
 # <a name="create-a-master-data-services-database"></a>建立 Master Data Services 資料庫
 
@@ -23,7 +24,7 @@ ms.locfileid: "73728113"
 
   當您需要新的資料庫支援 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 應用程式及 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服務時，請建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
   
 -   如需主控資料庫之電腦需求的相關資訊，請參閱[資料庫需求 &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)。  
   

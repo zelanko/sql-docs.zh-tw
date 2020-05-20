@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0b57ac8ea8462a5c79feb1a91c4f9d205927b953
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 946ea5d404db51c5241e5657524cf3dbc1a519a7
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987202"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152162"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps 工具 (預覽)
+# <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps 工具
 
 [SSIS DevOps 工具](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools)延伸模組可在 **Azure DevOps** Marketplace 中取得。
 
@@ -290,7 +290,7 @@ SSIS 目錄組態的內嵌 JSON。 只有當選取 [內嵌] 作為組態檔來�
 
 |屬性  |描述  |注意  |
 |---------|---------|---------|
-|資料夾  |資料夾物件的陣列。 每個物件都包含目錄資料夾的組態資訊。|如需資料夾物件的結構描述，請參閱＜資料夾屬性＞  。|
+|資料夾  |資料夾物件的陣列。 每個物件都包含目錄資料夾的組態資訊。|如需資料夾物件的結構描述，請參閱＜資料夾屬性＞。|
 
 ##### <a name="folder-attributes"></a>資料夾屬性
 
@@ -298,22 +298,22 @@ SSIS 目錄組態的內嵌 JSON。 只有當選取 [內嵌] 作為組態檔來�
 |---------|---------|---------|
 |NAME  |目錄資料夾的名稱。|如果資料夾不存在，則會加以建立。|
 |description|目錄資料夾的描述。|將略過 *null* 值。|
-|projects|專案物件的陣列。 每個物件都包含專案的組態資訊。|如需專案物件的結構描述，請參閱＜專案屬性＞  。|
-|environments|環境物件的陣列。 每個物件都包含環境的組態資訊。|如需環境物件的結構描述，請參閱＜環境屬性＞  。|
+|projects|專案物件的陣列。 每個物件都包含專案的組態資訊。|如需專案物件的結構描述，請參閱＜專案屬性＞。|
+|environments|環境物件的陣列。 每個物件都包含環境的組態資訊。|如需環境物件的結構描述，請參閱＜環境屬性＞。|
 
 ##### <a name="project-attributes"></a>專案屬性
 
 |屬性  |描述  |注意  |
 |---------|---------|---------|
 |NAME|專案的名稱。 |如果父資料表中不存在專案，則會略過專案物件。|
-|參數|參數物件的陣列。 每個物件都包含參數的組態資訊。|如需參數物件的結構描述，請參閱＜參數屬性＞  。|
-|參考|參考物件的陣列。 每個物件都代表目標專案的一個環境參考。|如需參考物件的結構描述，請參閱＜參考屬性＞  。|
+|參數|參數物件的陣列。 每個物件都包含參數的組態資訊。|如需參數物件的結構描述，請參閱＜參數屬性＞。|
+|參考|參考物件的陣列。 每個物件都代表目標專案的一個環境參考。|如需參考物件的結構描述，請參閱＜參考屬性＞。|
 
 ##### <a name="parameter-attributes"></a>參數屬性
 
 |屬性  |描述  |注意  |
 |---------|---------|---------|
-|NAME|參數的名稱。|參數可以是「專案參數」  或「套件參數」  。 <br> 如果父資料表中不存在參數，則會略過參數。|
+|NAME|參數的名稱。|參數可以是「專案參數」或「套件參數」。 <br> 如果父資料表中不存在參數，則會略過參數。|
 |容器|參數的容器。|<li>如果參數是專案參數，則 *container* 應該是專案名稱。 <li>如果是套件參數，則 *container* 應該是副檔名為 **.dtsx** 的套件名稱。 <li> 如果參數是連線管理員屬性，則名稱的格式應該如下：**CM.\<連線管理員名稱>.\<屬性名稱>** 。|
 |value|參數的值。|<li>當 *valueType* 是 *referenced* 時：此值是 *string* 類型的環境變數參考。 <li> 當 *valueType* 是 *literal* 時：此屬性支援任何有效的 *boolean*、*number* 和 *string* JSON 值。 <br> 系統會將此值轉換成目標參數類型。 如果無法轉換，則會發生錯誤。<li> *null* 值無效。 該工作將略過此參數物件，並發出警告。|
 |valueType|參數值類型。|有效類型包括： <br> *literal*：*value* 屬性代表常值。 <br> *referenced*：*value* 屬性代表環境變數參考。|
@@ -331,7 +331,7 @@ SSIS 目錄組態的內嵌 JSON。 只有當選取 [內嵌] 作為組態檔來�
 |---------|---------|---------|
 |NAME|環境的名稱。|如果環境不存在，則會加以建立。|
 |description|環境的描述。|將略過 *null* 值。|
-|variables|變數物件的陣列。|每個物件都包含環境變數的組態資訊。如需變數物件的結構描述，請參閱＜變數屬性＞  。|
+|variables|變數物件的陣列。|每個物件都包含環境變數的組態資訊。如需變數物件的結構描述，請參閱＜變數屬性＞。|
 
 ##### <a name="variable-attributes"></a>變數屬性
 
@@ -344,6 +344,12 @@ SSIS 目錄組態的內嵌 JSON。 只有當選取 [內嵌] 作為組態檔來�
 |sensitive|環境變數的值是否具敏感性。|有效輸入包括： <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>版本資訊
+
+### <a name="version-101"></a>1\.0.1 版
+
+發行日期：2020 年 5 月 9 日
+
+- 已修正即使只將單一 dtproj 檔案檔案指定為專案路徑，SSIS 建置工作還是一律會建立整個解決方案的問題。
 
 ### <a name="version-100"></a>1\.0.0 版
 

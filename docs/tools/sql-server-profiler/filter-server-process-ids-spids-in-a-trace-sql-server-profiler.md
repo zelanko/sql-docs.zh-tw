@@ -1,6 +1,7 @@
 ---
 title: 篩選追蹤檔案中的伺服器處理序識別碼 (SPID)
 titleSuffix: SQL Server Profiler
+description: 了解如何在伺服器處理序識別碼 (SPID) 上套用篩選，以限制 SQL Server Profiler 中的追蹤輸出。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4e565ab93f927c5ccb973a85c810d778e392845a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e4c3d5b6d69b55a588b9be957d2a3226c6b4719
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307220"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152061"
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>篩選追蹤中的伺服器處理序識別碼 (SPID) (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,17 +30,17 @@ ms.locfileid: "75307220"
      會出現 [追蹤屬性]  對話方塊。  
   
     > [!NOTE]  
-    >  如果選取 [進行連線後立即啟動追蹤]  ，將不會顯示 [追蹤屬性]  對話方塊，而是開始追蹤。 若要關閉這個設定，請在 [工具]  功能表上按一下 [選項]  ，然後清除 [進行連線後立即啟動追蹤]  核取方塊。  
+    >  如果選取 [進行連線後立即啟動追蹤]，將不會顯示 [追蹤屬性] 對話方塊，而是開始追蹤。 若要關閉這個設定，請在 [工具] 功能表上按一下 [選項]，然後清除 [進行連線後立即啟動追蹤] 核取方塊。  
   
 2.  在 **[追蹤名稱]** 方塊中，輸入追蹤的名稱。  
   
-3.  在 [使用範本]  名稱清單中，選取追蹤範本。  
+3.  在 [使用範本] 名稱清單中，選取追蹤範本。  
   
 4.  選擇性，指定要儲存追蹤結果的目的地檔案或資料表。  
   
-5.  在 [事件選取範圍]  索引標籤上，按一下 [SPID]  資料行標題，以啟動 [編輯篩選]  對話方塊。 您也可以用滑鼠右鍵按一下資料行標題，然後選擇 [編輯資料行篩選]  。 如果 [SPID]  資料行未出現，請核取 [顯示所有資料行]  方塊。  
+5.  在 [事件選取範圍] 索引標籤上，按一下 [SPID] 資料行標題，以啟動 [編輯篩選] 對話方塊。 您也可以用滑鼠右鍵按一下資料行標題，然後選擇 [編輯資料行篩選]。 如果 [SPID] 資料行未出現，請核取 [顯示所有資料行] 方塊。  
   
-6.  在 [編輯篩選]  對話方塊中，展開適當的比較運算子，然後輸入 SPID 作為比較的值。  
+6.  在 [編輯篩選] 對話方塊中，展開適當的比較運算子，然後輸入 SPID 作為比較的值。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

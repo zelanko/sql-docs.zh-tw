@@ -1,32 +1,34 @@
 ### YamlMime:Landing
-title: SQL Server 機器學習服務 (Python 和 R) 文件
-summary: 了解如何使用 SQL Server 機器學習服務在關聯式資料上執行 Python 和 R 指令碼。 教學課程、程式碼範例、安裝指南和其他文件都會為您示範作法。
+title: SQL 機器學習文件
+summary: 了解如何在 SQL 上使用機器學習，以在內部部署和雲端中的關聯式資料上執行 Python 和 R。 教學課程、程式碼範例、安裝指南和其他文件都會為您示範如何使用 SQL 機器學習。
 metadata:
-  title: SQL Server 機器學習服務 (Python、R) 文件 - 教學課程、快速入門和安裝指南
-  description: 了解如何使用 SQL Server 機器學習服務在關聯式資料上執行 Python 和 R 指令碼。 教學課程、程式碼範例、安裝指南和其他文件都會為您示範作法。
+  title: SQL 機器學習文件 - 教學課程及安裝指南
+  description: 了解如何在 SQL 上使用機器學習，以在內部部署和雲端中的關聯式資料上執行 Python 和 R。 教學課程、程式碼範例、安裝指南和其他文件都會為您示範如何使用 SQL 機器學習。
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 09/12/2019
-  ms.openlocfilehash: 94675074f4c9399f3192253a294ff8df8bd6c722
-  ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+  ms.date: 04/24/2020
+  ms.openlocfilehash: 41832dfd555df827e14182900a4faa07ad22ab1e
+  ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/16/2020
-  ms.locfileid: "81487519"
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83606822"
 landingContent:
-- title: 關於機器學習服務
+- title: SQL Server 上的機器學習
   linkLists:
   - linkListType: overview
     links:
-    - text: 什麼是 SQL Server 機器學習服務 (Python 和 R)？
+    - text: 什麼是使用 Python 和 R 的 SQL Server 機器學習服務？
       url: sql-server-machine-learning-services.md
-  - linkListType: whats-new
+  - linkListType: get-started
     links:
-    - text: 機器學習服務的新功能
-      url: what-s-new-in-sql-server-machine-learning-services.md
+    - text: 在 Windows 上安裝機器學習服務
+      url: install/sql-machine-learning-services-windows-install.md
+    - text: 在 Linux 上安裝機器學習服務
+      url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
   - linkListType: video
     links:
     - text: 如何使用機器學習服務在 SQL Server 中執行 R/Python
@@ -35,11 +37,11 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: 在 SQL Server 上執行 "Hello world" Python 指令碼
+    - text: 執行簡單的 Python 指令碼
       url: tutorials/quickstart-python-create-script.md
     - text: 處理輸入和輸出
       url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
-    - text: 在 SQL Server 中使用 Python 資料結構
+    - text: 在 SQL 中使用 Python 資料結構
       url: tutorials/quickstart-python-data-structures.md
     - text: 訓練並使用您的第一個模型
       url: tutorials/quickstart-python-train-score-model.md
@@ -53,11 +55,11 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: 在 SQL Server 上執行 "Hello world" R 指令碼
+    - text: 執行簡單的 R 指令碼
       url: tutorials/quickstart-r-create-script.md
     - text: 處理輸入和輸出
       url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
-    - text: 在 SQL Server 中使用 R 資料結構
+    - text: 在 SQL 中使用 R 資料結構
       url: tutorials/quickstart-r-data-types-and-objects.md
     - text: 訓練並使用您的第一個模型
       url: tutorials/quickstart-r-train-score-model.md
@@ -67,43 +69,45 @@ landingContent:
       url: tutorials/sqldev-in-database-r-for-sql-developers.md
     - text: 在 R 工具中使用機器學習服務
       url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: 安裝機器學習服務
+- title: 巨量資料叢集上的 ML
   linkLists:
+  - linkListType: overview
+    links:
+    - text: 什麼是 SQL Server 巨量資料叢集？
+      url: ../big-data-cluster/big-data-cluster-overview.md
   - linkListType: get-started
     links:
-    - text: 在 Windows 上安裝機器學習服務
-      url: install/sql-machine-learning-services-windows-install.md
-    - text: 在 Linux 上安裝機器學習服務
-      url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
+    - text: 啟用 SQL Server 巨量資料叢集上的機器學習服務
+      url: ../big-data-cluster/machine-learning-services.md
   - linkListType: how-to-guide
     links:
-    - text: 設定 Python 用戶端
-      url: python/setup-python-client-tools-sql.md
-    - text: 設定 R 用戶端
-      url: r/set-up-a-data-science-client.md
-- title: 架構和安全性
+    - text: 使用 MLeap 的 Spark 機器學習模型
+      url: ../big-data-cluster/spark-create-machine-learning-model.md
+    - text: SQL Server 巨量資料叢集中的 Sparklyr
+      url: ../big-data-cluster/sparklyr-from-rstudio.md
+    - text: 整合 Spark 與 SQL Server
+      url: ../big-data-cluster/spark-mssql-connector.md
+- title: Azure Synapse Analytics 上的 ML
   linkLists:
-  - linkListType: architecture
+  - linkListType: overview
     links:
-    - text: Extensibility Framework
-      url: concepts/extensibility-framework.md
-    - text: Python 延伸模組
-      url: concepts/extension-python.md
-    - text: R 延伸模組
-      url: concepts/extension-r.md
-  - linkListType: concept
+    - text: 什麼是 Azure Synapse Analytics？
+      url: /azure/synapse-analytics/overview-what-is
+  - linkListType: tutorial
     links:
-    - text: 擴充性架構的安全性
-      url: concepts/security.md
-- title: 管理 Python 和 R 套件
-  linkLists:
+    - text: 使用 Apache Spark MLlib 和 Azure Synapse Analytics 來建置機器學習應用程式
+      url: /azure/synapse-analytics/spark/apache-spark-machine-learning-mllib-notebook
   - linkListType: how-to-guide
     links:
-    - text: 取得 Python 套件資訊
-      url: package-management/python-package-information.md
-    - text: 使用 sqlmlutils 安裝 Python 套件
-      url: package-management/install-additional-python-packages-on-sql-server.md
-    - text: 取得 Python 資訊
-      url: package-management/r-package-information.md
-    - text: 使用 sqlmlutils 安裝新的 R 套件
-      url: package-management/install-additional-r-packages-on-sql-server.md
+    - text: 建立、開發及維護 Azure Synapse Studio 筆記本
+      url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
+- title: Azure SQL Database Edge 上的 ML
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Database Edge 中使用 ONNX 的機器學習和 AI
+      url: /azure/sql-database-edge/onnx-overview
+  - linkListType: how-to-guide
+    links:
+    - text: 在 SQL Database Edge 中使用 ONNX 模型進行部署和預測
+      url: /azure/sql-database-edge/deploy-onnx

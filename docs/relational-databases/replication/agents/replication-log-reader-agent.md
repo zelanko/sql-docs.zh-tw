@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 58ff313686f1f37643068a28d4e30ac93eddd2ce
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 9f459e71ebeb95de2b1d80f1281881df1c0474a0
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528202"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151861"
 ---
 # <a name="replication-log-reader-agent"></a>複寫記錄讀取器代理程式
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,8 @@ logread [-?]
 [-LoginTimeOut login_time_out_seconds]  
 [-LogScanThreshold scan_threshold]  
 [-MaxCmdsInTran number_of_commands]  
-[-MessageInterval message_interval]  
+[-MessageInterval message_interval]
+[-MultiSubnetFailover [0|1]]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2|3|4]]  
 [-PacketSize packet_size]  
@@ -112,7 +113,7 @@ logread [-?]
  指定擴充的事件 XML 組態檔的路徑和檔案名稱。 擴充的事件組態檔可讓您設定工作階段以及啟用事件追蹤。  
   
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
- 指定在記錄讀取器作業期間記錄的記錄量。  您可以透過選取 1，盡量減少記錄作業的效能影響。  
+ 指定在記錄讀取器作業期間記錄的記錄量。 您可以透過選取 1，盡量減少記錄作業的效能影響。  
   
 |HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
@@ -139,6 +140,8 @@ logread [-?]
  這是用於記錄的時間間隔。 在記錄上一個記錄事件之後，如果到達 **MessageInterval** 值，系統就會記錄記錄事件。  
   
  如果來源沒有任何複寫的交易可用，代理程式就會回報無交易訊息給散發者。 這個選項會指定回報另一個無交易訊息之前等候的時間長度。 在先前處理複寫的交易之後，當代理程式偵測到來源沒有任何交易可用時，代理程式一律會回報無交易訊息。 預設值是 60 秒。  
+ 
+ **-MultiSubnetFailover** [**0**|**1**] 指定是否啟用 MultiSubnetFailover 屬性。 如果您的應用程式連線至不同子網路上的 AlwaysOn 可用性群組 (AG)，將 MultiSubnetFailover 設定為 1 (true) 可讓您更快地偵測並連線到 (目前) 使用中的伺服器。
   
  **-Output** _output_path_and_file_name_  
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
@@ -201,6 +204,7 @@ logread [-?]
 |更新的內容|  
 |---------------------|  
 | 已加入 -ExtendedEventConfigFile 參數。|  
+|已新增 **-MultiSubnetFailover** 參數。|
   
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  

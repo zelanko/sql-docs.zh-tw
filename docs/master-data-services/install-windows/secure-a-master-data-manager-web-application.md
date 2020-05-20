@@ -1,5 +1,6 @@
 ---
 title: 保護主資料管理員 Web 應用程式
+description: 在 SQL Server 中，您可以使用 HTTPS 來保護主資料管理員 web 應用程式。 您必須是系統管理員，而且必須在 web 伺服器上安裝 MDS。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 57ba6a83d48254bdd0d86fee9a5d2d6300cb58bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ac70d45886904032e1f61c01c35ee8542351029
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728494"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606510"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保護主資料管理員 Web 應用程式
 
@@ -25,7 +26,7 @@ ms.locfileid: "81728494"
 > [!NOTE]  
 >  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式可以使用 HTTP 或 HTTPS，但不能同時使用兩者。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須是 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 安裝所在之 Web 伺服器的系統管理員。  
@@ -40,7 +41,7 @@ ms.locfileid: "81728494"
   
 3.  在 [動作]**** 窗格中，按一下 [繫結]****。  
   
-4.  按一下 **[新增]** 。  
+4.  按一下 [新增]  。  
   
 5.  從清單中選取 [https]****。  
   

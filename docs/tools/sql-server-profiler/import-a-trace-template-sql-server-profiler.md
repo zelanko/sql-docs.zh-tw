@@ -1,6 +1,7 @@
 ---
 title: 匯入追蹤範本
 titleSuffix: SQL Server Profiler
+description: 了解如何在 SQL Server Profiler 中匯入使用者定義的範本，使其可用於追蹤與預先定義的系統範本。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 309edccd7793e2dbf17105b4bf8f31e976994742
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 51bb55eb4213464fbaca2fd9e5990894c46c3c14
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307198"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151722"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>匯入追蹤範本 (SQL Server Profiler)
 
@@ -28,7 +29,7 @@ ms.locfileid: "75307198"
   
 1.  在 **[檔案]** 功能表上，按一下 **[範本]** ，然後按一下 **[匯入範本]** 。  
   
-2.  在 [開啟檔案]  對話方塊中，選取要匯入的追蹤範本檔案 (.tdf 檔案)，再按一下 [開啟]  。  
+2.  在 [開啟檔案] 對話方塊中，選取要匯入的追蹤範本檔案 (.tdf 檔案)，再按一下 [開啟]。  
   
      追蹤範本檔案會在 **[追蹤屬性]** 對話方塊的 **[使用範本]** 清單中，新增為可用範本。 使用者自訂範本會將 **(使用者)** 附加至範本名稱。  
   

@@ -1,5 +1,6 @@
 ---
 title: SQL 命令提示字元公用程式 (資料庫引擎)
+description: 命令提示字元公用程式可讓您編寫 SQL Server 作業指令碼。 此文章列出 SQL Server 隨附的許多命令提示字元公用程式。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -17,12 +18,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: a25fcbb39b2b4edacd3d9e6ddab64a88d5888fe9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c201c13c0d2a77f4005ad2fe788c783431c88094
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992744"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151424"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL 命令提示字元公用程式 (資料庫引擎)
 
@@ -30,7 +31,7 @@ ms.locfileid: "74992744"
 
 命令提示字元公用程式可編寫 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作業指令碼。 下表包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 隨附的多個命令提示字元公用程式清單。
 
-如需「主要」  SQL GUI 和命令列工具的資訊，請參閱 [SQL 工具總覽](overview-sql-tools.md)。
+如需「主要」SQL GUI 和命令列工具的資訊，請參閱 [SQL 工具總覽](overview-sql-tools.md)。
 
 |**公用程式**|**說明**|**安裝位置**|  
 |-----------------|---------------------|----------------------|  

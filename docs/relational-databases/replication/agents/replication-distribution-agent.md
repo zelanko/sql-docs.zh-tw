@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af057cffd0382364488076086f77af03376d64fd
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: c323fc0e0535b941b1349c3ceae2331aa55d7bb7
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528752"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151884"
 ---
 # <a name="replication-distribution-agent"></a>複寫散發代理程式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,7 @@ distrib [-?]
 [-MaxBcpThreads]  
 [-MaxDeliveredTransactions number_of_transactions]  
 [-MessageInterval message_interval]  
+[-MultiSubnetFailover [0|1]]
 [-OledbStreamThreshold oledb_stream_threshold]  
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2]]  
@@ -170,7 +171,7 @@ distrib [-?]
  這是用來連接到 FTP 服務的使用者名稱。  沒有指定這個參數時，系統就會使用 anonymous。  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
- 指定在散發作業期間記錄的記錄量。  您可以透過選取 1，盡量減少記錄作業的效能影響。  
+ 指定在散發作業期間記錄的記錄量。 您可以透過選取 1，盡量減少記錄作業的效能影響。  
   
 |HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
@@ -186,7 +187,7 @@ distrib [-?]
  這是記錄執行緒檢查是否有任何現有的連接正在等候伺服器回應之前的秒數。 執行長時間執行的批次時，您可以減少這個值，避免檢查代理程式將散發代理程式標示為有疑問。 預設值是 **300** 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- 這是登入逾時之前的秒數。  預設值為 15 秒。  
+ 這是登入逾時之前的秒數。 預設值為 15 秒。  
   
  **-MaxBcpThreads** _number_of_threads_  
  指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或散發資料庫之同步處理交易中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 **0** 的值而且沒有硬式編碼的上限。  預設值為 **2**乘以處理器的數目，最大值是 8。 當使用並行快照集選項來套用在發行者端產生的快照集時，系統會使用單一執行緒，不論您針對 **MaxBcpThreads**指定的數目為何都一樣。  
@@ -205,6 +206,8 @@ distrib [-?]
 -   記錄上一個歷程記錄事件之後，到達 **MessageInterval** 值。  
   
  如果來源沒有任何複寫的交易可用，代理程式就會回報無交易訊息給散發者。 這個選項會指定回報另一個無交易訊息之前等候的時間長度。 在先前處理複寫的交易之後，當代理程式偵測到來源沒有任何交易可用時，代理程式一律會回報無交易訊息。 預設值是 60 秒。  
+
+**-MultiSubnetFailover** 指定是否啟用 MultiSubnetFailover 屬性。 如果您的應用程式連線至不同子網路上的 AlwaysOn 可用性群組 (AG)，設定 MultiSubnetFailover=true 可讓您更快地偵測並連線到 (目前) 使用中的伺服器。
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
  指定二進位大型物件資料 (其中資料將繫結為資料流) 的大小下限 (以位元組為單位)。 您必須指定 **-UseOledbStreaming** 才能使用這個參數。 值的範圍在 400 至 1048576 個位元組之間，預設為 16384 個位元組。  
@@ -213,7 +216,7 @@ distrib [-?]
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
- 指定輸出是否應該詳細。  如果詳細資訊層級為 0，系統就只會列印錯誤訊息。  如果詳細資訊層級為 1，系統就會列印所有進度報表訊息。  如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
+ 指定輸出是否應該詳細。 如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 1，系統就會列印所有進度報表訊息。  如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
   
  **-PacketSize** _packet_size_  
  這是封包大小 (以位元組為單位)。 預設值是 4096 (位元組)。  
@@ -299,6 +302,7 @@ distrib [-?]
 |更新的內容|  
 |---------------------|  
 | 已加入 -ExtendedEventConfigFile 參數。|  
+|已新增 **-MultiSubnetFailover** 參數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  
