@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_script_synctran_commands
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d7caca72f684dfb6428361a4550860b3bea3f273
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 965fc3fe168ecd6027c2c1fc2ebad92bc334e383
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126405"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816795"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

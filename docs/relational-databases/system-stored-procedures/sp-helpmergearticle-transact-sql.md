@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticle
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e01a1c9c96813c14827ca2f941c84d151c147195
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122338"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818068"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是要取得資訊的發行集名稱。 *發行*集是**sysname**，預設值是**%**，它會傳回目前資料庫中所有發行集所包含之所有合併發行項的相關資訊。  
+`[ @publication = ] 'publication'`這是要取得資訊的發行集名稱。 *發行*集是**sysname**，預設值是 **%** ，它會傳回目前資料庫中所有發行集所包含之所有合併發行項的相關資訊。  
   
-`[ @article = ] 'article'`這是要傳回信息的發行項名稱。 發行項**sysname** **%** 是 sysname，預設值是，它會傳回給定發行集中所有合併發行項的相關資訊。 *article*  
+`[ @article = ] 'article'`這是要傳回信息的發行項名稱。 發行*項是* **sysname**，預設值是 **%** ，它會傳回給定發行集中所有合併發行項的相關資訊。  
   
 ## <a name="result-set"></a>結果集  
   
@@ -68,7 +68,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|如果已啟用自動識別範圍處理，則為，其中**1**已啟用，而**0**已停用。|  
 |**pub_identity_range**|**bigint**|當指派新的識別值時，所用的範圍大小。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
 |**identity_range**|**bigint**|當指派新的識別值時，所用的範圍大小。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
-|**閾值**|**int**|執行[!INCLUDE[ssEW](../../includes/ssew-md.md)]或舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者所使用的百分比值。 當合併代理程式指派新的識別範圍時，**臨界值**控制。 當使用 threshold 指定的百分比值，合併代理程式會建立新的識別範圍。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
+|**閾值**|**int**|執行或舊版的訂閱者所使用的百分比值 [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當合併代理程式指派新的識別範圍時，**臨界值**控制。 當使用 threshold 指定的百分比值，合併代理程式會建立新的識別範圍。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
 |**verify_resolver_signature**|**int**|如果在合併式複寫中使用解析程式之前先驗證數位簽章，則為，其中**0**表示不會驗證簽章，而**1**表示會驗證簽章，以查看它是否來自信任的來源。|  
 |**destination_object**|**sysname**|目的地物件的名稱。 只適用於合併預存程序、檢視和 UDF 結構描述發行項。|  
 |**allow_interactive_resolver**|**int**|如果在發行項上使用互動式解析程式，則為，其中**1**表示使用此解析程式， **0**表示不使用它。|  

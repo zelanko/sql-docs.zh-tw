@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3e75d1d43c37d0e758b02025df4f601c87f44f2e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104403"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816646"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  將**sys.databases**中的網路名稱設定為遠端實例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實際網路電腦名稱稱。 這個程序可用來啟用對於網路名稱含有無效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼之電腦的遠端預存程序呼叫。  
+  將**sys.databases**中的網路名稱設定為遠端實例的實際網路電腦名稱稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 這個程序可用來啟用對於網路名稱含有無效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼之電腦的遠端預存程序呼叫。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,10 +41,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>引數  
- *server* ** @server = '** server **'**  
+ ** @server = '** *server* **'**  
  這是使用者編寫的遠端預存程序呼叫語法所參考的遠端伺服器名稱。 在**sys.databases**中，只有一個資料列必須已經存在，才能使用此*伺服器*。 *server* 是 **sysname**，沒有預設值。  
   
- *network_name* ** @netname = '** network_name **'**  
+ ** @netname = '** *network_name* **'**  
  這是遠端預存程序呼叫的目標電腦網路名稱。 *network_name*是**sysname**，沒有預設值。  
   
  這個名稱必須符合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 電腦名稱，且這個名稱可以包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼不允許使用的字元。  

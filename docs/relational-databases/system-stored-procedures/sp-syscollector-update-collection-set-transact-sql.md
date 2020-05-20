@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0a351eaa746654d26d7f51536a41fc2677a2f67e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cb261fdfb745e935b94fc5c2944640c507674ece
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010561"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816483"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_syscollector_update_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration`這是收集的資料儲存在管理資料倉儲中的天數。 *days_until_expiration*為**Smallint**。 *days_until_expiration*必須是0或正整數。  
   
-`[ @proxy_id = ] proxy_id`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy 帳戶的唯一識別碼。 *proxy_id*為**int**。  
+`[ @proxy_id = ] proxy_id`這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy 帳戶的唯一識別碼。 *proxy_id*為**int**。  
   
 `[ @proxy_name = ] 'proxy_name'`這是 proxy 的名稱。 *proxy_name*是**sysname**且可為 null。  
   

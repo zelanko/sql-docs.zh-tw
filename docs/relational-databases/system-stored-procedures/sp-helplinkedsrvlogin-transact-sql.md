@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f1728b3e5d4cd3189a8d9a01a8b72ecedaf7cb6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7c9e0a996728c6bf0b352afc9615808773eefec0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122455"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818368"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ## <a name="arguments"></a>引數  
 `[ @rmtsrvname = ] 'rmtsrvname'`這是登入對應所套用的連結伺服器名稱。 *rmtsrvname*是**sysname**，預設值是 Null。 如果是 NULL，會傳回對所有連結伺服器 (定義於執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機電腦中) 定義的所有登入對應。  
   
-`[ @locallogin = ] 'locallogin'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機伺服器上的登入，其對應至連結的伺服器*rmtsrvname*。 *locallogin*是**sysname**，預設值是 Null。 Null 指定傳回*rmtsrvname*上定義的所有登入對應。 如果不是 Null，則*locallogin*至*rmtsrvname*的對應必須已經存在。 *locallogin*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 使用者。 必須以直接方式或透過其被授與存取權限之 Windows 群組的成員資格，來授與 Windows 使用者存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的權限。  
+`[ @locallogin = ] 'locallogin'`這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機伺服器上的登入，其對應至連結的伺服器*rmtsrvname*。 *locallogin*是**sysname**，預設值是 Null。 Null 指定傳回*rmtsrvname*上定義的所有登入對應。 如果不是 Null，則*locallogin*至*rmtsrvname*的對應必須已經存在。 *locallogin*可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 使用者。 必須以直接方式或透過其被授與存取權限之 Windows 群組的成員資格，來授與 Windows 使用者存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的權限。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

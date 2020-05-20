@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c26bf0ff225a593a6427402fc15543edbfc15637
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122445"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818169"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|登入名稱。|  
 |**SID**|**Varbinary （85）**|登入安全性識別碼 (SID)。|  
-|**DefDBName**|**sysname**|當連接到的實例時， **LoginName**會使用的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預設資料庫。|  
+|**DefDBName**|**sysname**|當連接到的實例時， **LoginName**會使用的預設資料庫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**DefLangName**|**sysname**|**LoginName**所使用的預設語言。|  
 |**Auser**|**char （5）**|Yes = **LoginName**在資料庫中具有相關聯的使用者名稱。<br /><br /> No = **LoginName**沒有相關聯的使用者名稱。|  
 |**ARemote**|**char （7）**|Yes = **LoginName**有相關聯的遠端登入。<br /><br /> No = **LoginName**沒有相關聯的登入。|  
@@ -61,7 +61,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|登入名稱。|  
-|**DBName**|**sysname**|當連接到的實例時， **LoginName**會使用的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預設資料庫。|  
+|**DBName**|**sysname**|當連接到的實例時， **LoginName**會使用的預設資料庫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**UserName**|**sysname**|**LoginName**在**dbname**中對應到的使用者帳戶，以及**LoginName**在**dbname**中屬於其成員的角色。|  
 |**UserOrAlias**|**char （8）**|MemberOf = **UserName**是一個角色。<br /><br /> User = **UserName**是使用者帳戶。|  
   
