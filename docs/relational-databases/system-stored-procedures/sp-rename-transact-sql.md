@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac92f07acb7e7322adcf00e09774f72e93e39963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983074"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826558"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  變更目前資料庫中之使用者建立物件的名稱。 這個物件可以是資料表、索引、資料行、別名資料類型或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime （CLR）使用者定義型別。  
+  變更目前資料庫中之使用者建立物件的名稱。 這個物件可以是資料表、索引、資料行、別名資料類型或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language RUNTIME （CLR）使用者定義型別。  
   
 > [!CAUTION]  
 >  變更物件名稱的任何部分，可能破壞指令碼和預存程序。 我們建議您不要使用陳述式來重新命名預存程序、觸發程序、使用者定義函數或檢視；相反地，請卸除物件，再利用新名稱來重新建立它。  
@@ -47,18 +47,18 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @objname = ]'*object_name*'  
+ [ @objname =] '*object_name*'  
  這是使用者物件或資料類型目前的完整或非完整名稱。 如果要重新命名的物件是資料表中的資料行， *object_name*必須在 form*資料表. column*或 schema. *table.* 資料行中。 如果要重新命名的物件是索引， *object_name*必須是*table. index*或 schema. table. *index*格式。 如果要重新命名的物件是條件約束， *object_name*必須為*schema. 條件約束*格式。  
   
  只有在指定限定物件時，才需要引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *object_name*是**Nvarchar （776）**，沒有預設值。  
   
- [ @newname = ]'*new_name*'  
+ [ @newname =] '*new_name*'  
  這是指定物件的新名稱。 *new_name*必須是一個部分的名稱，而且必須遵循識別碼的規則。 *newname*是**sysname**，沒有預設值。  
   
 > [!NOTE]  
 >  觸發程序名稱的開頭不能是 # 或 ##。  
   
- [ @objtype = ]'*object_type*'  
+ [ @objtype =] '*object_type*'  
  這是要重新命名的物件類型。 *object_type*是**Varchar （13）**，預設值是 Null，它可以是下列值之一。  
   
 |值|描述|  
@@ -100,7 +100,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>B. 重新命名資料行  
- 下列範例會將`TerritoryID` `SalesTerritory`資料表中的資料行重新`TerrID`命名為。  
+ 下列範例會將資料表中的資料行重新命名 `TerritoryID` `SalesTerritory` 為 `TerrID` 。  
   
 ```  
 USE AdventureWorks2012;  

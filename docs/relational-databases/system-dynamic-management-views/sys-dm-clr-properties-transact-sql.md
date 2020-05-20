@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266057"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824716"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68266057"
   
  **Version**屬性會指出伺服器上的 .NET Framework 版本和主控的 CLR。  
   
- **Dm_clr_properties**動態受控視圖可以針對**state**屬性傳回六個不同的值，這會反映[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主控 clr 的狀態。 其中包括：  
+ **Dm_clr_properties**動態受控視圖可以針對**state**屬性傳回六個不同的值，這會反映 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主控 clr 的狀態。 其中包括：  
   
 -   未載入 Mscoree。  
   
@@ -62,19 +62,19 @@ ms.locfileid: "68266057"
   
  在未使用託管 CLR 的情況下，可能會看到具有 mscoree.dll 狀態的已**鎖定 CLR 版本**，因此尚未初始化。 主控的 CLR 會在第一次執行 DDL 語句（例如[CREATE ASSEMBLY &#40;transact-sql&#41;](../../t-sql/statements/create-assembly-transact-sql.md)）或 managed 資料庫物件時初始化。  
   
- **CLR 已初始化**狀態表示已成功初始化主控的 CLR。 請注意，這並不會指出是否已啟用使用者 CLR 程式碼執行。 如果第一次啟用使用者 CLR 程式碼，然後使用[!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)預存程式加以停用，則狀態值仍然會**初始化 CLR**。  
+ **CLR 已初始化**狀態表示已成功初始化主控的 CLR。 請注意，這並不會指出是否已啟用使用者 CLR 程式碼執行。 如果第一次啟用使用者 CLR 程式碼，然後使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)預存程式加以停用，則狀態值仍然會**初始化 CLR**。  
   
  **Clr 初始化永久失敗**狀態表示託管 CLR 初始化失敗。 記憶體不足是可能的原因之一，或者也可能是因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 之間主控交握失敗所致。 在這種情況下會發生錯誤訊息 6512 或 6513。  
   
- **CLR 已停止狀態**，只有在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在關閉的進程中才會看到。  
+ **CLR 已停止狀態**，只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在正在關閉的進程中才會看到。  
   
 ## <a name="remarks"></a>備註  
- 這個視圖的屬性和值在未來的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中可能會因為 CLR 整合功能的增強而變更。  
+ 這個視圖的屬性和值在未來的版本中可能會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 因為 CLR 整合功能的增強而變更。  
   
 ## <a name="permissions"></a>權限  
   
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
+在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
 
 ## <a name="examples"></a>範例  
  下列範例會擷取有關主控 CLR 的資訊：  

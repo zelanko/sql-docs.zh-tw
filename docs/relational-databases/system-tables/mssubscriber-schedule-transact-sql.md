@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscriber_schedule system table
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 04ad122f6fc999aa285513d41e71bfc347dbfb82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bb5a31470af2630b0df53907db285e1206cc6fb4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139803"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824804"
 ---
 # <a name="mssubscriber_schedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "68139803"
   **MSsubscriber_schedule**資料表包含每個發行者/訂閱者配對的預設合併和交易同步處理排程。 這份資料表儲存在散發資料庫中。  
   
 > [!NOTE]
->  這個系統資料表已被取代，而且正進行維護以支援舊版的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+>  這個系統資料表已被取代，而且正進行維護以支援舊版的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**發行者**|**sysname**|發行者的名稱。|  
+|**publisher**|**sysname**|發行者的名稱。|  
 |**預訂**|**sysname**|訂閱者的名稱。|  
 |**agent_type**|**smallint**|代理程式的類型：<br /><br /> 0 = 散發代理程式。<br /><br /> 1 = 合併代理程式。|  
 |**frequency_type**|**int**|排程散發代理程式所採用的頻率：<br /><br /> **1** = 一次。<br /><br /> **2** = 視需要。<br /><br /> **4** = 每天。<br /><br /> **8** = 每週。<br /><br /> **16** = 每月。<br /><br /> **32** = 每月相對。<br /><br /> **64** = 自動啟動。<br /><br /> **128** = 重複。|  

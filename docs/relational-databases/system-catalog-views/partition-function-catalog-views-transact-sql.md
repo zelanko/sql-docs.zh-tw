@@ -13,14 +13,14 @@ helpviewer_keywords:
 - catalog views [SQL Server], partition function
 - partition function catalog views [SQL Server]
 ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 210a636943fca647539a840dbc394f4c91e6f28e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d47f28f10cb6491d65a5f15df7e334095618a55a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127594"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826418"
 ---
 # <a name="partition-function-catalog-views-transact-sql"></a>資料分割函數目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8d3284d8231b01b58cc807aeb70c55f5fe18c2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73536211"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828422"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -80,7 +80,7 @@ RECONFIGURE
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|組態選項的名稱。|  
 |**至少**|**int**|組態選項的最小值。|  
-|**maximum**|**int**|組態選項的最大值。|  
+|**高**|**int**|組態選項的最大值。|  
 |**config_value**|**int**|設定選項使用**sp_configure**的值（在**sys.databases**中為值）。 如需這些選項的詳細資訊，請參閱[伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)和[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
 |**run_value**|**int**|目前正在執行設定選項的值（sys.databases 中的值**value_in_use**）。<br /><br /> 如需詳細資訊，請參閱[&#40;transact-sql&#41;的 sys.databases ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
   
@@ -99,14 +99,14 @@ RECONFIGURE
 > [!CAUTION]  
 > 不恰當的選項值可能會對伺服器執行個體的組態產生負面的影響。 當使用 RECONFIGURE WITH OVERRIDE 時，請特別小心。  
   
- RECONFIGURE 陳述式會動態更新某些選項；其他選項則需要伺服器停止再重新啟動。 例如，[**最小伺服器記憶體**] 和 [**最大伺服器記憶體**] 伺服器記憶體選項會[!INCLUDE[ssDE](../../includes/ssde-md.md)]在中以動態方式更新。因此，您可以變更它們，而不需要重新開機伺服器。 相較之下，重新設定 [**填滿因數**] 選項的執行值[!INCLUDE[ssDE](../../includes/ssde-md.md)]需要重新開機。  
+ RECONFIGURE 陳述式會動態更新某些選項；其他選項則需要伺服器停止再重新啟動。 例如，[**最小伺服器記憶體**] 和 [**最大伺服器記憶體**] 伺服器記憶體選項會在中動態更新 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ; 因此，您可以在不重新開機伺服器的情況下變更它們。 相較之下，重新設定 [**填滿因數**] 選項的執行值需要重新開機 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
  在設定選項上執行 [重新設定] 之後，您可以藉由執行**sp_configure '***option_name***'**，查看是否已動態更新此選項。 [ **Run_value** ] 和 [ **config_value** ] 資料行中的值應該符合動態更新的選項。 您也可以查看 [ **sys.databases** ] 目錄檢視的 [ **is_dynamic** ] 資料行，查看哪些選項是動態的。  
  
  變更也會寫入 SQL Server 錯誤記錄檔。
   
 > [!NOTE]  
->  如果指定的*值*對選項而言太高， **run_value**資料行就會反映[!INCLUDE[ssDE](../../includes/ssde-md.md)]已預設為動態記憶體的事實，而不是使用不正確設定。  
+>  如果指定的*值*對選項而言太高， **run_value**資料行就會反映已預設為動態記憶體的事實， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 而不是使用不正確設定。  
   
  如需詳細資訊，請參閱[&#40;transact-sql&#41;重新](../../t-sql/language-elements/reconfigure-transact-sql.md)設定。  
   
@@ -157,7 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- 結果會傳回選項名稱，後面接著選項的最小值和最大值。 **Config_value**是重新設定完成時[!INCLUDE[ssDW](../../includes/ssdw-md.md)]將使用的值。 **run_value** 是目前正在使用的值。 除非正在變更值，否則 **config_value** 和 **run_value** 通常會一樣。  
+ 結果會傳回選項名稱，後面接著選項的最小值和最大值。 **Config_value**是重新設定 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 完成時將使用的值。 **run_value** 是目前正在使用的值。 除非正在變更值，否則 **config_value** 和 **run_value** 通常會一樣。  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. 列出某一個組態名稱的組態設定  
   

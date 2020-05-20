@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription_agent
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 07cc514d615c86a90dcf37fbd4748c3ab1776f06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81528972"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826290"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -98,7 +98,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`這是在同步處理時，連接到發行者時所使用的安全性模式。 *publisher_security_mode*是**int**，預設值是1。 如果為**0**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]則指定驗證。 如果是**1**，則指定 Windows 驗證。  
+`[ @publisher_security_mode = ] publisher_security_mode`這是在同步處理時，連接到發行者時所使用的安全性模式。 *publisher_security_mode*是**int**，預設值是1。 如果為**0**，則指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 如果是**1**，則指定 Windows 驗證。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -116,7 +116,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @subscriber_db = ] 'subscriber_db'`這是訂閱資料庫的名稱。 *subscriber_db*是**sysname**，預設值是 Null。  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`這是在同步處理時，連接到訂閱者時所要使用的安全性模式。 *subscriber_security_mode*是**int**，預設值是1。 如果為**0**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]則指定驗證。 如果是**1**，則指定 Windows 驗證。  
+`[ @subscriber_security_mode = ] subscriber_security_mode`這是在同步處理時，連接到訂閱者時所要使用的安全性模式。 *subscriber_security_mode*是**int**，預設值是1。 如果為**0**，則指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 如果是**1**，則指定 Windows 驗證。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 合併代理程式一律是利用 Windows 驗證來連接到本機訂閱者。 如果指定了這個參數值，便會傳回警告訊息，但會忽略這個值。  
@@ -126,14 +126,14 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 如果指定了這個參數值，便會傳回警告訊息，但會忽略這個值。  
   
-`[ @subscriber_password = ] 'subscriber_password'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證的訂閱者密碼。 如果*subscriber_security_mode*設定為**0**，則需要*subscriber_password* 。 *subscriber_password*是**sysname**，預設值是 Null。  
+`[ @subscriber_password = ] 'subscriber_password'`這是驗證的訂閱者密碼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果*subscriber_security_mode*設定為**0**，則需要*subscriber_password* 。 *subscriber_password*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 如果指定了這個參數值，便會傳回警告訊息，但會忽略這個值。  
   
 `[ @distributor = ] 'distributor'`這是散發者的名稱。 散發者是**sysname**，預設*值是* *publisher*;也就是說，「發行者」也是「散發者」。  
   
-`[ @distributor_security_mode = ] distributor_security_mode`這是在同步處理時，連接到散發者時所要使用的安全性模式。 *distributor_security_mode*是**int**，預設值是0。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 **1**指定 Windows 驗證。  
+`[ @distributor_security_mode = ] distributor_security_mode`這是在同步處理時，連接到散發者時所要使用的安全性模式。 *distributor_security_mode*是**int**，預設值是0。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 **1**指定 Windows 驗證。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -175,7 +175,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**5**|Thursday|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|Day|  
+|**8**|天|  
 |**9**|工作日|  
 |**10**|週末|  
 |NULL (預設值)||  
@@ -200,7 +200,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**1**|單次|  
 |**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小時|  
 |NULL (預設值)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是 Null。  
@@ -221,7 +221,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @merge_jobid = ] merge_jobid`這是作業識別碼的輸出參數。 *merge_jobid*是**binary （16）**，預設值是 Null。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`指定是否可以透過 Windows 同步處理管理員來同步處理訂閱。 *enabled_for_syncmgr*是**Nvarchar （5）**，預設值是 FALSE。 如果**為 false**，則表示訂閱未向同步處理管理員註冊。 若**為 true**，則會使用同步處理管理員註冊訂閱，而且可以在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]不啟動的情況下進行同步處理。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`指定是否可以透過 Windows 同步處理管理員來同步處理訂閱。 *enabled_for_syncmgr*是**Nvarchar （5）**，預設值是 FALSE。 如果**為 false**，則表示訂閱未向同步處理管理員註冊。 若**為 true**，則會使用同步處理管理員註冊訂閱，而且可以在不啟動的情況下進行同步處理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 `[ @ftp_address = ] 'ftp_address'`僅供回溯相容性之用。  
   
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`表示已啟用 Web 同步處理。 *use_web_sync*是**bit**，預設值是0。 **1**指定可使用 HTTP 透過網際網路同步處理提取訂閱。  
   
-`[ @internet_url = ] 'internet_url'`這是複寫接聽程式（REPLISAPI）的位置。DLL）進行 Web 同步處理。 *internet_url*是**Nvarchar （260）**，預設值是 Null。 *internet_url*是完整的 url，格式`http://server.domain.com/directory/replisapi.dll`為。 如果將伺服器設定成來接聽通訊埠 80 以外的通訊埠，就必須用 `http://server.domain.com:portnumber/directory/replisapi.dll` 格式來提供通訊埠編號，其中 `portnumber` 代表通訊埠。  
+`[ @internet_url = ] 'internet_url'`這是複寫接聽程式（REPLISAPI）的位置。DLL）進行 Web 同步處理。 *internet_url*是**Nvarchar （260）**，預設值是 Null。 *internet_url*是完整的 url，格式為 `http://server.domain.com/directory/replisapi.dll` 。 如果將伺服器設定成來接聽通訊埠 80 以外的通訊埠，就必須用 `http://server.domain.com:portnumber/directory/replisapi.dll` 格式來提供通訊埠編號，其中 `portnumber` 代表通訊埠。  
   
 `[ @internet_login = ] 'internet_login'`這是當使用 HTTP 基本驗證來連接到主控 Web 同步處理的 Web 服務器時，合併代理程式所使用的登入。 *internet_login*是**sysname**，預設值是 Null。  
   

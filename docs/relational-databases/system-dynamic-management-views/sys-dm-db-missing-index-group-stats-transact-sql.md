@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_group_stats dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa4da39290590591af30e259db910fdc9e5600ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e91971d13b26d6a156307b2a0288de236456c880
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051566"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828091"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ INNER JOIN sys.dm_db_missing_index_details AS mid
 WHERE migs.group_handle = 24;  
 ```  
   
- 此查詢提供遺漏索引之資料庫、結構描述和資料表的名稱。 它也提供索引鍵應該使用的資料行名稱。 撰寫 create index DDL 語句來執行遺漏的索引時，請在 CREATE index 語句的 ON \< *table_name*> 子句中，先列出相等資料行，然後再列出不相等資料行。 您應該將內含資料行列在 CREATE INDEX 陳述式的 INCLUDE 子句中。 若要決定相等資料行的有效次序，請依據其選擇性排列這些資料行，將選擇性最高的資料行列在最前面 (資料行清單的最左邊)。  
+ 此查詢提供遺漏索引之資料庫、結構描述和資料表的名稱。 它也提供索引鍵應該使用的資料行名稱。 撰寫 CREATE INDEX DDL 語句來執行遺漏的索引時，請在 \< CREATE index 語句的 ON *table_name*> 子句中，先列出相等資料行，然後再列出不相等資料行。 您應該將內含資料行列在 CREATE INDEX 陳述式的 INCLUDE 子句中。 若要決定相等資料行的有效次序，請依據其選擇性排列這些資料行，將選擇性最高的資料行列在最前面 (資料行清單的最左邊)。  
   
 ## <a name="see-also"></a>另請參閱  
  [dm_db_missing_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

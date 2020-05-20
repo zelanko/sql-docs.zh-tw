@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107906"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828855"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |------------------|---------------|-----------------|  
 |**錯誤**|**binary （4）**|錯誤號碼的二進位表示法。|  
 |**來源**|**Nvarchar （nn）**|錯誤的來源。|  
-|**說明**|**Nvarchar （nn）**|錯誤的描述。|  
+|**描述**|**Nvarchar （nn）**|錯誤的描述。|  
 |**説明**|**Nvarchar （nn）**|來源的說明檔。|  
 |**HelpID**|**int**|說明來源檔案中的說明內容識別碼。|  
   
@@ -84,7 +84,7 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |錯誤和 HRESULT|共同原因|  
 |-----------------------|------------------|  
-|**不正確的變數類型 (0x80020008)**|當做方法參數傳遞[!INCLUDE[tsql](../../includes/tsql-md.md)]之值的資料類型不符合[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]方法參數的資料類型，或傳遞 Null 值做為方法參數。|  
+|**不正確的變數類型 (0x80020008)**|當做 [!INCLUDE[tsql](../../includes/tsql-md.md)] 方法參數傳遞之值的資料類型不符合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 方法參數的資料類型，或傳遞 Null 值做為方法參數。|  
 |**未知名稱 (0x8002006)**|找不到指定物件的指定屬性或方法名稱。|  
 |**無效的類別字串 (0x800401f3)**|指定的 ProgID 或 CLSID 未登錄為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 OLE 物件。 您必須先註冊自訂 OLE automation 伺服器，才能使用**sp_OACreate**來將它們具現化。 使用同進程（.dll）伺服器的 Regsvr32 公用程式或本機（.exe）伺服器的 **/REGSERVER**命令列參數，即可完成這項作業。|  
 |**伺服器執行失敗 (0x80080005)**|指定的 OLE 物件已登錄成本機 OLE 伺服器 (.exe 檔)，但找不到或無法啟動 .exe 檔。|  

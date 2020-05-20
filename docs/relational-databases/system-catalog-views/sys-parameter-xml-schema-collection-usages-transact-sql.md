@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.parameter_xml_schema_collection_usages catalog view
 ms.assetid: bffb91a3-492c-4375-bd2a-db8fc1a3ace4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8d3d736c0877ff04a7a6d16819ebb9a861fe3369
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae066013a49aa8bc22b227bf8a9b232e9b621ae5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68102233"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825024"
 ---
 # <a name="sysparameter_xml_schema_collection_usages-transact-sql"></a>sys.parameter_xml_schema_collection_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

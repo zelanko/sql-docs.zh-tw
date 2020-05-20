@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 213cc6ea9be57590d52755fdbba3151882ac0a38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 687a624eea351433407ee88298a6520ceb213841
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055176"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827700"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**全文檢索目錄名稱**|**int**|全文檢索目錄的名稱。|  
 |**全文檢索目錄識別碼**|**sysname**|全文檢索目錄的識別碼。|  
-|**componenttype**|**sysname**|這是元件的類型， 下列其中之一：<br /><br /> Filter<br /><br /> 通訊協定處理常式<br /><br /> 斷詞工具|  
+|**componenttype**|**sysname**|這是元件的類型， 發生下列情形之一：<br /><br /> 篩選<br /><br /> 通訊協定處理常式<br /><br /> 斷詞工具|  
 |**componentname**|**sysname**|元件的名稱。|  
 |**clsid**|**uniqueidentifier**|元件的類別識別碼。|  
 |**fullpath**|**nvarchar(256)**|元件位置的路徑。<br /><br /> Null = 呼叫端不是**serveradmin**固定伺服器角色的成員。|  
 |**version**|**nvarchar(30)**|元件的版本。|  
-|**manufacturer**|**sysname**|元件的製造商名稱。|  
+|**負責**|**sysname**|元件的製造商名稱。|  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  

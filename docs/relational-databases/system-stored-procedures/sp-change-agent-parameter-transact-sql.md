@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_agent_parameter
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd737be5a1e71e46750f6c80fd68ad254cb6436f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f22b2446713274503071e615690aaf7a03fc33d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768936"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824829"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 > [!NOTE]  
 >  如果指定的*agent_type*支援參數，但尚未在代理程式設定檔中定義，則會傳回錯誤。 若要將參數加入至代理程式設定檔，您必須執行[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
   
- 針對快照集代理程式（*agent_type*=**1**），如果在設定檔中定義，則可以變更下列屬性：  
+ 針對快照集代理程式（*agent_type* = **1**），如果在設定檔中定義，則可以變更下列屬性：  
   
 -   **70Subscribers**  
   
@@ -70,7 +70,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UsePerArticleContentsView**  
   
- 針對記錄讀取器代理程式（*agent_type*=**2**），如果在設定檔中定義，則可以變更下列屬性：  
+ 針對記錄讀取器代理程式（*agent_type* = **2**），如果在設定檔中定義，則可以變更下列屬性：  
   
 -   **HistoryVerboseLevel**  
   
@@ -92,7 +92,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ReadBatchThreshold**  
   
- 針對散發代理程式（*agent_type*=**3**），如果在設定檔中定義，則可以變更下列屬性：  
+ 針對散發代理程式（*agent_type* = **3**），如果在設定檔中定義，則可以變更下列屬性：  
   
 -   **BcpBatchSize**  
   
@@ -130,7 +130,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **TransactionsPerHistory**  
   
- 針對合併代理程式（*agent_type*=**4**），如果在設定檔中定義，則可以變更下列屬性：  
+ 針對合併代理程式（*agent_type* = **4**），如果在設定檔中定義，則可以變更下列屬性：  
   
 -   **AltSnapshotFolder**  
   
@@ -216,11 +216,11 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UseInprocLoader**  
   
--   **Validate**  
+-   **驗證**  
   
 -   **ValidateInterval**  
   
- 針對佇列讀取器代理程式（*agent_type*=**9**），如果在設定檔中定義，則可以變更下列屬性：  
+ 針對佇列讀取器代理程式（*agent_type* = **9**），如果在設定檔中定義，則可以變更下列屬性：  
   
 -   **HistoryVerboseLevel**  
   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsort
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a9eeca46571b2e61e73f9f5670bfeba0fd5f908
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997362"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826074"
 ---
 # <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpsort
  傳回伺服器預設定序。  
   
 ## <a name="remarks"></a>備註  
- 如果使用指定的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定序來安裝實例以與舊版安裝相容[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **sp_helpsort**會傳回空白的結果。 當此行為發生時，您可以藉由查詢 SERVERPROPERTY 物件來判斷定序，例如`SELECT SERVERPROPERTY ('Collation');`：。  
+ 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用指定的定序來安裝實例以與舊版安裝相容，sp_helpsort 會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空白**sp_helpsort**的結果。 當此行為發生時，您可以藉由查詢 SERVERPROPERTY 物件來判斷定序，例如： `SELECT SERVERPROPERTY ('Collation');` 。  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  

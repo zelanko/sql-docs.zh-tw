@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bdfe70e3df86f792d250cd7abcc3ef3013e9df19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056227"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826004"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_publication_validation [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**0**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 相容總和檢查碼。<br /><br /> 注意：當水準篩選發行項時，會執行資料列計數作業，而不是總和檢查碼作業。|  
 |**1** (預設值)|只執行資料列計數檢查。|  
-|**2**|執行資料列計數及二進位總和檢查碼。<br /><br /> 注意：對於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本7.0 訂閱者，只會執行資料列計數驗證。|  
+|**2**|執行資料列計數及二進位總和檢查碼。<br /><br /> 注意：對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本7.0 訂閱者，只會執行資料列計數驗證。|  
   
 `[ @full_or_fast = ] 'full_or_fast'`這是用來計算資料列計數的方法。 *full_or_fast*是**Tinyint** ，而且可以是下列其中一個值。  
   
@@ -61,10 +61,10 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @shutdown_agent = ] 'shutdown_agent'`這是指在驗證完成時，散發代理程式是否應立即關閉。 *shutdown_agent*是**bit**，預設值是**0**。 如果是**0**，就不會關閉複寫代理程式。 如果是**1**，則複寫代理程式會在驗證最後一篇文章之後關閉。  
   
-`[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者端要求驗證時，不應使用「發行者」。  
+>  在發行者端要求驗證時，不應使用「*發行者*」 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

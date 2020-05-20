@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cycle_agent_errorlog
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c95cc2db84bdf059437a45e2719bbc63d6eb6829
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8fcb9bad5548107ef3a9294f22696abeacbdedcd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108356"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826242"
 ---
 # <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_cycle_agent_errorlog
  None  
   
 ## <a name="remarks"></a>備註  
- 每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟動代理程式時，目前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 agent 錯誤記錄檔都會重新命名為**SQLAgent。 1**;**SQLAgent**會變成**SQLAgent。 2**， **SQLAgent**會變成**SQLAgent。 3**，依此類推。 **sp_cycle_agent_errorlog**可讓您迴圈錯誤記錄檔，而不需要停止和啟動伺服器。  
+ 每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動代理程式時，目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent 錯誤記錄檔都會重新命名為**SQLAgent。 1**;**SQLAgent**會變成**SQLAgent。 2**， **SQLAgent**會變成**SQLAgent。 3**，依此類推。 **sp_cycle_agent_errorlog**可讓您迴圈錯誤記錄檔，而不需要停止和啟動伺服器。  
   
  這個預存程式必須從**msdb**資料庫中執行。  
   

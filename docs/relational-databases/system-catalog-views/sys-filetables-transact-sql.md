@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.filetables catalog view
 ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 791bba2f5ec1830e343acff24fd55628a3f13d2e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4cd2890f1dc5975895814067ab577e9bde93aea8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133996"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828114"
 ---
 # <a name="sysfiletables-transact-sql"></a>sys.filetables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

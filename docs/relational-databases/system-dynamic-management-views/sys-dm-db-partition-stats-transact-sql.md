@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_partition_stats dynamic management view
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eff14464f5913508d8d95fec8a11a70438f95880
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096279"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828028"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68096279"
   針對目前資料庫中的每個資料分割，各傳回其頁面和資料列計數資訊。  
   
 > [!NOTE]  
->  若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_db_partition_stats**的名稱。 Sys. dm_pdw_nodes_db_partition_stats 中的 partition_id 不同于 Azure SQL 資料倉儲的 [sys.databases] 目錄檢視中的 partition_id。
+>  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_db_partition_stats**的名稱。 Sys. dm_pdw_nodes_db_partition_stats 中的 partition_id 不同于 Azure SQL 資料倉儲的 [sys.databases] 目錄檢視中的 partition_id。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -48,11 +48,11 @@ ms.locfileid: "68096279"
 |**lob_reserved_page_count**|**bigint**|資料分割中為儲存和管理 out-of-row **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 和 **xml** 資料行所保留的頁數，不管這些頁面是否正在使用中。 IAM 頁數包括在內。<br /><br /> 保留在資料分割中儲存和管理資料行存放區索引的 LOB 總數。|  
 |**row_overflow_used_page_count**|**bigint**|資料分割中用來儲存管理資料列溢位 **varchar**、**nvarchar**、**varbinary** 和 **sql_variant** 資料行的頁數。 IAM 頁數包括在內。<br /><br /> 永遠是 0，表示資料行存放區索引。|  
 |**row_overflow_reserved_page_count**|**bigint**|資料分割中為儲存管理資料列溢位 **varchar**、**nvarchar**、**varbinary** 和 **sql_variant** 資料行所保留的頁數，不管這些頁面是否正在使用中。 IAM 頁數包括在內。<br /><br /> 永遠是 0，表示資料行存放區索引。|  
-|**used_page_count**|**bigint**|資料分割的總使用頁數。 計算為**in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**。|  
-|**reserved_page_count**|**bigint**|資料分割的總保留頁數。 計算為**in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**。|  
+|**used_page_count**|**bigint**|資料分割的總使用頁數。 計算為**in_row_used_page_count**  +  **lob_used_page_count**  +  **row_overflow_used_page_count**。|  
+|**reserved_page_count**|**bigint**|資料分割的總保留頁數。 計算為**in_row_reserved_page_count**  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**。|  
 |**row_count**|**bigint**|此資料分割中大約的資料列數目。|  
-|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
-|**distribution_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 與散發相關聯的唯一數值識別碼。|  
+|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|**distribution_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 與散發相關聯的唯一數值識別碼。|  
   
 ## <a name="remarks"></a>備註  
  **sys.dm_db_partition_stats** 顯示資料庫中所有資料分割用來儲存和管理同資料列資料、LOB 資料和資料列溢位資料的空間相關資訊。 每個資料分割顯示一個資料列。  

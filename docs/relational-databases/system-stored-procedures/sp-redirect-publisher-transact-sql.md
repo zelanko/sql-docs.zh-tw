@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6062522ca6c5c3a311ba2f2c796f791c47e874ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60cd08c7ddf8ab520b6ff5e8ffb588b1a8f118c9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252112"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828242"
 ---
 # <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @original_publisher = ] 'original_publisher'`原先發行資料庫之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的名稱。 *original_publisher*是**sysname**，沒有預設值。  
+`[ @original_publisher = ] 'original_publisher'`原先發行資料庫之實例的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *original_publisher*是**sysname**，沒有預設值。  
   
 `[ @publisher_db = ] 'publisher_db'`要發行之資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
@@ -55,7 +55,7 @@ sp_redirect_publisher
 ## <a name="remarks"></a>備註  
  **sp_redirect_publisher**可用來將發行者/資料庫配對與可用性群組的接聽程式產生關聯，以允許將複寫發行者重新導向至 Always On 可用性群組的目前主要複本。 在為包含已發行資料庫的可用性群組設定 AG 接聽程式之後，執行**sp_redirect_publisher** 。  
   
- 如果原始發行者端的發行集資料庫已從主要複本的可用性群組中移除，請執行**sp_redirect_publisher** ，但不指定* \@redirected_publisher*參數的值，以移除發行者/資料庫配對的重新導向。 如需有關在時重新導向發行者的詳細資訊，請參閱[維護 AlwaysOn 發行集資料庫 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)。  
+ 如果原始發行者端的發行集資料庫已從主要複本的可用性群組中移除，請執行**sp_redirect_publisher** ，但不指定* \@ redirected_publisher*參數的值，以移除發行者/資料庫配對的重新導向。 如需有關在時重新導向發行者的詳細資訊，請參閱[維護 AlwaysOn 發行集資料庫 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)。  
   
 ## <a name="permissions"></a>權限  
  呼叫者必須是**系統管理員（sysadmin** ）固定伺服器角色的成員、散發資料庫的**db_owner**固定資料庫角色，或是與發行者資料庫相關聯之定義發行集的發行集存取清單的成員。  

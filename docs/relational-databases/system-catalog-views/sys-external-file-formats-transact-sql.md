@@ -10,32 +10,32 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75e3f884e09d41c2ae7aa5c7610b0c7ac24691a7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048394"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828512"
 ---
 # <a name="sysexternal_file_formats-transact-sql"></a>sys.databases external_file_formats （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、和[!INCLUDE[ssSDS](../../includes/sssds-md.md)] [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，在目前資料庫中的每個外部檔案格式各包含一個資料列。  
+  針對、和，在目前資料庫中的每個外部檔案格式各包含一個資料列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。  
   
- 針對伺服器上的每個外部檔案格式，各包含[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]一個資料列。  
+ 針對伺服器上的每個外部檔案格式，各包含一個資料列 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|外部檔案格式的物件識別碼。||  
-|NAME|**sysname**|檔案格式的名稱。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]中，這對資料庫而言是唯一的。 在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中，這對伺服器而言是唯一的。||  
+|name|**sysname**|檔案格式的名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和中 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ，這對資料庫而言是唯一的。 在中 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，這對伺服器而言是唯一的。||  
 |format_type|**tinyint**|檔案格式類型。|DELIMITEDTEXT、RCFILE、ORC、PARQUET|  
 |field_terminator|**Nvarchar （10）**|對於 format_type = DELIMITEDTEXT，這是欄位結束字元。||  
 |string_delimiter|**Nvarchar （10）**|對於 format_type = DELIMITEDTEXT，這是字串分隔符號。||  
 |date_format|**nvarchar(50)**|針對 format_type = DELIMITEDTEXT，這是使用者定義的日期和時間格式。||  
-|use_type_default|**bit**|針對 format_type = 分隔文字，指定當 PolyBase 將資料從 HDFS 文字檔匯入到[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]時，如何處理遺漏值。|0-儲存遺漏的值做為字串 ' Null '。<br /><br /> 1-儲存遺漏值做為資料行的預設值。|  
+|use_type_default|**bit**|針對 format_type = 分隔文字，指定當 PolyBase 將資料從 HDFS 文字檔匯入到時，如何處理遺漏值 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|0-儲存遺漏的值做為字串 ' Null '。<br /><br /> 1-儲存遺漏值做為資料行的預設值。|  
 |serde_method|**nvarchar(255)**|對於 format_type = RCFILE，這是序列化/還原序列化方法。||  
 |row_terminator|**Nvarchar （10）**|針對 format_type = DELIMITEDTEXT，這是在外部 Hadoop 檔案中終止每個資料列的字元字串。|一律為 ' \n '。|  
 |編碼|**Nvarchar （10）**|針對 format_type = DELIMITEDTEXT，這是外部 Hadoop 檔案的編碼方法。|一律為 ' UTF8 '。|  

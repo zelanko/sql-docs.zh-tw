@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticle
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1e71d3795b233ec335cf01848fa3b226a6ebde0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771104"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828346"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @article = ] 'article'`這是發行集中的發行項名稱。 *article*發行項**sysname** **%** 是 sysname，預設值是。 如果未提供發行項，則會傳回指定之發行集的*所有文章相關*資訊。  
+`[ @article = ] 'article'`這是發行集中的發行項名稱。 發行*項是* **sysname**，預設值是 **%** 。 如果未提供發行項，則會傳回指定之發行集的*所有文章相關*資訊。  
   
 `[ @returnfilter = ] returnfilter`指定是否應該傳回篩選子句。 *returnfilter*是**bit**，預設值是**1**，會傳回篩選子句。  
   
-`[ @publisher = ] 'publisher'`指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  *publisher*要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者發行之發行項的資訊時，不應指定發行者。  
+>  *publisher*要求發行者發行之發行項的資訊時，不應指定發行者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ @found = ] found OUTPUT`僅供內部使用。  
   

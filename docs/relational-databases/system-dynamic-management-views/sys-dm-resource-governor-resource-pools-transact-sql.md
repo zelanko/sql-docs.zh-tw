@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_resource_pools dynamic management view
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c39c32a907cecd8f670875fffba9f21995f2ccee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae7fd97640b048d504dd03599bf991e9ae91929d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982302"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827837"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "73982302"
   傳回目前資源集區狀態的相關資訊、資源集區的目前組態和資源集區統計資料。  
   
 > [!NOTE]  
->  若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_resource_governor_resource_pools**的名稱。  
+>  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_resource_governor_resource_pools**的名稱。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|資源集區的識別碼。 不可為 Null。|  
-|NAME|**sysname**|資源集區的名稱。 不可為 Null。|  
+|name|**sysname**|資源集區的名稱。 不可為 Null。|  
 |statistics_start_time|**datetime**|重設此集區統計資料時的時間。 不可為 Null。|  
 |total_cpu_usage_ms|**bigint**|重設資源管理員統計資料之後的累計 CPU 使用量 (以毫秒為單位)。 不可為 Null。|  
 |cache_memory_kb|**bigint**|目前的快取記憶體總使用量 (以 KB 為單位)。 不可為 Null。|  
@@ -76,7 +76,7 @@ ms.locfileid: "73982302"
 |write_io_stall_queued_ms|**bigint**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 寫入 IO 從抵達到發行的總時間 (以毫秒為單位)。 可為 Null。 如果資源集區不受 IO 管制，則為 NULL。 也就是說，資源集區的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 設定為 0。<br /><br /> 這是 IO 資源管理導入的延遲。|  
 |io_issue_violations_total|**int**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> IO 發出違規總數。 也就是說，在 IO 發出率低於保留率時的次數。 可為 Null。 如果資源集區不受 IO 管制，則為 NULL。 也就是說，資源集區的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 設定為 0。|  
 |io_issue_delay_total_ms|**bigint**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 排程發出 IO 到實際發出 IO 的總時間 (以毫秒為單位)。 可為 Null。 如果資源集區不受 IO 管制，則為 NULL。 也就是說，資源集區的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 設定為 0。|  
-|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="remarks"></a>備註  
  資源管理員工作負載群組和資源管理員資源集區擁有多對一的對應。 因此，許多資源集區統計資料會從工作負載群組統計資料衍生。  

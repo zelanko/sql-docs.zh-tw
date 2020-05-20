@@ -17,15 +17,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0eb367dd29a96f5819563f0b10e036b7274c4303
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119325"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827353"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "68119325"
 |**database_name**|**nvarchar(128)**|執行備份所涉及的資料庫名稱。 可以是 NULL。|  
 |**server_name**|**nvarchar(128)**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份作業的伺服器名稱。 可以是 NULL。|  
 |**machine_name**|**nvarchar(128)**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦名稱。 可以是 NULL。|  
-|**flags**|**int**|在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **flags**資料行已被取代，而且正由下列位資料行取代：<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> 可以是 NULL。<br /><br /> 在較早 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的備份組中，旗標位元的狀況如下：<br />1 = 備份包含記錄最少的資料。 <br />2 = 使用 WITH SNAPSHOT。 <br />4 = 當備份時，資料庫是唯讀的。<br />8 = 當備份時，資料庫在單一使用者模式中。|  
+|**flags**|**int**|在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， **flags**資料行已被取代，而且正由下列位資料行取代：<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> 可以是 NULL。<br /><br /> 在較早 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的備份組中，旗標位元的狀況如下：<br />1 = 備份包含記錄最少的資料。 <br />2 = 使用 WITH SNAPSHOT。 <br />4 = 當備份時，資料庫是唯讀的。<br />8 = 當備份時，資料庫在單一使用者模式中。|  
 |**unicode_locale**|**int**|Unicode 地區設定。 可以是 NULL。|  
 |**unicode_compare_style**|**int**|Unicode 比較樣式。 可以是 NULL。|  
 |**collation_name**|**nvarchar(128)**|定序名稱。 可以是 NULL。|  
@@ -108,14 +108,14 @@ ms.locfileid: "68119325"
   
 ## <a name="see-also"></a>另請參閱  
  [備份和還原資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupmediaset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [備份和還原期間可能的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
+ [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [備份和還原期間可能發生的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
  [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
- [RESTORE HEADERONLY &#40;Transact-sql&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [備份和還原資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

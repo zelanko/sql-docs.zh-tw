@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_catalogs
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0844001016f67d227b4612176b2804dcda0a3d29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b760e27d7a0b320c0e911a1a485d1e5e9033146a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045937"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824849"
 ---
 # <a name="sp_catalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**Catalog_name**|**Nvarchar （** 128 **）**|目錄的名稱。|  
-|**說明**|**Nvarchar （** 4000 **）**|目錄的描述|  
+|**描述**|**Nvarchar （** 4000 **）**|目錄的描述|  
   
 ## <a name="permissions"></a>權限  
  需要結構描述的 SELECT 權限。  
@@ -55,7 +55,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
  下列範例會傳回 `OLE DB ODBC Linked Server #3` 這個連結伺服器的目錄資訊。  
   
 > [!NOTE]  
->  若要讓**sp_catalogs**提供有用的`OLE DB ODBC Linked Server #3`資訊，必須已經存在。  
+>  若要讓**sp_catalogs**提供有用的資訊， `OLE DB ODBC Linked Server #3` 必須已經存在。  
   
 ```  
 USE master;  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e88bc45995574dcde29427773e3e8d9bec62ed96
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108298"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826212"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 `[ @ODBCVer = ] odbc_version`這是所使用的 ODBC 版本。 *odbc_version*是**Tinyint**，預設值是2。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -79,7 +79,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
  需要 public 角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會藉由指定的*data_type*值，來抓取**sysname**和**Nvarchar**資料類型的`-9`資訊。  
+ 下列範例會藉由指定的*data_type*值，來抓取**sysname**和**Nvarchar**資料類型的資訊 `-9` 。  
   
 ```  
 USE master;  

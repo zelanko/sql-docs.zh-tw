@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17189e3acebd81e977b02b1b1b235f8e300e5e9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030899"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826022"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="examples"></a>範例  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. 設定特定索引的選項  
- 下列範例不允許`IX_Customer_TerritoryID` `Customer`資料表上索引的頁面鎖定。  
+ 下列範例不允許資料表上索引的頁面鎖定 `IX_Customer_TerritoryID` `Customer` 。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -117,7 +117,7 @@ GO
 ```  
   
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. 設定不含任何叢集索引之資料表的選項  
- 下列範例會禁止不含任何叢集索引之資料表 (堆積) 的頁面鎖定。 在`sys.indexes`執行程式之前和之後`sp_indexoption`都會查詢目錄檢視，以顯示語句的結果。  
+ 下列範例會禁止不含任何叢集索引之資料表 (堆積) 的頁面鎖定。 在 `sys.indexes` 執行程式之前和之後都會查詢目錄檢視， `sp_indexoption` 以顯示語句的結果。  
   
 ```sql  
 USE AdventureWorks2012;  

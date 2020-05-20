@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c09dfe73df914a38e53a39b99c99388590c8d9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304801"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827733"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------|-----------------|  
 |**本機**|本機作業類別目錄。|  
 |**MULTI -SERVER**|多伺服器作業類別目錄。|  
-|**無**|**作業**以外類別的分類。|  
+|**NONE**|**作業**以外類別的分類。|  
   
 `[ @name = ] 'name'`所要求之資訊所屬的類別目錄名稱。 *name*是**sysname**，預設值是 Null。  
   
@@ -66,7 +66,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 當** \@尾碼**為**0**時， **sp_help_category**會傳回下列結果集：  
+ 當** \@ 尾碼**為**0**時， **sp_help_category**會傳回下列結果集：  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|類別目錄類型：<br /><br /> **1** = 本機<br /><br /> **2** = 多伺服器<br /><br /> **3** = 無|  
 |**name**|**sysname**|類別目錄名稱|  
   
- 當** \@尾碼**為**1**時， **sp_help_category**會傳回下列結果集：  
+ 當** \@ 尾碼**為**1**時， **sp_help_category**會傳回下列結果集：  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

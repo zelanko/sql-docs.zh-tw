@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_properties system table
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e49d5ed290d95453c376713cabb914a495dfca8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 38013350a75e6632995d8025535ea115110894e0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139717"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827178"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,17 +31,17 @@ ms.locfileid: "68139717"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**發行者**|**sysname**|發行者的名稱。|  
+|**publisher**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
 |**publication_type**|**int**|發行集類型：<br /><br /> **0** = 交易式。<br /><br /> **2** = Merge。|  
 |**publisher_login**|**sysname**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**publisher_password**|**Nvarchar （524）**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (已加密)。|  
-|**publisher_security_mode**|**int**|在發行者端實作的安全性模式：<br /><br /> **0**  =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 驗證。<br /><br /> **1**  =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。<br /><br /> **2** = 同步處理觸發程式會使用靜態**sysservers**專案來執行遠端程序呼叫（RPC），而且必須在**sysservers**資料表中將*發行者*定義為遠端伺服器或連結的伺服器。|  
+|**publisher_security_mode**|**int**|在發行者端實作的安全性模式：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 驗證。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。<br /><br /> **2** = 同步處理觸發程式會使用靜態**sysservers**專案來執行遠端程序呼叫（RPC），而且必須在**sysservers**資料表中將*發行者*定義為遠端伺服器或連結的伺服器。|  
 |**伺服器**|**sysname**|散發者的名稱。|  
 |**distributor_login**|**sysname**|在散發者端用於執行 SQL Server 驗證的登入識別碼。|  
 |**distributor_password**|**Nvarchar （524）**|用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (已加密)。|  
-|**distributor_security_mode**|**int**|在散發者端實作的安全性模式：<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。<br /><br /> **1** = Windows 驗證。|  
+|**distributor_security_mode**|**int**|在散發者端實作的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。<br /><br /> **1** = Windows 驗證。|  
 |**ftp_address**|**sysname**|散發者的檔案傳輸通訊協定 (FTP) 服務的網路位址。|  
 |**ftp_port**|**int**|散發者的 FTP 服務通訊埠編號。|  
 |**ftp_login**|**sysname**|用於連接到 FTP 服務的使用者名稱。|  
@@ -52,15 +52,15 @@ ms.locfileid: "68139717"
 |**dts_package_name**|**sysname**|指定 Data Transformation Services (DTS) 封裝的名稱。|  
 |**dts_package_password**|**Nvarchar （524）**|指定封裝的密碼。|  
 |**dts_package_location**|**int**|DTS 封裝的儲存位置。|  
-|**enabled_for_syncmgr**|**bit**|指定是否能夠利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronization Manager 來同步處理訂閱。<br /><br /> **0** = 訂閱未向同步處理管理員註冊。<br /><br /> **1** = 訂閱是使用同步處理管理員註冊，而且可以在不[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]啟動的情況下進行同步處理。|  
+|**enabled_for_syncmgr**|**bit**|指定是否能夠利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronization Manager 來同步處理訂閱。<br /><br /> **0** = 訂閱未向同步處理管理員註冊。<br /><br /> **1** = 訂閱是使用同步處理管理員註冊，而且可以在不啟動的情況下進行同步處理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。|  
 |**offload_agent**|**bit**|指定是否能從遠端啟動代理程式。 如果是**0**，就無法從遠端啟動代理程式。|  
 |**offload_server**|**sysname**|指定遠端啟用所用之伺服器的網路名稱。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|指定儲存快照集檔案的資料夾路徑。|  
 |**use_web_sync**|**bit**|指定是否能夠利用 HTTP 來同步處理訂閱。 值為**1**表示已啟用這項功能。|  
 |**internet_url**|**nvarchar(260)**|代表複寫接聽程式之 Web 同步處理位置的 URL。|  
-|**internet_login**|**sysname**|當連接到使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證來裝載 web 同步處理的 web 伺服器時，合併代理程式所使用的登入。|  
-|**internet_password**|**Nvarchar （524）**|當連接到使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證來裝載 web 同步處理的 web 伺服器時，合併代理程式所使用之登入的密碼。|  
-|**internet_security_mode**|**int**|當連接到主控 Web 同步處理的 Web 服務器時所使用的驗證模式，其中**1**值表示 Windows 驗證，值為**0**表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
+|**internet_login**|**sysname**|當連接到使用驗證來裝載 Web 同步處理的 Web 服務器時，合併代理程式所使用的登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**internet_password**|**Nvarchar （524）**|當連接到使用驗證來裝載 Web 同步處理的 Web 服務器時，合併代理程式所使用之登入的密碼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**internet_security_mode**|**int**|當連接到主控 Web 同步處理的 Web 服務器時所使用的驗證模式，其中**1**值表示 Windows 驗證，值為**0**表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  
 |**internet_timeout**|**int**|Web 同步處理要求到期之前的時間長度 (以秒為單位)。|  
 |**hostname**|**sysname**|指定在聯結篩選的**WHERE**子句或邏輯記錄關聯性中使用這個函數時， **HOST_NAME**的值。|  
   

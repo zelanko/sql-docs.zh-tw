@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_sys_memory dynamic management view
 ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 891ae8c4f21d0a38302a7213aab22b8a70e855ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2304a0afc16c99934f6f77c640c60cb2ade52acf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79027950"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827875"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "79027950"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受限於 (回應) 作業系統層級的外部記憶體條件以及基礎硬體的實體限制。 判斷整體系統狀態是評估 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體使用量的重要部分。  
   
 > [!NOTE]  
->  若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_os_sys_memory**的名稱。  
+>  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_os_sys_memory**的名稱。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -49,14 +49,14 @@ ms.locfileid: "79027950"
 |**system_high_memory_signal_state**|**bit**|系統記憶體資源充足通知的狀態。 值為 1 表示 Windows 已經設定了記憶體充足的訊號。 如需詳細資訊，請參閱 MSDN library 中的[CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) 。|  
 |**system_low_memory_signal_state**|**bit**|系統記憶體資源不足通知的狀態。 值為 1 表示 Windows 已經設定了記憶體不足的訊號。 如需詳細資訊，請參閱 MSDN library 中的[CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) 。|  
 |**system_memory_state_desc**|**nvarchar(256)**|記憶體狀態的描述。 請參閱下表。|  
-|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 |狀況|值|  
 |---------------|-----------|  
-|system_high_memory_signal_state = 1<br /><br /> 和<br /><br /> system_low_memory_signal_state = 0|可用的實體記憶體充足|  
-|system_high_memory_signal_state = 0<br /><br /> 和<br /><br /> system_low_memory_signal_state = 1|可用的實體記憶體不足|  
-|system_high_memory_signal_state = 0<br /><br /> 和<br /><br /> system_low_memory_signal_state = 0|實體記憶體使用量穩定|  
-|system_high_memory_signal_state = 1<br /><br /> 和<br /><br /> system_low_memory_signal_state = 1|實體記憶體狀態正在轉換<br /><br /> 充足和不足的訊號不應該同時開啟。 不過，作業系統層級的快速變更可能會導致這兩個值看似對某個使用者模式應用程式同時開啟。 兩個訊號同時開啟的現象將解譯成轉換狀態。|  
+|system_high_memory_signal_state = 1<br /><br /> 及<br /><br /> system_low_memory_signal_state = 0|可用的實體記憶體充足|  
+|system_high_memory_signal_state = 0<br /><br /> 及<br /><br /> system_low_memory_signal_state = 1|可用的實體記憶體不足|  
+|system_high_memory_signal_state = 0<br /><br /> 及<br /><br /> system_low_memory_signal_state = 0|實體記憶體使用量穩定|  
+|system_high_memory_signal_state = 1<br /><br /> 及<br /><br /> system_low_memory_signal_state = 1|實體記憶體狀態正在轉換<br /><br /> 充足和不足的訊號不應該同時開啟。 不過，作業系統層級的快速變更可能會導致這兩個值看似對某個使用者模式應用程式同時開啟。 兩個訊號同時開啟的現象將解譯成轉換狀態。|  
   
 ## <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  

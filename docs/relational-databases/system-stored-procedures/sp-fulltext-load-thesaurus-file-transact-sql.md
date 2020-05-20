@@ -17,14 +17,14 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], editing
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ac01c2d29dbe79d0a5702e1bd42730d0b31efcf2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305208"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827769"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
@@ -44,7 +44,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  對應您想要載入同義字 XML 定義之語言地區設定識別碼 (LCID) 的整數。 若要取得伺服器實例上可用語言的 Lcid，請使用[fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)目錄檢視。  
   
- **\@loadOnlyIfNotLoaded** = *動作*  
+ ** \@ loadOnlyIfNotLoaded**  =  *動作*  
  指定同義字檔案是否會載入內部同義字資料表中，即使已經載入也是一樣。 *動作*為下列其中一項：  
   
 |值|定義|  
@@ -53,7 +53,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 |1|只有在尚未載入同義字檔案時，才會載入。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
  None  

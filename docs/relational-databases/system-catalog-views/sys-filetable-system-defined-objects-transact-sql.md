@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.filetable_system_defined_objects catalog view
 ms.assetid: 62022e6b-46f6-495f-b14b-53f41e040361
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dd05f24ab90844065b708230ee016ce9ce78bfbd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5ed70162c89d9aa3a02d8d1fe5cb76f7031a806c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005155"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828121"
 ---
 # <a name="sysfiletable_system_defined_objects-transact-sql"></a>sys.filetable_system_defined_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68005155"
 |**parent_object_id**|**int**|父 FileTable 的物件識別碼。<br /><br /> 參考**sys.databases**中的物件。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Create、Alter 和 Drop Filetable](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
+ [建立、改變及卸除 FileTable](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [管理 FileTable](../../relational-databases/blob/manage-filetables.md)  
   
   

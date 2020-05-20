@@ -17,23 +17,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_histogram dynamic management function
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06a8b8e36123f34b42b890c8315b8847a3c0e0bb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096247"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828043"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-傳回目前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中指定之資料庫物件（資料表或索引視圖）的統計資料長條圖。 類似於 `DBCC SHOW_STATISTICS WITH HISTOGRAM`。
+傳回目前資料庫中指定之資料庫物件（資料表或索引視圖）的統計資料長條圖 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 類似於 `DBCC SHOW_STATISTICS WITH HISTOGRAM`。
 
 > [!NOTE] 
-> 從[!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2 開始提供此 DMF
+> 從 SP1 CU2 開始提供此 DMF [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)]
 
 ## <a name="syntax"></a>語法  
   
@@ -59,13 +59,13 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |range_rows |**real** |資料行值在長條圖步驟內的預估資料列數，不包括上限。 |
 |equal_rows |**real** |資料行值等於長條圖步驟之上限的預估資料列數。 |
 |distinct_range_rows |**bigint** |在長條圖步驟內具有相異資料行值的預估資料列數，不包括上限。 |
-|average_range_rows |**real** |在長條圖步驟內具有重復資料行值的平均資料列數，不包括上限`RANGE_ROWS / DISTINCT_RANGE_ROWS` （ `DISTINCT_RANGE_ROWS > 0`適用于）。 |
+|average_range_rows |**real** |在長條圖步驟內具有重復資料行值的平均資料列數，不包括上限（ `RANGE_ROWS / DISTINCT_RANGE_ROWS` 適用于 `DISTINCT_RANGE_ROWS > 0` ）。 |
   
  ## <a name="remarks"></a>備註  
  
- 的結果集`sys.dm_db_stats_histogram` `DBCC SHOW_STATISTICS WITH HISTOGRAM`會傳回類似的資訊，而且`object_id`也`stats_id`包含、 `step_number`和。
+ 的結果集會傳回類似的資訊，而且 `sys.dm_db_stats_histogram` `DBCC SHOW_STATISTICS WITH HISTOGRAM` 也包含 `object_id` 、 `stats_id` 和 `step_number` 。
 
- 因為資料行`range_high_key`是 SQL_variant 的資料類型，所以如果述詞與`CAST`非`CONVERT`字串常數進行比較，您可能需要使用或。
+ 因為資料行 `range_high_key` 是 SQL_variant 的資料類型，所以如果述詞 `CAST` `CONVERT` 與非字串常數進行比較，您可能需要使用或。
 
 ### <a name="histogram"></a>長條圖
   
@@ -94,7 +94,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 ## <a name="examples"></a>範例  
 
 ### <a name="a-simple-example"></a>A. 簡單範例    
-下列範例會建立並填入簡單的資料表。 然後在資料`Country_Name`行上建立統計資料。
+下列範例會建立並填入簡單的資料表。 然後在資料行上建立統計資料 `Country_Name` 。
 
 ```sql
 CREATE TABLE Country
@@ -105,7 +105,7 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-主鍵會佔用`stat_id`數位1，因此，針對`sys.dm_db_stats_histogram` `stat_id`數位2呼叫以傳回`Country`資料表的統計資料長條圖。    
+主鍵會佔用 `stat_id` 數位1，因此， `sys.dm_db_stats_histogram` 針對 `stat_id` 數位2呼叫以傳回資料表的統計資料長條圖 `Country` 。    
 ```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
@@ -120,14 +120,14 @@ WHERE s.[name] = N'<statistic_name>';
 ```
 
 ### <a name="c-useful-query"></a>C. 有用的查詢：
-下列範例會從資料表`Country`中選取資料行`Country_Name`上具有述詞的。
+下列範例會從資料表中選取資料 `Country` 行上具有述詞的 `Country_Name` 。
 
 ```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
-下列範例會查看先前針對資料表`Country`和資料行`Country_Name`所建立的統計資料，以取得與上述查詢中的述詞相符的長條圖步驟。
+下列範例會查看先前針對資料表和資料行所建立的統計資料， `Country` `Country_Name` 以取得與上述查詢中的述詞相符的長條圖步驟。
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 

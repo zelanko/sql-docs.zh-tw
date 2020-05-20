@@ -15,14 +15,14 @@ helpviewer_keywords:
 - system tables [SQL Server], restore tables
 - restore system tables [SQL Server]
 ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3b70edcd7a8dec126816af944ed81516cb260f40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9bd366cc3d78887959e7eb08d0a63aba156cb780
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091888"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827342"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>備份及還原資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

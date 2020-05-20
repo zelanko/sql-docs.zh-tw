@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fc92c675902309179865593b03f51a385f61621e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107884"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828825"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-a-local-variable"></a>A. 使用本機變數  
- 下列範例會取得`HostName`屬性（先前建立的**SQLServer**物件），並將它儲存在本機變數中。  
+ 下列範例 `HostName` 會取得屬性（先前建立的**SQLServer**物件），並將它儲存在本機變數中。  
   
 ```  
 DECLARE @property varchar(255);  
@@ -114,7 +114,7 @@ PRINT @property;
 ```  
   
 ### <a name="b-using-a-result-set"></a>B. 使用結果集  
- 下列範例會取得`HostName`屬性（先前建立的**SQLServer**物件），並將它以結果集的形式傳回給用戶端。  
+ 下列範例 `HostName` 會取得屬性（先前建立的**SQLServer**物件），並將它以結果集的形式傳回給用戶端。  
   
 ```  
 EXEC @hr = sp_OAGetProperty @object, 'HostName';  

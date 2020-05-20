@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_databases
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c338fb8057c2d58727f18e0bb69e2fa825e71559
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1c4cd06a540709b5e100a086a426fd5bdb46abf5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108329"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826228"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|資料庫的名稱。 在中[!INCLUDE[ssDE](../../includes/ssde-md.md)]，這個資料行代表儲存在**sys.databases**目錄檢視中的資料庫名稱。|  
+|**DATABASE_NAME**|**sysname**|資料庫的名稱。 在中 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，這個資料行代表儲存在**sys.databases**目錄檢視中的資料庫名稱。|  
 |**DATABASE_SIZE**|**int**|資料庫的大小 (以 KB 為單位)。|  
 |**備註**|**Varchar （254）**|對於 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，這個欄位一律會傳回 NULL。|  
   

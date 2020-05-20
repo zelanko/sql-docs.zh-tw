@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_recompile
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241a0594f3487d47c49a96fb2539b660b294b8a4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002560"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827512"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_recompile [ @objname = ] 'object'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @objname= ]'*object*'  
+ [ @objname =] '*物件*'  
  目前資料庫中之預存程序、觸發程序、資料表、檢視表或使用者定義函數的限定或非限定名稱。 *物件*是**Nvarchar （776）**，沒有預設值。 如果*object*是預存程式、觸發程式或使用者定義函數的名稱，則會在下次執行時重新編譯預存程式、觸發程式或函數。 如果*object*是資料表或視圖的名稱，則會在下次執行時重新編譯參考資料表或 view 的所有預存程式、觸發程式或使用者自訂函數。  
   
 ## <a name="return-code-values"></a>傳回碼值  

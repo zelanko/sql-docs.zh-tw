@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 023ee54178c5f303797c6db83cc646353304b051
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80170f22636b9542524f8ce97b6fe8a5e595953c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090267"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827833"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68090267"
  |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |NAME|**nvarchar(60)**|物件的名稱。 名稱在特定物件類型的封裝內是唯一的。 不可為 Null。|  
-|object_type|**nvarchar(60)**|物件的型別。 object_type 為下列其中一項：<br /><br /> event<br /><br /> 動作<br /><br /> 目標<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> 不可為 Null。|  
+|object_type|**nvarchar(60)**|物件的型別。 object_type 為下列其中一項：<br /><br /> event<br /><br /> 動作<br /><br /> 目標<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 類型<br /><br /> 不可為 Null。|  
 |package_guid|**uniqueidentifier**|公開此動作之封裝的 GUID。 這與 sys.dm_xe_packages.package_id 之間是多對一的關聯性。 不可為 Null。|  
 |description|**nvarchar(256)**|動作的描述。 描述是由封裝作者所設定。 不可為 Null。|  
 |capabilities|**int**|描述此物件之功能的點陣圖。 可為 Null。|  

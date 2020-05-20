@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090056"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827562"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|命令應該重試的最大次數 (如果沒有成功)。|  
 |**retry_interval**|**int**|任何重試的間隔 (以分鐘為單位)。|  
 |**os_run_priority**|**int**|已保留。|  
-|**output_file_name**|**nvarchar(200)**|應該寫入命令輸出的檔案（[!INCLUDE[tsql](../../includes/tsql-md.md)]僅限、 **CmdExec**和**PowerShell**步驟）。|  
+|**output_file_name**|**nvarchar(200)**|應該寫入命令輸出的檔案（ [!INCLUDE[tsql](../../includes/tsql-md.md)] 僅限、 **CmdExec**和**PowerShell**步驟）。|  
 |**last_run_outcome**|**int**|上次執行步驟的結果：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = 重試<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
 |**last_run_duration**|**int**|上次執行步驟的持續期間 (hhmmss)。|  
 |**last_run_retries**|**int**|上次執行步驟時的命令重試次數。|  

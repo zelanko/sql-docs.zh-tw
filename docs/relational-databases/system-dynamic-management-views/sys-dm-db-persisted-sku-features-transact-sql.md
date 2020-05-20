@@ -17,14 +17,14 @@ helpviewer_keywords:
 - editions [SQL Server]
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f689541d455f4f7e6da4cc68742519a74f671506
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c92a9271575a725aef6981b97cb9b35c81829044
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981830"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828051"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,15 +44,15 @@ ms.locfileid: "73981830"
 ## <a name="remarks"></a>備註  
  如果資料庫未使用特定版本可能會限制的功能，則此視圖不會傳回任何資料列。  
   
- dm_db_persisted_sku_features 可能會列出下列僅限於特定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的資料庫變更功能：  
+ dm_db_persisted_sku_features 可能會列出下列僅限於特定版本的資料庫變更功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
 -   **ChangeCapture**：表示資料庫已啟用變更資料捕獲。 若要移除變更資料捕獲，請使用[sys.databases sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)預存程式。 如需詳細資訊，請參閱[關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)。  
   
--   **ColumnStoreIndex**：表示至少有一個資料表具有資料行存放區索引。 若要讓資料庫移到不支援這項功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本，請使用[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)或[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)語句來移除資料行存放區索引。 如需詳細資訊，請參閱資料行存放區[索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。  
+-   **ColumnStoreIndex**：表示至少有一個資料表具有資料行存放區索引。 若要讓資料庫移到不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援這項功能的版本，請使用[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)或[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)語句來移除資料行存放區索引。 如需詳細資訊，請參閱資料行存放區[索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。  
   
     **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)。  
   
--   **壓縮**：表示至少有一個資料表或索引使用資料壓縮或 vardecimal 儲存格式。 若要讓資料庫移到不支援這項功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本，請使用[Alter TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[alter INDEX](../../t-sql/statements/alter-index-transact-sql.md)語句來移除資料壓縮。 若要移除 Vardecimal 儲存格式，請使用 sp_tableoption 陳述式。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
+-   **壓縮**：表示至少有一個資料表或索引使用資料壓縮或 vardecimal 儲存格式。 若要讓資料庫移到不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援這項功能的版本，請使用[alter TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[alter INDEX](../../t-sql/statements/alter-index-transact-sql.md)語句來移除資料壓縮。 若要移除 Vardecimal 儲存格式，請使用 sp_tableoption 陳述式。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
   
 -   **MultipleFSContainers**：表示資料庫使用多個 FILESTREAM 容器。 資料庫具有具有多個容器（檔案）的 FILESTREAM 檔案群組。 如需詳細資訊，請參閱 [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73981830"
 -   **TransparentDataEncryption。** 指出資料庫的加密方式為透明資料加密。 若要移除透明資料加密，請使用 ALTER DATABASE 陳述式。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
 
 > [!NOTE]
-> 從[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 開始，這些功能（TransparentDataEncryption 除外） **。** 可跨多個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本使用，而不限於 Enterprise 或 Developer edition。
+> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 開始，這些功能（TransparentDataEncryption 除外） **。** 可跨多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本使用，而不限於 Enterprise 或 Developer edition。
 
  若要判斷資料庫是否使用任何受限於特定版本的功能，請在資料庫中執行下列陳述式：  
   

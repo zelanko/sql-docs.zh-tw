@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_set_cache_window stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 80462381e058c4cb9107aa4ac07138e42d27e677
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6f8ad01c5a287166e4196b78489d34f3fbbe31ce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010628"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828762"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @cache_window = ]*cache_window*  
+ [ @cache_window =] *cache_window*  
  這是在不遺失資料的情況下，重試將資料上傳至管理資料倉儲，但卻失敗的次數。 *cache_window*是**int** ，預設值是1。 *cache_window*可以具有下列其中一個值：  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |-1|從先前上傳失敗中快取所有上傳資料。|  
 |0|不要從上傳失敗中快取任何資料。|  

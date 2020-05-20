@@ -16,14 +16,14 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], stored procedures
 - performance [SQL Server], stored procedures
 ms.assetid: 8c99c3db-0b04-46c3-aa59-d6f680522fdd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dd242370cc3d2c200e4d8b3983d47e396be3004a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af4b654b6434d6ec8ee689fedbb6d29354a996f8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106653"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827432"
 ---
 # <a name="sql-server-profiler-stored-procedures-transact-sql"></a>SQL Server Profiler 預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

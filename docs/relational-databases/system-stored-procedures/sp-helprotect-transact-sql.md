@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8ff791855f7e65652f64d18f3128831172da9229
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997481"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828873"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67997481"
   傳回報表，報表中有目前資料庫中之物件的使用者權限或陳述式權限的相關資訊。  
   
 > [!IMPORTANT]  
->  **sp_helprotect**不會傳回中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]所引進之安全性實體的相關資訊。 請改用[sys.databases database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)和[fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 。  
+>  **sp_helprotect**不會傳回中所引進之安全性實體的相關資訊 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 請改用[sys.databases database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)和[fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 。  
   
  不會列出一律指派給固定伺服器角色或固定資料庫角色的權限。 不包括依本身在角色中的成員資格獲得權限的登入或使用者。  
   
@@ -65,7 +65,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**擁有者**|**sysname**|物件擁有者的名稱。|  
-|**Object**|**sysname**|物件的名稱。|  
+|**目標**|**sysname**|物件的名稱。|  
 |**者**|**sysname**|對其授與權限之主體的名稱。|  
 |**授與者**|**sysname**|對指定的被授與者授與權限之主體的名稱。|  
 |**ProtectType**|**Nvarchar （10）**|保護類型的名稱：<br /><br /> GRANT REVOKE|  
@@ -81,7 +81,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 EXEC sp_helprotect NULL, NULL, dbo;  
 ```  
   
- Or  
+ 或  
   
 ```  
 EXEC sp_helprotect @grantorname = 'dbo';  

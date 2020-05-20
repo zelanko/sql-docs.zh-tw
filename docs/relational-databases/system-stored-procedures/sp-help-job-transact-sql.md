@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 29870a0ffb3d2c3b1872acbb40266aef0d16b62c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75546561"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827638"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|已暫停。|  
 |**7**|正在執行完成動作。|  
   
-`[ @date_comparator = ] 'date_comparison'`比較運算子，用於*date_created*和*date_modified*的比較。 *date_comparison*是**char （1）**，而且可以是 =、 \<或 >。  
+`[ @date_comparator = ] 'date_comparison'`比較運算子，用於*date_created*和*date_modified*的比較。 *date_comparison*是**char （1）**，而且可以是 =、 \< 或 >。  
   
 `[ @date_created = ] date_created`作業的建立日期。 *date_created*是**datetime**，預設值是 Null。  
   
@@ -162,7 +162,7 @@ sp_help_job { [ @job_id = ] job_id
 |**retry_attempts**|**int**|命令應該重試的最大次數 (如果沒有成功)，之後，便將步驟視為失敗。|  
 |**retry_interval**|**int**|任何重試的間隔 (以分鐘為單位)。|  
 |**os_run_priority**|**Varchar （4000）**|已保留。|  
-|**output_file_name**|**Varchar （200）**|應該寫入命令輸出的檔案（[!INCLUDE[tsql](../../includes/tsql-md.md)]僅限**CmdExec**步驟）。|  
+|**output_file_name**|**Varchar （200）**|應該寫入命令輸出的檔案（ [!INCLUDE[tsql](../../includes/tsql-md.md)] 僅限**CmdExec**步驟）。|  
 |**last_run_outcome**|**int**|上次執行步驟的結果：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
 |**last_run_duration**|**int**|步驟上次執行的持續時間 (以秒為單位)。|  
 |**last_run_retries**|**int**|上次執行步驟時的命令重試次數。|  

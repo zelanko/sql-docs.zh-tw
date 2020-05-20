@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_alert
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a4b430884a497d9a8926f16f387b3608300f037c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 08569c2313bfb7c9d992c510ef4c9c7548f51e64
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304831"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827737"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +57,13 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
  **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 當** \@legacy_format**為**0**時， **sp_help_alert**會產生下列結果集。  
+ 當** \@ legacy_format**為**0**時， **sp_help_alert**會產生下列結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|系統指派的唯一整數識別碼。|  
 |**name**|**sysname**|警示名稱（例如，示範：完整的**msdb**記錄檔）。|  
-|**event_source**|**Nvarchar （100）**|事件的來源。 7.0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版一律會**MSSQLServer** [!INCLUDE[msCoName](../../includes/msconame-md.md)]|  
+|**event_source**|**Nvarchar （100）**|事件的來源。 7.0 版一律會**MSSQLServer** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|定義警示的訊息錯誤號碼。 （通常會對應至**sysmessages**資料表中的錯誤號碼）。 如果使用嚴重性來定義警示， **message_id**為**0**或 Null。|  
@@ -89,15 +89,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，便一律是 '[Uncategorized]'。|  
 |**wmi_namespace**|**sysname**|如果**type**是**3**，這個資料行會顯示 WMI 事件的命名空間。|  
 |**wmi_query**|**nvarchar(512)**|如果**type**是**3**，這個資料行會顯示 WMI 事件的查詢。|  
-|**type**|**int**|事件類型：<br /><br /> **1**  =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]個事件警示<br /><br /> **2**  =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]效能警示<br /><br /> **3** = WMI 事件警示|  
+|**type**|**int**|事件類型：<br /><br /> **1**個  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件警示<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能警示<br /><br /> **3** = WMI 事件警示|  
   
- 當** \@legacy_format**為**1**時， **sp_help_alert**會產生下列結果集。  
+ 當** \@ legacy_format**為**1**時， **sp_help_alert**會產生下列結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|系統指派的唯一整數識別碼。|  
 |**name**|**sysname**|警示名稱（例如，示範：完整的**msdb**記錄檔）。|  
-|**event_source**|**Nvarchar （100）**|事件的來源。 7.0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版一律會**MSSQLServer**|  
+|**event_source**|**Nvarchar （100）**|事件的來源。 7.0 版一律會**MSSQLServer** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|定義警示的訊息錯誤號碼。 （通常會對應至**sysmessages**資料表中的錯誤號碼）。 如果使用嚴重性來定義警示， **message_id**為**0**或 Null。|  
@@ -120,8 +120,8 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|如果向一或多個操作員通知這個警示，便是非零。 這個值是下列的一或多個值 (以 OR 聯結)：<br /><br /> **1**= 有電子郵件通知<br /><br /> **2**= 具有呼叫器通知<br /><br /> **4**= 具有**net send**通知。|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|如果**type**是**2**，這個資料行會顯示效能條件的定義。 如果**type**是**3**，這個資料行會顯示 WMI 事件的查詢。 否則，這個資料行是 NULL。|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]7.0 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一律會是 '**[未分類]**'。|  
-|**type**|**int**|警示類型：<br /><br /> **1**  =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]個事件警示<br /><br /> **2**  =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]效能警示<br /><br /> **3** = WMI 事件警示|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]7.0 的一律會是 '**[未分類]**' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**type**|**int**|警示類型：<br /><br /> **1**個  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件警示<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能警示<br /><br /> **3** = WMI 事件警示|  
   
 ## <a name="remarks"></a>備註  
  **sp_help_alert**必須從**msdb**資料庫中執行。  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e186b87680ec0592f5c69ee5659c3b9c74f680b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048157"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826044"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68048157"
   報告目前資料庫中資料庫層級主體的相關資訊。  
   
 > [!IMPORTANT]  
->  **sp_helpuser**不會傳回中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]所引進之安全性實體的相關資訊。 請改用[sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 。  
+>  **sp_helpuser**不會傳回中所引進之安全性實體的相關資訊 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 請改用[sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 下表顯示未針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *security_account*指定使用者帳戶或或 Windows 使用者時的結果集。  
+ 下表顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未針對*security_account*指定使用者帳戶或或 Windows 使用者時的結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

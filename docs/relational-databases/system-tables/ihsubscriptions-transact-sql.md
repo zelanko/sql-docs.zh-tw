@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHsubscriptions system table
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b677e0f6c9be058650a46aee3465811b8f3eecc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b2c3f429a8b4cecedc65bc2a3208299e664b9153
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67990151"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827272"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
