@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0d36c5a92dba9f3f92943b65107e7eedb178554
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089849"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000630"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>選項 (文字編輯器 - XML - 格式化頁面)
 
@@ -26,7 +26,7 @@ ms.locfileid: "66089849"
   
 ## <a name="attributes"></a>屬性  
  **保留手動屬性格式化**  
- 不要重新格式化屬性。 這是預設值。  
+ 不要重新格式化屬性。 此為預設值。  
   
 > [!NOTE]  
 >  如果屬性在多行中，編輯器就會縮排每一個屬性行，以符合父元素的縮排。  
@@ -50,7 +50,7 @@ ms.locfileid: "66089849"
   
 ## <a name="mixed-content"></a>混合內容  
  **依預設，格式化混合內容。**  
- 嘗試重新格式化混合內容，但是在 `xml:space="preserve"` 範圍中找到的內容除外。 這是預設值。  
+ 嘗試重新格式化混合內容，但是在 `xml:space="preserve"` 範圍中找到的內容除外。 此為預設值。  
   
  如果元素包含文字與標記的混合，則內容會被視為混合內容。 下列是具有混合內容之元素的範例。  
   

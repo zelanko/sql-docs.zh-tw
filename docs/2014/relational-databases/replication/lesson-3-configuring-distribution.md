@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a648902b97a8224b9032c24ee8c7715a4030777
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721105"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000401"
 ---
 # <a name="lesson-3-configuring-distribution"></a>第 3 課：設定散發
   在這一課，您將在「發行集」端設定散發，並在發行集和散發資料庫上設定所需權限。 如果您已經設定「散發者」，則必須先停用發行和散發，再開始進行本課。 如果您必須保留現有的複寫拓撲，請勿執行上述動作。  
@@ -35,11 +35,11 @@ ms.locfileid: "62721105"
   
      [散發組態精靈] 隨即啟動。  
   
-3.  在 [**散發**者] 頁面上 **，選取 [**_\<ServerName>_]**將扮演自己的散發者;SQL Server 將建立散發資料庫和記錄**檔，然後按 **[下一步]**。  
+3.  在 [**散發**者] 頁面上 **，選取 [** _ \< ServerName>_]**將扮演自己的散發者;SQL Server 將建立散發資料庫和記錄**檔，然後按 **[下一步]**。  
   
 4.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未執行，請在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動]**** 頁面上選取 [是]****，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為自動啟動。 按 [下一步]  。  
   
-5.  在** \\ **[**快照集資料夾**] 文字方塊中\< \<輸入_Machine_Name>_ **\repldata** ，其中*Machine_Name>* 是發行者的名稱，然後按 **[下一步]**。  
+5.  **\\\\** \< 在 [**快照集資料夾**] 文字方塊中輸入_Machine_Name>_ **\repldata** ，其中 \< *Machine_Name>* 是發行者的名稱，然後按 **[下一步]**。  
   
 6.  接受精靈其餘頁面上的預設值。  
   
@@ -47,19 +47,19 @@ ms.locfileid: "62721105"
   
 ### <a name="setting-database-permissions-at-the-publisher"></a>在發行者端設定資料庫權限  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展開 [**安全性** **]，以滑鼠右鍵按一下 [** 登入]，然後選取 **[新增登**入]。  
+1.  在中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，展開 [**安全性**]， **Logins**以滑鼠右鍵按一下 [登入]，然後選取 **[新增登**入]。  
   
 2.  在 [一般]**** 頁面上，按一下 [搜尋]****，並在 [輸入要選取的物件名稱]**** 方塊中輸入 \<_電腦名稱>_**\repl_snapshot** (其中 \<*電腦名稱>* 是本機「發行者」伺服器的名稱)，按一下 [檢查名稱]****，然後按一下 [確定]****。  
   
-3.  在 [**使用者對應**] 頁面的 [**對應到此登**入的使用者] 清單中， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]選取 [**散發**] 和 [資料庫]。  
+3.  在 [**使用者對應**] 頁面的 [**對應到此登**入的使用者] 清單中，選取 [**散發**] 和 [ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫]。  
   
-     在 [**資料庫角色成員資格**] 清單`db_owner`中，選取兩個資料庫的登入角色。  
+     在 [**資料庫角色成員資格**] 清單中，選取 `db_owner` 兩個資料庫的登入角色。  
   
 4.  按一下 [確定]****，以建立登入。  
   
-5.  重複執行步驟 1-4，以建立本機 repl_logreader 帳戶的登入。 此登入也必須對應至`db_owner` **散發**和**AdventureWorks**資料庫中固定資料庫角色成員的使用者。  
+5.  重複執行步驟 1-4，以建立本機 repl_logreader 帳戶的登入。 此登入也必須對應至 `db_owner` **散發**和**AdventureWorks**資料庫中固定資料庫角色成員的使用者。  
   
-6.  重複執行步驟 1-4，以建立本機 repl_distribution 帳戶的登入。 此登入必須對應到屬於`db_owner` **散發**資料庫中固定資料庫角色成員的使用者。  
+6.  重複執行步驟 1-4，以建立本機 repl_distribution 帳戶的登入。 此登入必須對應到屬於 `db_owner` **散發**資料庫中固定資料庫角色成員的使用者。  
   
 7.  重複執行步驟 1-4，以建立本機 repl_merge 帳戶的登入。 此登入必須在 **distribution** 和 **AdventureWorks** 資料庫中有使用者對應。  
   

@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68475977"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000498"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 索引設計指南
 
   設計不良的索引與不足的索引是資料庫應用程式瓶頸的主要原因。 設計有效的索引是達到良好資料庫和應用程式效能最重要的一點。 本 SQL Server 索引設計指南包含的資訊和最佳作法，可以協助您設計符合應用程式需求的有效索引。  
   
-**適用于**： [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]至[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ，除非另有說明。  
+**適用于**： [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 至，除非另有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 說明。  
   
  本指南假設讀者對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引類型有概略的認識。 如需索引類型的一般描述，請參閱 [Index Types](../relational-databases/indexes/indexes.md)(索引類型)。  
   
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   可用於範圍查詢。  
   
- 如果叢集索引不是以 UNIQUE 屬性建立，則[!INCLUDE[ssDE](../includes/ssde-md.md)]會自動將4位元組的唯一碼資料行加入至資料表。 當需要時， [!INCLUDE[ssDE](../includes/ssde-md.md)]會自動將唯一碼值加入資料列，使每個索引鍵都是唯一的。 這個資料行及其值是供內部使用的，使用者看不到也無法存取它。  
+ 如果叢集索引不是以 UNIQUE 屬性建立，則 [!INCLUDE[ssDE](../includes/ssde-md.md)] 會自動將4位元組的唯一碼資料行加入至資料表。 當需要時， [!INCLUDE[ssDE](../includes/ssde-md.md)] 會自動將唯一碼值加入資料列，使每個索引鍵都是唯一的。 這個資料行及其值是供內部使用的，使用者看不到也無法存取它。  
   
 ### <a name="clustered-index-architecture"></a>叢集索引架構  
 
@@ -267,7 +267,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   變更頻繁的資料行  
   
-     這使得整個資料列移動 (因為 [!INCLUDE[ssDE](../includes/ssde-md.md)] 必須以實際的順序保存資料列中的資料值)。 對於資料經常變動的龐大交易處理系統來說，這是一項很重要的考量。  
+     這會導致整個資料列移動，因為 [!INCLUDE[ssDE](../includes/ssde-md.md)] 必須以實體順序來保留資料列的資料值。 對於資料經常變動的龐大交易處理系統來說，這是一項很重要的考量。  
   
 -   寬索引鍵  
   
@@ -628,10 +628,10 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  [本指南中](#Top)![的 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")  
   
-##  <a name="additional-reading"></a><a name="Additional_Reading"></a>其他閱讀  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 其他閱讀資料  
 
  [＜使用 SQL Server 2008 索引檢視提升效能＞](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
- [資料分割資料表和索引](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [分割資料表與索引](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

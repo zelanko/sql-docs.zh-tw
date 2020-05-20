@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 968d1bb6ce5eee2d25860353586d14f31dc67807
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f770ea7ed5257cdca5def868b1bdfa8359af79a
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175907"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925092"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>監視與疑難排解記憶體使用量
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 耗用記憶體的模式與磁碟資料表不同。 您可以使用針對記憶體和記憶體回收子系統提供的 DMV 或效能計數器，監視資料庫中記憶體最佳化資料表和索引所配置和使用的記憶體數量。  如此就能讓您同時深入查看系統和資料庫層級，並且讓您防止因記憶體耗盡而發生問題。
@@ -113,7 +113,7 @@ ms.locfileid: "78175907"
 ##  <a name="monitoring-memory-usage"></a>監視記憶體使用狀況
 
 ###  <a name="using-ssmanstudiofull"></a>使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 隨附內建的標準報表，可用來監視記憶體中資料表耗用的記憶體。 您可以使用物件總管存取這些報表，如 [此處](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)所述。 您也可以使用物件總管監視個別記憶體最佳化資料表耗用的記憶體。
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 隨附內建的標準報表，可用來監視記憶體中資料表耗用的記憶體。 您可以使用 [物件總管] 存取這些報表。 您也可以使用物件總管監視個別記憶體最佳化資料表耗用的記憶體。
 
 #### <a name="consumption-at-the-database-level"></a>資料庫層級的耗用量
  您可以監視資料庫層級的記憶體使用量，如下所述。

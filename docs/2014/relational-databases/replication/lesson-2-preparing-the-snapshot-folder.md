@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbe571002a1168ca3f60592b86fb58fd482ecd05
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721019"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000403"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>第 2 課：準備快照集資料夾
   在這一課，您將學習設定用於建立及儲存發行集快照集的快照集資料夾。  
@@ -36,7 +36,7 @@ ms.locfileid: "62721019"
   
 6.  在 **[安全性]** 索引標籤上，按一下 **[編輯]** 。  
   
-7.  在 [權限]**** 對話方塊中，按一下 [新增]****。 在 [**選取使用者、電腦、服務帳戶或群組**] 文字方塊中，輸入第1課所建立快照集代理程式帳戶的名稱，如\< _Machine_Name>_ **\ repl_snapshot**，其中\< *Machine_Name>* 是發行者的名稱。 按一下 [檢查名稱]****，然後按一下 [確定]****。  
+7.  在 [權限]**** 對話方塊中，按一下 [新增]****。 在 [**選取使用者、電腦、服務帳戶或群組**] 文字方塊中，輸入第1課所建立快照集代理程式帳戶的名稱，如 \< _Machine_Name>_ **\ Repl_snapshot**，其中 \< *Machine_Name>* 是發行者的名稱。 按一下 [檢查名稱]****，然後按一下 [確定]****。  
   
 8.  重複上一個步驟，為散發代理程式 \<_電腦名稱>_**\repl_distribution** 以及合併代理程式 \<_電腦名稱>_**\repl_merge** 新增權限。  
   

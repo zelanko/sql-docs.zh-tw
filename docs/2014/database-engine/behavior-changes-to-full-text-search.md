@@ -11,15 +11,15 @@ helpviewer_keywords:
 - behavior changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00dc0fbda03bb7f729123a84e7e91fb2361aee9f
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813191"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001058"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>全文檢索搜尋的行為變更
   本主題描述全文檢索搜尋的行為變更。 行為變更會影響 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 功能的運作或互動方式 (相較於舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])。  
@@ -71,15 +71,15 @@ ms.locfileid: "62813191"
 |jěˊÿｑℭžl<br /><br /> *(其中詞彙不是有效的英文字元)*|'jěˊÿｑℭžl'|je yq zl|  
 |table's|table's<br /><br /> 資料表|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
-|v-z (其中 v 和 z 是非搜尋字)**|*(無結果)*|v-z|  
+|v-z (其中 v 和 z 是非搜尋字)**|*（沒有結果）*|v-z|  
 |$100 000 USD|$100<br /><br /> 000<br /><br /> nn000<br /><br /> nn100$<br /><br /> usd|$100 000 USD<br /><br /> nn100000usd|  
 |beautiful U.S land|beautiful<br /><br /> land<br /><br /> u.s<br /><br /> us|beautiful<br /><br /> land|  
 |Mt. Kent and Mt Challenger|challenger<br /><br /> kent<br /><br /> mt<br /><br /> Mt.|mt<br /><br /> kent<br /><br /> challenger|  
   
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>SQL Server 2008 中全文檢索搜尋的行為變更  
- 在[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]和更新的版本中，全文檢索引擎會以資料庫服務的形式整合至關係資料庫中，成為伺服器查詢和儲存引擎基礎結構的一部分。 新的全文檢索搜尋架構可達成下列目標：  
+ 在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和更新的版本中，全文檢索引擎會以資料庫服務的形式整合至關係資料庫中，成為伺服器查詢和儲存引擎基礎結構的一部分。 新的全文檢索搜尋架構可達成下列目標：  
   
--   整合式儲存與管理-全文檢索搜尋現在直接與的固有儲存體和管理功能整合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，而 MSFTESQL 服務已不存在。  
+-   整合式儲存與管理-全文檢索搜尋現在直接與的固有儲存體和管理功能整合 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，而 MSFTESQL 服務已不存在。  
   
     -   全文檢索索引會儲存在資料庫檔案群組內部，而非儲存在檔案系統中。 資料庫的管理作業 (例如建立備份) 會自動影響其全文檢索索引。  
   
@@ -94,11 +94,11 @@ ms.locfileid: "62813191"
   
 -   停用字詞和停用字詞表已經取代了非搜尋字和非搜尋字檔案。 停用字詞表是一個資料庫物件，可加快停用字詞管理工作的速度並且改善不同伺服器執行個體與環境之間的完整性。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
--   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和更新的版本包含 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中許多語言的新斷詞工具。 只有英文、韓文、泰文和中文 (所有形式) 的斷詞工具維持原狀。 對於其他語言，如果全文檢索目錄是在[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]資料庫升級為[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]或更新版本時匯入，則全文檢索目錄中的全文檢索索引所使用的一或多個語言現在可能會與新的斷詞工具相關聯，其行為可能與匯入的斷詞工具有些許不同。 如需有關如何確保查詢與全文檢索索引內容之間一致性的詳細資訊，請參閱[升級全文檢索搜尋](../relational-databases/search/upgrade-full-text-search.md)。  
+-   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和更新的版本包含 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中許多語言的新斷詞工具。 只有英文、韓文、泰文和中文 (所有形式) 的斷詞工具維持原狀。 對於其他語言，如果全文檢索目錄是在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 資料庫升級為 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 或更新版本時匯入，則全文檢索目錄中的全文檢索索引所使用的一或多個語言現在可能會與新的斷詞工具相關聯，其行為可能與匯入的斷詞工具有些許不同。 如需有關如何確保查詢與全文檢索索引內容之間一致性的詳細資訊，請參閱[升級全文檢索搜尋](../relational-databases/search/upgrade-full-text-search.md)。  
   
 -   加入了新的 FDHOST Launcher (MSSQLFDLauncher) 服務。 如需詳細資訊，請參閱[開始使用全文檢索搜尋](../relational-databases/search/get-started-with-full-text-search.md)。  
   
--   全文檢索索引的運作方式與[FILESTREAM](../relational-databases/blob/filestream-sql-server.md)資料行相同，方法與資料`varbinary(max)`行相同。 FILESTREAM 資料表必須有一個資料行包含每一個 FILESTREAM BLOB 的副檔名。 如需詳細資訊，請參閱[使用全文檢索搜尋進行查詢](../relational-databases/search/query-with-full-text-search.md)、[設定及管理搜尋的篩選](../relational-databases/search/configure-and-manage-filters-for-search.md)，以及[fulltext_document_types &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)。  
+-   全文檢索索引的運作方式與[FILESTREAM](../relational-databases/blob/filestream-sql-server.md)資料行相同，方法與資料 `varbinary(max)` 行相同。 FILESTREAM 資料表必須有一個資料行包含每一個 FILESTREAM BLOB 的副檔名。 如需詳細資訊，請參閱[使用全文檢索搜尋進行查詢](../relational-databases/search/query-with-full-text-search.md)、[設定及管理搜尋的篩選](../relational-databases/search/configure-and-manage-filters-for-search.md)，以及[fulltext_document_types &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)。  
   
      全文檢索引擎會針對 FILESTREAM BLOB 的內容建立索引。 為檔案 (如影像) 建立索引可能不會很實用。 當更新 FILESTREAM BLOB 時，會為它重新建立索引。  
   

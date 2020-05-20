@@ -10,12 +10,12 @@ ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4106de497a43404cb44606259d53beb1ed8f5a58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 435aa6a89b1b7aafd243efbc6de86bcb8f731346
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797448"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925009"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>設定 HealthCheckTimeout 屬性設定
   HealthCheckTimeout 設定是用來指定在將 AlwaysOn 容錯移轉叢集實例（FCI）回報為沒有回應之前，SQL Server 資源 DLL 應該等候[sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)預存程式傳回信息的時間長度（以毫秒為單位）。 針對逾時設定值所做的變更會立即生效，且不需要重新啟動 SQL Server 資源。  
@@ -42,7 +42,7 @@ ms.locfileid: "72797448"
   
 2.  匯入 `FailoverClusters` 模組來啟用叢集指令程式。  
   
-3.  使用`Get-ClusterResource` Cmdlet 來尋找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資源，然後使用`Set-ClusterParameter` Cmdlet 設定容錯移轉叢集實例的**HealthCheckTimeout**屬性。  
+3.  使用 `Get-ClusterResource` Cmdlet 來尋找 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源，然後使用 `Set-ClusterParameter` Cmdlet 設定容錯移轉叢集實例的**HealthCheckTimeout**屬性。  
   
 > [!TIP]  
 >  每次開啟新的 PowerShell 視窗時，都需要匯入 `FailoverClusters` 模組。  
@@ -58,7 +58,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ### <a name="related-content-powershell"></a>相關內容 (PowerShell)  
   
--   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (叢集和高可用性 - 容錯移轉叢集和網路負載平衡團隊部落格)  
+-   [Clustering and High-Availability](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (叢集和高可用性 - 容錯移轉叢集和網路負載平衡團隊部落格)  
   
 -   [在容錯移轉叢集上開始使用 Windows PowerShell](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -76,7 +76,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
 4.  選取 **[屬性]** 索引標籤，輸入需要的 **[HealthCheckTimeout]** 屬性值，然後按一下 **[確定]** 套用變更。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 您可以使用[ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]語句來指定 HealthCheckTimeOut 屬性值。  
+ 您可以使用[ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 語句來指定 HealthCheckTimeOut 屬性值。  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例會將 HealthCheckTimeout 選項設定為 15,000 毫秒 (15 秒)。  

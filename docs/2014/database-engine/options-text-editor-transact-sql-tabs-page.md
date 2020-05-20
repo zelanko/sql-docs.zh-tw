@@ -11,15 +11,15 @@ f1_keywords:
 dev_langs:
 - TSQL
 ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cc649ee021012774a0f199b97ea3cbf6bae4adef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 761c84612c207397e33ae96dfcfb088b05bc24b8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089140"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000663"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>選項（文字編輯器-Transact-sql-索引標籤頁面）
   使用這個對話方塊可以變更在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器中按下 Tab 鍵的移動行為，這個編輯器會用來撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼。 若要顯示這些設定，請按一下 [工具]**** 功能表上的 [選項]****，並展開 [文字編輯器]**** 資料夾，再展開 [Transact-SQL]**** 子資料夾，然後按一下 [定位點]****。  
@@ -28,10 +28,10 @@ ms.locfileid: "66089140"
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器的選項也可以在 [所有語言 - 索引標籤]**** 對話方塊中設定。 如果您使用 **[所有語言]** 對話方塊為其他 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 編輯器 (例如 DMX 或 MDX 編輯器) 設定不同的選項，則必須使用這個對話方塊重設 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器選項。  
   
 ## <a name="indenting"></a>縮排  
- **None**  
+ **無**  
  如果選取此選項，當您按下 ENTER 時所建立的新行就不會縮排。 資料指標會放在新行的第一個資料行上。  
   
- **總匯**  
+ **封鎖**  
  如果選取此選項，當您按下 ENTER 鍵時所建立的新行就會自動縮排與上一行相同的距離。  
   
  **智慧型**  
@@ -45,7 +45,7 @@ ms.locfileid: "66089140"
  以空格數目，設定自動縮排的大小。 預設值為四個空格。 會插入定位字元、空格字元或兩者，以填滿指定的大小。  
   
  **插入空格**  
- 如果選取此選項，縮排作業僅會插入空格字元，而非定位字元。 例如，如果 [**縮排大小**] 設為5，則每當您按下 TAB 鍵或在主[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]視窗的工具列上按一下 [**增加縮排**] 按鈕時，就會插入五個空白字元。  
+ 如果選取此選項，縮排作業僅會插入空格字元，而非定位字元。 例如，如果 [**縮排大小**] 設為5，則每當您按下 TAB 鍵或在主視窗的工具列上按一下 [**增加縮排**] 按鈕時，就會插入五個空白字元 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。  
   
  **保留定位點**  
  如果選取此選項，縮排作業會儘可能插入最多的定位字元。 每個定位字元會填滿 **[定位點大小]** 中所指定的空格數目。 如果 **[縮排大小]** 不是 **[定位點大小]** 的倍數，就會加入空格字元以填滿差異。  

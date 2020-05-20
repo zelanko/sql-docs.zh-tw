@@ -9,18 +9,18 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToText
 ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 43e35c5de15aeeab5351b4d262db846840e5f6a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2aea2292ada0256e5ae7b988a8e65649dbc50c0d
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090014"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000748"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>選項（查詢結果-SQL Server-以文字表示結果頁面）
-  使用此頁面，即可指定以文字格式顯示查詢結果集的選項。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [**查詢**] 功能表上的 [**查詢選項**]，或在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]查詢視窗中按一下滑鼠右鍵，然後選取 [**查詢選項**]。 在 **[查詢選項]** 對話方塊中，於 **[結果]** 之下，按一下 **[文字]**。  
+  使用此頁面，即可指定以文字格式顯示查詢結果集的選項。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [**查詢**] 功能表上的 [**查詢選項**]，或在查詢視窗中按一下滑鼠右鍵 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，然後選取 [**查詢選項**]。 在 **[查詢選項]** 對話方塊中，於 **[結果]** 之下，按一下 **[文字]**。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **輸出格式**  

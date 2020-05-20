@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplistproperties.general.f1
 - sql12.swb.fulltextsearch.ftstoplistproperties.schedule.f1
 ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 266687488dbd12b504b079314cc9d07b801b4f28
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779405"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000858"
 ---
 # <a name="full-text-stoplist-properties"></a>全文檢索停用字詞表屬性
   使用此對話方塊可加入或刪除個別停用字詞、刪除特定語言的所有停用字詞，或是清除目前的停用字詞表。 停用字詞是停用字詞表內所包含的常用字。 使用某停用字詞表之資料表的全文檢索索引中會省略該停用字詞表內的停用字詞。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)。  
@@ -27,7 +27,7 @@ ms.locfileid: "62779405"
   
 -   [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **動作**  
  指定您要執行的動作。  
   

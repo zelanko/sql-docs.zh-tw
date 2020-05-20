@@ -7,23 +7,23 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4bf6c8146e8f3b5f6222affb3709439c37fc5023
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7588f75c1b2f3f282026821d5bf9a77bd8e09886
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089942"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000708"
 ---
 # <a name="options-text-editor---file-extension-page"></a>選項 (文字編輯器 - 副檔名頁面)
   使用 [選項]**** 對話方塊，以指定 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何處理具有特定副檔名的所有檔案。 針對您輸入的每個副檔名，都可以選取一個編輯器。 因此，您可以選擇要用來開啟特定文件類型的[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 編輯器。 若要開啟副檔名選項，請按一下 [工具]**** 功能表上的 [選項]****，並展開 [文字編輯器]****，然後按一下 [副檔名]****。  
   
  若您從 [編輯器]**** 下拉式清單中，選取「含編碼方式」的選項，則每當開啟該類型的文件時，就會出現對話方塊，以讓您為該文件選取編碼配置。 如果您正在準備指令碼的版本，供不同作業系統或不同目標語言使用，這將會很有用。  
   
-## <a name="options"></a>選項。  
- **分機**  
+## <a name="options"></a>選項  
+ **延伸**  
  輸入副檔名。  
   
  **編輯器**  
@@ -35,7 +35,7 @@ ms.locfileid: "66089942"
  **移除**  
  從 [副檔名清單]**** 中刪除選取的項目。  
   
- **分機**  
+ **延伸**  
  列出有指定編輯器的所有副檔名。  
   
  **編輯經驗**  

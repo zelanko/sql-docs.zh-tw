@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 7f041821-6a12-4ab5-bb3a-a8345a9bc00b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe3384fe5e5dde96082b0e21805a0e8b915ccb6a
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778949"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000908"
 ---
 # <a name="full-text-search-f1-help"></a>全文檢索搜尋 F1 說明
   此章節提供有關 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]全文檢索搜尋對話方塊的主題。 若要存取某個使用者介面主題，請按 F1 或在對話方塊為開啟時按一下 **[說明]** 。  

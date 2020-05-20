@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b32dcfc95c5fc6929454add71ff4452e00fdda6e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089203"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001040"
 ---
 # <a name="options-text-editor---xml---general-page"></a>選項 (文字編輯器 - XML - 一般頁面)
   使用這個對話方塊可以變更 XML 編輯器的一般編輯行為，這個編輯器會用來編輯 XML 文件。 若要顯示這些設定，請在 **[工具]** 功能表上按一下 **[選項]** ，展開 **[XML]** 子資料夾，然後按一下 **[一般]**。  
@@ -55,7 +55,7 @@ ms.locfileid: "66089203"
   
  當行不是空白時，此設定對 **[複製]** 或 **[剪下]** 沒有影響。 如果沒有選取內容，就會複製或剪下整個行。 接著，如果您按一下 **[貼上]**，就會貼上整行的文字與其結束字元。  
   
-## <a name="display"></a>顯示器  
+## <a name="display"></a>顯示  
  **行號**  
  如果選取此核取方塊，行號就會出現在每一行程式碼的旁邊。  
   

@@ -10,15 +10,15 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ffe6a854e24240c6298dfbf7b4c195d787e07c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5f25a42b54e0ae310c7033a81f75cad75582416
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172017"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925062"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重新執行選項 (Distributed Replay 管理工具)
-  Distributed Replay 管理工具`DReplay.exe`是命令列工具，可讓您用來與 Distributed Replay controller 通訊。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 此主題描述 **replay** 命令列選項與對應的語法。
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 `DReplay.exe` 是命令列工具，可讓您用來與 Distributed Replay controller 通訊。 此主題描述 **replay** 命令列選項與對應的語法。
 
  **replay** 選項會起始事件重新執行階段，控制器在此階段中會分派重新執行資料給指定的用戶端、啟動分散式重新執行，並同步處理用戶端。 另外，參與重新執行的每個用戶端可以記錄重新執行活動，並在本機上儲存結果追蹤檔案。
 
@@ -50,11 +50,11 @@ ms.locfileid: "78172017"
 
 -   不支援 UNC 路徑。
 
- **-o**會捕獲用戶端的重新執行活動，並將其儲存至用戶端設定檔中專案`<ResultDirectory>`所指定路徑中的結果追蹤`DReplayClient.xml`檔案。
+ **-o**會捕獲用戶端的重新執行活動，並將其儲存至 `<ResultDirectory>` 用戶端設定檔中專案所指定路徑中的結果追蹤檔案 `DReplayClient.xml` 。
 
  未指定 **-o** 參數時，不會產生結果追蹤檔案。 主控台輸出會在重新執行結尾時傳回摘要資訊，但不會提供其他重新執行統計資料。
 
- **-s** *target_server*指定要對其重新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行分散式工作負載的目標實例。 您必須使用以下格式指定這個參數： **server_name[\instance name]**。
+ **-s** *target_server*指定要對其重新執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散式工作負載的目標實例。 您必須使用以下格式指定這個參數： **server_name[\instance name]**。
 
  不可使用 "`localhost`" 或 "`.`" 當做目標伺服器。
 
@@ -148,6 +148,6 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
  如需詳細資訊，請參閱 [Distributed Replay 安全性](distributed-replay-security.md)。
 
 ## <a name="see-also"></a>另請參閱
- 重新執行[追蹤資料](replay-trace-data.md)請參閱重新執行[結果](review-the-replay-results.md) [SQL Server Distributed Replay](sql-server-distributed-replay.md) [設定 Distributed Replay](configure-distributed-replay.md) [SQL Server Distributed Replay 論壇](https://social.technet.microsoft.com/Forums/sl/sqldru/)[使用 Distributed Replay 來負載測試您的 SQL Server-第2部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)[使用 Distributed Replay 負載測試您的 SQL Server-第1部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)
+ 重新執行[追蹤資料](replay-trace-data.md)請參閱重新執行[結果](review-the-replay-results.md) [SQL Server Distributed Replay](sql-server-distributed-replay.md) [設定 Distributed Replay](configure-distributed-replay.md) [SQL Server Distributed Replay 論壇](https://social.technet.microsoft.com/Forums/sl/sqldru/)[使用 Distributed Replay 來負載測試您的 SQL Server-第2部分](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)[使用 Distributed Replay 負載測試您的 SQL Server-第1部分](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)
 
 

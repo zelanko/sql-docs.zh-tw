@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b12b9030d27e371e0299e06917464b1467b9b10e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c018a020fd86925ff14efcb37e2f5734c7e5f141
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782954"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925010"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性群組的必要條件、限制和建議 (SQL Server)
   此主題描述部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的考量，包括對於主機電腦、Windows Server 容錯移轉叢集 (WSFC) 叢集、伺服器執行個體和可用性群組的必要條件、限制和建議。 它也會指出這些元件的安全性考量和必要權限 (如果有的話)。  
@@ -34,12 +34,12 @@ ms.locfileid: "72782954"
   
  
   
-##  <a name="net-hotfixes-that-support-alwayson-availability-groups"></a><a name="DotNetHotfixes"></a>支援 AlwaysOn 可用性群組的 .net 修補程式  
- 根據您將搭配 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 使用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]元件和功能而定，可能會需要安裝下表中識別的其他 .Net Hotfix。 您可以依照任何順序安裝 Hotfix。  
+##  <a name="net-hotfixes-that-support-alwayson-availability-groups"></a><a name="DotNetHotfixes"></a>支援 AlwaysOn 可用性群組的 .NET 修補程式  
+ 根據 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 您將搭配使用的元件和功能 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 而定，您可能需要安裝下表中識別的其他 .net 修補程式。 您可以依照任何順序安裝 Hotfix。  
   
 ||相依功能|Hotfix|連結|  
 |------|-----------------------|------------|----------|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|適用於 .Net 3.5 SP1 的 Hotfix 加入了對 AlwaysOn 功能的 SQL 用戶端支援，包括讀取意圖、Readonly 和 Multisubnetfailover。 每一部 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器上都需要安裝這個 Hotfix。|KB 2654347： [此 Hotfix 可將 AlwaysOn 功能的支援加入 .Net 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.NET 3.5 SP1 的修復程式新增了讀取意圖、readonly 和 multisubnetfailover AlwaysOn 功能的 SQL 用戶端支援。 每一部 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器上都需要安裝這個 Hotfix。|KB 2654347： [.net 3.5 SP1 的修補程式，可加入 AlwaysOn 功能的支援](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 ##  <a name="windows-system-requirements-and-recommendations"></a><a name="SystemReqsForAOAG"></a>Windows 系統需求和建議  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72782954"
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確定每部電腦都是執行 x86 (非 WOW64) 或 x64 Windows Server 2008 (含) 以後版本。|WOW64 (Windows 64 位元上的 Windows 32 位元) 不支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確定每部電腦都是在 Windows Server 容錯移轉叢集 (WSFC) 叢集中的節點。|[SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確定 WSFC 叢集包含足夠多的節點可支援您的可用性群組組態。|WSFC 節點只能裝載給定可用性群組的一個可用性複本。 在給定 WSFC 節點上，一個或多個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體可以裝載許多可用性群組的可用性複本。<br /><br /> 詢問您的資料庫管理員，計畫中可用性群組的可用性複本支援需要多少 WSFC 節點。<br /><br /> [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)。|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確定 WSFC 叢集中的每個節點上都安裝了所有適用的 Windows Hotfix。|** \* \*重要\*事項**在部署的 WSFC 叢集節點上[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，需要或建議使用一些修補程式。 如需詳細資訊，請參閱本節稍後的[支援 AlwaysOn 可用性群組的 Windows Hotfix (Windows 系統)](#WinHotfixes)。|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確定 WSFC 叢集中的每個節點上都安裝了所有適用的 Windows Hotfix。|** \* \* 重要 \* 事項 \* ：** 在部署的 WSFC 叢集節點上，需要或建議使用一些修補程式 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 如需詳細資訊，請參閱本節稍後的[支援 AlwaysOn 可用性群組的 Windows Hotfix (Windows 系統)](#WinHotfixes)。|  
   
 > [!IMPORTANT]  
 >  還要確定您的環境已正確設定為連接到可用性群組。 如需詳細資訊，請參閱[AlwaysOn 用戶端連線性（SQL Server）](always-on-client-connectivity-sql-server.md)。  
@@ -99,7 +99,7 @@ ms.locfileid: "72782954"
   
 3.  使用 `Get-ClusterResource` 指令程式尋找網路名稱資源，然後使用 `Set-ClusterParameter` 指令程式設定 `HostRecordTTL` 值，如下所示：  
   
-     Get-clusterresource "*\<networkresourcename>>*" |Set-set-clusterparameter HostRecordTTL * \<timeinseconds>>*  
+     Get-clusterresource "* \< networkresourcename>>*" |Set-Set-clusterparameter HostRecordTTL * \< timeinseconds>>*  
   
      下列 PowerShell 範例會針對名為 "`SQL Network Name (SQL35)`" 的網路名稱資源將 HostRecordTTL 設定為 300 秒。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "72782954"
   
 ##### <a name="related-content-powershell"></a>相關內容 (PowerShell)  
   
--   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (叢集和高可用性 - 容錯移轉叢集和網路負載平衡團隊部落格)  
+-   [Clustering and High-Availability](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (叢集和高可用性 - 容錯移轉叢集和網路負載平衡團隊部落格)  
   
 -   [在容錯移轉叢集上開始使用 Windows PowerShell](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72782954"
   
 -   [在多網站容錯移轉叢集中設定 DNS 設定](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [網路名稱資源的 DNS 註冊](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [網路名稱資源的 DNS 註冊](https://techcommunity.microsoft.com/t5/failover-clustering/dns-registration-with-the-network-name-resource/ba-p/371482)  
   
 -   [Windows 2008 R2 容錯移轉多站台叢集](https://kiruba4u.blogspot.com/2012/03/failover-clustering-in-windows-server.html)  
   
@@ -139,13 +139,13 @@ ms.locfileid: "72782954"
 ||必要條件|連結|  
 |-|------------------|-----------|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|主機電腦必須是 Windows Server 容錯移轉叢集 (WSFC) 節點。 裝載給定可用性群組之可用性複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，必須位於單一 WSFC 叢集的不同節點上。 唯一的例外狀況是在移轉至另一個 WSFC 叢集期間，可用性群組可以暫時跨兩個叢集。|[SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|若要讓可用性群組使用 Kerberos：<br /><br /> 裝載可用性群組之可用性複本的所有伺服器執行個體都必須使用相同的 SQL Server 服務帳戶。<br /><br /> 網域管理員需要針對可用性群組接聽程式之虛擬網路名稱 (VNN) 的 SQL Server 服務帳戶，在 Active Directory 中手動註冊伺服器主體名稱 (SPN)。 如果對 SQL Server 服務帳戶以外的帳戶註冊 SPN，驗證會失敗。<br /><br /> ** \* \*重要\*事項**如果您變更 SQL Server 服務帳戶，網域系統管理員將需要手動重新註冊 SPN。|[註冊 Kerberos 連接的服務主體名稱](../../configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **簡短說明：**<br /><br /> Kerberos 和 SPN 強制執行相互驗證。 SPN 對應到啟動 SQL Server 服務的 Windows 帳戶。 如果不正確地註冊 SPN 或註冊作業失敗，則 Windows 安全層無法判斷與 SPN 相關聯的帳戶，也無法使用 Kerberos 驗證。<br /><br /> 注意：NTLM 沒有此需求。|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|若要讓可用性群組使用 Kerberos：<br /><br /> 裝載可用性群組之可用性複本的所有伺服器執行個體都必須使用相同的 SQL Server 服務帳戶。<br /><br /> 網域管理員需要針對可用性群組接聽程式之虛擬網路名稱 (VNN) 的 SQL Server 服務帳戶，在 Active Directory 中手動註冊伺服器主體名稱 (SPN)。 如果對 SQL Server 服務帳戶以外的帳戶註冊 SPN，驗證會失敗。<br /><br /> 重要如果您變更 SQL Server 服務帳戶，網域系統管理員將需要手動重新註冊 SPN。 ** \* \* \* \* **|[註冊 Kerberos 連接的服務主體名稱](../../configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **簡短說明：**<br /><br /> Kerberos 和 SPN 強制執行相互驗證。 SPN 對應到啟動 SQL Server 服務的 Windows 帳戶。 如果不正確地註冊 SPN 或註冊作業失敗，則 Windows 安全層無法判斷與 SPN 相關聯的帳戶，也無法使用 Kerberos 驗證。<br /><br /> 注意：NTLM 沒有此需求。|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|如果您計劃使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 來裝載可用性複本，請務必了解 FCI 限制且符合 FCI 需求。|[使用 SQL Server 容錯移轉叢集執行個體 (FCI) 裝載可用性複本的必要條件和限制](#FciArLimitations) (本主題稍後)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|每個伺服器執行個體都必須執行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Enterprise Edition。|[SQL Server 2014 各版本所支援的功能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|裝載可用性群組之可用性複本的所有伺服器執行個體都必須使用相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 定序。|[設定或變更伺服器定序](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|在將要裝載任何可用性群組之可用性複本的每個伺服器執行個體上，啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。 在給定的電腦上，只要 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 安裝有支援，您就可以對多個伺服器執行個體啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。|[啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> ** \* \*重要\*事項**如果您刪除並重新建立 WSFC 叢集，則必須在原始 WSFC 叢集上已啟用的[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]每個伺服器實例上，停用並重新啟用此功能。|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|每一個伺服器執行個體都需要資料庫鏡像端點。 請注意，伺服器執行個體上的所有可用性複本、資料庫鏡像夥伴和見證都會共用此端點。<br /><br /> 如果您選取來裝載可用性複本的伺服器執行個體在網域使用者帳戶下執行，而且還沒有資料庫鏡像端點， [新增可用性群組精靈](use-the-availability-group-wizard-sql-server-management-studio.md) (或 [新增複本至可用性群組精靈](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) 可以建立端點並授與伺服器執行個體服務帳戶 CONNECT 權限。 但是，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務是以內建帳戶 (例如本機系統、本機服務或網路服務) 或非網域帳戶的身分執行，您就必須將憑證用於端點驗證，而且精靈無法在此伺服器執行個體上建立資料庫鏡像端點。 在此情況下，我們建議您先手動建立資料庫鏡像端點，然後再啟動精靈。<br /><br /> ** \* \*安全性\*注意事項**的傳輸安全性[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]與資料庫鏡像相同。|[資料庫鏡像端點 &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|如果使用 FILESTREAM 的任何資料庫將要加入至可用性群組，請確定即將裝載可用性群組之可用性複本的每個伺服器執行個體都啟用了 FILESTREAM。|[啟用及設定 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|在將要裝載任何可用性群組之可用性複本的每個伺服器執行個體上，啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。 在給定的電腦上，只要 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 安裝有支援，您就可以對多個伺服器執行個體啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。|[啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> 重要如果您刪除並重新建立 WSFC 叢集，則必須在** \* 原始 WSFC 叢集上已啟用的每個伺服器實例上，停用並重新啟用此功能。 \* \* \* ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|每一個伺服器執行個體都需要資料庫鏡像端點。 請注意，伺服器執行個體上的所有可用性複本、資料庫鏡像夥伴和見證都會共用此端點。<br /><br /> 如果您選取來裝載可用性複本的伺服器執行個體在網域使用者帳戶下執行，而且還沒有資料庫鏡像端點， [新增可用性群組精靈](use-the-availability-group-wizard-sql-server-management-studio.md) (或 [新增複本至可用性群組精靈](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) 可以建立端點並授與伺服器執行個體服務帳戶 CONNECT 權限。 但是，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務是以內建帳戶 (例如本機系統、本機服務或網路服務) 或非網域帳戶的身分執行，您就必須將憑證用於端點驗證，而且精靈無法在此伺服器執行個體上建立資料庫鏡像端點。 在此情況下，我們建議您先手動建立資料庫鏡像端點，然後再啟動精靈。<br /><br /> ** \* \* 安全性 \* 注意事項 \* **的傳輸安全性與 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 資料庫鏡像相同。|[資料庫鏡像端點 &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|如果使用 FILESTREAM 的任何資料庫將要加入至可用性群組，請確定即將裝載可用性群組之可用性複本的每個伺服器執行個體都啟用了 FILESTREAM。|[啟用和設定 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|如果任何自主資料庫將要加入至可用性群組，請確定在即將裝載可用性群組之可用性複本的每個伺服器執行個體，`contained database authentication` 伺服器選項都設為 `1`。|[自主資料庫驗證伺服器組態選項](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [伺服器組態選項 &#40;SQL Server&#41;](../../configure-windows/server-configuration-options-sql-server.md)|  
   
 ###  <a name="thread-usage-by-availability-groups"></a><a name="ThreadUsage"></a>可用性群組的執行緒使用量  
@@ -198,7 +198,7 @@ ms.locfileid: "72782954"
  例如，如果希望可用性群組支援自動容錯移轉，則屬於自動容錯移轉夥伴的次要複本必須處於 SYNCHRONIZED 狀態。 如果此次要複本的網路連結失敗 (或甚至間歇性失敗)，此複本會進入 UNSYNCHRONIZED 狀態，而且要等到還原連結之後才會開始重新同步處理。 如果 WSFC 叢集在次要複本未同步處理時要求自動容錯移轉，則不會發生自動容錯移轉。  
   
 ##  <a name="client-connectivity-support"></a><a name="ClientConnSupport"></a>用戶端連線性支援  
- 如需有關[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]用戶端連線支援的詳細資訊，請參閱[AlwaysOn 用戶端連線性（SQL Server）](always-on-client-connectivity-sql-server.md)。  
+ 如需有關 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用戶端連線支援的詳細資訊，請參閱[AlwaysOn 用戶端連線性（SQL Server）](always-on-client-connectivity-sql-server.md)。  
   
 ##  <a name="prerequisites-and-restrictions-for-using-a-sql-server-failover-cluster-instance-fci-to-host-an-availability-replica"></a><a name="FciArLimitations"></a>使用 SQL Server 容錯移轉叢集實例（FCI）裝載可用性複本的必要條件和限制  
  
@@ -274,7 +274,7 @@ ms.locfileid: "72782954"
   
     -   唯讀存取  
   
-    -   完全控制  
+    -   完整控制  
   
          [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 需要完整控制，而於 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體上啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，可使其對 WSFC 叢集有完整控制 (透過服務 SID).  
   
@@ -320,7 +320,7 @@ ms.locfileid: "72782954"
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|至少擁有一個完整資料庫備份。<br /><br /> 注意：將資料庫設為完整復原模式之後，需要完整備份以起始完整復原記錄檔鏈結。|[建立完整資料庫備份 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|不屬於任何現有的可用性群組。|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**group_database_id** = NULL)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|並未設定資料庫鏡像。|[sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) (如果資料庫未參與鏡像，前置詞為 "mirroring_" 的所有資料行都是 NULL)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|將使用 FILESTREAM 的資料庫加入至可用性群組之前，請確定 (將要) 裝載可用性群組之可用性複本的每個伺服器執行個體都啟用了 FILESTREAM。|[啟用及設定 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|將使用 FILESTREAM 的資料庫加入至可用性群組之前，請確定 (將要) 裝載可用性群組之可用性複本的每個伺服器執行個體都啟用了 FILESTREAM。|[啟用和設定 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|將自主資料庫加入至可用性群組之前，請確定在 (將要) 裝載可用性群組之可用性複本的每個伺服器執行個體，`contained database authentication` 伺服器選項都設為 `1`。|[自主資料庫驗證伺服器組態選項](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [伺服器組態選項 &#40;SQL Server&#41;](../../configure-windows/server-configuration-options-sql-server.md)|  
   
 > [!NOTE]  
@@ -330,7 +330,7 @@ ms.locfileid: "72782954"
   
 -   如果次要資料庫的檔案路徑 (包括磁碟機代號) 不同於對應主要資料庫的路徑，下列限制適用：  
   
-    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:** 不支援 [**完整**] 選項（在 [[選取初始資料同步](select-initial-data-synchronization-page-always-on-availability-group-wizards.md)處理] 頁面上），  
+    -   ** [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] / [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] ：** 不支援 [**完整**] 選項（在 [[選取初始資料同步](select-initial-data-synchronization-page-always-on-availability-group-wizards.md)處理] 頁面上），  
   
     -   **RESTORE WITH MOVE**  ：若要建立次要資料庫，在裝載次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上，資料庫檔案必須是 RESTORED WITH MOVE。  
   

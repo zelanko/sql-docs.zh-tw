@@ -13,12 +13,12 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 583af6e77d699c88e7712ac03053467138bd5a5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 021e37ee7efb8d525cdbc16d2f7b1111045ea7a6
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177348"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925042"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能可協助您評定未來 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 升級的影響。 您也可以使用它來協助評估硬體和作業系統升級以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 微調的影響。
@@ -47,7 +47,7 @@ ms.locfileid: "78177348"
 ## <a name="distributed-replay-concepts"></a>Distributed Replay 概念
  下列元件構成 Distributed Replay 環境：
 
--   **Distributed Replay 管理工具**：主控台應用程式， `DReplay.exe`用來與 Distributed Replay controller 通訊。 您可以使用管理工具來控制分散式重新執行。
+-   **Distributed Replay 管理工具**：主控台應用程式， `DReplay.exe` 用來與 Distributed Replay controller 通訊。 您可以使用管理工具來控制分散式重新執行。
 
 -   **Distributed Replay Controller**：執行 Windows 服務 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Controller) 的電腦。 Distributed Replay Controller 可協調 Distributed Replay Client 的動作。 每個 Distributed Replay 環境都只能有一個 Controller 執行個體。
 
@@ -72,6 +72,6 @@ ms.locfileid: "78177348"
 |描述如何使用管理工具來起始、監視和取消控制器上的作業。|[管理工具命令列選項 &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|
 
 ## <a name="see-also"></a>另請參閱
- [SQL Server Distributed Replay 論壇](https://social.technet.microsoft.com/Forums/sl/sqldru/)[使用 Distributed Replay 來負載測試您的 SQL Server-第2部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)[使用 Distributed Replay 負載測試您的 SQL Server-第1部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)
+ [SQL Server Distributed Replay 論壇](https://social.technet.microsoft.com/Forums/sl/sqldru/)[使用 Distributed Replay 來負載測試您的 SQL Server-第2部分](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)[使用 Distributed Replay 負載測試您的 SQL Server-第1部分](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)
 
 

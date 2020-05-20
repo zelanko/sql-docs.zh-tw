@@ -11,15 +11,15 @@ f1_keywords:
 dev_langs:
 - TSQL
 ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552e7cd3212d8fb65100c6bd8efbaca91af43c4
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089164"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000674"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>選項（文字編輯器-Transact-sql-一般頁面）
   使用 **[一般]** 選項對話方塊可以變更 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器的一般編輯行為，這個編輯器會用來編輯 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼。 若要顯示這些設定，請在 [工具]**** 功能表上按一下 [選項]****，展開 [Transact-SQL]**** 子資料夾，然後按一下 [一般]****。  
@@ -56,7 +56,7 @@ ms.locfileid: "66089164"
   
  當行不是空白時，此設定對 **[複製]** 或 **[剪下]** 沒有影響。 如果沒有選取內容，就會複製或剪下整個行。 接著，如果您按一下 **[貼上]**，就會貼上整行的文字與其結束字元。  
   
-## <a name="display"></a>顯示器  
+## <a name="display"></a>顯示  
  **行號**  
  如果選取此核取方塊，行號就會出現在每一行程式碼的旁邊。  
   

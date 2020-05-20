@@ -15,21 +15,21 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0ec82b7cca2062e1ed918e300eeb76dad16cbb20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc6636946f7c94992fc831f814df57baf6397a1f
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245616"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922153"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>對 Windows Token 服務 (C2WTS) 和 Reporting Services 的宣告
-  如果您想要針對 SharePoint 伺服器陣列以外的資料來源使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] windows 驗證，sharepoint 模式需要 Sharepoint 對 Windows Token 服務的宣告（c2WTS）。 使用者若是利用 Windows 驗證存取資料來源也是如此，因為 Web 前端 (WFE) 與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務之間的通訊皆會使用宣告驗證。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]如果您想要針對 sharepoint 伺服器陣列以外的資料來源使用 windows 驗證，sharepoint 模式需要 sharepoint 對 Windows Token 服務的宣告（c2WTS）。 使用者若是利用 Windows 驗證存取資料來源也是如此，因為 Web 前端 (WFE) 與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務之間的通訊皆會使用宣告驗證。  
   
  即使資料來源位於共用服務所在的同一部電腦上，也必須使用 c2WTS。 但此情況無須使用限制委派。  
   
  c2WTS 所建立的 Token 只可與限制委派 (僅限特定服務使用) 及組態選項 [使用任何驗證通訊協定] 並用。 如前文所述，資料來源與共用服務若是位在同一部電腦上，即無須使用限制委派。  
   
- 如果您的環境會使用 Kerberos 限制委派，則 SharePoint Server 服務及外部資料來源必須位於相同的 Windows 網域。 相依於 Windows Token 服務之宣告 (c2WTS) 的任何服務，都必須使用 Kerberos **限制** 委派，才能讓 c2WTS 使用 Kerberos 通訊協定轉換將宣告轉譯成 Windows 認證。 這些需求對於所有 SharePoint Shared 服務都是如此。 如需詳細資訊，請參閱[Microsoft SharePoint 2010 產品的 Kerberos 驗證總覽https://technet.microsoft.com/library/gg502594.aspx)（](https://technet.microsoft.com/library/gg502594.aspx)。  
+ 如果您的環境會使用 Kerberos 限制委派，則 SharePoint Server 服務及外部資料來源必須位於相同的 Windows 網域。 相依於 Windows Token 服務之宣告 (c2WTS) 的任何服務，都必須使用 Kerberos **限制** 委派，才能讓 c2WTS 使用 Kerberos 通訊協定轉換將宣告轉譯成 Windows 認證。 這些需求對於所有 SharePoint Shared 服務都是如此。 如需詳細資訊，請參閱[Microsoft SharePoint 2010 產品的 Kerberos 驗證總覽 https://technet.microsoft.com/library/gg502594.aspx) （](https://technet.microsoft.com/library/gg502594.aspx)。  
   
  本主題中會概述此程序。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75245616"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
   
 > [!NOTE]  
 >  注意：在某些伺服器陣列拓撲中，部分組態步驟可能會有所變更或無法使用。 例如單一伺服器安裝並不支援 Windows Identity Foundation c2WTS 服務，因此即無法在此伺服器陣列組態使用對 Windows Token 委派的宣告。  
@@ -65,7 +65,7 @@ ms.locfileid: "75245616"
   
         -   選取 [使用任何驗證通訊協定]  
   
-         如需詳細資訊，請參閱下列白皮書中的「設定電腦和服務帳戶的 Kerberos 限制委派」一節，為[SharePoint 2010 和 SQL Server 2008 R2 產品設定 kerberos 驗證](https://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx)  
+         如需詳細資訊，請參閱下列白皮書中的「設定電腦和服務帳戶的 Kerberos 限制委派」一節，為[SharePoint 2010 和 SQL Server 2008 R2 產品設定 kerberos 驗證](https://docs.microsoft.com/archive/blogs/tothesharepoint/white-paper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products)  
   
 2.  設定 c2WTS ' AllowedCallers '  
   

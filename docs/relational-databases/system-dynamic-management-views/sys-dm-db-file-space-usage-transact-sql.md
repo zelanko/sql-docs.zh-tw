@@ -17,39 +17,39 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_file_space_usage dynamic management view
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a160909901b265a6d07af18f6373554b036fe894
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c235ebc59424eba97d985740a7cf8456eee53150
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983051"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152029"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回資料庫中每一個檔案的空間使用方式資訊。  
+  傳回資料庫中每個資料檔案的空間使用量資訊。  
   
 > [!NOTE]  
->  若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_db_file_space_usage**的名稱。  
+>  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_db_file_space_usage**的名稱。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|資料庫識別碼。|  
 |file_id|**smallint**|檔案識別碼。<br /><br /> file_id 對應到[dm_io_virtual_file_stats sys.databases](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)中的 file_id，以及[sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)中的 fileid。|  
 |filegroup_id|**smallint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 檔案群組識別碼。|  
-|total_page_count|**bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 檔案中的總頁數。|  
-|allocated_extent_page_count|**bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 檔案中的已配置範圍中的總頁數。|  
-|unallocated_extent_page_count|**bigint**|檔案中的未配置範圍中的總頁數。<br /><br /> 不包含已配置範圍中的未使用頁面。|  
+|total_page_count|**bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 資料檔案中的總頁數。|  
+|allocated_extent_page_count|**bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 資料檔案中已配置之範圍內的總頁數。|  
+|unallocated_extent_page_count|**bigint**|資料檔案中未配置的範圍內的總頁數。<br /><br /> 不包含已配置範圍中的未使用頁面。|  
 |version_store_reserved_page_count|**bigint**|配置給版本存放區的一致範圍中的總頁數。 絕不從混合範圍配置版本存放區頁面。<br /><br /> 不包含 IAM 頁面，因為它們一律從混合範圍中配置。 如果 PFS 頁面是從一致範圍配置，則會包含它們。<br /><br /> 如需詳細資訊，請參閱 [sys.dm_tran_version_store &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)。|  
 |user_object_reserved_page_count|**bigint**|從一致範圍中配置給資料庫使用者物件的總頁數。 這個計數不包括已配置範圍中的未使用頁面。<br /><br /> 不包含 IAM 頁面，因為它們一律從混合範圍中配置。 如果 PFS 頁面是從一致範圍配置，則會包含它們。<br /><br /> 您可以使用[sys.databases allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)目錄檢視中的 [total_pages] 資料行，傳回使用者物件中每個配置單位的保留頁面計數。 不過請注意，total_pages 資料行包含 IAM 頁面。|  
 |internal_object_reserved_page_count|**bigint**|配置給檔案中內部物件之一致範圍中的總頁數。 這個計數不包括已配置範圍中的未使用頁面。<br /><br /> 不包含 IAM 頁面，因為它們一律從混合範圍中配置。 如果 PFS 頁面是從一致範圍配置，則會包含它們。<br /><br /> 沒有目錄檢視或動態管理物件可傳回每一個內部物件的頁數。|  
 |mixed_extent_page_count|**bigint**|檔案中已配置混合範圍的已配置和未配置總頁數。 混合範圍包含已配置給不同物件的頁面。 這個計數包含檔案中的所有 IAM 頁面。|
 |modified_extent_page_count|**bigint**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 及更新版本。<br /><br />自上一次完整資料庫備份以來，檔案已配置的範圍中修改的總頁數。 修改過的頁面計數可用來追蹤自從上次完整備份之後，資料庫中的差異變更量，以決定是否需要差異備份。|
-|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
-|distribution_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 與散發相關聯的唯一數值識別碼。|  
+|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|distribution_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 與散發相關聯的唯一數值識別碼。|  
   
 ## <a name="remarks"></a>備註  
  頁數一律在範圍層級上產生。 因此，頁數值一定是 8 的倍數。 包含 Global Allocation Map (GAM) 和 Shared Global Allocation Map (SGAM) 配置頁的範圍就是已配置的一致範圍。 上述頁數並不包含它們。 如需頁面和範圍的詳細資訊，請參閱[頁面與範圍架構指南](../../relational-databases/pages-and-extents-architecture-guide.md)。 
@@ -90,13 +90,13 @@ ms.locfileid: "73983051"
   
 ## <a name="permissions"></a>權限
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
+在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
 
 ## <a name="examples"></a>範例  
   
 ### <a name="determing-the-amount-of-free-space-in-tempdb"></a>判斷 tempdb 的可用空間量  
- 下列查詢會傳回**tempdb**中所有檔案中可用的總頁數和可用空間總計（以 mb 為單位）。  
+ 下列查詢會傳回**tempdb**中所有資料檔案的可用總頁數和可用空間總計（以 mb 為單位）。  
   
 ```sql
 USE tempdb;  

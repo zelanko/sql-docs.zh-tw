@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a39b3395a26fdbe3c235f429f312f4d6b3aff512
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721035"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000438"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>第 2 課：建立合併式發行集的訂閱
   在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]建立訂閱。 接著，您將在訂閱資料庫上設定權限，並手動為新訂閱產生已篩選資料快照集。 您必須先完成上一課 [第 1 課：使用合併式複寫發行資料](lesson-1-publishing-data-using-merge-replication.md)，才能進行這一課。  
@@ -36,15 +36,15 @@ ms.locfileid: "62721035"
   
 5.  在 [合併代理程式位置] 頁面上，按一下 [在訂閱者端執行每一個代理程式]****，然後按一下 [下一步]****。  
   
-6.  在 [訂閱者] 頁面上，選取訂閱者伺服器的實例名稱，然後在 [**訂閱資料庫**] 底下，從清單中選取** \<[新增資料庫>** ]。  
+6.  在 [訂閱者] 頁面上，選取訂閱者伺服器的實例名稱，然後在 [**訂閱資料庫**] 底下，從清單中選取 [ ** \< 新增資料庫>** ]。  
   
 7.  在 [新增資料庫]**** 對話方塊的 [資料庫名稱]**** 方塊中，輸入 **SalesOrdersReplica**，然後按一下 [確定]****，再按一下 [下一步]****。  
   
-8.  在 [合併代理程式安全性] 頁面上，按一下省略號 **（...**）按鈕，在 [ \<**處理帳戶**] 方塊中輸入_Machine_Name>_ **\ repl_merge** ，提供此帳戶的密碼，按一下 **[確定**]，按 [**下**一步]，然後再按 **[下一步]** 。  
+8.  在 [合併代理程式安全性] 頁面上，按一下省略號 **（...**）按鈕， \< 在 [**處理帳戶**] 方塊中輸入_Machine_Name>_ **\ repl_merge** ，提供此帳戶的密碼，按一下 **[確定**]，按 [**下**一步]，然後再按 **[下一步]** 。  
   
 9. 在 [初始化訂閱] 頁面上，從 [初始化時機]**** 清單中選取 [第一次同步處理時]****，按一下 [下一步]****，然後再按一次 [下一步]****。  
   
-10. 在 [HOST_NAME 值] 頁面的 [ `adventure-works\pamela0` **HOST_NAME 值**] 方塊中，輸入的值，然後按一下 **[完成]**。  
+10. 在 [HOST_NAME 值] 頁面 `adventure-works\pamela0` 的 [ **HOST_NAME 值**] 方塊中，輸入的值，然後按一下 **[完成]**。  
   
 11. 再按一次 [完成]****，建立訂閱之後，按一下 [關閉]****。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62721035"
   
 1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的「訂閱者」，依序展開 [資料庫]****、[SalesOrdersReplica]**** 和 [安全性]****，以滑鼠右鍵按一下 [使用者]****，然後選取 [新增使用者]****。  
   
-2.  在 [**一般**] 頁面的\<[**使用者名稱**] 方塊中，輸入_Machine_Name>_ **\ repl_merge** ，按一下省略號（**...**）按鈕，按一下 **[流覽]** \<，選取 [ _Machine_Name>_ **\ repl_merge**]，按一下 **[確定]**，按一下 [**檢查名稱**]，然後按一下 **[確定]**。  
+2.  在 [**一般**] 頁面 \< 的 [**使用者名稱**] 方塊中，輸入_Machine_Name>_ **\ repl_merge** ，按一下省略號（**...**）按鈕，按一下 **[流覽]**，選取 [ \< _Machine_Name>_ **\ Repl_merge**]，按一下 **[確定]**，按一下 [**檢查名稱**]，然後按一下 **[確定]**。  
   
 3.  在 [資料庫角色成員資格]**** 中，選取 [db_owner]****，然後按一下 [確定]**** 建立使用者。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62721035"
   
 3.  選取 [資料分割]**** 頁面，然後按一下 [加入]****。  
   
-4.  在 [**加入資料分割**] 對話方塊中， `adventure-works\pamela0`于 [ **HOST_NAME 值**] 方塊中輸入，然後按一下 **[確定]**。  
+4.  在 [**加入資料分割**] 對話方塊中，于 `adventure-works\pamela0` [ **HOST_NAME 值**] 方塊中輸入，然後按一下 **[確定]**。  
   
 5.  選取新加入的資料分割，按一下 [立即產生選取的快照集]****，然後按一下 [確定]****。  
   

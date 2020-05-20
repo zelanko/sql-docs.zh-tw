@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9c87a6900b8ee19e18efb76506d1bed5a645202
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ce44d14573000e9880fb1daf3a1ddb42746ee85
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76516266"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151967"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "76516266"
   
  Dm_exec_connections、sys.databases dm_exec_sessions 和 sys.databases dm_exec_requests 動態管理檢視會對應到[sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)系統資料表。  
   
-> **注意：** 若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_exec_sessions**的名稱。  
+> **注意：** 若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_exec_sessions**的名稱。  
   
 |資料行名稱|資料類型|描述和版本特定資訊|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|識別每個使用中的主要連接所關聯的工作階段。 不可為 Null。|  
-|login_time|**datetime**|建立工作階段的時間。 不可為 Null。|  
+|login_time|**datetime**|建立工作階段的時間。 不可為 Null。 在查詢此 DMV 時，尚未完成登入的會話會顯示為的登入時間 `1900-01-01` 。|  
 |host_name|**nvarchar(128)**|工作階段的特定用戶端工作站名稱。 內部工作階段的值為 NULL。 可為 Null。<br /><br /> **安全性注意事項：** 用戶端應用程式會提供工作站名稱，並可提供不正確的資料。 請勿依賴 HOST_NAME 當做安全性功能。|  
 |program_name|**nvarchar(128)**|起始工作階段的用戶端程式名稱。 內部工作階段的值為 NULL。 可為 Null。|  
 |host_process_id|**int**|起始工作階段之用戶端程式的處理序識別碼。 內部工作階段的值為 NULL。 可為 Null。|  
 |client_version|**int**|用戶端連接伺服器所用介面的 TDS 通訊協定版本。 內部工作階段的值為 NULL。 可為 Null。|  
 |client_interface_name|**nvarchar(32)**|用戶端用來與伺服器通訊的程式庫/驅動程式名稱。 內部工作階段的值為 NULL。 可為 Null。|  
 |security_id|**Varbinary （85）**|與登入相關聯之 Microsoft Windows 安全性識別碼。 不可為 Null。|  
-|login_name|**nvarchar(128)**|目前用來執行工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 如需建立工作階段的原始登入名稱，請參閱 original_login_name。 可以是已[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證的登入名稱或 Windows 驗證的網域使用者名稱。 不可為 Null。|  
+|login_name|**nvarchar(128)**|目前用來執行工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 如需建立工作階段的原始登入名稱，請參閱 original_login_name。 可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已驗證的登入名稱或 Windows 驗證的網域使用者名稱。 不可為 Null。|  
 |nt_domain|**nvarchar(128)**|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 用戶端的 Windows 網域 (如果工作階段使用 Windows 驗證或信任連接)。 內部工作階段和非網域使用者的這個值為 NULL。 可為 Null。|  
 |nt_user_name|**nvarchar(128)**|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 用戶端的 Windows 使用者名稱 (如果工作階段使用 Windows 驗證或信任連接)。 內部工作階段和非網域使用者的這個值為 NULL。 可為 Null。|  
 |status|**nvarchar(30)**|工作階段的狀態。 可能的值：<br /><br /> **執行中** - 目前執行一或多項要求<br /><br /> **睡眠中** - 目前不執行任何要求<br /><br /> **休眠**-會話已因連接共用而重設，且目前處於預先登入狀態。<br /><br /> **Preconnect** - 工作階段在資源管理員類別器中。<br /><br /> 不可為 Null。|  
@@ -88,13 +88,13 @@ ms.locfileid: "76516266"
 |database_id|**smallint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 每個工作階段之目前資料庫的識別碼。|  
 |authenticating_database_id|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 驗證主體之資料庫的識別碼。 如果是登入，此值會是 0。 如果是自主資料庫使用者，此值會是自主資料庫的資料庫識別碼。|  
 |open_transaction_count|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 每個工作階段的開啟交易數目。|  
-|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
 |page_server_reads|**bigint**|**適用于**： Azure SQL Database 超大規模資料庫<br /><br /> 在此會話期間，此會話中的要求所執行的頁面伺服器讀取數目。 不可為 Null。|  
   
 ## <a name="permissions"></a>權限  
 每個人都可以看到自己的會話資訊。  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** 需要`VIEW SERVER STATE`的許可權[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，才能查看伺服器上的所有會話。  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** 需要`VIEW DATABASE STATE`查看目前資料庫的所有連接。 `VIEW DATABASE STATE`無法在資料庫中授`master`與。 
+** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ：** 需要的 `VIEW SERVER STATE` 許可權 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，才能查看伺服器上的所有會話。  
+** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ：** 需要 `VIEW DATABASE STATE` 查看目前資料庫的所有連接。 `VIEW DATABASE STATE`無法在資料庫中授與 `master` 。 
   
   
 ## <a name="remarks"></a>備註  

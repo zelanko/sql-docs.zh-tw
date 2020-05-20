@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7a64d8fe198b5660715488b6e1b15d5e4831a99
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089236"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000718"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>選項 (文字編輯器：編輯器索引標籤和狀態列頁面)
   [編輯器索引標籤和狀態列]**** 頁面可讓您自訂 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 查詢編輯器所顯示的資訊。 您可以指定 [查詢編輯器] 視窗的索引標籤和狀態列中顯示的資訊層級，以及狀態列出現在編輯器視窗頂端或底部。  
@@ -34,7 +34,7 @@ ms.locfileid: "66089236"
  **顯示執行時間**  
  包括指令碼執行時間。 設定如下：  
   
- **None**  
+ **無**  
  狀態列不會顯示任何時間資訊。  
   
  **成品**  
@@ -70,7 +70,7 @@ ms.locfileid: "66089236"
  **返回頁首**  
  狀態列會出現在 [查詢編輯器] 視窗頂端。  
   
- **靠**  
+ **下層**  
  狀態列會出現在 [查詢編輯器] 視窗的底部。  
   
 ## <a name="tab-text"></a>索引標籤文字  

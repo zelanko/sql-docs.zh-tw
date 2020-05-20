@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.searchpropertylisteditor.f1
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97061590525a7e644319d7c8ff407d4905e59418
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773666"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000548"
 ---
 # <a name="search-property-list-editor"></a>搜尋屬性清單編輯器
   使用此對話方塊來新增或刪除搜尋屬性清單中的搜尋屬性。  
@@ -25,7 +25,7 @@ ms.locfileid: "62773666"
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>若要使用 SQL Server Management Studio 管理搜尋屬性清單  
  如需如何建立、查看或刪除搜尋屬性清單，以及如何設定全文檢索索引以進行屬性搜尋的詳細資訊，請參閱[使用搜尋屬性清單搜尋文件屬性](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **屬性名稱**  
  指定要用來識別全文檢索查詢中之屬性的名稱。 屬性名稱可以包含內部空格。 **[屬性名稱]** 的最大長度為 256 個字元。 這個名稱可以是使用者易記名稱，例如「作者」或「住家地址」，或者它可以是屬性的 Windows 正式名稱，例如 `System.Author` 或 `System.Contact.HomeAddress`。 **[屬性名稱]** 必須唯一識別屬性集內的屬性。  
   

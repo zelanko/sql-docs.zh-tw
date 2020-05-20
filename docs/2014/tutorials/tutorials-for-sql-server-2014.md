@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da87f0fbae21d11906f12a906aa5107e8812436e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242061"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000044"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>適用於 SQL Server 2014 的教學課程
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 引進了許多新技術和新功能。  
@@ -24,18 +24,18 @@ ms.locfileid: "75242061"
   
  如果您使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 伺服器，表示您已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料提供者。 為了讓教學課程正常運作，您將需要搭配這些提供者使用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 範例資料庫，或是搭配 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 版本範例資料庫使用的 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 資料提供者。  
   
--   若要[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]下載範例以搭配教學課程使用，請移至 CodePlex 上[SQL Server 的範例](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images)。  
+-   若要下載 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 範例以搭配教學課程使用，請移至 CodePlex 上[SQL Server 的範例](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images)。  
   
--   若要下載[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]活頁簿[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]和報表以搭配[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]教學課程使用，請移至[PowerPivot 中的 HelloWorldPicnic 範例模型和 Power View 的影像檔](https://www.microsoft.com/download/details.aspx?id=26719)案。  
+-   若要下載活頁 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 簿和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表以搭配教學課程使用 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] ，請移至[PowerPivot 中的 HelloWorldPicnic 範例模型和 Power View 的影像檔](https://www.microsoft.com/download/details.aspx?id=26719)案。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]是[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]適用于[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition 之增益集的功能。  
+    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 適用于 Enterprise Edition 之增益集的功能 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] 。  
   
--   若要[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]下載版本[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]的資料庫，請移至 CodePlex 上的 [[艾德公司] [Works 2014 範例資料庫](https://msftdbprodsamples.codeplex.com/releases/view/125550)]。  
+-   若要下載 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 版本的 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 資料庫，請移至 CodePlex 上的 [[艾德公司] [Works 2014 範例資料庫](https://msftdbprodsamples.codeplex.com/releases/view/125550)]。  
   
--   若要[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]下載版本[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]的資料庫，請移至 CodePlex 上的[SQL Server 2012 的「艾德公司」工作](https://msftdbprodsamples.codeplex.com/releases/view/55330)。  
+-   若要下載 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 版本的 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 資料庫，請移至 CodePlex 上的[SQL Server 2012 的「艾德公司」工作](https://msftdbprodsamples.codeplex.com/releases/view/55330)。  
   
--   若要查看教學課程[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]的清單，請移至 MSDN library 中的[教學](https://msdn.microsoft.com/library/ms167593.aspx)課程。  
+-   若要查看教學課程的清單 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ，請移至 MSDN library 中的[教學](https://msdn.microsoft.com/library/ms167593.aspx)課程。  
   
 ## <a name="in-this-section"></a>本節內容  
  教學課程可供運用於下列 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 技術。  

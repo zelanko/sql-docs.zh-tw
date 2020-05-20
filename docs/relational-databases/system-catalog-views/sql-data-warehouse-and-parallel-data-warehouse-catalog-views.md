@@ -12,21 +12,21 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b3d5780daea40f229ed7d4d86438be814dfe7d29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06970a9e21169af3959d69ba934417065621e855
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844518"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83605720"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL 資料倉儲與平行處理資料倉儲目錄檢視
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
- 本主題列出[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]目錄檢視。  
+ 本主題列出 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 目錄檢視。  
   
-## <a name="sssdw-and-sspdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]目錄檢視  
- 下列目錄檢視適用于[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和： [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="sssdw-and-sspdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 目錄檢視  
+ 下列目錄檢視適用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ：  
   
  [pdw_column_distribution_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md)  
   
@@ -62,11 +62,11 @@ ms.locfileid: "73844518"
 
 ## <a name="sssdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]目錄檢視
 
- 下列目錄檢視[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]僅適用于：
+ 下列目錄檢視僅適用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ：
 
- [pdw_materialized_view_column_distribution_properties &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest) （預覽）
+ [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest) 
 
- [pdw_materialized_view_distribution_properties &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest) （預覽）
+ [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest) 
 
  [pdw_materialized_view_mappings &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest) （預覽）
 
@@ -74,12 +74,12 @@ ms.locfileid: "73844518"
   
  [workload_management_workload_classifiers &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
   
- [workload_management_workload_groups &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) （預覽）
+ [workload_management_workload_groups &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) 
 
 
 ## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]目錄檢視
 
- 下列目錄檢視[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]僅適用于：
+ 下列目錄檢視僅適用于 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ：
 
  [pdw_database_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   

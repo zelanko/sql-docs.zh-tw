@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b0bd2f253dede1c427eda826eba0e998a144736
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f015625f168693da0c3c204ca85cbee1beb5d897
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252018"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152137"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -44,7 +44,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>引數  
 
-對於[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]， `sp_spaceused`必須指定具名引數（例如， `sp_spaceused (@objname= N'Table1');`而不是依賴參數的序數位置）。 
+對於 [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 和 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] ， `sp_spaceused` 必須指定具名引數（例如， `sp_spaceused (@objname= N'Table1');` 而不是依賴參數的序數位置）。 
 
 `[ @objname = ] 'objname'`
    
@@ -52,7 +52,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 如果未指定*objname* ，則會傳回整個資料庫的結果。  
 *objname*是**Nvarchar （776）**，預設值是 Null。  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]只支援資料庫和資料表物件。
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]和 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 只支援資料庫和資料表物件。
   
 `[ @updateusage = ] 'updateusage'`表示應執行 DBCC UPDATEUSAGE 以更新空間使用方式資訊。 未指定*objname*時，會在整個資料庫上執行語句;否則，語句會在*objname*上執行。 值可以是**true**或**false**。 *updateusage*是**Varchar （5）**，預設值是**false**。  
   
@@ -63,7 +63,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |值|說明|  
 |-----------|-----------------|  
 |ALL|傳回物件或資料庫的儲存體統計資料，包括本機部分和遠端部分。|  
-|LOCAL_ONLY|只傳回物件或資料庫的本機部分的儲存統計資料。 如果物件或資料庫未啟用 Stretch，會傳回與 when @mode = ALL 相同的統計資料。|  
+|LOCAL_ONLY|只傳回物件或資料庫的本機部分的儲存統計資料。 如果物件或資料庫未啟用 Stretch，會傳回與 when = ALL 相同的統計資料 @mode 。|  
 |REMOTE_ONLY|只傳回物件或資料庫之遠端部分的儲存統計資料。 當下列其中一個條件成立時，此選項會引發錯誤：<br /><br /> 資料表未啟用 Stretch。<br /><br /> 資料表已啟用延展功能，但您從未啟用過資料移轉。 在此情況下，遠端資料表還沒有架構。<br /><br /> 使用者已手動卸載遠端資料表。<br /><br /> 布建遠端資料封存會傳回「成功」狀態，但事實上卻失敗。|  
   
  *mode*是**Varchar （11）**，預設值是**N'ALL '**。  
@@ -72,15 +72,15 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |值|說明|  
 |-----------|-----------------|  
-|0|當* \@objname*為 null 或未指定時，會傳回兩個結果集。 有兩個結果集是預設行為。|  
-|1|當* \@objname* = null 或未指定時，會傳回單一結果集。|  
+|0|當* \@ objname*為 null 或未指定時，會傳回兩個結果集。 有兩個結果集是預設行為。|  
+|1|當* \@ objname* = null 或未指定時，會傳回單一結果集。|  
   
  *oneresultset*是**bit**，預設值是**0**。  
 
 `[ @include_total_xtp_storage] 'include_total_xtp_storage'`
-**適用于：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]、 [!INCLUDE[sssds-md](../../includes/sssds-md.md)]。  
+**適用于：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 、 [!INCLUDE[sssds-md](../../includes/sssds-md.md)] 。  
   
- 當@oneresultset= 1 時，參數@include_total_xtp_storage會決定單一結果集是否包含 MEMORY_OPTIMIZED_DATA 儲存體的資料行。 預設值為0，也就是根據預設（如果省略參數），XTP 資料行不會包含在結果集中。  
+ 當 @oneresultset = 1 時，參數會 @include_total_xtp_storage 決定單一結果集是否包含 MEMORY_OPTIMIZED_DATA 儲存體的資料行。 預設值為0，也就是根據預設（如果省略參數），XTP 資料行不會包含在結果集中。  
 
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -149,7 +149,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**xtp_used**|**Varchar （18）**|在 [結構]、[作用中] 和 [合併目標] 底下狀態的檢查點檔案大小總計，以 KB 為單位。 這是記憶體優化資料表中的資料主動使用的磁碟空間。|  
 |**xtp_pending_truncation**|**Varchar （18）**|狀態 WAITING_FOR_LOG_TRUNCATION 的檢查點檔案大小總計（以 KB 為單位）。 這是在記錄截斷發生後，用於等待清除之檢查點檔案的磁碟空間。|
 
-如果省略*objname* ，oneresultset 的值為1，而*include_total_xtp_storage*為1，則會傳回下列單一結果集，以提供目前的資料庫大小資訊。 如果`include_total_xtp_storage`為0（預設值），則會省略最後三個數據行。 
+如果省略*objname* ，oneresultset 的值為1，而*include_total_xtp_storage*為1，則會傳回下列單一結果集，以提供目前的資料庫大小資訊。 如果 `include_total_xtp_storage` 為0（預設值），則會省略最後三個數據行。 
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -160,18 +160,18 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**資料**|**Varchar （18）**|資料所用的空間總量。|  
 |**index_size**|**Varchar （18）**|索引所用的空間總量。|  
 |**未使用**|**Varchar （18）**|保留給資料庫中之物件但尚未使用的空間總量。|
-|**xtp_precreated**|**Varchar （18）**|具有狀態預先建立的檢查點檔案大小總計（以 KB 為單位）。 這會計入整個資料庫中的未配置空間。 如果資料庫沒有至少包含一個容器的 memory_optimized_data 檔案群組，則會傳回 Null。 *只有當@include_total_xtp_storage= 1 時，才會包含這個資料行*。| 
-|**xtp_used**|**Varchar （18）**|在 [結構]、[作用中] 和 [合併目標] 底下狀態的檢查點檔案大小總計，以 KB 為單位。 這是記憶體優化資料表中的資料主動使用的磁碟空間。 如果資料庫沒有至少包含一個容器的 memory_optimized_data 檔案群組，則會傳回 Null。 *只有當@include_total_xtp_storage= 1 時，才會包含這個資料行*。| 
-|**xtp_pending_truncation**|**Varchar （18）**|狀態 WAITING_FOR_LOG_TRUNCATION 的檢查點檔案大小總計（以 KB 為單位）。 這是在記錄截斷發生後，用於等待清除之檢查點檔案的磁碟空間。 如果資料庫沒有至少包含一個容器的 memory_optimized_data 檔案群組，則會傳回 Null。 只有在時`@include_total_xtp_storage=1`，才會包含這個資料行。|
+|**xtp_precreated**|**Varchar （18）**|具有狀態預先建立的檢查點檔案大小總計（以 KB 為單位）。 這會計入整個資料庫中的未配置空間。 如果資料庫沒有至少包含一個容器的 memory_optimized_data 檔案群組，則會傳回 Null。 *只有當 @include_total_xtp_storage = 1 時，才會包含這個資料行*。| 
+|**xtp_used**|**Varchar （18）**|在 [結構]、[作用中] 和 [合併目標] 底下狀態的檢查點檔案大小總計，以 KB 為單位。 這是記憶體優化資料表中的資料主動使用的磁碟空間。 如果資料庫沒有至少包含一個容器的 memory_optimized_data 檔案群組，則會傳回 Null。 *只有當 @include_total_xtp_storage = 1 時，才會包含這個資料行*。| 
+|**xtp_pending_truncation**|**Varchar （18）**|狀態 WAITING_FOR_LOG_TRUNCATION 的檢查點檔案大小總計（以 KB 為單位）。 這是在記錄截斷發生後，用於等待清除之檢查點檔案的磁碟空間。 如果資料庫沒有至少包含一個容器的 memory_optimized_data 檔案群組，則會傳回 Null。 只有在時，才會包含這個資料行 `@include_total_xtp_storage=1` 。|
 
 ## <a name="remarks"></a>備註  
- **database_size**一律大於**保留** + **未配置空間**的總和，因為它包含記錄檔的大小，但**保留**且**unallocated_space**只考慮資料頁。  
+ **database_size**通常會大於**保留**  +  **未配置空間**的總和，因為它包含記錄檔的大小，但**保留**且**unallocated_space**只考慮資料頁。 在某些情況下，使用 Azure Synapse 分析時，此語句可能不成立。 
   
  XML 索引和全文檢索索引所使用的頁面會包含在兩個結果集的**index_size**中。 當指定*objname*時，物件的 XML 索引和全文檢索索引的頁面也會計算在**保留**和**index_size**的總結果中。  
   
  如果針對資料庫或具有空間索引的物件計算空間使用量，則空間大小的資料行（例如**database_size**、**保留**和**index_size**）會包含空間索引的大小。  
   
- 當指定*updateusage*時，會[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]掃描資料庫中的資料頁，並針對每個資料表所使用的儲存**空間，進行**任何必要**allocation_units**的更正。 例如，在某些狀況下，在卸除索引之後，資料表的空間資訊可能不是目前的資訊。 *updateusage*可能需要一些時間才能在大型資料表或資料庫上執行。 只有當您懷疑傳回不正確的值，以及當進程對資料庫中的其他使用者或處理常式不會有負面影響時，才使用*updateusage* 。 如果願意的話，您可以個別執行 DBCC UPDATEUSAGE。  
+ 當指定*updateusage*時，會 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 掃描資料庫中的資料頁，並針對每個資料表所使用的儲存空間， **sys.partitions**進行任何必要**allocation_units**的更正。 例如，在某些狀況下，在卸除索引之後，資料表的空間資訊可能不是目前的資訊。 *updateusage*可能需要一些時間才能在大型資料表或資料庫上執行。 只有當您懷疑傳回不正確的值，以及當進程對資料庫中的其他使用者或處理常式不會有負面影響時，才使用*updateusage* 。 如果願意的話，您可以個別執行 DBCC UPDATEUSAGE。  
   
 > [!NOTE]  
 >  當您卸除或重建大型索引時，或卸除或截斷大型資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會延遲取消配置實際的頁面及其相關聯鎖定，直到認可交易之後。 延遲的卸除作業並不會立即釋出已配置的空間。 因此，在卸載或截斷大型物件之後， **sp_spaceused**所傳回的值，可能不會反映實際可用的磁碟空間。  
@@ -202,7 +202,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>C. 顯示與已啟用 Stretch 之資料表相關聯之遠端資料表的空間使用方式資訊  
- 下列範例會使用** \@mode**引數來指定遠端目標，以摘要說明與已啟用 Stretch 之資料表相關聯的遠端資料表所使用的空間。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
+ 下列範例會使用** \@ mode**引數來指定遠端目標，以摘要說明與已啟用 Stretch 之資料表相關聯的遠端資料表所使用的空間。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
   
 ```sql  
 USE StretchedAdventureWorks2016  

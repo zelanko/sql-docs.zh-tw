@@ -17,15 +17,15 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f50ff5cd5a3ecbc70aafb6da7cf5008f31bada0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e74a05193ae2051b12dbc15bb199b22a3c44f2a
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797726"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925002"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>設定可用性群組的唯讀路由 (SQL Server)
-  若要在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中將 AlwaysOn 可用性群組設定為支援唯讀路由，可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell。 *「唯讀路由」* (Read-Only Routing) 是指 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將合格的唯讀連接要求路由至可用之 AlwaysOn [可讀取的次要複本](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) (亦即在以次要角色執行時，設定為允許唯讀工作負載的複本) 的功能。 若要支援唯讀路由，可用性群組必須具有 [可用性群組接聽程式](../../listeners-client-connectivity-application-failover.md)。 唯讀用戶端必須將其連接要求導向至此接聽程式，且用戶端的連接字串必須將應用程式的意圖指定為「唯讀」。 換句話說必須是 *「讀取意圖的連接要求」*(Read-Intent Connection Request)。  
+  若要在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中將 AlwaysOn 可用性群組設定為支援唯讀路由，可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell。 *「唯讀路由」* (Read-Only Routing) 是指 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將合格的唯讀連接要求路由至可用之 AlwaysOn [可讀取的次要複本](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) (亦即在以次要角色執行時，設定為允許唯讀工作負載的複本) 的功能。 若要支援唯讀路由，可用性群組必須具有 [可用性群組接聽程式](../../listeners-client-connectivity-application-failover.md)。 唯讀用戶端必須將其連接要求導向至此接聽程式，且用戶端的連接字串必須將應用程式的意圖指定為「唯讀」。 換句話說必須是 *「讀取意圖的連接要求」* (Read-Intent Connection Request)。  
   
 > [!NOTE]
 >  如需如何設定可讀取之次要複本的相關資訊，請參閱 [設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)。
@@ -39,7 +39,7 @@ ms.locfileid: "72797726"
   
 -   可用性群組必須擁有可用性群組接聽程式。 如需詳細資訊，請參閱 [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)。  
   
--   一或多個可用性複本必須設定為接受次要角色的唯讀狀態（亦即，成為可讀取的[次要複本](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)（AlwaysOn% 20Availability% 20Groups\)））。 如需詳細資訊，請參閱 [設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)。  
+-   一或多個可用性複本必須設定為接受次要角色的唯讀狀態（亦即，成為可讀取的[次要複本](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)（AlwaysOn% 20Availability% 20Groups \) ））。 如需詳細資訊，請參閱 [設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
 -   您必須連接到裝載目前主要複本的伺服器執行個體。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72797726"
   
 -   每一個要支援唯讀路由之可讀取的次要複本，皆必須指定 *「唯讀路由 URL」*(Read-Only Routing URL)。 只有在本機複本以次要角色執行時，此 URL 才會生效。 如有必要，您必須各自指定每個複本的唯讀路由 URL。 每個唯讀路由 URL 可用於將讀取意圖的連接要求路由至特定可讀取的次要複本。 一般而言，每個可讀取的次要複本都有一個指派的唯讀路由 URL。  
   
-     如需有關計算可用性複本之唯讀路由 URL 的詳細資訊，請參閱 [計算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)。  
+     如需有關計算可用性複本之唯讀路由 URL 的詳細資訊，請參閱 [計算 AlwaysOn 的 read_only_routing_url](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)。  
   
 -   如果要支援唯讀路由的可用性複本為主要複本時，則必須指定 *「唯讀路由清單」*(Read-Only Routing List)。 只有本機複本以主要角色執行時，給定的唯讀路由清單才會生效。 如有必要，您必須各自指定每個複本的這份清單。 一般而言，每份唯讀路由清單皆會包含每一個唯讀路由 URL，並在清單結尾提供本機複本的 URL。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "72797726"
   
 1.  連接到裝載主要複本的伺服器執行個體。  
   
-2.  如果您要為新的可用性群組指定複本，請使用[CREATE availability group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]語句。 如果您要加入或修改現有可用性群組的複本，請使用[ALTER availability group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]語句。  
+2.  如果您要為新的可用性群組指定複本，請使用[CREATE AVAILABILITY group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 語句。 如果您要加入或修改現有可用性群組的複本，請使用[ALTER AVAILABILITY group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 語句。  
   
     -   若要設定次要角色的唯讀路由，請在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 SECONDARY_ROLE 選項，如下所示：  
   
-         SECONDARY_ROLE **（** READ_ONLY_ROUTING_URL **= '** TCP：**/*`system-address`*/*`port`*： '）**  
+         SECONDARY_ROLE **（** READ_ONLY_ROUTING_URL **= '** TCP：**// *`system-address`* ： *`port`* '）**  
   
          唯讀路由 URL 的參數如下：  
   
@@ -92,11 +92,11 @@ ms.locfileid: "72797726"
   
          在 MODIFY REPLICA 子句中，ALLOW_CONNECTIONS 是選擇性的 (如果複本已經設定為允許唯讀連接的話)。  
   
-         如需詳細資訊，請參閱 [計算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)。  
+         如需詳細資訊，請參閱 [計算 AlwaysOn 的 read_only_routing_url](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)。  
   
     -   若要設定主要角色的唯讀路由，請在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 PRIMARY_ROLE 選項，如下所示：  
   
-         PRIMARY_ROLE **（** READ_ONLY_ROUTING_LIST **= （'*`server`*'** [ **，**.。。*n* ] **））**  
+         PRIMARY_ROLE **（** READ_ONLY_ROUTING_LIST **= （' *`server`* '** [ **，**.。。*n* ] **））**  
   
          其中， *server* 會識別裝載可用性群組中唯讀次要複本的伺服器執行個體。  
   
@@ -150,13 +150,13 @@ GO
   
 2.  將可用性複本加入至可用性群組時，請使用 `New-SqlAvailabilityReplica` 指令程式。 修改現有的可用性複本時，請使用 `Set-SqlAvailabilityReplica` 指令程式。 相關參數如下所示：  
   
-    -   若要設定次要角色的唯讀路由，請指定**ReadonlyRoutingConnectionUrl "*`url`*"** 參數。  
+    -   若要設定次要角色的唯讀路由，請指定**ReadonlyRoutingConnectionUrl " *`url`* "** 參數。  
   
          其中， *url* 是路由至複本進行唯讀連接時要使用的連接性完整網域名稱 (FQDN) 和通訊埠。 例如：`-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
-         如需詳細資訊，請參閱 [計算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)。  
+         如需詳細資訊，請參閱 [計算 AlwaysOn 的 read_only_routing_url](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)。  
   
-    -   若要設定主要角色的連接存取，請指定**ReadonlyRoutingList*`server`*""** [ **，**.。。*n* ]，其中*server*會識別裝載可用性群組中唯讀次要複本的伺服器實例。 例如：`-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   若要設定主要角色的連接存取，請指定**ReadonlyRoutingList " *`server`* "** [ **，**.。。*n* ]，其中*server*會識別裝載可用性群組中唯讀次要複本的伺服器實例。 例如：`-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  您必須先設定複本的唯讀路由 URL，然後再設定其唯讀路由清單。  
@@ -183,7 +183,7 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer
  一旦目前的主要複本和可讀取的次要複本都設定為支援兩種角色的唯讀路由之後，可讀取的次要複本就可以從經由可用性群組接聽程式連接的用戶端接收讀取意圖連接要求。  
   
 > [!TIP]  
->  使用[Bcp 公用程式](../../../tools/bcp-utility.md)或[sqlcmd 公用程式](../../../tools/sqlcmd-utility.md)時，您可以藉由指定`-K ReadOnly`參數，為啟用唯讀存取的任何次要複本指定唯讀存取。  
+>  使用[Bcp 公用程式](../../../tools/bcp-utility.md)或[sqlcmd 公用程式](../../../tools/sqlcmd-utility.md)時，您可以藉由指定參數，為啟用唯讀存取的任何次要複本指定唯讀存取 `-K ReadOnly` 。  
   
 ###  <a name="requirements-and-recommendations-for-client-connection-strings"></a><a name="ConnStringReqsRecs"></a> 用戶端連接字串的需求和建議  
  若要讓用戶端應用程式使用唯讀路由，其連接字串必須滿足下列需求：  
@@ -233,7 +233,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -   **部落格：**  
   
-     [計算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)  
+     [計算 AlwaysOn 的 read_only_routing_url](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)  
   
      [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   

@@ -10,12 +10,12 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 087ca52acea1cace7eb218cc33ce31cd21e10cc8
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82086879"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922243"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
   本教學課程將教導您如何建立兩種報表：鑽研報表與主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 下圖顯示您將建立的報表。  
@@ -340,7 +340,7 @@ ms.locfileid: "82086879"
   
 1.  在 [報表資料] 窗格中，展開 **[參數]**。  
   
-2.  以滑鼠右鍵\@按一下 [ProductProductCategoryName]，然後按一下 [**參數屬性**]。  
+2.  以滑鼠右鍵按一下 [ \@ ProductProductCategoryName]，然後按一下 [**參數屬性**]。  
   
     > [!NOTE]  
     >  名稱旁邊的 \@ 字元表示這是一個參數。  
@@ -413,7 +413,7 @@ ms.locfileid: "82086879"
   
 5.  在 **[資料來源]** 中，確認資料來源為 **[Microsoft SQL Server Analysis Services (AdomdClient)]**。  
   
-6.  在 [**伺服器名稱**] 中，輸入安裝實例[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]所在伺服器的名稱。  
+6.  在 [**伺服器名稱**] 中，輸入安裝實例所在伺服器的名稱 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 7.  在 [選取或輸入資料庫名稱]**** 中，選取 [Contoso] Cube。  
   
@@ -447,7 +447,7 @@ ms.locfileid: "82086879"
 2.  在 [選取 Cube]**** 對話方塊中，按一下 [Sales]，然後按一下 [確定]****。  
   
     > [!TIP]  
-    >  如果您不想要手動建置 MDX 查詢，請按一下![切換到設計模式](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "切換到設計模式")圖示，將查詢設計工具切換到 [查詢] 模式，並將完成的 MDX 貼到查詢設計工具，然後繼續進行[建立資料集](#MSkip)中的步驟 5。  
+    >  如果您不想要手動建置 MDX 查詢，請按一下![切換到設計模式](media/rsqdicon-designmode.gif "切換到設計模式")圖示，將查詢設計工具切換到 [查詢] 模式，並將完成的 MDX 貼到查詢設計工具，然後繼續進行[建立資料集](#MSkip)中的步驟 5。  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51ad78c95881daacebcb3f2b7999a299cd4ebd7d
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089212"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000588"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>選項 (文字編輯器 - XML - 其他頁面)
 
@@ -44,4 +44,4 @@ ms.locfileid: "66089212"
   
 ## <a name="caching"></a>Caching  
  **結構描述**  
- 指定結構描述快取的位置。 瀏覽按鈕 (...) 會在新視窗中開啟目前的結構描述快取位置。 預設位置是* \<Management Studio 安裝目錄>* \xml\schemas。  
+ 指定結構描述快取的位置。 瀏覽按鈕 (...) 會在新視窗中開啟目前的結構描述快取位置。 預設位置是* \< Management Studio 安裝目錄>* \xml\schemas。  

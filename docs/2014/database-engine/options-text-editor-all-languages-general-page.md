@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55e89850c3b3f19c30a4943f5d787407da7e3c88
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089253"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000733"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>選項 (文字編輯器 - 所有語言 - 一般頁面)
   使用這個對話方塊可設定 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，全部五個編輯器的一般編輯選項。 若要顯示這些選項，請按一下 [工具]**** 功能表上的 [選項]****。 選取 [文字編輯器]**** 資料夾，展開 [所有語言]**** 資料夾，然後按一下 [一般]****。  
@@ -60,7 +60,7 @@ ms.locfileid: "66089253"
   
  當行不是空白時，此設定對 [複製]**** 或 [剪下]**** 命令沒有作用。 如果沒有選取內容，就會複製或剪下整個行。 接著，如果您按一下 **[貼上]**，就會貼上整行的文字與其結束字元。  
   
-## <a name="display"></a>顯示器  
+## <a name="display"></a>顯示  
  **行號**  
  在每一行程式碼旁邊顯示行號。  
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.general.f1
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b3ecf106315fa88fdfb68599cfce71a77be975dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f862f2067a1a85663754ab795822f2859b6c416a
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089036"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000598"
 ---
 # <a name="query-options-execution-general-page"></a>查詢選項執行 (一般頁面)
   使用此頁面可指定執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢的選項。 若要存取此對話方塊，請以滑鼠右鍵按一下查詢編輯器視窗的主體，然後按一下 [查詢選項]****。  

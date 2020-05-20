@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Banyan VINES
 - protocols [SQL Server], client configuration
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9046541411d472c7fe557cfad78ca903107513ab
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035278"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001085"
 ---
 # <a name="choosing-a-network-protocol"></a>選擇網路通訊協定
   若要連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，必須啟用網路通訊協定。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以同時服務數個通訊協定上的要求。 用戶端會使用單一通訊協定連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果用戶端程式不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在接聽哪個通訊協定，請設定用戶端循序嘗試多個通訊協定。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來啟用、停用及設定網路通訊協定。  

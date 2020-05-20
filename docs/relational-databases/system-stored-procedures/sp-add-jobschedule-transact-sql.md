@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobschedule
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 06dbee74cfb3e2d5e697ea9594d46c98557de8ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 11aa73828caba66637d5d5b87a478dca851bdaf9
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70810502"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151957"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70810502"
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > 在[Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，目前不支援所有 SQL Server Agent 功能。 如需詳細資訊，請參閱[Azure SQL Database 受控執行個體與 SQL Server 的 t-sql 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+  > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,8 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
      [ , [ @active_end_date = ] active_end_date ]  
      [ , [ @active_start_time = ] active_start_time ]  
      [ , [ @active_end_time = ] active_end_time ]  
-     [ , [ @schedule_id = ] schedule_id OUTPUT ]  
+     [ , [ @schedule_id = ] schedule_id OUTPUT ]
+     [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -86,7 +87,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**8** （每週）|*frequency_interval*是下列一或多個（與 or 邏輯運算子結合）：<br /><br /> 1 = 星期日<br /><br /> 2 = 星期一<br /><br /> 4 = 星期二<br /><br /> 8 = 星期三<br /><br /> 16 = 星期四<br /><br /> 32 = 星期五<br /><br /> 64 = 星期六|  
 |**16** （每月）|在當月的*frequency_interval*天。|  
 |**32** （每月相對）|*frequency_interval*為下列其中一項：<br /><br /> 1 = 星期日<br /><br /> 2 = 星期一<br /><br /> 3 = 星期二<br /><br /> 4 = 星期三<br /><br /> 5 = 星期四<br /><br /> 6 = 星期五<br /><br /> 7 = 星期六<br /><br /> 8 = 日<br /><br /> 9 = 工作日<br /><br /> 10 = 週末|  
-|**64** （當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務啟動時）|未使用*frequency_interval* 。|  
+|**64** （當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務啟動時）|未使用*frequency_interval* 。|  
 |**128**|未使用*frequency_interval* 。|  
   
 `[ @freq_subday_type = ] frequency_subday_type`指定*frequency_subday_interval*的單位。 *frequency_subday_type*是**int**，沒有預設值，而且可以是下列其中一個值：  
@@ -150,7 +151,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
  
  ## <a name="example"></a>範例
- 下列範例會將作業排程指派給`SaturdayReports`每個星期六的上午2:00 執行。
+ 下列範例會將作業排程指派給 `SaturdayReports` 每個星期六的上午2:00 執行。
 ```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
         @job_name = N'SaturdayReports', -- Job name

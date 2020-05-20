@@ -12,18 +12,18 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62626e8a9f3cfe5bf9272378b26e3bb0ab2f6b1a
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056620"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925352"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>從命令列執行 Data Migration Assistant
 
-在2.1 版和更新版本中，當您安裝 Data Migration Assistant 時，它也會在 *% ProgramFiles%\\Microsoft Data Migration Assistant\\*中安裝 dmacmd。 使用 dmacmd 以自動模式評估您的資料庫，並將結果輸出至 JSON 或 CSV 檔案。 當評估數個資料庫或大型資料庫時，這個方法特別有用。 
+在2.1 版和更新版本中，當您安裝 Data Migration Assistant 時，它也會在 *% ProgramFiles% \\ Microsoft Data Migration Assistant \\ *中安裝 dmacmd。 使用 dmacmd 以自動模式評估您的資料庫，並將結果輸出至 JSON 或 CSV 檔案。 當評估數個資料庫或大型資料庫時，這個方法特別有用。 
 
 > [!NOTE]
 > Dmacmd 只支援執行評量。 目前不支援遷移。
@@ -53,11 +53,20 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentOverwriteResult`     | 覆寫結果檔案    | N
 |`/AssessmentResultJson`     | JSON 結果檔案的完整路徑     | Y <br> （必須是 AssessmentResultJson 或 AssessmentResultCsv）
 |`/AssessmentResultCsv`    | CSV 結果檔案的完整路徑   | Y <br> （必須是 AssessmentResultJson 或 AssessmentResultCsv）
-|`/Action`    | 使用 SkuRecommendation 取得 SKU 建議，使用 AssessTargetReadiness 來執行目標就緒評估。   | N
+|`/AssessmentResultDma`    | Dma 結果檔案的完整路徑   | N
+|`/Action`    | 使用 SkuRecommendation 取得 SKU 建議。 <br> 使用 AssessTargetReadiness 來執行目標就緒評估。 <br> 使用 AzureMigrateUpload 上傳 AzzessmentResultInputFolder 中的所有 DMA 評估檔案，以大量上傳至 Azure Migrate。動作類型使用方式/Action = AzureMigrateUpload   | N
 |`/SourceConnections`    | 以空格分隔的連接字串清單。 [資料庫名稱（初始目錄）] 是選擇性的。 如果未提供任何資料庫名稱，則會評估來源上的所有資料庫。   | Y <br> （如果動作是 ' AssessTargetReadiness '，則為必要）
 |`/TargetReadinessConfiguration`    | XML 檔案的完整路徑，描述名稱、來源連接和結果檔案的值。   | Y <br> （必須是 TargetReadinessConfiguration 或 SourceConnections）
 |`/FeatureDiscoveryReportJson`    | 功能探索 JSON 報告的路徑。 如果產生此檔案，則它可以在不連線到來源的情況下，用來再次執行目標準備評估。 | N
 |`/ImportFeatureDiscoveryReportJson`    | 先前建立之功能探索 JSON 報表的路徑。 不使用來源連接，將會使用這個檔案。   | N
+|`/EnableAssessmentUploadToAzureMigrate`    | 啟用上傳和發佈評估結果至 Azure Migrate   | N
+|`/AzureCloudEnvironment`    |選取要連接的 Azure 雲端環境，預設值為 Azure 公用雲端。 支援的值： Azure （預設值）、AzureChina、AzureGermany、AzureUSGovernment。   | N 
+|`/SubscriptionId`    |Azure 訂用帳戶識別碼。   | Y <br> （如果指定 EnableAssessmentUploadToAzureMigrate 引數，則為必要）
+|`/AzureMigrateProjectName`    |要上傳評估結果的 Azure Migrate 專案名稱。   | Y <br> （如果指定 EnableAssessmentUploadToAzureMigrate 引數，則為必要）
+|`/ResourceGroupName`    |Azure Migrate 的資源組名。   | Y <br> （如果指定 EnableAssessmentUploadToAzureMigrate 引數，則為必要）
+|`/AssessmentResultInputFolder`    |包含的輸入資料夾路徑。要上傳至 Azure Migrate 的 DMA 評估檔案。   | Y <br> （如果動作是 AzureMigrateUpload，則為必要）
+
+
 
 ## <a name="examples-of-assessments-using-the-cli"></a>使用 CLI 進行評量的範例
 
@@ -208,7 +217,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
-<TargetReadinessConfiguration xmlns="https://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
   <SourcePlatform>Source Platform</SourcePlatform> <!-- Optional. The default is SqlOnPrem -->
   <TargetPlatform>TargetPlatform</TargetPlatform> <!-- Optional. The default is ManagedSqlServer -->
@@ -234,7 +243,40 @@ DmaCmd.exe /Action=AssessTargetReadiness
   <OverwriteResult>true</OverwriteResult><!-- or false -->
 </TargetReadinessConfiguration>
 ```
+**評估並上傳至 Azure 公用雲端中的 Azure Migrate （預設值）**
+```
+DmaCmd.exe
+/Action="Assess" 
+/AssessmentSourcePlatform=SqlOnPrem 
+/AssessmentTargetPlatform=ManagedSqlServer
+/AssessmentEvaluateCompatibilityIssues 
+/AssessmentEvaluateRecommendations 
+/AssessmentEvaluateFeatureParity 
+/AssessmentOverwriteResult 
+/AssessmentName="assess-myDatabase"
+/AssessmentDatabases="Server=myServer;Initial Catalog=myDatabase;Integrated Security=true" 
+/AssessmentResultDma="C:\assessments\results\assess-1.dma"
+/SubscriptionId="Subscription Id" 
+/AzureMigrateProjectName="Azure Migrate project ame" 
+/ResourceGroupName="Resource Group name" 
+/AzureAuthenticationInteractiveAuthentication
+/AzureAuthenticationTenantId="Azure Tenant Id"
+/EnableAssessmentUploadToAzureMigrate
 
+```
+**Batch 將 DMA 評估檔案上傳至 Azure 公用雲端中的 Azure Migrate （預設值）**
+```
+DmaCmd.exe 
+/Action="AzureMigrateUpload" 
+/AssessmentResultInputFolder="C:\assessments\results" 
+/SubscriptionId="subscription Id" 
+/AzureMigrateProjectName="Azure Migrate project name" 
+/ResourceGroupName="Resource Group name" 
+/AzureAuthenticationInteractiveAuthentication
+/AzureAuthenticationTenantId="Azure Tenant Id"
+/EnableAssessmentUploadToAzureMigrate
+
+```
 ## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>使用 CLI Azure SQL Database/受控實例 SKU 建議
 
 這些命令支援 Azure SQL Database 單一資料庫和受控實例部署選項的建議。

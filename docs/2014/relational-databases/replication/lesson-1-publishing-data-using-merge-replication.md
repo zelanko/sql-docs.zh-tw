@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63df76a4e136a7d0a581d613829482b7eb430ea6
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721185"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000478"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>第 1 課：使用合併式複寫發行資料
   在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，建立合併式發行集，以發行 **範例資料庫中**Employee **、** SalesOrderHeader **和** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表的子集。 這些資料表是以參數化資料列篩選器加以篩選，讓每一個訂閱包含唯一的資料分割。 此外，您也會將合併代理程式所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入加入至發行集存取清單 (PAL)。 本教學課程要求您，先完成上一個教學課程 [準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)。  
@@ -83,7 +83,7 @@ ms.locfileid: "62721185"
   
 21. 選取 [立即建立快照集]****，清除 [排程快照集代理程式在下列時間執行]****，然後按一下 [下一步]****。  
   
-22. 在 [代理程式安全性] 頁面上，按一下 [ \<**安全性設定**]，在 [**處理帳戶**] 方塊中輸入_Machine_Name>_ **\ repl_snapshot** ，提供此帳戶的密碼，然後按一下 **[確定]**。 按一下 [完成]  。  
+22. 在 [代理程式安全性] 頁面上，按一下 [**安全性設定**]， \< 在 [**處理帳戶**] 方塊中輸入_Machine_Name>_ **\ repl_snapshot** ，提供此帳戶的密碼，然後按一下 **[確定]**。 按一下 [完成]  。  
   
 23. 在 [完成精靈] 頁面的 [發行集名稱]**** 方塊中輸入 **AdvWorksSalesOrdersMerge**，然後按一下 [完成]****。  
   

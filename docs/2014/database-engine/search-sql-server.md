@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 2b4e890a-f83d-482f-b558-8fa6882c9556
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab4fbf86cffea9af6aef03a176aef3d559472506
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843714"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000558"
 ---
 # <a name="search-sql-server"></a>搜尋 (SQL Server)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]針對超出[!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE`關鍵字功能的文字和檔提供搜尋功能。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]針對超出關鍵字功能的文字和檔提供搜尋功能 [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` 。  
   
 ## <a name="in-this-section"></a>本節內容  
  [全文檢索搜尋](../relational-databases/search/full-text-search.md)  

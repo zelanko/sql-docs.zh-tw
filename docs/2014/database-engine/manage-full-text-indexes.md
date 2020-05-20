@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de736c48763973b48be41d4d63f5237a10b3fff6
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775040"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000878"
 ---
 # <a name="manage-full-text-indexes"></a>管理全文檢索索引
      
@@ -37,7 +37,7 @@ ms.locfileid: "62775040"
     |----------|-----------------|  
     |**一般**|顯示全文檢索索引的基本屬性。 這些屬性包括許多可修改的屬性和一些無法變更的屬性，例如資料庫名稱、資料表名稱，以及全文檢索索引鍵資料行的名稱。 可修改的屬性包括：<br /><br /> **全文檢索索引停用字詞表**<br /><br /> **全文檢索索引已啟用**<br /><br /> **變更追蹤**<br /><br /> **搜尋屬性清單**<br /><br /> <br /><br /> 如需詳細資訊，請參閱[全文檢索搜尋 &#40;一般頁面&#41;](full-text-index-properties-general-page.md)。|  
     |**資料行**|顯示可用於全文檢索索引的資料表資料行。 系統會針對選取的資料行建立全文檢索索引。 您可以選取任意數目的可用資料行，以便包含在全文檢索索引中。 如需詳細資訊，請參閱[全文檢索搜尋 &#40;資料行頁面&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)。|  
-    |**排程**|您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引母體擴展啟動累加資料表母體擴展。 如需詳細資訊，請參閱 [擴展全文檢索索引](../relational-databases/indexes/indexes.md)。<br /><br /> <strong> \* \*重要\*事項</strong>當您結束 [**全文檢索索引屬性**] 對話方塊之後，任何新建立的排程都會與 SQL Server Agent 作業相關聯（在*database_name*上啟動累加資料表擴展。*table_name*）。|  
+    |**排程**|您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引母體擴展啟動累加資料表母體擴展。 如需詳細資訊，請參閱 [擴展全文檢索索引](../relational-databases/indexes/indexes.md)。<br /><br /> <strong> \* \* 重要 \* 事項 \* </strong>在您結束 [**全文檢索索引屬性**] 對話方塊之後，任何新建立的排程都會與 SQL Server Agent 作業相關聯（在*database_name*上啟動累加資料表填入。*table_name*）。|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 儲存任何變更並結束 [全文檢索索引屬性]  對話方塊。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62775040"
   
  下表列出索引資料表和資料行的相關全文檢索屬性及其相關的 [!INCLUDE[tsql](../includes/tsql-md.md)] 函數。  
   
-|屬性|描述|函式|  
+|屬性|說明|函式|  
 |--------------|-----------------|--------------|  
 |`FullTextTypeColumn`|在資料表中，用來保存資料行文件類型資訊的 TYPE COLUMN。|[COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql)|  
 |`IsFulltextIndexed`|資料行是否已啟用全文檢索索引。|COLUMNPROPERTY|  
@@ -68,7 +68,7 @@ ms.locfileid: "62775040"
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>若要查詢給定的唯一索引是否當做全文檢索索引鍵資料行使用  
   
-1.  使用 [SELECT](/sql/t-sql/queries/select-transact-sql) 陳述式來呼叫 [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) 函數。 在函式呼叫中，使用 OBJECT_ID 函數，將資料表的名稱（*table_name*）轉換成資料表識別碼、指定資料表的唯一索引名稱，以及指定`IsFulltextKey`索引屬性，如下所示：  
+1.  使用 [SELECT](/sql/t-sql/queries/select-transact-sql) 陳述式來呼叫 [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) 函數。 在函式呼叫中，使用 OBJECT_ID 函數，將資料表的名稱（*table_name*）轉換成資料表識別碼、指定資料表的唯一索引名稱，以及指定 `IsFulltextKey` 索引屬性，如下所示：  
   
     ```  
     SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
@@ -92,7 +92,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 1.  每個啟用全文檢索的資料表都具有一個用來強制資料表之唯一資料列的資料行 (*unique**key column*)。 從 OBJECTPROPERTYEX 函數中取得的 `TableFulltextKeyColumn` 屬性會包含唯一索引鍵資料行的資料行識別碼。  
   
-     若要取得這個識別碼，您可以使用 SELECT 陳述式來呼叫 OBJECTPROPERTYEX 函數。 使用 OBJECT_ID 函數，將資料表的名稱（*table_name*）轉換成資料表識別碼，並指定`TableFulltextKeyColumn`屬性，如下所示：  
+     若要取得這個識別碼，您可以使用 SELECT 陳述式來呼叫 OBJECTPROPERTYEX 函數。 使用 OBJECT_ID 函數，將資料表的名稱（*table_name*）轉換成資料表識別碼，並指定 `TableFulltextKeyColumn` 屬性，如下所示：  
   
     ```  
     SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  

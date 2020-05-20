@@ -12,18 +12,23 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 287e3396ec26652f43754be313b02e3bf7d9831d
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78896808"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924622"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>資料移轉小幫手的新功能
 
 本文列出每個 Data Migration Assistant 版本中的新增專案。
+
+## <a name="data-migration-assistant-v-52"></a>Data Migration Assistant v 5。2
+Data Migration Assistant 的 v5.2 版本提供下列支援：
+- Azure Government 和國家雲端（主權供應專案）支援上傳評量至 Azure Migrate。  這項功能可讓評估遷移至 Azure SQL 之 SQL Server 資料資產的就緒程度。
+- 支援 Azure Government 和國家雲端上傳評量至 Azure Migrate 的命令列支援。  現在，您可以完全自動將評量上傳至 Azure 遷移專案，以取得匯總的 Azure SQL 就緒報告。 
 
 ## <a name="data-migration-assistant-v-50"></a>Data Migration Assistant v 5。0
 
@@ -178,7 +183,7 @@ V2.0 版本的 Data Migration Assistant 包括改良的 Stretch database 功能�
 - 探索可能會影響升級至內部部署版本 SQL Server 的問題。 所有的發現都會描述為相容性問題，而且會分類成下列領域：
   - 重大變更
   - 行為變更
-  - 即將淘汰的功能
+  - 已淘汰的功能
 - 探索目標 SQL Server 平臺中，資料庫在升級後可受益的新功能。 所有的發現都會描述為功能建議，且會分類為下欄區域：
   - 效能
   - 安全性

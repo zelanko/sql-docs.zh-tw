@@ -9,18 +9,18 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e075de106a66ffee63c02ead06a3fc68548111a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23e46eaf73be4f14e90065627379bb778525051a
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089376"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000838"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>選項（查詢執行-SQL Server-ANSI 頁面）
-  這些 ANSI (ISO) 標準 SET 選項共同定義了使用者查詢的查詢處理環境是執行觸發，還是預存程序。 不過，這些 SET 選項並沒有包含符合 ISO 標準所需的所有選項。 使用此頁面來指定[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]將使用 ISO 標準中指定的全部或部分設定來執行查詢。 這些選項的變更僅適用於新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [**查詢**] 功能表上的 [**查詢選項**]，或在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]查詢視窗中按一下滑鼠右鍵，然後選取 [**查詢選項**]。 在 **[查詢選項]** 對話方塊中，於 **[執行]** 之下，按一下 **[ANSI]**。  
+  這些 ANSI (ISO) 標準 SET 選項共同定義了使用者查詢的查詢處理環境是執行觸發，還是預存程序。 不過，這些 SET 選項並沒有包含符合 ISO 標準所需的所有選項。 使用此頁面來指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 將使用 ISO 標準中指定的全部或部分設定來執行查詢。 這些選項的變更僅適用於新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [**查詢**] 功能表上的 [**查詢選項**]，或在查詢視窗中按一下滑鼠右鍵， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 然後選取 [**查詢選項**]。 在 **[查詢選項]** 對話方塊中，於 **[執行]** 之下，按一下 **[ANSI]**。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **SET ANSI_DEFAULTS**  

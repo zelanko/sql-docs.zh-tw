@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bdbcfa8140ecbc8c40086af41e64ba96920fe78
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089854"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000691"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>選項 (文字編輯器 - 純文字 - 定位點頁面)
   使用這個對話方塊可變更文字編輯器中按 Tab 鍵移動的行為，這個文字編輯器是用來編輯與特定開發語言沒有關聯的文件。 若要顯示這些設定，請按一下 [工具]**** 功能表上的 [選項]****，展開 [文字編輯器]****，展開 [純文字]****，然後按一下 [定位點]****。  
@@ -26,10 +26,10 @@ ms.locfileid: "66089854"
  純文字編輯器的選項也可以在 **[所有語言 - 一般]** 對話方塊中設定。 如果您使用 **[所有語言]** 對話方塊為其他 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 編輯器 (例如 DMX 或 MDX 編輯器) 設定不同的選項，則必須使用這個對話方塊重設純文字編輯器。  
   
 ## <a name="indenting"></a>縮排  
- **None**  
+ **無**  
  按下 ENTER 後，請勿縮排新建立的行。 資料指標會放在新行的第一個資料行上。  
   
- **總匯**  
+ **封鎖**  
  按下 ENTER 後，將新建立的行縮排至與前一行相同的縮排距離。  
   
  **智慧型**  

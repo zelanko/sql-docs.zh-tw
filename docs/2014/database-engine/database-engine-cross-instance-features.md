@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 75522821-6daf-44ac-88bd-aa5b35258007
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac6c4c3f2ac265c10f012e46b027754eb189f4e5
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807522"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000978"
 ---
 # <a name="database-engine-cross-instance-features"></a>Database Engine 跨執行個體功能
   本節包含與管理及監視伺服器和資料庫執行個體有關的工具和工作。  
@@ -23,7 +23,7 @@ ms.locfileid: "62807522"
 ## <a name="in-this-section"></a>本節內容  
   
 [Transact-SQL](../ssms/sql-server-management-studio-ssms.md)  
-[SQL Server 公用程式的功能與工作](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+[SQL Server 公用程式功能和工作](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
 [使用原則式管理來管理伺服器](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
 [註冊伺服器](../ssms/register-servers/register-servers.md)  
 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)  

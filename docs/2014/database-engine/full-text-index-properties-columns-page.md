@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.columns.f1
 ms.assetid: 75e52edb-0d07-4393-9345-8b5af4561e35
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 67b7e72e0c4b248e8951667561eaf7548bfba1b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1b842f8fe4e2a5c3adc489df35e20c58000a69d
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778853"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000914"
 ---
 # <a name="full-text-index-properties-columns-page"></a>全文檢索索引屬性 (資料行頁面)
   **若要檢視或變更全文檢索索引的屬性**  

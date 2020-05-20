@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 377ca16075a86c366fcfa8d9d96bcfa989efec4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56dee0d04c713163f74c391fe5a482092c6c30e7
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089909"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000728"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>選項 (文字編輯器 - 所有語言 - 定位點頁面)
   使用這個對話方塊可設定在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的全部五個編輯器中按下 Tab 鍵的移動行為。 若要顯示這些選項，請按一下 [工具]**** 功能表上的 [選項]****。 選取 [文字編輯器]**** 資料夾，展開 [所有語言]**** 資料夾，然後按一下 [索引標籤]****。  
@@ -29,10 +29,10 @@ ms.locfileid: "66089909"
  當您為特定編輯器選取不同設定時，會顯示「個別文字格式的縮排 (或 Tab) 設定相衝突」訊息。 例如，如果針對 [純文字]**** 選取 [Block indenting (封鎖縮排)]**** 選項，而針對 [XML]**** 選取 [無]****，就會顯示此提醒。  
   
 ## <a name="indenting"></a>縮排  
- **None**  
+ **無**  
  如果選取此選項，當您按下 ENTER 時所建立的新行就不會縮排。 資料指標會放在新行的第一個資料行上。  
   
- **總匯**  
+ **封鎖**  
  如果選取此選項，當您按下 ENTER 鍵時所建立的新行就會自動縮排與上一行縮排相同的距離。  
   
  **智慧型**  

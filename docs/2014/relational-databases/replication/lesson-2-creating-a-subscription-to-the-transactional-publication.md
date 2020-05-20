@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9dc9824efb3f962d97f786835fa2367be18b55f7
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721082"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000409"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>第 2 課：建立交易式發行集的訂閱
   在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]建立訂閱。 您必須先完成上一課 [第 1 課：使用異動複寫發行資料](lesson-1-publishing-data-using-transactional-replication.md)，才能進行這一課。  
@@ -36,11 +36,11 @@ ms.locfileid: "62721082"
   
 5.  在 [訂閱者] 頁面上，如果未顯示訂閱者執行個體的名稱，請按一下 **[加入訂閱者]**，再按 **[加入 SQL Server 訂閱者]**，在 **[連接到伺服器]** 對話方塊中輸入訂閱者執行個體名稱，然後按一下 **[連接]**。  
   
-6.  在 [訂閱者] 頁面上，選取訂閱者伺服器的實例名稱，然後選取**Subscription Database** ** \< ** [訂閱資料庫] 下的 [新增資料庫>]。  
+6.  在 [訂閱者] 頁面上，選取訂閱者伺服器的實例名稱，然後選取 [**訂閱資料庫**] 下的 [ ** \< 新增資料庫>** ]。  
   
 7.  在 **[新增資料庫]** 對話方塊的 **[資料庫名稱]** 方塊中，輸入 **ProductReplica** ，然後按一下 **[確定]**，再按 **[下一步]**。  
   
-8.  在 [**散發代理程式安全性**] 對話方塊中，按一下省略號（**...**）按鈕，在 [**處理帳戶**] 方塊中輸入\< _Machine_Name>_ **\ repl_distribution** ，輸入此帳戶的密碼，按一下 **[確定]**，然後按 **[下一步**]。  
+8.  在 [**散發代理程式安全性**] 對話方塊中，按一下省略號（**...**）按鈕， \< 在 [**處理帳戶**] 方塊中輸入_Machine_Name>_ **\ Repl_distribution** ，輸入此帳戶的密碼，按一下 **[確定]**，然後按 **[下一步**]。  
   
 9. 按一下 **[完成]** 接受其餘頁面上的預設值，並完成精靈。  
   

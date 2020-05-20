@@ -9,20 +9,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.newsearchpropertylist.f1
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23941f8fcf11b874cb459c3a77308534c24ca81f
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774496"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000812"
 ---
 # <a name="new-search-property-list"></a>新增搜尋屬性清單
   使用這個對話方塊來建立搜尋屬性清單。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **搜尋屬性清單名稱**  
  請輸入搜尋屬性清單的名稱。  
   
