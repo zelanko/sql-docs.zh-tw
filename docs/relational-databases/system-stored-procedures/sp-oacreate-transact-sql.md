@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d851461ae4cd07f3dd89e2cff4326d03e05a5d66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107936"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815256"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ```  
   
 ## <a name="arguments"></a>引數  
- *進程*  
+ *progid*  
  這是要建立的 OLE 物件之程式化識別碼 (ProgID)。 這個字元字串描述 OLE 物件的類別，其格式為： **'**_OLEComponent_**。**_物件_**'**  
   
  *OLEComponent*是 ole Automation 伺服器的元件名稱，而*Object*是 ole 物件的名稱。 指定的 OLE 物件必須是有效的，而且必須支援**IDispatch**介面。  
@@ -65,9 +65,9 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  如果未指定，預設值為**5**。 這個值會當做呼叫的*dwClsCoNtext*參數傳遞至**CoCreateInstance**。  
   
- 如果允許同進程 OLE 伺服器（藉由使用內容值**1**或**5** ，或未指定內容值），則可以存取所擁有的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記憶體和其他資源。 同處理序 OLE 伺服器可能會損毀 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體或資源，並造成無法預期的結果，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取違規。  
+ 如果允許同進程 OLE 伺服器（藉由使用內容值**1**或**5** ，或未指定內容值），則可以存取所擁有的記憶體和其他資源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 同處理序 OLE 伺服器可能會損毀 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體或資源，並造成無法預期的結果，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取違規。  
   
- 當您指定內容值**4**時，本機 OLE 伺服器不會有任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資源的存取權，也不能損毀[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記憶體或資源。  
+ 當您指定內容值**4**時，本機 OLE 伺服器不會有任何資源的存取權 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，也不能損毀 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體或資源。  
   
 > [!NOTE]  
 >  這個預存程序的參數是依照位置來指定，而不是名稱。  

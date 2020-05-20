@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_control_query_exec_stats
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd8ee38dc4ac1a8fd3a729d94744d3fd98f78875
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60d5967417698bc1970f02658fc28e8659201089
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017856"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814440"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
  @new_collection_value=*值*  
  決定程序層級統計資料收集為開啟 (1) 或關閉 (0)。  
   
- @new_collection_value當啟動時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，會設定為零。  
+ @new_collection_value當啟動時，會設定為零 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  @database_id= = *database_id*， @xtp_object_id = *procedure_id*  
  原生編譯預存程序的資料庫識別碼和物件識別碼。 如果已針對實例啟用統計資料收集（[sp_xtp_control_proc_exec_stats sys.databases &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)），則會收集原生編譯預存程式的統計資料。 關閉執行個體上的統計資料收集並不會關閉個別原生編譯預存程序的統計資料收集。  

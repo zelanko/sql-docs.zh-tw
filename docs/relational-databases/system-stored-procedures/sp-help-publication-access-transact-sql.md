@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_publication_access
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8fe57e26392a2a01c7074d7d019baa20c4b9cb5f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770986"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815729"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'`這是要存取的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @return_granted = ] 'return_granted'`這是登入識別碼。 *return_granted*是**bit**，預設值是1。 如果指定**0** ，且[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用驗證，就會傳回出現在發行者端但不在散發者端的可用登入。 如果指定**0** ，且使用 Windows 驗證，則會傳回未在發行者或散發者端明確拒絕存取的登入。  
+`[ @return_granted = ] 'return_granted'`這是登入識別碼。 *return_granted*是**bit**，預設值是1。 如果指定**0** ，且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用驗證，就會傳回出現在發行者端但不在散發者端的可用登入。 如果指定**0** ，且使用 Windows 驗證，則會傳回未在發行者或散發者端明確拒絕存取的登入。  
   
-`[ @login = ] 'login'`這是標準安全性登入識別碼。 *login*是**sysname**，預設值是**%**。  
+`[ @login = ] 'login'`這是標準安全性登入識別碼。 *login*是**sysname**，預設值是 **%** 。  
   
 `[ @initial_list = ] initial_list`指定是否要傳回具有發行集存取權的所有成員，或只傳回在新成員加入清單之前有存取權的成員。 *initial_list*是 bit，預設值是**0**。  
   
@@ -66,7 +66,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="remarks"></a>備註  
  **sp_help_publication_access**用於所有類型的複寫中。  
   
- 當結果集中的**Isntname**和**Isntgroup**都是**0**時，會假設登入為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。  
+ 當結果集中的**Isntname**和**Isntgroup**都是**0**時，會假設登入為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
 ## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_help_publication_access**。  

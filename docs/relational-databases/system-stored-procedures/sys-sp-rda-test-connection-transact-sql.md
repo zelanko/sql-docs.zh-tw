@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 69b3b9eae6c292b9501dfbe74b84d7399304a291
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab377b42943c943f710d83661642423cfc070949
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305159"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814507"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys.databases sp_rda_test_connection （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ EXECUTE sys.sp_rda_test_connection
   
 ## <a name="arguments"></a>引數  
  @database_name= N '*db_name*'  
- 已啟用延展功能的 SQL Server 資料庫名稱。 這是選擇性參數。  
+ 已啟用延展功能的 SQL Server 資料庫名稱。 此為選擇性參數。  
   
  @server_address= N '*azure_server_fully_qualified_address*'  
  Azure 伺服器的完整位址。  
   
--   如果您提供** \@database_name**的值，但指定的資料庫未啟用 Stretch，則您必須提供** \@server_address**的值。  
+-   如果您提供** \@ database_name**的值，但指定的資料庫未啟用 Stretch，則您必須提供** \@ server_address**的值。  
   
--   如果您提供** \@database_name**的值，而且指定的資料庫已啟用 Stretch，則您不需要提供** \@server_address**的值。 如果您提供** \@server_address**的值，則預存程式會忽略它，並使用已與已啟用延展功能的資料庫相關聯的現有 Azure 伺服器。  
+-   如果您提供** \@ database_name**的值，而且指定的資料庫已啟用 Stretch，則您不需要提供** \@ server_address**的值。 如果您提供** \@ server_address**的值，則預存程式會忽略它，並使用已與已啟用延展功能的資料庫相關聯的現有 Azure 伺服器。  
   
  @azure_username= N '*azure_username*  
  遠端 Azure 伺服器的使用者名稱。  

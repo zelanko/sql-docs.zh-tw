@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.messages catalog view
 - error numbers [SQL Server]
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 44ab2e3106610f7b7130f997e9641e4aba685fd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8ed45ac6fd511d2024cc11916fe70980a7a6a065
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127925"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816058"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>訊息 (適用於錯誤) 目錄檢視 - sys.messages
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,6 @@ ms.locfileid: "68127925"
  [&#41; 目錄檢視 &#40;Transact-sql 的錯誤 &#40;訊息&#41;](https://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
  [例外狀況訊息方塊程式設計](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
  [錯誤訊息](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [Database Engine 事件和錯誤](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
+ [資料庫引擎事件和錯誤](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
   
   

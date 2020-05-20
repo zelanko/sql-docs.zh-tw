@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticlecolumns
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c15a9051c6d706ddec55d031e93858a3d33c9d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771086"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815839"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`這是傳回其資料行的發行項名稱。 *文章*是**sysname**，沒有預設值。  
   
-`[ @publisher = ] 'publisher'`指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  *publisher*發行者發佈[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要求的發行項時，不應指定發行者。  
+>  發行者發佈要求的發行項時，不應指定*發行者* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （未發行的資料行）或**1** （已發行的資料行）  
@@ -56,7 +56,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**資料行識別碼**|**int**|資料行的識別碼。|  
-|**排**|**sysname**|資料行的名稱。|  
+|**column**|**sysname**|資料行的名稱。|  
 |**published**|**bit**|資料行是否已發行：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
 |**發行者類型**|**sysname**|在發行者端之資料行的資料類型。|  
 |**訂閱者類型**|**sysname**|在訂閱者端之資料行的資料類型。|  

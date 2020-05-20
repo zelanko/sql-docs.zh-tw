@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_control_proc_exec_stats
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 14c45f5ba725ef8d9cc498b1049c5a71c80a6d7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 940caad59adf191e0ed1fe550707788de820c6b7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67909218"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814490"
 ---
 # <a name="syssp_xtp_control_proc_exec_stats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  @new_collection_value=*值*  
  決定程序層級統計資料收集為開啟 (1) 或關閉 (0)。  
   
- @new_collection_value當或資料庫啟動時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，會設定為零。  
+ @new_collection_value當或資料庫啟動時，會設定為零 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  @old_collection_value=*值*  
  傳回目前狀態。  
@@ -53,7 +53,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  需要固定系統管理員 (sysadmin) 角色的成員資格。  
   
 ## <a name="code-samples"></a>程式碼範例  
- 若要@new_collection_value設定並查詢的值@new_collection_value:  
+ 若要設定 @new_collection_value 並查詢的值@new_collection_value:  
   
 ```  
 exec [sys].[sp_xtp_control_proc_exec_stats] @new_collection_value = 1  

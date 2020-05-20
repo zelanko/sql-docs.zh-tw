@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_principalprofile_sp
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fedc7e0dd7fe71feb0b0da1f00f2a7f996c6129c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d752015dab48058af18cb981a009691f407da171
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305058"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814372"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +55,11 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- 若要將設定檔設為公用，請指定**0**的** \@principal_id**或**公用**的** \@principal_name** 。 **Msdb**資料庫中的所有使用者都可以使用公用設定檔，不過使用者也必須是**DatabaseMailUserRole**的成員，才能執行**sp_send_dbmail**。  
+ 若要將設定檔設為公用，請指定**0**的** \@ principal_id**或**公用**的** \@ principal_name** 。 **Msdb**資料庫中的所有使用者都可以使用公用設定檔，不過使用者也必須是**DatabaseMailUserRole**的成員，才能執行**sp_send_dbmail**。  
   
- 資料庫使用者只能有一個預設設定檔。 當** \@is_default**為 '**1**'，且使用者已與一或多個設定檔相關聯時，指定的設定檔會成為使用者的預設設定檔。 先前是預設設定檔的設定檔仍會關聯於這位使用者，但已不再是預設設定檔。  
+ 資料庫使用者只能有一個預設設定檔。 當** \@ is_default**為 '**1**'，且使用者已與一或多個設定檔相關聯時，指定的設定檔會成為使用者的預設設定檔。 先前是預設設定檔的設定檔仍會關聯於這位使用者，但已不再是預設設定檔。  
   
- 當** \@is_default**為 '**0**'，而且沒有其他關聯存在時，預存程式會傳回錯誤。  
+ 當** \@ is_default**為 '**0**'，而且沒有其他關聯存在時，預存程式會傳回錯誤。  
   
  預存程式**sysmail_add_principalprofile_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
   
@@ -69,7 +69,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="examples"></a>範例  
  **A. 建立關聯，設定預設設定檔**  
   
- 下列範例會在名為`AdventureWorks Administrator Profile`的設定檔與**msdb**資料庫使用者`ApplicationUser`之間建立關聯。 設定檔是使用者的預設設定檔。  
+ 下列範例會在名為的設定檔 `AdventureWorks Administrator Profile` 與**msdb**資料庫使用者之間建立關聯 `ApplicationUser` 。 設定檔是使用者的預設設定檔。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -80,7 +80,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
  **B. 使設定檔成為預設的公用設定檔**  
   
- 下列範例會讓設定檔`AdventureWorks Public Profile`成為**msdb**資料庫中使用者的預設公用設定檔。  
+ 下列範例會讓設定檔成為 `AdventureWorks Public Profile` **msdb**資料庫中使用者的預設公用設定檔。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  

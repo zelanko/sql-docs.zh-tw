@@ -15,15 +15,15 @@ helpviewer_keywords:
 - database catalog views [SQL Server]
 - catalog views [SQL Server], files
 ms.assetid: 60a05111-c542-45b5-a0cb-433ddcf6286a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbcfbf5dbd6d6680363c6c329d066191d22acfee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f6cd2cf271135c479963cbf3a1b15904291b272
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68033060"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816114"
 ---
 # <a name="databases-and-files-catalog-views-transact-sql"></a>資料庫和檔案目錄檢視 (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

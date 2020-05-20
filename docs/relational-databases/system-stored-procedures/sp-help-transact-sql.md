@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5e9a1ab72140a08423fa50c10eeb1f2d06ad79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac6e69db443bd23c3e9b1119b21d8fd98ebe39c4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909089"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815515"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**擁有者**|**Nvarchar （** 128 **）**|物件擁有者 (這是擁有物件的資料庫主體， 預設為包含物件之結構描述的擁有者)。|  
     |**Object_type**|**Nvarchar （** 31 **）**|物件類型|  
   
-2.  如果*name*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型或使用者自訂資料類型， **sp_help**會傳回這個結果集。  
+2.  如果*name*是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型或使用者自訂資料類型， **sp_help**會傳回這個結果集。  
   
     |資料行名稱|資料類型|描述|  
     |-----------------|---------------|-----------------|  
@@ -66,7 +66,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Storage_type**|**Nvarchar （** 128 **）**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型名稱。|  
     |**長度**|**smallint**|資料類型的實際長度 (以位元組為單位)。|  
     |**Prec**|**int**|有效位數 (總位數)。|  
-    |**調整**|**int**|小數點右側的位數。|  
+    |**縮放比例**|**int**|小數點右側的位數。|  
     |**可為 Null**|**Varchar （** 35 **）**|指出是否允許 NULL 值：[是] 或 [否]。|  
     |**Default_name**|**Nvarchar （** 128 **）**|與這個類型繫結的預設值名稱。<br /><br /> NULL = 未繫結預設值。|  
     |**Rule_name**|**Nvarchar （** 128 **）**|與這個類型繫結的規則名稱。<br /><br /> NULL = 未繫結預設值。|  
@@ -94,7 +94,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**過**|**Varchar （** 35 **）**|指出是否計算資料行中的值：[是] 或 [否]。|  
         |**長度**|**int**|資料行長度 (以位元組為單位)。<br /><br /> 注意：如果資料類型是大數數值型別（**Varchar （max）**、 **Nvarchar （max）**、 **Varbinary （max）** 或**xml**），此值會顯示為-1。|  
         |**Prec**|**char （** 5 **）**|資料行有效位數。|  
-        |**調整**|**char （** 5 **）**|資料行小數位數。|  
+        |**縮放比例**|**char （** 5 **）**|資料行小數位數。|  
         |**可為 Null**|**Varchar （** 35 **）**|指出資料行是否允許 NULL 值：[是] 或 [否]。|  
         |**TrimTrailingBlanks**|**Varchar （** 35 **）**|修剪尾端空白。 傳回 [是] 或 [否]。|  
         |**FixedLenNullInSource**|**Varchar （** 35 **）**|只是為了與舊版相容。|  
@@ -105,7 +105,7 @@ sp_help [ [ @objname = ] 'name' ]
         |資料行名稱|資料類型|描述|  
         |-----------------|---------------|-----------------|  
         |**身分識別**|**Nvarchar （** 128 **）**|資料類型宣告為識別的資料行名稱。|  
-        |**種子**|**numeric**|識別欄位的起始值。|  
+        |**Seed**|**numeric**|識別欄位的起始值。|  
         |**連續**|**numeric**|這個資料行的值所用的遞增。|  
         |**Not For Replication**|**int**|當複寫登入（例如**sqlrepl**）將資料插入資料表時，不會強制執行 IDENTITY 屬性：<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -155,7 +155,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**類型**|**Nvarchar （** 128 **）**|預存程序參數的資料類型。|  
         |**長度**|**smallint**|最大的實體儲存體長度 (以位元組為單位)。|  
         |**Prec**|**int**|有效位數或總位數。|  
-        |**調整**|**int**|小數點右側的位數。|  
+        |**縮放比例**|**int**|小數點右側的位數。|  
         |**Param_order**|**smallint**|參數的順序。|  
   
 ## <a name="remarks"></a>備註  
