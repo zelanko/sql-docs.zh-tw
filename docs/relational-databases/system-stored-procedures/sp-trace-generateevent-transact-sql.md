@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5c5807225c2bda185b61050433cc3378b25b6fe1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096017"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809675"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**十三**|記憶體用完。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
   
 ## <a name="remarks"></a>備註  
- **sp_trace_generateevent**會執行**xp_trace_\* **擴充預存程式先前執行的許多動作。 使用**sp_trace_generateevent** ，而不是**xp_trace_generate_event**。  
+ **sp_trace_generateevent**會執行**xp_trace_ \* **擴充預存程式先前執行的許多動作。 使用**sp_trace_generateevent** ，而不是**xp_trace_generate_event**。  
   
  只有使用者定義事件的識別碼會與**sp_trace_generateevent**搭配使用。 如果使用其他事件識別碼，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會發生錯誤。  
   

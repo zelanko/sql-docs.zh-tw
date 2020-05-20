@@ -19,14 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 55d7ad0dfd941102cfeb6661e65980f980fa8b2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 866f05904cfa1b6c7b3ce6b20a59a5be3096be2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770982"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810615"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是**%**，它會傳回符合所有發行集之指定*dynamic_snapshot_jobid*和*dynamic_snapshot_jobname*之所有已篩選資料快照集作業的相關資訊。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是 **%** ，它會傳回符合所有發行集之指定*dynamic_snapshot_jobid*和*dynamic_snapshot_jobname*之所有已篩選資料快照集作業的相關資訊。  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`這是已篩選資料快照集作業的名稱。 *dynamic_snapshot_jobname*是**sysname**，預設值為**%**'，它會傳回具有指定*dynamic_snapshot_jobid*之發行集的所有動態作業。 如果在建立作業時，沒有明確指定作業名稱，則作業名稱格式如下：  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`這是已篩選資料快照集作業的名稱。 *dynamic_snapshot_jobname*是**sysname**，預設值為 **%** '，它會傳回具有指定*dynamic_snapshot_jobid*之發行集的所有動態作業。 如果在建立作業時，沒有明確指定作業名稱，則作業名稱格式如下：  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -61,7 +61,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**id**|**int**|識別已篩選資料快照集作業。|  
 |**job_name**|**sysname**|已篩選資料快照集作業的名稱。|  
-|**job_id**|**uniqueidentifier**|識別散發[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]者端的代理程式作業。|  
+|**job_id**|**uniqueidentifier**|識別散發者端的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業。|  
 |**dynamic_filter_login**|**sysname**|用於評估針對發行集所定義之參數化資料列篩選器中[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)函數的值。|  
 |**dynamic_filter_hostname**|**sysname**|用於評估針對發行集所定義之參數化資料列篩選器中[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函數的值。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|如果使用參數化資料列篩選器的話，便是要讀取之快照集檔案的資料夾路徑。|  

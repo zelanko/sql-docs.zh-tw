@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d597436277255441ad893215a3581580264d99a3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032673"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810057"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +46,26 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @collection_set_id = ]*collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  這是收集組的唯一本機識別碼。 *collection_set_id*為**int**。  
   
- [ @collector_type_uid = ]'*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  是識別要用於此專案之收集器型別的 GUID *collector_type_uid*是不含預設值的**uniqueidentifier** 。 如需收集器型別的清單，請查詢 syscollector_collector_types 系統檢視表。  
   
- [ @name = ]'*name*'  
+ [ @name =] '*name*'  
  這是收集項目的名稱。 *名稱*是**sysname** ，不能是空字串或 Null。  
   
  *名稱*必須是唯一的。 如需目前的收集項名稱清單，請查詢 syscollector_collection_items 系統檢視表。  
   
- [ @frequency = ]*頻率*  
+ [ @frequency =]*頻率*  
  這可用來指定此收集項收集資料的頻率 (以秒為單位)。 *frequency*是**int**，預設值是5。 可指定的最小值是 5 秒。  
   
  如果收集組設定為非快取模式，系統就會忽略此頻率，因為這個模式會導致在針對收集組指定的排程中同時發生資料收集和上傳作業。 若要查看收集組的收集模式，請查詢[syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)系統檢視。  
   
- [ @parameters = ]'*parameters*'  
+ [ @parameters =] '*parameters*'  
  收集器類型的輸入參數。 *參數*是**xml** ，預設值是 Null。 *參數*架構必須符合收集器型別的參數架構。  
   
- [ @collection_item_id = ]*collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  這是可識別收集組項目的唯一識別碼。 *collection_item_id*為**int** ，且具有輸出。  
   
 ## <a name="return-code-values"></a>傳回碼值  

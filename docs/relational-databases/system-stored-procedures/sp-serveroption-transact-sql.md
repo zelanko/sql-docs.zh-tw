@@ -16,14 +16,14 @@ helpviewer_keywords:
 - 7343 (Database Engine error)
 - sp_serveroption
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1fcd6f158908893ce5eb86c24a3bb3882867bc2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 776e7b0c713e36f0d9f67112592dff6d24a46fbd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104386"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810183"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +48,8 @@ sp_serveroption [@server = ] 'server'
   
 |值|描述|  
 |-----------|-----------------|  
-|**定序相容**|影響針對連結伺服器的分散式查詢執行。 如果此選項設定為**true**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]則會假設連結伺服器中的所有字元都與本機伺服器相容，與字元集和定序順序（或排序次序）有關。 這會使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠將字元資料行的比較傳給提供者。 如果未設定這個選項， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律會在本機環境中評估字元資料行的比較。<br /><br /> 只有在確定對應於連結伺服器的資料來源與本機伺服器的字元集和排序順序相同時，才應該設定這個選項。|  
-|**定序名稱**|如果 [**使用遠端定序]** 為**true** ，而且資料來源不是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源，則指定遠端資料源所使用的定序名稱。 這個名稱必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所支援的定序之一。<br /><br /> 當存取不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但其定序卻符合某項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序的 OLE DB 資料來源時，請使用這個選項。<br /><br /> 連結伺服器必須支援供這部伺服器的所有資料行使用的單一定序。 如果連結伺服器支援單一資料來源內的多重定序，或無法確定連結伺服器的定序是否符合某項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序時，請勿設定這個選項。|  
+|**定序相容**|影響針對連結伺服器的分散式查詢執行。 如果此選項設定為**true**，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會假設連結伺服器中的所有字元都與本機伺服器相容，與字元集和定序順序（或排序次序）有關。 這會使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠將字元資料行的比較傳給提供者。 如果未設定這個選項， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律會在本機環境中評估字元資料行的比較。<br /><br /> 只有在確定對應於連結伺服器的資料來源與本機伺服器的字元集和排序順序相同時，才應該設定這個選項。|  
+|**定序名稱**|如果 [**使用遠端定序]** 為**true** ，而且資料來源不是資料來源，則指定遠端資料源所使用的定序名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 這個名稱必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所支援的定序之一。<br /><br /> 當存取不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但其定序卻符合某項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序的 OLE DB 資料來源時，請使用這個選項。<br /><br /> 連結伺服器必須支援供這部伺服器的所有資料行使用的單一定序。 如果連結伺服器支援單一資料來源內的多重定序，或無法確定連結伺服器的定序是否符合某項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序時，請勿設定這個選項。|  
 |**連接逾時**|連接到連結伺服器的超時 valuein 秒數。<br /><br /> 如果是**0**，請使用**sp_configure**預設值。|  
 |**資料存取**|啟用和停用連結伺服器的分散式查詢存取。 只能用於透過**sp_addlinkedserver**新增的**sys. server**專案。|  
 |**dist**|散發者。|  
@@ -60,7 +60,7 @@ sp_serveroption [@server = ] 'server'
 |**rpc 輸出**|啟用指向給定伺服器的 RPC。|  
 |**sub**|訂閱者。|  
 |**系統**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**使用遠端定序**|決定將使用遠端資料行或本機伺服器的定序。<br /><br /> 若為**true**，則會使用遠端資料行的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定序做為資料來源，而定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **序名稱**中所指定的定序則用於非資料來源。<br /><br /> 若**為 false**，分散式查詢一律會使用本機伺服器的預設定序，而定**序名稱**和遠端資料行的定序則會被忽略。 預設值為 **false**。 （ **False**值與7.0 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的定序語義相容）。|  
+|**使用遠端定序**|決定將使用遠端資料行或本機伺服器的定序。<br /><br /> 若為**true**，則會使用遠端資料行的定序做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源，而定**序名稱**中所指定的定序則用於非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源。<br /><br /> 若**為 false**，分散式查詢一律會使用本機伺服器的預設定序，而定**序名稱**和遠端資料行的定序則會被忽略。 預設值為 **false**。 （ **False**值與7.0 中使用的定序語義相容 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）。|  
 |**remote proc transaction promotion**|使用此選項，透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易，保護伺服器對伺服器程序的動作。 當此選項為 TRUE (或 ON) 時，呼叫遠端預存程序就會啟動分散式交易，而且會利用 MS DTC 來編列這項交易。 發出遠端預存程序呼叫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是交易發起者，它會控制交易的完成。 當發出連接的後續 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 陳述式時，負責控制的執行個體會要求 MS DTC 跨越所涉及的各部電腦來管理分散式交易的完成。<br /><br /> 在啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散式交易之後，會向已定義為連結伺服器的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體發出遠端預存程序呼叫。 所有連結伺服器都會編列在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散式交易中，MS DTC 會確保已針對每部連結伺服器來完成交易。<br /><br /> 如果此選項設定為 FALSE (或 OFF)，在連結伺服器上呼叫遠端預存程序時，本機交易將不會升級為分散式交易。<br /><br /> 如果在進行伺服器對伺服器的程序呼叫之前，此交易已經是分散式交易，則此選項不會有任何影響。 針對連結伺服器執行的程序呼叫將會在相同的分散式交易之下執行。<br /><br /> 如果在進行伺服器對伺服器的程序呼叫之前，連接中沒有任何使用中的交易，則此選項不會有任何影響。 然後此程序會在沒有使用中交易的情況下對連結伺服器執行。<br /><br /> 這個選項的預設值是 TRUE (或 ON)。|  
   
 `[ @optvalue = ] 'option_value'`指定應該啟用*option_name* （**TRUE**或**on**）或停用（**FALSE**或**off**）。 *option_value*為**Varchar （** 10 **）**，沒有預設值。  

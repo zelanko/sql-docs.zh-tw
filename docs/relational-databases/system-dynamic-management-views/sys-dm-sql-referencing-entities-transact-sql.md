@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3557f9f77a310a9e72e8a9fb1e11a6976256d2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982345"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811363"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73982345"
   
 -   伺服器層級 DDL 觸發程序  
   
-**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本） [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -101,7 +101,7 @@ sys.dm_sql_referencing_entities (
   
 |實體類型|參考實體|受參考的實體|  
 |-----------------|------------------------|-----------------------|  
-|Table|是*|是|  
+|資料表|是*|是|  
 |檢視|是|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序**|是|是|  
 |CLR 預存程序|否|是|  
@@ -118,7 +118,7 @@ sys.dm_sql_referencing_entities (
 |XML 結構描述集合|否|是|  
 |分割區函數|否|是|  
   
- \*只有當資料表參考計算資料行、CHECK 條件約束或 DEFAULT [!INCLUDE[tsql](../../includes/tsql-md.md)]條件約束的定義中的模組、使用者定義型別或 XML 架構集合時，才會將它當做參考實體進行追蹤。  
+ \*只有當資料表參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 計算資料行、CHECK 條件約束或 DEFAULT 條件約束的定義中的模組、使用者定義型別或 XML 架構集合時，才會將它當做參考實體進行追蹤。  
   
  ** 所包含之整數值大於 1 的編號預存程序不會當做參考或受參考的實體進行追蹤。  
   
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. 傳回參考給定類型的實體  
- 下列範例會傳回參考別名類型 `dbo.Flag` 的實體。 結果集會顯示有兩個預存程序使用這個類型。 此`dbo.Flag`類型也用於`HumanResources.Employee`資料表中數個數據行的定義中。不過，因為此類型不在計算資料行的定義、CHECK 條件約束或資料表的 DEFAULT 條件約束中，所以不會傳回`HumanResources.Employee`資料表的任何資料列。  
+ 下列範例會傳回參考別名類型 `dbo.Flag` 的實體。 結果集會顯示有兩個預存程序使用這個類型。 此 `dbo.Flag` 類型也用於資料表中的數個數據行定義中， `HumanResources.Employee` 不過，因為此類型不在資料表中的計算資料行、CHECK 條件約束或 DEFAULT 條件約束的定義中，所以不會傳回資料表的任何資料列 `HumanResources.Employee` 。  
   
 ```sql  
 USE AdventureWorks2012;  

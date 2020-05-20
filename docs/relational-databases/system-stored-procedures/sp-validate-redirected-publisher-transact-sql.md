@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validate_redirected_publisher
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b01fba8260e86d135e740964022187b9914e5fc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 09ef147b9051ecbacdc1a33468100f4be2b372e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252057"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809001"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "72252057"
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @original_publisher = ] 'original_publisher'`原先發行資料庫之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的名稱。 *original_publisher*是**sysname**，沒有預設值。  
+`[ @original_publisher = ] 'original_publisher'`原先發行資料庫之實例的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *original_publisher*是**sysname**，沒有預設值。  
   
 `[ @publisher_db = ] 'publisher_db'`要發行之資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72252057"
  無。  
   
 ## <a name="remarks"></a>備註  
- 如果發行者和發行資料庫沒有專案存在， **sp_validate_redirected_publisher**會在輸出參數* \@redirected_publisher*中傳回 null。 如果有項目存在，則成功和失敗案例的輸出參數中都會傳回此項目。  
+ 如果發行者和發行資料庫沒有專案存在， **sp_validate_redirected_publisher**會在輸出參數* \@ redirected_publisher*中傳回 null。 如果有項目存在，則成功和失敗案例的輸出參數中都會傳回此項目。  
   
  如果驗證成功， **sp_validate_redirected_publisher**會傳回成功指示。  
   

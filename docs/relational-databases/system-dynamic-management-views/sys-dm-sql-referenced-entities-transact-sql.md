@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb2b6e422b9b9e746e851e6d7b799cdf7c63387f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090669"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811252"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-針對中指定之參考實體的定義中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的名稱所參考的每個使用者定義實體，各傳回一個資料列。 當另一個使用者定義實體（稱為「*參考實體*」）的持續性 SQL 運算式中出現名稱*時，會*建立兩個實體之間的相依性。 例如，如果某個預存程序為指定的參考實體，這個函數就會傳回在預存程序中參考的所有使用者定義實體，例如資料表、檢視表、使用者定義型別 (UDT) 或其他預存程序。  
+針對中指定之參考實體的定義中的名稱所參考的每個使用者定義實體，各傳回一個資料列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當另一個使用者定義實體（稱為「*參考實體*」）的持續性 SQL 運算式中出現名稱*時，會*建立兩個實體之間的相依性。 例如，如果某個預存程序為指定的參考實體，這個函數就會傳回在預存程序中參考的所有使用者定義實體，例如資料表、檢視表、使用者定義型別 (UDT) 或其他預存程序。  
   
  您可以使用這個動態管理函數來回報下列由指定之參考實體所參考的實體類型：  
   
@@ -121,7 +121,7 @@ sys.dm_sql_referenced_entities (
   
 |實體類型|參考實體|受參考的實體|  
 |-----------------|------------------------|-----------------------|  
-|Table|是*|是|  
+|資料表|是*|是|  
 |檢視|是|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序**|是|是|  
 |CLR 預存程序|否|是|  
@@ -139,7 +139,7 @@ sys.dm_sql_referenced_entities (
 |分割區函數|否|是|  
 | &nbsp; | &nbsp; | &nbsp; |
 
- \*只有當資料表參考計算資料行、CHECK 條件約束或 DEFAULT [!INCLUDE[tsql](../../includes/tsql-md.md)]條件約束的定義中的模組、使用者定義型別或 XML 架構集合時，才會將它當做參考實體進行追蹤。  
+ \*只有當資料表參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 計算資料行、CHECK 條件約束或 DEFAULT 條件約束的定義中的模組、使用者定義型別或 XML 架構集合時，才會將它當做參考實體進行追蹤。  
   
  ** 所包含之整數值大於 1 的編號預存程序不會當做參考或受參考的實體進行追蹤。  
   
@@ -268,8 +268,8 @@ The dependencies reported for entity "dbo.Proc1" might not include
 
 此範例 E 假設已執行範例 D。 範例 E 顯示會動態維護相依性。 此範例會執行下列動作：
 
-1. 重新建立`Table1`，其已在範例 D 中卸載。
-2. 然後`sys.dm_sql_referenced_entities` ，使用指定為參考實體的預存程式，再次執行。
+1. 重新建立 `Table1` ，其已在範例 D 中卸載。
+2. 然後， `sys.dm_sql_referenced_entities` 使用指定為參考實體的預存程式，再次執行。
 
 結果集顯示會傳回兩個數據表，以及在預存程式中定義的個別資料行。 此外，`is_all_columns_found` 資料行會針對所有物件和資料行傳回 1。
 
@@ -304,7 +304,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. 傳回物件或資料行使用方式  
- 下列範例會傳回 `HumanResources.uspUpdateEmployeePersonalInfo` 預存程序的物件和資料行相依性。 這個程式會根據指定`NationalIDNumber` `BusinessEntityID`的`BirthDate,``MaritalStatus`值來`Gender`更新`Employee`資料表的、和資料行。 另一個預存`upsLogError`程式定義于 TRY .。。捕捉任何執行錯誤的 CATCH 區塊。 `is_selected`、`is_updated` 和 `is_select_all` 資料行會傳回如何在參考物件中使用這些物件和資料行的相關資訊。 修改的資料表和資料行會在 is_updated 資料行中由 1 表示。 只選取 `BusinessEntityID` 資料行，而且不會選取或修改 `uspLogError` 預存程序。  
+ 下列範例會傳回 `HumanResources.uspUpdateEmployeePersonalInfo` 預存程序的物件和資料行相依性。 這個程式會 `NationalIDNumber` `BirthDate,``MaritalStatus` `Gender` 根據指定的值來更新資料表的、和資料行 `Employee` `BusinessEntityID` 。 另一個預存 `upsLogError` 程式定義于 TRY .。。捕捉任何執行錯誤的 CATCH 區塊。 `is_selected`、`is_updated` 和 `is_select_all` 資料行會傳回如何在參考物件中使用這些物件和資料行的相關資訊。 修改的資料表和資料行會在 is_updated 資料行中由 1 表示。 只選取 `BusinessEntityID` 資料行，而且不會選取或修改 `uspLogError` 預存程序。  
 
 ```sql  
 USE AdventureWorks2012;

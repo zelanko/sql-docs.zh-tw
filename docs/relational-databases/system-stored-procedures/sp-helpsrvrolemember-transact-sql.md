@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 73a8052af35854b0e2a1d557b1b31050dbb560ea
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010760"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810515"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ## <a name="remarks"></a>備註  
  請使用 sp_helprolemember 來顯示資料庫角色的成員。  
   
- 所有登入都是公用的成員。 sp_helpsrvrolemember 無法辨識 public 角色，因為在內部， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並不會將 public 當做角色來執行。  
+ 所有登入都是公用的成員。 sp_helpsrvrolemember 無法辨識 public 角色，因為在內部， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會將 public 當做角色來執行。  
   
  若要加入或移除伺服器角色的成員，請參閱[ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)。  
   

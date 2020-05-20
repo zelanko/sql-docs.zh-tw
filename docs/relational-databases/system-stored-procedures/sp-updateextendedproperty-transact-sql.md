@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_updateextendedproperty
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f1c1c856cadbb4f005a99d5a5d49dc0c1280a8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7793291a565d50554180de10ab9df39a491f423a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67898421"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809219"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,31 +52,31 @@ sp_updateextendedproperty
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @name= ]{'*property_name*'}  
+ [ @name =] {'*property_name*'}  
  這是要更新的屬性名稱。 *property_name*是**sysname**，而且不能是 Null。  
   
- [ @value= ]{'*value*'}  
+ [ @value =] {'*value*'}  
  這是與屬性相關聯的值。 *value*是**SQL_variant**，預設值是 Null。 *值*的大小不得超過7500個位元組。  
   
- [ @level0type= ]{'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  使用者或使用者定義類型。 *level0_object_type*是**Varchar （128）**，預設值是 Null。 有效的輸入包括元件、合約、事件通知、檔案群組、訊息類型、資料分割函數、資料分割配置、計劃指南、遠端服務系結、路由、架構、服務、使用者、觸發程式、類型和 Null。  
   
 > [!IMPORTANT]  
 >  在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，會移除層級 0 類型的 USER 和 TYPE。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。 請改用 SCHEMA 來當做層級 0 類型，而不是使用 USER。 如果是 TYPE，請使用 SCHEMA 當做層級 0 類型，並使用 TYPE 當做層級 1 類型。  
   
- [ @level0name= ]{'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  這是所指定之層級 1 物件類型的名稱。 *level0_object_name*是**sysname** ，預設值是 Null。  
   
- [ @level1type= ]{'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  這是層級 1 物件的類型。 *level1_object_type*是**Varchar （128）** ，預設值是 Null。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
- [ @level1name= ]{'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  這是所指定之層級 1 物件類型的名稱。 *level1_object_name*是**sysname** ，預設值是 Null。  
   
- [ @level2type= ]{'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  這是層級 2 物件的類型。 *level2_object_type*是**Varchar （128）** ，預設值是 Null。 有效輸入如下：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
- [ @level2name= ]{'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  這是所指定之層級 2 物件類型的名稱。 *level2_object_name*是**sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
