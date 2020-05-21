@@ -10,18 +10,18 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b2c561791b88340fd0a77977843f582fa60c648
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: efea0d4306c71607de93652e08f347586a17450e
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269427"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606867"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝新的 R 套件
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-此文章說明如何使用 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 套件中的函式，將新的 R 套件安裝到 SQL Server 機器學習服務或 SQL Server R Services 的執行個體上。 您安裝的套件可用於使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 陳述式在資料庫中執行的 R 指令碼。
+本文說明如何使用 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 套件中的函數，將新的 R 套件安裝到 SQL Server 機器學習服務的執行個體上。 您安裝的套件可用於使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 陳述式在資料庫中執行的 R 指令碼。
 
 > [!NOTE]
 > 本文所述的 **sqlmlutils** 套件是用來將 R 套件新增至 SQL Server 2019 或更新版本。 SQL Server 2017 及舊版請參閱[使用 R 工具安裝套件](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15)。
@@ -30,7 +30,7 @@ ms.locfileid: "83269427"
 
 - 在用來連線到 SQL Server 的用戶端電腦上安裝 [R](https://www.r-project.org) 與 [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)。 您可以使用任何 R IDE 來執行指令碼，但此文章假設使用 RStudio。
 
-- 在用來連線到 SQL Server 的用戶端電腦上安裝 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 或 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS)。 您可以使用其他資料庫管理或查詢工具，但此文章假設使用 Azure Data Studio 或 SSMS。
+- 在用來連線到 SQL Server 的用戶端電腦上安裝 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)。 您可以使用其他資料庫管理或查詢工具，但此文章假設使用 Azure Data Studio。
 
 ### <a name="other-considerations"></a>其他考量
 
@@ -194,7 +194,6 @@ ms.locfileid: "83269427"
    ```
    ::: moniker-end
 
-
    針對 `Rversion` 值，請使用 SQL Server 上安裝的 R 版本。 若要確認已安裝的版本，請使用下列 T-SQL 命令。
 
    ```sql
@@ -227,7 +226,7 @@ ms.locfileid: "83269427"
 
 安裝 **glue** 套件之後，您可以在 SQL Server 中的 R 指令碼中搭配 T-SQL **sp_execute_external_script** 命令加以使用。
 
-1. 開啟 Azure Data Studio 或 SSMS，並連線到您的 SQL Server 資料庫。
+1. 開啟 Azure Data Studio，並連線到您的 SQL Server 資料庫。
 
 1. 執行以下命令：
 
