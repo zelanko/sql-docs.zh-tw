@@ -1,51 +1,58 @@
 ---
 title: R 教學課程
-description: 此文章說明 SQL Server 機器學習服務的 R 教學課程和快速入門。
+titleSuffix: SQL machine learning
+description: 本文說明 SQL 機器學習的 R 教學課程。 了解如何執行指令碼及建置機器學習模型。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/13/2020
 ms.topic: tutorial
-author: dphansen
-ms.author: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 952a33eb5a160acae44b5d1ae674c75b8d74cca5
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 63c271c4e1d59c9446495607b42b0b5ad13ea246
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487274"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606915"
 ---
-# <a name="r-tutorials-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的 R 教學課程
+# <a name="r-tutorials-for-sql-machine-learning"></a>SQL 機器學習的 R 教學課程
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+本文說明 [SQL Server](../sql-server-machine-learning-services.md) 和[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上機器學習服務的 R 教學課程和快速入門。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 此文章說明 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)的 R 教學課程和快速入門。
-
-+ 了解如何執行 R 指令碼。
-+ 建置並定型 R 模型，然後將其部署至 SQL Server。
-+ 了解遠端和本機計算內容。
-+ 探索適用於資料科學和機器學習的 Microsoft R 套件。
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+此文說明 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 的 R 教學課程和快速入門。
+::: moniker-end
 
 <a name="bkmk_sqltutorials"></a>
 
-## <a name="r-quickstarts-and-tutorials"></a>R 快速入門與教學課程
+## <a name="r-tutorials"></a>R 教學課程
 
-| 連結 | 描述 |
+| 教學課程 | 描述 |
 |------|-------------|
-| [快速入門：建立及執行簡易的 R 指令碼](quickstart-r-create-script.md) | 在多項快速入門中，首先說明使用 T-SQL 查詢編輯器 (例如 SQL Server Management Studio) 呼叫 R 函數的基本語法。 |
-| [教學課程：了解適用於資料科學家的資料庫內 R 分析](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | 本教學課程為剛接觸 SQL Server 的 R 開發人員說明如何在 SQL Server 中執行常見的資料科學工作。 載入資料並將其視覺化、將模型定型並儲存至 SQL Server，並使用模型進行預測性分析。 |
-| [教學課程：了解適用於 SQL 開發人員的資料庫內 R 分析](../tutorials/sqldev-in-database-r-for-sql-developers.md) | 僅使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 工具來建置和部署完整的 R 解決方案。 著重於將解決方案移至生產環境。 您將了解如何將 R 程式碼包裝在預存程序中、將 R 模型儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，以及對 R 模型進行參數化呼叫來進行預測。 |
-| [教學課程：RevoScaleR 深入探討](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | 了解如何使用 RevoScaleR 套件中的函數。 在 R 與 SQL Server 之間移動資料，並切換計算內容以符合特定的工作。 建立模型和繪圖，並在您的開發環境和資料庫伺服器之間移動兩者。 |
+| [使用決策樹預測滑雪工具租用](r-predictive-model-introduction.md) | 使用 R 和決策樹模型來預測未來的滑雪工具租用數。 在 Azure Data Studio 中使用筆記本來準備資料及訓練模型，並使用 T-SQL 進行模型部署。 |
+| [使用 k-means 叢集將客戶分類](r-clustering-model-introduction.md) | 使用 R 來開發及部署 K-Means 群集模型，以將客戶分類。 在 Azure Data Studio 中使用筆記本來準備資料及訓練模型，並使用 T-SQL 進行模型部署。 |
+| [適用於資料科學家的資料庫內 R 分析](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | 本教學課程為剛接觸 SQL Server 的 R 開發人員說明如何在 SQL Server 中執行常見的資料科學工作。 載入資料並將其視覺化、將模型定型並儲存至 SQL Server，並使用模型進行預測性分析。 |
+| [適用於 SQL 開發人員的資料庫內 R 分析](../tutorials/sqldev-in-database-r-for-sql-developers.md) | 僅使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 工具來建置和部署完整的 R 解決方案。 著重於將解決方案移至生產環境。 您將了解如何將 R 程式碼包裝在預存程序中、將 R 模型儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，以及對 R 模型進行參數化呼叫來進行預測。 |
 
-<a name ="bkmk_samples"></a>
+## <a name="r-quickstarts"></a>R 快速入門
 
-## <a name="code-samples"></a>程式碼範例
+如果您不熟悉 SQL 機器學習，也可以嘗試 R 快速入門。
 
-| 連結 | 描述 |
-|------|-------------|
-| [使用 R 和 SQL Server 建置預測模型](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | 了解滑雪板租賃業如何使用機器學習服務預測未來的租賃業務，這有助於商務方案和人員滿足未來的需求。 |
-| [使用 R 和 SQL Server 執行客戶叢集](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | 根據銷售資料使用無人監督的學習來區隔客戶。 |
+| 快速入門 | 描述 |
+|-|-|
+| [執行簡單的 R 指令碼](quickstart-r-create-script.md) | 了解如何使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，在 T-SQL 中呼叫 R 的基本概念。 |
+| [使用 R 的資料結構與物件](quickstart-r-data-types-and-objects.md) | 顯示 SQL 如何使用 R 來處理資料結構。 |
+| [在 R 中建立預測模型並為其評分](quickstart-r-data-types-and-objects.md) | 說明如何建立、訓練及使用 R 模型，以從新的資料進行預測。 |
 
-## <a name="see-also"></a>另請參閱
+## <a name="next-steps"></a>後續步驟
 
-+ [SQL Server 的 R 延伸模組](../concepts/extension-r.md)
+如需有關 SQL Server 中 R 的其他技術詳細資料，請參閱 [SQL Server中的 R 語言延伸模組](../concepts/extension-r.md)。

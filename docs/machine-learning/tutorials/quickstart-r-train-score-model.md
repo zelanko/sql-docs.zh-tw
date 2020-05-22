@@ -1,26 +1,35 @@
 ---
 title: 快速入門：在 R 中將模型定型
-description: 在此快速入門中，您將使用 T 來建立及定型預測模型。您會將模型儲存至 SQL Server 執行個體中的資料表，然後透過 SQL Server 機器學習服務使用該模型來從新資料預測值。
+titleSuffix: SQL machine learning
+description: 在此快速入門中，您將會使用 T 來建立及定型預測模型。您會將模型儲存至資料表，然後使用該模型搭配 SQL 機器學習來預測新資料中的值。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b34bfbf4f539412835c0de1e3c75b55e15b1e471
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 532a08f29b3b623d531d03ff7bc0ac56605faa17
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487268"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606093"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務在 R 中建立預測模型並計算其分數
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>快速入門：使用 SQL 機器學習在 R 中建立和評分預測模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+在此快速入門中，您將會使用 T 來建立及定型預測模型。您會將模型儲存至 SQL Server 執行個體中的資料表，然後使用該模型搭配 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)或[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)來預測新資料中的值。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在此快速入門中，您將會使用 T 來建立及定型預測模型。您會將模型儲存至 SQL Server 執行個體中的資料表，然後透過 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)使用該模型來從新資料預測值。
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+在此快速入門中，您將會使用 T 來建立及定型預測模型。您會將模型儲存至 SQL Server 執行個體中的資料表，然後使用該模型搭配 [SQL Server R Services](../r/sql-server-r-services.md)來預測新資料中的值。
+::: moniker-end
 
 您將建立並執行在 SQL 中執行的兩個預存程序。 第一個預存程序使用 R 隨附的 **mtcars** 資料集，並產生簡易的一般化線性模型 (GLM)，預測車輛已裝有手排變速箱的可能性。 第二個程序為評分用，會呼叫在第一個程式中產生的模型，並根據新資料輸出一組預測。 將 R 程式碼放入 SQL 預存程序後，作業會包含在 SQL 中、可重複使用，而且可由其他預存程序和用戶端應用程式呼叫。
 
@@ -36,19 +45,27 @@ ms.locfileid: "81487268"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- 本快速入門需使用已安裝 R 語言的 [SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)來存取 SQL Server 的執行個體。
+您需要符合下列必要條件，才能執行此快速入門。
 
-  您的 SQL Server 執行個體可以位於 Azure 虛擬機器或內部部署中。 請注意，外部指令碼功能預設為停用，因此可能需要[啟用外部指令碼](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)，並在開始之前確認 **SQL Server Launchpad 服務**正在執行。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 您也可以[啟用 SQL Server 巨量資料叢集上的機器學習服務](../../big-data-cluster/machine-learning-services.md)。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)。 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services。 如需如何安裝 R Services 的相關資訊，請參閱 [Windows 安裝指南](../install/sql-r-services-windows-install.md)。
+::: moniker-end
 
-- 您也需要工具來執行包含 R 指令碼的 SQL 查詢。 您可以使用任何資料庫管理或查詢工具來執行這些指令碼，只要該工具可以連線到 SQL Server 執行個體，並執行 T-SQL 查詢或預存程序即可。 本快速入門使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
+- 執行 SQL 查詢的工具，這些查詢包含 R 指令碼。 本快速入門使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 ## <a name="create-the-model"></a>建立模型
 
-若要建立模型，您需建立定型用的來源資料、建立模型並使用資料定型，然後將模型儲存在 SQL 資料庫中，該模型便可用來產生含有新資料的預測。
+若要建立模型，您需建立定型用的來源資料、建立模型並使用資料定型，然後將模型儲存在資料庫中，該模型便可用來產生含有新資料的預測。
 
 ### <a name="create-the-source-data"></a>建立來源資料
 
-1. 開啟 SSMS、連線到您的 SQL Server 執行個體，並開啟新的查詢視窗。
+1. 開啟 Azure Data Studio、連接至您的執行個體，然後開啟新的查詢視窗。
 
 1. 建立資料表來儲存定型資料。
 
@@ -108,9 +125,9 @@ GO
 - `glm` 的第一個引數是 *formula* 參數，此參數將 `am` 定義成與 `hp + wt` 相依。
 - 輸入資料儲存在變數 `MTCarsData` 中，會由 SQL 查詢填入。 如果您未將特定名稱指派給輸入資料，預設變數名稱將是 _InputDataSet_。
 
-### <a name="store-the-model-in-the-sql-database"></a>將模型儲存在 SQL 資料庫中
+### <a name="store-the-model-in-the-database"></a>將模型儲存在資料庫中
 
-接下來，將模型儲存在 SQL 資料庫中，您就可以用此模型進行預測或重新定型。 
+接下來，將模型儲存在資料庫中，您就可以用此模型進行預測或重新定型。 
 
 1. 建立資料表來儲存模型。
 
@@ -131,7 +148,7 @@ GO
    ```
 
    > [!TIP]
-   > 如果您二度執行此陳述式，會收到以下錯誤：「違反 PRIMARY KEY 條件約束 ...無法在物件 dbo. stopping_distance_models 中插入重複的索引鍵。 若要避免發生此錯誤，選項之一是更新每個新模型的名稱。 例如，您可以將名稱變得更具描述性，並加入模型類型、模型的建立日期等。
+   > 如果您二度執行此陳述式，會收到以下錯誤：「違反 PRIMARY KEY 條件約束 ...無法在物件 dbo. stopping_distance_models 中插入重複的索引鍵。」 若要避免發生此錯誤，選項之一是更新每個新模型的名稱。 例如，您可以將名稱變得更具描述性，並加入模型類型、模型的建立日期等。
 
      ```sql
      UPDATE GLM_models
@@ -220,6 +237,6 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 SQL Server 機器學習服務的詳細資訊，請參閱：
+如需有關使用 SQL 機器學習的 R 教學課程詳細資訊，請參閱：
 
-- [什麼是 SQL Server 機器學習服務 (Python 和 R)？](../sql-server-machine-learning-services.md)
+- [R 教學課程](r-tutorials.md)

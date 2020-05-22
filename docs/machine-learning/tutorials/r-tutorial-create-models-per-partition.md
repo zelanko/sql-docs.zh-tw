@@ -9,12 +9,12 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 997896520a72f7803e656a42d2e38ebc6bf59d3d
-ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
+ms.openlocfilehash: 9c45fa9db06980f05bdaf059aae857a36b326c24
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619661"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606680"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程：在 SQL Server 上的 R 中建立資料分割模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "82619661"
 
 + SQL Server 2019 資料庫引擎執行個體，包含機器學習服務和 R 整合。
 
-+ 本教學課程使用 [透過 ODBC 從 R 指令碼對 SQL Server 的回送連線](../connect/loopback-connection.md]。 所以，您需要[為 SQLRUserGroup 建立登入](../security/create-a-login-for-sqlrusergroup.md)。
++ 本教學課程使用[透過 ODBC 從 R 指令碼對 SQL Server 的回送連線](../connect/loopback-connection.md)。 所以，您需要[為 SQLRUserGroup 建立登入](../security/create-a-login-for-sqlrusergroup.md)。
 
 藉由執行 **`SELECT @@Version`** 作為查詢工具中的 T-SQL 查詢來檢查版本。
 
@@ -169,7 +169,7 @@ GO
 
 ### <a name="parallel-execution"></a>平行執行
 
-請注意，[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 輸入包含用來啟用平行處理的 `@parallel=1`，。 與舊版不同的是，在 SQL Server 2019 中，設定 `@parallel=1` 會對查詢最佳化工具提供更強的提示，讓平行執行成為更有可能的結果。
+請注意，[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 輸入包含用來啟用平行處理的 `@parallel=1`。 與舊版不同的是，在 SQL Server 2019 中，設定 `@parallel=1` 會對查詢最佳化工具提供更強的提示，讓平行執行成為更有可能的結果。
 
 根據預設，查詢最佳化工具通常會在具有超過 256 個資料列的資料表上執行 `@parallel=1`，但如果您可以如本指令碼所示來藉由設定 `@parallel=1` 明確地處理此項作業。
 

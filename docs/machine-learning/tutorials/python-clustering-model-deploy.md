@@ -1,6 +1,6 @@
 ---
 title: Python 教學課程：部署叢集模型
-description: 在這個四部分教學課程系列的第四部分中，您將使用 SQL Server Machine Learning 服務，在 Python 中部署群集模型。
+description: 在這個四部分教學課程系列的第四部分中，您將使用 SQL 機器學習，在 Python 中部署群集模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -11,28 +11,33 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116561"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606432"
 ---
-# <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教學課程：使用 SQL Server Machine Learning 服務在 Python 中部署模型以分類客戶
+# <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python 教學課程：使用 SQL 機器學習來部署模型以分類客戶
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+在這個四部分教學課程系列的第四部分中，您將使用 SQL Server 機器學習服務或在巨量資料叢集上，將以 Python 開發的群集模型部署到 SQL 資料庫。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在這個四部分教學課程系列的第四部分中，您將使用 SQL Server Machine Learning 服務，將以 Python 開發的群集模型部署到 SQL 資料庫。
+::: moniker-end
 
-為了定期執行群集，當新客戶註冊時，您必須能夠從任何應用程式呼叫 Python 指令碼。 若要這麼做，您可以將 Python 指令碼放在資料庫的 SQL 預存程序內，以在 SQL Server 中部署 Python 指令碼。 因為您的模型是在 SQL 資料庫中執行，所以可以輕鬆地針對儲存在資料庫中的資料進行定型。
+為了定期執行群集，當新客戶註冊時，您必須能夠從任何應用程式呼叫 Python 指令碼。 若要這麼做，您可以將 Python 指令碼放在 SQL 預存程序內，以在資料庫中部署 Python 指令碼。 因為您的模型是在資料庫中執行，所以可以輕鬆地針對儲存在資料庫中的資料進行定型。
 
-在本節中，您會將剛才撰寫的 Python 程式碼移至 SQL Server，並透過 SQL Server Machine Learning 服務的協助來部署群集。
+在本節中，您會將剛才撰寫的 Python 程式碼移至伺服器，並部署叢集。
 
 在本文中，您將學會如何：
 
 > [!div class="checklist"]
 > * 建立一個會產生模型的預存程序
-> * 在 SQL Server 中執行群集
+> * 在伺服器上執行群集
 > * 使用群集資訊
 
 在[第一部分](python-clustering-model.md)中，您已安裝必要條件並還原範例資料庫。
@@ -175,19 +180,18 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 
 ## <a name="clean-up-resources"></a>清除資源
 
-完成本教學課程後，您可以從 SQL Server 刪除 tpcxbb_1gb 資料庫。
+完成本教學課程後，您可以刪除 tpcxbb_1gb 資料庫。
 
 ## <a name="next-steps"></a>後續步驟
 
 在本教學課程系列的第四部分中，您已完成下列步驟：
 
 * 建立一個會產生模型的預存程序
-* 在 SQL Server 中執行群集
+* 在伺服器上執行群集
 * 使用群集資訊
 
-若要深入了解如何在 SQL Server Machine Learning 服務中使用 Python，請參閱：
+若要深入了解如何在 SQL 機器學習中使用 Python，請參閱：
 
-* [快速入門：使用 SQL Server 機器學習服務，建立及執行簡單的 Python 指令碼](quickstart-python-create-script.md)
-* [其他 SQL Server Machine Learning 服務的 Python 教學課程](sql-server-python-tutorials.md)
+* [快速入門：建立並執行簡單的 Python 指令碼](quickstart-python-create-script.md)
+* [其他 SQL 機器學習的 Python 教學課程](python-tutorials.md)
 * [使用 sqlmlutils 安裝 Python 套件](../package-management/install-additional-python-packages-on-sql-server.md)
-

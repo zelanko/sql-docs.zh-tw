@@ -1,26 +1,35 @@
 ---
 title: 快速入門：R 資料結構、資料類型與物件
-description: 在此快速入門中，您將會了解如何在 SQL Server 機器學習服務中使用 R 來使用資料結構、資料類型與物件。 在此快速入門中，您將會了解如何在 R 與 SQL Server 之間移動資料，以及可能發生的常見問題。
+titleSuffix: SQL machine learning
+description: 在此快速入門中，您將會了解如何在搭配 SQL 機器學習使用 R 時使用資料結構、資料類型與物件。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2019
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 07d167ddc39f281a3330ffd80460d9cc34ccfa65
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: e5b5f4e90b680f5ae06944eedc997a43b8a40024
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487305"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606570"
 ---
-# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>快速入門：在 SQL Server 機器學習服務中使用 R 的資料結構、資料類型與物件
+# <a name="quickstart-data-structures-data-types-and-objects-using-r-with-sql-machine-learning"></a>快速入門：搭配 SQL 機器學習使用 R 的資料類型和物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在此快速入門中，您將會了解當您在 SQL Server 機器學習服務中使用 R 時，如何使用資料結構與資料類型。 在此快速入門中，您將會了解如何在 R 與 SQL Server 之間移動資料，以及可能發生的常見問題。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+在此快速入門中，您將會了解當您在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中或在[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上使用 R 時，如何使用資料結構與資料類型。 在此快速入門中，您將會了解如何在 R 與 SQL Server 之間移動資料，以及可能發生的常見問題。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+在此快速入門中，您將會了解當您在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中使用 R 時，如何使用資料結構與資料類型。 在此快速入門中，您將會了解如何在 R 與 SQL Server 之間移動資料，以及可能發生的常見問題。
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+在此快速入門中，您將會了解當您在 [SQL Server R Services](../r/sql-server-r-services.md) 中使用 R 時，如何使用資料結構與資料類型。 在此快速入門中，您將會了解如何在 R 與 SQL Server 之間移動資料，以及可能發生的常見問題。
+::: moniker-end
 
 首先要瞭解的常見問題包括：
 
@@ -31,11 +40,19 @@ ms.locfileid: "81487305"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- 本快速入門需使用已安裝 R 語言的 [SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)來存取 SQL Server 的執行個體。
+您需要符合下列必要條件，才能執行此快速入門。
 
-  您的 SQL Server 執行個體可以位於 Azure 虛擬機器或內部部署中。 請注意，外部指令碼功能預設為停用，因此可能需要[啟用外部指令碼](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)，並在開始之前確認 **SQL Server Launchpad 服務**正在執行。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 您也可以[啟用 SQL Server 巨量資料叢集上的機器學習服務](../../big-data-cluster/machine-learning-services.md)。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)。 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services。 如需如何安裝 R Services 的相關資訊，請參閱 [Windows 安裝指南](../install/sql-r-services-windows-install.md)。 
+::: moniker-end
 
-- 您也需要工具來執行包含 R 指令碼的 SQL 查詢。 您可以使用任何資料庫管理或查詢工具來執行這些指令碼，只要該工具可以連線到 SQL Server 執行個體，並執行 T-SQL 查詢或預存程序即可。 本快速入門使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
+- 執行 SQL 查詢的工具，這些查詢包含 R 指令碼。 本快速入門使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 ## <a name="always-return-a-data-frame"></a>一律傳回資料框架
 
@@ -68,7 +85,7 @@ EXECUTE sp_execute_external_script
 
 為何結果如此不同？
 
-您通常可以使用 R `str()` 命令來找到答案。 在 R 指令碼中的任一處加入函數 `str(object_name)`，以傳回指定 R 物件的資料結構描述做為資訊訊息。 若要檢視訊息，可查看 Visual Studio Code 的 [訊息]  窗格，或 SSMS 中的 [訊息]  索引標籤。
+您通常可以使用 R `str()` 命令來找到答案。 在 R 指令碼中的任一處加入函數 `str(object_name)`，以傳回指定 R 物件的資料結構描述做為資訊訊息。
 
 若要了解為什麼範例 1 和範例 2 會有如此不同的結果，請在每個陳述式中 `@script` 變數定義的結尾插入一行 `str(OutputDataSet)`，如下：
 
@@ -94,7 +111,7 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N'  ';
 ```
 
-現在，檢視 [訊息]  中的文字，以查看為何會有不同的輸出。
+現在，檢視 [訊息] 中的文字，以查看為何會有不同的輸出。
 
 **結果 - 範例 1**
 
@@ -225,7 +242,7 @@ EXECUTE sp_execute_external_script
 
 請記住，資料框架只是看起來像資料表，其實是一個向量清單。
 
-## <a name="cast-or-convert-sql-server-data"></a>轉型或轉換 SQL Server 資料
+## <a name="cast-or-convert-data"></a>轉型或轉換資料
 
 R 和 SQL Server 不會使用相同的資料類型，因此，當您在 SQL Server 中執行查詢來取得資料，然後將該資料傳遞至 R 執行階段時，通常會發生某些類型的隱含轉換。 當您將資料從 R 傳回至 SQL Server 時，將發生另一組轉換。
 
@@ -292,20 +309,13 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 - 事先測試您的資料，並確認結構描述中可能會在傳遞至 R 程式碼發生問題的資料行或值。
 - 個別指定輸入資料來源中的資料行，而不是使用 `SELECT *`，並了解將如何處理每個資料行。
 - 在準備輸入資料時視需要執行明確的轉型，以避免出現意外狀況。
-- 避免傳遞會造成錯誤且不適用模型化的資料行 (例如 GUID 或 rowguids)。
+- 避免傳遞會造成錯誤且不適用模型化的資料行 (例如 GUID 或 rowguid)。
 
 如需可支援與不支援資料類型的詳細資訊，請參閱 [R 程式庫和資料類型](../r/r-libraries-and-data-types.md)。
 
-如需在執行階段將字串轉換為數值因數之效能影響的相關資訊，請參閱 [SQL Server R Services 效能微調](../r/sql-server-r-services-performance-tuning.md)。
-
 ## <a name="next-steps"></a>後續步驟
 
-若要了解如何在 SQL Server 中撰寫進階 R 函數，請遵循此快速入門：
+若要了解如何使用 SQL 機器學習撰寫進階 R 函式，請遵循此快速入門：
 
 > [!div class="nextstepaction"]
-> [使用 SQL Server 機器學習服務撰寫進階 R 函數](quickstart-r-functions.md)
-
-如需在 SQL Server 機器學習服務中使用 R 的詳細資訊，請參閱下列文章：
-
-- [使用 SQL Server 機器學習服務在 R 中建立預測模型並計算其分數](quickstart-r-train-score-model.md)
-- [什麼是 SQL Server 機器學習服務 (Python 和 R)？](../sql-server-machine-learning-services.md)
+> [使用 SQL 機器學習撰寫進階 R 函式](quickstart-r-functions.md)

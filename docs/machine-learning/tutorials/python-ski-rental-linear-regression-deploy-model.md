@@ -1,25 +1,31 @@
 ---
 title: Python 教學課程：部署模型
-description: 在此教學課程系列的第四部分 (總共四個部分) 中，您會使用機器學習服務，將預測雪橇租賃的 Python 模型部署到 SQL Server 資料庫。
+titleSuffix: SQL machine learning
+description: 在本教學課程系列的第四部分 (總共四個部分) 中，您會使用 SQL 機器學習服務，將預測雪橇租賃的 Python 模型部署到資料庫。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e78f099f108f9affa58f53d1ad46b802eae004dd
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1771cc70a2e5b36109ba028c86939ce66fa00993
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116481"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606730"
 ---
-# <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Python 教學課程：將線性迴歸模型部署到 SQL Server 機器學習服務
+# <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Python 教學課程：使用 SQL 機器學習部署線性迴歸模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+在本教學課程系列的第四部分 (總共四個部分) 中，您將使用機器學習服務或巨量資料叢集，將以 Python 開發的線性迴歸模型部署到 SQL Server 資料庫。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在本教學課程系列的第四部分 (總共四個部分) 中，您將使用機器學習服務，將以 Python 開發的線性迴歸模型部署到 SQL Server 資料庫。
+::: moniker-end
 
 在本文中，您將學會如何：
 
@@ -31,7 +37,7 @@ ms.locfileid: "81116481"
 
 在[第一部分](python-ski-rental-linear-regression.md)，您已了解如何還原範例資料庫。
 
-在[第二部分](python-ski-rental-linear-regression-prepare-data.md)，您已了解如何將資料從 SQL Server 載入到 Python 資料框架，並以 Python 準備資料。
+在[第二部分](python-ski-rental-linear-regression-prepare-data.md)中，您已了解如何將資料從資料庫載入到 Python 資料框架，並以 Python 準備資料。
 
 在[第三部分](python-ski-rental-linear-regression-train-model.md)中，您已了解如何在 Python 中定型線性迴歸機器學習模型。
 
@@ -119,11 +125,11 @@ GO
    CREATE PROCEDURE py_predict_rentalcount (@model varchar(100))
    AS
    BEGIN
-    DECLARE @py_model varbinary(max) = (select model from rental_py_models where model_name = @model);
+       DECLARE @py_model varbinary(max) = (select model from rental_py_models where model_name = @model);
    
-    EXECUTE sp_execute_external_script
-                @language = N'Python',
-                @script = N'
+       EXECUTE sp_execute_external_script
+                   @language = N'Python',
+                   @script = N'
    
    # Import the scikit-learn function to compute error.
    from sklearn.metrics import mean_squared_error
@@ -196,7 +202,7 @@ GO
 
    :::image type="content" source="media/python-tutorial-prediction-results.png" alt-text="來自預存程序的預測結果":::
 
-您已成功地在 SQL Server 機器學習服務中建立、定型及部署模型。 接著您在預存程序中使用該模型根據新資料來預測值。
+您已成功建立、定型和部署模型。 接著您在預存程序中使用該模型根據新資料來預測值。
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -207,6 +213,6 @@ GO
 * 建立一個使用此模型進行預測的預存程序
 * 以新資料執行模型
 
-若要深入了解如何在 SQL Server Machine Learning 服務中使用 Python，請參閱：
+若要深入了解如何搭配 SQL 機器學習使用 Python，請參閱：
 
-+ [SQL Server 機器學習服務的 Python 教學課程](sql-server-python-tutorials.md)
++ [Python 教學課程](python-tutorials.md)

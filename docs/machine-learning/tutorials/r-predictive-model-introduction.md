@@ -1,0 +1,108 @@
+---
+title: 教學課程：使用 R 開發預測模型
+titleSuffix: SQL machine learning
+description: 在這個四部分教學課程系列中，您將開發資料，以使用 SQL 機器學習在 R 中定型預測模型。
+ms.prod: sql
+ms.technology: machine-learning
+ms.topic: tutorial
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 237b8d5ac797b6e17a48bde2fff12de55844755e
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83607141"
+---
+# <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>教學課程：準備資料以使用 SQL 機器學習在 R 中定型預測模型。
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+在這個四部分教學課程系列中，您將在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中或在[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上使用 R 和機器學習模型來預測滑雪工具租用的數目。
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+在這個四部分教學課程系列中，您將在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中使用 R 和機器學習模型來預測滑雪工具租用的數目。
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+在這個四部分教學課程系列中，您將在 [SQL Server R Services](../r/sql-server-r-services.md) 中使用 R 和機器學習模型來預測滑雪工具租用的數目。
+::: moniker-end
+
+假設您擁有滑雪工具租用公司，而且想要預測未來日期的租用次數。 此資訊可協助您準備好庫存、員工和設備。
+
+在此系列課程的第一部分中，您將會設定必要條件。 在第二部分和第三部分中，您將在筆記本中開發一些 R 指令碼來準備您的資料，並將機器學習模型定型。 接著在第三部分中，您將使用 T-SQL 預存程式在 SQL Server 內執行這些 R 指令碼。
+
+在本文中，您將學會如何：
+
+> [!div class="checklist"]
+> * 將範例資料庫還原至 SQL Server 
+
+在[第二部分](r-predictive-model-prepare-data.md)中，您會了解如何將資料從資料庫載入到 Python 資料框架，並以 R 準備資料。
+
+在[第三部分](r-predictive-model-train.md)中，您將了解如何在 R 中定型機器學習模型。
+
+在[第四部分](r-predictive-model-deploy.md)中，您將了解如何將模型儲存在資料庫中，然後從您在第二和第三部分中開發的 R 指令碼建立預存程序。 預存程序將會在伺服器上中執行，以根據新資料進行預測。
+
+## <a name="prerequisites"></a>Prerequisites
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+* SQL Server 機器學習服務 - 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 您也可以[啟用 SQL Server 巨量資料叢集上的機器學習服務](../../big-data-cluster/machine-learning-services.md)。
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+* SQL Server 機器學習服務 - 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)。 
+::: moniker-end
+
+* R IDE - 本教學課程使用 [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)。
+
+* RODBC - 此驅動程式用於您將在本教學課程中開發的 R 指令碼。 如果尚未安裝，請使用 R 命令 `install.packages("RODBC")` 進行安裝。 如需 RODBC 的詳細資訊，請參閱 [CRAN - 封裝 RODBC](https://CRAN.R-project.org/package=RODBC)。
+
+* SQL 查詢工具 - 本教學課程假設您使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。 如需詳細資訊，請參閱[如何在 Azure Data Studio 中使用筆記本](../../azure-data-studio/sql-notebooks.md)。
+
+## <a name="restore-the-sample-database"></a>還原範例資料庫
+
+此教學課程中使用的範例資料庫已儲存為 **.bak** 資料庫備份檔案，以供您下載並使用。
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> 如果您是在巨量資料叢集上使用機器學習服務，請參閱如何[將資料庫還原至 SQL Server 巨量資料叢集主要執行個體](../../big-data-cluster/data-ingestion-restore-database.md)。
+::: moniker-end
+
+1. 下載 [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak) 檔案。
+
+1. 請遵循在 Azure Data Studio 中[從備份檔案還原資料庫](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)中的指示，使用下列詳細資料：
+
+   * 從您下載的 **TutorialDB** 檔案匯入
+   * 將目標資料庫命名為 "TutorialDB"
+
+1. 您可以藉由查詢 **dbo.rental_data** 資料表，確認已還原的資料庫是否存在：
+
+   ```sql
+   USE TutorialDB;
+   SELECT * FROM [dbo].[rental_data];
+   ```
+
+1. 執行下列 SQL 命令來啟用外部指令碼：
+
+    ```sql
+    sp_configure 'external scripts enabled', 1;
+    RECONFIGURE WITH override;
+    ```
+
+## <a name="next-steps"></a>後續步驟
+
+在本教學課程系列的第一部分中，您已完成下列步驟：
+
+* 安裝了必要條件
+* 已將範例資料庫還原至 SQL Server
+
+若要針對機器學習模型準備資料，請遵循本教學課程系列的第二部分進行：
+
+> [!div class="nextstepaction"]
+> [準備在 R 中定型預測模型所需的資料](r-predictive-model-prepare-data.md)

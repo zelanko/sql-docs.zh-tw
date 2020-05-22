@@ -1,28 +1,34 @@
 ---
 title: Python 教學課程：組建叢集模型
-description: 在這個教學課程系列的第三部分 (總共四個部分) 中，您將使用「SQL Server 機器學習服務」在 Python 中建立一個 K-Means 模型，以執行叢集。
+titleSuffix: SQL machine learning
+description: 在這個教學課程系列的第三部分 (總共四個部分) 中，您將使用 SQL 機器學習在 Python 中建立一個 K-Means 模型，以執行叢集。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/14/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6e0aa1bcbf1bc79b6f77fc0b564d840194ffa8ec
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116591"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606434"
 ---
-# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教學課程：使用 SQL Server 機器學習服務在 Python 中建立模型以分類客戶
+# <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python 教學課程：使用 SQL 機器學習來建置模型以分類客戶
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 Python 中建立一個 K-Means 模型以執行叢集。 在本系列的下一部分中，您將使用「SQL Server 機器學習服務」在 SQL 資料庫中部署此模型。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 Python 中建立一個 K-Means 模型以執行叢集。 在本系列的下一部分中，您將使用 SQL Server 機器學習服務在資料庫中部署此模型，或在巨量資料叢集上進行此部署。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 Python 中建立一個 K-Means 模型以執行叢集。 在本系列的下一部分中，您將使用 SQL Server 機器學習服務在資料庫中部署此模型。
+::: moniker-end
 
 在本文中，您將學會如何：
 
@@ -33,9 +39,9 @@ ms.locfileid: "81116591"
 
 在[第一部分](python-clustering-model.md)中，您已安裝必要條件並還原範例資料庫。
 
-在[第二部分](python-clustering-model-prepare-data.md)，您已了解如何準備 SQL 資料庫中的資料，以執行叢集。
+在[第二部分](python-clustering-model-prepare-data.md)，您已了解如何準備資料庫中的資料，以執行叢集。
 
-在[第四部分](python-clustering-model-deploy.md)，您將了解如何在 SQL 資料庫中建立預存程序，以根據新的資料在 Python 中執行叢集。
+在[第四部分](python-clustering-model-deploy.md)，您將了解如何在資料庫中建立預存程序，以根據新的資料在 Python 中執行叢集。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -147,7 +153,7 @@ cluster
 
 ## <a name="clean-up-resources"></a>清除資源
 
-如果您不打算繼續進行本教學課程，請從 SQL Server 刪除 tpcxbb_1gb 資料庫。
+如果您不打算繼續進行本教學課程，請刪除 tpcxbb_1gb 資料庫。
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -160,4 +166,4 @@ cluster
 若要部署您已建立的機器學習模型，請遵循本教學課程系列的第四部分：
 
 > [!div class="nextstepaction"]
-> [教學課程：使用 SQL Server 機器學習服務在 Python 中部署叢集模型](python-clustering-model-deploy.md)
+> [Python 教學課程：部署群集模型](python-clustering-model-deploy.md)

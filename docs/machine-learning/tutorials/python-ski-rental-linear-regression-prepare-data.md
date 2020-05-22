@@ -1,25 +1,31 @@
 ---
 title: Python 教學課程：準備資料
-description: 在此教學課程系列的第二部分 (總共四個部分)，您將會在 SQL Server 機器學習服務中使用 Python 準備資料以預測雪橇租賃。
+titleSuffix: SQL machine learning
+description: 在本教學課程系列的第二部分 (總共四個部分) 中，您將會使用 Python 搭配 SQL 機器學習服務，來準備資料以預測雪橇租賃。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9aeefb0b6fd9ca1a744d132fccf1eedfedbaa6e7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 75f475f8a2b4b0d23d95498a69f5e5d745f7510d
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116421"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606720"
 ---
-# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python 教學課程：在 SQL Server 機器學習服務中準備資料以定型線性迴歸模型
+# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Python 教學課程：準備資料以使用 SQL 機器學習來定型線性迴歸模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在這個教學課程系列的第二部分 (總共四個部分) 中，您將使用 Python 從 SQL Server 資料庫準備資料。 在本系列稍後，您將使用 SQL Server 機器學習服務，在 Python 中定型和部署線性迴歸模型。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+在本教學課程系列的第二部分 (總共四個部分) 中，您將使用 Python 準備資料庫中的資料。 在本系列稍後，您將使用此資料搭配 SQL Server 機器學習服務，在 Python 中定型和部署線性迴歸模型，或在巨量資料叢集上進行此定型和部署。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+在本教學課程系列的第二部分 (總共四個部分) 中，您將使用 Python 準備資料庫中的資料。 在本系列稍後，您將使用 SQL Server 機器學習服務，在 Python 中定型和部署線性迴歸模型。
+::: moniker-end
 
 在本文中，您將學會如何：
 
@@ -31,7 +37,7 @@ ms.locfileid: "81116421"
 
 在[第三部分](python-ski-rental-linear-regression-train-model.md)中，您將了解如何在 Python 中定型線性迴歸機器學習模型。
 
-在[第四部分](python-ski-rental-linear-regression-deploy-model.md)中，您將了解如何將模型儲存至 SQL Server，然後以您在第二部分和第三部分開發的 Python 指令碼建立預存程序。 預存程序將會在 SQL Server 中執行，以根據新資料進行預測。
+在[第四部分](python-ski-rental-linear-regression-deploy-model.md)中，您將了解如何將模型儲存在資料庫中，然後從您在第二和第三部分中開發的 Python 指令碼建立預存程序。 預存程序將會在伺服器上中執行，以根據新資料進行預測。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -39,7 +45,7 @@ ms.locfileid: "81116421"
 
 ## <a name="explore-and-prepare-the-data"></a>探索和準備資料
 
-為了使用 Python 中的資料，請將 SQL Server 資料庫中的資料載入到 pandas 資料框架。
+為了使用 Python 中的資料，請將資料庫中的資料載入到 pandas 資料框架。
 
 在 Azure Data Studio 中建立新的 Python 筆記本，並執行以下指令碼。 以您自己的 SQL Server 名稱取代 `<SQL Server>`。
 
@@ -54,7 +60,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Connection string to your SQL Server instance
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=TutorialDB; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=TutorialDB; Trusted_Connection=yes')
 
 query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 
@@ -92,7 +98,7 @@ Data frame:      Year  Month  Day  RentalCount  WeekDay  Holiday  Snow
 
 在本教學課程系列的第二部分中，您已完成下列步驟：
 
-* 將 SQL Server 資料庫的資料載入到 **pandas** 資料框架
+* 將資料庫中的資料載入至 **pandas** 資料框架
 * 透過移除一些資料行來準備 Python 中的資料
 
 若要使用 TutorialDB 資料庫中的資料定型機器學習模型，請遵循此教學課程系列的第三部分：

@@ -1,7 +1,7 @@
 ---
 title: 針對 Kubernetes 進行疑難排解
 titleSuffix: SQL Server big data clusters
-description: 本文提供用來監視 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]及針對其進行疑難排解的實用命令。
+description: 此文章提供用來監視和針對 SQL Server 2019 巨量資料叢集進行疑難排解的實用命令。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9ab57972b9ba0d758ff692887fa8d93d7f731d0a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 49ed75b4986a45dfec25547317e3fe0789671fe4
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664179"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606400"
 ---
 # <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>針對 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes 進行疑難排解
 
@@ -72,7 +72,7 @@ storage-0-1       7/7     Running   0          110m
 ```
 
 > [!NOTE]
-> 在部署期間，[狀態]  為 **ContainerCreating** 的 Pod 仍會上線。 如果部署因任何原因而停止回應，這可能會讓您了解問題所在。 另請查看 [就緒]  資料行。 這會告訴您已在 Pod 中啟動多少容器。 請注意，部署可能需要 30 分鐘或更久的時間，視您的設定和網路而定。 在這段時間內，大部分會花在下載不同元件的容器映像。
+> 在部署期間，[狀態] 為 **ContainerCreating** 的 Pod 仍會上線。 如果部署因任何原因而停止回應，這可能會讓您了解問題所在。 另請查看 [就緒] 資料行。 這會告訴您已在 Pod 中啟動多少容器。 請注意，部署可能需要 30 分鐘或更久的時間，視您的設定和網路而定。 在這段時間內，大部分會花在下載不同元件的容器映像。
 
 ## <a name="get-pod-details"></a>取得 Pod 詳細資料
 

@@ -1,7 +1,7 @@
 ---
 title: 執行使用 Spark 的範例筆記本
 titleSuffix: SQL Server big data clusters
-description: 本教學課程說明如何在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上載入和執行範例 Spark 筆記本。
+description: 本教學課程說明如何在 SQL Server 2019 巨量資料叢集上載入和執行範例 Spark 筆記本。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 440deb44e98a29136fa540efb8619702c51b7342
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: ce2b2439f136150348409f591550b8fc07383bd9
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531301"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606885"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>執行使用 Spark 的範例筆記本
 
@@ -53,11 +53,11 @@ ms.locfileid: "80531301"
 
 1. 在 Azure Data Studio 中，連線到巨量資料叢集的主要執行個體。 如需詳細資訊，請參閱[連線到巨量資料叢集](connect-to-big-data-cluster.md)。
 
-1. 按兩下 [伺服器]  視窗中的 HDFS/Spark 閘道連線。 然後選取 [開啟筆記本]  。
+1. 按兩下 [伺服器] 視窗中的 HDFS/Spark 閘道連線。 然後選取 [開啟筆記本]。
 
    ![開啟筆記本](media/notebook-tutorial-spark/azure-data-studio-open-notebook.png)
 
-1. 等候 [核心]  和目標內容 ([附加至]  ) 填入。 將 [核心]  設定為 [PySpark3]  ，並將 [附加至]  設定為巨量資料叢集端點的 IP 位址。
+1. 等候 [核心] 和目標內容 ([附加至]) 填入。 將 [核心] 設定為 [PySpark3]，並將 [附加至] 設定為巨量資料叢集端點的 IP 位址。
 
    ![設定 [核心] 和 [附加至]](media/notebook-tutorial-spark/set-kernel-and-attach-to.png)
 

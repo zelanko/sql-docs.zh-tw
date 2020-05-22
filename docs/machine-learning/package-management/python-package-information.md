@@ -4,17 +4,18 @@ description: 了解如何取得 SQL Server 機器學習服務上已安裝之 Pyt
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/22/2019
+ms.date: 05/01/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
+ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 173be52a343ad6f19395d6c532124ddd837ed70f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fb08940a9a6c9c15d8c633f5b3c439514bc43646
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118001"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83605990"
 ---
 # <a name="get-python-package-information"></a>取得 Python 套件資訊
 
@@ -24,7 +25,13 @@ ms.locfileid: "81118001"
 
 ## <a name="default-python-library-location"></a>預設 Python 程式庫位置
 
-搭配 SQL Server 安裝機器學習時，會針對您安裝的每個語言在執行個體層次建立單一套件程式庫。 在 Windows 上，執行個體程式庫是一個向 SQL Server 註冊的受保護資料夾。
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+搭配 SQL Server 安裝機器學習時，會針對您安裝的每個語言在執行個體層次建立單一套件程式庫。 執行個體程式庫是一個向 SQL Server 註冊的受保護資料夾。
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+搭配 SQL Server 安裝機器學習時，會針對您安裝的每個語言在執行個體層次建立單一套件程式庫。
+::: moniker-end
 
 所有在 SQL Server 上資料庫內執行的指令碼或程式碼都必須從執行個體程式庫載入函式。 SQL Server 無法存取安裝至其他程式庫的套件。 這也適用於遠端用戶端：任何在伺服器計算內容中執行的 Python 程式碼都只能使用安裝在執行個體程式庫中的套件。
 為了保護伺服器資產，只有電腦系統管理員才能修改預設執行個體程式庫。
@@ -33,15 +40,24 @@ ms.locfileid: "81118001"
 Python 的二進位檔預設路徑是：
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+
+這會假設預設 SQL 執行個體 MSSQLSERVER。 如果將 SQL Server 安裝成使用者定義的具名執行個體，則會改用指定的名稱。
 ::: moniker-end
 
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 Python 的二進位檔預設路徑是：
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES`
-::: moniker-end
 
 這會假設預設 SQL 執行個體 MSSQLSERVER。 如果將 SQL Server 安裝成使用者定義的具名執行個體，則會改用指定的名稱。
+::: moniker-end
+
+執行下列 SQL 命令來啟用外部指令碼：
+
+```sql
+sp_configure 'external scripts enabled', 1;
+RECONFIGURE WITH override;
+```
 
 請執行下列陳述式來確認目前執行個體的預設程式庫。 此範例會傳回 Python `sys.path` 變數中所包含的資料夾清單。 此清單包含目前目錄與標準程式庫路徑。
 
@@ -53,14 +69,16 @@ EXECUTE sp_execute_external_script
 
 如需有關 `sys.path` 變數及如何使用它來為模組設定解譯器搜尋路徑的詳細資訊，請參閱[模組搜尋路徑](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)。
 
-## <a name="default-python-packages"></a>預設 Python 套件
+## <a name="default-microsoft-python-packages"></a>預設 Microsoft Python 套件
 
-以下是您在安裝期間選取 Python 功能時，與 SQL Server 機器學習服務一起安裝的 Python 套件。
+以下是您在安裝期間選取 Python 功能時，與 SQL Server 機器學習服務一起安裝的 Microsoft Python 套件。
 
 | Packages | 版本 |  描述 |
 | ---------|---------|--------------|
-| [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | 用於遠端計算內容、串流、平行執行 rx 函式以進行資料匯入與轉換、模型化、視覺化，以及分析。 |
-| [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | 在 Python 中新增機器學習演算法。 |
+| [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.4.7 | 用於遠端計算內容、串流、平行執行 rx 函式以進行資料匯入與轉換、模型化、視覺化，以及分析。 |
+| [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.4.7 | 在 Python 中新增機器學習演算法。 |
+
+如需包括哪個 Python 版本的相關資訊，請參閱 [Python 和 R 版本](../sql-server-machine-learning-services.md#versions)。
 
 ### <a name="component-upgrades"></a>元件升級
 
@@ -77,7 +95,7 @@ EXECUTE sp_execute_external_script
 
 ## <a name="list-all-installed-python-packages"></a>列出所有已安裝的 Python 套件
 
-下列範例指令碼會顯示已安裝的套件及其版本的清單。
+下列範例指令碼會顯示一個清單，列出安裝在 SQL Server 執行個體中的所有 Python 套件。
 
 ```sql
 EXECUTE sp_execute_external_script 
@@ -89,42 +107,58 @@ installed_packages = pkg_resources.working_set
 installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in installed_packages])
 df = pd.DataFrame(installed_packages_list)
 OutputDataSet = df
-  '
+'
 WITH RESULT SETS (( PackageVersion nvarchar (150) ))
 ```
 
 ## <a name="find-a-single-python-package"></a>尋找單一 Python 套件
 
-如果您已安裝 Python 套件並想確定特定 SQL Server 執行個體能夠使用它，您可以執行預存程序來載入套件並傳回訊息。
+如果您已安裝 Python 套件並想確定該套件可用於特定 SQL Server 執行個體，則可以執行預存程序來尋找套件並傳回訊息。
 
 例如，下列程式碼會尋找 `scikit-learn` 套件。
-如果找到該套件，程式碼就會傳回「已安裝套件 scikit-learn」訊息。
+如果找到該套件，程式碼會列印套件版本。
 
 ```sql
 EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
 import pkg_resources
-pckg_name = "scikit-learn"
-pckgs = pandas.DataFrame([(i.key) for i in pkg_resources.working_set], columns = ["key"])
-installed_pckg = pckgs.query(''key == @pckg_name'')
-print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")
-  '
+pkg_name = "pandas"
+try:
+    version = pkg_resources.get_distribution(pkg_name).version
+    print("Package " + pkg_name + " is version " + version)
+except:
+    print("Package " + pkg_name + " not found")
+'
 ```
 
-<a name="get-package-vers"></a>
+結果：
 
-下列範例會傳回 revoscalepy 套件與 Python 的版本。
+```text
+STDOUT message(s) from external script: Package pandas is version 0.23.4
+```
+
+下列範例會列印套件 `pandas` 的版本。
 
 ```sql
 EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
-import revoscalepy
+import pkg_resources
+pkg_name = "pandas"
+print(pkg_name + " package is version " + pkg_resources.get_distribution(pkg_name).version)
+'
+```
+
+下列範例會傳回 Python 的版本。
+
+```sql
+EXECUTE sp_execute_external_script
+  @language = N'Python',
+  @script = N'
 import sys
-print(revoscalepy.__version__)
 print(sys.version)
-  '
+'
 ```
 
 ## <a name="next-steps"></a>後續步驟
@@ -132,6 +166,6 @@ print(sys.version)
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [使用 Python 工具來安裝套件](install-python-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [使用 sqlmlutils 安裝新的 Python 套件](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

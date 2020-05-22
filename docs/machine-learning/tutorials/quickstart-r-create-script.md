@@ -1,41 +1,57 @@
 ---
 title: 快速入門：執行 R 指令碼
-description: 使用 SQL Server 機器學習服務執行一組簡單的 R 指令碼。 了解如何使用預存程序 sp_execute_external_script 在 SQL Server 執行個體中執行指令碼。
+titleSuffix: SQL machine learning
+description: 使用 SQL 機器學習來執行一組簡單的 R 指令碼。 了解如何使用預存程序 sp_execute_external_script 來執行指令碼。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 33baeba807711c1eb65b3a9c972066bb384e2542
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ed4f4899869dbc9609f29d935c80a7df88fa3d4c
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487293"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606750"
 ---
-# <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務執行簡單的 R 指令碼
+# <a name="quickstart-run-simple-r-scripts-with-sql-machine-learning"></a>快速入門：使用 SQL 機器學習來執行簡單的 R 指令碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+在此快速入門中，您將會使用 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)或[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)執行一組簡單的 R 指令碼。 您將會了解如何使用預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在 SQL Server 執行個體中執行指令碼。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在此快速入門中，您將會使用 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)來執行一組簡單的 R 指令碼。 您將會了解如何使用預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在 SQL Server 執行個體中執行指令碼。
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+在此快速入門中，您將會使用 [SQL Server R Services](../r/sql-server-r-services.md) 來執行一組簡單的 R 指令碼。 您將會了解如何使用預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在 SQL Server 執行個體中執行指令碼。
+::: moniker-end
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- 本快速入門需使用已安裝 R 語言的 [SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)來存取 SQL Server 的執行個體。
+您需要符合下列必要條件，才能執行此快速入門。
 
-  您的 SQL Server 執行個體可以位於 Azure 虛擬機器或內部部署中。 請注意，外部指令碼功能預設為停用，因此可能需要[啟用外部指令碼](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)，並在開始之前確認 **SQL Server Launchpad 服務**正在執行。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 您也可以[啟用 SQL Server 巨量資料叢集上的機器學習服務](../../big-data-cluster/machine-learning-services.md)。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)。 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services。 如需如何安裝 R Services 的相關資訊，請參閱 [Windows 安裝指南](../install/sql-r-services-windows-install.md)。 
+::: moniker-end
 
-- 您也需要工具來執行包含 R 指令碼的 SQL 查詢。 您可以使用任何資料庫管理或查詢工具來執行這些指令碼，只要該工具可以連線到 SQL Server 執行個體，並執行 T-SQL 查詢或預存程序即可。 本快速入門使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
+- 執行 SQL 查詢的工具，這些查詢包含 R 指令碼。 本快速入門使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 ## <a name="run-a-simple-script"></a>執行簡單的指令碼
 
-若要執行 R 指令碼，請將它當做引數傳遞至系統預存程式，[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
-此系統預存程序會在 SQL Server 內容中啟動 R 執行階段、將資料傳遞到 R、安全地管理 R 使用者工作階段，並將任何結果傳回用戶端。
+若要執行 R 指令碼，請將它當做引數傳遞至系統預存程式，[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 此系統預存程序會啟動 R 執行階段、將資料傳遞到 R、安全地管理 R 使用者工作階段，並將任何結果傳回用戶端。
 
-在下列步驟中，您將在 SQL Server 執行個體中執行此範例 R 指令碼：
+在下列步驟中，您會執行此範例 R 指令碼：
 
 ```r
 a <- 1
@@ -45,7 +61,7 @@ d <- a*b
 print(c(c, d))
 ```
 
-1. 開啟 **SQL Server Management Studio** 並連線至 SQL Server 執行個體。
+1. 開啟 **Azure Data Studio**，並連接到您的伺服器。
 
 1. 將完整的 R 指令碼傳遞至 `sp_execute_external_script` 預存程序。
 
@@ -62,7 +78,7 @@ print(c(c, d))
     '
     ```
 
-1. 系統會計算正確的結果，且 R `print` 函數會將結果傳回至 [訊息]  視窗。
+1. 系統會計算正確的結果，且 R `print` 函數會將結果傳回至 [訊息] 視窗。
 
    其外觀應該如下所示。
 
@@ -91,8 +107,8 @@ GO
 |-|-|
 | @language | 定義要呼叫的語言擴充功能，在本例中為 R |
 | @script | 定義要傳遞至 R 執行階段的命令。 整個 R 指令碼都必須包含在這個引數中 (作為 Unicode 文字)。 您也可以將文字新增至 **Nvarchar** 類型的變數，並呼叫該變數 |
-| @input_data_1 | 查詢所傳回的資料會傳遞到 R 執行階段，它會以資料框架的格式將資料傳回 SQL Server |
-|使用結果集 | 子句會定義 SQL Server 傳回資料表的結構描述，然後加入 "Hello World" 做為資料行名稱，並將 **int** 用於資料類型 |
+| @input_data_1 | 查詢所傳回的資料會傳遞到 R 執行階段，其會以資料框架的格式傳回資料 |
+|使用結果集 | 子句會定義所傳回資料表的結構描述，然後加入 "Hello World" 做為資料行名稱，並將 **int** 用於資料類型 |
 
 此命令會輸出下列文字：
 
@@ -182,7 +198,12 @@ GO
 
 ## <a name="check-r-version"></a>檢查 R 版本
 
-如果您想要查看在 SQL Server 執行個體中所安裝的 R 版本，請執行下列指令碼。
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+如果您想要查看哪個版本的 R 與 SQL Server 機器學習服務一起安裝，請執行下列指令碼。
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+如果您想要查看哪個版本的 R 與 SQL Server 2016 R Services 一起安裝，請執行下列指令碼。
+::: moniker-end
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'R'
@@ -190,7 +211,7 @@ EXECUTE sp_execute_external_script @language = N'R'
 GO
 ```
 
-R `print` 函數會將版本傳回到 [訊息]  視窗。 在下方的範例輸出中，您可以看到在此案例中安裝的是 R 3.4.4 版。
+R `print` 函數會將版本傳回到 [訊息] 視窗。 在下方的範例輸出中，您可以看到在此案例中安裝的是 R 3.4.4 版。
 
 **結果**
 
@@ -214,8 +235,12 @@ nickname       Someone to Lean On
 ```
 
 ## <a name="list-r-packages"></a>列出 R 套件
-
-Microsoft 提供一些透過 SQL Server 機器學習服務預先安裝的 R 套件。
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Microsoft 提供一些預先與機器學習服務一起安裝的 R 套件。
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Microsoft 提供一些預先與 R Services 一起安裝的 R 套件。
+::: moniker-end
 
 若要查看已安裝 R 套件的清單 (包括版本、相依性、授權及程式庫路徑資訊)，請執行下列指令碼。
 
@@ -240,13 +265,7 @@ WITH result sets((
 
 ## <a name="next-steps"></a>後續步驟
 
-若要瞭解如何在 SQL Server 機器學習服務中使用 R 來使用資料結構，請遵循本快速入門：
+若要了解如何在使用 R 時搭配 SQL 機器學習使用資料結構，請遵循本快速入門：
 
 > [!div class="nextstepaction"]
-> [在 SQL Server 機器學習服務中使用 R 處理資料類型和物件](quickstart-r-data-types-and-objects.md)
-
-如需在 SQL Server 機器學習服務中使用 R 的詳細資訊，請參閱下列文章：
-
-- [使用 SQL Server 機器學習服務撰寫進階 R 函數](quickstart-r-functions.md)
-- [使用 SQL Server 機器學習服務在 R 中建立預測模型並計算其分數](quickstart-r-train-score-model.md)
-- [什麼是 SQL Server 機器學習服務 (Python 和 R)？](../sql-server-machine-learning-services.md)
+> [搭配 SQL 機器學習使用 R 來處理資料類型和物件](quickstart-r-data-types-and-objects.md)

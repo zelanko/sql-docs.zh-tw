@@ -1,25 +1,31 @@
 ---
 title: Python 教學課程：定型模型
-description: 在此教學課程系列的第三部分 (總共四個部分)，您將會在 SQL Server 機器學習服務中使用 Python 定型線性迴歸模型以預測雪橇租賃。
+titleSuffix: SQL machine learning
+description: 在這個教學課程系列的第三部分 (總共四個部分) 中，您將會使用 SQL 機器學習定型 Python 中的線性迴歸模型來預測雪橇租賃。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/20/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c564ac26c5706e67d9a633a05f81cb48d00fb771
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2d2335c982a75d924bfc60293632650b2d887527
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116431"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606530"
 ---
-# <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python 教學課程：在 SQL Server 機器學習服務中定型線性迴歸模型
+# <a name="python-tutorial-train-a-linear-regression-model-with-sql-machine-learning"></a>Python 教學課程：使用 SQL 機器學習定型線性迴歸模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+在這個教學課程系列的第三部分 (總共四個部分) 中， 您將使用 Python 來定型線性迴歸模型。 在本系列的下一部分中，您將使用機器學習服務在 SQL Server 資料庫中部署此模型，或在巨量資料叢集上進行此部署。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在這個教學課程系列的第三部分 (總共四個部分) 中， 您將使用 Python 來定型線性迴歸模型。 在本系列的下一部分中，您將使用機器學習服務在 SQL Server 資料庫中部署此模型。
+::: moniker-end
 
 在本文中，您將學會如何：
 
@@ -29,9 +35,9 @@ ms.locfileid: "81116431"
 
 在[第一部分](python-ski-rental-linear-regression.md)，您已了解如何還原範例資料庫。
 
-在[第二部分](python-ski-rental-linear-regression-prepare-data.md)，您已了解如何將資料從 SQL Server 載入到 Python 資料框架，並以 Python 準備資料。
+在[第二部分](python-ski-rental-linear-regression-prepare-data.md)中，您已了解如何將資料從資料庫載入到 Python 資料框架，並以 Python 準備資料。
 
-在[第四部分](python-ski-rental-linear-regression-deploy-model.md)中，您將了解如何將模型儲存至 SQL Server，然後以您在第二部分和第三部分開發的 Python 指令碼建立預存程序。 預存程序將會在 SQL Server 中執行，以根據新資料進行預測。
+在[第四部分](python-ski-rental-linear-regression-deploy-model.md)中，您將了解如何將模型儲存在資料庫中，然後從您在第二和第三部分中開發的 Python 指令碼建立預存程序。 預存程序將會在伺服器上執行，以根據新資料進行預測。
 
 ## <a name="prerequisites"></a>Prerequisites
 

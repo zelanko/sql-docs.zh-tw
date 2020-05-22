@@ -1,7 +1,7 @@
 ---
 title: 設定 Azure Kubernetes Service
 titleSuffix: SQL Server Big Data Clusters
-description: 了解如何針對 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]部署設定 Azure Kubernetes Service (AKS)。
+description: 了解如何針對 SQL Server 2019 巨量資料叢集部署設定 Azure Kubernetes Service (AKS)。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6a725cdbc5424da3820e5cd404306465482b3d94
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77173612"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606930"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>針對 SQL Server 巨量資料叢集部署設定 Azure Kubernetes Service
 
@@ -28,7 +28,7 @@ AKS 可讓使用者輕鬆地建立、設定及管理已預先設定 Kubernetes �
 此文章說明使用 Azure CLI 在 AKS 上部署 Kubernetes 的步驟。 如果您沒有 Azure 訂用帳戶，請在開始前先建立免費帳戶。
 
 > [!TIP]
-> 您也可以透過單一步驟編寫部署 AKS 和巨量資料叢集的指令碼。 如需詳細資訊，請參閱如何在 [Python 指令碼](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [筆記本](deploy-notebooks.md)中執行此動作。
+> 您也可以透過單一步驟編寫部署 AKS 和巨量資料叢集的指令碼。 如需詳細資訊，請參閱如何在 [Python 指令碼](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [筆記本](notebooks-deploy.md)中執行此動作。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -76,7 +76,7 @@ Azure 資源群組是部署及管理 Azure 資源所在的邏輯群組。 下列
    az account list-locations -o table
    ```
 
-1. 使用 **az group create** 命令來建立資源群組。 下列範例會在 `sqlbdcgroup` 位置建立名為 `westus2` 的資源群組。
+1. 使用 **az group create** 命令來建立資源群組。 下列範例會在 `westus2` 位置建立名為 `sqlbdcgroup` 的資源群組。
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2

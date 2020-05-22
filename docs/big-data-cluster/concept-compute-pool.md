@@ -1,7 +1,7 @@
 ---
 title: 什麼是計算集區？
 titleSuffix: SQL Server big data clusters
-description: 此文章說明 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]中的計算集區。
+description: 本文描述 SQL Server 2019 巨量資料叢集中的計算集區。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e54ee601b180e8883ec9fea49fff810c52fe5f49
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: be8766f00a8c6b4d9fd47c976c5a2e1235cacd41
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253136"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606340"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 巨量資料叢集中的計算集區？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-此文章說明 SQL Server 巨量資料叢集中「SQL Server 計算集區」  的角色。 計算集區為巨量資料叢集提供向外延展計算資源。 下列各節描述計算集區的架構和功能。
+此文章說明 SQL Server 巨量資料叢集中「SQL Server 計算集區」的角色。 計算集區為巨量資料叢集提供向外延展計算資源。 下列各節描述計算集區的架構和功能。
 
 您也可以觀看這段 5 分鐘的影片，以取得計算集區簡介：
 

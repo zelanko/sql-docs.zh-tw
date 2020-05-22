@@ -1,7 +1,7 @@
 ---
 title: 什麼是主要執行個體？
 titleSuffix: SQL Server big data clusters
-description: 本文說明 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]中的 SQL Server 主要執行個體。
+description: 本文描述 SQL Server 2019 巨量資料叢集中的 SQL Server 主要執行個體。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 42e16066a08c0b30fd8b43eaf481525c4f510b80
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0cb2f253f56fc58e215d1c800788294e2df7b0aa
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69652270"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606628"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 巨量資料叢集中的主要執行個體？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明 SQL Server 2019 巨量資料叢集中的「SQL Server 主要執行個體」  角色。 主要執行個體是在巨量資料叢集中執行的 SQL Server 執行個體，可管理連線能力、向外延展查詢、中繼資料與使用者資料庫，以及機器學習服務。
+本文說明 SQL Server 2019 巨量資料叢集中的「SQL Server 主要執行個體」角色。 主要執行個體是在巨量資料叢集中執行的 SQL Server 執行個體，可管理連線能力、向外延展查詢、中繼資料與使用者資料庫，以及機器學習服務。
 
 SQL Server 主要執行個體提供下列功能：
 
@@ -51,7 +51,7 @@ SQL Server 機器學習服務是資料庫引擎的附加元件功能，可用於
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>巨量資料叢集中的機器學習服務優點
 
-SQL Server 2019 可讓您輕鬆地將巨量資料聯結到維度資料 (通常儲存在企業資料庫中)。 當巨量資料不只是由組織的部分單位掌控，還包含在報表、儀表板和應用程式裡時，將可大幅提升價值。 同時，資料科學家可以繼續使用 Spark/HDFS 生態系統工具，並輕鬆即時地存取 SQL Server 主要執行個體中的資料，以及可「透過」  SQL Server 主要執行個體存取之外部資料來源中的資料。
+SQL Server 2019 可讓您輕鬆地將巨量資料聯結到維度資料 (通常儲存在企業資料庫中)。 當巨量資料不只是由組織的部分單位掌控，還包含在報表、儀表板和應用程式裡時，將可大幅提升價值。 同時，資料科學家可以繼續使用 Spark/HDFS 生態系統工具，並輕鬆即時地存取 SQL Server 主要執行個體中的資料，以及可「透過」SQL Server 主要執行個體存取之外部資料來源中的資料。
 
 藉由 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]，您可以使用企業資料湖來執行更多工作。 SQL Server 開發人員和分析師可以：
 

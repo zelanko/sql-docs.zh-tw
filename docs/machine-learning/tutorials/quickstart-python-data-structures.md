@@ -3,24 +3,29 @@ title: 快速入門：Python 資料結構
 description: 在此快速入門中，了解如何使用 Python 與 SQL Server 機器學習服務中的資料結構與資料物件。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/15/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 03d578b2cd6419a676ed6bd1b581dd57107d4209
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 3023287504cbb7b25e194b53d0957e82405d1ea8
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487319"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606690"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>快速入門：在 SQL Server 機器學習服務中使用 Python 的資料結構與物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在此快速入門中，您將會了解在 SQL Server 機器學習服務中使用 Python 時，如何使用資料結構。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+在此快速入門中，您將會了解當您在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中或在[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上使用 Python 時，如何使用資料結構與資料類型。 在此快速入門中，您將會了解如何在 Python 與 SQL Server 之間移動資料，以及可能發生的常見問題。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+在此快速入門中，您將會了解當您在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中使用 Python 時，如何使用資料結構與資料類型。 在此快速入門中，您將會了解如何在 Python 與 SQL Server 之間移動資料，以及可能發生的常見問題。
+::: moniker-end
 
 SQL Server 依賴 Python **pandas** 套件，這非常適合用來處理表格式資料。 不過，您無法將純量從 Python 傳遞至 SQL Server，並預期它「能正常工作」。 在此快速入門中，您將會複習一些基本資料結構定義，讓您能夠針對在 Python 與 SQL Server 之間傳遞表格式資料時可能會遇到的其他問題做好準備。
 
@@ -37,9 +42,15 @@ SQL Server 依賴 Python **pandas** 套件，這非常適合用來處理表格�
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- 本快速入門需使用已安裝 Python 語言的 [SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)來存取 SQL Server 的執行個體。
+您需要符合下列必要條件，才能執行此快速入門。
 
-- 您也需要工具來執行包含 Python 指令碼的 SQL 查詢。 您可以使用任何資料庫管理或查詢工具來執行這些指令碼，只要該工具可以連線到 SQL Server 執行個體，並執行 T-SQL 查詢或預存程序即可。 本快速入門使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 您也可以[啟用 SQL Server 巨量資料叢集上的機器學習服務](../../big-data-cluster/machine-learning-services.md)。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)。 
+::: moniker-end
+- 您也需要工具來執行包含 Python 指令碼的 SQL 查詢。 您可以使用任何資料庫管理或查詢工具來執行這些指令碼，只要該工具可以連線到 SQL Server 執行個體，並執行 T-SQL 查詢或預存程序即可。 本快速入門使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)。
 
 ## <a name="scalar-value-as-a-series"></a>以純量值作為序列
 
