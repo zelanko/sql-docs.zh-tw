@@ -82,7 +82,7 @@ ms.locfileid: "79288232"
 |status|狀態資料表使用的狀態碼。|  
 |sub_status|狀態資料表使用的子狀態碼。|  
 |status_message|狀態資料表使用的狀態訊息。|  
-|target|產生追蹤記錄的 Oracle CDC 元件名稱。|  
+|source|產生追蹤記錄的 Oracle CDC 元件名稱。|  
 |text_data|當錯誤或追蹤記錄包含文字裝載時的其他文字資料。|  
 |binary_data|當錯誤或追蹤記錄包含二進位裝載時的其他二進位資料。|  
   
