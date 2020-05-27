@@ -91,7 +91,7 @@ FETCH
   
 -   如果未指定 `DYNAMIC`、`FORWARD_ONLY` 或 `FAST_FORWARD`，且指定了 `KEYSET`、`STATIC` 或 `SCROLL` 其中之一，則所有 `FETCH` 都受支援。  
   
--   `DYNAMIC SCROLL` 資料指標支援除了 `FETCH` 外的所有 `ABSOLUTE` 選項。  
+-   `DYNAMIC SCROLL` 資料指標支援除了 `ABSOLUTE` 外的所有 `FETCH` 選項。  
   
  `@@FETCH_STATUS` 函數會報告最後一個 `FETCH` 陳述式的狀態。 相同的資訊記錄在 sp_describe_cursor 傳回之資料指標的 fetch_status 資料行中。 試圖在 `FETCH` 陳述式傳回的資料上執行任何作業之前，您應該先利用這個狀態資訊來判斷該資料是否有效。 如需詳細資訊，請參閱 [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)。  
   

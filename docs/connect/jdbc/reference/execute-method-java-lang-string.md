@@ -48,7 +48,7 @@ public final boolean execute(java.lang.String sql)
 ## <a name="remarks"></a>備註  
  這個 execute 方法是由 java.sql.Statement 介面中的 execute 方法指定。  
   
- 這個方法會覆寫 [SQLServerStatement](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 類別中找到的 [execute](../../../connect/jdbc/reference/sqlserverstatement-class.md) 方法。  
+ 這個方法會覆寫 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 類別中找到的 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法。  
   
  呼叫這個方法將會產生例外狀況，因為當建立 SQLServerPreparedStatement 物件時，已指定此物件的 SQL 陳述式。  
   

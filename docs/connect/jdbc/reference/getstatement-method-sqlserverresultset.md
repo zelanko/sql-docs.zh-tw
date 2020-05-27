@@ -25,7 +25,7 @@ ms.locfileid: "67979578"
 # <a name="getstatement-method-sqlserverresultset"></a>getStatement 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取產生這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
+  擷取產生這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件。  
   
 ## <a name="syntax"></a>語法  
   

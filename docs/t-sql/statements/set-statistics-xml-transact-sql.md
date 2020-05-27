@@ -60,7 +60,7 @@ SET STATISTICS XML { ON | OFF }
  SET STATISTICS PROFILE 和 SET STATISTICS XML 彼此是對應的項目。 前者會產生文字輸出；後者會產生 XML 輸出。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未來的版本中，只會透過 SET STATISTICS XML 陳述式來顯示新的查詢執行計畫資訊，不會使用 SET STATISTICS PROFILE 陳述式。  
   
 > [!NOTE]  
->  如果已在  **中選取了 [包括實際執行計畫]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，這個 SET 選項將不會產生 XML 執行程序表輸出。 在使用這個 SET 選項之前，請清除 [包括實際執行計畫]  按鈕。  
+>  如果已在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中選取了 [包括實際執行計畫]，這個 SET 選項將不會產生 XML 執行程序表輸出。 在使用這個 SET 選項之前，請清除 [包括實際執行計畫]  按鈕。  
   
 ## <a name="permissions"></a>權限  
  若要使用 SET STATISTICS XML 和檢視輸出，使用者必須有下列權限：  

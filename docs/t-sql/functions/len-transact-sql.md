@@ -48,7 +48,7 @@ LEN ( string_expression )
  這是要評估的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *string_expression* 可以是字元或二進位資料的常數、變數或資料行。  
   
 ## <a name="return-types"></a>傳回型別  
- 若 **expression** 的資料類型為 *varchar(max)* 、**nvarchar(max)** 或 **varbinary(max)** ，則為 **bigint**，否則為 **int**。  
+ 若 *expression* 的資料類型為 **varchar(max)** 、**nvarchar(max)** 或 **varbinary(max)** ，則為 **bigint**，否則為 **int**。  
   
  如果您使用 SC 定序，傳回的整數值也將 UTF-16 Surrogate 字組視為單一字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   

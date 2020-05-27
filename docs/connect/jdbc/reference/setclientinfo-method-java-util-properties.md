@@ -40,7 +40,7 @@ public void setClientInfo (java.util.Properties properties)
 ## <a name="remarks"></a>備註  
  此 setClientInfo 方法是由 java.sql.Connection 介面中的 setClientInfo 方法所指定。  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 不支援任何用戶端資訊屬性。 如果 *properties* 輸入參數不會參考空的屬性集，則這個方法就會產生警告。 換句話說，這個方法會針對應用程式將要設定的屬性產生警告。 應用程式必須使用 [SQLServerConnection](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) 類別的 [getWarnings](../../../connect/jdbc/reference/sqlserverconnection-class.md) 方法來擷取各個警告。  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 不支援任何用戶端資訊屬性。 如果 *properties* 輸入參數不會參考空的屬性集，則這個方法就會產生警告。 換句話說，這個方法會針對應用程式將要設定的屬性產生警告。 應用程式必須使用 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) 方法來擷取各個警告。  
   
 ## <a name="see-also"></a>另請參閱  
  [setClientInfo 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setclientinfo-method-sqlserverconnection.md)   

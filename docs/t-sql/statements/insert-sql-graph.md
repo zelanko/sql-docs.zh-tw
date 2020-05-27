@@ -27,7 +27,7 @@ ms.locfileid: "68071175"
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-將一或多個資料列新增至 `node` 的 `edge` 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 
+將一或多個資料列新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `node` 或 `edge` 資料表。 
 
 > [!NOTE]   
 >  如需標準 Transact-SQL 陳述式，請參閱 [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。
@@ -123,7 +123,7 @@ INTO
 
 節點資料表的大量插入仍然與關聯式資料表相同。
 
-在大量插入邊緣資料表之前，必須先匯入節點資料表。 然後可以從節點資料表的 `$from_id` 資料行擷取 `$to_id` 和 `$node_id` 的值，然後插入為邊緣。 
+在大量插入邊緣資料表之前，必須先匯入節點資料表。 然後可以從節點資料表的 `$node_id` 資料行擷取 `$from_id` 和 `$to_id` 的值，然後插入為邊緣。 
 
   
 ### <a name="permissions"></a>權限  

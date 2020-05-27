@@ -25,7 +25,7 @@ ms.locfileid: "67981016"
 # <a name="getparameterclassname-method-sqlserverparametermetadata"></a>getParameterClassName 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取 Java 類別的完整名稱，此類別的執行個體應該要傳遞給 [SQLServerPreparedStatement](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 類別的 [setObject](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 方法。  
+  擷取 Java 類別的完整名稱，此類別的執行個體應該要傳遞給 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別的 [setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 方法。  
   
 ## <a name="syntax"></a>語法  
   

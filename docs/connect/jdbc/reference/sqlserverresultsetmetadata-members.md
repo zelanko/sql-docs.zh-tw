@@ -39,7 +39,7 @@ ms.locfileid: "67970527"
 |名稱|描述|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|取得包含所指定之資料行之資料表的目錄名稱。|  
-|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|傳回 Java 類別的完整名稱，此類別執行個體會在呼叫 [SQLServerResultSet](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 類別的 [getObject](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法來從資料行擷取值時進行製造。|  
+|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|傳回 Java 類別的完整名稱，此類別執行個體會在呼叫 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 方法來從資料行擷取值時進行製造。|  
 |[getColumnCount](../../../connect/jdbc/reference/getcolumncount-method-sqlserverresultsetmetadata.md)|傳回結果集中的資料行數目。|  
 |[getColumnDisplaySize](../../../connect/jdbc/reference/getcolumndisplaysize-method-sqlserverresultsetmetadata.md)|傳回所指定資料行的正常最大寬度，以字元為單位。|  
 |[getColumnLabel](../../../connect/jdbc/reference/getcolumnlabel-method-sqlserverresultsetmetadata.md)|取得建議在指定之資料行之列印輸出和顯示中使用的標題。|  

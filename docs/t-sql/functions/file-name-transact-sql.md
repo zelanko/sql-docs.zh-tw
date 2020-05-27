@@ -56,7 +56,7 @@ FILE_NAME ( file_id )
 *file_ID* 對應於 sys.master_files 目錄檢視或 sys.database_files 目錄檢視中的 file_id 資料行。  
   
 ## <a name="examples"></a>範例  
-此範例會傳回 `file_ID 1` 資料庫中 `file_ID` 和 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的檔案名稱。  
+此範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `file_ID 1` 和 `file_ID` 的檔案名稱。  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  

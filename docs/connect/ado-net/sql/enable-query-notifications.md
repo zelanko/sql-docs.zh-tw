@@ -78,7 +78,7 @@ CREATE SERVICE ContactChangeNotifications
   
 在部分信任狀況下執行的用戶端程式碼需要 <xref:Microsoft.Data.SqlClient.SqlClientPermission>。  
   
-下列程式碼會建立將 <xref:Microsoft.Data.SqlClient.SqlClientPermission> 設定為 <xref:System.Security.Permissions.PermissionState> 的 <xref:System.Security.Permissions.PermissionState.Unrestricted> 物件。 如果在呼叫堆疊中較高的所有呼叫者都尚未獲授與權限，<xref:System.Security.CodeAccessPermission.Demand%2A> 將會在執行階段強制執行 <xref:System.Security.SecurityException>。  
+下列程式碼會建立將 <xref:System.Security.Permissions.PermissionState> 設定為 <xref:System.Security.Permissions.PermissionState.Unrestricted> 的 <xref:Microsoft.Data.SqlClient.SqlClientPermission> 物件。 如果在呼叫堆疊中較高的所有呼叫者都尚未獲授與權限，<xref:System.Security.CodeAccessPermission.Demand%2A> 將會在執行階段強制執行 <xref:System.Security.SecurityException>。  
   
 [!code-csharp[DataWorks SqlClientPermission_Demand#1](~/../sqlclient/doc/samples/SqlClientPermission_Demand.cs#1)]
   

@@ -43,7 +43,7 @@ public java.lang.String getSchemaTerm()
 ## <a name="remarks"></a>備註  
  這個 getSchemaTerm 方法是由 java.sql.DatabaseMetaData 介面中的 getSchemaTerm 方法指定。  
   
- 當搭配 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 資料庫使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，這個方法會傳回作為慣用詞彙的 "schema"。  
+ 當搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 時，這個方法會傳回作為慣用詞彙的 "schema"。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

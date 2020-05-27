@@ -26,7 +26,7 @@ ms.locfileid: "78896698"
 在引進 Multiple Active Result Set (MARS) 之前，開發人員必須使用多個連線或伺服器端資料指標來解決特定案例。 此外，當在交易情況中使用多重連線時，需要繫結連線 (使用 **sp_getbindtoken** 及 **sp_bindsession**)。 下列案例示範如何使用已啟用 MARS 的連線，而不是多個連線。  
   
 ## <a name="using-multiple-commands-with-mars"></a>使用多個具有 MARS 的命令  
-下列主控台應用程式示範如何使用兩個具有兩個 <xref:Microsoft.Data.SqlClient.SqlDataReader> 物件的 <xref:Microsoft.Data.SqlClient.SqlCommand> 物件，以及已啟用 MARS 的單一 <xref:Microsoft.Data.SqlClient.SqlConnection> 物件。  
+下列主控台應用程式示範如何使用兩個具有兩個 <xref:Microsoft.Data.SqlClient.SqlCommand> 物件的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 物件，以及已啟用 MARS 的單一 <xref:Microsoft.Data.SqlClient.SqlConnection> 物件。  
   
 ### <a name="example"></a>範例  
 此範例會開啟 **AdventureWorks** 資料庫的單一連線。 使用 <xref:Microsoft.Data.SqlClient.SqlCommand> 物件，即會建立 <xref:Microsoft.Data.SqlClient.SqlDataReader>。 使用讀取器時，會開啟第二個 <xref:Microsoft.Data.SqlClient.SqlDataReader>，並使用第一個 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的資料作為第二個讀取器的 WHERE 子句輸入。  
@@ -109,7 +109,7 @@ static void Main()
 MARS 允許將連線用於含有一個以上擱置中作業的讀取作業與資料操作語言 (DML) 作業。 此功能讓應用程式不需要處理連線忙碌的錯誤。 此外，MARS 也可以取代伺服器端資料指標的使用者，這通常會取用更多資源。 最後，因為多個作業可在單一連線上進行操作，所以可共用相同的交易內容，而無需使用 **sp_getbindtoken** 及 **sp_bindsession** 系統預存程序。  
   
 ### <a name="example"></a>範例  
-下列主控台應用程式示範如何使用兩個具有三個 <xref:Microsoft.Data.SqlClient.SqlDataReader> 物件的 <xref:Microsoft.Data.SqlClient.SqlCommand> 物件，以及已啟用 MARS 的單一 <xref:Microsoft.Data.SqlClient.SqlConnection> 物件。 第一個命令物件會擷取其信用評等為 5 的廠商清單。 第二個命令物件會使用 <xref:Microsoft.Data.SqlClient.SqlDataReader> 提供的廠商識別碼，來載入第二個 <xref:Microsoft.Data.SqlClient.SqlDataReader> 以及該特定廠商的所有產品。 第二個 <xref:Microsoft.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。 將會執行計算，以判斷新的 **OnOrderQty** 應該是什麼。 然後使用第三個命令物件，以新值來更新 **ProductVendor** 資料表。 這整個程序都會在單一交易內進行，並在結束時復原。  
+下列主控台應用程式示範如何使用兩個具有三個 <xref:Microsoft.Data.SqlClient.SqlCommand> 物件的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 物件，以及已啟用 MARS 的單一 <xref:Microsoft.Data.SqlClient.SqlConnection> 物件。 第一個命令物件會擷取其信用評等為 5 的廠商清單。 第二個命令物件會使用 <xref:Microsoft.Data.SqlClient.SqlDataReader> 提供的廠商識別碼，來載入第二個 <xref:Microsoft.Data.SqlClient.SqlDataReader> 以及該特定廠商的所有產品。 第二個 <xref:Microsoft.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。 將會執行計算，以判斷新的 **OnOrderQty** 應該是什麼。 然後使用第三個命令物件，以新值來更新 **ProductVendor** 資料表。 這整個程序都會在單一交易內進行，並在結束時復原。  
   
 > [!NOTE]
 >  下列範例使用包含於 SQL Server 的 **AdventureWorks** 範例資料庫。 範例程式碼中提供的連接字串會假設資料庫安裝在本機電腦且可供使用。 請依據您的環境需求修改連接字串。  

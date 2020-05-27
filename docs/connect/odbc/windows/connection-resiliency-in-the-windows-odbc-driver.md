@@ -35,7 +35,7 @@ ms.locfileid: "68008429"
   
      您可以在執行下列作業時修改連接重試次數：  
   
-    -   透過[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]連接重試計數**控制項定義或修改使用 ODBC Driver for**  的資料來源。  
+    -   透過**連接重試計數**控制項定義或修改使用 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料來源。  
   
     -   使用 **ConnectRetryCount** 連接字串關鍵字。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68008429"
   
      您可以在執行下列作業時修改連接重試間隔：  
   
-    -   透過[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]連接重試間隔**控制項定義或修改使用 ODBC Driver for**  的資料來源。  
+    -   透過**連接重試間隔**控制項定義或修改使用 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料來源。  
   
     -   使用 **ConnectRetryInterval** 連接字串關鍵字。  
   

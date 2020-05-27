@@ -54,7 +54,7 @@ ms.locfileid: "69028010"
 ## <a name="collation-support"></a>定序支援  
  JDBC Driver 3.0 支援 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 和 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所支援的所有定序，以及 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] 中引進的新定序或新版 Windows 定序名稱。  
   
- 如需定序的詳細資訊，請參閱《[ 線上叢書》中的](https://go.microsoft.com/fwlink/?LinkId=131366)定序與 Unicode 支援[ 和 ](https://go.microsoft.com/fwlink/?LinkId=131367)Windows 定序名稱 (Transact-SQL)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 如需定序的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[定序與 Unicode 支援](https://go.microsoft.com/fwlink/?LinkId=131366) 和 [Windows 定序名稱 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367)。  
   
 ## <a name="using-international-domain-names-idn"></a>使用國際網域名稱 (IDN)  
  SQL Server 的 JDBC Driver 6.0 支援使用國際化網域名稱 (IDN)，且於連線期間會於必要時將 Unicode serverName 轉換成 ASCII 相容編碼 (Punycode)。  如果 IDN 在網域名稱系統 (DNS) 中以 Punycode 格式 (由 RFC 3490 指定) 儲存為為 ASCII 字串，請將 serverNameAsACE 屬性設定為 true，啟用 Unicode 伺服器名稱的轉換。  否則，如果 DNS 服務設定為允許使用 Unicode 字元，則請將 serverNameAsACE 屬性設定為 false (預設值)。  針對舊版 JDBC 驅動程式，也可將 serverName 轉換為 Punycode，方法是在為連線設定該屬性之前，使用 [Java 的 IDN.toASCII](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) 方法。  

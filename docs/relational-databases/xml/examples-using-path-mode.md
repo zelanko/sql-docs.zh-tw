@@ -269,7 +269,7 @@ FOR XML PATH('ProductModelData');
   
 -   第一個巢狀 `SELECT` 使用 `data()` 做為資料行名稱，以傳回 ProductID 的清單。 因為查詢在 `FOR XML PATH`中將空字串指定為資料列元素名稱，所以不會產生元素。 值清單會改指派給 `ProductID` 屬性。  
   
--   第二個巢狀 `SELECT` 會擷取產品型號中的產品名稱。 它會產生包裝在 <`ProductName`> 元素中的 <`ProductNames`> 元素，因為查詢會將 `ProductNames` 指定為資料行名稱。  
+-   第二個巢狀 `SELECT` 會擷取產品型號中的產品名稱。 它會產生包裝在 <`ProductNames`> 元素中的 <`ProductName`> 元素，因為查詢會將 `ProductNames` 指定為資料行名稱。  
   
  以下是部份結果：  
   
@@ -329,7 +329,7 @@ FOR XML PATH ('Translation')
 GO  
 ```  
   
- 加入至 <`@xml:lang`> 元素的 `English` 屬性是在預先定義的 xml 命名空間中定義。  
+ 加入至 <`English`> 元素的 `@xml:lang` 屬性是在預先定義的 xml 命名空間中定義。  
   
  以下是結果：  
 

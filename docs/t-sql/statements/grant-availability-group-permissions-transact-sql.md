@@ -109,7 +109,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. 授與具有 GRANT OPTION 的 TAKE OWNERSHIP 權限  
- 下列範例會將可用性群組 `TAKE OWNERSHIP` 的 `MyAg` 權限授與具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `PKomosinski` 使用者 `GRANT OPTION`。  
+ 下列範例會將可用性群組 `TAKE OWNERSHIP` 的 `MyAg` 權限授與具有 `PKomosinski` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 `GRANT OPTION`。  
   
 ```  
 USE master;  

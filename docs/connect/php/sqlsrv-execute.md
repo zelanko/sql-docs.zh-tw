@@ -46,7 +46,7 @@ sqlsrv_execute( resource $stmt)
 一個布林值：如果陳述式成功執行，則為 **true** 。 否則為 **false**。  
   
 ## <a name="example"></a>範例  
-下列範例會執行一個陳述式，以更新 *AdventureWorks* 資料庫之 [Sales.SalesOrderDetail](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料表中的欄位。 此範例假設本機電腦上已安裝 SQL Server 和 AdventureWorks 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例會執行一個陳述式，以更新 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫之 *Sales.SalesOrderDetail* 資料表中的欄位。 此範例假設本機電腦上已安裝 SQL Server 和 AdventureWorks 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

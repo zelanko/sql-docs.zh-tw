@@ -25,7 +25,7 @@ ms.locfileid: "69027478"
 
 ## <a name="getter-method-conversions"></a>Getter 方法轉換
 
-根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，下列圖表包含 \<SQLServerResultSet[ 類別之 get](../../connect/jdbc/reference/sqlserverresultset-class.md)Type>() 方法的 JDBC 驅動程式轉換對應，以及 \<SQLServerCallableStatement[ 類別之 get](../../connect/jdbc/reference/sqlservercallablestatement-class.md)Type> 方法的支援轉換。
+根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，下列圖表包含 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別之 get\<Type>() 方法的 JDBC 驅動程式轉換對應，以及 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別之 get\<Type> 方法的支援轉換。
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
@@ -41,7 +41,7 @@ JDBC 驅動程式的 getter 方法所支援的轉換有三種類別：
 
 ## <a name="updater-method-conversions"></a>Updater 方法轉換
 
-若為傳遞給 \<SQLServerResultSet[ 類別之 update](../../connect/jdbc/reference/sqlserverresultset-class.md)類型>() 方法的 Java 類型資料，則適用下列轉換。
+若為傳遞給 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別之 update\<類型>() 方法的 Java 類型資料，則適用下列轉換。
 
 ![JDBCUpdaterConversions](../../connect/jdbc/media/jdbc_jdbcupdatterconversions.gif "JDBCUpdaterConversions")
 
@@ -65,7 +65,7 @@ JDBC 驅動程式的 updater 方法所支援的轉換有三種類別：
 
 ## <a name="setter-method-conversions"></a>Setter 方法轉換
 
-若為傳遞給 \<SQLServerPreparedStatement[ 類別和 ](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)SQLServerCallableStatement[ 類別之 set](../../connect/jdbc/reference/sqlservercallablestatement-class.md)類型>() 方法的 Java 類型資料，則適用下列轉換。
+若為傳遞給 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別之 set\<類型>() 方法的 Java 類型資料，則適用下列轉換。
 
 ![JDBCSetterConversions](../../connect/jdbc/media/jdbc_jdbcsetterconversions_v2.gif "JDBCSetterConversions")
 
@@ -96,7 +96,7 @@ JDBC 驅動程式的 setter 方法所支援的轉換有兩種類別：
 > [!NOTE]  
 > Microsoft JDBC Driver 4.2 (及更新版本) for SQL Server 支援 JDBC 4.1 和 4.2。 如需 4.1 和 4.2 資料類型對應與轉換的詳細資訊，請參閱[適用於 JDBC 驅動程式的 JDBC 4.1 合規性](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md)和[適用於 JDBC 驅動程式的 JDBC 4.2 合規性](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)，以及下列資訊。
 
-若為傳遞給 \<SQLServerPreparedStatement[ 類別之 setObject(](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)類型>) 方法的 Java 類型資料，則適用下列轉換。
+若為傳遞給 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別之 setObject(\<類型>) 方法的 Java 類型資料，則適用下列轉換。
 
 ![JDBCSetObjectConversions](../../connect/jdbc/media/jdbc_jdbcsetobjectconversions.gif "JDBCSetObjectConversions")
 

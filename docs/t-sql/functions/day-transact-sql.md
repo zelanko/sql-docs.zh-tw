@@ -35,7 +35,7 @@ ms.locfileid: "68119055"
 
 此函式會傳回整數，代表指定 *date* 的日期 (當月的日期)。
   
-如需所有 [ 日期和時間資料類型與函式的概觀，請參閱](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日期和時間資料類型與函式 &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]。
+如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

@@ -104,7 +104,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  查詢處理器會使用主要 XML 索引來進行包含 [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md) 的查詢，並從主要索引本身傳回純量值或 XML 子樹。 (這個索引會儲存重新建構 XML 執行個體的所有必要資訊)。  
   
- 例如，下列查詢會傳回儲存在 `CatalogDescription`**xml** 類型資料行 `ProductModel` 資料表中的摘要資訊。 此查詢只會針對目錄描述也儲存 <`Summary`> 描述的產品型號傳回其 <`Features`> 資訊。  
+ 例如，下列查詢會傳回儲存在 `CatalogDescription`**xml** 類型資料行 `ProductModel` 資料表中的摘要資訊。 此查詢只會針對目錄描述也儲存 <`Features`> 描述的產品型號傳回其 <`Summary`> 資訊。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -167,7 +167,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `//author[LastName="someName"]`，其中您知道 <`LastName`> 元素的值，但是 <`author`> 父系可存在於任何位置。  
   
--   在 `/book[@* = "someValue"]` 中，查詢會尋找某些屬性中包含值 `book` 的 <`"someValue"`> 元素。  
+-   在 `/book[@* = "someValue"]` 中，查詢會尋找某些屬性中包含值 `"someValue"` 的 <`book`> 元素。  
   
  下列查詢會從 `ContactID` 資料表傳回 `Contact` 。 `WHERE` 子句可指定篩選，在 `AdditionalContactInfo`**xml** 類型資料行中尋找值。 如果對應的其他連絡資訊 XML 二進位大型物件包含特定的電話號碼，就會傳回連絡識別碼。 因為 <`telephoneNumber`> 元素有可能出現在 XML 的任何位置，所以路徑運算式會指定 descendent-or-self 軸。  
   

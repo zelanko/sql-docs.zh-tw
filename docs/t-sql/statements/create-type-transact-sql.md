@@ -38,7 +38,7 @@ ms.locfileid: "74901879"
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的目前資料庫中建立別名資料類型或使用者定義型別。 別名資料類型的實作是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生系統類型為基礎。 使用者定義型別是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 通用語言執行平台 (CLR) 中之組件的類別來實作的。 若要將使用者定義型別繫結到它的實作，必須先在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 來註冊內含該型別之實作的 CLR 組件。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，依預設，執行 CLR 程式碼的功能是關閉。 您可以建立、修改及卸除參考受控碼模組的資料庫物件，但除非您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_configure[ 來啟用 ](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)clr enabled 選項[；否則，這些參考就不會在 ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 中執行。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，依預設，執行 CLR 程式碼的功能是關閉。 您可以建立、修改及卸除參考受控碼模組的資料庫物件，但除非您使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 來啟用 [clr enabled 選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)；否則，這些參考就不會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行。  
  
 > [!NOTE]  
 >  本主題將討論如何將 .NET Framework CLR 整合至 SQL Server。 CLR 整合不適用於 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
@@ -258,7 +258,7 @@ column_name <data_type>
   
 -   類別可以有多載的方法，但只能從 Managed 程式碼內 (不能從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 內) 呼叫這些方法。  
   
--   如果 **assembly_name** 是 SAFE 或 EXTERNAL_ACCESS，任何靜態成員都必須宣告為 **const** 或 *readonly*。  
+-   如果 *assembly_name* 是 SAFE 或 EXTERNAL_ACCESS，任何靜態成員都必須宣告為 **const** 或 **readonly**。  
   
  在資料庫內，只能有一個依照已從 CLR 上傳至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之任何指定類型來註冊的使用者自訂類型。 如果使用者自訂類型建立在某 CLR 類型上，而針對該 CLR 類型，在資料庫中已存在使用者自訂類型，則 CREATE TYPE 會因錯誤而失敗。 如果 CLR 類型可以對應至多個使用者自訂類型，就需要利用這項限制來避免 SQL 類型解析期間的模稜兩可。  
   

@@ -20,7 +20,7 @@ ms.locfileid: "68015141"
 # <a name="connecting-to-the-server"></a>連接到伺服器
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本節的主題描述使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接到 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的選項和程序。  
+本節的主題描述使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的選項和程序。  
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 可以使用 Windows 驗證或使用 SQL Server 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 根據預設， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會嘗試使用 Windows 驗證連接到伺服器。  
 

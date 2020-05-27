@@ -78,7 +78,7 @@ FROM OldTable;
 ```  
   
 ## <a name="examples"></a>範例  
- 下列範例會將 `Contact` 資料庫之 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中所有的資料列，插入稱為 `NewContact` 的新資料表中。 這個 IDENTITY 函數在 `NewContact` 資料表中，使識別碼從 100 開始，而不是從 1 開始。  
+ 下列範例會將 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `Contact` 資料表中所有的資料列，插入稱為 `NewContact` 的新資料表中。 這個 IDENTITY 函數在 `NewContact` 資料表中，使識別碼從 100 開始，而不是從 1 開始。  
   
 ```  
 USE AdventureWorks2012;  

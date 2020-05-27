@@ -57,7 +57,7 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>引數  
  *Boolean_expression*  
- 這是傳回 [TRUE](../../t-sql/language-elements/expressions-transact-sql.md) 或 **FALSE** 的**運算式**。 如果布林運算式包含 SELECT 陳述式，則這個 SELECT 陳述式必須括在括號中。  
+ 這是傳回 **TRUE** 或 **FALSE** 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 如果布林運算式包含 SELECT 陳述式，則這個 SELECT 陳述式必須括在括號中。  
   
  {*sql_statement* | *statement_block*}  
  這是利用陳述式區塊來定義的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或陳述式分組。 若要定義陳述式區塊，請使用流程控制關鍵字 BEGIN 和 END。  

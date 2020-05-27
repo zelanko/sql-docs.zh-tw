@@ -30,7 +30,7 @@ public boolean isClosed()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果這個 **SQLServerStatement** 物件已關閉，則為 [true](../../../connect/jdbc/reference/sqlserverstatement-class.md)；如果仍為開啟，則為 **false**。  
+ 如果這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件已關閉，則為 **true**；如果仍為開啟，則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

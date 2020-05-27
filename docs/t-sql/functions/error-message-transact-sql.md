@@ -53,7 +53,7 @@ ERROR_MESSAGE ( )
 ## <a name="remarks"></a>備註  
 `ERROR_MESSAGE` 支援在 CATCH 區塊範圍內的任何位置呼叫。  
   
-不論執行多少次，或在 `ERROR_MESSAGE` 區塊範圍內的哪個位置執行，`CATCH` 都會傳回相關的錯誤訊息。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
+不論執行多少次，或在 `CATCH` 區塊範圍內的哪個位置執行，`ERROR_MESSAGE` 都會傳回相關的錯誤訊息。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
   
 在巢狀 `CATCH` 區塊中，`ERROR_MESSAGE` 會參考該 `CATCH` 區塊之 `CATCH` 區塊範圍特定的錯誤訊息。 例如，外部 TRY...CATCH 建構的 `CATCH` 區塊可能會有內部 `TRY...CATCH` 建構。 在該內部 `CATCH` 區塊內，`ERROR_MESSAGE` 會傳回叫用內部 `CATCH` 區塊之錯誤的訊息。 如果 `ERROR_MESSAGE` 是在外部 `CATCH` 區塊中執行，它會傳回叫用該外部 `CATCH` 區塊之錯誤的訊息。  
   

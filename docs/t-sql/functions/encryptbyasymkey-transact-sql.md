@@ -88,7 +88,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，憑證和非對稱金鑰都可作為 RSA 金鑰上的包裝函式。  
   
 ## <a name="examples"></a>範例  
-此範例會使用非對稱金鑰 `@cleartext` 將儲存在 `JanainaAsymKey02` 中的文字加密。 陳述式會將加密資料插入 `ProtectedData04` 資料表中。  
+此範例會使用非對稱金鑰 `JanainaAsymKey02` 將儲存在 `@cleartext` 中的文字加密。 陳述式會將加密資料插入 `ProtectedData04` 資料表中。  
   
 ```  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   

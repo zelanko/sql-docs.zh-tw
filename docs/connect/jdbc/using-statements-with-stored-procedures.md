@@ -37,14 +37,14 @@ ms.locfileid: "69025858"
 > [!NOTE]  
 > 預存程序也可以傳回更新計數和多個結果集。 如需詳細資訊，請參閱[搭配更新計數使用預存程序](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)與[使用多個結果集](../../connect/jdbc/using-multiple-result-sets.md)。  
   
-當使用 JDBC 驅動程式呼叫具有參數的預存程序時，您必須使用 `call` SQL 逸出序列與 [SQLServerConnection](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 類別的 [prepareCall](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法搭配。 `call` 逸出序列的完整語法如下：  
+當使用 JDBC 驅動程式呼叫具有參數的預存程序時，您必須使用 `call` SQL 逸出序列與 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法搭配。 `call` 逸出序列的完整語法如下：  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
 > 如需 `call` 與其他 SQL 逸出序列的詳細資訊，請參閱[使用 SQL 逸出序列](../../connect/jdbc/using-sql-escape-sequences.md)。  
   
-本節的主題描述您可以使用 JDBC 驅動程式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 逸出序列來呼叫 `call` 預存程序的方式。  
+本節的主題描述您可以使用 JDBC 驅動程式和 `call` SQL 逸出序列來呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序的方式。  
   
 ## <a name="in-this-section"></a>本節內容  
   

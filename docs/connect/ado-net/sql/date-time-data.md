@@ -65,12 +65,12 @@ Transact-SQL SET LANGUAGE 陳述式會隱含地設定 DATEFORMAT，以決定日�
   
 - `SqlDbType.DateTimeOffSet`  
 
-您可以使用上述其中一個 <xref:Microsoft.Data.SqlClient.SqlParameter> 列舉來指定 <xref:System.Data.SqlDbType> 的資料類型。 
+您可以使用上述其中一個 <xref:System.Data.SqlDbType> 列舉來指定 <xref:Microsoft.Data.SqlClient.SqlParameter> 的資料類型。 
 
 > [!NOTE]
-> 您無法將 `DbType` 的 `SqlParameter` 屬性設定為 `SqlDbType.Date`。
+> 您無法將 `SqlParameter` 的 `DbType` 屬性設定為 `SqlDbType.Date`。
 
-您也可以藉由將 <xref:Microsoft.Data.SqlClient.SqlParameter> 物件的 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 屬性設定為特定的 `SqlParameter` 列舉值，以一般的方法指定 <xref:System.Data.DbType> 的類型。 <xref:System.Data.DbType> 中新增了以下列舉值，以支援 `datetime2` 和 `datetimeoffset` 資料類型：  
+您也可以藉由將 `SqlParameter` 物件的 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 屬性設定為特定的 <xref:System.Data.DbType> 列舉值，以一般的方法指定 <xref:Microsoft.Data.SqlClient.SqlParameter> 的類型。 <xref:System.Data.DbType> 中新增了以下列舉值，以支援 `datetime2` 和 `datetimeoffset` 資料類型：  
   
 - DbType.DateTime2  
   
@@ -105,7 +105,7 @@ Transact-SQL SET LANGUAGE 陳述式會隱含地設定 DATEFORMAT，以決定日�
 >  小於零或者大於或等於 24 小時的時間值將會擲回 <xref:System.ArgumentException>。  
   
 ### <a name="creating-parameters"></a>建立參數  
-您可以使用其建構函式來建立 <xref:Microsoft.Data.SqlClient.SqlParameter> 物件，或將它新增到 <xref:Microsoft.Data.SqlClient.SqlCommand>.<xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> 集合 (透過呼叫 `Add` 的 <xref:Microsoft.Data.SqlClient.SqlParameterCollection> 方法來完成)。 `Add` 方法將會取得建構函式引數或現有參數物件作為輸入。  
+您可以使用其建構函式來建立 <xref:Microsoft.Data.SqlClient.SqlParameter> 物件，或將它新增到 <xref:Microsoft.Data.SqlClient.SqlCommand>.<xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> 集合 (透過呼叫 <xref:Microsoft.Data.SqlClient.SqlParameterCollection> 的 `Add` 方法來完成)。 `Add` 方法將會取得建構函式引數或現有參數物件作為輸入。  
   
 此主題的後續小節將提供如何指定日期和時間參數的範例。
   
@@ -150,7 +150,7 @@ parameter.Value = DateTimeOffset.Parse("1666-09-02 1:00:00+0");
 ```  
   
 ### <a name="addwithvalue"></a>AddWithValue  
-您也可以使用 `AddWithValue` 的 <xref:Microsoft.Data.SqlClient.SqlCommand> 方法來提供參數，如下列程式碼片段所示。 不過，`AddWithValue` 方法不允許您針對參數指定 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 或 <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A>。  
+您也可以使用 <xref:Microsoft.Data.SqlClient.SqlCommand> 的 `AddWithValue` 方法來提供參數，如下列程式碼片段所示。 不過，`AddWithValue` 方法不允許您針對參數指定 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 或 <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A>。  
   
 ```csharp  
 command.Parameters.AddWithValue(   
@@ -177,7 +177,7 @@ command.Parameters.AddWithValue(
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>|傳回類型，其為欄位的底層提供者特定類型。 針對新的日期和時間類型，傳回與 `GetFieldType` 相同的類型。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>|擷取指定資料行的值。 針對新的日期和時間類型，傳回與 `GetValue` 相同的類型。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>|擷取指定陣列中的值。|  
-|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlString%2A>|以 <xref:System.Data.SqlTypes.SqlString> 形式擷取資料行值。 如果無法將資料表示為 <xref:System.InvalidCastException>，就會發生 `SqlString`。|  
+|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlString%2A>|以 <xref:System.Data.SqlTypes.SqlString> 形式擷取資料行值。 如果無法將資料表示為 `SqlString`，就會發生 <xref:System.InvalidCastException>。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValue%2A>|擷取資料行資料作為其預設 `SqlDbType`。 針對新的日期和時間類型，傳回與 `GetValue` 相同的類型。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValues%2A>|擷取指定陣列中的值。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetString%2A>|如果 Type System Version 是設為 SQL Server 2005，則擷取資料行的值作為字串。 如果無法將資料表示為字串，就會發生 <xref:System.InvalidCastException>。|  

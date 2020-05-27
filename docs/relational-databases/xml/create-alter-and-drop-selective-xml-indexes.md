@@ -54,7 +54,7 @@ FOR(
   
  **範例**  
   
- 下列範例顯示 ALTER INDEX 陳述式。 此陳述式會將路徑 `'/a/b/m'` 加入索引的 XQuery 部分，並且從 `'/a/b/e'`CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;[ 主題的範例中所建立索引的 SQL 部分刪除路徑 ](../../t-sql/statements/create-selective-xml-index-transact-sql.md)。 要刪除的路徑是以建立時提供的名稱識別。  
+ 下列範例顯示 ALTER INDEX 陳述式。 此陳述式會將路徑 `'/a/b/m'` 加入索引的 XQuery 部分，並且從 [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md) 主題的範例中所建立索引的 SQL 部分刪除路徑 `'/a/b/e'`。 要刪除的路徑是以建立時提供的名稱識別。  
   
 ```sql  
 ALTER INDEX sxi_index  

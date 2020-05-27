@@ -43,7 +43,7 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(int index)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 您可以搭配 [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) 設定 [DateTimeOffset 類別](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)參數值。  
+ 您可以使用 [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md) 來設定 [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)參數值。  
   
 ## <a name="see-also"></a>另請參閱  
  [getDateTimeOffset 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   

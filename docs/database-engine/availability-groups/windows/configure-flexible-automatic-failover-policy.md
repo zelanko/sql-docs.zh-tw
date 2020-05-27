@@ -54,7 +54,7 @@ ms.locfileid: "74056678"
 |若要修改現有可用性群組的原則|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 
 ##  <a name="health-check-timeout-threshold"></a><a name="HCtimeout"></a> 健全狀況檢查逾時臨界值  
- 可用性群組的 WSFC 資源 DLL 會在裝載主要複本的 SQL Server 執行個體上呼叫 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 預存程序，藉以執行主要複本的「健全狀況檢查」  。 **sp_server_diagnostics** 會以等於可用性群組之健全狀況檢查逾時臨界值 1/3 的間隔傳回結果。 預設的健全狀況檢查逾時臨界值為 30 秒，因此 **sp_server_diagnostics** 會以 10 秒的間隔傳回結果。 如果 **sp_server_diagnostics** 變慢或未傳回資訊，資源 DLL 會先等候健全狀況檢查逾時臨界值的完整間隔，然後再判斷主要複本是否沒有回應。 如果主要複本沒有回應，就會起始自動容錯移轉 (如果目前支援的話)。  
+ 可用性群組的 WSFC 資源 DLL 會在裝載主要複本的 SQL Server 執行個體上呼叫 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 預存程序，藉以執行主要複本的「健全狀況檢查」。 **sp_server_diagnostics** 會以等於可用性群組之健全狀況檢查逾時臨界值 1/3 的間隔傳回結果。 預設的健全狀況檢查逾時臨界值為 30 秒，因此 **sp_server_diagnostics** 會以 10 秒的間隔傳回結果。 如果 **sp_server_diagnostics** 變慢或未傳回資訊，資源 DLL 會先等候健全狀況檢查逾時臨界值的完整間隔，然後再判斷主要複本是否沒有回應。 如果主要複本沒有回應，就會起始自動容錯移轉 (如果目前支援的話)。  
   
 > [!IMPORTANT]  
 >  **sp_server_diagnostics** 不會在資料庫層級執行健全狀況檢查。  

@@ -32,7 +32,7 @@ ms.locfileid: "70148044"
 >如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
 
 ## <a name="features"></a>特性
-當您在 [ **安裝精靈] 的 [要安裝的元件] 頁面上選取 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，會安裝下列功能：  
+當您在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈] 的 [要安裝的元件] 頁面上選取 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine] 時，會安裝下列功能：  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   

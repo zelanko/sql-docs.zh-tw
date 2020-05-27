@@ -113,7 +113,7 @@ DROP TABLE ProductVendor1 ;
 ```  
   
 ### <a name="b-dropping-a-table-in-another-database"></a>B. 卸除另一個資料庫中的資料表  
- 下列範例會卸除 `SalesPerson2` 資料庫中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表。 您可以從伺服器執行個體的任何資料庫中執行這個範例。  
+ 下列範例會卸除 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的 `SalesPerson2` 資料表。 您可以從伺服器執行個體的任何資料庫中執行這個範例。  
   
 ```  
 DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  

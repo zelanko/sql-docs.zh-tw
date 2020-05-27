@@ -43,7 +43,7 @@ public java.lang.String getCatalogTerm()
 ## <a name="remarks"></a>備註  
  此 getCatalogTerm 方法由 java.sql.DatabaseMetaData 介面中的 getCatalogTerm 方法所指定。  
   
- 當搭配 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 資料庫使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，這個方法會傳回 "database" 字詞。  
+ 當搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 時，這個方法會傳回 "database" 字詞。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

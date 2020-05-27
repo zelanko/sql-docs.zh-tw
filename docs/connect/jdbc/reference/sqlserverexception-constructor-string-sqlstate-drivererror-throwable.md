@@ -23,7 +23,7 @@ ms.locfileid: "67971099"
 # <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>SQLServerException 建構函式 (java.lang.String, SQLState, DriverError, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  當提供 [string](../../../connect/jdbc/reference/sqlserverexception-class.md) 物件、**sqlstate** 物件、**drivererror** 物件，以及 **throwable** 物件時，初始化 **SQLServerException** 類別的新執行個體。
+  當提供 **string** 物件、**sqlstate** 物件、**drivererror** 物件，以及 **throwable** 物件時，初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 類別的新執行個體。
 
 ## <a name="syntax"></a>語法  
   

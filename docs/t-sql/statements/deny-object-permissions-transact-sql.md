@@ -140,7 +140,7 @@ PRIVILEGES
 下列範例使用 AdventureWorks 資料庫。
   
 ### <a name="a-denying-select-permission-on-a-table"></a>A. 拒絕資料表的 SELECT 權限  
- 下列範例會拒絕使用者 `SELECT` 對 `RosaQdM` 資料表的 `Person.Address` 權限。  
+ 下列範例會拒絕使用者 `RosaQdM` 對 `Person.Address` 資料表的 `SELECT` 權限。  
   
 ```  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  

@@ -23,7 +23,7 @@ ms.locfileid: "67971143"
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException 建構函式 (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  當給定 [object](../../../connect/jdbc/reference/sqlserverexception-class.md)、**string** 物件、**string** 物件、**int** 與 **boolean** 時，初始化 **SQLServerException** 類別的新執行個體。
+  當給定 **object**、**string** 物件、**string** 物件、**int** 與 **boolean** 時，初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 類別的新執行個體。
 
 ## <a name="syntax"></a>語法  
   

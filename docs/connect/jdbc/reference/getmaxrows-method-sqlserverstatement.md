@@ -25,7 +25,7 @@ ms.locfileid: "67982077"
 # <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取最大資料列數目，即這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件產生 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件可以包含的資料列。  
+  擷取最大資料列數目，即這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件產生 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件可以包含的資料列。  
   
 ## <a name="syntax"></a>語法  
   

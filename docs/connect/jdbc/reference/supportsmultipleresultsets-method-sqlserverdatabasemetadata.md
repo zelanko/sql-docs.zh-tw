@@ -25,7 +25,7 @@ ms.locfileid: "67969221"
 # <a name="supportsmultipleresultsets-method-sqlserverdatabasemetadata"></a>supportsMultipleResultSets 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取值，此值指出這個資料庫是否支援從單一呼叫 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [execute](../../../connect/jdbc/reference/execute-method.md) 方法，取得多個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 物件。  
+  擷取值，此值指出這個資料庫是否支援從單一呼叫 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別的 [execute](../../../connect/jdbc/reference/execute-method.md) 方法，取得多個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="syntax"></a>語法  
   

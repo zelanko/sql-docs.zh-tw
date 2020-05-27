@@ -68,7 +68,7 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-var"></a>A：使用 VAR  
- 下列範例會傳回 `SalesPerson` 資料庫之 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中所有獎金值的變異數。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `SalesPerson` 資料表中所有獎金值的變異數。  
   
 ```  
 SELECT VAR(Bonus)  

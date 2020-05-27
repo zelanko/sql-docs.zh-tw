@@ -87,7 +87,7 @@ ms.locfileid: "67970569"
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)|使用 Java 程式語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 Ref 物件。|  
 |[getRow](../../../connect/jdbc/reference/getrow-method-sqlserverresultset.md)|擷取目前資料列數值。|  
 |[getShort](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)|使用 Java 程式語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 **short**。|  
-|[getStatement](../../../connect/jdbc/reference/getstatement-method-sqlserverresultset.md)|擷取產生這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。|  
+|[getStatement](../../../connect/jdbc/reference/getstatement-method-sqlserverresultset.md)|擷取產生這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件。|  
 |[getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)|使用 Java 程式語言，擷取此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值當作 **String** 物件。|  
 |[getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)|擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 **SQLXML** 物件。|  
 |[getTime](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)|使用 Java 程式語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 java.sql.Time 物件。|  

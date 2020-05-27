@@ -40,7 +40,7 @@ POWER ( float_expression , y )
   
 ## <a name="arguments"></a>引數  
  *float_expression*  
- 為 [float](../../t-sql/language-elements/expressions-transact-sql.md) 類型或能夠隱含轉換成 **float** 類型的**運算式**。  
+ 為 **float** 類型或能夠隱含轉換成 **float** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *y*  
  為 *float_expression* 相乘的乘冪。 *y*　可為精確數值或近似數值資料類型類別目錄的運算式，但 **bit** 資料類型除外。  
@@ -149,7 +149,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D：使用 POWER 傳回數字的立方  
- 下列範例示範傳回 `POWER` 的 3 次方 `2.0` 結果。  
+ 下列範例示範傳回 `2.0` 的 3 次方 `POWER` 結果。  
   
 ```  
 SELECT POWER(2.0, 3);  

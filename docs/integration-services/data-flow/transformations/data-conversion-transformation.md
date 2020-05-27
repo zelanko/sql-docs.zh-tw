@@ -59,7 +59,7 @@ ms.locfileid: "71297963"
   使用 [資料轉換編輯器]  對話方塊，即可選取要轉換的資料行、選取資料行要轉換成哪一種資料類型，以及設定轉換屬性。  
   
 > [!NOTE]  
->  在 [資料轉換編輯器]  中無法使用資料轉換之輸出資料行的 **FastParse** 屬性，但可使用 [進階編輯器]  來設定這兩個屬性。 如需這個屬性的詳細資訊，請參閱 [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)的＜資料轉換＞一節。  
+>  在 [資料轉換編輯器] 中無法使用資料轉換之輸出資料行的 **FastParse** 屬性，但可使用 [進階編輯器] 來設定這兩個屬性。 如需這個屬性的詳細資訊，請參閱 [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)的＜資料轉換＞一節。  
   
 ### <a name="options"></a>選項。  
  **可用的輸入資料行**  

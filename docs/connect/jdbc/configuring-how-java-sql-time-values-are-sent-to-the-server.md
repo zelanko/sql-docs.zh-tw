@@ -38,7 +38,7 @@ ms.locfileid: "69028232"
   
  您可以設定 java.sql.Time 值如何使用 **sendTimeAsDatetime** 連線屬性來傳送。 如需詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
- 您可以使用程式設計方式，透過 **SQLServerDataSource.setSendTimeAsDatetime** 修改 [sendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) 連線屬性的值。  
+ 您可以使用程式設計方式，透過 [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) 修改 **sendTimeAsDatetime** 連線屬性的值。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] 版本不支援 **time** 資料類型，因此使用 java.sql.Time 的應用程式通常會將 java.sql.Time 值儲存為 **datetime** 或 **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。  
   

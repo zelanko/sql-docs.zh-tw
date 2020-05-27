@@ -58,7 +58,7 @@ AND     CPU < (Duration * 1000)
   
     -   定義追蹤時，請擷取 **Event Class**、 **ClientProcessID**與 **Start Time** 資料行，以及您想要擷取的其他資料行。 如需詳細資訊，請參閱[建立追蹤 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)。  
   
-    -   依照 **Event Class**資料行來將擷取的資料分組，並將追蹤擷取到檔案或資料表中。 若要將擷取的資料分組，請在 [追蹤屬性] 對話方塊的 [事件選取範圍]  索引標籤上，按一下 [組織資料行]  。 如需詳細資訊，請參閱[組織追蹤內顯示的資料行 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)。  
+    -   依照 **Event Class**資料行來將擷取的資料分組，並將追蹤擷取到檔案或資料表中。 若要將擷取的資料分組，請在 [追蹤屬性] 對話方塊的 [事件選取範圍] 索引標籤上，按一下 [組織資料行]。 如需詳細資訊，請參閱[組織追蹤內顯示的資料行 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)。  
   
     -   啟動追蹤，並在超過指定的時間或所擷取的事件數已達上限後停止追蹤。  
   
@@ -66,7 +66,7 @@ AND     CPU < (Duration * 1000)
   
     -   開啟追蹤檔案或資料表，然後展開想要的事件類別節點；例如， **Deadlock Chain**。 如需詳細資訊，請參閱 [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或 [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)隨附的預先定義「微調」範本。  
   
-    -   搜尋整個追蹤資料直到您找到要查看的事件為止 (請使用  **之 [編輯]** **功能表上的 [尋找]** [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 命令來協助您在追蹤中尋找值)。 請注意位於追蹤事件之 **ClientProcessID** 與 **Start Time** 資料行的值。  
+    -   搜尋整個追蹤資料直到您找到要查看的事件為止 (請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 之 [編輯] 功能表上的 [尋找] 命令來協助您在追蹤中尋找值)。 請注意位於追蹤事件之 **ClientProcessID** 與 **Start Time** 資料行的值。  
   
 3.  在內容中顯示事件。  
   

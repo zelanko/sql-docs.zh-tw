@@ -96,7 +96,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>範例  
   
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. 拒絕端點的 VIEW DEFINITION 權限  
- 下列範例拒絕在 `VIEW DEFINITION` 的 `Mirror7` 端點上，登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `ZArifin` 權限。  
+ 下列範例拒絕在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `Mirror7` 端點上，登入 `ZArifin` 的 `VIEW DEFINITION` 權限。  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. 拒絕具有 CASCADE 選項的 TAKE OWNERSHIP 權限  
- 下列範例會對 `TAKE OWNERSHIP` 使用者 `Shipping83` 拒絕端點 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `PKomosinski` 權限，並對 `PKomosinski` 對其授與 `TAKE OWNERSHIP` 的主體拒絕該權限。  
+ 下列範例會對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 `TAKE OWNERSHIP` 拒絕端點 `Shipping83` 的 `PKomosinski` 權限，並對 `PKomosinski` 對其授與 `TAKE OWNERSHIP` 的主體拒絕該權限。  
   
 ```  
 USE master;  

@@ -147,7 +147,7 @@ GO
 ```  
   
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. 從 EKM 提供者建立非對稱金鑰  
- 下列範例會從稱為 `EKM_askey1` 的可延伸金鑰管理提供者中所儲存的金鑰組來建立非對稱金鑰 `EKM_Provider1`，並在稱為 `key10_user1` 的提供者上建立金鑰。  
+ 下列範例會從稱為 `EKM_Provider1` 的可延伸金鑰管理提供者中所儲存的金鑰組來建立非對稱金鑰 `EKM_askey1`，並在稱為 `key10_user1` 的提供者上建立金鑰。  
   
 ```sql  
 CREATE ASYMMETRIC KEY EKM_askey1   

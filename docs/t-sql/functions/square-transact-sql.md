@@ -41,7 +41,7 @@ SQUARE ( float_expression )
   
 ## <a name="arguments"></a>引數  
  *float_expression*  
- 為 [float](../../t-sql/language-elements/expressions-transact-sql.md) 類型或能夠隱含轉換成 float 類型的**運算式**。  
+ 為 **float** 類型或能夠隱含轉換成 float 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回型別  
  **float**  
@@ -65,7 +65,7 @@ Cyl Vol
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會傳回 `volume` 資料表 `containers` 資料行中每個值的平方。  
+ 下列範例會傳回 `containers` 資料表 `volume` 資料行中每個值的平方。  
   
 ```  
 -- Uses AdventureWorks  

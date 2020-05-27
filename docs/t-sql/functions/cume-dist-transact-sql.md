@@ -29,7 +29,7 @@ ms.locfileid: "68026466"
 # <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此函數會計算值群組中，某值的累加分配。 換言之，`CUME_DIST` 會計算值群組中，某一指定值的相對位置。 假設採取遞增排序，則資料列 `CUME_DIST`r_中，某值的_ 是定義為有多少個資料列的值是小於或等於資料列 _r_ 中的值，除以資料分割或查詢結果集中計算得出的資料列數。 `CUME_DIST` 類似於 `PERCENT_RANK` 函數。
+針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此函數會計算值群組中，某值的累加分配。 換言之，`CUME_DIST` 會計算值群組中，某一指定值的相對位置。 假設採取遞增排序，則資料列 _r_ 中，某值的 `CUME_DIST` 是定義為有多少個資料列的值是小於或等於資料列 _r_ 中的值，除以資料分割或查詢結果集中計算得出的資料列數。 `CUME_DIST` 類似於 `PERCENT_RANK` 函數。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

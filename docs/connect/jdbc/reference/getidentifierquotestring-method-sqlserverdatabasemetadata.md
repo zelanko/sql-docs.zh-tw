@@ -43,7 +43,7 @@ public java.lang.String getIdentifierQuoteString()
 ## <a name="remarks"></a>備註  
  這個 getIdentifierQuoteString 方法是由 java.sql.DatabaseMetaData 介面中的 getIdentifierQuoteString 方法所指定。  
   
- 當您搭配 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 資料庫使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 時，這個方法會傳回 **double** 引號 ("")。  
+ 當您搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] JDBC Driver 時，這個方法會傳回 **double** 引號 ("")。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

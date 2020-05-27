@@ -48,7 +48,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 ## <a name="arguments"></a>引數
 
-PASSWORD ='*password*' 是用來加密資料庫中主要金鑰的密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 在 *和* 中，[!INCLUDE[ssSDS](../../includes/sssds-md.md)]password[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 為選擇性。
+PASSWORD ='*password*' 是用來加密資料庫中主要金鑰的密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 中，*password* 為選擇性。
 
 ## <a name="remarks"></a>備註
 

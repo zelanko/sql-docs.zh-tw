@@ -50,7 +50,7 @@ PWDCOMPARE ( 'clear_text_password'
  這是密碼的加密雜湊。 *password_hash* 為 **varbinary(128)** 。  
   
  *version*  
- 如果 *password_hash* 代表的登入值早於已經移轉到 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 或更新版本，但從未轉換為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 系統的 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]，則是可以設定為 1 的已淘汰參數。 *version* 為 **int**。  
+ 如果 *password_hash* 代表的登入值早於已經移轉到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本，但從未轉換為 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 系統的 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]，則是可以設定為 1 的已淘汰參數。 *version* 為 **int**。  
   
 > [!CAUTION]  
 >  提供這個參數是為了回溯相容性，因為密碼雜湊 BLOB 現在包含自己的版本說明，所以會忽略它。 [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  

@@ -161,7 +161,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-此訊息表示時間戳記在 109 (壓縮作業所完成的最後一項交易) 之前的快照集交易將封鎖壓縮作業。 這也表示 **sys.dm_tran_active_snapshot_database_transactions** 動態管理檢視中的 **transaction_sequence_num** 或 [first_snapshot_sequence_num](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 資料行包含值 15。 如果 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 檢視資料行所包含數字小於壓縮作業最後完成的交易 (109)，壓縮作業將會等到這些交易完成。
+此訊息表示時間戳記在 109 (壓縮作業所完成的最後一項交易) 之前的快照集交易將封鎖壓縮作業。 這也表示 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 動態管理檢視中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 資料行包含值 15。 如果 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 檢視資料行所包含數字小於壓縮作業最後完成的交易 (109)，壓縮作業將會等到這些交易完成。
   
 若要解決這個問題，可以執行下列其中一項工作：
 -   結束正在封鎖壓縮作業的交易。
@@ -174,7 +174,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 ## <a name="examples"></a>範例  
   
 ### <a name="shrinking-a-data-file-to-a-specified-target-size"></a>將資料檔案壓縮為指定的目標大小  
-下列範例會將 `DataFile1` 使用者資料庫中名為 `UserDB` 之資料檔案大小壓縮成 7 MB。
+下列範例會將 `UserDB` 使用者資料庫中名為 `DataFile1` 之資料檔案大小壓縮成 7 MB。
   
 ```sql  
 USE UserDB;  

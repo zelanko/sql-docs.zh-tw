@@ -76,7 +76,7 @@ COUNT(DISTINCT *expression*) 會針對群組中的每個資料列來評估 *expr
   
 若傳回的值超過 2^31-1，`COUNT` 會傳回錯誤。 這些情況下，請改用 `COUNT_BIG`。
   
-`COUNT`未搭配 ***OVER 和 ORDER BY 子句使用時，*** 是具決定性函數。 ***搭配*** OVER 和 ORDER BY 子句時，則不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
+***未搭配*** OVER 和 ORDER BY 子句使用時，`COUNT` 是具決定性函數。 ***搭配*** OVER 和 ORDER BY 子句時，則不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   
 ## <a name="examples"></a>範例  
   

@@ -36,7 +36,7 @@ ms.locfileid: "73981980"
   建立一個 Managed 應用程式模組，其中所包含的類別中繼資料和 Managed 程式碼是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的一個物件。 您可以參考這個模組，在資料庫中建立 Common Language Runtime (CLR) 函數、預存程序、觸發程序、使用者定義彙總以及使用者定義型別。  
   
 > [!WARNING]
->  CLR 使用 .NET Framework 中的程式碼存取安全性 (CAS)，而這不再作為安全性界限受支援。 使用 `PERMISSION_SET = SAFE` 所建立的 CLR 組件可以存取外部系統資源、呼叫 Unmanaged 程式碼，以及取得系統管理員權限。 從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 開始，引進稱為 `sp_configure` 的 `clr strict security` 選項，來增強 CLR 組件的安全性。 `clr strict security` 會依預設啟用，且將 `SAFE` 與 `EXTERNAL_ACCESS` 組件視作已標記為 `UNSAFE` 一樣。 可以基於回溯相容性停用 `clr strict security` 選項，但不建議這麼做。 Microsoft 建議透過具有已獲授與 master 資料庫中 `UNSAFE ASSEMBLY` 權限之對應登入的憑證或非對稱金鑰簽署所有組件。 如需詳細資訊，請參閱 [CLR 嚴格安全性](../../database-engine/configure-windows/clr-strict-security.md)。  
+>  CLR 使用 .NET Framework 中的程式碼存取安全性 (CAS)，而這不再作為安全性界限受支援。 使用 `PERMISSION_SET = SAFE` 所建立的 CLR 組件可以存取外部系統資源、呼叫 Unmanaged 程式碼，以及取得系統管理員權限。 從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 開始，引進稱為 `clr strict security` 的 `sp_configure` 選項，來增強 CLR 組件的安全性。 `clr strict security` 會依預設啟用，且將 `SAFE` 與 `EXTERNAL_ACCESS` 組件視作已標記為 `UNSAFE` 一樣。 可以基於回溯相容性停用 `clr strict security` 選項，但不建議這麼做。 Microsoft 建議透過具有已獲授與 master 資料庫中 `UNSAFE ASSEMBLY` 權限之對應登入的憑證或非對稱金鑰簽署所有組件。 如需詳細資訊，請參閱 [CLR 嚴格安全性](../../database-engine/configure-windows/clr-strict-security.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -113,7 +113,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 ## <a name="remarks"></a>備註  
  CREATE ASSEMBLY 會上傳之前從 Managed 程式碼編譯為 .dll 檔、用於 SQL Server 執行個體內部的組件。  
  
-啟用時，會在執行階段忽略 `PERMISSION_SET` 和 `CREATE ASSEMBLY` 陳述式中的 `ALTER ASSEMBLY` 選項，但在中繼資料中會保留 `PERMISSION_SET` 選項。 忽略此選項可將中斷現有程式碼陳述式最小化。
+啟用時，會在執行階段忽略 `CREATE ASSEMBLY` 和 `ALTER ASSEMBLY` 陳述式中的 `PERMISSION_SET` 選項，但在中繼資料中會保留 `PERMISSION_SET` 選項。 忽略此選項可將中斷現有程式碼陳述式最小化。
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許註冊具有相同名稱、文化特性及公開金鑰之不同版本的組件。  
   

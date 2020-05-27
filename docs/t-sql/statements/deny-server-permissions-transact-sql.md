@@ -150,7 +150,7 @@ DENY permission [ ,...n ]
 ## <a name="examples"></a>範例  
   
 ### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>A. 對 SQL Server 登入及已對其授與權限的主體，拒絕 CONNECT SQL 權限  
- 下列範例會對 `CONNECT SQL` 登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及她已對其授與權限的主體，拒絕 `Annika` 權限。  
+ 下列範例會對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `CONNECT SQL` 及她已對其授與權限的主體，拒絕 `Annika` 權限。  
   
 ```  
 USE master;  

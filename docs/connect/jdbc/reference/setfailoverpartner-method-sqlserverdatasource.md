@@ -42,7 +42,7 @@ public void setFailoverPartner(java.lang.String serverName)
 ## <a name="remarks"></a>備註  
  初始連接到主體伺服器若失敗，將使用這個方法所設定的值；在建立初始連接之後，將忽略這個值。 結合這個方法時也應該要使用 [setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md) 方法，否則會擲回例外狀況。  
   
- 驅動程式不支援在已設定容錯移轉伺服器名稱後指定容錯移轉伺服器的通訊埠編號。 不過，支援配合 [setFailoverPartner](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md) 方法來呼叫 [setServerName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md) 方法和 [setInstanceName](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) 方法。  
+ 驅動程式不支援在已設定容錯移轉伺服器名稱後指定容錯移轉伺服器的通訊埠編號。 不過，支援配合 [setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) 方法來呼叫 [setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md) 方法和 [setInstanceName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md) 方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

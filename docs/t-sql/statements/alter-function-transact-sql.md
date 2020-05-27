@@ -269,7 +269,7 @@ RETURNS return_data_type
  指定繫結函數之組件的方法。 *assembly_name* 必須符合目前所顯示之資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的現有組件。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須是組件中的類別。 如果該類別具有命名空間限定的名稱，且該名稱使用句號 ( **.** ) 來分隔命名空間的各個部分，您就必須使用方括弧 ( **[]** ) 或引號 ( **""** ) 來分隔類別名稱。 *method_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須是指定類別中的靜態方法。  
   
 > [!NOTE]  
->  依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能執行 CLR 程式碼。 您可以建立、修改和卸除參考通用語言執行平台模組的資料庫物件；不過，必須等到您啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]clr enabled 選項[之後，才能在 ](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) 中執行這些參考。 若要啟用這個選項，請使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
+>  依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能執行 CLR 程式碼。 您可以建立、修改和卸除參考通用語言執行平台模組的資料庫物件；不過，必須等到您啟用 [clr enabled 選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之後，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行這些參考。 若要啟用這個選項，請使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  

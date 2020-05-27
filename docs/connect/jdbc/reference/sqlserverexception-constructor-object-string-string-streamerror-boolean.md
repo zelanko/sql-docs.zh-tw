@@ -23,7 +23,7 @@ ms.locfileid: "67971120"
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>SQLServerException 建構函式 (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  當給定 [object](../../../connect/jdbc/reference/sqlserverexception-class.md)、**string** 物件、**string** 物件、**StreamError** 物件和 **boolean** 時，初始化 **SQLServerException** 類別的新執行個體。
+  當給定 **object**、**string** 物件、**string** 物件、**StreamError** 物件和 **boolean** 時，初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 類別的新執行個體。
 
 ## <a name="syntax"></a>語法  
   

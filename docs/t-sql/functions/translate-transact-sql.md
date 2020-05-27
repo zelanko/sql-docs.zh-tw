@@ -49,7 +49,7 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="remarks"></a>備註
 
-如果 `TRANSLATE`characters*和*translations*運算式的長度不同，則* 函數會傳回錯誤。 如果任何引數是 NULL，`TRANSLATE` 會傳回 NULL。  
+如果 *characters* 和 *translations* 運算式的長度不同，則 `TRANSLATE` 函數會傳回錯誤。 如果任何引數是 NULL，`TRANSLATE` 會傳回 NULL。  
 
 `TRANSLATE` 函式的行為類似於使用多個 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函式。 不過，`TRANSLATE` 不會多次取代 `inputString` 中的任何個別字元。 `characters` 參數中單一值可以取代 `inputString` 中的多個字元。 
 

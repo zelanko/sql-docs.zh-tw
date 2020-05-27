@@ -21,16 +21,16 @@ ms.locfileid: "69026748"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-若要使用 SQL 陳述式修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中包含的資料，您可以使用 [SQLServerStatement](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 類別的 [executeUpdate](../../connect/jdbc/reference/sqlserverstatement-class.md) 方法。 executeUpdate 方法會將 SQL 陳述式傳遞至資料庫以進行處理，然後傳回值以指出受影響的資料列數目。
+若要使用 SQL 陳述式修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中包含的資料，您可以使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 方法。 executeUpdate 方法會將 SQL 陳述式傳遞至資料庫以進行處理，然後傳回值以指出受影響的資料列數目。
 
-若要這樣做，您必須先使用 [SQLServerConnection](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 類別的 [createStatement](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法建立 SQLServerStatement 物件。
+若要這樣做，您必須先使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 方法建立 SQLServerStatement 物件。
 
 在下列範例中，[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的開啟連線會傳入至函式、建構一個將新資料新增至資料表的 SQL 陳述式，然後執行陳述式並顯示傳回值。
 
 [!code[JDBC#UsingSQLToModifyData1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-t_1_1.java)]
 
 > [!NOTE]  
-> 如果必須使用含有參數的 SQL 陳述式來修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料，應該使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md) 類別的 [executeUpdate](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 方法。
+> 如果必須使用含有參數的 SQL 陳述式來修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料，應該使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別的 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md) 方法。
 >
 > 如果您嘗試要插入資料的資料行包含特殊字元 (例如空格)，則需提供要插入的值，即使這些值是預設值也一樣。 如果沒有提供，插入作業將失敗。
 >

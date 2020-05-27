@@ -43,7 +43,7 @@ public java.lang.String getNString(int columnIndex)
 ## <a name="remarks"></a>備註  
  這個 getNString 方法是由 java.sql.SQLServerResultSet 介面中的 getNString 方法指定。  
   
- 這個方法可以用來擷取這個 **SQLServerResultSet** 物件目前資料列中 **nvarchar**、**nchar**、**nvarchar(max)** 、**ntext** 或 [xml](../../../connect/jdbc/reference/sqlserverresultset-class.md) 資料行的值。 如果嘗試使用這個方法來擷取其他資料類型的值，將擲回例外狀況。  
+ 這個方法可以用來擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中的 **nvarchar**、**nchar**、**nvarchar(max)** 、**ntext** 或 **xml** 資料行的值。 如果嘗試使用這個方法來擷取其他資料類型的值，將擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
  [getNString 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

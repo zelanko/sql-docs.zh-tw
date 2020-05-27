@@ -73,7 +73,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  指定 *boundary_value* 所提供的數目值，但不可超過 14,999。 所建立的資料分割數目等於 *n* + 1。 這些值不必依照順序列出。 如果值沒有排序，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它們排序、建立函數，以及傳回未依序提供值的警告。 如果 *n* 包括任何重複的值，「資料庫引擎」會傳回錯誤。  
   
  **LEFT** | RIGHT  
- 指定當  *是按遞增順序由左至右來排序間隔值時，* boundary_value **[** ,  ...n[!INCLUDE[ssDE](../../includes/ssde-md.md)] ] 屬於每個界限值間隔的哪一側 (左或右)。 若未指定，LEFT 便是預設值。  
+ 指定當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是按遞增順序由左至右來排序間隔值時，*boundary_value* [ **,** _...n_ ] 屬於每個界限值間隔的哪一側 (左或右)。 若未指定，LEFT 便是預設值。  
   
 ## <a name="remarks"></a>備註  
  資料分割函數的範圍只限於建立它的資料庫。 在這個資料庫內，資料分割函數是在不同於其他函數的個別命名空間中。  

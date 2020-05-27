@@ -36,7 +36,7 @@ ms.locfileid: "76934438"
 |-----------|-----------------|  
 |[基本資料類型範例](../../connect/jdbc/basic-data-types-sample.md)|描述如何使用結果集 getter 方法來擷取基本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型值，以及如何使用結果集 update 方法來更新這些值。|  
 |[SQLXML 資料類型範例](../../connect/jdbc/sqlxml-data-type-sample.md)|描述如何在關聯式資料庫中儲存 XML 資料、如何從資料庫中擷取 XML資料，以及如何剖析具有 **SQLXML** Java 資料類型的 XML資料。|  
-|[空間資料類型範例](../../connect/jdbc/spatial-data-types-sample.md)|描述如何使用 Microsoft JDBC 驅動程式定義的 Java 類型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Geometry**和**Geography **，儲存和擷取**  資料庫中具有空間資料類型 'Geometry' 和 'Geography' 的資料。|
+|[空間資料類型範例](../../connect/jdbc/spatial-data-types-sample.md)|描述如何使用 Microsoft JDBC 驅動程式定義的 Java 類型 **Geometry** 和 **Geography**，儲存和擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中具有空間資料類型 'Geometry' 和 'Geography' 的資料。|
 
 ## <a name="see-also"></a>另請參閱
 

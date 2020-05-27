@@ -57,7 +57,7 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  指定全文檢索索引和查詢要改變的目錄是否區分腔調字。  
   
- 若要判斷全文檢索目錄目前的區分重音字屬性設定，請針對 **catalog_name**，搭配 *accentsensitivity* 屬性值來使用 FULLTEXTCATALOGPROPERTY 函數。 如果函數傳回 '1'，全文檢索目錄就會區分腔調字；如果函數傳回 '0'，目錄就不會區分腔調字。  
+ 若要判斷全文檢索目錄目前的區分重音字屬性設定，請針對 *catalog_name*，搭配 **accentsensitivity** 屬性值來使用 FULLTEXTCATALOGPROPERTY 函數。 如果函數傳回 '1'，全文檢索目錄就會區分腔調字；如果函數傳回 '0'，目錄就不會區分腔調字。  
   
  目錄和資料庫區分腔調字的預設值相同。  
   

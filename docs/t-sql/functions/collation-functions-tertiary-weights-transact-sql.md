@@ -42,13 +42,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>引數  
 *non_Unicode_character_string_expression*  
-SQL 第 3 定序上定義之 [char](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar** 或 **varchar(max)** 類型的字串**運算式**。 如需這些定序的清單，請參閱「備註」一節。
+SQL 第 3 定序上定義之 **char**、**varchar** 或 **varchar(max)** 類型的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 如需這些定序的清單，請參閱「備註」一節。
   
 ## <a name="return-types"></a>傳回類型
-`TERTIARY_WEIGHTS` 會在 **non_Unicode_character_string_expression** 為 *char* 或 **varchar** 時傳回 **varbinary**，並在 **non_Unicode_character_string_expression** 具有 *varchar(max)* 資料類型時傳回 **varbinary(max)** 。
+`TERTIARY_WEIGHTS` 會在 *non_Unicode_character_string_expression* 為 **char** 或 **varchar** 時傳回 **varbinary**，並在 *non_Unicode_character_string_expression* 具有 **varchar(max)** 資料類型時傳回 **varbinary(max)** 。
   
 ## <a name="remarks"></a>備註  
-當 SQL 第 3 定序未定義 `TERTIARY_WEIGHTS`non_Unicode_character_string_expression *時，* 會傳回 NULL。 此表格顯示 SQL 第 3 定序：
+當 SQL 第 3 定序未定義 *non_Unicode_character_string_expression* 時，`TERTIARY_WEIGHTS` 會傳回 NULL。 此表格顯示 SQL 第 3 定序：
   
 |排序順序識別碼|SQL 定序|  
 |---|---|
@@ -85,7 +85,7 @@ SQL 第 3 定序上定義之 [char](../../t-sql/language-elements/expressions-tr
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-針對 `TERTIARY_WEIGHTS`char **、** varchar**或**varchar(max)**資料行之值所定義的計算資料行定義，使用**。 當查詢的 ORDER BY 子句指定 **char**、**varchar** 或 **varchar(max)** 資料行時，計算資料行和 **char**、**varchar** 或 **varchar(max)** 資料行的索引定義可以改善效能。
+針對 **char**、**varchar** 或 **varchar(max)** 資料行之值所定義的計算資料行定義，使用 `TERTIARY_WEIGHTS`。 當查詢的 ORDER BY 子句指定 **char**、**varchar** 或 **varchar(max)** 資料行時，計算資料行和 **char**、**varchar** 或 **varchar(max)** 資料行的索引定義可以改善效能。
   
 ## <a name="examples"></a>範例  
 此範例會在資料表中，建立一個將 `TERTIARY_WEIGHTS` 函式套用至 `char` 資料行之值的計算資料行：

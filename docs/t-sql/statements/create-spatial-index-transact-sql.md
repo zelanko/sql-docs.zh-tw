@@ -492,7 +492,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. 在幾何資料行上建立空間索引
-下列範例會建立包含 `SpatialTable`geometry**類型資料行** 且名稱為 `geometry_col` 的資料表。 然後，此範例會在 `SIndx_SpatialTable_geometry_col1` 上建立空間索引 `geometry_col`。 此範例會使用預設鑲嵌式配置，並指定週框方塊。  
+下列範例會建立包含 **geometry** 類型資料行 `geometry_col` 且名稱為 `SpatialTable` 的資料表。 然後，此範例會在 `SIndx_SpatialTable_geometry_col1` 上建立空間索引 `geometry_col`。 此範例會使用預設鑲嵌式配置，並指定週框方塊。  
   
 ```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
@@ -538,7 +538,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ```  
   
 ### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. 在地理資料行上建立空間索引
-下列範例會建立包含 `SpatialTable2`geography**類型資料行** 且名稱為 `geography_col` 的資料表。 然後，此範例會在 `SIndx_SpatialTable_geography_col1` 上建立空間索引 `geography_col`。 此範例會使用 GEOGRAPHY_AUTO_GRID 鑲嵌式配置的預設參數值。  
+下列範例會建立包含 **geography** 類型資料行 `geography_col` 且名稱為 `SpatialTable2` 的資料表。 然後，此範例會在 `SIndx_SpatialTable_geography_col1` 上建立空間索引 `geography_col`。 此範例會使用 GEOGRAPHY_AUTO_GRID 鑲嵌式配置的預設參數值。  
   
 ```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  

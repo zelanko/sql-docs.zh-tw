@@ -49,9 +49,9 @@ FOR XML EXPLICIT;
   
  在產生的 XML 文件中：  
   
--   因為 *資料行未指定*AttributeName`Overflow`，但指定 `xmltext` 指示詞，所以 <`overflow`> 元素中的屬性會附加到封閉式 <`Parent`> 元素的屬性清單。  
+-   因為 `Overflow` 資料行未指定 *AttributeName*，但指定 `xmltext` 指示詞，所以 <`overflow`> 元素中的屬性會附加到封閉式 <`Parent`> 元素的屬性清單。  
   
--   因為 <`PersonID`> 元素中的 `xmltext` 屬性與在相同元素層級上擷取的 `PersonID` 屬性衝突，所以即使 `xmltext` 為 NULL，還是會忽略 <`PersonID`> 元素中的屬性。 一般而言，屬性會覆寫溢位中相同名稱的屬性。  
+-   因為 <`xmltext`> 元素中的 `PersonID` 屬性與在相同元素層級上擷取的 `PersonID` 屬性衝突，所以即使 `PersonID` 為 NULL，還是會忽略 <`xmltext`> 元素中的屬性。 一般而言，屬性會覆寫溢位中相同名稱的屬性。  
   
  以下是結果：  
   
@@ -97,7 +97,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- 如果以 *指示詞指定*AttributeName`xmltext`，則 <`overflow`> 元素的屬性將會新增為封閉式 <`Parent`> 元素的子元素屬性。 為 *AttributeName* 所指定的名稱將成為子元素的名稱。  
+ 如果以 `xmltext` 指示詞指定 *AttributeName*，則 <`overflow`> 元素的屬性將會新增為封閉式 <`Parent`> 元素的子元素屬性。 為 *AttributeName* 所指定的名稱將成為子元素的名稱。  
   
  在此查詢中，*AttributeName* (<`overflow`>) 會與 `xmltext` 指示詞一起指定：   
   

@@ -61,7 +61,7 @@ SET SHOWPLAN_XML 用來傳回應用程式 (如 **sqlcmd** 公用程式) 的輸�
 SET SHOWPLAN_XML 會將資訊當作一組 XML 文件傳回。 SET SHOWPLAN_XML ON 陳述式之後的每個批次都會反映在單一文件的輸出中。 每份文件都包含批次內各陳述式的文字，後面接著執行步驟的詳細資料。 文件會顯示估計的成本、資料列數、存取的索引、執行的運算子類型、聯結順序，以及執行計畫的詳細資訊。
 
 > [!NOTE]
-> 如果已在  **中選取了 [包括實際執行計畫]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，這個 SET 選項將不會產生 XML 執行程序表輸出。 在使用這個 SET 選項之前，請清除 [包括實際執行計畫]  按鈕。
+> 如果已在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中選取了 [包括實際執行計畫]，這個 SET 選項將不會產生 XML 執行程序表輸出。 在使用這個 SET 選項之前，請清除 [包括實際執行計畫]  按鈕。
 
 ### <a name="location-of-showplan-output"></a>SHOWPLAN 輸出的位置
 

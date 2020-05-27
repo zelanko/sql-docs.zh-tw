@@ -71,7 +71,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 下列範例會建立 `cust`uniqueidentifier**資料類型的** 資料表，且使用 NEWID 在資料表中填入預設值。 在指派 `NEWID()` 的預設值時，每個新的資料列和現有的資料列，都有唯一的 `CustomerID` 資料行值。  
+ 下列範例會建立 **uniqueidentifier** 資料類型的 `cust` 資料表，且使用 NEWID 在資料表中填入預設值。 在指派 `NEWID()` 的預設值時，每個新的資料列和現有的資料列，都有唯一的 `CustomerID` 資料行值。  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  

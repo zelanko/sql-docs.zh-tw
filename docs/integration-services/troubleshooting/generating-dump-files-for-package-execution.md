@@ -26,7 +26,7 @@ ms.locfileid: "71295107"
   
 > **注意！** 偵錯傾印檔案可能會包含敏感性資訊。 若要保護敏感性資訊，您可以使用存取控制清單 (ACL) 來限制這些檔案的存取權，或將這些檔案複製到具有存取限制的資料夾。 例如，將偵錯檔案傳送給 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 支援服務之前，我們建議您移除任何敏感性或機密資訊。  
   
- 當您將某個專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器時，可以建立傾印檔案，這些檔案會提供有關專案中包含之封裝執行的資訊。 當 ISServerExec.exe 程序結束時，會建立傾印檔案。 您可以指定在封裝執行期間發生錯誤時建立傾印檔案，方法是選取 [執行封裝]  對話方塊中的 [在發生錯誤時傾印]  選項。 您也可以使用下列預存程序：  
+ 當您將某個專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器時，可以建立傾印檔案，這些檔案會提供有關專案中包含之封裝執行的資訊。 當 ISServerExec.exe 程序結束時，會建立傾印檔案。 您可以指定在封裝執行期間發生錯誤時建立傾印檔案，方法是選取 [執行封裝] 對話方塊中的 [在發生錯誤時傾印] 選項。 您也可以使用下列預存程序：  
   
 -   [catalog.set_execution_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "71295107"
   
 -   .tmp 偵錯傾印檔案。 這是文字格式的檔案。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 預設會將這些檔案儲存至 *磁碟機>:\<* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 資料夾。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 預設會將這些檔案儲存至 \<磁碟機>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 資料夾。  
   
  下表僅描述 .tmp 檔案中的特定區段。 .tmp 檔案還包含此表未列出的其他資料。  
   

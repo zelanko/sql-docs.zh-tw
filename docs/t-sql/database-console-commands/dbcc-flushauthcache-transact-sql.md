@@ -43,7 +43,7 @@ DBCC FLUSHAUTHCACHE [ ; ]
   
 ## <a name="remarks"></a>備註  
 驗證快取會複製儲存在 master 資料庫中的登入與伺服器防火牆規則，然後放在使用者資料庫的記憶體中。  因為自主資料庫使用者的資訊已儲存在使用者資料庫中，所以自主資料庫使用者不是驗證快取的一部分。
-持續作用中的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 連線至少每 10 小時就需要授權 (由[!INCLUDE[ssDE](../../includes/ssde-md.md)]執行)。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]會嘗試使用最初提交的密碼重新授權，而且不需要使用者輸入。 基於效能考量，當密碼在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中重設時，不會重新驗證連線，即使連線因為連線共用而重設。 這和內部部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行為不同。 如果自從連線初始授權後密碼已經變更，則必須中斷該連線，然後使用新密碼建立新連線。 具有 KILL DATABASE CONNECTION 權限的使用者可以使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]KILL &#40;Transact-SQL&#41;[ 命令明確地中斷對 ](../../t-sql/language-elements/kill-transact-sql.md) 的連線。
+持續作用中的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 連線至少每 10 小時就需要授權 (由[!INCLUDE[ssDE](../../includes/ssde-md.md)]執行)。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]會嘗試使用最初提交的密碼重新授權，而且不需要使用者輸入。 基於效能考量，當密碼在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中重設時，不會重新驗證連線，即使連線因為連線共用而重設。 這和內部部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行為不同。 如果自從連線初始授權後密碼已經變更，則必須中斷該連線，然後使用新密碼建立新連線。 具有 KILL DATABASE CONNECTION 權限的使用者可以使用 [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md) 命令明確地中斷對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的連線。
   
 ## <a name="permissions"></a>權限  
 需要 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 系統管理員帳戶。

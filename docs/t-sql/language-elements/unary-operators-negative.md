@@ -52,7 +52,7 @@ ms.locfileid: "68072139"
  這是在日期和時間類別目錄以外，屬於數值資料類型類別目錄之任何資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>結果類型  
- 除了不帶正負號的 *tinyint* 運算式升級為帶正負號 **smallint** 結果，傳回 **numeric_expression** 的資料類型。  
+ 除了不帶正負號的 **tinyint** 運算式升級為帶正負號 **smallint** 結果，傳回 *numeric_expression* 的資料類型。  
   
 ## <a name="examples"></a>範例  
   
@@ -136,7 +136,7 @@ SELECT TOP (1) - ( - 17) FROM DimEmployee;
 ```  
   
 ### <a name="e-returning-the-negative-of-a-column"></a>E. 傳回資料行的負值  
- 下列範例會傳回 `BaseRate` 資料表中每一位員工 `dimEmployee` 值的負值。  
+ 下列範例會傳回 `dimEmployee` 資料表中每一位員工 `BaseRate` 值的負值。  
   
 ```  
 USE ssawPDW;  

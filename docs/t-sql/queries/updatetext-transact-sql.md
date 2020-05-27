@@ -33,7 +33,7 @@ ms.locfileid: "67948226"
   更新現有的 **text**、**ntext** 或 **image** 欄位。 請使用 UPDATETEXT 來適當地只變更 **text**、**ntext** 或 **image** 資料行中的一部分。 使用 WRITETEXT 來更新和取代整個 **text**、**ntext** 或 **image** 欄位。  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用大數值資料類型和 **UPDATE** 陳述式的 [.](../../t-sql/queries/update-transact-sql.md)WRITE 子句。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用大數值資料類型和 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式的 **.** WRITE 子句。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

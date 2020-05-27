@@ -21,7 +21,7 @@ ms.locfileid: "73926027"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  稽核是由零或多個稽核動作項目所組成，這些項目會記錄到稽核 *「目標」* (Target)。 稽核目標可以是二進位檔案、Windows 應用程式事件記錄檔或 Windows 安全性事件記錄檔。 傳送給目標的記錄包含下表所述的項目：  
   

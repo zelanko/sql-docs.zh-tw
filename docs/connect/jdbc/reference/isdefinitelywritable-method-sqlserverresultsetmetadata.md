@@ -49,7 +49,7 @@ public boolean isDefinitelyWritable(int column)
  這個 isDefinitelyWritable 方法是由 java.sql.ResultSetMetaData 介面中的 isDefinitelyWritable 方法指定。  
   
 > [!NOTE]  
->  當配合 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 資料庫使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，這個方法一律會傳回 false。  
+>  當配合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 時，這個方法一律會傳回 false。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSetMetaData 方法](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

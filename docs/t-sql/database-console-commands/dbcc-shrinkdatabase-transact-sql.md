@@ -116,7 +116,7 @@ DBCC SHRINKDATABASE 會以個別檔案為基礎來壓縮資料檔案，但會依
   
 假設您有幾個記錄檔、一個資料檔，以及一個名為 **mydb** 的資料庫。 每個資料檔案和記錄檔均為 10 MB，資料檔案則包含 6 MB 的資料。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會計算每個檔案的目標大小。 這個值是檔案要壓縮到的大小。 當設定 _target\_percent_ 來指定 DBCC SHRINKDATABASE 時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將目標大小計算為在壓縮之後，檔案中可用空間的 _target\_percent_ 量。 
 
-例如，如果您指定壓縮 _mydb\_ 的_ target**percent** 為 25，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將這個資料檔案的目標大小計算為 8 MB (6 MB 資料加 2 MB 可用空間)。 因此，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將資料檔案最後 2 MB 的任何資料移到資料檔案前 8 MB 中的任何可用空間，然後再壓縮檔案。
+例如，如果您指定壓縮 **mydb** 的 _target\_percent_ 為 25，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將這個資料檔案的目標大小計算為 8 MB (6 MB 資料加 2 MB 可用空間)。 因此，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將資料檔案最後 2 MB 的任何資料移到資料檔案前 8 MB 中的任何可用空間，然後再壓縮檔案。
   
 假設 **mydb** 的資料檔案包含 7 MB 的資料。 將 _target\_percent_ 指定為 30，可以將這個資料檔案壓縮到可用百分比 30。 不過，將 _target\_percent_ 指定為 40 並不會壓縮資料檔案，因為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會將檔案壓縮成小於資料目前所佔用的大小。 
 
@@ -144,7 +144,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-此錯誤表示時間戳記早於 109 的快照集交易會封鎖壓縮作業。 該交易是壓縮作業完成的最後一個交易。 其也表示 **sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;** 動態管理檢視中的 **transaction_sequence_num** 或 [first_snapshot_sequence_num](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 資料行包含值 15。 檢視中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 資料行所包含數字可能小於壓縮作業所完成的最後一項交易 (109)。 如果是這樣，壓縮作業將會等到這些交易完成。
+此錯誤表示時間戳記早於 109 的快照集交易會封鎖壓縮作業。 該交易是壓縮作業完成的最後一個交易。 其也表示 [sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 動態管理檢視中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 資料行包含值 15。 檢視中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 資料行所包含數字可能小於壓縮作業所完成的最後一項交易 (109)。 如果是這樣，壓縮作業將會等到這些交易完成。
   
 若要解決這個問題，可以執行下列其中一項工作：
 -   結束正在封鎖壓縮作業的交易。  

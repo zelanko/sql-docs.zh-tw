@@ -25,7 +25,7 @@ ms.locfileid: "69025596"
 
 在用戶端程式碼中驗證使用者輸入相當重要，如此您不會浪費與伺服器的往返。 在伺服器上驗證預存程序的參數以捕捉無效的輸入以及略過用戶端驗證的輸入也同等重要。
 
-如需 SQL 插入式攻擊以及如何避免 SQL 插入式攻擊的詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書中的＜SQL 插入式攻擊＞。 如需有關驗證預存程序參數的詳細資訊，請參閱《[!INCLUDE[ssDE](../../includes/ssde_md.md)] 線上叢書》中的＜預存程序 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])＞及從屬的主題。
+如需 SQL 插入式攻擊以及如何避免 SQL 插入式攻擊的詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書中的＜SQL 插入式攻擊＞。 如需有關驗證預存程序參數的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜預存程序 ([!INCLUDE[ssDE](../../includes/ssde_md.md)])＞及從屬的主題。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. 更新 Employee 資料表的頁面及 (或) 資料列計數  
-下列範例會報告 `Employee` 資料庫中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表的已更新頁面或資料列計數資訊。
+下列範例會報告 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中 `Employee` 資料表的已更新頁面或資料列計數資訊。
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  

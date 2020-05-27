@@ -21,7 +21,7 @@ ms.locfileid: "69028324"
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]getCharacterStream[ 方法，從 ](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) 資料庫中擷取大型單一資料行值。
+此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何使用 [getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) 方法，從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中擷取大型單一資料行值。
 
 此範例的程式碼檔案名稱為 ReadLargeData.java，可在下列位置找到：
 
@@ -40,7 +40,7 @@ ms.locfileid: "69028324"
 
 在下列範例中，範例程式碼會建立與 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 資料庫的連線。 接著，範例程式碼會建立範例資料，並使用參數化查詢更新 Production.Document 資料表。
 
-此外，範例程式碼示範如何使用 [SQLServerStatement](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) 類別的 [getResponseBuffering](../../../connect/jdbc/reference/sqlserverstatement-class.md) 方法來取得自適性緩衝模式。 請注意，從 JDBC Driver 2.0 版開始，responseBuffering 連接屬性預設設定為 "adaptive"。
+此外，範例程式碼示範如何使用 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) 方法來取得自適性緩衝模式。 請注意，從 JDBC Driver 2.0 版開始，responseBuffering 連接屬性預設設定為 "adaptive"。
 
 然後，搭配 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件使用 SQL 陳述式時，範例程式碼會執行 SQL 陳述式，並且將所傳回的資料放入 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中。
 

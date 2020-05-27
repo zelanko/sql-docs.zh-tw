@@ -155,7 +155,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 | 引數 | 說明 |
 | -------- | ----------- |
-|*partition_column_name*| 指定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 將用來分割資料列的資料行。 此資料行可以是任何資料類型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會以遞增順序排序資料分割資料行值。 從低到高順序會以 `LEFT` 規格由 `RIGHT` 到 `RANGE` 排序。 |  
+|*partition_column_name*| 指定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 將用來分割資料列的資料行。 此資料行可以是任何資料類型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會以遞增順序排序資料分割資料行值。 從低到高順序會以 `RANGE` 規格由 `LEFT` 到 `RIGHT` 排序。 |  
 | `RANGE LEFT` | 指定屬於左邊 (較低的值) 資料分割的界限值。 預設值為 LEFT。 |
 | `RANGE RIGHT` | 指定屬於右邊 (較高的值) 資料分割的界限值。 | 
 | `FOR VALUES` ( *boundary_value* [,...*n*] ) | 指定資料分割的界限值。 *boundary_value* 是常數運算式。 不得為 NULL。 它必須符合或可以隱含轉換為 *partition_column_name* 的資料類型。 無法在進行隱含轉換期間截斷，因此值的大小和級別不會和 *partition_column_name* 的資料類型相符<br></br><br></br>如果指定 `PARTITION` 子句，但未指定界限值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 將會建立包含一個資料分割的資料分割資料表。 如果適用，您隨後可以將資料表分割成兩個資料分割。<br></br><br></br>如果您指定一個界限值，產生的資料表會有兩個資料分割，一個用於低於界限值的值，一個用於高於界限值的值。 如果將資料分割移動到非資料分割資料表中，非資料分割資料表將會接收資料，但其中繼資料中將不會有資料分割界限。| 

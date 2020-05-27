@@ -30,10 +30,10 @@ ms.locfileid: "78896699"
 如需使用者定義型別的完整文件，請參閱 SQL Server 線上叢書中的 [CLR 使用者定義型別](https://go.microsoft.com/fwlink/?LinkId=98366)。
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>使用 GetSchema 擷取 UDT 結構描述  
-<xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> 的 <xref:Microsoft.Data.SqlClient.SqlConnection> 方法會傳回 <xref:System.Data.DataTable> 中的資料庫結構描述資訊。
+<xref:Microsoft.Data.SqlClient.SqlConnection> 的 <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> 方法會傳回 <xref:System.Data.DataTable> 中的資料庫結構描述資訊。
   
 ### <a name="getschematable-column-values-for-udts"></a>UDT 的 GetSchemaTable 資料行值  
-<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法會傳回描述資料行中繼資料的 <xref:System.Data.DataTable>。 下表描述 SQL Server 2005 與 SQL Server 2008 之間大型 UDT 之資料行中繼資料中的差異。  
+<xref:Microsoft.Data.SqlClient.SqlDataReader> 的 <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 方法會傳回描述資料行中繼資料的 <xref:System.Data.DataTable>。 下表描述 SQL Server 2005 與 SQL Server 2008 之間大型 UDT 之資料行中繼資料中的差異。  
   
 |SqlDataReader 資料行|SQL Server 2005|SQL Server 2008 及更新版本|  
 |--------------------------|---------------------|-------------------------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "78896699"
 ## <a name="sqldatareader-considerations"></a>SqlDataReader 考量因素  
 從 SQL Server 2008 開始，<xref:Microsoft.Data.SqlClient.SqlDataReader> 已擴充，可支援大型 UDT 值的擷取。 <xref:Microsoft.Data.SqlClient.SqlDataReader> 處理大型 UDT 值的方式，取決於您所使用的 SQL Server 版本，以及連接字串中指定的 `Type System Version`。 如需詳細資訊，請參閱 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
   
-當 <xref:Microsoft.Data.SqlClient.SqlDataReader> 設定為 SQL Server 2005 時，下列 <xref:System.Data.SqlTypes.SqlBinary> 的方法將會傳回 `Type System Version`，而不是 UDT：  
+當 `Type System Version` 設定為 SQL Server 2005 時，下列 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的方法將會傳回 <xref:System.Data.SqlTypes.SqlBinary>，而不是 UDT：  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
@@ -62,7 +62,7 @@ ms.locfileid: "78896699"
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
-當 `Byte[]` 設定為 SQL Server 2005 時，下列方法將會傳回 `Type System Version` (而非 UDT) 的陣列：  
+當 `Type System Version` 設定為 SQL Server 2005 時，下列方法將會傳回 `Byte[]` (而非 UDT) 的陣列：  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetValue%2A>  
   

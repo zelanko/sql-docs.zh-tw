@@ -132,7 +132,7 @@ ms.locfileid: "73981999"
   
  如果在 **Vendor** 資料表的某資料列上執行 DELETE 陳述式，且指定了 **ProductVendor.VendorID** 的 ON DELETE CASCADE 動作，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 便會檢查 **ProductVendor** 資料表中一或多個相依的資料列。 如果有任何相依的資料列存在，除了會將 **Vendor** 資料表中所參考的資料列刪除，還會刪除 **ProductVendor** 資料表中的相依資料列。  
   
- 相反地，如果指定 NO ACTION，當 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ProductVendor**資料表中有至少一個資料列參考**Vendor **資料列時，** 會產生一則錯誤，且會回復 Vendor 資料列的刪除動作。  
+ 相反地，如果指定 NO ACTION，當 **ProductVendor** 資料表中有至少一個資料列參考 **Vendor** 資料列時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤，且會回復 Vendor 資料列的刪除動作。  
   
  ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
  指定當變更的資料表中之資料列有參考關聯性，且在父資料表中所參考的資料列有了更新時，變更的資料表中之資料列會發生什麼動作。 預設值是 NO ACTION。  
@@ -157,7 +157,7 @@ ms.locfileid: "73981999"
   
  如果在 **Vendor** 資料表的某資料列上執行 UPDATE 陳述式，且指定了 **ProductVendor.VendorID** 的 ON UPDATE CASCADE 動作，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 便會檢查 **ProductVendor** 資料表中一或多個相依的資料列。 如果有任何相依的資料列存在，除了 **Vendor** 資料表中所參考的資料列，還會更新 **ProductVendor** 資料表中的相依資料列。  
   
- 相反地，如果指定了 NO ACTION，當 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ProductVendor **資料表中有至少一個資料列參考 Vendor 資料列時，** 會產生一則錯誤，且會回復 **Vendor** 資料列的更新動作。  
+ 相反地，如果指定了 NO ACTION，當 **ProductVendor** 資料表中有至少一個資料列參考 Vendor 資料列時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤，且會回復 **Vendor** 資料列的更新動作。  
   
  NOT FOR REPLICATION  
  **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  

@@ -32,7 +32,7 @@ ms.locfileid: "68329297"
 
 此函式會傳回跨越指定之 *startdate* 和 *enddate* 的指定之 *datepart* 界限的計數 (作為帶正負號的大整數值)。
   
-如需所有 [ 日期和時間資料類型與函式的概觀，請參閱](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日期和時間資料類型與函式 &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]。
+如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -88,7 +88,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 帶正負號的 **bigint**  
   
 ## <a name="return-value"></a>傳回值  
-會傳回 **startdate** 和 *enddate* 之間的 *bigint* 差異，以 *datepart* 所設定的 coundary 表示。
+會傳回 *startdate* 和 *enddate* 之間的 **bigint** 差異，以 *datepart* 所設定的 coundary 表示。
   
 針對超出 **bigint** 範圍 (-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807) 的傳回值，`DATEDIFF_BIG` 會傳回錯誤。 不同於 `DATEDIFF` 會傳回 **int**，因此可使用 **minute** 或更高的精確度進行溢位，`DATEDIFF_BIG` 只能在使用 **nanosecond** 精確度 (其中 *enddate* 和 *startdate* 之間的差距超出 292 年 3 個月 10 天 23 小時 47 分鐘又 16.8547758 秒) 時進行溢位。
   
@@ -96,7 +96,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 `DATEDIFF_BIG` 不會使用 *startdate* 或 *enddate* 的時區時差元件來計算傳回值。
   
-針對用於 **startdate** 或 *enddate* 的 *smalldatetime* 值，`DATEDIFF_BIG` 一律會在傳回值中將秒和毫秒設定為 0，因為 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 的精確度只有到分鐘。
+針對用於 *startdate* 或 *enddate* 的 **smalldatetime** 值，`DATEDIFF_BIG` 一律會在傳回值中將秒和毫秒設定為 0，因為 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 的精確度只有到分鐘。
   
 如果您只有將時間值指派給日期資料類型變數，`DATEDIFF_BIG` 會將遺漏日期部分的值設定為預設值：`1900-01-01`。 如果您只有將日期值指派給時間或日期資料類型的變數，`DATEDIFF_BIG` 會將遺漏時間部分的值設定為預設值：`00:00:00`。 如果 *startdate* 或 *enddate* 其中之一只有時間部分，而另一個只有日期部分，`DATEDIFF_BIG` 會將遺漏的時間和日期部分設定為預設值。
   
@@ -119,13 +119,13 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 ```
   
 ## <a name="remarks"></a>備註  
-您可以在 `DATEDIFF_BIG`、`SELECT <list>`、`WHERE`、`HAVING` 和 `GROUP BY` 子句中使用 `ORDER BY`。
+您可以在 `SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY` 和 `ORDER BY` 子句中使用 `DATEDIFF_BIG`。
   
 `DATEDIFF_BIG` 會以隱含的方式，將字串常值轉換為 **datetime2** 類型。 這表示，將日期當作字串傳遞時，`DATEDIFF_BIG` 不支援 YDM 格式。 您必須明確地將字串轉換為 **datetime** 或 **smalldatetime** 類型，才能使用 YDM 格式。
   
 指定 `SET DATEFIRST` 對 `DATEDIFF_BIG` 沒有任何作用。 `DATEDIFF_BIG` 一律會使用星期天當作一週的第一天，以確保此函式以具決定性的方式運作。
 
-如果 `DATEDIFF_BIG`enddate**與**startdate*的差距傳回超出*bigint*範圍的值，則* 可使用 **nanosecond** 的精確度進行溢位。
+如果 *enddate* 與 *startdate* 的差距傳回超出 **bigint** 範圍的值，則 `DATEDIFF_BIG` 可使用 **nanosecond** 的精確度進行溢位。
   
 ## <a name="examples"></a>範例 
   

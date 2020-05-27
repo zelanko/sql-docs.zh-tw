@@ -61,7 +61,7 @@ GO
 ```  
   
 ### <a name="b-using-current_user-as-a-default-constraint"></a>B. 使用 CURRENT_USER 做為 DEFAULT 條件約束  
-此範例會建立一份資料表，利用 `CURRENT_USER` 作為銷售資料列之 `DEFAULT` 資料行的 `order_person` 條件約束。
+此範例會建立一份資料表，利用 `CURRENT_USER` 作為銷售資料列之 `order_person` 資料行的 `DEFAULT` 條件約束。
   
 ```sql
 USE AdventureWorks2012;  

@@ -97,7 +97,7 @@ ALTER SCHEMA schema_name
 ## <a name="examples"></a>範例  
   
 ### <a name="a-transferring-ownership-of-a-table"></a>A. 傳送資料表的擁有權  
- 下列範例會將 `HumanResources` 結構描述中的 `Address` 資料表傳送到 'HumanResources` 結構描述中，以修改 `Person` 結構描述。  
+ 下列範例會將 `Person` 結構描述中的 `Address` 資料表傳送到 'HumanResources` 結構描述中，以修改 `HumanResources` 結構描述。  
   
 ```  
 USE AdventureWorks2012;  
@@ -138,7 +138,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. 傳送資料表的擁有權  
- 下列範例會在 `Region` 結構描述中建立資料表 `dbo`、建立 `Sales` 結構描述，然後將 `Region` 資料表從 `dbo` 結構描述移動至 `Sales` 結構描述。  
+ 下列範例會在 `dbo` 結構描述中建立資料表 `Region`、建立 `Sales` 結構描述，然後將 `Region` 資料表從 `dbo` 結構描述移動至 `Sales` 結構描述。  
   
 ```  
 CREATE TABLE dbo.Region   

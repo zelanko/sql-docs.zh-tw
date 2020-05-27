@@ -23,7 +23,7 @@ ms.locfileid: "69026203"
 
 根據預設，在交易內建立的結果集會在交易認可到資料庫之後或在交易回復時保持開啟。 不過，有時候在已經認可交易之後，讓結果集關閉會很有用。 為了達到此目的，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援使用結果集保留性。
 
-您可以使用 [SQLServerConnection](../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md) 類別的 [setHoldability](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法來設定結果集保留性。 使用 setHoldability 方法來設定保留性時，您可以使用 `ResultSet.HOLD_CURSORS_OVER_COMMIT` 或 `ResultSet.CLOSE_CURSORS_AT_COMMIT` 的結果集保留性常數。
+您可以使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [setHoldability](../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md) 方法來設定結果集保留性。 使用 setHoldability 方法來設定保留性時，您可以使用 `ResultSet.HOLD_CURSORS_OVER_COMMIT` 或 `ResultSet.CLOSE_CURSORS_AT_COMMIT` 的結果集保留性常數。
 
 JDBC Driver 在建立其中一個陳述式物件時，也支援設定保留性。 使用結果集保留性參數來建立具有多載的陳述式物件時，陳述式物件的保留性必須與連接的保留性相符。 如果它們不相符，就會擲回例外狀況。 這是因為 SQL Server 只會在連接層級支援保留性。
 

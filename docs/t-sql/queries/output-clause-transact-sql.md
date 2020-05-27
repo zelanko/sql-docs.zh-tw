@@ -353,7 +353,7 @@ GO
 ```  
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. 使用 OUTPUT INTO 搭配 UPDATE 陳述式  
- 下列範例會將 `VacationHours` 資料表前 10 個資料列的 `Employee` 資料行更新 25%。 `OUTPUT` 子句會將在 `VacationHours` 資料行中套用 `UPDATE` 陳述式之前便已存在的 `deleted.VacationHours` 值，以及 `inserted.VacationHours` 資料行中更新的值傳回給 `@MyTableVar` 資料表變數。  
+ 下列範例會將 `VacationHours` 資料表前 10 個資料列的 `Employee` 資料行更新 25%。 `OUTPUT` 子句會將在 `deleted.VacationHours` 資料行中套用 `UPDATE` 陳述式之前便已存在的 `VacationHours` 值，以及 `inserted.VacationHours` 資料行中更新的值傳回給 `@MyTableVar` 資料表變數。  
   
  之後的兩個 `SELECT` 陳述式會傳回 `@MyTableVar` 中的值，以及 `Employee` 資料表中更新作業的結果。  
   
@@ -388,7 +388,7 @@ GO
 ```  
   
 ### <a name="d-using-output-into-to-return-an-expression"></a>D. 使用 OUTPUT INTO 來傳回運算式  
- 下列範例是以範例 C 為基礎所建立，它在 `OUTPUT` 子句中定義一個運算式，當做更新的 `VacationHours` 值和套用更新之前的 `VacationHours` 值之間的差異。 此運算式的值會傳回給 `@MyTableVar``table` 資料行中的 `VacationHoursDifference` 變數。  
+ 下列範例是以範例 C 為基礎所建立，它在 `OUTPUT` 子句中定義一個運算式，當做更新的 `VacationHours` 值和套用更新之前的 `VacationHours` 值之間的差異。 此運算式的值會傳回給 `VacationHoursDifference` 資料行中的 `@MyTableVar``table` 變數。  
   
 ```  
 USE AdventureWorks2012;  
@@ -422,7 +422,7 @@ GO
 ```  
   
 ### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. 在 UPDATE 陳述式中，使用 OUTPUT INTO 搭配 from_table_name  
- 下列範例會針對具有指定 `ScrapReasonID` 和 `WorkOrder` 的所有工單，更新 `ProductID` 資料表中的 `ScrapReasonID` 資料行。 `OUTPUT INTO` 子句會從更新的資料表 (`WorkOrder`) 傳回值，也會從 `Product` 傳回值。 `Product` 子句利用 `FROM` 資料表來指定要更新的資料列。 由於 `WorkOrder` 資料表定義了 `AFTER UPDATE` 觸發程序，因此，需要 `INTO` 關鍵字。  
+ 下列範例會針對具有指定 `ProductID` 和 `ScrapReasonID` 的所有工單，更新 `WorkOrder` 資料表中的 `ScrapReasonID` 資料行。 `OUTPUT INTO` 子句會從更新的資料表 (`WorkOrder`) 傳回值，也會從 `Product` 傳回值。 `Product` 子句利用 `FROM` 資料表來指定要更新的資料列。 由於 `WorkOrder` 資料表定義了 `AFTER UPDATE` 觸發程序，因此，需要 `INTO` 關鍵字。  
   
 ```  
 USE AdventureWorks2012;  

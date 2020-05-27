@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. 使用可延伸金鑰管理 (EKM) 裝置建立對稱金鑰  
- 下列範例會使用稱為 `MySymKey` 的提供者與 `MyEKMProvider` 的金鑰名稱，建立稱為 `KeyForSensitiveData` 的對稱金鑰。 它會將授權指派給 `User1`，並假設系統管理員已經在 `MyEKMProvider` 中，註冊稱為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的提供者。  
+ 下列範例會使用稱為 `MySymKey` 的提供者與 `MyEKMProvider` 的金鑰名稱，建立稱為 `KeyForSensitiveData` 的對稱金鑰。 它會將授權指派給 `User1`，並假設系統管理員已經在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，註冊稱為 `MyEKMProvider` 的提供者。  
   
 ```  
 CREATE SYMMETRIC KEY MySymKey  

@@ -82,7 +82,7 @@ column_name <data_type>
   
 ## <a name="arguments"></a>引數  
  *column_name*  
- 要改變、加入或卸除的資料欄名稱。 *column_name* 可由 1 到 128 個字元組成。 如果是以 timestamp 資料類型建立的新資料行，可以省略 *column_name*。 如果沒有為 *timestamp* 資料類型資料行指定任何 **column_name**，則會使用 **timestamp** 這個名稱。  
+ 要改變、加入或卸除的資料欄名稱。 *column_name* 可由 1 到 128 個字元組成。 如果是以 timestamp 資料類型建立的新資料行，可以省略 *column_name*。 如果沒有為 **timestamp** 資料類型資料行指定任何 *column_name*，則會使用 **timestamp** 這個名稱。  
   
  [ _type_schema_name_ **.** ] *type_name*  
  這是加入的資料行之資料類型及它所屬的結構描述。  
@@ -113,10 +113,10 @@ column_name <data_type>
  僅適用於 **varchar**、**nvarchar**，和 **varbinary** 資料類型。 這些資料類型用來儲存 2^31 位元組的字元和二進位資料，以及 2^30 位元組的 Unicode 資料。  
   
 **CONTENT**  
- 指定 **column_name** 中 *xml* 資料類型的每個執行個體都可以由多個最上層項目組成。 CONTENT 只適用於 **xml** 資料類型，而且只有在同時指定 *xml_schema_collection* 時，才能指定。 如果未指定這個項目，CONTENT 便是預設行為。  
+ 指定 *column_name* 中 **xml** 資料類型的每個執行個體都可以由多個最上層項目組成。 CONTENT 只適用於 **xml** 資料類型，而且只有在同時指定 *xml_schema_collection* 時，才能指定。 如果未指定這個項目，CONTENT 便是預設行為。  
   
 DOCUMENT  
- 指定 **column_name** 中 *xml* 資料類型的每個執行個體都只能由一個最上層項目組成。 DOCUMENT 只適用於 **xml** 資料類型，而且只有在同時指定 *xml_schema_collection* 時，才能指定。  
+ 指定 *column_name* 中 **xml** 資料類型的每個執行個體都只能由一個最上層項目組成。 DOCUMENT 只適用於 **xml** 資料類型，而且只有在同時指定 *xml_schema_collection* 時，才能指定。  
   
  *xml_schema_collection*  
  **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
@@ -124,7 +124,7 @@ DOCUMENT
  只適用於 **xml** 資料類型，以便將 XML 結構描述集合與類型產生關聯。 在結構描述中鍵入 **xml** 資料行之前，必須先使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)，在資料庫中建立結構描述。  
   
 FILESTREAM  
- 選擇性的針對具有 *varbinary(max)* 之 **type_name** 的資料行指定 FILESTREAM 儲存屬性。  
+ 選擇性的針對具有 **varbinary(max)** 之 *type_name* 的資料行指定 FILESTREAM 儲存屬性。  
   
  當針對資料行指定 FILESTREAM 時，資料表也必須要有 **uniqueidentifier** 資料類型的資料行 (此類型具有 ROWGUIDCOL 屬性)。 這個資料行不能允許 null 值，且必須具有 UNIQUE 或 PRIMARY KEY 單一資料行條件約束。 資料行的 GUID 值必須在插入資料時由應用程式提供，或是由使用 NEWID () 函數的 DEFAULT 條件約束所提供。  
   

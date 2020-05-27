@@ -83,7 +83,7 @@ U-SQL 設定有兩個設定：**SourceType** 和根據 **SourceType** 值而定�
 
 ## <a name="parameter-mapping-page-configuration"></a>參數對應頁面設定
 
-使用 [Azure Data Lake Analytics 工作編輯器]  對話方塊的 [參數對應]  頁面，將變數對應至 U-SQL 指令碼中的參數 (U-SQL 變數)。
+使用 [Azure Data Lake Analytics 工作編輯器] 對話方塊的 [參數對應] 頁面，將變數對應至 U-SQL 指令碼中的參數 (U-SQL 變數)。
 
 - **變數名稱：** 選取 [新增]  來新增參數對應之後，從清單中選取系統或使用者定義的變數。 或者，您可以選取 [<新增變數...>]  ，然後使用 [加入變數]  對話方塊來加入新的變數。 如需相關資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)。  
 

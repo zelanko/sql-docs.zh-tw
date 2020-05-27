@@ -42,7 +42,7 @@ ATN2 ( float_expression , float_expression )
   
 ## <a name="arguments"></a>引數  
 *float_expression*  
-資料型別為 [float](../../t-sql/language-elements/expressions-transact-sql.md) 的**運算式**。
+資料型別為 **float** 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>傳回類型
 **float**

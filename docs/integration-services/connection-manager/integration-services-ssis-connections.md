@@ -125,14 +125,14 @@ ms.locfileid: "79112277"
   
  若要在您建立新的封裝時自動建立及設定連線管理員，您可以使用 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]。 精靈也可以幫助您建立及設定使用連線管理員的來源和目的地。 如需詳細資訊，請參閱 [在 SQL Server 資料工具中建立封裝](../../integration-services/create-packages-in-sql-server-data-tools.md)。  
   
- 若要手動建立新的連線管理員，並將其加入至現有的封裝，請使用  **設計師之 [控制流程]** **、[資料流程]** **和 [事件處理常式]** **索引標籤上所出現的 [連線管理員]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區域。 從 [連線管理員]  區域，您可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師所提供的對話方塊，來選擇要建立的連線管理員類型，然後再設定連線管理員的屬性。 如需詳細資訊，請參閱本主題稍後的「使用連線管理員區域」一節。  
+ 若要手動建立新的連線管理員，並將其加入至現有的封裝，請使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師之 [控制流程]、[資料流程] 和 [事件處理常式] 索引標籤上所出現的 [連線管理員] 區域。 從 [連線管理員]  區域，您可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師所提供的對話方塊，來選擇要建立的連線管理員類型，然後再設定連線管理員的屬性。 如需詳細資訊，請參閱本主題稍後的「使用連線管理員區域」一節。  
   
  將連接管理員加入封裝之後，您就可以在工作、「Foreach 迴圈」容器、來源、轉換和目的地中使用它。 如需詳細資訊，請參閱 [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)、[Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)和[資料流程](../../integration-services/data-flow/data-flow.md)。  
   
 ### <a name="using-the-connection-managers-area"></a>使用連接管理員區域  
- 當  **設計師的 [控制流程]** **、[資料流程]** **或 [事件處理常式]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤處於作用中時，您可以建立連線管理員。  
+ 當 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程]、[資料流程] 或 [事件處理常式] 索引標籤處於作用中時，您可以建立連線管理員。  
   
- 下圖顯示  **設計師之 [控制流程]** **索引標籤上的 [連線管理員]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區域。  
+ 下圖顯示 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師之 [控制流程] 索引標籤上的 [連線管理員] 區域。  
   
  ![具有套件的控制流程設計師螢幕擷取畫面](../../integration-services/connection-manager/media/samplecontrolflow.gif "具有套件的控制流程設計師螢幕擷取畫面")    
   
@@ -192,7 +192,7 @@ ms.locfileid: "79112277"
   
 5.  選擇性地以滑鼠右鍵按一下連線管理員，並按一下 [重新命名]  ，然後修改連線管理員的預設名稱。  
   
-6.  若要儲存更新的封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
+6.  若要儲存更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
   
 ###  <a name="add-a-connection-manager-at-the-project-level"></a><a name="project"></a> 在專案層級新增連線管理員  
   
@@ -224,12 +224,12 @@ ms.locfileid: "79112277"
     |[SQL Server Compact Edition 連線管理員](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 連線管理員編輯器 &#40;連接頁面&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition 連線管理員編輯器 &#40;全部頁面&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
     |[WMI 連線管理員](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 連線管理員編輯器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
   
-     您加入的連線管理員將會顯示在方案總管  的 [連線管理員]  節點底下。 針對專案中的所有封裝，它也會顯示在 [SSIS 設計師]  視窗的 [連線管理員]  索引標籤中。 此索引標籤中連線管理員名稱的前置詞將是 **(專案)** ，以區分此專案層級連線管理員以及封裝層級連線管理員。  
+     您加入的連線管理員將會顯示在方案總管的 [連線管理員] 節點底下。 針對專案中的所有封裝，它也會顯示在 [SSIS 設計師] 視窗的 [連線管理員] 索引標籤中。 此索引標籤中連線管理員名稱的前置詞將是 **(專案)** ，以區分此專案層級連線管理員以及封裝層級連線管理員。  
   
-4.  或者，以滑鼠右鍵按一下方案總管  視窗之 [連線管理員]  節點底下的連線管理員 (或) 在 [SSIS 設計師]  視窗的 [連線管理員]  索引標籤中，按一下 [重新命名]  ，然後修改連線管理員的預設名稱。  
+4.  或者，以滑鼠右鍵按一下方案總管視窗之 [連線管理員] 節點底下的連線管理員 (或) 在 [SSIS 設計師] 視窗的 [連線管理員] 索引標籤中，按一下 [重新命名]，然後修改連線管理員的預設名稱。  
   
     > [!NOTE]  
-    >  在 [SSIS 設計師]  視窗的 [連線管理員]  索引標籤中，您無法覆寫連線管理員名稱中的 **(專案)** 前置詞。 這是原廠設定。  
+    >  在 [SSIS 設計師] 視窗的 [連線管理員] 索引標籤中，您無法覆寫連線管理員名稱中的 **(專案)** 前置詞。 這是原廠設定。  
 
 ### <a name="add-ssis-connection-manager-dialog-box"></a>新增 SSIS 連線管理員對話方塊
 使用 [加入 SSIS 連線管理員]  對話方塊來選取要加入封裝的連接類型。  
@@ -272,7 +272,7 @@ ms.locfileid: "79112277"
   
 ###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> 刪除共用的連線管理員 (專案層級的連線管理員)  
   
-1.  若要刪除專案層級的連線管理員，以滑鼠右鍵按一下方案總管  視窗之 [連線管理員]  節點底下的連線管理員，然後按一下 [刪除]  。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 會顯示下列警告訊息：  
+1.  若要刪除專案層級的連線管理員，以滑鼠右鍵按一下方案總管視窗之 [連線管理員] 節點底下的連線管理員，然後按一下 [刪除]。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 會顯示下列警告訊息：  
   
     > [!WARNING]  
     >  刪除專案連接管理員後，使用該連接管理員的封裝可能無法執行。 您無法恢復這個動作。 您要刪除連接管理員嗎?  
@@ -280,7 +280,7 @@ ms.locfileid: "79112277"
 2.  按一下 [確定] 可刪除該連接管理員，或按一下 [取消] 可保留該連接管理員。  
   
     > [!NOTE]  
-    >  您也可以從針對專案中任何封裝開啟之 [SSIS 設計師]  視窗的 [連線管理員]  索引標籤中，刪除專案層級的連線管理員。 為此，以滑鼠右鍵按一下索引標籤中的連線管理員，然後按一下 [刪除]  。 
+    >  您也可以從針對專案中任何封裝開啟之 [SSIS 設計師] 視窗的 [連線管理員] 索引標籤中，刪除專案層級的連線管理員。 為此，以滑鼠右鍵按一下索引標籤中的連線管理員，然後按一下 [刪除]  。 
     
 ## <a name="set-the-properties-of-a-connection-manager"></a>設定連線管理員的屬性
 所有連接管理員都可以使用 [屬性]  視窗進行設定。  

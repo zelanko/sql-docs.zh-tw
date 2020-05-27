@@ -37,7 +37,7 @@ ms.locfileid: "75255822"
 
 此函式會傳回字元字串，代表指定之 *date* 的指定 *datepart*。
 
-如需所有 [ 日期和時間資料類型與函式的概觀，請參閱](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日期和時間資料類型與函式 &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]。
+如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,7 +49,7 @@ DATENAME ( datepart , date )
   
 ## <a name="arguments"></a>引數  
 *datepart*  
-*會傳回之*date`DATENAME` 引數的特定部分。 此表格會列出所有有效的 *datepart* 引數。
+`DATENAME` 會傳回之 *date* 引數的特定部分。 此表格會列出所有有效的 *datepart* 引數。
 
 > [!NOTE]
 > `DATENAME` 不會接受 *datepart* 引數的使用者定義變數對等項目。
@@ -92,7 +92,7 @@ DATENAME ( datepart , date )
   
 -   每個 *datepart* 及其縮寫都會傳回相同的值。  
   
-傳回值會取決於使用 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 及登入的[設定 default language 伺服器設定選項](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)而設定的語言環境，而有所不同。 如果 [date](../../t-sql/statements/set-dateformat-transact-sql.md) 是某些格式的字串常值，傳回值就會取決於 *SET DATEFORMAT*。 當 date 是日期或時間資料類型的資料行運算式時，SET DATEFORMAT 並不會變更傳回值。
+傳回值會取決於使用 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 及登入的[設定 default language 伺服器設定選項](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)而設定的語言環境，而有所不同。 如果 *date* 是某些格式的字串常值，傳回值就會取決於 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)。 當 date 是日期或時間資料類型的資料行運算式時，SET DATEFORMAT 並不會變更傳回值。
   
 當 *date* 參數具有 **date** 資料類型引數時，傳回值就會根據 [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) 所指定的設定而不同。
   
@@ -103,7 +103,7 @@ DATENAME ( datepart , date )
 當 *date* 是 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 時，`DATENAME` 會以 00 形式傳回秒數。
   
 ## <a name="default-returned-for-a-datepart-that-is-not-in-the-date-argument"></a>針對不在 date 引數中的 datepart 所傳回的預設值  
-如果 *date* 引數的資料類型沒有指定的 *datepart*，只有在 `DATENAME`date *引數具有常值時，* 才會傳回該 *datepart* 的預設值。
+如果 *date* 引數的資料類型沒有指定的 *datepart*，只有在 *date* 引數具有常值時，`DATENAME` 才會傳回該 *datepart* 的預設值。
   
 例如，任何 **date** 資料類型的預設年-月-日都是 1900-01-01。 此陳述式具有 *datepart* 的日期部分引數、*date* 的時間引數，而且 `DATENAME` 會傳回 `1900, January, 1, 1, Monday`。
   

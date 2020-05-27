@@ -51,9 +51,9 @@ LEFT ( character_expression , integer_expression )
  *integer_expression* 參數會將 UTF-16 代理字元視為一個字元。  
   
 ## <a name="return-types"></a>傳回型別  
- 當 **character_expression** 是非 Unicode 字元資料類型時，則傳回 *varchar*。  
+ 當 *character_expression* 是非 Unicode 字元資料類型時，則傳回 **varchar**。  
   
- 當 **character_expression** 是 Unicode 字元資料類型時，則傳回 *nvarchar*。  
+ 當 *character_expression* 是 Unicode 字元資料類型時，則傳回 **nvarchar**。  
   
 ## <a name="remarks"></a>備註  
  當使用 SC 定序時，*integer_expression* 參數會將 UTF-16 代理字組視為一個字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
@@ -61,7 +61,7 @@ LEFT ( character_expression , integer_expression )
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-left-with-a-column"></a>A. 使用 LEFT 搭配資料行  
- 下列範例會傳回 `Product` 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中，每個產品名稱最左邊的五個字元。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Product` 資料表中，每個產品名稱最左邊的五個字元。  
   
 ```  
 SELECT LEFT(Name, 5)   

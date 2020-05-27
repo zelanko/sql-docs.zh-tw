@@ -44,7 +44,7 @@ ms.locfileid: "69027775"
   
 -   [方法名稱] 欄位會列出 JDBC API 中支援的 getter、setter 和 updater 方法。   
   
--   [Getter SQLXML 物件] 欄位代表 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md) 方法或 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 方法所建立的 SQLXML 物件。   
+-   [Getter SQLXML 物件] 欄位代表 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md) 方法或 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 方法所建立的 SQLXML 物件。  
   
 -   [Setter SQLXML 物件] 欄位代表 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法所建立的 SQLXML 物件。  請注意，下列 setter 方法僅接受 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法所建立的 SQLXML 物件。  
   

@@ -23,7 +23,7 @@ ms.locfileid: "69026827"
 
 您可以呼叫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序是會傳回一或多個 OUT 參數的預存程序，預存程序會使用這些參數將資料傳回給呼叫端應用程式。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別，您可以使用此類別呼叫這類型的預存程序並處理其傳回的資料。
 
-使用 JDBC 驅動程式呼叫這類型的預存程序時，必須搭配使用 `call` SQL 逸出序列與 [SQLServerConnection](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 類別的 [prepareCall](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法。 含有 OUT 參數之 `call` 逸出序列的語法如下：
+使用 JDBC 驅動程式呼叫這類型的預存程序時，必須搭配使用 `call` SQL 逸出序列與 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法。 含有 OUT 參數之 `call` 逸出序列的語法如下：
 
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 

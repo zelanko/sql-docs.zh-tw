@@ -35,7 +35,7 @@ ms.locfileid: "68893897"
 建立外部集區，以用來定義外部處理序的資源。 資源集區代表資料庫引擎執行個體的實體資源 (記憶體和 CPU) 子集。 資源管理員可讓資料庫管理員在資源集區間散發伺服器資源，最多可達 64 個集區。
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-若是 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 中的 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，外部集區會掌管 `rterm.exe`、`BxlServer.exe` 及其衍生的其他處理序。
+若是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部集區會掌管 `rterm.exe`、`BxlServer.exe` 及其衍生的其他處理序。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -88,7 +88,7 @@ MAX_PROCESSES =*value*
 
 ## <a name="remarks"></a>備註
 
-當您執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ALTER RESOURCE GOVERNOR RECONFIGURE[ 陳述式時，](../../t-sql/statements/alter-resource-governor-transact-sql.md) 將實作資源集區。
+當您執行 [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) 陳述式時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 將實作資源集區。
 
 如需資源集區的一般資訊，請參閱 [Resource Governor 資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)、[sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)及 [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)。
 

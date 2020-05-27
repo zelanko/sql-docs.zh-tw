@@ -21,10 +21,10 @@ ms.locfileid: "69028426"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何從資料庫擷取大型資料集，然後使用 [SQLServerResultSet](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 物件的 [setFetchSize](../../connect/jdbc/reference/sqlserverresultset-class.md) 方法控制用戶端上快取的資料列數。
+此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何從資料庫擷取大型資料集，然後使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 方法控制用戶端上快取的資料列數。
 
 > [!NOTE]  
-> 限制在用戶端上快取的列數不同於限制結果集可以包含的總列數。 若要控制結果集中包含的總資料列數，請使用 [SQLServerStatement](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 物件的 [setMaxRows](../../connect/jdbc/reference/sqlserverstatement-class.md) 方法，[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 物件兩者也繼承此方法。
+> 限制在用戶端上快取的列數不同於限制結果集可以包含的總列數。 若要控制結果集中包含的總資料列數，請使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的 [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 方法，[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 物件兩者也繼承此方法。
 
 若要對用戶端上快取的資料列數設定限制，您必須先在建立其中一個 Statement 物件時使用伺服器端資料指標，方法為特別陳述要在建立 Statement 物件時使用的資料指標類型。 例如，JDBC 驅動程式提供 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 資料指標類型，這是與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫搭配使用之快速順向且唯讀的伺服器端資料指標。
 

@@ -43,7 +43,7 @@ public java.lang.String getURL()
 ## <a name="remarks"></a>備註  
  這個 getURL 方法是由 java.sql.DatabaseMetaData 介面中的 getURL 方法所指定。  
   
- 當配合 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 資料庫使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，這個方法會傳回包含下列資訊的**字串**值：  
+ 當配合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 時，這個方法會傳回包含下列資訊的**字串**值：  
   
 -   URL 值，"jdbc:sqlserver://"  
   

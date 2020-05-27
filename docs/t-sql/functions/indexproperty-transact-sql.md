@@ -80,7 +80,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，INDEXPROPERTY) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回 **資料庫中** 資料表 **索引的**IsClustered **、** IndexDepth`PK_Employee_BusinessEntityID` 和 `Employee`IndexFillFactor[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 屬性的值。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Employee` 資料表 `PK_Employee_BusinessEntityID` 索引的 **IsClustered**、**IndexDepth** 和 **IndexFillFactor** 屬性的值。  
   
 ```  
 SELECT   

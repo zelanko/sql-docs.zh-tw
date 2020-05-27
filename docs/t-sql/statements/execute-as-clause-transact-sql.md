@@ -101,7 +101,7 @@ DDL Triggers with Database Scope
  執行內容的使用者識別碼儲存在中繼資料中，可以在 **sys.sql_modules** 或 **sys.assembly_modules** 目錄檢視的 **execute_as_principal_id** 資料行中檢視。  
   
  **'** *login_name* **'**  
- 指定模組內的陳述式，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]login_name*所指定的* 登入內容中執行。 會針對 *login_name* 來驗證模組內任何物件的權限。 *login_name* 只能針對具有伺服器範圍的 DDL 觸發程序或登入觸發程序來指定。  
+ 指定模組內的陳述式，在 *login_name* 所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入內容中執行。 會針對 *login_name* 來驗證模組內任何物件的權限。 *login_name* 只能針對具有伺服器範圍的 DDL 觸發程序或登入觸發程序來指定。  
   
  *login_name* 不可以是群組、角色、憑證、金鑰或內建帳戶，例如 NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
   

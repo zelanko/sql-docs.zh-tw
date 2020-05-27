@@ -32,7 +32,7 @@ Microsoft SQL Server 包含名為 **bcp** 的常用命令列公用程式，用�
 - 交易內的大量複製作業  
   
 > [!NOTE]
->  當使用 .NET Framework 1.1 版或更早版本 (不支援 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 類別) 時，您可使用 **物件執行 SQL Server Transact-SQL**BULK INSERT<xref:Microsoft.Data.SqlClient.SqlCommand> 陳述式。  
+>  當使用 .NET Framework 1.1 版或更早版本 (不支援 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 類別) 時，您可使用 <xref:Microsoft.Data.SqlClient.SqlCommand> 物件執行 SQL Server Transact-SQL **BULK INSERT** 陳述式。  
   
 ## <a name="in-this-section"></a>本節內容  
 [大量複製範例設定](bulk-copy-example-setup.md)  

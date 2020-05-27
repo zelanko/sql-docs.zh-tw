@@ -52,7 +52,7 @@ FILE_IDEX ( file_name )
 發生錯誤時傳回 **NULL**  
   
 ## <a name="remarks"></a>備註  
-*file_name* 對應至 **sys.master_files** 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)目錄檢視 [name](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 資料行中所顯示的邏輯檔案名稱。  
+*file_name* 對應至 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)目錄檢視 **name** 資料行中所顯示的邏輯檔案名稱。  
   
 您可以在 SELECT 清單、WHERE 子句或支援使用運算式的任何位置使用 `FILE_IDEX`。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
   

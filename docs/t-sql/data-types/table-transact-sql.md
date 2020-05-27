@@ -97,7 +97,7 @@ SELECT select_list INTO table_variable;
 ## <a name="limitations-and-restrictions"></a>限制事項
 **Table** 變數沒有散發統計資料。 它們不會觸發重新編譯。 在許多情況下，最佳化工具都將以資料表變數沒有資料列當作假設前提，建立查詢計畫。 基於這個原因，若您預期會有較多數目的資料列 (超過 100 列)，就應該謹慎使用資料表變數。 如果是這類情況，暫存資料表也許是更適宜的方案。 如果查詢聯結資料表變數與其他資料表，則可使用 RECOMPILE 提示，而使最佳化工具針對資料表變數使用正確的基數。
   
-**最佳化工具的成本考量推論模型不支援**table[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 變數。 因此，需要成本考量選擇來達成有效率的查詢計畫時，就不應該使用這些變數。 需要成本考量選擇時，最好使用暫存資料表。 這種計畫通常會包含具有聯結的查詢、平行處理原則決定，以及索引選取範圍選擇。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最佳化工具的成本考量推論模型不支援 **table** 變數。 因此，需要成本考量選擇來達成有效率的查詢計畫時，就不應該使用這些變數。 需要成本考量選擇時，最好使用暫存資料表。 這種計畫通常會包含具有聯結的查詢、平行處理原則決定，以及索引選取範圍選擇。
   
 修改 **table** 變數的查詢不會產生平行查詢執行計畫。 修改大型 **table** 變數或複雜查詢中的 **table** 變數時，可能會影響效能。 在 **table** 變數遭修改的情況下，請考慮改為使用暫存資料表。 如需詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。 讀取但不修改 **table** 變數的查詢仍然可以平行處理。
 
@@ -118,7 +118,7 @@ SELECT select_list INTO table_variable;
 ## <a name="examples"></a>範例  
   
 ### <a name="a-declaring-a-variable-of-type-table"></a>A. 宣告類型資料表的變數  
-下列範例會建立一個 `table` 變數來儲存 UPDATE 陳述式的 OUTPUT 子句所指定的值。 之後的兩個 `SELECT` 陳述式會傳回 `@MyTableVar` 中的值，以及 `Employee` 資料表中更新作業的結果。 `INSERTED.ModifiedDate` 資料行中的結果不同於 `ModifiedDate` 資料表中 `Employee` 資料行的值。 這項差異是因為將 `AFTER UPDATE` 值更新成目前日期的 `ModifiedDate` 觸發程序是定義在 `Employee` 資料表上。 不過，從 `OUTPUT` 傳回的資料行會反映引發觸發程序之前的資料。 如需詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。
+下列範例會建立一個 `table` 變數來儲存 UPDATE 陳述式的 OUTPUT 子句所指定的值。 之後的兩個 `SELECT` 陳述式會傳回 `@MyTableVar` 中的值，以及 `Employee` 資料表中更新作業的結果。 `INSERTED.ModifiedDate` 資料行中的結果不同於 `Employee` 資料表中 `ModifiedDate` 資料行的值。 這項差異是因為將 `ModifiedDate` 值更新成目前日期的 `AFTER UPDATE` 觸發程序是定義在 `Employee` 資料表上。 不過，從 `OUTPUT` 傳回的資料行會反映引發觸發程序之前的資料。 如需詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。
   
 ```sql
 USE AdventureWorks2012;  

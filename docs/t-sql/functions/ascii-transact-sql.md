@@ -49,7 +49,7 @@ ASCII ( character_expression )
  **int**  
   
 ## <a name="remarks"></a>備註
-ASCII 代表「美國訊息交換標準代碼」(**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange)。 它是現代電腦的字元編碼標準。 如需 ASCII 字元清單，請參閱 [ASCII](https://www.wikipedia.org/wiki/ASCII) 的＜可列印字元＞  (Printable characters) 一節。
+ASCII 代表「美國訊息交換標準代碼」(**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange)。 它是現代電腦的字元編碼標準。 如需 ASCII 字元清單，請參閱 [ASCII](https://www.wikipedia.org/wiki/ASCII) 的＜可列印字元＞(Printable characters) 一節。
 
 ASCII 是一組 7 位元的字元集。 擴充 ASCII 或高 ASCII 是一組 8 位元的字元集，其不會由 `ASCII` 函式進行處理。 
 

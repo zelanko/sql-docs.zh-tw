@@ -47,7 +47,7 @@ ms.locfileid: "68136034"
 變更交易隔離等級不會影響 @@DBTS 函式。
   
 ## <a name="examples"></a>範例  
-此範例會傳回 **資料庫目前的**timestamp[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。
+此範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫目前的 **timestamp**。
   
 ```sql
 USE AdventureWorks2012;  

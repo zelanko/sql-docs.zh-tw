@@ -61,7 +61,7 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 指定小數秒值的整數運算式。
   
 *有效位數*  
-整數運算式，指定 **會傳回之**datetime2`DATETIME2FROMPARTS` 值的精確度。
+整數運算式，指定 `DATETIME2FROMPARTS` 會傳回之 **datetime2** 值的精確度。
   
 ## <a name="return-types"></a>傳回類型
 **datetime2(** *precision* **)**

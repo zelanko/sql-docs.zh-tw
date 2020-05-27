@@ -56,7 +56,7 @@ FILEGROUP_NAME ( filegroup_id )
 *filegroup_id* 對應到 **sys.filegroups** 目錄檢視的 **data_space_id** 資料行。  
   
 ## <a name="examples"></a>範例  
-此範例會傳回 `1` 資料庫中檔案群組識別碼 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的檔案群組名稱。  
+此範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中檔案群組識別碼 `1` 的檔案群組名稱。  
   
 ```  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  

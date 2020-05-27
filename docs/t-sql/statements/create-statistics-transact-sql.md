@@ -249,7 +249,7 @@ MAXDOP = *max_degree_of_parallelism*
 ### <a name="examples-use-the-adventureworks-database"></a>範例使用的是 AdventureWorks 資料庫。  
 
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. 搭配 SAMPLE 數目 PERCENT 使用 CREATE STATISTICS  
- 下列範例會使用 `ContactMail1` 資料庫的 `BusinessEntityID` 資料表內，`EmailPromotion` 和 `Person` 資料行的 5% 隨機取樣，來建立 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 統計資料。  
+ 下列範例會使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Person` 資料表內，`BusinessEntityID` 和 `EmailPromotion` 資料行的 5% 隨機取樣，來建立 `ContactMail1` 統計資料。  
   
 ```sql  
 CREATE STATISTICS ContactMail1  
@@ -291,7 +291,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. 搭配 FULLSCAN 和 PERSIST_SAMPLE_PERCENT 使用 CREATE STATISTICS  
- 下列範例會針對 `NamePurchase` 中所有資料列和 `BusinessEntityID` 資料表中的 `EmailPromotion` 資料行建立 `Person` 統計資料，並針對未明確指定取樣百分比的所有後續更新，設定 100% 取樣百分比。  
+ 下列範例會針對 `BusinessEntityID` 中所有資料列和 `Person` 資料表中的 `EmailPromotion` 資料行建立 `NamePurchase` 統計資料，並針對未明確指定取樣百分比的所有後續更新，設定 100% 取樣百分比。  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
@@ -302,14 +302,14 @@ CREATE STATISTICS NamePurchase  
 ### <a name="examples-using-adventureworksdw-database"></a>使用 AdventureWorksDW 資料庫的範例。 
   
 ### <a name="f-create-statistics-on-two-columns"></a>F. 建立兩個資料行的統計資料  
- 下列範例會根據 `CustomerStats1` 資料表的 `CustomerKey` 和 `EmailAddress` 資料行，建立 `DimCustomer` 統計資料。 該統計資料是根據 `Customer` 資料表中統計上很重要的資料列取樣而建立的。  
+ 下列範例會根據 `DimCustomer` 資料表的 `CustomerKey` 和 `EmailAddress` 資料行，建立 `CustomerStats1` 統計資料。 該統計資料是根據 `Customer` 資料表中統計上很重要的資料列取樣而建立的。  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. 使用完整掃描建立統計資料  
- 下列範例會根據掃描 `CustomerStatsFullScan` 資料表中的所有資料列來建立 `DimCustomer` 統計資料。  
+ 下列範例會根據掃描 `DimCustomer` 資料表中的所有資料列來建立 `CustomerStatsFullScan` 統計資料。  
   
 ```sql  
 CREATE STATISTICS CustomerStatsFullScan 
@@ -317,7 +317,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ```  
   
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. 透過指定取樣百分比來建立統計資料  
- 下列範例會根據掃描 `CustomerStatsSampleScan` 資料表中 50% 的資料列來建立 `DimCustomer` 統計資料。  
+ 下列範例會根據掃描 `DimCustomer` 資料表中 50% 的資料列來建立 `CustomerStatsSampleScan` 統計資料。  
   
 ```sql  
 CREATE STATISTICS CustomerStatsSampleScan 

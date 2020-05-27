@@ -61,7 +61,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  需要憑證的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例使用憑證 `@SensitiveData` 簽署 `ABerglundCert07` 中的文字，且先使用密碼 "pGFD4bb925DGvbd2439587y" 將憑證解密。 然後將純文字和簽章插入資料表 `SignedData04`。  
+ 下列範例使用憑證 `ABerglundCert07` 簽署 `@SensitiveData` 中的文字，且先使用密碼 "pGFD4bb925DGvbd2439587y" 將憑證解密。 然後將純文字和簽章插入資料表 `SignedData04`。  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  

@@ -76,7 +76,7 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ## <a name="examples"></a>範例  
   
 ### <a name="a-dropping-a-function"></a>A. 卸除函數  
- 下列範例會從 `fn_SalesByStore` 範例資料庫的 `Sales` 結構描述，卸除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 使用者定義的函數。 若要建立此函數，請參閱範例 B 中的 [CREATE FUNCTION & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-function-transact-sql.md)。  
+ 下列範例會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫的 `Sales` 結構描述，卸除 `fn_SalesByStore` 使用者定義的函數。 若要建立此函數，請參閱範例 B 中的 [CREATE FUNCTION & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-function-transact-sql.md)。  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  

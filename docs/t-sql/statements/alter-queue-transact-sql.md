@@ -191,7 +191,7 @@ ALTER QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. 變更佇列讀取器的數目  
- 下列範例會將 `7` 為了這個佇列而啟動的最大預存程序執行個體數目設為 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。  
+ 下列範例會將 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 為了這個佇列而啟動的最大預存程序執行個體數目設為 `7`。  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  

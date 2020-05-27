@@ -58,13 +58,13 @@ WAITFOR
  這是在繼續執行批次、預存程序或交易之前，必須經過的指定時段，最多 24 小時。  
   
  '*time_to_pass*'  
- 這是要等待的時間週期。 您可以使用 *datetime* 資料格式來指定 **time_to_pass**，或將它指定成區域變數。 不能指定日期，因此不接受 **datetime** 值的日期部分。 *time_to_pass*會格式化為 hh:mm[[:ss].mss]。
+ 這是要等待的時間週期。 您可以使用 **datetime** 資料格式來指定 *time_to_pass*，或將它指定成區域變數。 不能指定日期，因此不接受 **datetime** 值的日期部分。 *time_to_pass*會格式化為 hh:mm[[:ss].mss]。
   
  TIME  
  此時執行批次、預存程序或交易時的指定時間。  
   
  '*time_to_execute*'  
- 這是 WAITFOR 陳述式完成的時間。 您可以使用 *datetime* 資料格式來指定 **time_to_execute**，也可以將它指定成區域變數。 不能指定日期，因此不接受 **datetime** 值的日期部分。 *time_to_execute* 會格式化為 hh:mm[[:ss].mss]，且可以選擇性地包含日期 1900-01-01。
+ 這是 WAITFOR 陳述式完成的時間。 您可以使用 **datetime** 資料格式來指定 *time_to_execute*，也可以將它指定成區域變數。 不能指定日期，因此不接受 **datetime** 值的日期部分。 *time_to_execute* 會格式化為 hh:mm[[:ss].mss]，且可以選擇性地包含日期 1900-01-01。
   
  *receive_statement*  
  這是有效的 RECEIVE 陳述式。  

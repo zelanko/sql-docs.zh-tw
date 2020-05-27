@@ -26,7 +26,7 @@ ms.locfileid: "67955126"
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取值，此值指出是否可呼叫 [SQLServerResultSet](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 類別的 [rowDeleted](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法來偵測可見資料列刪除。  
+  擷取值，此值指出是否可呼叫 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 方法來偵測可見資料列刪除。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,7 +60,7 @@ public boolean deletesAreDetected(int type)
 ## <a name="return-value"></a>傳回值  
  如果間距取代已刪除的資料列，則為 **true**。 如果移除已刪除的資料列，則為 **false**。  
   
- 當配合 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 資料庫使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，這個方法會針對 TYPE_SS_SCROLL_KEYSET 資料指標傳回 **true**，而針對所有的其他結果集類型傳回 **false**。  
+ 當配合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 時，這個方法會針對 TYPE_SS_SCROLL_KEYSET 資料指標傳回 **true**，而針對所有的其他結果集類型傳回 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

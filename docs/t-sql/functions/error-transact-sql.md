@@ -71,7 +71,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. 利用 @@ERROR 有條件地結束程序  
- 下列範例會在預存程序中的 `IF...ELSE` 陳述式之後，使用 `@@ERROR` 陳述式來測試 `DELETE`。 `@@ERROR` 變數的值決定了傳給呼叫端程式來指出程序成功或失敗的傳回碼。  
+ 下列範例會在預存程序中的 `DELETE` 陳述式之後，使用 `IF...ELSE` 陳述式來測試 `@@ERROR`。 `@@ERROR` 變數的值決定了傳給呼叫端程式來指出程序成功或失敗的傳回碼。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -105,7 +105,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>C. 搭配 @@ERROR使用 @@ROWCOUNT  
+### <a name="c-using-error-with-rowcount"></a>C. 搭配 @@ROWCOUNT使用 @@ERROR  
  下列範例搭配 `@@ERROR` 使用 `@@ROWCOUNT` 來驗證 `UPDATE` 陳述式的作業。 `@@ERROR` 的值用來針對任何錯誤指示來進行檢查，而 `@@ROWCOUNT` 則用來確保更新已成功套用至資料表中的資料列。  
   
 ```sql  

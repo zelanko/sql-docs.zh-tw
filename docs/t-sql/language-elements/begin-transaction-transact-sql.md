@@ -68,7 +68,7 @@ BEGIN { TRAN | TRANSACTION }
  *transaction_name*  
  **適用於：** SQL Server (從 2008 開始)、Azure SQL Database
  
- 這是指派給交易的名稱。 *transaction_name* 必須符合識別碼的規則，但不允許超出 32 個字元的識別碼。 請只在巢狀 BEGIN...COMMIT 或 BEGIN...ROLLBACK 陳述式的最外一組使用交易名稱。 即使  *的執行個體不區分大小寫，* transaction_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律還是會區分大小寫。  
+ 這是指派給交易的名稱。 *transaction_name* 必須符合識別碼的規則，但不允許超出 32 個字元的識別碼。 請只在巢狀 BEGIN...COMMIT 或 BEGIN...ROLLBACK 陳述式的最外一組使用交易名稱。 即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體不區分大小寫，*transaction_name* 一律還是會區分大小寫。  
   
  @*tran_name_variable*  
  **適用於：** SQL Server (從 2008 開始)、Azure SQL Database

@@ -65,7 +65,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  本文所使用的子查詢都是指 ALL。 ALL 也可以搭配 [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) 和 [SELECT](../../t-sql/queries/select-transact-sql.md) 使用。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立預存程序，以判斷 `SalesOrderID` 資料庫中所指定 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的所有組件，是否都可以在指定的天數內製造出來。 這個範例會使用子查詢，針對特定 `DaysToManufacture` 的所有元件建立一份 `SalesOrderID` 值數目清單，然後確認所有 `DaysToManufacture` 都在指定的天數範圍內。  
+ 下列範例會建立預存程序，以判斷 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中所指定 `SalesOrderID` 的所有組件，是否都可以在指定的天數內製造出來。 這個範例會使用子查詢，針對特定 `SalesOrderID` 的所有元件建立一份 `DaysToManufacture` 值數目清單，然後確認所有 `DaysToManufacture` 都在指定的天數範圍內。  
   
 ```  
 -- Uses AdventureWorks  

@@ -51,7 +51,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>引數  
  *transaction_name*  
- 指派給 BEGIN TRANSACTION 之交易的名稱。 *transaction_name* 必須符合識別碼的規則，但只可使用交易名稱的前 32 個字元。 當建立巢狀交易時，*transaction_name* 必須是最外層 BEGIN TRANSACTION 陳述式的名稱。 即使  *執行個體不區分大小寫，* transaction_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還是一律都會區分大小寫。  
+ 指派給 BEGIN TRANSACTION 之交易的名稱。 *transaction_name* 必須符合識別碼的規則，但只可使用交易名稱的前 32 個字元。 當建立巢狀交易時，*transaction_name* 必須是最外層 BEGIN TRANSACTION 陳述式的名稱。 即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體不區分大小寫，*transaction_name* 還是一律都會區分大小寫。  
   
  **@** *tran_name_variable*  
  這是包含有效交易名稱之使用者定義變數的名稱。 這個變數必須用 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型來宣告。  

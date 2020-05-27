@@ -48,7 +48,7 @@ public long getLong(java.lang.String sCol)
 ## <a name="remarks"></a>備註  
  此 getLong 方法由 java.sql.CallableStatement 介面中的 getLong 方法指定。  
   
- 只有可以安全傳回整數值 (如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bigint **、** int **、** smallint **、** tinyint**和**bit **) 的**  資料類型才支援這個方法。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
+ 只有可以安全傳回整數值 (如 **bigint**、**int**、**smallint**、**tinyint** 和 **bit**) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型才支援這個方法。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
  [getLong 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   

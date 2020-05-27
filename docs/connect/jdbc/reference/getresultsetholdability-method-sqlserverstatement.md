@@ -25,7 +25,7 @@ ms.locfileid: "67980321"
 # <a name="getresultsetholdability-method-sqlserverstatement"></a>getResultSetHoldability 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取由這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件產生的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件結果集保留性。  
+  擷取由這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件產生的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件結果集保留性。  
   
 ## <a name="syntax"></a>語法  
   

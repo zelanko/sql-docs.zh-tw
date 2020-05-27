@@ -146,7 +146,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>範例  
   
 ### <a name="a-revoking-a-permission-from-a-login"></a>A. 從登入撤銷權限  
- 下列範例會從 `VIEW SERVER STATE` 登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 撤銷 `WanidaBenshoof` 權限。  
+ 下列範例會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `VIEW SERVER STATE` 撤銷 `WanidaBenshoof` 權限。  
   
 ```  
 USE master;  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ### <a name="b-revoking-the-with-grant-option"></a>B. 撤銷 WITH GRANT 選項  
- 下列範例會從 `CONNECT SQL` 登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 撤銷授與 `JanethEsteves` 的權限。  
+ 下列範例會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `CONNECT SQL` 撤銷授與 `JanethEsteves` 的權限。  
   
 ```  
 USE master;  

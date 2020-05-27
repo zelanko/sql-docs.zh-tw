@@ -62,7 +62,7 @@ ms.locfileid: "76909828"
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 純量函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  您可以在 [ 陳述式中使用 ](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC 純量函式[!INCLUDE[tsql](../../includes/tsql-md.md)]。 這些陳述式會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行解譯。 它們可用於預存程序和使用者自訂函數中。 這些項目包括字串、數值、時間、日期、間隔和系統函數。  
+  您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用 [ODBC 純量函式](https://go.microsoft.com/fwlink/?LinkID=88579)。 這些陳述式會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行解譯。 它們可用於預存程序和使用者自訂函數中。 這些項目包括字串、數值、時間、日期、間隔和系統函數。  
   
 ## <a name="usage"></a>使用量  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  

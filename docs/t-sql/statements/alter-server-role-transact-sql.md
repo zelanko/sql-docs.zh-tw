@@ -112,7 +112,7 @@ ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. 將 SQL Server 登入加入至伺服器角色  
-下列範例會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `Ted` 登入新增至 `diskadmin` 固定伺服器角色中。  
+下列範例會將 `Ted` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入新增至 `diskadmin` 固定伺服器角色中。  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -120,14 +120,14 @@ GO
 ```  
   
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. 從伺服器角色移除網域帳戶  
-下列範例會從使用者定義的伺服器角色 `adventure-works\roberto0` 移除網域帳戶 `Production`。  
+下列範例會從使用者定義的伺服器角色 `Production` 移除網域帳戶 `adventure-works\roberto0`。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. 從伺服器角色移除 SQL Server 登入  
-下列範例會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定伺服器角色移除 `Ted` 的 `diskadmin` 登入。  
+下列範例會從 `diskadmin` 固定伺服器角色移除 `Ted` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ### <a name="g-to-view-role-membership"></a>G. 若要檢視角色成員資格  
-若要檢視角色成員資格，請使用  **的 [伺服器角色 (成員)]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 頁面，或執行下列查詢：  
+若要檢視角色成員資格，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [伺服器角色 (成員)] 頁面，或執行下列查詢：  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

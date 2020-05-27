@@ -50,7 +50,7 @@ SET STATISTICS TIME { ON | OFF }
   
  SET STATISTICS TIME 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   
- 當您啟用 [輕量型共用][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**設定選項時，會啟用 Fiber 模式，但在 Fiber 模式下，Microsoft** 無法提供準確的統計資料。  
+ 當您啟用 [輕量型共用] 設定選項時，會啟用 Fiber 模式，但在 Fiber 模式下，Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法提供準確的統計資料。  
   
  只有在使用 SET STATISTICS TIME ON 來執行查詢時，才會更新 **sysprocesses** 資料表的 **cpu** 資料行。 當 SET STATISTICS TIME 是 OFF 時，會傳回 **0**。  
   

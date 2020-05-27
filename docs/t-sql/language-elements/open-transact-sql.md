@@ -31,7 +31,7 @@ ms.locfileid: "68121930"
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標，並執行 DECLARE CURSOR 或 SET [!INCLUDE[tsql](../../includes/tsql-md.md)]cursor_variable*陳述式上指定的* 陳述式來擴展資料指標。  
+  開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標，並執行 DECLARE CURSOR 或 SET *cursor_variable* 陳述式上指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來擴展資料指標。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

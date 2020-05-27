@@ -164,7 +164,7 @@ CREATE CERTIFICATE certificate_name
 ## <a name="remarks"></a>備註  
  憑證是遵照 X.509 標準及支援 X.509 V1 欄位的資料庫層級安全性實體。 `CREATE CERTIFICATE` 可以從檔案、二進位常數或組件載入憑證。 這個陳述式也可以產生金鑰組及建立自簽憑證。  
   
- 私密金鑰必須為 \<= 2500 位元組的加密格式。 截至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 止，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 產生的私密金鑰長度為 1024 個位元；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始則為 2048 位元。 從外部來源匯入的私密金鑰，其最小長度為 384 個位元，其最大長度為 4,096 個位元。 匯入的私密金鑰，其長度必須為 64 個位元的整數倍。 用於 TDE 的憑證限制在 3456 位元的私密金鑰大小。  
+ 私密金鑰必須為 \<= 2500 位元組的加密格式。 截至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 止，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的私密金鑰長度為 1024 個位元；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始則為 2048 位元。 從外部來源匯入的私密金鑰，其最小長度為 384 個位元，其最大長度為 4,096 個位元。 匯入的私密金鑰，其長度必須為 64 個位元的整數倍。 用於 TDE 的憑證限制在 3456 位元的私密金鑰大小。  
   
  系統會儲存憑證的完整「序號」，但只有前 16 個位元組會出現在 sys.certificates 目錄檢視中。  
   

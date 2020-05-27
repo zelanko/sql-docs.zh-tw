@@ -104,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>範例  
   
 ### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. 撤銷端點的 VIEW DEFINITION 權限  
- 下列範例會撤銷 `VIEW DEFINITION` 登入 `Mirror7` 之端點 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `ZArifin` 權限。  
+ 下列範例會撤銷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `VIEW DEFINITION` 之端點 `Mirror7` 的 `ZArifin` 權限。  
   
 ```  
 USE master;  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. 撤銷具有 CASCADE 選項的 TAKE OWNERSHIP 權限  
- 下列範例會從 `TAKE OWNERSHIP` 使用者 `Shipping83` 撤銷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端點上的 `PKomosinski` 權限，以及從所有 `PKomosinski` 授與 `TAKE OWNERSHIP` 上 `Shipping83` 權限的主體撤銷該權限。  
+ 下列範例會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 `PKomosinski` 撤銷 `Shipping83` 端點上的 `TAKE OWNERSHIP` 權限，以及從所有 `PKomosinski` 授與 `Shipping83` 上 `TAKE OWNERSHIP` 權限的主體撤銷該權限。  
   
 ```  
 USE master;  

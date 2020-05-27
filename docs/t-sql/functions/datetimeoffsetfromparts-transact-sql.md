@@ -68,7 +68,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 指定時區時差之分鐘部分的整數運算式。  
   
 *有效位數*  
-整數常值，指定 **所傳回**datetimeoffset`DATETIMEOFFSETFROMPARTS` 值的有效位數。  
+整數常值，指定 `DATETIMEOFFSETFROMPARTS` 所傳回 **datetimeoffset** 值的有效位數。  
   
 ## <a name="return-types"></a>傳回類型
 **datetimeoffset(** *precision* **)**  

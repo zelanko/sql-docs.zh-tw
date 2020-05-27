@@ -158,7 +158,7 @@ DBCC CLONEDATABASE 使用來源資料庫的內部資料庫快照集，以取得�
 - PARTITION SCHEME
 - PROCEDURE   
 > [!NOTE]   
-> 從 [!INCLUDE[tsql](../../includes/tsql-md.md)] SP2 開始，所有版本都支援 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 程序。 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 開始，支援 CLR 程序。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，支援原生編譯程序。  
+> 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開始，所有版本都支援 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程序。 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 開始，支援 CLR 程序。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，支援原生編譯程序。  
 
 - QUERY STORE (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始)   
 > [!NOTE]   

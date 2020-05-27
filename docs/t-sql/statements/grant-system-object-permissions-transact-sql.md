@@ -76,7 +76,7 @@ GO
 ## <a name="examples"></a>範例  
   
 ### <a name="a-granting-select-permission-on-a-view"></a>A. 授與檢視的 SELECT 權限  
- 下列範例授與選取檢視 (這份檢視會列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入) 的 `Sylvester1` 登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 權限。 接著，這個範例再授與其他權限，它是檢視非使用者擁有之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入上的中繼資料時所需的權限。  
+ 下列範例授與選取檢視 (這份檢視會列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `Sylvester1` 權限。 接著，這個範例再授與其他權限，它是檢視非使用者擁有之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入上的中繼資料時所需的權限。  
   
 ```  
 USE AdventureWorks2012;  

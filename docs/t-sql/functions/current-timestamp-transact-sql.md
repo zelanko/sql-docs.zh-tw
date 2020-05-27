@@ -48,7 +48,7 @@ ms.locfileid: "68026407"
   
 這個函式是相當於 [GETDATE](../../t-sql/functions/getdate-transact-sql.md) 的 ANSI SQL。
   
-如需所有 [ 日期和時間資料類型與函式的概觀，請參閱](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日期和時間資料類型與函式[!INCLUDE[tsql](../../includes/tsql-md.md)]。
+如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -65,7 +65,7 @@ CURRENT_TIMESTAMP
 **datetime**
   
 ## <a name="remarks"></a>備註  
-只要是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以參考 `CURRENT_TIMESTAMP`datetime**運算式的任何位置，它們就可以參考**。
+只要是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以參考 **datetime** 運算式的任何位置，它們就可以參考 `CURRENT_TIMESTAMP`。
   
 `CURRENT_TIMESTAMP` 是非決定性函數。 參考這個資料行的檢視和運算式，是無法編製索引的。
   

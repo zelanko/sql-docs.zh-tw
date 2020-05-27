@@ -84,7 +84,7 @@ SELECT COUNT(*)
 ```
 
 *WLM_CONTEXT*  
-指定可分類要求的工作階段內容值。  context 是 nvarchar(255) 類型的選擇性參數。  在提交設定工作階段內容的要求之前，使用變數名稱等於 [ 的 ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)sys.sp_set_session_context`wlm_context`。
+指定可分類要求的工作階段內容值。  context 是 nvarchar(255) 類型的選擇性參數。  在提交設定工作階段內容的要求之前，使用變數名稱等於 `wlm_context` 的 [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)。
 
 範例：
 

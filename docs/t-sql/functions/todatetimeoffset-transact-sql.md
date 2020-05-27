@@ -46,7 +46,7 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 為解析為 [datetime2](../../t-sql/language-elements/expressions-transact-sql.md) 值的[運算式](../../t-sql/data-types/datetime2-transact-sql.md)。  
+ 為解析為 [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) 值的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 > [!NOTE]  
 >  運算式的類型不可為 **text**、**ntext** 或 **image**，因為這些類型不可隱含轉換成 **varchar** 或 **nvarchar**。  

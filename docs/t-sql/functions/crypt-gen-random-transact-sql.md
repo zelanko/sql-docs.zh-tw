@@ -39,7 +39,7 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="arguments"></a>引數  
 *length*  
-`CRYPT_GEN_RANDOM` 會建立的數字長度 (以位元組為單位)。 *length* 引數必須有一個 **int** 資料類型，以及一個介於 1 到 8000 之間的值。 `CRYPT_GEN_RANDOM`int**值若超出此範圍，則** 會傳回 NULL。 
+`CRYPT_GEN_RANDOM` 會建立的數字長度 (以位元組為單位)。 *length* 引數必須有一個 **int** 資料類型，以及一個介於 1 到 8000 之間的值。 **int** 值若超出此範圍，則 `CRYPT_GEN_RANDOM` 會傳回 NULL。 
   
 *seed*  
 選擇性十六進位數字，當作一個隨機種子值。 *seed* 的長度必須符合 *length* 引數的值。 *seed* 引數有一個 **varbinary(8000)** 資料類型。

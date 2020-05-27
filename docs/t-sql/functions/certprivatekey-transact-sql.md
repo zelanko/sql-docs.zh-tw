@@ -79,7 +79,7 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-如需使用 [CERTPRIVATEKEY](../../t-sql/functions/certencoded-transact-sql.md) 和 **CERTENCODED** 將憑證複製至其他資料庫的更複雜範例，請參閱 **CERTENCODED &#40;Transact-SQL&#41;** 範例 B。
+如需使用 **CERTPRIVATEKEY** 和 **CERTENCODED** 將憑證複製至其他資料庫的更複雜範例，請參閱 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 範例 B。
   
 ## <a name="see-also"></a>另請參閱
 [安全性函數 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

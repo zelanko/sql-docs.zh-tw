@@ -65,12 +65,12 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  定義一個資料指標，它會建立資料暫存複本供資料指標本身使用。 對於資料指標的所有要求都會從 **tempdb** 中的這個暫存資料表來回答；因此，對基底資料表所做的修改並不會反映在對這個資料指標所做之擷取傳回的資料中，而這個資料指標不允許修改。 使用 ISO 語法時若省略了 `INSENSITIVE`，則任何使用者對基礎資料表所做的已認可刪除及更新動作，都會反映在後續的擷取中。  
   
  SCROLL  
- 指定提供所有擷取選項 (`FIRST`、`LAST`、`PRIOR`、`NEXT`、`RELATIVE`、`ABSOLUTE`)。 如果 ISO `SCROLL` 中沒有指定 `DECLARE CURSOR`，則 `NEXT` 是唯一支援的擷取選項。 如果也指定了 `SCROLL`，就無法指定 `FAST_FORWARD`。 如果未指定 `SCROLL`，則只能使用擷取選項 `NEXT` 且資料指標會變成 `FORWARD_ONLY`。
+ 指定提供所有擷取選項 (`FIRST`、`LAST`、`PRIOR`、`NEXT`、`RELATIVE`、`ABSOLUTE`)。 如果 ISO `DECLARE CURSOR` 中沒有指定 `SCROLL`，則 `NEXT` 是唯一支援的擷取選項。 如果也指定了 `FAST_FORWARD`，就無法指定 `SCROLL`。 如果未指定 `SCROLL`，則只能使用擷取選項 `NEXT` 且資料指標會變成 `FORWARD_ONLY`。
   
  *select_statement*  
- 這是定義資料指標結果集的標準 `SELECT` 陳述式。 資料指標宣告的 `FOR BROWSE`select_statement`INTO` 中不允許關鍵字 *和*。  
+ 這是定義資料指標結果集的標準 `SELECT` 陳述式。 資料指標宣告的 *select_statement* 中不允許關鍵字 `FOR BROWSE` 和 `INTO`。  
   
- 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]select_statement*中的子句與所要求資料指標類型的功能相衝突，則* 會隱含地將資料指標轉換為其他類型。  
+ 如果 *select_statement* 中的子句與所要求資料指標類型的功能相衝突，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會隱含地將資料指標轉換為其他類型。  
   
  READ ONLY  
  防止利用這個資料指標進行更新。 無法在 `WHERE CURRENT OF` 子句中、在 `UPDATE` 或 `DELETE` 陳述式中參考該資料指標。 這個選項會覆寫要更新之資料指標的預設功能。  
@@ -109,7 +109,7 @@ DYNAMIC
 定義資料指標，在您捲動資料指標並擷取新的記錄時，反映結果集中資料列的所有資料變更，不論這些變更發生於資料指標內部，還是其他使用者在資料指標外部所做的變更。 因此，您可以透過資料指標看到所有使用者執行的全部 UPDATE、INSERT 和 DELETE 陳述式作業。 每次提取時，資料列的資料值、順序和成員資格都有可能改變。 動態資料指標不支援 `ABSOLUTE` 擷取選項。 至於資料指標外的更新必須經過認可後才看得見 (除非資料指標交易隔離等級設定為 `UNCOMMITTED`)。 例如，假設動態資料指標擷取兩個資料列，而其他應用程式接著更新其中一個資料列並刪除另一個資料列。 如果動態資料指標之後擷取這些資料列，它會找不到已刪除的資料列，但會顯示已更新資料列的新值。 
   
 FAST_FORWARD  
-指定 `FORWARD_ONLY`、`READ_ONLY` 資料指標，且啟用效能最佳化。 如果也指定了 `FAST_FORWARD` 或 `SCROLL`，就無法指定 `FOR_UPDATE`。 這種資料指標類型不允許從資料指標內部修改資料。  
+指定 `FORWARD_ONLY`、`READ_ONLY` 資料指標，且啟用效能最佳化。 如果也指定了 `SCROLL` 或 `FOR_UPDATE`，就無法指定 `FAST_FORWARD`。 這種資料指標類型不允許從資料指標內部修改資料。  
   
 > [!NOTE]  
 > `FAST_FORWARD` 和 `FORWARD_ONLY` 都可用於相同的 `DECLARE CURSOR` 陳述式。  
@@ -118,21 +118,21 @@ READ_ONLY
 防止利用這個資料指標進行更新。 無法在 `WHERE CURRENT OF` 子句中、在 `UPDATE` 或 `DELETE` 陳述式中參考該資料指標。 這個選項會覆寫要更新之資料指標的預設功能。  
   
 SCROLL_LOCKS  
-指定藉由資料指標進行的定位更新或刪除一定會成功。 當資料列讀入資料指標時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會鎖定這些資料列，以確保之後可對它們進行修改。 如果也指定了 `SCROLL_LOCKS` 或 `FAST_FORWARD`，就無法指定 `STATIC`。  
+指定藉由資料指標進行的定位更新或刪除一定會成功。 當資料列讀入資料指標時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會鎖定這些資料列，以確保之後可對它們進行修改。 如果也指定了 `FAST_FORWARD` 或 `STATIC`，就無法指定 `SCROLL_LOCKS`。  
   
 OPTIMISTIC  
-指定如果將資料列讀入資料指標之後，又更新了這些資料列，則透過資料指標來進行的定位更新或刪除不會成功。 當資料列讀入資料指標時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會鎖定資料列。 它會改用 **timestamp** 資料行值的比較，或者，如果資料表沒有 **timestamp** 資料行則使用總和檢查碼值，來判斷在將資料列讀入資料指標之後，該資料列是否已被修改。 如果修改了資料列，試圖執行的定位更新或刪除便會失敗。 如果也指定了 `OPTIMISTIC`，就無法指定 `FAST_FORWARD`。  
+指定如果將資料列讀入資料指標之後，又更新了這些資料列，則透過資料指標來進行的定位更新或刪除不會成功。 當資料列讀入資料指標時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會鎖定資料列。 它會改用 **timestamp** 資料行值的比較，或者，如果資料表沒有 **timestamp** 資料行則使用總和檢查碼值，來判斷在將資料列讀入資料指標之後，該資料列是否已被修改。 如果修改了資料列，試圖執行的定位更新或刪除便會失敗。 如果也指定了 `FAST_FORWARD`，就無法指定 `OPTIMISTIC`。  
   
  TYPE_WARNING  
  指定當資料指標從要求的類型隱含地轉換成另一個類型時，便傳送一則警告訊息給用戶端。  
   
  *select_statement*  
- 這是定義資料指標結果集的標準 SELECT 陳述式。 資料指標宣告的 `COMPUTE`select_statement`COMPUTE BY` 中不允許關鍵字 `FOR BROWSE`、`INTO`、*和*。  
+ 這是定義資料指標結果集的標準 SELECT 陳述式。 資料指標宣告的 *select_statement* 中不允許關鍵字 `COMPUTE`、`COMPUTE BY`、`FOR BROWSE` 和 `INTO`。  
   
 > [!NOTE]  
-> 您可以在資料指標宣告中使用查詢提示，但如果您也使用 `FOR UPDATE OF` 子句，請在 `OPTION (<query_hint>)` 之後指定 `FOR UPDATE OF`。  
+> 您可以在資料指標宣告中使用查詢提示，但如果您也使用 `FOR UPDATE OF` 子句，請在 `FOR UPDATE OF` 之後指定 `OPTION (<query_hint>)`。  
   
-如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]select_statement*中的子句與所要求資料指標類型的功能相衝突，則* 會隱含地將資料指標轉換為其他類型。 如需詳細資訊，請參閱＜隱含資料指標轉換＞。  
+如果 *select_statement* 中的子句與所要求資料指標類型的功能相衝突，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會隱含地將資料指標轉換為其他類型。 如需詳細資訊，請參閱＜隱含資料指標轉換＞。  
   
 FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 在資料指標內定義可更新的資料行。 如果提供了 `OF <column_name> [, <... n>]`，便只允許修改列出的資料行。 若指定 `UPDATE` 時未加上資料行清單，除非指定 `READ_ONLY` 這個並行選項，否則所有資料行皆可更新。  
@@ -142,9 +142,9 @@ FOR UPDATE [OF *column_name* [ **,** ...*n*]]
   
 `DECLARE CURSOR` 陳述式的第一種格式是使用 ISO 語法來宣告資料指標的行為。 `DECLARE CURSOR` 的第二種格式是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 延伸模組，讓您使用與 ODBC 或 ADO 資料庫 API 資料指標功能中相同的資料指標類型來定義資料指標。  
   
-您不能混用這兩種格式。 如果您在 `SCROLL` 關鍵字之前指定 `INSENSITIVE` 或 `CURSOR` 關鍵字，就不能在 `CURSOR` 和 `FOR <select_statement>` 關鍵字之間使用任何關鍵字。 如果您在 `CURSOR` 和 `FOR <select_statement>` 關鍵字之間指定任何關鍵字，就不能在 `SCROLL` 關鍵字之前指定 `INSENSITIVE` 或 `CURSOR`。  
+您不能混用這兩種格式。 如果您在 `CURSOR` 關鍵字之前指定 `SCROLL` 或 `INSENSITIVE` 關鍵字，就不能在 `CURSOR` 和 `FOR <select_statement>` 關鍵字之間使用任何關鍵字。 如果您在 `CURSOR` 和 `FOR <select_statement>` 關鍵字之間指定任何關鍵字，就不能在 `CURSOR` 關鍵字之前指定 `SCROLL` 或 `INSENSITIVE`。  
   
-如果使用 `DECLARE CURSOR` 語法的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 沒有指定 `READ_ONLY`、`OPTIMISTIC` 或 `SCROLL_LOCKS`，結果會如下：  
+如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法的 `DECLARE CURSOR` 沒有指定 `READ_ONLY`、`OPTIMISTIC` 或 `SCROLL_LOCKS`，結果會如下：  
   
 -   若 `SELECT` 陳述式不支援更新 (權限不足、存取的遠端資料表不支援更新等等)，則資料指標為 `READ_ONLY`。  
   

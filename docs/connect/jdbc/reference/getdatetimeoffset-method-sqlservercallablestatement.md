@@ -24,7 +24,7 @@ ms.locfileid: "67983813"
   
  使用 Java 程式設計語言，以指定的參數索引來擷取指定的參數值作為 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 物件。  
   
- 您可以搭配 [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) 設定 [DateTimeOffset 類別](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)參數值。  
+ 您可以使用 [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md) 來設定 [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)參數值。  
   
 ## <a name="overload-list"></a>多載清單  
   

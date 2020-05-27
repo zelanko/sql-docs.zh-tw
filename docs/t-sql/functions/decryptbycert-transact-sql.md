@@ -67,7 +67,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 `DECRYPTBYCERT` 需要憑證的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  
-此範例會從 `[AdventureWorks2012].[ProtectedData04]` 選取標示為憑證 `JanainaCert02` 原本加密之資料的資料列。 此範例會先使用憑證密碼 `JanainaCert02` 為憑證 `pGFD4bb925DGvbd2439587y` 的私密金鑰解密。 然後，此範例會使用此私密金鑰為加密文字解密。 此範例會將解密資料從 **varbinary** 轉換成 **nvarchar**。  
+此範例會從 `[AdventureWorks2012].[ProtectedData04]` 選取標示為憑證 `JanainaCert02` 原本加密之資料的資料列。 此範例會先使用憑證密碼 `pGFD4bb925DGvbd2439587y` 為憑證 `JanainaCert02` 的私密金鑰解密。 然後，此範例會使用此私密金鑰為加密文字解密。 此範例會將解密資料從 **varbinary** 轉換成 **nvarchar**。  
 
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  

@@ -45,7 +45,7 @@ ms.locfileid: "68099019"
  **integer**  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用 `SELECT` 來顯示在被 `@@TEXTSIZE` 陳述式變更前後的 `SET``TEXTSIZE` 值。  
+ 下列範例會使用 `SELECT` 來顯示在被 `SET``TEXTSIZE` 陳述式變更前後的 `@@TEXTSIZE` 值。  
   
 ```  
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  

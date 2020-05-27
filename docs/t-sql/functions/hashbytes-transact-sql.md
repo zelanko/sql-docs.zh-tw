@@ -69,7 +69,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 
 ## <a name="examples"></a>範例  
 ### <a name="return-the-hash-of-a-variable"></a>傳回變數的雜湊  
- 下列範例會傳回儲存於 `SHA2_256` 變數中 **nvarchar** 資料的 `@HashThis` 雜湊。  
+ 下列範例會傳回儲存於 `@HashThis` 變數中 **nvarchar** 資料的 `SHA2_256` 雜湊。  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  

@@ -55,7 +55,7 @@ FILE_ID ( file_name )
 ## <a name="remarks"></a>備註  
 *file_name* 對應於 sys.master_files 或 sys.database_files 目錄檢視 name 資料行中所顯示的邏輯檔案名稱。  
 
-如果 `FILE_ID`file_name`NULL` 未對應於目前資料庫元件檔案的邏輯名稱，*會傳回*。
+如果 *file_name* 未對應於目前資料庫元件檔案的邏輯名稱，`FILE_ID` 會傳回 `NULL`。
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指派給全文檢索目錄的識別碼超過 32767。 由於 `FILE_ID` 函數的傳回類型是 **smallint**，所以`FILE_ID` 不支援全文檢索檔案。 請改用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)。  
   

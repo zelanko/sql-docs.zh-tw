@@ -50,7 +50,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
  當您呼叫 GET_FILESTREAM_TRANSACTION_CONTEXT 時，呼叫端在交易期間會被授與此交易的檔案系統存取權。 若要允許另一個使用者透過檔案系統存取此交易，請使用 EXECUTE AS，以另一個使用者身分執行 GET_FILESTREAM_TRANSACTION_CONTEXT。  
   
 ## <a name="examples"></a>範例  
- 下列範例會在 `GET_FILESTREAM_TRANSACTION_CONTEXT` 交易中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 取得交易內容。  
+ 下列範例會在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 交易中使用 `GET_FILESTREAM_TRANSACTION_CONTEXT` 取得交易內容。  
   
 ```csharp  
 using System;  

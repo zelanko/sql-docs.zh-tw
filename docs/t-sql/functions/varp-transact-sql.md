@@ -68,7 +68,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-varp"></a>A：使用 VARP  
- 下列範例會傳回 `SalesPerson` 資料庫之[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中所有獎金值母體的變異數。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之`SalesPerson` 資料表中所有獎金值母體的變異數。  
   
 ```  
 SELECT VARP(Bonus)  
@@ -79,7 +79,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-varp"></a>B：使用 VARP  
- 下列範例會傳回 `VARP` 資料表中所有銷售配額值的 `dbo.FactSalesQuota`。 第一個資料行包含所有相異值的變異數，而第二個資料行則包含所有值的變異數 (包含任何重複的值)。  
+ 下列範例會傳回 `dbo.FactSalesQuota` 資料表中所有銷售配額值的 `VARP`。 第一個資料行包含所有相異值的變異數，而第二個資料行則包含所有值的變異數 (包含任何重複的值)。  
   
 ```  
 -- Uses AdventureWorks  

@@ -124,7 +124,7 @@ CTAS 陳述式需要一個散發選項，而且沒有預設值。 這和 CREATE 
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>權限  
-CTAS 需要 `SELECT`select_criteria*中所參考任何物件的* 權限。
+CTAS 需要 *select_criteria* 中所參考任何物件的 `SELECT` 權限。
 
 如需資料表的建立權限，請參閱 CREATE TABLE 中的[權限](https://msdn.microsoft.com/library/mt203953/#Permissions)。 
   
@@ -529,7 +529,7 @@ FROM    [dbo].[FactInternetSales]
 
 <a name="ctas-replace-implicit-joins-bk"></a>
 
-### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. 使用 CTAS 和隱含聯結來取代 `FROM` 陳述式 `UPDATE` 子句中的 ANSI 聯結  
+### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. 使用 CTAS 和隱含聯結來取代 `UPDATE` 陳述式 `FROM` 子句中的 ANSI 聯結  
 適用於：Azure SQL 資料倉儲和平行處理資料倉儲  
 
 假設您有一個複雜更新，其中使用 ANSI 聯結語法將兩個以上的資料表聯結起來，以執行 UPDATE 或 DELETE。
@@ -574,7 +574,7 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;
 ```
 
-因為 SQL 資料倉儲不支援 `FROM` 陳述式 `UPDATE` 子句中的 ANSI 聯結，因此您必須微幅修改這個 SQL Server 程式碼，否則無法使用。
+因為 SQL 資料倉儲不支援 `UPDATE` 陳述式 `FROM` 子句中的 ANSI 聯結，因此您必須微幅修改這個 SQL Server 程式碼，否則無法使用。
 
 您可以使用 `CTAS` 和隱含聯結的組合來取代此程式碼：
 
@@ -615,7 +615,7 @@ DROP TABLE CTAS_acs
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. 使用 CTAS 來指定要保留的資料，而不是在 DELETE 陳述式的 FROM 子句中使用 ANSI 聯結  
 適用於：Azure SQL 資料倉儲和平行處理資料倉儲  
 
-有時候，刪除資料的最佳方法是使用 `CTAS`。 您不用刪除資料，只要選取想要保留的資料即可。 對於使用 ANSI 聯結語法的 `DELETE` 陳述式更是如此，因為 SQL 資料倉儲不支援 `FROM` 陳述式 `DELETE` 子句的 ANSI 聯結。
+有時候，刪除資料的最佳方法是使用 `CTAS`。 您不用刪除資料，只要選取想要保留的資料即可。 對於使用 ANSI 聯結語法的 `DELETE` 陳述式更是如此，因為 SQL 資料倉儲不支援 `DELETE` 陳述式 `FROM` 子句的 ANSI 聯結。
 
 以下是已轉換的 DELETE 陳述式範例：
 
@@ -736,7 +736,7 @@ from ctas_r
 
 之所以會在這兩個結果之間看到差異，原因與隱含類型轉換有關。 在第一個範例中，資料表定義了資料行。 插入資料列時，就會發生隱含類型轉換。 在第二個範例中，沒有任何隱含類型轉換，因為運算式會定義資料行的資料類型。 另請注意，第二個範例中的資料行已定義成一個可為 Null 的資料行，而在第一個範例中並未這樣定義。 在第一個範例中建立資料表時，會明確定義料資料行的可 Null 性。 在第二個範例中，則交給運算式決定。根據預設，這樣會產生一個 NULL 定義。  
 
-若要解決這些問題，您必須在 `SELECT` 陳述式的 `CTAS` 部分，明確設定型別轉換和可 Null 性。 您無法在 CREATE TABLE 部分中設定這些屬性。
+若要解決這些問題，您必須在 `CTAS` 陳述式的 `SELECT` 部分，明確設定型別轉換和可 Null 性。 您無法在 CREATE TABLE 部分中設定這些屬性。
 
 下列範例會示範如何修正程式碼：
 

@@ -38,7 +38,7 @@ ms.locfileid: "67970873"
   
 |名稱|描述|  
 |----------|-----------------|  
-|[getParameterClassName](../../../connect/jdbc/reference/getparameterclassname-method-sqlserverparametermetadata.md)|擷取 Java 類別的完整名稱，此類別的執行個體應該要傳遞給 [SQLServerPreparedStatement](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 類別的 [setObject](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 方法。|  
+|[getParameterClassName](../../../connect/jdbc/reference/getparameterclassname-method-sqlserverparametermetadata.md)|擷取 Java 類別的完整名稱，此類別的執行個體應該要傳遞給 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別的 [setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 方法。|  
 |[getParameterCount](../../../connect/jdbc/reference/getparametercount-method-sqlserverparametermetadata.md)|擷取 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 物件中參數的數目，而這個 [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) 物件會包含前述物件的資訊。|  
 |[getParameterMode](../../../connect/jdbc/reference/getparametermode-method-sqlserverparametermetadata.md)|擷取指定之參數的模式。|  
 |[getParameterType](../../../connect/jdbc/reference/getparametertype-method-sqlserverparametermetadata.md)|擷取指定之參數的 SQL 型別。|  

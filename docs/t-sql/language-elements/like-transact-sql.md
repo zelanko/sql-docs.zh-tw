@@ -268,7 +268,7 @@ Gail                  Westover             305-555-0100
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. 使用 ESCAPE 子句  
- 下列範例會利用 `ESCAPE` 子句和逸出字元來尋找 `10-15%` 資料表 `c1` 資料行中完全相符的 `mytbl2` 字元字串。  
+ 下列範例會利用 `ESCAPE` 子句和逸出字元來尋找 `mytbl2` 資料表 `c1` 資料行中完全相符的 `10-15%` 字元字串。  
   
 ```sql
 USE tempdb;  
@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. 使用 LIKE 搭配 _ 萬用字元  
- 下列範例會在 `6` 資料表中尋找區碼是以 `2` 開頭且以 `DimEmployee` 結尾的所有電話號碼。 % 萬用字元會包含在搜尋模式的結尾，用來比對電話資料行值中的所有後續字元。  
+ 下列範例會在 `DimEmployee` 資料表中尋找區碼是以 `6` 開頭且以 `2` 結尾的所有電話號碼。 % 萬用字元會包含在搜尋模式的結尾，用來比對電話資料行值中的所有後續字元。  
   
 ```sql  
 -- Uses AdventureWorks  

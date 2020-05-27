@@ -62,7 +62,7 @@ for XML AUTO, TYPE, XMLSCHEMA
   
  請注意下列項目是從上一個查詢而來：  
   
--   外部 SELECT 陳述式會建構擁有 `Product`ProductID **屬性的 <** > 元素，以及兩個 <`Price`> 子元素。  
+-   外部 SELECT 陳述式會建構擁有 **ProductID** 屬性的 <`Product`> 元素，以及兩個 <`Price`> 子元素。  
   
 -   兩個內部 SELECT 陳述式會建構兩個 <`Price`> 元素，每個都具有一個 **PriceType** 屬性與會傳回產品價格的 XML。  
   

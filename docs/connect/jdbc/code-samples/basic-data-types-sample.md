@@ -38,7 +38,7 @@ ms.locfileid: "69028395"
   
 ## <a name="example"></a>範例
 
-在下列範例中，範例程式碼會建立資料庫的連線，然後從 DataTypesTable 測試資料表中擷取單一資料列。 接著呼叫自訂 displayRow 方法，使用 \<SQLServerResultSet[ 類別的各種 get](../../../connect/jdbc/reference/sqlserverresultset-class.md)類型> 方法顯示結果集中的所有資料。  
+在下列範例中，範例程式碼會建立資料庫的連線，然後從 DataTypesTable 測試資料表中擷取單一資料列。 接著呼叫自訂 displayRow 方法，使用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的各種 get\<類型> 方法顯示結果集中的所有資料。  
   
 接下來，範例會使用 SQLServerResultSet 類別的各種 update\<類型> 方法更新結果集中的資料，然後呼叫 [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法，將該資料存回資料庫。  
   

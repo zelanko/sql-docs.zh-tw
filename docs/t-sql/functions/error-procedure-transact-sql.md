@@ -57,7 +57,7 @@ ERROR_PROCEDURE ( )
 ## <a name="remarks"></a>備註  
 `ERROR_PROCEDURE` 支援在 CATCH 區塊範圍內的任何位置呼叫。  
   
-不論執行多少次，或在 `ERROR_PROCEDURE` 區塊範圍內的哪個位置執行，`CATCH` 都會傳回預存程序或觸發程序的名稱。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
+不論執行多少次，或在 `CATCH` 區塊範圍內的哪個位置執行，`ERROR_PROCEDURE` 都會傳回預存程序或觸發程序的名稱。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
    
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   

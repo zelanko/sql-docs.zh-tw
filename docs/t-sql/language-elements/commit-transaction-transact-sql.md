@@ -81,7 +81,7 @@ COMMIT [ TRAN | TRANSACTION ]
   
  如果認可的交易是一項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散式交易，COMMIT TRANSACTION 會觸發 MS DTC 利用兩階段認可通訊協定來認可交易所涉及的所有伺服器。 當本機交易跨越相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的兩個或更多資料庫時，執行個體會利用內部的兩階段認可，認可與交易有關的所有資料庫。  
   
- 用於巢狀交易時，認可內部交易並不會釋出資源，或永久修改它們。 只有在認可外部交易時，才會使資料修改永久化及釋出資源。 當 @@TRANCOUNT 大於 1 時，每個發出的 COMMIT TRANSACTION 都只使 @@TRANCOUNT 減量 1。 當最後 @@TRANCOUNT 減量到 0 時，便會認可整個外部交易。 由於*會忽略* transaction_name[!INCLUDE[ssDE](../../includes/ssde-md.md)]，因此，當有未完成的內部交易時，發出參考外部交易名稱的 COMMIT TRANSACTION 只會使 @@TRANCOUNT 減量 1。  
+ 用於巢狀交易時，認可內部交易並不會釋出資源，或永久修改它們。 只有在認可外部交易時，才會使資料修改永久化及釋出資源。 當 @@TRANCOUNT 大於 1 時，每個發出的 COMMIT TRANSACTION 都只使 @@TRANCOUNT 減量 1。 當最後 @@TRANCOUNT 減量到 0 時，便會認可整個外部交易。 由於[!INCLUDE[ssDE](../../includes/ssde-md.md)]會忽略 *transaction_name*，因此，當有未完成的內部交易時，發出參考外部交易名稱的 COMMIT TRANSACTION 只會使 @@TRANCOUNT 減量 1。  
   
  當 @@TRANCOUNT 是 0 時，發出 COMMIT TRANSACTION 會產生錯誤；沒有對應的 BEGIN TRANSACTION。  
   

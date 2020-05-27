@@ -48,9 +48,9 @@ RIGHT ( character_expression , integer_expression )
  這是一個指定將傳回的 *character_expression* 字元數的正整數。 如果 *integer_expression* 是負數，則會傳回錯誤。 如果 *integer_expression* 是 **bigint** 類型且包含大數值，則 *character_expression* 必須屬於大型資料類型，例如 **varchar(max)** 。  
   
 ## <a name="return-types"></a>傳回型別  
- 當 **character_expression** 是非 Unicode 字元資料類型時，則傳回 *varchar*。  
+ 當 *character_expression* 是非 Unicode 字元資料類型時，則傳回 **varchar**。  
   
- 當 **character_expression** 是 Unicode 字元資料類型時，則傳回 *nvarchar*。  
+ 當 *character_expression* 是 Unicode 字元資料類型時，則傳回 **nvarchar**。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補充字元 (Surrogate 字組)  
  當使用 SC 定序時，RIGHT 參數也將 UTF-16 Surrogate 字組視為單一字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  

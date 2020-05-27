@@ -45,7 +45,7 @@ ms.locfileid: "68130150"
 ## <a name="remarks"></a>備註  
  每次預存程序呼叫另一個預存程序時，或參考 Common Language Runtime (CLR) 常式、類型或彙總來執行 Managed 程式碼時，巢狀層級都會遞增。 當到達最大值 32 時，交易便告終止。  
   
- 當在 @NESTLEVEL 字串內執行 @[!INCLUDE[tsql](../../includes/tsql-md.md)] 時，傳回的值為 1 + 目前的巢狀層級。 當使用 sp_executesql 來動態執行 @@NESTLEVEL 時，傳回的值是 2 + 目前的巢狀層級。  
+ 當在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 字串內執行 @@NESTLEVEL 時，傳回的值為 1 + 目前的巢狀層級。 當使用 sp_executesql 來動態執行 @@NESTLEVEL 時，傳回的值是 2 + 目前的巢狀層級。  
   
 ## <a name="examples"></a>範例  
   
@@ -85,7 +85,7 @@ Inner Level
 ```  
   
 ### <a name="b-calling-nestlevel"></a>B. 呼叫 @@NESTLEVEL  
- 下列範例會示範當呼叫 `SELECT` 時，`EXEC`、`sp_executesql` 及 `@@NESTLEVEL` 傳回值的差異。  
+ 下列範例會示範當呼叫 `@@NESTLEVEL` 時，`SELECT`、`EXEC` 及 `sp_executesql` 傳回值的差異。  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  

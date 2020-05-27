@@ -41,7 +41,7 @@ TAN ( float_expression )
   
 ## <a name="arguments"></a>引數  
  *float_expression*  
- 為 [float](../../t-sql/language-elements/expressions-transact-sql.md) 類型或能夠隱含轉換成 **float** 之類型的**運算式**，會解譯為弧度的數目。  
+ 為 **float** 類型或能夠隱含轉換成 **float** 之類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，會解譯為弧度的數目。  
   
 ## <a name="return-types"></a>傳回型別  
  **float**  

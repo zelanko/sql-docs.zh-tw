@@ -48,7 +48,7 @@ PDO_SQLSRV 驅動程式讓您能夠建立可捲動的結果集，並含有數個
 
 在使用用戶端資料指標時，如果緩衝區因為不夠大而無法保存整個結果集，則查詢將傳回 false。 您可以將緩衝區大小上限提高到 PHP 記憶體限制。
 
-您可以設定緩衝區的大小，使用 `PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE`PDO::setAttribute[ 或 ](../../connect/php/pdo-setattribute.md)PDOStatement::setAttribute[ 的 ](../../connect/php/pdostatement-setattribute.md) 屬性來保留結果集。 您也可以在 php.ini 檔案中使用 pdo_sqlsrv.client_buffer_max_kb_size 來設定緩衝區大小上限 (例如 pdo_sqlsrv.client_buffer_max_kb_size = 1024)。
+您可以設定緩衝區的大小，使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 或 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) 的 `PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE` 屬性來保留結果集。 您也可以在 php.ini 檔案中使用 pdo_sqlsrv.client_buffer_max_kb_size 來設定緩衝區大小上限 (例如 pdo_sqlsrv.client_buffer_max_kb_size = 1024)。
 
 您可以使用 [PDO::prepare](../../connect/php/pdo-prepare.md)、指定 `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` 資料指標類型，然後指定 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_BUFFERED`，來要求用戶端資料指標。
 

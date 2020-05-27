@@ -185,7 +185,7 @@ sqlsrv_close( $conn );
 > [!NOTE]  
 > 批次查詢或預存程序所傳回的第一個 (或唯一) 結果為作用中，而不需要呼叫 **sqlsrv_next_result**。  
   
-此範例會使用 *AdventureWorks* 資料庫的 [Purchasing.ProductReview](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料表，並假設此資料庫已安裝在伺服器上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例會使用 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫的 *Purchasing.ProductReview* 資料表，並假設此資料庫已安裝在伺服器上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

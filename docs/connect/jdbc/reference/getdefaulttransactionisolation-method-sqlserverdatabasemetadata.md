@@ -43,7 +43,7 @@ public int getDefaultTransactionIsolation()
 ## <a name="remarks"></a>備註  
  這個 getDefaultTransactionIsolation 方法是由 java.sql.DatabaseMetaData 介面中的 getDefaultTransactionIsolation 方法所指定。  
   
- 當搭配 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 資料庫使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，這個方法會傳回值 TRANSACTION_READ_COMMITTED 或是 **int** 值 2。  
+ 當搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 時，這個方法會傳回值 TRANSACTION_READ_COMMITTED 或是 **int** 值 2。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

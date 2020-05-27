@@ -23,7 +23,7 @@ ms.locfileid: "69026117"
 
 為了查詢結果集內所包含之資料行的資訊，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會實作 [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 類別。 此類別包含數種以單一值形式傳回資訊的方法。
 
-若要建立 SQLServerResultSetMetaData 物件，您可以使用 [SQLServerResultSet](../../connect/jdbc/reference/getmetadata-method-sqlserverresultset.md) 類別的 [getMetaData](../../connect/jdbc/reference/sqlserverresultset-class.md) 方法。
+若要建立 SQLServerResultSetMetaData 物件，您可以使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverresultset.md) 方法。
 
 在下列範例中，系統會將連至 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的開啟連接傳遞至函式中、使用 SQLServerResultSet 類別的 getMetaData 方法傳回 SQLServerResultSetMetaData 物件，然後使用 SQLServerResultSetMetaData 物件的各種方法，顯示結果集內包含的資料行名稱和資料類型的相關資訊。
 

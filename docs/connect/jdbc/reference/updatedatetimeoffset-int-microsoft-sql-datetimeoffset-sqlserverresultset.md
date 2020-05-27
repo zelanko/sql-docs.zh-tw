@@ -44,7 +44,7 @@ public void updateDateTimeOffset(int index, microsoft.sql.DateTimeOffset x)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 您可以使用 [SQLServerResultSet.getDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) 來擷取 [DateTimeOffset 類別](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)值。  
+ 您可以使用 [SQLServerResultSet.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md) 來擷取 [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)值。  
   
 ## <a name="see-also"></a>另請參閱  
  [updateDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)   

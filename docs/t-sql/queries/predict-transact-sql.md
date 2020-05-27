@@ -110,7 +110,7 @@ Windows 和 Linux 上所有版本的 SQL Server 2017 和更新版本都支援 `P
 
 ### <a name="using-predict-in-a-from-clause"></a>在 FROM 子句中使用 PREDICT
 
-此範例在 `PREDICT` 陳述式的 `FROM` 子句中參考 `SELECT` 函數：
+此範例在 `SELECT` 陳述式的 `FROM` 子句中參考 `PREDICT` 函數：
 
 ```sql
 SELECT d.*, p.Score
@@ -118,7 +118,7 @@ FROM PREDICT(MODEL = @logit_model,
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-**參數中為資料表來源指定的別名**d`DATA` 用來參考屬於 dbo.mytable 的資料行。 為 **PREDICT** 函數指定的別名 **p** 用來參考 PREDICT 函數所傳回的資料行。
+`DATA` 參數中為資料表來源指定的別名 **d** 用來參考屬於 dbo.mytable 的資料行。 為 **PREDICT** 函數指定的別名 **p** 用來參考 PREDICT 函數所傳回的資料行。
 
 ### <a name="combining-predict-with-an-insert-statement"></a>合併 PREDICT 與 INSERT 陳述式
 

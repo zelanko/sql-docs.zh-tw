@@ -127,7 +127,7 @@ WHERE  E.EmployeeID = C.ContactID  AND
 FOR XML PATH;
 ```  
   
- 該資料行名稱是在 PATH 模式中建構 XML 時當做路徑使用。 包含員工識別碼值的資料行名稱是以 '\@' 開頭，因此會將 **EmpID** 屬性新增至 `row` 項目。 在指出階層的資料行名稱中，所有其他的資料行都包含斜線 ('/')。 產生的 XML 在 `EmpName` 項目底下將有 `row` 子項目，而且 `EmpName` 子項目將有 `First`、`Middle` 和 `Last` 子項目。  
+ 該資料行名稱是在 PATH 模式中建構 XML 時當做路徑使用。 包含員工識別碼值的資料行名稱是以 '\@' 開頭，因此會將 **EmpID** 屬性新增至 `row` 項目。 在指出階層的資料行名稱中，所有其他的資料行都包含斜線 ('/')。 產生的 XML 在 `row` 項目底下將有 `EmpName` 子項目，而且 `EmpName` 子項目將有 `First`、`Middle` 和 `Last` 子項目。  
   
 ```xml
 <row EmpID="1">  

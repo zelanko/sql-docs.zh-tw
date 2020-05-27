@@ -48,7 +48,7 @@ public short getShort(int index)
 ## <a name="remarks"></a>備註  
  這個 getShort 方法是由 java.sql.CallableStatement 介面中的 getShort 方法指定。  
   
- 只有可以安全傳回整數值 (如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]smallint **、** tinyint**和**bit **) 的**  資料類型才支援這個方法。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
+ 只有可以安全傳回整數值 (如 **smallint**、**tinyint** 和 **bit**) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型才支援這個方法。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
  [getShort 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)   

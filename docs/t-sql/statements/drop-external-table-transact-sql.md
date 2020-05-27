@@ -64,7 +64,7 @@ DROP EXTERNAL TABLE ProductVendor1;
 ```  
   
 ### <a name="c-dropping-a-table-from-another-database"></a>C. 從另一個資料庫卸除資料表  
- 下列範例會卸除 `SalesPerson` 資料庫中的 `EasternDivision` 資料表。  
+ 下列範例會卸除 `EasternDivision` 資料庫中的 `SalesPerson` 資料表。  
   
 ```  
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  

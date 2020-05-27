@@ -175,7 +175,7 @@ GO
 ## <a name="specific-types-of-searches"></a><a name="examples_specific"></a> 特定的搜尋類型
 
 ###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a> 搜尋特定單字或片語 (簡單詞彙)  
- 您可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 來搜尋資料表中的特定單字或片語。 例如，如果您要搜尋 **資料庫中的**ProductReview[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表，以尋找某產品具有 "learning curve" 片語的所有註解，可依照下列方式使用 CONTAINS 述詞：  
+ 您可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 來搜尋資料表中的特定單字或片語。 例如，如果您要搜尋 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的 **ProductReview** 資料表，以尋找某產品具有 "learning curve" 片語的所有註解，可依照下列方式使用 CONTAINS 述詞：  
   
 ```sql
 USE AdventureWorks2012  

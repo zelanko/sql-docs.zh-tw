@@ -64,7 +64,7 @@ FILEPROPERTY ( file_name , property )
  *file_name* 對應於 **sys.master_files** 或 **sys.database_files** 目錄檢視中的 **name** 資料行。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回 `IsPrimaryFile` 資料庫中 `AdventureWorks_Data` 檔案名稱的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 屬性設定。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `IsPrimaryFile` 檔案名稱的 `AdventureWorks_Data` 屬性設定。  
   
 ```  
   

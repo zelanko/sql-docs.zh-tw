@@ -85,7 +85,7 @@ EVENTDATA 會傳回 **xml** 資料類型的值。 根據預設，所有事件的
 此範例會建立可防止建立新資料庫資料表的 DDL 觸發程序。 針對 `EVENTDATA` 所產生的 XML 資料使用 XQuery ，可擷取引發觸發程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 如需詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)。  
   
 > [!NOTE]  
->  當您使用  **中的 [以方格顯示結果]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來查詢 `<TSQLCommand>` 元素時，命令文字中不會出現分行符號。 請改用 [Results to Text] (以文字顯示結果)  。  
+>  當您使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [以方格顯示結果] 來查詢 `<TSQLCommand>` 元素時，命令文字中不會出現分行符號。 請改用 [Results to Text] (以文字顯示結果)  。  
   
 ```  
 USE AdventureWorks2012;  

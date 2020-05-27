@@ -41,7 +41,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
   
 ## <a name="arguments"></a>引數  
  \<column_expression>  
- 為 *GROUP BY* 子句中的 [column_expression](../../t-sql/queries/select-group-by-transact-sql.md)。  
+ 為 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句中的 *column_expression*。  
   
 ## <a name="return-type"></a>傳回類型  
  **int**  
@@ -117,7 +117,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle);
 ### <a name="b-using-grouping_id-to-filter-a-result-set"></a>B. 使用 GROUPING_ID 篩選結果集  
   
 #### <a name="simple-example"></a>簡單範例  
- 在下列程式碼中，若只要依據職稱傳回具有員工計數的資料列，請從 `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 中移除註解字元。 若只要依據部門傳回具有員工計數的資料列，請從 `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;` 中移除註解字元。  
+ 在下列程式碼中，若只要依據職稱傳回具有員工計數的資料列，請從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` 中移除註解字元。 若只要依據部門傳回具有員工計數的資料列，請從 `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;` 中移除註解字元。  
   
 ```  
 SELECT D.Name  

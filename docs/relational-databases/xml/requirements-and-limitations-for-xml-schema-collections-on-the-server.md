@@ -49,7 +49,7 @@ ms.locfileid: "75257625"
 |標準格式與模式限制|值的標準表示法不能違反其類型的模式限制。 如需詳細資訊，請參閱 [標準格式與模式限制](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)。|  
 |列舉 Facet|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援類型含有模式 Facet 或列舉違反這些 Facet 的 XML 結構描述。|  
 |Facet 長度|**length**、 **minLength**和 **maxLength** Facet 將會儲存為 **long** 類型。 此類型是 32 位元的類型。 因此，這些值的可接受值範圍為 2^31。|  
-|ID 屬性|每個 XML 結構描述元件都可擁有識別碼屬性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對 **ID\< 類型的** **xsd:attribute>** 宣告強制唯一性，但不會儲存這些值。 唯一性的強制範圍是 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 陳述式。|  
+|ID 屬性|每個 XML 結構描述元件都可擁有識別碼屬性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對 **ID** 類型的 **\<xsd:attribute>** 宣告強制唯一性，但不會儲存這些值。 唯一性的強制範圍是 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 陳述式。|  
 |ID 類型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援 **xs:ID**、 **xs:IDREF**或 **xs:IDREFS**類型的元素。 結構描述不能宣告此類型的元素，或者宣告由限制此類型或從此類型衍生的元素。|  
 |區域命名空間|您必須為 **\<xsd:any>** 項目明確指定本機命名空間。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕使用空字串 ("") 作為命名空間屬性值的結構描述。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會要求明確使用 "##local"，將不完整的元素或屬性指示成萬用字元的執行個體。|  
 |混合的類型與簡單的內容|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援將混合類型限制為簡單內容。 如需詳細資訊，請參閱 [混合的類型與簡單的內容](../../relational-databases/xml/mixed-type-and-simple-content.md)。|  

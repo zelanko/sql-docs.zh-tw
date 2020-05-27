@@ -128,7 +128,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>敏感性資料分類中繼資料
 
-5\.8.0 版中引進新選項 `DataClassification`，可讓使用者使用 [ 存取 Microsoft SQL Server 2019 中的](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)敏感性資料分類中繼資料`sqlsrv_field_metadata`，需要 Microsoft ODBC Driver 17.4.2 或更新版本。
+5\.8.0 版中引進新選項 `DataClassification`，可讓使用者使用 `sqlsrv_field_metadata` 存取 Microsoft SQL Server 2019 中的[敏感性資料分類中繼資料](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)，需要 Microsoft ODBC Driver 17.4.2 或更新版本。
 
 根據預設，選項 `DataClassification` 是 `false`，但當設定為 `true` 時，`sqlsrv_field_metadata` 所傳回的陣列將會填入敏感性資料分類中繼資料 (如果存在)。 
 

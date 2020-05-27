@@ -52,7 +52,7 @@ MIN_ACTIVE_ROWVERSION
  MIN_ACTIVE_ROWVERSION 函數不會受到交易隔離等級中的變更影響。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用 **和** 來傳回 `MIN_ACTIVE_ROWVERSION`rowversion`@@DBTS`。 請注意，當資料庫中沒有任何使用中交易時，這些值就會不同。  
+ 下列範例會使用 `MIN_ACTIVE_ROWVERSION` 和 `@@DBTS` 來傳回 **rowversion**。 請注意，當資料庫中沒有任何使用中交易時，這些值就會不同。  
   
 ```  
 -- Create a table that has a ROWVERSION column in it.  

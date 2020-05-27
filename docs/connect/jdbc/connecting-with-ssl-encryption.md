@@ -61,7 +61,7 @@ String connectionUrl =
 ```  
   
 > [!NOTE]  
->  或者，您可以使用 **SQLServerDataSource** 類別所提供的適當 [setter](../../connect/jdbc/reference/sqlserverdatasource-class.md) 方法來設定連線屬性的值。  
+>  或者，您可以使用 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別所提供的適當 **setter** 方法來設定連線屬性的值。  
   
  如果 **encrypt** 屬性設定為 **true** 且 **trustServerCertificate** 屬性設定為 **false**，而且連接字串中的伺服器名稱不符合 TLS 憑證中的伺服器名稱，則會發出下列錯誤：`The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`。 從 7.2 版開始，驅動程式支援在 TLS 憑證中伺服器名稱最左側標籤中的萬用字元模式比對。
 

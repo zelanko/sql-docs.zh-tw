@@ -89,7 +89,7 @@ WHERE database_id = DB_ID();
   
  **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
- 指定的 *port_number* 必須符合在指定電腦的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端點的連接埠號碼。 這可以在選取的資料庫中執行下列查詢來取得：  
+ 指定的 *port_number* 必須符合在指定電腦的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端點的連接埠號碼。 這可以在選取的資料庫中執行下列查詢來取得：  
   
 ```  
 SELECT tcpe.port  
@@ -99,9 +99,9 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- 當路由在 **next_hop_address** 中指定 *'LOCAL'* 時，訊息會傳遞給在目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內的服務。  
+ 當路由在 *next_hop_address* 中指定 **'LOCAL'** 時，訊息會傳遞給在目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內的服務。  
   
- 當路由在 **next_hop_address** 中指定 *'TRANSPORT'* 時，會根據服務名稱中的網路位址來決定網路位址。 指定 **'TRANSPORT'** 的路由可以指定服務名稱或 Broker 執行個體。  
+ 當路由在 *next_hop_address* 中指定 **'TRANSPORT'** 時，會根據服務名稱中的網路位址來決定網路位址。 指定 **'TRANSPORT'** 的路由可以指定服務名稱或 Broker 執行個體。  
   
  當 *next_hop_address* 是資料庫鏡像的主體伺服器時，您也必須指定鏡像伺服器的 MIRROR_ADDRESS。 否則，這個路由不會自動進行容錯移轉，將工作交給鏡像伺服器。  
   
@@ -113,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- 指定的 *port_number* 必須符合在指定電腦的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端點的連接埠號碼。 這可以在選取的資料庫中執行下列查詢來取得：  
+ 指定的 *port_number* 必須符合在指定電腦的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端點的連接埠號碼。 這可以在選取的資料庫中執行下列查詢來取得：  
   
 ```  
 SELECT tcpe.port  
@@ -123,7 +123,7 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- 當指定 MIRROR_ADDRESS 時，路由必須指定 SERVICE_NAME 子句和 BROKER_INSTANCE 子句。 在 **next_hop_address** 中指定 **'LOCAL'** 或 *'TRANSPORT'* 的路由可能不會指定鏡像位址。  
+ 當指定 MIRROR_ADDRESS 時，路由必須指定 SERVICE_NAME 子句和 BROKER_INSTANCE 子句。 在 *next_hop_address* 中指定 **'LOCAL'** 或 **'TRANSPORT'** 的路由可能不會指定鏡像位址。  
   
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
@@ -133,7 +133,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  ALTER ROUTE 命令所未指定的子句會維持不變。 因此，您無法變更 (ALTER) 路由來指定路由不逾時、路由符合任何服務名稱，或是路由符合任何 Broker 執行個體。 若要變更路由的這些特性，您必須卸除現有的路由，再以新的資訊建立新的路由。  
   
- 當路由在 **next_hop_address** 中指定 *'TRANSPORT'* 時，會根據服務名稱來決定網路位址。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以順利處理開頭是網路位址且格式對 *next_hop_address* 有效的服務名稱。 名稱包含有效網路位址的服務會遞送到服務名稱中的網路位址。  
+ 當路由在 *next_hop_address* 中指定 **'TRANSPORT'** 時，會根據服務名稱來決定網路位址。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以順利處理開頭是網路位址且格式對 *next_hop_address* 有效的服務名稱。 名稱包含有效網路位址的服務會遞送到服務名稱中的網路位址。  
   
  路由表可以包含指定相同服務、網路位址及/或 Broker 執行個體識別碼之任意數目的路由。 在這個情況下，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會利用在交談所指定的資訊和路由表所指定的資訊之間，設計用來尋找完全相符項目的程序，來選擇路由。  
   

@@ -113,7 +113,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>範例  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. 使用 DBCC INDEXDEFRAG 重組索引  
-下列範例會重組 `PK_Product_ProductID` 資料庫之 `Production.Product`資料表中 `AdventureWorks` 索引的所有分割區。
+下列範例會重組 `AdventureWorks` 資料庫之 `Production.Product`資料表中 `PK_Product_ProductID` 索引的所有分割區。
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

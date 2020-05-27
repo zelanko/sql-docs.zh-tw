@@ -284,14 +284,14 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-update-statistics-on-a-table"></a>E. 更新資料表上的統計資料  
- 下列範例會更新 `CustomerStats1` 資料表上的 `Customer` 統計資料。  
+ 下列範例會更新 `Customer` 資料表上的 `CustomerStats1` 統計資料。  
   
 ```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. 使用完整掃描更新統計資料  
- 下列範例會根據掃描 `CustomerStats1` 資料表中的所有資料列來更新 `Customer` 統計資料。  
+ 下列範例會根據掃描 `Customer` 資料表中的所有資料列來更新 `CustomerStats1` 統計資料。  
   
 ```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  

@@ -25,7 +25,7 @@ ms.locfileid: "67981851"
 # <a name="getmetadata-method-sqlserverpreparedstatement"></a>getMetaData 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取 [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 物件，此物件包含當執行這個 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件時將傳回 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 物件資料行的相關資訊。  
+  擷取 [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 物件，此物件包含當執行這個 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 物件時將傳回 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件資料行的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   

@@ -107,7 +107,7 @@ White           19.00                 6.7926
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
- 下列範例搭配 OVER 子句使用 SUM 函數，為 `Sales.SalesPerson` 資料庫之 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中各領域的年度銷售提供累計總和。 `TerritoryID` 負責分割資料，而 `SalesYTD` 會進行邏輯性地排序。 這表示，將會根據銷售年度來針對每一個領域計算 SUM 函數。 請注意，在 `TerritoryID` 1 中，2005 銷售年度有兩個資料列，分別表示在該年度有銷售業績的兩個銷售人員。 計算這兩個資料列的總累計銷售額，然後將表示 2006 年度銷售額的第三個資料列納入計算。  
+ 下列範例搭配 OVER 子句使用 SUM 函數，為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `Sales.SalesPerson` 資料表中各領域的年度銷售提供累計總和。 `TerritoryID` 負責分割資料，而 `SalesYTD` 會進行邏輯性地排序。 這表示，將會根據銷售年度來針對每一個領域計算 SUM 函數。 請注意，在 `TerritoryID` 1 中，2005 銷售年度有兩個資料列，分別表示在該年度有銷售業績的兩個銷售人員。 計算這兩個資料列的總累計銷售額，然後將表示 2006 年度銷售額的第三個資料列納入計算。  
   
 ```  
 SELECT BusinessEntityID, TerritoryID   

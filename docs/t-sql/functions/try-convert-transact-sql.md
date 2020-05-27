@@ -49,7 +49,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
  *style*  
  這是指定 **TRY_CONVERT** 函數如何轉譯 *expression* 的選用性整數運算式。  
   
- *style* 接受與 *CONVERT* 函數的 **style** 參數相同的值。 如需詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
+ *style* 接受與 **CONVERT** 函數的 *style* 參數相同的值。 如需詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
  可接受值的範圍由 *data_type* 值決定。 如果 *style* 是 Null，那麼 **TRY_CONVERT** 會傳回 Null。  
   

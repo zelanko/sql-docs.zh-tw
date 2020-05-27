@@ -53,7 +53,7 @@ PATINDEX ( '%pattern%' , expression )
  這是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，通常是搜尋指定之模式的資料行。 *expression* 屬於字元字串資料類型類別目錄。  
   
 ## <a name="return-types"></a>傳回型別  
-若 **expression** 的資料類型為 *varchar(max)* 或 **nvarchar(max)** ，則為 **bigint**，否則為 **int**。  
+若 *expression* 的資料類型為 **varchar(max)** 或 **nvarchar(max)** ，則為 **bigint**，否則為 **int**。  
   
 ## <a name="remarks"></a>備註  
 如果 *pattern* 或 *expression* 為 NULL，則 PATINDEX 會傳回 NULL。  
@@ -70,7 +70,7 @@ PATINDEX 會以輸入的定序為基礎來執行比較。 若要執行指定定�
 ## <a name="examples"></a>範例  
   
 ### <a name="a-simple-patindex-example"></a>A. 簡單的 PATINDEX 範例  
- 下例範例會檢查 `interesting data`字元開頭位置的短字元字串 (`ter`)。  
+ 下例範例會檢查 `ter`字元開頭位置的短字元字串 (`interesting data`)。  
   
 ```sql  
 SELECT position = PATINDEX('%ter%', 'interesting data');  
@@ -85,7 +85,7 @@ position
 ```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. 搭配 PATINDEX 使用模式  
-下列範例會尋找 `ensure` 模式在 `DocumentSummary` 資料庫之 `Document` 資料表中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料行之特定資料列中的起始位置。  
+下列範例會尋找 `ensure` 模式在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `DocumentSummary` 資料表中 `Document` 資料行之特定資料列中的起始位置。  
   
 ```sql  
 SELECT position = PATINDEX('%ensure%',DocumentSummary)  

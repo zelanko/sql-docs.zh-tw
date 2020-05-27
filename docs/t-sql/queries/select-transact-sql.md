@@ -147,7 +147,7 @@ SELECT <select_criteria>
 下列範例使用 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 資料庫。
   
 ### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. 使用 SELECT 擷取資料列和資料行  
- 本節將示範三個程式碼範例。 第一個程式碼範例會從 `*` 資料表中，傳回所有資料列 (未指定 WHERE 子句) 和所有資料行 (使用 `DimEmployee`)。  
+ 本節將示範三個程式碼範例。 第一個程式碼範例會從 `DimEmployee` 資料表中，傳回所有資料列 (未指定 WHERE 子句) 和所有資料行 (使用 `*`)。  
   
 ```sql  
 SELECT *  
@@ -163,7 +163,7 @@ FROM DimEmployee AS e
 ORDER BY LastName;  
 ```  
   
- 此範例會從 `FirstName` 資料庫的 `LastName` 資料表中，傳回所有資料列 (未指定 WHERE 子句)，以及資料行子集 (`StartDate`、`DimEmployee`、`AdventureWorksPDW2012`)。 第三個資料行標題會重新命名為 `FirstDay`。  
+ 此範例會從 `AdventureWorksPDW2012` 資料庫的 `DimEmployee` 資料表中，傳回所有資料列 (未指定 WHERE 子句)，以及資料行子集 (`FirstName`、`LastName`、`StartDate`)。 第三個資料行標題會重新命名為 `FirstDay`。  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -171,7 +171,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- 此範例只會傳回 `DimEmployee` 不是 NULL 且 `EndDate` 是 ‘M’ (已婚) 的 `MaritalStatus` 資料列。  
+ 此範例只會傳回 `EndDate` 不是 NULL 且 `MaritalStatus` 是 ‘M’ (已婚) 的 `DimEmployee` 資料列。  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  

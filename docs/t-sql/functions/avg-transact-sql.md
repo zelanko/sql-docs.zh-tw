@@ -146,7 +146,7 @@ FROM Production.Product;
 ```
   
 ### <a name="d-using-avg-without-distinct"></a>D. 使用不含 DISTINCT 的 AVG  
-沒有 DISTINCT 時，`AVG` 函數會在 `Product` 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中，尋找所有產品的平均標價，且包含任何重複的值。
+沒有 DISTINCT 時，`AVG` 函數會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Product` 資料表中，尋找所有產品的平均標價，且包含任何重複的值。
   
 ```sql
 SELECT AVG(ListPrice)  
@@ -163,7 +163,7 @@ FROM Production.Product;
 ```
   
 ### <a name="e-using-the-over-clause"></a>E. 使用 OVER 子句  
-以下範例使用 AVG 函數搭配 OVER 子句，以針對 `Sales.SalesPerson` 資料庫 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中的每個領域，提供年度銷售的移動平均。 `TerritoryID` 負責分割資料，而 `SalesYTD` 會進行邏輯性地排序。 這表示，將會根據銷售年度來針對每一個領域計算 AVG 函數。 請注意，對於 `TerritoryID` 1，銷售年度 2005 有兩個資料列，這表示兩個銷售人員在該年度的銷售額。 系統計算這兩個資料列的平均銷售額，然後將表示 2006 年度銷售額的第三個資料列納入計算。
+以下範例使用 AVG 函數搭配 OVER 子句，以針對 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫 `Sales.SalesPerson` 資料表中的每個領域，提供年度銷售的移動平均。 `TerritoryID` 負責分割資料，而 `SalesYTD` 會進行邏輯性地排序。 這表示，將會根據銷售年度來針對每一個領域計算 AVG 函數。 請注意，對於 `TerritoryID` 1，銷售年度 2005 有兩個資料列，這表示兩個銷售人員在該年度的銷售額。 系統計算這兩個資料列的平均銷售額，然後將表示 2006 年度銷售額的第三個資料列納入計算。
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   

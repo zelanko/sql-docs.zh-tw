@@ -92,7 +92,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
- 下列範例會將 MIN、MAX、AVG 和 COUNT 函數搭配 OVER 子句一起使用，為 `HumanResources.Department` 資料庫之 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中的各部門提供彙總值。  
+ 下列範例會將 MIN、MAX、AVG 和 COUNT 函數搭配 OVER 子句一起使用，為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `HumanResources.Department` 資料表中的各部門提供彙總值。  
   
 ```  
 SELECT DISTINCT Name  

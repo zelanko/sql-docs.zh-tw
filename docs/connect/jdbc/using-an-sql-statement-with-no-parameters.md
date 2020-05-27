@@ -21,7 +21,7 @@ ms.locfileid: "69026546"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-若要使用不含參數的 SQL 陳述式來使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料，您可以使用 [SQLServerStatement](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 類別的 [executeQuery](../../connect/jdbc/reference/sqlserverstatement-class.md) 方法，來傳回一個將包含所要求之資料的 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)。 若要這樣做，您必須先使用 [SQLServerConnection](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 類別的 [createStatement](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法建立 SQLServerStatement 物件。
+若要使用不含參數的 SQL 陳述式來使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料，您可以使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法，來傳回一個將包含所要求之資料的 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)。 若要這樣做，您必須先使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 方法建立 SQLServerStatement 物件。
 
 在下列範例中，連至 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的開啟連線會傳入至函式中，並建構及執行 SQL 陳述式，然後從結果集讀取結果。
 

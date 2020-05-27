@@ -32,7 +32,7 @@ ms.locfileid: "68006774"
 ...  
 ```  
   
- 因為階層中有兩個層級，所以您要撰寫兩個 `SELECT` 查詢並套用 UNION ALL。 上述為第一個查詢，其會擷取 <`Employee`> 元素及其屬性的值。 查詢會將 `1` 指派為 <`Tag`> 元素的 `Employee` 值，並將 NULL 指派為 `Parent`，因為這是最上層元素。  
+ 因為階層中有兩個層級，所以您要撰寫兩個 `SELECT` 查詢並套用 UNION ALL。 上述為第一個查詢，其會擷取 <`Employee`> 元素及其屬性的值。 查詢會將 `1` 指派為 <`Employee`> 元素的 `Tag` 值，並將 NULL 指派為 `Parent`，因為這是最上層元素。  
   
 ```  
 SELECT 1    as Tag,  
@@ -45,7 +45,7 @@ INNER JOIN Person.Person AS P
 ON  E.BusinessEntityID = P.BusinessEntityID;  
 ```  
   
- 上述為第二個查詢。 它會擷取 <`Name`> 元素的值。 它會將 `2` 指派為 <`Tag`> 元素的 `Name` 值，並將 `1` 指派為識別 <`Parent`> 做為父系的 `Employee` 標記值。  
+ 上述為第二個查詢。 它會擷取 <`Name`> 元素的值。 它會將 `2` 指派為 <`Name`> 元素的 `Tag` 值，並將 `1` 指派為識別 <`Employee`> 做為父系的 `Parent` 標記值。  
   
 ```  
 SELECT 2 as Tag,  
@@ -112,9 +112,9 @@ Tag | 父系 | Employee!1!EmpID | Name!2!FName | Name!2!LName
   
  以下是如何處理通用資料表的資料列，以產生結果 XML 樹狀結構：  
   
- 第一個資料列會識別 `Tag` 值 `1`。 因此，會識別 `Tag` 值 `1` 的資料行群組 `Employee!1!EmpID`。 此資料行會將 `Employee` 識別為元素名稱。 然後就會建立擁有 `Employee` 屬性的 <`EmpID`> 元素。 對應的資料行值會指派給這些屬性。  
+ 第一個資料列會識別 `Tag` 值 `1`。 因此，會識別 `Tag` 值 `1` 的資料行群組 `Employee!1!EmpID`。 此資料行會將 `Employee` 識別為元素名稱。 然後就會建立擁有 `EmpID` 屬性的 <`Employee`> 元素。 對應的資料行值會指派給這些屬性。  
   
- 第二個資料列具有 `Tag` 值 `2`。 因此，會識別資料行名稱中 `Tag` 值為 `2` 的資料行群組 `Name!2!FName`、 `Name!2!LName`。 這些資料行名稱會將 `Name` 識別為元素名稱。 此外會建立擁有 `Name` 與 `FName` 屬性的 <`LName`> 元素。 然後將對應的資料行值指派給這些屬性。 此資料列會將 `1` 識別為 `Parent`。 此元素子系便會加入到先前的 <`Employee`> 元素。  
+ 第二個資料列具有 `Tag` 值 `2`。 因此，會識別資料行名稱中 `Tag` 值為 `2` 的資料行群組 `Name!2!FName`、 `Name!2!LName`。 這些資料行名稱會將 `Name` 識別為元素名稱。 此外會建立擁有 `FName` 與 `LName` 屬性的 <`Name`> 元素。 然後將對應的資料行值指派給這些屬性。 此資料列會將 `1` 識別為 `Parent`。 此元素子系便會加入到先前的 <`Employee`> 元素。  
   
  這個處理序會對資料列集中其餘的資料列重複進行。 請記下通用資料表中資料列排序的優先順序，如此 FOR XML EXPLICIT 就可以依序處理資料列集，並產生您想要的 XML。  
   

@@ -49,7 +49,7 @@ ms.locfileid: "75307845"
  如需有關事件類別的詳細資訊，請參閱 [SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
 ## <a name="default-template"></a>預設範本  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會自動指定 **標準** 範本作為新追蹤套用的預設範本。 不過，您可以將預設範本變更為其他任何預先定義的或使用者自訂的範本。 若要變更預設範本，請在您建立或編輯範本時，使用 [追蹤範本屬性]  對話方塊中的 [一般]  索引標籤，選取 [作為所選取伺服器類型的預設範本]  核取方塊。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會自動指定 **標準** 範本作為新追蹤套用的預設範本。 不過，您可以將預設範本變更為其他任何預先定義的或使用者自訂的範本。 若要變更預設範本，請在您建立或編輯範本時，使用 [追蹤範本屬性] 對話方塊中的 [一般] 索引標籤，選取 [作為所選取伺服器類型的預設範本] 核取方塊。  
   
  若要巡覽至 [追蹤範本屬性]  對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [檔案]  功能表上選擇 [範本]  ，然後按一下 [新增範本]  或 [編輯範本]  。  
   

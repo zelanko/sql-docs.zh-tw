@@ -171,7 +171,7 @@ GO
 ```  
   
 ### <a name="c-setting-the-owner-of-a-schema"></a>C. 設定結構描述的擁有者  
- 下列範例會建立由 `Production` 擁有的 `Mary` 結構描述。  
+ 下列範例會建立由 `Mary` 擁有的 `Production` 結構描述。  
   
 ```  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  

@@ -93,7 +93,7 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-dropping-statistics-from-a-table"></a>B. 從資料表卸除統計資料  
- 下列範例會從資料表 `CustomerStats1` 卸除 `Customer` 統計資料。  
+ 下列範例會從資料表 `Customer` 卸除 `CustomerStats1` 統計資料。  
   
 ```  
 DROP STATISTICS Customer.CustomerStats1;  

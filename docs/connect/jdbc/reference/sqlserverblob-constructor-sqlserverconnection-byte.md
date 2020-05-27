@@ -25,10 +25,10 @@ ms.locfileid: "67971988"
 # <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>SQLServerBlob 建構函式 (SQLServerConnection, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  當給定 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverblob-class.md) 物件和[位元組](../../../connect/jdbc/reference/sqlserverconnection-class.md)陣列時，初始化 **SQLServerBlob** 類別的新執行個體。  
+  當給定 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件和**位元組**陣列時，初始化 [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md) 類別的新執行個體。  
   
 > [!NOTE]  
->  這個方法在 JDBC Driver 2.0 版中已被取代。 請改用 [SQLServerConnection](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) 類別的 [createBlob](../../../connect/jdbc/reference/sqlserverconnection-class.md) 方法。  
+>  這個方法在 JDBC Driver 2.0 版中已被取代。 請改用 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) 方法。  
   
 ## <a name="syntax"></a>語法  
   

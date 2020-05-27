@@ -60,7 +60,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 *filegroup_name* 對應到 **sys.filegroups** 目錄檢視中的 **name** 資料行。  
   
 ## <a name="examples"></a>範例  
-這個範例會傳回 `IsDefault` 資料庫中主要檔案群組的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 屬性設定。  
+這個範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中主要檔案群組的 `IsDefault` 屬性設定。  
   
 ```  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  

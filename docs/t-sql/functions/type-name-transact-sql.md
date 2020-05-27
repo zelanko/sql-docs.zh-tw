@@ -62,7 +62,7 @@ TYPE_NAME ( type_id )
  系統函數可以用於選取清單、WHERE 子句以及任何可以使用運算式的位置。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) 及 [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
- 下列範例會針對 `Vendor` 資料庫之 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表中的每個資料行，傳回物件名稱、資料行名稱和類型名稱。  
+ 下列範例會針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之 `Vendor` 資料表中的每個資料行，傳回物件名稱、資料行名稱和類型名稱。  
   
 ```  
 SELECT o.name AS obj_name, c.name AS col_name,  
@@ -92,7 +92,7 @@ Vendor          PurchasingWebServiceURL  nvarchar
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會使用識別碼 `TYPE ID` 來傳回資料類型的 `1`。  
+ 下列範例會使用識別碼 `1` 來傳回資料類型的 `TYPE ID`。  
   
 ```  
 SELECT TYPE_NAME(36) AS Type36, TYPE_NAME(239) AS Type239;  

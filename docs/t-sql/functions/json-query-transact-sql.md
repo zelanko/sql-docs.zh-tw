@@ -106,7 +106,7 @@ JSON 路徑可為剖析指定 lax 或 strict 模式。 若您未指定剖析模�
 
 **JSON_QUERY** 會傳回有效的 JSON 片段。 因此，**FOR JSON** 不會在 **JSON_QUERY** 的傳回值中逸出特殊字元。
 
-若您使用 FOR JSON 傳回結果，並且在其中包含已經是 JSON 格式的資料 (在資料行中或運算式的結果)，請使用不具有 **path** 參數的 *JSON_QUERY* 來包裝 JSON 資料。
+若您使用 FOR JSON 傳回結果，並且在其中包含已經是 JSON 格式的資料 (在資料行中或運算式的結果)，請使用不具有 *path* 參數的 **JSON_QUERY** 來包裝 JSON 資料。
 
 ## <a name="examples"></a>範例  
   

@@ -156,7 +156,7 @@ ms.locfileid: "75681699"
 
 |名稱|描述|  
 |----------|-----------------|  
-|DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|在使用  **API 方法將參數值傳送到**加密的`setObject()/updateObject()` datetime, smalldatetime, money, smallmoney, uniqueidentifier 資料行時，使用這些類型作為目標 SQL 類型。|  
+|DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|在使用 `setObject()/updateObject()` API 方法將參數值傳送到**加密的** datetime, smalldatetime, money, smallmoney, uniqueidentifier 資料行時，使用這些類型作為目標 SQL 類型。|  
   
   
  **SQLServerStatementColumnEncryptionSetting 列舉**  

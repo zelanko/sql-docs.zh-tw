@@ -43,7 +43,7 @@ public java.lang.String getCatalogSeparator()
 ## <a name="remarks"></a>備註  
  此 getCatalogSeparator 方法由 java.sql.DatabaseMetaData 介面中的 getCatalogSeparator 方法所指定。  
   
- 當搭配 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 資料庫使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，這個方法會傳回作為目錄分隔符號的句號 (".")。  
+ 當搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 時，這個方法會傳回作為目錄分隔符號的句號 (".")。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

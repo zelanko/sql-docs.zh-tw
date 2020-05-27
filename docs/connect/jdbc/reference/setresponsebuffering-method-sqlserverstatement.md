@@ -49,7 +49,7 @@ public final void setResponseBuffering(java.lang.String value)
   
  adaptive 是 JDBC 驅動程式 2.0 和 3.0 版中的預設值。 full 是 JDBC 驅動程式 2.0 版之前的版本中的預設值。  
   
- [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 可讓您覆寫目前 **SQLServerStatement** 物件的 **responseBuffering** 連線 [String](../../../connect/jdbc/reference/sqlserverstatement-class.md) 屬性。 如需使用回應緩衝模式的詳細資訊，請參閱[使用自適性緩衝](../../../connect/jdbc/using-adaptive-buffering.md)。  
+ [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 可讓您覆寫目前 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的 **responseBuffering** 連線 **String** 屬性。 如需使用回應緩衝模式的詳細資訊，請參閱[使用自適性緩衝](../../../connect/jdbc/using-adaptive-buffering.md)。  
   
  如果應用程式指定給 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法的參數值無效，則會擲回 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)。  
   

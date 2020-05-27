@@ -30,7 +30,7 @@ ms.locfileid: "75307938"
   
 2.  在 [一般選項]  對話方塊中，按一下 [選擇字型]  。  
   
-3.  在 [字型]  對話方塊中，選取  **用來顯示追蹤的 [字型]** **、[字型樣式]** **和 [大小]** [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
+3.  在 [字型] 對話方塊中，選取 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用來顯示追蹤的 [字型]、[字型樣式] 和 [大小]。  
   
 4.  按一下 [確定]  套用設定並關閉 [字型]  對話方塊。  
   

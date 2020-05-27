@@ -45,7 +45,7 @@ public java.lang.String getClientInfo (java.lang.String name)
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 不支援任何用戶端資訊屬性。 因此，此方法會傳回 **null**。  
   
- 同樣地，應用程式可以使用 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) 類別的 [getClientInfoProperties](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 方法，擷取驅動程式可支援的用戶端資訊屬性清單。 [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) 方法會傳回空的結果集。  
+ 同樣地，應用程式可以使用 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 類別的 [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) 方法，擷取驅動程式可支援的用戶端資訊屬性清單。 [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) 方法會傳回空的結果集。  
   
 ## <a name="see-also"></a>另請參閱  
  [getClientInfo 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)   

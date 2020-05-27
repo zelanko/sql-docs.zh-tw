@@ -65,7 +65,7 @@ TEXTPTR ( column )
 |PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|傳回指定字元字串在 **text** 或 **ntext** 資料行中的字元位置。|  
 |DATALENGTH<b>(</b>_expression_ **)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
 |SET TEXTSIZE|傳回 SELECT 陳述式所要傳回的 **text**、**ntext** 或 **image** 資料的限制 (以位元組為單位)。|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|傳回指定的 **start** 位移和 *length* 所指定的 *varchar* 字串。 長度應該小於 8 KB。|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|傳回指定的 *start* 位移和 *length* 所指定的 **varchar** 字串。 長度應該小於 8 KB。|  
   
 ## <a name="examples"></a>範例  
   
@@ -73,7 +73,7 @@ TEXTPTR ( column )
 >  若要執行下列範例，您必須安裝 **pubs** 資料庫。  
   
 ### <a name="a-using-textptr"></a>A. 使用 TEXTPTR  
- 下列範例會使用 `TEXTPTR` 函式來尋找 **資料庫的** 資料表中與 `logo` 建立關聯的 `New Moon Books`image`pub_info` 資料行 `pubs`。 這個文字指標放在本機變數 `@ptrval.` 中。  
+ 下列範例會使用 `TEXTPTR` 函式來尋找 `pubs` 資料庫的 `pub_info` 資料表中與 `New Moon Books` 建立關聯的 **image** 資料行 `logo`。 這個文字指標放在本機變數 `@ptrval.` 中。  
   
 ```  
 USE pubs;  
@@ -163,7 +163,7 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ```  
   
 ### <a name="d-returning-specific-text-data"></a>D. 傳回特定文字資料  
- 下列範例會尋找 `text` 資料庫 `pr_info` 資料表中與 `pub_id``0736` 建立關聯的 `pub_info` 資料行 (`pubs`)。 它先宣告本機變數 `@val`。 之後，將文字指標 (大型二進位字串) 放在 `@val` 中，將它當作一個參數來提供給 `READTEXT` 陳述式。 這會傳回從第 5 位元組 (位移 4) 開始的 10 個位元組。  
+ 下列範例會尋找 `pubs` 資料庫 `pub_info` 資料表中與 `pub_id``0736` 建立關聯的 `text` 資料行 (`pr_info`)。 它先宣告本機變數 `@val`。 之後，將文字指標 (大型二進位字串) 放在 `@val` 中，將它當作一個參數來提供給 `READTEXT` 陳述式。 這會傳回從第 5 位元組 (位移 4) 開始的 10 個位元組。  
   
 ```  
 USE pubs;  

@@ -51,7 +51,7 @@ FILEGROUP_ID ( 'filegroup_name' )
 *filegroup_name* 對應到 **sys.filegroups** 目錄檢視中的 **name** 資料行。  
   
 ## <a name="examples"></a>範例  
-此範例會傳回 `PRIMARY` 資料庫中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 檔案群組的檔案群組識別碼。  
+此範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `PRIMARY` 檔案群組的檔案群組識別碼。  
   
 ```  
 SELECT FILEGROUP_ID('PRIMARY') AS [Filegroup ID];  

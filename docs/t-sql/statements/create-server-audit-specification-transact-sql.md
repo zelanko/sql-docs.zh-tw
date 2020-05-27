@@ -67,7 +67,7 @@ FOR SERVER AUDIT audit_name
  一旦建立伺服器稽核規格之後，就可以使用具有 CONTROL SERVER 或 ALTER ANY SERVER AUDIT 權限的主體、系統管理員 (sysadmin) 帳戶或具有此稽核之明確存取權的主體來加以檢視。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立稱為 `HIPAA_Audit_Specification` 的伺服器稽核規格，它會針對稱為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `HIPAA_Audit` 稽核來稽核失敗的登入。  
+ 下列範例會建立稱為 `HIPAA_Audit_Specification` 的伺服器稽核規格，它會針對稱為 `HIPAA_Audit` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核來稽核失敗的登入。  
   
 ```  
 CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  

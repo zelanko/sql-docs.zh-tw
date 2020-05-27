@@ -48,7 +48,7 @@ UNICODE ( 'ncharacter_expression' )
 **int**  
   
 ## <a name="remarks"></a>備註  
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本與 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，UNICODE 函式會傳回範圍介於 000000 到 00FFFF 之間的 UCS-2 字碼元素，此範圍可代表 Unicode 基本多語平面 (BMP) 中的 65,535 個字元。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，當使用支援[補充字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序時，UNICODE 會傳回範圍 000000 到 10FFFF 之間的 UTF-16 字碼元素。 如需 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 中 Unicode 支援的詳細資訊，請參閱[定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)。 
+在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本與 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，UNICODE 函式會傳回範圍介於 000000 到 00FFFF 之間的 UCS-2 字碼元素，此範圍可代表 Unicode 基本多語平面 (BMP) 中的 65,535 個字元。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，當使用支援[補充字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序時，UNICODE 會傳回範圍 000000 到 10FFFF 之間的 UTF-16 字碼元素。 如需 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 中 Unicode 支援的詳細資訊，請參閱[定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)。 
   
 ## <a name="examples"></a>範例  
   

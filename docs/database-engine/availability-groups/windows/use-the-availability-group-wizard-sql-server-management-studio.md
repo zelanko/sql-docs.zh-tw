@@ -26,7 +26,7 @@ ms.locfileid: "77507734"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>使用可用性群組精靈 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題描述如何使用  **中的 [新增可用性群組精靈]** [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中建立和設定 AlwaysOn 可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」* (Availability Replica))。  
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 [新增可用性群組精靈]，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中建立和設定 AlwaysOn 可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」* (Availability Replica))。  
   
 > [!NOTE]  
 >  如需可用性群組的簡介，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)中的 PowerShell，透過 PowerShell Cmdlet 建立及設定 AlwaysOn 可用性群組。  

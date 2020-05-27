@@ -69,7 +69,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-stdevp"></a>A：使用 STDEVP  
- 下列範例會傳回 `SalesPerson` 資料庫之[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中所有獎金值的母體標準差。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之`SalesPerson` 資料表中所有獎金值的母體標準差。  
   
 ```  
 SELECT STDEVP(Bonus)  
@@ -80,7 +80,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-stdevp"></a>B：使用 STDEVP  
- 下列範例會傳回 `STDEVP` 資料表中所有銷售配額值的 `dbo.FactSalesQuota`。 第一個資料行包含所有相異值的標準差，而第二個資料行則包含所有值的標準差 (包含任何重複的值)。  
+ 下列範例會傳回 `dbo.FactSalesQuota` 資料表中所有銷售配額值的 `STDEVP`。 第一個資料行包含所有相異值的標準差，而第二個資料行則包含所有值的標準差 (包含任何重複的值)。  
   
 ```  
 -- Uses AdventureWorks  

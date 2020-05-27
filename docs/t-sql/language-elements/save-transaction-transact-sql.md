@@ -49,7 +49,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>引數  
  *savepoint_name*  
- 這是指派給儲存點的名稱。 儲存點名稱必須符合識別碼的規則，但不能超出 32 個字元。 即使  *執行個體不區分大小寫，* savepoint_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還是一律都會區分大小寫。  
+ 這是指派給儲存點的名稱。 儲存點名稱必須符合識別碼的規則，但不能超出 32 個字元。 即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體不區分大小寫，*savepoint_name* 還是一律都會區分大小寫。  
   
  @*savepoint_variable*  
  這是包含有效儲存點名稱之使用者自訂變數的名稱。 這個變數必須用 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型來宣告。 您可以將超出 32 個字元傳給變數，但只會使用前 32 個字元。  

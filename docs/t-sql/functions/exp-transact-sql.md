@@ -41,7 +41,7 @@ EXP ( float_expression )
   
 ## <a name="arguments"></a>引數  
  *float_expression*  
- 為 [float](../../t-sql/language-elements/expressions-transact-sql.md) 類型或能夠隱含轉換成 **float** 類型的**運算式**。  
+ 為 **float** 類型或能夠隱含轉換成 **float** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回型別  
  **float**  

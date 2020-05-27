@@ -71,7 +71,7 @@ print $metadata['name'];
   
 ## <a name="sensitivity-data-classification-metadata"></a>敏感性資料分類中繼資料
 
-從 5.8.0 版開始，新的陳述式屬性 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 可供使用者透過使用 [ (其需要 Microsoft ODBC Driver 17.4.2 或更新版本) 來存取 Microsoft SQL Server 2019 中的](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)敏感性資料分類中繼資料`PDOStatement::getColumnMeta`。
+從 5.8.0 版開始，新的陳述式屬性 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 可供使用者透過使用 `PDOStatement::getColumnMeta` (其需要 Microsoft ODBC Driver 17.4.2 或更新版本) 來存取 Microsoft SQL Server 2019 中的[敏感性資料分類中繼資料](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)。
 
 請注意，`PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 屬性預設為 `false`，但當設定為 `true` 時，先前所提到的陣列欄位 `flags` 將會填入敏感性資料分類中繼資料 (如果其存在的話)。 
 
@@ -93,7 +93,7 @@ ADD SENSITIVITY CLASSIFICATION TO [Patients].SSN WITH (LABEL = 'Highly Confident
 ADD SENSITIVITY CLASSIFICATION TO [Patients].BirthDate WITH (LABEL = 'Confidential Personal Data', INFORMATION_TYPE = 'Birthdays')
 ```
 
-若要存取中繼資料，請在將 `PDOStatement::getColumnMeta` 設定為 true 之後使用 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION`，如下列程式碼片段中所示：
+若要存取中繼資料，請在將 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 設定為 true 之後使用 `PDOStatement::getColumnMeta`，如下列程式碼片段中所示：
 
 ```
 $options = array(PDO::SQLSRV_ATTR_DATA_CLASSIFICATION => true);

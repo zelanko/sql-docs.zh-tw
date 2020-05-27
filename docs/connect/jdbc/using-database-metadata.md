@@ -23,7 +23,7 @@ ms.locfileid: "69026424"
 
 為了查詢資料庫中有關其支援之項目的資訊，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會實作 [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 類別。 此類別包含數種方法，會以單一值形式或以結果集傳回資訊。
 
-若要建立 SQLServerDatabaseMetaData 物件，您可以使用 [SQLServerConnection](../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md) 類別的 [getMetaData](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法來取得有關它連線之資料庫的資訊。
+若要建立 SQLServerDatabaseMetaData 物件，您可以使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md) 方法來取得有關它連線之資料庫的資訊。
 
 在下列範例中，針對 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的開啟連線會傳遞至函式中，並使用 SQLServerConnection 類別的 getMetaData 方法傳回 SQLServerDatabaseMetadata 物件，然後使用 SQLServerDatabaseMetaData 物件的各種方法來顯示有關驅動程式、驅動程式版本、資料庫名稱和資料庫版本的資訊。
 
