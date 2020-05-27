@@ -214,7 +214,7 @@ CONTROL SERVER 權限的被授與者 (例如系統管理員 (sysadmin) 固定伺
 
 ### <a name="a-granting-permission-to-create-tables"></a>A. 授與建立資料表的權限
 
-下列範例會將 `CREATE TABLE` 資料庫的 `AdventureWorks` 權限授與使用者 `MelanieK`。
+下列範例會將 `AdventureWorks` 資料庫的 `CREATE TABLE` 權限授與使用者 `MelanieK`。
 
 ```sql
 USE AdventureWorks;
@@ -246,7 +246,7 @@ GO
 
 ### <a name="d-granting-control-permission-to-a-database-user"></a>D. 將 CONTROL 權限授與資料庫使用者
 
- 下列範例會將 `CONTROL` 資料庫的 `AdventureWorks2012` 權限授與資料庫使用者 `Sarah`。 使用者必須存在於資料庫，且內容必須設定為資料庫。
+ 下列範例會將 `AdventureWorks2012` 資料庫的 `CONTROL` 權限授與資料庫使用者 `Sarah`。 使用者必須存在於資料庫，且內容必須設定為資料庫。
 
 ```sql
 USE AdventureWorks2012;
