@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee9019f821c5608527e0bdca5eddc8f1ead52f41
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084026"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522122"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 群集演算法技術參考
   本節說明 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集演算法的實作，包括可用來控制群集模型行為的參數。 本章節也提供在建立及處理叢集模型時如何改善效能的指南。  
@@ -37,7 +36,7 @@ ms.locfileid: "66084026"
   
 -   [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
--   [群集模型查詢範例](clustering-model-query-examples.md)  
+-   [叢集模型查詢範例](clustering-model-query-examples.md)  
   
 ## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Microsoft 群集演算法的實作  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法提供兩種方法來建立群集並將資料點指派給群集。 第一種方法是 *K-means* 演算法，這是一種硬式群集方法。 這代表資料點只能屬於一個群集，而且會針對該群集中每個資料點的成員資格而計算單一機率。 第二種方法是 *Expectation Maximization* (EM) 方法，這是一種軟式群集** 方法。 這代表資料點一定屬於多個群集，而且會針對資料點和群集的每個組合而計算機率。  
@@ -94,7 +93,7 @@ ms.locfileid: "66084026"
  CLUSTERING_METHOD  
  指定演算法要使用的群集方法。 可用的群集方法有：  
   
-|識別碼|方法|  
+|ID|方法|  
 |--------|------------|  
 |1|可擴充的 EM|  
 |2|不可擴充的 EM (Non-scalable EM)|  
@@ -113,7 +112,7 @@ ms.locfileid: "66084026"
   
  藉由變更此數字，您可以變更建立初始群集的方法，然後比較使用不同的種子而建立的模型。 如果種子已變更，但找到的群集並未大幅變更，則可將模型視為相當穩定。  
   
- 預設值為 0。  
+ 預設值是 0。  
   
  MINIMUM_SUPPORT  
  指定建立群集所需的案例最小數目。 如果群集中的案例數目低於此數目，則會將群集視為空白並加以捨棄。  
@@ -159,12 +158,12 @@ ms.locfileid: "66084026"
 ### <a name="modeling-flags"></a>模型旗標  
  演算法支援下列模型旗標。 您可以在建立採礦結構或採礦模型時定義模型旗標。 模型旗標會指定在分析期間如何處理每個資料行中的值。  
   
-|模型旗標|描述|  
+|模型旗標|Description|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|資料行將被視為擁有兩個可能狀態：「遺漏」和「現有」。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
 |NOT NULL|資料行不得包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  叢集模型必須包含索引鍵資料行和輸入資料行。 您也可以將輸入資料行定義為可預測的。 設定為 `Predict Only` 的資料行不會用來建立群集。 這些值在群集內的散發是在建立群集之後才計算的。  
   
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  

@@ -4,26 +4,26 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c47514f551ec07a8c8837533cb38c0e6283645cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eeaeef25f27f29234aaa5a96a9272b4bea43dca3
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892887"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670398"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>資料採礦延伸模組 (DMX) 參考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  資料採礦延伸模組（DMX）是一種語言，您可以在中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]用來建立和使用資料採礦模型。 您可以使用 DMX 建立新資料採礦模型的結構、培訓這些模型，以及瀏覽、管理與預測模型。 DMX 是由資料定義語言 (DDL) 陳述式、資料操作語言 (DML) 陳述式及函數和運算子所組成。  
+  資料採礦延伸模組（DMX）是一種語言，您可以在中用來建立和使用資料採礦模型 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 您可以使用 DMX 建立新資料採礦模型的結構、培訓這些模型，以及瀏覽、管理與預測模型。 DMX 是由資料定義語言 (DDL) 陳述式、資料操作語言 (DML) 陳述式及函數和運算子所組成。  
   
 ## <a name="microsoft-ole-db-for-data-mining-specification"></a>Microsoft OLE DB for Data Mining 規格  
- 中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的資料採礦功能是為了符合資料採礦規格[!INCLUDE[msCoName](../includes/msconame-md.md)]的 OLE DB 而建立的。  
+ 中的資料採礦功能 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是為了符合 [!INCLUDE[msCoName](../includes/msconame-md.md)] 資料採礦規格的 OLE DB 而建立的。  
   
- 資料[!INCLUDE[msCoName](../includes/msconame-md.md)]挖掘規格的 OLE DB 會定義下列各項：  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]資料採礦規格的 OLE DB 會定義下列各項：  
   
 -   保存定義資料採礦模型之資訊的結構。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68892887"
   
  您可以使用 DMX 中的資料操作陳述式執行下列工作：  
   
--   使用[INSERT INTO](../dmx/insert-into-dmx.md)語句來定型「採礦模型」。 這不會將實際的來源資料插入資料採礦模型物件，而是會建立描述演算法建立之採礦模型的摘要。 在[ \<來源資料查詢>](../dmx/source-data-query.md)中會描述 INSERT INTO 語句的來源查詢。  
+-   使用[INSERT INTO](../dmx/insert-into-dmx.md)語句來定型「採礦模型」。 這不會將實際的來源資料插入資料採礦模型物件，而是會建立描述演算法建立之採礦模型的摘要。 在[ \< 來源資料查詢>](../dmx/source-data-query.md)中會描述 INSERT INTO 語句的來源查詢。  
   
 -   擴充 SELECT 語句，以流覽模型定型期間所計算的資訊，並儲存在資料採礦模型中，例如來源資料的統計資料。 以下是您可以加入以擴充 SELECT 語句之功能的子句：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68892887"
   
     -   [從 &#60;模型&#62; 中選取。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
--   使用 SELECT 語句的[預測聯結](../dmx/select-from-model-prediction-join-dmx.md)子句，建立以現有的採礦模型為基礎的預測。 在[ \<來源資料查詢>](../dmx/source-data-query.md)中，會描述預測聯結語句的來源查詢。  
+-   使用 SELECT 語句的[預測聯結](../dmx/select-from-model-prediction-join-dmx.md)子句，建立以現有的採礦模型為基礎的預測。 在[ \< 來源資料查詢>](../dmx/source-data-query.md)中，會描述預測聯結語句的來源查詢。  
   
 -   使用[DELETE &#40;DMX&#41;](../dmx/delete-dmx.md)語句，從模型或結構中移除所有定型的資料。  
   

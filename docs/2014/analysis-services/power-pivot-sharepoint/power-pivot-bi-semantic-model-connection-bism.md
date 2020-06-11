@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 846998acaa20b572760edcc67ecd24f8346a762a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bb78df367f59889f4665d9940880bf0ce49c462
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071377"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535230"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>PowerPivot BI 語意模型連接 (.bism)
   BI 語意模型連接 (.bism) 是可攜式連接，用於將 Excel 或 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式 model 資料庫或處於多維度模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 如果您熟悉 Office 資料連接 (.odc) 檔案，您會注意到定義和使用 .bism 連接檔案之方式的相似性。  

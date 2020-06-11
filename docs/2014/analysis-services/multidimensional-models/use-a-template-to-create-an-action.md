@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ad0917d6-349a-4923-97be-83c778424286
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 52ba9afd78722d53bad32a6c918a98dbc2279ffa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e861532cfd185d07d94bd3b62659303e8162696
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072692"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541350"
 ---
 # <a name="use-a-template-to-create-an-action"></a>使用範本建立動作
   Cube 設計師的 [動作]**** 檢視包含可用來建立一般動作的一些範本。 您可從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取 Cube 設計師。  

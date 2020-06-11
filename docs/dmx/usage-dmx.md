@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b961282ba6bc25caa260a3e156f843a413a5ef1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc1ae000166f075a3c6bac347cd7e3e8a605042b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893117"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670376"
 ---
 # <a name="usage-dmx"></a>使用方式 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  當您使用資料採礦延伸模組（DMX）在中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]定義新的資料採礦模型時，您必須指定建立模型的資料採礦演算法將如何使用每個資料行。 您可以將資料行指定為下列類型其中之一：  
+  當您使用資料採礦延伸模組（DMX）在中定義新的資料採礦模型時 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您必須指定建立模型的資料採礦演算法將如何使用每個資料行。 您可以將資料行指定為下列類型其中之一：  
   
 -   **關鍵**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68893117"
   
  指定為**Predict**類型的資料行會當做輸入和輸出資料行使用。 指定為**PredictOnly**的資料行只會用來做為輸出資料行。 特定的演算法可能會以不同方式處理 Predict 資料行。  
   
- 如需[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援之資料行使用類型的詳細資訊，請參閱[採礦模型資料行](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
+ 如需支援之資料行使用類型的詳細資訊 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱[採礦模型資料行](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   

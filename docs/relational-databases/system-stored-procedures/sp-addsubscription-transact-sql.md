@@ -1,6 +1,7 @@
 ---
 title: sp_addsubscription （Transact-sql） |Microsoft Docs
-ms.date: 10/28/2015
+description: 將訂閱加入發行集中，以及設定訂閱者狀態。 這個預存程式會在發行集資料庫的發行者端執行。
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73789c16cbea481cc159774e6c629d3a131d7478
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a87ba30f69027849ea5444163291465dec00d9be
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833624"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627614"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +84,9 @@ sp_addsubscription [ @publication = ] 'publication'
   
  [ @subscriber =] '*訂閱者*'  
  這是訂閱者的名稱。 *訂閱者*是**sysname**，預設值是 Null。  
+
+> [!NOTE]
+> 伺服器名稱可指定為 `<Hostname>,<PortNumber>` 。 當您使用自訂埠在 Linux 或 Windows 上部署 SQL Server，且已停用 browser 服務時，您可能需要指定連接的埠號碼。
   
  [ @destination_db =] '*destination_db*'  
  這是放置複寫資料之目的地資料庫的名稱。 *destination_db*是**sysname**，預設值是 Null。 當為 Null 時， *destination_db*設定為發行集資料庫的名稱。 若為 Oracle 發行者，必須指定*destination_db* 。 若為非 SQL Server 的訂閱者，請為*destination_db*指定（預設目的地）值。  
@@ -90,7 +94,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type =] '*sync_type*'  
  這是訂閱同步處理類型。 *sync_type*是**Nvarchar （255）**，它可以是下列其中一個值：  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |無|訂閱者已有發行資料表的結構描述和初始資料。<br /><br /> 注意：此選項已被取代。 請改用 replication support only。|  
 |automatic (預設值)|先將發行資料表的結構描述和初始資料傳送給訂閱者。|  
@@ -104,7 +108,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status =] '*status*'  
  這是訂閱狀態。 *狀態*為**sysname**，預設值為 Null。 如果未明確設定這個參數，複寫會自動將它設定為這些值之一。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |作用中|訂閱已初始化且已做好接受變更的準備。 當*sync_type*的值為 none、initialize with backup 或 replication support only 時，就會設定此選項。|  
 |subscribed|訂閱需要初始化。 當*sync_type*的值為 [自動] 時，就會設定此選項。|  
@@ -118,7 +122,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode =] '*update_mode*'  
  這是更新的類型。*update_mode*是**Nvarchar （30）**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |read only (預設值)|訂閱是唯讀的。 在訂閱者端的變更不會傳給發行者。|  
 |sync tran|啟用立即更新訂閱的支援。 不支援 Oracle 發行者使用這個值。|  
@@ -131,7 +135,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection =] '*loopback_detection*'  
  指定散發代理程式是否會將起源於訂閱者端的交易傳回給訂閱者。 *loopback_detection*是**Nvarchar （5）**，它可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |true|散發代理程式不將起源於訂閱者端的交易傳回給訂閱者。 搭配雙向異動複寫來使用。 如需詳細資訊，請參閱[雙向異動複寫](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
 |false|散發代理程式將起源於訂閱者端的交易傳回給訂閱者。|  
@@ -140,7 +144,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_type =] *frequency_type*  
  這是散發工作的排程頻率。 *frequency_type*是 int，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |1|一次性|  
 |2|隨選|  
@@ -157,7 +161,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval =] *frequency_relative_interval*  
  這是散發代理程式的日期。 當*frequency_type*設定為32（每月相對）時，會使用這個參數。 *frequency_relative_interval*是**int**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |1|First|  
 |2|Second|  
@@ -172,7 +176,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday =] *frequency_subday*  
  這是在定義的期間內，重新排程的頻率 (以分鐘為單位)。 *frequency_subday*是**int**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |1|單次|  
 |2|Second|  
@@ -237,7 +241,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicetype =] '*backupdevicetype*'  
  指定從備份中初始化訂閱者時所用的備份裝置類型。 *backupdevicetype*是**Nvarchar （20）**，它可以是下列其中一個值：  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |logical (預設值)|備份裝置是邏輯裝置。|  
 |disk|備份裝置是硬碟。|  
@@ -275,7 +279,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type =] *subscriber_type*  
  這是訂閱者的類型。 *subscriber_type*是**Tinyint**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |0 (預設值)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預訂|  
 |1|ODBC 資料來源伺服器|  

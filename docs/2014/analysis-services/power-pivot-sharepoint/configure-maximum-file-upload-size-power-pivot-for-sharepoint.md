@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7a43ec4c52de9be2c0345e520743cc2a9fb14a7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071816"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547554"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>設定檔案上傳的大小上限 (PowerPivot for SharePoint)
   PowerPivot 活頁簿經常包含大量的資料，這些資料產生的檔案會超出 SharePoint 上傳所允許的檔案大小上限。 當您嘗試上傳的檔案超出上限時，您將會得到以下 SharePoint 錯誤：  
@@ -44,7 +43,7 @@ ms.locfileid: "66071816"
   
      您可以指定的最大值是 2 GB (或是管理中心內指定的 2047 MB)。  
   
-7.  按一下 [確定]  。  
+7.  按一下 [確定]。  
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>設定 SharePoint Web 應用程式的檔案大小上限  
   
@@ -63,6 +62,6 @@ ms.locfileid: "66071816"
   
 6.  將此屬性設定為與 Excel Services 中 [最大活頁簿大小] 相同或更大的數字。  
   
-7.  按一下 [確定]  。  
+7.  按一下 [確定]。  
   
   

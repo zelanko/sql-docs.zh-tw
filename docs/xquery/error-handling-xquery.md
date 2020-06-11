@@ -1,5 +1,6 @@
 ---
 title: 錯誤處理（XQuery） |Microsoft Docs
+description: 瞭解 XQuery 中的錯誤處理，並查看處理動態錯誤的範例。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b80fda53a6ce0acfd326f6f897cb6cde1bf0e610
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038960"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305885"
 ---
 # <a name="error-handling-xquery"></a>錯誤處理 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68038960"
  因為 () 是對應到 False，所以在動態錯誤在述詞內發生的情況下，經常不會引發錯誤而未改變語意。 但是，在某些情況下，傳回 () 而非動態錯誤，可能會導致非預期的結果。 以下是說明此點的範例。  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>範例：搭配字串使用 avg() 函數  
- 在下列範例中，會呼叫[avg 函數](../xquery/aggregate-functions-avg.md)來計算三個值的平均值。 其中一個值是一個字串。 因為此例中的 XML 執行個體不具類型，所以其內含的所有資料都屬於不具類型的不可部份完成類型。 **Avg （）** 函數會先將這些值轉換為**xs： double** ，再計算平均值。 不過，值`"Hello"`無法轉換為**xs： double** ，而且會建立動態錯誤。 在此情況下，將轉換`"Hello"`成**xs： double** ，而不是傳回動態錯誤，會造成空的序列。 **Avg （）** 函數會忽略這個值、計算其他兩個值的平均值，然後傳回150。  
+ 在下列範例中，會呼叫[avg 函數](../xquery/aggregate-functions-avg.md)來計算三個值的平均值。 其中一個值是一個字串。 因為此例中的 XML 執行個體不具類型，所以其內含的所有資料都屬於不具類型的不可部份完成類型。 **Avg （）** 函數會先將這些值轉換為**xs： double** ，再計算平均值。 不過，值 `"Hello"` 無法轉換為**xs： double** ，而且會建立動態錯誤。 在此情況下，將轉換 `"Hello"` 成**xs： double** ，而不是傳回動態錯誤，會造成空的序列。 **Avg （）** 函數會忽略這個值、計算其他兩個值的平均值，然後傳回150。  
   
 ```  
 DECLARE @x xml  
@@ -58,7 +59,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>範例：使用 not 函數  
- 當您在述詞中使用[not 函數](../xquery/functions-on-boolean-values-not-function.md)時（例如， `/SomeNode[not(Expression)]`），而運算式會造成動態錯誤，則會傳回空的序列，而不是錯誤。 將**not （）** 套用至空的序列會傳回 True，而不是錯誤。  
+ 當您在述詞中使用[not 函數](../xquery/functions-on-boolean-values-not-function.md)時（例如， `/SomeNode[not(Expression)]` ），而運算式會造成動態錯誤，則會傳回空的序列，而不是錯誤。 將**not （）** 套用至空的序列會傳回 True，而不是錯誤。  
   
 ### <a name="example-casting-a-string"></a>範例：轉換字串  
  在以下範例中，會將常值字串 "NaN" 轉換成 xs:string，然後再轉換成 xs:double。 結果會是一個空白資料列集。 雖然無法順利將字串 "NaN" 轉換成 xs:double，但是因為此字串會先轉換成 xs:string，所以此點要到執行階段才會確定。  

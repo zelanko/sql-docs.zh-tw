@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938063"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669996"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>DMX 預測查詢的結構和使用方式
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中，您可以使用資料採礦延伸模組（DMX）中的預測查詢，根據採礦模型的結果，預測新資料集內的未知資料行值。  
+  在中 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您可以使用資料採礦延伸模組（DMX）中的預測查詢，根據採礦模型的結果，預測新資料集內的未知資料行值。  
   
  您使用的查詢類型依您想要從模型取得的資訊內容而定。 如果您想要即時建立簡單預測，例如知道網站上的潛在客戶是否符合自行車買家的角色，則使用單一查詢。 如果您想要從資料來源中包含的一組案例建立一批預測，則使用一般預測查詢。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "67938063"
   
 -   **選取 [簡維]**  
   
--   **頂端**  
+-   **返回頁首**  
   
--   **FROM***從\<模型>***預測聯結**      
+-   **從*** \< 模型>***預測聯結**      
   
--   **開啟**  
+-   **ON**  
   
 -   **希望**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67938063"
   
 -   傳回資料行的函數。  
   
- **FROM** *FROM \<model>* **預測聯結**元素會定義要用來建立預測的來源資料。 若是單一查詢，這是指派至資料行的一連串值。 若是空白預測聯結，這會保持空白。  
+ **FROM** * \< model>* **預測聯結**元素會定義要用來建立預測的來源資料。 若是單一查詢，這是指派至資料行的一連串值。 若是空白預測聯結，這會保持空白。  
   
  **ON**元素會將在採礦模型中定義的資料行對應至外部資料集內的資料行。 如果是建立空白預測聯結查詢或自然預測聯結，不必包含這個元素。  
   

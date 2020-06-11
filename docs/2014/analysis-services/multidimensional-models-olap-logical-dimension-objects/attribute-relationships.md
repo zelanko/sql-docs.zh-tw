@@ -23,16 +23,15 @@ helpviewer_keywords:
 ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 122638a2728a8a85ee58661196797383da20eef8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62728514"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545200"
 ---
 # <a name="attribute-relationships"></a>屬性關聯性
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，維度內的屬性永遠都是直接或間接與索引鍵屬性相關。 當您根據所有維度屬性都是衍生自相同關聯式資料表的星狀結構描述來定義維度時，便會在索引鍵屬性和維度的每個非索引鍵屬性之間，自動定義屬性關聯性。 而根據維度屬性是衍生自多個相關資料表的雪花式結構描述來定義維度時，便會自動定義下列的屬性關聯性：  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，維度內的屬性永遠都是直接或間接與索引鍵屬性相關。 當您根據所有維度屬性都是衍生自相同關聯式資料表的星狀結構描述來定義維度時，便會在索引鍵屬性和維度的每個非索引鍵屬性之間，自動定義屬性關聯性。 而根據維度屬性是衍生自多個相關資料表的雪花式結構描述來定義維度時，便會自動定義下列的屬性關聯性：  
   
 -   索引鍵屬性和繫結到主維度資料表之資料行的每個非索引鍵屬性之間。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62728514"
   
 -   City  
   
--   Country  
+-   國家/地區  
   
 -   區域  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62728514"
   
  層級的 `SourceAttribute` 屬性 (Property) 會決定該使用哪個屬性 (Attribute) 來描述層級。 屬性 (Attribute) 上的 `KeyColumns` 屬性 (Property) 會指定資料來源檢視中，提供成員的資料行。 屬性 (Attribute) 上的 `NameColumn` 屬性 (Property) 可為成員指定不同的名稱資料行。  
   
- 若要使用[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]定義使用者自訂階層中的層級，**維度設計師**可讓您選取維度屬性、維度資料表中的資料行，或從 cube 的資料來源視圖中所包含的相關資料表中選取資料行。 如需建立使用者定義階層的詳細資訊，請參閱[建立使用者定義](../multidimensional-models/user-defined-hierarchies-create.md)階層。  
+ 若要使用定義使用者自訂階層中的層級 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，**維度設計師**可讓您選取維度屬性、維度資料表中的資料行，或從 cube 的資料來源視圖中所包含的相關資料表中選取資料行。 如需建立使用者定義階層的詳細資訊，請參閱[建立使用者定義](../multidimensional-models/user-defined-hierarchies-create.md)階層。  
   
  在 Analysis Services 中，通常會對成員的內容進行假設。 分葉成員並沒有下階，且包含衍生自基礎資料來源的資料。 非分葉成員具有下階，且包含衍生自在子成員上執行之彙總的資料。 在彙總層級中，成員是以從屬層級的彙總為基礎。 因此，若在層級的來源屬性 (Attribute) 上，將 `IsAggregatable` 屬性 (Property) 設定為 `False` 時，就不應加入可彙總的屬性 (Attribute) 作為其上層級。  
   

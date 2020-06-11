@@ -4,23 +4,23 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c928d4c96917479f8c37415d5ebe2db9b7f9eb98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c16a1b25542e38bfc434fbe994ad6bb462069796
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938110"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670007"
 ---
-# <a name="ltsource-data-querygt---shape"></a>&lt;來源資料查詢&gt; -圖形
+# <a name="ltsource-data-querygt---shape"></a>&lt;來源資料查詢 &gt; -圖形
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   將多個資料來源的查詢結合到單一階層式資料表 (亦即，有巢狀資料表的資料表)，這個資料表會成為採礦模型的案例資料表。  
   
- **圖形**命令的完整語法記載于[!INCLUDE[msCoName](../includes/msconame-md.md)]資料存取元件（MDAC）軟體發展工具組（SDK）中。  
+ **圖形**命令的完整語法記載于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 資料存取元件（MDAC）軟體發展工具組（SDK）中。  
   
 ## <a name="syntax"></a>語法  
   

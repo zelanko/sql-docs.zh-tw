@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ed6668b4e9b35cb6c311fbbbbc7b17be88d6296
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071813"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547552"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>設定磁碟空間使用量 (PowerPivot for SharePoint)
   PowerPivot for SharePoint 部署會使用主機電腦的磁碟空間來快取 PowerPivot 資料庫，讓重新載入更快速。 在記憶體中載入的每個 PowerPivot 資料庫都會先快取至磁碟中，因此稍後可以快速重新載入該資料庫來服務新的要求。 根據預設，PowerPivot for SharePoint 會使用所有可用磁碟空間來快取其資料庫，但是您可以藉由設定限制磁碟空間使用量的屬性來修改這個行為。  
@@ -42,7 +41,7 @@ ms.locfileid: "66071813"
   
  Backup 資料夾會針對載入本機電腦上之記憶體中的任何 PowerPivot 資料庫提供一般快取儲存。 如果您在伺服器陣列中定義多個 PowerPivot 服務應用程式，任何一個都可以使用本機伺服器來載入 PowerPivot 資料，並於隨後快取 PowerPivot 資料。 資料載入和快取都是 Analysis Services 伺服器作業。 因此，總磁碟空間使用量會在 Analysis Services 執行個體層級的 Backup 資料夾上進行管理。 因此，限制磁碟空間使用量的組態設定會在 SharePoint 應用程式伺服器上執行的單一 SQL Server Analysis Services 執行個體上設定。  
   
- 快取只包含 PowerPivot 資料庫。 PowerPivot 資料庫存放在單一父資料夾 (Backup 資料夾) 下的多個檔案中。 由於 PowerPivot 資料庫打算當做 Excel 活頁簿的內部資料使用，因此，資料庫名稱是以 GUID 為基礎，而非描述性的。 ** \<ServiceApplicationName>** 下的 GUID 資料夾是 PowerPivot 資料庫的父資料夾。 當 PowerPivot 資料庫在伺服器上載入時，系統會針對每個資料庫建立其他資料夾。  
+ 快取只包含 PowerPivot 資料庫。 PowerPivot 資料庫存放在單一父資料夾 (Backup 資料夾) 下的多個檔案中。 由於 PowerPivot 資料庫打算當做 Excel 活頁簿的內部資料使用，因此，資料庫名稱是以 GUID 為基礎，而非描述性的。 下的 GUID 資料夾 **\<serviceApplicationName>** 是 PowerPivot 資料庫的父資料夾。 當 PowerPivot 資料庫在伺服器上載入時，系統會針對每個資料庫建立其他資料夾。  
   
  由於 PowerPivot 資料可能會在伺服器陣列中的任何 Analysis Services 執行個體上載入，因此在伺服器陣列中的多部電腦上也可能會快取相同的資料。 這個作法是效能優先於磁碟空間使用量，但如果磁碟上已經有可用的資料，權衡取捨便是使用者可以更快速地存取資料。  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66071813"
   
  您可以在系統層級建立磁碟空間不足時通知您的電子郵件警示。 Microsoft System Center 包含電子郵件警示功能。 您也可以使用「檔案伺服器資源管理員」、「工作排程器」或 PowerShell 指令檔來設定警示。 下列連結提供實用的資訊來設定有關磁碟空間不足的通知：  
   
--   [檔案伺服器 Resource Manager 的新功能](https://technet.microsoft.com/library/hh831746.aspx)（https://technet.microsoft.com/library/hh831746.aspx)。  
+-   [檔案伺服器 Resource Manager 的新功能](https://technet.microsoft.com/library/hh831746.aspx)（ https://technet.microsoft.com/library/hh831746.aspx) 。  
   
--   [檔案伺服器 Resource Manager Windows Server 2008 R2 的逐步指南](https://go.microsoft.com/fwlink/?LinkID=204875)（https://go.microsoft.com/fwlink/?LinkID=204875)）。  
+-   [檔案伺服器 Resource Manager Windows Server 2008 R2 的逐步指南](https://go.microsoft.com/fwlink/?LinkID=204875)（） https://go.microsoft.com/fwlink/?LinkID=204875) 。  
   
--   https://go.microsoft.com/fwlink/?LinkID=204870)[在 Windows Server 2008 （）上設定磁碟空間不足的警示](https://go.microsoft.com/fwlink/?LinkID=204870)。  
+-   [在 Windows Server 2008 （）上設定磁碟空間不足的警示](https://go.microsoft.com/fwlink/?LinkID=204870) https://go.microsoft.com/fwlink/?LinkID=204870) 。  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>如何限制儲存快取檔案所使用的磁碟空間量  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fe4c204b-1031-4ac4-9916-8052ce2301cc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 51e19ed19c78903be0565461871ccc0b00460002
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be3668378a2711e3da42126f5d0e06ff557bafb1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082203"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528894"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>定義帳戶智慧 (商業智慧精靈)
   使用 **[定義帳戶智慧]** 頁面，即可將 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體上所定義的帳戶類型，對應至資料來源中來源資料表所定義的帳戶類型，該來源資料表會提供帳戶維度的資料。  
@@ -25,7 +24,7 @@ ms.locfileid: "66082203"
 > [!NOTE]  
 >  如果維度屬性在 [設定維度屬性]**** 頁面上，已對應至 [帳戶類型]**** 屬性類型，就會顯示此頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **來源資料表帳戶類型**  
  針對在 [設定維度屬性]**** 頁面上指派給 [帳戶類型]**** 屬性類型的維度屬性，顯示其中所包含的值。  
   

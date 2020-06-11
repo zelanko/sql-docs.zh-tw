@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5675cdbf-bfaa-4b6e-b716-31b8e9da72b4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23845118c4c202db781fe325c4afc2402ceee271
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8905ba7019ba85d8e9e0711b1102bf37e1185d42
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072197"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541050"
 ---
 # <a name="notifications-storage-options-dialog-box-analysis-services---multidimensional-data"></a>通知 (儲存選項對話方塊) (Analysis Services - 多維度資料)
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [儲存選項]**** 對話方塊中，使用 [通知]**** 索引標籤，即可設定通知方法以及維度、Cube、量值群組或資料分割的相關設定。  
@@ -25,13 +24,13 @@ ms.locfileid: "66072197"
 > [!NOTE]  
 >  在您修改這些設定之前，必須先熟悉儲存模式與主動式快取功能。 如需詳細資訊，請參閱[主動式快取 &#40;資料分割&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  
 |**儲存模式**|選取用於物件的儲存模式。<br /><br /> **MOLAP**<br /> 物件使用多維度 OLAP (MOLAP) 儲存。<br /><br /> **HOLAP**<br /> 物件使用混合式 OLAP (HOLAP) 儲存。<br /><br /> **ROLAP**<br /> 物件使用關聯式 OLAP (ROLAP) 儲存。|  
 |**啟用主動式快取**|啟用主動式快取。<br /><br /> 注意：如果未選取此選項，則除了 [儲存模式]**** 之外，所有選項都會停用。|  
-|**SQL Server**|會在上[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用特殊的追蹤機制，來識別物件之基礎資料表的變更。|  
+|**SQL Server**|會在上使用特殊的追蹤機制 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，來識別物件之基礎資料表的變更。|  
 |**指定追蹤資料表**|指定要為物件追蹤的基礎資料表，然後鍵入以分號 (;) 字元分隔的資料表清單，或按一下省略符號按鈕 (**...**) 即可開啟 [關聯式物件]**** 對話方塊，然後選擇要追蹤的資料表。 如需詳細資訊，請參閱[關聯式物件對話方塊 &#40;Analysis Services - 多維度資料&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md)。<br /><br /> 如果未選取此選項，則只要符合特定需求， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 就會嘗試決定要為物件追蹤的基礎資料表清單。 如需這些需求的詳細資訊，請參閱[主動式快取 &#40;資料分割&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。|  
 |**由用戶端起始**|選取即可使用 XML for Analysis (XMLA) 命令 `NotifyTableChange`，來識別物件之基礎資料表的變更。 如果您計畫使用以用戶端為基礎的通知處理，一般會選取此選項。|  
 |**指定追蹤資料表**|選取即可指定要為物件追蹤的基礎資料表，然後鍵入以分號 (;) 字元分隔的資料表清單，或按一下省略符號按鈕 (**...**) 即可開啟 [關聯式物件]**** 對話方塊，然後選擇要追蹤的資料表。 如需詳細資訊，請參閱[關聯式物件對話方塊 &#40;Analysis Services - 多維度資料&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md)。<br /><br /> 如果未選取此選項，則只要符合特定需求， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 就會嘗試決定要為物件追蹤的基礎資料表清單。 如需這些需求的詳細資訊，請參閱[主動式快取 &#40;資料分割&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。|  

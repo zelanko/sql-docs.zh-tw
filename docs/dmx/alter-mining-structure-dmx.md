@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889868"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669870"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ USING <algorithm> [(<parameter list>)]
  *structure*  
  要對其加入採礦模型之採礦結構的名稱。  
   
- *模型*  
+ *model*  
  採礦模型的唯一名稱。  
   
  *資料行定義清單*  
@@ -55,7 +55,7 @@ USING <algorithm> [(<parameter list>)]
  提供者所定義的資料採礦演算法名稱。  
   
 > [!NOTE]  
->  您可以使用 DMSCHEMA_MINING_SERVICES 資料列[集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)來抓取目前提供者所支援的演算法清單。 若要查看目前實例中支援的演算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，請參閱[資料採礦屬性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
+>  您可以使用 DMSCHEMA_MINING_SERVICES 資料列[集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)來抓取目前提供者所支援的演算法清單。 若要查看目前實例中支援的演算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱[資料採礦屬性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
   
  *參數清單*  
  選擇性。 提供者自訂之演算法參數的逗號分隔清單。  
@@ -161,7 +161,7 @@ USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)
 ```  
   
 ## <a name="example-2-add-a-filtered-model-to-a-structure"></a>範例 2：將篩選模型加入至結構  
- 下列範例會將「採礦模型`Naive Bayes Women`」新增至新的「**郵件**」採礦結構。 新模型的基本結構與在範例 1 中加入的採礦模型相同；不過這個模型將取自採礦結構的案例限制為年過 50 的女性客戶。  
+ 下列範例會將「採礦模型」 `Naive Bayes Women` **新增至新**的「郵件」採礦結構。 新模型的基本結構與在範例 1 中加入的採礦模型相同；不過這個模型將取自採礦結構的案例限制為年過 50 的女性客戶。  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  

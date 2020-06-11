@@ -1,24 +1,24 @@
 ---
-title: '&lt;來源資料查詢&gt; |Microsoft Docs'
+title: '&lt;來源資料查詢 &gt; |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e523d33da502a971b950e33ec0bd935149ed26f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892347"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670012"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;來源資料查詢&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  若要將資料採礦模型定型並從「採礦模型」建立預測，您必須存取資料庫外部的[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料。 您可以使用\<資料採礦延伸模組（DMX）中的來源資料查詢> 子句來定義此外部資料。 [插入 &#40;dmx&#41;](../dmx/insert-into-dmx.md)、[從 &#60;模型中選取&#62; 預測聯結 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)，然後[從自然預測聯結](../dmx/select-from-model-prediction-join-dmx.md)語句中選取 [全部使用** \<來源資料查詢>**]。  
+  若要將資料採礦模型定型並從「採礦模型」建立預測，您必須存取資料庫外部的資料 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 您可以使用 \< 資料採礦延伸模組（DMX）中的來源資料查詢> 子句來定義此外部資料。 [插入 &#40;dmx&#41;](../dmx/insert-into-dmx.md)、[從 &#60;模型中選取&#62; 預測聯結 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)，然後[從自然預測聯結](../dmx/select-from-model-prediction-join-dmx.md)語句中選取 [全部使用** \< 來源資料查詢>**]。  
   
 ## <a name="query-types"></a>查詢類型  
  指定來源資料的三種最常見的方式為：  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 413272be4ac4ce913704494a26e9642666deeb92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4f40703f0e86874e8eef75a28696c63c4104526
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727313"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545050"
 ---
 # <a name="user-hierarchy-properties"></a>使用者階層屬性
   下表描述使用者自訂階層的屬性。  
@@ -28,11 +27,11 @@ ms.locfileid: "62727313"
 |--------------|-----------------|  
 |AllMemberName|階層的全部成員包含預設語言的標題。|  
 |AllowDuplicateNames|決定階層中是否容許重複名稱。 值為 True 與 False。 預設值是 True。|  
-|描述|包含階層的描述。|  
+|Description|包含階層的描述。|  
 |DisplayFolder|指定列出使用者階層的資料夾。|  
-|識別碼|包含階層的唯一識別碼 (ID)。|  
+|ID|包含階層的唯一識別碼 (ID)。|  
 |MemberNamesUnique|決定階層中的成員名稱是否必須為唯一的。 值為 True 與 False。 預設值為 False。|  
-|名稱|包含階層的名稱。|  
+|Name|包含階層的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  
  [使用者階層](user-hierarchies.md)   

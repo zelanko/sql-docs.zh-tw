@@ -1,7 +1,7 @@
 ---
 title: sp_adddistpublisher （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f341a881ca33c66121d6b87ee30d437c621f973
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771393"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627150"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,10 +48,13 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>引數  
 `[ @publisher = ] 'publisher'`這是發行者名稱。 *publisher*是**sysname**，沒有預設值。  
+
+> [!NOTE]
+> 伺服器名稱可指定為 `<Hostname>,<PortNumber>` 。 當您使用自訂埠在 Linux 或 Windows 上部署 SQL Server，且已停用 browser 服務時，您可能需要指定連接的埠號碼。
   
 `[ @distribution_db = ] 'distribution_db'`這是散發資料庫的名稱。 *distributor_db*是**sysname**，沒有預設值。 複寫代理程式利用這個參數來連接發行者。  
   
-`[ @security_mode = ] security_mode`是實作為安全性模式。 此參數只供複寫代理程式用來連接佇列更新訂閱的發行者，或使用非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *security_mode*是**int**，而且可以是下列其中一個值。  
+`[ @security_mode = ] security_mode`是實作為安全性模式。 此參數只供複寫代理程式用來連接佇列更新訂閱的發行者，或使用非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *security_mode*是**int**，而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -65,9 +68,9 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。  
   
-`[ @working_directory = ] 'working_directory'`這是用來儲存發行集資料和架構檔案的工作目錄名稱。 *working_directory*是**Nvarchar （255）**，預設為這個實例的 ReplData 資料夾[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如。 `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` 這個名稱應該用 UNC 格式來指定。  
+`[ @working_directory = ] 'working_directory'`這是用來儲存發行集資料和架構檔案的工作目錄名稱。 *working_directory*是**Nvarchar （255）**，預設為這個實例的 ReplData 資料夾 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，例如 `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` 。 這個名稱應該用 UNC 格式來指定。  
 
- 針對 Azure SQL Database，請`\\<storage_account>.file.core.windows.net\<share>`使用。
+ 針對 Azure SQL Database，請使用 `\\<storage_account>.file.core.windows.net\<share>` 。
 
 `[ @storage_connection_string = ] 'storage_connection_string'`SQL Database 需要。 使用 Azure 入口網站的 [儲存體] > [設定] 底下的 [存取金鑰]。
 
@@ -77,14 +80,14 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @encrypted_password = ] encrypted_password`已不再支援設定*encrypted_password* 。 嘗試將此**位**參數設定為**1**將會導致錯誤。  
   
-`[ @thirdparty_flag = ] thirdparty_flag`當發行者為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時。 *thirdparty_flag*是**位**，而且可以是下列其中一個值。  
+`[ @thirdparty_flag = ] thirdparty_flag`當發行者為時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *thirdparty_flag*是**位**，而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**0** (預設)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
 |**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的資料庫。|  
   
-`[ @publisher_type = ] 'publisher_type'`指定發行者不[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是時的發行者類型。 *publisher_type*是 sysname，而且可以是下列其中一個值。  
+`[ @publisher_type = ] 'publisher_type'`指定發行者不是時的發行者類型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *publisher_type*是 sysname，而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  

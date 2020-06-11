@@ -6,17 +6,17 @@ ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a4df60a40ff57ee7d51b7a34a2452815239ab491
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 84da8c7a87901ddcb964773bea2f330ea86a742e
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606650"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731682"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>建立主資料管理員 web 應用程式（Master Data Services）
 
@@ -56,7 +56,7 @@ ms.locfileid: "83606650"
   
 4.  在 **[建立網站]** 對話方塊中，指定新網站的資訊。 如需此對話方塊之使用者介面 (UI) 選項的詳細資訊，請參閱[建立網站對話方塊 &#40;Master Data Services 組態管理員&#41;](../../master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md)。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
   
 ## <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>在現有網站上建立主資料管理員 Web 應用程式  
  當您在現有網站上建立 Web 應用程式時，可以選擇 Web 應用程式的虛擬路徑及別名。 此 Web 應用程式會加入至新的應用程式集區。  
@@ -73,7 +73,7 @@ ms.locfileid: "83606650"
   
 5.  在 **[建立 Web 應用程式]** 對話方塊中，指定新 Web 應用程式的資訊。 如需此對話方塊之使用者介面 (UI) 選項的詳細資訊，請參閱[建立 Web 應用程式對話方塊 &#40;Master Data Services 組態管理員&#41;](../../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 ## <a name="next-steps"></a>後續步驟  
   

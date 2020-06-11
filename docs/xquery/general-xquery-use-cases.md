@@ -1,5 +1,6 @@
 ---
 title: 一般 XQuery 使用案例 |Microsoft Docs
+description: 查看一些一般 XQuery 使用範例，包括搜尋、抓取和列出產品目錄中的特定資料。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e844425f0c512cfe7c15354bf1aeb100d6104e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ef05644d0d36f8cc784afbf7e4face426817a30
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004520"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524404"
 ---
 # <a name="general-xquery-use-cases"></a>一般 XQuery 使用案例
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ WHERE CatalogDescription is not null
   
 -   此查詢主體建構所需的 XML。  
   
--   在 WHERE 子句中，**存在（）** 方法只會用來尋找包含產品目錄描述的資料列。 也就是包含 <`ProductDescription`> 元素的 XML。  
+-   在 WHERE 子句中，**存在（）** 方法只會用來尋找包含產品目錄描述的資料列。 也就是包含 <> 元素的 XML `ProductDescription` 。  
   
  以下是結果：  
   
@@ -71,7 +72,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- 下列查詢會抓取相同的資訊，但僅適用于其目錄描述包含權數的產品型號、<`Weight`> 元素（在規格中為 <`Specifications`> 專案）。 此範例使用 WITH XMLNAMESPACES 來宣告 pd 前置詞及其命名空間繫結。 如此一來，在**query （）** 方法和**存在（）** 方法中都不會描述系結。  
+ 下列查詢會抓取相同的資訊，但僅適用于其目錄描述包含權數的產品型號、<`Weight`> 元素（在規格中為 <> 專案） `Specifications` 。 此範例使用 WITH XMLNAMESPACES 來宣告 pd 前置詞及其命名空間繫結。 如此一來，在**query （）** 方法和**存在（）** 方法中都不會描述系結。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -86,7 +87,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight ') = 1  
 ```  
   
- 在上一個查詢中，WHERE 子句中**xml**資料類型的**存在（）** 方法會進行檢查，查看 <`Specifications`> 專案中是否`Weight`有 <的> 元素。  
+ 在上一個查詢中，WHERE 子句中**xml**資料類型的**存在（）** 方法會進行檢查，查看 <> 專案中是否有 <的 `Weight`> 元素 `Specifications` 。  
   
 ### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. 尋找其目錄描述中含有正面角度和小圖片之產品型號的產品型號識別碼  
  XML 產品目錄描述包含產品圖片、<`Picture`> 元素。 每一張圖片有數個屬性。 其中包括圖片角度、<`Angle`> 元素，以及大小 <`Size`> 元素。  
@@ -117,7 +118,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
  請注意下列項目是從上一個查詢而來：  
   
--   在 WHERE 子句中，**存在（）** 方法只會用來抓取具有 <`Picture`> 元素之產品目錄描述的資料列。  
+-   在 WHERE 子句中，**存在（）** 方法只會用來抓取具有 <> 元素之產品目錄描述的資料列 `Picture` 。  
   
 -   WHERE 子句會使用**value （）** 方法兩次來比較 <`Size`> 和 <`Angle`> 元素的值。  
   
@@ -135,7 +136,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ...  
 ```  
   
-### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. 建立產品型號名稱和功能配對的一般清單，其中每一組都包含在\<Features> 元素中  
+### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. 建立產品型號名稱和功能配對的一般清單，並將每個配對包含在 \<Features> 元素中  
  在產品型號目錄描述中，XML 包含數個產品功能。 所有這些功能都包含在 <`Features`> 元素中。 查詢會使用[Xml 結構（XQuery）](../xquery/xml-construction-xquery.md)來建立所需的 xml。 大括號內的運算式由結果取代。  
   
 ```  
@@ -155,7 +156,7 @@ WHERE ProductModelID=19
   
  請注意下列項目是從上一個查詢而來：  
   
--   $pd/p1： Features/* 只會傳回 <`Features`> 的元素節點子系，但 $pd/P1： features/node （）會傳回所有節點。 這包括元素節點、文字節點、處理指示和註解。  
+-   $pd/p1： Features/* 只會傳回 <> 的元素節點子系 `Features` ，但 $pd/p1： features/node （）會傳回所有節點。 這包括元素節點、文字節點、處理指示和註解。  
   
 -   兩個 FOR 迴圈產生一個 Cartesian 產品，並從中傳回產品名稱和個別功能。  
   
@@ -186,8 +187,8 @@ WHERE ProductModelID=19
 ...      
 ```  
   
-### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. 從產品型號的目錄描述中，列出產品模型名稱、模型識別碼和在\<產品內分組的功能> 元素  
- 下列查詢會使用產品型號的目錄描述中所儲存的資訊，列出產品> 元素中\<分組的產品型號名稱、模型識別碼和功能。  
+### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. 從產品型號的目錄描述中，列出產品型號名稱、模型識別碼，以及群組在元素內的功能 \<Product>  
+ 下列查詢會使用產品型號的目錄描述中所儲存的資訊，來列出專案內分組的產品型號名稱、模型識別碼和功能 \<Product> 。  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -223,7 +224,7 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="e-retrieve-product-model-feature-descriptions"></a>E. 擷取產品型號功能描述  
- 下列查詢會建立 XML，其中包含具有`Product` **ProducModelID**、 **ProductModelName**屬性和前兩個產品功能的 <> 元素。 具體而言，前兩個產品功能是 <`Features`> 元素的前兩個子項目。 如果有更多的功能，它會傳回空`There-is-more/`的 <> 元素。  
+ 下列查詢會建立 XML，其中包含 `Product` 具有**ProducModelID**、 **ProductModelName**屬性和前兩個產品功能的 <> 元素。 具體而言，前兩個產品功能是 <> 元素的前兩個子項目 `Features` 。 如果有更多的功能，它會傳回空的 <`There-is-more/`> 元素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -299,7 +300,7 @@ WHERE CatalogDescription.value('
   
  請注意下列項目是從上一個查詢而來：  
   
--   WHERE 子句是用來只抓取目錄描述在 <`Summary`> 專案中包含 "aerodynamic 一字" 一字的資料列。  
+-   WHERE 子句是用來只抓取目錄描述在 <> 專案中包含 "Aerodynamic 一字" 一字的資料列 `Summary` 。  
   
 -   **Contains （）** 函式可用來查看文字中是否包含單字。  
   
@@ -321,7 +322,7 @@ ProductModelID Result
 ```  
   
 ### <a name="h-find-product-models-whose-catalog-descriptions-do-not-include-product-model-pictures"></a>H. 尋找其目錄描述不包含產品型號圖片的產品型號  
- 下列查詢會針對其目錄描述不包含 <`Picture`> 元素的產品型號，抓取 ProductModelIDs。  
+ 下列查詢會針對其目錄描述不包含 <> 元素的產品型號，抓取 ProductModelIDs `Picture` 。  
   
 ```  
 SELECT  ProductModelID  

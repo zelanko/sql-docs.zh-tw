@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19754c99e87c50121fc79b80649d7555b79ca59e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077498"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544872"
 ---
 # <a name="actions-in-multidimensional-models"></a>多維度模型中的動作
   動作是使用者在所選取的 Cube 或部分 Cube 上所起始的作業。 這個作業可以使用所選取項目做為參數來啟動應用程式，或擷取關於所選取項目的資訊。 如需動作的詳細資訊，請參閱[動作 &#40;Analysis Services - 多維度資料&#41;](actions-analysis-services-multidimensional-data.md)。  
@@ -57,7 +56,7 @@ ms.locfileid: "66077498"
  **動作內容**  
  選取動作的類型。 下表摘要可以使用的類型。  
   
-|類型|描述|  
+|類型|Description|  
 |----------|-----------------|  
 |資料集|擷取資料集。|  
 |專屬|使用不同於此資料表列出的介面來執行作業。|  
@@ -72,10 +71,10 @@ ms.locfileid: "66077498"
   
 |屬性|描述|  
 |--------------|-----------------|  
-|**引動過程**|指定動作如何執行。 預設為互動式，會指定使用者存取物件時執行的動作。 可能的設定有：<br /><br /> Batch<br /><br /> Interactive (互動式)<br /><br /> 開啟時|  
+|**引動過程**|指定動作如何執行。 預設為互動式，會指定使用者存取物件時執行的動作。 可能的設定有：<br /><br /> Batch<br /><br /> 互動式<br /><br /> 開啟時|  
 |**應用程式**|描述動作的應用程式。|  
 |**描述**|描述動作。|  
-|**字幕**|提供為動作顯示的標題。 如果標題是 MDX，請針對`True` [**標題是 mdx**] 指定。|  
+|**字幕**|提供為動作顯示的標題。 如果標題是 MDX，請 `True` 針對 [**標題是 mdx**] 指定。|  
 |**標題是 MDX**|如果標題是 MDX，請指定 `True`；如果不是 MDX，則指定 `False`。|  
   
 > [!NOTE]  

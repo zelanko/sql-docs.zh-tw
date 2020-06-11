@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 26a529d6eb15997ccb48ad25d8d4fcb11cd2ddfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 834e31fcc9d8e0887929dae356c7b2068aeeff2d
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68071047"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669347"
 ---
 # <a name="comments-dmx"></a>註解 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  資料採礦延伸模組（DMX）中的批註是程式碼中不[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]會執行的文字字串。 註解也稱為備註。 您可以使用註解提供程式碼說明，或者在診斷程式碼時，暫時停用部份 DMX 陳述式或指令碼。  
+  資料採礦延伸模組（DMX）中的批註是程式碼中不 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會執行的文字字串。 註解也稱為備註。 您可以使用註解提供程式碼說明，或者在診斷程式碼時，暫時停用部份 DMX 陳述式或指令碼。  
   
  使用註解提供程式碼說明，未來維護程式碼會比較容易。 您可以使用註解記錄詳細資料，例如程式的名稱、撰寫程式碼的開發人員名稱，以及主要程式碼變更的日期。 您也可以使用註解描述複雜的計算或設計方法的程式。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68071047"
   
 -   **--（雙連字號）。** 使用這些註解字元在要執行之程式碼的同一行撰寫註解，或者在單獨一行撰寫註解。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將雙連字號開始到該行結束的所有內容評估為註解的一部分。 若要建立多行註解，請在註解的每一行開頭使用雙連字號。 如需有關此批註字元的詳細資訊，請參閱[&#40;批註&#41; &#40;DMX&#41; 摘要](../dmx/comment-dmx-summary.md)。  
   
--   **/\*...\*/（斜線-星號字元配對）。** 使用這些註解字元在要執行之程式碼的同一行撰寫註解，或者單獨一行撰寫註解，甚至在可執行程式碼中撰寫註解。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]會將開啟的批註配對（/*）中的所有內容評估為批註\*中的關閉批註配對（/）。 若要建立多行批註，請使用開啟的批註字元配對（/\*）啟動批註，並以關閉批註字元配對（\*/）結束批註。 任一行註解中不應包含其他任何註解字元。 如需此批註字元的詳細資訊，請參閱[&#40;批註&#41; &#40;DMX&#41;的斜線](../dmx/slash-star-comment-dmx.md)。  
+-   **/\*... \*/（斜線-星號字元配對）。** 使用這些註解字元在要執行之程式碼的同一行撰寫註解，或者單獨一行撰寫註解，甚至在可執行程式碼中撰寫註解。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]會將開啟的批註配對（/*）中的所有內容評估為批註中的關閉批註配對（ \* /）。 若要建立多行批註，請使用開啟的批註字元配對（/）啟動批註 \* ，並以關閉批註字元配對（ \* /）結束批註。 任一行註解中不應包含其他任何註解字元。 如需此批註字元的詳細資訊，請參閱[&#40;批註&#41; &#40;DMX&#41;的斜線](../dmx/slash-star-comment-dmx.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 參考](../dmx/data-mining-extensions-dmx-reference.md)   

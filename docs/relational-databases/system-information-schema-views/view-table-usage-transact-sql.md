@@ -19,12 +19,12 @@ ms.assetid: 0aeefb3f-02ef-457e-8c42-84ddb26f1c88
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e691a52cebf3ca9de0454ca2ccd60b3f8daa43f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7f3952dec669d5c85b9e8c8c5e5f8743264cff9
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078367"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670309"
 ---
 # <a name="view_table_usage-transact-sql"></a>VIEW_TABLE_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "68078367"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**VIEW_CATALOG**|**Nvarchar （** 128 **）**|檢視限定詞。|  
-|**VIEW_SCHEMA**|**Nvarchar （** 128 **）**|包含檢視的結構描述名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**VIEW_SCHEMA**|**Nvarchar （** 128 **）**|包含檢視的結構描述名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 只有可靠的方法可以尋找物件的架構，就是查詢 sys.databases 目錄檢視。|  
 |**VIEW_NAME**|**sysname**|檢視名稱。|  
 |**TABLE_CATALOG**|**Nvarchar （** 128 **）**|資料表限定詞。|  
-|**TABLE_SCHEMA**|**Nvarchar （** 128 **）**|包含基底資料表之結構描述的名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**TABLE_SCHEMA**|**Nvarchar （** 128 **）**|包含基底資料表之結構描述的名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 只有可靠的方法可以尋找物件的架構，就是查詢 sys.databases 目錄檢視。|  
 |**TABLE_NAME**|**sysname**|作為檢視基礎的基底資料表。|  
   
 ## <a name="see-also"></a>另請參閱  

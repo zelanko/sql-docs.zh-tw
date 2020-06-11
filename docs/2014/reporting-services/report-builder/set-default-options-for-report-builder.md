@@ -12,17 +12,17 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e119a0f4423b07a4c97339d843fbc60181886eb3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66107620"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858590"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>報表產生器選項對話方塊、設定 (報表產生器)
   按一下 [**報表產生器**] 按鈕，然後按一下 [**選項**]，設定顯示最近使用的檔案和連線的選項。 您也可以變更預設報表伺服器，或加入報表伺服器 (如果沒有預設值的話)。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **預設使用此報表伺服器或 SharePoint 網站**  
  您的管理員可能已經設定這個選項。 此值可以是以 http:// 或 https:// 為開頭的正確格式 URL。 這項設定會決定預設顯示在資料表/矩陣和圖表精靈中的資料來源連接。 此外，您的報表將在這個伺服器上處理，而且您可以參考來自這個伺服器的資源。  
   

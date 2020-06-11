@@ -19,12 +19,12 @@ ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db49815f367c9fe0100189e418db90e0bcddd9ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25706317e628e0f6d5eb864deaac8deb3656e35c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078462"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670325"
 ---
 # <a name="table_privileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68078462"
 |**授權**|**Nvarchar （** 128 **）**|權限同意授權者。|  
 |**者**|**Nvarchar （** 128 **）**|權限被授與者。|  
 |**TABLE_CATALOG**|**Nvarchar （** 128 **）**|資料表限定詞。|  
-|**TABLE_SCHEMA**|**Nvarchar （** 128 **）**|包含資料表的結構描述名稱。<br /><br /> <strong> \* \*重要\*事項</strong>請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**TABLE_SCHEMA**|**Nvarchar （** 128 **）**|包含資料表的結構描述名稱。<br /><br /> 重要的是，只有可靠的方法可以尋找物件的架構，就是查詢 sys.databases 目錄檢視。 <strong> \* \* \* \* </strong>|  
 |**TABLE_NAME**|**sysname**|資料表名稱。|  
 |**PRIVILEGE_TYPE**|**Varchar （** 10 **）**|權限的類型。|  
 |**IS_GRANTABLE**|**Varchar （** 3 **）**|指定被授與者是否可以將權限授與其他人。|  

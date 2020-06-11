@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893854"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666788"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  長條圖產生統計資料行。 傳回之長條圖的資料行結構，取決於搭配**PredictHistogram**函數使用的資料行參考類型。  
   
 ## <a name="scalar-columns"></a>純量資料行  
- \<如需純量資料行參考>， **PredictHistogram**函數傳回的長條圖包含下列資料行：  
+ 如需純量資料 \< 行參考>， **PredictHistogram**函數傳回的長條圖包含下列資料行：  
   
 -   所預測的值。  
   
@@ -55,10 +55,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$AdjustedProbability**  
   
-     [ **$AdjustedProbability** ] 資料行[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]是適用于[!INCLUDE[msCoName](../includes/msconame-md.md)]資料採礦規格之 OLE DB 的延伸模組。  
+     [ **$AdjustedProbability** ] 資料行是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 適用于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 資料採礦規格之 OLE DB 的延伸模組。  
   
 ## <a name="cluster-columns"></a>群集資料行  
- **PredictHistogram**函數針對\<叢集資料行參考所傳回的長條圖> 由下列資料行所組成：  
+ **PredictHistogram**函數針對叢集資料行參考所傳回的長條圖 \<> 由下列資料行所組成：  
   
 -   **$Cluster** （代表叢集名稱）  
   

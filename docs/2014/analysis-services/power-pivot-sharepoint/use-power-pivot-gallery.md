@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8c14a123fcdb23efade07e78dec94d242df7fc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f634f6c0a435c733af7f223de333cb52d95ce897
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175687"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547710"
 ---
 # <a name="use-powerpivot-gallery"></a>使用 PowerPivot 圖庫
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫是一種特殊用途的 SharePoint 文件庫，針對包含 PowerPivot 資料的已發行 Excel 活頁簿和 Reporting Services 報表，提供豐富的預覽與文件管理功能。
@@ -41,9 +40,9 @@ ms.locfileid: "78175687"
 
 -   [已知問題](#bkmk_known_issues)
 
- [必要條件](#prereq)
+ [先決條件](#prereq)
 
-##  <a name="prerequisites"></a><a name="prereq"></a> 必要條件
+##  <a name="prerequisites"></a><a name="prereq"></a> 先決條件
 
 > [!NOTE]
 >  Power Pivot 圖庫需要 Microsoft Silverlight，  但 Microsoft Edge 瀏覽器不支援 Silverlight。 若要在 Microsoft Edge 中查看**文件庫內容**，請按一下 Power Pivot 圖庫中的 [程式庫] 索引標籤，然後將 [文件庫] 視圖變更為 [**所有檔**]。  
@@ -55,7 +54,7 @@ ms.locfileid: "78175687"
 ##  <a name="icons-in-powerpivot-gallery"></a><a name="icons"></a>PowerPivot 圖庫中的圖示
  圖示會提供有關內容可用性和狀態的視覺指標。
 
-|圖示|描述|
+|圖示|Description|
 |----------|-----------------|
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|在文件中產生每一個頁面的縮圖影像時，將會出現沙漏圖示。 重新整理頁面以顯示更新的影像。|
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|當活頁簿或報表的頁面數多於可以顯示在 PowerPivot 圖庫中的頁數時，將會出現頁面圖示。 若要檢視所有頁面，您必須使用用戶端應用程式。|
@@ -146,16 +145,16 @@ ms.locfileid: "78175687"
 
 3.  按一下右邊的向下箭號，然後選取 **[編輯屬性]**。
 
-4.  按一下 [檔案]  。 儲存文件會強制快照服務重新產生預覽影像。
+4.  按一下 [檔案] 。 儲存文件會強制快照服務重新產生預覽影像。
 
-##  <a name="known-issues"></a><a name="bkmk_known_issues"></a>已知問題
+##  <a name="known-issues"></a><a name="bkmk_known_issues"></a> 已知問題
 
 ### <a name="document-type-is-not-supported"></a>不支援的文件類型
  不支援 **[PowerPivot 圖庫文件]** 內容類型。 如果您啟用 **[PowerPivot 圖庫文件]** 內容類型做為文件庫，並嘗試建立該類型的新文件，則會看見類似下列其中一項的錯誤訊息：
 
 -   「新檔」需要與 Microsoft Sharepoint Foundation 相容的應用程式和網頁瀏覽器。 若要將檔加入此文件庫，請按一下 [上傳檔] 按鈕。
 
--   「網際網路位址 ' HTTP：//[伺服器名稱]/testSite/PowerPivot 圖庫/ReportGallery/Forms/Template .xlsx ' 無效。」Microsoft Excel 無法存取檔案 ' HTTP：//[伺服器名稱]/testSite/PowerPivot 圖庫/ReportGallery/Forms/Template .xlsx '。 有幾項可能的原因：
+-   「網際網路位址 ' HTTP：//[伺服器名稱]/testSite/PowerPivot 圖庫/ReportGallery/Forms/Template.xlsx ' 無效。」Microsoft Excel 無法存取檔案 ' HTTP：//[伺服器名稱]/testSite/PowerPivot 圖庫/ReportGallery/Forms/Template.xlsx '。 有幾項可能的原因：
 
  **[PowerPivot 圖庫文件]** 內容類型不會自動加入至文件庫。除非您手動啟用不支援的內容類型，否則不會發生這個問題。
 

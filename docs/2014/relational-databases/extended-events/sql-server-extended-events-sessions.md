@@ -1,7 +1,7 @@
 ---
 title: SQL Server 擴充的事件工作階段 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 05/26/2020
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xevents
@@ -14,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83440163bdb1e03690fe4f5dcf93fdfc6779057f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63a94ef98eeb1b460672e50657b5ece6ef491764
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706611"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868340"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 擴充的事件工作階段
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 擴充的事件工作階段會建立在主控擴充之事件引擎的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序中。 下列是擴充的事件工作階段的各個層面，可讓您了解擴充的事件基礎結構的來龍去脈以及進行的一般處理：  
@@ -30,12 +30,12 @@ ms.locfileid: "82706611"
   
 ## <a name="session-states"></a>工作階段狀態  
  下圖顯示擴充事件工作階段的各個狀態。  
-  
- ![擴充事件工作階段狀態](../../database-engine/media/xesessionstate.gif "擴充事件工作階段狀態")  
-  
+
+![擴充事件工作階段狀態](../../database-engine/media/xesessionstate.png "擴充事件工作階段狀態")
+
  在上圖中，請注意在針對事件工作階段發出不同的 DDL 命令時，該工作階段狀態就會變更。 下表說明這些狀態變更所代表的意義。  
   
-|圖例標籤|DDL 陳述式|描述|  
+|圖例標籤|DDL 陳述式|Description|  
 |------------------------|-------------------|-----------------|  
 |建立|CREATE EVENT SESSION|主機處理序會建立工作階段物件，此物件包含由 CREATE EVENT SESSION 所提供的中繼資料。 主機處理序會驗證工作階段定義、驗證使用者權限等級，並將中繼資料儲存在 master 資料庫內。 此時，工作階段不在使用中。|  
 |變更|ALTER EVENT SESSION, STATE=START|主機處理序會啟動工作階段。 主機處理序會讀取儲存的中繼資料、驗證工作階段定義、驗證使用者權限等級，並建立工作階段。 會載入工作階段物件 (如事件和目標)，且事件處理為使用中。|  

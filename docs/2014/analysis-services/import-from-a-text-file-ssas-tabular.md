@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7c426b04-4ff6-49ab-8bfd-54074d6ae99d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 455d0981a4b81bc81b2dece8cedbd6ea07e66a21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4434818e28cba839b8850f359b52fb6bcd2dfeeb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080540"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544190"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>從文字檔匯入 (SSAS 表格式)
   您可以使用 [資料表匯入精靈]，從 Microsoft Excel 檔案和文字檔匯入資料。  

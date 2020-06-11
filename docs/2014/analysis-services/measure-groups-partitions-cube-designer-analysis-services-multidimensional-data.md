@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 58e44b24-cfcd-4908-b445-d4374b961b98
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 058248b5b2cb66a73124d8632ad6426ee9f3ad59
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077905"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541583"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>量值群組 (資料分割索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   在 Cube 設計師的 [資料分割]**** 索引標籤上，使用 [量值群組]**** 窗格來管理與 Cube 中每個量值群組相關聯的資料分割。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料分割**  
  顯示包含支援選取之量值群組之資料分割清單的窗格。 方格包含下列資料行：  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66077905"
   
  按一下 [...]**** 按鈕即可顯示 [資料分割來源]**** 對話方塊，並為選取的資料分割定義來源。  
   
- **彙總**  
+ **累積**  
  顯示分割區的彙總模式和儲存模式。 先顯示儲存模式：關聯式線上分析處理 (ROLAP)、多維度線上分析處理 (MOLAP) 或混合式線上分析處理 (HOLAP)。 彙總模式會顯示為要求最佳化的百分比、要求或使用之空間的量值、或建立的彙總數目。 按一下 [...]**** 按鈕即可顯示 [彙總設計精靈]****，並為指定的資料分割定義彙總設計。  
   
  **描述**  

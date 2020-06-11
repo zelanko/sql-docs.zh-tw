@@ -1,7 +1,7 @@
 ---
 title: sp_adddistributor （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 45088122cfb6824598aaf40486264d41216d3c39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c82ffa7ad254fc56f1c544a714d8633b7d1a33c
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771325"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627174"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  在[sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md)資料表中建立專案（如果沒有的話），將伺服器專案標記為散發者，並儲存屬性資訊。 這個預存程序執行於 master 資料庫的散發者端，以便登錄伺服器，並將伺服器標示為散發者。 如果是遠端散發者，它也會在 master 資料庫的發行者端執行，以登錄遠端散發者。  
+  在[sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md)資料表中建立專案（如果沒有的話），將伺服器專案標記為散發者，並儲存屬性資訊。 這個預存程序執行於 master 資料庫的散發者端，以便登錄伺服器，並將伺服器標示為散發者。 如果是遠端散發者，它也會在 master 資料庫的發行者端執行，以登錄遠端散發者。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,10 @@ sp_adddistributor [ @distributor= ] 'distributor'
   
 ## <a name="arguments"></a>引數  
 `[ @distributor = ] 'distributor'`這是散發伺服器名稱。 散發*者是* **sysname**，沒有預設值。 只有在設定遠端散發者時，才使用這個參數。 它會在 msdb 中加入散發者屬性的專案 **。MSdistributor**資料表。  
-  
+
+> [!NOTE]
+> 伺服器名稱可指定為 `<Hostname>,<PortNumber>` 。 當您使用自訂埠在 Linux 或 Windows 上部署 SQL Server，且已停用 browser 服務時，您可能需要指定連接的埠號碼。
+
 `[ @heartbeat_interval = ] heartbeat_interval`這是代理程式在未記錄進度訊息的情況下所能執行的最大分鐘數。 *heartbeat_interval*是**int**，預設值是10分鐘。 系統會建立一項 SQL Server Agent 作業，依這個間隔來執行，以便檢查執行中之複寫代理程式的狀態。  
   
 `[ @password = ] 'password']`這是**distributor_admin**登入的密碼。 *password*是**sysname**，預設值是 Null。 如果是 NULL 或空字串，就會將密碼重設為隨機值。 當加入第一個遠端散發者時，必須設定密碼。 針對散發*者 RPC 連接*（包括本機連接）所用的連結伺服器專案，會儲存**distributor_admin**登入和*密碼*。 如果 *「* 散發者」是本機的， **distributor_admin**的密碼會設定為新的值。 對於具有遠端散發者的發行者，當在發行者和散發者端執行**sp_adddistributor**時，必須指定相同的*password*值。 [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)可以用來變更散發者密碼。  

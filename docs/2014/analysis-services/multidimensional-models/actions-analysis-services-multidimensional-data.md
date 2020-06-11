@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e84f857105cd2bb5695fbcc0d0337d028e3fa297
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077593"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544890"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>動作 (Analysis Services - 多維度資料)
   動作可以屬於不同類型，而且必須據此來建立。 動作可以是：  
@@ -42,7 +41,7 @@ ms.locfileid: "66077593"
   
  類型是指要執行之動作的種類。 <xref:Microsoft.AnalysisServices.Action> 是抽象類別，因此使用它時，必須使用任何一個衍生類別。 預先定義的動作有兩種：鑽研和報表。 它們具有相對應的衍生類別： <xref:Microsoft.AnalysisServices.DrillThroughAction> 和 <xref:Microsoft.AnalysisServices.ReportAction>。 其他動作已涵蓋在 <xref:Microsoft.AnalysisServices.StandardAction> 類別中。  
   
- 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，動作是預存的 MDX 語句，可呈現給用戶端應用程式並供其使用。 換句話說，動作是定義及儲存在伺服器上的用戶端命令。 動作所包含的資訊還包含指定用戶端應用程式應顯示和處理 MDX 陳述式的時間和方式。 將動作中的資訊當成參數，動作所指定的作業即可啟動應用程式，或可根據動作所提供的準則來擷取資訊。  
+ 在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，動作是預存的 MDX 語句，可呈現給用戶端應用程式並供其使用。 換句話說，動作是定義及儲存在伺服器上的用戶端命令。 動作所包含的資訊還包含指定用戶端應用程式應顯示和處理 MDX 陳述式的時間和方式。 將動作中的資訊當成參數，動作所指定的作業即可啟動應用程式，或可根據動作所提供的準則來擷取資訊。  
   
  動作可讓商務使用者對其分析結果作出反應。 透過儲存並重複使用動作，使用者即可超越傳統分析 (一般是以呈現資料為結束)，並對已探索到的問題和缺點起始方案，因而擴充商業智慧應用程式使其超越 Cube 的範圍。 動作可將用戶端應用程式從複雜的資料轉譯工具轉換為企業作業系統的必要部分。 因為不是專注於傳送資料作為作業應用程式的輸入，所以使用者可在決策過程中「關閉迴圈」。 這個將分析資料轉換成決策的能力對成功的商業智慧應用程式而言十分重要。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66077593"
 ## <a name="types-of-actions"></a>動作的類型  
  下表列出 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中所含的動作類型：  
   
-|動作類型|描述|  
+|動作類型|Description|  
 |-----------------|-----------------|  
 |CommandLine|在命令提示字元執行命令。|  
 |資料集|將資料集傳回用戶端應用程式。|  

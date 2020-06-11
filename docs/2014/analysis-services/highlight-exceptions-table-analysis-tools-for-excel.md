@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab9289705bbea8d1e2c21d5f5820746e58b48cc5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080758"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544282"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>反白顯示例外狀況 (適用於 Excel 的資料表分析工具)
   ![功能區中的反白顯示例外狀況按鈕](media/tat-highlightex.gif "功能區中的反白顯示例外狀況按鈕")  
@@ -37,13 +36,13 @@ ms.locfileid: "66080758"
   
 2.  指定要分析的資料行。  
   
-3.  按一下 [執行]****。  
+3.  按一下 **[執行]** 。  
   
-4.  開啟標題\<為 [資料表名稱] 的工作表> 極端值，以查看找到的極端值摘要。  
+4.  開啟標題為 [極端值] 的工作表， \<table name> 以查看找到的極端值摘要。  
   
 5.  若要變更重點的數目，請按一下 [**反白顯示例外**狀況] 報告之 [**例外狀況臨界值**] 資料列中的向上和向下箭號。  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  您可以包括未含有錯誤值的資料行，但前提是這些值所包含的資訊可能對於預測其他資料列很有協助。 但是，您應該取消選取有許多遺失值或零值的資料行。  
   
  由於所有選取的資料行都用於建立一般模式，因此，您應該避免使用已知效能低落的輸入資料行，例如下列：  
@@ -76,7 +75,7 @@ ms.locfileid: "66080758"
 ## <a name="related-tools"></a>相關工具  
  當您在準備資料採礦的過程中要清除或檢閱資料時，您可能也會嘗試適用於 Excel 的資料採礦用戶端中的資料瀏覽功能。 這個增益集提供了更多進階的工具來協助您尋找極端值、重定資料標籤，或是檢視資料的分佈。 如需適用于 Excel 的資料採礦用戶端中的資料探索工具的詳細資訊，請參閱[探索和清除資料](exploring-and-cleaning-data.md)。  
   
- [**反白顯示例外**狀況[!INCLUDE[msCoName](../includes/msconame-md.md)] ] 工具使用群集演算法。 群集模型會偵測共用類似特性的資料列群組。 適用于 Excel 的資料採礦用戶端會提供一個 **[流覽**] 視窗，其中使用圖形和特性設定檔，讓您探索叢集所建立的資料採礦模型。 如需如何流覽「**反白顯示例外**狀況」工具所建立之群集模型的詳細資訊，請參閱[流覽模型（適用于 Excel 的資料採礦用戶端）](highlight-exceptions-table-analysis-tools-for-excel.md)。  
+ [**反白顯示例外**狀況 [!INCLUDE[msCoName](../includes/msconame-md.md)] ] 工具使用群集演算法。 群集模型會偵測共用類似特性的資料列群組。 適用于 Excel 的資料採礦用戶端會提供一個 **[流覽**] 視窗，其中使用圖形和特性設定檔，讓您探索叢集所建立的資料採礦模型。 如需如何流覽「**反白顯示例外**狀況」工具所建立之群集模型的詳細資訊，請參閱[流覽模型（適用于 Excel 的資料採礦用戶端）](highlight-exceptions-table-analysis-tools-for-excel.md)。  
   
  如需有關 [!INCLUDE[msCoName](../includes/msconame-md.md)] 群集演算法的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》中的＜Microsoft 群集演算法＞主題。  
   

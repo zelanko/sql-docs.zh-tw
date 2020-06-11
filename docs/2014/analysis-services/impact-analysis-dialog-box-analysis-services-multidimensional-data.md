@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 208268eb-4e14-44db-9c64-6f74b776adb6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92c7e91e090b8e82e2844cf1999328c6ef7a8684
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080746"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544270"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>影響分析對話方塊 (Analysis Services - 多維度資料)
   如果 **[處理]** 對話方塊中所列出的物件已經處理，請使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 **[影響分析]** 對話方塊來識別及選擇性地處理受影響的相依物件。 在 **[處理]** 對話方塊中按一下 **[影響分析]** ，即可顯示 **[影響分析]** 對話方塊。  
@@ -25,14 +24,14 @@ ms.locfileid: "66080746"
 > [!NOTE]  
 >  如果物件受到一個以上的影響，物件就會出現一次以上。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **物件清單**  
  在方格中顯示相依性物件的清單。 方格包含下列資料行：  
   
  **Object Name**  
  顯示可能需要處理之相依性物件的名稱。 名稱左邊的圖示會指出物件類型。  
   
- **類型**  
+ **型別**  
  顯示可能需要處理之相依性物件的類型。  
   
  **影響類型**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81a72e0009659e06fd27e9c402f17ddab259d228
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070937"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540170"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>無法重新整理活頁簿中資料連接的資料。 請再試一次或連絡系統管理員。 下列連接無法重新整理：PowerPivot 資料
   如果是包含 PowerPivot 資料的 Excel 活頁簿，Excel Services 會在提交連接要求至 PowerPivot 伺服器而且該要求失敗時，傳回這個錯誤。  
@@ -40,7 +39,7 @@ ms.locfileid: "66070937"
   
  您嘗試開啟的活頁簿可能是在 SQL Server 2008 R2 版的 PowerPivot for Excel 中建立。 最有可能是因為資料連接字串中指定的 Analysis Services 資料提供者不存在於處理要求的電腦上。  
   
- 如果是這種情況，您會在 ULS 記錄檔中發現此訊息：「活頁簿的\<URL 中的 ' PowerPivot 資料 ' 重新整理失敗> '」，後面接著「無法取得連接」。  
+ 如果是這種情況，您會在 ULS 記錄檔中找到此訊息：「重新整理活頁簿 ' ' 中的 ' PowerPivot 資料 ' 失敗」 \<URL to workbook> ，後面接著「無法取得連接」。  
   
  若要判斷活頁簿的版本，您可以在 Excel 開啟它並檢查連接字串中指定的資料提供者。 SQL Server 2008 R2 活頁簿使用 MSOLAP.4 做為其資料提供者。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66070937"
   
  若要解決此問題，請將電腦加入至與 PowerPivot 伺服器相同的網域，或在本機電腦上安裝網域控制站。 第二個解決方案「安裝網域控制站」將需要您為所有服務和使用者建立本機網域帳戶。 您將需要為您定義的帳戶設定服務帳戶和 SharePoint 權限。  
   
- 如果您的目標是在離線狀態下使用 PowerPivot for SharePoint，在電腦上安裝網域控制站相當實用。 如需有關如何離線使用 PowerPivot 的詳細指示，請參閱的「在網路上[http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241)取得您的 PowerPivot 服務器」的 blog 專案。  
+ 如果您的目標是在離線狀態下使用 PowerPivot for SharePoint，在電腦上安裝網域控制站相當實用。 如需有關如何離線使用 PowerPivot 的詳細指示，請參閱的「在網路上取得您的 PowerPivot 服務器」的 blog 專案 [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241) 。  
   
  **案例 4：伺服器不穩定**  
   

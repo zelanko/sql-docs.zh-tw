@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e149d5f7a6a8e14fbedc8e85ef31cbf42438b751
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078940"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543460"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>第 2 課：定義和部署 Cube
-  在您的[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案中定義資料來源視圖之後，您就可以開始定義初始[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube。  
+  在您的專案中定義資料來源視圖之後 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您就可以開始定義初始 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube。  
   
  您可以使用 Cube 精靈，在單一行程中定義 Cube 及其維度。 或者，您也可以定義一或多個維度，然後使用 Cube 精靈來定義使用這些維度的 Cube。 如果您要設計複雜的方案，通常會從定義維度開始。 如需詳細資訊，請參閱 [多維度模型中的維度](multidimensional-models/dimensions-in-multidimensional-models.md) 或 [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)。  
   

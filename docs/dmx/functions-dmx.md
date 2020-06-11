@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f68a66e778d44059a83ca6eca3cee35b4dffca9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad02b8414f2b59bf8e226b8d3d2cbbc05f161d9c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892759"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670178"
 ---
 # <a name="functions-dmx"></a>函數 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  當您使用資料採礦延伸模組（DMX）來查詢中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的物件時，您可以使用函式來傳回更多資訊，而不只是資料採礦模型或輸入資料集中的資料行中的值。 例如，您可以使用 DMX 查詢傳回資料行的預測值之外，還可以傳回預測正確的機率。 您不只能使用 DMX 函數，也可以使用 Microsoft Visual Basic for Applications (VBA)、Microsoft Excel 與預存程序的函數。  
+  當您使用資料採礦延伸模組（DMX）來查詢中的物件時 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您可以使用函式來傳回更多資訊，而不只是資料採礦模型或輸入資料集中的資料行中的值。 例如，您可以使用 DMX 查詢傳回資料行的預測值之外，還可以傳回預測正確的機率。 您不只能使用 DMX 函數，也可以使用 Microsoft Visual Basic for Applications (VBA)、Microsoft Excel 與預存程序的函數。  
   
 ## <a name="dmx-functions"></a>DMX 函數  
  您可以使用 DMX 函數執行下列工作：  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eec8da8f-eab4-4ac4-a81d-995c814f88ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59bff3eac690b7352b75d02bd7b266dfa8f303f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4207f617b4f6fafde5392fdea013196c54501314
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070206"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547430"
 ---
 # <a name="restrict-rows-partition-wizard"></a>限制資料列 (資料分割精靈)
   使用 [限制資料列]**** 頁面，即可限制從指定之資料表中擷取且將彙總並納入資料分割中的資料列。  
@@ -28,7 +27,7 @@ ms.locfileid: "66070206"
 > [!CAUTION]  
 >  如果在其他分割區所使用的 [指定來源資訊]**** 頁面上，指定了 [可用的資料表]**** 中的某資料表，您就必須在 [限制資料列]**** 頁面中提供查詢，或者接受在 Cube 中可能會有重複資料的風險。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **指定查詢來限制資料列**  
  選取即可在 [查詢]**** 方塊中，輸入限制資料列的查詢。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66070206"
 > [!IMPORTANT]  
 >  指定 WHERE 子句，就可以在這個資料分割使用記錄的子集。 當有多個分割區以單一事實資料表為基礎時，這是防止資料重複所必要的。  
   
- **勾**  
+ **勾選**  
  驗證 [查詢]**** 中的陳述式是否為有效的 SQL 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  

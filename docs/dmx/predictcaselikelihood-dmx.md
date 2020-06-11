@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0302af7f2241f3e158e8fa95691544c6fdf2dfac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18e988f55f68717f4e2054ec5c38869efba74ab1
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893921"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668196"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  傳回值包含案例的原始機率，也就是案例屬性機率的乘積。  
   
 ## <a name="applies-to"></a>套用至  
- 使用[!INCLUDE[msCoName](../includes/msconame-md.md)]群集與[!INCLUDE[msCoName](../includes/msconame-md.md)]時序群集演算法建立的模型。  
+ 使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 群集與時序群集演算法建立的模型 [!INCLUDE[msCoName](../includes/msconame-md.md)] 。  
   
 ## <a name="return-type"></a>傳回類型  
  介於 0 和 1 之間的雙精確度浮點數。 較接近 1 的數字代表案例在此模型中發生的機率較高。 較接近 0 的數字代表案例較不可能在此模型中發生。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc0cedfd-a7d0-40ef-bdd6-ea508130640a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b10a4a80b74bf64741784edc4fc1974dc0464805
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30838d33cc6d4d71eaaaf820cd929a57f60f6e34
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070983"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547730"
 ---
 # <a name="the-trusted-location-where-the-workbook-is-stored-does-not-allow-external-data-connections-the-following-connections-failed-to-refresh-powerpivot-data"></a>儲存活頁簿的信任位置不允許外部資料連接。 下列連接無法重新整理：PowerPivot 資料
   如果是包含 PowerPivot 資料的 Excel 活頁簿，Excel Services 會在無法連接到內嵌資料來源時傳回這個錯誤。  
@@ -24,7 +23,7 @@ ms.locfileid: "66070983"
   
 |||  
 |-|-|  
-|適用對象|PowerPivot for SharePoint|  
+|適用於|PowerPivot for SharePoint|  
 |產品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|Excel Services 設定為拒絕外部資料存取。|  
 |訊息文字|儲存活頁簿的信任位置不允許外部資料連接。 下列連接無法重新整理：PowerPivot 資料|  
@@ -45,7 +44,7 @@ ms.locfileid: "66070983"
   
 5.  在 [外部資料] 中，於 [允許外部資料] 內按一下 [信任的資料連線庫與內嵌連線]****。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
  或者，您可以針對包含 PowerPivot 活頁簿的網站建立新的信任位置，然後只針對該網站修改組態設定。 如需相關資訊，請參閱 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   

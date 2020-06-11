@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92e8aa42a3e4c7e725ced23d85ded836cc3dde6a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080337"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544086"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支援的驗證方法
   從用戶端應用程式到 Analysis Services 執行個體的連接需要 Windows 驗證 (整合式)。 您可以使用下列任何一種方法來提供 Windows 使用者識別：  

@@ -12,17 +12,17 @@ ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32e57b44b759ba36ea92cd7d08a600738ff2b4dd
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470005"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859230"
 ---
 # <a name="customize-toolbars-page"></a>自訂 (工具列頁面)
   [工具列]  索引標籤可以讓您建立、重新命名、移除和重設工具列。 您可以在 [工具]  功能表上按一下 [自訂]  ，然後按一下 [工具列]  來存取此索引標籤。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **工具列**  
  顯示內建工具列和您建立的其他工具列。 當工具列顯示時，此對話方塊中該工具列的左方會出現核取記號。  
   

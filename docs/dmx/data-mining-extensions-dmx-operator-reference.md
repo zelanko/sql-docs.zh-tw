@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4e0dfafb74e6e86185872ea8e736b95dce7d4058
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf2887fb779fbe66556c4b45098cba41b8128b44
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070916"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669401"
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>資料採礦延伸模組 (DMX) 運算子參考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的資料採礦延伸模組（DMX）語言支援算術、指派、比較、邏輯和一元運算子。 下表會列出 DMX 支援的運算子。  
+  中的資料採礦延伸模組（DMX）語言 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援算術、指派、比較、邏輯和一元運算子。 下表會列出 DMX 支援的運算子。  
   
 |運算子|描述|  
 |--------------|-----------------|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d56924f27f7986861895cf4fff21fa758cc47070
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082916"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520426"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>時序叢集模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關模型中排序之資訊的詳細資料，或是建立預測查詢來使用模型中的模式，根據所提供的新資料進行預測。 對於時序群集模型，內容查詢通常會提供找到之群集的其他詳細資料，或提供這些群集中的轉換。 您也可以使用查詢來擷取有關模型的中繼資料。  
@@ -253,7 +252,7 @@ AS t
   
 |||  
 |-|-|  
-|預測函數|使用量|  
+|預測函數|使用方式|  
 |[叢集 &#40;DMX&#41;](/sql/dmx/cluster-dmx)|傳回最可能包含輸入案例的群集|  
 |[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|傳回輸入案例與指定之群集的距離；如果沒有指定任何群集，則會傳回輸入案例與最可能之群集的距離。<br /><br /> 此函數可以搭配任何種類的叢集模型 (EM、K-Means 等) 使用，但是結果會隨著演算法而有所不同。|  
 |[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|傳回輸入案例屬於指定之群集的機率。|  

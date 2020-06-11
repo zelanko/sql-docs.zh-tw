@@ -10,19 +10,19 @@ ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5453bb0f67f670d20f239957ebc1e7bc799d0170
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095325"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859574"
 ---
 # <a name="feature-review"></a>功能檢閱
   [功能檢閱] 頁面是一份唯讀的功能清單，其中列出已經備妥而且將在完成映像步驟結束時設定並完成的功能。 此功能清單是在準備映像步驟期間選取，而且無法在完成映像步驟期間修改。 除了所顯示的功能以外，備妥的執行個體也會包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。  
   
  在您已經完成備妥 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的設定之後，就可以新增備妥 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中並未包含的其他功能。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
   
 |元件群組|元件和功能|  
 |---------------------|-----------------------------|  

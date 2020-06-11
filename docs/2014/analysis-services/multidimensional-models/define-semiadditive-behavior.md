@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd433f05f17a046ed49f49ea9fbdd9f36b90a3e2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075542"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546930"
 ---
 # <a name="define-semiadditive-behavior"></a>定義局部加總行為
   在許多商務狀況中，經常見到局部加總量值並未跨所有維度一致地彙總。 每個以不同時間之結餘快照集為基礎的 Cube 都會出現這個問題。 您可以在處理安全性、帳戶結餘、預算、人力資源、保險政策和理賠、以及其他許多商務領域的應用程式中發現這些快照集。  
@@ -50,7 +49,7 @@ ms.locfileid: "66075542"
   
 -   None  
   
- 此選項不會變更具有一般彙總函式的量值`Sum`： `Min`、 `Max`、 `Count`、或`Distinct``Count`。  
+ 此選項不會變更具有一般彙總函式的量值： `Sum` 、 `Min` 、 `Max` 、 `Count` 或 `Distinct``Count` 。  
   
  **此 wizard 偵測到「帳戶」帳戶維度，其中包含局部加總成員。伺服器會根據為每個帳戶類型指定的局部加總行為，來匯總此維度的成員。**  
  讓系統將帳戶類型維度所建立維度之量值群組中的所有量值設定為「依帳戶」彙總函式，而且伺服器將會根據每一個帳戶類型所指定之局部加總行為來彙總此維度的成員。  
@@ -66,7 +65,7 @@ ms.locfileid: "66075542"
   
  針對每個量值，您可以從下表描述之局部加總功能的類型進行選取。  
   
-|局部加總函數|描述|  
+|局部加總函數|Description|  
 |---------------------------|-----------------|  
 |子系的平均|成員的彙總是其子系的平均。|  
 |ByAccount|系統會讀取帳戶類型所指定的局部加總行為。|  

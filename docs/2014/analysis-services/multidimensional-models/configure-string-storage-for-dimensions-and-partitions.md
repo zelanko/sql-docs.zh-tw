@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbac2e675a08bbcdba6a43727e3de6896a52e56c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076534"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536890"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>設定維度及分割區的字串存放區
   您可以重新設定字串存放區，在超出字串存放區之 4 GB 檔案大小限制的維度屬性或分割區中容納非常大的字串。 如果您的維度或資料分割包含此大小的字串存放區，您可以在維度或資料分割層級，變更本機及連結 (本機或遠端) 物件的 **StringStoresCompatibilityLevel** 屬性來解決檔案大小限制。  
@@ -36,7 +35,7 @@ ms.locfileid: "66076534"
   
 -   [關於字串存放](#bkmk_background)  
   
--   [必要條件](#bkmk_prereq)  
+-   [先決條件](#bkmk_prereq)  
   
 -   [步驟 1：在 SQL Server Data Tools 中設定 StringStoreCompatiblityLevel 屬性](#bkmk_step1)  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66076534"
   
  與限制實體檔案大小的預設字串存放區架構相比，較大的字串存放區是以字串數目上限為基礎。 較大的字串存放區的最大限制為 40 億個唯一字串，或 40 億筆記錄，以先發生者為準。 較大的字串存放區會針對偶數大小建立記錄，其中每筆記錄等於 64K 的頁面。 如果您有非常長，而且無法納入單一記錄的字串，則有效限制將少於 40 億個字串。  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 先決條件  
  您也必須有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或更新版的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
  維度和分割區必須使用 MOLAP 儲存。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6908998b-9302-4a90-976e-770106b48d18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 94718b35efdcf31a0c9de19930cc765f7d9db5d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d686d8100e30d7608e8d90f135022bdf46785723
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082325"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528954"
 ---
 # <a name="data-sources-ssas-tabular"></a>資料來源 (SSAS 表格式)
   資料來源提供要包含在表格式模型方案中的資料。 您可以從各種來源將資料匯入至模型中，例如關聯式資料庫、資料摘要、Analysis Services Cube 等多維度資料來源，以及 Microsoft Excel 活頁簿等文字檔。 本節中的主題提供下列詳細資訊：您可以匯入的資料來源類型、您可以匯入的各種資料類型，以及描述如何從這些來源匯入資料的工作。  

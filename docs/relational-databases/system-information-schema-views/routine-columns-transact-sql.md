@@ -19,12 +19,12 @@ ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b0ed500b1217ae70dca72ab6eab64ab661c22ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08d9a3d71cb099e171e4e8a850766e685319d556
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078530"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669489"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "68078530"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**Nvarchar （** 128 **）**|資料表值函式的目錄或資料庫名稱。|  
-|**TABLE_SCHEMA**|**Nvarchar （** 128 **）**|包含資料表值函式的結構描述名稱。<br /><br /> <strong> \* \*重要\*事項</strong>請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**TABLE_SCHEMA**|**Nvarchar （** 128 **）**|包含資料表值函式的結構描述名稱。<br /><br /> <strong> \* \* 重要 \* 事項 \* ：</strong>請勿使用 INFORMATION_SCHEMA 視圖來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**TABLE_NAME**|**Nvarchar （** 128 **）**|資料表值函式的名稱。|  
 |**COLUMN_NAME**|**Nvarchar （** 128 **）**|資料行名稱。|  
 |**ORDINAL_POSITION**|**int**|資料行識別碼。|  
 |**COLUMN_DEFAULT**|**Nvarchar （** 4000 **）**|資料行的預設值。|  
-|**IS_NullABLE**|**Varchar （** 3 **）**|如果這個資料行允許 NULL，就會傳回 YES。 否則，便傳回 NO。|  
+|**IS_NULLABLE**|**Varchar （** 3 **）**|如果這個資料行允許 NULL，就會傳回 YES。 否則，便傳回 NO。|  
 |**DATA_TYPE**|**Nvarchar （** 128 **）**|系統提供的資料類型。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|二進位資料、字元資料，或文字和影像資料的最大長度 (以字元為單位)。<br /><br /> -1 適用于**xml**和大數數值型別資料。 否則，便傳回 NULL。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|  
 |**CHARACTER_OCTET_LENGTH**|**int**|二進位資料、字元資料，或文字和影像資料的最大長度 (以位元組為單位)。<br /><br /> -1 適用于**xml**和大數數值型別資料。 否則，便傳回 NULL。|  
@@ -56,7 +56,7 @@ ms.locfileid: "68078530"
 |**COLLATION_SCHEMA**|**Varchar （** 3 **）**|一律傳回 NULL。|  
 |**COLLATION_NAME**|**Nvarchar （** 128 **）**|如果資料行是字元資料或**文字**資料類型，則傳回排序次序的唯一名稱。 否則，便傳回 NULL。|  
 |**DOMAIN_CATALOG**|**Nvarchar （** 128 **）**|如果資料行是別名資料類型，這個資料行就是建立使用者自訂資料類型的資料庫名稱。 否則，便傳回 NULL。|  
-|**DOMAIN_SCHEMA**|**Nvarchar （** 128 **）**|如果資料行是一個使用者自訂資料類型，這個資料行就是包含使用者自訂資料類型之結構描述的名稱。 否則，便傳回 NULL。<br /><br /> <strong> \* \*重要\*事項</strong>請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**DOMAIN_SCHEMA**|**Nvarchar （** 128 **）**|如果資料行是一個使用者自訂資料類型，這個資料行就是包含使用者自訂資料類型之結構描述的名稱。 否則，便傳回 NULL。<br /><br /> <strong> \* \* 重要 \* 事項 \* ：</strong>請勿使用 INFORMATION_SCHEMA 視圖來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**DOMAIN_NAME**|**Nvarchar （** 128 **）**|如果資料行是一個使用者自訂資料類型，這個資料行就是使用者自訂資料類型的名稱。 否則，便傳回 NULL。|  
   
 ## <a name="see-also"></a>另請參閱  

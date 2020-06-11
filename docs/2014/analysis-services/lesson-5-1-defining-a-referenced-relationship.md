@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e68187207798a04b49f87b2a4b004661d873834
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08c0eeb1315b9ca7ab63a870e2e31ad4896b2d59
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175297"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542920"
 ---
 # <a name="defining-a-referenced-relationship"></a>定義參考關聯性
   本教學課程最特別要注意的事就是，您定義的每一個 Cube 維度所依據的資料表，是透過主索引鍵對外部索引鍵的關聯性，直接連結到量值群組的事實資料表。 在本主題的工作中，您會透過 [轉售商]**** 維度 (稱為「參考維度」**)，將 [地理位置]**** 維度連結到事實資料表。 這樣可讓使用者按地理位置建立轉售商銷售的維度。 如需詳細資訊，請參閱 [定義參考的關聯性及參考的關聯性屬性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。
@@ -88,7 +87,7 @@ ms.locfileid: "78175297"
 
      [Reseller] 維度中的 [Geography Key] 屬性只用來連結 [Geography] 維度與 [Reseller Sales] 事實資料表。 因為它不用於瀏覽，所以定義這個屬性階層的值沒有一個會顯示出來。 而且，屬性階層的排序和最佳化對處理效能只有負面影響。 不過，必須啟用屬性才能做為兩個維度之間的連結。
 
-4.  針對[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教學課程 Cube，切換到 cube 設計師，按一下 **[維度使用**方式] 索引標籤，然後按一下 [**轉售商銷售**] 量值群組和 [ **Geography** ] Cube 維度交集處的省略號按鈕（**...**）。
+4.  針對教學課程 Cube，切換到 Cube 設計師 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，按一下 [**維度使用**方式] 索引標籤，然後按一下 [**轉售商銷售**] 量值群組和 [ **Geography** ] Cube 維度交集處的省略號按鈕（**...**）。
 
 5.  在 [選取關聯性類型]**** 清單中，選取 [參考的]****。
 
@@ -98,13 +97,13 @@ ms.locfileid: "78175297"
 
      請注意，已選取 [具體化]**** 核取方塊。 這項設定是 MOLAP 維度的預設值。 具體化維度屬性連結，會在處理期間使事實資料表與每個資料列的參考維度之間的連結值具體化，或是儲存在維度的 MOLAP 結構中。 這對處理效能及儲存體需求上會有一點影響，但會提升 (偶爾也會大幅提升) 查詢效能。
 
-8.  按一下 [確定]  。
+8.  按一下 [確定]。
 
      請注意，[地理位置]**** Cube 維度現在是連結到 [轉售商銷售]**** 量值群組。 這個圖示指出其關聯性是參考維度關聯性。
 
 9. 在 [維度使用方式]**** 索引標籤的 [維度]**** 清單中，以滑鼠右鍵按一下 [地理位置]****，然後按一下 [重新命名]****。
 
-10. 將這個 cube 維度的名稱變更為`Reseller Geography`。
+10. 將這個 cube 維度的名稱變更為 `Reseller Geography` 。
 
      由於這個 Cube 維度現在是連結到 [轉售商銷售]**** 量值群組，所以使用者可在 Cube 中明確定義其使用方式，如此可避免產生可能的誤解。
 
@@ -114,7 +113,7 @@ ms.locfileid: "78175297"
 
 2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器]**** 索引標籤，然後按一下 [重新連接]**** 按鈕。
 
-3.  在 [中繼資料] 窗格`Reseller Geography`中，展開，以滑鼠右鍵按一下 [**地理**位置]，然後按一下 [**加入至資料欄區域**]。
+3.  在 [中繼資料] 窗格中，展開 `Reseller Geography` ，以滑鼠右鍵按一下 [**地理**位置]，然後按一下 [**加入至資料欄區域**]。
 
      請注意，[地理位置]**** 使用者定義階層的 [國家地區]**** 屬性現在已正確設定 [轉售商銷售 - 銷售量]**** 量值的維度，如下圖所示。
 

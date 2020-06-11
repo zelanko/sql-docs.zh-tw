@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b094e27a8b7c51afec21fcc4807d3ee6e8b22c37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a01640fec55fbf7c43030135d48707fb7f966280
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072510"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535538"
 ---
 # <a name="view-the-cube-schema"></a>檢視 Cube 結構描述
   **[Cube 設計師]** 之 **[Cube 結構]** 索引標籤的 **[資料來源檢視]** 窗格顯示 Cube 結構描述。 結構描述是一組衍生 Cube 量值和維度的來源資料表。 每一個 Cube 結構描述是由一個或多個事實資料表及一個或多個維度資料表所組成，Cube 中的量值和維度會以這些資料表為基礎。  

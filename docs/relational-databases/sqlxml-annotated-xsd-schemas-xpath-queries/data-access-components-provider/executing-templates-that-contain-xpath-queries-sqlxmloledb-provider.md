@@ -1,5 +1,6 @@
 ---
 title: 執行包含 XPath 查詢的範本（SQLXMLOLEDB）
+description: 查看使用 SQLXMLOLEDB 提供者的 ADO 應用程式範例，以執行包含 XPath 查詢的範本。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2da1b575b2df79321c87cbd88542c1210c9310b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d746b898aaf0ea050409585b88e8c6861b4fa2e
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257293"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215642"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>執行包含 XPath 查詢的範本 (SQLXMLOLEDB 提供者)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "75257293"
   
 -   對應結構描述  
   
- 在此範例 ADO 應用程式中，由 XPath 查詢（root）所組成的 XML 範本是針對 XSD 對應架構（MySchema）所指定，在[&#40;SQLXMLOLEDB 提供者&#41;中執行 XPath 查詢](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)中所述。  
+ 在此範例 ADO 應用程式中，由 XPath 查詢（root）所組成的 XML 範本是針對 XSD 對應架構（MySchema.xml）所指定，在[&#40;SQLXMLOLEDB 提供者&#41;中執行 XPath 查詢](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)中所述。  
   
  對應架構屬性會提供執行 XPath 查詢所針對的 XSD 對應架構。 [基底路徑] 屬性會提供對應架構的檔案路徑。  
   

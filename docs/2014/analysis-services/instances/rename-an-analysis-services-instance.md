@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f92fdd7ea01cb9a373bafc3357de65fd2e622add
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079614"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543780"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重新命名 Analysis Services 執行個體
-  您可以使用 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **重新命名實例**] 對話方塊來重新命名現有的實例。  
+  您可以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用 [**重新命名實例**] 對話方塊來重新命名現有的實例。  
   
 > [!IMPORTANT]  
 >  重新命名執行個體時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instance Rename Tool 會以更高的權限執行，並更新與該執行個體相關聯的 Windows 服務名稱、安全性帳戶，以及登錄項目。 為確保執行這些動作，請務必以本機系統管理員身分執行此工具。  
@@ -35,7 +34,7 @@ ms.locfileid: "66079614"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>若要重新命名 Analysis Services 的執行個體  
   
-1.  從 C:\Program Files\Microsoft SQL Server\110\tools\binn\managementstudio 啟動**實例重新命名**工具**asinstancerename**  
+1.  從 C:\Program Files\Microsoft SQL Server\110\tools\binn\managementstudio 啟動**實例重新命名**工具， **asinstancerename.exe**  
   
 2.  在 [重新命名執行個體]**** 對話方塊的 [要重新命名的執行個體]**** 清單中，選取您要重新命名的執行個體。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66079614"
   
      下列範例提供說明。 假設您使用預設虛擬帳戶，將表格式模式伺服器安裝為名為 "表格式" 的實例，則會產生下列設定：  
   
-    1.  實例名稱 = \<伺服器> \tabular  
+    1.  實例名稱 = \<server> \TABULAR  
   
     2.  服務名稱 = MSOLAP$TABULAR  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079614"
   
      現在假設您將實例重新命名為 "TAB2"。 名稱變更之後，您的設定現在看起來如下：  
   
-    1.  實例名稱 = \<伺服器> \tab2  
+    1.  實例名稱 = \<server> \TAB2  
   
     2.  服務名稱 = MSOLAP$TAB2  
   

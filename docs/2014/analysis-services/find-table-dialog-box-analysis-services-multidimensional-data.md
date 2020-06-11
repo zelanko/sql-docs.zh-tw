@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 133d28e8-55eb-4783-bb8b-d3776a95ebda
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2730d14bb0ffc0bab6c0f6dc8a331bae62644da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80d98b29b4d35978864d4a2289e9d351e20f661b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081093"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544440"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>尋找資料表對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [尋找資料表] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可尋找與維度、Cube 或採礦結構相關聯之資料來源檢視中的資料表。 您可以藉由下列方式在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中顯示此對話方塊：  
@@ -34,7 +33,7 @@ ms.locfileid: "66081093"
   
 -   在 [資料採礦模型設計師]**** 的 [採礦結構]**** 頁面上，以滑鼠右鍵按一下 [資料來源檢視]**** 窗格的背景，然後選取 [尋找資料表]****。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **從資料來源檢視中選取資料表**  
  在 [資料來源檢視]**** 窗格中，選取要尋找的資料表。 此選項會顯示可用物件及其類型的方格，這些類型符合 [篩選]**** 中設定的篩選 (如果未設定 [篩選]****，則為所有資料表)，且尚未在目前圖表中顯示。  
   

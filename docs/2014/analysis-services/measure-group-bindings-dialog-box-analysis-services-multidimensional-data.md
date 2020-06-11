@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d3d04692ac6576e76d2b630fb5cacb4f57db959
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4fb4b20fcccdabdf29aaf57dab65b1604a80a9e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077861"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541600"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>量值群組繫結對話方塊 (Analysis Services - 多維度資料)
   使用 [量值群組繫結]**** 對話方塊，即可針對一般維度關聯性，建立及修改 Cube 維度中之非資料粒度屬性，與量值群組中之資料行之間的直接關聯性；以及從 [定義關聯性]**** 對話方塊中，指定 Cube 維度中之任何屬性的 Null 處理選項。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **量值群組資料表**  
  顯示所選取量值群組之事實資料表的名稱。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66077861"
 |**屬性名稱**|顯示屬性的名稱。|  
 |**維度資料表**|顯示作為屬性基礎之維度資料表的名稱。|  
   
- **相對**  
+ **關聯性**  
  顯示由選取之屬性的維度資料表資料行，與選取之量值群組的事實資料表資料行之間的關聯性所組成的方格，以及關聯性的 Null 處理選項。 方格包含下列資料行：  
   
 |選項|定義|  

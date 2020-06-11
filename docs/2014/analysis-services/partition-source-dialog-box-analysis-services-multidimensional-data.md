@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c414dabe-9bad-49b7-9a3c-dfca87fef92b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2102d28a61a99ed9ed6786dd8f2dee196066045c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6732e8f00dc0d01e0d3b708794a1d9c497ae4cf5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072153"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540950"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>資料分割來源對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [資料分割來源]**** 對話方塊，即可指定資料分割之事實資料表資料的來源。 您可依下列方式顯示 [資料分割來源]**** 對話方塊：  
@@ -26,12 +25,12 @@ ms.locfileid: "66072153"
   
 -   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [屬性]**** 視窗中，於 [資料分割]**** 物件的 [來源]**** 屬性值上，按一下 [...]**** 按鈕。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |選項|定義|  
 |------------|----------------|  
 |**系結類型**|選取用於指定之資料分割來源的繫結類型。 有下列選項可供使用：<br /><br /> **資料表**系結：選取即可顯示 [資料表系結**詳細資料**] 窗格，並指出資料分割系結至資料來源或資料來源視圖中的資料表內容。 如需 [Table Binding Detail (資料表繫結詳細資料)]**** 窗格的詳細資訊，請參閱 [資料表繫結詳細資料 &#40;資料分割來源對話方塊&#41; &#40;Analysis Services - 多維度資料&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md)。<br /><br /> **詳細資料**：選取即可顯示 [查詢系結**詳細資料**] 窗格，並指出資料分割系結至在資料來源上執行之查詢的內容。 如需 [Query Binding Detail (查詢繫結詳細資料)]**** 窗格的詳細資訊，請參閱 [查詢繫結詳細資料 &#40;資料分割來源對話方塊&#41; &#40;Analysis Services - 多維度資料&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md)。|  
-|**資訊**|根據 [繫結類型]**** 選項的值而定，會顯示 [Table Binding Detail (資料表繫結詳細資料)]**** 對話方塊或 [Query Binding Detail (查詢繫結詳細資料)]**** 對話方塊。|  
+|**詳細資料**|根據 [繫結類型]**** 選項的值而定，會顯示 [Table Binding Detail (資料表繫結詳細資料)]**** 對話方塊或 [Query Binding Detail (查詢繫結詳細資料)]**** 對話方塊。|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料分割 &#40;Cube 設計師&#41; &#40;Analysis Services 多維度資料&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   

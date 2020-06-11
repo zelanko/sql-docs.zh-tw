@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7288979fdba0752149d8bdc6491e8c51cdebedc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071682"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547510"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>在管理中心將 PowerPivot 服務應用程式連接到 SharePoint Web 應用程式
   PowerPivot 服務應用程式可由伺服陣列中任何數目的 SharePoint Web 應用程式使用。 若要讓 PowerPivot 服務應用程式可用，請將它加入至服務關聯清單。  
@@ -40,7 +39,7 @@ ms.locfileid: "66071682"
   
 3.  選取 PowerPivot 服務應用程式旁邊的核取方塊 (由類型名稱 `PowerPivot Service Application Proxy` 所指出)。 如果您有一個以上的 PowerPivot 服務應用程式，請只選擇一個。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
 ##  <a name="add-powerpivot-services-application-a-custom-service-association-list"></a><a name="custom"></a>將 PowerPivot 服務應用程式加入至自訂服務關聯清單  
  預設群組可由自訂清單取代。 自訂清單是特別為單一 SharePoint Web 應用程式所建立。 它會覆寫預設的群組，並僅用伺服陣列或服務管理員指定的服務關聯來取代。 如果您建立了多個 PowerPivot 服務應用程式，必須使用自訂清單來指定要使用哪一個。 自訂清單無法由其他 Web 應用程式重複使用。 它只適用於建立它的 Web 應用程式。  

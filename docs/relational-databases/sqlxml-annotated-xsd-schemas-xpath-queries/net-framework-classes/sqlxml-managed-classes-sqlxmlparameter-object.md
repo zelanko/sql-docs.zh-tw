@@ -1,5 +1,6 @@
 ---
 title: SqlXmlParameter 物件（SQLXML）
+description: 瞭解 SqlXmlParameter 物件（SQLXML Managed 類別）所支援的屬性。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d86e6d3a6e910dbd18f2038f127ba99bfd65369
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5570b159f45bc06efd0fee082101e0c9b0f9fc5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252623"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529898"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>SQLXML 受控類別 - SqlXmlParameter 物件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   SqlXmlParameter 物件支援下列屬性：  
   
- 名稱  
+ Name  
  參數名稱。 可以將參數傳遞給命令。 呼叫 SqlXmlCommand 物件的 CreateParameter 方法會建立參數物件。  
   
  值  

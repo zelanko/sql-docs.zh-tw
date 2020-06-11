@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1af06d7ffe12301f6b8b678f41665e5c3146a13
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084270"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522315"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>邏輯架構 (Analysis Services – 資料採礦)
   資料採礦是涉及多個元件互動的程序。  
@@ -41,7 +40,7 @@ ms.locfileid: "66084270"
 ##  <a name="data-mining-source-data"></a><a name="bkmk_SourceData"></a> 資料採礦來源資料  
  資料採礦方案中不會儲存用於資料採礦的資料，而只會儲存繫結。 資料可能位於以舊版的 SQL Server 所建立的資料庫、CRM 系統或甚至一般檔案中。 當您以處理方式來定型結構或模型時，便會建立資料的統計摘要，並將其儲存在快取中，該快取可以保留供之後的作業使用，或是在處理之後加以刪除。 如需詳細資訊，請參閱[採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)。  
   
- 您會結合 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源檢視 (DSV) 物件中的不同資料，這樣會在資料來源頂端提供抽象層。 您可以在資料表之間指定聯結，或是加入具有多對一關聯性的資料表，以建立巢狀資料表資料行。 這些物件的定義、資料來源和資料來源檢視會儲存在方案內，而且副檔名為 *.ds 和 \*.dsv。 如需建立和使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料來源和資料來源視圖的詳細資訊，請參閱[&#40;SSAS 多維度&#41;支援的資料來源](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
+ 您會結合 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源檢視 (DSV) 物件中的不同資料，這樣會在資料來源頂端提供抽象層。 您可以在資料表之間指定聯結，或是加入具有多對一關聯性的資料表，以建立巢狀資料表資料行。 這些物件的定義、資料來源和資料來源檢視會儲存在方案內，而且副檔名為 *.ds 和 \*.dsv。 如需建立和使用資料來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和資料來源視圖的詳細資訊，請參閱[&#40;SSAS 多維度&#41;支援的資料來源](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
   
  您也可以使用 AMO 或 XMLA 來定義及更改資料來源和資料來源檢視。 如需如何以程式設計方式處理這些物件的詳細資訊，請參閱[邏輯架構概觀 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md)。  
   

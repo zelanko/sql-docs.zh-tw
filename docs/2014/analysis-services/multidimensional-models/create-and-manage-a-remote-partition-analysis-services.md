@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c87de5fb72036848088afd2fbfd651be5d7b850
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076258"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536120"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>建立及管理遠端分割區 (Analysis Services)
   分割量值群組時，您可以在遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上設定次要資料庫作為分割區儲存。  
@@ -27,7 +26,7 @@ ms.locfileid: "66076258"
   
  專用次要資料庫會針對唯一的 master 資料庫儲存遠端資料分割，但是 master 資料庫可以使用多個次要資料庫，只要所有次要資料庫都在相同的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]遠端執行個體上即可。 資料庫中專屬於遠端分割區的維度會建立為連結維度。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  建立遠端分割區之前，必須先符合下列條件：  
   
 -   您必須具有次要 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體和專用資料庫以儲存資料分割。 次要資料庫的用途只有一個，那就是為 master 資料庫提供遠端分割區儲存。  
@@ -45,7 +44,7 @@ ms.locfileid: "66076258"
 -   您必須確保災害復原計畫包含遠端分割區的備份與還原。 使用遠端分割區會讓備份與還原作業變得很複雜。 請務必針對您的計畫進行徹底的測試，確保能夠還原必要資料。  
   
 ## <a name="configure-remote-partitions"></a>設定遠端分割區  
- 執行實例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]兩部不同電腦都必須建立遠端分割區安排，將一部電腦指定為主伺服器，另一部電腦做為次級伺服器。  
+ 執行實例的兩部不同電腦 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 都必須建立遠端分割區安排，將一部電腦指定為主伺服器，另一部電腦做為次級伺服器。  
   
  下列程序假設您有兩個伺服器執行個體，其中 Cube 資料庫部署在主要伺服器上。 基於此程序的目的，Cube 資料庫稱為 db-master。 包含遠端分割區的儲存資料庫稱為 db-storage。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66076258"
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>設定遠端伺服器上的 MasterDataSourceID 資料庫屬性 (在 SSMS 中)  
   
-1.  在從屬伺服器上：以滑鼠右鍵按一下儲存體資料庫 [資料庫-儲存體]，指向 [**編寫資料庫的腳本為** | **ALTER to** | **New 查詢編輯器] 視窗**。  
+1.  在從屬伺服器上：以滑鼠右鍵按一下儲存體資料庫 [資料庫-儲存體]，指向 [**編寫資料庫的腳本為**  |  **ALTER to**  |  **New 查詢編輯器] 視窗**。  
   
 2.  將 **MasterDataSourceID** 加入 XMLA 中，然後指定 Cube 資料庫 db-master 的識別碼作為其值。 XMLA 看起來應該類似如下。  
   

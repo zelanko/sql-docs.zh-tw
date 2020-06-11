@@ -1,5 +1,6 @@
 ---
 title: 複寫預存程式（Transact-sql） |Microsoft Docs
+description: 在 SQL Server 中，複寫系統預存程式可以完成一次性的工作，例如執行複寫，或在批次檔和腳本中使用。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f8865167aaddeed91a071992244754e307ba69e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b62346e11923a1c9e1683ae0ccff1b3898b528a2
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770971"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807772"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>複寫預存程序 (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

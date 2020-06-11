@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a23a8ac9467d46190ba8222cf45af0961d9550d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078836"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543420"
 ---
 # <a name="modifying-the-product-dimension"></a>修改 [產品] 維度
   在這個主題的工作中，您會使用具名計算來針對產品線提供更具描述性的名稱、定義 [產品] 維度中的階層，以及指定該階層的 (全部) 成員名稱。 此外，您也會將屬性分組放入顯示資料夾中。  
@@ -29,7 +28,7 @@ ms.locfileid: "66078836"
   
 2.  在 [圖表] 窗格的底部，以滑鼠右鍵按一下 [Product]**** 資料表標頭，然後按一下 [新增具名計算]****。  
   
-3.  在 [**建立指名的計算**] 對話方塊中`ProductLineName` ，于 [資料**行名稱**] 方塊中輸入。  
+3.  在 [**建立指名的計算**] 對話方塊中，于 `ProductLineName` [資料**行名稱**] 方塊中輸入。  
   
 4.  在 [運算式]**** 方塊中，輸入或複製並貼上下列 **CASE** 陳述式：  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66078836"
   
      這個 **CASE** 陳述式會為 Cube 的每個產品線建立使用者易記名稱。  
   
-5.  按一下 **[確定]** 以`ProductLineName`建立已命名的計算。 您可能需要稍等一下。  
+5.  按一下 **[確定]** 以建立 `ProductLineName` 已命名的計算。 您可能需要稍等一下。  
   
 6.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66078836"
   
 3.  在畫面右側的 [屬性視窗中，按一下視窗底部的 [ **NameColumn** ] 屬性欄位，然後按一下流覽（**...**）按鈕，即可開啟 [**名稱資料行**] 對話方塊。 (您可能需要按一下畫面右側的 [屬性]**** 索引標籤開啟 [屬性] 視窗)。  
   
-4.  選取`ProductLineName` [**來源資料行**] 清單底部的，然後按一下 **[確定]**。  
+4.  選取 `ProductLineName` [**來源資料行**] 清單底部的，然後按一下 **[確定]**。  
   
      [NameColumn] 欄位現在會包含 **Product.ProductLineName (WChar)** 文字。 [產品線]**** 屬性階層的成員現在會顯示產品線的全名，而非產品線的簡稱。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "66078836"
   
      [NameColumn] 欄位現在會包含 **Product.EnglishProductName (WChar)** 文字。  
   
-8.  在 [屬性視窗中，按一下 [**名稱**] 屬性欄位，然後輸入`Product Name`。  
+8.  在 [屬性視窗中，按一下 [**名稱**] 屬性欄位，然後輸入 `Product Name` 。  
   
 ## <a name="creating-a-hierarchy"></a>建立階層  
   
@@ -79,13 +78,13 @@ ms.locfileid: "66078836"
   
 1.  將 [產品線]**** 屬性從 [屬性]**** 窗格拖曳到 [階層]**** 窗格中。  
   
-2.  將 [**模型名稱**] 屬性從 [**屬性**] 窗格拖曳**到 [階層] 窗格**中 [**產品線**] 層級底下的 [ ** \<新增層級>** ] 資料格。  
+2.  將 [型號名稱]**** 屬性從 [屬性]**** 窗格拖曳到 [階層]**** 窗格的 [\<new level>]**** 資料格中 (位於 [產品線]**** 層級底下)。  
   
-3.  將`Product Name`屬性從 [**屬性**] 窗格拖曳**到 [階層] 窗格**中的 [ ** \<新層級]>** 資料格，其位於 [**模型名稱**] 層級之下。 您在上一節中已將 [產品金鑰] 重新命名為 [產品名稱]。  
+3.  將 `Product Name` 屬性從 [**屬性**] 窗格拖曳到 [階層 **\<new level>** ] **Hierarchies**窗格中的資料格（位於 [**模型名稱**] 層級底下）。 您在上一節中已將 [產品金鑰] 重新命名為 [產品名稱]。  
   
-4.  在 [**維度結構**] 索引卷**標的 [階層] 窗格中**，以滑鼠右鍵按一下階層**階層的標題**欄，按一下 [ `Product Model Lines`**重新命名**]，然後輸入。  
+4.  在 [**維度結構**] 索引卷**標的 [階層] 窗格中**，以滑鼠右鍵按一下階層**階層的標題**欄，按一下 [**重新命名**]，然後輸入 `Product Model Lines` 。  
   
-     階層的名稱現在`Product Model Lines`是。  
+     階層的名稱現在是 `Product Model Lines` 。  
   
 5.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66078836"
   
     -   **類別**  
   
-    -   **顏色**  
+    -   **色彩**  
   
     -   **製造天數**  
   
@@ -113,7 +112,7 @@ ms.locfileid: "66078836"
   
     -   **Weight**  
   
-2.  在屬性視窗的 [ **attributehierarchydisplayfolder]** ] 屬性欄位中， `Stocking`輸入。  
+2.  在屬性視窗的 [ **attributehierarchydisplayfolder]** ] 屬性欄位中，輸入 `Stocking` 。  
   
      現在您已將這些屬性分組放入單一顯示資料夾。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66078836"
   
     -   **Standard Cost**  
   
-4.  在屬性視窗的 [ **attributehierarchydisplayfolder]** ] 屬性資料格中， `Financial`輸入。  
+4.  在屬性視窗的 [ **attributehierarchydisplayfolder]** ] 屬性資料格中，輸入 `Financial` 。  
   
      現在您已將這些屬性分組放入第二個顯示資料夾。  
   
@@ -137,13 +136,13 @@ ms.locfileid: "66078836"
   
     -   **狀態**  
   
-6.  在屬性視窗的 [ **attributehierarchydisplayfolder]** ] 屬性資料格中， `History`輸入。  
+6.  在屬性視窗的 [ **attributehierarchydisplayfolder]** ] 屬性資料格中，輸入 `History` 。  
   
      現在您已將這些屬性分組放入第三個顯示資料夾。  
   
-7.  `Product Model Lines` **在 [階層] 窗格**中選取階層，然後將屬性視窗中的 [ **AllMemberName** ] 屬性`All Products`變更為。  
+7.  `Product Model Lines`在 [階層] 窗格**Hierarchies**中選取階層，然後將屬性視窗中的 [ **AllMemberName** ] 屬性變更為 `All Products` 。  
   
-8.  按一下 [**階層] 窗格**的開放區域，然後將屬性視窗頂端的 [ **AttributeAllMemberName** ] 屬性變更為`All Products`。  
+8.  按一下 [**階層] 窗格**的開放區域，然後將屬性視窗頂端的 [ **AttributeAllMemberName** ] 屬性變更為 `All Products` 。  
   
      按一下開放區域可讓您修改 [Product] 維度本身的屬性。 您也可以在 [屬性]**** 窗格中，按一下屬性清單最上方的 [Product]****。  
   
@@ -162,7 +161,7 @@ ms.locfileid: "66078836"
   
      然後，在 [關聯性類型]**** 清單中，保持關聯性類型設定為 [彈性]**** 的狀態，因為成員之間的關聯性可能會隨著時間而變更。 例如，產品型號最後可能會移至不同的產品線。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
 5.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
@@ -174,9 +173,9 @@ ms.locfileid: "66078836"
   
 2.  當您收到 [已成功地完成部署]**** 訊息之後，請針對 [產品]**** 維度按一下 [維度設計師] **** 的 [瀏覽器]**** 索引標籤，然後按一下設計師工具列上的 [重新連接] 圖示。  
   
-3.  確認`Product Model Lines`已**在 [階層**] 清單中選取，然後展開`All Products`[]。  
+3.  確認 `Product Model Lines` 已在 [階層] **Hierarchy**清單中選取，然後展開 [] `All Products` 。  
   
-     請注意，[**全部**] 成員的名稱會`All Products`顯示為。 這是因為您已將此階層的**AllMemberName**屬性變更`All Products`為稍早在課程中。 此外，[產品線]**** 層級的成員現在有了使用者易記名稱，而非單一字母的縮寫。  
+     請注意，[**全部**] 成員的名稱會顯示為 `All Products` 。 這是因為您已將此階層的**AllMemberName**屬性變更為稍 `All Products` 早在課程中。 此外，[產品線]**** 層級的成員現在有了使用者易記名稱，而非單一字母的縮寫。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [修改日期維度](lesson-3-4-modifying-the-date-dimension.md)  

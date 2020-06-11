@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 1b9cae0a-8990-4194-af5f-a1ea5f2aff06
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 074659d42e1960c5f24cf4afa20668a3d8c823b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93361fb14bc6544ffa7376439c2da0c8e06c3fb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725482"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545950"
 ---
 # <a name="logical-architecture-analysis-services---multidimensional-data"></a>邏輯架構 (Analysis Services - 多維度資料)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會使用伺服器和用戶端元件，為商業智慧應用程式提供線上分析處理（OLAP）和資料採礦[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]功能：  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]會 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 使用伺服器和用戶端元件，為商業智慧應用程式提供線上分析處理（OLAP）和資料採礦功能：  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的伺服器元件是以 Microsoft Windows 服務的形式實作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援同一部電腦上的多個實例，每個[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]實例都實作為個別的 Windows 服務實例。  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的伺服器元件是以 Microsoft Windows 服務的形式實作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援同一部電腦上的多個實例，每個實例都實 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 作為個別的 Windows 服務實例。  
   
 -   用戶端使用公用標準 XML for Analysis (XMLA) 與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 通訊；而 XMLA 是一種用於發出命令和接收回應的 SOAP 型通訊協定，並以 Web 服務的形式公開。 用戶端物件模型也可透過 XMLA 予以提供，且可使用 Managed 提供者 (例如 ADOMD.Net) 或原生 OLE DB 提供者進行存取。  
   

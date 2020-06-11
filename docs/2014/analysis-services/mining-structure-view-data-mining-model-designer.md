@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3ddd0ab7-a4a1-4451-bac8-a0ad0b48be09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72a18711faf9784efc2202f577e2124f321e0052
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 093aa1043744381848db1c9ec8c46c992d32801b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077673"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537435"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>採礦結構檢視 (資料採礦模型設計工具)
   使用 **[採礦結構]** 檢視，即可修改採礦結構，並處理採礦結構及其所有相關聯的採礦模型。  

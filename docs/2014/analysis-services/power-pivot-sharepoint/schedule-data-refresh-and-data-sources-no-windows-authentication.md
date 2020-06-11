@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4851c8054434713e69d8bf63b046484a01f0398
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f291020e77bf557a352c07451665172f9c4bb225
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071160"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547790"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>排程資料重新整理與不支援 Windows 驗證的資料來源 (PowerPivot for SharePoint)
   本主題描述 PowerPivot for SharePoint 排程資料重新整理的工作流程，而且這項作業可以使用**不**支援 Windows 驗證的資料來源。 例如，Oracle 或 IDM DB2 資料來源。 雖然本主題的圖例和步驟參考的是 Oracle 資料來源，但是相同的工作流程也適用於其他資料來源。  
@@ -36,7 +35,7 @@ ms.locfileid: "66071160"
   
 -   **(4)** PowerePivot 活頁簿會使用 Oracle 資料。 活頁簿重新整理設定會指定要將目標應用程式 **(2)** 用於認證的資料來源連接。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
   
 -   PowerPivot 服務應用程式存在。  
   
@@ -64,15 +63,15 @@ ms.locfileid: "66071160"
   
     -   **目標應用程式頁面 URL** ：無。  
   
-5.  按 [下一步]  。  
+5.  按 [下一步] 。  
   
 6.  在 [認證] 頁面上，保留 [Windows 使用者名稱] **** 和 [Windows 密碼] **** 的兩個預設欄位名稱和欄位類型。  
   
-7.  按 [下一步]  。  
+7.  按 [下一步] 。  
   
 8.  在 [成員資格設定] **** 頁面上，至少加入一個 **目標應用程式管理員** ，然後加入需要存取目標應用程式的成員。  
   
-9. 按一下 [確定]  。  
+9. 按一下 [確定]。  
   
 10. 新的目標應用程式識別碼就會加入至清單。 選取目標應用程式識別碼，然後按一下 [**設定認證**]![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")。  
   
@@ -98,23 +97,23 @@ ms.locfileid: "66071160"
   
     -   **目標應用程式頁面 URL** ：無。  
   
-5.  按 [下一步]  。  
+5.  按 [下一步] 。  
   
-6.  在 [**認證**] 頁面上，將第一個功能變數名稱`Oracle User ID`變更為，並將**欄位類型**變更為`User Name`。  
+6.  在 [**認證**] 頁面上，將第一個功能變數名稱變更為， `Oracle User ID` 並將**欄位類型**變更為 `User Name` 。  
   
-     將第二個功能變數名稱變更`Oracle Password`為，並將**欄位類型**變更為`Password`。  
+     將第二個功能變數名稱變更為 `Oracle Password` ，並將**欄位類型**變更為 `Password` 。  
   
-7.  按 [下一步]  。  
+7.  按 [下一步] 。  
   
 8.  在 [成員資格設定] **** 頁面上，至少加入一個 **目標應用程式管理員** ，然後加入需要存取目標應用程式的成員。  
   
-9. 按一下 [確定]  。  
+9. 按一下 [確定]。  
   
 10. 新的目標應用程式識別碼就會加入至清單。 選取目標應用程式識別碼，然後按一下 [**設定認證**]![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")。  
   
 11. 輸入 Oracle 使用者識別碼和 Oracle 密碼，然後按一下 [確定] ****。  
   
- 如需詳細資訊，請參閱[使用安全存放區與 SQL Server 驗證（SharePoint Server 2013）](https://technet.microsoft.com/library/gg298949.aspx) （https://technet.microsoft.com/library/gg298949.aspx)）中的「若要建立 SQL Server 驗證的目標應用程式」一節。  
+ 如需詳細資訊，請參閱[使用安全存放區與 SQL Server 驗證（SharePoint Server 2013）（）](https://technet.microsoft.com/library/gg298949.aspx)中的「若要建立 SQL Server 驗證的目標應用程式」一節 https://technet.microsoft.com/library/gg298949.aspx) 。  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>若要設定 PowerPivot 服務應用程式  
   
@@ -124,7 +123,7 @@ ms.locfileid: "66071160"
   
 3.  在 [動作] 區段中，按一下 [設定服務應用程式設定] **** 。  
   
-4.  在 [**資料**重新整理] 區段中，將**PowerPivot 無人看管的資料**重新整理帳戶設定為`PowerPivotDataRefresh` ，然後按一下 **[確定]**。  
+4.  在 [**資料**重新整理] 區段中，將**PowerPivot 無人看管的資料**重新整理帳戶設定為， `PowerPivotDataRefresh` 然後按一下 **[確定]**。  
   
      ![as_powerpivot_refresh_new_refresh_acount](../media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   
@@ -134,7 +133,7 @@ ms.locfileid: "66071160"
   
 2.  如果您看見 [資料重新整理記錄] **** 頁面，請按一下 [設定排程] ****。  
   
-3.  請按一下 [啟用]****。  
+3.  按一下 [啟用]  。  
   
 4.  按一下 [並且盡快重新整理] ****。  
   
@@ -148,9 +147,9 @@ ms.locfileid: "66071160"
   
 9. 選取 **[使用儲存在 Secure Store Service (SSS) 中的認證進行連接，以登入資料來源。在 SSS ID 方塊中輸入用來查閱認證的 ID**。  
   
-10. 在 [**識別碼：** ] 方塊中`OracleAuthentication`，輸入。  
+10. 在 [**識別碼：** ] 方塊中，輸入 `OracleAuthentication` 。  
   
-11. 按一下 [確定]  。  
+11. 按一下 [確定]。  
   
      如果您看到類似下列的錯誤訊息： `The provided Secure Store target application is either incorrectly configured or does not exist`。  
   

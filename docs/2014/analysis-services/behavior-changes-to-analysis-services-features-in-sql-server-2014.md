@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a5525984fa4b1f1823f526097d271780a072bd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4856a924bcea68b98336dd77adfdc8762733d548
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284804"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527864"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中 Analysis Services 功能的行為變更
   本主題描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中多維度、表格式、資料採礦及 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 部署的行為變更。 行為變更會影響功能在目前版本中，與舊版 SQL Server 相較之下的運作或互動方式。  
@@ -48,7 +47,7 @@ ms.locfileid: "67284804"
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services 多維度模式  
   
 #### <a name="nullprocessing-option-set-to-preserve-is-no-longer-supported-for-distinct-count-measures"></a>相異計數量值不再支援將 NullProcessing 選項設為 Preserve  
- 在之前[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，您可以將[NullPROCESSING 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl)設定為， `Preserve`以進行相異計數量詞。  不幸的是，這種做法產生的結果時常無效，有時甚至會損毀正在處理的作業。 因此 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]將不再提供這項設定。 嘗試使用此設定將導致發生以下驗證錯誤：「中繼資料管理員發生錯誤。 對於\<measurename> 相異計數量詞，保留不是有效的 NullProcessing 值。」  
+ 在之前 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ，您可以將[NullProcessing 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl)設定為，以 `Preserve` 進行相異計數量詞。  不幸的是，這種做法產生的結果時常無效，有時甚至會損毀正在處理的作業。 因此 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]將不再提供這項設定。 嘗試使用此設定將導致發生以下驗證錯誤：「中繼資料管理員發生錯誤。 Preserve 不是 \<measurename> 相異計數量詞的有效 NullProcessing 值。」  
   
 #### <a name="cube-browser-in-management-studio-and-cube-designer-has-been-removed"></a>已經移除 Management Studio 和 Cube 設計師中的 Cube 瀏覽器  
  已經從產品中移除 Cube 瀏覽器控制項，此控制項可讓您將欄位拖放到 Management Studio 或 Cube 設計師中的樞紐分析表結構上。 此控制項為 Office Web 控制項 (OWC) 元件。 OWC 已被 Office 取代，無法再使用。  

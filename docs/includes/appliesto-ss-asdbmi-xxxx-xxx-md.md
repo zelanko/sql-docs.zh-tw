@@ -1,1 +1,1 @@
-<Token>**適用於：** ![是](media/yes-icon.png)SQL Server![是](media/yes-icon.png)Azure SQL Database (僅限受控執行個體)![否](media/no-icon.png)Azure Synapse Analytics (SQL DW)![否](media/no-icon.png)平行處理資料倉儲</Token>
+<Token>**適用物件：** ![是 ](media/yes-icon.png) SQL Server ![ 是 ](media/yes-icon.png) azure SQL 受控執行個體 ![ 否 ](media/no-icon.png) AZURE Synapse Analytics （SQL DW） ![ 否 ](media/no-icon.png) 平行處理資料倉儲</Token>

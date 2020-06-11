@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddd54c22af1e7130940fb8ff3073de0821f4fc90
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525459"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536020"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解適用於多維度模型的 Power View
   本文描述 Microsoft SQL Server 2014 中的「多維度模型的 Power View」功能，並為想要在組織中實作 Power View 的 BI 專業人員和系統管理員提供重要資訊。  
@@ -28,7 +27,7 @@ ms.locfileid: "79525459"
   
  ![多維度模型架構的 Power View](../media/daxmd-architecture.gif "多維度模型架構的 Power View")  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  **伺服器需求**  
   
 -   SQL Server 2014 Enterprise 或 Business Intelligence 版本與以多維度模式執行的 Analysis Services。  
@@ -39,7 +38,7 @@ ms.locfileid: "79525459"
   
 -   Power View 用戶端功能需要 Microsoft Silverlight 5。 如需詳細資訊，請參閱[規劃 Reporting Services 和 Power View 瀏覽器支援 &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
   
-## <a name="features"></a>特性  
+## <a name="features"></a>功能  
  **Power View 的原生支援**  
   
  在此版本中，多維度模型透過 SharePoint 模式的 Power View，支援分析和視覺效果。 您的多維度模型不需要特殊組態。 不過，相較於其他用戶端工具，例如 Microsoft Excel 和 Microsoft Performance Point，Power View 顯示多維度模型物件的方式有些不同。 此版本不支援在 Excel 2013 中使用 Power View，進行多維度模型的分析和視覺效果。  
@@ -55,7 +54,7 @@ ms.locfileid: "79525459"
   
 |多維度物件|表格式物件|  
 |-----------------------------|--------------------|  
-|Cube|模型|  
+|Cube|型號|  
 |Cube 維度|Table|  
 |維度屬性(索引鍵、名稱)|資料行|  
 |量值群組|Table|  
@@ -217,11 +216,11 @@ ms.locfileid: "79525459"
   
  DISCOVER_CSDL_METADATA 要求具有下列限制：  
   
-|名稱|必要|描述|  
+|Name|必要|描述|  
 |----------|--------------|-----------------|  
-|CATALOG_NAME|是|目錄\資料庫名稱。|  
+|CATALOG_NAME|Yes|目錄\資料庫名稱。|  
 |PERSPECTIVE_NAME|是，如果 Cube 包含一個以上的檢視方塊。 如果只有一個 Cube 或有預設檢視方塊，則為選擇性。|多維度資料庫中的 Cube 名稱或檢視方塊名稱。|  
-|VERSION|是|用戶端要求的 CSDL 版本。 2.0 版中支援多維度功能和建構。|  
+|VERSION|Yes|用戶端要求的 CSDL 版本。 2.0 版中支援多維度功能和建構。|  
   
  傳回的 CSDL 輸出文件將模型表示為命名空間，其中包含實體、關聯和屬性。  
   

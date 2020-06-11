@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b62bcdd7bb492a877572621bd7cfe9a3b150d04
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071737"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547520"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>設定使用量資料收集的對象 (PowerPivot for SharePoint
   使用量資料收集是伺服陣列層級的 SharePoint 功能。 PowerPivot for SharePoint 會使用並擴充此系統來支援 PowerPivot 管理儀表板中的報表，以便顯示 PowerPivot 資料與服務的使用方式。 根據您安裝 SharePoint 的方式而定，可能會關閉伺服陣列的使用量資料收集。 伺服陣列管理員必須啟用使用量記錄，以建立會顯示在 PowerPivot 管理儀表板中的使用量資料。  
@@ -123,7 +122,7 @@ ms.locfileid: "66071737"
   
      下一個事件發生時，就會實際刪除資料。 只有在系統處理事件時，才會檢查使用量資料記錄的限制。  
   
-3.  按一下 [確定]  。  
+3.  按一下 [確定]。  
   
  如需如何收集和儲存使用量資料的詳細資訊，請參閱[PowerPivot 使用量資料收集](power-pivot-usage-data-collection.md)。  
   
@@ -146,7 +145,7 @@ ms.locfileid: "66071737"
   
      任何超過此限制的要求都會被分類為 *「已超過」*。 *「已超過」* 沒有可設定的臨界值。 它會從您在 [長時間要求上限] 指定的上限來推斷。 歸類為「已超過」類別的要求，執行的時間超過您已定義的 SLA 所允許的時間。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 ##  <a name="specify-how-often-query-statistics-are-reported-to-the-usage-data-collection-system"></a><a name="ttr"></a>指定向使用量資料收集系統報告查詢統計資料的頻率  
  報告時間間隔指定向使用量資料收集系統報告查詢統計資料的頻率。 查詢統計資料會累積在處理序中，並定期報告為單一事件。 您可以調整間隔，以增加或減少寫入記錄檔的頻率。  
@@ -161,7 +160,7 @@ ms.locfileid: "66071737"
   
      如果您將此值引發成更大的數字，則可能會在可以報告它之前，即遺失統計資料。 例如，服務重新啟動將會導致查詢統計資料遺失。 相反地，如果內建的活動報表顯示資料不足，請考慮減少間隔，以便更頻繁地取得報告時間事件。  
   
-3.  按一下 [確定]  。  
+3.  按一下 [確定]。  
   
 ##  <a name="open-the-powerpivot-service-application-page-to-access-configuration-settings"></a><a name="openconfig"></a>開啟 [PowerPivot 服務應用程式] 頁面以存取設定  
  您必須是伺服陣列或服務系統管理員，才能修改服務應用程式設定。 如果在伺服陣列中定義了多個 PowerPivot 服務應用程式，則必須個別修改每個服務應用程式。  
@@ -181,7 +180,7 @@ ms.locfileid: "66071737"
   
 |設定|預設值|類型|有效範圍|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services 使用量事件** (連接、載入、卸載、要求)|\<已啟用>|Boolean|啟用或停用這些值。|  
+|**Analysis Services 使用量事件** (連接、載入、卸載、要求)|\<enabled>|布林值|啟用或停用這些值。|  
 |**查詢報告間隔**|300 (以秒為單位)|整數|1 到任何正整數。 預設值是 5 分鐘。|  
 |**[使用量資料記錄]**|365 (以天為單位)|整數|0 表示無限制，但是您也可以設定歷程記錄資料到期的上限，並設成可自動刪除資料。 有限的保留週期有效值為 1 到 5000 (以天為單位)。|  
 |簡單式回應時間上限|500 (以毫秒為單位)|整數|設定會定義簡單式要求-回應交換的上限。 任何介於 0 到 500 毫秒之間完成的要求都是簡單式要求，報告用途會加以忽略。|  

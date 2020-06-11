@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 554c7c0f375d63710c86e37666ee98c6dac6daf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6102fe9c623e785c0ca207660697bffebce82bb5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081166"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544482"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>篩選對話方塊 (採礦精確度圖表)
   [篩選]**** 對話方塊會幫助您建立可套用至資料集的條件。 此資料集可以是用於測試的外部資料集，或是用於定型採礦模型的案例資料。 此對話方塊可幫助您建立準則，您可以在 [資料集篩選器]**** 對話方塊或 [模型篩選器]**** 對話方塊中，將這些準則儲存為更複雜之篩選準則的一部分。  
@@ -34,7 +33,7 @@ ms.locfileid: "66081166"
   
  **如需詳細資訊，請參閱：** [測試和驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **條件**  
  包含資料行的方格，您會在這裡根據 [資料集篩選器]**** 對話方塊中選取的資料表指定資料行的條件。  
   

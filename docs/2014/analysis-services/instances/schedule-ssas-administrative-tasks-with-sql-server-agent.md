@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd751efccc038c131bc61338d7adcd8e10a67d93
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079677"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543770"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>使用 SQL Server Agent 排程 SSAS 管理工作
   您可以使用 SQL Server Agent 服務來為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理工作排程，以便按照所需的順序和時間執行工作。 為工作排程可協助您將處理自動化，以便定期或依照可預測的週期執行。 您可以排程管理工作 (例如 Cube 處理) 在商務活動較少的時間執行。 此外，您也可以在 SQL Server Agent 作業內建立作業步驟，決定工作執行的順序。 例如，您可以先處理 Cube，然後再執行 Cube 的備份。  
@@ -24,10 +23,10 @@ ms.locfileid: "66079677"
   
  本主題是一項逐步解說，其中示範了兩種使用 SQL Server Agent 來執行 XMLA 指令碼的方式。 第一則範例會示範如何排程單一維度的處理。 第二則範例會示範如何將處理工作結合成依照排程執行的單一指令碼。 若要完成此逐步解說，您必須符合下列必要條件。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  您必須安裝 SQL Server Agent 服務。  
   
- 根據預設，作業會在此服務帳戶底下執行。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中，SQL Server Agent 的預設帳戶是 NT Service\SQLAgent $\<instancename>。 若要執行備份或處理工作，此帳戶必須是 Analysis Services 執行個體的系統管理員。 如需詳細資訊，請參閱[&#40;Analysis Services&#41;授與伺服器管理員許可權](grant-server-admin-rights-to-an-analysis-services-instance.md)。  
+ 根據預設，作業會在此服務帳戶底下執行。 在中 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ，SQL Server Agent 的預設帳戶是 NT Service\SQLAgent $ \<instancename> 。 若要執行備份或處理工作，此帳戶必須是 Analysis Services 執行個體的系統管理員。 如需詳細資訊，請參閱[&#40;Analysis Services&#41;授與伺服器管理員許可權](grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   
  您也應該擁有要使用的測試資料庫。 您可以部署 AdventureWorks 多維度範例資料庫或是要用於此逐步解說之 Analysis Services 多維度教學課程中的專案。 如需詳細資訊，請參閱[安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](../install-sample-data-and-projects.md)。  
   
@@ -81,15 +80,15 @@ ms.locfileid: "66079677"
   
 6.  在 **[新增作業步驟]** 對話方塊的 **[步驟名稱]** 中，輸入步驟名稱。  
   
-7.  在 [伺服器]**** 中，輸入 **localhost** (代表 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的預設執行個體) 和 **localhost\\**\<執行個體名稱**> (代表具名執行個體)。  
+7.  在 [**伺服器**] 中，為的預設實例輸入**localhost** ， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 並為指定的實例輸入**localhost \\ ** \<*instance name*> 。  
   
-     如果您要從遠端電腦執行作業，請使用作業執行所在的伺服器名稱和執行個體名稱。 針對預設實例\<使用 [*伺服器名稱*>] 格式，並\<針對命名的實例使用 [*伺服器名稱*>\\<*實例名稱*]>。  
+     如果您要從遠端電腦執行作業，請使用作業執行所在的伺服器名稱和執行個體名稱。 使用 \<*server name*> 預設實例的格式，並針對 \<*server name*> \\ < 已命名的實例>*實例名稱*。  
   
 8.  在 **[類型]** 中，選取 **[SQL Server Analysis Services 命令]**。  
   
 9. 在 [命令]**** 中，按一下滑鼠右鍵，然後選取 [貼上]****。 您在上一個步驟中產生的 XMLA 指令碼應該就會出現在命令視窗中。  
   
-10. 按一下 [確定]  。  
+10. 按一下 [確定]。  
   
 11. 在 **[選取頁面]** 底下，按一下 **[排程]**，然後按一下 **[新增]**。  
   
@@ -205,7 +204,7 @@ ms.locfileid: "66079677"
   
 10. 在 [命令]**** 中，按一下滑鼠右鍵，然後選取 [貼上]****。  
   
-11. 按一下 [確定]  。  
+11. 按一下 [確定]。  
   
 12. 在 **[排程]** 頁面中，按一下 **[新增]**。  
   
@@ -213,7 +212,7 @@ ms.locfileid: "66079677"
   
      此步驟會建立星期日上午 12:00 的排程。 下一個步驟將為您示範如何手動執行作業。 您也可以選取在監視時執行作業的排程。  
   
-14. 按一下 [確定]**** 關閉對話方塊。  
+14. 按一下 [確定]  關閉對話方塊。  
   
 15. 在物件總管**** 中，展開 [作業]****、以滑鼠右鍵按一下您所建立的作業，然後選取 [從下列步驟啟動作業]****。  
   

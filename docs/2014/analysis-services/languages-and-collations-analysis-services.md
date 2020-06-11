@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 62956774e203b1438de1ea07708940d0711053ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 641f161ede6daebdd879c3316ce73a2e446c21c1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079375"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543657"
 ---
 # <a name="languages-and-collations-analysis-services"></a>語言和定序 (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 作業系統所提供的語言和定序。 `Language` 和 `Collation` 屬性會在安裝期間於執行個體層級進行初始設定，但之後可在物件階層的不同層級進行變更。  
@@ -51,7 +50,7 @@ ms.locfileid: "66079375"
 -   [Analysis Services 中的 GB18030 支援](#bkmk_gb18030)  
   
 ##  <a name="objects-that-support-language-and-collation-properties"></a><a name="bkmk_object"></a>支援語言和定序屬性的物件  
- `Language`和`Collation`屬性通常會一起公開-您可以在其中`Language`設定，也可以設定`Collation`。  
+ `Language`和 `Collation` 屬性通常會一起公開-您可以在其中設定 `Language` ，也可以設定 `Collation` 。  
   
  您可以在下列物件上設定 `Language` 和 `Collation`：  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079375"
   
      不論您在 Cube 上設定的語言和定序為何，都可供 Cube 中含有的所有量值和維度使用。 只有在維度屬性上建立翻譯時，才能進一步設定定序屬性。 否則會假設屬性層級沒有翻譯，而且每個 Cube 有一個定序。  
   
- 此外，您也可以`Language`在**翻譯**物件上單獨設定。  
+ 此外，您也可以 `Language` 在**翻譯**物件上單獨設定。  
   
  您將翻譯加入 Cube 或維度時，會建立翻譯物件。 `Language`是轉譯定義的一部分。 相反地，`Collation` 會在 Cube 或更高層級設定，並供所有翻譯共用。 這在含有翻譯之 Cube 的 XMLA 中會很明顯，其中您會看到多個語言屬性 (每個翻譯一個屬性)，但只會看到一個定序。 請注意，維度屬性翻譯是例外；在這種情況下，您可以覆寫 Cube 定序，來指定符合來源資料行的屬性定序 (資料庫引擎支援在個別資料行上設定定序，並且通常可設定個別翻譯，從不同的來源資料行取得成員資料)。 否則，對於其他所有翻譯而言，會使用 `Language` 本身，而不會使用 `Collation`。 如需詳細資訊，請參閱[翻譯 &#40;Analysis Services&#41;](translations-analysis-services.md)。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66079375"
   
  雖然 Analysis Services 會依名稱列出語言，但是針對屬性儲存的實際值會是 LCID。 以程式設計方式或透過 msmdsrv.ini 檔案設定語言屬性時，請使用 [地區設定識別碼 (LCID)](http://en.wikipedia.org/wiki/Locale) 作為值。 LCID 是由語言識別碼、排序識別碼和保留的位元 (用於識別特定語言) 所組成的 32 位元值。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用 LCID 為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體和物件指定選定語言。  
   
- 您可以使用十六進位或十進位格式設定 LCID。 `Language`屬性的一些有效值範例包括：  
+ 您可以使用十六進位或十進位格式設定 LCID。 屬性的一些有效值範例 `Language` 包括：  
   
 -   0x0409 或 1033，代表 [英文 (美國)] ****  
   
@@ -140,9 +139,9 @@ ms.locfileid: "66079375"
   
 -   更新定序之後，請重新處理資料分割和維度。  
   
- 您可以在伺服器層級，使用 SQL Server Management Studio 或 AMO PowerShell 來變更預設語言或定序。 或者，您也可以在 msmdsrv.exe 檔案中修改** \<language>** 和** \<CollationName>** 設定，指定語言的 LCID。  
+ 您可以在伺服器層級，使用 SQL Server Management Studio 或 AMO PowerShell 來變更預設語言或定序。 或者，您也可以 **\<Language>** **\<CollationName>** 在 msmdsrv.ini 檔案中，指定語言的 LCID 來修改和設定。  
   
-1.  在 Management Studio 中，以滑鼠右鍵按一下 [伺服器名稱] |**屬性** | **語言/定序**。  
+1.  在 Management Studio 中，以滑鼠右鍵按一下 [伺服器名稱] |**屬性**  | **語言/定序**。  
   
 2.  選擇排序選項。 若要選取 [二進位] **** 或 [二進位 2] ****，請先清除 [區分腔調字] **** 的核取方塊。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "66079375"
   
  使用 XMLA 修改現有的資料庫之前，請確定您沒有引入資料庫與用來建立資料庫的原始程式檔之間的差異。 例如，您可能想要使用 XMLA 來快速變更概念驗證測試的語言或定序，然後追蹤原始程式檔的變更 (請參閱 [變更 Cube 上的語言或定序](#bkmk_cube))，並使用已存在的作業程序來重新部署方案。  
   
-1.  在 Management Studio 中，以滑鼠右鍵按一下資料庫 |將**資料庫** | 編寫為**ALTER To** | **New 查詢編輯器視窗**。  
+1.  在 Management Studio 中，以滑鼠右鍵按一下資料庫 |**編寫資料庫的腳本為**  | **修改為**  | **新的查詢編輯器視窗**。  
   
 2.  搜尋現有的語言或定序，並以替代值取代。  
   

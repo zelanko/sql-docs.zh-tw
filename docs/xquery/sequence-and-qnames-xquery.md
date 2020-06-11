@@ -1,5 +1,6 @@
 ---
 title: Sequence 和 QNames （XQuery） |Microsoft Docs
+description: 瞭解 XQuery 中時序和 QNames 的基本概念。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 017c2289864b8d2d475bea63a5828d37543b7292
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380779"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305747"
 ---
 # <a name="sequence-and-qnames-xquery"></a>順序和 QName (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +112,7 @@ SELECT @x.query('/Root/a');
   
  在運算式 (`/Root/a`) 中，`Root` 和 `a` 是 QName。  
   
- 在下列範例中，查詢是針對具類型的**xml**資料行所指定。 查詢會逐一查看第\<一個 workcenter 位置上的所有步驟> 元素。  
+ 在下列範例中，查詢是針對具類型的**xml**資料行所指定。 查詢會 \<step> 逐一查看第一個 workcenter 位置上的所有元素。  
   
 ```  
 SELECT Instructions.query('  
@@ -146,7 +147,7 @@ WHERE ProductModelID=7;
  您建立的每個資料庫都有**sys** XML 架構集合。 此集合會保留這些結構描述，所以從使用者建立的任何 XML 結構描述集合都能存取這些結構描述。  
   
 > [!NOTE]  
->  此實作為不支援中`local` http://www.w3.org/2004/07/xquery-local-functions的 XQuery 規格中所述的前置詞。  
+>  此實作為不支援 `local` 中的 XQuery 規格中所述的前置詞 http://www.w3.org/2004/07/xquery-local-functions 。  
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 基本概念](../xquery/xquery-basics.md)  

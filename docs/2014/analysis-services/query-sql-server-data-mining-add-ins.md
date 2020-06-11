@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dcddeb64b14301f08a7dc723ef89737102f257ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d0f0212795adcaed220806f8cc1349f95c2a6f3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070474"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539570"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>查詢 (SQL Server 資料採礦增益集)
   ![資料採礦功能區中的查詢模型按鈕](media/dmc-query.gif "資料採礦功能區中的查詢模型按鈕")  
@@ -47,8 +46,8 @@ ms.locfileid: "66070474"
   
  您隨時都可以按一下 [ **Advanced** ]，切換至 [**資料採礦先進查詢編輯器**]，讓您更充分掌控 DMX 語句的每個部分。 如需如何使用 advanced query 編輯工具的詳細資訊，請參閱[先進資料採礦查詢編輯器](advanced-data-mining-query-editor.md)。  
   
-### <a name="requirements"></a>需求  
- 若要使用**查詢**嚮導，您必須連接到的實例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 此外，此伺服器必須至少包含一個適當類型的資料採礦模型。 如果沒有可用的採礦模型，您可以使用適用於 Excel 的資料採礦用戶端中所提供的精靈來建立採礦模型。 如需如何使用 wizard 建立新的「挖掘模式」的詳細資訊，請參閱[建立資料採礦模型](creating-a-data-mining-model.md)。  
+### <a name="requirements"></a>規格需求  
+ 若要使用**查詢**嚮導，您必須連接到的實例 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 此外，此伺服器必須至少包含一個適當類型的資料採礦模型。 如果沒有可用的採礦模型，您可以使用適用於 Excel 的資料採礦用戶端中所提供的精靈來建立採礦模型。 如需如何使用 wizard 建立新的「挖掘模式」的詳細資訊，請參閱[建立資料採礦模型](creating-a-data-mining-model.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;適用于 Excel 的資料採礦增益集部署和調整採礦模型&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   

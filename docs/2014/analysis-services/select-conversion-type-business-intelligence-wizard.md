@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ab618eaa2d8d54b08e3d01fa238d19451084eff8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3fd3d7607cad8c8e721e21f4e5ad00255817792
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069622"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538260"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>選取轉換類型 (商業智慧精靈)
   使用 **[選取轉換類型]** 頁面，即可針對以多種貨幣儲存的交易，定義本地貨幣和報表貨幣之間的關聯性。 本地貨幣為 **[選取量值]** 頁面中，選取之量值用於儲存交易的貨幣。 報表貨幣是用於轉換 **[選取量值]** 頁面中所選取交易的貨幣。  
@@ -25,7 +24,7 @@ ms.locfileid: "66069622"
 > [!NOTE]  
 >  如果 [商業智慧精靈] 是從 [維度設計師] 啟動，或是在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中方案總管的某維度上按一下滑鼠右鍵來啟動，則不會出現此頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **多對多**  
  使用本地貨幣儲存交易。 貨幣轉換功能會先將這類交易轉換為 **[設定貨幣轉換選項]** 頁面中指定的樞紐貨幣，再轉換為一或多種其他的報表貨幣。  
   

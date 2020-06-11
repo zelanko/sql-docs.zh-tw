@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1226c5a4-fd88-469c-81fe-3f664ab66e5e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f0f8ac81762fac418eb1009626038e6b0708476f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2351e5d29f4770486ecc97fb41e0419e32ac2f4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175617"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547664"
 ---
 # <a name="technical-reference-ssas"></a>技術參考 (SSAS)
   尋找工具、語言及 PowerShell 參考文件集以使用或管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5578bed4ce59ffb3c431c30e33418abe693a4165
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079870"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543840"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>確認 PowerPivot for SharePoint 安裝
   您在 SharePoint 伺服器陣列中安裝的 PowerPivot for SharePoint 執行個體是透過 SharePoint 管理中心來進行管理。 您至少可以檢查管理中心和 SharePoint 網站上的頁面，以確認 PowerPivot 伺服器元件和功能是可用的。 但是，為了完整確認安裝作業，您必須擁有可以發行到 SharePoint 並從文件庫存取的 PowerPivot 活頁簿。 為了測試用途，您可以發行已經包含 PowerPivot 資料的範例活頁簿，並用它來確認 SharePoint 整合已正確設定。  
@@ -59,7 +58,7 @@ ms.locfileid: "66079870"
 ## <a name="verify-integration-at-the-site-level"></a>確認網站層級的整合  
  若要確認 PowerPivot 可與 SharePoint 網站整合，請執行下列動作：  
   
-1.  在瀏覽器中，開啟您建立的 Web 應用程式。 如果您使用預設值，您可以在 URL\<位址中指定 HTTP://電腦名稱稱>。  
+1.  在瀏覽器中，開啟您建立的 Web 應用程式。 如果您使用預設值，您可以 \<your computer name> 在 URL 位址中指定 HTTP://。  
   
 2.  確認應用程式中可以使用 PowerPivot 資料存取和處理功能。 若要這樣做，您可以確認 PowerPivot 提供的文件庫範本是否存在：  
   
@@ -84,14 +83,14 @@ ms.locfileid: "66079870"
   
 6.  在 [開始] 功能表中，從 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 程式群組啟動 SQL Server Management Studio。 如果伺服器上未安裝此工具，您可以向前跳到最後一個步驟，確認快取檔案存在。  
   
-7.  在 [伺服器類型] 中，選取 [Analysis Services]****。  
+7.  在 [伺服器類型] 中，選取 [ **Analysis Services**]。  
   
-8.  在 [伺服器名稱] 中，輸入** \<伺服器名稱> \powerpivot**，其中** \<伺服器名稱>** 是具有 PowerPivot for SharePoint 安裝的電腦名稱稱。  
+8.  在 [伺服器名稱] 中，輸入** \<server-name> \powerpivot**，其中 **\<server-name>** 是具有 PowerPivot for SharePoint 安裝的電腦名稱稱。  
   
 9. 按一下 [ **連接**]。 這樣會確認可以使用 Analysis Services 伺服器。  
   
 10. 在物件總管中，您可以按一下 [**資料庫**]，以查看已載入的 PowerPivot 資料檔案清單。  
   
-11. 在電腦檔案系統上，檢查下列資料夾來決定檔案是否要快取到磁碟。 快取檔案的存在會進一步驗證您的部署是否可以運作。 若要查看檔案快取，請移\<至磁片磁碟機>： \PROGRAM Files\Microsoft SQL Server\MSAS11。POWERPIVOT\OLAP\Backup\Sandboxes\Default PowerPivot 服務應用程式資料夾。 每個快取的資料庫都會使用以 GUID 為基礎的命名慣例，儲存在自己的資料夾中，以確保名稱是唯一的。  
+11. 在電腦檔案系統上，檢查下列資料夾來決定檔案是否要快取到磁碟。 快取檔案的存在會進一步驗證您的部署是否可以運作。 若要查看檔案快取，請移至 \<drive> ： \Program FILES\MICROSOFT SQL Server\MSAS11。POWERPIVOT\OLAP\Backup\Sandboxes\Default PowerPivot 服務應用程式資料夾。 每個快取的資料庫都會使用以 GUID 為基礎的命名慣例，儲存在自己的資料夾中，以確保名稱是唯一的。  
   
   

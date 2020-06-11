@@ -16,17 +16,17 @@ ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eb7ac1830554180b1de1ee67b6bc6f11fd2463f
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 0f21a845b6db79390a31c4b26197547a041e76de
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000790"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856596"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>選項（查詢結果-SQL Server-一般頁面）
   使用此頁面來決定 [查詢結果] 窗格的預設行為。 若要顯示這些設定，請在 [工具]**** 功能表上按一下 [選項]****，展開 [查詢結果]**** 資料夾，選取 [SQL Server]****，然後按一下 [一般]****。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢]**** 功能表上的 [查詢選項]****，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]****。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **結果的預設目的地**  
  將結果集的預設目的地設定為 [結果] 窗格中的文字或方格，或者設定為一個檔案。  
   

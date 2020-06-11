@@ -1,7 +1,7 @@
 ---
 title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/20/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0673c55c64c623bd112cbf63c50bc803764ce04c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: beede3f42597a6b3c7acc6f5bc5a57bc070d0eba
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825022"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732686"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "82825022"
 |類型|**char(2)**|物件類型：<br /><br /> AF = 彙總函式 (CLR)<br /><br /> C = CHECK 條件約束<br /><br /> D = DEFAULT (條件約束或獨立式)<br /><br /> F = FOREIGN KEY 條件約束<br /><br /> FN = SQL 純量函數<br /><br /> FS = 組件 (CLR) 純量函數<br /><br /> FT = 組件 (CLR) 資料表值函式<br /><br /> IF = SQL 嵌入資料表值函式<br /><br /> IT = 內部資料表<br /><br /> P = SQL 預存程序<br /><br /> PC = 組件 (CLR) 預存程序<br /><br /> PG = 計畫指南<br /><br /> PK = PRIMARY KEY 條件約束<br /><br /> R = 規則 (舊式、獨立式)<br /><br /> RF = 複寫篩選程序<br /><br /> S = 系統基底資料表<br /><br /> SN = 同義字<br /><br /> SO = 序列物件<br /><br /> U = 資料表 (使用者定義)<br /><br /> V = 檢視<br /><br /> EC = 邊緣條件約束 <br /><br /> <br /><br /> **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> <br /><br /> SQ = 服務佇列<br /><br /> TA = 組件 (CLR) DML 觸發程序<br /><br /> TF = SQL 資料表值函式<br /><br /> TR = SQL DML 觸發程序<br /><br /> TT = 資料表類型<br /><br /> UQ = UNIQUE 條件約束<br /><br /> X = 擴充預存程序<br /><br /> <br /><br /> **適用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。<br /><br /> <br /><br /> ET = 外部資料表|  
 |type_desc|**nvarchar(60)**|物件類型的描述：<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
 |create_date|**datetime**|物件的建立日期。|  
-|modify_date|**datetime**|上次利用 ALTER 陳述式來修改物件的日期。 如果物件是資料表或檢視，當建立或變更資料表或檢視的叢集索引時，也會變更 modify_date。|  
+|modify_date|**datetime**|上次利用 ALTER 陳述式來修改物件的日期。 如果物件是資料表或視圖，當建立或更改資料表或 view 的索引時，modify_date 也會變更。|  
 |is_ms_shipped|**bit**|物件是內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所建立的。|  
 |is_published|**bit**|已發行物件。|  
 |is_schema_published|**bit**|僅發行物件的結構描述。|  
@@ -58,7 +58,7 @@ ms.locfileid: "82825022"
 ## <a name="remarks"></a>備註  
  您可以將 [ [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)]、[ [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md)] 和 [ [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)] （）內建函數套用至 sys.databases 中顯示的物件。  
   
- 這個視圖有一個具有相同架構的版本，稱為[system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)，它會顯示系統物件。 還有另一個稱為[all_objects sys.databases](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)的視圖，會同時顯示系統和使用者物件。 這三個目錄檢視都有相同的結構。  
+ 此視圖有一個具有相同架構的版本，稱為[sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)，會顯示系統物件。 還有另一個稱為[all_objects sys.databases](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)的視圖，會同時顯示系統和使用者物件。 這三個目錄檢視都有相同的結構。  
   
  在這一版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，擴充索引 (例如 XML 索引或空間索引) 會視為 sys.objects 中的內部資料表 (type = IT 且 type_desc = INTERNAL_TABLE)。 如果是擴充索引：  
   
@@ -163,7 +163,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [all_objects &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
- [system_objects &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
+ [sys.system_objects &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
  [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

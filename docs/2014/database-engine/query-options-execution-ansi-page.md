@@ -12,25 +12,25 @@ ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1b383c290bb507cdafaf824c16b3a1587b998bd3
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b20ab1851d02e493035414dd4682fc5330296b19
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000616"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858620"
 ---
 # <a name="query-options-execution-ansi-page"></a>查詢選項執行 (ANSI 頁面)
   使用此頁面來指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 將使用 ISO （ANSI）標準中所指定的全部或部分設定來執行查詢。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **SET ANSI_DEFAULTS**  
  選取所有的預設 ANSI 設定。 依預設，此方塊無法使用，因為只設定了某些 ISO 設定。  
   
  **SET QUOTED_IDENTIFIER**  
- 用引號來圍住物件識別碼。 預設會選取這個選項。  
+ 用引號來圍住物件識別碼。 預設會選取此選項。  
   
  **SET ANSI_NULL_DFLT_ON**  
- 針對在 CREATE TABLE 或 ALTER TABLE 陳述式期間未明確定義為 NOTNULL 的所有使用者自訂的資料類型或資料行，允許 Null 值 (預設的狀態)。 預設會選取這個選項。  
+ 針對在 CREATE TABLE 或 ALTER TABLE 陳述式期間未明確定義為 NOTNULL 的所有使用者自訂的資料類型或資料行，允許 Null 值 (預設的狀態)。 預設會選取此選項。  
   
  **SET IMPLICIT_TRANSACTIONS**  
  依預設，不會選取這個選項。  
@@ -48,10 +48,10 @@ ms.locfileid: "83000616"
   
 -   在清除了這個核取方塊之後，除以零及算術溢位錯誤，都會造成陳述式的復原並產生錯誤訊息。 設定為 OFF 時，除以零及算術溢位錯誤會造成傳回 Null 值。 如果在 character、Unicode 或 binary 資料行中嘗試 INSERT 或 UPDATE 作業，且新值長度超過資料行的大小上限時，除以零或算術溢位錯誤會造成傳回 Null 值。 如果**SET ANSI_WARNINGS**是 ON，則會依 ISO 標準的指定取消插入或更新作業。 字元資料行尾端的空格會被忽略，二進位資料行尾端的 Null 也會被忽略。 當它是 OFF 時，便會將資料截斷成為資料行大小，陳述式會繼續作業。  
   
- 預設會選取這個選項。  
+ 預設會選取此選項。  
   
  **SET ANSI_NULLS**  
- 指定搭配 null 值一起使用時，等於 (`=`) 和不等於 (`<>`) 比較運算子的 ISO 相容行為。 如果選取 **SET ANSI_NULLS** ，所有針對 Null 值的比較，都會評估為 UNKNOWN，也就是符合 ISO 的行為。 如果未選取 **SET ANSI_NULLS** ，且如果資料值為 NULL，則所有資料針對 Null 值比較，都會評估為 TRUE。 預設會選取這個選項。  
+ 指定搭配 null 值一起使用時，等於 (`=`) 和不等於 (`<>`) 比較運算子的 ISO 相容行為。 如果選取 **SET ANSI_NULLS** ，所有針對 Null 值的比較，都會評估為 UNKNOWN，也就是符合 ISO 的行為。 如果未選取 **SET ANSI_NULLS** ，且如果資料值為 NULL，則所有資料針對 Null 值比較，都會評估為 TRUE。 預設會選取此選項。  
   
  **重設為預設值**  
  將此頁面上的所有值重設為原始預設值。  

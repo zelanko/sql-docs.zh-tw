@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d44afc5bb4c352a2cb5dfd39030a52db990e3a0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6cc05e073bdb57033e4e618eb85a9c04fda76f5d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069601"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538211"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>選取建立方法 (維度精靈)
   使用 **[選取建立方法]** 頁面，即可選取建立維度的方式。  
@@ -26,7 +25,7 @@ ms.locfileid: "66069601"
   
 -   在方案總管**** 的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度]**** 資料夾，然後按一下 [新增維度]****。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用現有的資料表**  
  根據資料來源中的一個或多個資料表，建立維度。 適用於維度的屬性將會因資料表中資料的結構而不同。  
   

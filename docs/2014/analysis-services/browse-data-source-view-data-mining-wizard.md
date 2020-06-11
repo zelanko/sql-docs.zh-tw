@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59c8690a9b71f8a6fecf98e64007eecfbd339b82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08a9f9214f7a23a86ad631717d68e178bf49fce3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064484"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527794"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>瀏覽資料來源檢視 (資料採礦精靈)
   使用 [Browse Data Source View (瀏覽資料來源檢視)]**** 對話方塊，即可檢視您在精靈之 [選取資料來源檢視]**** 頁面上所選取的資料來源檢視。  
@@ -27,7 +26,7 @@ ms.locfileid: "66064484"
   
  **如需詳細資訊，請參閱** [多維度模型中的資料來源檢視](multidimensional-models/data-source-views-in-multidimensional-models.md)、[資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **縮放**  
  使用即可變更圖表中所顯示之詳細資料的層級。  
   

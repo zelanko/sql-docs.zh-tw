@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26877c4892b050cbf9c8dcc6553530dff513f8fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b714999109d4935130d7787983e18b76f9a442a7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078791"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543380"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>第 4 課：標記為日期資料表
   在「第 2 課：加入資料」中，您已匯入了名為 DimDate 的維度資料表。 接著您在「第 3 課：重新命名資料行」中，將 DimDate 資料表重新命名為簡化的 Date。 當模型中的此資料表已命名為 Date 時，也可以稱作「日期資料表」**，並會在其中包含日期及時間資料。  
@@ -26,7 +25,7 @@ ms.locfileid: "66078791"
   
  完成本課程的估計時間： **3 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 3 課：重新命名資料行](rename-columns.md)。  
   
 ### <a name="to-set-mark-as-date-table"></a>設定標記為日期資料表  

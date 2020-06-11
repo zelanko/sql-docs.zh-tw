@@ -1,5 +1,6 @@
 ---
 title: 邏輯運算式（XQuery） |Microsoft Docs
+description: 瞭解 XQuery 中支援的邏輯運算式。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62552e4e533126bc1e6b53e78e2b0456557e7f45
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004501"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689016"
 ---
 # <a name="logical-expressions-xquery"></a>邏輯運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ expression1 and expression2
 expression1 or expression2  
 ```  
   
- 中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的測試運算式`expression1,``expression2`會產生空的序列、一或多個節點的序列，或單一布林值。 根據結果而定，將以下列方式來決定有效的布林值：   
+ 中的測試運算式 `expression1,``expression2` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會產生空的序列、一或多個節點的序列，或單一布林值。 根據結果而定，將以下列方式來決定有效的布林值：   
   
 -   如果測試運算式產生空白時序，運算式的結果即為 False。  
   
@@ -47,7 +48,7 @@ expression1 or expression2
   
  接著，邏輯**and**和**or**運算子會套用至具有標準邏輯語義的運算式產生的布林值。  
   
- 下列查詢會從產品目錄中，針對特定的產品型號，從「封面`Picture`小型圖片」、「<> 元素」中抓取。 請注意對於每個產品描述文件，目錄可以儲存具有不同屬性的一或多個產品圖片，例如大小與角度。  
+ 下列查詢會從產品目錄中，針對特定的產品型號，從「封面小型圖片」、「<> 元素」中抓取 `Picture` 。 請注意對於每個產品描述文件，目錄可以儲存具有不同屬性的一或多個產品圖片，例如大小與角度。  
   
 ```  
 SELECT CatalogDescription.query('  

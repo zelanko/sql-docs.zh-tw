@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 363b662c-b839-4971-bbd7-1842f73ce141
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81d1df159944b96d0945bb45d2c331922d0f46e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 01df67471753922e3e7db39c56a9ed50aae900dc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074225"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546340"
 ---
 # <a name="modifying-data-mdx"></a>修改資料 (MDX)
   除了使用多維度運算式 (MDX) 擷取及處理維度與 Cube 的資料之外，您還可以使用 MDX來更新或「回寫」** 維度與 Cube 資料。 這些更新可能是暫時性 (如同推測性或 "what if" 分析 ) 或永久性 (例如，必須根據資料分析來變更時)。  

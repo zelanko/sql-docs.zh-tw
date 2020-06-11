@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65a6c852200c72fb9040cf5e93efbac02bb065b3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086644"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526334"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>交叉驗證 (SQL Server 資料採礦增益集)
   ![資料採礦功能區中的交叉驗證按鈕](media/dmc-xvalid.gif "資料採礦功能區中的交叉驗證按鈕")  
@@ -62,12 +61,12 @@ ms.locfileid: "66086644"
   
      如果可預測的資料行包含連續數值資料，就無法使用此選項。  
   
-8.  按一下 [完成]  。 隨即建立新的工作表，名為**交叉驗證**。  
+8.  按一下 [完成] 。 隨即建立新的工作表，名為**交叉驗證**。  
   
     > [!NOTE]  
     >  當系統正在將模型分割為折疊，而且每個折疊都在進行測試時，Microsoft Excel 可能會暫時變成沒有回應。  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  若要建立交叉驗證報表，您必須已經建立了資料採礦結構和相關的模型。 精靈會提供一個對話方塊來協助您選擇現有的結構和模型。  
   
  如果您選擇支援多個採礦模型的採礦結構，而且模型使用不同的可預測屬性，交叉驗證精靈將會只測試共用相同可預測屬性的模型。  
@@ -75,7 +74,7 @@ ms.locfileid: "66086644"
  如果您選擇同時支援群集模型和其他種類模型的結構，將不會測試群集模型。  
   
 ## <a name="understanding-cross-validation-results"></a>了解交叉驗證結果  
- 交叉驗證的結果會顯示在新的工作表中，標題**為 [屬性名稱的\<交叉驗證報表]>**。 新的工作表包含數個區段：第一個區段是摘要，提供關於經過測試之模型的重要中繼資料，讓您知道這是哪個模型或結構的結果。  
+ 交叉驗證的結果會顯示在新的工作表中，標題**為的 \<attribute name> 交叉驗證報表**。 新的工作表包含數個區段：第一個區段是摘要，提供關於經過測試之模型的重要中繼資料，讓您知道這是哪個模型或結構的結果。  
   
  報表中的第二個區段提供統計摘要，表示原始模型的良好程度。 在此摘要中，針對每個折迭所建立的模型之間的差異會針對三個主要量值進行分析：*根平均平方誤差*、*平均絕對錯誤*和*記錄分數*。 這些是標準的統計量值，不但可用於資料採礦，而且也可以用於大部分類型的統計分析。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66086644"
 #### <a name="classification-true-or-false-positives-and-negatives"></a>分類：真肯定和真否定或誤判和誤否定  
  此測試用於具有指定之目標的所有分類模型。 量值表示每個案例對於下列問題的回應如何進行分類：模型在預測什麼，以及實際的結果是什麼。  
   
-|Measure|描述|  
+|Measure|Description|  
 |-------------|-----------------|  
 |真肯定|符合這些條件的案例計數：<br /><br /> 案例包含目標值。<br /><br /> 模型預測出案例包含目標值。|  
 |誤判|符合這些條件的案例計數：<br /><br /> 實際的值等於目標值。<br /><br /> 模型預測出案例包含目標值。|  

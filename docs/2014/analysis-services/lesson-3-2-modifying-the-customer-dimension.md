@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63cfc1fc4b5bcc3e1c468bbb456a660587757f2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078933"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543440"
 ---
 # <a name="modifying-the-customer-dimension"></a>修改 [客戶] 維度
   您有許多不同方式可以增加 Cube 中維度的可用性和功能性。 在這個主題的工作中，您會修改 Customer 維度。  
@@ -27,7 +26,7 @@ ms.locfileid: "66078933"
   
 1.  針對 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [客戶] 維度，切換至 [維度設計師]****。 若要這樣做，請在方案總管的 [維度]**** 節點中，按兩下 [客戶]**** 維度。  
   
-2.  在 [屬性]**** 窗格中，以滑鼠右鍵按一下 [英文國家地區名稱]****，然後按一下 [重新命名]****。 將屬性的名稱變更為`Country-Region`。  
+2.  在 [屬性]**** 窗格中，以滑鼠右鍵按一下 [英文國家地區名稱]****，然後按一下 [重新命名]****。 將屬性的名稱變更為 `Country-Region` 。  
   
 3.  請以相同方式變更下列屬性的名稱：  
   
@@ -44,15 +43,15 @@ ms.locfileid: "66078933"
   
 #### <a name="to-create-a-hierarchy"></a>若要建立階層  
   
-1.  將`Country-Region`屬性從 [**屬性**] 窗格拖曳到 [**階層] 窗格**中。  
+1.  將 `Country-Region` 屬性從 [**屬性**] 窗格拖曳到**Hierarchies** [階層] 窗格中。  
   
-2.  將`State-Province`屬性從 [**屬性**] 窗格拖曳**到 [階層**] 窗格的 [ ** \<新增層級**]>`Country-Region`資料格（在層級底下）。  
+2.  將 `State-Province` 屬性從 [**屬性**] 窗格拖曳到 [階層 **\<new level>** ] **Hierarchies**窗格中的資料格（位於 `Country-Region` 層級底下）。  
   
-3.  將 [ **City** ] 屬性從 [**屬性**] 窗格拖曳到 [**階層] 窗格**中的 [ ** \<新增層級]>** 資料格（在`State-Province`層級底下）。  
+3.  將**City**屬性從 [**屬性**] 窗格拖曳到 [階層 **\<new level>** ] **Hierarchies**窗格中的資料格（位於 `State-Province` 層級底下）。  
   
-4.  在 [**維度結構**] 索引卷**標的 [階層] 窗格中**，以滑鼠右鍵按一下階層**階層的標題**欄，選取 [ `Customer Geography`**重新命名**]，然後輸入。  
+4.  在 [**維度結構**] 索引卷**標的 [階層] 窗格中**，以滑鼠右鍵按一下階層**階層的標題**欄，選取 [**重新命名**]，然後輸入 `Customer Geography` 。  
   
-     階層的名稱現在`Customer Geography`是。  
+     階層的名稱現在是 `Customer Geography` 。  
   
 5.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "66078933"
   
 2.  在左側的 [資料表]**** 窗格中，以滑鼠右鍵按一下 [客戶]****，然後按一下 [新增具名計算]****。  
   
-3.  在 [**建立命名計算**] 對話方塊中， `FullName`于 [資料**行名稱**] 方塊中輸入，然後在 [**運算式**] `CASE`方塊中輸入或複製並貼上下列語句：  
+3.  在 [**建立命名計算**] 對話方塊中，于 [資料行名稱] 方塊中輸入，然後在 `FullName` [運算式] 方塊中輸入或複製並貼上下列**Column name** `CASE` 語句： **Expression**  
   
     ```  
     CASE  
@@ -88,7 +87,7 @@ ms.locfileid: "66078933"
   
 7.  檢閱 [瀏覽客戶資料表]**** 檢視中的最後一個資料行。  
   
-     `FullName`請注意，資料行會出現在 [資料來源] 視圖中，將資料從基礎資料來源中的數個數據行正確串連，而不需要修改原始資料來源。  
+     請注意， `FullName` 資料行會出現在 [資料來源] 視圖中，將資料從基礎資料來源中的數個數據行正確串連，而不需要修改原始資料來源。  
   
 8.  關閉 [瀏覽 Customer 資料表]**** 索引標籤。  
   
@@ -103,13 +102,13 @@ ms.locfileid: "66078933"
   
 3.  開啟 [屬性] 視窗，然後按一下標題列上的 [自動隱藏]**** 按鈕，如此它就會保持開啟狀態。  
   
-4.  在 [**名稱**] 屬性欄位中`Full Name`，輸入。  
+4.  在 [**名稱**] 屬性欄位中，輸入 `Full Name` 。  
   
 5.  按一下底部的 [ **NameColumn** ] 屬性欄位，然後按一下 [流覽] （**...**）按鈕，即可開啟 [名稱資料**行**] 對話方塊。  
   
-6.  選取`FullName` [**來源資料行**] 清單底部的，然後按一下 **[確定]**。  
+6.  選取 `FullName` [**來源資料行**] 清單底部的，然後按一下 **[確定]**。  
   
-7.  在 [維度結構] 索引標籤`Full Name`中，將屬性從 [**屬性**] 窗格拖曳**到 [階層] 窗格**中 [ **City** ] 層級下的 [ ** \<新增層級>** ] 資料格。  
+7.  在 [維度結構] 索引標籤中，將 `Full Name` 屬性從 [**屬性**] 窗格拖曳到 [階層 **\<new level>** ] 窗格中 [ **City** ] 層級下的資料格。 **Hierarchies**  
   
 8.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
@@ -130,9 +129,9 @@ ms.locfileid: "66078933"
   
     -   `State-Province`  
   
-3.  在 [屬性視窗中，按一下頂端的 [ **attributehierarchydisplayfolder]** ] 屬性欄位（您可能需要指向它以查看完整名稱），然後輸入`Location`。  
+3.  在 [屬性視窗中，按一下頂端的 [ **attributehierarchydisplayfolder]** ] 屬性欄位（您可能需要指向它以查看完整名稱），然後輸入 `Location` 。  
   
-4.  在 [**階層] 窗格**中`Customer Geography`，按一下 []，然後在右邊的 [屬性視窗`Location`中，選取做為**DisplayFolder**屬性的值。  
+4.  在 [**階層] 窗格**中，按一下 [] `Customer Geography` ，然後在右邊的 [屬性視窗中，選取 `Location` 做為**DisplayFolder**屬性的值。  
   
 5.  在 [屬性]**** 窗格中，按住 CTRL 鍵，同時按一下每個屬性，藉以選取下列屬性：  
   
@@ -156,20 +155,20 @@ ms.locfileid: "66078933"
   
     -   **Yearly Income**  
   
-6.  在 [屬性視窗中，按一下頂端的 [ **attributehierarchydisplayfolder]** ] 屬性欄位，然後輸入`Demographic`。  
+6.  在 [屬性視窗中，按一下頂端的 [ **attributehierarchydisplayfolder]** ] 屬性欄位，然後輸入 `Demographic` 。  
   
 7.  在 [屬性]**** 窗格中，按住 CTRL 鍵，同時按一下每個屬性，藉以選取下列屬性：  
   
     -   **電子郵件地址**  
   
-    -   **來電**  
+    -   **手機**  
   
-8.  在 [屬性視窗中，按一下 [ **attributehierarchydisplayfolder]** ] 屬性欄位`Contacts`，然後輸入。  
+8.  在 [屬性視窗中，按一下 [ **attributehierarchydisplayfolder]** ] 屬性欄位，然後輸入 `Contacts` 。  
   
 9. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="defining-composite-keycolumns"></a>定義複合 KeyColumns  
- [KeyColumns]**** 屬性 (property) 包含代表屬性 (attribute) 之索引鍵的一或多個資料行。 在這一課，您會建立**城市**和`State-Province`屬性的複合索引鍵。 當您需要唯一識別某個屬性時，複合索引鍵便很有用。 例如，當您稍後在本教學課程中定義屬性關聯性時， **City**屬性必須唯一`State-Province`識別屬性。 不過，不同省份可能會有許多相同名稱的縣 (市) 存在。 因此，您將建立由 [縣 (市)]**** 屬性之 [StateProvinceName]**** 和 [City]**** 資料行所組成的複合索引鍵。 如需詳細資訊，請參閱 [修改屬性 (Attribute) 的 KeyColumn 屬性 (Property)](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
+ [KeyColumns]**** 屬性 (property) 包含代表屬性 (attribute) 之索引鍵的一或多個資料行。 在這一課，您會建立**城市**和屬性的複合索引鍵 `State-Province` 。 當您需要唯一識別某個屬性時，複合索引鍵便很有用。 例如，當您稍後在本教學課程中定義屬性關聯性時， **City**屬性必須唯一識別 `State-Province` 屬性。 不過，不同省份可能會有許多相同名稱的縣 (市) 存在。 因此，您將建立由 [縣 (市)]**** 屬性之 [StateProvinceName]**** 和 [City]**** 資料行所組成的複合索引鍵。 如需詳細資訊，請參閱 [修改屬性 (Attribute) 的 KeyColumn 屬性 (Property)](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
   
 #### <a name="to-define-composite-keycolumns-for-the-city-attribute"></a>針對 [縣 (市)] 屬性定義複合 KeyColumns  
   
@@ -183,7 +182,7 @@ ms.locfileid: "66078933"
   
      [City]**** 和 [StateProvinceName]**** 資料行現在會顯示在 [索引鍵資料行]**** 清單中。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
   
 6.  若要設定 [縣 (市)]**** 屬性 (attribute) 的 [NameColumn]**** 屬性 (property)，請按一下 [屬性] (property) 視窗中的 [NameColumn]**** 欄位，然後按一下瀏覽 (**...**) 按鈕。  
   
@@ -195,7 +194,7 @@ ms.locfileid: "66078933"
   
 1.  請確定 [客戶] 維度的 [維度結構]**** 索引標籤為開啟狀態。  
   
-2.  在 [**屬性**] 窗格中， `State-Province`按一下屬性。  
+2.  在 [**屬性**] 窗格中，按一下 `State-Province` 屬性。  
   
 3.  在 [屬性]**** 視窗的 [KeyColumns]**** 欄位中按一下，然後按一下瀏覽 (**...**) 按鈕。  
   
@@ -203,9 +202,9 @@ ms.locfileid: "66078933"
   
      [EnglishCountryRegionName]**** 和 [StateProvinceName]**** 資料行現在會顯示在 [索引鍵資料行]**** 清單中。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
   
-6.  若要設定**NameColumn** `State-Province`屬性的 namecolumn 屬性，請按一下 [屬性視窗中的 [ **namecolumn** ] 欄位，然後按一下 [流覽] （**...**）按鈕。  
+6.  若要設定屬性的**namecolumn**屬性 `State-Province` ，請按一下 [屬性視窗中的 [ **namecolumn** ] 欄位，然後按一下 [流覽] （**...**）按鈕。  
   
 7.  在 [名稱資料行]**** 對話方塊的 [來源資料行]**** 清單中，選取 [StateProvinceName]****，然後按一下 [確定]****。  
   
@@ -220,7 +219,7 @@ ms.locfileid: "66078933"
   
 2.  在圖表中，以滑鼠右鍵按一下 [縣 (市)]**** 屬性，然後按一下 [新增屬性關聯性]****。  
   
-3.  在 [建立屬性關聯性]**** 對話方塊中，[來源屬性]**** 是 [縣 (市)]****。 將**相關屬性**設定為`State-Province`。  
+3.  在 [建立屬性關聯性]**** 對話方塊中，[來源屬性]**** 是 [縣 (市)]****。 將**相關屬性**設定為 `State-Province` 。  
   
 4.  在 [關聯性類型]**** 清單中，將關聯性類型設定為 [固定]****。  
   
@@ -228,13 +227,13 @@ ms.locfileid: "66078933"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  在圖表中，以滑鼠右鍵按一下`State-Province`屬性，然後選取 [**新增屬性關聯**性]。  
+6.  在圖表中，以滑鼠右鍵按一下 `State-Province` 屬性，然後選取 [**新增屬性關聯**性]。  
   
-7.  在 [**建立屬性關聯**性] 對話方塊中，[**來源屬性**] 是`State-Province`。 將**相關屬性**設定為`Country-Region`。  
+7.  在 [**建立屬性關聯**性] 對話方塊中，[**來源屬性**] 是 `State-Province` 。 將**相關屬性**設定為 `Country-Region` 。  
   
 8.  在 [關聯性類型]**** 清單中，將關聯性類型設定為 [固定]****。  
   
-9. 按一下 [確定]  。  
+9. 按一下 [確定]。  
   
 10. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
@@ -247,7 +246,7 @@ ms.locfileid: "66078933"
   
 2.  當您收到 [已成功地完成部署]**** 訊息之後，請針對 [客戶] 維度按一下 [維度設計師] 的 [瀏覽器]**** 索引標籤，然後按一下設計師工具列左側的 [重新連接] 按鈕。  
   
-3.  `Customer Geography`確認已在 [階層]**清單中**選取，然後在瀏覽器窗格中展開 [**全部**]，展開 [**澳大利亞**]，展開 [**新南威爾士**]，然後展開 [ **Coffs Harbour**]。  
+3.  確認 `Customer Geography` 已在 [階層] **Hierarchy**清單中選取，然後在瀏覽器窗格中展開 **[全部**]，展開 [**澳大利亞**]，展開 [**新南威爾士**]，然後展開 [ **Coffs Harbour**]。  
   
      瀏覽器就會顯示該縣 (市) 的客戶。  
   

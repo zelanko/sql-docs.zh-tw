@@ -6,17 +6,17 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3e3993816d0811f7e23563b758ab2169240dc48
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: cd1ab44238077885ef1d4f2146c6a674d5708f52
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606830"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731947"
 ---
 # <a name="create-a-master-data-services-database"></a>建立 Master Data Services 資料庫
 

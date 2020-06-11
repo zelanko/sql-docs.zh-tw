@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d84f66ae-7551-49bf-99d0-88368ca2dd0e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e23d4af96b5ce7c740f1b29893e6ee760104b871
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d545f57db8b2c20630ef9443d84b9a8b30448234
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076430"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536500"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>使用維度精靈建立維度
   您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [維度精靈] 來建立新的維度。  
@@ -45,7 +44,7 @@ ms.locfileid: "66076430"
   
          如果 [索引鍵資料行]**** 清單包含多個索引鍵資料行，您必須可針對索引鍵屬性提供成員值的名稱資料行。 若要這樣做，您可以在資料來源檢視中，建立具名計算，並將其當做名稱資料行使用。  
   
-    5.  按 [下一步]  。  
+    5.  按 [下一步] 。  
   
 4.  在 [選取相關資料表]**** 頁面上，選取您要包含在維度中的相關資料表，然後按一下 [下一步]****。  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bbb92c73f29c55cf30dde68e59489e64859a2267
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3b5bf53dae1a86b41ac1a04435f02547fe7bb002
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819609"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203255"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>資料庫鏡像-sys. dm_db_mirroring_connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

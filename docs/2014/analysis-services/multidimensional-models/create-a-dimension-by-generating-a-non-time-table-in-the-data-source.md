@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 962df497e804011e69e2a350c24ce41f4c273b6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66ac0c2a120e0981ce23c794b97427121ae5eb23
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076443"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536770"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>在資料來源中產生非時間資料表來建立維度
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [維度] Wizard 來建立維度，而不需使用現有的資料來源。 方法是，選取精靈之 [選取建立方法]**** 頁面的 [在資料來源中產生非時間資料表]**** 選項。 若要在基礎資料來源中建立新的維度資料表，您必須擁有在基礎資料來源中建立物件的權限。 在沒有預先定義之資料來源檢視的情況下定義維度時，可以從頭開始定義維度或使用維度範本。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您可以使用中的 [維度] Wizard [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 來建立維度，而不需使用現有的資料來源。 方法是，選取精靈之 [選取建立方法]**** 頁面的 [在資料來源中產生非時間資料表]**** 選項。 若要在基礎資料來源中建立新的維度資料表，您必須擁有在基礎資料來源中建立物件的權限。 在沒有預先定義之資料來源檢視的情況下定義維度時，可以從頭開始定義維度或使用維度範本。  
   
  「維度精靈」提供了一些維度範本範例，讓您可以建立常見的維度類型。 您可以從以下維度類型中選擇：  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66076443"
   
 -   組織  
   
--   Products  
+-   產品  
   
 -   促銷  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66076443"
   
 -   銷售地區  
   
--   案例  
+-   狀況  
   
 -   來源貨幣  
   

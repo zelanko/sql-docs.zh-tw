@@ -19,12 +19,12 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e302d454ba0bf243f702b90b24cf7076ed97cb6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078517"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669461"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "68078517"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**Nvarchar （** 128 **）**|目錄的特定名稱。 這個名稱與 ROUTINE_CATALOG 相同。|  
-|SPECIFIC_SCHEMA|**Nvarchar （** 128 **）**|結構描述的特定名稱。<br /><br /> ** \* \*重要\*事項**請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|SPECIFIC_SCHEMA|**Nvarchar （** 128 **）**|結構描述的特定名稱。<br /><br /> ** \* \* 重要 \* 事項 \* ：** 請勿使用 INFORMATION_SCHEMA 視圖來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |SPECIFIC_NAME|**Nvarchar （** 128 **）**|目錄的特定名稱。 這個名稱與 ROUTINE_NAME 相同。|  
 |ROUTINE_CATALOG|**Nvarchar （** 128 **）**|函數的目錄名稱。|  
-|ROUTINE_SCHEMA|**Nvarchar （** 128 **）**|包含這個函數的結構描述名稱。<br /><br /> ** \* \*重要\*事項**請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|ROUTINE_SCHEMA|**Nvarchar （** 128 **）**|包含這個函數的結構描述名稱。<br /><br /> ** \* \* 重要 \* 事項 \* ：** 請勿使用 INFORMATION_SCHEMA 視圖來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |ROUTINE_NAME|**Nvarchar （** 128 **）**|函數的名稱。|  
 |ROUTINE_TYPE|**Nvarchar （** 20 **）**|傳回 PROCEDURE (預存程序) 和 FUNCTION (函數)。|  
 |MODULE_CATALOG|**Nvarchar （** 128 **）**|NULL。 保留供未來使用。|  

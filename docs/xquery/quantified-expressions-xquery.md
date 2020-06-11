@@ -1,5 +1,6 @@
 ---
 title: 定量運算式（XQuery） |Microsoft Docs
+description: 瞭解如何在 XQuery 中使用量化運算式，將存在或通用定量套用至一或多個序列的運算式。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f7c79cd185b88b8681460d2811f0d0ac4c20557
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946379"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215244"
 ---
 # <a name="quantified-expressions-xquery"></a>定量運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "67946379"
   
  您可以在查詢中使用這些運算式，以明確地將存在或通用定量套用至一或多個時序中的運算式。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，`satisfies` 子句中的運算式必須產生下列其中一個：節點時序、空白時序或布林值。 該運算式所產生的有效布林值結果將用於定量中。 如果數量詞所系結的至少一個值在滿足運算式中產生 True 結果，則使用**部分**的存在定量會傳回 true。 針對數量詞所系結的所有值，使用**每個**的通用定量都必須為 True。  
   
- 例如，下列查詢會檢查每個\<位置> 元素，以查看它是否有 LocationID 屬性。  
+ 例如，下列查詢會檢查每個 \<Location> 元素，以查看它是否有 LocationID 屬性。  
   
 ```  
 SELECT Instructions.query('  
@@ -64,7 +65,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 因為 LocationID 是\<Location> 元素的必要屬性，所以您會收到預期的結果：  
+ 因為 LocationID 是元素的必要屬性 \<Location> ，所以您會收到預期的結果：  
   
 ```  
 <Result>All work centers have Location ID</Result>   

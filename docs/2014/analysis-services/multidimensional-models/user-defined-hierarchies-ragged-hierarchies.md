@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4f14a1f853a99ccb6b2dbbed72bd38b70f2ea7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889326"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535620"
 ---
 # <a name="ragged-hierarchies"></a>不完全階層
   不完全階層是所含層級數目不平均的使用者定義階層。 常見範例包括組織圖 (高階主管同時擁有部門主管級和非主管級直屬員工)，或由國家/地區-區域-城市組成的地理階層 (其中部分城市缺少父州或省，例如華盛頓特區、梵蒂岡或新德里)。  
@@ -54,7 +53,7 @@ ms.locfileid: "68889326"
   
 2.  以滑鼠右鍵按一下此階層中的成員，並選取 [屬性]****。 將 `HideMemberIf` 設定為底下描述的其中一個值。  
   
-    |HideMemberIf 設定|描述|  
+    |HideMemberIf 設定|Description|  
     |--------------------------|-----------------|  
     |`Never`|永不隱藏層級成員。 這是預設值。|  
     |**OnlyChildWithNoName**|當層級成員是父系的唯一子系，且其名稱是 Null 或空白字串時，會隱藏層級成員。|  
@@ -65,7 +64,7 @@ ms.locfileid: "68889326"
 ##  <a name="set-mdx-compatibility-to-determine-how-placeholders-are-represented-in-client-applications"></a><a name="bkmk_Mdx"></a>設定 MDX 相容性以決定如何在用戶端應用程式中表示預留位置  
  在階層層級上設定 `HideMemberIf` 之後，您也應該在從用戶端應用程式傳送的連接字串中設定 `MDX Compatibility` 屬性。 `MDX Compatibility` 設定會決定是否使用 `HideMemberIf`。  
   
-|MDX 相容性設定|描述|使用量|  
+|MDX 相容性設定|Description|使用方式|  
 |-------------------------------|-----------------|-----------|  
 |**1**|顯示預留位置的值。|這是 Excel、SSDT 和 SSMS 使用的預設值。 它會指示伺服器在不完全階層中向下鑽研空的層級時，傳回預留位置的值。 如果您按一下預留位置的值，您可以繼續往下前往子節點 (分葉節點)。<br /><br /> Excel 擁有用來連接到 Analysis Services 的連接字串，而且它永遠都會針對每個新的連接將 `MDX Compatibility` 設定為 1。 這個行為會保留回溯相容性。|  
 |**2**|隱藏預留位置的值 (Null 值或父層級的重複)，但是會顯示具有相關值的其他層級和節點。|就不完全階層而言，`MDX Compatibility`=2 通常會視為慣用設定。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和某些協力廠商用戶端應用程式可以保留這項設定。|  

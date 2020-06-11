@@ -1,5 +1,6 @@
 ---
 title: false 函數（XQuery） |Microsoft Docs
+description: 瞭解傳回布林值 False 的 false （）函數。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a8c013a5fd87058a202e6d24f4b3148947b5319
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35569b5e27b058ae3f43a3e7db8b1a3e2455449b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68093203"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689606"
 ---
 # <a name="boolean-constructor-functions---false-xquery"></a>布林建構函式 - false (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

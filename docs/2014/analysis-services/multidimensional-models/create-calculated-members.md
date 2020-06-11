@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03ce064e08e28e4a5245c2cf18d110797e3ebce4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076280"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535990"
 ---
 # <a name="create-calculated-members"></a>建立導出成員
   您可以結合 Cube 資料、算術運算子、數字和函數，來建立自訂的量值或維度成員，稱為導出成員。 例如，您可以建立一個名為 Euros 的導出成員，藉由將現有的美金量值乘以轉換比率，來將美金轉換為歐元。 然後可以在另一個資料列或資料行中，向一般使用者顯示歐元。  

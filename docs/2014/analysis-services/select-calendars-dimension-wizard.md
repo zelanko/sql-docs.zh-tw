@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db6a51b44e9b467881c4aeaa8e0a63f48b617a22
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069685"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538320"
 ---
 # <a name="select-calendars-dimension-wizard"></a>選取日曆 (維度精靈)
   使用 [選取日曆]**** 頁面來建立其他階層，其中代表時間維度的會計日曆、報表日曆、製造日曆或國際標準組織 (ISO) 8601 日曆。  
@@ -25,7 +24,7 @@ ms.locfileid: "66069685"
 > [!NOTE]  
 >  唯有在 [選取維度類型]**** 頁面上選取了 [伺服器時間維度]****，或者在 [維度定義]**** 頁面上選取了 [不使用資料來源而建立維度]****，且在 [選取維度類型]**** 頁面上選取了 [時間維度]****，才會顯示此頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **會計日曆**  
  選取即可根據會計日曆建立時間階層。  
   

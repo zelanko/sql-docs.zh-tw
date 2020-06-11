@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d4b91b06470c9cb22e98ac76ea52494728a7ca11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f93df1c1388f6a85272ced6bf419140c74105ddc
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893098"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669956"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>套用至  
- 傳回資料表的運算式，例如\<資料表資料行參考>，或傳回資料表的函數。  
+ 傳回資料表的運算式，例如 \< 資料表資料行參考>，或傳回資料表的函數。  
   
 ## <a name="return-type"></a>傳回類型  
  \<資料表運算式>  
   
 ## <a name="remarks"></a>備註  
- \<次序運算式> 引數所提供的值，會決定\<資料表運算式> 引數中所提供資料列的次序遞減順序，並傳回\<count> 引數中指定之最上層資料列的數目。  
+ \<次序運算式> 引數所提供的值，會決定資料表運算式> 引數中所提供資料列的次序遞減順序 \< ，並 \< 傳回 count> 引數中指定之最上層資料列的數目。  
   
  TopCount 函數原本是為了啟用關聯預測而引進，而且通常會產生與包含**SELECT TOP**和**ORDER BY**子句的語句相同的結果。 如果您使用**預測（DMX）** 函數來支援要傳回之預測數目的指定，您將可獲得關聯預測的較佳效能。  
   
@@ -58,7 +58,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  範例結果︰  
   
-|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|型號|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -94,7 +94,7 @@ NATURAL PREDICTION JOIN
   
  範例結果︰  
   
-|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|型號|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.29 .。。|0.25 .。。|  
 |Water Bottle|2866|0.19 .。。|0.17 .。。|  

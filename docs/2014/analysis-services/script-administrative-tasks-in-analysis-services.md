@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 69ccdaf9bf0f8b67309a1f88c0c44a90f3167b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 660f0d52d4057a9bdb9e2a0af0ed268d64a7747a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530924"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538844"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>在 Analysis Services 中編寫管理工作的指令碼
   您可以撰寫或產生可手動執行或透過 SQL Server Agent 排程的指令碼，將 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理工作自動化。 下表摘要說明可用的指令碼選項，並提供詳細資訊的連結。  

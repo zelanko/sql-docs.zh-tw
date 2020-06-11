@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b0f0388e-3d75-450d-b5fb-8a1d31cf8376
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5693369574a7c7fc8ea357248347fb89dee0f214
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079397"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543644"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 組合管理 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [Cube 設計師] 之 [KPI]**** 索引標籤上的 [KPI 組合管理]**** 窗格，即可存取和記錄指定之 Cube 中所含的關鍵效能指標 (KPI)。  
@@ -25,8 +24,8 @@ ms.locfileid: "66079397"
 > [!NOTE]  
 >  表單檢視中不會顯示這個窗格。  
   
-## <a name="options"></a>選項。  
- **名單**  
+## <a name="options"></a>選項  
+ **清單**  
  顯示 KPI 的名稱。  
   
  選取 KPI 即可以表單檢視顯示 [KPI 表單編輯器]****。  

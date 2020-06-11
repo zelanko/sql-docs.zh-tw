@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ed38e8f28894143fd32b233870bc3aab2b24c464
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec7d1aa9a432b9d54e00427deb7b47ea5fd77fbc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078990"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543464"
 ---
 # <a name="deploying-an-analysis-services-project"></a>部署 Analysis Services 專案
   若要檢視 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 中物件的 Cube 和維度資料，您必須將此專案部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體，然後處理 Cube 及其維度。 「部署」**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案會在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體中建立已定義的物件。 「處理」**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體中的物件會將資料從基礎資料來源複製到 Cube 物件中。 如需詳細資訊，請參閱 [部署 Analysis Services 專案 &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) 和 [設定 Analysis Services 專案屬性 &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
@@ -35,9 +34,9 @@ ms.locfileid: "66078990"
      檢閱專案的部署屬性。 依預設， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案範本設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案以累加方式將所有專案部署到本機電腦上的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 預設執行個體中，建立與專案相同名稱的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，以及在部署之後使用預設處理選項來處理物件。 如需詳細資訊，請參閱 [設定 Analysis Services 專案屬性 &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
     > [!NOTE]  
-    >  如果您想要將專案部署到[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]本機電腦上的已命名實例，或遠端伺服器上的實例，請將**伺服器**屬性變更為適當的實例名稱，例如\< *ServerName**>\\**InstanceName * * >*。  
+    >  如果您想要將專案部署到本機電腦上的已命名實例 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，或遠端伺服器上的實例，請將**伺服器**屬性變更為適當的實例名稱，例如 \<*ServerName**> \\ < **InstanceName**> *。  
   
-3.  按一下 [確定]  。  
+3.  按一下 [確定]。  
   
 4.  在方案總管中，以滑鼠右鍵按一下 [Analysis Services Tutorial]**** 專案，然後按一下 [部署]****。 您可能需要稍等一下。  
   

@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6b4df30ec422df0dd79b2fc9d58766e6dbcf7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071114"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535040"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理儀表板和使用量資料
   PowerPivot 管理儀表板是 SharePoint 管理中心內預先定義之報表和網頁組件的集合，可讓您管理 SQL Server PowerPivot for SharePoint 部署。 管理儀表板會提供伺服器健全狀況、活頁簿活動和資料重新整理的相關資訊。 儀表板會使用 SharePoint 使用量資料收集的資料。  
   
- [必要條件](#prereq)  
+ [先決條件](#prereq)  
   
  [儀表板區段的總覽](#items)  
   
@@ -32,13 +31,13 @@ ms.locfileid: "66071114"
   
  [建立 PowerPivot 管理儀表板中的自訂報表](#reports)  
   
-##  <a name="prerequisites"></a><a name="prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="prereq"></a> 先決條件  
  您必須是服務管理員，才能開啟所管理 PowerPivot 服務應用程式的 PowerPivot 管理儀表板。  
   
 ##  <a name="overview-of-the-sections-of-the-dashboard"></a><a name="items"></a> 儀表板中各區段的概觀  
  PowerPivot 管理儀表板包含 Web 組件和向下鑽研至特定資訊類別的內嵌報表。 下列清單描述的是儀表板的每個部分：  
   
-|儀表板|描述|  
+|儀表板|Description|  
 |---------------|-----------------|  
 |基礎結構 - 伺服器健全狀況|顯示隨時間經過的 CPU 使用量、記憶體消耗量和查詢回應時間趨勢，以便評估系統資源是已接近最大容量，或利用率極低。|  
 |動作|包含管理中心內其他頁面的連結，包括目前的服務應用程式、服務應用程式的清單以及使用量記錄。|  
@@ -140,7 +139,7 @@ ms.locfileid: "66071114"
   
     5.  在檔案路徑中，指定 .odc 檔。  
   
-    6.  按一下 [開啟]  。 「資料表匯入精靈」隨即使用包含使用方式資料之 PowerPivot 活頁簿的連接字串啟動。  
+    6.  按一下 [開啟] 。 「資料表匯入精靈」隨即使用包含使用方式資料之 PowerPivot 活頁簿的連接字串啟動。  
   
     7.  按一下 **[測試連接]** 確認您是否擁有存取權。  
   

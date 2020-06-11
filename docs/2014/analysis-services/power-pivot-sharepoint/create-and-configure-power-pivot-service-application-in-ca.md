@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a48211455a8ac3de9ef0f4b0c7e2fb3cba5f473
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071577"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540501"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>在管理中心建立及設定 PowerPivot 服務應用程式
   PowerPivot 服務應用程式是 PowerPivot 系統服務的共用服務執行個體。 每一個服務應用程式都有它自己的應用程式識別、組態設定、屬性以及內部資料儲存位置。  
@@ -57,13 +56,13 @@ ms.locfileid: "66071577"
   
 3.  選取 [ **SQL Server PowerPivot 服務應用程式**]。 如果它沒有出現在清單中，表示 PowerPivot for SharePoint 未安裝或是未正確設定。  
   
-4.  在 [**建立新的 PowerPivot 服務應用程式**] 頁面中，輸入應用程式的名稱。 預設值為 New-powerpivotserviceapplication\<number>。 如果您要建立多個 PowerPivot 服務應用程式，描述性名稱將可協助其他系統管理員，了解如何使用應用程式。  
+4.  在 [**建立新的 PowerPivot 服務應用程式**] 頁面中，輸入應用程式的名稱。 預設值為 New-powerpivotserviceapplication \<number> 。 如果您要建立多個 PowerPivot 服務應用程式，描述性名稱將可協助其他系統管理員，了解如何使用應用程式。  
   
 5.  在 [應用程式集區] 中，針對此應用程式建立新的應用程式集區 (建議作法)。 請針對此應用程式集區選取或建立受管理的帳戶。 請務必指定網域使用者帳戶。 網域使用者帳戶會啟用 SharePoint 的受管理帳戶功能，好讓您在一個地方更新密碼和帳戶資訊。 如果您計劃將部署向外延展，以包括將在相同識別下執行的其他服務執行個體，也需要網域帳戶。  
   
 6.  在 **[資料庫伺服器]** 中，預設值是主控伺服陣列組態資料庫的 SQL Server Database Engine 執行個體。 您可以使用這部伺服器，或選擇不同的 SQL Server。  
   
-7.  在 [**資料庫名稱**] 中，預設值\<是 PowerPivotServiceApplication1_ guid>。 您必須針對每個 PowerPivot 服務應用程式，建立唯一的資料庫。 預設的資料庫名稱會對應至服務應用程式的預設名稱。 如果您輸入唯一的服務應用程式名稱，請依照類似的命名慣例來命名資料庫名稱，以利同時管理它們。  
+7.  在 [**資料庫名稱**] 中，預設值為 PowerPivotServiceApplication1_ \<guid> 。 您必須針對每個 PowerPivot 服務應用程式，建立唯一的資料庫。 預設的資料庫名稱會對應至服務應用程式的預設名稱。 如果您輸入唯一的服務應用程式名稱，請依照類似的命名慣例來命名資料庫名稱，以利同時管理它們。  
   
 8.  在 **[資料庫驗證]** 中，預設值是 Windows 驗證。 如果您選擇 **[SQL 驗證]**，請參考 SharePoint 管理員指南，以了解有關如何在 SharePoint 部署中使用這個驗證類型的最佳作法。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66071577"
   
      如需服務關聯的詳細資訊，請參閱[在管理中心將 PowerPivot 服務應用程式連接到 SharePoint Web 應用程式](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)。  
   
-10. 按一下 [確定]****。 此服務將會與伺服器陣列服務應用程式清單中的其他受管理的服務一起顯示。  
+10. 按一下 [確定]  此服務將會與伺服器陣列服務應用程式清單中的其他受管理的服務一起顯示。  
   
 ##  <a name="configure-powerpivot-service-application"></a><a name="ConfigApp"></a>設定 PowerPivot 服務應用程式  
  使用預設組態建立 PowerPivot 服務應用程式。 在大部分的情況下建議使用預設值。 只有在您遇到回應時間變慢或連接已卸除時，或是如果您要改變特定 SharePoint Web 應用程式的 PowerPivot 服務組態時，才變更它們。  
@@ -141,7 +140,7 @@ ms.locfileid: "66071577"
   
 5.  針對 **[自訂]**，選取您想要使用之每個服務應用程式連線旁的核取方塊。 如果您具有多個 PowerPivot 服務應用程式 (由 [類型] 設定為 `PowerPivot Service Application Proxy` 來表示)，請務必只選擇一個。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 ##  <a name="edit-service-application-properties"></a><a name="EditGSA"></a>編輯服務應用程式屬性  
  使用下列指示來重新開啟屬性頁，以指定服務的應用程式名稱、應用程式集區、資料庫設定以及服務關聯。  

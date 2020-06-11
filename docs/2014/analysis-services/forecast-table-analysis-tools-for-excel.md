@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a08cdf759ad3accd1f3c1405cefff9cde6b5319f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081051"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544474"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>預測 (適用於 Excel 的資料表分析工具)
   ![資料表分析工具功能區中的預測按鈕](media/tat-forecast.gif "資料表分析工具功能區中的預測按鈕")  
@@ -41,17 +40,17 @@ ms.locfileid: "66081051"
   
 3.  指定要預測的資料行。 此工具會自動選取具有可預測資料類型的資料行（也就是連續數值資料）。 如果資料行包含許多 null 或零值，此工具便可能不會選取一些具有連續數值資料的資料行，因為資料遺失可能會影響結果。 如果發生這種情況，您可以使用 [重定標籤[&#40;SQL Server 資料採礦增益集&#41;](relabel-sql-server-data-mining-add-ins.md)工具來修正資料。  
   
-4.  指定包含日期、時間或其他序列識別碼的資料行。 如果您選取 [ ** \<不>時間戳記**] 選項，工具會根據來源資料中的資料列序列來建立數列。  
+4.  指定包含日期、時間或其他序列識別碼的資料行。 如果您選取選項 **\<no time stamp>** ，此工具會根據來源資料中的資料列順序來建立數列。  
   
 5.  指定要做出的預測數目。  
   
-6.  您可以選擇性地提供有關您預期資料是要每週、每月或依其他間隔重複之演算法的提示。 如果您的資料不符合任何給定的模式，或如果您不知道任何模式，請選取** \<[自動**偵測]>，讓工具尋找重複的時間週期。  
+6.  您可以選擇性地提供有關您預期資料是要每週、每月或依其他間隔重複之演算法的提示。 如果您的資料不符合任何給定的模式，或如果您不知道任何模式，請選取 **\<detect automatically>** 讓工具尋找重複的時間週期。  
   
 7.  精靈會將預測加入來源資料表，並且在新的工作表中建立預測報表。  
   
 8.  若要將新值加入預測圖形，請延伸時間序列以包含預測值。  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  您預測的資料行必須包含連續數值資料，例如貨幣或其他數字。  
   
  可能的話，您的資料也應包含有時間或日期序列的資料行。 您可以使用數位序列（1、2、3 ....）來取代日期和時間資料。 不過，序列資料行中的值必須是唯一的。 如果**預測**工具在數列資料行中找到重複的值，就會發生錯誤。  
@@ -83,7 +82,7 @@ ms.locfileid: "66081051"
 ## <a name="related-tools"></a>相關工具  
  適用於 Excel 的資料採礦用戶端是獨立的增益集，它提供更多進階資料採礦功能，也包含預測用的精靈。  
   
- 「**預測**」工具（在適用于 Excel 的資料表分析工具）和「**預測**嚮導」（在適用于 Excel 的資料採礦客戶[!INCLUDE[msCoName](../includes/msconame-md.md)]端中）都使用時間序列演算法。  
+ 「**預測**」工具（在適用于 Excel 的資料表分析工具）和「**預測**嚮導」（在適用于 Excel 的資料採礦用戶端中）都使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時間序列演算法。  
   
 -   **預測**工具較容易使用，因為它會自動將演算法設定為使用最適合您資料的設定。  
   

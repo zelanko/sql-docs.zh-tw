@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23efdeddd568c815ad22ce6cf0b5d2026bab813e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8b44e09f929ad6a331bb335e801838ed3de64de
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080328"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544103"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>使用 SSIS 自動化 Analysis Services 管理工作
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可讓您自動執行 DDL 腳本、cube 和採礦模型處理工作，以及資料採礦查詢[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]工作。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可視為控制流程和維護工作的集合，可以連結它們來形成循序和平行的資料處理作業。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]可 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 讓您自動執行 DDL 腳本、cube 和採礦模型處理工作，以及資料採礦查詢工作。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可視為控制流程和維護工作的集合，可以連結它們來形成循序和平行的資料處理作業。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以在執行資料處理工作期間進行資料清除作業，以及匯集來自不同資料來源的資料。 使用 Cube 和採礦模型時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以將非數值資料轉換為數值資料，且可以確定資料值會落在預期的界限內，從而建立用來擴展事實資料表和維度的全新資料。  
   
 ## <a name="integration-services-tasks"></a>Integration Services 工作  
- 任何 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 工作或作業中有兩個主要元素：控制流程元素和資料流程元素。 控制流程元素會套用優先順序條件約束來定義作業進行的邏輯順序。 資料流程元素涉及到元件輸出和接續元件輸入之間的連接性，加上在中間資料上執行的任何資料轉換。 至於資料流向的決策，優先順序條件約束會包含邏輯來指定由哪個元件接收輸出。 與[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相關[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的工作，包括「執行 DDL」工作、「Analysis Services 處理」工作，以及「資料採礦查詢」工作。 針對其中每一項工作，可以使用傳送郵件工作將包含工作結果的電子郵件訊息傳送給管理員。  
+ 任何 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 工作或作業中有兩個主要元素：控制流程元素和資料流程元素。 控制流程元素會套用優先順序條件約束來定義作業進行的邏輯順序。 資料流程元素涉及到元件輸出和接續元件輸入之間的連接性，加上在中間資料上執行的任何資料轉換。 至於資料流向的決策，優先順序條件約束會包含邏輯來指定由哪個元件接收輸出。 與相關的工作， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括「 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL」工作、「Analysis Services 處理」工作，以及「資料採礦查詢」工作。 針對其中每一項工作，可以使用傳送郵件工作將包含工作結果的電子郵件訊息傳送給管理員。  
   
 ## <a name="the-execute-ddl-task"></a>執行 DDL 工作  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的執行 DDL 工作，可讓您直接傳送 DDL 指令碼至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器並自動執行。 這樣可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內執行備份、還原或同步處理作業。 封裝是由稍早所述的控制和資料流程元素組成，全部元素必須 **run regularly**，就像其他可加入工作中的 DDL 陳述式一樣。 因為此處所討論的工作經常在夜晚執行，可以輕易地從任何排程應用程式執行的封裝就非常有用。 您可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Agent 來排程封裝在任何時間執行。 如需如何實作這項工作的詳細資訊，請參閱 [Analysis Services 執行 DDL 工作](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)。  

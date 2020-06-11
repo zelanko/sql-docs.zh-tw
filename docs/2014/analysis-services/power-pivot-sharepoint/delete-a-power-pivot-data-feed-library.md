@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5dbfc67e-7260-445a-8210-a9d33827db7f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f2e12e536cfaf91bab25e958ba279b072b39259
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 414dfff0d98d127d11c8fa0e01da78d8b723918d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071476"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540443"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>刪除 PowerPivot 資料摘要庫
   您必須是網站擁有者，才能刪除資料摘要庫。 如果摘要庫中包含項目，就會連同摘要庫一起刪除。  
@@ -30,7 +29,7 @@ ms.locfileid: "66071476"
   
 3.  在 [網站管理] 之下，按一下 [網站文件庫和清單]****。  
   
-4.  按一下 **[\<自訂您的程式庫名稱>]**  
+4.  按一下 **[自 \<your library name> 定義]**  
   
 5.  在 [權限與管理] 之下，按一下 [刪除此文件庫]****。  
   

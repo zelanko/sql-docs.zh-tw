@@ -11,22 +11,21 @@ helpviewer_keywords:
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00ecb4487119251f1b86c2daf29b7481966f09f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b4f5a2949d82f612ed9a85c81a89a4ab1588bbe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071146"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547770"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>使用資料摘要庫共用資料摘要 (PowerPivot for SharePoint)
-  資料摘要是從以 Atom 電傳格式公開資料之服務或應用程式產生的 XML 資料流， 現在越來越常用在應用程式之間傳輸資料，以及傳輸資料至用戶端檢視器。 在 PowerPivot for SharePoint 部署中，資料摘要是用來以 Atom [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]感知應用程式或服務中的資料填入資料來源。  
+  資料摘要是從以 Atom 電傳格式公開資料之服務或應用程式產生的 XML 資料流， 現在越來越常用在應用程式之間傳輸資料，以及傳輸資料至用戶端檢視器。 在 PowerPivot for SharePoint 部署中，資料摘要是用來以 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Atom 感知應用程式或服務中的資料填入資料來源。  
   
  如果您已經使用 Atom 感知應用程式的組合，您可能永遠都不需要知道摘要是如何產生和取用的，因為應用程式之間會進行完美的資料傳輸。 但是，使用自訂方案來發行 Atom 摘要的組織通常都需要想辦法提供摘要給資訊工作者使用。 其中一種辦法就是：建立並共用資料服務文件 (.atomsvc) 檔，以提供連接到產生摘要的線上來源。 資料摘要庫是有特殊用途的程式庫，支援在 SharePoint Web 應用程式中建立並共用資料服務文件。  
   
  本主題包含下列幾節：  
   
- [必要條件](#prereq)  
+ [先決條件](#prereq)  
   
  [建立資料服務檔](#createdsdoc)  
   
@@ -39,8 +38,8 @@ ms.locfileid: "66071146"
 > [!NOTE]  
 >  雖然資料摘要是用來將 Web 資料加入您在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中建立的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]資料來源，但是任何可讀取 Atom 摘要的用戶端應用程式都可以處理資料服務文件。  
   
-##  <a name="prerequisites"></a><a name="prereq"></a> 必要條件  
- 您必須擁有[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot for SharePoint 的部署，才能將[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]查詢處理加入至 SharePoint 伺服器陣列。 資料摘要支援是透過 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案套件進行部署。  
+##  <a name="prerequisites"></a><a name="prereq"></a> 先決條件  
+ 您必須擁有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot for SharePoint 的部署，才能將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 查詢處理加入至 SharePoint 伺服器陣列。 資料摘要支援是透過 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案套件進行部署。  
   
  您必須有支援資料服務文件內容類型的 SharePoint 文件庫。 因此，建議您使用預設的資料摘要庫，但是您也可以手動方式加入該內容類型至任何文件庫。 如需詳細資訊，請參閱[建立或自訂資料摘要庫 &#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "66071146"
   
  同樣地，您後續排程的任何資料重新整理作業也會排除資料服務文件。 在匯入時，每份摘要的連接資訊都會複製到 PowerPivot 資料來源中，以便進行重新整理。 因此，進行資料重新整理時並不會檢查資料服務文件上的權限，因為在重新整理作業中永遠不會參考該文件本身。  
   
-|工作|SharePoint 權限需求|  
+|Task|SharePoint 權限需求|  
 |----------|----------------------------------------|  
 |匯入資料摘要至啟用 PowerPivot 功能的活頁簿。|文件庫中的資料服務文件的檢視權限。|  
 |在 PowerPivot 用戶端應用程式中，重新整理先前透過摘要擷取的資料。|不適用。 PowerPivot 用戶端應用程式會使用內嵌 HTTP 連接資訊，直接連接到提供摘要的資料服務和應用程式。 PowerPivot 用戶端應用程式不會使用資料服務文件。|  

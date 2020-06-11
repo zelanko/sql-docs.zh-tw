@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a80f607c3187e967404ce018b7eed00497d9c01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63fe9b7d83eea026a9a0f61213e2ccd30bba3591
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078574"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542900"
 ---
 # <a name="lesson-5-create-relationships"></a>第 5 課：建立關聯性
   在這一課，您將驗證匯入資料時自動建立的關聯性，以及在不同資料表之間加入新的關聯性。 關聯性是在兩個資料表之間的一種連接，這種連接會建立這兩個資料表中資料相互關聯的方式。 例如，[產品] 資料表和 [產品子類別目錄] 資料表的關聯性是以每個產品都屬於某個子類別目錄為基礎。 如需詳細資訊，請參閱[關聯性 &#40;SSAS 表格式&#41;](tabular-models/relationships-ssas-tabular.md)。  
   
  這堂課的預估完成時間：**10 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 3 課：重新命名資料行](rename-columns.md)。  
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>檢閱現有的關聯性並加入新的關聯性  
@@ -45,13 +44,13 @@ ms.locfileid: "66078574"
   
 3.  在圖表視圖中使用模型設計師，或在 [**管理關聯性**] 對話方塊中，確認從 AdventureWorksDW 資料庫匯入每個資料表時所建立的下列關聯性：  
   
-    |Active|Table|相關查閱資料表|  
+    |使用中|Table|相關查閱資料表|  
     |------------|-----------|--------------------------|  
-    |是|**客戶 [地理位置 ID]**|**地理位置 [地理位置 ID]**|  
-    |是|**產品 [產品子類別目錄 ID]**|**產品子類別目錄 [產品子類別目錄 ID]**|  
-    |是|**產品子類別目錄 [產品類別目錄 ID]**|**產品類別目錄 [產品類別目錄 ID]**|  
-    |是|**網際網路銷售 [客戶 ID]**|**客戶 [客戶 ID]**|  
-    |是|**網際網路銷售 [產品 ID]**|**產品 [產品 ID]**|  
+    |Yes|**客戶 [地理位置 ID]**|**地理位置 [地理位置 ID]**|  
+    |Yes|**產品 [產品子類別目錄 ID]**|**產品子類別目錄 [產品子類別目錄 ID]**|  
+    |Yes|**產品子類別目錄 [產品類別目錄 ID]**|**產品類別目錄 [產品類別目錄 ID]**|  
+    |Yes|**網際網路銷售 [客戶 ID]**|**客戶 [客戶 ID]**|  
+    |Yes|**網際網路銷售 [產品 ID]**|**產品 [產品 ID]**|  
   
  如果上表中的任何關聯性遺失，請確認您的模型中包含下列資料表：客戶、日期、地理位置、產品、產品類別目錄、產品子類別目錄和網際網路銷售。 如果是在不同時間從相同的資料來源連線匯入資料表，則不會建立這些資料表之間的關聯性，必須手動建立。  
   

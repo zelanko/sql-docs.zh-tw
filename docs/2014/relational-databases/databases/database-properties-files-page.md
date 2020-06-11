@@ -12,17 +12,17 @@ ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36b0d8b5d91b18ad4b97ac873ad3073ca97b133e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b43cc124ff6f5147a3255cbdf164679bae55d18
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871984"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858537"
 ---
 # <a name="database-properties-files-page"></a>資料庫屬性 (檔案頁面)
   使用此頁面來建立新的資料庫，或者檢視或修改選取之資料庫的屬性。 此主題適用於現有資料庫的 [資料庫屬性 (檔案頁面)]  ，以及 [新增資料庫 (一般頁面)]  。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **資料庫名稱**  
  加入或顯示資料庫的名稱。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62871984"
  若要將檔案 (容器) 加入至 Filestream 資料檔案群組，就必須啟用 FILESTREAM。 您可以使用 [[伺服器屬性 (進階頁面)]](../../database-engine/configure-windows/server-properties-advanced-page.md) 對話方塊來啟用 FILESTREAM。  
   
  **檔案群組**  
- 從清單中選取檔案的檔案群組。 依預設，此檔案群組為 PRIMARY。 您可以選取 [**新增檔案群組>]\<** ，並在 [新增檔案群組]  對話方塊中輸入有關檔案群組的資訊，以建立新的檔案群組。 新的檔案群組亦可在 **[檔案群組]** 頁面上建立。 您無法修改現有檔案的檔案群組。  
+ 從清單中選取檔案的檔案群組。 依預設，此檔案群組為 PRIMARY。 您可以選取 [\<新增檔案群組>]，並在 [新增檔案群組] 對話方塊中輸入有關檔案群組的資訊，以建立新的檔案群組。 新的檔案群組亦可在 **[檔案群組]** 頁面上建立。 您無法修改現有檔案的檔案群組。  
   
  將檔案 (容器) 加入至記憶體最佳化檔案群組時，[檔案群組]  欄位會填入資料庫之記憶體最佳化檔案群組的名稱。  
   

@@ -1,21 +1,21 @@
 ---
-title: 選取 [ &lt;從&gt;模型]。案例（DMX） |Microsoft Docs
+title: 選取 [從 &lt; 模型] &gt; 。案例（DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5f0334c37eeedafee7066f01d61745fcb82d1629
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6753f90b76f70de9f7368a5656ba93b16a3740d1
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892838"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669615"
 ---
-# <a name="select-from-ltmodelgtcases-dmx"></a>選取 [ &lt;從&gt;模型]。案例（DMX）
+# <a name="select-from-ltmodelgtcases-dmx"></a>選取 [從 &lt; 模型] &gt; 。案例（DMX）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   支援鑽研，並傳回用於培訓模型的案例。 如果已經在採礦結構和採礦模型上啟用鑽研，而且有適當的權限，您也可以傳回不包含在模型中的結構資料行。  
@@ -44,7 +44,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
  若要包含不包含在採礦模型中的結構資料行，請使用函數 `StructureColumn('<structure column name>')`。  
   
- *模型*  
+ *model*  
  模型識別碼。  
   
  *條件運算式*  
@@ -61,7 +61,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  在**WHERE**子句中使用[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)函數，只會傳回與架構資料列集的 NODE_UNIQUE_NAME 資料行所指定的節點相關聯的案例。  
   
 ## <a name="examples"></a>範例  
- 下列範例是根據以[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料庫和其相關聯的採礦模型為依據的目標郵寄結構。 如需詳細資訊，請參閱[基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程。  
+ 下列範例是根據以 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫和其相關聯的採礦模型為依據的目標郵寄結構。 如需詳細資訊，請參閱[基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程。  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>範例 1：鑽研模型案例和結構資料行  
  下列範例會傳回用於測試「目標郵寄」模型之所有案例的資料行。 如果有建置模型的採礦結構不包含鑑效組測試資料集，此查詢會傳回 0 個案例。 您可以使用運算式清單，僅傳回您需要的資料行。  

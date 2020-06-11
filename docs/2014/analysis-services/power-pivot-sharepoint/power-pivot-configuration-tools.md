@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 299b40b92b3d2f8c5559a5e10e511f80ab5a5bc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de11cdaf304b3010dcf21725edd2d3cbfa84ae0a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175657"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540227"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  使用 PowerPivot 組態工具設定、修復或移除[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用 PowerPivot 組態工具設定、修復或移除 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。
 
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈會安裝適用於 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具，以及適用於 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。 本主題描述這兩種工具的一般使用方式以及兩者之間的差異。
 
@@ -49,7 +48,7 @@ ms.locfileid: "78175657"
 
  這些工具僅能搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]執行個體使用。 請勿將它們用於 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 安裝。
 
-|名稱|支援的 SharePoint 版本|詳細組態|
+|Name|支援的 SharePoint 版本|詳細組態|
 |----------|-------------------------------------|----------------------------|
 |PowerPivot for SharePoint 2013 組態|SharePoint 2013|[設定或修復 PowerPivot for SharePoint 2013 &#40;PowerPivot 設定工具&#41;](configure-or-repair-power-pivot-for-sharepoint-2013.md)|
 |PowerPivot 組態工具|SharePoint 2010 含 SharePoint 2010|[設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 設定工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)|
@@ -62,7 +61,7 @@ ms.locfileid: "78175657"
 |PowerPivot for SharePoint 2013 組態|PowerPivot 組態工具|
 |--------------------------------------------------|-----------------------------------|
 |主頁面有 **[適用於 Excel Services 的 PowerPivot 伺服器]** 這個新選項。 這個選項支援採用在 SharePoint 伺服器陣列外部執行之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新架構。 您設定 Excel Services 使用以 SharePoint 模式執行的一部或多部 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。<br /><br /> ![新組態工具中的 PowerPivot 伺服器](../media/as-powerpivot-configtool-differences-new-mainpage.gif "新組態工具中的 PowerPivot 伺服器")||
-||2010工具組含本機伺服器上的頁面暫存器**SQL Server Analysis Services （PowerPivot）** ，用以設定的本機實例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 這個頁面不是 2013 工具的一部分，因為沒有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的本機執行個體。<br /><br /> ![做為舊組態工具中的服務帳戶](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "做為舊組態工具中的服務帳戶")|
+||2010工具組含本機伺服器上的頁面暫存器**SQL Server Analysis Services （PowerPivot）** ，用以設定的本機實例 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 這個頁面不是 2013 工具的一部分，因為沒有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的本機執行個體。<br /><br /> ![做為舊組態工具中的服務帳戶](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "做為舊組態工具中的服務帳戶")|
 ||**[建立 PowerPivot 服務應用程式]** 頁面多了 **[升級活頁簿以啟用資料重新整理]** 這個額外選項。 這個選項在 2013 工具中無法使用。<br /><br /> ![升級舊組態工具中的活頁簿](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "升級舊組態工具中的活頁簿")|
 |2013 工具有 **[設定 PowerPivot 伺服器]** 這個新頁面。 這個頁面支援在 SharePoint 伺服器陣列外部執行之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新架構。 根據預設，在主頁面的文字方塊 **[適用於 Excel Services 的 PowerPivot 伺服器]** 中輸入的伺服器名稱，也會在 **[設定 PowerPivot 伺服器]** 上列出。<br /><br /> ![註冊新組態工具中的 PowerPivot 伺服器](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "註冊新組態工具中的 PowerPivot 伺服器")||
 |2013 工具有一個新頁面 **[將 PowerPivot 增益集註冊為 Excel Services Usage Tracker]**。 SharePoint 2010 Excel Services 不會追蹤 PowerPivot 的使用量資料。||
@@ -91,7 +90,7 @@ ms.locfileid: "78175657"
 
 1.  在 [**開始**] 畫面上，輸入`powerpivot`
 
-     在 [**開始**] 畫面上`powerpivot` ，輸入或在 [**開始**] 功能表上，依[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]序按一下 [**所有程式**]、[]、[**組態工具**]，然後按一下下列其中一項：
+     在 [**開始**] 畫面上，輸入 `powerpivot` 或在 [**開始**] 功能表上，依序按一下 [**所有程式**]、[] [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 、[**組態工具**]，然後按一下下列其中一項：
 
     -   **PowerPivot 設定工具**。
 

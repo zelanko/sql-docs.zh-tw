@@ -1,5 +1,6 @@
 ---
 title: 將參數傳遞至 Updategram （SQLXML）
+description: 瞭解如何將參數傳遞至 SQLXML 4.0 中的 updategram。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e109543de3b45b5af0930a14541bf3e89c66edc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 462b9b2b8cd5239e6185b59dfabc028c4d7d8d6a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252404"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529798"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>將參數傳遞至 Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252404"
  Updategrams 可讓您將 NULL 當做參數值來傳遞。 若要傳遞 Null 參數值，請指定**nullvalue**屬性。 然後，會將指派給**nullvalue**屬性的值當做參數值提供。 Updategrams 將此值視為 NULL。  
   
 > [!NOTE]  
->  在** \<sql： header>** 和** \<updg： header>** 中，您應該將**nullvalue**指定為不合格;不過，在** \<updg： sync>** 中，您會將**nullvalue**指定為合格（例如**updg： nullvalue**）。  
+>  在 **\<sql:header>** 和中 **\<updg:header>** ，您應該將**nullvalue**指定為不合格，而在中 **\<updg:sync>** ，您會將**nullvalue**指定為合格（例如**updg： nullvalue**）。  
   
 ## <a name="examples"></a>範例  
  若要使用下列範例建立工作範例，您必須符合[執行 SQLXML 範例的需求](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)中所指定的需求。  
@@ -64,7 +65,7 @@ ms.locfileid: "75252404"
   
 1.  將上述的 updategram 複製到 [記事本] 中，並將它儲存為 UpdategramWithParameters.xml 檔。  
   
-2.  在中準備 SQLXML 4.0 測試腳本（Sqlxml4test.vbs），以[使用 ADO 執行 sqlxml 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)來執行 updategram，方法是在之後新增下列幾行`cmd.Properties("Output Stream").Value = outStream`：  
+2.  在中準備 SQLXML 4.0 測試腳本（Sqlxml4test.vbs），以[使用 ADO 執行 sqlxml 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)來執行 updategram，方法是在之後新增下列幾行 `cmd.Properties("Output Stream").Value = outStream` ：  
 
     ```  
     cmd.NamedParameters = True  
@@ -99,7 +100,7 @@ ms.locfileid: "75252404"
   
 1.  將上述的 updategram 複製到 [記事本] 中，並將它儲存為 UpdategramPassingNullvalues.xml 檔。  
   
-2.  在中準備 SQLXML 4.0 測試腳本（Sqlxml4test.vbs），以[使用 ADO 執行 sqlxml 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)來執行 updategram，方法是在之後新增下列幾行`cmd.Properties("Output Stream").Value = outStream`：  
+2.  在中準備 SQLXML 4.0 測試腳本（Sqlxml4test.vbs），以[使用 ADO 執行 sqlxml 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)來執行 updategram，方法是在之後新增下列幾行 `cmd.Properties("Output Stream").Value = outStream` ：  
   
     ```  
     cmd.NamedParameters = True  

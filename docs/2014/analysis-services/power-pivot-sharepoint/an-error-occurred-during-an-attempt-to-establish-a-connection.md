@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1b951da1-f62d-43d2-b40b-270a4a9ab92c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c09c8984e964b4bdfa93b0fcebae2e613d484892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 242fefb2ca22d7b0129268a8a3ea8ed98e80bbe3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071946"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547610"
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>嘗試建立與外部資料來源之間的連接時，發生錯誤。 下列連接無法重新整理：PowerPivot 資料
   如果您在沒有安裝 PowerPivot for SharePoint 的伺服器上查詢 PowerPivot 資料，就會發生這個錯誤。 如果 SQL Server Analysis Services (PowerPivot) 服務停止，或者您嘗試從舊版檢視 PowerPivot 資料，也會發生這個錯誤。  
@@ -24,7 +23,7 @@ ms.locfileid: "66071946"
   
 |||  
 |-|-|  
-|適用對象|PowerPivot for SharePoint|  
+|適用於|PowerPivot for SharePoint|  
 |產品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|資料連接失敗。|  
 |訊息文字|嘗試建立與外部資料來源之間的連接時，發生錯誤。 下列連接無法重新整理：PowerPivot 資料|  

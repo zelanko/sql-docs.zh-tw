@@ -12,17 +12,17 @@ ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7d60820ba7c384347aeeec80d8c41f934078eca8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e63db637566cd9e2e481731c4d742f02c261ddd
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056866"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856470"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
   [參數化]**** 對話方塊可讓您將新的或現有的參數與工作屬性產生關聯。 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，以滑鼠右鍵按一下工作或 [控制流程] 索引標籤，然後按一下 [參數化]**** 即可開啟此對話方塊。 下列清單描述對話方塊中的 UI 元素。 如需參數的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 參數](integration-services-ssis-package-and-project-parameters.md)。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **屬性**  
  選取要與參數產生關聯的工作屬性。 此清單會以可參數化的所有屬性擴展。  
   
@@ -53,5 +53,5 @@ ms.locfileid: "66056866"
  **必要**  
  指定參數是否是否需要先指定一個值 (非設計預設值)，指定的封裝才能執行。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
   

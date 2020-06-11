@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 360a8b93c20dd57d3dd3d382c843a2f65d5f3c27
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071849"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547580"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>設定及檢視 SharePoint 記錄檔與診斷記錄 (PowerPivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器作業、事件與訊息都會記錄在 SharePoint 記錄檔中。 使用本主題的資訊來設定記錄層級及檢視記錄檔資訊。 您可以控制要記錄到檔案中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器事件。 您也可以控制所記錄之訊息的嚴重性。 如需詳細資訊，請參閱[設定 &#40;PowerPivot for SharePoint 的使用量資料收集](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
@@ -64,7 +63,7 @@ ms.locfileid: "66071849"
   
 8.  選取 **[詳細資訊]** ，將所有事件記錄到追蹤記錄檔。  
   
-9. 按一下 [確定]  。  
+9. 按一下 [確定]。  
   
 ##  <a name="how-to-view-sharepoint-log-files"></a><a name="bkmk_how2viewlogfiles"></a>如何查看 SharePoint 記錄檔  
  記錄檔是文字檔。 您可以使用任何文字編輯器來開啟它們。 您也可以使用協力廠商的記錄檢視器應用程式。  
@@ -118,11 +117,11 @@ ms.locfileid: "66071849"
   
 |Process|區域|類別|層級|訊息|詳細資料|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|[PowerPivot 服務]|使用量|「詳細資訊」|目前沒有要求統計資料，沒有要記錄的項目。|服務報表會在預先定義的間隔查詢回應統計資料，做為使用量資料集合系統的使用量事件。 此訊息表示沒有要報告的查詢統計資料。|  
-|w3wp.exe|[PowerPivot 服務]|Web 前端|「詳細資訊」|開始尋找資料來源 =\<*路徑*的應用程式伺服器>|當它收到連接要求時， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務會識別可用的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 來處理要求。 如果伺服陣列中只有一個伺服器，在所有情況下本機伺服器都會接受要求。|  
+|w3wp.exe|[PowerPivot 服務]|使用方式|「詳細資訊」|目前沒有要求統計資料，沒有要記錄的項目。|服務報表會在預先定義的間隔查詢回應統計資料，做為使用量資料集合系統的使用量事件。 此訊息表示沒有要報告的查詢統計資料。|  
+|w3wp.exe|[PowerPivot 服務]|Web 前端|「詳細資訊」|開始尋找資料來源的應用程式伺服器 =\<*path*>|當它收到連接要求時， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務會識別可用的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 來處理要求。 如果伺服陣列中只有一個伺服器，在所有情況下本機伺服器都會接受要求。|  
 |w3wp.exe|[PowerPivot 服務]|Web 前端|「詳細資訊」|尋找應用程式伺服器成功。|此要求會配置到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。|  
-|w3wp.exe|[PowerPivot 服務]|Web 前端|「詳細資訊」|將\< *PowerPivotdata 來源*> 的要求重新導向至[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]。|此要求會轉送至 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]。|  
-|w3wp.exe|[PowerPivot 服務]|[要求處理]|「詳細資訊」|將 UserName\<*SharePoint 使用者*> 的要求重新導向至資料庫|系統會代表 SharePoint 使用者建立模擬的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料來源連接。|  
+|w3wp.exe|[PowerPivot 服務]|Web 前端|「詳細資訊」|將的要求重新導向 \<*PowerPivotdata source*> 至 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 。|此要求會轉送至 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]。|  
+|w3wp.exe|[PowerPivot 服務]|[要求處理]|「詳細資訊」|將使用者名稱的要求重新導向 \<*SharePoint user*> 至資料庫|系統會代表 SharePoint 使用者建立模擬的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料來源連接。|  
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot 使用量資料收集](power-pivot-usage-data-collection.md)   

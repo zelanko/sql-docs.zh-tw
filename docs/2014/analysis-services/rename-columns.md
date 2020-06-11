@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef23d99b4542880d9756bbdad2e5cfb368b4f43c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070322"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539360"
 ---
 # <a name="lesson-3-rename-columns"></a>第 3 課：重新命名資料行
   在這一課，您將重新命名匯入的每個資料表中的多個資料行。 重新命名可讓資料行更容易識別，且更容易在模型設計師中以及藉由使用者在用戶端應用程式中選取欄位的方式進行導覽。 若要深入了解，請參閱[重新命名資料表或資料行 &#40;SSAS 表格式&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md)。  
@@ -25,7 +24,7 @@ ms.locfileid: "66070322"
   
  這堂課的預估完成時間：**20 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 2 課：新增資料](lesson-2-add-data.md)。  
   
 ## <a name="rename-columns"></a>重新命名資料行  
@@ -36,7 +35,7 @@ ms.locfileid: "66070322"
   
      當您按一下某個索引標籤時，該資料表會在模型設計師視窗中變成使用中。  
   
-2.  按兩下 [ **CustomerKey** ] 資料行名稱，然後`Customer  Id`輸入，再按 enter 鍵。  
+2.  按兩下 [ **CustomerKey** ] 資料行名稱，然後輸入 `Customer  Id` ，再按 enter 鍵。  
   
     > [!TIP]  
     >  您也可以在資料行的 [**屬性**] 視窗或 [圖表視圖] 中，重新命名資料行**名稱**屬性中的資料行。  
@@ -65,7 +64,7 @@ ms.locfileid: "66070322"
     |NumberCarsOwned|Number of Cars Owned|  
     |AddressLine1|Address Line 1|  
     |AddressLine2|Address Line 2|  
-    |電話|電話號碼|  
+    |手機|電話號碼|  
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Commute Distance|  
   
@@ -100,7 +99,7 @@ ms.locfileid: "66070322"
     |PostalCode|郵遞區號|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **基礎**  
+     **產品**  
   
     |來源名稱|易記名稱|  
     |-----------------|-------------------|  
@@ -121,7 +120,7 @@ ms.locfileid: "66070322"
     |Dealer Price|Dealer Price|  
     |ModelName|模型名稱|  
     |LargePhoto|Large Photo|  
-    |EnglishDescription|描述|  
+    |EnglishDescription|Description|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
     |狀態|Product Status|  

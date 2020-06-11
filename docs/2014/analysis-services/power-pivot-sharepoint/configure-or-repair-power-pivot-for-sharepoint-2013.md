@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 84418ca3f32700831eaac6b344f50f9cc862625a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ead6325b6a5ad73326f868030470e8b78f0865d0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175697"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547570"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>設定或修復 PowerPivot for SharePoint 2013 (PowerPivot 組態工具)
   若要設定或修復 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 的安裝，請使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 組態工具。 此組態工具一開始先掃描系統，然後傳回完成或修復安裝所需的動作清單。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈會安裝適用於 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具，以及適用於 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。 本主題描述適用於 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。 如需有關 SharePoint 2010 的詳細資訊，請參閱[設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 設定工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)。
@@ -57,7 +56,7 @@ ms.locfileid: "78175697"
 
  ![PowerPivot for SharePoint 2013 組態工具](../media/ssas-powerpivot-configtool-4-sharepoint2013-mainpage-configure.gif "PowerPivot for SharePoint 2013 組態工具")
 
-||描述|
+||Description|
 |-|-----------------|
 |**sha-1**|工作清單視窗。|
 |**2**|個別動作。|
@@ -109,7 +108,7 @@ ms.locfileid: "78175697"
 
 |頁面|輸入值|來源|描述|
 |----------|-----------------|------------|-----------------|
-|**設定或修復[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint**|預設帳戶|目前使用者|預設帳戶是用於在伺服器陣列中佈建共用服務的網域 Windows 使用者帳戶。 它可用來佈建下列項目：<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式<br />Secure Store Service<br />Excel Services<br />Web 應用程式集區識別<br />網站集合管理員<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動資料重新整理帳戶。<br /><br /> 根據預設，它使用目前使用者的網域帳戶。 除非您是針對評估和非實際執行目的設定伺服器，否則建議您取代預設值。 您稍後可以使用管理中心變更服務識別。 (選擇性) 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具中，為下列項目指定專用帳戶：<br /><br /> Web 應用程式，使用 **[建立預設 Web 應用程式]** 頁面 (假設此工具正在為伺服器陣列建立 Web 應用程式)。<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]無人看管的資料重新整理帳戶，使用此工具中的 [**建立無人看管的資料**重新整理帳戶] 頁面。|
+|**設定或修復 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] For SharePoint**|預設帳戶|目前使用者|預設帳戶是用於在伺服器陣列中佈建共用服務的網域 Windows 使用者帳戶。 它可用來佈建下列項目：<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式<br />Secure Store Service<br />Excel Services<br />Web 應用程式集區識別<br />網站集合管理員<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動資料重新整理帳戶。<br /><br /> 根據預設，它使用目前使用者的網域帳戶。 除非您是針對評估和非實際執行目的設定伺服器，否則建議您取代預設值。 您稍後可以使用管理中心變更服務識別。 (選擇性) 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具中，為下列項目指定專用帳戶：<br /><br /> Web 應用程式，使用 **[建立預設 Web 應用程式]** 頁面 (假設此工具正在為伺服器陣列建立 Web 應用程式)。<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]無人看管的資料重新整理帳戶，使用此工具中的 [**建立無人看管的資料**重新整理帳戶] 頁面。|
 ||資料庫伺服器|本機 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體 (如果有的話)|如果資料庫引擎執行個體安裝為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體，此工具會將這個執行個體名稱填入資料庫伺服器欄位。 如果您沒有安裝資料庫引擎，此欄位是空的。<br /><br /> **[資料庫伺服器]**  是必要參數。 此執行個體可以是 SharePoint 伺服器陣列所支援的任何 SQL Server 版本或版別。|
 ||複雜密碼|使用者輸入|如果您要建立新的伺服器陣列，您所輸入的複雜密碼就會當做此伺服器陣列的複雜密碼使用。 如果您要將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 加入至現有的伺服器陣列，請輸入現有伺服器陣列的複雜密碼。|
 ||SharePoint 管理中心通訊埠|預設值 (如果需要)|如果未設定伺服器陣列，則此工具會提供用於建立伺服器陣列的選項，包括建立指向管理中心的 HTTP 端點。 它會選取一個隨機產生、未使用中的通訊埠編號。|
@@ -130,7 +129,7 @@ ms.locfileid: "78175697"
 ||連絡人電子郵件|預設值 (如果需要)|如果伺服器上設定了 Microsoft Outlook，此工具會使用目前使用者的電子郵件地址， 否則會使用預留位置值。|
 ||網站 URL|預設值 (如果需要)|此工具會使用與 SharePoint 相同的 URL 命名慣例來建立網站 URL。|
 ||網站標題|預設值 (如果需要)|此工具會加入 **[PowerPivot 網站]** 做為預設標題。|
-|**啟用[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]網站集合中的功能**|網站 URL||您要啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能之網站集合的 URL。|
+|**啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 網站集合中的功能**|網站 URL||您要啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能之網站集合的 URL。|
 ||啟用這個網站的高階功能||啟用 SharePoint 網站功能 "PremiumSite"。|
 |**建立 Secure Store Service 應用程式**|服務應用程式名稱|預設值 (如果需要)|輸入 Secure Store Service 應用程式的名稱。|
 ||資料庫伺服器|使用者輸入|輸入用於 Secure Store Service 應用程式的資料庫伺服器名稱。|
@@ -140,12 +139,12 @@ ms.locfileid: "78175697"
 ||複雜密碼|使用者輸入|用於資料加密的主要金鑰。 根據預設，用來產生金鑰的複雜密碼與用來在伺服器陣列中佈建新伺器所用的複雜密碼相同。 您可以用唯一的複雜密碼取代預設複雜密碼。|
 |**建立 DataRefresh 的自動帳戶**|目標應用程式識別碼|預設值 (如果需要)|建立目標應用程式以儲存無人看管之 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理的認證。<br /><br /> 應用程式識別碼可以是描述性文字。|
 ||目標應用程式的易記名稱|預設值 (如果需要)||
-||無人看管帳戶的使用者名稱和密碼|預設值 (如果需要)|輸入目標應用程式用來執行無人看管之資料重新整理的 Windows 使用者帳戶認證。 如需詳細資訊，請參閱[在 SharePoint Server 2013 中使用自動服務帳戶設定 Excel Services 資料](https://technet.microsoft.com/library/hh525344\(office.15\).aspx)重新https://technet.microsoft.com/library/hh525344(office.15).aspx)整理（。|
+||無人看管帳戶的使用者名稱和密碼|預設值 (如果需要)|輸入目標應用程式用來執行無人看管之資料重新整理的 Windows 使用者帳戶認證。 如需詳細資訊，請參閱[在 SharePoint Server 2013 中使用自動服務帳戶設定 Excel Services 資料](https://technet.microsoft.com/library/hh525344\(office.15\).aspx)重新整理（ https://technet.microsoft.com/library/hh525344(office.15).aspx) 。|
 ||網站 URL|預設值 (如果需要)|輸入與目標應用程式相關聯之網站集合的網站 URL。 若要與其他網站集合產生關聯，請使用 SharePoint 管理中心。|
 |**建立 Excel Services 服務應用程式**|服務應用程式名稱|預設值 (如果需要)|輸入服務應用程式名稱。 會在 SharePoint 伺服器陣列的資料庫伺服器上建立具有相同名稱的服務應用程式資料庫。|
-|**設定[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]伺服器**|服務應用程式名稱|預設值 (如果需要)|您在先前頁面上輸入的服務應用程式名稱。|
+|**設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器**|服務應用程式名稱|預設值 (如果需要)|您在先前頁面上輸入的服務應用程式名稱。|
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器名稱||已註冊的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器清單。<br /><br /> 在主要頁面上輸入的伺服器名稱會自動加入至此頁面。|
-|**將[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]增益集註冊為 Excel Services Usage 追蹤程式**|服務應用程式名稱||您在先前頁面上輸入的服務應用程式名稱。|
+|**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]將增益集註冊為 Excel Services Usage 追蹤程式**|服務應用程式名稱||您在先前頁面上輸入的服務應用程式名稱。|
 |||||
 
  如果 PowerPivot for SharePoint 2013 組態工具建立伺服器陣列，它會使用與 SharePoint 相同的檔案命名慣例，在資料庫伺服器上建立必要資料庫。 您無法變更伺服器陣列資料庫名稱。
@@ -153,7 +152,7 @@ ms.locfileid: "78175697"
  如果工具建立網站集合，它會使用與 SharePoint 相同的檔案命名慣例，在資料庫伺服器上建立內容資料庫。 您無法變更內容資料庫名稱。
 
 ## <a name="verify-the-configuration"></a>確認組態
- 請參閱[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [設定 PowerPivot 並將方案部署 &#40;SharePoint 2013&#41;](../instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)的「驗證設定」一節。
+ 請參閱 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [設定 PowerPivot 並將方案部署 &#40;SharePoint 2013&#41;](../instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)的「驗證設定」一節。
 
 ##  <a name="next-steps"></a><a name="bkmk_nextsteps"></a> 後續步驟
  完成伺服器安裝之後，有幾個您應該執行的後置安裝工作：
@@ -181,7 +180,7 @@ ms.locfileid: "78175697"
  伺服器端資料重新整理可讓使用者以自動安裝模式將更新的資料重新匯入其活頁簿中。 為了讓資料重新整理成功，以 SharePoint 模式執行 Analysis Services 的伺服器必須擁有原先用來匯入資料的相同資料提供者。 此外，用來執行資料重新整理的使用者帳戶經常會需要外部資料來源的讀取權限。 請您務必檢查啟用和設定資料重新整理的需求，以確保獲得成功的結果。 如需詳細資訊，請參閱[PowerPivot Data Refresh With SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)。
 
 > [!NOTE]
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]若是 for sharepoint 2013，當您執行**sppowerpivot.msi**安裝程式和[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for sharepoint 2013 設定工具時，就會安裝資料提供者。 如需詳細資訊，請參閱[安裝或卸載 PowerPivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。
+>  若為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013，當您執行**spPowerPivot.msi**安裝程式和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for sharepoint 2013 設定工具時，就會安裝資料提供者。 如需詳細資訊，請參閱[安裝或卸載 PowerPivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。
 
 ### <a name="change-application-pool-and-service-identities-in-sharepoint"></a>在 SharePoint 中變更應用程式集區和服務識別
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具會提供在單一帳戶下執行的伺服器陣列功能、應用程式和服務。 這樣會簡化安裝，但是不會產生一個符合 SharePoint 伺服陣列安全性需求的部署。 若要建立更強固的部署，請變更應用程式集區和服務識別，使其在安裝完成之後於不同的帳戶之下執行。 如需詳細資訊，請參閱[設定 PowerPivot 服務帳戶](configure-power-pivot-service-accounts.md)。
@@ -200,7 +199,7 @@ ms.locfileid: "78175697"
  一段時間之後，如果您決定需要額外的資料儲存和處理功能，可以將其他以 SharePoint 模式執行 Analysis Services 的伺服器加入至伺服器陣列。 若為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013，您可以使用 SharePoint 模式安裝新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器，然後設定 Excel Services。 如需詳細資訊，請參閱[PowerPivot for SharePoint 2013 安裝](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)的「超越單一伺服器安裝」一節。
 
 ## <a name="additional-resources"></a>其他資源
- ![SharePoint 設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")會https://connect.microsoft.com/SQLServer/Feedback)[透過 Microsoft SQL Server Connect （）提交意見反應和連絡人資訊](https://connect.microsoft.com/SQLServer/Feedback)。
+ ![SharePoint 設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")會[透過 Microsoft SQL Server Connect （）提交意見反應和連絡人資訊](https://connect.microsoft.com/SQLServer/Feedback) https://connect.microsoft.com/SQLServer/Feedback) 。
 
 ## <a name="see-also"></a>另請參閱
  [安裝或卸載 PowerPivot for SharePoint 增益集 &#40;sharepoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md) [powerpivot 組態工具](power-pivot-configuration-tools.md)管理中心升級活頁簿[中的 powerpivot 伺服器管理和](power-pivot-server-administration-and-configuration-in-central-administration.md)[設定和排程的資料重新整理 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)

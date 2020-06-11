@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b39909acacb29f68b0de49ba2093c9b812510172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078554"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542710"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>第 6 課：建立導出資料行
   在這一課，您將藉由加入導出資料行的方式在模型中建立新資料。 導出資料行是以已存在模型中的資料為基礎。 如需詳細資訊，請參閱[導出資料行 &#40;SSAS 表格式&#41;](tabular-models/ssas-calculated-columns.md)。  
@@ -24,7 +23,7 @@ ms.locfileid: "66078554"
   
  完成本課程的估計時間： **15 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 5 課：建立關聯性](lesson-4-create-relationships.md)。  
   
 ## <a name="create-calculated-columns"></a>建立導出資料行  
@@ -52,7 +51,7 @@ ms.locfileid: "66078554"
     > [!NOTE]  
     >  如果您收到錯誤，請確認公式中的資料行名稱與您在 [第 3 課：重新命名資料行](rename-columns.md)中變更的資料行名稱相符。  
   
-5.  將此資料行`Month Calendar`重新命名為。  
+5.  將此資料行重新命名為 `Month Calendar` 。  
   
  Month Calendar 導出資料行會提供可排序的月份名稱。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66078554"
   
      完成建立公式時，按 ENTER。  
   
-3.  將資料行重新`Day of Week`命名為。  
+3.  將資料行重新命名為 `Day of Week` 。  
   
 4.  按一下欄位標題，然後將資料行拖曳到 [Day Name]**** 資料行和 [Day of Month]**** 資料行之間。  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66078554"
   
      完成建立公式時，按 ENTER。  
   
-4.  將資料行重新`Product Subcategory Name`命名為。  
+4.  將資料行重新命名為 `Product Subcategory Name` 。  
   
  [Product Subcategory Name] 導出資料行可用來在 [產品] 資料表中建立階層，其中包括來自 [產品子類別目錄] 資料表中 [Product Subcategory Name] 資料行的資料。 階層不可跨越多個資料表。 您稍後將在第 7 課中建立階層。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66078554"
   
      完成建立公式時，按 ENTER。  
   
-3.  將資料行重新`Product Category Name`命名為。  
+3.  將資料行重新命名為 `Product Category Name` 。  
   
  [Product Category Name] 導出資料行可用來在 [產品] 資料表中建立階層，其中包括來自 [產品類別目錄] 資料表中 [Product Category Name] 資料行的資料。 階層不可跨越多個資料表。  
   
@@ -119,7 +118,7 @@ ms.locfileid: "66078554"
   
      完成建立公式時，按 ENTER。  
   
-4.  將資料行重新`Margin`命名為。  
+4.  將資料行重新命名為 `Margin` 。  
   
 5.  將這個資料行拖曳至 [Sales Amount]**** 資料行和 [Tax Amt]**** 資料行之間。  
   

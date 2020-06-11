@@ -1,5 +1,6 @@
 ---
 title: 命名空間-從-QName （XQuery）開始的 uri |Microsoft Docs
+description: 瞭解如何使用命名空間-從 QName 取得的 uri 函式來抓取 QName 的命名空間 URI。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 96edefd5409520109e2b2155507dd8879ed4b0d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a0967e9dfd9392513da3925725930111a97da0c9
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946639"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689552"
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>與 QNames 相關的函式 - namespace-uri-from-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

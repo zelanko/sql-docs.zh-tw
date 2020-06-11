@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: de72001ced1b7e2690f90b2de4c59bb35aca6ce4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bea6bb558e6ccafefbbb068fa3799eddff748a5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071107"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547804"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>管理中心的 PowerPivot 伺服器管理和組態
   PowerPivot 伺服器管理與組態是由 SharePoint 服務應用程式管理員使用 SharePoint 管理中心所執行。  

@@ -1,28 +1,28 @@
 ---
-title: 選取 [ &lt;從&gt;結構]。案例 |Microsoft Docs
+title: 選取 [從 &lt; 結構] &gt; 。案例 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baa7ed6209daf3de76c20d8ff67a9b76a36be4e8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928299"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670102"
 ---
-# <a name="select-from-ltstructuregtcases"></a>選取 [ &lt;從&gt;結構]。種
+# <a name="select-from-ltstructuregtcases"></a>選取 [從 &lt; 結構] &gt; 。種
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   傳回用於建立採礦結構的案例。  
   
  如果結構上未啟用鑽研，則陳述式會失敗。 同時，如果使用者沒有採礦結構的鑽研權限，陳述式將會失敗。  
   
- 在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中，預設會啟用新的採礦結構的鑽取。 若要確認是否已針對特定結構啟用「鑽看」，請檢查**CacheMode**屬性的值是否設定為**KeepTrainingCases**。  
+ 在中 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，預設會啟用新的採礦結構的鑽取。 若要確認是否已針對特定結構啟用「鑽看」，請檢查**CacheMode**屬性的值是否設定為**KeepTrainingCases**。  
   
  如果**CacheMode**的值變更為**ClearAfterProcessing**，則會從快取中清除結構案例，而且您無法使用 [鑽看]。  
   
@@ -65,7 +65,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  因此，若要保護敏感性資料或個人資訊，您應該先建立您的資料來源 view 來遮罩個人資訊，並且只在必要時才授與**AllowDrillthrough**許可權給採礦結構或採礦模型。  
   
 ## <a name="examples"></a>範例  
- 下列範例是以[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]資料庫和相關聯的採礦模型為基礎的「目標郵寄」為依據。 如需詳細資訊，請參閱[基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程。  
+ 下列範例是以 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 資料庫和相關聯的採礦模型為基礎的「目標郵寄」為依據。 如需詳細資訊，請參閱[基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程。  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>範例 1：鑽研結構案例  
  下列範例會傳回採礦結構「目標郵寄」中，最舊的 500 位客戶的清單。 此查詢會傳回採礦模型中的所有資料行，但會將資料列限制為購買自行車的客戶，並以年齡加以排序。 您也可以編輯運算式清單，僅傳回您需要的資料行。  
