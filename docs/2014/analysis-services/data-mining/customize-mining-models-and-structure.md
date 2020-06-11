@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b890514422a6b9b16cdfe2eb5b07d796a46bd60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a85819955e167c2356be51c5f3abcc2897bb42b9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174442"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523360"
 ---
 # <a name="customize-mining-models-and-structure"></a>自訂採礦模型和結構
   當您選取符合商務需求的演算法之後，可以使用下列方式來自訂採礦模型，以便能夠得到更好的結果。
@@ -61,7 +60,7 @@ ms.locfileid: "78174442"
 ### <a name="creating-aliases-for-model-columns"></a>建立模型資料行的別名
  當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立採礦模型時，它會使用採礦結構中存在的相同資料行名稱。 您可以將別名加入至採礦模型中的任何資料行。 這樣做可能會讓人較容易了解資料行的內容或使用方式，或者縮短名稱以便建立查詢。 當您想要建立資料行複本，並將它命名為具描述性的名稱時，別名也會很有幫助。
 
- 您會藉由編輯採礦模型資料行的 `Name` 屬性來建立別名。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會繼續使用原始名稱當做資料行的識別碼，而您針對輸入的`Name`新值會變成資料行別名，而且會顯示在資料行使用方式旁的方格中（以括弧括住）。
+ 您會藉由編輯採礦模型資料行的 `Name` 屬性來建立別名。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會繼續使用原始名稱當做資料行的識別碼，而您針對輸入的新值 `Name` 會變成資料行別名，而且會顯示在資料行使用方式旁的方格中（以括弧括住）。
 
  ![採礦模型資料行的別名](../media/modelcolumnalias-income.gif "採礦模型資料行的別名")
 
@@ -94,7 +93,7 @@ ms.locfileid: "78174442"
 
  每一個演算法類型的主題也會列出可以搭配以該演算法為根據之模型一起使用的預測函數。
 
-|屬性名稱|適用對象|
+|屬性名稱|適用於|
 |-------------------|----------------|
 |AUTO_DETECT_PERIODICITY|[Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)|
 |CLUSTER_COUNT|[Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 時序群集演算法技術參考](microsoft-sequence-clustering-algorithm-technical-reference.md)|

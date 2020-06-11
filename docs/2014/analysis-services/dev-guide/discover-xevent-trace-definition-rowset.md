@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bedd6ec66a188738ac9a522b4802b3b431e82f36
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62731910"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528624"
 ---
 # <a name="discover_xevent_trace_definition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 資料列集
   提供有關伺服器上目前使用中 XEvent 追蹤的資訊。  
@@ -25,7 +24,7 @@ ms.locfileid: "62731910"
 ## <a name="rowset-columns"></a>資料列集資料行  
  `DISCOVER_XEVENT_TRACE_DEFINITION` 資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|描述|  
+|資料行名稱|類型指標|長度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`Data`|`DBTYPE_WSTR`||XEvent 追蹤的 XML 定義。|  
   

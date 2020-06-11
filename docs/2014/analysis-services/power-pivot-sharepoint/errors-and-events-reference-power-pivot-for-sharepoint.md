@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 95970bab-aa4d-4e8e-be86-0c96e95a5d0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35f851770c78a5079ab5381ad66a13776d90023d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd74e51d358bdbc46fe39479395fdd9ba563ee6f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071408"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544530"
 ---
 # <a name="errors-and-events-reference-powerpivot-for-sharepoint"></a>錯誤和事件參考 (PowerPivot for SharePoint)
   本節提供有關 PowerPivot for SharePoint 錯誤和事件的資訊。 本節中的錯誤是由出現在記錄檔或錯誤視窗中的錯誤訊息文字所識別。  

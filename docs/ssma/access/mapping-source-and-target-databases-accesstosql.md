@@ -1,5 +1,6 @@
 ---
 title: 對應來源和目標資料庫（AccessToSQL） |Microsoft Docs
+description: 瞭解如何指定目標資料庫來進行 Access 資料庫移轉，以 SQL Server 或 Azure SQL Database，包括多個資料庫到多個資料庫。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 192db2e6c074305ca258d76652351175c8a82751
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 894dec18ab2d487eca22a65542e1d77d6c2e2f77
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907151"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293744"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>對應來源和目標資料庫（AccessToSQL）
-當您連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 時，您需要指定要進行遷移的目標資料庫。 如果您有多個 Access 資料庫，您可以將它們[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]對應至多個資料庫（或架構），或對應到已連線之 SQL Azure 資料庫下的多個架構。  
+當您連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 時，您需要指定要進行遷移的目標資料庫。 如果您有多個 Access 資料庫，您可以將它們對應至多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫（或架構），或對應到已連線之 SQL Azure 資料庫下的多個架構。  
   
 ## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server 或 SQL Azure 資料庫架構  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫會使用架構的概念，將資料庫內的物件分隔成邏輯群組。 例如，程式庫資料庫可以使用名為「**書籍**」、「**音訊**」和「**影片**」的三個架構來分隔書籍、音訊和影片物件。 根據預設，access 資料庫會對應到**master**資料庫，以及**dbo**中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 dbo 架構和 SQL Azure 中的連接資料庫和**dbo**架構。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫會使用架構的概念，將資料庫內的物件分隔成邏輯群組。 例如，程式庫資料庫可以使用名為「**書籍**」、「**音訊**」和「**影片**」的三個架構來分隔書籍、音訊和影片物件。 根據預設，access 資料庫會對應到**master**資料庫，以及中的**DBO**架構和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 中的連接資料庫和**dbo**架構。  
   
-除非您自訂每個 Access 資料庫與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫和架構之間的對應，否則 SSMA 會將與 Access 資料庫相關聯的所有架構和資料移轉到預設的資料庫對應。  
+除非您自訂每個 Access 資料庫與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和架構之間的對應，否則 SSMA 會將與 Access 資料庫相關聯的所有架構和資料移轉到預設的資料庫對應。  
   
 ## <a name="modifying-the-target-database-and-schema"></a>修改目標資料庫和架構  
-SSMA 可讓您將每個 Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫對應到或 SQL Azure 資料庫和架構。 下列程式描述如何自訂每個資料庫的對應。  
+SSMA 可讓您將每個 Access 資料庫對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料庫和架構。 下列程式描述如何自訂每個資料庫的對應。  
   
 **修改目標資料庫和架構**  
   
@@ -53,14 +54,14 @@ SSMA 可讓您將每個 Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 -   對應至 SQL Server  
   
-您可以將源資料庫對應到任何目標資料庫。 根據預設，源資料庫會對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您使用 SSMA 連接的目標資料庫。 如果要對應的目標資料庫不存在於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，則系統會提示您輸入「**資料庫和/或架構不存在於目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料中」的訊息。它會在同步處理期間建立。您要繼續嗎？** 」 按一下 [是]。 同樣地，您可以將架構對應到目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫下的非現有架構，這會在同步處理期間建立。  
+您可以將源資料庫對應到任何目標資料庫。 根據預設，源資料庫會對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您使用 SSMA 連接的目標資料庫。 如果要對應的目標資料庫不存在於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，則系統會提示您輸入「**資料庫和/或架構不存在於目標中繼資料中」的訊息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。它會在同步處理期間建立。您要繼續嗎？** 」 按一下 [是]。 同樣地，您可以將架構對應到目標資料庫下的非現有架構， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 這會在同步處理期間建立。  
   
 -   對應至 SQL Azure  
   
-您可以將源資料庫對應到連接的目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，或對應至連接的目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中的任何架構。 如果您將來源架構對應至 [已連接的目標資料庫] 底下的任何非現有架構，則系統會提示您輸入「**架構不存在於目標中繼資料中」的訊息。它會在同步處理期間建立。您要繼續嗎？按一下 [是]。**  
+您可以將源資料庫對應到連接的目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，或對應至連接的目標資料庫中的任何架構 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果您將來源架構對應至 [已連接的目標資料庫] 底下的任何非現有架構，則系統會提示您輸入「**架構不存在於目標中繼資料中」的訊息。它會在同步處理期間建立。您要繼續嗎？按一下 [是]。**  
   
 ## <a name="reverting-to-your-initial-database-and-schema"></a>還原成您的初始資料庫和架構  
-如果您自訂 Access 資料庫和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 sql azure 資料庫和架構之間的對應，您可以將對應還原回連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 sql azure 時所指定的資料庫。  
+如果您自訂 Access 資料庫和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql azure 資料庫和架構之間的對應，您可以將對應還原回連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql azure 時所指定的資料庫。  
   
 **若要重設為預設資料庫和架構**  
   

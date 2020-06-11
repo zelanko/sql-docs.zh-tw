@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73967427b97a00d88b3d6c372a0228aa28c2024c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b55e940f75319a965fb1441520a7e16ce7ab2f6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387908"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545305"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>Cube 資料格 (Analysis Services - 多維度資料)
   Cube 是由資料格所組成，而依據量值群組和維度來進行組織。 資料格代表 Cube 內每個維度之某個成員於 Cube 內的唯一邏輯交集。 例如，下圖所描述的 Cube 包含一個具有兩個量值的量值群組，並依 Source、Route 和 Time 這三個維度來進行組織。  
@@ -76,7 +75,7 @@ ms.locfileid: "81387908"
   
  ![識別空白資料格的 Cube 圖表](../../analysis-services/dev-guide/media/as-cubeintro7.gif "識別空白資料格的 Cube 圖表")  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，空的資料格是具有特殊品質的資料格。 因為空資料格會扭曲交叉聯結、計數等的結果，所以許多 MDX 函數會針對計算用途提供忽略空資料格的能力。 如需詳細資訊，請參閱多[維度運算式 &#40;mdx&#41; 參考](/sql/mdx/multidimensional-expressions-mdx-reference)和[mdx &#40;Analysis Services&#41;中的重要概念](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)。  
+ 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，空的資料格是具有特殊品質的資料格。 因為空資料格會扭曲交叉聯結、計數等的結果，所以許多 MDX 函數會針對計算用途提供忽略空資料格的能力。 如需詳細資訊，請參閱多[維度運算式 &#40;mdx&#41; 參考](/sql/mdx/multidimensional-expressions-mdx-reference)和[mdx &#40;Analysis Services&#41;中的重要概念](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)。  
   
 ## <a name="security"></a>安全性  
  資料格資料的存取是在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的角色層級中進行管理，且可使用 MDX 運算式進行細微的控制。 如需詳細資訊，請參閱[將維度資料的自訂存取權授與 &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)，並[將自訂存取權授與 &#40;Analysis Services&#41;的資料格資料](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)。  

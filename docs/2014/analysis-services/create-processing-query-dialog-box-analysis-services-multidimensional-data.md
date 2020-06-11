@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 225f5d757ee6b1d1da5c57b457d599fe4bb42d6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 185ea27c344ccb9e06f914507faca3fea9554dae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086770"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526426"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>建立處理查詢對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [建立處理查詢]**** 對話方塊，即可在 [儲存選項]**** 對話方塊的 [通知]**** 索引標籤中建立處理查詢。 處理查詢是會傳回資料列集的查詢，資料列集內會包含與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件相關聯之資料表所做的變更，而且會是上一次輪詢資料表之後所做的變更，如此才能累加地更新該物件的多維度 OLAP (MOLAP) 快取。 Analysis Services 使用另一種查詢 (稱為輪詢查詢) 來輪詢與物件相關聯的資料表，並決定是否已變更該資料表。 完全更新物件的 MOLAP 快取時，不需要處理查詢。  
@@ -49,14 +48,14 @@ ms.locfileid: "66086770"
   
      對於進階使用者，一般查詢產生器檢視提供更簡單、更直接的使用者介面，可以用來建構及測試 SQL 查詢。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料來源**  
  指定查詢的資料來源。  
   
  **查詢定義**  
  視選取的檢視而定，查詢定義會提供工具列和窗格，以定義及測試查詢。  
   
- **Toolbar**  
+ **工具列**  
  使用工具列即可管理資料集、選取要顯示的窗格和控制各種查詢功能。  
   
 |值|描述|  
@@ -67,7 +66,7 @@ ms.locfileid: "66086770"
 |**顯示/隱藏方格窗格**|顯示或隱藏 [**方格] 窗格**。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
 |**顯示/隱藏 SQL 窗格**|顯示或隱藏 **[SQL 窗格]**。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
 |**顯示/隱藏結果窗格**|顯示或隱藏 **[結果窗格]**。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
-|**進行**|執行查詢。 結果會顯示在 **[結果窗格]** 中。|  
+|**執行**|執行查詢。 結果會顯示在 **[結果窗格]** 中。|  
 |**確認 SQL**|驗證查詢中的 SQL 陳述式。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
 |**昇冪**|依遞增順序排序 **[方格窗格]** 中所選取資料行的輸出資料列。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
 |**遞減排序**|依遞減順序排序在 **[方格窗格]** 中所選取資料行的輸出資料列。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  

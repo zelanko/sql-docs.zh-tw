@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0bbd80998f7a6fd74f76f641cc16fe81ba715dde
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be257e4da206c1c30d54341fbfda4c0aed894ab2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889842"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669855"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>套用至  
- 傳回資料表的運算式，例如\<資料表資料行參考>，或傳回資料表的函數。  
+ 傳回資料表的運算式，例如 \< 資料表資料行參考>，或傳回資料表的函數。  
   
 ## <a name="return-type"></a>傳回類型  
  \<資料表運算式>  
   
 ## <a name="remarks"></a>備註  
- \<次序運算式> 引數所提供的值，會決定\<資料表運算式中提供之資料列的次序增加順序> 引數，並傳回在\<count> 引數中指定的最底層資料列數目。  
+ \<次序運算式> 引數所提供的值，會決定資料表運算式中提供之資料列的次序增加順序 \<> 引數，並 \< 傳回在 count> 引數中指定的最底層資料列數目。  
   
 ## <a name="examples"></a>範例  
  下列範例會針對您使用[基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程所建立的關聯模型，建立預測查詢。  
@@ -54,7 +54,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  範例結果︰  
   
-|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|型號|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -90,7 +90,7 @@ NATURAL PREDICTION JOIN
   
  範例結果︰  
   
-|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|型號|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  

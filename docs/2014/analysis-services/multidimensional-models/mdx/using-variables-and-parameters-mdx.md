@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: a4754d16-d9c4-49f6-9be0-392180b912e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eeb258266c489056994d8f78f80a6856602a174a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd01cf78ea5e3284aa51cad7dc848176a5dc9298
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073705"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546150"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>使用變數與參數 (MDX)
-  在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，您可以參數化多維度運算式（MDX）語句。 您可以使用參數化陳述式，建立可在執行階段自訂的一般陳述式。  
+  在中 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，您可以參數化多維度運算式（MDX）語句。 您可以使用參數化陳述式，建立可在執行階段自訂的一般陳述式。  
   
- 在建立參數化陳述式時，您可以在名稱前面加上 @ 符號，來識別參數名稱。 例如， @Year會是有效的參數名稱  
+ 在建立參數化陳述式時，您可以在名稱前面加上 @ 符號，來識別參數名稱。 例如， @Year 會是有效的參數名稱  
   
  MDX 只支援常值或純量值的參數。 若要建立參考成員、集合或 Tuple 的參數，您必須使用函數，例如 [StrToMember](/sql/mdx/strtomember-mdx) 或 [StrToSet](/sql/mdx/strtoset-mdx)。  
   
- 在下列 XML for Analysis （XMLA）範例中， @CountryName參數會包含取得客戶資料的國家/地區：  
+ 在下列 XML for Analysis （XMLA）範例中， @CountryName 參數會包含取得客戶資料的國家/地區：  
   
 ```  
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">  

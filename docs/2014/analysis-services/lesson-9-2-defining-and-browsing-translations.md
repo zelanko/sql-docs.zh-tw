@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9fb624116ca42f32ab20615d1c34fcb786d150a1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493783"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542240"
 ---
 # <a name="defining-and-browsing-translations"></a>定義和瀏覽翻譯
   翻譯是指採用特定語言之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件名稱的表示。 這些物件包括量值群組、量值、維度、屬性、階層、KPI、動作和導出成員。 翻譯會針對可支援多種語言的用戶端應用程式，提供伺服器支援。 透過使用這類用戶端，用戶端會將地區設定識別碼 (LCID) 傳遞給 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的執行個體，然後當它提供 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件的中繼資料時，就會使用此 LCID 來決定要使用哪一組翻譯。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件沒有包含該語言的翻譯，或者沒有包含指定之物件的翻譯，則在將物件中繼資料傳回到用戶端時會使用預設語言。 例如，假設有一位法國的商務使用者從地區設定為法文的工作站中存取 Cube，若有法文翻譯的話，則該商務使用者會看到法文的成員標題及成員屬性值。 不過，如果位於德國的商務使用者，從具有德文地區設定的工作站存取同一個 Cube，商務使用者就會看到德文的標題名稱以及成員屬性值。 如需詳細資訊，請參閱[維度翻譯](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)、 [Cube 翻譯](multidimensional-models-olap-logical-cube-objects/cube-translations.md)、[翻譯 &#40;Analysis Services&#41;](translations-analysis-services.md)。  
@@ -40,9 +39,9 @@ ms.locfileid: "69493783"
   
      此時會出現另一個語言資料行，讓您定義法文翻譯。  
   
-5.  在 [日期] 維度的 [**標題**] 物件的**資料**列`Fecha`中，輸入**西班牙文（西班牙**）翻譯`Temps`資料行和**法文（法國）** 翻譯資料行。  
+5.  在 [日期] 維度的 [**標題**] 物件的**資料**列中，輸入 `Fecha` 西班牙文 **（西班牙**）翻譯資料行和 `Temps` **法文（法國）** 翻譯資料行。  
   
-6.  在 [ **Month Name** ] 屬性之**Caption**物件的資料列中， `Mes del Año`輸入**西班牙文（西班牙**）翻譯資料行`Mois d'Année`和**法文（法國）** 翻譯資料行中的。  
+6.  在 [ **Month Name** ] 屬性之**Caption**物件的資料列中，輸入 `Mes del Año` 西班牙文 **（西班牙**）翻譯資料行和 `Mois d'Année` **法文（法國）** 翻譯資料行中的。  
   
      請注意，當您輸入這些翻譯時，會出現省略號（**...**）。 按一下這個省略符號，可讓您在基礎資料表中指定一個資料行，以便提供屬性階層每個成員的翻譯。  
   
@@ -80,11 +79,11 @@ ms.locfileid: "69493783"
   
      此時會出現另一個語言資料行，讓您定義法文翻譯。  
   
-5.  在 [日期] 維度的 [**標題**] 物件的**資料**列`Fecha`中，輸入**西班牙文（西班牙**）翻譯`Temps`資料行和**法文（法國）** 翻譯資料行。  
+5.  在 [日期] 維度的 [**標題**] 物件的**資料**列中，輸入 `Fecha` 西班牙文 **（西班牙**）翻譯資料行和 `Temps` **法文（法國）** 翻譯資料行。  
   
-6.  在 [**網際網路銷售**] 量值群組的 [**標題**] 物件的資料`Ventas del lnternet`列中，輸入**西班牙文（西班牙**） `Ventes D'Internet`翻譯資料行和**法文（法國）** 翻譯資料行中的。  
+6.  在 [**網際網路銷售**] 量值群組的 [**標題**] 物件的資料列中，輸入 `Ventas del lnternet` 西班牙文 **（西班牙**）翻譯資料行和 `Ventes D'Internet` **法文（法國）** 翻譯資料行中的。  
   
-7.  在 [網際網路銷售-銷售量] 量值的 [**標題**] 物件資料列中`Cantidad de las Ventas del Internet` ，輸入**西班牙文（西班牙**）翻譯資料`Quantité de Ventes d'Internet`行和**法文（法國）** 翻譯資料行中的。  
+7.  在 [網際網路銷售-銷售量] 量值的 [**標題**] 物件資料列中，輸入 `Cantidad de las Ventas del Internet` 西班牙文 **（西班牙**）翻譯資料行和 `Quantité de Ventes d'Internet` **法文（法國）** 翻譯資料行中的。  
   
      這個處理序的步驟，主要在示範如何定義 Cube 物件的中繼資料翻譯。  
   
@@ -102,13 +101,13 @@ ms.locfileid: "69493783"
   
 5.  在工具列上，選取 [語言]**** 清單中的 [西班牙文 (西班牙)]****。  
   
-     請注意，[中繼資料] 窗格中的項目會重新擴展。 [中繼資料] 窗格中的項目重新擴展之後，請注意，[網際網路銷售 - 銷售量] 量值就不會出現在 [網際網路銷售] 顯示資料夾中了， 相反地，它會在名為的新顯示資料夾`Ventas del lnternet`中顯示為西班牙文，如下圖所示。  
+     請注意，[中繼資料] 窗格中的項目會重新擴展。 [中繼資料] 窗格中的項目重新擴展之後，請注意，[網際網路銷售 - 銷售量] 量值就不會出現在 [網際網路銷售] 顯示資料夾中了， 相反地，它會在名為的新顯示資料夾中顯示為西班牙文 `Ventas del lnternet` ，如下圖所示。  
   
      ![重新擴展的中繼資料窗格](../../2014/tutorials/media/l9-translations-6.gif "重新擴展的中繼資料窗格")  
   
-6.  在 [中繼資料] 窗格中， `Cantidad de las Ventas del Internet`以滑鼠右鍵按一下，然後選取 [**加入至查詢**]。  
+6.  在 [中繼資料] 窗格中，以滑鼠右鍵按一下， `Cantidad de las Ventas del Internet` 然後選取 [**加入至查詢**]。  
   
-7.  在 [中繼資料] 窗格`Fecha`中，依序展開、[ **Fecha**] 和 [ **Fecha**日期]，以滑鼠右鍵按一下 []，然後選取 [**新增] 以進行篩選**。  
+7.  在 [中繼資料] 窗格中，依序展開、[Fecha] 和 [Fecha 日期]， `Fecha` 以滑鼠右鍵按一下 [ ** **]，然後選取 [**新增] 以進行篩選**。 **Fecha.Calendar Date**  
   
 8.  在 [篩選]**** 窗格中，選取 [CY 2007]**** 做為篩選運算式。  
   

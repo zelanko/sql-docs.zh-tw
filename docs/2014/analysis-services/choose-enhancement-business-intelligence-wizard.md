@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 39e2f36c-2c02-4a71-af8f-5dbd373190dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 687f7fb96ee5a2b96d80562c20d536eeeb308379
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9c28c39ef94c5dd28821e23c6ddbe83efd7fd11
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088120"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527571"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>選擇增強功能 (商業智慧精靈)
   使用 **[選擇增強功能]** 頁面，來選擇要加入至 Cube 或維度的商業智慧增強功能。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的增強功能**  
  選取要加入的商業智慧增強功能。 下表列出可用的增強功能。  
   
-|增強功能|描述|  
+|增強功能|Description|  
 |-----------------|-----------------|  
 |**定義時間智慧**|加入所選階層的其他時間檢視。 這些檢視包括某週期至今檢視、滾動平均檢視及某週期至另一週期檢視。<br /><br /> 注意：只有 Cube 能夠使用此選項。|  
 |**定義帳戶智慧**|將標準的會計科目分類 (例如收入與費用) 指派給帳戶屬性的成員。<br /><br /> 如果量值的彙總函式設定為 *ByAccount*， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體就使用會計科目分類，根據時段來彙總帳戶屬性的跨成員量值。|  

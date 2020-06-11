@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a7695bef91ace5eb6ff8d642c51b379343fb0b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084433"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522345"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>採礦模型的篩選 (Analysis Services - 資料採礦)
   以資料為基礎的模型篩選可協助您建立使用採礦結構中之資料子集的採礦模型。 當您設計採礦結構和資料來源時，篩選可提供彈性，因為您可以根據完整的資料來源檢視來建立單一採礦結構。 然後，您可以建立篩選來單獨使用其中一部分資料進行各種模型的定型和測試，而非針對每個資料子集建立不同的結構和相關模型。  
@@ -43,14 +42,14 @@ ms.locfileid: "66084433"
   
 -   使用資料採礦設計師中的 **[採礦模型]** 索引標籤並搭配篩選編輯器對話方塊來建立條件。  
   
--   直接在「採礦模型」的`Filter`屬性中輸入篩選運算式。  
+-   直接在「採礦模型」的屬性中輸入篩選運算式 `Filter` 。  
   
 -   使用分析管理物件 (AMO)，以程式設計方式設定模型的篩選條件。  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>使用資料採礦設計師來建立模型篩選  
  您可以變更採礦模型的 `Filter` 屬性，藉以在資料採礦設計師中篩選模型。 您可以直接在 **[屬性]** 窗格中輸入篩選運算式，也可以開啟篩選對話方塊來建立條件。  
   
- 目前提供了兩個篩選對話方塊。 第一個對話方塊可讓您建立套用至案例資料表的條件。 如果資料來源包含多份資料表，您首先要選取一份資料表，然後選取資料行並指定套用至該資料行的運算子與條件。 您可以使用`AND` / `OR`運算子來連結多個條件。 可用來定義值的運算子會因資料行包含離散值或連續值而不同。 例如，如果包含連續值，您就可以使用 `greater than` 和 `less than` 運算子。 不過，如果包含離散值，您就只能使用 `= (equal to)`、`!= (not equal to)` 和 `is null` 運算子。  
+ 目前提供了兩個篩選對話方塊。 第一個對話方塊可讓您建立套用至案例資料表的條件。 如果資料來源包含多份資料表，您首先要選取一份資料表，然後選取資料行並指定套用至該資料行的運算子與條件。 您可以使用運算子來連結多個條件 `AND` / `OR` 。 可用來定義值的運算子會因資料行包含離散值或連續值而不同。 例如，如果包含連續值，您就可以使用 `greater than` 和 `less than` 運算子。 不過，如果包含離散值，您就只能使用 `= (equal to)`、`!= (not equal to)` 和 `is null` 運算子。  
   
 > [!NOTE]  
 >  不支援 `LIKE` 關鍵字。 如果您想要加入多個離散屬性，就必須建立不同的條件，然後使用 `OR` 運算子來連結它們。  
@@ -82,7 +81,7 @@ ms.locfileid: "66084433"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>我要如何判斷是否使用篩選？  
  有多種方法可判斷篩選是否套用到模型：  
   
--   在設計工具中，按一下 [**採礦模型**] 索引標籤，開啟 [ `Filter` **屬性**]，然後查看 [採礦模型] 的屬性。  
+-   在設計工具中，按一下 [**採礦模型**] 索引標籤，開啟 [**屬性**]，然後查看 `Filter` [採礦模型] 的屬性。  
   
 -   DMV、DMSCHEMA_MINING_MODELS 會輸出包含篩選文字的資料行。 您可以針對 DMV 使用以下查詢來傳回模型的名稱以及其篩選：  
   

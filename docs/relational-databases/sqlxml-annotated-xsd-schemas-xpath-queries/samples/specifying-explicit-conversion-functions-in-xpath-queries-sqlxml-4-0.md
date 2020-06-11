@@ -1,5 +1,6 @@
 ---
 title: 在 XPath 查詢中使用轉換函數（SQLXML）
+description: 瞭解如何在 SQLXML 4.0 XPath 查詢中指定明確轉換函數位符串（）和數位（）。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58611edabcfeaeb9a97de3da6c7305fb169c14ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f38cb1b18b096fe73f9d6b587162e7fcbe6f69a8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252558"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529884"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定明確轉換函數 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "75252558"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. 使用 number() 明確轉換函數  
  **Number （）** 函數會將引數轉換成數位。  
   
- 假設**ContactID**的值為非數值，則下列查詢會將**ContactID**轉換成數位，並將它與值4進行比較。 然後，此查詢會傳回內容節點的所有** \<Employee>** 專案子系，其**ContactID**屬性的數值為4：  
+ 假設**ContactID**的值為非數值，則下列查詢會將**ContactID**轉換成數位，並將它與值4進行比較。 然後，此查詢會傳回內容節點的所有元素子系，其 **\<Employee>** **ContactID**屬性的數值為4：  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -81,7 +82,7 @@ ms.locfileid: "75252558"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. 使用 string() 明確轉換函數  
  **String （）** 函數會將引數轉換成字串。  
   
- 下列查詢會將**ContactID**轉換成字串，並將它與字串值 "4" 進行比較。 此查詢會傳回內容節點的所有** \<Employee>** 專案子系，且**ContactID**的字串值為 "4"：  
+ 下列查詢會將**ContactID**轉換成字串，並將它與字串值 "4" 進行比較。 此查詢會傳回 **\<Employee>** 內容節點的所有元素子系，並具有字串值為 "4" 的**ContactID** ：  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

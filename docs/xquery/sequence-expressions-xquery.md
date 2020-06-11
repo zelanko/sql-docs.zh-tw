@@ -1,5 +1,6 @@
 ---
 title: 序列運算式（XQuery） |Microsoft Docs
+description: 瞭解用來建立、篩選和結合專案序列的 XQuery 序列運算式。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72b8a066ce1480cd70f46658c8756b2548174b5b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946301"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529762"
 ---
 # <a name="sequence-expressions-xquery"></a>序列運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>範例 C  
- 下列查詢是針對 Contact 資料表中**xml**類型的 AdditionalContactInfo 資料行所指定。 這個資料行會儲存其他的連絡資訊，例如一或多個其他的電話號碼、呼叫器號碼和地址。 \<TelephoneNumber>、 \<呼機> 和其他節點都可以出現在檔中的任何位置。 查詢會建立一個序列，其中包含內容\<節點的所有 telephoneNumber> 子系，後面接著\<分頁> 子系。 請注意，在 return 運算式 (`($a//act:telephoneNumber, $a//act:pager)`) 中使用逗號序列運算子。  
+ 下列查詢是針對 Contact 資料表中**xml**類型的 AdditionalContactInfo 資料行所指定。 這個資料行會儲存其他的連絡資訊，例如一或多個其他的電話號碼、呼叫器號碼和地址。 \<telephoneNumber>、 \<pager> 和其他節點可以出現在檔中的任何位置。 查詢會建立一個序列，其中包含 \<telephoneNumber> 內容節點的所有子系，後面接著 \<pager> 子系。 請注意，在 return 運算式 (`($a//act:telephoneNumber, $a//act:pager)`) 中使用逗號序列運算子。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -151,7 +152,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- 若 <`a`只要抓取具有 attrA 屬性的> 元素，您可以在述詞中指定篩選準則。 產生的序列只會有一個 <`a`> 元素。  
+ 若 <只要抓取 `a` 具有 attrA 屬性的> 元素，您可以在述詞中指定篩選準則。 產生的序列只會有一個 <`a`> 元素。  
   
 ```  
 declare @x xml  
@@ -202,7 +203,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- 下列範例會套用述詞篩選。 運算式會尋找 <`a`> 的專案， `b`以及包含 <`c`> 元素的 <>。  
+ 下列範例會套用述詞篩選。 運算式會尋找 <`a`> 的專案，以及 `b` 包含 <> 元素的 <> `c` 。  
   
 ```  
 declare @x xml  

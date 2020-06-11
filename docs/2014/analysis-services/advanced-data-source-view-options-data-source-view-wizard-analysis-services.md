@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: db736863-3fc2-4166-af05-4c7d0323d4d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9512d0986b862b5865f8873b75a607f549cdac39
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062848"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528184"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>進階資料來源檢視選項對話方塊 (資料來源檢視精靈) (Analysis Services)
   **[進階資料來源檢視選項]** 對話方塊會提供其他控制項，讓您控制資料來源檢視如何從資料來源提取結構描述和關聯性以建立檢視。  
   
  若要開啟 **[進階資料來源檢視選項]** 對話方塊，在資料來源檢視精靈中，於 **[選取資料來源]** 頁面上，按一下 **[進階]**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **擷取關聯性**  
  指出是否應該從資料來源擷取關聯性詳細資料，並套用至資料來源檢視。 如果您在建立關聯性之後變更此選項，就不會從資料來源檢視中移除現有的關聯性。  
   

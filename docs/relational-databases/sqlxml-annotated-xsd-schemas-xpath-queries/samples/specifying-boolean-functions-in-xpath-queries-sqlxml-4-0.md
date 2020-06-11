@@ -1,5 +1,6 @@
 ---
 title: 在 XPath 查詢中使用布耳函數（SQLXML）
+description: 瞭解如何在 XPath 查詢中指定 SQLXML 4.0 布耳函數 true （）、false （）和 not （）。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18d1f66cde1a40e68d95fa4ef98c4df7c1a608b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1839d9bbf5776457828d39ab4a9242ae8d86631
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252593"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529874"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林函數 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252593"
 ## <a name="examples"></a>範例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. 指定 not() 布林函數  
- 此查詢會傳回內容節點中沒有** \<Order>** 子項目的所有** \<客戶>** 子項目：  
+ 此查詢會傳回 **\<Customer>** 內容節點中沒有子專案的所有子項目 **\<Order>** ：  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -79,7 +80,7 @@ ms.locfileid: "75252593"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. 指定 true() 和 false() 布林函數  
- 此查詢會傳回內容節點的所有** \<Customer>** 專案子系，而不會有** \<Order>** 子項目。 在關聯式詞彙中，此查詢會傳回尚未下任何訂單的所有客戶。  
+ 此查詢會傳回沒有 **\<Customer>** 子專案之內容節點的所有元素子系 **\<Order>** 。 在關聯式詞彙中，此查詢會傳回尚未下任何訂單的所有客戶。  
   
 ```  
 /child::Customer[child::Order=false()]  

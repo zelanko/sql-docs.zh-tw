@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 668ca4cfae7b660ff9e44de06c8523d8f9324cc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83ba32e732a590881803d87c73d9853ee6c20abf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086024"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525398"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>使用 Microsoft 貝氏機率分類檢視器瀏覽模型
-  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的貝氏貝氏機率分類檢視器會顯示以[!INCLUDE[msCoName](../../includes/msconame-md.md)]貝氏貝氏機率分類演算法建立的挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是可高度適應預測模型工作的分類演算法。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)＞。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]中的貝氏貝氏機率分類檢視器 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會顯示以貝氏貝氏機率分類演算法建立的採礦模型 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是可高度適應預測模型工作的分類演算法。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)＞。  
   
  由於貝氏機率分類模型的主要用途之一是要提供一個方式來快速瀏覽資料集內的資料，因此 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類檢視器會提供數個方法，來顯示可預測屬性和輸入屬性之間的互動。  
   
@@ -80,10 +79,10 @@ ms.locfileid: "66086024"
  **值**  
  在 [屬性]**** 資料行中顯示屬性的值。  
   
- **偏好\<值 1>**  
+ **照顧\<value 1>**  
  顯示一個彩色列，它會指出屬性值喜好 [值 1]**** 中顯示之可預測屬性值的強烈程度。  
   
- **偏好\<值 2>**  
+ **照顧\<value 2>**  
  顯示一個彩色列，它會指出屬性值喜好 [值 2]**** 中顯示之可預測屬性值的強烈程度。  
   
  [回到頁首](#BKMK_ViewerTabs)  

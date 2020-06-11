@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d2296eadc16d5ca1745fe940d1f5e7582ef30db6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f5dfbc1ab2481afc1b4f4b152c7748f9ac5a03a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085900"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525064"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>變更採礦模型中的資料行離散化
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]自動離散化值-也就是說，它會在某些情況下，將資料在數值資料行中。 例如，如果您的資料包含連續數值資料，而且您要建立決策樹模型，則連續資料的每一個資料行都將會自動分類收納 (視資料的分佈而定)。 如果您想要控制資料離散化的方式，您必須在採礦結構資料行上，變更可控制資料在模型內之使用方式的屬性。  
@@ -39,23 +38,23 @@ ms.locfileid: "66085900"
   
 ### <a name="to-change-the-discretization-method"></a>變更離散化方法  
   
-1.  在 [**挖掘屬性**] 視窗中，按一下 [**內容**] 旁邊的文字方塊， `Discretized`然後從下拉式清單中選取。  
+1.  在 [**挖掘屬性**] 視窗中，按一下 [**內容**] 旁邊的文字方塊，然後 `Discretized` 從下拉式清單中選取。  
   
      <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 和 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 屬性現在就會啟用。  
   
-2.  在 [**屬性**] 視窗中，按一下旁邊的文字方塊<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> ，然後選取下列其中一個值： `Automatic`、 `EqualAreas`或`Cluster`。  
+2.  在 [**屬性**] 視窗中，按一下旁邊的文字方塊， <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 然後選取下列其中一個值： `Automatic` 、 `EqualAreas` 或 `Cluster` 。  
   
     > [!NOTE]  
-    >  如果 [資料行使用方式] `Ignore`設定為，則資料行的 [**屬性**] 視窗是空白的。  
+    >  如果 [資料行使用方式] 設定為，則資料 `Ignore` 行的 [**屬性**] 視窗是空白的。  
   
      您在設計師中選取其他元素時，新值就會生效。  
   
-3.  在 [**屬性**] 視窗中，按一下旁邊的文字方塊<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> ，然後輸入數值。  
+3.  在 [**屬性**] 視窗中，按一下旁邊的文字方塊 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> ，然後輸入數值。  
   
     > [!NOTE]  
     >  如果您變更這些屬性，就必須重新處理此結構，連同您想要使用新設定的任何模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型工作和操作說明](mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)  
   
   

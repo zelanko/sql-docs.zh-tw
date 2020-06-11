@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f790df70-ff21-42ce-b38c-a360e8e01bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec3175fd9979b6b0a781492fb7ae0cde532db366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f6a5db00e6b25741cb9367d0b4a42101ca06650
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084520"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522473"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>編輯用於採礦結構的資料來源檢視
   您可以從資料採礦設計師開啟資料來源檢視，來修改它。  

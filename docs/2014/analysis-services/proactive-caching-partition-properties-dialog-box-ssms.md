@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cb486ec383ab6fa1684bd9d0e9b8f6bc67631eee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8fae25590d8da3f54ed94bc9d106b44a0aa4d85
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070707"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540190"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>主動式快取 (資料分割屬性對話方塊) (SSMS)
   在 SQL Server Management Studio 中，使用 **[資料分割屬性]** 對話方塊的 **[主動式快取]** 頁面，即可針對 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中的 Cube，設定量值群組中之資料分割的儲存與主動式快取屬性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **標準設定**  
  選取以啟用 [標準設定滑桿]****，並使用儲存模式與主動式快取功能的預先定義設定。  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6e2322553eef361f0131e3558cd591bc32525ef
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637520"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522148"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 決策樹演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是一種混合式演算法，其中併入建立樹狀結構的不同方法，並支援多種分析工作，包括迴歸、分類以及關聯。 Microsoft 決策樹演算法支援製作離散和連續屬性的模型。  
@@ -64,7 +63,7 @@ ms.locfileid: "73637520"
   
  所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦演算法都會自動使用特徵選取來改善分析並減少處理的負載。 特徵選取所使用的方法取決於建立模型所使用的演算法。 針對決策樹模型控制特徵選取的演算法參數為 MAXIMUM_INPUT_ATTRIBUTES 和 MAXIMUM_OUTPUT。  
   
-|演算法|分析的方法|評價|  
+|演算法|分析的方法|註解|  
 |---------------|------------------------|--------------|  
 |決策樹|有趣性分數<br /><br /> Shannon 熵<br /><br /> 使用 K2 優先的貝氏<br /><br /> 使用優先統一狄氏分配的貝氏 (預設值)|如果任何資料行包含非二進位連續數值，則所有資料行都會使用有趣性分數以確保一致性。 否則，會使用預設值或指定的方法。|  
 |線性迴歸|有趣性分數|線性迴歸只會使用有趣性，因為它只支援連續的資料行。|  
@@ -99,7 +98,7 @@ ms.locfileid: "73637520"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援會影響所產生之採礦模型效能和精確度的參數。 您也可以設定採礦模型資料行或採礦結構資料行上的模型旗標來控制處理資料的方式。  
   
 > [!NOTE]  
->  Microsoft 決策樹演算法可用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中，但是 Microsoft 決策樹演算法自訂行為的某些進階參數只能在特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中使用。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)（。https://go.microsoft.com/fwlink/?linkid=232473)  
+>  Microsoft 決策樹演算法可用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中，但是 Microsoft 決策樹演算法自訂行為的某些進階參數只能在特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中使用。 如需版本支援的功能清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)（ https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
  下表描述可以搭配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法使用的參數。  
@@ -149,7 +148,7 @@ ms.locfileid: "73637520"
  *SCORE_METHOD*  
  決定用來計算分岔準則的方法。 有下列選項可供使用：  
   
-|識別碼|名稱|  
+|ID|Name|  
 |--------|----------|  
 |1|熵|  
 |3|使用 K2 優先的貝氏|  
@@ -162,7 +161,7 @@ ms.locfileid: "73637520"
  *SPLIT_METHOD*  
  決定用來分岔節點的方法。 有下列選項可供使用：  
   
-|識別碼|名稱|  
+|ID|Name|  
 |--------|----------|  
 |1|**Binary:** 表示不管屬性的實際數目為何，樹狀結構都會分岔為兩個分支。|  
 |2|**Complete:** 表示樹狀結構可以建立與屬性值一樣多的分岔。|  
@@ -173,7 +172,7 @@ ms.locfileid: "73637520"
 ### <a name="modeling-flags"></a>模型旗標  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)。  
   
-|模型旗標|描述|  
+|模型旗標|Description|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|表示資料行將被視為擁有兩個可能狀態：`Missing` 和 `Existing`。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
 |NOT NULL|表示資料行不能包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
@@ -183,11 +182,11 @@ ms.locfileid: "73637520"
   
  您不需要指定連續數值資料的資料行代表迴歸輸入變數。 即使未在資料行上設定 REGRESSOR 旗標， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法也會自動使用資料行當做潛在迴歸輸入變數，並將資料集分割成具備有意義之模式的區域。  
   
- 不過，您可以使用 FORCE_REGRESSOR 參數來確保演算法會使用特定的迴歸輸入變數。 這個參數僅能搭配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法使用。 當您設定模型旗標時，演算法會嘗試尋找表單 a * C1 + b\*C2 + ... 的回歸方公式。以符合樹狀結構節點中的模式。 之後會計算剩餘數的總和，如果差異過大，就會在樹狀結構中強制進行分割。  
+ 不過，您可以使用 FORCE_REGRESSOR 參數來確保演算法會使用特定的迴歸輸入變數。 這個參數僅能搭配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法使用。 當您設定模型旗標時，演算法會嘗試尋找表單 a * C1 + b \* C2 + ... 的回歸方公式。以符合樹狀結構節點中的模式。 之後會計算剩餘數的總和，如果差異過大，就會在樹狀結構中強制進行分割。  
   
  例如，如果您要使用 **Income** 做為屬性來預測客戶購買行為，且在資料行上設定 REGRESSOR 模型旗標，則演算法首先會使用標準迴歸公式來比對 **Income** 值。 如果差異過大，就會放棄迴歸公式，且根據其他的屬性分割樹狀結構。 在分割之後，決策樹演算法就會接著嘗試在每個分支中比對迴歸輸入變數與收入。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  決策樹模型必須包含索引鍵資料行、輸入資料行和至少一個可預測資料行。  
   
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  

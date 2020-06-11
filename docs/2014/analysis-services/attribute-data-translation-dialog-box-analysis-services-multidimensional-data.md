@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76af68a7f9668b46a55a3bf28f9cf07dd64766aa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063070"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527924"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>屬性資料翻譯對話方塊 (Analysis Services - 多維度資料)
   使用 [屬性資料翻譯]**** 對話方塊，即可設定包含翻譯標題資料的資料行，以及要用於翻譯資料的定序和排序次序。 您可依下列方式顯示 [屬性資料翻譯]**** 對話方塊：  
@@ -28,7 +27,7 @@ ms.locfileid: "66063070"
   
 -   以滑鼠右鍵按一下 [維度設計師]**** 之 [翻譯]**** 索引標籤上的 [翻譯詳細資料]**** 窗格，然後選取 [新增標題資料行]**** 或 [編輯標題資料行]****。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **屬性**  
  顯示選取的屬性。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66063070"
  **定序指示項**  
  設定所選屬性的定序指示項。 依預設，會選取目前的 Windows 定序。 按一下向下箭頭即可從可用的定序中選取定序。  
   
- **二**  
+ **二進位**  
  選取此選項，即可根據為每個字元定義的位元模式來排序和比較資料。 二進位排序順序有區分大小寫，亦即小寫優先於大寫，而且有區分腔調字。 這是最快的排序順序。  
   
  如果沒有選取此選項， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會遵循相關聯之語言或字母字典中所定義的排序和比較規則。  

@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37263c42e4e9f37b1b782dc07b8df03f77092b14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f1c802f6503b84ff4f6879c18d3bffebb46d7ad
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083305"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521066"
 ---
 # <a name="modeling-flags-data-mining"></a>模型旗標 (資料採礦)
-  您可以使用中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的模型旗標，將有關案例資料表中所定義資料的其他資訊提供給資料採礦演算法。 演算法可以使用此一資訊建立更精確的資料採礦模型。  
+  您可以使用中的模型旗標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，將有關案例資料表中所定義資料的其他資訊提供給資料採礦演算法。 演算法可以使用此一資訊建立更精確的資料採礦模型。  
   
  有些模型旗標會定義於採礦結構層級，有些則會定義於採礦模型資料行的層級。 例如，`NOT NULL` 模型旗標是用於採礦結構資料行。 您可以根據您用來建立模型的演算法，在採礦模型資料行上定義其他模型旗標。  
   
@@ -102,7 +101,7 @@ WHERE MODEL_NAME = '<model name>'
 ## <a name="related-tasks"></a>相關工作  
  使用下列連結，深入了解如何使用模型旗標。  
   
-|工作|主題|  
+|Task|主題|  
 |----------|-----------|  
 |使用資料採礦設計師來編輯模型旗標|[檢視或變更模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)|  
 |為演算法指定提示，以建議可能的迴歸輸入變數|[在模型中指定當做迴歸輸入變數使用的資料行](specify-a-column-to-use-as-regressor-in-a-model.md)|  

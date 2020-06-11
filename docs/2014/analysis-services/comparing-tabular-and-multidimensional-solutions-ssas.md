@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cb21b733fd1663f0e26c765f519544597aa9063
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087765"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527424"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>比較表格式和多維度解決方案 (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]提供兩種不同的資料模型化方法：表格式和多維度。 雖然這兩種方法有很多重疊之處，但在告知關於後續進展方式的決策這一點上卻有著重大差異。 本主題將會進行功能比較，並說明每一種方法如何應付常見的專案需求。 例如，如果主要的考量是要支援特定資料來源，在關於資料來源的章節可引導您決定要使用哪一個模型化方法。  
@@ -99,13 +98,13 @@ ms.locfileid: "66087765"
 ||**多維度**|**以**|  
 |動作|[是](multidimensional-models/actions-in-multidimensional-models.md)|否|  
 |Aggregation 物件|[是](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|否|  
-|導出量值|[是](multidimensional-models/create-calculated-members.md)|是|  
+|導出量值|[是](multidimensional-models/create-calculated-members.md)|Yes|  
 |自訂組件|[是](multidimensional-models/multidimensional-model-assemblies-management.md)|否|  
-|自訂積存|是|否|  
+|自訂積存|是|No|  
 |Distinct Count|[是](multidimensional-models/use-aggregate-functions.md)|是（透過 DAX） *|  
-|鑽研|[是](multidimensional-models/actions-in-multidimensional-models.md)|是|  
-|階層|[是](multidimensional-models/user-defined-hierarchies-create.md)|是|  
-|KPI|[是](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|是|  
+|鑽研|[是](multidimensional-models/actions-in-multidimensional-models.md)|Yes|  
+|階層|[是](multidimensional-models/user-defined-hierarchies-create.md)|Yes|  
+|KPI|[是](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|Yes|  
 |連結量值群組|[是](multidimensional-models/linked-measure-groups.md)|否|  
 |多對多關聯性|[是](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|否|  
 |父子式階層|[是](multidimensional-models/parent-child-dimension.md)|是 (透過 DAX)|  
@@ -113,7 +112,7 @@ ms.locfileid: "66087765"
 |檢視方塊|[是](multidimensional-models/perspectives-in-multidimensional-models.md)|[是](tabular-models/partitions-ssas-tabular.md)|  
 |局部加總量值|[是](multidimensional-models/define-semiadditive-behavior.md)|是 (透過 DAX)|  
 |翻譯|[是](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|否|  
-|使用者定義階層|[是](multidimensional-models/user-defined-hierarchies-create.md)|是|  
+|使用者定義階層|[是](multidimensional-models/user-defined-hierarchies-create.md)|Yes|  
 |回寫|[是](multidimensional-models/set-partition-writeback.md)|否|  
   
  * 如果您的解決方案必須支援非常大量的相異計數（例如許多數百萬個客戶識別碼），請先考慮表格式。 它在這種案例中往往會有更好的效能。 請參閱技術白皮書中有關相異計數的章節： [Analysis Services 案例研究：在大規模的商業方案中使用表格式模型](https://msdn.microsoft.com/library/dn751533.aspx)。  
@@ -172,7 +171,7 @@ ms.locfileid: "66087765"
 ##  <a name="server-deployment-modes-for-multidimensional-and-tabular-solutions"></a><a name="bkmk_deploymentmode"></a>多維度和表格式解決方案的伺服器部署模式  
  Analysis Services 執行個體會使用設定伺服器操作內容的三個模式的其中一個模式來安裝。 您安裝的伺服器模式將會決定可以部署到該伺服器的方案類型。 儲存體和記憶體架構是模式之間的主要差異，但是還有其他差異存在。 下表簡短描述這三種伺服器模式。 如需詳細資訊，請參閱 [判斷 Analysis Services 執行個體的伺服器模式](instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
-|部署模式|描述|  
+|部署模式|Description|  
 |---------------------|-----------------|  
 |0 - 多維度和資料採礦|執行多維度和資料採礦解決方案，您會將這些解決方案部署到 Analysis Services 預設執行個體。 部署模式 0 是 Analysis Services 安裝的預設值。 如需詳細資訊，請參閱＜ [Install Analysis Services in Multidimensional and Data Mining Mode](../../2014/sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)＞。|  
 |1 - PowerPivot for SharePoint|就 Excel 資料模型的存取而言，Analysis Services 是 SharePoint 的內部元件。 Analysis Services 會以部署模式 1 進行安裝，並且只接受來自 SharePoint 環境中 Excel Services 的要求。 如需詳細資訊，請參閱＜ [PowerPivot for SharePoint 2010 Installation](../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)＞。|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b899ef4daba73237490d06df58c3447f6b2356d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b32f122933e03992afdc287fa064f78d5d22c0e4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083652"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521445"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>貝氏機率分類模型的採礦模型內容 (Analysis Services - 資料採礦)
   本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝式機率分類演算法之模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
@@ -72,7 +71,7 @@ ms.locfileid: "66083652"
  NODE_TYPE  
  貝式機率分類模型會輸出下列節點類型：  
   
-|節點類型識別碼|描述|  
+|節點類型識別碼|Description|  
 |------------------|-----------------|  
 |26 (NaiveBayesMarginalStatNode)|包含描述模型整組定型案例的統計資料。|  
 |9 (可預測的屬性)|包含可預測屬性的名稱。|  

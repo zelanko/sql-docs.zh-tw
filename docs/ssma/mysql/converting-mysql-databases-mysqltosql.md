@@ -1,5 +1,6 @@
 ---
 title: 轉換 MySQL 資料庫（MySQLToSQL） |Microsoft Docs
+description: 瞭解如何在連接和設定專案和資料對應選項之後，使用 SSMA 將 MySQL 資料庫物件轉換成 SQL Server 或 Azure SQL Database 物件。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 1ad4cbbdf80422f87c850c44e47f82899de4c82a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 51604ba389e103798ab067245f210bd565a719e7
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103054"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293665"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>轉換 MySQL 資料庫 (MySQLToSQL)
-連接到 MySQL、連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 sql azure，以及設定專案和資料對應選項之後，您可以將 mysql 資料庫物件轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 sql azure 資料庫物件。  
+連接到 MySQL、連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql azure，以及設定專案和資料對應選項之後，您可以將 mysql 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql azure 資料庫物件。  
   
 ## <a name="the-conversion-process"></a>轉換程式  
-轉換資料庫物件會從 MySQL 取得物件定義、將其轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類似或 SQL Azure 物件，然後將此資訊載入至 SSMA 中繼資料。 它不會將資訊載入的實例中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 接著，您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中繼資料瀏覽器來查看物件及其屬性。  
+轉換資料庫物件會從 MySQL 取得物件定義、將其轉換成類似 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 物件，然後將此資訊載入至 SSMA 中繼資料。 它不會將資訊載入的實例中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 接著，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中繼資料瀏覽器來查看物件及其屬性。  
   
 在轉換期間，SSMA 會將輸出訊息列印到 [輸出] 窗格，並在 [錯誤清單] 窗格中顯示錯誤訊息。 使用輸出和錯誤資訊來判斷您是否必須修改 MySQL 資料庫或轉換程式，以取得所需的轉換結果。  
   
@@ -28,13 +29,13 @@ ms.locfileid: "68103054"
 在轉換物件之前，請先查看 [**專案設定**] 對話方塊中的 [專案轉換] 選項。 藉由使用此對話方塊，您可以設定 SSMA 如何轉換資料表和索引。 如需詳細資訊，請參閱[專案設定 &#40;轉換&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
 ## <a name="conversion-results"></a>轉換結果  
-下表顯示轉換的 MySQL 物件，以及產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的物件：  
+下表顯示轉換的 MySQL 物件，以及產生的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件：  
   
 |||  
 |-|-|  
 |**MySQL 物件**|**產生 SQL Server 物件**|  
-|具有相依物件（例如索引）的資料表|SSMA 會建立具有相依物件的資料表。 資料表會以所有索引和條件約束進行轉換。 索引會轉換成不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的物件。<br /><br />**空間資料類型對應**只能在資料表節點層級執行。<br /><br />如需資料表轉換設定的詳細資訊，請參閱[轉換設定](conversion-settings-mysqltosql.md)|  
-|函式|如果函式可以直接轉換成 Transact-sql，SSMA 就會建立一個函數。 在某些情況下，函數必須轉換成預存程式。 您可以使用專案設定中的函式轉換來完成這項**工作**。 在此情況下，SSMA 會建立一個預存程式，以及一個呼叫預存程式的函數。<br /><br />**提供的選擇：**<br /><br />根據專案設定進行轉換<br /><br />轉換成函式<br /><br />轉換為預存程式<br /><br />如需函數轉換設定的詳細資訊，請參閱[轉換設定](conversion-settings-mysqltosql.md)|  
+|具有相依物件（例如索引）的資料表|SSMA 會建立具有相依物件的資料表。 資料表會以所有索引和條件約束進行轉換。 索引會轉換成不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的物件。<br /><br />**空間資料類型對應**只能在資料表節點層級執行。<br /><br />如需資料表轉換設定的詳細資訊，請參閱[轉換設定](conversion-settings-mysqltosql.md)|  
+|函數|如果函式可以直接轉換成 Transact-sql，SSMA 就會建立一個函數。 在某些情況下，函數必須轉換成預存程式。 您可以使用專案設定中的函式轉換來完成這項**工作**。 在此情況下，SSMA 會建立一個預存程式，以及一個呼叫預存程式的函數。<br /><br />**提供的選擇：**<br /><br />根據專案設定進行轉換<br /><br />轉換成函式<br /><br />轉換為預存程式<br /><br />如需函數轉換設定的詳細資訊，請參閱[轉換設定](conversion-settings-mysqltosql.md)|  
 |程序|如果程式可以直接轉換為 Transact-sql，SSMA 會建立預存程式。 在某些情況下，必須在自發交易中呼叫預存程式。 在此情況下，SSMA 會建立兩個預存程式：一個用來執行程式，另一個則用來呼叫執行預存程式。|  
 |資料庫轉換|SSMA for MySQL 不會直接轉換作為 MySQL 物件的資料庫。 MySQL 資料庫的處理方式比較類似架構名稱，而且所有實體參數在轉換期間都會遺失。 適用于 MySQL 的 SSMA 會使用將[Mysql 資料庫對應至 SQL Server 架構 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) ，將物件從 MySQL 資料庫對應到適當的 SQL Server 資料庫/架構配對。|  
 |觸發程式轉換|**SSMA 會根據下列規則建立觸發程式：**<br /><br />在將觸發程式轉換成而不是 T-sql 觸發程式之前<br /><br />AFTER 觸發程式會在每個資料列有或沒有反復專案的 T-sql 觸發程式之後轉換成。|  
@@ -103,7 +104,7 @@ ms.locfileid: "68103054"
   
 -   您可以修改 MySQL 資料庫中的物件，以移除或修改有問題的程式碼。 若要將更新的程式碼載入至 SSMA，您必須更新中繼資料。 如需詳細資訊，請參閱[連接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
--   您可以從遷移中排除物件。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Sql Azure 中繼資料 Explorer 和 Mysql 中繼資料瀏覽器中，清除專案旁的核取方塊，然後再[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將物件載入或 SQL Azure，並從 MySQL 遷移資料。  
+-   您可以從遷移中排除物件。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql Azure 中繼資料 explorer 和 Mysql 中繼資料瀏覽器中，清除專案旁的核取方塊，然後再將物件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，並從 MySQL 遷移資料。  
   
 ## <a name="next-step"></a>後續步驟  
 遷移程式的下一個步驟是將[轉換的資料庫物件載入 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  

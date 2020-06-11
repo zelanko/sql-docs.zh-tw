@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c030c725-7763-4c23-9988-4b274a88fc31
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b26c912791a18d4bbdcf3def6d282e025b5af89b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088265"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527604"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>計算工具 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [Cube 設計師] 中之 [KPI]**** 索引標籤上的 [計算工具]**** 窗格，即可瀏覽在關鍵效能指標 (KPI) 中可以使用的中繼資料、函數以及範本。  
@@ -25,7 +24,7 @@ ms.locfileid: "66088265"
 > [!NOTE]  
 >  此窗格只會以表單檢視方式顯示。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **中繼資料**  
  顯示選取之 Cube 的中繼資料。  
   

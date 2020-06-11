@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f858f2ba6fe542d84e3bd6e7617b2d1565c0ca2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078104"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542010"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>層級和成員 (瀏覽器索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用此頁面來瀏覽目前選取之階段和語言的成員。 若要選取要瀏覽的階層或語言，請使用 **[工具列]** 窗格上的 **[階層]** 和 **[語言]** 選項。 如需 [工具列] 窗格的詳細資訊，請參閱[工具列 &#40;瀏覽器索引標籤、維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)。  
@@ -36,7 +35,7 @@ ms.locfileid: "66078104"
 |重新命名選取的成員。|以滑鼠右鍵按一下選取的成員，然後選取 [重新命名]****，或按一下已經選取的成員。|  
 |編輯成員屬性值|針對選取的成員按兩下已選取成員屬性中的值，以編輯該值。|  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **目前層級**  
  顯示目前在 [樹狀]**** 中選取之成員所屬的層級。  
   

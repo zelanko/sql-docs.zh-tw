@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: a2c60d98-c15f-4f0d-ba95-7ee2def4277e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e2d8784c79ed4bbce63d8f9a18dce6b1b12f33f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7de859d94c2881b3c46997dac14d6309745db591
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086467"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525941"
 ---
 # <a name="data-mining-designers-and-dialog-boxes"></a>資料採礦設計工具與對話方塊
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]提供的設計工具可讓您用來建立、查看、測試和建立資料採礦模型的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]預測。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的設計工具可讓您用來建立、查看、測試和建立資料採礦模型的預測。  
   
  下表列出 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中之資料採礦設計師和工具的參考主題。  
   

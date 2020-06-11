@@ -1,5 +1,6 @@
 ---
 title: 用戶端 XML 格式（SQLXML）
+description: 瞭解 SQLXML 4.0 中使用 FOR XML 子句的用戶端 XML 格式。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 968af0ed24f14b4766e312a0cec0e9d3e7b5022b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b03c1cb91c17e330d73f192bbd364c95591c721
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247016"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529992"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>用戶端 XML 格式 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "75247016"
 > [!NOTE]  
 >  本主題提供在用戶端上使用 FOR XML 子句的其他資訊，並假設您已經熟悉 FOR XML 子句。 如需 FOR XML 的詳細資訊，請參閱[使用 FOR xml 來建立 xml](../../../relational-databases/xml/for-xml-sql-server.md)。  
   
- **重要事項**若要以新的**xml**資料類型使用用戶端的 FOR xml 功能，用戶端應該一律[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 Native client （SQLNCLI11）資料提供者，而非 SQLOLEDB 提供者。 SQLNCLI11 是最新版的 SQL Server 提供者，而且完全了解 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 推出的資料類型。 用戶端 FOR XML 與 SQLOLEDB 提供者的行為會將**xml**資料類型視為字串。  
+ **重要事項**若要以新的**xml**資料類型使用用戶端的 FOR xml 功能，用戶端應該一律使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE client （SQLNCLI11）資料提供者，而非 SQLOLEDB 提供者。 SQLNCLI11 是最新版的 SQL Server 提供者，而且完全了解 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 推出的資料類型。 用戶端 FOR XML 與 SQLOLEDB 提供者的行為會將**xml**資料類型視為字串。  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>格式化用戶端上的 XML 文件  
  當用戶端應用程式執行下列查詢時：  
@@ -119,7 +120,7 @@ AS
      您可以將 SQLXML Managed 類別的這個屬性設定為 true，藉以指定用戶端功能。  
   
 ## <a name="enhanced-xml-template-support"></a>增強的 XML 範本支援  
- 從開始[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的 XML 範本已透過加入**用戶端-xml**屬性來增強。 如果此屬性設定為 true，XML 會在用戶端上格式化。 請注意，此範本屬性的功能與 SQLXMLOLEDB 提供者特定的 ClientSideXML 屬性相同。  
+ 從開始 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ，中的 XML 範本已透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加入**用戶端-xml**屬性來增強。 如果此屬性設定為 true，XML 會在用戶端上格式化。 請注意，此範本屬性的功能與 SQLXMLOLEDB 提供者特定的 ClientSideXML 屬性相同。  
   
 > [!NOTE]  
 >  如果您在使用 SQLXMLOLEDB 提供者的 ADO 應用程式中執行 XML 範本，並同時在範本和提供者 ClientSideXML 屬性中指定**用戶端 xml**屬性，則會優先使用範本中指定的值。  

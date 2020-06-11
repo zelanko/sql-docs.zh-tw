@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5979ed2e4733609a504d852b5a0bcc8d7660b87
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112157"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523176"
 ---
 # <a name="data-mining-projects"></a>資料採礦專案
   資料採礦專案為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案的一部分。 在設計過程中，您在此專案中建立的物件可當做工作空間資料庫的一部分來測試及查詢。 當您希望使用者能夠查詢或瀏覽專案中的物件時，您必須將此專案部署到以多維度模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
@@ -86,7 +85,7 @@ ms.locfileid: "79112157"
   
 
   
-###  <a name="data-source-views"></a><a name="bkmk_DSV"></a> Data Source Views  
+###  <a name="data-source-views"></a><a name="bkmk_DSV"></a>資料來源視圖  
  當您已經定義資料來源的這個連接之後，可以建立一個檢視表，以識別與模型相關的特定資料。  
   
  資料來源檢視也會讓您自訂將資料來源中的資料提供給採礦模型的方式。 您可以修改資料結構，使它與您的專案關係更加密切，或僅選擇特定種類的資料。  

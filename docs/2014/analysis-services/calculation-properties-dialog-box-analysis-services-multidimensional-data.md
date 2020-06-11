@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: eb5e1179-b0e6-4ec8-bf4c-d67a1e329117
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2a8dfe06f3f05dead3686d0319ba0958388994ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a76f4cad33ac9c168d39f9878e297896da77d441
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088320"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527664"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>計算屬性對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [計算屬性] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，可檢視或編輯在 [Cube 設計師] 的 **[計算]** 索引標籤上，針對選取的 Cube 所定義的顯示資料夾和相關聯的量值群組計算屬性。 在 Cube 設計師的 **[計算]** 索引標籤上，按一下 **[工具列]** 窗格的 **[計算屬性]** ，即可顯示 **[計算屬性]** 對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **計算名稱**  
  顯示導出成員或命名集的名稱。  
   

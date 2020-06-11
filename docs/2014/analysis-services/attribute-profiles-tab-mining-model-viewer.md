@@ -11,27 +11,26 @@ f1_keywords:
 ms.assetid: 17c7e7ae-273c-4a6b-9a35-e8b9b8e65999
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b2bb75ec06d9b5c14ce5c2dcc85561412b362b40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4df97455d2fae8cb3375967a8e37a2329a7509fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063165"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527908"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>屬性設定檔索引標籤 (採礦模型檢視器)
   可以使用 **[屬性設定檔]** 索引標籤，來查看貝氏機率分類模型狀態中輸入值的分佈如何影響結果屬性的每個狀態。 值的分佈會顯示為彩色長條圖，而且所有分佈都會以表格格式呈現，以便更輕鬆地比較值。  
   
  **如需詳細資訊，請參閱 ** [Microsoft 貝氏機率分類演算法](data-mining/microsoft-naive-bayes-algorithm.md)、[使用 Microsoft 貝氏機率分類檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **重新整理檢視器內容**  
  在檢視器中重新載入採礦模型。  
   
  **採礦模型**  
  在目前採礦結構中選擇要檢視的採礦模型。 採礦模型會在其關聯的檢視器中開啟。  
   
- **檢視器**  
+ **檢視者**  
  選擇用來瀏覽選取之採礦模型的檢視器。 可以選擇為每個採礦模型提供的自訂檢視器，或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 採礦內容檢視器。 還可以使用外掛程式檢視器 (如果有)。  
   
  **顯示圖例**  

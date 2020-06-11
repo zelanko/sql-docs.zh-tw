@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67eadc6bc2f0bf6f318f20ad42a5cc9e7a5afa5e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086693"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526274"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>建立和使用屬性值 (MDX)
   多維度運算式 (MDX) 支援內建和使用者自訂維度、層級、成員，和資料格的屬性。 內建屬性可提供唯一的名稱、標題，甚至個別資料格的格式和字型大小。 另一方面使用者自訂屬性幾乎可以為成員提供所有的額外屬性。  

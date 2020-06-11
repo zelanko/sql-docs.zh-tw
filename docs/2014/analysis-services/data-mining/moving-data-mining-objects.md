@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ed12525e1b27bd45aa1d6313ad6538a7856f17ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b10be3a79487376b173eab87059404b7f7a618e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083302"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521044"
 ---
 # <a name="moving-data-mining-objects"></a>移動資料採礦物件
   移動資料採礦物件的最常見情形是將模型從測試或分析環境部署到實際執行環境，或者與其他使用者共用模型。  

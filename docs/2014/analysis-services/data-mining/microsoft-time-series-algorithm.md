@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d840d581fe4dba1ce9d65dfef6878a1e5a697864
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083773"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521632"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 時間序列演算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法提供的回歸演算法，已針對連續值的預測（例如一段時間的產品銷售）進行優化。 雖然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法 (如決策樹) 需要含有新資訊的其他資料行當做輸入來預測趨勢，但是時間序列模型則不需要。 時間序列模型可以只根據用於建立此模型的原始資料集來預測趨勢。 當您做出預測並將新的資料自動納入趨勢分析時，也可以將新的資料加入此模型中。  
@@ -47,11 +46,11 @@ ms.locfileid: "66083773"
  此公司在每一季都打算以最近的銷售資料來更新此模型，並將其預測更新為模型的最近趨勢。 若要針對未能正確或一致更新銷售資料的商店做出更正，將會建立一般預測模型，並使用該模型來建立所有區域的預測。  
   
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式  
- 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中， [!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法使用單一演算法 ARTXP。 ARTXP 演算法已針對短期預測進行優化，因此會預測數列中的下一個可能值。 從開始[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法會使用 ARTXP 演算法和第二個演算法 ARIMA。 ARIMA 演算法已針對長期預測而最佳化。 如需 ARTXP 和 ARIMA 演算法實作的詳細說明，請參閱 [Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)。  
+ 在中 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法使用單一演算法 ARTXP。 ARTXP 演算法已針對短期預測進行優化，因此會預測數列中的下一個可能值。 從開始 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法會使用 ARTXP 演算法和第二個演算法 ARIMA。 ARIMA 演算法已針對長期預測而最佳化。 如需 ARTXP 和 ARIMA 演算法實作的詳細說明，請參閱 [Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)。  
   
  依預設， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法在分析模式及作出預測時，會混合使用這些演算法。 此演算法會在相同的資料上定型兩個不同的模型：一個模型使用 ARTXP 演算法，另一個模型則使用 ARIMA 演算法。 然後此演算法會混合這兩個模型的結果，以針對變動數目的時間配量產生最佳預測結果。 因為 ARTXP 最適合用於短期預測，所以在一系列預測的開始會有較重的加權。 不過，隨著預測的時間配量進入未來，ARIMA 會有更重的加權。  
   
- 您也可以控制演算法的組合，以選擇偏好時間序列中的短期或長期預測。 從[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard 開始，您可以指定[!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法使用下列其中一項設定：  
+ 您也可以控制演算法的組合，以選擇偏好時間序列中的短期或長期預測。 從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard 開始，您可以指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法使用下列其中一項設定：  
   
 -   短期預測中只使用 ARTXP。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66083773"
   
 -   使用預設的兩種演算法混用。  
   
- 從開始[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]，您可以自訂[!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法如何混合模型以進行預測。 當您使用混合模型時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法會以下列方式來混合這兩種演算法：  
+ 從開始 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] ，您可以自訂 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法如何混合模型以進行預測。 當您使用混合模型時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法會以下列方式來混合這兩種演算法：  
   
 -   在做出最初的幾個預測時，一定只使用 ARTXP。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66083773"
 ### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>範例 1：具有表示為資料行值的時間序列資料集  
  這個範例使用下列的輸入案例表：  
   
-|TimeID|Products|Sales|磁碟區|  
+|TimeID|產品|Sales|磁碟區|  
 |------------|-------------|-----------|------------|  
 |1/2001|A|1000|600|  
 |2/2001|A|1100|500|  

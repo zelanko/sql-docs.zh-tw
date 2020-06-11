@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea0a9915e062d7b6f15b63e18976e88cc339202d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d34ea224efd5b218cafee58dec09ff4590b8511
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939500"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668767"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ```  
   
 ## <a name="applies-to"></a>套用至  
- 包含可預測的嵌套資料表的演算法，包括關聯和一些分類演算法。 支援嵌套資料表的分類演算法包括[!INCLUDE[msCoName](../includes/msconame-md.md)]決策樹、 [!INCLUDE[msCoName](../includes/msconame-md.md)]貝氏貝氏機率分類和[!INCLUDE[msCoName](../includes/msconame-md.md)]類神經網路演算法。  
+ 包含可預測的嵌套資料表的演算法，包括關聯和一些分類演算法。 支援嵌套資料表的分類演算法包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹、 [!INCLUDE[msCoName](../includes/msconame-md.md)] 貝氏貝氏機率分類和類 [!INCLUDE[msCoName](../includes/msconame-md.md)] 神經網路演算法。  
   
 ## <a name="return-type"></a>傳回類型  
  \<資料表運算式>  

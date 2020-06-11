@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57f62b125872e6b851235c1517925c6ee10058d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b23f250a5589d47ac6e26baf48a40b0979a1895
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174427"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521257"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>採礦模型 (Analysis Services - 資料採礦)
   「採礦模型」** 透過將演算法套用至資料來建立，但是採礦模型不只是演算法或中繼資料容器，還是可以套用至新資料以產生預測並推斷關聯性的一組資料、統計資料及模式。
@@ -83,7 +82,7 @@ ms.locfileid: "78174427"
 
  [採礦模型架構](#bkmk_mdlArch)
 
-##  <a name="mining-model-properties"></a><a name="bkmk_mdlProps"></a> 採礦模型屬性
+##  <a name="mining-model-properties"></a><a name="bkmk_mdlProps"></a>採礦模型屬性
  每個採礦模型都擁有定義模型及其中繼資料的屬性。 這些包括名稱、描述、上次處理模型的日期、模型的權限，以及用於定型之資料的任何篩選。
 
  每個採礦模型也都擁有衍生自採礦結構的屬性，以及描述模型所使用資料之資料行的屬性。 如果模型使用的任何資料行是巢狀資料表，該資料行也可以套用個別的篩選。
@@ -98,7 +97,7 @@ ms.locfileid: "78174427"
 
  [採礦模型架構](#bkmk_mdlArch)
 
-##  <a name="mining-model-columns"></a><a name="bkmk_mdlCols"></a> 採礦模型資料行
+##  <a name="mining-model-columns"></a><a name="bkmk_mdlCols"></a>採礦模型資料行
  採礦模型包含從採礦結構中定義的資料行取得的資料行。 您可以從採礦結構中選擇要用於模型的資料行，您也可以建立採礦結構資料行的複本，然後為其重新命名或變更其用法。 在建立模型的過程中，您也必須定義模型使用資料行的方式； 包括資料行是否為索引鍵資料行、資料行是否用於預測，或者演算法是否可以忽略資料行等資訊。
 
  當您建立模型時，建議您仔細檢閱結構中的資料，僅將對分析有意義的資料行加入至模型，而不是自動加入每一個可用的資料行。 例如，您應該避免包含重複相同資料的多個資料行，您也應該避免使用擁有最多唯一值的資料行。 如果您認為不應該使用資料行，就不需要從採礦結構或採礦模型中刪除，但是您可以在資料行上，只設定一個旗標，指定在建立模型時應該忽略該資料行。 這表示資料行會保留在採礦結構中，但不會在採礦模型中使用。 如果您啟用從模型鑽研到採礦結構，則可以在稍後從資料行擷取資訊。
@@ -135,10 +134,10 @@ ms.locfileid: "78174427"
 ## <a name="related-tasks"></a>相關工作
  使用下列連結以取得使用資料採礦模型的其他特定資訊
 
-|工作|連結|
+|Task|連結|
 |----------|----------|
 |加入及刪除採礦模型|[將採礦模型加入至現有的採礦結構](add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [從採礦結構刪除採礦模型](delete-a-mining-model-from-a-mining-structure.md)|
-|使用採礦模型資料行|[從採礦模型中排除資料行](exclude-a-column-from-a-mining-model.md)<br /><br /> [建立模型資料行的別名](create-an-alias-for-a-model-column.md)<br /><br /> [變更採礦模型中的資料行分隔](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [在模型中指定當做迴歸輸入變數使用的資料行](specify-a-column-to-use-as-regressor-in-a-model.md)|
+|使用採礦模型資料行|[從採礦模型排除資料行](exclude-a-column-from-a-mining-model.md)<br /><br /> [建立模型資料行的別名](create-an-alias-for-a-model-column.md)<br /><br /> [變更採礦模型中的資料行離散化](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [在模型中指定當做迴歸輸入變數使用的資料行](specify-a-column-to-use-as-regressor-in-a-model.md)|
 |改變模型屬性|[變更採礦模型的屬性](change-the-properties-of-a-mining-model.md)<br /><br /> [將篩選套用至採礦模型](apply-a-filter-to-a-mining-model.md)<br /><br /> [從採礦模型刪除篩選](delete-a-filter-from-a-mining-model.md)<br /><br /> [針對採礦模型啟用鑽研](enable-drillthrough-for-a-mining-model.md)<br /><br /> [檢視或變更演算法參數](view-or-change-algorithm-parameters.md)|
 |複製。 移動或管理模型|[建立採礦模型的複本](make-a-copy-of-a-mining-model.md)<br /><br /> [複製採礦模型的檢視](copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)|
 |以資料擴展模型，或更新模型中的資料|[處理採礦模型](process-a-mining-model.md)|

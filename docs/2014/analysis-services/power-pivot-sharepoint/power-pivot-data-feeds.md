@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b3080996eca3395e8be3cab5e17eaea7305dbfa2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3dd788c51867924882eba80fb9cbed280143fd6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071266"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535126"
 ---
 # <a name="powerpivot-data-feeds"></a>PowerPivot 資料摘要
-  資料摘要會視需要提供從線上資料來源到用戶端應用程式的資料串流。 在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用資料摘要，從 Atom 感知 Web 服務或應用程式，將資料加入至 Excel 活頁簿中的 PowerPivot 資料源。  
+  資料摘要會視需要提供從線上資料來源到用戶端應用程式的資料串流。 在中 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您可以使用資料摘要，從 Atom 感知 Web 服務或應用程式，將資料加入至 Excel 活頁簿中的 PowerPivot 資料源。  
   
  本節提供資訊，協助您發揮資料摘要的最大效用，以取得現有的企業或工作群組資料送入 PowerPivot 活頁簿中。 也提供下列資料：如何與組織中其他人員共用資料摘要，以及在您需要疑難排解所發生的任何問題時，如何建構及使用資料摘要。  
   

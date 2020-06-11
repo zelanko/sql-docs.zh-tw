@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: b1aa8a1a-6532-45d2-8f53-d3e211d7197a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ff0f13ec91ef1e8796ed5ebd5ccf3cc37ff2f354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e658ae7d839a55da315619e0870b32c1da52dad8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088283"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527614"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>計算工具 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師之 **[計算]** 索引標籤上的 **[計算工具]** 窗格，即可瀏覽可在計算中使用的中繼資料、函數以及範本。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **中繼資料**  
  顯示選取之 Cube 的中繼資料。  
   

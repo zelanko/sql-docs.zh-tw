@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: feba3688947362847a95aea2d800c1fc6f15f6cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9f7e4f7c9d97878be9f2cd2f3251ac463332faf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174678"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522294"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>增益圖 (Analysis Services - 資料採礦)
   增益**圖**以圖形表示與隨機猜測相較之下，採礦模型所提供的改進，並根據*增益分數來*測量變更。 藉由比較資料集各部分與不同模型的增益分數，您可以判斷哪一個模型最適合，以及資料集中的哪些案例百分比會因套用模型的預測而受益。
@@ -65,7 +64,7 @@ ms.locfileid: "78174678"
 
  [採礦圖例]**** 也包含可協助您解譯圖表的分數和統計資料。 這些結果代表位於灰線之模型的精確度，而在此狀況中，它會定位成包含 30% 的整體測試案例。
 
-|數列和模型|分數|目標母體|預測機率|
+|數列和模型|Score|目標母體|預測機率|
 |-----------------------|-----------|-----------------------|-------------------------|
 |目標郵寄全部|0.71|47.40%|61.38%|
 |目標郵寄 30 歲以下|0.85|51.81%|46.62%|
@@ -95,7 +94,7 @@ ms.locfileid: "78174678"
 
  您可以在圖表中按一下，以便移動垂直灰色列，而且 [採礦圖例]**** 會顯示整體案例的百分比，以及正確預測之案例的百分比。 例如，如果您將灰色滑動軸定位在 50% 的標示處，[採礦圖例]**** 就會顯示下列精確度分數。 這些數字是以「資料採礦基本教學課程」中建立的 TM_Decision Tree 模型為基礎。
 
-|數列、模型|分數|目標母體|預測機率|
+|數列、模型|Score|目標母體|預測機率|
 |-------------------|-----------|-----------------------|-------------------------|
 |TM_Decision Tree|0.77|40.50%|72.91%|
 |理想模型||50.00%||

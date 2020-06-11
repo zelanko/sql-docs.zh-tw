@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 986356e6ebf7697bf0b425553f6803659a0fc5cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49258d89858c8cea3a9620f50062d6371e22ec8e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80760299"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527994"
 ---
 # <a name="sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services
 

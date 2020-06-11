@@ -12,19 +12,19 @@ ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 187366d9f289804942ba6e7d331a47bfaae68232
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 1701479fe7469769d75f4b8ad3d8e65dcc75af91
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000938"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858670"
 ---
 # <a name="full-text-index-properties-general-page"></a>全文檢索索引屬性 (一般頁面)
   **若要檢視或變更全文檢索索引的可修改屬性**  
   
 -   [管理全文檢索索引](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **全文檢索目錄**  
  顯示與全文檢索索引相關聯之全文檢索目錄的名稱。  
   

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: de7fb2d398979bb1f3ced1319f068b70bff54c63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889767"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669838"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>套用至  
- 傳回資料表的運算式，例如\<資料表資料行參考>，或傳回資料表的函數。  
+ 傳回資料表的運算式，例如 \< 資料表資料行參考>，或傳回資料表的函數。  
   
 ## <a name="return-type"></a>傳回類型  
  \<資料表運算式>  
   
 ## <a name="remarks"></a>備註  
- **BottomSum**函數會以遞增的次序順序傳回最底端的資料列。 次序是以每個資料列的\<次序運算式> 引數的評估值為基礎，因此\<次序運算式> 值的總和至少是\<總和> 引數所指定的給定總和。 **BottomSum**會在仍符合指定總和值的情況下，傳回可能的最小元素數目。  
+ **BottomSum**函數會以遞增的次序順序傳回最底端的資料列。 次序是 \< 以每個資料列的次序運算式> 引數的評估值為基礎，因此 \< 次序運算式> 值的總和至少是 \< 總和> 引數所指定的給定總和。 **BottomSum**會在仍符合指定總和值的情況下，傳回可能的最小元素數目。  
   
 ## <a name="examples"></a>範例  
  下列範例會針對您使用[基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程所建立的關聯模型，建立預測查詢。  
@@ -54,7 +54,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  範例結果︰  
   
-|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|型號|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -90,7 +90,7 @@ NATURAL PREDICTION JOIN
   
  範例結果︰  
   
-|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|型號|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Road Bottle Cage|1195|0.08 .。。|0.07 .。。|  
 |Mountain Bottle Cage|1367|0.09 .。。|0.08 .。。|  

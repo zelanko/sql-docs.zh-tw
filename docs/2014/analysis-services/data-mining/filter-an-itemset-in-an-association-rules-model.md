@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ed919ea-8598-45d2-a4a0-b1b3357a4ab1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bef576a32bebc1c80b2ded8ee4831696811ba819
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f841280a6dd39a5f824f2e6a10975b0f80ed0761
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084354"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522454"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>篩選關聯規則模型中的項目集
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以篩選 **關聯規則檢視器的** [項目集] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 索引標籤中所顯示的項目集。  
@@ -35,6 +34,6 @@ ms.locfileid: "66084354"
  現在項目集經過篩選後，只顯示包含所選項目的那些項目集。 此方塊不區分大小寫。 篩選會儲存在記憶體中，這樣您就可以從清單中選取舊篩選。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型檢視器工作和操作說明](mining-model-viewer-tasks-and-how-tos.md)  
+ [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)  
   
   

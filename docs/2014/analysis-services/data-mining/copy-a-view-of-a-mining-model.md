@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 84abbb855673183910099f0a34d70702d34da7fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b91ee04b375a1329eb5f215e65a607ced8415ca
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085603"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524004"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>複製採礦模型的檢視
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，資料採礦設計師的 [採礦模型檢視器]**** 索引標籤，對每一種類型的採礦模型都會使用個別的檢視器。 有幾個檢視器含有一些元件，您可將其內容複製至剪貼簿，再將剪貼簿內容複製到文件或影像操作軟體。 下列元件可以使用此功能：  
@@ -66,6 +65,6 @@ ms.locfileid: "66085603"
 5.  再次以滑鼠右鍵按一下 [節點詳細資料]**** 窗格，然後選取 [複製]****。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型檢視器工作和操作說明](mining-model-viewer-tasks-and-how-tos.md)  
+ [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)  
   
   

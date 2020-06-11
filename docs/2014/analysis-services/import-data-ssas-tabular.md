@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96948f8a256b90429e45ac6ce1068cf3d88baa9a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080620"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544210"
 ---
 # <a name="import-data-ssas-tabular"></a>匯入資料 (SSAS 表格式)
   您可以從許多不同的來源，將資料匯入表格式模型中。 本節的主題描述如何使用資料匯入精靈連接至資料，以及選取要匯入模型專案的資料。  

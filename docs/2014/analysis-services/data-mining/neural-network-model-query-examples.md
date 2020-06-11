@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7154ce0ad66346634225734fe829c36e7bf3ad58
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083287"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520890"
 ---
 # <a name="neural-network-model-query-examples"></a>類神經網路模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，類神經網路模型的內容查詢可以擷取模型中繼資料，例如，隱藏層的數目。 或者，預測查詢可以根據輸入建議分類，並選擇性地提供每個分類的機率。  
@@ -181,7 +180,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="sample-query-5-creating-a-singleton-prediction"></a><a name="bkmk_Query5"></a>範例查詢5：建立單一預測  
  在類神經網路模型上建立預測查詢最簡單的方式就是使用預測查詢產生器 (可在 **和** 中，資料採礦設計師的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [採礦預測] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]索引標籤上取得)。 您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路檢視器中瀏覽模型來篩選感興趣的屬性並檢視趨勢，然後切換到 **[採礦預測]** 索引標籤來建立查詢，並針對這些趨勢預測新的值。  
   
- 例如，您可以瀏覽撥接中心模型來檢視訂單量與其他屬性間的關聯。 若要這麼做，請在檢視器中開啟模型，然後針對 [**輸入**] 選取** \<[所有>**]。  接著，為 **[輸出]** 選取 **[訂單數目]**。 為 **[值 1]** 選取代表最多訂單的範圍，並為 **[值 2]** 選取代表最少訂單的範圍。 然後，您可以看一下模型與訂單量關聯的所有屬性。  
+ 例如，您可以瀏覽撥接中心模型來檢視訂單量與其他屬性間的關聯。 若要這麼做，請在檢視器中開啟模型，然後在 [**輸入**] 中選取 [] **\<All>** 。  接著，為 **[輸出]** 選取 **[訂單數目]**。 為 **[值 1]** 選取代表最多訂單的範圍，並為 **[值 2]** 選取代表最少訂單的範圍。 然後，您可以看一下模型與訂單量關聯的所有屬性。  
   
  透過瀏覽檢視器中的結果，您會發現一週的某幾天訂單量較低，而運算子數目的增加似乎與較高的銷售量互相關聯。 接著，您可以在模型上使用預測查詢來測試 "what if" 假設，並詢問在訂單量低的天數上增加層級 2 運算子的數目是否會增加訂單。 若要這樣做，建立如下的查詢：  
   
@@ -210,7 +209,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|預測函數|使用量|  
+|預測函數|使用方式|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為類神經網路圖中另一個節點的子系。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|傳回加權機率。|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|傳回與目前預測值相關之值的資料表。|  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96ddf88bd6f071c667a021678b6f5cd2613ae8db
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064374"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527824"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>備份資料庫對話方塊 (Analysis Services - 多維度資料)
   透過 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫]**** 對話方塊，即可使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 備份檔 (.abf) 格式，將 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫備份至備份檔案中。  
@@ -29,7 +28,7 @@ ms.locfileid: "66064374"
   
 -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的 [資料庫]**** 資料夾或物件總管**** 中的資料庫，然後按一下 [備份]****。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **指令碼**  
  根據在對話方塊中選取的選項，建立備份指令碼。 此還原指令碼是以 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼語言 (ASSL) 撰寫而成。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66064374"
  **Database**  
  顯示目前選取的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫名稱。  
   
- **備份檔案**  
+ **[備份檔案]**  
  鍵入要使用的備份檔案之完整路徑和檔案名稱。  
   
  **瀏覽**  

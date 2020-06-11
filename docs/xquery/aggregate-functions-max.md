@@ -1,5 +1,6 @@
 ---
 title: max 函數（XQuery） |Microsoft Docs
+description: 深入瞭解 XQuery max （）函式，此函式會傳回序列中的一個專案，其值大於所有其他專案。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e47539a350a2918ef24c47e3c1eca270d4aeb72e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b2a7449da7c255d0ddbbed71fef3561f77e294d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985959"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529982"
 ---
 # <a name="aggregate-functions---max"></a>彙總函式 - max
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  **Max （）** 函數會傳回序列中的一個值，該值大於輸入序列中的任何其他值。 對於 xs:string 值，會使用預設 Unicode 字碼指標定序。 如果 xdt： untypedAtomic 值無法轉換為 xs： double，則會在輸入序列中忽略此值 *$arg*。 如果輸入是動態計算的空白序列，則會傳回空白序列。  
   
 ## <a name="examples"></a>範例  
- 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存**xml**在資料庫的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]各種 XML 類型資料行中。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在資料庫的各種**XML**類型資料行中 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 。  
   
 ### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. 使用 max() XQuery 函數來尋找製造過程中佔去大部分工時的工作中心位置  
  [Min function （XQuery）](../xquery/aggregate-functions-min.md)中提供的查詢可以重寫以使用**max （）** 函數。  

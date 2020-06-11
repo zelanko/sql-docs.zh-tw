@@ -19,12 +19,12 @@ ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 021e9e66b281a8bbca6d5c9e21e78ffa4069c5c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4215b5f677061926b13ec5d7b5411454fb818bbb
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67950792"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670146"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "67950792"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**Nvarchar （** 128 **）**|資料表限定詞。|  
-|**TABLE_SCHEMA**|**Nvarchar （** 128 **）**|包含資料表的結構描述名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**TABLE_SCHEMA**|**Nvarchar （** 128 **）**|包含資料表的結構描述名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**TABLE_NAME**|**Nvarchar （** 128 **）**|資料表名稱。|  
 |**COLUMN_NAME**|**Nvarchar （** 128 **）**|資料行名稱。|  
 |**ORDINAL_POSITION**|**int**|資料行識別碼。|  
 |**COLUMN_DEFAULT**|**Nvarchar （** 4000 **）**|資料行的預設值。|  
-|**IS_NullABLE**|**Varchar （** 3 **）**|資料行的 Null 屬性。 如果這個資料行允許 NULL，這個資料行就會傳回 YES。 否則，它就會傳回 NO。|  
+|**IS_NULLABLE**|**Varchar （** 3 **）**|資料行的 Null 屬性。 如果這個資料行允許 NULL，這個資料行就會傳回 YES。 否則，它就會傳回 NO。|  
 |**DATA_TYPE**|**Nvarchar （** 128 **）**|系統提供的資料類型。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|二進位資料、字元資料，或文字和影像資料的最大長度 (以字元為單位)。<br /><br /> -1 適用于**xml**和大數數值型別資料。 否則，就傳回 NULL。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|  
 |**CHARACTER_OCTET_LENGTH**|**int**|二進位資料、字元資料，或文字和影像資料的最大長度 (以位元組為單位)。<br /><br /> -1 適用于**xml**和大數數值型別資料。 否則，就傳回 NULL。|  
@@ -74,10 +74,10 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [資訊架構視圖 &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [syscharsets &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
+ [sys.sys字元集 &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [sys.configurations &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [&#40;Transact-sql&#41;的 sys.databases 類型](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
  [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)  

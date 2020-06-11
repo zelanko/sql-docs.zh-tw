@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b713d9918dabcbaabba2085710dfaa5ed5d3a33b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9694826bf2f74daef7b6d024e51e31d4ee448671
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083283"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520928"
 ---
 # <a name="naive-bayes-model-query-examples"></a>貝式機率分類模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 您也可以針對資料採礦結構描述資料列集使用查詢，藉以擷取有關模型的中繼資料。 本節說明如何針對以 Microsoft 貝氏機率分類演算法為基礎的模型來建立這些查詢。  
@@ -182,7 +181,7 @@ NATURAL PREDICTION JOIN
   
  範例結果︰  
   
-|運算是|  
+|運算式|  
 |----------------|  
 |0|  
   
@@ -230,7 +229,7 @@ AS t
   
  部分結果：  
   
-|模型|  
+|型號|  
 |-----------|  
 |Women's Mountain Shorts|  
 |Water Bottle|  
@@ -243,7 +242,7 @@ AS t
   
 |||  
 |-|-|  
-|預測函數|使用量|  
+|預測函數|使用方式|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為模型中另一個節點的子系。|  
 |[Predict &#40;DMX&#41;](/sql/dmx/predict-dmx)|傳回指定之資料行的一個或一組預測值。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|傳回加權機率。|  

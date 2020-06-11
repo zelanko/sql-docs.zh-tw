@@ -1,5 +1,6 @@
 ---
 title: 在 XPath 查詢中指定布林值述詞（SQLXML）
+description: 查看如何在 XPath 查詢中指定布林值述詞的範例（SQLXML 4.0）。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: acf43b7fd863690259719a81ec60b136f9f4996d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8f2f4a80b6e4ab47245c55aa9fa2f2716ea39f7
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252570"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215401"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林值述詞 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,13 +92,13 @@ ms.locfileid: "75252570"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 指定連續和巢狀述詞  
- 下列查詢顯示使用連續述詞。 此查詢會傳回所有** \<客戶>** 內容節點的子專案，**此屬性的**值為277，而**TerritoryID**屬性的值為3：  
+ 下列查詢顯示使用連續述詞。 此查詢 **\<Customer>** 會傳回內容節點的所有子項目，其中具有值為277的**SalesPersonID**屬性，以及值為3的**TerritoryID**屬性：  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 查詢會傳回滿足述詞中所指定條件的** \<客戶>** 元素。  
+ 查詢 **\<Customer>** 會傳回符合述詞中所指定條件的元素。  
   
  您可以指定**屬性**軸（@）的快捷方式，而且因為**子**軸是預設值，所以可以從查詢中省略：  
   
@@ -105,7 +106,7 @@ ms.locfileid: "75252570"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回內容節點的所有** \<客戶>** 子專案，其中包含** \<** 至少具有一個** \<order>** 元素（具有**SalesPersonID**屬性值為2）的 order>子項目。  
+ 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢 **\<Customer>** 會傳回內容節點的所有子專案，其中包含 **\<Order>** 至少一個元素的子項目 **\<Order>** ，其**SalesPersonID**屬性值為2。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -168,7 +169,7 @@ ms.locfileid: "75252570"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 指定最上層述詞  
- 下列查詢會傳回具有** \<Order>** 專案子系之內容節點的** \<Customer>** 子項目節點。 此查詢會測試當做最上層述詞的位置路徑：  
+ 下列查詢 **\<Customer>** 會傳回具有元素子系之內容節點的子項目節點 **\<Order>** 。 此查詢會測試當做最上層述詞的位置路徑：  
   
 ```  
 /child::Customer[child::Order]  

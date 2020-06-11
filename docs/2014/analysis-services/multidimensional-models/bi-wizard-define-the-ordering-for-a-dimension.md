@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05e75eb726d67e992a0a9320be8d23bbc547bedb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cd5ea148e374c18c530ba0a15c80dbb23983020
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076854"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544580"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>定義維度的排序方式
   將屬性排序方式增強功能加入至 Cube 或維度，即可指定如何排序屬性的成員。 您可以依名稱或屬性的索引鍵來排序成員，或是依名稱或另一個屬性 (根據屬性關聯性) 的索引鍵來排序成員。 依預設，會依名稱來排序成員。 這項增強功能會在維度中變更屬性的 `OrderBy` 和 `OrderByAttributeID` 屬性設定。  
@@ -35,7 +34,7 @@ ms.locfileid: "66076854"
 ## <a name="specifying-ordering"></a>指定排列方式  
  在精靈的第二個 [指定屬性排列方式]**** 頁面上，您指定如何排序維度中的所有屬性。  
   
- 在 [排序屬性]**** 資料行中，您可變更用於執行排序的屬性。 如果您要用來排序成員的屬性不在清單中，請在清單中向下移動，然後選取** \<[新增屬性 ...] >** 開啟 [選取資料**行**] 對話方塊，您可以在其中選取維度資料表中的資料行。 使用 [選取資料行]**** 對話方塊選取資料行會建立一個額外的屬性，可用它來排序屬性的成員。  
+ 在 [排序屬性]**** 資料行中，您可變更用於執行排序的屬性。 如果您要用來排序成員的屬性不在清單中，請在清單中向下移動，然後選取 **\<New attribute...>** 以開啟 [**選取資料行**] 對話方塊，您可以在其中選取維度資料表中的資料行。 使用 [選取資料行]**** 對話方塊選取資料行會建立一個額外的屬性，可用它來排序屬性的成員。  
   
  在 [準則]**** 資料行中，您可選取要依 [索引鍵]**** 或 [名稱]**** 來排序屬性的成員。  
   

@@ -1,24 +1,29 @@
 ---
 title: SSMA for Access 的新功能（AccessToSQL） |Microsoft Docs
+description: 瞭解每個版本的 SQL Server 移轉小幫手（SSMA） for Access （AccessToSQL）變更。
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: jtoland;alexiva
-ms.openlocfilehash: e1bc77c0fac3698d7d36ebfb47dde547d475142e
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: da71576b58487fa5d2d1e069d56c9fa6db783fc2
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220253"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292955"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access 的新功能（AccessToSQL）
 
 本文列出每個版本中的存取變更 SQL Server 移轉小幫手（SSMA）。
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+SSMA for Access 的 v4.0 版本包含次要效能改進和 bug 修正。
 
 ## <a name="ssma-v89"></a>SSMA v 8。9
 

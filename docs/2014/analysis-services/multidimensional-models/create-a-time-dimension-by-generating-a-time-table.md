@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af1cc0c5838c942d8f04eb5246c9c1714d08d786
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076285"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536400"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>透過產生時間資料表來建立時間維度
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，當源資料庫中沒有可用[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的時間資料表時，您可以使用中的 [維度 Wizard] 來建立時間維度。 您可以透過在 **[選取建立方法]** 頁面上選取下列其中一個選項，完成此作業：  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 當源資料庫中沒有可用的時間資料表時，您可以使用中的 [維度 Wizard] 來建立時間維度。 您可以透過在 **[選取建立方法]** 頁面上選取下列其中一個選項，完成此作業：  
   
 -   **在資料來源中產生時間資料表** ：當您擁有在基礎資料來源中建立物件的權限時，請選取這個選項。 然後，這個精靈將產生時間資料表並將此資料表儲存在資料來源中。 接著，這個精靈會根據此時間資料表建立時間維度。  
   

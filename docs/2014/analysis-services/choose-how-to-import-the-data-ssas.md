@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 17dc6903-c239-46aa-a3b0-6e3156accacc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 482d3b072eaa4db2c3aee84986590dd9d505b347
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fba1d5801f325400b228920fffa06512f4db8de2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088136"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527544"
 ---
 # <a name="choose-how-to-import-the-data-ssas"></a>選擇如何匯入資料 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您選擇如何從選取的資料來源匯入資料。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **從資料表和檢視表清單來選取要匯入的資料**  
  如果您想要透過從清單中選取來匯入資料，請選取此選項。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b01d537c-1c04-4d7d-9146-051c249b08e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 88849f85a5f2614961cb67db070f508c2c0718d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88060ca495eda8d06d57c3942a7e44325cfe6d0e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087163"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527004"
 ---
 # <a name="connect-to-an-informix-database-ssas"></a>連接到 Informix 資料庫 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您指定連接到 Informix 資料庫的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
@@ -27,7 +26,7 @@ ms.locfileid: "66087163"
 > [!NOTE]  
 >  在這個頁面中選取資料庫時，會使用目前使用者的認證。 不過，如果在 [模擬資訊] 頁面中指定的使用者未具備從所選取資料庫讀取的權限，則匯入將不會成功。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **易記連接名稱**  
  為此資料來源連接輸入唯一的名稱。 這是必要的欄位。  
   

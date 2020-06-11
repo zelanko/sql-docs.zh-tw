@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d86ba50c76c167e0f6d17cd0dee7e00e6ac938
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085136"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523314"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>資料採礦演算法 (Analysis Services - 資料採礦)
   *資料採礦演算法*是一組啟發學習法和計算，可從資料建立資料採礦模型。 若要建立模型，演算法首先會分析您提供的資料，尋找特定模式和趨勢類型。 此演算法會使用此分析結果來定義用於建立採礦模型的最佳參數。 然後這些參數會套用到整個資料集以擷取可付諸行動的模式與詳細的統計資料。  
@@ -41,7 +40,7 @@ ms.locfileid: "66085136"
   
 -   一組規則，描述交易中的產品及購買產品的機率如何群組在一起。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供用於資料採礦解決方案的多種[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]演算法。 這些演算法是資料採礦中所使用之其中一些最常用方法的實作。 所有 Microsoft 資料採礦演算法都可以使用提供的 API，或使用 SQL Server Integration Services 中的資料採礦元件加以自訂及完整程式化。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供用於資料採礦解決方案的多種演算法。 這些演算法是資料採礦中所使用之其中一些最常用方法的實作。 所有 Microsoft 資料採礦演算法都可以使用提供的 API，或使用 SQL Server Integration Services 中的資料採礦元件加以自訂及完整程式化。  
   
  您也可以使用符合 OLE DB for Data Mining 規格的協力廠商演算法，或開發可註冊為服務，然後用於 SQL Server 資料採礦架構中的自訂演算法。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66085136"
 |**模型內容**|說明每種資料採礦模型類型中的資訊結構化方式，並說明如何解譯儲存在每個節點中的資訊。|  
 ||[關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)<br /><br /> [貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-sequence-clustering-models.md)<br /><br /> [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
 |**資料採礦查詢**|提供多項可用於每種模型類型的查詢。 例如，可讓您深入了解模型中模式的內容查詢，以及可協助您根據這些模式建立預測的預測查詢。|  
-||[關聯模型查詢範例](association-model-query-examples.md)<br /><br /> [群集模型查詢範例](clustering-model-query-examples.md)<br /><br /> [決策樹模型查詢範例](decision-trees-model-query-examples.md)<br /><br /> [線性迴歸模型查詢範例](linear-regression-model-query-examples.md)<br /><br /> [羅吉斯迴歸模型查詢範例](logistic-regression-model-query-examples.md)<br /><br /> [貝式機率分類模型查詢範例](naive-bayes-model-query-examples.md)<br /><br /> [類神經網路模型查詢範例](neural-network-model-query-examples.md)<br /><br /> [時序叢集模型查詢範例](sequence-clustering-model-query-examples.md)<br /><br /> [時間序列模型查詢範例](time-series-model-query-examples.md)|  
+||[關聯模型查詢範例](association-model-query-examples.md)<br /><br /> [叢集模型查詢範例](clustering-model-query-examples.md)<br /><br /> [決策樹模型查詢範例](decision-trees-model-query-examples.md)<br /><br /> [線性迴歸模型查詢範例](linear-regression-model-query-examples.md)<br /><br /> [羅吉斯迴歸模型查詢範例](logistic-regression-model-query-examples.md)<br /><br /> [貝式機率分類模型查詢範例](naive-bayes-model-query-examples.md)<br /><br /> [類神經網路模型查詢範例](neural-network-model-query-examples.md)<br /><br /> [時序叢集模型查詢範例](sequence-clustering-model-query-examples.md)<br /><br /> [時間序列模型查詢範例](time-series-model-query-examples.md)|  
   
 ## <a name="related-tasks"></a>相關工作  
   

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d3623e9cd841feb3a82828c12ba32e2e691482a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd6972f94596a106dfd5971e46861a2b86976248
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083903"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521794"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft 貝氏機率分類演算法技術參考
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]貝氏貝氏機率分類演算法是提供[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的分類演算法，可用於預測模型。 此演算法會計算輸入資料行和可預測資料行之間的條件式機率，並假設資料行是獨立的。 這種獨立性假設產生了貝氏機率分類這個名稱。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]貝氏貝氏機率分類演算法是提供的分類演算法，可 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用於預測模型。 此演算法會計算輸入資料行和可預測資料行之間的條件式機率，並假設資料行是獨立的。 這種獨立性假設產生了貝氏機率分類這個名稱。  
   
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Microsoft 貝氏機率分類演算法的實作  
  此演算法比其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法更少計算，因此對於快速產生採礦模型來探索輸入資料行和可預測資料行之間的關聯性很有用。 此演算法會考量輸入屬性值與輸出屬性值的每個配對。  
@@ -38,7 +37,7 @@ ms.locfileid: "66083903"
 ### <a name="feature-selection"></a>特徵選取  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法會執行自動特徵選取，藉以限制建立模型時所考量的值數目。 如需詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)。  
   
-|演算法|分析的方法|評價|  
+|演算法|分析的方法|註解|  
 |---------------|------------------------|--------------|  
 |貝氏機率分類|Shannon 熵<br /><br /> 使用 K2 優先的貝氏<br /><br /> 使用優先統一狄氏分配的貝氏 (預設值)|貝氏機率分類只接受離散或離散化的屬性，因此無法使用有趣性分數。|  
   
@@ -79,12 +78,12 @@ ms.locfileid: "66083903"
 ### <a name="modeling-flags"></a>模型旗標  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)。  
   
-|模型旗標|描述|  
+|模型旗標|Description|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|表示資料行將被視為擁有兩個可能狀態：「遺漏」和「現有」。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
 |NOT NULL|表示資料行不能包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  貝氏機率分類樹狀模型必須包含索引鍵資料行、至少一個可預測屬性，以及至少一個輸入屬性。 任何屬性都不得為連續的；如果您的資料包含連續數值資料，將會忽略或離散化該資料。  
   
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  

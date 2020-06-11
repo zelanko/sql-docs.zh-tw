@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12900d49-db88-48bb-a5f4-0a9a172bc126
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 61f0f7c62c6c3f245a87e7e8ce37153f08226a7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 364de57cdf582123ad9d10e346b035856075ee5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070776"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540090"
 ---
 # <a name="prediction-query-builder-data-mining"></a>預測查詢產生器 (資料採礦)
   使用 **[採礦模型預測]** 檢視，即可根據採礦結構包含的採礦模型建立預測。  

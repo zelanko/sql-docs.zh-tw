@@ -10,19 +10,19 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21c4f3a480b039b4853c112831341b6448a7d6a7
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211251"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859378"
 ---
 # <a name="options-environment-fonts-and-colors-page"></a>選項 (環境：字型和色彩頁面)
   [選項]  對話方塊讓您能夠針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的各種使用者介面元素來建立自訂字型和色彩配置。 在 [工具]  功能表上按一下 [選項]  、展開 [環境]  資料夾，然後選取 [字型和色彩]  。  
   
  在對色彩配置進行變更的工作階段中，色彩配置的變更並不會生效。 您可以開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的其他執行個體，並產生您希望套用變更的條件，來評估色彩變更。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **顯示設定**  
  列出您可以變更字型和色彩配置的所有使用者介面元素。 從此清單中選取了項目之後，您可以自訂 [顯示項目]  中所選之項目的色彩設定。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a09984f089a88f90798c2ca8f4c2514c06bc1cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b98037ea9f26c339cdf7aba22c37e2cfb3dfbb97
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079750"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543810"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>監視 Analysis Services 執行個體
   您可使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或效能監視器 (此應用程式有時稱為 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **) 來監視**的效能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可讓您建立和管理追蹤，並分析和重新執行追蹤結果。 效能監視器會報告伺服器狀態 (透過某些計數器來建立索引)，這些將在下節中討論。  

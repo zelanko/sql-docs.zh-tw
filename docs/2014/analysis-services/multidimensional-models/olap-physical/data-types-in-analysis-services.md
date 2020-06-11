@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06b93090918a0fffc9c98e1560b338177eff3d84
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725382"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545926"
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services 中的資料類型
-  對於所有<xref:Microsoft.AnalysisServices.DataItem>物件， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]都支援下列的子集`System.Data.OleDb.OleDbType`。 若要設定或讀取資料類型，請使用[DataItem 資料類型 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)。  
+  對於所有 <xref:Microsoft.AnalysisServices.DataItem> 物件，都 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援下列的子集 `System.Data.OleDb.OleDbType` 。 若要設定或讀取資料類型，請使用[DataItem 資料類型 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)。  
   
 ## <a name="supported-data-types"></a>支援的資料類型  
   
@@ -26,7 +25,7 @@ ms.locfileid: "62725382"
 |-|-|  
 |BigInt|64 位元帶正負號的整數。 *BigInt*數值型別代表值範圍從負值9223372036854775808到正9223372036854775807的整數。|  
 |Binary|**Byte**類型的二進位資料資料流程。 **Byte**是代表不帶正負號整數值的實值型別，範圍介於0到255之間。|  
-|Boolean|這個類型的執行個體具有 `true` 或 `false` 值。|  
+|布林值|這個類型的執行個體具有 `true` 或 `false` 值。|  
 |貨幣|*貨幣*值，範圍從-922337203685477.5808 到 + 922337203685477.5807，精確度為貨幣單位的萬分之一（四位數）。|  
 |日期|日期和時間資料，儲存為雙精確度浮點數。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分或當天的時間。|  
 |Double|浮點數，範圍在 -1.79769313486232E +308 到 1.79769313486232E +308 之間。 Double 值儲存最多有效位數為 15 個小數位數的數字資訊。|  
@@ -43,7 +42,7 @@ ms.locfileid: "62725382"
 ## <a name="amo-validations-on-data-types"></a>資料類型的 AMO 驗證  
  下表列出分析管理物件 (AMO) 對某些繫結所做的額外驗證：  
   
-|Object|繫結|允許的資料類型|  
+|物件|繫結|允許的資料類型|  
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|二進位以外的所有資料類型|  
 ||NameColumn|僅 WChar|  

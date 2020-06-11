@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e52fae59d05447ef28eac7b9be408279ffcefb96
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083370"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521071"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型篩選語法和範例 (Analysis Services - 資料採礦)
   本節提供了有關模型篩選語法的詳細資訊，以及範例運算式。  
@@ -238,9 +237,9 @@ FILTER (EXISTS (Products))
 
   
 ###  <a name="example-7-complex-filter-combinations"></a><a name="bkmk_Ex7"></a> 範例 7：複雜的篩選組合  
- 這個模型的狀況與範例 4 的狀況很相似，但是更為複雜。 **ProductsOnSale**的嵌套資料表具有篩選準則`(OnSale)` ，表示**OnSale**的值必須`true`針對**ProductName**中列出的產品。 其中， **OnSale** 是結構資料行。  
+ 這個模型的狀況與範例 4 的狀況很相似，但是更為複雜。 **ProductsOnSale**的嵌套資料表具有篩選準則， `(OnSale)` 表示**OnSale**的值必須 `true` 針對**ProductName**中列出的產品。 其中， **OnSale** 是結構資料行。  
   
- 篩選的第二個部分（針對**productsnotonsale)**）會重複此語法，但會篩選**OnSale**值為`not true``(!OnSale)`的產品。  
+ 篩選的第二個部分（針對**productsnotonsale)**）會重複此語法，但會篩選**OnSale**值為的產品 `not true``(!OnSale)` 。  
   
  最後，這些條件會組合並在案例資料表中加入一項額外的限制。 其結果是針對年齡超過 25 歲的所有客戶，根據 **ProductsOnSale** 清單中包含的案例來預測 **ProductsOnSale** 清單中的購買產品。  
   

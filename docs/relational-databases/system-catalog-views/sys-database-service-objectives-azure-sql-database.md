@@ -1,7 +1,6 @@
 ---
 title: sys.database_service_objectives
 titleSuffix: Azure SQL Database
-ms.custom: seo-dt-2019
 ms.date: 03/21/2018
 ms.service: sql-database
 ms.prod_service: sql-database, sql-data-warehouse
@@ -15,13 +14,14 @@ f1_keywords:
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
 author: CarlRabeler
 ms.author: carlrab
+ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7a7dc1ff6c67845a02af431d2e36727c83fd279a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7a6de1ad7652e7b948d741acdeebdd186f590b44
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826436"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627574"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

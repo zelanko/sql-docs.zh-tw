@@ -1,5 +1,6 @@
 ---
 title: 將 MySQL 和 SQL Server 字元集（MySQLToSQL）對應 |Microsoft Docs
+description: 瞭解如何在 SSMA for MySQL 中指定要在字元資料類型轉換期間使用的 MySQL 字元資料類型、運算式和常值的字元集。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b52f18f8a7247faae24f266c6d8dba3d6c2ea4c
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67909027"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293635"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>對應 MySQL 和 SQL Server 字元集 (MySQLToSQL)
 您可以為 MySQL 字元資料類型、運算式和常值指定字元集（字元集）。  

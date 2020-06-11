@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9027ff3928f40d43f16bb31b52e0c1d52e072847
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084794"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522723"
 ---
 # <a name="data-types-data-mining"></a>資料類型 (資料採礦)
-  當您在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]建立採礦模型或採礦結構時，您必須為該採礦結構中的每個資料行定義資料類型。 此資料類型會告訴資料採礦引擎，資料來源中的資料是數值還是文字，以及應該如何處理資料。 例如，如果您的來源資料包含數值資料，您可以指定數字應該視為整數還是使用小數位數。  
+  當您在中建立採礦模型或採礦結構時 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您必須為該採礦結構中的每個資料行定義資料類型。 此資料類型會告訴資料採礦引擎，資料來源中的資料是數值還是文字，以及應該如何處理資料。 例如，如果您的來源資料包含數值資料，您可以指定數字應該視為整數還是使用小數位數。  
   
  每一個資料類型都會支援一個或多個內容類型。 藉由設定內容類型，您可以自訂處理資料行資料的方式或是計算採礦模型資料的方式。  
   

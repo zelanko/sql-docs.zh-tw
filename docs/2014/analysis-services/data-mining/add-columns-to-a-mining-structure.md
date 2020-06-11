@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3f879344-9f66-4178-851a-e8c5ccccf4cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13a8343fe83b29499c9fc52f40a7800884cd86cf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086230"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525614"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>將資料行加入至採礦結構
   使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的資料採礦設計師，即可將資料行加入至您在資料採礦精靈中定義的採礦結構。 您可以加入已存在於用來定義採礦結構之資料來源檢視中的任何資料行。  

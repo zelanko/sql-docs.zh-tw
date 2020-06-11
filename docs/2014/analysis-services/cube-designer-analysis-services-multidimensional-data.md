@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0c52d2598c2fff79d9d7dd6cb99468871f12639
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e206bcbddb1f6db8c58ecba8c5550809f79457a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086610"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526204"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Cube 設計師 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [Cube 設計師]**** 來編輯現有 Cube 的各種屬性，包括量值群組與量值、Cube 維度與維度關聯性、計算、關鍵效能指標 (KPI)、動作、資料分割、檢視方塊以及 Cube 包含的翻譯，還可以瀏覽 Cube 包含的資料。 您可依下列方式顯示 **[Cube 設計師]** 對話方塊：  

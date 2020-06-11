@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b71ca6e81a11b53d7a614fcffb498a1bf5fa2b32
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084604"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522520"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>鑽研採礦模型的案例資料
   如果採礦模型已經設定為讓您鑽研模型案例，當您瀏覽此模型時，可以擷取有關用來建立模型之案例的詳細資訊。 此外，如果基礎採礦結構已經設定為允許鑽研結構案例，而且您擁有適當的權限，就可以從採礦結構傳回資訊。 這可能包括沒有包含在採礦模型中的資料行。  
@@ -31,7 +30,7 @@ ms.locfileid: "66084604"
   
 |檢視器名稱|窗格或索引標籤名稱|選取節點|  
 |-----------------|----------------------|-----------------|  
-|**Microsoft 樹狀檢視器**|**決策樹**索引標籤|按一下樹狀節點。<br /><br /> **注意**請避免在`All`節點上使用「鑽看」，因為它可能需要很長的時間才能傳回結果。|  
+|**Microsoft 樹狀檢視器**|**決策樹**索引標籤|按一下樹狀節點。<br /><br /> **注意**請避免在節點上使用「鑽看」 `All` ，因為它可能需要很長的時間才能傳回結果。|  
 |**Microsoft 叢集檢視器**|**群集圖表**|按一下叢集節點。|  
 |**Microsoft 叢集檢視器**|**叢集設定檔**|按一下群集資料行中的任何位置。|  
 |**Microsoft 關聯檢視器**|**規則**索引標籤|按一下包含一組規則的資料列。|  

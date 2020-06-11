@@ -1,5 +1,6 @@
 ---
 title: 大寫函數（XQuery） |Microsoft Docs
+description: 瞭解如何使用 XQuery 函式的大寫（），將字元轉換為其大寫的相等大小寫。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c757e46f861d6652b3c8c151c3e002dba13e84ef
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004612"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689484"
 ---
 # <a name="functions-on-string-values---upper-case"></a>字串值的相關函式 - upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ fn:upper-case($arg as xs:string?) as xs:string
 ## <a name="examples"></a>範例  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 將字串變更為大寫  
- 下列範例會變更輸入字串 ' abcDEF！@4' 到大寫的大小寫。  
+ 下列範例會變更輸入字串 ' abcDEF！ @4 '為大寫。  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

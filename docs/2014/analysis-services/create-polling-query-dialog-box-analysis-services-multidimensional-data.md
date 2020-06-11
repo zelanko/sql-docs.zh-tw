@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be4a5f265d83c9346756e82f04d25616551b1af3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086826"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526494"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>建立輪詢查詢對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [建立輪詢查詢] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可在 **[儲存選項]** 對話方塊的 **[通知]** 索引標籤上建立輪詢查詢。 輪詢查詢通常為單一查詢，可傳回一個值，供 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用來判斷資料表或其他關聯式物件是否已變更。 您可以在 [儲存選項]**** 對話方塊之 [通知]**** 索引標籤上的 [排程輪詢]**** 選項中，於方格的 [輪詢查詢]**** 資料行上，按一下省略符號按鈕 (**...**)，以顯示 [建立輪詢查詢]**** 對話方塊。 如需 [儲存選項]**** 對話方塊之 [通知]**** 索引標籤的詳細資訊，請參閱[通知 &#40;儲存選項對話方塊&#41; &#40;Analysis Services - 多維度資料&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)。  
@@ -47,14 +46,14 @@ ms.locfileid: "66086826"
   
      對於進階使用者，一般查詢產生器檢視提供更簡單、更直接的使用者介面，可以用來建構及測試 SQL 查詢。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料來源**  
  指定查詢的資料來源。  
   
  **查詢定義**  
  視選取的檢視而定，查詢定義會提供工具列和窗格，以定義及測試查詢。  
   
- **Toolbar**  
+ **工具列**  
  使用工具列即可管理資料集、選取要顯示的窗格和控制各種查詢功能。  
   
 |值|描述|  
@@ -65,7 +64,7 @@ ms.locfileid: "66086826"
 |**顯示/隱藏方格窗格**|顯示或隱藏 [**方格] 窗格**。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
 |**顯示/隱藏 SQL 窗格**|顯示或隱藏 **[SQL 窗格]**。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
 |**顯示/隱藏結果窗格**|顯示或隱藏 **[結果窗格]**。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
-|**進行**|執行查詢。 結果會顯示在 **[結果窗格]** 中。|  
+|**執行**|執行查詢。 結果會顯示在 **[結果窗格]** 中。|  
 |**確認 SQL**|驗證查詢中的 SQL 陳述式。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
 |**昇冪**|依遞增順序排序 **[方格窗格]** 中所選取資料行的輸出資料列。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
 |**遞減排序**|依遞減順序排序在 **[方格窗格]** 中所選取資料行的輸出資料列。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  

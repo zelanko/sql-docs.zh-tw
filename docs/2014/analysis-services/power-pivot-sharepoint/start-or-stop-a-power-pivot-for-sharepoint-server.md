@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 237f4dfaa615718f7fa4301b8d64cab0c45600b0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071052"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547760"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>啟動或停止 PowerPivot for SharePoint 伺服器
-  PowerPivot 系統服務和[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]實例會在相同的本機應用程式伺服器上一起運作，以支援 SharePoint 伺服器陣列中的協調要求和資料處理。  
+  PowerPivot 系統服務和 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 實例會在相同的本機應用程式伺服器上一起運作，以支援 SharePoint 伺服器陣列中的協調要求和資料處理。  
   
  本主題包含下列幾節：  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66071052"
 ##  <a name="effects-of-stopping-a-powerpivot-server"></a><a name="effects"></a>停止 PowerPivot 服務器的影響  
  下表描述在 SharePoint 伺服器上停止 PowerPivot 系統服務及 Analysis Services 服務的影響。  
   
-|影響的項目|描述|  
+|影響的項目|Description|  
 |---------------|-----------------|  
 |現有的查詢|在 Analysis Services 伺服器上進行中的查詢將會立即停止。 使用者將會收到找不到資料或找不到資料來源連接的錯誤。|  
 |目前正在處理的現有資料重新整理工作|在目前的 Analysis Services 伺服器上進行中的作業將會立即停止。 資料重新整理將會失敗，而且會將錯誤記錄至資料重新整理記錄。<br /><br /> 在您使用 [SharePoint 管理中心] 中的 [檢查工作狀態] 頁面停止服務之前，您可以檢視目前工作的狀態。<br /><br /> 雖然要知道哪些作業目前正在處理是可能的，但是並沒有任何方法可檢視佇列本身是否有其他作業即將開始。|  

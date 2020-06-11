@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bbcb718005b1a0b3c657aef339b97bd60010b62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 476e1e231d3bb33eec37fdd21fa81571831fb7ef
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81219337"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528004"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services 教學課程 (SSAS)
   本節包含 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 的教學課程。  
@@ -27,7 +26,7 @@ ms.locfileid: "81219337"
  這個教學課程將教導您 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中多維度模型背後的基本技巧和概念。 完成這個教學課程後，您將擁有以 Adventure Works 資料為基礎的 Cube 資料庫，您可從 Excel、Reporting Services 或任何其他連接到 Analysis Services 的用戶端應用程式存取該資料庫。  
   
  [GitHub 上的 AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)  
- 此連結會帶您前往 GitHub 下載頁面，其中包含適用于[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]的 AdventureWorks 範例資料庫。  
+ 此連結會帶您前往 GitHub 下載頁面，其中包含適用于的 AdventureWorks 範例資料庫 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 。  
   
  [SQL Server 2008 R2 教學課程](https://go.microsoft.com/fwlink/?linkID=220944)  
  大部分 SQL Server 2008 R2 教學課程都可在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 伺服器運作。 如果您不熟悉資料採礦，請使用這個連結尋找 SQL Server 2008 R2 資料採礦教學課程，該教學課程同樣可搭配 Analysis Services 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 執行個體使用。  

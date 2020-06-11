@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbc390b046eed3e0caa0394d9e463625e054192e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074403"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546410"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>FORMATED_VALUE 上的 LANGUAGE 及 FORMAT_STRING
   FORMATTED_VALUE 屬性是根據資料格中 VALUE、FORMAT_STRING 和 LANGUAGE 屬性的互動而建立。 本主題將說明這些屬性如何互動，以便建立 FORMATTED_VALUE 屬性。  
@@ -76,7 +75,7 @@ ms.locfileid: "66074403"
   
  在伺服器上使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 來執行上述 MDX 查詢，而且用戶端的地區設定為 1033 時，調換的結果如下所示：  
   
-|member|FORMATTED_VALUE|說明|  
+|成員|FORMATTED_VALUE|說明|  
 |------------|----------------------|-----------------|  
 |A|$5,040.00|FORMAT_STRING 設定為 `Currency` 而且 LANGUAGE 為 `1033`(從系統地區設定值繼承而來)。|  
 |B|5.040,00|FORMAT_STRING 設定為 `Currency` (繼承自 A) 而且 LANGUAGE 明確設定為 `1034` (西班牙)，因此是歐元符號、不同的小數分隔符號和不同的千位分隔符號。|  
@@ -85,7 +84,7 @@ ms.locfileid: "66074403"
 |E|5,04E+03|FORMAT_STRING 設定為 `Scientific` 而且 LANGUAGE 明確設定為 `1034,` ，因此 `,` (逗號) 是小數分隔符號。|  
 |F|50.40%|FORMAT_STRING 設定為 `Percent` 而且 LANGUAGE 設定為 `1033`(從系統地區設定值繼承而來)，因此 `.` (點) 是小數分隔符號。<br /><br /> 請注意，VALUE 已經從 5040 變更為 0.5040|  
 |G|50,40%|FORMAT_STRING 設定為 `Percent`(繼承自 F)，而且 LANGUAGE 明確設定為 `1034` ，因此 `,` (逗號) 是小數分隔符號。<br /><br /> 請注意，VALUE 繼承自 F 值。|  
-|H|否|FORMAT_STRING 設定為 `YES/NO`、VALUE 設定為 0 而且 LANGUAGE 明確設定為 `1034`；因為英文 NO 與西班牙 NO 之間沒有任何差異，所以使用者在 FORMATTED_VALUE 中看不到任何差異。|  
+|H|No|FORMAT_STRING 設定為 `YES/NO`、VALUE 設定為 0 而且 LANGUAGE 明確設定為 `1034`；因為英文 NO 與西班牙 NO 之間沒有任何差異，所以使用者在 FORMATTED_VALUE 中看不到任何差異。|  
 |I|SI|FORMAT_STRING 設定為 `YES/NO`、VALUE 設定為 59 而且 LANGUAGE 明確設定為 `1034`；如同針對 YES/NO 格式所定義，因為與零 (0) 不同的任何值都是 YES 而且語言設定為西班牙文，所以 FORMATTED_VALUE 為 SI。|  
 |J|Desactivado|FORMAT_STRING 設定為 `ON/OFF`、VALUE 設定為 0 而且 LANGUAGE 明確設定為 `1034`；如同針對 ON/OFF 格式所定義，因為等於零 (0) 的任何值都是 OFF 而且語言設定為西班牙文，所以 FORMATTED_VALUE 為 Desactivado。|  
 |K|Activado|FORMAT_STRING 設定為 `ON/OFF`、VALUE 設定為 -312 而且 LANGUAGE 明確設定為 `1034`；如同針對 ON/OFF 格式所定義，因為與零 (0) 不同的任何值都是 ON 而且語言設定為西班牙文，所以 FORMATTED_VALUE 為 Activado。|  
@@ -126,7 +125,7 @@ ms.locfileid: "66074403"
   
  在伺服器上使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 來執行上述 MDX 查詢，而且用戶端的地區設定為 1033 時，調換的結果如下所示：  
   
-|member|FORMATTED_VALUE|說明|  
+|成員|FORMATTED_VALUE|說明|  
 |------------|----------------------|-----------------|  
 |A|3/12/1959 6:30:00 AM|FORMAT_STRING 由 CDate() 運算式隱含地設定為 `General Date` ，而且 LANGUAGE 是 `1033` (英文)，這是從系統地區設定值繼承而來。|  
 |B|Thursday, March 12, 1959|FORMAT_STRING 明確設定為 `Long Date` 而且 LANGUAGE 為 `1033` (英文)，這是從系統地區設定值繼承而來。|  

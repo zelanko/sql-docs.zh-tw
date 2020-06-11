@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86dc9146-cc6d-4cef-b178-9a6b4cf616e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 07970f55cea06e319ed937aa3937d49bc45363b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84dac0e9a4496196c4c2b160bfeb08b1554e1b27
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072334"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541120"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>新增量值對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [新增量值] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可將新量值加入至 Cube 設計師中的量值群組。 您可以藉由下列方式顯示 **[新增量值]** 對話方塊：  
@@ -28,7 +27,7 @@ ms.locfileid: "66072334"
   
 -   在 Cube 設計師的 [Cube 結構]**** 索引標籤上，以滑鼠右鍵按一下 [量值]**** 窗格中的量值群組或量值，然後從內容功能表中選取 [新增量值]****。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用量**  
  選取新量值將使用的彙總函式。  
   

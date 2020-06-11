@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e18298e152089f361faa839228415909133663f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078967"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543450"
 ---
 # <a name="lesson-2-add-data"></a>第 2 課：加入資料
   在這一課，您將會使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的 [資料表匯入精靈] 連接 AdventureWorksDW SQL Database、選取資料、預覽及篩選資料，然後將資料匯入您的模型工作空間。  
@@ -26,7 +25,7 @@ ms.locfileid: "66078967"
   
  這堂課的預估完成時間：**20 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行這堂課中的工作之前，您必須已完成上一堂課：[第1課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="create-a-connection"></a>建立連接  
@@ -39,7 +38,7 @@ ms.locfileid: "66078967"
   
 2.  在 [資料表匯入精靈]**** 的 [關聯式資料庫]**** 底下，按一下 [Microsoft SQL Server]****，然後按一下 [下一步]****。  
   
-3.  在 [**連接到 Microsoft SQL Server 資料庫]** 頁面的 [**易記連接名稱**] 中`Adventure Works DB from SQL`，輸入。  
+3.  在 [**連接到 Microsoft SQL Server 資料庫]** 頁面的 [**易記連接名稱**] 中，輸入 `Adventure Works DB from SQL` 。  
   
 4.  在 [伺服器名稱]**** 中，輸入您安裝 AdventureWorksDW 資料庫的伺服器名稱。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66078967"
     |-----------------|-------------------|  
     |DimDate|日期|  
     |DimGeography|[地理位置]|  
-    |DimProduct|Products|  
+    |DimProduct|產品|  
     |DimProductCategory|產品類別|  
     |DimProductSubcategory|產品子類別目錄|  
     |FactInternetSales|Internet Sales|  
@@ -109,7 +108,7 @@ ms.locfileid: "66078967"
     |**FrenchCountryRegionName**|  
     |**IpAddressLocator**|  
   
-    |Products|  
+    |產品|  
     |-------------|  
     |**SpanishProductName**|  
     |**FrenchProductName**|  
@@ -152,7 +151,7 @@ ms.locfileid: "66078967"
     > [!TIP]  
     >  若要查看在匯入的資料表之間自動建立的關聯性，請在 [資料準備]**** 資料列上按一下 [詳細資料]****。  
   
-2.  按一下 **關閉**。  
+2.  按一下 [關閉] 。  
   
      精靈隨即關閉，而且您可以看見模型設計師。 每一個資料表都已經加入成為模型設計師中的新索引標籤。  
   

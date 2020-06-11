@@ -1,5 +1,6 @@
 ---
 title: 條件運算式（XQuery） |Microsoft Docs
+description: 瞭解 XQuery 所支援的條件運算式。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76570b6b7cbb1ecb55a881d58683e158736e85d0
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039014"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689711"
 ---
 # <a name="conditional-expressions-xquery"></a>條件運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ else
   
 -   需要**else**運算式。 如果您不需要它，您可以傳回 " ( ) "，如本主題中的範例所說明。  
   
- 例如，下列查詢是針對**xml**類型變數所指定。 **If**條件會使用[SQL： variable （）函數](../xquery/xquery-extension-functions-sql-variable.md)延伸@v函數，測試 XQuery 運算式內 SQL 變數（）的值。 如果變數值為 "FirstName"，則會傳回 <`FirstName`> 元素。 否則，它會傳回 <`LastName`> 元素。  
+ 例如，下列查詢是針對**xml**類型變數所指定。 **If**條件會 @v 使用[SQL： variable （）函數](../xquery/xquery-extension-functions-sql-variable.md)延伸函數，測試 XQuery 運算式內 SQL 變數（）的值。 如果變數值為 "FirstName"，則會傳回 <`FirstName`> 元素。 否則，它會傳回 <`LastName`> 元素。  
   
 ```  
 declare @x xml  
@@ -80,7 +81,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- 下列查詢會從特定產品型號的產品目錄描述擷取前兩個功能的描述。 如果檔中有更多的功能，它會加入具有`there-is-more`空白內容的 <> 元素。  
+ 下列查詢會從特定產品型號的產品目錄描述擷取前兩個功能的描述。 如果檔中有更多的功能，它會加入 `there-is-more` 具有空白內容的 <> 元素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -104,7 +105,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 在上一個查詢中， **if**運算式中的條件會檢查 <`Features`> 中是否有兩個以上的子項目。 如果是，它會傳回結果中的 `\<there-is-more/>` 元素。  
+ 在上一個查詢中， **if**運算式中的條件會檢查 <> 中是否有兩個以上的子項目 `Features` 。 如果是，它會傳回結果中的 `\<there-is-more/>` 元素。  
   
  以下是結果：  
   
@@ -122,7 +123,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- 在下列查詢中，如果工作`Location`中心位置未指定設定時數，則會傳回具有 LocationID 屬性的 <> 元素。  
+ 在下列查詢中， `Location` 如果工作中心位置未指定設定時數，則會傳回具有 LocationID 屬性的 <> 元素。  
   
 ```  
 SELECT Instructions.query('  

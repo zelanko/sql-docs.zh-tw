@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7ad4cef-4567-4b84-8b70-0bd81e7b2e1e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4af526dd7ced7a5116e6727ffd2b5ebd3b998bcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e7ad0b89687e24e5220e091cc39737aabf4c89e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086404"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525860"
 ---
 # <a name="data-mining-model-designer-analysis-services---data-mining"></a>資料採礦模型設計工具 (Analysis Services - 資料採礦)
   此章節包含 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中之資料採礦模型設計師的 F1 說明主題。 您將使用此設計空間來建立、管理和處理資料採礦模型。  

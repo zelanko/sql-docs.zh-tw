@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f41ffd3091ccf38498f1484d9a1bf5a908e50e39
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086424"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525924"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>適用於 Excel 的資料採礦用戶端 (SQL Server 資料採礦增益集)
   適用於 Excel 的資料採礦用戶端是可讓您執行一般資料採礦工作 (從資料清理到模型建立與預測查詢) 的一組工具。 您可以使用 Excel 資料表或範圍中的資料，或是存取外部資料來源。  
@@ -140,15 +139,15 @@ ms.locfileid: "66086424"
  如果您具有必要的權限，您可以刪除、修改、重新命名或處理現有的採礦模型和結構，而不需離開 Excel。  
   
  [適用于 Excel&#41;的追蹤 &#40;資料採礦用戶端](trace-data-mining-client-for-excel.md)  
- 按一下 [**追蹤**] 以查看 Excel 用戶端與[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]伺服器之間互動的持續性捕捉。 所有活動都會儲存為 DMX 或 XMLA 陳述式，好讓您可以針對資料採礦工作階段進行疑難排解，或是儲存資訊供日後使用。  
+ 按一下 [**追蹤**] 以查看 Excel 用戶端與伺服器之間互動的持續性捕捉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 所有活動都會儲存為 DMX 或 XMLA 陳述式，好讓您可以針對資料採礦工作階段進行疑難排解，或是儲存資訊供日後使用。  
   
  [連接到資料採礦伺服器](connect-to-a-data-mining-server.md)  
  若要將 Excel 當做資料採礦的用戶端使用，您必須建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接， 此連接讓您能夠存取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 引擎。 如果您有權限，此連接也可讓您儲存已發現的任何模式，並修改現有的資料採礦物件。  
   
- [**連接**] 工具列會提供用來管理實例之[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]連接的嚮導。 若要使用資料採礦工具和演算法，您必須定義與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。 您可以在安裝增益集時建立連接，或稍後新增連接。  
+ [**連接**] 工具列會提供用來管理實例之連接的嚮導 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 若要使用資料採礦工具和演算法，您必須定義與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。 您可以在安裝增益集時建立連接，或稍後新增連接。  
   
  **快速入門**  
- 按一下 [**消費者入門**] 按鈕，啟動設定向導，引導您建立與實例的連接[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，並取得執行資料採礦所需的許可權。  
+ 按一下 [**消費者入門**] 按鈕，啟動設定向導，引導您建立與實例的連接 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，並取得執行資料採礦所需的許可權。  
   
  **說明**  
  [說明] 下拉式功能表提供線上說明、網站和設定**嚮導的連結**，可協助您完成設定並開始進行資料採礦。  

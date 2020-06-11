@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 589a1f64a3bed5455f8004e51f6cddf84e83fec5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088029"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527584"
 ---
 # <a name="choosing-data-for-data-mining"></a>選擇要進行資料採礦的資料
   當您開始進行資料採礦時，您可能會問「我需要多少資料？」 或「在清除或格式化資料時，是否有任何特殊需求？」  
@@ -205,7 +204,7 @@ ms.locfileid: "66088029"
   
  索引鍵資料行通常是數值或文字識別碼，不應該用於分析，只能用於追蹤記錄。 時間序列索引鍵和時序索引鍵則是例外。  
   
- **Nested table keys**只有當您從已定義為[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料來源視圖的外部資料源取得資料時，才會使用嵌套的資料表索引鍵。 如需有關嵌套資料表的詳細資訊[https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx)，請參閱：  
+ 只有當您從已定義為數據源視圖的外部資料源取得資料時，才會使用**嵌套的資料表索引鍵** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 如需有關嵌套資料表的詳細資訊，請參閱 [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx) ：  
   
  此內容類型可以用於以下資料類型：`Date`、`Double`、`Long` 和 `Text`。  
   
@@ -219,7 +218,7 @@ ms.locfileid: "66088029"
   
  這個內容類型受到下列資料類型所支援：`Double`、`Long` 和 `Date`。  
   
- **目錄**  
+ **資料表**  
  同樣的，只有從已定義為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源檢視的外部資料來源取得資料時，才可以使用此內容類型。  
   
  也就是說，每個資料列實際上是包含了巢狀資料表 (具有一個或多個資料行以及一個或多個資料列)。  

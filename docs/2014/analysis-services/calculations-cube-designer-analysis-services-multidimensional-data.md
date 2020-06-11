@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 603d5ea6f1e71abd469738b9f116927ca0b69e7d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088293"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527594"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>*計算 (Cube 設計工具) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 [計算]**** 索引標籤來檢視和編輯計算，包含選取之 Cube 的導出成員、命名集和多維度運算式 (MDX) 指令碼命令。  
@@ -34,7 +33,7 @@ ms.locfileid: "66088293"
      針對進階使用者，此檢視方式顯示整個與 Cube 相關聯的 MDX 指令碼，以及顯示 Cube 可以使用的中繼資料、函數和工具。  
   
 ## <a name="panes"></a>窗格  
- **Toolbar**  
+ **工具列**  
  使用表單檢視和腳本視圖中的工具列，來執行此索引標籤上的一般作業。如需這個窗格的詳細資訊，請參閱[工具列 &#40;計算] 索引標籤、Cube 設計師&#41; &#40;Analysis Services 多維度資料&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **指令碼組合管理**  

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9a054e59a830895d43d861e6d6533ad5bb876c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b3de498bcd5643bb8f83d00c9536f57560d30b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174513"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523206"
 ---
 # <a name="data-mining-concepts"></a>資料採礦概念
   資料採礦是從大型資料集探索可付諸行動之資訊的過程。 資料採礦使用數學分析衍生存在於資料中的模式和趨勢。 傳統資料瀏覽一般無法探索這些模式，因為這些關聯性太複雜或因為沒有太多資料。
@@ -60,7 +59,7 @@ ms.locfileid: "78174513"
 
 6.  [部署及更新模型](#DeployingandUpdatingModels)
 
- 下圖說明進程中每個步驟之間的關聯性，以及您可以用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來完成每個步驟的技術。
+ 下圖說明進程中每個步驟之間的關聯性，以及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您可以用來完成每個步驟的技術。
 
  ![資料採礦處理中的關鍵步驟](../media/data-mining-process.gif "資料採礦處理中的關鍵步驟")
 

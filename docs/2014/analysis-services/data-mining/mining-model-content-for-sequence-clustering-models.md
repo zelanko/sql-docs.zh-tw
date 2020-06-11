@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf196f1c026fe8878f572a6797ba2e738ba5b782
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083571"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521270"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>時序群集模型的採礦模型內容 (Analysis Services - 資料採礦)
   本主題描述使用 Microsoft 時序群集演算法的模型專用的採礦模型內容。 如需與適用於所有模型類型採礦模型內容相關的一般及統計詞彙說明，請參閱 [採礦模型內容 &amp;#40;Analysis Services - 資料採礦&amp;#41;](mining-model-content-analysis-services-data-mining.md)(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
@@ -53,7 +52,7 @@ ms.locfileid: "66083571"
  NODE_TYPE  
  時序群集模型會輸出下列節點類型：  
   
-|節點類型識別碼|描述|  
+|節點類型識別碼|Description|  
 |------------------|-----------------|  
 |1 (模型)|模型的根節點|  
 |5 (群集)|包含群集中的節點計數、屬性的清單，以及描述群集中之值的統計資料。|  
@@ -154,7 +153,7 @@ ms.locfileid: "66083571"
 ###  <a name="node_distribution-table"></a><a name="bkmk_NODEDIST"></a>NODE_DISTRIBUTION 資料表  
  NODE_DISTRIBUTION 資料表會針對特定群集的轉換和時序，提供詳細的機率與支援資訊。  
   
- 系統一律會將資料列加入到轉換資料表中，代表可能的 `Missing` 值。 如需值的`Missing`意義，以及它如何影響計算的詳細資訊，請參閱[遺漏值 &#40;Analysis Services 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
+ 系統一律會將資料列加入到轉換資料表中，代表可能的 `Missing` 值。 如需 `Missing` 值的意義，以及它如何影響計算的詳細資訊，請參閱[遺漏值 &#40;Analysis Services 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
   
  支援與機率的計算會根據計算應用於定型案例或完成的模型而有所不同。 這是因為預設的群集方法 Expectation Maximization (EM) 假設任何案例都可以屬於一個以上的群集。 計算模型中案例的支援時，可以使用原始計數和原始機率。 不過，群集中任何特定時序的機率都必須透過所有可能之時序和群集組合的總和加權。  
   
@@ -176,7 +175,7 @@ ORDER BY Count(*) DESC
   
  從這些結果中，您會發現訂單號碼 'SO72656'、'SO58845' 及 'SO70714' 包含最大的時序，其中每個時序都有 8 個項目。 您可以利用訂單識別碼檢視特定訂單的詳細資料，以查看所購買的項目以及在哪個訂單中。  
   
-|OrderNumber|LineNumber|模型|  
+|OrderNumber|LineNumber|型號|  
 |-----------------|----------------|-----------|  
 |SO58845|1|Mountain-500|  
 |SO58845|2|LL Mountain Tire|  
@@ -230,7 +229,7 @@ ORDER BY Count(*) DESC
   
  下表顯示 NODE_DISTRIBUTION 資料表的結果，以及顯示在圖形檢視器中的捨入機率值。  
   
-|Products|支援 (NODE_DISTRIBUTION 資料表)|機率 (NODE_DISTRIBUTION 資料表)|機率 (從圖形)|  
+|產品|支援 (NODE_DISTRIBUTION 資料表)|機率 (NODE_DISTRIBUTION 資料表)|機率 (從圖形)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |Missing|48.447887|0.138028169|(未顯示)|  
 |Cycling Cap|10.876056|0.030985915|0.03|  

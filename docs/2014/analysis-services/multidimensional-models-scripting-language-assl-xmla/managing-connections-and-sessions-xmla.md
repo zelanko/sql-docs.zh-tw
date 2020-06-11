@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bfe876f6874193fd0885f16d91caa9f6fe8b172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62701991"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544940"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>管理連接與工作階段 (XMLA)
   *Statefulness*是伺服器在方法呼叫之間保留用戶端身分識別和內容的條件。 *Statelessness*是一種情況，在此情況中，伺服器不會在方法呼叫完成之後記住用戶端的身分識別和內容。  
@@ -41,7 +40,7 @@ ms.locfileid: "62701991"
   
  World Wide Web Consortium (W3C) 簡易物件存取通訊協定 (SOAP) 規格建議使用 SOAP 標頭，在 SOAP 訊息上面建立新的通訊協定。 下表列出 XMLA 為起始、維護和關閉工作階段，所定義的 SOAP 標頭元素與屬性。  
   
-|SOAP 標頭|描述|  
+|SOAP 標頭|Description|  
 |-----------------|-----------------|  
 |BeginSession|此標頭要求提供者建立新的工作階段。 提供者應該建構新的工作階段，並在 SOAP 回應中，將工作階段識別碼與 Session 標頭一起傳回。|  
 |SessionId|值區域包含的工作階段識別碼，必須用於工作階段其餘部分的每個方法呼叫。 在 SOAP 回應中的提供者會傳送這個標記，而用戶端也必須將這個屬性與每個 Session 標頭元素一起傳送。|  
@@ -72,7 +71,7 @@ ms.locfileid: "62701991"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  來自提供者的 SOAP 回應訊息會使用 XMLA 標頭標記\<SessionId>，將會話識別碼包含在傳回標頭區域中。  
+2.  來自提供者的 SOAP 回應訊息會使用 XMLA 標頭標記，將會話識別碼包含在傳回標頭區域中 \<SessionId> 。  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +92,7 @@ ms.locfileid: "62701991"
     </SOAP-ENV:Header>  
     ```  
   
-4.  當會話完成時，會使用\<EndSession> 標記，其中包含相關的會話識別碼值。  
+4.  當會話完成時， \<EndSession> 會使用標記，其中包含相關的會話識別碼值。  
   
     ```  
     <SOAP-ENV:Header>  

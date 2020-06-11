@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 447b350aae97ded341788dd4b398441d6b1efdb2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084817"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522626"
 ---
 # <a name="data-mining-ssas"></a>資料採礦 (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供併入資料採礦的方案一個整合式平台。 您可以使用關聯式資料或 Cube 資料建立具有預測分析的商業智慧方案。  

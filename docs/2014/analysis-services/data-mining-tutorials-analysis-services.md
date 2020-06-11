@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d358a47631f2ca048e41b9e0d978795e175c5966
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f1e7d35ac11059c57889a0938914f339cc7d8d1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086326"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525851"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>資料採礦教學課程 (Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可讓您輕鬆建立複雜的資料採礦方案。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的工具可協助您設計、建立及管理使用關聯式資料或 Cube 資料的資料採礦模型。 您可以管理資料採礦模型的用戶端存取，以及從多個用戶端建立預測查詢。  
@@ -46,7 +45,7 @@ ms.locfileid: "66086326"
   
      這些課程涵蓋的進階概念包括使用巢狀資料表、交叉預測、自訂資料來源檢視和具名查詢，以及資料採礦查詢中的篩選。 當您在使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 所包含的預測查詢工具時，也會變得更熟練。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  [資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)  

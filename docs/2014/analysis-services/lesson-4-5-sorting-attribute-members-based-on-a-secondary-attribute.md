@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfd8e0dcb72850dccb2cc6840f3e68baf37528b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493898"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543087"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>依次要屬性來排序屬性成員
   在第 3 課，您學會如何根據名稱或索引鍵值排序屬性成員。 您也學會如何使用複合成員索引鍵來影響屬性成員和排序次序。 如需詳細資訊，請參閱 [修改 Date 維度](lesson-3-4-modifying-the-date-dimension.md)。 不過，如果屬性的名稱或索引鍵都無法提供想要的排序次序，您可以使用次要屬性來達成所需的排序次序。 藉由定義屬性之間的關聯性，您可以使用次要屬性排序第一個屬性的成員。  

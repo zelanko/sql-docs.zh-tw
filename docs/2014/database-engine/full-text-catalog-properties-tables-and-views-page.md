@@ -12,17 +12,17 @@ ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2cab8e460b2091f9b4be90f32b7e08b15b4cf60b
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 205ee5d7c316c9a81e82edc0b2b6d132ed5c0ae1
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000948"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858675"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>全文檢索目錄屬性 (資料表和檢視頁面)
   使用此對話方塊以檢視或修改指派給全文檢索目錄的資料表和檢視。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **此資料庫中所有適合的資料表/檢視物件**  
  列出已定義唯一索引的資料表和檢視，但還不屬於全文目錄的一部份。 若要選取資料表或視圖並將它指派給目錄，請選取清單方塊中的專案，然後按 [->] 按鈕。  
   

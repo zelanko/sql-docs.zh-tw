@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b0a54a0ae2bab2c8019b706a51b94f0338dcb3cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98176d54f6cdf29be5c06563ec1dbd7fd6275724
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085105"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523162"
 ---
 # <a name="data-mining-designer"></a>資料採礦設計師
-  資料採礦設計師是您在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用採礦模型的主要環境。 您可以選取現有的採礦結構，或使用資料採礦精靈來建立新的採礦結構和採礦模型，以存取此設計師。 您可以使用資料採礦設計師來執行下列工作：  
+  資料採礦設計師是您在中使用採礦模型的主要環境 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 您可以選取現有的採礦結構，或使用資料採礦精靈來建立新的採礦結構和採礦模型，以存取此設計師。 您可以使用資料採礦設計師來執行下列工作：  
   
 -   修改一開始是由資料採礦精靈所建立的採礦結構和採礦模型。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66085105"
   
  [採礦模型 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)  
   
- [採礦模型工作和操作說明](mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)  
   
 ## <a name="mining-model-viewer-tab"></a>採礦模型檢視器索引標籤  
  使用 **[採礦模型檢視器]** 索引標籤，以視覺化方式瀏覽採礦模型。 每一個採礦模型與一個自訂檢視器相關聯，後者會顯示該模型的特定內容。 您也可以使用內容檢視器來檢視採礦模型內容。  
@@ -61,7 +60,7 @@ ms.locfileid: "66085105"
   
  [資料採礦模型檢視器](data-mining-model-viewers.md)  
   
- [採礦模型檢視器工作和操作說明](mining-model-viewer-tasks-and-how-tos.md)  
+ [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)  
   
 ## <a name="mining-accuracy-chart-tab"></a>採礦精確度圖表索引標籤  
  使用 **[採礦精確度圖表]** 索引標籤來測試單一採礦模型的預測精確度，或比較採礦結構內所包含之多個採礦模型的效能。 這個索引標籤包含的工具是用來篩選資料、選取採礦模型，以及以增益圖、收益圖或分類矩陣顯示結果。  

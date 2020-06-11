@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef89ce093e9cf97926ceae3cc75e17941594e7ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076414"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536640"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>使用現有的資料表建立維度
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [維度 Wizard]，從現有的資料表建立維度。 方法是，選取精靈之 [選取建立方法]**** 頁面的 [使用現有的資料表]**** 選項。 如果您選取此選項，精靈會以維度資料表、其資料行，以及在現有資料來源檢視中之資料行間的任何關聯性為基礎， 並以來源資料表和相關資料表中的資料為範例。 它會使用此資料，定義以維度資料表中資料行為基礎的屬性資料行，並定義屬性的階層 (稱為「使用者定義的」** 階層)。 使用「維度精靈」建立維度之後，您可以使用 [維度設計師] 在維度中加入、移除和設定屬性與階層。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您可以使用中的 [維度 Wizard]， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 從現有的資料表建立維度。 方法是，選取精靈之 [選取建立方法]**** 頁面的 [使用現有的資料表]**** 選項。 如果您選取此選項，精靈會以維度資料表、其資料行，以及在現有資料來源檢視中之資料行間的任何關聯性為基礎， 並以來源資料表和相關資料表中的資料為範例。 它會使用此資料，定義以維度資料表中資料行為基礎的屬性資料行，並定義屬性的階層 (稱為「使用者定義的」** 階層)。 使用「維度精靈」建立維度之後，您可以使用 [維度設計師] 在維度中加入、移除和設定屬性與階層。  
   
  使用現有的資料表建立維度時，「維度精靈」會引導您進行下列步驟：  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66076414"
 ## <a name="selecting-dimension-attributes"></a>選取維度屬性  
  選取維度資料表後，您可以使用 [選取維度屬性]**** 頁面，從這些資料表中選取您要包含在維度中的屬性。 所有這些資料表中的所有基礎資料行都可以當做潛在的維度屬性使用。 您必須選取維度索引鍵屬性，並針對瀏覽啟用。  
   
- 根據預設，精靈會將屬性的類型設定為 `Regular`。 不過，您可能想要將特定的屬性對應到更能代表資料的不同屬性類型。 例如， [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW 範例資料庫的 dbo.DimAccount 資料表包含可提供帳戶號碼的 AccountCodeAlternateKey 資料行。 您可能想要將此`Regular`屬性對應至`Account Number`類型，而不是將此屬性的類型設定為。  
+ 根據預設，精靈會將屬性的類型設定為 `Regular`。 不過，您可能想要將特定的屬性對應到更能代表資料的不同屬性類型。 例如， [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW 範例資料庫的 dbo.DimAccount 資料表包含可提供帳戶號碼的 AccountCodeAlternateKey 資料行。 `Regular`您可能想要將此屬性對應至類型，而不是將此屬性的類型設定為 `Account Number` 。  
   
 > [!NOTE]  
 >  如果建立維度時，尚未設定維度類型和標準屬性類型，請在建立維度後，使用「商業智慧精靈」設定這些值。 如需詳細資訊，請參閱 [將維度智慧加入至維度中](bi-wizard-add-dimension-intelligence-to-a-dimension.md) 或 [將帳戶智慧加入至維度中](bi-wizard-add-account-intelligence-to-a-dimension.md)(適用於帳戶類型維度)。  

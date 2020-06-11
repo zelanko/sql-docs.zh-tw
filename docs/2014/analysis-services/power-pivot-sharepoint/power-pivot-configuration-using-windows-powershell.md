@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9282fce8e0004495ae8c10b0b3f75fec205d6b34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 83b42da3e676a291bb021c02ee52e9a810207397
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782811"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535100"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>使用 Windows PowerShell 的 PowerPivot 組態
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包括您可以用來設定 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝的 Windows PowerShell 指令程式。 若要使用 PowerShell 完整設定安裝，需要使用 SharePoint 指令程式和 PowerPivot for SharePoint 指令程式。 大部分組態都可以使用其中一項 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工具來完成。 如需這些工具的詳細資訊，請參閱[PowerPivot 組態工具](power-pivot-configuration-tools.md)。  
@@ -27,7 +26,7 @@ ms.locfileid: "72782811"
  您可以建立 Windows PowerShell (.ps1) 檔案，將組態工作自動化。 如果您需要可以在任何伺服器上執行的指令碼式安裝和設定步驟，建議使用此方法。 您可以需要此種指令碼做為災難復原計畫的一部分，才能在發生硬體故障時重建伺服器。  
   
 ## <a name="view-a-list-of-the-powerpivot-cmdlets-on-a-server"></a>在伺服器上檢視 PowerPivot 指令程式的清單  
- 若要查看[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Cmdlet 的內容和範例，請參閱[PowerPivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。  
+ 若要查看 Cmdlet 的內容和範例 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ，請參閱[PowerPivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。  
   
  使用 PowerShell 檢視 PowerPivot 指令程式的清單：  
   
@@ -45,7 +44,7 @@ ms.locfileid: "72782811"
   
     -   SQL Server 2012 Analysis Services 伺服器附帶的 17 個指令程式是在 SharePoint 模式和 SharePoint 2010 中進行設定。  
   
-     如果清單中未傳回任何命令，或您看到類似 "`get-help could not find *powerpivot* in a help file in this session.`" 的錯誤訊息，請參閱本主題中的下一節，以取得有關如何在伺服器上啟用 PowerPivot Cmdlet 的指示。  
+     如果清單中未傳回任何命令，或您看到類似 "" 的錯誤訊息 `get-help could not find *powerpivot* in a help file in this session.` ，請參閱本主題中的下一節，以取得有關如何在伺服器上啟用 PowerPivot Cmdlet 的指示。  
   
      所有指令程式都有線上說明。 下列範例顯示如何檢視 `New-PowerPivotServiceApplication` 指令程式的線上說明：  
   

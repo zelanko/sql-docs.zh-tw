@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44fd6a97cd355ab9bcdd5481fe4ebaa5d13d17c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 237618a07f7a6f541257ed0ad18fc2967723b93c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174723"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522110"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft Association Algorithm
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所提供的關聯分析演算法，對於建議引擎很有用。 建議引擎會依據客戶已購買或感興趣的項目向客戶建議產品。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法對於購物籃分析也很有用。 如需購物籃分析的範例，請參閱資料採礦教學課程中的[第3課：建立購物籃案例 &#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) 。
@@ -78,7 +77,7 @@ ms.locfileid: "78174723"
  如需如何針對資料採礦模型建立查詢的一般資訊，請參閱 [資料採礦查詢](data-mining-queries.md)。
 
 ## <a name="performance"></a>效能
- 建立項目集和計算關聯性的過程可能很耗費時間。 雖然[!INCLUDE[msCoName](../../includes/msconame-md.md)]關聯規則演算法會使用優化技巧來節省空間並使處理速度更快，但您應該知道可能會在下列情況下發生效能問題：
+ 建立項目集和計算關聯性的過程可能很耗費時間。 雖然 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法會使用優化技巧來節省空間並使處理速度更快，但您應該知道可能會在下列情況下發生效能問題：
 
 -   資料集很大且具有許多個別的項目。
 

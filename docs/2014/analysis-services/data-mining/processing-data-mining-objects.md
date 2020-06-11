@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65c61f6e4b571880b6607bb647d2629a3b6864f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4a6693a46679badc068111a311bb82219e752cd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083144"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520754"
 ---
 # <a name="processing-data-mining-objects"></a>處理資料採礦物件
   資料採礦物件在處理之前只是一個空容器。 *「處理」* (Processing) 資料採礦模型也稱為 *「定型」*(Training)。  

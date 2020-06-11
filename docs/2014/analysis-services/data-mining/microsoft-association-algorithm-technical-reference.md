@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ca9eab174a146ebd4dcd38d682fd52ee9e820ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084133"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522106"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 關聯分析演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法是有名的 Apriori 演算法的簡單實作。  
@@ -73,7 +72,7 @@ ms.locfileid: "66084133"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。  
   
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
- 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的資料採礦設計師，隨時變更採礦模型的參數。 您也可以使用 AMO 中的<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>集合以程式設計方式變更參數，或在 XMLA 中使用[MININGMODELS 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) 。 下表描述每一個參數。  
+ 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的資料採礦設計師，隨時變更採礦模型的參數。 您也可以使用 AMO 中的集合以程式設計方式變更參數 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> ，或在 XMLA 中使用[MiningModels 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) 。 下表描述每一個參數。  
   
 > [!NOTE]  
 >  您不能使用 DMX 語句變更現有模型中的參數;您必須在 DMX CREATE MODEL 或 ALTER STRUCTURE 中指定參數 .。。當您建立模型時，加入模型。  
@@ -147,7 +146,7 @@ ms.locfileid: "66084133"
   
  適用於採礦模型資料行。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  關聯模型必須包含索引鍵資料行、輸入資料行和單一的可預測資料行。  
   
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  

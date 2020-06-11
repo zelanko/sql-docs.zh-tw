@@ -12,19 +12,19 @@ ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a96b77c3f1243bc3d95cf38242463724348134b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b215ff16f5e4a42a6d43f0a6e5f9758f158a682
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68188506"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859845"
 ---
 # <a name="options-environment-general-page"></a>選項 (環境 - 一般頁面)
   使用 [選項]  對話方塊來設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的啟動動作、一般視窗管理選項，以及其他一般設定。 在 [工具]  功能表上按一下 [選項]  、展開 [環境]  資料夾，然後按一下 [一般]  。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **啟動時**  
- 選取 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 啟動時要執行的動作。 可用選項包括：  
+ 選取 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 啟動時要執行的動作。 其選項包括：  
   
 -   [開啟物件總管]**** 會提示進行連接，然後開啟物件總管。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "68188506"
  指定若選取了此核取方塊，只會關閉目前具有焦點的工具視窗，而不會關閉停駐集內的所有工具視窗。 依預設，這個核取方塊為已選取。  
   
  **自動隱藏按鈕只會影響使用中的索引標籤**  
- 指定若選取了此核取方塊，只會自動隱藏目前具有焦點的工具視窗，而不會隱藏停駐集內的所有工具視窗。 依預設，不會勾選此核取方塊。  
+ 指定若選取了此核取方塊，只會自動隱藏目前具有焦點的工具視窗，而不會隱藏停駐集內的所有工具視窗。 根據預設，會清除此核取方塊。  
   
-## <a name="display"></a>顯示器  
+## <a name="display"></a>顯示  
  **顯示最近使用清單中的 n 個檔案**  
  自訂 [檔案]**** 功能表上所顯示之最近使用的專案與最近使用之檔案的數目。 輸入介於 1 到 24 之間的數字。 預設值為 4。 這是方便用來擷取最近使用過的指令碼專案和檔案，以及編寫專案的方式。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 93baa6beffcb75e11c0ac389b7f0f5172c30d770
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17e8df6a2aa6da6b88a07a2abdef99d6ea03d8eb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073872"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546156"
 ---
 # <a name="supported-mdx-mdx"></a>支援的 MDX (MDX)
   多維度運算式 (MDX) 指令碼內支援下列陳述式及函數：  
@@ -53,7 +52,7 @@ ms.locfileid: "66073872"
  [此 &#40;MDX&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
->  MDX 支援對以下資料格屬性進行指派：`BACK_COLOR`、`FORE_COLOR`、`FORMAT_STRING`、`FONT_FLAGS`、`FONT_NAME` 與 `FONT_SIZE`。 如需詳細資訊，請參閱[使用資料格屬性 &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)。 MDX 也支援對`NON_EMPTY_BEHAVIOR` [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)語句的屬性進行指派。  
+>  MDX 支援對以下資料格屬性進行指派：`BACK_COLOR`、`FORE_COLOR`、`FORMAT_STRING`、`FONT_FLAGS`、`FONT_NAME` 與 `FONT_SIZE`。 如需詳細資訊，請參閱[使用資料格屬性 &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)。 MDX 也支援對 `NON_EMPTY_BEHAVIOR` [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)語句的屬性進行指派。  
   
  [SCOPE 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
   

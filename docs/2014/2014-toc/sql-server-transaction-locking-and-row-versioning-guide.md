@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 98752b4eb754bb3f29d8b42eb27d9122d79cd03d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d5b098d42c8e770496b67f365dd8ccd7bd8ad640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693932"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528414"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server 交易鎖定與資料列版本設定指南
 
@@ -317,14 +316,14 @@ GO
 |資料列版本設定隔離等級|定義|  
 |------------------------------------|----------------|  
 |讀取認可快照|當 READ_COMMITTED_SNAPSHOT 資料庫選項設為 ON 時，讀取認可隔離會使用資料列版本設定以提供陳述式層級的讀取一致性。 讀取作業只需要 SCH-S 資料表層級的鎖定，並不需要頁面或資料列的鎖定。 也就是說，Database Engine 會利用資料列版本設定，依照資料在陳述式開始時存在的狀態，為每個陳述式提供該資料具有交易一致性的快照。 鎖定的使用目的不是為了防止其他交易更新資料。 使用者定義的函數可傳回在包含 UDF 的陳述式開始之後所認可的資料。<br /><br /> 當 READ_COMMITTED_SNAPSHOT 資料庫選項設為 OFF (預設值) 時，讀取認可隔離會在目前交易正執行讀取作業期間，利用共用鎖定來防止其他交易修改資料列。 共用鎖定也會封鎖陳述式，使它們在其他交易完成之前，無法讀取其他交易所修改的資料列。 這兩種實作都符合讀取認可隔離的 ISO 定義。|  
-|快照集|快照隔離等級使用資料列版本設定來提供交易層級的讀取一致性。 讀取作業並不需要頁面或資料列的鎖定，只需要 SCH-S 資料表鎖定。 當讀取其他交易所修改的資料列時，它們會擷取在啟動交易時就已經存在的資料列版本。 只有當 ALLOW_SNAPSHOT_ISOLATION 資料庫選項設定為 ON 時，您才能針對資料庫使用快照集隔離。 根據預設，使用者資料庫的此選項為 OFF。<br /><br /> **注意：**  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援中繼資料版本設定。 因此，哪些 DDL 作業可以在快照隔離之下執行的明確交易中執行會有一些限制。 快照隔離之下的 BEGIN TRANSACTION 陳述式之後不允許有下列 DDL 陳述式：ALTER TABLE、CREATE INDEX、CREATE XML INDEX、ALTER INDEX、DROP INDEX、DBCC REINDEX、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或是任何 Common Language Runtime (CLR) DDL 陳述式。 在隱含交易內使用快照集隔離時，這些陳述式會受到允許。 就定義而言，隱含交易是一種單一陳述式，可強制使用快照隔離的語意 (即使是 DDL 陳述式)。 違反這個原則可能會造成錯誤 3961：「資料庫 '%.*ls' 中的快照集隔離交易失敗，因為這個交易啟動之後，另一個並行交易的 DDL 陳述式修改了此陳述式存取的物件。 這是不允許的，因為中繼資料並未建立版本。 如果在快照集隔離下並行更新中繼資料，將會造成不一致的問題。」|  
+|快照式|快照隔離等級使用資料列版本設定來提供交易層級的讀取一致性。 讀取作業並不需要頁面或資料列的鎖定，只需要 SCH-S 資料表鎖定。 當讀取其他交易所修改的資料列時，它們會擷取在啟動交易時就已經存在的資料列版本。 只有當 ALLOW_SNAPSHOT_ISOLATION 資料庫選項設定為 ON 時，您才能針對資料庫使用快照集隔離。 根據預設，使用者資料庫的此選項為 OFF。<br /><br /> **注意：**  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援中繼資料版本設定。 因此，哪些 DDL 作業可以在快照隔離之下執行的明確交易中執行會有一些限制。 快照隔離之下的 BEGIN TRANSACTION 陳述式之後不允許有下列 DDL 陳述式：ALTER TABLE、CREATE INDEX、CREATE XML INDEX、ALTER INDEX、DROP INDEX、DBCC REINDEX、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或是任何 Common Language Runtime (CLR) DDL 陳述式。 在隱含交易內使用快照集隔離時，這些陳述式會受到允許。 就定義而言，隱含交易是一種單一陳述式，可強制使用快照隔離的語意 (即使是 DDL 陳述式)。 違反這個原則可能會造成錯誤 3961：「資料庫 '%.*ls' 中的快照集隔離交易失敗，因為這個交易啟動之後，另一個並行交易的 DDL 陳述式修改了此陳述式存取的物件。 這是不允許的，因為中繼資料並未建立版本。 如果在快照集隔離下並行更新中繼資料，將會造成不一致的問題。」|  
   
  下表顯示不同隔離等級所啟用的並行副作用。  
   
 |隔離等級|中途讀取 (Dirty read)|非可重複讀取|虛設項目 (Phantom)|  
 |---------------------|----------------|------------------------|-------------|  
-|**讀取未認可**|是|是|是|  
-|**讀取認可**|否|是|是|  
+|**讀取未認可**|是|是|Yes|  
+|**讀取認可**|否|是|Yes|  
 |**可重複讀取**|否|否|是|  
 |**快照集**|否|否|否|  
 |**化**|否|否|否|  
@@ -395,7 +394,7 @@ GO
   
  下表顯示 [!INCLUDE[ssDE](../includes/ssde-md.md)] 使用的資源鎖定模式。  
   
-|鎖定模式|說明|  
+|鎖定模式|Description|  
 |---------------|-----------------|  
 |共用 (S)|用於不變更或更新資料的讀取作業，例如 SELECT 陳述式。|  
 |更新 (U)|用於可更新的資源上。 防止當多個工作階段正在讀取、鎖定及後來可能更新資源時發生常見的死結。|  
@@ -435,7 +434,7 @@ GO
   
  意圖鎖定包括意圖共用 (IS)、意圖獨佔 (IX) 與共用意圖獨佔 (SIX)。  
   
-|鎖定模式|說明|  
+|鎖定模式|Description|  
 |---------------|-----------------|  
 |意圖共用 (IS)|保護在階層較低位置的某些 (但不是全部) 資源上要求的或取得的共用鎖定。|  
 |意圖獨佔 (IX)|保護在階層較低位置的某些 (但不是全部) 資源上要求的或取得的獨佔鎖定。 IX 是 IS 的超集，它也保護在較低層級資源要求的共用鎖定。|  
@@ -475,9 +474,9 @@ GO
   
 ||現有已授與的模式||||||  
 |------|---------------------------|------|------|------|------|------|  
-|**要求的模式**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**意圖共用 (IS)**|是|是|是|是|是|否|  
-|**共用 (S)**|是|是|是|否|否|否|  
+|**要求的模式**|**均**|**S**|**U**|**IX**|**SIX**|**X**|  
+|**意圖共用 (IS)**|Yes|Yes|Yes|Yes|是|No|  
+|**共用 (S)**|Yes|Yes|是|否|否|否|  
 |**更新 (U)**|是|是|否|否|否|否|  
 |**意圖獨佔 (IX)**|是|否|否|是|否|否|  
 |**與意圖獨佔共用 (SIX)**|是|否|否|否|否|否|  
@@ -508,7 +507,7 @@ GO
   
 -   模式代表所使用的合併鎖定模式。 索引鍵範圍鎖定模式由兩個部份組成。 第一個部份代表用來鎖定索引鍵範圍的鎖定類型 (Range*T*)，第二個部份代表用來鎖定特定索引鍵的鎖定類型 (*K*)。 這兩個部分會以連字號（-）連接，例如範圍*T* - *K*。  
   
-    |範圍|資料列|模式|說明|  
+    |範圍|資料列|模式|Description|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|共用範圍，共用資源鎖定；可序列化範圍掃描。|  
     |RangeS|U|RangeS-U|共用範圍，更新資源鎖定；可序列化更新掃描。|  
@@ -523,12 +522,12 @@ GO
 ||現有已授與的模式|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**要求的模式**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**共用 (S)**|是|是|否|是|是|是|否|  
-|**更新 (U)**|是|否|否|是|否|是|否|  
-|**獨占 (X)**|否|否|否|否|否|是|否|  
-|**RangeS-S**|是|是|否|是|是|否|否|  
+|**共用 (S)**|Yes|是|否|是|Yes|是|否|  
+|**更新 (U)**|是|否|否|是|否|是|No|  
+|**獨占 (X)**|否|否|否|否|否|是|No|  
+|**RangeS-S**|Yes|是|否|是|是|否|否|  
 |**RangeS-U**|是|否|否|是|否|否|否|  
-|**RangeI-N**|是|是|是|否|否|是|否|  
+|**RangeI-N**|Yes|Yes|是|否|否|是|No|  
 |**RangeX-X**|否|否|否|否|否|否|否|  
   
 #### <a name="conversion-locks"></a>轉換鎖定  
@@ -745,8 +744,8 @@ INSERT mytable VALUES ('Dan');
 |屬性|追蹤旗標 1204 和追蹤旗標 1222|僅追蹤旗標 1204|僅追蹤旗標 1222|  
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
 |輸出格式|輸出是擷取到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 錯誤記錄檔中。|聚焦於死結所涉及的節點。 每一個節點有一個專用區段，最後區段描述死結犧牲者。|以類似 XML 格式傳回不符合 XML 結構描述定義 (XSD) 結構描述的資訊。 此格式有三大區段。 第一個區段宣告死結犧牲者。 第二個區段描述死結所涉及的每一個處理序。 第三個區段描述與追蹤旗標 1204 中的節點同義的資源。|  
-|識別屬性|**SPID： \< x> ECID： \< x>。** 識別平行處理序中的系統處理序識別碼執行緒。 專案 `SPID:<x> ECID:0` ，其中 \< x> 會被 SPID 值取代，代表主執行緒。 專案 `SPID:<x> ECID:<y>` ，其中 \< x> 會被 SPID 值取代，而 \< y> 大於0，代表相同 SPID 的子執行緒。<br /><br /> **BatchID** (追蹤旗標 1222 的**sbid** )。 識別程式碼執行從中要求或保留鎖定的批次。 停用 Multiple Active Result Sets (MARS) 時，BatchID 值為 0。 啟用 MARS 時，作用中批次的值為 1 到 *n*。 如果工作階段中沒有作用中批次，BatchID 為 0。<br /><br /> **模式**。 指定執行緒所要求、授與或等待之特定資源的鎖定類型。 模式可為 IS (意圖共用)、S (共用)、U (更新)、IX (意圖獨佔)、SIX (共用意圖獨佔) 和 X (獨佔)。<br /><br /> **Line #** (追蹤旗標 1222 的**line** )。 列出發生死結時正在執行之目前陳述式批次中的行號。<br /><br /> **Input Buf** (追蹤旗標 1222 的**inputbuf** )。 列出目前批次中的所有陳述式。|**Node**。 代表死結鏈結中的項目號碼。<br /><br /> **清單**。 鎖定擁有者可以是這些清單的一部分：<br /><br /> **授與清單**。 列舉資源的目前擁有者。<br /><br /> **轉換清單**。 列舉嘗試將其鎖定轉換為更高層的目前擁有者。<br /><br /> **等待清單**。 列舉資源的目前最新鎖定要求。<br /><br /> **陳述式類型**。 描述執行緒有權限的 DML 陳述式的類型 (SELECT、INSERT、UPDATE 或 DELETE)。<br /><br /> **犧牲者資源擁有者**。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 選擇作為犧牲者來中斷死結循環的參與執行緒。 選擇的執行緒和所有現存的子執行緒會終止。<br /><br /> **下一分支**。 代表相同 SPID 中兩個以上涉及死結循環的子執行緒。|**deadlock victim**。 代表被選為死結犧牲者之工作的實體記憶位址 (請參閱 [sys.dm_os_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql))。 在未解決的死結案例中，它可能會是 0 (零)。 回復中的工作不可選為死結犧牲者。<br /><br /> **executionstack**。 代表發生死結時正在執行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼。<br /><br /> **優先順序**。 代表死結優先權。 在特定案例中， [!INCLUDE[ssDE](../includes/ssde-md.md)] 可能會選擇在短時間內變更死結優先權，以達到更佳的並行效果。<br /><br /> **logused**。 工作所使用的記錄檔空間。<br /><br /> **擁有者識別碼**。具有要求控制之交易的識別碼。<br /><br /> **狀態**。 工作的狀態。 它是下列其中一值：<br /><br /> >> **暫**止。 等待工作者執行緒。<br /><br /> >> 可**執行。** 可開始執行但等待配量。<br /><br /> >> **正在**執行。 目前在排程器上執行。<br /><br /> >> 已**暫停**。 執行已暫停。<br /><br /> >> **完成**。 工作已完成。<br /><br /> >> **spinloop**。 等待單一執行緒存取鎖變成可用。<br /><br /> **waitresource**。 工作所需的資源。<br /><br /> **waittime**。 等待資源的時間 (以毫秒為單位)。<br /><br /> **schedulerid**。 與這個工作相關聯的排程器。 請參閱 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql)。<br /><br /> **主機名稱**。 工作站的名稱。<br /><br /> **isolationlevel**。 目前交易隔離等級。<br /><br /> **Xactid**。 具有要求控制權之交易的識別碼。<br /><br /> **currentdb**。 資料庫的識別碼。<br /><br /> **lastbatchstarted**。 用戶端處理序上次啟動批次執行的時間。<br /><br /> **lastbatchcompleted**。 用戶端處理序上次完成批次執行的時間。<br /><br /> **clientoption1 和 clientoption2**。 此用戶端連接上的設定選項。 這是位元遮罩，其中包含通常由 SET 陳述式 (例如 SET NOCOUNT 和 SET XACTABORT) 所控制之選項的資訊。<br /><br /> **associatedObjectId**。 代表 HoBT (堆積或 B 型樹狀目錄) 識別碼。|  
-|資源屬性|**RID**。 識別在資料表內保留或要求鎖定的單一資料列。 RID 是以 RID: *db_id:file_id:page_no:row_no*表示。 例如：`RID: 6:1:20789:0`。<br /><br /> **物件**。 識別保留或要求鎖定的資料表。 OBJECT 是以 OBJECT: *db_id:object_id*表示。 例如：`TAB: 6:2009058193`。<br /><br /> 索引**鍵**。 識別在索引內保留或要求鎖定的索引鍵範圍。 KEY 是以 KEY: *db_id:hobt_id* (*index key hash value*) 表示。 例如：`KEY: 6:72057594057457664 (350007a4d329)`。<br /><br /> **PAG**。 識別保留或要求鎖定的頁面資源。 PAG 是以 PAG: *db_id:file_id:page_no*表示。 例如：`PAG: 6:1:20789`。<br /><br /> **EXT**。 識別範圍結構。 EXT 是以 EXT: *db_id:file_id:extent_no*表示。 例如：`EXT: 6:1:9`。<br /><br /> **DB**。 識別資料庫鎖定。 **DB 是以下列其中一種方式表示：**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB]，識別備份資料庫使用的資料庫鎖定。<br /><br /> DB: *db_id*[BULK-OP-LOG]，識別該特定資料庫的備份記錄檔所使用的鎖定。<br /><br /> **應用程式**。 識別應用程式資源使用的鎖定。 APP 是以 APP: *lock_resource*表示。 例如：`APP: Formf370f478`。<br /><br /> **中繼資料**。 代表死結所涉及的中繼資料資源。 因為 METADATA 有許多子資源，所以傳回的值視含有死結的子資源而定。 例如，METADATA.USER_TYPE 會傳回 `user_type_id =` \<*integer_value*>。 如需有關 METADATA 資源和子資源的詳細資訊，請參閱 [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)。<br /><br /> **HOBT**。 代表死結所涉及的堆積或 B 型樹狀目錄。|None 與此追蹤旗標互斥。|None 與此追蹤旗標互斥。|  
+|識別屬性|**SPID： \<x> ECID： \<x> 。** 識別平行處理序中的系統處理序識別碼執行緒。 專案 `SPID:<x> ECID:0` （其中 \<x> 由 SPID 值取代）代表主執行緒。 專案 `SPID:<x> ECID:<y>` （其中 \<x> 由 SPID 值取代且 \<y> 大於0）代表相同 SPID 的子執行緒。<br /><br /> **BatchID** (追蹤旗標 1222 的**sbid** )。 識別程式碼執行從中要求或保留鎖定的批次。 停用 Multiple Active Result Sets (MARS) 時，BatchID 值為 0。 啟用 MARS 時，作用中批次的值為 1 到 *n*。 如果工作階段中沒有作用中批次，BatchID 為 0。<br /><br /> **模式**。 指定執行緒所要求、授與或等待之特定資源的鎖定類型。 模式可為 IS (意圖共用)、S (共用)、U (更新)、IX (意圖獨佔)、SIX (共用意圖獨佔) 和 X (獨佔)。<br /><br /> **Line #** (追蹤旗標 1222 的**line** )。 列出發生死結時正在執行之目前陳述式批次中的行號。<br /><br /> **Input Buf** (追蹤旗標 1222 的**inputbuf** )。 列出目前批次中的所有陳述式。|**Node**。 代表死結鏈結中的項目號碼。<br /><br /> **清單**。 鎖定擁有者可以是這些清單的一部分：<br /><br /> **授與清單**。 列舉資源的目前擁有者。<br /><br /> **轉換清單**。 列舉嘗試將其鎖定轉換為更高層的目前擁有者。<br /><br /> **等待清單**。 列舉資源的目前最新鎖定要求。<br /><br /> **陳述式類型**。 描述執行緒有權限的 DML 陳述式的類型 (SELECT、INSERT、UPDATE 或 DELETE)。<br /><br /> **犧牲者資源擁有者**。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 選擇作為犧牲者來中斷死結循環的參與執行緒。 選擇的執行緒和所有現存的子執行緒會終止。<br /><br /> **下一分支**。 代表相同 SPID 中兩個以上涉及死結循環的子執行緒。|**deadlock victim**。 代表被選為死結犧牲者之工作的實體記憶位址 (請參閱 [sys.dm_os_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql))。 在未解決的死結案例中，它可能會是 0 (零)。 回復中的工作不可選為死結犧牲者。<br /><br /> **executionstack**。 代表發生死結時正在執行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼。<br /><br /> **優先順序**。 代表死結優先權。 在特定案例中， [!INCLUDE[ssDE](../includes/ssde-md.md)] 可能會選擇在短時間內變更死結優先權，以達到更佳的並行效果。<br /><br /> **logused**。 工作所使用的記錄檔空間。<br /><br /> **擁有者識別碼**。具有要求控制之交易的識別碼。<br /><br /> **狀態**。 工作的狀態。 它是下列其中一值：<br /><br /> >> **暫**止。 等待工作者執行緒。<br /><br /> >> 可**執行。** 可開始執行但等待配量。<br /><br /> >> **正在**執行。 目前在排程器上執行。<br /><br /> >> 已**暫停**。 執行已暫停。<br /><br /> >> **完成**。 工作已完成。<br /><br /> >> **spinloop**。 等待單一執行緒存取鎖變成可用。<br /><br /> **waitresource**。 工作所需的資源。<br /><br /> **waittime**。 等待資源的時間 (以毫秒為單位)。<br /><br /> **schedulerid**。 與這個工作相關聯的排程器。 請參閱 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql)。<br /><br /> **主機名稱**。 工作站的名稱。<br /><br /> **isolationlevel**。 目前交易隔離等級。<br /><br /> **Xactid**。 具有要求控制權之交易的識別碼。<br /><br /> **currentdb**。 資料庫的識別碼。<br /><br /> **lastbatchstarted**。 用戶端處理序上次啟動批次執行的時間。<br /><br /> **lastbatchcompleted**。 用戶端處理序上次完成批次執行的時間。<br /><br /> **clientoption1 和 clientoption2**。 此用戶端連接上的設定選項。 這是位元遮罩，其中包含通常由 SET 陳述式 (例如 SET NOCOUNT 和 SET XACTABORT) 所控制之選項的資訊。<br /><br /> **associatedObjectId**。 代表 HoBT (堆積或 B 型樹狀目錄) 識別碼。|  
+|資源屬性|**RID**。 識別在資料表內保留或要求鎖定的單一資料列。 RID 是以 RID: *db_id:file_id:page_no:row_no*表示。 例如： `RID: 6:1:20789:0` 。<br /><br /> **物件**。 識別保留或要求鎖定的資料表。 OBJECT 是以 OBJECT: *db_id:object_id*表示。 例如： `TAB: 6:2009058193` 。<br /><br /> 索引**鍵**。 識別在索引內保留或要求鎖定的索引鍵範圍。 KEY 是以 KEY: *db_id:hobt_id* (*index key hash value*) 表示。 例如： `KEY: 6:72057594057457664 (350007a4d329)` 。<br /><br /> **PAG**。 識別保留或要求鎖定的頁面資源。 PAG 是以 PAG: *db_id:file_id:page_no*表示。 例如： `PAG: 6:1:20789` 。<br /><br /> **EXT**。 識別範圍結構。 EXT 是以 EXT: *db_id:file_id:extent_no*表示。 例如： `EXT: 6:1:9` 。<br /><br /> **DB**。 識別資料庫鎖定。 **DB 是以下列其中一種方式表示：**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB]，識別備份資料庫使用的資料庫鎖定。<br /><br /> DB: *db_id*[BULK-OP-LOG]，識別該特定資料庫的備份記錄檔所使用的鎖定。<br /><br /> **應用程式**。 識別應用程式資源使用的鎖定。 APP 是以 APP: *lock_resource*表示。 例如： `APP: Formf370f478` 。<br /><br /> **中繼資料**。 代表死結所涉及的中繼資料資源。 因為 METADATA 有許多子資源，所以傳回的值視含有死結的子資源而定。 例如，中繼資料。USER_TYPE 傳回 `user_type_id =` \<*integer_value*> 。 如需有關 METADATA 資源和子資源的詳細資訊，請參閱 [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)。<br /><br /> **HOBT**。 代表死結所涉及的堆積或 B 型樹狀目錄。|None 與此追蹤旗標互斥。|None 與此追蹤旗標互斥。|  
   
 ###### <a name="trace-flag-1204-example"></a>追蹤旗標 1204 範例  
 
@@ -1932,7 +1931,7 @@ GO
 
  若要尋找長時間執行的交易，請使用下列其中一種方式：  
   
--   **sys. dm_tran_database_transactions**  
+-   **sys.dm_tran_database_transactions**  
   
      這個動態管理檢視傳回有關資料庫層級之交易的資訊。 對於長時間執行的交易，特別感興趣的資料行包括第一個記錄檔記錄的時間（**database_transaction_begin_time**）、交易的目前狀態（**database_transaction_state**），以及交易記錄檔中開始記錄的記錄序號（LSN）（**database_transaction_begin_lsn**）。  
   

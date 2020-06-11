@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44313ce14beee0390f12ed0e6566502327b17795
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085883"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525034"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>變更採礦模型的屬性
   有些採礦模型屬性可套用至整個模型，有些模型屬性只套用至個別資料行。 例如，`Drillthrough` 屬性可套用至整個模型，它指定案例資料是否應該可用於查詢，`Description` 屬性也是這類屬性。 套用至資料行的屬性包含 `Usage` 和 `ModelingFlags`，它們控制資料行中的資料在模型內的使用方式。  
@@ -46,11 +45,11 @@ ms.locfileid: "66085883"
 2.  在畫面右側的 [屬性]**** 視窗中，反白顯示對應到您要變更之屬性的值，然後輸入新值。  
   
     > [!NOTE]  
-    >  如果 [資料行使用方式] `Ignore`設定為，則資料行的 [**屬性**] 視窗是空白的。  
+    >  如果 [資料行使用方式] 設定為，則資料 `Ignore` 行的 [**屬性**] 視窗是空白的。  
   
      您在設計師中選取其他元素時，新值就會生效。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型工作和操作說明](mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)  
   
   

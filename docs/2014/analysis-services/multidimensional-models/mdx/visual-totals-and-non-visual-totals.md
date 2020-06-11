@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79497b0fd84116ab69187bd7d1733101357ffbce
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073724"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546100"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>視覺化總計和非視覺化總計
   視覺化總計是在資料行或資料列結尾加總該資料行或資料列中之所有可見項目的總計。 這是大部分資料表顯示時的預設行為。 不過，有時候使用者只想要顯示資料表中的某些資料行，但保持整個資料列的總計，包括未顯示的資料行。 這些稱為「非視覺化總計」(`Non Visual Totals`)，因為總計來自可見和不可見的值。  
@@ -36,11 +35,11 @@ ms.locfileid: "66073724"
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|**服飾**|**元件**|  
+||**All Products**|**Accessories**|**自行車**|**服飾**|**元件**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
-|**式**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
+|**倉儲**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
   
 ## <a name="non-visual-on-rows-and-columns"></a>資料行和資料列上的非視覺化  
  若要只針對產品為 Accessories 和 Clothing，且轉售商為 Value Added Reseller 和 Warehouse 的資料產生資料表，但同時保留全部項目的總計，可以使用 NON VISUAL 撰寫如下：  
@@ -64,7 +63,7 @@ ms.locfileid: "66073724"
 ||**All Products**|**Accessories**|**服飾**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
-|**式**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
+|**倉儲**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
   
 ## <a name="non-visual-on-rows"></a>資料列上的非視覺化  
  若要產生可以視覺化總計資料行，但就資料列總計傳回所有 [Category] 的實際總計，應發出下列查詢：  
@@ -89,7 +88,7 @@ ms.locfileid: "66073724"
   
 |||||  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
+||All Products|Accessories|服飾|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  

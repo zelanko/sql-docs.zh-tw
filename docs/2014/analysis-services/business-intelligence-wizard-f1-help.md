@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25496be8f8cfc877b72ab6fd511446d9e194e2b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e78754c93393f172e7282df19166536b29a2e640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088395"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527674"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>商業智慧精靈 F1 說明
   使用商業智慧精靈即可定義商業智慧功能以及 Cube 和維度的進階選項。 此精靈會設定現有物件的屬性、建立新物件及產生多維度運算式 (MDX) 指令碼，以提供維度智慧和貨幣轉換等功能。  

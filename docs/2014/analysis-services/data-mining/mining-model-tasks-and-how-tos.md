@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee288cccb64535454a3ccfbbc271c4919c220c65
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083488"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521216"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>採礦模型工作和使用說明
   使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，[資料採礦設計師] 的 [採礦模型]**** 索引標籤，即可管理及處理採礦結構中的採礦模型。  
@@ -29,11 +28,11 @@ ms.locfileid: "66083488"
   
 -   [從採礦結構刪除採礦模型](delete-a-mining-model-from-a-mining-structure.md)  
   
--   [從採礦模型中排除資料行](exclude-a-column-from-a-mining-model.md)  
+-   [從採礦模型排除資料行](exclude-a-column-from-a-mining-model.md)  
   
 -   [建立模型資料行的別名](create-an-alias-for-a-model-column.md)  
   
--   [變更採礦模型中的資料行分隔](change-the-discretization-of-a-column-in-a-mining-model.md)  
+-   [變更採礦模型中的資料行離散化](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
 -   [檢視或變更模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)  
   

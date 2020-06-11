@@ -11,23 +11,22 @@ f1_keywords:
 ms.assetid: 3d046e63-bcb1-4ab1-9c37-652463fa68c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bdc4a0245ffa98dd89840a8746e828fd1660706
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087451"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527304"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>設定維度屬性 (商業智慧精靈)
   使用 **[設定維度屬性]** 頁面將維度屬性對應到屬性類型， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會使用這些屬性類型來識別帳戶維度的屬性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **維度類型**  
  顯示選取的維度類型。  
   
 > [!NOTE]  
->  此選項無法使用，因為維度`Type`的屬性無法變更為帳戶維度之*帳戶*以外的值。  
+>  此選項無法使用，因為 `Type` 維度的屬性無法變更為帳戶維度之*帳戶*以外的值。  
   
  **[維度屬性]**  
  顯示可對應到維度中現有維度屬性的有效屬性類型。  

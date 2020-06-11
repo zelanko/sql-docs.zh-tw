@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cb5e932e2121efb9bd19375dfd2ff329c001812
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084600"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522501"
 ---
 # <a name="drillthrough-on-mining-models"></a>採礦模型的鑽研
   「鑽研」** 表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  

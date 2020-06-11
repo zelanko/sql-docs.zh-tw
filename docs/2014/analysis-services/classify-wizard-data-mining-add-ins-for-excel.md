@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a62d937a733ea41b85a83224a043ff4ad7ecdd29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18cbc54053ddabf79ac6bfa30c8d43d05720c840
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087926"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527504"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>分類精靈 (適用於 Excel 的資料採礦增益集)
   ![資料採礦功能區中的分類精靈](media/dmc-classify.gif "資料採礦功能區中的分類精靈")  
@@ -78,8 +77,8 @@ ms.locfileid: "66087926"
   
  [Microsoft 類神經網路演算法技術參考資料](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
-### <a name="requirements"></a>需求  
- 若要使用 [**分類**] wizard，您必須連接到[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫。 如需有關如何建立連線的詳細資訊，請參閱[連接到來源資料 &#40;適用于 Excel&#41;的資料採礦用戶端](connect-to-source-data-data-mining-client-for-excel.md)。  
+### <a name="requirements"></a>規格需求  
+ 若要使用 [**分類**] wizard，您必須連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。 如需有關如何建立連線的詳細資訊，請參閱[連接到來源資料 &#40;適用于 Excel&#41;的資料採礦用戶端](connect-to-source-data-data-mining-client-for-excel.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立資料採礦模型](creating-a-data-mining-model.md)  

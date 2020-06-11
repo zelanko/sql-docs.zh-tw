@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: adf29f6f73020ddc265072b3b9f3f67042200506
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5650323524aa0b2146332f76b5582cc58950e203
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085244"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523694"
 ---
 # <a name="create-an-olap-mining-structure"></a>建立 OLAP 採礦結構
   建立以 OLAP Cube 或其他多維度資料存放區為根據的資料採礦模型有許多優點。 OLAP 方案已經包含妥善組織、清理和適當格式化的大量資料，但是這種資料的複雜性在於使用者不太可能根據隨選探索找到有意義的模式。 資料採礦讓您能夠探索新的相互關聯性，並提供可採取動作的洞察力。  
@@ -106,7 +105,7 @@ ms.locfileid: "66085244"
 ##  <a name="scenarios-for-use-of-data-mining-with-olap-data"></a><a name="bkmk_OLAP_Scenarios"></a>使用資料採礦與 OLAP 資料的案例  
  OLAP Cube 經常包含很多成員和維度，導致難以得知開始進行資料採礦的位置。 為了協助識別 Cube 所包含的模式，您通常會識別重要的單一維度，然後再開始探索與該維度相關的模式。 下表會列出數個常見的 OLAP 資料採礦工作，描述您可套用每個工作的範例狀況，並識別用於每一個工作的資料採礦演算法。  
   
-|工作|範例情節|演算法|  
+|Task|範例情節|演算法|  
 |----------|---------------------|---------------|  
 |將成員組成群集|依據客戶成員屬性、客戶購買的產品和客戶花費的金額，來分割客戶維度。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法|  
 |尋找特別的或異常的成員|依據銷售量、收益、商店位置和商店大小，在商店維度中識別特別的或異常的商店。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法|  

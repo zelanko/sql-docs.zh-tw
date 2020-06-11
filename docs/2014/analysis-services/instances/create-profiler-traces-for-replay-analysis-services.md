@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 93b2fc46-7cfb-4ab5-abeb-1475a7d6f0f2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc494fa63064d5c48c94e44cb91db5b1fe0f988d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 994fa58d9def8048f7fb88e09721055d2b184bb0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080138"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544000"
 ---
 # <a name="create-profiler-traces-for-replay-analysis-services"></a>建立 Profiler 追蹤以重新執行 (Analysis Services)
-  若要重新執行由[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用者提交到的查詢、探索和命令， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]必須搜集所需的事件。 若要起始收集這些事件，必須在 [追蹤屬性]**** 對話方塊的 [事件選取範圍]**** 索引標籤中選取適當的事件類別。 例如，若選取 Query Begin 事件類別，則會收集包含查詢的事件並用於重新執行。 另外，在分散式環境中，追蹤檔案包含足夠的資訊來支援以原始交易順序重新執行伺服器交易。  
+  若要重新執行由使用者提交到的查詢、探索和命令， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 必須搜集所需的事件。 若要起始收集這些事件，必須在 [追蹤屬性]**** 對話方塊的 [事件選取範圍]**** 索引標籤中選取適當的事件類別。 例如，若選取 Query Begin 事件類別，則會收集包含查詢的事件並用於重新執行。 另外，在分散式環境中，追蹤檔案包含足夠的資訊來支援以原始交易順序重新執行伺服器交易。  
   
 ## <a name="replay-for-queries"></a>查詢的重新執行  
  若要重新執行查詢， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 必須擷取下列事件：  
@@ -44,7 +43,7 @@ ms.locfileid: "66080138"
   
 -   Audit Login 事件類別及其所有資料行。 此事件類別提供有關登入的使用者與工作階段設定的資訊。 SPID 提供對使用者工作階段的參考。 如需詳細資訊，請參閱 [安全性稽核資料行](https://docs.microsoft.com/bi-reference/trace-events/security-audit-data-columns)。  
   
--   Discover Begin 事件類別及其所有資料行。 TextData 資料行會提供探索\<要求的 RequestType> 部分，而而 requestproperties 資料行則提供探索要求\<> 部分的屬性。 EventSubclass 資料行提供探索類型。 如需詳細資訊，請參閱 [探索事件資料行](https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns)。  
+-   Discover Begin 事件類別及其所有資料行。 TextData 資料行會提供 \<RequestType> 探索要求的部分，而而 requestproperties 資料行則提供 \<Properties> 探索要求的部分。 EventSubclass 資料行提供探索類型。 如需詳細資訊，請參閱 [探索事件資料行](https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns)。  
   
 -   Discover End 事件類別及其所有資料行。 此事件類別會確認探索要求的狀態。 如需詳細資訊，請參閱 [探索事件資料行](https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns)。  
   

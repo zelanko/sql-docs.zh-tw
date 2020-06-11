@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4ee781a5c15e38676ca11c4385f271988ba615
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083635"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521575"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>線性迴歸模型的採礦模型內容 (Analysis Services - 資料採礦)
   本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法的模型專用的採礦模型內容。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
@@ -58,7 +57,7 @@ ms.locfileid: "66083635"
  NODE_TYPE  
  線性迴歸模型會輸出下列節點類型：  
   
-|節點類型識別碼|類型|描述|  
+|節點類型識別碼|類型|Description|  
 |------------------|----------|-----------------|  
 |25|迴歸樹根節點|包含描述輸入和輸出變數之間關聯性的公式。|  
   
@@ -180,7 +179,7 @@ ms.locfileid: "66083635"
 #### <a name="intercept"></a>Intercept  
  迴歸方程式中的「截距」**(VALUETYPE = 11) 或「剩餘」** 會在輸入屬性所在的點，告訴您可預測屬性的值為 0。 在許多情況下，這可能不會發生，但是可能會導致反直覺式的結果。  
   
- 例如，在根據年齡預測收入的模型中得知年齡為 0 的收入是毫無用處的。 在實際生活中，了解關於平均值的線性行為通常比較實用。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會修改截距，以表示與平均值關聯性中的每個回歸輸入變數。  
+ 例如，在根據年齡預測收入的模型中得知年齡為 0 的收入是毫無用處的。 在實際生活中，了解關於平均值的線性行為通常比較實用。 因此，會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 修改截距，以表示與平均值關聯性中的每個回歸輸入變數。  
   
  這種調整很難在採礦模型內容中看出來，但是如果您在 [Microsoft 樹狀檢視器]**** 的 [採礦圖例]**** 中檢視完整的方程式就很明顯。 迴歸公式會從 0 點移位到代表平均值的點。 這會讓目前的資料以更直覺的方式呈現。  
   

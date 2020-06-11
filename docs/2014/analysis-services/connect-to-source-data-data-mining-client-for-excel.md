@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 548672ce-e403-4aca-b67a-c2c797f053dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c90031f3c1191e99ff6274f6198d513225f0927
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087094"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527014"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>連接到來源資料 (適用於 Excel 的資料採礦用戶端)
   本主題將說明如何建立和使用用於儲存資料採礦模型的連接，以及用於存取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中儲存之外部資料的連接。  
@@ -28,13 +27,13 @@ ms.locfileid: "66087094"
   
  **外部資料來源的連接。** 您也可以在建立模型或儲存結果時建立外部資料的連接。 例如，您可以在某個伺服器上建立資料採礦模型，然後使用另一個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體、Excel 資料表或 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 之類的外部資料來源中儲存之資料，對資料採礦模型執行預測查詢。 每次您存取新的資料來源時，系統都會提示您使用對話方塊來建立連接。  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq2"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq2"></a> 先決條件  
  此版本的增益集需要 SQL Server 2012 的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。 如果您要連接到舊版的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，則可以使用增益集的另一個版本。 目前有其他支援 SQL Server 2005、SQL Server 2008 和 SQL Server 2008 R2 的增益集版本。  
   
  若要連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，您必須擁有存取資料庫伺服器的權限。 而且，資料採礦工作階段必須已啟用，您也必須有伺服器上儲存之資料庫物件的讀取或讀取/寫入權限。  
   
 ##  <a name="creating-data-mining-server-connections"></a><a name="bkmk_connect"></a>建立資料採礦伺服器連接  
- 適用于 Excel 的資料採礦用戶端和適用于 Excel 的資料表分析工具中的 [**連接**] 群組會提供工具來[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]管理實例的連接。  
+ 適用于 Excel 的資料採礦用戶端和適用于 Excel 的資料表分析工具中的 [**連接**] 群組會提供工具來管理實例的連接 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 -   您可以在安裝增益集時建立連接，或稍後新增連接。  
   
@@ -45,14 +44,14 @@ ms.locfileid: "66087094"
 -   一次只能有一個作用中的連接。  
   
 ### <a name="connections-in-the-excel-add-ins"></a>Excel 增益集的連接  
- 適用于 Excel 的資料採礦用戶端和適用于 Excel 的資料表分析工具中的 [**連接**] 群組，可讓您[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]管理實例的連接。  
+ 適用于 Excel 的資料採礦用戶端和適用于 Excel 的資料表分析工具中的 [**連接**] 群組，可讓您管理實例的連接 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 ##### <a name="create-a-new-server-connection-in-the-excel-add-ins"></a>在 Excel 增益集中建立新的伺服器連接  
   
 1.  按一下 [**分析**] 或 [**資料採礦**] 功能區上的 [**連接**] 按鈕。  
   
     > [!NOTE]  
-    >  按鈕的文字表示連接是否存在。 在工作表中未進行任何連接時，按鈕會包含「\<沒有連接>」文字。 如果先前已在活頁簿中建立連接，該連接名稱會出現在按鈕上。  
+    >  按鈕的文字表示連接是否存在。 在工作表中未進行任何連接時，按鈕會包含 " \<No connection> ." 文字。如果先前已在活頁簿中建立連接，該連接的名稱就會出現在按鈕中。  
   
 2.  在 [ **Analysis Services 連接**] 對話方塊中，按一下 [**新增**]。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "66087094"
   
 2.  如果您必須修改連接字串以增加查詢逾時或加入 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體特有的其他參數，其中一個選項就是編輯儲存連接字串的 .dmc 檔案。  
   
-     \<磁片磁碟機： >\\ \users<\>myusername \AppData\Local\Microsoft\Data 挖掘增益集  
+     \<drive:>\Users \\<myusername \> \AppData\Local\Microsoft\Data 的挖掘增益集  
   
 ##  <a name="connecting-to-external-data-sources"></a><a name="bkmk_extconnections"></a>連接到外部資料源  
  [**分析**] 功能區中的工具僅適用于 Excel 中的資料，而 [**資料採礦**] 功能區中的工具可讓您直接連接到外部資料源，做為模型的輸入或進行取樣。  

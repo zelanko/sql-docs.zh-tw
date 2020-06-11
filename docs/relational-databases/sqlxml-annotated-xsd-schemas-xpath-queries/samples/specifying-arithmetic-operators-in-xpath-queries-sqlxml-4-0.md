@@ -1,5 +1,6 @@
 ---
 title: 在 XPath 查詢中使用算術運算子（SQLXML）
+description: 瞭解如何在 SQLXML 4.0 XPath 查詢中指定算術運算子。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64b13492b7359fa6baad7cee21dfb291f655cdea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252627"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529875"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定算術運算子 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "75252627"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. 指定 * 算術運算子  
- 這個 XPath 查詢會傳回符合指定之述詞的** \<OrderDetail>** 元素：  
+ 這個 XPath 查詢會傳回符合指定之述詞 **\<OrderDetail>** 的元素：  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- 在查詢中， `child` `OrderDetail`是軸而且是節點測試（如果**OrderDetail**是** \<專案節點>**，則為 TRUE，因為>節點的** \<元素**是**子**軸的主要節點）。 對於所有** \<OrderDetail>** 元素節點，會套用述詞中的測試，而且只會傳回滿足條件的節點。  
+ 在查詢中， `child` 是軸而且 `OrderDetail` 是節點測試（如果**OrderDetail**是，則為 TRUE **\<element node>** ，因為 **\<element>** 節點是**子**軸的主要節點）。 對於所有 **\<OrderDetail>** 元素節點，會套用述詞中的測試，而且只會傳回滿足條件的節點。  
   
 > [!NOTE]  
 >  XPath 中的數字為雙精確度浮點數，而且在範例中比較浮點數會造成四捨五入。  

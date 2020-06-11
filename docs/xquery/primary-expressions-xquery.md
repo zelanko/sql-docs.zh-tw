@@ -1,5 +1,6 @@
 ---
 title: 主要運算式（XQuery） |Microsoft Docs
+description: 瞭解 XQuery 主要運算式，其中包含常值、變數參考、內容專案運算式、函式和函式呼叫。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efa06923eeceff312def44ff13ab12b8371439c7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74200518"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529772"
 ---
 # <a name="primary-expressions-xquery"></a>主要運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "74200518"
 |`&quot;`|"|  
 |`&apos;`|'|  
   
- 字串常也可以包含字元參考、Unicode 字元的 XML 樣式參考，是由十進位或十六進位的字碼指標所識別。 例如，歐元符號可以用字元參考 "&\#8364;" 表示。  
+ 字串常也可以包含字元參考、Unicode 字元的 XML 樣式參考，是由十進位或十六進位的字碼指標所識別。 例如，歐元符號可以用字元參考 "&\# 8364;" 表示。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 XML 1.0 版做為剖析的基礎。  
@@ -156,7 +157,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>內容項目運算式  
  內容項目是路徑運算式內容中目前所處理的項目。 會在具有文件節點的非 NULL XML 資料類型執行個體中初始化它。 它也可以在 XPath 運算式或 [] 述詞的內容中，由節點（）方法來變更。  
   
- 內容項目是由包含點 (.) 的運算式所傳回的內容項目。 例如，下列查詢會評估屬性`a` `attr`是否存在 <> 的每個元素。 如果該屬性存在，就會傳回元素。 請注意，在述詞中的條件指定了單一句號所指定的內容節點。  
+ 內容項目是由包含點 (.) 的運算式所傳回的內容項目。 例如，下列查詢會評估 `a` 屬性是否存在 <> 的每個元素 `attr` 。 如果該屬性存在，就會傳回元素。 請注意，在述詞中的條件指定了單一句號所指定的內容節點。  
   
 ```  
 DECLARE @var XML  
@@ -172,7 +173,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>函數呼叫  
- 您可以呼叫內建的 XQuery 函數和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql： variable （）和 sql： column （）函數。 如需已實作用的函式清單，請參閱[針對 Xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)。  
+ 您可以呼叫內建的 XQuery 函數和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql： variable （）和 sql： column （）函數。 如需已實作用的函式清單，請參閱[針對 Xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)。  
   
 #### <a name="implementation-limitations"></a>實作限制  
  以下為實作限制：  

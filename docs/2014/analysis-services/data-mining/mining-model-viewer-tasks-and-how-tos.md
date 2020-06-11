@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04b6eb40999ca009184d438e0c0dc514d2c3f009
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083476"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521202"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>採礦模型檢視器工作和使用說明
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的資料採礦設計師包含數個工具，您可以用來瀏覽採礦模型。 下列主題提供逐步指示，教您如何完成在設計師中使用 [採礦模型檢視器]**** 索引標籤的特定工作。  

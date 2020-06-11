@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c843a74b831315c98deda9a9d6fb0c3a463bc5c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f23403b4e58b17441f3e828c9a9e536dcb652359
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083407"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521168"
 ---
 # <a name="mining-structure-columns"></a>採礦結構資料行
   當您建立採礦結構時會定義採礦結構中的資料行，其方法是選擇外部資料的資料行，然後指定資料如何用於模型化。 因此，採礦結構資料行不只是資料來源中的資料複本：這些資料行會定義採礦模型如何使用來源中的資料。 您可以指派可判斷如何將資料離散化的屬性以及可描述如何分佈資料值的屬性。  

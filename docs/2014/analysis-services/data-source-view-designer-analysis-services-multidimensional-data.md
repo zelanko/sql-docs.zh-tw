@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f40a074-761f-440b-a999-09b755bd86ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd19f3a7f4978d2f8bcbd8e62cdf542e05437519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2dcde9e445538866159f66639159aa1fc6cef87d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175164"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528992"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>資料來源檢視設計工具 (Analysis Services - 多維度資料)
   資料來源檢視 (DSV) 是外部關聯式資料來源的邏輯檢視，用來建立多維度模型中的 Cube 和維度。

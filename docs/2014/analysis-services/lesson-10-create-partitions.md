@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 545c6f45339047d3a632f9e18d69108f3c8b5111
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079194"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543580"
 ---
 # <a name="lesson-11-create-partitions"></a>第 11 課：建立資料分割
   在這一課，您將建立資料分割，以便將 [網際網路銷售] 資料表分成更小的邏輯部分，讓其他資料分割能夠單獨處理 (重新整理)。 根據預設，您在模型中包含的每個資料表都有一個資料分割，其中包含資料表的所有資料行和資料列。 針對 [網際網路銷售] 資料表，我們想要依年份分割資料;每一個資料表的五年都會有一個資料分割。  接著，每個資料分割就可以單獨處理。 如需詳細資訊，請參閱[資料分割 &#40;SSAS 表格式&#41;](tabular-models/partitions-ssas-tabular.md)。  
   
  完成本課程的估計時間： **15 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 10 課：建立階層](lesson-9-create-hierarchies.md)。  
   
 ## <a name="create-partitions"></a>建立資料分割  
@@ -35,7 +34,7 @@ ms.locfileid: "66079194"
   
 2.  在 [資料**分割管理員**] 對話方塊的 [資料分割 **] 中，** 按一下 [**網際網路銷售**] 資料分割。  
   
-3.  在 [資料**分割名稱**] 中， `Internet Sales 2005`將名稱變更為。  
+3.  在 [資料**分割名稱**] 中，將名稱變更為 `Internet Sales 2005` 。  
   
     > [!TIP]  
     >  在繼續進行下一步之前，您會發現 [資料表預覽] 視窗中的資料行名稱是以來源的資料行名稱顯示模型資料表中包含的資料行 (已核取)。 這是因為 [資料表預覽] 視窗是從來源資料表顯示資料行，而不是從模型資料表。  
@@ -83,9 +82,9 @@ ms.locfileid: "66079194"
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>若要在網際網路銷售資料表中建立2006年的資料分割  
   
-1.  在 [資料**分割管理員**] 對話方塊的 [資料分割 **] 中，** 按一下您剛才建立的`Internet Sales 2005`資料分割，然後**複製**。  
+1.  在 [資料**分割管理員**] 對話方塊的 [資料分割 **] 中，** 按一下 `Internet Sales 2005` 您剛才建立的資料分割，然後**複製**。  
   
-2.  在 [資料**分割名稱**] 中，輸入`Internet Sales 2006`。  
+2.  在 [資料**分割名稱**] 中，輸入 `Internet Sales 2006` 。  
   
 3.  在 SQL 語句中，若要讓資料分割只包含2006年的資料列，請將 WHERE 子句取代為下列內容：  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66079194"
   
 1.  在 [資料分割管理員]**** 對話方塊中，按一下 [複製]****。  
   
-2.  在 [資料**分割名稱**] 中，輸入`Internet Sales 2007`。  
+2.  在 [資料**分割名稱**] 中，輸入 `Internet Sales 2007` 。  
   
 3.  在 [**切換至**] 中，選取 [**查詢編輯器**]。  
   
@@ -111,7 +110,7 @@ ms.locfileid: "66079194"
   
 1.  在 [資料分割管理員]**** 對話方塊中，按一下 [新增]****。  
   
-2.  在 [資料**分割名稱**] 中，輸入`Internet Sales 2008`。  
+2.  在 [資料**分割名稱**] 中，輸入 `Internet Sales 2008` 。  
   
 3.  在 [**切換至**] 中，選取 [**查詢編輯器**]。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66079194"
   
 1.  在 [資料分割管理員]**** 對話方塊中，按一下 [新增]****。  
   
-2.  在 [資料**分割名稱**] 中，輸入`Internet Sales 2009`。  
+2.  在 [資料**分割名稱**] 中，輸入 `Internet Sales 2009` 。  
   
 3.  在 [**切換至**] 中，選取 [**查詢編輯器**]。  
   

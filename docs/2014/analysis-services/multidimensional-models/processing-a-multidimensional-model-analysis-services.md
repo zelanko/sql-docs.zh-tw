@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d4952724f19a3c7010884feac0254f4f75d90ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caf111b2d78032b0a127f978562b2e0138df0109
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073356"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545791"
 ---
 # <a name="multidimensional-model-object-processing"></a>多維度模型物件處理
   處理是一個步驟或是一連串的步驟，Analysis Services 會在這些步驟中將關聯式資料來源中的資料載入多維度模型中。 如果是使用 MOLAP 儲存的物件，資料會儲存至磁碟的資料庫檔案資料夾中。 對於 ROLAP 儲存，視需要發生處理，以回應物件的 MDX 查詢。 如果是使用 ROLAP 儲存的物件，處理是指在傳回查詢結果之前更新快取。  
@@ -35,7 +34,7 @@ ms.locfileid: "66073356"
   
  這個主題包括下列各節：  
   
- [必要條件](#bkmk_prereq)  
+ [先決條件](#bkmk_prereq)  
   
  [選擇工具或方法](#bkmk_tool)  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66073356"
   
  [重新處理物件](#bkmk_reproc)  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 先決條件  
   
 -   處理需要 Analysis Services 執行個體的管理權限。 如果您以互動方式從 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]處理，您必須是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的伺服器管理員角色成員。 如果是自動執行的處理，例如使用透過 SQL Server Agent 排程的 SSIS 封裝，則用來執行此封裝的帳戶必須是伺服器管理員角色的成員。 如需設定系統管理員許可權的詳細資訊，請參閱[&#40;Analysis Services&#41;授與伺服器管理員許可權](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   

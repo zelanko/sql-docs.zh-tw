@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c7a09c9a1c411b639ac1b91027e42899dec158f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073532"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546070"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多維度模型組件管理
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供許多內建函數，可搭配多維度運算式（MDX）和資料採礦延伸模組（DMX）語言使用，其設計目的是要完成標準統計計算的所有內容，以便在階層中的成員[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]進行。 但是，就如同其他複雜且強固的產品一樣，總是有進一步擴充產品功能的需求。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供許多內建函數，可搭配多維度運算式（MDX）和資料採礦延伸模組（DMX）語言使用，其設計目的是要完成標準統計計算的所有內容，以便在階層中的成員進行。 但是，就如同其他複雜且強固的產品一樣，總是有進一步擴充產品功能的需求。  
   
  因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可讓您將組件加入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體或資料庫中。 組件可讓您使用任何 Common Language Runtime (CLR) 語言 (例如 Microsoft Visual Basic .NET 或 Microsoft Visual C#) 來建立外部使用者自訂函數。 您也可以使用元件物件模型 (COM) 自動化語言 (例如 Microsoft Visual Basic 或 Microsoft Visual C++)。  
   
@@ -88,7 +87,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 主機層級原則，是系統組件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 固定原則，以及使用者組件的使用者指定原則的組合。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 主機原則之使用者自訂部份根據的是指定每個組件之下列其中一種權限值區 (共三種) 的組件擁有者：  
   
-|權限設定|描述|  
+|權限設定|Description|  
 |------------------------|-----------------|  
 |`Safe`|提供內部計算權限。 這個權限值區不會指派權限，來存取 .NET Framework 中的所有受保護資源。 如果未使用 `PermissionSet` 屬性指定任何權限，這就會是組件的預設權限值區。|  
 |`ExternalAccess`|提供和 `Safe` 設定相同的存取權，並附帶存取外部系統資源的能力。 這個權限值區不提供安全性保證 (雖然是可以確保此情況的安全)，但是可以提供可靠性的保證。|  
@@ -105,7 +104,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   如果有中繼 EXECUTE AS 變更了來自原始呼叫者的內容，對外部資源存取的嘗試就會失敗。  
   
- 可將 `ImpersonationMode` 屬性設定為 `ImpersonateCurrentUser` 或 `ImpersonateAnonymous`。 預設值是 `ImpersonateCurrentUser`，會用來以目前使用者的網路登入帳戶執行組件。 如果使用`ImpersonateAnonymous`設定，則執行內容會對應至伺服器上 IUSER_*servername*的 Windows 登入使用者帳戶。 這是網際網路 Guest 帳戶，在伺服器上的權限有限。 在這個內容中執行的組件，在本機伺服器上只能存取有限的資源。  
+ 可將 `ImpersonationMode` 屬性設定為 `ImpersonateCurrentUser` 或 `ImpersonateAnonymous`。 預設值是 `ImpersonateCurrentUser`，會用來以目前使用者的網路登入帳戶執行組件。 如果 `ImpersonateAnonymous` 使用設定，則執行內容會對應至伺服器上 IUSER_*Servername*的 Windows 登入使用者帳戶。 這是網際網路 Guest 帳戶，在伺服器上的權限有限。 在這個內容中執行的組件，在本機伺服器上只能存取有限的資源。  
   
 ### <a name="application-domains"></a>應用程式定義域  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不會直接公開應用程式定義域。 因為組件集是在相同的應用程式網域中執行，所以應用程式網域可以在執行時期使用 .NET Framework 中的 `System.Reflection` 命名空間或其他方式，來發現彼此，也可用延遲繫結方式呼叫它們。 這種呼叫會遭受以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 授權為基礎的安全性機制，進行權限檢查。  

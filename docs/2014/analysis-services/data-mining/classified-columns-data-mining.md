@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bb1484ff3bad80979c9421e8d46ec4f46e866b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085690"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524808"
 ---
 # <a name="classified-columns-data-mining"></a>分類資料行 (資料採礦)
   當您定義分類資料行時，您可以建立目前資料行與採礦結構中另一個資料行之間的關聯性。 您指定為分類資料行之採礦結構資料行中的資料包含類別目錄的資訊，該資訊描述採礦結構中另一個資料行的值。  

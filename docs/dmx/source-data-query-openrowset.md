@@ -4,18 +4,18 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8be3fe8cbf30121ec2895f59306c925a422d5c39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 125fe829c3b76be0d92a3519249df571890efbf2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938129"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670026"
 ---
-# <a name="ltsource-data-querygt---openrowset"></a>&lt;來源資料查詢&gt; -OPENROWSET
+# <a name="ltsource-data-querygt---openrowset"></a>&lt;來源資料查詢 &gt; -OPENROWSET
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   以對外部提供者的查詢取代來源資料查詢。 INSERT、SELECT FROM 預測聯結，以及 SELECT FROM 天然預測聯結語句支援**OPENROWSET**。  

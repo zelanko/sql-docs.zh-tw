@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f385577-a2e5-4527-ab88-b27e73112591
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 129e1df9463064baafa38fb860f415b9c01ab38b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0995ac659de7ffd4c36c584b5a16b46f79fe8d5d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080905"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544370"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>產生具名查詢對話方塊 (Analysis Services - 多維度資料)
   在 **中使用** [產生具名查詢] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可從 **[瀏覽資料]** 對話方塊之 **[樞紐圖表]** 索引標籤上顯示的圖表中，根據圖表中選取的圖表序列、圖表序列值或圖表篩選，來建立具名查詢。 您可以在 **[瀏覽資料]** 對話方塊按一下 **[產生具名查詢]** ，顯示 **[產生具名查詢]** 對話方塊。  

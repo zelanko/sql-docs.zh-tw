@@ -1,24 +1,24 @@
 ---
-title: 選取 [ &lt;從&gt;模型]。DIMENSION_CONTENT （DMX） |Microsoft Docs
+title: 選取 [從 &lt; 模型] &gt; 。DIMENSION_CONTENT （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7fac89454cd31c1334e41d4c2367143f31476e20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ffc372ad0c44208d246a2afc9259428e354e480
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928363"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669580"
 ---
-# <a name="select-from-ltmodelgtdimension_content-dmx"></a>選取 [ &lt;從&gt;模型]。DIMENSION_CONTENT （DMX）
+# <a name="select-from-ltmodelgtdimension_content-dmx"></a>選取 [從 &lt; 模型] &gt; 。DIMENSION_CONTENT （DMX）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  採礦模型可用來做為 OLAP Cube 中的維度，而模型中的每個節點都代表該維度的成員。 **[從\<模型選取]>。Dimension_CONTENT**語句會傳回其使用方式與維度相關的模型內容。  
+  採礦模型可用來做為 OLAP Cube 中的維度，而模型中的每個節點都代表該維度的成員。 **[從模型選取] \<>。Dimension_CONTENT**語句會傳回其使用方式與維度相關的模型內容。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  *運算式清單*  
  從內容結構描述資料列集衍生之相關資料行識別碼的逗號分隔清單。  
   
- *模型*  
+ *model*  
  模型識別碼。  
   
  *條件運算式*  

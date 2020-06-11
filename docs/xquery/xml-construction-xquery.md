@@ -1,5 +1,6 @@
 ---
 title: XML 結構（XQuery） |Microsoft Docs
+description: 瞭解如何使用直接和計算的函數，在 XQuery 中建立 XML 結構。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51c1898ddaee1ecf878944a3b43c3d8adbb38590
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e285c82ce8c8b451fb673b6864391bd0e394ad8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946176"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520014"
 ---
 # <a name="xml-construction-xquery"></a>XML 建構 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +41,15 @@ ms.locfileid: "67946176"
  當您使用直接建構函式時，可以在建構 XML 時指定與 XML 相似的語法。 下列範例說明以直接建構函式建構 XML 。  
   
 ### <a name="constructing-elements"></a>建構元素  
- 在使用 XML 註解時，您可以建構元素。 下列範例會使用直接元素的「函式」運算式\<，並建立 ProductModel> 元素。 此建構元素具有三個子元素  
+ 在使用 XML 註解時，您可以建構元素。 下列範例會使用直接元素的「函式」運算式，並建立 \<ProductModel> 元素。 此建構元素具有三個子元素  
   
 -   文字節點。  
   
--   > 的兩個\<元素節點、 \<摘要> 和功能。  
+-   兩個元素節點： \<Summary> 和 \<Features> 。  
   
-    -   \<摘要> 元素具有一個文位元組點子系，其值為「部分描述」。  
+    -   \<Summary>元素具有一個文位元組點子系，其值為「部分描述」。  
   
-    -   \<Features> 元素具有三個元素節點子系\<、色彩> \<、權數> 和\<擔保>。 這些節點的每一個都有一個文字子節點，而且分別有 Red、25、2 years parts and labor 的值。  
+    -   \<Features>元素具有三個元素節點子系：、 \<Color> \<Weight> 和 \<Warranty> 。 這些節點的每一個都有一個文字子節點，而且分別有 Red、25、2 years parts and labor 的值。  
   
 ```sql
 declare @x xml;  
@@ -78,7 +79,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- 雖然從常數運算式建構元素 (如本範例所示) 非常有用，不過此 XQuery 語言真正強大的功能在於能夠從資料庫動態擷取資料來建構 XML。 您可以使用大括號指定查詢運算式。 在產生的 XML 中，其值將會取代運算式。 例如，下列查詢會以一個子項目`NewRoot` （<`e`>）來建立 <> 專案。 元素 <`e`> 的值是藉由在大括弧（"{...}"）內指定路徑運算式來計算。  
+ 雖然從常數運算式建構元素 (如本範例所示) 非常有用，不過此 XQuery 語言真正強大的功能在於能夠從資料庫動態擷取資料來建構 XML。 您可以使用大括號指定查詢運算式。 在產生的 XML 中，其值將會取代運算式。 例如，下列查詢會 `NewRoot` 以一個子項目（<>）來建立 <> 專案 `e` 。 元素 <> 的值 `e` 是藉由在大括弧（"{...}"）內指定路徑運算式來計算。  
   
 ```sql
 DECLARE @x xml;  
@@ -98,7 +99,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- 下列查詢與上一個查詢相似。 不過，大括弧中的運算式會指定**data （）** 函式來抓取 <`root`> 元素的不可部分完成值，並將它指派給已 <`e`> 的結構化專案。  
+ 下列查詢與上一個查詢相似。 不過，大括弧中的運算式會指定**data （）** 函式來抓取 <> 元素的不可部分完成值， `root` 並將它指派給已 <> 的結構化專案 `e` 。  
   
 ```sql
 DECLARE @x xml;  
@@ -136,7 +137,7 @@ SELECT @y;
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
- 下列查詢是使用直接元素建構函式來建構元素的另一個範例。 此外，也會藉由在`FirstLocation`大括弧中執行運算式來取得 <> 元素的值。 查詢運算式會在第一個工作中心位置從 Production.ProductModel 資料表的 Instructions 資料行傳回製造步驟。  
+ 下列查詢是使用直接元素建構函式來建構元素的另一個範例。 此外，也 `FirstLocation` 會藉由在大括弧中執行運算式來取得 <> 元素的值。 查詢運算式會在第一個工作中心位置從 Production.ProductModel 資料表的 Instructions 資料行傳回製造步驟。  
   
 ```sql
 SELECT Instructions.query('  
@@ -234,7 +235,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- <`ProductModel`> 的結構化元素具有 ProductModelID 屬性和下列子節點：  
+ <> 的結構化元素 `ProductModel` 具有 ProductModelID 屬性和下列子節點：  
   
 -   文字節點 `This is product model catalog description.`  
   
@@ -344,7 +345,7 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     如果您套用**data （）** 函數，則查詢會運作，因為它會抓取運算式的不可部分完成`/x`值，而該運算式會與字串串連。 下列是不可部份完成值的時序：  
+     如果您套用**data （）** 函數，則查詢會運作，因為它會抓取運算式的不可部分完成值，而該運算式 `/x` 會與字串串連。 下列是不可部份完成值的時序：  
   
     ```sql
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
@@ -381,7 +382,7 @@ where ProductModelID=7;
 -   在 XQuery 初構中。  
   
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>使用命名空間宣告屬性加入命名空間  
- 下列範例會在元素 <`a`> 中使用命名空間宣告屬性，以宣告預設命名空間。 <`b`的子項目結構> 會復原在父元素中宣告之預設命名空間的宣告。  
+ 下列範例會在元素 <> 中使用命名空間宣告屬性 `a` ，以宣告預設命名空間。 <的子項目結構> 會 `b` 復原在父元素中宣告之預設命名空間的宣告。  
   
 ```sql
 declare @x xml  
@@ -400,7 +401,7 @@ select @x.query( '
 </a>  
 ```  
   
- 您可以指派前置詞給命名空間。 前置詞是在 <`a`> 元素的結構中指定。  
+ 您可以指派前置詞給命名空間。 前置詞是在 <> 元素的結構中指定 `a` 。  
   
 ```sql
 declare @x xml  
@@ -419,7 +420,7 @@ select @x.query( '
 </x:a>  
 ```  
   
- 您可以取消宣告 XML 建構中的預設命名空間，但是您無法取消宣告命名空間的前置詞。 下列查詢會傳回錯誤，因為您無法取消宣告元素 <`b`> 中所指定的前置詞。  
+ 您可以取消宣告 XML 建構中的預設命名空間，但是您無法取消宣告命名空間的前置詞。 下列查詢會傳回錯誤，因為您無法取消宣告元素 <> 中所指定的前置詞 `b` 。  
   
 ```sql
 declare @x xml  
@@ -444,7 +445,7 @@ FROM  Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 請注意以此方式建立的新命名空間前置詞，將會覆寫此前置詞的任何已存在的命名空間宣告。 例如，在查詢初構中`AWMI="https://someURI"`的命名空間宣告，會由 <`FirstLocation`> 專案中的命名空間宣告所覆寫。  
+ 請注意以此方式建立的新命名空間前置詞，將會覆寫此前置詞的任何已存在的命名空間宣告。 例如，在查詢初構中的命名空間宣告， `AWMI="https://someURI"` 會由 <> 專案中的命名空間宣告所覆寫 `FirstLocation` 。  
   
 ```sql
 SELECT Instructions.query('  
@@ -470,7 +471,7 @@ select @x.query( '
             <a><b xmlns=""/></a>' )  
 ```  
   
- 請注意，在專案 <`b`> 的結構中，命名空間宣告屬性是以空字串做為其值所指定。 這將會取消宣告在父元素中所宣告的預設命名空間。  
+ 請注意，在專案 <> 的結構中 `b` ，命名空間宣告屬性是以空字串做為其值所指定。 這將會取消宣告在父元素中所宣告的預設命名空間。  
   
 
 以下是結果：  
@@ -548,7 +549,7 @@ test
   
  **注意**如需使用明確文位元組點的範例，請參閱[insert &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)中的特定範例。  
   
- 在下列查詢中，已建構的 XML 包含一個元素、兩個屬性、註解以及處理指示。 請注意，<`FirstLocation`> 之前會使用逗號，因為正在建立序列。  
+ 在下列查詢中，已建構的 XML 包含一個元素、兩個屬性、註解以及處理指示。 請注意，<> 之前會使用逗號 `FirstLocation` ，因為正在建立序列。  
   
 ```sql
 SELECT Instructions.query('  
