@@ -1,5 +1,6 @@
 ---
 title: 功能表命令和其他快速鍵（MySQLToSQL） |Microsoft Docs
+description: 深入瞭解在 SSMA for MySQL 應用程式的各種對話方塊中，存取功能表命令和其他快速鍵所使用的鍵盤快速鍵。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04450495d85eed7ab198090afcc2a4ac9cffb4c0
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908804"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293599"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>功能表命令和其他快速鍵 (MySQLToSQL)
 下列各節說明用來存取功能表命令的鍵盤快速鍵，以及 SSMA for MySQL 應用程式的各種對話方塊中所使用的其他快速鍵。  

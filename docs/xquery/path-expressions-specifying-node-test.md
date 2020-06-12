@@ -1,5 +1,6 @@
 ---
 title: 在路徑運算式步驟中指定節點測試 |Microsoft Docs
+description: 瞭解如何在 XQuery 路徑運算式的軸步驟中指定節點測試。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dba7904f4e28b6bea50c802fd83b9c24c147defb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946439"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524412"
 ---
 # <a name="path-expressions---specifying-node-test"></a>路徑運算式 - 指定節點測試
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +70,9 @@ child::ProductDescription
   
  路徑運算式 `/child::PD:ProductDescription/child::PD:Features/descendant::*,` 有三步。 這些步可以指定元素和下階軸。 在每一步中，會將節點名稱指定成節點測試。 在第三步中的萬用字元 (`*`) 代表下階軸主要節點種類的所有節點。 軸的主要節點種類可決定所選取的節點類型，而節點名稱可篩選所選取的節點。  
   
- 因此，針對**ProductModel**資料表中的產品類別目錄 XML 檔執行此運算式時，它會抓取\< \<ProductDescription> 專案的功能> 專案節點子系的所有元素節點子系。  
+ 如此一來，當這個運算式針對**ProductModel**資料表中的產品類別目錄 XML 檔執行時，它會抓取專案之專案節點子系的所有元素節點 \<Features> 子系 \<ProductDescription> 。  
   
- 路徑運算式`/child::PD:ProductDescription/attribute::ProductModelID`是由兩個步驟所組成。 這兩步均指定節點名稱做為節點測試。 另外，第二步會使用屬性軸。 因此，每一步所選取的軸之主要節點種類的節點，其所指定的名稱均與節點測試相同。 因此，運算式會傳回**ProductModelID** \<ProductDescription> 元素節點的 ProductModelID 屬性節點。  
+ 路徑運算式 `/child::PD:ProductDescription/attribute::ProductModelID` 是由兩個步驟所組成。 這兩步均指定節點名稱做為節點測試。 另外，第二步會使用屬性軸。 因此，每一步所選取的軸之主要節點種類的節點，其所指定的名稱均與節點測試相同。 因此，運算式會傳回元素節點的**ProductModelID**屬性節點 \<ProductDescription> 。  
   
  當為節點測試指定節點名稱時，您可以使用萬用字元 (*) 指定節點的本機名稱或用於節點的命名空間前置詞，如下列範例所示：  
   
@@ -92,7 +93,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 ## <a name="node-type-as-node-test"></a>做為節點測試的節點類型  
  若要查詢非元素節點以外的節點類型，請使用節點類型測試。 如下表所示，有四種節點類型測試可供使用。  
   
-|節點類型|傳回值|範例|  
+|節點類型|傳回|範例|  
 |---------------|-------------|-------------|  
 |`comment()`|註解節點會傳回 True。|`following::comment()` 會選取所有出現在內容節點後面的註解節點。|  
 |`node()`|任何種類的節點均會傳回 True。|`preceding::node()` 會選取所有出現在內容節點前面的節點。|  
@@ -105,7 +106,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- 同樣地`/child::ProductDescription/child::Features/child::comment()` ，會抓取\<ProductDescription> 元素\<節點之功能> 專案節點子系的批註節點子系。  
+ 同樣地，會抓取專案節點之專案 `/child::ProductDescription/child::Features/child::comment()` 節點子系的批註節點子系 \<Features> \<ProductDescription> 。  
   
 ## <a name="examples"></a>範例  
  下列範例會比較節點名稱與節點種類。  
@@ -169,7 +170,7 @@ select @x.query('
 /child::a/child::b/descendant::node()  
 ```  
   
- 因為`node()`是節點類型，所以您將會收到下階軸的所有節點。 以下是結果：  
+ 因為 `node()` 是節點類型，所以您將會收到下階軸的所有節點。 以下是結果：  
   
 ```  
 text1  
@@ -201,7 +202,7 @@ text3
 ### <a name="b-specifying-a-node-name-in-the-node-test"></a>B. 指定節點測試中的節點名稱  
  下列範例在所有的路徑運算式中指定節點名稱做為節點測試。 結果，所有的運算式都會傳回在節點測試中有指定節點名稱的軸中主要節點種類的節點。  
   
- 下列查詢運算式會從儲存在`Warranty` `Production.ProductModel`資料表中的產品目錄 XML 檔傳回 <> 元素：  
+ 下列查詢運算式會 `Warranty` 從儲存在資料表中的產品目錄 XML 檔傳回 <> 元素 `Production.ProductModel` ：  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -221,7 +222,7 @@ WHERE ProductModelID=19
   
 -   在運算式的任一步中均無法指定軸步的選擇性步驟限定詞部份。  
   
- 此查詢會傳回 <`Warranty` `Features` `ProductDescription`> 元素 <> 專案子系的 <> 元素子項。  
+ 此查詢會傳回 `Warranty` `Features` <> 元素 <> 專案子系的 <> 元素子項 `ProductDescription` 。  
   
  以下是結果：  
   
@@ -244,7 +245,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 萬用字元是針對節點名稱所指定。 因此，此查詢會傳回 <`Features` `ProductDescription`> 專案節點之 <> 元素節點子系的所有專案節點子項。  
+ 萬用字元是針對節點名稱所指定。 因此，此查詢會傳回 `Features` <> 專案節點之 <> 元素節點子系的所有專案節點子項 `ProductDescription` 。  
   
  除了與萬用字元搭配使用以外，下列查詢與上一個查詢相似，都指定了命名空間。 結果，會傳回在該命名空間的所有元素節點子系。 請注意，<`Features`> 元素可以包含來自不同命名空間的元素。  
   
@@ -270,7 +271,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 此查詢會傳回產品`Maintenance`目錄 XML 檔的所有命名空間中的 <> 元素節點子系。  
+ 此查詢會傳回 `Maintenance` 產品目錄 XML 檔的所有命名空間中的 <> 元素節點子系。  
   
 ### <a name="c-specifying-node-kind-in-the-node-test"></a>C. 指定節點測試中的節點種類  
  下列範例在所有的路徑運算式中指定節點種類做為節點測試。 結果，所有的運算式都會傳回在節點測試中所指定的節點種類。  
@@ -295,7 +296,7 @@ WHERE ProductModelID=19
   
 -   前兩步指定節點名稱做為節點測試，而第三步指定節點種類做為節點測試。  
   
--   運算式會傳回 <`Features` `ProductDescription`> 元素節點之 <> 專案子系的文位元組點子項。  
+-   運算式會傳回 `Features` <> 元素節點之 <> 專案子系的文位元組點子項 `ProductDescription` 。  
   
  只會傳回一個文字節點。 以下是結果：  
   
@@ -303,7 +304,7 @@ WHERE ProductModelID=19
 These are the product highlights.   
 ```  
   
- 下列查詢會傳回 <`ProductDescription`> 元素的批註節點子系：  
+ 下列查詢會傳回 <> 元素的批註節點子系 `ProductDescription` ：  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -319,7 +320,7 @@ WHERE ProductModelID=19
   
 -   第二步指定節點種類做為節點測試  
   
--   因此，運算式會傳回 <`ProductDescription`> 元素節點的批註節點子系。  
+-   因此，運算式會傳回 <> 元素節點的批註節點子系 `ProductDescription` 。  
   
  以下是結果：  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d8293cd61ef105352e6c6e1aaccb7f44494b2d5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077455"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544860"
 ---
 # <a name="add-a-standard-action"></a>加入標準動作
   您可以使用 Cube 設計師的 [動作] 檢視將動作加入資料庫。 該檢視可透過 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取。 在建立動作之後，您必須先重新處理相關的 Cube，使用者才能使用動作。 如需相關資訊，請參閱 [Processing Analysis Services Objects](processing-analysis-services-objects.md)。  
@@ -47,7 +46,7 @@ ms.locfileid: "66077455"
   
     -   從 [類型]**** 下拉式清單中，選取您要建立的動作類型。 下表列出可用的動作類型。  
   
-        |類型|說明|  
+        |類型|Description|  
         |----------|-----------------|  
         |資料集|擷取資料集。|  
         |專屬|使用不同於此資料表列出的介面來執行作業。|  
@@ -63,7 +62,7 @@ ms.locfileid: "66077455"
   
         |選項|描述|  
         |------------|-----------------|  
-        |Interactive (互動式)|此動作會在使用者互動時觸發。|  
+        |互動式|此動作會在使用者互動時觸發。|  
         |Batch|此動作會以批次作業執行。|  
         |開啟時|此動作會在使用者開啟 Cube 時執行。|  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66077455"
         > [!NOTE]  
         >   除非用戶端應用程式明確限制結構描述資料列集僅傳回與在 **[應用程式]** 中指定的名稱相符的動作，否則不會將專屬動作傳回給伺服器。  
   
-    -   在 [**動作內容**] 中，如果您使用 URL 類型，請以引號括住網際網路位址，例如 "http://www.adventure-works.com"。  
+    -   在 [**動作內容**] 中，如果您使用 URL 類型，請以引號括住網際網路位址，例如 " http://www.adventure-works.com "。  
   
     -   在 **[描述]** 中，輸入動作的描述。  
   

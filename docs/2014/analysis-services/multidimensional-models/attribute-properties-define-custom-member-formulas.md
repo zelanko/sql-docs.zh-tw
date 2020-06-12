@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 969a8f11926957ae19512e92b68e02d12011dd03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5fab8618e18b6a6983f98cca58bc2b2c55d63fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077275"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544746"
 ---
 # <a name="define-custom-member-formulas"></a>定義自訂成員公式
   您可以定義多維度運算式 (MDX) 運算式 (稱為自訂成員公式)，來提供所指定屬性之成員的值。 來自資料來源檢視之資料表中的資料行，為屬性的每一個成員提供該運算式，來提供該成員的值。  
@@ -29,7 +28,7 @@ ms.locfileid: "66077275"
   
  屬性 (Attribute) 上的 `CustomRollupColumn` 屬性 (Property) 指定含有屬性 (Attribute) 成員之自訂成員公式的資料行。 如果資料行中的資料列是空的，則會正常傳回成員的資料格值。 如果資料行中的公式無效，則只要擷取使用成員的資料格值時，就會發生執行階段錯誤。  
   
- 在為屬性指定自訂成員公式之前，請確認包含該屬性的維度資料表，或直接相關的資料表中有字串資料行可儲存自訂成員公式。 如果是這種情況，您可以手動設定屬性`CustomRollupColumn`的屬性，或使用商業智慧 Wizard 的 [設定自訂成員公式增強功能]，在屬性上啟用自訂成員公式。 如需如何使用這項增強功能的詳細資訊，請參閱 [在維度中設定屬性的自訂成員公式](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)。  
+ 在為屬性指定自訂成員公式之前，請確認包含該屬性的維度資料表，或直接相關的資料表中有字串資料行可儲存自訂成員公式。 如果是這種情況，您可以手動設定屬性的 `CustomRollupColumn` 屬性，或使用商業智慧 Wizard 的 [設定自訂成員公式增強功能]，在屬性上啟用自訂成員公式。 如需如何使用這項增強功能的詳細資訊，請參閱 [在維度中設定屬性的自訂成員公式](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)。  
   
 ## <a name="evaluating-custom-member-formulas"></a>評估自訂成員公式  
  自訂成員公式與導出成員不同。 自訂成員公式是套用至維度資料表中的成員，並只提供成員的值。 相反地，導出成員不是儲存在維度資料表中，而導出成員運算式會定義維度或階層所含之其他成員的資料和中繼資料。  

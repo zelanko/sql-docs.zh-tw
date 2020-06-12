@@ -11,27 +11,26 @@ f1_keywords:
 ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e62e42dc1cc405f5515e40b0b050036b673a7b89
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063052"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527934"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>屬性特性索引標籤 (採礦模型檢視器)
   可以使用 [屬性特性]**** 窗格，瀏覽貝氏機率分類模型中結果和輸入屬性之間的關聯性。 可以選擇目標屬性的值，然後查看對結果造成最大影響的輸入屬性的清單。  
   
  **如需詳細資訊，請參閱 ** [Microsoft 貝氏機率分類演算法](data-mining/microsoft-naive-bayes-algorithm.md)、[使用 Microsoft 貝氏機率分類檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **重新整理檢視器內容**  
  在檢視器中重新載入採礦模型。  
   
  **採礦模型**  
  在目前採礦結構中選擇要檢視的採礦模型。 採礦模型會自動在最適合所選特定模型類型的自訂檢視器中開啟。  
   
- **檢視器**  
+ **檢視者**  
  選擇用來瀏覽選取之採礦模型的檢視器。 可以為每個模型選擇自訂檢視器，或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 採礦內容檢視器。 此清單中也會出現外掛程式檢視器 (如果有)。  
   
  **屬性**  
@@ -40,7 +39,7 @@ ms.locfileid: "66063052"
  **ReplTest1**  
  選擇 [屬性]**** 中設定之可預測屬性的狀態。 因為貝氏機率分類模型不支援連續變數，所以所有目標屬性都有離散或離散化結果。 永遠會自動將遺漏屬性新增至清單。  
   
- **可預測\<狀態>的特性**  
+ **的特性\<predictable state>**  
  圖形包含下列資料行，其中描述輸入屬性的狀態與選取之可預測屬性狀態如何相關。  
   
 |值|描述|  

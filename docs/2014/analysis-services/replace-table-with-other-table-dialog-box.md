@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac74a4147541837e642c9d3ab9637555ef16fb0d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070265"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539282"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>使用其他資料表取代對話方塊
   使用 **中的** [使用其他資料表取代] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可以尚未納入資料來源檢視中之基礎資料來源內的資料表，取代資料來源檢視中的現有資料表。 您可以在 [資料來源檢視設計師]**** 的 [圖表]**** 或 [資料表]**** 窗格中，以滑鼠右鍵按一下資料表的名稱，然後從 [取代資料表]**** 中選取 [使用其他資料表]****，來顯示 [使用其他資料表取代]**** 對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料來源**  
  選取要擷取資料表的資料來源。  
   

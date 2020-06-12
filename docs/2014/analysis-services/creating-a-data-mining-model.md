@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a8893960b5177563ccf98dbd21cb528ce399ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cce03fab2757b366fbe67dc6c68cb3be1c075e3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086731"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526427"
 ---
 # <a name="creating-a-data-mining-model"></a>建立資料採礦模型
   資料模型化是資料採礦的步驟，可讓您將*演算法*套用至資料，以建立模式和趨勢。 之後就可以使用這些模式進行分析，或進行預測。  
   
  適用於 Office 的資料採礦增益集會透過精靈支援資料採礦，可讓您輕鬆建立模型。 精靈會分析資料、識別相互關聯性、計算所有變數的統計重要性，以及自動選取最佳模型。  
   
- 雖然這項功能與[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]和[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]所提供的資料採礦工具一樣強大，但結合了和熟悉的 Excel 介面，讓您可以輕鬆地建立、修改和使用資料採礦。  
+ 雖然這項功能與和所提供的資料採礦工具一樣強大，但結合了和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 熟悉的 Excel 介面，讓您可以輕鬆地建立、修改和使用資料採礦。  
   
 ## <a name="advanced-data-mining"></a>進階 (資料採礦)  
- 「高級」程式可讓您使用中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的其中一種資料採礦演算法，根據儲存在 Excel 中的資料，建立新的資料採礦模型。  
+ 「高級」程式可讓您使用中的其中一種資料採礦演算法，根據儲存在 Excel 中的資料，建立新的資料採礦模型 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 ### <a name="create-mining-structure"></a>建立採礦結構  
  建立採礦結構精靈會協助您建立新的資料採礦結構，此結構可當做多個採礦模型的基礎。 此精靈提供選項讓您將資料的某部分擱置在一旁當做測試集使用，好讓您可以根據一致的測試標準來評估使用相同資料的所有模型。  

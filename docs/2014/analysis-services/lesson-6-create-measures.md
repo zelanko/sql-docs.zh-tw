@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef487927098e63c7fc870aa65e55f57faa26767d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078424"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542560"
 ---
 # <a name="lesson-7-create-measures"></a>第 7 課：建立量值
   在這一課，您將建立要包含在模型中的量值。 量值與您在上一課建立的導出資料行相似，基本上是使用 DAX 公式建立的計算。 不過，與導出資料行不同，量值評估是根據使用者選取的「篩選條件」**。例如，在樞紐分析表的 [資料列標籤] 欄位中新增的特定資料行或交叉分析篩選器。   然後會以套用的量值，計算篩選條件中每個資料格的值。 量值是功能強大且彈性的計算，您會希望將它包含在幾乎所有表格式模型中，以便在數值資料上執行動態計算。 如需詳細資訊，請參閱[量值 &#40;SSAS 表格式&#41;](tabular-models/measures-ssas-tabular.md)。  
@@ -28,7 +27,7 @@ ms.locfileid: "66078424"
   
  這堂課的預估完成時間：**30 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 6 課：建立導出資料行](lesson-5-create-calculated-columns.md)。  
   
 ## <a name="create-measures"></a>建立量值  
@@ -49,7 +48,7 @@ ms.locfileid: "66078424"
   
      請注意，左上方的資料格現在包含量值名稱 [**量值 1**]，後面接著結果 [ **30**]。 公式列中的公式前面也會有量值名稱。  
   
-5.  若要重新命名量值，請在公式列中反白顯示名稱 [**量值 1**]，然後輸入`Days Current Quarter to Date`，然後按 enter 鍵。  
+5.  若要重新命名量值，請在公式列中反白顯示名稱 [**量值 1**]，然後輸入 `Days Current Quarter to Date` ，然後按 enter 鍵。  
   
     > [!TIP]  
     >  在公式列中輸入公式時，您也可以先輸入量值名稱，後面接著冒號 (:)，再接著一個空格，最後是公式。 使用這個方法就不需要重新命名量值。  
@@ -88,7 +87,7 @@ ms.locfileid: "66078424"
   
 1.  使用「自動加總」功能建立並命名下列量值︰  
   
-    |[量值名稱]|資料行|自動加總 (∑)|公式|  
+    |[量值名稱]|資料行|自動加總 (∑)|Formula|  
     |------------------|------------|-------------------|-------------|  
     |Internet Order Lines Count|Sales Order Line Number|Count|=COUNT([Sales Order Line Number])|  
     |Internet Total Units|Order Quantity|Sum|=SUM([Order Quantity])|  
@@ -104,7 +103,7 @@ ms.locfileid: "66078424"
     > [!IMPORTANT]  
     >  您必須依序建立下列量值；後續量值中的公式會參考之前的量值。  
   
-    |[量值名稱]|公式|  
+    |[量值名稱]|Formula|  
     |------------------|-------------|  
     |Internet Previous Quarter Margin|=CALCULATE([Internet Total Margin],PREVIOUSQUARTER('Date'[Date]))|  
     |Internet Current Quarter Margin|=TOTALQTD([Internet Total Margin],'Date'[Date])|  

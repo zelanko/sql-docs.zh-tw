@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: c0d5fc7c-2fcf-4d13-b75c-84620667b9b7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbfbcdae5d16ac631dddda9aa79c85a359afefb0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 227928526eaeaf32c558ea311c8e3958e996b49d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087750"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527404"
 ---
 # <a name="completing-the-wizard-business-intelligence-wizard"></a>正在完成精靈 (商業智慧精靈)
   使用 **[正在完成精靈]** 頁面，即可檢閱完成商業智慧精靈時將做的變更。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **變更**  
- 顯示已對[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案中的物件所做的變更。  
+ 顯示已對專案中的物件所做的變更 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [商業智慧 Wizard F1 說明](business-intelligence-wizard-f1-help.md)   

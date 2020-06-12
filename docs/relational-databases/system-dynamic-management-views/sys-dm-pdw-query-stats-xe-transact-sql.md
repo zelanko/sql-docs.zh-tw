@@ -3,8 +3,8 @@ title: sys.databases dm_pdw_query_stats_xe （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.technology: system-objects
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -12,12 +12,12 @@ ms.assetid: 5d551241-db35-4958-b60f-55e996f95c1f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ba136f705c57fcd5ffbef1433d70ceaefe4e3ae9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d45995610f706bb978c9902623821199fc4a3c63
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829262"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627024"
 ---
 # <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>sys.databases dm_pdw_query_stats_xe （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

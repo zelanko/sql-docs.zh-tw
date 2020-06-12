@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fa1d14c1a96a89cbd890dbf4d133d84897b9197
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085312"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523674"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>在資料採礦設計師中建立單一查詢
   如果您想要針對單一案例建立預測，單一查詢便很有用。 如需單一查詢的詳細資訊，請參閱 [資料採礦查詢](data-mining-queries.md)。  
@@ -57,7 +56,7 @@ AS [t]
   
 4.  在 [單一查詢輸入]**** 資料表上，選取 [值]**** 資料行中的值來描述您要建立預測的案例。  
   
-     例如，針對 [在家中的**數位子**系] 選取 [ **2** ]，然後針對 [Age] 輸入。 **Age** `45`  
+     例如，針對 [在家中的**數位子**系] 選取 [ **2** ]，然後 `45` 針對 [ **Age**] 輸入。  
   
 5.  將可預測資料行從 [**採礦模型**] 資料表拖曳到索引標籤底部的 [**源**資料行]。您也可以選擇輸入資料行的別名。  
   

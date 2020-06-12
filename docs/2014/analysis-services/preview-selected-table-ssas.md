@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b6b34b5a-43b3-4a75-9f3b-b2ad1084b1b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a0f168dabd237fe685eb90d2caeeba0db4eed97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25eb4d4424223449052ab1f65b41cf270da81fb0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070714"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540070"
 ---
 # <a name="preview-selected-table-ssas"></a>預覽選取的資料表 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您預覽選定資料表中的資料、選取要併入資料匯入的資料行，以及在選取的資料行中篩選資料。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
@@ -28,7 +27,7 @@ ms.locfileid: "66070714"
   
  此頁面之資料的外觀不保證匯入將會成功。 如果在 [模擬資訊] 頁面中指定的使用者名稱未具備從所選資料庫讀取的權限，則匯入將會失敗。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **資料行標頭中的核取方塊**  
  選取核取方塊可將資料行納入資料匯入作業。 清除核取方塊可從資料匯入作業排除資料行。  
   

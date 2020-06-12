@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44b162c34f5f505462a713205d8434484473afa4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085645"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524054"
 ---
 # <a name="content-queries-data-mining"></a>內容查詢 (資料採礦)
   內容查詢是一種擷取採礦模型之內部統計資料和結構相關資訊的方法。 內容查詢有時候可以提供檢視器中無法隨時取得的詳細資料。 您也可以使用內容查詢的結果，以程式設計的方式擷取其他用途的資訊。  

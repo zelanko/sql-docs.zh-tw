@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f7a6759-82b8-44d9-9cca-a61ba214eb22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cc232f6c861a3b7dbde44b342deaa831de6c99c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070127"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547390"
 ---
 # <a name="row-filters-role-designertabular-model"></a>資料列篩選 (角色設計師)(表格式模型)
   使用角色設計師的 [資料列篩選]**** 頁面可以定義相關聯角色的資料列層級篩選。 只能針對具有「讀取」和「讀取和處理」權限的角色定義資料列篩選條件。  
@@ -25,14 +24,14 @@ ms.locfileid: "66070127"
 > [!NOTE]  
 >  如果已在角色設計師的 [一般]**** 頁面上選取 [完整控制權 (管理員)]****，或者如果角色權限設定為 [處理]****，則此頁面上的所有選項就會停用。  
   
-## <a name="options"></a>選項。  
- **目錄**  
+## <a name="options"></a>選項  
+ **資料表**  
  為其定義篩選的模型資料表。  
   
  **DAX 篩選**  
  評估為布林條件的 DAX 公式。  
   
- **DAX 篩選- \<tablename>**  
+ **DAX 篩選-\<tablename>**  
  請輸入評估為布林條件的 DAX 公式。  
   
 ## <a name="see-also"></a>另請參閱  

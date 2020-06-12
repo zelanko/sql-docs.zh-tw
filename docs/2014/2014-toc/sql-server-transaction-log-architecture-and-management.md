@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3e1063f41afce526afcde90c61950e9234ae7517
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 7b2a152178a525c7bc4ddd559713cf063376128f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000532"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528384"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management"></a>SQL Server 交易記錄架構與管理
 

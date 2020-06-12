@@ -1,5 +1,6 @@
 ---
 title: sql： relationship 和索引鍵排序規則（SQLXML）
+description: 瞭解如何使用 SQLXML 中的 sql： relationship 元素和索引鍵排序規則。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c04b14f474e2afc0e6feb18eaa0bd321fdbb5e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9963058caa3c027a294fac5828b39990bb344f5f
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246765"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215728"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>註解解譯 - sql:relationship 和索引鍵順序規則
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   由於 XML 大量載入會產生記錄做為其節點進入範圍，並將這些記錄傳送到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 做為其節點離開範圍，因此用於記錄的資料必須存在於節點的範圍內。  
   
- 請考慮下列 XSD 架構，其中** \<Customer>** 和** \<Order>** 元素之間的一對多關聯性（一位客戶可以下多個訂單）是使用** \<sql： relationship>** 元素所指定：  
+ 請考慮下列 XSD 架構，其中和元素之間的一對多關聯性 **\<Customer>** **\<Order>** （一位客戶可以下多個訂單）是使用元素指定的 **\<sql:relationship>** ：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -60,7 +61,7 @@ ms.locfileid: "75246765"
 </xsd:schema>  
 ```  
   
- 當** \<Customer>** 元素節點進入範圍內時，XML 大量載入會產生客戶記錄。 此記錄會持續，直到 XML 大量載入讀取** \</Customer>**。 在處理** \<Order>** 專案節點時，XML 大量載入會使用** \<sql： relationship>** 從** \<Customer>** 父元素取得 CustOrder 資料表的 CustomerID 外鍵資料行值，因為** \<Order>** 專案並未指定**customerid**屬性。 這表示在定義** \<Customer>** 元素時，您必須先在架構中指定**CustomerID**屬性，才能指定** \<sql： relationship>**。 否則，當** \<Order>** 元素進入範圍內時，xml 大量載入會產生 CustOrder 資料表的記錄，而當 XML 大量載入達到** \</order>** 結束標記時，它會將記錄傳送至[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，而不含 CustomerID 外鍵資料行值。  
+ 當 **\<Customer>** 元素節點進入範圍內時，XML 大量載入會產生客戶記錄。 此記錄會持續到 XML 大量載入讀取為止 **\</Customer>** 。 在處理專案 **\<Order>** 節點時，XML 大量載入 **\<sql:relationship>** 會使用從父元素取得 CustOrder 資料表之 CustomerID 外鍵資料行的值 **\<Customer>** ，因為此元素不 **\<Order>** 會指定**customerid**屬性。 這表示在定義 **\<Customer>** 元素時，您必須先在架構中指定**CustomerID**屬性，然後再指定 **\<sql:relationship>** 。 否則，當 **\<Order>** 元素進入範圍內時，Xml 大量載入會產生 CustOrder 資料表的記錄，而當 XML 大量載入到達 **\</Order>** 結束標記時，它會將記錄傳送至， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 而不含 CustomerID 外鍵資料行值。  
   
  將這個範例所提供的結構描述儲存為 SampleSchema.xml。  
   
@@ -117,7 +118,7 @@ ms.locfileid: "75246765"
     set objBL=Nothing  
     ```  
   
-     結果是，XML 大量載入將 NULL 值插入到 CustOrder 資料表的 CustomerID 外部索引鍵資料行中。 如果您修改 XML 範例資料，讓** \<CustomerID>** 子項目出現在** \<Order>** 子項目之前，您會得到預期的結果： XML 大量載入會將指定的外鍵值插入資料行中。  
+     結果是，XML 大量載入將 NULL 值插入到 CustOrder 資料表的 CustomerID 外部索引鍵資料行中。 如果您修改 XML 範例資料 **\<CustomerID>** ，使子項目出現在子專案之前 **\<Order>** ，您會得到預期的結果： XML 大量載入會將指定的外鍵值插入資料行。  
   
  這是相等的 XDR 結構描述：  
   

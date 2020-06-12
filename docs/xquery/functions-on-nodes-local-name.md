@@ -1,5 +1,6 @@
 ---
 title: 本機名稱函數（XQuery） |Microsoft Docs
+description: 瞭解如何使用 XQuery 函數的本機名稱（）來傳回節點的本機名稱部分。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3a10ab445bfcf9f61b7eb6c952100af9b6fadbb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038868"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689568"
 ---
 # <a name="functions-on-nodes---local-name"></a>節點的相關函式 - local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. 使用述詞中沒有引數的本機名稱  
- 下列查詢是針對 ProductModel 資料表的指示資料行（具類型的**xml**資料行）所指定。 運算式會傳回 <`root`> 專案的所有專案子系，QName 的本機名稱部分為 "Location"。 在述詞中指定了**本機名稱（）函式**，而且沒有任何引數該函數使用內容節點。  
+ 下列查詢是針對 ProductModel 資料表的指示資料行（具類型的**xml**資料行）所指定。 運算式會傳回 <> 專案的所有專案子系， `root` QName 的本機名稱部分為 "Location"。 在述詞中指定了**本機名稱（）函式**，而且沒有任何引數該函數使用內容節點。  
   
 ```  
 SELECT Instructions.query('  
@@ -81,7 +82,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- 查詢會傳回 <`Location` `root`> 元素的所有 <> 元素子系。  
+ 查詢會傳回 `Location` <> 元素的所有 <> 元素子系 `root` 。  
   
 ## <a name="see-also"></a>另請參閱  
  [節點上的函式](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

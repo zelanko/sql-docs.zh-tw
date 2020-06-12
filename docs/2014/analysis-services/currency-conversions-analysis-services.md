@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b60acaf4254112a53d905340c2750dd1e2e6e8f7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086545"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525981"
 ---
 # <a name="currency-conversions-analysis-services"></a>貨幣轉換 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** 僅限多維度  
@@ -84,7 +83,7 @@ ms.locfileid: "66086545"
 ## <a name="defining-currency-conversions"></a>定義貨幣轉換  
  您可以使用商業智慧精靈來定義 Cube 的貨幣轉換功能，或使用 MDX 指令碼來手動定義貨幣轉換。  
   
-### <a name="prerequisites"></a>先決條件  
+### <a name="prerequisites"></a>必要條件  
  您必須先定義至少一個貨幣維度、至少一個時間維度以及至少一個比率量值群組，才能使用商業智慧精靈來定義 Cube 中的貨幣轉換。 從這些物件中，商業智慧精靈可以擷取資料和中繼資料，這些資料用來建構報表貨幣維度與提供貨幣轉換功能所需的 MDX 指令碼。  
   
 ### <a name="decisions"></a>決策  

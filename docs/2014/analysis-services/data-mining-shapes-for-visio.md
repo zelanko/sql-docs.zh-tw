@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d30456ac3685aa3dc40af6f1c79f92796fc1404
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086401"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525774"
 ---
 # <a name="data-mining-shapes-for-visio"></a>適用於 Visio 的資料採礦圖形
   適用於 Visio 的資料採礦圖形提供了針對顯示資料採礦模型所自訂的範本。 使用這些範本就能連接到您已建立的模型，也可建立互動式簡報以說明資料採礦的結果。  
@@ -38,7 +37,7 @@ ms.locfileid: "66086401"
 -   **群集圖表：** 使用此嚮導為您的分割模型建立彩色圖形。 您可以在各種檢視 (例如屬性辨識、叢集設定檔與相依性) 之間切換，以及自訂叢集的外觀。  
   
 ## <a name="installation"></a>安裝  
- 當您安裝適用于 Visio 的資料採礦範本時，根據預設，下列檔案會\<安裝到 drive> \program Files\Microsoft SQL SERVER 2012 DM 增益集（ \<或磁片磁碟機> \ 或 Program files （x86） \Microsoft SQL Server 2012 DM 增益集）：  
+ 當您安裝適用于 Visio 的資料採礦範本時，根據預設，下列檔案會安裝到 \<drive> \Program Files\Microsoft SQL Server 2012 DM 增益集（或 \<drive> \ 或 Program files （x86） \Microsoft SQL SERVER 2012 DM 增益集）：  
   
 -   **Microsoft 資料發掘**此範本包含預先設計的格式設定、配置和嚮導，可協助您使用資料採礦圖形。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66086401"
   
  如需如何使用和增強 Visio 模型圖表的詳細資訊，請參閱[在 visio 中觀看資料採礦模型 &#40;資料採礦增益集&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
   
 -   若要使用範本，您必須先建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。  
   

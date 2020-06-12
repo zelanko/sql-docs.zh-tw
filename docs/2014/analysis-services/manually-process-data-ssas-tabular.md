@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a861225414ec5bb63f77a0c4ce6c76a9c58c153d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077966"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541820"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>手動處理資料 (SSAS 表格式)
   此主題描述如何手動處理 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的工作空間資料。  
@@ -50,7 +49,7 @@ ms.locfileid: "66077966"
   
 2.  在 **[處理資料分割]** 對話方塊的 **[模式]** 中，選取下列其中一個處理模式：  
   
-    |[模式]|描述|  
+    |模式|Description|  
     |----------|-----------------|  
     |**處理預設**|偵測資料分割物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的資料分割物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立階層、導出資料行及關聯性。|  
     |**完整處理**|處理資料分割物件及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件已進行過任何結構性變更時，就需要這種處理。|  

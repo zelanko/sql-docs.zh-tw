@@ -1,5 +1,6 @@
 ---
 title: SQLXML 4.0 中的註解式 XSD 結構描述
+description: 如需在 SQLXML 4.0 中使用批註式 XSD 架構的相關資訊，請參閱。
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f355f83be4dc2e77e3cbaceaeebe2a5157324b4d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2792bb40ec870f82694e82b291d55be4b9e9dddd
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247053"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689554"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 中的註解式 XSD 結構描述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

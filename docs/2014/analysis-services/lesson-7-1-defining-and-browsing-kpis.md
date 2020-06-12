@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a95c5819d88013a0e4f0e0be0aa21c11c1949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6044c22f84abdc17adf7015804627266ccff09b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175247"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542430"
 ---
 # <a name="defining-and-browsing-kpis"></a>定義和瀏覽 KPI
   若要定義關鍵效能指標 (KPI)，您必須先定義 KPI 名稱以及與該 KPI 相關聯的量值群組。 KPI 可以和所有的量值群組或單一量值群組相關聯。 接著就定義 KPI 的下列元素：
@@ -67,7 +66,7 @@ ms.locfileid: "78175247"
 
      ![顯示窗格中的空白 KPI 範本](../../2014/tutorials/media/l7-kpi-2.gif "顯示窗格中的空白 KPI 範本")
 
-3.  在 [**名稱**] 方塊中`Reseller Revenue`，輸入，然後在 [**相關聯的量值群組**] 清單中選取 [**轉售商銷售**]。
+3.  在 [**名稱**] 方塊中，輸入 `Reseller Revenue` ，然後在 [**相關聯的量值群組**] 清單中選取 [**轉售商銷售**]。
 
 4.  在 [計算工具]**** 窗格的 [中繼資料]**** 索引標籤上，依序展開 [量值]**** 和 [轉售商銷售]****，然後將 [轉售商銷售 - 銷售量]**** 量值拖曳到 [值運算式]**** 方塊。
 
@@ -152,7 +151,7 @@ ms.locfileid: "78175247"
 
 1.  按一下 [KPI]**** 索引標籤之工具列上的 [表單檢視]**** 按鈕，然後按一下 [新增 KPI]**** 按鈕。
 
-2.  在 [**名稱**] 方塊中`Product Gross Profit Margin`，輸入，然後確認 [ ** \<所有>** 都會出現在 [**相關聯的量值群組**] 清單中。
+2.  在 [**名稱**] 方塊中，輸入 `Product Gross Profit Margin` ，然後確認 **\<All>** 出現在 [**相關聯的量值群組**] 清單中。
 
 3.  在 [計算工具]**** 窗格的 [中繼資料]**** 索引標籤中，將 [總毛利率]**** 量值拖曳到 [值運算式]**** 方塊。
 
@@ -261,7 +260,7 @@ ms.locfileid: "78175247"
 
 2.  當您順利完成部署時，請在 [KPI]**** 索引標籤的工具列上按一下 [重新連接]****，然後按一下 [瀏覽器檢視]****。
 
-     Kpi 隨即出現，並顯示**Q3 CY 2007**和北美洲 sales 領域的 KPI 值。 **North America** `Product Gross Profit Margin`
+     `Product Gross Profit Margin`Kpi 隨即出現，並顯示**Q3 CY 2007**和**北美洲**sales 領域的 KPI 值。
 
 3.  在 [篩選]**** 窗格中，從 [維度]**** 清單中選取 [產品]****、從 [階層]**** 清單中選取 [類別目錄]****、從 [運算子]**** 清單中選取 [等於]****，並從 [篩選運算式]**** 清單中選取 [自行車]****，然後按一下 [確定]****。
 

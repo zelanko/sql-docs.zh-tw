@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f3244ee-b690-471c-893d-68e361c2d416
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 558f9936b7a8e78b3ef75f3bb525185ae497959c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087032"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526964"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>連接到 Microsoft SQL Server Analysis Services (SSAS)
   [**資料表匯入嚮導]** 的這個頁面可讓您指定從 SharePoint 上主控的 Microsoft SQL Server Analysis Services Cube 或 PowerPivot 活頁簿匯入資料的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
@@ -27,7 +26,7 @@ ms.locfileid: "66087032"
 > [!NOTE]  
 >  在這個頁面中選取資料庫時，會使用目前使用者的認證。 不過，如果在 [模擬資訊] 頁面中指定的使用者未具備從所選取資料庫讀取的權限，則匯入將不會成功。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **易記連接名稱**  
  為此資料來源連接輸入唯一的名稱。 這是必要的欄位。  
   

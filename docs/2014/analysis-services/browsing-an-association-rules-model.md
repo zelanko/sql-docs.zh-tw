@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69002d17205a5631d555e1022b8adeb9e51d3db2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088473"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527730"
 ---
 # <a name="browsing-an-association-rules-model"></a>瀏覽關聯規則模型
-  當您使用 **[流覽]** 開啟關聯模型時，該模型會顯示在互動式檢視器中，類似于中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的關聯規則檢視器。  此檢視器可讓您快速查看相互關聯的項目，並顯示可用於預測或提出建議的規則。  
+  當您使用 **[流覽]** 開啟關聯模型時，該模型會顯示在互動式檢視器中，類似于中的關聯規則檢視器 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  此檢視器可讓您快速查看相互關聯的項目，並顯示可用於預測或提出建議的規則。  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>探索模型  
- 當您開啟使用[!INCLUDE[msCoName](../includes/msconame-md.md)]關聯規則演算法建立的採礦模型時，[**流覽**] 視窗會包含下列視圖，每個都設計成讓您探索模型的不同層面：  
+ 當您開啟使用關聯規則演算法建立的採礦模型時 [!INCLUDE[msCoName](../includes/msconame-md.md)] ，[**流覽**] 視窗會包含下列視圖，每個都設計成讓您探索模型的不同層面：  
   
 -   [項目集](#BKMK_Itemsets)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66088473"
   
  您可以變更 [**最小支援**] 和 [**最大資料列**數] 值，以篩選顯示在索引標籤中的專案集數目。 如果您增加 [**最小支援**] 值，此清單會顯示較少的專案集，但專案集會是輸入資料中較常見的一個。 一般是否與重要相同是另一個問題，您可以使用 [**規則**] 索引標籤來探索。  
   
- 請注意，變更 [**專案集**] 索引標籤上的 [支援] 值或其他控制項，只會變更顯示的專案，而不會影響基礎模型。 如果您想要產生較少或更多的專案集，或限制其大小，您應該使用`MINIMUM_SUPPORT` [ `MAXIMUM_SUPPORT`**演算法參數**] 對話方塊中提供的參數和。  
+ 請注意，變更 [**專案集**] 索引標籤上的 [支援] 值或其他控制項，只會變更顯示的專案，而不會影響基礎模型。 如果您想要產生較少或更多的專案集，或限制其大小，您應該使用 `MINIMUM_SUPPORT` `MAXIMUM_SUPPORT` [**演算法參數**] 對話方塊中提供的參數和。  
   
 ##### <a name="explore-the-itemsets-list"></a>探索項目集清單  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66088473"
   
 2.  若要將焦點放在感興趣的特定專案集，請在 [**篩選**專案集] 方塊中輸入一些文字。  
   
-     我們在此`Gloves`輸入。 當您套用篩選時，系統會重新整理清單，並只顯示包含手套的項目集。 如此可讓您專注於客戶購買手套及其他一些項目的交易。  
+     我們在此輸入 `Gloves` 。 當您套用篩選時，系統會重新整理清單，並只顯示包含手套的項目集。 如此可讓您專注於客戶購買手套及其他一些項目的交易。  
   
      **[篩選項目集]** 選項也會顯示您先前已用過的篩選清單。  
   
@@ -142,7 +141,7 @@ ms.locfileid: "66088473"
  [回到頁首](#BKMK_ViewerTabs)  
   
 ## <a name="more-about-association-models"></a>進一步了解關聯模型  
- 您可以使用 [**流覽]** 功能來開啟和探索使用 Microsoft 關聯規則演算法建立的任何模型。 這包括使用購物籃分析所建立的模型[&#40;適用于 Excel&#41;工具的資料表 AnalysisTools](shopping-basket-analysis-table-analysistools-for-excel.md) 、**資料表的分析工具**功能區[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，或中的。  
+ 您可以使用 [**流覽]** 功能來開啟和探索使用 Microsoft 關聯規則演算法建立的任何模型。 這包括使用購物籃分析所建立的模型[&#40;適用于 Excel&#41;工具的資料表 AnalysisTools](shopping-basket-analysis-table-analysistools-for-excel.md) 、**資料表的分析工具**功能區，或中的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
  如果您使用購物籃分析工具建立關聯規則模型，許多進階選項將會自動為您設定。  
   

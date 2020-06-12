@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70ff168f2be759c7c5bb405868d7e569362f8430
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081782"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528608"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>維度設計師 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [維度設計師]，即可瀏覽維度所包含的資料，以及修改現有維度的各種屬性 (Property)：屬性 (Attribute)、階層、層級、屬性 (Attribute) 關聯性和翻譯。  
@@ -32,7 +31,7 @@ ms.locfileid: "66081782"
   
     -   按兩下維度。  
   
-## <a name="pages"></a>頁面  
+## <a name="pages"></a>Pages  
  [維度設計師] 包含下列頁面：  
   
  [維度結構](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  

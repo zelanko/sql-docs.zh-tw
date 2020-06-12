@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b110af78-8eee-4817-93da-d63c1603f6c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1f41b6138093b5ecbd6793a5c5210a9e8c6c412b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e36019b36426dd596edc616a739aba6730cf62b0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069657"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538340"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>選取案例層級資料行 (資料採礦精靈)
   使用 [選取案例層級資料行]**** 頁面，即可從基礎來源 Cube 維度中，選取將成為採礦結構之案例層級資料行的屬性和量值。  
@@ -27,7 +26,7 @@ ms.locfileid: "66069657"
   
  **如需詳細資訊，請參閱** [資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **相關的屬性和量值**  
  選取將成為採礦結構之案例層級資料行的屬性和量值。 所有選取的屬性都必須在階層中，或是已啟用其屬性階層。  
   

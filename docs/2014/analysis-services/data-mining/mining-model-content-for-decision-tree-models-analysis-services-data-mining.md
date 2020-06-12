@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5d8d0591c99e52071270689941adc45af7a835
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083665"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521586"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的模型專用的採礦模型內容。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。 請務必記住，Microsoft 決策樹演算法是一種混合式演算法，可以建立功能非常不同的模型：決策樹可以代表關聯、規則，甚至線性迴歸。 樹狀結構基本上相同，但是您解譯資訊的方式將取決於建立模型的目的。  
@@ -72,7 +71,7 @@ ms.locfileid: "66083665"
  NODE_TYPE  
  在決策樹模型中，會建立下列類型的節點：  
   
-|節點類型|描述|  
+|節點類型|Description|  
 |---------------|-----------------|  
 |1 (模型)|模型的根節點。|  
 |2 (樹狀結構)|在模型中分類樹狀結構的父節點。 標示為 **「All」**。|  
@@ -176,7 +175,7 @@ ms.locfileid: "66083665"
 |Age >= 30|Age >= 30 而且 Gender = Male|  
 ||Age >= 30 而且 Gender = Female|  
 |Age < 30|Age < 30 而且 Gender = Male|  
-||年齡\< 30 和性別 = 女性|  
+||年齡 \< 30 和性別 = 女性|  
   
  當您使用決策樹模型進行預測時，此模型會採用您所提供的屬性當做引數，然後遵照屬性的路徑向下到樹狀結構。 一般而言，所有預測都會到分葉，而內部節點則僅用於分類。  
   
@@ -189,7 +188,7 @@ ms.locfileid: "66083665"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|顯示區別相對於父節點之該特定節點的屬性。 節點標題會定義以母體為基礎之分岔條件的子區段。 例如，如果分割是在 [Age]，而它是三向分割，則三個子節點的節點標題可能是 "[Age] < 40"、"40 <= [Age] \< 50"、"[Age] >= 50"。|  
+|**NODE_CAPTION**|顯示區別相對於父節點之該特定節點的屬性。 節點標題會定義以母體為基礎之分岔條件的子區段。 例如，如果分割是在 [Age]，而它是三向分割，則三個子節點的節點標題可能是 "[Age] < 40"、"40 <= [Age] \< 50", "[Age] > = 50"。|  
 |**NODE_DESCRIPTION**|包含區別各節點之屬性的完整清單，從模型父節點開始。 例如，Product name = Apple 而且 Color = Red。|  
   
 ###  <a name="node-rule-and-marginal-rule"></a><a name="NodeRule"></a> 節點規則與臨界規則  
@@ -225,7 +224,7 @@ ms.locfileid: "66083665"
 |Age < 30|40|Age < 30 而且 Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 而且 Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- 在所有模型中進行小調整就可以計算可能的遺漏值。 針對連續屬性，每個值或值範圍都會以狀態表示（例如，Age \<30、age = 30 和 Age >30），而且機率的計算方式如下：狀態存在（值 = 1），其他狀態存在（值 = 0），狀態為。 `Missing` 如需如何調整機率來表示遺漏值的詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
+ 在所有模型中進行小調整就可以計算可能的遺漏值。 針對連續屬性，每個值或值範圍都會以狀態表示（例如，Age \<30, Age = 30, and Age > 30），而且機率的計算方式如下：狀態存在（值 = 1），其他狀態存在（值 = 0），狀態為 `Missing` 。 如需如何調整機率來表示遺漏值的詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
   
  每個節點的機率幾乎都直接從分佈計算，如下所示：  
   
@@ -240,12 +239,12 @@ ms.locfileid: "66083665"
   
  如需如何計算連續值之變異數的資訊，請參閱[線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
-#### <a name="value-type"></a>值類型  
+#### <a name="value-type"></a>數值類型  
  值類型資料行會提供 NODE_DISTRIBUTION 資料表中的其他資料行所提供之數值意義的相關資訊。 您可以使用查詢中的值類型，從巢狀資料表擷取特定的資料列。 如需範例，請參閱 [決策樹模型查詢範例](decision-trees-model-query-examples.md)。  
   
  在 <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> 列舉的類型中，下列類型用於分類樹狀結構。  
   
-|值類型|描述|  
+|值類型|Description|  
 |----------------|-----------------|  
 |1 (遺漏)|指出與遺漏值相關的計數、機率或其他統計資料。|  
 |4 (離散)|指出與離散或離散化值相關的計數、機率或其他統計資料。|  

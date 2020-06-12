@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 2f7cedb6-9a83-49c4-9cc6-883d4f147a68
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26d4cacc826750b74dd8bb5aa14f270e643edc44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 678dace2a8695b5da0788aa95b66adc3ada6af98
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081060"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544399"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>一般 (採礦結構對話方塊) (Analysis Services - 資料採礦)
   在 **SQL Server Management Studio** 中，使用 **[採礦結構屬性]** 對話方塊的 **[一般]** 頁面，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中採礦結構的一般屬性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

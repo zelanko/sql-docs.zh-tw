@@ -11,23 +11,22 @@ f1_keywords:
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d01aeb00c7cf96bf993867388d6a2cbbede82d90
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072737"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547307"
 ---
 # <a name="translations-in-multidimensional-models"></a>多維度模型中的翻譯
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的多語系支援是使用翻譯來完成的。 翻譯包含可以使用多種語言呈現之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的語言識別碼和屬性繫結。 例如，您可以定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的翻譯，以指定的語言來呈現該資料庫的標題和描述。 如需翻譯的詳細資訊，請參閱[Cube 翻譯](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)。  
+  中的多語系支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是使用翻譯來完成的。 翻譯包含可以使用多種語言呈現之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的語言識別碼和屬性繫結。 例如，您可以定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的翻譯，以指定的語言來呈現該資料庫的標題和描述。 如需翻譯的詳細資訊，請參閱[Cube 翻譯](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)。  
   
 ## <a name="defining-translations"></a>定義翻譯  
  您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中定義翻譯，方法是針對要翻譯的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件使用適當的設計師。 定義翻譯會建立 `Translation` 物件，並與適當的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件相關聯，其中會以指定的語言和指定的明確常值，來設定相關聯之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的屬性。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的下列物件和屬性有與其相關聯的翻譯：  
   
-|Object|屬性|設計師|  
+|物件|屬性|Designer|  
 |------------|----------------|--------------|  
 |資料庫|`Caption`, `Description`|[一般 &#40;資料庫設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../general-database-designer-analysis-services-multidimensional-data.md)|  
 |Cube|`Caption`, `Description`|[翻譯 &#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
@@ -40,11 +39,11 @@ ms.locfileid: "66072737"
 |命名集|`Caption`|[翻譯 &#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |「導出成員」|`Caption`|[翻譯 &#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |資料庫維度|`Caption`, `AttributeAllMember`|[翻譯 &#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|屬性|`Caption`、 `CaptionColumn` <sup>1</sup>、 `AttributeHierarchyDisplayFolder`、 `NamingTemplate`、`MembersWithDataCaption`|[翻譯 &#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|屬性|`Caption`、 `CaptionColumn` <sup>1</sup>、 `AttributeHierarchyDisplayFolder` 、 `NamingTemplate` 、`MembersWithDataCaption`|[翻譯 &#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |階層|`Caption`, `AllMemberName`|[翻譯 &#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |層級|`Caption`|[翻譯 &#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
- <sup>1</sup>屬性`CaptionColumn` （attribute）的屬性（property）可系結至資料來源視圖中的資料行，而且可以使用針對實例所指定以外的 Windows 定序，而不像其他翻譯。  
+ <sup>1</sup> `CaptionColumn` 屬性（attribute）的屬性（property）可系結至資料來源視圖中的資料行，而且可以使用針對實例所指定以外的 Windows 定序，而不像其他翻譯。  
   
 ### <a name="defining-attribute-translations"></a>定義屬性翻譯  
  與資料庫維度中之屬性相關聯的翻譯和其他翻譯在處理方式上有下列不同：  
@@ -53,7 +52,7 @@ ms.locfileid: "66072737"
   
 -   為該執行個體指定可使用之定序以外的 Windows 定序，以便針對翻譯中指定的語言適當地排序該屬性中的成員。  
   
- 您可以使用中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [**屬性資料翻譯**] 對話方塊，來定義資料庫維度中之屬性的翻譯。 如需 [**屬性資料翻譯**] 對話方塊的詳細資訊，請參閱[&#40;Analysis Services 多維度資料&#41;中的 [屬性資料翻譯] 對話方塊](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md)。  
+ 您可以使用中的 [**屬性資料翻譯**] 對話方塊 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，來定義資料庫維度中之屬性的翻譯。 如需 [**屬性資料翻譯**] 對話方塊的詳細資訊，請參閱[&#40;Analysis Services 多維度資料&#41;中的 [屬性資料翻譯] 對話方塊](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md)。  
   
 ## <a name="resolving-translations"></a>解析翻譯  
  如果用戶端應用程式要求指定之語言識別碼中的資訊， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體會嘗試將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的資料和中繼資料解析成最接近的語言識別碼。 如果用戶端應用程式未指定預設語言，或指定中性地區設定識別碼 (0) 或處理序預設語言識別碼 (1024)，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用執行個體的預設語言來傳回 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的資料和中繼資料。  

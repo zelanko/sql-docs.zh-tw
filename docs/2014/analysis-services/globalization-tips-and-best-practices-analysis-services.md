@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2018c557b8fd7dffdceb14c0a872595a3ce21da
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874411"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544339"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化秘訣和最佳作法 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** 僅限多維度  
@@ -102,7 +101,7 @@ ms.locfileid: "70874411"
   
 -   將 `Locale Identifier=1036` 新增至連接字串。 儲存並關閉檔案。  
   
--   開啟 Excel |**資料** | **現有的連接**。 將清單篩選到只剩下這部電腦上的連接檔案。 尋找 Adventure Works 的連接 (請仔細查看名稱；您可能會有一個以上的連接)。 開啟連線。  
+-   開啟 Excel |**資料**  | **現有的連接**。 將清單篩選到只剩下這部電腦上的連接檔案。 尋找 Adventure Works 的連接 (請仔細查看名稱；您可能會有一個以上的連接)。 開啟連線。  
   
      您應該會看到 Adventure Works 範例資料庫中的法文翻譯。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "70874411"
   
  在 Management Studio 中，您可以指定伺服器連接的地區設定識別碼。  
   
--   在物件總管 |**連接** | **Analysis Services**Analysis Services | **選項**]，按一下 [**其他連接參數**] 索引標籤。  
+-   在物件總管 |**連接**  | **Analysis Services**  | **選項**中，按一下 [**其他連接參數**] 索引標籤。  
   
 -   輸入 `Local Identifier=1036` ，然後按一下 [連接] ****。  
   

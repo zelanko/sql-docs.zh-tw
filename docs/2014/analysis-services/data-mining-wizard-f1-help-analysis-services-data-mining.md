@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44fd7290f48c995ae9cfc92476f1a33fbdc0e8be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1164689720cbe65d406160b457b3016998000f0c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086305"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525735"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>資料採礦精靈 F1 說明 (Analysis Services - 資料採礦)
   使用 **[資料採礦精靈]** ，即可建立新的採礦結構和選擇性的相關採礦模型。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77b65e8361287ba09fa7f28cd74dd5f88d188f97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085550"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523964"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>使用 XMLA 建立資料採礦查詢
   您可以使用 AMO、DMX 或 XML/A 來針對資料採礦物件建立各種查詢。  
@@ -44,9 +43,9 @@ ms.locfileid: "66085550"
   
      在 [結果]**** 窗格中會傳回結構描述資料列集的清單，其中包含目前執行個體提供之所有資料列集的資料列集名稱和資料列集資料行。  
   
-2.  在 [**查詢**] 窗格中，將游標放在 [ ** \<限制清單]>** ，然後按下 enter 以加入新的一行。  
+2.  在 [**查詢**] 窗格中，將游標放在後面， **\<Restriction List>** 然後按 enter 以加入新的行。  
   
-3.  將游標放在空白行，並輸入** \<SchemaName>DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName>**  
+3.  將游標放在空白行，然後輸入** \<SchemaName> DMSCHEMA_MINING_MODEL_CONTENT \</SchemaName> **  
   
      完整的限制區段應顯示如下：  
   
@@ -60,7 +59,7 @@ ms.locfileid: "66085550"
   
      `</Restrictions>`  
   
-4.  按一下 **[執行]**。  
+4.  按一下 **[執行]** 。  
   
      [結果]**** 窗格會顯示指定之結構描述資料列集的資料行名稱清單。  
   
@@ -94,7 +93,7 @@ ms.locfileid: "66085550"
   
      `</Restrictions>`  
   
-5.  按一下 **[執行]**。  
+5.  按一下 **[執行]** 。  
   
      [結果] 窗格會顯示結構描述定義，以及指定之模型的值。  
   

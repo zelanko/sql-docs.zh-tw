@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e55e6833b1fdeb600ddecdbf70f615565a38bb05
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493768"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542260"
 ---
 # <a name="defining-and-browsing-perspectives"></a>定義和瀏覽檢視方塊
   檢視方塊可以針對特定的用途，簡化 Cube 的檢視。 根據預設，使用者可以看到 Cube 中他們擁有權限的所有元素。 當使用者檢視整個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 時，他們所檢視的就是該 Cube 的預設檢視方塊。 整個 Cube 的檢視可能非常複雜，讓使用者難以瀏覽，尤其有的使用者只需要與一小部分的 Cube 互動，即可滿足他們的商業智慧和報告需求。  
@@ -41,7 +40,7 @@ ms.locfileid: "69493768"
   
      ![檢視方塊名稱資料行中的檢視方塊](../../2014/tutorials/media/l9-perspectives-2.gif "檢視方塊名稱資料行中的檢視方塊")  
   
-3.  將 [觀點名稱] `Internet Sales`變更為。  
+3.  將 [觀點名稱] 變更為 `Internet Sales` 。  
   
 4.  在下一個資料列上，將 [DefaultMeasure] 設定為 [網際網路銷售 - 銷售量]****。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "69493768"
   
 1.  在 [檢視方塊]**** 索引標籤的工具列上，按一下 [新增檢視方塊]**** 按鈕。  
   
-2.  將新觀點的名稱變更為`Reseller Sales`。  
+2.  將新觀點的名稱變更為 `Reseller Sales` 。  
   
 3.  將 [轉售商銷售 - 銷售量]**** 設為預設量值。  
   
@@ -131,7 +130,7 @@ ms.locfileid: "69493768"
   
 1.  在 [檢視方塊]**** 索引標籤的工具列上，按一下 [新增檢視方塊]**** 按鈕。  
   
-2.  將新觀點的名稱變更為`Sales Summary`。  
+2.  將新觀點的名稱變更為 `Sales Summary` 。  
   
     > [!NOTE]  
     >  您不可以將導出量值指定為預設量值。  
@@ -176,13 +175,13 @@ ms.locfileid: "69493768"
   
      ![Excel 中的資料連線精靈](../../2014/tutorials/media/l9-perspectives-3b.gif "Excel 中的資料連線精靈")  
   
-6.  在`Internet Sales` [**透視圖**] 清單中選取，然後在 [中繼資料] 窗格中檢查量值和維度。  
+6.  `Internet Sales`在 [**透視圖**] 清單中選取，然後在 [中繼資料] 窗格中檢查量值和維度。  
   
      請注意，只有那些針對 [網際網路銷售] 檢視方塊所指定的物件才會顯示出來。  
   
 7.  在 [中繼資料] 窗格中，展開 [量值]****。  
   
-     請注意，只有`Internet Sales`量值群組會出現，以及 [**網際網路毛利率**] 和 [**網際網路銷售與所有產品的比率**] 導出成員。  
+     請注意，只有 `Internet Sales` 量值群組會出現，以及 [**網際網路毛利率**] 和 [**網際網路銷售與所有產品的比率**] 導出成員。  
   
 8.  在模型中，再次選取 Excel。 選取 `Sales Summary`。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7dc221f6a81281970a9ad62ba7b16397e40e0648
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9cf77bf6c583a2f286c2b02d392314e9a2dad2e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084714"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522564"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>部署資料採礦方案
   資料採礦程序的最後一個步驟就是將模型部署到實際執行環境。 部署作業非常重要，因為可將模型提供給使用者，好讓您可以執行以下任何工作：  

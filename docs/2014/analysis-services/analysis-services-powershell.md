@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a6bbeab13d3a29c9dd7cf769dd28d776d3ae229
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782646"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528024"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 包含 Analysis Services PowerShell (SQLAS) 提供者和指令程式，讓您可以使用 Windows PowerShell 來導覽、管理和查詢 Analysis Services 物件。  
@@ -29,7 +28,7 @@ ms.locfileid: "72782646"
 -   例行作業的工作特定指令程式，例如處理、角色管理、資料分割管理、備份和還原。  
   
 ## <a name="in-this-article"></a>本文內容  
- [必要條件](#bkmk_prereq)  
+ [先決條件](#bkmk_prereq)  
   
  [支援的 Analysis Services 版本和模式](#bkmk_vers)  
   
@@ -39,14 +38,14 @@ ms.locfileid: "72782646"
 
 如需語法和範例的詳細資訊，請參閱[Analysis Services PowerShell 參考](/sql/analysis-services/powershell/analysis-services-powershell-reference)。
 
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 先決條件  
  您必須安裝 Windows PowerShell 2.0。 此元件預設安裝在較新版的 Windows 作業系統上。 如需詳細資訊，請參閱[安裝 Windows PowerShell 2.0](https://msdn.microsoft.com/library/ff637750.aspx)
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
   
  您必須安裝包含 SQL Server PowerShell (SQLPS) 模組與用戶端程式庫的 SQL Server 功能。 最簡單的安裝方式是安裝 SQL Server Management Studio，其中就會自動包含 PowerShell 功能與用戶端程式庫。 SQL Server PowerShell (SQLPS) 模組包含所有 SQL Server 功能的 PowerShell 提供者和指令程式，包括 SQLASCmdlets 模組和 SQLAS 提供者 (用於導覽 Analysis Services 物件階層)。  
   
- 您必須先匯入**SQLPS**模組，才能使用`SQLAS`提供者和 Cmdlet。 SQLAS 提供者是`SQLServer`提供者的延伸模組。 匯入 SQLPS 模組的方式有許多種。 如需詳細資訊，請參閱 [匯入 SQLPS 模組](../../2014/database-engine/import-the-sqlps-module.md)。  
+ 您必須先匯入**SQLPS**模組，才能使用 `SQLAS` 提供者和 Cmdlet。 SQLAS 提供者是提供者的延伸模組 `SQLServer` 。 匯入 SQLPS 模組的方式有許多種。 如需詳細資訊，請參閱 [匯入 SQLPS 模組](../../2014/database-engine/import-the-sqlps-module.md)。  
   
  您必須啟用遠端管理和檔案共用，才能從遠端存取 Analysis Services 執行個體。 如需詳細資訊，請參閱本主題中的[啟用遠端系統管理](#bkmk_remote)。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "72782646"
 |表格式執行個體與資料庫|支援本機和遠端管理。<br /><br /> 如需詳細資訊，請參閱8月2011的 blog，瞭解如何[使用 PowerShell 管理表格式模型](https://go.microsoft.com/fwlink/?linkID=227685)。|  
 |PowerPivot for SharePoint 執行個體與資料庫|有限支援。 您可以使用 HTTP 連接和 SQLAS 提供者來檢視執行個體與資料庫資訊。<br /><br /> 但是，不支援使用指令程式。 您不得使用 Analysis Services PowerShell 備份與還原記憶體中 InMemory PowerPivot 資料庫，也不得加入或移除角色、處理資料，或執行任意的 XMLA 指令碼。<br /><br /> 基於組態目的，PowerPivot for SharePoint 具有個別提供的內建 PowerShell 支援。 如需詳細資訊，請參閱[PowerPivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。|  
 |本機 Cube 的原生連接<br /><br /> "Data Source = c:\backup\test.cub"|不支援。|  
-|SharePoint 中 BI 語意模型 (.bism) 連接檔案的 HTTP 連接<br /><br /> 「資料來源 =http://server/shared_docs/name.bism」|不支援。|  
+|SharePoint 中 BI 語意模型 (.bism) 連接檔案的 HTTP 連接<br /><br /> 「資料 http://server/shared_docs/name.bism 源 =」|不支援。|  
 |PowerPivot 資料庫的內嵌連接<br /><br /> "Data Source = $Embedded $"|不支援。|  
 |Analysis Services 預存程序中的本機伺服器內容<br /><br /> "Data Source = *"|不支援。|  
   
@@ -82,7 +81,7 @@ ms.locfileid: "72782646"
   
 3.  認證物件所提供的使用者名稱和密碼會解析 Windows 使用者識別。 Analysis Services 會以目前使用者的身分使用此識別。 如果使用者不是 Windows 使用者，或缺少執行所要求之作業的足夠權限，則要求將會失敗。  
   
- 若要建立認證物件，您可以使用 Get-Credential 指令程式，向操作員收集認證。 接著，您可以在命令中使用連接至 Analysis Services 的認證物件。 下列範例將說明其中一個方法。 在此範例中，連接是針對 HTTP 存取所設定`SQLSERVER:\SQLAS\HTTP_DS`的本機實例（）。  
+ 若要建立認證物件，您可以使用 Get-Credential 指令程式，向操作員收集認證。 接著，您可以在命令中使用連接至 Analysis Services 的認證物件。 下列範例將說明其中一個方法。 在此範例中，連接是針對 HTTP 存取所設定的本機實例（ `SQLSERVER:\SQLAS\HTTP_DS` ）。  
   
 ```powershell
 $cred = Get-Credential adventureworks\dbadmin  
@@ -201,7 +200,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  如果您使用本主題中的指示設定伺服器以進行 HTTP 存取，HTTP 連線會很有用： [Internet Information Services &#40;IIS&#41; 8.0 設定 Http 存取 Analysis Services](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- 假設的伺服器 URL 為http://localhost/olap/msmdpump.dll，連接看起來可能如下所示：  
+ 假設的伺服器 URL 為 http://localhost/olap/msmdpump.dll ，連接看起來可能如下所示：  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  

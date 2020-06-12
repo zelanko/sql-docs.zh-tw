@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8af87605bb8c4c2cf4bcd53cce3f7ab0019b7d94
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087973"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527514"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>分類矩陣 (SQL Server 資料採礦增益集)
   ![資料採礦功能區中的分類矩陣按鈕](media/dmc-cmatrix.gif "資料採礦功能區中的分類矩陣按鈕")  
@@ -74,7 +73,7 @@ ms.locfileid: "66087973"
   
      精靈會建立報表，其中包含分類矩陣和關於分析的其他詳細資料。 此報表會儲存為 Excel 資料表，報表上方的摘要指出正確預測的案例數目，以及錯誤的預測數目。  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
   
 -   若要建立分類矩陣，您必須能夠存取可評估精確度的現有採礦模型。 此工具無法用來評估預測模型和關聯模型。  
   

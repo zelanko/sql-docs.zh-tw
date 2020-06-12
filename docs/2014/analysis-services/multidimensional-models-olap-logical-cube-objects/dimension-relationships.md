@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2334c1a97bb4172fff70550dbece5376eb1cb9d7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797616"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545279"
 ---
 # <a name="dimension-relationships"></a>維度關聯性
-  維度使用方式會定義 Cube 維度和 Cube 內量值群組之間的關聯性。 Cube 維度是在特定 Cube 中使用之資料庫維度的執行個體。 Cube 可以，而且經常會，具有與量值群組沒有直接關聯的 Cube 維度，但可能會透過其他維度或量值群組，間接地與此量值群組相關。 當您將資料庫維度或量值群組加入至 cube 時[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，會嘗試藉由檢查 cube 的資料來源視圖中的維度資料表與事實資料表之間的關聯性，以及檢查維度中屬性之間的關聯性，來判斷維度的使用方式。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動設定其可偵測到之關聯性的維度使用方式設定。  
+  維度使用方式會定義 Cube 維度和 Cube 內量值群組之間的關聯性。 Cube 維度是在特定 Cube 中使用之資料庫維度的執行個體。 Cube 可以，而且經常會，具有與量值群組沒有直接關聯的 Cube 維度，但可能會透過其他維度或量值群組，間接地與此量值群組相關。 當您將資料庫維度或量值群組加入至 cube 時，會 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 嘗試藉由檢查 cube 的資料來源視圖中的維度資料表與事實資料表之間的關聯性，以及檢查維度中屬性之間的關聯性，來判斷維度的使用方式。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動設定其可偵測到之關聯性的維度使用方式設定。  
   
  維度與量值群組之間的關聯性，是由維度和參與關聯性的事實資料表所組成的，而資料粒度屬性則會指定特定量值群組中之維度的資料粒度。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "72797616"
  如需參考關聯性的詳細資訊，請參閱[定義參考的關聯性和參考的關聯性屬性](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
   
 ## <a name="fact-dimension-relationships"></a>事實維度關聯性  
- 事實維度 (一般稱為變質維度) 是從事實資料表內的屬性資料行 (而非從維度資料表內的屬性資料行) 建構而來的標準維度。 有時候會將有用的維度資料儲存在事實資料表中，以減少資料的重複。 例如，下圖顯示[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]範例資料庫中的**FactResellerSales**事實資料表。  
+ 事實維度 (一般稱為變質維度) 是從事實資料表內的屬性資料行 (而非從維度資料表內的屬性資料行) 建構而來的標準維度。 有時候會將有用的維度資料儲存在事實資料表中，以減少資料的重複。 例如，下圖顯示範例資料庫中的**FactResellerSales**事實資料表 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 。  
   
  ![事實資料表中的資料行可支援維度](../../analysis-services/dev-guide/media/as-factdim.gif "事實資料表中的資料行可支援維度")  
   

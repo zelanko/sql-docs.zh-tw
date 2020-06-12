@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5dbf64a128cb21c7ac0e3d956a3dbdc6b320317
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2342cde485968bb40c523b9c7c3ae68d889f6fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085375"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523704"
 ---
 # <a name="create-a-relational-mining-structure"></a>建立關聯式採礦結構
   大多數的資料採礦模型都是根據關聯式資料來源。 建立關聯式資料採礦模型的優點如下：您可以組合隨選資料及定型和更新模型，而不需要經歷建立 Cube 的複雜程序。  
@@ -42,7 +41,7 @@ ms.locfileid: "66085375"
   
  [如何及為何啟用鑽研](#BKMK_DrillThru)  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  首先，您必須擁有現有的資料來源。 您可以使用資料來源設計師來設定資料來源 (如果沒有資料來源存在的話)。 如需詳細資訊，請參閱 [建立資料來源 &#40;SSAS 多維度&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)。  
   
  接下來，請使用資料來源檢視精靈，將必要的資料組合成單一資料來源檢視。 如需如何使用資料來源檢視選取、轉換、篩選或管理資料的詳細資訊，請參閱 [多維度模型中的資料來源檢視](../multidimensional-models/data-source-views-in-multidimensional-models.md)。  

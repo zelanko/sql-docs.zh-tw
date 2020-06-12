@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 777f2c23-1c1c-4b72-9d19-48a4866551f8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 579af162998ffaa7c9483a6e6d29a87f98e96fac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29ed96b46660808ff54d6997ca438eb0f5a60b8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077883"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541710"
 ---
 # <a name="mdx-query-editor-analysis-services---multidimensional-data"></a>MDX 查詢編輯器 (Analysis Services - 多維度資料)
   使用 MDX 查詢編輯器即可設計和執行以多維度運算式 (MDX) 語言撰寫的陳述式和指令碼。  
   
-## <a name="features"></a>特性  
+## <a name="features"></a>功能  
   
 -   在 [MDX 查詢編輯器] 的查詢編輯器窗格中鍵入指令碼。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66077883"
   
 |詞彙|定義|  
 |----------|----------------|  
-|**查詢編輯器視窗**|鍵入要由 MDX 查詢編輯器執行的 MDX 陳述式和指令碼。<br /><br /> 查詢編輯器的內容功能表提供下列選項：<br /><br /> **剪**下：將目前選取範圍複製到剪貼簿，並從 [查詢編輯器] 視窗中移除選取範圍。<br /><br /> **複製**：將目前選取範圍複製到剪貼簿。<br /><br /> **貼**上：將剪貼簿的內容貼入目前的選取範圍。<br /><br /> **連接**：開啟 [連接到伺服器]**** 對話方塊，以建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。<br /><br /> **中斷連接**：中斷目前查詢編輯器與[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例的連線。<br /><br /> **中斷所有查詢的連接**：中斷連接所有目前開啟的查詢編輯器。<br /><br /> **變更連接**：開啟 [**連接到伺服器**] 對話方塊，以建立與其他[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例的連接。<br /><br /> **在物件總管中開啟伺服器**：開啟[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]目前查詢編輯器連接的目標實例**物件總管**。<br /><br /> **執行**：執行選取的程式碼，如果未選取任何程式碼，則執行目前查詢編輯器中的完整程式碼。<br /><br /> **屬性視窗**：在中**Properties** [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，顯示目前查詢視窗的 [屬性] 視窗。<br /><br /> **查詢選項**：顯示 [**查詢選項**] 對話方塊。|  
+|**查詢編輯器視窗**|鍵入要由 MDX 查詢編輯器執行的 MDX 陳述式和指令碼。<br /><br /> 查詢編輯器的內容功能表提供下列選項：<br /><br /> **剪**下：將目前選取範圍複製到剪貼簿，並從 [查詢編輯器] 視窗中移除選取範圍。<br /><br /> **複製**：將目前選取範圍複製到剪貼簿。<br /><br /> **貼**上：將剪貼簿的內容貼入目前的選取範圍。<br /><br /> **連接**：開啟 [連接到伺服器]**** 對話方塊，以建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。<br /><br /> **中斷連接**：中斷目前查詢編輯器與實例的連線 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。<br /><br /> **中斷所有查詢的連接**：中斷連接所有目前開啟的查詢編輯器。<br /><br /> **變更連接**：開啟 [**連接到伺服器**] 對話方塊，以建立與其他實例的連接 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。<br /><br /> **在物件總管中開啟伺服器**：開啟 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 目前查詢編輯器連接的目標實例**物件總管**。<br /><br /> **執行**：執行選取的程式碼，如果未選取任何程式碼，則執行目前查詢編輯器中的完整程式碼。<br /><br /> **屬性視窗**：在中，顯示目前查詢視窗的 [**屬性**] 視窗 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。<br /><br /> **查詢選項**：顯示 [**查詢選項**] 對話方塊。|  
 |**中繼資料視窗**|顯示目前連接之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的中繼資料。|  
 |**Cube**|選取目前連接之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫內的 Cube，即可在 **[中繼資料]** 索引標籤中顯示與 Cube 相關聯的中繼資料。|  
 |**中繼資料**|顯示在 **[Cube]** 中選取之 Cube 的中繼資料，包括量值群組與量值、關鍵效能指標、維度、階層、層級、成員及成員屬性。 若要擷取物件的完整索引鍵，請：<br /><br /> 從 **[中繼資料]** 索引標籤，將物件拖曳至查詢窗格。<br /><br /> 以滑鼠右鍵按一下物件，然後選取 [複製]****，再以滑鼠右鍵按一下查詢窗格，然後選取 [貼上]****。|  

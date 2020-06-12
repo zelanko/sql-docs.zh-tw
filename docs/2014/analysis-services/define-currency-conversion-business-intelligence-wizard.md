@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 37dd65b7-9d8d-44ad-b316-96a92c622472
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b463363e2e239c348c626cf1ef1d61e621877814
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3131b38ad76f9b8cc51fac7cea2f82fbd788e086
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082144"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528824"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>定義貨幣轉換 (商業智慧精靈)
   使用 [定義貨幣轉換]**** 頁面來檢閱多維度運算式 (MDX) 指令碼，該指令碼包含 [商業智慧精靈] 所產生的貨幣轉換功能。 然後，您可以使用此精靈產生的 MDX 指令碼，在 Cube 的 MDX 指令碼中覆寫或附加之前定義的貨幣轉換功能。  
@@ -37,7 +36,7 @@ ms.locfileid: "66082144"
 >   
 >  如果您變更或移除這些註解，商業智慧精靈可能無法偵測到任何之前定義的貨幣轉換。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **新增貨幣轉換指令碼**  
  顯示由目前商業智慧精靈工作階段產生的 MDX 指令碼。  
   

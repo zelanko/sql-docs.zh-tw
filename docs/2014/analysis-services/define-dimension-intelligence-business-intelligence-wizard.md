@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 1089a788-763f-4c3e-80e3-b625e0728343
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a66a940e916cc05bb3fe502cb6f4d10a9c2fae6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 088006037fc9941021270287011f42d8d4bd4299
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082136"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528814"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>定義維度智慧 (商業智慧精靈)
   使用 **[定義維度智慧]** 頁面，即可將現有的維度屬性對應到所指定維度類型的屬性類型。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **維度類型**  
  選取要與所選取維度建立關聯的維度類型。 您在此選項中的選擇，會影響 **[維度屬性]** 方格中可用的屬性類型。  
   

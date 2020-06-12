@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00554c9e56bebe12a5e63c9d50e4a2fa59149599
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289136"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543820"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的記錄作業
   Analysis Services 實例會將伺服器通知、錯誤和警告記錄到 msmdsrv.exe 檔中，您安裝的每個實例各一個。 管理員可以參考此記錄檔，獲得例行和異常等事件的深入見解。 最新版本的記錄功能已經過增強，可以加入更多資訊。 記錄檔記錄現在包含產品版本和版本資訊，以及處理器、記憶體、連接及封鎖事件。 您可以在 [記錄改進](https://support.microsoft.com/kb/2965035)檢閱整個變更清單。  
@@ -34,7 +33,7 @@ ms.locfileid: "79289136"
   
 -   [迷你傾印 (.mdmp) 檔案](#bkmk_mdmp)  
   
--   [祕訣和最佳作法](#bkmk_tips)  
+-   [訣竅和最佳做法](#bkmk_tips)  
   
 > [!NOTE]  
 >  如果您正在尋找記錄的相關資訊，您也可能想要追蹤顯示處理和查詢執行路徑的作業。 臨機操作和持續性追蹤 (例如稽核 Cube 存取) 的追蹤物件，以及如何充分運用可以在此頁面上找到連結的 Flight Recorder、SQL Server Profiler 和 xEvent 的建議： [監視 Analysis Services 執行個體](monitor-an-analysis-services-instance.md)。  
@@ -42,11 +41,11 @@ ms.locfileid: "79289136"
 ##  <a name="location-and-types-of-logs"></a><a name="bkmk_location"></a>記錄檔的位置和類型  
  Analysis Services 提供如下所述的記錄檔。  
   
-|檔案名稱或位置|類型|用於|依預設開啟|  
+|檔案名稱或位置|類型|用途|依預設開啟|  
 |---------------------------|----------|--------------|-------------------|  
-|Msmdsrv.log|錯誤記錄檔|例行監視和基本疑難排解|是|  
-|關聯式資料庫中的 OlapQueryLog 資料表|查詢記錄|收集使用方式的最佳化精靈的輸入|否|  
-|Sqldmp<guid>.mdmp\<guid>. .mdmp 檔案|當機和例外狀況|深入疑難排解|否|  
+|Msmdsrv.log|錯誤記錄檔|例行監視和基本疑難排解|Yes|  
+|關聯式資料庫中的 OlapQueryLog 資料表|查詢記錄|收集使用方式的最佳化精靈的輸入|No|  
+|Sqldmp<guid>.mdmp \<guid> . .mdmp 檔案|當機和例外狀況|深入疑難排解|No|  
   
  我們強烈建議使用下列連結，以取得本主題中未涵蓋的其他資訊資源： [來自 Microsoft 支援的初始資料收集提示](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "79289136"
   
 2.  授與 Analysis Services 服務帳戶資料庫的足夠權限。 帳戶需要建立資料表、寫入資料表，並從資料表讀取的權限。  
   
-3.  在 SQL Server Management Studio 中，以滑鼠右鍵按一下**Analysis Services** | **屬性** | ]**[一般**]，將**CreateQueryLogTable**設定為 [true]。  
+3.  在 SQL Server Management Studio 中，以滑鼠右鍵按一下**Analysis Services**  |  **屬性**]  |  **[一般**]，將**CreateQueryLogTable**設定為 [true]。  
   
 4.  如果您想要以不同的速率對查詢取樣，或使用不同的資料表名稱，請選擇性地變更 **QueryLogSampling** 或 **QueryLogTableName** 。  
   

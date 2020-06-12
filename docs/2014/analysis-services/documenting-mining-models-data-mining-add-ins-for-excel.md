@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a663e11-e40c-4708-ad18-fabb6c976fa4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92ed5c43fa2b7484485b915d42946121487386d9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081593"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528484"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>記錄採礦模型 (適用於 Excel 的資料採礦增益集)
   ![資料採礦功能區中的文件模型按鈕](media/dmc-docmodel.gif "資料採礦功能區中的文件模型按鈕")  
@@ -37,7 +36,7 @@ ms.locfileid: "66081593"
   
 4.  在 [**選取檔詳細資料**] 對話方塊中，選擇下列兩個選項的其中一個： [**完整資訊**] 或 [**摘要資訊**]。  
   
-5.  按一下 [完成]  。  
+5.  按一下 [完成] 。  
   
 6.  Wizard 會自動建立新的工作表，其中包含指定的報表，標題為**Model 檔**，  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66081593"
 ||||  
 |-|-|-|  
 |**中繼資料**|模型中繼資料|演算法參數與值|  
-||資料行中繼資料|資料行名稱<br /><br /> 使用量<br /><br /> 資料類型<br /><br /> 內容類型<br /><br /> 值 (離散值的清單或值的範圍)|  
+||資料行中繼資料|資料行名稱<br /><br /> 使用方式<br /><br /> 資料類型<br /><br /> 內容類型<br /><br /> 值 (離散值的清單或值的範圍)|  
 |**模型統計資料**|連續資料行|平均值<br /><br /> 最小值<br /><br /> 最大值<br /><br /> 均方根誤差<br /><br /> 平均絕對誤差<br /><br /> 對數分數<br /><br /> 迴歸公式 (僅適用於線性迴歸模型)|  
 ||離散資料行|通過的計數<br /><br /> 失敗的計數<br /><br /> 對數分數<br /><br /> 增益|  
   

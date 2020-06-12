@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad07559c6b380f8fba11f00789f68f9e2c850840
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e7262beef3e9d64a488e255fe5fd9f1b79a8837
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086127"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525237"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>使用 Microsoft 時序叢集檢視器瀏覽模型
-  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的時序群集檢視器會顯示以[!INCLUDE[msCoName](../../includes/msconame-md.md)]時序群集演算法建立的挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是時序分析演算法，用來瀏覽包含事件的資料，這些事件可透過遵循路徑或 *時序*加以連結。 如需這個演算法的詳細資訊，請參閱 [Microsoft 時序群集演算法](microsoft-sequence-clustering-algorithm.md)。  
+  中的時序 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集檢視器 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會顯示以時序群集演算法建立的採礦模型 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是時序分析演算法，用來瀏覽包含事件的資料，這些事件可透過遵循路徑或 *時序*加以連結。 如需這個演算法的詳細資訊，請參閱 [Microsoft 時序群集演算法](microsoft-sequence-clustering-algorithm.md)。  
   
 > [!NOTE]  
 >  若要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)。  
@@ -61,7 +60,7 @@ ms.locfileid: "66086127"
  [回到頁首](#BKMK_ViewerTabs)  
   
 ###  <a name="cluster-profiles"></a><a name="BKMK_Profile"></a>叢集設定檔  
- **[群集設定檔]** 索引標籤，會提供模型中的演算法所建立之群集的整體檢視。 在方格中的 **[母體]** 資料行後面的每一個資料行代表模型所發現的群集。 > \<的屬性代表存在於叢集中的不同資料序列，而屬性> row 則\<描述該叢集包含的所有專案及其整體散發。  
+ **[群集設定檔]** 索引標籤，會提供模型中的演算法所建立之群集的整體檢視。 在方格中的 **[母體]** 資料行後面的每一個資料行代表模型所發現的群集。 [ \<attribute> 範例] 資料列代表存在於叢集中的不同資料序列，而此 \<attribute> 列會描述該叢集包含的所有專案及其整體散發。  
   
  [長條圖列] **** 選項會控制長條圖中可見的橫條數。 如果總列數超出您選擇要顯示的列數，就會保留最重要的列，而其餘的列將會分組放入灰色值區中。  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8775ec4dbfb7d851d98e0a943d052589f45b1ade
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084913"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523064"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>查詢資料採礦結構描述資料列集 (Analysis Services - 資料採礦)
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，許多現有的 OLE DB 資料採礦結構描述資料列集已經公開成一組系統資料表，而且您可以使用資料採礦延伸模組 (DMX) 陳述式來查詢它們。 透過針對資料採礦結構描述資料列集建立查詢，您可以識別可用的服務、取得模型和結構之狀態的更新，以及找出模型內容或參數的相關詳細資料。 如需資料採礦結構描述資料列集的描述，請參閱＜ [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)＞。  
@@ -33,7 +32,7 @@ ms.locfileid: "66084913"
 ## <a name="list-of-data-mining-schema-rowsets"></a>資料採礦結構描述資料列集的清單  
  下表列出可能適用於查詢和監視的資料採礦結構描述資料列集。  
   
-|資料列集名稱|描述|  
+|資料列集名稱|Description|  
 |-----------------|-----------------|  
 |DMSCHEMA_MINING_MODELS|列出目前環境中的所有採礦模型。<br /><br /> 其中包含的資訊如建立的日期、建立模型所使用的參數，以及定型集的大小。|  
 |DMSCHEMA_MINING_COLUMNS|列出目前環境之採礦模型中使用的所有資料行。<br /><br /> 其中的資訊包括採礦結構來源資料行的對應、資料類型、精確度，以及可搭配資料行使用的預測函數。|  

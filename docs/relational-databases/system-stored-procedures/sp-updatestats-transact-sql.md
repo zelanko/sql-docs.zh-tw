@@ -18,12 +18,12 @@ ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e28564c44dc226054f0b08e8ba75fe36509cf064
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5d2bab967400244e35ac33bf96a1be72ae21e375
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808919"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83806844"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="remarks"></a>備註  
  **sp_updatestats**會藉 `UPDATE STATISTICS` 由 `ALL` 在資料庫中的所有使用者定義和內部資料表上指定關鍵字來執行。 sp_updatestats 會顯示指出其進度的訊息。 當更新完成時，它會報告已更新所有資料表的統計資料。  
   
-sp_updatestats 會針對停用的非叢集索引更新統計資料，但不會針對停用的叢集索引更新統計資料。  
+**sp_updatestats**更新已停用的非叢集索引的統計資料，而且不會更新已停用叢集索引的統計資料。  
   
 對於以磁片為基礎的資料表， **sp_updatestats**會根據**sys.databases dm_db_stats_properties**目錄檢視中的**modification_counter**資訊更新統計資料，並更新至少一個資料列已修改的統計資料。 執行**sp_updatestats**時，一定會更新記憶體優化資料表的統計資料。 因此，請勿執行**sp_updatestats**超過所需。  
   
@@ -58,7 +58,8 @@ sp_updatestats 會針對停用的非叢集索引更新統計資料，但不會�
 對於相容性層級低於90的資料庫，執行**sp_updatestats**並不會保留特定統計資料的最新 NORECOMPUTE 設定。 對於相容性層級為90或更高的資料庫，sp_updatestats 會保留特定統計資料的最新 NORECOMPUTE 選項。 如需停用及重新啟用統計資料更新的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格，或資料庫（**dbo**）的擁有權。  
+
+若要執行**sp_updatestats**，使用者必須是資料庫的擁有者（而 `dbo` 不只是角色的成員）， `db_owner` 或是系統管理員（sysadmin）固定伺服器角色的成員。
 
 ## <a name="examples"></a>範例  
 下列範例會更新 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中之資料表的統計資料。  

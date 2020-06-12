@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2909ec00d184dc06eaa5ee05108752b47ac7186b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079704"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543830"
 ---
 # <a name="performance-counters-ssas"></a>效能計數器 (SSAS)
   使用效能監視器可以透過效能計數器來監視 Microsoft SQL Server Analysis Services (SSAS) 執行個體的效能。  
@@ -30,10 +29,10 @@ ms.locfileid: "66079704"
   
 ## <a name="counters-by-groups"></a>依群組分組的計數器  
   
-|群組|描述|  
+|群組|Description|  
 |-----------|-----------------|  
 |[快取](#bkmk_Cache)|與 Analysis Services 彙總快取相關的統計資料。|  
-|[建立](#bkmk_Connection)|與 Microsoft Analysis Services 連接相關的統計資料。|  
+|[連線](#bkmk_Connection)|與 Microsoft Analysis Services 連接相關的統計資料。|  
 |[Data Mining Prediction](#bkmk_DataMiningPrediction)|與處理資料採礦模型相關的統計資料。|  
 |[Data Mining Model Processing](#bkmk_DataMiningModelProcessing)|與根據資料採礦模型建立預測相關的統計資料。|  
 |[鎖定](#bkmk_Locks)|與 Microsoft Analysis Services 內部伺服器鎖定相關的統計資料。|  
@@ -44,7 +43,7 @@ ms.locfileid: "66079704"
 |[Processing Indexes](#bkmk_ProcIndexes)|與處理 MOLAP 資料檔之索引相關的統計資料。|  
 |[Processing](#bkmk_Processing)|與處理資料相關的統計資料。|  
 |[Storage Engine Query](#bkmk_StorageEngineQuery)|與 Microsoft Analysis Services 儲存引擎查詢相關的統計資料。|  
-|[執行緒](#bkmk_Threads)|與 Microsoft Analysis Services 執行緒相關的統計資料。|  
+|[串接](#bkmk_Threads)|與 Microsoft Analysis Services 執行緒相關的統計資料。|  
   
 ###  <a name="cache"></a><a name="bkmk_Cache"></a>高速  
  與 Microsoft Analysis Services 彙總快取相關的統計資料。  

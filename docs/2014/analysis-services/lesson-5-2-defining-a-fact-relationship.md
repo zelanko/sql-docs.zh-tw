@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8b43e36072e7151570c0b0fa610c3b7e4709616a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2473157bed334345f6c18177f97ac0415612232
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175277"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542780"
 ---
 # <a name="defining-a-fact-relationship"></a>定義事實關聯性
   使用者有時候想要按事實資料表中的資料項目建立量值維度，或查詢事實資料表中的其他特定相關資訊，例如與特定銷售事實相關的發票號碼或訂單號碼。 當您依據這樣的事實資料表項目來定義維度時，這種維度稱為「事實維度」**。 事實維度也稱為變質維度。 事實維度對於將相關事實資料表資料列 (例如，與特定發票號碼相關的所有資料列) 分組很有幫助。 雖然您可以將這項資訊放在關聯式資料庫的個別維度資料表中，但為這項資訊建立個別的維度資料表並無好處，因為維度資料表與事實資料表的成長速率一樣，只會建立重複資料和產生不必要的複雜性而已。
@@ -51,7 +50,7 @@ ms.locfileid: "78175277"
 
 7.  在 [名稱資料行]**** 清單中，選取 [SalesOrderLineNumber]****。
 
-8.  按 [下一步]  。
+8.  按 [下一步] 。
 
 9. 在 [選取相關資料表]**** 頁面上，清除所有資料表旁的核取方塊，然後按一下 [下一步]****。
 
@@ -69,9 +68,9 @@ ms.locfileid: "78175277"
 
 16. 將 [SalesOrderNumber]**** 資料行從 [資料來源檢視]**** 窗格中的 [InternetSales]**** 資料表拖曳到 [屬性]**** 窗格，以這個方式將 [銷售訂單號碼]**** 屬性加入維度。
 
-17. 將 [新**銷售訂單號碼**] 屬性的 [**名稱**] `Order Number`屬性變更為，並將 [ **OrderBy** ] 屬性變更為 [索引**鍵**]。
+17. 將 [新**銷售訂單號碼**] 屬性的 [**名稱**] 屬性變更為 `Order Number` ，並將 [ **OrderBy** ] 屬性變更為 [索引**鍵**]。
 
-18. 在 [**階層**] 窗格中，依序建立 [ `Order Number` **網際網路銷售訂單**] 使用者階層，其中包含和**專案描述**層級。
+18. 在 [**階層**] 窗格中，依序建立 [**網際網路銷售訂單**] 使用者階層，其中包含 `Order Number` 和**專案描述**層級。
 
 19. 在 [屬性]**** 窗格，選取 [網際網路銷售訂單的詳細資料]****，然後在 [屬性] 視窗中檢閱 [StorageMode]**** 屬性的值。
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 10015ac40948c95f8c912ba6fdb71147e50bb880
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94b9935f5ab13431033accf7431c1a9b6394569a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082884"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520508"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>適用於 Office 的 SQL Server 資料採礦增益集
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 適用於 Office 的資料採礦增益集是一組輕量型的預測分析工具，可讓您使用 Excel 中的資料建立用於預測、建議或探索的分析模型。  
@@ -46,7 +45,7 @@ ms.locfileid: "66082884"
   
 -   **探索和視覺化。** 資料採礦不是可以完全自動化的活動，您需要探索並瞭解您的結果，才能採取有意義的動作。 增益集可藉由提供 Excel 的互動式檢視器、讓您自訂模型圖表的 Visio 範本，以及將圖表和資料表匯出到 Excel 進行額外的篩選或修改的功能，幫助您進行探索。  
   
--   **部署與整合。** 當您建立了實用的模型時，使用管理工具將模型從實驗性伺服器匯出到另一個實例，讓您的模型進入生產環境[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+-   **部署與整合。** 當您建立了實用的模型時，使用管理工具將模型從實驗性伺服器匯出到另一個實例，讓您的模型進入生產環境 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
   
      您也可以將模型留在當初建立的伺服器上，但是使用 Integration Services 或 DMX 指令碼重新整理定型資料並執行預測。  
   
@@ -75,11 +74,11 @@ ms.locfileid: "66082884"
   
  資料採礦增益集需要連接以下其中一個 SQL Server Analysis Services 版本：  
   
--   Enterprise  
+-   企業  
   
 -   商業智慧  
   
--   Standard  
+-   標準  
   
  根據您連接的 SQL Server Analysis Services 版本而定，某些進階演算法可能會無法使用。 如需詳細資訊，請參閱＜ [SQL Server 2014 版本支援的功能](https://msdn.microsoft.com/library/cc645993.aspx)＞。  
   

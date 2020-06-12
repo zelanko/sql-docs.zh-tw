@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bfce63f3686f06c0289c818daac82f336fb2b17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab6725ddd86d18132de9c408125fa9084161a187
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084964"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523104"
 ---
 # <a name="data-mining-queries"></a>資料採礦查詢
   資料採礦查詢有許多實用的用途。 您可以：  
@@ -95,7 +94,7 @@ ms.locfileid: "66084964"
   
  下列清單提供您可以在查詢中使用之函數的摘要：  
   
--   **一般預測函數：** 函數`Predict`是多型的，這表示它適用于所有模型類型。 這個函數將會自動偵測您所使用之模型的類型，並提示您輸入其他參數。 如需詳細資訊，請參閱 [Predict &#40;DMX&#41](/sql/dmx/predict-dmx)。  
+-   **一般預測函數：** 函數是多型的 `Predict` ，這表示它適用于所有模型類型。 這個函數將會自動偵測您所使用之模型的類型，並提示您輸入其他參數。 如需詳細資訊，請參閱 [Predict &#40;DMX&#41](/sql/dmx/predict-dmx)。  
   
     > [!WARNING]  
     >  並非所有模型都會用來做預測。 例如，您可以建立沒有可預測屬性的叢集模型。 但是，即使模型沒有可預測屬性，您也可以建立預測查詢來傳回模型中其他類型的實用資訊。  
@@ -109,7 +108,7 @@ ms.locfileid: "66084964"
     |||  
     |-|-|  
     |[關聯模型查詢範例](association-model-query-examples.md)|[Microsoft 貝氏機率分類演算法](microsoft-naive-bayes-algorithm.md)|  
-    |[群集模型查詢範例](clustering-model-query-examples.md)|[類神經網路模型查詢範例](neural-network-model-query-examples.md)|  
+    |[叢集模型查詢範例](clustering-model-query-examples.md)|[類神經網路模型查詢範例](neural-network-model-query-examples.md)|  
     |[決策樹模型查詢範例](decision-trees-model-query-examples.md)|[時序叢集模型查詢範例](sequence-clustering-model-query-examples.md)|  
     |[線性迴歸模型查詢範例](linear-regression-model-query-examples.md)|[時間序列模型查詢範例](time-series-model-query-examples.md)|  
     |[羅吉斯迴歸模型查詢範例](logistic-regression-model-query-examples.md)||  

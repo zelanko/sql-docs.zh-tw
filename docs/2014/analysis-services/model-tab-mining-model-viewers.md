@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42285f94057441d01259c5fd54ce896dd0316b94
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077615"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537360"
 ---
 # <a name="model-tab-mining-model-viewers"></a>模型索引標籤 (採礦模型檢視器)
   Microsoft 時間序列檢視器中的 [模型]**** 索引標籤會將時間序列的表示顯示為圖形中的節點，這與決策樹模型中採用的方式類似。  
@@ -26,14 +25,14 @@ ms.locfileid: "66077615"
   
  **如需詳細資訊，請參閱** [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)、 [使用 Microsoft 時間序列檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)、 [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **重新整理檢視器內容**  
  在檢視器中重新載入採礦模型。  
   
  **採礦模型**  
  選擇要檢視的採礦模型。 採礦模型會在其關聯的檢視器中開啟。  
   
- **檢視器**  
+ **檢視者**  
  選擇用來瀏覽選取之採礦模型的檢視器。 您可以使用此模型類型的自訂檢視器，或 [Microsoft 一般內容樹狀檢視器]****。 還可以使用外掛程式檢視器 (如果有)。  
   
  **放大**  

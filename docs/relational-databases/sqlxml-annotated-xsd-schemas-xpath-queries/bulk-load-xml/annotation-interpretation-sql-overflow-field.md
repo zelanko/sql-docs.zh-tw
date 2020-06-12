@@ -1,5 +1,6 @@
 ---
 title: sql：溢位欄位（SQLXML）
+description: 瞭解如何使用 sql：溢位欄位注釋，將資料行識別為溢位資料行，以接收 XML 檔中所有未耗用的資料。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5757ce66dd0905f6c381d05caa99c6bb664021e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246806"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689236"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>註解解譯 - sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75246806"
   
  當它將資料儲存在溢位資料行時，XML 大量載入也會儲存父元素的開頭和結束記號，其中定義了**sql：溢位欄位**。  
   
- 例如，下列架構會描述** \<客戶>** 和** \<CustOrder>** 元素。 每一個元素都可識別溢位資料行：  
+ 例如，下列架構會描述** \< 客戶>** 和** \< CustOrder>** 元素。 每一個元素都可識別溢位資料行：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -75,9 +76,9 @@ ms.locfileid: "75246806"
 </xsd:schema>  
 ```  
   
- 在此架構中， ** \<Customer>** 專案會對應到「客戶」資料表，而** \<Order>** 元素則會對應至 CustOrder 資料表。  
+ 在此架構中， ** \< Customer>** 專案會對應到「客戶」資料表，而** \< Order>** 元素則會對應至 CustOrder 資料表。  
   
- Customer>和** \<Order>** 元素都會識別溢位資料行。 ** \< ** 因此，XML 大量載入會將** \<>Customer**的所有未耗用的子項目和屬性儲存在 CustOrder 資料表的溢** \<位**資料行中，而且 Order>元素的所有未耗用子項目和屬性。  
+ ** \< Customer>** 和** \< Order>** 元素都會識別溢位資料行。 因此，XML 大量載入會將** \<>Customer**的所有未耗用的子項目和屬性儲存在 CustOrder 資料表的溢位資料行中，而且** \< Order>** 元素的所有未耗用子項目和屬性。  
   
 ### <a name="to-test-a-working-sample"></a>測試工作範例  
   

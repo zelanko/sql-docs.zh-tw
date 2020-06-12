@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 8a4f0fa1-afb2-46fd-a713-52ba1887e537
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98d61d019aadeedadc673e1a8860ceb94d2ef96c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffbdf2b98cb94c2a0a8fb4e36587b255be3648b5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077688"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545420"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>採礦模型屬性對話方塊 (Analysis Services - 資料採礦)
   使用 **中的** [採礦模型屬性] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中之採礦模型的屬性。 您可以在 [物件總管]**** 中以滑鼠右鍵按一下採礦模型，然後選取 [屬性]****，來顯示 [採礦模型屬性]**** 對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

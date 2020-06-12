@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9b2613c4ca9c706e549aca9ed577a6defacd0e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174508"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521854"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 羅吉斯迴歸演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法的演變，其中 *HIDDEN_NODE_RATIO* 參數設為 0。 此設定會建立不包含隱藏層的類神經網路模型，而這相等於羅吉斯迴歸。
@@ -84,7 +83,7 @@ WHERE NODE_TYPE = 23
 
  針對每個輸出值，此查詢會傳回係數以及指回相關輸入節點的識別碼。 它也會傳回包含輸出值與截距的資料列。 每個輸入 X 都有自己的係數（Ci），但此嵌套資料表也包含 "free" 係數（Co），並根據下列公式計算：
 
- F （X） = X1 * C1 + X2\*C2 + ... + Xn\*Cn + X0
+ F （X） = X1 * C1 + X2 \* C2 + ... + Xn \* Cn + X0
 
  Activation: exp(F(X)) / (1 + exp(F(X)) )
 
@@ -102,7 +101,7 @@ WHERE NODE_TYPE = 23
 
  HOLDOUT_SEED 指定在隨機判斷維持的資料時，用來植入虛擬隨機產生器的數位。 如果 HOLDOUT_SEED 是設定為 0，則此演算法會依據採礦模型的名稱產生種子，以保證在重新處理期間模型內容保持不變。
 
- 預設值為 0。
+ 預設值是 0。
 
  MAXIMUM_INPUT_ATTRIBUTES 定義演算法在叫用特徵選取之前可處理的輸入屬性數目。 將此值設定為 0 可關閉特徵選取。
 
@@ -129,11 +128,11 @@ WHERE NODE_TYPE = 23
 
  適用於採礦結構資料行。
 
- MODEL_EXISTENCE_ONLY 表示會將資料行視為具有兩種可能的狀態： `Missing`和`Existing`。 Null 為遺漏值。
+ MODEL_EXISTENCE_ONLY 表示會將資料行視為具有兩種可能的狀態： `Missing` 和 `Existing` 。 Null 為遺漏值。
 
  適用於採礦模型資料行。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
  羅吉斯迴歸模型必須包含索引鍵資料行、輸入資料行和至少一個可預測資料行。
 
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行

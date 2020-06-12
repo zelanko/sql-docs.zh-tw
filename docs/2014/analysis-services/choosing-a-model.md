@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f3b1e504b7e027e888458b8cc2eaee169ca272f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088086"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527534"
 ---
 # <a name="choosing-a-model"></a>選擇模型
   **挖掘演算法：** 資料採礦*演算法*是從資料建立模式的機制。 此演算法會定義資料的計算方式、關聯性的衍生方式以及模式的儲存方式。 演算法的選擇部分取決於您想要分析的資料類型。 例如，有些演算法只能搭配連續數字使用，有些演算法則最適合與有限數目的相異值搭配使用。  
@@ -75,9 +74,9 @@ ms.locfileid: "66088086"
   
      摘要資料的時序或時段，例如使用者在導覽網站時所遵循的路徑。  
   
- 適用於 Office 的 SQL Server 資料採礦增益集所使用的演算法是以 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的演算法為基礎。 如果您連接的實例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]已設定為允許協力廠商演算法，則您也可以使用符合資料採礦規格之 OLE DB 的協力廠商演算法。  
+ 適用於 Office 的 SQL Server 資料採礦增益集所使用的演算法是以 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的演算法為基礎。 如果您連接的實例已 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 設定為允許協力廠商演算法，則您也可以使用符合資料採礦規格之 OLE DB 的協力廠商演算法。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  每一種演算法可以處理的資料類型會有所不同。  
   
 -   線性迴歸模型只能建立數值模型。 您的輸入變數和目標結果必須是連續的數字類型。 如果您必須混合離散和連續變數，請使用決策樹或估計模型。  
@@ -104,7 +103,7 @@ ms.locfileid: "66088086"
 ## <a name="list-of-supported-algorithms"></a>支援的演算法清單  
  預設會提供下列演算法。  
   
-|演算法名稱|描述|使用於|  
+|演算法名稱|Description|使用於|  
 |--------------------|-----------------|-------------|  
 |Microsoft 關聯規則|建立規則來描述可能一起出現在交易中的項目。|[&#40;適用于 Excel&#41;的資料採礦用戶端相關聯的 Wizard](associate-wizard-data-mining-client-for-excel.md)<br /><br /> [適用于 Excel&#41;的購物籃分析 &#40;資料表 AnalysisTools](shopping-basket-analysis-table-analysistools-for-excel.md)|  
 |Microsoft 群集|識別資料集內的關聯性，這種關聯性可能無法透過偶然的邏輯觀察而衍生。 會使用反覆技巧，將記錄組成包含類似特性的群集。|[偵測適用于 Excel&#41;&#40;資料表分析工具的分類](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [叢集 Wizard &#40;適用于 Excel 的資料採礦增益集&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  

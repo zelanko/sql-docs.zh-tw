@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bc6eacf49ceda89a018fd381700dcdff0a9ada0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075054"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546690"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授與維度資料的自訂存取權 (Analysis Services)
   啟用 Cube 的讀取權限後，您可以設定額外的權限以明確允許或拒絕維度成員 (包括 Measures 維度中的量值，其中含有 Cube 中使用的所有量值) 的存取。 例如，假設指定了多個轉售商類別，您可能想要設定權限以排除特定商業類型的資料。 下圖為拒絕存取 Reseller 維度中之 Warehouse 商業類型之前與之後的效果。  
@@ -41,12 +40,12 @@ ms.locfileid: "66075054"
   
  基本維度安全性是最簡單的；您只需選取要在角色中包含或排除的維度屬性和屬性階層。 進階安全性較複雜，而且需要 MDX 指令碼的專業知識。 以下是這兩種方法的敘述。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  並非所有量值或維度成員均可用在自訂存取案例中。 如果某個角色禁止存取預設的量值或成員，或是該角色禁止存取的量值為量值運算式的一部分，則連線將會失敗。  
   
  **檢查維度安全性的限制：預設量值、預設成員及量值運算式中使用的量值**  
   
-1.  在 SQL Server Management Studio 中，以滑鼠右鍵按一下 cube，然後選取 [**腳本 cube] 做** | 為 [**更改為** | 追加**查詢編輯器視窗]**。  
+1.  在 SQL Server Management Studio 中，以滑鼠右鍵按一下 cube，然後選取 [**腳本 cube] 做**為 [  |  **更改為**追加  |  **查詢編輯器視窗]**。  
   
 2.  搜尋 `DefaultMeasure`。 您應該會在 Cube 中發現一個，在每個檢視方塊中各發現一個。 當您定義維度安全性時，請避免限制對預設量值的存取。  
   
@@ -56,11 +55,11 @@ ms.locfileid: "66075054"
   
 ## <a name="basic-dimension-security"></a>基本維度安全性  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到的實例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、在物件總管中展開適當資料庫的 [**角色**]，然後按一下資料庫角色（或建立新的資料庫角色）。  
+1.  在中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，連接到的實例 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、在物件總管中展開適當資料庫的 [**角色**]，然後按一下資料庫角色（或建立新的資料庫角色）。  
   
      角色應該已具備 Cube 的讀取權限。 如需詳細資訊，請參閱 [授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) 。  
   
-2.  在 [**維度資料** | ] [**基本**] 上，選取您要設定許可權的維度。  
+2.  在 [**維度資料**]  |  [**基本**] 上，選取您要設定許可權的維度。  
   
 3.  選擇屬性階層。 並非所有屬性都是可用的。 只有擁有 [AttributeHierarchyEnabled]**** 的屬性會出現在 [屬性階層]**** 清單中。  
   
@@ -68,15 +67,15 @@ ms.locfileid: "66075054"
   
      或者，您可以 [取消選取全部成員]**** 來全面撤銷存取，然後挑選要允許的成員。 在後續的處理作業中，一直到您手動編輯維度資料安全性來允許存取新成員為止，將無法看到任何新成員。  
   
-5.  （選擇性） **Advanced**按一下 [Advanced `Visual Totals` ]，為此屬性階層啟用。 這個選項會根據可透過這個角色使用的成員，重新計算彙總。  
+5.  （選擇性）按一下 [ **Advanced** ]，為 `Visual Totals` 此屬性階層啟用。 這個選項會根據可透過這個角色使用的成員，重新計算彙總。  
   
     > [!NOTE]  
-    >  在套用變更維度成員的權限時，並不會自動重新計算彙總的總計。 假設在`All`套用許可權之前，屬性階層的成員傳回200計數。 套用拒絕存取部分成員的許可權之後， `All`仍然會傳回200，即使使用者看到的成員值較少也一樣。 若要避免混淆 cube 的取用者，您可以將`All`成員設定為僅限角色成員成員的匯總，而不是屬性階層之所有成員的匯總。 若要叫用這個行為，您`Visual Totals`可以在設定維度安全性時，于 [ **Advanced** ] 索引標籤上啟用。 啟用之後，彙總會在查詢期間計算，而不是從預先計算的彙總中擷取。 這可以在查詢效能上產生顯著效果，因此只有在需要時才使用它。  
+    >  在套用變更維度成員的權限時，並不會自動重新計算彙總的總計。 假設在套用 `All` 許可權之前，屬性階層的成員傳回200計數。 套用拒絕存取部分成員的許可權之後， `All` 仍然會傳回200，即使使用者看到的成員值較少也一樣。 若要避免混淆 cube 的取用者，您可以將成員設定為 `All` 僅限角色成員成員的匯總，而不是屬性階層之所有成員的匯總。 若要叫用這個行為，您可以 `Visual Totals` 在設定維度安全性時，于 [ **Advanced** ] 索引標籤上啟用。 啟用之後，彙總會在查詢期間計算，而不是從預先計算的彙總中擷取。 這可以在查詢效能上產生顯著效果，因此只有在需要時才使用它。  
   
 ## <a name="hiding-measures"></a>隱藏量值  
  在 [授與資料格資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)中，已說明如要完全隱藏量值的所有可見層面 (而非只是它的資料格資料)，需具備維度成員的權限。 本節說明如何拒絕存取量值的物件中繼資料。  
   
-1.  在 [**維度資料** | ] [**基本**] 上，向下流覽維度清單直到您到達 [cube 維度]，然後選取 [**量值維度**]。  
+1.  在 [**維度資料**]  |  [**基本**] 上，向下流覽維度清單直到您到達 [cube 維度]，然後選取 [**量值維度**]。  
   
 2.  從量值清單中，清除透過這個角色連接的使用者不應看見之量值的核取方塊。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66075054"
 >  查看 [必要條件] 以了解如何識別可能破壞角色安全性的量值。  
   
 ## <a name="advanced-dimension-security"></a>進階維度安全性  
- 如果您精通 MDX，另一個方法是撰寫 MDX 運算式來設定條件以允許或拒絕成員的存取。 按一下 [**建立角色** | **維度資料** | ] [**高級**] 以提供腳本。  
+ 如果您精通 MDX，另一個方法是撰寫 MDX 運算式來設定條件以允許或拒絕成員的存取。 按一下 [**建立角色**  |  **維度資料**]  |  [**高級**] 以提供腳本。  
   
  您可以使用 MDX 產生器來撰寫 MDX 陳述式。 如需詳細資訊，請參閱 [MDX 產生器 &#40;Analysis Services - 多維度資料&#41;](../mdx-builder-analysis-services-multidimensional-data.md)。 [進階]**** 索引標籤具有下列選項：  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66075054"
  建立 AllowedSet，會在屬性參與多層級階層時產生漣漪效果。 例如，假設有一個角色允許存取 Washington 州 (假設已將公司的 Washington 州業務部門權限授與角色)。 對於透過這個角色連接的人員，包含上階 (United States) 或下階 (Seattle 和 Redmond) 的查詢將只會看見包含 Washington 州之鏈結中的成員。 因為並未明確允許其他州，所以效果會和拒絕它們一樣。  
   
 > [!NOTE]  
->  如果您定義了屬性成員的{}空集合（），資料庫角色就看不到該屬性的任何成員。 沒有允許的集合不會被解釋為空的集合。  
+>  如果您定義了屬性成員的空集合（ {} ），資料庫角色就看不到該屬性的任何成員。 沒有允許的集合不會被解釋為空的集合。  
   
  **拒絕的成員集**  
  DeniedSet 屬性可以解析為沒有成員、全部成員 (預設值) 或部分屬性成員。 當拒絕的集合僅包含特定的屬性成員集合時，資料庫角色只會被拒絕存取這些特定成員以及下階 (如果屬性位於多層級階層中)。 請考量 Washington 州業務部門範例。 如果將 Washington 放在 DeniedSet 中，透過這個角色連接的人員將看見除了 Washington 及其下階屬性以外的所有其他州。  
@@ -116,13 +115,13 @@ ms.locfileid: "66075054"
  **啟用視覺化總計**  
  VisualTotals 屬性會指出所顯示彙總資料格的值，是根據所有資料格值來計算，還是只根據資料庫角色所看見資料格的值來計算。  
   
- 預設會停用 VisualTotals 屬性（設定為`False`）。 此預設值會使效能最佳化，因為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可快速計算所有資料格的值之總計，而不必浪費時間選取要計算之資料格的值。  
+ 預設會停用 VisualTotals 屬性（設定為 `False` ）。 此預設值會使效能最佳化，因為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可快速計算所有資料格的值之總計，而不必浪費時間選取要計算之資料格的值。  
   
  不過，停用 VisualTotals 屬性會產生安全性問題，因為使用者有可能使用彙總資料格的值來推論該使用者的資料庫角色沒有存取權之屬性成員的值。 例如， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用三個屬性成員的值來計算彙總資料格的值。 資料庫角色有檢視這三個屬性成員當中兩個的存取權。 利用彙總資料格的值，此資料庫角色的成員即可推論出第三個屬性成員的值。  
   
- 將 VisualTotals 屬性設定`True`為可以排除此風險。 當您啟用 VisualTotals 屬性時，資料庫角色只能檢視該角色具有權限之維度成員的彙總。  
+ 將 VisualTotals 屬性設定為 `True` 可以排除此風險。 當您啟用 VisualTotals 屬性時，資料庫角色只能檢視該角色具有權限之維度成員的彙總。  
   
- **勾**  
+ **勾選**  
  按一下即可測試此頁面定義的 MDX 語法。  
   
 ## <a name="see-also"></a>另請參閱  

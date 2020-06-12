@@ -1,5 +1,6 @@
 ---
 title: sp_dropsubscription （Transact-sql） |Microsoft Docs
+description: 卸載發行者上發行項、發行集或訂閱的訂閱。 這個預存程式會在發行集資料庫的發行者端執行。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f800ef185145e63a17db3855989bebde91b48bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 483fc481e78c1a879f2858addf6925e987066010
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831152"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807963"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

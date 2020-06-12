@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0dea40f9c4e4c0672db78ca7e841cb7cedca857e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 755b38d1f42432818f87d92b0d2bf097d58795f0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174347"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543947"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>檢查清單：使用 PowerShell 驗證 PowerPivot for SharePoint
   一定要通過穩固的驗證測試來確認您的服務和資料可運作， [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 安裝或復原作業才會是完整的。 在本文中，我們會示範如何使用 Windows PowerShell 執行這些步驟。 我們將每個步驟放在各自的章節中，好讓您可以直接前往特定工作。 例如，請執行本主題＜ [資料庫](#bkmk_databases) ＞一節中的指令碼來驗證服務應用程式和內容資料庫的名稱，以便排程這些應用程式或資料庫進行維護或備份。
@@ -69,7 +68,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 |資料重新整理並未執行|請參閱＜ [Timer Jobs](#bkmk_timer_jobs) ＞一節，並確認 **線上 PowerPivot 資料重新整理計時器工作** 在線上。|
 |管理儀表板資料是舊的|請參閱＜ [計時器工作](#bkmk_timer_jobs) ＞一節，並確認 **管理儀表板處理計時器工作** 在線上。|
 |管理儀表板的某些部分|如果您將 PowerPivot for SharePoint 安裝到具有管理中心拓撲的伺服陣列中，但沒有 Excel Services 或 PowerPivot for SharePoint，如果您想要完整存取 PowerPivot 管理儀表板中的內建報表，您必須下載及安裝 Microsoft ADOMD.NET 用戶端程式庫。 儀表板中的某些報表會使用 ADOMD.NET 來存取內部資料，這些資料會提供關於在伺服陣列中 PowerPivot 查詢處理和伺服器健全狀況的報告資料。 請參閱 [ADOMD.Net 用戶端程式庫](#bkmk_adomd) 一節和 [在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET](../../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)主題。|
-|\<未來內容>||
+|\<future content>||
 
 ##  <a name="analysis-services-windows-service"></a><a name="bkmk_windows_service"></a>Analysis Services Windows 服務
  本節的指令碼會在 SharePoint 模式下驗證 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體。 確認**服務正在執行。**
@@ -153,7 +152,7 @@ Status      : Online
 > [!NOTE]
 >  下列程式碼範例會先傳回預設 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 服務應用程式的 applicationpool 屬性。 從名稱會從字串剖析並用來取得應用程式集區物件的狀態。
 > 
->  確認狀態為**線上**。 如果狀態不是線上，或當您流覽[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]網站時看到「HTTP 錯誤」，請確認 IIS 應用程式集區中的身分識別認證仍然正確。 IIS 集區名稱將會是 Get-SPServiceApplicationPool 命令所傳回之 ID 屬性的值。
+>  確認狀態為**線上**。 如果狀態不是線上，或當您流覽網站時看到「HTTP 錯誤」 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ，請確認 IIS 應用程式集區中的身分識別認證仍然正確。 IIS 集區名稱將會是 Get-SPServiceApplicationPool 命令所傳回之 ID 屬性的值。
 
 ```powershell
 $poolname = [string](Get-PowerPivotServiceApplication | Select -Property applicationpool)
@@ -319,7 +318,7 @@ Message     : EXCEPTION: System.TimeoutException: The request channel timed out 
 ```
 
 ##  <a name="msolap-provider"></a><a name="bkmk_msolap"></a>MSOLAP 提供者
- 驗證 MSOLAP 提供者。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]和[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]需要 MSOLAP. 5。
+ 驗證 MSOLAP 提供者。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]和 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 需要 MSOLAP. 5。
 
 ```powershell
 $excelApp = Get-SPExcelServiceApplication

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6185d3d9aeb3221b1ae194790b89265787e4621
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530825"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544112"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>安裝 Analysis Services 多維度模型化教學課程的範例資料和專案
   使用本主題中提供的指示與連結，安裝 Analysis Services 教學課程中所使用的所有資料和專案檔案。  
@@ -65,7 +64,7 @@ ms.locfileid: "69530825"
   
 4.  以滑鼠右鍵按一下 [資料庫]，然後按一下 [附加]****。  
   
-5.  按一下 **[新增]** 。  
+5.  按一下 [新增] 。  
   
 6.  選取 **AdventureWorksDW2012_Data.mdf** 資料庫檔案，然後按一下 [確定]****。 如果未列出檔案，請檢查 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 資料夾以確認該檔案位於該處。  
   
@@ -98,7 +97,7 @@ ms.locfileid: "69530825"
   
      2012 教學課程對 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本有效。  
   
-     "Analysis Services 教學課程 SQL Server 2012 .zip" 檔案會儲存到您電腦上的 [下載] 資料夾中。  
+     「Analysis Services 教學課程 SQL Server 2012.zip」檔案會儲存到您電腦上的 [下載] 資料夾中。  
   
 2.  將 .zip 檔案移至根磁碟機的正下方資料夾 (例如 C:\Tutorial)。 如果您嘗試將 [下載] 資料夾中的檔案解壓縮，則此步驟會降低「路徑太長」錯誤。  
   
@@ -126,7 +125,7 @@ ms.locfileid: "69530825"
   
     -   第 10 課完成  
   
-4.  移除這些檔案的唯讀權限。 以滑鼠右鍵按一下上層資料夾 "Analysis Services Tutorial SQL Server 2012"，選取 [屬性]****，並清除 [唯讀]**** 的核取方塊。 按一下 [確定]  。 將變更套用到此資料夾、子資料夾和檔案。  
+4.  移除這些檔案的唯讀權限。 以滑鼠右鍵按一下上層資料夾 "Analysis Services Tutorial SQL Server 2012"，選取 [屬性]****，並清除 [唯讀]**** 的核取方塊。 按一下 [確定]。 將變更套用到此資料夾、子資料夾和檔案。  
   
 5.  啟動 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   

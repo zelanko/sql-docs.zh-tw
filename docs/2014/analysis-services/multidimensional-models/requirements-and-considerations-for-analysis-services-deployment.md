@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc862bcad512123dd7c31ce59a8c777c2423bedc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073166"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545730"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 部署的需求和考量
   方案的效能和可用性取決於許多因素，包括基礎硬體的功能、伺服器部署的拓撲、方案的特性 (例如，具有跨多部伺服器分散的資料分割，或使用需要直接存取關聯式引擎的 ROLAP 儲存)、伺服器等級協定，以及資料模型的複雜性。  
@@ -48,7 +47,7 @@ ms.locfileid: "66073166"
   
  [安裝 SQL Server 2014 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
- [SQL Server 版本的計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
+ [依 SQL Server 版本的計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
  [SQL Server 2014 各版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
@@ -87,7 +86,7 @@ ms.locfileid: "66073166"
  若要直接在背景處理來源資料的累加更新，請啟用主動式快取。 主動式快取會自動以新的來源資料更新 Cube，不需要手動處理且不影響 Cube 的可用性。 如需詳細資訊，請參閱[主動式快取 &#40;資料分割&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。  
   
 ##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>擴充性考慮  
- 相同電腦上[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和的多個實例可能會造成效能問題。 若要解決這些問題，可增加伺服器上的處理器、記憶體和磁碟資源。 不過，您可能也需要在多部電腦上調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的延展。  
+ 相同電腦上的和的多個實例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可能會造成效能問題。 若要解決這些問題，可增加伺服器上的處理器、記憶體和磁碟資源。 不過，您可能也需要在多部電腦上調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的延展。  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>在多部電腦上調整 Analysis Services 的延展  
  有幾個方法可調整延展至多部電腦上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安裝。 下列清單描述這些選項。  

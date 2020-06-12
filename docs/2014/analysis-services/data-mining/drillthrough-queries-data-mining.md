@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca74fe9ec36262130e01a58280f9d966c35c3485
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21e8c6f7cb6938e629be9d252c208c61c04d17d8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084544"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522482"
 ---
 # <a name="drillthrough-queries-data-mining"></a>鑽研查詢 (資料採礦)
   *「鑽研查詢」* (Drillthrough query) 可讓您傳送查詢至採礦模型，以擷取基礎案例或結構的詳細資料。 如果您想要檢視用來定型模型的案例與用來測試模型的案例，或者您想要查看案例資料的其他詳細資料，鑽研就很有用。  
@@ -69,7 +68,7 @@ ms.locfileid: "66084544"
 -   如果採礦結構不允許鑽研，但是採礦模型允許，您就只能檢視模型案例的資訊，而無法檢視採礦結構的資訊。  
   
 ###  <a name="security-issues-for-drillthrough"></a><a name="bkmk_Security"></a>鑽取的安全性問題  
- 如果您想要向下切入到模型的結構案例，您必須確認這兩個[AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl)屬性都設定為`True`。 此外，您必須是針對結構和模型同時擁有鑽研權限之角色的成員。 如需如何建立角色的資訊，請參閱[角色設計工具 &#40;Analysis Services - 多維度資料&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx)。 請參閱。  
+ 如果您想要向下切入到模型的結構案例，您必須確認這兩個[AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl)屬性都設定為 `True` 。 此外，您必須是針對結構和模型同時擁有鑽研權限之角色的成員。 如需如何建立角色的資訊，請參閱[角色設計工具 &#40;Analysis Services - 多維度資料&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx)。 請參閱。  
   
  鑽研權限是在結構和模型上分別設定的。 即使您沒有結構的權限，模型權限還是可以讓您從模型進行鑽研。 結構的鑽研權限可以使用 [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 函數，提供將結構資料行從模型加入到鑽研查詢的額外功能。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66084544"
 ##  <a name="related-tasks"></a><a name="bkmk_Tasks"></a> 相關工作  
  使用下列連結，在特定案例中使用鑽研。  
   
-|工作|連結|  
+|Task|連結|  
 |----------|----------|  
 |描述在資料採礦設計師中使用鑽研的程序|[鑽研採礦模型的案例資料](drill-through-to-case-data-from-a-mining-model.md)|  
 |改變現有的採礦模型以允許鑽研|[針對採礦模型啟用鑽研](enable-drillthrough-for-a-mining-model.md)|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa763516511f3d2fd68ca5275cdeb6fe0af7d57b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070863"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547660"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>預測計算器 (適用於 Excel 的資料表分析工具)
   ![預測計算工具](media/tat-predcal.gif "預測計算工具")  
@@ -48,17 +47,17 @@ ms.locfileid: "66070863"
   
 5.  按一下 **[選擇要用於分析的資料行**]。  
   
-6.  在 [**高級資料行選取**] 對話方塊中，選取具有有用資訊的資料行。 移除與分析不相關的任何資料行。 按一下 [確定]  。  
+6.  在 [**高級資料行選取**] 對話方塊中，選取具有有用資訊的資料行。 移除與分析不相關的任何資料行。 按一下 [確定]。  
   
      為防止扭曲結果，您也應該移除具有重複資訊的資料行。 例如，如果您的 [Income] 資料行包含數值資料，而 [Income Group] 資料行包含 [高]、[中] 與 [低] 標籤，則您不得在相同的模型中包含這兩個資料行， 但是您可以針對每個資料行建立一個個別的模型。  
   
 7.  在 [**輸出選項**] 區段中，選取 [**操作計算機**]，在 Excel 活頁簿內建立分析和計分卡。 選取 [**印表機就緒計算機**] 來建立分析，也會產生可列印並用於手動評分的報表。  
   
-8.  按一下 [執行]****。  
+8.  按一下 **[執行]** 。  
   
      此工具會建立包含報表與計分卡的新工作表。  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  **預測計算器**工具使用 Microsoft 羅吉斯回歸演算法，其可處理離散值，以及離散化和連續數值資料。  
   
 ## <a name="understanding-the-scoring-reports"></a>了解計分報表  
@@ -73,7 +72,7 @@ ms.locfileid: "66070863"
 -   本節描述每個報表中的資訊，以及如何使用各種報表選項。  
   
 ### <a name="prediction-report-with-graphs"></a>包含圖形的預測報表  
- 第一個預測報表的標題為 **[ \< \<目標屬性>的目標狀態> 預測計算器報表**]。 其中包含從分析衍生出來的因數資料表，以及可協助您評估特定分析之財務影響的工具。  
+ 第一個預測報表的標題為**預測計算器 \<target state> \<target attribute> 的報表**。 其中包含從分析衍生出來的因數資料表，以及可協助您評估特定分析之財務影響的工具。  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>指定成本與收益的資料表  
  此報表中的第一個工具在報表左上方的資料表，您可以在其中指定與正確和不正確預測值相關聯的成本與收益。  計算器需要這些成本與收益，才能計算最佳分數臨界值。  
@@ -120,7 +119,7 @@ ms.locfileid: "66070863"
  例如，雖然第一個圖表建議鎖定模型預測的前 500 個客戶是達到最高收益的方式，但是您在查看過這個圖表後判定錯誤鎖定客戶的成本太大，而可能決定改為在前 400 個客戶後中斷行銷活動。  
   
 ### <a name="interactive-prediction-calculator"></a>互動式預測計算器  
- 預測計算器工具所建立的第二個工作表，其標題為**目標屬性\<>\<之目標狀態> 的預測計算器**。 這是一個您可以用於計算個別分數的互動式工作表。 這個工作表使用存放在模型中的模式與統計資料，因此您可以試驗不同的值，並查看這些值如何影響預測的分數。 此報表也包含兩個區段：一個是互動式的區段，而另一個則為參考。  
+ 預測計算器工具所建立的第二個工作表，其標題為**預測計算器 \<target state> \<target attribute> **的。 這是一個您可以用於計算個別分數的互動式工作表。 這個工作表使用存放在模型中的模式與統計資料，因此您可以試驗不同的值，並查看這些值如何影響預測的分數。 此報表也包含兩個區段：一個是互動式的區段，而另一個則為參考。  
   
 #### <a name="first-table"></a>第一個資料表  
  您可以在資料表的 [**值**] 資料行中選取或輸入新的值，以查看變更值對分數的影響。  
@@ -135,7 +134,7 @@ ms.locfileid: "66070863"
 |Children|0|157|  
 |教育訓練|Bachelors|22|  
 |Occupation|Skilled Manual|33|  
-|Home Owner|是|8|  
+|Home Owner|Yes|8|  
 |Cars|2|50|  
 |Commute Distance|0-1 Miles|99|  
 |區域|北美洲|0|  
@@ -152,11 +151,11 @@ ms.locfileid: "66070863"
  此資料表針對輸入資料行的每個可能狀態顯示個別的分數，以及該分數對於結果的相對影響。 此資料表是靜態的，而且僅供參考。  
   
 ### <a name="printable-prediction-calculator"></a>可列印預測計算器  
- 預測計算器工具所建立的第三個工作表的標題為**PrintablePrediction \<計算機，適用于\<目標屬性>的目標狀態> **。 這個計分卡可以列印出來，讓您在不使用電腦時，能夠手動計算分數。  
+ 預測計算器工具所建立的第三個工作表的標題為**PrintablePrediction \<target state> 計算機 \<target attribute> **。 這個計分卡可以列印出來，讓您在不使用電腦時，能夠手動計算分數。  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>列印與使用預測計算器產生的計分報表  
   
-1.  針對 [屬性>，按一下標題為 [**可列印的\<預測計算器**] 的索引標籤。  
+1.  按一下標題為 [**可列印] 預測計算器的 \<attribute> **索引標籤。  
   
 2.  在 Excel 的 [檔案] 功能表上，選取 [**預覽列印**]。  
   
@@ -175,7 +174,7 @@ ms.locfileid: "66070863"
 8.  使用在**總**資料列之後的工作表上列印的準則，將分數轉換成預測的結果。  
   
 ## <a name="related-tools"></a>相關工具  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供 Microsoft 羅吉斯迴歸演算法，以用於此類型的分析。 如果您已經熟悉羅吉斯回歸，可以使用適用于 Excel 的資料採礦用戶端的 [ **Advanced** ] 選項，輕鬆地建立羅吉斯回歸模型。 如需詳細資訊，請參閱[Advanced 模型化 &#40;適用于 Excel 的資料採礦增益集&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)。 如需羅吉斯回歸模型之選項和參數的詳細資訊，請參閱《線上叢書》中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的「Microsoft 羅吉斯回歸演算法」主題。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供 Microsoft 羅吉斯迴歸演算法，以用於此類型的分析。 如果您已經熟悉羅吉斯回歸，可以使用適用于 Excel 的資料採礦用戶端的 [ **Advanced** ] 選項，輕鬆地建立羅吉斯回歸模型。 如需詳細資訊，請參閱[Advanced 模型化 &#40;適用于 Excel 的資料採礦增益集&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)。 如需羅吉斯回歸模型之選項和參數的詳細資訊，請參閱《線上叢書》中的「Microsoft 羅吉斯回歸演算法」主題 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [適用於 Excel 的資料表分析工具](table-analysis-tools-for-excel.md)  

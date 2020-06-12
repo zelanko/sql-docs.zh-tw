@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: HT
+ms.openlocfilehash: eafad9ac648994c1a8ce24746401728caa4b1500
+ms.sourcegitcommit: 5be63bf337f765dfe04972c034dbd9e93c834dc5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68213539"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721451"
 ---
 ## <a name="specifying-application-intent"></a>指定應用程式意圖
 
@@ -54,5 +54,5 @@ ms.locfileid: "68213539"
 
 每個都使用唯讀路由的多個連線可能不會都連線到相同的唯讀複本。 資料庫同步處理的變更或伺服器路由組態的變更，可能會導致用戶端連接至不同的唯讀複本。 您可以確保所有唯讀要求都連線到相同的唯讀複本。 透過*不*將可用性群組接聽程式傳遞到 **Server** 連接字串關鍵字，以確保此相同性。 請改為指定唯讀執行個體的名稱。
 
-唯讀路由連線到主要複本的時間可能會比較長。 等候較久是因為唯讀路由會先連線到主要複本，然後尋找最佳可用的可讀次要複本。 由於這些多 Stap，您應該將登入逾時增加到至少 30 秒。
+唯讀路由連線到主要複本的時間可能會比較長。 等候較久是因為唯讀路由會先連線到主要複本，然後尋找最佳可用的可讀次要複本。 由於有多個步驟，您應該將登入超時時間增加到至少30秒。
 

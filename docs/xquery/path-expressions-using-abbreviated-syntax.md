@@ -1,5 +1,6 @@
 ---
 title: 在路徑運算式中使用縮寫語法 |Microsoft Docs
+description: 瞭解如何在 XQuery 路徑運算式中使用縮寫語法。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e75db08f283631cf9b5daf064790786a1abc10f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eeb7026f341af60f289a1d3854e24656073add61
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946412"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306007"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>路徑運算式 - 使用縮寫語法
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +38,11 @@ child::ProductDescription[attribute::ProductModelID=19]
   
 -   **子**軸是預設軸。 因此，可以從運算式中的步驟省略**child：：** axis。 例如，`/child::ProductDescription/child::Summary` 可以撰寫成 `/ProductDescription/Summary`。  
   
--   **屬性**軸可以縮寫為@。 例如，`/child::ProductDescription[attribute::ProductModelID=10]` 可以撰寫成 `/ProudctDescription[@ProductModelID=10]`。  
+-   **屬性**軸可以縮寫為 @ 。 例如，`/child::ProductDescription[attribute::ProductModelID=10]` 可以撰寫成 `/ProudctDescription[@ProductModelID=10]`。  
   
 -   **/Descendant-or-self：： node （）/** 可以縮寫為//。 例如，`/descendant-or-self::node()/child::act:telephoneNumber` 可以撰寫成 `//act:telephoneNumber`。  
   
-     上一個查詢擷取了所有儲存在 Contact 資料表中 AdditionalContactInfo 資料行的電話號碼。 AdditionalContactInfo 的架構是以\<telephoneNumber> 專案可以出現在檔中任何位置的方式來定義。 因此，若要擷取所有的電話號碼，您必須搜尋文件中的每個節點。 將會從文件的根節點開始搜尋，並繼續搜尋所有的下階節點。  
+     上一個查詢擷取了所有儲存在 Contact 資料表中 AdditionalContactInfo 資料行的電話號碼。 AdditionalContactInfo 的架構是以專案 \<telephoneNumber> 可以出現在檔中任何地方的方式定義。 因此，若要擷取所有的電話號碼，您必須搜尋文件中的每個節點。 將會從文件的根節點開始搜尋，並繼續搜尋所有的下階節點。  
   
      下列查詢會擷取特定客戶連絡人的所有電話號碼。  
   

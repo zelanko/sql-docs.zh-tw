@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 322b755357da597d3bdcb41e4a83685075f4d991
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077033"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544638"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>備份與還原 Analysis Services 資料庫
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括備份與還原，讓您可以從特定時間點復原資料庫及其物件。 備份與還原也是一種有效的技術，可將資料庫移轉到升級的伺服器、在伺服器之間移動資料庫，或是將資料庫部署到實際伺服器。 如果您還沒有備份計畫，但是您有很重要的資料，就應該盡快設計及實作計畫，以供資料復原之用。  
@@ -45,7 +44,7 @@ ms.locfileid: "66077033"
   
 -   [還原 Analysis Services 資料庫](#bkmk_restore)  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 先決條件  
  您必須具有 Analysis Services 執行個體的管理權限，或在要備份的資料庫上擁有「完整控制權 (管理員)」權限。  
   
  還原位置相較於取得備份的來源執行個體而言，必須是相同版本或更新版本的 Analysis Services 執行個體。 雖然您無法將 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體中的資料庫還原到舊版的 Analysis Services，但是在較新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體上還原舊版資料庫 (例如 SQL Server 2012) 是常見的做法。  

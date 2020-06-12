@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: b206f39e-5fa3-4b5c-babf-c604c0dfd82a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1e11d8cddaa780e6572bdb9e8116fa970fc9ef95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef7326ce8711893b01eae06558a638efe894fd0a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070122"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539030"
 ---
 # <a name="review-the-queries-that-will-be-optimized-usage-based-optimization-wizard"></a>檢閱要最佳化的查詢 (基於使用方式的最佳化精靈)
   使用 [檢閱要最佳化的查詢]**** 頁面，即可顯示和選取從查詢記錄中擷取的查詢，而 [基於使用方式的最佳化精靈] 將使用此查詢記錄來設計選取之資料分割的彙總。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **請**  
  選取所需之查詢的核取方塊，以設計其彙總。  
   

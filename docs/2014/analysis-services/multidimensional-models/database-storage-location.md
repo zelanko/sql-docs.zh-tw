@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2dd3659aed11e4e1cee791fcb5e541471320c82a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e904333dc25e7ae58d8eae29ba00279d7e599033
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075895"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547100"
 ---
 # <a name="database-storage-location"></a>資料庫儲存位置
-  通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓特定資料庫放置於伺服器資料夾外部。 這些情況通常是由商務需求所驅使，例如改善效能或展開儲存體。 在`DbStorageLocation`這些情況下，資料庫屬性可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 指定本機磁片或網路裝置中的資料庫位置。  
+  通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓特定資料庫放置於伺服器資料夾外部。 這些情況通常是由商務需求所驅使，例如改善效能或展開儲存體。 在這些情況下， `DbStorageLocation` 資料庫屬性可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 指定本機磁片或網路裝置中的資料庫位置。  
   
 ## <a name="dbstoragelocation-database-property"></a>DbStorageLocation 資料庫屬性  
  `DbStorageLocation` 資料庫屬性會指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用以建立和管理所有資料庫資料和中繼資料檔案的資料夾。 所有中繼資料檔案都會儲存在 `DbStorageLocation` 資料夾，但資料庫中繼資料檔案除外，因為這種檔案會儲存在伺服器資料夾中。 在設定 `DbStorageLocation` 資料庫屬性的值時有兩個重要的考量：  
@@ -36,10 +35,10 @@ ms.locfileid: "66075895"
  `DbStorageLocation` 會指定所有資料庫資料和中繼資料檔案所在的資料夾，而 `StorageLocation` 則會指定一個或多個 Cube 資料分割所在的資料夾。 您可以在 `StorageLocation` 之外，獨立設定 `DbStorageLocation`。 這是根據預期結果的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 決策，而且這兩個屬性的使用方式將多次重疊。  
   
 ## <a name="dbstoragelocation-usage"></a>DbStorageLocation 使用方式  
- `DbStorageLocation`資料庫`Create`屬性在`Detach` / `Backup` / `Restore`資料庫命令序列、資料庫命令序列或`Synchronize`資料庫命令中，會當做資料庫命令的一部分使用。 `Attach` 變更 `DbStorageLocation` 資料庫屬性會被視為資料庫物件中的結構性變更。 這表示，您必須重新建立所有中繼資料並重新處理資料。  
+ 資料庫 `DbStorageLocation` 屬性在資料庫命令 `Create` `Detach` / `Attach` 序列、 `Backup` / `Restore` 資料庫命令序列或 `Synchronize` 資料庫命令中，會當做資料庫命令的一部分使用。 變更 `DbStorageLocation` 資料庫屬性會被視為資料庫物件中的結構性變更。 這表示，您必須重新建立所有中繼資料並重新處理資料。  
   
 > [!IMPORTANT]  
->  您不應該使用 `Alter` 命令來變更資料庫儲存位置。 `Detach` / `Attach`相反地，我們建議您使用一連串的資料庫命令（請參閱[移動 Analysis Services 資料庫](move-an-analysis-services-database.md)、[附加和卸離 Analysis Services 資料庫](attach-and-detach-analysis-services-databases.md)）。  
+>  您不應該使用 `Alter` 命令來變更資料庫儲存位置。 相反地，我們建議您使用一連串的 `Detach` / `Attach` 資料庫命令（請參閱[移動 Analysis Services 資料庫](move-an-analysis-services-database.md)、[附加和卸離 Analysis Services 資料庫](attach-and-detach-analysis-services-databases.md)）。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   

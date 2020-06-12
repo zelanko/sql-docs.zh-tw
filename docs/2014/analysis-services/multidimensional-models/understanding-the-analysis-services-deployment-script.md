@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: a63ebee9-9848-48f1-82ad-64ecf2e47019
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9436d33cdc99cf979509a40f06ceea15c0cd765
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25df0b377918316e54a14787d7492a681c81778d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072660"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536010"
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>了解 Analysis Services 部署指令碼
   [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 產生的 XMLA 部署指令碼包含兩個區段：  
   
--   部署腳本的第一個部分包含建立、改變或刪除目的地資料庫中的適當[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件時所需的命令。 根據預設， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案產生的輸入檔是以累加部署為基礎。 因此，XMLA 部署指令碼將只會影響已變更或刪除的物件。  
+-   部署腳本的第一個部分包含建立、改變或刪除 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 目的地資料庫中的適當物件時所需的命令 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 根據預設， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案產生的輸入檔是以累加部署為基礎。 因此，XMLA 部署指令碼將只會影響已變更或刪除的物件。  
   
 -   部署指令碼的第二個部分包含僅要處理目的地伺服器上所建立或改變的物件時所需的命令 ([處理預設] 選項) 或完整處理目的地資料庫時所需的命令。 您也可以選擇讓部署指令碼不包含任何處理命令。  
   

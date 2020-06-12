@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 32ee1539c734c549f89d5b3db8ec4add467a72b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08da312fa1348266bbc33fafa6b1b3c6b07c64ad
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070584"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539770"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>收益圖 (SQL Server 資料採礦增益集)
   ![資料採礦用戶端中的收益圖按鈕](media/dmc-profitchart.gif "資料採礦用戶端中的收益圖按鈕")  
@@ -67,7 +66,7 @@ ms.locfileid: "66070584"
   
 7.  精靈隨即建立包含模型之成本-效益分析的圖表。  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  如果您要預測離散數值，必須選取要預測的精確目標值。  
   
 ## <a name="understanding-the-profit-chart"></a>了解收益圖  

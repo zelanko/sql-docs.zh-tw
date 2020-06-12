@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: adeb16a91ef4d7b540e09b5e1f8b5b004be472e4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086595"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526254"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Cube 或模型屬性對話方塊 (SSAS)
   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [資料庫屬性]**** 對話方塊，即可設定 Cube 或模型資料庫的屬性。 您可以在**物件總管**中，以滑鼠右鍵按一下 Cube 或模型，然後選取 [屬性]****，藉以顯示此對話方塊。  
@@ -30,7 +29,7 @@ ms.locfileid: "66086595"
   
 -   [主動式快取 &#40;資料分割屬性] 對話方塊&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

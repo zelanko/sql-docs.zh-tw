@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 23c095dd-f47a-4d6b-8d22-b49bbb954bcb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5972d690f89374e02cc18ac4aa13fcbae9de87c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f85a1933b0b3c08f2295b92ee58f71426fb6ea2d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062773"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528154"
 ---
 # <a name="advanced-view-aggregations-tab-cube-designer"></a>進階檢視 (彙總索引標籤，Cube 設計師)
   使用彙總設計師的 **[進階檢視]** 手動建立與修改彙總設計和個別的彙總。 這個檢視應該只能供進階使用者使用。  
   
  **注意**[**匯總設計嚮導]** 和 [**基於使用方式的優化嚮導]** 無法在此視圖中使用。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |選項|描述|  
 |------------|-----------------|  

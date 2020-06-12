@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0838c90f0797a0db9c8a66cd8c5f877aaecdad0a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070014"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538930"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>儲存資料採礦查詢結果對話方塊 (採礦模型預測檢視)
   使用 **[儲存資料採礦查詢結果]** 對話方塊，即可將資料採礦查詢的結果儲存到新的資料表。  
   
  新的資料表將建立在資料來源所定義的資料庫中。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料來源**  
  從目前的專案中選取資料來源。 如果正確的資料來源不存在，請按一下 **[新增]** 建立新的資料來源。  
   

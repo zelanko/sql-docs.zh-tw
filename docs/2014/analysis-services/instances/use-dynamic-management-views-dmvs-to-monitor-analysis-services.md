@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3ea13dc58815e82d82a3f3b5ffdd3c5d666d7e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217114"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543713"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用動態管理檢視 (DMV) 監視 Analysis Services
   Analysis Services 動態管理檢視 (DMV) 是公開本機伺服器作業和伺服器健全狀況相關資訊的查詢結構。 查詢結構是傳回 Analysis Services 執行個體中繼資料和監視資訊之結構描述資料列集的介面。  
@@ -98,9 +97,9 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  如果指定的資料列集無法使用 DMV，伺服器會傳回下列錯誤：「伺服器無法辨識\<schemarowset> 要求類型」。 所有其他錯誤都指向語法問題。  
+>  如果指定的資料列集無法使用 DMV，伺服器會傳回下列錯誤：「 \<schemarowset> 伺服器無法辨識要求類型」。 所有其他錯誤都指向語法問題。  
   
-|資料列集|描述|  
+|資料列集|Description|  
 |------------|-----------------|  
 |[DBSCHEMA_CATALOGS 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|傳回目前連接上 Analysis Services 資料庫的清單。|  
 |[DBSCHEMA_COLUMNS 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|傳回目前資料庫中所有資料行的清單。 您可以使用此清單來建構 DMV 查詢。|  

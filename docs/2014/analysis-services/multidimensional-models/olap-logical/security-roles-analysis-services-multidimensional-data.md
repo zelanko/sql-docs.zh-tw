@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2e63ef1a2463f65e108ade9a43b748e02831da57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e62abaab5a8f74dfee7d51962f2fb243dc6eb20a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725252"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545990"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>安全性角色 (Analysis Services - 多維度資料)
-  在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，會使用角色來管理[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件和資料的安全性。 基本上，角色會與特定的 Microsoft Windows 使用者和群組的安全性識別碼 (SID) 相關聯，這些使用者和群組擁有針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體所管理物件定義的特定存取權限和權限。 在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中提供兩種角色類型：  
+  在中，會使用角色 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 來管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件和資料的安全性。 基本上，角色會與特定的 Microsoft Windows 使用者和群組的安全性識別碼 (SID) 相關聯，這些使用者和群組擁有針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體所管理物件定義的特定存取權限和權限。 在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中提供兩種角色類型：  
   
 -   伺服器角色，這是一種固定角色，提供對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體的管理員存取權。  
   
 -   資料庫角色，這是管理員所定義的角色，用來控制非管理員使用者對物件和資料的存取。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)]安全性是使用角色和許可權來[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]管理。 角色是使用者的群組。 使用者 (也稱為成員) 可以在角色中加入或移除。 物件的權限是依角色指定，而角色中的所有成員都可以使用此角色具有權限的物件。 角色中的所有成員都具有物件的相同權限。 權限是物件所特有。 每一個物件都有權限集合 (包含該物件的授與權限)，可以對物件授與不同的權限集合。 每一個權限 (來自物件的權限集合) 都會被指派單一角色。  
+ 安全性的安全性 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 是使用角色和許可權來管理。 角色是使用者的群組。 使用者 (也稱為成員) 可以在角色中加入或移除。 物件的權限是依角色指定，而角色中的所有成員都可以使用此角色具有權限的物件。 角色中的所有成員都具有物件的相同權限。 權限是物件所特有。 每一個物件都有權限集合 (包含該物件的授與權限)，可以對物件授與不同的權限集合。 每一個權限 (來自物件的權限集合) 都會被指派單一角色。  
   
 ## <a name="role-and-role-member-objects"></a>角色和角色成員物件  
  角色是使用者 (成員) 集合的包含物件。 角色定義會在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中建立使用者的成員資格。 由於權限是依角色指派，所以在使用者可存取任何物件之前，使用者必須是某個角色的成員。  
@@ -64,7 +63,7 @@ ms.locfileid: "62725252"
   
   類別是抽象類別， 因此，您必須使用衍生類別來定義對應物件的權限。 對於每一個物件而言，都會定義權限衍生類別。  
   
-|Object|類別|  
+|物件|類別|  
 |------------|-----------|  
 |<xref:Microsoft.AnalysisServices.Database>|<xref:Microsoft.AnalysisServices.DatabasePermission>|  
 |<xref:Microsoft.AnalysisServices.DataSource>|<xref:Microsoft.AnalysisServices.DataSourcePermission>|  
@@ -77,10 +76,10 @@ ms.locfileid: "62725252"
   
 |動作|值|說明|  
 |------------|------------|-----------------|  
-|Process|{`true`, `false`}<br /><br /> 預設值=|如果為 `true`，成員可以處理此物件以及此物件中包含的任何物件。<br /><br /> 處理權限不會套用到採礦模型。 <xref:Microsoft.AnalysisServices.MiningModel> 權限一律是從 <xref:Microsoft.AnalysisServices.MiningStructure> 繼承而來。|  
+|程序|{`true`, `false`}<br /><br /> 預設值=|如果為 `true`，成員可以處理此物件以及此物件中包含的任何物件。<br /><br /> 處理權限不會套用到採礦模型。 <xref:Microsoft.AnalysisServices.MiningModel> 權限一律是從 <xref:Microsoft.AnalysisServices.MiningStructure> 繼承而來。|  
 |ReadDefinition|{`None`, `Basic`, `Allowed`}<br /><br /> 預設值=|指定成員是否可以讀取與此物件有關的資料定義 (ASSL)。<br /><br /> 如果為 `Allowed`，表示成員可以讀取與此物件有關的 ASSL。<br /><br /> `Basic` 和 `Allowed` 會由此物件中所包含的物件所繼承。 `Allowed` 會覆寫 `Basic` 和 `None`。<br /><br /> 物件上的 DISCOVER_XML_METADATA 需要 `Allowed`。 必須要有 `Basic`，才能建立連結物件和本機 Cube。|  
 |讀取|{`None`, `Allowed`}<br /><br /> 預設值=`None` (DimensionPermission 例外，其預設值=`Allowed`)|指定成員是否具有結構描述資料列集和資料內容的讀取權。<br /><br /> `Allowed` 會提供資料庫的讀取權，這樣可讓您探索資料庫。<br /><br /> Cube 上的 `Allowed` 會提供結構描述資料列集中的讀取權及 Cube 內容的存取權 (除非受到 <xref:Microsoft.AnalysisServices.CellPermission> 和 <xref:Microsoft.AnalysisServices.CubeDimensionPermission> 的限制)。<br /><br /> 維度上的 `Allowed` 會授與此維度中所有屬性的讀取權限 (除非受到 <xref:Microsoft.AnalysisServices.CubeDimensionPermission> 的限制)。 讀取權限只會用於 <xref:Microsoft.AnalysisServices.CubeDimensionPermission> 的靜態繼承。 維度上的 `None` 會隱藏維度，並只針對可彙總屬性提供預設成員的存取；如果此維度包含不可彙總的屬性，則會引發錯誤。<br /><br /> <xref:Microsoft.AnalysisServices.MiningModelPermission> 上的 `Allowed` 會授與權限來查看結構描述資料列集中的物件以及執行預測聯結。<br /><br /> 必須有**NoteAllowed** ，才能讀取或寫入資料庫中的任何物件。|  
-|寫入|{`None`, `Allowed`}<br /><br /> 預設值=|指定成員是否具有父物件資料的寫入權。<br /><br /> 也適用於 <xref:Microsoft.AnalysisServices.Dimension>、<xref:Microsoft.AnalysisServices.Cube> 和 <xref:Microsoft.AnalysisServices.MiningModel> 子類別。 它不會套用到資料庫 <xref:Microsoft.AnalysisServices.MiningStructure> 子類別，這樣會產生驗證錯誤。<br /><br /> <xref:Microsoft.AnalysisServices.Dimension> 上的 `Allowed` 會授與維度中所有屬性的寫入權限。<br /><br /> <xref:Microsoft.AnalysisServices.Cube> 上的 `Allowed` 會針對定義為 Type=writeback 之資料分割的 Cube 上的資料格授與其寫入權限。<br /><br /> <xref:Microsoft.AnalysisServices.MiningModel> 上的 `Allowed` 會授與修改模型內容的權限。<br /><br /> <xref:Microsoft.AnalysisServices.MiningStructure> 上的 `Allowed` 在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中沒有特定的意義。 **注意：** 除非讀取也設定為`Allowed` ，否則無法將寫入設定為`Allowed`|  
+|寫入|{`None`, `Allowed`}<br /><br /> 預設值=|指定成員是否具有父物件資料的寫入權。<br /><br /> 也適用於 <xref:Microsoft.AnalysisServices.Dimension>、<xref:Microsoft.AnalysisServices.Cube> 和 <xref:Microsoft.AnalysisServices.MiningModel> 子類別。 它不會套用到資料庫 <xref:Microsoft.AnalysisServices.MiningStructure> 子類別，這樣會產生驗證錯誤。<br /><br /> <xref:Microsoft.AnalysisServices.Dimension> 上的 `Allowed` 會授與維度中所有屬性的寫入權限。<br /><br /> <xref:Microsoft.AnalysisServices.Cube> 上的 `Allowed` 會針對定義為 Type=writeback 之資料分割的 Cube 上的資料格授與其寫入權限。<br /><br /> <xref:Microsoft.AnalysisServices.MiningModel> 上的 `Allowed` 會授與修改模型內容的權限。<br /><br /> <xref:Microsoft.AnalysisServices.MiningStructure> 上的 `Allowed` 在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中沒有特定的意義。 **注意：** `Allowed`除非讀取也設定為，否則無法將寫入設定為`Allowed`|  
 |管理**注意事項：** 僅在資料庫許可權中|{`true`, `false`}<br /><br /> 預設值=|指定成員是否可以管理資料庫。<br /><br /> `true` 會授與資料庫中所有物件的存取權。<br /><br /> 成員可以具有特定資料庫的管理權限，但不包含其他資料庫。|  
   
 ## <a name="see-also"></a>另請參閱  

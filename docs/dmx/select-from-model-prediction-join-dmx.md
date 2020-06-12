@@ -1,21 +1,21 @@
 ---
-title: 從&lt;模型&gt;預測聯結（DMX）選取 |Microsoft Docs
+title: 從 &lt; 模型 &gt; 預測聯結（DMX）選取 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928337"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670135"
 ---
-# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>從&lt;模型&gt;預測聯結（DMX）選取
+# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>從 &lt; 模型 &gt; 預測聯結（DMX）選取
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   使用採礦模型預測外部資料來源中的資料行狀態。 **預測聯結**語句會將來源查詢中的每個案例與模型進行比對。  
@@ -38,7 +38,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *選取運算式清單*  
  從採礦模型衍生之資料行識別碼與運算式的逗號分隔清單。  
   
- *模型*  
+ *model*  
  模型識別碼。  
   
  *子 select*  
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  預測聯結的來源查詢可以是資料表或單一查詢。  
   
- 您可以指定不會在 [ \<*選取運算式] 清單*中傳回資料表運算式的預測函數> 和\<*條件運算式*>。  
+ 您可以指定不會在 [選取運算式] 清單中傳回資料表運算式的預測函數 \< *select expression list*> 和 \< *條件運算式*>。  
   
  **自然預測聯結**會自動將來源查詢中符合模型中資料行名稱的資料行名稱對應在一起。 如果您使用**自然預測**，就可以省略 ON 子句。  
   
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>範例 2：使用 OPENQUERY  
- 下列範例顯示如何使用儲存在外部資料集中的潛在客戶清單，建立批次預測查詢。 因為資料表是已在實例上定義之資料來源視圖的一部分[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，所以查詢可以使用[OPENQUERY](../dmx/source-data-query-openquery.md)來抓取資料。 因為資料表中的資料行名稱與在「採礦模型」中不同，所以必須使用**ON**子句將資料表中的資料行對應到模型中的資料行。  
+ 下列範例顯示如何使用儲存在外部資料集中的潛在客戶清單，建立批次預測查詢。 因為資料表是已在實例上定義之資料來源視圖的一部分 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，所以查詢可以使用[OPENQUERY](../dmx/source-data-query-openquery.md)來抓取資料。 因為資料表中的資料行名稱與在「採礦模型」中不同，所以必須使用**ON**子句將資料表中的資料行對應到模型中的資料行。  
   
  查詢會傳回資料表中每個人的名字與姓氏，以及表示每個人是否可能購買自行車，其中 0 表示「可能不會購買自行車」，而 1 表示「可能會購買自行車」。 最後一個資料行包含預測結果的機率。  
   

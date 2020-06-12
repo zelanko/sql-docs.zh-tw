@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32ac73a2d6fde38d15d1f45a8439293695749ea4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081844"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528694"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>設計窗格 (採礦模型預測檢視)
   **[設計]** 窗格包含預測查詢產生器，可用來建立資料採礦預測。 您可以設計預測查詢來使用資料來源檢視中輸入資料的資料表，以便產生大量預測，或者可以建立單一預測查詢，好讓您提供個別值。  
@@ -31,7 +30,7 @@ ms.locfileid: "66081844"
   
  **如需詳細資訊，請參閱** [資料採礦查詢](data-mining/data-mining-queries.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **切換到查詢結果檢視**  
  按一下，即可在 [設計]****、[查詢]**** 及 [結果]**** 窗格之間切換。 切換到 **[結果]** 窗格會執行查詢。  
   
@@ -81,11 +80,11 @@ ms.locfileid: "66081844"
  **欄位**  
  從衍生自來源資料表的資料行清單中，選取一個資料行。 如果您在 **[來源]** 中選取 **[預測函數]**，這就會包含所選取採礦模型可以使用的預測函數。  
   
- **群組**  
- 配合 [及/或]**** 資料行，即可將運算式群組在一起。 例如，`(expr1 Or expr2) And expr3`。  
+ **小組**  
+ 配合 [及/或]**** 資料行，即可將運算式群組在一起。 例如： `(expr1 Or expr2) And expr3` 。  
   
  **和/或**  
- 用於建立邏輯查詢。 例如，`(expr1 Or expr2) And expr3`。  
+ 用於建立邏輯查詢。 例如： `(expr1 Or expr2) And expr3` 。  
   
  **準則/引數**  
  指定套用至資料行的條件或使用者運算式。 可以從包含採礦模型的資料表和輸入資料表，將資料行拖曳到資料格。  

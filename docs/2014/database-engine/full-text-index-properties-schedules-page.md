@@ -12,12 +12,12 @@ ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4188a76609df3829455da05365d60776b8f6b815
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 9dda41e229e36c0c4b86c5bdb00782c3b5871bfa
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000898"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858643"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>全文檢索索引屬性 (排程頁面)
   您可以使用這個頁面來檢視和建立執行 SQL Server Agent 作業的排程，以便針對全文檢索索引的基底資料表啟動更新的累加母體擴展。 如果基底資料表或檢視表沒有包含 `timestamp` 資料類型的資料行，就會執行完整母體擴展。  
@@ -26,7 +26,7 @@ ms.locfileid: "83000898"
   
 -   [管理全文檢索索引](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **排程**  
  針對全文檢索索引的基底資料表列出每個排程的累加母體擴展 (如果有的話)。  
   

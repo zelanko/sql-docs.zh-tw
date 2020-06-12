@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 104d9dedafafedce505f63a9b8c17291d631ca54
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74684088"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540600"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
   Excel Services 可讓您指定哪些位置對於在 SharePoint 伺服器上開啟的活頁簿而言是有效的儲存機制。 這些位置稱為「信任位置」，而且您可以針對每個建立的信任位置使用不同的組態設定。 對於 PowerPivot for SharePoint 部署，您可以考慮針對包含 PowerPivot 活頁簿的網站建立信任位置，讓您可以套用最適合 PowerPivot 資料存取的設定，同時針對其餘的伺服陣列保留預設值。  
   
   
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  您必須是伺服陣列管理員或服務管理員，才能將 URL 指定為信任位置。  
   
  您必須知道包含 PowerPivot 圖庫或儲存活頁簿之其他文件庫的 SharePoint 網站之 URL 位址。 若要取得位址，請開啟包含文件庫的網站，以滑鼠右鍵按一下 [ **PowerPivot 圖庫**]，選取 [**屬性**]，然後複製包含伺服器名稱和網站路徑之位址（URL）的第一個部分。  

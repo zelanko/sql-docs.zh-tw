@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 94d8388819d8d60c7b9b00881b9f05ef7d890a2e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5b5fcc363acb7f6bfc9a7288c2a9c7718a6b6f47
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693915"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524385"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>SQL Server 2014 的開發人員參考資料
 

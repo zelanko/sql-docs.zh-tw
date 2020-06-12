@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9d009b6cae346fd2b16d0651b0e905a0fb9e7eb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076342"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536260"
 ---
 # <a name="create-a-report-data-source"></a>建立報表資料來源
   為了讓 Power View 連接到多維度模型，您必須在 SharePoint 文件庫中建立共用報表資料來源定義，也稱為 .rsds 檔。 .rsds 檔會指定 Analysis Services 伺服器執行個體的名稱、連接類型、連接字串，以及用來連接到多維度模型的認證。 當使用者按下 .rsds 時，新的空白 Power View 報表 (.rdlx 檔) 就會在瀏覽器中開啟。  
@@ -39,7 +38,7 @@ ms.locfileid: "66076342"
   
 1.  按一下文件庫功能區上的 [文件]**** 索引標籤。  
   
-2.  按一下 [**新增檔** > ] [報表] [**資料來源**]。  
+2.  按一下 [**新增檔**] [報表] [  >  **資料來源**]。  
   
     > [!NOTE]  
     >  如果您沒有在功能表上看見 [報表資料來源]**** 項目，表示此文件庫的報表資料來源內容類型尚未啟用。 如需詳細資訊，請參閱[將報表伺服器內容類型加入至程式庫 &#40;SharePoint 整合模式中的 Reporting Services&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)。  

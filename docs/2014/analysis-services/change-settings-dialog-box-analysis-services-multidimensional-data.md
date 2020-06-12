@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 717eabb3db136f048f7a39f2fc40f61ee60c253c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088244"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527634"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>變更設定對話方塊 (Analysis Services - 多維度資料)
   使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [變更設定] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可變更 **[處理]** 對話方塊所列出之物件的處理設定。 您可以在 **[處理]** 對話方塊中按一下 **[變更設定]** ，以顯示 **[變更設定]** 對話方塊。  
@@ -25,11 +24,11 @@ ms.locfileid: "66088244"
 > [!NOTE]  
 >   對於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [處理] **對話方塊中列出的物件，此對話方塊所指定的設定會覆寫從** 資料庫繼承的預設值。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **處理選項**  
  使用此索引標籤即可針對處理作業，修改處理順序、回寫資料表以及受影響的物件等相關設定。 索引標籤包含下列選項：  
   
- **並列**  
+ **Parallel**  
  按一下以平行處理物件。  
   
  **平行工作數上限**  

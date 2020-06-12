@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bca58767285718b733dd820970cc48a99d0ea14
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083382"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521240"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>採礦結構 (Analysis Services - 資料採礦)
   採礦結構定義從中建立採礦模型的資料：此結構會指定來源資料檢視、資料行的數目和類型，並將選用的資料分割指定為定型集和測試集。 單一採礦結構可支援共用相同網域的多個採礦模型。 下列圖表說明資料採礦結構與資料來源及其所構成資料採礦模型間的關聯性。  
@@ -54,7 +53,7 @@ ms.locfileid: "66083382"
   
 -   定義結構的索引鍵，包括巢狀資料表的索引鍵 (如果適用的話)。  
   
--   指定來源資料是否應分成定型集和測試集。 這是選擇性步驟。  
+-   指定來源資料是否應分成定型集和測試集。 此為選用步驟。  
   
 -   處理結構。  
   
@@ -116,7 +115,7 @@ ms.locfileid: "66083382"
 |-----------|-----------|  
 |使用關聯式採礦結構|[建立新的關聯式採礦結構](create-a-new-relational-mining-structure.md)<br /><br /> [將巢狀資料表加入至採礦結構](add-a-nested-table-to-a-mining-structure.md)|  
 |使用以 OLAP Cube 為基礎的採礦結構|[建立新的 OLAP 採礦結構](create-a-new-olap-mining-structure.md)<br /><br /> [篩選採礦結構的來源 Cube](../filter-the-source-cube-for-a-mining-structure.md)|  
-|使用採礦結構中的資料行|[將資料行新增至採礦結構](add-columns-to-a-mining-structure.md)<br /><br /> [從採礦結構中移除資料行](remove-columns-from-a-mining-structure.md)|  
+|使用採礦結構中的資料行|[將資料行加入至採礦結構](add-columns-to-a-mining-structure.md)<br /><br /> [從採礦結構中移除資料行](remove-columns-from-a-mining-structure.md)|  
 |變更或查詢採礦結構屬性和資料|[變更採礦結構的屬性](change-the-properties-of-a-mining-structure.md)|  
 |使用基礎資料來源及更新來源資料|[編輯用於採礦結構的資料來源檢視](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [處理採礦結構](process-a-mining-structure.md)|  
   

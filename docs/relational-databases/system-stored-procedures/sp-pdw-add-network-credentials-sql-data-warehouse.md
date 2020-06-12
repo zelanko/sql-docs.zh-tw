@@ -1,7 +1,6 @@
 ---
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure SQL Data Warehouse
-ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
 ms.reviewer: ''
@@ -12,17 +11,18 @@ ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.custom: seo-dt-2019
+ms.openlocfilehash: a4f4fac6f7b7dc1f7809042bd9b784b754bec1a2
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844407"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627485"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials （SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  這會將網路認證[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]儲存在中，並將它們與伺服器產生關聯。 例如，您可以使用這個預存程式[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ，提供適當的讀取/寫入權限來執行目標伺服器上的資料庫備份和還原作業，或建立用於 TDE 之憑證的備份。  
+  這會將網路認證儲存在中 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ，並將它們與伺服器產生關聯。 例如，您可以使用這個預存程式，提供 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 適當的讀取/寫入權限來執行目標伺服器上的資料庫備份和還原作業，或建立用於 TDE 之憑證的備份。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
  如果在控制節點和所有計算節點上新增認證失敗，就會發生錯誤。  
   
 ## <a name="general-remarks"></a>一般備註  
- 這個預存程式[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]會將網路認證新增至的 NetworkService 帳戶。 NetworkService 帳戶會在控制節點和計算[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]節點上執行 SMP 的每個實例。 例如，當備份作業執行時，控制節點和每個計算節點都會使用 NetworkService 帳號憑證來取得目標伺服器的讀取和寫入權限。  
+ 這個預存程式會將網路認證新增至的 NetworkService 帳戶 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 NetworkService 帳戶會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在控制節點和計算節點上執行 SMP 的每個實例。 例如，當備份作業執行時，控制節點和每個計算節點都會使用 NetworkService 帳號憑證來取得目標伺服器的讀取和寫入權限。  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

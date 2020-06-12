@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6973256746d668569d977cedbc2500ee007cd6ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081554"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528510"
 ---
 # <a name="dmx-templates"></a>DMX 範本
   資料採礦範本可幫助您快速建立複雜的查詢。 雖然 DMX 查詢的一般語法已完整記載，但是使用範本可直接按一下並指向引數和資料來源，讓您更容易建立查詢。  
@@ -42,7 +41,7 @@ ms.locfileid: "66081554"
   
      但是請注意，如果您在使用查詢編輯器時切換檢視，便會清除在上一個檢視中的所有資訊。 在變更檢視之前，請將 DMX 陳述式複製並貼到另一個檔案以儲存您的工作。  
   
-8.  按一下 [完成]  。 在 [**選擇目的地**] 對話方塊中，指定您想要儲存結果的位置。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  按一下 [完成] 。 在 [**選擇目的地**] 對話方塊中，指定您想要儲存結果的位置。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
 >  如果您成功執行語句，則您傳送至伺服器的 DMX 語句也會記錄在**追蹤**視窗中。 如需如何使用追蹤功能的詳細資訊，請參閱[追蹤 &#40;適用于 Excel&#41;的資料採礦用戶端](trace-data-mining-client-for-excel.md)。  
@@ -52,7 +51,7 @@ ms.locfileid: "66081554"
 ## <a name="list-of-dmx-templates"></a>DMX 範本的清單  
  適用於 Excel 的資料採礦用戶端中包括下列 DMX 範本。  
   
- **預測**  
+ **翻**  
   
  使用這些範本可建立進階預測查詢，包括增益集精靈不支援的查詢，例如，使用巢狀資料表或外部資料來源的查詢。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66081554"
   
  **建立**  
   
- 使用這些範本可建立自訂模型或資料結構。 您不受限於此程式所支援的模型-您可以使用所連接之實例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]所支援的任何資料採礦演算法，包括外掛程式演算法。  
+ 使用這些範本可建立自訂模型或資料結構。 您不受限於此程式所支援的模型-您可以使用所連接之實例所支援的任何資料採礦演算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，包括外掛程式演算法。  
   
 -   採礦模型  
   
@@ -122,7 +121,7 @@ ms.locfileid: "66081554"
   
 -   定型採礦結構  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  根據您使用的範本而定，您可能需要系統管理權限才能存取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器並執行查詢。  
   
 ## <a name="see-also"></a>另請參閱  

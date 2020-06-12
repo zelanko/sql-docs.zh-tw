@@ -1,5 +1,6 @@
 ---
 title: SqlXmlCommand 物件（SQLXML）
+description: 瞭解 SqlXmlCommand 物件的方法和屬性。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -31,12 +32,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb307599c48c72697f696e78eb7ed988dc03ca37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afebd1c659015e3daf4a357b12871687207b607e
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252645"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306157"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML 受控類別 - SqlXmlCommand 物件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "75252645"
 public SqlXmlCommand(string cnString)  
 ```  
   
- 其中`cnString`是用來識別伺服器、資料庫和登入資訊的 ADO 或 OLEDB 連接字串，例如`Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`。  
+ 其中 `cnString` 是用來識別伺服器、資料庫和登入資訊的 ADO 或 OLEDB 連接字串，例如 `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` 。  
   
  在連接字串中，`Provider` 必須為 SQLOLEDB 而 `Data Provider` 不應包含在連接字串中。  
   
@@ -65,7 +66,7 @@ public SqlXmlCommand(string cnString)
  將查詢結果寫入現有的資料流。 當您有需要附加結果的資料流程時（例如，將查詢結果寫入 HttpResponse. OutputStream），這個方法就很有用。 如需實用範例，請參閱[&#40;SQLXML Managed 類別&#41;執行 SQL 查詢](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)。  
   
  XmlReader ExecuteXmlReader （）  
- 傳回 XmlReader 物件。 您可以使用這個方法直接操作 XmlReader 物件中的資料，或插入 system.string 的可鏈結架構。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 文件集。 如需實用範例，請參閱[使用 ExecuteXMLReader 方法執行 SQL 查詢](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)。  
+ 傳回 XmlReader 物件。 您可以使用這個方法直接操作 XmlReader 物件中的資料，或插入 System.Xml 的可鏈結架構。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 文件集。 如需實用範例，請參閱[使用 ExecuteXMLReader 方法執行 SQL 查詢](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)。  
   
  TheSqlXmlCommand 物件也支援下列其他方法：  
   

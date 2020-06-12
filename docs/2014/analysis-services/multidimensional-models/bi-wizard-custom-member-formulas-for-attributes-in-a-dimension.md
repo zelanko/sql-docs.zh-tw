@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 08db0d81ac198795386391f977d09d20ff8d22ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 112f8944bd20b2b6a464b0d84fb8ac1a0e89d976
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076882"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544570"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>在維度中設定屬性的自訂成員公式
   將自訂成員公式增強功能加入至 Cube 或維度以取代預設彙總，預設彙總與使用多維度運算式 (MDX) 運算式之結果的維度成員相關聯。 (在維度中，此增強功能會於指定的屬性上設定 `CustomRollupColumn` 屬性)。  

@@ -19,12 +19,12 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a42fe0c5bf58dfb1214897d87cdde3126b924a75
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3b415e24ec1b81ed660f1ca43b3d4283d11c8e44
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833234"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423182"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  取得應用程式鎖定之後，只會擷取純文字中的前 32 個字元，其餘部分會予以雜湊。  
   
  [ @LockMode =] '*lock_mode*'  
- 這是要取得的特定資源鎖定模式。 *lock_mode* 是沒有預設值的 **nvarchar(32)**。 此值可以是下列任何一項： **Shared**、 **Update**、 **IntentShared**、 **IntentExclusive**或**Exclusive**。 如需詳細資訊，請參閱[鎖定模式](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)。
+ 這是要取得的特定資源鎖定模式。 *lock_mode*為**Varchar （32）** ，而且沒有預設值。 此值可以是下列任何一項： **Shared**、 **Update**、 **IntentShared**、 **IntentExclusive**或**Exclusive**。 如需詳細資訊，請參閱[鎖定模式](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)。
   
  [ @LockOwner =] '*lock_owner*'  
- 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)**。 這個值可以是 **Transaction ** (預設值) 或 **Session **。 當*lock_owner*值為**交易**時，根據預設或明確地指定，sp_getapplock 必須從交易內執行。  
+ 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner*為**Varchar （32）**。 這個值可以是 **Transaction ** (預設值) 或 **Session **。 當*lock_owner*值為**交易**時，根據預設或明確地指定，sp_getapplock 必須從交易內執行。  
   
  [ @LockTimeout =] '*值*'  
  這是鎖定逾時值 (以毫秒為單位)。 預設值與 @ 所傳回的值相同 @LOCK_TIMEOUT 。 若要指出鎖定要求應傳回-1 的傳回碼，而不是在無法立即授與要求時等待鎖定，請指定0。  

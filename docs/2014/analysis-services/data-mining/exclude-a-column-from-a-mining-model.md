@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 404fe5fe-3ba2-4b9b-8780-0d02343d467f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 70049092909b625a1f304f16f153bf4287d5bcdf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30affebc143184c6287858f60b5d4f5d089c322a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084563"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522477"
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>從採礦模型排除資料行
   當您建立新的採礦模型時，可能不想要使用模型做為基礎之採礦結構中已存在的所有資料行。 例如，您可能已加入 [客戶名稱] 資料行來進行鑽看，但不想要將它用於模型化。 或者，您可能決定為一個資料行建立具有不同離散化的多個複本，並且在每個模型中只使用其中一個複本，而忽略其餘複本。 您還可以選擇性地在多個不同模型中新增輸入資料行，檢查新增的變數如何影響輸出資料行。  
@@ -33,6 +32,6 @@ ms.locfileid: "66084563"
 2.  從下拉式清單方塊中選取 [忽略]****。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型工作和操作說明](mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)  
   
   

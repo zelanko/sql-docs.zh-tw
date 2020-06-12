@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 6466e075-3345-4d6b-9e20-1ffb4c8f30c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6c680dd48f3588b92a2c87d9fa8d3c3a04dde39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7befaa35fb520bda23cfe8cd216df521090cce58
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077612"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537335"
 ---
 # <a name="move-table-dialog-box-ssas"></a>移動資料表對話方塊 (SSAS)
   [移動資料表]**** 對話方塊讓您能夠變更資料表在模型設計工具中出現的順序。 若要存取此對話方塊，請以滑鼠右鍵按一下要移動之資料表底部的索引標籤，然後選取 [移動]****。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **將選取的資料表移到此資料表前面**  
  您要移動的資料表將會移到您從此清單中選擇之資料表前面的位置。 如果您要將某個資料表移到該組資料表的結尾，選擇 [(移到結尾)]****。  
   
