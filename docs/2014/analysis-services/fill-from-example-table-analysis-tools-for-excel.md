@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dac57d8f-1c65-4878-8ea0-9c680df5e4fb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3894f8ea42c0c5c91c3b6a5c5e7a6677b763b02
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081322"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528344"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>根據範例填滿 (適用於 Excel 的資料表分析工具)
   ![資料表分析工具中的根據範例填滿按鈕](media/tat-fillex.gif "資料表分析工具中的根據範例填滿按鈕")  
@@ -41,15 +40,15 @@ ms.locfileid: "66081322"
   
      例如，如果您從經驗得知，某個資料行與另一個具有遺失值的資料行之間有因果關係，即可取消選取其他資料行來獲得更好的結果。  
   
-     按一下 [確定]  。  
+     按一下 [確定]。  
   
-5.  按一下 [執行]****。  
+5.  按一下 **[執行]** 。  
   
      分析完成時，工具會建立新的**模式**工作表，其中包含分析的結果。 此報表會列出找到的規則或關鍵影響因數，並且顯示每個規則的機率。  
   
      此工具也會將包含新值的資料行加入到原始的資料表。 您可以檢閱這些值，並且將其與原始的值比較。  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  您只能使用在資料行中的資料。 如果您要填滿的數列存放在資料列中，您可以使用 Excel 中的 Paste、Transpose 函數將資料變更為單欄式格式。  
   
 ## <a name="understanding-the-pattern-report"></a>了解模式報表  
@@ -70,7 +69,7 @@ ms.locfileid: "66081322"
 > [!NOTE]  
 >  **相對影響**會顯示為陰影橫條。 該橫條越長，這條規則也就越有可能是填滿值的預測。  
   
- 此工具也會將新的資料行加入至原始資料表， \<名為 column name，> 擴充。  
+ 此工具也會將新的資料行加入至名為 Extended 的原始資料表 \<column name> 。  
   
  如果原始的資料資料行包含某個值，該值便會複製到新資料行中。 不過，如果原始的資料行包含空白的儲存格，新資料行便會包含由精靈所預測的值。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69d44846f37960ebebf4bce03924270163dabe8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079273"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543556"
 ---
 # <a name="lesson-12-create-roles"></a>第 12 課：建立角色
   在這一課，您將建立角色。 角色會藉由僅限身為角色成員的 Windows 使用者存取的方式，提供模型資料庫物件和資料安全性。 每個角色都定義有單一權限︰「無」、「讀取」、「讀取和處理」、「處理」或「系統管理員」。 您可以使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的 [角色管理員] 對話方塊，在模型撰寫期間定義角色。 部署模型之後，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]管理角色。 如需詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](tabular-models/roles-ssas-tabular.md)。  
@@ -35,7 +34,7 @@ ms.locfileid: "66079273"
   
  完成本課程的估計時間： **15 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 11 課：建立資料分割](lesson-10-create-partitions.md)。  
   
 ## <a name="create-roles"></a>建立角色  
@@ -48,7 +47,7 @@ ms.locfileid: "66079273"
   
      清單中會新增 [無] 權限的新角色。  
   
-3.  按一下 [新增] 角色，然後在 [**名稱**] 資料行中，將角色`Internet Sales Manager`重新命名為。  
+3.  按一下 [新增] 角色，然後在 [**名稱**] 資料行中，將角色重新命名為 `Internet Sales Manager` 。  
   
 4.  在 [權限]**** 資料行中，按一下下拉式清單，然後選取 [讀取]**** 權限。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66079273"
   
      清單中會新增 [無] 權限的新角色。  
   
-3.  按一下 [新增] 角色，然後在 [**名稱**] 資料行中，將角色`Internet Sales US`重新命名為。  
+3.  按一下 [新增] 角色，然後在 [**名稱**] 資料行中，將角色重新命名為 `Internet Sales US` 。  
   
 4.  在 [權限]**** 資料行中，按一下下拉式清單，然後選取 [讀取]**** 權限。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66079273"
   
 1.  在 [角色管理員]**** 對話方塊中，按一下 [新增]****。  
   
-2.  按一下 [新增] 角色，然後在 [**名稱**] 資料行中，將角色`Internet Sales Administrator`重新命名為。  
+2.  按一下 [新增] 角色，然後在 [**名稱**] 資料行中，將角色重新命名為 `Internet Sales Administrator` 。  
   
 3.  按一下 [權限]**** 資料行中的下拉式清單，然後選取 [系統管理員]**** 權限。  
   

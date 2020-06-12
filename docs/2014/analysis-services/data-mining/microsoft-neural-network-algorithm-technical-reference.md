@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf7db49fd2b6a86e9b113dbede785379f910b978
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083854"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521764"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 類神經網路演算法技術參考資料
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路使用「多層認知」**(Multilayer Perceptron) 網路，亦稱為「倒傳播差異規則」**(Back-Propagated Delta Rule) 網路，它包含最多 3 層神經 (Neuron) 或「認知器」**(Perceptron)。 這 3 層分別是輸入層、選擇性隱藏層和輸出層。  
@@ -86,7 +85,7 @@ ms.locfileid: "66083854"
   
  所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦演算法都會自動使用特徵選取來改善分析並減少處理的負載。 在類神經網路模型中，特徵選取所使用的方法取決於屬性的資料類型。 下表顯示用於類神經網路模型的特徵選取方法，並同時顯示用於羅吉斯迴歸演算法 (以類神經網路演算法為基礎) 的特徵選取方法，做為參考。  
   
-|演算法|分析的方法|評價|  
+|演算法|分析的方法|註解|  
 |---------------|------------------------|--------------|  
 |類神經網路|有趣性分數<br /><br /> Shannon 熵<br /><br /> 使用 K2 優先的貝氏<br /><br /> 使用優先統一狄氏分配的貝氏 (預設值)|類神經網路演算法可以使用以熵為基礎的計分方法和貝氏計分方法，只要資料包含連續資料行即可。<br /><br /> 預設值。|  
 |羅吉斯迴歸|有趣性分數<br /><br /> Shannon 熵<br /><br /> 使用 K2 優先的貝氏<br /><br /> 使用優先統一狄氏分配的貝氏 (預設值)|因為您無法將參數傳遞給這個演算法來控制特徵選取行為，所以會使用預設值。 因此，如果所有屬性都是離散或離散化的，則預設值為 BDEU。|  
@@ -186,7 +185,7 @@ ms.locfileid: "66083854"
  Log Normal  
  表示資料行內的值應視為根據「對數常態」** 曲線分佈，也就是說值的對數會以常態方式分佈。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  類神經網路模型必須至少包含一個輸入資料行和一個輸出資料行。  
   
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  

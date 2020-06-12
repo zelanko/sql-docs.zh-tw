@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 7393f846-7195-4cd3-95cd-83d102841e2e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 87c638b2c5455a2f3a15051b0e62ee86685d4e5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3faf5983b452f436b4d3071fa542bfb2ccdd382e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087554"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527277"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>正在完成精靈 (基於使用方式的最佳化精靈)
   使用 [正在完成精靈]**** 頁面，即可儲存彙總設計並將它指派給選取的資料分割。 在基於使用方式的最佳化精靈完成設計和儲存彙總之後，您也可以選擇性地處理選取的資料分割。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **建立新彙總設計**  
  選取此選項，即可建立新的彙總設計，然後針對新的彙總設計輸入名稱。  
   

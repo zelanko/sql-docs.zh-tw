@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1beb0a644edb25537b85c559192ece9288c2de6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5b22848e6f689615274d958f8b4ff175e8ac5ba
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62638777"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528054"
 ---
 # <a name="developer39s-guide-analysis-services"></a>開發人員&#39;s 指南（Analysis Services）
     

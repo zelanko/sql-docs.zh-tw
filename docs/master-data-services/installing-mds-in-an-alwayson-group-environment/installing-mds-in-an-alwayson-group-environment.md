@@ -5,17 +5,17 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b85fcb83b9268701f0b717faf41f07552073e37
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728099"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732466"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和災害復原
 
@@ -90,7 +90,7 @@ ms.locfileid: "73728099"
 
 WSFC 是一種功能，可改善應用程式和服務的高可用性。 它包含一組獨立的 Windows Server 執行個體，而且這些執行個體上執行 Microsoft 容錯移轉叢集服務。 Windows Server 執行個體 (或偶而呼叫的節點) 會連接以彼此通訊，而且可以進行失敗偵測。 WSFC 提供失敗偵測和容錯移轉功能。 如果叢集中的節點或服務失敗，則會偵測到失敗，而且另一個節點自動或手動開始提供失敗節點上所裝載的服務。 因此，使用者只會發生最少的服務中斷，進而改善服務可用性。  
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>必要條件
 
 Windows Server 作業系統安裝於所有執行個體上，並修補所有更新。
 
@@ -207,7 +207,7 @@ AG 提供資料庫層級的可用性。 AG (一組使用者資料庫) 和其虛�
 
 Fci 提供實例層級的高可用性。 SQL Server 服務及其相關服務會註冊為 WSFC 中的資源。 此外，FCI 解決方案需要對稱共用磁碟儲存體 (例如 SAN 或 SMB 檔案共用)，而且 WFC 叢集中的所有節點都必須使用這些磁碟儲存體。
    
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>必要條件
 
 - 在所有節點上安裝 SQL Server。 如需詳細資訊，請參閱[安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)。
 
@@ -323,7 +323,7 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 
    圖 18
 
-9. 在 [選取資料同步處理]**** 頁面上，按一下 [完整]****，然後指定每個節點可存取的網路共用。 按 **[下一步]**，繼續進行。 請參閱圖 19。
+9. 在 [選取資料同步處理]**** 頁面上，按一下 [完整]****，然後指定每個節點可存取的網路共用。 按一下 [下一步] 以繼續。 請參閱圖 19。
 
    此網路共用將用來儲存資料庫備份，以建立次要複本。 如果這不適用於您的組織，請選擇另一個資料同步處理喜好設定。 請參閱[SQL Server 2016 Always On 可用性群組](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)，以瞭解如何使用其他選項來建立次要複本。 圖 17 也會列出其他選項。
 
@@ -331,7 +331,7 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 
    圖 19 
 
-10. 在 [驗證]**** 頁面上，確定所有驗證都成功通過，並更正任何錯誤。 按 **[下一步]**，繼續進行。
+10. 在 [驗證]**** 頁面上，確定所有驗證都成功通過，並更正任何錯誤。 按一下 [下一步] 以繼續。
 
 11. 在 [摘要]**** 頁面上，檢閱所有組態設定，然後按一下 [完成]****。 這將建立並設定可用性群組。
 

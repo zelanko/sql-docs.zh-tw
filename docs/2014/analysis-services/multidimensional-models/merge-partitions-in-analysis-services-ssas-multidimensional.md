@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65f7c51f3bba2431ce78f6a9287aedeef0fff7b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073653"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546080"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合併分割區 (SSAS - 多維度)
   您可以合併現有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料分割，以合併相同量值群組中之多個資料分割的事實資料。  
@@ -117,7 +116,7 @@ ms.locfileid: "66073653"
   
 1.  在物件總管中，展開包含您要合併的資料分割之 Cube 的 [量值群組]**** 節點，然後展開 [資料分割]****，再以滑鼠右鍵按一下合併作業的目標或目的地資料分割。 例如，如果您要將季度事實資料移至儲存年度事實資料的分割區，請選取包含年度事實資料的分割區。  
   
-2.  按一下 [**合併**資料分割]，開啟 [**合併資料分割\<分割區名稱>** ] 對話方塊。  
+2.  按一下 [**合併**資料分割] 以開啟 [**合併資料分割 \<partition name> ** ] 對話方塊。  
   
 3.  在 [來源資料分割]**** 下，選取要與目標資料分割合併之每個來源資料分割旁的核取方塊，然後按一下 [確定]****。  
   
@@ -126,7 +125,7 @@ ms.locfileid: "66073653"
   
 4.  以滑鼠右鍵按一下包含累積資料的資料分割，然後選取 [屬性]****。  
   
-5.  開啟`Source`屬性並修改 WHERE 子句，使其包含剛才合併的分割區資料。 回想一下， `Source`此屬性不會自動更新。 如果您重新處理而未先`Source`更新，您可能無法取得所有預期的資料。  
+5.  開啟 `Source` 屬性並修改 WHERE 子句，使其包含剛才合併的分割區資料。 回想一下，此 `Source` 屬性不會自動更新。 如果您重新處理而未先更新 `Source` ，您可能無法取得所有預期的資料。  
   
 ##  <a name="how-to-merge-partitions-using-xmla"></a><a name="bkmk_partitionsXMLA"></a> 如何使用 XMLA 合併分割區  
  如需詳細資訊，請參閱此主題：[合併資料分割 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)。  

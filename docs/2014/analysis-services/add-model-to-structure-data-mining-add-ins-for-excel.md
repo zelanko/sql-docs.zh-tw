@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 606d453235529fbfed4dc0f07178ce2ae7132067
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062881"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528254"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>將模型加入結構 (適用於 Excel 的資料採礦增益集)
   ![將模型加入到結構按鈕中](media/dmc-addmodel.gif "將模型加入到結構按鈕中")  
@@ -44,7 +43,7 @@ ms.locfileid: "66062881"
   
 4.  我們建議您也要按一下 [**參數**] 按鈕，以開啟 [**演算法參數**] 對話方塊，並自訂演算法上的參數。 這個選項是建立自訂採礦模型的最簡單的方式。  
   
-5.  按 [下一步]  。  
+5.  按 [下一步] 。  
   
 6.  在 [**選取資料行**] 對話方塊中，檢查資料行的清單，並在必要時，將資料行的使用方式變更為下列其中一個值：  
   
@@ -86,10 +85,10 @@ ms.locfileid: "66062881"
   
 ### <a name="related-options"></a>相關的選項  
   
-|選項|評價|  
+|選項|註解|  
 |------------|--------------|  
 |[**選取結構或模型**] 對話方塊|選擇現有的採礦結構，以做為建立新模型的基礎。  您挑選的結構必須位於目前的連接中。 如果沒有，請使用 [[連接到來源資料] &#40;[適用于 Excel&#41;工具的資料採礦用戶端] 來](connect-to-source-data-data-mining-client-for-excel.md)變更連接。|  
-|[**選取挖掘演算法**] 對話方塊|此資料採礦演算法清單會視您連接的伺服器而不同。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Standard Edition 和 Enterprise Edition 提供不同的演算法。 您的管理員可能還加入了自訂演算法。<br /><br /> 如果您看不到任何演算法，請確認您已連接到的實例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。|  
+|[**選取挖掘演算法**] 對話方塊|此資料採礦演算法清單會視您連接的伺服器而不同。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Standard Edition 和 Enterprise Edition 提供不同的演算法。 您的管理員可能還加入了自訂演算法。<br /><br /> 如果您看不到任何演算法，請確認您已連接到的實例 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。|  
 |**演算法參數**對話方塊|在這些設定中，您可以使用分析方法特定的參數來自訂每個演算法。 您也可以設定種子，以確保可跨多個定型傳遞重現模型的結果。<br /><br /> 如需詳細資訊，請參閱[演算法參數 &#40;SQL Server 資料採礦增益集&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)。|  
 |**設定資料行模型旗標**對話方塊|模型旗標可透過指定遺漏資料的處理方式來改善您的模型。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](data-mining/modeling-flags-data-mining.md)。|  
   
@@ -112,7 +111,7 @@ ms.locfileid: "66062881"
   
      某些分析類型需要資料根據獨特的規則而小心地結構化。 例如，預測模型和關聯模型。 您可以輕鬆地加入相同類型的新模型，可能包含自訂內容，但這些資料可能不適用於其他演算法。  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  若要建立資料採礦模型，您必須具有 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。 如需有關如何建立或變更連接的詳細資訊，請參閱[連接到來源資料 &#40;適用于 Excel&#41;的資料採礦用戶端](connect-to-source-data-data-mining-client-for-excel.md)。  
   
  如果您看不到所需的資料採礦結構，可能是該結構儲存在不同的執行個體或不同的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中。 如需如何變更為不同資料採礦連接的相關資訊，請參閱[連接到資料採礦伺服器](connect-to-a-data-mining-server.md)。  

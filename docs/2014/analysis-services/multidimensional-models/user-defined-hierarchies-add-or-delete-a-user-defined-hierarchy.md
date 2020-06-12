@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50086ef38d9bd54a4088e9cf647a53553694a09d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072593"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535761"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>加入或刪除使用者定義階層
   您會在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，維度設計師的 [維度結構]**** 索引標籤上，從維度中加入或移除使用者自訂階層。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 626211f974b41ce44655d0b79cf82eb9cb8373ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074962"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546660"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>授與維度的權限 (Analysis Services)
   維度安全性是用來設定維度物件的權限，而不是設定它的資料。 通常，允許或拒絕存取處理作業是在設定維度權限時的主要目標。  
@@ -45,7 +44,7 @@ ms.locfileid: "66074962"
 ## <a name="set-permissions-on-a-database-dimension"></a>設定資料庫維度的權限  
  資料庫維度是資料庫內的獨立物件，允許在相同模型內重複使用維度。 請考量一個可在模型中多次使用的 DATE 資料庫維度，如同 Order Date、Ship Date 及 Due Date Cube 維度。 由於 Cube 和資料庫維度是資料庫中的對等物件，因此您可以個別設定每個物件的處理權限。  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到的實例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、在物件總管中展開適當資料庫的 [**角色**]，然後按一下資料庫角色（或建立新的資料庫角色）。  
+1.  在中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，連接到的實例 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、在物件總管中展開適當資料庫的 [**角色**]，然後按一下資料庫角色（或建立新的資料庫角色）。  
   
 2.  在 [維度]**** 窗格中，應該將維度集設為 [所有資料庫維度]****。  
   
@@ -58,9 +57,9 @@ ms.locfileid: "66074962"
 ## <a name="set-permissions-on-a-cube-dimension"></a>設定 Cube 維度的權限  
  Cube 維度是已新增到 Cube 的資料庫維度。 嚴格來說，它們在相關聯的量值群組上具有結構相依性。 儘管您能以不可部分完成的方式來處理這些物件，但就授權而言，將 Cube 和 Cube 維度視為單一實體是合理的。  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到的實例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、在物件總管中展開適當資料庫的 [**角色**]，然後按一下資料庫角色（或建立新的資料庫角色）。  
+1.  在中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，連接到的實例 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、在物件總管中展開適當資料庫的 [**角色**]，然後按一下資料庫角色（或建立新的資料庫角色）。  
   
-2.  在 [**維度**] 窗格中，將維度集\<變更為 cube 名稱> **cube 維度**。  
+2.  在 [**維度**] 窗格中，將維度集變更為 [ \<cube-name> **cube 維度**]。  
   
      根據預設，權限是繼承自相對應的資料庫維度。 清除 [繼承]**** 核取方塊，即可將權限從 [讀取]**** 更改為 [讀取/寫入]****。 使用 [讀取/寫入]**** 之前，請務必閱讀上一節的注意事項。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd395e605bfde9d34ed0dc4f16060812464efb56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20601a1ece7707e8f798907f21ee5ee7110fe2fe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078246"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542220"
 ---
 # <a name="lesson-9-create-perspectives"></a>第 9 課：建立檢視方塊
   在這一課，您將建立一個 [網際網路銷售] 檢視方塊。 檢視方塊會定義可檢視的模型子集，以提供聚焦、商務特有或應用程式特有的觀點。 使用者使用檢視方塊連接到模型時，只會將那些模型物件 (資料表、資料行、量值、階層和 KPI) 視為該檢視方塊中定義的欄位。  
@@ -28,7 +27,7 @@ ms.locfileid: "66078246"
   
  完成本課程的估計時間： **5 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 8 課：建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)。  
   
 ## <a name="create-perspectives"></a>建立檢視方塊  
@@ -39,9 +38,9 @@ ms.locfileid: "66078246"
   
 2.  在 [檢視方塊]**** 對話方塊中，按一下 [新增檢視方塊]****。  
   
-3.  若要重新命名此觀點，請按兩下**新的 [觀點 1** ] 資料行標題`Internet Sales`，然後輸入。  
+3.  若要重新命名此觀點，請按兩下**新的 [觀點 1** ] 資料行標題，然後輸入 `Internet Sales` 。  
   
-4.  在 [**欄位**] 中，選取下列資料表**日期**、**地理位置**、**產品**、**產品類別目錄**、 `Internet Sales`**產品子類別**目錄和。  
+4.  在 [**欄位**] 中，選取下列資料表**日期**、**地理位置**、**產品**、**產品類別目錄**、**產品子類別**目錄和 `Internet Sales` 。  
   
      請注意，您從此檢視方塊中排除了 Customer 資料表及其所有資料行。 稍後，您將在第 12 課中使用 [在 Excel 中進行分析] 功能測試此檢視方塊。 Excel 樞紐分析表欄位清單將包含 Customer 資料表之外的每個資料表。  
   

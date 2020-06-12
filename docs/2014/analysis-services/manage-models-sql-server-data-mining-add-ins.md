@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: c11380f0-7c24-4668-9cdf-9c53e4aff665
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d5f0619e7291cc08b1750c0b35f9639cb7a9872
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f37939fea1188c18079fc7e619cee6a336876e24
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078043"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541850"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>管理模型 (SQL Server 資料採礦增益集)
   ![資料採礦功能區中的管理模型按鈕](media/dmc-manage.gif "資料採礦功能區中的管理模型按鈕")  
   
- [**管理模型**] 對話方塊可讓您與目前所連接之[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]伺服器中儲存的現有「採礦模型」和「採礦結構」進行互動。 您也可以檢視及管理目前工作階段期間已建立的暫時性結構和模型。 如果您已使用工作階段模型和伺服器上儲存的模型，對話方塊中會顯示這兩種模型。  
+ [**管理模型**] 對話方塊可讓您與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 目前所連接之伺服器中儲存的現有「採礦模型」和「採礦結構」進行互動。 您也可以檢視及管理目前工作階段期間已建立的暫時性結構和模型。 如果您已使用工作階段模型和伺服器上儲存的模型，對話方塊中會顯示這兩種模型。  
   
 ## <a name="using-the-manage-models-wizard"></a>使用管理模型精靈  
  當您按一下 [**管理模型**] 時，會開啟 [**管理採礦結構和模型**] 對話方塊，提供下列功能的存取權來管理現有的資料採礦模型和結構：  
@@ -45,7 +44,7 @@ ms.locfileid: "66078043"
 > [!NOTE]  
 >  您無法使用這個對話方塊建立查詢或模型。 若要建立新的採礦結構，請使用適用于 Excel 的資料採礦用戶端中提供的其中一個嚮導，或使用**資料採礦查詢進階編輯器**。  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  若要管理資料採礦模型，您必須先建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。 即使您使用儲存在暫存檔中的工作階段模型，還是需要連接。 如需有關如何建立或變更連接的詳細資訊，請參閱[連接到來源資料 &#40;適用于 Excel&#41;的資料採礦用戶端](connect-to-source-data-data-mining-client-for-excel.md)。  
   
  如果您連接的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體沒有包含任何現有的資料採礦結構或資料採礦模型，您可以使用精靈或此增益集提供的其他工具來建立它們。 您也可以使用**資料採礦模型進階編輯器**建立新的模型。  

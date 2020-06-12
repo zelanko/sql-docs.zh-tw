@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d09f32cb21762ca56eab156701ee013ef2c03ec3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0943e3f98ae65ec6c142fb1b98f86da054e88638
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083780"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521615"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   當您已經使用基礎採礦結構中的資料來設計及處理採礦模型之後，該採礦模型會是完整的，並包含 *「採礦模型內容」*(Mining Model Content)。 您可以使用此內容來進行預測或分析資料。  
@@ -76,7 +75,7 @@ ms.locfileid: "66083780"
   
 |NODE_TYPE 識別碼|節點標籤|節點內容|  
 |-------------------|----------------|-------------------|  
-|1|模型|中繼資料和根內容節點。 適用於所有模型類型。|  
+|1|型號|中繼資料和根內容節點。 適用於所有模型類型。|  
 |2|樹狀結構|分類樹狀結構的根節點。 適用於決策樹模型。|  
 |3|Interior|樹狀結構內的內部分割節點。 適用於決策樹模型。|  
 |4|散發|樹狀結構的終端節點。 適用於決策樹模型。|  
@@ -228,11 +227,11 @@ ms.locfileid: "66083780"
 |13|Autoregressive order|表示代表著自動迴歸數列數目的值。<br /><br /> 適用於使用 ARIMA 演算法的時間序列模型。|  
 |14|Moving average order|表示代表著數列中移動平均數目的值。<br /><br /> 適用於使用 ARIMA 演算法的時間序列模型。|  
 |15|Difference order|表示代表著數列差異化之次數的值。<br /><br /> 適用於使用 ARIMA 演算法的時間序列模型。|  
-|16|Boolean|表示布林類型。|  
+|16|布林值|表示布林類型。|  
 |17|其他|表示演算法所定義的自訂值。|  
 |18|Prerendered string|表示演算法轉譯為字串的自訂值。 物件模型未套用任何格式。|  
   
- 此數值類型是衍生自 ADMOMD.NET 列舉。 如需詳細資訊，請參閱 <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>。  
+ 此數值類型是衍生自 ADMOMD.NET 列舉。 如需詳細資訊，請參閱 <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType> 。  
   
 ### <a name="node-score"></a>節點分數  
  節點分數的意義因模型類型而異，而且可能也是節點類型所特有。 如需如何針對每一個模型和節點類型計算 NODE_SCORE 的相關資訊，請參閱 [依據演算法類型的採礦模型內容](#bkmk_AlgoType)。  
@@ -273,7 +272,7 @@ ms.locfileid: "66083780"
 |演算法或模型類型|model content|查詢採礦模型|  
 |-----------------------------|-------------------|----------------------------|  
 |關聯規則模型|[關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[關聯模型查詢範例](association-model-query-examples.md)|  
-|叢集模型|[決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[群集模型查詢範例](clustering-model-query-examples.md)|  
+|叢集模型|[決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[叢集模型查詢範例](clustering-model-query-examples.md)|  
 |決策樹模型|[決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[決策樹模型查詢範例](decision-trees-model-query-examples.md)|  
 |線性迴歸模型|[線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[線性迴歸模型查詢範例](linear-regression-model-query-examples.md)|  
 |羅吉斯迴歸模型|[羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)|[線性迴歸模型查詢範例](linear-regression-model-query-examples.md)|  

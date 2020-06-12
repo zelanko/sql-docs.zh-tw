@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3400d904bc857bc282bb1ad9220c1e01fe5a4d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085654"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524034"
 ---
 # <a name="content-types-data-mining"></a>內容類型 (資料採礦)
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以在模型中使用時，同時定義資料行的實體資料類型，以及資料行的邏輯內容類型。  
+  在中， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 您可以在模型中使用時，同時定義資料行的實體資料類型，以及資料行的邏輯內容類型。  
   
  *「資料類型」* 會決定當您建立採礦模型時，演算法要如何處理這些資料行中的資料。 定義資料行的資料類型會提供資訊給演算法，這是有關資料行中的資料類型及如何處理資料的資訊。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的每一個資料類型都會支援一個或多個適用於資料採礦的內容類型。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66085654"
   
  `Discretized` 內容類型受到下列資料類型的支援：`Date`、`Double`、`Long` 和 `Text`。  
   
-## <a name="key"></a>Key  
+## <a name="key"></a>答案  
  *key* 內容類型表示資料行會唯一識別資料列。 在案例資料表中，索引鍵資料行通常是數值的或文字的識別碼。 您可以將內容類型設定為 `key`，以代表資料行只可以用於追蹤記錄，而不能用於分析。  
   
  巢狀資料表也具有索引鍵，但巢狀資料表索引鍵的用法稍有不同。 如果資料行是您想要分析的屬性，請在巢狀資料表中將內容類型設定為 `key`。 每個案例的巢狀資料表索引鍵值都必須是唯一的，但在整個案例集合中可能會有重複的值。  

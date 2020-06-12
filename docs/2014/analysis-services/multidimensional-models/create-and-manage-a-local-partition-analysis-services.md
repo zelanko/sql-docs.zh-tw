@@ -13,21 +13,20 @@ helpviewer_keywords:
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c06e40e452fa0db682e2f79b523ddcd90d0450c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7251f9e9422a79c214d27d913112a28ff43d56b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175787"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536230"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>建立及管理本機分割區 (Analysis Services)
   您可以建立其他分割區，讓量值群組能夠改善處理效能。 擁有多個分割區可讓您在本機和遠端伺服器上，跨對應數目的實體資料檔案以配置事實資料。 在 Analysis Services 中，分割區可以獨立及平行處理，讓您在伺服器上處理工作負載時，能夠有更強的控制力。
 
  您可以在模型設計期間，於 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中建立分割區，或是在部署方案之後，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 XMLA 來建立分割區。 建議您選取一種方法就好。 如果您交替使用這兩種工具，可能會發現，當您後續從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重新部署方案時，先前在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中對已部署的資料庫所做的變更會被覆寫。
 
-## <a name="before-you-start"></a>開始之前
- 檢查您是否有 Business Intelligence 版或 Enterprise 版。 Standard 版不支援多個分割區。 若要[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]檢查版本，請以滑鼠右鍵按一下中的伺服器節點，然後選擇 [**報表** | ]**[一般**]。 如需功能可用性的詳細資訊，請參閱[SQL Server 2014 版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。
+## <a name="before-you-start"></a>在您開始使用 Intune 之前
+ 檢查您是否有 Business Intelligence 版或 Enterprise 版。 Standard 版不支援多個分割區。 若要檢查版本，請以滑鼠右鍵按一下中的伺服器節點 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，然後選擇 [**報表**]  |  **[一般**]。 如需功能可用性的詳細資訊，請參閱[SQL Server 2014 版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。
 
  一開始時就務必了解，如果您之後要將分割區合併，則其必須共用相同的彙總設計。 分割區必須要有相同的彙總設計及儲存模式，才能進行合併。
 
@@ -108,7 +107,7 @@ ms.locfileid: "78175787"
 
 7.  在最後一頁的 [正在完成精靈] 上，提供描述性名稱給分割區。
 
-8.  按一下 [完成]  。
+8.  按一下 [完成] 。
 
 9. 重複先前的步驟以建立其餘的分割區，並每次選擇不同的具名查詢，以選取下一個資料配量。
 

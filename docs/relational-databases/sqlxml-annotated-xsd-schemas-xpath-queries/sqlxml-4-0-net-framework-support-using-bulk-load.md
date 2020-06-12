@@ -1,5 +1,6 @@
 ---
 title: 在 .NET 環境中使用 SQLXML 大量載入
+description: 瞭解如何在 .NET 環境中使用 SQLXML 4.0 大量載入 COM 物件，將 XML 資料大量載入到資料庫中。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5800c6323408f7b018021c041fbba17d2e8f6b89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d60df5334b34061138852340e56876057e398c79
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252445"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529821"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 .NET Framework 支援 - 使用大量載入
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -115,7 +116,7 @@ ms.locfileid: "75252445"
   
 6.  從 [**專案**] 功能表中，選取 [**加入參考**]。  
   
-7.  在 [ **COM** ] 索引標籤中，選取 [ **Microsoft SQLXML Bulkload 4.0 類型程式庫**（xblkld4.dll）]，然後按一下 **[確定]**。 您會看到在專案中建立的**SQLXMLBULKLOADLib**元件。  
+7.  在 [ **COM** ] 索引標籤中，選取 [ **Microsoft SQLXML Bulkload 4.0 型別程式庫**（xblkld4.dll）]，然後按一下 **[確定]**。 您會看到在專案中建立的**SQLXMLBULKLOADLib**元件。  
   
 8.  將 Main() 方法取代成下列程式碼。 將**ConnectionString**屬性和檔案路徑更新為架構和資料檔案。  
   

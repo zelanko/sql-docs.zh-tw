@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 0420a2f6-6d11-4d6c-a889-31e8ef55bbee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f06781ea61a1958d41f37a55026a60cba67b387
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081502"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528464"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Analysis Services 重複安全性角色對話方塊 (Analysis Services - 多維度資料)
-  使用中[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的 [ **Analysis Services 重複的\<安全性角色-資料庫\<名稱>-從角色名稱複製>** ] 對話方塊，複製[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫中現有的角色。 在物件總管中以滑鼠右鍵按一下角色並選取 [複製]****，即可顯示 [複製角色]**** 對話方塊。  
+  使用中的 [ **Analysis Services 重複安全性 \<database name>  -  \<copy from role name> 角色-** ] 對話方塊 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，即可複製資料庫中現有的角色 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 在物件總管中以滑鼠右鍵按一下角色並選取 [複製]****，即可顯示 [複製角色]**** 對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

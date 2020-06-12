@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: be52b351-f376-42ee-adba-2dcaa0c0f69c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b46e9e42d212ca8f92f905c241915fdccec679f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e9fd625b521e6de4693cf31fa2d1edb3ceb0da8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075890"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547120"
 ---
 # <a name="modify-or-delete-a-database-dimension-in-solution-explorer"></a>在方案總管中修改或刪除資料庫維度
   您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中使用維度設計師修改或刪除維度。 修改維度時，必須等到您處理維度之後，使用者才可以使用變更後的維度。 如需詳細資訊，請參閱多[維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)。  

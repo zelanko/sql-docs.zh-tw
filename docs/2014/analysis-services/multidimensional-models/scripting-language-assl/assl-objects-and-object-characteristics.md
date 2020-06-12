@@ -18,19 +18,18 @@ helpviewer_keywords:
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76d57bb421a7f486983476a6549a5121ce88ee9b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736612"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545690"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL 物件和物件特性
   Analysis Services 指令碼語言 (ASSL) 中的物件會遵循有關物件群組、繼承、命名、擴展和處理的特定指導方針。  
   
 ## <a name="object-groups"></a>物件群組  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]所有[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件都有 XML 表示。 這些物件分為兩個群組：  
+ 所有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件都有 XML 表示。 這些物件分為兩個群組：  
   
  **主要物件**  
  主要物件可以獨立建立、改變和刪除。 主要物件包括：  
@@ -86,7 +85,7 @@ ms.locfileid: "62736612"
 ## <a name="object-expansion"></a>物件展開  
   限制可用以控制伺服器傳回的 ASSL XML 展開程度。 這個限制具有下表中所列的選項。  
   
-|列舉值|允許\<Alter>|描述|  
+|列舉值|允許\<Alter>|Description|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|否|只會為要求的物件以及為所有包含的主要物件，遞迴地傳回名稱、識別碼和時間戳記。|  
 |*ObjectProperties*|是|展開要求的物件與所含的次要物件，但是不會傳回所含的主要物件。|  

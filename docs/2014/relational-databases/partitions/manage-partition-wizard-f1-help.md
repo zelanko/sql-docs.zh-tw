@@ -23,12 +23,12 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49625e9ef5311b261bc309a90cfa9d6b315953f6
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63249674"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858860"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>管理資料分割精靈 F1 說明
   使用 [管理資料分割精靈]  ，即可透過資料分割切換或滑動視窗案例的實作，管理和修改現有的資料分割資料表。 這個精靈可以讓資料分割的管理更方便，並且簡化將資料移轉入和移轉出資料表的一般作業。  
@@ -75,7 +75,7 @@ ms.locfileid: "63249674"
 ### <a name="sliding-window-scenario"></a>滑動視窗案例  
  若要以滑動視窗案例管理資料分割，請選取 [以滑動視窗案例管理分割資料]  。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **建立用於切換資料分割的臨時資料表**  
  針對您要切換移入或切換移出現有資料分割資料表的資料建立臨時資料表。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "63249674"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> 選取資料分割切換移入選項頁面  
  使用 [選取資料分割切換移入選項]  頁面，選取您想要切換移入資料分割資料表的暫存資料表。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **顯示所有資料分割**  
  選取此選項可顯示所有資料分割，包括目前在資料分割資料表中的資料分割。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "63249674"
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> 選取資料分割切換移出選項頁面  
  使用 [選取資料分割切換移出選項]  頁面，選取資料分割和暫存資料表來保存您想要切換移出資料分割資料表的分割資料。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **資料分割方格**  
  顯示您所選取之資料分割的資料分割名稱、[左界限]  、[右界限]  、[檔案群組]  和 [資料列計數]  。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63249674"
   
  您也可以在臨時資料表中建立存在來源資料分割內的相同索引。 臨時資料表會自動包含以來源資料分割元素為基礎的條件約束。 這個條件約束通常是根據來源資料分割的界限值產生。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **臨時資料表名稱**  
  為臨時資料表建立名稱，或接受顯示在編輯方塊中的預設名稱。  
   
@@ -258,7 +258,7 @@ ms.locfileid: "63249674"
 ##  <a name="summary-page"></a><a name="Summary"></a> 摘要頁面  
  使用 [摘要]  頁面，即可檢閱您在先前頁面中選取的選項。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **檢閱您的選取項目**  
  針對精靈的每一頁，顯示您所選取的項目。 按一下節點即可展開並檢視您先前選取的選項。  
   

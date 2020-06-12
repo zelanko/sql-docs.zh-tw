@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 330a9011956b90e1259c221610e98093843c0bd9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073451"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545896"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>父子式維度中的一元運算子
-  在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]包含父子式關聯性的維度中，您可以指定一元（或自訂匯總）運算子資料行，以決定父屬性之所有非匯出成員的自訂匯總。 只要評估父成員的值時，就會將一元運算子套用至成員。 父屬性 ( **Usage** =Parent) 上的**UnaryOperatorColumn**，會在包含一元運算子的資料來源檢視中指定資料表的資料行。 儲存在此資料行之自訂積存運算子的值，會套用到屬性的每個成員。  
+  在中包含父子式關聯性的維度中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您可以指定一元（或自訂匯總）運算子資料行，以決定父屬性之所有非匯出成員的自訂匯總。 只要評估父成員的值時，就會將一元運算子套用至成員。 父屬性 ( **Usage** =Parent) 上的**UnaryOperatorColumn**，會在包含一元運算子的資料來源檢視中指定資料表的資料行。 儲存在此資料行之自訂積存運算子的值，會套用到屬性的每個成員。  
   
  您可以在資料來源檢視的維度資料表上，建立和指定具名計算做為一元運算子資料行。 最簡單的運算式 (例如 '+') 會針對所有成員傳回相同的運算子。 但是您可以使用任何運算式，只要它會針對每個成員傳回運算子。  
   
@@ -30,7 +29,7 @@ ms.locfileid: "66073451"
   
  父屬性上之 **UnaryOperatorColumn** 屬性的預設值為 (無)，會停用自訂積存運算子。 下表列出一元運算子，並描述其套用到層級時的行為。  
   
-|一元運算子|描述|  
+|一元運算子|Description|  
 |--------------------|-----------------|  
 |+ (加號)|成員的值加入到該成員發生前之同層級成員的彙總值中。 如果沒有為屬性定義任何一元運算子資料行，這會是預設運算子。|  
 |-（負號）|從成員發生前之同層級成員的彙總值中減掉該成員的值。|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062434"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528034"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services 教學課程案例
   這個教學課程是以一家虛構的公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]為基礎。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司，專門生產及批發金屬和合成器材自行車給北美洲、歐洲和亞洲的商場。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的總公司在華盛頓 Bothell，該公司雇用 500 位員工。 另外， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 它的市場還雇用了一些地區銷售團隊。  
@@ -46,7 +45,7 @@ ms.locfileid: "66062434"
 -   資訊很難稽核。 財務部門目前使用的 **AdventureWorksDW2012** 資料庫只做為大量查詢的資料來源。 他們會將資料下載到個別的試算表，然後花很多時間準備資料及處理試算表。 因此，公司財務報表很難在整個公司進行準備、稽核和管理的工作。  
   
 ## <a name="the-solution"></a>方案  
- 資料倉儲團隊最近對目前分析系統進行設計檢閱。 這項檢閱包括對目前問題和未來需求的差距分析。 資料倉儲團隊認為 **AdventureWorksDW2012** 資料庫是一個設計完善的維度資料庫，其中包含符合標準的維度和 Surrogate 索引鍵。 符合維度可讓維度使用於多個資料超市，例如 [時間] 維度或 [產品] 維度。 Surrogate 索引鍵是假造的索引鍵，連結維度和事實資料表，用來確保唯一性及改進效能。 此外，資料倉儲團隊也判定 **AdventureWorksDW2012** 資料庫中基底資料表的載入和管理方面目前沒有重大問題。 因此，小組已決定使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]來完成下列動作：  
+ 資料倉儲團隊最近對目前分析系統進行設計檢閱。 這項檢閱包括對目前問題和未來需求的差距分析。 資料倉儲團隊認為 **AdventureWorksDW2012** 資料庫是一個設計完善的維度資料庫，其中包含符合標準的維度和 Surrogate 索引鍵。 符合維度可讓維度使用於多個資料超市，例如 [時間] 維度或 [產品] 維度。 Surrogate 索引鍵是假造的索引鍵，連結維度和事實資料表，用來確保唯一性及改進效能。 此外，資料倉儲團隊也判定 **AdventureWorksDW2012** 資料庫中基底資料表的載入和管理方面目前沒有重大問題。 因此，小組已決定使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 來完成下列動作：  
   
 -   透過共同中繼資料層，提供統一資料存取，以進行邏輯分析和報告。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e7712b7a7e861eb3d588f5217baa02bf26746fd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67343900"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528899"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 模式中的 DAX 公式相容性 (SSAS 2014)
 資料分析運算式語言（DAX）可以用來建立量值和其他自訂公式，以用於 Analysis Services 表格式模型、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Excel 活頁簿中的資料模型，以及 Power BI Desktop 資料模型。 在大部分的情況下，您在這些環境中建立的模型是相同的，而且您可以使用相同的量值、關聯性和 Kpi 等。不過，如果您撰寫 Analysis Services 表格式模型，並在 DirectQuery 模式中部署，則可以使用的公式有一些限制。 本主題提供這些差異的總覽，列出在相容性層級1100或1103和 DirectQuery 模式下 SQL Server 2014 Analysis Services tabulars 模型中不支援的函式，並列出支援但可能會傳回不同結果的函數。  
@@ -30,7 +29,7 @@ ms.locfileid: "67343900"
   
 相較之下，DAX 語言的目的是要盡可能模擬 Microsoft Excel 中函數的行為。 例如，在處理 Null、空字串和零值時，Excel 會嘗試提供最佳答案，而不考慮精確的資料類型，因此 xVelocity 引擎會執行相同的處理方式。 不過，當表格式模型以 DirectQuery 模式部署並且將公式傳遞給關聯式資料來源進行評估時，系統就必須根據關聯式資料來源的語意處理資料，而這通常需要以不同的方式處理空字串與 Null。 因此，根據快取的資料以及完全從關聯式存放區中傳回的資料進行評估時，相同的公式可能會傳回不同的結果。  
   
-此外，某些函數無法在 DirectQuery 模式中使用，因為計算需要將目前內容中的資料當做參數傳送到關聯式資料來源。 例如，活頁[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]簿中的量值通常會使用參考活頁簿內可用日期範圍的時間智慧函數。 這類公式通常無法用於 DirectQuery 模式。  
+此外，某些函數無法在 DirectQuery 模式中使用，因為計算需要將目前內容中的資料當做參數傳送到關聯式資料來源。 例如，活頁簿中的量值 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 通常會使用參考活頁簿內可用日期範圍的時間智慧函數。 這類公式通常無法用於 DirectQuery 模式。  
   
 ## <a name="semantic-differences"></a>語意差異  
 本節將列出您可以預期的語意差異類型，並且描述可能適用於函數使用方式或查詢結果的任何限制。  
@@ -55,7 +54,7 @@ ms.locfileid: "67343900"
   
 在記憶體內部模型中，結果為 **true** ，因為作為字串的數字會隱含轉換成數值資料類型，以便與其他數字進行比較。 SQL 也會將文字數字隱含轉換成數字，以便與數值資料類型相比較。  
   
-請注意，這代表第一版的[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]行為變更，這會傳回**false**，因為文字 "2" 一定會被視為大於任何數位。  
+請注意，這代表第一版的行為變更 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] ，這會傳回**false**，因為文字 "2" 一定會被視為大於任何數位。  
   
 **文字與布林值的比較**  
 範例： `"VERDADERO" = TRUE`  
@@ -85,7 +84,7 @@ ms.locfileid: "67343900"
 **從字串轉換成日期/時間**  
 在 DirectQuery 模式中，從日期和時間的字串表示轉換成實際的 **datetime** 值時，其行為方式與 SQL Server 相同。  
   
-如需在模型中[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]管理從字串轉換成**datetime**資料類型之規則的相關資訊，請參閱[DAX 語法參考](/dax/dax-syntax-reference)。
+如需在模型中管理從字串轉換成**datetime**資料類型之規則的相關資訊 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] ，請參閱[DAX 語法參考](/dax/dax-syntax-reference)。
   
 使用記憶體中資料存放區之模型所支援的日期文字格式範圍比 SQL Server 所支援的日期字串格式更有限。 不過，DAX 支援自訂日期和時間格式。  
   
@@ -215,7 +214,7 @@ DAX CEILING 函數的 Transact-SQL 對等項目僅支援大小為 10^19 以下�
 **不支援 SQL Time 資料類型**  
 記憶體內部模型不支援使用新的 SQL **Time** 資料類型。 在 DirectQuery 模式中，參考含有此資料類型之資料行的公式會傳回錯誤。 時間資料行無法匯入記憶體中模型。  
   
-不過，在[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]和的快取模型中，有時候引擎會將時間值轉換成可接受的資料類型，而且公式會傳回結果。  
+不過，在 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 和的快取模型中，有時候引擎會將時間值轉換成可接受的資料類型，而且公式會傳回結果。  
   
 這種行為會影響將日期資料行當做參數使用的所有函數。  
   
@@ -311,7 +310,7 @@ DirectQuery 模式會將 DAX TRIM 函數轉譯成 SQL 陳述式 `LTRIM(RTRIM(<co
   
 如果輸入文字為 **varchar** 或 **nvarchar**，公式的結果一定相同。  
   
-不過，如果文字是固定長度字元，而* &lt;num_chars&gt; *的值大於目標字串的長度，在 DirectQuery 模式中，就會在結果字串的結尾加入空白。  
+不過，如果文字是固定長度字元，而* &lt; num_chars &gt; *的值大於目標字串的長度，在 DirectQuery 模式中，就會在結果字串的結尾加入空白。  
   
 在記憶體中模型中，結果會在最後一個字串字元處終止，而且沒有填補。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d89de37de81311b1f4a884eeaf434e8247da633
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b5ace027c052090e2f0ce5bca77e02df9516da4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174467"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527264"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>設定或修復 PowerPivot for SharePoint 2010 (PowerPivot 組態工具)
   若要設定或修復 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安裝，請使用 PowerPivot 組態工具。 此組態工具一開始先掃描系統，然後傳回完成或修復安裝所需的動作清單。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 安裝精靈會安裝適用於 SharePoint 2010 的 PowerPivot 組態工具，以及適用於 SharePoint 2013 的 PowerPivot 組態工具。 本主題描述適用於 SharePoint 2010 的 PowerPivot 組態工具。 如需有關 SharePoint 2010 的詳細資訊，請參閱[設定或修復 PowerPivot for SharePoint 2013 &#40;PowerPivot 設定工具&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。
@@ -181,7 +180,7 @@ ms.locfileid: "78174467"
  一段時間之後，如果您判斷需要額外的資料儲存和處理功能，您可以將另一個 PowerPivot for SharePoint 伺服器執行個體加入到伺服器陣列中。 如需指示，請參閱[部署檢查清單：將 PowerPivot 服務器加入至 SharePoint 2010 伺服器陣列以向外](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)延展。
 
 ## <a name="additional-resources"></a>其他資源
- ![SharePoint 設定](media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")會https://connect.microsoft.com/SQLServer/Feedback)[透過 Microsoft SQL Server Connect （）提交意見反應和連絡人資訊](https://connect.microsoft.com/SQLServer/Feedback)。
+ ![SharePoint 設定](media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")會[透過 Microsoft SQL Server Connect （）提交意見反應和連絡人資訊](https://connect.microsoft.com/SQLServer/Feedback) https://connect.microsoft.com/SQLServer/Feedback) 。
 
 ## <a name="see-also"></a>另請參閱
  [Powerpivot 組態工具](power-pivot-sharepoint/power-pivot-configuration-tools.md)[管理中心內的 powerpivot 伺服器管理和](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)設定

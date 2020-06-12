@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57fe740bdd02c96eb21994f5996c734620793616
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da4e685a1ebc05e27070873b12de99e8cc480a31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079835"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543870"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升級活頁簿和排程的資料重新整理 (SharePoint 2013)
   本主題將說明在先前 PowerPivot 環境中建立之活頁簿的使用者體驗，以及如何升級 PowerPivot 活頁簿，以便讓您運用這個版本所導入的新功能。 若要深入瞭解新功能，請參閱[PowerPivot 的新](https://go.microsoft.com/fwlink/?LinkID=203917)功能。  
@@ -53,7 +52,7 @@ ms.locfileid: "66079835"
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot for SharePoint 2010**|**2012 PowerPivot for SharePoint 2010**|**2012 SP1 PowerPivot for SharePoint 2013**|  
 |**2008 R2 PowerPivot for Excel 2010**|所有功能|**體驗** ：使用者可以透過瀏覽器與活頁簿進行互動，而且可以使用它做為其他方案的資料來源。<br /><br /> **升級** ：如果 SharePoint 伺服器陣列中的 PowerPivot 系統服務已啟用自動升級，活頁簿就會在文件庫中自動升級。<br /><br /> **排程資料重新整理** ：不支援。 活頁簿需要升級。|**體驗** ：使用者可以與活頁簿進行互動，而且可以使用它做為其他方案的資料來源。<br /><br /> **升級** ：無法使用自動升級。 使用者必須手動將其 2008 R2 活頁簿升級為 2012 版本或 Office 2013 版本。<br /><br /> **排程資料重新整理** ：不支援。 活頁簿需要升級。|  
-|**2012 PowerPivot for Excel**|不受支援|所有功能|**體驗** ：使用者可以透過瀏覽器與活頁簿進行互動，而且可以使用它做為其他方案的資料來源。 可以使用排程資料重新整理。<br /><br /> **升級** ：不支援自動升級。 使用者可以手動將其活頁簿升級為 Office 2013 版本。<br /><br /> **排程資料重新整理** ：支援。|  
+|**2012 PowerPivot for Excel**|不支援|所有功能|**體驗** ：使用者可以透過瀏覽器與活頁簿進行互動，而且可以使用它做為其他方案的資料來源。 可以使用排程資料重新整理。<br /><br /> **升級** ：不支援自動升級。 使用者可以手動將其活頁簿升級為 Office 2013 版本。<br /><br /> **排程資料重新整理** ：支援。|  
 |**Excel 2013**|不支援|不支援|所有功能|  
   
 ##  <a name="upgrade-to-sql-server-2012-service-pack-1-sp1-workbooks-from-2008-r2-workbooks"></a><a name="bkmk_to_2012sp1_from_2008r2"></a>從 2008 R2 活頁簿升級至 SQL Server 2012 Service Pack 1 （SP1）活頁簿  

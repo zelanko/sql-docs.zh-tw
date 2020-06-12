@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d6d418bcdefbb3977a98f04743b7e1b2a58bf54
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 044b5e79ba558dd5bb38331d9b2a07410a3a50de
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810487"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294003"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +58,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 |資料行|資料類型|描述|  
 |------------|---------------|-----------------|  
-|**creation_time**|**datetime**|表示資料列建立的時間戳記。 單一資料列集的每個資料列都有相同的時間戳記。|  
+|**create_time**|**datetime**|表示資料列建立的時間戳記。 單一資料列集的每個資料列都有相同的時間戳記。|  
 |**component_type**|**sysname**|指出資料列是否包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例層級元件或 Always On 可用性群組的資訊：<br /><br /> instance<br /><br /> Always On： AvailabilityGroup|  
-|**component_name**|**sysname**|指出元件的名稱或可用性群組的名稱：<br /><br /> 系統<br /><br /> 資源<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 活動<br /><br /> *\<可用性群組的名稱>*|  
+|**component_name**|**sysname**|指出元件的名稱或可用性群組的名稱：<br /><br /> 系統<br /><br /> 資源<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 活動<br /><br /> *\<name of the availability group>*|  
 |**state**|**int**|指出元件的健全狀態：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|描述狀態資料行。 對應至狀態資料行值的描述如下：<br /><br /> 0：未知<br /><br /> 1：清除<br /><br /> 2：警告<br /><br /> 3：錯誤|  
 |**資料**|**Varchar （max）**|指定元件的相關資料。|  
@@ -77,14 +77,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **事件**：透過預存程式在伺服器記錄的錯誤和事件上收集資料和表面，包括有關信號緩衝區例外狀況的詳細資訊、記憶體代理人的信號緩衝區事件、記憶體不足、排程器監視器、緩衝集區、旋轉器、安全性和連線能力。 事件永遠會顯示狀態 0。  
   
--   ** \< 可用性群組>的名稱**：收集指定可用性群組的資料（如果 component_type = "Always On： AvailabilityGroup"）。  
+-   **\<name of the availability group>**：收集指定可用性群組的資料（如果 component_type = "Always On： AvailabilityGroup"）。  
   
 ## <a name="remarks"></a>備註  
 從失敗觀點來看，系統、資源和 query_processing 元件將會用於失敗偵測，而 io_subsystem 和事件元件只供診斷之用。  
   
 下表將元件對應到其相關聯的健全狀態。  
   
-|單元|乾淨 (1)|警告 (2)|錯誤 (3)|未知 (0) |  
+|元件|乾淨 (1)|警告 (2)|錯誤 (3)|未知 (0) |  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |系統|x|x|x||  
 |資源|x|x|x||  

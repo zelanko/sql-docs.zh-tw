@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1236a9cdffc4dd06764da1f2988df80d568798c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2020119f0561de92f4829f7d03d0f5e7ecd930fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175647"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540455"
 ---
 # <a name="delete-powerpivot-gallery"></a>刪除 PowerPivot 圖庫
   刪除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫也會刪除其所有項目，包括為排程的資料重新整理所設定之 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的資料重新整理記錄。

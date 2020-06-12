@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d78f2523e539d72f506d074d102507fca1d0a986
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e7f387bb62f15acff8e3443e7e9fdc8888896e8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175912"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536680"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>建立資料來源 (SSAS 多維度)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度模型中，資料來源物件代表資料來源的連接，您會從其中處理 (或匯入) 資料。 多維度模型至少必須包含一個資料來源物件，不過您可以加入更多資料來源物件，以便結合數個資料倉儲的資料。 使用本主題中的說明為您的模型建立資料來源物件。 如需設定這個物件之屬性的詳細資訊，請參閱[設定資料來源屬性 &#40;SSAS 多維度&#41;](set-data-source-properties-ssas-multidimensional.md)。  
@@ -82,11 +81,11 @@ ms.locfileid: "70175912"
   
      新連接的預設提供者為原生 OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者。 此提供者是用來連接到使用 OLE DB 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 執行個體。 若要連接到 SQL Server 關聯式資料庫，使用原生 OLE DB\SQL Server Native Client 11.0 通常會比使用其他提供者更快。  
   
-     您可以選擇不同的提供者來存取其他資料來源。 如需所支援的提供者和關係資料庫清單[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，請參閱[&#40;SSAS 多維度&#41;支援的資料來源](supported-data-sources-ssas-multidimensional.md)。  
+     您可以選擇不同的提供者來存取其他資料來源。 如需所支援的提供者和關係資料庫清單 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，請參閱[&#40;SSAS 多維度&#41;支援的資料來源](supported-data-sources-ssas-multidimensional.md)。  
   
 5.  輸入選定提供者所要求的資訊，以連接到基礎資料來源。 如果已選取 **原生 OLE DB\SQL Server Native Client** 提供者，請輸入下列資訊：  
   
-    1.  [伺服器名稱]**** 是 Database Engine 執行個體的網路名稱。 您可以將它指定為 IP 位址、電腦的 NETBIOS 名稱或完整網域名稱。 如果伺服器安裝為已命名的實例，您必須包含實例名稱（例如， \<computername>\\<instancename\>）。  
+    1.  [伺服器名稱]**** 是 Database Engine 執行個體的網路名稱。 您可以將它指定為 IP 位址、電腦的 NETBIOS 名稱或完整網域名稱。 如果伺服器安裝為已命名的實例，您必須包含實例名稱（例如， \<computername> \\<instancename \> ）。  
   
     2.  [登入伺服器]**** 會指定驗證連接的方式。 [使用 Windows 驗證]**** 會使用 Windows 驗證。 **使用 SQL Server 驗證**會指定 Azure SQL 資料庫的資料庫使用者登入，或支援混合模式驗證的 SQL Server 實例。  
   
@@ -105,7 +104,7 @@ ms.locfileid: "70175912"
   
          新的連接即會出現在「資料來源精靈」之 [選取如何定義連接]**** 頁面的 [資料連接]**** 窗格中。  
   
-6.  按 [下一步]  。  
+6.  按 [下一步] 。  
   
 7.  在 [模擬資訊]**** 中，指定 Analysis Services 連接外部資料來源時使用的 Windows 認證或使用者識別。 如果您針對連接使用資料庫驗證，則會忽略這些設定。  
   
@@ -117,9 +116,9 @@ ms.locfileid: "70175912"
   
      您指定的帳戶必須擁有資料來源的讀取權限。  
   
-8.  按 [下一步]  。  在 [正在完成精靈]**** 中，輸入資料來源名稱或使用預設名稱。 預設名稱是連接中所指定資料庫的名稱。 [預覽]**** 窗格會顯示這個新資料來源的連接字串。  
+8.  按 [下一步] 。  在 [正在完成精靈]**** 中，輸入資料來源名稱或使用預設名稱。 預設名稱是連接中所指定資料庫的名稱。 [預覽]**** 窗格會顯示這個新資料來源的連接字串。  
   
-9. 按一下 [完成]  。  方案總管中的 [資料來源]**** 資料夾會顯示新的資料來源。  
+9. 按一下 [完成] 。  方案總管中的 [資料來源]**** 資料夾會顯示新的資料來源。  
   
 ##  <a name="create-a-data-source-using-an-existing-connection"></a><a name="bkmk_connection"></a>使用現有的連接建立資料來源  
  當您在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中工作時，您的資料來源可以根據方案中的現有資料來源，也可以根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。 [資料來源精靈] 提供幾個選項用於建立資料來源物件，包括使用相同專案中的現有連接。  

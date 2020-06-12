@@ -1,7 +1,7 @@
 ---
 title: 動態 SQL |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56419723540114f122be2582f0de7c7e7d0c54f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fa4ac69602761f7c2a8d28e56db76bbfc39fc753
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306686"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423252"
 ---
 # <a name="dynamic-sql"></a>動態 SQL
 雖然靜態 SQL 在許多情況下都能順利運作，但還是有一個應用程式類別無法事先判斷資料存取。 例如，假設有一個試算表允許使用者輸入查詢，然後試算表就會將它傳送至 DBMS 來抓取資料。 撰寫試算表程式時，程式設計人員顯然無法得知此查詢的內容。  
@@ -39,4 +39,4 @@ ms.locfileid: "81306686"
   
 3.  程式可以重複使用 EXECUTE 語句，並在每次執行動態語句時提供不同的參數值。  
   
- 備妥的執行仍然與靜態 SQL 不相同。 在靜態 SQL 中，處理 SQL 語句的前四個步驟會在編譯時期進行。 在備妥的執行中，這些步驟仍會在執行時間進行，但是只會執行一次。只有在呼叫 EXECUTE 時，才會執行計畫。 這有助於消除動態 SQL 架構中固有的部分效能缺點。 下圖顯示靜態 SQL、具有立即執行的動態 SQL，以及具有備妥執行的動態 SQL 之間的差異。
+ 備妥的執行仍然與靜態 SQL 不相同。 在靜態 SQL 中，處理 SQL 語句的前四個步驟會在編譯時期進行。 在備妥的執行中，這些步驟仍會在執行時間進行，但是只會執行一次。只有在呼叫 EXECUTE 時，才會執行計畫。 這有助於消除動態 SQL 架構中固有的部分效能缺點。

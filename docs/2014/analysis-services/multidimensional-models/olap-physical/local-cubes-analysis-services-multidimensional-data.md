@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 52770f78381da2eb686aa445d19e6923f0f0a275
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75f02dd54992e9cc4f94d9845e0e25de5ed988f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889494"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545940"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>本機 Cube (Analysis Services - 多維度資料)
   若要建立、更新或刪除本機 Cube，您必須撰寫及執行 ASSL 指令碼或 AMO 程式。  
@@ -34,11 +33,11 @@ ms.locfileid: "68889494"
 >  目前不支援使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 來管理本機 Cube。  
   
 ## <a name="local-cubes"></a>本機 Cube  
- 本機 cube 可以從[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]實例中的現有 cube 或關聯式資料來源建立及填入。  
+ 本機 cube 可以從實例中的現有 cube [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 或關聯式資料來源建立及填入。  
   
 |本機 Cube 的資料來源|建立方法|  
 |------------------------------------|---------------------|  
-|以伺服器為基礎的 Cube|您可以使用 CREATE GLOBAL CUBE 語句或[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]指令碼語言（ASSL）腳本，從以伺服器為基礎的 cube 建立和填入 cube。 如需詳細資訊，請參閱[CREATE GLOBAL CUBE 語句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)或[Analysis Services 指令碼語言 &#40;ASSL&#41; 參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。|  
+|以伺服器為基礎的 Cube|您可以使用 CREATE GLOBAL CUBE 語句或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 指令碼語言（ASSL）腳本，從以伺服器為基礎的 cube 建立和填入 cube。 如需詳細資訊，請參閱[CREATE GLOBAL CUBE 語句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)或[Analysis Services 指令碼語言 &#40;ASSL&#41; 參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。|  
 |關聯式資料來源|您可以使用 ASSL 指令碼，根據 OLE DB 關聯式資料庫建立和擴展 Cube。 若要使用 ASSL 來建立本機 Cube，您只要連接至本機 Cube 檔案 (*.cub) 並以針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體執行 ASSL 指令碼來建立伺服器 Cube 的相同方式執行 ASSL 指令碼即可。 如需詳細資訊，請參閱[Analysis Services 指令碼語言 &#40;ASSL&#41; 參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。|  
   
  您可以使用 REFRESH CUBE 陳述式來重建本機 Cube 並更新其資料。 如需詳細資訊，請參閱[&#40;MDX&#41;的 REFRESH CUBE 語句](/sql/mdx/mdx-data-definition-refresh-cube)。  

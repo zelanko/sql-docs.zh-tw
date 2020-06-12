@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e47f887425c2294785bd6e6624961727bf65eb17
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174207"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527724"
 ---
 # <a name="browsing-a-neural-network-model"></a>瀏覽類神經網路模型
   當您使用 [瀏覽]**** 開啟類神經網路或羅吉斯迴歸模型時，該模型會在類似於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 類神經網路檢視器的互動式檢視器中顯示。 此檢視器可協助您探索相互關聯，以及取得有關模型和基礎資料之模式的資訊。
@@ -89,7 +88,7 @@ ms.locfileid: "78174207"
 
 1.  假設您想要鎖定特定群組，並且查看最能影響該群組之購買行為的因數。
 
-     在 [**輸入**] 窗格中，按一下 [**屬性**] 底下的 [ ** \<All>** ] 資料格，然後選取 [ **Age**]。
+     在 [**輸入**] 窗格中，按一下 [屬性] 底下的資料 **\<All>** 格，然後選取 [ ** ****年齡**]。
 
      針對 [值]****，選取最年輕的年齡類別目錄。
 

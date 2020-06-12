@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobsteps （Transact-sql） |Microsoft Docs
+title: dbo.sysjobsteps （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d98b1ccc4dc8da3ba9d494a78bfea3727102da07
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4bf7ed1c52aedb63ffe1e2e257022e004b327787
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827309"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423371"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "82827309"
 |**step_id**|**int**|作業中步驟的識別碼。|  
 |**step_name**|**sysname**|作業步驟的名稱。|  
 |**子系統**|**nvarchar(40)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來執行作業步驟的子系統名稱。|  
-|**命令**|**nvarchar(max)**|要由**子系統**執行的命令。|  
+|**command**|**nvarchar(max)**|要由**子系統**執行的命令。|  
 |**flags**|**int**|已保留。|  
 |**additional_parameters**|**ntext**|已保留。|  
 |**cmdexec_success_code**|**int**|**CmdExec**子系統步驟傳回的錯誤層級值，表示成功。|  
-|**on_success_action**|**tinyint**|當步驟執行成功時，所要執行的動作。|  
+|**on_success_action**|**tinyint**|當步驟執行成功時，所要執行的動作。<br /><br /> **1** = （預設值）結束並成功<br /><br /> **2** = 結束但失敗<br /><br /> **3** = 移至下一個步驟<br /><br /> **4** = 移至步驟_on_success_step_id_|
 |**on_success_step_id**|**int**|當步驟執行成功時，所要執行的下一個步驟的識別碼。|  
-|**on_fail_action**|**tinyint**|當步驟執行不成功時，所要執行的動作。|  
+|**on_fail_action**|**tinyint**|當步驟執行不成功時，所要執行的動作。<br /><br /> **1** = 成功結束<br /><br /> **2** = （預設值）結束但失敗<br /><br /> **3** = 移至下一個步驟<br /><br /> **4** = 移至步驟_on_fail_step_id_|
 |**on_fail_step_id**|**int**|當步驟執行不成功時，所要執行的下一個步驟的識別碼。|  
 |**伺服器**|**sysname**|已保留。|  
 |**database_name**|**sysname**|當**子系統**是 TSQL 時，用來執行**命令**的資料庫名稱。|  

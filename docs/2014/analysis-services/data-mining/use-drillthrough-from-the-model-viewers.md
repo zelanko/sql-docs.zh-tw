@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebb910af4a9c01784fb74195ad6eed0f7f96db71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdcc08060fc260d892ca7b90b13a0924d3fae491
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082842"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520239"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>從模型檢視器使用鑽研
   根據模型類型，您可以從資料採礦設計師的 [採礦模型檢視器]**** 索引標籤上的瀏覽檢視器中使用鑽研，以瀏覽採礦模型中使用的案例或查看採礦結構中的其他資料行。 雖然因為模型中的模式無法直接連結到特定案例，導致許多模型類型不支援鑽研，但下列模型類型支援鑽研。  

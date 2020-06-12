@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9f042a937b1ce2a51bc6d8dbb50b8fc39c4fb78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18c879aaaa5bc63b4312f0461404e830dcbc2029
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175627"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547690"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>SharePoint 2010 中的 PowerPivot 資料重新整理
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 資料重新整理是一項查詢外部資料來源的排程伺服器端作業，可更新儲存在內容庫中 Excel 2010 活頁簿的內嵌 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 資料。
@@ -75,7 +74,7 @@ ms.locfileid: "78175627"
 
 5.  在 [**資料庫**] 中，指定將裝載此服務應用程式之資料庫的 SQL Server 實例。 預設值是主控伺服陣列組態資料庫的 SQL Server Database Engine 執行個體。
 
-6.  在 [**資料庫名稱**] 中，輸入服務應用程式資料庫的名稱。 預設值為 Secure_Store_Service_DB_\<guid>。 預設名稱會對應至服務應用程式的預設名稱。 如果您輸入唯一的服務應用程式名稱，請依照類似的命名慣例來命名資料庫名稱，以利同時管理它們。
+6.  在 [**資料庫名稱**] 中，輸入服務應用程式資料庫的名稱。 預設值為 Secure_Store_Service_DB_ \<guid> 。 預設名稱會對應至服務應用程式的預設名稱。 如果您輸入唯一的服務應用程式名稱，請依照類似的命名慣例來命名資料庫名稱，以利同時管理它們。
 
 7.  在 **[資料庫驗證]** 中，預設值是 Windows 驗證。 如果您選擇 [SQL 驗證]，請參考 SharePoint 管理員指南，以取得如何在伺服陣列中使用這個驗證類型的指引。
 
@@ -93,7 +92,7 @@ ms.locfileid: "78175627"
 
 14. 輸入複雜密碼，然後進行確認。 此複雜密碼將用來加入其他安全存放共用服務應用程式。
 
-15. 按一下 [確定]  。
+15. 按一下 [確定]。
 
  可供疑難排解之用的 Store Service 作業稽核記錄必須在作業開始之前啟用。 如需如何啟用記錄的詳細資訊，請參閱[設定 Secure Store Service （SharePoint 2010）](https://go.microsoft.com/fwlink/p/?LinkID=223294)。
 
@@ -116,7 +115,7 @@ ms.locfileid: "78175627"
 
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")
 
- 預設會啟用這個認證選項。 啟用此認證選項之後，PowerPivot 系統服務會在 Secure Store Service 中產生目標應用程式，以儲存排程擁有者所輸入的使用者名稱及密碼。 產生的目標應用程式會使用下列命名慣例來建立\<： PowerPivotDataRefresh_ guid>。 每一組 Windows 認證各會建立一個目標應用程式。 假使 PowerPivot 系統服務已有目標應用程式可以用於儲存排程定義者所輸入的使用者名稱及密碼，PowerPivot 系統服務將會使用該目標應用程式，而不會建立新的目標應用程式。
+ 預設會啟用這個認證選項。 啟用此認證選項之後，PowerPivot 系統服務會在 Secure Store Service 中產生目標應用程式，以儲存排程擁有者所輸入的使用者名稱及密碼。 產生的目標應用程式會使用此命名慣例來建立： PowerPivotDataRefresh_ \<guid> 。 每一組 Windows 認證各會建立一個目標應用程式。 假使 PowerPivot 系統服務已有目標應用程式可以用於儲存排程定義者所輸入的使用者名稱及密碼，PowerPivot 系統服務將會使用該目標應用程式，而不會建立新的目標應用程式。
 
  此認證選項的主要優點在於簡單易用。 因為它會為您建立目標應用程式，所以不太需要額外的工夫。 除此之外，使用排程擁有者 (極有可能是活頁簿的建立者) 的認證執行資料重新整理也可簡化下游的權限需求。 此使用者極有可能已經具備目標資料庫的權限。 當資料重新整理以此人的 Windows 使用者身分識別執行時，任何指定「目前使用者」的資料連線都會自動運作。
 
@@ -204,7 +203,7 @@ ms.locfileid: "78175627"
 
  如果您在連接字串中看到 [**整合式安全性 = SSPI** ]，則無法覆寫連接字串中的認證。 連接一律會使用目前使用者， 並忽略您所提供的任何認證。
 
- 如果您看到 [**保存安全性資訊 = False，Password\*\*\*\*\*\*\*\*\*\*\*=，UserID\<= userlogin>**]，則表示您有可接受認證覆寫的連接字串。 連接字串中所出現的認證 (如使用者識別碼及密碼) 並非 Windows 認證，而是資料庫登入或其他對目標資料來源有效的登入帳戶。
+ 如果您看到 [**保存安全性資訊 = False，Password = \* \* \* \* \* \* \* \* \* \* \* ，UserID \<userlogin> =**]，則表示您有可接受認證覆寫的連接字串。 連接字串中所出現的認證 (如使用者識別碼及密碼) 並非 Windows 認證，而是資料庫登入或其他對目標資料來源有效的登入帳戶。
 
  **如何覆寫連接字串中的認證**
 
@@ -254,7 +253,7 @@ ms.locfileid: "78175627"
 
      如果不要定義下班處理期間，可以為 [開始時間] 和 [結束時間] 輸入相同的值 (例如，兩個時間都設定為 12: 00)。 不過請注意，SharePoint 網站上的排程定義頁面仍然會提供「下班後」做為選項。 如果使用者在未定義下班處理範圍的伺服器陣列上選取了該選項，最後會因為處理工作無法啟動而接到資料重新整理錯誤訊息。
 
-5.  按一下 [確定]  。
+5.  按一下 [確定]。
 
 ###  <a name="limit-how-long-data-refresh-history-is-retained"></a><a name="usagehist"></a>限制資料重新整理記錄的保留時間長度
  資料重新整理記錄是資料重新整理作業隨著時間經過所產生的成功與失敗訊息詳細記錄。 記錄資訊是透過伺服器陣列中的使用量資料收集系統進行收集與管理。 因此，您在使用量資料記錄上設定的限制也會套用至資料重新整理記錄。 由於使用活動報告會彙集整個 PowerPivot 系統的資料，所以只使用單一記錄設定來控制資料重新整理記錄與收集及儲存之所有其他使用量資料的資料保留。
@@ -269,7 +268,7 @@ ms.locfileid: "78175627"
 
      預設值為 365 天。 最小值是 1 天，最大值是 5000 天。 0 指定無限制的保留期間，也就是永遠不會刪除資料。 請注意，您無法透過任何設定關閉記錄。
 
-5.  按一下 [確定]  。
+5.  按一下 [確定]。
 
  SharePoint 使用者在具有資料重新整理記錄的活頁簿上選擇 [管理資料重新整理] 選項時，就可以使用記錄資訊。 這項資訊也用在伺服器陣列管理員用來管理 PowerPivot 服務作業的 PowerPivot 管理儀表板。 如需詳細資訊，請參閱[View Data Refresh History &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)。
 

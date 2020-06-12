@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 867bd6d1abffb29ec3eb2a8a78e562e5cbcc5b29
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086622"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526344"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>交叉驗證索引標籤 (採礦精確度圖表檢視)
   交叉驗證可讓您將採礦結構資料分割成交叉區段，並反覆地針對每個交叉區段培訓和測試模型。 您會指定數個將資料分割成的折疊，然後使用每個折疊當做測試資料，而剩餘的資料則用來定型新模型。 然後 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接著會針對每個模型產生一組標準精確度度量。 藉由比較針對每個交叉區段所產生的模型標準，您可以充分了解採礦模型對整個資料集而言有多可靠。  
@@ -41,7 +40,7 @@ ms.locfileid: "66086622"
   
 -   按一下 [取得結果]**** 以顯示交叉驗證的結果。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **折迭計數**  
  指定要建立之摺疊或資料分割的數目。 最小值為 2，代表半數的資料集用於測試，半數用於培訓。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66086622"
   
  如果使用 **0**，則來源資料中的所有案例都會用來進行交叉驗證。  
   
- 沒有預設值。  
+ 沒有任何預設值。  
   
 > [!NOTE]  
 >  如果增加案例數，則處理時間也會增加。  
@@ -96,7 +95,7 @@ ms.locfileid: "66086622"
   
  例如，假設針對特定的目標狀態進行了三項預測，而每項預測的機率分別為 0.05、0.15 和 0.8。 如果將臨界值設定為 0.5，只有一項預測會計為正確。 如果您將 [目標臨界值]**** **** 設定為 0.10，其中兩項預測就會計為正確。  
   
- 當 [**目標****臨界**值] `null`設定為（預設值）時，會將每個案例最可能的預測計為正確。 在剛剛提及的範例中，0.05、0.15 和 0.8 是三個不同案例的預測機率。 雖然機率非常不同，但每項預測都會被視為正確，因為每個案例都只會產生一項預測，而這些都是這些案例的最佳預測。  
+ 當 [**目標****臨界**值] 設定為 `null` （預設值）時，會將每個案例最可能的預測計為正確。 在剛剛提及的範例中，0.05、0.15 和 0.8 是三個不同案例的預測機率。 雖然機率非常不同，但每項預測都會被視為正確，因為每個案例都只會產生一項預測，而這些都是這些案例的最佳預測。  
   
 ## <a name="see-also"></a>另請參閱  
  [測試和驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)   

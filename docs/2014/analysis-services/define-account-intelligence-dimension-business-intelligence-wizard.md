@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 42ce4c2b-e058-43ad-8d63-19ba07a31b67
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7976b3a6711425aa9f0e0a454eee74cdfdfaf526
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99836d3b224b0c4d07d454d994df684d49d3325a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082167"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528840"
 ---
 # <a name="define-account-intelligence-dimension-business-intelligence-wizard"></a>定義帳戶智慧 (維度) (商業智慧精靈)
   使用此頁面來選取帳戶智慧的維度，包含維度和屬性類型設定、局部加總量值的定義和其他要套用的功能。  
@@ -25,8 +24,8 @@ ms.locfileid: "66082167"
 > [!NOTE]  
 >  如果 [商業智慧精靈] 是從 [維度設計師] 啟動，或是在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中方案總管的某維度上按一下滑鼠右鍵來啟動，則不會出現此頁面。  
   
-## <a name="options"></a>選項。  
- **Dimension**  
+## <a name="options"></a>選項  
+ **大小**  
  選取將會套用帳戶智慧的維度。  
   
 ## <a name="see-also"></a>另請參閱  

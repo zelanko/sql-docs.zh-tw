@@ -2,19 +2,18 @@
 title: SQL Server 2014 檔正在移動 |Microsoft Docs
 description: SQL Server 2014 的 Microsoft 檔將于7月2018日之前（從 MSDN 到這裡）移至這裡。
 author: rothja
-manager: craigg
 ms.prod: sql-server-2014
 ms.custom: ''
 ms.topic: article
 ms.date: 04/26/2018
 ms.author: jroth
 ms.reviewer: sudeepk
-ms.openlocfilehash: 8fe626ad99e4e0c5842d3551c8864116ee7b8634
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9d70386181c913b477286cb9351841e575f9c68c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693721"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524346"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>SQL Server 2014 的文件即將移往 Docs
 

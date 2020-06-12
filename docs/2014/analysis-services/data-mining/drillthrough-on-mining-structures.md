@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8b3dad28227547f88956f1ac49e2878b2940f91
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084576"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522531"
 ---
 # <a name="drillthrough-on-mining-structures"></a>採礦結構的鑽研
   「鑽研」** 表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  
@@ -38,7 +37,7 @@ ms.locfileid: "66084576"
   
 -   鑽研藉由擷取處理採礦結構時快取之定型案例的相關資訊來運作。 因此，如果您將 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性變更為 `ClearAfterProcessing`，在處理結構之後清除快取的資料，鑽研將不會運作。 若要啟用結構資料行的鑽研功能，您必須將 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性變更為 `KeepTrainingCases`，然後重新處理結構。  
   
--   確認這兩個[AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl)屬性都設定為`True`。 此外，您必須是針對結構和模型同時擁有鑽研權限之角色的成員。  
+-   確認這兩個[AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl)屬性都設定為 `True` 。 此外，您必須是針對結構和模型同時擁有鑽研權限之角色的成員。  
   
 ## <a name="security-issues-for-drillthrough"></a>鑽研的安全性問題  
  鑽研權限是在結構和模型上分別設定的。 即使您沒有結構的權限，模型權限還是可以讓您從模型進行鑽研。 結構的鑽研權限可以使用 [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 函數，提供將結構資料行從模型加入到鑽研查詢的額外功能。  

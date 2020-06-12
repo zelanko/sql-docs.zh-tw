@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0758c814a7edce134be01ebf766a12832e942a61
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079468"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543700"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>索引鍵資料行對話方塊 (Analysis Services - 多維度資料)
   使用 [索引鍵資料行]**** 對話方塊，即可變更屬性 (Attribute) 的 **KeyColumns** 屬性 (Property)。 如需詳細資訊，請參閱 [修改屬性 (Attribute) 的 KeyColumn 屬性 (Property)](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
@@ -28,19 +27,19 @@ ms.locfileid: "66079468"
   
 -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，選取屬性 (Attribute)，然後在 [屬性]**** 視窗中，按一下與該屬性 (Attribute) 之 **KeyColumns** 屬性 (Property) 相關聯的省略符號按鈕 (**...**)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **來源資料表**  
  選取您想要選取其索引鍵資料行的來源資料表。 您可以從 [資料來源檢視] 中所有資料表的清單中，選取來源資料表。  
   
  **可用的資料行**  
  選取您想要當做索引鍵資料行使用的資料行。 您可以從指定之 [來源資料表]**** 的資料行清單中選取尚未選取成索引鍵資料行的資料行。  
   
- 若要將選取的資料行加入至 [索引**鍵**資料**>** 行] 清單，請按一下該按鈕。  
+ 若要將選取的資料行加入至 [索引**鍵資料行**] 清單，請按一下該 **>** 按鈕。  
   
  **索引鍵資料行**  
  定義選取之索引鍵資料行的順序。 索引鍵資料行的順序在定義正確的複合索引鍵時很重要。 若要排序或重新排序索引鍵資料行的清單，請選取資料行，然後按一下 [向上]**** 或 [向下]**** 按鈕。  
   
- 若要從 [索引**鍵資料行**] 清單中移除資料行，請**\<** 選取資料行，然後按一下按鈕。  
+ 若要從 [索引**鍵資料行**] 清單中移除資料行，請選取資料行，然後按一下 **\<** 按鈕。  
   
  **Up**  
  按一下即可將 [索引鍵資料行]**** 中選取的資料行向上移動一個位置。  
@@ -48,7 +47,7 @@ ms.locfileid: "66079468"
 > [!NOTE]  
 >  只有當清單包含一個以上的資料行而且選取了資料行時，才會啟用此選項。  
   
- **向下**  
+ **Down**  
  按一下即可將 [索引鍵資料行]**** 中選取的資料行向下移動一個位置。  
   
 > [!NOTE]  

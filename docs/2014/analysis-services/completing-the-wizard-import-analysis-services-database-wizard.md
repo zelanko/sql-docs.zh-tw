@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 1c88608a-5408-4ac0-aea8-5abb977f32ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 99624a05ba543e59e6c85ea616c200c246371488
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c49ee5abd1269bc0c40954b4fb17400044bcb6c9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087572"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527324"
 ---
 # <a name="completing-the-wizard-import-analysis-services-database-wizard"></a>正在完成精靈 (匯入 Analysis Services 資料庫精靈)
   使用 **[正在完成精靈]** 頁面，即可顯示精靈將資料和中繼資料從選取的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫匯入 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的進度。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **進度**  
  顯示精靈將資料庫的每一個物件匯入 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的進度。  
   

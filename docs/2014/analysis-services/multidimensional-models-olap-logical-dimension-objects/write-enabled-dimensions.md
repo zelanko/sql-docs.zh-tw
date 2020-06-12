@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8f0f1c959d44b4d3e133e5676e9aca9365a628d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727436"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545090"
 ---
 # <a name="write-enabled-dimensions"></a>可寫入維度
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- 維度中的資料通常是唯讀的； 但是在某些狀況下，您可能會希望維度是可寫入的。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可寫入維度讓商務使用者能夠修改維度的內容，並查看變更對維度階層的立即影響。 以單一資料表為根據的任何維度皆可寫入； 在可寫入維度中，商務使用者和管理員可以變更、移動、加入及刪除此維度中的屬性成員。 這些更新統稱為*維度回寫*。  
+ 維度中的資料通常是唯讀的； 但是在某些狀況下，您可能會希望維度是可寫入的。 在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，可寫入維度讓商務使用者能夠修改維度的內容，並查看變更對維度階層的立即影響。 以單一資料表為根據的任何維度皆可寫入； 在可寫入維度中，商務使用者和管理員可以變更、移動、加入及刪除此維度中的屬性成員。 這些更新統稱為*維度回寫*。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援所有維度屬性上的維度回寫，並修改維度的任何成員。 如果是可寫入的 Cube 或資料分割，會將更新儲存在與 Cube 來源資料表分開的回寫資料表中。 不過，針對可寫入維度，更新會直接記錄在維度的資料表中。 而且，如果可寫入維度是包含在有多個資料分割的 Cube 中，其中部分或全部資料來源具有維度資料表的副本，則在回寫程序中只更新原始維度資料表。  
   

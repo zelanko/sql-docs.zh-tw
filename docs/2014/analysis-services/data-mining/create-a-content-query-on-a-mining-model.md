@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a963743dff12a239fb5d45a05c0af91af00620eb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085575"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524014"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>建立採礦模型內容查詢
   雖然您可以使用 AMO 或 XML/A，以程式設計方式查詢採礦模型內容，但是使用 DMX 來建立查詢是比較簡單的方式。 您也可以針對資料採礦結構描述資料列集建立查詢，方法是建立與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的連接，然後使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所提供的 DMV 建立查詢。  
@@ -40,17 +39,17 @@ ms.locfileid: "66085575"
   
      [內容查詢]**** 範本就會在適當的程式碼編輯器中開啟。 [中繼資料] 窗格會列出目前資料庫中可用的模型。 若要變更資料庫，請從 [可用的資料庫]**** 清單中選取不同的資料庫。  
   
-5.  在 [*\<採礦模型，名稱，mymodel>>*]`.CONTENT`這`FROM`一行中，輸入「採礦模型」的名稱。 如果採礦模型名稱包含空格，您就必須以方括號括住名稱。  
+5.  在 [] 行中輸入採礦模型的名稱 `FROM` *\<mining model, name, MyModel>* `.CONTENT` 。 如果採礦模型名稱包含空格，您就必須以方括號括住名稱。  
   
      如果您不想要輸入名稱，可以在 **物件總管** 中選取採礦模型，然後將它拖曳至範本中。  
   
-6.  在行中， `SELECT` * \<選取 [清單]、[ \*expr 清單*]，然後輸入 [採礦模型內容架構] 資料列集中的資料行名稱。  
+6.  在這一行中， `SELECT` *\<select list, expr list, \*>* 輸入 [採礦模型內容架構] 資料列集中的資料行名稱。  
   
      若要檢視您可以在採礦模型內容查詢中傳回的資料行清單，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)所提供的 DMV 建立查詢。  
   
 7.  (選擇性) 在範本的 WHERE 子句中輸入條件，以便將傳回的資料列限制為特定節點或值。  
   
-8.  按一下 **[執行]**。  
+8.  按一下 **[執行]** 。  
   
 ## <a name="querying-the-data-mining-schema-rowsets"></a>查詢資料採礦結構描述資料列集  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66085575"
   
      `WHERE MODEL_NAME = '<model name>'`  
   
-4.  按一下 **[執行]**。  
+4.  按一下 **[執行]** 。  
   
      [結果] 窗格就會顯示模型的內容。  
   

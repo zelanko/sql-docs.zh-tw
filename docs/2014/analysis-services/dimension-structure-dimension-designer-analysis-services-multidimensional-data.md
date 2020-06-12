@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88409278-4f8a-4f1f-8730-e602866dbb36
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cb5c593d07d0df235fb173c02229bcf784847306
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00bcf528f8f2c9a1541016d716d9d41c2ea7ee62
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081745"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528580"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>維度結構 (維度設計師) (Analysis Services - 多維度資料)
   使用維度設計師中的 [維度結構]**** 頁面，即可修改所選取維度的屬性、階層和層級。 [維度結構]**** 頁面包含一個工具列和三個窗格。  

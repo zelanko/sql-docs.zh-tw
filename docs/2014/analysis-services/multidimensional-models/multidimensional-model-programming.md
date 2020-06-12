@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 668878e93d72c9c0b276b95ad090c8570f3fc936
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b84140770b15d6b7b3640cdc0c845c1c1d8554b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725192"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546033"
 ---
 # <a name="multidimensional-model-programming"></a>多維度模型程式設計
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供數個 API，可讓您用來針對 Analysis Services 執行個體以及它所提供的多維度資料庫進行程式設計。 本節描述可供想要使用 Analysis Services 多維度方案建立自訂應用程式的開發人員使用的方法。 您可以使用此資訊來選擇最符合特定專案需求的程式設計介面。 Analysis Services 開發專案可以使用在 Windows 平台或支援 HTTP 存取之其他平台上執行的 Managed 或非 Managed 程式碼做為基礎。  

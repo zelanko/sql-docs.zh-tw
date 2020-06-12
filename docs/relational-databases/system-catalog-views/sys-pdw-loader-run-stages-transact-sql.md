@@ -3,8 +3,8 @@ title: sys.databases pdw_loader_run_stages （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.technology: system-objects
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -12,17 +12,17 @@ ms.assetid: 255681e9-323c-42c0-a63c-1f05536efdd5
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d10a3bcbf02e88e054c12060299e9462af3004d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 27f51f85b2723aa010c8f8d37756bb0a049f5a83
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127447"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627315"
 ---
 # <a name="syspdw_loader_run_stages-transact-sql"></a>sys.databases pdw_loader_run_stages （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  包含在中進行中和已完成之[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]載入作業的相關資訊。 此資訊在系統重新啟動之後會持續存留。  
+  包含在中進行中和已完成之載入作業的相關資訊 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。 此資訊在系統重新啟動之後會持續存留。  
   
 |||||  
 |-|-|-|-|  

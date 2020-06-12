@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa3e1544f625183df3240359aa22b117144244d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45379f12358b5e25d4f576bd01f11f777d688c64
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072997"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545649"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>設定多維度資料庫屬性 (Analysis Services)
-  您[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可以在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]資料庫設計工具中設定許多資料庫屬性。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 您可以在資料庫設計工具中設定許多資料庫屬性 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。  
   
  在此設計工具中，您可以執行以下工作類型：  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66072997"
 |定序|當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體時，資料庫將會繼承自定序伺服器屬性，除非這裡有提供不同的值。|  
 |DataSourceImpersonationInfo|針對資料庫中的所有資料來源物件指定預設模擬模式， 這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務在處理物件、同步處理伺服器，以及執行 OpenQuery 和 SystemOpenSchema 資料採礦陳述式時所用的模式。|  
 |估計的大小|提供磁碟上資料庫檔案的預估大小。 如果資料儲存在多個位置，此預估值僅限於儲存在資料庫資料夾底下的資料檔案。<br /><br /> `EstimatedSize` 也可以當做預估記憶體的基礎使用。 一般來說，記憶體需求會大於磁碟資料大小，因為將資料庫載入記憶體時會產生額外的資料結構。<br /><br /> 若要進一步預估記憶體需求，您也可以使用工作管理員，在處理資料庫前後查看 Analysis Services 處理序記憶體，並觀察耗用的記憶體，當做了解資料庫之記憶體需求的方法。|  
-|Language|當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體時，資料庫將會繼承自語言伺服器屬性，除非這裡有提供不同的值。|  
+|語言|當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體時，資料庫將會繼承自語言伺服器屬性，除非這裡有提供不同的值。|  
 |MasterDataSource ID|與遠端資料分割一起使用。 如需詳細資訊，請參閱 [遠端資料分割](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)。|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e02f4624dc0ec25ee0c3d8950c83550ca3d9ed57
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175264"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542730"
 ---
 # <a name="defining-named-sets"></a>定義命名集
   命名集是指傳回一組維度成員的多維度運算式 (MDX) 運算式。 您可以定義命名集，將它們儲存為 Cube 定義的一部分；也可以在用戶端應用程式建立命名集。 您可以結合 Cube 資料、算術運算子、數字和函數，來建立命名集。 使用者可以在用戶端應用程式中將命名集用於 MDX 查詢，也可以用於定義 Subcube 中的集合。 Subcube 是指交叉聯結集的集合，它會將 Cube 空間限制為針對後續陳述式定義的子空間。 定義限制的 Cube 空間是 MDX 指令碼的基本概念。
@@ -32,11 +31,11 @@ ms.locfileid: "78175264"
 
      當您在 [計算]**** 索引標籤上定義新的計算時，請記住，計算是根據它們出現在 [指令碼組合管理]**** 窗格中的順序加以解析的。 在建立新計算時，您在窗格內的焦點，決定了執行計算的順序；新的計算會在焦點計算進行之後立即定義。
 
-3.  在 [**名稱**] 方塊中，將新命名集的名稱變更`[Core Products]`為。
+3.  在 [**名稱**] 方塊中，將新命名集的名稱變更為 `[Core Products]` 。
 
      在 [指令碼組合管理]**** 窗格中，請注意分辨命名集與指令碼命令或導出成員所用的唯一圖示。
 
-4.  在 [**計算工具**] 窗格的 [**中繼資料**] 索引標籤上，依`Members`序展開 [**產品**]、[**類別**]、[] 和 [**所有產品**]。
+4.  在 [**計算工具**] 窗格的 [**中繼資料**] 索引標籤上，依序展開 [**產品**]、[**類別**]、[] `Members` 和 [**所有產品**]。
 
     > [!NOTE]
     >  如果您無法在 [計算工具]**** 窗格檢視任何中繼資料，請在工具列上按一下 [重新連接]****。 如果此舉無效，可能得處理 Cube，或者啟動 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的執行個體。
@@ -47,11 +46,11 @@ ms.locfileid: "78175264"
 
 ## <a name="defining-a-large-resellers-named-set"></a>定義大型轉售商命名集
 
-1.  以滑鼠右鍵`[Core Products]`按一下 [**腳本召集人**] 窗格，然後按一下 [**新增命名集**]。
+1.  以滑鼠右鍵按一下 `[Core Products]` [**腳本召集人**] 窗格，然後按一下 [**新增命名集**]。
 
-2.  在 [**名稱**] 方塊中，將這個命名集的名稱`[Large Resellers]`變更為。
+2.  在 [**名稱**] 方塊中，將這個命名集的名稱變更為 `[Large Resellers]` 。
 
-3.  在 [**運算式**] 方塊中`Exists()`，輸入。
+3.  在 [**運算式**] 方塊中，輸入 `Exists()` 。
 
      您會使用 Exists 函數，傳回 [轉售商名稱] 屬性階層中的成員集合，這個成員集合與 [員工數目] 屬性階層中，具有最多員工的成員集合交集。
 
@@ -69,29 +68,29 @@ ms.locfileid: "78175264"
 
      既然您已定義 Exists 集合運算式的第一個集合，就可以加入第二個集合，也就是包含最多員工的「轉售商」維度成員集合。
 
-7.  在 [**計算工具**] 窗格的 [**中繼資料**] 索引標籤上，展開 [轉售商`Members`] 維度中的 [**員工數目**]，展開，然後展開 [**所有轉售商**]
+7.  在 [**計算工具**] 窗格的 [**中繼資料**] 索引標籤上，展開 [轉售商] 維度中的 [**員工數目**]，展開 `Members` ，然後展開 [**所有轉售商**]
 
      請注意，這個屬性階層的成員並未分組。
 
 8.  針對 [轉售商]**** 維度開啟 [維度設計師]，然後按一下 [屬性]**** 窗格中的 [員工數目]****。
 
-9. 在屬性視窗中，將屬性`DiscretizationMethod`變更為 [**自動**]，然後將`DiscretizationBucketCount`屬性變更`5`為。 如需詳細資訊，請參閱[群組屬性成員 &#40;離散化&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)。
+9. 在屬性視窗中，將 `DiscretizationMethod` 屬性變更為 [**自動**]，然後將 `DiscretizationBucketCount` 屬性變更為 `5` 。 如需詳細資訊，請參閱[群組屬性成員 &#40;離散化&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)。
 
 10. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。
 
 11. 順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師]，然後按一下 [計算]**** 索引標籤之工具列上的 [重新連接]****。
 
-12. 在 [**計算工具**] 窗格的 [**中繼資料**] 索引標籤上，展開 [**轉售商**] 維度中的 [ `Members`**員工數目**]，展開，然後展開 [**所有轉售商**]
+12. 在 [**計算工具**] 窗格的 [**中繼資料**] 索引標籤上，展開 [**轉售商**] 維度中的 [**員工數目**]，展開 `Members` ，然後展開 [**所有轉售商**]
 
      請注意，這個屬性階層的成員現已包含在編號 0 到 4 的五個群組中。 若要檢視群組的數目，請將資料指標暫停在該群組上，以檢視資訊提示。 對於範圍 `2 -17`，資訊提示應該會包含 `[Reseller].[Number of Employees].&[0]`。
 
-     這個屬性階層的成員會進行分組，因為 DiscretizationBucketCount 屬性設定為`5` ，而且 DiscretizationMethod 屬性設定為**自動**。
+     這個屬性階層的成員會進行分組，因為 DiscretizationBucketCount 屬性設定為 `5` ，而且 DiscretizationMethod 屬性設定為**自動**。
 
 13. 在 [運算式]**** 方塊中，Exists 集合運算式的 Members 函數後面和右括弧前面加入逗號，然後將 [83 - 100]**** 從 [中繼資料]**** 窗格拖曳到逗號後面。
 
      現在您已經完成 Exists 集合運算式，當 [大型轉售商] 命名集置於軸上時，這個運算式會傳回與這兩個指定集合交集的成員集合：所有轉售商的集合以及擁有 83 到 100 名員工的轉售商集合。
 
-     下圖顯示`[Large Resellers]`命名集的 [**計算運算式**] 窗格。
+     下圖顯示命名集的 [**計算運算式**] 窗格 `[Large Resellers]` 。
 
      ![[大型轉售商] 的計算運算式窗格](../../2014/tutorials/media/l6-named-set-02.gif "[大型轉售商] 的計算運算式窗格")
 

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ff711e8e-971c-43ba-b479-effc034af4a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e18b1786201be9ba671bc08fe7b24ba2207469e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e3dfd0b727fd917c37aa44aa8fd1d29326aaaa1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075382"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546892"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>使用部署精靈部署模型解決方案
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署嚮導會使用從[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案產生的 XML 輸出檔做為輸入檔。 這些輸入檔很容易進行修改，以自訂 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的部署。 產生的部署指令碼可以立即執行，或儲存供稍後進行部署使用。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署嚮導會使用從專案產生的 XML 輸出檔 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 做為輸入檔。 這些輸入檔很容易進行修改，以自訂 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的部署。 產生的部署指令碼可以立即執行，或儲存供稍後進行部署使用。  
   
  您可以使用此處討論的精靈來進行部署， 也可以自動化部署或使用同步處理功能。 如果部署的資料庫很龐大，請考慮在目標系統上使用資料分割。 您也可以使用分析管理物件 (AMO)，自動化資料分割的建立與擴展。  
   
@@ -43,6 +42,6 @@ ms.locfileid: "66075382"
  [使用 XMLA 部署模型方案](deploy-model-solutions-using-xmla.md)   
  [同步處理 Analysis Services 資料庫](synchronize-analysis-services-databases.md)   
  [瞭解用來建立部署腳本的輸入檔](deployment-script-files-input-used-to-create-deployment-script.md)   
- [使用部署公用程式的部署模型方案](deploy-model-solutions-with-the-deployment-utility.md)  
+ [使用部署公用程式部署模型方案](deploy-model-solutions-with-the-deployment-utility.md)  
   
   

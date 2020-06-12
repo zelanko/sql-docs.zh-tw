@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c0e42f289c5d5aa0aebf546e1adeb0a31683d82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80eddefc7b4bafb28a1f4e4f166bfac1169632c2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062541"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528044"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services 功能及工作
   Analysis Services 基本文件集是依照模型和伺服器模式組織，因此您可以將焦點只放在已安裝之模式所提供的工具、工作和功能。 您可以在伺服器執行個體中找到跨越多個模式的伺服器管理工作。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52542ac1b15b59ecebca4ea26ba530298157ed50
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062311"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527940"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>關聯精靈 (適用於 Excel 的資料採礦用戶端)
   ![資料採礦功能區中的關聯精靈](media/dmc-associate.gif "資料採礦功能區中的關聯精靈")  
@@ -88,7 +87,7 @@ ms.locfileid: "66062311"
   
  演算法會使用關於項目集的這個資訊產生可用於預測關聯或進行建議的規則。 例如，規則可以如下：「如果使用者購買作者 1 和作者 2 的書，則這位使用者也可能會購買作者 3 的書」。 系統會根據關聯的強度來為每個建議指派機率。  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  若要使用關聯精靈，您必須連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。  
   
  您的來源資料必須組織成交易資料表， 來源資料必須包含一個含有交易識別碼的資料行， 此資料行會識別每一組項目。 該交易資料行必須與第二個資料行 (也就是項目識別碼) 具有一對多的關聯性，第二個資料行會儲存群組中個別項目的名稱或識別碼。  

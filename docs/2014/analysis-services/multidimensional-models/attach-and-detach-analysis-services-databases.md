@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4447f58baaa5ea88a48c67a9a32fcda77681d8d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a0c62698f1aed231128803cb91c80264a2fbdbf4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077490"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544830"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>附加和卸離 Analysis Services 資料庫
-  通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓資料庫保持離線一段時間，然後在相同或不同的伺服器執行個體上，讓該資料庫恢復連線狀態。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。 對於所有這些案例和其他情況， `Attach`和`Detach`命令可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 讓資料庫離線，並輕鬆地使其恢復上線。  
+  通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓資料庫保持離線一段時間，然後在相同或不同的伺服器執行個體上，讓該資料庫恢復連線狀態。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。 對於所有這些案例和其他情況， `Attach` 和 `Detach` 命令可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 讓資料庫離線，並輕鬆地使其恢復上線。  
   
 ## <a name="attach-and-detach-commands"></a>Attach 和 Detach 命令  
   命令可讓您將離線的資料庫恢復連線狀態。 您可以將資料庫附加至原始伺服器執行個體或其他執行個體。 當您附加資料庫時，使用者可以指定資料庫的 **[ReadWriteMode]** 設定。  命令可讓您中斷資料庫與伺服器的連線。  
@@ -48,7 +47,7 @@ ms.locfileid: "66077490"
 |--------------------------------------|-------------------------------------|  
 |1) 伺服器發出在資料庫上執行 CommitExclusive 鎖定的要求<br />2) 伺服器等候直到所有進行中的交易都已認可或回復為止<br />3) 伺服器建立卸離資料庫所需的所有中繼資料<br />4) 資料庫標示為已刪除<br />5) 伺服器認可交易|1) 資料庫標示為已刪除<br />2) 伺服器認可交易<br /><br /> <br /><br /> 注意：您無法針對唯讀資料庫變更卸離密碼。 如果您針對已經包含密碼的卸離資料庫提供密碼參數，就會引發錯誤。|  
   
-  和  命令必須當做單一作業執行。 它們無法在同一個交易中與其他作業結合。 此外， `Attach`和`Detach`命令是不可部分完成的交易式命令。 這表示此作業不是成功，就是失敗。 沒有任何資料庫會處於未完成的狀態。  
+  和  命令必須當做單一作業執行。 它們無法在同一個交易中與其他作業結合。 此外， `Attach` 和 `Detach` 命令是不可部分完成的交易式命令。 這表示此作業不是成功，就是失敗。 沒有任何資料庫會處於未完成的狀態。  
   
 > [!IMPORTANT]  
 >  您必須擁有伺服器或資料庫管理員權限才能執行 `Detach` 命令。  

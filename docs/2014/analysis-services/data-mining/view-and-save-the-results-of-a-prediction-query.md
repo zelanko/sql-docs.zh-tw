@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9abaf092d00a8acaf6c0b3ef963c940199068ce9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5fada79acb9a4dcac8ce3707ede13cfac96cc2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082705"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520295"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>檢視及儲存預測查詢的結果
-  在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用預測查詢產生器定義查詢之後，您可以藉由切換至 [查詢結果] 視圖來執行查詢並查看結果。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用預測查詢產生器定義查詢之後，您可以藉由切換至 [查詢結果] 視圖來執行查詢並查看結果。  
   
- 您可以將預測查詢的結果儲存至[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中所定義之任何資料來源中的資料表。 您可以建立新的資料表，或將查詢結果儲存至現有的資料表。 如果您將結果儲存至現有的資料表，則可選擇覆寫目前儲存在資料表中的資料，否則查詢結果會附加至資料表中的現有資料。  
+ 您可以將預測查詢的結果儲存至專案中所定義之任何資料來源中的資料表 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 您可以建立新的資料表，或將查詢結果儲存至現有的資料表。 如果您將結果儲存至現有的資料表，則可選擇覆寫目前儲存在資料表中的資料，否則查詢結果會附加至資料表中的現有資料。  
   
 ### <a name="run-a-query-and-view-the-results"></a>執行查詢並檢視結果  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66082705"
   
 4.  如果您想要將資料表加入資料來源檢視，請從 [加入至 DSV]**** 中選取資料來源檢視。  
   
-5.  按一下 **[儲存]** 。  
+5.  按一下 [檔案] 。  
   
     > [!WARNING]  
     >  如果目的地不支援階層式資料列集，您可以將 FALTTENED 關鍵字加入至結果中，以便儲存為二維資料表。  

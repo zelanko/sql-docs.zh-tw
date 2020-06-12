@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 243a8ef3c20f21a51f98c38918f8cece4dbf16d6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075555"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546950"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義具名查詢 (Analysis Services)
   具名查詢是以資料表代表的 SQL 運算式。 在具名查詢中，您可以指定 SQL 運算式，來選取在一個或多個資料來源中的一個或多個資料表所傳回的資料列和資料行。 具名查詢就像資料來源檢視 (DSV) 中具有資料列和關聯性的其他任何資料表一樣，差別在於具名查詢是以運算式為基礎。  
@@ -58,7 +57,7 @@ ms.locfileid: "66075555"
     > [!NOTE]  
     >  請注意，建立查詢的使用者介面 (UI) 需視資料來源而定； 您可以取得一般文字式 UI，而非圖形 UI。 您可以使用不同的 UI 來完成相同的工作，但必須以不同的方式執行。 如需詳細資訊，請參閱[建立/編輯具名查詢對話方塊 &#40;Analysis Services - 多維度資料&#41;](../create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)。  
   
-5.  按一下 [確定]  。 資料表頁首會出現表示兩個重疊資料表的圖示，指出資料表已取代為具名查詢。  
+5.  按一下 [確定]。 資料表頁首會出現表示兩個重疊資料表的圖示，指出資料表已取代為具名查詢。  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源視圖](data-source-views-in-multidimensional-models.md)   

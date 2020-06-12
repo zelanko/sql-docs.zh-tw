@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 20d1234b-a457-4a84-ae08-fe356870c466
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 097b9a3fa27f2e2dfcfa506836055c940117aeb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67f821ce83eb2970f04fa25788a5adafd2c77647
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175257"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543930"
 ---
 # <a name="grant-server-administrator-permissions-analysis-services"></a>授與伺服器管理員權限 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體內伺服器管理員角色的成員對於該執行個體中的所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件和資料具有不受限制的存取權。 使用者必須是伺服器管理員角色的成員，才能執行整個伺服器範圍的工作，例如建立資料庫或處理資料庫、修改伺服器屬性或啟動追蹤 (但處理事件不算)。
@@ -35,7 +34,7 @@ ms.locfileid: "78175257"
 
  在安裝期間，SQL Server 安裝程式會要求您至少指定一個使用者帳戶做為 Analysis Services 系統管理員。
 
- 依預設，也會將 Analysis Server 的管理權限授與本機 Administrators 群組的成員。 雖然本機群組未明確授與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器管理員角色的成員資格，但本機管理員可以建立資料庫，新增使用者和權限，以及執行系統管理員可執行的其他工作。 這個行為是可設定的， 它是由`BuiltinAdminsAreServerAdmins`伺服器屬性所決定，預設會設定為**true** 。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中變更這個屬性。 如需詳細資訊，請參閱 [Security Properties](../server-properties/security-properties.md)。
+ 依預設，也會將 Analysis Server 的管理權限授與本機 Administrators 群組的成員。 雖然本機群組未明確授與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器管理員角色的成員資格，但本機管理員可以建立資料庫，新增使用者和權限，以及執行系統管理員可執行的其他工作。 這個行為是可設定的， 它是由 `BuiltinAdminsAreServerAdmins` 伺服器屬性所決定，預設會設定為**true** 。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中變更這個屬性。 如需詳細資訊，請參閱 [Security Properties](../server-properties/security-properties.md)。
 
  您也可以使用分析管理物件 (AMO) 來管理伺服器角色。 如需詳細資訊，請參閱[使用分析管理物件 &#40;AMO&#41; 來開發](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)。
 

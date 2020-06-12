@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: aa54b8cc-ff3b-4ef6-a64e-11b9e9d7fa11
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6451e2a02bbaf7ef8a58b63c75838023433ff563
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c1088bd9920364d46117624673f27f09cf38b34
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076213"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536080"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>在 SQL Server 資料工具中建立及執行 MDX 指令碼
   若要在  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中建立和執行 MDX 指令碼，您必須是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中且已建立 Cube，並準備就緒可供編輯。  

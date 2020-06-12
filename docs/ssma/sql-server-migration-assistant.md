@@ -1,5 +1,6 @@
 ---
 title: SQL Server 移轉小幫手 |Microsoft Docs
+description: 瞭解 SQL Server 移轉小幫手，這是一種工具，可將資料庫從 Microsoft Access、DB2、MySQL、Oracle 和 SAP ASE 自動遷移至 SQL Server。
 ms.custom: ''
 ms.date: 10/10/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
-ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f03fdab2cf2f2593d43c16cef572614b36731ef9
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252131"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294025"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 移轉小幫手
 
@@ -68,7 +69,7 @@ Microsoft SQL Server 移轉小幫手 (SSMA) 工具的設計目的，是要自動
   
   - [SQL Server Developer Center 社區](https://go.microsoft.com/fwlink/?LinkId=42456)-適用于 SQL Server 開發人員的新聞群組、論壇和其他社區資源  
   
-- **協助支援**-移至[https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts)並搜尋 ' SQL Server 移轉小幫手 '。  選取您的版本，然後選取 [啟動要求]。  SQL Server 移轉小幫手工具隨附協助支援。  
+- **協助支援**-移至 [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) 並搜尋 ' SQL Server 移轉小幫手 '。  選取您的版本，然後選取 [啟動要求]。  SQL Server 移轉小幫手工具隨附協助支援。  
   
 - 頂級**支援**-如果您有頂級合約，您可以在[premier 線上入口網站](https://premier.microsoft.com/)取得頂級支援。  
   

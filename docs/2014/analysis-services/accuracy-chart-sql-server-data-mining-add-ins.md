@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15ba71b6beb46280f1fc3ad972c6252f95842eaa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062993"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528277"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>精確度圖表 (SQL Server 資料採礦增益集)
   ![資料採礦功能區中的精確度圖表按鈕](media/dmc-accchart.gif "資料採礦功能區中的精確度圖表按鈕")  
@@ -49,12 +48,12 @@ ms.locfileid: "66062993"
   
 2.  在 [**精確度和驗證**] 群組中，按一下 [**精確度圖表**]。  
   
-3.  在 [**選取結構或模型**] 對話方塊中，選擇您要評估的模型。 按 [下一步]  。  
+3.  在 [**選取結構或模型**] 對話方塊中，選擇您要評估的模型。 按 [下一步] 。  
   
     > [!NOTE]  
     >  您必須選擇緊密符合您所要測試之資料的模型。  
   
-4.  在 [**指定要預測的資料行及要預測的值**] 對話方塊中，選擇您想要預測的資料行和目標值（如果適用的話）。 按 [下一步]  。  
+4.  在 [**指定要預測的資料行及要預測的值**] 對話方塊中，選擇您想要預測的資料行和目標值（如果適用的話）。 按 [下一步] 。  
   
      例如，在以上的範例中，您可能選擇模型化客戶回應的資料行，並將目標值指定為 "Probably Will Buy"。  
   
@@ -67,11 +66,11 @@ ms.locfileid: "66062993"
   
      如果資料行名稱相似，精靈便會自動加以對應。 雖然輸入資料中的某些資料行可能與分析無關而且可以忽略，但是還需要某些資料行，資料採礦模型才能處理輸入。 這類資料行可能包含交易識別碼、目標值或用於預測的資料行。 如果您無法對應所需的資料行，此精靈將會提供一則警告訊息。  
   
-7.  按一下 [完成]  。  
+7.  按一下 [完成] 。  
   
      精靈會建立報表，其中包含增益圖和基礎資料。  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  如果您是在預測離散值，便必須選取您所要預測的目標值。 例如，如果您的資料被分類成回應 "Yes: Buy" 為 1，回應 "No: Do Not Buy" 為 2，您就必須將 1 或 2 指定為預測值。 不過，如果您要預測值的範圍，便只能在同時比較兩個值。 例如，如果您要預測高於 5 的分數，便必須重新標籤您的來源資料，並建立將結果分割為兩組的新模型：高於 5 的分數和低於 5 的分數。 然後您便可以比較這兩個群組的精確度。  
   
 ## <a name="understanding-accuracy"></a>了解精確度  

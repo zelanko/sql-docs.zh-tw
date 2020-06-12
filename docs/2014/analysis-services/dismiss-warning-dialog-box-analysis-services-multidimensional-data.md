@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 66d853e0-1b57-4b17-a7d1-a25899411684
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3450713f3b621e960e443062323c3074b2698b07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c75289571216568a440fdfb863a1a1633ecb86ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081637"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528524"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>解除警告對話方塊 (Analysis Services - 多維度資料)
   使用 **[解除警告]** 對話方塊，即可解除特定警告的執行個體。  
@@ -28,7 +27,7 @@ ms.locfileid: "66081637"
   
 2.  在方案總管**** 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案、按一下 [編輯資料庫]****，然後按一下 [警告]**** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **描述**  
  顯示正在解除的警告。  
   

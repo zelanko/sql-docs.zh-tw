@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d775b8fbfb7d50b5db245073fdc52fc274638eb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 723eb7c1c0e8547ee411fc54ecd4aca613011b38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075866"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547110"
 ---
 # <a name="database-readwritemodes"></a>資料庫 ReadWriteMode
-  通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要將讀取/寫入資料庫變更為唯讀資料庫，反之亦然。 這些情況通常是由商務需求所驅使，例如在許多伺服器之間共用相同的資料庫資料夾，以便向外延展方案並改善效能。 在`ReadWriteMode`這些情況下，資料庫屬性可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 輕鬆地變更資料庫作業模式。  
+  通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要將讀取/寫入資料庫變更為唯讀資料庫，反之亦然。 這些情況通常是由商務需求所驅使，例如在許多伺服器之間共用相同的資料庫資料夾，以便向外延展方案並改善效能。 在這些情況下， `ReadWriteMode` 資料庫屬性可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 輕鬆地變更資料庫作業模式。  
   
 ## <a name="readwritemode-database-property"></a>ReadWriteMode 資料庫屬性  
   資料庫屬性會指定資料庫處於讀取/寫入模式或唯讀模式。 此屬性只有這兩種可能的值。 當資料庫處於唯讀模式時，您就無法將任何變更或更新套用至該資料庫。 不過，當資料庫處於讀取/寫入模式時，您就可以進行變更和更新。  資料庫屬性定義為唯讀屬性。您只能透過  命令來設定它。  
@@ -38,7 +37,7 @@ ms.locfileid: "66075866"
 ## <a name="readwritemode-usage"></a>ReadWriteMode 使用方式  
  `ReadWriteMode` 資料庫屬性是要當做 `Attach` 資料庫命令的一部分使用。  命令允許此資料庫屬性設定為  或 。 您無法直接更新 `ReadWriteMode` 資料庫屬性值，因為此屬性定義為唯讀。 建立資料庫時，其 `ReadWriteMode` 屬性會設定為 `ReadWrite`。 您無法在唯讀模式下建立資料庫。  
   
- 若要在`ReadWriteMode`和`ReadWrite` `ReadOnly`之間切換資料庫屬性，您必須發出一連串的`Detach/Attach`命令。  
+ 若要在 `ReadWriteMode` 和之間切換資料庫屬性 `ReadWrite` `ReadOnly` ，您必須發出一連串的 `Detach/Attach` 命令。  
   
  所有資料庫作業 (`Attach` 除外) 都會將 `ReadWriteMode` 資料庫屬性保持在目前狀態。 例如，`Alter`、`Backup`、`Restore` 和 `Synchronize` 等作業會保留 `ReadWriteMode` 值。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6b29a31acb4e3dad83c760c27a9591cac026e0ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1abbbbd7c2f7caa99407bbcd17ace07deac5dfeb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530903"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547370"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>了解 Microsoft OLAP 架構
   使用這些主題可更加了解 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多維度資料庫，並規劃如何在商業智慧方案中實作多維度資料庫。  

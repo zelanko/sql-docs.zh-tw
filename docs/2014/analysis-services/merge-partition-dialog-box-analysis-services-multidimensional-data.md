@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 1c94e250-ee18-4f98-b112-985f6346102a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26751f2cc00330716f160c115d0e839cc6d9527a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07fb8bf093d4a6e0dfa7f73e771bd667a6383a79
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077833"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545490"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>合併資料分割對話方塊 (Analysis Services - 多維度資料)
   在 **SQL Server Management Studio** 中，使用 **[合併資料分割]** 對話方塊，即可為 Cube 中的量值群組合併資料分割。 在物件總管**** 中，以滑鼠右鍵按一下 [資料分割] 資料夾或資料分割，然後從操作功能表選取 [合併資料分割]****，即可顯示 [合併資料分割]**** 對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Server**  
  選取包含目標資料分割之 Analysis Services 執行個體的名稱。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66077833"
   
 |資料行|描述|  
 |------------|-----------------|  
-|**Merge**|選取即可將來源資料分割合併至目標資料分割。|  
+|**合併**|選取即可將來源資料分割合併至目標資料分割。|  
 |**分割區名稱**|顯示來源資料分割的名稱。|  
 |**上次處理**|顯示上次處理來源資料分割的日期和時間。|  
   

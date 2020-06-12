@@ -22,20 +22,19 @@ helpviewer_keywords:
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 47a7b4c2b11a6d17a52af20aef71ee13863ea29c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86057c14655b3fd2f0322387beb16a4a94717b68
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702623"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545260"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>資料分割 (Analysis Services - 多維度資料)
   資料分割是量值群組資料之一部分的容器。 無法從 MDX 查詢看到資料分割；所有的查詢都會反映量值群組的完整內容，不論針對此量值群組定義了多少個資料分割。 資料分割的資料內容是由資料分割的查詢繫結及分割運算式所定義。  
   
  簡單的 <xref:Microsoft.AnalysisServices.Partition> 物件是由基本資訊、分割定義、彙總設計等項目組成。 基本資訊包括資料分割的名稱、儲存模式、處理模式等等。 分割定義是指定 Tuple 或集合的 MDX 運算式。 分割定義與 StrToSet MDX 函數有相同的限制。 分割定義結合了 CONSTRAINED 參數，便可以在 Cube 中使用維度、階層、層級和成員名稱、索引鍵、唯一名稱或其他具名物件，但是不能使用 MDX 函數。 彙總設計是可在多個資料分割之間共用之彙總定義的集合。 預設值是取自父 Cube 的彙總設計。  
   
- 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料分割來管理及儲存 cube 中量值群組的資料和匯總。 每一個量值群組至少都有一個資料分割；當定義該量值群組時，就會建立此資料分割。 為量值群組建立新的資料分割時，新的資料分割會加入到該量值群組已存在的資料分割集合中。 量值群組會反映其所有資料分割中所包含的結合資料。 這表示，您必須確定量值群組中某個資料分割的資料不包含該量值群組中其他任何資料分割的資料，以確保資料不會在量值群組中反映一次以上。 量值群組的原始資料分割以 Cube 之資料來源檢視中的單一事實資料表為依據。 一個量值群組有多個資料分割時，每個資料分割都可以在資料來源檢視或 Cube 之基礎關聯式資料來源中參考不同的資料表。 如果將每個資料分割限制到資料表中的不同資料列，則量值群組中的多個資料分割即可參考相同的資料表。  
+ 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料分割來管理及儲存 cube 中量值群組的資料和匯總。 每一個量值群組至少都有一個資料分割；當定義該量值群組時，就會建立此資料分割。 為量值群組建立新的資料分割時，新的資料分割會加入到該量值群組已存在的資料分割集合中。 量值群組會反映其所有資料分割中所包含的結合資料。 這表示，您必須確定量值群組中某個資料分割的資料不包含該量值群組中其他任何資料分割的資料，以確保資料不會在量值群組中反映一次以上。 量值群組的原始資料分割以 Cube 之資料來源檢視中的單一事實資料表為依據。 一個量值群組有多個資料分割時，每個資料分割都可以在資料來源檢視或 Cube 之基礎關聯式資料來源中參考不同的資料表。 如果將每個資料分割限制到資料表中的不同資料列，則量值群組中的多個資料分割即可參考相同的資料表。  
   
  資料分割是管理 Cube 強大而有彈性的方式，特別是對大型的 Cube。 例如，內含銷售資訊的 Cube 可以包含過去每年資料的資料分割，以及今年每一季的資料分割。 將目前的資訊加入到 Cube 時，只需要處理目前這一季的資料分割；處理較少量的資料將會縮短處理時間而提升處理效能。 在一年的結尾，四季的資料分割可以合併到這一年的單一資料分割以及新年度第一季所建立的新資料分割當中。 此外，可以在資料倉儲載入及 Cube 處理程序當中自動化這個新資料分割的建立程序。  
   

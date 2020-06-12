@@ -27,18 +27,17 @@ helpviewer_keywords:
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b34fc9d18866572056126b1df408d91c3934e85
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082794"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520416"
 ---
 # <a name="testing-and-validation-data-mining"></a>測試和驗證 (資料採礦)
   驗證是評估採礦模型對實際資料的執行效能有多好的處理程序。 在部署採礦模型至生產環境之前，先了解其品質和特性以驗證採礦模型是很重要的。  
   
- 本節介紹一些與模型品質相關的基本概念，並說明中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的模型驗證策略。 如需模型驗證如何配合較大型資料採礦處理的概觀，請參閱 [資料採礦方案](data-mining-solutions.md)。  
+ 本節介紹一些與模型品質相關的基本概念，並說明中提供的模型驗證策略 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 如需模型驗證如何配合較大型資料採礦處理的概觀，請參閱 [資料採礦方案](data-mining-solutions.md)。  
   
 ## <a name="methods-for-testing-and-validation-of-data-mining-models"></a>測試的方法和資料採礦模型的驗證  
  有多種方法可以評估資料採礦模型的品質和特性。  

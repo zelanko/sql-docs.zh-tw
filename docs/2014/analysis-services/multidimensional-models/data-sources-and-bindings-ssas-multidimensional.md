@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e3631310e55089647559191dbefed67778d0241
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076076"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547190"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>資料來源和繫結 (SSAS 多維度)
   Cube、維度和其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件都可繫結至資料來源。 資料來源可為下列其中一個物件：  
@@ -56,7 +55,7 @@ ms.locfileid: "66076076"
 ## <a name="analysis-services-data-types"></a>Analysis Services 資料類型  
  繫結中所用的資料類型必須與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所支援的資料類型相符。 下列資料類型定義於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中：  
   
-|Analysis Services 資料類型|描述|  
+|Analysis Services 資料類型|Description|  
 |---------------------------------|-----------------|  
 |BigInt|64 位元帶正負號的整數。 這個資料類型會對應至 Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Int64 資料類型和 OLE DB 內部的 DBTYPE_I8 資料類型。|  
 |Bool|布林值。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Boolean 資料類型和 OLE DB 內部的 DBTYPE_BOOL 資料類型。|  
@@ -168,7 +167,7 @@ ms.locfileid: "66076076"
   
  非正規繫結的指定方式，是使用處理命令來包含選擇性 `Bindings` 集合物件。 選擇性 `Bindings` 集合包含下列元素。  
   
-|屬性|基數|類型|描述|  
+|屬性|基數|類型|Description|  
 |--------------|-----------------|----------|-----------------|  
 |`Binding`|0-n|`Binding`|提供新繫結的集合。|  
 |`DataSource`|0-1|`DataSource`|取代原本會使用之伺服器中的 `DataSource`。|  
@@ -177,9 +176,9 @@ ms.locfileid: "66076076"
  與非正規繫結相關的所有元素都是選擇性的。 如果是未指定的任何元素，ASSL 會使用保存之物件 DDL 中所包含的指定內容。 `DataSource` 中 `DataSourceView` 或 `Process` 的指定是選擇性的。 如果指定了 `DataSource` 或 `DataSourceView`，則在 `Process` 命令完成之後，不會將它們具現化及保存下來。  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>非正規繫結類型的定義  
- 在非正規 `Bindings` 集合內，ASSL 允許多個物件的繫結集合，每一個都是 `Binding`。 每一個 `Binding` 都有擴充物件參考 (類似於物件參考)，但是也可意指次要物件 (例如維度屬性和量值群組屬性)。 這個物件會採用命令中`Object` `Process`專案的一般形式，但\<不會有*物件*>\<*/Object*> 標記。  
+ 在非正規 `Bindings` 集合內，ASSL 允許多個物件的繫結集合，每一個都是 `Binding`。 每一個 `Binding` 都有擴充物件參考 (類似於物件參考)，但是也可意指次要物件 (例如維度屬性和量值群組屬性)。 此物件會採用命令中專案的一般形式 `Object` `Process` ，但 \<*Object*> \<*/Object*> 不會有標記。  
   
- 指定系結的每一個物件都是由表單\<*物件*>識別碼的 XML 元素所識別（例如`DimensionID`）。 在以表單\<*物件*>識別碼明確識別物件之後，您就可以識別要指定系結的元素，這通常`Source`是。 值得注意的常見情況是哪一個 `Source` 是 `DataItem` 上的屬性，這是屬性中常見繫結的情況。 在此情況下，您不會指定 `DataItem` 標記，而只會指定 `Source` 屬性，就像它直接位於要繫結的資料行上一樣。  
+ 指定系結的每一個物件都是由表單識別碼的 XML 元素所識別 \<*object*> （例如 `DimensionID` ）。 在您以表單識別碼明確地識別物件之後，就會識別要指定系結的 \<*object*> 元素，這通常是 `Source` 。 值得注意的常見情況是哪一個 `Source` 是 `DataItem` 上的屬性，這是屬性中常見繫結的情況。 在此情況下，您不會指定 `DataItem` 標記，而只會指定 `Source` 屬性，就像它直接位於要繫結的資料行上一樣。  
   
  `KeyColumns` 是由其在 `KeyColumns` 集合內的順序加以識別 例如，在這裡無法僅指定屬性的第一和第三個索引鍵資料行，因為沒有方法可以指示要略過第二個索引鍵資料行。 所有的索引鍵資料行都必須位於維度屬性的非正規繫結中。  
   

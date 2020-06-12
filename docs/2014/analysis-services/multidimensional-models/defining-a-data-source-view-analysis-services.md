@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21c7dd1e5ebe5e7b860a3b1f6a375772f236839c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075394"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546940"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>定義資料來源檢視 (Analysis Services)
-  [資料來源] 視圖包含多[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]維度資料庫物件（也就是 cube、維度和採礦結構）所使用之架構的邏輯模型。 資料來源檢視就是統一維度模型 (UDM) 和採礦結構所使用之結構描述元素的中繼資料定義，並以 XML 格式儲存。 資料來源檢視：  
+  [資料來源] 視圖包含多 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 維度資料庫物件（也就是 cube、維度和採礦結構）所使用之架構的邏輯模型。 資料來源檢視就是統一維度模型 (UDM) 和採礦結構所使用之結構描述元素的中繼資料定義，並以 XML 格式儲存。 資料來源檢視：  
   
 -   包含代表從一個或多個基礎資料來源選取之物件的中繼資料，或用來產生基礎關聯式資料存放區的中繼資料 (如果您是遵循由上而下產生結構描述的方法)。  
   
@@ -119,7 +118,7 @@ ms.locfileid: "66075394"
   
  [資料來源檢視精靈] 會使用您的回應來比對資料行名稱，並在 DSV 中建立不同資料表之間的關聯性。 您可以指定下表所列出的任何一個準則。  
   
-|名稱比對準則|描述|  
+|名稱比對準則|Description|  
 |----------------------------|-----------------|  
 |**與主索引鍵的名稱相同**|來源資料表中的外部索引鍵資料行名稱與目的地資料表中的主索引鍵資料行名稱相同。 例如，外部索引鍵資料行 `Order.CustomerID` 與主索引鍵資料行 `Customer.CustomerID`相同。|  
 |**與目的地資料表的名稱相同**|來源資料表中的外部索引鍵資料行名稱與目的地資料表的名稱相同。 例如，外部索引鍵資料行 `Order.Customer` 與主索引鍵資料行 `Customer.CustomerID`相同。|  

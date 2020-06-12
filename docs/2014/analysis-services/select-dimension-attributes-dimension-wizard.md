@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dcaf18ea2df3bbd3b227c8948d2fb15f54828853
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67624345"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537920"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>選取維度屬性 (維度精靈)
   使用 **[選取維度屬性]** 頁面，即可選取和修改要建立之維度的屬性。  
@@ -29,7 +28,7 @@ ms.locfileid: "67624345"
   
 -   在方案總管**** 的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度]**** 資料夾，然後按一下 [新增維度]****。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  (具有核取方塊的資料行)  
  選取即可將屬性包含在維度中。  
   

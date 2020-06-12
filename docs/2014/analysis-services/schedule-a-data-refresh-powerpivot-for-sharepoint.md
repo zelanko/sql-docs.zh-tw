@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cfbd8496a700f03ae91e81f1fcf442c1a12bcfa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070005"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538920"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>排程資料重新整理 (PowerPivot for SharePoint)
   您可以排程資料重新整理，以取得已發行到 SharePoint 網站之 Excel 活頁簿內對 PowerPivot 資料的自動更新。  
@@ -28,7 +27,7 @@ ms.locfileid: "66070005"
   
  **本主題內容：**  
   
- [必要條件](#prereq)  
+ [先決條件](#prereq)  
   
  [資料重新整理概觀](#intro)  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66070005"
 > [!NOTE]  
 >  PowerPivot 資料重新整理是由在 SharePoint 伺服陣列中的 Analysis Services 伺服器執行個體所執行。 它與在 Excel Services 中提供的資料重新整理功能不相關。 PowePivot 排程資料重新整理功能不會重新整理非 PowerPivot 資料。  
   
-##  <a name="prerequisites"></a><a name="prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="prereq"></a> 先決條件  
  您必須在活頁簿上擁有「參與」權限層級或更高的權限層級，才能建立資料重新整理排程。  
   
  在資料重新整理期間所存取的外部資料來源必須是可用的，而且您在排程中指定的認證必須具有存取這些資料來源的權限。 排程資料重新整理需要可透過網路連線存取的資料來源位置 (例如，從網路檔案共用，而非您工作站上的本機資料夾)。  

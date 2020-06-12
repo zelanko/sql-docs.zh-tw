@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 714845a9-4c27-461a-9ba3-149e1e818386
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0bad2a2e65a65bbafa8218a3e0afbedd4b9f13b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a20484a85b459dad58e5e6687a6cc34a093b130
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081313"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528354"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>瀏覽資料 (SQL Server 資料採礦增益集)
   ![瀏覽資料精靈](media/dmc-explore.gif "瀏覽資料精靈")  
@@ -48,7 +47,7 @@ ms.locfileid: "66081313"
   
 5.  您可以選擇將新資料行加入資料、變更資料分割的方式，或是將圖表複製到 Excel。  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  若要使用 [**流覽資料**] wizard，您的資料必須在 Excel 資料表中。   
   
 ## <a name="see-also"></a>另請參閱  

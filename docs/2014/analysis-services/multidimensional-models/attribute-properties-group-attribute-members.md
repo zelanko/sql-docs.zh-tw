@@ -21,20 +21,19 @@ helpviewer_keywords:
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e2c52ec93b46418b82b681fbacc1d31338a0d88
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077271"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544780"
 ---
 # <a name="group-attribute-members-discretization"></a>群組屬性成員 (分隔)
-  成員群組是系統產生之連續維度成員的集合。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，屬性的成員可以透過稱為「離散化」的進程，分組到多個成員群組中。 階層中的層級包含成員群組或成員，但不會同時包含兩者。 商務使用者瀏覽含有成員群組的層級時，他們會看到成員群組的名稱和資料格值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 產生以支援成員群組的成員稱為群組成員，看起來就像一般成員。  
+  成員群組是系統產生之連續維度成員的集合。 在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，屬性的成員可以透過稱為「離散化」的進程，分組到多個成員群組中。 階層中的層級包含成員群組或成員，但不會同時包含兩者。 商務使用者瀏覽含有成員群組的層級時，他們會看到成員群組的名稱和資料格值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 產生以支援成員群組的成員稱為群組成員，看起來就像一般成員。  
   
  屬性 (Attribute) 上的 `DiscretizationMethod` 屬性 (Property)，控制如何將成員群組。  
   
-|`DiscretizationMethod` 設定|描述|  
+|`DiscretizationMethod` 設定|Description|  
 |--------------------------------------|-----------------|  
 |`None`|顯示成員。|  
 |`Automatic`|請選取最適合代表資料的方法：`EqualAreas` 方法或 `Clusters` 方法。|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 485a3e12b46700319c760b878ecbdcfb8c97545d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086823"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526674"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>建立採礦結構 (SQL Server 資料採礦增益集)
   ![資料採礦功能區中的建立採礦結構按鈕](media/dmc-createstruct.gif "資料採礦功能區中的建立採礦結構按鈕")  
@@ -37,7 +36,7 @@ ms.locfileid: "66086823"
   
 2.  在 [**選取來源資料**] 對話方塊中，指定包含您要用於分析之資料的 excel 範圍、excel 資料表或外部資料源。  
   
-     按 [下一步]  。  
+     按 [下一步] 。  
   
 3.  在 [**選取資料行**] 對話方塊中，檢查所選資料來源中可用的資料行清單。  
   
@@ -62,9 +61,9 @@ ms.locfileid: "66086823"
     >   
     >  如需詳細資訊，請參閱關於[選擇資料採礦資料](choosing-data-for-data-mining.md)中的內容類型一節。  
   
-     按一下 [確定]**** 關閉對話方塊。  
+     按一下 [確定]  關閉對話方塊。  
   
-6.  按 [下一步]  。  
+6.  按 [下一步] 。  
   
      根據您使用的資料類型，您可以在這個步驟之後就完成精靈。 在這種情況下，請直接跳到 [**完成]** 頁面，為您的採礦結構命名。  
   
@@ -74,17 +73,17 @@ ms.locfileid: "66086823"
   
      或者，輸入要用於測試之資料列的數目上限。  
   
-     按 [下一步]  。  
+     按 [下一步] 。  
   
 8.  在 [**完成**] 對話方塊中，輸入新的「採礦結構」的名稱和描述。  
   
-9. 按一下 [完成]  。  
+9. 按一下 [完成] 。  
   
 ### <a name="related-options"></a>相關的選項  
   
-|選項|評價|  
+|選項|註解|  
 |------------|--------------|  
-|[**選取來源資料**] 對話方塊|當您選取 Excel 資料表時，您應該指出資料是否已有標頭。 如果略過這個選項，資料的第一列會做為資料行名稱。<br /><br /> 如果您使用 [**外部資料源**] 選項，您可以使用任何可在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料來源中定義的資料類型。 不過，增益集中用於建立新資料來源的對話方塊不包含 Analysis Services 支援的所有資料來源，因此建議您事先在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器上建立資料來源，然後再使用增益集進行連接。|  
+|[**選取來源資料**] 對話方塊|當您選取 Excel 資料表時，您應該指出資料是否已有標頭。 如果略過這個選項，資料的第一列會做為資料行名稱。<br /><br /> 如果您使用 [**外部資料源**] 選項，您可以使用任何可在資料來源中定義的資料類型 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 不過，增益集中用於建立新資料來源的對話方塊不包含 Analysis Services 支援的所有資料來源，因此建議您事先在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器上建立資料來源，然後再使用增益集進行連接。|  
 |[**資料來源查詢編輯器**] 對話方塊|在您連接至指定的資料來源之後，您可以加入資料行，或建立自訂查詢以產生自訂資料行。|  
 |**將資料分割成定型集和測試集**|定型與測試集的建議值為70%，用於定型，而30% 用於測試;不過，如果您有大量資料，您可以指定測試的最大資料列數目。|  
 |[完成] 對話方塊|某些模型類型提供鑽研選項，如果您在採礦結構中包含詳細資料的資料行，這些選項會很有用。 例如，如果您建立群集模型，您可以包含用於鑽研 (而不是用於分析) 的詳細資料 (例如名稱或電子郵件地址)，以便更容易連絡特定群集中的客戶。|  
@@ -111,7 +110,7 @@ ms.locfileid: "66086823"
   
 -   所有的演算法都需要索引**鍵**資料行。 索引鍵資料行中的值必須是唯一的。 只有在預測或時間序列模型中，才需要**Key Time**資料行。 .  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  若要建立資料採礦結構，您必須具有 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。 即使您使用暫時性結構，還是需要連接。 如需有關如何建立或變更連接的詳細資訊，請參閱[連接到來源資料 &#40;適用于 Excel&#41;的資料採礦用戶端](connect-to-source-data-data-mining-client-for-excel.md)。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,5 +1,6 @@
 ---
 title: 對應 Oracle 和 SQL Server 資料類型（OracleToSQL） |Microsoft Docs
+description: 瞭解如何自訂 Oracle 資料類型與 SQL Server 之間 Oracle 對應的 SSMA，或接受預設值。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,15 +13,15 @@ ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a9cb39213ed2809b7074a474edf5e4e20bd9122
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262962"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293831"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>對應 Oracle 和 SQL Server 資料類型 (OracleToSQL)
-Oracle 資料庫類型與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫類型不同。 當您將 Oracle 資料庫物件轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]成物件時，您必須指定如何將資料類型從 Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]對應到。 您可以接受預設資料類型對應，也可以自訂對應，如下列各節所示。  
+Oracle 資料庫類型與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫類型不同。 當您將 Oracle 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件時，您必須指定如何將資料類型從 Oracle 對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以接受預設資料類型對應，也可以自訂對應，如下列各節所示。  
   
 ## <a name="default-mappings"></a>預設對應  
 SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請參閱[專案設定 &#40;類型對應&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)。  
@@ -51,7 +52,7 @@ SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請�
   
 2.  若要加入新的對應，請執行下列動作：  
   
-    1.  按一下 **[新增]** 。  
+    1.  按一下 [新增] 。  
   
     2.  在 [**來源類型**] 底下，選取要對應的 Oracle 資料類型。  
   
@@ -59,7 +60,7 @@ SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請�
   
         這可讓您針對相同資料類型的較小且較大的值，自訂資料對應。  
   
-    4.  在 [**目標型別**] 底下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]選取 [目標資料類型]。  
+    4.  在 [**目標型別**] 底下，選取 [目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型]。  
   
         某些類型需要目標資料類型長度。 如有需要，請在 [**取代為**] 方塊中輸入新的資料長度。  
   
@@ -67,7 +68,7 @@ SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請�
   
 3.  若要修改資料類型對應，請執行下列動作：  
   
-    1.  按一下 **[編輯]**。  
+    1.  按一下 **[編輯]** 。  
   
     2.  在 [**來源類型**] 底下，選取要對應的 Oracle 資料類型。  
   
@@ -75,7 +76,7 @@ SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請�
   
         這可讓您針對相同資料類型的較小且較大的值，自訂資料對應。  
   
-    4.  在 [**目標型別**] 底下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]選取 [目標資料類型]。  
+    4.  在 [**目標型別**] 底下，選取 [目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型]。  
   
         某些類型需要目標資料類型長度。 如有需要，請在 [**取代為**] 方塊中輸入新的資料長度，然後[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -83,7 +84,7 @@ SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請�
   
     1.  選取 [類型對應] 清單中的資料列，其中包含您想要移除的資料類型對應。  
   
-    2.  按一下 [移除]****。  
+    2.  按一下 **[移除]** 。  
   
         您無法移除繼承的對應。 不過，繼承的對應會由特定物件或物件類別上的自訂對應覆寫。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d083611d7a72164cf2ad7cf63663cfadb0d77a51
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078096"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541890"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>增益圖索引標籤 (採礦精確度圖表檢視)
   使用 [增益圖]**** 窗格可檢視比較選取的採礦結構中所有選取的採礦模型的圖表。  
@@ -30,7 +29,7 @@ ms.locfileid: "66078096"
   
  如需採礦模型精確度測量方法的一般資訊，請參閱[增益圖 &#40;Analysis Services - 資料採礦&#41;](data-mining/lift-chart-analysis-services-data-mining.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **圖表類型**  
  設定要在檢視器中顯示之圖表的類型。 您可以選取 [增益圖]**** 或是 [收益圖]****。  
   

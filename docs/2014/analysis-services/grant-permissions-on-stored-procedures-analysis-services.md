@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 960b0ef3f050b780998a0f86dcd7b7edf121676d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080724"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544310"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>授與預存程序 (Analysis Services) 的權限
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的預存程序 (或組件) 是以 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET 程式語言撰寫的外部常式，用於擴充 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的功能。 組件可讓開發人員利用跨語言整合、例外狀況處理、版本控制支援、部署支援和偵錯支援等優點。  
@@ -29,7 +28,7 @@ ms.locfileid: "66080724"
   
  以下是用來執行預存程序的權限集合：  
   
--   **安全**在安全許可權集合中，預存程式無法存取[!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework 中受保護的資源。 此權限集合只允許計算。 這是最安全的權限集合；資訊不會洩露到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 之外，權限無法提高，使資料遭到竄改的風險降至最低。  
+-   **安全**在安全許可權集合中，預存程式無法存取 .NET Framework 中受保護的資源 [!INCLUDE[msCoName](../includes/msconame-md.md)] 。 此權限集合只允許計算。 這是最安全的權限集合；資訊不會洩露到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 之外，權限無法提高，使資料遭到竄改的風險降至最低。  
   
 -   **外部存取**使用外部存取權限集時，預存程式就可以使用受控碼來存取外部資源。 將預存程序設定為此權限集合不會造成可能導致伺服器不穩定的程式設計錯誤。 不過，此權限集合可能會導致資訊洩露到伺服器之外，而且權限有可能提高及資料遭到竄改的風險。  
   

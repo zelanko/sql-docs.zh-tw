@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a67cadab4ee67bb3f81776ccb658c66fe6a67d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 153369979737dded52609843cd30cf914315e9cc
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085155"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523393"
 ---
 # <a name="data-definition-queries-data-mining"></a>資料定義查詢 (資料採礦)
   如果是資料採礦， *「資料定義查詢」* (Data Definition Query) 類別目錄表示執行以下作業的 DMX 陳述式或 XMLA 命令：  

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bb8afc256881c96f70a3dd53a31e75c8fa2b5ce
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081440"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528444"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>編輯資料表屬性對話方塊 (SSAS)
   **[編輯資料表屬性]** 對話方塊可讓您檢視與修改使用 [資料表匯入精靈] 匯入至模型設計師之資料表的屬性。 若要存取此對話方塊，請在模型設計師中選取資料表，然後按一下 **[資料表]** 功能表，再按一下 **[資料表屬性]**。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  依您一開始是透過從清單中選取資料表或使用 SQL 查詢匯入資料，此對話方塊的選項都不同。  
   
 ## <a name="table-preview-mode"></a>資料表預覽模式  
@@ -89,7 +88,7 @@ ms.locfileid: "66081440"
  **SQL 陳述式**  
  顯示依目前資料來源發出以擷取資料列的 SQL 陳述式。 在預設情況下會擷取所有資料列，但是您可以設計篩選器或以手動方式編輯 SQL 陳述式，只擷取資料列的子集。  
   
- **Validate**  
+ **驗證**  
  按一下以針對所選資料來源和提供者，驗證陳述式的語法是否正確。  
   
  **設計**  

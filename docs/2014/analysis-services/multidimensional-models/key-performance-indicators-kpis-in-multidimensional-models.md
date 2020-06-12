@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6ae3a34da62ed24d1971540e825f9f8347f413f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074800"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546630"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多維度模型中的關鍵效能指標 (KPI)
   在商務用語中，關鍵效能指標 (KPI) 是量測商務成就的可量化度量。  
@@ -37,7 +36,7 @@ ms.locfileid: "66074800"
   
  在商務用語中，關鍵效能指標 (KPI) 是量測商務成就的可量化度量。 KPI 通常會在一段時間內進行評估。 例如，組織的業務部門可能使用每月毛利作為關鍵效能指標，但同一個組織的人力資源部門則可能使用每季員工的流動率。 每一個都是 KPI 的範例。 高階管理人員經常會耗用在商務計分卡中分組的 KPI，以取得商務成就之快速與精確的記錄摘要。  
   
- 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，KPI 是一種計算集合，與 cube 中的量值群組相關聯，用來評估商務成功。 一般來說，這些計算是多維度運算式 (MDX) 運算式和導出成員的結合。 KPI 也有其他中繼資料，這些中繼資料會提供有關用戶端應用程式應該如何顯示 KPI 計算結果的資訊。  
+ 在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，KPI 是一種計算集合，與 cube 中的量值群組相關聯，用來評估商務成功。 一般來說，這些計算是多維度運算式 (MDX) 運算式和導出成員的結合。 KPI 也有其他中繼資料，這些中繼資料會提供有關用戶端應用程式應該如何顯示 KPI 計算結果的資訊。  
   
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，KPI 的一個主要優點是它們均為可由不同用戶端應用程式耗用的伺服器架構 KPI。 與不同用戶端應用程式的不同版本真實性相比，伺服器型 KPI 呈現單一版本的真實性。 甚至，在伺服器上而非每部用戶端電腦上執行有時複雜的計算，也可能會對效能提升有所助益。  
   

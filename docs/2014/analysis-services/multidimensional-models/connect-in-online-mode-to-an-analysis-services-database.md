@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 33041234-7106-404f-a289-8e904f32aff2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37b28b6d4f15e29242d20b33bb5ade12460ded7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 520bf86abe448b444c653f61849640f0b1a7789f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076565"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536948"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>在連線模式下連接至 Analysis Services 資料庫
-  您可以直接連接到現有[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的資料庫，並直接修改該資料庫內的物件。 當您直接連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫時，對物件的變更會立即發生，而且 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中不會建立任何 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]專案。  
+  您可以直接連接到現有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的資料庫，並直接修改該資料庫內的物件。 當您直接連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫時，對物件的變更會立即發生，而且 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中不會建立任何 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]專案。  
   
 ### <a name="to-connect-directly-to-an-analysis-services-database-by-using-sql-server-data-tools"></a>若要使用 SQL Server 資料工具直接連接到 Analysis Services 資料庫  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66076565"
   
      您可以輸入資料庫名稱或是查詢伺服器，以檢視伺服器上現有的資料庫。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
   
      您現在可以直接編輯 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的任何物件。  
   

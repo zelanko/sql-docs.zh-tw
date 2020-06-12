@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c9c44aa6060a9b626b3de0cde5a3c82e1e55b1dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf009e45e97586a50c01f6e949120c09e3625ebc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070690"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539870"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>收益圖表設定對話方塊 (採礦精確度圖表檢視)
   使用 **[收益圖設定]** 對話方塊，即可設定用於產生收益圖的設定。 如需收益圖的詳細資訊，請參閱[增益圖 &#40;Analysis Services - 資料採礦&#41;](data-mining/lift-chart-analysis-services-data-mining.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **人數**  
  輸入資料集裡正用來建立收益圖的案例數目。  
   

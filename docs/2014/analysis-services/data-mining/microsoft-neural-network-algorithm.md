@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c8462d5965685986bbb68565ccb24de0f18c645
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083864"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521754"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中， [!INCLUDE[msCoName](../../includes/msconame-md.md)]類神經網路演算法會將輸入屬性的每個可能狀態與可預測屬性的每個可能狀態結合，並使用定型資料來電腦率。 稍後您可以使用這些機率來進行分類或迴歸，依據輸入屬性預測該預測屬性的結果。  
+  在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，類 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神經網路演算法會將輸入屬性的每個可能狀態與可預測屬性的每個可能狀態結合，並使用定型資料來電腦率。 稍後您可以使用這些機率來進行分類或迴歸，依據輸入屬性預測該預測屬性的結果。  
   
  以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建構的採礦模型可包含多個網路，視用於輸入和預測的資料行數目或只用於預測的資料行數目而定。 單一採礦模型包含的網路數目，視採礦模型使用的輸入資料行和可預測資料行所包含的狀態數目而定。  
   

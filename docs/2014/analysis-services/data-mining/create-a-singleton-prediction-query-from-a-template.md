@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54523b9c2302deafb0faa9c23708224470bd69b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085484"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523754"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>根據範本建立單一預測查詢
   當您有想要用於預測的模型，但不想要將它對應至外部輸入資料集或進行大量預測時，單一查詢會很有用。 使用單一查詢，您可以向模型提供一個或多個值，並且立即會看到預測值。  
@@ -69,20 +68,20 @@ AS [t]
   
 5.  在 [採礦模型]**** 資料列中，根據**物件總管**中顯示的採礦模型清單，輸入採礦模型的名稱。  
   
-     針對本主題開頭所顯示的範例程式碼，已將 [**採礦模型**] 資料列設定為 [ `TM_Decision_Tree`名稱]。  
+     針對本主題開頭所顯示的範例程式碼，已將 [**採礦模型**] 資料列設定為 [名稱] `TM_Decision_Tree` 。  
   
 6.  在 [值]**** 資料列中，針對您想要進行預測的項目輸入新資料值。  
   
-     針對本主題開頭所顯示的範例程式碼，[**值**] 資料列設定為`2` ，以根據家中子女的數目來預測自行車購買行為。  
+     針對本主題開頭所顯示的範例程式碼，[**值**] 資料列設定為， `2` 以根據家中子女的數目來預測自行車購買行為。  
   
 7.  在 [資料行]**** 資料列中，輸入新資料應該對應至採礦模型中的目標資料行名稱。  
   
-     針對本主題開頭所顯示的範例程式碼，資料行資料**列**已設定為`Number Children at Home`。  
+     針對本主題開頭所顯示的範例程式碼，資料行資料**列**已設定為 `Number Children at Home` 。  
   
     > [!NOTE]  
     >  當您使用 [指定範本參數的值]**** 對話方塊時，不需要在資料行名稱前後加上方括號。 系統會自動為您加入括號。  
   
-8.  將 [**輸入別名**] `t`保留為。  
+8.  將 [**輸入別名**] 保留為 `t` 。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -90,7 +89,7 @@ AS [t]
   
      若為本主題開頭所顯示的範例程式碼，其他查詢條件設定為 `'45' as [Age]`。  
   
-11. 按一下 **[執行]**。  
+11. 按一下 **[執行]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立預測 &#40;資料採礦基本教學課程&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  

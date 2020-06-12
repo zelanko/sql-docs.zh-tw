@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f535aa831824b2ab283b2b596d0de49ef0e72515
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080742"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544360"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>搜尋目標狀況 (適用於 Excel 的資料表分析工具)
   ![資料表分析工具中的搜尋目標按鈕](media/tat-goalseek.gif "資料表分析工具中的搜尋目標按鈕")  
@@ -59,7 +58,7 @@ ms.locfileid: "66080742"
   
 9. 如果您已選取**此資料列上**的選項，則分析的結果會輸出到對話方塊進行審核。 此對話方塊會維持開啟的狀態，讓您可以繼續輸入不同的值和目標。  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  此工具會使用可處理數值或離散值的 Microsoft 羅吉斯迴歸演算法。  
   
  您可以執行預測多次，並在之後選取不同的資料行，但是必須個別計算每一個目標和變更的組合。  
@@ -99,7 +98,7 @@ ms.locfileid: "66080742"
 ## <a name="related-tools"></a>相關工具  
  適用於 Excel 的資料採礦用戶端，是提供更為進階資料採礦功能的獨立增益集，其中包含的精靈可建立預測行為的資料採礦模型。 如需詳細資訊，請參閱[建立資料採礦模型](creating-a-data-mining-model.md)。  
   
- 如需「**搜尋目標**」案例工具所使用之演算法的詳細資訊，請參閱《線上叢書》中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的「Microsoft 羅吉斯回歸演算法」主題。  
+ 如需「**搜尋目標**」案例工具所使用之演算法的詳細資訊，請參閱《線上叢書》中的「Microsoft 羅吉斯回歸演算法」主題 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [適用於 Excel 的資料表分析工具](table-analysis-tools-for-excel.md)  

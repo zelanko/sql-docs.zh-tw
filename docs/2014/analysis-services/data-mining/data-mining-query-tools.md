@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1702ad82c65b5a7370a62c4bc31a08007f374c9f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084974"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523155"
 ---
 # <a name="data-mining-query-interfaces"></a>資料採礦查詢介面
   資料採礦查詢是以資料採礦延伸模組 (DMX) 語言為基礎。 您可以針對所有預測和模型工作使用 DMX，包括分類、風險分析、產生建議及線性迴歸。 您也可以擷取處理模型時所產生的模式和統計資料。  
@@ -61,7 +60,7 @@ ms.locfileid: "66084974"
  在使用查詢產生器時，可以使用圖形工具來選取採礦模型、加入新的案例資料以及加入預測函數。 [預測查詢產生器] 包含可讓您手動修改查詢的文字編輯器，以及用來查看查詢結果的簡單 [**結果**] 窗格。  
   
 ###  <a name="query-editor"></a><a name="bkmk_QueryEditor"></a> 查詢編輯器  
- 中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的查詢編輯器會提供工具，讓您用來建立及執行 DMX 查詢。 您可以連接到 SQL Server Analysis Services 的執行個體，然後選取資料庫、採礦結構資料行和採礦模型。 中繼資料總管**** 包含您可以瀏覽的預測函數清單。  
+ 中的查詢編輯器 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會提供工具，讓您用來建立及執行 DMX 查詢。 您可以連接到 SQL Server Analysis Services 的執行個體，然後選取資料庫、採礦結構資料行和採礦模型。 中繼資料總管**** 包含您可以瀏覽的預測函數清單。  
   
 ###  <a name="dmx-templates"></a><a name="bkmk_Templates"></a> DMX 範本  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供互動式的 DMX 查詢範本，可用來建立 DMX 查詢。 如果您看不到範本清單，請按一下工具列上的 [檢視]****，然後選取 [範本總管]****。 若要查看所有 Analysis Services 範本 (包括 DMX、MDX 及 XMLA 的範本)，請按一下 Cube 圖示。  
@@ -74,7 +73,7 @@ ms.locfileid: "66084974"
 >  適用於 Microsoft Office Excel 的資料採礦增益集也包含許多範本，連同可幫助您撰寫複雜 DMX 陳述式的互動式查詢產生器。 若要使用範本，請在資料採礦用戶端中按一下 [查詢]****，再按一下 [進階]****。  
   
 ###  <a name="integration-services-data-mining-components"></a><a name="bkmk_SSIS"></a>Integration Services 資料採礦元件  
- 您也可以將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]預測查詢包含為封裝的一部分。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的下列工作和轉換支援 DMX 預測查詢和 DMX 陳述式的建立及執行。  
+ 您也可以將預測查詢包含為封裝的一部分 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的下列工作和轉換支援 DMX 預測查詢和 DMX 陳述式的建立及執行。  
   
 |元件|描述|  
 |---------------|-----------------|  

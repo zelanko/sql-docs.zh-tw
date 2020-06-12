@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 06ce3967bf9258e9b8f6cd4a28cb28a29a1e0588
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6adfc389776f91132e527130f50f61c9783d9f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084536"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522464"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>針對採礦模型啟用鑽研
   如果您已經啟用採礦模型的鑽研，當您瀏覽此模型時，可以擷取有關用來建立模型之案例的詳細資訊。 若要檢視這項資訊，您必須擁有必要的權限，而且結構必須已經經過處理。  
@@ -27,7 +26,7 @@ ms.locfileid: "66084536"
   
 -   即使您沒有結構的權限，模型的鑽研權限還是可以讓您從模型進行鑽研。  
   
--   結構的鑽研權限可以使用 [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 函數，提供將結構資料行從模型加入到鑽研查詢的額外功能。 您也可以使用 [選取 ...] 來查詢結構中的定型和測試案例。FROM \<結構>。案例語法。  
+-   結構的鑽研權限可以使用 [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 函數，提供將結構資料行從模型加入到鑽研查詢的額外功能。 您也可以使用 [選取 ...] 來查詢結構中的定型和測試案例。從 \<structure> 。案例語法。  
   
  **快取定型案例** ：鑽研藉由擷取採礦結構中定型案例的相關資訊來運作。 這項資訊會在處理結構時快取。 因此，如果您選擇將 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性變更為 `ClearAfterProcessing` 來清除所有快取的資料，鑽研將不會運作。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 554ea10e-b0b0-4987-add8-19113d824787
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3739728631ae0273150c010600f099623bb98c2a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082343"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528886"
 ---
 # <a name="define-a-new-attribute-manually"></a>手動定義新屬性
   此程式描述如何使用維度設計師中的 [**屬性**] 窗格，在維度中建立新屬性。  
@@ -31,7 +30,7 @@ ms.locfileid: "66082343"
   
      以滑鼠右鍵按一下 [**屬性**] 窗格，指向 [**顯示內容于**]，然後按一下 [**方格**]。  
   
-3.  流覽至方格的最後一個資料列，然後按一下** \<[新增屬性]>**。  
+3.  流覽至方格的最後一個資料列，然後按一下 **\<new attribute>** 。  
   
 4.  輸入此屬性 (Attribute) 的名稱，以設定 `Name` 屬性 (Property)，然後按 Enter 鍵。  
   

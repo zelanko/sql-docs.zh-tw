@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b206facd1a8dc3faa58c58ae97e783d8a5c630b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079340"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543620"
 ---
 # <a name="defining-a-data-source"></a>定義資料來源
   建立 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案之後，您通常會定義專案要使用的一或多個資料來源來開始使用專案。 當您定義資料來源時，要定義用來連接到資料來源的連接字串資訊。 如需詳細資訊，請參閱 [建立資料來源 &#40;SSAS 多維度&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)。  
@@ -34,9 +33,9 @@ ms.locfileid: "66079340"
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]也支援**提供者**清單中顯示的其他提供者。  
   
-5.  在 [**伺服器名稱**] 文字方塊中， `localhost`輸入。  
+5.  在 [**伺服器名稱**] 文字方塊中，輸入 `localhost` 。  
   
-     若要連接到本機電腦上的已命名實例，請輸入**localhost\\<\>實例名稱**。 若要連接至特定電腦而非本機電腦，請輸入電腦名稱或 IP 位址。  
+     若要連接到本機電腦上的已命名實例，請輸入**localhost \\<\> 實例名稱**。 若要連接至特定電腦而非本機電腦，請輸入電腦名稱或 IP 位址。  
   
 6.  確認已選取 [使用 Windows 驗證]****。 在 [選取或輸入資料庫名稱]**** 清單中，選取 [AdventureWorksDW2012]****。  
   

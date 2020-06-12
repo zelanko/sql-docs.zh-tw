@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: bf25d649-f35a-458b-a8f4-9b159b3b2abe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a8feb2b80a629d51c7447843ff5a8b41f0700b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c320566ac04ff78cf342a250e53cab5608356ff0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069834"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538540"
 ---
 # <a name="select-a-column-dialog-box-business-intelligence-wizard"></a>選取資料行對話方塊 (商業智慧精靈)
   使用 **[選取資料行]** 對話方塊，即可從樹狀檢視所顯示的資料表清單中選取資料行。 商業智慧精靈會開啟此對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **樹狀檢視**  
  按一下資料行即可選取商業智慧精靈的資料行。  
   

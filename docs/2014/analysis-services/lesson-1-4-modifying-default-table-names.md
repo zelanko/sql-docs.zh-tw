@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44e7142da8c639f63b198983b1fda829c9099d38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079226"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543610"
 ---
 # <a name="modifying-default-table-names"></a>修改預設資料表名稱
   您可以針對資料來源檢視中的物件，變更 **FriendlyName** 屬性的值，使其更明顯且更容易使用。  
@@ -33,11 +32,11 @@ ms.locfileid: "66079226"
   
      當 [屬性] 視窗保持開啟時，要在資料來源檢視中變更每一個資料表的屬性會更加容易。 如果您未使用 [自動隱藏]**** 按鈕使視窗固定開啟，則在 [圖表]**** 窗格中按一下不同的物件時即會關閉視窗。  
   
-3.  將**FactInternetSales**物件的*`InternetSales`* **FriendlyName**屬性變更為。  
+3.  將**FactInternetSales**物件的**FriendlyName**屬性變更為 *`InternetSales`* 。  
   
      當您按一下而離開 **FriendlyName** 屬性的資料格時，即套用變更。 在下一課，您將定義以此事實資料表為基礎的量值群組。 事實資料表的名稱是 InternetSales 而不是 FactInternetSales，因為您在這一課已做了變更。  
   
-4.  按一下 [資料表]**** 窗格中的 [DimProduct]****。 在 [屬性視窗中，將 [ **FriendlyName** ] *`Product`* 屬性變更為。  
+4.  按一下 [資料表]**** 窗格中的 [DimProduct]****。 在 [屬性視窗中，將 [ **FriendlyName** ] 屬性變更為 *`Product`* 。  
   
 5.  以相同方式變更資料來源檢視中其餘每個資料表的 **FriendlyName** 屬性，以便移除 "**Dim**" 前置詞。  
   

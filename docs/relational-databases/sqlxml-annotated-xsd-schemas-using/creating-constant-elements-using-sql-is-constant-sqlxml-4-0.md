@@ -1,5 +1,6 @@
 ---
 title: 使用 sql： is-常數（SQLXML）來建立常數元素
+description: 瞭解如何使用 SQLXML 4.0 中的 sql： is-常數注釋，在未對應至任何資料庫資料表或資料行的 XSD 架構中建立常數元素。
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45ab0c13ad2c631a438e2a8637e36d192165094b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 854378b57a4798375e4f97841c8bd72ef0d7d0f3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257483"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524904"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 建立常數元素 (SQLXML 4.0)
 
@@ -35,17 +36,17 @@ ms.locfileid: "75257483"
   
 -   將最上層元素加入到 XML 文件中。 XML 需要單一的最上層元素 (根元素) 供文件使用。  
   
--   建立容器元素，例如包裝所有訂單的** \<訂單>** 元素。  
+-   建立容器元素，例如 **\<Orders>** 包裝所有訂單的元素。  
   
- **Sql： is-常數**注釋可以加入** \<complexType>** 元素中。  
+ **Sql： is-常數**注釋可以加入至 **\<complexType>** 元素。  
   
 ## <a name="examples"></a>範例  
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 指定 sql:is-constant 來加入容器元素  
- 在這個批註式 XSD 架構中， ** \<CustomerOrders>** 會藉由指定**sql： is-常數**屬性（其值為1）定義為常數元素。 因此， ** \<CustomerOrders>** 不會對應到任何資料庫資料表或資料行。 這個常數元素是由>子項目的** \<順序**所組成。  
+ 在這個批註式 XSD 架構中， **\<CustomerOrders>** 會藉由指定**sql： is-常數**屬性（其值為1），將定義為常數元素。 因此， **\<CustomerOrders>** 不會對應到任何資料庫資料表或資料行。 這個常數元素是由 **\<Order>** 子項目所組成。  
   
- 雖然** \<CustomerOrders>** 不會對應到任何資料庫資料表或資料行，但它仍會顯示在產生的 XML 中，當做包含** \<Order>** 子項目的容器元素。  
+ 雖然不 **\<CustomerOrders>** 會對應到任何資料庫資料表或資料行，但它仍會顯示在產生的 XML 中，做為包含子專案的容器元素 **\<Order>** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

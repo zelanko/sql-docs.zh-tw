@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9be99e5f5107491e2bac14c3a1590ccb1e1c778f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493878"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542838"
 ---
 # <a name="defining-calculated-members"></a>定義導出成員
   導出成員是根據 Cube 資料、算術運算子、數字和函數組合所定義的維度成員或量值群組成員。 例如，您可以建立一個導出成員，計算 Cube 中兩個實體量值的總和。 導出成員定義是儲存在 Cube 中，但其值是在查詢時計算。  
@@ -42,7 +41,7 @@ ms.locfileid: "69493878"
   
      ![計算運算式窗格表單](../../2014/tutorials/media/l6-calculatedmembers-02.gif "計算運算式窗格表單")  
   
-3.  在 [**名稱**] 方塊中，將匯出量值的名稱`[Total Sales Amount]`變更為。  
+3.  在 [**名稱**] 方塊中，將匯出量值的名稱變更為 `[Total Sales Amount]` 。  
   
      如果導出成員的名稱包含空格，則必須以方括號括住導出成員的名稱。  
   
@@ -85,9 +84,9 @@ ms.locfileid: "69493878"
   
      ![計算運算式窗格中的指令碼](../../2014/tutorials/media/l6-calculatedmembers-04.gif "計算運算式窗格中的指令碼")  
   
-12. 在 [**計算**] 索引標籤的工具列上，按一下 [**表單檢視**]，確認`[Total Sales Amount]`已在 [**腳本召集人**] 窗格中選取，然後按一下 [**新增匯出成員**]。  
+12. 在 [**計算**] 索引標籤的工具列上，按一下 [**表單檢視**]，確認 `[Total Sales Amount]` 已在 [**腳本召集人**] 窗格中選取，然後按一下 [**新增匯出成員**]。  
   
-13. 將這個新匯出成員的名稱變更為`[Total Product Cost]`，然後在 [**運算式**] 方塊中建立下列運算式：  
+13. 將這個新匯出成員的名稱變更為 `[Total Product Cost]` ，然後在 [**運算式**] 方塊中建立下列運算式：  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
@@ -101,9 +100,9 @@ ms.locfileid: "69493878"
   
 ## <a name="defining-gross-profit-margin-calculations"></a>定義毛利率計算  
   
-1.  確認`[Total Product Cost]`已在 [**腳本召集人**] 窗格中選取，然後在 [**計算**] 索引標籤的工具列上，按一下 [**新增匯出成員**]。  
+1.  確認 `[Total Product Cost]` 已在 [**腳本召集人**] 窗格中選取，然後在 [**計算**] 索引標籤的工具列上，按一下 [**新增匯出成員**]。  
   
-2.  在 [**名稱**] 方塊中，將這個新計算量值的`[Internet GPM]`名稱變更為。  
+2.  在 [**名稱**] 方塊中，將這個新計算量值的名稱變更為 `[Internet GPM]` 。  
   
 3.  在 [運算式]**** 方塊中，建立下列 MDX 運算式：  
   
@@ -119,7 +118,7 @@ ms.locfileid: "69493878"
   
 6.  在 [計算]**** 索引標籤的工具列上，按一下 [新增導出成員]****。  
   
-7.  在 [**名稱**] 方塊中，將這個新計算量值的`[Reseller GPM]`名稱變更為。  
+7.  在 [**名稱**] 方塊中，將這個新計算量值的名稱變更為 `[Reseller GPM]` 。  
   
 8.  在 [運算式]**** 方塊中，建立下列 MDX 運算式：  
   
@@ -135,7 +134,7 @@ ms.locfileid: "69493878"
   
 11. 在 [計算]**** 索引標籤的工具列上，按一下 [新增導出成員]****。  
   
-12. 在 [**名稱**] 方塊中，將這個匯出量值的`[Total GPM]`名稱變更為。  
+12. 在 [**名稱**] 方塊中，將這個匯出量值的名稱變更為 `[Total GPM]` 。  
   
 13. 在 [運算式]**** 方塊中，建立下列 MDX 運算式：  
   
@@ -153,7 +152,7 @@ ms.locfileid: "69493878"
   
 16. 在 [計算]**** 索引標籤的工具列上，按一下 [指令碼檢視]****，然後檢閱您剛新增至計算指令碼中的三個計算值。  
   
-17. 在計算腳本中，緊接在`[Internet GPM]`計算之前加入新行，然後將下列文字新增至腳本本身的行：  
+17. 在計算腳本中，緊接在計算之前加入新行 `[Internet GPM]` ，然後將下列文字新增至腳本本身的行：  
   
     ```  
     /* Calculations to calculate gross profit margin */  
@@ -167,11 +166,11 @@ ms.locfileid: "69493878"
   
 1.  在 [計算]**** 索引標籤的工具列上，按一下 [表單檢視]****。  
   
-2.  在 [**腳本召集人**] 窗格`[Total GPM]`中，選取，然後在 [**計算**] 索引標籤的工具列上，按一下 [**新增匯出成員**]。  
+2.  在 [**腳本召集人**] 窗格中，選取 `[Total GPM]` ，然後在 [**計算**] 索引標籤的工具列上，按一下 [**新增匯出成員**]。  
   
      在按一下 [新增導出成員]**** 之前，先按一下 [指令碼組合管理]**** 窗格中的最後一個導出成員，可確保這個新的導出成員加在指令碼結尾。 指令碼是以它們出現在 [指令碼組合管理]**** 窗格中的順序執行的。  
   
-3.  將這個新匯出成員的名稱變更為`[Internet Sales Ratio to All Products]`。  
+3.  將這個新匯出成員的名稱變更為 `[Internet Sales Ratio to All Products]` 。  
   
 4.  在 [運算式]**** 方塊中，輸入下列運算式：  
   
@@ -194,7 +193,7 @@ ms.locfileid: "69493878"
   
 7.  在 [計算]**** 索引標籤的工具列上，按一下 [新增導出成員]****。  
   
-8.  將這個匯出成員的名稱變更為`[Reseller Sales Ratio to All Products]`。  
+8.  將這個匯出成員的名稱變更為 `[Reseller Sales Ratio to All Products]` 。  
   
 9. 在 [運算式]**** 方塊中，輸入下列運算式：  
   
@@ -215,7 +214,7 @@ ms.locfileid: "69493878"
   
 12. 在 [計算]**** 索引標籤的工具列上，按一下 [新增導出成員]****。  
   
-13. 將這個匯出成員的名稱變更為`[Total Sales Ratio to All Products]`。  
+13. 將這個匯出成員的名稱變更為 `[Total Sales Ratio to All Products]` 。  
   
 14. 在 [運算式]**** 方塊中，輸入下列運算式：  
   
@@ -236,7 +235,7 @@ ms.locfileid: "69493878"
   
 17. 在 [計算]**** 索引標籤的工具列上，按一下 [指令碼檢視]****，然後檢閱您剛新增至計算指令碼中的三個計算值。  
   
-18. 在計算腳本中，緊接在`[Internet Sales Ratio to All Products]`計算之前加入新行，然後將下列文字新增至腳本本身的行：  
+18. 在計算腳本中，緊接在計算之前加入新行 `[Internet Sales Ratio to All Products]` ，然後將下列文字新增至腳本本身的行：  
   
     ```  
     /* Calculations to calculate percentage of product to total product sales */  

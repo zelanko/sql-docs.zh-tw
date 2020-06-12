@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 13864dba5cac0274204050a8c78730de29f3321e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd4bd012847c3aee231767e94bead86a507ecc53
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727172"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545220"
 ---
 # <a name="write-enabled-partitions"></a>可寫入的資料分割
   Cube 中的資料通常是唯讀的； 但是在某些狀況下，您可能會希望資料分割是可寫入的。 可寫入的資料分割可讓商務使用者藉由變更資料格值及分析變更對 Cube 資料的影響，以瀏覽一些狀況。 當您啟用資料分割的寫入功能時，用戶端應用程式可在資料分割中記錄資料的變更。 這些變更稱為回寫資料，是儲存在個別資料表中，不會覆寫量值群組中任何現有的資料。 不過，它們會併入到查詢結果中，就好像它們是 Cube 資料的一部分。  
@@ -40,7 +39,7 @@ ms.locfileid: "62727172"
  分葉和非分葉資料格的變更，其處理方式不同。 分葉資料格代表量值群組所參考之每個維度中的量值和分葉成員的交集。 分葉資料格的值直接取自事實資料表，且無法向下鑽研來進一步分割。 如果可寫入 Cube 或任何資料分割，則可以對分葉資料格進行變更。 只有在用戶端應用程式提供方法，在構成非分葉資料格的分葉資料格之間散發變更時，才可以變更非分葉資料格。 此處理序叫作配置，是透過多維度運算式 (MDX) 中的 UPDATE CUBE 陳述式加以管理。 商業智慧開發人員可使用 UPDATE CUBE 陳述式來包含配置功能。 如需詳細資訊，請參閱[&#40;MDX&#41;的 UPDATE CUBE 語句](/sql/mdx/mdx-data-manipulation-update-cube)。  
   
 > [!IMPORTANT]  
->  當更新的資料格未重疊時，`Update Isolation Level` 連接字串屬性可用來增強 UPDATE CUBE 的效能。 如需詳細資訊，請參閱 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>。  
+>  當更新的資料格未重疊時，`Update Isolation Level` 連接字串屬性可用來增強 UPDATE CUBE 的效能。 如需詳細資訊，請參閱 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 。  
   
  不論用戶端應用程式是否散發非分葉資料格的變更，每當評估查詢時，回寫資料表中的變更都會同時套用至分葉和非分葉資料格，好讓商務使用者可以檢視這些變更對整個 Cube 的影響。  
   

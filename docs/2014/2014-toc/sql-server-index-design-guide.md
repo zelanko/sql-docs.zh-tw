@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 6327f7e825906635864777e9c993ae16790e6116
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000498"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528374"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 索引設計指南
 
@@ -47,7 +46,7 @@ ms.locfileid: "83000498"
   
  為資料庫選擇正確的索引及工作負載時，往往很難在查詢速度與更新成本之間取得平衡。 範圍較小的索引，或是索引的索引鍵中包含較少的資料行，所需的磁碟空間與維護負擔相對較小。 相反的，如果索引範圍較大，能涵蓋的查詢就更多。 在找到最有效率的索引之前，可能需要先試過數種不同的設計。 索引可以新增、修改和卸除，不會影響資料庫結構描述或應用程式的設計。 所以，不要吝於嘗試各種不同的索引。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的查詢最佳化工具可以確實地選擇在大多數情況中最有效率的索引。 整體的索引設計策略應該為查詢最佳化工具提供多樣化的索引，然後信任它會做最恰當的決定。 這可降低分析時間，且會在各種不同狀況下得到相當好的效能。 若要查看查詢最佳化工具用於特定查詢的索引，請在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的 [查詢]**** 功能表中，選取 [包括實際執行計畫]****。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的查詢最佳化工具可以確實地選擇在大多數情況中最有效率的索引。 整體的索引設計策略應該為查詢最佳化工具提供多樣化的索引，然後信任它會做最恰當的決定。 這可降低分析時間，且會在各種不同狀況下得到相當好的效能。 若要查看查詢最佳化工具用於特定查詢的索引，請在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的 [查詢] 功能表中，選取 [包括實際執行計畫]。  
   
  使用索引不一定就會有良好的效能，良好的效能和有效率地使用索引也不能劃上等號。 如果使用索引對產生最佳效能一定有幫助，查詢最佳化工具的作業就很單純。 但事實上，選擇不正確的索引可能得不到最佳效能。 因此，查詢最佳化工具的工作是只有在提升效能時才選擇索引或索引組合，如果會妨礙效能，就要避免索引式擷取。  
   
@@ -137,7 +136,7 @@ ms.locfileid: "83000498"
   
  您也可以自訂索引的初始儲存特性，設定如 FILLFACTOR 的選項來最佳化其效能或維護。 您也可以使用檔案群組或資料分割配置的方式決定索引儲存位置，以最佳化效能。  
   
-###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a>檔案群組或資料分割配置上的索引位置  
+###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a> 檔案群組或資料分割配置上的索引位置  
 
  在您開發索引設計策略時，您應該考慮在資料庫關聯的檔案群組上之索引位置。 小心地選取檔案群組或資料分割配置將可改善查詢效能。  
   
@@ -165,7 +164,7 @@ ms.locfileid: "83000498"
   
  如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
-###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a>索引排序次序設計指導方針  
+###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a> 索引排序順序設計指導方針  
 
  定義索引時，您應該考慮要以遞增還是遞減的順序，來儲存索引鍵資料行的資料。 遞增是預設值，且可繼續與舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]相容。 CREATE INDEX、CREATE TABLE 與 ALTER TABLE 陳述式的語法，可在索引及條件約束的個別資料行上支援關鍵字 ASC (遞增) 與 DESC (遞減)。  
   
@@ -200,7 +199,7 @@ ON Purchasing.PurchaseOrderDetail
   
  [本指南中](#Top)![的 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")  
   
-##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a>叢集索引設計指導方針  
+##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a> 叢集索引設計指導方針  
 
  叢集索引將資料表中的資料列依其索引鍵值排序與儲存。 因為資料列本身只能以一種順序排序，所以每個資料表只能有一個叢集索引。 除了一些例外之外，每個資料表都應該在資料行上定義叢集索引，以提供下列功能：  
   
@@ -275,7 +274,7 @@ ON Purchasing.PurchaseOrderDetail
   
  [本指南中](#Top)![的 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")  
   
-##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a>非叢集索引設計指導方針  
+##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a> 非叢集索引設計指導方針  
 
  非叢集索引包含了索引鍵值和可指向資料表資料的儲存位置之資料列定位器。 您可以在資料表或索引檢視表上建立多個非叢集索引。 一般而言，應該將非叢集索引設計成可增進常用查詢 (叢集索引未涵蓋的查詢) 的效能。  
   
@@ -343,7 +342,7 @@ ON Purchasing.PurchaseOrderDetail
   
      如果只有很少量的不同值 (例如只有 1 和 0)，則大多數的查詢都不會使用索引，因為資料表掃描通常會更有效率。 如果是這種資料類型，請考慮針對只發生於少量資料列的相異值建立篩選的索引。 例如，如果大多數的值為 0，則查詢最佳化工具可能會將篩選的索引用於包含 1 的資料列。  
   
-####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a>使用內含資料行擴充非叢集索引  
+####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a> 使用內含資料行擴充非叢集索引  
 
  您可以加入非索引鍵資料行至非叢集索引的分葉層級，以擴充非叢集索引的功能。 藉由加入非索引鍵資料行，您可以建立涵蓋更多查詢的非叢集索引。 這是因為非索引鍵之索引資料行有下列好處：  
   
@@ -455,7 +454,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  [本指南中](#Top)![的 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")  
   
-##  <a name="unique-index-design-guidelines"></a><a name="Unique"></a>唯一索引設計指導方針  
+##  <a name="unique-index-design-guidelines"></a><a name="Unique"></a> 唯一索引設計指導方針  
 
  唯一索引可保證索引鍵不包含重複值，因此資料表中的每一個資料列在某方面來說是唯一的。 只有當資料具有唯一的特性時，指定唯一索引才有意義。 例如，若要確定 `NationalIDNumber` 資料表中 `HumanResources.Employee` 資料行的值是唯一的，則當主索引鍵是 `EmployeeID`時，請在 `NationalIDNumber` 資料行上建立 UNIQUE 條件約束。 如果使用者試著在該資料行上為不止一位員工輸入相同值，便會顯示錯誤訊息，而且無法輸入重複值。  
   
@@ -481,7 +480,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  [本指南中](#Top)![的 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")  
   
-##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a>篩選索引設計指導方針  
+##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> 篩選索引設計指導方針  
 
  篩選索引是最佳化的非叢集索引，特別適合用來處理會從定義完善之資料子集進行選取的查詢。 篩選索引會使用篩選述詞對資料表中的部分資料列進行索引。 與完整資料表索引相較，設計良好的篩選索引可以提升查詢效能、降低索引維護成本，並降低索引儲存成本。  
   
@@ -495,7 +494,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
      設計良好的篩選索引可以提升查詢效能和執行計畫品質，因為它比全資料表的非叢集索引來得小，且具有篩選統計資料。 篩選統計資料比全資料表統計資料更為正確，因為僅涵蓋篩選索引中的資料列。  
   
--   **降低索引維護成本**  
+-   **降低的索引維護成本**  
   
      只有在資料操作語言 (DML) 陳述式影響到索引中的資料時，才會對索引進行維護。 與全資料表的非叢集索引相較，篩選索引可以降低維護成本，因為後者較小且僅會在索引中的資料受到影響時才會進行維護。 篩選索引的數量可能很多，特別是當其包含不常受到影響的資料時。 同樣地，如果篩選索引僅包含經常受到影響的資料，則因為索引的大小較小，更新統計資料的成本就會下降。  
   

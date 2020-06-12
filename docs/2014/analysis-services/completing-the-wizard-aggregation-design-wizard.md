@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0081efe0-815d-4c55-9844-965db953aafe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dd8a149582c15cfb9b216bf478d23e7d4de16a0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3b6261697d101242cae1052b5da1c30fde65661
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087733"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527384"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>正在完成精靈 (彙總設計精靈)
   使用 **[正在完成精靈]** 頁面，即可將彙總設計儲存至選取的資料分割。 在彙總設計精靈完成設計並儲存彙總之後，您也可以選擇性地部署和處理選取的資料分割。  

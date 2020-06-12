@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fddf96a5d6ae1089ca2acd67f08ab0989ce75173
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083825"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521625"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 時序叢集演算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]時序群集演算法是所提供[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的序列分析演算法。 您可以使用此演算法來流覽包含事件的資料，這些事件可透過遵循路徑或*順序*來連結。 此演算法會透過分組或群集相同的時序來尋找最常見的時序。 以下是包含可能用於資料採礦之時序的一些資料範例，讓您得以深入了解常見問題或商務案例：  
+  時序 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法是所提供的序列分析演算法 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 您可以使用此演算法來流覽包含事件的資料，這些事件可透過遵循路徑或*順序*來連結。 此演算法會透過分組或群集相同的時序來尋找最常見的時序。 以下是包含可能用於資料採礦之時序的一些資料範例，讓您得以深入了解常見問題或商務案例：  
   
 -   按一下使用者在導覽或瀏覽網站時建立的路徑。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66083825"
  這個演算法在許多方面與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集演算法很相似。 不過， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法會尋找時序中路徑相似的案例群集，而非包含相似屬性的案例群集。  
   
 ## <a name="example"></a>範例  
- [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]網站會收集有關網站使用者造訪之頁面的資訊，以及頁面的流覽順序。 因為該公司提供線上訂購，客戶必須登入站台。 這樣為公司提供每一個客戶設定檔的點選資訊。 在此資料上使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法，公司可以找出具有類似點選模式或時序的客戶群組或群集。 然後，公司可以使用這些群集來分析使用者在整個網站的移動情形、識別哪些頁面與某項特定產品最有關係，並預測下次最可能再造訪哪些頁面。  
+ 網站 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 會收集有關網站使用者造訪之頁面的資訊，以及頁面的流覽順序。 因為該公司提供線上訂購，客戶必須登入站台。 這樣為公司提供每一個客戶設定檔的點選資訊。 在此資料上使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法，公司可以找出具有類似點選模式或時序的客戶群組或群集。 然後，公司可以使用這些群集來分析使用者在整個網站的移動情形、識別哪些頁面與某項特定產品最有關係，並預測下次最可能再造訪哪些頁面。  
   
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是一種混合式演算法，它結合了群集技術與 Markov 鏈結分析，可識別群集及其時序。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法的其中一項特徵就是它會使用時序資料。 這項資料通常代表資料集內的一系列事件或各狀態之間的轉換，例如特定使用者的一系列產品採購或網頁點選。 此演算法會檢查所有轉換的機率並測量資料集內所有可能時序之間的差異或距離，以便判斷哪些時序最適合當做群集的輸入使用。 在此演算法已經建立候選時序的清單之後，它就會使用此時序資訊當做群集之 EM 方法的輸入。  
