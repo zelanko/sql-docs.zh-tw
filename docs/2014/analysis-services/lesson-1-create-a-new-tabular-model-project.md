@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb9ca011cdbbe32ebd6c71cb9ca64967cfbccb9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f21d1805eda75bfa0008214e2f46f54b67ab48f5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079313"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543594"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>第 1 課：建立新的表格式模型專案
   在這一課，您將在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中建立新的空白表格式模型專案。 建立新專案之後，您就可以使用 [資料表匯入精靈] 開始加入資料。 除了建立新專案之外，這一課還包括 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中表格式模型撰寫環境的簡介。  
@@ -24,7 +23,7 @@ ms.locfileid: "66079313"
   
  這堂課的預估完成時間：**10 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  本主題是表格式模型撰寫教學課程的第一課。 若要完成本課，您必須在 SQL Server 執行個體上安裝 AdventureWorksDW 資料庫。 如需詳細資訊，請參閱[表格式模型化 &#40;Adventure Works 教學課程&#41;](tabular-modeling-adventure-works-tutorial.md)。  
   
 ## <a name="create-a-new-tabular-model-project"></a>建立新的表格式模型專案  
@@ -35,20 +34,20 @@ ms.locfileid: "66079313"
   
 2.  在 [**新增專案**] 對話方塊的 [**已安裝的範本**] 底下，按一下 [**商業智慧**]，然後按一下 [ **Analysis Services**]，再按一下 [ **Analysis Services 表格式專案**]。  
   
-3.  在 [**名稱**] `AW Internet Sales Tabular Model`中輸入，然後指定專案檔的位置。  
+3.  在 [**名稱**] 中輸入 `AW Internet Sales Tabular Model` ，然後指定專案檔的位置。  
   
      根據預設，[解決方案名稱]**** 會與專案名稱相同。不過，您可以輸入不同的解決方案名稱。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>了解 SQL Server 資料工具表格式模型撰寫環境  
- 既然您已建立新的表格式模型專案，讓我們花一點時間探索中[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的表格式模型撰寫環境（Visual Studio 2010 或更新版本）。  
+ 既然您已建立新的表格式模型專案，讓我們花一點時間探索中的表格式模型撰寫環境 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] （Visual Studio 2010 或更新版本）。  
   
- 建立專案之後，該專案會在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中開啟。 模型設計師會顯示空白模型，並選取 **方案總管** 視窗中的 **Model.bim** 檔。 當您加入資料時，資料表和資料行將出現在設計師中。 如果您看不到設計工具（具有 [model.bim] 索引標籤的空白視窗） ** **，請在`AW Internet Sales Tabular Model`[方案總管中，按兩下**model.bim**檔案。  
+ 建立專案之後，該專案會在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中開啟。 模型設計師會顯示空白模型，並選取 **方案總管** 視窗中的 **Model.bim** 檔。 當您加入資料時，資料表和資料行將出現在設計師中。 如果您看不到設計工具（具有 [model.bim] 索引標籤的空白視窗），請在 [**方案總管**中， `AW Internet Sales Tabular Model` 按兩下**model.bim**檔案。  
   
- 您可以在 [屬性]**** 視窗中檢視基本專案屬性。 在**方案總管**中， `AW Internet Sales Tabular Model`按一下 []。 請注意，您會在 [屬性]**** 視窗的 [專案檔]**** 中看見 **AW Internet Sales Tabular Model.smproj**。 這是專案檔的名稱，[專案資料夾]**** 中則會顯示專案檔的位置。  
+ 您可以在 [屬性]**** 視窗中檢視基本專案屬性。 在**方案總管**中，按一下 [] `AW Internet Sales Tabular Model` 。 請注意，您會在 [屬性]**** 視窗的 [專案檔]**** 中看見 **AW Internet Sales Tabular Model.smproj**。 這是專案檔的名稱，[專案資料夾]**** 中則會顯示專案檔的位置。  
   
- 在**方案總管**中，以滑鼠右鍵`AW Internet Sales Tabular Model`按一下專案，然後按一下 [**屬性**]。 [AW Internet Sales Tabular Model 屬性頁]**** 對話方塊隨即出現。 這些是進階的專案屬性。 稍後您將在準備好部署模型時，設定其中部分屬性。  
+ 在**方案總管**中，以滑鼠右鍵按一下 `AW Internet Sales Tabular Model` 專案，然後按一下 [**屬性**]。 [AW Internet Sales Tabular Model 屬性頁]**** 對話方塊隨即出現。 這些是進階的專案屬性。 稍後您將在準備好部署模型時，設定其中部分屬性。  
   
  現在，讓我們來看一下模型屬性。 在 **方案總管**中，按一下 **Model.bim**。 現在您會在 [屬性]**** 視窗中看見模型屬性，其中最重要的屬性是 [DirectQuery 模式]**** 屬性。 這個屬性可指定以 In-Memory 模式 (關閉) 還是 DirectQuery 模式 (開啟) 來部署模型。 在本教學課程中，您將撰寫及部署記憶體中模式的模型。  
   

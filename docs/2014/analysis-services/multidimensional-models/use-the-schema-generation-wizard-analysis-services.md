@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e434493813f0237533ca2e50ff089974f3556f34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ea4eee9909b4af80a5d8471f58d569690ff0962
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072649"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535910"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>使用結構描述產生精靈 (Analysis Services)
   結構描述產生精靈在產生階段，需要不多的資訊。 [結構描述產生精靈] 產生關聯式結構描述所需的大部分資訊，都是從您在專案中已建立的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 和維度中擷取。 此外，您可以自訂產生主題領域資料庫結構描述的方式，以及為結構描述中之物件命名的方式。  

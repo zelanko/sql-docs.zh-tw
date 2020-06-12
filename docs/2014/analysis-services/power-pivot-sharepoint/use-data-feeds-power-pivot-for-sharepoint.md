@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49ec8adeaf5d8726220ed03f29c1be3088f9ccb2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070910"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547700"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>使用資料摘要 (PowerPivot for SharePoint)
   資料摘要是從線上資料來源產生，並串流至目的地文件或應用程式的一個或多個資料流。 如果您使用的是 PowerPivot for Excel，資料摘要可以協助您從任意資料來源取得現有的公司或商務資料，送到 Excel 2010 活頁簿的 PowerPivot 視窗中。 將資料摘要匯入活頁簿之後，您可以在 SharePoint 伺服器上排程的任何資料重新整理作業中參考該摘要。  
@@ -26,7 +25,7 @@ ms.locfileid: "66070910"
   
  本主題包含下列幾節：  
   
- [必要條件](#prereq)  
+ [先決條件](#prereq)  
   
  [從 SharePoint 清單建立資料摘要](#sharepointlist)  
   
@@ -34,10 +33,10 @@ ms.locfileid: "66070910"
   
  [從資料服務檔建立資料摘要](#dsdoc)  
   
-##  <a name="prerequisites"></a><a name="prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="prereq"></a> 先決條件  
  您必須具有 PowerPivot for Excel，才能將資料摘要匯入 Excel 2010。  
   
- 您必須具有以 Atom 1.0 格式提供資料的 Web 服務或資料服務。 和[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 2010 都可以用這種格式提供資料。  
+ 您必須具有以 Atom 1.0 格式提供資料的 Web 服務或資料服務。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 SharePoint 2010 都可以用這種格式提供資料。  
   
  在您可以將 SharePoint 清單匯出為資料摘要之前，您必須在 SharePoint 伺服器上安裝 ADO.NET Data Services。 如需詳細資訊，請參閱 [安裝 ADO.NET Data Services 以支援 SharePoint 清單的資料摘要匯出](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66070910"
   
     1.  [基底 URL]**** 是選擇性的。 如果資料服務文件提供多個摘要，則您應該指定它。 基底 URL 應該指定所有摘要通用的 URL 部分 (例如，伺服器名稱和網站)。 如果您要建立 Reporting Services 報表的資料服務文件，基底 URL 將是報表伺服器 URL 與報表。  
   
-    2.  [Web 服務 URL]**** 是必要的。 如果沒有基底 URL，這個值在位址中必須包含 http:// 或 https://。 如果您有指定基底 URL，Web 服務 URL 就是基底 URL 後面的部分。 例如，如果完整的 URL 是http://adventure-works/inventory/today.aspx，則基底 url 會是http://adventure-works/inventory，而 Web 服務 URL 會是/today.aspx。  
+    2.  [Web 服務 URL]**** 是必要的。 如果沒有基底 URL，這個值在位址中必須包含 http:// 或 https://。 如果您有指定基底 URL，Web 服務 URL 就是基底 URL 後面的部分。 例如，如果完整的 URL 是 http://adventure-works/inventory/today.aspx ，則基底 url 會是 http://adventure-works/inventory ，而 WEB 服務 URL 會是/today.aspx。  
   
          Web 服務 URL 可以包含篩選或選取資料子集的參數。 提供摘要的應用程式或服務必須支援您在 URL 中指定的參數。  
   

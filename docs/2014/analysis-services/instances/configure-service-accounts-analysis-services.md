@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c48dbe2f224b9b7e2d5e47f6771105adc0524ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080192"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544050"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>設定服務帳戶 (Analysis Services)
   [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中記載如何佈建適用於整個產品範圍的帳戶，該主題提供適用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務 (包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) 的全方位服務帳戶資訊。 如需了解有效的帳戶類型、由安裝程式指派的 Windows 權限、檔案系統權限、登錄權限等，請參閱該主題。  
@@ -49,7 +48,7 @@ ms.locfileid: "66080192"
   
  您可以在本機安全性設定中看到這個安全性群組：  
   
--   執行 compmgmt.msc |**本機使用者和群組** | **群組** | `SQLServerMSASUser$`\<伺服器名稱>`$MSSQLSERVER` （適用于預設實例）。  
+-   執行 compmgmt.msc |**本機使用者和群組**  | **Groups**  |  `SQLServerMSASUser$` 群組 \<server-name> `$MSSQLSERVER`（適用于預設實例）。  
   
 -   按兩下安全性群組以檢視其成員。  
   
@@ -68,13 +67,13 @@ ms.locfileid: "66080192"
 |-|-|  
 |**增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)|透過 **[使用者]** 安全性群組，此權限預設可供所有使用者使用。 如果您藉由移除這個群組的權限來鎖定伺服器，Analysis Services 可能會無法啟動，並會記錄以下錯誤：「用戶端沒有這項特殊權限。」 發生這個錯誤時，請將權限授與適當的 Analysis Services 安全性群組，藉以將權限還原到 Analysis Services。|  
 |**調整處理序的記憶體配額** (SeIncreaseQuotaSizePrivilege)|如果處理程序擁有的資源不足以完成它的執行 (受限於針對執行個體所建立的記憶體臨界值)，則可使用這個權限來要求更多記憶體。|  
-|**鎖定記憶體中的分頁** (SeLockMemoryPrivilege)|只有在完全關閉分頁時才需要這個權限。 根據預設，表格式伺服器執行個體會使用 Windows 分頁檔，但是您可以藉由將 `VertiPaqPagingPolicy` 設為 0，來防止它使用 Windows 分頁。<br /><br /> `VertiPaqPagingPolicy` 為 1 (預設值)，指示表格式伺服器執行個體使用 Windows 分頁檔。 配置並未鎖定，可視需要允許 Windows 移出分頁。 由於已使用分頁，所以不需鎖定記憶體中的分頁。 因此，針對預設設定（其中`VertiPaqPagingPolicy` = 1），您不需要將 [**鎖定記憶體中的分頁**] 許可權授與表格式實例。<br /><br /> `VertiPaqPagingPolicy` 為 0。 如果您針對 Analysis Services 關閉分頁，即會假設已將 **[鎖定記憶體中的分頁]** 權限授與表格式執行個體，而鎖定配置。 指定這個設定和 **[鎖定記憶體中的分頁]** 權限，Windows 便無法在系統處於記憶體不足壓力的情況下，移出針對 Analysis Services 所做之記憶體配置的分頁。 Analysis Services 依賴 [**鎖定記憶體中的分頁**] 許可權做為後面`VertiPaqPagingPolicy`的強制執行 = 0。 請注意，不建議關閉 Windows 分頁。 這將會提高作業產生記憶體不足之錯誤的機率，而這些作業在允許分頁的情況下可能就會成功。 如需的詳細資訊，請`VertiPaqPagingPolicy`參閱[記憶體屬性](../server-properties/memory-properties.md)。|  
+|**鎖定記憶體中的分頁** (SeLockMemoryPrivilege)|只有在完全關閉分頁時才需要這個權限。 根據預設，表格式伺服器執行個體會使用 Windows 分頁檔，但是您可以藉由將 `VertiPaqPagingPolicy` 設為 0，來防止它使用 Windows 分頁。<br /><br /> `VertiPaqPagingPolicy` 為 1 (預設值)，指示表格式伺服器執行個體使用 Windows 分頁檔。 配置並未鎖定，可視需要允許 Windows 移出分頁。 由於已使用分頁，所以不需鎖定記憶體中的分頁。 因此，針對預設設定（其中 `VertiPaqPagingPolicy` = 1），您不需要將 [**鎖定記憶體中的分頁**] 許可權授與表格式實例。<br /><br /> `VertiPaqPagingPolicy` 為 0。 如果您針對 Analysis Services 關閉分頁，即會假設已將 **[鎖定記憶體中的分頁]** 權限授與表格式執行個體，而鎖定配置。 指定這個設定和 **[鎖定記憶體中的分頁]** 權限，Windows 便無法在系統處於記憶體不足壓力的情況下，移出針對 Analysis Services 所做之記憶體配置的分頁。 Analysis Services 依賴 [**鎖定記憶體中的分頁**] 許可權做為後面的強制執行 `VertiPaqPagingPolicy` = 0。 請注意，不建議關閉 Windows 分頁。 這將會提高作業產生記憶體不足之錯誤的機率，而這些作業在允許分頁的情況下可能就會成功。 如需的詳細資訊，請參閱[記憶體屬性](../server-properties/memory-properties.md) `VertiPaqPagingPolicy` 。|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>檢視或新增服務帳戶的 Windows 權限  
   
 1.  執行 GPEDIT.msc | 本機電腦原則 | 電腦組態 | Windows 設定 | 安全性設定 | 本機原則 | 使用者權限指派。  
   
-2.  檢查包含`SQLServerMSASUser$`的現有原則。 這是可以在已安裝 Analysis Services 的電腦上找到的本機安全性群組。 Windows 權限和檔案資料夾權限都會授與這個安全性群組。 按兩下 **[以服務方式登入]** 原則，以查看在系統上指定安全性群組的方式。 安全性群組的完整名稱會根據您是否安裝 Analysis Services 來做為具名執行個體而改變。 新增帳戶權限時，請使用這個安全性群組，而不要使用實際的服務帳戶。  
+2.  檢查包含的現有原則 `SQLServerMSASUser$` 。 這是可以在已安裝 Analysis Services 的電腦上找到的本機安全性群組。 Windows 權限和檔案資料夾權限都會授與這個安全性群組。 按兩下 **[以服務方式登入]** 原則，以查看在系統上指定安全性群組的方式。 安全性群組的完整名稱會根據您是否安裝 Analysis Services 來做為具名執行個體而改變。 新增帳戶權限時，請使用這個安全性群組，而不要使用實際的服務帳戶。  
   
 3.  若要在 GPEDIT 中新增帳戶權限，請以滑鼠右鍵按一下 **[增加處理程序工作組]** ，然後選取 **[屬性]**。  
   
@@ -104,7 +103,7 @@ ms.locfileid: "66080192"
   
  資料檔、程式執行檔、設定檔、記錄檔及暫存檔的權限持有者是由 SQL Server 安裝程式所建立的本機安全性群組。  
   
- 有一個針對您安裝之每個執行個體所建立的安全性群組。 安全性群組會在實例的後面命名為**SQLServerMSASUser $ MSSQLSERVER** （針對預設實例），或`SQLServerMSASUser$` \<為指定的\<實例指定 servername>$ instancename>。 安裝程式會為此安全性群組佈建執行伺服器作業所需的檔案權限。 如果您在 \MSAS12.MSSQLSERVER\OLAP\BIN 目錄上檢查安全性權限，就會看見安全性群組 (而不是服務帳戶或其個別服務 SID) 是該目錄的權限持有者。  
+ 有一個針對您安裝之每個執行個體所建立的安全性群組。 安全性群組會在實例之後命名為**SQLServerMSASUser $ MSSQLSERVER** （適用于預設實例），或 `SQLServerMSASUser$` \<servername> $ \<instancename> 用於已命名的實例。 安裝程式會為此安全性群組佈建執行伺服器作業所需的檔案權限。 如果您在 \MSAS12.MSSQLSERVER\OLAP\BIN 目錄上檢查安全性權限，就會看見安全性群組 (而不是服務帳戶或其個別服務 SID) 是該目錄的權限持有者。  
   
  安全性群組只包含一個成員： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體啟動帳戶的個別服務安全性識別碼 (SID)。 安裝程式會將個別服務 SID 新增到本機安全性群組。 相較於資料庫引擎，SQL Server 安裝程式佈建 Analysis Services 的方式有一個很小但明顯的差異，那就是搭配 SID 成員資格使用本機安全性群組。  
   
@@ -118,14 +117,14 @@ ms.locfileid: "66080192"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  使用 [**電腦系統管理員** | ] [**本機使用者和群組** | ]**群組**，檢查 SQLServerMSASUser $\<servername>$\<instancename> 安全性群組的成員資格。  
+2.  使用 [**電腦系統管理員**] [  |  **本機使用者] 和 [群組**]  |  **群組**來檢查 SQLServerMSASUser $ \<servername> $ \<instancename> 安全性群組的成員資格。  
   
      成員 SID 應該與來自步驟 1 的個別服務 SID 相符。  
   
-3.  使用**Windows Explorer** | **程式** | 檔案**Microsoft SQL Server** |[Msasxx.mssqlserver. MSSQLServer |[ **OLAP** | **bin** to verify] 資料夾安全性屬性會授與步驟2中的安全性群組。  
+3.  使用**Windows Explorer**  |  **程式**檔案  |  **Microsoft SQL Server** |[Msasxx.mssqlserver. MSSQLServer |**OLAP**  | [檢查資料夾安全性內容] 的**bin**會授與步驟2中的安全性群組。  
   
 > [!NOTE]  
->  請勿移除或修改 SID。 若要還原不小心刪除的個別服務 SID，請參閱[https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201)。  
+>  請勿移除或修改 SID。 若要還原不小心刪除的個別服務 SID，請參閱 [https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201) 。  
   
  **更多關於個別服務 SID 的資訊**  
   

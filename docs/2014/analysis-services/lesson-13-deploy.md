@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 96ffa6445d46f1e68efa907330d0945a499bf3b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b930734fa70578d10e107bc3d1e8d865f9e7e2d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079134"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543530"
 ---
 # <a name="lesson-14-deploy"></a>第 14 課：部署
   在這一課，您將設定部署屬性：指定以 [表格式] 模式執行之 Analysis Services 的部署伺服器執行個體，以及您所部署模型的名稱。 接著將模型部署至該執行個體。 部署完成後，使用者就可以使用報表用戶端應用程式連接到此模型。 如需詳細資訊，請參閱[表格式模型方案部署 &#40;SSAS 表格式&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  
   
  完成本課程的估計時間： **5 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課程的工作之前，您應已完成上一課： [第 13 課：在 Excel 中進行分析](lesson-12-analyze-in-excel.md)。  
   
 ## <a name="deploy-the-model"></a>部署模型  
@@ -41,9 +40,9 @@ ms.locfileid: "66079134"
     > [!NOTE]  
     >  DirectQuery 模式不支援使用本教學課程建立的模型。  
   
-4.  在 [**資料庫**] 屬性中`Adventure Works Internet Sales Model`，輸入。  
+4.  在 [**資料庫**] 屬性中，輸入 `Adventure Works Internet Sales Model` 。  
   
-5.  在 [ **Cube**名稱] 屬性中`Adventure Works Internet Sales Model`，輸入。  
+5.  在 [ **Cube**名稱] 屬性中，輸入 `Adventure Works Internet Sales Model` 。  
   
 6.  驗證您的選取項目，然後按一下 [確定]****。  
   

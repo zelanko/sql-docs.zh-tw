@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8138cef980e7b040a99a6e1db21f1b67fd84aeb5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081973"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528774"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>相依性網路圖表逐步解說 (資料採礦增益集)
   許多不同類型的資料採礦模型都會使用網路圖形做為探索資料關聯性的方式。 您可以使用 [相依性**網路**] 圖形將這些模型匯入 Visio，然後繼續自訂並增強版面配置。 **適用于 Visio 的資料採礦圖形**包含下列用來處理相依性網狀圖表的自訂控制項：  
@@ -43,13 +42,13 @@ ms.locfileid: "66081973"
   
 1.  如果您在 [**圖形**] 清單中看不到 [ **Microsoft 資料採礦圖形**]，請按一下 [**更多圖形**]，選取 [**開啟**樣板]，然後從預設安裝位置開啟範本。  
   
-     \<磁片磁碟機>： \Program files （x85） \Microsoft SQL Server 2012 DM 增益集  
+     \<drive>： \Program files （x85） \Microsoft SQL Server 2012 DM 增益集  
   
-2.  將 [相依性**網路**] 圖形拖曳至頁面上，以啟動精靈。 按 [下一步]  。  
+2.  將 [相依性**網路**] 圖形拖曳至頁面上，以啟動精靈。 按 [下一步] 。  
   
 3.  在相依性**網路 Visio 圖形 Wizard**的 [歡迎使用] 頁面上，按 **[下一步]**。  
   
-4.  在 [相依性**網路 Visio 圖形 Wizard]** 的 [**選取資料來源**] 頁面上，選擇具有[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]您想要視覺化之模型的伺服器連接。  
+4.  在 [相依性**網路 Visio 圖形 Wizard]** 的 [**選取資料來源**] 頁面上，選擇 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 具有您想要視覺化之模型的伺服器連接。  
   
 5.  選取適當的 [採礦模型]，然後按 **[下一步]**。  
   

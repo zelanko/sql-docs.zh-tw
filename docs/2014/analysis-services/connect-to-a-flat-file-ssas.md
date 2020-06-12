@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a365991e-eded-4cd8-89c0-0daf6d658d15
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 970a55b709e164da573fbd224c13cc641a3ba06a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087355"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527194"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>連接到一般檔案 (SSAS)
   [資料表匯入精靈]**** 的這個頁面可讓您連接到一般檔案 (.txt)、Tab 分隔的檔案 (.tab) 或逗號分隔的檔案 (.csv)。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
@@ -27,7 +26,7 @@ ms.locfileid: "66087355"
 > [!NOTE]  
 >  在這個頁面中選取檔案時，會使用目前使用者的認證。 不過，如果在 [模擬資訊] 頁面中指定的使用者未具備從所選檔案讀取的權限，則匯入將不會成功。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **易記連接名稱**  
  為此資料來源連接輸入唯一的名稱。 這是必要的欄位。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66087355"
  **資料行分隔符號**  
  從可用資料行分隔符號的清單中選取。 請選擇不太可能會在文字中出現的分隔符號。  
   
-|值|描述|  
+|值|Description|  
 |-----------|-----------------|  
 |定位字元 (t)|資料行是以定位字元 (t) 分隔。|  
 |逗號 (,)|資料行是以逗號 (,) 分隔。|  

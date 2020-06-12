@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9d83baaecbfdba3612acbdcf7a80c9093aac519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67384dc44710cc71ae30b8a558746410171dcbb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073284"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545810"
 ---
 # <a name="processing-analysis-services-objects"></a>處理 Analysis Services 物件
-  處理會影響下列[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件類型： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫、cube、維度、量值群組、分割區，以及資料採礦結構和模型。 您可以針對每一個物件，指定物件的處理層級，或者指定 [處理預設] 選項，讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自動選取最佳的處理層級。 如需處理每一個物件之不同層級的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)。  
+  處理會影響下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件類型： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫、cube、維度、量值群組、分割區，以及資料採礦結構和模型。 您可以針對每一個物件，指定物件的處理層級，或者指定 [處理預設] 選項，讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自動選取最佳的處理層級。 如需處理每一個物件之不同層級的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)。  
   
  您必須了解處理行為的後果，以減少任何不良影響。 例如，完整處理維度會自動將相依於該維度的所有資料分割設定為尚未處理狀態。 如此會造成受影響的 Cube 無法供查詢使用，直到相依的資料分割進行處理為止。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66073284"
 ##  <a name="processing-a-dimension"></a><a name="bkmk_procdim"></a> 處理維度  
  處理維度時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會編寫查詢並對維度資料表執行查詢，以傳回處理時所需的資訊。  
   
-|Country|銷售區域|State|  
+|國家/地區|銷售區域|State|  
 |-------------|------------------|-----------|  
 |美國|West|California|  
 |美國|West|Oregon|  

@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: 42319d60-ccd0-46b8-af0b-f0968c390d8a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9314494230469cca5e8db9926ddf71cb790b96ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1a2952c54974d924fdeca23d3173a690579d2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080647"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544240"
 ---
 # <a name="impersonation-information"></a>模擬資訊
   使用 **[模擬資訊]** 頁面可指定 Analysis Services 將用來連接資料來源的認證。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用特定的 Windows 使用者名稱和密碼**  
  選取此選項即可讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件使用指定之 Windows 使用者帳戶的安全性認證。 指定的認證將用於處理、ROLAP 查詢、非正規繫結、本機 Cube、採礦模型、遠端資料分割、連結物件以及從目標到來源的同步處理。 但如果是資料採礦延伸模組 (DMX) OPENQUERY 陳述式，將忽略這個選項，而且會使用目前使用者的認證。  
   
  **使用者名稱**  
  輸入選定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件所要使用之使用者帳戶的網域和名稱。 請使用下列格式：  
   
- **\\** * \<功能變數名稱* *>\<使用者帳戶名稱>*  
+ *\<Domain name>* **\\** *\<User account name>*  
   
  唯有選取 **[使用特定的使用者名稱和密碼]** 之後，才會啟用此選項。  
   

@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 699cc312b2f4b0a716d08259daf189276551e5d4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073210"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545766"
 ---
 # <a name="remote-processing-analysis-services"></a>遠端處理 (Analysis Services)
   您可以執行遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的排程處理或自動處理，其只會處理某電腦所發出的要求，但會在同一網路中的另一部電腦上執行。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
   
 -   您的每部電腦上若各自執行不同版本的 SQL Server，則用戶端程式庫的版本與處理此模型之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的版本必須相符。 例如，若處理在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 執行個體上進行，則發出要求的電腦便須擁有和 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]相同的用戶端程式庫。 請參閱 [用於 Analysis Services 連接的資料提供者](../instances/data-providers-used-for-analysis-services-connections.md)。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66073210"
   
  您可以使用下列連結來設定權限：  
   
--   [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
+-   [設定 SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
 -   若無法授與[SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components) 權限， **SQL Server Agent Components** 建議使用替代的固定伺服器角色。  
   

@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251215"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539640"
 ---
 # <a name="relational-query-designer-ssas"></a>關聯式查詢設計工具 (SSAS)
-  關聯式查詢設計工具可協助您建立查詢，以指定[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]要從和[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]關係資料庫和[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]中取出的資料。 您可以使用圖形化查詢設計工具來瀏覽中繼資料、以互動方式建立查詢以及檢視查詢的結果。  使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢，或是修改查詢。 您也可以從檔案或報表匯入現有的查詢。  
+  關聯式查詢設計工具可協助您建立查詢，以指定要從 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 關係資料庫和中 [!INCLUDE[msCoName](../includes/msconame-md.md)] 取出的資料 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 。 您可以使用圖形化查詢設計工具來瀏覽中繼資料、以互動方式建立查詢以及檢視查詢的結果。  使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢，或是修改查詢。 您也可以從檔案或報表匯入現有的查詢。  
   
  如有需要，您可以使用以文字為基礎的編輯器，利用 SQL 語言來撰寫查詢。 若要切換至以文字為基礎的查詢設計工具，請按一下工具列中的 [當成文字編輯]****。 在以文字為基礎的查詢設計工具中編輯查詢之後，您就無法再使用圖形化查詢設計工具。  
   
@@ -80,13 +79,13 @@ ms.locfileid: "72251215"
   
  彙總會提供資料摘要，而資料會進行分組，以支援傳遞摘要資料的彙總。 當您在查詢中使用彙總時，查詢傳回的其他欄位會自動分組，且查詢會包含 SQL GROUP BY 子句。 您可以僅使用 [群組和彙總]**** 清單中的 [群組依據]**** 選項摘要資料，而不新增彙總。 許多彙總會包含使用 DISTINCT 關鍵字的版本。 包含 DISTINCT 可消除重複的值。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用[!INCLUDE[tsql](../includes/tsql-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]並[!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]使用[!INCLUDE[DWsql](../includes/dwsql-md.md)]。 SQL 語言的這兩種方言都支援查詢設計工具提供的子句、關鍵字和彙總。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 並 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 使用 [!INCLUDE[DWsql](../includes/dwsql-md.md)] 。 SQL 語言的這兩種方言都支援查詢設計工具提供的子句、關鍵字和彙總。  
   
  如需 [!INCLUDE[tsql](../includes/tsql-md.md)] 的詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 參考 &#40;資料庫引擎&#41;](/sql/t-sql/language-reference)。  
   
  下表列出彙總並提供彙總的簡要說明。  
   
-|Aggregate|描述|  
+|Aggregate|Description|  
 |---------------|-----------------|  
 |Avg|傳回群組中值的平均值。 實作 SQL AVG 彙總。|  
 |Count|傳回群組中的項目數。 實作 SQL COUNT 彙總。|  
@@ -175,7 +174,7 @@ ms.locfileid: "72251215"
 ### <a name="graphical-query-designer-toolbar"></a>圖形化查詢設計工具工具列  
  圖形化查詢設計工具工具列會提供下列按鈕來協助您指定或檢視查詢的結果。  
   
-|按鈕|描述|  
+|按鈕|Description|  
 |------------|-----------------|  
 |**[當成文字編輯]**|切換至以文字為基礎的查詢設計工具，以便檢視自動產生的查詢，或是修改查詢。|  
 |[匯入]****|從檔案或報表匯入現有的查詢。 支援 .sql 和 .rdl 檔案類型。|  
@@ -198,7 +197,7 @@ ms.locfileid: "72251215"
 ### <a name="text-based-query-designer-toolbar"></a>以文字為基礎的查詢設計工具工具列  
  以文字為基礎的查詢設計工具為所有的命令類型提供了單一工具列。 下表列出工具列上的每一個按鈕以及該按鈕的功能。  
   
-|按鈕|描述|  
+|按鈕|Description|  
 |------------|-----------------|  
 |**[當成文字編輯]**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 並非所有的資料來源類型都支援圖形化查詢設計工具。|  
 |[匯入]****|從檔案或報表匯入現有的查詢。 只支援 sql 和 rdl 檔案類型。|  
@@ -247,7 +246,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- 按一下 [執行]**** \(**!**) 按鈕。 下表提供您在 [ `uspGetWhereUsedProductID` **定義查詢參數**] 對話方塊中提供值的參數範例。  
+ 按一下 [執行]**** \(**!**) 按鈕。 下表提供 `uspGetWhereUsedProductID` 您在 [**定義查詢參數**] 對話方塊中提供值的參數範例。  
   
 |||  
 |-|-|  

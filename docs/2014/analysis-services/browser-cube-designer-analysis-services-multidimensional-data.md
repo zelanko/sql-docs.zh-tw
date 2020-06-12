@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 902d35dfc20973dbbad5e6608d5934b31245d9d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 221f6d0c51b3c0a688a8bf3f002bfd4d31c04a45
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174237"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527774"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>瀏覽器 (Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 **[瀏覽器]** 索引標籤，瀏覽 Cube 中的維度、量值和 KPIS。 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 瀏覽器已與 MDX 查詢設計工具整合，並提供一個圖形使用者介面來協助您建立 MDX 查詢、篩選與配量 Cube，以及向下鑽研到階層。

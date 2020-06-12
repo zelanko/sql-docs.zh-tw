@@ -16,17 +16,17 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.SEQUENCES view
 author: CarlRabeler
 ms.author: carlrab
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ff8490824c6a0ccb45b383535e830cabff83407
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5ca2b9f7c93b9473c6dbafd309a1a6075031d06f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77479346"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767385"
 ---
 # <a name="sequences-transact-sql"></a>順序（Transact-sql）
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 針對目前資料庫中目前使用者所能存取的每個序列，各傳回一個資料列。
 

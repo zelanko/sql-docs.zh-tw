@@ -1,5 +1,6 @@
 ---
 title: 連接到 Azure SQL DB （AccessToSQL） |Microsoft Docs
+description: 瞭解如何連接到 Azure SQL Database 的目標實例，以遷移 Access 資料庫。 SSMA 會取得 Azure SQL Database 中資料庫的相關中繼資料。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6c35168f1c77f0574b202b77da515dab497a3ec7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006661"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293125"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>連接到 Azure SQL DB （AccessToSQL）
 若要將 Access 資料庫移轉至 SQL Azure，您必須連接到 SQL Azure 的目標實例。 當您連接時，SSMA 會取得 SQL Azure 實例中所有資料庫的相關中繼資料，並在 SQL Azure 中繼資料 Explorer 中顯示資料庫中繼資料。 SSMA 會儲存您所連接之 SQL Azure 實例的相關資訊，但不會儲存密碼。  
@@ -35,7 +36,7 @@ ms.locfileid: "68006661"
 ## <a name="required-sql-azure-permissions"></a>必要的 SQL Azure 許可權  
 用來連接到 SQL Azure 的帳戶需要不同的許可權，視帳戶執行的動作而定：  
   
--   若要將 Access 物件[!INCLUDE[tsql](../../includes/tsql-md.md)]轉換成語法、更新 SQL azure 的中繼資料，或將已轉換的語法儲存至腳本，此帳戶必須具有登入 sql azure 實例的許可權。  
+-   若要將 Access 物件轉換成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法、更新 SQL azure 的中繼資料，或將已轉換的語法儲存至腳本，此帳戶必須具有登入 Sql azure 實例的許可權。  
   
 -   若要將資料庫物件載入至 SQL Azure，最低許可權需求是目標資料庫中**db_owner**資料庫角色的成員資格。  
   

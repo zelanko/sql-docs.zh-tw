@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 853798cd1e78757684d16f7b964787dfa13d208a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b67fffa3bac581382112d9c37fb84c31ea5a5ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175637"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540491"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>建立或自訂資料摘要庫 (PowerPivot for SharePoint)
   *「資料摘要庫」* (Data Feed Library) 是一種特殊用途的 SharePoint 文件庫，可讓您註冊與共用 Atom 資料服務文件 (.atomsvc)。 這些文件會提供 XML 資料摘要給支援 Atom 資料摘要格式的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿或其他用戶端應用程式。 資料摘要庫與其他 SharePoint 文件庫不同，因為它讓您能夠：
@@ -33,13 +32,13 @@ ms.locfileid: "78175637"
 
  本主題包含下列幾節：
 
- [必要條件](#prereq)
+ [先決條件](#prereq)
 
  [建立新的資料摘要庫](#createlib)
 
  [將資料摘要庫內容類型加入至任何文件庫](#addtolib)
 
-##  <a name="prerequisites"></a><a name="prereq"></a> 必要條件
+##  <a name="prerequisites"></a><a name="prereq"></a> 先決條件
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能整合必須針對您要建立其資料摘要庫的網站啟用。 如果無法使用資料摘要庫範本類型，最可能的原因是不符合這項先決條件。 如需詳細資訊，請參閱為[管理中心的網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)。
 
  您必須是網站擁有者，才能建立該文件庫。
@@ -57,7 +56,7 @@ ms.locfileid: "78175637"
 
 4.  輸入名稱、描述、啟動及版本喜好設定。 加入描述性資訊，以協助使用者將這個文件庫識別為資料服務文件的儲存位置。
 
-5.  按一下頁面底部的 [新增]  。
+5.  按一下 [建立]。
 
  資料摘要庫的連結會出現在目前網站的導覽 [快速啟動] 窗格中。
 
@@ -76,7 +75,7 @@ ms.locfileid: "78175637"
 
 2.  在 SharePoint 功能區的 [文件庫工具] 中，按一下 **[文件庫]**。
 
-3.  按一下 [設定]  。
+3.  按一下 [設定] 。
 
 4.  按一下 **[文件庫設定]**。
 
@@ -84,7 +83,7 @@ ms.locfileid: "78175637"
 
 6.  在 [內容類型] 的 [是否允許內容類型的管理?] 區段中按一下 **[是]**。
 
-7.  按一下 [確定]  。
+7.  按一下 [確定]。
 
 #### <a name="step-2-add-the-data-service-document-content-type"></a>步驟 2：加入資料服務文件內容類型
 
@@ -96,7 +95,7 @@ ms.locfileid: "78175637"
 
 4.  在 [可用的網站內容類型] 中，按一下 [資料服務文件]****，然後按一下 [加入]****，將所選取的內容類型移到 [要新增的內容類型] 清單中。
 
-5.  按一下 [確定]  。
+5.  按一下 [確定]。
 
 #### <a name="step-3-verify-data-service-document-configuration"></a>步驟 3：確認資料服務文件設定
 

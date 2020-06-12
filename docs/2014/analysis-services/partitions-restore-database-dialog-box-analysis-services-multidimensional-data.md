@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 489076bed7238f9367eeb8a353da358239673edb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072108"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540730"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>資料分割 (還原資料庫對話方塊) (Analysis Services - 多維度資料)
   在 **中，使用** [還原資料庫] **對話方塊的** [資料分割] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 頁面，即可指定本機資料分割的還原位置和是否還原遠端資料分割，以及指定還原遠端資料分割時所使用的遠端備份檔案。  
@@ -32,7 +31,7 @@ ms.locfileid: "66072108"
   
 -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的 [資料庫]**** 資料夾或物件總管**** 中的資料庫，按一下 [還原]****，然後按一下 [選取頁面]**** 底下的 [資料分割]****。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **指令碼**  
  根據在對話方塊中選取的選項，建立還原指令碼。 此還原指令碼是以 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼語言 (ASSL) 撰寫而成。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66072108"
 |------------|-----------------|  
 |**Cube**|顯示包含本機資料分割的 Cube 名稱。|  
 |**MeasureGroup**|顯示包含本機資料分割之量值群組的名稱。|  
-|**劃分**|顯示本機資料分割的名稱。|  
+|**分割區**|顯示本機資料分割的名稱。|  
 |**大小 (MB)**|顯示本機資料分割的大小，以 MB 為單位。|  
 |**原始資料夾**|顯示儲存本機資料分割之原始資料夾的名稱。|  
 |**還原資料夾**|輸入本機資料分割的還原資料夾名稱，或按一下省略符號按鈕 (**...**)，以顯示 [瀏覽遠端資料夾]**** 對話方塊並選取要使用的資料夾路徑。 如需 [瀏覽遠端資料夾]**** 對話方塊的詳細資訊，請參閱[瀏覽遠端資料夾對話方塊 &#40;Analysis Services - 多維度資料&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)。|  

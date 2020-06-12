@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db132a4a4cf6e8c2b73067220a5ed91a5316afef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3437c8edaa0ffeb2d647ec2dc111106b8ef81030
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075189"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546810"
 ---
 # <a name="dimension-attribute-properties-reference"></a>維度屬性 (attribute) 屬性 (property) 參考
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，有許多屬性可決定維度和維度屬性的運作方式。 下表列出與描述每一項屬性 (Attribute) 的屬性 (Property)。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，有許多屬性可決定維度和維度屬性的運作方式。 下表列出與描述每一項屬性 (Attribute) 的屬性 (Property)。  
   
 |屬性|描述|  
 |--------------|-----------------|  
@@ -48,7 +47,7 @@ ms.locfileid: "66075189"
 |`Name`|包含屬性的使用者易記名稱。|  
 |`NameColumn`|識別可提供向使用者顯示之屬性名稱的資料行，而非屬性之索引鍵資料行中的值。 當屬性成員的索引鍵資料行值已加密 (亦即使用者無法理解)，或當索引鍵資料行是以複合索引鍵為基礎時，就會使用此資料行。 `NameColumn` 屬性不會用於父子式階層中。不過，子成員的 `NameColumn` 屬性會當做父子式階層中的成員名稱使用。|  
 |`NamingTemplate`|定義在由父屬性建構的父子式階層中如何命名層級。 只有當 `Usage` 屬性值設定為 Parent 時，才會使用這個屬性值。 這表示已經定義了父子式階層。|  
-|`OrderBy`|描述如何排序屬性階層中包含的成員。 預設值為 Name，這會指定屬性成員的排序是根據 `NameColumn` 屬性的值 (如果有的話)。 否則，這項作業會依據索引鍵資料行的值來排序成員。 可用的選項如下：<br /><br /> `NameColumn`依`NameColumn`屬性的值排序。<br /><br /> **Key** ：依據屬性成員之索引鍵資料行的值來進行排序。<br /><br /> **AttributeKey** ：依據所指定屬性之成員索引鍵的值來進行排序，這與該屬性必須有屬性關聯性。<br /><br /> **AttributeName** ：依據所指定屬性之成員名稱的值來進行排序，這與該屬性必須有屬性關聯性。|  
+|`OrderBy`|描述如何排序屬性階層中包含的成員。 預設值為 Name，這會指定屬性成員的排序是根據 `NameColumn` 屬性的值 (如果有的話)。 否則，這項作業會依據索引鍵資料行的值來排序成員。 可用的選項如下：<br /><br /> `NameColumn`依屬性的值排序 `NameColumn` 。<br /><br /> **Key** ：依據屬性成員之索引鍵資料行的值來進行排序。<br /><br /> **AttributeKey** ：依據所指定屬性之成員索引鍵的值來進行排序，這與該屬性必須有屬性關聯性。<br /><br /> **AttributeName** ：依據所指定屬性之成員名稱的值來進行排序，這與該屬性必須有屬性關聯性。|  
 |`OrderByAttribute`|識別排序屬性階層之成員時，所要依據的屬性。|  
 |`RootMemberIf`|決定如何識別父子式階層的根成員或最上層成員。 只有當 `Usage` 屬性值設定為 Parent 時，才會使用這個屬性值。 這表示已經定義了父子式階層。 預設值是 `ParentIsBlankSelfOrMissing`，表示只有符合針對 `ParentIsBlank`、`ParentIsSelf` 或 `ParentIsMissing` 所描述之一或多個條件的成員，才能視為根成員。 也可使用下列值：<br /><br /> `ParentIsBlank`只有在索引鍵資料行中具有 null、零或空字串的成員會被視為根成員。<br /><br /> `ParentIsSelf`只有本身為父系的成員會被視為根成員。<br /><br /> `ParentIsMissing`只有擁有找不到父代的成員會被視為根成員。|  
 |`Type`|包含屬性的類型。 如需詳細資訊，請參閱 [設定屬性類型](attribute-properties-configure-attribute-types.md)。|  
@@ -57,7 +56,7 @@ ms.locfileid: "66075189"
 |`ValueColumn`|識別提供屬性值的資料行。 如果已指定屬性的 `NameColumn` 元素，則會使用相同的 `DataItem` 值做為 `ValueColumn` 元素的預設值。 如果未指定屬性的 `NameColumn` 元素，且屬性的 `KeyColumns` 集合包含單一 `KeyColumn` 元素 (代表具有字串資料類型的索引鍵資料行)，則會使用相同的 `DataItem` 值做為 `ValueColumn` 元素的預設值。|  
   
 > [!NOTE]  
->  如需如何在使用 null 值和其他資料`KeyColumn`完整性問題時設定屬性值的詳細資訊，請參閱[處理 Analysis Services 2005 中的資料完整性問題](https://go.microsoft.com/fwlink/?LinkId=81891)。  
+>  如需如何在 `KeyColumn` 使用 null 值和其他資料完整性問題時設定屬性值的詳細資訊，請參閱[處理 Analysis Services 2005 中的資料完整性問題](https://go.microsoft.com/fwlink/?LinkId=81891)。  
   
 > [!NOTE]  
 >  當查詢中並未明確包含階層中的成員時，會使用屬性的預設成員來評估運算式。 屬性的預設成員由該屬性的 `DefaultMember` 屬性指定。 只要查詢內包含來自維度的階層，對應到該階層內各層級之屬性的所有預設成員都會忽略。 如果查詢內並未包含維度的階層，則預設成員會用於維度中的所有屬性。 如需預設成員的詳細資訊，請參閱 [定義預設成員](attribute-properties-define-a-default-member.md)。  

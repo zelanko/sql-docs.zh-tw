@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cceead32ca14d2a5261c0ef35cb4444be2effcf5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088474"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527714"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>瀏覽貝式機率分類模型
   當您使用 **[流覽]** 來開啟簡單的貝氏機率分類模型時，該模型會顯示在具有四個不同窗格的互動式檢視器中。 您可以使用此檢視器來探索相互關聯，以及取得有關模型和基礎資料的資訊。  

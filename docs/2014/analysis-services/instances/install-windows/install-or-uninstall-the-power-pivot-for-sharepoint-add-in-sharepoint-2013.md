@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16174728ac57b0a6380f1780eb550f85e2191d39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f29f1fcc8e63f688ea1769ee773957979ebef051
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387838"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543910"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>安裝或解除安裝 PowerPivot for SharePoint 增益集 (SharePoint 2013)
   [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] 是應用程式伺服器元件及後端服務的集合，可以在 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器陣列中提供 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 資料存取功能。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 增益集 (**spPowerpivot.msi**) 是用來安裝應用程式伺服器元件的安裝程式封裝。
@@ -32,7 +31,7 @@ ms.locfileid: "81387838"
 
 -   [背景](#bkmk_background)
 
--   [要在何處安裝 Sppowerpivot.msi？](#bkmk_where_to_install)
+-   [安裝 spPowerPivot.msi 的位置？](#bkmk_where_to_install)
 
 -   [需求和必要條件](#bkmk_prereq)
 
@@ -84,7 +83,7 @@ ms.locfileid: "81387838"
 
 -   **權限** ：若要安裝 [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)]，目前使用者必須是電腦的系統管理員以及 SharePoint 伺服器陣列管理員群組的成員。
 
--   如需[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]需求和必要條件的詳細資訊，請移至[SharePoint 模式下 Analysis Services Server 的硬體和軟體需求 &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)。
+-   如需 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 需求和必要條件的詳細資訊，請移至[SharePoint 模式下 Analysis Services Server 的硬體和軟體需求 &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)。
 
 ##  <a name="to-install-powerpivot-for-sharepoint"></a><a name="bkmk_install"></a>若要安裝 PowerPivot for SharePoint
  **spPowerpivot.msi** 安裝程式封裝同時支援圖形化使用者介面和命令列模式。 這兩個安裝方法都需要您使用系統管理員權限執行 .msi。 安裝之後，請參閱下列主題，以取得設定工具和其他功能的相關資訊、[設定 PowerPivot 並將方案部署 &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)。
@@ -100,7 +99,7 @@ ms.locfileid: "81387838"
 
 4.  在 **[特徵選取]** 頁面上，已預設選取所有功能。
 
-5.  按 [下一步]  。
+5.  按 [下一步] 。
 
 6.  按一下 **[安裝]** 完成安裝。
 
@@ -109,7 +108,7 @@ ms.locfileid: "81387838"
 
  `Msiexec.exe /i SpPowerPivot.msi`.
 
- 若要建立安裝記錄檔，請使用標準 MsiExec 記錄參數。 下列範例會使用 "v" 詳細資訊記錄參數來建立記錄檔 "Install_Log .txt"。
+ 若要建立安裝記錄檔，請使用標準 MsiExec 記錄參數。 下列範例會使用 "v" 詳細資訊記錄參數來建立記錄檔 "Install_Log.txt"。
 
 ```cmd
 Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
@@ -169,7 +168,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
 
  ![兩個 powerpivot 設定工具](../../media/as-powerpivot-configtools-bothicons.gif "兩個 powerpivot 設定工具")
 
- **Or**
+ **或**
 
 1.  移至 **[開始]**、 **[所有程式]**。
 
@@ -200,7 +199,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
     msiexec.exe /f spPowerPivot.msi
     ```
 
- 或者
+ 或
 
 -   若要解除安裝，請執行下列命令：
 

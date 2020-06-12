@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9322e8b8-43e1-4e02-a7d1-e41a586a5bb8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0275a071c5548de7086844e48cec7eff3bb72d31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30dc6562ec394065cf2f177608d4e5679cbd7df3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074535"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546485"
 ---
 # <a name="building-calculated-members-in-mdx-mdx"></a>在 MDX 中建立導出成員 (MDX)
   在多維度運算式 (MDX) 中，導出成員是藉由計算 MDX 運算式以傳回一個值而解析出來的成員。 此一定義涵蓋的範圍相當廣泛。 在 MDX 查詢中建構和使用導出成員的能力，提供了許多管理多維度資料的功能。  

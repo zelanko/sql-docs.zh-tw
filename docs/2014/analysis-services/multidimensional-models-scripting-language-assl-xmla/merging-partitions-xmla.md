@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65840066d3e95571db511a2015a1bee64aa8d922
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702039"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544950"
 ---
 # <a name="merging-partitions-xmla"></a>合併資料分割 (XMLA)
   如果資料分割具有相同的匯總設計與結構，您可以使用 XML for Analysis （XMLA）中的[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)命令來合併資料分割。 合併資料分割是管理資料分割時要執行的一項重要的動作，特別是那些包含依日期分割的歷程記錄資料之資料分割。  
@@ -34,7 +33,7 @@ ms.locfileid: "62702039"
  兩個資料分割使用不同的儲存設定，但是使用相同的彙總設計。 您不需要在年底時處理跨多年歷程記錄資料的 Cube，只要改用 `MergePartitions` 命令將今年的資料分割合併到往年的資料分割中。 如此便可保存資料，而不需要將時間耗費在 Cube 的完整處理上。  
   
 ## <a name="specifying-partitions-to-merge"></a>指定要合併的資料分割  
- 當`MergePartitions`命令執行時，會將儲存在[source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)屬性中指定之來源分割區的匯總資料，加入[目標](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla)屬性中指定的目標資料分割。  
+ 當 `MergePartitions` 命令執行時，會將儲存在[source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)屬性中指定之來源分割區的匯總資料，加入[目標](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla)屬性中指定的目標資料分割。  
   
 > [!NOTE]  
 >  `Source` 屬性可包含一個以上的資料分割物件參考。 不過，`Target` 屬性則不可以。  
@@ -46,7 +45,7 @@ ms.locfileid: "62702039"
 ## <a name="examples"></a>範例  
   
 ### <a name="description"></a>描述  
- 下列範例會將「**艾德工作」 DW**範例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫中 [ **Customer** count] 量值群組內的所有資料分割，合併到**Customers_2004** **的資料分割**中。  
+ 下列範例會將「**艾德工作」 DW**範例資料庫**中 [** **Customer** count] 量值群組內的所有資料分割，合併 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 到**Customers_2004**的資料分割中。  
   
 ### <a name="code"></a>程式碼  
   

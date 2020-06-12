@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4e3e06280ad91c59984b91e7383213f73f95343
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 838d96fc7db5ae4bf1930d159c7fee56d0a0408f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175327"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543370"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>定義父子式階層中父屬性 (Attribute) 的屬性 (Property)
   父子式階層是指維度中以兩個資料表資料行為基礎的階層。 這些資料行會一起定義維度成員之間的階層式關聯性。 第一個名稱為「成員索引鍵資料行」** 的資料行會識別每個維度成員。 另一個名稱為「父資料行」** 資料行則會識別每個維度成員的父系。 父屬性的 **NamingTemplate** 屬性決定父子式階層中每個層級的名稱，而 **MembersWithData** 屬性則決定是否應該顯示父成員的資料。
@@ -73,7 +72,7 @@ ms.locfileid: "78175327"
 
      在 [層級命名範本]**** 對話方塊中，您會定義可決定父子式階層中層級名稱的層級命名範本，而使用者瀏覽 Cube 時便會看到這些名稱。
 
-4.  在第二個**\*** 資料列中，于 [**名稱**] 資料行中輸入**Employee Level \* ** ，然後按一下第三列。
+4.  在第二個數據列中，于 [名稱] 資料行中 **\*** 輸入**Employee \* Level** ，然後按一下第三列。 **Name**
 
      請注意，在 [結果]**** 之下，每一個層級的名稱都變成 "Employee Level"，後面接著循序遞增的數字。
 
@@ -81,7 +80,7 @@ ms.locfileid: "78175327"
 
      ![層級命名範本對話方塊](../../2014/tutorials/media/l4-namingtemplate.gif "層級命名範本對話方塊")
 
-5.  按一下 [確定]  。
+5.  按一下 [確定]。
 
 6.  在 **Employees** 屬性的屬性視窗中，選取 **MembersWithData** 屬性儲存格的 **NonLeafDataHidden** 來變更 **Employees** 屬性的這個值。
 

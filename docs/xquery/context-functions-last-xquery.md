@@ -1,5 +1,6 @@
 ---
 title: last 函數（XQuery） |Microsoft Docs
+description: 深入瞭解 XQuery last （）函式，此函數會傳回序列中最後一個專案的整數索引。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f88c438206551e170810f467e7944b21232e245d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039000"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529702"
 ---
 # <a name="context-functions---last-xquery"></a>內容函式 - last (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- 在上述查詢中，/`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]`中的**最後一個（）** 函數會傳回製造步驟的數目。 此值是用以擷取工作中心位置的最後一個製造步驟。  
+ 在上述查詢中，/中的**最後一個（）** 函數會傳回 `/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` 製造步驟的數目。 此值是用以擷取工作中心位置的最後一個製造步驟。  
   
  以下是結果：  
   

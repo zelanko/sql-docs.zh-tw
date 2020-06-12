@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73a3058b0e7836c96f15e876f5cf4b5f2cf8bedc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 759830666c3da1faa8deccb754fc2955b47e5bd7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085344"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523714"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>使用預測查詢產生器來建立預測查詢
   您可以建立預測查詢，方法是當您在 BI Development Studio 中建立資料採礦方案時，或是在 SQL Server Management Studio 中以滑鼠右鍵按一下現有的採礦模型，然後選擇 [建立預測查詢]**** 選項。  
@@ -45,7 +44,7 @@ ms.locfileid: "66085344"
  **顯示**  
  決定 [來源]**** 資料行中的選取範圍是否顯示在結果中。  
   
- **群組**  
+ **小組**  
  使用 [及/或]**** 資料行，以括號將運算式群組在一起。 例如，(expr1 或 expr2) 及 expr3。  
   
  **和/或**  

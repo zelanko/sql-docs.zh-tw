@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10a83b13-2640-4ff5-80c8-a35e1d692908
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c2f79f8bf9a1d0ff01ba97d29662fab026d4adcd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 01e8651dd7e9d59012b0ba065bccb9ea62a1ee54
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084464"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522524"
 ---
 # <a name="export-and-import-data-mining-objects"></a>匯出及匯入資料採礦物件
   除了在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中針對備份、還原和移轉方案提供的功能之外，SQL Server 資料採礦還可以使用資料採礦延伸模組 (DMX)，在不同的伺服器之間快速傳送資料採礦結構和模型。  

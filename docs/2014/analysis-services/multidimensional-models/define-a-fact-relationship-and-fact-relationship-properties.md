@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8e41724-da77-4ac1-bc42-956b5d91ea5d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 471a65cb8f7560b409e6ddf8f73969d83d42a346
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15f67a4bdf699bbc6443fc76ce54bcfb35831827
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075789"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547090"
 ---
 # <a name="define-a-fact-relationship-and-fact-relationship-properties"></a>定義事實關聯性及事實關聯性屬性
   當您定義新的 Cube 維度或新的量值群組時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會嘗試偵測是否有事實維度關聯性，然後將維度使用方式設定設為 `Fact`。 您可以在 Cube 設計師的 [維度使用方式]**** 索引標籤上，檢視或編輯事實維度關聯性。 維度和量值群組之間的事實關聯性具有下列條件約束：  

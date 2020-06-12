@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 172bc267-c637-4caa-bf55-0ba198d30b1e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f3fa1ce62b3c7402e1f938bea8e400173ef79f5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fde91a51fd3dcde87da2ede2b0c936256c718fc0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075638"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547002"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義邏輯主索引鍵 (Analysis Services)
   [資料來源檢視精靈] 和資料來源檢視設計師會自動根據基礎資料庫資料表，針對加入到資料來源檢視中的資料表定義主索引鍵。  

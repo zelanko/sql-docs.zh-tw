@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fbc0698f-93d3-4292-86cd-afe3a2ec5b0a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 703080418566b761741575c69fb6be6a7572988e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ab0103a32ef674a3521f7ce13be721a8ea60df8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073573"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546010"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>多維度模型方案 (SSAS)
     
@@ -44,6 +43,6 @@ ms.locfileid: "66073573"
  描述如何在無現有的關聯式結構描述之下來設計多維度資料庫物件。  
   
  [Analysis Services 個人化延伸模組](extending-olap/analysis-services-personalization-extensions.md)  
- 描述如何設計的[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]個人化延伸模組。  
+ 描述如何設計的個人化延伸模組 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
   
   

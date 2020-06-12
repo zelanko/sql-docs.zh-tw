@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02eb89db44e08daf7de5d89a932a097df277b961
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084421"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522479"
 ---
 # <a name="feature-selection-data-mining"></a>特徵選取 (資料採礦)
   「*特徵選取」（Feature selection* ）一詞常用於資料採礦中，描述可用來將輸入縮減為可管理大小以進行處理和分析的工具和技術。 特徵選取不僅意味著*基數縮減*，也就是在建立模型時可考慮的屬性數目施加任意或預先定義的截止，同時也會選擇屬性，這表示分析師或模型化工具會根據其對分析的實用性，主動選取或捨棄屬性。  
@@ -103,7 +102,7 @@ ms.locfileid: "66084421"
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Analysis Services 演算法所使用的特徵選取方法  
  下表列出支援特徵選取的演算法、演算法所使用的特徵選取方法，以及設定來控制特徵選取行為的參數：  
   
-|演算法|分析的方法|評價|  
+|演算法|分析的方法|註解|  
 |---------------|------------------------|--------------|  
 |貝氏機率分類|Shannon 熵<br /><br /> 使用 K2 優先的貝氏<br /><br /> 使用優先統一狄氏分配的貝氏 (預設值)|Microsoft 貝氏機率分類演算法只接受分隔或離散化的屬性，因此無法使用有趣性分數。<br /><br /> 如需這個演算法的詳細資訊，請參閱 [Microsoft 貝氏機率分類演算法技術參考](microsoft-naive-bayes-algorithm-technical-reference.md)。|  
 |決策樹|有趣性分數<br /><br /> Shannon 熵<br /><br /> 使用 K2 優先的貝氏<br /><br /> 使用優先統一狄氏分配的貝氏 (預設值)|如果任何資料行包含非二進位連續數值，則所有資料行都會使用有趣性分數以確保一致性。 否則，便會使用預設特徵選取方法，或是當您建立模型時所指定的方法。<br /><br /> 如需這個演算法的詳細資訊，請參閱 [Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)。|  

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: fa04d602-d12e-425a-971d-68bf1500152a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 489c0aaa7a25c10e024c63a11c2bf98fdf46917a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ed1e65402c5ca59f349c28b2b9236ef02678114
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087673"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527309"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>正在完成精靈 (資料來源精靈) (Analysis Services)
   使用精靈的 **[正在完成精靈]** 頁面，即可檢閱連接字串，並指定新資料來源的名稱。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料來源名稱**  
  鍵入名稱，或使用為資料來源提供的預設名稱。  
   

@@ -1,7 +1,7 @@
 ---
 title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2020
+ms.date: 06/08/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0cc6509f3bdd5a7ca64dc739bf4db24dc96c709
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05901a97ea85deb6f45b5ee440d0eefaac1c8fd6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828174"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529370"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -102,9 +102,9 @@ ms.locfileid: "82828174"
 |**default_language_name**|**nvarchar(128)**|表示自主資料庫的預設語言。<br /> 非自主資料庫的這個值是**null** 。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_fulltext_language_lcid**|**int**|表示自主資料庫預設全文檢索語言的地區設定識別碼（lcid）。<br /> **注意：** 函式做為預設[的 [設定的預設全文檢索語言伺服器設定選項](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)] `sp_configure` 。 非自主資料庫的這個值是**null** 。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_fulltext_language_name**|**nvarchar(128)**|表示自主資料庫的預設全文檢索語言。<br /> 非自主資料庫的這個值是**null** 。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**is_nested_triggers_on**|**bit**|指出自主資料庫是否允許巢狀觸發程序。<br /> 0 = 不允許巢狀觸發程序。<br /> 1 = 允許巢狀觸發程序。<br /> **注意：** 做為的 [[設定嵌套的觸發程式] 伺服器設定選項](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) `sp_configure` 。 非自主資料庫的這個值是**null** 。 如需詳細資訊，請參閱[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)的設定。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**is_transform_noise_words_on**|**bit**|指出自主資料庫中是否應該轉換非搜尋字。<br /> 0 = 不應該轉換非搜尋字。<br /> 1 = 應該轉換非搜尋字。<br /> **注意：** 當做「轉換非搜尋[字」伺服器設定選項](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)的函數 `sp_configure` 。 非自主資料庫的這個值是**null** 。 如需詳細資訊，請參閱[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)的設定。<br /> **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本|  
-|**two_digit_year_cutoff**|**smallint**|表示 1753 與 9999 之間的數值，代表將二位數年份解譯為四位數年份時的截斷年份 (Cutoff Year)。<br /> **注意：** 做為的[設定兩位數年份的截止伺服器設定選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) `sp_configure` 。 非自主資料庫的這個值是**null** 。 如需詳細資訊，請參閱[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)的設定。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**is_nested_triggers_on**|**bit**|指出自主資料庫是否允許巢狀觸發程序。<br /> 0 = 不允許巢狀觸發程序。<br /> 1 = 允許巢狀觸發程序。<br /> **注意：** 做為的 [[設定嵌套的觸發程式] 伺服器設定選項](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) `sp_configure` 。 非自主資料庫的這個值是**null** 。 如需詳細資訊，請參閱[sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**is_transform_noise_words_on**|**bit**|指出自主資料庫中是否應該轉換非搜尋字。<br /> 0 = 不應該轉換非搜尋字。<br /> 1 = 應該轉換非搜尋字。<br /> **注意：** 當做「轉換非搜尋[字」伺服器設定選項](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)的函數 `sp_configure` 。 非自主資料庫的這個值是**null** 。 如需詳細資訊，請參閱[sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 。<br /> **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本|  
+|**two_digit_year_cutoff**|**smallint**|表示 1753 與 9999 之間的數值，代表將二位數年份解譯為四位數年份時的截斷年份 (Cutoff Year)。<br /> **注意：** 做為的[設定兩位數年份的截止伺服器設定選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) `sp_configure` 。 非自主資料庫的這個值是**null** 。 如需詳細資訊，請參閱[sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**抑制**|**Tinyint not null**|指示資料庫的內含項目狀態。<br />  0 = 資料庫內含項目已關閉。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 1 = 資料庫位於部分內含專案中**適用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本|  
 |**containment_desc**|**Nvarchar （60） not null**|指示資料庫的內含項目狀態。<br /> NONE = 舊版資料庫 (零個內含項目)<br /> PARTIAL = 部分自主資料庫<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**target_recovery_time_in_seconds**|**int**|復原資料庫的預估時間 (以秒為單位)。 可為 Null。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
@@ -117,8 +117,9 @@ ms.locfileid: "82828174"
 |**is_temporal_retention_enabled**|**bit**|指出是否已啟用時態性保留原則清除工作。<br /> **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|目錄定序設定：<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|目錄定序設定：<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**physical_database_name**|**nvarchar(128)**|若為 SQL Server，則為資料庫的機構名稱。 針對 Azure SQL Database，這是伺服器上資料庫的通用識別碼。 <br />**適用**于： SQL Server 2019 （15. x）和更新版本，以及 Azure SQL Database|
 |**is_result_set_caching_on**|**bit**|1 = is_result_set_caching_on 是 on</br>0 = is_result_set_caching_on 是關閉的</br>**適用**于： Azure SQL 資料倉儲 Gen2。 雖然這項功能會推出到所有區域，但請檢查部署至您實例的版本，以及最新的[AZURE SQL DW 版本](/azure/sql-data-warehouse/release-notes-10-0-10106-0)資訊，以取得功能可用性。|
-|**is_memory_optimized_enabled**|**bit**|指出是否已針對資料庫啟用特定的記憶體內部功能，例如[混合式緩衝集區](../../database-engine/configure-windows/hybrid-buffer-pool.md)。 不會反映[記憶體內部 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)的可用性或設定狀態。 <br />**適用**于： SQL Server 2019 （15. x）|
+|**is_memory_optimized_enabled**|**bit**|指出是否已針對資料庫啟用特定的記憶體內部功能，例如[混合式緩衝集區](../../database-engine/configure-windows/hybrid-buffer-pool.md)。 不會反映[記憶體內部 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)的可用性或設定狀態。 <br />**適用**于： SQL Server 2019 （15. x）和更新版本，以及 Azure SQL Database|
   
 ## <a name="permissions"></a>權限
 

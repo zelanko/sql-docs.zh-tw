@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2856bca26e8a49ffdb2ed5187479434c7762015b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f385fd078500739d97394cd8856fc8bd6a3b87e8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702631"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545205"
 ---
 # <a name="perspectives"></a>檢視方塊
   檢視方塊是可讓使用者以更簡單的方式查看 Cube 的定義。 檢視方塊是 Cube 功能的子集。 檢視方塊可讓管理員建立 Cube 的檢視，幫助使用者將焦點放在最相關的資料上。 檢視方塊包含了 Cube 中所有物件的子集。 檢視方塊不能包含父 Cube 中未定義的元素。  
@@ -32,9 +31,9 @@ ms.locfileid: "62702631"
   
  Cube 必須要先更新及處理，然後才可以使用檢視方塊。  
   
- Cube 可以是非常複雜的物件，供使用者在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中進行探索。 單一 Cube 可以代表整個資料倉儲的內容，且 Cube 中的多個量值群組代表多份事實資料表，而多個維度的基礎是多份維度資料表。 雖然這類 Cube 可以十分複雜且功能強大，但是對只需要與 Cube 的一小部份進行互動以滿足其商業智慧和報表需求的使用者而言，卻令人望而怯步。  
+ Cube 可以是非常複雜的物件，供使用者在中進行探索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 單一 Cube 可以代表整個資料倉儲的內容，且 Cube 中的多個量值群組代表多份事實資料表，而多個維度的基礎是多份維度資料表。 雖然這類 Cube 可以十分複雜且功能強大，但是對只需要與 Cube 的一小部份進行互動以滿足其商業智慧和報表需求的使用者而言，卻令人望而怯步。  
   
- 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用觀點來降低中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]發現之 cube 的複雜度。 檢視方塊會定義可檢視之 Cube 子集，而這類子集會對 Cube 提供有焦點的商務特有或應用程式特有觀點； 檢視方塊會控制 Cube 所容納之物件的可見性。 下列物件可以在檢視方塊中顯示或隱藏：  
+ 在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您可以使用觀點來降低中發現之 cube 的複雜度 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 檢視方塊會定義可檢視之 Cube 子集，而這類子集會對 Cube 提供有焦點的商務特有或應用程式特有觀點； 檢視方塊會控制 Cube 所容納之物件的可見性。 下列物件可以在檢視方塊中顯示或隱藏：  
   
 -   維度  
   
@@ -52,7 +51,7 @@ ms.locfileid: "62702631"
   
 -   動作  
   
- 例如， [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]範例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫中的「**艾德作品**」 cube 包含11個量值群組和二十個不同的 cube 維度，代表銷售、銷售預測和財務資料。 用戶端應用程式可以直接參考整個 Cube，但是這個觀點對於只想嘗試擷取基本銷售預測資訊的使用者而言可能不適合。 相反地，相同的使用者可以使用「**銷售目標**」的觀點，將「**艾德作品**」 cube 的觀點限制為只有與銷售預測相關的物件。  
+ 例如，範例資料庫中的「**艾德作品**」 cube [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含11個量值群組和二十個不同的 cube 維度，代表銷售、銷售預測和財務資料。 用戶端應用程式可以直接參考整個 Cube，但是這個觀點對於只想嘗試擷取基本銷售預測資訊的使用者而言可能不適合。 相反地，相同的使用者可以使用「**銷售目標**」的觀點，將「**艾德作品**」 cube 的觀點限制為只有與銷售預測相關的物件。  
   
  在 Cube 中，使用者無法透過檢視方塊看到的物件，仍可以使用 XML for Analysis (XMLA)、多維度運算式 (MDX) 或資料採礦延伸模組 (DMX) 陳述式直接予以參考和擷取。 檢視方塊並不會限制 Cube 中物件的存取，而且也不應該這麼做；而檢視方塊是用來提供使用者較佳的 Cube 存取經驗。  
   

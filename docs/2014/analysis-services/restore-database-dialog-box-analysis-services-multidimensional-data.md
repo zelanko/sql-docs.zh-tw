@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3990d47-55e2-424e-8eac-87edc937e806
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5007728a9af2032f83b71a7ea5b2aea19d0cf20
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070255"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539120"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>還原資料庫對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [還原資料庫]**** 對話方塊，即可從使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 備份檔案 (.abf) 格式的備份檔案還原 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。  
@@ -34,7 +33,7 @@ ms.locfileid: "66070255"
   
  **[還原資料庫]** 對話方塊包含下列頁面。  
   
-## <a name="pages"></a>頁面  
+## <a name="pages"></a>Pages  
  **一般**  
  使用此頁面即可選取要還原的資料庫、用來還原資料庫的備份檔案，以及還原資料庫時使用的一般選項與密碼。 如需此頁面的詳細資訊，請參閱[一般 &#40;還原資料庫對話方塊&#41; &#40;Analysis Services – 多維度資料&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)。  
   

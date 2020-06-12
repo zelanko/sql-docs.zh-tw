@@ -1,5 +1,6 @@
 ---
 title: SqlXmlAdapter 物件（SQLXML）
+description: 瞭解提供方法的 SqlXmlAdapter 物件，以便與 .NET Framework 中的資料集進行互動。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f1361babe25e8546b120bed352e31c7fa87d133
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: abc83952a57d27ab6ec6053d7d9b1b50ec29fba7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251399"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529927"
 ---
 # <a name="sqlxml-managed-classes---sqlxmladapter-object"></a>SQLXML 受控類別 - SqlXmlAdapter 物件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

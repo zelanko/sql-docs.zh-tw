@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55812c7df95b49fecbdbf8ed1a17c7403c04fbcb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071640"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547480"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>建立與 PowerPivot 活頁簿的 BI 語意模型連接
   使用本主題中的資訊可設定 BI 語意模型連接，該連接會重新導向至相同伺服器陣列中的 PowerPivot 活頁簿。  
@@ -39,7 +38,7 @@ ms.locfileid: "66071640"
   
  您必須具有支援 BI 語意模型連接內容類型的文件庫。 如需詳細資訊，請參閱[將 BI 語義模型連接內容類型新增至程式庫 &#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)。  
   
- 您必須知道要設定 BI 語義模型連接之 PowerPivot 活頁簿的 URL （例如http://adventure-works/shared documents/myworkbook.xlsx) .xlsx）。 活頁簿必須位於相同伺服器陣列中。  
+ 您必須知道要設定 BI 語義模型連接之 PowerPivot 活頁簿的 URL （例如， http://adventure-works/shared documents/myworkbook.xlsx）。 活頁簿必須位於相同伺服器陣列中。  
   
  參與連接順序的所有電腦和使用者都必須是在相同網域或受信任網域 (雙向信任) 中。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66071640"
   
      ![SharePoint 文件庫中的新文件子功能表](../media/ssas-bismconnection-new.gif "SharePoint 文件庫中的新文件子功能表")  
   
-2.  將 [**伺服器**] 屬性設定為 PowerPivot 活頁簿的 SharePoint URL （例如， ** http://mysharepoint/shared documents/myworkbook.xlsx) .xlsx**）。 在 PowerPivot for SharePoint 部署中，可以在伺服器陣列中的任何伺服器上載入資料。 因此，資料來源與 PowerPivot 資料的連接只會指定活頁簿的路徑。 PowerPivot 系統服務會決定載入資料的伺服器。  
+2.  將 [**伺服器**] 屬性設定為 PowerPivot 活頁簿的 SharePoint URL （例如， ** http://mysharepoint/shared documents/myWorkbook.xlsx**。 在 PowerPivot for SharePoint 部署中，可以在伺服器陣列中的任何伺服器上載入資料。 因此，資料來源與 PowerPivot 資料的連接只會指定活頁簿的路徑。 PowerPivot 系統服務會決定載入資料的伺服器。  
   
      請勿使用**資料庫**屬性;指定 PowerPivot 活頁簿的位置時，不會使用它。  
   

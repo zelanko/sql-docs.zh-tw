@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 892198c217918fd2b2a374261c6eac5e31d0a428
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b310c3fd762274a038198f7d88456b85d156ba3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074077"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546240"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>指定查詢座標軸的內容 (MDX)
   查詢座標軸指定多維度運算式 (MDX) SELECT 陳述式傳回的資料格集邊緣。 指定資料格集邊緣，您就可以限制用戶端能看見的傳回資料。  

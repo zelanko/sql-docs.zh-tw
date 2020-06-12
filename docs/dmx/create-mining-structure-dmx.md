@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b27f9e1c5927392b4ea221dcb6b7468a42ff9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892818"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669456"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  您可以為一個資料行定義多個模型旗標值。 不過，對於一個資料行，您僅能擁有一個內容類型和一個資料類型。  
   
 ### <a name="column-relationships"></a>資料行關聯性  
- 您可以在任何資料行定義陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援使用下列\<資料行關聯性> 子句。  
+ 您可以在任何資料行定義陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援使用下列資料 \< 行關聯性> 子句。  
   
  **與**  
  表示階層。 RELATED TO 資料行的目標可以是巢狀資料表中的索引鍵資料行、案例資料列中的分隔值資料行，或者使用 RELATED TO 子句的另一個資料行 (表示更深的階層)。  
@@ -131,7 +131,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  鑑效組種子可控制程序的起點，而且此程序會將案例隨機指派給培訓資料集或測試資料集。 您可以藉由設定鑑效組種子，確保資料分割可以重複。 如果您沒有指定鑑效組種子，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會使用採礦結構的名稱來建立種子。 如果您要為結構重新命名，種子值將會變更。 鑑效組種子參數可以搭配一個或兩個其他鑑效組參數使用。  
   
 > [!NOTE]  
->  因為資料分割資訊是以定型資料進行快取，所以若要使用「維持」，您必須確定將「採礦結構」的**CacheMode**屬性設定為**KeepTrainingData**。 在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中，這是新採礦結構的預設值。 在包含維持資料分割的現有採礦結構上，將**CacheMode**屬性變更為**ClearTrainingCases** ，將不會影響任何已處理的採礦模型。 不過，如果<xref:Microsoft.AnalysisServices.MiningStructureCacheMode>未設定為**KeepTrainingData**，則維持的參數不會有任何作用。 也就是說，所有來源資料都將用於培訓，而不會提供任何測試集。 資料分割的定義是利用結構快取的；如果您清除培訓案例的快取，也會清除測試資料的快取以及鑑效組集的定義。  
+>  因為資料分割資訊是以定型資料進行快取，所以若要使用「維持」，您必須確定將「採礦結構」的**CacheMode**屬性設定為**KeepTrainingData**。 在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中，這是新採礦結構的預設值。 在包含維持資料分割的現有採礦結構上，將**CacheMode**屬性變更為**ClearTrainingCases** ，將不會影響任何已處理的採礦模型。 不過，如果未 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 設定為**KeepTrainingData**，則維持的參數不會有任何作用。 也就是說，所有來源資料都將用於培訓，而不會提供任何測試集。 資料分割的定義是利用結構快取的；如果您清除培訓案例的快取，也會清除測試資料的快取以及鑑效組集的定義。  
   
 ## <a name="examples"></a>範例  
  下列範例示範如何使用 DMX 建立包含鑑效組的採礦結構。  

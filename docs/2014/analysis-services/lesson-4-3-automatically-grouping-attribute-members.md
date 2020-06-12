@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 887e3b8c57d0aaf13cc88dea944cf8b74e78266a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175337"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543390"
 ---
 # <a name="automatically-grouping-attribute-members"></a>自動分組屬性成員
-  當您瀏覽 Cube 時，通常會按另一個屬性階層的成員建立一個屬性階層成員的維度。 例如，您可以按縣 (市)、按購買的產品或按性別將客戶銷售加以分組。 不過，若[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]使用特定類型的屬性，根據屬性階層中成員的散發，自動建立屬性成員的群組會很有説明。 例如，您可以讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 為客戶建立年收入值的群組。 如此一來，瀏覽這個屬性階層的使用者會看到群組的名稱和值而不是成員本身。 這樣可限制使用者看到的層級數，對於分析更有幫助。
+  當您瀏覽 Cube 時，通常會按另一個屬性階層的成員建立一個屬性階層成員的維度。 例如，您可以按縣 (市)、按購買的產品或按性別將客戶銷售加以分組。 不過，若使用特定類型的屬性， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根據屬性階層中成員的散發，自動建立屬性成員的群組會很有説明。 例如，您可以讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 為客戶建立年收入值的群組。 如此一來，瀏覽這個屬性階層的使用者會看到群組的名稱和值而不是成員本身。 這樣可限制使用者看到的層級數，對於分析更有幫助。
 
  [DiscretizationMethod]**** 屬性會決定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是否建立分組，並決定執行的分組類型。 依預設， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不會執行任何分組。 當您啟用自動分組時，可以讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 依據屬性的結構自動決定最佳群組方法，或是從下列清單中選擇其中一種群組演算法來指定群組方法：
 
- **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]會建立群組範圍，使維度成員的總擴展平均分散于群組中。
+ **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]建立群組範圍，使維度成員的總擴展平均分散于群組中。
 
- 叢集會藉由在輸入值上執行一維叢集**來** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]建立群組，方法是使用具有高斯分佈的 K 表示群集方法。 這個選項只對數值資料行有效。
+ **群集** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]藉由在輸入值上執行一維叢集來建立群組，方法是使用具有高斯分佈的 K 表示群集方法。 這個選項只對數值資料行有效。
 
  在指定群組方法之後，您必須使用 [DiscretizationBucketCount]**** 屬性來指定群組數目。 如需詳細資訊，請參閱 [群組屬性成員 &#40;分隔&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
@@ -42,7 +41,7 @@ ms.locfileid: "78175337"
 
 4.  在 [屬性]**** 窗格中，選取 [年收入]****。
 
-5.  在 [屬性視窗中，將 [ **DiscretizationMethod** ] 屬性的值變更為 [**自動**]，並將 [ **DiscretizationBucketCount** ] 屬性的值變更為`5`。
+5.  在 [屬性視窗中，將 [ **DiscretizationMethod** ] 屬性的值變更為 [**自動**]，並將 [ **DiscretizationBucketCount** ] 屬性的值變更為 `5` 。
 
      下圖顯示 [年收入]**** 的已修改屬性。
 
@@ -60,11 +59,11 @@ ms.locfileid: "78175337"
 
 4.  在 [屬性]**** 窗格中，選取 [病假時數]****。
 
-5.  在 [屬性視窗中，將 [ **DiscretizationMethod** ] 屬性的值變更為 [叢集]，並**DiscretizationBucketCount**將 [DiscretizationBucketCount `5`] 屬性的值**變更為。**
+5.  在 [屬性視窗中，將 [ **DiscretizationMethod** ] 屬性的值變更為 [叢集] **，並將**[ **DiscretizationBucketCount** ] 屬性的值變更為 `5` 。
 
 6.  在 [屬性]**** 窗格中，選取 [假期時數]****。
 
-7.  在 [屬性視窗中，將 [ **DiscretizationMethod** ] 屬性的值變更為 [**等於] 區域**，並將 [ **DiscretizationBucketCount** ] 屬性的值變更為`5`。
+7.  在 [屬性視窗中，將 [ **DiscretizationMethod** ] 屬性的值變更為 [**等於] 區域**，並將 [ **DiscretizationBucketCount** ] 屬性的值變更為 `5` 。
 
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>瀏覽已修改的屬性階層
 

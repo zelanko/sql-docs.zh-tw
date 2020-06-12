@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 7c76ec1a74032b5f35bc42ab4a901d95574e0900
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe5e48613ad5a4290e881c7b26a830af11eb60f9
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75688219"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868317"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>使用 Microsoft 商業智慧 (BI) 工具進行分析和報告
 
@@ -30,7 +30,7 @@ ms.locfileid: "75688219"
 |||**Excel**|**SharePoint**|**SharePoint Online 的存取權**|**Power BI**|**SQL Server**|  
 |**自助 BI**|分析師/使用者||||||  
 |輕鬆地探索及存取公用和公司資料||[Power Query](https://go.microsoft.com/fwlink/p/?LinkId=391845)||[Azure 資料目錄](https://azure.microsoft.com/services/data-catalog/)<br /><br />||  
-|建立功能強大的資料模型||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
+|建立功能強大的資料模型||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
 |執行自助式預測分析||||||[適用於 Excel 的資料採礦增益集](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |將資料視覺化及探索資料||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [3D 地圖](https://support.office.com/article/visualize-your-data-in-3d-maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||||  
 |使用自然語言查詢發問|||||[問 & A](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  

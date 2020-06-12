@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: f363fbf5-c51f-42ee-8ab4-86ab35cab597
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b94fef660128637ebeb01ea1290ec24ed11b3278
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 829a4092e8a55e3b2581a09e4afcc8c826152179
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088080"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527524"
 ---
 # <a name="choose-time-calculations-business-intelligence-wizard"></a>選擇時間計算 (商業智慧精靈)
   使用 [選擇時間計算]**** 頁面，即可定義針對現有時間階層所建立之新時間計算的解決方式。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用下列階層來分析時間計算**  
  選取用來建立新時間計算之時間維度的階層。  
   

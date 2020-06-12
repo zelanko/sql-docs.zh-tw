@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c120afe4f4cd873c91ae67bad73b2baab2d18fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075580"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547003"
 ---
 # <a name="define-linked-dimensions"></a>定義連結維度
   連結維度是根據在相同版本與相容性層級的另一個 Analysis Services 資料庫中所建立和儲存的維度。 藉由使用連結維度，您可以在一個資料庫上建立、儲存和維護維度，同時將該維度提供給多個資料庫的使用者使用。 對於使用者來說，連結維度和其他任何維度看起來都一樣。  
@@ -30,7 +29,7 @@ ms.locfileid: "66075580"
 > [!NOTE]  
 >  因為無法使用重新整理，所以大多數的 Analysis Services 開發人員都會複製維度而不是連結維度。 您可以在相同方案內複製不同專案中的維度。 如需詳細資訊，請參閱 [Refresh of a linked dimension in SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx)(在 SSAS 中重新整理連結維度)。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  提供維度的來源資料庫和使用該維度的目前資料庫都必須具有相同的版本和相容性層級。 如需詳細資訊，請參閱[將多維度資料庫的相容性層級設定 &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)。  
   
  來源資料庫必須已部署並處於線上。 您必須將發行或取用連結物件的伺服器設定為允許該作業 (如下所示)。  
@@ -62,7 +61,7 @@ ms.locfileid: "66075580"
   
 2.  在 [連線管理員] 中，確認提供者是否設定為 **Native OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0**。  
   
-3.  輸入伺服器的名稱（使用指定實例的*servername*\\*instancename* ）<sup>1</sup> ，或鍵入**localhost**來連接到在同一部電腦上執行的 Analysis Services 伺服器。  
+3.  輸入伺服器的名稱（使用指定實例的*servername* \\ *instancename* ）<sup>1</sup> ，或鍵入**localhost**來連接到在同一部電腦上執行的 Analysis Services 伺服器。  
   
 4.  使用連接的 Windows 驗證。  
   

@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89e87d8c1f15dfd0f70ebaca92a81603b06ff0ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074787"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546540"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>子選擇和 Subcube 中的導出成員
   在舊版，子選擇或 Subcube 中不允許使用導出成員。 但是從 SQL Server 2008 開始，您可以使用導出成員，並透過連接屬性啟用。 此外，SQL Server 2008 R2 也導入了子選擇和 Subcube 中導出成員的新行為。  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>子選擇和 Subcube 中的導出成員  
- 中`SubQueries` <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>的連接字串屬性或支援`DBPROPMSMDSUBQUERIES`的 XMLA 屬性中的屬性[&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)會在子選擇或 subcube 上定義匯出成員或匯出集的行為或額度。 在本文的內容中，除非另有說明，否則子選擇同時指子選擇和 Subcube。  
+ `SubQueries`中的連接字串屬性 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 或 `DBPROPMSMDSUBQUERIES` 支援的 xmla 屬性中的屬性[&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)會在子選擇或 subcube 上定義匯出成員或匯出集的行為或額度。 在本文的內容中，除非另有說明，否則子選擇同時指子選擇和 Subcube。  
   
  SubQueries 屬性允許下列值。  
   

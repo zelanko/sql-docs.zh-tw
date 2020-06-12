@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f302a41612b19e9412fc52fbe6813c4e8ee2d26
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811064"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547290"
 ---
 # <a name="understanding-incremental-generation"></a>了解累加式產生
   在初始結構描述產生之後，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來變更 Cube 和維度定義，然後重新執行 [結構描述產生精靈]。 此精靈會更新主題領域資料庫和相關資料來源檢視中的結構描述，以便能夠反映變更，同時盡量保留目前存在於要重新產生之資料表中的資料。 如果您在初始產生之後變更了資料表，結構描述產生精靈會使用下列規則，盡量保留那些變更：  

@@ -12,17 +12,17 @@ ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e763c930a37e90d1bf23c186fa5db8a16c5e971
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b14a78839ac49a76a8745d74f04f3b6c9a37b82
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067884"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858982"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>檢查條件約束運算式對話方塊 (Visual Database Tools)
   當附加檢查條件約束至資料表或資料行時，必須包含 SQL 運算式。 在提供的方塊中輸入檢查條件約束運算式。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  運算是  
  輸入運算式  
   

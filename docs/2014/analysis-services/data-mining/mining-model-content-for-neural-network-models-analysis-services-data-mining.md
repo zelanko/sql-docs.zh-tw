@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2de6fad32057abdbebab86b880c4edb23b1440e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083590"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521404"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   本主題描述使用 Microsoft 類神經網路演算法的模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
@@ -68,13 +67,13 @@ ms.locfileid: "66083590"
   
 |節點|內容|  
 |----------|-------------|  
-|模型根|Blank|  
-|臨界統計資料|Blank|  
-|輸入層|Blank|  
+|模型根|空白|  
+|臨界統計資料|空白|  
+|輸入層|空白|  
 |輸入節點|輸入屬性名稱|  
-|hidden layer|Blank|  
-|隱藏節點|Blank|  
-|輸出層|Blank|  
+|hidden layer|空白|  
+|隱藏節點|空白|  
+|輸出層|空白|  
 |輸出節點|輸出屬性名稱|  
   
  NODE_NAME  
@@ -127,13 +126,13 @@ ms.locfileid: "66083590"
   
 |節點|內容|  
 |----------|-------------|  
-|模型根|Blank|  
-|臨界統計資料|Blank|  
-|輸入層|Blank|  
+|模型根|空白|  
+|臨界統計資料|空白|  
+|輸入層|空白|  
 |輸入節點|輸入屬性名稱|  
-|hidden layer|Blank|  
+|hidden layer|空白|  
 |隱藏節點|指出隱藏節點清單中，隱藏節點順序的整數。|  
-|輸出層|Blank|  
+|輸出層|空白|  
 |輸出節點|如果輸出屬性是連續的，則包含輸出屬性的名稱。<br /><br /> 如果輸出屬性是離散或離散化的，則包含輸出屬性的名稱和值。|  
   
  NODE_RULE  
@@ -141,13 +140,13 @@ ms.locfileid: "66083590"
   
 |節點|內容|  
 |----------|-------------|  
-|模型根|Blank|  
-|臨界統計資料|Blank|  
-|輸入層|Blank|  
+|模型根|空白|  
+|臨界統計資料|空白|  
+|輸入層|空白|  
 |輸入節點|包含與 NODE_DESCRIPTION 資料行資訊相同的 XML 片段。|  
-|hidden layer|Blank|  
+|hidden layer|空白|  
 |隱藏節點|指出隱藏節點清單中，隱藏節點順序的整數。|  
-|輸出層|Blank|  
+|輸出層|空白|  
 |輸出節點|包含與 NODE_DESCRIPTION 資料行資訊相同的 XML 片段。|  
   
  MARGINAL_RULE  
@@ -173,13 +172,13 @@ ms.locfileid: "66083590"
  MSOLAP_MODEL_COLUMN  
  |節點|內容|  
 |----------|-------------|  
-|模型根|Blank|  
-|臨界統計資料|Blank|  
-|輸入層|Blank|  
+|模型根|空白|  
+|臨界統計資料|空白|  
+|輸入層|空白|  
 |輸入節點|輸入屬性名稱。|  
-|hidden layer|Blank|  
-|隱藏節點|Blank|  
-|輸出層|Blank|  
+|hidden layer|空白|  
+|隱藏節點|空白|  
+|輸出層|空白|  
 |輸出節點|輸入屬性名稱。|  
   
  MSOLAP_NODE_SCORE  

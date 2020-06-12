@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 52e62633-856c-4af2-8c8a-d4a5a57351b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10858ca8d245a9a63169b555674941bf29a6363a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081671"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528564"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>維度使用方式 (Cube 設計工具) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 **[維度使用方式]** 索引標籤，在 Cube 中檢視和編輯 Cube 維度與量值群組之間的維度關聯性。  
@@ -26,7 +25,7 @@ ms.locfileid: "66081671"
   
 |窗格|定義|  
 |----------|----------------|  
-|**Toolbar**|使用工具列來執行此索引標籤上的一般作業。如需這個窗格的詳細資訊，請參閱[工具列 &#40;維度使用方式索引標籤、Cube 設計師&#41; &#40;Analysis Services 多維度資料&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)。|  
+|**工具列**|使用工具列來執行此索引標籤上的一般作業。如需這個窗格的詳細資訊，請參閱[工具列 &#40;維度使用方式索引標籤、Cube 設計師&#41; &#40;Analysis Services 多維度資料&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**Grid**|使用此方格即可在 Cube 中檢視和編輯 Cube 維度與量值群組之間的維度關聯性。 如需此窗格的詳細資訊，請參閱[方格 &#40;維度使用方式索引標籤，Cube 設計師&#41; &#40;Analysis Services - 多維度資料&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md)。|  
   
 ## <a name="see-also"></a>另請參閱  

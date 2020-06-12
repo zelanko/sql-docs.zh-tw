@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cbf379d1-0859-414a-a63f-ddc7f789b422
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b27f1b3ae063cd1a464169f4ab5dbc85a4ce7466
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0862091d6ac2039074c2bb79012c128a819e8c54
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077774"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545470"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>採礦精確度圖表設計師 (資料採礦)
   使用 **[採礦精確度圖表]** 檢視，即可比較所包含的所選採礦結構上建立之採礦模型的效能。  

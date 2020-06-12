@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 63b035bd0ce315ccf1334c53e7ee1718c7569dac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 066969ef47dbe72732d7ee873f162a6a1e5915d5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073669"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546090"
 ---
 # <a name="measures-and-measure-groups"></a>量值和量值群組
   Cube 包含「量值群組」** 中的「量值」**、商務邏輯，以及可以在求取量值所提供之數值資料的值時提供內容的維度集合。 量值和量值群組均為 Cube 的重要元件。 Cube 的存在至少須具備其中一項元件。  
@@ -46,7 +45,7 @@ ms.locfileid: "66073669"
   
  每個 Cube 至少須有一個量值，但大部分 Cube 都有許多量值，有時數量可達數百。 從結構來說，量值通常會對應到事實資料表中的來源資料行，再由資料行提供用以載入量值的值。 或者，您也可以使用 MDX 定義量值。  
   
- 量值取決於內容，並會在查詢中所含之維度成員所指定的內容中，對數值資料作業。 例如，計算**轉售商銷售**的量值將由`Sum`操作員提供支援，並會為查詢中包含的每個維度成員加入銷售金額。 無論查詢指定個別的產品、彙總成一個類別，或是依時間或地理位置切割，量值所衍生的作業對查詢中所含的維度而言，都必須有效。  
+ 量值取決於內容，並會在查詢中所含之維度成員所指定的內容中，對數值資料作業。 例如，計算**轉售商銷售**的量值將由 `Sum` 操作員提供支援，並會為查詢中包含的每個維度成員加入銷售金額。 無論查詢指定個別的產品、彙總成一個類別，或是依時間或地理位置切割，量值所衍生的作業對查詢中所含的維度而言，都必須有效。  
   
  在此範例中，「轉售商銷售」**** 會彙總成「銷售領域」**** 階層的各種層級。  
   

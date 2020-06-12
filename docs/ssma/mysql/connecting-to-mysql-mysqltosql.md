@@ -1,5 +1,6 @@
 ---
 title: 連接到 MySQL （MySQLToSQL） |Microsoft Docs
+description: 瞭解如何連接到目標 iMySQL 資料庫，以遷移 MySQL 資料庫。 SSMA 會取得 Azure SQL Database 中資料庫的相關中繼資料。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6cb47c0f06d7133b8c7454a4fa538937a0e78e19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d82a23735cde22773c693dce5f6e8dc86b9654b4
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103175"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293655"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>連線到 MySQL (MySQLToSQL)
 若要將 MySQL 資料庫遷移至 SQL Server 或 SQL Azure，您必須連線到您想要遷移的 MySQL 資料庫。 當您連線時，SSMA 會取得所有 MySQL 架構的相關中繼資料，然後在 [MySQL 中繼資料瀏覽器] 窗格中顯示。 SSMA 會儲存資料庫伺服器的相關資訊，但不會儲存密碼。  
@@ -108,7 +109,7 @@ MySQL 資料庫的相關中繼資料不會自動重新整理。 當您第一次�
   
     -   若要查看色彩編碼的定義，請按一下 [**圖例**] 按鈕。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
   
 ## <a name="next-step"></a>後續步驟  
 遷移程式的下一個步驟是[連接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  

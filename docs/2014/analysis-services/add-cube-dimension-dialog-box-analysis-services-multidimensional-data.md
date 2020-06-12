@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 625a3b1f-183b-445f-9bb7-96945c324767
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f147c438e16c00e0e1b979f2d3e2fe6e16cf7428
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0de75c02c39b0690184f35f2b0b6a07d7ed9a4f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062950"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528224"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>加入 Cube 維度對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [加入 Cube 維度]**** 對話方塊，即可將資料庫維度的參考加入 Cube。 您可以執行下列其中一個動作，來顯示 [加入 Cube 維度]**** 對話方塊：  
@@ -33,7 +32,7 @@ ms.locfileid: "66062950"
 > [!NOTE]  
 >  每個 Cube 維度對量值群組只能有一個關聯性。 不過，如果 Cube 維度所依據的資料庫維度，在資料來源檢視中透過一個以上的關聯性與量值群組相關，則您可以建立一個以上的 Cube 維度並將其加入至 Cube。 此類維度被稱為角色扮演維度，且一般是和時間維度一起發生。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **選取維度**  
  選取現有的資料庫維度，即可將依據此資料庫維度的 Cube 維度加入至選取的 Cube。 從相同資料庫維度中可以定義多個 Cube 維度。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12dec570bb4ef4a499c5f141d62b15467212d2ae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084725"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522594"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>從採礦模型刪除篩選
   當您建立採礦模型的篩選時，您可以在資料來源檢視中的資料子集上建立模型。 篩選對於測試原始資料子集上之模型的精確度也非常實用。  
@@ -38,7 +37,7 @@ ms.locfileid: "66084725"
   
 4.  在 [模組篩選器]**** 對話方塊中，以滑鼠右鍵在方格中按一下包含所要刪除之條件的資料列。  
   
-5.  選取 [刪除]  。  
+5.  選取 [刪除] 。  
   
 ### <a name="to-clear-the-filter-on-a-mining-model-in-the-filter-editor-dialog-box"></a>若要在篩選編輯器對話方塊中清除採礦模型上的篩選  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66084725"
   
 1.  在 [方案總管] 中，按一下包含篩選的採礦模型。  
   
-2.  在 [**屬性**] 視窗中，以滑鼠右鍵按一下`Filter`屬性中的篩選文字，然後選取 [**全選**]。  
+2.  在 [**屬性**] 視窗中，以滑鼠右鍵按一下屬性中的篩選文字 `Filter` ，然後選取 [**全選**]。  
   
 3.  按退格鍵或 Delete 鍵。  
   

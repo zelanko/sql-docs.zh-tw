@@ -10,17 +10,17 @@ ms.assetid: 07ca5ac6-a68a-4e85-bc6f-fa7ccf9f1c10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9496be167ae092df8737dffec723daf77147f496
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22205936807ca316e7b0541d59b6f0b1d8068f96
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211137"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859280"
 ---
 # <a name="sql-server-properties-filestream-tab"></a>SQL Server 屬性 (FILESTREAM 索引標籤)
   您可以使用這個頁面，針對這個 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝啟用 FILESTREAM。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **對 Transact-SQL 存取啟用 FILESTREAM**  
  選取此選項即可針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取啟用 FILESTREAM。 您必須先核取這個控制項，然後才能使用其他控制選項。  
   

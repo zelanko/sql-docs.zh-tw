@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62d688230a43305ae0c652891213ba529a378e70
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078975"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543476"
 ---
 # <a name="browsing-the-cube"></a>瀏覽 Cube
   部署 Cube 之後，您就可以在 [Cube 設計師] 的 [瀏覽器]**** 索引標籤上檢視 Cube 資料，以及在 [維度設計師] 的 [瀏覽器]**** 索引標籤上檢視維度資料。 瀏覽 Cube 和維度資料是累加地檢查工作的一種方式。 您可以在物件經處理之後，驗證對屬性、關聯性和其他物件所做的細微變更是否達到期望的效果。 由於 [瀏覽器] 索引標籤用於檢視 Cube 和維度資料，因此該索引標籤會根據您要瀏覽的物件，提供不同的功能。  
@@ -30,7 +29,7 @@ ms.locfileid: "66078975"
   
 1.  針對 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [產品] 維度，切換至 [維度設計師]****。 若要這樣做，請在方案總管的 [維度]**** 節點中，按兩下 [產品]**** 維度。  
   
-2.  按一下 [**瀏覽器**] 索引卷**All**標，顯示`Product Key`屬性階層的 [全部] 成員。 在第 3 課，您將定義 [產品] 維度的使用者階層，以便瀏覽此維度。  
+2.  按一下 [**瀏覽器**] 索引標籤，顯示內容階層的 [**全部**] 成員 `Product Key` 。 在第 3 課，您將定義 [產品] 維度的使用者階層，以便瀏覽此維度。  
   
 3.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，切換至 [Cube 設計師]****。 若要這麼做，請在方案總管的 [ **cube** ] 節點中，按兩下 [ **Analysis Services 教學**課程] cube。  
   

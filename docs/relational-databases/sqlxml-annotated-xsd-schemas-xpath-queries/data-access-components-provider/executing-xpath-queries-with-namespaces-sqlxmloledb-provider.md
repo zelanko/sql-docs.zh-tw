@@ -1,5 +1,6 @@
 ---
 title: 使用命名空間執行 XPath 查詢（SQLXMLOLEDB）
+description: 瞭解如何在使用 SQLXMLOLEDB 提供者執行 XPath 查詢時，在 SQLXML 4.0 中指定命名空間。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1559beee9838920c5e219c4e13e5a8b0c130b51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81d8b40501df0cd18765c684a4cce217d2b87ef2
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257299"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215864"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>執行含有命名空間的 XPath 查詢 (SQLXMLOLEDB 提供者)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75257299"
   
  由於 SQLXML 4.0 不支援使用萬用字元 (*)，所以您必須使用命名空間前置詞來指定 XPath 查詢。 若要解析此前置詞，請使用 namespace 屬性來指定命名空間系結。  
   
- 在下列範例中，XPath 查詢會使用萬用字元（\*）和本機名稱（）和命名空間 uri （） xpath 函數來指定命名空間。 此 XPath 查詢會傳回本機名稱為**Contact**的所有元素，而命名空間 URI 為**urn： myschema： Contacts**。  
+ 在下列範例中，XPath 查詢會使用萬用字元（ \* ）和本機名稱（）和命名空間 uri （） xpath 函數來指定命名空間。 此 XPath 查詢會傳回本機名稱為**Contact**的所有元素，而命名空間 URI 為**urn： myschema： Contacts**。  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

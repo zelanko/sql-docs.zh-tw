@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a912bab0c43764c0c09844fd26ca66a708b3c495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d75636280033ff0dcedfc3c281939a2484a4cac0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175667"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540610"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>建立及自訂 PowerPivot 圖庫
   PowerPivot 圖庫是一種特殊類型的 SharePoint 文件庫，針對包含 PowerPivot 資料的已發行 Excel 活頁簿和 Reporting Services 報表，提供豐富的預覽與文件管理功能。
 
 ##  <a name="in-this-topic"></a><a name="bkmk_top"></a>本主題中的
 
--   [必要條件](#prereq)
+-   [先決條件](#prereq)
 
 -   [概觀](#overview)
 
@@ -34,7 +33,7 @@ ms.locfileid: "78175667"
 
 -   [切換至劇場檢視或圖庫檢視](#switch)
 
-##  <a name="prerequisites"></a><a name="prereq"></a> 必要條件
+##  <a name="prerequisites"></a><a name="prereq"></a> 先決條件
 
 -   您必須有 Silverlight。 您可以透過 Microsoft Update 下載並安裝 Silverlight。 如果您使用沒有 Silverlight 的瀏覽器檢視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫文件庫，按一下頁面上的連結即可安裝它。 安裝後，您必須先關閉瀏覽器再重新開啟。
 
@@ -73,11 +72,11 @@ ms.locfileid: "78175667"
 
     2.  按一下 **[新增應用程式]**。
 
-    3.  按一下 [PowerPivot 圖庫] ****。
+    3.  按一下 [PowerPivot 圖庫]  。
 
 2.  輸入文件庫的名稱。 請務必包含描述性資訊，以協助使用者將此文件庫識別為 PowerPivot 活頁簿和 Reporting Services 報表的豐富預覽。
 
-3.  按一下頁面底部的 [新增]  。
+3.  按一下 [建立]。
 
 4.  要求伺服陣列或服務管理員將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫新增為 Excel Service 的信任位置。 如果使用者為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理設定活頁簿，就需要這個步驟以避免錯誤。 如需這項工作的詳細資訊，請參閱[在管理中心建立 PowerPivot 網站的信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。
 

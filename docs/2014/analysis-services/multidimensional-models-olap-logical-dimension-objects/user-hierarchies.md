@@ -24,18 +24,17 @@ helpviewer_keywords:
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 533b244a8a5b6ec5e2866b068cfbf5eb6f31a7a3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72811597"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545110"
 ---
 # <a name="user-hierarchies"></a>使用者階層
-  使用者定義階層是使用者定義的屬性階層，可用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]來將維度的成員組織成階層式結構，並在 cube 中提供導覽路徑。 例如，下表定義時間維度的維度資料表， 此維度資料表支援三個屬性，名為年份、季度和月份。  
+  使用者定義階層是使用者定義的屬性階層，可用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 來將維度的成員組織成階層式結構，並在 cube 中提供導覽路徑。 例如，下表定義時間維度的維度資料表， 此維度資料表支援三個屬性，名為年份、季度和月份。  
   
-|Year|Quarter|Month|  
+|年|Quarter|Month|  
 |----------|-------------|-----------|  
 |1999|第一季|一月|  
 |1999|第一季|二月|  
@@ -80,7 +79,7 @@ ms.locfileid: "72811597"
  省份層級會使用與國家 (地區) 層級中之其他成員相關聯的成員進行擴展，而縣 (市) 層級中的成員會與省份層級中之對應的成員相關聯。 但是，由於國家 (地區) 層級中的 Vatican City 成員在省份層級裡沒有關聯的成員，因此必須直接從縣 (市) 層級，將成員與國家 (地區) 層級裡的 Vatican City 成員相關聯。 因為這些變更，所以維度的階層會變成不完全。 Vatican City 縣 (市) 的父系是 Vatican City 國家 (地區)，這並不會在國家 (地區) 層級中 Vatican City 成員的直接上層層級裡。 如需詳細資訊，請參閱 [不完全階層](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)。  
   
 ### <a name="parent-child-hierarchies"></a>父子式階層  
- 維度的父子式階層是使用一個特殊屬性 (稱為父屬性) 定義，以決定各成員如何互相關聯。 父屬性描述維度主資料表內的「自我參考關聯性」** 或「自我聯結」**。 父子式階層是由單一父屬性所建構的。 因為階層中的層級是從與父屬性相關之成員間的父子式關聯性衍生而來，所以只會將一個層級指派給父子式階層。 父子式階層的維度結構描述，相依於維度主資料表上所顯示的自我參考關聯性。 例如，下圖說明[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]範例資料庫中的**DimOrganization**維度主資料表。  
+ 維度的父子式階層是使用一個特殊屬性 (稱為父屬性) 定義，以決定各成員如何互相關聯。 父屬性描述維度主資料表內的「自我參考關聯性」** 或「自我聯結」**。 父子式階層是由單一父屬性所建構的。 因為階層中的層級是從與父屬性相關之成員間的父子式關聯性衍生而來，所以只會將一個層級指派給父子式階層。 父子式階層的維度結構描述，相依於維度主資料表上所顯示的自我參考關聯性。 例如，下圖說明**DimOrganization** [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 範例資料庫中的 DimOrganization 維度主資料表。  
   
  ![DimOrganization 資料表中的自我參考聯結](../dev-guide/media/dimorganization.gif "DimOrganization 資料表中的自我參考聯結")  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 561cbbb64734c117b295ca6d97420b6980fa5428
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0495ed563585a5b7427655428a257174673fc02
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725492"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545915"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>最大容量規格 (Analysis Services)
   下表指定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 元件中的不同伺服器部署模式下，所定義之各種物件的大小和數目上限。  
@@ -34,7 +33,7 @@ ms.locfileid: "62725492"
 ##  <a name="multidimensional-and-data-mining-deploymentmode0"></a><a name="bkmk_OLAP"></a>多維度和資料採礦（DeploymentMode = 0）  
  MOLAP 儲存模式，會同時儲存資料和中繼資料，對於檔案大小另有實體限制。 字串存放檔案的預設大小上限為 4 GB。 如果您需要更大的字串存放檔案，可以指定不同的字串儲存體架構。 如需詳細資訊，請參閱[設定維度和資料分割的字串儲存體](../configure-string-storage-for-dimensions-and-partitions.md)。  
   
-|Object|大小/數目上限|  
+|物件|大小/數目上限|  
 |------------|----------------------------|  
 |執行個體中的資料庫|2^31-1 = 2,147,483,647|  
 |資料庫中的維度|2^31-1 = 2,147,483,647|  
@@ -63,7 +62,7 @@ ms.locfileid: "62725492"
   
 ##  <a name="sharepoint-deploymentmode1"></a><a name="bkmk_sharepoint"></a>SharePoint （DeploymentMode = 1）  
   
-|Object|大小/數目上限|  
+|物件|大小/數目上限|  
 |------------|----------------------------|  
 |執行個體中的資料庫|2^31-1 = 2,147,483,647|  
 |資料庫中的資料表|2^31-1 = 2,147,483,647|  
@@ -81,7 +80,7 @@ ms.locfileid: "62725492"
   
 ##  <a name="tabular-deploymentmode2"></a><a name="bkmk_vertipaq"></a>表格式（DeploymentMode = 2）  
   
-|Object|大小/數目上限|  
+|物件|大小/數目上限|  
 |------------|----------------------------|  
 |執行個體中的資料庫|2^31-1 = 2,147,483,647|  
 |資料庫中的資料表|2^31-1 = 2,147,483,647|  

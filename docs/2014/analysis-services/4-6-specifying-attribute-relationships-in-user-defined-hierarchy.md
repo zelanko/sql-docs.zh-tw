@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 620eb875dfb4b3e7594000777feb23993d9e129e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493854"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528304"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>在使用者定義階層的屬性之間指定屬性關聯性
   如同您在這個教學課程中已學到的，您可以將屬性階層組織成使用者階層內的層級，在 Cube 中為使用者提供導覽路徑。 使用者階層可代表自然階層，例如縣 (市)、省份和國家 (地區)，或只代表導覽路徑，例如員工姓名、職稱和部門名稱。 對於導覽階層的使用者而言，這兩種類型的使用者階層是一樣的。  
@@ -42,7 +41,7 @@ ms.locfileid: "69493854"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     此時，圖表中會顯示一個警告圖示，因為關聯性是重複的。 關聯性**完整名稱** -> **Geography**-> **郵遞區號**已經存在，而您剛建立了關聯性**完整名稱** -> 的**郵遞區號**。 關係**地理位置**-> **郵遞區號**現在是多餘的，因此我們會將它移除。  
+     此時，圖表中會顯示一個警告圖示，因為關聯性是重複的。 關聯性**完整名稱**  ->  **Geography** ->  **郵遞區號**已經存在，而您剛建立了關聯性**完整名稱**的  ->  **郵遞區號**。 關係**地理位置** ->  **郵遞區號**現在是多餘的，因此我們會將它移除。  
   
 6.  在 [屬性關聯性]**** 窗格中，以滑鼠右鍵按一下 [地理位置]****-> [郵遞區號]****，然後按一下 [刪除]****。  
   
@@ -54,9 +53,9 @@ ms.locfileid: "69493854"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     關係**地理位置**-> **City**現在是多餘的，因此我們會將其刪除。  
+     關係**地理位置** ->  **City**現在是多餘的，因此我們會將其刪除。  
   
-11. 在 [屬性關聯性] 窗格中，以滑鼠右鍵按一下 [ **Geography**-> **City** ]，然後按一下 [**刪除**]。  
+11. 在 [屬性關聯性] 窗格中，以滑鼠右鍵按一下 [ **Geography** ->  **City** ]，然後按一下 [**刪除**]。  
   
 12. 當 [刪除物件]**** 對話方塊顯示時，按一下 [確定]****。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "69493854"
   
 20. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-21. 在 [屬性關聯性] 窗格中，以滑鼠右鍵按一下 [**地理位置**-> **國家/地區**]，然後按一下 [**刪除**]。  
+21. 在 [屬性關聯性] 窗格中，以滑鼠右鍵按一下 [**地理位置** ->  **國家/地區**]，然後按一下 [**刪除**]。  
   
 22. 當 [刪除物件]**** 對話方塊顯示時，按一下 [確定]****。  
   

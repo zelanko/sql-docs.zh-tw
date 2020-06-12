@@ -1,5 +1,6 @@
 ---
 title: 在 XPath 查詢中指定 XPath 變數（SQLXML）
+description: 查看如何在 SQLXML 4.0 XPath 查詢中指定 XPath 變數的範例。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f73bb6880fb19f3e49387d9d3d0bb57100ffdf42
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56169fafb9d5705360899fb38757abaf599f96a9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252542"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529851"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定 XPath 變數 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "75252542"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-use-the-xpath-variables"></a>A. 使用 XPath 變數  
- 範例範本由兩個 XPath 查詢所組成。 每個 XPath 查詢都會採用一個參數。 此範本也會指定這些參數的預設值。 如果未指定參數值，則會使用預設值。 ** \<Sql：標頭>** 中指定了兩個具有預設值的參數。  
+ 範例範本由兩個 XPath 查詢所組成。 每個 XPath 查詢都會採用一個參數。 此範本也會指定這些參數的預設值。 如果未指定參數值，則會使用預設值。 中指定了兩個具有預設值的參數 **\<sql:header>** 。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

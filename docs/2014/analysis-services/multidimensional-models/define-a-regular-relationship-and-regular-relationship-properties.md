@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 840280d8-20c3-46c0-99ea-62479469c36b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c13fecba6b36a5a3ac6ac0c37f94416b612c69f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b4f49e219a85d5577fb1acddfe14e7afd3b105d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075745"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547070"
 ---
 # <a name="define-a-regular-relationship-and-regular-relationship-properties"></a>定義一般關聯性及一般關聯性屬性
   當您定義新的 Cube 維度或新的量值群組時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會嘗試偵測是否有一般關聯性，然後將維度使用方式設定設為 `Regular`。 在 Cube 設計師的 [維度使用方式]**** 索引標籤上，您可以檢視或編輯一般維度關聯性。  

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: d154477d-3e4b-4e9b-a306-8166a0d83d21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ec2b1ec7c4f9a3dc0053ad323fcc54cf36522da
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070174"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547420"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>結果窗格 (採礦模型預測檢視)
   [結果]**** 窗格會顯示在預測查詢產生器的 [設計]**** 檢視中，所設計之資料採礦預測查詢的結果。 您可以將方格的選取範圍或整個結果方格複製到剪貼簿。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **切換到查詢設計檢視**  
  按一下，即可在 [設計]****、[查詢]**** 及 [結果]**** 窗格之間切換。  
   

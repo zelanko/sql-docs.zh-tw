@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e3f47b6cfe97806f093ee4ac1c9c8574056042d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072844"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547350"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步處理 Analysis Services 資料庫
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含資料庫同步處理功能，此功能藉由將來源伺服器上資料庫的資料和中繼資料複製到目的地伺服器上的資料庫，讓兩個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫相等。 使用同步處理資料庫功能可完成下列任何一項工作：  
@@ -42,7 +41,7 @@ ms.locfileid: "66072844"
 > [!NOTE]  
 >  以下針對舊版 Analysis Services 所撰寫的技術白皮書依然適用於使用 SQL Server 2012 所建立的可擴充式多維度方案。 如需詳細資訊，請參閱 [使用 Analysis Services 向外延展查詢](https://go.microsoft.com/fwlink/?LinkId=253136) 和 [使用唯讀資料庫向外延展查詢 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253137.)  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  在您起始資料庫同步處理的目的地 (或目標) 伺服器上，您必須是 Analysis Services 伺服器管理員角色的成員。 在來源伺服器上，您的 Windows 使用者帳戶必須擁有來源資料庫的完整控制權限。 如果您以互動方式同步處理資料庫，請記得同步處理是在 Windows 使用者識別的安全性內容之下執行。 如果系統拒絕您的帳戶存取特定物件，這些物件將會從作業中排除。 如需伺服器管理員角色和資料庫許可權的詳細資訊，請參閱[授與伺服器管理員許可權 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)並[授與資料庫許可權 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)。  
   
  TCP 通訊埠 2383 必須已在兩部伺服器上開啟，好讓預設執行個體之間能夠進行遠端連接。 如需在 Windows 防火牆中建立例外狀況的詳細資訊，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
@@ -129,7 +128,7 @@ ms.locfileid: "66072844"
   
      [位置]**** 選項會顯示一個方格，其中列出有關來源資料庫之遠端資料分割之儲存位置的詳細資訊，包括來源和目的地資訊，以及各個位置所使用的儲存體大小 (從選取的資料庫取得)。 方格包含下列資料行：  
   
-     **同步**  
+     **同步處理**  
      選取以納入在同步處理期間包含遠端分割區的位置。  
   
     > [!NOTE]  

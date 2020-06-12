@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3f1c43ad454f499429a151dc23177e380f4eac88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e45433b1a7e031c0aa5e549f9b2d48c036ef91c6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892858"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669786"
 ---
 # <a name="data-types-dmx"></a>資料類型 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  當您使用資料採礦延伸模組（DMX）在中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]定義新的採礦模型時，您必須為模型中的每個資料行提供資料類型。 資料類型描述資料採礦演算法建立模型時，將會使用的資料。  
+  當您使用資料採礦延伸模組（DMX）在中定義新的採礦模型時 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您必須為模型中的每個資料行提供資料類型。 資料類型描述資料採礦演算法建立模型時，將會使用的資料。  
   
  資料類型會視演算法而定。 每個演算法決定支援哪些資料類型，以及如何使用這些資料類型。 Microsoft 演算法支援下列資料類型：  
   
@@ -26,13 +26,13 @@ ms.locfileid: "68892858"
   
 -   long  
   
--   Boolean  
+-   布林值  
   
 -   Double  
   
--   Date  
+-   日期  
   
- 如需有關[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援之資料類型的詳細資訊，請參閱[資料類型 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)。  
+ 如需有關支援之資料類型的詳細資訊 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱[資料類型 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   

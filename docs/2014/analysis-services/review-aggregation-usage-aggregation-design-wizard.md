@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: 107ee872-3df2-4931-b56c-af11e38f6745
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f52ec05ddadc6bb23968f6b5f8ee7fda9adc65a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a248721ee64ff815c1b5b73a81d3b29fc5d2b84
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070223"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547400"
 ---
 # <a name="review-aggregation-usage-aggregation-design-wizard"></a>檢閱彙總使用方式 (彙總設計精靈)
   使用 **[檢閱彙總使用方式]** 頁面，即可設定彙總使用方式設定。  
   
-## <a name="options"></a>選項。  
- **預設**  
+## <a name="options"></a>選項  
+ **預設值**  
  選取此選項，即可將屬性的彙總使用方式設定設為 Default。 透過使用這項設定，設計工具會根據屬性和維度的類型來套用預設規則。  
   
  `Full`  
  選取此選項，即可將屬性的彙總使用方式設定設為 `Full`。 透過使用這項設定，Cube 的每個彙總都必須包含這個屬性或在屬性鏈結中較低的相關屬性。 當某個屬性包含許多成員時，您就應該避免使用 `Full` 彙總使用方式設定。 如果針對多個屬性或具有許多成員的屬性指定，這項設定可能會讓彙總無法設計，因為大小過大。  
   
- **None**  
+ **無**  
  選取此選項，即可將屬性的彙總使用方式設定設為 None。 透過使用這項設定，Cube 的任何彙總都無法包含這個屬性。  
   
  `Unrestricted`  

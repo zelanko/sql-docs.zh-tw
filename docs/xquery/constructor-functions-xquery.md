@@ -1,5 +1,6 @@
 ---
 title: 函式函數（XQuery） |Microsoft Docs
+description: 瞭解 XQuery 中的函式函式，可讓您建立 XSD 內建或使用者定義不可部分完成類型的實例。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 105ba6fb68e8d8031858fcf54dddc56b655ddcea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038988"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529204"
 ---
 # <a name="constructor-functions-xquery"></a>建構函式函數 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +139,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種**xml**類型資料行中。  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. 使用 dateTime() XQuery 函數擷取較舊的產品描述  
- 在此範例中，會先將範例 XML 檔指派給**xml**類型變數。 本檔包含三個範例`ProductDescription` <> 元素，其中每個專案都包含`DateCreated` <的> 子項目。  
+ 在此範例中，會先將範例 XML 檔指派給**xml**類型變數。 本檔包含三個範例 <`ProductDescription`> 元素，其中每個專案都包含 <的 `DateCreated`> 子項目。  
   
  然後查詢該變數，只擷取在特定日期之前建立的那些產品描述。 為了進行比較，查詢會使用**xs： dateTime （）** 函式函數來輸入日期。  
   
@@ -173,7 +174,7 @@ select @x.query('
   
  請注意下列項目是從上一個查詢而來：  
   
--   .。。WHERE 迴圈結構用來抓取滿足 WHERE \<子句中指定之條件的 ProductDescription> 專案。  
+-   .。。WHERE 迴圈結構用來抓取 \<ProductDescription> 滿足 WHERE 子句中所指定條件的專案。  
   
 -   **Datetime （）** function 函數是用來建立**日期時間**類型值，以便適當地進行比較。  
   

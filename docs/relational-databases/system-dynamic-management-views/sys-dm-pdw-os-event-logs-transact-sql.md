@@ -3,8 +3,8 @@ title: sys.databases dm_pdw_os_event_logs （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.technology: system-objects
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -12,19 +12,19 @@ ms.assetid: a0daa8cf-72e2-4349-8be1-d3cc0f9b1e02
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed27e25a1aa977c8fc78186ae2bc9f96ee0e231e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b410cd5a710e0f18bb7afa139e9ef08cfa466ae8
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819270"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627325"
 ---
 # <a name="sysdm_pdw_os_event_logs-transact-sql"></a>sys.databases dm_pdw_os_event_logs （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   保存不同節點上不同 Windows 事件記錄檔的相關資訊。  
   
-|資料行名稱|資料類型|說明|範圍|  
+|資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|此記錄檔來源的設備節點。<br /><br /> pdw_node_id 和 log_name 形成此視圖的索引鍵。||  
 |log_name|**nvarchar(255)**|Windows 事件記錄檔名稱。<br /><br /> pdw_node_id 和 log_name 形成此視圖的索引鍵。||  

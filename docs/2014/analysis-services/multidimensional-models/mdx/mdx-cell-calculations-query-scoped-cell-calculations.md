@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 575bac6ba111259fe20540fd0b40f193f0a54b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a9c9d529bfeb26b959b2521e4ce3c3d7f10d082
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074417"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546442"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>建立查詢範圍資料格計算 (MDX)
   您可以使用多維度運算式 (MDX) 的 `WITH` 關鍵字，描述查詢內容中的導出資料格。 `WITH` 關鍵字有下列語法：  
@@ -34,7 +33,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
 |空集合|解析成空集合的 MDX 命名集運算式。 在此情況下，導出資料格的範圍是整個 Cube。|  
 |單一成員集合|解析成單一成員集合的 MDX 命名集運算式。|  
 |單一層級成員|解析成單一層級成員的 MDX 命名集運算式。 *Level_Expression*是這類集合運算式的範例。`Members` MDX 函數。 若要包含匯出成員，請使用*Level_Expression*。`AllMembers` MDX 函數。 如需詳細資訊，請參閱 [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx)。|  
-|下階集合|解析為指定成員之下階的 MDX 集合運算式。 這類集合運算式的範例`Descendants`為（*Member_Expression*、 *Level_Expresion*、 *Desc_Flag*） MDX 函數。 如需詳細資訊，請參閱 [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx)。|  
+|下階集合|解析為指定成員之下階的 MDX 集合運算式。 這類集合運算式的範例為 `Descendants` （*Member_Expression*、 *Level_Expresion*、 *Desc_Flag*） MDX 函數。 如需詳細資訊，請參閱 [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx)。|  
   
  如果 `String_Expression` 引數未描述維度，MDX 會假設已包含所有成員以供建構計算 Subcube。 因此，如果 `String_Expression` 引數是 NULL，導出資料格定義就會套用到整個 Cube。  
   

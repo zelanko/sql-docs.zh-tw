@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b1810eb23a8d0d0541606cb69197b8030463748
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079279"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543640"
 ---
 # <a name="defining-a-data-source-view"></a>定義資料來源檢視
   定義您在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案中使用的資料來源之後，下一個步驟通常是定義專案的資料來源檢視。 資料來源檢視是資料來源在專案中定義之指定資料表和檢視的中繼資料的單一統一檢視。 在資料來源檢視中儲存中繼資料可讓您在開發期間使用中繼資料，而不需要開啟與任何基礎資料來源的連接。 如需詳細資訊，請參閱 [多維度模型中的資料來源檢視](multidimensional-models/data-source-views-in-multidimensional-models.md)。  
@@ -26,9 +25,9 @@ ms.locfileid: "66079279"
   
 1.  在方案總管中 (於 [Microsoft Visual Studio] 視窗右側)，以滑鼠右鍵按一下 [資料來源檢視]****，然後按一下 [新增資料來源檢視]****。  
   
-2.  在 [歡迎使用資料來源檢視精靈]**** 頁面上，按 [下一步]****。 此時會出現 [選取資料來源]**** 頁面。  
+2.  在 [歡迎使用資料來源檢視精靈]  頁面上，按 [下一步] 。 此時會出現 [選取資料來源]**** 頁面。  
   
-3.  在 [關聯式資料來源]**** 底下，已選取 [Adventure Works DW 2012]**** 資料來源。 按 [下一步]  。  
+3.  在 [關聯式資料來源]**** 底下，已選取 [Adventure Works DW 2012]**** 資料來源。 按 [下一步] 。  
   
     > [!NOTE]  
     >  若要建立依據多個資料來源的資料來源檢視，首先要定義一個依據單一資料來源的資料來源檢視。 這個資料來源稱為主要資料來源。 然後您可以從次要資料來源加入資料表和檢視。 當您根據多個資料來源中的相關資料表設計包含屬性的維度時，可能需要將 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料來源定義為主要資料來源，才能使用其分散式查詢引擎功能。  
@@ -50,7 +49,7 @@ ms.locfileid: "66079279"
   
     -   **FactInternetSales (dbo)**  
   
-5.  按一下**>** 即可將選取的資料表加入至 [**包含的物件**] 清單。  
+5.  按一下 **>** 即可將選取的資料表加入至 [**包含的物件**] 清單。  
   
 6.  按 **[下一步]**。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35c9ee36bf30b18859fa3ded540e607a48d0beb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088365"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527655"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>導出成員表單編輯器 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中，使用 **[計算]** 索引標籤上的 **[導出成表單編輯器]** 窗格，即可建立或修改導出成員。  
@@ -39,7 +38,7 @@ ms.locfileid: "66088365"
   
  **請注意** 如果 **[父階層]** 指定 MEASURES 以外的階層，才可以使用此選項。  
   
- **更改**  
+ **變更**  
  選取即可顯示 [選取父成員]**** 對話方塊，然後選擇 [父成員]**** 的成員。 如需 [選取父成員]**** 對話方塊的詳細資訊，請參閱[選取父成員對話方塊 &#40;Analysis Services - 多維度資料&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md)。  
   
  **運算式**  

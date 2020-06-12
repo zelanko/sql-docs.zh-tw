@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7136c984315714ba6726633522c8702b4c3a84f8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082350"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528914"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>資料來源檢視 (維度結構索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用 [資料來源檢視]**** 窗格，即可從與選取之維度相關聯的資料來源檢視中檢視資料表和資料行。 此窗格會用來建立屬性 (attribute)、成員屬性 (property)、階層以及層級，方式是藉由從 [資料來源檢視]**** 窗格拖曳資料行至 ****[屬性] 或 [階層和層級]**** 窗格。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[資料來源檢視]**  
  顯示與選取之維度相關聯的資料來源檢視。  
   

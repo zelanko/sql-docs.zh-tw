@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef951825144f381ab37a83526ec96321fe43cfec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 755a7f9c8708664dbb3a65c223873cf1dd4e20c8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082274"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528864"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>決策樹圖表逐步解說（資料採礦增益集）
   如果您已經建立決策樹模型，就可以在 Visio 中使用 [決策樹] 圖形或 [相依性網路] 圖形來建立自訂的圖表。 本主題描述您可以使用 [**決策樹**] 圖形和這些控制項來執行的自訂：  
@@ -40,13 +39,13 @@ ms.locfileid: "66082274"
   
 1.  如果您在 [**圖形**] 清單中看不到 [ **Microsoft 資料採礦圖形**]，請按一下 [**更多圖形**]，選取 [**開啟**樣板]，然後從預設安裝位置開啟範本。  
   
-     \<磁片磁碟機>： \Program files （x85） \Microsoft SQL Server 2012 DM 增益集  
+     \<drive>： \Program files （x85） \Microsoft SQL Server 2012 DM 增益集  
   
 2.  將 [**決策樹**] 圖形拖曳至頁面上。  
   
 3.  在 [**決策樹 Visio 圖形 Wizard]** 的 [歡迎使用] 頁面上，按 **[下一步]**。  
   
-4.  在叢集 Wizard 的 [**選取資料來源** **]** 頁面上，選擇具有您想要[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]視覺化之模型的伺服器連接。  
+4.  在叢集 Wizard 的 [**選取資料來源** **]** 頁面上，選擇 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 具有您想要視覺化之模型的伺服器連接。  
   
 5.  選取適當的 [採礦模型]，然後按 **[下一步]**。  
   

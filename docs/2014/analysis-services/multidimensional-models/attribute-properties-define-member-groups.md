@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 006cc915-c499-4781-b9a7-01ad31bebf6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2da7f19fa9626792a117ffa0108a28c50f32c5f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95f9516c7a0077e97af348afa863fe15c8d4528b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077295"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544740"
 ---
 # <a name="define-member-groups"></a>定義成員群組
   如果屬性有大量成員，您可以選擇將這些成員分組成值區，減少使用者在階層中瀏覽資料時所看到的成員數目。 您也可以決定成員分組的值區數目和設定值區的命名配置。 如需詳細資訊，請參閱[群組屬性成員 &#40;離散化&#41;](attribute-properties-group-attribute-members.md)。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29d27d38a72954b1471db21c199c0372cac4036
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087463"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527254"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>設定 PowerPivot 資料重新整理的預存認證 (PowerPivot for SharePoint)
   只要您在 Secure Store Service 中建立目標應用程式來儲存想要使用的認證，PowerPivot 資料重新整理作業就可以在任何 Windows 使用者帳戶之下執行。 同樣地，若想要提供的資料庫登入不同於最初用於匯入 PowerPivot for Excel 資料的登入，可以將這些認證對應至 Secure Store Service 目標應用程式，然後在資料重新整理排程中指定該目標應用程式。  
@@ -75,11 +74,11 @@ ms.locfileid: "66087463"
   
 8.  略過目標應用程式的網頁 URL。 PowerPivot 資料重新整理不會使用它。  
   
-9. 按 [下一步]  。  
+9. 按 [下一步] 。  
   
 10. 在 [**指定 Secure Store 目標應用程式的認證欄位**] 頁面中，接受預設值。 欄位名稱和類型應該是 Windows 使用者名稱和 Windows 密碼。  
   
-11. 按 [下一步]。  
+11. 按一下 [下一步]。  
   
 12. 在 [目標應用程式管理員] 中，指定 SharePoint 使用者的 Windows 網域使用者帳戶，而該使用者必須具備目標應用程式的系統管理存取權 (例如新增或移除 [成員] 清單中之帳戶的能力)。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66087463"
   
     3.  加入將在資料重新整理排程中輸入此目標應用程式的 Windows 使用者和群組帳戶。  
   
-14. 按一下 [確定]  。  
+14. 按一下 [確定]。  
   
 15. 選取您剛才建立的目標應用程式，按一下向下箭號，然後選取 [**設定認證]。**  
   
@@ -99,7 +98,7 @@ ms.locfileid: "66087463"
   
      在 [Windows 使用者名稱] 及 [Windows 密碼] 中，輸入要用於執行資料重新整理之 Windows 使用者帳戶的認證。  
   
-17. 按一下 [確定]  。  
+17. 按一下 [確定]。  
   
 ###  <a name="step-2-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>步驟2：授與帳戶的「參與」許可權  
  帳戶必須先獲指派其所應用之任何 PowerPivot 活頁簿的「參與」權限，您才可使用預存認證。 您需要這個權限等級才能從文件庫開啟活頁簿，然後在重新整理資料之後，將其存回文件庫。  
@@ -162,13 +161,13 @@ ms.locfileid: "66087463"
   
 8.  略過目標應用程式的網頁 URL。 PowerPivot 資料重新整理不會使用它。  
   
-9. 按 [下一步]  。  
+9. 按 [下一步] 。  
   
 10. 在 [**指定 Secure Store 目標應用程式的認證欄位**] 頁面中，只有在資料來源使用 Windows 驗證時才接受預設值。 否則，請選擇適用於資料來源的欄位類型，然後編輯欄位名稱以符合此類型。  
   
      例如，您可能在欄位名稱中指定 SQL Server 使用者名稱及 SQL Server 使用者密碼，然後選擇使用者名稱及密碼做為欄位類型。  
   
-11. 按 [下一步]。  
+11. 按一下 [下一步]。  
   
 12. 在 [目標應用程式管理員] 中，針對應該擁有應用程式設定管理存取權的 SharePoint 使用者指定 Windows 網域使用者帳戶。  
   
@@ -180,7 +179,7 @@ ms.locfileid: "66087463"
   
     3.  加入將在資料重新整理排程頁面之資料來源區段中輸入此目標應用程式的 Windows 使用者和群組帳戶。  
   
-14. 按一下 [確定]  。  
+14. 按一下 [確定]。  
   
 15. 選取您剛才建立的目標應用程式，按一下向下箭號，然後選取 [**設定認證]。**  
   

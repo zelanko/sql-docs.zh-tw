@@ -12,17 +12,17 @@ ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8561661b2893cceb1cea9a31326d856bc1287acb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7575fc5d539c31e901b5229d215a3bfeb42b221c
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917203"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859442"
 ---
 # <a name="database-object-extended-properties-page"></a>資料庫物件 (擴充屬性頁面)
   擴充屬性讓您能夠將自訂屬性加入資料庫物件中。 使用此頁面來檢視或修改選取物件的擴充屬性。 所有資料庫物件類型的 [擴充屬性]  頁面都是相同的。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **Database**  
  顯示選取之資料庫的名稱。 此欄位是唯讀的。  
   

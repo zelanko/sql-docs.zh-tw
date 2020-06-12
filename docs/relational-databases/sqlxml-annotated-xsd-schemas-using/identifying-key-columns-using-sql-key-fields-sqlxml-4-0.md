@@ -1,5 +1,6 @@
 ---
 title: 使用 sql：索引鍵-欄位識別索引鍵資料行（SQLXML）
+description: 瞭解如何在 XPath 查詢中指定 sql：索引鍵欄位注釋以識別索引鍵資料行，以確保 SQLXML 4.0 查詢結果中的適當嵌套。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,12 +23,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71d42f9f3f819dc12964ea0f13de92dfc8db5663
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d4902cd16e1812740e6c2cc5e298cb0915ed119f
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257395"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215838"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>使用 sql:key-fields 來識別索引鍵資料行 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,19 +39,19 @@ ms.locfileid: "75257395"
   
  **Sql：索引鍵-欄位**的值會識別可唯一識別關聯中資料列的資料行。 如果需要多個資料行才能唯一識別某個資料列，這些資料行值就會以空格隔開。  
   
- 當元素包含在元素和子專案之間定義的** \<sql： relationship>** ，但未提供在父元素中指定之資料表的主鍵時，您必須使用**sql：索引鍵欄位**注釋。  
+ 當專案包含在專案和子專案之間定義的，但未提供在父元素中指定之資料表的主鍵時，您必須使用**sql：索引鍵欄位**注釋 **\<sql:relationship>** 。  
   
 ## <a name="examples"></a>範例  
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 當 sql： relationship> \<未提供足夠的資訊時，產生適當的嵌套  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 當未提供足夠的資訊時，產生適當的嵌套 \<sql:relationship>  
  這個範例會顯示必須指定**sql：索引鍵-欄位**的位置。  
   
- 請考慮下列結構描述。 架構會指定** \<order>** 和** \<customer>** 元素之間的階層，其中** \<order>** 元素是父系，而** \<customer>** 元素是子系。  
+ 請考慮下列結構描述。 架構會指定和專案之間的階層， **\<Order>** **\<Customer>** 其中專案 **\<Order>** 是父元素，而 **\<Customer>** 元素是子系。  
   
- Sql： relationship>標記是用來指定父子式關聯性。 ** \< ** 它會將 Sales.SalesOrderHeader 資料表中的 CustomerID 識別為參考 Sales.Customer 資料表中 CustomerID 子索引鍵的父索引鍵。 ** \<Sql： relationship>** 中提供的資訊並不足以唯一識別父資料表（SalesOrderHeader）中的資料列。 因此，如果沒有**sql：索引鍵-欄位**注釋，所產生的階層就不會正確。  
+ **\<sql:relationship>** 標記是用來指定父子式關聯性。 它會將 Sales.SalesOrderHeader 資料表中的 CustomerID 識別為參考 Sales.Customer 資料表中 CustomerID 子索引鍵的父索引鍵。 在中提供的資訊 **\<sql:relationship>** 並不足以唯一識別父資料表（SalesOrderHeader）中的資料列。 因此，如果沒有**sql：索引鍵-欄位**注釋，所產生的階層就不會正確。  
   
- 使用** \<Order>** 上指定的**sql：索引鍵-欄位**，批註會唯一識別父系（SalesOrderHeader 資料表）中的資料列，而且其子項目會顯示在其父系之下。  
+ 使用在上指定的**sql：索引鍵-欄位**時 **\<Order>** ，批註會唯一識別父系（SalesOrderHeader 資料表）中的資料列，而且其子項目會顯示在其父系之下。  
   
  這是結構描述：  
   
@@ -89,7 +90,7 @@ ms.locfileid: "75257395"
   
 1.  複製上述的結構描述程式碼，並將其貼到文字檔中。 將檔案儲存為 KeyFields1.xml。  
   
-2.  複製下列範本，並將其貼到文字檔中。 將檔案儲存為 KeyFields1T.xml，並放在儲存 KeyFields1.xml 的相同目錄中。 範本中的 XPath 查詢會傳回 CustomerID 小於3的** \<所有 Order>** 元素。  
+2.  複製下列範本，並將其貼到文字檔中。 將檔案儲存為 KeyFields1T.xml，並放在儲存 KeyFields1.xml 的相同目錄中。 範本中的 XPath 查詢會傳回 **\<Order>** CustomerID 小於3的所有元素。  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -127,7 +128,7 @@ ms.locfileid: "75257395"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. 指定 sql:key-fields 在結果中產生適當的巢狀結構  
- 在下列架構中，沒有使用** \<sql： relationship>** 所指定的階層。 架構仍然需要指定**sql： key-fields**注釋，以唯一識別 HumanResources Employee 資料表中的員工。  
+ 在下列架構中，沒有使用指定的階層 **\<sql:relationship>** 。 架構仍然需要指定**sql： key-fields**注釋，以唯一識別 HumanResources Employee 資料表中的員工。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -154,7 +155,7 @@ ms.locfileid: "75257395"
   
 1.  複製上述的結構描述程式碼，並將其貼到文字檔中。 將檔案儲存為 KeyFields2.xml。  
   
-2.  複製下列範本，並將其貼到文字檔中。 將檔案儲存為 KeyFields2T.xml，並放在儲存 KeyFields2.xml 的相同目錄中。 範本中的 XPath 查詢會傳回所有** \<HumanResources>** 元素：  
+2.  複製下列範本，並將其貼到文字檔中。 將檔案儲存為 KeyFields2T.xml，並放在儲存 KeyFields2.xml 的相同目錄中。 範本中的 XPath 查詢會傳回所有 **\<HumanResources.Employee>** 元素：  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

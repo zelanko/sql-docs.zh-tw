@@ -1,5 +1,6 @@
 ---
 title: 已展開-QName （XQuery） |Microsoft Docs
+description: 瞭解如何使用擴充的-QName （）函數來傳回 QName 的命名空間 URI 和本機名稱部分。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 295427f0b5b7dc9fe42ad363bb95ebab0a1be1eb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004579"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689340"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>與 QNames 相關的函式 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +48,10 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援從 xs:QName 類型轉換成任何其他類型。 因此，**擴充的 QName （）** 函數不能用在 XML 結構中。 例如，當您建構節點時，例如 `<e> expanded-QName(...) </e>`，該值必須為不具類型。 您將需要將 `expanded-QName()` 傳回的 xs:QName 類型值轉換成 xdt:untypedAtomic。 不過，並不支援此轉換。 本主題稍後將在範例中提供解決方案。  
   
--   您無法修改或比較現有的 QName 類型值。 例如， `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`會比較元素的值，<`e`>，以及**擴充的 qname （）** 函數所傳回的 QName。  
+-   您無法修改或比較現有的 QName 類型值。 例如，會 `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` 比較元素的值，<`e`>，以及**擴充的 qname （）** 函數所傳回的 QName。  
   
 ## <a name="examples"></a>範例  
- 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存**xml**在資料庫的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]各種 XML 類型資料行中。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在資料庫的各種**XML**類型資料行中 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 。  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. 取代 QName 類型節點值  
  此範例說明您可以如何修改 QName 類型的元素節點值。 本範例將執行下列動作：  
@@ -98,7 +99,7 @@ go
 </Root>   
 ```  
   
- 在下列查詢中，會使用`ElemQN` xml 資料類型的**modify （）** 方法和 xml DML 的 replace 值來取代 <> 元素值，如下所示。  
+ 在下列查詢中， `ElemQN` 會使用 xml 資料類型的**modify （）** 方法和 xml DML 的 replace 值來取代 <> 元素值，如下所示。  
   
 ```  
 -- the value.  
@@ -157,7 +158,7 @@ SELECT *
 FROM T  
 ```  
   
- 下列嘗試會加入另一個`root` <> 元素但失敗，因為 XML 結構中不支援展開的 QName （）函數。  
+ 下列嘗試會加入另一個 <`root`> 元素但失敗，因為 XML 結構中不支援展開的 QName （）函數。  
   
 ```  
 update T SET xmlCol.modify('  
@@ -165,7 +166,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- 解決方法是先插入具有 <`root`> 元素值的實例，然後加以修改。 在此範例中，插入 <`root`> 元素時，會使用 nil 初始值。 這個範例中的 XML 架構集合允許 <`root`> 元素的 nil 值。  
+ 解決方法是先插入具有 <> 元素值的實例 `root` ，然後加以修改。 在此範例中，插入 <> 元素時，會使用 nil 初始值 `root` 。 這個範例中的 XML 架構集合允許 <> 元素的 nil 值 `root` 。  
   
 ```  
 update T SET xmlCol.modify('  
@@ -186,7 +187,7 @@ go
   
  `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
- 您可以比較 QName 值，如下列查詢所示。 查詢只會傳回其值`root`符合**擴充的 qname （）** 函數所傳回之 QName 類型值的 <> 元素。  
+ 您可以比較 QName 值，如下列查詢所示。 查詢只會傳回 `root` 其值符合**擴充的 qname （）** 函數所傳回之 QName 類型值的 <> 元素。  
   
 ```  
 SELECT xmlCol.query('  

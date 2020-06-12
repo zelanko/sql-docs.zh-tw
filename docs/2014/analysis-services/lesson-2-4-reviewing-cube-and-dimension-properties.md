@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e30096bcd23f517e640903b0c9036633ad5427d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078994"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543500"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>檢閱 Cube 和維度屬性
   定義 Cube 之後，您可以使用 Cube 設計師來檢閱這些結果。 在下列工作中，您將檢閱 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案中 Cube 的結構。  
@@ -52,7 +51,7 @@ ms.locfileid: "66078994"
   
 9. 在方案總管中，以滑鼠右鍵按一下 [Cube]**** 節點中的 [Analysis Services 教學課程]****，然後按一下 [檢視程式碼]****。 您可能需要稍等一下。  
   
-     教學課程 cube 的 XML [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]程式碼會顯示在** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [cube [XML]]** 索引標籤上。這是在部署[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]期間用來在實例中建立 cube 的實際程式碼。 如需詳細資訊，請參閱[檢視 Analysis Services 專案的 XML &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md)。  
+     教學課程 cube 的 XML [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 程式碼會顯示在** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [cube [XML]]** 索引標籤上。這是在部署期間用來在實例中建立 cube 的實際程式碼 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 如需詳細資訊，請參閱[檢視 Analysis Services 專案的 XML &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md)。  
   
 10. 關閉 [XML 程式碼] 索引標籤。  
   

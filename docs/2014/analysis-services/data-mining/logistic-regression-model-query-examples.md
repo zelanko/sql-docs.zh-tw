@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d432d38794e65e8b8bea69608479e330649ee395
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084225"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522224"
 ---
 # <a name="logistic-regression-model-query-examples"></a>羅吉斯迴歸模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，也可以建立預測查詢來使用模型中的模式，透過新的資料進行預測。  
@@ -145,7 +144,7 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>建立離散化版本的客服中心採礦結構和模型  
   
-1.  在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的方案總管中，展開 [**採礦結構**]。  
+1.  在的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 方案總管中，展開 [**採礦結構**]。  
   
 2.  以滑鼠右鍵按一下 Call Center.dmm，然後選取 [複製]****。  
   
@@ -157,7 +156,7 @@ NATURAL PREDICTION JOIN
   
 6.  在 [採礦結構]**** 索引標籤中，以滑鼠右鍵按一下 Service Grade 的資料行，然後選取 [屬性]****。  
   
-7.  將屬性`Content`從 [**連續**] 變更為 [**離散**化]。 將`DiscretizationMethod`屬性變更為 [**群集**]。 針對 DiscretizationBucketCount 輸入 **3**。  
+7.  將 `Content` 屬性從 [**連續**] 變更為 [**離散**化]。 將 `DiscretizationMethod` 屬性變更為 [**群集**]。 針對 DiscretizationBucketCount 輸入 **3**。  
   
     > [!NOTE]  
     >  這些參數只用來說明此程序，並不一定會產生有效的模型。  
@@ -193,7 +192,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|預測函數|使用量|  
+|預測函數|使用方式|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為模型中另一個節點的子系。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|傳回指定狀態的已調整機率。|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|傳回指定之資料行的一個或一組預測值。|  

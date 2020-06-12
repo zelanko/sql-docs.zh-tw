@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83cdc571019cffd8ae99e00f119541736c6f503b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072720"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541280"
 ---
 # <a name="use-aggregate-functions"></a>使用彙總函式
   當維度用於配量量值時，量值會與該維度所含的階層一起彙總。 而總和行為則視指定給量值的彙總函式而定 對於大多數包含數值資料的量值而言，彙總函式是 `Sum`。 量值的值會依據所使用的階層層級而加總為不同的數量。  
   
- 在 Analysis Services 中，您建立的每個量值都有一個彙總函數可以決定量值的作業。 預先定義的匯總`Sum`類型`Min`包括`Max`、 `Count`、、、**相異計數**，以及數個其他更特殊化的函式。 或者，您如需透過複雜或自訂的公式執行彙總，可以建置 MDX 計算，而不使用預先建置的彙總函數。 例如，若您要定義百分比值的量值，可以在 MDX 中使用導出量值。 請參閱 [CREATE MEMBER 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)。  
+ 在 Analysis Services 中，您建立的每個量值都有一個彙總函數可以決定量值的作業。 預先定義的匯總類型包括 `Sum` 、 `Min` 、 `Max` 、 `Count` 、**相異計數**，以及數個其他更特殊化的函式。 或者，您如需透過複雜或自訂的公式執行彙總，可以建置 MDX 計算，而不使用預先建置的彙總函數。 例如，若您要定義百分比值的量值，可以在 MDX 中使用導出量值。 請參閱 [CREATE MEMBER 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)。  
   
  由 [Cube 精靈] 建立的量值，會在定義量值時，為其指派彙總類型。 若來源資料行包含數值資料，彙總類型一律為 `Sum`。 無論來源資料行的資料類型為何，一律會指派 `Sum`。 例如，若是使用 [Cube 精靈] 建立量值，並將其從事實資料表提取到所有資料行，則即使來源為日期時間資料行，所得量值的彙總類型都會是 `Sum`。 對於精靈所建立的量值，請務必檢查預先指派的彙總方法，以確認彙總函數的適用性。  
   

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c665c894a4e0bb3691c483a8d8bab084ac2fa276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0ebb99e8368254e085cc9a4f4b0dc9a040b24c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075440"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546954"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>使用商業智慧精靈定義時間智慧計算
   時間智慧增強功能是一種 Cube 增強功能，用於將時間計算 (時間檢視) 加入至選取的階層。 此增強功能支援下列計算類別目錄：  
@@ -43,7 +42,7 @@ ms.locfileid: "66075440"
   
  您將時間智慧套用到具有時間維度的 Cube。 (時間維度是 `Type` 屬性設成 `Time` 的維度)。 另外，該維度時間屬性的， `Type` 屬性，也必須有適當的設定 (例如，年份或月份)。 如果您使用維度精靈來建立時間維度，維度及其屬性的 `Type` 屬性都會正確地設定。  
   
- 若要將時間智慧加入 Cube，您可使用 [商業智慧精靈]，並於 [選擇增強功能]**** 頁面上選取 [定義時間智慧]**** 選項。 然後，此精靈會引導您逐步完成選取要加入時間智慧的階層，並在將會套用時間智慧的階層內指定成員。 在 wizard 的最後一頁，您可以看到將對[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫進行的變更，以加入選取的時間智慧。  
+ 若要將時間智慧加入 Cube，您可使用 [商業智慧精靈]，並於 [選擇增強功能]**** 頁面上選取 [定義時間智慧]**** 選項。 然後，此精靈會引導您逐步完成選取要加入時間智慧的階層，並在將會套用時間智慧的階層內指定成員。 在 wizard 的最後一頁，您可以看到將對資料庫進行的變更， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以加入選取的時間智慧。  
   
 ## <a name="selecting-a-time-hierarchy"></a>選取時間階層  
  在 [選擇目標階層與計算]**** 頁面上，您可以選取時間增強功能套用的時間階層。 每一次執行商業智慧精靈時，您只可以套用時間增強功能到一個時間階層。 如果您要套用增強功能到多個時間階層，就要再次執行精靈。  
@@ -66,7 +65,7 @@ ms.locfileid: "66075440"
 ## <a name="viewing-the-time-intelligence-enhancement"></a>檢視時間智慧增強功能  
  在 [商業智慧精靈] 的最後一頁，您可以檢視將會對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫進行的變更。 針對時間智慧增強功能，精靈會變更選取的時間維度、關聯的資料來源檢視以及關聯的 Cube，如下表所述。  
   
-|Object|變更|  
+|物件|變更|  
 |------------|------------|  
 |時間維度|針對每個計算 (或檢視) 加入屬性。|  
 |資料來源檢視|針對時間維度中的每個新屬性，在時間資料表內加入導出資料行。|  

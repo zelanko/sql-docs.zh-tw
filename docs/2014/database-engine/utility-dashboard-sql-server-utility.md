@@ -10,19 +10,19 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ce0c700e7e53ef1b055fa476e1e259fefe6c0aa
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773810"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857759"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>公用程式儀表板 (SQL Server 公用程式)
   若要查看 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式儀表板中的資料，請在公用程式總管樹狀目錄中，選取最上方的節點，也就是標示為 "Utility<UCP_Name>\\(ComputerName\UCP)" 的節點。 此儀表板包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式內所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體及所有資料層應用程式中的摘要和詳細資料。 若要重新整理儀表板中的資料，請以滑鼠右鍵按一下公用程式總管樹狀目錄中的最上方節點，然後選取 [重新整理]****。  
   
  如需如何建立公用程式控制點的詳細資訊，請參閱 [建立 SQL Server 公用程式控制點 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)。 如需如何將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體加入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式的詳細資訊，請參閱 [註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  Managed 執行個體健全狀況  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體的健全狀態會顯示在 [公用程式總管] 內容窗格的左邊。  
   

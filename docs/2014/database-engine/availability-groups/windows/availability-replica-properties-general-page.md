@@ -12,12 +12,12 @@ ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c1455e4330ef4d9c8c0c6e3e07e285cf548c7b4
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791902"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858898"
 ---
 # <a name="availability-replica-properties-general-page"></a>可用性複本屬性 (一般頁面)
   使用此對話方塊來檢視可用性複本的屬性。  
@@ -29,7 +29,7 @@ ms.locfileid: "62791902"
   
 -   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **可用性群組名稱**  
  可用性群組的名稱。 這是使用者指定的名稱，它在 Windows Server 容錯移轉叢集 (WSFC) 內必須是唯一的。  
   
