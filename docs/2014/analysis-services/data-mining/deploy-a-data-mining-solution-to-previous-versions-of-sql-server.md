@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29bd841ea0dd2d4676e087c9886f678eedc9a8f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084680"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522643"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>將資料採礦方案部署到舊版的 SQL Server
   本章節描述當您嘗試將 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 執行個體內建立的資料採礦模型或資料採礦結構部署到使用 SQL Server 2005 Analysis Services 的資料庫，或是當您將 SQL Server 2005 中建立的模型部署到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體時，可能發生的相容性問題。  
@@ -60,7 +59,7 @@ ms.locfileid: "66084680"
   
  當您在 SQL Server 2005 Analysis Services 中開啟此採礦結構時， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 會引發錯誤，然後重新產生此結構來移除鑑效組資料分割。  
   
- 重建結構之後，屬性視窗中無法再使用維持的分割區大小。不過，ASSL 腳本\<檔案中仍可能會\<出現 ddl100_100： HoldoutMaxPercent>30/ddl100_100： HoldoutMaxPercent>）的值。  
+ 重建結構之後，屬性視窗中無法再使用維持的分割區大小。不過，值 \<ddl100_100:HoldoutMaxPercent> 30 \</ddl100_100:HoldoutMaxPercent> ）可能仍存在於 ASSL 腳本檔案中。  
   
 ##  <a name="deploying-models-with-filters"></a><a name="bkmk_Filter"></a>使用篩選部署模型  
  如果您使用 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 將篩選套用到採礦模型，此模型可以部署到 SQL Server 2005 執行個體，但是篩選將不會套用。  

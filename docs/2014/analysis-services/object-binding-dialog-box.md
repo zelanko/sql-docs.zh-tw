@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2bb5ad7c-2962-4559-8c95-cf7148bd2e72
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9cc86a5712dae9c231fa6e03d86a82d7dc172a75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9af22f47531f468c3ba43d119644790af0c48457
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072190"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540970"
 ---
 # <a name="object-binding-dialog-box"></a>物件繫結對話方塊
   使用 **中的** [物件繫結] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可定義 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件屬性與資料來源檢視中之資料表或資料行之間的繫結。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性]**** 視窗中，從下列 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件屬性值的下拉式清單中選取 [(新增)]****，即可顯示 [物件繫結]**** 對話方塊：  
@@ -34,7 +33,7 @@ ms.locfileid: "66072190"
   
 -   UnaryOperatorColumn  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **系結類型**  
  選取要用於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件的繫結。 可以使用下列類型的繫結：  
   

@@ -1,5 +1,6 @@
 ---
 title: 新增和移除 Access 資料庫檔案（AccessToSQL） |Microsoft Docs
+description: 瞭解如何在 SSMA 專案中新增或移除 Access 資料庫，以將存取資料移轉至 SQL Server 或 Azure SQL Database。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -28,24 +29,24 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 39df13a3cab2d842a313ca37fc4a98d0c331ba83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6806792fa828a5ebb4ea3a7a5a7e813626bff523
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104207"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293685"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>新增和移除 Access 資料庫檔案（AccessToSQL）
-若要將存取資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遷移至或 SQL Azure，您必須將一或多個 access 資料庫新增至 SSMA 專案。 這些資料庫必須是 Access 97 或更新版本。 如果您有舊版 Access 的資料庫，則必須將資料庫轉換成較新的版本。 若要這麼做，您可以開啟並儲存 Access 97 或更新版本中的資料庫，然後再將它們新增至 SSMA。  
+若要將存取資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，您必須將一或多個 access 資料庫新增至 SSMA 專案。 這些資料庫必須是 Access 97 或更新版本。 如果您有舊版 Access 的資料庫，則必須將資料庫轉換成較新的版本。 若要這麼做，您可以開啟並儲存 Access 97 或更新版本中的資料庫，然後再將它們新增至 SSMA。  
   
 ## <a name="what-happens-when-you-add-access-database-files"></a>當您新增 Access 資料庫檔案時，會發生什麼事？  
-當您將 Access 資料庫新增至 SSMA 專案時，SSMA 會讀取資料庫中繼資料，然後將此中繼資料加入至專案檔。 此中繼資料會描述資料庫及其物件。 SSMA 會在將物件轉換為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 sql azure 語法，以及將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 sql azure 時，使用中繼資料。 您可以在 [存取中繼資料瀏覽器] 中流覽此中繼資料，並查看個別資料庫物件的屬性。  
+當您將 Access 資料庫新增至 SSMA 專案時，SSMA 會讀取資料庫中繼資料，然後將此中繼資料加入至專案檔。 此中繼資料會描述資料庫及其物件。 SSMA 會在將物件轉換為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql azure 語法，以及將資料移轉至或 Sql azure 時，使用中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以在 [存取中繼資料瀏覽器] 中流覽此中繼資料，並查看個別資料庫物件的屬性。  
   
 > [!NOTE]  
-> Access 資料庫可以分割成多個檔案：包含資料表的後端資料庫，以及包含查詢、表單、報表、宏、模組和快捷方式的前端資料庫。 如果您想要將分割資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，請將前端資料庫新增至 SSMA。  
+> Access 資料庫可以分割成多個檔案：包含資料表的後端資料庫，以及包含查詢、表單、報表、宏、模組和快捷方式的前端資料庫。 如果您想要將分割資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，請將前端資料庫新增至 SSMA。  
   
 ## <a name="permissions-that-are-required-by-ssma"></a>SSMA 所需的許可權  
-若要將 Access 資料庫移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到或 SQL Azure，Users 群組和 Admin 使用者必須具有 [管理] 許可權。 如需如何使用工作組保護來遷移資料庫的相關資訊，請參閱[準備 Access 資料庫以進行遷移](preparing-access-databases-for-migration-accesstosql.md)。  
+若要將 Access 資料庫移轉到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，Users 群組和 Admin 使用者必須具有 [管理] 許可權。 如需如何使用工作組保護來遷移資料庫的相關資訊，請參閱[準備 Access 資料庫以進行遷移](preparing-access-databases-for-migration-accesstosql.md)。  
   
 ## <a name="selecting-databases-to-add"></a>選取要新增的資料庫  
 如果您想要將一個或多個資料庫新增至 SSMA 專案，而且檔案全都位於一個已知位置，您可以使用下列程式來新增檔案。  
@@ -84,7 +85,7 @@ ms.locfileid: "68104207"
   
     您可以使用清單頂端的 [**全選**] 和 [**全部清除**] 按鈕來選取或清除所有資料庫。 您可以按住 CTRL 鍵來選取多個資料庫，或按住 SHIFT 鍵來選取某個範圍的資料庫。  
   
-7.  按 [下一步]  。  
+7.  按 [下一步] 。  
   
 8.  在 [驗證] 頁面上，按一下 **[完成]**。  
   

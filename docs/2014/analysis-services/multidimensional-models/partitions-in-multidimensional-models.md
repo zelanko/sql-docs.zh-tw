@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00d17af3ce46ee5b20a730e536321140bb69f4ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a36489037607ad046689e55825f5958cb9ee611
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073324"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545832"
 ---
 # <a name="partitions-in-multidimensional-models"></a>多維度模型中的分割區
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中， *「分割區」* (Partition) 提供載入量值群組之事實資料的實體儲存體。 系統會自動為每個量值群組建立一個分割區，但通常會建立其他分割區以進一步分割資料，因此處理效能更佳且查詢效能更快。  

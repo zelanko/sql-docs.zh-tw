@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6adfd4b23b6fe9129641271fc3c2381e161119ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530888"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545886"
 ---
 # <a name="object-naming-rules-analysis-services"></a>物件命名規則 (Analysis Services)
   本主題將描述物件命名慣例以及任何物件名稱 (以 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的程式碼或指令碼形式) 中無法使用的保留字和字元。  
@@ -66,7 +65,7 @@ ms.locfileid: "69530888"
   
  下表列出特定物件的無效字元。  
   
-|Object|無效字元|  
+|物件|無效字元|  
 |------------|------------------------|  
 |`Server`|在命名伺服器物件時要遵守 Windows 伺服器命名慣例。 如需詳細資訊，請參閱[命名慣例（Windows）](/windows/desktop/DNS/naming-conventions) 。|  
 |`DataSource`| `: / \ * \| ? " () [] {} <>` |  
@@ -80,10 +79,10 @@ ms.locfileid: "69530888"
   
 |伺服器模式和資料庫相容性層級|允許保留的字元嗎？|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (所有版本)|否|  
-|表格式 - 1050|否|  
-|表格式 - 1100|否|  
-|表格式-1130 和更高版本|是|  
+|MOLAP (所有版本)|No|  
+|表格式 - 1050|No|  
+|表格式 - 1100|No|  
+|表格式-1130 和更高版本|Yes|  
   
  資料庫可以有 ModelType 預設值。 預設值相當於多維度，因此不支援在資料行名稱中使用保留的字元。  
   

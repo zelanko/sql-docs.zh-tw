@@ -1,5 +1,6 @@
 ---
 title: XQuery 中的類型轉換規則 |Microsoft Docs
+description: 瞭解在 XQuery 中明確或隱含轉換成另一個資料類型時所套用的規則。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9dcae8facc642d43620bde77ab7f01467a8a54d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946219"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520125"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery 中的類型轉換規則
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "67946219"
   
  本主題說明使用下列其中一種方法，從一種類型轉換成另一種類型時，所套用的類型轉換規則：  
   
--   使用**cast 做為**或類型的函式函數（例如， `xs:integer("5")`）所做的明確轉換。  
+-   使用**cast 做為**或類型的函式函數（例如，）所做的明確轉換 `xs:integer("5")` 。  
   
 -   在類型升級期間所執行的隱含轉換  
   
@@ -95,7 +96,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- 下列查詢會傳回靜態錯誤，因為您不知道檔實例中> 元素有多少`root`最上層 <。  
+ 下列查詢會傳回靜態錯誤，因為您不知道 `root` 檔實例中> 元素有多少最上層 <。  
   
 ```  
 declare @x xml(myCollection)  
@@ -105,7 +106,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- 藉由在運算式中`root`指定單一 <> 元素，查詢就會成功。 查詢將可傳回 xs:string 類型的簡單類型值序列。  
+ 藉由在運算式中指定單一 <`root`> 元素，查詢就會成功。 查詢將可傳回 xs:string 類型的簡單類型值序列。  
   
 ```  
 declare @x xml(myCollection)  
@@ -115,7 +116,7 @@ select @x.query('/root[1]/A cast as xs:string?')
 go  
 ```  
   
- 在下列範例中，xml 類型的變數包含指定 XML 結構描述集合的文件關鍵字。 這指出 XML 執行個體必須是包含單一最上層元素的文件。 如果您在 XML 實例`root`中建立兩個 <> 元素，則會傳回錯誤。  
+ 在下列範例中，xml 類型的變數包含指定 XML 結構描述集合的文件關鍵字。 這指出 XML 執行個體必須是包含單一最上層元素的文件。 如果您在 XML 實例中建立兩個 <`root`> 元素，則會傳回錯誤。  
   
 ```  
 declare @x xml(document myCollection)  
@@ -167,7 +168,7 @@ min(xs:integer("1"), xs:double("1.1"))
  當從字串或 untypedAtomic 類型轉換成如 xs:base64Binary 或 xs:hexBinary 的二進位類型時，輸入值必須分別為 Base64 或已編碼的十六進位。  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>將值轉換成字串或 untypedAtomic 類型。  
- 轉換成 string 或 untypedAtomic 類型會將值轉換成其 XQuery 標準語彙表示法。 具體而言，這意謂著在輸入期間已遵守特定模式或其他條件約束的值，將不會根據該條件約束來表示。  若要告知使用者這項[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資訊，請在將這些類型載入架構集合時提供警告，以旗標類型條件約束可能是問題的類型。  
+ 轉換成 string 或 untypedAtomic 類型會將值轉換成其 XQuery 標準語彙表示法。 具體而言，這意謂著在輸入期間已遵守特定模式或其他條件約束的值，將不會根據該條件約束來表示。  若要告知使用者這項資訊，請在將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 這些類型載入架構集合時提供警告，以旗標類型條件約束可能是問題的類型。  
   
  當將 xs:float 或 xs:double 類型或它其中任何一個子類型的值，轉換成 string 或 untypedAtomic 類型時，該值會以科學記號表示。 只有當值的絕對值小於 1.0E-6，或大於或等於 1.0E6 時才會這麼做。 這意謂著 0 是以科學記號序列化成 0.0E0。  
   

@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9035079fc94e0e39344fa89d9e7cf1b6e77fb8de
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493980"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543400"
 ---
 # <a name="browsing-the-deployed-cube"></a>瀏覽已部署的 Cube
   在下列工作中，您將瀏覽 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube。 我們的分析會跨多個維度比較量值，因此您將使用 Excel 樞紐分析表瀏覽資料。 使用樞紐分析表可讓您將客戶、日期和產品資訊放在不同的軸上，讓您可以看到跨特定時間週期、客戶人口統計資料和產品線檢視時，[網際網路銷售] 如何變更。  
   
 ### <a name="to-browse-the-deployed-cube"></a>瀏覽已部署的 Cube  
   
-1.  若要切換至中[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的 [Cube 設計師]，請在 [方案總管的 [cube] 資料夾中，按兩下 [ ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教學**課程] Cube。 **Cubes**  
+1.  若要切換至中的 [Cube 設計師] [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ，請在 [方案總管的 [ **cube]** 資料夾中，按兩下 [ ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學**課程] Cube。  
   
 2.  開啟 [瀏覽器]**** 索引標籤，然後按一下設計師工具列上的 [重新連接]**** 按鈕。  
   

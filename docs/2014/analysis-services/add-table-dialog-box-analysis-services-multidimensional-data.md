@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: b93f841f-0164-4e37-bd08-085aa179ea1f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b429f115eff1692495e1ded58fb6afadc6e5ee8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c038e13706c44891bae021aaf35d04a10b715a97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062806"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528238"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>[ 新增表格 ] 對話方塊 (Analysis Services - 多維度資料)
   在 [建立具名查詢]**** 對話方塊、[建立輪詢查詢]**** 對話方塊或 [建立處理查詢]**** 對話方塊中建立查詢時，使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [加入資料表]**** 對話方塊，即可加入資料表。 按一下 [建立具名查詢]**** 對話方塊、[建立輪詢查詢]**** 對話方塊或 [建立處理查詢]**** 對話方塊中之 [工具列]**** 窗格的 [加入資料表]****，即可顯示 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [加入資料表]**** 對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

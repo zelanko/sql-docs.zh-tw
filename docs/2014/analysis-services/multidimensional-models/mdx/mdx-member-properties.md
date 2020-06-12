@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c0326d45af68db966f120fa12e35eb59f30becc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b7fdf989fc23ea70be7d7863f5d4c6ac0b61d8a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074155"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546320"
 ---
 # <a name="using-member-properties-mdx"></a>使用成員屬性 (MDX)
   成員屬性包含每個 Tuple 中每個成員的基本資訊。 此基本資訊包括成員名稱、父層級、子系數目等等。 指定層級上的所有成員都能使用成員屬性。 就組織而言，會將成員屬性視為儲存在單一維度上，且以維度方式組織的資料。  
@@ -40,10 +39,10 @@ ms.locfileid: "66074155"
   
  如需詳細資訊，請參閱[使用者自訂成員屬性 &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md)。  
   
- 內建和使用者自訂成員屬性都可以透過使用`PROPERTIES`關鍵字或[properties](/sql/mdx/properties-mdx)函數來抓取。  
+ 內建和使用者自訂成員屬性都可以透過使用 `PROPERTIES` 關鍵字或[properties](/sql/mdx/properties-mdx)函數來抓取。  
   
 ## <a name="using-the-properties-keyword"></a>使用 PROPERTIES 關鍵字  
- `PROPERTIES` 關鍵字可以指定成員屬性，以供指定的座標軸維度使用。 `PROPERTIES`關鍵字會內嵌在 MDX [SELECT](/sql/mdx/mdx-data-manipulation-select)語句的`<axis specification>`子句中：  
+ `PROPERTIES` 關鍵字可以指定成員屬性，以供指定的座標軸維度使用。 `PROPERTIES`關鍵字會內嵌在 `<axis specification>` MDX [SELECT](/sql/mdx/mdx-data-manipulation-select)語句的子句中：  
   
 ```  
 SELECT [<axis_specification>  
@@ -69,9 +68,9 @@ SELECT [<axis_specification>
   
  `<property>` 語法的解析會依據您查詢的屬性而有所不同：  
   
--   可區分內容的內建成員屬性，必須在前面加上維度或層級的名稱。 但是，不區分內容的內建成員屬性，就無法以維度或層級名稱來限定。 如需如何搭配使用`PROPERTIES`關鍵字與內建成員屬性的詳細資訊，請參閱[內部成員屬性 &#40;MDX&#41;](mdx-member-properties-intrinsic-member-properties.md)。  
+-   可區分內容的內建成員屬性，必須在前面加上維度或層級的名稱。 但是，不區分內容的內建成員屬性，就無法以維度或層級名稱來限定。 如需如何搭配使用關鍵字與內建成員屬性的詳細資訊 `PROPERTIES` ，請參閱[內部成員屬性 &#40;MDX&#41;](mdx-member-properties-intrinsic-member-properties.md)。  
   
--   使用者自訂成員屬性應該在前面加上所屬層級的名稱。 如需如何搭配使用`PROPERTIES`關鍵字與使用者定義成員屬性的詳細資訊，請參閱[&#40;MDX&#41;的使用者自訂成員屬性](mdx-member-properties-user-defined-member-properties.md)。  
+-   使用者自訂成員屬性應該在前面加上所屬層級的名稱。 如需如何搭配使用 `PROPERTIES` 關鍵字與使用者定義成員屬性的詳細資訊，請參閱[&#40;MDX&#41;的使用者自訂成員屬性](mdx-member-properties-user-defined-member-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立和使用屬性值 &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)  

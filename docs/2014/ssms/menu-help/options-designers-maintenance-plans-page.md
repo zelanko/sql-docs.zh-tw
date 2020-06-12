@@ -12,17 +12,17 @@ ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e995fcdb128f7b9f67bb75ae41222c7d6d022d3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283183"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859836"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>選項（設計工具-維護計畫頁面）
   使用 [選項]  對話方塊以決定將新形狀新增至設計介面時，設計工具的預設行為。 在 [工具]  功能表上按一下 [選項]  ，展開 [設計工具]  ，然後選取 [維護計畫]  。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **依預設，會將新形狀連接到選取的形狀**  
  如果選取此核取方塊，當新形狀加入到設計介面時會自動連接到其他的形狀。 如果清除此核取方塊，加入新形狀時就不會連接。 選取此核取方塊來啟用下列方塊。  
   

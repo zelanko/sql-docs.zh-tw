@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3682d65ac06d970fed2d5346e9d39684485c5dfe
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064674"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527754"
 ---
 # <a name="browsing-a-clustering-model"></a>瀏覽群集模型
-  當您使用 **[流覽]** 開啟群集模型時，該模型會顯示在互動式檢視器中，類似于中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的群集檢視器。 此檢視器可協助您探索已建立的叢集，並且了解叢集特性。 您也可以將個別的區段與其他區段或母體進行比較與對照。  
+  當您使用 **[流覽]** 開啟群集模型時，該模型會顯示在互動式檢視器中，類似于中的群集檢視器 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 此檢視器可協助您探索已建立的叢集，並且了解叢集特性。 您也可以將個別的區段與其他區段或母體進行比較與對照。  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>探索模型  
  [**流覽**] 視窗包含下列工具，可協助您瞭解您的群集模型並探索基礎資料群組的屬性：  
@@ -65,7 +64,7 @@ ms.locfileid: "66064674"
   
 5.  現在，按一下 [**陰影變數**] 下拉式清單，然後選擇 [ **Age** ] 變數。 當您這麼做時，[**狀態**] 文字方塊中會出現值清單。  
   
-     當做此模型之輸入使用的 Age 資料行包含連續數值，但是基於叢集的目的，演算法一定會離散化數字。 您可以在這裡看到此演算法所建立的 bin 或群組，例如「非常低（\<= 27）」和「非常高（>= 63）」。  
+     當做此模型之輸入使用的 Age 資料行包含連續數值，但是基於叢集的目的，演算法一定會離散化數字。 您可以在這裡看到此演算法所建立的 bin 或群組，例如「非常低（ \<=27)" and "Very High (> = 63）」。  
   
 6.  從 [**狀態**] 下拉式清單中，選取 [**非常高**]，並查看圖表的變更方式。  
   
@@ -132,7 +131,7 @@ ms.locfileid: "66064674"
   
      ![重新命名叢集讓圖表更容易使用](media/dm13-cluster-rename.gif "重新命名叢集讓圖表更容易使用")  
   
- **各種**  
+ **提示**  
   
 -   按一下資料行標題，即可依該群集的重要性順序來排序屬性。  
   
@@ -177,7 +176,7 @@ ms.locfileid: "66064674"
   
      請注意，新的叢集特性圖表會加入至它自己的工作表中。 您可以將它移至與另一個設定檔相同的工作表，以便更輕鬆地比較它們，您可以在下一個步驟中進行。  
   
- **各種**  
+ **提示**  
   
 -   請注意，過去65叢集中的客戶主要特性是他們不會購買您的產品！ 如果您想要了解原因，可以瀏覽叢集並比較群組，也可以使用適合探索原因和結果的演算法來建立相關模型，例如決策樹模型或貝氏機率分類模型。  
   
@@ -216,7 +215,7 @@ ms.locfileid: "66064674"
   
      除了使用 Excel 以外，我們也建議您嘗試 Visio 的叢集檢視器，這個檢視器不僅能讓您檢視資料點，還能廣泛地修改並增強圖形。 如需詳細資訊，請參閱叢集[圖表逐步解說 &#40;資料採礦增益集&#41;](cluster-diagram-walkthrough-data-mining-add-ins.md)。  
   
- **各種**  
+ **提示**  
   
  取得客戶群組的深入解析之後，請嘗試 &#40;使用[適用于 excel 的資料表分析工具&#41;](what-if-scenario-table-analysis-tools-for-excel.md)或[目標搜尋案例 &#40;](goal-seek-scenario-table-analysis-tools-for-excel.md)適用于 Excel&#41;工具的資料表分析工具]，以探索模型中可能會變更以影響結果的因素。  
   

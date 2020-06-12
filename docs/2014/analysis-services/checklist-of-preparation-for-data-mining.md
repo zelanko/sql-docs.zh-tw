@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a20fde7ebe09a3e57af504846cf010c8120ffbc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 099f97ac1195f58ae9bf9dbc7c6b0671e6aada2c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088144"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527554"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>資料採礦準備清單
   雖然資料採礦增益集讓模型的建立和試驗工作變得相當簡單有趣，不過當您需要取得可重複、可付諸行動的結果時，就必須預留足夠的時間來擬定基本業務需求，以及取得和準備資料。 本節提供一份檢查清單以協助您規劃調查，並描述常見的問題。  

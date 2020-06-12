@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23b0125ab578ebb4fb8837c95ec61db900880ec6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a4b8978c895d1da2b9e63f4e66a39f2f0fff478
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064524"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527804"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>瀏覽遠端資料夾對話方塊 (Analysis Services - 多維度資料)
   **[瀏覽遠端資料夾]** 對話方塊會顯示為 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體定義之可用記錄和資料的資料夾清單。 您可以選取列出的資料夾，或視需要指定不同的資料夾。 執行下列其中一個步驟，即可顯示 **[瀏覽遠端資料夾]** 對話方塊：  
@@ -30,7 +29,7 @@ ms.locfileid: "66064524"
   
 -   在 [同步處理資料精靈] 中，於 [指定本機資料分割的位置]**** 或 [指定遠端資料分割的位置]**** 頁面上，[位置]**** 選項的 [目的資料夾]**** 資料行中，按一下省略符號按鈕 (**...**)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **選取資料夾**  
  選取資料夾，將 [選取的路徑]**** 設定為所要的路徑。  
   

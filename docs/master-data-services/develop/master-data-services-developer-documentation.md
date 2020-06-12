@@ -5,17 +5,17 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: master-data-services
 ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 415e20eb08041780b8d20fb124151cc700cacbe6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a56b4417361a0d86da345f25a7c054e3fc903a9
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728253"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731901"
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 開發人員文件
 
@@ -51,7 +51,7 @@ ms.locfileid: "73728253"
 ## <a name="web-server-namespaces"></a>Web 伺服器命名空間  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 會將一組組件安裝在 Web 伺服器電腦上。 這些組件包含可用於進階案例的命名空間，這些案例會自訂 Web 伺服器電腦的行為。 下表描述這些命名空間。  
   
-|命名空間|描述|  
+|命名空間|Description|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|包含的類別可用來從模型建立部署封裝以及將封裝部署到 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。|  
 |<xref:Microsoft.MasterDataServices.Services>|包含的類別可接收和處理透過 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式對 Web 伺服器電腦所做的 Web 服務作業。|  

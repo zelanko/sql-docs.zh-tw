@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5a46dc4c6130bb49d973ffc0025388c563c080f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e830fc353898e3ec835b338e84765a0cad0de43f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075216"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546820"
 ---
 # <a name="specifying-the-installation-target"></a>指定安裝目標
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署嚮導會從\<*專案名稱*中讀取安裝目標資訊> .deploymenttargets 檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]當您建立[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案時，會建立這個檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]使用 [ * \<專案名稱]>* [**屬性頁**] 對話方塊之 [**部署**] 頁面上指定的資料庫和伺服器\<，建立> .targets 檔案的*專案名稱*。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署嚮導會從 .deploymenttargets 檔案讀取安裝目標資訊 \<*project name*> 。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]當您建立專案時，會建立這個檔案 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]使用 [屬性頁] 對話方塊之 [**部署**] 頁面上指定的資料庫和伺服器 *\<project name>* **Properties Pages**來建立 \<*project name*> .targets 檔案。  
   
 ## <a name="modifying-the-installation-target-for-deployment"></a>修改部署的安裝目標  
  在某些情況下，您可能需要將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案部署到與 [部署]**** 頁面所指定之不同的資料庫或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上。 例如，您可能需要在部署之前先將專案部署到伺服器以進行測試，然後在測試完成後再部署到實際伺服器。 您也可能需要將完整與測試的專案部署到網路負載平衡叢集中的多個實際伺服器，或部署到臨時伺服器和實際伺服器。  
@@ -42,7 +41,7 @@ ms.locfileid: "66075216"
   
      -或-  
   
--   \<使用任何文字編輯器來修改*專案名稱*> .deploymenttargets 檔案。  
+-   \<*project name*>使用任何文字編輯器來修改 .deploymenttargets 檔案。  
   
 ## <a name="see-also"></a>另請參閱  
  [指定資料分割和角色部署選項](deployment-script-files-partition-and-role-deployment-options.md)   

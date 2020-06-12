@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75e5df5a0677ee205b5517f4c7ca89a390426971
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074254"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546290"
 ---
 # <a name="user-defined-member-properties-mdx"></a>使用者自訂成員屬性 (MDX)
   使用者自訂成員屬性可以做為屬性關聯性，增加到維度中的特定具名層級。 階層的 `(All)` 層級或階層本身無法增加使用者自訂成員屬性。  
@@ -30,7 +29,7 @@ ms.locfileid: "66074254"
 -   若要以程式設計方式加入使用者定義的成員屬性，您的應用程式可以使用分析管理物件 (AMO)，或 XML for Analysis (XMLA) 及 Analysis Services 指令碼語言 (ASSL) 的組合。 如需詳細資訊，請參閱 [屬性關聯性](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
   
 ## <a name="retrieving-user-defined-member-properties"></a>擷取使用者自訂成員屬性  
- 您可以使用`PROPERTIES`關鍵字或[properties](/sql/mdx/properties-mdx)函數來抓取使用者自訂成員屬性。  
+ 您可以使用 `PROPERTIES` 關鍵字或[properties](/sql/mdx/properties-mdx)函數來抓取使用者自訂成員屬性。  
   
 ### <a name="using-the-properties-keyword-to-retrieve-user-defined-member-properties"></a>使用 PROPERTIES 關鍵字擷取使用者自訂成員屬性  
  擷取使用者自訂成員屬性的語法，跟用以擷取內建層級成員屬性的語法類似，如以下語法所示：  

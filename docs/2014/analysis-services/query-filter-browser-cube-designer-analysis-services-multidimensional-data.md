@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa501e2a5b23f32fbd10d244788b1e6e938e938b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070543"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539730"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>查詢和篩選 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   Cube 設計師中的 [瀏覽器]**** 索引標籤區域包含查詢和篩選區域，以協助您從 Cube 選擇用於瀏覽或查詢的資料。 您可以加入所需的 Cube 物件數，然後在資料區域中檢視結果，或者使用 [在 Excel 中進行分析] 將結果匯出至報表，以視覺化使用者檢使用者使用者檢視資料的方式。  
@@ -27,8 +26,8 @@ ms.locfileid: "66070543"
   
  根據預設，執行查詢時，目前使用者的認證 (而非在 [模擬資訊]**** 頁面中指定的認證) 會用來連接資料來源。 不過，您也可以按一下 [工具列]**** 上的 [變更使用者]****，變更查詢或報表的使用者內容。  
   
-## <a name="options"></a>選項。  
- **Dimension**  
+## <a name="options"></a>選項  
+ **大小**  
  選取要配量 Subcube 的維度。  
   
  **階層**  
@@ -41,7 +40,7 @@ ms.locfileid: "66070543"
 |-----------|-----------------|  
 |**等於**|結果會限制為 **[篩選運算式]** 中定義的集合。|  
 |**不等於**|結果會限制為 **[篩選運算式]** 中定義之集合所排除的成員。|  
-|**在**|結果會限制為 **[篩選運算式]** 中選擇的命名集。|  
+|**位於**|結果會限制為 **[篩選運算式]** 中選擇的命名集。|  
 |**不在**|結果會限制為 **[篩選運算式]** 中選擇之命名集所排除的成員。|  
 |**包含**|結果會限制為成員名稱中包含 **[篩選運算式]** 中的字串之成員。|  
 |**Begins With**|結果會限制為成員名稱是以 **[篩選運算式]** 中的字串開頭之成員。|  

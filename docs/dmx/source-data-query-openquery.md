@@ -4,18 +4,18 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: caac43eb176e17a6e92e487f3dedae71a252f5af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8e3b85f3d18b25f9dda1ef4f442ec0822257fae
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887731"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670029"
 ---
-# <a name="ltsource-data-querygt---openquery"></a>&lt;來源資料查詢&gt; -OPENQUERY
+# <a name="ltsource-data-querygt---openquery"></a>&lt;來源資料查詢 &gt; -OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   以對現有資料來源的查詢取代來源資料查詢。 INSERT、SELECT FROM 預測聯結，以及 SELECT FROM 天然預測聯結語句支援**OPENQUERY**。  
@@ -29,7 +29,7 @@ OPENQUERY(<named datasource>, <query syntax>)
   
 ## <a name="arguments"></a>引數  
  *已命名的 datasource*  
- 存在於[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫上的資料來源。  
+ 存在於資料庫上的資料來源 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
  *查詢語法*  
  傳回資料列集的查詢語法。  
@@ -44,7 +44,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  `SELECT * FROM $system.MDSCHEMA_INPUT_DATASOURCES`  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用已經在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫中定義的 MyDS 資料來源來建立與[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料庫的連接，並查詢**vTargetMail** view。  
+ 下列範例會使用已經在資料庫中定義的 MyDS 資料來源 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 來建立與資料庫的連接 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] ，並查詢**vTargetMail** view。  
   
 ```  
 OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')  

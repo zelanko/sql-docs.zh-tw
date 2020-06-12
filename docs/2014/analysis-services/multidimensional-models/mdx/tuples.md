@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c39d03d60cb66f3b2e26b2e660bd85f4e5e9d4ec
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073771"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546130"
 ---
 # <a name="tuples"></a>Tuple
   Tuple 可以唯一識別 Cube 中的資料配量。 Tuple 是由維度成員的組合所構成，只要沒有兩個以上的成員屬於相同階層即可。  

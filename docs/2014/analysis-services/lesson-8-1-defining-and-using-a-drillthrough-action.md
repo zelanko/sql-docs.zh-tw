@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b34883d3dfa5a3d38f26a7ed905b5f00e7bcf8e6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493819"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542310"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>定義和使用鑽研動作
   依據事實維度測量事實資料的維度，但卻未正確篩選查詢傳回的資料，可能會降低查詢效能。 為了避免這種情況，您可以定義鑽研動作，以便限制傳回的資料列總數。 這樣做將會大幅改善查詢效能。  
@@ -38,7 +37,7 @@ ms.locfileid: "69493819"
   
      ![顯示窗格中的空白動作範本](../../2014/tutorials/media/l8-action2.gif "顯示窗格中的空白動作範本")  
   
-3.  在 [**名稱**] 方塊中，將此動作的名稱`Internet Sales Details Drillthrough Action`變更為。  
+3.  在 [**名稱**] 方塊中，將此動作的名稱變更為 `Internet Sales Details Drillthrough Action` 。  
   
 4.  在 [量值群組成員]**** 清單中，選取 [網際網路銷售]****。  
   
@@ -52,9 +51,9 @@ ms.locfileid: "69493819"
   
      ![其他屬性方塊](../../2014/tutorials/media/l8-action4.gif "其他屬性方塊")  
   
-8.  在 [**最大資料列數**] 方塊中，輸入`10`。  
+8.  在 [**最大資料列數**] 方塊中，輸入 `10` 。  
   
-9. 在 [**標題**] 方塊中`Drillthrough to Order Details...`，輸入。  
+9. 在 [**標題**] 方塊中，輸入 `Drillthrough to Order Details...` 。  
   
      這些設定會限制傳回的資料列數，指定在用戶端應用程式功能表中所顯示的標題。 下圖顯示 [其他屬性]**** 方塊中的這些設定。  
   
@@ -104,11 +103,11 @@ ms.locfileid: "69493819"
   
     -   ShipDateKey  
   
-6.  將 [**訂單日期**] 索引鍵`Order Date`屬性的 [**名稱**] 屬性變更為，然後按一下 [**名稱資料行**] 屬性的 [流覽] 按鈕，然後在 [名稱資料**行**] 對話方塊中，選取 [日期] 做為來源資料表，然後選取 [SimpleDate] 做為源**資料**行。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  將 [**訂單日期**] 索引鍵屬性的 [**名稱**] 屬性變更為 `Order Date` ，然後按一下 [**名稱資料行**] 屬性的 [流覽] 按鈕，然後在 [**名稱資料行**] 對話方塊中，選取 [日期] 做為來源資料表，然後選取 [SimpleDate] 做為源**資料**行。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  將 [**到期日期**] 索引鍵屬性的`Due Date`[**名稱**] 屬性變更為，然後使用與 [**訂單日期索引鍵**] 屬性相同的方法，將此屬性的 [名稱] 資料**行**屬性變更為**SimpleDate （WChar）**。  
+7.  將 [**到期日期**] 索引鍵屬性的 [**名稱**] 屬性變更為 `Due Date` ，然後使用與 [**訂單日期索引鍵**] 屬性相同的方法，將此屬性的 [名稱] 資料**行**屬性變更為**SimpleDate （WChar）**。  
   
-8.  將 [出**貨日期索引鍵**] 屬性的 [ `Ship Date`**名稱**] 屬性變更為，然後將這個屬性的 [名稱] 資料**行**屬性變更為**SimpleDate （WChar）**。  
+8.  將 [出**貨日期索引鍵**] 屬性的 [**名稱**] 屬性變更為 `Ship Date` ，然後將這個屬性的 [名稱] 資料**行**屬性變更為**SimpleDate （WChar）**。  
   
 9. 針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師] 的 [動作]**** 索引標籤。  
   

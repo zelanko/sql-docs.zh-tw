@@ -18,22 +18,21 @@ helpviewer_keywords:
 ms.assetid: 249971cc-4bcd-44f1-8241-bdacc04d3d38
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35521a8f12d3e5c16e63ba883a2b5d561bde4c96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c4a7e8ba43ac8ede0bd60409f84a6fa233ce182
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073483"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545880"
 ---
 # <a name="attributes-in-parent-child-hierarchies"></a>父子式階層中的屬性
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，通常會對維度中的成員內容進行一般假設。 分葉成員包含直接衍生自基礎資料來源的資料；非分葉成員包含衍生自對子成員執行的彙總。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，通常會對維度中的成員內容進行一般假設。 分葉成員包含直接衍生自基礎資料來源的資料；非分葉成員包含衍生自對子成員執行的彙總。  
   
  不過，在父子式階層中，除了從子成員彙總的資料之外，有些非分葉成員也含有衍生自基礎資料來源的資料。 對於在父子式階層中的這些非分葉成員，會建立特殊系統產生的子成員，它們包含基礎事實資料表資料。 它們稱為 *資料成員*，它們包含與非分葉成員直接關聯的值，此值與從非分葉成員之下階計算而來的摘要值無關。  
   
  資料成員只可供含有父子式階層的維度使用，而且唯有父屬性允許時才會顯示出來。 您可以使用維度設計師來控制資料成員的可見性。 若要公開資料成員，請將父屬性 (Attribute) 的 `MembersWithData` 屬性 (Property) 設定為 `NonLeafDataVisible.`。若要隱藏父屬性 (Attribute) 所包含的資料成員，請將父屬性 (Attribute) 上的 `MembersWithData` 屬性 (Property) 設定為 `NonLeafDataHidden`。  
   
- 這項設定不會覆寫非分葉成員的正常彙總行為；基於彙總用途，一律會將資料成員併入為子成員。 然而，可使用自訂積存公式來覆寫正常彙總行為。 多維度運算式（MDX） [DataMember](/sql/mdx/datamember-mdx)函數讓您能夠存取相關聯資料成員的值，而不論`MembersWithData`屬性的值為何。  
+ 這項設定不會覆寫非分葉成員的正常彙總行為；基於彙總用途，一律會將資料成員併入為子成員。 然而，可使用自訂積存公式來覆寫正常彙總行為。 多維度運算式（MDX） [DataMember](/sql/mdx/datamember-mdx)函數讓您能夠存取相關聯資料成員的值，而不論屬性的值為何 `MembersWithData` 。  
   
  父屬性的 `MembersWithDataCaption` 屬性提供具名範本給 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，用以產生資料成員的成員名稱。  
   

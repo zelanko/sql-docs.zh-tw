@@ -1,5 +1,6 @@
 ---
 title: namespace-uri 函數（XQuery） |Microsoft Docs
+description: 瞭解如何在 XQuery 中使用 namespace uri 函式，以傳回指定之 QName 的命名空間 URI。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a87e6108e68c3b9a2648abf7394f03f7e5c8d1ea
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929946"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306057"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>節點的相關函式 - namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  因為指定的 QName 沒有命名空間 URI 部份，而只有本機名稱部份，所以結果是長度為零的字串。  
   
- 下列查詢是針對指示類型的**xml**資料行所指定。 運算式`namespace-uri(/AWMI:root[1]/AWMI:Location[1])`會傳回 <`Location` `root`> 專案之第一個 <> 元素子系的命名空間 URI。  
+ 下列查詢是針對指示類型的**xml**資料行所指定。 運算式會傳回 `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` <> 專案之第一個 <> 元素子系的命名空間 URI `Location` `root` 。  
   
 ```  
 SELECT Instructions.query('  
@@ -98,7 +99,7 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- 您可以將上一個查詢中的命名空間 URI 變更為 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`。 接著，您將會收到 <`ProductDescription`> 元素的所有元素節點子系，其已展開的 QName 的命名`https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`空間 URI 部分為。  
+ 您可以將上一個查詢中的命名空間 URI 變更為 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`。 接著，您將會收到 <> 元素的所有元素節點子系， `ProductDescription` 其已展開的 QName 的命名空間 URI 部分為 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` 。  
   
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  

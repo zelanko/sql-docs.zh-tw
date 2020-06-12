@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 85b25625-a7ab-4960-9f9c-df22e8ecae37
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d93f676aec67b5d791924cbbda8f71a966d5bbc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09aa5a282e02b778b759cbdfc83950d3a2559423
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087813"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527474"
 ---
 # <a name="cluster-wizard-data-mining-add-ins-for-excel"></a>叢集精靈 (適用於 Excel 的資料採礦增益集)
   ![資料採礦功能區中的群集精靈](media/dmc-cluster.gif "資料採礦功能區中的群集精靈")  
@@ -65,7 +64,7 @@ ms.locfileid: "66087813"
   
  您也可以使用 CLUSTER_SEED 參數控制此起始值，以確保使用相同資料集的重複模型擁有相同的結果。  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>規格需求  
  您必須連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，才能使用 [叢集] 精靈。 如需詳細資訊，請參閱[連接到來源資料 &#40;適用于 Excel&#41;的資料採礦用戶端](connect-to-source-data-data-mining-client-for-excel.md)。  
   
 ## <a name="see-also"></a>另請參閱  

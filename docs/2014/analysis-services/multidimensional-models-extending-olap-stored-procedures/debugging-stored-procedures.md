@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f5971fe611f06a413ca48b2bc91237a8c87ee8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727744"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545390"
 ---
 # <a name="debugging-stored-procedures"></a>除錯預存程序
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預存程序實際上是以 C# (或任何其他 CLR 或 COM 語言) 撰寫的 CLR 或 COM 程式庫 (通常是 DLL)。 因此，偵錯預存程序十分類似在 Visual Studio 偵錯環境中除錯任何其他應用程式。 您可以使用整合偵錯功能，在 Visual Studio 開發環境中偵錯預存程序。 它們可讓您在程序位置上停止，檢查記憶體和登錄值，變更變數，觀察訊息流量，以及仔細查看程式碼的運作方式。  
@@ -41,7 +40,7 @@ ms.locfileid: "62727744"
   
     2.  在 [**附加 toProcess** ] 對話方塊中，選取 [**顯示所有使用者的進程**]。  
   
-    3.  在 [**可使用的進程**] 清單中，按一下 [**處理**] 資料行中的 [ **msmdsrv.exe**]。 如果在伺服器上執行一個以上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，您需要以您要使用之執行個體的識別碼來識別處理序。  
+    3.  在 [**可使用的進程**] 清單中，按一下 [**處理**] 資料行中的 [ **Msmdsrv.exe**]。 如果在伺服器上執行一個以上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，您需要以您要使用之執行個體的識別碼來識別處理序。  
   
     4.  在 [**附加至**] 文字方塊中，確認已選取適當的程式類型。 若為 CLR DLL，請依序按一下 [**選取**]、[**偵錯工具代碼類型**] 和 [**受管理**]，然後按一下 **[確定]**。 若為 COM DLL，請依序按一下 [**選取**]、[**偵錯工具代碼類型**] 和 [**原生**]，然後按一下 **[確定]**。  
   

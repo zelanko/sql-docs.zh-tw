@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c0411e2e19fbec88ab9c1bae8536d96725554f5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079025"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543490"
 ---
 # <a name="adding-attributes-to-dimensions"></a>將屬性加入至維度
   既然您已經定義維度，就可以使用代表維度中每個資料元素的屬性擴展它們。 屬性通常是以資料來源檢視中的欄位為基礎。 將屬性加入至維度時，您可以將欄位從任何資料表加入至資料來源檢視中。  
@@ -56,7 +55,7 @@ ms.locfileid: "66079025"
   
     -   **NumberCarsOwned**  
   
-    -   **來電**  
+    -   **手機**  
   
     -   **DateFirstPurchase**  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66079025"
   
     -   **StandardCost**  
   
-    -   **顏色**  
+    -   **色彩**  
   
     -   **SafetyStockLevel**  
   

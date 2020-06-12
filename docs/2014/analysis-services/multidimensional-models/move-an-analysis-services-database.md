@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f10901625ece0a154248f99370e427c7a999c87
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073603"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546060"
 ---
 # <a name="move-an-analysis-services-database"></a>移動 Analysis Services 資料庫
   通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要將多維度或表格式模型資料庫移至不同的位置。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。  
@@ -55,7 +54,7 @@ ms.locfileid: "66073603"
   
 7.  在 [資料夾]**** 文字方塊中，輸入資料庫資料夾的新位置。 或者，您可以使用瀏覽按鈕（**...**）來找出資料庫檔案夾。  
   
-8.  選取資料庫`ReadWrite`的模式。  
+8.  選取 `ReadWrite` 資料庫的模式。  
   
 9. 輸入在步驟 3 中使用的密碼，然後按一下 [確定]**** 執行附加命令。  
   

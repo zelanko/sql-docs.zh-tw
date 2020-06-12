@@ -1,5 +1,6 @@
 ---
 title: 將 Sybase ASE 資料庫移轉至 SQL Server-Azure SQL DB |Microsoft Docs
+description: 使用此建議的程式，將 SAP 調適型伺服器企業資料庫移轉至使用 SQL Server 移轉小幫手（SSMA） SQL Server 或 Azure SQL Database。
 ms.custom: ''
 ms.date: 11/30/2017
 ms.prod: sql
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c3735e03e3196f899ab33ca152364244e3331ac5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9bcca5d23fe147394a350ff8c640680ec674675
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028856"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292815"
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>將 SAP ASE 資料庫移轉至 SQL Server Azure SQL Database （SybaseToSQL）
-適用于 SAP 調適型伺服器 Enterprise （ASE）的 SQL Server 移轉小幫手（SSMA）是一種完整的環境，可協助[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您快速將 sap ASE 資料庫移轉至或 Azure SQL Database。 藉由使用適用于 SAP ASE 的 SSMA，您可以查看資料庫物件和資料、評估要遷移的資料庫、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將資料庫物件遷移至或 Azure SQL Database， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]然後將資料移轉至或 Azure SQL Database。  
+適用于 SAP 調適型伺服器 Enterprise （ASE）的 SQL Server 移轉小幫手（SSMA）是一種完整的環境，可協助您快速將 SAP ASE 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database。 藉由使用適用于 SAP ASE 的 SSMA，您可以查看資料庫物件和資料、評估要遷移的資料庫、將資料庫物件遷移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database，然後將資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database。  
   
 ## <a name="recommended-migration-process"></a>建議的移轉程序  
-若要成功地將物件和資料從 SAP ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫移轉至或 Azure SQL Database，請使用下列程式：  
+若要成功地將物件和資料從 SAP ASE 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database，請使用下列程式：  
   
 1.  [建立新的 SSMA 專案](working-with-ssma-projects-sybasetosql.md)。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "68028856"
   
 7.  [將轉換的資料庫物件載入 SQL Server/Azure SQL Database](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)。  
   
-    請儲存腳本並在或 Azure SQL Database 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行，或同步處理資料庫物件。  
+    請儲存腳本並在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database 中執行，或同步處理資料庫物件。  
   
 8.  [將資料移轉至 SQL Server/Azure SQL Database](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)。  
   

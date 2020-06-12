@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a7f00e4d9ecbcc539b470cf5b2afe5864eb6114
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086215"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525524"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>將篩選套用至採礦模型
   如果採礦結構包含巢狀資料表，則篩選可以套用至案例資料表、巢狀資料表或兩者。  
@@ -66,7 +65,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  按一下 [值]**** 文字方塊，然後在方塊中輸入值。  
   
-     例如，選取`Income`做為資料行，選取大於運算子（>），然後輸入`30000`。  
+     例如，選取 `Income` 做為資料行，選取大於運算子（>），然後輸入 `30000` 。  
   
 9. 在方格中，按下一個資料列。  
   
@@ -74,11 +73,11 @@ WHERE [Model] <> 'Water Bottle' )
   
 10. 在方格的下一個資料列中，按一下 [AND/OR]**** 文字方塊以加入條件。  
   
-     例如，若要建立 BETWEEN 條件，請從`AND`邏輯運算元的下拉式清單中選取。  
+     例如，若要建立 BETWEEN 條件，請 `AND` 從邏輯運算元的下拉式清單中選取。  
   
 11. 選取運算子並輸入值，如步驟 7 和 8 所述。  
   
-     例如，再次選取`Income` [當做資料行]，選取 [小於] 運算子（<），然後輸入`40000`。  
+     例如，再次選取 [當做資料 `Income` 行]，選取 [小於] 運算子（<），然後輸入 `40000` 。  
   
 12. 在方格中，按下一個資料列。  
   
@@ -86,7 +85,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>若要在採礦模型中的巢狀資料表加入篩選  
   
-1.  在 [ ** \<名稱>模型篩選器**] 對話方塊中，按一下 [**採礦結構**資料行] 下方格中的空白資料列。  
+1.  在 [ ** \<name> 模型篩選器**] 對話方塊中，按一下 [**採礦結構**資料行] 下方格中的空白資料列。  
   
 2.  從下拉式清單選取巢狀資料表的名稱。  
   
@@ -98,7 +97,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 4.  按一下 [**值**] 方塊，然後按一下 **（...）** 按鈕來建立運算式。  
   
-     [ ** \<名稱>篩選**] 對話方塊隨即開啟。 這個對話方塊只能在目前的資料表上設定條件，在此例中為巢狀資料表。  
+     [ ** \<name> 篩選**] 對話方塊隨即開啟。 這個對話方塊只能在目前的資料表上設定條件，在此例中為巢狀資料表。  
   
 5.  按一下 [採礦結構資料列]**** 方塊，然後從巢狀資料表資料行的下拉式清單選取資料行名稱。  
   
@@ -106,7 +105,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  按一下 [值]****，然後輸入值。  
   
-     例如，針對 [**採礦結構資料行**] `Model`，選取。 針對 [**運算子**] `<>`，選取，然後輸入`Water Bottle`值。 這種情況會建立下列篩選運算式：  
+     例如，針對 [**採礦結構資料行]，** 選取 `Model` 。 針對 [**運算子**]，選取 `<>` ，然後輸入值 `Water Bottle` 。 這種情況會建立下列篩選運算式：  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -115,7 +114,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  由於巢狀資料表屬性的數目基本上並無限制，所以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不會提供可能值的清單以供選取。 您必須輸入確實的值。 此外，您也不能在巢狀資料表中使用 LIKE 運算子。  
   
-1.  視需要新增更多條件，並在 [**條件**] `OR`方格左側的 [ **AND/or** ] 方塊中選取`AND`或來合併條件。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  視需要新增更多條件， `AND` `OR` 並在 [**條件**] 方格左側的 [ **AND/or** ] 方塊中選取或來合併條件。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  在 [模型篩選器]**** 對話方塊中，檢閱您使用 [篩選器]**** 對話方塊建立的條件。 巢狀資料表的條件會附加至案例資料表的條件，完整的篩選條件集合會在 [運算式]**** 文字方塊中顯示。  
   

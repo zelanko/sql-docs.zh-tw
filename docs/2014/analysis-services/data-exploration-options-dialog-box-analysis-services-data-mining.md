@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 876920c8-9d6f-4d09-abb2-53d78161a289
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b327a0a350e88fd197a52c710f8a991c892a0aea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aedd88a380ad8790d5492524a24028c6df03db3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086542"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525914"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>資料瀏覽選項對話方塊 (Analysis Services - 資料採礦)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [資料瀏覽選項]**** 對話方塊，即可設定 [瀏覽資料]**** 對話方塊的取樣與圖表選項。 您可以藉由在 [瀏覽資料]**** 對話方塊中按一下 [取樣選項]****，來顯示 [資料瀏覽選項]**** 對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

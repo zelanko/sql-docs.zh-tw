@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 92624ca4-de67-4ebd-aab2-8adb527d327e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 494b3a6e4c05a88e68da34aca34bfbdce2944fbe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069927"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538560"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>指令碼組合管理 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師的 [計算]**** 索引標籤上，使用 [指令碼組合管理]**** 窗格，即可存取和重新排列包含在指定 Cube 之 Cube 指令碼中的導出成員、命名集以及指令碼命令。  
@@ -25,13 +24,13 @@ ms.locfileid: "66069927"
 > [!NOTE]  
 >  表單檢視中不會顯示這個窗格。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **步驟**  
  顯示 Cube 指令碼中的導出成員、命名集和指令碼命令的執行順序。  
   
  在 [工具列]**** 窗格或內容功能表中，按一下 [上移]**** 或 [下移]****，即可變更計算的執行順序。  
   
- **類型**  
+ **型別**  
  顯示識別計算為導出成員、命名集或指令碼命令的圖示。  
   
  **命令**  

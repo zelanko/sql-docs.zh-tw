@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8bf766c6f0a7fd757b280b0f950a43cfdc025929
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 544071565a18ade74b3dd4f26945991987295cbc
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928429"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669602"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,11 +46,11 @@ FROM <model/structure>[.aspect]
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
-## <a name="top-n-and-order-by"></a>前\<n 個> 和排序依據  
- 您可以使用運算式來排序查詢的結果，然後可以使用**ORDER by**和**TOP**子句的組合傳回結果的子集。 這在您只想將結果傳送至最可能的回應者的目標郵寄等狀況中很有用。 您可以依照預測機率來排序目標郵寄預測查詢的結果，然後只傳回前\<n 個> 結果。  
+## <a name="top-n-and-order-by"></a>前 \< n 個> 和排序依據  
+ 您可以使用運算式來排序查詢的結果，然後可以使用**ORDER by**和**TOP**子句的組合傳回結果的子集。 這在您只想將結果傳送至最可能的回應者的目標郵寄等狀況中很有用。 您可以依照預測機率來排序目標郵寄預測查詢的結果，然後只傳回前 \< n 個> 結果。  
   
 ## <a name="select-list"></a>選取清單  
- 選取清單>可以包含純量資料行參考、預測函數和運算式。 * \< * 可使用的選項是根據演算法及下列內容而定：  
+ * \< 選取清單>* 可以包含純量資料行參考、預測函數和運算式。 可使用的選項是根據演算法及下列內容而定：  
   
 -   您是否查詢採礦結構或採礦模型  
   
@@ -76,7 +76,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- 您可以使用**WHERE**子句來限制查詢所傳回的案例。 **Where**子句會指定**where**運算式中的資料行參考必須與**select**語句之* \<select 清單>* 中的資料行參考具有相同的語義，而且只能傳回布林運算式。 **WHERE**子句的語法如下所示  
+ 您可以使用**WHERE**子句來限制查詢所傳回的案例。 **Where**子句會指定**where**運算式中的資料行參考必須與**select**語句之* \< select 清單>* 中的資料行參考具有相同的語義，而且只能傳回布林運算式。 **WHERE**子句的語法如下所示  
   
 ```  
 WHERE < condition expression >  

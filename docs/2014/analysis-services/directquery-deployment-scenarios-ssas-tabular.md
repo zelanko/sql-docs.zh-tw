@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23f7debc1d2253938f235461279f39bb085c2b2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081645"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528544"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery 部署案例 (SSAS 表格式)
   本主題提供 DirectQuery 模型設計和部署程序的逐步解說。 您可以設定 DirectQuery 只使用關聯式資料 (僅限 DirectQuery)，或者您可以將此模型設定為在使用快取資料與僅限關聯式資料之間切換 (混合模式)。 本主題說明這兩個模式的實作程序，並描述查詢結果中的可能差異 (視模型和安全性組態而定)。  
@@ -39,7 +38,7 @@ ms.locfileid: "66081645"
   
  依預設，DirectQuery 為停用狀態。 因此，您必須設定設計環境來支援 DirectQuery 模式。  
   
- 以滑鼠右鍵按一下方案總管中的 [ **model.bim** ] 節點，並將 [ **DirectQuery 模式]** 屬性`On`設定為。  
+ 以滑鼠右鍵按一下方案總管中的 [ **model.bim** ] 節點，並將 [ **DirectQuery 模式]** 屬性設定為 `On` 。  
   
  您可以隨時開啟 DirectQuery，但是若要確保您不會建立與 DirectQuery 模式不相容的資料行或公式，我們建議您從一開始就啟用 DirectQuery 模式。  
   
@@ -111,8 +110,8 @@ ms.locfileid: "66081645"
   
 |||  
 |-|-|  
-|**無快取的 DirectQuery**|沒有資料會載入到快取中。 模型永遠不會處理。<br /><br /> 模型只能透過支援 DAX 查詢的用戶端進行查詢。 查詢結果永遠是從原始資料來源傳回。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **DirectQuery**|  
-|**DirectQuery 並且查詢僅針對快取**|部署失敗。 不支援這樣的設定。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **記憶體**內部|  
+|**無快取的 DirectQuery**|沒有資料會載入到快取中。 模型永遠不會處理。<br /><br /> 模型只能透過支援 DAX 查詢的用戶端進行查詢。 查詢結果永遠是從原始資料來源傳回。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode**  = **DirectQuery**|  
+|**DirectQuery 並且查詢僅針對快取**|部署失敗。 不支援這樣的設定。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode**  = **記憶體**內部|  
   
  **混合模式**  
  部署混合模式的模型有許多好處：您可以根據需要從 SQL Server 資料來源取得最新資料，但保留快取讓您能夠使用記憶體中的資料，在設計報表或測試模型時增進效能。  
@@ -123,8 +122,8 @@ ms.locfileid: "66081645"
   
 |||  
 |-|-|  
-|**快取為慣用的混合模式**|可以處理此模型，並且可以將資料載入至快取中。 查詢預設使用快取。  如果用戶端想要使用 DirectQuery 來源，必須在連接字串中插入參數。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode**  = **使用 DirectQuery QueryMode 記憶體**內部|  
-|**DirectQuery 為慣用的混合模式**|會處理模型，並且可以將資料載入至快取中。 但是，查詢預設使用 DirectQuery。 如果用戶端想要使用快取資料，必須在連接字串中插入參數。 如果模型中的資料表已分割，快取的主要資料分割也要設定為 **[搭配使用 In-Memory 和 DirectQuery]**。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode**  = **使用記憶體中**的 QueryMode DirectQuery|  
+|**快取為慣用的混合模式**|可以處理此模型，並且可以將資料載入至快取中。 查詢預設使用快取。  如果用戶端想要使用 DirectQuery 來源，必須在連接字串中插入參數。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode**  = **使用 DirectQuery 的記憶體**內部|  
+|**DirectQuery 為慣用的混合模式**|會處理模型，並且可以將資料載入至快取中。 但是，查詢預設使用 DirectQuery。 如果用戶端想要使用快取資料，必須在連接字串中插入參數。 如果模型中的資料表已分割，快取的主要資料分割也要設定為 **[搭配使用 In-Memory 和 DirectQuery]**。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode**  = **具有記憶體**內部的 DirectQuery|  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;的 DirectQuery 模式](tabular-models/directquery-mode-ssas-tabular.md)   

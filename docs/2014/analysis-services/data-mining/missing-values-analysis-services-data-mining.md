@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91bc709d61c786c165711cfdb31ff696456997ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083361"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521206"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>遺漏值 (Analysis Services - 資料採礦)
   正確地處理  *「遺漏值」* (Missing value) 是有效模型中很重要的一部分。 本節描述何謂遺漏值，以及您在建立資料採礦結構及採礦模型時，可用來處理遺漏值的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 功能。  
@@ -44,7 +43,7 @@ ms.locfileid: "66083361"
   
  當您建立採礦模型時，`Missing` 狀態會自動加入模型以供所有離散資料行使用。 例如，若 [性別] 輸入資料行含有「男」和「女」兩種可能值，則第三個值會自動加入以代表 `Missing` 值，而顯示資料行所有值散發的長條圖一定會包含具有 `Missing` 值的案例計數。 如果「性別」資料行未遺漏任何值，則長條圖會顯示在 0 個案例中找到「遺漏」狀態。  
   
- 預設包含 `Missing` 狀態是合乎常理的，因為資料可能並不具備所有可能值的範例，而且您也不想只因為資料中沒有範例而讓模型排除可能的值。 例如，如果某個店家的銷售資料顯示已購買特定產品的所有客戶剛好都是女性，您不會想建立一個模型來預測只有女性可能會購買該產品。 相反地[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，會為額外的未知值新增預留位置， `Missing`稱為，以容納可能的其他狀態。  
+ 預設包含 `Missing` 狀態是合乎常理的，因為資料可能並不具備所有可能值的範例，而且您也不想只因為資料中沒有範例而讓模型排除可能的值。 例如，如果某個店家的銷售資料顯示已購買特定產品的所有客戶剛好都是女性，您不會想建立一個模型來預測只有女性可能會購買該產品。 相反地，會 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 為額外的未知值新增預留位置，稱為 `Missing` ，以容納可能的其他狀態。  
   
  例如，下表顯示針對 Bike Buyer 教學課程所建立的決策樹模型中 (All) 節點的值散發。 在範例案例中，[Bike Buyer] 資料行是可預測的屬性，其中 1 代表「是」，而 0 代表「否」。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66083361"
 |1|9098|  
 |Missing|0|  
   
- 此散發顯示大約一半的客戶已購買腳踏車，另一半則沒有。 這個特定資料集非常清楚，因此每個案例在 [Bike Buyer] 資料行中都有一個值，而 `Missing` 值為 0。 不過，如果任何案例在 [自行車購買者] 欄位中都有 null [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Missing`值，就會將該資料列計為具有值的案例。  
+ 此散發顯示大約一半的客戶已購買腳踏車，另一半則沒有。 這個特定資料集非常清楚，因此每個案例在 [Bike Buyer] 資料行中都有一個值，而 `Missing` 值為 0。 不過，如果任何案例在 [自行車購買者] 欄位中都有 null [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 值，就會將該資料列計為具有值的案例 `Missing` 。  
   
  如果輸入是連續的資料行，則模型會將屬性的兩個可能狀態製為表格：`Existing` 和 `Missing`。 換言之，資料行會包含某個數值類型的值或不包含任何值。 對於擁有值的案例，模型會計算平均標準差以及其他有用的統計資料。 對於沒有值的案例，模型則會提供 `Missing` 值的計數並據此調整預測。 調整預測的方法會根據演算法而異，相關說明請見下一章節。  
   

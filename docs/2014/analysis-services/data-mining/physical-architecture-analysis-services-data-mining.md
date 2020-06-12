@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f034e8892a8f5a77c7a049da6e33336592cb5294
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9d90d0483b81f2a21b187b6132efc1c93861d8a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175197"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520888"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>實體架構 (Analysis Services – 資料採礦)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會使用伺服器和用戶端元件，為商業智慧應用程式提供資料採礦功能：
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]會 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用伺服器和用戶端元件，為商業智慧應用程式提供資料採礦功能：
 
 -   伺服器元件是以 Microsoft Windows 服務的形式實作。 同一部電腦上可以有多個執行個體，每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體都實作為個別的 Windows 服務執行個體。
 

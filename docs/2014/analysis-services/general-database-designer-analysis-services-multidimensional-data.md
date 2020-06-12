@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1e7b2e1e72263d8edf362941985bb775457fc6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081076"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544470"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>一般 (資料庫設計工具) (Analysis Services - 多維度資料)
   使用 **[一般]** 索引標籤，即可變更 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的屬性。  
@@ -48,7 +47,7 @@ ms.locfileid: "66081076"
  **語言**  
  選取指定交易的語言。  
   
- 若要將新翻譯加入方格中，請按一下** \<[加入新翻譯]>**。  
+ 若要將新翻譯加入方格中，請按一下 [] **\<Add new translation>** 。  
   
  **翻譯的標題**  
  以適當的翻譯語言鍵入資料庫的標題。 如果空白，則會使用資料庫的預設標題。  
@@ -67,7 +66,7 @@ ms.locfileid: "66081076"
  **名稱**  
  鍵入帳戶類型的名稱。  
   
- 若要加入新的帳戶類型，請按一下** \<[新增帳戶類型>**]。  
+ 若要加入新的帳戶類型，請按一下 [] **\<Add new account type>** 。  
   
  **鋸齒**  
  設定供商業智慧精靈使用之帳戶類型的預設名稱。 如果此資料行保留空白，則會使用 **[名稱]** 資料行中的預設值。  

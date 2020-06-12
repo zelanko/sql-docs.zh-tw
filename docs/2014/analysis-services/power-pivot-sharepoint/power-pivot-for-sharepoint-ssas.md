@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34a4cc6b16e22a20e0e8be3ded12b0465ba46eab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683581"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535120"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
   PowerPivot for SharePoint 是以 SharePoint 模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 PowerPivot for SharePoint 提供將 PowerPivot 資料裝載於 SharePoint 伺服器陣列的功能。 PowerPivot 資料是您使用下列其中一個項目建立的分析資料模型：  
@@ -24,12 +23,12 @@ ms.locfileid: "74683581"
   
 -   Excel 2013  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013 |[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013 |[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2010  
   
  這些資料的伺服器裝載需要 SharePoint、Excel Services 和 PowerPivot for SharePoint 安裝。 資料載入到 PowerPivot for SharePoint 執行個體上，在此處可透過伺服器為 Excel 2010 活頁簿提供的 PowerPivot 資料重新整理功能或是為 Excel 2013 活頁簿提供的 SharePoint 2013 Excel Services，依排程間隔重新整理資料。  
   
 ## <a name="powerpivot-for-sharepoint-2013"></a>PowerPivot for SharePoint 2013  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]支援[!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2013 excel Services 使用包含資料模型和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power View 報表的 excel 活頁簿。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)]SharePoint 2013 Excel Services 使用包含資料模型和 Power View 報表的 Excel 活頁簿 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
   
  SharePoint 2013 中的 Excel Services 包含資料模型功能，可在瀏覽器中啟用與 PowerPivot 活頁簿的互動。 您不需要將 PowerPivot for SharePoint 2013 增益集部署至伺服器陣列。 您只需要在 SharePoint 模式下安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器，並且在 Excel Services **[資料模型]** 設定中註冊伺服器即可。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "74683581"
   
  SharePoint 整合模式的 Analysis Service 伺服器執行個體會完成部署。 它會載入、查詢和卸載資料。 如果活頁簿設定為使用 PowerPivot 資料重新整理，它也會處理資料。  每個執行個體會與相同安裝中的本機 PowerPivot 系統服務緊密結合在一起。  
   
-##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a>本節內容  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a> 本節內容  
  [管理中心的 PowerPivot 伺服器管理和設定](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [使用 Windows PowerShell 的 PowerPivot 設定](power-pivot-configuration-using-windows-powershell.md)  

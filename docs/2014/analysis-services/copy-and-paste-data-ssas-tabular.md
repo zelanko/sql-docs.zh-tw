@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30d7e6aafe613e5ca43307aa75540d8fb1cea3ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086973"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526834"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>複製及貼上資料 (SSAS 表格式)
   您可以從外部應用程式複製資料表的資料，並將其貼入模型設計師中新的資料表或現有的資料表。 您從 [剪貼簿] 貼入的資料必須是 HTML 格式，例如從 Excel 或 Word 複製的資料。 模型設計師將會自動偵測並套用資料類型至貼上的資料。 您也可以手動修改資料類型或資料行的顯示格式設定。  
@@ -28,13 +27,13 @@ ms.locfileid: "66086973"
   
  本主題的章節：  
   
--   [必要條件](#bkmk_prerequisites)  
+-   [先決條件](#bkmk_prerequisites)  
   
 -   [貼上資料](#bkmk_paste_data)  
   
 -   [貼上預覽對話方塊](#bkmk_paste_preview)  
   
-##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a> 先決條件  
  貼上資料時有一些限制：  
   
 -   貼上的資料表不能超過 10,000 個資料列。  
