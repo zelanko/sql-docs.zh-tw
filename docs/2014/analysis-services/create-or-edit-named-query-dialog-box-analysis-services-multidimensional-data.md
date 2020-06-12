@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97f01b0bbf3d1ddc54ea4db2b771723e12d168d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87253123e42349aac4a6fef204de0bffb63c101c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086804"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526585"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>建立或編輯具名查詢對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [建立/編輯具名查詢]**** 對話方塊，即可建立或編輯 [資料來源檢視設計師]**** 中的具名查詢。 具名查詢可以當成資料表處理，並以此作為其他 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件的基礎。 您可以執行下列動作來顯示 [建立/編輯具名查詢]**** 對話方塊：  
@@ -53,7 +52,7 @@ ms.locfileid: "66086804"
  **查詢定義**  
  視選取的檢視而定，查詢定義會提供工具列和窗格，以定義及測試查詢。  
   
- **Toolbar**  
+ **工具列**  
  使用工具列即可管理資料集、選取要顯示的窗格和控制各種查詢功能。  
   
 |值|描述|  
@@ -64,7 +63,7 @@ ms.locfileid: "66086804"
 |**顯示/隱藏方格窗格**|顯示或隱藏 [**方格] 窗格**。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
 |**顯示/隱藏 SQL 窗格**|顯示或隱藏 **[SQL 窗格]**。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
 |**顯示/隱藏結果窗格**|顯示或隱藏 **[結果窗格]**。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
-|**進行**|執行查詢。 結果會顯示在 **[結果窗格]** 中。|  
+|**執行**|執行查詢。 結果會顯示在 **[結果窗格]** 中。|  
 |**確認 SQL**|驗證查詢中的 SQL 陳述式。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
 |**昇冪**|依遞增順序排序 **[方格窗格]** 中所選取資料行的輸出資料列。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  
 |**遞減排序**|依遞減順序排序在 **[方格窗格]** 中所選取資料行的輸出資料列。<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器] **** 才會顯示此選項。|  

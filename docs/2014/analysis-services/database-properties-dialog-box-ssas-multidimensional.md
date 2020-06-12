@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 70f000b7-917f-4699-b142-7a0d13ff767c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: be4133aa143ecf0e1fb9b50c40a38a73b4207f30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 281dc08a4674949758e4abbc8142f78eb97700f6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082315"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528934"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>資料庫屬性對話方塊 (SSAS - 多維度)
   使用 **中的** [資料庫屬性] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中之資料庫的屬性。 您可以在 [物件總管] 中以滑鼠右鍵按一下資料庫，然後選取 [屬性]****，藉以顯示 [資料庫屬性]**** 對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

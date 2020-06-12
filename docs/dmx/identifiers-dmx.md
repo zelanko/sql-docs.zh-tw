@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9dfbe291c1aa7d856862de54ed10c845b4e5544
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074808"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670393"
 ---
 # <a name="identifiers-dmx"></a>識別碼 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  中的[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]所有物件都必須有識別碼。 物件的名稱是其識別碼。 伺服器、資料庫與資料庫物件 (例如資料來源、資料來源檢視、Cube、維度、採礦模型等等) 都有識別碼。  
+  中的所有物件都 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 必須有識別碼。 物件的名稱是其識別碼。 伺服器、資料庫與資料庫物件 (例如資料來源、資料來源檢視、Cube、維度、採礦模型等等) 都有識別碼。  
   
  資料採礦延伸模組 (DMX) 中有兩個類別的識別碼：  
   
@@ -75,7 +75,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   您使用保留字作為物件名稱或部份的物件名稱時。  
   
-     建議您不要使用保留的關鍵字作為物件名稱。 您從舊版升級[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的資料庫可能包含識別碼，其中包含在舊版中不是保留的文字， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]但這是的保留字。[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 您可以使用分隔識別碼參考這類物件，直到您能夠變更物件的名稱為止。  
+     建議您不要使用保留的關鍵字作為物件名稱。 您從舊版升級的資料庫 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可能包含識別碼，其中包含在舊版中不是保留的文字， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 但這是的保留字 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 您可以使用分隔識別碼參考這類物件，直到您能夠變更物件的名稱為止。  
   
 -   您使用未列為合格識別碼的字元時。  
   

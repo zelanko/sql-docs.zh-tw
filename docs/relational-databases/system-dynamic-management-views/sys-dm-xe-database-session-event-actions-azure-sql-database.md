@@ -1,7 +1,6 @@
 ---
 title: sys.dm_xe_database_session_event_actions
 titleSuffix: Azure SQL Database
-ms.custom: seo-lt-2019
 ms.date: 06/10/2016
 ms.service: sql-database
 ms.prod_service: sql-database
@@ -11,12 +10,13 @@ ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a8b072fe9b2d81782941f88eb739c5dcbadc13c8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.custom: seo-lt-2019
+ms.openlocfilehash: c6e9cacb9f6249f98f1481049c3b55b58a247fdb
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818796"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627390"
 ---
 # <a name="sysdm_xe_database_session_event_actions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

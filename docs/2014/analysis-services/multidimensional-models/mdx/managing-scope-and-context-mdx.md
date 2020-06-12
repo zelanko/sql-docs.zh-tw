@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 631e7c20-8be9-4c35-8609-76516aef19d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bec0dc51a4f91ba4ca8f71a0a3caba387d37bf1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7cf1e6cea8df00b632e114a5a8756373738ca6e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074636"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546520"
 ---
 # <a name="managing-scope-and-context-mdx"></a>管理範圍及內容 (MDX)
-  在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，多維度運算式（MDX）腳本可在腳本執行中的特定點套用至整個 cube 或 cube 的特定部分。 MDX 指令碼會透過使用計算行程，對 Cube 內的計算採用分層方法。  
+  在中 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，多維度運算式（MDX）腳本可在腳本執行中的特定點套用至整個 cube 或 cube 的特定部分。 MDX 指令碼會透過使用計算行程，對 Cube 內的計算採用分層方法。  
   
 > [!NOTE]  
 >  如需計算行程如何影響計算的詳細資訊，請參閱[了解行程順序和解決順序 &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)。  
@@ -58,7 +57,7 @@ SCOPE([Customer].&[Redmond].MEMBERS,
 END SCOPE;  
 ```  
   
- 如需`This`函數語法的詳細資訊，請參閱[這 &#40;MDX&#41;](/sql/mdx/this-mdx)。  
+ 如需函數語法的詳細資訊 `This` ，請參閱[這 &#40;MDX&#41;](/sql/mdx/this-mdx)。  
   
 ## <a name="using-the-scope-statement"></a>使用 SCOPE 陳述式  
  SCOPE 陳述式會定義目前的 Subcube，此 Subcube 包含 MDX 指令碼內的其他 MDX 運算式及陳述式，而且會指定它們的範圍。 MDX 會評估 Subcube 內容中此其他的 MDX 運算式及陳述式，包括 `This` 函數及 CALCULATE 陳述式在內。  

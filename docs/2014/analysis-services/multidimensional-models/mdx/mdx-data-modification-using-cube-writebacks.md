@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ac43e9206619117c1fc090a594ca32ccbeeeb31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074222"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546330"
 ---
 # <a name="using-cube-writebacks-mdx"></a>使用 Cube 回寫 (MDX)
   您可以使用 [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) 陳述式更新 Cube。 您可以使用此陳述式，來更新具有特定值的 Tuple。 若要有效地使用 UPDATE CUBE 陳述式更新 Cube，您必須了解陳述式的語法、可能發生的錯誤狀況，以及更新在 Cube 上所會產生的影響。  
@@ -41,7 +40,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
  您可以將 UPDATE CUBE 陳述式視為一個副程式，其會對不可部份完成的資料格產生一系列的個別回寫作業。 然後，所有個別的回寫作業就會積存到指定總和。  
   
 > [!NOTE]  
->  當更新的資料格未重疊時，`Update Isolation Level` 連接字串屬性可用來增強 UPDATE CUBE 的效能。 如需詳細資訊，請參閱 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>。  
+>  當更新的資料格未重疊時，`Update Isolation Level` 連接字串屬性可用來增強 UPDATE CUBE 的效能。 如需詳細資訊，請參閱 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 。  
   
 ## <a name="example"></a>範例  
  您可以在 Adventure Works Cube 中，使用銷售目標量值群組來測試 UPDATE CUBE。 此量值群組包含 SUM 彙總的量值，這是 UPDATE CUBE 的需求。  

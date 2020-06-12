@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2b114135-2572-4479-8c81-3ccf0cfeb9f7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bc4a06bd637d6fce460fb15739f8b291c95a3361
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e0e15d4f74c2c6cec06edaf692199e48534c7e9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702427"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545130"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>維度 (Analysis Services - 多維度資料)
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，維度是 cube 的基礎元件。 維度會以使用者希望了解的領域來組織資料，例如客戶、商店或員工。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的維度包含對應到維度資料表中之資料行的屬性。 這些屬性會顯示為屬性階層，並可以組成使用者自訂階層，也可以根據基礎維度資料表中的資料行定義為父子式階層。 這些階層會用於組織包含在 Cube 中的量值。 下列主題提供維度、屬性以及階層的概觀。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，維度是 cube 的基礎元件。 維度會以使用者希望了解的領域來組織資料，例如客戶、商店或員工。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的維度包含對應到維度資料表中之資料行的屬性。 這些屬性會顯示為屬性階層，並可以組成使用者自訂階層，也可以根據基礎維度資料表中的資料行定義為父子式階層。 這些階層會用於組織包含在 Cube 中的量值。 下列主題提供維度、屬性以及階層的概觀。  
   
 ## <a name="in-this-section"></a>本節內容  
   

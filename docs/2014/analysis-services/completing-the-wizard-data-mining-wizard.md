@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fea2db082448fa96ad26733a2fad5f294575a74
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087704"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527364"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>正在完成精靈 (資料採礦精靈)
   使用 [正在完成精靈]**** 頁面，即可檢閱完成精靈時會建立的採礦結構。 您也可以設定採礦結構的名稱。  
@@ -29,7 +28,7 @@ ms.locfileid: "66087704"
   
  **如需詳細資訊，請參閱：** [資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[資料採礦設計師](data-mining/data-mining-designer.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **採礦結構名稱**  
  鍵入 [資料採礦精靈]**** 所定義之採礦結構的名稱。  
   

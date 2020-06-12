@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 52c6da1d-9fb5-4dbc-bffa-248d11cd337c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00725279ef55d2cd69662d30e16c1bdc0954adae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66980b1afe9d4eed353ae18c37ed1fdd052e62b9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081160"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544460"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>篩選成員對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [篩選成員]**** 對話方塊，即可在 [維度設計師]**** 的 [瀏覽器]**** 索引標籤中瀏覽維度時，依成員標題、成員名稱、成員唯一的名稱、索引鍵資料行的值或值資料行的值，篩選目前層級的維度成員。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a6b158a42c9ca90bf2cfd2e9b981a1e2a735ccc
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084760"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522714"
 ---
 # <a name="decision-trees-model-query-examples"></a>決策樹模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，決策樹模型的內容查詢可能會提供有關每一樹狀結構層上之案例數的統計資料，或是區分案例的規則。 或者，預測查詢會將此模型對應到新的資料，以便產生建議、分類等等。 您也可以使用查詢來擷取有關模型的中繼資料。  
@@ -206,7 +205,7 @@ NATURAL PREDICTION JOIN
   
  預期的結果：  
   
-|模型|  
+|型號|  
 |-----------|  
 |Mountain-200|  
 |Mountain Tire Tube|  
@@ -225,7 +224,7 @@ NATURAL PREDICTION JOIN
   
  預期的結果：  
   
-|模型|  
+|型號|  
 |-----------|  
 |Long-Sleeve Logo Jersey|  
 |Mountain-400-W|  
@@ -257,7 +256,7 @@ WHERE NODE_TYPE = 25
   
 |||  
 |-|-|  
-|預測函數|使用量|  
+|預測函數|使用方式|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為模型中另一個節點的子系。|  
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指示指定的節點是否包含目前案例。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|傳回加權機率。|  

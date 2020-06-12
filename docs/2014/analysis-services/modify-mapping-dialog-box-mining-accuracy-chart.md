@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b968046a09214c4b5d7922302c911ca4d1f2b875
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077677"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537400"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>修改對應對話方塊 (採礦精確度圖表)
   使用 **[修改對應]** 對話方塊可變更輸入資料行與採礦模型中的資料行聯結的方法。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]將會根據資料行名稱和資料類型自動對應資料行，但您可以使用此對話方塊來變更資料行對應。 如果要進行變更，則必須確定外部資料來源中的資料行具有與所測試採礦模型中的資料行相符的資料類型和內容類型。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **採礦結構資料行**  
  選取的採礦結構中所定義之採礦結構資料行的清單。  
   

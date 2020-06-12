@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6fa7c62-4005-4792-9211-3b699377a517
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3043c8f63433396f059f5c456512ad4ba2bffd93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecc7cba81a394664b2bdb6a60b6c5f8110760f44
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072141"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547275"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>極端值 (SQL Server 資料採礦增益集)
   ![資料採礦功能區中的極端值精靈](media/dmc-outliers.gif "資料採礦功能區中的極端值精靈")  
@@ -69,7 +68,7 @@ ms.locfileid: "66072141"
   
 3.  在 [**選取資料行**] 對話方塊中，選取**單一**資料行。  
   
-     按 [下一步]  。  
+     按 [下一步] 。  
   
 4.  在 [**指定臨界**值] 對話方塊中，檢查資料的分佈。  
   
@@ -79,7 +78,7 @@ ms.locfileid: "66072141"
   
     -   如果資料行包含數值資料，您可以按一下 [**以離散方式顯示**] 按鈕或 [**以數值形式**顯示] 按鈕，在查看橫條圖或折線圖中的值之間切換。  
   
-5.  在 [**指定臨界**值] 對話方塊中，選擇您想要保留的資料範圍，方法是輸入最小和最大值，或拖曳滑動軸。 按 [下一步]  。  
+5.  在 [**指定臨界**值] 對話方塊中，選擇您想要保留的資料範圍，方法是輸入最小和最大值，或拖曳滑動軸。 按 [下一步] 。  
   
 6.  在 [極端值**處理**] 對話方塊中，指定是否要刪除或取代值，然後按 **[下一步]**。  
   

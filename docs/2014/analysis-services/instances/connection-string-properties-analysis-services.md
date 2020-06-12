@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7cd6ea975462a7967c7938de8900d5b1877ff524
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3888642f73fc0898c12ed471c7bc09d678303989
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217069"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544020"
 ---
 # <a name="connection-string-properties-analysis-services"></a>連接字串屬性 (Analysis Services)
   本主題將說明您可能會在某個設計工具或管理工具中設定的連接字串屬性，或是在連接到 Analysis Services 以查詢資料的用戶端應用程式所建立的連接字串中看到的連接字串屬性。 因此，本文內容只涵蓋可用屬性的子集。 完整的清單包含許多伺服器和資料庫屬性，可讓您針對特定應用程式自訂連接，而不必在乎伺服器上設定執行個體或資料庫的方式。  
@@ -52,7 +51,7 @@ ms.locfileid: "79217069"
 |--------------|-----------------|-------------|  
 |`Data Source` 或 `DataSource`|指定伺服器執行個體。 此屬性是所有連接的必要項。 有效值包括伺服器的網路名稱或 IP 位址、本機連接的 local 或 localhost 值、設定為 HTTP 或 HTTPS 存取之伺服器的 URL，或是本機 Cube (.cub) 檔案的名稱。|`Data source=AW-SRV01` 代表預設執行個體及通訊埠 (TCP 2383)。<br /><br /> `Data source=AW-SRV01$Finance:8081` 代表具名執行個體 ($Finance) 及固定連接埠。<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` 代表完整網域名稱，假設是預設執行個體及通訊埠。<br /><br /> `Data source=172.16.254.1` 代表伺服器的 IP 位址，略過 DNS 伺服器查閱，對於疑難排解連接問題相當實用。|  
 |`Initial Catalog` 或 `Catalog`|指定要連接的 Analysis Services 資料庫的名稱。 資料庫必須部署在 Analysis Services 上，而且您必須具有連接到該資料庫的權限。 此屬性對於 AMO 連接而言為選擇項，但卻是 ADOMD.NET 的必要項。|`Initial catalog=AdventureWorks2012`|  
-|`Provider`|有效的值包括 MSOLAP 或 MSOLAP。\<版本>，其中\<version> 為3、4或5。 在檔案系統上，資料提供者名稱是 msolap110.dll (SQL Server 2012 版)、msolap100.dll (SQL Server 2008 和 2008 R2) 以及 msolap90.dll (SQL Server 2005)。<br /><br /> 目前的版本為 MSOLAP.5。 這是選用屬性。 依預設，用戶端程式庫會從登錄讀取目前版本的 OLE DB 提供者。 當您需要特定版本的資料提供者，例如連接到 SQL Server 2008 執行個體時，才需要設定此屬性。<br /><br /> 資料提供者對應至 SQL Server 的版本。 如果您的組織使用目前版本和舊版的 Analysis Services，則您很可能必須以手動建立的連接字串指定要使用的提供者。 若電腦上沒有您所需要的特定版本資料提供者，您可能也必須下載並安裝該版本。 您可以從下載中心的 SQL Server 功能套件網頁下載 OLE DB 提供者。 請移至 [Microsoft SQL Server 2012 功能套件](https://go.microsoft.com/fwlink/?LinkId=296473) ，下載 Analysis Services OLE DB Provider for SQL Server 2012。<br /><br /> MSOLAP.4 是隨 SQL Server 2008 及 SQL Server 2008 R2 發行。 2008 R2 版支援 PowerPivot 活頁簿，有時候 SharePoint 伺服器必須手動安裝此版本。 若要區別這些版本，您必須檢查提供者檔案內容中的組建編號：移至 Program files\Microsoft Analysis Services\AS OLEDB\10。 以滑鼠右鍵按一下 msolap110.dll，然後選取 **[內容]**。 按一下 [詳細資料]****。 檢視檔案版本資訊。 版本應包含10.50。\<SQL Server 2008 R2 的 buildnumber>。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 和 [用於 Analysis Services 連接的資料提供者](data-providers-used-for-analysis-services-connections.md)。<br /><br /> SQL Server 2005 中已發行 MSOLAP. 3。<br /><br /> SQL Server 2008 發行了 MSOLAP，SQL Server 2008 R2<br /><br /> SQL Server 2012 已發行 MSOLAP. 5|`Provider=MSOLAP.3` 的適用對象是需要 SQL Server 2005 版 OLE DB Provider for Analysis Services 的連接。|  
+|`Provider`|有效的值包括 MSOLAP 或 MSOLAP \<version> ，其中 \<version> 是3、4或5。 在檔案系統上，資料提供者名稱是 msolap110.dll (SQL Server 2012 版)、msolap100.dll (SQL Server 2008 和 2008 R2) 以及 msolap90.dll (SQL Server 2005)。<br /><br /> 目前的版本為 MSOLAP.5。 這是選用屬性。 依預設，用戶端程式庫會從登錄讀取目前版本的 OLE DB 提供者。 當您需要特定版本的資料提供者，例如連接到 SQL Server 2008 執行個體時，才需要設定此屬性。<br /><br /> 資料提供者對應至 SQL Server 的版本。 如果您的組織使用目前版本和舊版的 Analysis Services，則您很可能必須以手動建立的連接字串指定要使用的提供者。 若電腦上沒有您所需要的特定版本資料提供者，您可能也必須下載並安裝該版本。 您可以從下載中心的 SQL Server 功能套件網頁下載 OLE DB 提供者。 請移至 [Microsoft SQL Server 2012 功能套件](https://go.microsoft.com/fwlink/?LinkId=296473) ，下載 Analysis Services OLE DB Provider for SQL Server 2012。<br /><br /> MSOLAP.4 是隨 SQL Server 2008 及 SQL Server 2008 R2 發行。 2008 R2 版支援 PowerPivot 活頁簿，有時候 SharePoint 伺服器必須手動安裝此版本。 若要區別這些版本，您必須檢查提供者檔案內容中的組建編號：移至 Program files\Microsoft Analysis Services\AS OLEDB\10。 以滑鼠右鍵按一下 msolap110.dll，然後選取 **[內容]**。 按一下 [詳細資料]****。 檢視檔案版本資訊。 版本應包含10.50。\<buildnumber> 適用于 SQL Server 2008 R2。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 和 [用於 Analysis Services 連接的資料提供者](data-providers-used-for-analysis-services-connections.md)。<br /><br /> SQL Server 2005 中已發行 MSOLAP. 3。<br /><br /> SQL Server 2008 發行了 MSOLAP，SQL Server 2008 R2<br /><br /> SQL Server 2012 已發行 MSOLAP. 5|`Provider=MSOLAP.3` 的適用對象是需要 SQL Server 2005 版 OLE DB Provider for Analysis Services 的連接。|  
 |`Cube`|Cube 名稱或檢視方塊名稱。 資料庫可能包含多個 Cube 和檢視方塊。 如果可能會有多重目標，請在連接字串中加入 Cube 或檢視方塊的名稱。|`Cube=SalesPerspective` 表示您可以使用 Cube 連接字串屬性指定 Cube 的名稱或檢視方塊的名稱。|  
   
 ##  <a name="authentication-and-security"></a><a name="bkmk_auth"></a>驗證和安全性  
@@ -73,7 +72,7 @@ ms.locfileid: "79217069"
 |`Roles`|指定預先定義的角色以逗號分隔的清單，以便使用該角色所傳達的權限連接到伺服器或資料庫。 如果省略此屬性，則會使用所有角色，而且有效權限將是所有角色權限的組合。 將屬性設定為空值（例如，Role = ' '）用戶端連接沒有角色成員資格。<br /><br /> 系統管理員使用此屬性連接時將使用其角色所傳達的權限。 如果角色未提供足夠的權限，某些命令可能會失敗。|  
 |`SSPI`|當 `Integrated Security` 設定為 `SSPI` 時，明確指定哪一種安全性封裝用於用戶端驗證。 SSPI 支援多種封裝，但是您可以使用這個屬性來指定特定封裝。 有效的值為：交涉、Kerberos、NTLM 和匿名使用者。 如果未設定此屬性，所有封裝都將可供連接使用。|  
 |`Use Encryption for Data`|將資料傳輸加密。 有效值為 True 和 False。|  
-|`User ID`=...;`Password`=|`User ID`和`Password`會一起使用。 Analysis Services 會模擬透過這些認證所指定的使用者識別。 只有當伺服器設定為 HTTP 存取，而且您針對 IIS 虛擬目錄指定了基本驗證而非整合式安全性時，才會使用透過命令列為 Analysis Services 連接提供認證的方式。<br /><br /> 使用者名稱與密碼必須是 Windows 識別 (本機或網域使用者帳戶) 的認證。 請注意 `User ID` 有內嵌的空格。 此屬性的其他別名包括 `UserName` (不含空格) 和 `UID`。 `Password` 的別名則是 `PWD`。|  
+|`User ID`=...;`Password`=|`User ID`和 `Password` 會一起使用。 Analysis Services 會模擬透過這些認證所指定的使用者識別。 只有當伺服器設定為 HTTP 存取，而且您針對 IIS 虛擬目錄指定了基本驗證而非整合式安全性時，才會使用透過命令列為 Analysis Services 連接提供認證的方式。<br /><br /> 使用者名稱與密碼必須是 Windows 識別 (本機或網域使用者帳戶) 的認證。 請注意 `User ID` 有內嵌的空格。 此屬性的其他別名包括 `UserName` (不含空格) 和 `UID`。 `Password` 的別名則是 `PWD`。|  
   
 ##  <a name="special-purpose-parameters"></a><a name="bkmk_special"></a>特殊用途的參數  
  本節描述其餘的連接字串參數。 這些參數是用於確保應用程式所需的特定連接行為。  
@@ -120,7 +119,7 @@ ms.locfileid: "79217069"
   
 -   偵錯模式  
   
--   [模式]  
+-   模式  
   
 -   SQLCompatibility  
   
@@ -166,11 +165,11 @@ ms.locfileid: "79217069"
   
  **PowerPivot 活頁簿 (.xlsx、.xlsb 或 .xlsm 檔) 的 Http(s) 連接**  
   
- `Data Source=<URL>`，其中 URL 是已發行至 SharePoint 文件庫之 PowerPivot 活頁簿的 SharePoint 路徑。 例如，「資料來源 =<http://localhost/Shared> Documents/Sales .xlsx」。  
+ `Data Source=<URL>`，其中 URL 是已發行至 SharePoint 文件庫之 PowerPivot 活頁簿的 SharePoint 路徑。 例如，「資料來源 = <http://localhost/Shared> Documents/Sales.xlsx」。  
   
  **BI 語意模型連接檔案的 Http(s) 連接**  
   
- `Data Source=<URL>` ，其中 URL 是 .bism 檔案的 SharePoint 路徑。 例如，"Data Source =<http://localhost/Shared> Documents/Sales. bism"。  
+ `Data Source=<URL>` ，其中 URL 是 .bism 檔案的 SharePoint 路徑。 例如，"Data Source = <http://localhost/Shared> Documents/Sales. bism"。  
   
  **內嵌的 PowerPivot 連接**  
   

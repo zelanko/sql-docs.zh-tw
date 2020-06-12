@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4457a5fa434be3865edf770f7ca69a676c051893
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702686"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545340"
 ---
 # <a name="calculations"></a>計算
-  計算是多維度運算式（MDX）運算式或腳本，可用來定義中 cube 內[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的匯出成員、命名集或限定範圍的指派。 計算可讓您加入的物件不是由 Cube 之資料所定義，而是由參考 Cube 之其他部分、其他 Cube 甚至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫外部之資訊的運算式所定義。 計算可讓您擴充 Cube 的功能，以在商業智慧應用程式中加入彈性和強大功能。 如需腳本計算的詳細資訊，請參閱[Microsoft SQL Server 2005 中的 MDX 腳本簡介](https://go.microsoft.com/fwlink/?LinkId=81892)。 如需 MDX 查詢和計算相關效能問題的詳細資訊，請參閱[SQL Server 2005 Analysis Services 效能指南](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)。  
+  計算是多維度運算式（MDX）運算式或腳本，可用來定義中 cube 內的匯出成員、命名集或限定範圍的指派 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 計算可讓您加入的物件不是由 Cube 之資料所定義，而是由參考 Cube 之其他部分、其他 Cube 甚至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫外部之資訊的運算式所定義。 計算可讓您擴充 Cube 的功能，以在商業智慧應用程式中加入彈性和強大功能。 如需腳本計算的詳細資訊，請參閱[Microsoft SQL Server 2005 中的 MDX 腳本簡介](https://go.microsoft.com/fwlink/?LinkId=81892)。 如需 MDX 查詢和計算相關效能問題的詳細資訊，請參閱[SQL Server 2005 Analysis Services 效能指南](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)。  
   
 ## <a name="calculated-members"></a>導出成員  
  導出成員是使用您在定義導出成員時指定的多維度運算式 (MDX) 運算式，以在執行階段計算出其值的成員。 與其他任何成員一樣，商業智慧應用程式也可以使用導出成員。 因為在 Cube 中只會儲存定義，所以導出成員並不會增加 Cube 的大小；需要回答查詢時才會在記憶體中計算出值。  
@@ -45,10 +44,10 @@ ms.locfileid: "62702686"
  若要建立匯出成員，請在 Cube 設計師中使用 [**計算**] 索引標籤。 如需詳細資訊，請參閱[建立匯出成員](../multidimensional-models/create-calculated-members.md)  
   
 ## <a name="named-sets"></a>命名集  
- 命名集是會傳回集合的 CREATE SET MDX 陳述式運算式； MDX 運算式會儲存為中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]cube 定義的一部分。 建立命名集，以供在多維度運算式 (MDX) 查詢中重複使用。 命名集可讓商務使用者簡化查詢，以及針對複雜且常用的集合運算式來使用集合名稱 (而非集合運算式)。 **相關主題：** [建立命名集](../multidimensional-models/create-named-sets.md)  
+ 命名集是會傳回集合的 CREATE SET MDX 陳述式運算式； MDX 運算式會儲存為中 cube 定義的一部分 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 建立命名集，以供在多維度運算式 (MDX) 查詢中重複使用。 命名集可讓商務使用者簡化查詢，以及針對複雜且常用的集合運算式來使用集合名稱 (而非集合運算式)。 **相關主題：** [建立命名集](../multidimensional-models/create-named-sets.md)  
   
 ## <a name="script-commands"></a>指令碼命令  
- 指令碼命令是 MDX 指令碼，包含在 Cube 的定義中。 指令碼命令幾乎可讓您在 Cube 上執行 MDX 所支援的任何動作 (例如，設定計算的範圍使其只適用於 Cube 的一部分)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，MDX 腳本可套用至整個 cube 或 cube 的特定區段，在整個腳本執行的特定時間點。 預設指令碼命令 (CALCULATE 陳述式) 會使用根據預設範圍的彙總資料來填入 Cube 中的資料格。  
+ 指令碼命令是 MDX 指令碼，包含在 Cube 的定義中。 指令碼命令幾乎可讓您在 Cube 上執行 MDX 所支援的任何動作 (例如，設定計算的範圍使其只適用於 Cube 的一部分)。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，MDX 腳本可套用至整個 cube 或 cube 的特定區段，在整個腳本執行的特定時間點。 預設指令碼命令 (CALCULATE 陳述式) 會使用根據預設範圍的彙總資料來填入 Cube 中的資料格。  
   
  預設範圍就是整個 Cube，但您可以定義更小的範圍，即所謂的 Subcube，然後將 MDX 指令碼只套用至該特定 Cube 空間。 SCOPE 陳述式會在計算指令碼中定義所有後續 MDX 運算式和陳述式的範圍，直到範圍終止或重新定義為止。 然後使用 THIS 陳述式，將 MDX 運算式至目前範圍。 您可以使用 BACK_COLOR 陳述式，指定目前範圍內資料格的背景資料格顏色，以協助您進行偵錯。  
   

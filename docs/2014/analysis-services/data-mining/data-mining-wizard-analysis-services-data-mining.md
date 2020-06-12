@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0fb91b5343bd6f45eaadb93f71a73b85cb7f3a1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084743"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522744"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>資料採礦精靈 (Analysis Services - 資料採礦)
-  每次在資料採礦[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中加入新的採礦結構時，中的資料採礦嚮導都會啟動。 此精靈可幫助您選擇資料來源及設定資料來源檢視來定義用於分析的資料，然後幫助您建立初始模型。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 每次在資料採礦專案中加入新的採礦結構時，中的資料採礦嚮導都會啟動。 此精靈可幫助您選擇資料來源及設定資料來源檢視來定義用於分析的資料，然後幫助您建立初始模型。  
   
  在精靈的最後一個階段，您可以選擇將資料分成定型集和測試集，並啟用類似鑽研的功能。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66084743"
   
 -   您想要使用哪些資料行或屬性來預測？ 哪些資料行或屬性非常適合當做分析的輸入使用？  
   
--   您應該使用哪一個演算法？ 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的演算法具有不同的特性，且會產生不同的結果。 很幸運的是，每一組資料不限於一個模型，所以您可以自由地加入不同的模型進行試驗。  
+-   您應該使用哪一個演算法？ 中提供的演算法 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 具有不同的特性，且會產生不同的結果。 很幸運的是，每一組資料不限於一個模型，所以您可以自由地加入不同的模型進行試驗。  
   
 -   您是否需要能夠針對統一的資料集測試模型？ 如果是的話，請考慮使用此選項，以保留某些資料進行測試。 您可以選擇某個百分比，然後視需要加以覆蓋指定的資料列數。  
   

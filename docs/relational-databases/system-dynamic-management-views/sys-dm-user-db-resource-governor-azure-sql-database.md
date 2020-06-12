@@ -3,9 +3,9 @@ title: sys.databases dm_user_db_resource_governance （Transact-sql） |Microsof
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f853f1778a62b345accff745aade5fb5608322fd
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165916"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627394"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.databases dm_user_db_resource_governance （Transact-sql）
 
@@ -61,7 +61,7 @@ ms.locfileid: "74165916"
 |**initial_db_file_size_in_mb**|BIGINT|新資料檔案的預設大小（以 MB 為單位）。 請參閱[sys.databases database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
 |**log_size_in_mb**|BIGINT|新記錄檔的預設大小（以 MB 為單位）。 請參閱[sys.databases database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
 |**instance_cap_cpu**|int|僅供內部使用。|
-|**instance_max_log_rate**|BIGINT|SQL Server 實例的記錄產生速率限制（以每秒位元組數為單位）。 適用于實例所產生的所有記錄檔， `tempdb`包括和其他系統資料庫。 在彈性集區中，會套用至集區中所有資料庫所產生的記錄檔。|
+|**instance_max_log_rate**|BIGINT|SQL Server 實例的記錄產生速率限制（以每秒位元組數為單位）。 適用于實例所產生的所有記錄檔，包括 `tempdb` 和其他系統資料庫。 在彈性集區中，會套用至集區中所有資料庫所產生的記錄檔。|
 |**instance_max_worker_threads**|int|SQL Server 實例的背景工作執行緒限制。|
 |**replica_type**|int|複本類型，其中0是主要，1是次要。|
 |**max_transaction_size**|BIGINT|任何交易所使用的記錄空間上限（以 KB 為單位）。|

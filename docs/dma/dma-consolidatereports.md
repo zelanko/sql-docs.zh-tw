@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 456d71e2abccdddb4b14c06dc2ad9b2e4ce9a032
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: e7a3c58612761e046b71cddf35c87680bb6e9528
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886165"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868377"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 評估企業及整合評估報告
 
@@ -33,7 +33,7 @@ ms.locfileid: "82886165"
   - [PowerShell](https://aka.ms/wmf5download) 5.0 版或更新版本。
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) 4.5 或更新版本。
   - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 或更新版本。
-  - [Power BI 桌面](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)]。
+  - [Power BI 桌面](/power-bi/fundamentals/desktop-get-the-desktop)]。
   - [Azure PowerShell 模組](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 下載並解壓縮：
   - [DMA 會報告 Power BI 範本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip)。
@@ -113,7 +113,7 @@ ms.locfileid: "82886165"
 
 下表說明與 dmaDataCollector 函數相關聯的參數。
 
-|參數  |說明 |
+|參數  |描述 |
 |---------|---------|
 |**getServerListFrom** | 您的清查。 可能的值為**SqlServer**和**CSV**。<br/>如需詳細資訊，請參閱[建立 SQL server 的清查](#create-inventory)。 |
 |**csvPath** | CSV 清查檔案的路徑。  只有在**getServerListFrom**設定為**CSV**時才會使用。 |
@@ -136,7 +136,7 @@ ms.locfileid: "82886165"
 
 下表說明與 dmaProcessor 函數相關聯的參數。
 
-|參數  |說明 |
+|參數  |描述 |
 |---------|---------|
 |**processTo** | 將處理 JSON 檔案的位置。 可能的值為**SQLServer**和**AzureSQLDatabase**。 |
 |**serverName** | 將處理資料的 SQL Server 實例。  如果您針對**processTo**參數指定**AzureSQLDatabase** ，則只會包含 SQL Server 名稱（不包括 database.windows.net）。 當您以 Azure SQL Database 為目標時，系統會提示您輸入兩次登入;第一個是您的 Azure 租使用者認證，而第二個則是 Azure SQL Server 的系統管理員登入。 |

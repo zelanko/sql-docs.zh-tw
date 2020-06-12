@@ -11,27 +11,26 @@ f1_keywords:
 ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1855150cdfbb4d2132c1edc7c08604dd90b87a9d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088011"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527454"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>叢集圖表索引標籤 (採礦模型檢視器)
   **[叢集圖表]** 索引標籤會提供叢集模型中，所有叢集的圖形化檢視。  
   
  **如需詳細資訊，請參閱** [Microsoft 叢集演算法](data-mining/microsoft-clustering-algorithm.md)、 [使用 Microsoft 叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **重新整理檢視器內容**  
  在檢視器中重新載入採礦模型。  
   
  **採礦模型**  
  在目前採礦結構中選擇採礦模型。 採礦模型會在其關聯的檢視器中開啟。  
   
- **檢視器**  
+ **檢視者**  
  選擇檢視器以瀏覽選取的採礦模型。 可以使用其中一個自訂的叢集檢視器，或使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 採礦內容檢視器。 還可以使用外掛程式檢視器 (如果有)。  
   
  **放大**  

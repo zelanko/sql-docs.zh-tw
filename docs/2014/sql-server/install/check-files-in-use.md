@@ -10,12 +10,12 @@ ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3610ad08d34942dd7dbc1af1371a6c5d86e7890
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096525"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856597"
 ---
 # <a name="check-files-in-use"></a>檢查使用中的檔案
   若要避免在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新之後重新啟動 Windows，請使用 [檢查使用中檔案] 頁面來識別正在鎖定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新安裝程式所需之檔案的處理序。  
@@ -42,11 +42,11 @@ ms.locfileid: "66096525"
   
 -   鎖定的檔案名稱  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
   
-|名稱|描述|  
+|Name|描述|  
 |----------|-----------------|  
-|Process|顯示正在使用要更新之檔案的處理序完整名稱。|  
+|程序|顯示正在使用要更新之檔案的處理序完整名稱。|  
 |類型|顯示處理序的類型。|  
 |帳戶|顯示執行處理序所使用的帳戶。|  
 |處理序識別碼|顯示處理序識別碼。|  

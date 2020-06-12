@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c9fb5d1300b6f50f7ef0a765881896069becf0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41471645e3443d59294f980eba35fbf9074d7728
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073895"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546142"
 ---
 # <a name="subselects-in-queries"></a>查詢中的子選擇
   子選擇運算式是巢狀 SELECT 運算式，用於限制評估外部 SELECT 的 Cube 空間。 子選擇可讓您定義評估所有計算的新空間。  
@@ -305,7 +304,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|澳大利亞|Canada|Central|Northwest|Southwest|  
+||All Sales Territories|澳洲|加拿大|Central|Northwest|Southwest|  
 |All Products|$7,591,495.49|$1,281,059.99|$1,547,298.12|$600,205.79|$1,924,763.50|$2,238,168.08|  
 |Mountain-200 Silver, 38|$1,449,576.15|$248,702.93|$275,052.45|$141,103.65|$349,487.01|$435,230.12|  
 |Mountain-200 Black, 38|$1,722,896.50|$218,024.05|$418,726.43|$123,929.46|$486,694.63|$475,521.93|  
@@ -328,7 +327,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|澳大利亞|Canada|Northwest|Southwest|United Kingdom|  
+||All Sales Territories|澳洲|加拿大|Northwest|Southwest|英國|  
 |All Products|$7,938,218.56|$1,096,312.24|$1,474,255.49|$2,042,674.72|$2,238,099.55|$1,086,876.56|  
 |Mountain-200 Silver, 38|$1,520,958.53|$248,702.93|$275,052.45|$349,487.01|$435,230.12|$212,486.03|  
 |Mountain-200 Silver, 42|$1,392,237.14|$198,127.15|$229,679.01|$361,233.58|$407,854.24|$195,343.16|  
@@ -349,6 +348,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   axis 子句中不允許 HAVING 子句；請改用 [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx) 函數運算式。  
   
--   根據預設，子選擇中不允許使用匯出成員;不過，您可以在每個會話中變更此限制，方法是將值指派給中`SubQueries` <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>的連接字串屬性， `DBPROP_MSMD_SUBQUERIES`或[&#40;xmla&#41;支援的 xmla 屬性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)中的屬性。 如需匯出成員之行為的詳細說明，請參閱[子選擇和 subcube 中](calculated-members-in-subselects-and-subcubes.md)的匯出成員，視`SubQueries`或`DBPROP_MSMD_SUBQUERIES`的值而定。  
+-   根據預設，子選擇中不允許使用匯出成員;不過，您可以在每個會話中變更此限制，方法是將值指派給 `SubQueries` 中的連接字串屬性， <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 或 `DBPROP_MSMD_SUBQUERIES` [&#40;XMLA&#41;支援的 xmla 屬性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)中的屬性。 如需匯出成員之行為的詳細說明，請參閱[子選擇和 subcube 中](calculated-members-in-subselects-and-subcubes.md)的匯出成員，視或的值而定 `SubQueries` `DBPROP_MSMD_SUBQUERIES` 。  
   
   

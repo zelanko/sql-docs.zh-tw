@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6a6da73815f06aa5ab80f6ad5a9d06227ed842
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074704"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546562"
 ---
 # <a name="cube-space"></a>Cube 空間
   「Cube 空間」是 Cube 屬性階層中具有 Cube 量值之成員的乘積。 因此，Cube 空間是由 Cube 所有屬性階層成員和 Cube 量值的組合乘積所決定，定義了 Cube 的大小上限。 請務必注意，此空間包含屬性階層成員的所有可能組合，甚至還包含在真實世界中被視為不可能的組合，例如城市為巴黎而國家/地區為英國、西班牙、日本、印度或其他地方的組合。  
@@ -78,7 +77,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  所傳回的資料格值將會相同，不過結果集中的中繼資料將會不同。 例如，在上述查詢中，Country 階層已移至 slicer 座標軸 (在 WHERE 子句中)，因此不會明確出現在結果集中。  
   
- 這三個先前的查詢都會示範中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]自動存在行為的作用。  
+ 這三個先前的查詢都會示範中自動存在行為的作用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。  
   
 ## <a name="user-defined-hierarchies-and-cube-space"></a>使用者自訂階層和 Cube 空間  
  在本主題的先前範例中，我們都是使用屬性階層來定義 Cube 空間中的位置。 然而，您也可以利用使用者自訂階層 (已經根據維度中的屬性階層加以定義)，定義 Cube 空間中的位置。 使用者自訂階層是由屬性階層組成的階層，設計目的為幫助使用者瀏覽 Cube 資料。  
@@ -112,7 +111,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  請注意， `WITH`關鍵字會與[CurrentMember （Mdx）](/sql/mdx/current-mdx)和[Name （mdx）](/sql/mdx/members-string-mdx)函數搭配使用，以建立要在查詢中使用的匯出成員。 如需詳細資訊，請參閱[基本 MDX 查詢 &#40;MDX&#41;](mdx-query-the-basic-query.md)。  
+>  請注意， `WITH` 關鍵字會與[CURRENTMEMBER （mdx）](/sql/mdx/current-mdx)和[Name （mdx）](/sql/mdx/members-string-mdx)函數搭配使用，以建立要在查詢中使用的匯出成員。 如需詳細資訊，請參閱[基本 MDX 查詢 &#40;MDX&#41;](mdx-query-the-basic-query.md)。  
   
  在上述查詢中，會傳回與 State 屬性階層之每個成員相關的 Country 屬性階層的成員名稱。 預期的 Country 成員會出現 (因為 City 和 Country 屬性之間已定義屬性關聯性)。 然而，如果相同維度中的多個屬性階層之間沒有定義屬性關聯性，則會傳回 (全部) 成員，如下列查詢所說明。  
   

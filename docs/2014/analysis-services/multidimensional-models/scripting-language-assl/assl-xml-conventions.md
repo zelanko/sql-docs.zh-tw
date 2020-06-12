@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b70742b07fd6450b01cf205147a05f40c4b6121
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736391"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545670"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 慣例
   Analysis Services 指令碼語言 (ASSL) 將物件階層以一組元素類型來表示，每個元素類型都定義了它們可以包含的子系元素。  
@@ -135,10 +134,10 @@ ms.locfileid: "62736391"
   
 -   保留內部空白字元。  
   
- `Name` 與 `ID` 屬性對於字串元素中的有效字元具有特殊限制。 如需`Name`和`ID`慣例的詳細資訊，請參閱[ASSL 物件和物件特性](assl-objects-and-object-characteristics.md)。  
+ `Name` 與 `ID` 屬性對於字串元素中的有效字元具有特殊限制。 如需和慣例的詳細資訊 `Name` `ID` ，請參閱[ASSL 物件和物件特性](assl-objects-and-object-characteristics.md)。  
   
  `DateTime`  
- .NET Framework `DateTime`中的結構。  值不可以是 NULL。 `DataTime` 資料類型支援的最低日期是 1601 年 1 月 1 日，可供程式設計人員做為 `DateTime.MinValue` 來使用。 出現支援的最低日期即表示您遺漏了 `DateTime` 值。  
+ `DateTime`.NET Framework 中的結構。  值不可以是 NULL。 `DataTime` 資料類型支援的最低日期是 1601 年 1 月 1 日，可供程式設計人員做為 `DateTime.MinValue` 來使用。 出現支援的最低日期即表示您遺漏了 `DateTime` 值。  
   
  `Boolean`  
  只有兩個值的列舉，例如 {true, false} 或是 {0, 1}。  
@@ -151,7 +150,7 @@ ms.locfileid: "62736391"
 |`Boolean`|False|  
 |`String`|"" (空字串)|  
 |`Integer` 或 `Long`|0 (零)|  
-|`Timestamp`|12:00:00 AM、1/1/0001 （對應至0刻度的 .NET `System.DateTime` framework）|  
+|`Timestamp`|12:00:00 AM、1/1/0001 （對應至0刻度的 .NET Framework `System.DateTime` ）|  
   
  有顯示但為空的元素會解譯成具有 Null 字串值，而不是預設值。  
   

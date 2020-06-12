@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e781e26dc2e45c6637b6868304be08452d31a996
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077423"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544800"
 ---
 # <a name="define-a-default-member"></a>定義預設成員
   當查詢中並未包含屬性階層時，會使用屬性階層的預設成員來評估運算式。 只要查詢包含屬性階層，或是使用者階層包含做為屬性階層來源的屬性，就會忽略預設成員。 這是因為使用查詢中指定的成員。  
@@ -33,11 +32,11 @@ ms.locfileid: "66077423"
  如果屬性階層沒有指定預設成員，而且該屬性階層是可彙總的 (屬性 (Attribute) 上的 `IsAggregatable` 屬性 (Property) 設定為 `True`)，則 (全部) 成員都是預設成員。 如果未指定任何預設成員，且屬性階層是不可彙總的 (屬性 (attribute) 上的 `IsAggregatable` 屬性 (property) 設定為 `False`)，則會從屬性階層的最上層中選取預設成員。  
   
 ## <a name="specifying-the-default-member"></a>指定預設成員  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]維度中的每個屬性都有預設成員，您可以使用`DefaultMember`屬性（attribute）來指定它。 如果查詢中不包含屬性，則此設定可用來評估運算式。 如果查詢在維度中指定階層，則會忽略階層中之屬性的預設成員。 如果查詢未在維度中指定階層，則維度屬性的`DefaultMember`設定會生效。  
+ 中維度中的每個屬性 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 都有預設成員，您可以使用屬性（attribute）來指定它 `DefaultMember` 。 如果查詢中不包含屬性，則此設定可用來評估運算式。 如果查詢在維度中指定階層，則會忽略階層中之屬性的預設成員。 如果查詢未在維度中指定階層，則 `DefaultMember` 維度屬性的設定會生效。  
   
- 如果屬性`DefaultMember`的設定為空白，且其`IsAggregatable`屬性設定為`True`，則預設成員為 All 成員。 如果`IsAggregatable`屬性設定為`False`，則預設成員是第一個可見層級的第一個成員。  
+ 如果 `DefaultMember` 屬性的設定為空白，且其 `IsAggregatable` 屬性設定為 `True` ，則預設成員為 All 成員。 如果 `IsAggregatable` 屬性設定為 `False` ，則預設成員是第一個可見層級的第一個成員。  
   
- 屬性`DefaultMember`的設定會套用至屬性所參與的每一個階層。 您不能對維度中的不同階層使用不同設定。 比方說，如果 [1998] 成員是 [Year] 屬性的預設成員，此設定將套用至維度中的每一個階層。 在`DefaultMember`此情況下的設定不能是一個階層中的 [1998] 和不同階層中的 [1997]。  
+ `DefaultMember`屬性的設定會套用至屬性所參與的每一個階層。 您不能對維度中的不同階層使用不同設定。 比方說，如果 [1998] 成員是 [Year] 屬性的預設成員，此設定將套用至維度中的每一個階層。 `DefaultMember`在此情況下的設定不能是一個階層中的 [1998] 和不同階層中的 [1997]。  
   
  如果您為沒有自然彙總之階層的特定層級定義預設成員，則必須定義階層中位於該層級上方之所有層級中的預設成員。 例如，在階層的所有國家/地區中，除非您定義國家/地區的預設成員，否則您無法定義氣候的預設成員。 如果沒有這麼做，會產生查詢階段錯誤。  
   

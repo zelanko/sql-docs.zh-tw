@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 86894159dd702466823bed8f2185caaa4295b3ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97d52ba1e5167c988b89421ff784428725ccec37
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086358"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525604"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>將巢狀資料表加入至採礦結構
   資料採礦精靈建立巢狀資料表之後，即可使用資料採礦設計師，將巢狀資料表加入至採礦結構。  
@@ -39,7 +38,7 @@ ms.locfileid: "66086358"
   
 5.  在 [來源資料行]**** 之下，選取巢狀資料表的索引鍵資料行。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
      包含索引鍵資料行的新資料表資料行，就會加入至採礦結構。 如需如何加入其他資料行的相關資訊，請參閱 [將資料行加入至採礦結構](add-columns-to-a-mining-structure.md)。  
   

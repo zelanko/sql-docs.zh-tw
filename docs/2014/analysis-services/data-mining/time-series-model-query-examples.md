@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d7451c82261e23c75b748d4b1cde473191b7749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f6b6ed2674d5f1d852b6281c6244af4f2f6ad3a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082744"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520315"
 ---
 # <a name="time-series-model-query-examples"></a>時間序列模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，時間序列模型的內容查詢可能會提供有關所偵測到之週期性結構的其他詳細資料，而預測查詢則為您提供下 5-10 個時間配量的預測。 您也可以使用查詢來擷取有關模型的中繼資料。  
@@ -66,7 +65,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0.1，MINIMUM_SUPPORT = 10，PERIODICITY_HINT ={1,3},..。。|  
+|COMPLEXITY_PENALTY = 0.1，MINIMUM_SUPPORT = 10，PERIODICITY_HINT = {1,3} ,..。。|  
   
  預設週期性提示為 {1}，而且會出現在所有模型中；這個範例模型是使用其他提示所建立，這個提示可能不會出現在最終模型中。  
   
@@ -156,7 +155,7 @@ AND NODE_TYPE = 15
   
  例如，假設現有的模型有六個月的資料。 您想要加入最後三個月的銷售數字來擴充這個模型， 同時，您想要對未來三個月做出預測。 如果加入新的資料時只要取得新的預測，請將起點指定為時間配量 4，並將結束點指定為時間配量 7。 您一共可以要求六個預測，但是前三個預測的時間配量會與剛加入的新資料重疊。  
   
- 如需查詢範例以及使用`REPLACE_MODEL_CASES`和`EXTEND_MODEL_CASES`之語法的詳細資訊，請參閱[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
+ 如需查詢範例以及使用和之語法的詳細 `REPLACE_MODEL_CASES` 資訊 `EXTEND_MODEL_CASES` ，請參閱[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
   
 ###  <a name="making-predictions-with-extend_model_cases"></a><a name="bkmk_EXTEND"></a> 使用 EXTEND_MODEL_CASES 做出預測  
  預測行為會因為您要擴充還是取代模型案例而異。 當您擴充模型時，新的資料會附加到序列的結尾，而且定型集的大小會增加。 但是，用於預測查詢的時間配量一定會開始於原始序列的結尾。 因此，如果您加入三個新的資料點，並要求六個預測，則傳回的前三個預測會與新的資料重疊。 在此情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會傳回實際的新資料點，而不是做出預測，直到所有新的資料點都用完為止。 然後， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會根據複合系列來做出預測。  
@@ -198,17 +197,17 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  從 REPLACE_MODEL_CASES 的時間戳記 1 開始，您會根據新的資料取得新的預測，新的資料會取代舊的訓練資料。  
   
- 如需查詢範例以及使用`REPLACE_MODEL_CASES`和`EXTEND_MODEL_CASES`之語法的詳細資訊，請參閱[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
+ 如需查詢範例以及使用和之語法的詳細 `REPLACE_MODEL_CASES` 資訊 `EXTEND_MODEL_CASES` ，請參閱[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
   
 ###  <a name="missing-value-substitution-in-time-series-models"></a><a name="bkmk_MissingValues"></a>時間序列模型中的遺漏值替代  
- 當您使用 `PREDICTION JOIN` 陳述式將新的資料加入時間序列模型時，新的資料集不能有任何遺漏值。 如果有任何數列不完整，此模型必須提供遺漏的值，其方式是使用 null、數值平均、特定的數值平均或預測值。 如果您指定 `EXTEND_MODEL_CASES`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用根據原始模型的預測來取代遺漏值。 如果您使用`REPLACE_MODEL_CASES`， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會以您在*MISSING_VALUE_SUBSTITUTION*參數中指定的值來取代遺漏值。  
+ 當您使用 `PREDICTION JOIN` 陳述式將新的資料加入時間序列模型時，新的資料集不能有任何遺漏值。 如果有任何數列不完整，此模型必須提供遺漏的值，其方式是使用 null、數值平均、特定的數值平均或預測值。 如果您指定 `EXTEND_MODEL_CASES`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用根據原始模型的預測來取代遺漏值。 如果您使用 `REPLACE_MODEL_CASES` ，會以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 您在*MISSING_VALUE_SUBSTITUTION*參數中指定的值來取代遺漏值。  
   
 ## <a name="list-of-prediction-functions"></a>預測函數的清單  
  所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法都支援一組常用的函數。 不過， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法支援下表所列出的其他函數。  
   
 |||  
 |-|-|  
-|預測函數|使用量|  
+|預測函數|使用方式|  
 |[Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)|傳回目前案例的日期與定型集的最後日期之間的時間配量數目。<br /><br /> 這個函數的典型用法就是用來識別最近的定型案例，好讓您可以擷取有關案例的詳細資料。|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|傳回指定之可預測資料行的節點識別碼。<br /><br /> 這個函數的典型用法就是用來識別產生特定預測值的節點，好讓您可以檢閱與此節點有關的案例，或擷取方程式和其他詳細資料。|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|傳回指定之可預測資料行中預測的標準差。<br /><br /> 此函數會取代 INCLUDE_STATISTICS 引數，時間序列模型不支援這個引數。|  

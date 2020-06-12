@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3cd99acc-368d-4e21-ad18-298fff056acd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aad6b1f02ad5fc10eb254a50eefe67166ddb563d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079431"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543632"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>KPI (Cube 設計工具) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 [KPI]**** 索引標籤，檢視及編輯所選取之 Cube 檢視的關鍵效能指標 (KPI)。  
@@ -37,7 +36,7 @@ ms.locfileid: "66079431"
   
 |窗格|定義|  
 |----------|----------------|  
-|**Toolbar**|使用表單檢視和瀏覽器視圖中的工具列來執行此索引標籤上的一般作業。如需此窗格的詳細資訊，請參閱[工具列 &#40;Kpi] 索引標籤，Cube 設計師&#41; &#40;Analysis Services 多維度資料&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)。|  
+|**工具列**|使用表單檢視和瀏覽器視圖中的工具列來執行此索引標籤上的一般作業。如需此窗格的詳細資訊，請參閱[工具列 &#40;Kpi] 索引標籤，Cube 設計師&#41; &#40;Analysis Services 多維度資料&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**KPI 組合管理**|使用表單檢視中的 **[KPI 組合管理]** ，依排序的格式來顯示 Cube 內含的 KPI。 如需此窗格的詳細資訊，請參閱 [KPI 組合管理 &#40;KPI 索引標籤，Cube 設計師&#41; &#40;Analysis Services - 多維度資料&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**計算工具**|使用表單檢視中的 **[計算工具]** 窗格，來顯示 Cube 可以使用的中繼資料、函數和工具。 如需此窗格的詳細資訊，請參閱[計算工具 &#40;KPI 索引標籤，Cube 設計師&#41; &#40;Analysis Services - 多維度資料&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**KPI 表單編輯器**|使用表單檢視中的 [KPI 表單編輯器] 窗格，即可編輯 Cube 內含的 KPI。 如需此窗格的詳細資訊，請參閱 [KPI 表單編輯器 &#40;KPI 索引標籤，Cube 設計師&#41; &#40;Analysis Services - 多維度資料&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)。|  

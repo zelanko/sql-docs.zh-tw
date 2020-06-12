@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae3e672932dd320c6b369f23f03c1f056d30d4ba
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084197"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522174"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>資料採礦方案與物件的管理
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供可用於管理現有採礦結構和採礦模型的用戶端工具。 本節說明可以利用每種環境執行的管理作業。  
@@ -35,7 +34,7 @@ ms.locfileid: "66084197"
 ## <a name="location-of-data-mining-objects"></a>資料採礦物件的位置  
  已經處理的採礦結構和模型會儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體中。  
   
- 如果您在開發資料採礦物件[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]時， `Immediate`在模式中建立資料庫的連接，則您所建立的任何物件都會在您工作時立即加入至伺服器。 不過，如果在 **[離線]** 模式 (也就是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中作業時的預設值) 中設計資料採礦物件，則您建立的採礦物件在部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體之前，都只是中繼資料容器。 因此，只要您對物件進行變更，就必須將物件重新部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 如需資料採礦架構的詳細資訊，請參閱[實體架構 &#40;Analysis Services - 資料採礦&#41;](physical-architecture-analysis-services-data-mining.md)。  
+ 如果您在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Immediate` 開發資料採礦物件時，在模式中建立資料庫的連接，則您所建立的任何物件都會在您工作時立即加入至伺服器。 不過，如果在 **[離線]** 模式 (也就是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中作業時的預設值) 中設計資料採礦物件，則您建立的採礦物件在部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體之前，都只是中繼資料容器。 因此，只要您對物件進行變更，就必須將物件重新部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 如需資料採礦架構的詳細資訊，請參閱[實體架構 &#40;Analysis Services - 資料採礦&#41;](physical-architecture-analysis-services-data-mining.md)。  
   
 > [!NOTE]  
 >  有些用戶端 (例如適用於 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007 的資料採礦增益集) 也可讓您建立工作階段採礦模型和採礦結構，這些用戶端會使用執行個體的連接，但只會將採礦結構和模型儲存在工作階段持續時間的伺服器中。 您仍可以透過用戶端管理這些模型，方法與您管理儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的結構和模型相同，但是在您中斷與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的連接之後，並不會保存這些物件。  

@@ -3,19 +3,19 @@ title: sys.databases pdw_health_component_groups （Transact-sql） |Microsoft D
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.technology: system-objects
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: conceptual
 ms.assetid: 5ba27432-7a29-4420-b73d-def621c0b3ac
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79d459fdff2e26726168f5200b53c82f3bb6a79c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5362c1f441c3b5afee22e8cac75290b476ef8263
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127512"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627050"
 ---
 # <a name="syspdw_health_component_groups-transact-sql"></a>sys.databases pdw_health_component_groups （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

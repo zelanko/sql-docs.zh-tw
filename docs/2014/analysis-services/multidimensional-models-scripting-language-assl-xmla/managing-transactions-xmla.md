@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad8a77d1d8552dc811c1232afb53c142452658db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff1c60addd25b222905e33bc33e77dd85e88803
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727200"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544960"
 ---
 # <a name="managing-transactions-xmla"></a>管理交易 (XMLA)
-  傳送至實例的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]每個 XML for Analysis （XMLA）命令都會在目前隱含或明確會話的交易內容中執行。 若要管理這些交易，您可以使用[BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla)、 [CommitTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla)和[RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla)命令。 透過使用這些命令，您可以建立隱含或是明確的交易、變更交易參考計數，以及開始、認可或是回復交易。  
+  傳送至實例的每個 XML for Analysis （XMLA）命令都會在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 目前隱含或明確會話的交易內容中執行。 若要管理這些交易，您可以使用[BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla)、 [CommitTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla)和[RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla)命令。 透過使用這些命令，您可以建立隱含或是明確的交易、變更交易參考計數，以及開始、認可或是回復交易。  
   
 ## <a name="implicit-and-explicit-transactions"></a>隱含與明確交易。  
  交易是隱含或明確的：  
   
  **隱含交易**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]如果`BeginTransaction`命令未指定交易的開頭，則會建立 XMLA 命令的*隱性*事務。 如果命令成功，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 永遠都會認可隱含交易。而如果命令失敗，則會回復隱含交易。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]如果*implicit* `BeginTransaction` 命令未指定交易的開頭，則會建立 XMLA 命令的隱含交易。 如果命令成功，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 永遠都會認可隱含交易。而如果命令失敗，則會回復隱含交易。  
   
  **明確交易**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]如果`BeginTransaction`命令開始交易，則建立*明確*的交易。 不過，如果傳送的是 `CommitTransaction` 命令，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 只會認可明確交易。而如果傳送的是 `RollbackTransaction` 命令，則會回復明確交易。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]如果命令開始交易，則建立*明確*的交易 `BeginTransaction` 。 不過，如果傳送的是 `CommitTransaction` 命令，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 只會認可明確交易。而如果傳送的是 `RollbackTransaction` 命令，則會回復明確交易。  
   
  此外，如果目前的工作階段在使用中交易完成之前就結束了目前的工作階段，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 則會回復隱含交易和明確交易。  
   

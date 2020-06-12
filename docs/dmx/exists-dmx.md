@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df52a83c2e60395e72b6f81903d0372d1dc05614
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889043"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670246"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ EXISTS(<subquery>)
   
 ## <a name="arguments"></a>引數  
  *種子*  
- [從\<資料行名稱] 表單 select * 的 select 語句> \<[WHERE 述詞清單>]。  
+ [從資料行名稱] 表單 SELECT * 的 SELECT 語句 \<> [WHERE 述詞 \< 清單>]。  
   
 ## <a name="result-type"></a>結果類型  
  如果子查詢所傳回的結果集至少包含一個資料列，則會傳回**true** ;否則，會傳回**false**。  
@@ -42,7 +42,7 @@ EXISTS(<subquery>)
 ## <a name="examples"></a>範例  
  您可以使用 EXISTS 和 NOT EXISTS 來檢查巢狀資料表中的條件。 當您建立的篩選可控制用來定型或測試資料採礦模型的資料時，這樣的處理方式會很有用。 如需詳細資訊，請參閱[採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)。  
   
- 下列範例是以您在`[Association]` [基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程中建立的「採礦結構」和「採礦模型」為基礎。 此查詢只會傳回客戶至少購買一個修補套件的案例。  
+ 下列範例是 `[Association]` 以您在[基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程中建立的「採礦結構」和「採礦模型」為基礎。 此查詢只會傳回客戶至少購買一個修補套件的案例。  
   
 ```  
 SELECT * FROM [Association].CASES  

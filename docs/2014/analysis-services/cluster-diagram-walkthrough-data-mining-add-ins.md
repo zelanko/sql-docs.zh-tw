@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 578b5b8e55fd3ae660db985eed2e608667dc768b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087906"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527484"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>叢集圖表逐步解說 (資料採礦增益集)
   建立群集模型之後，您可以**使用 [叢集] 圖形將它**匯入 Visio，然後繼續自訂並增強配置。 **適用于 Visio 的資料採礦圖形**包含下列自訂控制項，可用來處理資料採礦圖表：  
@@ -43,13 +42,13 @@ ms.locfileid: "66087906"
   
 1.  如果您在 [**圖形**] 清單中看不到 [ **Microsoft 資料採礦圖形**]，請按一下 [**更多圖形**]，選取 [**開啟**樣板]，然後從預設安裝位置開啟範本。  
   
-     \<磁片磁碟機>： \Program files\Microsoft SQL Server 2012 DM 增益集  
+     \<drive>： \Program files\Microsoft SQL Server 2012 DM 增益集  
   
 2.  **將 [叢集] 圖形拖曳**至頁面上。  
   
 3.  在 [叢集**Visio 圖形 Wizard]** 的 [歡迎使用] 頁面上，按 **[下一步]**。  
   
-4.  在叢集 Wizard 的 [**選取資料來源** **]** 頁面上，選擇包含您想要[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]視覺化之資料採礦模型的伺服器連接。  
+4.  在叢集 Wizard 的 [**選取資料來源** **]** 頁面上，選擇 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 包含您想要視覺化之資料採礦模型的伺服器連接。  
   
 5.  選取適當的 [採礦模型]，然後按 **[下一步]**。  
   

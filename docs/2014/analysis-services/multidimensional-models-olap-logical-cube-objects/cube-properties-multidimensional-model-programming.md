@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27d4202774107795eaddf76c27e21010d534d977
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727644"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545250"
 ---
 # <a name="cube-properties"></a>Cube 屬性
   Cube 有許多屬性，您可以設定這些屬性來影響整個 Cube 的行為。 這些屬性都摘要在下表中：  
@@ -58,13 +57,13 @@ ms.locfileid: "62727644"
 |`Language`|指定 Cube 的預設語言識別碼。|  
 |`Name`|指定 Cube 的使用者易記名稱。|  
 |`ProactiveCaching`|定義 Cube 的主動式快取設定。|  
-|`ProcessingMode`|指出在處理期間或處理之後，是否應該進行檢索和彙總。 選項為**regular** [一般`lazy`] 或 []。|  
+|`ProcessingMode`|指出在處理期間或處理之後，是否應該進行檢索和彙總。 選項為 [**一般**] 或 [] `lazy` 。|  
 |`ProcessingPriority`|決定 Cube 在背景作業 (例如延遲彙總和索引) 期間的處理優先權。 預設值為**0**。|  
-|`ScriptCacheProcessingMode`|指出在處理期間或處理之後是否應建立指令碼快取。 選項為**一般**和`lazy`。|  
+|`ScriptCacheProcessingMode`|指出在處理期間或處理之後是否應建立指令碼快取。 選項為**一般**和 `lazy` 。|  
 |`ScriptErrorHandlingMode`|決定錯誤處理。 選項為 `IgnoreNone` 或 `IgnoreAll`。|  
 |`Source`|顯示用於 Cube 的資料來源檢視。|  
 |`StorageLocation`|指定 Cube 的檔案系統儲存位置。 如果未指定，會從包含 Cube 物件的資料庫中繼承位置。|  
-|`StorageMode`|指定 Cube 的儲存模式。 值為`MOLAP`、 `ROLAP`或。`HOLAP``.`|  
+|`StorageMode`|指定 Cube 的儲存模式。 值為 `MOLAP` 、 `ROLAP` 或。`HOLAP``.`|  
 |`Visible`|決定 Cube 的可見性。|  
   
 > [!NOTE]  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8ade48f56a6b8bec4a8de5094a271080a1eab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42d48d088b72c28c6e44b6f96aab1e1493e47577
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175767"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536050"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>在多維度模型中建立量值和量值群組
   *「量值」* (measure) 是數值資料值的彙總，包括總和、計數、最小值、最大值、平均值或您建立的自訂 MDX 運算式。 *「量值群組」* (measure group) 是包含一個或多個量值的容器。 所有量值都存在量值群組中，即使只有一個量值。 Cube 必須具有至少一個量值與量值群組。
@@ -49,8 +48,8 @@ ms.locfileid: "78175767"
 
 |||
 |-|-|
-|**來源**|大部分量值來自於外部資料倉儲中之事實資料表中的數值資料行，例如 AdventureWorks 資料倉儲中「網際網路銷售」和「轉售商銷售」資料表中的「銷售量」資料行；但您也可以完全依據您所定義的計算來建立新的量值。<br /><br /> 維度資料表中的屬性資料行也可以用來定義量值，但從其彙總行為上來看，這類量值通常為局部加總或不加總。 如需局部加總行為的詳細資訊，請參閱 [Define Semiadditive Behavior](define-semiadditive-behavior.md)(定義局部加總行為)。|
-|**累積**|依預設，會沿著每個維度來加總量值。 然而，`AggregateFunction` 屬性可讓您修改這個行為。 如需清單，請參閱＜ [Use Aggregate Functions](use-aggregate-functions.md) ＞。|
+|**source**|大部分量值來自於外部資料倉儲中之事實資料表中的數值資料行，例如 AdventureWorks 資料倉儲中「網際網路銷售」和「轉售商銷售」資料表中的「銷售量」資料行；但您也可以完全依據您所定義的計算來建立新的量值。<br /><br /> 維度資料表中的屬性資料行也可以用來定義量值，但從其彙總行為上來看，這類量值通常為局部加總或不加總。 如需局部加總行為的詳細資訊，請參閱 [Define Semiadditive Behavior](define-semiadditive-behavior.md)(定義局部加總行為)。|
+|**aggregation**|依預設，會沿著每個維度來加總量值。 然而，`AggregateFunction` 屬性可讓您修改這個行為。 如需清單，請參閱＜ [Use Aggregate Functions](use-aggregate-functions.md) ＞。|
 |**屬性**|如需其他屬性說明，請參閱＜ [Configure Measure Properties](configure-measure-properties.md) ＞。|
 
 ##  <a name="modeling-measures-and-measure-groups-on-facts-and-fact-tables"></a><a name="bkmk_modeling"></a>模型化事實和事實資料表上的量值和量值群組

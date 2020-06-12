@@ -1,5 +1,6 @@
 ---
 title: 將 MySQL 資料庫對應至 SQL Server 架構（MySQLToSQL） |Microsoft Docs
+description: 瞭解如何自訂 MySQL 架構與 SQL Server 或 Azure SQL Database 之間的 MySQL 對應 SSMA，或接受預設值。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 215833c96fae02ae7877e00173fb5a920a47ee0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f70cf22db8d4a9c957465ea86f286c41098538c5
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908982"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293706"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>將 MySQL 資料庫對應到 SQL Server 結構描述 (MySQLToSQL)
-根據預設，適用于 MySQL 的 SSMA 會將 MySQL 架構中的所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件遷移至名為的或 SQL Azure 資料庫，做為架構。 不過，您可以自訂 MySQL 架構和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫之間的對應。  
+根據預設，適用于 MySQL 的 SSMA 會將 MySQL 架構中的所有物件遷移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名為的或 SQL Azure 資料庫，做為架構。 不過，您可以自訂 MySQL 架構和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料庫之間的對應。  
   
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL 和 SQL Server 或 SQL Azure 架構  
 架構的 MySQL 概念會對應到資料庫的 SQL Server 概念及其其中一個架構。 SSMA 指的是資料庫和架構的 SQL Server 組合，做為架構。  
   
-架構的 MySQL 概念會對應到資料庫的 SQL Server 概念及其其中一個架構。 例如，MySQL 可能會有一個名為**HR**的架構。 SQL Server 的實例可能會有一個名為**HR**的資料庫，而該資料庫內則為架構。 其中一個架構是**dbo** （或資料庫擁有者）架構。 根據預設，MySQL 架構**hr**會對應到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫和架構**hr. dbo**。 SSMA 是指將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫和架構結合為架構。  
+架構的 MySQL 概念會對應到資料庫的 SQL Server 概念及其其中一個架構。 例如，MySQL 可能會有一個名為**HR**的架構。 SQL Server 的實例可能會有一個名為**HR**的資料庫，而該資料庫內則為架構。 其中一個架構是**dbo** （或資料庫擁有者）架構。 根據預設，MySQL 架構**hr**會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和架構**hr. dbo**。 SSMA 是指將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和架構結合為架構。  
   
-您可以修改 MySQL 與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure 架構之間的對應。  
+您可以修改 MySQL 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure 架構之間的對應。  
   
 ## <a name="modifying-the-target-database-and-schema"></a>修改目標資料庫和架構  
-在 SSMA 中，您可以將 MySQL 架構對應到任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可用或 SQL Azure 架構。  
+在 SSMA 中，您可以將 MySQL 架構對應到任何可用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 架構。  
   
 **若要修改資料庫和架構**  
   
@@ -40,7 +41,7 @@ ms.locfileid: "67908982"
   
 2.  在右窗格中，按一下 [**架構對應**] 索引標籤。  
   
-    您會看到所有 MySQL 架構的清單，後面接著目標值。 此目標是以或 SQL Azure 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的兩個部分標記法（*schema*）表示，而您的物件和資料將會在其中進行遷移。  
+    您會看到所有 MySQL 架構的清單，後面接著目標值。 此目標是以或 SQL Azure 中的兩個部分標記法（*schema*）表示， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而您的物件和資料將會在其中進行遷移。  
   
 3.  選取包含您要變更之對應的資料列，然後按一下 [**修改**]。  
   
@@ -52,11 +53,11 @@ ms.locfileid: "67908982"
   
 -   對應至 SQL Server  
   
-您可以將源資料庫對應到任何目標資料庫。 根據預設，源資料庫會對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您使用 SSMA 連接的目標資料庫。 如果要對應的目標資料庫在上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不存在，則系統會提示您輸入「**資料庫和/或架構不存在於目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料中」的訊息。它會在同步處理期間建立。您要繼續嗎？** 」 按一下 [是]。 同樣地，您可以將架構對應到目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫下的非現有架構，這會在同步處理期間建立。  
+您可以將源資料庫對應到任何目標資料庫。 根據預設，源資料庫會對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您使用 SSMA 連接的目標資料庫。 如果要對應的目標資料庫在上不存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則系統會提示您輸入「**資料庫和/或架構不存在於目標中繼資料中」的訊息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。它會在同步處理期間建立。您要繼續嗎？** 」 按一下 [是]。 同樣地，您可以將架構對應到目標資料庫下的非現有架構， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 這會在同步處理期間建立。  
   
 -   對應至 SQL Azure  
   
-您可以將源資料庫對應到連接的目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，或對應至連接的目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中的任何架構。 如果您將來源架構對應至 [已連接的目標資料庫] 底下的任何非現有架構，則系統會提示您輸入「**架構不存在於目標中繼資料中」的訊息。它會在同步處理期間建立。您要繼續嗎？按一下 [是]。**  
+您可以將源資料庫對應到連接的目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，或對應至連接的目標資料庫中的任何架構 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果您將來源架構對應至 [已連接的目標資料庫] 底下的任何非現有架構，則系統會提示您輸入「**架構不存在於目標中繼資料中」的訊息。它會在同步處理期間建立。您要繼續嗎？按一下 [是]。**  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>還原為預設資料庫和架構  
 如果您自訂 MySQL 架構與 SQL Server 架構之間的對應，您可以將對應還原回預設值。  

@@ -1,5 +1,6 @@
 ---
 title: 驗證運算式（XQuery） |Microsoft Docs
+description: 瞭解 XQuery 中的驗證運算式。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb2592a1-1fad-41f9-8ff8-74c5905dbae9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0cd42034bb143476862b4460ef28d1f02dcca027
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc909fcf942bc73bed6c39357b494ecaeabcb97c
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946199"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215850"
 ---
 # <a name="validate-expressions-xquery"></a>驗證運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

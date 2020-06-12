@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2915b0214b5b1a53392f025fbb4cce6eb3d14674
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075606"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547030"
 ---
 # <a name="define-database-dimensions"></a>定義資料庫維度
-  使用中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [維度設計師] 來設定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案或資料庫中的現有資料庫維度。 您可以使用 [維度設計師] 執行下列動作：  
+  使用中的 [維度設計師] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 來設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫中的現有資料庫維度。 您可以使用 [維度設計師] 執行下列動作：  
   
 -   設定維度層級屬性 (Property)。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66075606"
   
  維度設計師有三個不同的索引標籤，下表就是這些索引標籤的描述。  
   
-|索引標籤|描述|  
+|索引標籤|Description|  
 |---------|-----------------|  
 |**維度結構**|使用此索引標籤來處理維度的結構-以檢查或建立維度的資料來源視圖架構、使用屬性，以及組織使用者自訂階層中的屬性。|  
 |**屬性關聯性**|使用這個索引標籤，即可建立、修改或刪除維度的屬性關聯性。|  

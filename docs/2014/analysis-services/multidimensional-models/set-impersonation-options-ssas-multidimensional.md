@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 730ba13c22c8dcecf503398baae683f5d9c2b667
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072963"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545623"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>設定模擬選項 (SSAS - 多維度)
   在 Analysis Services 模型中建立 `data source` 物件時，您必須進行的其中一項設定就是模擬選項。 此選項會決定當執行與連接有關的本機作業時，Analysis Services 是否採用特定 Windows 使用者帳戶的識別，例如在支援漫遊設定檔的環境中載入 OLE DB 資料提供者或解析使用者設定檔資訊。  
@@ -49,7 +48,7 @@ ms.locfileid: "66072963"
  對話方塊中的所有選項都可以使用，但並非所有選項都適合所有案例。 請使用下列資訊來確定最適合您案例的選項。  
   
  **使用特定的使用者名稱和密碼**  
- 選取此選項[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，讓物件使用以下列格式指定之 Windows 使用者帳戶的安全性認證： * \<功能變數名稱>***\\*** \<使用者帳戶名稱>*。  
+ 選取此選項，讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件使用以下列格式指定之 Windows 使用者帳戶的安全性認證： *\<Domain name>***\\***\<User account name>* 。  
   
  選擇此選項，即可使用您專為資料存取目的所建立的專用最低權限 Windows 使用者識別。 例如，如果您習慣建立一般用途帳戶來擷取報表中使用的資料，則可以在此指定該帳戶。  
   

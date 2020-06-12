@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 622f575541d1a111e5cda6a28617ad400a977292
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59e4a78c9432c5ba8f75eb7bfaa6ab46a0b052cf
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892801"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670271"
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
 ## <a name="remarks"></a>備註  
  如果陳述式指定採礦模型，產生的檔案也會包含相關聯的採礦結構。 如果語句指定**WITH**相依性，則處理物件所需的所有物件（例如，資料來源和資料來源 view）都會包含在 .abf 檔案中。  
   
- 您必須是資料庫或伺服器管理員，才能從[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫匯出或匯入物件。  
+ 您必須是資料庫或伺服器管理員，才能從資料庫匯出或匯入物件 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 ## <a name="export-mining-structure-example"></a>匯出採礦結構範例  
  下列範例會將 Targeted Mailing 與 Forecasting 採礦結構，以及 Association 採礦模型匯出到特定的檔案位置。 因為 Association 模型是 Market Basket 採礦結構的一部份，所以範例也會匯出 Market Basket 結構。 因為關聯模型是使用「**採礦模型**」（而非「**採礦結構**」）匯出，所以不會匯出任何可能當做購物籃採礦結構一部分存在的任何其他採礦模型。  

@@ -11,27 +11,26 @@ f1_keywords:
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb68b07a4e14e16a8df5acde7bea986733564253
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081700"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528554"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>維度 (Cube 結構索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   在 Cube 設計師中的 **[Cube 結構]** 索引標籤上，使用 **[維度]** 窗格來檢視和編輯 Cube 維度，包括階層和屬性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **階層**  
  按一下即可顯示可用的 Cube 維度及其相關聯的 Cube 階層。  
   
- 展開 cube 維度，然後選取 **[ \<編輯維度>** ] 來顯示維度設計師，並編輯 cube 維度所依據的資料庫維度。 如需維度設計師的詳細資訊，請參閱[維度設計師 &#40;Analysis Services - 多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)。  
+ 展開 cube 維度，然後選取 **[ \<dimension> 編輯**] 以顯示維度設計師，並編輯 cube 維度所依據的資料庫維度。 如需維度設計師的詳細資訊，請參閱[維度設計師 &#40;Analysis Services - 多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)。  
   
  **屬性**  
  按一下即可顯示可用的 Cube 維度及其相關聯的 Cube 屬性。  
   
- 展開 cube 維度，然後選取 **[ \<編輯維度>** ] 來顯示維度設計師，並編輯 cube 維度所依據的資料庫維度。 如需維度設計師的詳細資訊，請參閱[維度設計師 &#40;Analysis Services - 多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)。  
+ 展開 cube 維度，然後選取 **[ \<dimension> 編輯**] 以顯示維度設計師，並編輯 cube 維度所依據的資料庫維度。 如需維度設計師的詳細資訊，請參閱[維度設計師 &#40;Analysis Services - 多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)。  
   
 ## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下 [維度]**** 窗格，即可顯示提供下列選項的操作功能表：  

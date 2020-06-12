@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e09018fad9c291ec1f47bbb776797d634950381
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083841"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521666"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 時序群集演算法技術參考
   Microsoft 時序叢集演算法是一種混合式演算法，它使用 Markov 鏈結分析來識別已排序的時序，並結合此分析的結果與叢集技術，根據模型中的時序和其他屬性產生叢集。 本主題描述演算法的實作、如何自訂演算法，以及時序叢集模型的特殊需求。  
@@ -46,7 +45,7 @@ ms.locfileid: "66083841"
 ### <a name="feature-selection-in-a-sequence-clustering-model"></a>時序叢集模型中的特徵選取  
  特徵選取不會在建立時序時叫用，但是特徵選取會在群集階段套用。  
   
-|模型類型|特徵選取方法|評價|  
+|模型類型|特徵選取方法|註解|  
 |----------------|------------------------------|--------------|  
 |時序群集|未使用|尚未叫用特徵選取。不過，您可以藉由設定 MINIMUM_SUPPORT 和 MINIMUM_PROBABILIITY 參數的值，控制演算法的行為。|  
 |叢集|有趣性分數|雖然群集演算法可以使用離散或離散化的演算法，但每個屬性的分數都會計算為距離，而且是連續的；因此會使用有趣性分數。|  
@@ -99,7 +98,7 @@ ms.locfileid: "66083841"
  預設值為 64。  
   
  MAXIMUM_STATES  
- 針對演算法支援的非順序屬性指定最大狀態數目。 如果非順序屬性的狀態數目大於狀態的最大數目，演算法會使用屬性最常用的狀態，並將其餘的狀態視為`Missing`。  
+ 針對演算法支援的非順序屬性指定最大狀態數目。 如果非順序屬性的狀態數目大於狀態的最大數目，演算法會使用屬性最常用的狀態，並將其餘的狀態視為 `Missing` 。  
   
  預設值為 100。  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66083841"
   
  如需如何在採礦模型中使用 Missing 值，以及遺漏值如何影響機率分數的詳細資訊，請參閱[遺漏值&#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  案例資料表必須有一個案例識別碼資料行。 案例資料表可以選擇性地包含儲存案例之相關屬性的其他資料行。  
   
  Microsoft 時序群集演算法需要儲存為巢狀資料表的時序資訊。 巢狀資料表必須有一個單一的 Key Sequence 資料行。 `Key Sequence` 資料行可以包含能夠儲存的任何資料類型，包括字串資料類型，但資料行對於每個案例，必須包含唯一的值。 此外，處理模型前，您必須確認案例資料表與巢狀資料表都根據與資料表相關的索引鍵，以遞增方式排序。  
@@ -136,7 +135,7 @@ ms.locfileid: "66083841"
   
 ## <a name="remarks"></a>備註  
   
--   請使用 [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 函數以預測時序。 如需有關支援序列預測之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的詳細資訊，請參閱[SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)（https://go.microsoft.com/fwlink/?linkid=232473)。  
+-   請使用 [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 函數以預測時序。 如需有關支援序列預測之版本的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)（ https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序叢集演算法不支援使用預測模型標記語言 (PMML) 來建立採礦模型。  
   

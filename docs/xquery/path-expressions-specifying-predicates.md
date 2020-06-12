@@ -1,5 +1,6 @@
 ---
 title: 在路徑運算式步驟中指定述詞 |Microsoft Docs
+description: 瞭解如何在 XQuery 路徑運算式的軸步驟中指定述詞，以篩選 XML 節點序列。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e8ba9bb523d4ce7aed76f61c569f5e8b1775972
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45837533806f2294665abbb242627a39d041e6d6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946436"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529790"
 ---
 # <a name="path-expressions---specifying-predicates"></a>路徑運算式 - 指定述詞
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,13 +71,13 @@ select @x.query('/People/Person[1]/Name')
 select @x.query('/People[1]/Person/Name')  
 ```  
   
- 請注意，在每個情況下，述詞都會繫結到路徑運算式中述詞所套用到的節點。 例如，第一個路徑運算式會選取每個/People/Person `Name`節點內的第一個 <> 元素，並使用提供的 XML 實例傳回下列內容：  
+ 請注意，在每個情況下，述詞都會繫結到路徑運算式中述詞所套用到的節點。 例如，第一個路徑運算式會選取 `Name` 每個/People/Person 節點內的第一個 <> 元素，並使用提供的 XML 實例傳回下列內容：  
   
 ```  
 <Name>John</Name><Name>Goofy</Name><Name>Daffy</Name>  
 ```  
   
- 不過，第二個路徑運算式會選取`Name`第一個/People/Person 節點下的所有 <> 元素。 因此，它會傳回下列項目：  
+ 不過，第二個路徑運算式會選取 `Name` 第一個/People/Person 節點下的所有 <> 元素。 因此，它會傳回下列項目：  
   
 ```  
 <Name>John</Name>  
@@ -134,11 +135,11 @@ WHERE ProductModelID=7
     WHERE ProductModelID=7  
     ```  
   
-     此查詢中的路徑運算式只會傳回已`Location`指定 LotSize 屬性的 <> 元素節點。 如果述詞針對特定 <`Location`> 傳回空的序列，則結果中不會傳回該工作中心位置。  
+     此查詢中的路徑運算式只 `Location` 會傳回已指定 LotSize 屬性的 <> 元素節點。 如果述詞針對特定 <> 傳回空的序列 `Location` ，則結果中不會傳回該工作中心位置。  
   
-2.  述詞值只能是 xs： integer、xs： Boolean 或 node\*。 對於 node\*，如果有任何節點，述詞會評估為 True，如果是空的序列，則會評估為 False。 任何其他數值類型 (例如 Double 和浮點類型) 都會產生靜態類型錯誤。 只有當產生的整數等於內容位置的值時，運算式的述詞真值才是 True。 此外，只有整數常值和**last （）** 函數會將已篩選步驟運算式的基數減少為1。  
+2.  述詞值只能是 xs： integer、xs： Boolean 或 node \* 。 對於 node \* ，如果有任何節點，述詞會評估為 True，如果是空的序列，則會評估為 False。 任何其他數值類型 (例如 Double 和浮點類型) 都會產生靜態類型錯誤。 只有當產生的整數等於內容位置的值時，運算式的述詞真值才是 True。 此外，只有整數常值和**last （）** 函數會將已篩選步驟運算式的基數減少為1。  
   
-     例如，下列查詢會抓取 <`Features`> 元素的第三個子項目節點。  
+     例如，下列查詢會抓取 <> 元素的第三個子項目節點 `Features` 。  
   
     ```  
     SELECT CatalogDescription.query('  
@@ -156,11 +157,11 @@ WHERE ProductModelID=7
   
     -   第三個步驟也指定了萬用字元 (*)，表示節點測試中的所有節點。 但是，述詞會篩選節點，並且只會傳回在第三個位置的節點。  
   
-    -   查詢會傳回檔根目錄之 <`Features` `ProductDescription`> 專案子系的 <> 專案子系的第三個子項目節點。  
+    -   查詢會傳回 `Features` 檔根目錄之 <> 專案子系的 <> 專案子系的第三個子項目節點 `ProductDescription` 。  
   
 3.  若述詞運算式的值是一個簡單類型的布林類型值，則此述詞真值會等於述詞運算式的值。  
   
-     例如，下列查詢是針對保留 XML 實例的**xml**類型變數（客戶問卷調查 xml 實例）所指定。 此查詢會擷取那些有孩童的客戶。 在此查詢中，將會\<HasChildren>1\</HasChildren>。  
+     例如，下列查詢是針對保留 XML 實例的**xml**類型變數（客戶問卷調查 xml 實例）所指定。 此查詢會擷取那些有孩童的客戶。 在此查詢中，這會是 \<HasChildren> 1 \</HasChildren> 。  
   
     ```  
     declare @x xml  
@@ -193,7 +194,7 @@ WHERE ProductModelID=7
   
     -   「 **For**迴圈」中的運算式有兩個步驟，而第二個步驟會指定述詞。 此述詞的值是布林類型的值。 若此值是 True，則此述詞的真值也會是 True。  
   
-    -   查詢會傳回 <`Customer`> 專案子系，其述詞值為 True，屬於\<檔根目錄的問卷> 元素子系。 以下是結果：  
+    -   查詢會傳回 <`Customer`> 專案子系，其述詞值為 True，屬於 \<Survey> 檔根目錄的元素子系。 以下是結果：  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   
@@ -201,7 +202,7 @@ WHERE ProductModelID=7
   
 4.  若述詞運算式的值是包含至少一個節點的序列，則述詞真值為 True。  
   
- 例如，下列查詢會從與**wm**首碼關聯的命名空間中，針對其 XML 目錄描述包含至少一項功能（<`Features`> 元素的子項目）的產品模型，抓取 ProductModelID。  
+ 例如，下列查詢會 `Features` 從與**wm**首碼關聯的命名空間中，針對其 XML 目錄描述包含至少一項功能（<> 元素的子項目）的產品模型，抓取 ProductModelID。  
   
 ```  
 SELECT ProductModelID  

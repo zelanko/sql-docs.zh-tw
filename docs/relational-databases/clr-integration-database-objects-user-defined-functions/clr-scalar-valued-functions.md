@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a44187fc41409d149501c4cda7e99817be034a12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c9f5fe3a3fa9a58b8c1a103bcb2cf359d842190
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488415"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83806757"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 純量值函式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  純量值函式 (SVF) 會傳回單一值，如字串、整數或位元值。 您可以使用任何 .NET Framework 程式設計語言，在 managed 程式碼中建立純量值的使用者定義函數。 這些函數可供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他 Managed 程式碼存取。 如需 CLR 整合的優點，以及在 managed 程式碼和[!INCLUDE[tsql](../../includes/tsql-md.md)]之間選擇的詳細資訊，請參閱[CLR 整合的總覽](../../relational-databases/clr-integration/clr-integration-overview.md)。  
+  純量值函式 (SVF) 會傳回單一值，如字串、整數或位元值。 您可以使用任何 .NET Framework 程式設計語言，在 managed 程式碼中建立純量值的使用者定義函數。 這些函數可供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他 Managed 程式碼存取。 如需 CLR 整合的優點，以及在 managed 程式碼和之間選擇的詳細資訊 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，請參閱[CLR 整合的總覽](../../relational-databases/clr-integration/clr-integration-overview.md)。  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR 純量值函式的需求  
- .NET Framework SVF 會在 .NET Framework 組件中實作為類別上的方法。 從 SVF 傳回[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的輸入參數和類型可以是所支援的任何純量資料類型，但**Varchar**、 **char**、 **rowversion**、 **text**、 **Ntext**、 **image**、 **timestamp**、 **table**或**cursor**除外。 SVF 必須確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型與實作方法的傳回資料類型相符。 如需類型轉換的詳細資訊，請參閱[對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
+ .NET Framework SVF 會在 .NET Framework 組件中實作為類別上的方法。 從 SVF 傳回的輸入參數和類型可以是所支援的任何純量資料類型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，但**Varchar**、 **char**、 **rowversion**、 **text**、 **Ntext**、 **image**、 **timestamp**、 **table**或**cursor**除外。 SVF 必須確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型與實作方法的傳回資料類型相符。 如需類型轉換的詳細資訊，請參閱[對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
  在 .NET Framework 語言中執行 .NET Framework SVF 時，可以指定**SqlFunction**自訂屬性來包含函數的其他資訊。 **SqlFunction**屬性會指出函式是否會存取或修改資料（如果有具決定性），以及函數是否牽涉到浮點運算。  
   
@@ -81,17 +81,17 @@ Public Class T
 End Class  
 ```  
   
- 第一行程式碼會參考**SqlClient**來存取 ADO.NET 命名空間 **，以存取**屬性和。 （此命名空間包含**SqlClient**，也就是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 .NET Framework Data Provider）。  
+ 第一行程式碼會參考**SqlClient**來存取 ADO.NET 命名空間 **，以存取**屬性和。 （此命名空間包含**SqlClient**，也就是的 .NET Framework Data Provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）。  
   
  接下來，此函式會接收**SqlFunction**自訂屬性，這是在**Microsoft. SqlServer. 伺服器**命名空間中找到的。 此自訂屬性會指出使用者定義函數 (UDF) 是否會使用同處理序提供者來讀取伺服器上的資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許 UDF 更新、插入或刪除資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以讓不使用同處理序提供者之 UDF 的執行最佳化。 這是藉由將**dataaccesskind.read**設定為**dataaccesskind.read**來表示。 在下一行中，目標方法為 public static (Visual Basic .NET 中則為 shared)。  
   
- **SqlCoNtext**類別（位於**Microsoft**命名空間中）可以接著存取具有已設定之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例連接的**SqlCommand**物件。 雖然這裡並未用到，但目前的交易內容也可以透過**系統交易**應用程式開發介面（API）取得。  
+ **SqlCoNtext**類別（位於**Microsoft**命名空間中）可以接著存取具有已設定之實例連接的**SqlCommand**物件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 雖然這裡並未用到，但目前的交易內容也可以透過**系統交易**應用程式開發介面（API）取得。  
   
  撰寫使用**SqlClient**命名空間中的類型之用戶端應用程式的開發人員，在函式主體中大部分的程式程式碼看起來應該很熟悉。  
   
  [C#]  
   
-```  
+```csharp
 using(SqlConnection conn = new SqlConnection("context connection=true"))   
 {  
    conn.Open();  
@@ -103,7 +103,7 @@ using(SqlConnection conn = new SqlConnection("context connection=true"))
   
  [Visual Basic]  
   
-```  
+```vb
 Using conn As New SqlConnection("context connection=true")  
    conn.Open()  
    Dim cmd As New SqlCommand( _  
@@ -132,11 +132,11 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 >  `/t:library` 表示應該產生程式庫，而不是可執行檔。 可執行檔無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊。  
   
 > [!NOTE]  
->  不支援在上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行以 **/clr： pure**編譯的 Visual C++ 資料庫物件。 例如，這類資料庫物件包括純量值函式。  
+>  不支援在上執行以 **/clr： pure**編譯的 Visual C++ 資料庫物件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 例如，這類資料庫物件包括純量值函式。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢及註冊組件和 UDF 的範例引動過程為：  
   
-```  
+```sql
 CREATE ASSEMBLY FirstUdf FROM 'FirstUdf.dll';  
 GO  
   

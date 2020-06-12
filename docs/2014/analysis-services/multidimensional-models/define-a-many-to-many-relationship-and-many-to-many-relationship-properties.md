@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60456afe700d3bfb793d214331871445190eb10
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075783"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547080"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定義多對多關聯性及多對多關聯性屬性
   本主題說明 Analysis Services 中的多對多維度，包括何時使用這些維度以及如何建立這些維度。  
@@ -142,7 +141,7 @@ ms.locfileid: "66075783"
   
 1.  部署專案，然後瀏覽 Cube 來確認彙總有效。  
   
-2.  在 Excel 中，**從 Analysis Services**按一下 [**來自其他來源** | 的**資料** | ]。 輸入伺服器的名稱，並選擇資料庫和 Cube。  
+2.  在 Excel 中， **Data**  |  從 Analysis Services 按一下 [**來自其他來源**  |  **的**資料]。 輸入伺服器的名稱，並選擇資料庫和 Cube。  
   
 3.  建立使用以下項目的樞紐分析表：  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 013a56ef71c33a283fb298ca322ed0e30b8933eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b0b1d50095584a86074ebe1fb7eac9b7de98256
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175287"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542850"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>定義多對多關聯性
   定義維度時，通常每一個事實只聯結到一個維度成員，而單一維度成員可以與許多不同事實相關聯。 例如，每個客戶可以有許多張訂單，但是每張訂單只會屬於單一客戶。 在關係資料庫術語中，這稱為「*一對多關聯性*」。 不過，有時候單一事實可聯結到多個維度成員。 在關聯式資料庫詞彙中，這稱為「多對多關聯性」**。 例如，客戶進行採購有許多原因，而採購原因可能與多個採購相關聯。 聯結資料表是用來定義與每項採購相關的銷售原因。 從這樣的關聯性建構的 [銷售原因] 維度會有多個成員與單一銷售交易有關。 當維度與事實資料表無直接相關時，多對多維度會將維度模型可擴展到典型星形結構描述之外，來支援複雜分析。
@@ -35,7 +34,7 @@ ms.locfileid: "78175287"
 
 1.  請針對 **Adventure Works DW 2012** 資料來源檢視，開啟資料來源檢視設計師。
 
-2.  以滑鼠右鍵按一下 [**圖表召集人**] 窗格中的任何位置，然後`Internet Sales Order Reasons`按一下 [**新增圖表**]，並指定做為此新圖表的名稱。
+2.  以滑鼠右鍵按一下 [**圖表召集人**] 窗格中的任何位置，然後按一下 [**新增圖表**]，並指定 `Internet Sales Order Reasons` 做為此新圖表的名稱。
 
 3.  將 [InternetSales]**** 資料表從 [資料表]**** 窗格拖曳至 [圖表]**** 窗格。
 
@@ -47,13 +46,13 @@ ms.locfileid: "78175287"
 
 6.  在 [格式]**** 功能表上，指向 [自動配置]****，然後按一下 [圖表]****。
 
-7.  在 [屬性視窗中，將 [ **DimSalesReason** ] 資料表`SalesReason`的 [ **friendlyname** ] 屬性變更為，然後將 [ **FactInternetSalesReason** ] 資料表的`InternetSalesReason`[ **friendlyname** ] 屬性變更為。
+7.  在 [屬性視窗中，將 [ **DimSalesReason** ] 資料表的 [ **friendlyname** ] 屬性變更為 `SalesReason` ，然後將 [ **FactInternetSalesReason** ] 資料表的 [ **friendlyname** ] 屬性變更為 `InternetSalesReason` 。
 
 8.  在 [資料表]**** 窗格中，展開 [InternetSalesReason (dbo.FactInternetSalesReason)]****，並按一下 [SalesOrderNumber]****，然後在 [屬性] 視窗中檢閱這個資料行的 [DataType]**** 屬性。
 
      請注意， **SalesOrderNumber** 資料行的資料類型是字串資料類型。
 
-9. 檢查`InternetSalesReason`資料表中其他資料行的資料類型。
+9. 檢查資料表中其他資料行的資料類型 `InternetSalesReason` 。
 
      請注意，這份資料表的其他兩個資料行的資料類型是數值資料類型。
 
@@ -69,7 +68,7 @@ ms.locfileid: "78175287"
 
 2.  以滑鼠右鍵按一下 [量值]**** 窗格中的任何位置，然後按一下 [新增量值群組]****。 如需詳細資訊，請參閱 [在多維度模型中建立量值和量值群組](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。
 
-3.  在 [**新增量值群組**] 對話方塊中`InternetSalesReason` ，于 [**從資料來源視圖選取資料表**] 清單中選取，然後按一下 **[確定]**。
+3.  在 [**新增量值群組**] 對話方塊中，于 `InternetSalesReason` [**從資料來源視圖選取資料表**] 清單中選取，然後按一下 **[確定]**。
 
      請注意，[網際網路銷售原因]**** 量值群組現在出現在 [量值]**** 窗格中。
 
@@ -99,15 +98,15 @@ ms.locfileid: "78175287"
 
 4.  在 [指定來源資訊]**** 頁面上，確認已選取 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 資料來源檢視。
 
-5.  在 [**主資料表**] 清單中`SalesReason`，選取 []。
+5.  在 [**主資料表**] 清單中，選取 [] `SalesReason` 。
 
 6.  在 [索引鍵資料行]**** 清單中，確認已列出 [SalesReasonKey]****。
 
 7.  在 [名稱資料行]**** 清單中，選取 [SalesReasonName]****。
 
-8.  按 [下一步]  。
+8.  按 [下一步] 。
 
-9. 在 [選取維度屬性]**** 頁面上，系統會自動選取 [銷售原因索引鍵]**** 屬性，因為它是索引鍵屬性。 選取 [**銷售原因類型**] 屬性旁的核取方塊，將其名稱變更`Sales Reason Type`為，然後按 **[下一步]**。
+9. 在 [選取維度屬性]**** 頁面上，系統會自動選取 [銷售原因索引鍵]**** 屬性，因為它是索引鍵屬性。 選取 [**銷售原因類型**] 屬性旁的核取方塊，將其名稱變更為 `Sales Reason Type` ，然後按 **[下一步]**。
 
 10. 在 [正在完成精靈]**** 頁面上，按一下 [完成]**** 建立 [銷售原因] 維度。
 
@@ -115,11 +114,11 @@ ms.locfileid: "78175287"
 
 12. 在 [**銷售原因**] 維度之 [維度設計師] 的 [**屬性**] 窗格中，選取 [**銷售原因索引鍵**]，然後將屬性視窗中的 [**名稱**] 屬性變更為`Sales Reason.`
 
-13. 在 [維度**設計師] 的**[階層] 窗格中，依該順序建立包含 [ `Sales Reason Type`層級] 和 [**銷售原因**] 層級的 [**銷售原因**] 使用者階層。
+13. 在 [維度**設計師] 的**[階層] 窗格中，依該順序建立包含 [層級] 和 [銷售原因] 層級的 [**銷售原因**] 使用者階層 `Sales Reason Type` 。 **Sales Reason**
 
-14. 在屬性視窗中，將`All Sales Reasons`定義為 [銷售原因] 階層的 [ **AllMemberName** ] 屬性值。
+14. 在屬性視窗中， `All Sales Reasons` 將定義為 [銷售原因] 階層的 [ **AllMemberName** ] 屬性值。
 
-15. 將`All Sales Reasons`定義為 [銷售原因] 維度的 [ **AttributeAllMemberName** ] 屬性值。
+15. `All Sales Reasons`將定義為 [銷售原因] 維度的 [ **AttributeAllMemberName** ] 屬性值。
 
 16. 若要將新建立的維度新增至 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 當成 Cube 維度，請切換至 [Cube 設計師]****。 在 [Cube 結構]**** 索引標籤上，以滑鼠右鍵按一下 [維度]**** 窗格，然後選取 [新增 Cube 維度]****。
 
@@ -145,7 +144,7 @@ ms.locfileid: "78175287"
 
      ![[定義關聯性] 對話方塊](../../2014/tutorials/media/l5-many-to-many-3.gif "定義關聯性對話方塊")
 
-5.  按一下 [確定]  。
+5.  按一下 [確定]。
 
      請注意代表 [銷售原因] 維度和 [網際網路銷售] 量值群組之間關聯性的多對多圖示。
 
@@ -161,7 +160,7 @@ ms.locfileid: "78175287"
 
 5.  在 [中繼資料] 窗格中，依序展開 [客戶]****、[位置]****、[客戶地理位置]****、[成員]****、[所有客戶]**** 和 [澳大利亞]****，並以滑鼠右鍵按一下 [昆士蘭]****，然後按一下 [新增至篩選]****。
 
-6.  展開`Sales Reason Type`層級的每個成員，以檢查與昆士蘭客戶在網際網路上購買[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]產品的每個原因相關聯的貨幣值。
+6.  展開層級的每個成員 `Sales Reason Type` ，以檢查與昆士蘭客戶在網際網路上購買產品的每個原因相關聯的貨幣值 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 。
 
      請注意，與每一個銷售原因有關聯的總計累加超過總銷售量。 這是因為有些客戶針對其採購引用了多個原因。
 

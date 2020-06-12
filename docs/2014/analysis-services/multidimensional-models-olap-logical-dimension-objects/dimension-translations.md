@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 38fc1e05-2ac9-4816-b52b-dfd19c3a43a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e0ecacaa185b9fe520513af57ced3b382a343c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f31773ad871ef7e3fc8f99d57e7a9099335b899
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62728524"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545148"
 ---
 # <a name="dimension-translations"></a>維度翻譯
   翻譯是一種簡單的機制，用來將顯示的標籤和標題從某個語言變成另一個語言。 每一個翻譯都會定義成一組值：具有翻譯文字的字串以及具有語言識別碼的數字。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的所有物件都可使用翻譯。 維度也可以將屬性值翻譯。 用戶端應用程式負責尋找使用者已定義的語言設定，並將所有標題和標籤切換成以該語言顯示。 物件可以有您想要的任何翻譯數目。  
   
  簡單的 <xref:Microsoft.AnalysisServices.Translation> 物件是由語言識別碼和翻譯的標題所組成。 語言識別碼是具有語言識別碼的 `Integer`。 翻譯的標題則是翻譯的文字。  
   
- 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，維度轉譯是維度名稱的特定語言標記法、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件名稱或其成員之一，例如標題、成員或階層層級。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]也支援 cube 物件的翻譯。  
+ 在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，維度轉譯是維度名稱的特定語言標記法、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件名稱或其成員之一，例如標題、成員或階層層級。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]也支援 cube 物件的翻譯。  
   
  翻譯會針對可支援多種語言的用戶端應用程式，提供伺服器支援。 通常，檢視 Cube 及其維度的使用者來自許多不同國家 (地區)。 可將 Cube 及其維度的各種元素翻譯成不同語言則十分有用，如此這些使用者就可檢視和了解 Cube。 例如，法國的商務使用者使用法文地區設定的工作站存取 Cube 時，就可用法文查看物件屬性值。 而德國的商務使用者使用德文地區設定的工作站存取相同 Cube 時，就可用德文查看相同的物件屬性值。  
   

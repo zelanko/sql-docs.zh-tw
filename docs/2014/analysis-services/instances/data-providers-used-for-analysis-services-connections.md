@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a48316bb89f92ba8b44e3160a6b38e77762f3be
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080103"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543980"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>用於 Analysis Services 連接的資料提供者
   Analysis Services 會為伺服器和資料存取提供三個資料提供者。 所有連接到 Analysis Services 的應用程式都會使用其中一個提供者來進行存取。 其中兩個提供者 ADOMD.NET 和 Analysis Services 管理物件 (AMO) 為 Managed 資料提供者。 Analysis Services OLE DB 提供者 (MSOLAP DLL) 是原生資料提供者。  
@@ -54,7 +53,7 @@ ms.locfileid: "66080103"
   
 1.  移至 \Program Files\Microsoft Analysis Services\AS OLEDB\120。  
   
-2.  以滑鼠右鍵按一下 [msolap120.dll]，然後按一下 [**屬性**]。  
+2.  以滑鼠右鍵按一下 msolap120.dll，然後按一下 [**屬性**]。  
   
  如果您在此位置找不到該檔案，或是資料夾路徑包含 AS OLEDB\110 或 AS OLEDB\90，表示您目前使用的是舊版程式庫，必須安裝較新版本 (AS OLEDB\11) 才能連接至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66080103"
   
  MSOLAP130.dll 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]隨附的 Analysis Services OLE DB 提供者版本。 其他最近的舊版本包括 MSOLAP10.dll (適用於 SQL Server 2008 和 2008 R2) 以及 MSOLAP90.dll (適用於 SQL Server 2005)。  
   
- 連接字串中經常要指定 OLE DB 提供者。 Analysis Services 連接字串會使用不同的命名法來參考 OLE DB 提供者： MSOLAP。\<版本> .dll  
+ 連接字串中經常要指定 OLE DB 提供者。 Analysis Services 連接字串使用不同的命名法來參考 OLE DB 提供者： MSOLAP. \<version> 。urlmon.dll  
   
  MSOLAP.5.dll 是目前和 Excel 2013 搭配安裝的 Analysis Services OLE DB 提供者。 較舊的版本如 MSOLAP.4.dll 或 MSOLAP.3.dll 則通常會在執行舊版 Excel 的工作站上找到。 部分 Analysis Services 功能 (例如 PowerPivot 增益集) 需要特定版本的 OLE DB 提供者。 如需詳細資訊，請參閱[連接字串屬性 &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66080103"
   
  AMO 是由 SQL Server 安裝程式所安裝，SQL Server 用戶端應用程式會用它來連接 Analysis Services。 您也可以在透過自訂程式碼使用 AMO 時手動下載及安裝此程式庫 (請參閱本主題中的 [如何判斷 Analysis Services 資料提供者版本](#bkmk_LibUpdate) )。 您可以在全域組件快取 (如 `Microsoft.AnalysisServices`) 中找到 AMO。  
   
- 使用 AMO 的連接通常是最小的，由 "data source\<= servername>" 所組成。 建立連線之後，您可以使用 API 來處理資料庫集合與主要物件。 SSDT 和 SSMS 都會使用 AMO 來連線到 Analysis Services 執行個體。  
+ 使用 AMO 的連接通常是最小的，由 "data source =" 所組成 \<servername> 。 建立連線之後，您可以使用 API 來處理資料庫集合與主要物件。 SSDT 和 SSMS 都會使用 AMO 來連線到 Analysis Services 執行個體。  
   
  如需有關以程式設計方式連接的詳細資訊，請參閱＜ [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects)＞。  
   

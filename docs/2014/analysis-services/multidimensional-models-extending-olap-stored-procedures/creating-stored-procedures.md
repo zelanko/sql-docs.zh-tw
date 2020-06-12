@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a997244a2d54cca8732196107dd21927b5f9e2f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62703084"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545443"
 ---
 # <a name="creating-stored-procedures"></a>建立預存程序
-  所有預存程序都必須與 Common Language Runtime (CLR) 或元件物件模型 (COM) 類別建立關聯，才能使用。 類別必須安裝在伺服器上-通常是以[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX®動態連結程式庫（DLL）的形式，並在伺服器或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫中註冊為元件。  
+  所有預存程序都必須與 Common Language Runtime (CLR) 或元件物件模型 (COM) 類別建立關聯，才能使用。 類別必須安裝在伺服器上-通常是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX®動態連結程式庫（DLL）的形式，並在伺服器或資料庫中註冊為元件 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
   
- 預存程序是在伺服器或資料庫上註冊。 可以從任何查詢內容呼叫伺服器預存程序。 只有資料庫內容是為預存程序定義的資料庫時，才能存取資料庫預存程序。 如果某個組件中的函數呼叫其他組件中的函數，您必須將兩個組件註冊在相同內容 (伺服器或資料庫) 中。 如果是伺服器或伺服器上[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]已部署的資料庫，您可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來註冊元件。 如果是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，您可使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 設計師在專案中註冊組件。  
+ 預存程序是在伺服器或資料庫上註冊。 可以從任何查詢內容呼叫伺服器預存程序。 只有資料庫內容是為預存程序定義的資料庫時，才能存取資料庫預存程序。 如果某個組件中的函數呼叫其他組件中的函數，您必須將兩個組件註冊在相同內容 (伺服器或資料庫) 中。 如果是伺服器或伺服器上已部署的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來註冊元件。 如果是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，您可使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 設計師在專案中註冊組件。  
   
 > [!IMPORTANT]  
 >  COM 組件可能會造成安全性風險。 由於這項風險和其他考量，COM 組件在 [!INCLUDE[ssASversion10](../../includes/ssasversion10-md.md)]中已經被取代。 在未來的版本中，可能不再支援 COM 組件。  
@@ -59,7 +58,7 @@ ms.locfileid: "62703084"
   
 ### <a name="to-create-a-database-assembly-on-a-server"></a>在伺服器上建立資料庫組件  
   
-1.  在 [物件總管中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]展開資料庫的實例，以滑鼠右鍵按一下 [**元件**] 資料夾，然後按一下 [**新增元件**]。 這會顯示 [**註冊資料庫元件**] 對話方塊。  
+1.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在 [物件總管中展開資料庫的實例，以滑鼠右鍵按一下 [**元件**] 資料夾，然後按一下 [**新增元件**]。 這會顯示 [**註冊資料庫元件**] 對話方塊。  
   
 2.  針對 [**類型**]，指定元件的類型：  
   
@@ -82,11 +81,11 @@ ms.locfileid: "62703084"
   
 ### <a name="to-create-a-database-assembly-in-an-analysis-service-project"></a>在 Analysis Service 專案中建立資料庫組件  
   
-1.  在 [物件總管中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]展開資料庫的實例，以滑鼠右鍵按一下 [**元件**] 資料夾，然後按一下 [**新增元件參考**]。 這會顯示 [**加入參考**] 對話方塊。 [**加入參考**] 對話方塊的 [ **.net** ] 索引標籤會列出現有的 .net （CLR）元件，而 [**專案**] 索引標籤則會列出專案。  
+1.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在 [物件總管中展開資料庫的實例，以滑鼠右鍵按一下 [**元件**] 資料夾，然後按一下 [**新增元件參考**]。 這會顯示 [**加入參考**] 對話方塊。 [**加入參考**] 對話方塊的 [ **.net** ] 索引標籤會列出現有的 .net （CLR）元件，而 [**專案**] 索引標籤則會列出專案。  
   
-2.  您可以按一下現有的元件或專案，然後按一下**Add** [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]新增] 將它加入至專案。 若要加入 COM DLL 的參考，請按一下 [**流覽**] 索引標籤來尋找檔案。 [**選取的專案和元件**] 清單會顯示您要新增至專案之每個元件的名稱、類型、版本和位置。  
+2.  您可以按一下現有的元件或專案，然後按一下 [**新增**] 將它加入至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。 若要加入 COM DLL 的參考，請按一下 [**流覽**] 索引標籤來尋找檔案。 [**選取的專案和元件**] 清單會顯示您要新增至專案之每個元件的名稱、類型、版本和位置。  
   
-3.  當您完成選取要加入的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]元件時，請按一下 **[確定]** 將其新增至專案。  
+3.  當您完成選取要加入的元件時，請按一下 **[確定]** 將其新增至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。  
   
 ## <a name="script-format-for-an-assembly"></a>組件的指令碼格式  
  註冊 .NET 組件相當地簡單。 .NET 組件會使用下列格式，以二進位格式加入資料庫中：  

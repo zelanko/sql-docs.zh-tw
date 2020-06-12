@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c54c6f369d519812bb79cacf51bd1ad00a1dfb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a507e0d77cd81165b0220e3d09ec10227d32d853
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175217"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528704"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>偵測類別目錄 (適用於 Excel 的資料表分析工具)
   ![功能區中的偵測類別目錄按鈕](media/tat-detectcat.gif "功能區中的偵測類別目錄按鈕")
@@ -71,20 +70,20 @@ ms.locfileid: "78175217"
 
  ![偵測類別目錄工具建立的報表](media/dm13-tat-detectcat-report3.gif "偵測類別目錄工具建立的報表")
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
  [偵測**類別目錄**] 工具沒有資料量或類型的需求。
 
 > [!NOTE]
 >  當您使用 [偵測**類別目錄**] 工具時，它會在原始資料表中建立新的資料行 [類別]。 如果您將這個資料行保留在資料表中，接著執行後續的資料採礦作業，這個資料行的存在可能會影響結果。 為了確保不影響其他作業，在使用其他資料採礦工具之前，您應該複製不含類別目錄資料行的資料表。
 
 ## <a name="related-tools"></a>相關工具
- 當 [偵測**類別目錄**] 工具分析您的資料時，它會使用[!INCLUDE[msCoName](../includes/msconame-md.md)]群集演算法建立資料採礦結構和資料採礦模型。
+ 當 [偵測**類別目錄**] 工具分析您的資料時，它會使用群集演算法建立資料採礦結構和資料採礦模型 [!INCLUDE[msCoName](../includes/msconame-md.md)] 。
 
  當您使用 [**分析關鍵影響**因數] 工具建立資料採礦模型之後，您可以使用適用于 Excel 的資料採礦用戶端流覽模型，並更詳細地探索關聯性。 適用於 Excel 的資料採礦用戶端是獨立的增益集，提供更多進階資料採礦功能。 如需詳細資訊，請參閱[在 Excel 中流覽模型 &#40;SQL Server 資料採礦增益集&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)。
 
  如需在適用于 Excel 的資料採礦用戶端中使用資料模型化功能的詳細資訊，請參閱[建立資料採礦模型](creating-a-data-mining-model.md)。
 
- 如需 [偵測**類別目錄**] 工具所使用之演算法的詳細資訊，請參閱《線上叢書》 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的「Microsoft 群集演算法」主題。
+ 如需 [偵測**類別目錄**] 工具所使用之演算法的詳細資訊，請參閱《線上叢書》中的「Microsoft 群集演算法」主題 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。
 
 ## <a name="see-also"></a>另請參閱
  [適用於 Excel 的資料表分析工具](table-analysis-tools-for-excel.md)

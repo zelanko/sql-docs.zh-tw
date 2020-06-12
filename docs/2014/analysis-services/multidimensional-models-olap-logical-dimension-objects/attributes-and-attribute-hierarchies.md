@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c1f1c6644e14beaee7bdcab9e3f50129f73b7bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be3912ffd41c12043007418a0d36f835dc0b60f7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727392"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545170"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>屬性和屬性階層
   維度是屬性的集合，這些屬性會繫結至資料來源檢視中資料表或檢視內的一或多個資料行。  

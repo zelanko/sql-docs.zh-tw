@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a610f3aed7f520163dc4e2b30651d8b0397ef644
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf7389ee0097428bd5825c81abd36f3bdc5c02d2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893934"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83667939"
 ---
 # <a name="modeling-flags-dmx"></a>模型旗標 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL,REGRESSOR  
   
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>在採礦模型上指定模型旗標  
- 如需[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援在「採礦結構」資料行上指定旗標的語法範例，請參閱[CREATE &#40;DMX&#41;的「採礦結構](../dmx/create-mining-structure-dmx.md)」。  
+ 如需支援在「 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 採礦結構」資料行上指定旗標的語法範例，請參閱[CREATE &#40;DMX&#41;的「採礦結構](../dmx/create-mining-structure-dmx.md)」。  
   
  如需在「採礦模型」資料行上指定模型 flga 之語法的範例，請參閱[ALTER &#40;DMX&#41;的採礦結構](../dmx/alter-mining-structure-dmx.md)。  
   

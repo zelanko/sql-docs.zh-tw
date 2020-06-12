@@ -1,5 +1,6 @@
 ---
 title: 序列類型比對 |Microsoft Docs
+description: 瞭解如何比對具有特定類型之 XQuery 運算式所傳回的序列類型。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8904ab2ea9e8f78037b03f886e6b61d692b65e60
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946222"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306067"
 ---
 # <a name="type-system---sequence-type-matching"></a>類型系統 - 序列類型比對
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "67946222"
   
 -   您可能想知道運算式是傳回 XML 元素或是特定名稱和類型的屬性節點。  
   
- 您可以在序列類型比對中使用 `instance of` 布林運算子。 如需`instance of`運算式的詳細資訊，請參閱[&#40;XQuery&#41;的 SequenceType 運算式](../xquery/sequencetype-expressions-xquery.md)。  
+ 您可以在序列類型比對中使用 `instance of` 布林運算子。 如需運算式的詳細資訊 `instance of` ，請參閱[&#40;XQuery&#41;的 SequenceType 運算式](../xquery/sequencetype-expressions-xquery.md)。  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>比較運算式傳回的不可部份完成值類型  
  如果運算式傳回含有不可部份完成值的序列，則您必須尋找序列中值的類型。 下列範例說明如何使用序列類型語法，來評估運算式傳回的不可部份完成值類型。  
@@ -51,7 +52,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 現在，如果具類型的 XML 實例指定 <`root`> 元素的值， `instance of empty()`則會傳回 False。  
+ 現在，如果具類型的 XML 實例指定 <> 元素的值，則會傳回 `root` `instance of empty()` False。  
   
 ```  
 DECLARE @var XML(SC1)  
@@ -61,7 +62,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
- 如果 <`root`> 元素在實例中 nilled，其值為空的序列，且`instance of empty()`會傳回 True。  
+ 如果 <`root`> 元素在實例中 nilled，其值為空的序列，且會傳回 `instance of empty()` True。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -112,7 +113,7 @@ GO
 ```  
   
 ### <a name="example-cardinality-in-sequence-expressions"></a>範例：序列運算式中的基數  
- 此範例說明基數在序列運算式中的作用。 下列 XML 架構會定義屬於 byte `root`類型的 <> 元素，且為 nillable。  
+ 此範例說明基數在序列運算式中的作用。 下列 XML 架構會定義屬於 `root` byte 類型的 <> 元素，且為 nillable。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -160,7 +161,7 @@ GO
  如果都符合，`instance of` 運算式會傳回 True。  
   
 ### <a name="example-querying-against-an-xml-type-column"></a>範例：針對 xml 類型資料行查詢  
- 在下列範例中，查詢是針對[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫中**Xml**類型的指示資料行所指定。 它是具類型的 XML 資料行，因為它有相關聯的結構描述。 XML 結構描述定義了整數類型的 `LocationID` 屬性。 因此，在序列運算式中， `instance of xs:integer?`會傳回 True。  
+ 在下列範例中，查詢是針對資料庫中**xml**類型的指示資料行所指定 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 。 它是具類型的 XML 資料行，因為它有相關聯的結構描述。 XML 結構描述定義了整數類型的 `LocationID` 屬性。 因此，在序列運算式中，會傳回 `instance of xs:integer?` True。  
   
 ```  
 SELECT Instructions.query('   
@@ -198,14 +199,14 @@ SET @var = '<?xml-stylesheet href="someValue" type="text/xsl" ?>
 </root>'  
 ```  
   
- 在第一個查詢中，運算式會傳回元素的具類型值`a` <>。 在第二個查詢中，運算式會傳回`a` <> 的元素。 兩者都是項目。 因此，兩個查詢都傳回 True。  
+ 在第一個查詢中，運算式會傳回元素的具類型值 <`a`>。 在第二個查詢中，運算式會傳回 <> 的元素 `a` 。 兩者都是項目。 因此，兩個查詢都傳回 True。  
   
 ```  
 SELECT @var.query('data(/root[1]/a[1]) instance of item()')  
 SELECT @var.query('/root[1]/a[1] instance of item()')  
 ```  
   
- 下列三個查詢中的所有 XQuery 運算式都會傳回 <`root`> 元素的元素節點子系。 因此，序列類型運算式 `instance of node()` 會傳回 True，其他兩個運算式 (`instance of text()` 和 `instance of document-node()`) 則傳回 False。  
+ 下列三個查詢中的所有 XQuery 運算式都會傳回 <> 元素的元素節點子系 `root` 。 因此，序列類型運算式 `instance of node()` 會傳回 True，其他兩個運算式 (`instance of text()` 和 `instance of document-node()`) 則傳回 False。  
   
 ```  
 SELECT @var.query('(/root/*)[1] instance of node()')  
@@ -213,7 +214,7 @@ SELECT @var.query('(/root/*)[1] instance of text()')
 SELECT @var.query('(/root/*)[1] instance of document-node()')   
 ```  
   
- 在下列查詢中， `instance of document-node()`運算式會傳回 True，因為 <`root`> 元素的父系是檔節點。  
+ 在下列查詢中， `instance of document-node()` 運算式會傳回 True，因為 <> 元素的父系 `root` 是檔節點。  
   
 ```  
 SELECT @var.query('(/root/..)[1] instance of document-node()') -- true  
@@ -255,7 +256,7 @@ element(*, ElementType?)
  下列範例說明元素測試和屬性測試都很有用的案例。  
   
 ### <a name="example-a"></a>範例 A  
- 下列 XML 架構會定義複雜`CustomerType`型別，其中`firstName` <> 和`lastName` <> 元素是選擇性的。 對於指定的 XML 執行個體，您必須決定是否保留特定客戶的名字。  
+ 下列 XML 架構 `CustomerType` 會定義複雜型別，其中 <`firstName`> 和 <`lastName`> 元素是選擇性的。 對於指定的 XML 執行個體，您必須決定是否保留特定客戶的名字。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -279,7 +280,7 @@ SET @var = '<x:customer xmlns:x="myNS">
 </x:customer>'  
 ```  
   
- 下列查詢會使用`instance of element (firstName)`運算式來判斷 <`customer`> 的第一個子項目是否為名稱 <`firstName`> 的元素。 在此案例中，它傳回 True。  
+ 下列查詢 `instance of element (firstName)` 會使用運算式來判斷 <> 的第一個子項目是否 `customer` 為名稱 <> 的元素 `firstName` 。 在此案例中，它傳回 True。  
   
 ```  
 SELECT @var.query('declare namespace x="myNS";   
@@ -287,7 +288,7 @@ SELECT @var.query('declare namespace x="myNS";
 GO  
 ```  
   
- 如果您從實例中`firstName`移除 <> 元素，則查詢會傳回 False。  
+ 如果您從實例中移除 <`firstName`> 元素，則查詢會傳回 False。  
   
  您也可以使用下列各項：  
   
@@ -308,7 +309,7 @@ GO
 ### <a name="example-b"></a>範例 B  
  下列範例說明如何判斷運算式傳回的節點是否為具有特定名稱的元素節點。 它會使用**element （）** 測試。  
   
- 在下列範例中，要查詢之`Customer` XML 實例中的兩個 <> 元素有兩種不同的類型： `CustomerType`和`SpecialCustomerType`。 假設您想要知道運算式所傳回的 <`Customer`> 元素的型別。 下列 XML 結構描述集合定義了 `CustomerType` 與 `SpecialCustomerType` 類型。  
+ 在下列範例中，要 `Customer` 查詢之 XML 實例中的兩個 <> 元素有兩種不同的類型： `CustomerType` 和 `SpecialCustomerType` 。 假設您想要知道運算式所傳回的 <> 元素的型別 `Customer` 。 下列 XML 結構描述集合定義了 `CustomerType` 與 `SpecialCustomerType` 類型。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -335,7 +336,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 這個 XML 架構集合是用來建立具類型的**xml**變數。 指派給這個變數的 XML 實例有兩個`customer`不同類型的 <> 元素。 第一個元素是 `CustomerType` 類型，而第二個元素是 `SpecialCustomerType` 類型。  
+ 這個 XML 架構集合是用來建立具類型的**xml**變數。 指派給這個變數的 XML 實例有兩個 `customer` 不同類型的 <> 元素。 第一個元素是 `CustomerType` 類型，而第二個元素是 `SpecialCustomerType` 類型。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -358,7 +359,7 @@ SELECT @var.query('declare namespace x="myNS";
     (/x:customer)[1] instance of element (*, x:SpecialCustomerType ?)')  
 ```  
   
- 如果您變更上一個查詢的運算式，並取出第二個`customer` <> 元素`/x:customer)[2]`（）， `instance of`則會傳回 True。  
+ 如果您變更上一個查詢的運算式，並取出第二個 <`customer`> 元素（ `/x:customer)[2]` ），則會傳回 `instance of` True。  
   
 ### <a name="example-c"></a>範例 C  
  此範例會使用屬性測試。 下列 XML 結構描述定義了 CustomerType 複雜類型，它包含 CustomerID 和 Age 屬性。 Age 屬性是選擇性的。 針對特定的 XML 實例，您可能會想要判斷 Age 屬性是否存在於 <`customer`> 元素中。  
@@ -415,7 +416,7 @@ RETURN
         ()')  
 ```  
   
- 或者，您也可以指定`attribute(*, type)`序列類型語法。 如果屬性類型符合指定的類型，不論名稱是什麼，即會符合屬性節點。  
+ 或者，您也可以指定 `attribute(*, type)` 序列類型語法。 如果屬性類型符合指定的類型，不論名稱是什麼，即會符合屬性節點。  
   
 ### <a name="implementation-limitations"></a>實作限制  
  特定限制如下：  
@@ -424,7 +425,7 @@ RETURN
   
 -   不支援**element （ElementName，TypeName）** 。  
   
--   不支援**元素（\*，TypeName）** 。  
+-   不支援**元素（ \* ，TypeName）** 。  
   
 -   不支援**架構元素（）** 。  
   

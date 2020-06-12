@@ -12,17 +12,17 @@ ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2aea2292ada0256e5ae7b988a8e65649dbc50c0d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f5cdfc761b3b8c19e07b1818c2732414b03258cc
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000748"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856560"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>選項（查詢結果-SQL Server-以文字表示結果頁面）
   使用此頁面，即可指定以文字格式顯示查詢結果集的選項。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [**查詢**] 功能表上的 [**查詢選項**]，或在查詢視窗中按一下滑鼠右鍵 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，然後選取 [**查詢選項**]。 在 **[查詢選項]** 對話方塊中，於 **[結果]** 之下，按一下 **[文字]**。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **輸出格式**  
  根據預設，輸出會顯示在以空格填補結果所建立的資料行中。 其他選項為使用逗號、定位點或空格來分隔資料行。 在此下拉式清單中選取 [自訂分隔符號]****，即可在 [自訂分隔符號]**** 文字方塊中指定不同的分隔字元。  
   

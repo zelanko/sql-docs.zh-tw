@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 560d1846-8da2-475f-b021-13ff31fb49d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2b8c46cc7bb06a66c358c0be4adc9be050774172
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fe64248d34db8a1e0cf1e24dc77446e8b9fa6b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082494"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528969"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>資料來源檢視屬性對話方塊 (SSAS)
   使用 **中的** [資料來源檢視屬性] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中之資料來源檢視的屬性。 您可以在物件總管**** 中以滑鼠右鍵按一下資料來源檢視，然後選取 [屬性]****，來顯示 [資料來源檢視屬性]**** 對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

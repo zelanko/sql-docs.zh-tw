@@ -17,29 +17,28 @@ helpviewer_keywords:
 ms.assetid: 20e080cd-6a0e-4591-b022-ea4cd3638e36
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dec93494dd21412c067af293832066087ca3ed37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2eb377b29ef798b4cbdd02666b866c52eb8f8599
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075407"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546870"
 ---
 # <a name="understanding-the-input-files-used-to-create-the-deployment-script"></a>了解用來建立部署指令碼的輸入檔
-  當[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]您建立專案時， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]會為專案產生 XML 檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會將這些 XML 檔案放置在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的輸出資料夾中。 依預設，輸出是放在 \Bin 資料夾中。 下表列出 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 建立的 XML 檔案。  
+  當您建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時，會 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 為專案產生 XML 檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會將這些 XML 檔案放置在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的輸出資料夾中。 依預設，輸出是放在 \Bin 資料夾中。 下表列出 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 建立的 XML 檔案。  
   
-|XMLA 檔案|描述|  
+|XMLA 檔案|Description|  
 |---------------|-----------------|  
-|\<*專案名稱*>. .asdatabase|包含專案中所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的宣告式定義。|  
-|\<*專案名稱*>. .deploymenttargets|包含將建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體和資料庫的名稱。|  
-|\<*專案名稱*>. .configsettings|包含環境特定設定，例如資料來源連接資訊和物件儲存位置。 此檔案中的設定會覆寫\<*專案名稱*> .asdatabase 檔案中的設定。|  
-|\<*專案名稱*>. d|包含部署選項，例如部署是否為交易式，以及部署之後是否應處理部署的物件。|  
+|\<*project name*>. .asdatabase|包含專案中所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的宣告式定義。|  
+|\<*project name*>. .deploymenttargets|包含將建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體和資料庫的名稱。|  
+|\<*project name*>. .configsettings|包含環境特定設定，例如資料來源連接資訊和物件儲存位置。 此檔案中的設定會覆寫 .asdatabase 檔案中的設定 \<*project name*> 。|  
+|\<*project name*>. d|包含部署選項，例如部署是否為交易式，以及部署之後是否應處理部署的物件。|  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 絕不會將密碼儲存在專案檔中。  
   
 ## <a name="modifying-the-input-files"></a>修改輸入檔  
- 修改輸入檔中的值，或從輸入檔中抓取的值，可讓您變更部署目的地、設定和部署選項，而不需編輯整個\<*專案名稱*> .asdatabase 檔案（如果是從現有[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的資料庫產生腳本，則為整個 XMLA 腳本檔案）。 您可以修改個別的檔案，以輕鬆地針對各種用途建立不同的部署指令碼。  
+ 修改輸入檔中的值，或從輸入檔中抓取的值，可讓您變更部署目的地、設定和部署選項，而不需編輯整個 \<*project name*> .asdatabase 檔案（如果您從現有的資料庫產生腳本，則可以使用整個 XMLA 腳本檔案 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ）。 您可以修改個別的檔案，以輕鬆地針對各種用途建立不同的部署指令碼。  
   
  下列主題說明如何修改各種輸入檔中的值：  
   

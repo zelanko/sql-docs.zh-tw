@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fde9de00adaa1712a9db6e18aabc6a83dd660efb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086135"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525314"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>將預測函數套用至模型
   若要建立預測查詢，您必須先選取查詢所根據的採礦模型。 您可以選取存在於目前專案中的任何採礦模型。  
@@ -67,7 +66,7 @@ ms.locfileid: "66086135"
   
     |||  
     |-|-|  
-    |**\<模型名稱>**|選取此選項，將採礦模型中的值包含在輸出中。 您只能加入可預測的資料行。<br /><br /> 當您加入模型中的資料行時，傳回的結果會是該資料行中的非相異值清單。<br /><br /> 您以這個選項加入的資料行會包含在產生之 DMX 陳述式的 SELECT 部分內。|  
+    |**\<model name>**|選取此選項，將採礦模型中的值包含在輸出中。 您只能加入可預測的資料行。<br /><br /> 當您加入模型中的資料行時，傳回的結果會是該資料行中的非相異值清單。<br /><br /> 您以這個選項加入的資料行會包含在產生之 DMX 陳述式的 SELECT 部分內。|  
     |**預測函數**|選取這個選項可瀏覽預測函數清單。<br /><br /> 您選取的值或函數會加入至產生之 DMX 陳述式的 SELECT 部分內。<br /><br /> 系統不會篩選預測函數清單，也不會由您選取的模型類型加以限制。 因此，如果您對於目前模型類型是否支援此函數有任何疑問，您只需要將此函數加入至清單中，並查看是否有錯誤發生。<br /><br /> 前有 $ 的清單項目 (例如 $AdjustedProbability) 代表巢狀資料表中的資料行，當您使用 `PredictHistogram` 函數時，該資料表為輸出。 當您傳回單一資料行而非巢狀資料表時，可以使用這些當做捷徑。|  
     |**自訂運算式**|選取這個選項來輸入自訂運算式，然後為輸出指派別名。<br /><br /> 此自訂運算式會加入至產生之 DMX 預測查詢的 SELECT 部分中。<br /><br /> 如果您想要針對包含每一個資料列的輸出加入文字、呼叫 VB 函數或是呼叫自訂預存程序，這個選項會非常實用。<br /><br /> 如需從 DMX 使用 VBA 和 Excel 函數的資訊，請參閱 [MDX 和 DAX 中的 VBA 函數](/sql/mdx/vba-functions-in-mdx-and-dax)。|  
   
@@ -92,9 +91,9 @@ ms.locfileid: "66086135"
   
 5.  在查詢方格中，針對 [來源]**** 選取 TM_Clustering 採礦模型，並加入 [Bike Buyer] 資料行。  
   
-6.  針對 [**來源**] 選取 [**預測函數**]，然後新增`Cluster`函式。  
+6.  針對 [**來源**] 選取 [**預測函數**]，然後新增函式 `Cluster` 。  
   
-7.  針對 [**來源**] 選取 [**預測函數**]，加入`PredictSupport`函數，然後將模型資料行 [自行車買方] 拖曳至 [**準則/引數**] 方塊中。 在 [別名]**** 資料行中輸入 **Support**。  
+7.  針對 [**來源**] 選取 [**預測函數**]，加入函數， `PredictSupport` 然後將模型資料行 [自行車買方] 拖曳至 [**準則/引數**] 方塊中。 在 [別名]**** 資料行中輸入 **Support**。  
   
      從 [準則/引數]**** 方塊複製代表預測函數和資料行參考的運算式。  
   

@@ -1,5 +1,6 @@
 ---
 title: 連接到 DB2 資料庫（DB2ToSQL） |Microsoft Docs
+description: 瞭解如何連接到 DB2 資料庫的目標實例，以遷移 DB2 資料庫。 SSMA 會取得所有 DB2 架構的相關中繼資料。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: b49e5f53e1efbff6febe37a6f3d02fbb3e9cfc05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d31a20aa0aa4b00feaf7d0af5aeb13b5b73c381d
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141073"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292933"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>連接到 DB2 資料庫（DB2ToSQL）
-若要將 DB2 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遷移至，您必須連接到您想要遷移的 db2 資料庫。 當您連接時，SSMA 會取得所有 DB2 架構的相關中繼資料，然後在 [DB2 中繼資料瀏覽器] 窗格中顯示。 SSMA 會儲存資料庫伺服器的相關資訊，但不會儲存密碼。  
+若要將 DB2 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您必須連接到您想要遷移的 db2 資料庫。 當您連接時，SSMA 會取得所有 DB2 架構的相關中繼資料，然後在 [DB2 中繼資料瀏覽器] 窗格中顯示。 SSMA 會儲存資料庫伺服器的相關資訊，但不會儲存密碼。  
   
 您的資料庫連接會保持作用中狀態，直到您關閉專案為止。 當您重新開啟專案時，如果您想要資料庫的使用中連接，就必須重新連接。  
   
@@ -31,7 +32,7 @@ ms.locfileid: "68141073"
 -   資料移轉的資料存取需要 DATAACCESS  
   
 ## <a name="establishing-a-connection-to-db2"></a>建立 DB2 的連接  
-當您連接到資料庫時，SSMA 會讀取資料庫中繼資料，然後將此中繼資料加入至專案檔。 當 SSMA 將物件轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]語法，以及將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，會使用此中繼資料。 您可以在 [DB2 中繼資料瀏覽器] 窗格中流覽此中繼資料，並查看個別資料庫物件的屬性。  
+當您連接到資料庫時，SSMA 會讀取資料庫中繼資料，然後將此中繼資料加入至專案檔。 當 SSMA 將物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語法，以及將資料移轉至時，會使用此中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以在 [DB2 中繼資料瀏覽器] 窗格中流覽此中繼資料，並查看個別資料庫物件的屬性。  
   
 > [!IMPORTANT]  
 > 嘗試連接之前，請確定資料庫伺服器正在執行，而且可以接受連接。  
@@ -77,7 +78,7 @@ ms.locfileid: "68141073"
     如需詳細資訊，請參閱[連接到 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)。  
   
 ## <a name="reconnecting-to-db2"></a>重新連接到 DB2  
-您的資料庫伺服器連接會保持作用中狀態，直到您關閉專案為止。 當您重新開啟專案時，如果您想要資料庫的使用中連接，就必須重新連接。 您可以離線工作，直到您想要更新中繼資料、將資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件載入及遷移資料為止。  
+您的資料庫伺服器連接會保持作用中狀態，直到您關閉專案為止。 當您重新開啟專案時，如果您想要資料庫的使用中連接，就必須重新連接。 您可以離線工作，直到您想要更新中繼資料、將資料庫物件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及遷移資料為止。  
   
 ## <a name="refreshing-db2-metadata"></a>重新整理 DB2 中繼資料  
 有關 DB2 資料庫的中繼資料不會自動重新整理。 DB2 Metadata Explorer 中的中繼資料是您第一次連接時的中繼資料快照集，或上次手動重新整理中繼資料的時間。 您可以手動更新所有架構、單一架構或個別資料庫物件的中繼資料。  

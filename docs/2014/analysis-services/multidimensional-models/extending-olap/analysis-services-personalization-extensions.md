@@ -11,51 +11,50 @@ helpviewer_keywords:
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cddb6b604e0fc397e6640637db7320898d2beb5c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62726114"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546750"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 個人化延伸模組
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組是實現外掛程式架構之概念的基礎。 在外掛程式架構中，您可以動態開發新的 Cube 物件和功能，並輕鬆地與其他開發人員共用。 因此， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組所提供的功能，可讓您達到下列目的：  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組是實現外掛程式架構之概念的基礎。 在外掛程式架構中，您可以動態開發新的 Cube 物件和功能，並輕鬆地與其他開發人員共用。 因此， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組所提供的功能，可讓您達到下列目的：  
   
--   **動態設計和部署**在您設計和部署[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組之後，使用者就可以在下一個使用者會話開始時存取物件和功能。  
+-   **動態設計和部署**在您設計和部署個人化延伸模組之後 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，使用者就可以在下一個使用者會話開始時存取物件和功能。  
   
--   **介面獨立性**不論您用來建立[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組的介面為何，使用者都可以使用任何介面來存取物件和功能。  
+-   **介面獨立性**不論您用來建立個人化延伸模組的介面為何 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，使用者都可以使用任何介面來存取物件和功能。  
   
 -   **會話內容** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組在現有的基礎結構中不是永久的物件，而且不需要重新處理 cube。 它們會在使用者連接資料庫時針對使用者來公開及建立，而且在整個使用者工作階段期間都維持可用狀態。  
   
--   **快速散發**與[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]其他軟體發展人員共用個人化延伸模組，而不需要深入瞭解如何找到此延伸功能的詳細規格。  
+-   **快速散發**[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]與其他軟體發展人員共用個人化延伸模組，而不需要深入瞭解如何找到此延伸功能的詳細規格。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組有許多用途。 例如，假設貴公司的銷售使用不同的貨幣。 您建立一個導出成員，該成員會使用存取此 Cube 之人員所用的當地貨幣來傳回合併的銷售量。 您會將這個成員建立為個人化延伸模組， 然後您可以將這個導出成員與一組使用者共用。 一旦共用之後，這些使用者就可以在連接伺服器之後立刻存取此導出成員。 即使這些使用者所使用的介面與當初建立此導出成員所用的介面不同，他們還是可以存取。  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組是對現有 managed 元件架構的簡單且簡潔的修改，而且會[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer>在整個物件模型、多維度運算式（MDX）語法和架構資料列集公開。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組是對現有 managed 元件架構的簡單且簡潔的修改，而且會在整個 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> 物件模型、多維度運算式（MDX）語法和架構資料列集公開。  
   
 ## <a name="logical-architecture"></a>邏輯架構  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組的架構是根據 Managed 組件架構，而且具有以下四個基本元素：  
   
  [PlugInAttribute] 自訂屬性  
- 啟動服務時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]會載入必要的元件，並判斷哪些類別具有<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>自訂屬性。  
+ 啟動服務時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會載入必要的元件，並判斷哪些類別具有 <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> 自訂屬性。  
   
 > [!NOTE]  
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 會使用可描述程式碼及影響執行階段行為的方式來定義自訂屬性。 如需詳細資訊，請參閱 MSDN 上《 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]開發人員指南》中的「[屬性總覽](https://go.microsoft.com/fwlink/?LinkId=82929)」主題。  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 會使用可描述程式碼及影響執行階段行為的方式來定義自訂屬性。 如需詳細資訊，請參閱 MSDN 上《開發人員指南》中的「[屬性總覽](https://go.microsoft.com/fwlink/?LinkId=82929)」主題 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 。  
   
- 對於具有<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>自訂屬性的所有類別[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，會叫用其預設的函式。 在啟動時叫用所有建構函式會提供一個共用位置，可以從這個位置建立新的物件，而且此位置與任何使用者活動都無關。  
+ 對於具有自訂屬性的所有類別，會叫用其預設的函式 <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。 在啟動時叫用所有建構函式會提供一個共用位置，可以從這個位置建立新的物件，而且此位置與任何使用者活動都無關。  
   
  除了建立有關撰寫及管理個人化延伸模組之資訊的小型快取之外，此類別建構函式通常還會訂閱 <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened> 和 <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing> 事件。 無法訂閱這些事件可能會導致 Common Language Runtime (CLR) 記憶體回收行程不當標記此類別來加以清除。  
   
  工作階段內容  
- 如果是根據個人化延伸模組的物件，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會在用戶端工作階段期間建立執行環境，並在此環境中動態建立大多數的物件。 就像其他任何 CLR 組件一樣，這個執行環境也可存取其他函數和預存程序。 當使用者會話結束時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]會移除動態建立的物件並關閉執行環境。  
+ 如果是根據個人化延伸模組的物件，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會在用戶端工作階段期間建立執行環境，並在此環境中動態建立大多數的物件。 就像其他任何 CLR 組件一樣，這個執行環境也可存取其他函數和預存程序。 當使用者會話結束時，會 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 移除動態建立的物件並關閉執行環境。  
   
  事件  
  物件的建立是由工作階段事件 `On-Cube-OpenedCubeOpened` 和 `On-Cube-ClosingCubeClosing` 所觸發。  
   
  用戶端與伺服器之間的通訊是透過特定的事件而產生。 這些事件可讓用戶端了解導致用戶端物件建立的狀況。 用戶端的環境是使用兩組事件所動態建立的：工作階段事件和 Cube 事件。  
   
- 工作階段事件與伺服器物件有關聯。 當用戶端登入伺服器時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]會建立會話並觸發<xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened>事件。 當用戶端在伺服器上結束會話時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]就會<xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing>觸發事件。  
+ 工作階段事件與伺服器物件有關聯。 當用戶端登入伺服器時，會 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 建立會話並觸發 <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened> 事件。 當用戶端在伺服器上結束會話時，就會 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 觸發 <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing> 事件。  
   
  Cube 事件與連接物件有關聯。 連接到 Cube 會觸發 <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeOpened> 事件。 關閉與 Cube 的連接 (不論是關閉 Cube 還是切換到不同的 Cube) 會觸發 <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeClosing> 事件。  
   

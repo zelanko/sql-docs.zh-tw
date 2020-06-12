@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1a78735cd5aee5ebc87adaac6fab48bb4e183d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8df85723676df5f9fb1475465c8f7585384013ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387898"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545120"
 ---
 # <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>維度簡介 (Analysis Services - 多維度資料)
-  所有的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Microsoft 維度都是根據資料來源視圖中資料表或 views 的資料行所組成的屬性群組。 維度的存在與 Cube 無關，也可以用於多個 Cube 中、在單一 Cube 中使用多次，也可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之間連結。 存在與 Cube 無關的維度稱為資料庫維度，而 Cube 中的資料庫維度執行個體則稱為 Cube 維度。  
+  所有的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 維度都是根據資料來源視圖中資料表或 views 的資料行所組成的屬性群組。 維度的存在與 Cube 無關，也可以用於多個 Cube 中、在單一 Cube 中使用多次，也可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之間連結。 存在與 Cube 無關的維度稱為資料庫維度，而 Cube 中的資料庫維度執行個體則稱為 Cube 維度。  
   
 ## <a name="dimension-based-on-a-star-schema-design"></a>根據星狀結構描述設計的維度  
  維度的結構主要是由基礎維度資料表或資料表的結構來驅動。 最簡單的結構稱為星狀結構描述，其中的每個維度都會根據單一維度資料表，而該資料表又會透過「主索引鍵 - 外部索引鍵」關聯性直接連結至事實資料表。  
   
- [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)]下圖說明範例資料庫的子區段，其中**FactResellerSales**事實資料表與兩個維度資料表**DimReseller**和**dimpromotion 這**相關。 **FactResellerSales**事實資料表中的**ResellerKey**資料行，會定義與**DimReseller**維度資料表中**ResellerKey**主鍵資料行的外鍵關聯性。 同樣地， **FactResellerSales**事實資料表中的**PromotionKey**資料行也會定義與**dimpromotion 這**維度資料表中**PromotionKey**主鍵資料行的外鍵關聯性。  
+ 下圖說明範例資料庫的子區段 [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] ，其中**FactResellerSales**事實資料表與兩個維度資料表**DimReseller**和**dimpromotion 這**相關。 **FactResellerSales**事實資料表中的**ResellerKey**資料行，會定義與**DimReseller**維度資料表中**ResellerKey**主鍵資料行的外鍵關聯性。 同樣地， **FactResellerSales**事實資料表中的**PromotionKey**資料行也會定義與**dimpromotion 這**維度資料表中**PromotionKey**主鍵資料行的外鍵關聯性。  
   
  ![事實維度關聯性的邏輯結構描述](../../analysis-services/dev-guide/media/dimfactrelationship.gif "事實維度關聯性的邏輯結構描述")  
   

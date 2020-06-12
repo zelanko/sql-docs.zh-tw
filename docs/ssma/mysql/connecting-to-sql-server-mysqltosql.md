@@ -1,5 +1,6 @@
 ---
 title: 連接到 SQL Server （MySQLToSQL） |Microsoft Docs
+description: 瞭解如何連接到 SQL Server 的目標實例，以遷移 MySQL 資料庫。 SSMA 會取得 SQL Server 中資料庫的相關中繼資料。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0ec33e462f1b68d70a86a0fbf4f7cf0214d25770
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bed8dee876546cf418f3f547b0ddce092d3cfce
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103133"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293955"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>連線到 SQL Server (MySQLToSQL)
 若要將 MySQL 資料庫遷移至 SQL Server，您必須連接到 SQL Server 的目標實例。 當您連接時，SSMA 會取得 SQL Server 實例中所有資料庫的相關中繼資料，並在 SQL Server 中繼資料瀏覽器中顯示資料庫中繼資料。 SSMA 會儲存您所連接 SQL Server 實例的資訊，但不會儲存密碼。  
@@ -29,7 +30,7 @@ ms.locfileid: "68103133"
 ## <a name="required-sql-server-permissions"></a>必要的 SQL Server 許可權  
 用來連接到 SQL Server 的帳戶需要不同的許可權，視帳戶執行的動作而定：  
   
--   若要將 MySQL 物件[!INCLUDE[tsql](../../includes/tsql-md.md)]轉換成語法、更新 SQL Server 的中繼資料，或將已轉換的語法儲存至腳本，該帳戶必須具有登入 SQL Server 實例的許可權。  
+-   若要將 MySQL 物件轉換成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法、更新 SQL Server 的中繼資料，或將已轉換的語法儲存至腳本，該帳戶必須具有登入 SQL Server 實例的許可權。  
   
 -   若要將資料庫物件載入 SQL Server，最低許可權需求是目標資料庫中**db_owner**資料庫角色的成員資格。  
   
@@ -67,13 +68,13 @@ ms.locfileid: "68103133"
   
 它可以連接/重新連接至較高版本的 SQL Server。  
   
-1.  當建立的專案[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 時，您將能夠連線到2008或2012或2014或2016。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當建立的專案是2005時，您將能夠連線到2008或2012或2014或 2016 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-2.  當建立的專案[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 時，您將能夠連接到2012或2014或2016，但不允許連接到較低版本，亦即[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005。  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當建立的專案是2008時，您將能夠連接到2012或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但不允許連接到較低版本，亦即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005。  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當建立的專案是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 時，您將能夠連接到2012或2014或2016。  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當建立的專案是2012時，您將能夠連接到2012或2014或 2016 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-4.  當建立的專案為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 時，您只能連接到2014或2016。  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當建立的專案為2014時，您只能連接到2014或 2016 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 5.  較高的版本相容性對「SQL Azure」無效。  
   
@@ -84,11 +85,11 @@ ms.locfileid: "68103133"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||是|是|是|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||是|是|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||是|是||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||是||  
-|SQL Azure||||||是|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||Yes||  
+|SQL Azure||||||Yes|  
   
 > [!IMPORTANT]  
-> 資料庫物件的轉換是根據專案類型執行，而不是根據所[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連接之的版本。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 專案中，即使您連接至較高版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016），還是會以每個2005執行轉換。  
+> 資料庫物件的轉換是根據專案類型執行，而不是根據所 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接之的版本。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 專案中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使您連接至較高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016），還是會以每個2005執行轉換。  
   
 ## <a name="synchronizing-sql-server-metadata"></a>同步處理 SQL Server 中繼資料  
 SQL Server 資料庫的相關中繼資料不會自動更新。 當您第一次連接到 SQL Server 時，或上次手動更新中繼資料時，SQL Server 中繼資料 Explorer 中的中繼資料就是中繼資料的快照集。 您可以手動更新所有資料庫或任何單一資料庫或資料庫物件的中繼資料。  

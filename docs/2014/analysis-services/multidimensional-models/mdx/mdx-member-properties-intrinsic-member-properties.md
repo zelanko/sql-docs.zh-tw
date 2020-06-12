@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 268203d044734bb4e6a1d2acf6311ee7ef828a53
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074211"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546360"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>內建成員屬性 (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會公開維度成員的內建屬性，您可以將它們納入查詢中，以便傳回用於自訂應用程式的其他資料或中繼資料，或協助模型調查或建構。 如果您使用 SQL Server 用戶端工具，您可以在 SQL Server Management Studio (SSMS) 中檢視內建屬性。  
@@ -29,12 +28,12 @@ ms.locfileid: "66074211"
  如需有關使用及檢視維度成員屬性的簡介，請參閱 [在 SSMS 的 MDX 查詢視窗中檢視 SSAS 成員屬性](https://go.microsoft.com/fwlink/?LinkId=317362)。  
   
 > [!NOTE]  
->  作為符合 OLE DB 規格之 OLAP 區段（日期為1999年3月（2.6））的提供者[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，支援本主題中列出的內建成員屬性。  
+>  作為符合 OLE DB 規格之 OLAP 區段（日期為1999年3月（2.6））的提供者， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援本主題中列出的內建成員屬性。  
 >   
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 以外的提供者可支援其他內建成員屬性。 如需其他提供者支援之內建成員屬性的詳細資訊，請參閱這些提供者提供的文件。  
   
 ## <a name="types-of-member-properties"></a>成員屬性類型  
- 支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的內建成員屬性有兩種類型：  
+ 支援的內建成員屬性 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 有兩種類型：  
   
  區分內容的成員屬性  
  這些成員屬性必須用於特定階層或層級的內容，而且要將值提供給指定維度或層級的每個成員。  
@@ -54,7 +53,7 @@ ms.locfileid: "66074211"
   
 -   您可以使用 `PROPERTIES` 關鍵字以查詢屬性。  
   
- 下列各節將描述中可用的各種內容相關和不區分內容的內[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]建成員屬性，以及如何搭配每`PROPERTIES`個屬性類型使用關鍵字。  
+ 下列各節將描述中可用的各種內容相關和不區分內容的內建成員屬性 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，以及如何搭配 `PROPERTIES` 每個屬性類型使用關鍵字。  
   
 ## <a name="context-sensitive-member-properties"></a>區分內容的成員屬性  
  所有維度成員及層級成員支援區分內容的內建成員屬性清單。 下表列出這些區分內容的屬性。  
@@ -84,10 +83,10 @@ ms.locfileid: "66074211"
 ## <a name="non-context-sensitive-member-properties"></a>不區分內容的成員屬性  
  所有成員支援同樣不顧內容的內建成員屬性清單。 這些屬性能提供應用程式可用以加強使用者經驗的其他資訊。  
   
- 下表列出支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的不區分內容內建屬性。  
+ 下表列出支援的不區分內容內建屬性 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。  
   
 > [!NOTE]  
->  MEMBERS 結構描述資料列集中的資料行支援下表列出的內建成員屬性。 如需`MEMBERS`架構資料列集的詳細資訊，請參閱 MDSCHEMA_MEMBERS 資料列[集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)。  
+>  MEMBERS 結構描述資料列集中的資料行支援下表列出的內建成員屬性。 如需架構資料列集的詳細資訊 `MEMBERS` ，請參閱 MDSCHEMA_MEMBERS 資料列[集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)。  
   
 |屬性|描述|  
 |--------------|-----------------|  
@@ -101,7 +100,7 @@ ms.locfileid: "66074211"
 |`IS_DATAMEMBER`|指出成員是否為資料成員的布林值。|  
 |`IS_PLACEHOLDERMEMBER`|表示成員是否為預留位置的布林值。|  
 |`KEYx`|成員的索引鍵，其中 x 是索引鍵以零為基底的序數。 KEY0 可用於複合和非複合索引鍵。<br /><br /> 如果索引鍵為非複合鍵，則 KEY0 相當於 `Key`。<br /><br /> 關於複合索引鍵，KEY0、KEY1、KEY2 等等，共同形成複合索引鍵。 您可以在查詢中單獨參考每一項，藉以傳回複合索引鍵的該部分。 例如，指定 KEY0 可傳回複合索引鍵的第一個部分，指定 KEY1 傳回複合索引鍵的下一部分，依此類推。<br /><br /> 請注意，`KEYx` 可用於內容中，也可以在沒有內容的情況下使用。 因此，兩個清單上都有它。<br /><br /> 如需如何使用此成員屬性的範例，請參閱 [簡單的 MDX 小知識：Key0、Key1、Key2](https://go.microsoft.com/fwlink/?LinkId=317364)。|  
-|`LCID`*x*|以地區設定識別碼十六進位值翻譯的成員標題，其中 *x* 是地區設定識別碼十進位值 (例如，代表加拿大英文的 LCID1009)。 只有當翻譯的標題資料行繫結至資料來源時，才適用此功能。|  
+|`LCID` *x*|以地區設定識別碼十六進位值翻譯的成員標題，其中 *x* 是地區設定識別碼十進位值 (例如，代表加拿大英文的 LCID1009)。 只有當翻譯的標題資料行繫結至資料來源時，才適用此功能。|  
 |`LEVEL_NUMBER`|成員距根階層的距離。 根層級為零。|  
 |`LEVEL_UNIQUE_NAME`|成員所屬層級的唯一名稱。 對於會依識別資格產生唯一名稱的提供者，此名稱的每個元件會使用分隔符號。|  
 |`MEMBER_CAPTION`|與該成員關聯的標籤或標題。 標題主要是供顯示之用。 如果標題不存在，查詢就會傳回 `MEMBER_NAME`。|  
@@ -128,7 +127,7 @@ ms.locfileid: "66074211"
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
- 此陳述式會傳回座標軸維度中每個成員的描述。 如果您嘗試使用維度或層級（如*維度*`.DESCRIPTION`或*層級*`.DESCRIPTION`）來限定屬性，則語句不會進行驗證。  
+ 此陳述式會傳回座標軸維度中每個成員的描述。 如果您嘗試使用維度或層級（如*維度* `.DESCRIPTION` 或*層級*）來限定屬性， `.DESCRIPTION` 則語句不會進行驗證。  
   
 ### <a name="example"></a>範例  
  下列範例顯示傳回內建屬性的 MDX 查詢。  

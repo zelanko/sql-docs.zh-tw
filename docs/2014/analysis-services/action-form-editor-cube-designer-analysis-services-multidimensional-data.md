@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0353d2af250f620237a165a3f9878a4efc14fdf0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062962"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528264"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>動作表單編輯器 (動作索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [Cube 設計師] 中之 [動作]**** 索引標籤上的 [Action Form Editor (動作表單編輯器)] 窗格，即可建立和修改標準動作。  
@@ -54,7 +53,7 @@ ms.locfileid: "66062962"
  **動作內容**  
  展開以檢視 [類型]**** 和 [動作運算式]**** 選項。  
   
- **類型**  
+ **型別**  
  選取執行動作時要採取的動作類型。 下列是可以使用的動作類型：  
   
 |值|描述|  
@@ -84,7 +83,7 @@ ms.locfileid: "66062962"
 |值|描述|  
 |-----------|-----------------|  
 |Batch|此動作應該當作批次作業的一部份或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 工作來執行。|  
-|Interactive (互動式)|此動作會在使用者叫用動作時執行。|  
+|互動式|此動作會在使用者叫用動作時執行。|  
 |開啟時|此動作會在第一次開啟 Cube 時執行。|  
   
  **應用程式**  

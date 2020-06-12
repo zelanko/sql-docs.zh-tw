@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 134355cb-69a7-4b16-8076-82ede43ce940
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c9dfc99a05b4da5d8ba5537529db4d25f6771038
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f13ce76e79c3bb67de50bc1fbd37c7d91d36899
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064550"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527809"
 ---
 # <a name="browse-data-source-dialog-box-analysis-services---multidimensional-data"></a>瀏覽資料來源對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [瀏覽資料來源] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，來檢視選取之資料表的前 1,000 筆記錄。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料來源資料表**  
  顯示所選取資料表的前 1,000 筆記錄。 所有資料為唯讀。  
   

@@ -10,17 +10,17 @@ ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773750"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857846"
 ---
 # <a name="utility-administration-sql-server-utility"></a>公用程式管理 (SQL Server 公用程式)
   您可以使用 [公用程式管理] 索引標籤來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式的原則、安全性和資料倉儲設定。 如需 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式概念的詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  原則索引標籤 - 使用 [原則] 索引標籤來檢視或指定全域監視原則。  
   
  設定全域資料層應用程式監視原則。 若要展開這個選項的值清單，請按一下原則名稱旁的箭頭，或是按一下原則標題。  
@@ -64,7 +64,7 @@ ms.locfileid: "62773750"
  從高動態的資源中減少原則違規雜訊。 若要展開這項功能的控制項，請按一下顯示畫面右邊的向下箭頭。  
  如需詳細資訊，請參閱[降低 CPU 使用量原則中的雜訊 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  安全性索引標籤 - 顯示有權從 UCP 管理或讀取的登入名稱。  
   
  從 UCP 選取將會加入至公用程式讀取者角色的登入。  
@@ -80,7 +80,7 @@ ms.locfileid: "62773750"
   
  若要成為公用程式管理員，您必須擁有 SQL Server 執行個體的系統管理員 (sysadmin) 權限。 若要加入或變更 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP 的使用者帳戶，請在 SSMS 中使用物件總管，將使用者加入至 SQL Server UCP 執行個體的伺服器登入。 如需詳細資訊，請參閱 [sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  資料倉儲索引標籤 - 顯示公用程式管理資料倉儲的組態詳細資料。  
   
  資料保留  

@@ -1,7 +1,7 @@
 ---
 title: sys.databases dm_db_partition_stats （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 05/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eff14464f5913508d8d95fec8a11a70438f95880
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a947396f3706c877770a10259838f6b860ab34b9
+ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828028"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454421"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "82828028"
   針對目前資料庫中的每個資料分割，各傳回其頁面和資料列計數資訊。  
   
 > [!NOTE]  
->  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_db_partition_stats**的名稱。 Sys. dm_pdw_nodes_db_partition_stats 中的 partition_id 不同于 Azure SQL 資料倉儲的 [sys.databases] 目錄檢視中的 partition_id。
+> 若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_db_partition_stats**的名稱。 Sys. dm_pdw_nodes_db_partition_stats 中的 partition_id 不同于 Azure SQL 資料倉儲的 [sys.databases] 目錄檢視中的 partition_id。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。 這與 [ **sys.databases** ] 目錄檢視中**partition_id**的值相同，但 Azure SQL 資料倉儲除外。|  
-|**object_id**|**int**|資料分割所屬資料表或索引檢視的物件識別碼。|  
+|object_id|**int**|資料分割所屬資料表或索引檢視的物件識別碼。|  
 |**index_id**|**int**|資料分割所屬之堆積或索引的識別碼。<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引。<br /><br /> > 1 = 非叢集索引|  
 |**partition_number**|**int**|在索引或堆積內，以 1 為基底的資料分割編號。|  
 |**in_row_data_page_count**|**bigint**|這個資料分割中用來儲存同資料列資料的頁數。 如果資料分割屬於堆積，這個值是堆積中的資料頁數。 如果資料分割屬於索引，這個值是分葉層級中的頁數。 （[B] 樹狀目錄中的非分葉頁面不會包含在計數中）。任一情況下都不會包含 IAM （索引配置對應）分頁。 xVelocity 記憶體最佳化的資料行存放區索引之 Always 0。|  
@@ -66,14 +66,14 @@ ms.locfileid: "82828028"
  個別資料表或索引的總計數可以藉由加入所有相關資料分割的計數來取得。  
   
 ## <a name="permissions"></a>權限  
- 需要 VIEW DATABASE STATE 權限來查詢 **sys.dm_db_partition_stats** 動態管理檢視。 如需動態管理檢視之許可權的詳細資訊，請參閱[動態管理檢視和函數 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
+ 需要 `VIEW DATABASE STATE` 和 `VIEW DEFINITION` 許可權，才能查詢**sys.databases dm_db_partition_stats**動態管理檢視。 如需動態管理檢視之許可權的詳細資訊，請參閱[動態管理檢視和函數 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a>A. 傳回資料庫中所有索引和堆積之所有資料分割的所有計數  
  下列範例會顯示 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中所有索引和堆積之所有資料分割的所有計數。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats;  
@@ -83,7 +83,7 @@ GO
 ### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>B. 傳回資料表與其索引之所有資料分割的所有計數  
  下列範例會顯示 `HumanResources.Employee` 資料表與其索引之所有資料分割的所有計數。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats   
@@ -94,7 +94,7 @@ GO
 ### <a name="c-returning-total-used-pages-and-total-number-of-rows-for-a-heap-or-clustered-index"></a>C. 傳回堆積或叢集索引的總使用頁數和資料列總數  
  下列範例會傳回 `HumanResources.Employee` 資料表之堆積或叢集索引的總使用頁數和資料列總數。 因為依預設不會分割 `Employee` 資料表，請注意總和只包括一個資料分割。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SUM(used_page_count) AS total_number_of_used_pages,   

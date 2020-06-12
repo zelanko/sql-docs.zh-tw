@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dcca1e1e5eec19c81c26fd917e3f557006926233
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077849"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545500"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>中繼資料 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師中之 [瀏覽器]**** 索引標籤的 [中繼資料]**** 窗格瀏覽 Cube 的結構，以查看相關的量值，並檢視與建立維度。 您可以向下鑽研階層、檢視可用量值與 KPI 的清單，以及複製物件的完整名稱。  
   
  您也可以將 [中繼資料]**** 窗格中的物件和階層拖曳到查詢建立區域，以建立新查詢或匯出可在 Excel 中瀏覽的資料。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **中繼資料**  
  顯示目前檢視中可用的中繼資料。 您可以按一下 Cube 圖示，然後使用 [選取 Cube]**** 對話方塊選擇一個新的 Cube 或檢視方塊，藉以變更檢視 (亦即目前選取的檢視方塊或 Cube)。 您也可以按一下 [量值群組]****，然後從下拉式清單中選取一個新的量值群組，以篩選 [中繼資料]**** 窗格中提供的物件。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe12b82ce2d237acd060b1e387e7a6dfbf958851
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085723"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524175"
 ---
 # <a name="clustering-model-query-examples"></a>叢集模型查詢範例
   當您根據資料採礦模型建立查詢時，可以擷取有關模型的中繼資料或建立內容查詢，以提供有關在分析中所發現之模式的詳細資料。 或者，您可以建立預測查詢，這會使用模型中的模式對新資料進行預測。 每種查詢都會提供不同的資訊。 例如，內容查詢可能會提供有關所找到群集的詳細資料，預測查詢則會告訴您最可能包含新資料點的群集。  
@@ -216,7 +215,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  範例結果︰  
   
-|屬性|值|分數|  
+|屬性|值|Score|  
 |----------------|------------|-----------|  
 |區域|北美洲|100|  
 |English Occupation|Skilled Manual|94.9003803898654|  
@@ -273,13 +272,13 @@ NATURAL PREDICTION JOIN
   
  當使用方式設定為 `Predict` 時的結果範例：  
   
-|Bike Buyer|運算是|  
+|Bike Buyer|運算式|  
 |----------------|----------------|  
 |1|0.592924735740338|  
   
  當使用方式設定為 `PredictOnly` 並重新處理模型時的結果範例：  
   
-|Bike Buyer|運算是|  
+|Bike Buyer|運算式|  
 |----------------|----------------|  
 |1|0.55843544003102|  
   
@@ -324,11 +323,11 @@ NATURAL PREDICTION JOIN
   
  範例結果︰  
   
-|$CLUSTER|運算是|  
+|$CLUSTER|運算式|  
 |--------------|----------------|  
 |群集 2|0.397918596951617|  
   
- **注意**根據預設， `ClusterProbability`函數會傳回最可能叢集的機率。 不過，您可以使用 `ClusterProbability('cluster name')`語法來指定不同的叢集。 如果要這麼做，請注意每個預測函數的結果都與其他結果無關。 因此，第二個資料行中的機率分數所參考的群集可以與命名於第一個資料行中的群集不同。  
+ **注意**根據預設，函數會傳回 `ClusterProbability` 最可能叢集的機率。 不過，您可以使用 `ClusterProbability('cluster name')`語法來指定不同的叢集。 如果要這麼做，請注意每個預測函數的結果都與其他結果無關。 因此，第二個資料行中的機率分數所參考的群集可以與命名於第一個資料行中的群集不同。  
   
  [回到頁首](#bkmk_top2)  
   
@@ -369,7 +368,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|預測函數|使用量|  
+|預測函數|使用方式|  
 |[叢集 &#40;DMX&#41;](/sql/dmx/cluster-dmx)|傳回最可能包含輸入案例的群集。|  
 |[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|傳回輸入案例與指定之群集的距離；如果沒有指定任何群集，則會傳回輸入案例與最可能之群集的距離。<br /><br /> 傳回輸入案例屬於指定之群集的機率。|  
 |[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|傳回輸入案例屬於指定之群集的機率。|  

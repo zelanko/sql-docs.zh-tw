@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc9aa519d37b040026414ab826373357a1ddd92f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd35958a364456c12d58392afe3754f6adcf97b8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074733"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546590"
 ---
 # <a name="autoexists"></a>自動存在
   「自動存在」** 的概念是將 Cube 空間限制為實際存在於 Cube 中的資料格，相對因建立相同階層中的所有屬性階層成員組合而可能存在的資料格。 這是因為某個屬性階層的成員不能與相同維度中另一個屬性階層的成員同時存在。 在 SELECT 陳述式中使用相同維度的兩個以上屬性階層時，Analysis Services 會評估屬性的運算式來確認這些屬性的成員有受到正確的限制以符合所有其他屬性的準則。  
@@ -85,7 +84,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  所傳回的資料格值將會相同，不過結果集中的中繼資料將會不同。 例如，在上述查詢中，Country 階層已移至 slicer 座標軸 (在 WHERE 子句中)，因此不會明確出現在結果集中。  
   
- 這三個先前的查詢都會示範中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]自動存在行為的作用。  
+ 這三個先前的查詢都會示範中自動存在行為的作用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。  
   
 ## <a name="deep-and-shallow-autoexists"></a>深層和淺層自動存在  
  自動存在以「深層」或「淺層」方式套用至運算式。 「深層自動存在」(`Deep Autoexists`) 表示在套用 slicer 運算式、軸中的子 SELECT 運算式等之後，會評估所有運算式以符合最深層的可能空間。 「淺層自動存在」(`Shallow Autoexists`) 表示在目前運算式之前評估外部運算式，並將這些結果傳遞至目前運算式。 預設值是深層自動存在。  
@@ -308,7 +307,7 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- 您可以在連接字串中使用自動存在 = [1 | 2 | 3] 參數來修改自動存在行為;如需參數使用方式，請參閱<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> [支援的 XMLA 屬性 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)和。  
+ 您可以在連接字串中使用自動存在 = [1 | 2 | 3] 參數來修改自動存在行為;如需參數使用方式，請參閱[支援的 Xmla 屬性 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)和 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 。  
   
 ## <a name="see-also"></a>另請參閱  
  [MDX 中的重要概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   

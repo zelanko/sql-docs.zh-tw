@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 123393c061d151240949f41e59e5d14b19056c52
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078364"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542317"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>第 8 課：建立關鍵效能指標
   在這一課，您將建立關鍵效能指標 (KPI)。 Kpi 是用來針對*目標*值（也是由量值或絕對值所定義），測量由*基底*量值定義之值的效能。 在報告用戶端應用程式中，KPI 可讓商務專業人士輕鬆、快速地概括了解商務成果或找出趨勢。 如需詳細資訊，請參閱 [KPI &#40;SSAS 表格式&#41;](tabular-models/kpis-ssas-tabular.md)。  
   
  完成本課程的估計時間： **15 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 7 課：建立量值](lesson-6-create-measures.md)。  
   
 ## <a name="create-key-performance-indicators"></a>建立關鍵效能指標  
@@ -47,9 +46,9 @@ ms.locfileid: "66078364"
   
 5.  在 [關鍵效能指標]**** 對話方塊的 [定義目標值]**** 中，選取 [絕對值]**** 選項。  
   
-6.  在 [**絕對值**] 欄位中， `1.1`輸入，然後按 enter。  
+6.  在 [**絕對值**] 欄位中，輸入 `1.1` ，然後按 enter。  
   
-7.  在 [**定義狀態臨界**值] 的左側（低）滑杆欄位中`1`，輸入，然後在右側（高）滑杆欄位中， `1.07`輸入。  
+7.  在 [**定義狀態臨界**值] 的左側（低）滑杆欄位中，輸入 `1` ，然後在右側（高）滑杆欄位中，輸入 `1.07` 。  
   
 8.  在 [選取圖示樣式]**** 中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66078364"
   
 4.  在 [關鍵效能指標]**** 對話方塊的 [定義目標值]**** 中，選取 [絕對值]**** 選項。  
   
-5.  在 [**絕對值**] 欄位中， `1.25`輸入。  
+5.  在 [**絕對值**] 欄位中，輸入 `1.25` 。  
   
 6.  在 [定義狀態臨界值]**** 中，滑動左側 (下) 滑動軸欄位，直到欄位顯示 **0.8**，然後滑動右側 (上) 滑動軸欄位，直到欄位顯示 **1.03**。  
   

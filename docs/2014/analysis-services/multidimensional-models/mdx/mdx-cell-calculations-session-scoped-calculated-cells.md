@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 199de07778a153cd1bc40b5033d364e5e0055bd3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074432"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546430"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>建立工作階段範圍導出資料格
     
@@ -80,7 +79,7 @@ FOR String_Expression AS 'MDX_Expression'
 |空集合|解析成空集合的 MDX 命名集運算式。 在此情況下，導出資料格的範圍是整個 Cube。|  
 |單一成員集合|解析成單一成員集合的 MDX 命名集運算式。|  
 |單一層級成員|解析成單一層級成員的 MDX 命名集運算式。 *Level_Expression*是其中一個範例。`Members` MDX 函數。 若要包含匯出成員，請使用*Level_Expression*。`AllMembers` MDX 函數。<br /><br /> 如需詳細資訊，請參閱 [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx)。|  
-|下階集合|解析為指定成員之下階的 MDX 集合運算式。 其中一個範例`Descendants`是（*Member_Expression*、 *Level_Expression*、 *Desc_Flag*） MDX 函數。<br /><br /> 如需詳細資訊，請參閱 [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx)。|  
+|下階集合|解析為指定成員之下階的 MDX 集合運算式。 其中一個範例是 `Descendants` （*Member_Expression*、 *Level_Expression*、 *Desc_Flag*） MDX 函數。<br /><br /> 如需詳細資訊，請參閱 [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [在 MDX 中建立資料格計算 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  

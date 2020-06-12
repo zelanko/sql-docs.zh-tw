@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e7fca367c72aaff5f02280829740942a36915ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087351"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527234"
 ---
 # <a name="connect-to-a-data-mining-server"></a>連接到資料採礦伺服器
   ![連接按鈕](media/misc-connection.gif "連接按鈕")  
   
- 按一下 [**連接**] 按鈕，以選取現有的連接，或建立與實例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]新連接。  
+ 按一下 [**連接**] 按鈕，以選取現有的連接，或建立與實例的新連接 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
  **為什麼需要連接到伺服器？**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66087351"
   
  **我收到一則訊息，指出「找不到連接」。**  
   
- 如果按鈕下半部的文字顯示 [**沒有連接**]，表示您沒有建立[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫的連接，或連接失敗。 您可以繼續從 Access 或其他來源使用 Excel 中的資料，但是若要建立資料採礦模型或執行預測查詢，便必須要有使用中的連接。  
+ 如果按鈕下半部的文字顯示 [**沒有連接**]，表示您沒有建立資料庫的連接 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，或連接失敗。 您可以繼續從 Access 或其他來源使用 Excel 中的資料，但是若要建立資料採礦模型或執行預測查詢，便必須要有使用中的連接。  
   
  **假設我沒有使用伺服器的許可權嗎？**  
   

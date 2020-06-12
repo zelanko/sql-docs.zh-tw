@@ -12,12 +12,12 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd5d242d0b2cdd6ccedb8c8f46e8047a72050d40
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032412"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859200"
 ---
 # <a name="object-dependencies"></a>物件相依性
   某些資料庫物件與其他資料庫物件具有相依性。 例如，檢視和預存程序必須相依於特定資料表，這些資料表中包含檢視或程序所傳回的資料。 目前物件的 **物件相依性 (一般頁面)** 列出必須存在，物件才能正常運作的資料庫物件，以及相依於所選物件的物件。 參考自身定義中之其他物件，並將定義儲存在系統目錄中的物件稱為 *參考實體*。 受其他物件參考的物件稱為 *被參考的實體*。  
@@ -26,15 +26,15 @@ ms.locfileid: "63032412"
   
  在變更或刪除選取的物件之前，請使用此對話方塊來了解相依性。  
   
-## <a name="uielement-list"></a>UIElement 清單  
- **Objects that depend on**相依于_\<所選物件的物件>_    
+## <a name="ui-element-list"></a>UI 元素清單  
+ 相依于_ \< 所選物件_**的物件**>   
  按一下此按鈕會顯示已進行相依性追蹤，並相依於所選取物件的物件清單。  
   
- **Objects on which** _ \<所選取物件>_**相依**的物件      
+ _ \< 所選取物件>_**相依****的物件**      
  按一下此按鈕會顯示已進行相依性追蹤，所選取物件相依的物件清單。  
   
  **Dependencies** (相依性)  
- 如果按一下 [相依于_ \<所選物件_**的物件**>]，這就會顯示相依于所選取物件之物件的階層式視圖。 如果按一下_ \<所選物件>_ **相依**的**物件**，這會顯示所選物件所相依之物件的階層式視圖。  
+ 如果按一下 [相依于_ \< 所選物件_**的物件**>]，這就會顯示相依于所選取物件之物件的階層式視圖。 如果按一下_ \< 所選物件>_ **相依**的**物件**，這會顯示所選物件所相依之物件的階層式視圖。  
   
  **名稱**  
  顯示在上述 [相依性]  樹狀檢視中選取之物件的名稱。  

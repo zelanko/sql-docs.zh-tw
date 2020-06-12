@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: da7169cc95b768324e18f1ab5fd7b0a33615f99a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da1bc2b1ac0af7576cfe3c3593b451f78d6a9fae
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077454"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544850"
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>在資料來源檢視中加入或移除資料表或檢視 (Analysis Services)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立資料來源檢視 (DSV) 之後，即可在資料來源檢視設計工具中，透過加入或移除資料表和資料行 (包括其他資料來源中的資料表和資料行) 來進行修改。  
@@ -39,7 +38,7 @@ ms.locfileid: "66077454"
   
  在 DSV 中加入或移除資料表，也會在 DSV 中目前所選取的圖表內加入或移除資料表。 如需圖表的詳細資訊，請參閱 [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)。  
   
- 將資料表移到 [加入/移除資料表]**** 對話方塊中的 [包含的物件]**** 清單之後，您還可以加入所有相關資料表。 此作業會根據資料來源中的外部索引鍵條件約束來加入資料表 (如果有這樣的條件約束存在的話)。 如果外部索引鍵條件約束不存在，您可以使用資料來源檢視的 `NameMatchingCriteria` 屬性來決定關聯性，做法是指定用來比對資料表中之資料行名稱的準則來產生可能的關聯性。 如果已`NameMatchingCriteria`針對資料來源視圖指定屬性，請按一下 [**加入相關資料表**]，從資料來源中加入具有相符資料行名稱的資料表。 如需設定`NameMatchingCriteria`屬性的詳細資訊，請參閱多[維度模型中的資料來源 Views](data-source-views-in-multidimensional-models.md)。  
+ 將資料表移到 [加入/移除資料表]**** 對話方塊中的 [包含的物件]**** 清單之後，您還可以加入所有相關資料表。 此作業會根據資料來源中的外部索引鍵條件約束來加入資料表 (如果有這樣的條件約束存在的話)。 如果外部索引鍵條件約束不存在，您可以使用資料來源檢視的 `NameMatchingCriteria` 屬性來決定關聯性，做法是指定用來比對資料表中之資料行名稱的準則來產生可能的關聯性。 如果 `NameMatchingCriteria` 已針對資料來源視圖指定屬性，請按一下 [**加入相關資料表**]，從資料來源中加入具有相符資料行名稱的資料表。 如需設定屬性的詳細資訊 `NameMatchingCriteria` ，請參閱多[維度模型中的資料來源 Views](data-source-views-in-multidimensional-models.md)。  
   
 > [!NOTE]  
 >  在資料來源檢視中加入或移除物件不會影響基礎資料來源。  

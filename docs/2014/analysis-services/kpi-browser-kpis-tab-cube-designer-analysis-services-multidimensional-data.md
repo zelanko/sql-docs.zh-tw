@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41000c78c4ff3a68e1d3acd107ce57c221a16e28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b6d15cbb75f3528546c566a72f8b23323df8772
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079494"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543710"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 瀏覽器 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
-  在 Cube 設計師中，使用 [KPI]**** 索引標籤的 [KPI 瀏覽器]**** 窗格，即可檢視和測試關鍵效能指標 (KPI) 的結果。 流覽之前，kpi 必須先部署[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]至實例。  
+  在 Cube 設計師中，使用 [KPI]**** 索引標籤的 [KPI 瀏覽器]**** 窗格，即可檢視和測試關鍵效能指標 (KPI) 的結果。 流覽之前，kpi 必須先部署至 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 實例。  
   
 > [!NOTE]  
 >  此窗格只會顯示在瀏覽器檢視中。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Subcube 方格**  
  這可用來定義 Subcube 和限制 [結果]**** 窗格中顯示的 KPI 結果。 方格包含下列資料行：  
   
- **Dimension**  
+ **大小**  
  選取要套用此篩選的維度。  
   
  **階層**  
@@ -42,7 +41,7 @@ ms.locfileid: "66079494"
 |-----------|-----------------|  
 |**等於**|結果會限制為 **[篩選運算式]** 中定義的集合。|  
 |**不等於**|結果會限制為 **[篩選運算式]** 中定義之集合所排除的成員。|  
-|**在**|結果會限制為 **[篩選運算式]** 中選擇的命名集。|  
+|**位於**|結果會限制為 **[篩選運算式]** 中選擇的命名集。|  
 |**不在**|結果會限制為 **[篩選運算式]** 中選擇之命名集所排除的成員。|  
 |**包含**|結果會限制為成員名稱中包含 **[篩選運算式]** 中的字串之成員。|  
 |**Begins With**|結果會限制為成員名稱是以 **[篩選運算式]** 中的字串開頭之成員。|  

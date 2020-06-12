@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97f5d2045601f72c3536fbf2d4e469eb5eb20fbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b43be7165898ab396e646dd5a3e13add86d8b114
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071246"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540176"
 ---
 # <a name="powerpivot-data-access"></a>PowerPivot 資料存取
   本主題描述從發佈到 SharePoint 文件庫的 PowerPivot 活頁簿擷取資料的方法。  

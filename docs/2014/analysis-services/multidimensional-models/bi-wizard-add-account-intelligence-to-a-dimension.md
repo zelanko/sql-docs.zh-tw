@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6279c738ada597984465ff0c1c3db6fa8fbaeb38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076894"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544592"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>將帳戶智慧加入至維度中
-  將帳戶智慧增強功能加入至 Cube 或維度中，以便將標準會計科目分類 (例如收益與費用) 指派給帳戶屬性的成員。 此增強功能也會識別科目類型 (例如資產和負債)，並對每一個科目類型指派適當的彙總。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以使用分類來匯總一段時間的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]帳戶。  
+  將帳戶智慧增強功能加入至 Cube 或維度中，以便將標準會計科目分類 (例如收益與費用) 指派給帳戶屬性的成員。 此增強功能也會識別科目類型 (例如資產和負債)，並對每一個科目類型指派適當的彙總。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以使用分類來匯總一段時間的帳戶。  
   
 > [!NOTE]  
 >  只有以現有的資料來源為基礎的維度才可使用帳戶智慧。 對於沒有使用資料來源建立的維度，在加入帳戶智慧之前，您必須執行結構描述產生精靈來建立資料來源檢視。  
@@ -44,7 +43,7 @@ ms.locfileid: "66076894"
   
 -   **[伺服器帳戶類型]** 資料行會識別 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所辨識的對應帳戶類型。 下表列出 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所辨識的帳戶類型，以及每一個這些類型的預設彙總。 如果維度資料表使用的帳戶類型名稱與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用的一樣，則會自動選取。  
   
-    |伺服器帳戶類型|彙總|描述|  
+    |伺服器帳戶類型|彙總|Description|  
     |-------------------------|-----------------|-----------------|  
     |**統計**|`None`|某項目的計算比率，或者經過一段時間無法彙總之項目的計數。 此帳戶類型不使用轉換規則來轉換貨幣。|  
     |**負債**|`LastNonEmpty`|在特定時間虧欠之事物的金額或價值。 此帳戶類型經過一段時間不會累積，因此經過一段時間不會自然彙總。 例如，Year 數量是有資料的上一個月的值。 這種類型的帳戶會以 End of Period 匯率轉換貨幣。|  

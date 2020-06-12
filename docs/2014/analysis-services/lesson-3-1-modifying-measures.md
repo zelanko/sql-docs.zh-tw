@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ce255a2dfe9e959ed0d68da62266e3a8acc353e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078895"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543430"
 ---
 # <a name="modifying-measures"></a>修改量值
   您可以使用 [FormatString]**** 屬性來定義格式設定，以便控制向使用者顯示量值的方式。 在這項工作中，您在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 中指定貨幣和百分比量值的格式化屬性。  
@@ -56,9 +55,9 @@ ms.locfileid: "66078895"
   
 7.  在 [屬性] 視窗 (標題列正下方) 頂端的下拉式清單中，選取 [單價折扣百分比]**** 量值，然後選取 [FormatString]**** 清單中的 [百分比]****。  
   
-8.  在 [屬性視窗中，將 [**單價折扣百分比**] 量值的 [ `Unit Price Discount Percentage`**名稱**] 屬性變更為。  
+8.  在 [屬性視窗中，將 [**單價折扣百分比**] 量值的 [**名稱**] 屬性變更為 `Unit Price Discount Percentage` 。  
   
-9. 在 [**量值**] 窗格中，按一下 [**稅金 Amt** ]，並將`Tax Amount`此量值的名稱變更為。  
+9. 在 [**量值**] 窗格中，按一下 [**稅金 Amt** ]，並將此量值的名稱變更為 `Tax Amount` 。  
   
 10. 在 [屬性] 視窗中，按一下 [自動隱藏]**** 圖示隱藏 [屬性] 視窗，然後按一下 [Cube 結構]**** 索引標籤的工具列上的 [顯示量值樹狀目錄]****。  
   

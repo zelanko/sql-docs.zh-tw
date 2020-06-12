@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: f97a568c-dab4-4e3b-a70a-1aa9af186805
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c0d0f99ebd4fcd45d456cb25d256e230ec1194d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 203a1baf1079667ddb84aa986f2a805b0e71f1a4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087722"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527374"
 ---
 # <a name="completing-the-wizard-cube-wizard"></a>正在完成精靈 (Cube 精靈)
   使用 **[正在完成精靈]** 頁面，即可命名並預覽在精靈完成後所建立的 Cube。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Cube 名稱**  
  鍵入 Cube 的名稱。  
   

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: c30016f0-7e50-44de-b45d-df11b8b34320
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf63755b657ae55085decc9c84e25ee1dd51c553
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3173e382cfc2dbbba8eabf5b84db9bd95725c4bf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082404"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528944"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>資料庫設計工具 (Analysis Services - 多維度資料)
-  使用中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的 [資料庫設計工具]，即可變更的屬性，以及檢查[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫所產生的警告。  
+  使用中的 [資料庫設計工具] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ，即可變更的屬性，以及檢查資料庫所產生的警告 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 ## <a name="tabs"></a>定位點  
  「資料庫設計工具」包含下列索引標籤：  

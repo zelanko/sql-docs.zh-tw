@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 225fd818-b5ea-494f-b67b-66e09798274a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 546448bd05f3af45b7093acb2dbb9d1e1a8f1bd5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081460"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528494"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>鑽研動作表單編輯器 (動作索引標籤，設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中，使用 **[動作]** 索引標籤的 **[鑽研動作表單編輯器]** 窗格，即可修改 **[動作組合管理]** 窗格中選取的鑽研動作。 如需鑽研動作的詳細資訊，請參閱[動作 &#40;Analysis Services - 多維度資料&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
@@ -25,7 +24,7 @@ ms.locfileid: "66081460"
 > [!NOTE]  
 >  鑽研動作不再向下鑽研至基礎資料存放區。 鑽研動作存取的資訊，必須是使用維度或階層成員包含在 Cube 模型中的資訊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **name**  
  鍵入動作的名稱。  
   
@@ -56,10 +55,10 @@ ms.locfileid: "66081460"
  **其他屬性**  
  展開以檢視 [預設值]****、[最大資料列數]****、[引動過程]****、[應用程式]****、[描述]****、[標題]**** 及 [標題是 MDX]**** 選項。  
   
- **預設**  
+ **預設值**  
  選取 [True]**** 以包含此鑽研動作作為預設鑽研動作，否則，請選取 [False]****。  
   
- 如果從`RETURN`用戶端應用程式所執行`DRILLTHROUGH`的 MDX 語句中省略子句， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例就會評估所有預設的鑽取動作，並執行第一個傳回非空白集合的預設「鑽取」動作。 如需 MDX `DRILLTHROUGH`語句的詳細資訊，請參閱[&#40;mdx&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)的「鑽看」語句。  
+ 如果 `RETURN` 從 `DRILLTHROUGH` 用戶端應用程式所執行的 MDX 語句中省略子句，實例就會 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 評估所有預設的鑽取動作，並執行第一個傳回非空白集合的預設「鑽取」動作。 如需 MDX 語句的詳細資訊 `DRILLTHROUGH` ，請參閱[&#40;mdx&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)的「鑽看」語句。  
   
 > [!NOTE]  
 >  此選項用於回溯相容性用途。  
@@ -78,7 +77,7 @@ ms.locfileid: "66081460"
 |值|說明|  
 |-----------|-----------------|  
 |Batch|此動作應該當作批次作業的一部份或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 工作來執行。|  
-|Interactive (互動式)|此動作會在使用者叫用動作時執行。|  
+|互動式|此動作會在使用者叫用動作時執行。|  
 |開啟時|此動作會在第一次開啟 Cube 時執行。|  
   
  **應用程式**  

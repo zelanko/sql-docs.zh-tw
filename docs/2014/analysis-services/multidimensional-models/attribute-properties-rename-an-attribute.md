@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4094f0a7-2fde-407c-9b36-c8b30537c2da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: df6f25841231bbfc8821cb5a7c42c4687544f407
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dee8b07c942a76601da81ae227b5cd34d9ed32ec
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077217"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544720"
 ---
 # <a name="rename-an-attribute"></a>重新命名屬性
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的屬性 (attribute) 名稱，是由它的 **Name** 屬性 (property) 所定義。 若要重新命名屬性，請以滑鼠右鍵按一下 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 維度設計師中，[維度結構]**** 索引標籤的 [屬性]**** 窗格內的屬性，然後按一下 [重新命名]****。 如果 **[屬性]** 窗格是在方格檢視中，請按一下屬性的名稱，並直接在方格中編輯它。 您也可以選取屬性，並在 **[屬性]** 視窗中設定它的 **Name** 屬性。  

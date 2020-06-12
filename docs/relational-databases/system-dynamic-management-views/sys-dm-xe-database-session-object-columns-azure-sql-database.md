@@ -1,7 +1,6 @@
 ---
 title: sys.dm_xe_database_session_object_columns
 titleSuffix: Azure SQL Database
-ms.custom: seo-dt-2019
 ms.date: 06/10/2016
 ms.service: sql-database
 ms.prod_service: sql-database
@@ -11,12 +10,13 @@ ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d24f6413d9641b58795dc9950aba27dae974d7b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 652f6fe7bda0cf333734155f4a6d86f59b6ec3ce
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826702"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627365"
 ---
 # <a name="sysdm_xe_database_session_object_columns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

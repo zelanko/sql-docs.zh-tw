@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bde0035ae3c855d2add02003ca9ea84357146f90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea26856075d37d815d819fa0eada61d677f77819
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809851"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523634"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>交叉驗證 (Analysis Services - 資料採礦)
   *交叉驗證*是分析中的標準工具，它是協助您開發和微調資料採礦模型的一項重要功能。 在您建立了採礦結構和相關的採礦模型之後，就可以使用交叉驗證來確定模型的有效性。  交叉驗證具有下列應用方式：  
@@ -82,7 +81,7 @@ ms.locfileid: "68809851"
 ### <a name="choosing-models-and-columns-to-validate"></a>選擇要驗證的模型和資料行  
  當您使用資料採礦設計師中的 [交叉驗證]**** 索引標籤時，必須先從清單選取可預測的資料行。 一般而言，採礦結構可以支援許多採礦模型，但並不是所有的採礦模型都使用同一個可預測資料行。 當您執行交叉驗證時，只有使用同一個可預測資料行的模型可包含在報表中。  
   
- 若要選擇可預測屬性，請按一下 [目標屬性]****，然後從清單選取資料行。 如果目標屬性是一個嵌套的資料行，或是嵌套的資料表中的資料行，您就必須使用 [將嵌套的資料表名稱\<> （索引鍵）] 格式來輸入嵌套資料行的名稱。\<> 的嵌套資料行。 如果從嵌套資料表使用的唯一資料行是索引鍵資料行，您可以\<使用嵌套的資料表名稱> （索引鍵）。  
+ 若要選擇可預測屬性，請按一下 [目標屬性]****，然後從清單選取資料行。 如果目標屬性是一個嵌套的資料行，或是嵌套的資料表中的資料行，您就必須使用格式 \<Nested Table Name> （索引鍵）來輸入嵌套資料行的 \<Nested Column> 名稱。 如果從嵌套資料表使用的唯一資料行是索引鍵資料行，您可以使用 \<Nested Table Name> （索引鍵）。  
   
  在您選取可預測屬性之後， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動測試所有使用同一個可預測屬性的模型。 如果目標屬性包含離散的值，且您有想要預測的特定值，則可以在選取可預測資料行之後，選擇性地輸入目標狀態。  
   

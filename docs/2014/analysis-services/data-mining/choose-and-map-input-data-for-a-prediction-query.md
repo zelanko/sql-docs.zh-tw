@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20a10c066fc77e8d760bde456be54b366def8f59
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085853"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524884"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>為預測查詢選擇和對應輸入資料
   從採礦模型建立預測時，通常是透過饋送新資料至模型  (時間序列模型是例外，它只能根據歷程記錄資料進行預測)。若要提供新資料給模型，您必須確保資料是做為資料來源檢視的一部分提供。 如果您事先知道哪些資料要用於預測，可以將資料包含在用於建立模型的資料來源檢視中。 否則，您可能需要建立新的資料來源檢視。 如需詳細資訊，請參閱 [多維度模型中的資料來源檢視](../multidimensional-models/data-source-views-in-multidimensional-models.md)。  
@@ -48,7 +47,7 @@ ms.locfileid: "66085853"
   
 3.  在 [資料表/檢視名稱]**** 之下，選取包含您要用來測試模型之資料的資料表。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
      採礦結構中的資料行，會自動對應到輸入資料表中之名稱相同的資料行。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66085853"
   
 4.  從外部資料來源的可用資料行清單中，選取新的資料行。 選取清單中的空白項目來刪除資料行對應。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
   
      新的資料行對應會在設計師中顯示。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66085853"
   
 3.  按一下 **[移除關聯性]**。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
      即移除案例資料表和巢狀資料表之間的關聯性。  
   

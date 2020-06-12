@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 819d0a4e-7815-4332-a605-b07ca2ade6ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0ace708cc4ee09295380b814bbf21f5a1c350974
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8903a49754357aad9cf24ee63fffa45fbf120e4d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075711"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546990"
 ---
 # <a name="define-cube-hierarchy-properties"></a>定義 Cube 階層屬性
   Cube 階層屬性可以讓您根據同一個資料庫維度，為 Cube 維度中的使用者自訂階層指定唯一設定。 下表描述 Cube 階層的屬性。  

@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a4f41e548746d443ff9cbed5eca17e557127240
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064664"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527744"
 ---
 # <a name="browsing-a-decision-trees-model"></a>瀏覽決策樹模型
-  當您使用 **[流覽]** 開啟分類模型時，該模型會顯示在互動式決策樹檢視器中， [!INCLUDE[msCoName](../includes/msconame-md.md)]類似于中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的決策樹檢視器。 此檢視器會將分類的結果顯示成圖形，而這個圖形是設計來反白顯示區分不同資料群組的準則。 您也可以向下鑽研個別的樹狀結構子集，並且擷取基礎資料。  
+  當您使用 **[流覽]** 開啟分類模型時，該模型會顯示在互動式決策樹檢視器中，類似于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 中的決策樹檢視器 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 此檢視器會將分類的結果顯示成圖形，而這個圖形是設計來反白顯示區分不同資料群組的準則。 您也可以向下鑽研個別的樹狀結構子集，並且擷取基礎資料。  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>探索模型  
  以決策樹演算法為基礎的模型具有許多有趣的資訊可探索。 [**流覽**] 視窗包含下列索引標籤和窗格，可協助您瞭解模式並使用圖表預測結果：  
@@ -87,13 +86,13 @@ ms.locfileid: "66064664"
   
      只要查看陰影的濃度，您就可以將重點放在一些感興趣的群組上，並且取得這些群組的詳細資料以進行比較。 例如，下列群組購買自行車的機率相當高：  
   
-    -   年齡 >= 32 和\< 53，而年收入 >= 26000 和子系 = 0  
+    -   年齡 >= 32， \< 53 and Yearly Income > = 26000，子系 = 0  
   
          總案例數：1150  
   
          自行車購買者機率：18%  
   
-    -   年齡 >= 32 和\< 53，而年收入 >= 26000 和子系不 = 0 且婚姻狀態 = ' Single '  
+    -   年齡 >= 32， \< 53 and Yearly Income > = 26000，子系不 = 0 且婚姻狀態 = ' Single '  
   
          案例總計：402  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66064664"
   
      ![關聯模型的相依性網路圖表](media/dm13-dec-tree-background-no.gif "關聯模型的相依性網路圖表")  
   
- **各種**  
+ **提示**  
   
 -   如果您的資料可以分成多個數列，系統就會針對您想要建立模型的每組資料建立不同的模型。  
   

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 985d3b5b-7891-465b-862d-f7e75431b342
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05bc721be827fc9f72317874d32de8815a38a412
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069625"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538160"
 ---
 # <a name="select-creation-method-cube-wizard"></a>選取建立方法 (Cube 精靈)
   使用 **[選取建立方法]** 頁面，即可指定建立 Cube 的方式。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用現有的資料表**  
  選取此選項，即可使用資料來源中的現有資料表來建立 Cube。 這個精靈將引導您完成根據現有資料表選取並定義量值群組和維度，以便建立新 Cube 的程序。  
   
