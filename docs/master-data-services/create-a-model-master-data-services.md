@@ -55,7 +55,7 @@ ms.locfileid: "73728479"
   
  對於每個建立的模型，會將含有八個資料行的資料列加入方格中。 八個資料行如下：  
   
--   **狀態**︰模型狀態。 當您按一下 [**儲存模型**] 按鈕時，會顯示![更新](../master-data-services/media/mds-model-status-updating.png "Updating")影像，表示正在更新模型。 如果建立或編輯模型時發生錯誤，則會顯示![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像。 否則，狀態會是 [確定]，而且會顯示 [![確定]](../master-data-services/media/mds-model-status-ok.png "[確定]")影像。  
+-   **狀態**︰模型狀態。 當您按一下 [**儲存模型**] 按鈕時，會顯示![更新](../master-data-services/media/mds-model-status-updating.png "Updating")影像，表示正在更新模型。 如果建立或編輯模型時發生錯誤，則會顯示![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像。 否則，狀態會是 [確定]，而且會顯示 ![確定](../master-data-services/media/mds-model-status-ok.png "[確定]")影像。  
   
 -   **名稱**：模型名稱。  
   
