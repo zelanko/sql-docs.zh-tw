@@ -1,5 +1,6 @@
 ---
 title: 使用具名管道建立有效的連接字串 |Microsoft Docs
+description: 瞭解如何在使用具名管道通訊協定連接到 SQL Server 的實例時，建立有效的連接字串。 查看有效管道名稱的範例。
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +17,12 @@ ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001028"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716705"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>使用具名管道建立有效的連接字串
   除非使用者變更，否則當的預設實例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接聽具名管道通訊協定時，它會使用 `\\.\pipe\sql\query` 做為管道名稱。 其中句點表示該電腦為本機電腦， `pipe` 表示連接是具名管道，而 `sql\query` 則是管道的名稱。 若要連接到預設管道，別名必須用 `\\<computer_name>\pipe\sql\query` 做為管道名稱。 若將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為接聽其他管道，則管道名稱必須使用該管道。 例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以 `\\.\pipe\unit\app` 做為管道，則別名必須以 `\\<computer_name>\pipe\unit\app` 做為管道名稱。  

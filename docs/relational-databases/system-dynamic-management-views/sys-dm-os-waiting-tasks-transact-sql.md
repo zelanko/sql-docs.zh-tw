@@ -20,12 +20,12 @@ ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0efa4a5b5c8144807c27014a96b3fa90ed77971
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ab32f364725d11a606ac698fdefb7f9f95a312d
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811748"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748248"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "82811748"
   傳回有關等候某項資源的工作等候佇列資訊。 如需有關工作的詳細資訊，請參閱[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
    
 > [!NOTE]  
->  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_os_waiting_tasks**的名稱。  
+> 若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_os_waiting_tasks**的名稱。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -54,11 +54,11 @@ ms.locfileid: "82811748"
   
  **執行緒集區資源擁有者：**  
   
--   threadpool id = 排程器 \< 十六進位-位址>  
+-   threadpool 識別碼 = 排程器\<hex-address>  
   
  **平行查詢資源擁有者：**  
   
--   exchangeEvent id = {Port |管道} \< 十六進位-位址> WaitType = \< exchange-等候類型> 節點識別碼 = \< exchange 節點識別碼>  
+-   exchangeEvent id = {Port |Pipe} \<hex-address> WaitType = \<exchange-wait-type>\<exchange-node-id>  
   
  **Exchange-wait-type：**  
   
@@ -78,43 +78,43 @@ ms.locfileid: "82811748"
   
  **鎖定資源擁有者：**  
   
--   \<類型特定-描述> 識別碼 = 鎖定 \< 鎖定-十六進位位址> 模式 = \< 模式> associatedObjectId = \< 相關聯的 obj 識別碼>  
+-   \<type-specific-description>id = 鎖定 \<lock-hex-address> 模式 = \<mode> associatedObjectId =\<associated-obj-id>  
   
-     **\<類型特定-描述> 可以是：**  
+     **\<type-specific-description>可以是：**  
   
-    -   針對資料庫： databaselock subresource = \< databaselock-subresource> dbid = \< db-id>  
+    -   針對資料庫： databaselock subresource = \<databaselock-subresource> dbid =\<db-id>  
   
-    -   針對 FILE： k fileid = \< file-id> subresource = \< k-subresource> dbid = \< db-id>  
+    -   針對 FILE： k fileid = \<file-id> subresource = \<filelock-subresource> dbid =\<db-id>  
   
-    -   針對物件： objectlock lockPartition = \< lock-partition-id> objid = \< obj-id> subresource = \< objectlock-subresource> dbid = \< db 識別碼>  
+    -   物件： objectlock lockPartition = \<lock-partition-id> objid = \<obj-id> subresource = \<objectlock-subresource> dbid =\<db-id>  
   
-    -   針對頁面： pagelock fileid = \< file-id> pageid = \< PAGE id> dbid = \< db-id> subresource = \< pagelock-subresource>  
+    -   針對 PAGE： pagelock fileid = \<file-id> pageid = \<page-id> dbid = \<db-id> subresource =\<pagelock-subresource>  
   
-    -   針對索引鍵：機碼 hobtid = \< hobt-id> dbid = \< db 識別碼>  
+    -   針對索引鍵：機碼 hobtid = \<hobt-id> dbid =\<db-id>  
   
-    -   針對範圍： extentlock fileid = \< file-id> pageid = \< page id> dbid = \< db-id>  
+    -   針對範圍： extentlock fileid = \<file-id> pageid = \<page-id> dbid =\<db-id>  
   
-    -   針對 RID： ridlock fileid = \< file-id> pageid = \< page id> dbid = \< db-id>  
+    -   針對 RID： ridlock fileid = \<file-id> pageid = \<page-id> dbid =\<db-id>  
   
-    -   針對應用程式： applicationlock hash = \< hash> databasePrincipalId = \< role-id> dbid = \< db-id>  
+    -   針對應用程式： applicationlock hash = \<hash> databasePrincipalId = \<role-id> dbid =\<db-id>  
   
-    -   針對中繼資料： metadatalock subresource = \< metadata-subresource> classid = \< metadatalock-description> dbid = \< db-id>  
+    -   中繼資料： metadatalock subresource = \<metadata-subresource> classid = \<metadatalock-description> dbid =\<db-id>  
   
-    -   針對 HOBT： hobtlock hobtid = \< HOBT-id> subresource = \< HOBT-subresource> dbid = \< db 識別碼>  
+    -   針對 HOBT： hobtlock hobtid = \<hobt-id> subresource = \<hobt-subresource> dbid =\<db-id>  
   
-    -   針對 ALLOCATION_UNIT： allocunitlock hobtid = \< hobt-id> subresource = 配置 \< -UNIT-subresource> dbid = \< db 識別碼>  
+    -   針對 ALLOCATION_UNIT： allocunitlock hobtid = \<hobt-id> subresource = \<alloc-unit-subresource> dbid =\<db-id>  
   
-     **\<模式> 可以是：**  
+     **\<mode>可以是：**  
   
      Sch-S、Sch-M、S、U、X、IS、IU、IX、SIU、SIX、UIX、BU、RangeS-S、RangeS-U、RangeI-N、RangeI-S、RangeI-U、RangeI-X、RangeX-、RangeX-U、RangeX-X  
   
  **外部資源擁有者：**  
   
--   External ExternalResource = \< wait-類型>  
+-   外部 ExternalResource =\<wait-type>  
   
  **一般資源擁有者：**  
   
--   TransactionMutex TransactionInfo Workspace = \< 工作區識別碼>  
+-   TransactionMutex TransactionInfo 工作區 =\<workspace-id>  
   
 -   Mutex  
   
@@ -128,11 +128,11 @@ ms.locfileid: "82811748"
   
  **閂鎖資源擁有者：**  
   
--   \<資料庫識別碼>：檔案 \< 識別碼>： \< 分頁檔>  
+-   \<db-id>:\<file-id>:\<page-in-file>  
   
 -   \<GUID>  
   
--   \<閂鎖類別> （ \< 閂鎖-位址>）  
+-   \<latch-class> (\<latch-address>)  
   
 ## <a name="permissions"></a>權限
 
@@ -140,12 +140,44 @@ ms.locfileid: "82811748"
 在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
  
 ## <a name="example"></a>範例
-這個範例會識別已封鎖的會話。 [!INCLUDE[tsql](../../includes/tsql-md.md)]在中執行查詢 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。
+### <a name="a-identify-tasks-from-blocked-sessions"></a>A. 識別已封鎖會話中的工作。 
 
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
-``` 
+```   
+
+### <a name="b-view-waiting-tasks-per-connection"></a>B. 查看每個連接的等候工作
+
+```sql
+SELECT st.text AS [SQL Text], c.connection_id, w.session_id, 
+  w.wait_duration_ms, w.wait_type, w.resource_address, 
+  w.blocking_session_id, w.resource_description, c.client_net_address, c.connect_time
+FROM sys.dm_os_waiting_tasks AS w
+INNER JOIN sys.dm_exec_connections AS c ON w.session_id = c.session_id 
+CROSS APPLY (SELECT * FROM sys.dm_exec_sql_text(c.most_recent_sql_handle)) AS st 
+              WHERE w.session_id > 50 AND w.wait_duration_ms > 0
+ORDER BY c.connection_id, w.session_id
+GO
+```
+
+### <a name="c-view-waiting-tasks-for-all-user-processes-with-additional-information"></a>C. 使用其他資訊來查看所有使用者進程的等候工作
+
+```sql
+SELECT 'Waiting_tasks' AS [Information], owt.session_id,
+    owt.wait_duration_ms, owt.wait_type, owt.blocking_session_id,
+    owt.resource_description, es.program_name, est.text,
+    est.dbid, eqp.query_plan, er.database_id, es.cpu_time,
+    es.memory_usage*8 AS memory_usage_KB
+FROM sys.dm_os_waiting_tasks owt
+INNER JOIN sys.dm_exec_sessions es ON owt.session_id = es.session_id
+INNER JOIN sys.dm_exec_requests er ON es.session_id = er.session_id
+OUTER APPLY sys.dm_exec_sql_text (er.sql_handle) est
+OUTER APPLY sys.dm_exec_query_plan (er.plan_handle) eqp
+WHERE es.is_user_process = 1
+ORDER BY owt.session_id;
+GO
+```
   
 ## <a name="see-also"></a>另請參閱  
 [SQL Server 作業系統相關的動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      

@@ -1,7 +1,7 @@
 ---
 title: SQLGetCursorName 函式 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/12/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3ac65dc07897ddc789ee03b06b1bc1f71d37c3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 413b1a6982a5411d9af204a54536c4778b5593b9
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285546"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779060"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 函數
 **標準**  
@@ -54,12 +54,12 @@ SQLRETURN SQLGetCursorName(
  如果*CursorName*為 Null， *NameLengthPtr*仍會傳回*CursorName*所指向的緩衝區中可傳回的字元總數（不包括字元資料的 Null 終止字元）。  
   
  *BufferLength*  
- 源\* *CursorName*的長度（以字元為單位）。 如果* \*CursorName*中的值是 Unicode 字串（在呼叫**SQLGetCursorNameW**時），則*BufferLength*引數必須是偶數。  
+ 源\* *CursorName*的長度（以字元為單位）。 
   
  *NameLengthPtr*  
- 輸出記憶體的指標，要在其中傳回\* *CursorName*中可傳回的字元總數（不包括 null 終止字元）。 如果可傳回的字元數大於或等於*BufferLength*， \* *CursorName*中的資料指標名稱會截斷為*BufferLength*減去 null 終止字元的長度。  
+ 輸出記憶體的指標，要在其中傳回 CursorName 中可傳回的字元總數（不包括 null 終止字元） \* * *。 如果可傳回的字元數大於或等於*BufferLength*，CursorName 中的資料指標名稱 \* *CursorName*會截斷為*BufferLength*減去 null 終止字元的長度。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
@@ -68,8 +68,8 @@ SQLRETURN SQLGetCursorName(
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|驅動程式特定的參考用訊息。 （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01004|字串資料，右邊已截斷|緩衝區\* *CursorName*不夠大，無法傳回整個資料指標名稱，所以資料指標名稱已截斷。 Untruncated 資料指標名稱的長度會在 **NameLengthPtr*中傳回。 （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 MessageText 緩衝區中的**SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。 * \* *|  
+|01004|字串資料，右邊已截斷|緩衝區 \* *CursorName*不夠大，無法傳回整個資料指標名稱，所以資料指標名稱已截斷。 Untruncated 資料指標名稱的長度會在 **NameLengthPtr*中傳回。 （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 * \* MessageText*緩衝區中的**SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
 |HY010|函數順序錯誤|（DM）已針對與*StatementHandle*相關聯的連接控制碼呼叫以非同步方式執行的函式。 呼叫**SQLGetCursorName**函數時，這個非同步函式仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** ，並 SQL_PARAM_DATA_AVAILABLE 傳回。 在抓取所有資料流程參數的資料之前，會呼叫這個函式。<br /><br /> （DM）已針對*StatementHandle*呼叫非同步執行的函式，且在呼叫此函式時仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** ，並傳回 SQL_NEED_DATA。 在傳送資料給所有資料執行中參數或資料行之前，已呼叫此函數。|  
 |HY013|記憶體管理錯誤|無法處理函數呼叫，因為無法存取基礎記憶體物件，可能是因為記憶體不足的狀況。|  
@@ -79,7 +79,7 @@ SQLRETURN SQLGetCursorName(
 |HYT01|連接逾時已過期|在資料來源回應要求之前，連接逾時時間已過期。 連接逾時時間是透過**SQLSetConnectAttr**設定，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驅動程式不支援此功能|（DM）與*StatementHandle*相關聯的驅動程式不支援此功能。|  
   
-## <a name="comments"></a>評價  
+## <a name="comments"></a>註解  
  資料指標名稱只會在定位 update 和 delete 語句中使用（例如，**更新**_資料表名稱_.。。**其中目前的**資料_指標名稱_）。 如需詳細資訊，請參閱[定位 Update 和 Delete 語句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果應用程式未呼叫**SQLSetCursorName**來定義資料指標名稱，則驅動程式會產生名稱。 這個名稱的開頭是字母 SQL_CUR。  
   
 > [!NOTE]

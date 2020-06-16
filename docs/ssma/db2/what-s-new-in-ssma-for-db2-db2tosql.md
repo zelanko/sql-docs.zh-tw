@@ -1,7 +1,7 @@
 ---
 title: SSMA for DB2 的新功能（DB2ToSQL） |Microsoft Docs
 description: 瞭解每個版本的 SQL Server 移轉小幫手（SSMA） for DB2 （DB2ToSQL）的變更。
-authors: HJToland3;nahk-ivanov
+author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
 ms.date: 6/2/2020
@@ -9,13 +9,13 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-ms.author: jtoland;alexiva
-ms.openlocfilehash: 73a0afb17e8c44aea6cdb25d590cedeecdc274cf
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.author: alexiva
+ms.openlocfilehash: 18e7ba16dcbcc44155172f239accbfe26fe86fc2
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293975"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779050"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 的新功能（DB2ToSQL）
 

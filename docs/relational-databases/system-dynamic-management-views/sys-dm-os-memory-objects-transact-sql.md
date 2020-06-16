@@ -20,12 +20,12 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eece83b3c1fcde0d33a515c85eeb2cdac0a72cf4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61cc363e15a200ed23de4ac94aba64680e1bc4a6
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827874"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716775"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "82827874"
 |**page_allocator_address**|**varbinary(8)**|頁面配置器的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱[dm_os_memory_clerks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
 |**creation_stack_address**|**varbinary(8)**|僅供內部使用。 可為 Null。|  
 |**sequence_num**|**int**|僅供內部使用。 可為 Null。|  
-|**partition_type**|**int**|資料分割的類型：<br /><br /> 0-非可分割記憶體物件<br /><br /> 1-可分割記憶體物件，目前未分割<br /><br /> 2-可分割 memory 物件，依 NUMA 節點進行分割。 在具有單一 NUMA 節點的環境中，這相當於1。<br /><br /> 3-可分割 memory 物件，依 CPU 分割。|  
-|**contention_factor**|**real**|值，指定此記憶體物件上的爭用，0表示沒有爭用。 每當指定的記憶體配置數目反映該期間內的爭用時，就會更新此值。 僅適用于安全線程的記憶體物件。|  
-|**waiting_tasks_count**|**bigint**|此記憶體物件的等候次數。 每當從這個記憶體物件配置記憶體時，這個計數器就會遞增。 增量是目前正在等待存取此記憶體物件的工作數目。 僅適用于安全線程的記憶體物件。 這是不具有正確性保證的最佳工作價值。|  
-|**exclusive_access_count**|**bigint**|指定以獨佔方式存取此記憶體物件的頻率。 僅適用于安全線程的記憶體物件。  這是不具有正確性保證的最佳工作價值。|  
+|**partition_type**|**int**|**適用對象**：[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 及更新版本。<br /><br /> 資料分割的類型：<br /><br /> 0-非可分割記憶體物件<br /><br /> 1-可分割記憶體物件，目前未分割<br /><br /> 2-可分割 memory 物件，依 NUMA 節點進行分割。 在具有單一 NUMA 節點的環境中，這相當於1。<br /><br /> 3-可分割 memory 物件，依 CPU 分割。|  
+|**contention_factor**|**real**|**適用對象**：[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 及更新版本。<br /><br /> 值，指定此記憶體物件上的爭用，0表示沒有爭用。 每當指定的記憶體配置數目反映該期間內的爭用時，就會更新此值。 僅適用于安全線程的記憶體物件。|  
+|**waiting_tasks_count**|**bigint**|**適用對象**：[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 及更新版本。<br /><br /> 此記憶體物件的等候次數。 每當從這個記憶體物件配置記憶體時，這個計數器就會遞增。 增量是目前正在等待存取此記憶體物件的工作數目。 僅適用于安全線程的記憶體物件。 這是不具有正確性保證的最佳工作價值。|  
+|**exclusive_access_count**|**bigint**|**適用對象**：[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 及更新版本。<br /><br /> 指定以獨佔方式存取此記憶體物件的頻率。 僅適用于安全線程的記憶體物件。  這是不具有正確性保證的最佳工作價值。|  
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
  **partition_type**、 **contention_factor**、 **waiting_tasks_count**和**exclusive_access_count**尚未在中執行 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 。  

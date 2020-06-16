@@ -1,7 +1,7 @@
 ---
 title: 連接到 Sybase （SybaseToSQL） |Microsoft Docs
 description: 連接到 SAP ASE 實例，以使用 SSMA for Sybase （SAP ASE）開始遷移。 使用 [連接到 Sybase] 對話方塊。
-authors: nahk-ivanov
+author: nahk-ivanov
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 ms.author: alexiva
-ms.openlocfilehash: 2fb73b6f5abe1feeb5b341ad81fc97f21331e824
-ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
+ms.openlocfilehash: 72c6797bfc8d673069cab41002a4a93596d7e5d9
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454411"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779410"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>連線到 Sybase (SybaseToSQL)
 
@@ -23,7 +23,7 @@ ms.locfileid: "84454411"
 
 若要存取此對話方塊，請在 [檔案]**功能表上，選取 [連線****到 Sybase]**。 如果您先前已連線，此命令會**重新連接到 Sybase**。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 **提供者**  
 選取電腦上任何已安裝的提供者，以連接到 Sybase 伺服器。

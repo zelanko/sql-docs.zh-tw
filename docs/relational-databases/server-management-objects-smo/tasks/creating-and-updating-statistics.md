@@ -2,9 +2,10 @@
 title: 建立和更新統計資料
 ms.prod: sql
 ms.prod_service: database-engine
-ms.technology: smo
+ms.technology: ''
 ms.topic: reference
-helpviewer_keywords: statistical information [SMO]
+helpviewer_keywords:
+- statistical information [SMO]
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 author: markingmyname
 ms.author: maghan
@@ -12,12 +13,12 @@ ms.reviewer: matteot
 ms.custom: seo-dt-2019
 ms.date: 06/04/2020
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c90feb8f12be713f56a5fc6705f8c71908eb5fd
-ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
+ms.openlocfilehash: c3e04a1e6434c0319d4797460c6574d2fc81a973
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454511"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779100"
 ---
 # <a name="create-and-update-statistics"></a>建立和更新統計資料
 

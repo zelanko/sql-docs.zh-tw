@@ -1,18 +1,19 @@
 ---
 title: 透過 CLR UDT 來模擬記錄與集合
 description: 涵蓋 Oracle 的 SQL Server 移轉小幫手（SSMA）如何使用 SQL Server Common Language Runtime （CLR）使用者定義資料類型（UDT）來模擬 Oracle 記錄和集合。
-authors: nahk-ivanov
-ms.service: ssma
+author: nahk-ivanov
+ms.prod: sql
+ms.technology: ssma
 ms.devlang: sql
 ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
-ms.openlocfilehash: 39a7e8d59425db7ce2d7e81083012321caac35ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73991999cf0a6e7bd2c8cd541ec58a37d1f18f09
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76762812"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779378"
 ---
 # <a name="emulating-records-and-collections-via-clr-udt"></a>透過 CLR UDT 來模擬記錄與集合
 
@@ -26,7 +27,7 @@ SSMA 會建立三個以 CLR 為基礎的 Udt：
 * `CollectionIndexString`
 * `Record`
 
-此`CollectionIndexInt`類型適用于模擬以整數編制索引的集合，例如`VARRAY`s、嵌套資料表和以整數為基礎的關聯陣列。 `CollectionIndexString`型別用於以字元索引鍵編制索引的關聯陣列。 Oracle 記錄功能是由`Record`類型模擬。
+此 `CollectionIndexInt` 類型適用于模擬以整數編制索引的集合，例如 `VARRAY` s、嵌套資料表和以整數為基礎的關聯陣列。 `CollectionIndexString`型別用於以字元索引鍵編制索引的關聯陣列。 Oracle 記錄功能是由 `Record` 類型模擬。
 
 記錄或集合類型的所有宣告都會轉換成此 Transact-sql 宣告：
 
@@ -34,7 +35,7 @@ SSMA 會建立三個以 CLR 為基礎的 Udt：
 declare @Collection$TYPE varchar(max) = '<type definition>'
 ```
 
-以下`<type definition>`是可唯一識別來源 PL/SQL 類型的描述性文字。
+以下 `<type definition>` 是可唯一識別來源 PL/SQL 類型的描述性文字。
 
 請考慮下列範例：
 
@@ -101,7 +102,7 @@ BEGIN
 END
 ```
 
-在這裡，由於`Manager`資料表與數值索引（`INDEX BY PLS_INTEGER`）相關聯，因此所使用的對應 t-sql 宣告的類型`@CollectionIndexInt$TYPE`為。 如果資料表與字元集索引相關聯（例如`VARCHAR2`），則對應的 t-sql 宣告會是下列類型： `@CollectionIndexString$TYPE`
+在這裡，由於 `Manager` 資料表與數值索引（）相關聯 `INDEX BY PLS_INTEGER` ，因此所使用的對應 t-sql 宣告的類型為 `@CollectionIndexInt$TYPE` 。 如果資料表與字元集索引相關聯（例如 `VARCHAR2` ），則對應的 t-sql 宣告會是 `@CollectionIndexString$TYPE` 下列類型：
 
 ```sql
 -- Oracle
@@ -112,13 +113,13 @@ TYPE Manager_table is TABLE OF Manager INDEX BY VARCHAR2(40);
     ' TABLE INDEX BY STRING OF ( RECORD ( MGRID INT , MGRNAME STRING , HIREDATE DATETIME ) )'
 ```
 
-Oracle 記錄功能僅由`Record`類型模擬。
+Oracle 記錄功能 `Record` 僅由類型模擬。
 
-、 `CollectionIndexInt`、和`CollectionIndexString` `Record`這兩種類型都有一個靜態屬性`[Null]` ，會傳回空的實例。 呼叫`SetType`方法來接收特定類型的空物件（如上述範例所示）。
+、、和這兩種類型 `CollectionIndexInt` `CollectionIndexString` `Record` 都有一個靜態屬性，會傳回 `[Null]` 空的實例。 `SetType`呼叫方法來接收特定類型的空物件（如上述範例所示）。
 
 ## <a name="constructor-call-conversions"></a>函式呼叫轉換
 
-函式標記法只能用於嵌套的資料表和`VARRAY`，因此所有的明確函式呼叫都會使用`CollectionIndexInt`類型進行轉換。 空白的函式呼叫會透過`SetType`在的 null 實例上叫`CollectionIndexInt`用的呼叫來轉換。 `[Null]`屬性會傳回 null 實例。 如果此函式包含專案清單，則會依序套用特殊方法呼叫，以將值新增至集合。
+函式標記法只能用於嵌套的資料表和 `VARRAY` ，因此所有的明確函式呼叫都會使用類型進行轉換 `CollectionIndexInt` 。 空白的函式呼叫會透過 `SetType` 在的 null 實例上叫用的呼叫來轉換 `CollectionIndexInt` 。 屬性會傳回 `[Null]` null 實例。 如果此函式包含專案清單，則會依序套用特殊方法呼叫，以將值新增至集合。
 
 例如：
 
@@ -166,7 +167,7 @@ END
 
 ## <a name="referencing-and-assigning-record-and-collection-elements"></a>參考和指派記錄和集合元素
 
-每個 Udt 都有一組方法，可使用各種資料類型的元素。 例如， `SetDouble`方法會將`float(53)`值指派給 record 或 collection，而且`GetDouble`可以讀取此值。 以下是完整的方法清單：
+每個 Udt 都有一組方法，可使用各種資料類型的元素。 例如， `SetDouble` 方法會將值指派 `float(53)` 給 record 或 collection，而且 `GetDouble` 可以讀取此值。 以下是完整的方法清單：
 
 ```sql
 GetCollectionIndexInt(@key <KeyType>) returns CollectionIndexInt;
@@ -235,7 +236,7 @@ SET @c = @c.SetRecord(1, @c.GetOrCreateRecord(1).SetInt(N'ID', 1))
 
 SSMA 會使用下列 UDT 方法來模擬 PL/SQL 集合的內建方法。
 
-Oracle 收集方法 | `CollectionIndexInt`和`CollectionIndexString`對等
+Oracle 收集方法 | `CollectionIndexInt`和對 `CollectionIndexString` 等
 --- | ---
 COUNT | `Count returns int`
 刪除 | `RemoveAll() returns <UDT_type>`
@@ -255,16 +256,16 @@ TRIM （n） | `TrimN(@count int) returns <UDT_type>`
 
 ## <a name="bulk-collect-operation"></a>大量收集作業
 
-SSMA 會`BULK COLLECT INTO`將語句轉換`SELECT ... FOR XML PATH`成 SQL Server 語句，其結果會包裝成下列其中一個函數：
+SSMA `BULK COLLECT INTO` 會將語句轉換成 SQL Server `SELECT ... FOR XML PATH` 語句，其結果會包裝成下列其中一個函數：
 
 * `ssma_oracle.fn_bulk_collect2CollectionSimple`
 * `ssma_oracle.fn_bulk_collect2CollectionComplex`
 
-選擇取決於目標物件的類型。 這些函式會傳回可由`CollectionIndexInt`、 `CollectionIndexString`和`Record`類型剖析的 XML 值。 特殊`AssignData`函式會將以 XML 為基礎的集合指派給 UDT。
+選擇取決於目標物件的類型。 這些函式會傳回可由 `CollectionIndexInt` 、和類型剖析的 XML 值 `CollectionIndexString` `Record` 。 特殊函 `AssignData` 式會將以 XML 為基礎的集合指派給 UDT。
 
-SSMA 會辨識三種`BULK COLLECT INTO`語句。
+SSMA 會辨識三種 `BULK COLLECT INTO` 語句。
 
-### <a name="the-collection-contains-elements-with-scalar-types-and-the-select-list-contains-one-column"></a>集合包含具有純量類型的元素，且`SELECT`清單包含一個資料行
+### <a name="the-collection-contains-elements-with-scalar-types-and-the-select-list-contains-one-column"></a>集合包含具有純量類型的元素，且 `SELECT` 清單包含一個資料行
 
 ```sql
 -- Oracle
@@ -279,7 +280,7 @@ SET @<collection_name_1> =
             (SELECT column_name_1 FROM <data_source> FOR XML PATH)))
 ```
 
-### <a name="the-collection-contains-elements-with-record-types-and-the-select-list-contains-one-column"></a>集合包含具有記錄類型的元素，且`SELECT`清單包含一個資料行
+### <a name="the-collection-contains-elements-with-record-types-and-the-select-list-contains-one-column"></a>集合包含具有記錄類型的元素，且 `SELECT` 清單包含一個資料行
 
 ```sql
 -- Oracle
@@ -301,7 +302,7 @@ SET @<collection_name_1> =
             FOR XML PATH)))
 ```
 
-### <a name="the-collection-contains-elements-with-scalar-type-and-the-select-list-contains-multiple-columns"></a>集合包含具有純量類型的元素，且`SELECT`清單包含多個資料行
+### <a name="the-collection-contains-elements-with-scalar-type-and-the-select-list-contains-multiple-columns"></a>集合包含具有純量類型的元素，且 `SELECT` 清單包含多個資料行
 
 ```sql
 -- Oracle
@@ -340,4 +341,4 @@ SELECT
 
 ## <a name="select-into-record"></a>選取記錄
 
-當 Oracle 查詢的結果儲存在 PL/SQL 記錄變數中時，您有兩個選項取決於 [轉換記錄] 的 [SSMA] 設定，**做為分隔變數清單**（可在 [**工具**] 功能表、[**專案設定**]、 **[一般** -> **轉換**] 底下取得）。 如果此設定的值為 **[是]** （預設值），則 SSMA 不會建立記錄類型的實例。 相反地，它會將記錄分割成構成欄位，方法是為每個記錄欄位建立個別的 Transact-sql 變數。 如果設定為 [**否**]，則會具現化記錄，並使用`Set`方法為每個欄位指派一個值。
+當 Oracle 查詢的結果儲存在 PL/SQL 記錄變數中時，您有兩個選項取決於 [轉換記錄] 的 [SSMA] 設定，**做為分隔變數清單**（可在 [**工具**] 功能表、[**專案設定**]、 **[一般**  ->  **轉換**] 底下取得）。 如果此設定的值為 **[是]** （預設值），則 SSMA 不會建立記錄類型的實例。 相反地，它會將記錄分割成構成欄位，方法是為每個記錄欄位建立個別的 Transact-sql 變數。 如果設定為 [**否**]，則會具現化記錄，並使用方法為每個欄位指派一個值 `Set` 。
