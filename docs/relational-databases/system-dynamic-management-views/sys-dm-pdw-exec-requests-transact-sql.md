@@ -12,18 +12,18 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4f4ebcbf84da7d899b4d4cbd861cfb2ae3f75863
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 982096893cdce9c4b604df9c3fb0258cefaaf93d
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82087558"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796519"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.databases dm_pdw_exec_requests （Transact-sql）
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  保存目前或最近在中作用中的所有[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]要求的相關資訊。 它會針對每個要求/查詢列出一個資料列。  
+  保存目前或最近在中作用中的所有要求的相關資訊 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 它會針對每個要求/查詢列出一個資料列。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
@@ -35,7 +35,7 @@ ms.locfileid: "82087558"
 |end_compile_time|**datetime**|引擎完成編譯要求的時間。|Null 表示尚未編譯的要求;否則，有效的**日期時間**小於 start_time，且小於或等於目前的時間。|
 |end_time|**datetime**|要求執行完成、失敗或已取消的時間。|針對已佇列或作用中的要求，則為 Null;否則，有效的**日期時間**就會小於或等於目前的時間。|  
 |total_elapsed_time|**int**|自要求開始後執行所經過的時間（以毫秒為單位）。|介於0和 start_time 與 end_time 之間的差異。</br></br> 如果 total_elapsed_time 超過整數的最大值，total_elapsed_time 會繼續成為最大值。 此狀況會產生「已超過最大值」的警告。</br></br> 最大值（以毫秒為單位）與24.8 天相同。|  
-|標籤|**nvarchar(255)**|與某些 SELECT 查詢語句相關聯的選擇性標籤字串。|包含 ' a-z '、' A-z '、' 0-9 '、' _ ' 的任何字串。|  
+|label|**nvarchar(255)**|與某些 SELECT 查詢語句相關聯的選擇性標籤字串。|包含 ' a-z '、' A-z '、' 0-9 '、' _ ' 的任何字串。|  
 |error_id|**Nvarchar （36）**|與要求相關聯之錯誤的唯一識別碼（如果有的話）。|請參閱[dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md);如果未發生錯誤，則設為 Null。|  
 |database_id|**int**|明確內容所使用之資料庫的識別碼（例如，使用 DB_X）。|如[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)，請參閱 sys.databases 中的識別碼。|  
 |命令|**nvarchar(4000)**|保留使用者提交之要求的完整文字。|任何有效的查詢或要求文字。 長度超過4000個位元組的查詢會被截斷。|  
@@ -44,7 +44,7 @@ ms.locfileid: "82087558"
 |group_name|**sysname** |對於使用資源的要求，group_name 是執行要求之工作負載群組的名稱。  如果要求未利用資源，group_name 是 null。</br>適用對象：Azure SQL 資料倉儲|
 |classifier_name|**sysname**|針對使用資源的要求，用於指派資源和重要性的分類器名稱。||
 |resource_allocation_percentage|**decimal （5，2）**|配置給要求的資源數量百分比。</br>適用對象：Azure SQL 資料倉儲|
-|result_cache_hit|**十六進位**|詳細說明已完成的查詢是否使用結果集快取。  </br>適用對象：Azure SQL 資料倉儲| 1 = 結果集快取點擊 </br> 0 = 結果集快取遺漏 </br> 負值 = 未使用結果集快取的原因。  如需詳細資訊，請參閱備註一節。|
+|result_cache_hit|**decimal**|詳細說明已完成的查詢是否使用結果集快取。  </br>適用對象：Azure SQL 資料倉儲| 1 = 結果集快取點擊 </br> 0 = 結果集快取遺漏 </br> 負值 = 未使用結果集快取的原因。  如需詳細資訊，請參閱備註一節。|
 ||||
   
 ## <a name="remarks"></a>備註 

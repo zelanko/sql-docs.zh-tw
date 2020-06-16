@@ -1,5 +1,6 @@
 ---
 title: 學習 SQL Server Master Data Services
+description: 透過自學訓練、影片、範例和 SQL Server 認證，探索 SQL Server 2019 Master Data Services 的特性和功能。
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ keywords:
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a98dd5e9ac6c3f343e0d91edbb3137e5d1c01c5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1143636402af33512a65d7057f7acccdf455b034
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487862"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796619"
 ---
 # <a name="learn-sql-server-master-data-services"></a>學習 SQL Server Master Data Services
 
@@ -26,8 +27,8 @@ ms.locfileid: "81487862"
   
   
 ## <a name="training"></a>訓練  
-* 若要探索引進[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]的新特性和功能，請嘗試一個自學[實驗室](https://www.microsoft.com/handsonlabs/selfpacedlabs)（使用您的 Microsoft 帳戶登入）。  
-* 若要使用[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]適用于 Excel 的增益集和[!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]來開發用來儲存和管理主要資料清單的方案，請試試一個自學的[實驗室](https://www.microsoft.com/handsonlabs/selfpacedlabs)。 您將建立實體和階層，並使用 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 來擴展維度資料表。  
+* 若要探索引進的新特性和功能 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] ，請嘗試一個自學[實驗室](https://www.microsoft.com/handsonlabs/selfpacedlabs)（使用您的 Microsoft 帳戶登入）。  
+* 若要 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 使用適用于 Excel 的增益集和來開發用來儲存和管理主要資料清單的方案，請 [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)] 試試一個自學的[實驗室](https://www.microsoft.com/handsonlabs/selfpacedlabs)。 您將建立實體和階層，並使用 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 來擴展維度資料表。  
   
 ## <a name="videos"></a>影片  
 * 若要了解 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]版的新功能，請 [**觀看這段影片**](https://www.youtube.com/watch?v=cKA72FpOVxI)。  

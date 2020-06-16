@@ -1,5 +1,6 @@
 ---
 title: 部署模型部署套件（MDSModelDeploy）
+description: 瞭解如何使用 MDSModelDeploy 在 Master Data Services 中部署封裝。 封裝只能包含模型物件或模型物件和資料。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3ae40a50eb9866b452efb8d387df62f8bed8fa24
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 646ed23608fdeada57ae28e12ad674fc557ad856
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728304"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796361"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署封裝
 
@@ -32,7 +33,7 @@ ms.locfileid: "73728304"
 > [!IMPORTANT]  
 >  封裝只能部署到之前建立封裝所使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 這表示，在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中建立的套件無法部署到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更高版本。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   在目標 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境中，您必須擁有存取 [系統管理]**** 功能區域的權限。  
@@ -113,7 +114,7 @@ ms.locfileid: "73728304"
      更新模型時，如果此程序在前三個步驟期間失敗，就不會繼續進行，但是，並不會回復已經進行的變更。 如果此程序在步驟 4 失敗，則會更新可以更新的成員。  
   
 ## <a name="next-steps"></a>後續步驟  
- 檔案屬性及使用者和群組的權限不包含在模型部署封裝中。 在部署模型之後，您必須手動更新這些項目。 如需詳細資訊，請參閱：  
+ 檔案屬性及使用者和群組的權限不包含在模型部署封裝中。 在部署模型之後，您必須手動更新這些項目。 如需詳細資訊，請參閱  
   
 -   [指派模型物件權限 &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

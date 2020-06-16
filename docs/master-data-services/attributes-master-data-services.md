@@ -1,5 +1,6 @@
 ---
 title: 屬性
+description: 瞭解屬性，這是 Master Data Services 實體中的物件。 屬性值描述實體的成員。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 19cbf51a9ac022674e9dfec7b287a38d16af00cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e715a59f45eeaf549d2f553099e47ba420223f6
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728747"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796573"
 ---
 # <a name="attributes-master-data-services"></a>屬性 (Master Data Services)
 

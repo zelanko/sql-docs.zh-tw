@@ -1,5 +1,6 @@
 ---
 title: 加入使用者
+description: 瞭解如何在主資料管理員中將使用者新增至使用者清單。 您必須新增使用者，以開始將許可權指派給 web 應用程式的流程。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c17a3356949375ab6836db94a31910f5e54ca2a
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729815"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796582"
 ---
 # <a name="add-a-user-master-data-services"></a>加入使用者 (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "73729815"
 
   在 **的** [使用者] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 清單中加入使用者，開始指派 Web 應用程式權限的程序。 在清單中的使用者存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]之前，您必須提供使用者一個或多個功能區域和模型物件的權限。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
@@ -37,11 +38,11 @@ ms.locfileid: "73729815"
   
 2.  在 **[使用者]** 頁面上，按一下 **[加入使用者]**。  
   
-3.  輸入使用者名稱，前面加上 Active Directory 功能變數名稱或伺服器電腦名稱稱，如*domain*\\*user_name*或*computer \ user_name*。  
+3.  輸入使用者名稱，前面加上 Active Directory 功能變數名稱或伺服器電腦名稱稱，如*domain* \\ *user_name*或*computer \ user_name*。  
   
 4.  (選擇性) 按一下 **[檢查名稱]**。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
   
 ## <a name="next-steps"></a>後續步驟  
   

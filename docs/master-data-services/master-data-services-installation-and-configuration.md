@@ -1,5 +1,6 @@
 ---
 title: 安裝和設定
+description: 瞭解如何在 Windows Server 2012 R2 電腦上安裝 Master Data Services、設定 MDS 資料庫和網站，以及部署範例模型和資料。
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289776"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796279"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
 
@@ -34,7 +35,7 @@ ms.locfileid: "79289776"
 如需協助您了解 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]之影片和其他訓練資源的連結，請參閱 [了解 Master Data Services](../master-data-services/learn-sql-server-master-data-services.md)。 
   
 > **下載**  
-> -   若要下載 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**。  
+> -   若要下載 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** 。  
 > -   有 Azure 帳戶嗎？  接著前往**[這裡](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 來啟動已安裝 SQL Server 的虛擬機器。  
 > 
 > **無法建立 MDS 網站嗎？**
@@ -46,7 +47,7 @@ ms.locfileid: "79289776"
 - 若要在 Web 應用程式中工作，用戶端電腦必須安裝 Silverlight 5。 如果您沒有必要的 Silverlight 版本，系統將會在您巡覽至需要 Silverlight 的 Web 應用程式區域時提示安裝 Silverlight。 您可以從**[這裡](https://www.microsoft.com/silverlight/)** 安裝 Silverlight 5。
 
 ## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>Azure 虛擬機器上的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
-根據預設，當您加速[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]已安裝的 Azure 虛擬機器時， [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]也會一併安裝。 
+根據預設，當您加速已安裝的 Azure 虛擬機器時 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] ， [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 也會一併安裝。 
 
 您的下一個步驟是安裝 Internet Information Services (IIS)。 請參閱[安裝和設定 IIS](#InstallIIS) 一節。 
 
@@ -89,7 +90,7 @@ ms.locfileid: "79289776"
    
 9. 在 [功能]**** 頁面上，確認已選取下列功能，然後按一下 [下一步]****。 在 [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] 上，[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 需要這些功能。
   
-    |特性|特性|  
+    |功能|功能|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
@@ -131,21 +132,21 @@ ms.locfileid: "79289776"
 
     >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]新增 SQL Server 受控執行個體的支援。 將**SQL Server 實例**的值設定為 Azure SQL Database 受控實例的主機。 例如： `xxxxxx.xxxxxx.database.windows.net` 。
 
-4. 選取**驗證類型**，然後按一下 [**測試連接**]，確認您可以使用所選驗證類型的認證連接到資料庫。 按 [下一步]  。
+4. 選取**驗證類型**，然後按一下 [**測試連接**]，確認您可以使用所選驗證類型的認證連接到資料庫。 按 [下一步] 。
 
     >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]若要連接到 Azure SQL Database 受控實例，請使用下列其中一種驗證類型：
     >
     >- Azure Active Directory 整合式驗證：**目前的使用者-Active Directory 整合**
     >- SQL Server 驗證： **SQL Server 帳戶**。
     >
-    >在 Azure SQL Database 受控實例中，使用者必須是`sysadmin`固定伺服器角色的成員。
+    >在 Azure SQL Database 受控實例中，使用者必須是 `sysadmin` 固定伺服器角色的成員。
 
     > [!NOTE]  
     >  若您選取 [目前使用者 - 整合式安全性]**** 作為驗證類型，[使用者名稱]**** 方塊會是唯讀的，並顯示登入電腦的 Windows 使用者帳戶名稱。 如果您要在 Azure 虛擬機器 (VM) 上執行 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，則 [使用者名稱]**** 方塊會顯示 VM 名稱以及 VM 上本機系統管理員帳戶的使用者名稱。 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  在 [資料庫名稱]**** 欄位中輸入名稱。 (選擇性) 若要選取 Windows 定序，請清除 [SQL Server 預設定序]**** 核取方塊，然後按一下一或多個可用選項 (例如 [區分大小寫]****)。 按 [下一步]  。
+4.  在 [資料庫名稱]**** 欄位中輸入名稱。 (選擇性) 若要選取 Windows 定序，請清除 [SQL Server 預設定序]**** 核取方塊，然後按一下一或多個可用選項 (例如 [區分大小寫]****)。 按 [下一步] 。
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -161,7 +162,7 @@ ms.locfileid: "79289776"
   
      如需 [建立資料庫精靈]**** 中的設定詳細資訊，請參閱[建立資料庫精靈 &#40;Master Data Services 組態管理員&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)。  
   
-7.  在的 [**資料庫**設定] 頁面[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]上，按一下 [**選取資料庫**]。  
+7.  在的 [**資料庫**設定] 頁面上 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ，按一下 [**選取資料庫**]。  
   
 8.  按一下 **「連接」**，並選取您在步驟 7 中建立的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，然後按一下 **「確定」**。 
 
@@ -203,7 +204,7 @@ ms.locfileid: "79289776"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. 按一下 [套用]  。 [組態完成]**** 訊息方塊隨即顯示。 按一下訊息方塊中的 [確定]****，以啟動 Web 應用程式。 網站位址為 [HTTPs://*server name*/*web application*/]。 
+15. 按一下 [套用]。 [組態完成]**** 訊息方塊隨即顯示。 按一下訊息方塊中的 [確定]****，以啟動 Web 應用程式。 網站位址為 [HTTPs://*server name* / *web application*/]。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -281,7 +282,7 @@ ms.locfileid: "79289776"
   
     1.  瀏覽至您設定的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 網站。 請參閱 [設定資料庫和網站](#SetUpWeb) 一節。  
   
-         網站位址為 [HTTPs://*server name*/*web application*/]。  
+         網站位址為 [HTTPs://*server name* / *web application*/]。  
   
     2.  從 [模型]**** 清單方塊中選取一個模型，然後按一下 [總管]****。  
   

@@ -1,5 +1,6 @@
 ---
 title: 建立模型
+description: 瞭解如何在 Master Data Services 中建立模型以包含模型物件。 您必須擁有 [系統管理] 區域的許可權。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55a0ff697fd9f20f34c2ddc878016ba75f5fa673
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728479"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796413"
 ---
 # <a name="create-a-model-master-data-services"></a>建立模型 (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "73728479"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立模型以包含模型物件。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -55,7 +56,7 @@ ms.locfileid: "73728479"
   
  對於每個建立的模型，會將含有八個資料行的資料列加入方格中。 八個資料行如下：  
   
--   **狀態**︰模型狀態。 當您按一下 [**儲存模型**] 按鈕時，會顯示![更新](../master-data-services/media/mds-model-status-updating.png "Updating")影像，表示正在更新模型。 如果建立或編輯模型時發生錯誤，則會顯示![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像。 否則，狀態會是 [確定]，而且會顯示 ![確定](../master-data-services/media/mds-model-status-ok.png "[確定]")影像。  
+-   **狀態**︰模型狀態。 當您按一下 [**儲存模型**] 按鈕時，會顯示![更新](../master-data-services/media/mds-model-status-updating.png "更新")影像，表示正在更新模型。 如果建立或編輯模型時發生錯誤，則會顯示![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像。 否則，狀態會是 [確定]，而且會顯示 [![確定]](../master-data-services/media/mds-model-status-ok.png "確定")影像。  
   
 -   **名稱**：模型名稱。  
   

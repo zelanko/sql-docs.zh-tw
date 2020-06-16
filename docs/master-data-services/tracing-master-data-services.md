@@ -1,5 +1,6 @@
 ---
 title: 追蹤
+description: Web.config 檔案包含追蹤區段，SQL Server 2016 Master Data Services 的新功能。 深入瞭解預設的追蹤行為。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0af3075f66eefff2de2199d18710de0bf7e62e71
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727852"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796473"
 ---
 # <a name="tracing-master-data-services"></a>追蹤 (Master Data Services)
 
@@ -62,7 +63,7 @@ ms.locfileid: "73727852"
   
     |元素|描述|  
     |-------------|-----------------|  
-    |時間|追蹤項目的發生時間。|  
+    |Time|追蹤項目的發生時間。|  
     |CorrelationID|每個要求會指派一個相互關聯識別碼。 此要求觸發的所有追蹤會共用相同的相互關聯識別碼。<br /><br /> 當 UI 中發生錯誤時，相互關聯識別碼會出現在錯誤訊息中。|  
     |作業|要求作業名稱。 如果要求是 Web UI 要求，作業名稱會是 URL。 如果要求是 API 要求，作業名稱會是服務名稱。|  
     |層級|此追蹤項目的層級。|  

@@ -1,5 +1,6 @@
 ---
 title: 建立實體
+description: 瞭解如何在 Master Data Services 中建立實體以包含成員及其屬性。 您必須擁有 [系統管理] 區域的許可權。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b06d77f562864a1b18e492d1db70563b62d4647
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a43ffa259fd30d7aeaf4e2336780a2b92b2ef289
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728460"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796391"
 ---
 # <a name="create-an-entity-master-data-services"></a>建立實體 (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "73728460"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立實體以包含成員及其屬性。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -64,16 +65,16 @@ ms.locfileid: "73728460"
   
 9. 選擇性。 選取 [啟用資料壓縮]**** 核取方塊。 依預設會開啟資料列壓縮。 如需詳細資訊，請參閱 [資料壓縮](../relational-databases/data-compression/data-compression.md)。  
   
-10. 按一下 [檔案]  。  
+10. 按一下 [檔案] 。  
   
 ## <a name="grid-columns"></a>方格資料行  
  對於每個建立的實體，會將含有十三個資料行的資料列加入格線。 以下是資料行。  
   
-|名稱|描述|  
+|Name|描述|  
 |----------|-----------------|  
 |狀態|實體狀態。 當您按一下 [儲存]**** 時，下列影像隨即顯示，指出正在更新實體。<br /><br /> ![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")<br /><br /> 如果建立或編輯實體時發生錯誤，則會顯示下列影像。<br /><br /> ![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")|  
-|名稱|實體名稱。|  
-|描述|實體描述。|  
+|Name|實體名稱。|  
+|Description|實體描述。|  
 |暫存資料表|此資料表的前置名稱用於儲存資料。|  
 |交易記錄類型|實體的交易記錄類型。|  
 |自動建立代碼|指定是否啟用自動建立程式碼。|  

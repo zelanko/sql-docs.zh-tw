@@ -1,5 +1,6 @@
 ---
 title: 建立訂閱檢視以匯出資料
+description: 瞭解如何建立訂閱視圖，將 Master Data Services 資料匯出至訂閱系統，以建立資料的視圖。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e46961fa67492667a697c34f727ae068744e5e63
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728476"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796412"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>建立訂閱檢視以匯出資料 (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "73728476"
 
   建立訂閱檢視，以將 Master Data Services 資料匯出至訂閱系統。 您正要建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中資料的檢視。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[整合管理]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -60,7 +61,7 @@ ms.locfileid: "73728476"
   
 10. 如果您從 **[格式]** 清單中選擇 **[明確層級]** 或 **[衍生層級]** ，請輸入階層內要加入檢視中的層級數。  
   
-11. 按一下 [檔案]  。  
+11. 按一下 [檔案] 。  
   
 ## <a name="view-information"></a>檢視資訊  
  對於每個建立的檢視，會將含十個資料行的資料列加入方格中。 下表描述該資料行。  
@@ -68,13 +69,13 @@ ms.locfileid: "73728476"
 |資料行|描述|  
 |------------|-----------------|  
 |狀態|檢視狀態。<br /><br /> 當您按一下 [**儲存**] 時，會顯示 [![正在更新狀態](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")影像] 圖示，表示正在更新此視圖。<br /><br /> 如果建立或編輯檢視時發生錯誤，則會顯示 [![錯誤狀態](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像] 圖示。<br /><br /> 否則，狀態為 [確定]，並顯示 [![確定狀態影像] 圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")。|  
-|名稱|訂閱檢視名稱。|  
+|Name|訂閱檢視名稱。|  
 |模型|模型名稱。|  
 |版本|版本名稱。|  
 |版本旗標|版本旗標名稱。|  
 |衍生階層|衍生階層名稱。|  
 |單位|實體名稱。|  
-|[格式]|指定檢視中資料的類型。|  
+|格式|指定檢視中資料的類型。|  
 |層級|指定檢視中的層級數目 (僅用於明確層級或衍生層級檢視格式)。|  
 |包含刪除成員|表示檢視中是否包含虛刪除成員。|  
   

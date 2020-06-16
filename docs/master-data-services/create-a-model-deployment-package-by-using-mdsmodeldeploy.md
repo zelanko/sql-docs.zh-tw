@@ -1,5 +1,6 @@
 ---
 title: 建立模型部署套件（MDSModelDeploy）
+description: 使用 MDSModelDeploy 在 Master Data Services 中建立部署套件。 封裝只能包含模型物件或模型物件和資料。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 47ae80a58f32aab4debb7cd4dde60a1ccf2cdb4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 404faa39224c74e7768aa011fffd8818d6274455
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728499"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796417"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 建立模型部署封裝
 
@@ -29,7 +30,7 @@ ms.locfileid: "73728499"
   
  如果您想要部署只包含模型物件的封裝，您可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中改用模型部署精靈。 如需詳細資訊，請參閱 [使用精靈建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 1.  執行 MDSModelDeploy 工作所需的基本權限如下：  

@@ -1,5 +1,6 @@
 ---
 title: 暫存預存程序
+description: 使用下列三個預存程式之一，從 Master Data Services 中的 SQL Server Management Studio 起始暫存進程。
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 103c43f012f6cf7025139fd29656a42d00fc233f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82b068612f0699cdba3788e4931fb6bdfe8c7e69
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727890"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796499"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>暫存預存程序 (Master Data Services)
 
@@ -23,11 +24,11 @@ ms.locfileid: "73727890"
 
   從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]起始暫存處理序時，可以使用下列三個預存程序其中之一：  
   
--   stg.udp_\<名稱>_Leaf  
+-   stg.< _Leaf udp_ \<name>  
   
--   stg.udp_\<名稱>_Consolidated  
+-   stg.< _Consolidated udp_ \<name>  
   
--   stg.udp_\<名稱>_Relationship  
+-   stg.< _Relationship udp_ \<name>  
   
  其中 name 是建立實體時所指定之暫存資料表的名稱。  
   

@@ -1,5 +1,6 @@
 ---
 title: Data Quality Services 功能支援
+description: 本文摘要說明不同版本 SQL Server 的 Master Data Services 和 Data Quality Services 功能支援。
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a3e90ac3-69a6-47c9-aa18-8e9084717369
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9cd3259e29d3d54216ccf4a73599766631f2548e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 314bd631ba092afb087b3daf4cfead89ff77ebaf
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728050"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796260"
 ---
 # <a name="master-data-services-and-data-quality-services-features-support"></a>Master Data Services 和 Data Quality Services 功能支援
 
@@ -24,7 +25,7 @@ ms.locfileid: "73728050"
 
 ## <a name="ssmdsshort_md-and-data-quality-services"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 和 Data Quality Services
 
-|功能|Enterprise|標準|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
+|功能|Enterprise|標準|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫|是||||||是|  
 |[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式|是||||||是|  

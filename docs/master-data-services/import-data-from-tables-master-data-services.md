@@ -1,5 +1,6 @@
 ---
 title: 從資料表匯入資料
+description: 從資料表匯入資料，並對模型進行大量資料變更。 使用此程式來新增、更新和刪除 Master Data Services 資料庫中的資料。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e10a3facdec9b5b412b1c9b93396d2d0a94886e
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729251"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796305"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>從資料表匯入資料 (Master Data Services)
 
@@ -23,23 +24,23 @@ ms.locfileid: "73729251"
 
   您可以將大量資料加入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的模型中，也可對模型中的資料進行大量變更。  
   
- **必要條件**  
+ **先決條件**  
   
--   您必須具備權限，才能將資料插入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 stg.\<名稱>_Leaf、stg.\<名稱>_Consolidated、stg.\<名稱>_Relationship 資料表中。  
+-   您必須具有將資料插入 stg.< 的許可權。 \<name>_Leaf，stg.<。 \<name>_Consolidated，stg.<。 \<name>資料庫中 _Relationship 資料表 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
   
--   您必須具備權限，才能執行 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的 stg.udp_\<名稱>_Leaf、stg.udp\_\<名稱>_Consolidated 或 stg.udp\_\<名稱>_Relationship 預存程序。  
+-   您必須擁有在資料庫中執行 udp_ stg.< \<name> _Leaf、stg.< \_ \<name> _Consolidated 或 stg.< \_ \<name> _Relationship 預存 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 程式的許可權。  
   
 -   模型的狀態不得為 [已認可] ****。  
   
- **若要加入、更新和刪除資料庫中的[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料**  
+ **若要加入、更新和刪除資料庫中的資料 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
   
 1.  準備要匯入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之適當暫存資料表中的成員，這包括為必要欄位提供值。 如需暫存資料表的概觀，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-    -   對於分葉成員，資料表為 stg.\<名稱>_Leaf，其中 \<名稱> 是指對應的實體。 如需必要欄位的資訊，請參閱[分葉成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
+    -   對於分葉成員，資料表為 stg.<。 \<name>_Leaf，其中 \<name> 指的是對應的實體。 如需必要欄位的資訊，請參閱[分葉成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
-    -   對於合併成員，資料表是 stg.\<名稱>_Consolidated。 如需必要欄位的資訊，請參閱[合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)。  
+    -   若為合併成員，則資料表為 stg.<。 \<name>_Consolidated。 如需必要欄位的資訊，請參閱[合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)。  
   
-    -   對於要移動明確階層中的成員位置，資料表是 stg.\<名稱>_Relationship。 如需必要欄位的資訊，請參閱[合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)。  
+    -   若要在明確階層中移動成員的位置，資料表是 stg.<。 \<name>_Relationship。 如需必要欄位的資訊，請參閱[合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)。  
   
          如需在明確階層中移動成員的概觀，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
   

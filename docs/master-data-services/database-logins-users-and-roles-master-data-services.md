@@ -1,5 +1,6 @@
 ---
 title: 資料庫登入、使用者和角色
+description: Master Data Services 包括安裝在裝載 Master Data Services 資料庫之 SQL Server 資料庫引擎實例上的登入、使用者和角色。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7200d919975a644321e596f66349a2a8aae26f99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54d0d7db0f76407836b266c3534198d0e177c679
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729490"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796379"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>資料庫登入、使用者和角色 (Master Data Services)
 
@@ -32,21 +33,21 @@ ms.locfileid: "73729490"
   
 ## <a name="logins"></a>登入  
   
-|登入|描述|  
+|登入|Description|  
 |-----------|-----------------|  
 |**mds_dlp_login**|允許建立 UNSAFE 組件。 如需詳細資訊，請參閱 [建立組件](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。<br /><br /> -具有隨機產生之密碼的已停用登入。<br /><br /> -對應至 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 dbo。<br /><br /> -若是 msdb，mds_clr_user 會對應至此登入。|  
 |**mds_email_login**|用於通知的已啟用登入。<br /><br /> 若是 msdb 和 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，mds_email_user 會對應至此登入。|  
   
 ## <a name="msdb-users"></a>msdb 使用者  
   
-|User|描述|  
+|User|Description|  
 |----------|-----------------|  
 |**mds_clr_user**|未使用。 對應至 mds_dlp_login。|  
 |**mds_email_user**|用於通知。<br /><br /> -對應至 mds_email_login。<br /><br /> -為 DatabaseMailUserRole 角色的成員。|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services 資料庫使用者  
   
-|User|描述|  
+|User|Description|  
 |----------|-----------------|  
 |**mds_email_user**|用於通知。<br /><br /> -具有 mdm 結構描述的 SELECT 權限。<br /><br /> -具有 mdm.MemberGetCriteria 使用者定義資料表類型的 EXECUTE 權限。<br /><br /> -具有 mdm.udpNotificationQueueActivate 預存程序的 EXECUTE 權限。|  
 |**mds_schema_user**|擁有 mdm 和 mdq 結構描述。 預設結構描述為 mdm。<br /><br /> 沒有對應的登入。|  

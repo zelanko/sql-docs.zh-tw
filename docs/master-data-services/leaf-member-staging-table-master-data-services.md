@@ -1,5 +1,6 @@
 ---
 title: 分葉成員暫存資料表
+description: 在 Master Data Services 資料庫中使用分葉成員臨時表，以建立、更新、停用和刪除分葉成員。
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 626452bb0247b355cff7e8f1e9584e2fdc0c32c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a23e37608597b1f746b53d15deca99ff49031bc
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729058"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796600"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>分葉成員暫存資料表 (Master Data Services)
 
@@ -36,11 +37,11 @@ ms.locfileid: "73729058"
 |**ImportStatus_ID**<br /><br /> 必要|匯入程序的狀態。|**0**：您用來指定記錄已備妥，可供暫存。<br /><br /> **1**：自動指派，表示記錄的暫存處理序已成功。<br /><br /> **2**：自動指派，表示記錄的暫存處理序已失敗。|  
 |**Batch_ID**<br /><br /> 只有 Web 服務需要|自動指派的識別碼，可用來將暫存的記錄分組。 批次中的所有成員都會被指派這個識別碼，這個識別碼會顯示在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者介面的 **[識別碼]** 欄中。|如果尚未處理批次，這個欄位是空白。|  
 |**BatchTag**<br /><br /> 必要項，只有 Web 服務不需要|批次的唯一名稱 (最多 50 個字元)。||  
-|**錯誤碼**|顯示錯誤碼。 若要查詢 **ImportStatus_ID** 為 **2**的所有記錄，請參閱 [暫存處理序錯誤 &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)。||  
-|**錯誤碼**<br /><br /> 必要項，除非程式碼自動為 **ImportType1** 或 **2** 產生。如需詳細資訊，請參閱[自動建立代碼 &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)。|成員的唯一代碼。||  
+|**ErrorCode**|顯示錯誤碼。 若要查詢 **ImportStatus_ID** 為 **2**的所有記錄，請參閱 [暫存處理序錯誤 &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)。||  
+|**程式碼**<br /><br /> 必要項，除非程式碼自動為 **ImportType1** 或 **2** 產生。如需詳細資訊，請參閱[自動建立代碼 &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)。|成員的唯一代碼。||  
 |**名稱**<br /><br /> 選擇性|成員的名稱。||  
 |**NewCode**|唯有在您要變更成員代碼時才使用。||  
-|\<屬性名稱>|實體中的每個屬性都有一個資料行存在。 將其搭配 **ImportType****0** 或 **2**使用。 對於自由格式屬性，指定屬性的新文字或字串值。 對於網域屬性，指定將成為屬性之成員的代碼。 針對連結屬性，URL 開頭必須是 **https://**。<br /><br /> 注意：您無法暫存檔案屬性。||  
+|\<Attribute name>|實體中的每個屬性都有一個資料行存在。 將其搭配 **ImportType****0** 或 **2**使用。 對於自由格式屬性，指定屬性的新文字或字串值。 對於網域屬性，指定將成為屬性之成員的代碼。 針對連結屬性，URL 開頭必須是 **https://**。<br /><br /> 注意：您無法暫存檔案屬性。||  
   
 ## <a name="see-also"></a>另請參閱  
  [總覽：從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

@@ -1,5 +1,6 @@
 ---
 title: 部署模型
+description: 部署模型封裝，將模型的複本從一個 Master Data Services 環境移至另一個，或在您的環境中建立新的模型。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1fa740ec21867c07b2e39b9743234dd3c8121551
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef909fd817da4835e9f3d0903a4e8a7f8f1a4658
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728286"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796363"
 ---
 # <a name="deploying-models-master-data-services"></a>部署模型 (Master Data Services)
 
@@ -27,7 +28,7 @@ ms.locfileid: "73728286"
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，套件是一個 XML 檔案，其中包含可部署的模型結構，以及模型中的資料 (選擇性)。 使用模型封裝將模型的副本從一個 MDS 環境移到另一個 MDS 環境，或在現有的 MDS 環境中建立新的模型。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**MDSModelDeploy 工具**與在或更新版本中[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]建立的舊版套件相容。  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**MDSModelDeploy 工具**與在或更新版本中建立的舊版套件相容 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 。  
   
 ## <a name="tools-for-deploying-models"></a>部署模型的工具  
  若要使用模型封裝，您可以使用以下三個工具之一，端視您的需要而定。  
