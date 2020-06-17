@@ -1,5 +1,6 @@
 ---
 title: 類型系統（XQuery） |Microsoft Docs
+description: 瞭解 XQuery 類型系統，其中包含內建類型的 XML 架構和 xpath 資料類型命名空間中定義的類型。
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -23,21 +24,21 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82cfc060b021e28c5b5e73602285b1edc3fcf20
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946206"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886551"
 ---
 # <a name="type-system-xquery"></a>類型系統 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery 對結構描述類型而言是一個強式類型語言，對於不具類型的資料而言是一個弱式類型語言。 XQuery 的預先定義類型包括下列各項：  
   
--   **http://www.w3.org/2001/XMLSchema**命名空間中的內建 XML 架構類型。  
+-   命名空間中的內建 XML 架構類型 **http://www.w3.org/2001/XMLSchema** 。  
   
--   命名空間中定義**http://www.w3.org/2004/07/xpath-datatypes**的類型。  
+-   命名空間中定義的類型 **http://www.w3.org/2004/07/xpath-datatypes** 。  
   
  此主題也描述下列項目：  
   
@@ -50,7 +51,7 @@ ms.locfileid: "67946206"
 ## <a name="built-in-types-of-xml-schema"></a>XML 結構描述的內建類型  
  XML 結構描述的內建類型具有預先定義的命名空間前置詞 xs。 其中一些類型包含**xs： integer**和**xs： string**。 這些內建類型都受到支援。 當您建立 XML 結構描述集合時，可以使用這些類型。  
   
- 查詢具類型的 XML 時，節點的靜態和動態類型是由被查詢的資料行或變數相關聯之 XML 結構描述集合所決定。 如需靜態和動態類型的詳細資訊，請參閱[運算式內容和查詢評估 &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)。 例如，下列查詢是針對具類型的**xml**資料行（`Instructions`）所指定。 運算式使用 `instance of` 來確認所傳回之 `LotSize` 屬性的具類型值屬於 `xs:decimal` 類型。  
+ 查詢具類型的 XML 時，節點的靜態和動態類型是由被查詢的資料行或變數相關聯之 XML 結構描述集合所決定。 如需靜態和動態類型的詳細資訊，請參閱[運算式內容和查詢評估 &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)。 例如，下列查詢是針對具類型的**xml**資料行（）所指定 `Instructions` 。 運算式使用 `instance of` 來確認所傳回之 `LotSize` 屬性的具類型值屬於 `xs:decimal` 類型。  
   
 ```  
 SELECT Instructions.query('  
@@ -64,7 +65,7 @@ WHERE ProductModelID=7
  此類型資訊是由資料行相關聯的 XML 結構描述集合所提供。  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>XPath 資料類型命名空間中定義的類型  
- 命名空間中定義的類型具有預先定義的前置詞**xdt。** **http://www.w3.org/2004/07/xpath-datatypes** 下列適用於這些類型：  
+ 命名空間中定義的類型 **http://www.w3.org/2004/07/xpath-datatypes** 具有預先定義的前置詞**xdt**。 下列適用於這些類型：  
   
 -   當您建立 XML 結構描述集合時，不能使用這些類型。 這些類型會用於 XQuery 類型系統中，並用於[xquery 和靜態輸入](../xquery/xquery-and-static-typing.md)。 您可以在**xdt**命名空間中轉換成不可部分完成的類型，例如**xdt： untypedAtomic**。  
   
@@ -105,7 +106,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 -   [String 函數 &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)會傳回節點的字串值。  
   
- 在下列 XML 架構集合中，會定義`root`整數類型的 <> 元素：  
+ 在下列 XML 架構集合中， `root` 會定義整數類型的 <> 元素：  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -132,7 +133,7 @@ SET @x='<root>5</root>'
 SELECT @x.query('string(/root[1]) + 3')  
 ```  
   
- 下列範例計算 `LaborHours` 屬性的總計。 `data()`函式會從產品型號的`LaborHours`所有 <`Location`> 元素中，抓取屬性的具類型值。 根據與資料`Instruction`行相關聯的 XML 架構， `LaborHours`是**xs： decimal**類型。  
+ 下列範例計算 `LaborHours` 屬性的總計。 函 `data()` 式會 `LaborHours` 從產品型號的所有 <> 元素中，抓取屬性的具類型值 `Location` 。 根據與資料行相關聯的 XML 架構 `Instruction` ， `LaborHours` 是**xs： decimal**類型。  
   
 ```  
 SELECT Instructions.query('   
@@ -149,7 +150,7 @@ WHERE ProductModelID=7
 >  此範例中的**資料（）** 函數明確使用僅供說明之用。 如果未指定， **sum （）** 會隱含地套用**data （）** 函數，以解壓縮節點的具類型值。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Profiler 範本和許可權](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [XQuery 基本概念](../xquery/xquery-basics.md)  
   
   

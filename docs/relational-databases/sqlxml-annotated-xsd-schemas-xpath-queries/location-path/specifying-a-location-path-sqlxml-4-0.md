@@ -1,5 +1,6 @@
 ---
 title: 指定位置路徑（SQLXML）
+description: 瞭解如何在 SQLXML 4.0 XPath 查詢中指定位置路徑，以選取一組相對於內容節點的節點，並產生節點集。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e2668da10e41e997cc4d37760d79e4b66dae215
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e0af5fb77538a0942a913c8f0e441affb84af93
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245587"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882259"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>指定位置路徑 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "75245587"
   
 -   **相對位置路徑**  
   
-     相對位置路徑會從文件中的內容節點開始。 位置路徑包含一或多個位置步驟的序列，而且每個位置步驟都以斜線 (/) 分隔。 每個步驟都會選取相對於內容節點的一組節點。 步驟的初始序列會選取一組相對於內容節點的節點。 該集合中的每個節點都會當做下列步驟的內容節點使用。 系統會加入由該步驟識別的節點集合。 例如， **child：： Order/child：： OrderDetail**會選取內容節點之** \<Order>** 元素子系的** \<OrderDetail>** 專案子系。  
+     相對位置路徑會從文件中的內容節點開始。 位置路徑包含一或多個位置步驟的序列，而且每個位置步驟都以斜線 (/) 分隔。 每個步驟都會選取相對於內容節點的一組節點。 步驟的初始序列會選取一組相對於內容節點的節點。 該集合中的每個節點都會當做下列步驟的內容節點使用。 系統會加入由該步驟識別的節點集合。 例如， **child：： Order/child：： OrderDetail**會選取 **\<OrderDetail>** **\<Order>** 內容節點之元素子系的專案子系。  
   
     > [!NOTE]  
     >  在 XPath 的 SQLXML 4.0 實作中，即使 XPath 明顯地不是絕對的，每個 XPath 查詢都會從根內容開始。 例如，系統會將 "Customer" 開頭的 XPath 查詢視為 "/Customer"。 在 XPath 查詢**客戶 [訂單]** 中，客戶會從根內容開始，但訂單會從客戶內容開始。 如需詳細資訊，請參閱[使用 XPath 查詢的簡介 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)。  
@@ -51,15 +52,15 @@ ms.locfileid: "75245587"
   
 -   **節點測試**  
   
-     節點測試會指定位置步驟所選取的節點類型。 每個軸（**子**系、**父系**、**屬性**和**本身**）都具有主要節點類型。 若為**屬性**軸，主要節點類型為** \<屬性>**。 若為**父代**、**子**系和**獨立**軸，主要節點類型為** \<element>**。  
+     節點測試會指定位置步驟所選取的節點類型。 每個軸（**子**系、**父系**、**屬性**和**本身**）都具有主要節點類型。 若為**屬性**軸，主要節點類型為 **\<attribute>** 。 若為**父代**、**子**系和**獨立**軸，主要節點類型為 **\<element>** 。  
   
-     例如，如果位置路徑指定了**child：： Customer**，就會選取內容節點的** \<Customer>** 元素子系。 由於**子**軸的** \<元素>** 做為其主要節點類型，因此，如果 customer 是>節點的** \<元素**，則節點測試客戶為 TRUE。  
+     例如，如果位置路徑指定了**child：： Customer**，則 **\<Customer>** 會選取內容節點的元素子系。 因為**子**軸的 **\<element>** 主要節點類型為，所以如果 customer 是節點，則節點測試 customer 為 TRUE **\<element>** 。  
   
 -   **選取述詞 (零或其他)**  
   
      述詞會針對軸篩選節點集。 在 XPath 運算式中指定選取述詞類似於在 SELECT 陳述式中指定 WHERE 子句。 並指定在方括號之間。 套用在選取述詞中指定的測試會篩選由節點測試傳回的節點。 對於節點集內要篩選的每一個節點，該節點會當做內容節點，而且節點集內的節點數目會當做內容大小，然後評估述詞運算式。 如果述詞運算式評估該節點為 TRUE，則產生的節點集會包含該節點。  
   
-     位置步驟的語法是軸名稱之後加上雙冒號 (::)、接著是節點測試，最後是零或其他述詞，每個述詞都會以方括弧括起來。 例如，XPath 運算式（位置路徑） **child：： Customer@CustomerID[= ' ALFKI ']** 會選取內容節點的所有** \<客戶>** 元素子系。 然後，述詞中的測試會套用至節點集，只傳回其**CustomerID**屬性的屬性值為 ' ALFKI ' 的** \<Customer>** 元素節點。  
+     位置步驟的語法是軸名稱之後加上雙冒號 (::)、接著是節點測試，最後是零或其他述詞，每個述詞都會以方括弧括起來。 例如，XPath 運算式（位置路徑） **child：： Customer [ @CustomerID = ' ALFKI ']** 會選取 **\<Customer>** 內容節點的所有元素子系。 然後，述詞中的測試會套用至節點集，而此節點集只會傳回 **\<Customer>** 其**CustomerID**屬性的屬性值為 ' ALFKI ' 的元素節點。  
   
 ## <a name="in-this-section"></a>本節內容  
  [指定 &#40;SQLXML 4.0&#41;的軸](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  

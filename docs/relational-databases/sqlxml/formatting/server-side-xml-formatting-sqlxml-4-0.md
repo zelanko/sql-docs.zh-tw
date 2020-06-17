@@ -1,5 +1,6 @@
 ---
 title: 伺服器端 XML 格式（SQLXML）
+description: 瞭解針對 Microsoft SQL Server 資料庫執行的 SQLXML 4.0 查詢所產生之檔的伺服器端 XML 格式。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec84fdfad468124f59cefde73486d5b19a5a4110
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be657e9fa17be6c6ea2b0441d852f51efa6882be
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255904"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882147"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>伺服器端 XML 格式 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "75255904"
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，您可以將 XML 文件儲存到資料庫資料表中，以及從資料庫資料表中擷取 XML 文件。 若要擷取 XML 文件，請在 SELECT 查詢中使用 FOR XML 查詢延伸模組。  
   
- 例如，假設用戶端應用程式對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行的命令是由下列[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢所組成：  
+ 例如，假設用戶端應用程式對執行的命令是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 由下列查詢所組成 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ：  
   
 ```  
 SELECT FirstName, LastName  

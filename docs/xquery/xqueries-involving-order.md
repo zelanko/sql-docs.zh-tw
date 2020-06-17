@@ -1,5 +1,6 @@
 ---
 title: 涉及訂單的 Xquery |Microsoft Docs
+description: 根據節點出現在檔中的順序，來查看 Xquery 的範例。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36c7e512c1e691d0341cb802a61e57d46d4b076a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946116"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880516"
 ---
 # <a name="xqueries-involving-order"></a>與順序有關的 XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  關聯式資料庫沒有順序的概念。 例如，您不能提出像「從資料庫取得第一個客戶」之類的要求。 不過，您可以查詢 XML 檔並抓取第一個\<Customer> 元素。 如此一來，您會一直擷取相同客戶。  
+  關聯式資料庫沒有順序的概念。 例如，您不能提出像「從資料庫取得第一個客戶」之類的要求。 不過，您可以查詢 XML 檔並抓取第一個 \<Customer> 元素。 如此一來，您會一直擷取相同客戶。  
   
  此主題依據節點出現在文件中的順序來說明查詢。  
   
@@ -63,7 +64,7 @@ WHERE ProductModelID=7
   
 -   **@\*** 抓取第二個工作中心位置的所有屬性。  
   
--   FLWOR 反復專案（適用于 .。。RETURN）抓取第二個`step`工作中心位置的所有 <> 子項目。  
+-   FLWOR 反復專案（適用于 .。。RETURN）抓取 `step` 第二個工作中心位置的所有 <> 子項目。  
   
 -   [Sql： column （）函數（XQuery）](../xquery/xquery-extension-functions-sql-column.md)包含所要建立之 XML 中的關聯式值。  
   
@@ -81,7 +82,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- 上一個查詢只擷取文字節點。 如果您想要改為`step`傳回整個 <> 元素，請從查詢中移除**string （）** 函數：  
+ 上一個查詢只擷取文字節點。 如果您想要改為 `step` 傳回整個 <> 元素，請從查詢中移除**string （）** 函數：  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. 在第二個工作中心位置尋找所有用來製造產品的材料和工具  
  針對特定產品型號，下列查詢會在製造過程的工作中心位置順序中，擷取在第二個工作中心位置所使用的工具和材料。  
@@ -115,7 +116,7 @@ where ProductModelID=7
   
  請注意下列項目是從上一個查詢而來：  
   
--   查詢會將 <Loca`tion`> 元素，並從資料庫中抓取其屬性值。  
+-   查詢會將 <Loca `tion`> 元素，並從資料庫中抓取其屬性值。  
   
 -   它使用兩個 FLWOR (for...return) 反覆運算：一個擷取工具，另一個擷取使用的材料。  
   
@@ -137,7 +138,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. 從產品目錄中擷取前兩個產品的功能描述  
- 針對特定的產品模型，查詢會從產品型號目錄中的 <`Features`> 元素抓取前兩個功能描述。  
+ 針對特定的產品模型，查詢會從 `Features` 產品型號目錄中的 <> 元素抓取前兩個功能描述。  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -157,7 +158,7 @@ where ProductModelID=19
   
  請注意下列項目是從上一個查詢而來：  
   
- 查詢主體會建立 XML，其中包含具有`ProductModel` ProductModelID 和 ProductModelName 屬性的 <> 元素。  
+ 查詢主體會建立 XML，其中包含 `ProductModel` 具有 ProductModelID 和 ProductModelName 屬性的 <> 元素。  
   
 -   查詢會使用 FOR .。。傳回迴圈以取得產品型號功能描述。 **Position （）** 函數是用來抓取前兩個功能。  
   

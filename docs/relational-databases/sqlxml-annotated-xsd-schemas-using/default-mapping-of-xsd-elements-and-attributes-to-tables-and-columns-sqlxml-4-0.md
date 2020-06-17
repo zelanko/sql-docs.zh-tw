@@ -1,5 +1,6 @@
 ---
 title: 資料表/資料行的預設 XSD 對應（SQLXML）
+description: 瞭解 XSD 架構中的元素和屬性如何依預設對應至 SQLXML 4.0 中的資料表和資料行。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -27,12 +28,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a1c2ec82a539eb509950580ddea0b8164167bb1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cabf0e7eb0fd65121cab717ffc2b94b22b4cc354
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257456"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885456"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和屬性對資料表和資料行的預設對應 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "75257456"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-default-mapping"></a>A. 指定預設對應  
- 在這個範例的 XDR 結構描述中不會指定任何註解。 Person. Contact>元素屬於複雜類型，因此預設會對應到 AdventureWorks 資料庫中的 Person 和 Contact 資料表。 ** \< ** ** \<>person**的所有屬性（ContactID、FirstName、LastName）都是簡單類型，而且預設會對應至 person 資料表中具有相同名稱的資料行。  
+ 在這個範例的 XDR 結構描述中不會指定任何註解。 **\<Person.Contact>** 元素屬於複雜類型，因此預設會對應到 AdventureWorks 資料庫中的 Person 資料表。 元素的所有屬性（ContactID、FirstName、LastName） **\<Person.Contact>** 都是簡單類型，而且預設會對應至 Person 資料表中具有相同名稱的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -93,7 +94,7 @@ ms.locfileid: "75257456"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. 將 XML 元素對應至資料庫資料行  
- 在此範例中，因為沒有使用註解，因此也會發生預設對應。 Person. Contact>元素屬於複雜型別，而且會對應至資料庫中具有相同名稱的資料表。 ** \< ** 元素** \<FirstName>** 和** \<LastName>** ，而「**員工**名稱」屬性則是簡單類型，因此會對應到具有相同名稱的資料行。 此範例與先前範例唯一的差別在於，這些元素用於對應 FirstName 和 LastName 欄位。  
+ 在此範例中，因為沒有使用註解，因此也會發生預設對應。 **\<Person.Contact>** 元素屬於複雜型別，而且會對應至資料庫中具有相同名稱的資料表。 元素 **\<FirstName>** 和的 [專案名稱] **\<LastName>** 屬性屬於簡單類型，因此會對應到具有相同名稱的資料行。 **EmployeeID** 此範例與先前範例唯一的差別在於，這些元素用於對應 FirstName 和 LastName 欄位。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -147,7 +148,7 @@ ms.locfileid: "75257456"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. 將 XML 元素對應至 XML 資料類型資料行  
- 在此範例中，因為沒有使用註解，因此也會發生預設對應。 ProductModel>元素屬於複雜類型，而且會對應至資料庫中具有相同名稱的資料表。 ** \< ** **ProductModelID**屬性屬於簡單類型，因此會對應到具有相同名稱的資料行。 這個與先前範例的唯一差異在於，>專案的** \<指示**是使用**xsd： anyType**類型對應到使用**xml**資料類型的資料行。  
+ 在此範例中，因為沒有使用註解，因此也會發生預設對應。 **\<Production.ProductModel>** 元素屬於複雜型別，而且會對應至資料庫中具有相同名稱的資料表。 **ProductModelID**屬性屬於簡單類型，因此會對應到具有相同名稱的資料行。 這個專案與先前的範例唯一的差別在於，專案 **\<Instructions>** 是使用**Xsd： anyType**類型對應到使用**xml**資料類型的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -163,7 +164,7 @@ ms.locfileid: "75257456"
 </xsd:schema>  
 ```  
   
- **Xml**資料類型是在中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]引進。  
+ **Xml**資料類型是在中引進 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>針對結構描述測試範例 XPath 查詢  
   

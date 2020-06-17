@@ -1,5 +1,6 @@
 ---
 title: SQL Server XML 大量載入物件模型（SQLXML）
+description: 瞭解在 SQLXML 4.0 中用來大量載入 XML 的 Sqlxmlbulkload.sqlxmlbulkload.4.0 物件的方法和屬性。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -32,12 +33,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56dff7936e236ae76333543e902f588fa8ead1be
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246714"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882556"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大量載入物件模型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,13 +140,13 @@ ms.locfileid: "75246714"
  預設值為 FALSE。  
   
  TempFilePath  
- 針對交易的大量載入，指定 XML 大量載入建立暫存檔案所在的檔案路徑  （只有當 Transaction 屬性設定為 TRUE 時，這個屬性才有用）。您必須確定用於 XML [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]大量載入的帳戶具有這個路徑的存取權。 如果未設定此屬性，XML 大量載入會將暫存檔案儲存在 TEMP 環境變數中所指定的位置。  
+ 針對交易的大量載入，指定 XML 大量載入建立暫存檔案所在的檔案路徑  （只有當 Transaction 屬性設定為 TRUE 時，這個屬性才有用）。您必須確定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用於 XML 大量載入的帳戶具有這個路徑的存取權。 如果未設定此屬性，XML 大量載入會將暫存檔案儲存在 TEMP 環境變數中所指定的位置。  
   
  交易  
  指定大量載入是否應該當做交易完成，在此情況下，保證會在大量載入失敗時回復。 這是布林屬性。 如果屬性設定為 TRUE，大量載入會在交易內容中發生。 只有當 Transaction 設定為 TRUE 時，TempFilePath 屬性才有用。  
   
 > [!NOTE]  
->  如果您要將二進位資料（例如，[bin]、[bin]、[base64 XML] 資料類型）載入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]至二進位、影像資料類型），交易屬性必須設定為 [FALSE]。  
+>  如果您要將二進位資料（例如，[bin]、[bin]、[base64 XML] 資料類型）載入至二進位、影像 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型），交易屬性必須設定為 [FALSE]。  
   
  預設值為 FALSE。  
   

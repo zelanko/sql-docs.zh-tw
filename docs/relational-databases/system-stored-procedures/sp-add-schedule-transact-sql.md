@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dcaf10a680540a533e539783a1fc9ed289998a40
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c12d6650023fcb3473a834d8145437d8a013df5e
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151976"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818139"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,6 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
     [ , [ @owner_login_name = ] 'owner_login_name' ]  
     [ , [ @schedule_uid = ] schedule_uid OUTPUT ]  
     [ , [ @schedule_id = ] schedule_id OUTPUT ]
-    [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
     [ , [ @originating_server = ] server_name ] /* internal */  
 ```  
   
@@ -66,7 +65,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**1**|單次|  
 |**4**|每日|  
 |**8**|每週|  
-|**1600**|每月|  
+|**16**|每月|  
 |**32**|每月，相對於*freq_interval*|  
 |**64**|當 SQL 代理程式服務啟動時執行|  
 |**128**|在電腦閒置時執行（ [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)不支援） |  
@@ -102,7 +101,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|Last|  
+|**16**|Last|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`作業的排程執行之間的周數或月數。 只有在*freq_type*是**8**、 **16**或**32**時，才會使用*freq_recurrence_factor* 。 *freq_recurrence_factor*是**int**，預設值是**0**。  
   

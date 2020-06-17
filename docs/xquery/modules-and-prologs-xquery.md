@@ -1,5 +1,6 @@
 ---
 title: 模組和初構（XQuery） |Microsoft Docs
+description: 瞭解在 XQuery 初構中宣告命名空間時，不支援的規格。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f17b4a4-6234-41d4-a996-6db4e27bff7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7a2df8ea534622c4ff4c1695c7e44a7aea7611d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 078cd9e29c917ce8842edd2269896debee074a91
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946581"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881642"
 ---
 # <a name="modules-and-prologs-xquery"></a>模組和初構 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "67946581"
   
 -   模組宣告 (`module namespace`)  
   
--   Xmpspacedeclaration （`xmlspace`）  
+-   Xmpspacedeclaration （ `xmlspace` ）  
   
 -   預設定序宣告 (`declare default collation`)  
   

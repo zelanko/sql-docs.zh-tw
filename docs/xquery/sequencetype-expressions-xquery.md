@@ -1,5 +1,6 @@
 ---
 title: SequenceType 運算式（XQuery） |Microsoft Docs
+description: 瞭解的 XQuery SequenceType 運算式實例，並將轉換為。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 78cc79444a37216014e2eb99852c1cbeee7f4a93
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946287"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886069"
 ---
 # <a name="sequencetype-expressions-xquery"></a>時序類型運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   在 XQuery 中，值永遠是一種時序。 值的類型又稱為時序類型。 序列類型可用於 XQuery 運算式**的實例**中。 當您需要參考 XQuery 運算式中的類型時，就會使用 XQuery 規格中所描述的 SequenceType 語法。  
   
- 不可部分完成的類型名稱也可以在**轉換**中當做 XQuery 運算式使用。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，部分支援 SequenceTypes 的**實例**和**cast 做為**XQuery 運算式。  
+ 不可部分完成的類型名稱也可以在**轉換**中當做 XQuery 運算式使用。 在中 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，部分支援 SequenceTypes 的**實例**和**cast 做為**XQuery 運算式。  
   
 ## <a name="instance-of-operator"></a>運算子的執行個體  
  運算子的**實例**可以用來判斷指定之運算式值的動態或執行時間類型。 例如：  
@@ -39,11 +40,11 @@ ms.locfileid: "67946287"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- 請注意， `instance of`運算子`Occurrence indicator`會指定產生的序列中的基數、專案數目。 若未指定，會將基數假設為 1。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，只支援問號（**？）** 出現次數指標。 **？** 出現指示器指出`Expression`可以傳回零個或一個專案。 如果 **？** 指定出現指示器時， `instance of`會在`Expression`類型符合指定`SequenceType`的時傳回 True，不論是否`Expression`傳回單一或空的序列。  
+ 請注意， `instance of` 運算子會 `Occurrence indicator` 指定產生的序列中的基數、專案數目。 若未指定，會將基數假設為 1。 在中 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，只支援問號（**？）** 出現次數指標。 **？** 出現指示器指出 `Expression` 可以傳回零個或一個專案。 如果 **？** 指定出現指示器時，會 `instance of` 在 `Expression` 類型符合指定的時傳回 True `SequenceType` ，不論是否傳回 `Expression` 單一或空的序列。  
   
- 如果 **？** 未指定發生次數指標， `sequence of`只有當`Expression`類型符合指定的`Type`並`Expression`傳回 singleton 時，才會傳回 True。  
+ 如果 **？** 未指定發生次數指標， `sequence of` 只有當 `Expression` 類型符合指定的並傳回 singleton 時，才會傳回 True `Type` `Expression` 。  
   
- **注意**中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支援加號**+**（）和星號（**&#42;**）出現指示器。  
+ **注意****+** 中不支援加號（）和星號（**&#42;**）出現指示器 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  下列範例說明如何使用 XQuery 運算子的**實例**。  
   
@@ -111,7 +112,7 @@ WHERE ProductModelID = 19
   
  如需詳細資訊，請參閱[比較具類型的 xml 與](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)不具類型的 xml。  
   
- 下列查詢會 usetheBoolean `instance of`運算式，以判斷 LocationID 屬性是否為 xs： integer 類型：  
+ 下列查詢會 usetheBoolean `instance of` 運算式，以判斷 LocationID 屬性是否為 xs： integer 類型：  
   
 ```  
 SELECT Instructions.query('  
@@ -163,7 +164,7 @@ CREATE XML SCHEMA COLLECTION MyTestSchema AS '
 Go  
 ```  
   
- 下列查詢會傳回 False，因為在 `instance of` 運算式中指定的 SequenceType 不是指定運算式中實際類型的最高父系。 也就是說，<`TestElement`> 的值是整數類型。 最高父系是 xs:decimal。 不過，並未將它指定為 `instance of` 運算子的第二個運算元。  
+ 下列查詢會傳回 False，因為在 `instance of` 運算式中指定的 SequenceType 不是指定運算式中實際類型的最高父系。 也就是說，<> 的值 `TestElement` 是整數類型。 最高父系是 xs:decimal。 不過，並未將它指定為 `instance of` 運算子的第二個運算元。  
   
 ```  
 SET QUOTED_IDENTIFIER ON  
@@ -188,9 +189,9 @@ go
 ```  
   
 ### <a name="example-d"></a>範例 D  
- 在此範例中，您會先建立 XML 架構集合，並使用它來輸入**xml**變數。 然後會查詢具類型的**xml**變數以說明`instance of`功能。  
+ 在此範例中，您會先建立 XML 架構集合，並使用它來輸入**xml**變數。 然後會查詢具類型的**xml**變數以說明 `instance of` 功能。  
   
- 下列 XML 架構集合會定義簡單類型 myType，以及類型為 myType 的元素 <`root`>：  
+ 下列 XML 架構集合會定義簡單類型 myType，以及 `root` 類型為 myType 的元素 <>：  
   
 ```  
 drop xml schema collection SC  
@@ -234,11 +235,11 @@ go
 ### <a name="example-e"></a>範例 E  
  在下列範例中，運算式會擷取 IDREFS 屬性的其中一個值，並使用 `instance of` 來判斷值是否為 IDREF 類型。 本範例將執行下列動作：  
   
--   建立 XML `Customer`架構集合，其中 <> 元素具有**OrderList** IDREFS 類型屬性，而且 <`Order`> 專案具有「**訂單**識別碼」類型屬性。  
+-   建立 XML 架構集合，其中 <`Customer`> 元素具有**OrderList** IDREFS 類型屬性，而且 <> 專案具有「 `Order` **訂單**識別碼」類型屬性。  
   
 -   建立具類型的**xml**變數，並將範例 xml 實例指派給它。  
   
--   針對變數指定查詢。 查詢運算式會從第一個 <`Customer`> 的 OrderList IDRERS type 屬性中，抓取第一個訂單識別碼的值。 所擷取的值是 IDREF 類型。 因此，`instance of` 會傳回 True。  
+-   針對變數指定查詢。 查詢運算式會從第一個 <> 的 OrderList IDRERS type 屬性中，抓取第一個訂單識別碼的值 `Customer` 。 所擷取的值是 IDREF 類型。 因此，`instance of` 會傳回 True。  
   
 ```  
 create xml schema collection SC as  
@@ -308,11 +309,11 @@ select @x.query(' declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
   
--   與`instance of`運算子比較時，不支援**架構元素（）** 和**架構屬性（）** 序列類型。  
+-   與運算子比較時，不支援**架構元素（）** 和**架構屬性（）** 序列類型 `instance of` 。  
   
 -   例如，完整時序不支援 `(1,2) instance of xs:integer*`。  
   
--   當您使用**element （）** 序列類型的形式指定型別名稱（例如`element(ElementName, TypeName)`）時，型別必須以問號（？）限定。 例如，`element(Title, xs:string?)` 指出元素可能為 Null。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支援使用`instance of`來偵測**xsi： nil**屬性的執行時間。  
+-   當您使用**element （）** 序列類型的形式指定型別名稱（例如）時，型別 `element(ElementName, TypeName)` 必須以問號（？）限定。 例如，`element(Title, xs:string?)` 指出元素可能為 Null。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支援使用來偵測**xsi： nil**屬性的執行時間 `instance of` 。  
   
 -   如果在 `Expression` 中的值是源自於聯集類型的元素或屬性，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只能識別基本類型，而無法識別衍生值類型的衍生類型。 例如，如果 <`e1`> 定義為具有靜態類型（xs： integer | xs： string），下列將會傳回 False。  
   
@@ -332,7 +333,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 Expression cast as  AtomicType?  
 ```  
   
- 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，在 `AtomicType` 後面需要問號 (?)。 例如，如下列查詢所示， `"2" cast as xs:integer?`會將字串值轉換為整數：  
+ 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，在 `AtomicType` 後面需要問號 (?)。 例如，如下列查詢所示，會 `"2" cast as xs:integer?` 將字串值轉換為整數：  
   
 ```  
 declare @x xml  
@@ -354,7 +355,7 @@ WHERE ProductModelID = 19
  在此查詢中，不需要明確使用**資料（）** 。 `cast as` 運算式可在輸入運算式上執行隱含的不可部份完成。  
   
 ### <a name="constructor-functions"></a>建構函式  
- 您可以使用不可部份完成類型的建構函式。 例如，您可以使用`cast as` **xs： integer （）** 函數（如下列範例所示），而不是使用運算子`"2" cast as xs:integer?`：  
+ 您可以使用不可部份完成類型的建構函式。 例如， `cast as` `"2" cast as xs:integer?` 您可以使用**xs： integer （）** 函數（如下列範例所示），而不是使用運算子：  
   
 ```  
 declare @x xml  

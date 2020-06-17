@@ -1,5 +1,6 @@
 ---
 title: avg 函數（XQuery） |Microsoft Docs
+description: 深入瞭解 XQuery 函數 avg （），此函式會傳回指定之數位序列的平均值。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b659aa13a8704a060be12bb015bd0de0fd126562
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e7b88b5e28794ff8bc27c02b64b49471af92a05
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882029"
 ---
 # <a name="aggregate-functions---avg"></a>彙總函式 - avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

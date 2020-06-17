@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c16a1b25542e38bfc434fbe994ad6bb462069796
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: c6bdacd512dce26d423980cb5af3c91d5947cb24
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670007"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881799"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;來源資料查詢 &gt; -圖形
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "83670007"
   
 ```  
   
-SHAPE {<master query>}  
+SHAPE {<primary query>}  
 APPEND ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS <column table name>  
 [  
      ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS < column table name>  
 ...  
 ]       
@@ -49,7 +49,7 @@ APPEND ({ <child table query> }
  父資料表中，識別子資料表查詢結果中之子資料列的資料行。  
   
  *子資料行*  
- 子資料表中，識別主要查詢結果中之父資料列的資料行。  
+ 子資料工作表中的資料行，用來識別主要查詢結果的父資料列。  
   
  *資料行資料表名稱*  
  巢狀資料表中，父資料表內新附加的資料行名稱。  

@@ -1,5 +1,6 @@
 ---
 title: SQLXML 的核心安全性考量
+description: 瞭解使用 SQLXML 進行資料存取的核心安全性指導方針。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d897d81f0f2079e06c481d62f069e4626126da1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eafd432d96ad17a3ec0187c6c0e58103a7c9c6b1
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252515"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84883589"
 ---
 # <a name="core-sqlxml-security-considerations"></a>SQLXML 的核心安全性考量
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "75252515"
   
 -   SQLXML 可以讓使用者針對資料庫執行任何所要的 SQL 查詢。 絕對不要將這項功能公開至不安全或未受控制的來源，因為這樣基本上是在未規定任何使用者的情況下，讓 SQL 資料庫門戶洞開。  
   
--   執行 Updategram 時，SQLXML 會針對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例將**updg： sync**區塊轉譯為 DELETE、UPDATE 和 INSERT 命令。 這些命令只會影響現有的資料。 SQLXML 所產生的命令絕不會改變資料庫。 使用者必須發出明確的命令才能改變資料庫結構。 例如，將它們包含在範本的**sql： query**區塊中。  
+-   執行 Updategram 時，SQLXML 會針對實例將**updg： sync**區塊轉譯為 DELETE、UPDATE 和 INSERT 命令 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 這些命令只會影響現有的資料。 SQLXML 所產生的命令絕不會改變資料庫。 使用者必須發出明確的命令才能改變資料庫結構。 例如，將它們包含在範本的**sql： query**區塊中。  
   
 -   執行 DiffGrams 時，SQLXML 會將 DiffGram 針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體轉譯為 DELETE、UPDATE 和 INSERT 命令。 這些命令只會影響現有的資料。 SQLXML 所產生的命令絕不會改變資料庫。 使用者必須發出明確的命令才能改變資料庫結構。 例如，將它們包含在範本的**sql： query**區塊中。  
   

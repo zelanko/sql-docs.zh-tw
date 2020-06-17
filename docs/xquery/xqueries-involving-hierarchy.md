@@ -1,5 +1,6 @@
 ---
 title: 涉及階層的 Xquery |Microsoft Docs
+description: View Xquery 的範例，其中包含階層。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4ab17b99dc1d90d867689c5f79425fde0775a4b
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946109"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880632"
 ---
 # <a name="xqueries-involving-hierarchy"></a>與階層有關的 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "67946109"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. 從製造指示文件中，擷取工作中心位置以及這些位置上的第一個製造步驟  
- 若為產品型號7，查詢會使用**ProductModelID**和 ProductModelName 屬性`ManuInstr` ，以及一或多個**ProductModelName** <`Location`> 子項目，來建立包含 <> 元素的 XML。  
+ 若為產品型號7，查詢會 `ManuInstr` 使用**ProductModelID**和**ProductModelName**屬性，以及一或多個 <> 子項目，來建立包含 <> 元素的 XML `Location` 。  
   
- 每個`Location` <> 元素都有自己的屬性集，以及`step`一個 <> 子項目。 這個 <`step`> 子項目是工作中心位置的第一個製造步驟。  
+ 每個 <`Location`> 元素都有自己的屬性集，以及一個 <`step`> 子項目。 這個 <`step`> 子項目是工作中心位置的第一個製造步驟。  
   
 ```sql
 SELECT Instructions.query('  
@@ -63,7 +64,7 @@ WHERE ProductModelID=7
   
 -   在建立 <`Location`> 元素時，$wc/@ * 會抓取所有的工作中心位置屬性。  
   
--   **String （）** 函式會傳回 <`step`> 元素的字串值。  
+-   **String （）** 函式會傳回 <> 元素的字串值 `step` 。  
   
  以下是部份結果：  
   
@@ -84,7 +85,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. 在 AdditionalContactInfo 資料行中尋找所有電話號碼  
- 下列查詢會藉由搜尋整個階層中的 <`telephoneNumber`> 元素，來抓取特定客戶連絡人的其他電話號碼。 因為 <`telephoneNumber`> 元素可以出現在階層中的任何位置，所以查詢會在搜尋中使用下階和自我運算子（//）。  
+ 下列查詢會藉由搜尋整個階層中的 <> 元素，來抓取特定客戶連絡人的其他電話號碼 `telephoneNumber` 。 因為 <`telephoneNumber`> 元素可以出現在階層中的任何位置，所以查詢會在搜尋中使用下階和自我運算子（//）。  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -111,7 +112,7 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- 若只要取出最上層的電話號碼，特別是 <`telephoneNumber`> <`AdditionalContactInfo`> 的子項目，則查詢中的 FOR 運算式會變更為  
+ 若只要取出最上層的電話號碼，特別是 <`telephoneNumber`> <> 的子項目 `AdditionalContactInfo` ，則查詢中的 FOR 運算式會變更為  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   

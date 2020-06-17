@@ -1,5 +1,6 @@
 ---
 title: empty 函數（XQuery） |Microsoft Docs
+description: 深入瞭解 XQuery 函式 empty （），此函式會傳回值，指出指定的專案序列是否為空的。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b80437f4c5a51fa649a291673fc212483fd43ae
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004669"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881836"
 ---
 # <a name="functions-on-sequences---empty"></a>序列的相關函式 - empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

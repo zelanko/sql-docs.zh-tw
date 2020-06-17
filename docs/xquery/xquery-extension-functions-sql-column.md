@@ -1,5 +1,6 @@
 ---
 title: sql： column （）函數（XQuery） |Microsoft Docs
+description: 瞭解 XQuery 函數 sql： column （）如何用來系結 XML 內的非 XML 關聯式資料，並將關聯式和 XML 資料整合在一起。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb52e949b706f7e1af51f1c067d38ce23bb777f2
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946014"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881507"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 擴充函式 - sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ sql:column("columnName")
 ## <a name="remarks"></a>備註  
  請注意，在 XQuery 內**sql： column （）** 函數中指定之資料行的參考，是指正在處理之資料列中的資料行。  
   
- 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，您只能參考 XML-DML insert 語句之來源運算式內容中的**xml**實例。否則，您不能參考**xml**類型或 CLR 使用者定義類型的資料行。  
+ 在中 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，您只能參考 xml-DML insert 語句之來源運算式內容中的**xml**實例; 否則，您不能參考**xml**類型或 CLR 使用者定義類型的資料行。  
   
  聯結作業中不支援**sql： column （）** 函數。 可改為使用 APPLY 作業。  
   
@@ -105,7 +106,7 @@ ProductID               Result
 ...  
 ```  
   
- 下列查詢建構了包含產品特定資訊的 XML。 此資訊包含隸屬於特定產品型號 ProductModelID=19 的所有產品之 ProductID、ProductName、ProductPrice 以及 ProductModelName (如果有的話)。 然後會將 XML 指派給@x **xml**類型的變數。  
+ 下列查詢建構了包含產品特定資訊的 XML。 此資訊包含隸屬於特定產品型號 ProductModelID=19 的所有產品之 ProductID、ProductName、ProductPrice 以及 ProductModelName (如果有的話)。 然後會將 XML 指派給 @x **xml**類型的變數。  
   
 ```sql
 declare @x xml  
@@ -133,7 +134,7 @@ select @x
  [SQL Server XQuery 擴充功能函式](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [比較具類型的 XML 與不具類型的 XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [建立 XML 資料的實例](../relational-databases/xml/create-instances-of-xml-data.md)   
+ [建立 XML 資料的執行個體](../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 資料類型方法](../t-sql/xml/xml-data-type-methods.md)   
  [XML 資料修改語言 &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   

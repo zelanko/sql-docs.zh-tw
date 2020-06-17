@@ -1,5 +1,6 @@
 ---
 title: SQLXML 4.0 程式設計概念
+description: 查看 SQLXML 4.0 中使用之程式設計概念的相關資訊。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff9785d18d46e9aaca26c768d1069c32d3d2e8b6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1302798ac92456b4b2ce483ddcc2ae2e3b4f6067
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242616"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882135"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 程式設計概念
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

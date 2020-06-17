@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 982096893cdce9c4b604df9c3fb0258cefaaf93d
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: a3ee27ca4f92efb950c35ab0d8174676246c14b3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796519"
+ms.locfileid: "84818048"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.databases dm_pdw_exec_requests （Transact-sql）
 
@@ -34,7 +34,7 @@ ms.locfileid: "84796519"
 |start_time|**datetime**|開始執行要求的時間。|佇列要求為 Null;否則，有效的**日期時間**就會小於或等於目前的時間。|  
 |end_compile_time|**datetime**|引擎完成編譯要求的時間。|Null 表示尚未編譯的要求;否則，有效的**日期時間**小於 start_time，且小於或等於目前的時間。|
 |end_time|**datetime**|要求執行完成、失敗或已取消的時間。|針對已佇列或作用中的要求，則為 Null;否則，有效的**日期時間**就會小於或等於目前的時間。|  
-|total_elapsed_time|**int**|自要求開始後執行所經過的時間（以毫秒為單位）。|介於0和 start_time 與 end_time 之間的差異。</br></br> 如果 total_elapsed_time 超過整數的最大值，total_elapsed_time 會繼續成為最大值。 此狀況會產生「已超過最大值」的警告。</br></br> 最大值（以毫秒為單位）與24.8 天相同。|  
+|total_elapsed_time|**int**|自要求開始後執行所經過的時間（以毫秒為單位）。|介於0和 submit_time 與 end_time 之間的差異。</br></br> 如果 total_elapsed_time 超過整數的最大值，total_elapsed_time 會繼續成為最大值。 此狀況會產生「已超過最大值」的警告。</br></br> 最大值（以毫秒為單位）與24.8 天相同。|  
 |label|**nvarchar(255)**|與某些 SELECT 查詢語句相關聯的選擇性標籤字串。|包含 ' a-z '、' A-z '、' 0-9 '、' _ ' 的任何字串。|  
 |error_id|**Nvarchar （36）**|與要求相關聯之錯誤的唯一識別碼（如果有的話）。|請參閱[dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md);如果未發生錯誤，則設為 Null。|  
 |database_id|**int**|明確內容所使用之資料庫的識別碼（例如，使用 DB_X）。|如[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)，請參閱 sys.databases 中的識別碼。|  

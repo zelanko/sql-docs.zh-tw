@@ -1,5 +1,6 @@
 ---
 title: 概觀
+description: 瞭解 Master Data Services 的重要資料組織和管理功能。 Master Data Services 可讓您管理一組主要資料。
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 44723e33929c71b51cdf61d675644a4bf9f6068d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb6d1967173c4379b54ca8596b34eadbd8ab46e9
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729048"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800515"
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概觀 (MDS)
 
@@ -30,7 +31,7 @@ ms.locfileid: "73729048"
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 可讓您管理組織的一組主要資料。 您可以將資料組織到模型、建立用來更新資料的規則，並控制誰更新資料。 使用 Excel，您可以在組織中與其他人共用主要資料集。 
   
- >  如需 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 架構的說明，請參閱 simple-talk.com 上的 [Master Data Services - 基本概念](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 文件。 如需中[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]新功能的詳細資訊，請參閱[Master Data Services &#40;MDS 的新功能&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
+ >  如需 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 架構的說明，請參閱 simple-talk.com 上的 [Master Data Services - 基本概念](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 文件。 如需中新功能的詳細資訊 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ，請參閱[MASTER DATA SERVICES &#40;MDS 的新功能&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
    **如需如何安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、設定資料庫和網站，以及部署範例模型的指示，請參閱 ** [Master Data Services 安裝和組態](../master-data-services/master-data-services-installation-and-configuration.md)。  
   
  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，此模型是您主要資料結構中的最上層容器。 您可以建立模型來管理各種類似資料分類，例如管理線上產品資料組。 模型包含一或多個實體，而實體又包含成員，亦即資料記錄。 實體類似於資料表。  

@@ -1,5 +1,6 @@
 ---
 title: SQLXML 4.0 的指導方針和限制
+description: 瞭解使用 SQLXML 4.0 的指導方針和限制。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ba2e7438a9084d7ad2d4f8edee9564236ecbadd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dfd3b6cdc2bdd4a110a3ec6b4b307b5b5c40e335
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257244"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882413"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0 的指導方針和限制
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

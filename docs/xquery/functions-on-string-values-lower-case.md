@@ -1,5 +1,6 @@
 ---
 title: 小寫函數（XQuery） |Microsoft Docs
+description: 瞭解將指定字串中的每個字元轉換成小寫對等用法的 XQuery 函式小寫（）。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9202f357ebf09bef666edfe9a9e18d6dc685545
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68077662"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886588"
 ---
 # <a name="functions-on-string-values---lower-case"></a>字串值的相關函式 - lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 ## <a name="examples"></a>範例  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 將字串變更為大寫  
- 下列範例會變更輸入字串 ' abcDEF！@4' 到小寫。  
+ 下列範例會變更輸入字串 ' abcDEF！ @4 '到小寫。  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

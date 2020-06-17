@@ -1,5 +1,6 @@
 ---
 title: 用戶端與伺服器端 XML 格式（SQLXML）
+description: 瞭解 SQLXML 4.0 中用戶端和伺服器端 XML 格式的一般差異。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 421c48590098f9dbf4ce075c213fcd1cda720649
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34eb3a31a9b2affc473338cb730dddeee2f87904
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247005"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882895"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>用戶端和伺服器端的 XML 格式化 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主題描述 SQLXML 中用戶端與伺服器端 XML 格式化之間的一般差異。  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>用戶端格式中不支援多個資料列集查詢  
- 當您使用用戶端 XML 格式化時，不支援會產生多個資料列集的查詢。 例如，假設您有一個虛擬目錄，您已在其中指定用戶端格式。 請考慮這個範例範本，其中在** \<sql： query>** 區塊中有兩個 SELECT 語句：  
+ 當您使用用戶端 XML 格式化時，不支援會產生多個資料列集的查詢。 例如，假設您有一個虛擬目錄，您已在其中指定用戶端格式。 請考慮這個範例範本，其中在區塊中有兩個 SELECT 語句 **\<sql:query>** ：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -42,12 +43,12 @@ ms.locfileid: "75247005"
 </ROOT>  
 ```  
   
- 您可以在應用程式的程式碼中執行這個範本，而且會傳回錯誤，因為用戶端 XML 格式化不支援多個資料列集的格式。 如果您在兩個不同** \<的 sql：查詢>** 區塊中指定查詢，您會得到所要的結果。  
+ 您可以在應用程式的程式碼中執行這個範本，而且會傳回錯誤，因為用戶端 XML 格式化不支援多個資料列集的格式。 如果您在兩個不同的區塊中指定查詢 **\<sql:query>** ，將會得到所需的結果。  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>時間戳記在用戶端與伺服器端格式中的對應不同  
  在伺服器端 XML 格式化中， **timestamp**類型的資料庫資料行會對應到 i8 XDR 類型（在查詢中指定 XMLDATA 選項時）。  
   
- 在用戶端 XML 格式中， **timestamp**類型的資料庫資料行會對應到**uri**或**bin. base64** XDR 類型（視查詢中是否指定了 binary base64 選項而定）。 如果您使用 updategram 和 bulkload 功能，則**bin. base64** XDR 型別會很有用，因為這個型別會[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]轉換成**timestamp**型別。 如此一來，插入、更新或刪除作業都會成功。  
+ 在用戶端 XML 格式中， **timestamp**類型的資料庫資料行會對應到**uri**或**bin. base64** XDR 類型（視查詢中是否指定了 binary base64 選項而定）。 如果您使用 updategram 和 bulkload 功能，則**bin. base64** XDR 型別會很有用，因為這個型別會轉換成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp**型別。 如此一來，插入、更新或刪除作業都會成功。  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>伺服器端格式中會使用深入的 VARIANT  
  在伺服器端 XML 格式化中，會使用深入類型的 VARIANT 類型。 如果您使用用戶端 XML 格式化，Variant 會轉換成 Unicode 字串，而且不會使用 VARIANT 的子類型。  

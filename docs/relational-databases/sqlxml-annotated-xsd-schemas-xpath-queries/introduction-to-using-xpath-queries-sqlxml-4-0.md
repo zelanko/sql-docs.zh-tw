@@ -1,5 +1,6 @@
 ---
 title: 使用 XPath 查詢的簡介（SQLXML）
+description: 瞭解在 SQLXML 4.0 中使用 XPath 查詢的基本概念。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f82c330e2d18f05d0f358171a4ffeabc63ac9c3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ed8de737a350181a62eb12b8c9f2f19a762a44c
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246587"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882246"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>使用 XPath 查詢的簡介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,17 +48,17 @@ ms.locfileid: "75246587"
 </root>  
 ```  
   
- 在本檔中， ** \<客戶>** 是元素節點， **cid**是屬性節點，而「**重要**」則是文位元組點。  
+ 在本檔中， **\<Customer>** 是元素節點， **cid**是屬性節點，而「**重要**」是文位元組點。  
   
- XPath 是一種圖表導覽語言，可用來從 XML 文件中選取一組節點。 每個 XPath 運算子都會根據前一個 XPath 運算子所選取的節點集來選取節點集。 例如，假設有一組** \<客戶>** 節點，則 XPath 可以選取**日期**屬性值為 **"7/14/1999"** 的所有** \<Order>** 節點。 產生的節點集會包含訂單日期為 7/14/1999 的所有訂單。  
+ XPath 是一種圖表導覽語言，可用來從 XML 文件中選取一組節點。 每個 XPath 運算子都會根據前一個 XPath 運算子所選取的節點集來選取節點集。 例如，假設有一組 **\<Customer>** 節點，則 XPath 可以選取 **\<Order>** **日期**屬性值為 **"7/14/1999"** 的所有節點。 產生的節點集會包含訂單日期為 7/14/1999 的所有訂單。  
   
- 全球資訊網協會 (W3C) 將 XPath 語言定義成標準導覽語言。 SQLXML 4.0 會執行 W3C XPath 規格的子集，其位於http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
+ 全球資訊網協會 (W3C) 將 XPath 語言定義成標準導覽語言。 SQLXML 4.0 會執行 W3C XPath 規格的子集，其位於 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  下面是 W3C XPath 實作與 SQLXML 4.0 實作之間的重要差異。  
   
 -   **根目錄查詢**  
   
-     SQLXML 4.0 不支援根目錄查詢 (/)。 每個 XPath 查詢都必須從架構中的最上層** \<ElementType>** 開始。  
+     SQLXML 4.0 不支援根目錄查詢 (/)。 每個 XPath 查詢都必須從架構的最上層開始 **\<ElementType>** 。  
   
 -   **報告錯誤**  
   
@@ -91,11 +92,11 @@ ms.locfileid: "75246587"
 ## <a name="supported-functionality"></a>支援的功能  
  下表將顯示在 SQLXML 4.0 中實作之 XPath 語言的功能。  
   
-|功能|項目|範例查詢的連結|  
+|功能|Item|範例查詢的連結|  
 |-------------|----------|----------------------------|  
 |軸|**attribute**、 **child**、 **parent**和**self**軸|[在 XPath 查詢中指定軸 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |布林值述詞，包括連續和巢狀述詞||[在 XPath 查詢中指定算術運算子 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|所有關係運算子|=、！ =、<、 \<=、>、>=|[在 XPath 查詢中指定關聯式運算子 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|所有關係運算子|=、！ =、<、 \<=, > 、>=|[在 XPath 查詢中指定關聯式運算子 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |算術運算子|+、-、*、div|[在 XPath 查詢中指定算術運算子 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |明確轉換函數|**number （）**、 **string （）**、 **Boolean （）**|[在 XPath 查詢中指定明確轉換函數 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |布林運算子|AND、OR|[在 XPath 查詢中指定布林運算子 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -105,7 +106,7 @@ ms.locfileid: "75246587"
 ## <a name="unsupported-functionality"></a>不支援的功能  
  下表將顯示沒有在 SQLXML 4.0 中實作之 XPath 語言的功能。  
   
-|功能|項目|  
+|功能|Item|  
 |-------------|----------|  
 |軸|**上****階、上**階**或****自我、下階、後**階**或自我（//）**、後面接著 **-同輩**、 **namespace**、**前面、****上-同輩**|  
 |數值述詞||  

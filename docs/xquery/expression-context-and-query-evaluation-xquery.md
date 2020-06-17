@@ -1,5 +1,6 @@
 ---
 title: 運算式內容和查詢評估（XQuery） |Microsoft Docs
+description: 瞭解如何使用 XQuery 運算式的靜態和動態內容中的資訊來進行分析和評估。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cadfc71bdbb137650d897dc8374ed1caa8d193ab
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038926"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881908"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>運算式內容和查詢評估 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68038926"
   
     -   任何使用 WITH XMLNAMESPACES 定義的命名空間。 如需詳細資訊，請參閱使用[With xmlnamespaces 將命名空間加入至查詢](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
   
-    -   任何在查詢初構中定義的命名空間。 請注意，初構中的命名空間宣告可能覆寫 WITH XMLNAMESPACES 中的命名空間宣告。 例如，在下列查詢中，WITH WITH XMLNAMESPACES 會宣告將它系結至命名空間（`https://someURI`）的前置詞（pd）。 不過，在 WHERE 子句中，查詢初構會覆寫繫結。  
+    -   任何在查詢初構中定義的命名空間。 請注意，初構中的命名空間宣告可能覆寫 WITH XMLNAMESPACES 中的命名空間宣告。 例如，在下列查詢中，WITH WITH XMLNAMESPACES 會宣告將它系結至命名空間（）的前置詞（pd） `https://someURI` 。 不過，在 WHERE 子句中，查詢初構會覆寫繫結。  
   
         ```  
         WITH XMLNAMESPACES ('https://someURI' AS pd)  
@@ -119,7 +120,7 @@ ms.locfileid: "68038926"
   
 2.  解析運算式中所指定的函數和類型名稱。  
   
-3.  查詢的靜態類型 (Static Typing)。 這可確定查詢為安全類型。 例如，下列查詢會傳回靜態錯誤，因為**+** 運算子需要數值基本類型引數：  
+3.  查詢的靜態類型 (Static Typing)。 這可確定查詢為安全類型。 例如，下列查詢會傳回靜態錯誤，因為 **+** 運算子需要數值基本類型引數：  
   
     ```  
     declare @x xml  
@@ -127,7 +128,7 @@ ms.locfileid: "68038926"
     SELECT @x.query('"x" + 4')  
     ```  
   
-     在下列範例中， **value （）** 運算子需要 singleton。 如 XML 架構中所指定，可以有多個\<Elem> 元素。 運算式的靜態分析判斷它不是安全類型，而傳回靜態錯誤。 若要解決此錯誤，必須將運算式重寫為明確指定單一值 (`data(/x:Elem)[1]`)。  
+     在下列範例中， **value （）** 運算子需要 singleton。 如 XML 架構中所指定，可以有多個 \<Elem> 元素。 運算式的靜態分析判斷它不是安全類型，而傳回靜態錯誤。 若要解決此錯誤，必須將運算式重寫為明確指定單一值 (`data(/x:Elem)[1]`)。  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  

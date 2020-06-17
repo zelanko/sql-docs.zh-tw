@@ -1,5 +1,6 @@
 ---
 title: 自訂資料表/資料行的 XSD 對應（SQLXML）
+description: 瞭解如何在 XSD 架構的專案和屬性與關係資料庫的資料表和資料行之間，建立 SQLXML XPath 查詢中的自訂對應。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -29,12 +30,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fafcd918dda0001c316fd68cae3b19e6cd805a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e4d7e4c58234ff5db68cdf51265100b88df5cef
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257436"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885597"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>自訂資料表/資料行的 XSD 對應（SQLXML）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "75257436"
   
  在專案上指定**sql： relation**時，此注釋的範圍會套用至該專案的複雜類型定義中所描述的所有屬性和子專案，因此提供寫入批註的快捷方式。  
   
- 當中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有效的識別碼在 XML 中無效時， **sql：關聯**注釋也很有用。 例如，"Order Details" 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中是有效的資料表名稱，但是在 XML 中是無效的。 在這種情況下，可以使用**sql：關聯**注釋來指定對應，例如：  
+ 當中有效的識別碼在 XML 中無效時， **sql：關聯**注釋也很有用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 例如，"Order Details" 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中是有效的資料表名稱，但是在 XML 中是無效的。 在這種情況下，可以使用**sql：關聯**注釋來指定對應，例如：  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -60,9 +61,9 @@ ms.locfileid: "75257436"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. 指定 sql:relation 和 sql:field 註解  
- 在此範例中，XSD 架構是由具有** \<FName>** 和** \<LName>** 子專案和**ContactID**屬性的複雜類型的** \<連絡人>** 元素所組成。  
+ 在此範例中，XSD 架構是由複雜類型的元素所組成， **\<Contact>** 其中包含 **\<FName>** 和子專案 **\<LName>** ，以及**ContactID**屬性。  
   
- **Sql：關聯**注釋會將** \<Contact>** 元素對應到 AdventureWorks 資料庫中的 Person. contact 資料表。 [ **Sql：] 欄位**批註會將** \<FName>** 元素對應至 FirstName 資料行，並將** \<LName>** 元素對應至 LastName 資料行。  
+ **Sql：關聯**注釋會將 **\<Contact>** 元素對應至 AdventureWorks 資料庫中的 Person 資料表。 [ **Sql：] 欄位**注釋會將 **\<FName>** 元素對應至 FirstName 資料行，並將 **\<LName>** 元素對應至 LastName 資料行。  
   
  未指定**ContactID**屬性的注釋。 這會導致將屬性預設對應到具有相同名稱的資料行。  
   

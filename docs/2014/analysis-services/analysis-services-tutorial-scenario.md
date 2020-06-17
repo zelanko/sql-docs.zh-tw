@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7609ecdf63f1bec0a344c9c6c8456a009ca3bbfa
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880661"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services 教學課程案例
   這個教學課程是以一家虛構的公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]為基礎。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司，專門生產及批發金屬和合成器材自行車給北美洲、歐洲和亞洲的商場。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的總公司在華盛頓 Bothell，該公司雇用 500 位員工。 另外， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 它的市場還雇用了一些地區銷售團隊。  
@@ -26,7 +26,7 @@ ms.locfileid: "84528034"
 ## <a name="current-analysis-environment"></a>目前分析環境  
  為了支援銷售和行銷團隊以及資深管理的資料分析需求，該公司目前是從 [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 資料庫取得交易資料，再從試算表取得非交易資訊，如銷售配額，然後將這項資訊合併到 **AdventureWorksDW2012** 關聯式資料倉儲。 不過，關聯式資料倉儲帶來下列挑戰：  
   
--   報表是靜態的。 使用者無法互動地瀏覽報表中的資料來取得更詳細的資訊，如同他們在處理 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 樞紐資料表一般。 雖然現有的預先定義報表集對許多使用者而言已經足夠，但更進階的使用者需要直接查詢來存取資料庫中的互動式查詢和特殊報表。 不過，由於 **AdventureWorksDW2012** 資料庫很複雜，進階使用者需要很多時間才能學會如何建立有效率的查詢。  
+-   報表是靜態的。 使用者無法互動地瀏覽報表中的資料來取得更詳細的資訊，如同他們在處理 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 樞紐資料表一般。 雖然現有的預先定義報表集對許多使用者而言已經足夠，但更進階的使用者需要直接查詢來存取資料庫中的互動式查詢和特殊報表。 不過，因為**AdventureWorksDW2012**資料庫的複雜性，所以這類使用者需要太多時間來學習如何建立有效的查詢。  
   
 -   查詢效能變化很大。 例如，有些查詢在短短幾秒鐘內就可以傳回結果，有些查詢則需要花幾分鐘才能傳回。  
   

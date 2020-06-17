@@ -14,17 +14,16 @@ helpviewer_keywords:
 - backing up remote partitions [Analysis Services]
 - partitions [Analysis Services], storage
 - storing data [Analysis Services], partitions
-- MasterDataSourceID property
 - remote partitions [Analysis Services]
 ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: c564425b541ff61353b511ba09ca16fb5331ff10
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 32fdf05d061d4e1c1da6ec0ef9179ecd12bda172
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545240"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880318"
 ---
 # <a name="remote-partitions"></a>遠端資料分割
   遠端分割區的資料會儲存在不同的 Microsoft 實例上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 而實例包含分割區及其父 cube 的定義（中繼資料）。 遠端資料分割是在與定義資料分割和其父 Cube 的相同 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上進行管理。  

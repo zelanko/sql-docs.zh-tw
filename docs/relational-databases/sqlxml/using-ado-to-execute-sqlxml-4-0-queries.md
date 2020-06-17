@@ -1,5 +1,6 @@
 ---
 title: 使用 ADO 執行 SQLXML 4.0 查詢
+description: 瞭解如何使用 SQLXML 延伸模組，在以 COM 為基礎的應用程式中執行 SQLXML 4.0 查詢，以 ActiveX Data Objects （ADO）。
 ms.custom: ''
 ms.date: 12/15/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 436ec564e4cf5de21647eb5cd667741ce246e99d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e0a26c534aeb25bd445deb087bef06a2137bfa3
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254145"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882100"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>使用 ADO 執行 SQLXML 4.0 查詢
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,9 +122,9 @@ ms.locfileid: "75254145"
     3.  在目前已安裝的程式清單中，確認 [ **Microsoft SQL Server Native Client** ] 出現在清單中。  
   
         > [!NOTE]  
-        >  如果您需要安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，請參閱[安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
+        >  如果您需要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，請參閱[安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
   
-2.  確認用戶端電腦所安裝的 MDAC 版本為 2.6 或更新版本。 如果您需要驗證 MDAC 版本資訊，可以使用 MDAC Component 檢查工具，這是從 Microsoft 網站免費下載提供[http://www.microsoft.com](https://www.microsoft.com)。 如需詳細資訊，請在 Microsoft 網站上搜尋 "MDAC Component Checker"。  
+2.  確認用戶端電腦所安裝的 MDAC 版本為 2.6 或更新版本。 如果您需要驗證 MDAC 版本資訊，可以使用 MDAC Component 檢查工具，這是從 Microsoft 網站免費下載提供 [http://www.microsoft.com](https://www.microsoft.com) 。 如需詳細資訊，請在 Microsoft 網站上搜尋 "MDAC Component Checker"。  
   
 3.  執行指令碼。  
   

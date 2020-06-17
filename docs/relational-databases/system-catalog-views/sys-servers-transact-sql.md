@@ -20,12 +20,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7b9cb03b97660bedc9c8e86cc72ae2bf9ebdd56d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4b141520b21902c4dadb26a3ac013b1ee334928
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832700"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818222"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "82832700"
 |**server_id**|**int**|連結伺服器的本機識別碼。|  
 |**name**|**sysname**|當**server_id** = 0 時，傳回的值就是伺服器名稱。<br /><br /> 當**server_id** > 0 時，傳回的值就是連結伺服器的本機名稱。|  
 |**基礎**|**sysname**|連結伺服器的產品名稱。 "SQL Server" 的值表示的另一個實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|**那裡**|**sysname**|連接連結伺服器所用的 OLE DB 提供者名稱。|  
+|**provider**|**sysname**|連接連結伺服器所用的 OLE DB 提供者名稱。|  
 |**data_source**|**nvarchar(4000)**|OLE DB 資料來源連接屬性。|  
 |**location**|**nvarchar(4000)**|OLE DB 位置連接屬性。 如果沒有，則為 NULL。|  
 |**provider_string**|**nvarchar(4000)**|OLE DB 提供者字串連接屬性。<br /><br /> 除非呼叫端具有 ALTER ANY LINKED SERVER 權限，否則為 NULL。|  
@@ -59,6 +59,7 @@ ms.locfileid: "82832700"
 |**is_nonsql_subscriber**|**bit**|伺服器是非 SQL Server 複寫訂閱者。|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|如果是 1，呼叫遠端預存程序就會啟動分散式交易，而且會利用 MS DTC 來編列這項交易。 如需詳細資訊，請參閱 [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)的資料。|  
 |**modify_date**|**datetime**|上次變更伺服器資訊的日期。|  
+|**is_rda_server**|**bit**|伺服器為遠端資料封存啟用（已啟用延展功能）。 如需詳細資訊，請參閱在[伺服器上啟用 Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer)。 適用于 SQL Server 2016 和更新版本。|
   
 ## <a name="permissions"></a>權限  
  除非呼叫端具有 ALTER ANY 連結伺服器許可權，否則**provider_string**中的值一律為 Null。  

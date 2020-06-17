@@ -1,5 +1,6 @@
 ---
 title: 指定軸（SQLXML）
+description: 瞭解如何在 SQLXML 4.0 XPath 查詢中指定軸在位置步驟所選取的節點與內容節點之間指定樹狀結構關聯性。
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43daf972eacd67dcd7e75eabd1aca87bb3f67932
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882180"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定軸 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "75253058"
   
      包含內容節點的子系。  
   
-     下列 XPath 運算式（位置路徑）會從目前的內容節點中選取所有** \<客戶>** 子系：  
+     下列 XPath 運算式（位置路徑）會從目前的內容節點中選取所有 **\<Customer>** 子系：  
   
     ```  
     child::Customer  
@@ -47,7 +48,7 @@ ms.locfileid: "75253058"
   
      包含內容節點的父系。  
   
-     下列 XPath 運算式會選取** \<訂單>** 子系的所有** \<客戶>** 父系：  
+     下列 XPath 運算式會選取子系的所有父系 **\<Customer>** **\<Order>** ：  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -69,7 +70,7 @@ ms.locfileid: "75253058"
   
      包含內容節點本身。  
   
-     下列 XPath 運算式會選取目前的節點（如果它是** \<Order>** 節點）：  
+     下列 XPath 運算式會選取目前的節點（如果它是 **\<Order>** 節點）：  
   
     ```  
     self::Order  

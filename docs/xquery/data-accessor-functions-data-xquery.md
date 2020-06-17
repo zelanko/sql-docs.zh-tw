@@ -1,5 +1,6 @@
 ---
 title: data 函數（XQuery） |Microsoft Docs
+description: 瞭解如何使用 XQuery 函數資料（），傳回指定之專案序列中每個專案的具類型值。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac340466d1d816139249e4b007c7b2bc733dd390
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038976"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881871"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>資料存取子函式 - data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +126,7 @@ WHERE ProductModelID = 19
   
  下列範例說明需要**data （）** 函數的實例。  
   
- 在下列查詢中， **$pd/p1：規格/材質**會傳回 <`Material`> 元素。 此外，**資料（$pd/p1：規格/材質）** 會傳回類型為 Xdt： untypedAtomic 的字元資料， `Material`因為 <> 不具類型。 當輸入不具類型時， **data （）** 的結果會輸入為**xdt： untypedAtomic**。  
+ 在下列查詢中， **$pd/p1：規格/材質**會傳回 <`Material`> 元素。 此外，**資料（$pd/p1：規格/材質）** 會傳回類型為 Xdt： untypedAtomic 的字元資料，因為 <`Material`> 不具類型。 當輸入不具類型時， **data （）** 的結果會輸入為**xdt： untypedAtomic**。  
   
 ```  
 SELECT CatalogDescription.query('  

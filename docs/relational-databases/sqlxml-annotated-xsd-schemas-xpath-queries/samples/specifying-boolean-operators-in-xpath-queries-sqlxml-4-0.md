@@ -1,5 +1,6 @@
 ---
 title: 在 XPath 查詢中使用布林運算子（SQLXML）
+description: 瞭解如何在 SQLXML 4.0 XPath 查詢中使用布林運算子。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00a53f9d1b04d0f96e854a9e85c1588aa33e60fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41c521f2e8d1984ab8c10b8970c83c7ebe495f99
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252574"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884180"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林運算子 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252574"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. 指定 OR 布林運算子  
- 此 XPath 查詢會傳回** \<客戶>** 專案子系，其內容節點的**CustomerID**屬性值為13或31：  
+ 這個 XPath 查詢會傳回 **\<Customer>** **CustomerID**屬性值為13或31之內容節點的元素子系：  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -43,7 +44,7 @@ ms.locfileid: "75252574"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 在述詞中`attribute` ，是軸而且`CustomerID`是節點測試（如果**CustomerID**是** \<屬性>** 節點，則為 TRUE，因為** \<屬性>** 節點是**屬性**軸的主要節點）。 述詞會篩選** \<客戶>** 元素，並只傳回滿足述詞中所指定條件的專案。  
+ 在述詞中， `attribute` 是軸而且 `CustomerID` 是節點測試（如果**CustomerID**是節點，則為 TRUE **\<attribute>** ，因為 **\<attribute>** 節點是**屬性**軸的主要節點）。 述詞會篩選項目 **\<Customer>** ，並只傳回滿足述詞中所指定條件的元素。  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   

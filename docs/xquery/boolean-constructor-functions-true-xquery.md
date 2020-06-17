@@ -1,5 +1,6 @@
 ---
 title: true 函數（XQuery） |Microsoft Docs
+description: 瞭解會傳回布林值 True 的 XQuery 函數 true （）。
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb3625b1377d11907ca118faee8d81c06b8d6af6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039040"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886566"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>布林建構函式 - true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +48,9 @@ go
 -- result = 1  
 ```  
   
- 在下列範例中，查詢是針對具類型的**xml**資料行所指定。 `if`運算式會檢查 <`ROOT`> 元素的具類型布林值，並據以傳回已建立的 XML。 本範例將執行下列動作：  
+ 在下列範例中，查詢是針對具類型的**xml**資料行所指定。 `if`運算式會檢查 <> 元素的具類型布林值，並據以傳回已建立 `ROOT` 的 XML。 本範例將執行下列動作：  
   
--   建立 XML 架構集合，以定義 xs： `ROOT` boolean 類型的 <> 元素。  
+-   建立 XML 架構集合，以定義 `ROOT` xs： boolean 類型的 <> 元素。  
   
 -   使用 XML 架構集合，建立具有具類型**xml**資料行的資料表。  
   

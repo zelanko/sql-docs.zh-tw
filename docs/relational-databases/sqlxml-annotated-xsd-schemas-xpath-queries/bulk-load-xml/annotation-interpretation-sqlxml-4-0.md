@@ -1,5 +1,6 @@
 ---
 title: 注釋轉譯（SQLXML）
+description: 瞭解 SQLXML 4.0 中的 XML 大量載入如何解讀 XSD 和 XDR 架構中的批註。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4dc5842487c0740386d97f3ec187dff144520a74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9dabbbce21727203e9e7641587490ba03876727f
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246752"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884414"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>註解的解譯 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

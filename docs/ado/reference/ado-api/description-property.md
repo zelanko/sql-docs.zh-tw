@@ -1,5 +1,6 @@
 ---
 title: Description 屬性 |Microsoft Docs
+description: 瞭解 ADO 中 Error 物件的 description 屬性，其會傳回包含錯誤描述的字串值。
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25130c94ce9491fa8e61b1bba38246498880568a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5bbaa998c419ba1a0af49ffa28e32fe91ffc96b9
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757244"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880546"
 ---
 # <a name="description-property"></a>Description 屬性
 描述[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  

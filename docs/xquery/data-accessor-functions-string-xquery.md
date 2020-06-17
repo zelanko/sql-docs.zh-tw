@@ -1,5 +1,6 @@
 ---
 title: string 函數（XQuery） |Microsoft Docs
+description: 深入瞭解 XQuery 函數位符串（），其會傳回以字串表示的引數值。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59c90ce7e0bdbe46fa1ca577e2b16e6576650751
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038937"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881891"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>資料存取子函式 - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ fn:string($arg as item()?) as xs:string
  本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種**xml**類型資料行中。  
   
 ### <a name="a-using-the-string-function"></a>A. 使用字串函數  
- 下列查詢會抓取 <`Features` `ProductDescription`> 元素的 <> 子項目節點。  
+ 下列查詢會抓取 `Features` <> 元素的 <> 子項目節點 `ProductDescription` 。  
   
 ```  
 SELECT CatalogDescription.query('  

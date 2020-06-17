@@ -1,5 +1,6 @@
 ---
 title: XML 大量載入的指導方針和限制（SQLXML）
+description: 瞭解在 SQLXML 4.0 中使用 XML 大量載入的指導方針和限制。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec3b70c4a37382bb3fa8641e4224750a4337c28d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 846ba2d77f399192d3e2c2e6ea00f704f0b1fa4d
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246764"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882973"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 大量載入的指導方針和限制 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,9 +38,9 @@ ms.locfileid: "75246764"
   
 -   系統會忽略任何 XML 初構資訊。  
   
-     XML 大量載入會忽略 XML 檔中\<根> 元素之前和之後的所有資訊。 例如，XML 大量載入會忽略任何 XML 宣告、內部 DTD 定義、外部 DTD 參考、註解等等。  
+     XML 大量載入會忽略 \<root> xml 檔中元素之前和之後的所有資訊。 例如，XML 大量載入會忽略任何 XML 宣告、內部 DTD 定義、外部 DTD 參考、註解等等。  
   
--   如果您擁有的對應結構描述會定義兩個資料表之間 (例如 Customer 和 CustOrder 之間) 的主索引鍵/外部索引鍵關聯性，則必須先在結構描述中描述具有主索引鍵的資料表。 包含外部索引鍵資料行的資料表稍後必須出現在結構描述中。 這是因為在架構中識別資料表的順序，是用來將它們載入資料庫的順序。例如，下列 XDR 架構在 XML 大量載入中使用時會產生錯誤，因為** \<Order>** 元素會在** \<Customer>** 元素之前描述。 在 CustOrder 中的 CustomerID 資料行是外部索引鍵資料行，它會參考在 Cust 資料表中的 CustomerID 主索引鍵資料行。  
+-   如果您擁有的對應結構描述會定義兩個資料表之間 (例如 Customer 和 CustOrder 之間) 的主索引鍵/外部索引鍵關聯性，則必須先在結構描述中描述具有主索引鍵的資料表。 包含外部索引鍵資料行的資料表稍後必須出現在結構描述中。 這是因為在架構中識別資料表的順序，是用來將它們載入資料庫的順序。例如，下列 XDR 架構在 XML 大量載入中使用時會產生錯誤，因為元素會在專案 **\<Order>** 之前描述 **\<Customer>** 。 在 CustOrder 中的 CustomerID 資料行是外部索引鍵資料行，它會參考在 Cust 資料表中的 CustomerID 主索引鍵資料行。  
   
     ```  
     <?xml version="1.0" ?>  
@@ -79,7 +80,7 @@ ms.locfileid: "75246764"
   
 -   如果架構未使用**sql：溢位欄位**注釋來指定溢位資料行，則 Xml 大量載入會忽略 xml 檔中的任何資料，但不會在對應架構中描述。  
   
-     每當 XML 大量載入在 XML 資料流中碰到已知的標記時，會套用您所指定的對應結構描述。 它會忽略顯示在 XML 文件中的資料，但是不會在結構描述中描述。 例如，假設您有一個描述** \<客戶>** 元素的對應架構。 XML 資料檔案具有** \<AllCustomers>** 根標記（未在架構中說明），其中包含所有** \<客戶>** 元素：  
+     每當 XML 大量載入在 XML 資料流中碰到已知的標記時，會套用您所指定的對應結構描述。 它會忽略顯示在 XML 文件中的資料，但是不會在結構描述中描述。 例如，假設您有一個描述元素的對應架構 **\<Customer>** 。 XML 資料檔案具有括住 **\<AllCustomers>** 所有元素的根標記（未在架構中說明） **\<Customer>** ：  
   
     ```  
     <AllCustomers>  
@@ -89,9 +90,9 @@ ms.locfileid: "75246764"
     </AllCustomers>  
     ```  
   
-     在此情況下，XML 大量載入會忽略** \<AllCustomers>** 元素，並在** \<Customer>** 元素開始對應。 XML 大量載入會忽略結構描述中沒有描述但是顯示在 XML 文件中的元素。  
+     在此情況下，XML 大量載入會忽略 **\<AllCustomers>** 元素，並在專案開始對應 **\<Customer>** 。 XML 大量載入會忽略結構描述中沒有描述但是顯示在 XML 文件中的元素。  
   
-     請考慮另一個包含** \<Order>** 元素的 XML 源資料檔案。 這些元素不會在對應的結構描述中描述：  
+     請考慮包含元素的另一個 XML 源資料檔案 **\<Order>** 。 這些元素不會在對應的結構描述中描述：  
   
     ```  
     <AllCustomers>  
@@ -107,11 +108,11 @@ ms.locfileid: "75246764"
     </AllCustomers>  
     ```  
   
-     XML 大量載入會忽略這些** \<Order>** 元素。 但是，如果您在架構中使用**sql：溢位欄位**注釋，將資料行識別為溢位資料行，則 XML 大量載入會將所有未耗用的資料儲存在此資料行中。  
+     XML 大量載入會忽略這些 **\<Order>** 元素。 但是，如果您在架構中使用**sql：溢位欄位**注釋，將資料行識別為溢位資料行，則 XML 大量載入會將所有未耗用的資料儲存在此資料行中。  
   
 -   CDATA 區段和實體參考會在儲存在資料庫之前，先轉譯成其對等字串。  
   
-     在此範例中，CDATA 區段會包裝** \<City>** 元素的值。 XML 大量載入會先解壓縮字串值（"NY"），然後再將** \<City>** 元素插入資料庫中。  
+     在此範例中，CDATA 區段會包裝元素的值 **\<City>** 。 XML 大量載入會先解壓縮字串值（"NY"），然後再將 **\<City>** 元素插入資料庫。  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -144,7 +145,7 @@ ms.locfileid: "75246764"
     </Schema>  
     ```  
   
-     在此 XML 資料中，第二個** \<客戶>** 元素中遺漏了「**雇用**項」屬性。 當 XML 大量載入將第二個** \<客戶>** 元素插入資料庫時，它會使用架構中指定的預設值。  
+     在此 XML 資料中，第二個元素中遺漏了「**雇用**項」屬性 **\<Customers>** 。 當 XML 大量載入將第二個 **\<Customers>** 元素插入資料庫時，它會使用架構中指定的預設值。  
   
     ```  
     <ROOT>  
@@ -161,7 +162,7 @@ ms.locfileid: "75246764"
   
 -   如果您指定 SchemaGen 屬性（例如，SchemaGen = true），就會建立對應架構中所識別的資料表。 但是，SchemaGen 不會在這些資料表上建立任何條件約束（例如主鍵/外鍵條件約束），但有一個例外狀況：如果在關聯性中組成主鍵的 XML 節點定義為擁有 XML 類型的 ID （也就是 XSD 的**type = "xsd： ID"** ），且 SGUseID 屬性設定為 True 以進行 SchemaGen，則不只是從識別碼類型節點建立的主鍵，而是從對應架構關聯性建立主鍵/外鍵關聯性。  
   
--   SchemaGen 不會使用 XSD 架構 facet 和延伸模組來產生關聯式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]架構。  
+-   SchemaGen 不會使用 XSD 架構 facet 和延伸模組來產生關聯式 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 架構。  
   
 -   如果您在大量載入時指定 SchemaGen 屬性（例如，SchemaGen = true），則只會更新指定的資料表（而不是共用名稱的觀點）。  
   
