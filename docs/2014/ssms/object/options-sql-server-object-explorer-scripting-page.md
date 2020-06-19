@@ -12,27 +12,26 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9966db2e5b08cd16976e2c16434cec0adca8445f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63031932"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058559"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>選項（SQL Server 物件總管-腳本頁面）
   使用此頁面設定指定碼選項，以在**物件總管**之物件操作功能表的下列命令中使用：  
   
--   使用者資料表與檢視的 [編輯]  命令。  
+-   使用者資料表與檢視的 [編輯] 命令。  
   
--   **腳本\<物件> 做**為使用者建立之物件的命令。  
+-   使用者建立之物件的 編寫 \<object>。  
   
--   使用者建立之物件的 [修改]  命令。  
+-   使用者建立之物件的 [修改] 命令。  
   
--   此頁面也可設定 [產生 SQL Server 指令碼精靈]  的編寫指令碼選項預設值。  
+-   此頁面也可設定 [產生 SQL Server 指令碼精靈] 的編寫指令碼選項預設值。  
   
 ## <a name="remarks"></a>備註  
- [**編輯**] 和 [**修改**] 命令可能會產生與相同選項設定的 [ ** \<腳本物件>** ] 命令不同的結果。 [編輯]  與 [修改]  命令的設計讓您可以在查詢編輯器工作階段期間，修改目前資料庫中的物件。 **Script \<物件> as**命令的設計是用來產生腳本，以便稍後用來建立物件。  
+ 即使選項設定相同，編輯 與 修改 命令所產生的結果，可能會與 編寫 \<object>命令所產生的結果不同。 [編輯] 與 [修改] 命令的設計讓您可以在查詢編輯器工作階段期間，修改目前資料庫中的物件。 [編寫 \<object> 指令碼為] 命令的設計則在讓您產生指令碼，供日後建立物件之用。  
   
 ## <a name="options"></a>選項。  
  在每個選項右方的清單中選取可用的設定，即可指定指令碼選項。  
@@ -56,7 +55,7 @@ ms.locfileid: "63031932"
  **編寫全文檢索目錄的指令碼**  
  加入全文檢索目錄的指令碼。 預設值是 False。 如需詳細資訊，請參閱[&#40;transact-sql&#41;建立全文檢索目錄](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)。  
   
- **腳本使用\<資料庫>**  
+ **腳本使用\<database>**  
  將 USE DATABASE 陳述式新增到指令碼中，可在目前的 **物件總管** 資料庫內容中建立資料庫物件。 如果預期指令碼會用於不同的資料庫，請選取 False 省略。 預設值是 True。 如需詳細資訊，請參閱 [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)。  
   
 ### <a name="object-scripting-options"></a>物件指令碼選項  

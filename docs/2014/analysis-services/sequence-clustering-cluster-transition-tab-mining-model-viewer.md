@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31fa9942ccfe25c5c56cc0edbce98f6946afad98
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069083"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940685"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>時序叢集的叢集轉換索引標籤 (採礦模型檢視器)
   可以使用 [Microsoft 時序叢集檢視器]**** 中的 [狀態轉換]**** 索引標籤，更仔細地查看選定叢集中屬性/值組 (或狀態) 之間的轉換。  
@@ -33,7 +32,7 @@ ms.locfileid: "66069083"
  **採礦模型**  
  選擇包含在目前採礦結構中，您要檢視的採礦模型。 採礦模型會在其關聯的檢視器中開啟。  
   
- **檢視器**  
+ **檢視者**  
  選擇用來瀏覽選取之採礦模型的檢視器。 可以使用自訂檢視器，或 **[Microsoft 一般內容樹狀檢視器]**。 還可以使用外掛程式檢視器 (如果有)。  
   
  **放大**  
@@ -56,7 +55,7 @@ ms.locfileid: "66069083"
  **顯示邊緣標籤**  
  選取此選項可在圖形的每個邊緣上顯示數字來表示轉換機率。  
   
- **連結**  
+ **相關**  
  使用滑動軸可控制圖表中顯示的狀態數目和轉換數目。 降低滑動軸只會顯示具有最高機率的狀態和轉換。  
   
 ## <a name="see-also"></a>另請參閱  

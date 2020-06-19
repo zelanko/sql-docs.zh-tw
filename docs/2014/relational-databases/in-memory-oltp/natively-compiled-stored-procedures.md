@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d5ed432c-10c5-4e4f-883c-ef4d1fa32366
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e9bdc0c104b212f3c26389c1792b6b617634a12a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63a3b7b1e91323290059b5208f9c2582ced1da8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050056"
 ---
 # <a name="natively-compiled-stored-procedures"></a>原生編譯的預存程序
   原生編譯預存程序是編譯成可存取記憶體最佳化資料表之機器碼的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。 原生編譯預存程序提供以有效率的方式執行預存程序中的查詢與商務邏輯。 如需有關原生編譯程序的詳細資料，請參閱＜ [Native Compilation of Tables and Stored Procedures](native-compilation-of-tables-and-stored-procedures.md)＞。 如需將以磁碟為基礎之預存程序移轉至原生編譯預存程序的詳細資訊，請參閱 [原生編譯預存程序的移轉問題](migration-issues-for-natively-compiled-stored-procedures.md)。  
@@ -46,6 +45,6 @@ ms.locfileid: "62714915"
 -   [從資料存取應用程式呼叫原生編譯預存程序](calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體優化資料表](memory-optimized-tables.md)  
+ [記憶體最佳化資料表](memory-optimized-tables.md)  
   
   

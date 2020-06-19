@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d78707925303d5e19d93b170f257d76fb7d1747d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011105"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004054"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
   為了定義全文檢索搜尋， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索查詢會使用全文檢索述詞 (CONTAINS 和 FREETEXT) 與函數 (CONTAINSTABLE 和 FREETEXTTABLE)。 這些項目支援豐富的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法，而這種語法支援各種形式的查詢詞彙。 若要撰寫全文檢索查詢，您必須了解使用這些述詞與函數的時機和方式。  
@@ -130,7 +129,7 @@ GO
 ```  
   
 #### <a name="b-using-freetexttable"></a>B. 使用 FREETEXTTABLE  
- 下列範例將擴充 FREETEXTTABLE 查詢，以便先傳回最高等級的資料列，並將每個資料列的等級加至選取清單。 若要指定查詢，您必須知道**ProductDescriptionID**是`ProductDescription`資料表的唯一索引鍵資料行。  
+ 下列範例將擴充 FREETEXTTABLE 查詢，以便先傳回最高等級的資料列，並將每個資料列的等級加至選取清單。 若要指定查詢，您必須知道**ProductDescriptionID**是資料表的唯一索引鍵資料行 `ProductDescription` 。  
   
 ```  
 USE AdventureWorks2012  
@@ -232,7 +231,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 ### <a name="xml-data"></a>xml 資料  
  `xml` 資料類型資料行只會儲存 XML 文件和片段，而且只有 XML 篩選會用於這些文件。 因此，類型資料行是不必要的。 在 `xml` 資料行上，全文檢索索引會建立 XML 元素內容的索引，但忽略 XML 標記。 屬性值是全文檢索索引的值 (除非它們是數值)。 元素標記會當做 Token 界限來使用。 系統支援包含多種語言且格式正確的 XML 或 HTML 文件和片段。  
   
- 如需有關在資料`xml`行上查詢的詳細資訊，請參閱[使用 XML 資料行進行全文檢索搜尋](../xml/use-full-text-search-with-xml-columns.md)。  
+ 如需有關在資料行上查詢的詳細資訊 `xml` ，請參閱[使用 XML 資料行進行全文檢索搜尋](../xml/use-full-text-search-with-xml-columns.md)。  
   
  
   

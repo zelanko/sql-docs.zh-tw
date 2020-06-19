@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d5465ab5157af0c0a6f1bd4a0566d49e45cd55c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7fbe69600b337130e7fb3b309535f880904e356
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482685"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961183"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>刪除資料列 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您不再想要讓使用者使用某個資料列 (成員) 時，請從 MDS 存放庫中刪除它。  
@@ -23,7 +22,7 @@ ms.locfileid: "65482685"
 > [!NOTE]  
 >  管理員可以重新啟動刪除的成員。 如需詳細資訊，請參閱[重新啟用成員或集合 &#40;Master Data Services&#41;](../reactivate-a-member-or-collection-master-data-services.md)。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有 [總管]**** 功能區域的權限。  

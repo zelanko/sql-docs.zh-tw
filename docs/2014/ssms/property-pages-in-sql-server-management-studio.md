@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0711b5ff618ec563b437a089765a30547377efaa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fae6a07fbaa2a259fcca5c3807094b31e0d52d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058492"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio 中的屬性頁
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中所有 [屬性頁] 對話方塊都會以共用格式來顯示展開和摺疊類別目錄的資訊。 顯示的欄位會隨著特定內容而不同。 以灰色顯示的屬性是唯讀屬性。 [分類] 和 [字母] 按鈕在每個屬性頁的頂端附近。  

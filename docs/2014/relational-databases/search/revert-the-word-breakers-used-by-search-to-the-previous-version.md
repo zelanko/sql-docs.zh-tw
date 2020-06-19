@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c3354fecd145f1df35d0c01252886de69bd37b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874718"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004073"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>將搜索所使用的斷詞工具還原為舊版
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 對於全文檢索搜尋支援的所有語言 (韓文除外)，都會安裝並啟用特定版本的斷詞工具和字幹分析器。 本主題描述的是如何從此版本的元件切換成舊版，或從舊版切換回新版。  
@@ -152,7 +151,7 @@ ms.locfileid: "70874718"
     > [!WARNING]  
     >  此變更影響在目前版本和舊版中都使用 NaturalLanguage6.dll 的所有語言。  
   
-5.  在登錄中，流覽至下列節點： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><t \MSSearch\CLSID**]。  
+5.  在登錄中，流覽至下列節點： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<t \> \MSSearch\CLSID**]。  
   
 6.  使用下列步驟，針對選定語言的舊版斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -181,7 +180,7 @@ ms.locfileid: "70874718"
     > [!WARNING]  
     >  此變更影響在目前版本和舊版中都使用 NaturalLanguage6.dll 的所有語言。  
   
-3.  在登錄中，流覽至下列節點： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><t \MSSearch\CLSID**]。  
+3.  在登錄中，流覽至下列節點： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<t \> \MSSearch\CLSID**]。  
   
 4.  如果下列機碼不存在，請使用下列步驟，針對選定語言的目前斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -273,7 +272,7 @@ ms.locfileid: "70874718"
   
 1.  不要從 Binn 資料夾中移除目前元件版本的檔案。  
   
-2.  在登錄中，流覽至下列節點： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><t \MSSearch\CLSID**]。  
+2.  在登錄中，流覽至下列節點： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<t \> \MSSearch\CLSID**]。  
   
 3.  使用下列步驟，針對選定語言的舊版斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -297,7 +296,7 @@ ms.locfileid: "70874718"
   
 1.  不要從 Binn 資料夾中移除舊版元件的檔案。  
   
-2.  在登錄中，流覽至下列節點： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><t \MSSearch\CLSID**]。  
+2.  在登錄中，流覽至下列節點： **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<t \> \MSSearch\CLSID**]。  
   
 3.  如果下列機碼不存在，請使用下列步驟，針對選定語言的目前斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   

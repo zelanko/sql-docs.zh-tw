@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0bfb4-3aa6-4eb2-a83e-c0d0e7d4e9f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6c73db809e81cc9b6d1ee182227078a83688384
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 445f6eeaea7057a6267ad41d5e2490eaab253460
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63273426"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011480"
 ---
 # <a name="server-element-dta"></a>Server 元素 (DTA)
   包含您要微調的資料庫所在之伺服器的識別資訊。  
@@ -50,7 +49,7 @@ ms.locfileid: "63273426"
 |**子元素**|[伺服器的 Name 元素 &#40;DTA&#41;](name-element-for-server-dta.md)<br /><br /> [伺服器的 Database 元素 &#40;DTA&#41;](database-element-for-server-dta.md)|  
   
 ## <a name="remarks"></a>備註  
- 您只能為`DTAInput`元素指定`Server`一個元素。 在 DTA XML 結構描述中，這個元素是 **ServerDetailsTypecomplexType** 名稱。 請勿混淆這個 `Server` 元素和 `Configuration` 元素的子元素。 如需詳細資訊，請參閱[組態的 Server 元素 &#40;DTA&#41;](server-element-for-configuration-dta.md)。  
+ 您只能 `Server` 為元素指定一個元素 `DTAInput` 。 在 DTA XML 結構描述中，這個元素是 **ServerDetailsTypecomplexType** 名稱。 請勿混淆這個 `Server` 元素和 `Configuration` 元素的子元素。 如需詳細資訊，請參閱[組態的 Server 元素 &#40;DTA&#41;](server-element-for-configuration-dta.md)。  
   
 ## <a name="example"></a>範例  
  下列範例顯示如何在 SERVER001 的 **AdventureWorks** 資料庫中，指定 **Sales.SalesPerson** 資料表：  

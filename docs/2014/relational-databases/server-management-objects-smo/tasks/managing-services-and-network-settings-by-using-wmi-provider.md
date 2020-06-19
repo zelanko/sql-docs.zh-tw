@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 167cec89a772084cbd171be14001dded42e059d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796625"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996813"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供者管理服務和網路設定
   WMI 提供者是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) 用於管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務和網路通訊協定的已發行介面。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件表示 WMI 提供者。  
@@ -30,7 +29,7 @@ ms.locfileid: "72796625"
 ## <a name="example"></a>範例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- 對於使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wmi 提供者的程式，您必須包含`Imports`語句來限定 wmi 命名空間。 將陳述式插入至其他 `Imports` 陳述式之後、在應用程式中的任何宣告之前，例如：  
+ 對於使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wmi 提供者的程式，您必須包含 `Imports` 語句來限定 wmi 命名空間。 將陳述式插入至其他 `Imports` 陳述式之後、在應用程式中的任何宣告之前，例如：  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

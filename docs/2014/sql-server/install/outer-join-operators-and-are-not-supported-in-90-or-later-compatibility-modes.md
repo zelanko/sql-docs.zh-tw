@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 62a6f9e016abf24f28660b04e7a6242fdd6606ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 357c729e6d53cc17f2e4c169dd66613b6cfd2f5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093690"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065255"
 ---
 # <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>在 90 (含) 之後的相容性模式中不支援外部聯結運算 \*= 和 =\*
-  Upgrade Advisor 偵測到使用外部聯結運算子\*= 和 =。\* 在 90 或之後的相容性模式中並不支援這些運算子。 當您升級時，使用者資料庫會維持其相容性模式。 使用這些運算子的陳述式將會失敗。  
+  Upgrade Advisor 偵測到使用外部聯結運算子 \* = 和 = \* 。 在 90 或之後的相容性模式中並不支援這些運算子。 當您升級時，使用者資料庫會維持其相容性模式。 使用這些運算子的陳述式將會失敗。  
   
 ## <a name="component"></a>元件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>更正動作  
- 在您將資料庫相容性模式變更為90或更新版本之前，請修改使用外部聯結\*運算子 = 和\* = 的語句，以使用對等的外部聯結關鍵字。 下列範例會顯示使用 `\*=` 運算子的查詢以及使用 `LEFT OUTER JOIN` 關鍵字的對等查詢。  
+ 在您將資料庫相容性模式變更為90或更新版本之前，請修改使用外部聯結運算子 \* = 和 = 的語句， \* 以使用對等的外部聯結關鍵字。 下列範例會顯示使用 `\*=` 運算子的查詢以及使用 `LEFT OUTER JOIN` 關鍵字的對等查詢。  
   
 ```  
 -- This query uses an old-style outer join operator.  

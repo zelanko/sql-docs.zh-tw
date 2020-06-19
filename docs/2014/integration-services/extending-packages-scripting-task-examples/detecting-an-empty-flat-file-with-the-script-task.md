@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 34462589141133e04ca8728361e3a173f0944f12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2936d94f07d5bd8ba046811ad632a5be81f15a8a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895497"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968518"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>以指令碼工作偵測空的一般檔案
   一般檔案來源不會在嘗試處理一般檔案之前，判斷它是否包含資料列。 您可能會想要略過不包含任何資料列的檔案，藉以改善封裝的效率，尤其是逐一查看許多一般檔案的封裝。 指令碼工作可以在封裝開始處理資料流程之前，尋找空白的一般檔案。  
@@ -29,11 +28,11 @@ ms.locfileid: "62895497"
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
 ## <a name="description"></a>描述  
- 下列範例會使用 `System.IO` 命名空間的方法來測試一般檔案連接管理員中指定的一般檔案，以便判斷此檔案是否空白，或者它是否僅包含預期的非資料列，例如資料行標頭或空白的行。 此指令碼會先檢查檔案的大小。如果大小為零個位元組，表示檔案是空白的。 如果檔案大小大於零，此指令碼就會從檔案中讀取各行，直到沒有其他行為止，或者直到行數超過預期的非資料列數目為止。 如果檔案中的行數小於或等於預期的非資料列數目，此檔案就會被視為空白。 結果會以布林值的形式傳入使用者變數中，而這個變數的值可用於在封裝的控制流程中分支。 方法也會在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications （VSTA）的 [輸出] 視窗中顯示結果。 **Output** `FireInformation`  
+ 下列範例會使用 `System.IO` 命名空間的方法來測試一般檔案連接管理員中指定的一般檔案，以便判斷此檔案是否空白，或者它是否僅包含預期的非資料列，例如資料行標頭或空白的行。 此指令碼會先檢查檔案的大小。如果大小為零個位元組，表示檔案是空白的。 如果檔案大小大於零，此指令碼就會從檔案中讀取各行，直到沒有其他行為止，或者直到行數超過預期的非資料列數目為止。 如果檔案中的行數小於或等於預期的非資料列數目，此檔案就會被視為空白。 結果會以布林值的形式傳入使用者變數中，而這個變數的值可用於在封裝的控制流程中分支。 `FireInformation`方法也會**Output**在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications （VSTA）的 [輸出] 視窗中顯示結果。  
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
-1.  建立並設定名為`EmptyFlatFileTest`的一般檔案連線管理員。  
+1.  建立並設定名為的一般檔案連線管理員 `EmptyFlatFileTest` 。  
   
 2.  建立名為 `FFNonDataRows` 的整數變數並將其值設定為一般檔案中預期的非資料列數目。  
   

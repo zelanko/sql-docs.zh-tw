@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 63be6853-c54a-42b2-ae1a-db2175f1d28e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 41c183c72188cccb21838e1e574992bfb723c022
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c04f7890ba8d8efe64afaf11b922af156c5de46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065129"
 ---
 # <a name="verify-that-no-database-files-are-on-compressed-drives-during-the-upgrade-process"></a>確認在升級過程中，壓縮磁碟機上沒有資料庫檔案
   Upgrade Advisor 在壓縮磁碟機上偵測到資料庫檔案。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能在壓縮磁碟機上建立或升級資料庫。  

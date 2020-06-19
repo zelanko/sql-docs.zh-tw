@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 65cc22ce-53e9-49dc-8f40-cbf0159c9e54
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d1dcc44c8d9892bb6dee31b5cebd4be73037cf0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d6b8d340535ad50c05cdc7753e3d5e1b26751f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065230"
 ---
 # <a name="ready-to-repair"></a>已完成修復準備工作
   [已完成修復準備工作] 頁面會提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式之修復程序的摘要。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  這個頁面含有下列選項：  
   
 -   若要繼續安裝，請按一下 **[修復]**。  

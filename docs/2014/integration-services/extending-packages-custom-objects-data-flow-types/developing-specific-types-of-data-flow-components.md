@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 348e219a-b8ff-425e-b9c6-811880101c54
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 78810a0599d2345770175bc0ed9bdc06f3195817
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfca6453c68ecafcc4d0b375965f7f35c0cc84df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896330"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968878"
 ---
 # <a name="developing-specific-types-of-data-flow-components"></a>開發特定類型的資料流程元件
   本節涵蓋開發來源元件、具有同步輸出的轉換元件、具有非同步輸出的轉換元件以及目的地元件的細節。  

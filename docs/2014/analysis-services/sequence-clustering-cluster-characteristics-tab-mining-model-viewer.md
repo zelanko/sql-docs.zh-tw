@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82bab25b25c8d27e1aad2e2692d9ca519c9269b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069171"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940759"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>時序叢集的叢集特性索引標籤 (採礦模型檢視器)
   **[Microsoft 時序叢集檢視器]** 中的 **[叢集特性]** 索引標籤提供定義時序叢集之特性的詳細清單。 這些特性可包括簡單屬性/值組以及狀態之間的轉換。  
@@ -33,13 +32,13 @@ ms.locfileid: "66069171"
  **採礦模型**  
  選擇包含在目前採礦結構中，您要檢視的採礦模型。 採礦模型會在其關聯的檢視器中開啟。  
   
- **檢視器**  
+ **檢視者**  
  選擇用來瀏覽選取之採礦模型的檢視器。 可以使用自訂檢視器，或 **[Microsoft 一般內容樹狀檢視器]**。 還可以使用外掛程式檢視器 (如果有)。  
   
  **該群**  
  選擇要檢視的叢集。  
   
- **叢集>\<的特性**  
+ **的特性\<Cluster>**  
  此資料表提供已指派給目前叢集之時序的清單 (依機率排序)。 請記住，時序基本上是一個屬性/值組，後面跟著一個或多個其他的屬性/值組。 時序及其機率的組合定義了每個叢集的特性。  
   
  例如，以購物籃分析為基礎的時序叢集模型中，一個叢集的最上層特性可能是客戶選擇促銷項目，然後在不再購買其他項目的情況下結束交易。 在試圖分析伺服器失敗的時序叢集模型中，叢集的主要特性可能是一系列高頻率錯誤事件。  

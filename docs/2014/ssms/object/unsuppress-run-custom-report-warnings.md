@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae7f4d08ac613113d715728a5cb78ae37bd6f99b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62824389"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058529"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>取消隱藏執行自訂報表警告
   自訂報表有兩個警告對話方塊。 此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中取消隱藏這些方塊的顯示。  
@@ -28,21 +27,21 @@ ms.locfileid: "62824389"
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>取消隱藏主要自訂報表警告對話方塊  
   
-1.  連接到\<*伺服器*> \\ \< * * \\ \>*共用*磁片磁碟機> \documents 和設定<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.>| <  
+1.  連接至 \<*Server*> \\ < *共用* >| \<*Drive*> \Documents 和設定 \\<UserProfile \> \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml。  
   
-2.  按一下`reports.xml`滑鼠右鍵，然後按一下 [**編輯**]。  
+2.  按一下滑鼠右鍵 `reports.xml` ，然後按一下 [**編輯**]。  
   
-3.  將**\<suppresswarning>>true\</SuppressWarning> 變更\<為 suppresswarning>>\<false/SuppressWarning>**。  
+3.  將** \<SuppressWarning> true \</SuppressWarning> 變更 \<SuppressWarning> 為 \</SuppressWarning> false**。  
   
 4.  重新啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>取消隱藏鑽研自訂報表警告對話方塊  
   
-1.  連接到\<*伺服器*> \\ \< * * \\ \>*共用*磁片磁碟機> \documents 和設定<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.>| <  
+1.  連接至 \<*Server*> \\ < *共用* >| \<*Drive*> \Documents 和設定 \\<UserProfile \> \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml。  
   
-2.  按一下`reports.xml`滑鼠右鍵，然後按一下 [**編輯**]。  
+2.  按一下滑鼠右鍵 `reports.xml` ，然後按一下 [**編輯**]。  
   
-3.  將** \<suppressdrillthroughwarning>>true\</SuppressDrillthroughWarning>變更\<為 suppressdrillthroughwarning>>\<false/SuppressDrillthroughWarning>**。  
+3.  將** \<SuppressDrillthroughWarning> true \</SuppressDrillthroughWarning> 變更 \<SuppressDrillthroughWarning> 為 \</SuppressDrillthroughWarning> false**。  
   
 4.  重新啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   

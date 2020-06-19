@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f43034d81af8092a44c25db466fa8fa51b9eaa8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961538"
 ---
 # <a name="metadata-master-data-services"></a>中繼資料 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，使用者定義的中繼資料是用來描述模型物件的資訊。 例如，您可以追蹤特定模型或實體的擁有者，或追蹤提供資料給實體的來源系統。  
   
- 使用者定義的中繼資料是由稱為「**中繼資料**」的模型所管理。 當安裝時[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，會自動包含此模型，而且它類似于其他所有 MDS 模型，但您無法建立其版本。  
+ 使用者定義的中繼資料是由稱為「**中繼資料**」的模型所管理。 當安裝時，會自動包含此模型 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，而且它類似于其他所有 MDS 模型，但您無法建立其版本。  
   
  當您使用使用者定義的中繼資料來擴展中繼資料模型時，可以將其包含在訂閱檢視中，以便透過訂閱系統來取用。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66054041"
   
 -   名稱為 [上次檢閱日期] 的自由格式屬性，用來追蹤擁有者上次檢閱物件的日期。  
   
--   名為 [來源] 的網域屬性，用來追蹤和管理與[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]實例互動的來源系統。  
+-   名為 [來源] 的網域屬性，用來追蹤和管理與實例互動的來源系統 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
   
 ## <a name="related-tasks"></a>相關工作  
   

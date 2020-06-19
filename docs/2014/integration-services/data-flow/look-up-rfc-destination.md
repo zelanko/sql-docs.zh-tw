@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4badd9c961f5a0d7ca2d3e32185a7ab742628d97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4c22636095f211eef836b709beac269938c730
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901778"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915248"
 ---
 # <a name="look-up-rfc-destination"></a>查閱 RFC 目的地
   使用 [查閱 RFC 目的地]  對話方塊可以查閱 SAP Netweaver BW 系統中定義的 RFC 目的地。 出現可用的 RFC 目的地清單時，請選取您要的目的地，然後此元件就會將必要的值填入相關聯的選項。  
@@ -35,7 +34,7 @@ ms.locfileid: "62901778"
   
 4.  在 [連線管理員]  頁面的 [RFC 目的地]  群組方塊中，按一下 [查閱]  顯示 [查閱 RFC 目的地]  對話方塊。  
   
-     在 [SAP BW 來源編輯器]  中，只有當 [執行模式]  的值是 [P - 觸發處理鏈結]  或 [W - 等候通知]  時，才會出現 [RFC 目的地]  群組方塊。  
+     在 [SAP BW 來源編輯器] 中，只有當 [執行模式] 的值是 [P - 觸發處理鏈結] 或 [W - 等候通知] 時，才會出現 [RFC 目的地] 群組方塊。  
   
 ## <a name="options"></a>選項。  
  **目的地**  

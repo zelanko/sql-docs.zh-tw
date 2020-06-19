@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7ac1acb47c6345bb2b746b2e3a3e1817b63a3e75
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 8ee1d9205eeff0fd407cb8c2766d8fbceed47bf9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886375"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961628"
 ---
 # <a name="master-data-services-overview"></a>Master Data Services 概觀
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，此模型是您主要資料結構中的最上層容器。 您可以建立模型來管理各種類似資料分類，例如管理線上產品資料組。 模型包含一或多個實體，而實體又包含成員，亦即資料記錄。
@@ -54,7 +53,7 @@ ms.locfileid: "82886375"
 |管理實體|視需要建立多個實體以包含成員。|[實體 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)<br /><br /> [建立實體 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|
 |建立實體當做網域屬性|若要建立網域屬性，請先建立實體來擴展屬性值清單。|[網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)<br /><br /> [建立網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|
 |建立實體的屬性|建立屬性以描述成員。 Name 和 Code 屬性會自動包含在每個實體，且無法移除。 您可能想要建立其他自由格式屬性來包含文字、日期、數字或檔案。|[屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)<br /><br /> [建立文字屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)<br /><br /> [建立數值屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)<br /><br /> [建立日期屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-date-attribute-master-data-services.md)<br /><br /> [建立連結屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)<br /><br /> [建立檔案屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|
-|建立屬性群組|如果實體有四個或五個以上的屬性，您可能想要建立屬性群組。 **** 這些群組是在 [總管] 中方格上方顯示的索引標籤，透過在個別索引標籤上群組屬性，方便導覽。 \<插入影像>|[屬性群組 &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)<br /><br /> [建立屬性群組 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|
+|建立屬性群組|如果實體有四個或五個以上的屬性，您可能想要建立屬性群組。 **** 這些群組是在 [總管] 中方格上方顯示的索引標籤，透過在個別索引標籤上群組屬性，方便導覽。 \<INSERT IMAGE>|[屬性群組 &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)<br /><br /> [建立屬性群組 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|
 |匯入支援實體的資料記錄 (成員)|使用暫存處理序匯入支援實體的資料。<br /><br /> 針對 Product 模型，這表示匯入色彩或大小。<br /><br /> 您也可以手動建立成員。<br /><br /> 注意：如果使用者至少擁有實體分葉模型物件的 [更新] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]**權限且可存取 [總管]****功能區域，他們就可以在** 中建立成員。|[資料匯入 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)<br /><br /> [使用暫存處理序在 Master Data Services 中載入或更新成員](../../2014/master-data-services/add-update-and-delete-data-master-data-services.md)<br /><br /> [建立分葉成員 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|
 |建立商務規則以確保資料品質|建立及發行商務規則，確保資料的正確性。 您可以使用商務規則：<br /><br /> 設定預設屬性值。<br /><br /> 變更屬性值。<br /><br /> 在資料未通過商務規則驗證時，傳送電子郵件通知。|[商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)<br /><br /> [建立及發行商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)<br /><br /> [通知 &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)<br /><br /> [設定電子郵件通知 &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)<br /><br /> [設定商務規則來傳送通知 &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|
 |匯入主要實體的資料記錄 (成員)。 套用商務規則|使用暫存處理序匯入主要實體的資料。 完成之後會驗證版本。 這會將商務規則套用到模型版本中的所有成員。<br /><br /> 然後您可以更正任何商務規則驗證問題。|[驗證 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)<br /><br /> [根據商務規則驗證版本 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)<br /><br /> [驗證預存程序 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)|

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 762248d4c2a268ac36b0dfa3ffeba20123017017
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068600"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940499"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>配量來源 Cube (資料採礦精靈)
   **** 您可以使用 [配量來源 Cube] 對話方塊來限制用於培訓模型的資料。 Cube 通常包含了與許多不同維度及屬性相關的資料，例如所有商店、所有區域和所有產品。 根據無限制的屬性組合來培訓模型並不實用，所以您要使用此對話方塊選擇用於培訓模型的一組特定項目。  
@@ -40,7 +39,7 @@ ms.locfileid: "66068600"
  **如需詳細資訊，請參閱** [資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>選項。  
- **Dimension**  
+ **大小**  
  選取您要配量的維度。  
   
  **階層**  

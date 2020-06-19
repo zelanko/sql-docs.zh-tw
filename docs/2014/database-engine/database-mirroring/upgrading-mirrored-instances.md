@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a343e6b9e93aa1910c82f436f3a50daf00d57bc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754274"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933874"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>在升級伺服器執行個體時將鏡像資料庫的停機時間減至最少
-  將伺服器實例升級至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時，您可以藉由執行連續升級（稱為*輪流升級*），將每個鏡像資料庫的停機時間減少至僅單一手動容錯移轉。 輪流升級是一種多階段程序，其最簡單的形式包括升級目前在鏡像工作階段中當做鏡像伺服器的伺服器執行個體，然後手動容錯移轉鏡像資料庫、升級之前的主體伺服器，以及繼續進行鏡像。 實際上，確切的程序會取決於作業模式以及在您要升級之伺服器執行個體上執行的鏡像工作階段數目和配置而定。  
+  將伺服器實例升級至時 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，您可以藉由執行連續升級（稱為*輪流升級*），將每個鏡像資料庫的停機時間減少至僅單一手動容錯移轉。 輪流升級是一種多階段程序，其最簡單的形式包括升級目前在鏡像工作階段中當做鏡像伺服器的伺服器執行個體，然後手動容錯移轉鏡像資料庫、升級之前的主體伺服器，以及繼續進行鏡像。 實際上，確切的程序會取決於作業模式以及在您要升級之伺服器執行個體上執行的鏡像工作階段數目和配置而定。  
   
 > [!NOTE]  
 >  如需執行輪流升級以安裝 Service Pack 或修補程式的相關資訊，請參閱[在鏡像資料庫停機時間最短的系統上安裝 Service pack](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)。  

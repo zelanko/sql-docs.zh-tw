@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93bb5d5d1625c4d558b865bdd28445e377abbfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918569"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表
   此主題的程序描述如何使用「Foreach 迴圈」容器搭配適當列舉值，循環使用資料夾中的 Excel 活頁簿，或循環使用 Excel 活頁簿中的資料表。  
@@ -49,7 +48,7 @@ ms.locfileid: "62830579"
   
 8.  選取新的 Excel 連線管理員，在 [屬性] 視窗中按一下 **Expressions** 屬性，然後按一下省略符號。  
   
-9. 在 [**屬性運算式編輯器**] 中， `ConnectionString`選取屬性，然後按一下省略號。  
+9. 在 [**屬性運算式編輯器**] 中，選取 `ConnectionString` 屬性，然後按一下省略號。  
   
 10. 在「運算式產生器」中，輸入下列運算式：  
   

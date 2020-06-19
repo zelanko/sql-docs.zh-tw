@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5e8121cc-03f0-4168-98cf-63c5c032bb0b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cf29721888fb672c242baa8a5984da4de40cd020
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 354883f2bb57de348d6449dd969470483d3c5e50
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858134"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940819"
 ---
 # <a name="select-tables-and-views-ssas"></a>選取資料表和檢視表 (SSAS)
   [資料表匯入精靈]**** 的這個頁面可讓您選取您要匯入資料的來源資料表和檢視表。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a4834e8a32f5cb2cb512061777715f314f84299
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637826"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916304"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
   本主題提供有關如何設計 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝以避免常見效能問題的建議。 本主題同時也提供有關您可以用於疑難排解封裝效能之功能與工具的資訊。  
@@ -94,7 +93,7 @@ ms.locfileid: "73637826"
  不管資料流程元件為何，都有兩個您應該遵循的一般指導方針來改善效能：最佳化查詢與避免不必要的字串。  
   
 #### <a name="optimize-queries"></a>最佳化查詢  
- 某些資料流程元件會在從來源擷取資料時或在查閱作業中使用查詢，以建立參考資料表。 預設查詢會使用 SELECT * FROM \<資料表名稱> 語法。 這種類型的查詢會傳回來源資料表中的所有資料行。 讓所有資料行都在設計階段可用，您便可以選擇任何資料行作為查閱、傳遞或來源資料行。 不過，在選擇要使用的資料行後，您應該將查詢修訂為只包含選取的資料行。 移除多餘的資料行可讓封裝中的資料流程更為有效，因為資料行越少，就會建立越小的資料列。 資料列越小，表示有越多的資料列可以納入同一個緩衝區，而且處理資料集中全部資料列所需的工作也就越少。  
+ 某些資料流程元件會在從來源擷取資料時或在查閱作業中使用查詢，以建立參考資料表。 預設查詢會使用 SELECT * FROM \<tableName> 語法。 這種類型的查詢會傳回來源資料表中的所有資料行。 讓所有資料行都在設計階段可用，您便可以選擇任何資料行作為查閱、傳遞或來源資料行。 不過，在選擇要使用的資料行後，您應該將查詢修訂為只包含選取的資料行。 移除多餘的資料行可讓封裝中的資料流程更為有效，因為資料行越少，就會建立越小的資料列。 資料列越小，表示有越多的資料列可以納入同一個緩衝區，而且處理資料集中全部資料列所需的工作也就越少。  
   
  若要建構查詢，您可以輸入查詢或使用「查詢產生器」。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "73637826"
  使用本節中的建議來改善「彙總」、「模糊查閱」、「模糊群組」、「查閱」、「合併聯結」與「緩時變維度」轉換的效能。  
   
 #### <a name="aggregate-transformation"></a>彙總轉換  
- 「彙總」轉換包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 屬性。 這些屬性會提升效能，其方式是讓轉換針對轉換所快取的資料來預先配置所需的記憶體數量。 如果您知道預期要從 [**群組依據**] 作業產生的精確或大約群組數，請分別設定`Keys`和`KeysScale`屬性。 如果您知道預期要從 [**相異計數**] 作業產生的確切或近似相異值數目，請分別設定`CountDistinctKeys`和`CountDistinctScale`屬性。  
+ 「彙總」轉換包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 屬性。 這些屬性會提升效能，其方式是讓轉換針對轉換所快取的資料來預先配置所需的記憶體數量。 如果您知道預期要從 [**群組依據**] 作業產生的精確或大約群組數，請 `Keys` 分別設定和 `KeysScale` 屬性。 如果您知道預期要從 [**相異計數**] 作業產生的確切或近似相異值數目，請 `CountDistinctKeys` 分別設定和 `CountDistinctScale` 屬性。  
   
  如果必須在資料流程中建立多個彙總，您應考慮使用一個「彙總」轉換來建立多個彙總，而不是建立多個轉換。 當一個彙總就是其他彙總的子集時，這個方法能夠改善效能，因為轉換可以最佳化內部儲存體，並且只會掃描一次傳入的資料。 例如，如果彙總使用 GROUP BY 子句和 AVG 彙總，則將它們組合成一個轉換可以改進效能。 不過，在一個「彙總」轉換內執行多個彙總會序列化彙總作業，因此，當多個彙總必須個別計算時，可能不會改善效能。  
   

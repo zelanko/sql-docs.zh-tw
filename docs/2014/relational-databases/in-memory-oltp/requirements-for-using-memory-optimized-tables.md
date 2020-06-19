@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecb9d388fd0e1362bb8844e874cd89162912e93e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62467888"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050051"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用記憶體最佳化資料表的需求
   除了[安裝 SQL Server 2014 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)以外，以下是使用記憶體內部 OLTP 的需求：  
@@ -32,11 +31,11 @@ ms.locfileid: "62467888"
   
 -   處理器需要支援指令 **cmpxchg16b** 以使用記憶體內部 OLTP。 所有新型 64 位元處理器都支援 **cmpxchg16b**。  
   
-     如果您使用 VM 主機應用程式，並[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]顯示較舊處理器造成的錯誤，請查看應用程式是否有允許**cmpxchg16b**的設定選項。 如果沒有，您可以使用 Hyper-V，它可以支援 **cmpxchg16b** ，而不需要修改組態選項。  
+     如果您使用 VM 主機應用程式，並 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 顯示較舊處理器造成的錯誤，請查看應用程式是否有允許**cmpxchg16b**的設定選項。 如果沒有，您可以使用 Hyper-V，它可以支援 **cmpxchg16b** ，而不需要修改組態選項。  
   
 -   若要安裝記憶體中 OLTP，請在您安裝 **時選取** [Database Engine Services] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
-     若要安裝報表產生[（判斷是否應將資料表或預存程式移植到記憶體內部 oltp](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)）和[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] （透過[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]物件總管來管理記憶體內部 oltp），請在安裝[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]時選取 [**管理工具-基本**] 或 [**管理工具-Advanced** ]。  
+     若要安裝報表產生（[判斷是否應將資料表或預存程式移植到記憶體內部 oltp](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)）和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] （透過物件總管來管理記憶體內部 oltp [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ），請在安裝時選取 [**管理工具-基本**] 或 [**管理工具-Advanced** ] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 。  
   
 ## <a name="important-notes-on-using-hek_2"></a>使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]的重要注意事項  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62467888"
 -   如果您建立一個或多個具有記憶體最佳化資料表的資料庫，就應該針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟用立即檔案初始化 (將 SE_MANAGE_VOLUME_NAME 使用者權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動帳戶)。 如果沒有立即檔案初始化，記憶體最佳化儲存體檔案 (資料和差異檔案) 將會在建立時初始化，而這樣可能會對工作負載的效能造成負面影響。 如需有關立即檔案初始化的詳細資訊，請參閱 [資料庫檔案初始化](../databases/database-instant-file-initialization.md)。 如需有關如何啟用立即檔案初始化的詳細資訊，請參閱 [如何及為何啟用立即檔案初始化](https://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx)。  
   
 ## <a name="did-this-article-help-you-were-listening"></a>這篇文章對您有幫助嗎？ 我們正在接聽  
- 您要尋找哪些資訊？找到了嗎？ 我們正在聆聽您的意見反應以改善內容。 請將您的意見[sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page)提交至。  
+ 您要尋找哪些資訊？找到了嗎？ 我們正在聆聽您的意見反應以改善內容。 請將您的意見提交至 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](in-memory-oltp-in-memory-optimization.md)  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6d27ab0b-a016-4fb3-9391-74c6a9c1991c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 177aec3306c0be861b2fdf09f5a0d6974d715d3d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb06ec2ddd75f21eae697a5a9c439c893bfbd7b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63031992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058519"
 ---
 # <a name="select-object-types-object-explorer"></a>選取物件類型 (物件總管)
   使用此對話方塊即可指定 [選取物件]  對話方塊中出現的物件類型。  
