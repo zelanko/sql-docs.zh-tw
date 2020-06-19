@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f31c514b8fbb68be7a326f3fd94ac67f0805ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767883"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965488"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>使用 SSIS 封裝升級精靈來升級 Integration Services 封裝
   您可以升級以舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所建立的封裝，至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所使用的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 格式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈] 協助完成此程序。 因為您可以將精靈設定成備份原始封裝，所以如果您遇到升級問題，就可以繼續使用原始封裝。  
@@ -50,7 +49,7 @@ ms.locfileid: "62767883"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>在命令提示字元中執行此精靈  
   
--   在命令提示字元中，從**C:\Program FILES\MICROSOFT SQL Server\120\DTS\Binn**資料夾執行 ssisupgrade.exe 檔。  
+-   在命令提示字元中，從**C:\Program FILES\MICROSOFT SQL Server\120\DTS\Binn**資料夾執行 SSISUpgrade.exe 檔案。  
   
 ## <a name="backing-up-the-original-packages"></a>備份原始封裝  
  若要備份原始封裝，原始封裝和升級封裝都必須存放在檔案系統的相同資料夾中。 根據您執行此精靈的方式，系統可能會自動選取這個儲存位置。  
@@ -86,7 +85,7 @@ ms.locfileid: "62767883"
 2.  在此精靈的 [選取封裝管理選項]  頁面上，選取 [備份原始封裝]  選項。  
   
     > [!WARNING]  
-    >  當您在中[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]開啟或專案時，不會顯示 [**備份原始封裝**] 選項，而這會自動啟動精靈。  
+    >  當您在中開啟或專案時，不會顯示 [**備份原始封裝**] 選項 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，而這會自動啟動精靈。  
   
 3.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，執行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈。  
   

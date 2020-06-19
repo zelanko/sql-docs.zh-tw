@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: de238c1012a255ceb59086e542d5529b8b907915
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5da68a6379c0d65c4d5a83af2b359f96784d4ae2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057552"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950908"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>多個一般檔案連接管理員編輯器 (進階頁面)
   使用 [多個一般檔案連線管理員編輯器]**** 對話方塊的 [進階]**** 頁面，來設定各種屬性，例如一般檔案連線管理員所連接的文字檔中，每個資料行的資料類型和分隔符號。  
@@ -32,7 +31,7 @@ ms.locfileid: "66057552"
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的多個一般檔案連接管理員。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師的 [連線管理員]**** 區域內。  
   
- **描述**  
+ **說明**  
  描述連接管理員。 最佳作法是以其用途描述連接管理員，使封裝可以自我記錄並易於維護。  
   
  **設定每一個資料行的屬性**  
@@ -46,7 +45,7 @@ ms.locfileid: "66057552"
 |**TextQualified**|使用文字限定詞字元指出文字資料是否為限定的。 有效值為：<br /><br /> **True**：一般檔案中的文字資料是限定的。<br /><br /> **False**：一般檔案中的文字資料是非限定的。|  
 |**名稱**|提供資料行名稱。 預設為已編號的資料行清單；然而，您可以選擇任何唯一的、描述性的名稱。|  
 |**DataScale**|指定數值資料的小數位數。 小數位數是指小數位數的數目。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。|  
-|**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}**：資料行是以歸位字元和換行字元的組合分隔<br /><br /> **{CR}** -資料行是以回車符分隔<br /><br /> **{LF}** -資料行是以換行字元分隔<br /><br /> **分號 {;}**-資料行是以分號分隔<br /><br /> **冒號 {：}** -資料行是以冒號分隔<br /><br /> **逗號{,} ** -資料行是以逗號分隔<br /><br /> **定位字元 {t}**：資料行是以定位字元分隔<br /><br /> **分隔號 {&#124;}**：資料行是以分隔號分隔|  
+|**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}**：資料行是以歸位字元和換行字元的組合分隔<br /><br /> **{CR}** -資料行是以回車符分隔<br /><br /> **{LF}** -資料行是以換行字元分隔<br /><br /> **分號 {;}**-資料行是以分號分隔<br /><br /> **冒號 {：}** -資料行是以冒號分隔<br /><br /> **逗號 {,} **-資料行是以逗號分隔<br /><br /> **定位字元 {t}**：資料行是以定位字元分隔<br /><br /> **分隔號 {&#124;}**：資料行是以分隔號分隔|  
 |**DataPrecision**|指定數值資料的有效位數。 有效位數是指位數的數目。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。|  
 |**InputColumnWidth**|指定將儲存為位元組計數的值；針對 Unicode 檔案，這將會顯示為字元計數。 分隔資料行將忽略這個值。<br /><br /> **注意** ︰在物件模型中，這個屬性的名稱為 ColumnWidth。|  
   

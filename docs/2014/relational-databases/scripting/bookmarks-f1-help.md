@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 72d3091d9d247dbe1faa7e94d6c6f66ec164409c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f4036e8d1b5419737af8de4de6fa92a0eabd53f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063474"
 ---
 # <a name="bookmarks-f1-help"></a>書籤 F1 說明
 
- 此章節包含  **中 [書籤]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 頁面的 F1 說明。  
+ 此章節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [書籤] 頁面的 F1 說明。  
   
  [管理書籤](manage-bookmarks.md)

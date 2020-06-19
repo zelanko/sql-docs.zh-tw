@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed13712678ab599e55b539d6226142b686106fe5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774966"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931942"
 ---
 # <a name="upgrade-database-engine"></a>升級 Database Engine
   本主題提供了您在準備和了解升級程序時所需要的資訊，其中涵蓋：  
@@ -102,7 +101,7 @@ ms.locfileid: "62774966"
  您可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安裝精靈來升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>升級後的資料庫相容性層級  
- 升級之後`tempdb`， `model`、 `msdb`和**資源**資料庫的相容性層級會設定為120。 `master` 系統資料庫會繼續保有升級前的相容性層級。  
+ `tempdb`升級之後，、和資源資料庫的相容性層級 `model` `msdb` 會設定為120。 **Resource** `master` 系統資料庫會繼續保有升級前的相容性層級。  
   
  如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]所支援的最低相容性層級)。  
   

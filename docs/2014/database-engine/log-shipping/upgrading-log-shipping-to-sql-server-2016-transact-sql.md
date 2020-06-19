@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 773426ed91039ee4c0c6fd224547e44102f9846b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80330d03853c984cfd26100b02918eb218705085
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175414"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931129"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>將記錄傳送升級至 SQL Server 2014 (Transact-SQL)
   當您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時，可保留記錄傳送組態。 本主題描述升級記錄傳送組態的替代案例和最佳做法。
@@ -181,7 +180,7 @@ ms.locfileid: "78175414"
 5.  將用戶端從原始主要伺服器 (伺服器 A) 重新導向線上次要伺服器 (伺服器 B) 來容錯移轉資料庫。
 
     > [!IMPORTANT]
-    >  當您容錯移轉到新的主要資料庫時，應該確保其中繼資料與原始主要資料庫的中繼資料一致。 如需詳細資訊，請參閱[在另一個伺服器實例上提供資料庫時管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。
+    >  當您容錯移轉到新的主要資料庫時，應該確保其中繼資料與原始主要資料庫的中繼資料一致。 如需詳細資訊，請參閱 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。
 
 ##  <a name="upgrading-multiple-secondary-server-instances"></a><a name="MultipleSecondaries"></a>升級多個次要伺服器實例
  這個組態會在下圖中表示，其中顯示主要伺服器執行個體 A 及兩個次要伺服器執行個體 B 和 C。

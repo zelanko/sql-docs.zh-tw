@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce04befcb4c8558216cecded6cb1892c3106295f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058144"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965668"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>匯入和匯出封裝 (SSIS 服務)
     
@@ -50,7 +49,7 @@ ms.locfileid: "66058144"
   
  您可以在下列位置之間匯入或匯出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝：  
   
--   您可以匯入儲存在實例[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、檔案系統或[!INCLUDE[ssIS](../includes/ssis-md.md)]封裝存放區中的封裝。 匯入的封裝將儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區內的資料夾中。  
+-   您可以匯入儲存在實例 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、檔案系統或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區中的封裝。 匯入的封裝將儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區內的資料夾中。  
   
 -   您可以將儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體、檔案系統或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區內的封裝匯出至不同的儲存格式和位置。  
   
@@ -64,17 +63,17 @@ ms.locfileid: "66058144"
   
 #### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來匯入封裝  
   
-1.  按一下 [**開始**]，指向 [ **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]]，然後按一下 [ **SQL Server Management Studio**]。  
+1.  按一下 [**開始**]，指向 [ **Microsoft** ] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，然後按一下 [ **SQL Server Management Studio**]。  
   
 2.  在 [連接到伺服器]**** 對話方塊上，設定下列選項：  
   
     -   在 [伺服器類型]**** 方塊中，選取 [Integration Services]****。  
   
-    -   在 [**伺服器名稱**] 方塊中，提供伺服器名稱，或按一下** \<[流覽其他 ...] >** 並尋找要使用的伺服器。  
+    -   在 [**伺服器名稱**] 方塊中，提供伺服器名稱，或按一下 **\<Browse for more...>** 並找出要使用的伺服器。  
   
 3.  如果物件總管尚未開啟，請在 [檢視]**** 功能表上，按一下物件總管****。  
   
-4.  在物件總管中，展開 [存放的封裝]**** 資料夾。  
+4.  在物件總管中，展開 [**儲存的封裝**] 資料夾。  
   
 5.  展開子資料夾以尋找您要匯入封裝的資料夾。  
   
@@ -100,17 +99,17 @@ ms.locfileid: "66058144"
   
 #### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來匯出封裝  
   
-1.  按一下 [**開始**]，指向 [ **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]]，然後按一下 [ **SQL Server Management Studio**]。  
+1.  按一下 [**開始**]，指向 [ **Microsoft** ] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，然後按一下 [ **SQL Server Management Studio**]。  
   
 2.  在 [**連接到伺服器**] 對話方塊中，設定下列選項：  
   
     -   在 [伺服器類型]**** 方塊中，選取 [Integration Services]****。  
   
-    -   在 [**伺服器名稱**] 方塊中，提供伺服器名稱，或按一下** \<[流覽其他 ...] >** 並尋找要使用的伺服器。  
+    -   在 [**伺服器名稱**] 方塊中，提供伺服器名稱，或按一下 **\<Browse for more...>** 並找出要使用的伺服器。  
   
 3.  如果物件總管尚未開啟，請在 [檢視]**** 功能表上，按一下物件總管****。  
   
-4.  在物件總管中，展開 [**儲存的封裝**] 資料夾。  
+4.  在物件總管中，展開 [存放的封裝]**** 資料夾。  
   
 5.  展開子資料夾，以找出您要匯出的封裝。  
   

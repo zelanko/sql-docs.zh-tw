@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1690e2772de50258a69a4a33b048f16f7da2caca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067295"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939712"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>從 SQL Server Data Tools 部署 (SSAS 表格式)
   使用本主題的工作，透過 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [部署] 命令來部署表格式模型方案。  
@@ -37,7 +36,7 @@ ms.locfileid: "66067295"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的方案總管**** 中，以滑鼠右鍵按一下專案名稱，然後按一下 [屬性]****。  
   
-2.  在 [ ** \<專案名稱> 屬性**] 對話方塊的 [**部署選項**] 中，指定屬性設定（如果不同于預設設定）。  
+2.  在 [ ** \<project name> 屬性**] 對話方塊的 [**部署選項**] 中，指定屬性設定（如果不同于預設設定）。  
   
     > [!NOTE]  
     >  快取模式之模型的 [查詢模式]**** 一律是 [記憶體內部]****。  
@@ -54,7 +53,7 @@ ms.locfileid: "66067295"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>若要部署表格式模型方案  
   
--   在[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 [**建立**] 功能表上，按一下 [**部署\<專案名稱>**]。  
+-   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [**建立**] 功能表上，按一下 [**部署 \<project name> **]。  
   
      [部署]**** 對話方塊將會出現，並指出模型中包含之每個資料表的中繼資料部署與處理狀態 (除非 [處理選項] 屬性設為 [不處理])。 部署程序完成後，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 連接至 Analysis Services 執行個體，並確認已建立新的模型資料庫物件，或使用用戶端報表應用程式連接至已部署的模型。  
   

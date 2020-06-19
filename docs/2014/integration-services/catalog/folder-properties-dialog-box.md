@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7d04a071bd5d74ddff6c2dc682c0f6153a8f8b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc76f612f598144172ac81f8addbe0a25ec15e54
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771584"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924379"
 ---
 # <a name="folder-properties-dialog-box"></a>資料夾屬性對話方塊
   資料夾會包含 `SSISDB` 目錄中的專案和環境。 每個資料夾都會定義套用到資料夾內容的權限。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 權限的詳細資訊，請參閱 [catalog.grant_permission &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)。  
@@ -28,7 +27,7 @@ ms.locfileid: "62771584"
   
 1.  以滑鼠右鍵按一下該資料夾，然後選取 [屬性]  。  
   
-2.  在 [一般]  頁面上，選取 [一般]  底下的 [描述]  ，然後選擇性地輸入描述。  
+2.  在 [一般] 頁面上，選取 [一般] 底下的 [描述]，然後選擇性地輸入描述。  
   
 3.  在 [權限]  頁面上，按一下 [瀏覽]  ，選取一或多個資料庫主題，然後按一下 [確定]  。  
   

@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d85fc4c21f200bcdc5a489cfcee6b50bc9f4b98e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50cf10a9a745b3a111deb5db6be356d10d204d4a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479909"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971715"
 ---
 # <a name="create-an-entity-master-data-services"></a>建立實體 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立實體以包含成員及其屬性。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -53,7 +52,7 @@ ms.locfileid: "65479909"
   
 8.  從 [**啟用明確階層和集合**] 清單中，選取下列其中一個選項：  
   
-    -   **No**。 如果不需要啟用明確階層和集合的實體，請選取這個選項。 您稍後可以視需要加以變更。  
+    -   **否**。 如果不需要啟用明確階層和集合的實體，請選取這個選項。 您稍後可以視需要加以變更。  
   
     -   **是**。 如果想要啟用明確階層和集合的實體，請選取這個選項。 在 [**明確階層名稱**] 方塊中，輸入名稱。 （選擇性）選取 **[強制階層（包含所有分葉成員**]，讓明確階層成為強制階層。  
   

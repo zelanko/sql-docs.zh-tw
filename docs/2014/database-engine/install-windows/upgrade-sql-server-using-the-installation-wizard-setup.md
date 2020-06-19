@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fac51c7916e6fda90d4f04d5e6f3603709e48dd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775392"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931819"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>使用安裝精靈升級為 SQL Server 2014 (安裝程式)
    安裝精靈提供了升級  元件的單一功能樹狀目錄。 您也可以將 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 與舊版並存安裝，或是從舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉現有的資料庫和組態設定，然後將它們套用至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的執行個體。  
@@ -38,7 +37,7 @@ ms.locfileid: "62775392"
 > [!NOTE]  
 >  在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Core SP1 的電腦上，不支援將舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升級為 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]。 如需 Server Core 安裝的詳細資訊，請參閱[在 Server core 上安裝 SQL Server 2014](install-sql-server-on-server-core.md)。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  您必須以系統管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取和執行權限並且為本機系統管理員的網域帳戶。  
   
  在升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之前，請檢閱下列主題：  
@@ -54,7 +53,7 @@ ms.locfileid: "62775392"
 -   [SQL Server Database Engine 回溯相容性](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  請注意，您無法變更要升級的功能，而且您無法在升級作業期間加入功能。 如需如何在升級作業完成後將功能加入升級後[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之實例的詳細資訊，請參閱[將功能加入至 SQL Server 2014 的實例 &#40;安裝程式&#41;](add-features-to-an-instance-of-sql-server-setup.md)。  
+>  請注意，您無法變更要升級的功能，而且您無法在升級作業期間加入功能。 如需如何在升級作業完成後將功能加入升級後之實例的詳細資訊 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，請參閱[將功能加入至 SQL Server 2014 的實例 &#40;安裝程式&#41;](add-features-to-an-instance-of-sql-server-setup.md)。  
   
 ## <a name="procedure"></a>程序  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62775392"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體，然後在根資料夾中，按兩下 Setup.exe。 若要從網路共用區進行安裝，請移到共用區上的根資料夾，然後按兩下 Setup.exe。  
   
-2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]升級現有的實例，請按一下左側導覽區域中的 [**安裝**]，然後按一下 [**從[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]升級**]。  
+2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要升級現有的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請按一下左側導覽區域中的 [**安裝**]，然後按一下 [**從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或升級**]。  
   
 3.  在 [產品金鑰] 頁面上，按一下選項，指出您要升級為免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，還是您擁有產品之產品版本的 PID 金鑰。 如需詳細資訊，請參閱[SQL Server 2014 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[支援的版本與版本升級](supported-version-and-edition-upgrades.md)。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62775392"
      右窗格會顯示選取功能的必要條件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會在這個程序稍後說明的安裝步驟期間安裝尚未安裝的必要條件。  
   
     > [!NOTE]  
-    >  如果您選擇只在 [**選取實例**] 頁面上選取 [ ** \<僅升級共用功能>** 來升級共用功能，則會在 [特徵選取] 頁面上預先選取所有共用功能。 所有共用元件都會同時升級。  
+    >  如果您選擇 **\<Upgrade shared features only>** 在 [**選取實例**] 頁面上選取以升級共用功能，則會在 [特徵選取] 頁面上預先選取所有共用功能。 所有共用元件都會同時升級。  
   
 12. 在 [執行個體組態] 頁面上，指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的執行個體識別碼。  
   
@@ -126,7 +125,7 @@ ms.locfileid: "62775392"
   
 -   **更新統計資料**：若要協助最佳化查詢效能，我們建議您在升級之後，更新所有資料庫的統計資料。 請使用 `sp_updatestats` 預存程序更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中使用者定義資料表的統計資料。  
   
--   **設定新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的安裝**-為了減少系統的可攻擊介面區， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會選擇性地安裝和啟用主要服務和功能。 如需有關介面區組態的詳細資訊，請參閱這一版的讀我檔案。  
+-   **設定新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝**-為了減少系統的可攻擊介面區，會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 選擇性地安裝和啟用主要服務和功能。 如需有關介面區組態的詳細資訊，請參閱這一版的讀我檔案。  
   
 ## <a name="see-also"></a>另請參閱  
  [升級至 SQL Server 2014](upgrade-sql-server.md)   

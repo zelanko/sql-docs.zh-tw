@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92485676ba8340163c9fc1251be45f89336acf93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75f7ac8b8bfcb561376d7bb58eb7938712e79690
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008244"
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>Analysis Server 屬性 (進階索引標籤)
   這個服務是 Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 如果定義了自訂屬性，屬性與其值會在這個索引標籤上顯示。  

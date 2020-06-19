@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5813279b-52ca-4232-8826-38001467d9bd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bf462fc9084468b3a76b7c6bd61f07a16ae4f466
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a6ae5036e64f4d9dd103d8d3cd78d70a2b98b40
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054344"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972388"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>WMI 事件監看員工作編輯器 (一般頁面)
   使用 [WMI 事件監看員工作編輯器]**** 對話方塊的 [一般]**** 頁面，即可命名和描述 WMI 事件監看員工作。  
@@ -33,7 +32,7 @@ ms.locfileid: "66054344"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入 WMI 事件監看員工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

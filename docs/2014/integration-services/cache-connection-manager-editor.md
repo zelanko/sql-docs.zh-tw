@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 403210fd8a60cdfb7e92b18f9bb66ccb0a6f1f4c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061079"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924619"
 ---
 # <a name="cache-connection-manager-editor"></a>快取連接管理員編輯器
   快取連接管理員會從快取轉換或快取檔案 (.caw) 中讀取參考資料集，而且可以將資料儲存至快取檔案。 資料永遠會儲存在記憶體中。  
@@ -42,7 +41,7 @@ ms.locfileid: "66061079"
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的快取連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
- **描述**  
+ **說明**  
  描述連接。 最佳作法是根據其用途描述連接，使封裝可以自我記錄並易於維護。  
   
  **使用檔案快取**  
@@ -57,7 +56,7 @@ ms.locfileid: "66061079"
   
 -   從快取檔案中讀取資料。  
   
- [檔案名稱]****  
+ **檔案名稱**  
  輸入快取檔案的路徑和檔案名稱。  
   
  **瀏覽**  
@@ -83,7 +82,7 @@ ms.locfileid: "66061079"
 > [!NOTE]  
 >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。  
   
- **類型**  
+ **型別**  
  指定資料行的資料類型。  
   
  `Length`  

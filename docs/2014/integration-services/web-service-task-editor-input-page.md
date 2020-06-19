@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa1858469ec8756f05e186ca1cb50c966ee47268
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054521"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972458"
 ---
 # <a name="web-service-task-editor-input-page"></a>Web 服務工作編輯器 (輸入頁面)
   使用 [Web 服務工作編輯器]**** 對話方塊的 [輸入]**** 頁面，即可指定 Web 服務、Web 方法，以及提供給 Web 方法的輸入值。 在 [值] 資料行中直接輸入字串，或是在 [值] 資料行中選取變數，即可提供這些值。  
@@ -27,7 +26,7 @@ ms.locfileid: "66054521"
  若要了解這個工作，請參閱 [Web 服務工作](control-flow/web-service-task.md)。  
   
 ## <a name="options"></a>選項。  
- **Service**  
+ **服務**  
  從清單中選取要用於執行 Web 方法的 Web 服務。  
   
  **方法**  
@@ -39,7 +38,7 @@ ms.locfileid: "66054521"
  **名稱**  
  列出 Web 方法之輸入的名稱。  
   
- **類型**  
+ **型別**  
  列出輸入的資料類型。  
   
 > [!NOTE]  

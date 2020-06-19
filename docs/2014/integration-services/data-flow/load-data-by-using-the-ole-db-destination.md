@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 138db9b23aba930f47e850599d04ba7f5c8e6320
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902232"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915366"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>使用 OLE DB 目的地來載入資料
   若要加入及設定 OLE DB 目的地，封裝必須已包括至少一個「資料流程」工作與來源。  
@@ -36,7 +35,7 @@ ms.locfileid: "62902232"
   
 5.  按兩下 OLE DB 目的地。  
   
-6.  在 [連接管理員]  頁面的 [OLE DB 目的地編輯器]  對話方塊中，選取現有的 OLE DB 連接管理員，或按一下 [新增]  以新建連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
+6.  在 [連接管理員] 頁面的 [OLE DB 目的地編輯器] 對話方塊中，選取現有的 OLE DB 連接管理員，或按一下 [新增] 以新建連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
   
 7.  選取資料存取方法：  
   

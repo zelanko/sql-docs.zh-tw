@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 88dbc58a205a87f1b4c2e187537eef9d9c493cf1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a994ee7b9e01b310ba9d90c5acf35ba93877c0a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059773"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939104"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>資料採礦查詢轉換編輯器 (採礦模型索引標籤)
   使用 **[資料採礦查詢轉換編輯器]** 對話方塊的 **[採礦模型]** 索引標籤，來選取資料採礦結構及其採礦模型。  
@@ -27,7 +26,7 @@ ms.locfileid: "66059773"
  若要深入了解資料採礦查詢轉換，請參閱＜ [Data Mining Query Transformation](data-flow/transformations/data-mining-query-transformation.md)＞。  
   
 ## <a name="options"></a>選項。  
- **建立**  
+ **[連接]**  
  使用清單方塊來選取現有的 Analysis Services 連接，或使用 [新增]**** 按鈕來建立新的連接，如下所述。  
   
  **新增**  

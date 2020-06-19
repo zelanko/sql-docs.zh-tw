@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a435875-cbee-49d1-914c-4aa15fad7628
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cdf32878788bd68f9f0da36500be75fed5b96691
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a904ebd4330c1207fe2f5b0cbef6756d6370b4f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938469"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>技術參考 (適用於 Excel 的資料採礦增益集)
   適用於 Office 的資料採礦增益集具有對程式設計人員和進階資料採礦人員很實用的功能。  

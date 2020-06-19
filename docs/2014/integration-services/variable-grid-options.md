@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0e53d710c6c3310641a30144a42ea5f614dffd6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054680"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972578"
 ---
 # <a name="variable-grid-options"></a>變數方格選項
   使用 **[變數方格選項]** 對話方塊選擇將顯示在 **[變數]** 視窗中的資料行，並選取要套用到此變數清單的篩選。 如需所對應之變數屬性的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)。  
@@ -40,7 +39,7 @@ ms.locfileid: "66054680"
   
 -   **範圍**  
   
--   **資料類型**  
+-   **Data type**  
   
 -   **ReplTest1**  
   
@@ -48,9 +47,9 @@ ms.locfileid: "66054680"
   
 -   **變數值變更時引發事件**  
   
--   **描述**  
+-   **說明**  
   
--   **運算式**  
+-   **運算是**  
   
 ## <a name="see-also"></a>另請參閱  
  [變數視窗](../../2014/integration-services/variables-window.md)   

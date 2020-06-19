@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8eb90b24b8b1d6d9137022a5128d78183dcf077
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767350"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951408"
 ---
 # <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>步驟 2:將專案轉換成專案部署模型
   在這個工作中，您將使用 Integration Services 專案轉換精靈，將專案轉換為專案部署模型。  

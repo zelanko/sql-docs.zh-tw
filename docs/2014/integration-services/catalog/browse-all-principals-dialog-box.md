@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 46d6fd5d4ecd821a3ccfeb35679e8fa7bab6104e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbc063300616567f3d6c83e7a0898dd915878abf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771714"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924499"
 ---
 # <a name="browse-all-principals-dialog-box"></a>瀏覽所有主體對話方塊
   使用 [瀏覽所有主體]  對話方塊選取資料庫主體，以變更主體在所選專案或所選資料夾中包含之所有專案上的權限。  
@@ -50,7 +49,7 @@ ms.locfileid: "62771714"
  若選取主體，在您按一下 **[確定]** 並關閉 **[瀏覽所有主體]** 對話方塊時，它們就會加入至父對話方塊中 **[權限]** 頁面上的 **[登入或角色]** 清單。 將主體加入至 **[登入或角色]** 清單後，您可以變更它們在所選專案上的權限。  
   
  **選取資料行**  
- 選取此選項即可將主體加入至父對話方塊中 [權限]  頁面上的 [登入或角色]  清單。  
+ 選取此選項即可將主體加入至父對話方塊中 [權限] 頁面上的 [登入或角色] 清單。  
   
  **圖示資料行**  
  與主體之 [類型]  對應的圖示。  

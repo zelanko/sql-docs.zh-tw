@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0682c6100a96fbfb3016dec4bead4c385190192f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87866ebff3a7c6ae74157053492b76f49d713927
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470035"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048470"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 元素 (DTA)
   Database Engine Tuning Advisor XML 輸入或輸出檔的根元素， **DTAXML** 包含說明 Database Engine Tuning Advisor 所產生之微調輸入和微調輸出的所有元素。  
@@ -48,7 +47,7 @@ ms.locfileid: "62470035"
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
-|**次出現**|每個 DTA XML 檔需要使用這個元素一次。|  
+|**出現次數**|每個 DTA XML 檔需要使用這個元素一次。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   

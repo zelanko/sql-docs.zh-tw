@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c366cca32c8d441ff25f9688a841e2f0fac77a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e7db48f0ee7241bedcd7536133450a2a41cd8f9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204550"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048550"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>資料表值物件屬性 (Visual Database Tools)
   您在查詢和檢視表設計工具  中選取資料表值物件時，這些屬性就會出現在 [屬性] 視窗中。 資料表值物件可以是檢視、同義字、衍生資料表，或是資料表值函數。 除非另有說明，這些屬性在 [屬性]  視窗中都是唯讀的。  

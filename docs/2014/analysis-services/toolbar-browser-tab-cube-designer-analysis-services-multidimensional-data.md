@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d1135be55065ab62e649d84c00cec4eebf60b58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba90d60a9ec3b3651c4889be423a5c1311fc9c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175577"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938479"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中使用 [工具列]**** 內的功能執行常見的作業，同時設計或瀏覽 Cube 或其物件，或者建立 MDX 查詢。 設計階段與查詢檢視通用的作業包括設定使用者內容、處理物件，以及設定預設語言。
@@ -51,7 +50,7 @@ ms.locfileid: "78175577"
 
 -   **顯示彙總** (![顯示彙總按鈕](media/rsqdicon-showaggregations.gif "顯示彙總按鈕"))
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 |選項|描述|
 |------------|-----------------|

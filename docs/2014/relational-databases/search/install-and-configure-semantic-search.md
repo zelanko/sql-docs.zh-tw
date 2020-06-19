@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d95e0bb2adf3bacf7057b881ab2e85afd50feef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637912"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063243"
 ---
 # <a name="install-and-configure-semantic-search"></a>安裝及設定語意搜尋
   描述統計語意搜尋的必要元件以及如何安裝或檢查這些必要元件。  
@@ -61,9 +60,9 @@ GO
   
     -   在 **安裝媒體上，找到名稱為** SemanticLanguageDatabase.msi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Windows Installer 套件。 找到 32 位元或 64 位元版本的 Installer 套件 (視目標系統而定)。 包含資料夾名稱可識別檔案的 32 位元或 64 位元版本；這兩種版本的檔案名稱本身相同。  
   
-    -   要從 Microsoft 下載安裝程式套件[嗎？SQL Server？？2014語意語言統計資料](https://go.microsoft.com/fwlink/?LinkID=296743)] 頁面上[!INCLUDE[msCoName](../../../includes/msconame-md.md)]的 [下載中心]。  
+    -   要從 Microsoft 下載安裝程式套件[嗎？SQL Server？？2014語意語言統計資料](https://go.microsoft.com/fwlink/?LinkID=296743)] 頁面上的 [ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 下載中心]。  
   
-2.  執行**semanticlanguagedatabase.msi**的 Windows installer 封裝，將資料庫和記錄檔解壓縮。  
+2.  執行**SemanticLanguageDatabase.msi**的 Windows installer 套件，以將資料庫和記錄檔解壓縮。  
   
      您可以選擇性地變更目的地目錄。 根據預設，安裝程式會將檔案解壓縮至32位或64位 Program Files 資料夾中名為**Microsoft 語義語言資料庫**的資料夾。 MSI 檔案包含壓縮的資料庫檔案和記錄檔。  
   

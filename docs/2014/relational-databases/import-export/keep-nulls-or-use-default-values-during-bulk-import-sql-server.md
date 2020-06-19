@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 856aa12f6ad5e5094324e0df65941bc63d611451
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011896"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026690"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>大量匯入期間保留 Null 或使用預設值 (SQL Server)
   根據預設，當資料匯入資料表時， **bcp** 命令和 BULK INSERT 陳述式會查看資料表中的資料行是否已定義預設值。 例如，若資料檔中有一個 Null 值欄位，將會以載入該資料行的預設值來取代。 **bcp** 命令和 BULK INSERT 陳述式都可讓您指定保留 Null 值。  
@@ -39,7 +38,7 @@ ms.locfileid: "66011896"
  若要執行此主題中的範例，您必須建立範例資料表與資料檔。  
   
 ### <a name="sample-table"></a>範例資料表  
- 在此範例中，必須將名為 **MyTestDefaultCol2** 的資料表，建立在 **AdventureWorks** 範例資料庫中的 **dbo** 結構描述下。 若要建立此資料表， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]請在 [查詢編輯器] 中執行：  
+ 在此範例中，必須將名為 **MyTestDefaultCol2** 的資料表，建立在 **AdventureWorks** 範例資料庫中的 **dbo** 結構描述下。 若要建立此資料表，請在 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器] 中執行：  
   
 ```  
 USE AdventureWorks;  
@@ -79,7 +78,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
 |Command|Qualifier|限定詞類型|  
 |-------------|---------------|--------------------|  
-|**bcp**|`-k`|Switch|  
+|**bcp**|`-k`|參數|  
 |BULK INSERT|KEEPNullS<sup>1</sup>|引數|  
   
  <sup>1</sup>針對 BULK INSERT，如果無法使用預設值，則必須將資料表資料行定義為允許 null 值。  
@@ -99,7 +98,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- 若要插入`NULL`"" 而非`Default value of Col2`""，您必須使用`-k` switch 或 KEEPNull 選項，如下列**bcp**和 BULK INSERT 範例所示。  
+ 若要插入 " `NULL` " 而非 " `Default value of Col2` "，您必須使用 `-k` switch 或 KEEPNull 選項，如下列**bcp**和 BULK INSERT 範例所示。  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>使用 bcp 並保留 Null 值  
  下列範例示範如何使用 **bcp** 命令保留 Null 值。 **Bcp**命令包含下列參數：  
