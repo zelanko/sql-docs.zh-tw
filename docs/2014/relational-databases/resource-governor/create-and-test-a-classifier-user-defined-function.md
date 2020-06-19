@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b8e5371762e38cf2b3ac8c1d506b467dcfa7e3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212000"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063636"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>建立和測試分類使用者定義函數
   本主題說明如何建立和測試分類使用者定義函數 (UDF)。 這些步驟將包含在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器中執行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 陳述式。  
@@ -263,16 +262,16 @@ ms.locfileid: "68212000"
         >  以下是我們建議的最佳做法。 如果有問題導致無法遵循下列最佳做法，建議您連絡 Microsoft 支援部門，以便主動避免未來發生任何問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [Resource Governor](resource-governor.md)   
- [啟用 Resource Governor](enable-resource-governor.md)   
- [Resource Governor 資源集區](resource-governor-resource-pool.md)   
- [Resource Governor 工作負載群組](resource-governor-workload-group.md)   
- [使用範本設定 Resource Governor](configure-resource-governor-using-a-template.md)   
- [View Resource Governor 屬性](view-resource-governor-properties.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
- [建立資源集區 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [建立工作負載群組 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
- [CREATE FUNCTION &#40;Transact-sql&#41;](/sql/t-sql/statements/create-function-transact-sql)   
+ [資源管理員](resource-governor.md)   
+ [啟用資源管理員](enable-resource-governor.md)   
+ [資源管理員資源集區](resource-governor-resource-pool.md)   
+ [資源管理員工作負載群組](resource-governor-workload-group.md)   
+ [使用範本來設定資源管理員](configure-resource-governor-using-a-template.md)   
+ [檢視資源管理員屬性](view-resource-governor-properties.md)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 35f7bcf1c8e5ebcb225a9198944cf4144321bad3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1c2a07ae5d4248b4c37ab5fa8124582c99a1e6f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063416"
 ---
 # <a name="use-the-sqlcmd-utility"></a>使用 sqlcmd 公用程式
   `sqlcmd` 公用程式是命令列公用程式，可用來執行特定的互動式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和指令碼，以及用於自動化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作。 若要以互動方式使用 `sqlcmd`，或是要建立透過 `sqlcmd` 執行的指令碼檔案，使用者必須了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 一般而言，`sqlcmd` 公用程式的使用方式如下：  
@@ -562,8 +561,8 @@ SQLCMD -E -N -C
   
 ## <a name="see-also"></a>另請參閱  
  [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   
- [搭配腳本變數使用 sqlcmd](sqlcmd-use-with-scripting-variables.md)   
- [使用查詢編輯器編輯 SQLCMD 腳本](edit-sqlcmd-scripts-with-query-editor.md)   
+ [以指令碼變數使用 sqlcmd](sqlcmd-use-with-scripting-variables.md)   
+ [使用查詢編輯器編輯 SQLCMD 指令碼](edit-sqlcmd-scripts-with-query-editor.md)   
  [管理作業步驟](../../ssms/agent/manage-job-steps.md)   
  [建立 CmdExec 作業步驟](../../ssms/agent/create-a-cmdexec-job-step.md)  
   

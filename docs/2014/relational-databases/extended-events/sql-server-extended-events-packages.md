@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93691dccde430e7f636f956229b5305b211449f8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45c452300c008d486bd1f4ab4c92b5f76b96ecd8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719172"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027380"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 擴充事件封裝
   封裝是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 擴充事件物件的容器。 有三種擴充事件封裝，包括以下項目：  
@@ -46,7 +45,7 @@ ms.locfileid: "82719172"
   
 -   述詞  
   
--   地圖服務  
+-   地圖  
   
  不同封裝中的物件可以混合在事件工作階段中。 如需詳細資訊，請參閱 [SQL Server 擴充的事件工作階段](sql-server-extended-events-sessions.md)。  
   
@@ -70,14 +69,14 @@ ms.locfileid: "82719172"
 #### <a name="event-categorization"></a>事件分類  
  擴充的事件會使用類似於 Windows 事件追蹤 (ETW) 的事件分類模型。 會有兩個事件屬性用於分類，也就是通道和關鍵字。 使用這些屬性可支援將擴充的事件與 ETW 及其工具整合。  
   
- **頻道**  
+ **通道**  
   
  通道會識別事件的使用者。 下表將描述這些通道。  
   
 |詞彙|定義|  
 |----------|----------------|  
 |管理|管理事件所針對的主要目標是使用者、管理員和支援人員。 在管理通道中找到的事件會指出問題，並列出定義完善的方案，供管理員做為採取動作之依據。 管理事件的一個範例就是應用程式無法連接到印表機。 這些事件不是會完善記載下來，就是有與其相關的訊息來告訴讀者該做什麼事情來修正問題。|  
-|作業|作業事件是用來分析及診斷問題或出現次數， 這些事件可用來觸發以問題或出現次數為根據的工具或工作。 在系統中新增或移除印表機時即為作業事件的一個範例。|  
+|運作|作業事件是用來分析及診斷問題或出現次數， 這些事件可用來觸發以問題或出現次數為根據的工具或工作。 在系統中新增或移除印表機時即為作業事件的一個範例。|  
 |分析|分析事件的發行量很大， 這些事件會描述程式作業，而且通常用於效能調查。|  
 |偵錯|偵錯事件只能由開發人員使用，以便診斷問題進行偵錯。<br /><br /> 注意： Debug 通道中的事件會傳回內部執行特定的狀態資料。 事件所傳回的結構描述和資料在 SQL Server 的未來版本中可能會改變或變得無效。 因此，偵錯通道中的事件在 SQL Server 的未來版本中可能會改變或被移除，恕不另行通知。|  
   
@@ -147,11 +146,11 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   類型  
+-   type  
   
  如需詳細資訊，請參閱 [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)。  
   
-### <a name="maps"></a>地圖服務  
+### <a name="maps"></a>地圖  
  對應表會將內部值對應到字串，如此可讓使用者得知該值所表示的意義。 使用者不只能夠取得數值，也可以取得有意義的內部值描述。 下列查詢將示範如何取得對應值。  
   
 ```  

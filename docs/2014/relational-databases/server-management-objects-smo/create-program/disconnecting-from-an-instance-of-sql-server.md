@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7783fa93912c305403cc34ad6e52668123d164ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3430048a52b3dce5e82d6b7af2d6a8162841d062
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192069"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063163"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>從 SQL Server 的執行個體中斷連接
   您並不需要以手動方式關閉和中斷 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 物件的連接。 連接會視需要開啟和關閉。  
@@ -31,7 +30,7 @@ ms.locfileid: "63192069"
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>從 RMO 的 SQL Server 執行個體中斷連接  
  在使用 RMO 進行程式開發時關閉伺服器連接，與使用 SMO 時稍有不同。  
   
- 由於 RMO 物件的伺服器連接是由<xref:Microsoft.SqlServer.Management.Common.ServerConnection>物件維護，因此[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]當您使用 RMO 進行程式設計時，也會使用這個物件來與的實例中斷連接。 若要使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件關閉連接，請呼叫 RMO 物件的 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 方法。 在關閉連接之後，就無法使用 RMO 物件。  
+ 由於 RMO 物件的伺服器連接是由物件維護，因此 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 當您使用 RMO 進行程式設計時，也會使用這個物件來與的實例中斷連接。 若要使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件關閉連接，請呼叫 RMO 物件的 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 方法。 在關閉連接之後，就無法使用 RMO 物件。  
   
 ## <a name="example"></a>範例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

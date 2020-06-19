@@ -15,18 +15,17 @@ topic_type:
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4350badedcaf2a4e2b977b57cf9e6cfde6c1b275
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cce316685bccb2724eb89965e4e466fe58fb807e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032226"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027731"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 函數
   傳回指定之 SQL Server Express LocalDB 版本的資訊，例如此版本是否存在，以及完整的 LocalDB 版本號碼 (包括組建和發行版本號碼)。  
   
- 此資訊會以`struct`名為**LocalDBVersionInfo**的形式傳回，其具有下列定義。  
+ 此資訊會以 `struct` 名為**LocalDBVersionInfo**的形式傳回，其具有下列定義。  
   
 ```  
 typedef struct _LocalDBVersionInfo  
@@ -68,7 +67,7 @@ HRESULT LocalDBGetVersionInfo(
  *dwVersionInfoSize*  
  源保留*VersionInfo*緩衝區的大小。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   
@@ -85,9 +84,9 @@ HRESULT LocalDBGetVersionInfo(
  發生意外錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="details"></a>詳細資料  
- 引進`struct`大小引數（*lpVersionInfoSize*）背後的原理是讓 API 能夠傳回不同版本的**LocalDBVersionInfostruct**，並有效地啟用向前和向後相容性。  
+ 引進 `struct` 大小引數（*lpVersionInfoSize*）背後的原理是讓 API 能夠傳回不同版本的**LocalDBVersionInfostruct**，並有效地啟用向前和向後相容性。  
   
- 如果`struct`大小引數（*LpVersionInfoSize*）符合**LocalDBVersionInfostruct**已知版本的大小，則`struct`會傳回該版本的。 否則會傳回 LOCALDB_ERROR_INVALID_PARAMETER。  
+ 如果 `struct` 大小引數（*lpVersionInfoSize*）符合**LocalDBVersionInfostruct**已知版本的大小，則會傳回該版本的 `struct` 。 否則會傳回 LOCALDB_ERROR_INVALID_PARAMETER。  
   
  **LocalDBGetVersionInfo** API 使用方式的典型範例如下所示：  
   

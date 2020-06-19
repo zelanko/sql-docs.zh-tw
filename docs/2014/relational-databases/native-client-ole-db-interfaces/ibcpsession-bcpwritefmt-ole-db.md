@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a547548f84af88ea3790658618570aeed8ce8112
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec126f82b3bae86701f2723bb8b93180916dc6b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695135"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047952"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
   將每個資料行的格式資訊寫入格式檔案。  

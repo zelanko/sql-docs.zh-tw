@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0d0c4862-19c0-4513-a5f4-3fe97f635cf6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 44245b7e64a1ccb16180fd0ceaa0f1dde0937133
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4820fd7f9aeeec02b82b7c55493b3d8bf77c92cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060394"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920149"
 ---
 # <a name="connection-managers-area"></a>連接管理員區域
   封裝會使用連接管理員連接到資料來源，例如檔案、關聯式資料庫和伺服器。  

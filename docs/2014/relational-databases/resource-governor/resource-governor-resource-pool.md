@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6d724d5dc6a9859674f8ae64c9e08486b3ea7cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209880"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063573"
 ---
 # <a name="resource-governor-resource-pool"></a>資源管理員資源集區
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員中，資源集區代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的實體資源子集。 資源管理員可讓您針對內送應用程式要求可在資源集區使用的 CPU、實體 IO 和記憶體數量指定限制。 每個資源集區都會包含一個或多個工作負載群組。 在工作階段啟動時，資源管理員分類會將此工作階段指派給特定的工作負載群組，並且此工作階段必須使用指派給該工作負載群組的資源來執行。  
@@ -117,10 +116,10 @@ ms.locfileid: "63209880"
 |描述如何刪除資源集區。|[刪除資源集區](delete-a-resource-pool.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [Resource Governor](resource-governor.md)   
- [Resource Governor 工作負載群組](resource-governor-workload-group.md)   
+ [資源管理員](resource-governor.md)   
+ [資源管理員工作負載群組](resource-governor-workload-group.md)   
  [Resource Governor 分類函數](resource-governor-classifier-function.md)   
- [使用範本設定 Resource Governor](configure-resource-governor-using-a-template.md)   
+ [使用範本來設定資源管理員](configure-resource-governor-using-a-template.md)   
  [檢視資源管理員屬性](view-resource-governor-properties.md)  
   
   

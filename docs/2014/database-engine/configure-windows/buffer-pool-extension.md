@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42a8873f4046a307e3b8ec1ce703a34bf8cb0df2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175427"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935889"
 ---
 # <a name="buffer-pool-extension"></a>緩衝集區擴充
   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]中導入緩衝集區擴充，可將非動態隨機存取記憶體 (也就是固態硬碟) 擴充完全整合到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 緩衝集區，如此能大幅提升 I/O 輸送量。 並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都有提供緩衝集區擴充。 如需詳細資訊，請參閱＜ [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)＞。
@@ -46,11 +45,11 @@ ms.locfileid: "78175427"
 
  固態硬碟（SSD）固態硬碟會以持續的方式將資料儲存在記憶體（RAM）中。 如需詳細資訊，請參閱 [這個定義](http://en.wikipedia.org/wiki/Solid-state_drive)。
 
- 緩衝區在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，緩衝區是 8 KB 的記憶體頁面，大小與資料或索引頁面相同。 因此，緩衝區快取也分成 8 KB 的頁面。 頁面會保留在緩衝區快取中，直到緩衝區管理員需要緩衝區來讀取更多資料為止。 只有資料修改後，才會重新寫入磁碟。 這些記憶體中已修改的頁面稱為中途分頁。 如果頁面相當於它在磁碟上的資料庫映像，就表示它不是中途頁面。 在重新寫入磁碟之前，可以多次修改緩衝區快取中的資料。
+ 緩衝區在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，緩衝區是 8 KB 的記憶體頁面，大小與資料或索引頁面相同。 因此，緩衝區快取也分成 8 KB 的頁面。 頁面會保留在緩衝區快取中，直到緩衝區管理員需要緩衝區來讀取更多資料為止。 只有資料修改後，才會重新寫入磁碟。 這些記憶體中已修改的頁面稱為中途分頁。 如果頁面相當於它在磁碟上的資料庫映像，就表示它不是中途頁面。 在重新寫入磁碟之前，可以多次修改緩衝區快取中的資料。
 
  緩衝集區也稱為緩衝區快取。 緩衝集區是所有資料庫的快取資料頁面所共用的全域資源。 緩衝集區快取大小的上限和下限是在啟動期間決定，或者當使用 sp_configure 來動態重新設定 SQL Server 的執行個體時所決定。 此大小會決定執行中的執行個體內隨時可在緩衝集區內快取的最大頁數。
 
- 檢查點會建立一個已知的正確點，以便[!INCLUDE[ssDE](../../includes/ssde-md.md)]在非預期的關機或損毀之後，于復原期間開始套用包含在交易記錄中的變更。 檢查點會將中途分頁和交易記錄資訊從記憶體寫入磁碟，也會記錄有關交易記錄的資訊。 如需詳細資訊，請參閱[資料庫檢查點 &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)。
+ 檢查點會建立一個已知的正確點， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 以便在非預期的關機或損毀之後，于復原期間開始套用包含在交易記錄中的變更。 檢查點會將中途分頁和交易記錄資訊從記憶體寫入磁碟，也會記錄有關交易記錄的資訊。 如需詳細資訊，請參閱[資料庫檢查點 &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)。
 
 ## <a name="buffer-pool-extension-details"></a>緩衝集區擴充詳細資料
  SSD 儲存體是當做記憶體子系統的延伸模組來使用，而非磁碟儲存體的子系統。 也就是說，緩衝集區擴充檔案允許緩衝集區管理員使用 DRAM 和 NAND 快閃記憶體，在 SSD 支援的非揮發性隨機存取記憶體中維護較大的 lukewarm 頁面緩衝集區。 這樣會建立多層級快取階層，其中的層級 1 (L1) 為 DRAM，而層級 (L2) 為 SSD 上的緩衝集區擴充檔案。 只有乾淨的頁面會寫入 L2 快取中，如此有助於維護資料安全。 緩衝區管理員會處理 L1 與 L2 快取之間非中途頁面的移動。
@@ -92,7 +91,7 @@ ms.locfileid: "78175427"
 
 |||
 |-|-|
-|**工作描述**|**主題**|
+|**工作描述**|**本文**|
 |啟用及設定緩衝集區擴充|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
 |修改緩衝集區擴充組態|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
 |檢視緩衝集區擴充組態|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 698af283d24598c7ccd669b7e1d14ebcfd26d8d6
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: c2ef4a0546dfced643fb50900e6b56002b617e09
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849812"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928799"
 ---
 # <a name="sql-server-managed-backup-to-azure---retention-and-storage-settings"></a>SQL Server Managed Backup 到 Azure - 保留和儲存體設定
   本主題說明設定資料庫之 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 及設定執行個體之預設設定的基本步驟。 本主題也描述為執行個體暫停及繼續 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 服務的必要步驟。  
@@ -31,7 +30,7 @@ ms.locfileid: "82849812"
   
 -   請勿對目前正在使用維護計劃或記錄傳送的資料庫啟用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 。 如需有關互通性和與其他 SQL Server 功能共存的詳細資訊，請參閱[SQL Server 受控備份至 Azure：互通性與共存](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
   
 -   SQL Server Agent 應在執行中。  
   
@@ -148,7 +147,7 @@ ms.locfileid: "82849812"
 > [!IMPORTANT]  
 >  在設定執行個體的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 前，它對檢查現有的組態 (如果有的話) 也許會有幫助。 檢閱資料庫組態設定的步驟，於本節稍後說明。  
   
- **SQL Server Management Studio** ：若要在 SQL Server Management Studio 中執行這項工作，請移至 [物件總管]，再展開 **[管理]** 節點，並以滑鼠右鍵按一下 **[Managed Backup]**。 選取 [設定]  。 這樣會開啟 **[Managed Backup]** 對話方塊。 使用此對話方塊可指定保留週期、SQL 認證、儲存體 URL 和加密設定。 如需此對話方塊的特定說明，請參閱[設定受管理的備份 &#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md)。  
+ **SQL Server Management Studio** ：若要在 SQL Server Management Studio 中執行這項工作，請移至 [物件總管]，再展開 **[管理]** 節點，並以滑鼠右鍵按一下 **[Managed Backup]**。 選取 [設定] 。 這樣會開啟 **[Managed Backup]** 對話方塊。 使用此對話方塊可指定保留週期、SQL 認證、儲存體 URL 和加密設定。 如需此對話方塊的特定說明，請參閱[設定受管理的備份 &#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md)。  
   
 #### <a name="using-transact-sql"></a>使用 TRANSACT-SQL  
   

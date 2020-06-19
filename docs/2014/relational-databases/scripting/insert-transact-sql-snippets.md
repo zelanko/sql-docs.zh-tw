@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 258934209cf17fd43ea41b6aa07063a2e42b056a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3984f1f7d9744fee36c5fc52af080d783e87615c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703870"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063442"
 ---
 # <a name="insert-transact-sql-snippets"></a>插入 Transact-SQL 程式碼片段
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段是範本，當您在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器中撰寫新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 陳述式時可將它做為起點。  

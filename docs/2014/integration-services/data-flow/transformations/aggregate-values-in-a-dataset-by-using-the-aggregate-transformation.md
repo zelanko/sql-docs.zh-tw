@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10b14aa8a1f68b32c00ecb321c1af36fb15b868e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e181a0d4ebdb2acde1709b18e452f5a290f13c8f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900931"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84913867"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>使用彙總轉換來彙總資料集中的值
   若要加入及設定「彙總」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  
@@ -54,7 +53,7 @@ ms.locfileid: "62900931"
     > [!NOTE]  
     >  提供相異值的數目 (不論是精確值或近似值) 可最佳化效能，因為轉換可以預先配置適當的記憶體容量來執行其工作。  
   
-12. (選擇性) 按一下 **[進階]** ，並更新「彙總」轉換輸出的名稱。 如果匯總包含`Group By`作業，您可以在 [索引**鍵小**數位數] 資料行中選取群組索引鍵值的近似計數，或是在 [索引**鍵**] 資料行中指定精確的群組索引鍵值數目。  
+12. (選擇性) 按一下 **[進階]** ，並更新「彙總」轉換輸出的名稱。 如果匯總包含作業 `Group By` ，您可以在 [索引**鍵小**數位數] 資料行中選取群組索引鍵值的近似計數，或是在 [索引**鍵**] 資料行中指定精確的群組索引鍵值數目。  
   
     > [!NOTE]  
     >  提供相異值的數目 (不論是精確值或近似值) 可最佳化效能，因為轉換可以預先配置適當的記憶體容量來執行其工作。  

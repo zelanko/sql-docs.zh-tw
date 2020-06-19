@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa0d34f100af614a1e2187c265bf01a24f3be7ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66265155"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026894"
 ---
 # <a name="create-a-format-file-sql-server"></a>建立格式檔案 (SQL Server)
   當您將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，或從資料表大量匯出資料時，可以使用格式檔案提供可用來寫入資料檔的彈性系統，幾乎不需要進行編輯即可符合其他資料格式，或是從其他軟體程式讀取資料檔。  
@@ -27,7 +26,7 @@ ms.locfileid: "66265155"
  一般而言，XML 和非 XML 格式檔案可以互換使用， 但是，仍建議您在新的格式檔案中使用 XML 語法，因為 XML 比非 XML 格式檔案多了一些優點。  
   
 > [!NOTE]  
->  用於讀取格式檔案的 **bcp** 公用程式 (Bcp.exe) 版本，必須與用於建立格式檔案的版本相同或比它更新。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**可以讀取由[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**產生的10.0 版格式檔案，但[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**無法讀取由[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**產生的11.0 格式檔案。  
+>  用於讀取格式檔案的 **bcp** 公用程式 (Bcp.exe) 版本，必須與用於建立格式檔案的版本相同或比它更新。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**可以讀取由 bcp 產生的10.0 版格式檔案， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**無法讀取由 bcp 產生的11.0 格式檔案 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ** **。  
   
  此主題描述如何使用 [bcp 公用程式](../../tools/bcp-utility.md) 來建立特定資料表的格式檔案。 格式檔案以指定的資料類型選項 ( **-n**、 **-c**、 **-w**，或 **-N**) 與資料表或檢視分隔符號為基礎。  
   

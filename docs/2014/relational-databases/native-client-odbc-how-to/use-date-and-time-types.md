@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b9373aeec2086e330da95eba343645c0c0d68ab6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a3fe6c753fa432084edd90e820d859263be7c498
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048151"
 ---
 # <a name="use-date-and-time-types"></a>使用日期和時間類型
   此範例顯示如何初始化在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中加入的日期/時間資料結構。 接著，它會準備輸入值、繫結參數，然後執行查詢。 如需有關使用這些類型的詳細資訊，請參閱[ODBC&#41;&#40;的日期和時間改善](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  

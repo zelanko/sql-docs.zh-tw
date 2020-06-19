@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cd7af8f4f8eb3cd0531bc907011846f73f94f6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209687"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063514"
 ---
 # <a name="view-resource-governor-properties"></a>檢視資源管理員屬性
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 [資源管理員屬性] 頁面來建立或設定資源管理員實體，例如資源集區和工作負載群組。  
@@ -126,10 +125,10 @@ ms.locfileid: "63209687"
 2.  若要檢視 Resource Governor 實體的目前組態，請使用 [Resource Governor 相關的動態管理檢視 &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Resource Governor](resource-governor.md)   
- [啟用 Resource Governor](enable-resource-governor.md)   
- [Resource Governor 資源集區](resource-governor-resource-pool.md)   
- [Resource Governor 工作負載群組](resource-governor-workload-group.md)   
- [Resource Governor Classifier Function](resource-governor-classifier-function.md)  
+ [資源管理員](resource-governor.md)   
+ [啟用資源管理員](enable-resource-governor.md)   
+ [資源管理員資源集區](resource-governor-resource-pool.md)   
+ [資源管理員工作負載群組](resource-governor-workload-group.md)   
+ [資源管理員分類函數](resource-governor-classifier-function.md)  
   
   

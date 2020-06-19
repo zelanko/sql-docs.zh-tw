@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34b01bc737e35705a7ec4f49ea07a47faaf2b11d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 720a42b2b3ddf46318ac5412181d70a79b142026
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718440"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063360"
 ---
 # <a name="call-stack-window"></a>呼叫堆疊視窗
   [呼叫堆疊]  視窗會顯示呼叫堆疊上的模組以及傳遞給模組之任何參數的資料類型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組包括預存程序、函數及觸發程序 若要顯示呼叫堆疊，您必須在偵錯模式中。  
@@ -63,7 +62,7 @@ ms.locfileid: "82718440"
  如果是頂端列以外的所有列， **LineNumber** 表示模組中呼叫此框架的那一行。 如果是頂端列， **LineNumber** 表示偵錯工具目前焦點所在的那一行。  
   
  **語言**  
- 顯示  **的 [Transact-SQL]** [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+ 顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的 [Transact-SQL]。  
   
 ## <a name="see-also"></a>另請參閱  
  [Transact-sql 偵錯工具](transact-sql-debugger.md)   

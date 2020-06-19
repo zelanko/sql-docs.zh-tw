@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 21e6a4b3a391840a4240a9f20c4b74f697e4aa5f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d43c0e2e1489974c0eacc7839429b70dfbfde9f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704065"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063469"
 ---
 # <a name="change-font-color-size-and-style"></a>變更字型色彩、大小與樣式
   您可以自訂文字在編輯器及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的其他位置中之呈現方式。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72d392837da4abd28aaf48ed460113c561bd688d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704860"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063588"
 ---
 # <a name="resource-governor"></a>資源管理員
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源管理員是一項功能，可讓您用於管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工作負載和系統資源耗用量。 Resource Governor 可讓您指定內送應用程式要求所能使用的 CPU、實體 IO 和記憶體數量限制。  
@@ -56,9 +55,9 @@ ms.locfileid: "62704860"
   
 -   **資源集區。** 資源集區代表伺服器的實體資源。 您可以將集區視為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體內部的虛擬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，系統會建立兩個資源集區 (內部和預設)。 資源管理員也可支援使用者定義的資源集區。 如需詳細資訊，請參閱 [Resource Governor Resource Pool](resource-governor-resource-pool.md)。  
   
--   **工作負載群組：** 工作負載群組可做為有類似分類準則之工作階段要求的容器。 工作負載允許對工作階段進行彙總監視，並定義工作階段的原則。 每個工作負載群組各在一個資源集區中。 安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，系統會建立兩個工作負載群組 (內部和預設)，並將其對應至相對應的資源集區。 資源管理員也可支援使用者定義的工作負載群組。 如需相關資訊，請參閱 [Resource Governor Workload Group](resource-governor-workload-group.md)。  
+-   **工作負載群組。** 工作負載群組可做為有類似分類準則之工作階段要求的容器。 工作負載允許對工作階段進行彙總監視，並定義工作階段的原則。 每個工作負載群組各在一個資源集區中。 安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，系統會建立兩個工作負載群組 (內部和預設)，並將其對應至相對應的資源集區。 資源管理員也可支援使用者定義的工作負載群組。 如需相關資訊，請參閱 [Resource Governor Workload Group](resource-governor-workload-group.md)。  
   
--   **分類.** 分類程序會根據工作階段的特性，將工作階段指派給工作負載群組。 您可以透過撰寫使用者定義函數 (稱為分類函數) 來自訂分類邏輯。 資源管理員也可支援實作分類規則的使用者定義分類函數。 如需詳細資訊，請參閱 [Resource Governor Classifier Function](resource-governor-classifier-function.md)。  
+-   **分類。** 分類程序會根據工作階段的特性，將工作階段指派給工作負載群組。 您可以透過撰寫使用者定義函數 (稱為分類函數) 來自訂分類邏輯。 資源管理員也可支援實作分類規則的使用者定義分類函數。 如需詳細資訊，請參閱 [Resource Governor Classifier Function](resource-governor-classifier-function.md)。  
   
 > [!NOTE]  
 >  資源管理員不會對專用管理員連接 (DAC) 進行任何控制， 因為根本不需要分類在內部工作負載群組和資源集區中執行的 DAC 查詢。  
@@ -85,8 +84,8 @@ ms.locfileid: "62704860"
 |描述如何停用資源管理員。|[停用資源管理員](disable-resource-governor.md)|  
 |描述如何建立、改變和卸除資源集區。|[資源管理員資源集區](resource-governor-resource-pool.md)|  
 |描述如何建立、改變、移動及卸除工作負載群組。|[資源管理員工作負載群組](resource-governor-workload-group.md)|  
-|描述如何建立和測試分類使用者定義函數。|[Resource Governor Classifier Function](resource-governor-classifier-function.md)|  
-|描述如何使用範本設定資源管理員。|[使用範本來設定資源管理員](configure-resource-governor-using-a-template.md)|  
+|描述如何建立和測試分類使用者定義函數。|[資源管理員分類函數](resource-governor-classifier-function.md)|  
+|描述如何使用範本設定資源管理員。|[使用範本設定資源管理員](configure-resource-governor-using-a-template.md)|  
 |描述如何檢視資源管理員的屬性。|[檢視資源管理員屬性](view-resource-governor-properties.md)|  
   
 ## <a name="see-also"></a>另請參閱  

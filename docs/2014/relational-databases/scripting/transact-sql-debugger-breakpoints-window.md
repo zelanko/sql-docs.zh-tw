@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 33cfb7faaa7f332292df8e4a087925b2f1605250
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9a2b488b13eeb4df7754e331960faedef49b9bdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718483"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063382"
 ---
 # <a name="breakpoints-window"></a>中斷點視窗
   [中斷點]  視窗會列出目前 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中設定的所有中斷點。 若要管理中斷點，請使用 [中斷點]  視窗內的工具列。 中斷點是偵錯模式下暫停執行的程式碼位置，好讓您可以檢視偵錯資料。  
@@ -48,7 +47,7 @@ ms.locfileid: "82718483"
  顯示 [中斷]  。  
   
  **語言**  
- 顯示  **的 [Transact-SQL]** [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+ 顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的 [Transact-SQL]。  
   
  **Function**  
  顯示設定中斷點的行號。  

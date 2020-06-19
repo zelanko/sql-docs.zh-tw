@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a229b02f60c56b9979d2d31788910b3faa63cb2f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b2db0f80599be6f4437636d978532f640af3cdd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706642"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027571"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在物件總管中管理事件工作階段
   本主題將討論您可以在 **[物件總管]** 中採取以影響「擴充事件」的動作：  
@@ -96,7 +95,7 @@ STATE = STOP
   
 4.  展開 **[範本]** 下拉式方塊。  
   
-5.  按一下 [檔案** \< 來源 ...] >開啟**並流覽您要匯入的會話（XML 檔案）。  
+5.  按一下 [ ** \<File From ...> 開啟**]，然後流覽至您要匯入的會話（XML 檔案）。  
   
  此工作階段會顯示在 **[工作階段]** 節點底下。 根據預設，工作階段不會啟動。  
   

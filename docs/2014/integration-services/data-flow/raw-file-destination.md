@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf4d31a05977cc34cf9aaee8fff38867aa302f37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914798"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   「原始檔案」目的地會將原始資料寫入檔案。 由於資料的格式對於目的地而言是原生的，因此資料不需翻譯，也幾乎不需要剖析。 這表示，「原始檔案」目的地可比其他目的地更快地寫入資料，例如「一般檔案」和 OLE DB 目的地。  
@@ -113,7 +112,7 @@ ms.locfileid: "81487008"
   
 1.  將 WriteOption 屬性設為 [CreateOnce]  或 [CreateAlways]  ，然後執行一次迴圈的反覆運算。 檔案就會建立， 這可確保附加資料的中繼資料與該檔案相符。  
   
-2.  將 [WriteOption] 屬性重設為 [**附加**]， `False`並將 ValidateExternalMetadata 屬性設定為。  
+2.  將 [WriteOption] 屬性重設為 [**附加**]，並將 ValidateExternalMetadata 屬性設定為 `False` 。  
   
  如果您使用 [TruncateAppend]  選項，而不是 [Append]  選項，它就會截斷在任何先前反覆運算中新增的資料列，然後附加新的資料列。 使用 [TruncateAppend]  選項也會要求資料符合檔案格式。  
   

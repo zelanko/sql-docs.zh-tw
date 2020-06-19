@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ab8ca7912db7607acbca716f733184ed57dc681e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 18e9a002bfb205e2c0807234550998fe48120d20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707289"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047992"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支援
   FILESTREAM 提供透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或直接存取 Windows 檔案系統來儲存及存取大型二進位值的方式。 大型二進位值是大於 2 GB 的值。 如需有關增強型 FILESTREAM 支援的詳細資訊，請參閱 [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)。  
@@ -42,7 +41,7 @@ ms.locfileid: "82707289"
   
  若要建立 FILESTREAM 資料行，或偵測哪些現有的資料行是 FILESTREAM 資料行，您可以使用 `is_filestream` [sys.databases](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)目錄檢視的資料行。  
   
- 以下是一個範例：  
+ 下列為範例：  
   
 ```  
 -- Create a table with a FILESTREAM column.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7db8c722eb7afcb9db47478a1f42dd7830935ad7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 18f9e8742fb01ef0bf3b635d0bdc3fda4e428296
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712524"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048157"
 ---
 # <a name="call-stored-procedures-odbc"></a>呼叫預存程序 (ODBC)
   當 SQL 語句使用 ODBC CALL escape 子句來呼叫預存程式時，Microsoft SQL Server 驅動程式會使用遠端預存程序呼叫（RPC）機制，將此程式傳送至 SQL Server。 RPC 要求會略過 SQL Server 中大部分的陳述式剖析和參數處理，也比使用 Transact-SQL EXECUTE 陳述式來得快。  

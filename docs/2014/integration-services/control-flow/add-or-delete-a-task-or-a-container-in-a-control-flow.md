@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f13db8a1e22c88c4433cd8928479a6ed1af540f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc86d269d3b286aeee5ccc67ddf6dddc4bfb1c95
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833123"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920169"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>在控制流程中加入或刪除工作或容器
   當您在控制流程設計師中工作時，[ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中的 [工具箱] 會列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供用於在封裝中建立控制流程的工作。 如需工具箱的詳細資訊，請參閱 [SSIS 工具箱](../ssis-toolbox.md)。  
@@ -39,7 +38,7 @@ ms.locfileid: "62833123"
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  若要開啟 [工具箱]  ，請按一下 [檢視]  功能表上的 [工具箱]  。  
+4.  若要開啟 [工具箱]，請按一下 [檢視] 功能表上的 [工具箱]。  
   
 5.  展開 [控制流程項目]  和 [維護工作]  。  
   

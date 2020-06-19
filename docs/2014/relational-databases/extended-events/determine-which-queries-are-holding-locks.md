@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c358973ad93360d7b9cd54efa0e70d9114bbc7de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ecbee10f53ca2a45513bc3386940d96b7e82dce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706783"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027600"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>判斷哪些查詢持有鎖定
   資料庫管理員經常需要識別阻礙資料庫效能的鎖定來源。  

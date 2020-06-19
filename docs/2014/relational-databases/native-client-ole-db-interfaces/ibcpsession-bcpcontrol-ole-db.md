@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 594bdc64ac926388a327c4ec57bf47330d820565
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 879836ec6628f70ace9a0168e9db77910e7a32f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695764"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048025"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
   設定大量複製作業的選項。  
@@ -42,7 +41,7 @@ void *iValue);
   
  *eOption* 的可能值為：  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |BCP_OPTION_ABORT|停止已經進行的大量複製作業。 您可以用 BCP_OPTION_ABORT 的 *eOption* 引數來呼叫 **BCPControl** 方法，從另一個執行緒停止正在執行的大量複製作業。 *iValue* 引數會被忽略。|  
 |BCP_OPTION_BATCH|每一批次中的資料列數目。 預設值為 0，表示資料擷取時，會指出資料表中的所有資料列，或資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，會指出使用者資料檔案中的所有資料列。 小於 1 的值會將 BCP_OPTION_BATCH 重設為預設值。|  
