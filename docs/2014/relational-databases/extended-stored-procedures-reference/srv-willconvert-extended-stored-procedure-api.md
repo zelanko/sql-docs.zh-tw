@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0af2ec4471dc24af0fdb02576adad312ed35069f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9930810e5f8253fb3ba3fdddb8fd16875bbcd9b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62740698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026976"
 ---
 # <a name="srv_willconvert-extended-stored-procedure-api"></a>srv_willconvert (擴充預存程序 API)
     
@@ -55,7 +54,7 @@ desttype
  *desttype*  
  表示轉換來源資料的目標資料類型。 此參數可以是任何擴充預存程序 API 資料類型。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  支援資料類型轉換時為 TRUE；不支援資料類型轉換時則為 FALSE。  
   
 ## <a name="remarks"></a>備註  

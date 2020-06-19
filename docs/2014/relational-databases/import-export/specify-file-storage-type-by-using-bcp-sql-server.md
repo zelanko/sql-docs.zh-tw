@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1f3ad2a94ffe3e0f1db19a8e66f85497e7143dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011815"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026488"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>使用 bcp 指定檔案儲存類型 (SQL Server)
   *檔案儲存類型* 描述資料如何儲存在資料檔中。 資料可以依其資料庫資料表類型 (原生格式)、依其字元表示 (字元格式)，或者依支援隱含轉換的任何資料類型匯出至資料檔；例如，將 `smallint` 複製為 `int`。 使用者自訂資料類型會依其基底類型匯出。  
@@ -73,9 +72,9 @@ ms.locfileid: "66011815"
     |`UDT` (使用者定義的資料類型)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup>欄位長度、前置長度和結束字元的互動，可決定在資料檔案中配置的儲存空間量，以非字元匯出為`char`檔案儲存類型的資料。  
+     <sup>1</sup>欄位長度、前置長度和結束字元的互動，可決定在資料檔案中配置的儲存空間量，以非字元匯出為檔案 `char` 儲存類型的資料。  
   
-     <sup>2</sup> `ntext`， `text`、和`image`資料類型將會在未來的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中移除。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前使用這些資料類型的應用程式。 請改用 `nvarchar(max)`、`varchar(max)` 和 `varbinary(max)`。  
+     <sup>2</sup> `ntext` ，、 `text` 和 `image` 資料類型將會在未來的版本中移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前使用這些資料類型的應用程式。 請改用 `nvarchar(max)`、`varchar(max)` 和 `varbinary(max)`。  
   
 ## <a name="native-file-storage-types"></a>原生檔案儲存類型  
  每個原生檔案儲存類型都記錄於格式檔案內，做為對應的主機檔案資料類型。  
@@ -109,16 +108,16 @@ ms.locfileid: "66011815"
 |`timestamp`|SQLBINARY|  
 |UDT (使用者定義資料類型)|SQLUDT|  
   
- <sup>1</sup>以字元格式儲存的資料檔案會使用`char`做為檔案儲存類型。 因此，對於字元資料檔案，SQLCHAR 是唯一會出現在格式檔案中的資料類型。  
+ <sup>1</sup>以字元格式儲存的資料檔案會使用 `char` 做為檔案儲存類型。 因此，對於字元資料檔案，SQLCHAR 是唯一會出現在格式檔案中的資料類型。  
   
- <sup>2</sup>您無法將資料大容量`text`導`ntext`入具有`image`預設值的、和資料行。  
+ <sup>2</sup>您無法將資料大量匯入 `text` `ntext` `image` 具有預設值的、和資料行。  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>檔案儲存類型的額外考量  
  當您將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料大量匯出到資料檔案時：  
   
 -   您永遠可以將檔案儲存類型指定為 `char`。  
   
--   如果您輸入的檔案儲存類型代表不正確隱含轉換，則**bcp**會失敗;例如，雖然`int`您可以針對`smallint`資料指定，但如果您針對`smallint` `int`資料指定，就會產生溢位錯誤。  
+-   如果您輸入的檔案儲存類型代表不正確隱含轉換，則**bcp**會失敗;例如，雖然您可以針對資料指定，但 `int` `smallint` 如果您 `smallint` 針對資料指定，就會 `int` 產生溢位錯誤。  
   
 -   若 `float`、`money`、`datetime` 或 `int` 等非字元資料類型儲存為其資料庫類型時，資料會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生格式寫入資料檔案中。  
   

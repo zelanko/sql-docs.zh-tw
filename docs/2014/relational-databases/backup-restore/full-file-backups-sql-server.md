@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2e45dc68afa4d464aa3931075a1c1b3be792e6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876131"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957968"
 ---
 # <a name="full-file-backups-sql-server"></a>完整檔案備份 (SQL Server)
   本主題僅與包含多個檔案或檔案群組的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫有關。  

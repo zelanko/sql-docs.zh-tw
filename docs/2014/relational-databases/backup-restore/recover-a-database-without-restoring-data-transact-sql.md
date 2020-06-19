@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04e4f78e51adb803bb65530c0b3b903aa7f76419
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921792"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957598"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>在不還原資料的情況下復原資料庫 (Transact-SQL)
   通常會先還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的所有資料，再復原資料庫。 不過，還原作業可以復原資料庫，而不實際還原備份；例如，復原與資料庫一致的唯讀檔案時即是如此。 這稱為「僅復原的還原」  。 如果離線資料已與資料庫一致，而且只需要回復為可用狀態，僅復原的還原作業就會完成資料庫的復原，並讓資料回到線上。  
@@ -42,7 +41,7 @@ ms.locfileid: "62921792"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  From **=** \< *backup_device>* 子句不會用於僅復原還原，因為不需要備份。  
+>  FROM **=** \<*backup_device> * 子句不會用於僅復原還原，因為不需要備份。  
   
  **範例**  
   
@@ -91,8 +90,8 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 ## <a name="see-also"></a>另請參閱  
  [線上還原 &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [分次還原 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
- [&#40;簡單復原模式的檔案還原&#41;](file-restores-simple-recovery-model.md)   
- [&#40;完整復原模式的檔案還原&#41;](file-restores-full-recovery-model.md)   
+ [檔案還原 &#40;簡單復原模式&#41;](file-restores-simple-recovery-model.md)   
+ [檔案還原 &#40;完整復原模式&#41;](file-restores-full-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 327217aee7f3e7abf8e09de30542b488a2be5108
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481148"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938049"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>備份及還原 DQS 資料庫
   此主題描述如何備份及還原 DQS 資料庫。  
@@ -60,7 +59,7 @@ ms.locfileid: "65481148"
   
 10. 在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]**。  
   
-11. 在 [查詢編輯器] 視窗中，複製下列 SQL 語句，並將* \<password>* 取代為您在 DQS 安裝期間為資料庫主要金鑰提供的密碼：  
+11. 在 [查詢編輯器] 視窗中，複製下列 SQL 語句，並將取代為 *\<PASSWORD>* 您在 DQS 安裝期間為資料庫主要金鑰提供的密碼：  
   
     ```  
     USE [DQS_MAIN]  

@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d72c84a7ed84503e0c88d2a46c808196903900b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026735"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>大量匯入與匯出 XML 文件的範例 (SQL Server)
     
-##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>您可以將 XML 檔大容量導[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]入資料庫，或從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫大量匯出它們。 本主題將提供這兩種情況的範例。  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>您可以將 XML 檔大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，或從資料庫大量匯出它們 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 本主題將提供這兩種情況的範例。  
   
  若要從資料檔將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或非資料分割檢視，您可以使用下列方式：  
   

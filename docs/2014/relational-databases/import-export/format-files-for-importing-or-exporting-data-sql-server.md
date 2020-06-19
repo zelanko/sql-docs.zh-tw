@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 463bd0f3fee203820eb6312a6d4ecfa3165d31b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026819"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>匯入或匯出資料的格式檔案 (SQL Server)
   當您將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，或從資料表大量匯出資料時，可以使用「格式檔案」  來儲存大量匯出或大量匯入資料所需的所有格式資訊。 這包含相對於該資料表之資料檔中各欄位的格式資訊。  

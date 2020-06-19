@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 34e8f4a5b49c9e023c224e62c23326864ef26f65
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 520ce1b4eed8dc11d6d3fe038969257aea1e90fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026360"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字元格式匯入或匯出資料 (SQL Server)
   使用含有擴充/DBCS 字元的資料檔在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間大量傳送資料時，建議使用 Unicode 字元格式。 Unicode 字元資料格式可允許從伺服器匯出資料時所使用的字碼頁，與執行作業之用戶端所使用的字碼頁不同。 在此情況下，使用 Unicode 字元格式具有下列優點：  

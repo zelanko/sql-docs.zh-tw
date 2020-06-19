@@ -1,5 +1,6 @@
 ---
 title: 支援原則
+description: 瞭解 SQL Server Native Client 支援的 SQL Server 版本、作業系統，以及 ADO、BCP、ODBC 和 OLE DB 的支援原則。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7b0c4e271d72188d306fa52a1ccb843ddbb4e1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 621cd2345f578b4f1a6091450d3e4a1c5697682b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388230"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965188"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>SQL Server Native Client 的支援原則
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,15 +31,15 @@ ms.locfileid: "81388230"
   
 |SQL Server Native Client 版本|支援的作業系統|  
 |--------------------------------------|---------------------------------|  
-|SQL Server Native Client (SQL Server 2005)|Microsoft Windows 2000 Service Pack 4 或更新版本<br /><br /> Microsoft Windows Server 2003 或更新版本<br /><br /> Microsoft Windows XP Service Pack 1 或更新版本<br /><br /> Microsoft Windows Vista (需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 或更新版本)<br /><br /> Microsoft Windows Server 2008 R2 （需要[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 或更新版本）|  
-|SQL Server Native Client 10.0 （[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]）|Microsoft Windows Server 2003 Service Pack 2 或更新版本<br /><br /> Microsoft Windows XP Service Pack 2 或更新版本<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2|  
-|SQL Server Native Client 10.5 （[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]）|Microsoft Windows Server 2003 Service Pack 2 或更新版本<br /><br /> Microsoft Windows XP Service Pack 2 或更新版本<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7|  
+|SQL Server Native Client (SQL Server 2005)|Microsoft Windows 2000 Service Pack 4 或更新版本<br /><br /> Microsoft Windows Server 2003 或更新版本<br /><br /> Microsoft Windows XP Service Pack 1 或更新版本<br /><br /> Microsoft Windows Vista (需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 或更新版本)<br /><br /> Microsoft Windows Server 2008 R2 （需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 或更新版本）|  
+|SQL Server Native Client 10.0 （ [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ）|Microsoft Windows Server 2003 Service Pack 2 或更新版本<br /><br /> Microsoft Windows XP Service Pack 2 或更新版本<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2|  
+|SQL Server Native Client 10.5 （ [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] ）|Microsoft Windows Server 2003 Service Pack 2 或更新版本<br /><br /> Microsoft Windows XP Service Pack 2 或更新版本<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7|  
 |SQL Server Native Client 11.0 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])|Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7<br /><br /> Microsoft Windows 8<br /><br /> Microsoft Windows Server 2012|  
   
 ## <a name="ado-support-policies"></a>ADO 支援原則  
  如果 ADO 應用程式不需要 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的任何功能，就可以使用 Windows 隨附的 SQLOLEDB OLE DB 提供者。  
   
- ADO 應用程式可以使用包含在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]的 Native Client 版本。 ADO 應用程式也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 (隨附於 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])，但是如果它們這樣做，就必須在連接字串中指定 `DataTypeCompatibility=80`。 當連接字串中存在 `DataTypeCompatibility=80` 時，只能使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的功能。  
+ ADO 應用程式可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含在中的 Native Client 版本 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 。 ADO 應用程式也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 (隨附於 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])，但是如果它們這樣做，就必須在連接字串中指定 `DataTypeCompatibility=80`。 當連接字串中存在 `DataTypeCompatibility=80` 時，只能使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的功能。  
   
 ## <a name="bcp-support-policies"></a>BCP 支援原則  
  從 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 開始，bcp.exe 便支援不超過提供 bcp.exe 之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本前三個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的資料檔案。  
@@ -51,9 +52,9 @@ ms.locfileid: "81388230"
   
  如果未經認證可搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用的 OLE DB 應用程式在其連接字串中指定了 `DataTypeCompatibility=80`，它們就可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。  
   
- 如果使用 OLE DB 服務元件的 OLE DB 應用程式在其連接字串中指定了 `DataTypeCompatibility=80`，它們就只能使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 不過，在此情況下[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ，將無法使用之後新增的任何功能。  
+ 如果使用 OLE DB 服務元件的 OLE DB 應用程式在其連接字串中指定了 `DataTypeCompatibility=80`，它們就只能使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 不過， [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 在此情況下，將無法使用之後新增的任何功能。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 SQL Server Native Client 建立應用程式](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [使用 SQL Server Native Client 建置應用程式](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

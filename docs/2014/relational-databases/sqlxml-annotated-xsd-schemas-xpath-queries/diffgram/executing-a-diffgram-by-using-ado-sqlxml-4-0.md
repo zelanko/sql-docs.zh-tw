@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 30b46fba97e5608fa91a2b0a52bffc797982e923
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 304cba3b913e9eb16d25af58f303945ec882266c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703167"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062977"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>使用 ADO 執行 DiffGram (SQLXML 4.0)
   這個 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 應用程式會使用 ADO 來建立 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接，然後執行 DiffGram。 在此應用程式中，DiffGram 和 XSD 結構描述會儲存在一個檔案中。 應用程式會從指定的檔案載入 DiffGram。 您可以使用[DiffGram 範例](diffgram-examples-sqlxml-4-0.md)中所述的任何 diffgram （和相關聯的 XSD 架構）。  
@@ -38,7 +37,7 @@ ms.locfileid: "82703167"
   
 -   命令的輸出資料流程會設定為**StrmOut**物件（**ADODB。資料流程**）接收任何傳回的資料。  
   
--   當您使用 SQLOLEDB 提供者時，根據預設，您會取得 Sqlxmlx.dll 提供的 Microsoft SQLXML 功能。 若要搭配使用 Sqlxml4.dll 與 SQLOLEDB 提供者，必須在 SQLOLEDB 提供者**連接**物件上，將**sqlxml Version**屬性設定為**sqlxml. 4.0** 。  
+-   當您使用 SQLOLEDB 提供者時，根據預設，您會取得 Sqlxmlx.dll 提供的 Microsoft SQLXML 功能。 若要使用 Sqlxml4.dll 搭配 SQLOLEDB 提供者，必須在 SQLOLEDB 提供者**連接**物件上，將**sqlxml Version**屬性設定為**sqlxml. 4.0。**  
   
 -   執行命令 (DiffGram)。  
   

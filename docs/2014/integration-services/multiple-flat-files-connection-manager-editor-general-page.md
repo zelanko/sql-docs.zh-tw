@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6d4b926d08096087735458ed309e5bc4189a87df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11c56c29f685eb8f3746431a79b4d6a42a4b9fe5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057477"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965138"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>多個一般檔案連線管理員編輯器 (一般頁面)
   使用 **[多個一般檔案連線管理員編輯器]** 對話方塊的 **[一般]** 頁面，即可選取一組具有相同資料格式的檔案，並指定其資料格式。 多個一般檔案連接，可以讓封裝連接到一組具有相同格式的文字檔。  
@@ -30,7 +29,7 @@ ms.locfileid: "66057477"
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
- **描述**  
+ **說明**  
  描述連接。 最佳作法是以其用途描述連接，使封裝可以自我記錄並易於維護。  
   
  **檔案名**  
@@ -39,7 +38,7 @@ ms.locfileid: "66057477"
  **瀏覽**  
  瀏覽檔案名稱，以便於多個一般檔案連接中使用。 您可以選取多個檔案。 所有檔案必須有相同的資料格式。  
   
- **語言**  
+ **Locale**  
  指定地區，以提供排序以及時間和日期的轉換資訊。  
   
  **Unicode**  
@@ -48,7 +47,7 @@ ms.locfileid: "66057477"
  **字碼頁**  
  指定非 Unicode 文字的字碼頁。  
   
- **編排**  
+ **[格式]**  
  指出是要使用分隔符號、固定寬度或不齊右的格式。 所有檔案必須有相同的資料格式。  
   
 |值|描述|  

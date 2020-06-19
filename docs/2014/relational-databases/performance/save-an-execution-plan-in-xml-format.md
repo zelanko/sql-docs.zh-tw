@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84ed341d186993ed77260e8361156b324c597839
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150857"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047894"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式儲存執行計畫
   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將執行計畫儲存為 XML 檔，並開啟它們來進行檢視。  
@@ -65,9 +64,9 @@ ms.locfileid: "63150857"
   
 4.  在 [結果]**** 窗格中，以滑鼠右鍵按一下包含查詢計劃的 [Microsoft SQL Server XML 執行程序表]****，然後按一下 [儲存結果]****。  
   
-5.  在 [**儲存** \<格線或文字>**結果**] 對話方塊的 [**存檔類型**] 方塊中，按一下 [**所有\*檔案\*（.）**]。  
+5.  在 [**儲存** \<Grid or Text> **結果**] 對話方塊的 [**存檔類型**] 方塊中，按一下 [**所有檔案（ \* . \* ）**]。  
   
-6.  在 [**檔案名**] 方塊中提供名稱，格式\<為名稱 **> .Sqlplan**，然後按一下 [**儲存**]。  
+6.  在 [**檔案名**] 方塊中提供名稱，格式為 \<name**> . .sqlplan * *，然後按一下 [**儲存**]。  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>若要使用 SQL Server Management Studio 選項來儲存執行計畫  
   
@@ -79,7 +78,7 @@ ms.locfileid: "63150857"
   
 3.  在 [另存新檔]**** 對話方塊中，請確認將 [檔案類型]**** 設為 [執行計畫檔案 (\*.sqlplan)]****。  
   
-4.  在 [**檔案名**] 方塊中提供名稱，格式\<為名稱 **> .Sqlplan**，然後按一下 [**儲存**]。  
+4.  在 [**檔案名**] 方塊中提供名稱，格式為 \<name**> . .sqlplan * *，然後按一下 [**儲存**]。  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中開啟已儲存的 XML 查詢計畫  
   

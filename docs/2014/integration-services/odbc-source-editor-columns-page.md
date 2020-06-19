@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5bfda61e5a57dabd62289f32d04d6367695b070b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61311dfa6428c9dd1e67fe783389c2a4b20ac1d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057164"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965028"
 ---
 # <a name="odbc-source-editor-columns-page"></a>ODBC 來源編輯器 (資料行頁面)
   使用 [ODBC 來源編輯器]**** 對話方塊的 [資料行]**** 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  

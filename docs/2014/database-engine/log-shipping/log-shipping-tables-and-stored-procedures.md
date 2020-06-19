@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d88e0826617b63638c720f176da84a85d68a7e18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f10a6555ed3a0c27a72c3d097cc200f21d901274
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774494"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931169"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
   此主題描述與記錄傳送設定關聯的所有資料表與預存程序。 所有記錄傳送資料表都儲存在每部伺服器上的 **msdb** 中。 下表描述在記錄傳送設定中，會在哪部伺服器上使用哪些資料表與預存程序。  

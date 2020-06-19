@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ab87d5d8aa08b7b2860fe52fd097f33af327a94
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774882"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931159"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>監視記錄傳送 (Transact-SQL)
   在您設定了記錄傳送之後，即可監視所有記錄傳送伺服器的狀態相關資訊。 記錄傳送作業的記錄和狀態一律是由記錄傳送作業儲存在本端。 備份作業的記錄和狀態會儲存在主要伺服器，而複製和還原作業的記錄和狀態會儲存在次要伺服器上。 若您已實作遠端監視伺服器，此資訊也會儲存在監視伺服器中。  

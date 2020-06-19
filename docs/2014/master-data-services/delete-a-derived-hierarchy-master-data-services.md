@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bcf52745a984d049db92e8255ba7984b6b52a71a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3491e22303b7f8371877f53c9648380457ef605e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483119"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971618"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>刪除衍生階層 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除您不再需要的衍生階層。  
@@ -26,7 +25,7 @@ ms.locfileid: "65483119"
 > [!NOTE]  
 >  刪除衍生階層對於此階層所依據的屬性關聯性沒有影響。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

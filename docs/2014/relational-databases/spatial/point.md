@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: b5027eb9be355348e00b6f17128b821a2bfc2af4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b12069d84e00738e3ddac8c414f33903f4f0999
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063041"
 ---
 # <a name="point"></a>Point
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空間資料中，`Point` 是一個代表單一位置的 0 維度物件，而且可包含 Z (高度) 和 M (測量) 值。  

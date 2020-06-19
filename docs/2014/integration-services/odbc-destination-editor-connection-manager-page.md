@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 281bbda38a6711efd4e2ffae7afbfa17d689254b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57a45cb3e9eace357477c0c9f2adfc25384466a1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057210"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965048"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>ODBC 目的地編輯器 (連接管理員頁面)
   使用 **[ODBC 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可選取目的地的 ODBC 連接管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視表。  

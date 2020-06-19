@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 05c636b29b57e898aa3579fc104cc8b044489fc0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b88b8616ee822a3811afe993936edd8747961506
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707258"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047908"
 ---
 # <a name="performing-asynchronous-operations"></a>執行非同步作業
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允許應用程式執行非同步資料庫作業。 非同步處理可讓方法立即執行，而不會在呼叫的執行緒上封鎖。 這樣可允許多執行緒的許多功能與彈性，而不需要開發人員明確建立執行緒或處理同步。 當初始化資料庫連接或初始化執行命令的結果時，應用程式會要求非同步處理。  

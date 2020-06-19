@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b968322f92c7a135adb5fd0733b5774e7562bc39
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875716"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957578"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>復原包含標記之異動的相關資料庫
   這個主題僅與包含標示的交易，且使用完整模式或大量記錄復原模式的資料庫有關。  
@@ -61,11 +60,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>復原標示的 Transact-SQL 語法  
  針對標示的交易使用[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql)陳述式時，您可以使用下列其中一個子句，以在標示上或標示當前停止：  
   
--   使用 WITH STOPATMARK = **'*`<mark_name>`*'** 子句，以指定標示的交易為復原點。  
+-   使用 WITH STOPATMARK = **' *`<mark_name>`* '** 子句，以指定標示的交易為復原點。  
   
      STOPATMARK 可向前復原標示，並將已標示的交易納入向前復原。  
   
--   使用 WITH STOPBEFOREMARK = **'*`<mark_name>`*'** 子句，以指定在標記之前的記錄檔記錄是復原點。  
+-   使用 WITH STOPBEFOREMARK = **' *`<mark_name>`* '** 子句，以指定在標記之前的記錄檔記錄是復原點。  
   
      STOPBEFOREMARK 可向前復原標示，並從向前復原中排除已標示的交易。  
   

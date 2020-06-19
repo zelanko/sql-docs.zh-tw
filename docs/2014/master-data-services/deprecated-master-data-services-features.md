@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dd6342542da7528fef633ba02a430a8ba2ef5857
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d861d390989798ed9f33834cf42d6dcb8179ebe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971566"
 ---
 # <a name="deprecated-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014 中已被取代的 Master Data Services 功能
   本主題描述 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中仍然可用但已被取代的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  
@@ -23,7 +22,7 @@ ms.locfileid: "65483058"
 ## <a name="staging-process"></a>暫存處理序  
  [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Web 應用程式中不再提供 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中所使用的暫存處理序，不過仍可在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 使用。  
   
- 來自 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 暫存處理序的暫存錯誤不再顯示在使用者介面中。 在暫存進程期間填入的錯誤碼仍可在臨時表中使用，您可以在這裡找到： [https://msdn.microsoft.com/library/ff487022.aspx](https://msdn.microsoft.com/library/ff487022.aspx)。  
+ 來自 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 暫存處理序的暫存錯誤不再顯示在使用者介面中。 在暫存進程期間填入的錯誤碼仍可在臨時表中使用，您可以在這裡找到： [https://msdn.microsoft.com/library/ff487022.aspx](https://msdn.microsoft.com/library/ff487022.aspx) 。  
   
  暫存資料表 (tblStgMember、tblStgMemberAttribute 及 tblStgRelationship) 仍在資料庫中。 用來起始暫存處理序 (mdm.udpStagingSweep) 的預存程序仍在資料庫中。  
   

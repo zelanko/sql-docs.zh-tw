@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 222e21e83ef0b722ea33c45ff5413dd77b88fe12
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057705"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951078"
 ---
 # <a name="merge-join-transformation-editor"></a>合併聯結轉換編輯器
   使用 [合併聯結轉換編輯器]  對話方塊，即可指定合併兩個由聯結組合之輸入的聯結類型、聯結資料行以及輸出資料行。  

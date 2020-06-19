@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a73b983b98e0474f443f3fbcf71b88ad692ac961
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d724f069fe7e1047387a95d1e5c1900fedfff162
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703057"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062917"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>存取 .NET 環境中的 SQLXML 功能
   此範例顯示：  

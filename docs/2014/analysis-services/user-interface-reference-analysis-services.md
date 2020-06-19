@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: c3e6ac4b-1435-459e-8678-ee2c8abdfad9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c13cdec19ac961a3126b4220895498c7c7a049f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b751e2dfd9950ba7a25bc3cde36f3625ab473131
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065534"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938219"
 ---
 # <a name="user-interface-reference-analysis-services"></a>使用者介面參考 (Analysis Services)
-  本節包含的[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]說明主題。 在使用者介面的環境中按一下 F1 鍵，或在精靈頁面上、設計師和對話方塊中按一下 [說明]****，亦可取得這些主題。  
+  本節包含的說明主題 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 在使用者介面的環境中按一下 F1 鍵，或在精靈頁面上、設計師和對話方塊中按一下 [說明]****，亦可取得這些主題。  
   
 ## <a name="topic-list"></a>主題清單  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54128ccbeab2a40a8e9f65da138b52602f45a86c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065333"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938089"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>適用于 Office 的資料採礦增益集包含哪些&#39;
   當您安裝適用於 Office 2013 的資料採礦增益集時，選取所有的安裝選項就會加入以下的工具列和範本：  
@@ -56,9 +55,9 @@ ms.locfileid: "66065333"
   
      範例活頁簿的預設位置取決於您安裝的版本：  
   
-    -   \<磁片磁碟機>： \Program Files\Microsoft SQL Server 2014 DM 增益集  
+    -   \<drive>： \Program Files\Microsoft SQL Server 2014 DM 增益集  
   
-    -   \<磁片磁碟機>： \Program Files （x86） \Microsoft SQL Server 2014 DM 增益集  
+    -   \<drive>： \Program Files （x86） \Microsoft SQL Server 2014 DM 增益集  
   
 ## <a name="see-also"></a>另請參閱  
  [適用于 Excel 的資料採礦 &#40;資料採礦增益集的消費者入門&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  

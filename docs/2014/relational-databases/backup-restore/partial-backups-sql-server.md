@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4213bcee1d17d27bf63da9eb286b21dea4cc5a02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c03cf2fb4d3af6fe87459e881e26c48cfacc232
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921914"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957765"
 ---
 # <a name="partial-backups-sql-server"></a>部分備份 (SQL Server)
   所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 復原模式皆支援部分備份，因此本主題與所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都有關。 但是，部分備份設計為在簡單復原模式下用以改善備份超大型資料庫 (其中包含一個或多個唯讀檔案群組) 時的彈性。  

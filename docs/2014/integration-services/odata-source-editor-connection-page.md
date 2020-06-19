@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64d40dd2a6f0f2568e7e7817a3a9366be8f83cc4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057321"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965078"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 來源編輯器 (連接頁面)
   使用 **[OData 來源編輯器]** 對話方塊的 **[連接]** 頁面，選取 OData 來源的 OData 連接管理員。 此頁面也可讓您指定集合或資源路徑及任何查詢選項，以指示需要從 OData 來源擷取哪些資料。 若要深入了解 OData 來源，請參閱＜ [OData Source](data-flow/odata-source.md)＞。  
@@ -53,7 +52,7 @@ ms.locfileid: "66057321"
  從下拉式清單中選取集合。  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>使用集合或資源路徑 = 資源路徑  
- **Resource path**  
+ **資源路徑**  
  輸入資源路徑。 例如：員工  
   
 ## <a name="see-also"></a>另請參閱  

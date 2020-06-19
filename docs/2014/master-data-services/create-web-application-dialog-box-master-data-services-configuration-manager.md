@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 65e057224a8456f893b38e106e6b7f75d03d237a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41e3018953bd768abd3129628431aac24583c78d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483228"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971678"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>建立 Web 應用程式對話方塊 (Master Data Services 組態管理員)
   使用 [建立 Web 應用程式]**** 對話方塊可建立 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。 這個 Web 應用程式會建立在您於 [Web 組態]**** 頁面上所選取的網站中。  

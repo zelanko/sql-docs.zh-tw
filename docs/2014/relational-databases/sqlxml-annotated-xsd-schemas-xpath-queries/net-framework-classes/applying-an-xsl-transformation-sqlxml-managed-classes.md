@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bb86fc6020b6a9421861f6d946438aea326feb45
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 381d22e666fb8d490013004d00f5354b972e5215
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703068"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062905"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>套用 XSL 轉換 (SQLXML Managed 類別)
   在本範例中，SQL 查詢會針對 AdventureWorks 資料庫執行。 XSL 轉換會套用到查詢結果以產生員工名字和姓氏之兩個資料行的資料表。  

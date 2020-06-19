@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b15b19bfc7f04c96bb955207c6631706380063fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fa7119ba9a8321e2b3bb8cbe1015271c9a3c95e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057864"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965192"
 ---
 # <a name="lesson-3-installing-packages"></a>第 3 課：安裝套件
   在[第2課：建立部署](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)配套中，您建立了部署公用程式，並建立了部署配套，其中包含您必須在另一部電腦上安裝套件的專案。 此外，您也確認了部署配套中的檔案清單，並且檢查了建立部署公用程式時所建立的資訊清單檔內容。  
   
- 在這一課中，您會將部署配套複製到目的地電腦，然後執行「封裝安裝精靈」，將封裝、封裝相依性及輔助檔案安裝到該部電腦上。 封裝將會安裝在**msdb** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫中，而其他專案則會安裝在檔案系統中。 完成封裝安裝之後，將會使用「執行封裝公用程式」從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 執行封裝，以測試部署。  
+ 在這一課中，您會將部署配套複製到目的地電腦，然後執行「封裝安裝精靈」，將封裝、封裝相依性及輔助檔案安裝到該部電腦上。 封裝將會安裝在**msdb** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中，而其他專案則會安裝在檔案系統中。 完成封裝安裝之後，將會使用「執行封裝公用程式」從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 執行封裝，以測試部署。  
   
  **完成本課程的估計時間：** 30 分鐘  
   

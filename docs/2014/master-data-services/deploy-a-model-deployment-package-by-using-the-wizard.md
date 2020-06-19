@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cbdf233af3c0c27d6b4e95d18dc2c438d5307e7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48060c9b1bf3dfd670f96a9b8bcf68c2002fc7fc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479480"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971589"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用精靈部署模型部署封裝
   若要部署只包含模型物件的套件，請使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署精靈。 如果您需要部署包含資料的套件，請參閱 [使用 MDSModelDeploy 部署模型部署封裝](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
@@ -26,7 +25,7 @@ ms.locfileid: "65479480"
 > [!IMPORTANT]  
 >  封裝只能部署到之前建立封裝所使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 這表示，在 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中建立的封裝無法部署到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   在目標 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境中，您必須擁有存取 [系統管理]**** 功能區域的權限。  
@@ -43,11 +42,11 @@ ms.locfileid: "65479480"
   
 3.  按一下 [模型部署精靈]**** 上的 [部署]****。  
   
-4.  按一下 [瀏覽]****。  
+4.  按一下 **[瀏覽]** 。  
   
 5.  尋找您的部署套件 (.pkg 檔案)，然後按一下 [開啟]****。  
   
-6.  按 [下一步]  。  
+6.  按 [下一步] 。  
   
 7.  載入套件之後，按一下 [下一步]****。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "65479480"
      更新模型時，如果此程序在前三個步驟的任何一個期間失敗，就不會繼續進行，但是，並不會回復已經進行的變更。 如果此程序在步驟 4 失敗，則會更新可以更新的成員。  
   
 ## <a name="next-steps"></a>後續步驟  
- 使用者定義的中繼資料、檔案屬性及使用者和群組的權限不包含在模型部署封裝中。 在部署模型之後，您必須手動更新這些項目。 如需詳細資訊，請參閱：  
+ 使用者定義的中繼資料、檔案屬性及使用者和群組的權限不包含在模型部署封裝中。 在部署模型之後，您必須手動更新這些項目。 如需詳細資訊，請參閱  
   
 -   [新增中繼資料 &#40;Master Data Services&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d3f78c3c97c5bbe862867d5f51ff35f57d147df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026353"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式檔案略過資料欄位 (SQL Server)
   資料檔所包含的欄位，可以比資料表中的資料行數多。 此主題描述如何將資料表資料行對應到相對的資料欄位並忽略多餘欄位，藉以修改非 XML 格式檔案與 XML 格式檔案，讓資料檔能容納更多欄位。  
@@ -30,7 +29,7 @@ ms.locfileid: "66011719"
  此主題中的修改格式檔案的範例是以下列資料表與資料檔為基礎。  
   
 ### <a name="sample-table"></a>範例資料表  
- 此範例需要在 `myTestSkipField` 結構描述底下的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中建立一個名為 `dbo` 的資料表。 若要建立此資料表， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]請在 [查詢編輯器] 中執行下列程式碼：  
+ 此範例需要在 `myTestSkipField` 結構描述底下的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中建立一個名為 `dbo` 的資料表。 若要建立此資料表，請在 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器] 中執行下列程式碼：  
   
 ```  
 USE AdventureWorks2012;  

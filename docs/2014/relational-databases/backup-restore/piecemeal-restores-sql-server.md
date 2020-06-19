@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebc4ea11780908f847946a01338571211b57678a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957748"
 ---
 # <a name="piecemeal-restores-sql-server"></a>分次還原 (SQL Server)
   這個主題僅與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 版中包含多個檔案或檔案群組 (若是簡單模式，僅適用唯讀檔案群組) 的資料庫有關。  
@@ -173,7 +172,7 @@ ms.locfileid: "62876076"
 4.  差異備份之後緊接著原始分次還原順序中所還原的任何其他備份，可還原資料直到原始的復原點為止。  
   
 ## <a name="see-also"></a>另請參閱  
- [將交易記錄備份套用 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [套用交易記錄備份 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [還原和復原概觀 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   

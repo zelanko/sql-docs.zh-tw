@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7fc2b8f7-10a8-4adc-a5d3-a4ddf5db651c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a202c97b858e234657340232cef22ea3f25ba432
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057379"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965098"
 ---
 # <a name="odata-connection-manager-editor"></a>OData 連線管理員編輯器
   使用 [OData 連線管理員編輯器] **** 對話方塊加入連線，或編輯現有的 OData 來源連線。  
@@ -27,7 +26,7 @@ ms.locfileid: "66057379"
  連接管理員的名稱。  
   
  **服務文件位置**  
- OData 服務的 URL。 例如：http://services.odata.org/V3/Northwind/Northwind.svc/。  
+ OData 服務的 URL。 例如： http://services.odata.org/V3/Northwind/Northwind.svc/ 。  
   
  **驗證**  
  針對 [驗證]**** 選取 [Windows 驗證]**** 或 [使用此使用者名稱和密碼]****。 如果您選取第二個選項，請輸入 [使用者名稱] **** 和 [密碼] ****。  

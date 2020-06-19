@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 84339eab432194327759fbdad505cdb1af60517b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 890a7da8d94c23ff65303eb2ce629774f20f70a4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479421"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971528"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>分類的 Web 服務作業 (Master Data Services)
    Web 服務包含一組完整的作業，這組作業可讓您撰寫程式碼以控制  透過其使用者介面所執行的所有功能。 這些 Web 服務作業是透過 <xref:Microsoft.MasterDataServices.IService> 介面定義，並當做 <xref:Microsoft.MasterDataServices.ServiceClient> 類別中的方法實作。 本主題將 Web 服務作業分為概念性類別目錄，以協助您了解如何使用 Web 服務 API。  

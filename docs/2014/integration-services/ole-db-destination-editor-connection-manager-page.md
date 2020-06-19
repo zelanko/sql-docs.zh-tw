@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 436b758abdde0c05539bc17aabd2c11b240642df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b19c61cf736ad888cdcb2ecb1f36060eebf30812
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057140"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964988"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>OLE DB 目的地編輯器 (連接管理員頁面)
   使用 **[OLE DB 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面來選取目的地的 OLE DB 連接。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
@@ -61,7 +60,7 @@ ms.locfileid: "66057140"
  使用 [建立資料表]**** 對話方塊建立新的資料表。  
   
 > [!NOTE]  
->  當您按一下**New**[新增[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ] 時，會根據連接的資料來源產生預設的 CREATE TABLE 語句。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+>  當您按一下 [**新增**] 時，會根據 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 連接的資料來源產生預設的 CREATE TABLE 語句。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
 ### <a name="data-access-mode--table-or-view---fast-load"></a>資料存取模式 = 資料表或檢視 - 快速載入  
  **資料表或檢視的名稱**  
@@ -71,7 +70,7 @@ ms.locfileid: "66057140"
  使用 [建立資料表]**** 對話方塊建立新的資料表。  
   
 > [!NOTE]  
->  當您按一下**New**[新增[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ] 時，會根據連接的資料來源產生預設的 CREATE TABLE 語句。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+>  當您按一下 [**新增**] 時，會根據 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 連接的資料來源產生預設的 CREATE TABLE 語句。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **保留識別**  
  指定載入資料時是否複製識別值。 這個屬性只能搭配快速載入選項使用。 此屬性的預設值為 `false`。  
@@ -114,7 +113,7 @@ ms.locfileid: "66057140"
  使用 [建立資料表]**** 對話方塊建立新的資料表。  
   
 > [!NOTE]  
->  當您按一下**New**[新增[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ] 時，會根據連接的資料來源產生預設的 CREATE TABLE 語句。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+>  當您按一下 [**新增**] 時，會根據 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 連接的資料來源產生預設的 CREATE TABLE 語句。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **保留識別**  
  指定載入資料時是否複製識別值。 這個屬性只能搭配快速載入選項使用。 此屬性的預設值為 `false`。  
