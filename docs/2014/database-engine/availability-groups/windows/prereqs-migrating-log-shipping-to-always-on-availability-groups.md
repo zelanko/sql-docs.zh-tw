@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a2dc38d5e916cf67c09162c86db9ab31728804f
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: c517850e7dfc7dfb134389b50feee77b3d1cbfbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936629"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>從記錄傳送移轉至 AlwaysOn 可用性群組的必要條件 (SQL Server)
   本主題描述將記錄傳送主要資料庫與其一個或多個次要資料庫轉換成 AlwaysOn 主要資料庫和次要資料庫的必要條件。  

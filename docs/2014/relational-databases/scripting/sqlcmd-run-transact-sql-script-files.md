@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1c6d747fe98e08ee21305525302563d1c8025aa2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ba44f1bf0906dfd4265ce07cf6f7dd5d350ee5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703680"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063409"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>使用 sqlcmd 執行 Transact-SQL 指令碼檔案
   您可以使用 `sqlcmd` 來執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案是一個文字檔，可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、`sqlcmd` 命令和指令碼變數的組合。  

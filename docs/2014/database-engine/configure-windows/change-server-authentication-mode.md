@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bda31ca7d0c5949173a9a3e5ea656c1757c04f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812294"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935857"
 ---
 # <a name="change-server-authentication-mode"></a>變更伺服器驗證模式
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的伺服器驗證模式。 在安裝期間， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會設為 **[Windows 驗證模式]** 或 **[SQL Server 及 Windows 驗證模式]** 。 安裝後，您可以隨時變更驗證模式。  
@@ -58,7 +57,7 @@ ms.locfileid: "62812294"
   
 #### <a name="to-enable-the-sa-login"></a>若要啟用 sa 登入  
   
-1.  在物件總管中，依序展開 [**安全性**] 和 [ `sa`登入]，以滑鼠**按右鍵，** 然後按一下 [內容]。  
+1.  在物件總管中，依序展開 [**安全性**] 和 [登入]，以滑鼠右鍵按一下，然後按一下 [內容] `sa` 。 **Properties**  
   
 2.  在 **[一般]** 頁面上，您可能需要為登入建立並確認密碼。  
   

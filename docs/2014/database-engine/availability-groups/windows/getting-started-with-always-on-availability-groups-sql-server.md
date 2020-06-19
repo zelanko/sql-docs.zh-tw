@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e809d84071089ce57c66bc8f9a388203923fe66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0dc9fc81fb02f004eb86c1bfef5662460aa4005f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228758"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936792"
 ---
 # <a name="getting-started-with-alwayson-availability-groups-sql-server"></a>開始使用 AlwaysOn 可用性群組 (SQL Server)
   本主題介紹設定 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體，以支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 建立、管理及監視可用性群組的步驟。  
@@ -98,7 +97,7 @@ ms.locfileid: "75228758"
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [設定 AlwaysOn 可用性群組 &#40;SQL Server 的伺服器實例&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   
- [建立和設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [監視可用性群組 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;的 Transact-sql 語句總覽](transact-sql-statements-for-always-on-availability-groups.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;的 PowerShell Cmdlet 總覽](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  

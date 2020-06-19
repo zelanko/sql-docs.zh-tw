@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5de4600d4f4c3d52d1757218e1f2d9b32f554286
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b0d79325bcde33d13688003de079a42a9601cc41
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797669"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936766"
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>將次要資料庫聯結至可用性群組 (SQL Server)
   此主題說明如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將次要資料庫聯結至 AlwaysOn 可用性群組。 當您準備次要複本的次要資料庫之後，您必須盡快將此資料庫聯結至可用性群組。 這會從對應的主要資料庫開始將資料移動到次要資料庫。  
   
 -   **開始之前：**  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
      [安全性](#Security)  
   
@@ -120,6 +119,6 @@ ms.locfileid: "72797669"
 -   [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER AVAILABILITY GROUP &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
+ [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [針對 AlwaysOn 可用性群組 Configuration &#40;SQL Server&#41;已刪除進行疑難排解](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

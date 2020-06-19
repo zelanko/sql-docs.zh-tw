@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9d174bb43388af9ea3fe02d839c7a3fcfec202c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9072b851f3512113b23dedc91f8c9b7151136a57
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77646328"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936172"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中對於 Database Engine 功能的行為變更
   本主題描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中的行為變更。 行為變更會影響 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 功能的運作或互動方式 (相較於舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])。  
@@ -30,15 +29,15 @@ ms.locfileid: "77646328"
 ## <a name="behavior-changes-in-sssql11"></a><a name="Denali"></a>中的行為變更[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>中繼資料探索  
- 中的[!INCLUDE[ssDE](../includes/ssde-md.md)]改良功能， [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]可讓 SQLDescribeCol 取得比舊版中的 SQLDescribeCol 所傳回的預期結果更精確的描述[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱[中繼資料探索](../relational-databases/native-client/features/metadata-discovery.md)。  
+ 中的改良功能， [!INCLUDE[ssDE](../includes/ssde-md.md)] [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 可讓 SQLDescribeCol 取得比舊版中的 SQLDescribeCol 所傳回的預期結果更精確的描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 如需詳細資訊，請參閱[中繼資料探索](../relational-databases/native-client/features/metadata-discovery.md)。  
   
  用來判斷回應格式而不實際執行查詢的[SET set fmtonly](/sql/t-sql/statements/set-fmtonly-transact-sql)選項，會取代為[sp_describe_first_result_set &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)、 [sp_describe_undeclared_parameters &#40;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)transact-sql&#41;，以及[dm_exec_describe_first_result_set &#40;transact-sql ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)&#41;[中 dm_exec_describe_first_result_set_for_object](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)的 transact-sql &#40;。  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>編寫 SQL Server Agent 工作之指令碼時的行為變更  
-從開始[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，如果您從現有作業複製腳本來建立新作業，新的作業可能會不小心影響現有的作業。 若要使用現有作業中的腳本建立新作業，請手動刪除參數* \@schedule_uid*這通常是在現有作業中建立作業排程之區段的最後一個參數。 這將會為新的作業建立新的獨立排程，而不會影響現有的作業。  
+從開始 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ，如果您從現有作業複製腳本來建立新作業，新的作業可能會不小心影響現有的作業。 若要使用現有作業中的腳本建立新作業，請手動刪除參數* \@ schedule_uid*這通常是在現有作業中建立作業排程之區段的最後一個參數。 這將會為新的作業建立新的獨立排程，而不會影響現有的作業。  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>CLR 使用者定義函數和方法的常數摺疊  
-從開始[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，下列使用者定義的 CLR 物件現在可以折迭：  
+從開始 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ，下列使用者定義的 CLR 物件現在可以折迭：  
 
 -   具決定性、純量值的 CLR 使用者定義函數。  
 -   CLR 使用者定義類型的具決定性方法。  
@@ -97,15 +96,15 @@ SELECT geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>XML 模式中的 sqlcmd.exe 行為變更  
- 當您執行 SELECT * from T FOR XML ... 時，如果您使用 sqlcmd 搭配 XML 模式（： XML ON 命令），則會發生行為變更。  
+ 當您執行 SELECT * from T FOR XML ... 時，如果您使用 sqlcmd.exe 搭配 XML 模式（： XML ON 命令），就會發生行為變更。  
   
 ### <a name="dbcc-checkident-revised-message"></a>DBCC CHECKIDENT 修訂的訊息  
- 在[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中，DBCC CHECKIDENT 命令所傳回的訊息只有在與重新植入*new_reseed_value*變更目前的識別值一起使用時才會變更。 新訊息是「*正在檢查識別資訊：目前的識別值\<' 目前的識別值> '*」。 DBCC 的執行已經完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。  
+ 在中 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ，DBCC CHECKIDENT 命令所傳回的訊息只有在與重新植入*new_reseed_value*變更目前的識別值一起使用時才會變更。 新訊息是「*正在檢查識別資訊：目前的識別值 ' \<current identity value> '*」。 DBCC 的執行已經完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。  
   
- 在舊版中，訊息是「*正在檢查識別資訊：目前的識別值\<' 目前的識別值> '，目前的\<資料行值「目前的資料行值>」。DBCC 執行已完成。如果 DBCC 印出錯誤訊息，請洽詢您的系統管理員。* 」 當指定了`NORESEED`、但`DBCC CHECKIDENT`沒有第二個參數，或沒有重新植入值時，訊息會原封不動。 如需詳細資訊，請參閱 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)。  
+ 在舊版中，訊息是「*正在檢查識別資訊：目前的識別值 ' \<current identity value> '，目前的資料行值 ' \<current column value> '。DBCC 執行已完成。如果 DBCC 印出錯誤訊息，請洽詢您的系統管理員。* 」 當 `DBCC CHECKIDENT` 指定了 `NORESEED` 、但沒有第二個參數，或沒有重新植入值時，訊息會原封不動。 如需詳細資訊，請參閱 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)。  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>XML 資料類型上之 exist() 函數的行為已變更  
- 將具有 null 值`exist()`的 XML 資料類型與0（零）進行比較時，函數的行為已變更。 請考慮下列範例：  
+ 將 `exist()` 具有 null 值的 XML 資料類型與0（零）進行比較時，函數的行為已變更。 請考慮下列範例：  
   
 ```sql  
 DECLARE @test XML;  

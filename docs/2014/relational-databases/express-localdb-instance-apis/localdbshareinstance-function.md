@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 63407b3bf1a2860ad3f8c35b5cd8ecc4a4b125c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fc8b4e5a5d6741dd11faf4c846db7862a7254db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032326"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027605"
 ---
 # <a name="localdbshareinstance-function"></a>LocalDBShareInstance 函數
   使用指定的共用名稱，與電腦的其他使用者共用指定的 SQL Server Express LocalDB 執行個體。  
@@ -52,7 +51,7 @@ HRESULT LocalDBShareInstance(
  *dwFlags*  
  [輸入] 保留供日後使用。 目前應設為 0。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

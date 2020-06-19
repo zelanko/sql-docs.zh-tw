@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e0aeae7b7207c9b469504cf4115f371d00f5d7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814064"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936379"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>摘要頁面 (AlwaysOn 可用性群組精靈)
   本說明主題描述 **[摘要]** 頁面的選項。 本主題適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 請使用此頁面上的方格來檢閱您為新可用性群組所做的選擇。 若要進行一個或多個變更，請按 **[上一步]** 返回相關頁面。 完成變更之後，請按 **[下一步]** 返回 **[摘要]** 頁面。 一旦您滿意所做的選擇之後，請按一下 **[完成]**。  

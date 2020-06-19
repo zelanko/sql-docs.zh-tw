@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39ee8bfc079445e177aa9b175019ae385b9f9f36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c38c2d59a46b15fc9a1dca77ae6a67e8e59e1b80
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797655"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936759"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>將次要複本聯結至可用性群組 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將次要複本聯結至 AlwaysOn 可用性群組。 當次要複本加入至 AlwaysOn 可用性群組之後，此次要複本必須聯結至可用性群組。 聯結複本作業必須在裝載次要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行。  
   
 -   **開始之前：**  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
      [安全性](#Security)  
   
@@ -125,6 +124,6 @@ ms.locfileid: "72797655"
 2.  將每一個次要資料庫加入可用性群組。 如需詳細資訊，請參閱 [將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立和設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [針對 AlwaysOn 可用性群組 Configuration &#40;SQL Server&#41;已刪除進行疑難排解](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e1892f24-7272-4d5d-8926-6150cc82b2c3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3644ecee04dd177c792efcb02ad75f91baa46c9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089583"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928293"
 ---
 # <a name="trace-properties-events-selection-tab"></a>追蹤屬性 (事件選取範圍索引標籤)
   使用 **[追蹤屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，來檢視或指定追蹤的事件和資料行。  
@@ -51,7 +50,7 @@ ms.locfileid: "66089583"
  [篩選追蹤中的事件 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [視圖篩選資訊 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [修改篩選 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
- [SQL Server Profiler 範本和許可權](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

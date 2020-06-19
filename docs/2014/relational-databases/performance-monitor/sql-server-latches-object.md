@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2393ea1c-2bf3-41c3-9f37-b9761144eeca
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a6d0d9249a5cfb801e07a85132060bb4d1781346
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f49ac00114065e971c0893f9217ab883eb2d7f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63251094"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047899"
 ---
 # <a name="sql-server-latches-object"></a>SQL Server 的 Latches 物件
   Microsoft **的** SQLServer:Latches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件提供計數器，可監視稱為閂鎖的內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源鎖定。 監視閂鎖來判斷使用者活動和資源使用狀況，可協助您找出效能的瓶頸。  

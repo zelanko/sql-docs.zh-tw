@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fd058eb14b45fe9f5aaaea4e9e37c8741c19d6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782740"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970273"
 ---
 # <a name="delete-a-data-tier-application"></a>刪除資料層應用程式
   您可以使用 [刪除資料層應用程式精靈] 或 Windows PowerShell 指令碼來刪除資料層應用程式。 您可以指定是否要保留、卸離或卸除相關聯的資料庫。  
@@ -101,7 +100,7 @@ ms.locfileid: "72782740"
   
  資料庫的資料和記錄檔會遭到永久刪除。  
   
- 上一步-返回 [**簡介**] 頁面。 ** \< **  
+ ** \< 上一步**-返回 [**簡介**] 頁面。  
   
  **下一步 >** - 繼續進行 [摘要]**** 頁面。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "72782740"
   
  **檢閱選項摘要** - 檢閱顯示在方塊中的 DAC、資料庫與刪除方法。 如果資訊正確，選取 **[下一步]** 或 **[完成]** 來刪除 DAC。 如果 DAC 和資料庫資訊不正確，選取 **[取消]** ，然後選取正確的 DAC。 如果刪除方法不正確，選取 **[上一步]** ，返回 **[選擇方法]** 頁面，然後選取其他方法。  
   
- 上一步-返回 [**選擇方法**] 頁面，選擇不同的 delete 方法。 ** \< **  
+ ** \< 上一步**-返回 [**選擇方法**] 頁面，選擇不同的 delete 方法。  
   
  **下一步 >** - 使用您在上一頁選擇的方法刪除 DAC 執行個體，然後繼續進行 [刪除資料層應用程式]**** 頁面。  
   

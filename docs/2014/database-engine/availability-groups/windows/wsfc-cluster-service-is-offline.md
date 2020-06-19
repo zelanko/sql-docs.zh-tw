@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cfab5de4cd3d171d4d8b7515e65b0a9cd117ac16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1394b84cca05ef1e3371f21463d20d802ead9841
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812896"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936189"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC 叢集服務離線
     

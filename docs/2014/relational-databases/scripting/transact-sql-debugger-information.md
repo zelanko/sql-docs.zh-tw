@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2dbf3a215ebdd52172af9b0917f218ab3598b7e8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 487c347679fc26e28f02aa8bd11306ac3086567c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718401"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063342"
 ---
 # <a name="transact-sql-debugger-information"></a>Transact-SQL 偵錯工具資訊
   每當偵錯工具在特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行作業時，您就可以使用各種偵錯工具視窗來檢視目前的執行狀態。  
@@ -58,9 +57,9 @@ ms.locfileid: "82718401"
   
  四個 [監看式]  視窗會顯示有關您已選取之變數和運算式的資訊。 在您於清單中加入或刪除運算式之前，[監看式]  視窗中所列的這組運算式都不會變更。  
   
- 若要將運算式加入至 [監看式]  視窗，您可以在 [快速監看式]  對話方塊中選取 [加入監看式]  ，也可以在 [監看式]  視窗中空白資料列的 [名稱]  資料行中輸入運算式的名稱。  
+ 若要將運算式加入至 [監看式] 視窗，您可以在 [快速監看式] 對話方塊中選取 [加入監看式]，也可以在 [監看式] 視窗中空白資料列的 [名稱] 資料行中輸入運算式的名稱。  
   
- 您可以在 [區域變數]  、[監看式]  或 [快速監看式]  視窗中，以滑鼠右鍵按一下資料列，然後選取 [編輯值]  ，藉以設定變數的資料值。 [區域變數]  視窗、[監看式]  視窗和 [快速監看式]  對話方塊中的 [值]  資料行支援都文字、XML 和 HTML 資料視覺化檢視。 這些視覺化檢視是以 [值]  資料行最右邊的放大鏡資料提示表示。 您可以使用這些視覺化檢視，在符合資料類型的顯示中檢視文字、XML 或 HTML 資料值，例如在瀏覽器視窗中檢視 XML 檔。  
+ 您可以在 [區域變數]  、[監看式]  或 [快速監看式]  視窗中，以滑鼠右鍵按一下資料列，然後選取 [編輯值]  ，藉以設定變數的資料值。 [區域變數] 視窗、[監看式] 視窗和 [快速監看式] 對話方塊中的 [值] 資料行支援都文字、XML 和 HTML 資料視覺化檢視。 這些視覺化檢視是以 [值]  資料行最右邊的放大鏡資料提示表示。 您可以使用這些視覺化檢視，在符合資料類型的顯示中檢視文字、XML 或 HTML 資料值，例如在瀏覽器視窗中檢視 XML 檔。  
   
  在偵錯模式中，當您將滑鼠指標移到識別碼上方時，[快速諮詢]  快顯就會顯示運算式的名稱及其目前值。 如需詳細資訊，請參閱[快速諮詢 &#40;IntelliSense&#41;](quick-info-intellisense.md)。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47ec51a82b1369210447b7d853d39a5a61e055ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970148"
 ---
 # <a name="database-properties-mirroring-page"></a>資料庫屬性 (鏡像頁面)
   請從主體資料庫存取此頁面，並且用它來設定和修改資料庫的資料庫鏡像屬性。 您也可以用來它啟動「設定資料庫鏡像安全性精靈」，以便檢視鏡像工作階段的狀態，以及暫停或移除資料庫鏡像工作階段。  
@@ -49,7 +48,7 @@ ms.locfileid: "62871943"
   
  TCP **://**_fully_qualified_domain_name_**:**_port_  
   
- where  
+ 其中  
   
 -   *fully_qualified_domain_name* 是伺服器執行個體所在的伺服器。  
   

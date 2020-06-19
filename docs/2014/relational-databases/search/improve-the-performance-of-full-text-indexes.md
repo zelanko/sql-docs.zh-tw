@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51b5913e9c3ce65faa5a1fddc5846cc7c94d149f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011254"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063247"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
   全文檢索索引與全文檢索查詢的效能會受硬體資源的影響，例如記憶體、磁碟速度、CPU 速度與電腦架構。  
@@ -58,7 +57,7 @@ ms.locfileid: "66011254"
 ##  <a name="tuning-the-performance-of-full-text-indexes"></a><a name="tuning"></a>微調全文檢索索引的效能  
  若要將全文檢索索引的效能發揮至極限，請實作下列最佳作法：  
   
--   若要使用所有處理器或核心來達到最大[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)值，`max full-text crawl ranges`請將 sp_configure ' ' 設定為系統上的 cpu 數目。 此組態選項的相關資訊，請參閱 [全文檢索搜耙最大範圍伺服器組態選項](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)。  
+-   若要使用所有處理器或核心來達到最大值，請將[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)' `max full-text crawl ranges` ' 設定為系統上的 cpu 數目。 此組態選項的相關資訊，請參閱 [全文檢索搜耙最大範圍伺服器組態選項](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)。  
   
 -   請確定基底資料表具有叢集索引。 對叢集索引的第一個資料行使用整數資料類型。 避免在叢集索引的第一個資料行使用 GUID。 叢集索引的多重範圍母體擴展可能會產生最高的母體擴展速度。 我們建議當做全文檢索索引鍵的資料行應該是整數資料類型。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "66011254"
   
  上述公式中變數的預設值如下所示：  
   
-|**變數**|**預設值**|  
+|**變**|**預設值**|  
 |------------------|-----------------------|  
 |*number_of_crawl_ranges*|CPU 數目|  
 |*ism_size*|1 MB (適用於 x86 電腦)<br /><br /> 4 MB、8 MB 或 16MB (適用於 x64 電腦，端視實體記憶體總數而定)|  
@@ -121,17 +120,17 @@ ms.locfileid: "66011254"
   
 -   *T*，這是系統上可用的實體記憶體總計 (以 MB 為單位)。  
   
--   *M*，這是最佳`max server memory`設定。  
+-   *M*，這是最佳 `max server memory` 設定。  
   
 > [!IMPORTANT]  
 >  如需公式的基本資訊，請參閱下方的<sup>1</sup>、 <sup>2</sup>和<sup>3</sup>。  
   
-|平台|估計 fdhost 的 .exe 記憶體需求（以 MB 為單位）-*F*<sup>1</sup>|計算最大伺服器記憶體的公式-*M*<sup>2</sup>|  
+|平台|估計 fdhost.exe 記憶體需求（MB）-*F*<sup>1</sup>|計算最大伺服器記憶體的公式-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** **&#42;** 50_的爬網範圍數目_|_M_ **= 最小值（** _T_ **，** 2000 **）-*`F`* ** 500|  
-|x64|_F_ **=** _爬網範圍數_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ T **-** _F_ F **-** 500|  
+|x86|_F_ **=** **&#42;** 50_的爬網範圍數目_|_M_ **= 最小值（** _T_ **，** 2000 **）- *`F`* - ** 500|  
+|x64|_F_ **=** _爬網範圍數_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup>如果有多個完整擴展正在進行中，請分別計算每個的 fdhost 記憶體需求，例如*F1*、 *F2*等。 然後將 *M* 計算為 _T_**-** sigma **(**_F_i **)**。  
+ <sup>1</sup>如果有多個完整擴展正在進行中，請分別計算每個的 fdhost.exe 記憶體需求，例如*F1*、 *F2*等。 然後將 *M* 計算為 _T_**-** sigma **(**_F_i **)**。  
   
  <sup>2</sup> 500 MB 是系統中其他進程所需記憶體的估計。 如果系統正在進行其他工作，請據此增加這個值。  
   
@@ -143,13 +142,13 @@ ms.locfileid: "66011254"
   
  `F = 8*10*8=640`  
   
- 下一個計算會取得`max server memory` - *M*的最佳值。 此系統上可用的實體記憶體總計（以 MB 為*單位）* 為`8192` *t*。  
+ 下一個計算會取得 M 的最佳值 `max server memory` - * *。 此系統上可用的實體記憶體總計（以 MB 為*單位）為* *t* `8192` 。  
   
  `M = 8192-640-500=7052`  
   
  **範例：設定 max server memory**  
   
- 這個範例會使用[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)並[重新](/sql/t-sql/language-elements/reconfigure-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]設定語句， `max server memory`將設為上述範例中為*M*計算的值`7052`，如下所示：  
+ 這個範例會使用[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)並[重新](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 設定語句，將設 `max server memory` 為上述範例中為*M*計算的值， `7052` 如下所示：  
   
 ```  
 USE master;  
@@ -203,7 +202,7 @@ GO
   
  基於安全性理由，篩選是由篩選背景程式主機處理序載入。 伺服器執行個體會針對所有多執行緒篩選使用多執行緒處理序，而針對所有單一執行緒篩選使用單一執行緒處理序。 當使用多執行緒篩選的文件包含使用單一執行緒篩選的內嵌文件時，全文檢索引擎就會針對內嵌文件啟動單一執行緒處理序。 例如，如果遇到包含 PDF 文件的 Word 文件，全文檢索引擎就會針對 Word 內容啟動多執行緒處理序，而針對 PDF 內容啟動單一執行緒處理序。 不過，單一執行緒篩選在此環境下可能無法正常運作，而且可能會使篩選處理序不穩定。 在經常會有這類內嵌的特定情況下，不穩定可能會導致篩選處理序損毀。 發生這個狀況時，全文檢索引擎就會將任何失敗的文件 (例如，包含內嵌 PDF 內容的 Word 文件) 重新路由傳送至單一執行緒篩選處理序。 如果經常發生重新路由傳送的狀況，則會導致全文檢索索引處理序的效能降低。  
   
- 若要解決這個問題，請將容器文件 (在此範例中是 Word) 的篩選標示成單一執行緒篩選。 您可以變更篩選登錄值，以便將給定的篩選標示成單一執行緒篩選。 若要將篩選標示為單一執行緒篩選，您必須將篩選的**ThreadingModel**登錄值設定為`Apartment Threaded`。 如需有關單一執行緒 Apartment 的詳細資訊，請參閱 [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(了解與使用 COM 執行緒模型) 技術白皮書。  
+ 若要解決這個問題，請將容器文件 (在此範例中是 Word) 的篩選標示成單一執行緒篩選。 您可以變更篩選登錄值，以便將給定的篩選標示成單一執行緒篩選。 若要將篩選標示為單一執行緒篩選，您必須將篩選的**ThreadingModel**登錄值設定為 `Apartment Threaded` 。 如需有關單一執行緒 Apartment 的詳細資訊，請參閱 [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(了解與使用 COM 執行緒模型) 技術白皮書。  
   
   
   

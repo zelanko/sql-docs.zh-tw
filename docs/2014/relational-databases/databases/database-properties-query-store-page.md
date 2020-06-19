@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 51116c993cf795e6390ac463f67f75e2ddff3e0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bab0d9b697e9ad9ec4b27f320d26b9b9edb5944e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917199"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970118"
 ---
 # <a name="database-properties-query-store-page"></a>資料庫屬性 (查詢存放區頁面)
   請從主體資料庫存取此頁面，並將其用於設定及修改資料庫查詢存放區的屬性。 這些選項也可使用 [ALTER DATABASE SET 選項](/sql/t-sql/statements/alter-database-transact-sql-set-options)加以設定。 如需查詢存放區的相關資訊，請參閱 [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)  

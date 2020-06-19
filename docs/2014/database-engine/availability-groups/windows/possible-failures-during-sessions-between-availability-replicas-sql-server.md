@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cfacb7f7c75875d4f5d0b0b435d282b3f537cc7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874468"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936639"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>工作階段期間可用性複本之間可能發生失敗 (SQL Server)
   實體、作業系統或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 問題都可能會在兩個可用性複本之間的工作階段中導致失敗。 可用性複本不會為了確認 Sqlservr.exe 所依賴的元件是正常運作或已失敗，而定期檢查這些元件。 不過，針對某些類型的錯誤，受影響的元件會對 Sqlservr.exe 報告錯誤。 由其他元件所報告的錯誤稱為「重大錯誤」**(Hard Error)。 為了偵測其他沒有通知的失敗，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]會實作其本身的工作階段逾時機制。 指定工作階段逾時期限 (以秒為單位)。 逾時期限是伺服器執行個體在將另一個執行個體視為中斷連接之前，等待接收該執行個體發出之 PING 訊息的最長時間。 如果兩個可用性複本之間發生工作階段逾時，可用性複本會假設失敗已經發生，並宣告「軟體錯誤」**。  

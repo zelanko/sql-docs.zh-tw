@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c3616e40ff54c67d27902ddf9454084fb62e282
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a0e23e073375c8f00317003635df8ec0b69883cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813653"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936345"
 ---
 # <a name="cross-database-transactions-not-supported-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>資料庫鏡像或 AlwaysOn 可用性群組不支援跨資料庫交易 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]或資料庫鏡像皆不支援跨資料庫交易和分散式交易。 這是因為無法確保交易不可部分完成性/完整性，原因如下：  

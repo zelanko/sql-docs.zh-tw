@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 45f1479d96838ce69a7bde35cd2a2fbd9c7e684d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d128d38a1123e89b45dc3fdcaa0343aa5fd3d5b5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814246"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936862"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>某些可用性資料庫的資料同步處理狀態不健全
     
@@ -29,7 +28,7 @@ ms.locfileid: "62814246"
 |-|-|  
 |**原則名稱**|可用性複本資料同步處理狀態|  
 |**問題**|某個可用性資料庫的資料同步處理狀態不良。|  
-|**類別**|**Warning**|  
+|**類別**|**警告**|  
 |**層面**|可用性複本|  
   
 ## <a name="description"></a>描述  

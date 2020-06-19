@@ -13,20 +13,19 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a552b5847f1abda254da1d6c7348088ee0e8a03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97cf01d12e56b238b02d1c36c14cf8094dfd74d2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76923035"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936419"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>指定複本頁面 (新增可用性群組精靈：加入複本精靈)
   此主題描述 **[指定複本]** 頁面的選項。 此頁面適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 和 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用 **[指定複本]** 頁面指定與設定要加入可用性群組的一個或多個可用性複本。 此頁面包含四個索引標籤，其說明如下表所示。 按一下表格中的索引標籤名稱即可前往對應的章節，如本主題稍後所示。  
   
 |索引標籤|簡短描述|  
 |---------|-----------------------|  
-|[複本](#ReplicasTab)|使用此索引標籤可指定將裝載或目前裝載次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 請注意，您目前所連接的伺服器執行個體必須裝載主要複本。<br /><br /> 提示：在 [複本]**** 索引標籤上完成指定所有複本，然後啟動其他索引標籤。|  
+|[複本數](#ReplicasTab)|使用此索引標籤可指定將裝載或目前裝載次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 請注意，您目前所連接的伺服器執行個體必須裝載主要複本。<br /><br /> 提示：在 [複本]**** 索引標籤上完成指定所有複本，然後啟動其他索引標籤。|  
 |[端點](#EndpointsTab)|使用此索引標籤可驗證任何現有的資料庫鏡像端點，此外，如果在其服務帳戶使用 Windows 驗證的伺服器執行個體上缺少此端點，則可自動建立該端點。|  
 |[備份喜好設定](#BackupPreferencesTab)|使用此索引標籤可指定整個可用性群組的備份喜好設定，以及個別可用性複本的備份優先權。|  
 |[接聽程式](#Listener)|使用此索引標籤 (如果有的話) 建立可用性群組接聽程式。 預設不會建立接聽程式。<br /><br /> 此索引標籤只有在您執行 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]時才可以使用。|  
@@ -146,7 +145,7 @@ ms.locfileid: "76923035"
  指定此可用性群組的接聽程式喜好設定，如下所示：  
   
  **接聽程式 DNS 名稱**  
- 指定接聽程式的網路名稱。 這個名稱在網域上必須是唯一的，而且只能包含英數位元、**-** 虛線（）和連字號（**_**）（依任何順序）。 使用 **[接聽程式]** 索引標籤指定時，DNS 名稱長度最多可以有 15 個字元。  
+ 指定接聽程式的網路名稱。 這個名稱在網域上必須是唯一的，而且只能包含英數位元、虛線（ **-** ）和連字號（**_**）（依任何順序）。 使用 **[接聽程式]** 索引標籤指定時，DNS 名稱長度最多可以有 15 個字元。  
   
 > [!IMPORTANT]  
 >  如果您在 [接聽程式]**** 索引標籤上輸入無效的 DNS 接聽程式名稱 (或通訊埠編號)，[指定複本]**** 頁面上的 [下一步]**** 按鈕便會停用。  
@@ -210,7 +209,7 @@ ms.locfileid: "76923035"
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-sql&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [AlwaysOn 可用性群組 &#40;SQL Server 的必要條件、限制和建議&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

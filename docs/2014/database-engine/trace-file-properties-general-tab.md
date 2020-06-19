@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2464bb8d-1139-4b2b-8f98-0983e62167ea
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f9dfa0d120460ea6a2d6501ba93bab9e00ea4be
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089615"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928339"
 ---
 # <a name="trace-file-properties-general-tab"></a>追蹤檔案屬性 (一般索引標籤)
   使用 **[追蹤檔案屬性]** 對話方塊的 **[一般]** 索引標籤，來檢視追蹤檔案的屬性。  
@@ -27,7 +26,7 @@ ms.locfileid: "66089615"
  若要檢視此視窗，請開啟追蹤檔案。 接著在 **[檔案]** 功能表上，按一下 **[屬性]**。  
   
 ## <a name="options"></a>選項。  
- [檔案名稱]****  
+ **檔案名稱**  
  就會顯示追蹤檔案的路徑與名稱。  
   
  **追蹤提供者名稱**  
@@ -42,10 +41,10 @@ ms.locfileid: "66089615"
  **檔案大小 (KB)**  
  追蹤檔案的大小 (以 KB 為單位)。  
   
- **已**  
+ **建立日期**  
  追蹤檔案的建立日期和時間。  
   
- **修改日期**  
+ **被**  
  追蹤檔案的修改日期和時間。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fa9e42b6b4bd33bc3c0212615bc9e89f2d06426e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3c20b7008ca447e278dd07e9c483a3147117dbf9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703847"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063394"
 ---
 # <a name="manage-bookmarks"></a>管理書籤
   使用程式碼編輯器時，[書籤]  視窗可讓您建立連結至文件內之程式碼的特定行。 您可以從 [檢視]  功能表顯示這個視窗。  

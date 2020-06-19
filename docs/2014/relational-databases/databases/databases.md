@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea3da64ce6da8cbcb32b5854f14e8d24349c0c25
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154577"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970078"
 ---
 # <a name="databases"></a>資料庫
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料庫是由資料表集合所組成，該集合內儲存了一組特定的結構資料。 而資料表中則包含資料列集合 (也稱為記錄或 Tuple) 和資料行 (也稱為屬性) 集合。 資料表中的每個資料行都是為了儲存某類型資訊而設計，例如，日期、名稱、金額和數字。  

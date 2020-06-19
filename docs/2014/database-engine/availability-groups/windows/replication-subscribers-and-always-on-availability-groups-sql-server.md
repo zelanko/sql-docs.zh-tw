@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8985a8758f3e9be0bf15f48283f20220a47ece84
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789144"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936539"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>複寫訂閱者及 AlwaysOn 可用性群組 (SQL Server)
   當包含複寫訂閱者資料庫的 AlwaysOn 可用性群組容錯移轉時，複寫訂閱可能會失敗。 針對交易式複寫推播訂閱者，若訂用帳戶是使用 AGI 接聽程式名稱建立時，散發代理程式將繼續自動複寫。 針對交易式複寫推播訂閱者，若訂用帳戶是使用 AGI 接聽程式名稱建立且原始訂閱者伺服器已啟動並執行時，散發代理程式將繼續自動複寫。 這是因為散發代理程式作業只會在原始訂閱者 (AG 的原始複本) 上建立。 如果是合併訂閱者，複寫管理員必須透過重新建立訂閱，手動重新設定訂閱者。  

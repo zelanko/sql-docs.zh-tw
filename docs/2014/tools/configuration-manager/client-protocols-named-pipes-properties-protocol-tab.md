@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 30fbae62-2f2e-4d36-9c6e-3444fff68781
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3fe7bb05afc8e0814ddb3d872a810759aae2a678
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 169b6d98212c724b8d6c43615ae2fa7eba9cfc7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253551"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008137"
 ---
 # <a name="client-protocols---named-pipes-properties-protocol-tab"></a>用戶端通訊協定 - 具名管道內容 (通訊協定索引標籤)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，使用 [具名管道屬性]  對話方塊的 [通訊協定]  索引標籤來檢視或修改預設管道的描述。 若要連接到其他管道，請在 **[預設管道]** 方塊內輸入管道名稱。 如需有關連接字串的詳細資訊，請參閱＜ [Creating a Valid Connection String Using Named Pipes](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)＞。  

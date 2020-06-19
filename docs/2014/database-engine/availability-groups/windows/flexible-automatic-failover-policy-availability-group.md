@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 63c9f56894ede1002b358c624ab763935fd42fc1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd4dd62d8b30e2041415e0b9be5682ce4b01d1f6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789890"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936779"
 ---
 # <a name="flexible-failover-policy-for-automatic-failover-of-an-availability-group-sql-server"></a>可用性群組自動容錯移轉的彈性容錯移轉原則 (SQL Server)
   彈性容錯移轉原則可讓您更精確地控制造成可用性群組之[自動容錯移轉](failover-and-failover-modes-always-on-availability-groups.md)的狀況。 透過變更觸發自動容錯移轉的失敗狀況和健全狀況檢查的頻率，您可以提高或降低自動容錯移轉的可能性，以便支援高可用性的 SLA。  

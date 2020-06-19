@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06b9dac5f9074b335afff7c6b71980618a3020ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b6fafaf6464431d68f8cfdf9dc9d8fa844a42a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782865"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936592"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>將主要資料庫從可用性群組移除 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，將主要資料庫和對應的次要資料庫從 AlwaysOn 可用性群組中移除。  

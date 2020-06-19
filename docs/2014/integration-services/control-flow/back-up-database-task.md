@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4b6aabb1f44c2a25704b7079074a5600c4d52d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b3f78748ec380a40cd5dbd234a5a02ee58bc660
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833126"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919949"
 ---
 # <a name="back-up-database-task"></a>備份資料庫工作
   「備份資料庫」工作會執行不同類型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫備份作業。 如需詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  

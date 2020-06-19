@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a441595fa07c86ff1cdbeac4e67e3a6ca0361f80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 585f1d86d328b7c5027241310108d102b56ca327
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782981"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936849"
 ---
 # <a name="enable-and-disable-alwayson-availability-groups-sql-server"></a>啟用和停用 AlwaysOn 可用性群組 (SQL Server)
   啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 是伺服器執行個體使用可用性群組的必要條件。 您必須在將要裝載一個或多個可用性群組之可用性複本的每個 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體上啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能，才能建立及設定任何可用性群組。  
@@ -30,7 +29,7 @@ ms.locfileid: "72782981"
   
 -   **開始之前：**  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
      [安全性](#Security)  
   
@@ -97,12 +96,12 @@ ms.locfileid: "72782981"
     -   如果 `IsHadrEnabled` = 0，表示 AlwaysOn 可用性群組已停用。  
   
     > [!NOTE]  
-    >  如需伺服器屬性的`IsHadrEnabled`詳細資訊，請參閱[SERVERPROPERTY &#40;transact-sql&#41;](/sql/t-sql/functions/serverproperty-transact-sql)。  
+    >  如需伺服器屬性的詳細資訊 `IsHadrEnabled` ，請參閱[SERVERPROPERTY &#40;transact-sql&#41;](/sql/t-sql/functions/serverproperty-transact-sql)。  
   
 ###  <a name="using-powershell"></a><a name="PowerShell1Procedure"></a> 使用 PowerShell  
  **判斷 AlwaysOn 可用性群組是否已啟用**  
   
-1.  將預設值`cd`（）設定為您要判斷是否`\SQL\NODE1\DEFAULT` [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]已啟用的伺服器實例（例如）。  
+1.  將預設值（ `cd` ）設定為 `\SQL\NODE1\DEFAULT` 您要判斷是否已啟用的伺服器實例（例如） [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。  
   
 2.  輸入下列 PowerShell `Get-Item` 命令：  
   
@@ -131,7 +130,7 @@ ms.locfileid: "72782981"
   
 2.  指向 [開始] **** 功能表上的 [所有程式] ****，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] 和 [組態工具] ****，再按一下 [SQL Server 組態管理員] ****。  
   
-3.  在**SQL Server 組態管理員**中，按一下 [ **SQL Server 服務**]，以滑鼠右鍵按一下 [SQL Server ** < *`instance name`* ** （** < *`instance name`*>）**]，其中是您要啟用 AlwaysOn 可用性群組的本機伺服器實例名稱，然後按一下 [**屬性]。**  
+3.  在**SQL Server 組態管理員**中，按一下 [ **SQL Server 服務**]，以滑鼠右鍵按一下 [SQL Server （** < *`instance name`*>）**]，其中 **<*`instance name`*>** 是您要啟用 AlwaysOn 可用性群組的本機伺服器實例名稱，然後按一下 [**屬性]。**  
   
 4.  選取 [ **AlwaysOn 高可用性**] 索引標籤。  
   
@@ -151,14 +150,14 @@ ms.locfileid: "72782981"
      若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
     > [!NOTE]  
-    >  如需如何控制`Enable-SqlAlwaysOn` Cmdlet 是否重新開機[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務的相關資訊，請參閱本主題稍後的「 [Cmdlet 何時重新開機 SQL Server 服務？](#WhenCmdletRestartsSQL)」。  
+    >  如需如何控制 `Enable-SqlAlwaysOn` Cmdlet 是否重新開機服務的相關資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請參閱本主題稍後的「 [Cmdlet 何時重新開機 SQL Server 服務？](#WhenCmdletRestartsSQL)」。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
 ####  <a name="example-enable-sqlalwayson"></a><a name="ExmplEnable-SqlHadrServic"></a> 範例：Enable-SqlAlwaysOn  
- 下列 PowerShell 命令會在[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] SQL Server （*電腦*\\*實例*）的實例上啟用。  
+ 下列 PowerShell 命令會 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 在 SQL Server （*電腦* \\ *實例*）的實例上啟用。  
   
 ```powershell
 Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
@@ -193,9 +192,9 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  連接到 Windows Server 容錯移轉叢集 (WSFC) 節點，此節點裝載您要停用 AlwaysOn 可用性群組的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
   
-2.  在 [**開始**] 功能表上，依序指向 [**所有程式**]、 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)][] 和 [**組態工具**]，然後按一下 [ **SQL Server 組態管理員**]。  
+2.  在 [**開始**] 功能表上，依序指向 [**所有程式**]、[] 和 [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] **組態工具**]，然後按一下 [ **SQL Server 組態管理員**]。  
   
-3.  在**SQL Server 組態管理員**中，按一下 [ **SQL Server 服務**]，以滑鼠右鍵按一下 [SQL Server ** < *`instance name`* ** （** < *`instance name`*>）**]，其中是您要停用 AlwaysOn 可用性群組的本機伺服器實例名稱，然後按一下 [**屬性**]。  
+3.  在**SQL Server 組態管理員**中，按一下 [ **SQL Server 服務**]，以滑鼠右鍵按一下 [SQL Server （** < *`instance name`*>）**]，其中 **<*`instance name`*>** 是您要停用 AlwaysOn 可用性群組的本機伺服器實例名稱，然後按一下 [**屬性**]。  
   
 4.  在 [AlwaysOn 高可用性]**** 索引標籤上，取消選取 [啟用 AlwaysOn 可用性群組] **** 核取方塊，然後按一下 [確定] ****。  
   
@@ -206,18 +205,18 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="using-sql-server-powershell"></a><a name="PScmd3Procedure"></a> 使用 SQL Server PowerShell  
  **停用 AlwaysOn**  
   
-1.  將目錄（`cd`）變更為您想要為 AlwaysOn 可用性群組停用的目前已啟用伺服器實例。  
+1.  將目錄（ `cd` ）變更為您想要為 AlwaysOn 可用性群組停用的目前已啟用伺服器實例。  
   
 2.  使用 `Disable-SqlAlwaysOn` 指令程式，啟用 AlwaysOn 可用性群組。  
   
-     例如，下列命令會在 SQL Server 的實例（*電腦*\\*實例*）上停用 AlwaysOn 可用性群組。  此命令需要重新啟動執行個體，而且系統將提示您確認重新啟動。  
+     例如，下列命令會在 SQL Server 的實例（*電腦* \\ *實例*）上停用 AlwaysOn 可用性群組。  此命令需要重新啟動執行個體，而且系統將提示您確認重新啟動。  
   
     ```powershell
     Disable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
     ```  
   
     > [!IMPORTANT]  
-    >  如需如何控制`Disable-SqlAlwaysOn` Cmdlet 是否重新開機[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務的相關資訊，請參閱本主題稍後的「 [Cmdlet 何時重新開機 SQL Server 服務？](#WhenCmdletRestartsSQL)」。  
+    >  如需如何控制 `Disable-SqlAlwaysOn` Cmdlet 是否重新開機服務的相關資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請參閱本主題稍後的「 [Cmdlet 何時重新開機 SQL Server 服務？](#WhenCmdletRestartsSQL)」。  
   
      若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   

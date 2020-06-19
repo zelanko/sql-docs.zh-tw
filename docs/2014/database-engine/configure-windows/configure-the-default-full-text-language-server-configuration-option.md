@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d98194f5dead58b738c39503445923d9df49be06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec0736326a4da0708d125bfc480996d54bb86c8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787037"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935725"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>設定 default full-text language 伺服器組態選項
-  `default full-text language`本主題描述如何使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中設定 server configuration 選項。 `default full-text language`選項會指定全文檢索索引的預設語言值。 語言分析會針對已全文檢索索引的所有資料執行，而且相依於資料的語言。 這個選項的預設值是伺服器使用的語言。 若為當地語系化的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式會`default full-text language`將選項設定為伺服器的語言（如果有適當的相符項存在的話）。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為非當地語系化的版本時，則 `default full-text language` 選項會是英文。  
+  本主題描述如何 `default full-text language` 使用或，在中設定 server configuration 選項 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 `default full-text language`選項會指定全文檢索索引的預設語言值。 語言分析會針對已全文檢索索引的所有資料執行，而且相依於資料的語言。 這個選項的預設值是伺服器使用的語言。 若為當地語系化的版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會將 `default full-text language` 選項設定為伺服器的語言（如果有適當的相符項存在的話）。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為非當地語系化的版本時，則 `default full-text language` 選項會是英文。  
   
  **本主題內容**  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62787037"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
--   當未透過 CREATE `default full-text language`全文檢索索引或 ALTER 全文檢索索引語句中的 language **language_term**選項指定資料行的語言時，會在全文檢索索引中使用選項的值。 如果不支援預設的全文檢索語言或無法使用語言分析封裝 (Linguistic Analysis Package)，CREATE 或 ALTER 作業會失敗，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將傳回錯誤訊息，表示指定的語言無效。  
+-   `default full-text language`當未透過 CREATE 全文檢索索引或 ALTER 全文檢索索引語句中的 language **language_term**選項指定資料行的語言時，會在全文檢索索引中使用選項的值。 如果不支援預設的全文檢索語言或無法使用語言分析封裝 (Linguistic Analysis Package)，CREATE 或 ALTER 作業會失敗，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將傳回錯誤訊息，表示指定的語言無效。  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   

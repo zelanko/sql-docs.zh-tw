@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87dff347bd0aee1211093d9e3406a24670a80e7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db2f56befe6905b9c3de6bd1ab6a2e5a4a00b1b3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228174"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928479"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>讓可用性群組離線 (SQL Server)
   本主題描述如何使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 和更新版本中的 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] ，將 AlwaysOn 可用性群組從 ONLINE 狀態變成 OFFLINE 狀態。 同步認可資料庫不會有資料遺失，因為如果有任何未同步處理的同步認可複本，OFFLINE 作業就會引發錯誤並且讓可用性群組維持 ONLINE 狀態。 讓可用性群組保持上線可保護未同步處理的同步認可資料庫，避免可能的資料遺失。 在可用性群組離線之後，其資料庫就無法供用戶端使用，而且您無法讓可用性群組恢復上線。 因此，只有在從某一個 WSFC 叢集將可用性群組資源移轉至另一個叢集時，才讓可用性群組離現。  
@@ -32,7 +31,7 @@ ms.locfileid: "75228174"
 > [!CAUTION]  
 >  OFFLINE 選項只可用於跨叢集移轉可用性群組資源。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
   
 -   您輸入 OFFLINE 命令所在的伺服器執行個體必須執行 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 或更新版本 (Enterprise Edition 或更新版本)。  
   

@@ -15,18 +15,17 @@ topic_type:
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1bac043c4a194c904154e2c97cd0544c8c941078
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130521"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027769"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 函數
   傳回指定之 SQL Server Express LocalDB 執行個體的資訊，例如執行個體是否存在、執行個體使用的 LocalDB 版本、執行個體是否正在執行等等。  
   
- 此資訊會在`struct`名為的**LocalDBInstanceInfo**中傳回，其具有下列定義。  
+ 此資訊會在 `struct` 名為的**LocalDBInstanceInfo**中傳回，其具有下列定義。  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -95,7 +94,7 @@ HRESULT LocalDBGetInstanceInfo(
  *dwInstanceInfoSize*  
  源保留*InstanceInfo*緩衝區的大小。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   
@@ -127,9 +126,9 @@ HRESULT LocalDBGetInstanceInfo(
  發生意外錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="details"></a>詳細資料  
- 引進`struct`大小引數（*lpInstanceInfoSize*）背後的原理是讓 API 能夠傳回不同版本的**LocalDBInstanceInfostruct**，並有效地啟用向前和向後相容性。  
+ 引進 `struct` 大小引數（*lpInstanceInfoSize*）背後的原理是讓 API 能夠傳回不同版本的**LocalDBInstanceInfostruct**，並有效地啟用向前和向後相容性。  
   
- 如果`struct`大小引數（*LpInstanceInfoSize*）符合**LocalDBInstanceInfostruct**已知版本的大小，則`struct`會傳回該版本的。 否則會傳回 LOCALDB_ERROR_INVALID_PARAMETER。  
+ 如果 `struct` 大小引數（*lpInstanceInfoSize*）符合**LocalDBInstanceInfostruct**已知版本的大小，則會傳回該版本的 `struct` 。 否則會傳回 LOCALDB_ERROR_INVALID_PARAMETER。  
   
  **LocalDBGetInstanceInfo** API 使用方式的典型範例如下所示：  
   

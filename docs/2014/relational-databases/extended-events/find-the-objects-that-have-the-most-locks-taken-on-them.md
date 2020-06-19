@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6e533f823d69f10af28084eecd714c303735957d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 345c5f179358bd7b8df587b76c9c6053235d3a73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706641"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027486"
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>尋找持有最多鎖定的物件
   資料庫管理員經常需要識別阻礙資料庫效能的鎖定來源。  
@@ -99,7 +98,7 @@ ms.locfileid: "82706641"
   
  當此程序中的陳述式完成之後，查詢編輯器的 **[結果]** 索引標籤會顯示以下資料行：  
   
--   name  
+-   NAME  
   
 -   object_id  
   

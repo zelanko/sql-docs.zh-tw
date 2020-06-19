@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c81f5b22aa61dce596896ccd90bfb1d56054742d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c62942eaa8f4ab4472bca5c7123e5999eb069216
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782965"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936669"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>執行可用性群組的已規劃手動容錯移轉 (SQL Server)
   本主題說明如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，在不遺失資料的情況下對 AlwaysOn 可用性群組執行手動容錯移轉 (*規劃的手動容錯移轉*)。 可用性群組會在可用性複本層級容錯移轉。 已規劃的手動容錯移轉就像任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 容錯移轉一樣，會將次要複本轉換成主要角色，同時將先前的主要複本轉換成次要角色。  

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d73724cd1aebd1d06048f634da3a1ad32ff8e49c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175980"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970248"
 ---
 # <a name="export-a-data-tier-application"></a>匯出資料層應用程式
   匯出已部署的資料層應用程式 (DAC) 或資料庫，會建立匯出檔，而此檔案包含資料庫中物件的定義以及資料表中所含的所有資料。 接著，匯出檔可以匯入 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的另一個執行個體或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC、建立邏輯備份或建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中所部署資料庫的內部部署複本。  
@@ -100,12 +99,12 @@ ms.locfileid: "70175980"
 ##  <a name="validation-page"></a><a name="Validation"></a>驗證頁面  
  您可以使用 [驗證] 頁面來檢閱封鎖作業的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 **[重新執行驗證]** 確定驗證成功。  
   
- 若要繼續，請按 [下一步]****。  
+ 若要繼續進行，請按 **[下一步]** 。  
   
 ##  <a name="summary-page"></a><a name="Summary"></a> 摘要頁面  
  您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成匯出作業，請按一下 [完成]****。 若要取消匯出作業並結束精靈，請按一下 [取消]****。  
   
-##  <a name="progress-page"></a><a name="Progress"></a>進度頁面  
+##  <a name="progress-page"></a><a name="Progress"></a> 進度頁面  
  此頁面會顯示進度列，指出作業的狀態。 若要檢視詳細狀態，請按一下 **[檢視詳細資料]** 選項。  
   
 ##  <a name="results-page"></a><a name="Results"></a>結果頁面  

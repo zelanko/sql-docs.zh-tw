@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5041882c3eadb4e7f6f28a118e45c6e42f13cea6
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 165036ba539c3392b1944282bd9d6126eb471a97
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924890"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936339"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>疑難排解 AlwaysOn 可用性群組組態 (SQL Server)
   此主題中的資訊可協助您疑難排解為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]設定伺服器執行個體時常見的問題。 一般組態問題包含 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 未啟用、不正確地設定帳戶、資料庫鏡像端點不存在、端點無法存取 (SQL Server 錯誤 1418)、網路存取不存在，以及聯結資料庫命令失敗 (SQL Server 錯誤 35250)。
@@ -29,7 +28,7 @@ ms.locfileid: "82924890"
 
  **本主題內容：**
 
-|區段|說明|
+|區段|描述|
 |-------------|-----------------|
 |[AlwaysOn 可用性群組未啟用](#IsHadrEnabled)|如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體未啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，此執行個體不會支援可用性群組建立，也無法裝載任何可用性複本。|
 |[帳戶](#Accounts)|討論正確設定在底下執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之帳戶的需求。|
@@ -121,7 +120,7 @@ ms.locfileid: "82924890"
 ##  <a name="join-database-fails-sql-server-error-35250"></a><a name="JoinDbFails"></a> 聯結資料庫失敗 (SQL Server 錯誤 35250)
  本節討論因為與主要複本的連接不在作用中，次要資料庫聯結至可用性群組失敗的可能原因和解決方案。
 
- **解決方法：**
+ **解決方案：**
 
 1.  檢查防火牆設定是否允許裝載主要複本和次要複本的伺服器執行個體之間的端點通訊埠通訊 (預設為通訊埠 5022)。
 

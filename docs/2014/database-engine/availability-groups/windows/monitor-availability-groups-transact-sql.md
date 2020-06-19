@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 103dd8eef782dfa7a4d13929b0b832dba9bc46e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789817"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936707"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>監視可用性群組 (Transact-SQL)
   為了透過 [!INCLUDE[tsql](../../../includes/tsql-md.md)]監視可用性群組和複本，以及相關聯的資料庫， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 提供一組目錄和動態管理檢視與伺服器屬性。 您可以透過 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 陳述式使用這些檢視來監視可用性群組及其複本和資料庫。 針對給定可用性群組所傳回的資訊取決於連接到的是裝載主要複本或次要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
@@ -80,7 +79,7 @@ ms.locfileid: "62789817"
 > [!NOTE]  
 >  另請參閱本主題稍後[監視可用性複本](#AvReplicas)一節中的 **sys.dm_hadr_availability_replica_cluster_nodes** 和 **sys.dm_hadr_availability_replica_cluster_states**，以及[監視可用性資料庫](#AvDbs)一節中的 **sys.availability_databases_cluster** 和 **sys.dm_hadr_database_replica_cluster_states**。  
   
- 如需 WSFC 叢集和[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的詳細資訊，請參閱[Windows Server 容錯移轉叢集 &#40;WSFC&#41; 搭配 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)和[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;](failover-clustering-and-always-on-availability-groups-sql-server.md)SQL Server&#41;。  
+ 如需 WSFC 叢集和的詳細資訊 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，請參閱[Windows Server 容錯移轉叢集 &#40;WSFC&#41; 搭配 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)和[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;](failover-clustering-and-always-on-availability-groups-sql-server.md)SQL Server&#41;。  
   
 ##  <a name="monitoring-availability-groups"></a><a name="AvGroups"></a>監視可用性群組  
  若要監視伺服器執行個體裝載其可用性複本的可用性群組，請使用下列檢視：  
@@ -148,7 +147,7 @@ ms.locfileid: "62789817"
  [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
  針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中的每個資料庫，各包含一個資料列。 如果資料庫屬於某個可用性複本，該資料庫的資料列會顯示複本的 GUID，以及資料庫在其可用性群組內的唯一識別碼。  
   
- 資料行名稱： replica_id、group_database_id ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] **  
+ 資料** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 行名稱：** replica_id、group_database_id  
   
  [sys.dm_hadr_auto_page_repair](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
  針對可用性複本上的任何可用性資料庫進行的每個自動修復頁面嘗試行為，各傳回一個資料列，該可用性複本是針對伺服器執行個體的任何可用性群組所裝載。 這個檢視包含在給定之主要或次要資料庫上進行最新自動修復頁面嘗試行為的資料列，而且每個資料庫最多 100 個資料列。 一旦資料庫到達上限時，下一個自動修復頁面嘗試行為的資料列就會取代其中一個現有的項目。  

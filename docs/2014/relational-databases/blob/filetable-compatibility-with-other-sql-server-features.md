@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a6ac6668ff362a986646c4e01b1f0e5e722611c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010147"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955348"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable 與其他 SQL Server 功能的相容性
   描述 FileTable 如何搭配其他的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能一起運作。  
@@ -91,7 +90,7 @@ ms.locfileid: "66010147"
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   
- **索引檢視表**  
+ **索引視圖**  
  目前的索引檢視表不得包含 FILESTREAM 資料行，或是相依於 FILESTREAM 資料行的計算資料行/保存的計算資料行。 當 FileTable 上定義檢視表時，這個行為依然不會變更。  
   
 ##  <a name="snapshot-isolation-and-filetables"></a><a name="OtherSnapshots"></a> 快照集隔離和 FileTable  

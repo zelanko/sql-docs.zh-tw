@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 63d14790e0690882dd23527d52d5de282637d2d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f810a24baec565a7870fb6602b76ff8f3ba119f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770784"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914618"
 ---
 # <a name="resolve-column-reference-editor"></a>解析資料行參考編輯器
   當輸入路徑中斷連接，或是如果路徑中有任何未對應的資料行，對應的資料路徑旁邊就會顯示錯誤圖示。 若要簡化資料行參考錯誤的解析，新的解析參考編輯器可讓您針對執行樹狀目錄中的所有路徑，將未對應的輸出資料行與未對應的輸入資料行連結。 解析參考編輯器也會反白顯示路徑，以指出正在解析哪些路徑。  

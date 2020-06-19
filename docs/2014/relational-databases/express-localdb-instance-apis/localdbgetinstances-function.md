@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53c691495631fd3d39aca464f8f6343f5690af6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032245"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027753"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 函數
   傳回指定之版本的所有 SQL Server Express LocalDB 執行個體。  
@@ -45,7 +44,7 @@ HRESULT LocalDBGetInstances(
  *lpdwNumberOfInstances*  
  [輸入/輸出]在輸入時，包含*pInstanceNames*緩衝區中實例名稱的位置數目。 輸出時，包含在使用者工作站上找到的 LocalDB 實例數目。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

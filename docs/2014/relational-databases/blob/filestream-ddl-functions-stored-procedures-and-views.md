@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fdcf6fbc7a7c9eb325d87a5eec838a5854664c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dffcc454d21a0a8dea0e98c4db2c19a4af29e948
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010124"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955421"
 ---
 # <a name="filestream-ddl-functions-stored-procedures-and-views"></a>FILESTREAM DDL、函數、預存程序和檢視表
   列出支援 FILESTREAM 的 Transact-SQL 陳述式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件。  

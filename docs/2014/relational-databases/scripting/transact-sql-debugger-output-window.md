@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc15a7f6002675c4e81b3ae8169a78648b210f44
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1d490f4355f1dac4c337002e22f2d4dae82a7e9a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063313"
 ---
 # <a name="output-window"></a>輸出視窗
-  此視窗會顯示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中各種功能的狀態訊息。 輸出會從  **偵錯工具、外部工具功能或是偵錯工具 [命令視窗]** [!INCLUDE[tsql](../../includes/tsql-md.md)] 內執行的命令傳遞給 [輸出]  視窗內的特殊窗格。 通常從外部工具 (如 .bat 或 .com 檔案) 顯示在 [命令提示字元] 視窗內的輸出也可以使用。  
+  此視窗會顯示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中各種功能的狀態訊息。 輸出會從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具、外部工具功能或是偵錯工具 [命令視窗] 內執行的命令傳遞給 [輸出] 視窗內的特殊窗格。 通常從外部工具 (如 .bat 或 .com 檔案) 顯示在 [命令提示字元] 視窗內的輸出也可以使用。  
   
  **若要存取輸出視窗**  
   

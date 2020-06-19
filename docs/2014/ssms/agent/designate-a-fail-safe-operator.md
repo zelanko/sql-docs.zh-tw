@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54ec71df8efab1f60bfb7a5b9af448705e349d28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73eb11034d185deb9c004d138230fff8fbf27bb6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211428"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995285"
 ---
 # <a name="designate-a-fail-safe-operator"></a>指定保全操作員
-  如果在無法聯繫到指定的操作員時，就會由保全操作員這位使用者接收警示。 本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在中設定要接收 Agent 警示通知的失敗安全操作員。  
+  如果在無法聯繫到指定的操作員時，就會由保全操作員這位使用者接收警示。 本主題描述如何使用，在中設定要接收 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示通知的失敗安全操作員 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
  **本主題內容**  
   
@@ -35,13 +34,13 @@ ms.locfileid: "68211428"
   
 -   **若要使用下列項目指定保全操作員：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
--   在未來版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，將會從 Agent 移除 [呼機] 和 [ **net send** ] 選項。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
+-   在未來版本的中，將會從 Agent 移除 [呼機] 和 [ **net send** ] 選項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
   
 -   請注意，必須設定 SQL Server Agent 使用 Database Mail，才能將電子郵件及呼叫器通知傳送給操作員。 如需詳細資訊，請參閱＜ [指派警示給操作員](assign-alerts-to-an-operator.md)＞。  
   

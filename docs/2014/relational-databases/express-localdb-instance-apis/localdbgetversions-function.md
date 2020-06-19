@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8b02f89903475462265ffc154553c176951c259
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027665"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 函數
   傳回電腦上所有可用的 SQL Server Express LocalDB 版本。  
@@ -42,7 +41,7 @@ ms.locfileid: "63032287"
  [輸入/輸出]在輸入時，會保留*pVersionNames*緩衝區中版本的插槽數目。   
 在輸出時，保存現有 LocalDB 版本的數目。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9211f91d81d1da1d3c1b96286aac0fa53306f6e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936509"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>結果頁面 (AlwaysOn 可用性群組精靈)
   本說明主題描述 **[結果]** 頁面的選項。 本主題適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此頁面可以檢視精靈的結果。  
@@ -31,13 +30,13 @@ ms.locfileid: "62789009"
  **名稱**  
  顯示描述特定作業的片語。  
   
- **Result**  
+ **結果**  
  針對每個完成的步驟，顯示下列其中一個超連結文字。  
   
 |結果|描述|  
 |------------|-----------------|  
 |**錯誤**|表示驗證步驟失敗。 按一下連結可檢視錯誤訊息。|  
-|「成功」 |表示驗證步驟已順利完成。|  
+|「成功」|表示驗證步驟已順利完成。|  
   
 
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 61faaa7854aa362e7d269cf3f00911470126f42c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176838"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063321"
 ---
 # <a name="full-text-search"></a>全文檢索搜尋
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的全文檢索搜尋可讓使用者和應用程式針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中以字元為主的資料，執行全文檢索查詢。 資料庫管理員必須先在資料表上建立全文檢索索引，才能在此資料表上執行全文檢索查詢。 全文檢索索引包括資料表中一或多個以字元為基礎的資料行。 這些資料行可以具有下列任何資料類型：`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml` 或 `varbinary(max)` 和 FILESTREAM。 每個全文檢索索引都會為資料表中的一個或多個資料行建立索引，而且每個資料行都可以使用特定的語言。
@@ -134,7 +133,7 @@ ms.locfileid: "78176838"
 ###  <a name="full-text-indexing-process"></a><a name="indexing"></a>全文檢索索引進程
  全文檢索擴展 (也就是搜耙) 起始時，全文檢索引擎會將大批的資料發送至記憶體中，並通知篩選背景程式主機。 此主機會針對資料進行篩選並斷詞，並且將轉換的資料轉換成反向字詞清單。 然後，全文檢索搜尋會從這些字詞清單中提取轉換的資料、處理資料以便移除停用字詞，並且將批次的字詞清單保存在一或多個反向索引中。
 
- 為`varbinary(max)`或`image`資料行中儲存的資料編制索引時，會執行**IFilter**介面的篩選準則會根據該資料的指定檔案格式（例如[!INCLUDE[msCoName](../../includes/msconame-md.md)] Word）來解壓縮文字。 在某些情況下，篩選元件需要將`varbinary(max)`、或`image`資料寫出至 filterdata 資料夾，而不是推送至記憶體中。
+ 為或資料行中儲存的資料編制索引時 `varbinary(max)` `image` ，會執行**IFilter**介面的篩選準則會根據該資料的指定檔案格式（例如 Word）來解壓縮文字 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 在某些情況下，篩選元件需要將 `varbinary(max)` 、或 `image` 資料寫出至 filterdata 資料夾，而不是推送至記憶體中。
 
  做為處理程序的一部分，收集的文字資料在經由文字分隔的處理之後，會分隔成 Token 或關鍵字。 用於 Token 化的語言是在資料行層級指定，也可由篩選元件在 `varbinary(max)`、`image` 或 `xml` 資料中識別。
 
