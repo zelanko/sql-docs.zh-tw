@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3724210a1c55a1ad584b5b581de72763fdfd1c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d52790be862d4a41552a32a7be4082decf2af0f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177298"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061754"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>工作 1：建立資料品質專案
   在這項工作中，您會建立資料品質專案，針對您在本教學課程稍早建立的供應商知識庫來清理 Excel 檔案中的供應商資料。

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dff22b94cd4be464783a3b9dfcb07cae890a2307
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228365"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000547"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 索引對話方塊 (Visual Database Tools)
   使用 [XML 索引]  對話方塊可建立 XML 資料類型資料行的索引，但是此類資料行無法以 [索引/索引鍵]  對話方塊進行索引。 各個 XML 資料行可以具有一個以上的 XML 索引，但是首先建立 (主要) 的索引將成為其他索引 (次要) 的基準。 如果刪除主要的 XML 索引，次要索引也將一併刪除。  

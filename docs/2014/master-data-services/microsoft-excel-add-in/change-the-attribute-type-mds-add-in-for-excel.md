@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81349af5984f7fafda863f0091cae3375f3dd8d5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482759"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961458"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>變更屬性類型 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當資料類型或是允許的字元數目不正確時，管理員可以變更屬性類型。  
@@ -25,7 +24,7 @@ ms.locfileid: "65482759"
 > [!NOTE]  
 >  您不能更新 **Name** 或 **Code** 資料行的類型或長度。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理]**** 和總管**** 功能區域的權限。  
@@ -44,7 +43,7 @@ ms.locfileid: "65482759"
   
 4.  在 [屬性內容]**** 對話方塊中，視需要更新設定。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
   
 ## <a name="what-happens-when-you-change-the-attribute-type"></a>當您變更屬性類型時會發生什麼情況？  
  如果有屬性的相依性，例如屬性由任何 MDS 商務規則參考或屬性包含在訂閱檢視中，而且您變更屬性的資料類型，則 MDS 會：  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03913242246fcdaf11e9272e827cd8e06951a108
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21be7236565104edf9fd708d9162c92ac1e71fe6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829894"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917953"
 ---
 # <a name="transfer-jobs-task"></a>傳送作業工作
   「傳送作業」工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間，傳送一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 作業。  

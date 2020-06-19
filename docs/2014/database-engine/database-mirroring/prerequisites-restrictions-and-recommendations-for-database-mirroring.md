@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0dc29dbdc8432a4abd197a2a1a3f15b6ff5f6d52
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754604"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934059"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>資料庫鏡像的必要條件、限制和建議事項
     
@@ -44,7 +43,7 @@ ms.locfileid: "62754604"
   
 
   
-##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
   
 -   如果要建立鏡像工作階段，則夥伴伺服器和見證伺服器 (如果有的話) 必須在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本上執行。  
   

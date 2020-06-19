@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fc3fdb873a567bef9326232e5435cea5649b041
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952313"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054879"
 ---
 # <a name="database-ssrs-native-mode"></a>資料庫 (SSRS 原生模式)
   使用 [資料庫] 頁面，即可建立和設定報表伺服器資料庫，以便提供一個或多個報表伺服器執行個體的內部儲存位置。 如果您要設定報表伺服器使用遠端報表伺服器資料庫，您必須使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員建立此資料庫。  
@@ -47,7 +46,7 @@ ms.locfileid: "71952313"
  指定報表伺服器用來連接到報表伺服器資料庫的認證。 您可以指定的認證類型包括服務帳戶、Windows 網域使用者、Windows 本機使用者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫登入。 如需選取認證的詳細資訊，請參閱[將報表伺服器資料庫連接設定 &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
  **使用者名稱**  
- 如果您是使用 Windows 認證，請指定網域使用者帳戶；如果您是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，請指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果您使用 Windows 認證，請以下列格式指定： * \<網域>\\<帳戶\>*。  
+ 如果您是使用 Windows 認證，請指定網域使用者帳戶；如果您是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，請指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果您使用 Windows 認證，請以下列格式指定： * \<domain> \\<帳戶 \> *。  
   
  **密碼**  
  指定帳戶的密碼。  

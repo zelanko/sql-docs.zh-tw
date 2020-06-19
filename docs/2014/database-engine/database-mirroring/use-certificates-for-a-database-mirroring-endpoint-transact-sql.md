@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f7c23cc2-48dc-4b78-b441-89ca29a0bd9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 116c5d900cf56d89c01bbf333d2d8bd3905aa371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c159e66e798524c41bf6e653283c299cc8393be5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933821"
 ---
 # <a name="use-certificates-for-a-database-mirroring-endpoint-transact-sql"></a>使用資料庫鏡像端點憑證 (Transact-SQL)
   若要啟用某伺服器執行個體上資料庫鏡像的憑證驗證，系統管理員必須設定每一個伺服器執行個體，才能同時在傳出和傳入的連接使用憑證。 您必須先設定傳出連接。  

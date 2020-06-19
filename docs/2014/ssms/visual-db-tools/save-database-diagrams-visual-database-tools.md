@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70cf3a1a0edb8cb38d59a2b79ef1891d3bdd0e9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62710504"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044217"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>儲存資料庫圖表 (Visual Database Tools)
   藉由儲存資料庫圖表，您可以儲存針對資料庫圖表所進行的所有變更，包括對於資料表、資料行及其他資料庫物件所進行的何變更。  
   
 ### <a name="to-save-the-database-diagram"></a>儲存資料庫圖表  
   
-1.  從 [檔案 **] 功能表中，選擇 [** **儲存*`tablename`*<**]。  
+1.  從 [檔案 **] 功能表中，選擇 [** **儲存 *`tablename`* > <**]。  
   
 2.  如果這是從未儲存過的新圖表，[另存新檔]  對話方塊便會出現。 輸入圖表的名稱。  
   

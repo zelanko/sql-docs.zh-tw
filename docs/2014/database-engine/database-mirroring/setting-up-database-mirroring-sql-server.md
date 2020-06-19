@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ea3a93c6b1c512583608eb6b27c8a64a41e5c3f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754448"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933931"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>設定資料庫鏡像 (SQL Server)
   本節描述的是設定資料庫鏡像的必要條件、建議事項及步驟。 如需資料庫鏡像的簡介，請參閱 [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)。  

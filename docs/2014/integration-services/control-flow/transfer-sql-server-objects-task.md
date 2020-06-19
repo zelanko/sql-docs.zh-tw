@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01b985a1bb818e7b3d3612596bb4e2b7fa6fd393
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11e995020bd4e212304f6071e3e60195a962a7ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829468"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917884"
 ---
 # <a name="transfer-sql-server-objects-task"></a>傳送 SQL Server 物件工作
   「傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件」工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間，傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中的一個或多個類型物件。 例如，該工作可以複製資料表和預存程序。 因用作來源的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本不同，可複製不同類型的物件。 例如，只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫包含結構描述和使用者定義彙總。  

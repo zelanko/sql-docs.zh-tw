@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: d685098b-86a1-46bf-939a-63d56951e009
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cb44a7b635e24c0c2e3266c1cca98a9c4f6a347c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 041b46383232f3784c1c817f8feb726f382e1ec5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093990"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054723"
 ---
 # <a name="migrate-scripts-to-vsta"></a>將指令碼移轉到 VSTA
-  當您將[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]封裝升級[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]為[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]時，會將任何腳本工作或腳本元件中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]的腳本遷移至 Tools for Applications （VSTA）。 VSTA 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所使用的指令碼環境。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中，的腳本環境[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications （VSA）。  
+  當您將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 封裝升級為時，會將 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 任何腳本工作或腳本元件中的腳本遷移至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications （VSTA）。 VSTA 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所使用的指令碼環境。 在中 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ，的腳本環境 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications （VSA）。  
   
  如果指令碼工作或指令碼元件中的指令碼會參考介面，您可能必須在升級封裝以前修改這些參考。 否則，此封裝將無法升級或指令碼將無法驗證 (視您所使用的升級方法而定)。 若要修改這些參考，請以對應的 IDTS*xxx*100 介面的參考取代 IDTS*xxx*90 介面的參考。  
   
@@ -40,9 +39,9 @@ ms.locfileid: "66093990"
   
 -   無法加入組件參考。  
   
--   `ScriptMain` 類別已修改為除了 `ScriptObjectModelSSIS` 類別之外，也會繼承其他類別。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]不支援多重繼承。  
+-   `ScriptMain` 類別已修改為除了 `ScriptObjectModelSSIS` 類別之外，也會繼承其他類別。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]不 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 支援多重繼承。  
   
- 您無法將使用[!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)]的 VSA 腳本轉換成使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]的 VSTA 腳本。 不過，您可以建立使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]的新 VSTA 腳本。 如需詳細資訊，請參閱[指令碼工作的程式碼撰寫和偵錯](../../integration-services/control-flow/script-task.md)和[指令碼元件的程式碼撰寫和偵錯](../../integration-services/data-flow/transformations/script-component.md)。  
+ 您無法將使用的 VSA 腳本轉換成 [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)] 使用的 VSTA 腳本 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)] 。 不過，您可以建立使用的新 VSTA 腳本 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)] 。 如需詳細資訊，請參閱[指令碼工作的程式碼撰寫和偵錯](../../integration-services/control-flow/script-task.md)和[指令碼元件的程式碼撰寫和偵錯](../../integration-services/data-flow/transformations/script-component.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用指令碼擴充套件](../../relational-databases/server-management-objects-smo/tasks/scripting.md)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc9695e711379247590a849651bc6573bd2f04fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035056"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007021"
 ---
 # <a name="sqllogship-application"></a>sqllogship 應用程式
   **sqllogship** 應用程式會對記錄傳送組態執行備份、複製或還原作業，以及相關的清除工作。 這些作業是在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的特定執行個體上對特定資料庫執行。  
@@ -74,7 +73,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  **sqllogship** 所建立的記錄傳送記錄會穿插記錄傳送備份、複製和還原作業所建立的記錄。 如果您要重複使用 **sqllogship** 對記錄傳送組態執行備份、複製或還原作業，請考慮停用對應的一或多個記錄傳送作業。 如需詳細資訊，請參閱 [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md)。  
   
- **Sqllogship**應用程式（sqllogship）安裝在 X:\PROGRAM Files\Microsoft SQL Server\120\Tools\Binn 目錄中。  
+ **Sqllogship**應用程式（SqlLogShip.exe）會安裝在 X:\PROGRAM Files\Microsoft SQL Server\120\Tools\Binn 目錄中。  
   
 ## <a name="permissions"></a>權限  
  **sqllogship** 使用「Windows 驗證」。 執行命令的「Windows 驗證」帳戶必須擁有 Windows 目錄存取權和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 權限。 需求取決於 **sqllogship** 命令是指定 **-backup**、 **-copy**或 **-restore** 選項。  

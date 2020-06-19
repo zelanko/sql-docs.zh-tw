@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 58e15293-94e2-4163-a0f2-758d1440b82c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8abc1974d6bf7aedec63299f8127e759a4a88ffb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee6e9e60fc15bfddd0f3f99a8036f933ac1c09af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069395"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940929"
 ---
 # <a name="select-missing-dimension-keys-cube-wizard"></a>選取遺漏維度索引鍵 (Cube 精靈)
   使用 **[選取遺漏維度索引鍵]** 頁面，即可選取要在新維度沒有針對其主要資料表定義索引鍵時使用的索引鍵資料行。  

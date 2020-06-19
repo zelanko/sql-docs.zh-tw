@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fee3411a65d7e2b5f91e503b1314aa004b6a12bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191710"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023175"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>使用公用程式總管來管理 SQL Server 公用程式
   公用程式總管是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的元件，它會連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，以便在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內提供所有物件的樹狀檢視。 [公用程式總管] 內容窗格會提供幾個方法來檢視摘要與詳細資料，並提供與 SQL Server 受管理的執行個體健全狀態相關的資料。 [公用程式總管] 也會提供用於檢視及管理原則定義的使用者介面。 公用程式總管的功能會因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內的物件而有些微的不同，但是一般來說都會包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式所管理的物件、資料和原則。 如需詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](sql-server-utility-features-and-tasks.md)。  
@@ -26,7 +25,7 @@ ms.locfileid: "63191710"
 ## <a name="enroll-an-instance-of-sql-server-or-a-data-tier-application-from-utility-explorer"></a>從公用程式總管註冊 SQL Server 執行個體或資料層應用程式  
  您可以輕鬆地將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體註冊到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式。 在公用程式總管中，以滑鼠右鍵按一下 **[受管理的執行個體]** 節點，然後按一下 **[新增受管理的執行個體]** 。 遵循精靈的步驟完成作業。 如需詳細資訊，請參閱[註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](enroll-an-instance-of-sql-server-sql-server-utility.md)。  
   
- 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內將資料層應用程式部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體，請按一下 [物件總管]  索引標籤，並展開 [管理]  節點，然後以滑鼠右鍵按一下 [資料層應用程式]  。 從滑鼠右鍵功能表中，選取 [部署資料層應用程式]  。 如需詳細資訊，請參閱[部署資料層應用程式](../data-tier-applications/deploy-a-data-tier-application.md)。  
+ 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內將資料層應用程式部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體，請按一下 [物件總管] 索引標籤，並展開 [管理] 節點，然後以滑鼠右鍵按一下 [資料層應用程式]。 從滑鼠右鍵功能表中，選取 [部署資料層應用程式]  。 如需詳細資訊，請參閱[部署資料層應用程式](../data-tier-applications/deploy-a-data-tier-application.md)。  
   
 ## <a name="viewing-utility-explorer"></a>檢視公用程式總管  
  預設在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中看不到公用程式總管。 如果您在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 使用者介面中看不到公用程式總管，請在 **[檢視]** 功能表上按一下 **[公用程式總管]** 。 若要檢視 [公用程式總管] 內容窗格，請在 **[檢視]** 功能表上按一下 **[公用程式總管內容]** 。  
@@ -49,7 +48,7 @@ ms.locfileid: "63191710"
   
      在樹狀檢視中以滑鼠右鍵按一下 [受管理的執行個體]  節點，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的受管理執行個體加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中，以存取篩選設定或重新整理清單檢視中的資料。  
   
--   按一下樹狀檢視中的 [公用程式管理]  節點，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理執行個體及部署的資料層應用程式來存取全域原則定義，以檢視 UCP 管理員資訊，並存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式管理資料倉儲的組態設定。 如需詳細資訊，請參閱[公用程式管理 &#40;SQL Server 公用程式&#41;](../../database-engine/utility-administration-sql-server-utility.md)。 您也可以使用 **[原則]** 索引標籤上的控制項，變更報告原則違規的敏感度。 如需詳細資訊，請參閱[降低 CPU 使用量原則的雜訊 &#40;SQL Server Utility&#41;](reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
+-   按一下樹狀檢視中的 [公用程式管理] 節點，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理執行個體及部署的資料層應用程式來存取全域原則定義，以檢視 UCP 管理員資訊，並存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式管理資料倉儲的組態設定。 如需詳細資訊，請參閱[公用程式管理 &#40;SQL Server 公用程式&#41;](../../database-engine/utility-administration-sql-server-utility.md)。 您也可以使用 **[原則]** 索引標籤上的控制項，變更報告原則違規的敏感度。 如需詳細資訊，請參閱[降低 CPU 使用量原則的雜訊 &#40;SQL Server Utility&#41;](reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
      在樹狀檢視中，以滑鼠右鍵按一下 [公用程式管理]  節點，以重新整理內容窗格中的資料。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f2b2f9d-7744-460e-83cd-56d34ea70ff0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a7d336e777f4f6bf00310cbadfed75987ba45252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1704cf87bfebf0cab80630f3dcb66517b0f5420a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478935"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961418"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>連接 (適用於 Excel 的 MDS 增益集)
   若要將資料下載至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您必須先建立連接。 連接可讓 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服務知道要連接的目標 MDS 資料庫。  
@@ -35,7 +34,7 @@ ms.locfileid: "65478935"
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 具有 Data Quality Services 功能，可協助您在發行資料至 MDS 儲存機制之前比對資料。 當您建立連接時，如果 DQS 資料庫與 MDS 資料庫安裝在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，您就能夠在功能區上檢視 DQS 按鈕。 如果 DQS_Main 資料庫不存在執行個體上，系統就不會顯示這些按鈕，而且資料品質功能將無法使用。  
   
 ## <a name="troubleshooting-connections"></a>疑難排解連接  
- 當您連接到 MDS 時，如果您遇到任何問題[https://social.technet.microsoft.com/wiki/contents/articles/4520.aspx](https://social.technet.microsoft.com/wiki/contents/articles/4520.aspx) ，請參閱以取得疑難排解秘訣。  
+ 當您連接到 MDS 時，如果您遇到任何問題，請參閱 [https://social.technet.microsoft.com/wiki/contents/articles/4520.aspx](https://social.technet.microsoft.com/wiki/contents/articles/4520.aspx) 以取得疑難排解秘訣。  
   
 ## <a name="related-tasks"></a>相關工作  
   

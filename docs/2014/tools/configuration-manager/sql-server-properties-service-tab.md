@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f79b52e62a8080c70865ae8ebe33d1a8a87faa04
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b8554e65ff54f49410e87b0e7a3df1beae91517
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63237980"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000464"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 屬性 (服務索引標籤)
-  您可以使用 [MSSQLSERVER 屬性]  對話方塊的 [服務]  索引標籤來檢視或指定下列選項。  
+  您可以使用 [MSSQLSERVER 屬性] 對話方塊的 [服務] 索引標籤來檢視或指定下列選項。  
   
 ## <a name="options"></a>選項。  
  **二進位路徑**  

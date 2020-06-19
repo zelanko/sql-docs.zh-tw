@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 022dd1b7-08be-4a42-9b3a-c3bd09703e27
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fabb6cd5d089ba39c413ee12427b18f1bbee8bf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31f123adda9a49a490855bcae4a3a08fcf9bf561
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688589"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007228"
 ---
 # <a name="run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler"></a>在追蹤暫停或停止之後執行追蹤 (SQL Server Profiler)
   此主題描述如何在追蹤暫停或停止之後，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]再啟動追蹤。  

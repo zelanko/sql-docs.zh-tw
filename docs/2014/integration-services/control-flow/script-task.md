@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c44017e7f3746861209b62bcb8c7b8999712076
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830559"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918346"
 ---
 # <a name="script-task"></a>指令碼工作
   指令碼工作提供程式碼，用來執行無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的內建工作和轉換中使用的函式。 指令碼工作亦可在一個指令碼中結合函數，而不使用多項工作和轉換。 您可以使用指令碼工作處理必須在封裝中執行一次 (或是每個列舉物件一次) 的工作，而非每個資料列執行一次的工作。  
@@ -64,7 +63,7 @@ ms.locfileid: "62830559"
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計的方式來設定這些屬性。  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>在設計師中設定指令碼工作  
- 下表描述可以為指令碼工作記錄的 `ScriptTaskLogEntry` 事件。 在`ScriptTaskLogEntry` [**設定 SSIS 記錄**] 對話方塊的 [**詳細資料**] 索引標籤上，已選取要記錄的事件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../custom-messages-for-logging.md)。  
+ 下表描述可以為指令碼工作記錄的 `ScriptTaskLogEntry` 事件。 在 `ScriptTaskLogEntry` [**設定 SSIS 記錄**] 對話方塊的 [**詳細資料**] 索引標籤上，已選取要記錄的事件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../custom-messages-for-logging.md)。  
   
 |記錄項目|描述|  
 |---------------|-----------------|  

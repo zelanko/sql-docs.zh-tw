@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98bc018ac9d95082a70334dc01f456a4b258b397
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069225"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940779"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>選取來源 Cube 維度 (資料採礦精靈)
   使用 [選取來源 Cube 維度]**** 頁面，即可從包含您要分析之案例的 Cube 中選取維度。 例如，如果您要建立根據人口統計分析客戶購買行為的模型，您要選取 [客戶] 維度，其中通常包含每個客戶的唯一記錄，以及表示人口統計的各種屬性，例如性別、居住地或收入。 在此精靈的後半部，您將有機會加入與此案例資料表相關的資料表：例如，您可以加入顯示客戶已購買之產品的巢狀資料表。  

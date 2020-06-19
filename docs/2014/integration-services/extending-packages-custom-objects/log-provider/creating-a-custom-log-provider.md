@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: de1b0ed65bc4c0c079ca6de9e667c044027479fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6486f87072b203da5240f01dc5c3a4e1a948fa8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176322"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968763"
 ---
 # <a name="creating-a-custom-log-provider"></a>建立自訂記錄提供者
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段環境具有廣泛的記錄功能。 用於擷取封裝執行期間所發生之事件的記錄檔。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括各種記錄提供者，讓記錄可以多種格式，例如 XML、文字、資料庫或 Windows 事件記錄檔加以建立並儲存記錄檔。 如果這些提供者或輸出格式都不符合您的需求，可以建立自訂記錄提供者。
@@ -43,10 +42,10 @@ ms.locfileid: "78176322"
  設定專案以使用強式名稱金鑰檔案來簽署將產生的組件。
 
 > [!NOTE]
->  許多 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 記錄提供者都有自訂使用者介面，以實作 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，以及使用可用連線管理員的篩選下拉式清單，取代 [設定 SSIS 記錄]  對話方塊中的 [設定]  文字方塊。 不過，在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中並未實作自訂記錄提供者的自訂使用者介面。
+>  許多 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 記錄提供者都有自訂使用者介面，以實作 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，以及使用可用連線管理員的篩選下拉式清單，取代 [設定 SSIS 記錄] 對話方塊中的 [設定] 文字方塊。 不過，在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中並未實作自訂記錄提供者的自訂使用者介面。
 
 ### <a name="applying-the-dtslogprovider-attribute"></a>套用 DtsLogProvider 屬性
- 將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 屬性套用至您已建立的類別，以便將它識別為記錄提供者。 此屬性會提供記錄提供者的名稱和描述等設計階段資訊。 屬性`DisplayName`的`Description`和屬性會對應至 [**設定 SSIS 記錄**編輯器] 中所顯示的[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]**名稱**和`Description`資料行，當您在中設定封裝的記錄時，就會顯示此編輯器。
+ 將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 屬性套用至您已建立的類別，以便將它識別為記錄提供者。 此屬性會提供記錄提供者的名稱和描述等設計階段資訊。 `DisplayName`屬性的和 `Description` 屬性會對應至 [設定 SSIS 記錄編輯器] 中所顯示的**名稱**和資料 `Description` 行，當您在中**設定**封裝的記錄時，就會顯示此編輯器 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 。
 
 > [!IMPORTANT]
 >  未使用屬性 (Attribute) 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.LogProviderType%2A> 屬性 (Property)。 不過，您必須為它輸入值，否則自訂記錄提供者將不會顯示在可用記錄提供者的清單中。

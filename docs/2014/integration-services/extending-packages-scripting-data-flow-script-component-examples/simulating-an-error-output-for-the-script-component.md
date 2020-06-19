@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b7e2324fcfce6c560000bfef798aa966102d674b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17f6ed6fd86bb7440f795268e63aa7b9ba418afb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895507"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968539"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>模擬指令碼元件的錯誤輸出
   雖然您無法在指令碼元件中將輸出直接設定為錯誤輸出，以自動處理錯誤資料列，不過可以建立其他輸出並使用指令碼中的條件式邏輯，適時地將資料列導向此輸出，以重新產生內建錯誤輸出的功能。 您可能會想要加入兩個額外的輸出資料行，以接收發生錯誤的資料行之錯誤碼與識別碼，來模擬內建錯誤輸出的行為。  
@@ -46,7 +45,7 @@ ms.locfileid: "62895507"
   
 7.  在 [輸入資料行]  頁面上，選取您要在指令碼轉換中處理的資料行。 此範例只使用 CountryRegionName 資料行。 您保留未選取的可用輸入資料行，將會在資料流程中傳遞時保持不變。  
   
-8.  在 [**輸入和輸出**] 頁面上，加入新的第二個輸出， `SynchronousInputID`並將其值設定為輸入的識別碼，也就是預設輸出`SynchronousInputID`的屬性值。 將兩個輸出的 `ExclusionGroup` 屬性設定為相同的非零值 (例如 1)，以指出將每個資料列導向僅兩個輸出的其中一個。 提供特殊的名稱給新錯誤輸出，例如 "MyErrorOutput"。  
+8.  在 [**輸入和輸出**] 頁面上，加入新的第二個輸出，並將其 `SynchronousInputID` 值設定為輸入的識別碼，也就是 `SynchronousInputID` 預設輸出的屬性值。 將兩個輸出的 `ExclusionGroup` 屬性設定為相同的非零值 (例如 1)，以指出將每個資料列導向僅兩個輸出的其中一個。 提供特殊的名稱給新錯誤輸出，例如 "MyErrorOutput"。  
   
 9. 將額外輸出資料行加入新錯誤輸出，以擷取所需的錯誤資訊，這可能包含發生錯誤的資料行之錯誤碼與識別碼，以及或許還有錯誤描述。 此範例會建立新資料行 ErrorColumn 與 ErrorMessage。 如果您在自己的實作中擷取預先定義的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤，請確定加入錯誤號碼的 ErrorCode 資料行。  
   

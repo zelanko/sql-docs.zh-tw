@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ebe18a74-0375-4df4-b894-239f8fdabb64
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e2865607f058c077fc3d12c2e3c2f778450511d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f78bca9bf2b99b2ab6f530613b64bc0e46c4001c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095395"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054817"
 ---
 # <a name="dormant-sql-server-65-logins-cannot-be-upgraded"></a>無法升級休眠 SQL Server 6.5 登入
   Upgrade Advisor 偵測到密碼無法直接升級到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 登入。  

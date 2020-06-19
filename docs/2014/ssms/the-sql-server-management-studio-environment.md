@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8d448e0af854cab5944062368f2f13e1d81efc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d53db591f9e82ce7dbe8d5c222df8b6d2b33a38d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156406"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061914"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 環境
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 提供一個非常豐富的環境，供您管理和開發 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的查詢。  

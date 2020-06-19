@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d56f2fd8e72e0cb00555f18288180f674645056e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204536"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044154"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>資料表值物件 (資料行) 屬性 (Visual Database Tools)
   在查詢和檢視表設計工具的 [圖表]  窗格中，選取資料表值物件中的資料行時，就會出現這些屬性。  

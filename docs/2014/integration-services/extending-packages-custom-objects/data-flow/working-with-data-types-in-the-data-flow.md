@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5fe4f8527bf23ac1af36b6661f2d8f98350a96e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc30f175ce11051fc4ab578180da0a1df75e5fd9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176358"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968798"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>使用資料流程中的資料類型
   在 Integration Services 中開發自訂資料流程元件時，您會不斷地處理資料類型、將資料複製到資料流程緩衝區或從其中複製資料，以及轉換值。 在本主題中的資訊可協助您選擇正確的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型，以及正確的處理方法。
@@ -130,7 +129,7 @@ ms.locfileid: "78176358"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI8>|System.UInt64|
 
 ### <a name="mapping-integration-services-data-types-to-fit-managed-data-types"></a>對應 Integration Services 資料類型以符合 Managed 資料類型
- 有時資料流程元件必須也先將某個 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型轉換到另一個資料類型，才能將該類型轉換為 Managed 類型。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> 方法類別會將 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型對應至其他可以由 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 方法對應至 Managed 資料類型的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> 資料類型。
+ 有時資料流程元件必須也先將某個 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型轉換到另一個資料類型，才能將該類型轉換為 Managed 類型。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> 方法類別會將 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型對應至其他可以由 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> 方法對應至 Managed 資料類型的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型。
 
 > [!CAUTION]
 >  開發人員應該謹慎地使用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 類別的這些方法，而且可能會想要撰寫自己的資料類型對應方法程式碼，以便能更加符合其自訂元件的獨特需求。 現有方法並未考慮數值的有效位數或小數位數，也未考慮與資料類型本身密切相關的其他屬性。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 可能會在後續版本的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中修改或移除這些方法，或是修改其執行的對應。

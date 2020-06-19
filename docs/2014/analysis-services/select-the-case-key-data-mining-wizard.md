@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 75755ee7-65b7-4d61-b1e8-3566199430d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d005ef9666d9bac5355b7419cf2a9cbb9040e6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 484b1ccb084ca6e3ed5f80f0ed8a98fd8c1c7c49
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069256"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940799"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>選取案例索引鍵 (資料採礦精靈)
   使用 [選取案例索引鍵]**** 頁面，即可選取要作為採礦結構的索引鍵之來源 Cube 維度的屬性。 此屬性必須在階層中或已啟用其屬性階層。  

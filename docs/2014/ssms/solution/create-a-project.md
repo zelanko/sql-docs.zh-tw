@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3c36d070701712158587f283df0f55cffadac2ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11af4a71ae5c0eb45395b71f8eac83ef27daf4f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67197590"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062039"
 ---
 # <a name="create-a-project"></a>建立專案
   您可以在現有方案內，建立一或多個專案。  
