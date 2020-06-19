@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ccc7b96f4275b09b90b8120813b93f860ec07b9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35cf7af50eba333440c42a1bac428df1fff156b4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871056"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969968"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>檢視或變更資料庫的相容性層級
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視或變更資料庫的相容性層級。 在變更資料庫的相容性層級之前，您應該先了解此變更對應用程式的影響。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
@@ -86,7 +85,7 @@ GO
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會變更的相容性層[!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)]級。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會變更的相容性層級 [!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)] 。  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  

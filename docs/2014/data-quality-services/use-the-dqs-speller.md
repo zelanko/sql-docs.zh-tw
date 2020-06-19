@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9a14059e72dfb7ba2c2e0740969ee3ea30618e35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ffb403c82ebff3cd7715595714504831a127090
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484106"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937389"
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼字檢查
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 拼字檢查會檢查定義域中字串值的語法、拼字和句子結構。 拼字檢查是一種獨立的用戶端功能，它並未與伺服器端引擎整合，也不涉及目前的流程或狀態。 拼字檢查會識別它視為潛在錯誤的字串值，然後在您對定義域值進行其他手動變更的相同位置中，以紅色底線標示這些值。 這些位置包括：  

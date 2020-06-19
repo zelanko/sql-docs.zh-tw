@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6750456d708d68e57aadd4b1139f6e108a93b9ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d946440e2950192299c42652babb4082790dbd03
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783023"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937044"
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>變更可用性複本的容錯移轉模式 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中變更 AlwaysOn 可用性群組內可用性複本的容錯移轉模式。 容錯移轉模式是複本屬性，用於判斷以同步認可可用性模式下執行之複本的容錯移轉模式。 如需詳細資訊，請參閱[容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md) 和[可用性模式 &#40;AlwaysOn 可用性群組&#41;](availability-modes-always-on-availability-groups.md)。  
@@ -70,11 +69,11 @@ ms.locfileid: "72783023"
   
      }  )  
   
-     where  
+     其中  
   
     -   *group_name* 是可用性群組的名稱。  
   
-    -   {'*system_name*[\\*instance_name*] ' |'*FCI_network_name*[\\*instance_name*] '}  
+    -   { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
   
          指定裝載要改變之可用性複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體位址。 這個位址的元件如下所示：  
   

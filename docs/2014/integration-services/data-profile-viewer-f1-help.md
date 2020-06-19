@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88ad528bfe581639dfa7e5dde35a7b53278b44b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059714"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951832"
 ---
 # <a name="data-profile-viewer-f1-help"></a>資料設定檔檢視器 F1 說明
   您可以使用資料設定檔檢視器來檢視資料分析工作的輸出。  
@@ -46,7 +45,7 @@ ms.locfileid: "66059714"
   
 ### <a name="profile-type--column-length-distribution-profile"></a>設定檔類型 = 資料行長度散發設定檔  
   
-#### <a name="column-length-distribution-profile---column-pane"></a>資料行長度散發設定檔 - \<資料行> 窗格  
+#### <a name="column-length-distribution-profile---column-pane"></a>資料行長度散發設定檔- \<column> 窗格  
  **最小長度**  
  顯示這個資料行中值的最小長度。  
   
@@ -69,12 +68,12 @@ ms.locfileid: "66059714"
  **Count**  
  顯示已分析資料行的值具有 [長度]**** 資料行中所顯示之長度的資料列數目。  
   
- **百分比**  
+ **比例**  
  顯示已分析資料行的值具有 [長度]**** 資料行中所顯示之長度的資料列百分比。  
   
 ### <a name="profile-type--column-null-ratio-profile"></a>設定檔類型 = 資料行 Null 比例設定檔  
   
-#### <a name="column-null-ratio-profile---column-pane"></a>資料行 Null 比例設定檔 - \<資料行> 窗格  
+#### <a name="column-null-ratio-profile---column-pane"></a>資料行 Null 比例設定檔- \<column> 窗格  
  **Null 計數**  
  顯示已分析資料行具有 Null 值的資料列數目。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66059714"
   
 ### <a name="profile-type--column-pattern-profile"></a>設定檔類型 = 資料行模式設定檔  
   
-#### <a name="column-pattern-profile---column-pane"></a>資料行模式設定檔 - \<資料行> 窗格  
+#### <a name="column-pattern-profile---column-pane"></a>資料行模式設定檔 \<column> 窗格  
  **資料列計數**  
  顯示資料表或檢視表中的資料列數目。  
   
@@ -94,16 +93,16 @@ ms.locfileid: "66059714"
  **模式**  
  顯示針對已分析資料行所計算的模式。  
   
- **百分比**  
+ **比例**  
  顯示值符合 [模式]**** 資料行中所顯示之模式的資料列百分比。  
   
 ### <a name="profile-type--column-statistics-profile"></a>設定檔類型 = 資料行統計資料設定檔  
   
-#### <a name="column-statistics-profile---column-pane"></a>資料行統計資料設定檔 - \<資料行> 窗格  
- **至少**  
+#### <a name="column-statistics-profile---column-pane"></a>資料行統計資料設定檔- \<column> 窗格  
+ **最小值**  
  顯示在已分析資料行中找到的最小值。  
   
- **高**  
+ **最大值**  
  顯示在已分析資料行中找到的最大值。  
   
  **表明**  
@@ -114,7 +113,7 @@ ms.locfileid: "66059714"
   
 ### <a name="profile-type--column-value-distribution-profile"></a>設定檔類型 = 資料行值散發設定檔  
   
-#### <a name="column-value-distribution-profile---column-pane"></a>資料行值散發設定檔 - \<資料行> 窗格  
+#### <a name="column-value-distribution-profile---column-pane"></a>資料行值散發設定檔- \<column> 窗格  
  **相異值的數目**  
  顯示在已分析資料行中找到之相異值的計數。  
   
@@ -128,12 +127,12 @@ ms.locfileid: "66059714"
  **Count**  
  顯示已分析資料行具有 [值]**** 資料行中所顯示之值的資料列數目。  
   
- **百分比**  
+ **比例**  
  顯示已分析資料行具有 [值]**** 資料行中所顯示之值的資料列百分比。  
   
 ### <a name="profile-type--candidate-key-profile"></a>設定檔類型 = 候選索引鍵設定檔  
   
-#### <a name="candidate-key-profile---table-pane"></a>候選索引鍵設定檔 - \<資料表> 窗格  
+#### <a name="candidate-key-profile---table-pane"></a>候選索引鍵設定檔- \<table> 窗格  
  **索引鍵資料行**  
  顯示針對分析成候選索引鍵所選取的資料行。  
   
@@ -164,17 +163,17 @@ ms.locfileid: "66059714"
 > [!NOTE]  
 >  如果資料中錯誤值的百分比很高，可能會導致功能相依性設定檔產生非預期的結果。 例如，在 90% 的資料列中，州值 "WI" 代表郵遞區號值 "98052"。 此設定檔會將包含正確州值 "WA" 的資料列回報成違規。  
   
- **\<行列式資料行名稱>**  
+ **\<determinant column name>**  
  顯示這個功能相依性違規的執行個體中行列式資料行或資料行組合的值。  
   
- **\<相依資料行名稱>**  
+ **\<dependent column name>**  
  顯示這個功能相依性違規的執行個體中相依資料行的值。  
   
  **支持度計數**  
  顯示行列式資料行值會決定相依資料行的資料列數目。  
   
  **違規計數**  
- 顯示行列式資料行值無法決定相依資料行的資料列數目 （這些是相依值為 [ ** \<相依**資料行名稱] 中所顯示的值>] 欄位）的資料列。  
+ 顯示行列式資料行值無法決定相依資料行的資料列數目 （這些是相依值為數據行中所顯示之值的資料 **\<dependent column name>** 列）。  
   
  **支持度百分比**  
  顯示行列式資料行會決定相依資料行的資料列百分比。  

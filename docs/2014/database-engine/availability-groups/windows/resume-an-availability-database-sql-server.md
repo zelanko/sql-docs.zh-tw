@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5e6a5792c7e18013dba5cc4c0963dc6d045410f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a2279940c2502a310e9dac4448bd6029b6e13dc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782914"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936519"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>繼續可用性資料庫 (SQL Server)
   您可以使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中繼續暫停的可用性資料庫。 繼續暫停的資料庫會使資料庫處於 SYNCHRONIZING 狀態。 繼續主要資料庫也會繼續因為暫停主要資料庫而暫停的任何次要資料庫。 如果在本機 (從裝載次要複本的伺服器執行個體) 暫停任何次要資料庫，該次要資料庫必須在本機繼續。 給定的次要資料庫與對應的主要資料庫都處於 SYNCHRONIZING 狀態之後，資料同步處理就會在次要資料庫上繼續。  
@@ -53,7 +52,7 @@ ms.locfileid: "72782914"
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  一旦裝載目標資料庫的複本接受 RESUME 命令之後，就會將其傳回，但繼續資料庫實際上是以非同步方式進行。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
   
 -   您必須連接到裝載要繼續之資料庫的伺服器執行個體。  
   

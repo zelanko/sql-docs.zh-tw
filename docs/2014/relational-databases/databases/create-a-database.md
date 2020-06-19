@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe42e394482e3abf4d87c00c6e79ee84db6ba278
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872271"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952008"
 ---
 # <a name="create-a-database"></a>建立資料庫
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立資料庫。  
@@ -48,7 +47,7 @@ ms.locfileid: "62872271"
   
 -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一個執行個體上，最多可以指定 32,767 個資料庫。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
   
 -   CREATE DATABASE 陳述式必須在自動認可模式 (預設交易管理模式) 下執行，而且不能用於明確或隱含的交易。  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62872271"
   
 #### <a name="to-create-a-database"></a>若要建立資料庫  
   
-1.  在**物件總管**中，連接到的實例[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，然後展開該實例。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
 2.  以滑鼠右鍵按一下 [**資料庫**]，然後按一下 [**新增資料庫**]。  
   

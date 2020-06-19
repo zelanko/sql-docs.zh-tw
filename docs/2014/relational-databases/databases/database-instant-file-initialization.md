@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dedd2c5b8d075dee8aeeb438904137558c664d95
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872088"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970209"
 ---
 # <a name="database-instant-file-initialization"></a>資料庫立即檔案初始化
   系統會將資料和記錄檔初始化，以覆寫磁碟上先前刪除之檔案中所遺留的任何現有資料。 資料檔和記錄檔初始化的方式是先在您執行下列作業之一時，在檔案中填入 0：  
@@ -55,7 +54,7 @@ ms.locfileid: "62872088"
   
 4.  按一下 [新增使用者或群組] **** ，新增用於備份的任何使用者帳戶。  
   
-5.  按一下 **[** 套用]，然後關閉`Local Security Policy`所有對話方塊。  
+5.  按一下 **[** 套用]，然後關閉所有 `Local Security Policy` 對話方塊。  
   
 ### <a name="security-considerations"></a>安全性考量  
  刪除的磁碟內容只有在新資料寫入檔案時才會被覆寫，因此，未經授權的主體可能會存取刪除的內容。 當資料庫檔案附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體後，檔案上的任意存取控制清單 (DACL) 可降低此一資訊洩漏威脅。 此 DACL 只允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶和本機系統管理員存取檔案。 但是當檔案卸離後，沒有 SE_MANAGE_VOLUME_NAME 的使用者或服務便能存取該檔案。 備份資料庫時也存在類似的威脅。 如果備份檔案未使用適當的 DACL 保護，未經授權的使用者或服務便可存取刪除的內容。  

@@ -1,5 +1,6 @@
 ---
 title: 建立分散式交易 |Microsoft Docs
+description: 應用程式可以使用 MSDTC，在多個 SQL Server 實例之間擴充或散發交易。 .NET 類別也可以散發交易。
 ms.custom: ''
 ms.date: 05/13/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f21ea9b7146b2907a09688f5189d6d9ae4f3f26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f7a98b35483103059600086c37294c5acb56ad0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303683"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950391"
 ---
 # <a name="create-a-distributed-transaction"></a>建立分散式交易
 
@@ -38,7 +39,7 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 
 ## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>ODBC 驅動程式會呼叫 MSDTC 進行內部部署 SQL Server
 
-Microsoft 分散式交易協調器（MSDTC）可讓應用程式在兩_distribute_個或多個實例之間擴充或散發[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]交易。 即使兩個實例裝載于不同的電腦上，分散式交易仍然可以運作。
+Microsoft 分散式交易協調器（MSDTC）可讓應用程式在兩個或多個實例之間擴充或_散發_交易 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 即使兩個實例裝載于不同的電腦上，分散式交易仍然可以運作。
 
 MSDTC 是針對內部部署 Microsoft SQL Server 進行安裝，但不適用於 Microsoft 的 Azure SQL Database 雲端服務。
 
@@ -57,7 +58,7 @@ _（1）_ MSDTC 不需要 ODBC 就可以叫用。 在這種情況下，MSDTC 會
 
 ### <a name="only-one-distributed-transaction"></a>只有一個分散式交易
 
-假設您的 c + + Native Client ODBC 應用程式已登記在分散式交易中。 接下來，應用程式會在第二個分散式交易中登記。 在此情況下， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會離開原始的分散式交易，並在新的分散式交易中登記。
+假設您的 c + + Native Client ODBC 應用程式已登記在分散式交易中。 接下來，應用程式會在第二個分散式交易中登記。 在此情況下， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式會離開原始的分散式交易，並在新的分散式交易中登記。
 
 如需詳細資訊，請參閱 DTC 程式設計[人員參考](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\))。
 

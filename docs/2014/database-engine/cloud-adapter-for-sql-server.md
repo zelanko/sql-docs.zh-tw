@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44fce4aba87968a9b7e6acc3e18ae5d966f70d07
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936019"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>適用 SQL Server 的雲端配接器
-  在 Azure VM 上布建的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]過程中，會建立雲端配接器服務。 雲端配接器服務會在其初次執行時產生自我簽署 SSL 憑證，然後以 **本機系統** 帳戶執行。 它會產生用來設定本身的組態檔。 雲端配接器也會建立 Windows 防火牆規則，以允許其在預設通訊埠 11435 的傳入 TCP 連接。  
+  在 Azure VM 上布建的過程中，會建立雲端配接器服務 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 雲端配接器服務會在其初次執行時產生自我簽署 SSL 憑證，然後以 **本機系統** 帳戶執行。 它會產生用來設定本身的組態檔。 雲端配接器也會建立 Windows 防火牆規則，以允許其在預設通訊埠 11435 的傳入 TCP 連接。  
   
  雲端配接器是無狀態的同步服務，可從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的內部部署執行個體接收訊息。 當雲端配接器服務停止時，它會停止遠端存取雲端配接器、將 SSL 憑證解除繫結，並且停用 Windows 防火牆規則。  
   
@@ -51,19 +50,19 @@ ms.locfileid: "70176013"
   
         -   \<appSettings>  
   
-            -   \<add key = "WebServicePort" value = ""/>  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<add key = "WebServiceCertificate" value = "GUID"/>  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<add key = "ExposeExceptionDetails" value = "true"/>  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
         -   \</appSettings>  
   
-    -   \</組態>  
+    -   \</configuration>  
   
 -   **憑證詳細資料**-憑證具有下列值：  
   
-    -   Subject-"CN = CloudAdapter\<VMName>，dc = SQL SERVER，DC = Microsoft"  
+    -   Subject-"CN = CloudAdapter \<VMName> ，dc = SQL Server，dc = Microsoft"  
   
     -   憑證應只啟用伺服器驗證 EKU。  
   
@@ -71,10 +70,10 @@ ms.locfileid: "70176013"
   
  **設定檔值**：  
   
-|設定|值|預設|評價|  
+|設定|值|預設|註解|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|若未指定，則使用 11435。|  
-|WebServiceCertificate|指模|空白|如為空白，則會產生新的自我簽署憑證。|  
+|WebServiceCertificate|Thumbprint|空白|如為空白，則會產生新的自我簽署憑證。|  
 |ExposeExceptionDetails|True/False|False||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>雲端配接器疑難排解  
@@ -84,16 +83,16 @@ ms.locfileid: "70176013"
   
 -   **追蹤、事件**-所有事件都會寫入應用程式事件記錄檔。  
   
--   **控制，** 設定-使用位於下列位置的設定檔： C:\PROGRAM Files\Microsoft SQL\\Server\120\Tools\CloudAdapter。  
+-   **控制，** 設定-使用位於下列位置的設定檔： C:\PROGRAM Files\Microsoft SQL Server\120\Tools\CloudAdapter \\ 。  
   
-|錯誤|錯誤識別碼|原因|解決方法|  
+|錯誤|錯誤識別碼|原因|解決方案|  
 |-----------|--------------|-----------|----------------|  
 |將憑證加入至憑證存放區時發生例外狀況。 {例外狀況文字}。|45560|電腦憑證存放區權限。|請確認雲端配接器服務具有將憑證加入至電腦憑證存放區的權限。|  
 |嘗試設定通訊埠 {通訊埠號碼} 和憑證 {指模} 的 SSL 繫結時發生例外狀況。 {例外狀況}。|45561|其他應用程式已使用該通訊埠並將憑證繫結至該通訊埠。|請移除現有繫結，或變更組態檔中的雲端配接器通訊埠。|  
 |憑證存放區中找不到 SSL 憑證 [{指模}]。|45564|憑證指模位於組態檔中，但服務的個人憑證存放區未包含憑證。<br /><br /> 權限不足。|請確認憑證位於個人服務的個人憑證存放區中。<br /><br /> 請確認服務具有正確的存放區權限。|  
 |無法啟動 Web 服務。 {例外狀況文字}。|45570|於例外狀況中描述。|請啟用 ExposeExceptionDetails 並使用例外狀況中的擴充資訊。|  
 |憑證 [{指模}] 已過期。|45565|從組態檔參考的憑證已過期。|請加入有效的憑證，並以其指模更新組態檔。|  
-|Web 服務錯誤： {0}。|45571|於例外狀況中描述。|請啟用 ExposeExceptionDetails 並使用例外狀況中的擴充資訊。|  
+|Web 服務錯誤： {0} 。|45571|於例外狀況中描述。|請啟用 ExposeExceptionDetails 並使用例外狀況中的擴充資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
  [將 SQL Server Database 部署到 Microsoft Azure 虛擬機器](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  

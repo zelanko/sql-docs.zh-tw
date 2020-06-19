@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d85f5704a3a091f2f4b652812a66977eb11c93f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483418"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971838"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>建立分葉成員 (Master Data Services)
-  當[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]您想要在系統中加入主要資料，而不是使用臨時表或[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]匯入資料時，可以在中建立分葉成員。  
+  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]當您想要在系統中加入主要資料，而不是使用臨時表或匯入資料時，可以在中建立分葉成員 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  

@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8ffed36767f961f7482aa0dccf755118c80c019
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917465"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952109"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>使用備份與還原複製資料庫
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您可以藉由還原使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本所建立的使用者資料庫備份，建立新的資料庫。 但是， **無法還原使用舊版**所建立的 **master** 、 **model** 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]備份。 此外，任何舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 都無法還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用與之前版本不同的預設路徑。 因此，若要還原舊版預設位置中建立的資料庫備份，您就必須使用 MOVE 選項。 如需新預設路徑的詳細資訊[，請參閱 SQL Server 預設和命名實例的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。 如需移動資料庫檔案的詳細資訊，請參閱本主題稍後的「移動資料庫檔案」。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用與之前版本不同的預設路徑。 因此，若要還原舊版預設位置中建立的資料庫備份，您就必須使用 MOVE 選項。 如需有關新預設路徑的詳細資訊，請參閱 [SQL Server 的預設和具名執行個體的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。 如需移動資料庫檔案的詳細資訊，請參閱本主題稍後的「移動資料庫檔案」。  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>使用備份與還原來複製資料庫的一般步驟  
  當您使用備份與還原將資料庫複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的另一個執行個體時，來源和目的地電腦可為執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何平台。  
@@ -38,7 +37,7 @@ ms.locfileid: "62917465"
   
 1.  備份來源資料庫，它可能在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本的執行個體上。 執行這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦稱為 *來源電腦*。  
   
-2.  在您要複製資料庫的目的電腦上（即*目的地電腦*），連接到您打算還原資料庫的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例。 如有需要，請在目的地伺服器執行個體上建立與來源資料庫備份所用的相同備份裝置。  
+2.  在您要複製資料庫的目的電腦上（即*目的地電腦*），連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您打算還原資料庫的實例。 如有需要，請在目的地伺服器執行個體上建立與來源資料庫備份所用的相同備份裝置。  
   
 3.  在目的地電腦上還原來源資料庫的備份。 還原資料庫會自動建立所有的資料庫檔案。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62917465"
  當資料庫在另一部電腦上還原時，初始還原作業的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者會自動變成新資料庫的擁有者。 還原資料庫時，系統管理員或新的資料庫擁有者可以變更資料庫擁有權。 若要防止未經授權的資料庫還原，請使用媒體或備份組密碼。  
   
 ## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>還原至另一個伺服器執行個體時管理中繼資料  
- 當您在另一個伺服器執行個體還原資料庫時，為了提供一致的經驗給使用者和應用程式，您可能需要在其他伺服器執行個體上為資料庫重新建立部分或全部的中繼資料，例如登入和作業。 如需詳細資訊，請參閱[在另一個伺服器實例上提供資料庫時管理中繼資料 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)。  
+ 當您在另一個伺服器執行個體還原資料庫時，為了提供一致的經驗給使用者和應用程式，您可能需要在其他伺服器執行個體上為資料庫重新建立部分或全部的中繼資料，例如登入和作業。 如需詳細資訊，請參閱 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
  **檢視備份組中的資料與記錄檔**  
   
@@ -131,9 +130,9 @@ ms.locfileid: "62917465"
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
 ## <a name="see-also"></a>另請參閱  
- [將資料庫複製到其他伺服器](copy-databases-to-other-servers.md)   
- [SQL Server 預設和已命名實例的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [RESTORE FILELISTONLY &#40;Transact-sql&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
+ [複製資料庫至其他伺服器](copy-databases-to-other-servers.md)   
+ [SQL Server 的預設和具名執行個體的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
+ [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aca595e33a831e472f06a349e12920aced6dd71f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87af29b64e7185148ead0f089d539bc0519911a5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480689"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937769"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>卸離和附加 DQS 資料庫
   本主題描述如何卸離和附加 DQS 資料庫。  
@@ -25,7 +24,7 @@ ms.locfileid: "65480689"
 ###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> 限制事項  
  如需限制事項的清單，請參閱 [資料庫卸離與附加 &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)中卸離資料庫。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
   
 -   請確定 DQS 中沒有任何執行中的活動或處理序。 這可以使用 **[活動監控]** 畫面加以確認。 如需有關在此畫面工作的詳細資訊，請參閱＜ [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)＞。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "65480689"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  **[資料庫詳細資料]** (下方) 窗格會顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下**流覽**按鈕（...）。  
+5.  **[資料庫詳細資料]** (下方) 窗格會顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下 [瀏覽]  按鈕 ( ... )。  
   
 6.  按一下 **[確定]** 以附加 DQS_MAIN 資料庫。  
   

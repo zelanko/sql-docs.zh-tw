@@ -31,13 +31,12 @@ helpviewer_keywords:
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7044fdc4c29110870e20cd2f9fe4f2140659e551
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61f4d13550fa1812e6de3fdc98a8e4e4113fe5bd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874443"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970708"
 ---
 # <a name="clr-user-defined-types"></a>CLR 使用者定義型別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的功能可讓您建立針對 .NET Framework Common Language Runtime (CLR) 中建立的組件來進行程式設計的資料庫物件。 資料庫物件可充分運用 CLR 所提供的豐富程式設計模型，包括觸發程序、預存程序、函數、彙總函式和類型等。  
@@ -45,7 +44,7 @@ ms.locfileid: "62874443"
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，執行 CLR 程式碼的功能預設會設定為 OFF。 您可以使用**sp_configure**系統預存程式來啟用 CLR。  
   
- 從開始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，您可以使用使用者定義型別（udt）來擴充伺服器的純量型別系統，以便在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中儲存 CLR 物件。 UDT 可以包含多個元素並可以具有行為，使其有別於由單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型組成的傳統別名資料類型。  
+ 從開始 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ，您可以使用使用者定義型別（udt）來擴充伺服器的純量型別系統，以便在資料庫中儲存 CLR 物件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 UDT 可以包含多個元素並可以具有行為，使其有別於由單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型組成的傳統別名資料類型。  
   
  因為系統將 UDT 當做一個整體來進行存取，所以它們使用的複雜資料類型可能會對效能產生負面影響。 通常使用傳統資料列及資料表可以對複雜資料進行最佳模型化。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 UDT 適用於以下項目：  
   
@@ -59,14 +58,14 @@ ms.locfileid: "62874443"
   
 1.  **編寫和建立定義 UDT 的組件。** UDT 是使用會產生可驗證程式碼之 .NET Framework Common Language Runtime (CLR) 支援的任何語言所定義。 這包括 Visual C# 和 Visual Basic .NET。 資料會公開為 .NET Framework 類別或結構的欄位及屬性，並且其行為是由類別或結構的方法所定義。  
   
-2.  **註冊組件。** Udt 可以透過資料庫專案中的 Visual Studio 使用者介面來部署，或藉由使用[!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 語句，將包含類別或結構的元件複製到資料庫中。  
+2.  **註冊組件。** Udt 可以透過資料庫專案中的 Visual Studio 使用者介面來部署，或藉由使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 語句，將包含類別或結構的元件複製到資料庫中。  
   
-3.  **在 SQL Server 中建立 UDT。** 將元件載入到主機資料庫之後，您可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)] create TYPE 語句來建立 udt，並將類別或結構的成員公開為 UDT 的成員。 UDT 僅存在於單一資料庫的內容中，並且一旦註冊後，就不再與建立它們的外部檔案具有相依性。  
+3.  **在 SQL Server 中建立 UDT。** 將元件載入到主機資料庫之後，您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TYPE 語句來建立 udt，並將類別或結構的成員公開為 UDT 的成員。 UDT 僅存在於單一資料庫的內容中，並且一旦註冊後，就不再與建立它們的外部檔案具有相依性。  
   
     > [!NOTE]  
-    >  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前，不支援從 .NET Framework 組件建立的 UDT。 不過，您仍然可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sp_addtype**來使用別名資料類型。 CREATE TYPE 語法可用來建立原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者定義資料類型及 UDT。  
+    >  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前，不支援從 .NET Framework 組件建立的 UDT。 不過，您仍然可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sp_addtype**來使用別名資料類型。 CREATE TYPE 語法可用來建立原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者定義資料類型及 UDT。  
   
-4.  **使用 UDT 建立資料表、變數或參數**從開始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，使用者定義型別可用來當做資料表的資料行定義、 [!INCLUDE[tsql](../../includes/tsql-md.md)]批次中的變數，或當做[!INCLUDE[tsql](../../includes/tsql-md.md)]函數或預存程式的引數。  
+4.  **使用 UDT 建立資料表、變數或參數**從開始 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ，使用者定義型別可用來當做資料表的資料行定義、批次中的變數 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，或當做 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數或預存程式的引數。  
   
 ## <a name="in-this-section"></a>本節內容  
  [建立使用者定義型別](creating-user-defined-types.md)  

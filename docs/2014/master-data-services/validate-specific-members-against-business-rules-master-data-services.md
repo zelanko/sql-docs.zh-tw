@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: edf6d73edb8c4409f82302c2cdf013f18037e4bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5be8fa1912df9a2fd426615e758a67818d644d96
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478536"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970938"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>根據商務規則驗證特定成員 (Master Data Services)
   如果您想要更新或依照商務規則驗證成員子集，請在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中選擇性地套用商務規則。  
@@ -26,7 +25,7 @@ ms.locfileid: "65478536"
 > [!NOTE]  
 >  如果您想要將商務規則套用至某版本模型中的所有成員，請參閱 [根據商務規則驗證版本 &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  

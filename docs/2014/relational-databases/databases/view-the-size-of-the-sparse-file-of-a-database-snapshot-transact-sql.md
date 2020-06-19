@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 424399b9915c8e7e26e1076fd2e553aafe06fcf0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62870877"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969928"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>檢視資料庫快照集的疏鬆檔案大小 (Transact-SQL)
   此主題描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫檔案是疏鬆檔案，以及了解其實際和最大大小。 疏鬆檔案是 NTFS 檔案系統的功能，提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫快照集所使用。  

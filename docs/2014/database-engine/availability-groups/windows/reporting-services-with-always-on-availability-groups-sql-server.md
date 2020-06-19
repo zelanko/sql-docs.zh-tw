@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 685560b35eafd4092c149a809089abc299da6bbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29e41e2b65df744cdf495441a8e7bd72accc9ce9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175457"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936529"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services 與 AlwaysOn 可用性群組 (SQL Server)
   本主題包含將 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 設定為使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](AG) 的相關資訊。 使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的三種案例包括報表資料來源的資料庫、報表伺服器資料庫以及報表設計。 這三種案例的支援功能和必要組態有所不同。
 
  使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料來源的主要優點是能夠運用可讀取的次要複本做為報表資料來源，同時次要複本可針對主要資料庫提供容錯移轉。
 
- 如需有關的[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]一般資訊，請參閱[SQL Server 2012 的https://msdn.microsoft.com/sqlserver/gg508768)AlwaysOn 常見問題（](https://msdn.microsoft.com/sqlserver/gg508768)。
+ 如需有關的一般資訊 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，請參閱[SQL Server 2012 的 https://msdn.microsoft.com/sqlserver/gg508768) AlwaysOn 常見問題（](https://msdn.microsoft.com/sqlserver/gg508768)。
 
  
 
 ##  <a name="requirements-for-using-reporting-services-and-alwayson-availability-groups"></a><a name="bkmk_requirements"></a>使用 Reporting Services 和 AlwaysOn 可用性群組的需求
- 若要[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]搭配[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]使用，您必須下載並安裝 .net 3.5 SP1 的修補程式。 此 Hotfix 會加入 SQL 用戶端對於 AG 功能的支援，以及連接字串屬性 **ApplicationIntent** 和 **MultiSubnetFailover**的支援。 如果裝載報表伺服器的每部電腦沒有安裝此 Hotfix，則嘗試預覽報表的使用者將會看見類似下面的錯誤訊息，而且該錯誤訊息將寫入報表伺服器追蹤記錄：
+ 若要搭配使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ，您必須下載並安裝 .net 3.5 SP1 的修補程式。 此 Hotfix 會加入 SQL 用戶端對於 AG 功能的支援，以及連接字串屬性 **ApplicationIntent** 和 **MultiSubnetFailover**的支援。 如果裝載報表伺服器的每部電腦沒有安裝此 Hotfix，則嘗試預覽報表的使用者將會看見類似下面的錯誤訊息，而且該錯誤訊息將寫入報表伺服器追蹤記錄：
 
 > **錯誤訊息：** 「不支援關鍵字 'applicationintent'」
 

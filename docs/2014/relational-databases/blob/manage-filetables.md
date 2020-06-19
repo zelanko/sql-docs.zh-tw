@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a15a914c243f1fafd3b913d98113e984bf533086
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009985"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970868"
 ---
 # <a name="manage-filetables"></a>管理 FileTable
   描述用於管理 FileTable 的常見管理工作。  
@@ -62,7 +61,7 @@ GO
   
      如果 ALTER DATABASE 命令已取消或因逾時而結束，則交易式存取的層級不會變更。  
   
--   如果您使用 WITH \<終止> 子句 (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT) 來呼叫 ALTER DATABASE 陳述式，則系統會終止所有開啟的非交易式檔案控制代碼。  
+-   如果您使用 WITH 子句來呼叫 ALTER DATABASE 語句 \<termination> （ROLLBACK AFTER integer [SECONDS] |立即復原 |NO_WAIT），則會終止所有開啟的非交易式檔案控制代碼。  
   
 > [!WARNING]  
 >  終止開啟檔案控制代碼，可能會導致使用者遺失未儲存的資料。 此行為與檔案系統本身的行為一致。  
@@ -192,7 +191,7 @@ GO
  FileTable 所採用的大部分鎖定都會對應至應用程式所開啟的檔案。  
   
  **識別開啟的檔案和相關聯的鎖定**  
- 您可以將 **sys.dm_tran_locks &#40;Transact-SQL&#41;** 動態管理檢視中的 [request_owner_id](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) 欄位與 **sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;** 中的 [fcb_id](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) 欄位聯結。 在某些情況下，鎖定不會對應至單一開啟檔案控制代碼。  
+ 您可以將 [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) 動態管理檢視中的 **request_owner_id** 欄位與 [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) 中的 **fcb_id** 欄位聯結。 在某些情況下，鎖定不會對應至單一開啟檔案控制代碼。  
   
 ```sql  
 SELECT opened_file_name  

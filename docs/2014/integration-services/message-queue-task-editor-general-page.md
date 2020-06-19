@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2cdd3c2e8e903de90871b096d24cda17fe490d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25053ac966629c1265d735df8502eccad1d8a290
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057624"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950928"
 ---
 # <a name="message-queue-task-editor-general-page"></a>訊息佇列工作編輯器 (一般頁面)
   使用 **[訊息佇列工作編輯器]** 對話方塊的 **[一般頁面]** ，即可命名和描述訊息佇列工作、指定訊息格式以及指出工作是否傳送或接收訊息。  
@@ -33,18 +32,18 @@ ms.locfileid: "66057624"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入訊息佇列工作的描述。  
   
  **Use2000Format**  
  指示是否使用 Message Queuing (又稱為 MSMQ) 的 2000 格式。 預設值為 `False`。  
   
  **MSMQConnection**  
- 選取現有的 MSMQ 連線管理員， \<或按一下 [**新增連接 ...** ]> 建立新的連線管理員。  
+ 選取現有的 MSMQ 連線管理員，或按一下 \<**New connection...**> 以建立新的連線管理員。  
   
  **相關主題**： [MSMQ 連線管理員](connection-manager/msmq-connection-manager.md)、 [MSMQ 連線管理員編輯器](../../2014/integration-services/msmq-connection-manager-editor.md)  
   
- **訊息**  
+ **Message**  
  指定訊息佇列工作是否傳送或接收訊息。 如果選取 **[傳送訊息]**，對話方塊的左窗格會列出 [傳送] 頁面，如果選取 **[接收訊息]**，則會列出 [接收] 頁面。 依預設，此值設定為 **[傳送訊息]**。  
   
 ## <a name="see-also"></a>另請參閱  

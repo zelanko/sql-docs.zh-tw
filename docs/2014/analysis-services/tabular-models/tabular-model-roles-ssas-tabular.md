@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 28658862-dce2-459f-8868-29ee31c879bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 433dc3dcde3a0cee2652baa5f1a59997ec7bf55b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be10a321ba511953bc16f893bf37035ec66d495d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066445"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938539"
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>表格式模型角色 (SSAS 表格式)
   本主題和相關工作中的資訊適用於使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來建立和管理已部署表格式模型之角色的表格式模型資料庫管理員。 若要了解表格式模型中角色的詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)。 若要了解在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中使用 [角色管理員] 來建立和管理表格式模型專案中之角色的詳細資訊，請參閱[建立及管理角色 &#40;SSAS 表格式&#41;](create-and-manage-roles-ssas-tabular.md)。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5407aee5-6a07-4559-a2ba-2ca00a242f02
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c506b72f48206f5a68dc10d0b236aa7fb934435
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a6e447b827b54eb126a867746e12b0ddfc10fec
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067085"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938889"
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>隱藏或凍結資料行 (SSAS 表格式)
   在模型設計師中，如果資料表中有您不想要顯示的資料行，可以暫時隱藏起來。 隱藏資料行會讓您在螢幕上有更多的空間，以加入新的資料行或是只處理相關的資料行。 您可以從模型設計師的 [資料行]**** 功能表，以及從每個資料行標頭所提供的右鍵功能表，來隱藏及取消隱藏資料行。 若要在捲動到模型其他區域時，讓某個模型區域保持可見，您可以執行凍結操作，將特定的資料行鎖定於一個區域之中。  
@@ -44,7 +43,7 @@ ms.locfileid: "66067085"
   
 3.  在 [隱藏和取消隱藏資料行]**** 對話方塊中，找出所要隱藏的每個資料行，然後取消選取 [在設計師中]**** 及/或 [在報表中]****。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
 ### <a name="to-freeze-columns"></a>凍結資料行  
   

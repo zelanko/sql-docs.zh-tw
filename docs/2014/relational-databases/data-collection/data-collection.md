@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70a7b7c959283f934ed94f654293d1de2ef8cd9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175970"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970488"
 ---
 # <a name="data-collection"></a>資料收集
   資料收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的元件，它會收集不同的資料集。 資料收集會連續執行或依照使用者定義的排程執行。 然後，資料收集器會將收集而來的資料儲存在關聯式資料庫內 (稱為管理資料倉儲)。
@@ -59,7 +58,7 @@ ms.locfileid: "78175970"
  如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)。
 
 ## <a name="data-collector-terminology"></a>資料收集器術語
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]以支援資料收集之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中的實例為目標。 如需有關支援版本的詳細資訊，請參閱[SQL Server 2014 版本所支援功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)的「管理能力」一節。
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]以支援資料收集之版本中的實例為目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需有關支援版本的詳細資訊，請參閱[SQL Server 2014 版本所支援功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)的「管理能力」一節。
 
  *「目標根」* (Target Root) 會定義目標階層中的子樹。 在這些由目標根定義之子樹上套用篩選後所產生之目標的群組，就是 *「目標集」* (Target Set)。 目標根可以是資料庫、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體或電腦執行個體。
 
@@ -67,7 +66,7 @@ ms.locfileid: "78175970"
 
  資料提供者：可提供資料給收集器型別的已知資料來源（特定于目標型別）。
 
- 收集器輸入[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝周圍的邏輯包裝函式，以提供實際機制來收集資料，並將其上傳到管理資料倉儲。
+ 收集器輸入封裝周圍的邏輯包裝函式 [!INCLUDE[ssIS](../../includes/ssis-md.md)] ，以提供實際機制來收集資料，並將其上傳到管理資料倉儲。
 
  收集項：收集器型別的實例。 收集項是使用一組特定的輸入屬性和收集頻率所建立的。
 

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e74a05193ae2051b12dbc15bb199b22a3c44f2a
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 2d51d1db75caa29814a01fc1f49bfdd49b403c3d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925002"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936969"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>設定可用性群組的唯讀路由 (SQL Server)
   若要在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中將 AlwaysOn 可用性群組設定為支援唯讀路由，可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell。 *「唯讀路由」* (Read-Only Routing) 是指 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將合格的唯讀連接要求路由至可用之 AlwaysOn [可讀取的次要複本](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) (亦即在以次要角色執行時，設定為允許唯讀工作負載的複本) 的功能。 若要支援唯讀路由，可用性群組必須具有 [可用性群組接聽程式](../../listeners-client-connectivity-application-failover.md)。 唯讀用戶端必須將其連接要求導向至此接聽程式，且用戶端的連接字串必須將應用程式的意圖指定為「唯讀」。 換句話說必須是 *「讀取意圖的連接要求」* (Read-Intent Connection Request)。  
@@ -85,7 +84,7 @@ ms.locfileid: "82925002"
          *system-address*  
          這是明確識別目的地電腦系統的字串，例如系統名稱、完整網域名稱或 IP 位址。  
   
-         *移植*  
+         *port*  
          這是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之 Database Engine 所使用的通訊埠編號。  
   
          例如：   `SECONDARY_ROLE (READ_ONLY_ROUTING_URL = N'TCP://COMPUTER01.contoso.com:1433')`  

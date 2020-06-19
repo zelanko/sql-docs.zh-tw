@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8f9d36b6394aa3921a9262a8b4afc544033c7a20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4aeb731e9febff42a912cf1e6af785ae794841a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901129"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915099"
 ---
 # <a name="odbc-destination-custom-properties"></a>ODBC Destination Custom Properties
   下表描述 ODBC 目的地的自訂屬性。 所有屬性都可從 SSIS 屬性運算式設定。  

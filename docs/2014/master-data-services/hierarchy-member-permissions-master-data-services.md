@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 371c7c605b5415654c01f3faa66fbd0801202785
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8a50ce407e0f9284d07a7248f08decacf434fee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482958"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971408"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
   階層成員權限為選擇性，而且只有當您希望使用者擁有特定成員的受限存取權時，才應該使用。 如果您未在 [階層成員]**** 索引標籤上指派權限，則使用者的權限完全是根據 [模型]**** 索引標籤上指派的權限。  
   
- 階層成員許可權會在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]使用者介面（UI）中，于 [階層**成員**] 索引標籤上的 [**使用者和群組的許可權**] 功能區域中指派。這些許可權會決定使用者可以在 UI 的 [ **Explorer** ] 功能區域中存取哪些成員。  
+ 階層成員許可權會在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者介面（UI）中，于 [階層**成員**] 索引標籤上的 [**使用者和群組的許可權**] 功能區域中指派。這些許可權會決定使用者可以在 UI 的 [ **Explorer** ] 功能區域中存取哪些成員。  
   
  在 [階層成員]**** 索引標籤上，每一個階層會表示為一個樹狀結構。 當您將權限指派給樹狀結構中的節點時，所有子項都會繼承該權限，除非在較低層級明確指派權限。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "65482958"
 |權限|描述|  
 |----------------|-----------------|  
 |**唯讀**|顯示成員，但是使用者無法變更成員。 使用者也無法在任何明確階層或成員所屬的集合中移動成員。<br /><br /> 注意：如果您將 [**唯讀**] 許可權指派給 [**根**]，[**根**] 底下的成員是唯讀的;不過，在明確階層和集合中，使用者可以將成員移至**根目錄**，並且可以將新成員加入至**根**。|  
-|**更新**|顯示成員，而且使用者可加以變更。 使用者也可以在任何明確階層或成員所屬的集合中移動成員。|  
+|**Update**|顯示成員，而且使用者可加以變更。 使用者也可以在任何明確階層或成員所屬的集合中移動成員。|  
 |**拒絕**|不顯示成員。|  
   
  在 [階層成員]**** 索引標籤上，您指派的權限不會立即生效。 權限套用的頻率取決於 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中 [系統設定] 資料表內的 [成員安全性處理間隔設定]****。 遵循 [立即套用成員權限 &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)中的步驟，可以立即套用成員權限。  

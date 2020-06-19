@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e2b606fae657fdc7d5652e4f33c6d14ccff690c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 143bbc4840fe78637ca4ccc7a70c4931e1655682
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971418"
 ---
 # <a name="hierarchies-master-data-services"></a>階層 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，階層是一個樹狀目錄，您可以用它來執行以下作業：

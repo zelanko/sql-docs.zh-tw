@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6836b42f-28b8-4a98-a86d-2c3c109f0189
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37571e141395afe255329edc10edeaeaed121710
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7dd48fae06258370e4b93bcceb9eadc80554bbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066884"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938769"
 ---
 # <a name="configure-default-field-set-for-power-view-reports-ssas-tabular"></a>設定 Power View 報表的預設欄位集 (SSAS 表格式)
   預設欄位集是預先定義的資料行和量值的清單，當您選取報表欄位清單中的資料表時，此清單會自動加入 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表畫布。 表格式模型作者可以建立預設欄位集，針對在報表中使用此模型的報表作者移除多餘的步驟。 例如，如果您知道使用客戶連絡資訊的大部分報表作者都想要看到連絡人的名稱、主要電話號碼、電子郵件地址和公司名稱，您可以預先選取這些資料行，這樣當報表作者按一下 [客戶連絡人] 資料表時，這些資料行就會固定加入到報表畫布上。  

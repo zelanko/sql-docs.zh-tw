@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d5e3ec1fc7c3c811b588aaf4145aa286d9aa078e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 062a02688a81235686635db4315754e16dc38d08
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484148"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937499"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>管理 (開啟、解除鎖定、重新命名和刪除) 資料品質專案
   此主題描述如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 管理資料品質專案，例如開啟、解除鎖定、重新命名和刪除資料品質專案。  
@@ -39,7 +38,7 @@ ms.locfileid: "65484148"
   
 -   您只能解除鎖定由您建立的資料品質專案。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
  您至少必須有一個資料品質專案可供管理。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
@@ -90,6 +89,6 @@ ms.locfileid: "65484148"
   
 3.  在 **[開啟專案]** 畫面中，以滑鼠右鍵按一下您所建立且解除鎖定的資料品質專案，然後按一下快速鍵功能表中的 **[刪除]** 。  
   
-4.  確認訊息隨即出現。 按一下 [是]  。  
+4.  確認訊息隨即出現。 按一下 [是] 。  
   
   

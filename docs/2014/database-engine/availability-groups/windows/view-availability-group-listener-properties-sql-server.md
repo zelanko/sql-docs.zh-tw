@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bdec432699b7d0a6152509ec6a53ddf452376d5c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef7fe316394a030350ceb12a0d1b8e2d48ee1d34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788024"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936201"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>檢視可用性群組接聽程式屬性 (SQL Server)
   此主題描述如何使用 *中的* 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 來檢視 AlwaysOn [!INCLUDE[tsql](../../../includes/tsql-md.md)] 「可用性群組接聽程式」 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](Availability Group Listener) 的屬性。  
@@ -95,7 +94,7 @@ ms.locfileid: "62788024"
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性群組接聽程式、用戶端連接和應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [監視可用性群組 &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
   

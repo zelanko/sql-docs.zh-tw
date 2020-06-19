@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 118fe59e76f23089ce56371ea4ba981bb4ab1f7f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93555bbbc6c7a10955e8fc869f6ddadc38572830
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706966"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927117"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 各版本所支援的功能
 
@@ -34,7 +33,7 @@ ms.locfileid: "82706966"
   
  [擴充性和效能](#Scalability)  
   
- [Security](#Enterprise_security)  
+ [安全性](#Enterprise_security)  
   
  [複寫](#Replication)  
   
@@ -44,7 +43,7 @@ ms.locfileid: "82706966"
   
  [開發工具](#Dev_tools)  
   
- [序](#Programmability)  
+ [可程式性](#Programmability)  
   
  [Integration Services](#SSIS)  
   
@@ -277,7 +276,7 @@ ms.locfileid: "82706966"
 > [!NOTE]  
 >  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 只能在 64 位元版本的 Business Intelligence 和 Enterprise 上使用。  
   
-|功能|企業|商業智慧|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能|Enterprise|商業智慧|標準|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫|是|是||||||  
 |[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式|是|是||||||  
@@ -415,7 +414,7 @@ ms.locfileid: "82706966"
 |資料驅動報表訂閱|是|是||||||  
 |向外延展部署 (Web 伺服器陣列)|是|是||||||  
 |警示<sup>2</sup>|是|是||||||  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|是|是||||||  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]<sup>2</sup>|是|是||||||  
   
  <sup>1</sup>如需有關中支援之資料來源的詳細資訊 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] ，請參閱[REPORTING SERVICES &#40;SSRS&#41;支援的資料來源](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
@@ -426,7 +425,7 @@ ms.locfileid: "82706966"
   
 |對於這一版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|使用這一版的 Database Engine 執行個體來主控資料庫|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
-|企業|Standard、Business Intelligence Enterprise 版 (本機或遠端)|  
+|Enterprise|Standard、Business Intelligence Enterprise 版 (本機或遠端)|  
 |商業智慧|Standard、Business Intelligence Enterprise 版 (本機或遠端)|  
 |標準|Standard、Enterprise Edition (本機或遠端)|  
 |Web|Web Edition (僅限本機)|  

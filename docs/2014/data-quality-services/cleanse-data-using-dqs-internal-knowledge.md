@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 26e4c7394f1af445534e32f9a960cb71480f72c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9962cdc87fca0014d8e70738069bb52b5a36092d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481132"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938019"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>使用 DQS (內部) 知識清理資料
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用資料品質專案來清理資料。 資料清理是使用已針對高品質資料集內建在 DQS 中的知識庫，於來源資料上執行。 如需詳細資訊，請參閱 [建立知識庫](../../2014/data-quality-services/building-a-knowledge-base.md)。  
@@ -29,7 +28,7 @@ ms.locfileid: "65481132"
   
 ## <a name="before-you-begin"></a>開始之前  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
   
 -   您必須為清理活動指定適當的臨界值。 如需有關執行此作業的詳細資訊，請參閱＜ [設定清理和比對的臨界值](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)＞。  
   
@@ -157,17 +156,17 @@ ms.locfileid: "65481132"
   
     -   **資料和清理資訊**：按一下此選項按鈕，匯出每一個定義域的以下資料：  
   
-        -   網域>_Source：網域中的原始值。 ** \< **  
+        -   ** \<Domain> _Source**：定義域中的原始值。  
   
-        -   網域>_Output：網域中的清理值。 ** \< **  
+        -   ** \<Domain> _Output**：定義域中的清理值。  
   
-        -   網域>_Reason：為值更正所指定的原因。 ** \< **  
+        -   ** \<Domain> _Reason**：為值更正所指定的原因。  
   
-        -   網域>_Confidence：已更正之所有詞彙的信賴等級。 ** \< ** 顯示為小數值，相當於對應的百分比值。 例如，95% 的信賴等級將會顯示為 .9500000。  
+        -   ** \<Domain> _Confidence**：已更正之所有詞彙的信賴等級。 顯示為小數值，相當於對應的百分比值。 例如，95% 的信賴等級將會顯示為 .9500000。  
   
-        -   網域>_Status：資料清理後的定義域值狀態。 ** \< ** 例如， **[建議]**、 **[新增]**、 **[無效]**、 **[更正]** 或 **[正確]**。  
+        -   ** \<Domain> _Status**：資料清理後的定義域值狀態。 例如， **[建議]**、 **[新增]**、 **[無效]**、 **[更正]** 或 **[正確]**。  
   
-        -   **記錄狀態**：除了每個對應的定義域都有一個狀態欄位 **(\<定義域名稱>_Status**) 之外，[記錄狀態]**** 欄位也會顯示記錄的狀態。 如果記錄中任何定義域的狀態是 [*新增*] 或 [*正確*]，則 [**記錄狀態**] 會設為 [*正確*]。 如果記錄中任何定義域的狀態是 [*建議*]、[*無效*] 或 [已*更正*]，則 [**記錄狀態**] 會設為個別的值。 例如，如果記錄中任何定義域的狀態是 [*建議*]，則 [**記錄狀態**] 會設為 [*建議*]。  
+        -   **記錄狀態**：除了每個對應的定義域都有 [狀態] 欄位 **（ \<DomainName> _Status**）之外，[**記錄狀態**] 欄位也會顯示記錄的狀態。 如果記錄中任何定義域的狀態是 [*新增*] 或 [*正確*]，則 [**記錄狀態**] 會設為 [*正確*]。 如果記錄中任何定義域的狀態是 [*建議*]、[*無效*] 或 [已*更正*]，則 [**記錄狀態**] 會設為個別的值。 例如，如果記錄中任何定義域的狀態是 [*建議*]，則 [**記錄狀態**] 會設為 [*建議*]。  
   
             > [!NOTE]  
             >  如果您針對清理作業使用參考資料服務，也可使用有關此定義域值的一些其他資料進行匯出。 如需詳細資訊，請參閱[使用參考資料 &#40;外部&#41; 知識清理資料](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)。  

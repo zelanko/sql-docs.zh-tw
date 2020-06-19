@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75be591f1910f5a55f6b7a019dad366a49ea921a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 14a2ddb95c3e36076b02901e5fb6f431c1dfb12e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707042"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927290"
 ---
 # <a name="about-the-sql-server-license-terms"></a>關於 SQL Server 授權條款
   在安裝 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 軟體授權條款會複製到本機電腦。 如果在同一部電腦上安裝了相同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本和語言的多個執行個體，一份授權條款便可適用於該版本和語言的所有執行個體。 檔案已寫入：% ProgramFiles% \\ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] \120\License 詞彙 \ 或% ProgramFiles （x86）% \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License 詞彙 \\ 。  
   
  如果在同一部電腦上安裝了相同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本和語言的多個執行個體，一份授權條款便可適用於該版本和語言的所有執行個體。  
   
- 授權條款檔案名稱會指示已安裝的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本以及 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 語言版本。 授權條款檔案名的格式為： SQLServer2014_License_Edition_ \< 類型>_ \< LCID>。 例如：  
+ 授權條款檔案名稱會指示已安裝的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本以及 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 語言版本。 授權條款檔案名的格式為： SQLServer2014_License_Edition_ \<TYPE> _ \<LCID> .rtf。 例如：  
   
 -    Developer (英文版) 的 SQLServer2014_License_DEV_1033.rtf。  
   

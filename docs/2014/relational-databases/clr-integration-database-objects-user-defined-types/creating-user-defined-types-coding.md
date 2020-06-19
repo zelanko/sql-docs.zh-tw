@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7427de92691a2d5c0a92aac55ac16f47dd2ef6b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4daa52a25ebc44e1668fa2c4d98619dc08f2dc26
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232243"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970703"
 ---
 # <a name="coding-user-defined-types"></a>編碼使用者定義型別
   當您編碼使用者定義型別 (UDT) 定義時，您必須根據您是否將 UDT 實作為類別或結構以及您已選擇的格式和序列化選項來實作各種功能。  
@@ -197,7 +196,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ## <a name="implementing-the-tostring-method"></a>實作 ToString 方法  
- `ToString` 方法會將 `Point` UDT 轉換成字串值。 在此情況下，會針對 `Point` 類型的 Null 執行個體傳回 "NULL" 字串。 `ToString` 方法藉由使用 `Parse` 傳回以逗號分隔並包含 X 及 Y 座標值的 `System.Text.StringBuilder`，以反轉 `System.String` 方法。 因為**InvokeIfReceiverIsNull**預設為 false，所以`Point`不需要檢查的 null 實例。  
+ `ToString` 方法會將 `Point` UDT 轉換成字串值。 在此情況下，會針對 `Point` 類型的 Null 執行個體傳回 "NULL" 字串。 `ToString` 方法藉由使用 `Parse` 傳回以逗號分隔並包含 X 及 Y 座標值的 `System.Text.StringBuilder`，以反轉 `System.String` 方法。 因為**InvokeIfReceiverIsNull**預設為 false，所以不需要檢查的 null 實例 `Point` 。  
   
 ```vb  
 Private _x As Int32  
@@ -367,10 +366,10 @@ private bool ValidatePoint()
 ### <a name="validation-method-limitations"></a>驗證方法限制  
  伺服器呼叫此驗證方法的時機是當伺服器執行轉換時，而不是當藉由設定個別屬性插入資料，或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 陳述式插入資料時。  
   
- 如果您想要在所有情況下執行驗證方法， `Parse`您必須從屬性 setter 和方法明確呼叫驗證方法。 這不是硬性規定，在某些情況下可能也不適當。  
+ `Parse`如果您想要在所有情況下執行驗證方法，您必須從屬性 setter 和方法明確呼叫驗證方法。 這不是硬性規定，在某些情況下可能也不適當。  
   
 ### <a name="parse-validation-example"></a>Parse 驗證範例  
- 若要確保`ValidatePoint`方法是在`Point`類別中叫用，您必須從`Parse`方法和設定 X 和 Y 座標值的屬性程式呼叫它。 下列程式碼片段顯示如何從`ValidatePoint` `Parse`函式呼叫驗證方法。  
+ 若要確保 `ValidatePoint` 方法是在 `Point` 類別中叫用，您必須從 `Parse` 方法和設定 X 和 Y 座標值的屬性程式呼叫它。 下列程式碼片段顯示如何從函式呼叫 `ValidatePoint` 驗證方法 `Parse` 。  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -416,7 +415,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ### <a name="property-validation-example"></a>Property 驗證範例  
- 下列程式碼片段顯示如何從設定 X 和`ValidatePoint` Y 座標的屬性程式呼叫驗證方法。  
+ 下列程式碼片段顯示如何 `ValidatePoint` 從設定 X 和 Y 座標的屬性程式呼叫驗證方法。  
   
 ```vb  
 Public Property X() As Int32  
@@ -490,7 +489,7 @@ public Int32 Y
 ```  
   
 ## <a name="coding-udt-methods"></a>編碼 UDT 方法  
- 當編碼 UDT 方法時，請考慮使用的演算法是否可能隨著時間而改變。 如果會的話，您可能會想要考慮針對 UDT 使用的方法建立個別類別。 如果演算法變更，您可在不影響 UDT 的情況下，以新的程式碼重新編譯該類別，並將組件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在許多情況下，您可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 陳述式重新載入 UDT，但是這樣做可能會導致現有資料發生問題。 例如，包含在`Currency` **AdventureWorks**範例資料庫中的 UDT 會使用**ConvertCurrency**函數來轉換貨幣值，這會在不同的類別中執行。 轉換演算法在未來有可能以非預期的方式變更，或者可能需要新的功能。 在規劃**ConvertCurrency**未來的變更時`Currency` ，將 ConvertCurrency 函數與 UDT 的執行區隔開，可提供更大的彈性。  
+ 當編碼 UDT 方法時，請考慮使用的演算法是否可能隨著時間而改變。 如果會的話，您可能會想要考慮針對 UDT 使用的方法建立個別類別。 如果演算法變更，您可在不影響 UDT 的情況下，以新的程式碼重新編譯該類別，並將組件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在許多情況下，您可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 陳述式重新載入 UDT，但是這樣做可能會導致現有資料發生問題。 例如，包含在 `Currency` **AdventureWorks**範例資料庫中的 UDT 會使用**ConvertCurrency**函數來轉換貨幣值，這會在不同的類別中執行。 轉換演算法在未來有可能以非預期的方式變更，或者可能需要新的功能。 在規劃未來的變更時，將**ConvertCurrency**函數與 UDT 的執行區隔開， `Currency` 可提供更大的彈性。  
   
 ### <a name="example"></a>範例  
  `Point`類別包含三個簡單的方法來計算距離：**距離**、 **DistanceFrom**和**DistanceFromXY**。 每一個方法都會傳回 `double`，計算從 `Point` 到零的距離、從指定點到 `Point` 的距離，以及從指定之 X 及 Y 座標到 `Point` 的距離。 **距離**和**DistanceFrom**每個呼叫**DistanceFromXY**，並示範如何針對每個方法使用不同的引數。  
@@ -543,7 +542,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  `Microsoft.SqlServer.Server.SqlMethodAttribute` 類別會提供可用來標示方法定義的自訂屬性，以便針對 Null 呼叫行為指定決定性以及指定方法是否為 mutator。 已假設這些屬性 (Property) 的預設值，而且只有在需要非預設值時才會使用自訂屬性 (Attribute)。  
   
 > [!NOTE]  
->  `SqlMethodAttribute` 類別繼承自 `SqlFunctionAttribute` 類別，因此 `SqlMethodAttribute` 會繼承自 `FillRowMethodName` 而 `TableDefinition` 欄位會繼承自 `SqlFunctionAttribute`。 這意味著撰寫資料表值方法是可行的，不過情況不是這樣。 方法會`IEnumerable`編譯和元件部署，但傳回型別的相關錯誤會在執行時間引發，並出現下列訊息：「方法、屬性，或元件 '\<\<\<assembly> ' 中類別 ' class> ' 的欄位 ' name> ' 具有不正確傳回型別。」  
+>  `SqlMethodAttribute` 類別繼承自 `SqlFunctionAttribute` 類別，因此 `SqlMethodAttribute` 會繼承自 `FillRowMethodName` 而 `TableDefinition` 欄位會繼承自 `SqlFunctionAttribute`。 這意味著撰寫資料表值方法是可行的，不過情況不是這樣。 方法會編譯和元件部署，但在執行時間會引發有關傳回類型的錯誤，並 `IEnumerable` 出現下列訊息：「方法、屬性或 \<name> 元件 ' ' 中類別 ' ' 的欄位 ' ' \<class> 有不正確傳回 \<assembly> 類型。」  
   
  下表說明可在 UDT 方法中使用的部分相關 `Microsoft.SqlServer.Server.SqlMethodAttribute` 屬性，並列出其預設值。  
   
@@ -620,7 +619,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  填補的目的是確保文化特性與貨幣值完全分開，以便在將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼中的一個 UDT 與另一 UDT 進行比較時，會將文化特性位元組與文化特性位元組進行比較，並將貨幣位元組值與貨幣位元組值進行比較。  
   
- 如需`Currency` UDT 的完整程式代碼清單，請遵循在[SQL Server 資料庫引擎範例](https://msftengprodsamples.codeplex.com/)中安裝 CLR 範例的指示。  
+ 如需 UDT 的完整程式代碼清單 `Currency` ，請遵循在[SQL Server 資料庫引擎範例](https://msftengprodsamples.codeplex.com/)中安裝 CLR 範例的指示。  
   
 ### <a name="currency-attributes"></a>Currency 屬性  
  使用下列屬性定義 `Currency` UDT。  
@@ -744,7 +743,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- 如需`Currency` UDT 的完整程式代碼清單，請參閱[SQL Server 資料庫引擎範例](https://msftengprodsamples.codeplex.com/)。  
+ 如需 UDT 的完整程式代碼清單 `Currency` ，請參閱[SQL Server 資料庫引擎範例](https://msftengprodsamples.codeplex.com/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立使用者定義型別](creating-user-defined-types.md)  

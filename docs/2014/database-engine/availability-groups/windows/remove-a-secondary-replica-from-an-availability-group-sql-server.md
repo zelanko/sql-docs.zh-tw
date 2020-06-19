@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b927483f5e57272460f1c2f0f1c4b1bca56a3abe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3f2b35ec9cf27f2f7b23714a41665f2709837a5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782939"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936579"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>將次要複本從可用性群組移除 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將次要複本從 AlwaysOn 可用性群組中移除。  
@@ -51,7 +50,7 @@ ms.locfileid: "72782939"
   
 -   只有次要複本可以從可用性群組中移除。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
   
 -   您必須連接到裝載可用性群組之主要複本的伺服器執行個體。  
   

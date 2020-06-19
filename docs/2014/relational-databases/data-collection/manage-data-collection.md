@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a7d88923bc41939541bedeed2d40908e454e9c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918570"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970448"
 ---
 # <a name="manage-data-collection"></a>管理資料收集
-  您可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程式和函數來管理資料收集的不同層面，例如啟用或停用資料收集、變更收集組設定，或在管理資料倉儲中查看資料。  
+  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程式和函數來管理資料收集的不同層面，例如啟用或停用資料收集、變更收集組設定，或在管理資料倉儲中查看資料。  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 管理資料收集  
  您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用 [物件總管] 來執行與資料收集器相關的下列工作：  

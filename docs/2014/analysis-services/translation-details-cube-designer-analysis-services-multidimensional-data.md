@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d90d246cb54b54dea0ed4f84f1b96142a5f56803
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065863"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938301"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>翻譯詳細資料 (翻譯索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師之 [翻譯]**** 索引標籤上的 [翻譯詳細資料]**** 窗格，即可定義和管理目前選取之 Cube 的翻譯。  
@@ -61,7 +60,7 @@ ms.locfileid: "66065863"
   
      `Caption` 屬性  
   
- **\<語言>**  
+ **\<Language>**  
  鍵入所選語言中 Cube 物件的屬性值。  
   
 ## <a name="context-menu"></a>操作功能表  

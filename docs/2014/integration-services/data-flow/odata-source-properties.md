@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fbae9e97e99223665e6d89d9e8c1a2bce3e48a26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26be406c26c362f1bd7fc5880e7c889fbd450ad6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901197"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915182"
 ---
 # <a name="odata-source-properties"></a>OData 來源屬性
   當您以滑鼠右鍵按一下資料流程中的 [OData 來源]**** 並按一下 [屬性]**** 時，您將會看到 [OData 來源]**** 元件的屬性出現在 [屬性]**** 視窗中。  

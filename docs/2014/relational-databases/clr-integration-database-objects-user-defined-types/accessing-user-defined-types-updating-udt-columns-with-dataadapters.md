@@ -22,19 +22,18 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5f0642644632c40f7f95e731c61e0a968cd83b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919638"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970741"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>以 DataAdapter 更新 UDT 資料行
   可藉由使用 `System.Data.DataSet` 和 `System.Data.SqlClient.SqlDataAdapter` 擷取與修改資料，以支援使用者定義型別 (UDT)。  
   
 ## <a name="populating-a-dataset"></a>填入資料集  
- 您可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式來選取 UDT 資料行值，以使用資料配接器填入資料集。 下列範例假設您的**Points**資料表定義了下列結構和一些範例資料。 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]語句會建立**Points**資料表並插入幾個資料列。  
+ 您可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式來選取 UDT 資料行值，以使用資料配接器填入資料集。 下列範例假設您的**Points**資料表定義了下列結構和一些範例資料。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句會建立**Points**資料表並插入幾個資料列。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -46,7 +45,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 下列 ADO.NET 程式碼片段會抓取有效的連接字串、建立新`SqlDataAdapter`的，並`System.Data.DataTable`使用**Points**資料表中的資料列填入。  
+ 下列 ADO.NET 程式碼片段會抓取有效的連接字串、建立新的 `SqlDataAdapter` ，並 `System.Data.DataTable` 使用**Points**資料表中的資料列填入。  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -85,9 +84,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  下列 ADO.NET 範例有兩個方法：  
   
--   `UserProvidedCommands`，示範如何`InsertCommand`提供、和`UpdateCommand` `DeleteCommand`物件，以便在**點**資料表（ `Point`不包含資料`timestamp`行）中更新 UDT。  
+-   `UserProvidedCommands`，示範如何提供 `InsertCommand` 、 `UpdateCommand` 和 `DeleteCommand` 物件，以便 `Point` 在**點**資料表（不包含資料行）中更新 UDT `timestamp` 。  
   
--   `CommandBuilder`，示範如何`SqlCommandBuilder`在包含資料`timestamp`行的**Points_ts**資料表中使用。  
+-   `CommandBuilder`，示範如何 `SqlCommandBuilder` 在包含資料行的**Points_ts**資料表中使用 `timestamp` 。  
   
 ```vb  
 Imports System  

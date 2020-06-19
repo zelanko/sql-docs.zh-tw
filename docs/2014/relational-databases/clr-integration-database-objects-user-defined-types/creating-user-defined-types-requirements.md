@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cf45c7c108f522f894f97c25ed51bd4dd3c4fbf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919665"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970701"
 ---
 # <a name="user-defined-type-requirements"></a>使用者定義型別需求
-  建立要安裝在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的使用者定義型別（UDT）時，您必須進行幾項重要的設計決策。 對於大部分的 UDT 而言，雖然將 UDT 當做類別來建立也是一種選擇，但是建議將 UDT 當做結構來建立。 UDT 定義必須符合建立 UDT 的規格，才能讓它使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊。  
+  建立要安裝在中的使用者定義型別（UDT）時，您必須進行幾項重要的設計決策 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 對於大部分的 UDT 而言，雖然將 UDT 當做類別來建立也是一種選擇，但是建議將 UDT 當做結構來建立。 UDT 定義必須符合建立 UDT 的規格，才能讓它使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊。  
   
 ## <a name="requirements-for-implementing-udts"></a>實作 UDT 的需求  
  若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行，UDT 必須實作 UDT 定義中的下列需求：  
@@ -51,7 +50,7 @@ ms.locfileid: "62919665"
   
 -   UDT 必須將資料元素公開為公用欄位或屬性程序。  
   
--   公用名稱的長度不能超過128個字元，而且必須符合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [資料庫識別碼](../databases/database-identifiers.md)中所定義之識別碼的命名規則。  
+-   公用名稱的長度不能超過128個字元，而且必須符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [資料庫識別碼](../databases/database-identifiers.md)中所定義之識別碼的命名規則。  
   
 -   `sql_variant` 資料行無法包含 UDT 的執行個體。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62919665"
   
  **bool**、 **byte**、 **sbyte**、 **short**、 **ushort**、 **int**、 **uint**、 **long**、 **ulong**、 **float**、 **double**、 **SqlByte**、 **SqlInt16**、 **SqlInt32**、 **SqlInt64**、 **SqlDateTime**、 **SqlSingle**、 **SqlDouble**、 **SqlMoney**、 **SqlBoolean**  
   
- 由上述型別的欄位所組成的實值型別是適合`Native`的格式，例如`structs` Visual c # 中的（ `Structures`或 Visual Basic 中的已知）。 例如，使用 `Native` 序列化格式指定的 UDT 可能包含也使用 `Native` 格式指定之其他 UDT 的欄位。 如果 UDT 定義較為複雜，且包含不在上面清單中的資料型別，則必須改為指定 `UserDefined` 序列化格式。  
+ 由上述型別的欄位所組成的實值型別是適合的 `Native` 格式，例如 `structs` Visual c # 中的（或 Visual Basic 中的 `Structures` 已知）。 例如，使用 `Native` 序列化格式指定的 UDT 可能包含也使用 `Native` 格式指定之其他 UDT 的欄位。 如果 UDT 定義較為複雜，且包含不在上面清單中的資料型別，則必須改為指定 `UserDefined` 序列化格式。  
   
  `Native` 格式具有下列需求：  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62919665"
   
 -   如果 UDT 是以類別而非以結構來定義，`System.Runtime.InteropServices.StructLayoutAttribute` 就必須指定為 `StructLayout.LayoutKindSequential`。 此屬性可以控制資料欄位的實體配置，並用於強制以成員出現的順序對成員進行配置。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用此屬性來判定具有多個值之 UDT 的欄位順序。  
   
- 如需以`Native`序列化定義之 udt 的範例，請參閱撰寫[使用者定義類型的程式碼](creating-user-defined-types-coding.md)中的 Point udt。  
+ 如需以序列化定義之 UDT 的範例 `Native` ，請參閱撰寫[使用者定義類型的程式碼](creating-user-defined-types-coding.md)中的 Point udt。  
   
 ## <a name="userdefined-serialization"></a>UserDefined 序列化  
  `UserDefined` 屬性的 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 格式設定可讓開發人員完全控制二進位格式。 將 `Format` 屬性指定為 `UserDefined` 時，您必須在程式碼中進行下列動作：  
@@ -92,7 +91,7 @@ ms.locfileid: "62919665"
   
 -   藉由實作 `Read` 介面，撰寫程式碼以實作 UDT 的 `Write` 及 `System.Data.Sql.IBinarySerialize` 方法。  
   
- 如需以`UserDefined`序列化定義之 udt 的範例，請參閱[編碼使用者定義類型](creating-user-defined-types-coding.md)中的 Currency udt。  
+ 如需以序列化定義之 UDT 的範例 `UserDefined` ，請參閱[編碼使用者定義類型](creating-user-defined-types-coding.md)中的 Currency udt。  
   
 > [!NOTE]  
 >  UDT 欄位必須使用原生序列化，或保存下來進行索引。  
@@ -148,7 +147,7 @@ ms.locfileid: "62919665"
  除了必須正確地指定組件的屬性外，您的類別還必須能夠支援 Null 屬性。 載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 UDT 可辨識 Null，但是為了讓 UDT 能夠辨識 Null 值，此類別必須實作 `INullable` 介面。 如需詳細資訊以及如何在 UDT 中執行 null 屬性的範例，請參閱撰寫[使用者定義類型](creating-user-defined-types-coding.md)的程式碼。  
   
 ### <a name="string-conversions"></a>字串轉換  
- 若要支援字串與 UDT 的來回轉換，則必須在您的類別中提供 `Parse` 方法及 `ToString` 方法。 `Parse` 方法允許將字串轉換成 UDT。 它必須宣告為 `static` (或 Visual Basic 中的 `Shared`)，並採用型別 `System.Data.SqlTypes.SqlString` 的參數。 如需如何執行`Parse`和`ToString`方法的詳細資訊和範例，請參閱撰寫[使用者定義類型](creating-user-defined-types-coding.md)的程式碼。  
+ 若要支援字串與 UDT 的來回轉換，則必須在您的類別中提供 `Parse` 方法及 `ToString` 方法。 `Parse` 方法允許將字串轉換成 UDT。 它必須宣告為 `static` (或 Visual Basic 中的 `Shared`)，並採用型別 `System.Data.SqlTypes.SqlString` 的參數。 如需如何執行和方法的詳細資訊和範例 `Parse` `ToString` ，請參閱撰寫[使用者定義類型](creating-user-defined-types-coding.md)的程式碼。  
   
 ## <a name="xml-serialization"></a>XML 序列化  
  UDT 必須藉由符合 XML 序列化合約，來支援 `xml` 資料類型間的轉換。 `System.Xml.Serialization` 命名空間包含用於將物件序列化為 XML 格式文件或資料流的類別。 您可以選擇使用 `xml` 介面 (該介面可提供 XML 序列化和還原序列化的自訂格式)，以便實作 `IXmlSerializable` 序列化。  

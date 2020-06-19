@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 84e4dccb97b045e5077d75c4280cee066a154d5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77b954956a4934d1b325667cbbeb75060de16c31
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971518"
 ---
 # <a name="custom-workflow-example-master-data-services"></a>自訂工作流程範例 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中建立自訂的工作流程類別庫時，您要建立一個實作 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 介面的類別。 此介面包含一個方法 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>，當工作流程啟動時，SQL Server MDS 工作流程整合服務會呼叫這個方法。 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法包含兩個參數：*workflowType* 包含您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 之 [工作流程類型]**** 文字方塊中輸入的文字，而 *dataElement* 則包含觸發工作流程商務規則之項目的中繼資料和項目資料。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06d31a4244da2a751bc501080cdf501d540fbc92
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951528"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>步驟 2:啟用和設定封裝組態
   在此工作中，您會將專案轉換成封裝部署模型，並使用封裝組態精靈來啟用封裝組態。 您將利用這個精靈來產生 XML 組態檔，它包含 Foreach 迴圈容器的 `Directory` 屬性的組態設定。 Directory 屬性的值是由新的封裝層級變數提供，您可以在執行階段更新它。 另外，您還會擴展一個要在測試期間使用的新範例資料夾。  
@@ -41,7 +40,7 @@ ms.locfileid: "62891054"
   
 8.  在 [ **Foreach 迴圈編輯器**] 的 [**集合**] 頁面上，按一下 [**運算式**]，然後按一下省略號按鈕 **（...）**。  
   
-9. 在 [**屬性運算式編輯器**] 中，按一下 [**屬性**] 清單， `Directory`然後選取 []。  
+9. 在 [**屬性運算式編輯器**] 中，按一下 [**屬性**] 清單，然後選取 [] `Directory` 。  
   
 10. 在 [**運算式**] 方塊中，按一下省略號按鈕 **（...）**。  
   
@@ -83,26 +82,26 @@ ms.locfileid: "62891054"
   
 14. 在 [正在完成精靈]**** 頁面上，輸入組態的組態名稱，例如 **SSIS 教學課程目錄組態**。 這是顯示在 [封裝組態組合管理]**** 對話方塊中的組態名稱。  
   
-15. 按一下 [完成]  。  
+15. 按一下 [完成] 。  
   
-16. 按一下 **關閉**。  
+16. 按一下 [關閉] 。  
   
-17. 此 wizard 會建立名為 SSISTutorial. Ssistutorial.dtsconfig 的設定檔，其中包含變數`value`之的設定，接著會設定列舉值的`Directory`屬性。  
+17. 此 wizard 會建立名為 SSISTutorial. Ssistutorial.dtsconfig 的設定檔，其中包含變數之的設定， `value` 接著會設定列舉值的 `Directory` 屬性。  
   
     > [!NOTE]  
     >  組態檔通常包含關於封裝屬性的複雜資訊，但在此教學課程中，唯一的組態資訊應該是  
     > <Configuration ConfiguredType="Property"  
     > Path = "\Package.Variables [User：： varFolderName]。Properties [Value] "ValueType =" 字串 "\>  
     >  \<ConfiguredValue>\</ConfiguredValue>  
-    > \</組態>。  
+    > \</Configuration>.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>若要建立及擴展新的範例資料夾  
   
-1.  在 Windows Explorer 中，于磁片磁碟機的根目錄層級（例如 C：\\），建立名為`New Sample Data`的新資料夾。  
+1.  在 Windows Explorer 中，于磁片磁碟機的根目錄層級（例如 C： \\ ），建立名為的新資料夾 `New Sample Data` 。  
   
 2.  尋找電腦上的範例檔案，並從資料夾複製三個檔案。  
   
-3.  在`New Sample Data`資料夾中，貼上複製的檔案。  
+3.  在 `New Sample Data` 資料夾中，貼上複製的檔案。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [步驟 3：修改 Directory 屬性組態值](lesson-5-3-modifying-the-directory-property-configuration-value.md)  

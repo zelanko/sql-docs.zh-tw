@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c751f6d7b56cc43c6a8548d4776ce4c2b4f390cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f36908102a09eb1ef1f7a485898da715deb4253b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936716"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>執行可用性群組的強制手動容錯移轉 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，在 AlwaysOn 可用性群組上執行強制容錯移轉 (可能會遺失資料)。 強制容錯移轉是一種手動容錯移轉形式，嚴格限於 [已規劃的手動容錯移轉](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 不可行時用來進行災難復原。 如果您強制容錯移轉至非同步的次要複本，有些資料可能會遺失。 因此，強烈建議您只有在主要複本不再執行、而且您願意承擔遺失資料的風險以還原可用性群組中對資料庫的存取時，才進行強制容錯移轉。  
@@ -151,7 +150,7 @@ ms.locfileid: "72782876"
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要強制容錯移轉 (可能會遺失資料)**  
   
-1.  將目錄（`cd`）變更為裝載複本的伺服器實例，其角色在需要故障切換的可用性群組中處於次要或解決狀態。  
+1.  將目錄（ `cd` ）變更為裝載複本的伺服器實例，其角色在需要故障切換的可用性群組中處於次要或解決狀態。  
   
 2.  以下列其中一種形式，搭配 `Switch-SqlAvailabilityGroup` 參數使用 `AllowDataLoss` 指令程式：  
   

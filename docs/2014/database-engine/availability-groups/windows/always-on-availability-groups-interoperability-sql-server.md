@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55e19c050d0dd5d0a07c12f88076c423ade3281a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815744"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937205"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>AlwaysOn 可用性群組：互通性 (SQL Server)
   本主題記錄 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中其他 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]功能的互通性。  
@@ -31,7 +30,7 @@ ms.locfileid: "62815744"
 |功能|相關資訊|  
 |-------------|----------------------|  
 |變更資料擷取|[複寫、變更追蹤、變更資料捕獲，以及 AlwaysOn 可用性群組 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
-|變更追蹤|[複寫、變更追蹤、變更資料捕獲，以及 AlwaysOn 可用性群組 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
+|Change tracking|[複寫、變更追蹤、變更資料捕獲，以及 AlwaysOn 可用性群組 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
 |自主資料庫|[自主資料庫與 AlwaysOn 可用性群組 (SQL Server)](always-on-availability-groups-sql-server.md)|  
 |資料庫加密|[具有 AlwaysOn 可用性群組 &#40;SQL Server 的加密資料庫&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
 |資料庫快照集|[具有 AlwaysOn 可用性群組 &#40;SQL Server 的資料庫快照集&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  

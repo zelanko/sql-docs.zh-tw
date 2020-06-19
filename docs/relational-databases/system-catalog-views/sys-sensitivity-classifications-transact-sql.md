@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9b8f6bf20fa02981e3275299849d1cb04036dfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77903897"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939039"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "77903897"
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. 列出所有分類的資料行及其對應的分類
 
-下列範例會傳回一個資料表，其中列出資料庫中每個分類資料行的資料表名稱、資料行名稱、標籤、標籤識別碼、資訊類型、資訊類型識別碼。
+下列範例會傳回一個資料表，其中列出資料庫中每個分類資料行的資料表名稱、資料行名稱、標籤、標籤識別碼、資訊類型、資訊類型識別碼、次序和次序描述。
 
 > [!NOTE]
 > 標籤是 Azure SQL 資料倉儲的關鍵字。

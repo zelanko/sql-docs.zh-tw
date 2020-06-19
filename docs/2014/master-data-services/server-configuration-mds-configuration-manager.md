@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4d2fabec1bd022a1d73c3abc669995d04bfc9856
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40dcdc2e6413e2b9944dfbdb0194da410b05733c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478848"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971078"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>Master Data Services 伺服器組態頁面 (組態管理員)
   使用 [伺服器組態]**** 頁面可檢視本機伺服器電腦的組態資訊。  

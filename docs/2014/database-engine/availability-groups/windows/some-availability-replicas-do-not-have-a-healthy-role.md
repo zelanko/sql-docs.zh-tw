@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 50518e78585b7e56f62411edc539d0f9ac3db9e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9dcb24572774bf3d2e1fc084c6157c1b1a817b86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788182"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936439"
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>某些可用性複本沒有狀況良好的角色
     

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 06075248-705e-4563-9371-b64cd609793c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4ceedcedae64bf2ec8f8ede0ccbb99350b979fd7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c50ad866b9c658b54107e5f8e3da45c15dae231c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773375"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927867"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>了解記憶體最佳化資料表上的交易
   交易會使用一種開放式多重版本並行控制的形式，存取記憶體最佳化的資料表。 這表示有不同版本的資料。 每一筆交易都會在它自己的交易一致性資料庫版本上運作，與其他並行執行的交易無關。 此外，交易會在開放式假設下運作，並不會與其他並行交易發生衝突。 如此就不需要使用鎖定，不過需要系統偵測衝突，並終止其中一個衝突的交易。 只有寫入-寫入交易和讀取-寫入交易會發生衝突。 如果發生寫入-寫入衝突，其中一個寫入交易會終止。  
@@ -38,6 +37,6 @@ ms.locfileid: "62773375"
  如需詳細資訊，請參閱[控制交易持久性](../relational-databases/logs/control-transaction-durability.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體優化資料表](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [記憶體最佳化資料表](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

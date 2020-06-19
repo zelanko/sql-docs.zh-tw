@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c832fe601eb7151e438d7f93c3e39e9b249ea246
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a9959189b3ce805c7d8e97dd3b4948a3674b0cb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483326"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971728"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>建立屬性群組 (Master Data Services)
   當您想要在總管**** 方格的個別索引標籤上顯示屬性時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立屬性群組。  
@@ -26,7 +25,7 @@ ms.locfileid: "65483326"
 > [!NOTE]  
 >  當您建立屬性群組時，它會自動隱藏起來不讓所有使用者看到，除了建立它的使用者以外。 如需如何顯示此群組的詳細資訊，請參閱 [讓使用者看到屬性群組 &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -66,7 +65,7 @@ ms.locfileid: "65483326"
   
 13. （選擇性）按一下**向上**和**向下**箭號，變更屬性由左至右的順序。  
   
-14. 按一下 **[儲存]** 。  
+14. 按一下 [檔案] 。  
   
 ## <a name="next-steps"></a>後續步驟  
   

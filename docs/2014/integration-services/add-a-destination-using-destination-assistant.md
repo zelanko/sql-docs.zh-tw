@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 747a0de0-3c2f-4d31-a692-7111fc0911d8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66e48903776824b0e540b854a5704ceef3a9782e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c6ffb11f208236ccf95371e8162550d8f221cfb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926395"
 ---
 # <a name="add-a-destination-using-destination-assistant"></a>使用目的地小幫手來加入目的地
   本主題提供使用目的地小幫手來加入新目的地的步驟，也會列出可在 [加入新目的地]**** 對話方塊上使用的選項。當您將目的地小幫手拖放至 SSIS 設計師時，即會顯示此對話方塊。  
@@ -28,10 +27,10 @@ ms.locfileid: "66062073"
   
 3.  在 [類型]**** 清單中選取目的地的類型。  
   
-4.  在 [**連接管理員**] 清單中選取現有的連線管理員，或選取** \<[新增>** ] 來建立新的連線管理員。  
+4.  在 [**連接管理員**] 清單中選取現有的連線管理員，或選取 **\<New>** 以建立新的連線管理員。  
   
 5.  如果您選取現有的連線管理員，請按一下 [確定]****，以關閉 [加入新目的地]**** 對話方塊。 您應該會看到目的地和連線管理員已加入資料流程。  
   
-6.  如果您按一下** \<[新增>** 建立新的連線管理員，您應該會看到 [**連線管理員**] 對話方塊，可讓您指定連接的參數。 完成建立新的連接管理員之後，您會在 SSIS 設計師中看到目的地和連接管理員。  
+6.  如果您按一下 **\<New>** 以建立新的連線管理員，您應該會看到 [**連線管理員**] 對話方塊，可讓您指定連接的參數。 完成建立新的連接管理員之後，您會在 SSIS 設計師中看到目的地和連接管理員。  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3fa149aa47c99418bd3109829bfffee698ab3f6e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e7de7b4d66890bb5f1fe49799844f666de81f4db
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814137"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936791"
 ---
 # <a name="filestream-and-filetable-with-alwayson-availability-groups-sql-server"></a>FILESTREAM 和 FileTable 與 AlwaysOn 可用性群組 (SQL Server)
   本主題包含在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中使用 FILESTREAM 和 FileTable 功能搭配 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的相關資訊。  
@@ -30,7 +29,7 @@ ms.locfileid: "62814137"
   
  **本主題內容：**  
   
--   [必要條件](#Prerequisites)  
+-   [先決條件](#Prerequisites)  
   
 -   [使用虛擬網路名稱 (VNN) 進行 FILESTREAM 和 FileTable 存取](#vnn)  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62814137"
   
 -   [相關內容](#RelatedContent)  
   
-##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
   
 -   將使用 FILESTREAM (包含或不含 FileTable) 的資料庫加入至可用性群組之前，請確定裝載可用性群組之可用性複本的每個伺服器執行個體都啟用了 FILESTREAM。 如需詳細資訊，請參閱 [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "62814137"
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
--   [啟用及設定 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
+-   [啟用和設定 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [啟用 FileTable 的必要條件](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   

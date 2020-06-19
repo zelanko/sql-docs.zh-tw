@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10ad92286011f6f81fbaff5ab4908007e16bdd45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6aee7503ca02d47575be4e8103641f61d9696d1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62870948"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969948"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>檢視或變更資料庫的屬性
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視或變更資料庫的屬性。 變更資料庫屬性之後，修改會立即生效。  
@@ -54,7 +53,7 @@ ms.locfileid: "62870948"
   
 #### <a name="to-view-or-change-the-properties-of-a-database"></a>檢視或變更資料庫的屬性  
   
-1.  在**物件總管**中，連接到的實例[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，然後展開該實例。  
+1.  在**物件總管**中，連接到的實例 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，然後展開該實例。  
   
 2.  展開 [資料庫]****，並以滑鼠右鍵按一下要檢視的資料庫，然後按一下 [屬性]****。  
   
@@ -113,8 +112,8 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [ALTER DATABASE SET HADR &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)   
- [ALTER DATABASE SET 選項 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
+ [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)   
+ [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
  [ALTER DATABASE 資料庫鏡像 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [ALTER DATABASE 相容性層級 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)   
  [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  

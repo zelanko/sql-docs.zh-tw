@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e08fd0455e42717a5efcc33f9cb9757e81867ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874637"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970735"
 ---
 # <a name="retrieving-udt-data"></a>擷取 UDT 資料
   為了在用戶端上建立使用者定義型別 (UDT)，用戶端應用程式必須提供在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中登錄為 UDT 的組件。 您可以將 UDT 組件置於與應用程式相同的目錄中，或置於全域組件快取 (GAC) 中。 您還可以在專案中設定組件的參考。  
@@ -157,10 +156,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>以位元組繫結 UDT  
- 在某些情況下，您可能要從 UDT 資料行擷取未經處理資料。 可能該型別在本機不可使用，或您不想要具現化 UDT 的執行個體。 您可以使用的**GetBytes**方法，將未經處理的位元組讀取到位元組陣列`SqlDataReader`。 此方法可將指定資料行位移的位元組資料流，讀取至始於指定緩衝區位移的陣列緩衝區。 另一個選項是使用其中一個**GetSqlBytes**或**GetSqlBinary**方法，並在單一作業中讀取所有內容。 在任何一種情況中，都不會具現化 UDT 物件，所以您無需設定用戶端組件的 UDT 參考。  
+ 在某些情況下，您可能要從 UDT 資料行擷取未經處理資料。 可能該型別在本機不可使用，或您不想要具現化 UDT 的執行個體。 您可以使用的**GetBytes**方法，將未經處理的位元組讀取到位元組陣列 `SqlDataReader` 。 此方法可將指定資料行位移的位元組資料流，讀取至始於指定緩衝區位移的陣列緩衝區。 另一個選項是使用其中一個**GetSqlBytes**或**GetSqlBinary**方法，並在單一作業中讀取所有內容。 在任何一種情況中，都不會具現化 UDT 物件，所以您無需設定用戶端組件的 UDT 參考。  
   
 ### <a name="example"></a>範例  
- 這個範例會示範如何使用，將**點**資料以未經處理的位元組形式捕獲到`SqlDataReader`位元組陣列。 該程式碼使用 `System.Text.StringBuilder`，將未經處理位元組轉換成要顯示於主控台視窗的字串表示。  
+ 這個範例會示範如何使用，將**點**資料以未經處理的位元組形式捕獲到位元組陣列 `SqlDataReader` 。 該程式碼使用 `System.Text.StringBuilder`，將未經處理位元組轉換成要顯示於主控台視窗的字串表示。  
   
 ```vb  
 Option Explicit On  
@@ -374,7 +373,7 @@ class GetRawBytes
  在 ADO.NET 程式碼中，UDT 可以同時當做輸入及輸出參數使用。  
   
 ## <a name="using-udts-in-query-parameters"></a>在查詢參數中使用 UDT  
- 設定 `SqlParameter` 物件的 `System.Data.SqlClient.SqlCommand` 時，可以使用 UDT 做為參數值。 對 `SqlDbType.Udt` 集合呼叫 `SqlParameter` 方法時，可使用 `Add` 物件的 `Parameters` 列舉型別表示參數是 UDT。 `SqlCommand`物件`UdtTypeName`的屬性是用來指定資料庫中 UDT 的完整名稱，使用*schema_name. object_name*語法。 儘管並非必須如此，但使用完整名稱可消除程式碼的模稜兩可性。  
+ 設定 `SqlParameter` 物件的 `System.Data.SqlClient.SqlCommand` 時，可以使用 UDT 做為參數值。 對 `SqlDbType.Udt` 集合呼叫 `SqlParameter` 方法時，可使用 `Add` 物件的 `Parameters` 列舉型別表示參數是 UDT。 `UdtTypeName`物件的屬性 `SqlCommand` 是用來指定資料庫中 UDT 的完整名稱，使用*schema_name. object_name*語法。 儘管並非必須如此，但使用完整名稱可消除程式碼的模稜兩可性。  
   
 > [!NOTE]  
 >  UDT 組件的本機複本必須可讓用戶端專案使用。  

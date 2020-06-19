@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b5b12aa1456f7f4009f48a8c8609f296dfa4b27d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ca2f251cd107d99d3d5a682fb7a56cd37fc62a5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484346"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937699"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>將定義域匯出成 .dqs 檔案
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中將定義域匯出至 .dqs 檔案。 您可以將定義域或整個知識庫匯出到資料檔。 如需匯出知識庫的資訊，請參閱[將知識庫匯出為 .dqs 檔案](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)。  
@@ -49,7 +48,7 @@ ms.locfileid: "65484346"
   
 5.  在 [匯出到資料檔]**** 對話方塊中，移至您想要用來儲存檔案的資料夾、為檔案命名或是保留預設名稱、將 [DQS 資料檔 (\*.dqs)]**** 保留為 [檔案類型]****，然後按一下 [儲存]****。  
   
-6.  在 **[匯出定義域]** 對話方塊中，確認此對話方塊中的狀態行指出已完成匯出。 按一下 [確定]  。  
+6.  在 **[匯出定義域]** 對話方塊中，確認此對話方塊中的狀態行指出已完成匯出。 按一下 [確定]。  
   
 ##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>後續操作：將定義域匯出至 dqs 檔案之後  
  在您將定義域匯出到 .dqs 檔案之後，您可以將此定義域匯入另一個知識庫中。  

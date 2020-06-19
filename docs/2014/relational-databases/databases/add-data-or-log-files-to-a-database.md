@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f72e00f9dab422652237b4b85579c544d0cda9fb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917700"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952348"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>將資料或記錄檔加入資料庫
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將資料或記錄檔加入至資料庫。  
@@ -71,11 +70,11 @@ ms.locfileid: "62917700"
   
 6.  選取檔案類型：資料或記錄檔。  
   
-7.  若是資料檔案，請選取檔案群組，其中的檔案應包含在清單中，或選取 [**新增檔案群組>]\<** 以建立新的檔案群組。 交易記錄檔無法放在檔案群組中。  
+7.  若是資料檔案，請從清單中選取應包含檔案的檔案群組，或選取 **\<new filegroup>** 以建立新的檔案群組。 交易記錄檔無法放在檔案群組中。  
   
 8.  指定檔案的起始大小。 可根據預期的資料庫最大資料量，儘可能將資料檔設為最大。  
   
-9. 若要指定檔案應該如何成長，請按一下 [自動成長]  資料行中的 ( **…** )。 然後選取下列選項：  
+9. 若要指定檔案應該如何成長，請按一下 [自動成長] 資料行中的 (**…**)。 然後選取下列選項：  
   
     1.  若要允許目前選取的檔案依所需的資料空間成長，請選取 **[啟用自動成長]** 核取方塊，然後選取下列選項：  
   

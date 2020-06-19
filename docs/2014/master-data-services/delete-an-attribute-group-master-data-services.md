@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4a913d9a49d2b1af43ea569bf40585c47432ef96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d7d86080444e06aeaa50a274323805c31e12566
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479566"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950748"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>刪除屬性群組 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，如果 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的 [總管]**** 功能區域已不再需要顯示某個索引標籤時，您即可刪除該屬性群組。  
   
 -   **注意**：當屬性群組存在時，[總管]**** 只會顯示屬於該屬性群組的屬性。 當屬性群組不存在時，則會顯示所有屬性。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4219830c82710861ee7b079ce78d1b5859681753
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83b489db3e5324febe26da10c980814d5dd50f8f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479526"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971498"
 ---
 # <a name="entity-permissions-master-data-services"></a>實體權限 (Master Data Services)
   實體權限適用於：  
@@ -37,7 +36,7 @@ ms.locfileid: "65479526"
 |權限|描述|  
 |----------------|-----------------|  
 |**唯讀**|顯示實體，但使用者無法加入、移除或變更成員。|  
-|**更新**|顯示實體，而且使用者可以加入、移除及變更成員。|  
+|**Update**|顯示實體，而且使用者可以加入、移除及變更成員。|  
 |**拒絕**|不顯示實體。|  
   
 ## <a name="see-also"></a>另請參閱  

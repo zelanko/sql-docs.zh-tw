@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb904cd0f0649c43553b5d6c8b031c5f284901f4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814487"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936809"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)
   在可用性群組的內容中，可用性複本的主要角色和次要角色在稱為 *「容錯移轉」*(Failover) 的程序中通常可以互換。 容錯移轉共有三種形式，包括自動容錯移轉 (不會遺失資料)、規劃的手動容錯移轉 (不會遺失資料)，以及強制手動容錯移轉 (可能會遺失資料)，這種形式通常稱為「強制容錯移轉」**。 自動及經過規劃的手動容錯移轉會保留您的所有資料。 可用性群組會在可用性複本層級容錯移轉。 亦即可用性群組會容錯移轉至其中一個次要複本 (目前的「容錯移轉目標」**)。  
@@ -78,11 +77,11 @@ ms.locfileid: "62814487"
 ### <a name="failover-sets"></a>容錯移轉設定  
  由容錯移轉設定便能理解給定的可用性群組可能進行的容錯移轉形式。 容錯移轉設定是由支援給定容錯移轉形式的主要複本與次要複本所組成，如下所示：  
   
--   （選擇性）： ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] ** 在給定的可用性群組內，為具有自動容錯移轉的同步認可模式所設定的一對可用性複本（包括目前的主要複本）（如果有的話）。 自動容錯移轉設定只有在次要複本目前與主要複本 SYNCHRONIZED 時才會生效。  
+-   ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] （選擇性）：** 在指定的可用性群組內，是指使用自動容錯移轉設定為同步認可模式的一對可用性複本（包括目前的主要複本）（如果有的話）。 自動容錯移轉設定只有在次要複本目前與主要複本 SYNCHRONIZED 時才會生效。  
   
--   （選擇性）： ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] ** 在給定的可用性群組內，為同步認可模式（如果有）設定的一組兩個或三個可用性複本（包括目前的主要複本）。 同步認可容錯移轉設定只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時才會生效。  
+-   ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] （選擇性）：** 在給定的可用性群組內，為同步認可模式（如果有）設定的一組二或三個可用性複本（包括目前的主要複本）。 同步認可容錯移轉設定只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時才會生效。  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :** 在給定的可用性群組內，其操作狀態目前在線上的所有可用性複本集合，不論可用性模式和容錯移轉模式為何。 完整容錯移轉設定會在次要複本目前與主要複本 SYNCHRONIZED 時變成相關。  
+-   ** [!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] ：** 在給定的可用性群組內，其操作狀態目前在線上的所有可用性複本集合，不論可用性模式和容錯移轉模式為何。 完整容錯移轉設定會在次要複本目前與主要複本 SYNCHRONIZED 時變成相關。  
   
  當使用自動容錯移轉將可用性複本設定成同步認可時，該可用性複本會變成 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]的一部分。 不過，設定是否生效，取決於目前的主要複本。 實際上在給定時間可能進行的容錯移轉形式取決於目前生效的容錯移轉設定。  
   
@@ -235,7 +234,7 @@ ms.locfileid: "62814487"
   
 1.  連接到主要複本。  
   
-2.  查詢 sys.databases `last_commit_lsn`的（上次認可交易的 LSN）和`last_commit_time` [ [dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)動態管理] 視圖的（上次認可的時間）資料行。  
+2.  查詢 `last_commit_lsn` sys.databases 的（上次認可交易的 LSN）和 `last_commit_time` [ [dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)動態管理] 視圖的（上次認可的時間）資料行。  
   
 3.  比較每一個主要資料庫和其每個次要資料庫所傳回的值。 兩者的上次認可 LSN 之間的差異表示落後的程度。  
   

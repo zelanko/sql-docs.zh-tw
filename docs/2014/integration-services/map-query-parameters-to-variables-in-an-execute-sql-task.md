@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 691196697b7131cfaaf5ed5e41aea33f76ddc698
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057800"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951198"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>在執行 SQL 工作中將查詢參數對應到變數
 
@@ -58,7 +57,7 @@ ms.locfileid: "66057800"
     |連線類型|參數標記|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET 和 SQLMOBILE|@\<參數名稱>|  
+    |ADO.NET 和 SQLMOBILE|@\<parameter name>|  
     |ODBC|?|  
     |EXCEL 和 OLE DB|?|  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66057800"
     |連線類型|參數名稱|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, ...|  
-    |ADO.NET 和 SQLMOBILE|@\<參數名稱>|  
+    |ADO.NET 和 SQLMOBILE|@\<parameter name>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL 和 OLE DB|0, 1, 2, 3, ...|  
   

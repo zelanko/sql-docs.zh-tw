@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6f1da20eb1c23176036dad0847d5b420a498e83e
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: da41c6d629ffb57749ae9c13e715f535e98aa3da
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922005"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936705"
 ---
 # <a name="monitoring-of-availability-groups-sql-server"></a>監視可用性群組 (SQL Server)
   若要監視 AlwaysOn 可用性群組的屬性和狀態，您可以使用以下工具。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 54c1a720f34a7cce978371a6794f41e8af5f3b24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d3f751d0547c3b335eb71b55370c8e8cb1e5529
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480964"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937909"
 ---
 # <a name="create-a-domain"></a>建立定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中建立定義域。 定義域中的值是欄位中資料的語意表示法。 如需定義域的詳細資訊，請參閱[管理定義域](../../2014/data-quality-services/managing-a-domain.md)。  
@@ -85,7 +84,7 @@ ms.locfileid: "65480964"
   
 8.  如果資料類型是 **[字串]**，請選取 **[停用語法錯誤演算法]** 來擴展定義域，而不檢查字串值的語法錯誤。  
   
-9. 按一下 [確定]  。  
+9. 按一下 [確定]。  
   
 10. 按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](../../2014/data-quality-services/end-the-domain-management-activity.md)＞中所述。  
   

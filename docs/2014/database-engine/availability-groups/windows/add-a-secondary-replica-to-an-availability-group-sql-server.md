@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00cf7a7fab52640cc3fc19a3d9da051d281be7c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 498103a781641c72e166c6b11663f5248ae5ccfc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783006"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937249"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>將次要複本加入至可用性群組 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將次要複本加入至現有的 AlwaysOn 可用性群組。  
@@ -150,9 +149,9 @@ ms.locfileid: "72783006"
 -   [變更可用性複本的工作階段逾時期限 &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER AVAILABILITY GROUP &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
+ [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [建立和設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [監視可用性群組 &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   

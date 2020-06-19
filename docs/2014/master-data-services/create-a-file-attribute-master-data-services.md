@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 387613e12af3435a2a8eb9e3f630f61acaf28a8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1af7ba28b217612a37a0649cd69892bff6f272b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479995"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971848"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>建立檔案屬性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立檔案屬性，以使用檔案來擴展屬性值。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -58,7 +57,7 @@ ms.locfileid: "65479995"
   
 9. 在 **[顯示像素寬度]** 方塊中，輸入要在 **[總管]** 方格中顯示的屬性資料行寬度。  
   
-10. 從 [**副檔名**] 清單中，選取使用者可上傳的一或多個檔案類型，或保留預設值（\**.）以允許所有檔案類型。  
+10. 從 [**副檔名**] 清單中，選取使用者可上傳的一或多個檔案類型，或保留預設值（*. \* ）以允許所有檔案類型。  
   
 11. (選擇性) 選取 **[啟用變更追蹤]** 以追蹤屬性群組的變更。 如需詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   

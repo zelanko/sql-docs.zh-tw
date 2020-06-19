@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0378394c274e66d71eebd642188f20194d29236b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f26ef1429d24b93d3c2aa59d613a6ec37684a89
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479998"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971808"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 建立模型部署封裝
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，使用 MDSModelDeploy 工具來建立封裝。 根據您指定的命令，此封裝可以包含：  
@@ -27,7 +26,7 @@ ms.locfileid: "65479998"
  如果您想要部署只包含模型物件的封裝，您可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中改用模型部署精靈。 如需詳細資訊，請參閱 [使用精靈建立模型部署封裝](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
 > [!NOTE]  
 > 這個版本的 MDSModelDeploy 工具無法使用超過 gb 的記憶體。 當您使用**模型物件和資料**選項建立或部署大型模型時，可能會遇到「記憶體不足」或「資料流程太長」錯誤。 若要解決此問題，請使用 MDS 預備環境來部署資料;或升級至 MDS 2016 或更新版本，其中包含 MDSModelDeploy 工具的更新版本。
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 1.  執行 MDSModelDeploy 工作所需的基本權限如下：  

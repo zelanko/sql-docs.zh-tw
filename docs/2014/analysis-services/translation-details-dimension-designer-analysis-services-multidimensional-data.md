@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a3d7934cb3bff570a2060becde6715bec88f02f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065847"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938309"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>翻譯詳細資料 (翻譯索引標籤，維度設計師) (Analysis Services - 多維度資料)
   在 [維度設計師] 的 **[翻譯]** 索引標籤中使用 **[翻譯詳細資料]** 窗格，即可定義和管理目前所選取維度的翻譯。  
@@ -54,7 +53,7 @@ ms.locfileid: "66065847"
   
      `Caption` 屬性  
   
- **\<語言>**  
+ **\<Language>**  
  以選取的語言鍵入或選取維度物件的屬性值。 按一下省略符號按鈕 (**...**) 會依據所編輯的屬性開啟其他對話方塊：  
   
 -   `NamingTemplate` 屬性  

@@ -11,36 +11,35 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ee3582e7de37b99cd7f665f563e789259954b722
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 239a71ced6a96c62ddead6ee2659756cbeff3681
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478479"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970898"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 組態參考 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 在 Web.config 檔案中包含讓 Internet Information Services (IIS) 主控 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和 Web 服務的組態設定。 這個 Web.config 檔案位於 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 安裝路徑的 WebApplication 資料夾。 如需路徑和權限的詳細資訊，請參閱[資料夾和檔案的權限 &#40;Master Data Services&#41;](folder-and-file-permissions-master-data-services.md)。  
   
 ## <a name="webconfig-elements"></a>Web.Config 元素  
- 除了標準的 IIS、.NET Framework、ASP.NET [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]和 Windows Communication Foundation （WCF）設定元素以外，web.config 檔案還包含自訂元素** \<masterDataServices>**。 下表描述 Web.config 檔案中包含的元素。  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **\<masterDataServices>** 除了標準的 IIS、.NET Framework、ASP.NET 和 WINDOWS COMMUNICATION FOUNDATION （WCF）設定元素之外，Web.config 檔案還包含自訂元素。 下表描述 Web.config 檔案中包含的元素。  
   
 |組態元素|描述|  
 |---------------------------|-----------------|  
 |`masterDataServices`|自訂元素。 將 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服務連接到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。|  
 |`connectionStrings`|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [connectionStrings 項目 (ASP.NET 設定結構描述)](https://go.microsoft.com/fwlink/?LinkId=178347) 。|  
 |`system.web`|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [system.web 項目 (ASP.NET 設定結構描述)](https://go.microsoft.com/fwlink/?LinkId=178348) 。|  
-|`startup`|.NET Framework 元素。 如需詳細資訊， [ \<](https://go.microsoft.com/fwlink/?LinkId=178349)請參閱 MSDN Library 中的 startup> 元素。|  
-|`runtime`|.NET Framework 元素。 如需詳細資訊， [ \<](https://go.microsoft.com/fwlink/?LinkId=178350)請參閱 MSDN library 中的 runtime> 元素。|  
-|`system.codedom`|.NET Framework 元素。 如需詳細資訊， [ \<](https://go.microsoft.com/fwlink/?LinkId=178351)請參閱 MSDN library 中的 system.object> 元素。|  
+|`startup`|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的[ \<startup> 元素](https://go.microsoft.com/fwlink/?LinkId=178349)。|  
+|`runtime`|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的[ \<runtime> 元素](https://go.microsoft.com/fwlink/?LinkId=178350)。|  
+|`system.codedom`|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的[ \<system.codedom> 元素](https://go.microsoft.com/fwlink/?LinkId=178351)。|  
 |`system.web.extensions`|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [system.web.extensions 項目 (ASP.NET 設定結構描述)](https://go.microsoft.com/fwlink/?LinkId=178352) 。|  
 |`system.webServer`|包含 IIS 項目的區段群組。 如需詳細資訊，請參閱 MSDN Library 中的 [system.webServer 區段群組 \[IIS 7 設定結構描述\]](https://go.microsoft.com/fwlink/?LinkId=178353)。|  
-|`system.serviceModel`|WCF 元素。 如需詳細資訊， [ \<](https://go.microsoft.com/fwlink/?LinkId=178354)請參閱 MSDN library 中的 system.servicemodel>。|  
-|`system.diagnostics`|.NET Framework 元素。 如需詳細資訊，請參閱[ \<MSDN library 中的 system. diagnostics> 元素](https://go.microsoft.com/fwlink/?LinkId=178355)。|  
+|`system.serviceModel`|WCF 元素。 如需詳細資訊，請參閱 [\<system.serviceModel>](https://go.microsoft.com/fwlink/?LinkId=178354) MSDN Library 中的。|  
+|`system.diagnostics`|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的[ \<system.diagnostics> 元素](https://go.microsoft.com/fwlink/?LinkId=178355)。|  
 |`appSettings`|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [appSettings 項目 (一般設定結構描述)](https://go.microsoft.com/fwlink/?LinkId=178356) 。|  
   
 ## <a name="masterdataservices-element"></a>masterDataServices 元素  
- MasterDataServices>元素是用來將[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服務連接到[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫的自訂元素。 ** \< **  
+ **\<masterDataServices>** 元素是用來將 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服務連接到資料庫的自訂元素 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
   
 ### <a name="syntax"></a>語法  
   
@@ -52,13 +51,13 @@ ms.locfileid: "65478479"
   
 ### <a name="elements-and-attributes"></a>元素和屬性  
   
-|項目|描述|  
+|Item|描述|  
 |----------|-----------------|  
 |`instance`|子元素。 包含指定 Web 服務和資料庫連接字串之資訊的屬性。|  
-|`virtualPath`|屬性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和服務的路徑。 這對應于 IIS `path` applicationhost.config 檔案中** \<網站>** 元素下之** \<應用程式>** 專案的屬性。|  
-|`siteName`|屬性。 指定主控 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和服務之網站的名稱。 這對應于 IIS `name` applicationhost.config 檔案中 [ ** \<>網站**] 底下的 [ ** \<網站>** ] 專案的屬性。|  
-|`connectionName`|屬性。 指定要使用之連接的名稱。 這會對應至`name` web.config 中** \<connectionStrings>** 元素下的** \<add>** 元素的屬性。|  
-|`serviceName`|屬性。 指定 Web 服務的名稱。 這會對應至`name` web.config 中** \<services>** 元素下的** \<服務>** 元素的屬性。|  
+|`virtualPath`|屬性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和服務的路徑。 這會對應到 `path` IIS ApplicationHost.config 檔案中專案底下元素的屬性 **\<application>** **\<site>** 。|  
+|`siteName`|屬性。 指定主控 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和服務之網站的名稱。 這會對應到 `name` **\<site>** IIS ApplicationHost.config 檔案中底下元素的屬性 **\<sites>** 。|  
+|`connectionName`|屬性。 指定要使用之連接的名稱。 這會對應至 Web.config 之專案底下 `name` 元素的屬性 **\<add>** **\<connectionStrings>** 。|  
+|`serviceName`|屬性。 指定 Web 服務的名稱。 這會對應至 Web.config 之專案底下 `name` 元素的屬性 **\<service>** **\<services>** 。|  
   
 ### <a name="example"></a>範例  
  下列範例示範使用 MDSDB 指定之連接字串的 Contoso 網站和 /MDS 路徑上一項名為 MDS1 的服務。  

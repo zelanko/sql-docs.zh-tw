@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc978cd0280c9885fe7d4d4b499d01adc8f540cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789840"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937269"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>關於可用性複本的用戶端連接存取 (SQL Server)
   在 AlwaysOn 可用性群組中，您可以設定一個或多個可用性複本，讓它在次要角色之下執行時 (也就是以次要複本的方式執行時)，允許唯讀連接。 以主要角色執行時 (也就是當做主要複本執行時)，您也可以設定每個可用性複本，以允許或排除唯讀連接。  
@@ -53,11 +52,11 @@ ms.locfileid: "62789840"
  不允許任何使用者連接。 次要資料庫不適用於讀取。 這是次要角色的預設行為。  
   
  僅讀取意圖連接  
- 次要資料庫僅適用于`Application Intent`連接屬性設定為`ReadOnly` （*讀取意圖連接*）的連接。  
+ 次要資料庫僅適用于 `Application Intent` 連接屬性設定為 `ReadOnly` （*讀取意圖連接*）的連接。  
   
  如需有關此連接屬性的詳細資訊，請參閱＜ [高可用性/災害復原的 SQL Server Native Client 支援](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)＞。  
   
- 允許任何唯讀連接  
+ 允許任何唯讀連線  
  次要資料庫全部適用於讀取連接。 此選項允許較低版本的用戶端進行連接。  
   
  如需詳細資訊，請參閱[在可用性複本上設定唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)。  
@@ -69,7 +68,7 @@ ms.locfileid: "62789840"
  同時允許與主要資料庫的讀寫和唯讀連接。 這是主要角色的預設行為。  
   
  僅允許讀寫連接  
- 當`Application Intent`連接屬性設定為**ReadWrite**或未設定時，允許連接。 不允許`Application Intent`連接字串關鍵字設定為`ReadOnly`的連接。 僅允許讀寫連接有助於防止客戶錯誤地將讀取意圖的工作負載連接至主要複本。  
+ 當 `Application Intent` 連接屬性設定為**ReadWrite**或未設定時，允許連接。 `Application Intent`不允許連接字串關鍵字設定為的連接 `ReadOnly` 。 僅允許讀寫連接有助於防止客戶錯誤地將讀取意圖的工作負載連接至主要複本。  
   
  如需有關此連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
   
@@ -80,13 +79,13 @@ ms.locfileid: "62789840"
   
 |複本角色|複本上支援的連接存取|連接意圖|連接嘗試結果|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|次要|全部|讀取意圖、讀寫，或未指定任何連接意圖|成功|  
+|次要|全部|讀取意圖、讀寫，或未指定任何連接意圖|Success|  
 |次要|無 (這是預設的次要行為)。|讀取意圖、讀寫，或未指定任何連接意圖|失敗|  
-|次要|僅限讀取意圖|讀取意圖|成功|  
+|次要|僅限讀取意圖|讀取意圖|Success|  
 |次要|僅限讀取意圖|讀寫，或未指定任何連接意圖|失敗|  
-|Primary|全部 (這是預設的主要行為)。|唯讀、讀寫，或未指定任何連接意圖|成功|  
-|Primary|讀寫|僅限讀取意圖|失敗|  
-|Primary|讀寫|讀寫，或未指定任何連接意圖|成功|  
+|主要|全部 (這是預設的主要行為)。|唯讀、讀寫，或未指定任何連接意圖|Success|  
+|主要|讀寫|僅限讀取意圖|失敗|  
+|主要|讀寫|讀寫，或未指定任何連接意圖|Success|  
   
  如需設定可用性群組接受用戶端連接至其複本的相關資訊，請參閱 [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "62789840"
   
 |複本|認可模式|初始角色|次要角色的連接存取|主要角色的連接存取|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|同步|Primary|None|讀寫|  
+|Replica1|同步|主要|None|讀寫|  
 |Replica2|同步|次要|None|讀寫|  
 |Replica3|非同步的|次要|僅限讀取意圖|讀寫|  
 |Replica4|非同步的|次要|僅限讀取意圖|讀寫|  
@@ -124,7 +123,7 @@ ms.locfileid: "62789840"
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性群組接聽程式、用戶端連接和應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [統計資料](../../../relational-databases/statistics/statistics.md)  
   
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 728469a4-6523-4a37-925f-a950d75420fa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 945d569638db639f350630b424190e3aa38c35e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1baccad5236bd8c1a71024b7dd542cc9d11cbd7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916205"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969778"
 ---
 # <a name="mssqlserver_10537"></a>MSSQLSERVER_10537
     
@@ -39,7 +38,7 @@ ms.locfileid: "62916205"
  請停用現有的計畫指南後，再啟用指定的計畫指南。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [計劃指南](../performance/plan-guides.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   

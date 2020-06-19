@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bb062d9e-0156-4ac4-837d-9a99e5dd5e93
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45ad2e961c9f53067b3e998dc2efcec8fb31b51d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33c44106a091f1d970b156a4b29a45738ee81169
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065450"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938149"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>檢視詳細資料對話方塊 (Analysis Services - 多維度資料)
   使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [檢視詳細資料] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可檢視有關 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中之訊息或作業的其他詳細資料。 您可依下列方式顯示 **[檢視詳細資料]** 對話方塊  

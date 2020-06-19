@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a94db154042f2cc6314459b6af4b52a43c2c9966
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cf899cdbeb1ae4ede6c9196b8eb93a9d9e54f05
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62790677"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937239"
 ---
 # <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>使用中次要：在次要複本上備份 (AlwaysOn 可用性群組)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用中次要功能包含對次要複本執行備份作業的支援。 備份作業可能會對 I/O 和 CPU 造成相當大的壓力 (備份壓縮已啟用時)。 將備份卸載至已同步處理或正在同步處理的次要複本，可讓裝載主要複本的伺服器執行個體上的資源用於第 1 層工作負載。  
@@ -70,8 +69,8 @@ ms.locfileid: "62790677"
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [僅限複本備份 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-sql&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
+ [只複製備份 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)  
   
   

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 68bd85258bd3fd259386f020394ffb5bc70a9781
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c06569a6e7363b05139281a9699b72ba37d779c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937201"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>[加入 IP 位址] 對話方塊 (SQL Server Management Studio)
    此 F1 描述主題描述 [加入 IP 位址]**** 對話方塊的選項。 可從 **[新增可用性群組接聽程式]** 對話方塊以及 **** 或 **的** [指定複本] [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 頁面的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] [接聽程式] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]索引標籤存取此對話方塊。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  開始將子網路加入至可用性群組接聽程式之前，請務必知道每個子網路的 IP 位址，以及 IPv4 位址的子網路遮罩。  
   
 ##  <a name="add-ip-address-options"></a><a name="PageOptions"></a> 加入 IP 位址選項  
@@ -31,7 +30,7 @@ ms.locfileid: "62791912"
   
  在完成 **[加入 IP 位址]** 對話方塊，並按一下 **[確定]** 將選定的子網路位址加入至接聽程式之後， **[子網路]** 下拉式清單會篩選出該子網路位址。 所有未選定的子網路位址會保留在下拉式清單中。 針對每個子網路，務必只將一個子網路位址加入至接聽程式，否則接聽程式建立會失敗。  
   
- **位址**  
+ **地址**  
  使用此欄位，為選定的子網路位址輸入靜態 IP 位址。 請連絡您的網路系統管理員以取得此靜態 IP 位址。 請務必為選定的子網路位址輸入有效位址，否則接聽程式建立會失敗。  
   
  **IPv4 位址**  
@@ -64,7 +63,7 @@ ms.locfileid: "62791912"
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性群組接聽程式、用戶端連接和應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [AlwaysOn 用戶端連接性 (SQL Server)](always-on-client-connectivity-sql-server.md)  
   
   
