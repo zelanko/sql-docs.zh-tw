@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1405c26761b41ab0ecbccfc4e2479b89a01a1f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b654ffa2cba5066a750055243ab358c76a7946d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062064"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio 功能表說明 [SQL Server]
   本節提供 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中功能表列對話方塊與頁面的 F1 說明。  

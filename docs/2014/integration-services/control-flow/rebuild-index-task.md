@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9e89c081c1c543c198a827955ab4865709ead391
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 602f2f1065de7be8e1f18eafdd9d5e3cf0ff0a98
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918488"
 ---
 # <a name="rebuild-index-task"></a>重建索引工作
   「重建索引」工作會重建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料表與檢視中的索引。 如需管理索引的詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
@@ -41,7 +40,7 @@ ms.locfileid: "62830422"
 -   設定 ONLINE = ON，不要持有資料表鎖定，以便對基礎資料表的查詢或更新可在重建索引期間繼續進行。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需版本支援的功能清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  如需 ALTER INDEX 陳述式和索引重建選項的詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
   

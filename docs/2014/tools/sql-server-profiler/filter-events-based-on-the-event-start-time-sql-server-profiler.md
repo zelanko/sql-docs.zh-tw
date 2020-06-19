@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0cd08ce16341022072c76fc1bf073d1a469d9273
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e263b0e38da7e5f5aa422f898f2118469b2ed4c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192910"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000374"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>依據事件開始時間篩選事件 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，依據事件開始時間來篩選追蹤事件。  
@@ -42,7 +41,7 @@ ms.locfileid: "63192910"
   
 5.  在 [事件選取範圍]  索引標籤上，按一下 [開始時間]  資料行標題。 您也可以用滑鼠右鍵按一下資料行標題，然後按一下 [編輯資料行篩選]  以啟動 [編輯篩選]  對話方塊。  
   
-6.  展開 [**大於**] 或 [**小於**]，然後在`datetime`比較運算子下方的欄位中輸入值。  
+6.  展開 [**大於**] 或 [**小於**]，然後在 `datetime` 比較運算子下方的欄位中輸入值。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](sql-server-profiler.md)  

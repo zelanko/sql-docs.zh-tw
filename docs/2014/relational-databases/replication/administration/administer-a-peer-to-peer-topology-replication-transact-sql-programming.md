@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a73af1c1f3a7196d87f77681ee9d62a3ef248a4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62629724"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068776"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>管理點對點拓撲 (複寫 Transact-SQL 程式設計)
   管理點對點拓撲與管理一般的異動複寫拓撲類似，但有一些需要特殊考量的地方。 管理點對點拓撲的主要差別在於有些變更需要 *「停止」*(Quiesce) 系統。 停止系統包括停止所有節點上已發行資料表的活動，並確定每個節點已收到來自其他所有節點的所有變更。 如需詳細資訊，請參閱[停止複寫拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](quiesce-a-replication-topology-replication-transact-sql-programming.md)。  

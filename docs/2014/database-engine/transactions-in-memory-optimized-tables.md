@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c953060e082ade1e325589cc712f723dabb4909d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8806486631ca65f67fb197dceef9149d66f655df
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175392"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928099"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>記憶體最佳化的資料表中的交易
   以磁碟為基礎之資料表的資料列版本設定 (使用 SNAPSHOT 隔離或 READ_COMMITTED_SNAPSHOT) 會提供某種形式的開放式並行存取控制。 讀取器和寫入器不會封鎖彼此。 在記憶體最佳化的資料表中，寫入器不會封鎖寫入器。 如果在磁碟資料表上使用資料列版本設定，一筆交易會鎖定資料列，而嘗試更新此資料列的並行交易會遭封鎖。 在記憶體最佳化資料表中，不會有任何鎖定。 而是當有兩筆交易嘗試更新相同資料列時，將會發生寫入/寫入衝突 (錯誤 41302)。

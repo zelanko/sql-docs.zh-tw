@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd5717b545913bd9e5ee98debe670a1af616fc61
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919248"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953594"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>利用 Common Language Runtime (CLR) 整合建置資料庫物件
-  您可以使用[!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]來建立資料庫物件，稱為「CLR 常式」。 這些常式包括：  
+  您可以使用來建立資料庫物件， [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稱為「CLR 常式」。 這些常式包括：  
   
 -   純量值的使用者定義函數 (純量 UDF)  
   
@@ -37,7 +36,7 @@ ms.locfileid: "62919248"
   
  CLR 常式在 Managed 程式碼中包含三個相同的結構。 這三個結構會對應到類別的 public、static (在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET 中則為 shared) 方法。 除了常式之外，使用者定義型別 (UDT) 和使用者定義彙總函式也可以使用 .NET Framework 來定義。 UDT 和使用者定義彙總都會對應到整個 .NET Framework 類別。  
   
- 每種類型的 .NET Framework 常式都[!INCLUDE[tsql](../../../includes/ssnoversion-md.md)]有， [!INCLUDE[tsql](../../../includes/tsql-md.md)]可以使用對等的。 例如，純量 UDF 可以在任何純量運算式中使用。 TVF 可以在任何 FROM 子句中使用。 程序可以在 EXEC 陳述式中叫用，或從用戶端應用程式叫用。  
+ 每種類型的 .NET Framework 常式都有 [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] ， [!INCLUDE[tsql](../../../includes/tsql-md.md)] 可以使用對等的。 例如，純量 UDF 可以在任何純量運算式中使用。 TVF 可以在任何 FROM 子句中使用。 程序可以在 EXEC 陳述式中叫用，或從用戶端應用程式叫用。  
   
 > [!NOTE]  
 >  Common Language Runtime 上的 CLR 物件 (使用者定義函數、使用者定義類型或觸發程序) 可以在多個執行緒上執行 (平行計畫)，如果查詢最佳化工具判定這是有幫助的。 不過，如果使用者定義函數存取資料，則是以序列計畫執行。 在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的伺服器版本上執行時，如果使用者定義函數包含 LOB 參數或傳回值，也必須以序列計畫執行。  

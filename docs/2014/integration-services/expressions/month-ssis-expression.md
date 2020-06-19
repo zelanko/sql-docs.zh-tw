@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f5e997f40f5af0a9f1c5cd0de4114714a1db8b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55a96f60731e6fc1d4d5879f2fc431fdc7fbec64
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897525"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969208"
 ---
 # <a name="month-ssis-expression"></a>MONTH (SSIS 運算式)
   傳回代表日期之月份部分的整數。  

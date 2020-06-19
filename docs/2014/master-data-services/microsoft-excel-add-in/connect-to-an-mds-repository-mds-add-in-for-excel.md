@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b040198b4ed152f8fa4ea00571375de911822687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f29cdaad3f362c190372ec510f24cb67efe15f7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482610"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961388"
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>連接到 MDS 儲存機制 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您必須先連接到 MDS 儲存機制，然後才能載入或發行資料。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
@@ -40,7 +39,7 @@ ms.locfileid: "65482610"
     > [!NOTE]  
     >  請確認您使用的是電腦名稱，請不要使用 "localhost"。  
   
-6.  按一下 [確定]  。 此名稱就會顯示在 [現有連接]**** 區段中。  
+6.  按一下 [確定]。 此名稱就會顯示在 [現有連接]**** 區段中。  
   
 7.  (選擇性) 按一下 [測試]**** 測試連接。 此時會顯示確認或錯誤對話方塊。 按一下 [確定]**** 關閉對話方塊。  
   

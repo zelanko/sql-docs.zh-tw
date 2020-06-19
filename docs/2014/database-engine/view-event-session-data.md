@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60fdb986e24c2fa682caaf56ad7209ca555c966
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67131797"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927629"
 ---
 # <a name="view-event-session-data"></a>檢視事件工作階段資料
   本主題描述如何使用顯示使用者介面來查看並分析擴充事件資料：  
@@ -44,9 +43,9 @@ ms.locfileid: "67131797"
   
 -   若為 event_file 目標，請使用下列其中一種方法來檢視檔案目標資料 (.XEL 檔案)：  
   
-    -   使用檔案 > 在中[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]開啟。
+    -   使用檔案 > 在中開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。
     
-    -   將檔案拖放到[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 
+    -   將檔案拖放到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。 
     
     -   按兩下 .XEL 檔案。  
     

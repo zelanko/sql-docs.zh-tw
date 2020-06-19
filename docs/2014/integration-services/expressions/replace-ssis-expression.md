@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b1970fae04a4dff260fe9eafa30125e63e9cf1a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf3885a6efc1e93e3f42a16fde0469e3c0c0ca43
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897472"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969098"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (SSIS 運算式)
   以不同的字元字串或空白字串取代運算式中的字元字串後，傳回字元運算式。  

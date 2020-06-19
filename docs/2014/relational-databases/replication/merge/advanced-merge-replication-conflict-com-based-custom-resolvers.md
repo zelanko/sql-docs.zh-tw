@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 27d5be264fc6e6033997babb4a7aac1e8271a39d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 78f3dbabe5d9671d243b7c6f9a295146a047daba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63066306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068656"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   自訂解決器比預設解決機制更具有彈性，它們能使用複寫資料實作應用程式要求的商務邏輯。 以 COM 為基礎的自訂解決器是一個實作 **ICustomResolver** COM 介面、其方法與屬性，以及特別為衝突解決所設計的其他支援介面與類型定義之動態連結程式庫 (DLL)。  

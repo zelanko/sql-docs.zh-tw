@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f45a017ab1d04643b4bc85454f9dfe0db0d17792
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62679158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000519"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 屬性 (啟動參數索引標籤)
   您可以使用這個對話方塊來加入或移除 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的啟動參數。 啟動參數可能會對 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 效能產生很大的影響。 加入或變更啟動參數之前，請先參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動選項＞主題。  

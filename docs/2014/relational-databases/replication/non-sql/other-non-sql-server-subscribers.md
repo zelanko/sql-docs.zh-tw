@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e6a01bfc16041db89ea6160c36af1a7536290ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021941"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068545"
 ---
 # <a name="other-non-sql-server-subscribers"></a>其他非 SQL Server 訂閱者
   如需[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的非 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]訂閱者清單，請參閱＜ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)＞。 本主題包含 ODBC 驅動程式和 OLE DB 提供者需求的資訊。  
@@ -89,7 +88,7 @@ ms.locfileid: "63021941"
   
 -   **ICommandWithParameters**  
   
- 需要**IAccessor** 才能建立參數存取子 (Accessor)。 如果提供者支援**IColumnRowset**， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會使用該介面來判斷資料行是否為識別欄位。  
+ 需要**IAccessor** 才能建立參數存取子 (Accessor)。 如果提供者支援**IColumnRowset**， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用該介面來判斷資料行是否為識別欄位。  
   
 ### <a name="rowset-object-interfaces"></a>Rowset 物件介面  
  以下是必要的介面：  

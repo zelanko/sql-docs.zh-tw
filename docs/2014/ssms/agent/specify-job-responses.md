@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8e19977300bc32bf832028b0d7e060fbaeb1665
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63246000"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062131"
 ---
 # <a name="specify-job-responses"></a>指定作業回應
   作業回應可指定完成作業後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式服務將採取的動作。 作業回應可確保資料庫管理員知道作業已完成，以及作業的執行頻率。 典型的作業回應包括：  
@@ -41,7 +40,7 @@ ms.locfileid: "63246000"
   
 |||  
 |-|-|  
-|**描述**|**主題**|  
+|**說明**|**本文**|  
 |描述如何通知操作員作業狀態。|[通知操作員作業狀態](notify-an-operator-of-job-status.md)|  
 |描述如何將作業狀態寫入 Windows 應用程式記錄檔。|[若要將作業狀態寫入到 Windows 應用程式記錄](../../reporting-services/report-server/windows-application-log.md)|  
   

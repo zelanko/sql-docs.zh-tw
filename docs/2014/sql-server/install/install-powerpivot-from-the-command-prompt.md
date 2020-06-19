@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c69caf370d454c708484a61576716c213663f3d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798325"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054703"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>從命令提示字元安裝 PowerPivot
   您可以從命令列執行安裝程式來安裝 SQL Server PowerPivot for SharePoint。 您可以在命令中包含 `/ROLE` 參數並排除 `/FEATURES` 參數。  
@@ -41,7 +40,7 @@ ms.locfileid: "72798325"
  相對於舊版，所有伺服器組態工作會以後續安裝工作來執行。 如果您想自動化安裝和組態步驟，您可以使用 PowerShell 設定伺服器。 如需詳細資訊，請參閱[使用 Windows PowerShell 的 PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)設定。  
   
 ## <a name="example-commands"></a>範例命令  
- 下列範例說明每個選項的用法。 範例1顯示`SPI_AS_ExistingFarm`。  
+ 下列範例說明每個選項的用法。 範例1顯示 `SPI_AS_ExistingFarm` 。  
   
 ```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -80,9 +79,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     /PID=<product key for an Enterprise installation>  
     ```  
   
-3.  使用有效的使用者\<帳戶和密碼\<來取代網域 \ 使用者名稱> 和設為 strongpassword>的預留位置。  
+3.  \<domain\username> \<StrongPassword> 以有效的使用者帳戶和密碼取代和的預留位置。  
   
-     `/assvaccount`和 **/assvcpassword**參數是用來設定應用程式[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]伺服器上的實例。 請以有效的帳戶資訊取代這些預留位置。  
+     `/assvaccount`和 **/assvcpassword**參數是用來設定 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 應用程式伺服器上的實例。 請以有效的帳戶資訊取代這些預留位置。  
   
      **/Assysadminaccounts**參數必須設定為正在執行 SQL Server 安裝程式之使用者的身分識別。 您至少必須指定一個系統管理員。 請注意，SQL Server 安裝程式不再授與自動系統管理員 (sysadmin) 權限給內建系統管理員群組的成員。  
   

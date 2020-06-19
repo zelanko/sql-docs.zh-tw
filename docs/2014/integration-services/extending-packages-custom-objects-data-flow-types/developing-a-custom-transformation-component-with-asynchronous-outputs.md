@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0f5b96d22881f3ee42d0cba2fb79a911d77842c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85562f345a115d4c12a1ba1819ae189bab493afd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176368"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968918"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>開發具有非同步輸出的自訂轉換元件
   當轉換在元件收到它的所有輸入資料列以前無法輸出資料料時，或是當轉換無法針對每一個收到的輸入資料列剛好產生一個輸出資料列時，您會使用非同步輸出。 例如，彙總轉換要等到讀取所有資料列以後，才能計算資料列的總和。 相反地，每當您在資料通過時修改每一個資料列時，都可以搭配同步輸出來使用元件。 您可以就地修改每一個資料列的資料，或是建立一或多個其他新的資料行，每一個資料行對於每一個輸入資料列都有一個值。 如需同步與非同步元件之間差異的詳細資訊，請參閱[了解同步和非同步轉換](../understanding-synchronous-and-asynchronous-transformations.md)。

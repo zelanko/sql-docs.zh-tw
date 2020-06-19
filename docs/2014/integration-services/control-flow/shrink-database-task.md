@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 617a0af103c5490faec2a5a8e5f6796cc8af0eea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0217014f5de3941f8071939a4fcb108f00023fd3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830091"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918108"
 ---
 # <a name="shrink-database-task"></a>壓縮資料庫工作
   「壓縮資料庫」工作會減少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料和記錄檔的大小。  

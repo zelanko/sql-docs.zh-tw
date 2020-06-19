@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9344f3b0858050441452238800758a769bcf3d27
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190433"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023374"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 公用程式的功能與工作
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客戶有一項需求，也就是以整體方式管理其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境，這項需求會在這一版中透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內應用程式和多伺服器管理的概念來滿足。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4762b2aec13821402c8b38bd5da207855fd1ea76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eda91751ecde2dd1282453759ba66f8483b755f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705108"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068859"
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>偵測到 SCSI 主機介面卡問題
   這個規則會檢查系統事件記錄檔中是否有 EventId 1066。 這個錯誤是因為發生 SCSI 主機介面卡組態問題或是裝置異常。  

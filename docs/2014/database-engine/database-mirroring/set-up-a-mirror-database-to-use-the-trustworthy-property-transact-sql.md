@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 29cafc7e9669ca322571ff171961dd64cab114cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6cd46a08037bcb6eee178a96d84bdab358e5350d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754331"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933959"
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>設定鏡像資料庫可使用 Trustworthy 屬性 (Transact-SQL)
   備份資料庫時，TRUSTWORTHY 資料庫屬性將設為 OFF。 因此，新鏡像資料庫上的 TRUSTWORTHY 一律為 OFF。 您必須在鏡像開始之後執行額外的設定步驟，以確保資料庫在容錯移轉之後的可信度。  

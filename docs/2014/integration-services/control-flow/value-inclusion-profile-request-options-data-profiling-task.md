@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e524fcb3a107384853a5c6fa2114cadb58f80636
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829478"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917778"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含設定檔要求選項 (資料分析工作)
-  您可以使用 [設定檔要求]  頁面的 [要求屬性]  窗格，針對要求窗格中選取的 [值包含設定檔要求]  設定選項。 值包含設定檔會計算兩個資料行或資料行集合之間值的重疊。 因此，它也可以判斷資料行或資料行集合是否適合當做選取之資料表之間的外部索引鍵。 這個設定檔也可協助您識別資料中的問題，例如無效的值。 舉例來說，您使用了值包含設定檔來分析 Sales 資料表的 ProductID 資料行。 此設定檔發現該資料行包含在 Products 資料表之 ProductID 資料行中找不到的值。  
+  您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [值包含設定檔要求] 設定選項。 值包含設定檔會計算兩個資料行或資料行集合之間值的重疊。 因此，它也可以判斷資料行或資料行集合是否適合當做選取之資料表之間的外部索引鍵。 這個設定檔也可協助您識別資料中的問題，例如無效的值。 舉例來說，您使用了值包含設定檔來分析 Sales 資料表的 ProductID 資料行。 此設定檔發現該資料行包含在 Products 資料表之 ProductID 資料行中找不到的值。  
   
 > [!NOTE]  
 >  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]** 頁面上。 如需此編輯器頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](data-profiling-task-editor-profile-requests-page.md)。  
@@ -44,14 +43,14 @@ ms.locfileid: "62829478"
   
 -   當包含強度具有 1.0 的值，而且 [InclusionStrengthThreshold]  設定為 [精確]  時。  
   
- 您可以透過篩選出超集資料行並非超集資料表之適當索引鍵的組合 (因為非唯一的值)，進一步精簡輸出。 當您針對 [SupersetColumnsKeyThresholdSetting]  指定 **None** 以外的值時，只有在下列其中一項條件底下，此設定檔才會報告超集中子集的包含強度：  
+ 您可以透過篩選出超集資料行並非超集資料表之適當索引鍵的組合 (因為非唯一的值)，進一步精簡輸出。 當您針對 [SupersetColumnsKeyThresholdSetting] 指定 **None** 以外的值時，只有在下列其中一項條件底下，此設定檔才會報告超集中子集的包含強度：  
   
 -   當超集資料行當作超集資料表之索引鍵的適合性超過 [SupersetColumnsKeyThreshold]  中指定的臨界值時  
   
 -   當包含強度具有 1.0 的值，而且 [SupersetColumnsKeyThreshold]  設定為 [精確]  時。  
   
 ## <a name="request-properties-options"></a>要求屬性選項  
- [要求屬性]  窗格會針對 [值包含設定檔要求]  顯示下列選項群組：  
+ [要求屬性] 窗格會針對 [值包含設定檔要求] 顯示下列選項群組：  
   
 -   [資料]  ，其中包括 [SubsetTableOrView]  、[SupersetTableOrView]  和 [InclusionColumns]  選項  
   
@@ -91,7 +90,7 @@ ms.locfileid: "62829478"
  如需詳細資訊，請參閱本主題前面的「了解 InclusionColumns 屬性之資料行的選擇」一節。  
   
  **IsWildcard**  
- 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(** ) **來分析所有資料行，這個選項會設定為 [True]\*** 。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
+ 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
   
  **ColumnName**  
  顯示所選取資料行的名稱。 如果您已選取 **(\*)** 來分析所有資料行，這個選項就是空白的。 此選項是唯讀的。  
@@ -100,7 +99,7 @@ ms.locfileid: "62829478"
  選取比較字串值的選項。 這個屬性具有下表中所列的選項。 這個選項的預設值為 **預設值**頁面上。  
   
 > [!NOTE]  
->  當您針對 **ColumnName\* 使用** ( **)** 萬用字元時，**CompareOptions** 就是唯讀的，而且它會設定為 [預設值]  設定。  
+>  當您針對 **ColumnName** 使用 **(\*)** 萬用字元時，**CompareOptions** 就是唯讀的，而且它會設定為 [預設值] 設定。  
   
 |值|描述|  
 |-----------|-----------------|  

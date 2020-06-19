@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 422872b7-b0cd-466d-a6bf-2e2c8a2f8da5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23b19a53b512996f72990714ba3a478965179a1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19dc400cac04fbf0956a33b899d18e3dcee449ac
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773380"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927619"
 ---
 # <a name="validation-rules-for-data-tier-application-wizards"></a>資料層應用程式精靈的驗證規則
   本主題將使用資料層應用程式精靈中驗證規則的更正動作來更新。  

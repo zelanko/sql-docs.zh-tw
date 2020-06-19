@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a26aca7b33a7355500350572ea5e8ed21bddeacb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250591"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068718"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
   「複寫快照集代理程式」是一個可執行檔，它會準備包含已發行資料表與資料庫物件之結構描述及資料的快照集檔案、將這些檔案儲存在快照集資料夾內，然後記錄散發資料庫中的同步處理作業。  
@@ -138,7 +137,7 @@ ms.locfileid: "63250591"
  如需詳細資訊，請參閱[SQL Server 複寫安全性](../security/view-and-modify-replication-security-settings.md)。  
   
  **-FieldDelimiter** _field_delimiter_  
- 這是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製資料檔案中標示欄位結尾的字元或字元序列。 預設值是 \n\<x$3>\n。  
+ 這是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製資料檔案中標示欄位結尾的字元或字元序列。 預設值為 \n \<x$3> 對除 \n  
   
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  指定在快照集作業期間記錄的記錄量。 您可以透過選取 **1**，盡量減少記錄作業對效能造成的影響。  
@@ -181,7 +180,7 @@ ms.locfileid: "63250591"
  這是指無關的刪除動作是否會傳送至訂閱者。 無關的刪除動作是針對不屬於訂閱者資料分割的資料列傳送至訂閱者的 DELETE 命令。 雖然無關的刪除動作不會影響資料完整性或聚合，但是它們可能會產生不必要的網路流量。 **MaxNetworkOptimization** 的預設值為 **0**。 將 **MaxNetworkOptimization** 設定為 **1** 會盡可能減少無關刪除動作的機會，因而縮減網路流量並擴大網路最佳化。 如果聯結篩選和複雜子集篩選的多重層級存在，將這個參數設定為 **1** 也可能會增加中繼資料的儲存體，而且導致發行者端的效能降低。 您應該仔細地評估複寫拓撲，並且只有在無關刪除動作的網路流量高得無法接受，才將 **MaxNetworkOptimization** 設定為 **1** 。  
   
 > [!NOTE]
->  只有當合併式發行集的同步處理優化選項設定為**true** （sp_addmergepublication 的**@keep_partition_changes**參數[&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)）時，將此參數設定為**1**才有用。  
+>  只有當合併式發行集的同步處理優化選項設定為**true** （sp_addmergepublication 的**1** **@keep_partition_changes** 參數[&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)）時，將此參數設定為1才有用。  
   
  **-Output** _output_path_and_file_name_  
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
@@ -243,10 +242,10 @@ ms.locfileid: "63250591"
  指定複寫的類型。 值為 **1** 表示異動複寫，而值為 **2** 則表示合併式複寫。  
   
  **-RowDelimiter** _row_delimiter_  
- 這是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製資料檔案中標示資料列結尾的字元或字元序列。 預設值是 \n\<,@g>\n。  
+ 這是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製資料檔案中標示資料列結尾的字元或字元序列。 預設值為 \n \<,@g> 對除 \n  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 這是當執行中並行動態快照集進程數目是由**@max_concurrent_dynamic_snapshots** [sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)的屬性所設定的限制時，快照集代理程式等待的最大秒數。 如果已到達最大秒數而且快照集代理程式仍然等候中，它就會結束。 值為 0 表示代理程式會永遠等候，不過您可以取消它。  
+ 這是當執行中並行動態快照集進程數目是由 **@max_concurrent_dynamic_snapshots** [Sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)的屬性所設定的限制時，快照集代理程式等待的最大秒數。 如果已到達最大秒數而且快照集代理程式仍然等候中，它就會結束。 值為 0 表示代理程式會永遠等候，不過您可以取消它。  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  這個參數已被取代，而且是為了回溯相容性才提供支援。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f2534aef1fedb2a7991c5d2e0341e46711cc7b55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ee8ee285d395425e925f2d5ec1e8a169d4ac5fa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830412"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918408"
 ---
 # <a name="notify-operator-task"></a>通知操作員工作
   「通知操作員」工作會傳送通知訊息給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 操作員。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 操作員是可接收電子通知的人員或群組使用的別名。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 運算子的詳細資訊，請參閱 [運算子](../../ssms/agent//operators.md)。  

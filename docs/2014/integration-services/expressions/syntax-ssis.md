@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11b503817096f76a501aace2ba0825c7986d736a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768834"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969018"
 ---
 # <a name="syntax-ssis"></a>語法 (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語法與 C 和 C# 語言使用的語法類似。 運算式的元素包括識別碼 (資料行和變數)、常值、運算子以及函數。 本主題摘要說明運算式評估工具語法套用至不同運算式元素時的獨特需求。  

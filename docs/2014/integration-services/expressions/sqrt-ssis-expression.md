@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 308a74501b0b4bf7b071feae2088c1ab1b7f030c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc94a4834108f63b1e07d9fbc3daf025b31b49de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768764"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969048"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (SSIS 運算式)
   傳回數值運算式的平方根。  

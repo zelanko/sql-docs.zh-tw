@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9ae6f68ad3f743400199f5981e813eda1488683
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: aa60ae2e275646812c226bd2fd9cd945174bab54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718558"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068465"
 ---
 # <a name="step-through-transact-sql-code"></a>逐步執行 Transact-SQL 程式碼
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具可讓您控制哪些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式要在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗中執行。 您可以在個別的陳述式上暫停偵錯工具，然後在該點檢視程式碼項目的狀態。  

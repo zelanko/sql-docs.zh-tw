@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c174dd70611d39a4938146480583615e09ad3914
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068654"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940509"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>顯示資料表對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [顯示資料表] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，以包含與維度、Cube 或採礦結構相關聯之資料來源檢視的資料表。 您可以藉由下列方式在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中顯示此對話方塊：  

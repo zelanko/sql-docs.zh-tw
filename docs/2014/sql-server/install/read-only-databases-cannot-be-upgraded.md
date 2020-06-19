@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 27964211-ea30-4390-b791-dcf225fb9ae7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 414b26cf860ab32bb11beaa1ccbef3316c68f557
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba48ed2bd80961a4949dc13f04fed0637ecc27ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093364"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054679"
 ---
 # <a name="read-only-databases-cannot-be-upgraded"></a>無法升級唯讀資料庫
   Upgrade Advisor 已確定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的某些資料庫無法升級。  
@@ -29,7 +28,7 @@ ms.locfileid: "66093364"
  已偵測到唯讀資料庫。 若要升級資料庫，安裝程式必須可以寫入資料庫。  
   
 ## <a name="corrective-action"></a>更正動作  
- 如果沒有人正在使用資料庫，請使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Manager、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或 ALTER database 語句，將資料庫變更為讀寫。 下列陳述式會將資料庫變更為可讀寫。  
+ 如果沒有人正在使用資料庫，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Manager、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 ALTER database 語句，將資料庫變更為讀寫。 下列陳述式會將資料庫變更為可讀寫。  
   
 ```  
 USE master;  

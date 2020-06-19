@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2b749a88a0783e6981cf9fd643412f0ca614e6a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c1618bb188a893ffb43eaae36f22ea17a615659
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768727"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969028"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (SSIS 運算式)
   傳回從指定位置開始算起指定長度的字元運算式部分。 *position* 參數和 *length* 參數必須評估為整數。  

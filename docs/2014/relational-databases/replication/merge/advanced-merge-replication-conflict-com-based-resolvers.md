@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8fb5a27e9087044b1049106ca5abd071db74af9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b446c3300b2c8a440a092084f01c55105c9be95e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63240205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068673"
 ---
 # <a name="microsoft-com-based-resolvers"></a>Microsoft COM-Based Resolvers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供的所有以 COM 為基礎的解決器可處理更新衝突，如有需要，也可以處理插入與刪除衝突。 它們都能處理資料行追蹤，大部分還能處理資料列追蹤。 這些及所有其他的以 COM 為基礎的解決器都宣告它們所能處理的衝突類型，而「合併代理程式」使用預設解決器來處理其他所有的衝突類型。  

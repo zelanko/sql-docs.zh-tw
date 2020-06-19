@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a9d7fe2f1f65f0a698e727e5bad6df392c91546
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: abe734d5a67ea7c450536c2e48d8096c694117df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969350"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 運算式
   運算式是產生單一資料值的符號組合 (識別碼、常值、函數和運算子)。 簡單的運算式可以是單一常數、變數或函數。 通常運算式都比較複雜，更常使用多個運算子和函數，並參考多個資料行和變數。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，運算式可用於定義 CASE 陳述式的條件、建立和更新資料行中的值、指派值到變數、在執行階段更新或擴展屬性、定義優先順序條件約束中的條件約束和提供「For 迴圈」容器所使用的運算式。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ebf3f066dec03ba9e9f74dfdf551ccaababf032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842533"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927969"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>疑難排解記憶體最佳化雜湊索引的常見效能問題
   本主題將焦點放在疑難排解以及解決與雜湊索引相關的常見問題。  
@@ -25,7 +24,7 @@ ms.locfileid: "62842533"
   
  相反地，只要索引鍵資料行是索引中的前置資料行，像是磁碟非叢集索引和記憶體最佳化非叢集索引這類已排序索引就可支援在這些資料行的子集上進行索引搜尋。  
   
- **徵兆：** 這會導致效能降低，因為[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]需要執行完整資料表掃描，而不是索引搜尋，這通常是較快速的作業。  
+ **徵兆：** 這會導致效能降低，因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要執行完整資料表掃描，而不是索引搜尋，這通常是較快速的作業。  
   
  **如何進行疑難排解：** 除了效能降低之外，查詢計劃的檢查會顯示掃描，而不是索引搜尋。 如果查詢相當簡單，則查詢文字和索引定義的檢查也會指出搜尋需要索引鍵資料行的子集。  
   

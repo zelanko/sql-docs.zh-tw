@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3308899190aa63ebb9be93c4c9af15d5e0f94600
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 701416b401d428cda9fe0e78b9219dfb2ef53167
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830392"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918208"
 ---
 # <a name="send-mail-task"></a>傳送郵件工作
   傳送郵件工作會傳送電子郵件訊息。 藉由使用傳送郵件工作，封裝即可在封裝工作流程中的工作成功或失敗時傳送訊息，或傳送回應封裝在執行階段所引發事件的訊息。 例如，工作可通知資料庫管理員「備份資料庫」工作成功或失敗。  

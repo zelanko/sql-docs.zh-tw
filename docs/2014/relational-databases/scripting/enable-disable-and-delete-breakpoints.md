@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 438e5eacfc2bb1fc2e3e20fbb95ff2d3c768c49a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f9ab795149344eec1d7cbbdf88cbd749bd6d73e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703939"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068479"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>啟用、停用以及刪除中斷點
   若要檢視和管理所有已開啟的中斷點，您可以使用 **[中斷點]** 視窗。 這個視窗可用以檢視中斷點資訊，以及採取刪除、停用或啟用中斷點的這類動作。  

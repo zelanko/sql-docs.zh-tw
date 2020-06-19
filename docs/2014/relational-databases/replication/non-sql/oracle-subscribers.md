@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0aefc34ace8c8ec9d78780778007dc5b9f134ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022230"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068563"
 ---
 # <a name="oracle-subscribers"></a>Oracle 訂閱者
   從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就會透過由 Oracle 提供的 Oracle OLE DB 提供者支援 Oracle 的發送訂閱。  
@@ -123,11 +122,11 @@ ms.locfileid: "63022230"
 |`nvarchar(1-1000)`|VARCHAR2(1-2000)|  
 |`nvarchar(1001-4000)`|NCLOB|  
 |`nvarchar(max)`|NCLOB|  
-|`real`|real|  
+|`real`|REAL|  
 |`smalldatetime`|日期|  
 |`smallint`|NUMBER(5,0)|  
 |`smallmoney`|NUMBER(10,4)|  
-|`sql_variant`|不適用|  
+|`sql_variant`|N/A|  
 |`sysname`|VARCHAR2(128)|  
 |`text`|CLOB|  
 |`time(0-7)`|VARCHAR(16)|  
