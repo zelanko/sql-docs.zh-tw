@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 364d155ce61dd452e63112b6182b6ff9653ef261
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 380dcccbea9c108f77f9f054e82fd002f85bee59
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637688"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933663"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>使用 CLR 及 XML 建立連絡人
   SQL Server 的「連絡人」範例提供了一些有用的公用程式，以構成基底 AdventureWorks2012 範例資料庫最上層的額外功能層。 第一個公用程式會建立 AdventureWorks2012 資料庫所含各類人員的連絡記錄。 連絡資訊是使用 XML 來指定並傳遞至以 C# 為基礎或 VB 預存程序，以便建立 XML 並將它放入包含此資料庫的正確資料表中。  
@@ -78,7 +77,7 @@ ms.locfileid: "73637688"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-10. 將[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令腳本複製到檔案中，並將`test.sql`它儲存成範例目錄中的。  
+10. 將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存成 `test.sql` 範例目錄中的。  
   
 11. 使用下列命令來執行測試指令碼  
   

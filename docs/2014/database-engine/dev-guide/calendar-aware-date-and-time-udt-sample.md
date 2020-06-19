@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c2636d417bb9956ac56885686b3512cc3c119cd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a8d632b538104e490fb70542cdd0f8bd73b87f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929496"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933723"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>行事曆感知日期和時間 UDT 範例
   將日期儲存為字串可能會產生混淆，因為如果不了解正在使用的日曆系統為何，日期便沒有意義。`CADatetime` 範例會定義兩種使用者定義資料類型 (`CADatetime` 和 `CADate`)，可提供日期和時間的日曆感知處理。  
@@ -116,7 +115,7 @@ ms.locfileid: "76929496"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-14. 將[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令腳本複製到檔案中，並將`test.sql`它儲存成範例目錄中的。  
+14. 將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存成 `test.sql` 範例目錄中的。  
   
 15. 使用下列命令來執行測試指令碼  
   

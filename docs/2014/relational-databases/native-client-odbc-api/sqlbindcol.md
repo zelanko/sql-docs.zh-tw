@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f4a04d7851a79ab461711cfc173d40a0a83ef6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72d0ca1b0fbad144117e409019d8d2247bbf918f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706392"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022948"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
   作為一般規則，請考慮使用**SQLBindCol**來造成資料轉換的含意。 例如，繫結轉換為用戶端處理序，所以擷取繫結至字元資料行的浮點值時，將會造成驅動程式在提取資料列時，於本機執行浮點對字元的轉換。 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT 函數可將資料轉換的成本置於伺服器上。  

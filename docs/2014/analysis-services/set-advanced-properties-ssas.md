@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 69928b3e-53c8-4e6c-83a5-3dd3cf7ece7c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c657b4670acaab008bafa24def05102938a99d0e
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: dd015873e8ca513e6a5a3b34b77a872b7fd8906b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858038"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940569"
 ---
 # <a name="set-advanced-properties-ssas"></a>設定進階屬性 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您指定資料來源連接的其他屬性設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  

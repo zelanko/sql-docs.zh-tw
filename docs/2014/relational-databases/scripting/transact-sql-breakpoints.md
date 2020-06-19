@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 84ff925f2aa68ee81268eaca2faa3920f3ec407b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1b5d363e7f68ba735168ef17eeff8e9605c54b2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718541"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068453"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 中斷點
   中斷點指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具要在特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行，然後您就可以在該點檢視程式碼元素的狀態。  

@@ -20,27 +20,26 @@ helpviewer_keywords:
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7d2d611ab4292f96db13305571e8b3fa16d4702
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e58de07841aeba956e6bc8d552b14237a31b515e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896248"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968818"
 ---
 # <a name="validating-a-data-flow-component"></a>驗證資料流程元件
   提供 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 基底類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 方法，可以避免執行設定不正確的元件。 使用這個方法可確認元件具有預期的輸入和輸出物件數、此元件的自訂屬性具有可接受的值，以及指定了任何需要的連接。 使用這個方法也可確認輸入和輸出集合內的資料行具有正確的資料類型，以及每一個資料行的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> 都針對此元件適當地設定。 基底類別實作會協助驗證程序，其方式是檢查此元件的輸入資料行集合，並確保此集合中的每一個資料行都會參考上游元件之 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> 中的資料行。  
   
 ## <a name="validate-method"></a>Validate 方法  
- 在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 設計師中編輯元件時，便會重複呼叫 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 方法。 您可以透過 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus> 列舉傳回值及藉由公佈警告和錯誤，提供意見給此元件的設計人員和使用者。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus> 列舉包含可指示失敗的各個階段的三個值，以及第四個值 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISVALID>，該值會指出此元件是否已正確設定並準備好要執行。  
+ 在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中編輯元件時，便會重複呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 方法。 您可以透過 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus> 列舉傳回值及藉由公佈警告和錯誤，提供意見給此元件的設計人員和使用者。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus> 列舉包含可指示失敗的各個階段的三個值，以及第四個值 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISVALID>，該值會指出此元件是否已正確設定並準備好要執行。  
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA> 值指出 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 中有錯誤存在，而且此元件可修復錯誤。 如果元件遇到了可以修復的中繼資料錯誤，它不應該修正 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 方法中的錯誤，而且驗證期間不應該修改 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>。 而是 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 方法應該只能傳回 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA>，而且此元件應該在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> 方法的呼叫中修復此錯誤，如同本章節稍後所述。  
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISBROKEN> 值指出，此元件的錯誤可以在設計師中編輯此元件來加以修正。 此錯誤通常是因為自訂屬性或是未指定或設定錯誤的必要連接所造成。  
   
- 最後的錯誤值是 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>，該值指出此元件發現的錯誤只有在直接修改了 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 屬性時才應該發生 (不論是編輯封裝 XML 或使用物件模型)。 例如，當元件只加入了單一輸入，但是驗證作業發現 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 中有一個以上的輸入存在時，就會發生這種錯誤。 若要修復產生這個傳回值的錯誤，只能重設此元件或是使用 [進階編輯器]  對話方塊中的 [重設]  按鈕。  
+ 最後的錯誤值是 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>，該值指出此元件發現的錯誤只有在直接修改了 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 屬性時才應該發生 (不論是編輯封裝 XML 或使用物件模型)。 例如，當元件只加入了單一輸入，但是驗證作業發現 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 中有一個以上的輸入存在時，就會發生這種錯誤。 若要修復產生這個傳回值的錯誤，只能重設此元件或是使用 [進階編輯器] 對話方塊中的 [重設] 按鈕。  
   
- 除了傳回錯誤值以外，元件還會藉由公佈驗證期間的警告或錯誤來提供意見。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法會提供這項機制。 當呼叫這些方法時，這些事件會在  **的 [錯誤清單]** [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 視窗內公佈。 然後元件開發人員可以提供有關所發生之錯誤的直接意見給使用者，並在適當的情況下提供修正錯誤的方式。  
+ 除了傳回錯誤值以外，元件還會藉由公佈驗證期間的警告或錯誤來提供意見。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法會提供這項機制。 當呼叫這些方法時，這些事件會在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的 [錯誤清單] 視窗內公佈。 然後元件開發人員可以提供有關所發生之錯誤的直接意見給使用者，並在適當的情況下提供修正錯誤的方式。  
   
  下列程式碼範例會示範已覆寫的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 實作。  
   
@@ -108,7 +107,7 @@ End Function
 ```  
   
 ## <a name="reinitializemetadata-method"></a>ReinitializeMetaData 方法  
- 當您編輯的元件從其 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> 方法傳回 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 時，<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA> 設計工具便會呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 方法。 元件包含的程式碼，應能偵測及修正此元件在驗證期間所指出的各項問題。  
+ 當您編輯的元件從其 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> 方法傳回 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA> 時，[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工具便會呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 方法。 元件包含的程式碼，應能偵測及修正此元件在驗證期間所指出的各項問題。  
   
  下列範例所示的元件，會在驗證期間偵測問題，並使用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> 方法修正這些錯誤。  
   

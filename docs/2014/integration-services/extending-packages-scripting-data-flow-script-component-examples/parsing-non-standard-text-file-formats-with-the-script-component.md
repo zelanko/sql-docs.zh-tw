@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40139962f6c5fd77611ccd486785cd6afadeff69
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769004"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968598"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>使用指令碼元件剖析非標準文字檔案格式
   當來源資料是以非標準格式排列時，為了達成相同的結果，您可能會發現將所有剖析邏輯合併在單一指令碼中會比將多個 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 轉換鏈結在一起更方便。  
@@ -86,15 +85,15 @@ ms.locfileid: "62769004"
   
 7.  將資料流程工作新增至套件，然後按一下 SSIS 設計工具的 [資料流程]  索引標籤。  
   
-8.  將一般檔案來源加入至資料流程，並且將它設定為使用 RowDelimitedData 連接管理員。 在 [一般檔案來源編輯器]  的 [資料行]  頁面上，選取單一可用的外部資料行。  
+8.  將一般檔案來源加入至資料流程，並且將它設定為使用 RowDelimitedData 連接管理員。 在 [一般檔案來源編輯器] 的 [資料行] 頁面上，選取單一可用的外部資料行。  
   
 9. 將指令碼元件加入至資料流程並將它設定為轉換。 將一般檔案來源的輸出連接至指令碼元件。  
   
 10. 按兩下指令碼元件，以顯示 [指令碼轉換編輯器]  。  
   
-11. 在 [指令碼轉換編輯器]  的 [輸入資料行]  頁面上，選取單一可用的輸入資料行。  
+11. 在 [指令碼轉換編輯器] 的 [輸入資料行] 頁面上，選取單一可用的輸入資料行。  
   
-12. 在 [**腳本轉換編輯器**] 的 [**輸入和輸出**] 頁面上，選取 [輸出`SynchronousInputID` 0]，並將其設定為 [無]。 建立 5 個輸出資料行，全部都屬於字串 [DT_STR] 類型而且長度為 32：  
+12. 在 [**腳本轉換編輯器**] 的 [**輸入和輸出**] 頁面上，選取 [輸出 0]，並將其設定 `SynchronousInputID` 為 [無]。 建立 5 個輸出資料行，全部都屬於字串 [DT_STR] 類型而且長度為 32：  
   
     -   名字  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62769004"
   
     -   StateProvince  
   
-13. 在 [**腳本轉換編輯器**] 的 [**腳本**] 頁面上，按一下 [**編輯腳本**]，然後`ScriptMain`輸入範例的類別中所顯示的程式碼。 關閉指令碼開發環境以及 [指令碼轉換編輯器]  。  
+13. 在 [**腳本轉換編輯器**] 的 [**腳本**] 頁面上，按一下 [**編輯腳本**]，然後輸入範例的類別中所顯示的程式碼 `ScriptMain` 。 關閉指令碼開發環境以及 [指令碼轉換編輯器]  。  
   
 14. 將 SQL Server 目的地加入至資料流程。 將它設定為使用 OLE DB 連接管理員和 RowDelimitedData 資料表。 將指令碼元件的輸出連接至這個目的地。  
   
@@ -245,15 +244,15 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 7.  將資料流程工作新增至套件，然後按一下 SSIS 設計工具的 [資料流程]  索引標籤。  
   
-8.  將一般檔案來源加入至資料流程，並且將它設定為使用 ParentChildData 連接管理員。 在 [一般檔案來源編輯器]  的 [資料行]  頁面上，選取單一可用的外部資料行。  
+8.  將一般檔案來源加入至資料流程，並且將它設定為使用 ParentChildData 連接管理員。 在 [一般檔案來源編輯器] 的 [資料行] 頁面上，選取單一可用的外部資料行。  
   
 9. 將指令碼元件加入至資料流程並將它設定為轉換。 將一般檔案來源的輸出連接至指令碼元件。  
   
 10. 按兩下指令碼元件，以顯示 [指令碼轉換編輯器]  。  
   
-11. 在 [指令碼轉換編輯器]  的 [輸入資料行]  頁面上，選取單一可用的輸入資料行。  
+11. 在 [指令碼轉換編輯器] 的 [輸入資料行] 頁面上，選取單一可用的輸入資料行。  
   
-12. 在 [**腳本轉換編輯器**] 的 [**輸入和輸出**] 頁面上，選取 [輸出 0]，將它重新`SynchronousInputID`命名為 ParentRecords，並將其設定為 [無]。 建立 2 個輸出資料行：  
+12. 在 [**腳本轉換編輯器**] 的 [**輸入和輸出**] 頁面上，選取 [輸出 0]，將它重新命名為 ParentRecords，並將其設定 `SynchronousInputID` 為 [無]。 建立 2 個輸出資料行：  
   
     -   ParentID (主索引鍵)，屬於四位元組帶正負號的整數 [DT_I4] 類型  
   
@@ -267,7 +266,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     -   ChildRecord，屬於字串 [DT_STR] 類型而且長度為 50  
   
-14. 在 [指令碼轉換編輯器]  的 [指令碼]  頁面上，按一下 [編輯指令碼]  。 在 `ScriptMain` 類別中，輸入此範例中所示的程式碼。 關閉指令碼開發環境以及 [指令碼轉換編輯器]  。  
+14. 在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，按一下 [編輯指令碼]。 在 `ScriptMain` 類別中，輸入此範例中所示的程式碼。 關閉指令碼開發環境以及 [指令碼轉換編輯器]  。  
   
 15. 將 SQL Server 目的地加入至資料流程。 將指令碼元件的 ParentRecords 輸出連接至這個目的地。將它設定為使用 OLE DB 連接管理員和 Parents 資料表。  
   

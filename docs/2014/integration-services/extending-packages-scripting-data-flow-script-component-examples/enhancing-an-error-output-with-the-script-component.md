@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd935387e8d6e4a95a25d21eb5d5d229f9599bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2846fed91174f0703e5d195b13a36c2207a03c1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895487"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968583"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>使用指令碼元件增強錯誤輸出
   依預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤輸出中的兩個額外資料行 ErrorCode 與 ErrorColumn 只包含數字碼，代表錯誤號碼及發生錯誤之資料行的識別碼。 這些數值若無對應的錯誤描述，則用途有限。  
   
- 此主題描述如何使用指令碼元件，將錯誤描述資料行加入資料流程中的現有錯誤輸出資料。 此範例使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 方法 (可透過指令碼元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 屬性取得)，加入對應至特定預先定義的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 錯誤碼之錯誤描述。  
+ 此主題描述如何使用指令碼元件，將錯誤描述資料行加入資料流程中的現有錯誤輸出資料。 此範例使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法 (可透過指令碼元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 屬性取得)，加入對應至特定預先定義的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤碼之錯誤描述。  
   
 > [!NOTE]  
 >  如果您要建立可以更輕鬆地在多個資料流程工作與多個封裝之間重複使用的元件，請考慮使用這個指令碼元件範例中的程式碼，做為自訂資料流程元件的起點。 如需詳細資訊，請參閱 [開發自訂資料流程元件](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
@@ -51,7 +50,7 @@ ms.locfileid: "62895487"
   
 7.  在 [腳本轉換編輯器] 的 [**輸入資料行**] 頁面上，選取 [ErrorCode] 資料行。  
   
-8.  在 [**輸入和輸出**] 頁面上，加入名為**ErrorDescription**之`String`類型的新輸出資料行。 將新資料行的預設長度增加至 255，以支援長訊息。  
+8.  在 [**輸入和輸出**] 頁面上，加入 `String` 名為**ErrorDescription**之類型的新輸出資料行。 將新資料行的預設長度增加至 255，以支援長訊息。  
   
 9. 關閉**指令碼轉換編輯器**。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f0067b0e13e724948e53a2eb291c9a1da6315011
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5401bea3c42674a1e85cd823570e2abfb30491b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012750"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068394"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會安裝適用於英文的新版 (14.0.4999.1038 版) 斷詞工具和字幹分析器，並取代這些舊版元件 (12.0.6828.0 版)。 如需新元件行為變更的詳細資訊，請參閱 [全文檢索搜尋的行為變更](full-text-search.md)。 本主題描述的是如何從新版元件切換成舊版，或從舊版切換回新版。 若為叢集安裝，就應該在所有主要和被動節點上進行這些變更。  

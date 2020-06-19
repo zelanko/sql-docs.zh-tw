@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 2fc7fe10-0cbb-49ac-aa8c-8ec3f7a7705f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9316827245adfbcf64bd798869f570dc5f0af14c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a6b5880a67afde3efaf34eb9050dc9c95b472bf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068913"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940596"
 ---
 # <a name="security-properties"></a>安全性屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的安全性伺服器屬性。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
   
  **適用於：** 多維度與表格式伺服器模式  
   
-## <a name="properties"></a>屬性  
+## <a name="properties"></a>[內容]  
  `RequireClientAuthentication`  
  指出是否需要用戶端驗證的布林屬性。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: df28974c9fc6fdf3c9ef974ea5dd868f775af134
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99026cd6d26376c4aa4c8ef92c1de542e90b7c59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705193"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061712"
 ---
 # <a name="export-as-policy-dialog-box"></a>匯出為原則對話方塊
   使用此對話方塊可將一組以原則為基礎之管理 Facet 的屬性儲存為原則。 原則可以儲存在 XML 檔案中，或是直接儲存到目前的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。  

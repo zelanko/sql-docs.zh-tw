@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ede861a696ba7782f7cdce962578dc077f799b33
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec5479d3b1e4ee1e828ba1c43cd86ce5e42b6497
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043890"
 ---
 # <a name="data-source-objects-ole-db"></a>資料來源物件 (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 會針對用於建立資料存放區連結的一組 OLE DB 介面（例如），使用「資料來源」一詞 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 建立提供者之資料來源物件的實例是 Native Client 取用者的第一個工作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

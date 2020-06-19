@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b9007ce0c5f0c05638f88fcb1ac27658b9f91c7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b77cc00c6b6faef7e22fc636a0b33703864d34d7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706881"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926769"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 快速入門安裝
     

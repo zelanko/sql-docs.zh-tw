@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8c74a4c427e4fc89d32c0dcf961bf5f4b839fff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78288987"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061973"
 ---
 # <a name="start-sql-server-management-studio"></a>啟動 SQL Server Management Studio
   在開始這個教學課程之前，我們先看一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
@@ -24,12 +23,12 @@ ms.locfileid: "78288987"
   
 #### <a name="to-open-sql-server-management-studio"></a>開啟 SQL Server Management Studio  
   
-1.  在 [**開始**] 功能表上，依序指向 [**所有程式**] 和 [] [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然後按一下 [ **SQL Server Management Studio**]。  
+1.  在 [**開始**] 功能表上，依序指向 [**所有程式**] 和 [] [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ，然後按一下 [ **SQL Server Management Studio**]。  
   
     > [!NOTE]  
     >  預設不會安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果沒有 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，請執行安裝程式來安裝它。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 未提供 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express 可從[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=14630)免費下載，但其使用者介面與本教學課程中所述的不同。  
   
-2.  在 [連接到伺服器]**** 對話方塊中，驗證預設值，然後按一下 [連接]****。 若要連接，[**伺服器名稱**] 方塊必須包含已安裝之電腦[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的名稱。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]如果是已命名的實例，[**伺服器名稱**] 方塊也應該包含實例名稱\<，格式為*computer_name*>\\<*instance_name*>。  
+2.  在 [連接到伺服器]**** 對話方塊中，驗證預設值，然後按一下 [連接]****。 若要連接，[**伺服器名稱**] 方塊必須包含已安裝之電腦的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是已命名的實例，[**伺服器名稱**] 方塊也應該包含實例名稱，格式為 \<*computer_name*> \\ < *instance_name*>。  
   
 ## <a name="management-studio-components"></a>Management Studio 元件  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 在特定資訊類型專用的視窗中呈現資訊。 資料庫資訊是顯示在「物件總管」和文件視窗中。  

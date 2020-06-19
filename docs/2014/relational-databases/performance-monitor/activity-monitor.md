@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c578b2ebb686c28fc34b2f99e5215bdd54154aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63249334"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061729"
 ---
 # <a name="activity-monitor"></a>活動監視器
   活動監視器顯示有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序以及這些處理序如何影響目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的詳細資訊。  
@@ -38,7 +37,7 @@ ms.locfileid: "63249334"
   
 |||  
 |-|-|  
-|**描述**|**主題**|  
+|**說明**|**本文**|  
 |描述如何開啟 [活動監視器] 以及如何設定 [活動監視器] 的重新整理間隔。|[開啟活動監視器 &#40;SQL Server Management Studio&#41;](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)|  
 |伺服器效能和活動監視主題的連結。|[伺服器效能與活動監視](../performance/server-performance-and-activity-monitoring.md)|  
   

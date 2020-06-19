@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 673ad13ff5688fb17eaa4b975644256f072a3aef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 905e4c6909c792b019c11ef95662a7ec1a113bb4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204625"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054582"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>使用查詢和檢視表設計工具操作國際資料 (Visual Database Tools)
   您可以使用 [查詢和檢視表設計工具](visual-database-tools.md) 處理任何語言的資料，並在任何版本的 Windows 作業系統中執行。 下列方針即簡要說明您將注意到的不同處，並提供管理國際應用程式資料的資訊。  

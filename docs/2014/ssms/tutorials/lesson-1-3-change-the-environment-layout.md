@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce118ee5-70e2-472e-8e09-7ed3bfed59fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39e84cf00810a45e48d1d1210bca54cd30ddfff6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62634267"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061885"
 ---
 # <a name="change-the-environment-layout"></a>變更環境配置
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的各個元件會競相爭取使用畫面空間。 若要有更多空間，您可以關閉、隱藏或移動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 元件。 這一頁的各個練習會將元件移到不同的位置。  
@@ -52,7 +51,7 @@ ms.locfileid: "62634267"
   
     -   Float  
   
-    -   停駐  
+    -   Dock  
   
     -   當做索引標籤式文件停駐  
   

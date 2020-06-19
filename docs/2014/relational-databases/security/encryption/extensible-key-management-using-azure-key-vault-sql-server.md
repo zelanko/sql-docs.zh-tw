@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e4bbc4f0c371c927988e6b91fdbf47307ad9d3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289446"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068377"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 進行可延伸金鑰管理 (SQL Server)
-  適用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]于[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault 的連接器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可讓加密利用 Azure Key Vault 服務作為可延伸[金鑰管理 &#40;EKM&#41;](extensible-key-management-ekm.md)提供者，以保護其加密金鑰。
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]適用于 Azure Key Vault 的連接器 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密利用 Azure Key Vault 服務作為可延伸[金鑰管理 &#40;EKM&#41;](extensible-key-management-ekm.md)提供者，以保護其加密金鑰。
 
  本主題內容：
 
@@ -79,7 +78,7 @@ ms.locfileid: "79289446"
 
     -   **** 若要存取保存庫，以解除包裝 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 加密所使用的金鑰，則需要另一個服務主體 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。
 
-     如需如何註冊應用程式及產生服務主體的詳細資訊，請參閱 **開始使用 Azure Key Vault** 中的 [使用 Azure Active Directory 註冊應用程式](https://go.microsoft.com/fwlink/?LinkId=521402)一節。 註冊程序會針對每個 Azure Active Directory **服務主體** ，傳回 **應用程式識別碼**(又稱為 **用戶端識別碼** ) 和 **驗證金鑰**(又稱為 **密碼**)。 在`CREATE CREDENTIAL`語句中使用時，必須從**用戶端識別碼**移除連字號。 請記錄這些項目，以用於下列指令碼：
+     如需如何註冊應用程式及產生服務主體的詳細資訊，請參閱 **開始使用 Azure Key Vault** 中的 [使用 Azure Active Directory 註冊應用程式](https://go.microsoft.com/fwlink/?LinkId=521402)一節。 註冊程序會針對每個 Azure Active Directory **服務主體** ，傳回 **應用程式識別碼**(又稱為 **用戶端識別碼** ) 和 **驗證金鑰**(又稱為 **密碼**)。 在語句中使用時 `CREATE CREDENTIAL` ，必須從**用戶端識別碼**移除連字號。 請記錄這些項目，以用於下列指令碼：
 
     -   **sysadmin** 登入的 **服務主體** ： **CLIENTID_sysadmin_login** 和 **SECRET_sysadmin_login**
 
@@ -94,7 +93,7 @@ ms.locfileid: "79289446"
 
      Azure Key Vault 文件的連結
 
-    -   [何謂 Azure Key Vault？](https://go.microsoft.com/fwlink/?LinkId=521401)
+    -   [什麼是 Azure 金鑰保存庫？](https://go.microsoft.com/fwlink/?LinkId=521401)
 
     -   [開始使用 Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)
 
@@ -159,9 +158,9 @@ ms.locfileid: "79289446"
 2.  設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統管理員登入的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認證使用金鑰保存庫，以便設定及管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密案例。
 
     > [!IMPORTANT]
-    >  的身分**識別**自`CREATE CREDENTIAL`變數需要金鑰保存庫名稱。 `CREATE CREDENTIAL`的**secret**引數需要將* \<用戶端識別碼>* （不含連字號）和* \<秘密>* 一起傳遞，但兩者之間沒有空格。
+    >  的身分**識別**引數 `CREATE CREDENTIAL` 需要金鑰保存庫名稱。 的**SECRET**引數 `CREATE CREDENTIAL` 需要 *\<Client ID>* （不含連字號）和 *\<Secret>* 一起傳遞，但兩者之間沒有空格。
 
-     在下列範例中，**用戶端識別碼**（`EF5C8E09-4D2A-4A76-9998-D93440D8115D`）已移除連字號並以字串`EF5C8E094D2A4A769998D93440D8115D`輸入，而**密碼**會以*SECRET_sysadmin_login*的字串表示。
+     在下列範例中，**用戶端識別碼**（ `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ）已移除連字號並以字串輸入 `EF5C8E094D2A4A769998D93440D8115D` ，而**密碼**會以*SECRET_sysadmin_login*的字串表示。
 
     ```sql
     USE master;
@@ -175,7 +174,7 @@ ms.locfileid: "79289446"
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```
 
-     如需使用`CREATE CREDENTIAL`引數的變數，並以程式設計方式從用戶端識別碼移除連字號的範例，請參閱[CREATE CREDENTIAL &#40;transact-sql&#41;](/sql/t-sql/statements/create-credential-transact-sql)。
+     如需使用引數的變數 `CREATE CREDENTIAL` ，並以程式設計方式從用戶端識別碼移除連字號的範例，請參閱[CREATE CREDENTIAL &#40;transact-sql&#41;](/sql/t-sql/statements/create-credential-transact-sql)。
 
 3.  如果您已如第 3 節步驟 1 所述匯入非對稱金鑰，請在下列範例中提供您的金鑰名稱，以開啟金鑰。
 
@@ -224,9 +223,9 @@ ms.locfileid: "79289446"
 1.  建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認證，以供 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 在資料庫載入期間用於存取金鑰保存庫 EKM。
 
     > [!IMPORTANT]
-    >  的身分**識別**自`CREATE CREDENTIAL`變數需要金鑰保存庫名稱。 `CREATE CREDENTIAL`的**secret**引數需要將* \<用戶端識別碼>* （不含連字號）和* \<秘密>* 一起傳遞，但兩者之間沒有空格。
+    >  的身分**識別**引數 `CREATE CREDENTIAL` 需要金鑰保存庫名稱。 的**SECRET**引數 `CREATE CREDENTIAL` 需要 *\<Client ID>* （不含連字號）和 *\<Secret>* 一起傳遞，但兩者之間沒有空格。
 
-     在下列範例中，**用戶端識別碼**（`EF5C8E09-4D2A-4A76-9998-D93440D8115D`）已移除連字號並以字串`EF5C8E094D2A4A769998D93440D8115D`輸入，而**密碼**會以*SECRET_DBEngine*的字串表示。
+     在下列範例中，**用戶端識別碼**（ `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ）已移除連字號並以字串輸入 `EF5C8E094D2A4A769998D93440D8115D` ，而**密碼**會以*SECRET_DBEngine*的字串表示。
 
     ```sql
     USE master;

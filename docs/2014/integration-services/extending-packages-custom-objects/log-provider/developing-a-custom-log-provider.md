@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af3478e254f01f7cf53d5a09b6febab3b1e85e8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 257fec0f1d7ce59ce84cc3c54b9b5d105440a6f1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176292"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968712"
 ---
 # <a name="developing-a-custom-log-provider"></a>開發自訂記錄提供者
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 具有多種記錄功能，可以擷取在封裝執行期間所發生的事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括各種記錄提供者，讓記錄可以 XML、文字、資料庫或 Windows 事件記錄檔格式加以建立並儲存記錄檔。 如果所提供的記錄提供者與輸出格式並未完全符合您的需求，可以建立自訂記錄提供者。
@@ -36,14 +35,14 @@ ms.locfileid: "78176292"
 
  撰寫[自訂記錄提供者的程式碼](coding-a-custom-log-provider.md)描述如何藉由覆寫基類的方法和屬性，來執行自訂記錄提供者。
 
- [開發自訂記錄提供者的使用者介面](developing-a-user-interface-for-a-custom-log-provider.md)中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]不支援自訂記錄提供者的自訂使用者介面。
+ [開發自訂記錄提供者的使用者介面](developing-a-user-interface-for-a-custom-log-provider.md)中不支援自訂記錄提供者的自訂使用者介面 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 。
 
 ## <a name="related-topics"></a>[相關主題]
 
 ### <a name="information-common-to-all-custom-objects"></a>自訂物件的共通資訊
  如需有關 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中可以建立之所有類型自訂物件適用的共通資訊，請參閱下列主題：
 
- [開發 Integration Services 的自訂物件](../developing-custom-objects-for-integration-services.md)說明為[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]執行所有類型之自訂物件的基本步驟。
+ [開發 Integration Services 的自訂物件](../developing-custom-objects-for-integration-services.md)說明為執行所有類型之自訂物件的基本步驟 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 。
 
  [保存自訂物件](../persisting-custom-objects.md)描述自訂持續性，並在必要時加以說明。
 

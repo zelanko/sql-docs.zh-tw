@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9fa5ac78eec56c665f05c1624c8555042433731d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bd8a4c3ce267052062725b0328039cc4a5c7076
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832039"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917548"
 ---
 # <a name="copy-package-objects"></a>複製封裝物件
   此主題描述如何在某個封裝內或兩個封裝之間複製控制流程項目、資料流程項目和連接管理員。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b82b7776bf9a56e5c72b5ffabdf6d8398b5d183
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176268"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968568"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>以指令碼元件建立來源
   您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用來源元件，以從資料來源載入資料，進而將其傳遞至下游轉換與目的地。 通常您會透過現有的連接管理員來連接到資料來源。
@@ -60,7 +59,7 @@ ms.locfileid: "78176268"
 -   您可能會想要建立一或多個其他輸出，例如含有非預期值的資料列之模擬錯誤輸出。 使用 [新增輸出]  和 [移除輸出]  按鈕管理來源元件的輸出。 所有的輸入資料列都會導向至所有可用的輸出，除非您也為那些輸出的 `ExclusionGroup` 屬性指定相同的非零值，也就是您想要將每個輸入資料列導向至有著相同 `ExclusionGroup` 值的其中一個輸出。 至於選取哪一個特定的整數值以識別 `ExclusionGroup` 則無關緊要。
 
     > [!NOTE]
-    >  當您不想要輸出所有的資料列時，也可以使用具有單一輸出的非零 `ExclusionGroup` 屬性值。 然而，在此情況下，您必須為要傳送至輸出的每個資料列，明確地呼叫 **DirectRowTo\<outputbuffer>** 方法。
+    >  當您不想要輸出所有的資料列時，也可以使用具有單一輸出的非零 `ExclusionGroup` 屬性值。 不過，在此情況下，您必須針對要傳送至輸出的每個資料列，明確地呼叫**DirectRowTo \<outputbuffer> **方法。
 
 -   您可能會想要將易記名稱指派給輸出。 之後，您將在指令碼中使用輸出的名稱來加以參考，方法是使用在自動產生的程式碼中為您建立的具有類型之存取子屬性。
 
@@ -69,9 +68,9 @@ ms.locfileid: "78176268"
  如需 [指令碼轉換編輯器]  之 [輸入及輸出]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../script-transformation-editor-inputs-and-outputs-page.md)。
 
 ### <a name="adding-variables"></a>加入變數
- 如果有`ReadOnlyVariables`任何現有變數的值是您想要在腳本中使用的，您可以在 [**腳本轉換編輯器**] 的 [**腳本**] 頁面上，將它們加入和`ReadWriteVariables`屬性欄位中。
+ 如果有任何現有變數的值是您想要在腳本中使用的，您可以在 [ `ReadOnlyVariables` `ReadWriteVariables` **腳本轉換編輯器**] 的 [**腳本**] 頁面上，將它們加入和屬性欄位中。
 
- 當您在屬性欄位中輸入多個變數時，請用逗號分隔變數名稱。 您也可以按一下`ReadOnlyVariables`和`ReadWriteVariables`屬性欄位旁的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中選取變數，以輸入多個變數。
+ 當您在屬性欄位中輸入多個變數時，請用逗號分隔變數名稱。 您也可以按一下和屬性欄位旁的省略號（**...**）按鈕 `ReadOnlyVariables` `ReadWriteVariables` ，然後在 [**選取變數**] 對話方塊中選取變數，以輸入多個變數。
 
  如需如何利用指令碼元件使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。
 
@@ -87,7 +86,7 @@ ms.locfileid: "78176268"
 
  `ScriptMain` 類別包括 `CreateNewOutputRows` 方法的 Stub。 `CreateNewOutputRows` 是來源元件中最重要的方法。
 
- 如果您在 VSTA 中開啟 [**專案管理器**] 視窗，您可以看到腳本元件也會產生唯讀`BufferWrapper`和`ComponentWrapper`專案專案。 `ScriptMain` 類別會繼承 `UserComponent` 專案項目中的 `ComponentWrapper` 類別。
+ 如果您在 VSTA 中開啟 [**專案管理器**] 視窗，您可以看到腳本元件也會產生唯讀 `BufferWrapper` 和 `ComponentWrapper` 專案專案。 `ScriptMain` 類別會繼承 `UserComponent` 專案項目中的 `ComponentWrapper` 類別。
 
  在執行階段，資料流程引擎會叫用 `PrimeOutput` 類別中的 `UserComponent` 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 `PrimeOutput` 方法會依序呼叫下列方法：
 
@@ -114,7 +113,7 @@ ms.locfileid: "78176268"
  下列範例示範建立來源元件時，`ScriptMain` 類別中所需的自訂程式碼。
 
 > [!NOTE]
->  `AdventureWorks`這些範例使用範例資料庫中的**Person**資料表，並透過資料流程傳遞第一個和第四個數據行，也就是**intAddressID**和**Nvarchar （30） City**資料行。 在本章節中的來源、轉換和目的地範例使用相同的資料。 每個範例都會記載其他必要條件與假設。
+>  這些範例使用範例資料庫中的**Person**資料表， `AdventureWorks` 並透過資料流程傳遞第一個和第四個數據行，也就是**intAddressID**和**Nvarchar （30） City**資料行。 在本章節中的來源、轉換和目的地範例使用相同的資料。 每個範例都會記載其他必要條件與假設。
 
 ### <a name="adonet-source-example"></a>ADO.NET 來源範例
  這個範例示範一個來源元件，它使用現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表將資料載入資料流程。
@@ -134,7 +133,7 @@ ms.locfileid: "78176268"
 
 5.  在 [指令碼]  頁面上，按一下 [編輯指令碼]  ，並輸入以下指令碼。 然後關閉指令碼開發環境以及 [指令碼轉換編輯器]  。
 
-6.  建立和設定目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件，它需要 **AddressID** 和 **City** 資料行。 然後將來源元件連接到目的地 （您可以直接將來源連接到目的地，而不需要任何轉換）。您可以在[!INCLUDE[tsql](../../includes/tsql-md.md)] `AdventureWorks`資料庫中執行下列命令，以建立目的地資料表：
+6.  建立和設定目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件，它需要 **AddressID** 和 **City** 資料行。 然後將來源元件連接到目的地 （您可以直接將來源連接到目的地，而不需要任何轉換）。您可以 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在資料庫中執行下列命令，以建立目的地資料表 `AdventureWorks` ：
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,
@@ -255,7 +254,7 @@ ms.locfileid: "78176268"
 
  如果您要執行這個範例程式碼，必須依下列方式設定封裝與元件：
 
-1.  使用 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出嚮導]，將 [ **Person. Address** ] `AdventureWorks`資料表從範例資料庫匯出至逗號分隔的一般檔案。 這個範例使用的檔案名稱為 ExportedAddresses.txt。
+1.  使用 [匯 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入和匯出嚮導]，將 [ **Person. Address** ] 資料表從 `AdventureWorks` 範例資料庫匯出至逗號分隔的一般檔案。 這個範例使用的檔案名稱為 ExportedAddresses.txt。
 
 2.  建立一般檔案連接管理員以連接至匯出的資料檔案。
 
@@ -267,7 +266,7 @@ ms.locfileid: "78176268"
 
 6.  在 [指令碼]  頁面上，按一下 [編輯指令碼]  ，並輸入以下指令碼。 然後關閉指令碼開發環境以及 [指令碼轉換編輯器]  。
 
-7.  建立和設定目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將來源元件連接到目的地 （您可以直接將來源連接到目的地，而不需要任何轉換）。您可以在[!INCLUDE[tsql](../../includes/tsql-md.md)] `AdventureWorks`資料庫中執行下列命令，以建立目的地資料表：
+7.  建立和設定目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將來源元件連接到目的地 （您可以直接將來源連接到目的地，而不需要任何轉換）。您可以 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在資料庫中執行下列命令，以建立目的地資料表 `AdventureWorks` ：
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,

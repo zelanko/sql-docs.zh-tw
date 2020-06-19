@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ef120e0142b3ccabb03fe8750b02713601d7fd1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6ad0658a6a1db32a804b7bb1d85b968af067f8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63224479"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061847"
 ---
 # <a name="copy-queries-visual-database-tools"></a>複製查詢 (Visual Database Tools)
   您可以將查詢本身複製到新查詢，以做為新的查詢起點。  

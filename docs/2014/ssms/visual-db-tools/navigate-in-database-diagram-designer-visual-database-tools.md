@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d1d93518a2b11ed55620aa39448faac9f0bc424
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63254454"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044306"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>在資料庫圖表設計工具中導覽 (Visual Database Tools)
   您可使用鍵盤和滑鼠，在 [資料庫圖表設計工具] 中工作。 如需在 [資料庫圖表設計工具] 中所用的特定方法，請參閱下列資料表。  

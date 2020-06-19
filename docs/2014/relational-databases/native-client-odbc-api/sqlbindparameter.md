@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4673a38b275e180a51eedddfdee2c8233616fbd3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a43d803913faed9f7a63397b0b5784ca15e7ff54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706391"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022905"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter`當用來提供 Native Client ODBC 驅動程式的資料時，可以消除資料轉換的負擔 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，進而大幅提升應用程式的用戶端和伺服器元件的效能。 其他優點包括插入或更新近似的數值資料類型時，降低有效位數的損失。  

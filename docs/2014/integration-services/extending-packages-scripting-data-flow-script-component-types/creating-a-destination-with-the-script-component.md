@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4058a059f1f8690f636e00ac1c68957b68c85f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4151c889e83555e81352f606bd1876961a933fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176288"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968566"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>以指令碼元件建立目的地
   您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用目的地元件，以便將從上游來源和轉換收到的資料儲存至資料來源。 通常，目的地元件會透過現有的連接管理員連接到資料來源。
@@ -66,9 +65,9 @@ ms.locfileid: "78176288"
  如需 [指令碼轉換編輯器]  之 [輸入及輸出]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../script-transformation-editor-inputs-and-outputs-page.md)。
 
 ### <a name="adding-variables"></a>加入變數
- 如果您`ReadOnlyVariables`想要在腳本中使用現有的變數，您可以在 [**腳本轉換編輯器**] 的 [**腳本**] 頁面上，將它們加入和`ReadWriteVariables`屬性欄位中。
+ 如果您想要在腳本中使用現有的變數，您可以在 [ `ReadOnlyVariables` `ReadWriteVariables` **腳本轉換編輯器**] 的 [**腳本**] 頁面上，將它們加入和屬性欄位中。
 
- 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以按一下`ReadOnlyVariables`和`ReadWriteVariables`屬性欄位旁的省略號（**...**）按鈕，然後選取 [**選取變數**] 對話方塊中的變數，來選取多個變數。
+ 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以按一下和屬性欄位旁的省略號（**...**）按鈕，然後選取 `ReadOnlyVariables` `ReadWriteVariables` [**選取變數**] 對話方塊中的變數，來選取多個變數。
 
  如需如何利用指令碼元件使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。
 
@@ -82,7 +81,7 @@ ms.locfileid: "78176288"
 ### <a name="understanding-the-auto-generated-code"></a>了解自動產生的程式碼
  當您在建立和設定目的地元件之後開啟 VSTA IDE 時，可編輯的 `ScriptMain` 類別會出現在程式碼編輯器中，並具有 `ProcessInputRow` 方法的虛設常式。 `ScriptMain` 類別是您將撰寫自訂程式碼的地方，而 `ProcessInputRow` 則是目的地元件中最重要的方法。
 
- 如果您在 VSTA 中開啟 [**專案管理器**] 視窗，您可以看到腳本元件也會產生唯讀`BufferWrapper`和`ComponentWrapper`專案專案。 `ScriptMain` 類別會繼承 `UserComponent` 專案項目中的 `ComponentWrapper` 類別。
+ 如果您在 VSTA 中開啟 [**專案管理器**] 視窗，您可以看到腳本元件也會產生唯讀 `BufferWrapper` 和 `ComponentWrapper` 專案專案。 `ScriptMain` 類別會繼承 `UserComponent` 專案項目中的 `ComponentWrapper` 類別。
 
  在執行階段，資料流程引擎會叫用 `ProcessInput` 類別中的 `UserComponent` 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 `ProcessInput` 方法接著會在輸入緩衝區的資料列中執行迴圈，並為每個資料列呼叫一次 `ProcessInputRow` 方法。
 
@@ -101,7 +100,7 @@ ms.locfileid: "78176288"
  下列範例將示範在 `ScriptMain` 類別中所需的程式碼，以建立目的地元件。
 
 > [!NOTE]
->  `AdventureWorks`這些範例使用範例資料庫中的**Person**資料表，並透過資料流程傳遞第一個和第四個數據行： **int * AddressID*** 和**Nvarchar （30） City**資料行。 在本章節中的來源、轉換和目的地範例使用相同的資料。 每個範例都會記載其他必要條件與假設。
+>  這些範例使用範例資料庫中的**Person**資料表， `AdventureWorks` 並透過資料流程傳遞第一個和第四個數據行： **int * AddressID*** 和**Nvarchar （30） City**資料行。 在本章節中的來源、轉換和目的地範例使用相同的資料。 每個範例都會記載其他必要條件與假設。
 
 ### <a name="adonet-destination-example"></a>ADO.NET 目的地範例
  這個範例會示範一個目的地元件，它使用現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，將資料流程的資料儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。
@@ -119,7 +118,7 @@ ms.locfileid: "78176288"
 
 3.  將新的指令碼元件加入至資料流程設計師介面，並將它設定為目的地。
 
-4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件 （您可以直接將來源連接到目的地，而不需要任何轉換）。這個輸出應該從`AdventureWorks`範例資料庫的**Person. Address**資料表中提供資料，其中至少包含**AddressID**和**City**資料行。
+4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件 （您可以直接將來源連接到目的地，而不需要任何轉換）。這個輸出應該從範例資料庫的**Person. Address**資料表中提供資料 `AdventureWorks` ，其中至少包含**AddressID**和**City**資料行。
 
 5.  開啟**指令碼轉換編輯器**。 在 [輸入資料行]  頁面上，選取 **AddressID** 和 **City** 輸入資料行。
 
@@ -236,7 +235,7 @@ public class ScriptMain:
 
 2.  將新的指令碼元件加入至資料流程設計師介面，並將它設定為目的地。
 
-3.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件 （您可以直接將來源連接到目的地，而不需要任何轉換）。這個輸出應該從`AdventureWorks`範例資料庫的**Person. Address**資料表中提供資料，而且應該至少包含**AddressID**和**City**資料行。
+3.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件 （您可以直接將來源連接到目的地，而不需要任何轉換）。這個輸出應該從範例資料庫的**Person. Address**資料表中提供資料 `AdventureWorks` ，而且應該至少包含**AddressID**和**City**資料行。
 
 4.  開啟**指令碼轉換編輯器**。 在 [輸入資料行]  頁面上，選取 [AddressID]  與 [City]  資料行。
 

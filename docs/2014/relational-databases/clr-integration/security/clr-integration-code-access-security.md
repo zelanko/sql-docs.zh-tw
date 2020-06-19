@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75b283da2760b39349351802a83caae04e546c06
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873744"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953443"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 整合程式碼存取安全性
   Common Language Runtime (CLR) 支援稱為 Managed 程式碼之程式碼存取安全性的安全性模型。 在此模型中，將會根據程式碼的識別來授與權限給組件。 如需詳細資訊，請參閱 .NET Framework 軟體開發套件中的＜程式碼存取安全性＞一節。  
@@ -31,20 +30,20 @@ ms.locfileid: "62873744"
   
 -   電腦原則：此原則適用於在已安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之電腦中執行的所有 Managed 程式碼。  
   
--   使用者原則：此原則適用於由處理序主控的 Managed 程式碼。 服務[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]正在執行。  
+-   使用者原則：此原則適用於由處理序主控的 Managed 程式碼。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務正在執行。  
   
 -   主機原則：此原則由 CLR 的主機 (在此案例中為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) 所設定，適用於在該主機中執行的 Managed 程式碼。  
   
  CLR 所支援的程式碼存取安全性機制是根據執行階段可以主控完全信任和部分信任程式碼的假設。 受到 CLR 代碼啟用安全性保護的資源，通常是由 managed 應用程式開發介面所包裝，在允許存取資源之前，會先 requirethe 對應的許可權。 只有在呼叫堆疊中的所有呼叫端（位於元件層級）都具有對應的資源許可權時，才會滿足 demandfor 許可權。  
   
- 在內部[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行時授與給 managed 程式碼的代碼啟用安全性許可權集合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，會將一組許可權授與載入的元件，使用者和電腦層級原則可能會進一步限制指定給使用者程式碼的最終許可權集合。  
+ 在內部執行時授與給 managed 程式碼的代碼啟用安全性許可權集合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，會將一組許可權授與載入的元件 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，使用者和電腦層級原則可能會進一步限制指定給使用者程式碼的最終許可權集合。  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server 主機原則層級權限集合  
- 由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主機原則層級授與組件的程式碼存取安全性權限集合是由建立組件時指定的權限集合所決定。 有三個許可權集合： `SAFE`、 `EXTERNAL_ACCESS`和`UNSAFE` （使用[CREATE ASSEMBLY &#40;transact-sql&#41;](/sql/t-sql/statements/create-assembly-transact-sql)的**PERMISSION_SET**選項指定）。  
+ 由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主機原則層級授與組件的程式碼存取安全性權限集合是由建立組件時指定的權限集合所決定。 有三個許可權集合： `SAFE` 、 `EXTERNAL_ACCESS` 和 `UNSAFE` （使用[CREATE ASSEMBLY &#40;transact-sql&#41;](/sql/t-sql/statements/create-assembly-transact-sql)的**PERMISSION_SET**選項指定）。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 此原則不適用於當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建立 CLR 執行個體時所生效的預設應用程式網域。  
   
- 系統[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]元件的 fixedpolicy，以及使用者元件的使用者指定原則。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]系統元件的 fixedpolicy，以及使用者元件的使用者指定原則。  
   
  CLR 組件及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統組件的固定原則會授與它們完全的信任。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62873744"
 |`SqlClientPermission`|`Context connection = true`、`context connection = yes`：只能使用內容連接，而且連接字串只能指定 "context connection=true" 或 "context connection=yes" 的值。<br /><br /> **AllowBlankPassword = false：** 不允許空白密碼。|  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
- EXTERNAL_ACCESS 元件具有與`SAFE`元件相同的許可權，而且能夠存取外部系統資源，例如檔案、網路、環境變數和登錄。  
+ EXTERNAL_ACCESS 元件具有與元件相同的許可權 `SAFE` ，而且能夠存取外部系統資源，例如檔案、網路、環境變數和登錄。  
   
  `EXTERNAL_ACCESS` 組件也具有下列權限和值：  
   
@@ -88,7 +87,7 @@ ms.locfileid: "62873744"
  `UNSAFE` 會提供給 `FullTrust` 組件。  
   
 > [!IMPORTANT]  
->  對於執行計算和資料管理工作而不存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外之資源的組件而言，`SAFE` 是建議的權限設定。 `EXTERNAL_ACCESS`元件預設會以[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務帳戶的身分執行，只應`EXTERNAL_ACCESS`將執行的許可權授與給受信任的登入，以作為服務帳戶。 從安全性的角度來看，`EXTERNAL_ACCESS` 及 `UNSAFE` 組件相同。 不過，`EXTERNAL_ACCESS` 組件提供 `UNSAFE` 組件中沒有的各種可靠性及強固性保護。 指定`UNSAFE`可讓元件中的程式碼對執行不合法的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]作業。 如需在中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]建立 clr 元件的詳細資訊，請參閱[管理 clr 整合元件](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)。  
+>  對於執行計算和資料管理工作而不存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外之資源的組件而言，`SAFE` 是建議的權限設定。 `EXTERNAL_ACCESS`元件預設會以服務帳戶的身分執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，只應將執行的許可權授與給受信任的登入， `EXTERNAL_ACCESS` 以作為服務帳戶。 從安全性的角度來看，`EXTERNAL_ACCESS` 及 `UNSAFE` 組件相同。 不過，`EXTERNAL_ACCESS` 組件提供 `UNSAFE` 組件中沒有的各種可靠性及強固性保護。 指定 `UNSAFE` 可讓元件中的程式碼對執行不合法的作業 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 如需在中建立 CLR 元件的詳細資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請參閱[管理 Clr 整合元件](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)。  
   
 ## <a name="accessing-external-resources"></a>存取外部資源  
  如果使用者定義型別 (UDT)、預存程序或其他型別的建構組件是以 `SAFE` 權限集合註冊，在此建構中執行的 Managed 程式碼便無法存取外部資源。 不過，如果指定了 `EXTERNAL_ACCESS` 或 `UNSAFE` 權限集合，而 Managed 程式碼嘗試存取外部資源，則 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會套用下列規則：  
@@ -107,7 +106,7 @@ ms.locfileid: "62873744"
 |-|-|-|-|  
 ||`SAFE`|`EXTERNAL_ACCESS`|`UNSAFE`|  
 |`Code Access Security Permissions`|僅限 Execute|對外部資源的 Execute + 存取權|不受限制 (包括 P/Invoke)|  
-|`Programming model restrictions`|是|是|無限制|  
+|`Programming model restrictions`|是|是|沒有限制|  
 |`Verifiability requirement`|是|是|否|  
 |`Local data access`|是|是|是|  
 |`Ability to call native code`|否|否|是|  

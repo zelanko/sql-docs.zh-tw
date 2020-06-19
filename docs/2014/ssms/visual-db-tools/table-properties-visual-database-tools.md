@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df4a0332ebc622b069c468e51c461b7cba20aa36
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204694"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044201"
 ---
 # <a name="table-properties-visual-database-tools"></a>資料表屬性 (Visual Database Tools)
   當您在 [資料表設計師] 中按一下滑鼠右鍵並選取 [屬性] 時，這些屬性便會出現在 [屬性] 視窗中。 已選取資料表時，您可以在 [屬性] 視窗中編輯這些屬性 (除非另有附註)。  

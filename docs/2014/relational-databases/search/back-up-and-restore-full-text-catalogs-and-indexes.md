@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 28ab36c2f9f500df89b1d936ec60871c0904bc1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c0df49c03325da375427c6566799f374fcc9dd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012815"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068432"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>備份並還原全文檢索目錄與索引。
   本主題說明如何備份和還原在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中建立的全文檢索索引。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，全文檢索目錄是邏輯概念，而且不會位於檔案群組中。 因此，若要備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的全文檢索目錄，您必須識別包含屬於此目錄之全文檢索索引的每個檔案群組。 然後，您必須逐一備份這些檔案群組。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45768952-23a6-45a5-b541-e7bf192b4a78
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dd4ff661a10eca71781aee9d1886e80936f6246d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53eaf828dd3fe6f5fa4056bda9dbc428dfa5d385
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952416"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054638"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>報表管理員 URL (SSRS 原生模式)
   使用 [報表管理員 URL] 頁面可設定或修改用於存取報表管理員的 URL。 根據預設，報表管理員 URL 會繼承報表伺服器 Web 服務 URL 的前置詞、IP 位址和通訊埠。 這是因為報表管理員會提供在相同報表伺服器服務內執行之 Web 服務的前端存取權。 如果您要隔離服務應用程式並使用報表管理員來存取不同電腦上的報表伺服器 Web 服務，您必須編輯 RSReportServer.config 檔案，讓報表管理員指向不同的執行個體。 如需設定報表管理員連接到遠端報表伺服器的詳細資訊，請參閱[Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
@@ -35,7 +34,7 @@ ms.locfileid: "71952416"
  **虛擬目錄**  
  為報表管理員指定虛擬目錄名稱。 相同電腦上的每一個報表管理員執行個體只能有一個虛擬目錄名稱。  
   
- **URL**  
+ **Url**  
  顯示為目前報表管理員執行個體定義的 URL。  
   
  **進階**  

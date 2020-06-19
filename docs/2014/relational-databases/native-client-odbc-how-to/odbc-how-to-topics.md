@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: faf30bd2b6ebfc13a7699241bc4a83ab653f2e24
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d228eedfb3a23ae34a5d20fad682d7c42a9fceff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043938"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC 的使用說明主題
   若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] odbc 驅動程式，您必須能夠建立 odbc 資料來源，並確定伺服器具有正確的目錄預存程式版本。 若要撰寫使用 SQL Server 之 ODBC 應用程式的程式碼，您必須知道如何配置 ODBC 控制代碼、設定屬性、連接至 SQL Server 執行個體、執行查詢以及處理結果。  

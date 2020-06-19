@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bbe1188773d0770ff345cd54ea47e03a3c05555f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acfec7a6d86f55e35ef7b3e6f1fa1af481ef87d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482708"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961120"
 ---
 # <a name="load-data-from-mds-into-excel"></a>將資料從 MDS 載入 Excel 中
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]在中，您必須從 MDS 儲存機制載入資料，才能使用它。  
+  在中 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] ，您必須從 MDS 儲存機制載入資料，才能使用它。  
   
  如果您想要在載入之前篩選資料集，請[先參閱先篩選資料，然後再載入適用于 Excel 的 &#40;MDS 增益集&#41;](filter-data-before-exporting-mds-add-in-for-excel.md) 。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
@@ -41,7 +40,7 @@ ms.locfileid: "65482708"
   
     > [!NOTE]  
     >  -   只有前 1 百萬個成員會載入 Excel 中。 若要在載入之前篩選清單，在功能區上，按一下 [連接和載入]**** 群組中的 [篩選]****。  
-    > -   在屬於受條件約束之清單 (網域屬性) 的資料行中，只會載入前 25,000 個值。 您可以在安裝 Excel 所在電腦上的 excelusersettings.config 檔案內，變更 MaximumDbaEntitySize 屬性中的這個數字。 此檔案位於 C:\Users\\<USER\>\AppData\Local\Microsoft\Microsoft SQL Server\120\MasterDataServices。\\  
+    > -   在屬於受條件約束之清單 (網域屬性) 的資料行中，只會載入前 25,000 個值。 您可以在安裝 Excel 所在電腦上的 excelusersettings.config 檔案內，變更 MaximumDbaEntitySize 屬性中的這個數字。 此檔案位於 C:\Users \\<user \> \AppData\Local\Microsoft\Microsoft SQL Server\120\MasterDataServices \\ 。  
   
     > [!NOTE]  
     >  如果您使用適用於 Microsoft Excel (32 位元 Excel) 的增益集載入以文字分隔的資料，而且 [Cell Count to Load (要載入的資料格計數)]**** 和 [Cell Count to Publish (要發行的資料格計數)]**** 屬性的值都設為最大值 1000，將會發生記憶體不足的錯誤。 您必須使用 64 位元 Excel，才能使用 [Cell Count to Load (要載入的資料格計數)]**** 和 [Cell Count to Publish (要發行的資料格計數)]**** 的最大值設定。  

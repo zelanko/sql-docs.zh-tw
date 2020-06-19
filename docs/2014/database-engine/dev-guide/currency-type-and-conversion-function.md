@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53faaae001e177f1d48d394e06961e89c563d124
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb4a2b48343c6424007a590f7a54e40290c6a345
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933649"
 ---
 # <a name="currency-type-and-conversion-function"></a>Currency 類型及轉換函數
   此範例會使用 C# 來定義 Currency 使用者定義資料類型。 這個使用者定義資料類型會封裝金額和文化特性，這樣做有助決定將金額轉譯成該文化特性中之貨幣值的正確方式。 此範例也會提供貨幣轉換函數，該函數會傳回 Currency 使用者定義資料類型的執行個體。 如果 AdventureWorks 資料庫具有從美元 (USD) 到與指定文化特性相關聯之貨幣的轉換比率，則轉換函數會傳回具有轉換比率和符合文化特性要求之文化特性的 Currency 使用者定義資料類型。 否則，會傳回具有使用 `en-us` 文化特性以 USD 計算之原始金額的 Currency 使用者定義資料類型。 此範例還會示範如何使用 Transact-SQL 取消註冊和註冊 Common Language Runtime (CLR) 方法與組件。  
@@ -55,7 +54,7 @@ ms.locfileid: "73637642"
   
 -   AdventureWorks 資料庫必須安裝在您所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。  
   
--   如果您不是所使用之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的系統管理員，則必須讓系統管理員授與您**CreateAssembly**許可權，才能完成安裝。  
+-   如果您不是所使用之實例的系統管理員 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須讓系統管理員授與您**CreateAssembly**許可權，才能完成安裝。  
   
 ## <a name="building-the-sample"></a>建立範例  
   
@@ -79,7 +78,7 @@ ms.locfileid: "73637642"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-8.  將[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令腳本複製到檔案中，並將`test.sql`它儲存成範例目錄中的。  
+8.  將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存成 `test.sql` 範例目錄中的。  
   
 9. 使用下列命令來執行測試指令碼  
   

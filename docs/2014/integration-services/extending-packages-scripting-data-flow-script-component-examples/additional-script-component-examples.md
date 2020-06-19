@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f0cab4451b78b662a426612aee0f0a72aae8cf80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0ad216a5c016cf02fc20a67e80b6efb10435c18
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968605"
 ---
 # <a name="additional-script-component-examples"></a>額外的指令碼元件範例
   指令碼元件是您可以在封裝的資料流程中使用的可設定工具，幾乎可滿足 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所含的來源、轉換和目的地未能達成的任何需求。 本節包含指令碼元件程式碼範例，以示範各種類型的可用功能。  

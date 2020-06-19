@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b450d603ec1d7b8c930a0361d8070519b6a2a91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068894"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940597"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>在 Analysis Services 中設定伺服器屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的預設伺服器組態屬性。 每一個執行個體都有自己的組態屬性，可以在同一部伺服器上與其他執行個體分開設定。  
@@ -82,10 +81,10 @@ ms.locfileid: "66068894"
 |[一般屬性](general-properties.md)|一般屬性是基本和進階屬性，並且包含定義資料目錄、備份目錄和其他伺服器行為的屬性。|  
 |[資料採礦屬性](data-mining-properties.md)|資料採礦屬性控制要啟用和停用哪些資料採礦演算法。 依預設，會啟用所有的演算法。|  
 |DSO|不再支援 DSO。 DSO 屬性會遭到忽略。|  
-|[功能屬性](feature-properties.md)|與產品功能有關的功能屬性，大部分是進階屬性，包含控制伺服器執行個體間之連結的屬性。|  
+|[Feature 屬性](feature-properties.md)|與產品功能有關的功能屬性，大部分是進階屬性，包含控制伺服器執行個體間之連結的屬性。|  
 |[[內容] 屬性](filestore-properties.md)|檔案存放區屬性僅供進階使用。 其中包含進階記憶體管理設定。|  
 |[鎖定管理員屬性](lock-manager-properties.md)|鎖定管理員屬性定義與鎖定和逾時有關的伺服器行為。 這些屬性大部分僅供進階使用。|  
-|[記錄屬性](log-properties.md)|記錄屬性控制在伺服器上是否記錄事件、記錄於何處以及如何記錄。 這包含錯誤記錄、例外狀況記錄、飛行記錄器、查詢記錄和追蹤。|  
+|[記錄檔屬性](log-properties.md)|記錄屬性控制在伺服器上是否記錄事件、記錄於何處以及如何記錄。 這包含錯誤記錄、例外狀況記錄、飛行記錄器、查詢記錄和追蹤。|  
 |[記憶體屬性](memory-properties.md)|記憶體屬性控制伺服器如何使用記憶體。 這些屬性主要是供進階使用。|  
 |[網路屬性](network-properties.md)|網路屬性控制與網路有關的伺服器行為，包含控制壓縮和二進位 XML 的屬性。 這些屬性大部分僅供進階使用。|  
 |[OLAP 屬性](olap-properties.md)|OLAP 屬性控制 Cube 和維度處理、延遲處理、資料快取，以及查詢行為。 這些包含基本和進階屬性。|  

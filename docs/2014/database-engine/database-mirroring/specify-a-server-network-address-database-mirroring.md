@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5da49fee774b7f70a0ab6108ee302d0ee28cec1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755061"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933932"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>指定伺服器網路位址 (資料庫鏡像)
   設定資料庫鏡像工作階段時，需要有每一個伺服器執行個體的伺服器網路位址。 伺服器執行個體的伺服器網路位址必須透過提供系統位址和執行個體所接聽的通訊埠編號，以明確識別該執行個體。  
@@ -32,11 +31,11 @@ ms.locfileid: "62755061"
 ##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a>伺服器網路位址的語法  
  伺服器網路位址的語法採用下列格式：  
   
- TCP：<strong>//</strong>*\<系統-位址>* <strong>：<strong>*\<埠>* 
+ TCP：<strong>//</strong> *\<system-address>* <strong> ：<strong>*\<port>* 
   
- where  
+ 其中  
   
--   系統位址>是可明確識別目的地電腦系統的字串。 * \< * 伺服器位址通常是系統名稱 (如果系統位於同一個網域內)、完整網域名稱或 IP 位址。  
+-   *\<system-address>* 是可明確識別目的地電腦系統的字串。 伺服器位址通常是系統名稱 (如果系統位於同一個網域內)、完整網域名稱或 IP 位址。  
   
     -   如果系統位於同一個網域，您可以使用電腦系統的名稱，例如 `SYSTEM46`。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62755061"
         > [!NOTE]  
         >  如需有關如何尋找完整網域名稱的詳細資訊，請參閱本主題稍後的「尋找完整網域名稱」。  
   
--   埠>是夥伴伺服器實例的鏡像端點所使用的通訊埠編號。 * \< * 如需指定端點的資訊，請參閱 [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
+-   *\<port>* 這是夥伴伺服器實例的鏡像端點所使用的通訊埠編號。 如需指定端點的資訊，請參閱 [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
      資料庫鏡像端點可以使用電腦系統上任何可用的通訊埠。 電腦系統上的每個通訊埠編號必須只與一個端點產生關聯，而且每個端點會與單一伺服器執行個體產生關聯，因此相同伺服器上的不同伺服器執行個體會利用不同通訊埠接聽不同端點。 因此，當您設定資料庫鏡像工作階段時，在伺服器網路位址中指定的通訊埠，會永遠把工作階段導向到端點與該通訊埠產生關聯的伺服器執行個體。  
   

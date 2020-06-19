@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af647a446366ea03063ea0deb84603a3f8f90dd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 566f7ab8bc23eee58b133acb2e740cab1647b0ec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896126"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968616"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>引發並在自訂工作中定義事件
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段引擎提供事件的集合，可以顯示驗證與執行工作時的工作進度狀態。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面會定義這些事件，而且是以 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> 方法的參數提供給工作。  
@@ -43,7 +42,7 @@ ms.locfileid: "62896126"
   
  下列程式碼範例會示範自訂工作的 `InitializeTask` 方法，其中建立了兩個自訂事件並設定其屬性。 然後會將新事件加入 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 集合。  
   
- 第一個自訂事件的 *eventName* 為 "**OnBeforeIncrement**"，而 *description* 為「**更新初始值之後觸發**」。 下一個參數 `true` 值表示此事件應允許建立事件處理常式容器以處理事件。 事件處理常式是提供封裝中結構與工作服務的容器，就像封裝、時序、ForLoop 和 ForEachLoop 等其他容器一樣。 當*allowEventHandlers*參數是`true`時， <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>會為事件建立物件。 為事件定義的任何參數現在可供 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 的變數集合中之 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 使用。  
+ 第一個自訂事件的 *eventName* 為 "**OnBeforeIncrement**"，而 *description* 為「**更新初始值之後觸發**」。 下一個參數 `true` 值表示此事件應允許建立事件處理常式容器以處理事件。 事件處理常式是提供封裝中結構與工作服務的容器，就像封裝、時序、ForLoop 和 ForEachLoop 等其他容器一樣。 當*allowEventHandlers*參數是時 `true` ， <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 會為事件建立物件。 為事件定義的任何參數現在可供 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 的變數集合中之 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 使用。  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  

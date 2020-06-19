@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bad0f660bb6cb08de51a52a951bddca8a6c7eb2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 092c2a56af6ed607b565f6a489f834136ccdb789
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000132"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 篩選追蹤
   您可以為 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤事件的資料行定義篩選，以便只擷取您感興趣的事件資訊。 追蹤篩選可降低追蹤對系統效能的影響，因為擷取的追蹤事件減少了。 透過篩選，也能讓追蹤輸出較容易讀取，因為需進行搜尋的事件數目也比較少。  

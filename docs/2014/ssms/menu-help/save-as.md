@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 441ed50984ef6bbfcdaec47be0fb29aa37cf69c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510317"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062010"
 ---
 # <a name="save-as"></a>另存新檔
-  使用此對話方塊，即可以指定的檔案格式將目前項目的執行個體儲存在指定的位置。 若要顯示此對話方塊，請按一下 [檔案]**功能表上的** **[** **儲存** * \<* 盤案>] （其中* \<file>* 是目前專案的名稱），或在程式碼編輯器中按下 ALT + F。  
+  使用此對話方塊，即可以指定的檔案格式將目前項目的執行個體儲存在指定的位置。 若要顯示此對話方塊，請按一下 [檔案] 功能表上的 [**另存** *\<file>* **As**新檔] （其中**File** *\<file>* 是目前專案的名稱），或在程式碼編輯器中按下 ALT + F。  
   
 ## <a name="central-panel"></a>中央面板  
  **儲存於**  

@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 7c4df482-4a83-4da0-802b-3637b507693a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 801eb84df08837ec8e49b6bb0e28fc1f1115e674
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7195311fefe3f0f1b7b4d6d789aa8d8487bc3bfe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933499"
 ---
 # <a name="issabort-ole-db"></a>ISSAbort (OLE DB)
-  **ISSAbort**介面（在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者中公開）提供了[ISSAbort：： Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md)方法，可用於取消目前的資料列集，加上使用命令批次處理的任何命令，這是一開始產生資料列集，而且尚未完成執行。  
+  **ISSAbort**介面（在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者中公開）提供了[ISSAbort：： Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md)方法，可用於取消目前的資料列集，加上使用命令批次處理的任何命令，這是一開始產生資料列集，而且尚未完成執行。  
   
- **ISSAbort** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是原生用戶端提供者特定的介面，可在**ICommand：： Execute**或**IOpenRowset：： OpenRowset**所傳回的**IMultipleResults**物件上使用**QueryInterface** 。  
+ **ISSAbort**是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端提供者特定的介面，可在**ICommand：： Execute**或**IOpenRowset：： OpenRowset**所傳回的**IMultipleResults**物件上使用**QueryInterface** 。  
   
 ## <a name="in-this-section"></a>本節內容  
   

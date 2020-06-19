@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41c3022d-ab13-443e-ac64-ba1d64584f79
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8beb6998d78ad9a113ce18323133de7ed39ead56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f6a17e9cc6cd3beb0626c53f03c2d83edc7c4ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061689"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>將伺服器設定為執行 Off By Default 原則
   現在，您有一個名為 Off By Default 的原則。 在這項工作中，您將檢查伺服器是否符合這個原則的需求。  

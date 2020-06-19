@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f23bc2e0f21f15c0af1a26d64e528c65632d75a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068472"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940419"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>指定資料行內容和資料類型 (資料採礦精靈)
   使用 **[指定資料行的內容和資料類型]** 頁面，針對每個在精靈的前一頁上所選取的資料行指定使用方式和資料類型。 如果想要忽略資料行，請按一下 **[上一步]** 返回 **[指定培訓資料]**，然後清除所有核取方塊。  
@@ -50,7 +49,7 @@ ms.locfileid: "66068472"
 |Discretized|指定資料行包含的數字值已離散化，或可以視為離散的值。|  
 |Discrete|指定資料行包含文字或其他非數字的值。|  
   
- **資料類型**  
+ **Data type**  
  指定資料行的資料類型。  
   
  有下列可用的值：  
@@ -65,7 +64,7 @@ ms.locfileid: "66068472"
   
 -   `Text`  
   
- **Detect**  
+ **偵測**  
  分析所有數字資料行中的資料範例。 以推薦的內容類型取代指定的 **[內容類型]** 值。  
   
 ## <a name="see-also"></a>另請參閱  

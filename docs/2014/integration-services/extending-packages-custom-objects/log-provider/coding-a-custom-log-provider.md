@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a0f7e10a39896efffa5159911ebd753b1d649e45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d055769a8f854b58e455eec873c1c94a7f740393
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768577"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968728"
 ---
 # <a name="coding-a-custom-log-provider"></a>撰寫自訂記錄提供者的程式碼
   建立繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> 基底類別的類別，並將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 屬性 (attribute) 套用到類別之後，必須覆寫基底類別的屬性 (properties) 與方法的實作，才可提供自訂功能。  
@@ -132,7 +131,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>寫入記錄項目  
- 每次封裝中的物件呼叫其中一個事件介面上的 Fire<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>event> 方法來引發事件時，就會呼叫 \< 方法。 每個引發的事件都會帶有關於其內容且通常是說明訊息的資訊。 不過，並不是每次呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法都包括每個方法參數的資訊。 例如，有些其名稱字面意義明白的標準事件並未提供 MessageText，而且 DataCode 與 DataBytes 是為了提供選擇性的補充資訊。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>每當封裝中的物件透過呼叫 \<event> 其中一個事件介面上的引發方法來引發事件時，就會呼叫方法。 每個引發的事件都會帶有關於其內容且通常是說明訊息的資訊。 不過，並不是每次呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法都包括每個方法參數的資訊。 例如，有些其名稱字面意義明白的標準事件並未提供 MessageText，而且 DataCode 與 DataBytes 是為了提供選擇性的補充資訊。  
   
  下列程式碼範例會實作 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法，並將事件寫入上一節所開啟的資料流。  
   

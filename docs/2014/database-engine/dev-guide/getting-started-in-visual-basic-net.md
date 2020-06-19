@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1cbb9f35-13d8-40a1-9685-72cb1b589947
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bfaf73d82eaa61753d958941cb1b633f8098e975
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 224093839e8e464f731040d3634c8b252796cfed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781559"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933599"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Visual Basic .NET 使用者入門
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 的通用執行階段程式庫所支援其中一種 Managed 程式語言。 本文件集的許多範例都是以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 撰寫。 您可以使用 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 和 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 來開發 SMO 應用程式。  

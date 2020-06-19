@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 926a410ce7b91c5c4683856729a01353b2d37d00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140401"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061878"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在條件窗格中合併搜尋條件的慣例 (Visual Database Tools)
   您可以建立使用任意多個 AND 和 OR 運算子連結，包含任何搜尋條件的查詢。 查詢中如有使用 AND 與 OR 子句組合比較複雜，因此建議能夠先了解這類查詢在您執行時的解譯方式，以及這類查詢在 [[準則窗格]](visual-database-tools.md) 及 [SQL 窗格](sql-pane-visual-database-tools.md)中的表示方式。  

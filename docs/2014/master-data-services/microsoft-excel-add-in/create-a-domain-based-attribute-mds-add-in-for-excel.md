@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 296ace8d97269d80179d437b1033b92196d6adc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93a22979296e397ebe9c28a014913ca9da592ee6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478979"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961318"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>建立網域屬性 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當系統管理員想要將資料行中的值限制為一組特定的值時，可以建立網域屬性。  
@@ -25,7 +24,7 @@ ms.locfileid: "65478979"
 > [!NOTE]  
 >  如果使用者在受條件約束的資料行中輸入值，而不是從清單中選取，在發行時 **$InputStatus$** 資料行中會顯示錯誤。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理]**** 和總管**** 功能區域的權限。  
@@ -52,7 +51,7 @@ ms.locfileid: "65478979"
   
 6.  如果您在上一個步驟中選擇 [選取的資料行]****，請在 [新實體名稱]**** 方塊中輸入新實體的名稱。 此名稱可以與資料行 (屬性) 名稱相同。  
   
-7.  按一下 [確定]  。 資料行中的每個資料格現在都有一個可供使用者選擇的值清單。  
+7.  按一下 [確定]。 資料行中的每個資料格現在都有一個可供使用者選擇的值清單。  
   
 ## <a name="next-steps"></a>後續步驟  
   
