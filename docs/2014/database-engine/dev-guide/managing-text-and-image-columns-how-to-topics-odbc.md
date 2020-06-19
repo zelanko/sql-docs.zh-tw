@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: f97333ad-e2ab-4d26-9395-741ba25f2c28
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ed9eb3e4bd081636a4f4708bbde69a53448ff1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780983"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933489"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>管理 text 和 image 資料行的使用說明主題 (ODBC)
   Microsoft® SQL Server™ ODBC 驅動程式可支援使用文字和影像參數，以及從結果集中的 text、ntext 和 image 資料行中擷取資料。  

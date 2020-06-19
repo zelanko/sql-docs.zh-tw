@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f414053bcc3f51ffc737a84a3b693fb0e924a7b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901482"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915058"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
   OLE DB 目的地會使用資料庫的資料表、檢視或 SQL 命令將資料載入各種符合 OLE DB 標準的資料庫。 例如，OLE DB 來源可以將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表中。  
@@ -45,7 +44,7 @@ ms.locfileid: "62901482"
 > [!NOTE]  
 >  OLE DB 目的地不支援參數。 如果需要執行參數化 INSERT 陳述式，請考慮 OLE DB 命令轉換。 如需相關資訊，請參閱 [OLE DB Command Transformation](transformations/ole-db-command-transformation.md)。  
   
- 當 OLE DB 目的地載入使用雙位元組字元集 (DBCS) 的資料時，如果資料存取模式未使用快速載入選項，而 OLE DB 連接管理員使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，則資料可能會損毀。 若要確定 DBCS 資料的完整性，您應該將 OLE DB 連線管理員設定為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，或使用下列其中一個快速載入存取模式：[資料表或檢視表 - 快速載入]**** 或 [資料表名稱或檢視名稱變數 - 快速載入]****。 兩個選項都可從 [OLE DB 目的地編輯器]**** 對話方塊使用。 在程式設計[!INCLUDE[ssIS](../../includes/ssis-md.md)]物件模型時，您應該將 AccessMode 屬性設定`OpenRowset Using FastLoad`為、 `OpenRowset Using FastLoad From Variable`或。  
+ 當 OLE DB 目的地載入使用雙位元組字元集 (DBCS) 的資料時，如果資料存取模式未使用快速載入選項，而 OLE DB 連接管理員使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，則資料可能會損毀。 若要確定 DBCS 資料的完整性，您應該將 OLE DB 連線管理員設定為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，或使用下列其中一個快速載入存取模式：[資料表或檢視表 - 快速載入]**** 或 [資料表名稱或檢視名稱變數 - 快速載入]****。 兩個選項都可從 [OLE DB 目的地編輯器]**** 對話方塊使用。 在程式設計 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 物件模型時，您應該將 AccessMode 屬性設定為 `OpenRowset Using FastLoad` 、或 `OpenRowset Using FastLoad From Variable` 。  
   
 > [!NOTE]  
 >  如果使用「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中的 [OLE DB 目的地編輯器]**** 對話方塊來建立 OLE DB 目的地插入資料的目的地資料表，則您可能必須手動選取新建立的資料表。 當 OLE DB 提供者 (例如 DB2 的 OLE DB 提供者) 自動將結構描述識別碼加入資料表名稱時，需進行手動選取。  
@@ -76,7 +75,7 @@ ms.locfileid: "62901482"
   
 -   指定批次中的資料列數目以及認可大小。  
   
- 部分快速載入選項儲存在 OLE DB 目的地的特定屬性中。 例如，FastLoadKeepIdentity 指定是否要保留識別值、FastLoadKeepNulls 指定是否要保留 Null 值，而 FastLoadMaxInsertCommitSize 則指定要認可為批次的資料列數目。 其他快速載入選項儲存在 FastLoadOptions 屬性的逗號分隔清單中。 如果 OLE DB 目的地使用儲存在 FastLoadOptions 中的所有快速載入選項，並列在 [ **OLE DB 目的地編輯器**] 對話方塊中，則屬性的值會設定為`TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`。 1000 值代表目的地設定為使用 1000 列的批次。  
+ 部分快速載入選項儲存在 OLE DB 目的地的特定屬性中。 例如，FastLoadKeepIdentity 指定是否要保留識別值、FastLoadKeepNulls 指定是否要保留 Null 值，而 FastLoadMaxInsertCommitSize 則指定要認可為批次的資料列數目。 其他快速載入選項儲存在 FastLoadOptions 屬性的逗號分隔清單中。 如果 OLE DB 目的地使用儲存在 FastLoadOptions 中的所有快速載入選項，並列在 [ **OLE DB 目的地編輯器**] 對話方塊中，則屬性的值會設定為 `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000` 。 1000 值代表目的地設定為使用 1000 列的批次。  
   
 > [!NOTE]  
 >  目的地的任何條件約束失敗都會使 FastLoadMaxInsertCommitSize 所定義的整個資料列批次失敗。  
@@ -85,9 +84,9 @@ ms.locfileid: "62901482"
   
 |快速載入選項|描述|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|指定要插入的大小 (以 KB 為單位)。 選項`KILOBYTES_PER_BATCH`  =  \<的格式為正整數值**>**。|  
+|KILOBYTES_PER_BATCH|指定要插入的大小 (以 KB 為單位)。 選項的格式為 `KILOBYTES_PER_BATCH`  =  \<positive integer value**> * *。|  
 |FIRE_TRIGGERS|指定是否要針對插入資料表上引發觸發程序。 選項的格式為 **FIRE_TRIGGERS**。 選項的存在代表觸發程序會引發。|  
-|ORDER|指定如何儲存輸入資料。 選項的格式為 ORDER \<資料行名稱> ASC&#124;DESC。 可以列出任何數目的資料行，也可以選擇包含排序順序。 如果省略排序順序，大量插入作業會假設資料沒有排序。<br /><br /> 注意：如果您使用 ORDER 選項依照資料表的叢集索引排序輸入資料，將可改善效能。|  
+|ORDER|指定如何儲存輸入資料。 選項的格式為 \<column name> ASC&#124;DESC。 可以列出任何數目的資料行，也可以選擇包含排序順序。 如果省略排序順序，大量插入作業會假設資料沒有排序。<br /><br /> 注意：如果您使用 ORDER 選項依照資料表的叢集索引排序輸入資料，將可改善效能。|  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字通常是以大寫字母輸入，但是這些關鍵字並不區分大小寫。  
   

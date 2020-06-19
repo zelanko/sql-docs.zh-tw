@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4db4d5b5ce08c50646857099d82964bb944bc8af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876179"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957828"
 ---
 # <a name="online-restore-sql-server"></a>線上還原 (SQL Server)
   只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 才支援線上還原。 在此版本中，檔案、分頁或分次還原預設都是在線上進行。 本主題僅與包含多個檔案或檔案群組 (若是簡單復原模式，則只有唯讀檔案群組) 的資料庫有關。  
@@ -54,17 +53,17 @@ ms.locfileid: "62876179"
     > [!NOTE]  
     >  上述資訊也同樣適用於每個離線檔案。  
   
--   比較特殊的情況是，在發出第一個還原陳述式時仍在線上，但之後因該還原陳述式而自動離線的讀取/寫入檔案。 在此情況下，您必須在第一個「還原順序」**(此順序中包含一或多個可還原、向前復原及復原資料的 RESTORE 陳述式) 期間進行記錄備份。 一般而言，必須在還原所有完整備份之後，而且在復原資料之前進行這個記錄備份。 不過，如果特定的檔案群組有多個檔案備份，則記錄備份最晚的時間點是在檔案群組離線之後的時間。 這個資料還原後的記錄備份會擷取檔案離線時的時間點。 資料還原後的記錄備份是必要的，因為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 無法使用線上記錄進行線上還原。  
+-   比較特殊的情況是，在發出第一個還原陳述式時仍在線上，但之後因該還原陳述式而自動離線的讀取/寫入檔案。 在此情況下，您必須在第一個「還原順序」  (此順序中包含一或多個可還原、向前復原及復原資料的 RESTORE 陳述式) 期間進行記錄備份。 一般而言，必須在還原所有完整備份之後，而且在復原資料之前進行這個記錄備份。 不過，如果特定的檔案群組有多個檔案備份，則記錄備份最晚的時間點是在檔案群組離線之後的時間。 這個資料還原後的記錄備份會擷取檔案離線時的時間點。 資料還原後的記錄備份是必要的，因為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 無法使用線上記錄進行線上還原。  
   
     > [!NOTE]  
     >  此外，您也可以在還原順序之前手動使檔案離線。 如需詳細資訊，請參閱本主題稍後的「使資料庫或檔案離線」。  
   
-##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a>讓資料庫或檔案離線  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> 使資料庫或檔案離線  
  如果您不想要使用線上還原，則可以使用下列其中一個方法先讓資料庫離線，再來啟動還原順序：  
   
 -   在任何復原模式下，您可以使用下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 陳述式，讓資料庫離線：  
   
-     ALTER DATABASE *database_name*設定離線  
+     ALTER DATABASE *database_name* SET OFFLINE  
   
 -   或者，也可以在完整復原模式下強制檔案或分頁還原離線，方法是使用下列 [BACKUP LOG](/sql/t-sql/statements/backup-transact-sql) 陳述式，將資料庫置於正在還原狀態：  
   
@@ -104,9 +103,9 @@ ms.locfileid: "62876179"
 -   [移除無用的檔案群組 &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;完整復原模式的檔案還原&#41;](file-restores-full-recovery-model.md)   
- [&#40;簡單復原模式的檔案還原&#41;](file-restores-simple-recovery-model.md)   
- [SQL Server&#41;還原頁面 &#40;](restore-pages-sql-server.md)   
+ [檔案還原 &#40;完整復原模式&#41;](file-restores-full-recovery-model.md)   
+ [檔案還原 &#40;簡單復原模式&#41;](file-restores-simple-recovery-model.md)   
+ [還原頁面 &#40;SQL Server&#41;](restore-pages-sql-server.md)   
  [分次還原 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [還原和復原概觀 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
   

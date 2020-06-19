@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69877c6a20e37e012925185d0b807e9579066e35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6497e3e28f5ea3347cc735292cc3502a42301ce
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754390"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933989"
 ---
 # <a name="service-accounts-configure-database-mirroring-security-wizard"></a>服務帳戶 (設定資料庫鏡像安全性精靈)
   在使用 Windows 驗證時，如果伺服器執行個體使用不同的帳戶，請指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的服務帳戶。 這些服務帳戶必須全都是網域帳戶 (在同一或受信任的網域中)。  
@@ -34,20 +33,20 @@ ms.locfileid: "62754390"
 -   [啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
 ## <a name="options"></a>選項。  
- **委託人**  
+ **主體**  
  指定主體伺服器執行個體的服務帳戶。 以大寫輸入網域名稱：  
   
- *DOMAINNAME*\\使用者*名稱*  
+ *DOMAINNAME* \\使用者*名稱*  
   
  **鏡像**  
  指定鏡像伺服器執行個體的服務帳戶。 以大寫輸入網域名稱：  
   
- *DOMAINNAME*\\使用者*名稱*  
+ *DOMAINNAME* \\使用者*名稱*  
   
  **見證**  
  指定見證伺服器執行個體的服務帳戶。 以大寫輸入網域名稱：  
   
- *DOMAINNAME*\\使用者*名稱*  
+ *DOMAINNAME* \\使用者*名稱*  
   
 ## <a name="see-also"></a>另請參閱  
  [[鏡像] 頁面 &#40;的資料庫屬性&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   

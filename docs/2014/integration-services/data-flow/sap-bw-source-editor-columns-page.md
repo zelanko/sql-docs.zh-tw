@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f0031b874b2477bff53f8f0855b557a3188c3719
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebdddaaef7c0b87ff25e639fff26a2b858ed6a1e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770891"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914359"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 來源編輯器 (資料行頁面)
-  使用 [SAP BW 來源編輯器]  的 [資料行]  頁面可以將輸出資料行對應至每個外部 (來源) 資料行。  
+  使用 [SAP BW 來源編輯器] 的 [資料行] 頁面可以將輸出資料行對應至每個外部 (來源) 資料行。  
   
  若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 來源元件，請參閱 [SAP BW 來源](sap-bw-source.md)。  
   

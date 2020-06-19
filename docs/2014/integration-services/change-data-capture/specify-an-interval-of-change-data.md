@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80126a2f1955356ae451e2f1092869e962674689
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771201"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922469"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定變更資料的間隔
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第一個工作是計算變更間隔的端點。 這些端點是 `datetime` 值，而且將會以封裝變數儲存，以便稍後在封裝中使用。  
@@ -73,7 +72,7 @@ ms.locfileid: "62771201"
   
 -   **計算開始日期和時間**。 您可以使用上次載入的結束日期和時間當做目前的開始日期和時間。 如果您將固定間隔用於累加式載入，您可以使用 Transact-SQL 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語言的 `datetime` 函數來計算這個值。 否則，您可能需要保存執行之間的端點，並使用「執行 SQL」工作或「指令碼」工作來載入前一個端點。  
   
--   **計算結束日期和時間**。 如果您將固定間隔用於累加式載入，計算目前的結束日期和時間當做開始日期和時間的位移。 同樣地，您可以使用 Transact-sql 或`datetime` [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]運算式語言的函數來計算此值。  
+-   **計算結束日期和時間**。 如果您將固定間隔用於累加式載入，計算目前的結束日期和時間當做開始日期和時間的位移。 同樣地，您可以使用 `datetime` transact-sql 或運算式語言的函數來計算此值 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  
   
  在下列程序中，變更間隔會使用固定間隔，並假設累加式載入封裝是每天執行而沒有例外。 否則，將會遺失遺漏間隔的變更資料。 間隔的起點是前天的午夜，也就是在前 24 到 48 小時之間。 間隔的結束點是昨天的午夜，也就是昨天晚上，前 0 到 24 小時之間。  
   

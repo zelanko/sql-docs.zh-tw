@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0af079eaa96fd7925ef361b398cd628641c55a3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56d267e6cc1e3343dc92dac6cc247b9308ba072d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770872"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914466"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目的地編輯器 (對應頁面)
-  使用 [SAP BW 目的地編輯器]  的 [對應]  頁面可以將輸入資料行對應至目的地資料行。  
+  使用 [SAP BW 目的地編輯器] 的 [對應] 頁面可以將輸入資料行對應至目的地資料行。  
   
  若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目的地，請參閱 [SAP BW 目的地](sap-bw-destination.md)。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62770872"
 > [!NOTE]  
 >  如果您不知道設定目的地的所有必要值，可能必須詢問 SAP 系統管理員。  
   
- [SAP BW 目的地編輯器]  的 [對應]  頁面包含兩個區段：  
+ [SAP BW 目的地編輯器] 的 [對應] 頁面包含兩個區段：  
   
 -   上方區段會顯示可用的輸入和目的地資料行，並且讓您建立這兩種資料行類型之間的對應。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62770872"
  **輸入資料行**  
  檢視您已選取的輸入資料行。  
   
- 若要將不同的輸入資料行對應至相同的目的地資料行，請在清單中選取不同的輸入資料行。 若要移除對應，請選取 [**忽略>]\<** ，即可從輸出中排除輸入資料行。  
+ 若要將不同的輸入資料行對應至相同的目的地資料行，請在清單中選取不同的輸入資料行。 若要移除對應，請選取 **\<ignore>** [從輸出中排除輸入資料行]。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論該資料行是否已經對應。  

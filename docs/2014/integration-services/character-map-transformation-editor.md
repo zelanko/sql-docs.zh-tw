@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d769112c95b88becfd1ec9bfbe7beabd0130cdd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060976"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922102"
 ---
 # <a name="character-map-transformation-editor"></a>字元對應表轉換編輯器
   使用 [字元對應表轉換編輯器]**** 對話方塊，來選取要套用至資料行資料的字串函數，以及指定對應是就地變更或加入為新資料行。  

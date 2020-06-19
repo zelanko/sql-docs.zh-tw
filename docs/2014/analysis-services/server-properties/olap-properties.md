@@ -94,13 +94,12 @@ helpviewer_keywords:
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 627aae71f32230ccbd78e7ee1c042ca78ba71985
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068864"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940607"
 ---
 # <a name="olap-properties"></a>OLAP 屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的 OLAP 伺服器屬性。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
@@ -196,7 +195,7 @@ ms.locfileid: "66068864"
  `PartitionLatencyAccuracy`  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## <a name="process"></a>Process  
+## <a name="process"></a>程序  
  `AggregationMemoryLimitMax`  
  此為帶正負號的 64 位元雙精確度浮點數屬性，定義可專用於彙總處理的記憶體數量上限 (以實體記憶體的百分比表示)。  
   

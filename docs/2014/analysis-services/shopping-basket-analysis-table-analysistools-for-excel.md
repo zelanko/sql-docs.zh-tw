@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f5d571d1a3f88f20600947d3093bf1e37feeee2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068683"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940519"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>購物籃分析 (適用於 Excel 的資料表分析工具)
   ![購物籃工具](media/tat-shopbskt.gif "購物籃工具")  
   
- [**購物籃分析**] 工具可協助`associations`您在資料中尋找。 關聯可以告訴您通常會同時購買的項目。 在資料採礦中，這項技術是稱為「*購物籃分析*」的知名方法，用來分析非常大型資料集中客戶的購買行為。 商人可能會利用這項資訊，為客戶製造建議的相關產品，並將這些產品放在網頁上、目錄中或貨架上非常接近的地方來進行促銷。  
+ [**購物籃分析**] 工具可協助您 `associations` 在資料中尋找。 關聯可以告訴您通常會同時購買的項目。 在資料採礦中，這項技術是稱為「*購物籃分析*」的知名方法，用來分析非常大型資料集中客戶的購買行為。 商人可能會利用這項資訊，為客戶製造建議的相關產品，並將這些產品放在網頁上、目錄中或貨架上非常接近的地方來進行促銷。  
   
  若要使用購物籃分析，您要分析的項目必須透過交易識別碼產生關聯。 例如，如果要分析透過網站收到的所有訂單，每張訂單都會有一個與一或多個購買項目相關聯的訂單識別碼或交易識別碼。  
   

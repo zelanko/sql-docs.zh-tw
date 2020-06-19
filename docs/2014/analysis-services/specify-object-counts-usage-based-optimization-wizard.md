@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 306c7c25-ae24-4852-ab8c-c82f68a4bc1f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e0503192c3c948110f8301c8eb375e1c8203e42f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 862be19f12308def815a280dba04f42f0cbe6878
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068240"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940309"
 ---
 # <a name="specify-object-counts-usage-based-optimization-wizard"></a>指定物件計數 (基於使用方式的最佳化精靈)
   使用 **[指定物件計數]** 頁面，即可自動計算 Cube 中的物件計數，或者手動輸入估計的計數。 「基於使用方式的最佳化精靈」會使用物件計數來估計儲存需求。  
   
 ## <a name="options"></a>選項。  
  **Cube 物件**  
- 顯示 Cube 中的維度及屬性。 在 wizard 的 [**審核匯總使用**方式`AggregationUsage` ] 頁面中，只有未將其屬性設為 [無] 的屬性會顯示出來，因為這是唯一需要指定計數的屬性。  
+ 顯示 Cube 中的維度及屬性。 在 `AggregationUsage` wizard 的 [**審核匯總使用**方式] 頁面中，只有未將其屬性設為 [無] 的屬性會顯示出來，因為這是唯一需要指定計數的屬性。  
   
  **估計計數**  
  顯示量值群組中估計的資料列數目以及資料庫維度中估計的屬性成員計數。 您可以輸入要當做估計計數使用的值，也可以計算估計計數的值。 若要計算計數值，請在欄位中輸入 0 ，然後按一下 [計數] ****。 已經顯示計數的欄位不會更新。  

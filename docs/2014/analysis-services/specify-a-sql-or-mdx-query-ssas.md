@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e4128221-3b46-48be-b0f1-d82477ce6782
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 682fbbbeba570ad067a3f702edf66959eabfd5ee
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: bce5e92aaed7a62311e989d6963e4fa5764028ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857800"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940469"
 ---
 # <a name="specify-a-sql-or-mdx-query-ssas"></a>指定 SQL 或 MDX 查詢 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您使用 SQL 或 MDX 查詢匯入資料。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  

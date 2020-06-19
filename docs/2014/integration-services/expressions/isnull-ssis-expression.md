@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: df3612392859a8b7ed6301587cf4d630b2fecf4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4f15d786ccc4ef367ff5e16065f9221991fc021
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769144"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967318"
 ---
 # <a name="isnull-ssis-expression"></a>ISNULL (SSIS 運算式)
   依據運算式是否為 Null 來傳回布林結果。  

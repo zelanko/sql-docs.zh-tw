@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e16adbad2106d623279edf9d443eae3755c7be5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754470"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934009"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>資料庫鏡像工作階段期間的角色切換 (SQL Server)
   在資料庫鏡像工作階段的內容中，主體與鏡像角色通常可以用一種稱為 *「角色切換」* 的程序交換。 在角色切換中，鏡像伺服器將充當主體伺服器的「容錯移轉夥伴」**、接替主體角色、復原其資料庫副本，並使其上線以作為新的主體資料庫。 先前的主體伺服器可用時，會擔任鏡像角色，而其資料庫即成為新的鏡像資料庫。 原則上，這些角色可以來回切換，以回應多項失敗或達成管理目的。  
@@ -292,7 +291,7 @@ ms.locfileid: "62754470"
  [資料庫鏡像期間可能發生的失敗](possible-failures-during-database-mirroring.md)   
  [將用戶端連接至資料庫鏡像會話 &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [資料庫鏡像見證](database-mirroring-witness.md)   
- [完整的資料庫還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
+ [完整資料庫還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [資料庫鏡像作業模式](database-mirroring-operating-modes.md)   
  [鏡像狀態 &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

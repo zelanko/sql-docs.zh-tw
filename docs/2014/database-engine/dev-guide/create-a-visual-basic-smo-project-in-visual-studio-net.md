@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 662916720b9953e0374bedb29890a36ced0cfac0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49eb94833d10b2e901c008092aea29eab8e4ad48
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753335"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933677"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>在 Visual Studio .NET 中建立 Visual Basic SMO 專案
   本節描述如何建立簡單的 SMO 主控台應用程式。  
@@ -32,11 +31,11 @@ ms.locfileid: "62753335"
   
 2.  在 [檔案]**** 功能表上，按一下 [新增專案]****。 [新增專案]  對話方塊隨即出現。  
   
-3.  在 [**專案類型**] 對話方塊中，選取 [ **Visual Basic**]，然後選取 [ **Windows**]。 在 [ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]已安裝的範本] 窗格中，選取 [**主控台應用程式]。**  
+3.  在 [**專案類型**] 對話方塊中，選取 [ **Visual Basic**]，然後選取 [ **Windows**]。 在 [ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 已安裝的範本] 窗格中，選取 [**主控台應用程式]。**  
   
 4.  選擇性在 [**名稱**] 欄位中，輸入新應用程式的名稱。  
   
-5.  按一下 **[確定]** 以[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]載入主控台應用程式範本。  
+5.  按一下 **[確定]** 以載入 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 主控台應用程式範本。  
   
 6.  在 [專案]**** 功能表上，選取 [新增參考]****。 [新增參考]**** 對話方塊隨即出現。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62753335"
   
      Microsoft.SqlServer.ServiceBrokerEmum.dll  
   
-9. 按一下 [開啟]  。  
+9. 按一下 [開啟] 。  
   
 10. 在 [ **View** ] 功能表上，按一下 [程式**代碼**]。-或-選取 [Module1] 視窗以顯示程式碼視窗。  
   

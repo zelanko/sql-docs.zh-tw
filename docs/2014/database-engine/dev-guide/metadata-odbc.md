@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 99133efc-b1f2-46e9-8203-d90c324a8e4c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48f2fde8280a4b309c43e292bda452091d46ee02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e206edda86a8143962a1d658d507fa88daad3e6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781227"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933479"
 ---
 # <a name="metadata-odbc"></a>中繼資料 (ODBC)
   本節討論參數、資料行結果，以及目錄中繼資料。  

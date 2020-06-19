@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a670b2e4f4a7a276f9e026cb650855c8aa2108a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74055909"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933730"
 ---
 # <a name="array-parameter-sample"></a>陣列參數範例
   有時，在資料庫中建立、更新或刪除一組資料列非常有用。 您可以使用數種方法實現此目標。 其中之一便是從用戶端將資訊的陣列，傳遞至使用 Common Language Runtime (CLR) 整合使用者自訂資料類型之伺服器上的 CLR 整合預存程序。 此類使用者自訂資料類型的性質將提供給伺服器的資料大小限制在 8000 位元組。 因此，此方法無法滿足大型或複雜的資料。 如果管理的資料較小而且簡單，則相較於呼叫每一個資料列的預存程序，此方法會更有效。 藉由傳遞陣列，對於順序重要的那些應用程式可保留資料的順序。此範例包含下列項目：  

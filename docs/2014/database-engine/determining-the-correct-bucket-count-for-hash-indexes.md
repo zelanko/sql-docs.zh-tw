@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0579a98e3302b6944f68ca449d3e7cda0ecc01d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754240"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933779"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>判斷雜湊索引的正確值區計數
   您必須在建立記憶體最佳化資料表時，指定 `BUCKET_COUNT` 參數的值。 本主題將針對判斷適合 `BUCKET_COUNT` 參數的值提出建議。 如果您無法判斷正確的值區計數，請改用非叢集索引。  不正確的 `BUCKET_COUNT` 值 (尤其是過低的值) 可能會對工作負載的效能以及資料庫的復原時間造成嚴重影響。 最好是高估值區計數。  
@@ -24,7 +23,7 @@ ms.locfileid: "62754240"
   
  如需有關非叢集雜湊索引的詳細資訊，請參閱＜ [Hash Indexes](hash-indexes.md) ＞和＜ [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)＞。  
   
- 針對記憶體最佳化的資料表上的每個雜湊索引配置一個雜湊表。 配置給索引的雜湊表大小是由`BUCKET_COUNT` [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)或[CREATE TYPE &#40;transact-sql&#41;](/sql/t-sql/statements/create-type-transact-sql)中的參數所指定。 值區計數會於內部四捨五入進位至下一個二的乘冪。 例如，指定值區計數 300,000 將產生實際值區計數 524,288。  
+ 針對記憶體最佳化的資料表上的每個雜湊索引配置一個雜湊表。 配置給索引的雜湊表大小是由 `BUCKET_COUNT` [CREATE TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)或[CREATE TYPE &#40;transact-sql&#41;](/sql/t-sql/statements/create-type-transact-sql)中的參數所指定。 值區計數會於內部四捨五入進位至下一個二的乘冪。 例如，指定值區計數 300,000 將產生實際值區計數 524,288。  
   
  如需有關貯體計數的文章和視訊的連結，請參閱 [如何判斷雜湊索引的正確貯體計數 (記憶體內 OLTP)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/)。  
   
@@ -177,7 +176,7 @@ GO
 -   如果完整索引掃描是主要倚賴效能的作業，請使用接近索引鍵值實際數目的值區計數。  
   
 ### <a name="big-tables"></a>大型資料表  
- 對於大型資料表而言，記憶體使用量可能成為問題。 例如，具有4個雜湊索引的250000000資料列資料表，每個都有一個值區計數為1000000000，而雜湊表的額外負荷為 4 \*個索引 * 1000000000 值區8個位元組 = 32 gb 的記憶體使用量。 如果針對每個索引選擇的值區計數為 2500 萬，則雜湊表的總負擔將會是 8 GB。 請注意，這是除了8個位元組的記憶體使用量以外，每個索引都會新增至每個個別的資料列，在此案例中\*為 8 \* gb （4索引8個位元組250000000資料列）。  
+ 對於大型資料表而言，記憶體使用量可能成為問題。 例如，具有4個雜湊索引的250000000資料列資料表，每個都有一個值區計數為1000000000，而雜湊表的額外負荷為4個索引 * 1000000000 值區 \* 8 個位元組 = 32 gb 的記憶體使用量。 如果針對每個索引選擇的值區計數為 2500 萬，則雜湊表的總負擔將會是 8 GB。 請注意，這是除了8個位元組的記憶體使用量以外，每個索引都會新增至每個個別的資料列，在此案例中為 8 gb （4索引 \* 8 個位元組 \* 250000000 資料列）。  
   
  完整資料表掃描通常不在 OLTP 工作負載的關鍵效能路徑中。 因此，選擇會介於記憶體使用量與點查閱和插入作業的效能之間：  
   

@@ -1,5 +1,6 @@
 ---
 title: 處理傳回碼和輸出參數（ODBC） |Microsoft Docs
+description: 深入瞭解 SQLSTATE，其中提供有關 SQL Server Native Client ODBC 驅動程式中的警告或錯誤原因的詳細資訊。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32310288b14ca49a53f68c6fd632f884fa78ec6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c0f9fadf13ae32581e66b55a0f0ea13b48d47c1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281878"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967573"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>執行預存程序 - 處理傳回碼和輸出參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,11 +49,11 @@ ms.locfileid: "81281878"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)]）程式代碼清單會建立此範例所使用的預存程式。  
+ 第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會建立此範例所使用的預存程式。  
   
  使用 odbc32.lib 編譯第二個 (C++) 程式碼清單。 然後，執行此程式。  
   
- 第三個[!INCLUDE[tsql](../../includes/tsql-md.md)]（）程式代碼清單會刪除此範例所使用的預存程式。  
+ 第三個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會刪除此範例所使用的預存程式。  
   
 ```  
 use AdventureWorks  

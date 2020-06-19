@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 713e2e507fd98f6d3d87fe60e075e587725ddaf2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee871b6cabbe6c2b2cb4f444fd1e2d42d711dfbc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890350"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957972"
 ---
 # <a name="full-database-backups-sql-server"></a>完整資料庫備份 (SQL Server)
   完整資料庫備份會備份整個資料庫。 這包括交易記錄的部分，讓完整資料庫得以在還原完整資料庫備份之後復原。 完整資料庫備份代表備份完成時的資料庫。  

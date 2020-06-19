@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 605e3be5-aeea-4573-9847-b866ed3c8bff
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 27511f209dbf73906f77c0c5b1721d3cceec287f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88a5dcd54dac7a0886d1c33d2e121af8779bf6b0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780892"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933469"
 ---
 # <a name="metadata-ole-db"></a>中繼資料 (OLE DB)
   本節描述參數中繼資料、結果集資料行中繼資料，以及結構描述資料列集中繼資料。  

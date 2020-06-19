@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd7aea63ae85a16e23ff532c7e18ace3c376a707
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921951"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957928"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>管理 suspect_pages 資料表 (SQL Server)
   本主題描述如何使用 **或** 管理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]資料表。 **suspect_pages** 資料表用於維護可疑頁面的相關資訊，有助於決定是否有必要進行還原。 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 資料表位於 [msdb 資料庫](../databases/msdb-database.md)中。  
   
  頁面視為「可疑」的條件如下：當 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 嘗試讀取資料頁時，遇到下列其中一個錯誤：  
   
--   作業系統發出之循環冗餘檢查 (CRC) 所造成的 [823 錯誤](../errors-events/mssqlserver-823-database-engine-error.md) ，例如磁碟錯誤 (某些硬體錯誤)  
+-   作業系統發出的迴圈冗余檢查（CRC）所造成的[823 錯誤](../errors-events/mssqlserver-823-database-engine-error.md)，例如磁片錯誤（某些硬體錯誤）  
   
--   [824 錯誤](../errors-events/mssqlserver-824-database-engine-error.md)，例如損毀頁 (任何邏輯錯誤)  
+-   [824 錯誤](../errors-events/mssqlserver-824-database-engine-error.md)，例如損毀頁（任何邏輯錯誤）  
   
  每一個可疑頁面的頁面識別碼都會記錄在 **suspect_pages** 資料表中。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會記錄正常處理期間 (例如下列時間) 發生的任何可疑頁面：  
   

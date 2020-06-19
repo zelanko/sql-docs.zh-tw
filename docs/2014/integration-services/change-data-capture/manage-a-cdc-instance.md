@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f29463784436918834fe94c3ac5e4a8c5420703
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c92cbb557484e3bd879e9712121b2bbc52d4732
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922909"
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 執行個體
   您可以使用 CDC 設計工具主控台來檢視有關您所建立之執行個體的資訊，並管理執行個體的操作。  
@@ -103,17 +102,17 @@ ms.locfileid: "62835596"
     -   **寫入的變更**：寫入 SQL Server 變更資料表的變更數目。  
   
  **Oracle**  
- 顯示有關 CDC 執行個體以及它與 Oracle 資料庫之連接的資訊。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵在左窗格中按一下執行個體，並選取 [屬性]  或按一下右窗格中的 [屬性]  ，開啟 [\<執行個體> 屬性] 對話方塊。  
+ 顯示有關 CDC 執行個體以及它與 Oracle 資料庫之連接的資訊。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵按一下左窗格中的實例，然後選取 [**屬性**]，或按一下右窗格中的 [**屬性**]，以開啟 [ \<instance> 屬性] 對話方塊。  
   
  如需有關這些屬性以及如何加以編輯的詳細資訊，請參閱＜ [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md)＞。  
   
  **資料表**  
- 顯示有關 CDC 執行個體中包含之資料表的資訊。 這裡也會提供資料行資訊。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵在左窗格中按一下執行個體，並選取 [屬性]  或按一下右窗格中的 [屬性]  ，開啟 [\<執行個體> 屬性] 對話方塊。  
+ 顯示有關 CDC 執行個體中包含之資料表的資訊。 這裡也會提供資料行資訊。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵按一下左窗格中的實例，然後選取 [**屬性**]，或按一下右窗格中的 [**屬性**]，以開啟 [ \<instance> 屬性] 對話方塊。  
   
  如需有關這些屬性以及如何加以編輯的詳細資訊，請參閱＜ [Edit Tables](edit-tables.md)＞。  
   
  **進階**  
- 顯示 CDC 執行個體的進階屬性和屬性值。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵在左窗格中按一下執行個體，並選取 [屬性]  或按一下右窗格中的 [屬性]  ，開啟 [\<執行個體> 屬性] 對話方塊。  
+ 顯示 CDC 執行個體的進階屬性和屬性值。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵按一下左窗格中的實例，然後選取 [**屬性**]，或按一下右窗格中的 [**屬性**]，以開啟 [ \<instance> 屬性] 對話方塊。  
   
  如需有關這些屬性以及如何加以編輯的詳細資訊，請參閱＜ [Edit the Advanced Properties](edit-the-advanced-properties.md)＞。  
   

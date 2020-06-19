@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e76005b6314f074d4f54f64d42a03b4b79dcef3a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754196"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933769"
 ---
 # <a name="allowing-partially-trusted-callers"></a>允許部分信任的呼叫端
   共用程式碼程式庫是 Common Language Runtime (CLR) 整合的一個常見狀況，其中包含使用者定義型別、預存程序、使用者定義函數、使用者定義彙總、觸發程序或公用程式類別的組件通常會由另一個組件或應用程式所存取。 要由多個應用程式所共用的程式碼程式庫必須使用強式名稱來簽署。  

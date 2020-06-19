@@ -22,18 +22,17 @@ helpviewer_keywords:
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4464b0ca035bc19695b37aea01385f737549fec1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50d0914efce0fd8b91d0a4ac2e93d01d910849e4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768394"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967202"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>連接至指令碼工作中的資料來源
   連接管理員會提供已在封裝中設定的資料來源存取權。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../connection-manager/integration-services-ssis-connections.md)。  
   
- 指令碼工作可以透過 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>Dts**物件的** 屬性來存取這些連線管理員。 在 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 集合中的每個連接管理員儲存有關如何連接至基礎資料來源的資訊。  
+ 指令碼工作可以透過 **Dts** 物件的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> 屬性來存取這些連線管理員。 在 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 集合中的每個連接管理員儲存有關如何連接至基礎資料來源的資訊。  
   
  當您呼叫連接管理員的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 方法時，如果連接管理員尚未連接，連接管理員會連接至資料來源，並傳回適當的連接或是連接資訊，供您在指令碼工作程式碼中使用。  
   
@@ -43,12 +42,12 @@ ms.locfileid: "62768394"
  您可以在程式碼中使用連接之前，先透過 <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Contains%2A> 屬性傳回的 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 集合之 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> 方法，尋找現有的連接。  
   
 > [!IMPORTANT]  
->  在指令碼工作的 Managed 程式碼中，無法呼叫傳回 Unmanaged 物件之連線管理員的 AcquireConnection 方法，例如 OLE DB 連線管理員與 Excel 連線管理員。 不過，您可以讀取這些連接管理員的 ConnectionString 屬性，並直接在程式碼中連接到資料來源，方法是使用的連接字串`OledbConnection`搭配**system.web**命名空間中的。  
+>  在指令碼工作的 Managed 程式碼中，無法呼叫傳回 Unmanaged 物件之連線管理員的 AcquireConnection 方法，例如 OLE DB 連線管理員與 Excel 連線管理員。 不過，您可以讀取這些連接管理員的 ConnectionString 屬性，並直接在程式碼中連接到資料來源，方法是使用的連接字串搭配 `OledbConnection` **system.web**命名空間中的。  
 >   
->  如果您必須呼叫會傳回 Unmanaged 物件之連線管理員的 AcquireConnection 方法，請使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連線管理員。 當您設定 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連接管理員以使用 OLE DB 提供者時，它會透過使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 來連接。 在此情況下，AcquireConnection 方法會傳回`System.Data.OleDb.OleDbConnection` ，而不是非受控物件。 若要將 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連線管理員設定成與 Excel 資料來源搭配使用，請選取 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for Jet，指定 Excel 檔案，然後在 [連線管理員]`Excel 8.0` **對話方塊的 [全部]** **頁面上輸入** (針對 Excel 97 和更新的版本)，作為 [擴充屬性]  的值。  
+>  如果您必須呼叫會傳回 Unmanaged 物件之連線管理員的 AcquireConnection 方法，請使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連線管理員。 當您設定 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連接管理員以使用 OLE DB 提供者時，它會透過使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 來連接。 在此情況下，AcquireConnection 方法會傳回， `System.Data.OleDb.OleDbConnection` 而不是非受控物件。 若要將 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連線管理員設定成與 Excel 資料來源搭配使用，請選取 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for Jet，指定 Excel 檔案，然後在 [連線管理員] 對話方塊的 [全部] 頁面上輸入 `Excel 8.0` (針對 Excel 97 和更新的版本)，作為 [擴充屬性] 的值。  
   
 ## <a name="connections-example"></a>連接範例  
- 在下列程式碼範例中，示範如何從指令碼工作存取連接管理員。 範例假設您已建立和設定名為 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]Test ADO.NET Connection**的** 連接管理員，以及名為 **Test Flat File Connection** 的一般檔案連線管理員。 請注意，[!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連接管理員會傳回您可立即用以連接至資料來源的 `SqlConnection` 物件。 另一方面，一般檔案連接管理員只會傳回包含路徑與檔案名稱的字串。 您必須使用 `System.IO` 命名空間的方法，以開啟和處理一般檔案。  
+ 在下列程式碼範例中，示範如何從指令碼工作存取連接管理員。 範例假設您已建立和設定名為 **Test ADO.NET Connection** 的 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連接管理員，以及名為 **Test Flat File Connection** 的一般檔案連線管理員。 請注意，[!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連接管理員會傳回您可立即用以連接至資料來源的 `SqlConnection` 物件。 另一方面，一般檔案連接管理員只會傳回包含路徑與檔案名稱的字串。 您必須使用 `System.IO` 命名空間的方法，以開啟和處理一般檔案。  
   
 ```vb  
 Public Sub Main()  

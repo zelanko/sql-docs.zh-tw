@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64a693738df444e91fa4c9277b8a7dbc3eaca1a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637651"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933558"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 範例
   Hello World Ready 範例示範涉及建立、部署及測試以簡單全球化整備 Common Language Runtime (CLR) 整合為基礎之預存程序的基本作業。 全球化整備元件可以輕鬆地當地語系化成全世界不同市場的不同語言，而不變更元件的原始程式碼。 此範例還示範如何透過輸出參數，以及透過由預存程序動態建構及傳回至用戶端的記錄來傳回資料。此範例與 Hello World 範例幾乎相同，但它可更容易、更安全地當地語系化此應用程式。 若要變更當地語系化文字，需要依照以下進行：  
@@ -78,7 +77,7 @@ ms.locfileid: "73637651"
   
 4.  在 c:\MySample 中，建立 `messages.resx` 檔案並將範例程式碼複製到此檔案中。  
   
-5.  在 c:\MySample 中，將檔案`messages.de.resx`儲存`messages.resx`在變更行`messages.de.resx`之後，以建立檔案  
+5.  在 c:\MySample 中，將檔案 `messages.de.resx` 儲存在 `messages.resx` `messages.de.resx` 變更行之後，以建立檔案  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -86,7 +85,7 @@ ms.locfileid: "73637651"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  在 c:\MySample 中，將檔案`messages.es.resx`儲存`messages.resx`在變更行`messages.es.resx`之後，以建立檔案  
+6.  在 c:\MySample 中，將檔案 `messages.es.resx` 儲存在 `messages.resx` `messages.es.resx` 變更行之後，以建立檔案  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -94,7 +93,7 @@ ms.locfileid: "73637651"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  在 c:\MySample 中，將檔案`messages.fr.resx`儲存`messages.resx`在變更行`messages.fr.resx`之後，以建立檔案  
+7.  在 c:\MySample 中，將檔案 `messages.fr.resx` 儲存在 `messages.resx` `messages.fr.resx` 變更行之後，以建立檔案  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -102,7 +101,7 @@ ms.locfileid: "73637651"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  在 c:\MySample 中，將檔案`messages.fr-FR.resx`儲存`messages.resx`在變更行`messages.fr-FR.resx`之後，以建立檔案  
+8.  在 c:\MySample 中，將檔案 `messages.fr-FR.resx` 儲存在 `messages.resx` `messages.fr-FR.resx` 變更行之後，以建立檔案  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -110,7 +109,7 @@ ms.locfileid: "73637651"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. 在 c:\MySample 中，將檔案`messages.it.resx`儲存`messages.resx`在變更行`messages.it.resx`之後，以建立檔案  
+9. 在 c:\MySample 中，將檔案 `messages.it.resx` 儲存在 `messages.resx` `messages.it.resx` 變更行之後，以建立檔案  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -118,7 +117,7 @@ ms.locfileid: "73637651"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. 在 c:\MySample 中，將檔案`messages.ja.resx`儲存`messages.resx`在變更行`messages.ja.resx`之後，以建立檔案  
+10. 在 c:\MySample 中，將檔案 `messages.ja.resx` 儲存在 `messages.resx` `messages.ja.resx` 變更行之後，以建立檔案  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -142,7 +141,7 @@ ms.locfileid: "73637651"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-16. 將[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令腳本複製到檔案中，並將`test.sql`它儲存成範例目錄中的。  
+16. 將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存成 `test.sql` 範例目錄中的。  
   
 17. 使用下列命令來執行測試指令碼  
   

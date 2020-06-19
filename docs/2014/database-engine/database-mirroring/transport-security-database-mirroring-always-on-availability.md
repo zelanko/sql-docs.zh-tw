@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 944f66f3a08ff008720d78802aadfb0fee3801e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754290"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933883"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 (SQL Server)
   傳輸安全性牽涉到驗證，以及對資料庫間交換的訊息進行加密 (選擇性)。 對於資料庫鏡像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]而言，驗證與加密是針對資料庫鏡像端點所設定。 如需資料庫鏡像端點的簡介，請參閱 [資料庫鏡像端點 &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)。  
@@ -65,7 +64,7 @@ ms.locfileid: "62754290"
   
 |ALGORITHM 值|描述|  
 |---------------------|-----------------|  
-|RC4|指定端點必須使用 RC4 演算法。 這是預設值。<br /><br /> 注意： RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。|  
+|RC4|指定端點必須使用 RC4 演算法。 此為預設值。<br /><br /> 注意： RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。|  
 |AES|指定端點必須使用 AES 演算法。|  
 |AES RC4|指定這兩個端點必須與這個偏好 AES 演算法的端點針對加密演算法進行交涉。|  
 |RC4 AES|指定這兩個端點必須與這個偏好 RC4 演算法的端點針對加密演算法進行交涉。|  

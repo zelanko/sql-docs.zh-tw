@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91f12b0d97d2e2065c5bb08d175253c22dffb032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755250"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933690"
 ---
 # <a name="clr-triggers"></a>CLR 觸發程序
   因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已與 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 整合，所以您可以使用任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 語言建立 CLR 觸發程序。 本節涵蓋使用 CLR 整合實作之觸發程序的特定資訊。 如需觸發程式的完整討論，請參閱[DDL 觸發](../../relational-databases/triggers/ddl-triggers.md)程式。  
@@ -49,7 +48,7 @@ ms.locfileid: "62755250"
   
 -   存取受 DDL 陳述式的執行所影響之資料庫物件的相關資訊。  
   
- 這些功能可以在查詢語言中自動提供，或由 `SqlTriggerContext` 類別提供。 如需 CLR 整合的優點，以及在 managed 程式碼和[!INCLUDE[tsql](../../includes/tsql-md.md)]之間選擇的詳細資訊，請參閱[CLR 整合的總覽](../../relational-databases/clr-integration/clr-integration-overview.md)。  
+ 這些功能可以在查詢語言中自動提供，或由 `SqlTriggerContext` 類別提供。 如需 CLR 整合的優點，以及在 managed 程式碼和之間選擇的詳細資訊 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，請參閱[CLR 整合的總覽](../../relational-databases/clr-integration/clr-integration-overview.md)。  
   
 ## <a name="using-the-sqltriggercontext-class"></a>使用 SqlTriggerContext 類別  
  `SqlTriggerContext` 類別無法公開建構，而是僅可藉由存取 CLR 觸發程序主體內的 `SqlContext.TriggerContext` 屬性來取得。 藉由呼叫 `SqlTriggerContext` 屬性，可從作用中的 `SqlContext` 取得 `SqlContext.TriggerContext` 類別：  
@@ -480,7 +479,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- 在[!INCLUDE[tsql](../../includes/tsql-md.md)]中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立觸發程式的語句如下所示，並假設元件**SQLCLRTest**已經在目前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料庫中註冊。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]在中建立觸發程式的語句 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如下所示，並假設元件**SQLCLRTest**已經在目前的資料庫中註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ```  
 CREATE TRIGGER EmailAudit  

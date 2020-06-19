@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00a5db60a0bccdd3deec1d1ac845e926b6af5fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e73e11c582a2a8fc310423551e6e618718e375a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637752"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933693"
 ---
 # <a name="clr-transactions-sample"></a>CLR 交易範例
   此範例會示範如何使用位於 `System.Transactions` 命名空間內的 Managed API 來控制交易。 特別的是，`System.Transactions.TransactionScope` 類別是用來建立交易界限，以確保除非有足夠庫存可應付要求，否則不調整庫存數字，而且如果有足夠庫存，則庫存是以不可部分完成的方式從某個位置轉移到另一個位置。 示範在分散式交易中自動註冊，其方式是將庫存的變更記錄到儲存在另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的稽核資料庫。  
@@ -52,7 +51,7 @@ ms.locfileid: "73637752"
   
 -   AdventureWorks 資料庫必須安裝在您所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。  
   
--   如果您不是所使用之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的系統管理員，則必須讓系統管理員授與您**CreateAssembly**許可權，才能完成安裝。  
+-   如果您不是所使用之實例的系統管理員 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須讓系統管理員授與您**CreateAssembly**許可權，才能完成安裝。  
   
 ## <a name="building-the-sample"></a>建立範例  
   
@@ -78,7 +77,7 @@ ms.locfileid: "73637752"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  將[!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫安裝程式碼複製到檔案`installDB.sql`中，並將它儲存成範例目錄中的。  
+7.  將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料庫安裝程式碼複製到檔案中，並將它儲存成 `installDB.sql` 範例目錄中的。  
   
 8.  安裝稽核資料庫，方法是執行  
   
@@ -86,7 +85,7 @@ ms.locfileid: "73637752"
   
      並搭配適當的執行個體和伺服器值。  
   
-9. 將[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令腳本複製到檔案中，並將`test.sql`它儲存成範例目錄中的。  
+9. 將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存成 `test.sql` 範例目錄中的。  
   
 10. 使用下列命令來執行測試指令碼  
   

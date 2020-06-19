@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c355c95c5e6c686a063c4c32081aa0740f8e2fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901185"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915208"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>在執行階段修改 OData 來源查詢
   您可以在執行階段修改 OData 來源查詢，修改的方式是將運算式加入資料流程工作的 **[OData Source].[Query]** 屬性。  
@@ -29,7 +28,7 @@ ms.locfileid: "62901185"
   
 1.  以滑鼠右鍵按一下 [資料流程工作]  ，然後選取 [參數化...]  選項。  
   
-2.  在 [參數化]  對話方塊中，針對 [屬性] **\< 選取** [**OData 來源元件的名稱>].[Query]** 。  
+2.  在 [**參數**化] 對話方塊中，選取 **[ \<Name of the OData Source Component> ]. [Query]** 做為**屬性**。  
   
 3.  選擇是要 [建立新的參數]  還是 [使用現有的參數]  。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62901185"
   
 6.  輸入**運算式**。  
   
-7.  按一下 [確定]  。  
+7.  按一下 [確定]。  
   
 > [!WARNING]  
 >  請注意，當您使用這種方法時，您必須確定設定的值具有正確的 URL 編碼。 當從使用者輸入接受值時 (例如，從參數設定個別查詢選項值)，您必須確定這些值已經過驗證，以免可能發生 SQL 資料隱碼類型的攻擊。  

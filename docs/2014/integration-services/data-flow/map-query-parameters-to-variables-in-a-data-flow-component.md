@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 92caab2b0631c80403c7367aeb98ae001a5e11eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a1d86dce6be4ed342fe8d90fefe53649533b816
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901624"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915238"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>在資料流程元件中將查詢參數對應至變數
   將 OLE DB 來源設定為使用參數化查詢時，可以將參數對應至變數。  
@@ -43,7 +42,7 @@ ms.locfileid: "62901624"
   
 7.  按一下 **[參數]** 。  
   
-8.  在 [設定查詢參數]  對話方塊中，將 [參數]  清單中的每個參數對應至 [變數]  清單中的變數，或按一下 [**新增變數>]\<** 來建立新變數。 按一下 [確定]  。  
+8.  在 [**設定查詢參數**] 對話方塊中，將 [**參數**] 清單中的每個參數對應至 [**變數**] 清單中的變數，或按一下以建立新的變數 **\<New variable>** 。 按一下 [確定]  。  
   
     > [!NOTE]  
     >  只有封裝、「Foreach 迴圈」之類的父容器或包含資料流程元件之「資料流程」工作等範圍內的系統變數和使用者自訂變數才可用於對應。 變數的資料類型必須與指派參數之 WHERE 子句中的資料行相容。  

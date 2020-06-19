@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b69439226b55965e37f24f2131c77340ae833590
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: abd183f1e7857a811194179f14f20b9fa599fa57
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154717"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958368"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure"></a>設定 SQL Server Managed Backup 到 Azure
   本主題包含兩個教學課程：  
@@ -24,22 +23,22 @@ ms.locfileid: "70154717"
   
  在執行個體層級設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]、啟用電子郵件通知，以及監視備份活動。  
   
- 如需設定可用性群組[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的教學課程，請參閱[將 SQL Server Managed 備份設定為可用性群組的 Microsoft Azure](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)。  
+ 如需設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 可用性群組的教學課程，請參閱[將 SQL Server Managed 備份設定為可用性群組的 Microsoft Azure](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)。  
   
 ## <a name="setting-up-ss_smartbackup"></a>設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
 ### <a name="enable-and-configure-ss_smartbackup-for-a-database"></a>啟用及設定資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
  此教學課程會先說明啟用及設定資料庫 (TestDB) 之 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的必要步驟，然後再說明啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 健全狀態之監視功能的步驟。  
   
- **無權**  
+ **權限：**  
   
--   需要**db_backupoperator**資料庫角色中的成員資格、具有**ALTER ANY CREDENTIAL**許可權`EXECUTE` ，以及**sp_delete_backuphistory**預存程式的許可權。  
+-   需要**db_backupoperator**資料庫角色中的成員資格、具有**ALTER ANY CREDENTIAL**許可權，以及 `EXECUTE` **sp_delete_backuphistory**預存程式的許可權。  
   
 -   需要**smart_admin. fn_get_current_xevent_settings**函數的**SELECT**許可權。  
   
--   需要`EXECUTE` smart_admin 的許可權 **。 sp_get_backup_diagnostics**預存程式。 除此之外，因為它會從內部呼叫其他需要此權限的系統物件，所以還需要 `VIEW SERVER STATE` 權限。  
+-   需要 `EXECUTE` smart_admin 的許可權 **。 sp_get_backup_diagnostics**預存程式。 除此之外，因為它會從內部呼叫其他需要此權限的系統物件，所以還需要 `VIEW SERVER STATE` 權限。  
   
--   需要`EXECUTE`和`smart_admin.sp_backup_master_switch`預存`smart_admin.sp_set_instance_backup`程式的許可權。  
+-   需要 `EXECUTE` `smart_admin.sp_set_instance_backup` 和 `smart_admin.sp_backup_master_switch` 預存程式的許可權。  
 
 
 1.  **建立 Microsoft Azure 儲存體帳戶：** 備份會儲存在 Microsoft Azure 儲存體服務中。 如果您還沒有帳戶，您必須先建立 Microsoft Azure 儲存體帳戶。
@@ -50,9 +49,9 @@ ms.locfileid: "70154717"
   
 3.  **確定 SQL Server Agent 服務已啟動且正在執行：** 如果目前未執行，請啟動 SQL Server Agent。  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 需要在執行個體上執行 SQL Server Agent，才能執行備份作業。  您可能需要將 SQL Server Agent 設定為自動執行，以確保備份作業定期執行。  
   
-4.  **指定保留週期：** 指定備份檔案的保留週期。 保留週期的指定單位為天，範圍從 1 到 30。  
+4.  **決定保留期限：** 決定備份檔案的保留期限。 保留週期的指定單位為天，範圍從 1 到 30。  
   
-5.  **啟用和設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：** 啟動 SQL Server Management Studio，並連接到安裝資料庫的實例。 在您根據需要修改資料庫名稱、SQL 認證、保留週期及加密選項的值之後，請在查詢視窗中執行下列陳述式：  
+5.  **啟用和設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：** 啟動 SQL Server Management Studio，並連接到安裝資料庫的實例。 在您根據需要修改資料庫名稱、SQL 認證、保留週期及加密選項的值之後，請在查詢視窗中執行下列陳述式：  
   
      如需建立憑證以進行加密的詳細資訊，請參閱[建立加密備份](create-an-encrypted-backup.md)中的**建立備份憑證**步驟。  
   
@@ -73,7 +72,7 @@ ms.locfileid: "70154717"
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 已在您指定的資料庫上啟用。 資料庫上的備份作業可能需要 15 分鐘才會開始執行。  
   
-6.  **檢閱擴充事件預設組態：** 執行下列 Transact-SQL 陳述式，以檢閱擴充事件設定。  
+6.  **檢閱延伸事件預設設定：** 執行下列 Transact-SQL 陳述式，以檢閱擴充事件設定。  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
@@ -87,7 +86,7 @@ ms.locfileid: "70154717"
   
     2.  設定 SQL Server Agent 通知使用 Database Mail。 如需詳細資訊，請參閱 [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
   
-    3.  **啟用電子郵件通知，以接收備份錯誤及警告：** 在查詢視窗中，執行下列 Transact-SQL 陳述式：  
+    3.  **啟用電子郵件通知接收備份錯誤和警告：** 從 [查詢] 視窗中，執行下列 Transact-SQL 陳述式：  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -100,7 +99,7 @@ ms.locfileid: "70154717"
   
 8.  **檢視 Microsoft Azure 儲存體帳戶中的備份檔案：** 從 SQL Server Management Studio 或 Azure 管理入口網站連接至儲存體帳戶。 您會看到裝載設定為使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的資料庫之 SQL Server 執行個體的容器。 您也會在啟用資料庫之 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的 15 分鐘內，看到資料庫和記錄備份。  
   
-9. **監視健全狀態：**  您可以透過先前設定的電子郵件通知進行監視，或主動監視記錄的事件。 以下是用於檢視事件的一些 Transact-SQL 陳述式範例：  
+9. **監視健康狀態：** 您可以透過先前設定的電子郵件通知進行監視，或主動監視記錄的事件。 以下是用於檢視事件的一些 Transact-SQL 陳述式範例：  
   
     ```  
     --  view all admin events  
@@ -150,15 +149,15 @@ ms.locfileid: "70154717"
  本節所描述的步驟是針對第一次在資料庫上設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 您可以使用相同的系統預存程式 smart_admin 來修改現有的設定 **。 sp_set_db_backup**並提供新的值。 如需詳細資訊，請參閱[SQL Server Managed Backup to Microsoft Azure-保留和儲存體設定](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)。  
   
 ### <a name="enable-ss_smartbackup-for-the-instance-with-default-settings"></a>使用預設設定啟用執行個體的   
- 本教學課程描述啟用及設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]實例 ' MyInstance ' 的步驟。\\ 其中也包括如何啟用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]健全狀態之監視功能的步驟。  
+ 本教學課程描述啟用及設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 實例 ' MyInstance ' 的步驟 \\ 。 其中也包括如何啟用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]健全狀態之監視功能的步驟。  
   
- **無權**  
+ **權限：**  
   
--   需要**db_backupoperator**資料庫角色中的成員資格、具有**ALTER ANY CREDENTIAL**許可權`EXECUTE` ，以及**sp_delete_backuphistory**預存程式的許可權。  
+-   需要**db_backupoperator**資料庫角色中的成員資格、具有**ALTER ANY CREDENTIAL**許可權，以及 `EXECUTE` **sp_delete_backuphistory**預存程式的許可權。  
   
 -   需要**smart_admin. fn_get_current_xevent_settings**函數的**SELECT**許可權。  
   
--   需要`EXECUTE` smart_admin 的許可權 **。 sp_get_backup_diagnostics**預存程式。 除此之外，因為它會從內部呼叫其他需要此權限的系統物件，所以還需要 `VIEW SERVER STATE` 權限。  
+-   需要 `EXECUTE` smart_admin 的許可權 **。 sp_get_backup_diagnostics**預存程式。 除此之外，因為它會從內部呼叫其他需要此權限的系統物件，所以還需要 `VIEW SERVER STATE` 權限。  
 
 
 1.  **建立 Microsoft Azure 儲存體帳戶：** 備份會儲存在 Microsoft Azure 儲存體服務中。 如果您還沒有帳戶，您必須先建立 Microsoft Azure 儲存體帳戶。
@@ -169,9 +168,9 @@ ms.locfileid: "70154717"
   
 3.  **確認 SQL Server Agent 服務已啟動且在執行中：** 如果目前尚未執行 SQL Server Agent，請加以啟動。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 需要在執行個體上執行 SQL Server Agent，才能執行備份作業。  您可能需要將 SQL Server Agent 設定為自動執行，以確保備份作業定期執行。  
   
-4.  **指定保留週期：** 指定備份檔案的保留週期。 保留週期的指定單位為天，範圍從 1 到 30。 在執行個體層級啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 並使用預設值之後，所有於此後所新建的資料庫，皆會繼承這些設定。 僅支援設定為完整或大量記錄復原模式的資料庫，並且會自動設定。 如果您不想設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，您可以隨時停用特定資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 您也可以在資料庫層級設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，以變更特定資料庫的設定。  
+4.  **決定保留期限：** 決定備份檔案的保留期限。 保留週期的指定單位為天，範圍從 1 到 30。 在執行個體層級啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 並使用預設值之後，所有於此後所新建的資料庫，皆會繼承這些設定。 僅支援設定為完整或大量記錄復原模式的資料庫，並且會自動設定。 如果您不想設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，您可以隨時停用特定資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 您也可以在資料庫層級設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，以變更特定資料庫的設定。  
   
-5.  **啟用和設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：** 啟動 SQL Server Management Studio，並連接到 SQL Server 的實例。 在您根據需要修改資料庫名稱、SQL 認證、保留週期及加密選項的值之後，請在查詢視窗中執行下列陳述式：  
+5.  **啟用和設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：** 啟動 SQL Server Management Studio，並連接到 SQL Server 的實例。 在您根據需要修改資料庫名稱、SQL 認證、保留週期及加密選項的值之後，請在查詢視窗中執行下列陳述式：  
   
      如需建立憑證以進行加密的詳細資訊，請參閱[建立加密備份](create-an-encrypted-backup.md)中的**建立備份憑證**步驟。  
   
@@ -216,7 +215,7 @@ ms.locfileid: "70154717"
   
     2.  設定 SQL Server Agent 通知使用 Database Mail。 如需詳細資訊，請參閱 [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
   
-    3.  **啟用電子郵件通知，以接收備份錯誤及警告：** 在查詢視窗中，執行下列 Transact-SQL 陳述式：  
+    3.  **啟用電子郵件通知接收備份錯誤和警告：** 從 [查詢] 視窗中，執行下列 Transact-SQL 陳述式：  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -229,7 +228,7 @@ ms.locfileid: "70154717"
   
 9. **檢視 Microsoft Azure 儲存體帳戶中的備份檔案：** 從 SQL Server Management Studio 或 Azure 管理入口網站連接至儲存體帳戶。 您會看到裝載設定為使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的資料庫之 SQL Server 執行個體的容器。 您也會在建立新的資料庫之後的 15 分鐘內，看到資料庫和記錄備份。  
   
-10. **監視健全狀態：**  您可以透過先前設定的電子郵件通知進行監視，或主動監視記錄的事件。 以下是用於檢視事件的一些 Transact-SQL 陳述式範例：  
+10. **監視健康狀態：** 您可以透過先前設定的電子郵件通知進行監視，或主動監視記錄的事件。 以下是用於檢視事件的一些 Transact-SQL 陳述式範例：  
   
     ```  
     --  view all admin events  

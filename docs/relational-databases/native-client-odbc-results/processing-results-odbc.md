@@ -1,5 +1,6 @@
 ---
 title: 處理結果（ODBC） |Microsoft Docs
+description: 瞭解如何處理 SQL Server 在 ODBC 應用程式提交 SQL 語句時傳回的資料。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39dafbb865ef951356bb01c4fd8f646bf943346b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53c7b25cfe1429e18ee944f296ca8ebe6b50ce17
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967543"
 ---
 # <a name="processing-results-odbc"></a>處理結果 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,9 +38,9 @@ ms.locfileid: "81304579"
   
  每個 INSERT、UPDATE 和 DELETE 陳述式都會傳回只包含受到修改影響之資料列數目的結果集。 當應用程式呼叫[SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)時，就可以使用此計數。 ODBC 3。*x*應用程式必須呼叫**SQLRowCount**來取得結果集或[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) ，才能將它取消。 當應用程式執行包含多個 INSERT、UPDATE 或 DELETE 子句的批次或預存程式時，必須使用**SQLRowCount**來處理每個修改語句的結果集，或使用**SQLMoreResults**來取消。 在批次或預存程序中加入 SET NOCOUNT ON 陳述式可以取消這些計數。  
   
- Transact-SQL 包括 SET NOCOUNT 陳述式。 當 NOCOUNT 選項設定為 on 時，SQL Server 不會傳回受語句影響的資料列計數，而**SQLRowCount**會傳回0。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式版本引進驅動程式特有的[SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)選項 SQL_SOPT_SS_NOCOUNT_STATUS，以報告 NOCOUNT 選項為開啟或關閉。 每當**SQLRowCount**傳回0時，應用程式應該測試 SQL_SOPT_SS_NOCOUNT_STATUS。 如果傳回 SQL_NC_ON，則**SQLRowCount**中0的值只表示 SQL Server 未傳回資料列計數。 如果傳回 SQL_NC_OFF，則表示 NOCOUNT 是 OFF，而**SQLRowCount**的值則表示語句不會影響任何資料列。 當 SQL_SOPT_SS_NOCOUNT_STATUS SQL_NC_OFF 時，應用程式不應該顯示**SQLRowCount**的值。 大型批次或預存程序可能包含多個 SET NOCOUNT 陳述式，因此，程式設計人員無法假設 SQL_SOPT_SS_NOCOUNT_STATUS 仍為常數。 每次**SQLRowCount**傳回0時，應該測試此選項。  
+ Transact-SQL 包括 SET NOCOUNT 陳述式。 當 NOCOUNT 選項設定為 on 時，SQL Server 不會傳回受語句影響的資料列計數，而**SQLRowCount**會傳回0。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式版本引進驅動程式特有的[SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)選項 SQL_SOPT_SS_NOCOUNT_STATUS，以報告 NOCOUNT 選項為開啟或關閉。 每當**SQLRowCount**傳回0時，應用程式應該測試 SQL_SOPT_SS_NOCOUNT_STATUS。 如果傳回 SQL_NC_ON，則**SQLRowCount**中0的值只表示 SQL Server 未傳回資料列計數。 如果傳回 SQL_NC_OFF，則表示 NOCOUNT 是 OFF，而**SQLRowCount**的值則表示語句不會影響任何資料列。 當 SQL_SOPT_SS_NOCOUNT_STATUS SQL_NC_OFF 時，應用程式不應該顯示**SQLRowCount**的值。 大型批次或預存程序可能包含多個 SET NOCOUNT 陳述式，因此，程式設計人員無法假設 SQL_SOPT_SS_NOCOUNT_STATUS 仍為常數。 每次**SQLRowCount**傳回0時，應該測試此選項。  
   
- 其他數個 Transact-SQL 陳述式會在訊息 (而非結果集) 中傳回其資料。 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式收到這些訊息時，它會傳回 SQL_SUCCESS_WITH_INFO，讓應用程式知道有參考用訊息。 然後，應用程式可以呼叫**SQLGetDiagRec**來取得這些訊息。 使用此種方式運作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式為：  
+ 其他數個 Transact-SQL 陳述式會在訊息 (而非結果集) 中傳回其資料。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式收到這些訊息時，它會傳回 SQL_SUCCESS_WITH_INFO，讓應用程式知道有參考用訊息。 然後，應用程式可以呼叫**SQLGetDiagRec**來取得這些訊息。 使用此種方式運作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式為：  
   
 -   DBCC  
   
@@ -51,7 +52,7 @@ ms.locfileid: "81304579"
   
 -   RAISERROR  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會在嚴重性為11（含）以上的 RAISERROR 上傳回 SQL_ERROR。 如果 RAISERROR 的嚴重性為 19 以上，也會中斷連接。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會在嚴重性為11（含）以上的 RAISERROR 上傳回 SQL_ERROR。 如果 RAISERROR 的嚴重性為 19 以上，也會中斷連接。  
   
  若要從 SQL 陳述式處理結果集，應用程式會：  
   

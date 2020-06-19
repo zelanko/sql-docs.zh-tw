@@ -1,5 +1,6 @@
 ---
 title: 執行查詢（ODBC） |Microsoft Docs
+description: ODBC 應用程式可以藉由初始化連接控制碼並連接到資料來源，在 SQL Server 實例上執行語句。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93984308c9b661af8e7263ed1c3c0a54e1b35eab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d704a1231ae61776ea2f99679517100932c26a27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297992"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967559"
 ---
 # <a name="executing-queries-odbc"></a>執行查詢 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  當 ODBC 應用程式將連接控制代碼初始化並連接資料來源後，會在連接控制代碼上配置一個或多個陳述式控制代碼。 然後，應用程式可以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在語句控制碼上執行語句。 執行 SQL 陳述式的一般事件序列是：  
+  當 ODBC 應用程式將連接控制代碼初始化並連接資料來源後，會在連接控制代碼上配置一個或多個陳述式控制代碼。 然後，應用程式可以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在語句控制碼上執行語句。 執行 SQL 陳述式的一般事件序列是：  
   
 1.  設定任何需要的陳述式屬性。  
   
@@ -49,7 +50,7 @@ INSERT INTO MyTable VALUES (?, ?, ?)
   
  在執行所有 SQL 陳述式，而且也處理其結果集之後，應用程式會釋放陳述式控制代碼。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式支援每個連接控制碼有多個語句控制碼。 由於交易是在連接層級管理，因此在所有陳述式控制代碼上所執行的所有工作，會在單一連接控制代碼上管理成為相同交易的一部分。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式支援每個連接控制碼有多個語句控制碼。 由於交易是在連接層級管理，因此在所有陳述式控制代碼上所執行的所有工作，會在單一連接控制代碼上管理成為相同交易的一部分。  
   
 ## <a name="in-this-section"></a>本節內容  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0c8ce9ce-f5ce-4bea-830d-05836ea17112
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72807eca5fb43c81bf51c20a93cd69f4d618c241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeeed1f69513979a566a7db4385e4dc00b4855b9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068609"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940452"
 ---
 # <a name="specify-a-unary-operator-dimension-business-intelligence-wizard"></a>指定一元運算子 (維度) (商業智慧精靈)
   使用 **[指定一元運算子]** 頁面即可選取已定義父屬性的維度，讓商業智慧精靈套用一元運算子至此維度。 如需父屬性的詳細資訊，請參閱 [屬性和屬性階層](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
@@ -26,7 +25,7 @@ ms.locfileid: "66068609"
 >  如果 [商業智慧精靈] 是從 [維度設計師] 啟動，或是在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中方案總管的某維度上按一下滑鼠右鍵來啟動，則不會出現此頁面。  
   
 ## <a name="options"></a>選項。  
- **Dimension**  
+ **大小**  
  選取包含父屬性的維度，讓精靈套用一元運算子至此維度。  
   
 ## <a name="see-also"></a>另請參閱  

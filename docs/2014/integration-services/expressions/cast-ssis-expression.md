@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19b2e960aa2383568d3977d19368576f4178949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d94df6a59043bee136b0dc42ad8fb013c6c77456
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176438"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967478"
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 運算式)
   將運算式從一種資料類型明確轉換成另一種資料類型。 轉換運算子也可以當作截斷運算子使用。
@@ -35,7 +34,7 @@ ms.locfileid: "78176438"
 ```
 
 ## <a name="arguments"></a>引數
- *type_spec*是有效[!INCLUDE[ssIS](../../includes/ssis-md.md)]的資料類型。
+ *type_spec*是有效的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 資料類型。
 
  *運算式*這是有效的運算式。
 
@@ -54,8 +53,8 @@ ms.locfileid: "78176438"
 |DT_STR|*charcount*<br /><br /> *頁*|(DT_STR,30,1252) 會使用 1252 字碼頁將 30 個位元組 (或 30 個單一字元) 轉換成 DT_STR 資料類型。|
 |DT_WSTR|*Charcount*|(DT_WSTR,20) 會將成對的 20 個位元組 (或 20 個 Unicode 字元) 轉換成 DT_WSTR 資料類型。|
 |DT_BYTES|*Bytecount*|(DT_BYTES,50) 將 50 個位元組轉換為 DT_BYTES 資料類型。|
-|DT_DECIMAL|*調整*|(DT_DECIMAL,2) 將數值轉換為 DT_DECIMAL 資料類型，使用 2 位小數位數。|
-|DT_NUMERIC|*有效位數*<br /><br /> *調整*|(DT_NUMERIC,10,3) 將數值轉換為 DT_NUMERIC 資料類型，使用 10 位有效位數與 3 位小數位數。|
+|DT_DECIMAL|*縮放比例*|(DT_DECIMAL,2) 將數值轉換為 DT_DECIMAL 資料類型，使用 2 位小數位數。|
+|DT_NUMERIC|*有效位數*<br /><br /> *縮放比例*|(DT_NUMERIC,10,3) 將數值轉換為 DT_NUMERIC 資料類型，使用 10 位有效位數與 3 位小數位數。|
 |DT_TEXT|*頁*|(DT_TEXT,1252) 將值轉換為 DT_TEXT 資料類型，使用 1252 字碼頁。|
 
  當字串轉換成 DT_DATE 或 DT_DATE 轉換成字串時，會使用轉換的地區設定。 不過，日期是使用 ISO 格式 YYYY-MM-DD，而不論地區設定的偏好設定是否使用 ISO 格式。
