@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c305b7d-a231-4d03-a09f-8e2d6564fa76
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 37d09aa75c3f6c5dd61b257056127ca76b410487
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ba82ed1dac3cf992ca181e5795b33721eca4d86
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055140"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962218"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>詞彙擷取轉換編輯器 (詞彙擷取索引標籤)
   使用 **[詞彙擷取轉換編輯器]** 對話方塊的 **[詞彙擷取]** 索引標籤，可指定包含要擷取之文字的文字資料行。  
@@ -33,7 +32,7 @@ ms.locfileid: "66055140"
  **詞彙**  
  提供輸出資料行的名稱，其中將包含所擷取的詞彙。  
   
- **分數**  
+ **Score**  
  提供輸出資料行的名稱，其中將包含每個所擷取詞彙的分數。  
   
  **設定錯誤輸出**  

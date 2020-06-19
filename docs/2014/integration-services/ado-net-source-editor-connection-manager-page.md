@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d6dc089acb1d15491817d8876dee82951e4495d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061693"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925875"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>ADO NET 來源編輯器 (連接管理員頁面)
   使用 [ADO NET 來源編輯器]**** 對話方塊的 [連線管理員]**** 頁面，即可選取來源的 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連線管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
@@ -51,7 +50,7 @@ ms.locfileid: "66061693"
  使用 [資料檢視]**** 對話方塊來預覽結果。 [預覽]**** 最多可顯示 200 個資料列。  
   
 > [!NOTE]  
->  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 而會顯示 \<數值太大而無法顯示> 或 System.Byte[]。 使用 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
+>  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 相反地，values \<value too big to display> 或 system.string [] 會顯示。 使用 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
   
 ## <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
   
@@ -72,6 +71,6 @@ ms.locfileid: "66061693"
 ## <a name="see-also"></a>另請參閱  
  [ADO NET 來源編輯器 &#40;資料行] 頁面&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [ADO NET 來源編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
- [ADO.NET 連接管理員](connection-manager/ado-net-connection-manager.md)  
+ [ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)  
   
   

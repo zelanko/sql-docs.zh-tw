@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70227f556ae268144549616dab0895e70ff39de8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c88bc60b4aeab12b3c55d23d1fe7b2b033a962f0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936289"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>使用可用性群組精靈 (SQL Server Management Studio)
   本主題描述如何使用 [新增可用性群組精靈] (在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中)，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中建立和設定 AlwaysOn 可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
@@ -115,14 +114,14 @@ ms.locfileid: "75228735"
   
     |索引標籤|簡短描述|  
     |---------|-----------------------|  
-    |**複本**|使用此索引標籤可指定將裝載次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 請注意，您目前所連接的伺服器執行個體必須裝載主要複本。|  
+    |**複本數**|使用此索引標籤可指定將裝載次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 請注意，您目前所連接的伺服器執行個體必須裝載主要複本。|  
     |**端點**|使用此索引標籤可驗證任何現有的資料庫鏡像端點，此外，如果在其服務帳戶使用 Windows 驗證的伺服器執行個體上缺少此端點，則可自動建立該端點。 **注意：** 如果有任何伺服器實例是在非網域使用者帳戶下執行，您必須先對伺服器實例進行手動變更，然後才能在嚮導中繼續進行。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#PrerequisitesRestrictions)＞。|  
     |**備份喜好設定**|使用此索引標籤可指定整個可用性群組的備份喜好設定，以及個別可用性複本的備份優先權。|  
     |**接聽程式**|使用此索引標籤可建立可用性群組接聽程式。 根據預設，精靈不會建立接聽程式。|  
   
 8.  在 **[選取初始資料同步處理]** 頁面上，選擇您要如何建立新的次要資料庫並將它聯結至可用性群組。 選擇下列其中一個選項：  
   
-    -   **寫**  
+    -   **完整**  
   
          只有在您的環境符合自動啟動初始資料同步處理的需求時，才選取此選項 (如需詳細資訊，請參閱本主題稍早的 [必要條件、限制和建議](#PrerequisitesRestrictions))。  
   
@@ -202,7 +201,7 @@ ms.locfileid: "75228735"
   
      [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
--   **視頻**  
+-   **影片：**  
   
      [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第 1 部：新一代高可用性解決方案簡介](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

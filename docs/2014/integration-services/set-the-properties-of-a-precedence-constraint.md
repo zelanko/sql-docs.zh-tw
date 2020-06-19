@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 679e61c37df7d31b80f47fff186589ce0081f838
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055734"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963118"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>設定優先順序條件約束的屬性
   若要設定優先順序條件約束的屬性，您可以使用下列其中一項工具：  
@@ -43,14 +42,14 @@ ms.locfileid: "66055734"
   
 5.  在 [評估作業]**** 下拉式清單中，選取評估作業。  
   
-6.  在`Value`下拉式清單中，選取優先順序可執行檔的執行結果。  
+6.  在 `Value` 下拉式清單中，選取優先順序可執行檔的執行結果。  
   
-7.  如果評估作業使用運算式，請在方塊中`Expression`輸入運算式，然後按一下 [**測試**] 來評估運算式。  
+7.  如果評估作業使用運算式，請在方塊中 `Expression` 輸入運算式，然後按一下 [**測試**] 來評估運算式。  
   
     > [!NOTE]  
     >  變數名稱會區分大小寫。  
   
-8.  如果有多個工作或容器連接到受條件約束的可執行檔，請選取 [**邏輯 AND** ]，以指定所有先前`true`可執行檔的執行結果都必須評估為。 選取 [**邏輯 OR** ]，以指定只有一個執行結果必須`true`評估為。  
+8.  如果有多個工作或容器連接到受條件約束的可執行檔，請選取 [**邏輯 AND** ]，以指定所有先前可執行檔的執行結果都必須評估為 `true` 。 選取 [**邏輯 OR** ]，以指定只有一個執行結果必須評估為 `true` 。  
   
 9. 按一下 [確定]****，以關閉 [優先順序條件約束編輯器]****。  
   
@@ -69,9 +68,9 @@ ms.locfileid: "66055734"
     |讀取/寫入屬性|組態動作|  
     |--------------------------|--------------------------|  
     |描述|提供描述。|  
-    |EvalOp|選取評估作業。 如果已`Expression`選取、 **[expressionandconstant]** 或 **[expressionorconstant**作業，您可以指定運算式。|  
+    |EvalOp|選取評估作業。 如果 `Expression` 已選取、 **[Expressionandconstant]** 或 **[expressionorconstant**作業，您可以指定運算式。|  
     |運算是|如果評估作業包含運算式，請提供一個運算式。 運算式必須評估為布林。 如需運算式語言的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)。|  
-    |LogicalAnd|設定`LogicalAnd`為指定當多個可執行檔在和連結到受條件約束的可執行檔時，是否要與其他優先順序條件約束一起評估優先順序條件約束|  
+    |LogicalAnd|設定 `LogicalAnd` 為指定當多個可執行檔在和連結到受條件約束的可執行檔時，是否要與其他優先順序條件約束一起評估優先順序條件約束|  
     |名稱|更新優先順序條件約束的名稱。|  
     |ShowAnnotation|指定要使用之註解的類型。 選擇 [Never]**** 以停用註解，選擇 [AsNeeded]**** 以視需要啟用註解，選擇 [ConstraintName]**** 以使用 Name 屬性的值來自動註解，選擇 [ConstraintDescription]**** 以使用 Description 屬性的值來自動註解，以及選擇 [ConstraintOptions]**** 以使用 Value 和 Expression 屬性的值來自動註解。|  
     |值|如果 EvalOP 屬性中指定的評估作業包含條件約束，請選取具有條件約束之可執行檔的執行結果。|  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c835f42fdbcc43309a0235f8ad862bee9c230e33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db1db5b066e5540d64121993e6126edefa3b8124
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66462694"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925409"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 連線管理員
   **Azure Data Lake Store 連線管理員** 可讓 SSIS 套件透過兩種驗證類型連接到 Azure Data Lake Store 服務︰Azure AD 使用者識別及 Azure AD 服務識別。  
@@ -27,7 +26,7 @@ ms.locfileid: "66462694"
   
 1.  在 [新增 SSIS 連線管理員] **** 對話方塊中，選取 [AzureDataLake] ****，然後按一下 [新增] ****。   
   
-2.  在 [Azure Data Lake Store 連線管理員編輯器] 對話方塊中，在 [ADLS Host (ADLS 主機)] **** 欄位中輸入 Azure Data Lake Store 的主機 URL。 例如： HTTPs：\//test.azuredatalakestore.net 或 test.azuredatalakestore.net。
+2.  在 [Azure Data Lake Store 連線管理員編輯器] 對話方塊中，在 [ADLS Host (ADLS 主機)] **** 欄位中輸入 Azure Data Lake Store 的主機 URL。 例如： HTTPs： \/ /test.azuredatalakestore.net 或 test.azuredatalakestore.net。
   
 3.  選擇對應的驗證類型，以存取 Azure Data Lake Store 資料。
 
@@ -49,7 +48,7 @@ ms.locfileid: "66462694"
     
         4. 按一下 [測試連接] **** 按鈕來測試連接。  
   
-4.  按一下 [確定]**** 關閉對話方塊。  
+4.  按一下 [確定]  關閉對話方塊。  
   
     您可以在 [屬性] **** 視窗中看到您建立的連線管理員屬性。  
   

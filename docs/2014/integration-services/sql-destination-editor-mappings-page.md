@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca00cf8-3460-43e9-9705-af4c530f7fbd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c687b82433a8491fbdd1b54b9f92d9de62ad418
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2ad2ed1689494918080aaad85eb8f84efedc711
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055480"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962668"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>SQL 目的地編輯器 (對應頁面)
   使用 **[SQL 目的地編輯器]** 對話方塊的 **[對應]** 頁面，即可將輸入資料行對應至目的地資料行。  

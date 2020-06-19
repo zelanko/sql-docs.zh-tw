@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9986384801788f907f42588ee298ba531fd13f95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d338cac89b7b6c8f2588817cfd6718d4f415589
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061834"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925942"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>在方案中加入或移除 Integration Services 專案
   下列程序將描述如何在方案中加入或移除 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
- 只有當您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中看到方案時，才能將專案加入至現有的方案，或從方案中移除專案。 如果您已在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中選取 [**永遠顯示方案**] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]選項，則會顯示方案，即使該方案僅包含一個專案也一樣。 否則，只有當方案包含多個專案時，[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 才會顯示該方案。 其他專案可以是 [!INCLUDE[ssIS](../includes/ssis-md.md)] 專案或其他類型的專案。  
+ 只有當您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中看到方案時，才能將專案加入至現有的方案，或從方案中移除專案。 如果您已在中選取 [**永遠顯示方案**] 選項 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 則會顯示方案，即使該方案僅包含一個專案也一樣。 否則，只有當方案包含多個專案時，[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 才會顯示該方案。 其他專案可以是 [!INCLUDE[ssIS](../includes/ssis-md.md)] 專案或其他類型的專案。  
   
 ## <a name="adding-an-integration-services-project"></a>加入 Integration Services 專案  
  當您加入專案時，可以讓 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 建立全新的空白專案，也可以加入已經針對不同方案建立的專案。 只有當您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中看到方案時，才能將專案加入至現有的方案。  
@@ -43,7 +42,7 @@ ms.locfileid: "66061834"
   
 3.  (選擇性) 編輯專案名稱及位置。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
 #### <a name="to-add-an-existing-integration-services-project-to-a-solution"></a>將現有的 Integration Services 專案加入方案  
   

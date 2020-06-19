@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d0606e2a3f5480b27e27a4a585562f4b289b640
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813676"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935955"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask 伺服器組態選項
   為了完成多工作業， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 與 Windows Server 2003 有時會在不同的處理器之間移動處理序執行緒。 雖然從作業系統的觀點來看很有效率，但是在繁重的系統負載下，這項活動可能會降低 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的效能，因為每個處理器快取會重複重新載入資料。 將處理器指派給特定的執行緒，可藉由去除處理器的重新載入，而在這些狀況下增進效能；執行緒與處理器之間的這種關聯，稱為處理器相似性。  
@@ -58,7 +57,7 @@ ms.locfileid: "62813676"
   
 -   在 **affinity I/O mask** 選項中為 0，而在 **affinity mask** 選項中為 1。  
   
- **affinity I/O mask** 屬於進階選項。 如果您要使用`sp_configure`系統預存程式來變更此設定，只有當**show advanced options**設為1時，才能變更**相似性 i/o mask** 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，重新設定 **affinity I/O mask** 選項需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+ **affinity I/O mask** 屬於進階選項。 如果您要使用 `sp_configure` 系統預存程式來變更此設定，只有當**show advanced options**設為1時，才能變更**相似性 i/o mask** 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，重新設定 **affinity I/O mask** 選項需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
 > [!CAUTION]  
 >  不要在 Windows 作業系統中設定 CPU 相似性，然後又在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中設定相似性遮罩。 這些設定嘗試達到相同的結果，如果組態不一致，可能會有無法預期的結果。 設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 相似性時，最好使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 `sp_configure` 選項。  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8e7e02f844df026c597e93e43ebee7f8e786a72
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: e952ef1102ac67bd0ed9f72d0c201d54b320b5ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849436"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935989"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>設定受管理的備份 (SQL Server Management Studio)
   **[受管理的備份]** 對話方塊可讓您設定執行個體的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 預設值。 本主題說明如何使用此對話方塊來設定執行個體的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 預設設定，和您在這麼做時必須考量的選項。 在設定執行個體的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 時，設定會套用至之後建立的任何新資料庫。  
@@ -59,7 +58,7 @@ ms.locfileid: "82849436"
  `smart_admin.sp_set_instance_backup` 的 `EXECUTE` 權限和 `smart_admin.sp_backup_master_switch`。  
   
 ## <a name="configure-ss_smartbackup-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 設定 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
- 從 **[物件總管]** 展開 **[管理]** 節點，並以滑鼠右鍵按一下 **[Managed Backup]**。 選取 [設定]  。 這樣會開啟 **[Managed Backup]** 對話方塊。  
+ 從 **[物件總管]** 展開 **[管理]** 節點，並以滑鼠右鍵按一下 **[Managed Backup]**。 選取 [設定] 。 這樣會開啟 **[Managed Backup]** 對話方塊。  
   
  勾選 **[啟用 Managed Backup]** 選項，並指定組態值：  
   
@@ -69,7 +68,7 @@ ms.locfileid: "82849436"
   
  指定 Azure 儲存體帳戶的**儲存體 URL** 、儲存儲存體帳戶之驗證資訊的 SQL 認證，以及備份檔案的保留期限。  
   
- 儲存體 URL 格式為： HTTPs:// \< StorageAccount>. blob.core.windows.net/  
+ 儲存體 URL 格式為： HTTPs:// \<StorageAccount> . blob.core.windows.net/  
   
  若要設定執行個體層級的加密設定，請勾選 **[加密備份]** 選項，並指定演算法，和用於加密的憑證或非對稱金鑰。  這會在執行個體層級進行設定，並且在套用此組態之後用於所有建立的新資料庫。  
   

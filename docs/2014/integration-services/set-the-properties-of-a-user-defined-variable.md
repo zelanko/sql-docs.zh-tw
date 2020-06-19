@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aadfb7b53d22a00bf14699f611f20ce508a7ab5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53eeb46b5ce23a8976c9de1aaace7959bc708a84
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055647"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963078"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>設定使用者定義變數的屬性
   若要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中設定使用者定義變數的屬性，您可以使用下列其中一項功能：  
@@ -34,21 +33,21 @@ ms.locfileid: "66055647"
   
  當您使用 [屬性]**** 視窗設定使用者定義變數的運算式時：  
   
--   變數的值可以由 Value 或 Expression 屬性設定。 根據預設，EvaluateAsExpression 屬性會設定為`False` ，而變數的值會由 value 屬性設定。 若要使用運算式來設定值，您必須先將 EvaluateAsExpression 設定為`True`，然後在 expression 屬性中提供運算式。 Value 屬性會自動設為運算式的評估結果。  
+-   變數的值可以由 Value 或 Expression 屬性設定。 根據預設，EvaluateAsExpression 屬性會設定為 `False` ，而變數的值會由 value 屬性設定。 若要使用運算式來設定值，您必須先將 EvaluateAsExpression 設定為 `True` ，然後在 expression 屬性中提供運算式。 Value 屬性會自動設為運算式的評估結果。  
   
--   ValueType 屬性包含 Value 屬性中之值的資料類型。 運算式設定 Value 之後，ValueType 就會自動更新為與運算式之評估結果相容的資料類型。 例如，如果 Value 包含0且 ValueType 屬性包含**Int32** ，然後您將 Expression 設為 GETDATE （），Value 就會包含目前的日期和時間，且 ValueType `DateTime`會設定為。  
+-   ValueType 屬性包含 Value 屬性中之值的資料類型。 運算式設定 Value 之後，ValueType 就會自動更新為與運算式之評估結果相容的資料類型。 例如，如果 Value 包含0且 ValueType 屬性包含**Int32** ，然後您將 Expression 設為 GETDATE （），Value 就會包含目前的日期和時間，且 ValueType 會設定為 `DateTime` 。  
   
 -   透過變數的 [屬性]**** 視窗，可以存取 [運算式產生器]**** 對話方塊。 您可使用此工具建立、驗證和評估運算式。 如需詳細資訊，請參閱[運算式產生器](expressions/expression-builder.md)和 [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)。  
   
  當您使用 [變數]**** 視窗設定使用者定義變數的運算式時：  
   
--   若要使用運算式設定變數值，請先確認變數資料類型是否與運算式的評估結果相容，然後在 [ `Expression` **變數**] 視窗的資料行中提供運算式。 [**屬性**] 視窗中的 [EvaluateAsExpression] 屬性會`True`自動設為。  
+-   若要使用運算式設定變數值，請先確認變數資料類型是否與運算式的評估結果相容，然後在 `Expression` [**變數**] 視窗的資料行中提供運算式。 [**屬性**] 視窗中的 [EvaluateAsExpression] 屬性會自動設為 `True` 。  
   
 -   當您將運算式指派給變數時，會在變數旁邊顯示特殊圖示標記。 此特殊圖示標記也會顯示在已經設定運算式的連接管理員及工作旁邊。  
   
 -   透過變數的 [變數]**** 視窗，可以存取 [運算式產生器]**** 對話方塊。 您可使用此工具建立、驗證和評估運算式。 如需詳細資訊，請參閱[運算式產生器](expressions/expression-builder.md)和 [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)。  
   
- 在 [**變數**] 和 [**屬性**] 視窗中，如果您將運算式指派給變數`EvaluateAsExpression` ，並將`True`設定為，則無法變更變數資料類型。  
+ 在 [**變數**] 和 [**屬性**] 視窗中，如果您將運算式指派給變數，並將 `EvaluateAsExpression` 設定為 `True` ，則無法變更變數資料類型。  
   
  **設定命名空間及名稱屬性**  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66055647"
   
 4.  選擇性地在 [變數]**** 視窗中按一下 [方格選項]****，然後選取要在 [變數]**** 視窗中顯示的資料行，並選取要套用到此變數清單的篩選。  
   
-5.  選取清單中的變數，然後更新 [**資料類型** `Value`]、[] `Namespace`、[**引發變更事件**]、[**描述**] 和`Expression` [資料行] 中的`Name`值。  
+5.  選取清單中的變數，然後更新 [資料類型]、[] `Name` 、[ **Data Type** `Value` `Namespace` **引發變更事件**]、[**描述**] 和 [資料 `Expression` 行] 中的值。  
   
 6.  選擇清單中的變數，然後按一下 [移動變數]**** 以變更範圍。  
   

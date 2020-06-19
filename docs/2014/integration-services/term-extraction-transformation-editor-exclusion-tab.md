@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5539544afba4e2752baaefb2324b33d3ac897b0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055232"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962238"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>詞彙擷取轉換編輯器 (排除索引標籤)
   使用 **[詞彙擷取轉換編輯器]** 對話方塊的 **[排除]** 索引標籤，可設定排除資料表的連接，並指定包含排除詞彙的資料行。  

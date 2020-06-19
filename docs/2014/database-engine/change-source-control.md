@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a615e26ac966fcf0c2af580825019c344889a5d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812733"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936049"
 ---
 # <a name="change-source-control"></a>變更原始檔控制
   建立與管理連接和繫結，連接和繫結會將本機上儲存的方案或專案連結至原始檔控制資料庫資料夾。  
@@ -43,7 +42,7 @@ ms.locfileid: "62812733"
  **[連接]**  
  在選取的項目和原始檔控制伺服器之間建立連接。  
   
- **聯繫**  
+ **連線**  
  顯示選取之方案或專案的連接狀態。  
   
  **取消**  
@@ -67,7 +66,7 @@ ms.locfileid: "62812733"
  **方案/專案**  
  顯示目前選取項目中之每個方案和專案的名稱。  
   
- **Sort**  
+ **方式**  
  排序顯示之資料行的順序。  
   
  **狀態**  
@@ -80,7 +79,7 @@ ms.locfileid: "62812733"
 |Unknown|尚未決定在原始檔控制下之項目的狀態。|  
 |未控制|項目尚未放置在原始檔控制之下。|  
   
- **解除系結**  
+ **解除繫結**  
  顯示 [**原始檔控制**] 對話方塊，可讓您從原始檔控制中移除選取的專案，並將專案從其目前的資料夾永久解除關聯。  
   
 ## <a name="see-also"></a>另請參閱  

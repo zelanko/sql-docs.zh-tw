@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5723ba6fcbcd8e5b2280fc977aa5f405d461b805
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061595"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925559"
 ---
 # <a name="analysis-of-data-flow"></a>資料流程分析
-  您可以使用 [[目錄]. execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`資料庫] 視圖來分析封裝的資料流程。 每當資料流程元件傳送資料至下游元件，此檢視就會顯示一個資料列。 您可以使用這項資訊深入了解傳送至每個元件的資料列。  
+  您可以使用 [ [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` 資料庫] 視圖來分析封裝的資料流程。 每當資料流程元件傳送資料至下游元件，此檢視就會顯示一個資料列。 您可以使用這項資訊深入了解傳送至每個元件的資料列。  
   
 > [!NOTE]  
 >  您必須將記錄層次設定為 [詳細資訊]****，以透過 catalog.execution_data_statistics 檢視來擷取資訊。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cbfbea15-9277-498f-b772-75b4cb06f408
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6e24edbf9c988081e7d36539f325e903626ae791
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ea86bbaa7c998d6f32b48ac1b9a43a0366e36fd9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000995"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936059"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>導致 Database Engine 錯誤的原因和解決方案
   本主題包含數個與 [!INCLUDE[ssDE](../includes/ssde-md.md)] 相關之錯誤的原因和解決方案資訊。  

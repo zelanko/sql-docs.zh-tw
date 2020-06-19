@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9a223060768c35b2daf00837153e59218ff1c50e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 260b1a303685ad9247154504400ef1519ecaa219
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001018"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936109"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>對全文檢索搜尋的重大變更
   本主題描述全文檢索搜尋的重大變更。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您升級時可能會遇到這些問題。 如需詳細資訊，請參閱＜ [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)＞。  
@@ -36,7 +35,7 @@ ms.locfileid: "83001018"
 ## <a name="breaking-changes-in-full-text-search-in-sql-server-2008"></a>SQL Server 2008 全文檢索搜尋的重大變更  
  下列重大變更適用於 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 到 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 及更新版本的全文檢索搜尋。  
   
-|特徵|案例|SQL Server 2005|SQL Server 2008 及更新版本|  
+|功能|狀況|SQL Server 2005|SQL Server 2008 及更新版本|  
 |-------------|--------------|---------------------|----------------------------------------|  
 |具有使用者定義類型（Udt）的[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|全文檢索索引鍵是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用者定義型別，例如 `MyType = char(1)`。|傳回的索引鍵具有指派給使用者定義型別的型別。<br /><br /> 在此範例中，這會是**char （1）**。|傳回的索引鍵具有使用者定義型別。 在此範例中，這會是**MyType**。|  
 |*top_n_by_rank*參數（CONTAINSTABLE 和[FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] 語句的）|*top_n_by_rank*使用0做為參數的查詢。|發生失敗並傳回錯誤訊息，該訊息指出您必須使用大於零的值。|成功，傳回零個資料列。|  

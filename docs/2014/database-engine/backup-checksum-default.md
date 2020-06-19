@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.assetid: a3b70885-47d7-4bd0-b28b-5a44947ae83c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 986ab44295d8227e485aa003c54c64c214a65c7d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788797"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936154"
 ---
 # <a name="backup-checksum-default"></a>備份總和檢查碼預設
   使用備份總和檢查碼預設設定，在備份及還原期間啟用或停用備份總和檢查碼。  

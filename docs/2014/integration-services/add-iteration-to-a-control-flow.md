@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b96f5f900e8c1a3adf136c7bdaf1b89f297e4921
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 671073193853d35f1d66f815b5952ab69e978bf9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061975"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926059"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>將反覆運算加入控制流程
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括 For 迴圈容器，該容器為控制流程項目，可簡化在套件中包括有條件地重複控制流程的迴圈。 如需詳細資訊，請參閱 [For 迴圈容器](control-flow/for-loop-container.md)為止。  
@@ -38,7 +37,7 @@ ms.locfileid: "66061975"
   
  運算式可以包含變數。 使用變數的優點是，可以在執行階段對它們進行更新，使封裝更為靈活也易於管理。 運算式的最大長度為 4000 個字元。  
   
- 在運算式中指定變數時，必須在變數名稱之前加上 at 符號 (@)。 例如，針對名`Counter`為的變數，請@Counter在「for 迴圈」容器所使用的運算式中輸入。 如果您在變數中包括命名空間屬性，則您必須使用括號將變數與命名空間括起來。 例如，針對`Counter` `MyNamespace`命名空間中的變數，請輸入 [@MyNamespace::Counter]。  
+ 在運算式中指定變數時，必須在變數名稱之前加上 at 符號 (@)。 例如，針對名為的變數 `Counter` ，請 @Counter 在「for 迴圈」容器所使用的運算式中輸入。 如果您在變數中包括命名空間屬性，則您必須使用括號將變數與命名空間括起來。 例如，針對 `Counter` 命名空間中的變數 `MyNamespace` ，請輸入 [ @MyNamespace::Counter ]。  
   
  「For 迴圈」容器使用的變數必須定義在「For 迴圈」容器的範圍內，或封裝容器階層中任何更高容器的範圍內。 例如，「For 迴圈」容器可以使用其範圍內定義的變數，也可以使用封裝範圍內定義的變數。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)和[在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)。  
   

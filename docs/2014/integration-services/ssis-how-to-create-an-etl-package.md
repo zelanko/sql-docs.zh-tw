@@ -16,26 +16,25 @@ helpviewer_keywords:
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b67e2308c95db109c89bd2c3ff61f311e83fb898
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62878280"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962578"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS 教學課程：建立簡易 ETL 封裝
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] （SSIS）是一個平臺，可用於建立高效能資料整合解決方案，包括資料倉儲的擷取、轉換和下載（ETL） [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]封裝。 SSIS 包含建立和偵錯封裝的圖形工具及精靈；執行工作流程功能 (例如 FTP 作業、執行 SQL 陳述式和傳送電子郵件訊息) 的工作；擷取和載入資料的資料來源和目的地；清除、彙總、合併和複製資料的轉換；管理封裝執行和儲存的管理服務 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ；以及設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型之程式的應用程式開發介面 (API)。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] （SSIS）是一個平臺，可用於建立高效能資料整合解決方案，包括資料倉儲的擷取、轉換和下載（ETL）封裝。 SSIS 包含建立和偵錯封裝的圖形工具及精靈；執行工作流程功能 (例如 FTP 作業、執行 SQL 陳述式和傳送電子郵件訊息) 的工作；擷取和載入資料的資料來源和目的地；清除、彙總、合併和複製資料的轉換；管理封裝執行和儲存的管理服務 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ；以及設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型之程式的應用程式開發介面 (API)。  
   
- 在本教學課程中，您將瞭解如何[!INCLUDE[ssIS](../includes/ssis-md.md)]使用設計師來建立簡單[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的封裝。 您建立的封裝會從一般檔案取用資料，重新格式化資料，然後將重新格式化之後的資料插入到事實資料表中。 在下列課程中，將會擴充封裝來示範迴圈、封裝組態、記錄和錯誤流程。  
+ 在本教學課程中，您將瞭解如何使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師來建立簡單的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。 您建立的封裝會從一般檔案取用資料，重新格式化資料，然後將重新格式化之後的資料插入到事實資料表中。 在下列課程中，將會擴充封裝來示範迴圈、封裝組態、記錄和錯誤流程。  
   
  當您安裝教學課程使用的範例資料時，也會安裝您將在教學課程每一課所建立之封裝的完整版本。 利用完整封裝，您可以三級跳，從教學課程後面的課程開始。 如果這是您第一次使用封裝或新的開發環境，我們建議您從第 1 課開始。  
   
 ## <a name="what-you-will-learn"></a>學習內容  
- 若要熟悉中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]可用的新工具、控制項和功能，最好的方法就是使用它們。 這個教學課程引導您使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師來建立簡單的 ETL 封裝，包括迴圈、組態、錯誤流程邏輯和記錄。  
+ 若要熟悉中可用的新工具、控制項和功能，最好的方法 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 就是使用它們。 這個教學課程引導您使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師來建立簡單的 ETL 封裝，包括迴圈、組態、錯誤流程邏輯和記錄。  
   
 ## <a name="requirements"></a>需求  
- 本教學課程的主要物件是熟悉基本資料庫作業，但對提供[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的新功能有所限制的使用者。  
+ 本教學課程的主要物件是熟悉基本資料庫作業，但對提供的新功能有所限制的使用者 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。  
   
  若要使用這個教學課程，系統上必須已安裝下列元件：  
   

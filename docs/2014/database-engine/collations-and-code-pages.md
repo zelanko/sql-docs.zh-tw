@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96eea051fbf4a34257d61ff8eaf4f796debf49a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786733"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936009"
 ---
 # <a name="collations-and-code-pages"></a>定序和字碼頁
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] 對於記憶體最佳化的資料表中 (var)Char 資料行支援的字碼頁以及用於索引和原生編譯預存程序中支援的定序有一些限制。  
@@ -82,7 +81,7 @@ GO
   
 -   原生編譯的預存程序中的所有運算式和排序作業都必須使用 BIN2 定序。 其含意為，所有的比較與排序作業都是根據字元的 Unicode 字碼指標 (二進位表示法)。 例如，所有排序都區分大小寫 ('Z' 排列在 'a' 之前)。 如有需要，請使用解譯的 [!INCLUDE[tsql](../includes/tsql-md.md)] 進行不區分大小寫的排序和比較。  
   
--   原生編譯的預存程序中不支援 UTF-16 資料截斷。 這*表示如果定* < 序具有 _SC*屬性，則*n （var） char （*n*）值無法轉換成類型 n （var） char （*i*）。 例如，以下範例不受支援：  
+-   原生編譯的預存程序中不支援 UTF-16 資料截斷。 這表示如果定序具有 _SC 屬性 *，則 n*（var） char （*n*）值無法轉換成類型 n （var） char （*i*）  <  * *。 例如，以下範例不受支援：  
   
     ```sql  
     -- column definition using an _SC collation  

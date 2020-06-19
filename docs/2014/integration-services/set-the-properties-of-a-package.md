@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f105a7f30d2d1c42bfb31f1555bb976745bbbe4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7dbc9e7c535b327b39c18fad80d7848a96d0ded7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055794"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963229"
 ---
 # <a name="set-the-properties-of-a-package"></a>設定封裝的屬性
   此程序描述如何使用 **[屬性]** 視窗設定封裝屬性。  

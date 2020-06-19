@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfebde8a9431026e8faedb2a1e76eb2f2d82e207
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935949"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask 伺服器組態選項
     
@@ -59,7 +58,7 @@ ms.locfileid: "62814032"
   
  如果您指定嘗試對應到不存在之 CPU 的相似性遮罩，RECONFIGURE 命令會將錯誤訊息回報至用戶端工作階段和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔。 在此情況下，使用 RECONFIGURE WITH OVERRIDE 選項沒有作用，而且會再次回報相同的組態錯誤。  
   
- 您也可以從處理器中排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活動，此為 Windows 2000 或 Windows Server 2003 作業系統所指定的特定工作負載。 如果將某處理器的代表位元設成 1，則表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 已選取該處理器準備進行執行緒指派。 當您將`affinity mask`設定為0（預設值）時，Microsoft Windows 2000 或 Windows Server 2003 排程演算法會設定執行緒的親和性。 將 `affinity mask` 設成任何非零的值時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相似性會將該值解譯為指定適合選取之處理器的位元遮罩。  
+ 您也可以從處理器中排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活動，此為 Windows 2000 或 Windows Server 2003 作業系統所指定的特定工作負載。 如果將某處理器的代表位元設成 1，則表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 已選取該處理器準備進行執行緒指派。 當您將設定 `affinity mask` 為0（預設值）時，Microsoft Windows 2000 或 Windows Server 2003 排程演算法會設定執行緒的親和性。 將 `affinity mask` 設成任何非零的值時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相似性會將該值解譯為指定適合選取之處理器的位元遮罩。  
   
  藉由將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行緒從特定處理器中分離，Microsoft Windows 2000 或 Windows Server 2003 可以更有效地評估 Windows 特定處理序的系統處理。 例如，系統管理員可以在執行兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (執行個體 A 與 B) 的 8-CPU 伺服器上，使用 affinity mask 選項將第一組 4 個 CPU 指派到執行個體 A，並將第二組 4 個 CPU 指派到執行個體 B。若要設定 32 個以上的處理器，請同時設定 affinity mask 與 affinity64 mask。 `affinity mask` 的值如下：  
   
@@ -114,7 +113,7 @@ GO
 |127|01111111|0、1、2、3、4、5 與 6|  
 |255|11111111|0、1、2、3、4、5、6 與 7|  
   
- affinity mask 屬於進階選項。 如果您使用 sp_configure 系統預存程式來變更此設定，只有當`affinity mask` **show advanced options**設為1時，才能變更。 在執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 命令之後，新的設定會立即生效，而不需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+ affinity mask 屬於進階選項。 如果您使用 sp_configure 系統預存程式來變更此設定， `affinity mask` 只有當**show advanced options**設為1時，才能變更。 在執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 命令之後，新的設定會立即生效，而不需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
 ## <a name="non-uniform-memory-access-numa"></a>非統一記憶體存取 (NUMA)  
  當使用以非統一記憶體存取 (NUMA) 為基礎的硬體且設定相似性遮罩時，節點中的每一個排程器將相似於它自己的 CPU。 若未設定相似性遮罩，則每一個排程器會相似於 NUMA 節點內的 CPU 群組，且對應到 NUMA 節點 N1 的排程器可在該節點的任何 CPU 上設定工作排程，但不能在與另一個節點相關聯的 CPU 上設定。  

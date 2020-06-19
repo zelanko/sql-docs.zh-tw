@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 419a63f9a98e51b9601d7d38f70528ff4ae05970
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a94ba92b44c00442f97f9e11bbd72d06556d8fe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061586"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925609"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>彙總轉換編輯器 (進階索引標籤)
   使用 **[彙總轉換編輯器]** 對話方塊的 **[進階]** 索引標籤，即可設定元件屬性、指定彙總，以及設定輸入和輸出資料行的屬性。  

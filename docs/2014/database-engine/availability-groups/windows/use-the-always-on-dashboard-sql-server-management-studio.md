@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4ce0072bcd6642dcb4f3ac63e04c98786bd550e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788725"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936271"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Use the AlwaysOn Dashboard (SQL Server Management Studio)
   資料庫管理員可以使用 AlwaysOn 儀表板，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中取得 AlwaysOn 可用性群組及其可用性複本和資料庫的健全狀況摘要檢視。 AlwaysOn 儀表板的部分一般用法包括：  

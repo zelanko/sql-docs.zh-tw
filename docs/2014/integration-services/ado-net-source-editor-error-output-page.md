@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8543f1a7bd14db09873aaefb58b74efae0f3cf34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec17acfb9be26fc08274d285cf98897768633b9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925759"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>ADO NET 來源編輯器 (錯誤輸出頁面)
   使用 [ADO NET 來源編輯器]**** 對話方塊的 [錯誤輸出]**** 頁面，即可選取錯誤處理選項，並設定錯誤輸出資料行的屬性。  
@@ -47,7 +46,7 @@ ms.locfileid: "66061640"
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **描述**  
+ **說明**  
  檢視錯誤的描述。  
   
  **將這個值設定到選取的資料格**  
@@ -59,6 +58,6 @@ ms.locfileid: "66061640"
 ## <a name="see-also"></a>另請參閱  
  [ADO NET 來源編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
  [ADO NET 來源編輯器 &#40;資料行] 頁面&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [ADO.NET 連接管理員](connection-manager/ado-net-connection-manager.md)  
+ [ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)  
   
   

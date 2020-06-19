@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ae832263c3a025f53989761541e3278f5ea6a60
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890363"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925569"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 處理工作編輯器 (Analysis Services 頁面)
   使用 [Analysis Services 處理工作編輯器]**** 對話方塊的 [Analysis Services]**** 頁面，即可指定 Analysis Services 連接管理員、選取要處理的分析物件，以及設定處理與錯誤處理選項。  
@@ -36,7 +35,7 @@ ms.locfileid: "68890363"
   
  若要了解這個工作，請參閱 [Analysis Services 處理工作](control-flow/analysis-services-processing-task.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **Analysis Services 連線管理員**  
  在清單中選取現有的 Analysis Services 連接管理員，或按一下 [新增]**** 以建立新的連接管理員。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "68890363"
  |屬性|描述|  
 |--------------|-----------------|  
 |**Object Name**|列出指定的物件名稱。|  
-|**類型**|列出指定的物件類型。|  
+|**型別**|列出指定的物件類型。|  
 |**處理選項**|選取清單中的處理選項。<br /><br /> **相關主題**：多[維度模型物件處理](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**設定**|列出指定物件的處理設定。|  
   

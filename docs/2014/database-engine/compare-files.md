@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 728811c4-5d7a-4420-abce-f56c5a0994d2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f29bf7098f0c73d0b672e20b973b1347349b31f2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812592"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935999"
 ---
 # <a name="compare-files"></a>比較檔案
   您可以比較檔案來判斷檔案如何進入目前的狀態。 例如，如果您在簽入特定來源檔案版本之後，在程式碼專案的某項建置中偵測到錯誤，您可以比較目前的檔案版本和先前的版本。 這可以協助您找出引起錯誤的程式碼。  

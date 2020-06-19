@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 046058aa9c00cafb9a5ab9aac61b14d1d78668fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b32a3ac28174b60f955f8c91428d0874f43719b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766474"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962750"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
   

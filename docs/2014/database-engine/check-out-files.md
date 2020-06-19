@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc033727-51bb-4b58-a12b-8977ce61ff56
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10c076f7bee35e0e466fc22aec9ad9f6984bac6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936029"
 ---
 # <a name="check-out-files"></a>簽出檔案
   除非您將 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境設成允許編輯簽入的檔案，否則，您必須先將檔案簽出，才能修改它。 當您簽出檔案時，會將檔案版本的副本複製到您的本機磁碟中，且必須移除檔案的唯讀屬性。  
@@ -29,7 +28,7 @@ ms.locfileid: "62786743"
  使用 [**簽出**] 命令來簽出原始檔控制的專案和檔案。 如果您使用這個命令來簽出方案或專案，則也會簽出方案或專案中的所有檔案。不過，簽出個別的原始程式碼檔案並不會導致簽出它所屬的專案或方案。  
   
 > [!NOTE]  
->  如果您[!INCLUDE[msCoName](../includes/msconame-md.md)]專案的 Visual SourceSafe 資料庫設定為允許多個簽出，而您想要以獨佔方式簽出檔案，您必須在簽出檔案之前，清除 [**高級簽出選項**] 對話方塊中的 [**允許多次簽**出] 選項。 您必須重新啟動 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，這項設定才會生效。  
+>  如果 [!INCLUDE[msCoName](../includes/msconame-md.md)] 您專案的 Visual SourceSafe 資料庫設定為允許多個簽出，而您想要以獨佔方式簽出檔案，您必須在簽出檔案之前，清除 [**高級簽出選項**] 對話方塊中的 [**允許多次簽**出] 選項。 您必須重新啟動 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，這項設定才會生效。  
   
 ### <a name="to-check-out-a-file"></a>簽出檔案  
   
@@ -37,7 +36,7 @@ ms.locfileid: "62786743"
   
 2.  **在 [檔案**] 功能表上，指向 [原始檔**控制**]，然後按一下 [**簽出] 進行編輯**。  
   
-3.  如果顯示 [**簽出進行編輯**] 對話方塊，請選取您想要的專案，然後按一下 [**簽出**]。如果您已將[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]環境設定為不顯示 [**簽出**] 對話方塊，則會立即簽出方案總管中選取的專案，以及他們可能擁有的任何子系。  
+3.  如果顯示 [**簽出進行編輯**] 對話方塊，請選取您想要的專案，然後按一下 [**簽出**]。如果您已將 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境設定為不顯示 [**簽出**] 對話方塊，則會立即簽出方案總管中選取的專案，以及他們可能擁有的任何子系。  
   
      **退房**  
      簽出所有已選取的項目。  
@@ -55,7 +54,7 @@ ms.locfileid: "62786743"
      在原始檔控制連接之下，以一般清單顯示正在簽出的項目。  
   
      **編輯**  
-     修改專案但不簽出。只有**Edit**在您已[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]設定為支援編輯簽入檔案時，才會出現 [編輯] 按鈕。  
+     修改專案但不簽出。只有**Edit**在您已 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 設定為支援編輯簽入檔案時，才會出現 [編輯] 按鈕。  
   
      **名稱**  
      會顯示可簽出之項目的名稱。 選取的項目旁邊會顯示核取方塊。 如果您不要簽出特定項目，請清除其核取方塊。  
@@ -63,7 +62,7 @@ ms.locfileid: "62786743"
      **選項**  
      按一下按鈕右邊的箭頭之後，就會顯示原始檔控制外掛程式特定的簽出選項。  
   
-     **Sort**  
+     **方式**  
      排序顯示之資料行的順序。  
   
      **樹狀檢視**  

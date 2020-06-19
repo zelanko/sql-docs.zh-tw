@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93b9b60d3042e690d2e3e23b05131fabe384e945
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061899"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926109"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>將運算式加入優先順序條件約束
   優先順序條件約束可以使用運算式來定義兩個可執行檔之間的條件約束：優先順序可執行檔和受條件約束的可執行檔。 可執行檔可以是工作或容器。 運算式可以單獨使用，或與優先順序可執行檔的執行結果組合使用。 可執行檔的執行結果為成功或失敗。 設定優先順序條件約束的執行結果時，可以將執行結果設為 `Success`、`Failure` 或 `Completion`。 `Success` 表示優先順序可執行檔必須執行成功；`Failure` 表示優先順序可執行檔必須執行失敗；`Completion` 則指示不論優先順序工作成功與否，受條件約束的可執行檔都應該執行。 如需詳細資訊，請參閱 [優先順序條件約束](control-flow/precedence-constraints.md)。  
@@ -46,10 +45,10 @@ ms.locfileid: "66061899"
   
 |評估作業|條件約束評估為|運算式評估為|受條件約束的可執行檔執行|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|條件約束|True|不適用|True|  
-|條件約束|False|不適用|False|  
-|運算是|不適用|True|True|  
-|運算是|不適用|False|False|  
+|條件約束|True|N/A|True|  
+|條件約束|False|N/A|False|  
+|運算是|N/A|True|True|  
+|運算是|N/A|False|False|  
 |條件約束與運算式|True|True|True|  
 |條件約束與運算式|True|False|False|  
 |條件約束與運算式|False|True|False|  

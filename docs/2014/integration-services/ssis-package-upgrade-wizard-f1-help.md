@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 56aa708d39756932d28c8a94da534cb758916fcd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f141b220284e758a8c7b3038ccc6cc064bd527f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889361"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962518"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 封裝升級精靈 F1 說明
-  使用 [SSIS 封裝升級嚮導]， [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)]將封裝[!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)]和封裝升級為目前版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]封裝格式。  
+  使用 [SSIS 封裝升級嚮導]，將封裝 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 和 [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] 封裝升級為目前版本的封裝格式 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。  
   
  **執行 SSIS 封裝升級精靈**  
   
