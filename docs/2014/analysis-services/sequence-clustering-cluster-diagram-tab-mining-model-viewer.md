@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3e27ccc67858edd8e1f95bb910300a93a3e0db8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069106"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940749"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>時序叢集的叢集圖表索引標籤 (採礦模型檢視器)
   **[Microsoft 時序叢集檢視器]** 中的 **[叢集圖表]** 索引標籤會提供時序叢集模型所包含之所有叢集的圖形檢視。  
@@ -33,7 +32,7 @@ ms.locfileid: "66069106"
  **採礦模型**  
  選擇包含在目前採礦結構中，您要檢視的採礦模型。 採礦模型會在其關聯的檢視器中開啟。  
   
- **檢視器**  
+ **檢視者**  
  選擇用來瀏覽選取之採礦模型的檢視器。 可以使用自訂檢視器，或 **[Microsoft 一般內容樹狀檢視器]**。 還可以使用外掛程式檢視器 (如果有)。  
   
  **放大**  
@@ -72,7 +71,7 @@ ms.locfileid: "66069106"
  **State**  
  選取對應於 [陰影變數]**** 的狀態。 例如，如果您要檢視包含特定產品的時序，您會選取 [Product] 資料行做為 [陰影變數]**** 的屬性，並選取特定產品名稱做為 [狀態]**** 的值。  
   
- **連結**  
+ **相關**  
  圖表中的線條表示時序叢集之間的關聯。 您可以調整叢集右邊的滑動軸，來調整檢視器顯示的連結數目。 降低滑桿只顯示最強的連結。  
   
 ## <a name="see-also"></a>另請參閱  

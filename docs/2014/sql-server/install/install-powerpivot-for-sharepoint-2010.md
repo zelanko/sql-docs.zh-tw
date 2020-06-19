@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: eec38696-5e26-46fa-bc83-aa776f470ce8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b7d478761a1051114e0189c7fd11eddafcef086b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2b17fcb1464d32e7fd2e43ae6350f4681a48998
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054738"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>安裝 PowerPivot for SharePoint 2010
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是中間層級後端服務的集合，可以在 SharePoint 2010 伺服器陣列中提供 PowerPivot 資料存取功能。 如果您的組織使用用戶端應用程式 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 2010 來建立包含分析資料的活頁簿，您必須要有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，才能在伺服器環境中存取該資料。 本主題會逐步引導您完成基本安裝程序，而且提供了其他主題的連結，可協助您設定 PowerPivot。
@@ -26,7 +25,7 @@ ms.locfileid: "78172337"
 
  
 
- 如需有關如何在相同[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]伺服器[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]上安裝和的指示，請參閱[部署檢查清單： Reporting Services、Power View 和 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)。
+ 如需有關如何在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相同伺服器上安裝和的指示 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，請參閱[部署檢查清單： Reporting Services、Power View 和 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -42,7 +41,7 @@ ms.locfileid: "78172337"
 
 6.  必須要有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 執行個體名稱。 在您要安裝 PowerPivot for SharePoint 的電腦上，不能有現存的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體。
 
-7.   執行個體不得為 SQL Server 容錯移轉叢集的一部分。 使用 SharePoint 產品的高可用性功能。 例如，Excel Services 會管理 PowerPivot for SharePoint 伺服器的負載平衡。 如需詳細資訊，請參閱[管理 Excel Services 資料模型設定（SharePoint Server 2013）](https://technet.microsoft.com/library/jj219780.aspx) （https://technet.microsoft.com/library/jj219780.aspx)。
+7.   執行個體不得為 SQL Server 容錯移轉叢集的一部分。 使用 SharePoint 產品的高可用性功能。 例如，Excel Services 會管理 PowerPivot for SharePoint 伺服器的負載平衡。 如需詳細資訊，請參閱[管理 Excel Services 資料模型設定（SharePoint Server 2013）](https://technet.microsoft.com/library/jj219780.aspx) （ https://technet.microsoft.com/library/jj219780.aspx) 。
 
 8.  如果您要在現存的伺服器陣列上安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，必須要有一個或多個為傳統模式驗證所設定的 SharePoint Web 應用程式。 Web 應用程式必須支援傳統模式驗證，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取才能運作。 如需傳統模式需求的詳細資訊，請參閱[PowerPivot 驗證和授權](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization)。
 
@@ -61,9 +60,9 @@ ms.locfileid: "78172337"
 
 4.  在 [**產品金鑰**] 頁面上，指定評估版或輸入 enterprise edition 授權複本的產品金鑰。
 
-     按 [下一步]  。
+     按 [下一步] 。
 
-5.  接受 Microsoft 軟體授權合約的條款，而且如果您一併開啟客戶經驗和錯誤報告，我們會非常感激。 按 [下一步]  。
+5.  接受 Microsoft 軟體授權合約的條款，而且如果您一併開啟客戶經驗和錯誤報告，我們會非常感激。 按 [下一步] 。
 
 6.  如果系統提示您如此做，請更新安裝程式檔。
 
@@ -72,7 +71,7 @@ ms.locfileid: "78172337"
     > [!NOTE]
     >  由於已啟用 Windows 防火牆，因此系統會警告您開放通訊埠才可啟用遠端存取。 這個警告通常不適用於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安裝。 與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務及資料檔案之間的連接，是使用已針對 SharePoint 服務對服務通訊所開啟的 SharePoint 連接埠來建立。
 
-     按 [下一步]  。 正在伺服器上安裝 SQL Server 安裝程式檔案，請稍候。
+     按 [下一步] 。 正在伺服器上安裝 SQL Server 安裝程式檔案，請稍候。
 
 8.  在 **[安裝程式角色]** 頁面上，選取 **[SQL Server PowerPivot for SharePoint]**。
 
@@ -80,13 +79,13 @@ ms.locfileid: "78172337"
 
      ![GMNI_SetupUI_FeatureRole](../../../2014/sql-server/install/media/gmni-setupui-featurerole.gif "GMNI_SetupUI_FeatureRole")
 
-10. 按 [下一步]  。
+10. 按 [下一步] 。
 
-11. 在 [**特徵選取**] 頁面上，會顯示要安裝之功能的唯讀清單，以供參考之用。 您不能加入或移除預先為這個角色選取的項目。 按 [下一步]  。
+11. 在 [**特徵選取**] 頁面上，會顯示要安裝之功能的唯讀清單，以供參考之用。 您不能加入或移除預先為這個角色選取的項目。 按 [下一步] 。
 
 12. 在 [**功能規則**] 頁面上，按 **[下一步]**。 您可以略過此頁面。
 
-13. 在 **[執行個體組態]** 頁面上，顯示 'PowerPivot' 的唯讀執行個體名稱是為了給使用者參考。 **POWERPIVOT**的這個實例名稱是**必要的，而且無法修改**。 但是，您可以輸入唯一的執行個體識別碼來指定描述性目錄名稱和登錄機碼。 按 [下一步]  。
+13. 在 **[執行個體組態]** 頁面上，顯示 'PowerPivot' 的唯讀執行個體名稱是為了給使用者參考。 **POWERPIVOT**的這個實例名稱是**必要的，而且無法修改**。 但是，您可以輸入唯一的執行個體識別碼來指定描述性目錄名稱和登錄機碼。 按 [下一步] 。
 
 14. 在 [**伺服器**設定] 頁面上，輸入所需的帳戶資訊。
 
@@ -98,19 +97,19 @@ ms.locfileid: "78172337"
 
      絕不要使用您自己的網域使用者帳戶提供任何服務。 這麼做會授與伺服器您對網路中的資源所擁有的相同權限。 如果伺服器遭到惡意使用者的危害，該使用者將會以您的網域認證登入，而且能夠下載或使用您可以下載或使用的相同資料與應用程式。
 
-15. 按 [下一步]  。
+15. 按 [下一步] 。
 
-16. 若您正安裝 Database Engine，則隨即會出現 Database Engine 組態頁面。 在資料庫引擎設定] 中，按一下 [**加入目前使用者**]，將資料庫引擎實例的系統管理員許可權授與您的使用者帳戶。 按一下 [**新增**] 以新增其他帳戶。 按 [下一步]  。
+16. 若您正安裝 Database Engine，則隨即會出現 Database Engine 組態頁面。 在資料庫引擎設定] 中，按一下 [**加入目前使用者**]，將資料庫引擎實例的系統管理員許可權授與您的使用者帳戶。 按一下 [**新增**] 以新增其他帳戶。 按 [下一步] 。
 
 17. 在 **[Analysis Services 組態]** 頁面上，按一下 **[加入目前使用者]** ，為您的使用者帳戶授與管理權限。 在完成安裝程式之後，您將會需要管理權限來設定伺服器。
 
 18. 在相同的頁面上，加入也需要管理權限之任何人的 Windows 使用者帳戶。 例如，想要在 SQL Server Management Studio 中連接至 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]執行個體以疑難排解資料庫連接問題或取得版本資訊的所有使用者，都必須擁有該伺服器的系統管理權限。 請加入可能需要立即針對伺服器進行疑難排解或管理之任何人的使用者帳戶。
 
-19. 按 [下一步]  。
+19. 按 [下一步] 。
 
 20. 在其餘每個頁面上按 **[下一步]** ，直到您進入 [準備安裝] 頁面為止。
 
-21. 按一下 [Install]  。
+21. 按一下 [Install] 。
 
 > [!TIP]
 >  如果您需要排除 SQL Server 安裝的問題，請參閱[查看和閱讀 SQL Server 安裝程式記錄](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)檔。
@@ -136,7 +135,7 @@ ms.locfileid: "78172337"
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 MSOLAP 包含在 SQL Server 安裝程式中，因此只有在應用程式伺服器不是 PowerPivot 應用程式伺服器時，才需要明確安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 MSOLAP。
 
     > [!NOTE]
-    >  Excel Calculation Services 應用程式伺服器也需要通用群組件中**microsoft.analysisservices**檔案的實例。 若要將此 .dll 安裝在應用程式伺服器上，請安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在 SQL Server 安裝程式] 的 [**特徵選取**] 頁面上，選取 [管理工具-完成]。
+    >  Excel Calculation Services 應用程式伺服器也需要通用群組件中**Microsoft.AnalysisServices.Xmla.dll**檔案的實例。 若要將此 .dll 安裝在應用程式伺服器上，請安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在 SQL Server 安裝程式] 的 [**特徵選取**] 頁面上，選取 [管理工具-完成]。
 
 -   如果您希望應用程式伺服器支援舊版 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，則需要安裝 SQL Server 2008 R2 版本的 MSOLAP。
 

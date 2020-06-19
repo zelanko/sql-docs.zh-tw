@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: f683fdc6-0d4c-4793-8143-567616cb2094
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ecbbaba1441fa150daaecbfcbc7cbdf65636de55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 939ec9727cc81ce3b206b8bc7ca3ed8dd62c3877
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482644"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961298"
 ---
 # <a name="data-quality-matching-columns-mds-add-in-for-excel"></a>資料品質比對資料行 (適用於 Excel 的 MDS 增益集)
-  在中，當您比對資料之後，您可以在功能區的 [**資料品質**] 群組中按一下 [**顯示詳細**資料]，以顯示提供相符詳細資料的資料行。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]  
+  在中， [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 當您比對資料之後，您可以在功能區的 [**資料品質**] 群組中按一下 [**顯示詳細**資料]，以顯示提供相符詳細資料的資料行。  
   
  下表顯示比對資料時所顯示的資料行。  
   

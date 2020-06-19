@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b1f285243e2b925cca9d263a53c9b70087ea5d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068593"
 ---
 # <a name="non-sql-server-subscribers"></a>非 SQL Server 訂閱者
   下列非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」可以使用發送訂閱來訂閱快照式和交易式發行集。 使用已列 OLE DB 提供者的最新版本，列出的每個資料庫之兩個最新版本可支援訂閱。  
@@ -49,7 +48,7 @@ ms.locfileid: "63022241"
   
 -   複寫支援將資料表和索引檢視做為資料表發行至非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」(索引檢視無法複寫為索引檢視)。  
   
--   在 [新增發行集] 中建立發行集，然後使用 [發行集屬性] 對話方塊為非 SQL Server 的訂閱者啟用時，不會為非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]訂閱者」指定訂閱資料庫中所有物件的擁有[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]者，而對於「訂閱者」，則會設定為發行集資料庫中對應物件的擁有者。  
+-   在 [新增發行集] 中建立發行集，然後使用 [發行集屬性] 對話方塊為非 SQL Server 的訂閱者啟用時，不會為非「訂閱者」指定訂閱資料庫中所有物件的擁有者 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，而對於「 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」，則會設定為發行集資料庫中對應物件的擁有者。  
   
 -   如果發行集要擁有「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」和非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」，則在建立「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」的任何訂閱前，必須為非「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」啟用發行集。  
   

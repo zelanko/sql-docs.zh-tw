@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3624aed38a7a5bf75e0c0807aa8d3657156264f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022291"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068598"
 ---
 # <a name="manage-oracle-tablespaces"></a>管理 Oracle 資料表空間
   資料表空間是資料庫的儲存單位，大致相當於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的檔案群組。 資料表空間允許在個別群組中儲存和管理資料庫物件。 如需詳細資訊，請參閱 Oracle 文件集。  
@@ -31,15 +30,15 @@ ms.locfileid: "63022291"
   
 -   使用 [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)。 若要使用 **sp_changearticle**，請指定下列項目：  
   
-    -   參數**@publisher**的 Oracle 發行者名稱。  
+    -   參數的 Oracle 發行者名稱 **@publisher** 。  
   
-    -   參數**@publication**的 Oracle 發行集名稱。  
+    -   參數的 Oracle 發行集名稱 **@publication** 。  
   
-    -   參數**@article**的發行項名稱。  
+    -   參數的發行項名稱 **@article** 。  
   
-    -   參數**@property**的 ' 資料表空間 ' 值。  
+    -   參數的 ' 資料表空間 ' 值 **@property** 。  
   
-    -   參數**@value**的資料表空間名稱。  
+    -   參數的資料表空間名稱 **@value** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Oracle 發行者](configure-an-oracle-publisher.md)   

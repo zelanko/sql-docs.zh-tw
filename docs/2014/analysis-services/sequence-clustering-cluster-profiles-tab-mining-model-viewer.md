@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b7aff4d6a7f4f685fe589e2fb141848296bb82b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069099"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940698"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>時序叢集的叢集設定檔索引標籤 (採礦模型檢視器)
   [Microsoft 時序叢集檢視器]**** 中的 [叢集設定檔]**** 索引標籤提供每個叢集中所包含時序的色彩編碼檢視。  
@@ -33,7 +32,7 @@ ms.locfileid: "66069099"
  **採礦模型**  
  選擇包含在目前採礦結構中，您要檢視的採礦模型。 採礦模型會在其關聯的檢視器中開啟。  
   
- **檢視器**  
+ **檢視者**  
  選擇用來瀏覽選取之採礦模型的檢視器。 可以使用自訂檢視器，或 **[Microsoft 一般內容樹狀檢視器]**。 還可以使用外掛程式檢視器 (如果有)。  
   
  **顯示圖例**  
@@ -49,9 +48,9 @@ ms.locfileid: "66069099"
   
  模型中每個叢集各顯示兩組長條圖，每組位於圖形中不同的資料列上：  
   
--   **屬性名稱>。範例：此資料列中的長條圖顯示代表每個叢集的專案序列。 \< ** 在 DMX 詞彙中，它們是每個叢集的範例案例。  
+-   ** \<attribute name> 。範例**：此資料列中的長條圖顯示代表每個叢集的專案序列。 在 DMX 詞彙中，它們是每個叢集的範例案例。  
   
--   屬性名稱>：此資料列中的長條圖描述叢集包含的所有專案及其整體分佈。 ** \< ** 在 **[採礦圖例]** 可見時按一下長條圖，這會顯示每個項目的數值。  
+-   **\<attribute name>**：此資料列中的長條圖描述叢集包含的所有專案及其整體分佈。 在 **[採礦圖例]** 可見時按一下長條圖，這會顯示每個項目的數值。  
   
  **狀態**  
  此資料行在圖表中是選擇性的，可透過選取 [顯示圖例]**** 選項來顯示或移除它。 **[狀態]** 資料行就對應的叢集長條圖中的哪種色彩表示哪種狀態提供了指南。  

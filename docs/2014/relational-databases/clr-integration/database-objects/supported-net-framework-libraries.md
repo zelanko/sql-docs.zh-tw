@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c2518404830577839bce3e84c4eac9b76c850cd3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0db38e8bf21d56a0fcd35208920b9ee24b583062
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873774"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953468"
 ---
 # <a name="supported-net-framework-libraries"></a>支援的 .NET Framework 程式庫
   利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中裝載的 Common Language Runtime (CLR)，您能夠以 Managed 程式碼撰寫預存程序、觸發程序、使用者定義函數、使用者定義型別及使用者定義彙總。 藉由 .NET Framework 類別庫所提供的功能，您可以存取預先建立的類別，這些類別可提供字串操作、進階數學運算、檔案存取、加密等多項功能。 您可以透過任何 Managed 預存程序、使用者定義型別、觸發程序、使用者定義函數或使用者定義彙總來存取這些類別。  
   
 > [!NOTE]  
->  如果您在全域組件快取（GAC）中服務或升級不支援的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]元件，您的。 如果元件同時存在於[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 整合中，則為。 如果您在 GAC 中服務或升級的組件也已在資料庫中註冊 (包括不受支援的 .NET Framework 組件)，請務必也在您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中藉由 `ALTER ASSEMBLY` 陳述式來服務或升級該組件的副本。 如需詳細資訊，請參閱[知識庫文章 949080](https://support.microsoft.com/kb/949080)。  
+>  如果您在全域組件快取（GAC）中服務或升級不支援的元件，您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 如果元件同時存在於 CLR 整合中，則為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 如果您在 GAC 中服務或升級的組件也已在資料庫中註冊 (包括不受支援的 .NET Framework 組件)，請務必也在您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中藉由 `ALTER ASSEMBLY` 陳述式來服務或升級該組件的副本。 如需詳細資訊，請參閱[知識庫文章 949080](https://support.microsoft.com/kb/949080)。  
   
 ## <a name="supported-libraries"></a>支援的程式庫  
- 從開始[!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] ，有一份支援的 .NET Framework 程式庫清單，其已進行測試，以確保它們符合與[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]直接從全域組件快取（GAC）載入它們的互動可靠性和安全性標準。  
+ 從開始 [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] ，有一份支援的 .NET Framework 程式庫清單，其已進行測試，以確保它們符合與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 直接從全域組件快取（GAC）載入它們的互動可靠性和安全性標準。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 整合所支援的程式庫/命名空間是：  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62873774"
   
 -   mscorlib  
   
--   System  
+-   系統  
   
 -   System.Configuration  
   

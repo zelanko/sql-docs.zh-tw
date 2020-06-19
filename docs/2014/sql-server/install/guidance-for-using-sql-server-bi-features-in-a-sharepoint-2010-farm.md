@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 02aaab5056d5e2b095d9440f696edcc77475323e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba400e1030bb18b3370a023f88d069711a44c7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172517"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054838"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>在 SharePoint 2010 伺服器陣列中使用 SQL Server BI 功能的指引
   本主題摘要說明根據您使用之軟體版本的功能可用性， 也說明使用特定 SQL Server 功能的 SharePoint 2010 安裝需求。 如需 SharePoint 2013 的相關資訊，請參閱[sharepoint 中 SQL SERVER BI 功能的部署拓撲](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。
@@ -45,7 +44,7 @@ ms.locfileid: "78172517"
 
 |支援的功能|SharePoint 產品|
 |------------------------|------------------------|
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，這是適用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]于[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition 之增益集的功能。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。|
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 適用于 Enterprise Edition 之增益集的功能 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。|
 |一般 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表檢視以及 SharePoint 的功能整合。|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard 和 Enterprise Edition。<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|
 
  如需詳細資訊，請參閱[SQL Server 2012 版本所支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)。
@@ -57,7 +56,7 @@ ms.locfileid: "78172517"
 
 -   您想要使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。
 
- 以[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]執行的 SharePoint 安裝需要 SP1 的其中一個主要原因是資料庫引擎功能**sp_dboption**（在舊版中已被取代）已在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]版本中停止。 如需詳細資訊，請參閱[SQL Server 2014 中已停止的資料庫引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)
+ 以執行的 SharePoint 安裝需要 SP1 的其中一個主要原因 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 是資料庫引擎功能**sp_dboption**（在舊版中已被取代）已在版本中停止 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。 如需詳細資訊，請參閱[SQL Server 2014 中已停止的資料庫引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)
 
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>SharePoint 2010 SP1 安裝指引
  [下載 SharePoint Server 2010 SP1](https://go.microsoft.com/fwlink/?LinkID=219697)並將它套用到伺服器陣列中的所有伺服器。
@@ -67,7 +66,7 @@ ms.locfileid: "78172517"
 
 -   **SharePoint 產品設定向導：** 執行嚮導以完成 SP1 升級和設定。
 
--   **使用 Psconfig.exe 完成升級：** 執行命令`psconfig -upgrade`以完成 SP1 升級
+-   **使用 Psconfig.exe 完成升級：** 執行命令 `psconfig -upgrade` 以完成 SP1 升級
 
  如需詳細資訊，請參閱[（Sharepoint Server 2010）](https://technet.microsoft.com/library/cc263093.aspx)和資源中心的「升級」一節[： SharePoint 2010 產品的更新](https://technet.microsoft.com/sharepoint/ff800847.aspx)
 

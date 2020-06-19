@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dae96ba17ee792b703e96ceff2200d1f8f629a01
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b8b27d39327a68a150fe42a0d6f152bd34c0dd4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022928"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 實作詳細資料
   本章節會記載搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式使用時的 ODBC 函數，這些函數可呈現 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特有的行為。 並非所有的 ODBC 函數都有記載在這裡。 個別主題只會討論 ODBC 函數的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特有問題， 並不是 ODBC 函數的完整參考。  

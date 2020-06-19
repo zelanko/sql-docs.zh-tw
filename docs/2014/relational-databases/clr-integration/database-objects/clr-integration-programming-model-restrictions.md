@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b9385d9b801ee615a377a78a44e087589a581ac
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873812"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953473"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 整合程式設計模型限制
-  當您建立 managed 預存程式或其他 managed 資料庫物件時，會執行特定的程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代碼檢查，其會在第一次於資料庫中註冊、使用`CREATE ASSEMBLY`語句，以及在執行時間時，對 managed 程式碼元件執行檢查。 也會在執行階段檢查 Managed 程式碼，因為在組件中，可能會有執行階段絕對無法到達的程式碼路徑。  特別是這樣提供了註冊協力廠商組件的彈性，如此一來，當組件中的不安全程式碼設計為在用戶端環境中執行，但是絕對不會在主控的 CLR 內執行時，就不會封鎖該組件。 Managed 程式碼必須符合的需求取決於元件是否註冊`SAFE`為、 `EXTERNAL_ACCESS`、或`UNSAFE`， `SAFE`是否為最嚴格的，並且如下所示。  
+  當您建立 managed 預存程式或其他 managed 資料庫物件時，會執行特定的程式碼檢查， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 其會在第一次於資料庫中註冊、使用 `CREATE ASSEMBLY` 語句，以及在執行時間時，對 managed 程式碼元件執行檢查。 也會在執行階段檢查 Managed 程式碼，因為在組件中，可能會有執行階段絕對無法到達的程式碼路徑。  特別是這樣提供了註冊協力廠商組件的彈性，如此一來，當組件中的不安全程式碼設計為在用戶端環境中執行，但是絕對不會在主控的 CLR 內執行時，就不會封鎖該組件。 Managed 程式碼必須符合的需求取決於元件是否註冊為 `SAFE` 、 `EXTERNAL_ACCESS` 、或，是否為 `UNSAFE` `SAFE` 最嚴格的，並且如下所示。  
   
  除了對 Managed 程式碼組件所加諸的限制以外，也有授與的程式碼安全性權限。 Common Language Runtime (CLR) 支援稱為 Managed 程式碼之程式碼存取安全性 (CAS) 的安全性模型。 在此模型中，將會根據程式碼的識別來授與權限給組件。 `SAFE`、`EXTERNAL_ACCESS` 和 `UNSAFE` 組件有不同的 CAS 權限。 如需詳細資訊，請參閱[CLR 整合代碼啟用安全性](../security/clr-integration-code-access-security.md)。  
   
@@ -37,9 +36,9 @@ ms.locfileid: "62873812"
   
 -   此組件是其中一個支援的組件。 如需詳細資訊，請參閱[支援的 .NET Framework 程式庫](supported-net-framework-libraries.md)。  
   
--   您使用`CREATE ASSEMBLY FROM` * \<的位置>，* 而且所有參考的元件及其相依性都可在 [ * \<位置]>* 中取得。  
+-   您正在使用 `CREATE ASSEMBLY FROM` * \<location> ，* 而且所有參考的元件及其相依性都可在中取得 *\<location>* 。  
   
--   您使用`CREATE ASSEMBLY FROM` * \<的是 bytes ... >，* 而且所有的參考都是透過以空格分隔的位元組來指定。  
+-   您使用的是 `CREATE ASSEMBLY FROM` * \<bytes ...> ，* 而且所有的參考都是透過以空格分隔的位元組來指定。  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  所有 `EXTERNAL_ACCESS` 組件都必須符合下列準則：  
@@ -86,7 +85,7 @@ ms.locfileid: "62873812"
  執行階段會檢查程式碼組件是否有下列條件。 如果找到這些條件的任何一個，將不允許執行 Managed 程式碼，而且將會擲回例外狀況。  
   
 ### <a name="unsafe"></a>UNSAFE  
- 不允許載入元件（不論是從位元組`System.Reflection.Assembly.Load()`陣列呼叫方法，或是透過使用`Reflection.Emit`命名空間隱含）。  
+ 不允許載入元件（不論是 `System.Reflection.Assembly.Load()` 從位元組陣列呼叫方法，或是透過使用 `Reflection.Emit` 命名空間隱含）。  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  所有 `UNSAFE` 條件都會檢查。  
@@ -97,7 +96,7 @@ ms.locfileid: "62873812"
   
 -   SelfAffectingThreading  
   
--   Synchronization  
+-   同步處理  
   
 -   SharedState  
   

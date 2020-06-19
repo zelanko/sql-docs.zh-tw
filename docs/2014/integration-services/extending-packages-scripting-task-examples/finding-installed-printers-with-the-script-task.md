@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 956a73f76e113eb0a50f628150e47ed33791cc97
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdb702c890097965b8058258f78c8572ad911a72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176237"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968506"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>以指令碼工作尋找安裝的印表機
-  由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝轉換的資料通常有列印的報表，做為其最終的目的地。 中`System.Drawing.Printing` [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的命名空間提供使用印表機的類別。
+  由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝轉換的資料通常有列印的報表，做為其最終的目的地。 `System.Drawing.Printing`中的命名空間 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供使用印表機的類別。
 
 > [!NOTE]
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../extending-packages-custom-objects/task/developing-a-custom-task.md)。
@@ -41,11 +40,11 @@ ms.locfileid: "78176237"
 
 1.  建立名為 `PrinterList` 且類型為 `Object` 的變數。
 
-2.  在 [指令碼工作編輯器]  的 [指令碼]  頁面上，將此變數加入 ReadWriteVariables 屬性。
+2.  在 [指令碼工作編輯器] 的 [指令碼] 頁面上，將此變數加入 ReadWriteVariables 屬性。
 
 3.  在指令碼專案中，加入 **System.Drawing** 命名空間的參考。
 
-4.  在您的程式碼`Imports`中，使用語句來匯入**system.web**和`System.Drawing.Printing`命名空間。
+4.  在您的程式碼中，使用 `Imports` 語句來匯入**system.web**和 `System.Drawing.Printing` 命名空間。
 
 ### <a name="code"></a>程式碼
 

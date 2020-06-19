@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee713086be138a204ca5b79f3ec172f8e376ea86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829508"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917668"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件監看員工作
   「WMI 事件監看員」工作使用 Management Instrumentation 查詢語言 (WQL) 事件查詢來監看 Windows Management Instrumentation (WMI) 事件，以指定感興趣的事件。 您可將「WMI 事件監看員」工作用於下列用途：  
@@ -75,7 +74,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   定義工作回應事件的方式。 工作可以根據事件設定為成功或失敗，也可以讓工作只再次監看事件。  
   
--   指定當 WMI 查詢超時時，工作所採取的動作。您可以記錄超時時間和過期後的狀態，或者引發自訂[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]事件，表示 WMI 事件超時，並記錄超時和超時狀態。  
+-   指定當 WMI 查詢超時時，工作所採取的動作。您可以記錄超時時間和過期後的狀態，或者引發自訂 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 事件，表示 WMI 事件超時，並記錄超時和超時狀態。  
   
 -   定義工作如何回應超時。工作可以設定為成功或失敗，或工作可以再次監看事件。  
   

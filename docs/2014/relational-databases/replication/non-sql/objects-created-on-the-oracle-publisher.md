@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50580bcb80e58b73931fd867a1be83cac58a9911
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022143"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068579"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>在 Oracle 發行者端建立的物件
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]複寫會在 oracle 發行者端安裝資料庫物件，以啟用變更追蹤和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]轉送（不會在 oracle 發行者端安裝任何二進位檔案）。 下表列出當「Oracle 發行者」在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端上識別為「發行者」時，在該「Oracle 發行者」端上建立的物件。 提供的物件描述僅供參考之用。 不應對這些物件進行修改。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]複寫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會在 Oracle 發行者端安裝資料庫物件，以啟用變更追蹤和轉送（不 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會在 oracle 發行者端安裝任何二進位檔案）。 下表列出當「Oracle 發行者」在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端上識別為「發行者」時，在該「Oracle 發行者」端上建立的物件。 提供的物件描述僅供參考之用。 不應對這些物件進行修改。  
   
 |物件名稱|物件類型|描述|  
 |-----------------|-----------------|-----------------|  

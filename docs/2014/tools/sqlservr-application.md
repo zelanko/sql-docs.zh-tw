@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48dcf9d22686aa87f267304fe844a1989fe4e24c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211013"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007035"
 ---
 # <a name="sqlservr-application"></a>sqlservr 應用程式
   **sqlservr** 應用程式會在命令提示字元之下，啟動、停止、暫停和繼續執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。  
@@ -61,7 +60,7 @@ ms.locfileid: "68211013"
  啟動只含最小組態的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 如果組態值設定 (如過度調配記憶體) 造成伺服器無法啟動，這就很有用。  
   
  **-e** _error_log_path_  
- 指出錯誤記錄檔的完整路徑。 如果未指定，則預設位置為* \<磁片磁碟機>*： \Program Files\Microsoft sql Server\MSSQL\Log\Errorlog，適用于預設實例，而* \<磁片磁碟機>*： \Program Files\Microsoft sql Server\MSSQL $*instance_name*\Log\Errorlog 適用于已命名的實例。 **-e** 和 *error_log_path*之間沒有空格。  
+ 指出錯誤記錄檔的完整路徑。 如果未指定，則預設位置為 *\<Drive>* ： \Program FILES\MICROSOFT sql Server\MSSQL\Log\Errorlog，適用于預設實例，而 *\<Drive>* ： \PROGRAM Files\Microsoft sql Server\MSSQL $*instance_name*\Log\Errorlog 用於已命名的實例。 **-e** 和 *error_log_path*之間沒有空格。  
   
  **-l** _master_log_path_  
  指出 **master** 資料庫交易記錄檔的完整路徑。 **-l** 和 *master_log_path*之間沒有空格。  
@@ -76,7 +75,7 @@ ms.locfileid: "68211013"
  指出啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，應該已啟用指定的追蹤旗標 (*trace#*)。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
   
 > [!IMPORTANT]  
->  指定追蹤旗標時，請使用 **-T** 傳遞追蹤旗標號碼。 **接受小寫的 t (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 是用來設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援工程師所需要的其他內部追蹤旗標。  
+>  指定追蹤旗標時，請使用 **-T** 傳遞追蹤旗標號碼。 **接受小寫的 t (** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 是用來設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援工程師所需要的其他內部追蹤旗標。  
   
  **-v**  
  顯示伺服器版本號碼。  
@@ -91,9 +90,9 @@ ms.locfileid: "68211013"
   
  除非您在 **錯誤記錄檔中見到下列任何警告，否則，請使用** -g [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 參數的預設值：  
   
--   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<大小>"  
+-   「失敗的虛擬配置位元組： \<size> FAIL_VIRTUAL_RESERVE」  
   
--   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<大小>"  
+-   「失敗的虛擬配置位元組： \<size> FAIL_VIRTUAL_COMMIT」  
   
  這些訊息可能表示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 正在嘗試釋出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體集區的可用部分，以便找出擴充預存程序 .dll 檔或自動化物件等項目的空間。 在這種情況下，可考慮加大 **-g**`` 參數所保留的記憶體數量。  
   
