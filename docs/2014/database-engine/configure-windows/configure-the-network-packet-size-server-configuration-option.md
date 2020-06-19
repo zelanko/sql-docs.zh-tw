@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4bd992f16158e7286db668256dc5963d83dbd4b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69e5963675349bceff6a0ee022f6dc28da03db59
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786997"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935606"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>設定 network packet size 伺服器組態選項
-  `network packet size`本主題描述如何使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中設定 server configuration 選項。 `network packet size`選項會設定在整個網路上使用的封包大小（以位元組為單位）。 封包是在用戶端與伺服器之間傳送要求與結果的固定大小資料區塊。 預設的封包大小為 4096 個位元組。  
+  本主題描述如何 `network packet size` 使用或，在中設定 server configuration 選項 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 `network packet size`選項會設定在整個網路上使用的封包大小（以位元組為單位）。 封包是在用戶端與伺服器之間傳送要求與結果的固定大小資料區塊。 預設的封包大小為 4096 個位元組。  
   
 > [!NOTE]  
 >  除非確信有助於提升效能，否則請勿變更封包大小。 對於大部分應用程式而言，預設封包大小是最適當的大小。  

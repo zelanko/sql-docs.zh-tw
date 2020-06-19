@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 595da161660b60845c02d71e22411a2a4eba009c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e96ef9eb6c4dd1537413b50c808673c47904b39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192116"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063122"
 ---
 # <a name="handling-smo-exceptions"></a>處理 SMO 例外狀況
   在 Managed 程式碼中發生錯誤時會擲回例外狀況。 SMO 方法和屬性不會在傳回值中報告成功或失敗， 而是由例外處理常式攔截和處理例外狀況。  
@@ -33,7 +32,7 @@ ms.locfileid: "63192116"
  例外狀況可以是一般或特定的。 一般例外狀況包含一組特定的例外狀況。 可以用數個 `Catch` 陳述式來處理預期的錯誤，而讓剩餘的錯誤通過以留待一般例外狀況處理程式碼處理。 例外狀況通常是以串聯式序列發生。 SMO 例外狀況經常是由 SQL 例外狀況所導致。 偵測此種狀況的方法是連續使用 `InnerException` 屬性來判斷導致最後之最上層例外狀況的原始例外狀況。  
   
 > [!NOTE]  
->  例外`SQLException`狀況是在**SqlClient**命名空間中宣告的。  
+>  `SQLException`例外狀況是在**SqlClient**命名空間中宣告的。  
   
  ![顯示 excp 等級的長條圖](../../../database-engine/dev-guide/media/exception-flow.gif "顯示 excp 等級的長條圖")  
   

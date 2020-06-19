@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a710ef8474ea0ce67d0b549febb3a9dd40aa36e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d7fd9ecafda270a02f1fba9f5dd74adc9e299d1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811372"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935739"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>設定 cursor threshold 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cursor threshold [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **cursor threshold** 選項會指定資料指標集中以非同步方式產生資料指標索引鍵集的列數。 當資料指標為結果集產生索引鍵集時，查詢最佳化工具會估計將在該結果集傳回的資料列數。 如果查詢最佳化工具估計將傳回的列數會大於這個臨界值，就會以非同步方式產生資料指標，讓使用者在資料指標繼續擴展的同時，可以從資料指標擷取資料列。 否則，會以同步的方式產生資料指標，使查詢等到所有資料列都傳回為止。  

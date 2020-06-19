@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 758c2b42d09e120bf0621bcdedf26b93f130b39f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d4f8420bf8ed8c08d3626c797968c041a40f7c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786789"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935589"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>設定 query governor cost limit 伺服器組態選項
-  `query governor cost limit`本主題描述如何使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中設定 server configuration 選項。 查詢管理員成本限制選項指定查詢可執行的時間週期上限。 查詢成本代表在特定的硬體組態上，預估完成查詢所需的時間 (以秒為單位)。 此選項的預設值為 0，這會將查詢管理員設定為關閉。 這允許所有查詢在沒有任何時間限制下執行。 如果指定非零的非負值，查詢若超過該值的估計成本，查詢管理員就不允許執行此查詢。  
+  本主題描述如何 `query governor cost limit` 使用或，在中設定 server configuration 選項 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 查詢管理員成本限制選項指定查詢可執行的時間週期上限。 查詢成本代表在特定的硬體組態上，預估完成查詢所需的時間 (以秒為單位)。 此選項的預設值為 0，這會將查詢管理員設定為關閉。 這允許所有查詢在沒有任何時間限制下執行。 如果指定非零的非負值，查詢若超過該值的估計成本，查詢管理員就不允許執行此查詢。  
   
  **本主題內容**  
   

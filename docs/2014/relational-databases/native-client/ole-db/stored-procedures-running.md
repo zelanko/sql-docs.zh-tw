@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91d6da9e7d9fd17d35d9868834c6b0d688519ff7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 786101d76185c21763787ab11fd29600938be198
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704173"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055804"
 ---
 # <a name="running-stored-procedures-ole-db"></a>執行預存程序 (OLE DB)
   執行陳述式時，在資料來源上呼叫預存程序 (而非直接在用戶端應用程式中執行或準備陳述式) 可以提供：  
@@ -51,6 +50,6 @@ ms.locfileid: "82704173"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會將 DBPROP_OUTPUTPARAMETERAVAILABILITY 屬性設定為 DBPROPVAL_OA_ATROWRELEASE，以指出在處理或釋放結果集之前，不會傳回傳回碼和輸出參數。  
   
 ## <a name="see-also"></a>另請參閱  
- [預存程序](stored-procedures.md)  
+ [預存程式](stored-procedures.md)  
   
   

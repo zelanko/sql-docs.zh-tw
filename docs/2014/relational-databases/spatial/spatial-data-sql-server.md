@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dccec5ca3c42f605145853b2e864e861b17535fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014063"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063032"
 ---
 # <a name="spatial-data-sql-server"></a>空間資料 (SQL Server)
   空間資料代表幾何物件的實體位置和圖形相關資訊。 這些物件可以是點位置或更複雜的物件，例如國家/地區、道路或湖泊。  
@@ -55,7 +54,7 @@ ms.locfileid: "66014063"
  [空間資料類型概觀](spatial-data-types-overview.md)  
  介紹空間資料類型。  
   
--   [Point](point.md)  
+-   [點](point.md)  
   
 -   [LineString](linestring.md)  
   

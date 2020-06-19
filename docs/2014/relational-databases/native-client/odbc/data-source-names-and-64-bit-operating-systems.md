@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: c2f86810-2775-4ddd-8df7-e8373785a7fc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d529786fdb8643338c3a0d004c4a409e8e85a420
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ae31584ca3c076919f688d1ef9bdef80706c6940
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704297"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055849"
 ---
 # <a name="data-source-names-and-64-bit-operating-systems"></a>資料來源名稱和 64 位元作業系統
   若要建立並執行應用程式，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  

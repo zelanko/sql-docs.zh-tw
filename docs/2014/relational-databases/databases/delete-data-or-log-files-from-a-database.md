@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e0f2de1f7003e61dbdc8e82f7a9b549fd42c77fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f7bd170e085e9bc94b00446545850e905efaa34
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917268"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970055"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>刪除資料庫的資料或記錄檔
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來刪除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的資料或記錄檔。  
@@ -44,9 +43,9 @@ ms.locfileid: "62917268"
   
 #### <a name="to-delete-data-or-log-files-from-a-database"></a>若要刪除資料庫的資料或記錄檔  
   
-1.  在**物件總管**中，連接到的實例[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，然後展開該實例。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 **[資料庫]**，以滑鼠右鍵按一下要從中刪除檔案的資料庫，再按一下 **[屬性]**。  
+2.  展開 **[資料庫]** ，以滑鼠右鍵按一下要從中刪除檔案的資料庫，再按一下 **[屬性]** 。  
   
 3.  選取 **[檔案]** 頁面。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 627dafb26a4368261e820dd03525f147429cdbcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c00050ee323cade7493d44c4c296ba4ce6811e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874436"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955111"
 ---
 # <a name="transaction-lifetimes"></a>交易存留期間
   利用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序啟動的交易以及利用 Managed 程式碼啟動的交易間有一個重要的差異：Common Language Runtime (CLR) 程式碼無法在進入或離開 CLR 引動過程時讓交易狀態不平衡。 請注意此差異的下列含意：  

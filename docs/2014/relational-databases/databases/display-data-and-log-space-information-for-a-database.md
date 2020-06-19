@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4850be4c112f9c0b987d543873cb55af08372455
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1beb8cdedbc2b72eadeeb350ee1c3b6d16218205
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917324"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970041"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>顯示資料庫的資料和記錄空間資訊
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中顯示資料庫的資料和記錄檔空間資訊。  

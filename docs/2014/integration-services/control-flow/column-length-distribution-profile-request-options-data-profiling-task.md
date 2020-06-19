@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a34e5f5af82103709b1e08c22860b1f87288422e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fa7b494745c70ae63c8c51f3aa9ae8249040f50
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832564"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919582"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>資料行長度散發設定檔要求選項 (資料分析工作)
   您可以使用 **[設定檔要求]** 頁面的 **[要求屬性]** 窗格，針對要求窗格中選取的 **[資料行長度散發設定檔要求]** 設定選項。 資料行長度散發設定檔會報告選取之資料行中字串值的所有相異長度，以及該資料表中每個長度所代表之資料列的百分比。 這個設定檔可協助您識別資料中的問題，例如無效的值。 舉例來說，您分析了美國州名二字元代碼的資料行並發現長度超過兩個字元的值。  
@@ -59,7 +58,7 @@ ms.locfileid: "62832564"
   
 #### <a name="column-options"></a>資料行選項  
  **IsWildCard**  
- 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(** ) **來分析所有資料行，這個選項會設定為 [True]\*** 。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
+ 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
   
  **ColumnName**  
  顯示所選取資料行的名稱。 如果您已選取 **(\*)** 來分析所有資料行，這個選項就是空白的。 此選項是唯讀的。  

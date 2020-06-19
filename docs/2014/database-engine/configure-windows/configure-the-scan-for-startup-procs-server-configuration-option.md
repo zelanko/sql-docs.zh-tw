@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a1af9aea2b4088c2a8d3753fd55feaa0f43ae6ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fbf46fc7476e6e879991cfe3f649fd5617f3275e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811365"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935502"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>設定 scan for startup procs 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] scan for startup procs [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 您可以使用 **scan for startup procs** 選項，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動期間掃描預存程序的自動執行。 如果這個選項設定為 1， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會掃描及執行伺服器上所定義的所有自動執行預存程序。 **掃描啟動程序** 的預設值是 0 (不掃描)。  

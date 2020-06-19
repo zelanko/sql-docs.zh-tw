@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4505817838d881e3d37c93d6e159652caeadf4d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245603"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001669"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
   此主題描述如何使用  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Agent 錯誤記錄檔。  
@@ -56,7 +55,7 @@ ms.locfileid: "63245603"
   
 -   調整處理序的記憶體配額 (SeIncreaseQuotaPrivilege)  
   
- 如需[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶所需之 Windows 許可權的詳細資訊，請參閱[選取 SQL Server Agent 服務的帳戶](select-an-account-for-the-sql-server-agent-service.md)和[設定 windows 服務帳戶與許可權](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+ 如需 Agent 服務帳戶所需之 Windows 許可權的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[選取 SQL Server Agent 服務的帳戶](select-an-account-for-the-sql-server-agent-service.md)和[設定 Windows 服務帳戶與許可權](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -91,21 +90,21 @@ ms.locfileid: "63245603"
      停止載入記錄檔項目。 例如，如果遠端或離線記錄檔需要長時間才能載入，而您只要檢視最新項目時，就可以使用這個選項。  
   
      **記錄檔摘要**  
-     此資訊面板會顯示記錄檔篩選的摘要。 如果未篩選檔案，則會看到下列文字： **[未套用篩選]**。 若篩選已套用到記錄檔，則會看到下列文字：**篩選記錄項目的準則：** \<篩選準則>。  
+     此資訊面板會顯示記錄檔篩選的摘要。 如果未篩選檔案，則會看到下列文字： **[未套用篩選]**。 若篩選已套用到記錄，則會看到下列文字：**篩選記錄項目的準則：** \<filter criteria>。  
   
      **選取的資料列詳細資料**  
      選取資料列以顯示頁面下方有關選取之事件資料列的其他詳細資料。 將資料行拖曳至方格中的新位置，以重新排序資料行。 將方格標頭中的資料行分隔線拖曳至左邊或右邊，以調整資料行大小。 在方格標頭中按兩下資料行分隔線，自動將資料行大小調整為內容寬度。  
   
      **執行個體**  
-     發生事件之執行個體的名稱。 這會顯示為*電腦名稱稱*\\*實例名稱*。  
+     發生事件之執行個體的名稱。 這會顯示為*電腦名稱稱* \\ *實例名稱*。  
   
      **日期**  
      顯示事件的日期。  
   
-     **來源**  
+     **Source**  
      顯示事件建立的來源功能，例如服務名稱 (如 MSSQLSERVER)。 不是所有記錄檔類型都會出現來源。  
   
-     **訊息**  
+     **Message**  
      顯示與事件相關聯的任何訊息。  
   
      **記錄類型**  

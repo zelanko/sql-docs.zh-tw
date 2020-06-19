@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c58abd60ecc6236e52e302f6e11daaaa244ff21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063174"
 ---
 # <a name="permissions-database-engine"></a>權限 (Database Engine)
   每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性實體都具有可授與主體的關聯權限。 此主題提供下列資訊：  
@@ -49,11 +48,11 @@ ms.locfileid: "81487154"
   
      授與變更特定安全性實體之屬性 (除了擁有權之外) 的能力。 在特定範圍授與 ALTER 權限時，也會一併授與改變、建立或卸除該範圍內包含之任何安全性實體的能力。 例如，結構描述上的 ALTER 權限包括建立、改變與卸除結構描述之物件的能力。  
   
--   改變任何\<*伺服器*安全性實體>，其中*伺服器*安全性實體可以是任何伺服器安全性實體。  
+-   ALTER ANY \<*Server Securable*> ，其中*伺服器*安全性實體可以是任何伺服器安全實體。  
   
      授與 *伺服器安全性實體*的 CREATE、ALTER 或 DROP 個別執行個體的能力。 例如，ALTER ANY LOGIN 會授與建立、改變或卸除執行個體中任何登入的能力。  
   
--   改變任何\<*資料庫*安全性實體>，其中*資料庫*安全性實體可以是資料庫層級的任何安全性實體。  
+-   ALTER ANY \<*Database Securable*> ，其中*資料庫*安全性實體可以是資料庫層級的任何安全性實體。  
   
      授與 *資料庫安全性實體*的 CREATE、ALTER 或 DROP 個別執行個體能力。 例如，ALTER ANY SCHEMA 會授與建立、改變或卸除資料庫中任何結構描述的能力。  
   
@@ -61,23 +60,23 @@ ms.locfileid: "81487154"
   
      讓被授與者可以取得被授與之安全性實體的擁有權。  
   
--   \<模擬*登*入>  
+-   偽裝\<*Login*>  
   
      讓被授與者可以模擬登入。  
   
--   \<模擬*使用者*>  
+-   偽裝\<*User*>  
   
      讓被授與者可以模擬使用者。  
   
--   建立\<*伺服器*安全性實體>  
+-   建立\<*Server Securable*>  
   
      為被授與者授與建立 *伺服器安全性實體*的能力。  
   
--   建立\<*資料庫*安全性實體>  
+-   建立\<*Database Securable*>  
   
      為被授與者授與建立 *資料庫安全性實體*的能力。  
   
--   建立\<*包含架構的*安全性實體>  
+-   建立\<*Schema-contained Securable*>  
   
      授與建立結構描述包含的安全性實體之能力。 然而，需要結構描述上的 ALTER 權限才能在特定結構描述中建立該安全性實體。  
   
@@ -92,17 +91,17 @@ ms.locfileid: "81487154"
      需要物件的 REFERENCES 權限，才能建立具有可參考該物件之 `WITH SCHEMABINDING` 的 FUNCTION 或 VIEW。  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 權限的圖表  
- 如需 pdf 格式之所有[!INCLUDE[ssDE](../../includes/ssde-md.md)]許可權的海報大小圖表，請[https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)參閱。  
+ 如需 pdf 格式之擁有權限的海報大小圖表 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，請參閱 [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) 。  
   
 ##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>適用于特定安全性實體的許可權  
  下表列出主要的權限類別，以及這些類別的權限適用的安全性實體。  
   
-|權限|適用對象|  
+|權限|適用於|  
 |----------------|----------------|  
 |SELECT|同義字<br /><br /> 資料表與資料行<br /><br /> 資料表值函式、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、Common Language Runtime (CLR) 與資料行<br /><br /> 檢視表與資料行|  
 |VIEW CHANGE TRACKING|資料表<br /><br /> 結構描述|  
 |UPDATE|同義字<br /><br /> 資料表與資料行<br /><br /> 檢視表與資料行<br /><br /> 順序物件|  
-|REFERENCES|純量與彙總函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列<br /><br /> 資料表與資料行<br /><br /> 資料表值函數 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR) 及資料行<br /><br /> 型別<br /><br /> 檢視表與資料行<br /><br /> 順序物件|  
+|REFERENCES|純量與彙總函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列<br /><br /> 資料表與資料行<br /><br /> 資料表值函數 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR) 及資料行<br /><br /> 類型<br /><br /> 檢視表與資料行<br /><br /> 順序物件|  
 |Insert|同義字<br /><br /> 資料表與資料行<br /><br /> 檢視表與資料行|  
 |刪除|同義字<br /><br /> 資料表與資料行<br /><br /> 檢視表與資料行|  
 |執行 CREATE 陳述式之前，請先執行|程序 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 純量與彙總函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 同義字<br /><br /> CLR 類型|  
@@ -157,7 +156,7 @@ ms.locfileid: "81487154"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注意：僅適用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注意：僅適用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +164,7 @@ ms.locfileid: "81487154"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 注意：僅適用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 注意：僅適用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +203,7 @@ ms.locfileid: "81487154"
 |DATABASE|刪除|DL|SERVER|CONTROL SERVER|  
 |DATABASE|執行 CREATE 陳述式之前，請先執行|EX|SERVER|CONTROL SERVER|  
 |DATABASE|Insert|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注意：僅適用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注意：僅適用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  

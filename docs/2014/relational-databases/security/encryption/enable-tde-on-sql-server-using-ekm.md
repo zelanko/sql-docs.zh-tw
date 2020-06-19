@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 8b3f046017aa54f5db96878f8bfb6c435409d839
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e659c5ff0245fdb17192b845eafc60badf5e295e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957227"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063212"
 ---
 # <a name="enable-tde-using-ekm"></a>使用 EKM 啟用 TDE
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中透過使用儲存在可延伸金鑰管理 (EKM) 模組中的非對稱金鑰，啟用透明資料加密 (TDE) 以保護資料庫加密金鑰。  

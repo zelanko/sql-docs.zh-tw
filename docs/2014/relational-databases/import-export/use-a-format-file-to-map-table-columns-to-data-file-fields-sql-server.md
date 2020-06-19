@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79d187f3223f845f00d9eabb8744758755005db9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026414"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式檔案將資料表資料行對應至資料檔欄位 (SQL Server)
   資料檔中包含的欄位順序可以與資料表中對應資料行的順序不同。 此主題呈現非 XML 與 XML 格式檔案，這些檔案已經過修改，以配合欄位順序與資料表資料行不同的資料檔。 已修改的格式檔案可將資料欄位對應到與它們對應的資料表資料行。  

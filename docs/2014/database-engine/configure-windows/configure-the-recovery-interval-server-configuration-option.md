@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 560d514ba8dd1503b59b3b59ecf404d876e24cd2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787100"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935564"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>設定 recovery interval 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] recovery interval [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **recovery interval** 選項會定義資料庫的復原時間上限。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用此選項的指定值，來決定 [automatic checkpoints](../../relational-databases/logs/database-checkpoints-sql-server.md) 在給定資料庫上發出自動檢查點的大約頻率。  

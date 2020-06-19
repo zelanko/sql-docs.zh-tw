@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f07d9b2f613ca1face8be3bb23bac78202da6655
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e82debe452a1fb4214c297d781e3a95146ec52aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192135"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063145"
 ---
 # <a name="setting-properties"></a>設定屬性
-  屬性是儲存有關物件之描述性資訊的值。 例如， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]設定選項會以<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>物件的屬性來表示。 您可以使用屬性集合來直接或間接地存取屬性。 直接存取屬性會使用下列語法：  
+  屬性是儲存有關物件之描述性資訊的值。 例如，設定 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 選項會以 <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> 物件的屬性來表示。 您可以使用屬性集合來直接或間接地存取屬性。 直接存取屬性會使用下列語法：  
   
  `objInstance.PropertyName`  
   

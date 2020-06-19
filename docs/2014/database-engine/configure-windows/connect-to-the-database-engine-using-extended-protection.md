@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 894cb2beb52684ececb4d9aadb171e283fad5a55
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811249"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935449"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用擴充保護連接至 Database Engine
-  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始  **就支援 [擴充保護]** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。 **驗證擴充保護** 是作業系統實作的網路元件功能。 Windows 7 和 Windows Server 2008 R2 上可支援 **[擴充保護]** 。 Service Pack 中內含**擴充保護** ，可供舊版 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 作業系統使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在使用 **擴充保護**進行連接時較安全。  
+  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就支援 [擴充保護]。 **驗證擴充保護** 是作業系統實作的網路元件功能。 Windows 7 和 Windows Server 2008 R2 上可支援 **[擴充保護]** 。 Service Pack 中內含**擴充保護** ，可供舊版 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 作業系統使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在使用 **擴充保護**進行連接時較安全。  
   
 > [!IMPORTANT]  
 >  Windows 預設不會啟用 **[擴充保護]** 。 如需有關如何在 Windows 中啟用 **[擴充保護]** 的詳細資訊，請參閱 [驗證擴充保護](https://support.microsoft.com/kb/968389)。  
@@ -48,7 +47,7 @@ ms.locfileid: "62811249"
  通道繫結會在用戶端與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的執行個體之間建立安全通道 (Schannel)。 此服務會驗證用戶端的真實性，其方式是比較該通道特定用戶端通道繫結權杖 (CBT) 與它自己的 CBT。 通道繫結會處理引誘和詐騙這兩種攻擊。 但是，它會發生較大的執行階段成本，因為它需要所有工作階段流量的傳輸層安全性 (TLS) 加密。 用戶端應用程式使用加密連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時會發生通道繫結，與加密由用戶端還是伺服器強制無關。  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料提供者支援 TLS 1.0 和 SSL 3.0。 如果您以在作業系統 SChannel 層級中進行變更的方式，強制執行不同的通訊協定 (例如 TLS 1.1 或 TLS 1.2)，您與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連線可能會失敗。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 資料提供者支援 TLS 1.0 和 SSL 3.0。 如果您以在作業系統 SChannel 層級中進行變更的方式，強制執行不同的通訊協定 (例如 TLS 1.1 或 TLS 1.2)，您與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連線可能會失敗。  
   
 ### <a name="operating-system-support"></a>作業系統支援  
  下列連結提供有關 Windows 如何支援 **[擴充保護]** 的詳細資訊：  
@@ -81,11 +80,11 @@ ms.locfileid: "62811249"
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>啟用 Database Engine 的擴充保護  
  若要使用 **[擴充保護]** ，伺服器和用戶端都必須擁有支援 **[擴充保護]** 的作業系統，而且必須在作業系統上啟用 **[擴充保護]** 。 如需有關如何針對作業系統啟用 **[擴充保護]** 的詳細資訊，請參閱 [驗證擴充保護](https://support.microsoft.com/kb/968389)。  
   
- 從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始  **就支援 [擴充保護]** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。 某些舊版**的未來更新中將可以使用** [擴充保護] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在伺服器電腦上啟用 **[擴充保護]** 之後，請使用下列步驟來啟用 **[擴充保護]** ：  
+ 從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就支援 [擴充保護]。 某些舊版**的未來更新中將可以使用** [擴充保護] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在伺服器電腦上啟用 **[擴充保護]** 之後，請使用下列步驟來啟用 **[擴充保護]** ：  
   
 1.  在 **[開始]** 功能表上，選擇 **[所有程式]** ，指向 **[Microsoft SQL Server]** ，然後按一下 **[SQL Server 組態管理員]** 。  
   
-2.  展開 [ **SQL Server 網路**設定]，然後以滑鼠右鍵按一下 [*>* InstanceName *\<***的通訊協定**]，然後按一下 [**屬性**]。  
+2.  展開 [ **SQL Server 網路**設定]，然後在 [**通訊協定**] 上按一下滑鼠右鍵 *\<*InstanceName*>* ，然後按一下 [內容]。 **Properties**  
   
 3.  針對通道繫結和服務繫結，在 **[進階]** 索引標籤上將 **[擴充保護]** 設定為適當的設定值。  
   

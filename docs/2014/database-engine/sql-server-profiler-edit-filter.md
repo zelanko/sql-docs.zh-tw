@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a589eff5-6ec6-4f6e-94b8-831658257f14
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c4ed409286e531413be74a487f5baa2d3a7a878
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089774"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928669"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - 編輯篩選
   使用 **[編輯篩選]** 對話方塊來建立和修改追蹤中的資料行篩選。 按一下清單中的資料行名稱，該資料行可用的篩選準則就會顯示在相鄰的窗格中。 輸入篩選準則，然後按一下 **[確定]** ，以套用至選取的資料行。 如果篩選圖示出現在清單中之資料行名稱的左邊，表示已經設定該資料行的篩選。  

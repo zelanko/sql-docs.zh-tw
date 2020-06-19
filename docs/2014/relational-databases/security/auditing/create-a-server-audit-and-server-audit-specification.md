@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a648a975ae9f2c4139a8ebd584f6998f4d0fa1a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198406"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063198"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>建立伺服器稽核與伺服器稽核規格
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立伺服器稽核和伺服器稽核規格。 *「稽核」* (Audit) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的執行個體牽涉到追蹤和記錄系統上所發生的事件。 *SQL Server Audit* 物件會收集要監視之伺服器或資料庫層級動作和動作群組的單一執行個體。 此稽核位於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體層級。 您可以針對每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體設有多個稽核。 *「伺服器稽核規格」* (Server Audit Specification) 物件屬於稽核。 您可以針對每個稽核建立一個伺服器稽核規格，因為這兩者都是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體範圍所建立。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](sql-server-audit-database-engine.md)。  

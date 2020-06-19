@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ccb9642982b8680e4111346298e7a70bbc606dbb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4711e25dcfcc99e14894e47166638673c61a6831
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011892"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026520"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>大量匯入中最低限度記錄的先決條件
   如果是完整復原模式之下的資料庫，則大量匯入執行的所有資料列插入作業，都會完整記錄在交易記錄中。 若使用完整復原模式，大型的資料匯入作業可能會使交易記錄檔很快就填滿。 相較之下，在簡單復原模式或大量記錄復原模式之下，大量匯入作業的最少記錄會減少大量匯入作業填滿記錄空間的機會。 最低限度記錄也比完整記錄更有效率。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07af1256f4935467d1230bf2987fde4cd02c5de7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055726"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963140"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>使用資料流程路徑編輯器來設定路徑的屬性
   路徑會連接兩個資料流程元件。 在您可以設定路徑屬性之前，資料流程必須包含至少兩個已連接的資料流程元件。 如需詳細資訊，請參閱 [在資料流程中加入或刪除元件](data-flow/add-or-delete-a-component-in-a-data-flow.md) 和 [連接資料流程中的元件](data-flow/connect-components-in-a-data-flow.md)。  
@@ -32,7 +31,7 @@ ms.locfileid: "66055726"
   
 4.  在 [資料流程路徑編輯器]**** 中按一下 [一般]****。 然後，您可以編輯路徑的預設名稱並提供路徑的描述。 您還可以修改 PathAnnotation 屬性。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
   
 6.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

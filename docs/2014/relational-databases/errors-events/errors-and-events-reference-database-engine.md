@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e991accfd0e6fdd4fa25746499308455eff85ce3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62870900"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969918"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>錯誤和事件參考 (Database Engine)
 
 本節包含所選資料庫引擎錯誤訊息，需要進一步說明。
   
 ## <a name="in-this-section"></a>本節內容  
- [資料庫引擎事件和錯誤](database-engine-events-and-errors.md)描述[!INCLUDE[ssDE](../../includes/ssde-md.md)]錯誤訊息的格式，並說明如何查看錯誤訊息，並將錯誤訊息傳回給應用程式。  
+ [資料庫引擎事件和錯誤](database-engine-events-and-errors.md)描述 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤訊息的格式，並說明如何查看錯誤訊息，並將錯誤訊息傳回給應用程式。  
   
  提供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤訊息、可能原因以及任何可以更正問題之動作的說明。  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3da6ce80cc9e7bff25614e8589b4bf85dfc68e81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4d57be12cf63a6f9211125b9795f4dc60253f3e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832704"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919880"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig 工作
 使用 **Azure HDInsight Pig 工作** ，在 Azure HDInsight 叢集上執行 Pig 指令碼。

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 973d14a238f109def82cf49f223a1ce2f37888b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c31c1d87c8b743132dd90d495f73ef711dc1f813
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935501"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>設定 two digit year cutoff 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] two digit year cutoff [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **two digit year cutoff** 選項會指定從 1753 到 9999 之間的整數，以代表將兩位數年份解譯為四位數年份時的截止年份 (Cutoff Year)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設時間範圍為 1950-2049，代表截止年份為 2049。 這表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動把兩位數字年份 49 解譯為 2049，兩位數字年份 50 解譯為 1950，兩位數字年份 99 解譯為 1999。 若要維持回溯相容性，請保留預設值。  

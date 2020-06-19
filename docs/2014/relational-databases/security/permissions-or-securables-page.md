@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c83d92da6708c8c63e1ba4c2cea60b1497a54883
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80417c720258833850f07eb67f83f5c47f487ad2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63284550"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063139"
 ---
 # <a name="permissions-or-securables-page"></a>權限或安全性實體頁面
   使用 **[權限]** 頁面或 **[安全性實體]** 頁面可檢視或設定安全性實體的權限。 您可以從許多位置開啟此頁面。 此頁面的內容會隨著開啟頁面的方式以及頁面中包含的內容而稍有不同。 當頁面開啟時，頁面的上層方格可能會填入資料或是空白。 若要在上方格中加入項目，請按一下 **[搜尋]** 。 在上方格中選取項目，然後在 **[明確]** 索引標籤上設定適當的權限。若要檢視彙總的權限，請使用 **[有效]** 索引標籤。  

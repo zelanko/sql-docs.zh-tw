@@ -49,13 +49,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f74d26366e0c7c586f466b8fd227cd78ba8ab598
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 8a2fc385e7235e1857931e187086911b52ef14b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269407"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935529"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每項服務代表一個或一組處理序，用以管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業對 Windows 的驗證。 本主題描述此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的預設服務組態，以及可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間和安裝完成後設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務組態選項。  
@@ -140,9 +139,9 @@ ms.locfileid: "83269407"
   
 -   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**-提供商業智慧應用程式的線上分析處理（OLAP）和資料採礦功能。 可執行檔為 \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe。  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**-管理、執行、建立、排程和傳遞報表。 可執行檔為 \<MS SQL 路徑>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe。  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**-管理、執行、建立、排程和傳遞報表。 可執行檔為 \<MSSQLPATH> \Reporting Services\ReportServer\Bin\ReportingServicesService.exe。  
   
--   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**-提供 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝儲存體和執行的管理支援。 可執行檔路徑為 \< m h> \120\dts\binn\msdtssrvr.exe  
+-   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**-提供 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝儲存體和執行的管理支援。 可執行檔路徑為 \<MSSQLPATH>\120\DTS\Binn\MsDtsSrvr.exe  
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser** - 提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接資訊給用戶端電腦的名稱解析服務。 可執行檔路徑為 c:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe  
   
@@ -230,7 +229,7 @@ ms.locfileid: "83269407"
   
 -   <a name="VA_Desc"></a>**虛擬帳戶**  
   
-     虛擬帳戶 (從 Windows Server 2008 R2 和 Windows 7 開始) 為「受管理的本機帳戶」  ，並會提供下列功能來簡化服務管理工作。 虛擬帳戶是自動管理的，而且虛擬帳戶可以在網域環境中存取網路。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安裝期間針對服務帳戶使用預設值，則會使用以執行個體名稱作為服務名稱的虛擬帳戶，其格式為 **NT SERVICE\\** \<服務名稱>  。 以虛擬帳戶執行的服務，會利用電腦帳戶的認證存取網路資源，其格式為 <網域名稱>  **\\** <電腦名稱>  **$** 。  指定虛擬帳戶啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，請讓密碼空白。 如果虛擬帳戶無法註冊服務主要名稱 (SPN)，請手動註冊 SPN。 如需手動註冊 SPN 的詳細資訊，請參閱 [手動 SPN 註冊](register-a-service-principal-name-for-kerberos-connections.md#Manual)。  
+     虛擬帳戶 (從 Windows Server 2008 R2 和 Windows 7 開始) 為「受管理的本機帳戶」  ，並會提供下列功能來簡化服務管理工作。 虛擬帳戶是自動管理的，而且虛擬帳戶可以在網域環境中存取網路。 如果在安裝期間針對服務帳戶使用預設值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則會使用以實例名稱做為服務名稱的虛擬帳戶，格式為**NT service \\ ** _\<SERVICENAME>_ 。 以虛擬帳戶執行的服務，會利用電腦帳戶的認證存取網路資源，其格式為 <網域名稱>  **\\** <電腦名稱>  **$** 。  指定虛擬帳戶啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，請讓密碼空白。 如果虛擬帳戶無法註冊服務主要名稱 (SPN)，請手動註冊 SPN。 如需手動註冊 SPN 的詳細資訊，請參閱 [手動 SPN 註冊](register-a-service-principal-name-for-kerberos-connections.md#Manual)。  
   
     > [!NOTE]  
     >  虛擬帳戶無法用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體，因為虛擬帳戶在叢集的每一個節點上不會有相同的 SID。  
@@ -301,7 +300,7 @@ ms.locfileid: "83269407"
 -   [具名管道](#Pipes)  
   
 ###  <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> 服務組態和存取控制  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會對它的每個服務啟用個別服務 SID，以提供深度的服務隔離和防禦。 每個服務 SID 都是衍生自服務名稱，而且是該服務專用的。 例如，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的服務 SID 名稱可能是 **NT Service\MSSQL$** \<執行個體名稱>  。 服務隔離可讓服務存取特定物件，而不需要以高權限帳戶執行或降低物件的安全性保護。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務可以透過使用包含服務 SID 的存取控制項目，來限制其資源的存取權。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會對它的每個服務啟用個別服務 SID，以提供深度的服務隔離和防禦。 每個服務 SID 都是衍生自服務名稱，而且是該服務專用的。 例如，服務的服務 SID 名稱 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可能是**NT Service\MSSQL $** _\<InstanceName>_ 。 服務隔離可讓服務存取特定物件，而不需要以高權限帳戶執行或降低物件的安全性保護。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務可以透過使用包含服務 SID 的存取控制項目，來限制其資源的存取權。  
   
 > [!NOTE]  
 >  在 Windows 7 和 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 (以及更新版本) 上，個別服務 SID 可以是服務所使用的虛擬帳戶。  
@@ -344,31 +343,31 @@ ms.locfileid: "83269407"
   
 |服務帳戶|檔案和資料夾|存取|  
 |-------------------------|-----------------------|------------|  
-|MSSQLServer|Instid\MSSQL\backup|完整控制|  
+|MSSQLServer|Instid\MSSQL\backup|完全控制|  
 ||Instid\MSSQL\binn|讀取、執行|  
-||Instid\MSSQL\data|完整控制|  
-||Instid\MSSQL\FTData|完整控制|  
+||Instid\MSSQL\data|完全控制|  
+||Instid\MSSQL\FTData|完全控制|  
 ||Instid\MSSQL\Install|讀取、執行|  
-||Instid\MSSQL\Log|完整控制|  
+||Instid\MSSQL\Log|完全控制|  
 ||Instid\MSSQL\Repldata|完整控制|  
 ||120\shared|讀取、執行|  
 ||Instid\MSSQL\Template Data (僅限[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] )|讀取|  
-|SQLServerAgent<sup>1</sup>|Instid\MSSQL\binn|完整控制|  
-||Instid\MSSQL\binn|完整控制|  
+|SQLServerAgent<sup>1</sup>|Instid\MSSQL\binn|完全控制|  
+||Instid\MSSQL\binn|完全控制|  
 ||Instid\MSSQL\Log|讀取、寫入、刪除、執行|  
 ||120\com|讀取、執行|  
 ||120\shared|讀取、執行|  
 ||120\shared\Errordumps|讀取、寫入|  
-||ServerName\EventLog|完整控制|  
-|FTS|Instid\MSSQL\FTData|完整控制|  
+||ServerName\EventLog|完全控制|  
+|FTS|Instid\MSSQL\FTData|完全控制|  
 ||Instid\MSSQL\FTRef|讀取、執行|  
 ||120\shared|讀取、執行|  
 ||120\shared\Errordumps|讀取、寫入|  
 ||Instid\MSSQL\Install|讀取、執行|  
 ||Instid\MSSQL\jobs|讀取、寫入|  
-|MSSQLServerOLAPService|120\shared\ASConfig|完整控制|  
+|MSSQLServerOLAPService|120\shared\ASConfig|完全控制|  
 ||Instid\OLAP|讀取、執行|  
-||Instid\Olap\Data|完整控制|  
+||Instid\Olap\Data|完全控制|  
 ||Instid\Olap\Log|讀取、寫入|  
 ||Instid\OLAP\Backup|讀取、寫入|  
 ||Instid\OLAP\Temp|讀取、寫入|  
@@ -402,17 +401,17 @@ ms.locfileid: "83269407"
 ||80\tools|讀取、執行|  
 ||120\sdk|讀取|  
 ||Microsoft SQL Server\120\Setup Bootstrap|讀取、執行|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|\<ToolsDir>\DReplayController\Log\ (空目錄)|讀取、執行、列出資料夾內容|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|\<ToolsDir>\DReplayController\Log\ （空目錄）|讀取、執行、列出資料夾內容|  
 ||\<ToolsDir>\DReplayController\DReplayController.exe|讀取、執行、列出資料夾內容|  
-||\<ToolsDir>\DReplayController\resources\|讀取、執行、列出資料夾內容|  
-||\<ToolsDir>\DReplayController\\{all dlls}|讀取、執行、列出資料夾內容|  
+||\<ToolsDir>\DReplayController\resources \| 讀取、執行、列出資料夾內容|  
+||\<ToolsDir>\DReplayController \\ {所有 dll}|讀取、執行、列出資料夾內容|  
 ||\<ToolsDir>\DReplayController\DReplayController.config|讀取、執行、列出資料夾內容|  
 ||\<ToolsDir>\DReplayController\IRTemplate.tdf|讀取、執行、列出資料夾內容|  
 ||\<ToolsDir>\DReplayController\IRDefinition.xml|讀取、執行、列出資料夾內容|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|\<ToolsDir>\DReplayClient\Log\|讀取、執行、列出資料夾內容|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|\<ToolsDir>\DReplayClient\Log \| 讀取、執行、列出資料夾內容|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.exe|讀取、執行、列出資料夾內容|  
-||\<ToolsDir>\DReplayClient\resources\|讀取、執行、列出資料夾內容|  
-||\<ToolsDir>\DReplayClient\ (所有 dll)|讀取、執行、列出資料夾內容|  
+||\<ToolsDir>\DReplayClient\resources \| 讀取、執行、列出資料夾內容|  
+||\<ToolsDir>\DReplayClient\ （所有 dll）|讀取、執行、列出資料夾內容|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.config|讀取、執行、列出資料夾內容|  
 ||\<ToolsDir>\DReplayClient\IRTemplate.tdf|讀取、執行、列出資料夾內容|  
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|讀取、執行、列出資料夾內容|  
@@ -429,14 +428,14 @@ ms.locfileid: "83269407"
 |MSSQLServer|效能記錄使用者|Instid\MSSQL\binn|列出資料夾內容|  
 ||效能監視器使用者|Instid\MSSQL\binn|列出資料夾內容|  
 ||效能記錄使用者、效能監視器使用者|\WINNT\system32\sqlctr120.dll|讀取、執行|  
-||僅限管理員|\\\\.\root\Microsoft\SqlServer\ServerEvents \\<sql_instance_name><sup>1</sup>|完整控制|  
+||僅限管理員|\\\\.\root\Microsoft\SqlServer\ServerEvents \\<sql_instance_name><sup>1</sup>|完全控制|  
 ||管理員，系統|\tools\binn\schemas\sqlserver\2004\07\showplan|完整控制|  
 ||使用者|\tools\binn\schemas\sqlserver\2004\07\showplan|讀取、執行|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|報表伺服器 Windows 服務帳戶|\<安裝>  \Reporting Services\LogFiles|刪除<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||報表伺服器 Windows 服務帳戶，每個人|* \< 安裝>* \Reporting Services\ReportManager、 * \< install>* \Reporting l services\reportmanager\pages \\ \* \* 、install * \<>* \Reporting services\reportmanager\styles. \\ \* . \* 、 * \< install>* \Reporting services\reportmanager\ webctrl_client \ 1_0 \\ *。\*|讀取、執行|  
-||報表伺服器 Windows 服務帳戶|\<安裝>  \Reporting Services\ReportServer|讀取|  
-||報表伺服器 Windows 服務帳戶|\<安裝>  \Reporting Services\ReportServer\global.asax|完整|  
-||所有人|\<安裝>  \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|報表伺服器 Windows 服務帳戶|*\<install>* \Reporting Services\LogFiles|刪除<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||報表伺服器 Windows 服務帳戶，每個人|*\<install>* \Reporting Services\ReportManager、 *\<install>* \Reporting l services\reportmanager\pages、\Reporting services\reportmanager\styles. \\ \* \* *\<install>* \\ \* . \* 、 *\<install>* \Reporting services\reportmanager\ webctrl_client \ 1_0 \\ *。\*|讀取、執行|  
+||報表伺服器 Windows 服務帳戶|*\<install>* \Reporting Services\ReportServer|讀取|  
+||報表伺服器 Windows 服務帳戶|*\<install>* \Reporting Services\ReportServer\global.asax|完整|  
+||所有人|*\<install>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
 ||報表伺服器 Windows 服務帳戶|*\<install>* \Reporting Services\ReportServer\rsreportserver.config|刪除<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||所有人|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 列舉子機碼<br /><br /> Notify<br /><br /> 讀取控制|  
 ||終端服務使用者|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 設定值<br /><br /> 建立子機碼<br /><br /> 列舉子機碼<br /><br /> Notify<br /><br /> 刪除<br /><br /> 讀取控制|  

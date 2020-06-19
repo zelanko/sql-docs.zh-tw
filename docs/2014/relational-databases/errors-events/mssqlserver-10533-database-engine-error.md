@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cc2fbdab-7b90-415f-a1f9-066824344283
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 86bd82dfd095baeacb35f8454859adb938123f52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ccef25bc8f594cb6ea0b60aefab838ef27cda6f8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916185"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969788"
 ---
 # <a name="mssqlserver_10533"></a>MSSQLSERVER_10533
     
@@ -40,7 +39,7 @@ ms.locfileid: "62916185"
   
 ## <a name="see-also"></a>另請參閱  
  [計劃指南](../performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

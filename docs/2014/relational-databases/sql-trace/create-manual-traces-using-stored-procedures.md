@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 247548de6f3a89afac2143347d987a6f6d638c55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2840dced22ccdba8fe71cc87c05d7fd6fb4be58
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714816"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063046"
 ---
 # <a name="create-manual-traces-using-stored-procedures"></a>使用預存程序建立手動追蹤
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所提供的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 系統預存程序可建立 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體的追蹤。 您可以從自己的應用程式中使用這些系統預存程序以手動建立追蹤，而不是使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]建立追蹤。 如此一來，就可以依照您的企業需求撰寫自訂的應用程式。  

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 46598cf66c80d07383fb033436bbe1792b1eec64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 824dc837142acc4a0898cb04b4a8687bc5be4043
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786933"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935669"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>設定 max degree of parallelism 伺服器組態選項
-  `max degree of parallelism`本主題描述如何使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中設定 server configuration 選項。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在具有多個微處理器或 CPU 的電腦上執行時，會偵測平行處理原則的最佳程度，也就是說，針對每一個平行計畫的執行，執行單一陳述式所要採用的處理器個數。 您可以使用 `max degree of parallelism` 選項來限制執行平行計畫所用的處理器數目。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對查詢、索引資料定義語言 (DDL) 作業，以及靜態和索引鍵集驅動資料指標擴展，考慮進行平行執行計畫。  
+  本主題描述如何 `max degree of parallelism` 使用或，在中設定 server configuration 選項 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在具有多個微處理器或 CPU 的電腦上執行時，會偵測平行處理原則的最佳程度，也就是說，針對每一個平行計畫的執行，執行單一陳述式所要採用的處理器個數。 您可以使用 `max degree of parallelism` 選項來限制執行平行計畫所用的處理器數目。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對查詢、索引資料定義語言 (DDL) 作業，以及靜態和索引鍵集驅動資料指標擴展，考慮進行平行執行計畫。  
   
  **本主題內容**  
   
@@ -70,7 +69,7 @@ ms.locfileid: "62786933"
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>設定 max degree of parallelism 選項  
   
-1.  在**物件總管**中，以滑鼠右鍵按一下伺服器，然後選取 [**屬性**]。  
+1.  在 **[物件總管]** 中，以滑鼠右鍵按一下伺服器，然後選取 **[屬性]** 。  
   
 2.  按一下 **[進階]** 節點。  
   
@@ -101,16 +100,16 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="follow-up-after-you-configure-the-max-degree-of-parallelism-option"></a><a name="FollowUp"></a>後續操作：設定平行處理原則的最大程度選項之後  
+##  <a name="follow-up-after-you-configure-the-max-degree-of-parallelism-option"></a><a name="FollowUp"></a> 後續操作：在您設定完最大平行處理程度的選項後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
- [親和性遮罩伺服器設定選項](affinity-mask-server-configuration-option.md)   
+ [affinity mask 伺服器組態選項](affinity-mask-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [伺服器組態選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [ALTER INDEX &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [DBCC CHECKTABLE &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)   
  [DBCC CHECKDB &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   

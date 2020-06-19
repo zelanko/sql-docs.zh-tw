@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0baaeef6cb196a67b2f615aa280b61b61fbc5119
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871135"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970001"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈
   「複製資料庫精靈」可讓您輕鬆地在伺服器之間移動或複製資料庫及其物件，而不需要讓伺服器停機。 您也可以將資料庫從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 使用此精靈可以執行下列作業：  
@@ -91,14 +90,14 @@ ms.locfileid: "62871135"
   
 -   卸離和附加方法可卸離資料庫、移動或複製資料庫 .mdf、.ndf 和 .ldf 檔案，並在新的位置中重新附加資料庫。 對於卸離和附加方法而言，為了避免資料遺失或不一致，使用中工作階段不能附加到正在移動或複製的資料庫。 如果有任何使用中工作階段存在，「複製資料庫精靈」將不會執行移動或複製作業。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件方法而言，因為資料庫絕對不會離線，所以允許使用中工作階段。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
  確定目的地伺服器上已啟動 SQL Server Agent。  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   為了確保升級的資料庫能有最佳效能，請針對升級的資料庫執行 sp_updatestats (更新統計資料)。  
   
--   將資料庫複製到另一個伺服器執行個體時，為了提供一致的經驗給使用者和應用程式，您可能會需要在其他伺服器執行個體上為資料庫重新建立部分或所有中繼資料，例如登入和作業。 如需詳細資訊，請參閱[在另一個伺服器實例上提供資料庫時管理中繼資料 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)。  
+-   將資料庫複製到另一個伺服器執行個體時，為了提供一致的經驗給使用者和應用程式，您可能會需要在其他伺服器執行個體上為資料庫重新建立部分或所有中繼資料，例如登入和作業。 如需詳細資訊，請參閱 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   
@@ -177,7 +176,7 @@ ms.locfileid: "62871135"
      **複製**  
      複製資料庫至目的地伺服器。  
   
-     **來源**  
+     **Source**  
      顯示存在於來源伺服器上的資料庫。  
   
      **狀態**  
@@ -191,7 +190,7 @@ ms.locfileid: "62871135"
   
 6.  從 **[設定目的地資料庫]** 頁面，適當地變更資料庫名稱，以及指定資料庫檔案的位置和名稱。 每次移動或複製各個資料庫時，就會出現此頁面。  
   
-7.  從 **[選取資料庫物件]** 頁面，選取要包含在移動或複製作業中的物件。 此頁面只能在來源和目的地是不同的伺服器時使用。 若要包含物件，請按一下 [可用的相關物件]**** 方塊中的物件名稱，然後按一下 [>>]**** 按鈕，將物件移至 [選取的相關物件]**** 方塊。 若要排除物件，請按一下 [**選取的相關物件**] 方塊中的物件名稱，然後** < **按一下按鈕，將物件移至 [**可用的相關物件**] 方塊。 根據預設，屬於所選取類型的所有物件都會傳送。 若要選擇任何類型的個別物件，請按一下 **[選取的相關物件]** 方塊中之任何物件類型旁的省略符號按鈕。 這會開啟一個對話方塊，其中您可以選取個別物件。  
+7.  從 **[選取資料庫物件]** 頁面，選取要包含在移動或複製作業中的物件。 此頁面只能在來源和目的地是不同的伺服器時使用。 若要包含物件，請按一下 [可用的相關物件]**** 方塊中的物件名稱，然後按一下 [>>]**** 按鈕，將物件移至 [選取的相關物件]**** 方塊。 若要排除物件，請按一下 [**選取的相關物件**] 方塊中的物件名稱，然後按一下按鈕，將 **<\<** 物件移至 [**可用的相關物件**] 方塊。 根據預設，屬於所選取類型的所有物件都會傳送。 若要選擇任何類型的個別物件，請按一下 **[選取的相關物件]** 方塊中之任何物件類型旁的省略符號按鈕。 這會開啟一個對話方塊，其中您可以選取個別物件。  
   
      **登入 (執行階段的所有登入)**  
      在移動或複製作業中加入登入。 依預設為已選取。  
@@ -217,7 +216,7 @@ ms.locfileid: "62871135"
      **SSIS 封裝**  
      包含在來源資料庫中所定義的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝。  
   
-     **描述**  
+     **說明**  
      對物件的描述。  
   
 8.  從 **[來源資料庫檔案的位置]** 頁面，指定包含來源伺服器資料庫檔案的檔案系統共用。 如果來源和目的地伺服器執行個體位於不同的電腦上，這就是必要項。  
@@ -233,14 +232,14 @@ ms.locfileid: "62871135"
      **來源伺服器上的檔案共用**  
      將來源資料庫檔案的位置指定為檔案共用的路徑。  
   
-     例如： "\\\\*server_name*\c $ \Program Files\Microsoft SQL Server\MSSQL110。MSSQLSERVER\MSSQL\Data  
+     例如： " \\ \\ *server_name*\c $ \Program Files\Microsoft SQL Server\MSSQL110。MSSQLSERVER\MSSQL\Data  
   
 9. 複製資料庫精靈會建立 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝來傳送資料庫。請從 **[設定封裝]** 頁面適當地自訂封裝。  
   
      **封裝位置**  
      顯示 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的寫入位置。  
   
-     **封裝名稱**  
+     **套件名稱**  
      輸入 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的名稱。  
   
      **記錄選項**  
@@ -251,13 +250,13 @@ ms.locfileid: "62871135"
   
 10. 從 **[排程封裝]** 頁面，指定您要讓移動或複製作業開始的時間。 如果您不是系統管理員，您必須指定可存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSIS) 封裝執行子系統的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Agent Proxy 帳戶。  
   
-     **立即執行**  
+     **Run immediately**  
      在您按 **[下一步]** 之後，開始移動或複製作業。  
   
-     **排程**  
+     **[排程]**  
      稍後開始移動或複製作業。 目前的排程設定會出現在描述方塊中。 若要變更排程，請按一下 **[變更]**。  
   
-     **更改**  
+     **變更**  
      開啟 **[新增作業排程]** 對話方塊。  
   
      **Integration Services Proxy 帳戶**  
@@ -275,11 +274,11 @@ ms.locfileid: "62871135"
      **狀態**  
      表示動作完全成功或失敗。  
   
-     **訊息**  
+     **Message**  
      提供每個步驟所傳回的任何訊息。  
   
-##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> 待處理：升級 SQL Server 資料庫之後  
- 在您使用複製資料庫精靈，將資料庫從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫就會變成立即可用並自動進行升級。 如果資料庫具有全文檢索索引，升級程序就會根據 [全文檢索目錄升級選項]**** 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入]**** 或 [重建]****，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 另請注意，當升級選項設定為 [匯**入**] 時，如果全文檢索目錄無法使用，則會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。  
+##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> 後續操作：升級 SQL Server 資料庫之後  
+ 在您使用複製資料庫精靈，將資料庫從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫就會變成立即可用並自動進行升級。 如果資料庫具有全文檢索索引，升級程序就會根據 [全文檢索目錄升級選項]  伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入]  或 [重建]  ，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入]  時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。  
   
  如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果已升級資料庫中的相容性層級為 90，則相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]所支援的最低相容性層級)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
   

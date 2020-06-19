@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 182a0f4b7e74490f9600b7ef43cd2baa511080f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f18fd2485c9b2e62586d9f3e81f76f6cf680dbfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176638"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063007"
 ---
 # <a name="multipolygon"></a>MultiPolygon
   `MultiPolygon` 執行個體是零或多個 `Polygon` 執行個體的集合。
@@ -38,7 +37,7 @@ ms.locfileid: "78176638"
 
 -   它是空的 `MultiPolygon` 執行個體。
 
--   組成 `MultiPolygon` 執行個體的所有執行個體都是可接受的 `Polygon` 執行個體。 如需已接受`Polygon`之實例的詳細資訊，請參閱[多邊形](../spatial/polygon.md)。
+-   組成 `MultiPolygon` 執行個體的所有執行個體都是可接受的 `Polygon` 執行個體。 如需已接受之實例的詳細資訊 `Polygon` ，請參閱[多邊形](../spatial/polygon.md)。
 
  下列範例會顯示可接受的 `MultiPolygon` 執行個體。
 
@@ -59,7 +58,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>有效的執行個體
  如果 `MultiPolygon` 執行個體是空的 `MultiPolygon` 執行個體或符合下列準則，則為有效的執行個體。
 
-1.  組成 `MultiPolygon` 執行個體的所有執行個體都是有效的 `Polygon` 執行個體。 如需`Polygon`有效的實例，請參閱[多邊形](../spatial/polygon.md)。
+1.  組成 `MultiPolygon` 執行個體的所有執行個體都是有效的 `Polygon` 執行個體。 如需有效的 `Polygon` 實例，請參閱[多邊形](../spatial/polygon.md)。
 
 2.  組成 `Polygon` 執行個體的所有 `MultiPolygon` 執行個體彼此不會重疊。
 

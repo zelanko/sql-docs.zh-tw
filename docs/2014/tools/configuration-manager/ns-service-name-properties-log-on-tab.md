@@ -1,5 +1,5 @@
 ---
-title: NS $&lt;service 名稱&gt;屬性（登入索引標籤） |Microsoft Docs
+title: NS $ &lt; service 名稱 &gt; 屬性（登入索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14a5fbd6b30003b4eaa0ec1592c9a01c150b7e87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a811e815cf4321dca126ecb584cd226a225a306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049231"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008010"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;服務名稱&gt; 屬性 ([登入] 索引標籤)
   您可以使用 **[Notification Services 屬性]** 對話方塊的 **[登入]** 索引標籤，來指定要供 [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服務使用的帳戶，以及啟動和停止該服務。  

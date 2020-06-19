@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4efcddfb4c8cb53603614f3ffbdc3cb088990ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf5bf07c8b0913ff81f31ff0ca64a18eee0f2ac2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782905"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935439"
 ---
 # <a name="contained-database-authentication-server-configuration-option"></a>自主資料庫驗證伺服器組態選項
   使用  [自主資料庫驗證] 選項，可在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用自主資料庫。  

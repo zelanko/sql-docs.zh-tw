@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e0f9a295cb5c49b9a88d70187cd49527df5ba83b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0e62fef112dad2c6c307946bc720adf1f14d82b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935709"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>設定 default language 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] default language [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **default language** 選項會指定所有新建登入的預設語言。 若要設定預設語言，請指定所需語言的 **langid** 值。 **langid** 值可透過查詢 **sys.syslanguages** 相容性檢視來取得。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 558218b4cff8e9d4ce100a92135f0fee4e0e09c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02258c92b4a09277d371e605fd4729ba9fda3461
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786766"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935695"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>設定 fill factor 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fill factor [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 提供填滿因數的用意，是為了微調索引資料的儲存與效能。 建立或重建索引時，填滿因數值會決定要在每個分葉層級頁面上填滿資料的空間百分比，進而保留剩餘百分比當做可用空間，以供未來成長使用。 如需詳細資訊，請參閱 [指定索引的填滿因素](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  

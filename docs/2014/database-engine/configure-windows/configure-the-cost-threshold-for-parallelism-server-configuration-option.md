@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ae87ebd3afa2ee49b55471be4d955cbb4d894ca7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 675055a753e84ace3a4fcb44b41b8c914326c5c6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935769"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>設定 cost threshold for parallelism 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cost threshold for parallelism [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **平行處理原則的成本臨界值** 選項指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為查詢建立及執行平行計劃的臨界值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 **或**。 成本是指在特定硬體組態下，估計執行序列計畫所需的已耗用時間 (以秒為單位)。 **cost threshold for parallelism** 選項可設成從 0 到 32767 的任何值。 預設值為 5。  
@@ -115,7 +114,7 @@ GO
  [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)   
  [查詢提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [ALTER &#40;Transact-sql&#41;的工作負載群組](/sql/t-sql/statements/alter-workload-group-transact-sql)   
- [親和性遮罩伺服器設定選項](affinity-mask-server-configuration-option.md)   
+ [affinity mask 伺服器組態選項](affinity-mask-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [伺服器組態選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

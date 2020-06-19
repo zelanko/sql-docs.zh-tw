@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: bf5674f4-da5e-43f9-aeb2-76ca37993790
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f0ad3d1204e8c27d91ecb3b586d56a27d45eeb4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 449f8000db655012ca7e66e5f186467b5671ea56
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089760"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928619"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler - 組織資料行
   使用 **[組織資料行]** 對話方塊來選取在追蹤中所顯示的群組或彙總事件的資料行，讓您易於檢視和分析大型追蹤檔案或資料表。  
   
- 彙總會移動和摺疊在追蹤中的各事件類別類型之下的所有事件。 正號（**+**）會出現在事件類別名稱的左邊。 按一下加號會展開事件類別，使您可以檢視該類型的所有事件。  
+ 彙總會移動和摺疊在追蹤中的各事件類別類型之下的所有事件。 正號（ **+** ）會出現在事件類別名稱的左邊。 按一下加號會展開事件類別，使您可以檢視該類型的所有事件。  
   
  群組會將特定類型的所有事件類別，組織在一起並顯示在追蹤視窗中。 不過，事件並不會摺疊在事件類別類型之下。  
   
@@ -34,14 +33,14 @@ ms.locfileid: "66089760"
  **群組**  
  將 [群組]**** 之下的資料行名稱移至追蹤視窗中的群組或彙總事件類別。  
   
- 若要彙總事件，請將一個資料行移至 **[群組]**。 這會使特定類型的所有事件，都摺疊在追蹤視窗顯示中的事件類別類型名稱之下。 正號（**+**）會出現在事件類別名稱的左邊。 按一下加號即可展開事件類別類型並檢視所有事件。 按一下 **[檢視]** 功能表上的 **[彙總檢視]** 或 **[群組檢視]** ，您可以設定開啟或關閉彙總和群組。  
+ 若要彙總事件，請將一個資料行移至 **[群組]**。 這會使特定類型的所有事件，都摺疊在追蹤視窗顯示中的事件類別類型名稱之下。 正號（ **+** ）會出現在事件類別名稱的左邊。 按一下加號即可展開事件類別類型並檢視所有事件。 按一下 **[檢視]** 功能表上的 **[彙總檢視]** 或 **[群組檢視]** ，您可以設定開啟或關閉彙總和群組。  
   
  若要群組事件，請將多個資料行移至 **[群組]**。 這會使特定類型的所有事件群組在追蹤視窗顯示中，但是不會將事件摺疊在每個事件類別類型名稱之下。 按一下 [檢視] 功能表上的 **[群組檢視]** ，您可以在群組檢視和非群組檢視之間來回切換。 當多個資料行移至 **[群組]** 時，不能使用切換至 **[彙總檢視]** 的選項。  
   
  **資料行**  
- 可移至 [群組]**** 的資料行清單。 按一下 [資料**行**]**+** 左邊的加號（），以展開清單。  
+ 可移至 [群組]**** 的資料行清單。 按一下 [資料行] 左邊的加號（ **+** ） **Columns** ，以展開清單。  
   
- **Up**  
+ **上移**  
  選取資料行之後，按一下 [向上]**** 將資料行向上移至 [群組]****。 您也可以按一下 **[向上]** ，來重新排列追蹤視窗所顯示的資料行。  
   
  **向下**  
@@ -50,7 +49,7 @@ ms.locfileid: "66089760"
 ## <a name="see-also"></a>另請參閱  
  [組織追蹤中所顯示的資料行 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
  [建立追蹤 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [建立 &#40;SQL Server Profiler 的追蹤範本&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [建立追蹤範本 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   

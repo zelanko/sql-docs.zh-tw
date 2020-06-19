@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 84e36fcb-2c78-48e8-8e4b-bf784a3ee557
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 578b870128486285a7c31bf9a860b85d170f8771
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d98d75e74c52a4c9108b1cb46202906aa69e505
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935759"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>設定 Database Engine 執行個體 (SQL Server)
   每個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體都必須設定成符合針對執行個體所裝載之資料庫定義的效能和可用性需求。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 包含的組態選項可控制如資源使用狀況等行為，或是如稽核或觸發程序遞迴等功能的可用性。  

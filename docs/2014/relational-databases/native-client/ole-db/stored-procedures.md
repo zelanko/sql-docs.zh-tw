@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: efda11d7bcbb4afd37143c6f9669e15f0cc16f5f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d978b53754d8b233f1f8b7e58b30d806c0bfdb26
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704165"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055800"
 ---
 # <a name="stored-procedures"></a>預存程序
   預存程序 ([預存程序 &#40;資料庫引擎&#41;](../../stored-procedures/stored-procedures-database-engine.md)) 是儲存於資料庫中的可執行物件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援：  

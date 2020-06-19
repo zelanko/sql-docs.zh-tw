@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfaeec04-93d3-4214-9fc1-38b80179b36b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 81ed454290a5ca62093fe9bdb619179106ca9985
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 141cfe63151f65e171550beda1c20e232a6205e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088860"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928679"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>SQL Server Profiler - 尋找對話方塊
   使用 [尋找]**** 對話方塊，即可針對追蹤搜尋特定字元或文字。 若要取消進行中的搜尋，請按下 ESC 鍵。  
@@ -31,7 +30,7 @@ ms.locfileid: "66088860"
  輸入您想要搜尋的文字。 搜尋會找出其中包含指定字串的字串。 例如，搜尋 "Completed" 會與 "SQL:BatchCompleted" 相符。 不支援萬用字元 (*、? 等等)。  
   
  **在資料行中搜尋**  
- 按一下要搜尋的資料行，或按一下** \<[所有資料行]>** ，即可搜尋追蹤中的所有資料行。  
+ 按一下要搜尋的資料行，或按一下 **\<All columns>** 以搜尋追蹤中的所有資料行。  
   
  **大小寫須相符**  
  尋找與 [尋找目標]**** 方塊中的大小寫相同的文字。 清除此核取方塊，即可在追蹤中同時尋找大寫與小寫文字字元的範例。  
@@ -50,7 +49,7 @@ ms.locfileid: "66088860"
  [建立追蹤 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
- [SQL Server Profiler 範本和許可權](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

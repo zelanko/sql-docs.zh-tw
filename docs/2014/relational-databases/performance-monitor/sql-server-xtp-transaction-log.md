@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f49c43eeaf6f5b799d60f500c303227f94452503
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65bb3f2e47297df7d0b2908156758f04ea6996cb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151014"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055764"
 ---
 # <a name="xtp-transaction-log"></a>XTP 交易記錄
   XTP 交易記錄效能物件包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中與 XTP 交易記錄相關的計數器。  

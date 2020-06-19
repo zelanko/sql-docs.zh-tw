@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a54a067ed9da68e25f9394a463fa352ccc165f21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: edf390d5f127065b23c6ae479af1145209774332
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781924"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063072"
 ---
 # <a name="scripting"></a>指令碼
-  在 SMO 中，指令碼是由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 物件及其子物件控制，或是由個別物件的 `Script` 方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>物件會針對實例[!INCLUDE[msCoName](../../../includes/msconame-md.md)]上物件的相依性關聯性控制對應[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  在 SMO 中，指令碼是由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 物件及其子物件控制，或是由個別物件的 `Script` 方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>物件會針對實例上物件的相依性關聯性控制對應 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 物件及其子物件所進行的進階指令碼作業是三階段的程序：  
   
