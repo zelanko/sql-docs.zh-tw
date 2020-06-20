@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69ed33b3967b3c807b21df0ab8a3a4a1cd07bebc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939477"
 ---
 # <a name="lookup-transformation"></a>查閱轉換
   「查閱」轉換會藉由聯結輸入資料行中的資料與參考資料集中的資料行來執行查閱。 您可以使用查閱在相關資料表中存取以通用資料行中的值為基礎的其他資訊。  
@@ -74,7 +73,7 @@ ms.locfileid: "62900221"
 -   無相符結果輸出。 無相符結果輸出會處理輸入中沒有至少符合參考資料集中一個項目的資料列。 如果將「查閱」轉換設定為把沒有相符項目的資料列視為錯誤，則這些資料列會重新導向至錯誤輸出； 否則，轉換會將這些資料列重新導向至無相符結果輸出。  
   
     > [!NOTE]  
-    >  在 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] 中，「查閱」轉換僅具有一個輸出： 如需如何執行在中[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]建立之查閱轉換的詳細資訊，請參閱[升級查閱轉換](../../../sql-server/install/upgrade-lookup-transformations.md)。  
+    >  在 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] 中，「查閱」轉換僅具有一個輸出： 如需如何執行在中建立之查閱轉換的詳細資訊 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ，請參閱[升級查閱轉換](../../../sql-server/install/upgrade-lookup-transformations.md)。  
   
 -   錯誤輸出。  
   

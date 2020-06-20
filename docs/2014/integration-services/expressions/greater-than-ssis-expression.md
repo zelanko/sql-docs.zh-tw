@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 52df62d9a69d57b95c3e3f4fa9a6e75599925953
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83f3342d69b1d7bc60b1db502ca0761c6f58c3df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967342"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (大於) (SSIS 運算式)
   執行比較來決定第一個運算式是否大於第二個運算式。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。  

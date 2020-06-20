@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a5710ab5a74adc34601790c134a4553b8b01604
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 28e5515f5132f5e8b7859da1a11b5466b90c5579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704042"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056922"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>設定 Transact-SQL 偵錯工具
   當連接的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行個體與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器在不同的電腦上執行時，就必須設定 Windows 防火牆規則才能啟用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵錯。  
@@ -56,7 +55,7 @@ ms.locfileid: "82704042"
   
     2.  在 [規則類型]**** 對話方塊中，選取 [程式]****，然後按一下 [下一步]****。  
   
-    3.  在 [程式]**** 對話方塊中，選取 [這個程式路徑]****，然後輸入此執行個體的 sqlservr.exe 完整路徑。 根據預設，sqlservr.exe 安裝在 C:\Program Files\Microsoft SQL Server\MSSQL12. 中。*Instancename*\MSSQL\Binn，其中*instancename*是預設實例的 MSSQLSERVER，以及任何已命名實例的實例名稱。  
+    3.  在 [程式]**** 對話方塊中，選取 [這個程式路徑]****，然後輸入此執行個體的 sqlservr.exe 完整路徑。 根據預設，sqlservr.exe 會安裝在 C:\Program Files\Microsoft SQL Server\MSSQL12. 中。*Instancename*\MSSQL\Binn，其中*instancename*是預設實例的 MSSQLSERVER，以及任何已命名實例的實例名稱。  
   
     4.  在 [動作]**** 對話方塊中，選取 [允許連線]****，然後按一下 [下一步]****。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6eaf39005e6c5d1d5cf401738fe82f3c97cdf693
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86ce196fa2f7fc90d1ed3f5786881cd30ab316ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059413"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966920"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>維度處理目的地編輯器 (對應頁面)
   使用 **[維度處理目的地編輯器]** 對話方塊的 **[對應]** 頁面，即可將輸入資料行對應至維度資料行。  

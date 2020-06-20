@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d287a7ceff1c38c829da91a8ae2e530f664fb4ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f106cb74174a501af9e1a1b9bc30d6870f3a1904
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128745"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027776"
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 函數
   傳回指定之 SQL Server Express LocalDB 錯誤的當地語系化文字描述。  
@@ -61,7 +60,7 @@ HRESULT LocalDBFormatMessage(
  *lpcchMessage*  
  [輸入/輸出][輸入] 包含*wszMessage*緩衝區的大小（以字元為單位）。 輸出時，如果指定的緩衝區大小太小，則會包含所需的緩衝區大小 (以字元為單位)，包括尾端的 Null。 如果函數成功，則會在訊息中包含字元數，尾端的 Null 不計。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

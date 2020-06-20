@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4328c284d23313cf737c5cf8b39751359e568b4f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c69ded7b487168063109d1acb3f44f20e138e38f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704186"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055829"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是用於存取資料的低階 COM API。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建議將 Native Client OLE DB 提供者用於開發工具、公用程式或需要高效能的低階元件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是原生、高效能的提供者，會直接存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格式資料流 (TDS) 通訊協定。  
@@ -42,7 +41,7 @@ ms.locfileid: "82704186"
   
 -   [資料列集](../../native-client-ole-db-rowsets/rowsets.md)  
   
--   [預存程序](stored-procedures.md)  
+-   [預存程式](stored-procedures.md)  
   
 -   [BLOB 與 OLE 物件](../../native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   

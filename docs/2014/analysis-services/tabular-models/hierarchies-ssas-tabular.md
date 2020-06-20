@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 823d35b71fca52b2f1892d6e7dbfc940688f0ae6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067074"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938869"
 ---
 # <a name="hierarchies-ssas-tabular"></a>階層 (SSAS 表格式)
   表格式模型中的階層是中繼資料，可定義資料表中兩個 (含) 以上的資料行之間的關聯性。 在報表用戶端欄位清單中，階層可以與其他資料行分開顯示，讓用戶端使用者更易於導覽及包含在報表中。  
@@ -28,7 +27,7 @@ ms.locfileid: "66067074"
   
 -   [相關工作](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>各種  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 優點  
  資料表可以包含數十個或甚至數百個具有不常見資料行名稱的資料行，且沒有明顯的順序。 這可能會導致未排序的報表用戶端欄位清單外觀，讓使用者很難在報表中尋找及包含資料。 階層可以針對複雜的資料結構，提供簡單直覺式的檢視。  
   
  例如，您可以在 Date 資料表中建立 Calendar 階層。 Calendar Year 做為最上層的父層級，而 Month、Week 和 Day 則加入做為子層級 (Calendar Year->Month->Week->Day)。 此階層顯示從 [日曆年度] 到 [天] 的邏輯關聯性。 用戶端使用者可以接著從 [欄位清單] 中選取 [日曆年度]，以在樞紐分析表中包含所有層級，或者展開階層，然後僅選取要包含在樞紐分析表中的特定層級。  

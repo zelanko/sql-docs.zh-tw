@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5e24b3a0-0658-44fc-b653-f4c52f9eb328
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 748760817948e71aeb3c2160e63e768b1f0ba54c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 03bdccc83a04078210f2283d0b330f237ed02979
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707368"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056174"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
   本主題討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 特有的 OLE DB 行為。  

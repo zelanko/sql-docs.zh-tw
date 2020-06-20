@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 84ed22e8-2a0c-41c2-a8f0-eea3f4047656
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c04d257b4000f0d5855a44e299bcb970a5fef8be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbc143cae1e37aef059ad5489939f9fc1e763ab6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771454"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923759"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-how-to-guide"></a>Attunity Oracle Change Data Capture (CDC) 設計工具使用說明指南
   本節描述如何在 Attunity Oracle Change Data Capture (CDC) 設計工具中執行工作。  

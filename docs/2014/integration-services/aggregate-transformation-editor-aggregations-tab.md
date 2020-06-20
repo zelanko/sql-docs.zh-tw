@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 698e3757a32d9a2a9db95df495e33903dbdfed1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4799df229e96ce8488614d8ec7b0755332360fbc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061574"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925589"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>彙總轉換編輯器 (彙總索引標籤)
   使用 [彙總轉換編輯器]**** 對話方塊的 [彙總]**** 索引標籤，即可指定彙總的資料行與彙總屬性。 您可以套用多個彙總。 此轉換不會產生錯誤輸出。  
@@ -73,14 +72,14 @@ ms.locfileid: "66061574"
 |**Average**|傳回資料行中資料行值的平均。 只能平均具有數值資料類型的資料行。 如需詳細資訊，請參閱 AVG。|  
 |**Count**|傳回群組中的項目數。 如需詳細資訊，請參閱 COUNT。|  
 |**CountDistinct**|傳回群組中唯一非 Null 值的數目。 如需詳細資訊，請參閱 COUNT 和 Distinct。|  
-|**至少**|傳回群組中的最小值。 限制為數值資料類型。|  
-|**高**|傳回群組中的最大值。 限制為數值資料類型。|  
+|**最小值**|傳回群組中的最小值。 限制為數值資料類型。|  
+|**最大值**|傳回群組中的最大值。 限制為數值資料類型。|  
   
  **比較旗標**  
  如果您選擇 [群組依據]****，請使用核取方塊來控制轉換執行比較的方式。 如需字串比較選項的資訊，請參閱 [比較字串資料](data-flow/comparing-string-data.md)。  
   
  **計數相異小數值**  
- 可選擇性地指定彙總可寫入之相異值的近似數目。 根據預設，此選項的值為 **[未指定]**。 如果同時`CountDistinctScale`指定了和**CountDistinctKeys** ， **CountDistinctKeys**會優先使用。  
+ 可選擇性地指定彙總可寫入之相異值的近似數目。 根據預設，此選項的值為 **[未指定]**。 如果同時 `CountDistinctScale` 指定了和**CountDistinctKeys** ， **CountDistinctKeys**會優先使用。  
   
 |值|說明|  
 |-----------|-----------------|  
@@ -90,7 +89,7 @@ ms.locfileid: "66061574"
 |高|彙總可寫入超過 25,000,000 個相異值。|  
   
  **計算相異索引鍵**  
- 可選擇性地指定彙總可寫入之相異值的確實數目。 如果同時`CountDistinctScale`指定了和**CountDistinctKeys** ， **CountDistinctKeys**會優先使用。  
+ 可選擇性地指定彙總可寫入之相異值的確實數目。 如果同時 `CountDistinctScale` 指定了和**CountDistinctKeys** ， **CountDistinctKeys**會優先使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

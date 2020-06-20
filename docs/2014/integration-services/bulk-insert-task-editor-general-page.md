@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b67b5eaf0d6927a0ed009498fd1b81c3aabd3354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4349e520e248c581ba588bf58781bf037a97781
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061134"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924599"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>大量插入工作編輯器 (一般頁面)
   使用 **[大量插入工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述大量插入工作。  
@@ -33,7 +32,7 @@ ms.locfileid: "66061134"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入大量插入工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59650edbef55b7bb433c6003c9ddc0f203ca7c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 110dcd8ef5f554bdf1c59ab9a15984ec8ca97c65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228999"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048402"
 ---
 # <a name="index-element-dta"></a>Index 元素 (DTA)
   包含您要建立或卸除的使用者指定組態索引的相關資訊。  
@@ -45,7 +44,7 @@ ms.locfileid: "63228999"
 |`Online`|`boolean`|選擇性。 指定伺服器在線上時，能夠執行作業的索引，需要暫存磁碟空間。 設為 "true" 或 "false"，例如：<br /><br /> `<Index Online="true">`<br /><br /> 依預設，這個屬性設為 "false"。<br /><br /> 如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。|  
 |`IndexSizeInMB`|`double`|選擇性。 指定索引的大小上限 (MB)，例如：<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> 沒有預設值。|  
 |`NumberOfRows`|`integer`|選擇性。 模擬不同的索引大小，它能夠有效模擬不同的資料表大小，例如：<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> 沒有預設值。|  
-|`QUOTED_IDENTIFIER`|`boolean`|選擇性。 會[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]導致遵循 ISO 規則來分隔識別碼和常值字串的引號。 如果索引是在計算資料行或檢視上，就必須開啟這個屬性。 例如，下列語法會將這個屬性設為開啟：<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> 依預設，會關閉這個屬性。<br /><br /> 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)。|  
+|`QUOTED_IDENTIFIER`|`boolean`|選擇性。 在分隔識別碼與文字字串的引號方面，使 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遵循該 ISO 規則。 如果索引是在計算資料行或檢視上，就必須開啟這個屬性。 例如，下列語法會將這個屬性設為開啟：<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> 依預設，會關閉這個屬性。<br /><br /> 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)。|  
 |`ARITHABORT`|`boolean`|選擇性。 在查詢執行期間，當發生溢位或除以零的錯誤時，會使查詢終止。 如果索引是在計算資料行或檢視上，就必須開啟這個屬性。 例如，下列語法會將這個屬性設為開啟：<br /><br /> `<Index ARITHABORT [...]>`<br /><br /> 依預設，會關閉這個屬性。<br /><br /> 如需詳細資訊，請參閱 [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)。|  
 |`CONCAT_NULL_YIELDS_`<br /><br /> `NULL`|`boolean`|選擇性。 控制是否將串連結果當作 Null 或空字串值來處理。 如果索引是在計算資料行或檢視上，就必須開啟這個屬性。 例如，下列語法會將這個屬性設為開啟：<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> 依預設，會關閉這個屬性。<br /><br /> 如需詳細資訊，請參閱 [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)。|  
 |`ANSI_NULLS`|`boolean`|選擇性。 指定搭配 null 值一起使用時，等於 (=) 和不等於 (<>) 比較運算子的 ISO 相容行為。 如果索引是在計算資料行或檢視上，就必須開啟這個屬性。 例如，下列語法會將這個屬性設為開啟：<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> 依預設，會關閉這個屬性。<br /><br /> 如需詳細資訊，請參閱 [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)。|  
@@ -59,7 +58,7 @@ ms.locfileid: "63228999"
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
-|**次出現**|如果未利用 `Create` 或 `Drop` 元素來指定任何其他實體設計結構，每個 `Statistics` 或 `Heap` 元素需要使用這個元素一次。|  
+|**出現次數**|如果未利用 `Create` 或 `Drop` 元素來指定任何其他實體設計結構，每個 `Statistics` 或 `Heap` 元素需要使用這個元素一次。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
@@ -72,6 +71,6 @@ ms.locfileid: "63228999"
  如需此元素的使用範例，請參閱[含使用者指定組態的 XML 輸入檔範例 &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

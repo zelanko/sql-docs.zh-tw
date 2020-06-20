@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d7e351dc2e9669fc47bc87a01c2882c0006401c5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6a938b49a5497aa81b48cb4032286e9d748acceb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711872"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048130"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>使用 Microsoft 分散式交易協調器 (ODBC)
     

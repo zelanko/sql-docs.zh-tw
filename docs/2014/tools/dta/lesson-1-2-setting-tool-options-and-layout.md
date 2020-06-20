@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36139b916442b2c0f616d52d2b06efdbda2cfe03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110194"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048340"
 ---
 # <a name="setting-tool-options-and-layout"></a>設定工具選項和配置
   您可以設定一些選項來設定 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) 在啟動時所顯示的項目、它使用的字型，以及其他工具功能，以便對您使用它的方式，提供最好的支援。 這一頁的練習可讓您熟悉您可以設定的選項及如何設定它們。  
@@ -26,7 +25,7 @@ ms.locfileid: "66110194"
   
 1.  啟動 Database Engine Tuning Advisor。 在 Windows [開始]**** 功能表上，依序指向 [所有程式]****、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、[效能工具]****，然後按一下 [Database Engine Tuning Advisor]****。  
   
-2.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+2.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
 3.  在 [選項]**** 對話方塊中，檢視下列選項：  
   

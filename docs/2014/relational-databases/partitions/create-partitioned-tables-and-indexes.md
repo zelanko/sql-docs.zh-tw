@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 76ccd8b784902f8542f06f3823e5f8dcb78e9201
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057179"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>建立分割區資料表及索引
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立分割區資料表或索引。 分割區資料表及索引中的資料會被水平分割成單元，可散佈在資料庫中的多個檔案群組中。 分割作業可讓大型資料表和索引更容易管理及擴充。  
@@ -382,7 +381,7 @@ ms.locfileid: "79289376"
   
 #### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>若要判斷分割資料表的分割區資料行  
   
-1.  下列查詢會傳回資料表之分割區資料行的名稱。 `PartitionTable`第 1 課：建立 Windows Azure 儲存體物件{2}。  
+1.  下列查詢會傳回資料表之分割區資料行的名稱。 `PartitionTable`第 1 課：建立 Windows Azure 儲存體物件`PartitionTable`。  
   
     ```  
     SELECT   

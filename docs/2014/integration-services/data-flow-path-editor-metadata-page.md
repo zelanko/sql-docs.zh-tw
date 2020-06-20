@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9441d9cc13ce509183d25359323df16152998581
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059993"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916998"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>資料流程路徑編輯器 (中繼資料頁面)
   使用 [資料流程路徑編輯器]**** 對話方塊的 [中繼資料]**** 頁面，即可檢視路徑資料行的中繼資料。  
@@ -37,7 +36,7 @@ ms.locfileid: "66059993"
  **有效位數**  
  列出數值中的位數。  
   
- **調整**  
+ **縮放比例**  
  列出數值中之小數點右邊的位數。  
   
  **長度**  

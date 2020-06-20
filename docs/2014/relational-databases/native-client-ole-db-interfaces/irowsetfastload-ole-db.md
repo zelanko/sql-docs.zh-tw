@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 720ea095343abefb0b56f4f1f47bbd853d72378e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7ecf72f0015d9ed197b3b7a33d4f9bb3246134b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707347"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056159"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
   `IRowsetFastLoad`介面會公開以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體為基礎之大量複製作業的支援。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者取用者會使用介面，快速地將資料加入現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。  

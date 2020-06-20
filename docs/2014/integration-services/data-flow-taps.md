@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 212688d5dddaa84b1b7c6aee3fe4ebbb6415e8a9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059911"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916862"
 ---
 # <a name="data-flow-taps"></a>資料流程點選
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 導入了一項新功能，可讓您在執行階段於封裝的資料流程路徑上加入資料點選，然後從資料點選將輸出導向至外部檔案。 若要使用此功能，您必須使用專案部署模型將 SSIS 專案部署至 SSIS 伺服器。 將封裝部署至伺服器之後，您需要對 SSISDB 資料庫執行 T-SQL 指令碼先加入資料點選，然後再執行該封裝。 範例狀況如下：  
@@ -51,7 +50,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  add_data_tap 預存程序的 dataflow_path_id_string 參數對應到您要在其上加入資料點選之資料流程路徑的 IdentificationString 屬性。 若要取得 dataflow_path_id_string，請按一下資料流程路徑 (資料流程中位於工作之間的箭號)，並記下 [屬性] 視窗所示 **IdentificationString** 屬性的值。  
   
- 當您執行指令碼時，輸出檔會儲存於 \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps。 如果已有同名的檔案存在，則將建立附帶尾碼的新檔案 (例如：output[1].txt)。  
+ 當您執行腳本時，輸出檔會儲存在 \<Program Files> \MICROSOFT SQL server\110\dts\datadumps。中。 如果已有同名的檔案存在，則將建立附帶尾碼的新檔案 (例如：output[1].txt)。  
   
  如先前所述，您也可以使用 [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid)預存程序，而不是使用 add_data_tap 預存程序。 此預存程序接受資料流程工作的識別碼當做參數，而非 task_package_path。 您可以從 Visual Studio 屬性視窗取得資料流程工作的識別碼。  
   

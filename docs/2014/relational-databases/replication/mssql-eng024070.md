@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c10b9071fb821acc284c5d52621ed582c526ed62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023909"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057129"
 ---
 # <a name="mssql_eng024070"></a>MSSQL_ENG024070
     
@@ -35,7 +34,7 @@ ms.locfileid: "63023909"
 ## <a name="explanation"></a>說明  
  這是不論是否使用複寫，都有可能引發的一般性錯誤。 如果是複寫拓撲中的伺服器，通常是因為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 服務控制管理員 (而不是正確使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 組態管理員) 變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶，而引發錯誤。 當您在變更服務帳戶之後嘗試執行代理程式作業時，作業可能失敗，並會顯示訊息如下：  
   
- 「以使用者身分執行\<： UserAccount>。 複寫-複寫快照集子系統： \<代理程式代理程式名稱> 失敗。 以使用者身分執行\<： UserAccount>。 用戶端沒有必要的權限。 步驟失敗。 `[SQLSTATE 42000] (Error 14151)`. 步驟失敗。」  
+ 「以使用者身分執行： \<UserAccount> 。 複寫-複寫快照集子系統：代理程式 \<AgentName> 失敗。 以使用者身分執行： \<UserAccount> 。 用戶端沒有必要的權限。 步驟失敗。 `[SQLSTATE 42000] (Error 14151)`. 步驟失敗。」  
   
  發生這個問題是因為 Windows 服務控制管理員無法授與權限給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的新服務帳戶。  
   

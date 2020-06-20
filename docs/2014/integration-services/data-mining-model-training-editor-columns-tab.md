@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9495343fca6da023dbf54bcf69dff6b9bb3e2b9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059884"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939149"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>資料採礦模型培訓編輯器 (資料行索引標籤)
   使用 **[資料採礦模型培訓編輯器]** 對話方塊的 **[資料行]** 頁面，即可將輸入資料行對應至採礦結構的資料行。  

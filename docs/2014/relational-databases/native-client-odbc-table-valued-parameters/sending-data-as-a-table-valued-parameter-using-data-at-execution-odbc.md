@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a2b1e6b5b366a6c4132be78ff089dbe0001efd41
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93711e90fcc924d53747e5ec47e33fc0f6eb4946
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698611"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056470"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用資料執行中 (ODBC) 以資料表值參數的方式傳送資料
   這類似于「[全部在記憶體中](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)」程式，但會針對資料表值參數使用「資料執行中」。  
@@ -184,7 +183,7 @@ from @Items
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 這個範例會示範您可以使用 ODBC TVP，針對每個呼叫 SQLPutData 的資料列串流（一個資料列），類似于您可能會使用 BCP 載入資料庫的方式。  
+ 這個範例示範您可以使用 ODBC TVP，針對每個呼叫 SQLPutData 的資料列串流（一個資料列），類似于您可能會使用 BCP.exe 將資料載入資料庫的方式。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
   
@@ -372,7 +371,7 @@ EXIT:
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 這個範例會示範您可以使用 ODBC TVP，每次呼叫 SQLPutData 時，使用資料列串流、多個資料列，類似于您可以如何使用 BCP 將資料載入資料庫中。  
+ 這個範例會示範您可以使用 ODBC TVP，每次呼叫 SQLPutData 時，使用資料列串流、多個資料列，類似于您可能會使用 BCP.exe 將資料載入資料庫的方式。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
   

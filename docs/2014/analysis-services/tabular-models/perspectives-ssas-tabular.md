@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fcd6e438327d88b79a88b5026f28e24e19fffb5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9aa139c33a3d72b5a628ba6354488b8cef81c0a0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066883"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938789"
 ---
 # <a name="perspectives-ssas-tabular"></a>檢視方塊 (SSAS 表格式)
   表格式模型中的檢視方塊會定義可檢視之模型子集，以提供具體的特定商務或應用程式模型視點。  
@@ -28,7 +27,7 @@ ms.locfileid: "66066883"
   
 -   [相關工作](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>各種  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> 優點  
  對於要瀏覽的使用者而言，表格式模型可以是很複雜的。 單一模型可能代表完整的資料倉儲內容，其中有許多資料表、量值和維度。 對只需要與模型的一小部分進行互動即可滿足其商業智慧和報表需求的使用者而言，這樣的複雜性令人望而生畏。  
   
  在檢視方塊中，資料表、資料行和量值 (包括 KPI) 是定義為欄位物件。 您可以為每個檢視方塊選取可檢視的欄位。 例如，單一模型可以包含產品、銷售、財務、員工和地理資料。 雖然銷售部門需要產品、銷售、促銷和地理資料，但可能不需要員工和財務資料。 同樣地，人力資源部門不需要促銷和地理資料。  

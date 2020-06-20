@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ec9ad9569326e4a9b3e890af4b5f909e36e5c5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cbe1d99a8e38ddc31ebac1ce66d1e549781dd5e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149484"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057790"
 ---
 # <a name="create-element-dta"></a>Create 元素 (DTA)
   包含使用者指定組態中之索引、統計資料或堆積結構的相關資訊。  
@@ -51,7 +50,7 @@ ms.locfileid: "63149484"
 |**子元素**|[Index 元素 &#40;DTA&#41;](index-element-dta.md)<br /><br /> `Statistics`元素（如需資訊，請參閱[DATABASE ENGINE TUNING ADVISOR XML 架構](https://schemas.microsoft.com/sqlserver/)）<br /><br /> `Heap`元素（如需資訊，請參閱[DATABASE ENGINE TUNING ADVISOR XML 架構](https://schemas.microsoft.com/sqlserver/)）|  
   
 ## <a name="remarks"></a>備註  
- 在 Database Engine Tuning Advisor XML 結構描述中，這個元素的名稱為 **CreateTypecomplexType** 。 它用來建立使用者指定組態的索引、統計資料和堆積結構。 請勿混淆這個 `Create` 元素與可用來建立檢視 (`CreateViewType`) 或資料分割 (`CreatePType`) 的其他類型。 如需這些其他`Create`元素類型的相關資訊，請參閱[Database Engine Tuning Advisor XML 架構](https://schemas.microsoft.com/sqlserver/)。  
+ 在 Database Engine Tuning Advisor XML 結構描述中，這個元素的名稱為 **CreateTypecomplexType** 。 它用來建立使用者指定組態的索引、統計資料和堆積結構。 請勿混淆這個 `Create` 元素與可用來建立檢視 (`CreateViewType`) 或資料分割 (`CreatePType`) 的其他類型。 如需這些其他元素類型的相關資訊，請參閱[DATABASE ENGINE TUNING ADVISOR XML 架構](https://schemas.microsoft.com/sqlserver/) `Create` 。  
   
 ## <a name="example"></a>範例  
  如需此元素的使用範例，請參閱[含使用者指定組態的 XML 輸入檔範例 &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。  

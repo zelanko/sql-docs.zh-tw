@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7fe7d714d93915814b6658409a9f892c28e03b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67316670"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917148"
 ---
 # <a name="custom-messages-for-logging"></a>自訂訊息以進行記錄
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組豐富的自訂事件，可以為封裝和許多工作寫入記錄項目。 您可以使用這些項目，透過記錄預先定義事件或使用者自訂訊息，來儲存關於執行進度、結果和問題的詳細資訊，以供稍後分析。 比方說，您可以記錄大量插入開始和結束的時間，以便識別封裝執行時的效能問題。  
@@ -47,23 +46,23 @@ ms.locfileid: "67316670"
   
  [FTP 工作](#FTP)  
   
- [Message Queue Task](#MessageQueue)  
+ [訊息佇列工作](#MessageQueue)  
   
  [指令碼工作](#Script)  
   
- [傳送郵件工作](#SendMail)  
+ [傳送電子郵件工作](#SendMail)  
   
- [傳送資料庫工作](#TransferDatabase)  
+ [傳輸資料庫工作](#TransferDatabase)  
   
- [傳送錯誤訊息工作](#TransferErrorMessages)  
+ [傳輸錯誤訊息工作](#TransferErrorMessages)  
   
- [傳送作業工作](#TransferJobs)  
+ [傳輸作業工作](#TransferJobs)  
   
- [傳送登入工作](#TransferLogins)  
+ [傳輸登入工作](#TransferLogins)  
   
- [傳送主要預存程序工作](#TransferMasterStoredProcedures)  
+ [傳輸主要預存程序工作](#TransferMasterStoredProcedures)  
   
- [傳送 SQL Server 物件工作](#TransferSQLServerObjects)  
+ [傳輸 SQL 伺服器物件工作](#TransferSQLServerObjects)  
   
  [Web 服務工作](#WebServices)  
   

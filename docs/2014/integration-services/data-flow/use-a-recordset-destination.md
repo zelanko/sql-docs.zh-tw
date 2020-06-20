@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e61e8c122b284dfe448f415cd05b20feab699ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899963"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939209"
 ---
 # <a name="use-a-recordset-destination"></a>使用資料錄集目的地
   資料錄集目的地不會將資料儲存到外部資料來源， 而是將資料儲存到資料類型為 `Object` 之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝變數內儲存的資料錄集記憶體中。 當資料錄集目的地儲存資料之後，您通常要使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 Foreach ADO 列舉值會將目前資料列的每一資料行值儲存到個別封裝變數之中。 接著，您在 Foreach 迴圈容器中設定的工作會讀取這些變數中的值，然後對它們執行一些動作。  
@@ -96,7 +95,7 @@ ms.locfileid: "62899963"
   
 #### <a name="to-configure-the-data-flow-and-the-recordset-destination"></a>設定資料流程和資料錄集目的地  
   
-1.  在  **設計師的 [控制流程]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤上，將資料流程工作加入設計介面。  
+1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程] 索引標籤上，將資料流程工作加入設計介面。  
   
 2.  在 [資料流程]  索引標籤上，將 OLE DB 來源加入至資料流程工作，然後開啟 OLE DB 來源編輯器  。  
   
@@ -121,19 +120,19 @@ ms.locfileid: "62899963"
   
 5.  開啟資料錄集目的地編輯器  ，並依照下列設定來設定目的地：  
   
-    1.  在 [**元件屬性**] 索引卷`VariableName`標上， `User::BonusRecordset`針對 [屬性] 選取 []。  
+    1.  在 [**元件屬性**] 索引標籤上，針對 [屬性] 選取 [] `VariableName` `User::BonusRecordset` 。  
   
     2.  在 [輸入資料行]  索引標籤上，選取可用的全部三個資料行。  
   
 #### <a name="to-configure-the-foreach-loop-container-and-run-the-package"></a>設定 Foreach 迴圈容器並執行封裝  
   
-1.  在  **設計師的 [控制流程]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤上，加入 Foreach 迴圈容器，並將此容器連接在資料流程工作之後。  
+1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程] 索引標籤上，加入 Foreach 迴圈容器，並將此容器連接在資料流程工作之後。  
   
 2.  開啟 Foreach 迴圈編輯器  ，依照下列設定來設定容器：  
   
-    1.  在 [**集合**] 頁面上，針對 [**列舉**值] 選取 [ **Foreach ADO 列舉**值]，然後`User::BonusRecordset`針對 [ **ADO 物件來源變數**] 選取 []。  
+    1.  在 [**集合**] 頁面上，針對 [**列舉**值] 選取 [ **Foreach ADO 列舉**值]，然後針對 [ **ADO 物件來源變數**] 選取 [] `User::BonusRecordset` 。  
   
-    2.  在 [**變數**對應] 頁面上`User::EmailAddress` ，對應至索引`User::FirstName` 0、索引1和`User::Bonus`索引2。  
+    2.  在 [**變數**對應] 頁面上，對應 `User::EmailAddress` 至索引0、 `User::FirstName` 索引1和 `User::Bonus` 索引2。  
   
 3.  在 [控制流程]  索引標籤上的 Foreach 迴圈容器中，加入傳送郵件工作。  
   

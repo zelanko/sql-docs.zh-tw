@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5fc58d837a6dd0ca508dbaba8da18578fac6b6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066605"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938659"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>設定資料行的資料類型 (SSAS 表格式)
   當您將資料匯入或貼上模型時，模型設計師會自動偵測並套用資料類型。 將資料加入至模型之後，您可以手動修改資料行的資料類型，以變更資料儲存的方式。 如果您只要變更資料顯示方式的格式，而不要變更其儲存方式，可以只變更該顯示格式。  
@@ -50,7 +49,7 @@ ms.locfileid: "66066605"
   
 |模型資料類型|  
 |----------------------|  
-|Text<br /><br /> 十進位數字<br /><br /> 整數<br /><br /> 貨幣<br /><br /> TRUE/FALSE<br /><br /> 日期|  
+|Text<br /><br /> 十進位數字<br /><br /> 整數<br /><br /> 貨幣<br /><br /> TRUE/FALSE<br /><br /> Date|  
   
  如果發現資料的資料類型錯誤，或是與您想要的資料類型不同，您有幾個選擇：  
   

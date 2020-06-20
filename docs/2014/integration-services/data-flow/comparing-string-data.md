@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99d1954d2509b15591239e14727cf9c88eb26054
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828142"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916518"
 ---
 # <a name="comparing-string-data"></a>比較字串資料
   字串比較是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]執行之許多轉換中的重要部分，此外在評估變數的運算式和屬性運算式時也會使用字串比較。 例如，「排序」轉換會比較資料集中的值，並以遞增或遞減的順序對資料進行排序。  
@@ -78,7 +77,7 @@ ms.locfileid: "62828142"
   
  「排序」、「彙總」「模糊群組」和「模糊查閱」轉換包含這些用於比較資料的選項。  
   
- 「模糊群組」和「模糊查閱」轉換的 [進階編輯器]  對話方塊中會顯示 **FullySensitive** 比較旗標。 選取 [FullySensitive]  比較旗標表示會套用所有的比較選項。  
+ 「模糊群組」和「模糊查閱」轉換的 [進階編輯器] 對話方塊中會顯示 **FullySensitive** 比較旗標。 選取 [FullySensitive]  比較旗標表示會套用所有的比較選項。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 資料類型](integration-services-data-types.md)   

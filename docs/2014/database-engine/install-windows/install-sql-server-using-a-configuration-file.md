@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89215c16f958848942c64d2427d7201bc13cb282
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775281"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932375"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>使用組態檔安裝 SQL Server 2014
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式可供您根據系統預設值與執行階段輸入，產生組態檔。 您可以使用相同的設定，於整個企業中利用組態檔部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您也可以透過建立啟動 Setup.exe 的批次檔，在企業中將手動安裝標準化。  
@@ -56,7 +55,7 @@ FEATURES=SQL,Tools
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  遵循精靈的指示，直到 **[準備安裝]** 頁面。 組態檔的路徑已指定於 **[準備安裝]** 頁面的 [組態檔路徑] 區段中。 如需有關如何安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的詳細資訊，請參閱[install SQL Server 2014 From the 安裝 Wizard &#40;安裝程式&#41;](install-sql-server-from-the-installation-wizard-setup.md)。  
+2.  遵循精靈的指示，直到 **[準備安裝]** 頁面。 組態檔的路徑已指定於 **[準備安裝]** 頁面的 [組態檔路徑] 區段中。 如需有關如何安裝的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[install SQL Server 2014 From The 安裝 Wizard &#40;安裝程式&#41;](install-sql-server-from-the-installation-wizard-setup.md)。  
   
 3.  取消安裝程式而不實際完成安裝，即可產生 INI 檔案。  
   
@@ -71,7 +70,7 @@ FEATURES=SQL,Tools
   
 #### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>如何使用組態檔安裝獨立式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
--   透過命令提示字元執行安裝，並使用*ConfigurationFile*參數提供 ConfigurationFile。  
+-   透過命令提示字元執行安裝，並使用*ConfigurationFile*參數提供 ConfigurationFile.ini。  
   
 #### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>如何使用組態檔準備及完成獨立式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (SysPrep) 的映像  
   

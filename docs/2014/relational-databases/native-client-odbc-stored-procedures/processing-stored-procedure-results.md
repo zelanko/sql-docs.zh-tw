@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 788ef2a4-17de-4526-960b-46bf29aafc9f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18ffd4adb4387d8b7bc4209cd8e8532abdd686ac
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5f37a6d8beff88748fa944293bd67f449d29eff2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709538"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048138"
 ---
 # <a name="processing-stored-procedure-results"></a>處理預存程序結果
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序有四個用於傳回資料的機制：  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06bfc2148f7a367fa02d94109e9b5b8a250fd1f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b847a22d31bbf3ea7540c55339fe27531134125
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198982"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063721"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>檢視及修改提取訂閱屬性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視及修改提取訂閱屬性。  
@@ -39,7 +38,7 @@ ms.locfileid: "68198982"
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在 [訂閱屬性 - **發行者>: \<發行集資料庫>]\<** 對話方塊中檢視發行者或訂閱者的提取訂閱屬性，該對話方塊可從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 取得。 「訂閱者」可看見更多屬性，而屬性可於「訂閱者」端修改。 您也可以從 **[所有訂閱]** 索引標籤上的「發行者」檢視屬性，該索引標籤位於「複寫監視器」中。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](monitor/start-the-replication-monitor.md)。  
+ 在 [**訂閱屬性- \<Publisher> ： \<PublicationDatabase> ** ] 對話方塊中，從「發行者」或「訂閱者」視圖提取訂閱屬性，可從取得 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 「訂閱者」可看見更多屬性，而屬性可於「訂閱者」端修改。 您也可以從 **[所有訂閱]** 索引標籤上的「發行者」檢視屬性，該索引標籤位於「複寫監視器」中。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](monitor/start-the-replication-monitor.md)。  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>從 Management Studio 中的發行者檢視提取訂閱屬性  
   
@@ -76,23 +75,23 @@ ms.locfileid: "68198982"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>檢視快照式或交易式發行集之提取訂閱的屬性  
   
-1.  在訂閱者上，執行 [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql)。 指定**@publisher**、 **@publisher_db**和**@publication**。 這樣會傳回儲存於訂閱者上之系統資料表內的訂閱相關資訊。  
+1.  在訂閱者上，執行 [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql)。 指定 **@publisher** 、 **@publisher_db** 和 **@publication** 。 這樣會傳回儲存於訂閱者上之系統資料表內的訂閱相關資訊。  
   
-2.  在訂閱者上，執行 [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)。 指定**@publisher**、 **@publisher_db**、 **@publication**和的下列其中一個值**@publication_type**：  
+2.  在訂閱者上，執行 [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)。 指定 **@publisher** 、 **@publisher_db** 、 **@publication** 和的下列其中一個值 **@publication_type** ：  
   
     -   **0** - 訂閱屬於交易式發行集。  
   
     -   **1** - 訂閱屬於快照式發行集。  
   
-3.  在發行者上，執行 [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)。 指定**@publication**和**@subscriber**。  
+3.  在發行者上，執行 [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)。 指定 **@publication** 和 **@subscriber** 。  
   
 4.  在發行者上，執行 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)，指定 **@subscriber**取得。 這樣會顯示與訂閱者有關的資訊。  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>變更快照式或交易式發行集之提取訂閱的屬性  
   
-1.  在訂閱者上，執行[sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql)， **@publisher**並**@publisher_db**指定**@publication**、、、的**0** （交易式）或**1** （快照集） **@publication_type**的值、變更為**@property**的訂閱屬性，以及做為**@value**的新值。  
+1.  在訂閱者上，執行[sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql)， **@publisher** 並指定、 **@publisher_db** 、、的 **@publication** **0** （交易式）或**1** （快照集）的值 **@publication_type** 、變更為的訂閱屬性， **@property** 以及做為的新值 **@value** 。  
   
-2.  (選擇性) 在訂閱資料庫的訂閱者上，執行 [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql)。 指定的散發代理程式作業的識別碼**@jobid**，以及下列資料轉換服務（DTS）封裝屬性：  
+2.  (選擇性) 在訂閱資料庫的訂閱者上，執行 [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql)。 指定的散發代理程式作業的識別碼 **@jobid** ，以及下列資料轉換服務（DTS）封裝屬性：  
   
     -   **@dts_package_name**  
   
@@ -107,17 +106,17 @@ ms.locfileid: "68198982"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>檢視合併式發行集之提取訂閱的屬性  
   
-1.  在訂閱者上，執行 [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql)。 指定**@publisher**、 **@publisher_db**和**@publication**。  
+1.  在訂閱者上，執行 [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql)。 指定 **@publisher** 、 **@publisher_db** 和 **@publication** 。  
   
-2.  在訂閱者上，執行 [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)。 指定**@publisher**、 **@publisher_db**、 **@publication**，以及2的**@publication_type**值。  
+2.  在訂閱者上，執行 [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)。 指定 **@publisher** 、 **@publisher_db** 、 **@publication** ，以及2的值 **@publication_type** 。  
   
-3.  在發行者上執行 [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) ，以顯示訂閱資訊。 若要傳回特定訂閱的相關資訊，您必須**@publication**指定**@subscriber**、，以及的**pull**值**@subscription_type**。  
+3.  在發行者上執行 [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) ，以顯示訂閱資訊。 若要傳回特定訂閱的相關資訊，您必須指定 **@publication** 、 **@subscriber** ，以及的**pull**值 **@subscription_type** 。  
   
 4.  在發行者上，執行 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)，指定 **@subscriber**取得。 這樣會顯示與訂閱者有關的資訊。  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>變更合併式發行集之提取訂閱的屬性  
   
-1.  在訂閱者上，執行 [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql)。 指定**@publication**、 **@publisher**、 **@publisher_db**、將變更為**@property**的訂閱屬性，並將新的值**@value**指定為。  
+1.  在訂閱者上，執行 [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql)。 指定 **@publication** 、 **@publisher** 、 **@publisher_db** 、將變更為的訂閱屬性 **@property** ，並將新的值指定為 **@value** 。  
   
 ##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  用於檢視或修改提取訂閱屬性的 RMO 類別，將取決於該提取訂閱所訂閱的發行集類型而定。  

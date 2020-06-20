@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b48bf3c0f0984c3f13acde23515c931aed5f467
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185962"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057633"
 ---
 # <a name="tablediff-utility"></a>tablediff 公用程式
   **tablediff** 公用程式用來比較兩份資料表之資料的非聚合狀況，當進行複寫拓撲中之非聚合狀況的疑難排解時，它尤其有用。 您可以在命令提示字元之下，或在批次檔中，利用這個公用程式來執行下列工作：  
@@ -76,8 +75,8 @@ ms.locfileid: "68185962"
  [ **-?** ]  
  傳回支援的參數清單。  
   
- **-sourceserver** *source_server_name*[**\\**_instance_name_]  
- 這是來源伺服器的名稱。 指定預設實例的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]_來源\_\_伺服器名稱_。 針對的已命名實例指定_\_來源\_伺服器名稱_**\\**_\_實例名稱。_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ **-sourceserver** *source_server_name*[ **\\** _instance_name_]  
+ 這是來源伺服器的名稱。 指定預設實例的_來源 \_ 伺服器 \_ 名稱_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 針對的已命名實例指定_來源 \_ 伺服器 \_ 名稱_ **\\** _實例 \_ 名稱_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  **-sourcedatabase** *source_database*  
  這是來源資料庫的名稱。  
@@ -100,8 +99,8 @@ ms.locfileid: "68185962"
  **-sourcelocked**  
  在比較期間，來源資料表以 TABLOCK 和 HOLDLOCK 資料表提示鎖定。  
   
- **-destinationserver** *destination_server_name*[**\\**_實例\_名稱_]  
- 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 針對的已命名實例指定_\_目的地\_伺服器名稱_**\\**_\_實例名稱。_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ **-destinationserver** *destination_server_name*[ **\\** _實例 \_ 名稱_]  
+ 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 針對的已命名實例指定_目的地 \_ 伺服器 \_ 名稱_ **\\** _實例 \_ 名稱_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  **-destinationdatabase** *subscription_database*  
  這是目的地資料庫的名稱。  
@@ -169,7 +168,7 @@ ms.locfileid: "68185962"
 |**2**|資料表差異|  
   
 ## <a name="remarks"></a>備註  
- **Tablediff**公用程式不能與非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]伺服器一起使用。  
+ **Tablediff**公用程式不能與非伺服器一起使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  具有 `sql_variant` 資料類型資料行的資料表不受支援。  
   

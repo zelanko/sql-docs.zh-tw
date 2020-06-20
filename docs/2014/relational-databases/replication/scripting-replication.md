@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52c0129c18f3248813c663026797b86ea23d5b13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250529"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056898"
 ---
 # <a name="scripting-replication"></a>編寫複寫指令碼
   拓撲中的所有複寫元件都應作為損毀復原計畫的一部份來編寫指令碼，而指令碼也可以用於自動執行重複性工作。 指令碼包含實作已編寫指令碼之複寫元件所必要的 Transact-SQL 系統預存程序，例如，發行集或訂閱。 指令碼可以在精靈中建立 (例如 [新增發行集精靈])，或可在建立元件之後，於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立。 您可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**，檢視、修改和執行指令碼。 指令碼可以和備份檔案一起儲存，萬一必須重新設定複寫拓撲時即可使用。  
@@ -82,7 +81,7 @@ ms.locfileid: "63250529"
   
 3.  以滑鼠右鍵按一下發行集或訂閱，然後按一下 **[產生指令碼]** 。  
   
-4.  指定 [產生 SQL 指令碼 - **複寫物件>]\<** 對話方塊中的選項。  
+4.  在 [**產生 SQL 腳本- \<ReplicationObject> ** ] 對話方塊中指定選項。  
   
 5.  按一下 **[編寫指令碼至檔案]** 。  
   

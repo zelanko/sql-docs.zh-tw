@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 318f4404467814c95e778d19aa793107a3ad0945
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24e264ad0f30a8cf3ec454405f5d40a301ce2f49
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176170"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967228"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>指令碼工作的程式碼撰寫和偵錯
   在 [指令碼工作編輯器]  中設定指令碼工作之後，於指令碼工作開發環境中撰寫自訂程式碼。
@@ -34,7 +33,7 @@ ms.locfileid: "78176170"
 ## <a name="script-task-development-environment"></a>指令碼工作開發環境
  指令碼工作使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 作為指令碼本身的開發環境。
 
- 指令碼是以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 撰寫。 您可以在 [指令碼工作編輯器]  中設定 [ScriptLanguage]  屬性來指定指令碼語言。 如果想要使用其他的程式語言，可以用您所選的語言開發自訂組件，然後在指令碼工作中，從程式碼呼叫其功能。
+ 指令碼是以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 撰寫。 您可以在 [指令碼工作編輯器] 中設定 [ScriptLanguage] 屬性來指定指令碼語言。 如果想要使用其他的程式語言，可以用您所選的語言開發自訂組件，然後在指令碼工作中，從程式碼呼叫其功能。
 
  您在指令碼工作中建立的指令碼會儲存在封裝定義中， 而沒有個別的指令碼檔案。 因此，使用指令碼工作並不會影響封裝部署。
 
@@ -49,9 +48,9 @@ ms.locfileid: "78176170"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>指令碼工作專案中的專案項目和類別
  依預設，顯示在 VSTA [專案總管] 視窗中的指令碼工作專案包含單一項目：`ScriptMain`。 `ScriptMain` 項目則包含單一類別，同樣名為 `ScriptMain`。 類別中的程式碼項目會根據您針對指令碼工作所選取的程式語言而變更。
 
--   針對程式[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]設計語言設定腳本工作時， `ScriptMain`類別具有公用副程式。 `Main` `ScriptMain.Main` 副程式是當您執行指令碼工作時，執行階段呼叫的方法。
+-   針對程式設計語言設定腳本工作時， [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] `ScriptMain` 類別具有公用副程式 `Main` 。 `ScriptMain.Main` 副程式是當您執行指令碼工作時，執行階段呼叫的方法。
 
-     依預設，在新指令碼的 `Main` 副程式中的唯一程式碼是 `Dts.TaskResult = ScriptResults.Success` 這一行。 這行會通知執行階段，工作的作業已成功。 `Dts.TaskResult` [從腳本工作傳回結果](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)中會討論屬性。
+     依預設，在新指令碼的 `Main` 副程式中的唯一程式碼是 `Dts.TaskResult = ScriptResults.Success` 這一行。 這行會通知執行階段，工作的作業已成功。 `Dts.TaskResult`[從腳本工作傳回結果](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)中會討論屬性。
 
 -   當為 Visual C# 程式語言設定指令碼工作時，`ScriptMain` 類別具有公用的方法 `Main`。 此方法是在指令碼工作執行時呼叫。
 

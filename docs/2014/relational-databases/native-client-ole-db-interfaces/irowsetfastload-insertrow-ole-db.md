@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 594d3461-34d2-41e7-8ad4-bd2753601ab6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0781ab267556b9869412d24d95ffdf94b8b11aaf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2ecc836f8e8042b9fd18c4c6d6548cf01cd25292
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707385"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056173"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
   將資料列加入至大量複製資料列集。 如需範例，請參閱[使用 IRowsetFastLoad 大量複製資料 &#40;OLE DB&#41;](../native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) 和[使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 將 BLOB 資料傳送到 SQL SERVER &#40;OLE DB&#41;](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
