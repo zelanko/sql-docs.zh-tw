@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 690b52fceb74269501880565bab65b020206fa61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44fa1271143f813364bfd2109f8147f1d04294a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761521"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066448"
 ---
 # <a name="delete-primary-keys"></a>刪除主索引鍵
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除 (卸除) 主索引鍵。 刪除主索引鍵時，系統會刪除對應的索引。  
@@ -62,7 +61,7 @@ ms.locfileid: "62761521"
     > [!NOTE]  
     >  若要恢復此一動作，可將資料表關閉而不儲存變更。 如果恢復刪除主索引鍵的動作，將會遺失所有對資料表進行的其他變更。  
   
-3.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
+3.  在 [檔案]  功能表上，按一下 [儲存「資料表名稱」]。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

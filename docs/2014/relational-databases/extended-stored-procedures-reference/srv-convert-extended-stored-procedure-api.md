@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39d738898db75cffd1d979b150628d7c3484b887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127273"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050790"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (擴充預存程序 API)
     
@@ -87,7 +86,7 @@ destlen
  *destlen*  
  指定目的地變數的長度 (以位元組為單位)。 固定長度的資料類型會忽略這個參數。 如果是 SRVCHAR 類型的目的地變數，*destlen* 的值必須是目的地緩衝區空間的總長度。 如果 SRVCHAR 或 SRVBINARY 類型的目的地變數長度為 -1，這表示可用的空間很充足。 如果是 *srvchar* 類型的目的地變數，則 -1 的長度會造成字元字串以 null 結束。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  如果資料類型轉換成功，則為轉換之資料的長度 (以位元組為單位)。 當 **srv_convert** 遇到所不支援的轉換要求時，它會呼叫開發人員提供的錯誤處理常式 (如果有的話)、設定全域錯誤號碼，並傳回 -1。  
   
 ## <a name="remarks"></a>備註  

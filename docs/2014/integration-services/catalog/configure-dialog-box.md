@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3b272d51505024a3df54e486651a54d3584722d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836106"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924479"
 ---
 # <a name="configure-dialog-box"></a>設定對話方塊
   使用 **[設定]** 對話方塊來針對封裝和專案設定參數、連接管理員及環境的參考。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4f23f7e4-7b4d-4e19-86c9-7527bb8b107d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce2cfce6e35a95b7a07c17c4d3a2fd8a1b1c2610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc6882439338509a3c716129d9504f209ab1e555
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093176"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065195"
 ---
 # <a name="remove-colon-following-reserved-keyword"></a>移除保留關鍵字後面的冒號
   Upgrade Advisor 偵測到指令碼中的保留關鍵字後面有冒號 (:)。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，會忽略此語法且成功地執行該陳述式。 現在，當資料庫相容性模式設定為 100 或之後時，此語法會導致陳述式失敗。  

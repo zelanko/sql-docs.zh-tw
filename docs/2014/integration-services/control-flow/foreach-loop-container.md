@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bb50b4000397ca3dd51be58867e45135d1d587f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be0fcbb238dfc73664569fec6753de49e4f0270d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831573"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918938"
 ---
 # <a name="foreach-loop-container"></a>Foreach 迴圈容器
   「Foreach 迴圈」容器定義封裝中重複的控制流程。 迴圈實作與程式設計語言中 **Foreach** 迴圈的結構類似。 在封裝中，迴圈是使用 Foreach 列舉值啟用。  「Foreach 迴圈」容器會為指定列舉值的每個成員重複控制流程。  
@@ -53,7 +52,7 @@ ms.locfileid: "62831573"
   
  ![列舉資料夾的 Foreach 迴圈容器](../media/ssis-foreachloop.gif "列舉資料夾的 Foreach 迴圈容器")  
   
- 您可以使用變數和屬性運算式的組合，以列舉值集合值更新封裝物件的屬性。 首先，對應集合值與使用者定義的變數，接著在使用該變數的屬性上實作屬性運算式。 例如，「Foreach 檔案」列舉值的集合值會對應至名`MyFile`為的變數，然後在「傳送郵件」工作的 Subject 屬性的屬性運算式中使用該變數。 當執行封裝時，便會在每次迴圈重複時以某個檔案名稱更新 Subject 屬性。 如需詳細資訊，請參閱 [在封裝中使用屬性運算式](../expressions/use-property-expressions-in-packages.md)。  
+ 您可以使用變數和屬性運算式的組合，以列舉值集合值更新封裝物件的屬性。 首先，對應集合值與使用者定義的變數，接著在使用該變數的屬性上實作屬性運算式。 例如，「Foreach 檔案」列舉值的集合值會對應至名為的變數，然後在「傳送郵件」工作的 `MyFile` Subject 屬性的屬性運算式中使用該變數。 當執行封裝時，便會在每次迴圈重複時以某個檔案名稱更新 Subject 屬性。 如需詳細資訊，請參閱 [在封裝中使用屬性運算式](../expressions/use-property-expressions-in-packages.md)。  
   
  對應至列舉值集合值的變數亦可在運算式和指令碼中使用。  
   

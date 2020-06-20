@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f1b1dcc6-6d44-4ad2-8c2e-4fd48c2c8086
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d8f777bd8a3b473a93e3f9b6a6e212efd56c04a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ca39d6a45066ce6c93a32a3e2348cb1e0ccf289
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911501"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059697"
 ---
 # <a name="propertyvaluetype-property-sqlserviceadvancedproperty-class"></a>PropertyValueType 屬性 (SqlServiceAdvancedProperty 類別)
   取得屬性的資料類型。  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  代表進階屬性的 [SqlServiceAdvancedProperty 類別](sqlserviceadvancedproperty-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

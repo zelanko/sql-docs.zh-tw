@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac8669fc161dfba1f7ed1f7c3b16e15619be2ff6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2d9bf67d1c71e9802ac7c90c79e69b1cea6af3a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706926"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926679"
 ---
 # <a name="legal-notice-for-documentation"></a>文件集的法律注意事項
   這份文件依「現狀」提供。 本文件中提供的資訊及檢視 (包括 URL 及其他網際網路網站參照) 如有變更，恕不另行通知。 您應自行承擔使用本文件的風險。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e170326f-d126-4ed5-bb01-246e1934b710
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e9850652965b44e68d7996ce28386aef2803f546
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3579e2f5c950187f643c9ca131e8652226b3d60
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809661"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935069"
 ---
 # <a name="replication-xps-server-configuration-option"></a>複寫 XPs 伺服器組態選項
   此選項僅供內部使用。  

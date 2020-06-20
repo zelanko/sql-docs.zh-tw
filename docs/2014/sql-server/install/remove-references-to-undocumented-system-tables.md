@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 010b1236-2219-4bf4-a6db-e3fc3abfa37a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45c38038ee3d3214e4303c0ddbe0110be926c37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059197"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>移除未記載之系統資料表的參考
   在舊版本中未記載的許多系統資料表都已變更或不存在，因此，在升級之後，使用這些資料表可能導致錯誤發生。 因為 Upgrade Advisor 會尋找系統資料表名稱的參考，所以它會報告與系統資料表有相同名稱的任何使用者資料表的參考。  
@@ -80,10 +79,10 @@ ms.locfileid: "66093150"
 ## <a name="corrective-action"></a>更正動作  
  根據下表修改您的應用程式。  
   
-|取代|用法|  
+|取代|使用|  
 |----------------|---------|  
 |**sysfulltextnotify**|OBJECTPROPERTYEX 函數的**TableFulltextPendingChanges**屬性。|  
-|**syslocks**|**dm_tran_locks**動態管理檢視] 或 [sp_lock] 或 [ **syslockinfo** ] 相容性檢視。|  
+|**syslocks**|**dm_tran_locks**動態管理檢視] 或 [sp_lock] 或 [ **sys.syslockinfo**相容性] 視圖。|  
 |**sysproperties**|**extended_properties**目錄檢視或**fn_listextendedproperty**函數|  
 |**sysxlogins**|**server_principals**目錄檢視或**syslogins**相容性檢視。|  
 |所有**spt_** 資料表|沒有可用的取代項目|  

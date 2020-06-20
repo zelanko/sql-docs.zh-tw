@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49f1b0832fb82425874b656715091f793b79dfd5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745757"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004489"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>使用 Windows Synchronization Manager 同步處理訂閱 (Windows Synchronization Manager)
   如果 Microsoft[!INCLUDE[msCoName](../../includes/msconame-md.md)] 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows Synchronization Manager 在相同的電腦上執行，則 Synchronization Manager 只能用於同步處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的訂閱 (它也可以用於同步處理離線檔案和網頁)。 若要使用 Synchronization Manager：  
   
-1.  在 [訂閱屬性 - \<訂閱者>: \<訂閱資料庫>]**** 對話方塊中，啟用同步處理提取訂閱與 Windows Synchronization Manager。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)。  
+1.  在 [**訂閱屬性- \<Subscriber> ： \<SubscriptionDatabase> ** ] 對話方塊中，使用 Windows 同步處理管理員啟用提取訂閱的同步處理。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)。  
   
 2.  透過 Windows 中的 **[開始]** 功能表存取 Synchronization Manager。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62745757"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>若要使用 Windows Synchronization Manager 啟用提取訂閱同步處理  
   
-1.  在 [訂閱屬性 - \<訂閱者>: \<訂閱資料庫>]**** 對話方塊的 [一般]**** 頁面中，針對 [使用 Windows Synchronization Manager]**** 選項選取 [啟用]****。  
+1.  在 [**訂閱屬性- \<Subscriber> ： \<SubscriptionDatabase> ** ] 對話方塊的 [**一般**] 頁面上，為 [**使用 Windows 同步處理管理員**] 選項選取 [**啟用**] 值。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62745757"
   
     -   按一下 **[開始]**，依序指向 **[程式集]** (或 **[程式集]**) 和 **[附屬應用程式]**，然後按一下 **[同步處理]**。  
   
-    -   按一下 [**開始**]，然後按一下 [**執行]。** 在 [**執行**] 對話方塊的 [ `mobsync.exe` **開啟**] 欄位中輸入，然後按一下 **[確定]**。  
+    -   按一下 [**開始**]，然後按一下 [**執行]。** 在 [**執行**] 對話方塊的 `mobsync.exe` [**開啟**] 欄位中輸入，然後按一下 **[確定]**。  
   
 2.  在 **[要同步處理的項目]** 對話方塊中，選取要同步處理的訂閱。 訂閱會列在電腦上安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之下。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "62745757"
   
 2.  在 **[SQL Server 訂閱屬性]** 對話方塊中，按一下 **[重新初始化訂閱]**。  
   
-3.  按一下 [是]  。  
+3.  按一下 [是] 。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

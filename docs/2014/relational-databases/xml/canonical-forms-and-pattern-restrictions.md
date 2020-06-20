@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9653e076a8b1f6fec04945d8a19ea0fd3170eef8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 569e8c4a01ed1eb9ae26ea9e2f6d471b9aad9fe0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717386"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059575"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>標準格式與模式限制
   XSD 模式 Facet 允許簡單類型的語彙空間限制。 當在有一個以上的可能語彙表示法之類型上設置模式限制時，有些值可能會在驗證時造成非預期的行為。  

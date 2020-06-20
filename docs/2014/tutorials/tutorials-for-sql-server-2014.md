@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: da87f0fbae21d11906f12a906aa5107e8812436e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ccc9871a879196bc26251ea952ddd5dd573768e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000044"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035304"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>適用於 SQL Server 2014 的教學課程
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 引進了許多新技術和新功能。  

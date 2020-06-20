@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 866586f5da9682d66f884565254adf4185d63760
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 37459359f9f6cb7e3951b705c4007477ec43e36a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706590"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050894"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>檢視同等於 SQL 追蹤事件類別的擴充事件項目
   如果您想要使用「擴充事件」來收集同等於 SQL 追蹤事件類別和資料行的事件資料，了解 SQL 追蹤事件如何對應到「擴充事件」事件和動作會非常實用。  

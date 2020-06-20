@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b894d7b554dffcb0941ddf38182519cf85a84c2f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809347"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934959"
 ---
 # <a name="server-properties-connections-page"></a>伺服器屬性 (連接頁面)
   使用此頁面來檢視或修改您的連接選項。  

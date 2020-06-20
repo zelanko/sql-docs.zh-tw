@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c08c423e7e5d3e59bfe75d388363f5d70dd885db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62937015"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035767"
 ---
 # <a name="job-categories-manage-job-categories"></a>作業類別目錄：管理作業類別目錄
   使用 [作業類別目錄]**** 對話方塊以加入或刪除作業類別目錄。 無法刪除內建作業類別目錄。  
@@ -34,7 +33,7 @@ ms.locfileid: "62937015"
  **檢視作業**  
  開啟選取之類別目錄的 [屬性]**** 對話方塊，以列出目前為該類別目錄定義的所有作業。  
   
- **加入**  
+ **新增**  
  開啟 [新增作業類別目錄]**** 對話方塊，以新增類別目錄  
   
  **刪除**  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1a6beb1c6996e6e12f16c4555fd9dfcab97617d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064852"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933043"
 ---
 # <a name="event-pairing-target"></a>事件配對目標
   事件配對目標會使用每個事件中存在之一個或多個資料行來比對兩個事件。 許多事件都是以成對的形式出現，例如鎖定取得和鎖定釋放。 當事件序列配對之後，會捨棄這兩個事件。 捨棄相符的事件組可讓您輕鬆偵測尚未釋放的鎖定取得。  
@@ -43,7 +42,7 @@ ms.locfileid: "66064852"
   
  所有與事件有關的資料都會擷取，並儲存起來供將來配對。 此外，也會收集動作所加入的資料。 收集的事件資料會儲存在記憶體中，因此會有有限度的限制。 這個限制是以系統容量和活動為根據。 所使用的記憶體數量將會根據可用的系統資源而定，而不會將最大記憶體數量當做參數使用。 當無法使用這些項目時，將會卸除已經保留且未配對的事件。 如果事件尚未配對且遭到卸除，則相符的事件將會以未配對事件的形式出現。  
   
- 配對目標會將未配對的事件序列化成 XML 格式， 這個格式不符合任何結構描述。 此格式只包含兩個元素類型。 不** \<成對的>** 元素是根，後面接著一個。 目前正在追蹤之每一個未配對事件的事件>元素。 ** \< ** Event>元素包含一個屬性，其中包含未配對事件的名稱。 ** \< **  
+ 配對目標會將未配對的事件序列化成 XML 格式， 這個格式不符合任何結構描述。 此格式只包含兩個元素類型。 **\<unpaired>** 元素是根，後面接著一個。 **\<event>** 目前正在追蹤之每一個未配對事件的元素。 **\<event>** 元素包含一個屬性，其中包含未配對事件的名稱。  
   
 ## <a name="adding-the-target-to-a-session"></a>將目標加入至工作階段  
  若要將配對比對目標加入至擴充事件工作階段，您必須在建立或更改事件工作階段時，加入下列陳述式：  

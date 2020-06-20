@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ce419321dc3201c4db8d103e1d256e14168c6ec8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 2d0bcc4ffa9141e8a86a2d8d4de8dfbe05fc8dd8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036914"
 ---
 # <a name="full-text-search-upgrade-options"></a>全文檢索搜尋升級選項
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [全文檢索搜尋升級選項] 頁面，針對此時升級的資料庫選取要使用的全文檢索搜尋升級選項。  

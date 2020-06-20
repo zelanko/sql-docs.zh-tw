@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd7ce157e831d32272f6ff2531c39f789a01e901
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eaca5fcf2dfbac57fc6d3ba6178251927d15aba9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66015084"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003744"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>疑難排解全文檢索索引
      

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4227560fbaf3e618a25e3dd214a214ac68a736e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d69416b36969e564b611d1b1274367b6ce5cb86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176553"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924969"
 ---
 # <a name="building-packages-programmatically"></a>以程式設計方式建立封裝
   如果您需要動態建立封裝，或要在開發環境以外的地方管理和執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，可以使用程式設計方式操作封裝。 在這種方法中，您有連續範圍的選項：
@@ -63,7 +62,7 @@ ms.locfileid: "78176553"
  [以程式設計方式儲存封裝](../building-packages-programmatically/saving-a-package-programmatically.md)描述如何以程式設計方式儲存封裝。
 
 ## <a name="reference"></a>參考
- [Integration Services 錯誤和訊息參考](../integration-services-error-and-message-reference.md)列出預先定義[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的錯誤碼及其符號名稱和描述。
+ [Integration Services 錯誤和訊息參考](../integration-services-error-and-message-reference.md)列出預先定義的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤碼及其符號名稱和描述。
 
 ## <a name="related-sections"></a>相關章節
  [使用腳本擴充封裝](../extending-packages-scripting/extending-packages-with-scripting.md)討論如何使用腳本工作來擴充控制流程，以及如何使用腳本元件來擴充資料流程。

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6df72a78-6b36-4bc1-948e-04b4ebe46094
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 15f3c898faf97f5e013fa3665971d55830f0c68d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 804c2f55047a69e75622fbab23a3524a3f082695
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092193"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036184"
 ---
 # <a name="setup-and-servicing-installation"></a>安裝程式和服務安裝
   本節包含以下內容：  

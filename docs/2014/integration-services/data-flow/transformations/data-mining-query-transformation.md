@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 44cdff7d7b6813e6fbdf52282621d8845d0643b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10a8c6495fc7d839132d102d9e696263a6f9df17
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890530"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939629"
 ---
 # <a name="data-mining-query-transformation"></a>資料採礦查詢轉換
   「資料採礦查詢」轉換會對資料採礦模型執行預測查詢。 這項轉換包含用來建立「資料採礦延伸模組」(DMX) 查詢的查詢產生器。 查詢產生器可讓您建立自訂陳述式，以便使用 DMX 語言對照現有採礦模型評估轉換輸入資料。 如需詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)。  

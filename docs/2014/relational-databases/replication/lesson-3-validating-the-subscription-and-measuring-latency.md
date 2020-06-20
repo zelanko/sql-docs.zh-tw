@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 147f7b93-1804-4e0b-9e17-57a51d035b2a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1298f70bbc894c08585c5e5aa731f10ef45dfd15
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: eba65b6b19054414a13a46ebd2ccb92a28305dde
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000370"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065882"
 ---
 # <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>第 3 課：驗證訂閱及測量延遲
   在這一課，您將使用追蹤 Token，以確認變更正複寫至訂閱者，並決定延遲 (亦即在「發行者」端所做變更顯示在「訂閱者」上所花費的時間)。 您必須先完成上一課 [第 2 課：建立交易式發行集的訂閱](lesson-2-creating-a-subscription-to-the-transactional-publication.md)，才能進行這一課。  

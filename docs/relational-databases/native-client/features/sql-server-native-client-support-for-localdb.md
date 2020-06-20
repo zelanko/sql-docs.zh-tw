@@ -1,5 +1,6 @@
 ---
 title: LocalDB 的支援
+description: 瞭解如何連接到 LocalDB 實例中的資料庫，這是 SQL Server Native Client 所支援 SQL Server 的輕量版本。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6b3bda8e934e67371c48611383a45cbdc5cb993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e4f305bd92ea8b5c003b4793e0443effaeeb9ef
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388417"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948807"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client 對 LocalDB 的支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

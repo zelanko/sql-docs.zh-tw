@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 790fa1b969f933890e050311173fcde3f12c37ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066402"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>建立使用者定義函數 (Database Engine)
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立使用者定義函數。  
@@ -50,7 +49,7 @@ ms.locfileid: "68211719"
   
 -   使用者定義函數無法傳回多個結果集。 如果您需要傳回多個結果集，請使用預存程序。  
   
--   使用者定義函數中限制錯誤處理。 UDF 不支援 [嘗試 ...]CATCH @ERROR或 RAISERROR。  
+-   使用者定義函數中限制錯誤處理。 UDF 不支援 [嘗試 ...]CATCH @ERROR 或 RAISERROR。  
   
 -   使用者定義函數無法呼叫預存程序，但是可以呼叫擴充預存程序。  
   

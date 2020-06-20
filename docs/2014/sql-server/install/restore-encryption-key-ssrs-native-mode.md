@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 111e44275922149949cd7e252e112d95cef65076
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e26b3d124d01d2163eade48656de44ca03784bb1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952028"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058954"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>還原加密金鑰 (SSRS 原生模式)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用加密金鑰來保護儲存於報表伺服器資料庫中的敏感性資料安全。 為了確保您可持續存取加密的資料，一定要建立加密金鑰的備份，以免日後因為服務帳戶變更或進行規劃移轉時需要還原加密金鑰。 本主題提供如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員還原金鑰的概觀。  
@@ -31,7 +30,7 @@ ms.locfileid: "71952028"
  如果您所還原的無效金鑰與之前用來加密資料的金鑰不同，這樣就無法針對目前儲存於報表伺服器資料庫內的資料進行解密。 如果您還原無效的金鑰，您應該立即還原正確金鑰的備份副本 (如果可用的話)。 如果您沒有之前用來加密資料之金鑰的備份副本，則必須刪除所有加密的資料。 按一下 **加密金鑰** 頁面上的 [[刪除]](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) 按鈕，以執行這個步驟。 當您刪除加密的內容之後，您必須手動更新所有訂閱，並重新指定報表伺服器上針對報表和資料驅動訂閱所定義的所有預存認證。  
   
 ## <a name="restore-encryption-key-dialog"></a>[還原加密金鑰] 對話方塊  
- 如需有關何處尋找[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager 的詳細資訊，請參閱[Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 如需有關何處尋找 Configuration Manager 的詳細資訊 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，請參閱[Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
  若要開啟 [還原加密金鑰] 對話方塊，請按一下 **組態管理員導覽窗格內的** [加密金鑰] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然後按一下 **[還原]**。 當您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員內的 [服務帳戶] 頁面來更新服務帳戶時，這個對話方塊也會出現。 如需詳細資訊  
   

@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1f95544de8f0362b8981a175f1c65de1798a1eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245628"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059314"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 模式的 Reporting Services 之硬體和軟體需求
 
-  本主題描述以 SharePoint 模式執行的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]必要條件、硬體需求和安裝考慮。 由於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式需要 SharePoint 伺服器，因此大部分需求都是以 SharePoint 環境為基礎。 若是原生模式報表伺服器，您的硬體應符合執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的最低硬體和軟體需求。 如需詳細資訊，請參閱＜ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)＞。  
+  本主題描述以 SharePoint 模式執行的必要條件、硬體需求和安裝考慮 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 由於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式需要 SharePoint 伺服器，因此大部分需求都是以 SharePoint 環境為基礎。 若是原生模式報表伺服器，您的硬體應符合執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的最低硬體和軟體需求。 如需詳細資訊，請參閱＜ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)＞。  
   
--   [必要條件](#bkmk_prereq)  
+-   [先決條件](#bkmk_prereq)  
   
 -   [報表伺服器資料庫需求](#bkmk_report_server_database)  
   
 -   [Power View 需求](#bkmk_powerview)  
   
--   [詳細資訊](#bkmk_more_information)  
+-   [其他資訊](#bkmk_more_information)  
   
 ##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要條件  
   
@@ -65,9 +64,9 @@ ms.locfileid: "75245628"
 
  請檢閱 Office.Microsoft.com 上最新的 [Power View 文件集](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) 。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 是 Microsoft Excel 2013 的一項功能，而且屬於適用於 Microsoft SharePoint Server 2010 和 2013 Enterprise 版之 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services 增益集的一部分。  
   
-##  <a name="more-information"></a><a name="bkmk_more_information"></a>詳細資訊
+##  <a name="more-information"></a><a name="bkmk_more_information"></a> 其他資訊
 
- 如需 SharePoint 變更的相關資訊，請參閱[從 sharepoint 2010 變更為 sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) （https://technet.microsoft.com/library/ff607742(office.15).aspx)。  
+ 如需 SharePoint 變更的相關資訊，請參閱[從 sharepoint 2010 變更為 sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) （ https://technet.microsoft.com/library/ff607742(office.15).aspx) 。  
   
  [SQL Server 2014 版本](https://go.microsoft.com/fwlink/?LinkID=296445)資訊。  
   

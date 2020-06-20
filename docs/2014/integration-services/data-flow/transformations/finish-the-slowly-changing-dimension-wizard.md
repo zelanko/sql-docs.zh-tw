@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fca94c601dff429458fbde9d1614b078004f4d5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25e68290102d545f0ccb4bbc019616671f7602a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770364"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939550"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>完成緩時變維度精靈
   使用 [完成緩時變維度精靈]  對話方塊，即可在精靈為緩時變維度建立支援之前，先確認您的選擇。  

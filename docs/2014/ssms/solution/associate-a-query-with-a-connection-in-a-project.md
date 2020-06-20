@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a28982b3dcf8136e7981899b50aed1aa8f9904c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b05715dc6680148a8ae673c73cfc36c96a55c4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62955891"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066343"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>在專案中建立查詢與連接的關聯性
   如果建立不含連接的查詢，或在專案之間移動查詢，這項查詢都不會與目前專案中的連接相關聯。  

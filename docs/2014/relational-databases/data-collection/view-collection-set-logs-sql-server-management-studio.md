@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a68d71c44304d2f57c39d5a32fd57a5efb9617e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 925029966c0d6ea023b18655fc7399b2a0b3af70
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918238"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970370"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>檢視收集組記錄 (SQL Server Management Studio)
   您可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]檢視所有的收集組記錄或個別的收集組記錄。  

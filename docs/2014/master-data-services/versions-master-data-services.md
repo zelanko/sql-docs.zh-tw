@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 07ba6990049c5ad3bff2e93b06aac0023dedbfe8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: befdb8a5e7de5c4aef86edf5e5bf029954c934c7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481350"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960538"
 ---
 # <a name="versions-master-data-services"></a>版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以在模型內建立多個版本的主要資料。 系統會在您驗證資料時鎖定版本，並在驗證資料之後認可版本。 認可的版本會形成可稽核的變更記錄。 您建立的每個版本都包含該模型的所有成員、屬性值、階層成員、階層關聯性和集合。  

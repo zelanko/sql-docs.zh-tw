@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 02a788c5675a763d7285c9986eef94f3621e6a9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0a460abdab356b4ec20678c2e549605792271fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478814"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960788"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>驗證資料 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您發行資料時，會進行下列兩種驗證類型：  
@@ -38,7 +37,7 @@ ms.locfileid: "65478814"
 |------------|-----------------|  
 |錯誤|對 MDS 管理員所定義的商務規則，資料列中一個或多個值的驗證失敗。|  
 |未驗證|尚未對商務規則驗證資料列中的值。|  
-|成功|資料列中的所有值已經通過商務規則驗證。|  
+|Success|資料列中的所有值已經通過商務規則驗證。|  
   
 ## <a name="input-statuses"></a>輸入狀態  
  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，可能出現下列幾種輸入狀態：  

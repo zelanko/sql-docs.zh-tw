@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 682a3692414f89beb0c5e0f0204bc1a69b532e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1144d186ca38a32dc5fe5db3f487ea7507953cba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807619"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934249"
 ---
 # <a name="database-mirroring-witness"></a>資料庫鏡像見證
   若要支援自動容錯移轉，就必須在高安全性模式下設定資料庫鏡像工作階段，而且它也會包含第三個伺服器執行個體，稱為「見證」  。 見證是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的選擇性執行個體，可以讓在高安全性模式工作階段中的鏡像伺服器辨別是否啟動自動容錯移轉。 與兩位夥伴不同的是，見證並不是為資料庫服務。 支援自動容錯移轉是見證的唯一角色。  

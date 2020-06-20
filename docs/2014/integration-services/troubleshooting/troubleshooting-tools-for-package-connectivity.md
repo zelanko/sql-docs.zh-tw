@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8bb86d738aed61743defa3261318e2eb7536aa84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2dbeca0a1f49484061c894b33b9022a63cede712
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766161"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972679"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>疑難排解工具封裝連接
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所含的功能及工具，可以讓您用於疑難排解封裝與封裝擷取及載入資料之資料來源之間的連接。  

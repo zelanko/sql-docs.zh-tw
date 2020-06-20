@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67b21f48-4795-4128-81dc-743f7a95ef74
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c901c3f10198a1516279b9e93d9c5ddb6a9c49ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a89818eac194ff6d980fcfc801014584ee1f724
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972848"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>傳送錯誤訊息工作編輯器 (一般頁面)
   使用 [傳送錯誤訊息工作編輯器]**** 對話方塊的 [一般]**** 頁面，即可命名和描述傳送錯誤訊息工作。 [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用者自訂的錯誤訊息。 如需這項工作的詳細資訊，請參閱 [傳送錯誤訊息工作](control-flow/transfer-error-messages-task.md)。  
@@ -31,7 +30,7 @@ ms.locfileid: "66055077"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入傳送錯誤訊息工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6bcf7d78fd550404f81f9cc303414303ad82504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae5c8d56c1d51290c35a04c22474fcc04ddff61d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63000352"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065910"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>記錄讀取器代理程式安全性 (點對點複寫)
   **[記錄讀取器代理程式安全性]** 頁面，可讓您指定記錄讀取器代理程式在每個對等 (Peer) 端執行和連接的帳戶。 如需代理程式所需權限和複寫安全性最佳做法的資訊，請參閱[複寫代理程式安全性模型](security/replication-agent-security-model.md)和[複寫安全性最佳做法](security/replication-security-best-practices.md)。  
@@ -37,10 +36,10 @@ ms.locfileid: "63000352"
  在每個對等 (Peer) 端作為發行集資料庫和訂閱資料庫的資料庫。  
   
  **散發者的連接**  
- 用於連接到散發者的內容。 散發者的本機連接一律會使用執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的內容進行，所以這個欄位一律顯示 [模擬 '\<網域>\\<登入\>']  或 [模擬 '\<電腦>\\<登入\>']  。  
+ 用於連接到散發者的內容。 散發者的本機連接一律會使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 執行代理程式之 Windows 帳戶的內容進行，因此此欄位一律會顯示 [模擬 **' \<Domain> \\<登入 \> '** ] 或 [模擬 **' \<Computer> \\<登入 \> '**]。  
   
  **發行者的連接**  
- 用於連接到發行者的內容。 發行者的連接可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，或使用執行代理程式之 Windows 帳戶的內容進行。 這個欄位會顯示下列其中一項資訊：[使用登入 '\<登入>']  、[模擬 '\<網域>\\<登入\>']  或 [模擬 '\<電腦>\\<登入\>']  。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
+ 用於連接到發行者的內容。 發行者的連接可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，或使用執行代理程式之 Windows 帳戶的內容進行。 欄位會顯示下列其中一項：**使用登入 ' \<Login> '**，模擬 **' \<Domain> \\<登入 \> '** 或模擬 **' \<Computer> \\<登入 \> '**。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理點對點拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

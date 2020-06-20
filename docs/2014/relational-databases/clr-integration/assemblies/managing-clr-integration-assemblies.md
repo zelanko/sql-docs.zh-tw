@@ -15,23 +15,22 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e65bb5c651862a82d78faede158234d20392c1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9acc56d72d2ed994f497676813e45ef0a914431
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919688"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953778"
 ---
 # <a name="managing-clr-integration-assemblies"></a>管理 CLR 整合組件
-  Managed 程式碼會經過編譯，然後以稱為組件的單位進行部署。 組件會封裝為 DLL 或可執行檔 (.exe)。 可執行檔可以自行執行，而 DLL 則必須裝載在現有的應用程式中。 Managed DLL 元件可以載入並由[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]裝載。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 CREATE ASSEMBLY 語句的資料庫，然後才可以在進程中載入並使用它。 這些組件也可以使用 ALTER ASSEMBLY 陳述式，從比較新的版本升級，或者使用 DROP ASSEMBLY 陳述式，從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 移除。  
+  Managed 程式碼會經過編譯，然後以稱為組件的單位進行部署。 組件會封裝為 DLL 或可執行檔 (.exe)。 可執行檔可以自行執行，而 DLL 則必須裝載在現有的應用程式中。 Managed DLL 元件可以載入並由裝載 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 CREATE ASSEMBLY 語句的資料庫，然後才可以在進程中載入並使用它。 這些組件也可以使用 ALTER ASSEMBLY 陳述式，從比較新的版本升級，或者使用 DROP ASSEMBLY 陳述式，從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 移除。  
   
  組件資訊會儲存在安裝該組件所在資料庫的 `sys.assembly_files` 資料表中。 `sys.assembly_files` 資料表包含下列資料行。  
   
 |資料行|描述|  
 |------------|-----------------|  
 |assembly_id|為組件定義的識別項。 此號碼會指派給與同一組件相關的所有物件。|  
-|NAME|物件的名稱。|  
+|name|物件的名稱。|  
 |file_id|識別每個物件的數字，其中會將 1 的值指派給與給定 `assembly_id` 相關聯的第一個物件。 如果有多個物件與相同的 `assembly_id` 相關聯，則每個後續的 `file_id` 值都會以 1 遞增。|  
 |內容|組件或檔案的十六進位表示法。|  
   

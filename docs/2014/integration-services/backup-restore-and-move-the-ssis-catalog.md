@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 314dfaee23854524884edd0fe67fe1f45ec89b2e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670502"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925269"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>備份、 還原和移動的 SSIS 目錄
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包括 SSISDB 資料庫。 您可以查詢 SSISDB 資料庫中的檢視，以檢查物件、設定以及儲存在 [SSISDB]**** 目錄中的作業資料。 本主題提供備份與還原資料庫的指示。  
@@ -48,7 +47,7 @@ ms.locfileid: "68670502"
   
 5.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，請執行下列動作，藉以產生 sp_ssis_startup 的 CREATE PROCEDURE 指令碼。 如需詳細資訊，請參閱 [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)。  
   
-    1.  在物件總管中，**Programmability** > 展開 [**資料庫**] 節點，然後展開 [**系統資料庫** > ] [**主要** > 程式設計] [**預存程式**] 節點。  
+    1.  在物件總管中，展開 [**資料庫**] 節點，然後展開 [**系統資料庫**] [主要程式設計] [  >  **master**  >  **Programmability**  >  **預存程式**] 節點。  
   
     2.  以滑鼠右鍵按一下 [dbo.sp_ssis_startup]****，然後按一下 [編寫預存程序的指令碼為]**** > [CREATE 至]**** > [新增查詢編輯器視窗]****。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "68670502"
   
     1.  在物件總管中，展開 [SQL Server Agent]**** 節點，然後展開 [作業]**** 節點。  
   
-    2.  以滑鼠右鍵按一下 [SSIS 伺服器維護作業]，然後按一下 [**腳本作業] 做為** > [**建立至** > **新查詢編輯器視窗]**。  
+    2.  以滑鼠右鍵按一下 [SSIS 伺服器維護作業]，然後按一下 [**腳本作業] 做為**[  >  **建立至**  >  **新查詢編輯器視窗]**。  
   
 ### <a name="to-restore-the-ssis-database"></a>若要還原 SSIS 資料庫  
   
@@ -109,7 +108,7 @@ ms.locfileid: "68670502"
   
 7.  使用下列其中一種方法來還原主要金鑰。 如需加密的詳細資訊，請參閱 [加密階層](../relational-databases/security/encryption/encryption-hierarchy.md)。  
   
-    -   **方法 1**  
+    -   **方法1**  
   
          如果您已經備份資料庫主要金鑰，而且您有用來加密主要金鑰的密碼，請使用此方法。  
   
@@ -131,7 +130,7 @@ ms.locfileid: "68670502"
         >   
         >  FORCE 引數會指定即使未開放目前的資料庫主要金鑰，也應該繼續還原程序。 若是 SSISDB 目錄，因為尚未在您要還原資料庫所在的執行個體上開放資料庫主要金鑰，因此您將會看到此訊息。  
   
-    -   **方法 2**  
+    -   **方法2**  
   
          如果您有建立 SSISDB 所使用的原始密碼，請使用此方法。  
   

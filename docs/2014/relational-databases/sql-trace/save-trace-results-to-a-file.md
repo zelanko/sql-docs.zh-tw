@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a55662b38fbd69dc45d8f0031856ad4da5929038
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 644fc812bbb4863c336ff2f53f5b2d67ee0a4d5e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136445"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996428"
 ---
 # <a name="save-trace-results-to-a-file"></a>將追蹤結果儲存至檔案
   您可以將追蹤結果儲存至檔案。 追蹤檔案是用來寫入追蹤結果的檔案。 追蹤檔案可以位於本機目錄 (例如 C:\\  \\檔案名稱.trc  ) 或網路目錄 (例如 \\\電腦名稱\共用名稱\檔案名稱.trc)。  
@@ -34,7 +33,7 @@ ms.locfileid: "63136445"
   
 -   完成查詢最佳化。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當預存程式**@tracefile** **sp_trace_create**的引數指定路徑和檔案名時，會將追蹤結果儲存至檔案。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當 **@tracefile** 預存程式**sp_trace_create**的引數指定路徑和檔案名時，會將追蹤結果儲存至檔案。  
   
 > [!NOTE]  
 >  若要將路徑指定到 **sp_trace_create** 預存程序以儲存追蹤檔案，則其必須是伺服器可存取的目錄。 另請注意，若要在 **sp_trace_create**指定本機目錄，此目錄必須是伺服器電腦上的本機目錄。  

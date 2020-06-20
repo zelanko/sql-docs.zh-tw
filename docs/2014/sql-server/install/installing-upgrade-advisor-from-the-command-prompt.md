@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a6841cc2-ca13-4b1c-9343-9e4d54312c3a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 738e1ef203f4c9c83e42c7d8255f82978465eadf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094341"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065291"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>從命令提示字元安裝 Upgrade Advisor
   您可以使用安裝精靈或命令提示字元來安裝 Upgrade Advisor。 藉由使用命令提示字元，可執行自主式且自動化的安裝。  
@@ -35,7 +34,7 @@ ms.locfileid: "66094341"
 |引數|描述|  
 |--------------|-----------------|  
 |/q [n&#124;b&#124;r&#124;f]|設定使用者介面 (UI) 層級：<br /><br /> n = 沒有 UI<br /><br /> b = 基本 UI (只有進度，沒有提示)<br /><br /> r = 縮減 UI (在安裝結尾顯示對話方塊)<br /><br /> f = 完整 UI|  
-|/L|指定記錄檔選項。 若要將所有訊息記錄到*log_file_name*，請使用 **-\*L v**_log_file_name_。 若只要記錄錯誤訊息，請`-Le`使用*log_file_name*。|  
+|/L|指定記錄檔選項。 若要將所有訊息記錄到*log_file_name*，請使用 **-L \* v**_log_file_name_。 若只要記錄錯誤訊息，請使用 `-Le` *log_file_name*。|  
 |ADDLOCAL = ALL&#124; REMOVE = ALL&#124;重新安裝 = 全部|指定要安裝 (ADDLOCAL)、移除 (REMOVE) 或重新安裝 (REINSTALL) Upgrade Advisor。|  
 |UAINSTALLDIR=path|將 Upgrade Advisor 安裝至 path 指定的位置。|  
   

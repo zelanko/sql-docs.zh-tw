@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 58258ab6c364cbe7137e8a5157cb4f335e049c42
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 659b6ca1149eb8f0412efbe2adbaf4c1ffce59d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718588"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997865"
 ---
 # <a name="specify-a-breakpoint-condition"></a>指定中斷點條件
   中斷點條件是指偵錯工具在到達中斷點時所評估的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 如果已滿足條件，而且到達任何指定的叫用次數，偵錯工具就會中斷或執行為中斷點指定的動作。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcfa139cb854954d920a1148f3d5cebb907c61e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e6e28e6d1bb923fb226e7df7964853685f23178b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706560"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050384"
 ---
 # <a name="altering-memory-optimized-tables"></a>改變記憶體最佳化資料表
   不支援執行記憶體最佳化資料表上的 ALTER 作業。 這些作業包括變更 bucket_count、加入或移除索引，以及加入或移除資料行等等。 本主題提供如何更新記憶體最佳化之資料表的指導方針。  
@@ -223,7 +222,7 @@ Write-Host ""
   
  下列 PowerShell 指令碼會執行前述範例中所撰寫的結構描述變更指令碼。 此指令碼會採用資料表做為引數，並執行為該資料表與相關預存程序產生的結構描述變更指令碼。  
   
- 使用方式： execute_schema_change. ps1 *server_name * * db_name `schema_name` table_name*  
+ 使用方式： execute_schema_change.ps1 *server_name * * db_name `schema_name` table_name*  
   
 ```powershell
 # stop execution once an error occurs  

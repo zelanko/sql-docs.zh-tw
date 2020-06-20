@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 88ab6a4e91b98a2e6551f6a01cbca29738513b61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 79a49a7029e404e370987e73527ff199e2fd0e34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028628"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919952"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 建立叢集工作
 [Azure HDInsight 建立叢集工作]  可讓 SSIS 套件在指定的 Azure 訂用帳戶和資源群組中建立 Azure HDInsight 叢集。

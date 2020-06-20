@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: dfee7265529419aecf2b05831503ed134b93f525
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56d85f36840f0900c8b5e986334a99ba610d3930
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935629"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>設定 min memory per query 伺服器組態選項
-  `min memory per query`本主題描述如何使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中設定 server configuration 選項。 `min memory per query`選項會指定要為查詢執行配置的最小記憶體數量（以 kb 為單位）。 例如，如果`min memory per query`設定為 2048 KB，則查詢保證至少會取得記憶體總計。 預設值為 1,024 KB。 最小值是 512 KB，最大值則是 2,147,483,647 KB (2 GB)。  
+  本主題描述如何 `min memory per query` 使用或，在中設定 server configuration 選項 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 `min memory per query`選項會指定要為查詢執行配置的最小記憶體數量（以 kb 為單位）。 例如，如果 `min memory per query` 設定為 2048 KB，則查詢保證至少會取得記憶體總計。 預設值為 1,024 KB。 最小值是 512 KB，最大值則是 2,147,483,647 KB (2 GB)。  
   
  **本主題內容**  
   

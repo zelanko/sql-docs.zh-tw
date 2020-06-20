@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da58ed50-3a13-4172-9065-960559d8f383
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 136056f848c85c2fbe8c572a5866c4e23b3a85b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b44e7f5e0801bb370a98abe79a6ea449c6f7409
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782204"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935331"
 ---
 # <a name="ekm-provider-enabled-server-configuration-option"></a>EKM provider enabled 伺服器組態選項
   `EKM provider enabled` 選項可控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的可延伸金鑰管理裝置支援。 根據預設，這個選項是關閉的。  
@@ -34,7 +33,7 @@ sp_configure 'EKM provider enabled', 0
 ```  
   
 > [!NOTE]  
->  並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都會啟用此選項。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都會啟用此選項。 如需版本支援的功能清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   

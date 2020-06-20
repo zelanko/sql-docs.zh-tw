@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6e829bc3bc7216532bd76f083335f126166347f4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5b86fb120d8263ae48bb9a4e874e4cf0d012bf7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706512"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050214"
 ---
 # <a name="cross-database-queries"></a>跨資料庫查詢
   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，記憶體最佳化資料表不支援跨資料庫的交易。 您無法在同時存取記憶體最佳化資料表的相同交易或相同查詢中存取另一個資料庫。 您無法輕鬆地從某一個資料庫的資料表中，將資料複製到另一個資料庫中的記憶體最佳化資料表。  

@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b788c94a1f27cced3e57b8f7941eb92edd61a2f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9caf64a88652323e710385f177852ee8e2b25146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065514"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>前置處理結構描述以合併包含的結構描述
   W3C XSD **include** 元素提供結構描述模組化的支援，在模組化中可以將 XML 結構描述分割成一個以上的實體檔案。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前不支援這個元素。 伺服器將會拒絕包含此元素的 XML 結構描述。  
   
- 可預先處理作為解決方案且包含 \<xsd:include> 指示詞的 XML 結構描述，以便將任何包含結構描述的內容複製和合併成單一結構描述，以利上傳至伺服器。 下列 C#  程式碼可用以預先處理。 在程式碼開始部份的註解提供如何使用它的資訊。  
+ 作為解決方案，包含指示詞的 XML 架構 \<xsd:include> 可進行前置處理，以便將任何內含架構的內容複寫和合併成單一架構，以上傳至伺服器。 下列 C#  程式碼可用以預先處理。 在程式碼開始部份的註解提供如何使用它的資訊。  
   
 ```  
 // XSD Schema Include Normalizer  

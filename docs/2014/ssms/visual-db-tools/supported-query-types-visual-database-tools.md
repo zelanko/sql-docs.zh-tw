@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 752467d058a6618ccfa44d7e2f75ac33b632878e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b00b7018fc6d0b631696811bd1870e09842b4162
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204655"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994578"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>支援的查詢類型 (Visual Database Tools)
   在 [查詢和檢視表設計工具](visual-database-tools.md)的 [圖表] 和 [準則] 窗格 (圖形窗格) 中，您可以建立下列查詢類型：  

@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: ef81b658-8eb5-4636-ac81-eead10cc7b9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 41e0ca3ee7ccaa7bb57e5667092c0660e35c4c52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18afc2a57f4e86417f4228baa459117f1dc7f7a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808675"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934589"
 ---
 # <a name="connect-to-server-reporting-services"></a>連接到伺服器 (Reporting Services)
   連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時，使用此對話方塊來檢視或指定選項。  
   
 ## <a name="options"></a>選項。  
  **伺服器類型**  
- 從**物件總管**註冊伺服器時，請選取要連接的伺服器類型： [!INCLUDE[ssDE](../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從 [**已註冊的伺服器**] 註冊伺服器時，[**伺服器類型**] 方塊是唯讀的，而且會與 [**已註冊的伺服器**] 元件中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請[!INCLUDE[ssDE](../includes/ssde-md.md)]從 [**已註冊的伺服器**] 工具列中選取、Analysis Services、Reporting Services 或 Integration Services，然後再開始註冊新的伺服器。  
+ 從**物件總管**註冊伺服器時，請選取要連接的伺服器類型： [!INCLUDE[ssDE](../includes/ssde-md.md)] 、Analysis Services、Reporting Services 或 Integration Services。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從 [**已註冊的伺服器**] 註冊伺服器時，[**伺服器類型**] 方塊是唯讀的，而且會與 [**已註冊的伺服器**] 元件中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請 [!INCLUDE[ssDE](../includes/ssde-md.md)] 從 [**已註冊的伺服器**] 工具列中選取、Analysis Services、Reporting Services 或 Integration Services，然後再開始註冊新的伺服器。  
   
  **伺服器名稱**  
  您要連接之報表伺服器執行個體的伺服器模式會決定您必須輸入的值。  
   
- 若為以原生模式執行的報表伺服器，請指定要連接的報表伺服器執行個體。 如果您正使用預設執行個體，此伺服器名稱通常就是電腦的名稱。 如果您安裝了已命名的實例，請使用下列格式將實例名稱附加到伺服器\<名稱： \\ servername>\><InstanceName。 Reporting Services 會使用反斜線字元來分隔執行個體名稱。  
+ 若為以原生模式執行的報表伺服器，請指定要連接的報表伺服器執行個體。 如果您正使用預設執行個體，此伺服器名稱通常就是電腦的名稱。 如果您安裝了已命名的實例，請使用下列格式將實例名稱附加到伺服器名稱： \<servername> \\<InstanceName \> 。 Reporting Services 會使用反斜線字元來分隔執行個體名稱。  
   
  若為以 SharePoint 整合模式執行的報表伺服器，您就必須指定 SharePoint 網站。 您可以在網站集合中指定與 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]整合的任何網站。 您所提供的 URL 必須包含 HTTP 或 HTTPS 前置詞。 您必須擁有存取 SharePoint 網站的權限，才能在 Management Studio 中連接至此網站。 您被指派的權限等級將會決定您可以檢視和管理的項目。 如需詳細資訊，請參閱 [Connect to a Report Server in Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) (連線至 Management Studio 中的報表伺服器)。  
   

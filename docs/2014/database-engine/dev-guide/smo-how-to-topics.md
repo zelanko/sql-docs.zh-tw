@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 201c83af-47b3-413a-8909-3c7cc5142be5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b100c23c1600a9c5fe4af9a39e16f8bd861656f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f4e5101ee7de5b765e9a56c0bb609928bb62971
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781932"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933359"
 ---
 # <a name="smo-how-to-topics"></a>SMO 的使用說明主題
   SMO 的如何主題提供了有關如何設定 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 程式設計環境在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 或 C# 中建立程式的資訊。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4d780294ca82b8d8b577a62446f4d8bd8bb4b93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68fbb4a17de131c128b5b1bb7cfb35a33b9d0037
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811219"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935483"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>設定 user connections 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user connections [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **user connections** 選項會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上可同時連接的使用者數目上限。 實際允許的使用者連接數也取決於您所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，以及應用程式的限制或應用程式和硬體的限制而定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最多允許 32,767 個使用者連接。 因為 **user connections** 是動態的 (自我設定的) 選項，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會視需要自動調整最大使用者連接數，最多調整到允許的最大值。 例如，如果只有 10 個使用者登入，就配置 10 個使用者連線物件。 在大部分情況下，不需要變更這個選項的值。 預設值為 0，表示允許最大量 (32,767) 的使用者連接數。  

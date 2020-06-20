@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a9fafc9b-9963-4b59-97a0-3472158fa665
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cb31bae59d95b01279a9fa84e02cd22c8017ca14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 511e5f2e2caa934313ba96fb3dbc4cadddace968
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021744"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065747"
 ---
 # <a name="publication-database"></a>發行集資料庫
   發行集資料庫是在發行者上的資料庫，它是要被複寫之資料和資料庫物件的來源。 必須啟用用於複寫的每個發行集資料庫。 當 **系統管理員 (sysadmin)** 固定伺服器角色的成員執行下列各項動作時，會啟用資料庫：  

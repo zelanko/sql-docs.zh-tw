@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1d97a3b694eebb924f9e1ff228d4d38da4f45ec
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797882"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932914"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   有關使用適用於 Windows PowerShell 和指令程式之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者的資訊來源有幾個。 其中包括 Windows PowerShell 環境中可用的說明。  

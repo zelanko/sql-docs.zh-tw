@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5d6c941283f02fd83e873d51e300add886ba5d73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d5e30a0161202613ca4cab361733c1786c4ae90
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479927"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971745"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>建立版本旗標 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立要指派給版本的版本旗標。 此旗標可以指出使用者或訂閱系統應該使用的版本。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
@@ -39,7 +38,7 @@ ms.locfileid: "65479927"
   
 3.  在 **[管理版本旗標]** 頁面上，從 **[模型]** 欄位選取您要建立旗標的模型。  
   
-4.  按一下 **[新增]** 。  
+4.  按一下 [新增] 。  
   
 5.  在 **[名稱]** 方塊中，輸入名稱。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "65479927"
   
 7.  在 **[僅限認可的版本]** 欄位中，選取 **[True]** 表示旗標只能指派給狀態為 **[已認可]** 的版本。 選取 **[False]** 表示旗標可以指派給任何狀態的版本。  
   
-8.  按一下 **[儲存]** 。  
+8.  按一下 [檔案] 。  
   
 ## <a name="next-steps"></a>後續步驟  
   

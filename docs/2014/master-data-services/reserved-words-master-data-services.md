@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd1e5bcee01992607cf9bffca1a72dd99bd75fbe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482568"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960578"
 ---
 # <a name="reserved-words-master-data-services"></a>保留字 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您建立模型物件或成員時，無法使用某些字詞。 使用這些字詞可能會導致錯誤。  
@@ -34,7 +33,7 @@ ms.locfileid: "65482568"
   
 -   [屬性](#attributes)  
   
--   [成員](#members)  
+-   [屬於](#members)  
   
 ##  <a name="models"></a><a name="models"></a>機型  
  如果您建立一個名稱設定為 **Name**的模型，請勿選取 **[建立與模型同名的實體]** ，因為 **Name** 無法用於實體的名稱。  
@@ -49,7 +48,7 @@ ms.locfileid: "65482568"
   
 -   **識別碼**  
   
--   **錯誤碼**  
+-   **程式碼**  
   
 -   **名稱**  
   

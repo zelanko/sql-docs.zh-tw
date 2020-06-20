@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28437f0903459616a574e713c0f138e8bb459870
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934479"
 ---
 # <a name="cross-container-transactions"></a>跨容器交易
   跨容器交易是隱含或明確的使用者交易，其包含對原生編譯的預存程序或記憶體最佳化的資料表作業的呼叫。  
@@ -65,7 +64,7 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>個別作業的隔離語意  
  可序列化交易 T 會在完全隔離的情況下執行。 就像是其他每一筆交易在 T 開始之前已經認可，或者在 T 認可之後開始一樣。 當交易中有不同的作業具有不同隔離等級時，它會變得更複雜。  
   
- 中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的交易隔離等級的一般語義以及對鎖定的影響，會在[&#40;Transact-sql&#41;的設定交易隔離等級](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)中說明。  
+ 中的交易隔離等級的一般語義 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以及對鎖定的影響，會在[&#40;transact-sql&#41;的設定交易隔離等級](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)中說明。  
   
  如果是不同作業可能會有不同隔離等級的跨容器交易，您必須了解個別讀取作業的隔離語意。 寫入作業永遠都會隔離。 不同交易中的寫入無法影響彼此。  
   
@@ -135,7 +134,7 @@ commit
   
  如果符合下列其中一個條件，給定交易 T 的磁碟端會到達某個隔離等級 X：  
   
--   它會從 X 開始。也就是說，會話預設值是 X，因為您執行`SET TRANSACTION ISOLATION LEVEL`了，或者它是[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]預設值。  
+-   它會從 X 開始。也就是說，會話預設值是 X，因為您執行了 `SET TRANSACTION ISOLATION LEVEL` ，或者它是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設值。  
   
 -   在交易期間，使用 `SET TRANSACTION ISOLATION LEVEL` 將預設隔離等級變更為 X。  
   

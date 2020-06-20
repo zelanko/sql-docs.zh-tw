@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3017f5d0-ef53-4522-b42f-bdf637e7d75e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebcc6da18ebe6c1930888bb0d2bd36610a19e7e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807502"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934499"
 ---
 # <a name="create-history-and-status-reports"></a>建立記錄和狀態報表
   您可以在目前載入的方案中，建立一份記錄或檔案目前狀態的報表。 您也可以預覽報表，再將報表傳給印表機、檔案或 [剪貼簿]。 這些報表不是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 產生的。 相反地，報表是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 產生的。  
@@ -29,7 +28,7 @@ ms.locfileid: "62807502"
   
 2.  **在 [檔案**] 功能表上，指向 [原始檔**控制**]，然後按一下 [歷程**記錄**]。  
   
-3.  在 [檔案或專案> 的歷程**記錄** \<] 對話方塊中，按一下 [**報表**]。  
+3.  在 [歷程**記錄** \<File or Project> ] 對話方塊中，按一下 [**報表**]。  
   
 4.  在 [歷程**記錄報告**] 對話方塊中，選取適當的選項，然後按一下 **[確定]**。  
   

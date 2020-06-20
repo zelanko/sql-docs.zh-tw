@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d4f31448f9a8db6e516eff6b7cac079d9d46dfd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68c8b655dbec3380ddad64199735d1c5b052c30f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066159"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>刪除資料表對話方塊 (Visual Database Tools)
   這個對話方塊可以讓您指定想要刪除資料錄的資料表。 當您變更查詢類型為 DELETE 查詢時，如果 [圖表窗格] 顯示一個以上的資料表，就會出現這個對話方塊。  

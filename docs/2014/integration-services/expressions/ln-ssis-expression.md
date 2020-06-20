@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 521ed3f1c817f687bfbddc497f638ee4eed4a834
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45d91013c8da7f68c17af5d19e89a6f968cb0dbe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897545"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969278"
 ---
 # <a name="ln-ssis-expression"></a>LN (SSIS 運算式)
   傳回數值運算式的自然對數。  

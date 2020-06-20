@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e7912885-1c14-409b-9022-83ad4c36f3bd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2077b7b5f8ac84d95903a80a0a567cff119231e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c64dcfc42522b8252edb94237bd4acc7c246083
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065776"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051117"
 ---
 # <a name="localdb_error_not_installed"></a>LOCALDB_ERROR_NOT_INSTALLED
     
