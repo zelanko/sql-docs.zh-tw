@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96f7f6ca45483fcfeb4e403659399972d81cda54
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890754"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951438"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>步驟 1:複製第 5 課的封裝
   在這項工作中，您將為第 5 課所建立的 Lesson 5.dtsx 封裝建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 5 課封裝加入至專案中，然後改為複製該封裝。 在第 6 課其餘的課程中，您將使用這個新的副本。  
@@ -38,7 +37,7 @@ ms.locfileid: "62890754"
   
 7.  在 [屬性] 視窗中，將 Name 屬性更新為第 6 課。  
   
-8.  按一下 ID 屬性的方塊，然後按一下下拉箭號，再按一下\<[產生新的識別碼]>。  
+8.  依序按一下 ID 屬性的方塊、下拉箭頭及 [ \<Generate New ID>]。  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>若要加入已完成的第 5 課封裝  
   

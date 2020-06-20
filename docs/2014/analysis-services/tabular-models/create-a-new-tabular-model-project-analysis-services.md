@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ccb53d47b44ce70b8a84baa784decef74c8367fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c8f449eb21e53a22a1a8d8f2eaa1aa39cf58c99
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067625"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939849"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>建立新的表格式模型專案 (SSAS 表格式)
   此主題描述如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立一個新的空白表格式模型專案。 建立新的模型專案之後，您可以從資料來源匯入資料，以便開始撰寫模型專案。  

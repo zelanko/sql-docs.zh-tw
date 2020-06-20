@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75667beed815ef93cd071935ce7e5a24cf5b7166
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7c7338500b68c157d5b555e29cf3a88bea3513c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009291"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>xml 資料類型在 SQLXML 4.0 中的支援
   從開始 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用資料類型的 XML 類型資料 `xml` 。 本主題提供有關 SQLXML 4.0 如何識別 `xml` 資料類型之執行個體與實作其支援的資訊。  
@@ -26,7 +25,7 @@ ms.locfileid: "82702807"
 ## <a name="working-with-xml-data-types"></a>使用 xml 資料類型  
  為了解如何使用實作 `xml` 資料類型資料行之 SQL 資料表的詳細資訊，提供下列範例：  
   
-|工作|範例|主題|  
+|Task|範例|主題|  
 |----------|-------------|-----------|  
 |如何在 XML 檢視中對應與包含 `xml` 資料行|「將 XML 元素對應至 XML 資料類型資料行」|[XSD 元素和屬性對資料表和資料行的預設對應 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
 |如何使用 Updategrams 將資料插入 `xml` 資料行|「將資料插入至 XML 資料類型資料行」|[使用 XML Updategram 插入資料 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
@@ -34,7 +33,7 @@ ms.locfileid: "82702807"
   
 ## <a name="guidelines-and-limitations"></a>指導方針與限制  
   
--   ** \< xsd：任何>** 都無法對應至包含 `xml` 資料類型的資料行。 在 SQLXML 中針對此案例的支援會透過 `sql:overflow-field` 註解提供。 另一個因應措施為，對應 `xml` 資料類型欄位做為 `xsd:anyType` 的元素。 此因應措施會在上述資料表中參考之「將 XML 元素對應至 XML 資料類型資料行」範例中示範。  
+-   **\<xsd:any>** 無法對應至包含 `xml` 資料類型的資料行。 在 SQLXML 中針對此案例的支援會透過 `sql:overflow-field` 註解提供。 另一個因應措施為，對應 `xml` 資料類型欄位做為 `xsd:anyType` 的元素。 此因應措施會在上述資料表中參考之「將 XML 元素對應至 XML 資料類型資料行」範例中示範。  
   
 -   不支援 `xml` 資料類型資料行內容中的 XPath 查詢。  
   

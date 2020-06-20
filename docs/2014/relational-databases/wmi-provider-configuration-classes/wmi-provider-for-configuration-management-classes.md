@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b83388ff3be4c8cfdfec72968230f957358b1960
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b64042d7ee28d8e30b6823010b1612cf3ed2010
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63288417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061268"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>組態管理類別的 WMI 提供者
   組態管理的 Windows Management Instrumentation (WMI) 提供者提供了以下類別的功能：  

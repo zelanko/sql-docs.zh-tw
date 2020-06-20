@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33ea59dfce0dc29080d08792b662c5fd8293f56f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63070878"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000982"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>排序及群組查詢結果 (Visual Database Tools)
   可以建立一種查詢結果，其中各結果資料列對應至原始資料的完整資料列群組。  

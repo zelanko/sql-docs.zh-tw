@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7e9294de10be0df9ef470c75d0934e9f8787b55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62856138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047249"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>將資料行加入資料表 (Database Engine)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將新的資料行加入至資料表。  
@@ -78,7 +77,7 @@ ms.locfileid: "62856138"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  下列範例會將兩個資料行加入至 `dbo.doc_exa`資料表。 將下列範例複製並貼入查詢視窗中，然後按一下 [**執行**]  
+3.  下列範例會將兩個資料行加入至 `dbo.doc_exa`資料表。 將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**  
   
 ```  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  

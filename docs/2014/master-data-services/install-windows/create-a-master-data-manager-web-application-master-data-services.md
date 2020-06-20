@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 238cf52a52e53aa4ee2712e0bd6abf43a6c5e128
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 031bd9b88200ee129b7555baed5396aad8dd03ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479378"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971348"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>建立主資料管理員 Web 應用程式 (Master Data Services)
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式提供了一個介面，可讓使用者處理主資料並且讓管理員設定及管理 MDS。  
@@ -30,7 +29,7 @@ ms.locfileid: "65479378"
   
  建立 Web 應用程式之後，將它與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫產生關聯。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   如需主控此 Web 應用程式之電腦需求的資訊，請參閱 [Web 應用程式需求 &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "65479378"
   
 4.  在 **[建立網站]** 對話方塊中，指定新網站的資訊。 如需此對話方塊之使用者介面 (UI) 選項的詳細資訊，請參閱[建立網站對話方塊 &#40;Master Data Services 組態管理員&#41;](../create-website-dialog-box-master-data-services-configuration-manager.md)。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
   
 ## <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>在現有網站上建立主資料管理員 Web 應用程式  
  當您在現有網站上建立 Web 應用程式時，可以選擇 Web 應用程式的虛擬路徑及別名。 此 Web 應用程式會加入至新的應用程式集區。  
@@ -69,7 +68,7 @@ ms.locfileid: "65479378"
   
 5.  在 **[建立 Web 應用程式]** 對話方塊中，指定新 Web 應用程式的資訊。 如需此對話方塊之使用者介面 (UI) 選項的詳細資訊，請參閱[建立 Web 應用程式對話方塊 &#40;Master Data Services 組態管理員&#41;](../create-web-application-dialog-box-master-data-services-configuration-manager.md)。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 ## <a name="next-steps"></a>後續步驟  
   

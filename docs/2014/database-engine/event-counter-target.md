@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 342e08d1-dcca-4a71-ae64-cb61b55b85bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ddf153da7af2906fe7167c8cb2b77d9100d1154f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f540f39176ec638cdc9236b315e306ecebfdcb1b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064923"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933069"
 ---
 # <a name="event-counter-target"></a>事件計數器目標
   事件計數器目標會計算在擴充事件工作階段期間發生的所有事件。 您可以使用事件計數器目標來取得有關工作負載特性的資訊，而不會增加完整事件收集的負擔。 此目標沒有任何可自訂的參數。  

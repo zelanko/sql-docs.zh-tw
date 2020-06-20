@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10996e4e988970c8d4b4354bbe1f2532aa2f8829
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832574"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919379"
 ---
 # <a name="data-profiling-task-and-viewer"></a>資料分析工作和檢視器
   「資料分析」工作提供擷取、轉換和載入資料之處理內部的資料分析功能。 您可以使用「資料分析」工作來獲得下列好處：  

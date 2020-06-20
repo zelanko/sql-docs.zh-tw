@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c54dd8b57dc0b1e13b622110d3f4cf9f796610a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811078"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067626"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>選取 SQL Server Agent 服務的帳戶
   服務啟動帳戶會定義 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Agent 用來執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帳戶及其網路權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會以指定的使用者帳戶執行。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員選擇下列選項，藉此選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的帳戶：  
@@ -79,8 +78,8 @@ ms.locfileid: "68811078"
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 網域帳戶 (Windows Administrators 群組的成員)|支援|支援|支援|  
 |Windows 網域帳戶 (非管理)|支援<sup>1</sup>|支援<sup>1</sup>|支援<sup>1</sup>|  
 |網路服務帳戶 (NT AUTHORITY\NetworkService)|支援<sup>1、3、4</sup>|不支援|不支援|  
-|本機使用者帳戶 (非管理)|支援<sup>1</sup>|不受支援|不適用|  
-|本機系統帳戶 (NT AUTHORITY\System)|支援<sup>2</sup>|不受支援|支援<sup>2</sup>|  
+|本機使用者帳戶 (非管理)|支援<sup>1</sup>|不支援|不適用|  
+|本機系統帳戶 (NT AUTHORITY\System)|支援<sup>2</sup>|不支援|支援<sup>2</sup>|  
 |本機服務帳戶 (NT AUTHORITY\LocalService)|不支援|不支援|不支援|  
   
  <sup>1</sup>請參閱下面的限制1。  

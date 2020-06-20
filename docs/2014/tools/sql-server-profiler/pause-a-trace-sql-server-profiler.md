@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 432b9b0c-b5e7-47f3-a71b-310fb3bf2445
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4961b68d46f8e4f1627c28c05ab2efb609d9f90d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdc9dbbd01099b1d33787a72b0bd59b65cea722e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240480"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054336"
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>暫停追蹤 (SQL Server Profiler)
   暫停追蹤可避免進一步擷取事件資料，直到追蹤重新啟動為止。  

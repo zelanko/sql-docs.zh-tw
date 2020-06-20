@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 054707856c017877b868c1ad754fbaa3520a8c59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a20782e83422e6d8f7b6a550f23e57c6339b1a24
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66068020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940199"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>建議相關資料行 (資料採礦精靈)
   使用 **[建議相關資料行]** 頁面，即可檢視您在先前的精靈頁面中選取之 **[建議]** 功能的建議。 會根據輸入資料行與所選取 [可預測]**** 資料行的關聯，預先選取輸入資料行。 如果您接受此對話方塊中的變更，這些變更就會反映在 **[指定培訓資料]** 頁面上。  
@@ -28,7 +27,7 @@ ms.locfileid: "66068020"
  **資料行名稱**  
  顯示您在精靈的 [指定培訓資料]**** 頁面上定義的輸入資料行。  
   
- **分數**  
+ **Score**  
  顯示資料行與先前所選取 [可預測]**** 資料行之間的關聯性。  
   
  **輸入**  

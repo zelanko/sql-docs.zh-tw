@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 12d68b8494fee4400c0a8e9ec043f0972ba2de5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef2176d4916e8affbb9ef89c9b26499289c520ce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783356"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045993"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>檢視叢集仲裁 NodeWeight 設定
   本主題說明如何檢視 Windows Server 容錯移轉叢集 (WSFC) 叢集中每個成員節點的 NodeWeight 設定。 在仲裁投票期間，使用 NodeWeight 設定來支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的災害復原和多重子網路案例。  

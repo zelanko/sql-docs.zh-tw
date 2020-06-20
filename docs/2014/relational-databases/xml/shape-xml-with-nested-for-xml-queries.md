@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3b60b0cfdf37758f8250e3de1840a2fa950ae28d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 16614a3ab0cc3b60bc53e594d5461eebeb403be3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702477"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046585"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>使用巢狀 FOR XML 查詢組成 XML
   以下範例會查詢 `Production.Product` 資料表，以擷取特定產品的 `ListPrice` 及 `StandardCost` 值。 兩個價格都會以 <`Price`> 元素傳回，而且每個 <`Price`> 元素都有一個 `PriceType` 屬性，使查詢值得關注。  

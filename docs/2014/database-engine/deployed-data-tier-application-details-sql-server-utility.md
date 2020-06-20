@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c66359dde77a8dcaceca26304df9ac5b32d5339b
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 40d0ad53de3589f5dc23e587427f001dbdb808b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858684"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933829"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>部署的資料層應用程式詳細資料 (SQL Server 公用程式)
   公用程式總管之 [部署的資料層應用程式] 檢視中的資訊提供了個別資料層應用程式的使用量資料、CPU 使用量歷程記錄、檔案層級的儲存使用量詳細資料，以及檢視和更新原則臨界值的功能。 原則臨界值可以針對 CPU 使用量及資料庫的資料檔案和記錄檔，於資料層應用程式層級進行控制。 您也可以針對個別的資料層應用程式來檢視屬性詳細資料。  

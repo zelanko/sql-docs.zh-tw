@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 38b04dc1e7cf9d6bcb6a098faaffd4d53fb1fac3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a68ba77473775aecb0cc73e0c4415fed0e5835d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481094"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937399"
 ---
 # <a name="set-domain-properties"></a>設定定義域屬性
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中設定定義域屬性。  

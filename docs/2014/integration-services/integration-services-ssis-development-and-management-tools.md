@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7c8f05c1b822cc3cad81ed910b71cb46621554eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef53f08f457d9122b1ab965d0269717379779335
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892415"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965424"
 ---
 # <a name="integration-services-ssis-and-studio-environments"></a>Integration Services (SSIS) 和 Studio 環境
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含兩個可搭配 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]使用的 Studio：  

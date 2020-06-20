@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4685dc65c860776143f25f4299a62427adfcb31f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067663"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939882"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>連接到表格式模型資料庫 (SSAS)
   建置表格式模型，並將其部署到 Analysis Services 表格式模式伺服器之後，您需要設定權限，使其可供用戶端應用程式使用。 此主題說明如何設定權限和如何從用戶端應用程式連接到資料庫。  
@@ -31,7 +30,7 @@ ms.locfileid: "66067663"
   
  [從 Excel 或 SharePoint 連接](#bkmk_excelconn)  
   
- [連接問題的疑難排解](#bkmk_Tshoot)  
+ [疑難排解連接問題](#bkmk_Tshoot)  
   
 ##  <a name="user-permissions-on-the-database"></a><a name="bkmk_userpermissions"></a>資料庫的使用者權限  
  連接到在表格式資料庫的使用者必須擁有指定讀取權限的資料庫角色成員資格。  
@@ -81,11 +80,11 @@ ms.locfileid: "66067663"
   
 2.  選取 [從 Analysis Services]****。  
   
-3.  在 [伺服器名稱]**** 中，指定裝載資料庫的 Analysis Services 執行個體。 伺服器名稱通常是執行伺服器軟體之電腦的名稱。 如果伺服器安裝為已命名的實例，您必須以下列格式指定名稱： \<servername>\\<instancename。\>  
+3.  在 [伺服器名稱]**** 中，指定裝載資料庫的 Analysis Services 執行個體。 伺服器名稱通常是執行伺服器軟體之電腦的名稱。 如果伺服器已安裝為已命名的實例，您必須以下列格式指定名稱： \<servername> \\<instancename \> 。  
   
      您必須針對獨立的表格式部署設定伺服器執行個體，而且伺服器執行個體必須有允許存取的輸入規則。 如需詳細資訊，請參閱 [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) 和 [設定 Windows 防火牆以允許 Analysis Services 存取](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-4.  對於登入認證，如果您有資料庫的讀取權限，請選擇 [使用 Windows 驗證]****。 否則，請選擇 [使用下列的使用者名稱和密碼]****，然後輸入具有資料庫權限之 Windows 帳戶的使用者名稱和密碼。 按 [下一步]  。  
+4.  對於登入認證，如果您有資料庫的讀取權限，請選擇 [使用 Windows 驗證]****。 否則，請選擇 [使用下列的使用者名稱和密碼]****，然後輸入具有資料庫權限之 Windows 帳戶的使用者名稱和密碼。 按 [下一步] 。  
   
 5.  選取資料庫。 有效的選項將會針對資料庫顯示一個 [模型]**** Cube。 按 [下一步]****，然後按一下 [完成]****。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66067663"
   
  匯入資料時，如果您嘗試使用此精靈連接到遠端 Analysis Services 伺服器上的表格式模型資料庫，而且您沒有足夠的權限，就會發生這個 Microsoft Excel 錯誤。 若要解決這個錯誤，您必須擁有資料庫的使用者存取權限。 如需授與使用者對資料的存取權，請參閱本主題稍早所提供的指示。  
   
- **嘗試建立與外部資料源的連接時發生錯誤。下列連接無法重新整理： \<模型名稱> 沙箱**  
+ **嘗試建立與外部資料源的連接時發生錯誤。下列連接無法重新整理： \<model name> 沙箱**  
   
  在 SharePoint 上，當您嘗試使用模型資料之樞紐分析表中的資料互動 (如篩選資料) 時，就會發生這個 Microsoft Excel 錯誤。 此錯誤的發生，是因為您在遠端 Analysis Services 伺服器上沒有足夠的權限。 若要解決這個錯誤，您必須擁有資料庫的使用者存取權限。 如需授與使用者對資料的存取權，請參閱本主題稍早所提供的指示。  
   

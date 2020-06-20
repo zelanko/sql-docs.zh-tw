@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 12fc3e7e7b67b9f02f2a9744d4af2af175ce0812
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fcdca4d57b21855a959a876c0c9c9344487046b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022670"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060672"
 ---
 # <a name="new-agent-profile"></a>新增代理程式設定檔
-  使用 **[新增代理程式設定檔]** 對話方塊，即可建立新的設定檔。 新的設定檔一律會以現有設定檔為基礎，但是還可以進行修改來滿足應用程式的需求。 建立了設定檔之後，即可套用到 **[代理程式設定檔]** 對話方塊中之現有及未來的代理程式作業。 代理程式參數值可以在 [\<AgentProfileName> 屬性]  對話方塊中進行編輯。  
+  使用 **[新增代理程式設定檔]** 對話方塊，即可建立新的設定檔。 新的設定檔一律會以現有設定檔為基礎，但是還可以進行修改來滿足應用程式的需求。 建立了設定檔之後，即可套用到 **[代理程式設定檔]** 對話方塊中之現有及未來的代理程式作業。 您可以在 [屬性] 對話方塊中編輯代理程式參數值 \<**AgentProfileName> 。  
   
 ## <a name="options"></a>選項。  
  **名稱**  

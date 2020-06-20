@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 55e89850c3b3f19c30a4943f5d787407da7e3c88
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 721ebe6d235e1a8001403d4fb9bb993dba86dd13
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000733"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929960"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>選項 (文字編輯器 - 所有語言 - 一般頁面)
   使用這個對話方塊可設定 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，全部五個編輯器的一般編輯選項。 若要顯示這些選項，請按一下 [工具]**** 功能表上的 [選項]****。 選取 [文字編輯器]**** 資料夾，展開 [所有語言]**** 資料夾，然後按一下 [一般]****。  

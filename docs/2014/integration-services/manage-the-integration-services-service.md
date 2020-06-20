@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc3b1eb4e73b3d77b49cc9f485e0a6fc456a8875
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: baa716eec75925c97f987656d11e39ba947918d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057784"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951358"
 ---
 # <a name="manage-the-integration-services-service"></a>管理 Integration Services 服務
     
@@ -28,7 +27,7 @@ ms.locfileid: "66057784"
  當安裝 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]元件時，也會安裝 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務。 根據預設， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會啟動，而且服務的啟動類型會設為自動。 不過，您也必須安裝 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 才能使用此服務來管理已儲存和執行中的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
 > [!NOTE]  
->  您[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]無法從[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]版本的[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]連接至服務的實例。 也就是說，在 **[連接到伺服器]** 對話方塊中，您無法輸入只有執行 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 版本之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的伺服器名稱。 不過，您可以從 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 版本的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 編輯此服務的組態檔，進而管理儲存在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]執行個體中的封裝。 如需詳細資訊，請參閱 [設定 Integration Services 服務 &#40;SSIS 服務&#41;](service/integration-services-service-ssis-service.md)回溯相容。  
+>  您無法 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 從版本的連接至服務的實例 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 。 也就是說，在 **[連接到伺服器]** 對話方塊中，您無法輸入只有執行 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 版本之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的伺服器名稱。 不過，您可以從 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 版本的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 編輯此服務的組態檔，進而管理儲存在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]執行個體中的封裝。 如需詳細資訊，請參閱 [設定 Integration Services 服務 &#40;SSIS 服務&#41;](service/integration-services-service-ssis-service.md)回溯相容。  
   
  您在一部電腦上只能安裝單一 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的執行個體。 此服務並非特定 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體特有的。 您可以使用執行服務所在之電腦的名稱來連接至服務。  
   

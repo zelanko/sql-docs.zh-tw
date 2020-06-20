@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 230bd4d840c3d59dc1267dd6801754b68386cb32
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033620"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009258"
 ---
 # <a name="create-statistics"></a>建立統計資料
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對資料表或索引檢視表的一個或多個資料行建立查詢最佳化統計資料。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計畫的必要統計資料。不過，在少數情況下，您必須建立其他統計資料。  

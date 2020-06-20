@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89f962ead45c4c0670cd5adfb5da0be9373c4097
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: edd9853a68fd86481e32cfa9dee69b0be8b577a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858933"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930917"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>受管理的執行個體詳細資料 (SQL Server 公用程式)
   公用程式總管之 Managed 執行個體檢視中的資訊提供了個別 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的使用量資料、CPU 使用量歷程記錄、檔案層級的儲存使用量詳細資料，以及檢視和更新原則臨界值的功能。 原則臨界值可以針對電腦及資料庫檔案和記錄檔在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體層級控制，也可以在存放磁碟區的層級控制。 您也可以針對個別的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Managed 執行個體檢視屬性詳細資料。  

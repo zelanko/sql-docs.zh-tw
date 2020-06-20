@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8179e5caddbd104fdf35598b7ea25e0f32fd9e84
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056939"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964908"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>封裝組態精靈 UI 參考
   使用 **[封裝組態精靈]** ，即可建立在執行階段更新 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝及其物件之屬性的組態。 當您在 **[封裝組態組合管理]** 對話方塊中加入新的組態或修改現有的組態時，這個精靈便會執行 若要開啟 **[封裝組態組合管理]** 對話方塊，請在 **中選取** [SSIS] **功能表上的** [封裝組態] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 如需詳細資訊，請參閱 [建立封裝組態](../../2014/integration-services/create-package-configurations.md)。  
@@ -88,7 +87,7 @@ ms.locfileid: "66056939"
   
 |值|描述|  
 |-----------|-----------------|  
-|**登錄專案**|輸入包含組態資訊的登錄機碼。 格式為 \<登錄機碼>。<br /><br /> 登錄機碼必須已經存在於 HKEY_CURRENT_USER 中且具有名為 Value 的值。 該值可以是 DWORD 或字串。<br /><br /> 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式來識別該機碼。|  
+|**登錄專案**|輸入包含組態資訊的登錄機碼。 格式為 \<registry key>。<br /><br /> 登錄機碼必須已經存在於 HKEY_CURRENT_USER 中且具有名為 Value 的值。 該值可以是 DWORD 或字串。<br /><br /> 如果您想要使用登錄機碼，而不是 HKEY_CURRENT_USER 的根目錄，請使用格式 \<Registry key\registry key\\...> 來識別金鑰。|  
   
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
@@ -118,7 +117,7 @@ ms.locfileid: "66056939"
   
 |值|描述|  
 |-----------|-----------------|  
-|**Connection**|請從清單中選取連接，或按一下 **[新增]** 即可建立新的連接。|  
+|**[連接]**|請從清單中選取連接，或按一下 **[新增]** 即可建立新的連接。|  
 |**組態資料表**|選取現有的資料表，或按一下 **[新增]** ，即可撰寫建立新資料表的 SQL 陳述式。|  
 |**組態篩選**|選取現有的組態名稱或鍵入新的名稱。<br /><br /> 許多 SQL Server 組態可儲存在相同的資料表中，且每個組態都可包括多個組態項目。<br /><br /> 這個使用者自訂值是儲存在資料表中，以識別特定組態所屬的組態項目。|  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea88d736-849e-4368-b55d-06aeee097bf3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22fae65a5e62be579f751dd3d6d3d0c9a73e7409
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1ba568309bcea7f760d2f4c7f7a691048a4bf84
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067311"
 ---
 # <a name="script-a-table"></a>編寫資料表的指令碼
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以建立指令碼來選取、插入、更新和刪除資料表，以及建立、變更、卸除或執行預存程序。  

@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 22eeb621cb9c4ccdf0d853ff9d6d528c156c15a0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5acc2081212b0b732305949234e5f5d5ae73fa63
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706929"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926859"
 ---
 # <a name="getting-sql-server-assistance"></a>取得 SQL Server 協助
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 提供三個有關 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要資訊來源：  

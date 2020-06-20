@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 989e4b1b538144a1ead50cc3e28c64e0ae6e32c0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900557"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939559"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊群組轉換
   「模糊群組」轉換會透過識別可能重複的資料列並選取用於標準化資料的標準資料列，執行資料清除工作。  
@@ -69,7 +68,7 @@ ms.locfileid: "62900557"
  此轉換有一個輸入和一個輸出。 它不支援錯誤輸出。  
   
 ## <a name="row-comparison"></a>資料列比較  
- 設定模糊群組轉換時，您可以指定轉換在比較轉換輸入中的資料列時所使用的比較演算法。 如果您將 [詳盡] 屬性`true`設為，則轉換會比較輸入中的每個資料列與輸入中的每個其他資料列。 此比較演算法可產生更精確的結果，但很可能會讓轉換的執行速度更慢，除非輸入中的資料列數目較小。 為避免效能問題，建議您只在封裝開發期間將詳盡`true`的屬性設定為。  
+ 設定模糊群組轉換時，您可以指定轉換在比較轉換輸入中的資料列時所使用的比較演算法。 如果您將 [詳盡] 屬性設為 `true` ，則轉換會比較輸入中的每個資料列與輸入中的每個其他資料列。 此比較演算法可產生更精確的結果，但很可能會讓轉換的執行速度更慢，除非輸入中的資料列數目較小。 為避免效能問題，建議您 `true` 只在封裝開發期間將詳盡的屬性設定為。  
   
 ## <a name="temporary-tables-and-indexes"></a>暫存資料表和索引  
  在執行階段，「模糊群組」轉換會在轉換連接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中建立暫存物件，例如資料表和索引 (它們的大小可能相當大)。 資料表和索引的大小與轉換輸入中的資料列數目和「模糊群組」轉換所建立的 Token 數目成正比。  

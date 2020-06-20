@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d374e5c8-ed35-43bf-8dd6-c37e38d9b5f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9345a02d446d8a4b7b82e9652444a08f68641f87
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f51f031bec05715e0345507278113f4f16179a77
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706074"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022346"
 ---
 # <a name="sqlfreehandle"></a>SQLFreeHandle
   在手動認可模式中，使用開啟的交易在語句控制碼上呼叫**SQLFreeHandle** ，會導致資料庫的暫止變更回復。 在語句控制碼上呼叫**SQLFreeHandle**一律會關閉任何開啟的資料指標，並捨棄暫止的結果，釋放與語句控制碼相關聯的所有資源。  

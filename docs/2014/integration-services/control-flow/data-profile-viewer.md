@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0f6bcad3636178fb4aebbcdbeee29ba2542f092e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3bcd42d1ca3c502f8dd04475356ce0f13d0b7c5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832413"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919319"
 ---
 # <a name="data-profile-viewer"></a>資料設定檔檢視器
   檢視和分析資料設定檔是資料分析程序中的下一個步驟。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部執行「資料分析」工作並計算資料設定檔後，檢視這些設定檔。 如需如何設定和執行「資料分析」工作的詳細資訊，請參閱 [資料分析工作的設定](data-profiling-task.md)。  
@@ -29,9 +28,9 @@ ms.locfileid: "62832413"
 ## <a name="data-profiles"></a>資料設定檔  
  若要檢視資料設定檔，您可以設定「資料分析」工作，將其輸出傳送到檔案，然後使用獨立的「資料設定檔檢視器」即可。 若要開啟資料設定檔檢視器，請執行下列其中一項操作。  
   
--   以滑鼠右鍵按一下  **設計師中的 [資料分析]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工作，然後按一下 [編輯]  。 在 [資料分析工作編輯器]  的 [一般]  頁面上按一下 [開啟設定檔檢視器]  。  
+-   以滑鼠右鍵按一下 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的 [資料分析] 工作，然後按一下 [編輯]。 在 [資料分析工作編輯器] 的 [一般] 頁面上按一下 [開啟設定檔檢視器]。  
   
--   在 *磁碟機>\<* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中，執行 DataProfileViewer.exe。  
+-   在資料夾中， *\<drive>* ： \Program Files （x86） |Program Files\Microsoft SQL Server\110\DTS\Binn，執行 DataProfileViewer.exe。  
   
  此檢視器可使用多個窗格，顯示您所要求與計算之結果的設定檔以及選擇性的詳細資料與向下鑽研能力：  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 991223c373113b465c3182f552e5f5d157efef9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9544f7ae00d3a0eda732b43e9485cafa23536ed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831600"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918956"
 ---
 # <a name="for-loop-container"></a>For 迴圈容器
   「For 迴圈」容器定義封裝中重複的控制流程。 迴圈實作與程式設計語言中 **For** 迴圈的結構類似。 在每次迴圈重複中，「For 迴圈」容器都會評估運算式並重複其工作流程，直到運算式評估為 `False` 為止。  
@@ -40,7 +39,7 @@ ms.locfileid: "62831600"
   
  運算式必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式。  
   
- 若要建立初始化和指派運算式，可使用指派運算子 (=)。 除了「For 迴圈」容器中的初始化和指派運算式類型可使用此運算子外，Integration Services 運算式文法不另外支援此運算子。 任何使用指派運算子的運算式都必須使用此語法 `@Var = <expression>`，其中 **Var** 是執行階段變數，而 \<運算式> 是遵循 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 運算式語法規則的運算式。 運算式可包含變數、常值，以及任何 SSIS 運算式文法支援的運算子和函數。 運算式必須評估為可轉換成變數資料類型的資料類型。  
+ 若要建立初始化和指派運算式，可使用指派運算子 (=)。 除了「For 迴圈」容器中的初始化和指派運算式類型可使用此運算子外，Integration Services 運算式文法不另外支援此運算子。 任何使用指派運算子的運算式都必須具有語法 `@Var = <expression>` ，其中**Var**是執行時間變數，而 \<expression> 則是遵循運算式語法規則的運算式 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 。 運算式可包含變數、常值，以及任何 SSIS 運算式文法支援的運算子和函數。 運算式必須評估為可轉換成變數資料類型的資料類型。  
   
  「For 迴圈」容器只能有一個評估運算式。 這表示「For 迴圈」容器執行其所有控制流程元素的次數皆相同。 由於「For 迴圈」容器可包含其他「For 迴圈」容器，因此您可以在封裝中建立巢狀迴圈並實作複雜的迴圈。  
   

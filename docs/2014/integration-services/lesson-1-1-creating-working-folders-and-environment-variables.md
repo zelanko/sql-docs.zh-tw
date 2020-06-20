@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25700bfb9e2cd28fd18efe59a2df4e68f468d39b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767650"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965351"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>步驟 1:建立工作資料夾和環境變數
   在這項工作中，您將建立工作資料夾 (C:\DeploymentTutorial) 和新的系統環境變數 (`DataTransfer` 與 `LoadXMLData`)，並稍後在教學課程工作中使用。  
@@ -36,7 +35,7 @@ ms.locfileid: "62767650"
   
 3.  在 [檔案]  功能表上，指向 [新增]  ，然後按一下 [資料夾]  。  
   
-4.  將新資料夾重新`DeploymentTutorial`命名為。  
+4.  將新資料夾重新命名為 `DeploymentTutorial` 。  
   
 ### <a name="to-create-local-environment-variables"></a>建立基本環境變數  
   
@@ -48,11 +47,11 @@ ms.locfileid: "62767650"
   
 4.  在 [環境變數]  對話方塊的 [系統變數]  框架中，按一下 [新增]  。  
   
-5.  在 [**新增系統變數**] 對話方塊中， `DataTransfer`于 [變數**名稱**] 方塊和`C:\DeploymentTutorial\datatransferconfig.dtsconfig` [**變數值**] 方塊中輸入。  
+5.  在 [**新增系統變數**] 對話方塊中，于 [變數 `DataTransfer` **名稱**] 方塊和 `C:\DeploymentTutorial\datatransferconfig.dtsconfig` [**變數值**] 方塊中輸入。  
   
 6.  按一下 [確定]  。  
   
-7.  再次按一下 [**新增**]， `LoadXMLData`然後在 [變數**名稱**] 方塊`C:\DeploymentTutorial\loadxmldataconfig.dtsconfig`和 [**變數值**] 方塊中輸入。  
+7.  再次按一下 [**新增**]，然後在 `LoadXMLData` [變數**名稱**] 方塊和 `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` [**變數值**] 方塊中輸入。  
   
 8.  按一下 [確定]  ，結束 [環境變數]  對話方塊。  
   
@@ -70,11 +69,11 @@ ms.locfileid: "62767650"
   
 4.  在 [環境變數]  對話方塊的 [系統變數]  框架中，按一下 [新增]  。  
   
-5.  在 [**新增系統變數**] 對話方塊中， `DataTransfer`于 [變數**名稱**] 方塊和`C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` [**變數值**] 方塊中輸入。  
+5.  在 [**新增系統變數**] 對話方塊中，于 [變數 `DataTransfer` **名稱**] 方塊和 `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` [**變數值**] 方塊中輸入。  
   
 6.  按一下 [確定]  。  
   
-7.  再次按一下 [**新增**]， `LoadXMLData`然後在 [變數**名稱**] 方塊`C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig`和 [**變數值**] 方塊中輸入。  
+7.  再次按一下 [**新增**]，然後在 `LoadXMLData` [變數**名稱**] 方塊和 `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` [**變數值**] 方塊中輸入。  
   
 8.  按一下 [確定]  ，結束 [環境變數]  對話方塊。  
   

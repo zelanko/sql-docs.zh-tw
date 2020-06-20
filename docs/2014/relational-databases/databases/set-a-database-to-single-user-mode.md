@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ea6e37603ae997c218db196c14fe7831bef95e81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16281b5fa7d4f6698bb6c498915bfa84779b3e14
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871228"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965749"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>將資料庫設定為單一使用者模式
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將使用者定義資料庫設定為單一使用者模式。 單一使用者模式指定一次只可有一位使用者存取資料庫，且一般是用於維護動作。  

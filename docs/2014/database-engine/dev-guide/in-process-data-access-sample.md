@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5d44c980c7535b05d462d55e6f2aa1e87bf68c98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14b729156409fcf57b39c4bdefce95d3aa3eafcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637746"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933539"
 ---
 # <a name="in-process-data-access-sample"></a>同處理序資料存取範例
   `InProcessDataAccess` 範例包含許多簡單的函數，這些函數會示範 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 同處理序資料存取提供者的各種功能。  
@@ -52,7 +51,7 @@ ms.locfileid: "73637746"
   
 -   AdventureWorks 資料庫必須安裝在您所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。  
   
--   如果您不是所使用之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的系統管理員，則必須讓系統管理員授與您**CreateAssembly**許可權，才能完成安裝。  
+-   如果您不是所使用之實例的系統管理員 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須讓系統管理員授與您**CreateAssembly**許可權，才能完成安裝。  
   
 ## <a name="building-the-sample"></a>建立範例  
   
@@ -355,7 +354,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)] （`test.sql`）會執行此範例中定義的預存程式和函式，藉以測試範例。  
+ 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] （）會執行 `test.sql` 此範例中定義的預存程式和函式，藉以測試範例。  
   
 ```  
 USE AdventureWorks;  

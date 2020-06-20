@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 929624cf85f7146fa668632fa586a47caca743f0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965468"
 ---
 # <a name="inherited-transactions"></a>繼承的交易
   封裝可使用「執行封裝」工作執行另一個封裝。 子封裝 (亦即「執行封裝」工作所執行的封裝) 可建立其自己的封裝交易，也可以繼承父封裝交易。  

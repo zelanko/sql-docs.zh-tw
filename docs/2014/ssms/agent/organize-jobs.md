@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 53e0424f15818903e913fc41e4a5a4a3fdade41d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efe5e4ebed309c191cce5f498d5c9f80d146e7b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316545"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067684"
 ---
 # <a name="organize-jobs"></a>組織作業
   作業類別目錄可幫助您組織作業，以便於篩選與分組。 例如，您可以將所有的資料庫備份作業整理在資料庫維護類別中。 您也可以建立您自己的作業類別。  
@@ -30,7 +29,7 @@ ms.locfileid: "63316545"
   
 |||  
 |-|-|  
-|**描述**|**主題**|  
+|**說明**|**本文**|  
 |描述如何建立作業類別目錄。|[建立作業類別目錄](create-a-job-category.md)|  
 |描述如何刪除作業類別目錄。|[刪除作業類別目錄](delete-a-job-category.md)|  
 |描述如何將作業指派給作業類別目錄。|[將作業指派至作業類別目錄](assign-a-job-to-a-job-category.md)|  

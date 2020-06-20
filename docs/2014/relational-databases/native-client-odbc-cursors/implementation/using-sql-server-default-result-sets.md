@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe9ecf81abe12da2db3e7183fd517e01947c2942
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 18cd10dd95329f68a42497d2bea5ce63f345ceff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705637"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020848"
 ---
 # <a name="using-sql-server-default-result-sets"></a>使用 QL Server 預設結果集
   預設的 ODBC 資料指標屬性為：  

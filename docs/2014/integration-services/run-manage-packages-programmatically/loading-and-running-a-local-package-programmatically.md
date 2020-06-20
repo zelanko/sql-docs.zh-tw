@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08a644f9de2f406ecb0abfaa30bf1c9e646213f0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766890"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964500"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>以程式設計的方式載入和執行本機封裝
-  您可以使用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]執行套件[中所述的方法，視需要或是依預定的次數執行 ](../packages/run-integration-services-ssis-packages.md) 套件。 然而，只需要幾行的程式碼，您就可以從 Windows Form 應用程式、主控台應用程式、ASP.NET Web 表單或 Web 服務，或是 Windows 服務等自訂應用程式執行封裝。  
+  您可以使用[執行套件](../packages/run-integration-services-ssis-packages.md)中所述的方法，視需要或是依預定的次數執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。 然而，只需要幾行的程式碼，您就可以從 Windows Form 應用程式、主控台應用程式、ASP.NET Web 表單或 Web 服務，或是 Windows 服務等自訂應用程式執行封裝。  
   
  此主題會討論：  
   
@@ -59,12 +58,12 @@ ms.locfileid: "62766890"
   
 2.  在 [專案]  功能表上，按一下 [新增參考]  ，然後新增 **Microsoft.SqlServer.ManagedDTS.dll** 的參考。 按一下 [確定]  。  
   
-3.  請使用 Visual Basic `Imports`語句或 c # `using`語句來匯入**Microsoft. SqlServer. （運行**時間）命名空間。  
+3.  請使用 Visual Basic `Imports` 語句或 c # `using` 語句來匯入**Microsoft. SqlServer. （運行**時間）命名空間。  
   
 4.  在主常式中加入下列程式碼。 完成的主控台應用程式應類似下列範例。  
   
     > [!NOTE]  
-    >  範例程式碼會透過使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 方法示範從檔案系統載入封裝。 不過，您也可以呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 方法從 MSDB 資料庫載入封裝，或是呼叫 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 方法從 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 封裝存放區載入封裝。  
+    >  範例程式碼會透過使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 方法示範從檔案系統載入封裝。 不過，您也可以呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 方法從 MSDB 資料庫載入封裝，或是呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 方法從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝存放區載入封裝。  
   
 5.  執行專案。 範例程式碼會執行隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範例安裝的 CalculatedColumns 範例封裝。 封裝執行的結果會顯示在主控台視窗中。  
   

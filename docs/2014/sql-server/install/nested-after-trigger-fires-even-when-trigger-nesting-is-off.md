@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 94d72960-676e-40d9-81bc-08bffe778110
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0675c412d753a1ce60fa41c7ced40528b3c58f75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f91c04e8d69880b451c1479e2907cd1910e8f9c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093833"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042123"
 ---
 # <a name="nested-after-trigger-fires-even-when-trigger-nesting-is-off"></a>即使觸發程序巢狀結構是 OFF，也會引發巢狀 AFTER 觸發程序
   Upgrade Advisor 偵測到在一個或多個資料表上所定義的 INSTEAD OF 觸發程序內，有巢狀的 AFTER 觸發程序。 即使 `nested triggers` 伺服器組態選項設定為 0，巢狀 AFTER 觸發程序仍可能引發。  

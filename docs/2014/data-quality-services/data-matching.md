@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7226a7788fe672200676a2c439a12cd870596e11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21876490923901e2a7414489e6e270c47964d702
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175528"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937849"
 ---
 # <a name="data-matching"></a>資料比對
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 資料比對程序可讓您減少資料重複，並提高資料來源中的資料精確度。 比對會分析單一資料來源之所有記錄中的重複程度，傳回每一組比較之記錄之間相符的加權機率。 然後您可以決定哪些記錄相符，並針對來源資料採取適當的動作。

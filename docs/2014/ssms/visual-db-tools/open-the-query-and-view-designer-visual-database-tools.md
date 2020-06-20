@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1b729c5652258deb0780ec129592e1a0f14217c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0459679a9be1d124a7c9dfacaebe7f1a2e02d34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001204"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>開啟查詢和檢視表設計工具 (Visual Database Tools)
   在開啟檢視的定義、顯示查詢或檢視的結果，或者建立或開啟查詢時，[查詢和檢視設計師] 會開啟。 這包含四個個別的窗格：  

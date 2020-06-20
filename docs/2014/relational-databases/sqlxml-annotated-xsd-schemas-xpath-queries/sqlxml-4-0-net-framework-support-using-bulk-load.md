@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c84e6c6d9e35526f51f010ab27bbc9d46f83d508
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ef1bec93a1e0ce04c40f4333fa3450118da08df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717552"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060112"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>在 .NET 環境中使用 SQLXML 大量載入
   本主題說明如何在 .NET 環境中使用 XML 大量載入功能。 如需 XML 大量載入的詳細資訊，請參閱[執行 Xml 資料的大量載入 &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)。  
@@ -113,7 +112,7 @@ ms.locfileid: "82717552"
   
 6.  從 [**專案**] 功能表中，選取 [**加入參考**]。  
   
-7.  在 [ **COM** ] 索引標籤中，選取 [ **Microsoft SQLXML Bulkload 4.0 類型程式庫**（xblkld4.dll）]，然後按一下 **[確定]**。 您會看到在專案中建立的**SQLXMLBULKLOADLib**元件。  
+7.  在 [ **COM** ] 索引標籤中，選取 [ **Microsoft SQLXML Bulkload 4.0 型別程式庫**（xblkld4.dll）]，然後按一下 **[確定]**。 您會看到在專案中建立的**SQLXMLBULKLOADLib**元件。  
   
 8.  將 Main() 方法取代成下列程式碼。 將**ConnectionString**屬性和檔案路徑更新為架構和資料檔案。  
   

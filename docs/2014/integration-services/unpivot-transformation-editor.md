@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45430eea18d533855e00021f5fda46d80ac0e0c2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054843"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972648"
 ---
 # <a name="unpivot-transformation-editor"></a>取消樞紐轉換編輯器
   使用 **[取消樞紐轉換編輯器]** 對話方塊，即可選取要樞紐轉換為資料列的資料行，以及指定資料行和新的樞紐值輸出資料行。  

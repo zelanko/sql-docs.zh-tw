@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 544c7709-6de0-4c08-bda3-759985be9a05
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 30163b4d65ac6a732efb3f7c67a018f433a42ac0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4d3e00998aefefe228b0bf537fa34e25410695c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056451"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964528"
 ---
 # <a name="row-sampling-transformation-editor-sampling-page"></a>資料列取樣轉換編輯器 (取樣頁面)
   使用 **[資料列取樣轉換編輯器]** 對話方塊，即可將輸入的一部分分割為指定資料列數目的取樣。 這個轉換會將輸入分成兩個不同的輸出。  

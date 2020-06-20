@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cca14f144e442fbe75e41dec6ce652c4603863b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d0390447c63bcc66428b886595e8c27a795a89f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226168"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044888"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>將外部工具加入至工具功能表 (SQL Server Management Studio)
   您可以從 [!INCLUDE[msCoName](../includes/msconame-md.md)] 啟動任何 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 或 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 應用程式。 您也可以將外部應用程式新增至 [工具]  功能表，再從功能表上執行。  

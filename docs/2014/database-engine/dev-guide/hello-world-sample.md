@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac48f47b7455fd68245cec23c68132e4070835f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b6b8c303f056686efb5ba13b2924c9697fbd6e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637762"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933559"
 ---
 # <a name="hello-world-sample"></a>Hello World 範例
   這個 Hello World 範例會示範建立、部署和測試以簡單 Common Language Runtime (CLR) 整合為基礎的預存程序過程中所涉及的基本作業。 此範例還示範如何透過由預存程序動態建構及傳回至呼叫端的記錄來傳回資料。  
   
- `HelloWorld`預存程式會傳回字串 "Hello world！" 在包含一個資料列的結果集中。 這個範例會說明[SqlMetaData](https://go.microsoft.com/fwlink/?LinkID=193572)、 [SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573)和[microsoft](https://go.microsoft.com/fwlink/?LinkID=193571)的類別的一些用途，如下所示：. sql server。  
+ 預存程式會傳回 `HelloWorld` 字串 "Hello world！" 在包含一個資料列的結果集中。 這個範例會說明[SqlMetaData](https://go.microsoft.com/fwlink/?LinkID=193572)、 [SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573)和[microsoft](https://go.microsoft.com/fwlink/?LinkID=193571)的類別的一些用途，如下所示：. sql server。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  若要建立並執行這個專案，您必須安裝下列軟體：  
@@ -54,7 +53,7 @@ ms.locfileid: "73637762"
   
 -   AdventureWorks 資料庫必須安裝在您所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。  
   
--   如果您不是所使用之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的系統管理員，則必須讓系統管理員授與您**CreateAssembly**許可權，才能完成安裝。  
+-   如果您不是所使用之實例的系統管理員 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須讓系統管理員授與您**CreateAssembly**許可權，才能完成安裝。  
   
 ## <a name="building-the-sample"></a>建立範例  
   
@@ -78,7 +77,7 @@ ms.locfileid: "73637762"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  將[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令腳本複製到檔案中，並將`test.sql`它儲存成範例目錄中的。  
+7.  將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存成 `test.sql` 範例目錄中的。  
   
 8.  使用下列命令來執行測試指令碼  
   

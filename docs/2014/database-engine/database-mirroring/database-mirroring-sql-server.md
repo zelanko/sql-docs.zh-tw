@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe1221b1ff86b96490fb09a5785978dcc16ac40b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807893"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934289"
 ---
 # <a name="database-mirroring-sql-server"></a>資料庫鏡像 (SQL Server)
     
@@ -211,7 +210,7 @@ ms.locfileid: "62807893"
 > [!NOTE]  
 >  由於鏡像資料庫彼此獨立，因此資料庫不能當做群組來容錯移轉。  
   
-###  <a name="client-connections"></a><a name="ClientConnections"></a>用戶端連接  
+###  <a name="client-connections"></a><a name="ClientConnections"></a> 用戶端連接  
  資料庫鏡像工作階段的用戶端連接支援是由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供。 如需詳細資訊，請參閱本主題稍後的 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
 ###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a>暫停會話對主體交易記錄的影響  
@@ -233,7 +232,7 @@ ms.locfileid: "62807893"
   
 -   [複寫](database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="in-this-section"></a><a name="InThisSection"></a>本節內容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本節內容  
  [資料庫鏡像的必要條件、限制和建議事項](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  描述設定資料庫鏡像的必要條件和建議事項。  
   
@@ -276,7 +275,7 @@ ms.locfileid: "62807893"
   
 -   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
- **使用 Transact-sql**  
+ **使用 Transact-SQL**  
   
 -   [使用 Windows 驗證允許資料庫鏡像的網路存取 &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)  
   
@@ -313,7 +312,7 @@ ms.locfileid: "62807893"
   
 -   [移除資料庫鏡像 &#40;SQL Server&#41;](remove-database-mirroring-sql-server.md)  
   
- **Transact-SQL**  
+ **SQL Server Management Studio**  
   
 -   [新增或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d57984228e23143d2061df6bf447f978f9bd3c46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206575"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060908"
 ---
 # <a name="modify-a-partition-scheme"></a>修改資料分割配置
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來指定檔案群組以保存下一個要加入資料分割資料表的資料分割，藉此在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改資料分割配置。 作法是，將 NEXT USED 屬性指派給檔案群組。 NEXT USED 屬性可以指派給空的檔案群組或已保存資料分割的檔案群組。 換句話說，檔案群組可以保存一個以上的資料分割。  

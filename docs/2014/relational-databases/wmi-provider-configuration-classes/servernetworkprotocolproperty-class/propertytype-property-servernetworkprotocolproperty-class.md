@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4932eaf-da7c-4b09-8298-ffb6333dfba2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1f0c3536f8196a1ff0b31134f3818d3578b72635
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1321f66277c2a3658e6f43cfd3e4b5850f4503b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643731"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042892"
 ---
 # <a name="propertytype-property-servernetworkprotocolproperty-class"></a>PropertyType 屬性 (ServerNetworkProtocolProperty 類別)
   取得屬性的類型。  
@@ -37,8 +36,8 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
- 代表實例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上網路通訊協定之屬性的[ServerNetworkProtocolProperty 類別](servernetworkprotocolproperty-class.md)物件。  
+ *object*  
+ 代表實例上網路通訊協定之屬性的[ServerNetworkProtocolProperty 類別](servernetworkprotocolproperty-class.md)物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定屬性之類型的 `uint32` 值。  

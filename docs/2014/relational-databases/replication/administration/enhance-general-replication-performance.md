@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a85519a947e7d5d03f324b71984d2ffb40bcefe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187098"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043349"
 ---
 # <a name="enhance-general-replication-performance"></a>增強一般複寫效能
   透過使用本主題中所述的指導方針，您可以提升應用程式及網路上所有複寫類型的一般效能：  

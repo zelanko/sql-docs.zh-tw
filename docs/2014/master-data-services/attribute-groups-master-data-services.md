@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bacb199a87cd0d9e388b49b00cbc2e245571d2ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88ea7681ec3f7dfacfee77e05306eb60007eef4b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972198"
 ---
 # <a name="attribute-groups-master-data-services"></a>屬性群組 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，屬性群組有助於組織實體中的屬性。 當實體包含多個屬性時，屬性群組可改善實體在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中顯示的方式。  

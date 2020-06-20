@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 06ae01a097b164abb1b55267853ee99f7e5bf445
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b8aa5b83756df36b133a339ba99b13406251947
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483829"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971458"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>資料夾和檔案的權限 (Master Data Services)
-  當您安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]時，資料夾和檔案會安裝在檔案系統中針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共用功能所指定的安裝路徑。 如果您使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]共用功能的預設安裝路徑，的安裝路徑[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]為*drive*： \Program Files\Microsoft SQL Server\120\Master 資料服務。 雖然您可以變更共用功能的安裝路徑，但請注意繼承自父資料夾的權限以及為 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]明確設定的權限。  
+  當您安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]時，資料夾和檔案會安裝在檔案系統中針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共用功能所指定的安裝路徑。 如果您使用共用功能的預設安裝路徑 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，的安裝路徑為 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] *drive*： \Program Files\Microsoft SQL Server\120\Master 資料服務。 雖然您可以變更共用功能的安裝路徑，但請注意繼承自父資料夾的權限以及為 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]明確設定的權限。  
   
 ## <a name="inherited-permissions"></a>繼承的權限  
  **Microsoft SQL Server** 資料夾、 **Master Data Services** 資料夾，以及大部分子資料夾和檔案都會從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式中指定的父資料夾繼承權限。 如果您選擇預設安裝位置，則會從下列父資料夾繼承權限： *drive*:\Program Files。 下表描述 **Program Files**的預設權限。  
@@ -37,7 +36,7 @@ ms.locfileid: "65483829"
 |---------------------------|-----------------|  
 |CREATOR OWNER|特殊權限|  
 |系統|特殊權限|  
-|Administrators|特殊權限|  
+|系統管理員|特殊權限|  
 |使用者|讀取與執行、列出資料夾內容、讀取|  
 |TrustedInstaller|列出資料夾內容、特殊權限|  
   
@@ -49,7 +48,7 @@ ms.locfileid: "65483829"
 |群組或帳戶名稱|權限|  
 |---------------------------|-----------------|  
 |系統|修改、讀取與執行、列出資料夾內容、讀取、寫入|  
-|Administrators|修改、讀取與執行、列出資料夾內容、讀取、寫入|  
+|系統管理員|修改、讀取與執行、列出資料夾內容、讀取、寫入|  
 |MDS_ServiceAccounts|修改、讀取與執行、列出資料夾內容、讀取、寫入|  
   
 ###### <a name="webconfig-permissions"></a>Web.config 的權限  
@@ -57,7 +56,7 @@ ms.locfileid: "65483829"
 |群組或帳戶名稱|權限|  
 |---------------------------|-----------------|  
 |系統|完全控制、修改、讀取與執行、讀取、寫入|  
-|Administrators|完全控制、修改、讀取與執行、讀取、寫入|  
+|系統管理員|完全控制、修改、讀取與執行、讀取、寫入|  
 |MDS_ServiceAccounts|讀取與執行、讀取|  
   
  如需 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config 檔案內容的詳細資訊，請參閱 [Web 組態參考 &#40;Master Data Services&#41;](web-configuration-reference-master-data-services.md)。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 28203de42b3cdb4a033ce222c747df3e80da96f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91443fbb12714bd7d4e1048924b10207de2acb47
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63224496"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067213"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>在 OR 具有優先權時結合條件 (Visual Database Tools)
   若要使用 OR 來連結條件，並使其優先權超越使用 AND 連結的條件，則必須在每個 OR 條件中重複 AND 條件。  
@@ -38,7 +37,7 @@ ms.locfileid: "63224496"
   
 1.  在 [準則窗格](visual-database-tools.md)中，新增想要搜尋的資料行。 若要搜尋使用由 AND 所連結的兩個或多個條件之相同資料行，就必須針對想要搜尋的每個值，將資料行名稱加入方格中。  
   
-2.  在 [篩選條件]  方格資料行中輸入第一個條件，在另一個 [或...]  資料行中輸入第二個 (及後續其他的) 條件，即可建立使用 OR 連結的條件。 例如，若要使用 OR 連結搜尋 `job_lvl` 和 `status` 資料行的條件，請在 `= 100` 的 [篩選條件]  資料行輸入 `job_lvl`，在 `= 'R'` 的 [或...]  資料行輸入 `status`。  
+2.  在 [篩選條件]  方格資料行中輸入第一個條件，在另一個 [或...]  資料行中輸入第二個 (及後續其他的) 條件，即可建立使用 OR 連結的條件。 例如，若要使用 OR 連結搜尋 `job_lvl` 和 `status` 資料行的條件，請在 `job_lvl` 的 [篩選條件] 資料行輸入 `= 100`，在 `status` 的 [或...] 資料行輸入 `= 'R'`。  
   
      輸入上述方格中的值，會在 [SQL] 窗格的陳述式中產生下列 WHERE 子句：  
   
@@ -46,7 +45,7 @@ ms.locfileid: "63224496"
     WHERE (job_lvl = 100) OR (status = 'R')  
     ```  
   
-3.  藉由輸入每個 OR 條件的 AND 條件，即可建立此條件。 將每個項目放入相同的方格資料行中，做為它所對應的 OR 條件。 例如，若要新增搜尋 `hire_date` 資料行並套用至這兩個 OR 條件的 AND 條件，請在 [準則] 資料行和 [或...]`< '1/1/91'`**資料行中輸入**。  
+3.  藉由輸入每個 OR 條件的 AND 條件，即可建立此條件。 將每個項目放入相同的方格資料行中，做為它所對應的 OR 條件。 例如，若要新增搜尋 `hire_date` 資料行並套用至這兩個 OR 條件的 AND 條件，請在 [準則] 資料行和 [或...] 資料行中輸入 `< '1/1/91'`。  
   
      輸入上述方格中的值，會在 [SQL] 窗格的陳述式中產生下列 WHERE 子句：  
   

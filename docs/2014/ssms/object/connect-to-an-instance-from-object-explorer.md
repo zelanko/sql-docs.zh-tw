@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a25a9c376b7443bb23520c26be545c027da0bde6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63277425"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067360"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>從物件總管連接到執行個體
   若要使用物件總管管理物件，您必須先將物件總管連接到包含物件的執行個體。 您可以同時將物件總管連接到多個執行個體。  
@@ -28,11 +27,11 @@ ms.locfileid: "63277425"
   
  若要指定選擇性的連接設定，請遵照下列步驟：  
   
-1.  在物件總管工具列上，按一下 [連接]****，再按一下要連接的伺服器類型。 [連線到伺服器]**** 對話方塊隨即出現。  
+1.  在物件總管工具列上，按一下 [連接]****，再按一下要連接的伺服器類型。 [連線到伺服器] 對話方塊隨即出現。  
   
 2.  在 [伺服器名稱]**** 方塊中，輸入您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。  
   
-3.  按一下 [選項]****。 此時 [連接到伺服器]**** 對話方塊會顯示其他選項。  
+3.  按一下 [選項]。 此時 [連接到伺服器]**** 對話方塊會顯示其他選項。  
   
 4.  按一下 [連接屬性]**** 索引標籤來設定其他設定。 可用的設定會隨著伺服器類型而不同。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]可以使用下列設定。  
   

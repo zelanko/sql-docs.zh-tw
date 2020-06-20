@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0123027ac9aa87d616b52ac5cc26f36a20f7e1e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b31a8bc38968733de0a23f67a71772721c8baedd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524012"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009001"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的多伺服器管理組態中脫離多個目標伺服器。 從主要伺服器執行這個程序。  

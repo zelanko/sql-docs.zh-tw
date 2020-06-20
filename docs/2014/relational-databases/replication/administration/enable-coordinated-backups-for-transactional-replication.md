@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 582e7afef033aac6fdc281e8fc310760a77949a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77405cd968fa917c3ccc799eb7d168782443eee9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793423"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060794"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication-replication-transact-sql-programming"></a>為異動複寫啟用協調備份 (複寫 Transact-SQL 程式設計)
   在啟用異動複寫的資料庫時，可以指定所有的交易必須先備份，才能傳遞到散發資料庫。 也可以在散發資料庫上啟用協調備份，如此在傳播到「散發者」的交易進行備份之前，發行集資料庫的交易記錄都不會遭到截斷。 如需詳細資訊，請參閱 [備份與還原快照式和異動複寫的策略](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
@@ -41,7 +40,7 @@ ms.locfileid: "67793423"
   
 1.  在散發者端，使用 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql) 函式傳回散發資料庫的 **IsSyncWithBackup** 屬性。 如果函數傳回 **1**，則已經為散發資料庫啟用協調備份。  
   
-2.  如果步驟 1 中的函式傳回 **0**，則請在散發資料庫的散發者端執行 [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)。 為 [ ** \@optname** ] 指定 [**同步備份**] 的值，並為** \@[值**] 指定 [ **true** ]。  
+2.  如果步驟 1 中的函式傳回 **0**，則請在散發資料庫的散發者端執行 [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)。 為 [ ** \@ optname** ] 指定 [**同步備份**] 的值，並為 [ ** \@ 值**] 指定 [ **true** ]。  
   
 ### <a name="to-disable-coordinated-backups"></a>若要停用協調備份  
   

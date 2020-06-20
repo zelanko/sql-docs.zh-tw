@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6aa5dcb3ff23c5a9a57124e59b50b70969fddd68
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 05e14ccb0fadb4f1cf05f965c79cf8c05c71f93a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706290"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022818"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
   為了描述任何 SQL 語句的參數， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 會在備妥的 ODBC 語句控制碼上呼叫 SQLDescribeParam 時，建立並執行 SELECT 語句。 結果集的中繼資料則會決定已備妥之陳述式中的參數特性。 SQLDescribeParam 可能會傳回 SQLExecute 或 SQLExecDirect 可能傳回的任何錯誤碼。  

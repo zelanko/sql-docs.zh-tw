@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 89b1e347-9579-4f6b-af74-c6519ea08eea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc13943df93acf2227b089b177cdca6c86ee1831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdd4c6f134af120b70546f6d27f0f8fc8aac672d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056657"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964738"
 ---
 # <a name="path-properties"></a>路徑屬性
-  物件模型中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的資料流程物件具有元件層級、輸入和輸出，以及輸入資料行和輸出資料行的通用屬性和自訂屬性。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 許多屬性都有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
+  物件模型中的資料流程物件 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 具有元件層級、輸入和輸出，以及輸入資料行和輸出資料行的通用屬性和自訂屬性。 許多屬性都有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
   
  本主題將列出及描述連接資料流程物件之路徑的自訂屬性。  
   

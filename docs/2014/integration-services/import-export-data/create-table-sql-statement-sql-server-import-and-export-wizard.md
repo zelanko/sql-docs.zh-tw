@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f541ad24e87bf5bdea9ed8b8c2523a73c81daa9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9348dd5394aa3ff9bd3d2672b64fcd2327445d5d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768000"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965588"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>建立資料表的 SQL 陳述式 (SQL Server 匯入和匯出精靈)
   使用 [**建立資料表的 SQL 語句**] 對話方塊，即可查看自動產生的語句，或針對您的用途加以修改。 如果您修改此陳述式，就可能也必須對資料行對應進行相關的變更，而且此後必須手動維護已編輯的 SQL 陳述式。  

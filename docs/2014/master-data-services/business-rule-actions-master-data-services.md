@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 83e65825f098dbcabe9fa6cbb67513e1c9654f9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 188551ec988bfd71a54f0a56b6180cb92defc2bb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483632"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972138"
 ---
 # <a name="business-rule-actions-master-data-services"></a>商務規則動作 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，商務規則動作是商務規則條件評估的結果。 如果條件為 true，就會起始動作。  
@@ -37,7 +36,7 @@ ms.locfileid: "65483632"
   
 |值名稱|描述|  
 |----------------|-----------------|  
-|**等**|選取的屬性變更為已定義的屬性值、另一個屬性或空白。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
+|**等於**|選取的屬性變更為已定義的屬性值、另一個屬性或空白。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
 |**等於串連值**|選取的屬性變更為串連值，這個值取決於指定多個屬性。<br /><br /> 此動作適用於文字及連結值。|  
   
 ## <a name="validation-actions"></a>驗證動作  

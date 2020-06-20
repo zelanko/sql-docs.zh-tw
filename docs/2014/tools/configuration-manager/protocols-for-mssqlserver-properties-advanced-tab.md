@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9000dd2b7456036f4828640694aaf697036b71d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef16a5a125883e5ce33e04d9899d0bb882d56541
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62645799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007913"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER 的通訊協定內容 (進階索引標籤)
   您可以使用 [MSSQLSERVER 的通訊協定內容]  對話方塊的 [進階]  索引標籤來設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [驗證擴充保護]  。 [擴充保護]  是作業系統實作的網路元件功能。 [擴充保護]  可在 Windows 7 和 Windows Server 2008 R2 中使用，而且會包含在舊版作業系統的 Service Pack 中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在使用 **擴充保護**進行連接時較安全。 [擴充保護]  的某些優點需要在 [旗標]  索引標籤上選取 [強制加密]  。  
@@ -27,7 +26,7 @@ ms.locfileid: "62645799"
   
  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始，[擴充保護]**** 就受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的完整支援。 目前不支援其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端提供者的 [擴充保護]**** 支援。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **擴充保護**  
  有三個可能的值：  
   

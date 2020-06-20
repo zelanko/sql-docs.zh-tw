@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47dc2b5b-7803-4202-ad53-a431a821ad69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e2b44b84df73df4e6e17b67a9f671eef9a790cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63312614"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061154"
 ---
 # <a name="set-the-startup-options"></a>設定啟動選項
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可設定成在啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 時，開啟您偏好之組態的設計介面。 設定 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來開啟慣用的組態，可以節省您的時間。  
@@ -24,7 +23,7 @@ ms.locfileid: "63312614"
   
 #### <a name="to-configure-startup-options"></a>若要設定啟動選項  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
 2.  展開 [環境]****，然後按一下 [啟動]****。 在 [啟動時]**** 清單中，檢閱您的選項：  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2645ae5b16ffa4738f06e1439abac977c8e18894
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fe5382fae26d01478b33c7b54c3d6f5170d34eb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479337"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971313"
 ---
 # <a name="install-master-data-services"></a>安裝 Master Data Services
   下列工作流程提供如何安裝及設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]的概觀。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安裝程序包含三個部分：  
@@ -30,7 +29,7 @@ ms.locfileid: "65479337"
   
 |動作|詳細資料|[相關主題]|  
 |------------|-------------|--------------------|  
-|確認安裝需求|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的電腦，必須符合以下項目的基本需求：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。<br /><br /> [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式和 Web 服務。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫，如果您在與 Web 應用程序相同的電腦中裝載資料庫。<br /><br /> 請注意，您可以只在 web 伺服器電腦上執行安裝程式，並在執行支援之版本的[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遠端電腦上建立資料庫，來分隔 web 伺服器電腦和資料庫伺服器電腦。|[SQL Server 2014 各版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)<br /><br /> [安裝 SQL Server 2014 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Web 應用程式需求 &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)<br /><br /> [資料庫需求 &#40;Master Data Services&#41;](database-requirements-master-data-services.md)|  
+|確認安裝需求|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的電腦，必須符合以下項目的基本需求：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。<br /><br /> [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式和 Web 服務。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫，如果您在與 Web 應用程序相同的電腦中裝載資料庫。<br /><br /> 請注意，您可以只在 web 伺服器電腦上執行安裝程式，並在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 執行支援之版本的遠端電腦上建立資料庫，來分隔 web 伺服器電腦和資料庫伺服器電腦 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|[SQL Server 2014 各版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)<br /><br /> [安裝 SQL Server 2014 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Web 應用程式需求 &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)<br /><br /> [資料庫需求 &#40;Master Data Services&#41;](database-requirements-master-data-services.md)|  
 |設定必要角色、角色服務和功能|執行安裝程式之前，使用必要 Windows 角色、角色服務和功能來設定電腦。<br /><br /> 注意：雖然您可以在稍後的工作流程中執行此步驟，但在執行安裝程式之前先設定此內容，有助於在安裝之後立即執行 Web 設定工作。|[Web 應用程式需求 &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)|  
 |檢閱語言支援考量|決定您要安裝及執行 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 的語言。|[多語言及全域部署 &#40;Master Data Services&#41;](multi-lingual-and-global-deployments-master-data-services.md)|  
   
@@ -44,7 +43,7 @@ ms.locfileid: "65479337"
   
 |動作|詳細資料|[相關主題]|  
 |------------|-------------|--------------------|  
-|開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 到完整的後續安裝作業中|安裝程式完成之後，請開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 會在本機電腦上執行下列安裝後作業：<br /><br /> 建立 Windows 群組 **MDS_ServiceAccounts**，包含應用程式集區的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 服務帳戶。<br /><br /> 在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安裝路徑之下建立 MDSTempDir 資料夾，並為 **MDS_ServiceAccounts**指派權限。 此為編譯 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式暫存編譯檔的資料夾。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]在 web.config 檔案中，使用 MDSTempDir 資料夾的路徑，設定** \<編譯>** 專案的`tempDirectory`屬性。<br /><br /> <br /><br /> 若您撰寫安裝程序的指令碼，可以開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 註冊 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 嵌入式管理單元，但您必須手動執行其他步驟以完成設定。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 為您提供一個由精靈驅動的設定程序。 沒有任何命令列程序可設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。|[資料夾和檔案的權限 &#40;Master Data Services&#41;](../folder-and-file-permissions-master-data-services.md)<br /><br /> [Web 組態參考 &#40;Master Data Services&#41;](../web-configuration-reference-master-data-services.md)|  
+|開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 到完整的後續安裝作業中|安裝程式完成之後，請開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 會在本機電腦上執行下列安裝後作業：<br /><br /> 建立 Windows 群組 **MDS_ServiceAccounts**，包含應用程式集區的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 服務帳戶。<br /><br /> 在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安裝路徑之下建立 MDSTempDir 資料夾，並為 **MDS_ServiceAccounts**指派權限。 此為編譯 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式暫存編譯檔的資料夾。<br /><br /> 在 Web.config 檔案中 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] ， `tempDirectory` **\<compilation>** 使用 MDSTempDir 資料夾的路徑來設定元素的屬性。<br /><br /> <br /><br /> 若您撰寫安裝程序的指令碼，可以開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 註冊 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 嵌入式管理單元，但您必須手動執行其他步驟以完成設定。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 為您提供一個由精靈驅動的設定程序。 沒有任何命令列程序可設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。|[資料夾和檔案的權限 &#40;Master Data Services&#41;](../folder-and-file-permissions-master-data-services.md)<br /><br /> [Web 組態參考 &#40;Master Data Services&#41;](../web-configuration-reference-master-data-services.md)|  
 |建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 可針對您的主要資料建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。|[建立 Master Data Services 資料庫](create-a-master-data-services-database.md)|  
 |建立 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 建立及設定 Web 應用程式，以供裝載 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。|[建立主資料管理員 Web 應用程式 &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)|  
 |讓 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫與 Web 應用程式產生關聯|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] ，讓 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫產生關聯。|[建立 Master Data Services 資料庫與 Web 應用程式的關聯](associate-a-master-data-services-database-and-web-application.md)|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34c33364-8538-45db-ae41-5654481cda93
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 272a33f69edc6f5152b22e6ffb0c8c3bf8ebbb85
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781313"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933522"
 ---
 # <a name="interfaces-ole-db"></a>介面 (OLE DB)
   除了 Microsoft Data Access Components （MDAC）所提供的核心 OLE DB 介面， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者還會執行下列額外的 OLE DB 介面：  
