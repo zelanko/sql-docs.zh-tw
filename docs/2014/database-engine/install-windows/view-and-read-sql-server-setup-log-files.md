@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14750517c0423a24c442cb38c09806dab7ad0a26
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774320"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931579"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>檢視與讀取 SQL Server 安裝程式記錄檔
-  每次執行安裝程式時，都會使用新的時間戳記記錄檔資料夾（位於%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]programfiles%\\\120\Setup Bootstrap\Log）來建立記錄檔。 時間戳記記錄檔資料夾的名稱格式為 YYYYMMDD_hhmmss。 在自動安裝模式下執行安裝程式時，會在 % temp%\sqlsetup*.log 建立記錄檔。 記錄檔資料夾中的所有檔案都會封存到個別記錄檔資料夾的 Log\*.cab 檔中。  
+  每次執行安裝程式時，都會使用新的時間戳記記錄檔資料夾（位於% programfiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log）來建立記錄檔 \\ 。 時間戳記記錄檔資料夾的名稱格式為 YYYYMMDD_hhmmss。 在自動安裝模式下執行安裝程式時，會在 % temp%\sqlsetup*.log 建立記錄檔。 記錄檔資料夾中的所有檔案都會封存到個別記錄檔資料夾的 Log\*.cab 檔中。  
   
  典型的安裝程式要求會經過三個執行階段：  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62774320"
   
 ## <a name="summary-text"></a>摘要文字  
   
-### <a name="overview"></a>總覽  
+### <a name="overview"></a>概觀  
  此檔案會顯示安裝期間偵測到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件、作業系統環境、命令列參數值 (如果有指定)，以及已執行之每個 MSI/MSP 的整體狀態。  
   
  記錄檔組織成下列各區段：  
@@ -77,42 +76,42 @@ ms.locfileid: "62774320"
   
 -   規則報表檔案的位置  
   
-### <a name="location"></a>位置  
- 它位於\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% programfiles% \120\Setup Bootstrap\Log\\。  
+### <a name="location"></a>Location  
+ 它位於% programfiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\ 。  
   
  若要尋找摘要文字檔中的錯誤，使用 "error" 或 "failed" 等關鍵字搜尋檔案。  
   
 ## <a name="summary_engine-base_yyyymmdd_hhmmsstxt"></a>Summary_engine-base_YYYYMMDD_HHMMss.txt  
   
-### <a name="overview"></a>總覽  
+### <a name="overview"></a>概觀  
  summary_engine base 檔案與摘要檔案類似，而且是在主要工作流程期間產生的。  
   
-### <a name="location"></a>位置  
- \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]它位於% programfiles% \120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>。 \\  
+### <a name="location"></a>Location  
+ 它位於% programfiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ 。  
   
 ## <a name="summary_engine-base_yyyymmdd_hhmmss_componentupdatetxt"></a>Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
   
-### <a name="overview"></a>總覽  
+### <a name="overview"></a>概觀  
  元件更新摘要記錄檔與摘要檔案類似，而且是在元件更新工作流程期間產生的。  
   
-### <a name="location"></a>位置  
- \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]它位於% programfiles% \120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>。 \\  
+### <a name="location"></a>Location  
+ 它位於% programfiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ 。  
   
-## <a name="summary_engine-base_versionnumbermmdd_hhmmss_globalrulestxt"></a>Summary_engine-base_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
+## <a name="summary_engine-base_versionnumbermmdd_hhmmss_globalrulestxt"></a>Summary_engine base_ \<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
   
-### <a name="overview"></a>總覽  
+### <a name="overview"></a>概觀  
  全域規則摘要記錄檔與摘要檔案類似，而且是在全域規則工作流程期間產生的。  
   
-### <a name="location"></a>位置  
- \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]它位於% programfiles% \120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>。 \\  
+### <a name="location"></a>Location  
+ 它位於% programfiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ 。  
   
 ## <a name="detailtxt"></a>Detail.txt  
   
-### <a name="overview"></a>總覽  
+### <a name="overview"></a>概觀  
  安裝或升級之類的主要工作流程會產生 Detail.txt，並提供執行的詳細資料。 針對安裝叫用每個動作時，檔案中的記錄會隨著時間而產生，並顯示執行動作的順序及其相依性。  
   
-### <a name="location"></a>位置  
- 它位於% programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup  
+### <a name="location"></a>Location  
+ 它位於% programfiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup  
   
  Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
   
@@ -120,53 +119,53 @@ ms.locfileid: "62774320"
   
 ## <a name="detail_componentupdatetxt"></a>Detail_ComponentUpdate.txt  
   
-### <a name="overview"></a>總覽  
+### <a name="overview"></a>概觀  
  元件更新工作流程會產生 Detail_ComponentUpdate.txt 檔，而且與 Detail.txt 類似。  
   
-### <a name="location"></a>位置  
- \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]它位於% programfiles% \120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>。 \\  
+### <a name="location"></a>Location  
+ 它位於% programfiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ 。  
   
 ## <a name="detail_globalrulestxt"></a>Detail_GlobalRules.txt  
   
-### <a name="overview"></a>總覽  
+### <a name="overview"></a>概觀  
  全域規則執行會產生 Detail_GlobalRules.txt，而且與 Detail.txt 類似。  
   
-### <a name="location"></a>位置  
- \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]它位於% programfiles% \120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>。 \\  
+### <a name="location"></a>Location  
+ 它位於% programfiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ 。  
   
 ## <a name="msi-log-files"></a>MSI 記錄檔  
   
-### <a name="overview"></a>總覽  
+### <a name="overview"></a>概觀  
  MSI 記錄檔會提供安裝套件程序的詳細資料。 在指定之套件的安裝期間，MSIEXEC 會產生這些記錄檔。  
   
  MSI 記錄檔的類型：  
   
--   \<功能>_\<架構>\_\<互動>.log  
+-   \<Feature>_ \<Architecture> \_ \<Interaction> .log  
   
--   \<功能>_\<架構>\_\<語言>\_\<互動>.log  
+-   \<Feature>_ \<Architecture> \_ \<Language> \_ \<Interaction> .log  
   
--   \<功能>_\<架構>\_\<互動>\_\<工作流程>.log  
+-   \<Feature>_ \<Architecture> \_ \<Interaction> \_ \<workflow> .log  
   
-### <a name="location"></a>位置  
- MSI 記錄檔位於% programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<名稱\>.log。  
+### <a name="location"></a>Location  
+ MSI 記錄檔位於% programfiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\<名稱 \> .log。  
   
  檔案的結尾是執行的摘要，其中包含成功或失敗狀態以及屬性。 若要尋找 MSI 檔中的錯誤，請搜尋 "value 3"，通常就可以在該字串的附近找到錯誤。  
   
 ## <a name="configurationfileini"></a>ConfigurationFile.ini  
   
-### <a name="overview"></a>總覽  
+### <a name="overview"></a>概觀  
  組態檔包含安裝期間提供的輸入設定。 該檔案可以用來重新啟動安裝，而不必手動輸入設定。 不過，帳號的密碼、PID 與某些參數不會儲存在組態檔中。 這些設定可以加入至檔案，或者使用命令列或安裝程式使用者介面提供。 如需詳細資訊，請參閱[使用設定檔安裝 SQL Server 2014](install-sql-server-using-a-configuration-file.md)。  
   
-### <a name="location"></a>位置  
- \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]它位於% programfiles% \120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>。 \\  
+### <a name="location"></a>Location  
+ 它位於% programfiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ 。  
   
 ## <a name="systemconfigurationcheck_reporthtm"></a>SystemConfigurationCheck_Report.htm  
   
-### <a name="overview"></a>總覽  
+### <a name="overview"></a>概觀  
  系統組態檢查報告包含每個已執行規則以及執行狀態的簡短描述。  
   
-### <a name="location"></a>位置  
- \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]它位於% programfiles% \120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>。 \\  
+### <a name="location"></a>Location  
+ 它位於% programfiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ 。  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 how to 主題](../../sql-server/install/installation-how-to-topics.md)   

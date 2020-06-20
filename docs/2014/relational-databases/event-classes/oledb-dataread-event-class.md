@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d12bf6f0e002b1f06bc96ff97608f88bd305b34b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7911e64ca0e272b95f1c88b705ab9aca9ea75483
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62960795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029174"
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead 事件類別
   當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 呼叫 OLE DB 提供者以執行分散式查詢和遠端預存程序時，會發生 OLEDB DataRead 事件類別。 請在監看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 何時對 OLE DB 提供者發出資料要求呼叫的追蹤中，包含此事件類別。  

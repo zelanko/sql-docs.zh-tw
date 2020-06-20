@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c015844fd0b0a3ed219adabaf95f4b2af98d663
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5171de39727578028ed4cf01c090b98e3d70e0d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486974"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914748"
 ---
 # <a name="raw-file-source"></a>原始檔案來源
   「原始檔案」來源會從檔案讀取原始資料。 由於資料的表示法對於來源而言是原生的，因此資料不需翻譯，也幾乎不需要剖析。 這表示，「原始檔案」來源可比其他來源更快讀取資料，例如「一般檔案」和 OLE DB 來源。  

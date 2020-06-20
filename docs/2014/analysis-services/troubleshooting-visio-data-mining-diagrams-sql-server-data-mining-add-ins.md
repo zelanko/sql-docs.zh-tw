@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c60120c6-0af1-45c5-90d1-0a99b878ff18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 067d3c3a324922a8c8ef19239771c8a8c2305541
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f787b4d3bfae12d65897e807f43b76b9b8a7520
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065716"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938249"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>Visio 資料採礦圖表的疑難排解 (SQL Server 資料採礦增益集)
   本主題包含一些額外的資訊，供您在進行 Visio 資料採礦圖表的疑難排解時使用。  

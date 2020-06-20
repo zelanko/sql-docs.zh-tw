@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 860de6d29557b6594c9ec149f09e915b837fa95e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149800"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048508"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能之前，請先考慮本主題所列的各項產品需求。  
@@ -107,7 +106,7 @@ ms.locfileid: "63149800"
   
 -   SPID  
   
--   Start Time  
+-   開始時間  
   
 -   EndTime  
   
@@ -125,7 +124,7 @@ ms.locfileid: "63149800"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>作業系統需求  
- 支援執行管理工具以及控制器和用戶端服務的作業系統，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相同。 如需您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的實例支援哪些作業系統的詳細資訊，請參閱[安裝 SQL Server 2014 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
+ 支援執行管理工具以及控制器和用戶端服務的作業系統，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相同。 如需您的實例支援哪些作業系統的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[安裝 SQL Server 2014 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
  x86 及 x64 作業系統皆支援 Distributed Replay 功能。 若為 x64 架構作業系統，只支援 Windows on Windows (WOW) 模式。  
   

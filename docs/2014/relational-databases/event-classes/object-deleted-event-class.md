@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3145385db6239df128ead6070ebede48bc96e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90bcc20e16d775e6497958fc1adc58269fb24296
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63025826"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029379"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted 事件類別
   Object:Deleted 事件類別指出物件已刪除，例如，被 DROP INDEX 和 DROP TABLE 陳述式所刪除。 此事件類別可以用來判斷物件是否已遭刪除，例如，由通常建立暫存預存程序的 ODBC 應用程式刪除。  

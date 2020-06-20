@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b15e2f457cca84abb7ab597bdf14d0b2fb2e3ffe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bebcfed02aa30ffc686b2a74807b6a4cc3955c90
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931989"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>升級 PowerPivot for SharePoint
   本主題概述將 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署升級至 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]所需的步驟。 特定步驟取決於您環境目前所執行的 SharePoint 版本，並包含 PowerPivot for SharePoint 增益集 (**spPowerPivot.msi**)。  
@@ -38,7 +37,7 @@ ms.locfileid: "81388043"
   
 
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 先決條件  
  **權限**  
   
 -   您必須是伺服器陣列管理員，才能升級 PowerPivot for SharePoint 安裝。 您必須是本機系統管理員，才能執行 SQL Server 安裝程式。  
@@ -47,9 +46,9 @@ ms.locfileid: "81388043"
   
  **SQL Server：**  
   
--   如果現有的 PowerPivot 安裝為[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，則[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]需要 SERVICE Pack 2 （SP2），才能升級至[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
+-   如果現有的 PowerPivot 安裝為 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ，則 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 需要 Service Pack 2 （SP2），才能升級至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。  
   
--   如果現有的 PowerPivot 安裝為[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，則[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]需要 SERVICE Pack 1 （SP1），才能升級至[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
+-   如果現有的 PowerPivot 安裝為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ，則 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 需要 Service Pack 1 （SP1），才能升級至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。  
   
  **SharePoint 2010：**  
   
@@ -237,7 +236,7 @@ ms.locfileid: "81388043"
 Get-PowerPivotSystemService  
 ```  
   
- 驗證 **CurrentSolutionVersion**。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]為12.0 版。\<主要組建>。\<次要組建>  
+ 驗證 **CurrentSolutionVersion**。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]為版本 12.0. \<major build> 。\<minor build>  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>驗證 Analysis Services Windows 服務的版本  
  如果您只有升級 SharePoint 2010 伺服陣列中的部分 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 伺服器，則未升級之伺服器上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體將會比預期在伺服器陣列中的版本還舊。 您必須將所有的伺服器升級至相同版本，才可以加以使用。 使用下列其中一種方法來驗證每部電腦上的 SQL Server Analysis Services （PowerPivot） Windows 服務版本。  
@@ -250,7 +249,7 @@ Get-PowerPivotSystemService
   
 3.  按一下 [詳細資料]****。  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]檔案版本應為12.00。\<主要組建>。\<次要組建>。  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]檔案版本應為 \<major build> 12.00 ... \<minor build>  
   
 5.  驗證這個編號與 PowerPivot 方案和系統服務版本相同。  
   
@@ -300,7 +299,7 @@ Get-PowerPivotSystemService
   
 2.  依組件名稱排序，並搜尋 **Microsoft.Analysis Services.Adomd.Client**。  
   
-3.  確認您的版本為12.0。\<組建編號>。  
+3.  確認您的版本為 12.0. \<build number> 。  
   
 
 ##  <a name="upgrading-multiple-powerpivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a>升級 SharePoint 伺服器陣列中的多部 PowerPivot for SharePoint 伺服器  

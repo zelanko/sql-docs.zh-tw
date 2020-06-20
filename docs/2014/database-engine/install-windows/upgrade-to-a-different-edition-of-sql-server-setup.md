@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5801916d34e45b5d70c9953d8dff0becbf6207cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774572"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931609"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>升級為不同的 SQL Server 2014 版本 (安裝程式)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援各種不同 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本之間的版本升級。 如需支援版本升級方式的詳細資訊，請參閱 [支援的版本與版本升級](supported-version-and-edition-upgrades.md)。 在您起始 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體的版本升級之前，請檢閱以下主題：  
@@ -29,7 +28,7 @@ ms.locfileid: "62774572"
 -   [安裝 SQL Server 2014 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **在叢集環境中： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **在叢集的其中一個節點[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上執行版本升級就已足夠。 這個節點可以是主動或被動節點，而且引擎不會在版本升級期間讓資源離線。 版本升級之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或容錯移轉至不同的節點。  
+>  ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在叢集環境中：** 在叢集的其中一個節點上執行版本升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就已足夠。 這個節點可以是主動或被動節點，而且引擎不會在版本升級期間讓資源離線。 版本升級之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或容錯移轉至不同的節點。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取權限的網域帳戶。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86c29f696c93789cb3815cf14587690c2edb5f6b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774559"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931319"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>變更主要與次要記錄傳送伺服器間的角色 (SQL Server)
   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄傳送組態容錯移轉到次要伺服器之後，您可以設定次要資料庫做為主要資料庫。 接著，您就可以視需要交換主要與次要資料庫。  
@@ -78,7 +77,7 @@ ms.locfileid: "62774559"
 3.  啟用次要伺服器 (新的主要伺服器) 上的記錄傳送備份作業，以及主要伺服器 (新的次要伺服器) 上的複製與還原工作。  
   
 > [!IMPORTANT]  
->  當您將次要資料庫變更為主要資料庫時，為了提供一致的經驗給使用者和應用程式，可能需要在新主要伺服器執行個體上為資料庫重新建立部份或全部的中繼資料，例如登入和作業。 如需詳細資訊，請參閱[在另一個伺服器實例上提供資料庫時管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+>  當您將次要資料庫變更為主要資料庫時，為了提供一致的經驗給使用者和應用程式，可能需要在新主要伺服器執行個體上為資料庫重新建立部份或全部的中繼資料，例如登入和作業。 如需詳細資訊，請參閱 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   

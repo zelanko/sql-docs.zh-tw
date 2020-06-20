@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fd64fe5cad5f85c41830d25dce279ba09915626b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 071dcc95a2b8dac3aef7fbea25c8dc2ba9dfed02
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771166"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923049"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
   此程序描述如何使用 CDC 設計工具主控台，於執行階段管理 CDC 執行個體操作。  

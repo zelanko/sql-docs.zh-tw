@@ -1,5 +1,6 @@
 ---
 title: 系結參數 |Microsoft Docs
+description: 瞭解如何將 SQL 語句中的每個參數標記系結至應用程式中的變數，然後才能執行語句。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01e179d2abc6ef786f94b6d7938f0e21938c5a59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c2076acbe29cefbbee12c716d3c555054c5808a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304621"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967555"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>使用陳述式參數 - 繫結參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "81304621"
   
      藉由呼叫**SQLSetStmtAttr**並將*屬性*設定為 SQL_ATTR_PARAM_BIND_TYPE，並將*valueptr 是*設定為保留程式變數的結構大小，來指定資料列取向系結。  
   
- 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式將字元或二進位字串參數傳送至伺服器時，它會將值填補至**SQLBindParameter** *ColumnSize*參數中指定的長度。 如果 ODBC 2.x 應用程式為*ColumnSize*指定0，驅動程式會將參數值填補至資料類型的有效位數。 當連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器時，有效位數為 8000，連接至舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時則為 255。 Variant 資料行的*ColumnSize*是以位元組為單位。  
+ 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式將字元或二進位字串參數傳送至伺服器時，它會將值填補至**SQLBindParameter** *ColumnSize*參數中指定的長度。 如果 ODBC 2.x 應用程式為*ColumnSize*指定0，驅動程式會將參數值填補至資料類型的有效位數。 當連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器時，有效位數為 8000，連接至舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時則為 255。 Variant 資料行的*ColumnSize*是以位元組為單位。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援定義預存程序參數的名稱。 ODBC 3.5 也導入了對呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序時所使用之具名參數的支援。 這項支援可用來：  
   
@@ -57,9 +58,9 @@ ms.locfileid: "81304621"
   
 -   以不同的順序指定參數，也就是在應用程式中的順序，與在預存程序建立時所指定的順序不同。  
   
- 只有在使用[!INCLUDE[tsql](../../includes/tsql-md.md)] **execute**語句或 ODBC 呼叫 escape 序列來執行預存程式時，才支援具名引數。  
+ 只有在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **execute**語句或 ODBC 呼叫 escape 序列來執行預存程式時，才支援具名引數。  
   
- 如果為預存程式參數設定**SQL_DESC_NAME** ，則查詢中的所有預存程式參數也都應該設定**SQL_DESC_NAME**。  如果在預存程序呼叫中使用常值，其中參數已設定**SQL_DESC_NAME** ，則常值應使用格式 *' NAME*=*value*'，其中*name*是預存程式參數名稱（例如@p1）。 如需詳細資訊，請參閱[依名稱系結參數（具名引數）](https://go.microsoft.com/fwlink/?LinkId=167215)。  
+ 如果為預存程式參數設定**SQL_DESC_NAME** ，則查詢中的所有預存程式參數也都應該設定**SQL_DESC_NAME**。  如果在預存程序呼叫中使用常值，其中參數已設定**SQL_DESC_NAME** ，則常值應使用格式 *' NAME* = *value*'，其中*name*是預存程式參數名稱（例如 @p1 ）。 如需詳細資訊，請參閱[依名稱系結參數（具名引數）](https://go.microsoft.com/fwlink/?LinkId=167215)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用陳述式參數](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

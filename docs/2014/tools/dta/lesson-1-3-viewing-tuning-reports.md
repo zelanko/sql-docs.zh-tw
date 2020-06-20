@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f435e79b3f03d2fecdf0d2f18d2fd5aad90bfa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048322"
 ---
 # <a name="viewing-tuning-reports"></a>檢視微調報表
   在這個課程的上一個練習中，您檢視了在 MySession 微調工作階段所產生的 Database Engine Tuning Advisor 建議中建立或卸除資料庫物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 MySession 微調工作階段是先前在 [微調工作負載](lesson-1-1-tuning-a-workload.md)中所建立的。  
@@ -36,7 +35,7 @@ ms.locfileid: "66110149"
   
 4.  在 [微調報表]**** 窗格中，按一下 [選取報表]**** 清單中的 [陳述式成本報表]****。 如果您需要更多空間來檢視報表，請向左拖曳 [工作階段監視器]**** 窗格框線。 每個針對資料庫中某份資料表來執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式都有相關的效能成本。 您可以在資料表中常常存取的資料行上建立有效的索引來降低這個效能成本。 這份報表會顯示執行工作負載中某陳述式的原始成本和實作微調建議的成本之間的估計改進百分比。 請注意，報表所包含的資訊量以工作負載的長度和複雜度為基礎。  
   
-5.  以滑鼠右鍵按一下方格區域中的 [陳述式成本報表]**** 窗格，然後按一下 [匯出至檔案]****。 將報表儲存為`MyReport`。 檔案名稱會自動附加 .xml 副檔名。 您可以在喜愛的 XML 編輯器或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，開啟 MyReport.xml 來檢視報表內容。  
+5.  以滑鼠右鍵按一下方格區域中的 [陳述式成本報表]**** 窗格，然後按一下 [匯出至檔案]****。 將報表儲存為 `MyReport` 。 檔案名稱會自動附加 .xml 副檔名。 您可以在喜愛的 XML 編輯器或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，開啟 MyReport.xml 來檢視報表內容。  
   
 6.  返回 Database Engine Tuning Advisor 的 [報表]**** 索引標籤，然後以滑鼠右鍵按一下 [陳述式成本報表]****。 檢視其他可用的選項。 請注意，您可以變更所檢視之報表的字型。 在這裡變更字型，也會變更其他索引標籤頁面的字型。  
   

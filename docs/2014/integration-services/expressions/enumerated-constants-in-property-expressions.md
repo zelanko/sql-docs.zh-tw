@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b691367b8cfbe00c1e383fa3a2fd18e2d545be8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898896"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967418"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>屬性運算式中的列舉常數
   如果屬性運算式包含來自列舉值成員清單的值，運算式必須使用列舉值成員的數值來取代成員的易記名稱。 例如，如果運算式設定了 `LoggingMode` 屬性，您就必須使用數值 2 來取代易記名稱 Disabled。  
   
  此主題列出相當於列舉值易記名稱的數值，但僅限屬性運算式中常用之成員所屬的列舉值。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型包含其他許多列舉值，您在設計物件模型程式以程式設計方式建立封裝，或是對自訂封裝元素 (例如工作和資料流程元件) 進行編碼時，都會使用這些列舉值。  
   
- 除了封裝和封裝物件適用的自訂屬性以外， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [屬性] 視窗還包含一組可用於封裝、工作以及「Foreach 迴圈」、「For 迴圈」和「時序」等容器的屬性。 由枚舉器`ForceExecutionResult`-、 `LoggingMode`、 `IsolationLevel`和`Transaction Option`的值所設定的通用屬性會列在 [通用屬性] 區段中。  
+ 除了封裝和封裝物件適用的自訂屬性以外， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [屬性] 視窗還包含一組可用於封裝、工作以及「Foreach 迴圈」、「For 迴圈」和「時序」等容器的屬性。 由枚舉器-、、和的值所設定的通用屬性 `ForceExecutionResult` `LoggingMode` `IsolationLevel` `Transaction Option` 會列在 [通用屬性] 區段中。  
   
  下列章節提供有關列舉常數的資訊：  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62898896"
 ##  <a name="package"></a><a name="Package"></a> 封裝  
  下列表格列出使用來自列舉值的值所設定之封裝屬性的易記名稱和數值相等項。  
   
- `PackageType`屬性：使用來自列舉的`DTSPackageType`值進行設定。  
+ `PackageType`屬性：使用來自列舉的值進行設定 `DTSPackageType` 。  
   
 |DTSPackageType 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
@@ -57,7 +56,7 @@ ms.locfileid: "62898896"
 |DTSDesigner100|5|  
 |SQLDBMaint|6|  
   
- `CheckpointUsage`屬性：使用來自列舉的`DTSCheckpointUsage`值進行設定。  
+ `CheckpointUsage`屬性：使用來自列舉的值進行設定 `DTSCheckpointUsage` 。  
   
 |DTSCheckpointUsage 中的易記名稱|數值|  
 |-----------------------------------------|-------------------|  
@@ -65,7 +64,7 @@ ms.locfileid: "62898896"
 |IfExists|1|  
 |一律|2|  
   
- `PackagePriorityClass`屬性：使用來自列舉的`DTSPriorityClass`值進行設定。  
+ `PackagePriorityClass`屬性：使用來自列舉的值進行設定 `DTSPriorityClass` 。  
   
 |DTSPriorityClass 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
@@ -75,7 +74,7 @@ ms.locfileid: "62898896"
 |BelowNormal|3|  
 |閒置|4|  
   
- `ProtectionLevel`屬性：使用來自列舉的`DTSProtectionLevel`值進行設定。  
+ `ProtectionLevel`屬性：使用來自列舉的值進行設定 `DTSProtectionLevel` 。  
   
 |DTSProtectionLevel 中的易記名稱|數值|  
 |-----------------------------------------|-------------------|  
@@ -87,7 +86,7 @@ ms.locfileid: "62898896"
 |ServerStorage|5|  
   
 ##  <a name="precedence-constraints"></a><a name="PrecedenceConstraints"></a> 優先順序條件約束  
- `EvalOp`屬性：使用來自列舉的`DTSPrecedenceEvalOp`值進行設定。  
+ `EvalOp`屬性：使用來自列舉的值進行設定 `DTSPrecedenceEvalOp` 。  
   
 |DTSPrecedenceEvalOp 中的易記名稱|數值|  
 |------------------------------------------|-------------------|  
@@ -96,7 +95,7 @@ ms.locfileid: "62898896"
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
   
- `Value`屬性：使用來自列舉的`DTSExecResult`值進行設定。  
+ `Value`屬性：使用來自列舉的值進行設定 `DTSExecResult` 。  
   
 |易記名稱|數值|  
 |-------------------|-------------------|  
@@ -109,7 +108,7 @@ ms.locfileid: "62898896"
  「Foreach 迴圈」包含一組列舉值，其屬性可由屬性運算式設定。  
   
 ### <a name="foreach-ado-enumerator"></a>Foreach ADO 列舉值  
- `Type`屬性：使用來自列舉的`ADOEnumerationType`值進行設定。  
+ `Type`屬性：使用來自列舉的值進行設定 `ADOEnumerationType` 。  
   
 |ADOEnumerationType 中的易記名稱|數值|  
 |-----------------------------------------|-------------------|  
@@ -118,7 +117,7 @@ ms.locfileid: "62898896"
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Foreach NodeList 列舉值  
- `SourceDocumentType`、 `InnerXPathStringSourceType`和**OuterXPathStringSourceType**屬性：使用來自列舉的`SourceType`值進行設定。  
+ `SourceDocumentType`、 `InnerXPathStringSourceType` 和**OuterXPathStringSourceType**屬性：使用來自列舉的值進行設定 `SourceType` 。  
   
 |SourceType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
@@ -126,7 +125,7 @@ ms.locfileid: "62898896"
 |變數|1|  
 |DirectInput|2|  
   
- `EnumerationType`屬性：使用來自列舉的`EnumerationType`值進行設定。  
+ `EnumerationType`屬性：使用來自列舉的值進行設定 `EnumerationType` 。  
   
 |EnumerationType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
@@ -135,7 +134,7 @@ ms.locfileid: "62898896"
 |NodeText|2|  
 |ElementCollection|3|  
   
- `InnerElementType`屬性：使用來自列舉的`InnerElementType`值進行設定。  
+ `InnerElementType`屬性：使用來自列舉的值進行設定 `InnerElementType` 。  
   
 |InnerElementType 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
@@ -147,7 +146,7 @@ ms.locfileid: "62898896"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含許多工作，其屬性可由屬性運算式設定。  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作  
- `SourceType`屬性：使用來自列舉的`DDLSourceType`值進行設定。  
+ `SourceType`屬性：使用來自列舉的值進行設定 `DDLSourceType` 。  
   
 |DDLSourceType 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
@@ -156,7 +155,7 @@ ms.locfileid: "62898896"
 |變數|2|  
   
 ### <a name="bulk-insert-task"></a>大量插入工作  
- `DataFileType`屬性：使用來自列舉的`DTSBulkInsert_DataFileType`值進行設定。  
+ `DataFileType`屬性：使用來自列舉的值進行設定 `DTSBulkInsert_DataFileType` 。  
   
 |DTSBulkInsert_DataFileType 中的易記名稱|數值|  
 |--------------------------------------------------|-------------------|  
@@ -166,7 +165,7 @@ ms.locfileid: "62898896"
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
 ### <a name="execute-sql-task"></a>執行 SQL 工作  
- `ResultSetType`屬性：使用來自列舉的`ResultSetType`值進行設定。  
+ `ResultSetType`屬性：使用來自列舉的值進行設定 `ResultSetType` 。  
   
 |ResultSetType 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
@@ -175,7 +174,7 @@ ms.locfileid: "62898896"
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
   
- `SqlStatementSourceType`屬性：使用來自列舉的`SqlStatementSourceType`值進行設定。  
+ `SqlStatementSourceType`屬性：使用來自列舉的值進行設定 `SqlStatementSourceType` 。  
   
 |SqlStatementSourceType 中的易記名稱|數值|  
 |---------------------------------------------|-------------------|  
@@ -184,7 +183,7 @@ ms.locfileid: "62898896"
 |變數|3|  
   
 ### <a name="file-system-task"></a>檔案系統工作  
- `Operation`屬性：使用來自列舉的`DTSFileSystemOperation`值進行設定。  
+ `Operation`屬性：使用來自列舉的值進行設定 `DTSFileSystemOperation` 。  
   
 |DTSFileSystemOperation 中的易記名稱|數值|  
 |---------------------------------------------|-------------------|  
@@ -199,7 +198,7 @@ ms.locfileid: "62898896"
 |DeleteDirectory|8|  
 |DeleteDirectoryContent|9|  
   
- `Attributes`屬性：使用來自列舉的`DTSFileSystemAttributes`值進行設定。  
+ `Attributes`屬性：使用來自列舉的值進行設定 `DTSFileSystemAttributes` 。  
   
 |DTSFileSystemAttributes 中的易記名稱|數值|  
 |----------------------------------------------|-------------------|  
@@ -210,7 +209,7 @@ ms.locfileid: "62898896"
 |系統|8|  
   
 ### <a name="ftp-task"></a>FTP 工作  
- `Operation`屬性：使用來自列舉的`DTSFTPOp`值進行設定。  
+ `Operation`屬性：使用來自列舉的值進行設定 `DTSFTPOp` 。  
   
 |DTSFTPOp 中的易記名稱|數值|  
 |-------------------------------|-------------------|  
@@ -224,7 +223,7 @@ ms.locfileid: "62898896"
 |RemoveDirRemote|7|  
   
 ### <a name="message-queue-task"></a>Message Queue Task  
- `MessageType`屬性：使用來自列舉的`MQMessageType`值進行設定。  
+ `MessageType`屬性：使用來自列舉的值進行設定 `MQMessageType` 。  
   
 |MQMessageType 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
@@ -233,7 +232,7 @@ ms.locfileid: "62898896"
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
- `StringCompareType`屬性：使用來自列舉的`MQStringMessageCompare`值進行設定。  
+ `StringCompareType`屬性：使用來自列舉的值進行設定 `MQStringMessageCompare` 。  
   
 |MQStringMessageCompare 中的易記名稱|數值|  
 |---------------------------------------------|-------------------|  
@@ -242,7 +241,7 @@ ms.locfileid: "62898896"
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
- `TaskType`屬性：使用來自列舉的`MQType`值進行設定。  
+ `TaskType`屬性：使用來自列舉的值進行設定 `MQType` 。  
   
 |MQType 中的易記名稱|數值|  
 |-----------------------------|-------------------|  
@@ -250,7 +249,7 @@ ms.locfileid: "62898896"
 |DTSMQType_Receiver|1|  
   
 ### <a name="send-mail-task"></a>傳送郵件工作  
- `MessageSourceType`屬性：使用來自列舉的`SendMailMessageSourceType`值進行設定。  
+ `MessageSourceType`屬性：使用來自列舉的值進行設定 `SendMailMessageSourceType` 。  
   
 |SendMailMessageSourceType 中的易記名稱|數值|  
 |------------------------------------------------|-------------------|  
@@ -258,7 +257,7 @@ ms.locfileid: "62898896"
 |FileConnection|1|  
 |變數|2|  
   
- `Priority`屬性：使用來自列舉的`MailPriority`值進行設定。  
+ `Priority`屬性：使用來自列舉的值進行設定 `MailPriority` 。  
   
 |MailPriority 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
@@ -267,14 +266,14 @@ ms.locfileid: "62898896"
 |低|5|  
   
 ### <a name="transfer-database-task"></a>傳送資料庫工作  
- `Action`屬性：使用來自列舉的`TransferAction`值進行設定。  
+ `Action`屬性：使用來自列舉的值進行設定 `TransferAction` 。  
   
 |TransferAction 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |[複製]|0|  
 |移動|1|  
   
- `Method`屬性：使用來自列舉的`TransferMethod`值進行設定。  
+ `Method`屬性：使用來自列舉的值進行設定 `TransferMethod` 。  
   
 |TransferMethod 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
@@ -282,7 +281,7 @@ ms.locfileid: "62898896"
 |DatabaseOnline|1|  
   
 ### <a name="transfer-error-messages-task"></a>傳送錯誤訊息工作  
- `IfObjectExists`屬性：使用來自列舉的`IfObjectExists`值進行設定。  
+ `IfObjectExists`屬性：使用來自列舉的值進行設定 `IfObjectExists` 。  
   
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
@@ -291,7 +290,7 @@ ms.locfileid: "62898896"
 |Skip|2|  
   
 ### <a name="transfer-jobs-task"></a>傳送作業工作  
- `IfObjectExists`屬性：使用來自列舉的`IfObjectExists`值進行設定。  
+ `IfObjectExists`屬性：使用來自列舉的值進行設定 `IfObjectExists` 。  
   
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
@@ -300,7 +299,7 @@ ms.locfileid: "62898896"
 |Skip|2|  
   
 ### <a name="transfer-logins-task"></a>傳送登入工作  
- `IfObjectExists`屬性：使用來自列舉的`IfObjectExists`值進行設定。  
+ `IfObjectExists`屬性：使用來自列舉的值進行設定 `IfObjectExists` 。  
   
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
@@ -308,7 +307,7 @@ ms.locfileid: "62898896"
 |Overwrite|1|  
 |Skip|2|  
   
- `LoginsToTransfer`屬性：使用來自列舉的`LoginsToTransfer`值進行設定。  
+ `LoginsToTransfer`屬性：使用來自列舉的值進行設定 `LoginsToTransfer` 。  
   
 |LoginsToTransfer 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
@@ -317,7 +316,7 @@ ms.locfileid: "62898896"
 |AllLoginsFromSelectedDatabases|2|  
   
 ### <a name="transfer-master-stored-procedures-task"></a>傳送主要預存程序工作  
- `IfObjectExists`屬性：使用來自列舉的`IfObjectExists`值進行設定。  
+ `IfObjectExists`屬性：使用來自列舉的值進行設定 `IfObjectExists` 。  
   
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
@@ -326,7 +325,7 @@ ms.locfileid: "62898896"
 |Skip|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>傳送 SQL Server 物件工作  
- `ExistingData`屬性：使用來自列舉的`ExistingData`值進行設定。  
+ `ExistingData`屬性：使用來自列舉的值進行設定 `ExistingData` 。  
   
 |ExistingData 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
@@ -334,7 +333,7 @@ ms.locfileid: "62898896"
 |附加|1|  
   
 ### <a name="web-service-task"></a>Web 服務工作  
- `OutputType`屬性：使用來自列舉的`DTSOutputType`值進行設定。  
+ `OutputType`屬性：使用來自列舉的值進行設定 `DTSOutputType` 。  
   
 |DTSOutputType 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
@@ -342,7 +341,7 @@ ms.locfileid: "62898896"
 |變數|1|  
   
 ### <a name="wmi-data-reader-task"></a>WMI 資料讀取器工作  
- `OverwriteDestination`屬性：使用來自列舉的`OverwriteDestination`值進行設定。  
+ `OverwriteDestination`屬性：使用來自列舉的值進行設定 `OverwriteDestination` 。  
   
 |OverwriteDestination 中的易記名稱|數值|  
 |-------------------------------------------|-------------------|  
@@ -350,7 +349,7 @@ ms.locfileid: "62898896"
 |AppendToDestination|1|  
 |KeepOriginal|2|  
   
- `OutputType`屬性：使用來自列舉的`OutputType`值進行設定。  
+ `OutputType`屬性：使用來自列舉的值進行設定 `OutputType` 。  
   
 |OutputType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
@@ -358,14 +357,14 @@ ms.locfileid: "62898896"
 |PropertyValue|1|  
 |PropertyNameAndValue|2|  
   
- `DestinationType`屬性：使用來自列舉的`DestinationType`值進行設定。  
+ `DestinationType`屬性：使用來自列舉的值進行設定 `DestinationType` 。  
   
 |DestinationType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
 |變數|1|  
   
- `WqlQuerySourceType`屬性：使用來自列舉的`QuerySourceType`值進行設定。  
+ `WqlQuerySourceType`屬性：使用來自列舉的值進行設定 `QuerySourceType` 。  
   
 |QuerySourceType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
@@ -373,21 +372,21 @@ ms.locfileid: "62898896"
 |DirectInput|1|  
 |變數|2|  
   
- WMI 事件監`ActionAtEvent`看員屬性：使用來自列舉的`ActionAtEvent`值進行設定。  
+ WMI 事件監看員 `ActionAtEvent` 屬性：使用來自列舉的值進行設定 `ActionAtEvent` 。  
   
 |ActionAtEvent 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
 |LogTheEvent|1|  
   
- `ActionAtTimeout`屬性：使用來自列舉的`ActionAtTimeout`值進行設定。  
+ `ActionAtTimeout`屬性：使用來自列舉的值進行設定 `ActionAtTimeout` 。  
   
 |ActionAtTimeout 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
 |LogTimeout|1|  
   
- `AfterEvent`屬性：使用來自列舉的`AfterEvent`值進行設定。  
+ `AfterEvent`屬性：使用來自列舉的值進行設定 `AfterEvent` 。  
   
 |AfterEvent 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
@@ -395,7 +394,7 @@ ms.locfileid: "62898896"
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `AfterTimeout`屬性：使用來自列舉的`AfterTimeout`值進行設定。  
+ `AfterTimeout`屬性：使用來自列舉的值進行設定 `AfterTimeout` 。  
   
 |AfterTimeout 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
@@ -403,7 +402,7 @@ ms.locfileid: "62898896"
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `WqlQuerySourceType`屬性：使用來自列舉的`QuerySourceType`值進行設定。  
+ `WqlQuerySourceType`屬性：使用來自列舉的值進行設定 `QuerySourceType` 。  
   
 |QuerySourceType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
@@ -412,7 +411,7 @@ ms.locfileid: "62898896"
 |變數|2|  
   
 ### <a name="xml-task"></a>XML 工作  
- `OperationType`屬性：使用來自列舉的`DTSXMLOperation`值進行設定。  
+ `OperationType`屬性：使用來自列舉的值進行設定 `DTSXMLOperation` 。  
   
 |DTSXMLOperation 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
@@ -423,7 +422,7 @@ ms.locfileid: "62898896"
 |Diff|4|  
 |Patch|5|  
   
- `SourceType`、 `SecondOperandType`和`XPathSourceType`屬性：使用來自列舉的`DTSXMLSourceType`值進行設定。  
+ `SourceType`、 `SecondOperandType` 和 `XPathSourceType` 屬性：使用來自列舉的值進行設定 `DTSXMLSourceType` 。  
   
 |DTSXMLSourceType 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
@@ -431,21 +430,21 @@ ms.locfileid: "62898896"
 |變數|1|  
 |DirectInput|2|  
   
- `DestinationType`和**DiffGramDestinationType**屬性：使用來自列舉的`DTSXMLSaveResultTo`值進行設定。  
+ `DestinationType`和**DiffGramDestinationType**屬性：使用來自列舉的值進行設定 `DTSXMLSaveResultTo` 。  
   
 |DTSXMLSaveResultTo 中的易記名稱|數值|  
 |-----------------------------------------|-------------------|  
 |FileConnection|0|  
 |變數|1|  
   
- `ValidationType`屬性：使用來自列舉的`DTSXMLValidationType`值進行設定。  
+ `ValidationType`屬性：使用來自列舉的值進行設定 `DTSXMLValidationType` 。  
   
 |DTSXMLValidationType 中的易記名稱|數值|  
 |-------------------------------------------|-------------------|  
 |DTD|0|  
 |XSD|1|  
   
- `XPathOperation`屬性：使用來自列舉的`DTSXMLXPathOperation`值進行設定。  
+ `XPathOperation`屬性：使用來自列舉的值進行設定 `DTSXMLXPathOperation` 。  
   
 |DTSXMLXPathOperation 中的易記名稱|數值|  
 |-------------------------------------------|-------------------|  
@@ -453,7 +452,7 @@ ms.locfileid: "62898896"
 |值|1|  
 |NodeList|2|  
   
- `DiffOptions`屬性：使用來自列舉的`DTSXMLDiffOptions`值進行設定。 此列舉值中的選項不會互斥。 若要使用多個選項，請提供要套用之選項的逗號分隔清單。  
+ `DiffOptions`屬性：使用來自列舉的值進行設定 `DTSXMLDiffOptions` 。 此列舉值中的選項不會互斥。 若要使用多個選項，請提供要套用之選項的逗號分隔清單。  
   
 |DTSXMLDiffOptions 中的易記名稱|數值|  
 |----------------------------------------|-------------------|  
@@ -467,7 +466,7 @@ ms.locfileid: "62898896"
 |IgnoreXmlDecl|64|  
 |IgnoreDtd|128|  
   
- `DiffAlgorithm`屬性：使用來自列舉的`DTSXMLDiffAlgorithm`值進行設定。  
+ `DiffAlgorithm`屬性：使用來自列舉的值進行設定 `DTSXMLDiffAlgorithm` 。  
   
 |DTSXMLDiffAlgorithm 中的易記名稱|數值|  
 |------------------------------------------|-------------------|  
@@ -483,7 +482,7 @@ ms.locfileid: "62898896"
 ### <a name="all-maintenance-tasks"></a>所有維護工作  
  所有維護工作都使用下列列舉來設定指定的屬性。  
   
- `DatabaseSelectionType`屬性：使用來自列舉的`DatabaseSelection`值進行設定。  
+ `DatabaseSelectionType`屬性：使用來自列舉的值進行設定 `DatabaseSelection` 。  
   
 |DatabaseSelection 中的易記名稱|數值|  
 |----------------------------------------|-------------------|  
@@ -493,7 +492,7 @@ ms.locfileid: "62898896"
 |User|3|  
 |特定|4|  
   
- `TableSelectionType`屬性：使用來自列舉的`TableSelection`值進行設定。  
+ `TableSelectionType`屬性：使用來自列舉的值進行設定 `TableSelection` 。  
   
 |TableSelection 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
@@ -501,7 +500,7 @@ ms.locfileid: "62898896"
 |全部|1|  
 |特定|2|  
   
- `ObjectTypeSelection`屬性：使用來自列舉的`ObjectType`值進行設定。  
+ `ObjectTypeSelection`屬性：使用來自列舉的值進行設定 `ObjectType` 。  
   
 |ObjectType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
@@ -510,21 +509,21 @@ ms.locfileid: "62898896"
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>備份資料庫工作  
- `DestinationCreationType`屬性：使用來自列舉的`DestinationType`值進行設定。  
+ `DestinationCreationType`屬性：使用來自列舉的值進行設定 `DestinationType` 。  
   
 |DestinationType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
 |手動|1|  
   
- `ExistingBackupsAction`屬性：使用來自列舉的`ActionForExistingBackups`值進行設定。  
+ `ExistingBackupsAction`屬性：使用來自列舉的值進行設定 `ActionForExistingBackups` 。  
   
 |ActionForExistingBackups 中的易記名稱|數值|  
 |-----------------------------------------------|-------------------|  
 |附加|0|  
 |Overwrite|1|  
   
- `BackupAction`屬性：使用來自列舉的`BackupTaskType`值進行設定。 此屬性可搭配 `BackupIsIncremental` 屬性使用，以定義工作執行的備份類型。  
+ `BackupAction`屬性：使用來自列舉的值進行設定 `BackupTaskType` 。 此屬性可搭配 `BackupIsIncremental` 屬性使用，以定義工作執行的備份類型。  
   
 |BackupTaskType 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
@@ -532,7 +531,7 @@ ms.locfileid: "62898896"
 |檔案|1|  
 |Log|2|  
   
- `BackupDevice`屬性：使用來自[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件（SMO） `DeviceType`列舉的值進行設定。  
+ `BackupDevice`屬性：使用來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件（SMO）列舉的值進行設定 `DeviceType` 。  
   
 |DeviceType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
@@ -543,14 +542,14 @@ ms.locfileid: "62898896"
 |VirtualDevice|4|  
   
 ### <a name="maintenance-cleanup-task"></a>維護清除工作  
- `FileTypeSelected`屬性：使用來自列舉的`FileType`值進行設定。  
+ `FileTypeSelected`屬性：使用來自列舉的值進行設定 `FileType` 。  
   
 |FileType 中的易記名稱|數值|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
 |FileReport|1|  
   
- `OlderThanTimeUnitType`屬性：使用來自列舉的`TimeUnitType`值進行設定。  
+ `OlderThanTimeUnitType`屬性：使用來自列舉的值進行設定 `TimeUnitType` 。  
   
 |TimeUnitType 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
@@ -560,7 +559,7 @@ ms.locfileid: "62898896"
 |Year|3|  
   
 ### <a name="update-statistics-task"></a>更新統計資料工作  
- `UpdateType`屬性：使用來自[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件（SMO） `StatisticsTarget`列舉的值進行設定。  
+ `UpdateType`屬性：使用來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件（SMO）列舉的值進行設定 `StatisticsTarget` 。  
   
 |StatisticsTarget 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
@@ -571,7 +570,7 @@ ms.locfileid: "62898896"
 ##  <a name="common-properties"></a><a name="CommonProperties"></a> 通用屬性  
  封裝、工作以及「Foreach 迴圈」、「For 迴圈」和「時序」等容器可以使用下列列舉來設定指定的屬性。  
   
- `ForceExecutionResult`屬性：使用來自列舉的`DTSForcedExecResult`值進行設定。  
+ `ForceExecutionResult`屬性：使用來自列舉的值進行設定 `DTSForcedExecResult` 。  
   
 |DTSForcedExecResult 中的易記名稱|數值|  
 |------------------------------------------|-------------------|  
@@ -580,9 +579,9 @@ ms.locfileid: "62898896"
 |失敗|1|  
 |Completion|2|  
   
- `IsolationLevel`屬性-由 .NET Framework `IsolationLevel`列舉所設定。 如需詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313)中的＜.NET Framework 類別庫＞。  
+ `IsolationLevel`屬性-由 .NET Framework 列舉所設定 `IsolationLevel` 。 如需詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313)中的＜.NET Framework 類別庫＞。  
   
- `LoggingMode`屬性：使用來自列舉的`DTSLoggingMode`值進行設定。  
+ `LoggingMode`屬性：使用來自列舉的值進行設定 `DTSLoggingMode` 。  
   
 |DTSLoggingMode 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
@@ -590,7 +589,7 @@ ms.locfileid: "62898896"
 |啟用|1|  
 |已停用|2|  
   
- `TransactionOption`屬性：使用來自列舉的`DTSTransactionOption`值進行設定。  
+ `TransactionOption`屬性：使用來自列舉的值進行設定 `DTSTransactionOption` 。  
   
 |DTSTransactionOption 中的易記名稱|數值|  
 |-------------------------------------------|-------------------|  

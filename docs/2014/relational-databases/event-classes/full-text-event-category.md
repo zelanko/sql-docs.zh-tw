@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8107a3ea-f891-4134-946b-c64e3a8e92e8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cd00b1966351b5205da737a8f04912b015ec81e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a889f4bc00f48a73fa16b079a34c2b07f1df297
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63023112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029537"
 ---
 # <a name="full-text-event-category"></a>Full Text 事件類別目錄
   **Full Text** 事件類別目錄包含一般的全文檢索事件。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 228753c113bcf43ed276d989a3996e9bf23bfc16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063656"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>檢視交易式發行集的資料衝突 (SQL Server Management Studio)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 複寫衝突檢視器可讓您檢視點對點異動複寫和具有佇列更新訂閱之異動複寫的衝突。 如需如何偵測和解決衝突的資訊，請參閱[點對點複寫中的衝突偵測](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)和[設定佇列更新衝突解決選項 &#40;SQL Server Management Studio&#41;](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
@@ -32,7 +31,7 @@ ms.locfileid: "63144405"
   
     -   針對 [**sp_addpublication**](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 的 `@conflict_retention` 參數指定保留值。  
   
-    -   `'conflict_retention'`針對@property參數指定的值，並為@value [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)的參數指定保留值。  
+    -   針對參數指定的值 `'conflict_retention'` @property ，並為 sp_changepublication 的參數指定保留值 @value 。 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)  
   
 ### <a name="to-view-conflicts"></a>若要檢視衝突  
   

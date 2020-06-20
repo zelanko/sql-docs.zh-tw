@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb2cd178440a2d0ea0cd9842616a52058a63f7b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3c02ce70ace777c171aa981ae6e2f53d235aaa4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662182"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029462"
 ---
 # <a name="missing-join-predicate-event-class"></a>遺失聯結述詞事件類別
   「遺失聯結述詞」事件類別指示要執行的查詢沒有聯結述詞。 這可能造成長時間執行的查詢。 如需聯結述詞的詳細資訊，請參閱[述詞 &#40;Transact-SQL&#41;](/sql/t-sql/queries/predicates)。  

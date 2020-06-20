@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0561ff95fc5fbcfb6a9dc552580e14ff2a5d14f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775748"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932719"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2014 (安裝程式)
-  本主題提供使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式的安裝精靈安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之新執行個體的逐步程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈會針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的安裝提供單一功能樹狀目錄，所以您不需要個別予以安裝。 如需可安裝之各種元件的詳細資訊，請參閱[SQL Server 2014 的安裝](installation-for-sql-server.md)。  如需如何個別安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件的詳細資訊，請參閱[install SQL Server 2014](install-sql-server.md)。  
+  本主題提供使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式的安裝精靈安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之新執行個體的逐步程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈會針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的安裝提供單一功能樹狀目錄，所以您不需要個別予以安裝。 如需可安裝之各種元件的詳細資訊，請參閱[SQL Server 2014 的安裝](installation-for-sql-server.md)。  如需如何個別安裝元件的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[install SQL Server 2014](install-sql-server.md)。  
   
  這些額外的主題列出了安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他方式：  
   
@@ -36,7 +35,7 @@ ms.locfileid: "62775748"
   
 -   [使用安裝精靈 &#40;安裝程式&#41;升級至 SQL Server 2014 ](upgrade-sql-server-using-the-installation-wizard-setup.md)。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，請檢閱 [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)中的主題。  
   
 > [!NOTE]  
@@ -50,7 +49,7 @@ ms.locfileid: "62775748"
   
 3.  在 [產品金鑰] 頁面上，選取選項，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，或具有 PID 金鑰之產品的產品版本。 如需詳細資訊，請參閱[SQL Server 2014 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
-     若要繼續，請按 [下一步]****。  
+     若要繼續進行，請按 **[下一步]** 。  
   
 4.  在 [授權條款] 頁面上，檢閱授權合約，並在同意時，選取 [我接受授權條款] **** 核取方塊，然後按 [下一步] ****。 若要協助提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62775748"
   
 8.  安裝程式會在 [安裝安裝程式檔案] 頁面上，顯示下載、擷取及安裝安裝程式檔案的進度。 如有找到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的更新，並指定要包含該更新，將會一併安裝。  
   
-9. 在 [安裝程式角色] 頁面上，選取** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [功能安裝**]，然後按 **[下一步]** 繼續前往 [特徵選取] 頁面。  
+9. 在 [安裝程式角色] 頁面上，選取 [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安裝**]，然後按 **[下一步]** 繼續前往 [特徵選取] 頁面。  
   
 10. 在 [特徵選取] 頁面上，選取要安裝的元件。 當您選取功能名稱之後，每一個元件群組的描述就會出現在 [功能描述] **** 窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱[SQL Server 2014 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[SQL Server 2014 版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
@@ -142,21 +141,21 @@ ms.locfileid: "62775748"
   
      按一下 [加入目前使用者] **** 按鈕，可加入要授與 Distributed Replay Controller 服務之存取權限的使用者。 按一下 [加入] **** 按鈕，可加入 Distributed Replay Controller 服務的存取權限。 按一下 [移除] **** 按鈕，可移除 Distributed Replay Controller 服務的存取權限。  
   
-     若要繼續，請按 [下一步]****。  
+     若要繼續進行，請按 **[下一步]** 。  
   
 18. 您可以使用 [Distributed Replay Client 組態] 頁面，指定要授與 Distributed Replay Client 服務之管理權限的使用者。 擁有管理權限的使用者將可不受限制地存取 Distributed Replay Client 服務。  
   
-     [控制器名稱]**** 是選擇性參數，預設值為 \<空白**>。 針對 Distributed Replay Client 服務，輸入將與用戶端電腦進行通訊之控制器的名稱。 請注意：  
+     [**控制器名稱**] 是選擇性參數，預設值是 \<*blank*> 。 針對 Distributed Replay Client 服務，輸入將與用戶端電腦進行通訊之控制器的名稱。 請注意：  
   
     -   如果您已經設定了控制器，請在設定每個用戶端時輸入該控制器的名稱。  
   
     -   如果您尚未設定控制器，則可以將控制器名稱留白。 不過，您必須在 [用戶端組態] **** 檔中，手動輸入控制器名稱。  
   
-     指定 Distributed Replay 用戶端服務的**工作目錄**。 預設工作目錄為\<*磁碟機號*>：\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Program Files \DReplayClient\WorkingDir\\。  
+     指定 Distributed Replay 用戶端服務的**工作目錄**。 預設工作目錄為 \<*drive letter*> ： \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\WorkingDir \\ 。  
   
-     指定 Distributed Replay 用戶端服務的**結果目錄**。 預設結果目錄為\<*磁碟機號*>：\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Program Files \DReplayClient\ResultDir\\。  
+     指定 Distributed Replay 用戶端服務的**結果目錄**。 預設結果目錄為 \<*drive letter*> ： \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\ResultDir \\ 。  
   
-     若要繼續，請按 [下一步]****。  
+     若要繼續進行，請按 **[下一步]** 。  
   
 19. [準備安裝] 頁面會顯示在安裝期間指定之安裝選項的樹狀檢視。 在此頁面上，安裝程式會指出產品更新功能為啟用或停用，以及最後的更新版本。  
   

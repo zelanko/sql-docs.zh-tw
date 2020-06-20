@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14623019-7839-4038-9d12-2f8953d2ec04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1939ea9e1de7b0b7858ad09ad26bc3b4fbf008c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2625fa00aa871bf628e0152f6310dba3864f592
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065304"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938079"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>XMLA 查詢編輯器 (Analysis Services - 多維度資料)
   使用 XMLA 查詢編輯器，即可設計和執行以多維度運算式 (XMLA) 語言撰寫的陳述式和指令碼。  
@@ -56,7 +55,7 @@ ms.locfileid: "66065304"
   
 |詞彙|定義|  
 |----------|----------------|  
-|**查詢編輯器視窗**|鍵入要由 XMLA 查詢編輯器執行的 XMLA 陳述式和指令碼。<br /><br /> 查詢編輯器的內容功能表提供下列選項：<br /><br /> **剪**下：將目前選取範圍複製到剪貼簿，並從 [查詢編輯器] 視窗中移除選取範圍。<br />**複製**：將目前選取範圍複製到剪貼簿。<br />**貼**上：將剪貼簿的內容貼入目前的選取範圍。<br />**連接**：開啟 [連接到伺服器]**** 對話方塊，以建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。<br />**中斷連接**：中斷目前查詢編輯器與[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例的連線。<br />**中斷所有查詢的連接**：中斷連接所有開啟的查詢編輯器。<br />**變更連接**：開啟 [**連接到伺服器**] 對話方塊，以建立與其他[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例的連接。<br />**在物件總管中開啟伺服器**：開啟[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]目前查詢編輯器連接的目標實例**物件總管**。<br />**執行**：執行選取的程式碼，如果未選取任何程式碼，則執行目前查詢編輯器中的完整程式碼。<br />**屬性視窗**：在中**Properties** [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，顯示目前查詢視窗的 [屬性] 視窗。<br />**查詢選項**：顯示 [**查詢選項**] 對話方塊。|  
+|**查詢編輯器視窗**|鍵入要由 XMLA 查詢編輯器執行的 XMLA 陳述式和指令碼。<br /><br /> 查詢編輯器的內容功能表提供下列選項：<br /><br /> **剪**下：將目前選取範圍複製到剪貼簿，並從 [查詢編輯器] 視窗中移除選取範圍。<br />**複製**：將目前選取範圍複製到剪貼簿。<br />**貼**上：將剪貼簿的內容貼入目前的選取範圍。<br />**連接**：開啟 [連接到伺服器]**** 對話方塊，以建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。<br />**中斷連接**：中斷目前查詢編輯器與實例的連線 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。<br />**中斷所有查詢的連接**：中斷連接所有開啟的查詢編輯器。<br />**變更連接**：開啟 [**連接到伺服器**] 對話方塊，以建立與其他實例的連接 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。<br />**在物件總管中開啟伺服器**：開啟 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 目前查詢編輯器連接的目標實例**物件總管**。<br />**執行**：執行選取的程式碼，如果未選取任何程式碼，則執行目前查詢編輯器中的完整程式碼。<br />**屬性視窗**：在中，顯示目前查詢視窗的 [**屬性**] 視窗 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。<br />**查詢選項**：顯示 [**查詢選項**] 對話方塊。|  
 |**結果視窗**|以文字顯示 XMLA 陳述式或指令碼的結果。|  
 |**訊息視窗**|顯示 XMLA 陳述式或指令碼如何執行的相關資訊。 例如，這個視窗會顯示執行期間發生的錯誤，或執行之後擷取的資料格數目。|  
   

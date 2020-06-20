@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 371a2ba0b88266e076cf4e3e438fbe5b0216cf1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059617"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951708"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Deploy Packages by Using the Deployment Utility
   當已建立部署公用程式，以從建立部署公用程式之電腦以外電腦上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案安裝封裝時，必須首先將部署資料夾複製到目的地電腦。  
   
  部署資料夾的路徑是在為其建立部署公用程式之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的 DeploymentOutputPath 屬性中指定的。 預設路徑為 bin\Deployment (相對於 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案)。 如需詳細資訊，請參閱 [建立部署公用程式](../../2014/integration-services/create-a-deployment-utility.md)。  
   
- 請使用「封裝安裝精靈」來安裝封裝。 若要啟動此精靈，請在將部署資料夾複製到伺服器後按兩下部署公用程式檔案。 此檔案名為 \<專案名稱>.SSISDeploymentManifest；您可以在目的地電腦的部署資料夾中找到這個檔案。  
+ 請使用「封裝安裝精靈」來安裝封裝。 若要啟動此精靈，請在將部署資料夾複製到伺服器後按兩下部署公用程式檔案。 這個檔案的名稱為 \<project name> 。.Ssisdeploymentmanifest，而且可以在目的地電腦的 [部署] 資料夾中找到。  
   
 > [!NOTE]  
 >  根據所部署的封裝版本，如果有不同版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 並存安裝，可能會發生錯誤。 因為 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]所有版本的 .SSISDeploymentManifest 副檔名都相同，所以可能會發生這項錯誤。 按兩下此檔案就會針對最近安裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]版本 (可能與部署公用程式檔案的版本不同) 呼叫安裝程式 (dtsinstall.exe)。 若要解決此問題，請從命令列執行正確的 dtsinstall.exe 版本，並且提供部署公用程式檔案的路徑。  
@@ -50,7 +49,7 @@ ms.locfileid: "66059617"
   
 1.  開啟目標電腦上的部署資料夾。  
   
-2.  按兩下資訊清單檔 \<專案名稱>.SSISDeploymentManifest，以啟動 [套件安裝精靈]。  
+2.  按兩下資訊清單檔案 \<project name> 。.Ssisdeploymentmanifest]，以啟動 [封裝安裝精靈]。  
   
 3.  在 [部署 SSIS 封裝]**** 頁面上，選取 [SQL Server 部署]**** 選項。  
   

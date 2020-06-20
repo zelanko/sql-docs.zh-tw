@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9272a6c11ce226f385c0b1f79f965a2a0f55835e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88bbf2131ba1c067d5232ddb2fc52c8ce8b0e3e6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901119"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967388"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>進階 Integration Services 運算式範例
   本節提供組合多個運算子和函數的進階運算式範例。 如果在優先順序條件約束或「條件式分割」轉換中使用運算式，則評估結果必須為布林。 不過，該條件約束不會套用至屬性運算式、變數、「衍生的資料行」轉換，或「For 迴圈」容器中使用的運算式。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d503ffad6c8d723bb0d933120a37e9b680a37cd7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d141c1951066af14e25cb4dd36459f5e87051001
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704790"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056078"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
   依照序數根據每個參數來設定參數的屬性，或指定 SSPARAMPROPS 結構的陣列來設定大量參數屬性。  
@@ -72,7 +71,7 @@ SSPARAMPROPS rgParamProperties[]);
   
  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，資料庫引擎的改進功能就允許 ISSCommandWithParameters::SetParameterProperties 針對預期的結果取得更精確的描述。 這些更精確的結果可能會與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 ISSCommandWithParameters::SetParameterProperties 所傳回的值不同。 如需詳細資訊，請參閱[中繼資料探索](../native-client/features/metadata-discovery.md)。  
   
-|成員|說明|  
+|member|描述|  
 |------------|-----------------|  
 |*iOrdinal*|所傳遞參數的序數。|  
 |*cPropertySets*|*rgPropertySets* 中的 DBPROPSET 結構數目。|  

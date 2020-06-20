@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d352c91a-6e08-4e50-9f3e-a37892d9c2cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 551a810d12d698124e1e9d0f78fcb0b37a113d6d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b680086f76e0c1a1e8c8cfc2f4ef82099957b3fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055910"
 ---
 # <a name="multithreaded-applications"></a>多執行緒應用程式
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式是一個多執行緒的驅動程式。 撰寫多執行緒應用程式是使用非同步呼叫處理多個 ODBC 呼叫的替代方式。 執行緒可以進行非同步的 ODBC 呼叫，而其他執行緒可以在第一個執行緒遭到封鎖而等待回應其呼叫時處理。 此模式比進行非同步呼叫更有效率，因為它會排除網路流量之類的負擔，而且產生重複的 ODBC 函數會呼叫 SQL_STILL_EXECUTING 的測試。  

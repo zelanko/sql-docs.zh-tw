@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 225b6010e5d5a6c45a84d7e22272c4e5242906fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: abce2a7e9c2c75b497a40965f3b4742ed7278bca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827894"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916080"
 ---
 # <a name="data-in-data-flows"></a>資料流程中的資料
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供一組資料流程中使用的資料類型。  

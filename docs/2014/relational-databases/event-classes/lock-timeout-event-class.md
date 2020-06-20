@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67f9d89897ef36d297dbeabfffcc02906677cb29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6b2b2e60f0aadaa2000fa9b14975ab5e2f5879
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62663953"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029408"
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout 事件類別
   Lock:Timeout 事件類別指出資源 (例如分頁) 上的鎖定要求已逾時，因為其他交易在所需資源上已有封鎖的鎖定。 逾時由 @@LOCK_TIMEOUT 系統函式決定，且可使用 SET LOCK_TIMEOUT 陳述式來設定。  

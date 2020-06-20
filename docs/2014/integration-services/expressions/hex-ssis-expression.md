@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4dfd342647f6d355ee34e1e815db9431a212dbc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1aeeaf3231d727d610ac51a476bf32bbd9a549b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897853"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967328"
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS 運算式)
   傳回代表整數的十六進位值的字串。  

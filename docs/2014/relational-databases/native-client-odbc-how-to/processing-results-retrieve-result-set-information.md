@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3017f74b12eb18624f8a34e8a1289da18b70c93a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0f7ed275eb9b6558a77160c3c7fb2fc233c199cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048211"
 ---
 # <a name="retrieve-result-set-information-odbc"></a>擷取結果集資訊 (ODBC)
     
@@ -30,7 +29,7 @@ ms.locfileid: "82712700"
   
     -   呼叫[SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md)以取得結果資料行的相關資訊。  
   
-     或  
+     Or  
   
     -   呼叫[SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md)以取得結果資料行的特定描述元資訊。  
   

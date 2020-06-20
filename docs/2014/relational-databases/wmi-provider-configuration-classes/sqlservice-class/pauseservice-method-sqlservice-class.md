@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f4b9667f9d0018920885d4fdf7e5fce3b5a47311
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8286e123bbbc279ba461336c5716eeb208c5b238
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061836"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002148"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>PauseService 方法 (SqlService 類別)
   嘗試將此服務置於暫停狀態。  
@@ -38,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  表示此服務的 [SqlService 類別](sqlservice-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

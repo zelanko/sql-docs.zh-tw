@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 335ea792-8f3a-45e6-bc63-eb2d7855878e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d67a37e85bd67d80b86a30c21b35de298060985f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4a44a38d2475537e639ece0b35829cfed1c596e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044211"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028793"
 ---
 # <a name="server-event-category"></a>Server 事件類別目錄
   **Server** 事件類別目錄包含一般的伺服器事件。  

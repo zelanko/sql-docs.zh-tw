@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f12b66fd895b7a7b90103fd1bed1eb51597c669a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8d22e8e594bd0a0491ab0546e373d64ea591925b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483171"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967018"
 ---
 # <a name="delete-a-model-master-data-services"></a>刪除模型 (Master Data Services)
   刪除模型，從 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]移除模型及其所有資料。  
@@ -26,7 +25,7 @@ ms.locfileid: "65483171"
 > [!NOTE]  
 >  完成這個程序時，模型中所有版本的所有物件和所有資料都會永久刪除。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

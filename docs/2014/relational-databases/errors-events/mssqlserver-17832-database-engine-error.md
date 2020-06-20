@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 245cf55b5cff4cb203b20557d6944e0d05375a99
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915426"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967798"
 ---
 # <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
     
@@ -55,7 +54,7 @@ ms.locfileid: "62915426"
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-2.  輸入`regedit`，然後按一下 **[確定]**。 (如果出現 [使用者帳戶控制]  對話方塊，請按一下 [繼續]  )。  
+2.  輸入 `regedit` ，然後按一下 **[確定]**。 (如果出現 [使用者帳戶控制]  對話方塊，請按一下 [繼續]  )。  
   
 3.  巡覽至 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**。  
   

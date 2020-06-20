@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 653f2dd3-36a2-4bd5-8703-71a57d244661
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2d4b110446ae27335f65e83958a1a153350ccbcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c772f2527bd5ddb8a6759cbaa72d8aed9277f5cb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048483"
 ---
 # <a name="creating-a-table-tutorial"></a>建立資料表 (教學課程)
   若要建立資料表，您必須提供資料表的名稱，以及資料表中各資料行的名稱和資料類型， 最好也能指出各資料行中是否允許有 Null 值。  

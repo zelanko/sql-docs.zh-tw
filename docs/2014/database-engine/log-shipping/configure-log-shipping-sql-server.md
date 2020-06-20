@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 269b0ae2980435e507128cc87606f7eb702c2b7f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774582"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931369"
 ---
 # <a name="configure-log-shipping-sql-server"></a>設定記錄傳送 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的記錄傳送。  
@@ -107,7 +106,7 @@ ms.locfileid: "62774582"
   
 21. 請注意 **[還原作業]** 下之 **[排程]** 方塊中所列的還原排程。 如果您要自訂安裝的排程，請按一下 **[排程]** ，然後視需要調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。 這個排程應接近備份排程。  
   
-22. 按一下 [確定]  。  
+22. 按一下 [確定]。  
   
 23. 在 **[監視伺服器執行個體]** 下，選取 **[使用監視伺服器執行個體]** 核取方塊，再按一下 **[設定]**。  
   
@@ -120,7 +119,7 @@ ms.locfileid: "62774582"
   
 26. 在 **[記錄保留]** 下，選擇您要保留記錄傳送記錄的時間長度。  
   
-27. 按一下 [確定]  。  
+27. 按一下 [確定]。  
   
 28. 在 **[資料庫屬性]** 對話方塊上，按一下 **[確定]** 以開始設定處理序。  
   

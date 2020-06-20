@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: eae8ad534ba452acd7f65e4faf66dfcf4bc73791
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5b64aee371a41bc0d58ec4a52a1a1526bc13388
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223282"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002287"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Dependencies 屬性 (SqlService 類別)
   取得相依於參考之服務的服務清單。  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  表示此服務的 [SqlService 類別](sqlservice-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

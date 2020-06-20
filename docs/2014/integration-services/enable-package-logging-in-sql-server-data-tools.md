@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73a4c6fc0795fde7a9b8e7378fd0a88447ff5cd2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059275"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966932"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中啟用封裝記錄功能
   本程序描述如何將記錄檔加入封裝、設定封裝層級的記錄，以及將記錄組態儲存至 XML 檔案。 您可以僅在封裝層級加入記錄檔，但封裝無需執行記錄即可啟用封裝所包含之容器中的記錄。  
@@ -35,7 +34,7 @@ ms.locfileid: "66059275"
   
 3.  在 [提供者類型]**** 清單中選取記錄提供者，然後按一下 [加入]****。  
   
-4.  在 [**設定**] 資料行中，選取連接管理員，或按一下** \<[新增連接>** ]，為記錄提供者建立適當類型的新連線管理員。 因所選提供者的不同，使用下列連接管理員之一：  
+4.  在 [設定]**資料行中**，選取連接管理員，或按一下 **\<New connection>** 以針對記錄提供者建立適當類型的新連線管理員。 因所選提供者的不同，使用下列連接管理員之一：  
   
     -   若為「文字」檔案，請使用「檔案」連接管理員。 如需詳細資訊，請參閱檔案[連線管理員](connection-manager/file-connection-manager.md)  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66059275"
   
 9. 在 [詳細資料]**** 索引標籤上，按一下 [儲存]****。 [另存新檔]**** 對話方塊隨即出現。 尋找要儲存記錄組態的資料夾，輸入新記錄組態的檔案名稱，然後按一下 [儲存]****。  
   
-10. 按一下 [確定]  。  
+10. 按一下 [確定]。  
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

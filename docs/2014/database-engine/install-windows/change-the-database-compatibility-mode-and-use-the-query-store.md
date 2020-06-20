@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dafd3a5f8a460bb08e63919c2cb853ad74dc2f1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779110"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932755"
 ---
 # <a name="migrate-query-plans"></a>移轉查詢計劃
   在大多數的情況下，將資料庫升級到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最新版，可提升查詢效能。 但是，如果您的關鍵任務查詢已針對效能謹慎地加以微調，您可能會想要在升級之前為這些查詢保留查詢計劃，透過的方式是為每一個查詢建立計畫指南。 如果在升級之後，查詢最佳化工具針對一個或多個查詢選擇比較沒有效率的計畫，您可啟用計畫指南，並強制查詢最佳化工具使用升級前計畫。  
@@ -50,7 +49,7 @@ ms.locfileid: "62779110"
   
 -   查詢[sys.databases dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql)動態管理函數的 query_plan 資料行。  
   
--   查詢[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]編譯事件類別的執行程式表[xml](../../relational-databases/event-classes/showplan-xml-event-class.md)、執行程式表 xml[統計資料設定檔](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)和顯示[計畫 xml](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) 。  
+-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)][查詢編譯](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)事件類別的執行程式表[xml](../../relational-databases/event-classes/showplan-xml-event-class.md)、執行程式表 xml[統計資料設定檔](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)和顯示計畫 xml。  
   
  下列範例會藉由查詢動態管理檢視來為 `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` 陳述式收集查詢計畫。  
   
@@ -92,8 +91,8 @@ GO
  再次執行此查詢，並檢查所產生的查詢計劃。 您應該會發現此計畫符合您在計畫指南中所指定的計畫。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [查詢提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
- [計劃指南](../../relational-databases/performance/plan-guides.md)  
+ [計畫指南](../../relational-databases/performance/plan-guides.md)  
   
   

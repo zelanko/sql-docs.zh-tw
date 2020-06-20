@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7417efef16ae16ef11b955af12ba8dbbd549939c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065874"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938319"
 ---
 # <a name="translations-analysis-services"></a>翻譯 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** 僅限多維度  
@@ -45,7 +44,7 @@ ms.locfileid: "66065874"
   
 1.  在設計工具中，開啟 Adventure Works 多維度模型。  
   
-2.  在方案總管中，開啟 [資料來源] [流覽]，然後\<按兩下 [艾德公司 DW 版本]>. dsv。  
+2.  在方案總管中，開啟 [資料來源視圖]，然後按兩下 [艾德作品] [Works DW \<version> . dsv]。  
   
 3.  尋找 dimDate、dimProduct、dimProductCategory 或 dimProductSubcateogry。 上述所有維度包含月、週中的日、產品名稱、類別目錄名稱等翻譯成員的屬性。  
   

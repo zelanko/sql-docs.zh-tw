@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d43ed0ad-3dbd-42e0-9cef-8320b8d87497
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0986e654430a47cc494bf1646c222b4888fc105b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67b642d369c73cc144af31f835786613766045f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033510"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028848"
 ---
 # <a name="preconnectstarting-event-class"></a>PreConnect:Starting 事件類別
   PreConnect:Starting 事件類別會指出 LOGON 觸發程序或資源管理員分類函數開始執行。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241087f5da3c7baa09a34fab8ab1886809ce0d36
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289306"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931439"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>可用性群組接聽程式、用戶端連接及應用程式容錯移轉 (SQL Server)
   此主題包含有關 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 用戶端連接和應用程式容錯移轉功能的考量資訊。  
@@ -118,7 +117,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- 在這個連接字串範例中，用戶端嘗試連接到通訊埠 1433 (如果可用性群組接聽程式是在 1433 上接聽，也可以省略此通訊埠編號) 上名為 `AGListener` 的可用性群組接聽程式。  連接字串將`ApplicationIntent`屬性設定為`ReadOnly`，使其成為*讀取意圖的連接字串*。  如果沒有此設定，伺服器就不會嘗試唯讀路由連接。  
+ 在這個連接字串範例中，用戶端嘗試連接到通訊埠 1433 (如果可用性群組接聽程式是在 1433 上接聽，也可以省略此通訊埠編號) 上名為 `AGListener` 的可用性群組接聽程式。  連接字串將 `ApplicationIntent` 屬性設定為 `ReadOnly` ，使其成為*讀取意圖的連接字串*。  如果沒有此設定，伺服器就不會嘗試唯讀路由連接。  
   
  可用性群組的主要資料庫會處理內送唯讀路由要求，並嘗試找出已聯結至主要複本並設定為唯讀路由的線上唯讀複本。  用戶端會從主要複本伺服器接收連接資訊，並連接到已識別的唯讀複本。  
   

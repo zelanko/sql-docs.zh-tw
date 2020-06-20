@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fe8a7c8ad24c472eb41448f1303ad240a5232c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048433"
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
   在 XML 輸入檔中，直接指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作負載。  
@@ -47,7 +46,7 @@ ms.locfileid: "68211110"
 |--------------------|-----------------|  
 |**資料類型和長度**|`string`，沒有長度限制。|  
 |**預設值**|無。|  
-|**次出現**|如果未指定任何其他工作負載類型，便需要使用這個元素一次。 您必須指定 `EventString` 父系的 `File`、`Database` 或 `Workload` 子元素，但只能使用一種類型。 例如，如果您利用 `EventString` 元素指定了工作負載，便不能在相同 XML 輸入檔中，同時利用 `File` 元素來指定工作負載。|  
+|**出現次數**|如果未指定任何其他工作負載類型，便需要使用這個元素一次。 您必須指定 `EventString` 父系的 `File`、`Database` 或 `Workload` 子元素，但只能使用一種類型。 例如，如果您利用 `EventString` 元素指定了工作負載，便不能在相同 XML 輸入檔中，同時利用 `File` 元素來指定工作負載。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
@@ -60,6 +59,6 @@ ms.locfileid: "68211110"
  此元素的使用方式範例，請參閱 [XML Input File Sample with Inline Workload &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md) (內嵌工作負載的 XML 輸入檔範例 (DTA))。  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

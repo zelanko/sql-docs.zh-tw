@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f754abc2e10732c33c011fdaf8fcd06c0175a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771434"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923439"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>建立函數以擷取變更資料
   完成執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程後，下一個工作是建立可擷取變更資料的資料表值函式。 第一次累加式載入前，您僅需要建立一次這個函數。  
@@ -76,7 +75,7 @@ ms.locfileid: "62771434"
 > [!NOTE]  
 >  如需此預存程序之語法及其參數的詳細資訊，請參閱 [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL &#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql)。  
   
- 預存程序永遠會產生一個包裝函數來傳回每個擷取執行個體的所有變更。 如果在*@supports_net_changes*建立 capture 實例時設定了參數，預存程式也會產生一個包裝函式，以從每個適用的 capture 實例傳回淨變更。  
+ 預存程序永遠會產生一個包裝函數來傳回每個擷取執行個體的所有變更。 如果在建立 *@supports_net_changes* capture 實例時設定了參數，預存程式也會產生一個包裝函式，以從每個適用的 capture 實例傳回淨變更。  
   
  預存程序會傳回包含兩個資料行的結果集：  
   
@@ -108,7 +107,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>了解與使用預存程序所建立的函數  
- 若要有系統地逐步解說已捕捉變更資料的時間軸，所產生*@end_time*的包裝函式會預期一個*@start_time*間隔的參數將會是後續間隔的參數。 遵循此慣例時，所產生的包裝函數可以進行下列工作：  
+ 若要有系統地逐步解說已捕捉變更資料的時間軸，所產生的包裝函式 *@end_time* 會預期一個間隔的參數將會是 *@start_time* 後續間隔的參數。 遵循此慣例時，所產生的包裝函數可以進行下列工作：  
   
 -   將日期/時間值對應到內部使用的 LSN 值。  
   
@@ -126,7 +125,7 @@ deallocate #hfunctions
   
 -   間隔的開始日期/時間值和結束日期/時間值。 當包裝函數使用日期/時間值做為查詢間隔的端點時，異動資料擷取函數會使用兩個 LSN 值做為端點。  
   
--   資料列篩選器。 對於包裝函式和變更資料捕獲函數而言， *@row_filter_option*參數相同。 如需詳細資訊，請參閱 [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) 和 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)。  
+-   資料列篩選器。 對於包裝函式和變更資料捕獲函數而言， *@row_filter_option* 參數相同。 如需詳細資訊，請參閱 [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) 和 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)。  
   
  包裝函數所傳回的結果集包含下列資料：  
   
@@ -134,7 +133,7 @@ deallocate #hfunctions
   
 -   名稱為 __CDC_OPERATION 的資料行使用一或兩個字元欄位來識別與資料列關聯的作業。 此欄位的有效值如下：'I' 用於插入、'D' 用於刪除、'UO'’ 用於更新舊值，而 'UN' 用於更新新值。  
   
--   當您要求旗標時，會在作業碼之後以位資料行顯示，並以*@update_flag_list*參數中指定的順序出現。 這些資料行的命名方式是將 '_uflag' 附加到相關聯的資料行名稱。  
+-   當您要求旗標時，會在作業碼之後以位資料行顯示，並以參數中指定的順序出現 *@update_flag_list* 。 這些資料行的命名方式是將 '_uflag' 附加到相關聯的資料行名稱。  
   
  如果您的封裝呼叫查詢所有變更的包裝函式，該包裝函式也會傳回 __CDC_STARTLSN 和 \__CDC_SEQVAL 資料行。 這兩個資料行會分別成為結果集的第一和第二個資料行。 此包裝函數也會根據這兩個資料行，排序結果集。  
   
@@ -212,7 +211,7 @@ go
 |**__$seqval**|`binary(10)`|用來排序交易內資料列變更的序列值。|  
 |**__ $ operation**|`int`|與變更相關聯的資料操作語言 (DML) 作業。 可以是下列其中一項：<br /><br /> 1 = 刪除<br /><br /> 2 = 插入<br /><br /> 3 = 更新 (更新作業之前的值)。<br /><br /> 4 = 更新 (更新作業之後的值)。|  
 |**__$update_mask**|`varbinary(128)`|位元遮罩，可根據變更資料表的資料行序數識別這些變更的資料行。 如果您必須判斷已經變更的資料行，可以檢查這個值。|  
-|**\<已捕獲的來源資料表資料行>**|視情況而異|這個函數所傳回的其餘資料行都是建立擷取執行個體時，在來源資料表中識別成擷取資料行的資料行。 如果擷取的資料行清單中沒有以序數指定任何資料行，就會傳回來源資料表中的所有資料行。|  
+|**\<captured source table columns>**|視情況而異|這個函數所傳回的其餘資料行都是建立擷取執行個體時，在來源資料表中識別成擷取資料行的資料行。 如果擷取的資料行清單中沒有以序數指定任何資料行，就會傳回來源資料表中的所有資料行。|  
   
  如需詳細資訊，請參閱 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)。  
   

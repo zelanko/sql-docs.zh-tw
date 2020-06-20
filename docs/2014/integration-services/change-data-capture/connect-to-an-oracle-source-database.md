@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f32462ef33af50a08cd933ed5c1a04c4efaa17de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf25496a36a1c5864ee4101226b6432663af111f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835760"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923459"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>連接到 Oracle 來源資料庫
   使用 [Oracle 來源] 頁面可提供連接至 Oracle 來源資料庫所需的資訊。 此 CDC 執行個體將會讀取您所連接之 Oracle 資料庫的重做記錄。  
@@ -41,7 +40,7 @@ ms.locfileid: "62835760"
 > [!NOTE]
 >  使用者必須擁有 Oracle 資料庫中授與的以下權限，才能成為記錄採礦使用者。  
 > 
->  -   SELECT on \<任何擷取的資料表>  
+>  -   選取 [開啟]\<any-captured-table>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE on DBMS LOGMNR  
 > -   SELECT on V$LOGMNR CONTENTS  

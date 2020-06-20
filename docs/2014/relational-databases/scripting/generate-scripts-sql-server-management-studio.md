@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91d00367c0ae8cc0541c4bd9dbec2c508010bb90
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8207e899c98d788ea0cbd618231597b22a6c0793
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703897"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063459"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>產生指令碼 (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供兩種產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼的機制。 您可以使用 [**產生和發佈腳本] Wizard**來建立多個物件的腳本。 您也可以使用**物件總管**中的 [編寫組件的指令碼為] 功能表，為個別物件或多個物件產生指令碼。  
@@ -42,7 +41,7 @@ ms.locfileid: "82703897"
   
 3.  展開物件的類別目錄。 例如，展開 [資料表] 或 [檢視表] 節點。  
   
-4.  以滑鼠右鍵按一下物件，然後指向 [產生 \<物件類型> 的指令碼為]，例如指向 [產生資料表的指令碼為]。  
+4.  以滑鼠右鍵按一下物件，並指向 [**編寫腳本 \<object type> 為**]，例如，指向 [**編寫資料表的腳本為**]。  
   
 5.  指向指令碼類型，例如 [CREATE 至] 或 [ALTER 至]。  
   
@@ -57,11 +56,11 @@ ms.locfileid: "82703897"
   
 2.  展開 [資料庫]，然後展開含有要編寫指令碼之物件的資料庫。  
   
-3.  以滑鼠右鍵按一下第一個要編寫指令碼的物件，並指向 [產生 \<物件類型> 的指令碼為]****，然後在 [另存新檔]**** 選項中選擇 [新增查詢編輯器視窗]**** 作為輸出目的地。  
+3.  以滑鼠右鍵按一下要編寫腳本的第一個物件，指向 [**編寫腳本 \<object type> 為**]，然後在 [**另存**新檔] 選項中選擇 [追加**查詢編輯器] 視窗**做為輸出目的地。  
   
 4.  導覽至您想要編寫指令碼的第二個物件。  
   
-5.  以滑鼠右鍵按一下物件，並指向 [產生 \<物件類型> 的指令碼為]****，然後在 [另存新檔]**** 選項中選擇 [剪貼簿]**** 作為輸出目的地。  
+5.  以滑鼠右鍵按一下物件，並指向 [**編寫腳本 \<object type> 為**]，然後在 [**另存**新檔] 選項中選擇 [**剪貼**簿] 做為輸出目的地。  
   
 6.  在針對第一個物件開啟的 [查詢編輯器] 視窗中，從剪貼簿貼上第二個物件的指令碼。  
   
@@ -82,6 +81,6 @@ ms.locfileid: "82703897"
   
 6.  Crtl + 以滑鼠左鍵按一下您想要編寫指令碼的第二個物件。  
   
-7.  以滑鼠右鍵按一下其中一個選取的物件，然後選取 [產生 \<物件類型> 的指令碼為]。  
+7.  以滑鼠右鍵按一下其中一個選取的物件，然後選取 [**編寫腳本 \<object type> 為**]。  
   
   

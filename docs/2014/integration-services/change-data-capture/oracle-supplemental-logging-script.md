@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c8f876852ff78e254bdff7ed687d2196d01d9c1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41925225638ca278fb2d58ec1fddf1b8c9918ab5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835345"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922634"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 補充記錄指令碼
   此對話方塊會顯示 Oracle 補充記錄指令碼。  

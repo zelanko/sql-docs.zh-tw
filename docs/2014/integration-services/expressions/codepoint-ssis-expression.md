@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10d2eeb6991c0c75e8dbe8102f94148f60f0a361
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c77590de168837b2acd172550fbd4180e6e3b16d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769372"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967448"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (SSIS 運算式)
   傳回字元運算式最左邊字元的 Unicode 字碼指標。  

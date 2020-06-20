@@ -1,5 +1,6 @@
 ---
 title: 使用資料指標（ODBC） |Microsoft Docs
+description: ODBC 支援資料指標模型，可允許數種類型的資料指標、在資料指標內的滾動/定位、數個並行選項，以及定點更新。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be512713462a9518856de2a16db749490ea24366
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d39b26cfdbbba543700d040bac575a48efe65813
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306278"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967688"
 ---
 # <a name="using-cursors-odbc"></a>使用資料指標 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

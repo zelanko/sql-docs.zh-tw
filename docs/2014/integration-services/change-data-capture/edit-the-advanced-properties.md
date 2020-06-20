@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 320530eeb7bad37f7fd40bab5df9a9af8e9b1d82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 694f7280995f7f884681e2ec9c23658c00296fa3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835687"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923289"
 ---
 # <a name="edit-the-advanced-properties"></a>編輯進階屬性
   使用 **[進階]** 索引標籤，將特殊屬性加入至 CDC 執行個體。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 87ada4ef6cf9266720ac0c9742440d0d60345c88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e105502a79fc96deeba0ee49d94d88272e73c51
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827962"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916368"
 ---
 # <a name="create-infosource-for-master-data"></a>[建立主要資料的 InfoSource]
   使用 [建立主要資料的 InfoSource]  對話方塊可以在 SAP Netweaver BW 系統中建立主要資料的新 InfoSource。  

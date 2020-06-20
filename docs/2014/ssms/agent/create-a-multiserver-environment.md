@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6920920aa603c615cdc5f84a34a93204842052d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192968"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995365"
 ---
 # <a name="create-a-multiserver-environment"></a>建立多伺服器環境
   多伺服器管理會要求您設定一部主要伺服器 (MSX) 以及一或多部目標伺服器 (TSX)。 將在所有目標伺服器上處理的作業會先在主要伺服器上定義，然後再下載至目標伺服器。  
@@ -60,7 +59,7 @@ ms.locfileid: "63192968"
   
 |描述|主題|  
 |-----------------|-----------|  
-|描述如何建立主要伺服器。|[設定為主要伺服器](make-a-master-server.md)|  
+|描述如何建立主要伺服器。|[設為主要伺服器](make-a-master-server.md)|  
 |描述如何建立目標伺服器。|[設為目標伺服器](make-a-target-server.md)|  
 |描述如何將目標伺服器編列到主要伺服器中。|[將目標伺服器編列至主要伺服器](enlist-a-target-server-to-a-master-server.md)|  
 |描述如何使目標伺服器脫離主要伺服器，|[使目標伺服器脫離主要伺服器](defect-a-target-server-from-a-master-server.md)|  
@@ -68,6 +67,6 @@ ms.locfileid: "63192968"
 |描述如何檢查目標伺服器的狀態。|[sp_help_targetserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
 ## <a name="see-also"></a>另請參閱  
- [針對使用 Proxy 的多伺服器作業進行疑難排解](troubleshoot-multiserver-jobs-that-use-proxies.md)  
+ [為使用 Proxy 的多伺服器作業疑難排解](troubleshoot-multiserver-jobs-that-use-proxies.md)  
   
   

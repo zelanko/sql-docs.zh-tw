@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d34c78589a853c2b73167dbad555ab9da3e0d9fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650883"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995063"
 ---
 # <a name="resize-the-job-history-log"></a>調整作業記錄大小
-  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在中設定 Agent 作業記錄的大小限制。  
+  本主題描述如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用，在中設定 Agent 作業記錄的大小限制 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 -   **開始之前：**  
   
@@ -33,7 +32,7 @@ ms.locfileid: "62650883"
   
 -   **若要使用下列項目設定作業記錄的大小限制：**  
   
-     [Transact-SQL](#SSMS)  
+     [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62650883"
   
 #### <a name="to-resize-the-job-history-log-based-on-time"></a>若要根據時間調整作業記錄大小  
   
-1.  在**物件總管**中，連接到的實例[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，然後展開該實例。  
+1.  在**物件總管**中，連接到的實例 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，然後展開該實例。  
   
 2.  以滑鼠右鍵按一下 [SQL Server Agent]****，然後按一下 [屬性]****。  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d12dbcdf49fc34bdd37fca21635cbcd416efc36b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c200e69d0e80232a558c4fa030864fe864d237c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176223"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967338"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>指令碼元件的程式碼撰寫和偵錯
   在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中，指令碼元件有中繼資料設計與程式碼設計兩種模式。 當您開啟 [指令碼轉換編輯器]  時，元件就會進入中繼資料設計模式，您可在其中設定中繼資料及元件屬性。 在您於中繼資料設計模式設定好指令碼元件的屬性和輸入及輸出後，就可以切換到程式碼設計模式編寫自訂的指令碼。 如需中繼資料設計模式和程式碼設計模式的詳細資訊，請參閱[在指令碼元件編輯器中設定指令碼元件](configuring-the-script-component-in-the-script-component-editor.md)。
@@ -36,7 +35,7 @@ ms.locfileid: "78176223"
 ### <a name="script-component-development-environment"></a>指令碼元件開發環境
  若要撰寫指令碼，請在 [指令碼轉換編輯器]  的 [指令碼]  頁面上按一下 [編輯指令碼]  以開啟 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE。 VSTA IDE 包含 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 環境的所有標準功能，例如色彩編碼的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 編輯器、IntelliSense 和物件瀏覽器。
 
- 指令碼是以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 撰寫。 您可以在 [指令碼轉換編輯器]  中，藉由設定 **ScriptLanguage** 屬性來指定指令碼語言。 如果想要使用其他的程式語言，可以用您所選的語言開發自訂組件，然後在指令碼元件中，從程式碼呼叫其功能。
+ 指令碼是以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 撰寫。 您可以在 [指令碼轉換編輯器] 中，藉由設定 **ScriptLanguage** 屬性來指定指令碼語言。 如果想要使用其他的程式語言，可以用您所選的語言開發自訂組件，然後在指令碼元件中，從程式碼呼叫其功能。
 
  您在指令碼元件中建立的指令碼會儲存在封裝定義中， 而沒有個別的指令碼檔案。 因此，使用指令碼元件並不會影響封裝部署。
 
@@ -59,9 +58,9 @@ ms.locfileid: "78176223"
 
     -   `Connections` 集合類別，這個類別包含 [指令碼轉換編輯器] 的 [連接管理員] 頁面上所選取連接的參考。
 
-    -   `Variables`集合類別，其中包含在 [**腳本轉換編輯器**] 的`ReadOnlyVariable` [ `ReadWriteVariables` **腳本**] 頁面上，和屬性中所輸入之變數的參考。
+    -   `Variables`集合類別，其中包含在 [ `ReadOnlyVariable` `ReadWriteVariables` **腳本轉換編輯器**] 的 [**腳本**] 頁面上，和屬性中所輸入之變數的參考。
 
--   `BufferWrapper`專案專案所包含的類別，會針對<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> [**腳本轉換編輯器**] 的 [**輸入和輸出**] 頁面上所設定的每個輸入和輸出，繼承自。 這其中每個類別所包含的類型存取子屬性，都與設定的輸入和輸出資料行以及包含這些資料行的資料流緩衝區相對應。
+-   `BufferWrapper`專案專案所包含的類別，會 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 針對 [**腳本轉換編輯器**] 的 [**輸入和輸出**] 頁面上所設定的每個輸入和輸出，繼承自。 這其中每個類別所包含的類型存取子屬性，都與設定的輸入和輸出資料行以及包含這些資料行的資料流緩衝區相對應。
 
  如需如何使用這些物件、方法和屬性的資訊，請參閱[了解指令碼元件物件模型](understanding-the-script-component-object-model.md)。 如需如何在特定的指令碼元件類型中使用這些類別的方法和屬性的資訊，請參閱[其他指令碼元件範例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)。 範例主題也包含完整的程式碼範例。
 
@@ -170,7 +169,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|
 |變數|使用 `Variables` 專案項目的 `ComponentWrapper` 集合類別中的具名和類型存取子屬性，這些屬性是透過 `Variables` 類別的 `ScriptMain` 屬性而公開。<br /><br /> `PreExecute` 方法只能存取唯讀變數。 `PostExecute` 方法可以存取唯讀和讀/寫變數。|
 |連接|使用 `Connections` 專案項目的 `ComponentWrapper` 集合類別中的具名和類型存取子屬性，這些屬性是透過 `Connections` 類別的 `ScriptMain` 屬性而公開。|
-|事件|使用<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> `ScriptMain`類別的屬性和<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>介面的**\<引發 X>** 方法，引發事件。|
+|事件|使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 類別的屬性 `ScriptMain` 和介面的**引發 \<X> **方法，引發事件 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 。|
 |記錄|使用 `ScriptMain` 類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 方法來執行記錄。|
 
 ## <a name="debugging-the-script-component"></a>偵錯指令碼元件
@@ -184,9 +183,9 @@ public class ScriptMain : UserComponent
 
  您也可以使用下列方法來監視指令碼元件的執行：
 
--   使用`MessageBox.Show` **system.web**命名空間中的方法中斷執行，並顯示強制回應訊息。 (請在完成偵錯程序之後移除此程式碼)。
+-   使用 `MessageBox.Show` **system.web**命名空間中的方法中斷執行，並顯示強制回應訊息。 (請在完成偵錯程序之後移除此程式碼)。
 
--   引發資訊訊息、警告和錯誤的事件。 FireInformation、FireWarning 和 FireError 方法會在 Visual Studio [輸出]  視窗中顯示事件描述。 不過，FireProgress 方法、Console.Write 方法和 Console.WriteLine 方法不會在 [輸出]  視窗中顯示任何資訊。 FireProgress 事件的訊息會顯示在  **設計師的 [進度]** [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 索引標籤上。 如需詳細資訊，請參閱[在指令碼元件中引發事件](../../data-flow/transformations/script-component.md)。
+-   引發資訊訊息、警告和錯誤的事件。 FireInformation、FireWarning 和 FireError 方法會在 Visual Studio [輸出]  視窗中顯示事件描述。 不過，FireProgress 方法、Console.Write 方法和 Console.WriteLine 方法不會在 [輸出]  視窗中顯示任何資訊。 FireProgress 事件的訊息會顯示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師的 [進度] 索引標籤上。 如需詳細資訊，請參閱[在指令碼元件中引發事件](../../data-flow/transformations/script-component.md)。
 
 -   將事件或使用者定義的訊息記錄到啟用的記錄提供者。 如需詳細資訊，請參閱[在指令碼元件中記錄](logging-in-the-script-component.md)。
 
@@ -197,7 +196,7 @@ public class ScriptMain : UserComponent
 
  [瞭解腳本元件物件模型](understanding-the-script-component-object-model.md)說明如何使用腳本元件中可用的物件、方法和屬性。
 
- [參考腳本解決方案中的其他元件](../referencing-other-assemblies-in-scripting-solutions.md)說明如何從腳本元件中的[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]類別庫參考物件。
+ [參考腳本解決方案中的其他元件](../referencing-other-assemblies-in-scripting-solutions.md)說明如何從 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 腳本元件中的類別庫參考物件。
 
  [模擬腳本元件的錯誤輸出](../../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)說明如何針對在腳本元件處理期間引發錯誤的資料列，模擬錯誤輸出。
 

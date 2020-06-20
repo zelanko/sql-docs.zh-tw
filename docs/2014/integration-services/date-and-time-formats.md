@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9db752a0910abb1a671e50b3a7a34fd2fd9cff68
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059650"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967008"
 ---
 # <a name="date-and-time-formats"></a>日期和時間格式
   快速剖析提供一組快速、簡單的常式用以剖析資料。 快速剖析可支援下列格式的日期和時間資料類型。  
@@ -120,11 +119,11 @@ ms.locfileid: "66059650"
   
  快速剖析會以 DT_DATE、DT_DBTIMESTAMP、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 輸出字串。 將填補以截斷格式表示的日期/時間值。 下表列出針對遺失的日期和時間部分而加入的值。  
   
-|日期/時間部分|填補|  
+|日期/時間部分|邊框間距|  
 |---------------------|-------------|  
 |秒|加入 00。|  
 |分鐘|加入 00:00。|  
-|Hour|加入 00:00:00。|  
+|小時|加入 00:00:00。|  
 |Day|加入 01 做為此月的某個日期。|  
 |Month|加入 01 做為此年份的某個月份。|  
   

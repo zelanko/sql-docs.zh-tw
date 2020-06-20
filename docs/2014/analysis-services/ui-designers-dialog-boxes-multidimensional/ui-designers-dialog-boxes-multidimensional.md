@@ -8,13 +8,12 @@ ms.technology: analysis-services
 ms.topic: conceptual
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c2d10e1b117cf88f74523dad6fcec3cfd3ee871
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a098b1c75f6ef388e6e7a069827861623f8f4e85
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065673"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938227"
 ---
 # <a name="ui-designers-and-dialogs-for-multidimensional-analysis"></a>多維度分析的 UI 設計工具和對話方塊
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bb567bffe0c184907ca61bd583eb5666948a0f03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad036177e6265c31697a98c9e24fc4d1c11b310b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176179"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967238"
 ---
 # <a name="extending-packages-with-scripting"></a>使用指令碼擴充封裝
   如果您發現 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的內建元件不符合需求，可以透過撰寫自己的延伸模組，擴充 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能。 您有兩個完全不同的選項可擴充封裝：其一是在指令碼工作與指令碼元件所提供的強大包裝函數中撰寫程式碼；其二則是可以從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型提供的基底類別衍生，從頭建立自訂 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 延伸模組。
@@ -40,12 +39,12 @@ ms.locfileid: "78176179"
  [使用腳本元件擴充資料流程](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)討論如何使用腳本元件建立自訂的資料流程來源、轉換和目的地。 資料流程元件通常會為處理的每個資料列呼叫一次。
 
 ## <a name="reference"></a>參考
- [Integration Services 錯誤和訊息參考](../integration-services-error-and-message-reference.md)列出預先定義[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的錯誤碼及其符號名稱和描述。
+ [Integration Services 錯誤和訊息參考](../integration-services-error-and-message-reference.md)列出預先定義的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤碼及其符號名稱和描述。
 
 ## <a name="related-sections"></a>相關章節
  [使用自訂物件擴充封裝](../extending-packages-custom-objects/extending-packages-with-custom-objects.md)討論如何建立程式自訂工作、資料流程元件以及其他封裝物件，以便在多個封裝中使用。
 
- [以程式設計方式建立套件](../building-packages-programmatically/building-packages-programmatically.md)描述如何以程式設計方式建立、設定、執行、載入、儲存[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和管理封裝。
+ [以程式設計方式建立套件](../building-packages-programmatically/building-packages-programmatically.md)描述如何以程式設計方式建立、設定、執行、載入、儲存和管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。
 
 ![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的最新下載、文件、範例和影片以及社群中的選定方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。
 
