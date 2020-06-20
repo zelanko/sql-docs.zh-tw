@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3f24bf0-6b02-496b-b08e-327f7b320bc5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8bf094914e087379ac72f23afcbf034a8248b30e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2d09d85e7b041e2899d69556bcccd2a2aa8ea9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643087"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059760"
 ---
 # <a name="instancename-property-servernetworkprotocolproperty-class"></a>InstanceName 屬性 (ServerNetworkProtocolProperty 類別)
-  取得伺服器網路通訊協定安裝所在之[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例的名稱。  
+  取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 伺服器網路通訊協定安裝所在之實例的名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  代表 [執行個體上網路通訊協定之屬性的](servernetworkprotocolproperty-class.md) ServerNetworkProtocolProperty 類別 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

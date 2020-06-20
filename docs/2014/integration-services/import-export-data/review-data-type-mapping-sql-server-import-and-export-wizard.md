@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6472ff165894937d31366e47651ada64af38ae1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 108256e1d8a3638da5cd676a0ee57894b3ee874c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767940"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966200"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>檢閱資料類型對應 (SQL Server 匯入和匯出精靈)
   使用 [**審核資料類型對應**] 頁面，即可查看 wizard 為了讓來源資料與目的地相容，而必須執行之資料類型轉換的詳細資訊。 這項資訊包括視覺提示，可區別預期會成功的轉換與可能導致錯誤或截斷的轉換。 針對每個轉換，您可以決定是否要接受精靈所建議的轉換，而且可以指定如何處理發生的任何錯誤。  
@@ -35,7 +34,7 @@ ms.locfileid: "62767940"
 |資料行|描述|  
 |------------|-----------------|  
 |來源圖示|指出資料類型轉換的成功機率：<br /><br /> 綠色核取記號圖示表示精靈預期這個資料表的所有資料類型轉換都會成功。<br /><br /> 黃色警告圖示表示您應該檢閱精靈即將執行的個別轉換。 若要檢閱這些轉換，請選取資料表，然後在 **[資料類型對應]** 清單中檢閱個別資料行的轉換。<br /><br /> 紅色錯誤圖示表示精靈無法確實針對這個資料表執行某些轉換。|  
-|**來源**|顯示來源資料表的名稱。|  
+|**Source**|顯示來源資料表的名稱。|  
 |目的地圖示|指出目的地已經存在或將由精靈建立：<br /><br /> 資料表圖示表示目的地是現有的資料表。<br /><br /> 含有光環的資料表圖示表示目的地是精靈即將建立的新資料表。|  
 |**Destination**|顯示目的地資料表的名稱。|  
   

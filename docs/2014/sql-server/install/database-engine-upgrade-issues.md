@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 81df03de-219b-4ec1-b3c6-fb861150346e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6f06cea141c2812e97459b0427d1ceb248688a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69c6dfdf1657e7ddf93905b4f9e880eba23ec1b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095775"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054913"
 ---
 # <a name="database-engine-upgrade-issues"></a>Database Engine 升級問題
   本章節的主題描述的是可能會影響升級為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 問題。 這些主題會描述一些可讓您採取的動作，以便減少這些變更對環境的影響。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fcda1522fdb8be83ec61df04898d19600ad04a3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6e7b88de880348fabb00cb46d3028716441bc2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176810"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055126"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主要與外部索引鍵條件約束
   主索引鍵和外部索引鍵是兩種類型的條件約束，可用以強制執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中的資料完整性。 這些都是重要的資料庫物件。
@@ -74,7 +73,7 @@ ms.locfileid: "78176810"
 #### <a name="cascading-referential-integrity"></a>串聯式參考完整性
  使用串聯式參考完整性條件約束，就可以定義使用者嘗試刪除或更新現有外部索引鍵所指向的索引鍵時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 所採取的動作。 可以定義下列串聯式動作。
 
- 沒有動作： [!INCLUDE[ssDE](../../includes/ssde-md.md)]會引發錯誤，而且會回復父資料表中資料列的刪除或更新動作。
+ 沒有動作 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ：會引發錯誤，而且會回復父資料表中資料列的刪除或更新動作。
 
  當父資料表中的資料列更新或刪除時，會在參考資料表中更新或刪除 CASCADE 對應的資料列。 如果 `timestamp` 資料行是外部索引鍵或被參考索引鍵的一部分，就無法指定 CASCADE。 如果資料表有 INSTEAD OF DELETE 觸發程序，則不能指定 ON DELETE CASCADE。 如果資料表有 INSTEAD OF UPDATE 觸發程序，則不能指定 ON UPDATE CASCADE。
 
@@ -106,7 +105,7 @@ ms.locfileid: "78176810"
 ##  <a name="related-tasks"></a><a name="Tasks"></a> 相關工作
  下表列出與主索引鍵和外部索引鍵條件約束相關聯的一般工作。
 
-|工作|主題|
+|Task|主題|
 |----------|-----------|
 |描述如何建立主索引鍵。|[建立主索引鍵](../tables/create-primary-keys.md)|
 |描述如何刪除主索引鍵。|[刪除主索引鍵](../tables/delete-primary-keys.md)|

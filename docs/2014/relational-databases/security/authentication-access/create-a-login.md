@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e476880103a69ae016c6720f36e26ef884db6f5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012023"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055396"
 ---
 # <a name="create-a-login"></a>建立登入
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立登入。 登入是連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的人員或程序的識別。  
@@ -81,7 +80,7 @@ ms.locfileid: "63012023"
   
     4.  如需其他進階搜尋選項，請按一下 [進階...]****。 如需詳細資訊，請參閱 [選擇使用者、電腦或群組對話方塊 - 進階頁面](https://technet.microsoft.com/library/cc733110.aspx)。  
   
-    5.  按一下 [確定]  。  
+    5.  按一下 [確定]。  
   
 4.  若要建立以 Windows 主體為基礎的登入，請選取 **[Windows 驗證]**。 這是預設選項。  
   
@@ -198,7 +197,7 @@ ms.locfileid: "63012023"
  **名稱**  
  加入此方格的每一個主體或安全性實體名稱。  
   
- **類型**  
+ **型別**  
  描述每個項目的類型。  
   
  **明確索引標籤**  
@@ -210,7 +209,7 @@ ms.locfileid: "63012023"
  **授與者**  
  授與權限的主體。  
   
- **把**  
+ **授與**  
  選取此選項即可授與此權限給登入。 清除此選項即可撤銷這個權限。  
   
  **使用授與**  
@@ -237,7 +236,7 @@ ms.locfileid: "63012023"
  選取此選項可啟用或停用此登入。 此選項會搭配 ENABLE 或 DISABLE 選項來使用 ALTER LOGIN 陳述式。  
   
  **SQL Server 驗證**  
- 只有當選取的登入使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]驗證進行連接，而且登入已被鎖定時，才可以使用 [登入**已鎖定**] 核取方塊。此設定為唯讀。 若要解除鎖定已經鎖定的登入，請搭配 UNLOCK 選項執行 ALTER LOGIN。  
+ 只有當選取的登入使用驗證進行連接，而且登入已被鎖定時，才可以使用 [**登入已鎖定**] 核取方塊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。此設定為唯讀。 若要解除鎖定已經鎖定的登入，請搭配 UNLOCK 選項執行 ALTER LOGIN。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

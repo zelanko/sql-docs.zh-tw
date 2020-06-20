@@ -10,14 +10,13 @@ helpviewer_keywords:
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 ms.reviewer: carlrab
-ms.openlocfilehash: cc0b3e0dccd1ecf674d583e4d1b7adc1a85341d2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cb8305d9d5a3c72e6dffafd231f21110a5abdd14
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758884"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055334"
 ---
 # <a name="create-a-database-master-key"></a>建立資料庫主要金鑰
 

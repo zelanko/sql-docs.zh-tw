@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1f87c3c612be25660b5949f57d3ba0745f23587
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4de7d9af6a9936a85842c6de6289e958272dadc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012539"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053149"
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Audit Schema Object Take Ownership 事件類別
   檢查是否有變更結構描述物件 (例如資料表、程序或函數) 擁有者的權限時，就會發生 **Audit Schema Object Take Ownership** 事件類別。 這是在使用 ALTER AUTHORIZATION 陳述式指派物件的擁有者時發生。  

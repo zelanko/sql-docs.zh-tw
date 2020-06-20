@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61c8186f84a391b3b2394e82e21ecc407f6f3864
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a0163077a2751759d0f48ee20afc75abdcf6b58d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702627"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054892"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>授與 XML 結構描述集合的權限
   您可以授與建立 XML 結構描述集合的權限，也可以授與 XML 結構描述集合物件的權限。  

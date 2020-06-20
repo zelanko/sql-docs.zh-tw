@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9addd13deb4dcf3c81a4975e0ed33783799ae2a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93e92395435b229bf613d2d26f5a90b4ca4157ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769164"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966638"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (SSIS 運算式)
   傳回小於或等於數值運算式的最大整數。  

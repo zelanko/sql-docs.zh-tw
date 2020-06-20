@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c59a2fce106b08f53722ce44ae69225b680d7925
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdf3b71d985a60fed5080ec97462a43e79c4ca22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484657"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054313"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>第 3 課：比對資料，以便從供應商清單中移除重複項
   您會藉由在知識庫中建立比對原則，準備知識庫來執行比對活動。 知識庫中只能有一個比對原則。 比對原則是由一個或多個比對規則所組成。 規則會識別與比對程序有關的定義域，並指定每個定義域值在比對判斷中攜帶的加權。 您會在規則中指定定義域值是否必須完全相符或者可以類似，以及相似度的程度。 您也會指定定義域比對是否為比對程序的必要條件。 您可以個別測試每個規則，並針對取樣資料測試整個原則。 測試程式會顯示比對分數大於叢集（群組）中 DQS 設定所指定之**最低記錄分數**臨界值的記錄。 您可以持續調整原則中的規則，直到滿意為止。  

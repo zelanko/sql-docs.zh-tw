@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 037e56649d3473e3fe09b9533bcc96b4729870d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196711"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055062"
 ---
 # <a name="table-properties"></a>資料表屬性
   本主題描述在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]之 [資料表屬性] 對話方塊中顯示的資料表屬性。 如需如何顯示這些屬性的詳細資訊，請參閱 [檢視資料表定義](view-the-table-definition.md)。  
@@ -141,7 +140,7 @@ ms.locfileid: "68196711"
   
 ### <a name="general"></a>一般  
  **Vardecimal 儲存格式已啟用**  
- 當`True`為時，這個唯讀值表示`decimal`和`numeric`資料類型會使用 vardecimal 儲存格式來儲存。 若要變更此選項，請`vardecimal storage format`使用[sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)的選項。 Vardecimal 儲存格式已被取代。 請改用資料列壓縮。  
+ 當為時 `True` ，這個唯讀值表示 `decimal` 和 `numeric` 資料類型會使用 vardecimal 儲存格式來儲存。 若要變更此選項，請使用 `vardecimal storage format` [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)的選項。 Vardecimal 儲存格式已被取代。 請改用資料列壓縮。  
   
  **索引空間**  
  顯示索引在資料表中所佔的空間量 (以 MB 表示)。 這個值不包括資料表的 XML 索引空間使用量。 如果 XML 索引屬於此資料表，請改用 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 。  

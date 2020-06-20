@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6748956dcfe0b880ffe3b384e49a8ccc00ebf12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1db38c3381939ecb0842dd3e7c265d49ba6c46d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62936986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062257"
 ---
 # <a name="job-categories-properties-and-new-job-category"></a>作業類別目錄屬性及新增作業類別目錄
   列出一項作業類別目錄或所有作業類別目錄中的作業，並讓您能夠加入新的作業類別目錄。  

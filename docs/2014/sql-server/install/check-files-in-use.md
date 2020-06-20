@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e3610ad08d34942dd7dbc1af1371a6c5d86e7890
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 17c77a69804cd290ab1b7f5e21372b6c4a79975a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856597"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037175"
 ---
 # <a name="check-files-in-use"></a>檢查使用中的檔案
   若要避免在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新之後重新啟動 Windows，請使用 [檢查使用中檔案] 頁面來識別正在鎖定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新安裝程式所需之檔案的處理序。  
@@ -44,7 +43,7 @@ ms.locfileid: "83856597"
   
 ## <a name="ui-element-list"></a>UI 元素清單  
   
-|Name|描述|  
+|名稱|描述|  
 |----------|-----------------|  
 |程序|顯示正在使用要更新之檔案的處理序完整名稱。|  
 |類型|顯示處理序的類型。|  

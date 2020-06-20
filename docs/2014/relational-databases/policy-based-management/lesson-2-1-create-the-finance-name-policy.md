@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 184865166da659ae00308eb1192e832989949da6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67792907"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061633"
 ---
 # <a name="create-the-finance-name-policy"></a>建立 Finance Name 原則
    在這項工作中，您將會建立名為 Finance 的資料庫，然後建立要求所有資料表都以字母 **fintbl** 為開頭的條件。 接著，您將會建立原則和原則類別目錄，以便針對 Finance 資料庫中的資料表強制執行命名標準。  
@@ -39,7 +38,7 @@ ms.locfileid: "67792907"
   
 3.  在 [Facet]**** 清單中，選取 [多部分名稱]****。  
   
-4.  在 [**運算式**] 區域的 [**欄位**] 方塊中** \@ **，選取 [名稱];在 [**運算子**] 方塊中，選取 [ **Like**];在 [**值**] 方塊中，輸入 **' fintbl 為開頭% '** 來強制所有資料表名稱的開頭都是字母**fintbl 為開頭**。  
+4.  在 [**運算式**] 區域的 [**欄位**] 方塊中，選取 [ ** \@ 名稱**]; 在 [**運算子**] 方塊中，選取 [ **Like**]，然後在 [**值**] 方塊中輸入 **' fintbl 為開頭% '** ，強制所有資料表名稱的開頭都是字母**fintbl 為開頭**。  
   
 5.  在 [描述]**** 頁面上，輸入**財務資料表名稱的開頭必須是 fintbl**，然後按一下 [確定]**** 建立條件。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "67792907"
   
 6.  在 [建立新條件]**** 對話方塊的 [名稱]**** 方塊中，輸入 **Finance Database**。  
   
-7.  在 [**運算式**] 方塊中，完成運算式以包含** \@Name = ' 財務 '**，然後按一下 **[確定]** 以關閉 [條件] 頁面。  
+7.  在 [**運算式**] 方塊中，完成運算式以包含** \@ Name = ' 財務 '**，然後按一下 **[確定]** 以關閉 [條件] 頁面。  
   
     > [!NOTE]  
     >  您可能必須按下 TAB 鍵跳離 [值]**** 方塊，才能啟用 [確定]**** 按鈕。  
@@ -74,7 +73,7 @@ ms.locfileid: "67792907"
   
 1.  在物件總管中，展開 [管理]****，以滑鼠右鍵按一下 [原則管理]****，然後按一下 [管理類別目錄]****。  
   
-2.  在 [**管理原則類別目錄**] 對話方塊中**Name**，于 [ `Finance`名稱] 底下的空白方塊中輸入，然後清除 [託管**資料庫訂閱**]。 [託管資料庫訂閱]**** 將會強制執行個體中的每一個資料庫訂閱屬於這個原則類別目錄的原則。 基於這個理由，只有 Finance 資料庫應該訂閱 Finance Name 原則。  
+2.  在 [**管理原則類別目錄**] 對話方塊中，于 [**名稱**] 底下 `Finance` 的空白方塊中輸入，然後清除 [託管**資料庫訂閱**]。 [託管資料庫訂閱]**** 將會強制執行個體中的每一個資料庫訂閱屬於這個原則類別目錄的原則。 基於這個理由，只有 Finance 資料庫應該訂閱 Finance Name 原則。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

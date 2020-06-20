@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57e8738edf77dae56454baba9ffc1b193146b110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006344"
 ---
 # <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>工作 8：新增條件式分割轉換來分割清理輸出
   在這項轉換中，您會將條件式分割轉換加入至資料流程。 「條件式分割」轉換可根據資料的內容，將資料列路由傳送至不同的輸出。 在本教學課程中，您會使用 DQS 清理轉換中的 [**記錄狀態**輸出] 資料行。 在本教學課程中，您只會將正確或已更正的記錄上傳到 MDS 伺服器。 因此，您會檢查**記錄狀態**是否**正確**或已**更正**，並在將記錄上傳至 MDS 之前，先合併記錄。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eb7ddb23-12d0-4c81-9609-4046ccaca7d2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3eb86615f0023ff5c2c65e02af5c597ed3c1fdf1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: adaea30ec9838ff4b1b82a8f929ebeb2f5858b89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096254"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037034"
 ---
 # <a name="complete---installation"></a>完成 - 安裝
   按一下 [關閉]**** 完成安裝。  
