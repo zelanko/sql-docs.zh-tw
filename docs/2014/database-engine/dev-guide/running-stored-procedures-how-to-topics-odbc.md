@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2220182-a23d-4475-b353-77a77ab613d6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c40d064da4cd518e77d724a2ea38217124d6b8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 532a211f0e765547c6f15eb762b8dcc3048302a1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781752"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933387"
 ---
 # <a name="running-stored-procedures-how-to-topics-odbc"></a>執行預存程序的使用說明主題 (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式支援將預存程序當做遠端預存程序執行。 將預存程序當做遠端預存程序執行可讓驅動程式和伺服器最佳化執行程序的效能。  

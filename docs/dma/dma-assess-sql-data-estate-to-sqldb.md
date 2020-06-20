@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 30f840c9fe558382c5a0549f09657c917c69c3d4
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: a5181dcf07745fc1bf9cd993ebd65c58f55f96c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886185"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054269"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>使用 Data Migration Assistant，評估遷移至 Azure SQL Database 的 SQL Server 資料資產是否就緒
 
@@ -39,7 +38,7 @@ ms.locfileid: "82886185"
 Azure Migrate 專案用來儲存從您要評估或遷移的環境中收集到的探索、評估和遷移中繼資料。 您也可以使用專案來追蹤探索到的資產，並協調評估和遷移。
 
 1. 登入 Azure 入口網站，選取 [**所有服務**]，然後搜尋 Azure Migrate。
-2. 在 [服務]  下，選取 [Azure Migrate]  。
+2. 在 [服務] 下，選取 [Azure Migrate]。
 
    ![Azure Migrate-選取服務](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-services.png)
 
@@ -60,10 +59,10 @@ Azure Migrate 專案用來儲存從您要評估或遷移的環境中收集到的
 
     | **地理位置**  | **儲存位置區域** |
     | ------------- | ------------- |
-    | 亞洲 | 東南亞或東亞 |
+    | Asia | 東南亞或東亞 |
     | 歐洲 | 歐洲南部或西歐 |
-    | 英國 | 英國南部或英國西部 |
-    | 美國 | 美國中部或美國西部2 |
+    | United Kingdom | 英國南部或英國西部 |
+    | 美國 | 美國中部或美國西部 2 |
 
     針對專案所指定的地理位置，僅會用於儲存從內部部署虛擬機器收集的中繼資料。 您可以選取任何目標區域以進行實際移轉。
 
@@ -102,7 +101,7 @@ Azure Migrate 專案用來儲存從您要評估或遷移的環境中收集到的
 
     如果您要將內部部署 SQL Server 實例升級至較新版本的 SQL Server 或裝載在 Azure VM 上的 SQL Server，請將來源和目標伺服器類型設定為 [ **SQL Server**]。 將 [目標伺服器類型] 設定為 [Azure SQL Database （PaaS）目標就緒評量的**Azure SQL Database 受控執行個體**。
 
-3. 選取 [建立]  。
+3. 選取 [建立]。
 
    ![Azure Migrate Data Migration Assistant 介面](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 
@@ -127,7 +126,7 @@ Azure Migrate 專案用來儲存從您要評估或遷移的環境中收集到的
    > [!NOTE]
    > 您可以選取多個資料庫，同時按住 Shift 或 Ctrl 鍵，然後按一下 [移除來源]。 您也可以使用 [新增來源] 按鈕，從多個 SQL Server 實例新增資料庫。
 
-4. 選取 [下一步]  開始進行評估。
+4. 選取 [下一步] 開始進行評估。
 
    ![Azure Migrate-Data Migration Assistant-選取來源畫面](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-select-sources-screen.png)
 

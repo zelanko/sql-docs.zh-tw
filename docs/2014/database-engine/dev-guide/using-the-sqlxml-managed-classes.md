@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3f021290-00ee-44e1-af4b-33d3ba8c6302
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ad1756d3943f6a9db68633c59013bcb85037ffa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 634a0e4110b13931201edd026ee95028cb94e859
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780327"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933189"
 ---
 # <a name="using-the-sqlxml-managed-classes"></a>使用 SQLXML Managed 類別
   本節提供範例應用程式，示範如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML Managed 類別。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如需有關在[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 記憶體取和修改資料，以及如何使用 diffgram 來更新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表中資料的詳細資訊，請參閱在[.net 環境中存取 SQLXML 功能](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)。  
+ 如需有關在 .NET Framework 記憶體取和修改資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] ，以及如何使用 diffgram 來更新資料表中資料的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱在[.NET 環境中存取 SQLXML 功能](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)。  
   
 > [!NOTE]  
 >  您也可以撰寫 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 應用程式，藉由使用 XML 大量載入來大量載入 XML 文件。 如需詳細資訊，請參閱[執行 XML 資料的大量載入 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)。 您必須在應用程式中加入 XML 大量載入 DLL (Xblkld4.dll) 的參考。 這是 COM DLL，Visual Studio .NET 會自動為其建立包裝函數程式庫。  

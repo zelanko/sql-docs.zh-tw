@@ -1,5 +1,6 @@
 ---
 title: ODBC 中的交易 |Microsoft Docs
+description: ODBC 會在連接層級管理交易、認可或回復所有已完成的工作，不論是自動認可或手動認可模式。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 093eae04962409b5ac426713aedc74aa1bd0703b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 175bc304e1a2127873c54da79fd921995af17714
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303646"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950234"
 ---
 # <a name="performing-transactions-in-odbc"></a>在 ODBC 中執行交易
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

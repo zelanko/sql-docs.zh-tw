@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c05dc72e99d5b897412bdcf8afdd85370dd06b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229014"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937220"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]中導入的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可讓企業將一組使用者資料庫的可用性提高到最大程度。 *「可用性群組」* (Availability Group) 支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的 *「可用性資料庫」*(Availability Database)。 可用性群組支援一組讀寫的主要資料庫，以及一到八組對應的次要資料庫。 此外，您可以將次要資料庫用於唯讀存取及/或某些備份作業。  
@@ -29,7 +28,7 @@ ms.locfileid: "75229014"
  可用性群組會在可用性複本層級容錯移轉。 容錯移轉不是因資料庫問題 (例如資料庫因為資料檔案遺失而變得可疑、資料庫刪除或交易記錄損毀) 而造成的。  
   
   
-##  <a name="benefits"></a><a name="Benefits"></a>各種  
+##  <a name="benefits"></a><a name="Benefits"></a> 優點  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 提供了一組豐富的選項，可改善資料庫可用性並實現改善的資源使用方式。 關鍵元件如下：  
   
 -   最多支援九個可用性複本。 *「可用性複本」* (Availability Replica) 是特定 SQL Server 執行個體所裝載之可用性群組的具現化，其中維護屬於可用性群組之每個可用性資料庫的本機複本。 每個可用性群組都支援一個主要複本和最多八個次要複本。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)。  
@@ -39,9 +38,9 @@ ms.locfileid: "75229014"
   
 -   支援替代可用性模式，如下所示：  
   
-    -   非同步認可模式**。 這種可用性模式是一種當可用性複本分散距離相當遠時仍可正常運作的災害復原方案。  
+    -   *非同步認可模式*。 這種可用性模式是一種當可用性複本分散距離相當遠時仍可正常運作的災害復原方案。  
   
-    -   同步認可模式**。 這種可用性模式強調的是高可用性和資料保護而非效能，但是相對地增加了交易延遲。 給定的可用性群組最多可支援三個同步認可的可用性複本，包括目前的主要複本。  
+    -   *同步認可模式*。 這種可用性模式強調的是高可用性和資料保護而非效能，但是相對地增加了交易延遲。 給定的可用性群組最多可支援三個同步認可的可用性複本，包括目前的主要複本。  
   
      如需詳細資訊，請參閱[可用性模式。Always On 可用性群組;](availability-modes-always-on-availability-groups.md)。  
   
@@ -141,7 +140,7 @@ ms.locfileid: "75229014"
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  如需搭配使用其他功能的限制和限制的[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]相關資訊，請參閱[Always On 可用性群組：互通性;SQL Server;](always-on-availability-groups-interoperability-sql-server.md)。  
+>  如需搭配使用其他功能的限制和限制的相關資訊 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，請參閱[Always On 可用性群組：互通性;SQL Server;](always-on-availability-groups-interoperability-sql-server.md)。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
@@ -155,9 +154,9 @@ ms.locfileid: "75229014"
   
      [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
--   **視頻**  
+-   **影片：**  
   
-     [Microsoft SQL Server Code-Named "Denali" AlwaysOn Series,Part 1: Introducing the Next Generation High Availability Solution (Microsoft SQL Server 代碼 "Denali" AlwaysOn 系列第一部分：新一代高可用性解決方案簡介)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1:Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Microsoft SQL Server Code-Named "Denali" Always On 系列第 1 部分：新一代高可用性解決方案簡介)  
   
      [Microsoft SQL Server 程式碼名稱 "Denali" Always On 系列，第2部分：使用 AlwaysOn 建立要徑任務的高可用性解決方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

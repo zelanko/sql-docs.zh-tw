@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b822da364fef2831f0f183089ce1cc330ca3118e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033648"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067576"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務啟動帳戶會定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行的 Windows 帳戶以及它的網路權限。 此主題描述如何透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 組態管理員來設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Agent 服務帳戶。  
@@ -45,7 +44,7 @@ ms.locfileid: "63033648"
 ###  <a name="security"></a><a name="Security"></a> Security  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
- 若要執行它的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]函式，必須將 Agent 設定為使用帳戶的認證，該帳戶是中`sysadmin` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的固定伺服器角色的成員。 此帳戶必須擁有下列 Windows 權限：  
+ 若要執行它的函 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 式，必須將 Agent 設定為使用帳戶的認證，該帳戶是 `sysadmin` 中的固定伺服器角色的成員 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 此帳戶必須擁有下列 Windows 權限：  
   
 -   以服務登入 (SeServiceLogonRight)  
   
@@ -55,7 +54,7 @@ ms.locfileid: "63033648"
   
 -   調整處理序的記憶體配額 (SeIncreaseQuotaPrivilege)  
   
- 如需[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶所需之 Windows 許可權的詳細資訊，請參閱[選取 SQL Server Agent 服務的帳戶](select-an-account-for-the-sql-server-agent-service.md)和[設定 windows 服務帳戶與許可權](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+ 如需 Agent 服務帳戶所需之 Windows 許可權的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[選取 SQL Server Agent 服務的帳戶](select-an-account-for-the-sql-server-agent-service.md)和[設定 Windows 服務帳戶與許可權](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -71,7 +70,7 @@ ms.locfileid: "63033648"
   
 5.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的主控台窗格中，選取 **[SQL Server 服務]**。  
   
-6.  在詳細資料窗格中，以滑鼠右鍵按一下 [ **SQL Server Agent**_（server_name）_]，其中*server_name*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您要變更服務啟動帳戶之 Agent 實例的名稱，然後選取 [**屬性**]。  
+6.  在詳細資料窗格中，以滑鼠右鍵按一下 [ **SQL Server Agent**_（server_name）_]，其中*server_name*是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您要變更服務啟動帳戶之 Agent 實例的名稱，然後選取 [**屬性**]。  
   
 7.  在 [ **SQL Server Agent**_（server_name）_ **屬性**] 對話方塊的 [**登**入] 索引標籤中，選取 [**登**入身分] 下的下列其中一個選項：  
   
@@ -88,7 +87,7 @@ ms.locfileid: "63033648"
   
         2.  在 **[密碼]** 方塊中，輸入帳戶的密碼。 在 [確認密碼]**** 方塊中重新輸入密碼。  
   
-8.  按一下 [確定]  。  
+8.  按一下 [確定]。  
   
 9. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，按一下 **[關閉]** 按鈕。  
   

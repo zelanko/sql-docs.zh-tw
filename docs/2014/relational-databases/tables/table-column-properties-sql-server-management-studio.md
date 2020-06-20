@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1894b074491af1962d2180337288e188d41b2951
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211790"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055064"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>資料表資料行屬性 (SQL Server Management Studio)
   這些屬性會出現在 [資料表設計工具] 的下方窗格中。 已選取資料行時，您可以在 [屬性] 視窗中編輯這些屬性 (除非另有附註)。 可依類別目錄或依字母順序顯示 **[資料行屬性]** 。 且只會出現或只可變更特定資料類型的一些屬性。  

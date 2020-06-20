@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1701479fe7469769d75f4b8ad3d8e65dcc75af91
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: b2ca5eef7905806f551b960d2ec912d1d5a8a09f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858670"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932979"
 ---
 # <a name="full-text-index-properties-general-page"></a>全文檢索索引屬性 (一般頁面)
   **若要檢視或變更全文檢索索引的可修改屬性**  
@@ -65,7 +64,7 @@ ms.locfileid: "83858670"
  全文檢索索引所屬的檔案群組。  
   
  **全文檢索索引停用字詞表**  
- 目前與全文檢索索引產生關聯的停用字詞表。 停用字詞表是 [停用字詞](../relational-databases/search/full-text-search.md)的清單。 與全文檢索索引相關聯的停用字詞表 (如果有的話) 會套用至該索引上的全文檢索查詢。 您可以從清單中選取 [ ** \<>關閉**]，從索引中移除停用字詞表，也可以選取不同的停用字詞表;** \< 系統>** 表示系統停用字詞表。  
+ 目前與全文檢索索引產生關聯的停用字詞表。 停用字詞表是 [停用字詞](../relational-databases/search/full-text-search.md)的清單。 與全文檢索索引相關聯的停用字詞表 (如果有的話) 會套用至該索引上的全文檢索查詢。 您可以從清單中選取，從索引中移除停用字詞表 **\<OFF>** ，也可以選取不同的停用字詞表; 表示系統停用字詞表 **\<SYSTEM>** 。  
   
  **若要建立停用字詞表**  
   
@@ -74,7 +73,7 @@ ms.locfileid: "83858670"
  **搜尋屬性清單**  
  目前與此全文檢索索引相關聯的搜尋屬性清單 (如果有的話)。 搜尋屬性清單會指定關聯全文檢索索引擴展時所包含的一組文件屬性。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
- ** \< Off>** 表示目前沒有與索引相關聯的搜尋屬性清單。 您可以從清單中選取 [ ** \< 關閉>** ]，從索引中移除目前的搜尋屬性清單，也可以從清單中選取不同的搜尋屬性清單。 這裡只會列出目前資料庫中的搜尋屬性清單。  
+ **\<Off>** 指出目前沒有與索引相關聯的搜尋屬性清單。 您可以從清單中選取，從索引中移除目前的搜尋屬性清單 **\<Off>** ，也可以從清單中選取不同的搜尋屬性清單。 這裡只會列出目前資料庫中的搜尋屬性清單。  
   
 > [!NOTE]  
 >  您可以將特定的搜尋屬性清單與相同資料庫中的多個全文檢索索引相關聯。  
@@ -140,7 +139,7 @@ ms.locfileid: "83858670"
 |-|-|  
 |**完整**|在資料表的完整母體擴展期間，系統會針對所有資料列建立索引項目。|  
 |**增強**|累加母體擴展會針對在上一次母體擴展之後或進行時加入、刪除或修改的資料列，更新全文檢索索引。 若要執行累加母體擴展，基底資料表必須包含 `timestamp` 資料類型的資料行。|  
-|**更新**|每當修改基底資料表中的資料時，就會更新全文檢索索引。|  
+|**Update**|每當修改基底資料表中的資料時，就會更新全文檢索索引。|  
   
 ## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋使用者入門](../relational-databases/search/get-started-with-full-text-search.md)  

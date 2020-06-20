@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bbf5bad0a8c8e633149e2868047b88833a400849
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ceb1d222131c14810d3d71bdd8faf13509f97614
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703590"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055140"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>使用 sql:mapped 從產生的 XML 文件排除結構描述元素 (SQLXML 4.0)
   XSD 結構描述中的每個元素和屬性都會因為預設對應，而對應到資料庫資料表/檢視表和資料行。 如果您要在 XSD 結構中建立沒有對應到任何資料庫資料表 (檢視表) 或資料行，而且沒有出現在 XML 中的元素，您可以指定 `sql:mapped` 註解。  
@@ -40,11 +39,11 @@ ms.locfileid: "82703590"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. 指定 sql:mapped 註解  
- 假設您有來自其他來源的 XSD 結構描述。 這個 XSD 架構是由** \< Person. Contact>** 元素所組成，其中包含**ContactID**、 **FirstName**、 **LastName**和**HomeAddress**屬性。  
+ 假設您有來自其他來源的 XSD 結構描述。 這個 XSD 架構是由元素所組成， **\<Person.Contact>** 其中包含**ContactID**、 **FirstName**、 **LastName**和**HomeAddress**屬性。  
   
  在將這個 XSD 架構對應到 AdventureWorks 資料庫中的 Person. Contact 資料表 `sql:mapped` 時，會在**HomeAddress**屬性上指定，因為 employees 資料表不會儲存員工的主位址。 因此，根據對應結構描述指定 XPath 查詢時，此屬性不會對應到資料庫，而且不會在產生的 XML 文件中傳回。  
   
- 預設的對應發生於其餘的結構描述。 ** \< Person>** 元素會對應到 person. contact 資料表，而所有屬性都會對應到 person. contact 資料表中具有相同名稱的資料行。  
+ 預設的對應發生於其餘的結構描述。 **\<Person.Contact>** 元素會對應至 person 資料表，而所有屬性會對應至 person 資料表中具有相同名稱的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

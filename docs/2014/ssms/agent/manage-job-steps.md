@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7362df13956e44b73d6984691e882bec2f39a1e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798216"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062229"
 ---
 # <a name="manage-job-steps"></a>管理作業步驟
   作業步驟是指作業對資料庫或伺服器所採取的動作， 每一個作業必須至少有一個作業步驟。 作業步驟可以是：  
@@ -101,7 +100,7 @@ ms.locfileid: "72798216"
   
 -   要開啟之現有的 PowerShell 指令碼檔案。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent powershell 子系統會開啟 powershell 會話，並載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] powershell 嵌入式管理單元。當做作業步驟命令使用的 PowerShell 腳本可以參考[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] powershell 提供者和 Cmdlet。 如需使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元撰寫 PowerShell 指令碼的詳細資訊，請參閱 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent powershell 子系統會開啟 powershell 會話，並載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] powershell 嵌入式管理單元。當做作業步驟命令使用的 PowerShell 腳本可以參考 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] powershell 提供者和 Cmdlet。 如需使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元撰寫 PowerShell 指令碼的詳細資訊，請參閱 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX Scripting 作業步驟  
   
@@ -198,7 +197,7 @@ Set oServer = nothing
   
 |||  
 |-|-|  
-|**說明**|**主題**|  
+|**說明**|**本文**|  
 |描述如何建立包含可執行程式的作業步驟。|[建立 CmdExec 作業步驟](create-a-cmdexec-job-step.md)|  
 |描述如何重設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 權限。|[設定使用者可建立及管理 SQL Server Agent 作業](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |描述如何建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟。|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
@@ -210,6 +209,6 @@ Set oServer = nothing
 |描述如何刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟記錄。|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [sysjobstepslogs &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo.sysjobstepslogs &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [建立作業](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

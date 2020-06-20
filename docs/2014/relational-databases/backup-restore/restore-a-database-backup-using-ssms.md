@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 521fc35b8ada4b1eb6c62e75fed4e1d9f99d21c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82c3c7191ab686550885ebdc050f5fb1ac818cb9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154783"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957301"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>還原資料庫備份 (SQL Server Management Studio)
   本主題說明如何還原完整資料庫備份。  
@@ -32,13 +31,13 @@ ms.locfileid: "70154783"
 > [!IMPORTANT]  
 >  在完整或大量記錄復原模式下，您必須先備份使用中的交易記錄檔 (也稱為記錄檔的結尾)，才能在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中還原資料庫。 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)資料庫還原至新位置，並選擇性地重新命名資料庫。 若要還原加密的資料庫，您必須能夠存取之前用來加密資料庫的憑證或非對稱金鑰。 如果沒有該憑證或非對稱金鑰，就無法還原資料庫。 因此，只要需要備份，就必須保留用來加密資料庫加密金鑰的憑證。 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md)。  
   
- 請注意，如果您將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的資料庫還原成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，資料庫會自動升級。 通常，資料庫立即變為可用。 不過，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫具有全文檢索索引，升級程序就會根據 [全文檢索升級選項]**** 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入]**** 或 [重建]****，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 另請注意，當升級選項設定為 [匯**入**] 時，如果全文檢索目錄無法使用，則會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。  
+ 請注意，如果您將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的資料庫還原成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，資料庫會自動升級。 通常，資料庫立即變為可用。 不過，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫具有全文檢索索引，升級程序就會根據 [全文檢索升級選項]  伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入]  或 [重建]  ，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入]  時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。  
   
 ### <a name="to-restore-a-full-database-backup"></a>還原完整資料庫備份  
   
-1.  連接到適當的實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]之後，請在物件總管中，按一下伺服器名稱以展開伺服器樹狀目錄。  
+1.  連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，請在 [物件總管] 中按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  展開 **[資料庫]** 。 視資料庫而定，選取使用者資料庫，或者展開 [系統資料庫] ****，再選取系統資料庫。  
+2.  展開 **[資料庫]** 。 視資料庫而定，選取使用者資料庫，或者展開 [系統資料庫]  ，再選取系統資料庫。  
   
 3.  以滑鼠右鍵按一下資料庫，指向 [工作 **]，再**指向 [**還原**]，然後按一下 [**資料庫**]，這會開啟 [**還原資料庫**] 對話方塊。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "70154783"
          **移除**  
          移除一個或多個選取的檔案、磁帶或邏輯備份裝置。  
   
-         **內容**  
+         **Contents**  
          顯示選取之檔案、磁帶或邏輯備份裝置的媒體內容。  
   
 5.  在 **[目的地]** 區段中，會將要還原之資料庫的名稱自動填入 **[資料庫]** 方塊。 若要變更資料庫的名稱，請在 **[資料庫]** 方塊中輸入新名稱。  
@@ -98,11 +97,11 @@ ms.locfileid: "70154783"
   
     1.  `WITH` 選項 (非必要)：  
   
-        -   **覆寫現有的資料庫（WITH REPLACE）**  
+        -   **覆寫現有的資料庫 (WITH REPLACE)**  
   
-        -   **保留複寫設定（使用 KEEP_REPLICATION）**  
+        -   **保留複寫設定 (WITH KEEP_REPLICATION)**  
   
-        -   **限制對還原資料庫的存取（使用 RESTRICTED_USER）**  
+        -   **限制對還原資料庫的存取 (WITH RESTRICTED_USER)**  
   
     2.  針對 **[還原狀態]** 方塊，選取選項。 此方塊決定資料庫在還原作業之後的狀態。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "70154783"
 ## <a name="see-also"></a>另請參閱  
  [備份交易記錄 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)   
- [將資料庫還原到新的位置 &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)   
+ [將資料庫還原到新位置 &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)   
  [還原交易記錄備份 &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [還原資料庫 &#40;選項頁面&#41;](restore-database-options-page.md)   

@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67855ba7841c06181240f220945dda0f4a719629
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472928"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067722"
 ---
 # <a name="pick-schedule-for-job"></a>作業的挑選排程
-  使用此對話方塊來挑選[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的現有排程。  
+  使用此對話方塊來挑選 Agent 作業的現有排程 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的排程**  
  列出此作業可用的排程。 因為作業和排程必須有相同的擁有者，所以此清單只會包含工作擁有者所擁有的排程。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62472928"
  **已啟用**  
  選取是否啟用排程。  
   
- **描述**  
+ **說明**  
  描述排程執行作業所用的條件。  
   
  **排程中的作業**  

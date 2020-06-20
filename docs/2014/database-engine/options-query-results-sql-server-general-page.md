@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0f21a845b6db79390a31c4b26197547a041e76de
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 87af61145c4e09c2713c96e5a451fe30c4d7300c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930069"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>選項（查詢結果-SQL Server-一般頁面）
   使用此頁面來決定 [查詢結果] 窗格的預設行為。 若要顯示這些設定，請在 [工具]**** 功能表上按一下 [選項]****，展開 [查詢結果]**** 資料夾，選取 [SQL Server]****，然後按一下 [一般]****。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢]**** 功能表上的 [查詢選項]****，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]****。  

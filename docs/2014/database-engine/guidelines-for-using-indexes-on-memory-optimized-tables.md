@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f00d643088634c918eb626917eae64a001ce3678
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779222"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932869"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>使用記憶體最佳化資料表索引的方針
   索引是用來有效率地存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表中的資料。 指定正確的索引可以大幅提高查詢效能。 假設有以下的查詢範例：  
@@ -71,7 +70,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |索引掃描，擷取所有資料表資料列。|是|是|是|  
 |等號比較述詞 (=) 的索引搜尋。|是<br /><br /> (需要完整金鑰。)|是<sup>1</sup>|是|  
-|不等比較述詞的索引搜尋（> \<、<、=、>=、BETWEEN）。|否 (產生索引掃描)|是<sup>1</sup>|是|  
+|不等比較述詞的索引搜尋（>、<、 \<=, > =、BETWEEN）。|否 (產生索引掃描)|是<sup>1</sup>|是|  
 |依照排序次序擷取符合索引定義的資料列。|否|是|是|  
 |依照排序次序擷取符合相反索引定義的資料列。|否|否|是|  
   

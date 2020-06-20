@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe92bf5f783bb1b71c1020d0ff808aafa0594b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889228"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937158"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services 與 AlwaysOn 可用性群組
   AlwaysOn 可用性群組是預先定義的 SQL Server 關聯式資料庫集合，會在條件觸發任何一個資料庫的容錯移轉時一起容錯移轉，將要求重新導向至相同可用性群組中其他執行個體上的鏡像資料庫。 如果使用可用性群組做為高可用性解決方案，則可以使用該群組中的資料庫做為 Analysis Services 表格式或多維度解決方案的資料來源。 使用可用性資料庫時，下列所有 Analysis Services 作業都會如預期般運作：處理或匯入資料、直接查詢關聯式資料 (使用 ROLAP 儲存或 DirectQuery 模式)，以及回寫。  
@@ -23,7 +22,7 @@ ms.locfileid: "68889228"
  處理及查詢是唯讀工作負載。 您可以將這些工作負載卸載至可讀取的次要複本，以提升效能。 這個案例不需要進行其他組態設定。 使用本主題中的檢查清單，以確保您遵循所有步驟。  
   
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 先決條件  
  您必須擁有所有複本的 SQL Server 登入。 您必須是 **系統管理員** ，才能設定可用性群組、接聽程式及資料庫，但是使用者只需要 **db_datareader** 權限，即可從 Analysis Services 用戶端存取資料庫。  
   
  使用支援表格式資料流 (TDS) 通訊協定 7.4 版或更新版本的資料提供者，例如 SQL Server Native Client 11.0 或 .NET Framework 4.02 的 Data Provider for SQL Server。  
@@ -55,7 +54,7 @@ ms.locfileid: "68889228"
   
     -   在 [可讀取次要]**** 下拉式清單中，選取 [僅限讀取意圖]****。  
   
-    -   在 **[主要角色的連接]** 下拉式清單中，選取 **[允許所有連接]**。 這是預設值。  
+    -   在 **[主要角色的連接]** 下拉式清單中，選取 **[允許所有連接]**。 此為預設值。  
   
     -   或者，在 **[可用性模式]** 下拉式清單中，選取 **[同步認可]**。 不需要這個步驟，但是進行設定可確保主要與次要複本之間的資料同位。  
   
@@ -217,7 +216,7 @@ ms.locfileid: "68889228"
  若要執行這項操作，請在 Analysis Services 模型中建立其他資料來源，以支援讀寫連接。 建立其他資料來源時，請使用您在唯讀連線中指定的相同接聽程式名稱和資料庫，但不要修改 [應用程式的意圖]****，保留支援 READWRITE 連線的預設值。 您現在可以將以讀寫資料來源為基礎的新事實或維度資料表新增至資料來源檢視，然後啟用新資料表的回寫功能。  
   
 ## <a name="see-also"></a>另請參閱  
- [可用性群組接聽程式、用戶端連接和應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server 的操作問題 AlwaysOn 原則&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [建立 &#40;SSAS 多維度&#41;的資料來源](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   

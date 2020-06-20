@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfde82079c32b9aaba8db0ba9e52b02886bd2c47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831880"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919235"
 ---
 # <a name="data-profiling-task"></a>資料分析工作
   資料分析工作會計算各種設定檔，協助您熟悉資料來源並在資料中識別必須修復的問題。  
@@ -82,7 +81,7 @@ ms.locfileid: "62831880"
 |FunctionalDependencyProfile|`integer` 類型、`char` 類型和 `datetime` 類型的資料行|  
 |InclusionProfile|`integer` 類型、`char` 類型和 `datetime` 類型的資料行|  
   
- \*在有效資料類型的上一個資料表中， `integer`、 `char`、 `datetime`和`numeric`類型包含下列特定的資料類型：  
+ \*在有效資料類型的上一個資料表中， `integer` 、 `char` 、 `datetime` 和 `numeric` 類型包含下列特定的資料類型：  
   
  整數類型包括 `bit`、`tinyint`、`smallint`、`int` 和 `bigint`。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62831880"
   
  數值類型包括 `integer` 類型 (`bit` 除外)、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`。  
   
- \*\*`image`對於`text`資料`XML`行`udt`Null 比例`variant`設定檔以外的設定檔，不支援、、、和類型。  
+ \*\*`image` `text` 對於資料 `XML` `udt` `variant` 行 Null 比例設定檔以外的設定檔，不支援、、、和類型。  
   
 ### <a name="valid-tables-and-columns"></a>有效的資料表和資料行  
  如果資料表或資料行為空白，資料分析會採取下列動作：  

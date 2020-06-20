@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8b9f5968cf68762178602ced64078248f3badb0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779005"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932929"
 ---
 # <a name="get-dialog-box-source-control"></a>取得對話方塊 (原始檔控制)
   從原始檔控制資料庫擷取選取項目的唯讀副本，傳送到您的工作資料夾，或者其他指定資料夾。  
@@ -49,7 +48,7 @@ ms.locfileid: "62779005"
  **選項**  
  點選按鈕右側的箭頭之後，就會顯示來源安全外掛程式特定的取得選項。  
   
- **Sort**  
+ **方式**  
  排序顯示之資料行的順序。  
   
  **樹狀檢視**  

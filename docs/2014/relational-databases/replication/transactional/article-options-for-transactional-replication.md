@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3469b185-0ea5-4690-a71c-717230d886b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 992b479ea0867aef1ca75e42cc865db2cc5a735f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cc13a3d11e35ed47eac4ff401fb8b7cb607b32b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63268645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060305"
 ---
 # <a name="article-options-for-transactional-replication"></a>異動複寫的發行項選項
   針對交易式發行集中的發行項提供了一些選項。 使用異動複寫，您可以執行下列項目：  

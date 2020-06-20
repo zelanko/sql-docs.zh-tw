@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17ca833a0773b48df0cc3781505b1046e2a63814
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779133"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932739"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>使用 SysPrep 安裝 SQL Server 的考量
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 可讓您在電腦上準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體，並於稍後完成設定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 需要使用包含兩個步驟的程序來取得已設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]獨立執行個體。 這些步驟包含以下內容：  
@@ -28,7 +27,7 @@ ms.locfileid: "62779133"
   
      這個步驟可讓您完成已備妥之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的組態。 在此步驟中，您可以提供電腦、網路和帳戶特有的資訊。  
   
- 如需如何使用 SysPrep 安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的詳細資訊，請參閱[使用 sysprep 安裝 SQL Server 2014](install-sql-server-using-sysprep.md)。  
+ 如需如何使用 SysPrep 安裝的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[使用 sysprep 安裝 SQL Server 2014](install-sql-server-using-sysprep.md)。  
   
 ## <a name="common-uses-for-ssnoversion-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 的常見用法  
  您可依照下列任何方法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 功能：  
@@ -65,7 +64,7 @@ ms.locfileid: "62779133"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當您準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，也會自動準備瀏覽器與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]寫入器。 當您在完成映像步驟中完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，便會完成這兩個項目。  
   
- 如需支援之版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]詳細資訊，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 如需支援之版本的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  您可以執行版本升級，同時設定備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 版本不支援這個選項。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "62779133"
 ##  <a name="prepare-image"></a><a name="BKMK_PrepareImage"></a> 準備映像  
  準備映像步驟會安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品和功能，但不會設定安裝。  
   
- 您可以在這個步驟中，指定要安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品安裝檔的安裝位置。 若要準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，可以在 [安裝中心]  的 [進階]  頁面上透過 [Image Preparation of a stand-alone instance for SysPrep deployment (準備 SysPrep 部署獨立執行個體的映像)]  或是從命令提示字元執行。  
+ 您可以在這個步驟中，指定要安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品安裝檔的安裝位置。 若要準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，可以在 [安裝中心] 的 [進階] 頁面上透過 [Image Preparation of a stand-alone instance for SysPrep deployment (準備 SysPrep 部署獨立執行個體的映像)] 或是從命令提示字元執行。  
   
 -   您可以在同一部電腦上準備多個可於稍後完成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "62779133"
   
 -   使用 [開始] 功能表上的捷徑。  
   
--   在 [安裝中心]  的 [進階]  頁面上存取 [Image completion of a prepared stand-alone instance (完成備妥之獨立執行個體的映像)]  步驟。  
+-   在 [安裝中心] 的 [進階] 頁面上存取 [Image completion of a prepared stand-alone instance (完成備妥之獨立執行個體的映像)] 步驟。  
   
 ## <a name="see-also"></a>另請參閱  
  [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)  

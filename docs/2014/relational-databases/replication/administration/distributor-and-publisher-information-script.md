@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4695b53e52c9c63eaacb4f2f32c6bc9f65958213
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060828"
 ---
 # <a name="distributor-and-publisher-information-script"></a>散發者與發行者資訊指定碼
   此指令碼使用系統資料表與複寫預存程序來回答關於「散發者」與「發行者」端物件的常見問題。 指令碼能以其現狀使用，也能提供自訂指令碼的基準。 在您的環境下，指令碼可能需要進行兩項修改：  
   
 -   變更 `use AdventureWorks2012` 行以使用您的發行集資料庫之名稱。  
   
--   從 `--` 行移除註解 (`exec sp_helparticle @publication='<PublicationName>'`)，並使用發行集的名稱取代 \<發行集名稱>。  
+-   從該行移除批註（ `--` ） `exec sp_helparticle @publication='<PublicationName>'` ，並將取代 \<PublicationName> 為發行集的名稱。  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4aeffaf9098e2476db4a0faf95811f3ea5204aaa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b711dfaf089173dcf72f854168e6b73aa05949ab
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480919"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937969"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>為 DQS 記錄檔設定嚴重性層級
   此主題描述如何使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 來針對 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)](DQS) 中的各種不同活動和模組設定嚴重性層級。 嚴重性層級會定義 DQS 中發生之事件的強度。 DQS 事件具有以下的嚴重性層級 (依照嚴重性的遞減順序排列)：  
@@ -61,7 +60,7 @@ ms.locfileid: "65480919"
     > [!NOTE]  
     >  預設會針對每一個活動選取 **[錯誤]** 。 這表示，預設會針對每一個活動將錯誤和嚴重訊息寫入 DQS 記錄檔中。  
   
-5.  按一下 **關閉**。  
+5.  按一下 [關閉] 。  
   
 ##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>設定模組層級的嚴重性等級（Advanced）  
  **[記錄檔設定]** 索引標籤中的 **[進階]** 區段可讓您在模組層級設定記錄嚴重性設定。 模組是 DQS 系統組件，可在 DQS 中實作某項功能內的各種不同功能。 例如，定義域管理活動包含類似以下的各種功能：定義定義域規則、定義規則條件、定義複合定義域的跨定義域規則等。  
@@ -86,7 +85,7 @@ ms.locfileid: "65480919"
   
 4.  必要時針對其他模組重複步驟 2 和 3。 您也可以在方格中加入或刪除資料列，方法是按一下 **[加入模組]** 和 **[移除模組]** 圖示。  
   
-5.  按一下 **關閉**。  
+5.  按一下 [關閉] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 DQS 記錄檔的進階設定](../../2014/data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
