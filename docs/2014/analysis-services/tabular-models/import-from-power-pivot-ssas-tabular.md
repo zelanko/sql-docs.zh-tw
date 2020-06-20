@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1530f609d958b75a584f506dbfa6ab6409a74d0f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938849"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>從 PowerPivot 匯入 (SSAS 表格式)
   本主題描述如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [從 PowerPivot 匯入] 專案範本，從 PowerPivot 活頁簿匯入中繼資料和資料，以建立新的表格式模型專案。  

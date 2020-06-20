@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a671f33fa26829e96cb53e1a040eb042406bc4eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f7a56c01a1c4af7a2e618c6b6a6cb586424e639
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757705"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940049"
 ---
 # <a name="calculated-column-representation-tabular"></a>導出資料行表示法 (表格式)
   導出資料行是在資料表中建立新資料行並將其取得的值儲存於資料表的 DAX 運算式。 每次處理資料表時都將評估導出資料行運算式。  

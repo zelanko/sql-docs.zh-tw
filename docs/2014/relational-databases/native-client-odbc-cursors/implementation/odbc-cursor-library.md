@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63a9a974c1487548526d4b40b8c72d2ce86f2136
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b0f0ad049c6b9e77f9888d582ab0cda2f5a5e0f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705656"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020924"
 ---
 # <a name="odbc-cursor-library"></a>ODBC 資料指標程式庫
   某些 ODBC 驅動程式只支援預設的資料指標設定;這些驅動程式也不支援定位的資料指標作業，例如**SQLSetPos**。 ODBC 資料指標程式庫是 Microsoft 資料存取元件 (MDAC) 的元件，可用來在一般並不支援區塊或靜態資料指標的驅動程式上實作這些項目。 資料指標程式庫也會針對它所建立的資料指標，執行定位的 UPDATE 和 DELETE 子句和**SQLSetPos** 。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 622b5a02f0b13e9cbf6a78977a07daea93a3f520
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63138780"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007582"
 ---
 # <a name="table-element-for-schema-dta"></a>結構描述的 Table 元素 (DTA)
   指定要微調的資料表。  
@@ -43,9 +42,9 @@ ms.locfileid: "63138780"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|**字串**，介於1到255個字元之間。|  
+|**資料類型和長度**|**string**，在 1 和 255 個字元之間。|  
 |**預設值**|無。|  
-|**次出現**|選擇性。 依照工作負載的需要，列出儘可能多的資料表。|  
+|**出現次數**|選擇性。 依照工作負載的需要，列出儘可能多的資料表。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
@@ -61,6 +60,6 @@ ms.locfileid: "63138780"
  如需使用範例，請參閱[伺服器元素 &#40;DTA&#41;](server-element-dta.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

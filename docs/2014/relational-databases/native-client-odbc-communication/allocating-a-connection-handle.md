@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cfda8d23f3be8b37f9eb3876496394fc32660769
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d3cf84e541f114d527d9a00cd19bce705a09af30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702074"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021219"
 ---
 # <a name="allocating-a-connection-handle"></a>配置連接控制代碼
   在應用程式可以連接到資料來源或驅動程式之前，必須配置連接控制代碼。 這是藉由呼叫**SQLAllocHandle**並將*HandleType*參數設定為 SQL_HANDLE_DBC，並將*InputHandle*指向已初始化的環境控制碼來完成。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e6c67fa9-bb52-44a9-82f6-d86551cf12b2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb39e9d50d135adfedcf307cda2ad703e302eda5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65476989"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061139"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>工作 13：新增 OLE DB 目的地來將資料寫入 MDS 暫存資料表
   現在您已將**ImportType**和**BatchTag**值新增至所有記錄，您已準備好將它們傳送至 MDS 進行預備。 在這項工作中，您會使用 OLE DB 目的地，將資料寫入**stg.< 中。 supplier_Leaf**臨時表。  

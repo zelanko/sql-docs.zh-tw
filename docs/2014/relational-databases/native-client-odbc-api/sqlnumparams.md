@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 8e0c7d87-d7f2-455a-bfb8-67066adc04f9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 836423f0a0ac609cd7e4c823afe0be2da1158239
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c73c8d05ddf40a4baacc6f29d055bbd7af84cb87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705951"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021880"
 ---
 # <a name="sqlnumparams"></a>SQLNumParams
   從開始，database engine 的改進 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可讓 SQLNumParams 取得預期結果的更精確描述。 這些更精確的結果可能與舊版的 SQLNumParams 所傳回的值不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38c92e397c971f6e9976bb857c63410fa60b7e85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ba066136493c2a429b1193d9846f4183f781846
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232425"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956478"
 ---
 # <a name="sql-server-backup-and-restore-with-azure-blob-storage-service"></a>使用 Azure Blob 儲存體服務的 SQL Server 備份及還原
-  本主題介紹[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Azure Blob 儲存體服務](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)的備份與還原。 它也提供使用 Azure Blob 服務來儲存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份的優點摘要。  
+  本主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Azure Blob 儲存體服務](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)的備份與還原。 它也提供使用 Azure Blob 服務來儲存備份的優點摘要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  SQL Server 支援以下列方式將備份儲存到 Azure Blob 儲存體服務：  
   
@@ -27,9 +26,9 @@ ms.locfileid: "75232425"
     > [!NOTE]  
     >  針對 SQL Server 2014 之前的 SQL Server 版本，您可以使用增益集 SQL Server 備份至 Azure 工具，快速且輕鬆地建立 Azure 儲存體的備份。 如需詳細資訊，請參閱＜ [下載中心](https://go.microsoft.com/fwlink/?LinkID=324399)＞。  
   
--   **讓 SQL Server 管理 Azure 的備份：** 設定 SQL Server 來管理單一資料庫或多個資料庫的備份策略與排程備份，或在實例層級設定預設值。 這項功能稱為**[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**。 如需詳細資訊，請參閱[SQL Server 受控備份至 Azure](sql-server-managed-backup-to-microsoft-azure.md)。 SQL Server 2014 或更新版本皆提供此功能。  
+-   **讓 SQL Server 管理 Azure 的備份：** 設定 SQL Server 來管理單一資料庫或多個資料庫的備份策略與排程備份，或在實例層級設定預設值。 這項功能稱為 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** 。 如需詳細資訊，請參閱[SQL Server 受控備份至 Azure](sql-server-managed-backup-to-microsoft-azure.md)。 SQL Server 2014 或更新版本皆提供此功能。  
   
-## <a name="benefits-of-using-the-azure-blob-service-for-ssnoversion-backups"></a>使用 Azure Blob 服務進行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份的優點  
+## <a name="benefits-of-using-the-azure-blob-service-for-ssnoversion-backups"></a>使用 Azure Blob 服務進行備份的優點 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   彈性、可靠且無限制的異地儲存體：將您的備份儲存在 Azure Blob 服務可以是方便、彈性且容易存取的異地選項。 針對您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份建立異地儲存體就像修改現有的指令碼/作業一樣簡單。 異地儲存體通常應該遠離實際執行資料庫位置，防止單一災害同時影響異地和實際執行資料庫位置。 透過選擇異地備援 Blob 儲存體，您就可以在發生可能影響整個地區的災害時，獲得一層額外的保護。 此外，您可以隨時隨地取得備份，輕鬆地針對還原作業進行存取。  
   
@@ -37,9 +36,9 @@ ms.locfileid: "75232425"
   
 -   沒有硬體管理的額外負荷： Azure 服務不會產生硬體管理的額外負荷。 Azure 服務會管理硬體，並提供地埋區域備援複寫，以提供備援及硬體故障的防護。  
   
--   目前，針對在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure 虛擬機器中執行的實例，您可以藉由建立連接的磁片來備份至 azure Blob 儲存體服務。 不過，您可以連接到 Azure 虛擬機器的磁片數目有所限制。 超大執行個體的限制為 16 個磁碟，而較小執行個體的限制則更低。 藉由啟用直接備份至 Azure Blob 儲存體，您可以略過16個磁片限制。  
+-   目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，針對在 Azure 虛擬機器中執行的實例，您可以藉由建立連接的磁片來備份至 Azure Blob 儲存體服務。 不過，您可以連接到 Azure 虛擬機器的磁片數目有所限制。 超大執行個體的限制為 16 個磁碟，而較小執行個體的限制則更低。 藉由啟用直接備份至 Azure Blob 儲存體，您可以略過16個磁片限制。  
   
-     此外，現在儲存在 Azure Blob 儲存體服務中的備份檔案可以直接提供給內部部署[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或在 Azure 虛擬機器中執行的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]另一個，而不需要資料庫附加/卸離或下載並連結 VHD。  
+     此外，現在儲存在 Azure Blob 儲存體服務中的備份檔案可以直接提供給內部部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或在 Azure 虛擬機器中執行的另一個， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而不需要資料庫附加/卸離或下載並連結 VHD。  
   
 -   成本效益：只有使用的服務才要付費。 成為符合成本效益的異地與備份封存選項。 如需詳細資訊和連結，請參閱[Azure 計費考慮](#Billing)一節。  
   

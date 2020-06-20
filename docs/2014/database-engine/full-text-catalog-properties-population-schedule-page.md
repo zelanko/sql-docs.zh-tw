@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e8ac94f235e08f2217edb9504722ebac998cb28
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 62d69cdc42745fcbb5eb7d2cb05f90b710e5c70d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000930"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932999"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>全文檢索目錄屬性 (母體擴展排程頁面)
   使用此對話方塊即可加入或修改排程，決定何時擴展或重新擴展全文檢索目錄。  
@@ -34,7 +33,7 @@ ms.locfileid: "83000930"
  **已啟用**  
  選取或清除此核取方塊，以啟用或停用已排程的作業。  
   
- **描述**  
+ **說明**  
  已排程作業的描述。  
   
  **新增**  

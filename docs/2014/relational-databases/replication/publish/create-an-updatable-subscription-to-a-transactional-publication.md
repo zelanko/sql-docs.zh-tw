@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e784216116bdb9ab308dff5fa998740b0fa459b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691599"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060575"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>建立交易式發行集的可更新訂閱 (Management Studio)
 
@@ -116,7 +115,7 @@ ms.locfileid: "62691599"
     * `1` - 在連接到發行者時，使用在訂閱者上進行變更之使用者的安全性內容。 如需與此安全性模式有關的限制，請參閱 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) 。
     * `2`-使用以[sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)建立的現有使用者定義連結伺服器登入。
 
-6. 在發行者上，執行[sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)指定`@publication`、 `@subscriber`、 `@destination_db`、的提取值`@subscription_type`，以及針對`@update_mode`的步驟3中指定的相同值。
+6. 在發行者上，執行[sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)指定 `@publication` 、 `@subscriber` 、 `@destination_db` 、的提取值 `@subscription_type` ，以及針對的步驟3中指定的相同值 `@update_mode` 。
 
 這樣會在發行者上註冊提取訂閱。 
 
@@ -190,7 +189,7 @@ ms.locfileid: "62691599"
     * (選擇性) `0` 的 `@distributor_security_mode` 值和 `@distributor_login` 和 `@distributor_password`的 SQL Server 登入資訊，如果您需要在連接到散發者時使用 SQL Server 驗證的話。 
     * 此訂閱之散發代理程式作業的排程。
 
-5. 在發行者上，執行[sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql)在發行者端註冊訂閱者，並指定`@publication`、 `@subscriber`、 `@destination_db`、的提取值`@subscription_type`，以及在步驟3中指定的相同值。 `@update_mode`
+5. 在發行者上，執行[sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql)在發行者端註冊訂閱者，並指定 `@publication` 、 `@subscriber` 、 `@destination_db` 、的提取值 `@subscription_type` ，以及在步驟3中指定的相同值 `@update_mode` 。
 
 這樣會在發行者上註冊提取訂閱。 
 
@@ -299,19 +298,19 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>設定佇列更新衝突解決選項 (SQL Server Management Studio)
-  在 [發行集屬性 - \<發行集>]**** 對話方塊的 [訂閱選項]**** 頁面中，為支援佇列更新訂閱的發行集設定衝突解決選項。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](view-and-modify-publication-properties.md)＞。  
+  在 [**發行集屬性 \<Publication> -** ] 對話方塊的 [**訂閱選項**] 頁面上，為支援佇列更新訂閱的發行集設定衝突解決選項。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](view-and-modify-publication-properties.md)＞。  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>若要設定佇列更新衝突解決選項  
   
-1.  在 [發行集屬性 - \<發行集>]**** 對話方塊的 [訂閱選項]**** 頁面中，選取下列 [衝突解決原則]**** 選項的其中一個值︰    
+1.  在 [**發行集屬性- \<Publication> ** ] 對話方塊的 [**訂閱選項**] 頁面上，針對 [**衝突解決原則**] 選項選取下列其中一個值：    
     -   **[保留發行者變更]**    
     -   **[保留訂閱者變更]**    
-    -   **[重新初始化訂閱]**    
+    -   **重新初始化訂閱**    
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ## <a name="see-also"></a>另請參閱 ##
  [Create a Publication](create-a-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
- [搭配腳本變數使用 sqlcmd](../../scripting/sqlcmd-use-with-scripting-variables.md)   
+ [以指令碼變數使用 sqlcmd](../../scripting/sqlcmd-use-with-scripting-variables.md)   
 
   

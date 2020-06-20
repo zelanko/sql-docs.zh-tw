@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e11f73bf9538fb5ba84f4575631489ef852802c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060792"
 ---
 # <a name="programmatically-monitor-replication"></a>以程式設計方式監視複寫
   「複寫監視器」是一個允許您監視複寫拓撲之全面健全狀況的圖形化工具。 您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 複寫預存程序或 Replication Management Objects (RMO)，以程式設計的方式存取相同的監視資料。 這些物件可用來設計下列工作：  
@@ -58,21 +57,21 @@ ms.locfileid: "62667244"
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>若要從散發者監視發行者、發行集和訂閱  
   
-1.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql)。 這會為所有使用此「散發者」的「發行者」傳回監視資訊。 若要將結果集限制為單一「發行者」 **@publisher**，請指定。  
+1.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql)。 這會為所有使用此「散發者」的「發行者」傳回監視資訊。 若要將結果集限制為單一「發行者」，請指定 **@publisher** 。  
   
-2.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql)。 這會為所有使用此「散發者」的發行集傳回監視資訊。 若要將結果集限制為單一「發行者」、「發行集」或**@publisher**「 **@publication**已發行**@publisher_db**」資料庫，請分別指定、或。  
+2.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql)。 這會為所有使用此「散發者」的發行集傳回監視資訊。 若要將結果集限制為單一「發行者」、「發行集」或「已發行」資料庫，請 **@publisher** 分別指定、 **@publication** 或 **@publisher_db** 。  
   
-3.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql)。 這會為所有使用此「散發者」的訂閱傳回監視資訊。 若要將結果集限制為屬於單一「發行者」、發行集或已發行資料庫的**@publisher**訂閱**@publication**，請**@publisher_db**分別指定、或。  
+3.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql)。 這會為所有使用此「散發者」的訂閱傳回監視資訊。 若要將結果集限制為屬於單一「發行者」、發行集或已發行資料庫的訂閱，請 **@publisher** 分別指定、 **@publication** 或 **@publisher_db** 。  
   
 #### <a name="to-monitor-transactional-commands-waiting-to-be-applied-at-the-subscriber"></a>若要監視在訂閱者端等候套用的交易式命令  
   
-1.  在散發資料庫的「散發者」端，執行 [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)。 這會為所有使用此「散發者」的訂閱傳回所有暫止命令的監視資訊。 若要將結果集限制為屬於單一「發行者」、「訂閱者」、發行集或已發行資料庫之**@publisher**訂閱**@subscriber**的**@publication**暫止**@publisher_db**命令，請分別指定、、或。  
+1.  在散發資料庫的「散發者」端，執行 [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)。 這會為所有使用此「散發者」的訂閱傳回所有暫止命令的監視資訊。 若要將結果集限制為屬於單一「發行者」、「訂閱者」、發行集或已發行資料庫之訂閱的暫止命令，請 **@publisher** 分別指定、 **@subscriber** 、 **@publication** 或 **@publisher_db** 。  
   
 #### <a name="to-monitor-merge-changes-waiting-to-be-uploaded-or-downloaded"></a>若要監視等候上傳或下載的合併變更  
   
-1.  在發行集資料庫的「發行者」端，執行 [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)。 這會傳回結果集，顯示正等候複寫至「訂閱者」之變更的相關資訊。 若要將結果集限制為屬於單一發行集或發行項的變更， **@publication**請**@article**分別指定或。  
+1.  在發行集資料庫的「發行者」端，執行 [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)。 這會傳回結果集，顯示正等候複寫至「訂閱者」之變更的相關資訊。 若要將結果集限制為屬於單一發行集或發行項的變更， **@publication** 請 **@article** 分別指定或。  
   
-2.  在訂閱資料庫的「訂閱者」端，執行 [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)。 這會傳回結果集，顯示正等候複寫至「發行者」之變更的相關資訊。 若要將結果集限制為屬於單一發行集或發行項的變更， **@publication**請**@article**分別指定或。  
+2.  在訂閱資料庫的「訂閱者」端，執行 [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)。 這會傳回結果集，顯示正等候複寫至「發行者」之變更的相關資訊。 若要將結果集限制為屬於單一發行集或發行項的變更， **@publication** 請 **@article** 分別指定或。  
   
 #### <a name="to-monitor-merge-agent-sessions"></a>若要監視合併代理程式的工作階段  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62667244"
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>若要從訂閱者監視提取訂閱的合併代理程式工作階段  
   
-1.  在訂閱資料庫的「訂閱者」端，執行 [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)。 針對指定的訂用帳戶**@publisher**， **@publication**指定、，以及的發行集資料庫名稱**@publisher_db**。 這會傳回此訂閱最後五個「合併代理程式」工作階段的監視資訊。 請注意結果集中感興趣之工作階段的 **Session_id** 值。  
+1.  在訂閱資料庫的「訂閱者」端，執行 [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)。 針對指定的訂用帳戶，指定 **@publisher** 、 **@publication** ，以及的發行集資料庫名稱 **@publisher_db** 。 這會傳回此訂閱最後五個「合併代理程式」工作階段的監視資訊。 請注意結果集中感興趣之工作階段的 **Session_id** 值。  
   
 2.  在訂閱資料庫的「訂閱者」端，執行 [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)。 針對 **Session_id** 指定步驟 1 的 **@session_id**。 這會顯示有關工作階段的詳細監視資訊。  
   
@@ -92,13 +91,13 @@ ms.locfileid: "62667244"
   
 #### <a name="to-view-and-modify-the-monitor-threshold-metrics-for-a-publication"></a>若要檢視和修改發行集的監視臨界值標準  
   
-1.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql)。 這會傳回為所有使用此「散發者」的發行集所設定的監視臨界值。 若要將結果集限制為監視屬於單一「發行者」或已發行資料庫的發行集之臨界值，或**@publisher**分別**@publisher_db**指定、 **@publication**或。 請注意必須變更之任何臨界值的 **Metric_id** 值。 如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)。  
+1.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql)。 這會傳回為所有使用此「散發者」的發行集所設定的監視臨界值。 若要將結果集限制為監視屬於單一「發行者」或已發行資料庫的發行集之臨界值，或 **@publisher** 分別指定、 **@publisher_db** 或 **@publication** 。 請注意必須變更之任何臨界值的 **Metric_id** 值。 如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)。  
   
 2.  在散發資料庫的「散發者」端，執行 [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)。 視需要指定下列項目：  
   
     -   針對 **Metric_id** 指定在步驟 1 中取得的 **@metric_id**。  
   
-    -   監視閾值標準的新值**@value**。  
+    -   監視閾值標準的新值 **@value** 。  
   
     -   針對 **@shouldalert** ，指定 **@shouldalert** 的值以在達到此臨界值時記錄警示，或者如果不需要警示，則指定 **0** 的值。  
   
@@ -128,9 +127,9 @@ ms.locfileid: "62667244"
   
 5.  使用步驟 3 中取得的工作階段識別碼，呼叫下列其中一個方法來傳回有關特定工作階段詳細資料的資訊。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A>-傳回所提供<xref:Microsoft.SqlServer.Replication.MergeSessionDetail> *sessionID*的物件陣列。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A>-傳回 <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> 所提供*sessionID*的物件陣列。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A>-傳回<xref:System.Data.DataSet>物件，其中包含指定*sessionID*的資訊。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A>-傳回 <xref:System.Data.DataSet> 物件，其中包含指定*sessionID*的資訊。  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>若要監視在散發者端所有發行集的複寫屬性  
   

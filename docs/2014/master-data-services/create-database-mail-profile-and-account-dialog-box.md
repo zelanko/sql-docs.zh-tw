@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b614422d3670dc30e0714b18bbf42ed87f1886af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 309cd3f67cb6fd4d41e3513aa6d3876af53bbc1b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483271"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971738"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>建立 Database Mail 設定檔和帳戶對話方塊 (Master Data Services 組態管理員)
   使用 [建立 Database Mail 設定檔和帳戶]**** 對話方塊，即可建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 Database Mail 設定檔和 Database Mail 帳戶。 當商務規則驗證失敗時，將會使用這個設定檔來透過電子郵件通知使用者和群組。  
@@ -37,10 +36,10 @@ ms.locfileid: "65483271"
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
-|**電子郵件地址**|輸入帳戶之電子郵件地址的名稱。 這是傳送電子郵件的電子郵件地址，格式必須是*email_name*@*domain_name*。 範例電子郵件地址為 sales@contoso.com。|  
+|**電子郵件地址**|輸入帳戶之電子郵件地址的名稱。 這是傳送電子郵件的電子郵件地址，格式必須是*email_name* @ *domain_name*。 範例電子郵件地址為 sales@contoso.com。|  
 |**顯示名稱**|選擇性設定。 輸入要在這個帳戶所送出的電子郵件訊息上顯示的名稱。 範例顯示名稱為 Contoso 業務小組。|  
 |**回覆電子郵件地址**|選擇性設定。 輸入將用來回覆這個帳戶所送出之電子郵件訊息的電子郵件地址。 範例回覆電子郵件地址為 admin@contoso.com。|  
-|**SMTP 伺服器**|輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 SMTP 伺服器格式`smtp.`的範例 *<company_name>* `.com`。 如需相關說明，請洽詢您的郵件管理員。|  
+|**SMTP 伺服器**|輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 SMTP 伺服器格式的範例 `smtp.` *<company_name>* `.com` 。 如需相關說明，請洽詢您的郵件管理員。|  
 |**連接埠號碼**|輸入此帳戶之 SMTP 伺服器的通訊埠編號。 預設 SMTP 通訊埠為 25。|  
 |**這個伺服器需要安全連接 (SSL)**|使用安全通訊端層 (SSL) 將通訊加密。|  
   
@@ -49,7 +48,7 @@ ms.locfileid: "65483271"
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
-|**使用 Database Engine 服務認證的 Windows 驗證**|指定 Database Mail 應該使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Windows 服務帳戶的認證在 SMTP 伺服器上進行驗證。|  
+|**使用 Database Engine 服務認證的 Windows 驗證**|指定 Database Mail 應該使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Windows 服務帳戶的認證在 SMTP 伺服器上進行驗證。|  
 |**基本驗證**|指定 Database Mail 應該使用特定的使用者名稱和密碼在 SMTP 伺服器上驗證。 此資訊僅用於電子郵件伺服器的驗證，而且帳戶不需要對應到執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之電腦上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用者。|  
 |**使用者名稱**|輸入 Database Mail 用來登入 SMTP 伺服器之使用者帳戶的名稱。 如果 SMTP 伺服器需要基本驗證，則使用者名稱是必要的。|  
 |**密碼**|輸入 Database Mail 用來登入 SMTP 伺服器的密碼。 如果 SMTP 伺服器需要基本驗證，則需要密碼。|  

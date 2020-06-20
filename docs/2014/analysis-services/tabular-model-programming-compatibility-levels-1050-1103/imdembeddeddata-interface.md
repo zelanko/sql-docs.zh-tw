@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 331f8c33f7748e6591acd6d6ecda7a03ef7d8137
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757781"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940109"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded 介面
   IMDEmbedded 介面是用來管理內嵌 PowerPivot 資料庫或表格式模型資料庫的公用介面。 此介面繼承自 `IPersistStream` 介面， 允許下列作業：  
@@ -38,8 +37,8 @@ ms.locfileid: "62757781"
   
 -   將本機或同處理序資料庫儲存至容器文件中的內嵌資料流。 繼承自 `IPersistStream`。  
   
-## <a name="reference"></a>參考資料  
- 下列參考記載**msmd.h**頭`IMDEmbedded`檔中所提供的介面。  
+## <a name="reference"></a>參考  
+ 下列參考記載 `IMDEmbedded` **msmd.h**標頭檔中所提供的介面。  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>來源檔案：PXOEmbeddedData.idl  
   

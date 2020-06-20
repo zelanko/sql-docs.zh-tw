@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a6208467b4d6af6b0417727643e190b8702968ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c36ff73606e95ed7ee5e713b81acf7c177a42563
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702127"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021572"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
   當要求資料列識別碼（*IdentifierType* SQL_BEST_ROWID）時， **SQLSpecialColumns**會針對除了 SQL_SCOPE_CURROW 以外的任何要求範圍，傳回空的結果集（無資料列）。 產生的結果集表示資料行只有在這個範圍中才是有效的。  

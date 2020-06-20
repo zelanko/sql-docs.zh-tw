@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1d2378426a3cd55b6df183cac7782d63578e2ed0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54422b13b39de1e39f86ad653ecea95cdca02784
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830202"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918286"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>資料分析工作的設定
   在您可以檢閱來源資料的設定檔前，第一個步驟是設定並執行「資料分析」工作。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部建立這個工作。 若要設定「資料分析」工作，您可以使用「資料分析工作編輯器」。 此編輯器可讓您選取要輸出設定檔的位置以及要計算的設定檔。 設定工作後，您可以執行封裝以計算資料設定檔。  
@@ -54,7 +53,7 @@ ms.locfileid: "62830202"
 |計算|這有助於識別|使用這個設定檔|  
 |----------------|-------------------------|----------------------|  
 |選取之資料行中所有不同的字串值長度，以及該資料表中每個長度所代表之資料列的百分比。|**無效的字串值** - 例如，您分析了應該使用兩個字元之美國州名代碼的資料行，但發現長度大於兩個字元的值。|資料**行長度散發-** 適用于具有下列其中一種資料類型的資料行：<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`|  
-|一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。<br /><br /> 同時可尋找未來可用於驗證新值的規則運算式|無效**或格式不正確的字串值-** 例如，{5}「郵遞區號」資料行的模式設定檔可能會產生正則運算式： \d-\d{4}、\d{5}和 \d。{9} 如果輸出包含其他規則運算式，表示資料包含無效或格式錯誤的值。|**資料行模式設定檔-** 適用于具有下列其中一種資料類型的資料行：<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`|  
+|一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。<br /><br /> 同時可尋找未來可用於驗證新值的規則運算式|無效**或格式不正確的字串值-** 例如，「郵遞區號」資料行的模式設定檔可能會產生正則運算式： \d {5} -\d {4} 、\d {5} 和 \d {9} 。 如果輸出包含其他規則運算式，表示資料包含無效或格式錯誤的值。|**資料行模式設定檔-** 適用于具有下列其中一種資料類型的資料行：<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`|  
 |選取之資料行中 Null 值的百分比。|**資料行中 null 值的比例過高-** 例如，您分析了應該包含美國郵遞區號的資料行，但發現遺漏郵遞區號的百分比過高。|資料**行 Null 比例-** 對於具有下列資料類型的資料行有效：<br /><br /> 任何資料類型。 這包括 `image`、`text`、`xml`、使用者定義型別和 Variant 類型。|  
 |數值資料行的最小值、最大值、平均和標準差，以及 `datetime` 資料行的最小值和最大值等統計資料。|不正確**數值和日期**-例如，您分析了歷程記錄日期的資料行，但發現未來的最大日期。|**資料行統計資料設定檔-** 適用于具有下列其中一種資料類型的資料行：<br /><br /> 數值資料類型：整數類型 (`bit` 除外)、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`<br />注意：若為具有日期和時間資料類型的資料行，此設定檔就只會計算最小值和最大值。|  
 |選取之資料行中的所有相異值，以及該資料表中每個值所代表之資料列的百分比。 或者，代表超過資料表中指定之資料列百分比的值。|**資料行中相異值的數目不正確**-例如，您分析了包含美國州的資料行，但發現超過50個相異值。|資料**行值散發-** 適用于具有下列其中一種資料類型的資料行：<br /><br /> 數值資料類型：整數類型 (`bit` 除外)、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
@@ -66,7 +65,7 @@ ms.locfileid: "62830202"
   
  在 [設定檔要求]**** 頁面上，您也可以指定資料來源並設定資料設定檔。 當您設定工作時，請考慮下列資訊：  
   
--   若要簡化設定並讓探索不熟悉資料的特性變得更容易，您可以使用萬用字元（ ** \*）** 來取代個別的資料行名稱。 如果您使用這個萬用字元，此工作將會分析具有適當資料類型的每個資料行，而且可能會降低處理速度。  
+-   若要簡化設定並讓探索不熟悉資料的特性變得更容易，您可以使用萬用字元（ ** \* ）** 來取代個別的資料行名稱。 如果您使用這個萬用字元，此工作將會分析具有適當資料類型的每個資料行，而且可能會降低處理速度。  
   
 -   當選取的資料表或檢視為空白時，資料分析工作不會計算任何設定檔。  
   
@@ -91,13 +90,13 @@ ms.locfileid: "62830202"
 -   [值包含設定檔要求選項 &#40;資料分析工作&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>執行包含資料分析工作的封裝  
- 設定「資料分析」工作後，您可以執行該工作。 然後，此工作會計算資料設定檔，並將此資訊以 XML 格式輸出到檔案或封裝變數。 這個 XML 的結構會遵循 DataProfile.xsd 結構描述。 您可以在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]或其他架構編輯器、XML 編輯器或 [記事本] 之類的文字編輯器中開啟架構。 此資料品質資訊的結構描述對於下列用途可能很實用：  
+ 設定「資料分析」工作後，您可以執行該工作。 然後，此工作會計算資料設定檔，並將此資訊以 XML 格式輸出到檔案或封裝變數。 這個 XML 的結構會遵循 DataProfile.xsd 結構描述。 您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或其他架構編輯器、XML 編輯器或 [記事本] 之類的文字編輯器中開啟架構。 此資料品質資訊的結構描述對於下列用途可能很實用：  
   
 -   在組織內部與跨組織交換資料品質資訊。  
   
 -   建立搭配資料品質資訊使用的自訂工具。  
   
- 在架構中，將目標命名空間識別[https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)為。  
+ 在架構中，將目標命名空間識別為 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/) 。  
   
 ## <a name="next-step"></a>後續步驟  
  [資料設定檔檢視器](data-profile-viewer.md)。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dff5f6464a14b520a35493b96b47b4a1c5a82481
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cdd6219bf9fb807f1d347d3ee6ed7330b704103
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175507"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937999"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用參考資料 (外部) 知識清理資料
   本主題描述如何使用參考資料提供者的知識來清理資料。 對於使用參考資料提供者的知識來清理資料而言，雖然執行清理活動的所有步驟仍與[使用 DQS &#40;內部&#41; 知識清理資料](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中所說明的步驟相同，不過本主題將針對在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用 Reference Data Service 進行資料清理提供特定資訊。
@@ -41,7 +40,7 @@ ms.locfileid: "78175507"
 
 ## <a name="before-you-begin"></a>開始之前
 
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件
  您必須已經將 DQS 知識庫中已對應且必要的定義域對應至適當的參考資料服務。 此外，知識庫必須包含您想要清理之資料類型的相關知識。 例如，如果您想要清理包含美國地址的來源資料，就必須將定義域對應至提供「高品質」美國地址資料的參考資料服務提供者。 如需詳細資訊，請參閱[將定義域或複合定義域附加至參考資料](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)。
 
 ###  <a name="security"></a><a name="Security"></a> Security
@@ -54,7 +53,7 @@ ms.locfileid: "78175507"
 
 1.  建立資料品質專案，然後選取 **[清理]** 活動。 請參閱 [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md)。
 
-2.  在 **[對應]** 頁面上，將下列 4 定義域對應至來源資料中的適當資料行： **[地址行]**、 **[縣/市]**、 **[省/市]** 和 **[郵遞區號]**。 按 [下一步]  。
+2.  在 **[對應]** 頁面上，將下列 4 定義域對應至來源資料中的適當資料行： **[地址行]**、 **[縣/市]**、 **[省/市]** 和 **[郵遞區號]**。 按 [下一步] 。
 
     > [!NOTE]
     >  因為我們已經對應了 **[地址驗證]** 複合定義域中的所有定義域，所以資料清理現在將針對複合定義域層級進行，而非針對個別定義域層級進行。
@@ -64,7 +63,7 @@ ms.locfileid: "78175507"
     > [!NOTE]
     >  在 **[清理]** 頁面上，DQS 會以下列兩種方式顯示附加至參考資料服務之定義域的相關資訊：
     > 
-    >  -   [**開始**] 按鈕底下會顯示一則訊息： \<「網域 Domain1 \<>、domain2> ...>,.。。\<Domainn>> 是使用參考資料服務提供者清理。」 在此範例中，則會顯示下列訊息：「使用參考資料服務提供者清理了網域位址驗證」。
+    >  -   [開始] 按鈕底下會顯示一則訊息： **「** 網域 \<Domain1> ， \<Domain2> ,... \<DomainN>是使用參考資料服務提供者所清理的。」 在此範例中，則會顯示下列訊息：「使用參考資料服務提供者清理了網域位址驗證」。
     > -   針對附加至參考資料服務提供者的定義域，會在 [分析工具 **] 區域中**顯示圖示 [![網域已附加至 RDS](../../2014/data-quality-services/media/dqs-rdsindicator.JPG "定義域已附加至 RDS")]。 在此範例中，該圖示會顯示在 **[地址驗證]** 複合定義域旁邊。
 
 4.  在 **[管理和檢視結果]** 頁面上，檢閱您的定義域值。 根據將定義域對應至參考資料服務期間在 **[建議的候選值]** 方塊中指定的最大建議數目，參考資料服務可能會針對一個值顯示多項建議 (如果有的話)。 例如，下列美國地址會顯示兩項建議：

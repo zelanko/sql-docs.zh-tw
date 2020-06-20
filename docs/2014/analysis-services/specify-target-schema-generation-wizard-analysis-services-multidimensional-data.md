@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 342877c5-14af-4287-a2b3-d48882b0133a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 343cb7d3957f1859b8676629a14b165e756b450d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068246"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940279"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>指定目標 (結構描述產生精靈) (Analysis Services - 多維度資料)
   使用 **[指定目標]** 頁面，來識別在其中建立關聯式結構描述的資料來源檢視。  

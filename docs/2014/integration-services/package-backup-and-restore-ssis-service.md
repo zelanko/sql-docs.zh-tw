@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b5c775393f7815084e8a79aae4be7f0974886f3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16ffb226202bb4ed52fd01e5e6376accfe6b6558
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056925"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964912"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>封裝備份和還原 (SSIS 服務)
     
 > [!IMPORTANT]  
 >  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]封裝可以儲存至檔案系統或 msdb （ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]系統資料庫）。 儲存至 msdb 的封裝可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份和還原功能進行備份和還原。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]封裝可以儲存至檔案系統或 msdb （ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系統資料庫）。 儲存至 msdb 的封裝可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份和還原功能進行備份和還原。  
   
  如需備份和還原 msdb 資料庫的詳細資訊，請按一下下列主題之一：  
   

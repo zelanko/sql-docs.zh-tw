@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b839fe4359e083df9c6b4643111b61f5b681914
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63217817"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067194"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>計算資料表中的資料列 (Visual Database Tools)
   您可以計算資料表中的資料列，以判斷：  
@@ -43,7 +42,7 @@ ms.locfileid: "63217817"
   
 2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [新增群組依據]  。 [查詢和檢視表設計工具](visual-database-tools.md)會將 [群組依據]  資料行新增至 [準則] 窗格的方格中。  
   
-3.  在代表資料表或資料表值物件的矩形中，選取** \* [（所有資料行）** ]。  
+3.  在代表資料表或資料表值物件的矩形中，選取 [ ** \* （所有資料行）** ]。  
   
      查詢和檢視表設計工具會自動將 [計數]  一詞填入至 [準則] 窗格的 [群組依據]  資料行，並且將資料行別名指定至您所摘要的資料行。 您可以使用較有意義的別名取代這個自動產生的別名。 如需詳細資訊，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md)。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "63217817"
   
 2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [新增群組依據]  。 查詢和檢視表設計工具會將 [群組依據]  資料行新增至 [準則] 窗格的方格中。  
   
-3.  在代表資料表或資料表結構化物件的矩形中，選取** \*[（所有資料行）** ]。  
+3.  在代表資料表或資料表結構化物件的矩形中，選取 [ ** \* （所有資料行）** ]。  
   
      查詢和檢視表設計工具會自動將 [計數]  一詞填入至 [準則] 窗格的 [群組依據]  資料行，並且將資料行別名指定至您所摘要的資料行。 若要在查詢輸出中建立更有用的資料行標題，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md)。  
   

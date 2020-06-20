@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca1ac00668e6a4383b022ae5e1ed108da6ef603d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057230"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965018"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>ODBC 目的地編輯器 (對應頁面)
   使用 [ODBC 目的地編輯器]**** 對話方塊的 [對應]**** 頁面，即可將輸入資料行對應至目的地資料行。  
@@ -33,7 +32,7 @@ ms.locfileid: "66057230"
  可用目的地資料行的清單。 將目的地資料行拖放至可用的輸入資料行，即可對應資料行。  
   
 ### <a name="input-column"></a>輸入資料行  
- 檢視所選取的輸入資料行。 您可以選取** \<[略過>** ] 來移除對應，以排除輸出中的資料行。  
+ 檢視所選取的輸入資料行。 您可以選取 **\<ignore>** 從輸出中排除資料行來移除對應。  
   
 ### <a name="destination-column"></a>目的地資料行  
  檢視所有可用的目的地資料行，包括對應和取消對應的資料行。  
