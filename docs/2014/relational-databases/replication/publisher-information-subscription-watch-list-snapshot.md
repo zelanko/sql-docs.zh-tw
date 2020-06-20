@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0b84f87aff9684cc08fc0d91fc5de364f816125a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ae61697e1943aa97658d7651e6a2bd4176f88c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63262151"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005032"
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot-publication-sql-server-2005-and-later"></a>發行者資訊，訂閱監看清單 (快照式發行集，SQL Server 2005 和更新的版本)
   執行 **和更新版本的散發者可以使用** [訂閱監看清單] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 索引標籤。這個索引標籤的用途是顯示選取發行者端之所有可用發行集的相關訂閱資訊。 您可以篩選訂閱清單以查看錯誤、警告以及任何執行不良的訂閱。 此索引標籤為管理員提供監視發行者端所有複寫活動的單一位置：複寫監視器會根據選取的複寫類型和 **[顯示]** 下拉式清單方塊中選擇的選項，顯示需要注意的所有訂閱。 由於此索引標籤上顯示的項目會依據目前的狀態與效能，因此唯有在目前符合 **[顯示]** 清單方塊中之選項的訂閱，才會在這個頁面上顯示。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  如需詳細資訊以及與訂閱相關的工作，請以滑鼠右鍵按一下該訂閱的資料列，然後按一下捷徑功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
 -   **排序**：在 **[排序資料行]** 對話方塊中排序一個或多個資料行。  
@@ -64,7 +63,7 @@ ms.locfileid: "63262151"
   
  唯有設定了臨界值時，才會顯示 **[即將過期/已過期]** 狀態值。 如需設定閾值的資訊，請參閱[在複寫監視器中設定閾值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
- **訂閱帳戶**  
+ **訂用帳戶**  
  每一個訂閱的名稱，格式為： *SubscriberName: SubscriptionDatabaseName*。  
   
  **發行集**  

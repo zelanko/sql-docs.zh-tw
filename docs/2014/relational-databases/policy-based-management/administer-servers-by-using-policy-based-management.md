@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f415ffbc10b93cee2037da78daef3b7ee5aba9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157091"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069024"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用原則式管理來管理伺服器
   以原則為基礎的管理是用於管理一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的系統。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原則管理員使用原則式管理時，他們會使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立管理伺服器上實體的原則，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體、資料庫或其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件。  

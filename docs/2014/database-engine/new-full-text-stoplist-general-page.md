@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1dc58f006d1e37885418dfb923c6c7cc7563d018
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: a6272fb570b85989f38c8187e29712966862710d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000828"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930464"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>新增全文檢索停用字詞表 (一般頁面)
   使用這個對話方塊，即可建立全文檢索停用字詞表。 *「停用字詞表」* (Stoplist) 是指一組稱為 *「停用字詞」*(Stopword) 的常用字，而使用該停用字詞表之資料表的全文檢索索引會省略這些字。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)。  
@@ -26,7 +25,7 @@ ms.locfileid: "83000828"
   
 -   [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **全文檢索停用字詞表名稱**  
  輸入全文檢索停用字詞表的名稱。  
   

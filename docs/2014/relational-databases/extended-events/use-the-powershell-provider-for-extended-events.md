@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69de90bb43e35b559def569bfe1f60433d7c14de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4cdb785a5a053e0b839386c5fbb57e9393f5b9dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050918"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>針對擴充事件使用 PowerShell 提供者
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件。 XEvent 子資料夾位於 SQLSERVER 磁碟機底下。 您可以使用下列其中一種方法來存取這個資料夾：  

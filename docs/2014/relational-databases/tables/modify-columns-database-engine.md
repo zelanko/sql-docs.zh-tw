@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23567accc051e72ede3b8ed079b22411de6bc7c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a73c25d91b742f1cc1f7edcc8a95cdf226b2683c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211831"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067966"
 ---
 # <a name="modify-columns-database-engine"></a>修改資料行 (Database Engine)
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改資料行的資料類型。  
@@ -56,7 +55,7 @@ ms.locfileid: "68211831"
   
 3.  在 [資料行屬性]  索引標籤中，按一下 [資料類型]  屬性的方格資料格，並且從下拉式清單中選擇新的資料類型。  
   
-4.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
+4.  在 [檔案]  功能表上，按一下 [儲存「資料表名稱」]。  
   
 > [!NOTE]  
 >  在修改資料行的資料類型時，資料表設計工具會套用所選取資料類型的預設長度，即使您已經指定另一個資料類型也是如此。 一定要在指定資料類型之後，設定所需值的資料類型長度。  

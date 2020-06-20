@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8558fde82245a02e04c34008eb124219354c4352
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb008003b05b00e342795d51afee2b4491a71260
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192098"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065622"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL 屬性 (ClientNetworkProtocol 類別)
   取得[設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)所指定的網路通訊協定所需的 .DLL 檔案名。  
@@ -37,8 +36,8 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)]代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端所使用之網路通訊協定的[ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)物件。  
+ *object*  
+ 代表用戶端所使用之網路通訊協定的[ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定用戶端網路通訊協定所需之通訊協定 .dll 檔案的字串值。  

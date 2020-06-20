@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 560822d7cc4df81bb55d0ea9a78eb8f9dfbbeeb5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900198"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939313"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩時變維度轉換
   「緩時變維度」轉換可在資料倉儲維度資料表中協調記錄的更新與插入。 例如，您可利用此轉換來設定轉換輸出，該轉換輸出會使用 AdventureWorks OLTP 資料庫中 Production.Products 資料表的資料，在 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 資料庫的 DimProduct 資料表內插入和更新記錄。  

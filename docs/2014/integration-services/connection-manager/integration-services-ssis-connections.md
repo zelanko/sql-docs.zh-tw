@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db78d2aef82e04846e7dff823c3448005beb1b22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112163"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920779"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 連接
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件會使用連線來執行不同的工作以及實作 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
@@ -64,29 +63,29 @@ ms.locfileid: "79112163"
 -   如果現有的連接管理員不符合您的需求，您可以建立自己的自訂連接管理員。  
   
 ### <a name="built-in-connection-managers"></a>內建的連接管理員  
- 下表列出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供的連接管理員類型。  
+ 下表列出提供的連接管理員類型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  
   
 |類型|描述|主題|  
 |----------|-----------------|-----------|  
-|ADO|連接到 ActiveX Data Objects (ADO) 物件。|[ADO 連接管理員](ado-connection-manager.md)|  
-|ADO.NET|使用 .NET 提供者連接到資料來源。|[ADO.NET 連接管理員](ado-net-connection-manager.md)|  
+|ADO|連接到 ActiveX Data Objects (ADO) 物件。|[ADO 連線管理員](ado-connection-manager.md)|  
+|ADO.NET|使用 .NET 提供者連接到資料來源。|[ADO.NET 連線管理員](ado-net-connection-manager.md)|  
 |CACHE|從資料流程或快取檔案 (.caw) 中讀取資料，而且可以將資料儲存至快取檔案。|[快取連接管理員](cache-connection-manager.md)|  
 |DQS|連接至 Data Quality Services 伺服器及伺服器上的 Data Quality Services 資料庫。|[DQS 清理連接管理員](dqs-cleansing-connection-manager.md)|  
-|EXCEL|連接到 Excel 活頁簿檔案。|[Excel 連接管理員](excel-connection-manager.md)|  
-|FILE|連接到檔案或資料夾。|[檔案連接管理員](file-connection-manager.md)|  
-|FLATFILE|連接到單一一般檔案中的資料。|[一般檔案連接管理員](flat-file-connection-manager.md)|  
-|FTP|連接到 FTP 伺服器。|[FTP 連接管理員](ftp-connection-manager.md)|  
-|HTTP|連接到 Web 伺服器。|[HTTP 連接管理員](http-connection-manager.md)|  
-|MSMQ|連接到訊息佇列。|[MSMQ 連接管理員](msmq-connection-manager.md)|  
-|MSOLAP100|連接到的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]實例或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。|[Analysis Services 連接管理員](analysis-services-connection-manager.md)|  
-|MULTIFILE|連接到多個檔案和資料夾。|[多個檔案連接管理員](multiple-files-connection-manager.md)|  
-|MULTIFLATFILE|連接到多個資料檔案和資料夾。|[多個一般檔案連接管理員](multiple-flat-files-connection-manager.md)|  
+|EXCEL|連接到 Excel 活頁簿檔案。|[Excel 連線管理員](excel-connection-manager.md)|  
+|FILE|連接到檔案或資料夾。|[檔案連線管理員](file-connection-manager.md)|  
+|FLATFILE|連接到單一一般檔案中的資料。|[一般檔案連線管理員](flat-file-connection-manager.md)|  
+|FTP|連接到 FTP 伺服器。|[FTP 連線管理員](ftp-connection-manager.md)|  
+|HTTP|連接到 Web 伺服器。|[HTTP 連線管理員](http-connection-manager.md)|  
+|MSMQ|連接到訊息佇列。|[MSMQ 連線管理員](msmq-connection-manager.md)|  
+|MSOLAP100|連接到的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。|[Analysis Services 連線管理員](analysis-services-connection-manager.md)|  
+|MULTIFILE|連接到多個檔案和資料夾。|[多重檔案連線管理員](multiple-files-connection-manager.md)|  
+|MULTIFLATFILE|連接到多個資料檔案和資料夾。|[多重一般檔案連線管理員](multiple-flat-files-connection-manager.md)|  
 |OLEDB|使用 OLE DB 提供者連接到資料來源。|[OLE DB 連接管理員](ole-db-connection-manager.md)|  
-|ODBC|使用 ODBC 連接到資料來源。|[ODBC 連接管理員](odbc-connection-manager.md)|  
+|ODBC|使用 ODBC 連接到資料來源。|[ODBC 連線管理員](odbc-connection-manager.md)|  
 |SMOServer|連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 伺服器。|[SMO 連線管理員](smo-connection-manager.md)|  
-|SMTP|連接到 SMTP 郵件伺服器。|[SMTP 連接管理員](smtp-connection-manager.md)|  
-|SQLMOBILE|連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 壓縮資料庫。|[SQL Server Compact Edition 連接管理員](sql-server-compact-edition-connection-manager.md)|  
-|WMI|連接到伺服器，並指定該伺服器上 Windows Management Instrumentation (WMI) 管理的範圍。|[WMI 連接管理員](wmi-connection-manager.md)|  
+|SMTP|連接到 SMTP 郵件伺服器。|[SMTP 連線管理員](smtp-connection-manager.md)|  
+|SQLMOBILE|連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 壓縮資料庫。|[SQL Server Compact Edition 連線管理員](sql-server-compact-edition-connection-manager.md)|  
+|WMI|連接到伺服器，並指定該伺服器上 Windows Management Instrumentation (WMI) 管理的範圍。|[WMI 連線管理員](wmi-connection-manager.md)|  
   
 ### <a name="connection-managers-available-for-download"></a>可下載的連接管理員  
  下表列出您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 網站下載的其他連接管理員類型。  
@@ -96,9 +95,9 @@ ms.locfileid: "79112163"
   
 |類型|描述|主題|  
 |----------|-----------------|-----------|  
-|ORACLE|連接到 Oracle \<版本資訊> 伺服器。|Oracle 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|ORACLE|連接到 Oracle \<version info> 伺服器。|Oracle 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
 |SAPBI|連接到 SAP NetWeaver BI 7 系統。|SAP BI 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440)＞。|  
-|TERADATA|連接到 Teradata \<版本資訊> 伺服器。|Teradata 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|TERADATA|連接到 Teradata \<version info> 伺服器。|Teradata 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
   
 ### <a name="custom-connection-managers"></a>自訂連接管理員  
  您也可以撰寫自訂連接管理員。 如需詳細資訊，請參閱＜ [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)＞。  

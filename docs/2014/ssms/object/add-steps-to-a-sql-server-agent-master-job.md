@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 18c4af67230726d831c2c192a782135f9afe3743
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50096ae9f00125406a494f2b19c317ff9cabd3fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68188315"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067409"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>將步驟加入至 SQL Server Agent 主要作業
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將步驟加入至 SQL Server Agent 主要作業。  
@@ -56,7 +55,7 @@ ms.locfileid: "68188315"
   
 4.  以滑鼠右鍵按一下您想要新增步驟的作業，然後選取 [屬性]  。  
   
-5.  在 [作業屬性 -**job_name**]  對話方塊的 [選取頁面]  下，選取 [步驟]  。 如需有關此頁面上可用選項的詳細資訊，請參閱[作業屬性：新增作業 &#40;步驟頁面&#41;](../agent/job-properties-new-job-steps-page.md)。  
+5.  在 [作業屬性 -_job_name_] 對話方塊的 [選取頁面] 下，選取 [步驟]。 如需有關此頁面上可用選項的詳細資訊，請參閱[作業屬性：新增作業 &#40;步驟頁面&#41;](../agent/job-properties-new-job-steps-page.md)。  
 
 6.  完成後，請按一下 **[確定]** 。  
   

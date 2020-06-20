@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f5504c6f58d7ff5254d081ea479ca30ed6ca705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdbc41e4290914ac45a4afe09cc5715395774d80
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770335"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939449"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>使用聯集全部轉換來合併資料
   若要加入及設定「聯集全部」轉換，封裝必須已包括至少一個「資料流程」工作與兩個資料來源。  
@@ -38,7 +37,7 @@ ms.locfileid: "62770335"
   
 4.  按兩下 [聯集全部] 轉換。  
   
-5.  在 [聯集全部轉換編輯器]  中，藉由按一下資料列並選取輸入清單中的資料行，將輸入的資料行對應至 [輸出資料行名稱]  清單中的資料行。 選取輸入清單中的 [**忽略>]\<** ，以略過資料行的對應。  
+5.  在 [聯集全部轉換編輯器]  中，藉由按一下資料列並選取輸入清單中的資料行，將輸入的資料行對應至 [輸出資料行名稱]  清單中的資料行。 **\<ignore>** 在輸入清單中選取，以略過資料行的對應。  
   
     > [!NOTE]  
     >  兩個資料行之間的對應，會要求資料行的中繼資料相符。  

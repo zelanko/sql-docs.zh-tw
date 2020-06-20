@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82ed0e5dd67738b705b4991b90669198495d497a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63286542"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060263"
 ---
 # <a name="sql-trace"></a>SQL 追蹤
   在 SQL 追蹤中，如果事件是列在追蹤定義中之事件類別的執行個體，這些事件就會被蒐集起來。 您可將這些事件篩選掉，也可以放入分配目的地的佇列中。 目的地可以是檔案或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO)，後者會在用於管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的應用程式中使用這些追蹤資訊。  
@@ -35,7 +34,7 @@ ms.locfileid: "63286542"
  下列詞彙說明 SQL 追蹤的主要概念。  
   
  **事件**  
- 實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]中出現的動作。  
+ 實例中出現的動作 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 。  
   
  **資料行**  
  事件的屬性。  
@@ -78,11 +77,11 @@ ms.locfileid: "63286542"
 |**Binary Data**|2|二進位值，依據在追蹤中所擷取的事件類別而定。|  
 |**ClientProcessID** <sup>1</sup>|9|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|  
 |**ColumnPermissions**|44|指出是否設定資料行權限。 您可以剖析陳述式文字，以判斷資料行所套用的權限。|  
-|**使用率**|18|事件所使用的 CPU 時間量 (以毫秒為單位)。|  
+|**CPU**|18|事件所使用的 CPU 時間量 (以毫秒為單位)。|  
 |**資料庫識別碼** <sup>1</sup>|3|由 USE <資料庫名稱>** 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE <資料庫名稱>** 陳述式，則是預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|  
 |**DatabaseName**|35|正在其中執行使用者陳述式的資料庫名稱。|  
 |**DBUserName** <sup>1</sup>|40|用戶端的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者名稱。|  
-|**期限**|13|事件的持續期間 (以百萬分之一秒為單位)。<br /><br /> 伺服器會以百萬分之一秒為單位 (百萬分之一秒，或 10<sup>-6</sup>秒) 報告事件的持續時間，並以毫秒為單位 (千分之一秒，或 10<sup>-3</sup>秒) 報告事件使用的 CPU 時間量。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 圖形化使用者介面預設會以毫秒為單位來顯示 **Duration** 資料行，但是當追蹤儲存到檔案或資料庫資料表時，會以百萬分之一秒為單位來寫入 **Duration** 資料行值。|  
+|**有效期間**|13|事件的持續期間 (以百萬分之一秒為單位)。<br /><br /> 伺服器會以百萬分之一秒為單位 (百萬分之一秒，或 10<sup>-6</sup>秒) 報告事件的持續時間，並以毫秒為單位 (千分之一秒，或 10<sup>-3</sup>秒) 報告事件使用的 CPU 時間量。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 圖形化使用者介面預設會以毫秒為單位來顯示 **Duration** 資料行，但是當追蹤儲存到檔案或資料庫資料表時，會以百萬分之一秒為單位來寫入 **Duration** 資料行值。|  
 |**EndTime**|15|事件結束的時間。 參考到啟動事件的事件類別，例如 **SQL:BatchStarting** 或 **SP:Starting**，不會填入這個欄位。|  
 |**錯誤**|31|給定事件的錯誤代碼。 通常這是儲存在 **sysmessages**中的錯誤代碼。|  
 |**EventClass** <sup>1</sup>|27|所擷取的事件類別的類型。|  
@@ -127,13 +126,13 @@ ms.locfileid: "63286542"
 |**SqlHandle**|63|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 此值可以傳遞給**sys.databases dm_exec_sql_text （）** ，以取得相關聯的 sql 文字。|  
 |**StartTime** <sup>1</sup>|14|事件啟動的時間 (如果有的話)。|  
 |**State**|30|錯誤狀態碼。|  
-|「成功」 |23|代表事件成功與否。 數值包括：<br /><br /> **1** = 成功。<br /><br /> **0** = 失敗<br /><br /> 例如， **1** 表示權限檢查成功， **0** 表示檢查失敗。|  
+|「成功」|23|代表事件成功與否。 數值包括：<br /><br /> **1** = 成功。<br /><br /> **0** = 失敗<br /><br /> 例如， **1** 表示權限檢查成功， **0** 表示檢查失敗。|  
 |**TargetLoginName**|42|對於目標為登入的動作，這是目標登入的名稱；例如，要加入新登入。|  
 |**TargetLoginSid**|43|對於目標為登入的動作，這是目標登入的 SID；例如，要加入新登入。|  
 |**TargetUserName**|39|對於目標為資料庫使用者的動作，這是該使用者的名稱；例如，要授與使用者權限。|  
 |**TextData**|1|文字值，依據在追蹤中所擷取的事件類別而定。 但是，如果是追蹤參數化查詢， **TextData** 資料行就不會顯示變數與資料值。|  
-|**交易識別碼**|4|系統指派的交易識別碼。|  
-|**類型**|57|相依於追蹤所擷取之事件類別的整數值。|  
+|**Transaction ID**|4|系統指派的交易識別碼。|  
+|**型別**|57|相依於追蹤所擷取之事件類別的整數值。|  
 |**寫入**|17|伺服器代表事件所執行的實體磁碟寫入作業次數。|  
 |**XactSequence**|50|用來描述目前交易的 Token。|  
   
@@ -161,7 +160,7 @@ ms.locfileid: "63286542"
 |描述在 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中排程追蹤的兩種方法。|[排程追蹤](../sql-trace/schedule-traces.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Profiler 範本和許可權](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler 範本和權限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 管理物件 &#40;SMO&#41; 程式設計指南](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

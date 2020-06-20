@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56157ce2c29a95d35198ab44835b50e45d7831a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b521c230d1789b031903aecdf8f42f9be3ffc0b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827201"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052827"
 ---
 # <a name="plan-guide-successful-event-class"></a>Plan Guide Successful 事件類別
   Plan Guide Successful 事件類別會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 成功針對包含計畫指南的查詢或批次產生了執行計畫。 當下列條件成立時，就會引發此事件：  
@@ -42,7 +41,7 @@ ms.locfileid: "62827201"
 |EventSequence|`int`|要求中之特定事件的順序。|51|否|  
 |HostName|`nvarchar`|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，這個資料行就會擴展。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IsSystem|`int`|指出事件是發生在系統處理序或使用者處理序：1 = 系統，0 = 使用者。|60|是|  
-|LoginName|`nvarchar`|使用者的登[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]入名稱（安全性登入或 DOMAIN [!INCLUDE[msCoName](../../includes/msconame-md.md)] \\ *username*格式的 Windows 登入認證）。|11|是|  
+|LoginName|`nvarchar`|使用者的登入名稱（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 入或 DOMAIN username 格式的 Windows 登入認證 \\ * *）。|11|是|  
 |LoginSid|`image`|已登入之使用者的安全性識別碼 (SID)。 您可以在 [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) 或 [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) 目錄檢視中找到此資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |NTDomainName|`nvarchar`|使用者所隸屬的 Windows 網域。|7|是|  
 |NTUserName|`nvarchar`|Windows 使用者名稱。|6|是|  

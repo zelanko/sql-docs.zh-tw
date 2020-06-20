@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1622e87d971a32dcf478dfb036a504e0959fd76
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774928"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930729"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>合併 Check 和外部索引鍵條件約束
-  [!INCLUDE[hek_2](../includes/hek-2-md.md)]中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]不支援 Check 和 foreign key 條件約束。 這些結構通常是用來在架構中強制執行邏輯資料完整性，並且對於維護應用程式的功能正確性而言很重要。  
+  中不支援 Check 和 foreign key 條件約束 [!INCLUDE[hek_2](../includes/hek-2-md.md)] [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 。 這些結構通常是用來在架構中強制執行邏輯資料完整性，並且對於維護應用程式的功能正確性而言很重要。  
   
  資料表上的邏輯完整性檢查（例如 check 和 foreign key 條件約束）需要額外的交易處理，而且通常應該避免對效能敏感的應用程式。 不過，如果這類檢查對您的應用程式很重要，則有兩種因應措施。  
   
@@ -28,7 +27,7 @@ ms.locfileid: "62774928"
  這個因應措施的優點是對效能的影響最小，因為資料修改不會受到條件約束檢查封鎖。 不過，如果違反一個或多個條件約束的變更發生，則回復該變更的程式可能會花很長的時間。  
   
 ## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>在插入、更新或刪除作業之前強制執行條件約束  
- 此解決方法會模擬[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]條件約束的行為。 條件約束會在進行資料修改之前檢查，而且如果檢查失敗，則會終止交易。 這個方法會對資料修改產生效能上的負面影響，但會確保資料表內的資料一律符合條件約束。  
+ 此解決方法會模擬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 條件約束的行為。 條件約束會在進行資料修改之前檢查，而且如果檢查失敗，則會終止交易。 這個方法會對資料修改產生效能上的負面影響，但會確保資料表內的資料一律符合條件約束。  
   
  當邏輯資料完整性對正確性和違反條件約束的修改可能很重要時，請使用此因應措施。 不過，若要保證完整性，所有資料修改都必須透過包含這些實行原則的預存程式進行。 透過臨機操作查詢和其他預存程式的修改將不會強制執行這些條件約束，因此可能會違反它們而不發出警告。  
   
@@ -99,7 +98,7 @@ GO
   
  轉換成記憶體優化資料表之後，[Sales] 的定義。[SalesOrderDetail] 如下所示：  
   
- 請注意，rowguid 不再是 ROWGUIDCOL，因為不支援此功能[!INCLUDE[hek_2](../includes/hek-2-md.md)]。 已移除資料行。 此外，LineTotal 是一個計算資料行，而且不在本文的範圍內，因此也已被移除。  
+ 請注意，rowguid 不再是 ROWGUIDCOL，因為不支援此功能 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 。 已移除資料行。 此外，LineTotal 是一個計算資料行，而且不在本文的範圍內，因此也已被移除。  
   
 ```sql  
 USE [AdventureWorks2012]  

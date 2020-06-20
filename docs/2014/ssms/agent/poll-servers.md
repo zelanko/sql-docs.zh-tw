@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ae75dc8af9364a619113d2c38071a441e15351be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6370e53083d2cf818e8c8b09752d49e092755a46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062193"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067680"
 ---
 # <a name="poll-servers"></a>輪詢伺服器
   在實作多伺服器管理時，目標伺服器會定期連絡主要伺服器，來上傳已執行作業的相關資訊，並下載新的作業。 連絡主要伺服器的程序稱為「伺服器輪詢」**，它會以定期的「輪詢間隔」** 來進行。  

@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1d50f31078389cad9fc1e687e67b515c61c89b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cacffbae4f2b31349b04d159c9756609d2d9c1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783044"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996996"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>備份和還原資料庫與交易記錄
-  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 類別和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 類別都是公用程式類別，可提供工具來完成備份及還原的特定工作。 <xref:Microsoft.SqlServer.Management.Smo.Backup>物件代表所需的特定備份工作，而不[!INCLUDE[msCoName](../../../includes/msconame-md.md)]是伺服器實例上的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]物件。  
+  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 類別和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 類別都是公用程式類別，可提供工具來完成備份及還原的特定工作。 <xref:Microsoft.SqlServer.Management.Smo.Backup>物件代表所需的特定備份工作，而不是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 伺服器實例上的物件。  
   
  如果發生資料遺失或損毀，則必須完整或部分地還原備份。 部分還原會使用 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 集合來分割要還原的資料。 如果是進行交易記錄的備份，則可以使用 <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Restore> 屬性還原至特定的時間點。 也可以使用 <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> 方法來驗證資料。 建議的備份程序是定期執行還原作業並檢查資料庫中的資料，以檢查備份的完整性。  
   

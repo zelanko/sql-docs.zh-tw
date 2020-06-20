@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e36b895bdb7c0ade6674525ad94677b1444082a5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 34b03423f3bb88166d0d9ce5b0df450d4455e7ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703424"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068164"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>資料類型與 XML 大量載入行為 (SQLXML 4.0)
   除了在下列情況下之外，在對應結構描述 (XSD 或 XDR 類型和 `sql:datatype`) 中指定的資料類型通常會遭到忽略：  

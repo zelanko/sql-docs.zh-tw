@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0588bdced4d8d11111b02eb7d6a1e1a892d1acb4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e82f9d68a5b796c6152531437265a665a9b85a68
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023936"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052859"
 ---
 # <a name="objectcreated-event-class"></a>Object:Created 事件類別
   Object:Created 事件類別指出已建立物件，例如，利用 CREATE INDEX、CREATE TABLE 或 CREATE DATABASE 陳述式建立的物件。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16ab59a9fcdab29c927cb624dabcdfa71eaae1e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011075"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003945"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索屬性清單搜索文件屬性
   文件屬性的內容與文件本文的內容之間原本無法區別。 這項限制會將全文檢索查詢限制為整個文件的一般搜尋。 不過，現在您可以針對 `varbinary`、`varbinary(max)` (包括 `FILESTREAM`) 或 `image` 二進位資料行中支援的文件類型設定全文檢索索引，以便支援特定屬性 (例如 Author 和 Title) 的屬性範圍搜尋作業。 這種搜尋形式稱為「屬性搜尋」  。  
@@ -211,7 +210,7 @@ GO
   
     1.  若要移除文件屬性，請按一下屬性左邊的資料列標頭，然後按下 DEL 鍵。  
   
-    2.  若要加入文件屬性，請按一下清單底部的空白資料列，右邊的**\***，然後輸入新屬性的值。  
+    2.  若要加入文件屬性，請按一下清單底部的空白資料列，右邊的 **\*** ，然後輸入新屬性的值。  
   
          如需這些值的相關資訊，請參閱 [搜尋屬性清單編輯器](../../database-engine/search-property-list-editor.md)。 如需如何取得 Microsoft 所定義之屬性值的詳細資訊，請參閱 [尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼](find-property-set-guids-and-property-integer-ids-for-search-properties.md)。 如需有關獨立軟體廠商 (ISV) 所定義之屬性的詳細資訊，請參閱該廠商的文件集。  
   

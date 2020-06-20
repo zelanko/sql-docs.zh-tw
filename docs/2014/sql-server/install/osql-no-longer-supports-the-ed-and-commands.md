@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cc2852f-94e8-4292-9326-c3f1a1acd281
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6ce7bfa0bbeec5c5ca83b7139f0ff28e3994021d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ad92a32c47002c8f56e56a5b3695d42d3bdd671
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093720"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012071"
 ---
 # <a name="osql-no-longer-supports-the-ed-and--commands"></a>osql 不再支援 ED 和 !! 命令
   **Osql**公用程式不支援**ED**和 **！！** 指令.  

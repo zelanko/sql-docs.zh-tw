@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86a9538e81881a3b42b95447f4264200e2fe9d4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190959"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065313"
 ---
 # <a name="instance-configuration"></a>執行個體組態
   請使用 **安裝精靈的** [執行個體組態] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面，指定要建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的預設執行個體還是具名執行個體。 如果尚未安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，則除非您指定具名執行個體，否則將會建立預設執行個體。  
@@ -36,7 +35,7 @@ ms.locfileid: "68190959"
   
  如需詳細資訊，請參閱[SQL Server 的最大容量規格](../maximum-capacity-specifications-for-sql-server.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  僅限容錯移轉叢集執行個體 - 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集網路名稱。 這個名稱會在網路上識別容錯移轉叢集執行個體。  
   
  預設或具名執行個體 - 在決定要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體還是具名執行個體時，請考量以下資訊：  
@@ -47,7 +46,7 @@ ms.locfileid: "68190959"
   
 -   安裝 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的任何應用程式都應該將它安裝為具名執行個體。 這種作法可以減少將多個應用程式安裝在相同電腦時所造成的衝突。  
   
- **預設實例**  
+ **預設執行個體**  
  選取這個選項可安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體。 電腦只能主控一個預設執行個體；所有其他執行個體都必須加以命名。 不過，如果您已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體，您可將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的預設執行個體加入相同電腦中。  
   
  **具名執行個體**  
@@ -71,7 +70,7 @@ ms.locfileid: "68190959"
   
 -   執行個體名稱中不允許內嵌空格或其他特殊字元。 此外，也不允許反斜線 (\\)、逗號 (,)、冒號 (:)、分號 (;)、單引號 (')、＆ 符號 (&)、連字號 (-) 和 At 符號 (@)。  
   
--   **只有在目前 Windows 字碼頁中有效的字元可以用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例名稱。如果使用不支援的 Unicode 字元，將會發生安裝程式錯誤。**  
+-   **只有在目前 Windows 字碼頁中有效的字元可以用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例名稱。如果使用不支援的 Unicode 字元，將會發生安裝程式錯誤。**  
   
  **偵測到的實例和功能**  
  在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的電腦上檢視已安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和元件的清單。  

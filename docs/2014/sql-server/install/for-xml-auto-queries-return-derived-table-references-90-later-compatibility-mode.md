@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b42d8fd7694aaa3962d049cb0e9663479778958
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 702cb2ca1d437dff03cee09c98d72082500709d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012451"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>FOR XML AUTO 查詢在 90 或之後的相容性模式中，會傳回衍生的資料表參考
   當資料庫相容性層級設定為 90 或之後時，在 AUTO 模式中執行的 FOR XML 查詢會傳回衍生資料表別名的參考。 當相容性層級設定為 80 時，FOR XML AUTO 查詢會傳回定義衍生資料表之基底資料表的參考。  

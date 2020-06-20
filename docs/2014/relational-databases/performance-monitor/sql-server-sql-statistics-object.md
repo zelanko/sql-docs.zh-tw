@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 783c20de7f1ea23f41dcbc4fb645644bdaf5ad7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8aba118f93a9a4f38179e8e7c5156eecc24012ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183075"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066923"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server 的 SQL Statistics 物件
   **的** SQLServer:SQL Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件會提供計數器，可用來監視編譯以及傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的要求類型。 監視查詢編譯和重新編譯的次數，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所收到的批次數目，可讓您了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理使用者查詢的速度，以及查詢最佳化工具處理查詢的效率。  

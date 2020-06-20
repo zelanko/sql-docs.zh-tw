@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f4f46bd388476934226e41d371c85fa13b94d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066089"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases 物件
   SQL Server 中的 **SQLServer:Databases** 物件提供計數器，可用來監視大量複製作業、備份和還原輸送量以及交易記錄活動。 監視交易和交易記錄檔，可以判斷資料庫中有多少使用者活動，以及交易記錄檔有多滿。 使用者活動量可用來判斷資料庫的效能，並且會影響記錄檔大小、鎖定和複寫。 監視低階記錄檔活動，則可量測使用者活動和資源使用量，以協助您找出效能瓶頸。  
@@ -42,7 +41,7 @@ ms.locfileid: "63250644"
 |**Log Cache Reads/sec**|每秒透過記錄檔管理員快取所執行的讀取數。|  
 |**Log File(s) Size (KB)**|資料庫內所有交易記錄檔的總計大小 (以位元組為單位)。|  
 |**Log File(s) Used Size (KB)**|資料庫中所有記錄檔的總計使用大小。|  
-|**Log Flush Wait Time**|排清記錄檔的等候時間總計 (以毫秒為單位)。 在 AlwaysOn 次要資料庫上，此值表示記錄檔記錄強行寫入磁碟的等候時間。|  
+|**記錄檔排清等候時間**|排清記錄檔的等候時間總計 (以毫秒為單位)。 在 AlwaysOn 次要資料庫上，此值表示記錄檔記錄強行寫入磁碟的等候時間。|  
 |**Log Flush Waits/sec**|每秒鐘等候記錄檔排清的認可數。|  
 |**Log Flush Write Time (ms)**|執行在最後一筆記錄中完成之記錄檔排清寫入的時間 (以毫秒為單位)。|  
 |**Log Flushes/sec**|每秒的記錄檔排清數目。|  
@@ -52,13 +51,13 @@ ms.locfileid: "63250644"
 |**Log Pool Disk Reads/sec**|由記錄檔集區發出來提取記錄檔區塊的磁碟讀取數目。|  
 |**Log Pool Requests/sec**|記錄檔集區處理的記錄檔區塊要求數目。|  
 |**Log Truncations**|交易記錄檔被壓縮的次數。|  
-|**Percent Log Used**|使用中的記錄檔空間百分比。|  
+|**使用的記錄百分比**|使用中的記錄檔空間百分比。|  
 |**正在進行複寫。暫止個交易**|標示成複寫、但未傳送到散發資料庫的發行集資料庫內的交易記錄檔之交易數。|  
 |**Repl. Trans. Rate**|每秒自發行集資料的交易記錄檔讀取並傳送至散發資料庫的交易數。|  
 |**Shrink Data Movement Bytes/sec**|經由自動壓縮作業或是 DBCC SHRINKDATABASE 或 DBCC SHRINKFILE 陳述式移動的每秒資料量。|  
 |**Tracked transactions/sec**|資料庫的認可資料表中記錄的已認可交易數目。|  
 |**Transactions/sec**|每秒針對資料庫啟動的交易數。<br /><br /> [Transactions/sec]**** 並未計入僅限 XTP 交易 (由原生編譯的預存程序啟動的交易)。|  
-|**Write Transactions/sec**|上一秒寫入資料庫並認可的交易數目。|  
+|**寫入交易數/秒**|上一秒寫入資料庫並認可的交易數目。|  
   
 ## <a name="see-also"></a>另請參閱  
  [監視資源使用量 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)   

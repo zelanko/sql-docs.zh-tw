@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: af3d3490957114d6ba7731b49435dc7e90122f90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c228ea5db963919d39fcf564eea11b7f63ae76b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62932489"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005849"
 ---
 # <a name="merge-agent-security"></a>合併代理程式安全性
   **[合併代理程式安全性]** 對話方塊可讓您指定執行合併代理程式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶。 合併代理程式會在發送訂閱的散發者端和提取訂閱的訂閱者端執行。 Windows 帳戶也稱為 *處理帳戶*，因為代理程式處理是在這個帳戶下執行。 對話方塊中其他可用的選項會視您存取的方式而定：  

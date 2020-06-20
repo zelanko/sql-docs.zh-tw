@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cae79be898c326b395e781db741c87578edfe7ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fad49d5191e093272664527a9964268455b16e44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721277"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066011"
 ---
 # <a name="generate-filters"></a>產生篩選
   **[產生篩選]** 對話方塊可讓您在合併式發行集內定義一個資料表的資料列篩選；然後複寫會自動將篩選擴充至透過外部索引鍵關聯性相關的其他資料表。 例如，若您定義客戶資料表的篩選，使其只包含 French 客戶的資料，則複寫會擴充該篩選，使相關的訂單與訂單的詳細資料只包含與 French 客戶相關的資料。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2efb37fafa29bcb043dedbcfa8719d0092b1c77
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162390"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068939"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>設定原則式管理的一般屬性
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定原則式管理的屬性。  

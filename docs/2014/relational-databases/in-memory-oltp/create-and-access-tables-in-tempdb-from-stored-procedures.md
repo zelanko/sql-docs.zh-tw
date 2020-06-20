@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11c9cd6f9084deaa2cb16acf8bf489a8aa28a353
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6c66b43d4bad56724817a4d38a810fd150b2b3fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706523"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050247"
 ---
 # <a name="creating-and-accessing-tables-in-tempdb-from-natively-compiled-stored-procedures"></a>從原生編譯預存程序建立及存取 TempDB 中的資料表
   不支援從原生編譯預存程序建立及存取 TempDB 中的資料表。 請改用資料表類型和資料表變數。 例如：  

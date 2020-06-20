@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2ff4972-cf18-4d5c-98cd-ec78861a63ce
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d705a02df8e133b5deb8242b1120a6ddd9f9cac9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcc46c9ca565f162a2ab8b4273f3b314790f6db4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177216"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006418"
 ---
 # <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>工作 7：檢視您在 Excel 中使用主資料管理員所做的更新
   在這項工作中，您會確認有在 Excel 中看到來自 MDS 的更新資料。

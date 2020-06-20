@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 268eebf7df9a0f3df31e850520baa5f24829721e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b768f963f4b905d9d7e5a1004247b305c132262a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059450"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>字串資料類型的 FOR XML 支援
   實體化資料中 FOR XML 空白字元所產生的 XML。  

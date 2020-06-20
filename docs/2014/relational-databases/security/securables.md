@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff2aaba72e2e5489694d31b35e594622c099acab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745717"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997321"
 ---
 # <a name="securables"></a>安全性實體
   安全性實體是一種資源， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 授權系統會管理其存取權。 例如，資料表是安全性實體。 有些安全性實體可以包含在其他安全性實體內，因而建立稱為「範圍」的巢狀階層，以保護它們自己本身的安全。 安全性實體範圍為 **伺服器**、 **資料庫**以及 **結構描述**。  

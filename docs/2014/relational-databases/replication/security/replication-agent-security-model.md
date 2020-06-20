@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da597bf97422f5a0960062b385bc0b67338edfe1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62960814"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004964"
 ---
 # <a name="replication-agent-security-model"></a>複寫代理程式安全性模型
   複寫代理程式安全性模型允許精確控制複寫代理程式執行並建立連接所使用的帳戶：您可為每個代理程式指定不同的帳戶。 如需如何指定帳戶的詳細資訊，請參閱[管理複寫的登入與密碼](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)。  
@@ -55,9 +54,9 @@ ms.locfileid: "62960814"
 |代理程式|權限|  
 |-----------|-----------------|  
 |快照集代理程式|在連接到散發者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須：<br /><br /> -至少是散發資料庫中**db_owner**固定資料庫角色的成員。<br /><br /> -具備快照集共用的讀取、寫入及修改權限。<br /><br /> <br /><br /> 用來連接發行者的帳戶必須至少是發行集資料庫中 **db_owner** 固定資料庫角色的成員。|  
-|記錄讀取器代理程式|在連接到散發者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須至少是散發資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> 用來連接發行者的帳戶必須至少是發行集資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> 當選取 [ `sync_type` *僅限複寫支援*]、[*使用備份進行初始化*] 或 [*從 lsn 初始化*] 選項時，記錄`sp_addsubscription`讀取器代理程式必須在執行之後執行，以便將安裝腳本寫入散發資料庫。 記錄讀取器代理程式必須在屬於 **系統管理員 (sysadmin)** 固定伺服器角色成員的 Windows 帳戶底下執行。 當此`sync_type`選項設定為 [*自動*] 時，不需要任何特殊的記錄讀取器代理程式動作。|  
-|發送訂閱的散發代理程式|在連接到散發者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須：<br /><br /> -至少是散發資料庫中**db_owner**固定資料庫角色的成員。<br /><br /> -為 PAL 的成員。<br /><br /> -擁有快照集共用的讀取權限。<br /><br /> -如果訂閱是針對非 SQL Server 訂閱者，訂閱者之 OLE DB 提供者的安裝目錄上，就要擁有讀取權限。<br /><br /> -在複寫 LOB 資料時，散發代理程式必須擁有複寫 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 的寫入權限，其中 XX 代表執行個體識別碼。<br /><br /> <br /><br /> 用於連接訂閱者的帳戶必須至少為訂閱資料庫中 **db_owner** 固定資料庫角色的成員，或者，如果訂閱為非 SQL Server 訂閱者的訂閱，則應擁有相等權限。<br /><br /> 注意：在散發`-subscriptionstreams >= 2`代理程式上使用時，您也必須`View Server State`授與訂閱者的許可權以偵測到鎖死。|  
-|提取訂閱的散發代理程式|在連接到訂閱者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須至少是訂閱資料庫中 **db_owner** 固定資料庫角色的成員。 用於連接散發者的帳戶必須：<br /><br /> -為 PAL 的成員。<br /><br /> -擁有快照集共用的讀取權限。<br /><br /> -在複寫 LOB 資料時，散發代理程式必須擁有複寫 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 的寫入權限，其中 XX 代表執行個體識別碼。<br /><br /> <br /><br /> 注意：在散發`-subscriptionstreams >= 2`代理程式上使用時，您也必須`View Server State`授與訂閱者的許可權以偵測到鎖死。|  
+|記錄讀取器代理程式|在連接到散發者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須至少是散發資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> 用來連接發行者的帳戶必須至少是發行集資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> 當選取 [ `sync_type` *僅限複寫支援*]、[*使用備份進行初始化*] 或 [*從 lsn 初始化*] 選項時，記錄讀取器代理程式必須在執行之後執行 `sp_addsubscription` ，以便將安裝腳本寫入散發資料庫。 記錄讀取器代理程式必須在屬於 **系統管理員 (sysadmin)** 固定伺服器角色成員的 Windows 帳戶底下執行。 當此 `sync_type` 選項設定為 [*自動*] 時，不需要任何特殊的記錄讀取器代理程式動作。|  
+|發送訂閱的散發代理程式|在連接到散發者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須：<br /><br /> -至少是散發資料庫中**db_owner**固定資料庫角色的成員。<br /><br /> -為 PAL 的成員。<br /><br /> -擁有快照集共用的讀取權限。<br /><br /> -如果訂閱是針對非 SQL Server 訂閱者，訂閱者之 OLE DB 提供者的安裝目錄上，就要擁有讀取權限。<br /><br /> -在複寫 LOB 資料時，散發代理程式必須擁有複寫 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 的寫入權限，其中 XX 代表執行個體識別碼。<br /><br /> <br /><br /> 用於連接訂閱者的帳戶必須至少為訂閱資料庫中 **db_owner** 固定資料庫角色的成員，或者，如果訂閱為非 SQL Server 訂閱者的訂閱，則應擁有相等權限。<br /><br /> 注意：在 `-subscriptionstreams >= 2` 散發代理程式上使用時，您也必須授與 `View Server State` 訂閱者的許可權以偵測到鎖死。|  
+|提取訂閱的散發代理程式|在連接到訂閱者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須至少是訂閱資料庫中 **db_owner** 固定資料庫角色的成員。 用於連接散發者的帳戶必須：<br /><br /> -為 PAL 的成員。<br /><br /> -擁有快照集共用的讀取權限。<br /><br /> -在複寫 LOB 資料時，散發代理程式必須擁有複寫 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 的寫入權限，其中 XX 代表執行個體識別碼。<br /><br /> <br /><br /> 注意：在 `-subscriptionstreams >= 2` 散發代理程式上使用時，您也必須授與 `View Server State` 訂閱者的許可權以偵測到鎖死。|  
 |發送訂閱的合併代理程式|與發行者和散發者建立連接時，需使用代理程式執行時所用的 Windows 帳戶。 這個帳戶必須：<br /><br /> -至少是散發資料庫中**db_owner**固定資料庫角色的成員。<br /><br /> -為 PAL 的成員。<br /><br /> -為與發行集資料庫中使用者相關聯的登入。<br /><br /> -擁有快照集共用的讀取權限。<br /><br /> <br /><br /> 用來連接訂閱者的帳戶必須至少是訂閱資料庫中 **db_owner** 固定資料庫角色的成員。|  
 |提取訂閱的合併代理程式|在連接到訂閱者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須至少是訂閱資料庫中 **db_owner** 固定資料庫角色的成員。 用於連接發行者和散發者的帳戶必須：<br /><br /> -為 PAL 的成員。<br /><br /> -為與發行集資料庫中使用者相關聯的登入。<br /><br /> -為與散發資料庫中使用者相關聯的登入。 使用者可以是 `Guest` 使用者。<br /><br /> -擁有快照集共用的讀取權限。|  
 |佇列讀取器代理程式|在連接到散發者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須至少是散發資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> 用來連接發行者的帳戶必須至少是發行集資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> 用來連接訂閱者的帳戶必須至少是訂閱資料庫中 **db_owner** 固定資料庫角色的成員。|  
@@ -67,19 +66,19 @@ ms.locfileid: "62960814"
   
 |代理程式|作業名稱|  
 |-----------|--------------|  
-|快照集代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>\<-整數>**|  
-|合併式發行集分割區的快照集代理程式|**Dyn_\<發行者>-\<發行集資料庫>-\<發行集>-\<GUID>**|  
-|記錄讀取器代理程式|**\<發行者>-\<發行集資料庫>-\<整數>**|  
-|提取訂閱的合併代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>\<-訂閱者\<>-訂閱資料庫\<>-整數>**|  
-|發送訂閱的合併代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>\<-訂閱者\<>-整數>**|  
-|發送訂閱的散發代理程式|** \< \< \<發行者>-發行集資料庫>-發行集>-訂閱者\<>-整數>1 \< ** <sup>1</sup>|  
-|提取訂閱的散發代理程式|** \< \< \< \<發行者>-發行集資料庫>-發行集>-訂閱者>-訂閱資料庫\<>-GUID>2 \< ** <sup>2</sup>|  
-|發送訂閱至非 SQL Server 訂閱者的散發代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>\<-訂閱者\<>-整數>**|  
-|佇列讀取器代理程式|**[\<散發者>]。\<整數>**|  
+|快照集代理程式|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|  
+|合併式發行集分割區的快照集代理程式|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|  
+|記錄讀取器代理程式|**\<Publisher>-\<PublicationDatabase>-\<integer>**|  
+|提取訂閱的合併代理程式|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
+|發送訂閱的合併代理程式|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|發送訂閱的散發代理程式|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**<sup>1</sup>|  
+|提取訂閱的散發代理程式|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**<sup>2</sup>|  
+|發送訂閱至非 SQL Server 訂閱者的散發代理程式|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|佇列讀取器代理程式|**[\<Distributor>].\<integer>**|  
   
- <sup>1</sup>對於 Oracle 發行集的發送訂閱，作業名稱會是** \<發行者>\<** 發行者> 而不是** \<發行者>\<-發行集資料庫>**。  
+ <sup>1</sup>對於 Oracle 發行集的發送訂閱，作業名稱是 * *， \<Publisher> - \<Publisher**> 而不是 **\<Publisher>-\<PublicationDatabase>** 。  
   
- <sup>2</sup>對於 Oracle 發行集的提取訂閱而言，作業名稱是** \<publisher>\<-散發資料庫**>，而不是** \<publisher>-\<發行集資料庫>**。  
+ <sup>2</sup>對於 Oracle 發行集的提取訂閱，作業名稱是 * *， \<Publisher> - \<DistributionDatabase**> 而不是 **\<Publisher>-\<PublicationDatabase>** 。  
   
  在複寫設定期間，指定代理程式應在其下執行的帳戶。 但是，所有作業步驟均在 *Proxy*安全性內容下執行，因此複寫將為您指定的代理程式帳戶在內部執行下列對應：  
   

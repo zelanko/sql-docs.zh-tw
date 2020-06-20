@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a2ab8f20002188684b09fbd574b1cfe5e26feba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62834640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922299"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 設計工具主控台簡介
   本節描述 Attunity Oracle Change Data Capture (CDC) 設計工具的安裝程序。  
   
 ## <a name="installation"></a>安裝  
- 本節描述 Attunity Oracle Change Data Capture (CDC) 設計工具的安裝程序。 若要安裝 CDC 設計工具主控台，請從 SQL Server 安裝媒體手動執行**attunityoraclecdcdesigner.msi。**  X86 和 x64 的安裝套件位於 SQL Server 安裝媒體上的 **.\Tools\AttunityCDCOracle\\ **中。  
+ 本節描述 Attunity Oracle Change Data Capture (CDC) 設計工具的安裝程序。 若要安裝 CDC 設計工具主控台，請從 SQL Server 安裝媒體手動執行**AttunityOracleCdcDesigner.msi** 。  X86 和 x64 的安裝套件位於 SQL Server 安裝媒體上的 **.\Tools\AttunityCDCOracle \\ **中。  
   
 ## <a name="supported-windows-environments"></a>支援的 Windows 環境  
  CDC 設計工具主控台可在以下 Windows 環境中執行：  

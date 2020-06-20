@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4097b2c185b6dde307cd9b295d3b5b32f5797649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021901"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065824"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle 發行者疑難排解
   本主題列出設定和使用「Oracle 發行者」時可能發生的一些問題。  
@@ -66,9 +65,9 @@ ms.locfileid: "63021901"
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Oracle 發行者與另一散發者產生關聯  
  一個「Oracle 發行者」只能與一個「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」相關聯。 如果有另一個「散發者」與該「Oracle 發行者」相關聯，則必須在卸除它之後方可使用另一個「散發者」。 如果沒有先卸除該「散發者」，您將收到下列錯誤訊息之一：  
   
--   「Oracle 伺服器執行個體 '\<Oracle 發行者名稱  >' 之前已經設定使用 '\<SQL Server 散發者名稱  >' 作為其散發者。 若要開始使用 '\<新的 SQL Server 散發者名稱  >' 作為其散發者，您必須移除 Oracle 伺服器執行個體上目前的複寫組態，這會刪除該伺服器執行個體上的所有發行集」。  
+-   「Oracle 伺服器實例 ' \<*OraclePublisherName*> ' 先前已設定為使用 ' \<*SQLServerDistributorName*> ' 做為其散發者。 若要開始使用 ' \<*NewSQLServerDistributorName*> ' 做為其散發者，您必須移除 Oracle 伺服器實例上目前的複寫設定，這會刪除該伺服器實例上的所有發行集。」  
   
--   「Oracle 伺服器 '\<Oracle 伺服器名稱  >' 已經在散發者 '\<SQL Server 散發者名稱  >.\<散發資料庫名稱>  ' 上定義為發行者 '\<Oracle 發行者名稱  >'。 請卸除發行者或是卸除公用同義字 '\<同義字名稱>  ' 來重新建立」。  
+-   「Oracle 伺服器 ' \<*OracleServerName*> ' 已經定義為散發者 \<*OraclePublisherName*> '. ' 上的發行者 ' ' \<*SQLServerDistributorName*> *\<DistributionDatabaseName>* 。 請卸載發行者，或卸載公用同義字 ' *\<SynonymName>* ' 來重新建立」。  
   
  在卸除某個「Oracle 散發者」時，Oracle 資料庫中的複寫物件也會自動清除。 但是在某些情況下必須手動清除 Oracle 複寫物件。 若要手動清除複寫建立的 Oracle 複寫物件：  
   
@@ -81,14 +80,14 @@ ms.locfileid: "63021901"
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>發生有關缺少主索引鍵的 SQL Server 錯誤 21663  
  交易式發行集中的發行項必須擁有有效的主索引鍵。 如果它們沒有有效的主索引鍵，您將在嘗試新增發行項時收到下列錯誤訊息：  
   
- 「找不到有效的來源資料表 [\<資料表擁有者  >].[\<資料表名稱  >] 主索引鍵。」  
+ 「找不到來源資料表 [ \<*TableOwner*> ]. [] 的有效 \<*TableName*> 主鍵  
   
  如需主索引鍵需求的詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md)＞主題中的＜唯一索引和條件約束＞一節。  
   
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>發生有關重複連結伺服器登入的 SQL Server 錯誤 21642  
  在最初設定「Oracle 發行者」時，會為「發行者」與「散發者」之間的連接建立一個連結伺服器項目。 連結伺服器的名稱與 Oracle TNS 服務名稱相同。 如果您嘗試建立相同名稱的連結伺服器，將顯示下列錯誤訊息：  
   
- 「異質性發行者需要已連結伺服器。 已經存在名稱為 '\<連結伺服器名稱>  ' 的連結伺服器。 請移除已連結伺服器或選擇不同的發行者名稱」。  
+ 「異質性發行者需要已連結伺服器。 名為 ' ' 的連結伺服器 *\<LinkedServerName>* 已經存在。 請移除已連結伺服器或選擇不同的發行者名稱」。  
   
  如果您嘗試直接建立連結伺服器，或者您之前已卸除「Oracle 發行者」與「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」之間的關聯性，現在又嘗試重新設定，便可能引發此錯誤。 若在嘗試重新設定「發行者」時收到此錯誤，請使用 [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql) 卸除連結伺服器。  
   
@@ -155,7 +154,7 @@ ms.locfileid: "63021901"
   
 2.  在 **[執行]** 對話方塊中，輸入 **regedit**，然後按一下 **[確定]** 。  
   
-3.  巡覽至 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\\<執行個體名稱>  \Providers。  
+3.  流覽至 HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server \\ *\<InstanceName>* \providers。  
   
      [Providers] 下應包含一個名為 OraOLEDB.Oracle 的資料夾。 在此資料夾中應是 DWORD 值名稱 **AllowInProcess**，其值為 **1**。  
   

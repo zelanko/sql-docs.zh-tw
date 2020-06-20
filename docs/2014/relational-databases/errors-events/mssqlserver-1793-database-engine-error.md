@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 808db1d0-acc1-41d0-9287-8a5455001a02
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fdddf626aa081138d58387b9562327964d600074
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cfe405a2c60e20c8feb6a3fe5dde0b16c7dac6a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869451"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969428"
 ---
 # <a name="mssqlserver_1793"></a>MSSQLSERVER_1793
     

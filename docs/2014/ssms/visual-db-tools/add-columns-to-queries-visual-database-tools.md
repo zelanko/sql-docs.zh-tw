@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9082377f1599b719f490222d3ddacba4a6622699
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067252"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>將資料行加入查詢 (Visual Database Tools)
   若要在查詢中使用資料行，您必須將資料行加入至查詢。 您可能會加入資料行以便在查詢輸出中顯示資料行、使用資料行進行排序、搜尋資料行內容，或者摘要資料行內容。 您可以決定在執行查詢時，結果窗格中包含哪些查詢中所使用的資料行。 如需詳細資訊，請參閱[移除查詢結果的資料行 &#40;Visual Database Tools&#41;](visual-database-tools.md)。  
@@ -40,7 +39,7 @@ ms.locfileid: "63015699"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>若要針對一個資料表或資料表值物件新增所有資料行  
   
--   在 [**圖表] 窗格**中，選取 [ ** \*（所有資料行）**] 旁邊的核取方塊。  
+-   在 [**圖表] 窗格**中，選取 [ ** \* （所有資料行）**] 旁邊的核取方塊。  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>若要針對所有資料表和表格化物件 (Table-Structured Object) 新增所有資料表  
   

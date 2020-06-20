@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 398e3f3d8496d26c2672ad6d11557c0058a594ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055104"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962068"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>傳送資料庫工作編輯器 (資料庫頁面)
   使用 [傳送資料庫工作編輯器]**** 對話方塊的 [資料庫]**** 頁面，即可指定傳送資料庫工作中所含之來源和目的地資料庫的屬性。 傳送資料庫工作會在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的兩個執行個體間，複製或移動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫。 這項工作也可用來在同一部伺服器內複製資料庫。 如需這項工作的詳細資訊，請參閱 [傳送資料庫工作](control-flow/transfer-database-task.md)。  
   
 ## <a name="options"></a>選項。  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下** \<[新增連接 ...] >** ，建立與來源伺服器的新連接。  
+ 在清單中選取 SMO 連線管理員，或按一下 **\<New connection...>** 以建立與來源伺服器的新連接。  
   
  **[Destinationconnection**  
- 在清單中選取 SMO 連線管理員，或按一下** \<[新增連接 ...] >** ，以建立目的地伺服器的新連接。  
+ 在清單中選取 SMO 連線管理員，或按一下 **\<New connection...>** 以建立目的地伺服器的新連接。  
   
  **DestinationDatabaseName**  
  指定目的地伺服器上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的名稱。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96abc6def3f4ab8cdb76b548e7717ae6c030c00f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067020"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:Deprecated Features 物件提供了計數器來監視指定為已被取代的功能。 在每一個案例中，此計數器都會提供一個使用計數，列出上一次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後所遇到之已被取代功能的次數。  
@@ -30,9 +29,9 @@ ms.locfileid: "68206966"
 |SQL Server 已被取代的功能計數器執行個體|描述|  
 |------------------------------------------------------|-----------------|  
 |做為暫存資料表和預存程序名稱的 '#' 和 '##'。|遇到一個不包含 # 以外之任何字元的識別碼。 請至少使用一個其他字元。 每次編譯時發生一次。|  
-|'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代為`SELECT column_list FROM` * \< function_name>* `()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
+|'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 將取代為 `SELECT column_list FROM` *\< function_name>* `()` 。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
 |'\@' 和以 '\@\@' 開頭的名稱作為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼|出現了以 \@ 或 \@\@ 開頭的識別碼。 請勿使用 \@ 或 \@\@，或是以 \@\@ 開頭的名稱，作為識別碼。 每次編譯時發生一次。|  
-|ADDING TAPE DEVICE|遇到已被取代的`tape`功能 sp_addumpdevice ' '。 請改用 sp_addumpdevice`disk`' '。 每次使用時發生一次。|  
+|ADDING TAPE DEVICE|遇到已被取代的功能 sp_addumpdevice ' `tape` '。 請改用 sp_addumpdevice ' `disk` '。 每次使用時發生一次。|  
 |ALL 權限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 語法的總次數。 請修改語法來拒絕特定權限。 每次查詢時發生一次。|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|上一次啟動伺服器執行個體之後，已經使用 ALTER DATABASE 的已被取代功能 TORN_PAGE_DETECTION 選項的總次數。 請改用 PAGE_VERIFY 語法。 每次在 DDL 陳述式中使用時發生一次。|  
 |ALTER LOGIN WITH SET CREDENTIAL|遇到已被取代的功能語法 ALTER LOGIN WITH SET CREDENTIAL 或 ALTER LOGIN WITH NO CREDENTIAL。 請改用 ADD 或 DROP CREDENTIAL 語法。 每次編譯時發生一次。|  

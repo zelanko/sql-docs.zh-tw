@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e09323a96a5a2fc282c1595c2606ea7e9b9a6bee
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: dc0410e7a54674673f64442d8a3cf9476d250033
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717358"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059560"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 子句的基本語法
   FOR XML 模式可以是 RAW、AUTO、EXPLICIT 或 PATH。 它可以決定產生 XML 的外觀。  
@@ -62,7 +61,7 @@ XML
   
 ## <a name="arguments"></a>引數  
  RAW[('*ElementName*')]  
- 使用查詢結果並將結果集中的每一個資料列轉換為 XML 項目，該項目包含作為項目標記的泛用識別碼 \<資料列 />。 當您使用此指示詞時，您可以選擇性地指定資料列元素的名稱。 產生的 XML 將會使用指定的 *ElementName* 作為針對每個資料列所產生的資料列元素。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 RAW 模式](use-raw-mode-with-for-xml.md)。  
+ 會採用查詢結果，並將結果集中的每個資料列轉換成具有泛型識別碼的 XML 元素， \<row /> 做為專案標記。 當您使用此指示詞時，您可以選擇性地指定資料列元素的名稱。 產生的 XML 將會使用指定的 *ElementName* 作為針對每個資料列所產生的資料列元素。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 RAW 模式](use-raw-mode-with-for-xml.md)。  
   
  AUTO  
  將查詢結果以簡易巢狀 XML 樹狀結構傳回。 FROM 子句中的每個資料表至少都有一個資料行是列在 SELECT 子句中，這些資料表是以 XML 元素表示。 列在 SELECT 子句中的資料行會對應到適當的元素屬性。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 AUTO 模式](use-auto-mode-with-for-xml.md)。  
@@ -71,7 +70,7 @@ XML
  指定產生之 XML 樹狀結構的形狀已明確地定義。 透過使用此模式，必須以特定方式撰寫查詢，這樣才能明確地指定您需要的巢狀其他資訊。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 EXPLICIT 模式](use-explicit-mode-with-for-xml.md)。  
   
  PATH  
- 提供更簡單的方式來混合元素與屬性，並引用其他的巢狀來代表複雜的屬性。 您可以使用 FOR XML EXPLICIT 模式查詢來建構從資料列集而來的這類 XML，但是 PATH 模式對於可能會比較繁雜的 EXPLICIT 模式查詢提供較簡單的替代方案。 PATH 模式還可撰寫巢狀 FOR XML 查詢及 TYPE 指示詞，以傳回 **xml** 類型執行個體，這將可讓您撰寫較不複雜的查詢。 它為撰寫大部份的 EXPLICIT 模式查詢提供替代方案。 依預設，PATH 模式會針對結果集的每個資料列產生 \<資料列> 項目包裝函式。 您可以選擇性地指定元素名稱。 如果您有選擇，則會將指定名稱做為包裝函數的元素名稱。 如果您提供空白字串 (FOR XML PATH (''))，就不會產生包裝函數元素。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 PATH 模式](use-path-mode-with-for-xml.md)。  
+ 提供更簡單的方式來混合元素與屬性，並引用其他的巢狀來代表複雜的屬性。 您可以使用 FOR XML EXPLICIT 模式查詢來建構從資料列集而來的這類 XML，但是 PATH 模式對於可能會比較繁雜的 EXPLICIT 模式查詢提供較簡單的替代方案。 PATH 模式還可撰寫巢狀 FOR XML 查詢及 TYPE 指示詞，以傳回 **xml** 類型執行個體，這將可讓您撰寫較不複雜的查詢。 它為撰寫大部份的 EXPLICIT 模式查詢提供替代方案。 根據預設，PATH 模式會 \<row> 針對結果集中的每個資料列產生元素包裝函式。 您可以選擇性地指定元素名稱。 如果您有選擇，則會將指定名稱做為包裝函數的元素名稱。 如果您提供空白字串 (FOR XML PATH (''))，就不會產生包裝函數元素。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 PATH 模式](use-path-mode-with-for-xml.md)。  
   
  XMLDATA  
  指定應傳回的內嵌 XML-Data Reduced (XDR) 結構描述。 結構描述則是文件預先決定的內嵌結構描述。 如需實用範例，請參閱 [搭配 FOR XML 使用 RAW 模式](use-raw-mode-with-for-xml.md)。  

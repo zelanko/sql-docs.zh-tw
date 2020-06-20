@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d69745b3316222f9ebabbad29fbc12e023351d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caa9be1a61ed579aa8bfaaf1bc6c83282f52c42c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067524"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066212"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>選擇插入結果的目標資料表對話方塊 (Visual Database Tools)
   讓您指定資料表，以便將資料列加入做為 NSERT RESULTS 查詢的結果。 這個對話方塊會在啟動 NSERT RESULTS 查詢時出現。  

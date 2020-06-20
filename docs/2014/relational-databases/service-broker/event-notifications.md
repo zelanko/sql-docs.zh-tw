@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2d5d7114515179cda973b9685c57b26fa930521
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996674"
 ---
 # <a name="event-notifications"></a>事件通知
   事件通知會傳送事件的詳細資訊給 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務。 事件通知會將這些事件的資訊傳送給 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服務，以回應各種 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 資料定義語言 (DDL) 陳述式和 SQL 追蹤事件。  
@@ -59,7 +58,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |觸發程序|事件通知|  
 |--------------|-------------------------|  
 |DML 觸發程序回應資料管理語言 (DML) 事件。 DDL 觸發程序回應資料定義語言 (DDL) 事件。|事件通知可回應 DDL 事件和 SQL 追蹤事件的子集。|  
-|觸發程序可以執行 Transact-SQL 或 Common Language Runtime (CLR) Managed 程式碼。|事件通知不會執行程式碼。 相反地，它們`xml`會將訊息傳送至 Service Broker 服務。|  
+|觸發程序可以執行 Transact-SQL 或 Common Language Runtime (CLR) Managed 程式碼。|事件通知不會執行程式碼。 相反地，它們會將 `xml` 訊息傳送至 Service Broker 服務。|  
 |觸發程序會在引發它們的交易範圍內同步處理觸發程序。|事件通知可以非同步處理，而且不會在引發它們的交易範圍中執行。|  
 |觸發程序的取用者與引發它的事件緊密繫結在一起。|事件通知的取用者與引發它的事件分離。|  
 |觸發程序必須在本機伺服器上處理。|事件通知可以在遠端伺服器上處理。|  
@@ -67,7 +66,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |DML 觸發程序名稱是由結構描述限定範圍。 DML 觸發程序名稱是以資料庫或伺服器限定範圍。|事件通知名稱是以伺服器或資料庫限定範圍。 在 QUEUE_ACTIVATION 事件上的事件通知是限定成特定的佇列。|  
 |DML 觸發程序是由套用觸發程序的資料表之相同擁有者所擁有。|佇列上的事件通知擁有者，有可能與套用事件通知的物件具有不同的擁有者。|  
 |觸發程序支援 EXECUTE AS 子句。|事件通知不支援 EXECUTE AS 子句。|  
-|DDL 觸發程式事件資訊可以使用 EVENTDATA 函數來捕捉，此函式`xml`會傳回資料類型。|事件通知會`xml`將事件資訊傳送至 Service Broker 服務。 資訊將格式化成與 EVENTDATA 函數相同的結構描述。|  
+|DDL 觸發程式事件資訊可以使用 EVENTDATA 函數來捕捉，此函式會傳回 `xml` 資料類型。|事件通知會將 `xml` 事件資訊傳送至 Service Broker 服務。 資訊將格式化成與 EVENTDATA 函數相同的結構描述。|  
 |與觸發程序相關的中繼資料可在 **sys.triggers** 與 **sys.server_triggers** 目錄檢視中找到。|與事件通知相關的中繼資料可在 **sys.event_notifications** 與 **sys.server_event_notifications** 目錄檢視中找到。|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>事件通知與 SQL 追蹤  

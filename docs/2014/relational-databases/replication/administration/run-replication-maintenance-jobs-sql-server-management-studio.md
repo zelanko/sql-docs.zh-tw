@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74c00479e5587c8662d81e554cae5add2e295183
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127058"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068754"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>執行複寫維護作業 (SQL Server Management Studio)
   複寫會使用下列維護作業：  
@@ -27,9 +26,9 @@ ms.locfileid: "63127058"
 -   **散發的複寫監視重新整理器。**
 -   **檢查複寫代理程式**
 -   **散發清除：散發**
--   **清除過期的訂閱**  
+-   **清除已過期的訂閱**  
   
- 從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [作業]**** 資料夾，以及從複寫監視器的 [代理程式]**** 索引標籤啟動和停止這些作業。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../monitor/start-the-replication-monitor.md)。 在 [作業屬性 - \<作業>]**** 對話方塊中檢視及修改各作業的屬性，該對話方塊位於相同的資料夾和索引標籤中。  
+ 從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [作業]**** 資料夾，以及從複寫監視器的 [代理程式]**** 索引標籤啟動和停止這些作業。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../monitor/start-the-replication-monitor.md)。 在 [**作業屬性- \<Job> ** ] 對話方塊中，您可以從相同的資料夾和索引標籤中，查看及修改每個作業的屬性。  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-management-studio"></a>在 Management Studio 中啟動或停止複寫維護作業  
   
@@ -55,7 +54,7 @@ ms.locfileid: "63127058"
   
 3.  以滑鼠右鍵按一下作業，然後按一下 **[屬性]**。  
   
-4.  在 [作業屬性 - \<作業>]**** 對話方塊中，視需要修改任何屬性，然後按一下 [確定]****。  
+4.  在 [**作業屬性- \<Job> ** ] 對話方塊中，視需要修改任何屬性，然後按一下 **[確定]**。  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>在複寫監視器中檢視及修改複寫維護作業的屬性  
   
@@ -65,7 +64,7 @@ ms.locfileid: "63127058"
   
 3.  以滑鼠右鍵按一下方格中的作業，再按一下 **[屬性]**。  
   
-4.  在 [作業屬性 - \<作業>]**** 對話方塊中，視需要修改任何屬性，然後按一下 [確定]****。  
+4.  在 [**作業屬性- \<Job> ** ] 對話方塊中，視需要修改任何屬性，然後按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動和停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   

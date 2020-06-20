@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfcbdd9d-d83b-46ae-9caa-d1833b5913f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aeb6709930190017487476d0d19b105261ae7acd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e536713d0f3d600d3f7b8a7326594b7e364f2f8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62473393"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051332"
 ---
 # <a name="unprepare-sql-event-class"></a>Unprepare SQL 事件類別
   Unprepare SQL 事件類別指出 SqlClient、ODBC、OLE DB 或 DB-Library 已取消準備 (已刪除) 一或多個備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  

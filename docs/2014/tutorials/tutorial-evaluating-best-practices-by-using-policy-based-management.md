@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42e6b505c71abecce7b56b5cb2544b4e9f4e8f71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064425"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061096"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>教學課程：使用原則式管理來評估最佳做法
   歡迎使用「使用以原則為基礎的管理來評估最佳作法」教學課程。 本教學課程的主要對象是熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 但剛接觸以原則為基礎之管理的使用者。 原則式管理，這個系統定義可用來強制執行網站管理標準的原則。 原則式管理所包含的一組最佳作法原則可用來分析 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，以判斷該執行個體是否符合最佳作法指導方針與建議。  

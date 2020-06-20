@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71fc7ebd-2e86-4a76-994b-66d3a57bcc9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 965a3a7c1bfa9549793690e92760ce39f147e0d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1387b5773ee3521979a3afc18f3417cabc156fe4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067200"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938919"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>啟用 DirectQuery 設計模式 (SSAS 表格式)
   若要建立 DirectQuery 模式的模型，必須先將設計階段環境變更為支援使用 DirectQuery 模式。 當您這樣做時，設計工具還會執行下列操作：  

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e9412ee0bd2be7b44dff2a06bd674abee0da34a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fddc5820676cb231b6f0cd5f7151e24d8eceaefa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798174"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067549"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>設定作業步驟成功或失敗的流程
-  建立[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業時，您可以指定在作業[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行期間發生失敗時，應採取什麼動作。 決定每個作業步驟成功或失敗時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應採取的動作。 接著，依照下列程序使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來設定作業步驟動作流程。  
+  建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業時，您可以指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業執行期間發生失敗時，應採取什麼動作。 決定每個作業步驟成功或失敗時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應採取的動作。 接著，依照下列程序使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來設定作業步驟動作流程。  
   
 -   **開始之前：**  
   

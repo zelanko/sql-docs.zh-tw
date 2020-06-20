@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4483facba1a1233dda7f3330f432ef8d3f9c2b5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767476"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968225"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>步驟 4：測試第 2 課的教學課程封裝
   利用現在已設定的 Foreach 迴圈容器和一般檔案連接管理員，第 2 課的封裝可反覆進行範例資料夾之 14 個一般檔案的集合。 每次一找到符合指定檔案名稱準則的檔案名稱時，Foreach 迴圈容器就會以該檔案名稱擴展使用者自訂變數。 然後，這個變數會更新一般檔案連接管理員的 ConnectionString 屬性，並建立與新的一般檔案之連接。 在連接到資料夾的下一個檔案之前，Foreach 迴圈容器會對新的一般檔案中的資料執行未修改過的資料流程工作。  
@@ -40,7 +39,7 @@ ms.locfileid: "62767476"
   
 1.  在 **[方案總管]** 中，以滑鼠右鍵按一下 **[Lesson 2.dtsx]** ，然後按一下 **[執行封裝]**。  
   
-     此時會執行封裝。 您可以在 [輸出] 視窗中驗證每個迴圈的狀態，或按一下 [**進度**] 索引標籤來確認。例如，您可以看到1097行已從檔案 Currency_VEB .txt 加入目的地資料表。  
+     此時會執行封裝。 您可以在 [輸出] 視窗中驗證每個迴圈的狀態，或按一下 [**進度**] 索引標籤來確認。例如，您可以看到1097行已從檔案 Currency_VEB.txt 新增至目的地資料表。  
   
 2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
   

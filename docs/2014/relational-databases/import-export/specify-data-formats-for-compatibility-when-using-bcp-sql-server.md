@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f2fb27a109ec361b0287adfff4ba3e7abcaac062
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d12456760f32ddbd8cc434d474aebb0e0ecf141
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011831"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050441"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>使用 bcp 指定相容性的資料格式 (SQL Server)
-  本主題描述資料格式屬性、欄位特定提示，以及以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp`命令的非 xml 格式檔案來儲存逐欄位資料。 大量匯出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料以大量匯入至另一個程式 (例如另一個資料庫程式) 時，了解這些資訊十分有用。 在來源資料表中的預設資料格式 (原生、字元或 Unicode) 可能和另一個程式所預期的資料配置不相容。如果匯出資料時發生了不相容的狀況，您就必須描述資料配置的方式。  
+  本主題描述資料格式屬性、欄位特定提示，以及以命令的非 xml 格式檔案來儲存逐欄位資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` 。 大量匯出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料以大量匯入至另一個程式 (例如另一個資料庫程式) 時，了解這些資訊十分有用。 在來源資料表中的預設資料格式 (原生、字元或 Unicode) 可能和另一個程式所預期的資料配置不相容。如果匯出資料時發生了不相容的狀況，您就必須描述資料配置的方式。  
   
 > [!NOTE]  
 >  如不熟悉資料匯入或匯出的資料格式，請參閱 [大量匯入或大量匯出的資料格式 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)。  
@@ -59,7 +58,7 @@ ms.locfileid: "66011831"
      針對字元資料欄位，選擇性的結束字元讓您可以標示資料檔中每個欄位的結尾 (使用「欄位結束字元」  )，以及每個資料列的結尾 (使用「資料列結束字元」  )。 結束字元可讓讀取資料檔的程式知道某個欄位或資料列在何處結束，另一個在何處開始。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。  
   
 ##  <a name="overview-of-the-field-specific-prompts"></a><a name="FieldSpecificPrompts"></a> 欄位專用提示字元的概觀  
- 如果`bcp`互動式命令包含**in**或**out**選項，但不包含格式檔案參數（**-f**）或資料格式參數（**-n**、 **-c**、 **-w**或 **-n**），則來源或目標資料表中的每個資料行都會依次出現每個先前屬性的命令提示字元。 在每個提示字元中，`bcp` 命令是根據資料表資料行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型來提供預設值。 接受所有提示字元的預設值，會和在命令行上指定原生格式 ( **-n**) 產生相同結果。 每個提示都會將預設值顯示於方括號中：[*預設值*]。 按下 ENTER 即可接受顯示的預設值。 若要指定預設以外的值，請在提示字元中輸入新值。  
+ 如果互動式 `bcp` 命令包含**in**或**out**選項，但不包含格式檔案參數（**-f**）或資料格式參數（**-n**、 **-c**、 **-w**或 **-n**），則來源或目標資料表中的每個資料行都會依次出現每個先前屬性的命令提示字元。 在每個提示字元中，`bcp` 命令是根據資料表資料行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型來提供預設值。 接受所有提示字元的預設值，會和在命令行上指定原生格式 ( **-n**) 產生相同結果。 每個提示都會將預設值顯示於方括號中：[*預設值*]。 按下 ENTER 即可接受顯示的預設值。 若要指定預設以外的值，請在提示字元中輸入新值。  
   
 ### <a name="example"></a>範例  
  下列範例使用 `bcp` 命令，將資料以互動方式從 `HumanResources.myTeam` 資料表大量匯出至 `myTeam.txt` 檔案。 您必須先建立此資料表，才能執行範例。 如需此資料表及建立方式的相關資訊，請參閱 [HumanResources.myTeam 範例資料表 &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md)。  

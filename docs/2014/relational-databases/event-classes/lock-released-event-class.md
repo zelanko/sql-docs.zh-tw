@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf04a73d2ecc100ae5e9b41b5807aa25b05ba32a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee61532c806ca52b9e9d08ef6052c4da0c564ad2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023838"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052919"
 ---
 # <a name="lockreleased-event-class"></a>Lock:Released 事件類別
   Lock:Released 事件類別指出已釋放資源 (例如頁面) 的鎖定。  

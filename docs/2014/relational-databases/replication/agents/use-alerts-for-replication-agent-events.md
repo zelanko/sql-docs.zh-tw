@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e9d945123fae29e8cb629348b41e811f25e0e71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210739"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068771"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>使用複寫代理程式事件的警示
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 提供使用警示來監視事件 (如複寫代理程式事件) 的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會監視 Windows 應用程式記錄檔中與警示相關的事件。 如果發生這類事件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會藉由執行已經定義的工作，及 (或) 向指定操作員傳送電子郵件或呼叫器訊息，進行自動回應。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含一組預先定義的複寫代理程式警示，您可以設定這類警示來執行工作和 (或) 通知操作員。 如需定義要執行之工作的詳細資訊，請參閱本主題的「自動化回應警示」一節。  

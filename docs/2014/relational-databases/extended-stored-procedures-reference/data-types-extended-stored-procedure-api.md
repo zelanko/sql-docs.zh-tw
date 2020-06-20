@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 715cdc343e3a73781c06977fdb3d3d829d6bf533
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57b9c5b8929f6af33546a55e848a75e4243b4973
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62511640"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050810"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>資料類型 (擴充預存程序 API)
     
@@ -38,19 +37,19 @@ ms.locfileid: "62511640"
 |SRVBITN|`bit null`|`bit` 資料類型，允許 Null 值。|  
 |SRVCHAR|`char`|`character` 資料類型。|  
 |SRVDATETIME|`datetime`|8 個位元組的 `datetime` 資料類型。|  
-|SRVDATETIM4|`smalldatetime`|4個位元組`smalldatetime`的資料類型。|  
+|SRVDATETIM4|`smalldatetime`|4個位元組的 `smalldatetime` 資料類型。|  
 |SRVDATETIMN|**datetime null**|`smalldatetime` 或 `datetime` 資料類型，允許 Null 值。|  
 |SRVDECIMAL|`decimal`|`decimal` 資料類型。|  
 |SRVDECIMALN|`decimal null`|`decimal` 資料類型，允許 Null 值。|  
-|SRVFLT4|`real`|4個位元組`real`的資料類型。|  
+|SRVFLT4|`real`|4個位元組的 `real` 資料類型。|  
 |SRVFLT8|`float`|8 個位元組的 `float` 資料類型。|  
 |SRVFLTN|`real` &#124; `float null`|`real` 或 `float` 資料類型，允許 Null 值。|  
 |SRVIMAGE|`image`|`image` 資料類型。|  
-|SRVINT1|`tinyint`|1個位元組`tinyint`的資料類型。|  
-|SRVINT2|`smallint`|2個位元組`smallint`的資料類型。|  
-|SRVINT4|`int`|4個位元組`int`的資料類型。|  
+|SRVINT1|`tinyint`|1個位元組的 `tinyint` 資料類型。|  
+|SRVINT2|`smallint`|2個位元組的 `smallint` 資料類型。|  
+|SRVINT4|`int`|4個位元組的 `int` 資料類型。|  
 |SRVINTN|`tinyint` &#124; `smallint` &#124; `int null`|`tinyint`、`smallint` 或 `int` 資料類型，允許 Null 值。|  
-|SRVMONEY4|`smallmoney`|4個位元組`smallmoney`的資料類型。|  
+|SRVMONEY4|`smallmoney`|4個位元組的 `smallmoney` 資料類型。|  
 |SRVMONEY|`money`|8 個位元組的 `money` 資料類型。|  
 |SRVMONEYN|`money` &#124; `smallmoney null`|`smallmoney` 或 `money` 資料類型，允許 Null 值。|  
 |SRVNCHAR|**nchar**|Unicode `character` 資料類型。|  

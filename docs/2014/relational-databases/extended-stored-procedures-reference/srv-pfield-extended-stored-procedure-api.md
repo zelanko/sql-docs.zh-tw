@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b9168d73f2104bafd8efef0e0560911f56f5a68
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127116"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050680"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (擴充預存程序 API)
     
@@ -58,7 +57,7 @@ len
  *欄位*  
  指定連接上要傳回的資料。  
   
-|值|傳回值|  
+|值|傳回|  
 |-----------|-------------|  
 |SRV_APPLNAME|用戶端建立連接時所提供的應用程式名稱。|  
 |SRV_BCPFLAG|如果用戶端正在準備進行大量複製作業，則為 TRUE 的旗標，否則為 FALSE 的旗標。|  
@@ -83,7 +82,7 @@ len
  *len*  
  這是指向 **int** 變數的指標，該變數含有傳回 *field* 值的長度。 如果 *len* 是 NULL，則不會傳回字串的長度。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  以 Null 結束的字串指標，其中包含指定之欄位在 SRV_PROC 結構中的目前值。 如果欄位是空的，則會傳回空字串的有效指標，而且 *len* 包含 0。 如果欄位不明，會傳回 NULL，而且 *len* 包含值 -1。  
   
 > [!IMPORTANT]  

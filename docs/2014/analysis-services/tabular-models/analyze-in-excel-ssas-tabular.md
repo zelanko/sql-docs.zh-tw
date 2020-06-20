@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8090c75108f7a384019030082699917fca915b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 429245f875ce6d13ef3818cf7bae874f72c500ed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939932"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>在 Excel 中進行分析 (SSAS 表格式)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [在 Excel 中進行分析] 功能，為表格式模型製作者提供了一個在開發期間可快速分析模型專案的方法。 [在 Excel 中進行分析] 功能可開啟 Microsoft Excel、建立模型工作空間資料庫的資料來源連接，以及自動將樞紐分析表加入工作表。 工作空間資料庫物件 (資料表、資料行及量值) 會包含在樞紐分析表欄位清單中做為欄位。 接著，即可在有效使用者或角色及檢視方塊的內容中檢視物件及資料。  
@@ -28,7 +27,7 @@ ms.locfileid: "66067692"
   
 -   [相關工作](#bkmk_rt)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>各種  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 優點  
  [在 Excel 中進行分析] 功能可讓模型製作者利用 Microsoft Excel 這類常見的資料分析應用程式來測試模型專案的功效。 為了使用 [在 Excel 中進行分析] 功能，您必須在與 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]相同的電腦上安裝 Microsoft Office 2003 或更高版本。  
   
 > [!NOTE]  
@@ -51,7 +50,7 @@ ms.locfileid: "66067692"
   
 ##  <a name="related-tasks"></a><a name="bkmk_rt"></a> 相關工作  
   
-|**主題**|**描述**|  
+|**本文**|**說明**|  
 |---------------|---------------------|  
 |[在 Excel 中分析表格式模型 &#40;SSAS 表格式&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|此主題描述如何使用模型設計師的 [在 Excel 中進行分析] 功能來開啟 Excel、建立模型工作空間資料庫的資料來源連接，以及將樞紐分析表加入工作表。|  
   

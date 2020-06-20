@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ba1e5eddfdcffa5fbefdea323f110ba9d15ca8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667813"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005822"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>針對異動複寫測量延遲及驗證連接
   本主題描述如何使用複寫監視器、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中測量延遲及驗證異動複寫的連接。 異動複寫具有追蹤 Token 功能，該功能會提供便利的方式來計算異動複寫拓撲中的延遲並驗證「發行者」、「散發者」及「訂閱者」之間的連接。 Token (即少量的資料) 會寫入發行集資料庫的交易記錄，會標示為典型的已複寫交易並且會透過系統傳送，它可允許計算：  
@@ -55,15 +54,15 @@ ms.locfileid: "62667813"
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  追蹤 Token 在停止系統時也很有幫助，包括停止所有活動並確認所有節點已接收全部尚未處理的變更。 如需詳細資訊，請參閱[停止複寫拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
   
- 若要使用追蹤 token，您必須使用的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定版本：  
+ 若要使用追蹤 token，您必須使用的特定版本 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ：  
   
--   散發者必須為[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]或更新版本。  
+-   散發者必須為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本。  
   
 -   「發行者」必須為 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本，或為「Oracle 發行者」。  
   
--   針對發送訂閱，如果訂閱者是[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 或更新版本，則會從發行者、散發者和訂閱者收集追蹤 token 統計資料。  
+-   針對發送訂閱，如果訂閱者是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 或更新版本，則會從發行者、散發者和訂閱者收集追蹤 token 統計資料。  
   
--   對於提取訂閱，則會從「訂閱者」收集追蹤 Token 統計資料，但只限於「訂閱者」為 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的情況下。 如果訂閱者是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]，則只會從發行者和散發者收集統計資料。  
+-   對於提取訂閱，則會從「訂閱者」收集追蹤 Token 統計資料，但只限於「訂閱者」為 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的情況下。 如果訂閱者是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] ，則只會從發行者和散發者收集統計資料。  
   
  以下為另外一些應注意的問題和限制：  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62667813"
   
 2.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_helpsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)。 請確認訂閱存在且狀態為使用中。  
   
-3.  在發行集資料庫的發行者上，執行 [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql)，並指定 **@publication**。 請注意**@tracer_token_id**輸出參數的值。  
+3.  在發行集資料庫的發行者上，執行 [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql)，並指定 **@publication**。 請注意 **@tracer_token_id** 輸出參數的值。  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>若要針對異動複寫判斷延遲並驗證連接  
   

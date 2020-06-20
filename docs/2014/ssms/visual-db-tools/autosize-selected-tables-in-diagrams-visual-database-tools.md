@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 37ea46f7cae616e39b4d2b459c2d0768a03117b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1acc36c3e8054d4e3555401bc4ba5f4f62196f83
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63297557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066271"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>自動調整圖表中所選資料表的大小 (Visual Database Tools)
   您可以將圖表中的資料表快速調整成可以顯示所有欄位的最小尺寸。  

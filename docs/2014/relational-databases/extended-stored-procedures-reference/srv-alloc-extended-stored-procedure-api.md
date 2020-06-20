@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61157ab8ba2b9f47caf89b6a16a3edd830437abf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 729675f7df3a4e394bb28f4074644289489ef248
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63138905"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050800"
 ---
 # <a name="srv_alloc-extended-stored-procedure-api"></a>srv_alloc (擴充預存程序 API)
     
@@ -48,7 +47,7 @@ size
  *size*  
  指定要配置的位元組數。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  新配置空間的指標。 如果無法配置 *size* 個位元組，就會傳回 Null 指標。  
   
 ## <a name="remarks"></a>備註  

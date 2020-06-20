@@ -13,21 +13,20 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6cd3599ff68fadf6a55af1c57379e9cdd8cc4b5d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c183bebe34e37455fbefa214ed0fcfeb55f3aa8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154489"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937979"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>設定 DQS 使用參考資料
   此主題描述如何設定 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 來使用參考資料清理您的資料。 您可以使用來自 Azure Marketplace 的參考資料，或從直接線上協力廠商參考資料提供者。  
   
 ## <a name="before-you-begin"></a>開始之前  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
- 若要使用服務商場的參考資料，您必須擁有有效的服務商場帳號金鑰。 如需有關建立 Marketplace 帳戶金鑰的詳細資訊，請參閱[建立您的帳戶](https://go.microsoft.com/fwlink/?LinkId=212936)（https://go.microsoft.com/fwlink/?LinkId=212936)。 您也可以從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 建立服務商場帳號金鑰，方法是按一下 **首頁畫面中** [管理] **底下的** [組態] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ，然後按一下 **[參考資料]** 索引標籤底下的 **[建立 DataMarket 帳戶識別碼]** 。  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
+ 若要使用服務商場的參考資料，您必須擁有有效的服務商場帳號金鑰。 如需有關建立 Marketplace 帳戶金鑰的詳細資訊，請參閱[建立您的帳戶](https://go.microsoft.com/fwlink/?LinkId=212936)（ https://go.microsoft.com/fwlink/?LinkId=212936) 。 您也可以從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 建立服務商場帳號金鑰，方法是按一下 **首頁畫面中** [管理] **底下的** [組態] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ，然後按一下 **[參考資料]** 索引標籤底下的 **[建立 DataMarket 帳戶識別碼]** 。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   

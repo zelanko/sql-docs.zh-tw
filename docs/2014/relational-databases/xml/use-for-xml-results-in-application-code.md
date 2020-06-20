@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 130228aee1ba21829651afb5dfd5665692a42315
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 13c588f975a219284ed4ec26b6ed2cfa73dd70a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702397"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059385"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在應用程式的程式碼中使用 FOR XML 結果
   藉由在 SQL 查詢中使用 FOR XML 子句，您就可以將查詢結果擷取為 XML 資料，以及將其轉換為 XML 資料。 如果可以在 XML 應用程式的程式碼中使用 FOR XML 查詢結果，此功能便能讓您執行下列功能：  

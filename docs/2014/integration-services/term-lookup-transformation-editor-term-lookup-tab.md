@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 245d3466-d51f-4073-978a-694a8d9dfaec
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2939d160773d60944a2e8a786e5495cea366edb1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d67c8c02e79583b5c8f4295abc4d71c2b05dae8b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055126"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962071"
 ---
 # <a name="term-lookup-transformation-editor-term-lookup-tab"></a>詞彙查閱轉換編輯器 (詞彙查閱索引標籤)
   使用 **[詞彙查閱轉換編輯器]** 對話方塊的 **[詞彙查閱]** 索引標籤，即可將輸入資料行對應至參考資料表的查閱資料行，並提供每一個輸出資料行的別名。  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 005e71195fc294ef7c2590886208d7184ec00474
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066345"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>教學課程：SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 教學課程將為您介紹用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構的整合式環境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供設定、監視和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的圖形介面。 也讓您部署、監視以及升級應用程式所使用的資料層元件，例如資料庫和資料倉儲。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 也提供用於編輯和偵錯指令碼的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 語言編輯器。  

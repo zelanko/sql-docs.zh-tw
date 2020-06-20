@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 37c719beb625a533c2d8f279a8500365c4786c05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0214b2ec0fbc712873d4c39732425a78ef31653
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990578"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050185"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>記憶體內部 OLTP 資料庫的高可用性支援
   不論包含或不含原生編譯的預存程序，包含記憶體最佳化資料表的資料庫完全支援 AlwaysOn 可用性群組。  設定中並沒有任何差異，但與不含的情況相比，包含原生編譯的預存程序還支援包含 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 物件的資料庫。  

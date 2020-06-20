@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 57e5ed3215391d3a1b134db471e2f4f0393f4443
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7b67464e8866697b0234af46bf2e773071c73ad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127129"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050663"
 ---
 # <a name="srv_paramstatus-extended-stored-procedure-api"></a>srv_paramstatus (擴充預存程序 API)
     
@@ -55,7 +54,7 @@ n
  *n*  
  這指出參數的數目。 第一個參數是數字 1。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  包含參數之狀態旗標的 `int`。 目前只有一個旗標：如果位元 0 設定為 1，參數為傳回參數。 如果沒有第 *n* 個參數或是沒有任何遠端預存程序，其會傳回 -1。  
   
 ## <a name="remarks"></a>備註  

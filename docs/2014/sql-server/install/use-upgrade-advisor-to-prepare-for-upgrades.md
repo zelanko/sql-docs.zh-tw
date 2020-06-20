@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fa2fce50d7f62f134ef96175ed359c86ea84080
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632731"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058844"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>使用 Upgrade Advisor 來準備升級
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor 可以協助您完成升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的相關準備工作。 Upgrade Advisor 會分析已安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版元件，然後產生報告，以指出在您升級之前或之後要修正的問題。  
@@ -66,7 +65,7 @@ ms.locfileid: "73632731"
   
 -   Windows Installer 從版本 4.5 開始。 您可以從[Windows Installer 的網站](https://www.microsoft.com/download/details.aspx?id=8483)安裝 Windows Installer。  
   
--   Microsoft .NET Framework 4。 .NET Framework 4 可在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]產品媒體上取得，並從[.NET Framework 4 下載頁面](https://go.microsoft.com/fwlink/?LinkId=209895)取得。  
+-   Microsoft .NET Framework 4。 .NET Framework 4 可在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 產品媒體上取得，並從[.NET Framework 4 下載頁面](https://go.microsoft.com/fwlink/?LinkId=209895)取得。  
   
     -   若要從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 媒體安裝 .NET Framework 4，請找出光碟機的根目錄。 然後，在 \redist 資料夾上按兩下滑鼠按鈕後於 DotNetFrameworks 資料夾上再按兩下滑鼠按鈕，然後執行 dotNetFx40_Full_x86_x64.exe (32 位元作業系統或 64 位元作業系統)。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "73632731"
   
  安裝 Upgrade Advisor 之後，您可以從 [**開始**] 功能表開啟它：  
   
--   按一下 [**開始**]，指向 [**所有程式**] [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，再指向 []，然後按一下** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Upgrade Advisor**]。  
+-   按一下 [**開始**]，指向 [**所有程式**]，再指向 [] [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ，然後按一下 [ ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**]。  
   
  如需詳細資訊，請參閱 Upgrade Advisor 下載以及 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本資訊中的 Upgrade Advisor 文件。  
   

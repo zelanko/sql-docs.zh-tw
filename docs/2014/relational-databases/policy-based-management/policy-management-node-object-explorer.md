@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: febf8ce34e93f4efffaea1d9a9925ab5c8206652
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e07e054209065ae1e466b0b3f50f21f7af9c97a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62625895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066743"
 ---
 # <a name="policy-management-node-object-explorer"></a>原則管理節點 (物件總管)
   本節包含 **中物件總管之** PolicyManagement [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]節點的 F1 說明主題。  

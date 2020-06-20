@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f03b9a202c3c49f147368460518a579f28dc850
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62960813"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004683"
 ---
 # <a name="secure-the-subscriber"></a>保護訂閱者
   「合併代理程式」與「散發代理程式」會連接到「訂閱者」。 這些連接會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入或 Windows 登入的內容下進行。 為遵循授與所需最小權限的原則，並同時保護所有密碼的儲存，有必要為這些代理程式提供適當的登入。 如需有關各代理程式需要的權限資訊，請參閱＜ [Replication Agent Security Model](replication-agent-security-model.md)＞。  
@@ -53,7 +52,7 @@ ms.locfileid: "62960813"
  如需詳細資訊，請參閱[建立交易式發行集的可更新訂閱](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)和[檢視及修改複寫安全性設定](view-and-modify-replication-security-settings.md)。  
   
 > [!IMPORTANT]  
->  對於複寫在發行集資料庫中建立的檢視，為連接指定的帳戶應該只被授與插入、更新及刪除資料的權限，而不應該被授與任何其他權限。 對於發行集資料庫中以 **syncobj_** _\<十六進位數字>_ 格式命名的檢視，您在每一個訂閱者端設定的帳戶都應該被授與這些檢視的權限。  
+>  對於複寫在發行集資料庫中建立的檢視，為連接指定的帳戶應該只被授與插入、更新及刪除資料的權限，而不應該被授與任何其他權限。 授與發行集資料庫中，以**syncobj_** 格式命名之 views 的許可權，以及 _\<HexadecimalNumber>_ 您在每個「訂閱者」上設定的帳戶。  
   
 ## <a name="queued-updating-subscriptions"></a>佇列更新訂閱  
  設定佇列更新訂閱時，請注意與安全性相關的兩方面：  

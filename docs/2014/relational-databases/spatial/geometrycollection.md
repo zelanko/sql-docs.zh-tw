@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5aceabe5a263cfa53572be6f818ddc905f9742a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b882aad6557eb812ee44eeeb46ecbbbda86061c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014224"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996320"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
   `GeometryCollection` 是零或多個 `geometry` 或 `geography` 執行個體的集合。 `GeometryCollection` 可以是空的。  
