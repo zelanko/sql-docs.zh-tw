@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5e906e23-6638-410d-920b-fdf35b0d3cc4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2d6265fd9d86b96c75fce63a265848f769253024
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d6040e86b29c7f3d79606ee47004b0bb9c38cb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092363"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058928"
 ---
 # <a name="select-features-upgrade"></a>選取功能 (升級)
   使用 **安裝精靈的 [選取功能]**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 頁面，可檢視要升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的功能。  

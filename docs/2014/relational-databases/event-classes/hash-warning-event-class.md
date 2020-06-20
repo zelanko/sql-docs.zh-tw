@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc2b6d2ba25ee487053a7f9f711c499356a5ec59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c26b06e61a6f9fcad52dab0d042b299f993342e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052948"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 事件類別
   Hash Warning 事件類別可用來監視在雜湊作業期間發生雜湊遞迴或雜湊停止 (Hash Bailout) 的時間。  
@@ -61,7 +60,7 @@ ms.locfileid: "62662342"
 |HostName|`nvarchar`|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，這個資料行就會擴展。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IntegerData|`int`|遞迴等級 (僅限雜湊遞迴)。|25|是|  
 |IsSystem|`int`|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  
-|LoginName|`nvarchar`|使用者的登入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名稱（安全性登入或* \<DOMAIN \\ \>* 格式的 Windows 登入認證，><username）。|11|是|  
+|LoginName|`nvarchar`|使用者的登入名稱（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或以* \<DOMAIN> \\<使用者名稱 \> *的格式的 Windows 登入認證）。|11|是|  
 |LoginSid|`image`|已登入之使用者的安全性識別碼 (SID)。 您可以在 sys.server_principals 目錄檢視中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |NTDomainName|`nvarchar`|使用者所隸屬的 Windows 網域。|7|是|  
 |NTUserName|`nvarchar`|Windows 使用者名稱。|6|是|  

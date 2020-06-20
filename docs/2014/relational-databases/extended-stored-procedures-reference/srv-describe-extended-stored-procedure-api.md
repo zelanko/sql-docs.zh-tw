@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 64910ce8bab155639a16cb065768c43fd86ac737
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 264781f21e328c4740ee31b53fe3812bbe392305
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050779"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (擴充預存程序 API)
     
@@ -99,7 +98,7 @@ srcdata
   
  如果 *desttype* 為 SRVDECIMAL 或 SRVNUMERIC，則 *srcdata* 參數必須是 DBNUMERIC 或 DBDECIMAL 結構的指標，而且此結構的有效位數及小數位數欄位已設定為您想要的值。 您可以使用 DEFAULTPRECISION 來指定預設有效位數，並使用 DEFAULTSCALE 來指定預設小數位數。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  所描述之資料行的編號。 第一個資料行為資料行 1。 若發生錯誤，就會傳回 0。  
   
 ## <a name="remarks"></a>備註  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 0ed9d0f8-3297-4e31-a3e9-4a827f381789
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b334a62c56d4fb62337204eae91f83eed290b641
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c587ada5f08d3743f4fe7eafccfc923c38a2b7b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62519402"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051206"
 ---
 # <a name="localdb_error_instance_busy"></a>LOCALDB_ERROR_INSTANCE_BUSY
     

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2b33f4a2d85f2613b238c9bd9b2e59415784b2a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc2bf8c781df287bf499f4a6d10bdd572c4129ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051341"
 ---
 # <a name="tm-save-tran-starting-event-class"></a>TM: Save Tran Starting 事件類別
   TM: Save Tran Starting 事件類別指出正在啟動 SAVE TRANSACTION 要求。 此要求是從用戶端透過 Transaction Management 介面傳送的。  

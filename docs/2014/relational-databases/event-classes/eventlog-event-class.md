@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 88e254954c126684eca606f318170c82d3699fab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74a6db063168cf0eb444a2ee442ff44e3b09958b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662541"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053004"
 ---
 # <a name="eventlog-event-class"></a>EventLog 事件類別
   EventLog 事件類別指出已將事件記錄在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔中。  

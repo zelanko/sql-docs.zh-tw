@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a167ce3a-50b4-4e77-a884-adb23b586c72
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5e7b5ed9d730eb51e9994a8bd068eefda9715a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4977d45d53e1114edc8e04ad504963bae0b9eb9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092937"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059120"
 ---
 # <a name="remove-udts-named-after-the-reserved-geometry-and-geography-data-types"></a>移除依據保留之 GEOMETRY 和 GEOGRAPHY 資料類型所命名的 UDT
   Upgrade Advisor 偵測到依據針對 `geometry` 或 `geography` 資料類型保留之詞彙所命名的使用者定義型別 (UDT)。 `geometry` 和 `geography` 資料類型屬於空間資料功能的一部分。  

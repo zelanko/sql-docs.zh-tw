@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c6cd168a852eca294e85de696a611b460423c5a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062215"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926539"
 ---
 # <a name="active-operations-dialog-box"></a>作用中的作業對話方塊
   使用 **[作用中的作業]** 對話方塊檢視 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上目前執行中之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 作業 (例如，部署、驗證及封裝執行) 的狀態。 此資料儲存在 SSISDB 目錄中。  
@@ -42,8 +41,8 @@ ms.locfileid: "66062215"
 ##  <a name="configure-the-options"></a><a name="options"></a>設定選項  
   
 ### <a name="options"></a>選項。  
- **類型**  
- 指定作業的類型。 以下是 [**類型**] 欄位的可能值，以及 transact-sql `catalog.operations`視圖的 [operations_type] 資料行中的對應值。  
+ **型別**  
+ 指定作業的類型。 以下是 [**類型**] 欄位的可能值，以及 transact-sql 視圖的 [operations_type] 資料行中的對應值 `catalog.operations` 。  
   
 |||  
 |-|-|  

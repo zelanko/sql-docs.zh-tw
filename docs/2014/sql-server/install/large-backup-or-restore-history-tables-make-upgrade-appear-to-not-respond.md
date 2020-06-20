@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f88d86ec-324b-4518-b6d7-1af7e7265812
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e4d994eb6d345ab98e6cd51a44c7c90a74bafd3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 918c20f58c00c535d8ed41d887e9671f5e821a17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874606"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059218"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>大型備份或還原記錄資料表會使升級作業看似沒有回應
   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，新的資料行會加入至某些備份和還原記錄資料表。 升級這些資料表需要更改它們，以便加入新的資料行。 如果其中一個或多個資料表包含大量資料列，則升級會延滯相當長的一段時間，等候 ALTER TABLE 陳述式將資料行加入至該資料表。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 63c2ba5a-be34-461e-bee1-03c25b396cd2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 33dfe774838aa88dc0c68829ae0abe34f3f1dda9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47aebfa29b60a1c2ae50c6699946312996d26e6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869752"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967918"
 ---
 # <a name="mssqlserver_17065"></a>MSSQLSERVER_17065
     
@@ -30,7 +29,7 @@ ms.locfileid: "62869752"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|SQLASSERT_BOTH|  
-|訊息文字|SQL Server 判斷提示: 檔案: \<%s>，行 = %d 失敗的判斷提示 = '%s' %s。 此錯誤可能與時間有關。 如果重新執行陳述式之後仍然發生此錯誤，請使用 DBCC CHECKDB 來檢查資料庫的結構完整性，或重新啟動伺服器以確定記憶體中的資料結構並未損毀。|  
+|訊息文字|SQL Server 判斷提示：檔案： \<%s> ，行 =% d 失敗的判斷提示 = '% s '% s。 此錯誤可能與時間有關。 如果重新執行陳述式之後仍然發生此錯誤，請使用 DBCC CHECKDB 來檢查資料庫的結構完整性，或重新啟動伺服器以確定記憶體中的資料結構並未損毀。|  
   
 ## <a name="explanation"></a>說明  
  這項錯誤可能是由暫時性的時間相關錯誤所造成，或由記憶體中或磁碟內存的資料損毀所造成。  

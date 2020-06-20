@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d4b3ab8f1e956ee68585ecdc3e12ae605d52ab38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9625d2865a21b66663ebe2c2ad066e9ce8c7bf25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745669"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050515"
 ---
 # <a name="srv_setcollen-extended-stored-procedure-api"></a>srv_setcollen (擴充預存程序 API)
     
@@ -55,13 +54,13 @@ len
  *srvproc*  
  是 SRV_PROC 結構的指標，也是特定用戶端連接的控制代碼。 擴充預存程序 API 程式庫會使用該結構所包含的資訊來管理應用程式與用戶端之間的通訊和資料。  
   
- *排*  
+ *column*  
  這表示要指定其資料長度的資料行編號。 資料行的編號會從 1 開始。  
   
  *len*  
  這表示資料行資料的長度 (以位元組為單位)。 0 的長度代表資料行資料值為 Null。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  

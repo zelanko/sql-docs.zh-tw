@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: d88953d2-2258-40ac-b3bf-2ef502f9b5fd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8e5d87a9d98e4804dd9f2687b5125e55882606c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aed5a76cff9d90b81f02f6af11b6fc437efee14e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487679"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035310"
 ---
 # <a name="task-3-verifying-the-data-in-master-data-manager"></a>工作 3：在主資料管理員中驗證資料
   在這項工作中，您會使用**主資料管理員 Web 應用程式**，確認已在**MDS**上建立**供應商**實體。
 
-1.  如果**主資料管理員**已開啟，請按一下頂端的 [ **SQL Server 2012 Master Data Services** ，流覽至首頁。 否則，請流覽`http://localhost/MDS`至以啟動**主資料管理員**。
+1.  如果**主資料管理員**已開啟，請按一下頂端的 [ **SQL Server 2012 Master Data Services** ，流覽至首頁。 否則，請流覽至 `http://localhost/MDS` 以啟動**主資料管理員**。
 
 2.  選取 [適用于**模型**的**供應商**]，然後按一下 [ **Explorer**]。
 

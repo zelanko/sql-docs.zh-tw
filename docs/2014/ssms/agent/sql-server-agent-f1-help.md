@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55f4bd55-aa61-4d5c-98fd-f85824206ea0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a8be48dd3895f669aad8d1ed5af7be578ba23b9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9b09cf787d2d1519ef5b46a22d7424e12869909
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245706"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058761"
 ---
 # <a name="sql-server-agent-f1-help"></a>SQL Server Agent F1 說明
   此章節包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 F1 說明。 在使用者介面的環境中按一下 F1 鍵，或是在對話方塊中按一下 [說明]，即可取得這些主題。  

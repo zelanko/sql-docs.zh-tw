@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ae97386c-9dbf-456d-bcbc-391931775fa3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 95a2e4a2bc7caeaae04ac8aab245ccf7edbb6af7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce4f4f60801ccbf2e2718efabef5e19e47a944d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061285"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051702"
 ---
 # <a name="sqlstmtstarting-event-class"></a>SQL:StmtStarting 事件類別
   SQL:StmtStarting 事件類別指出 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式已啟動。  

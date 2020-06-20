@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 975da6bc447ed3a29f39dd9a8e877a5b556098c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a166889694e6d4348587ca65f238f9a817f36f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62724827"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051391"
 ---
 # <a name="user-configurable-event-class"></a>使用者可設定的事件類別
   使用「使用者可設定的」事件類別目錄來監視使用者自訂的事件。 建立使用者自訂的事件類別目錄，以監視無法由系統在其他事件類別目錄中提供之事件類別監視的事件。 例如，可以建立使用者自訂的事件以監視您正在測試之應用程式的進度。 當應用程式執行時，它可在預先定義的時間點產生事件，讓您可以判斷您應用程式的目前執行點。  

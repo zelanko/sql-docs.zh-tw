@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 447d880fb80871dbb3de46b389be6b1937f64a99
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768994"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968366"
 ---
 # <a name="upgrade-integration-services-packages"></a>升級 Integration Services 封裝
-  當您[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]將或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的實例升級為目前的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本時，現有[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]的封裝並不會自動升級為目前版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]所使用的封裝格式。 您必須選取升級方法並手動升級您的封裝。  
+  當您將或的實例 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升級 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 為目前的版本時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，現有的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 封裝並不會自動升級為目前版本所使用的封裝格式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 您必須選取升級方法並手動升級您的封裝。  
   
- 當您升級[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]封裝時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]會將任何腳本工作和腳本元件中的腳本[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]遷移至 Tools for Applications （VSTA）。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中，腳本工作或腳本元件中用於[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]應用程式的腳本（VSA）。 如需您可能必須在移轉之前對指令碼進行的變更以及指令碼轉換失敗的詳細資訊，請參閱[將指令碼移轉到 VSTA](../../sql-server/install/migrate-scripts-to-vsta.md)。  
+ 當您升級封裝時，會將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 任何腳本工作和腳本元件中的腳本遷移至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] TOOLS for Applications （VSTA）。 在中 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ，腳本工作或腳本元件中用於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 應用程式的腳本（VSA）。 如需您可能必須在移轉之前對指令碼進行的變更以及指令碼轉換失敗的詳細資訊，請參閱[將指令碼移轉到 VSTA](../../sql-server/install/migrate-scripts-to-vsta.md)。  
   
  如需將專案轉換為專案部署模型時升級封裝的相關資訊，請參閱 [將專案部署至 Integration Services 伺服器](../deploy-projects-to-integration-services-server.md)。  
   
 ## <a name="sql-server-2000-data-transformation-services-packages"></a>SQL Server 2000 Data Transformation Services 封裝  
- 在目前的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]版本中，已停止遷移或執行資料轉換服務（DTS）封裝的支援。 下列 DTS 功能已停用：  
+ 在目前的版本中，已停止遷移或執行資料轉換服務（DTS）封裝的支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 下列 DTS 功能已停用：  
   
 -   DTS 執行階段  
   
@@ -81,14 +80,14 @@ ms.locfileid: "62768994"
   
 -   DTExecUI.exe.config  
   
- 若要[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]使用設計包含[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]自訂群組件的套件，您需要修改位於* \<磁片磁碟機>*： \Program Files\Microsoft Visual Studio 10.0 \ common7\ide。的 devenv 檔案。  
+ 若要使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 設計包含 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 自訂群組件的套件，您需要修改位於下列位置的 devenv.exe.config 檔案 *\<drive>* ： \Program Files\Microsoft Visual Studio 10.0 \ common7\ide。  
   
- 如果要使用這些封裝搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本執行階段所建置的應用程式，必須在可執行檔的 *.exe.config 檔案的組態區段中包含重新導向規則。 規則會將執行階段組件重新導向至 11.0.0.0 版 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 如需元件版本重新導向的詳細資訊，請參閱[ \<運行\<時間>的 assemblyBinding> 元素](https://msdn.microsoft.com/library/twy1dw1e.aspx)。  
+ 如果要使用這些封裝搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本執行階段所建置的應用程式，必須在可執行檔的 *.exe.config 檔案的組態區段中包含重新導向規則。 規則會將執行階段組件重新導向至 11.0.0.0 版 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 如需元件版本重新導向的詳細資訊，請參閱[ \<assemblyBinding> 的 \<runtime> 元素](https://msdn.microsoft.com/library/twy1dw1e.aspx)。  
   
 ### <a name="locating-the-assemblies"></a>尋找組件  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件已經升級至 .NET 4.0。 .Net 4 有個別的全域組件快取，位於* \<磁片磁碟機>*： \windows\microsoft.net\assembly。 您可以在此路徑底下 (通常在 GAC_MSIL 資料夾中) 找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件已經升級至 .NET 4.0。 .NET 4 有個別的全域組件快取，位於 *\<drive>* ： \windows\microsoft.net\assembly。 您可以在此路徑底下 (通常在 GAC_MSIL 資料夾中) 找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件。  
   
- 如同舊版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，核心[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]擴充性 .dll 檔案也位於* \<磁片磁碟機>*： \Program Files\Microsoft SQL server\100\sdk\assemblies。  
+ 如同舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，核心擴充性 .dll 檔案 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 也位於 *\<drive>* ： \Program Files\Microsoft SQL server\100\sdk\assemblies。  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>了解 SQL Server 封裝升級結果  
  升級封裝期間，[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 封裝中的大多數元件及功能皆會順利地轉換成目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的對應項目。 不過，其中有許多元件和功能不會升級，或者具有您應該注意的升級結果。 下表將識別這些元件和功能。  

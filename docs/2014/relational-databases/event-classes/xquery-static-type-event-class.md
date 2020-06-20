@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 30df7ba9-1e5f-432b-b90b-4310ef0473c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e40c50f93973b7c3c80cdf5dbca831d531a68d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 079b7ad5d7a509cc1f96f748005458d289682091
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051378"
 ---
 # <a name="xquery-static-type-event-class"></a>XQuery 靜態類型事件類別
   當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 XQuery 運算式時，就會發生 XQuery 靜態類型事件類別。 這個事件類別提供 XQuery 運算式的靜態類型。  

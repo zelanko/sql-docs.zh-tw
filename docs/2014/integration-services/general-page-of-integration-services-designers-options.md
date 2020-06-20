@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f27ec0c9fe8078bb11a48114a3d456793271853d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14a38f66dbad9b30e1b9300e16682546b7b865de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768284"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968397"
 ---
 # <a name="general-page"></a>一般頁面
-  在 [選項]  對話方塊上使用 [Integration Services 設計師]  頁面上的 [一般]  頁面，指定用來載入、顯示及升級封裝的選項。  
+  在 [選項] 對話方塊上使用 [Integration Services 設計師] 頁面上的 [一般] 頁面，指定用來載入、顯示及升級封裝的選項。  
   
  若要開啟 [一般]  頁面，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [工具]  功能表上按一下 [選項]  ，然後展開 [商業智慧設計師]  ，再選取 [Integration Services 設計師]  。  
   

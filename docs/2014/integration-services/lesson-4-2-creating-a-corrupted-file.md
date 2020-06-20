@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f793f2cadf46d4a5431c01f5a1b1966ffad6fd55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767380"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968198"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>步驟 2:建立損毀的檔案
   若要示範組態和轉換錯誤的處理，您必須建立處理時會造成元件失敗的範例一般檔案。  
@@ -34,12 +33,12 @@ ms.locfileid: "62767380"
   
     3.  按一下 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 檔案。  
   
-2.  使用文字編輯器的 [尋找和取代] 功能來尋找的`VEB`所有實例，並將`BAD`其取代為。  
+2.  使用文字編輯器的 [尋找和取代] 功能來尋找的所有實例 `VEB` ，並將其取代為 `BAD` 。  
   
-3.  在與其他範例資料檔案相同的資料夾中，將修改過的檔案`Currency_BAD.txt`儲存為。  
+3.  在與其他範例資料檔案相同的資料夾中，將修改過的檔案儲存為 `Currency_BAD.txt` 。  
   
     > [!IMPORTANT]  
-    >  請確定`Currency_BAD.txt`與其他範例資料檔案儲存在相同的資料夾中。  
+    >  請確定與 `Currency_BAD.txt` 其他範例資料檔案儲存在相同的資料夾中。  
   
 4.  關閉文字編輯器。  
   

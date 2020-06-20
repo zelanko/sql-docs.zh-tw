@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3ca4efb2a16f615af57e89fa56a4dcb8bdb3bf5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8ffe3b9befd0c7239d32094e5738e0fb2947c5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091362"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058818"
 ---
 # <a name="use-sp_rename-to-rename-duplicate-index-name"></a>使用 sp_rename 重新命名重複的索引名稱
   Upgrade Advisor 偵測到重複的資料表或檢視表索引名稱。 升級之前，請先重新命名索引以移除重複項目。  

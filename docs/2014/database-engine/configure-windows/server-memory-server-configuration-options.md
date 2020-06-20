@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 38129f2f502f3a3f2ec1be02d718a642e2a52c23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028695"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934989"
 ---
 # <a name="server-memory-configuration-options"></a>伺服器記憶體設定選項
   您可以使用 [最小伺服器記憶體]  和 [最大伺服器記憶體]  這兩個伺服器記憶體選項，針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所使用的 SQL Server 處理序重新設定 SQL Server Memory Manager 所管理的記憶體數量 (以 MB 為單位)。  
@@ -34,7 +33,7 @@ ms.locfileid: "69028695"
  [最小伺服器記憶體]**** 的預設值是 0，而 [最大伺服器記憶體]**** 的預設值是 2147483647 MB。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以根據可用的系統資源，動態變更其記憶體需求。  
   
 > [!NOTE]  
-> 將 [最大伺服器記憶體]**** 設定為最小值可能會大幅降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能，甚至讓伺服器無法啟動。 如果您在變更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]此選項後無法啟動，請使用 **-f**啟動選項啟動它，並將 [**最大伺服器記憶體**] 重設為先前的值。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](database-engine-service-startup-options.md)。  
+> 將 [最大伺服器記憶體]**** 設定為最小值可能會大幅降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能，甚至讓伺服器無法啟動。 如果您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 變更此選項後無法啟動，請使用 **-f**啟動選項啟動它，並將 [**最大伺服器記憶體**] 重設為先前的值。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](database-engine-service-startup-options.md)。  
   
  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 動態使用記憶體時，它會定期查詢系統以判定可用的記憶體量。 維持這個可用記憶體數量可避免作業系統 (OS) 進行分頁。 如果可用記憶體少於這個數量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將記憶體釋出給 OS。 如果可用記憶體多於這個數量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會配置更多記憶體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只有當工作負載需要更多的記憶體時，它才會增加記憶體。休息中的伺服器不會增加其虛擬位址空間的大小。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "69028695"
 <a name="min_server_memory"></a> 您可使用 **min_server_memory** 確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員，能有最少的記憶體數量可用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在啟動時，不會立即配置 [**最小伺服器記憶體**] 中指定的記憶體數量。 不過，由於用戶端負載使記憶體使用量達到這個值後，除非降低 [最小伺服器記憶體]**** 的值，否則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法釋出記憶體。 例如，當多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體可以同時存在於相同的主機上時，設定 min_server_memory 參數而非 max_server_memory 可為執行個體保留記憶體。 此外，也需要設定虛擬環境中的 min_server_memory 值，以確保基礎主機的記憶體壓力不會為了得到可接受的效能，而嘗試從客體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虛擬機器 (VM) 的緩衝集區，解除超過所需的記憶體。
  
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不保證會配置 [**最小伺服器記憶體**] 中指定的記憶體數量。 如果伺服器上的負載不需要配置 [**最小伺服器記憶體**] 中指定的記憶體數量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則會以較少的記憶體執行。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不保證會配置 [**最小伺服器記憶體**] 中指定的記憶體數量。 如果伺服器上的負載不需要配置 [**最小伺服器記憶體**] 中指定的記憶體數量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則會以較少的記憶體執行。  
   
 <a name="max_server_memory"></a> 您可使用 **max_server_memory** 確保 OS 不會遇到有害的記憶體壓力。 若要設定最大伺服器記憶體設定，請監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的整體取用量，以判斷記憶體需求。 若要為單一執行個體進行更準確的計算：
  -  從 OS 總記憶體中保留 1GB - 4GB 的記憶體給 OS 本身。
@@ -96,14 +95,14 @@ ms.locfileid: "69028695"
 3.  如果已選取 [網路應用程式的資料輸送量最大化]****，請選擇其他任何選項，按一下 [確定]****，然後關閉其餘的對話方塊。  
   
 ## <a name="lock-pages-in-memory"></a>鎖定記憶體分頁  
- 此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。 將記憶體分頁到磁碟時，鎖定記憶體分頁可能會讓伺服器保持回應狀態。 當具有執行 sqlservr.exe 許可權的帳戶已被授與 Windows [已鎖定記憶體中的分頁] （ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] LPIM）使用者權限時，在32位和64位 Standard edition 和更新版本的實例中，[SQL Server**鎖定記憶體分頁**] 選項會設定為 ON。 在舊版 SQL Server 中，設定 32 位元 SQL Server 執行個體的 [鎖定分頁] 選項時，需要具有 sqlservr.exe 執行權限的帳戶具有 LPIM 使用者權限，而且 'awe_enabled' 組態選項設定為 ON。  
+ 此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。 將記憶體分頁到磁碟時，鎖定記憶體分頁可能會讓伺服器保持回應狀態。 當具有執行許可權 sqlservr.exe 的帳戶已被授與 Windows 「鎖定記憶體中的分頁」（LPIM）使用者權限時，[SQL Server**鎖定記憶體中的分頁**] 選項會在32位和64位 Standard edition 和更新版本的實例中設定為 ON [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 在舊版 SQL Server 中，設定 32 位元 SQL Server 執行個體的 [鎖定分頁] 選項時，需要具有 sqlservr.exe 執行權限的帳戶具有 LPIM 使用者權限，而且 'awe_enabled' 組態選項設定為 ON。  
   
- 若要停**用 [鎖定記憶體中**的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分頁] 選項，請移除 SQL Server 啟動帳戶的 [鎖定記憶體中的分頁] 使用者權限。  
+ 若要停**用 [鎖定記憶體中的分頁** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ] 選項，請移除 SQL Server 啟動帳戶的 [鎖定記憶體中的分頁] 使用者權限。  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>停用鎖定記憶體中的分頁  
  **若要停用 [鎖定記憶體中的分頁] 選項：**  
   
-1.  在 **[開始]** 功能表上，按一下 **[執行]** 。 在 [**開啟**] 方塊中`gpedit.msc`，輸入。  
+1.  在 **[開始]** 功能表上，按一下 **[執行]** 。 在 [**開啟**] 方塊中，輸入 `gpedit.msc` 。  
   
      [群組原則]**** 對話方塊隨即開啟。  
   
@@ -149,7 +148,7 @@ ms.locfileid: "69028695"
   
  ***/3gb**是作業系統開機參數。 如需詳細資訊，請瀏覽 [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
   
- * * WOW64 （windows 64 上的 Windows）是在64位作業系統上執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32 位的模式。 如需詳細資訊，請瀏覽 [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
+ * * WOW64 （windows 64 上的 Windows）是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 位作業系統上執行32位的模式。 如需詳細資訊，請瀏覽 [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
   
 ## <a name="examples"></a>範例  
   

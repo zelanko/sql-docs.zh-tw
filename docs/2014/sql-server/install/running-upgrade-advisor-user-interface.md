@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5aecaea9bef359ad24aebbd20dd5e9547497043b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 653e3d0565d0b32c67ccf77772a9b89f611dd082
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092451"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058951"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>執行 Upgrade Advisor (使用者介面)
   在升級規劃期間，您可以執行 Upgrade Advisor 來分析本機或遠端元件。 Upgrade Advisor 會針對分析的每個元件和執行個體產生一份報表。  
@@ -30,7 +29,7 @@ ms.locfileid: "66092451"
 > [!IMPORTANT]  
 >  Upgrade Advisor 不會分析 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的遠端執行個體。 若要分析 [!INCLUDE[ssRS](../../includes/ssrs.md)] 執行個體，您必須將 Upgrade Advisor 安裝在已安裝 [!INCLUDE[ssRS](../../includes/ssrs.md)] 的電腦上。  
 >   
->  若要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分析 Integration Services，您必須[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]在同一部[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]電腦上安裝並安裝和。  
+>  若要分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 同一部 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 電腦上安裝並安裝和。  
   
 ## <a name="running-the-upgrade-advisor-analysis-wizard"></a>執行 Upgrade Advisor 分析精靈  
  執行 Upgrade Advisor 分析精靈具有六個步驟：  

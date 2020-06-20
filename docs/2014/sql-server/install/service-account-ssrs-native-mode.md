@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf46eaa4790bfc09e6f10ef1c43aa06aad12f436
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952388"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036393"
 ---
 # <a name="service-account-ssrs-native-mode"></a>服務帳戶 (SSRS 原生模式)
   使用 [服務帳戶] 頁面，即可指定報表伺服器服務執行所用的帳戶。 此帳戶是在安裝期間進行初始設定。 如果想要變更帳戶或密碼，就可以修改它。 報表伺服器 Web 服務、報表管理員和背景處理應用程式都會使用您在此頁面上指定的服務識別來執行。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式。  
   
- 您為報表伺服器服務所指定的帳戶需要可存取登錄、報表伺服器程式檔和報表伺服器資料庫的權限。 當您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員設定此帳戶時，將會自動設定此帳戶的所有權限。 如果您使用服務帳戶來連接至報表伺服器資料庫，則 Configuration Manager 會建立帳戶的資料庫登入，並藉由將此帳戶指派給主控報表伺服器資料庫之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例上的 RSExecRole，來設定資料庫許可權。 報表伺服器資料庫是報表伺服器寫入的唯一資料存放區， 此服務帳戶不需要任何其他資料存放區的權限。  
+ 您為報表伺服器服務所指定的帳戶需要可存取登錄、報表伺服器程式檔和報表伺服器資料庫的權限。 當您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員設定此帳戶時，將會自動設定此帳戶的所有權限。 如果您使用服務帳戶來連接至報表伺服器資料庫，則 Configuration Manager 會建立帳戶的資料庫登入，並藉由將此帳戶指派給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主控報表伺服器資料庫之實例上的 RSExecRole，來設定資料庫許可權。 報表伺服器資料庫是報表伺服器寫入的唯一資料存放區， 此服務帳戶不需要任何其他資料存放區的權限。  
   
  若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並在導覽窗格中選取此連結。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "71952388"
  從清單中選取 **[網路服務]**、 **[本機系統]** 或 **[本機服務]** 。 只建議您使用 **[網路服務]** ；但是，您可以設定此帳戶使用任何可用的帳戶。  
   
  **使用其他帳戶**  
- 選取這個選項可指定 Windows 使用者帳戶。 您可以輸入本機 Windows 使用者帳戶或網域使用者帳戶。 請以此格式指定網域帳戶： * \<網域>\\<使用者\>*。 使用以下格式指定本機 Windows 使用者帳戶： * \<電腦名稱稱>\\ \><使用者*。 您只能選取現有的帳戶；您無法在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態中建立新帳戶。  
+ 選取這個選項可指定 Windows 使用者帳戶。 您可以輸入本機 Windows 使用者帳戶或網域使用者帳戶。 請以此格式指定網域帳戶： * \<domain> \\<使用者 \> *。 請以下列格式指定本機 Windows 使用者帳戶： * \<computer name> \\<使用者 \> *。 您只能選取現有的帳戶；您無法在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態中建立新帳戶。  
   
  此帳戶的最大字元限制為 20 個字元。  
   

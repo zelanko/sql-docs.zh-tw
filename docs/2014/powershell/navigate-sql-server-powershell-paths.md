@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e5b716847c33623968077aca33932ad005953af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797808"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960288"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>導覽 SQL Server PowerShell 路徑
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell 提供者會公開一組物件，而這組物件位在類似於檔案路徑之結構的 SQL Server 執行個體中。 您可以使用 Windows PowerShell 指令程式導覽提供者路徑，以及建立自訂磁碟機來縮短必須輸入的路徑。  
@@ -29,10 +28,10 @@ ms.locfileid: "72797808"
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|取得目前的節點。|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|變更目前的節點。|  
-|**Get-childitem**|**gci**|**dir**|**！**|列出儲存在目前節點上的物件。|  
+|**Get-ChildItem**|**gci**|**dir**|**！**|列出儲存在目前節點上的物件。|  
 |**Get-Item**|**gi**|||傳回目前項目的屬性。|  
-|**重新命名專案**|**rni**|**rn**|**ren**|重新命名物件。|  
-|**移除專案**|**ri**|**del, rd**|**rm, rmdir**|移除物件。|  
+|**Rename-Item**|**rni**|**rn**|**ren**|重新命名物件。|  
+|**Remove-Item**|**ri**|**del, rd**|**rm, rmdir**|移除物件。|  
   
 > [!IMPORTANT]  
 >  某些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼 (物件名稱) 包含 Windows PowerShell 在路徑名稱中不支援的字元。 如需如何使用包含這些字元之名稱的詳細資訊，請參閱 [PowerShell 中的 SQL Server 識別碼](sql-server-identifiers-in-powershell.md)。  
@@ -44,7 +43,7 @@ ms.locfileid: "72797808"
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|傳回本機電腦的名稱。 若您已經使用 SMO 或 WMI 連接到其他電腦上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體，也會列出這些電腦。|  
 |SQLSERVER:\SQL\\*ComputerName*|電腦上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的清單。|  
-|SQLSERVER： \ SQL\\*ComputerName*\\*實例*名稱|執行個體中最上層物件類型的清單，例如 Endpoints、Certificates 和 Databases。|  
+|SQLSERVER： \ SQL \\ *ComputerName* \\ *實例*名稱|執行個體中最上層物件類型的清單，例如 Endpoints、Certificates 和 Databases。|  
 |物件類別節點，例如 Databases|該類型的物件清單，例如資料庫的清單：master、model、AdventureWorks20008R2。|  
 |物件名稱節點，例如 AdventureWorks2012|此物件內所包含的物件類型清單。 例如，資料庫會列出資料表和檢視表之類的物件類型。|  
   

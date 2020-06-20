@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fbca62a5d32ed6b7ec30eb5d6dba6a82a2b80c64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 045671cc386f91bb9f24caaa95cd6934fc50f5b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298347"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011550"
 ---
 # <a name="database-element-for-configuration-dta"></a>組態的 Database 元素 (DTA)
   指定 Database Engine Tuning Advisor 評估假設性組態 (`Configuration` 元素所指定) 時所針對的資料庫。  
@@ -52,7 +51,7 @@ ms.locfileid: "63298347"
  在 Database Engine Tuning Advisor XML 結構描述中，這個元素的名稱為 **DatabaseTypecomplexType** 。 請勿混淆這個 `Database` 元素與根父系是在 XML 輸入檔頂端之 `Server` 元素的元素。 如需詳細資訊，請參閱[伺服器的 Database 元素 &#40;DTA&#41;](database-element-for-server-dta.md)。  
   
 ## <a name="example"></a>範例  
- 如需此`Database`元素的使用範例，請參閱[具有使用者指定設定的 XML 輸入檔範例 &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。  
+ 如需此元素的使用範例 `Database` ，請參閱[具有使用者指定設定的 XML 輸入檔範例 &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

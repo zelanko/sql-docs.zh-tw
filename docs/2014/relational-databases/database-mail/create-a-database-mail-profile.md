@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0453d495c90c1e599bfc7777b4899f30e6659c52
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872204"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952612"
 ---
 # <a name="create-a-database-mail-profile"></a>建立 Database Mail 設定檔
   您可以使用 [Database Mail 組態精靈]  或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，建立 Database Mail 公用和私人設定檔。  
@@ -96,7 +95,7 @@ ms.locfileid: "62872204"
   
      *@description*= '*描述 '*  
   
-     其中*@profile_name* ，是設定檔的名稱，而*@description*是設定檔的描述。 這是選擇性參數。  
+     其中， *@profile_name* 是設定檔的名稱，而 *@description* 是設定檔的描述。 這是選擇性參數。  
   
 -   針對每個帳戶，執行預存程序 [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql)，如下所示：  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62872204"
   
      *@sequence_number*= '*帳戶在設定檔內的序號。* '  
   
-     其中*@profile_name* ，是設定檔的名稱，而*@account_name*是要新增至設定檔的帳戶名稱， *@sequence_number*可決定帳戶在設定檔中的使用順序。  
+     其中， *@profile_name* 是設定檔的名稱，而 *@account_name* 是要新增至設定檔的帳戶名稱，可 *@sequence_number* 決定帳戶在設定檔中的使用順序。  
   
 -   針對使用此設定檔傳送郵件的每個資料庫角色或使用者，授與設定檔的存取權。 作法是執行預存程序 [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql)，如下所示：  
   
@@ -120,7 +119,7 @@ ms.locfileid: "62872204"
   
      *@is_default*= '*預設設定檔狀態*'  
   
-     其中*@profile_name* ，是設定檔的名稱，而*@principal_name*是資料庫使用者或角色的名稱， *@is_default*可決定此設定檔是否為資料庫使用者或角色的預設值。  
+     其中， *@profile_name* 是設定檔的名稱，而 *@principal_name* 是資料庫使用者或角色的名稱，可 *@is_default* 決定此設定檔是否為資料庫使用者或角色的預設值。  
   
  下列範例會建立 Database Mail 帳戶、建立 Database Mail 私人設定檔，然後將帳戶加入設定檔，並將設定檔的存取權授與 **msdb** 資料庫中的 **DBMailUsers** 資料庫角色。  
   
@@ -166,7 +165,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@description*= '*描述 '*  
   
-     其中*@profile_name* ，是設定檔的名稱，而*@description*是設定檔的描述。 這是選擇性參數。  
+     其中， *@profile_name* 是設定檔的名稱，而 *@description* 是設定檔的描述。 這是選擇性參數。  
   
 -   針對每個帳戶，執行預存程序 [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql)，如下所示：  
   
@@ -178,7 +177,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@sequence_number*= '*帳戶在設定檔內的序號。* '  
   
-     其中*@profile_name* ，是設定檔的名稱，而*@account_name*是要新增至設定檔的帳戶名稱， *@sequence_number*可決定帳戶在設定檔中的使用順序。  
+     其中， *@profile_name* 是設定檔的名稱，而 *@account_name* 是要新增至設定檔的帳戶名稱，可 *@sequence_number* 決定帳戶在設定檔中的使用順序。  
   
 -   若要授與公用存取權，請執行預存程序 [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql)，如下所示：  
   
@@ -190,7 +189,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default*= '*預設設定檔狀態*'  
   
-     其中*@profile_name* ，是設定檔的名稱，而*@principal_name*表示這是公用設定檔， *@is_default*可決定此設定檔是否為資料庫使用者或角色的預設值。  
+     其中， *@profile_name* 是設定檔的名稱，而 *@principal_name* 表示這是公用設定檔，可 *@is_default* 決定此設定檔是否為資料庫使用者或角色的預設值。  
   
  下列範例會建立 Database Mail 帳戶、建立 Database Mail 私人設定檔，然後將帳戶加入設定檔，並授與設定檔的公用存取權。  
   

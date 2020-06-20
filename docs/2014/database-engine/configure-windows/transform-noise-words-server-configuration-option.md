@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49de4a381de3e998073a73c284e3e3e5960f4921
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808689"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934724"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>轉換非搜尋字伺服器組態選項
-  如果非`transform noise words`搜尋字（[停用字詞](../../relational-databases/search/full-text-search.md)）造成全文檢索查詢的布耳運算傳回零個數據列，請使用伺服器設定選項來隱藏錯誤訊息。 若全文檢索查詢使用的 CONTAINS 述詞中，布林運算或 NEAR 運算有包括非搜尋字，則這個選項很有幫助。 下表說明可能的值。  
+  `transform noise words`如果非搜尋字（[停用字詞](../../relational-databases/search/full-text-search.md)）造成全文檢索查詢的布耳運算傳回零個數據列，請使用伺服器設定選項來隱藏錯誤訊息。 若全文檢索查詢使用的 CONTAINS 述詞中，布林運算或 NEAR 運算有包括非搜尋字，則這個選項很有幫助。 下表說明可能的值。  
   
 |值|描述|  
 |-----------|-----------------|  

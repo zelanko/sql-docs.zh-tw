@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b615023-3c76-4b95-bbd0-9c39f3353f4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7afeb1685951e0947af02e5309a25dd0a395a61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 696cf25deea19a25939b8180c31806791de318d6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211140"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011577"
 ---
 # <a name="sql-server-browser-sql-server-configuration-manager"></a>SQL Server Browser (SQL Server 組態管理員)
   這是支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 的服務。 若要檢視服務的屬性，請以滑鼠右鍵按一下詳細資料窗格中的服務，然後按一下 **[屬性]** 。  

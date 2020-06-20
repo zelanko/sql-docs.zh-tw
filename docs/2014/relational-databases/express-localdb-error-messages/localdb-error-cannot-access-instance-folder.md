@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: c4288265-43f7-44fd-acab-ba64d04264d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ec8fa09f34b27d9638f505981f11de960cb4d5b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f592958e5feecfaeba0279a428b012038de4514e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62520158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051284"
 ---
 # <a name="localdb_error_cannot_access_instance_folder"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
     
@@ -27,7 +26,7 @@ ms.locfileid: "62520158"
 |事件識別碼|261|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  
 |元件|本機資料庫執行階段 API|  
-|訊息文字|無法存取本機資料庫實例資料夾：%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server 本機 DB\Instances\\<實例名稱\>。|  
+|訊息文字|無法存取本機資料庫實例資料夾：%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server 本機 DB\Instances \\<實例名稱 \> 。|  
   
 ## <a name="explanation"></a>說明  
  無法存取執行個體資料夾。  

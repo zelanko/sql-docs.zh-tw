@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c3ee58ebc7cd579b04d317b44e823779ae987e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745878"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004554"
 ---
 # <a name="synchronize-a-push-subscription"></a>同步處理發送訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]複寫代理程式 [或 Replication Management Objects (RMO) 來同步處理](agents/replication-agents-overview.md)中的發送訂閱。  
@@ -40,7 +39,7 @@ ms.locfileid: "62745878"
   
 4.  以滑鼠右鍵按一下您要同步處理的訂閱，然後按一下 **[檢視同步處理的狀態]** 。  
   
-5.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>]  對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
+5.  在 [ **View 同步處理狀態 \<Subscriber> - \<SubscriptionDatabase> ：** ] 對話方塊中，按一下 [**啟動**]。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
   
 6.  按一下 [關閉]  。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62745878"
   
 4.  接著會顯示有關建立連接到「散發者」的訊息。 按一下 [確定]  。  
   
-5.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>]  對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
+5.  在 [ **View 同步處理狀態 \<Subscriber> - \<SubscriptionDatabase> ：** ] 對話方塊中，按一下 [**啟動**]。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
   
 6.  按一下 [關閉]  。  
   

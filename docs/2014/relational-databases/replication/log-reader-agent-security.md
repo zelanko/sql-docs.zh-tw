@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c55292aff126d1955c438c9417ce0651cc6afc94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 01e3d687ef2edbd9c42ba8066a7c029d865e5774
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63162249"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065894"
 ---
 # <a name="log-reader-agent-security"></a>記錄讀取器代理程式安全性
   **[記錄讀取器代理程式安全性]** 對話方塊可以讓您指定：  

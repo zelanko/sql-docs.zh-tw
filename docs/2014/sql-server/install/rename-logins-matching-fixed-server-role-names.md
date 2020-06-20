@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 296ae4d4051e79e3c5d3bc158ef3e87c9164ecd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278212"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059090"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>重新命名符合固定伺服器角色名稱的登入
   Upgrade Advisor 偵測到與固定伺服器角色名稱相符的一個或多個使用者自訂登入名稱。 會保留固定伺服器角色名稱。 升級之前，請先重新命名登入。  
@@ -60,7 +59,7 @@ ms.locfileid: "72278212"
   
 2.  卸除登入。  
   
-3.  使用**sp_addlogin**系統程式來建立新的登入。 針對每個對應的登入， ** \@在 sid**參數中指定步驟1中傳回的 sid。  
+3.  使用**sp_addlogin**系統程式來建立新的登入。 針對每個對應的登入，在** \@ sid**參數中指定步驟1中傳回的 sid。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

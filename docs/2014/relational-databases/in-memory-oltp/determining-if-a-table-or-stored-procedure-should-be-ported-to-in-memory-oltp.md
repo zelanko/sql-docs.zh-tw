@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8e517cff394bc0c813e34763469f75147a0a16c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706541"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050237"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
   中的交易效能收集器 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 可協助您評估記憶體內部 OLTP 是否能改善資料庫應用程式的效能。 交易效能分析報表還會指出應用程式啟用記憶體中 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用 [記憶體最佳化建議程式](memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。  
@@ -93,7 +92,7 @@ ms.locfileid: "82706541"
   
 4.  按一下 [**新增**] 以建立新的資料庫來保存設定檔資料。 當您完成建立資料庫之後，請按一下嚮導中的 **[下一步**]。  
   
-5.  精靈中的下一個步驟可讓您加入使用者和登入。 您可以將登入對應到 MDW 執行個體的角色成員資格。 從本機執行個體收集資料並不一定要這樣做。 如果您不是從本機執行個體收集資料，您可以將資料庫角色成員資格 `mdw_admin` 授與將執行即將分析之交易的帳戶。 完成時，按 **[下一步]**。  
+5.  精靈中的下一個步驟可讓您加入使用者和登入。 您可以將登入對應到 MDW 執行個體的角色成員資格。 從本機執行個體收集資料並不一定要這樣做。 如果您不是從本機執行個體收集資料，您可以將資料庫角色成員資格 `mdw_admin` 授與將執行即將分析之交易的帳戶。 完成時，按一下 [下一步]。  
   
 6.  確定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 正在執行中。  
   

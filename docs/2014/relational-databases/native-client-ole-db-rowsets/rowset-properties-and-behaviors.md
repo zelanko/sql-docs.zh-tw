@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6e4cfffc585f6aef50a207df8c095d7153c6beb8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1158650b8029aed9447ce4d11e4273314ad0aa94
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011283"
 ---
 # <a name="rowset-properties-and-behaviors"></a>資料列集屬性和行為
   這些是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者資料列集屬性。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04cb8ea2505340cb90221b328c04efc390296c19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7086db16eab9935624546965652834313a467db
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175357"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927849"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>使用叢集資料行存放區索引
   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中使用叢集資料行存放區索引的工作。
@@ -24,7 +23,7 @@ ms.locfileid: "78175357"
 
  如需有關叢集資料行存放區索引的詳細資訊，請參閱＜ [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)＞。
 
-## <a name="contents"></a>內容
+## <a name="contents"></a>目錄
 
 -   [建立叢集資料行存放區索引](#create)
 
@@ -68,7 +67,7 @@ GO
  對於分割資料， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會先將每個資料列指派至一個分割區，然後在分割區內對資料執行資料行存放區作業。 每個分割區都有自己的資料列群組以及至少一個差異存放區。
 
 ### <a name="deltastore-loading-scenarios"></a>差異存放區載入案例
- 資料列會在差異存放區中累積，直到資料列數達到一個資料列群組允許的資料列數上限。 當差異存放區包含每個資料列群組的最大資料[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]列數目時，會將資料列群組標示為「已關閉」。 背景進程（稱為「元組」）會尋找關閉的資料列群組，並移入資料行存放區，其中資料列群組會壓縮成資料行區段，而資料行區段則儲存在資料行存放區中。
+ 資料列會在差異存放區中累積，直到資料列數達到一個資料列群組允許的資料列數上限。 當差異存放區包含每個資料列群組的最大資料列數目時，會將資料列群組 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 標示為「已關閉」。 背景進程（稱為「元組」）會尋找關閉的資料列群組，並移入資料行存放區，其中資料列群組會壓縮成資料行區段，而資料行區段則儲存在資料行存放區中。
 
  每一個叢集資料行存放區索引可以有多個差異存放區。
 

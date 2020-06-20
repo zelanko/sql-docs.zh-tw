@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84a80b4690597f9274bb7ff334b5879ef465c6e6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089527"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928269"
 ---
 # <a name="trace-properties-general-tab"></a>追蹤屬性 (一般索引標籤)
   使用 **[追蹤屬性]** 對話方塊的 **[一般]** 索引標籤，來檢視或指定追蹤的屬性。  
@@ -46,7 +45,7 @@ ms.locfileid: "66089527"
  **設定最大檔案大小 (MB)**  
  如果您選擇將追蹤資料儲存至檔案，您必須指定追蹤檔案的大小上限。 預設值為 5 MB。 只由存放檔案的檔案系統 (NTFS, FAT) 限制大小上限。  
   
- \<圖形>**另存**新檔  
+ \<Graphic>**另存**新檔  
  選取儲存之後，您可以選取此圖示以變更檔案名稱。  
   
  **啟用檔案換用**  
@@ -58,7 +57,7 @@ ms.locfileid: "66089527"
  **儲存至資料表**  
  將追蹤資料擷取到資料庫資料表。 儲存追蹤資料對日後檢閱與分析很有用。 不過，將追蹤資料儲存至資料表，可能導致儲存追蹤的伺服器負擔過重。 可能的話，不要將追蹤資料表儲存在被追蹤的同一部伺服器上。  
   
- \<圖形>**目的地資料表**  
+ \<Graphic>**目的地資料表**  
  選取將追蹤資料儲存至資料庫資料表之後，您可以選取此圖示以變更資料表名稱。  
   
  **設定最大資料列數 (單位: 千)**  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8da8743840c604e08cd8c17666e03f2de76c11cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62938580"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065849"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 複寫衝突檢視器 (合併式複寫)
   複寫衝突檢視器可以讓您檢視在複寫同步處理過程中發生的任何衝突。 如果在兩個不同的伺服器端 (例如，在發行者端和訂閱者端，或在兩個不同的訂閱者端) 修改相同的資料，就會發生衝突。 複寫會使用建立發行項時選取的 Conflict Resolver 以自動解決衝突。 不過，複寫衝突檢視器可讓您在必要時選擇衝突的不同解決方案。 會發生下列衝突：  
@@ -33,7 +32,7 @@ ms.locfileid: "62938580"
 > [!NOTE]  
 >  「衝突檢視器」中不會顯示涉及邏輯記錄的衝突。 若要檢視這些衝突的相關資訊，請使用複寫預存程序。 如需詳細資訊，請參閱[檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](view-conflict-information-for-merge-publications.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  複寫衝突檢視器會劃分為兩個區段。 對話方塊的上半段會顯示選取之資料表的衝突清單。 當您按一下衝突清單中的某個項目時，對話方塊的下半段中會顯示衝突的詳細資料。  
   
  描述為何發生衝突的資訊 (例如，同時在發行者與訂閱者端更新相同的資料列)，會顯示在對話方塊的下半段中。 下半段中的衝突資料，會在兩個對應的資料行 (**[衝突成功者]** 和 **[衝突失敗者]**) 中顯示。 如果衝突是發生在已更新和已刪除的資料之間，那麼衝突中已刪除的一方可能沒有資料可以顯示。 在此情況下，複寫衝突檢視器會在其中一個資料行裡顯示訊息，指出刪除一個位置的資料列而更新另一個位置的資料列。 它也會指出建議的解決方式。  
@@ -46,7 +45,7 @@ ms.locfileid: "62938580"
  **發行集**  
  選擇包含有衝突之資料表的發行集。  
   
- **目錄**  
+ **資料表**  
  選擇包含衝突的資料表。  
   
  **定義篩選**  

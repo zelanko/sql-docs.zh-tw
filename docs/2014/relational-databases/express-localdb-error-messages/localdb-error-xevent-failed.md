@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e33f3809-0175-4d83-b1b7-b29d23238846
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63230e31a1e15e79d37df3b5c1bc66168b941ec2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 249da657be9104c1f2befe16f91c2b2f8828b7f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62714995"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051038"
 ---
 # <a name="localdb_error_xevent_failed"></a>LOCALDB_ERROR_XEVENT_FAILED
     

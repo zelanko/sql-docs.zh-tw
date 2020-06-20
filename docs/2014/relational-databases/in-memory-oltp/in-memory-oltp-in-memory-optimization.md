@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 418cdbb85781cd99d3febc2371ed69751d29f588
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 22faed7d9505c1ad487b5300a46a565379512091
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922104"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050164"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (記憶體中最佳化)
 
@@ -66,7 +65,7 @@ ms.locfileid: "82922104"
 ## <a name="in-this-section"></a>本節內容
  本節提供下列概念的相關資訊：
 
-|主題|說明|
+|主題|描述|
 |-----------|-----------------|
 |[使用記憶體最佳化資料表的需求](memory-optimized-tables.md)|討論有關使用記憶體最佳化資料表的硬體和軟體需求以及方針。|
 |[在 VM 環境使用記憶體中的 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|涵蓋在虛擬化環境中使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 。|

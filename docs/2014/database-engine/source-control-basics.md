@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d28202148d6f85e0aafde6ee324b11fd8cd10b23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842982"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928917"
 ---
 # <a name="source-control-basics"></a>原始檔控制基本概念
   「原始檔控制」是指利用一段中央伺服器軟體來儲存和追蹤檔案版本及控制檔案存取動作的系統。 典型的原始檔控制系統包括一個原始檔控制提供者及兩個或更多原始檔控制用戶端。  
@@ -51,7 +50,7 @@ ms.locfileid: "62842982"
   
 |||  
 |-|-|  
-|**Task**|**主題**|  
+|**Task**|**本文**|  
 |設定原始檔控制選項|[設定原始檔控制選項](../../2014/database-engine/set-source-control-options.md)|  
 |變更原始檔控制連接|[變更原始檔控制連接](../../2014/database-engine/change-source-control-connections.md)|  
 |從原始檔控制中排除檔案|[從原始檔控制中排除檔案](../../2014/database-engine/exclude-files-from-source-control.md)|  

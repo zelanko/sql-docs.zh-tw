@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 45db8a3111173257cad45bea2961b9bb4c72bffc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f4373229d6e612a7de401dbd94bc0da1766db45b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717788"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065687"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林運算子 (SQLXML 4.0)
   下列範例顯示如何在 XPath 查詢中指定布林運算子。 此範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱[XPath 範例的範例批註式 XSD 架構 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -29,7 +28,7 @@ ms.locfileid: "82717788"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. 指定 OR 布林運算子  
- 此 XPath 查詢會傳回** \< 客戶>** 專案子系，其內容節點的**CustomerID**屬性值為13或31：  
+ 這個 XPath 查詢會傳回 **\<Customer>** **CustomerID**屬性值為13或31之內容節點的元素子系：  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,7 +40,7 @@ ms.locfileid: "82717788"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 在述詞中， `attribute` 是軸而且 `CustomerID` 是節點測試（如果**CustomerID**是>節點的** \< 屬性**，則為 TRUE，因為** \< 屬性>** 節點是軸的主要節點 `attribute` ）。 述詞會篩選** \< 客戶>** 元素，並只傳回滿足述詞中所指定條件的專案。  
+ 在述詞中， `attribute` 是軸而且 `CustomerID` 是節點測試（如果**CustomerID**是節點，則為 TRUE **\<attribute>** ，因為 **\<attribute>** 節點是軸的主要節點 `attribute` ）。 述詞會篩選項目 **\<Customer>** ，並只傳回滿足述詞中所指定條件的元素。  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
