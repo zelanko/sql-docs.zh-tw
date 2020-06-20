@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da790644cbd29bc38a89899e02d50aac58228a0e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965511"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>匯入封裝對話方塊 UI 參考
   使用 **[匯入封裝]** 對話方塊 (可以從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]存取)，即可匯入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝，並設定或修改封裝的保護等級。  
@@ -55,7 +54,7 @@ ms.locfileid: "66058076"
  **封裝路徑**  
  輸入封裝路徑，或按一下瀏覽按鈕 ([...])****，然後找出封裝。  
   
- **封裝名稱**  
+ **套件名稱**  
  選擇性地重新命名封裝。 預設名稱是要匯入的封裝名稱。  
   
  **保護等級**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79967f4244749f5e0e14d823b4e04832e8ccb3e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891787"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965328"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>步驟 2:新增和設定一般檔案連線管理員
   在這項工作中，您將一般檔案連接管理員加入您剛才建立的封裝中。 一般檔案連接管理員可讓封裝從一般檔案擷取資料。 使用一般檔案連接管理員，您可以指定當封裝從一般檔案擷取資料時，要套用的檔案名稱和位置、地區設定和字碼頁及檔案格式 (包括資料行分隔符號)。 此外，您可以手動指定個別資料行的資料類型，或使用 [建議資料行類型]  對話方塊，將所擷取資料的資料行自動對應至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 資料類型。  
@@ -36,7 +35,7 @@ ms.locfileid: "62891787"
   
 2.  在 [一般檔案連接管理員編輯器]**** 對話方塊中，對 [連接管理員名稱]**** 輸入 [範例一般檔案來源資料]****。  
   
-3.  按一下 [瀏覽]****。  
+3.  按一下 **[瀏覽]** 。  
   
 4.  在 [開啟]**** 對話方塊中，尋找電腦上的 SampleCurrencyData.txt 檔案。  
   
@@ -62,13 +61,13 @@ ms.locfileid: "62891787"
   
 2.  在屬性窗格中，進行下列變更：  
   
-    -   將 [資料**行 0** ] 名稱`AverageRate`屬性變更為。  
+    -   將 [資料**行 0** ] 名稱屬性變更為 `AverageRate` 。  
   
-    -   將 [資料**行 1** ] 名稱`CurrencyID`屬性變更為。  
+    -   將 [資料**行 1** ] 名稱屬性變更為 `CurrencyID` 。  
   
-    -   將 [資料**行 2** ] 名稱`CurrencyDate`屬性變更為。  
+    -   將 [資料**行 2** ] 名稱屬性變更為 `CurrencyDate` 。  
   
-    -   將 [資料**行 3** ] 名稱`EndOfDayRate`屬性變更為。  
+    -   將 [資料**行 3** ] 名稱屬性變更為 `EndOfDayRate` 。  
   
     > [!NOTE]  
     >  依預設，所有 4 個資料行一開始是設為字串資料類型 [DT_STR]，且 `OutputColumnWidth` 為 50。  
@@ -90,13 +89,13 @@ ms.locfileid: "62891787"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-     為數據`CurrencyID`行建議的資料類型與目的地資料表中的欄位資料類型不相容。 因為的資料類型`DimCurrency.CurrencyAlternateKey`是 Nchar （3）， `CurrencyID`所以必須從 string [DT_STR] 變更為 string [DT_WSTR]。 此外，此欄位`DimDate.FullDateAlternateKey`會定義為日期資料類型;因此， `CurrencyDate`必須從 date [DT_Date] 變更為資料庫日期 [DT_DBDATE]。  
+     為數據行建議的資料類型 `CurrencyID` 與目的地資料表中的欄位資料類型不相容。 因為的資料類型 `DimCurrency.CurrencyAlternateKey` 是 Nchar （3），所以 `CurrencyID` 必須從 string [DT_STR] 變更為 string [DT_WSTR]。 此外，此欄位 `DimDate.FullDateAlternateKey` 會定義為日期資料類型; 因此，必須 `CurrencyDate` 從 date [DT_Date] 變更為資料庫日期 [DT_DBDATE]。  
   
-2.  在清單中選取 [CurrencyID] 資料行，然後在 [屬性] 窗格中，將資料`CurrencyID`行的資料類型從 string [DT_STR] 變更為 Unicode string [DT_WSTR]。  
+2.  在清單中選取 [CurrencyID] 資料行，然後在 [屬性] 窗格中，將資料行的資料類型 `CurrencyID` 從 string [DT_STR] 變更為 Unicode string [DT_WSTR]。  
   
-3.  在 [屬性] 窗格中，將 [date [ `CurrencyDate` DT_DATE] 資料行的資料類型變更為 [資料庫日期 [DT_DBDATE]]。  
+3.  在 [屬性] 窗格中，將 [date [DT_DATE] 資料行的資料類型變更 `CurrencyDate` 為 [資料庫日期 [DT_DBDATE]]。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [步驟 3：新增和設定 OLE DB 連線管理員](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  

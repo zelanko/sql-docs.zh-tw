@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: afa994d7bda334e946a837f078d1efef1b78ac0a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7d5e937cead8fa86fd249d782fa570639a403493
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717988"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015290"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>執行含有命名空間的 XPath 查詢 (SQLXML Managed 類別)
   XPath 查詢可以包含命名空間。 如果結構描述元素會限定命名空間 (使用目標命名空間)，針對此結構描述進行的 XPath 查詢就必須指定此命名空間。  

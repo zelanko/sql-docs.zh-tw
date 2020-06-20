@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65f932d5-daa1-4eff-b6df-ee633fcf2a7c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 16654d2a313d99bfd7ebd249c9895a268e03e5e7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 32438b9fb5473d9251acd0aceddb46db373f3548
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704447"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017646"
 ---
 # <a name="components-of-sql-server-native-client"></a>SQL Server Native Client 的元件
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 包含下列元件：  
@@ -31,7 +30,7 @@ ms.locfileid: "82704447"
 |sqlnclir11.rll|隨附 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 程式庫的資源檔。|  
 |s10ch_sqlncli.chm|記載如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料來源的資料來源精靈說明檔。|  
 |sqlncli.h|包含使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 所需之所有新定義的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 標頭檔。 此標頭檔會同時取代 odbcss.h 和 sqloledb.h 標頭檔。 **注意：** 您不能在相同的程式中參考 sqlncli 和 odbcss.h，但是只要先定義 sqloledb，就可以在同一個程式中參考 sqlncli 和 sqloledb。|  
-|sqlncli11.lib|直接呼叫屬於**bcp** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式一部分之 bcp 公用程式函式所需的程式庫檔案。 **注意：** 如果您在程式碼中參考 sqlncli11 檔案，則必須確定 sqlncli11 檔案位於您的系統路徑中，以及使用您的應用程式之使用者的系統路徑中。|  
+|sqlncli11.lib|直接呼叫屬於**bcp** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式一部分之 bcp 公用程式函式所需的程式庫檔案。 **注意：** 如果您在程式碼中參考 sqlncli11 檔案，您必須確定 sqlncli11.dll 檔案位於您的系統路徑中，以及使用您的應用程式之使用者的系統路徑中。|  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SQL Server Native Client 建置應用程式](building-applications-with-sql-server-native-client.md)  

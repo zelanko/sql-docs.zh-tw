@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a5939d97f518dd88f6eaa48fde259d6b4eab54ae
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: deb2c179cea2d0ea7c97385d56320075061f0686
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705228"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018902"
 ---
 # <a name="use-rowset-binding-odbc"></a>使用資料列集繫結 (ODBC)
     

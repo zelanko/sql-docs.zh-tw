@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9c90dbb072ace600258edfb4ff13f99ecadf188
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f670ed5ea57bc61f0509afd58432888c1fdae13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196516"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014668"
 ---
 # <a name="ddl-events"></a>DDL 事件
   下表列出可用以引發 DDL 觸發程序或事件通知的 DDL 事件。 請注意，每個事件都會對應到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或預存程序，且陳述式語法已修改為在關鍵字之間加上了底線字元 (_)。  

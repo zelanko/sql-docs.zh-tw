@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6d6c4de-43c6-473e-92aa-34ffddd58cbe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6f005b9ab1c3d334242b2a20d47f6e4646d6cef8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4d7bea98a3afcd0022f66117b6bde2d968a866b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704540"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017992"
 ---
 # <a name="dropping-a-sql-server-table"></a>卸除 SQL Server 資料表
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會公開**ITableDefinition：:D roptable**函數。 這可讓取用者 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 從資料庫中移除資料表。  

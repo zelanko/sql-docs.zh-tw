@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3cd2e8af1630fed8dd996a951e904bef0266b300
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07fe58cee4046b78bdca0a748ea4d0c6a82dfebf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702977"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014921"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 資料類型 (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath 和 XML 架構（XSD）具有非常不同的資料類型。 例如，XPath 沒有整數或日期資料類型，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 XSD 則有許多。 XSD 會將奈秒的有效位數用於時間值，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則至多使用 1/300 秒的有效位數。 因此，並非永遠都能將一個資料類型對應到另一個。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將資料類型對應到 XSD 資料類型的詳細資訊，請參閱[資料類型強制型轉和 sql： datatype 注釋 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
@@ -46,7 +45,7 @@ ms.locfileid: "82702977"
   
 -   布林運算子 (and、or)  
   
--   關係運算子（ \< ，>， \< =，>=）  
+-   關係運算子（ \<, > ， \<=, > =）  
   
 -   相等運算子 (=、!=)  
   
@@ -71,7 +70,7 @@ ms.locfileid: "82702977"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會在節點集上執行位置選取：例如，XPath 查詢 `Customer[3]` 表示第三個客戶；在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支援此種類型的位置選取。 因此，系統不會實作 XPath 規格所描述的節點集對 `string` 或節點集對 `number` 的轉換。 在 XPath 規格指定 "first" 語意的每個地方，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會使用 "any" 語意。 例如，根據 W3C XPath 規格，XPath 查詢 `Order[OrderDetail/@UnitPrice > 10.0]` 會選取具有大於10.0 之**單價**的第一個**OrderDetail**的訂單。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此 XPath 查詢會選取具有大於10.0 之**單價**的任何**OrderDetail**訂單。  
   
- 轉換為 `boolean` 時，會產生存在測試，因此，XPath 查詢 `Products[@Discontinued=true()]` 相當於 SQL 運算式 "Products.Discontinued is not null"，而非 SQL 運算式 "Products.Discontinued = 1"。 為了讓查詢相當於後者的 SQL 運算式，請先將節點集轉換為非 `boolean` 類型，例如 `number`。 例如：`Products[number(@Discontinued) = true()]`。  
+ 轉換為 `boolean` 時，會產生存在測試，因此，XPath 查詢 `Products[@Discontinued=true()]` 相當於 SQL 運算式 "Products.Discontinued is not null"，而非 SQL 運算式 "Products.Discontinued = 1"。 為了讓查詢相當於後者的 SQL 運算式，請先將節點集轉換為非 `boolean` 類型，例如 `number`。 例如： `Products[number(@Discontinued) = true()]` 。  
   
  對於節點集中的任何一個節點或其中一個節點，如果運算子為 TRUE，則大部分會定義為 TRUE，所以如果節點集是空的，這些運算永遠會評估為 FALSE。 因此，如果 A 是空的，`A = B` 和 `A != B` 都為 FALSE，而 `not(A=B)` 和 `not(A!=B)` 都為 TRUE。  
   
@@ -89,7 +88,7 @@ ms.locfileid: "82702977"
 |-------------------|------------------------------------|--------------------------------|  
 |Nonebin.base64bin.hex|N/A|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
-|number、int、float、i1、i2、i4、i8、r4、r8ui1、ui2、ui4、ui8|數字|CONVERT(float(53), EmployeeID)|  
+|number、int、float、i1、i2、i4、i8、r4、r8ui1、ui2、ui4、ui8|number|CONVERT(float(53), EmployeeID)|  
 |id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|字串|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/A (在 XPath 中沒有相當於 fixed14.4 XDR 資料類型的資料類型)|CONVERT(money, EmployeeID)|  
 |date|字串|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
@@ -150,7 +149,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. 在 XPath 查詢中執行數個資料類型轉換  
  請考慮使用針對註解式 XSD 結構描述指定的這個 XPath 查詢：`OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- 這個 XPath 查詢會傳回滿足述詞的所有** \< OrderDetail>** 元素 `@UnitPrice * @OrderQty > 98` 。 如果在**UnitPrice** `fixed14.4` 標注架構中使用資料類型來標注單價，則此述詞相當於 SQL 運算式：  
+ 這個 XPath 查詢會傳回滿足述詞的所有 **\<OrderDetail>** 元素 `@UnitPrice * @OrderQty > 98` 。 如果在**UnitPrice** `fixed14.4` 標注架構中使用資料類型來標注單價，則此述詞相當於 SQL 運算式：  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e37ed20eb1babf85df0bea191ea3c302e7968f6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9c9abee95a8d2ce52a3f9f25b5e629aad0bfed1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017420"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>SQL Server Native Client 的支援原則
   本主題討論如何搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用各種不同的資料存取元件。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 14d1836483373c82c17f1d4db34bb01769f376aa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 915f449a11278f3ef7503caf0a588cc48d6cf23e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700920"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018723"
 ---
 # <a name="set-cursor-options-odbc"></a>設定資料指標選項 (ODBC)
   若要設定資料指標選項，請呼叫[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)來設定或[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) ，以取得控制資料指標行為的語句選項。  

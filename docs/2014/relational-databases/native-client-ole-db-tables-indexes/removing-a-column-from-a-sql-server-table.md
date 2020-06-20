@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8cde1faf93713a72f9fa69f056250b4e5357c538
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d416514ed627556b1716fba2ee4be8861fdabad2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704533"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017845"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>從 SQL Server 資料表中移除資料行
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會公開**ITableDefinition：:D ropcolumn**函數。 如此可讓取用者從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中移除資料行。  

@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: da0ddd549ad82420c4071c21de4ea6fef7f025de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6fc8be573e6aab92b06405bb3ac41ec6cbac238a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703258"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015648"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>執行包含 SQL 查詢的範本 (SQLXMLOLEDB 提供者)
   這個範例說明如何使用 SQLXMLOLEDB 提供者特定的屬性 ClientSideXML。 在此用戶端 ADO 範例應用程式中，由 SQL 查詢所組成的 XML 範本會在伺服器上執行。  
   
  因為 ClientSideXML 屬性設定為 True，所以不含 FOR XML 子句的 SELECT 語句會傳送至伺服器。 伺服器會執行查詢，並將資料列集傳回給用戶端。 用戶端接著會將 FOR XML 轉換套用至資料列集，並產生 XML 文件。  
   
- XML 範本會針對所產生的 XML 檔提供單一最上層根項目（ \< 根>）; 因此，不會提供 xml 根屬性。  
+ XML 範本會針對所產生的 XML 檔提供單一最上層根項目（ \<ROOT> ），因此不會提供 xml 根屬性。  
   
  若要執行 XML 範本，必須指定 Dialect {5d531cb2-e6ed-11d2-b252-00c04f681b71}。  
   

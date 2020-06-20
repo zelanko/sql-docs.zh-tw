@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9778b89c0bef0bd937608454f7bdb9f5921515ff
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9a9323b6729f04653cc3c6f6e62f4f402b643d21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701002"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018755"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>準備和執行陳述式 (ODBC)
     
