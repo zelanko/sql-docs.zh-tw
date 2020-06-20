@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1e63cee642738036933b0a1e2a9da6b48192fba9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bfd64cea8d661b2d1d5b1b4c7e581d2f4e413a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676635"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055654"
 ---
 # <a name="snapshot-agent-security"></a>快照集代理程式安全性
   **[快照集代理程式安全性]** 對話方塊可讓您指定：  

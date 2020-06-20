@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1a49d7db68fe32d9794e89db66020d7f90555508
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15771db8b0622183ca24f684b498ab513bdc78bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011396"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055497"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>SQL Server 2014 中已被取代的全文檢索搜尋功能
   本主題描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中仍然可用之已被取代的全文檢索搜尋功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  
@@ -48,7 +47,7 @@ ms.locfileid: "66011396"
   
 |已被取代的功能|取代|功能名稱|功能識別碼|  
 |------------------------|-----------------|------------------|----------------|  
-|CONTAINS 和 CONTAINSTABLE 一般 NEAR 運算子：<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|自訂 NEAR 運算子：<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [，\<距離> [，\<順序>]]<br /><br /> }<br /><br /> )<br /><br /> \<距離>：： = {*整數*&#124; **MAX**}<br /><br /> \<order>：： = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|CONTAINS 和 CONTAINSTABLE 一般 NEAR 運算子：<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|自訂 NEAR 運算子：<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,\<distance> [,\<order>] ]<br /><br /> }<br /><br /> )<br /><br /> \<distance> ::= {*integer* &#124; **MAX**}<br /><br /> \<order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG 選項：<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|無。|CREATE FULLTEXT CATLOG IN PATH<br /><br /> 無。*|237<br /><br /> 無。<sup>*</sup>|  
 |DATABASEPROPERTYEX 屬性：IsFullTextEnabled|無。|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |sp_detach_db 選項：<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|無。|sp_detach_db @keepfulltextindexfile|226|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26da2a16462b9853489c6430a6c80e1ab2a6f3b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c72b8c718237582f5a40c56e40e2a51e79e177e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029910"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction 事件類別
   使用 **DTCTransaction** 事件類別，可監視透過 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 分散式交易協調器 (DTC) 進行協調之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 交易的狀態。 這些包括牽涉到同一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中兩個以上資料庫的交易，以及牽涉到兩個以上 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的分散式交易。  

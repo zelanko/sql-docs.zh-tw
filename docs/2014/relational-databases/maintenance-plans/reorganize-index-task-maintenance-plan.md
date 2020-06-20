@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9463e25701391519ac1d1671f32b32c10a3450dd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0bbb154045b781f8a92dfce9c9d2f6ee2d819c17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706414"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023961"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>重新組織索引工作 (維護計畫)
   使用 [重新組織索引工作]  對話方塊，即可將索引頁面移至更有效率的搜尋順序。 此工作會使用 `ALTER INDEX REORGANIZE` 陳述式搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。  
@@ -54,7 +53,7 @@ ms.locfileid: "82706414"
  限制 [選取範圍]  格線僅顯示資料表、檢視或兩者。  
   
  **選取範圍**  
- 指定受此工作影響的資料表或索引。 [物件]  方塊中的 [資料表和檢視]  為選取狀態時無法使用。  
+ 指定受此工作影響的資料表或索引。 [物件] 方塊中的 [資料表和檢視] 為選取狀態時無法使用。  
   
  **壓縮大型物件**  
  可能時取消配置給資料表和檢視的空間。 此選項使用 `ALTER INDEX LOB_COMPACTION = ON`。  

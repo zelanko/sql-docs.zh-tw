@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75bea1c5c5fabff7ce55fe07a5181baa8f99e0fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524384"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056611"
 ---
 # <a name="delete-an-operator"></a>刪除操作員
-  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中移除操作員，使其不會再收到 Agent 警示通知。  
+  本主題描述如何使用或，在中移除操作員，使其不會再收到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示通知 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  **本主題內容**  
   

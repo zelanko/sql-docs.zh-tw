@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 714ede33a89a3ab4e44dae682887ee0c21c9f363
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 269aef896c485f0a383a35eae6d750e939868c29
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766650"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963823"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用數位簽章來識別封裝的來源
   您可以使用數位憑證來簽署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，以便識別其來源。 當您已經使用數位憑證來簽署封裝之後，就可以讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查數位簽章，然後再載入封裝。 若要讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查簽章，您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 公用程式 (dtexec.exe) 中設定選項，或設定選擇性登錄值。  
@@ -34,7 +33,7 @@ ms.locfileid: "62766650"
   
 -   若要在設計階段載入封裝之前檢查所有封裝的數位簽章，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中設定 [載入封裝時檢查數位簽章]  選項。 這個選項是 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中所有封裝的全域設定。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
--   若要檢查個別封裝的數位簽章，請在使用`/VerifyS[igned]` **dtexec**公用程式來執行封裝時，指定選項。 如需詳細資訊，請參閱 [dtexec Utility](../packages/dtexec-utility.md)。  
+-   若要檢查個別封裝的數位簽章，請在 `/VerifyS[igned]` 使用**dtexec**公用程式來執行封裝時，指定選項。 如需詳細資訊，請參閱 [dtexec Utility](../packages/dtexec-utility.md)。  
   
 ## <a name="setting-a-registry-value-to-check-the-package-signature"></a>設定檢查封裝簽章的登錄值  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 也支援選擇性登錄值 **BlockedSignatureStates**，可讓您用來管理載入已簽署和未簽署封裝的組織原則。 如果封裝未經簽署或是具有無效或不受信任的簽章，此登錄值可以防止載入封裝。 如需如何設定此登錄值的詳細資訊，請參閱 [透過設定登錄值實作簽署原則](../implement-a-signing-policy-by-setting-a-registry-value.md)。  

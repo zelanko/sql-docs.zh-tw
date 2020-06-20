@@ -15,26 +15,25 @@ helpviewer_keywords:
 ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab6d134177c7861c3a8f92cf767c71c0b56e233
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843711"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929123"
 ---
 # <a name="set-source-control-options"></a>設定原始檔控制選項
   在利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中所建立的原始檔控制功能之前，您應該先設定您的各種工作環境的原始檔控制選項。  
   
  您可以使用 [**選項**] 對話方塊來設定一個或多個原始檔控制角色，以設定原始檔控制選項。 角色由您在其中使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 之設定的一般描述，以及這項設定的相關原始檔控制選項所組成。  
   
- 例如，如果您是獨立的資料庫開發人員，則簽入檔案之後，通常會保留簽出的檔案，以避免與其他使用者發生衝突。 因此，[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會定義一個「獨立開發人員」角色。 針對此角色， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]會自動選取 [**簽入時讓專案保持簽出**] 選項。  
+ 例如，如果您是獨立的資料庫開發人員，則簽入檔案之後，通常會保留簽出的檔案，以避免與其他使用者發生衝突。 因此，[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會定義一個「獨立開發人員」角色。 針對此角色， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會自動選取 [**簽入時讓專案保持簽出**] 選項。  
   
  由於您可以定義和自訂角色，因此，您可以使用各種開發設定來工作，且不需要在每次切換不同設定時，全面重新設定原始檔控制。  
   
 ### <a name="to-set-source-control-options"></a>設定原始檔控制選項  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
 2.  在 [**選項**] 對話方塊中，展開 [**原始檔控制**]，然後按一下 [**外掛程式選取範圍]** 頁面。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "62843711"
   
     |角色|描述|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|指定您想要使用[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 使用者最常使用的設定。|  
+    |**Visual SourceSafe**|指定您想要使用 Visual SourceSafe 使用者最常使用的設定 [!INCLUDE[msCoName](../includes/msconame-md.md)] 。|  
     |**獨立開發人員**|指定您是獨立工作者。|  
     |**Custom**|指定您已修改角色的設定。|  
   
@@ -76,7 +75,7 @@ ms.locfileid: "62843711"
   
     |角色|描述|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|指定您想要使用[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 使用者最常使用的設定。|  
+    |**Visual SourceSafe**|指定您想要使用 Visual SourceSafe 使用者最常使用的設定 [!INCLUDE[msCoName](../includes/msconame-md.md)] 。|  
     |**獨立開發人員**|指定您是獨立工作者。|  
     |**Custom**|指定您已修改角色的設定。|  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62843711"
      指定當您簽入項目以更新原始檔控制存放區時，項目應保持簽出。 如果您想要針對特定簽入變更此選項，請按一下 [**簽入**] 對話方塊中的 [**選項**] 箭號，然後清除 [**保持簽出**] 核取方塊。  
   
      **已簽入的項目**  
-     顯示選項清單，指定當您嘗試[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]編輯未簽出的專案時，應該如何表現。下表描述可用的選項。  
+     顯示選項清單，指定 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 當您嘗試編輯未簽出的專案時，應該如何表現。下表描述可用的選項。  
   
      **儲存**  
   
@@ -96,7 +95,7 @@ ms.locfileid: "62843711"
     |**自動簽出**|簽出項目，而不顯示 [**簽出**] 對話方塊。 這是預設選項。|  
     |**另存新檔**|另存為新的檔案。|  
   
-     **編輯**  
+     **編輯中**  
   
     |動作|描述|  
     |------------|-----------------|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 48d0e96f2cd7b37683399c599f336f78e1ede3fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a60950a079be98ed00bbf5f20b0f2024d4cda400
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195035"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001231"
 ---
 # <a name="open-queries-visual-database-tools"></a>開啟查詢 (Visual Database Tools)
   您可以使用 **[開啟]** 命令，在查詢和檢視表設計工具中開啟現有的查詢。  

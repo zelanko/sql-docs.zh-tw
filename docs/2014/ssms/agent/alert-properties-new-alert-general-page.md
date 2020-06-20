@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29bdc55bde4d5dfb11d669d9e7b4aad06482ce7e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062143"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056623"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>警示屬性-新增警示（一般頁面）
-  使用此頁面來查看及修改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示的一般屬性。  
+  使用此頁面來查看及修改 Agent 警示的一般屬性 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -29,7 +28,7 @@ ms.locfileid: "63062143"
  **啟用**  
  啟用警示。 若警示尚未啟用，警示中所指定的動作就不會發生。  
   
- **類型**  
+ **型別**  
  選取警示的類型：  
   
 -   **SQL Server 事件警示** 會回應 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔中的訊息。  
@@ -55,7 +54,7 @@ ms.locfileid: "63062143"
  指定要用來篩選事件的字串。  
   
 ## <a name="sql-server-performance-condition-alerts"></a>SQL Server 效能條件警示  
- **目標**  
+ **Object**  
  指定要監視的效能物件。  
   
  **計數器**  
@@ -74,7 +73,7 @@ ms.locfileid: "63062143"
  **Namespace**  
  指定針對 WMI 查詢語言 (WQL) 陳述式使用的命名空間。 僅支援執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 之電腦上的命名空間。  
   
- **查詢**  
+ **Query**  
  指定會識別警示所回應之事件的 WQL 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  

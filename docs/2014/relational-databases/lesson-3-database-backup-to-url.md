@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3e95616b2b001dff4b2d375800fe4bbaf315a214
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175625"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025123"
 ---
 # <a name="lesson-4-create-a-database-in-azure-storage"></a>第 4 課：在 Azure 儲存體中建立資料庫
   在這一課，您將瞭解如何使用 Azure 中的 SQL Server 資料檔案功能來建立資料庫。 請注意，開始進行這一課之前，您必須先完成第 1、2 和 3 課。 第3課是非常重要的步驟，因為您必須先將 Azure 儲存體容器及其相關聯的原則名稱和 SAS 金鑰等資訊儲存在第4課的 SQL Server 認證存放區中。  

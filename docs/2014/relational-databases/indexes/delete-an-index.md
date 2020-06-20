@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 092d6e9432f22ef43a155d2a7d3ff03299bcd131
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4552ba701782e5790f95f54c0c1c66f82573f1e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025621"
 ---
 # <a name="delete-an-index"></a>刪除索引
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除 (卸除) 索引。  
@@ -82,7 +81,7 @@ ms.locfileid: "63162329"
   
 7.  按一下 [關閉]  。  
   
-8.  在 [檔案]  功能表上，選取 [儲存 **table_name**]  。  
+8.  在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

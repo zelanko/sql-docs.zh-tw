@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b249aff99abbe692e1515397c493109c54c86713
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a3dbaa76fcc54bf35b72d0a81efce479be51974
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63023896"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029651"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started 事件類別
   **FT:Crawl Started** 事件類別指出全文檢索搜耙 (母體擴展) 已啟動。 使用此事件類別來檢查是否真由工作者工作來挑選搜耙要求。  

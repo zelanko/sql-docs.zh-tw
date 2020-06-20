@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ca0717a63c9660c225ec238e1e4d2423f7d01ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721356"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010785"
 ---
 # <a name="distributor-information-dialog-box"></a>散發者資訊對話方塊 
 本主題**提供 [散發**者] 對話方塊的相關資訊 
@@ -30,7 +29,7 @@ ms.locfileid: "62721356"
 
   **[發行集]** 索引標籤可以提供在左窗格中所選取「散發者」之所有發行集的摘要資訊。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  顯示的資訊會與受到「散發者」支援的發行集相關，當中包括了包含「發行者」之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料行。 否則，當您在複寫監視器的「發行者」檢視中檢視發行集時，所提供的發行集資訊會與此處的發行集資訊相同。 如需有關 **[發行集]** 索引標籤中之資料行的詳細資訊，請參閱＜ [Publisher Information, Publications](publisher-information-publications.md)＞。  
 
 ## <a name="subscription-watch-list"></a>訂閱監看清單
@@ -51,7 +50,7 @@ ms.locfileid: "62721356"
   
  如需有關「快照集」、「佇列讀取器代理程式」和維護作業的詳細資訊，請參閱＜ [Publisher Information, Agents](publisher-information-agents.md)＞。 請注意，當您在 **[代理程式]** 索引標籤上檢視「散發者」的代理程式資訊時，「發行者」資訊也會顯示，以供「快照集」和「記錄讀取器」代理程式使用。 但是，在專供「散發者」檢視中之「散發者」使用的 **[代理程式]** 索引標籤中，您也可以選取 **[散發者代理程式]** 和 **[合併代理程式]**。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  下列各節將描述這個索引標籤上針對「散發者代理程式」和「合併代理程式」顯示的資料。  
   
 ### <a name="distributor-agent"></a>[散發者代理程式]  
@@ -70,16 +69,16 @@ ms.locfileid: "62721356"
  **發行集**  
  與代理程式相關聯之發行集的名稱。  
   
- **訂閱帳戶**  
+ **訂用帳戶**  
  訂閱的名稱，格式應該為：[*SubscriberName*].[*Database*]。  
   
- **類型**  
+ **型別**  
  複寫類型：發送、提取或匿名。  
   
  **上次啟動時間**  
  代理程式上次啟動的時間。  
   
- **期限**  
+ **有效期間**  
  代理程式已執行的時間長度。 如果代理程式目前正在執行，此時間代表經過時間。如果代理程式先前已執行過，則代表總時間。  
   
  **最後一個動作**  
@@ -88,7 +87,7 @@ ms.locfileid: "62721356"
  **傳遞速率**  
  最近一次代理程式執行期間，在散發資料庫中認可初始化命令的速率 (以每秒命令數為單位)。  
   
- **Latency**  
+ **延遲**  
  在發行集資料庫中認可的最近一次變更與散發資料庫中認可的對應命令之間經過的時間 (以秒為單位)。  
   
  **交易數**  
@@ -116,16 +115,16 @@ ms.locfileid: "62721356"
  **發行集**  
  與代理程式相關聯之發行集的名稱。  
   
- **訂閱帳戶**  
+ **訂用帳戶**  
  訂閱的名稱，格式應該為：[*SubscriberName*].[*Database*]。  
   
- **類型**  
+ **型別**  
  複寫類型：發送、提取或匿名。  
   
  **上次啟動時間**  
  代理程式上次啟動的時間。  
   
- **期限**  
+ **有效期間**  
  代理程式已執行的時間長度。 如果代理程式目前正在執行，此時間代表經過時間。如果代理程式先前已執行過，則代表總時間。  
   
  **最後一個動作**  

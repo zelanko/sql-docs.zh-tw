@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f5c56f63-4478-40af-abb9-642f58a0026c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c78630764a26bb8fe281446c1bb997f18d965db7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b3d10ff74c78e97ea554acdbcce3a5df0d76b74
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091600"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062389"
 ---
 # <a name="upgrade-advisor-overview"></a>Upgrade Advisor 概觀
   Upgrade Advisor 提供了一個中央主控台，可讓您分析 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 元件，並檢視包含有關分析結果資訊的報表。  

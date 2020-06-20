@@ -13,25 +13,24 @@ helpviewer_keywords:
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 33757ad1f8085ce141b8e206f2c3fd99c7dcba90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4cff9c60e466418f7aeff19a9ee23649042d844d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150697"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047855"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>儲存死結圖形 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]儲存死結圖表。 死結圖表會儲存為 XML 檔。  
   
 ### <a name="to-save-deadlock-graph-events-separately"></a>若要個別儲存死結圖表事件  
   
-1.  在 **[檔案]** 功能表上按一下 **[新增追蹤]**，然後連接到 SQL Server 的執行個體。  
+1.  在 **[檔案]** 功能表上按一下 **[新增追蹤]** ，然後連接到 SQL Server 的執行個體。  
   
      會出現 [追蹤屬性] **[追蹤屬性]** 對話方塊。  
   
     > [!NOTE]  
-    >  如果選取 [進行連接後立即啟動追蹤]****，將不會顯示 [追蹤屬性]**** 對話方塊，而是開始追蹤。 於 [工具]**** 功能表，按一下 [選項]****，並清除 [連接後立即啟動追蹤]**** 核取方塊，以關閉這項設定。  
+    >  如果選取 [進行連接後立即啟動追蹤]****，將不會顯示 [追蹤屬性]**** 對話方塊，而是開始追蹤。 於 [工具] 功能表，按一下 [選項]，並清除 [連接後立即啟動追蹤] 核取方塊，以關閉這項設定。  
   
 2.  在 [追蹤屬性] 對話方塊的 [追蹤名稱]**** 方塊中，輸入追蹤的名稱。  
   

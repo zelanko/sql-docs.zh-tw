@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ed28805-a9ae-43ca-92da-101ba0c0c43a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3cf9ec0ff53fced20701b0b5b3379c1ec8dac219
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4dd6e1999fa04ec1de4428f6474c8eb2090257b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68186525"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057735"
 ---
 # <a name="xml-input-file-samples-dta"></a>XML 輸入檔範例 (DTA)
   本節包含可以搭配 **dta** 命令列工具使用的範例 XML 輸入檔。 這個工具是 Database Engine Tuning Advisor 的使用者介面之一，您可以利用這個工具來微調資料庫，以改進查詢效能。 Database Engine Tuning Advisor 會針對一或多個資料庫來分析工作負載的效果。 工作負載是針對需要微調的資料庫來執行的一組 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 在 Database Engine Tuning Advisor 分析好工作負載的效果之後，它會建立加入索引、索引檢視或資料分割策略，來改進資料庫查詢效能的建議。  

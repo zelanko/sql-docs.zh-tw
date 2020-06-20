@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 55c84e62326b7b1aa8619bf57ffccf16c43aec67
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 08574f42905831c4a194313b7d7d58ebeeffeee2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705127"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056319"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的資料類型對應
   使用**ITableDefinition：： CreateTable**函數來建立資料表時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者取用者可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在傳遞之 DBCOLUMNDESC 陣列的*pwszTypeName*成員中指定資料類型。 如果取用者依照名稱來指定資料行的資料類型，系統就會忽略 OLE DB 資料對應 (由 DBCOLUMNDESC 結構的 *wType* 成員代表)。  

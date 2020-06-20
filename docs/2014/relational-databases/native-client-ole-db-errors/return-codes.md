@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d4f66d2ddfcb18dcdde4125e33971e6cc583dc9b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: dd033d16b1e95773d2cab1c4e1fca733dc491b96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704958"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048063"
 ---
 # <a name="return-codes"></a>傳回碼
   在大部分的基本層級，成員函數不是成功就是失敗。 在更精確一點的層級，函數可能會成功，但是其成功可能不是應用程式開發人員所樂見的。  

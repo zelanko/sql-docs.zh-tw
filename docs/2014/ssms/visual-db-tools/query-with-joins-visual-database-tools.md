@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89eebf359167559357ef9c3aadf7599b77c8d376
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 598a6cd3f891dc838bc5a797ad99e545a67bcf65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63010760"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048565"
 ---
 # <a name="query-with-joins-visual-database-tools"></a>使用聯結進行查詢 (Visual Database Tools)
   查詢結果可包含來自多個資料表或表格值物件的資料。 若要結合來自多個資料表值物件的資料，請使用 SQL 的 JOIN 作業。  

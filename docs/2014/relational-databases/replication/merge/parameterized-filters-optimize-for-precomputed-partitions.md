@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ad0a33f0a5951256ff94bc78e7f09a88c05f227
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63250553"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010417"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>使用預先計算的資料分割最佳化參數化篩選效能
   預先計算的資料分割是可用於篩選合併式發行集的效能最佳化。 預先計算的資料分割也是在篩選發行集上使用邏輯記錄的需求。 如需邏輯記錄的詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](group-changes-to-related-rows-with-logical-records.md)。  
   
  當「訂閱者」與「發行者」同步時，「發行者」必須評估「訂閱者」的篩選以決定哪些資料列屬於該「訂閱者」的資料分割或資料集。 在發行者端針對每一個接收到已篩選資料集來判斷變更的資料分割成員資格之處理，稱為 *資料分割評估*。 若沒有預先計算的資料分割，則自從上次為特定的「訂閱者」執行「合併代理程式」之後，必須對「發行者」端的篩選資料行所作之變更執行資料分割評估，而且每個與「發行者」同步的「訂閱者」都必須重複這個過程。  
   
- 不過，如果「發行者」和「訂閱者[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 」在或更新版本上執行，而且您使用預先計算的資料分割，則在進行變更時，會預先計算並保存「發行者」端所有變更的資料分割成員資格。 如此一來，訂閱者與發行者同步處理時，它可以立即啟動來下載與其資料分割相關的變更，不必再經過資料分割評估處理。 當發行集內有大量的變更、訂閱者或發行項時，如此就可以大幅提高效能。  
+ 不過，如果「發行者」和「訂閱者」在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本上執行，而且您使用預先計算的資料分割，則在進行變更時，會預先計算並保存「發行者」端所有變更的資料分割成員資格。 如此一來，訂閱者與發行者同步處理時，它可以立即啟動來下載與其資料分割相關的變更，不必再經過資料分割評估處理。 當發行集內有大量的變更、訂閱者或發行項時，如此就可以大幅提高效能。  
   
  除了使用預先計算的資料分割之外，請預先產生快照集並/或允許「訂閱者」在第一次進行同步處理時要求產生並套用快照集。 使用上述一或兩個選項為使用參數化篩選的發行集提供快照集。 如果不指定任何選項，訂閱會使用一系列 SELECT 與 INSERT 陳述式進行初始化，而非使用 **bcp** 公用程式；此處理要慢很多。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)。  
   

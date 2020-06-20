@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f0d46200df3881d7b24cf582b5c252f4e66e255b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 362699ca4aec82315d86b99a440e8714fe6e0e72
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709738"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048101"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>其他資料表值參數中繼資料
   為了取得資料表值參數的中繼資料，應用程式會呼叫 SQLProcedureColumns。 若為數據表值參數，SQLProcedureColumns 會傳回單一資料列。 已加入兩個額外 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的特定資料行 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME，以提供與資料表值參數相關聯之資料表類型的架構和目錄資訊。 依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式專用資料行之前，以及 ODBC 本身所託管的所有資料行之後。  

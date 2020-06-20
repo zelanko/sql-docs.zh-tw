@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 406175533b92d13dce8c14b91b654fbb6099dc22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721650"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010993"
 ---
 # <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合併式複寫的 Web 同步處理選項可讓您透過網際網路使用 HTTPS 通訊協定進行資料複寫。 若要使用 Web 同步處理，您必須先執行下列組態設定動作：  
@@ -124,7 +123,7 @@ IIS 5.0 版開始支援 Web 同步處理。 但是，IIS 7.0 版不支援「設�
   
 -   如果您要複寫大量資料，可能必須調整合併代理程式的批次大小。  
   
- 合併式複寫的批次大小是以 *「層代」* (Generation) 為測量單位，而這是每個發行項的變更集合。 批次中的層代數目是使用合併代理程式的-`DownloadGenerationsPerBatch`和-`UploadGenerationsPerBatch`參數所指定。 如需詳細資訊，請參閱 [Replication Merge Agent](agents/replication-merge-agent.md)。  
+ 合併式複寫的批次大小是以 *「層代」* (Generation) 為測量單位，而這是每個發行項的變更集合。 批次中的層代數目是使用合併代理程式的- `DownloadGenerationsPerBatch` 和-參數所指定 `UploadGenerationsPerBatch` 。 如需詳細資訊，請參閱 [Replication Merge Agent](agents/replication-merge-agent.md)。  
   
  若為大量資料，請針對每個批次參數指定一個少量數目。 我們建議您從 10 這個值開始，然後根據需求和效能進行微調。 一般而言，這些參數都指定於代理程式設定檔中。 如需有關設定檔的詳細資訊，請參閱＜ [Replication Agent Profiles](agents/replication-agent-profiles.md)＞。  
   
@@ -144,7 +143,7 @@ IIS 5.0 版開始支援 Web 同步處理。 但是，IIS 7.0 版不支援「設�
   
      如需有關代理程式所需權限的詳細資訊，請參閱＜ [Replication Agent Security Model](security/replication-agent-security-model.md)＞。  
   
--   當您在 [新增訂閱嚮導] 的 [ **Web 服務器資訊**] 頁面上指定帳戶和密碼，或指定**@internet_url** **@internet_login** [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)的和參數值時，請指定與合併代理程式所使用的相同的網域帳戶。 此帳戶必須具有快照集共用的讀取權限。  
+-   當您在 [新增訂閱嚮導] 的 [ **Web 服務器資訊**] 頁面上指定帳戶和密碼，或指定 sp_addpullsubscription_agent 的和參數值時，請指定與合併代理程式所使用的相同的網域帳戶 **@internet_url** **@internet_login** 。 [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) 此帳戶必須具有快照集共用的讀取權限。  
   
 -   每個發行集應使用個別的 IIS 虛擬目錄。  
   

@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2195d96f4337cc60ba213deb5e3cc2831d27da76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721730"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010910"
 ---
 # <a name="create-a-push-subscription"></a>建立發送訂閱
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的發送訂閱。 如需為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者建立發送訂閱的相關資訊，請參閱為[非 SQL Server 的訂閱者建立訂閱](create-a-subscription-for-a-non-sql-server-subscriber.md)。  
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的發送訂閱。 如需為非訂閱者建立發送訂閱的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱為[非 SQL Server 的訂閱者建立訂閱](create-a-subscription-for-a-non-sql-server-subscriber.md)。  
   
   
   
@@ -71,7 +70,7 @@ ms.locfileid: "62721730"
   
 3.  以滑鼠右鍵按一下 **[區域訂閱]** 資料夾，然後按一下 **[新增訂閱]**。  
   
-4.  在 [新增訂閱精靈] 的 [發行集]**** 頁面上，從 [發行者]**** 下拉式清單中選取 [\<尋找 SQL Server 發行者>]**** 或 [\<尋找 Oracle 發行者>]****。  
+4.  在 [新增訂閱嚮導] 的 [**發行**集] 頁面上， **\<Find SQL Server Publisher>** **\<Find Oracle Publisher>** 從 [**發行者]** 下拉式清單中選取或。  
   
 5.  連接到 **[連接到伺服器]** 對話方塊中的發行者。  
   
@@ -91,18 +90,18 @@ ms.locfileid: "62721730"
   
     -   如果 **allow_push** 的值為 **1**，則發送訂閱受到支援。  
   
-    -   如果**allow_push**的值為**0**，請執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)， **@property**並`true`針對**@value**指定**allow_push** 。  
+    -   如果**allow_push**的值為**0**，請執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，並針對指定**allow_push** **@property** `true` **@value** 。  
   
-2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定**@publication**、 **@subscriber**和**@destination_db**。 將 **@subscription_type** 指定為 **@subscription_type**＞。 如需有關如何更新訂閱的詳細資訊，請參閱[建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication** 、 **@subscriber** 和 **@destination_db** 。 將 **@subscription_type** 指定為 **@subscription_type**＞。 如需有關如何更新訂閱的詳細資訊，請參閱[建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 3.  在發行集資料庫的「發行者」上，執行 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定下列項目：  
   
-    -   **@subscriber**、 **@subscriber_db**和**@publication**參數。  
+    -   **@subscriber**、 **@subscriber_db** 和 **@publication** 參數。  
   
-    -   在[!INCLUDE[msCoName](../../includes/msconame-md.md)]散發者端用來**@job_login**執行和**@job_password**之散發代理程式的 Windows 認證。  
+    -   在散發者端用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 來執行和之散發代理程式的 Windows **@job_login** 認證 **@job_password** 。  
   
         > [!NOTE]  
-        >  使用「Windows 整合式驗證」建立的連接一律使用由**@job_login**和**@job_password**指定的 Windows 認證。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
+        >  使用「Windows 整合式驗證」建立的連接一律使用由和指定的 Windows 認證 **@job_login** **@job_password** 。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
   
     -   (選擇性) **0** 指定為 **@subscriber_security_mode** ，以及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，並將 **@subscriber_password**＞。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62721730"
   
     -   如果 **allow_push** 的值為 **1**，則發行集支援發送訂閱。  
   
-    -   如果**allow_push**的值不是**1**，請執行[sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)， **@property**並`true`針對**@value**指定**allow_push** 。  
+    -   如果**allow_push**的值不是**1**，請執行[sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，並針對指定**allow_push** **@property** `true` **@value** 。  
   
 2.  在發行集資料庫的「發行者」上，執行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)並指定下列參數：  
   
@@ -131,12 +130,12 @@ ms.locfileid: "62721730"
   
 3.  在發行集資料庫的「發行者」上，執行 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)。 指定下列項目：  
   
-    -   **@subscriber**、 **@subscriber_db**和**@publication**參數。  
+    -   **@subscriber**、 **@subscriber_db** 和 **@publication** 參數。  
   
-    -   在散發者端用來**@job_login**執行和**@job_password**之合併代理程式的 Windows 認證。  
+    -   在散發者端用來執行和之合併代理程式的 Windows **@job_login** 認證 **@job_password** 。  
   
         > [!NOTE]  
-        >  使用「Windows 整合式驗證」建立的連接一律使用由**@job_login**和**@job_password**指定的 Windows 認證。 「合併代理程式」一律使用「Windows 整合式驗證」建立到「散發者」的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
+        >  使用「Windows 整合式驗證」建立的連接一律使用由和指定的 Windows 認證 **@job_login** **@job_password** 。 「合併代理程式」一律使用「Windows 整合式驗證」建立到「散發者」的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
   
     -   (選擇性) **0** 指定為 **@subscriber_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，並將 **@subscriber_password**＞。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
   
@@ -264,6 +263,6 @@ ms.locfileid: "62721730"
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [同步處理發送訂閱](synchronize-a-push-subscription.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
- [搭配腳本變數使用 sqlcmd](../scripting/sqlcmd-use-with-scripting-variables.md)  
+ [以指令碼變數使用 sqlcmd](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

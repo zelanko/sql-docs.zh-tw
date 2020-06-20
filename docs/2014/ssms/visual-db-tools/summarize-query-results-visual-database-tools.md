@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25f79dee9adb9ac6e953a802d404597508e7abba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08713be2d4439e520df07ec5efd6cb761a78a994
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204527"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057928"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>摘要查詢結果 (Visual Database Tools)
   當您建立彙總查詢時，可以套用某些邏輯原則。 例如，您無法顯示摘要查詢中的個別資料列內容。 查詢和檢視設計工具可協助您依據 [圖表窗格](visual-database-tools.md) 與 [準則窗格](criteria-pane-visual-database-tools.md) 的運作模式來符合這些原則。  

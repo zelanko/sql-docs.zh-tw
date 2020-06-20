@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c36eae0ca3d9613dfdaf13bce3a5e748f91b123f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8c9e2d0f20a91bb11c0d5e08aff00c27785818e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255402"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047592"
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>教學課程：利用行動用戶端複寫資料
   對於在中央伺服器與只是偶爾連接的行動用戶端之間移動資料的問題，複寫是一個很好的解決方案。 您可以使用複寫的精靈，輕鬆設定及管理複寫拓撲。 本教學課程告訴您，如何為行動用戶端設定複寫拓撲。  

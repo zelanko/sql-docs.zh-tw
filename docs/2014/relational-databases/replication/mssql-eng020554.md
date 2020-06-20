@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0223cd2499d228eea233ac56fb6964c5fdaa24f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63057118"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010370"
 ---
 # <a name="mssql_eng020554"></a>MSSQL_ENG020554
     
@@ -79,6 +78,6 @@ ms.locfileid: "63057118"
  [複寫記錄讀取器代理程式](agents/replication-log-reader-agent.md)   
  [複寫合併代理程式](agents/replication-merge-agent.md)   
  [複寫佇列讀取器代理程式](agents/replication-queue-reader-agent.md)   
- [複寫快照集代理程式](agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

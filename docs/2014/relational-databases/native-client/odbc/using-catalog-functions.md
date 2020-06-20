@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9308f9208d75287f3c93112f7f810c8ece3bc18b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6cac35e658343f606c1953f265c752335c70d81f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704270"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011071"
 ---
 # <a name="using-catalog-functions"></a>使用目錄函數
   所有資料庫都有包含儲存在資料庫之資料的結構。 此結構的定義以及權限之類的其他資訊會儲存在目錄 (當做一組系統資料表實作) 中，也就是所謂的資料字典。  

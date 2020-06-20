@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 78b78021f32faed097a4faf29ea139dd85f429e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 418e68d4bb7c6ba6632767a554aea72e85726840
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015640"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047480"
 ---
 # <a name="delete-a-stored-procedure"></a>刪除預存程序
     

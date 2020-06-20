@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 05fac94c8673aed046455fc57eac223bd7853d40
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f93fd39957a2fc6f0c22e1bcfdddd06e3b441440
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718738"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009300"
 ---
 # <a name="search-documents-interactively"></a>以互動方式搜尋文件
   您可以利用 [尋找和取代]  對話方塊，搜尋一或多個開啟的檔案或視窗，並逐一搜尋相符的項目。 這項技術可讓您在環繞相符項目的文字內容中，檢閱每項個別的搜尋相符項目。 您也可以選擇執行大量尋找作業，或利用 [尋找和取代]  對話方塊，以報表格式檢閱搜尋相符項目。  
@@ -59,7 +58,7 @@ ms.locfileid: "82718738"
   
      選擇 [取代全部]  取代所有相符項目。 此時會出現一個訊息方塊，列出取代的總數。  
   
- [取代全部]  命令會取代所有搜尋相符項目，其中包括您利用 [尋找下一個]  按鈕所略過的相符項目。 若要取消 [取代全部]  ，請在關閉任何檔案之前，按一下 [編輯]  功能表中的 [恢復]  。  
+ [取代全部]  命令會取代所有搜尋相符項目，其中包括您利用 [尋找下一個]  按鈕所略過的相符項目。 若要取消 [取代全部]，請在關閉任何檔案之前，按一下 [編輯] 功能表中的 [恢復]。  
   
 ## <a name="see-also"></a>另請參閱  
  [以累加方式搜尋作用中的文件](search-an-active-document-incrementally.md)   

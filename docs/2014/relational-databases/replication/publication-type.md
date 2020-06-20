@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1b77a466-479c-4356-b539-a644cec507b5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48c6ccac0692075db43e4a5c3a7010c541827d0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d0fdd06d19c270d0deaf49384815f092fc5cb44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021791"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038203"
 ---
 # <a name="publication-type"></a>發行集類型
   複寫提供下列類型的發行集：  

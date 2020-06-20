@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d40c0397b0a43f8cd17a53ee9be3f738bbe8500c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03df9e953e8e6441a933f39632993804c6ea1227
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283320"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048686"
 ---
 # <a name="options-environment-help-online-page"></a>選項（環境-說明-線上頁面）
   [選項]  對話方塊可以讓您指定用於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 搜尋的說明來源，包括 F1 說明。 在 [工具]  功能表上，按一下 [選項]  、展開 [環境]  資料夾、選取 [說明]  ，然後按一下 [線上]  。 如果 [線上]  頁面未出現在清單中，請在 [選項]  對話方塊中選取 [顯示所有設定]  核取方塊。  

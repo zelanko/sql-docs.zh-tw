@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52d059977481236883be931a78a302c249f43ae4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1eb9109a7dab131b710b0d746dc638c35a28d42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137551"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057870"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 組態
   本區段包含   組態管理員中 [!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server Native Client 組態[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]對話方塊的 F1 說明主題。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 為用戶端電腦用來與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線的網路程式庫，從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07b942ad64043f93f014a54246b42ef5375ade97
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f6daeeca6253861e8a9dcbb72faa2bd55eb2761
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798282"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056637"
 ---
 # <a name="create-a-job-category"></a>建立作業類別目錄
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 管理物件，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立作業類別目錄。  
@@ -52,7 +51,7 @@ ms.locfileid: "72798282"
   
 6.  選取 **[顯示所有作業]** 核取方塊。 選取對應於作業的方塊，為新的類別目錄選取一個或多個作業。  
   
-7.  按一下 [確定]  。  
+7.  按一下 [確定]。  
   
 8.  在 [**管理作業類別目錄**_server_name_ ] 對話方塊中 **，按一下 [** 重新整理] 以確定新的作業類別目錄為作用中。 如果一切如預期，關閉此對話方塊。  
   

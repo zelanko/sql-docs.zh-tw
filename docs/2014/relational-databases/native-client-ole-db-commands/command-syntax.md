@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d463d3d7-e5cb-426d-8e92-aa29980356b6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4002a3e92bc731eaa440fc85da98b7e8b3207d5c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 61d0474b720b24de18a93f016f6485a52b0ab592
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708018"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056424"
 ---
 # <a name="command-syntax"></a>命令語法
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會辨識 DBGUID_SQL 宏指定的命令語法。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，此規範表示 ODBC SQL、ISO 和的混合物 [!INCLUDE[tsql](../../includes/tsql-md.md)] 是有效的語法。 例如，下列 SQL 陳述式會使用 ODBC SQL 逸出序列來指定 LCASE 字串函數：  

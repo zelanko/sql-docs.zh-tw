@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 571f6f3a0d44f0fc87c67885249fca441776946d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212022"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055568"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>檢視及修改散發者和發行者屬性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視及修改「散發者」和「發行者」屬性。  
@@ -58,7 +57,7 @@ ms.locfileid: "68212022"
   
 2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[散發者屬性]**。  
   
-3.  檢視和修改 [散發者屬性 - \<散發者>]**** 對話方塊中的屬性。  
+3.  在 [散發者**屬性- \<Distributor> ** ] 對話方塊中，查看及修改屬性。  
   
     -   若要檢視和修改散發資料庫的屬性，請按一下對話方塊中 [一般]**** 頁面上資料庫的屬性按鈕 (**...**)。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "68212022"
   
 2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[發行者屬性]**。  
   
-3.  在 [**發行者屬性- \<發行者 >** ] 對話方塊中，查看及修改屬性。  
+3.  在 [**發行者屬性- \< Publisher > ** ] 對話方塊中，查看及修改屬性。  
   
     -   **sysadmin** 固定伺服器角色中的使用者能啟用 **[發行集資料庫]** 頁面上複寫的資料庫。 啟用資料庫不會發行此資料庫；不過，它允許該資料庫之 **db_owner** 固定資料庫角色中的任何使用者在資料庫中建立一個或多個發行集。  
   

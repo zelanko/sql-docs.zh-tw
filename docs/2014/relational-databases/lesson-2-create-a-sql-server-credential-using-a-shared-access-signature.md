@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 61a25d1f4e86204d05b3be6bf2a5dbc8cd0474b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 808438e544e3beb18b2e2afa9c399b5666277483
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70153827"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025060"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>第 3 課：建立 SQL Server 認證
   在這一課，您將建立認證，以儲存用來存取 Azure 儲存體帳戶的安全性資訊。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e890882fe600ed774da2c852bd15c83f1b9f16f3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 986a34628f73b2698e4c299d0a2d6182d31415a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712928"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048234"
 ---
 # <a name="log-long-running-queries-odbc"></a>記錄長時間執行的查詢 (ODBC)
   此範例會顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用選項，用以記錄長時間執行的查詢。 執行時，此範例會建立 Odbcqry.log，其中包含執行超過應用程式設定之間隔的查詢清單。 IA64 不支援此範例。 此範例是針對 ODBC 3.0 版或更新版本所開發。  

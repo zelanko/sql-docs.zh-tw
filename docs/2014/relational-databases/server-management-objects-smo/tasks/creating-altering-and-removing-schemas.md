@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 073cdba829845c940c67d60a92b0346d4ed7541d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 335b1f398357689fcbfb9ab383c37c4d8e6df16f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782255"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003535"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>建立、改變和移除結構描述
   <xref:Microsoft.SqlServer.Management.Smo.Schema> 物件表示資料庫物件的擁有權內容。 <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Database> 屬性表示 <xref:Microsoft.SqlServer.Management.Smo.Schema> 物件的集合。  

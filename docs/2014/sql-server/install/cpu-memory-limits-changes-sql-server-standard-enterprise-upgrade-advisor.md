@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 348c45b9-2e3f-4a51-acde-5fc7e27f94a5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6564a507b01e45e9808f2efbce79c4b3d07b0680
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3645dea1a929295d72c01a31fdc0e1f7999e9ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952567"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012861"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-standard-and-enterprise-upgrade-advisor"></a>SQL Server Standard 和 Enterprise 之 CPU 和記憶體限制的變更 (Upgrade Advisor)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard 和 Enterprise 最多可支援 64 GB 的系統記憶體。  
@@ -37,7 +36,7 @@ ms.locfileid: "71952567"
   
 -   [SQL Server 2014 各版本所支援的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
--   [SQL Server 版本的計算容量限制](../compute-capacity-limits-by-edition-of-sql-server.md)  
+-   [依 SQL Server 版本的計算容量限制](../compute-capacity-limits-by-edition-of-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Upgrade Advisor Reporting Services 升級問題&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
