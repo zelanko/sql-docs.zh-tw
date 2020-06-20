@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac94543b0c3d4957cdd3eb95d80c33fc5443c546
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdf50267de5ce0abaf6f4b91a324a0317cb4cb0c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63057788"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065858"
 ---
 # <a name="log-reader-agent"></a>記錄讀取器代理程式
   **[記錄讀取器代理程式]** 對話方塊會顯示記錄讀取器代理程式的詳細資訊，包括狀態、記錄、參考訊息，以及任何錯誤訊息。  

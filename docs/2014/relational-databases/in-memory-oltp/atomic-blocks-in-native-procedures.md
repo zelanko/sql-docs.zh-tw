@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca8f5b4d767ef0fe836cd260f8d12dd5b40c75d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62467278"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050370"
 ---
 # <a name="atomic-blocks"></a>不可部分完成的區塊
   `BEGIN ATOMIC` 是 ANSI SQL 標準的一部分。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只有在最上層原生編譯預存程序才支援不可部分完成的區塊。  

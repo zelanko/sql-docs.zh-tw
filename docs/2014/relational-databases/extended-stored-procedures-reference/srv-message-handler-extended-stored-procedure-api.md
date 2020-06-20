@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f597aa6c9ba9759b606501b0bd72a2166b1805e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd2452a969f290f4d33529eee44d36611c8d7525
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127401"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050744"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (擴充預存程序 API)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
- 呼叫安裝的擴充預存程序 API 訊息處理常式。 此函數通常用來從擴充[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程式呼叫，以便在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤記錄檔或[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔中記錄錯誤（由擴充預存程式所定義）。  
+ 呼叫安裝的擴充預存程序 API 訊息處理常式。 此函數通常用來 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 從擴充預存程式呼叫，以便在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔中記錄錯誤（由擴充預存程式所定義）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -97,7 +96,7 @@ oserrtextlen
  *oserrtextlen*  
  這是作業系統錯誤字串 *oserrtext* 的長度。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  

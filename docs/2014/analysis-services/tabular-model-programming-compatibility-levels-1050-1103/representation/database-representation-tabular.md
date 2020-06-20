@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c327e07685e98e6fa9f992025510e869d909e5ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757814"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940089"
 ---
 # <a name="database-representationtabular"></a>資料庫表示法 (表格式)
   在表格式模式下，資料庫是表格式模型中所有物件的容器。  

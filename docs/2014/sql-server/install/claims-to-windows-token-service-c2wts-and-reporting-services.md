@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dc6636946f7c94992fc831f814df57baf6397a1f
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 72b88bd1bd2a033683f83dd53cca8404eccb613f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922153"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059350"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>對 Windows Token 服務 (C2WTS) 和 Reporting Services 的宣告
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]如果您想要針對 sharepoint 伺服器陣列以外的資料來源使用 windows 驗證，sharepoint 模式需要 sharepoint 對 Windows Token 服務的宣告（c2WTS）。 使用者若是利用 Windows 驗證存取資料來源也是如此，因為 Web 前端 (WFE) 與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務之間的通訊皆會使用宣告驗證。  
@@ -37,7 +36,7 @@ ms.locfileid: "82922153"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 > [!NOTE]  
 >  注意：在某些伺服器陣列拓撲中，部分組態步驟可能會有所變更或無法使用。 例如單一伺服器安裝並不支援 Windows Identity Foundation c2WTS 服務，因此即無法在此伺服器陣列組態使用對 Windows Token 委派的宣告。  
@@ -69,7 +68,7 @@ ms.locfileid: "82922153"
   
 2.  設定 c2WTS ' AllowedCallers '  
   
-     c2WTS 需要在設定檔**c2wtshost.exe.config**中明確列出「呼叫者」身分識別。c2WTS 不接受系統中所有經過驗證之使用者的要求，除非已設定為執行此動作。 本例中的 'caller' 是 WSS_WPG Windows 群組。 c2wtshost.exe.confi 檔案會儲存在下列位置：  
+     c2WTS 需要在設定檔中明確列出「呼叫者」身分識別， **c2wtshost.exe.config**。c2WTS 不接受系統中所有經過驗證之使用者的要求，除非已設定為執行此動作。 本例中的 'caller' 是 WSS_WPG Windows 群組。 c2wtshost.exe.confi 檔案會儲存在下列位置：  
   
      **\Program Files\Windows Identity Foundation\v3.5\c2wtshost.exe.config**  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5696c47-5f10-4ab4-bd6a-8eea71d4c020
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eaed6350c6a6dde394e2ccff1617ac3bab2ba19c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c62ec98e826a14b1472345d40ce9ad440df8f133
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088702"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928116"
 ---
 # <a name="trace-template-properties-general-tab"></a>追蹤範本屬性 (一般索引標籤)
   使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來建立新的追蹤範本。 若要存取此對話方塊，請在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **[檔案]** 功能表上，指向 **[範本]**，然後按一下 **[新增範本]**。  
@@ -38,8 +37,8 @@ ms.locfileid: "66088702"
  依預設，會針對為此伺服器類型所建立的追蹤使用此範本。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立 &#40;SQL Server Profiler 的追蹤範本&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [SQL Server Profiler 範本和許可權](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [建立追蹤範本 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f309349b2867412d552372e83ed1947b34242336
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28a8a91b07fd61ba347e26f774380630198e3e4a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046643"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050595"
 ---
 # <a name="srv_rpcname-extended-stored-procedure-api"></a>srv_rpcname (擴充預存程序 API)
     
@@ -55,7 +54,7 @@ len
  *len*  
  這是整數變數的指標，此變數會接收資料庫名稱的長度。 如果 *len* 為 NULL，則不會傳回遠端預存程序名稱的長度。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  目前遠端預存程序之遠端預存程序名稱元件中以 Null 結尾字串的 DBCHAR 指標。 如果目前沒有遠端預存程序，則會傳回 NULL 且 *len* 設定為 - 1。  
   
 ## <a name="remarks"></a>備註  

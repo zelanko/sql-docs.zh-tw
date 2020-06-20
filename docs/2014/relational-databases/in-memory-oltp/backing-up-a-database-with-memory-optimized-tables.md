@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 176448aa9d4bab4101ab2db12ffc9a8a7fd1a5b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468324"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050321"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>備份含有記憶體最佳化資料表的資料庫
   記憶體最佳化資料表會當做正常資料庫備份的一部分進行備份。 如果是磁碟資料表，資料庫備份作業會驗證資料的 CHECKSUM 和差異檔案組，以便偵測是否有儲存體損毀。  

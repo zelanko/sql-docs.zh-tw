@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4aed312c01e47245d3b2c3d360652ab2b366cfd9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c5c7595b163dbaa965ed5c71b039e76108a4b49a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702325"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013183"
 ---
 # <a name="use-xml-data-in-applications"></a>在應用程式中使用 XML 資料
   此主描述在您的應用程式中使用 `xml` 資料類型時，可用的選項有哪些。 此主題包括有關下列項目的資訊：  

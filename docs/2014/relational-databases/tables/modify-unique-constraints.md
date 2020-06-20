@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8bb3daf170e25abc9b346aeaedb4b835cae2dfdd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dbe235d5d4c2b4b9523319622710cc20d1c3b76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809924"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067932"
 ---
 # <a name="modify-unique-constraints"></a>修改唯一的條件約束
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改唯一條件約束。  
@@ -63,7 +62,7 @@ ms.locfileid: "68809924"
     |設定叢集選項|在 [資料表設計工具]  下的方格中，選取 [建立為叢集]  ，然後從下拉式清單中，選擇 [是] 建立叢集索引，或選擇 [否] 建立非叢集索引。 每個資料表只能存在一個叢集索引。 如果叢集索引已經存在這個資料表中，您就必須清除原始索引的這項設定。|  
     |定義填滿因數|在 **[資料表設計工具]** 底下的方格中，展開 **[填滿規格]** 類別目錄，然後在 **[填滿因數]** 方塊中輸入 0 到 100 之間的整數。|  
   
-5.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
+5.  在 [檔案]  功能表上，按一下 [儲存「資料表名稱」]。  
   
 ##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **修改唯一條件約束**  
   

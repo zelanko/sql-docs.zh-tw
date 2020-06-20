@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7e277d22-8d4b-422e-8882-7c5dd7a6d915
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2773352ea91890031931c19b20789d7bf3cb813d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934699"
 ---
 # <a name="connect-to-server-analysis-services"></a>連接到伺服器 (Analysis Services)
   連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 時，使用此對話方塊來檢視或指定選項。  

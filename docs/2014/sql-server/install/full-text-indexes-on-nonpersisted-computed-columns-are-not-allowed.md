@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cba737f7-b187-47d0-8458-23dc18d18aca
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 417ca3c2e5e477960c4c905543f3a712a5ec7453
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de153d45e2f652bfea6e9dce68428af84be68b6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095164"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012344"
 ---
 # <a name="full-text-indexes-on-nonpersisted-computed-columns-are-not-allowed"></a>不允許在非保存的計算資料行上使用全文檢索索引
   您不可在不具決定性且不精確的計算資料行上建立全文檢索索引。 這樣的資料行無法做為類型資料行或全文檢索索引鍵資料行。  

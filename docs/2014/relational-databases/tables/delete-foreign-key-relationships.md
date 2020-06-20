@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 919a0c9eb96021ccd7495579cda9756bcdde3194
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86ae466b9fce53073bfc0645c753246023ff3269
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761440"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066473"
 ---
 # <a name="delete-foreign-key-relationships"></a>刪除外部索引鍵關聯性
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除外部索引鍵條件約束。 刪除外部索引鍵條件約束後，就不需要強制執行參考完整性。  

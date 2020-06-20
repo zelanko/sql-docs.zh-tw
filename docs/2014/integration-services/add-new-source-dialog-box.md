@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 619e437b-e00f-49a9-a94c-8feafc4af713
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 755f2955e7bcd12ac022b29e6e4d3c7cf3aa80be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed1b5851868705000d5aa04eb885b8e188dd45ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061851"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925909"
 ---
 # <a name="add-new-source-dialog-box"></a>加入新來源對話方塊
   下表列出可以在 [加入新來源] 對話方塊中使用的選項。  
   
 |選項|描述|  
 |------------|-----------------|  
-|型別|選取您要連接的來源類型。|  
-|連接管理員|選取現有的連線管理員，或按一下** \<[新增>** ] 以建立新的連線管理員。|  
+|類型|選取您要連接的來源類型。|  
+|連接管理員|選取現有的連接管理員，或按一下 **\<New>** 以建立新的連線管理員。|  
 |僅顯示已安裝|指定是否只要檢視已安裝的來源。|  
-|[確定]|按一下以儲存您的變更，並開啟任何後續的對話方塊設定其他選項。|  
+|確定|按一下以儲存您的變更，並開啟任何後續的對話方塊設定其他選項。|  
   
   

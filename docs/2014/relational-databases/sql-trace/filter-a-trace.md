@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb1a9825b2079e4836f654605097667d8edb05a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714715"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068314"
 ---
 # <a name="filter-a-trace"></a>篩選追蹤
   篩選可限制追蹤中收集的事件。 如果沒有設定篩選條件，選定事件類別的所有事件都會傳回到追蹤輸出。 例如，限制追蹤裡的 Windows 使用者名稱為特定使用者，可將輸出資料縮小為只有這些使用者。  
@@ -137,7 +136,7 @@ ms.locfileid: "62714715"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup>如果從**osql**公用程式或**sqlcmd**公用程式追蹤事件，請一律**%** 附加到**TextData**資料行的篩選。  
+ <sup>1</sup>如果從**osql**公用程式或**sqlcmd**公用程式追蹤事件，請一律附加 **%** 到**TextData**資料行的篩選。  
   
  基於安全機制，「SQL 追蹤」會自動把任何與安全性相關、會影響密碼的預存程序的資訊從追蹤省略。 此安全機制無法設定，也永遠有效。 如此可預防有權限追蹤 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上所有活動的使用者擷取到密碼。  
   

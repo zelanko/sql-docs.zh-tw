@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 941ac9edde6f0bd0fa1610d2ac4f32f2af169342
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4e736beb22f40008d2a8aa5fac797b9f48904c52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013300"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>範例：使用 ELEMENTS 指示詞指定 XSINIL
   下列查詢會指定 `ELEMENTS` 指示詞，從查詢結果產生元素中心的 XML。  

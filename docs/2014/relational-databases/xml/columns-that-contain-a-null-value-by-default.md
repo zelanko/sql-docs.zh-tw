@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3aaa7cc6fb40c2f600e734cb3e2250a40e15d63e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c08aa85254dcbd8aad0ea95edf5daac3ba9380c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059532"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>預設包含 NULL 值的資料行
   依預設，資料行中的 Null 值會與缺少的屬性、節點或元素相對應。 此預設行為是可以覆寫的，方法為使用 ELEMENTS 指示詞來要求元素中心的 XML，並指定 XSINIL 來要求為 NULL 值加入元素，如下列查詢所示：  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48c4b11963d8e05ff7787ce9200329daf2e899ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873551"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970371"
 ---
 # <a name="data-compression"></a>資料壓縮
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援資料列存放區之資料表和索引的資料列和頁面壓縮，並且支援資料行存放區之資料表和索引的資料行存放區和資料行存放區封存壓縮。  
@@ -63,7 +62,7 @@ ms.locfileid: "62873551"
   
 -   壓縮可讓更多的資料列儲存在頁面上，但是不會變更資料表或索引的資料列大小上限。  
   
--   當資料列大小上限加上壓縮負擔超過 8060 個位元組的資料列大小上限時，資料表將無法啟用壓縮。 例如，因為有額外的壓縮負荷，所以`char(8000)`無法壓縮`char(53)`具有資料行 c1 和 c2 的資料表。 當使用 Vardecimal 儲存格式時，將會在啟用此格式時執行資料列大小檢查。 對於資料列和頁面壓縮而言，最初壓縮物件時會執行資料列大小檢查，然後在插入或修改每一個資料列時加以檢查。 壓縮會強制執行下列兩個規則：  
+-   當資料列大小上限加上壓縮負擔超過 8060 個位元組的資料列大小上限時，資料表將無法啟用壓縮。 例如， `char(8000)` `char(53)` 因為有額外的壓縮負荷，所以無法壓縮具有資料行 c1 和 c2 的資料表。 當使用 Vardecimal 儲存格式時，將會在啟用此格式時執行資料列大小檢查。 對於資料列和頁面壓縮而言，最初壓縮物件時會執行資料列大小檢查，然後在插入或修改每一個資料列時加以檢查。 壓縮會強制執行下列兩個規則：  
   
     -   固定長度類型的更新一定要成功。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62873551"
   
 ||  
 |-|  
-|**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
+|**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
   
 ### <a name="basics"></a>基本概念  
  資料行存放區資料表和索引永遠都會以資料行存放區壓縮形式來儲存。 您可以進一步減少資料行存放區資料的大小，只要設定稱為封存壓縮的額外壓縮即可。  為了執行封存壓縮， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對資料執行 Microsoft XPRESS 壓縮演算法。 您可以使用下列資料壓縮類型來新增或移除封存壓縮：  
@@ -167,9 +166,9 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>中繼資料  
  下列系統檢視表包含叢集索引之資料壓縮的相關資訊：  
   
--   [&#40;transact-sql&#41;的索引](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)- `type`和`type_desc`資料行包含叢集資料行存放區和非叢集資料行存放區。  
+-   [&#40;transact-sql&#41;的索引](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)-和資料行包含叢集資料行存放區 `type` 和非叢集資料行存放區 `type_desc` 。  
   
--   [sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - `data_compression`和`data_compression_desc`資料行包含資料行存放區和 COLUMNSTORE_ARCHIVE。  
+-   [sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - `data_compression` 和資料行包含資料行存放區 `data_compression_desc` 和 COLUMNSTORE_ARCHIVE。  
   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 程序不適用於資料行存放區索引。  
   

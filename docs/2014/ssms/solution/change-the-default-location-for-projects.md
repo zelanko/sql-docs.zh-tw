@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a772a80e6cb0e51682880c0579ec07914948372b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 330dc8ae1746a4fe7be8291cf1032a12bc62e948
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62956106"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066362"
 ---
 # <a name="change-the-default-location-for-projects"></a>變更專案的預設位置
   檔案和專案的預設位置是 [我的文件] 資料夾中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 專案資料夾。  

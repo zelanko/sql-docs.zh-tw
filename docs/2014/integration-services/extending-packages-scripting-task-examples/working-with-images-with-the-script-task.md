@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 413d0d42ce629076488b5971408df25ca0ce9d1e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768444"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968438"
 ---
 # <a name="working-with-images-with-the-script-task"></a>以指令碼工作處理影像
   產品或是使用者的資料庫除了文字與數值資料之外經常包括影像。 Microsoft .NET Framework 中的 `System.Drawing` 命名空間提供操作影像的類別。  
@@ -47,7 +46,7 @@ ms.locfileid: "62768444"
   
 1.  建立名為 `CurrentImageFile` 的字串變數，並將其值設定為現有影像檔的路徑與檔案名稱。  
   
-2.  在 [**腳本工作編輯器**] 的 [**腳本**] 頁面上`CurrentImageFile` ，將變數`ReadOnlyVariables`加入至屬性。  
+2.  在 [**腳本工作編輯器**] 的 [**腳本**] 頁面上，將 `CurrentImageFile` 變數加入至 `ReadOnlyVariables` 屬性。  
   
 3.  在指令碼專案中，設定 `System.Drawing` 命名空間的參考。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62768444"
   
 1.  在 Foreach 迴圈容器中置放指令碼工作。  
   
-2.  在 **Foreach 迴圈編輯器** 的 [集合]  頁面上，將 [Foreach 檔案列舉值]  選取為列舉值，以及指定來源檔案的路徑與檔案遮罩，例如 "*.bmp"。  
+2.  在 **Foreach 迴圈編輯器** 的 [集合] 頁面上，將 [Foreach 檔案列舉值] 選取為列舉值，以及指定來源檔案的路徑與檔案遮罩，例如 "*.bmp"。  
   
 3.  在 [變數對應]  頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
   
@@ -158,7 +157,7 @@ End Function
   
 2.  另外建立 `MaxThumbSize` 整數變數並指派以像素為單位的值，例如 100。  
   
-3.  在 [**腳本工作編輯器**] 的 [**腳本**] 頁面上，將這`ReadOnlyVariables`兩個變數加入至屬性。  
+3.  在 [**腳本工作編輯器**] 的 [**腳本**] 頁面上，將這兩個變數加入至 `ReadOnlyVariables` 屬性。  
   
 4.  在指令碼專案中，設定 `System.Drawing` 命名空間的參考。  
   
@@ -168,7 +167,7 @@ End Function
   
 1.  在 Foreach 迴圈容器中置放指令碼工作。  
   
-2.  在 **Foreach 迴圈編輯器**的 [集合]  頁面上，將 [Foreach 檔案列舉值]  選取為 [列舉值]  ，以及指定來源檔案的路徑與檔案遮罩，例如 "*.jpg"。  
+2.  在 **Foreach 迴圈編輯器**的 [集合] 頁面上，將 [Foreach 檔案列舉值] 選取為 [列舉值]，以及指定來源檔案的路徑與檔案遮罩，例如 "*.jpg"。  
   
 3.  在 [變數對應]  頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7a8bcf160fe7baf8fbb98efa80b4f28516041f36
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9c72618f52b4a85c7611049a5bff3bedde4074ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702906"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066508"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>用戶端和伺服器端格式 (SQLXML 4.0)
   SQLXML 提供兩個方式來格式化 XML 文件：  

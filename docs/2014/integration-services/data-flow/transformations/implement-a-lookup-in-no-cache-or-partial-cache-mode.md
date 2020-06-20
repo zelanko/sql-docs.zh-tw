@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97da627058fa6da67e8ef623b267d0f7cbaa6c7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d9dd56eb10d9f99a19e32f6916d217ccfb8575a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770712"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939509"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>以沒有快取或部分快取模式實作查閱
   您可以將查閱轉換設定為使用部分快取或沒有快取模式：  
@@ -101,7 +100,7 @@ ms.locfileid: "62770712"
      如果陳述式包含參數，請按一下 **[參數]** 以將參數對應至輸入資料行。  
   
     > [!NOTE]  
-    >  在此頁面上所指定的選擇性 SQL 陳述式會覆寫並取代在 [查閱轉換編輯器]  的 [連接]  頁面上所指定的資料表名稱。  
+    >  在此頁面上所指定的選擇性 SQL 陳述式會覆寫並取代在 [查閱轉換編輯器] 的 [連接] 頁面上所指定的資料表名稱。  
   
 13. 若要設定錯誤輸出，按一下 **[錯誤輸出]** 頁面，然後設定錯誤處理選項。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../lookup-transformation-editor-error-output-page.md)。  
   

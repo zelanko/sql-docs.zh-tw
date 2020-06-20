@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c9da36f49927acd2a313bcb9f8647655731006d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7845a84c45015ba3346538030725eb2973490d9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089608"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928549"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler-工具-選項（一般選項頁面）
   使用 [一般選項]**** 對話方塊來檢視或指定下列選項。  
@@ -79,7 +78,7 @@ ms.locfileid: "66089608"
  [重新執行追蹤檔案 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [重新執行追蹤](../tools/sql-server-profiler/replay-traces.md)   
  [&#40;SQL Server Profiler 設定全域追蹤選項&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
- [SQL Server Profiler 範本和許可權](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

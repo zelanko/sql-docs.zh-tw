@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: d6a677ff-60ad-47ba-a0cb-df4193b165e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c387513b8896018ead7d35e15a32e9e314ac0d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f4524b5c7b611ebc9407ab79339d6e35e6c82de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245725"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058714"
 ---
 # <a name="sql-server-agent-properties-connection-page"></a>SQL Server Agent 屬性 (連接頁面)
-  使用此頁面來查看和修改從[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連接的設定。  
+  使用此頁面來查看和修改從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務到連接的設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **別名本機主機伺服器**  
  指定用來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之本機執行個體的別名。 如果您無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的預設連接選項，請為執行個體定義別名，並在此處指定該別名。  
   

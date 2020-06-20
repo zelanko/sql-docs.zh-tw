@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00aade3025f83d485d57d9e4975760c05c8064b4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 176cdb15a2b6930582fb5ffee96ab264542dad9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702457"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013155"
 ---
 # <a name="the-xsqname-type"></a>xs:QName 類型
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援使用 XML 結構描述限制元素且從 **xs:QName** 衍生的類型。 此外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前不支援 **QName** 為成員類型的聯集類型。  

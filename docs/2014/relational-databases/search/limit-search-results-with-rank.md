@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab1b930b3238cb541965e1984d1561f1a1c22d87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011151"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004210"
 ---
 # <a name="limit-search-results-with-rank"></a>限制 RANK 的搜索結果
   [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 函數會傳回名為 RANK 的資料行，其中包含 0 到 1000 (順位值) 的序數值。 這些值的用途，在根據傳回資料列符合選取準則的程度予以分級。 等級值僅表示結果集中資料列相關性的相對順序，其值越低表示相關性越低。 實際的值並不重要，而且每次執行查詢後該值通常會不一樣。  
@@ -143,7 +142,7 @@ GO
   
  統計資料 (例如 `IndexRowCount`) 可能會有很大的差異。 例如，如果某個目錄在主索引中有 20 億個資料列，則會將一個新文件的索引編製到記憶體的中繼索引。而該文件會根據記憶體索引中的文件數目所得的等級，與主索引的文件等級進行非對稱比較。 因此，建議您在執行任何會造成大量資料列編製索引或重新編製索引的母體擴展動作後，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來將這些索引與主要的索引合併。 全文檢索引擎也會根據參數 (例如中繼索引的數目與大小) 來自動合併索引。  
   
- `MaxOccurrence` 值會正規化為 32 種範圍中的其中一種。 這表示，會將長度 50 個字的文件視為與長度 100 個字的文件一樣。 下表用於正規化作業。 因為檔長度在相鄰資料表值32和128之間的範圍內，所以會有效地將其視為具有相同的長度，128（32 `docLength` < <= 128）。  
+ `MaxOccurrence` 值會正規化為 32 種範圍中的其中一種。 這表示，會將長度 50 個字的文件視為與長度 100 個字的文件一樣。 下表用於正規化作業。 因為檔長度在相鄰資料表值32和128之間的範圍內，所以會有效地將其視為具有相同的長度，128（32 < `docLength` <= 128）。  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02b112a93cb6098ab873ac2a698303b8a717afd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021782"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065731"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>發行集資訊，代理程式 (快照式發行集)
    [代理程式]**** 索引標籤會顯示選取之發行集的快照集代理程式的摘要資訊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  如需快照集代理程式的詳細資訊與相關工作，請以滑鼠右鍵按一下代理程式的資料列，然後按一下快速鍵功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
 -   **排序**：在 **[排序資料行]** 對話方塊中排序一個或多個資料行。  
@@ -52,7 +51,7 @@ ms.locfileid: "63021782"
  **上次啟動時間**  
  代理程式上次啟動的時間。  
   
- **期限**  
+ **有效期間**  
  代理程式已執行的時間量。 如果代理程式目前正在執行，此時間代表經過時間；如果代理程式是先前有執行過，則此時間代表總共時間。  
   
  **最後一個動作**  

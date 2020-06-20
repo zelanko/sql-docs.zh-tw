@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 651705426b52b822c3eb8c7cf9d341968bbc088f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91062864b77ba3c62a87d66b8ff93068f9c10c8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003874"
 ---
 # <a name="semantic-search-sql-server"></a>語意搜尋 (SQL Server)
-  統計語意搜尋會擷取統計上相關的「主要片語」[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*並建立其索引，藉以深入解析儲存在*  資料庫中的非結構化文件。 然後，它也會使用這些主要片語來識別「相似或相關文件」**，並建立其索引。  
+  統計語意搜尋會擷取統計上相關的「主要片語」並建立其索引，藉以深入解析儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的非結構化文件。 然後，它也會使用這些主要片語來識別「相似或相關文件」**，並建立其索引。  
   
  使用三個 Transact-SQL 資料列集函數，以結構化資料形式擷取結果，就可以查詢這些語意索引。  
   

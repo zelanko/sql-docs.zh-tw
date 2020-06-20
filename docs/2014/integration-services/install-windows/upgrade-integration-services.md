@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab63f0d12b4cd5d76fcb6e3419f5d1f1ed7232d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768066"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968348"
 ---
 # <a name="upgrade-integration-services"></a>升級 Integration Services
   如果您的電腦上目前有安裝 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]，您可以升級到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
   
  如果您在安裝其中一個舊版 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的電腦上升級到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，則 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 會與舊版並存安裝。  
   
- 有多個版本的 dtexec 公用程式會隨著這個並行安裝一併安裝。 為確保您執行正確的公用程式版本，請在命令提示字元中輸入完整路徑 (\<磁碟機>:\Program Files\Microsoft SQL Server\\<版本\>\DTS\Binn) 來執行公用程式。 如需有關 dtexec 的詳細資訊，請參閱＜ [dtexec Utility](../packages/dtexec-utility.md)＞。  
+ 有多個版本的 dtexec 公用程式會隨著這個並行安裝一併安裝。 為確保您執行正確的公用程式版本，請在命令提示字元中輸入完整路徑（ \<drive> ： \Program Files\Microsoft SQL Server \\<版本 \DTS\Binn）來執行公用程式 \> 。 如需有關 dtexec 的詳細資訊，請參閱＜ [dtexec Utility](../packages/dtexec-utility.md)＞。  
   
 > [!NOTE]  
 >  在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，Users 群組中的所有使用者預設都能存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時，使用者則無法存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 因此，服務預設是安全的。 安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員必須執行 DCOM 組態工具 (Dcomcnfg.exe)，授與特定使用者 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的存取權限。 如需詳細資訊，請參閱 [Grant Permissions to Integration Services Service](../grant-permissions-to-integration-services-service.md)。  
@@ -36,7 +35,7 @@ ms.locfileid: "62768066"
  我們建議您在升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前，最好先執行 Upgrade Advisor。 Upgrade Advisor 會報告當您將現有的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝移轉至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所使用的新封裝格式時可能會遇到的問題。 如需詳細資訊，請參閱＜ [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)＞。  
   
 > [!NOTE]
->  在目前的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]版本中，已停止遷移或執行資料轉換服務（DTS）封裝的支援。 下列 DTS 功能已停用：  
+>  在目前的版本中，已停止遷移或執行資料轉換服務（DTS）封裝的支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 下列 DTS 功能已停用：  
 > 
 >  -   DTS 執行階段  
 > -   DTS API  
@@ -50,9 +49,9 @@ ms.locfileid: "62768066"
 ## <a name="upgrading-integration-services"></a>升級 Integration Services  
  您可以使用以下其中一個方法來升級：  
   
--   執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安裝程式，並選取**從 SQL Server 2005、SQL Server 2008 或 SQL Server 2008 R2 升級**的選項， **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]** 或。  
+-   執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式，並選取**從 SQL Server 2005、SQL Server 2008 或 SQL Server 2008 R2 升級**的選項，或 **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]** 。  
   
--   在命令提示字元**中執行 setup.exe** ，並指定`/ACTION=upgrade`選項。 如需詳細資訊，請參閱[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)][從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)中的「安裝腳本」一節。  
+-   在命令提示字元中執行**setup.exe** ，並指定 `/ACTION=upgrade` 選項。 如需詳細資訊，請參閱 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)中的「安裝腳本」一節。  
   
  您無法使用升級作業來執行下列動作：  
   
@@ -76,9 +75,9 @@ ms.locfileid: "62768066"
   
 -   安裝 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 檔案、服務和工具 ([!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)])。 如果同一部電腦上有多個 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的執行個體，在您第一次將任何執行個體升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 時，會安裝 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 檔案、服務和工具。  
   
--   將[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的實例升級到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本。  
+-   將或的實例升級 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本。  
   
--   將資料從[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]或[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]系統資料表移到[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]系統資料表，如下所示：  
+-   將資料從 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 系統資料表移到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 系統資料表，如下所示：  
   
     -   將封裝從 msdb.dbo.sysdtspackages90 系統資料表移到 msdb.dbo.sysssispackages 系統資料表，而不變更封裝。  
   
@@ -93,14 +92,14 @@ ms.locfileid: "62768066"
   
 -   為了控制封裝的存取權，建立三個新的固定資料庫層級角色：db_ssisadmin、db_ssisltduser 和 db_ssisoperator。 雖然不會移除 db_dtsadmin、db_dtsltduser 和 db_dtsoperator 的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色，但是它們會成為對應新角色的成員。  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]如果封裝存放區（也就[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]是服務所管理的檔案系統位置）是**\SQL Server\90**、 **\SQL Server\100**或**\SQL Server\110**下的預設位置，則會將這些封裝移至**\SQL server\120 請**下的新預設位置。  
+-   如果 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區（也就是服務所管理的檔案系統位置 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ）是**\SQL Server\90**、 **\SQL Server\100**或**\SQL Server\110**下的預設位置，則會將這些封裝移至**\SQL server\120 請**下的新預設位置。  
   
 -   將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務組態檔更新為指向升級的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。  
   
 ### <a name="what-the-upgrade-process-does-not-do"></a>升級程序不會執行的工作  
  升級程序不會執行以下工作：  
   
--   不**會**移除[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]或[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]服務。  
+-   不**會**移除 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 服務。  
   
 -   不會將現有的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝移轉至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所使用的新封裝格式。 如需如何移轉封裝的相關資訊，請參閱 [升級 Integration Services 封裝](upgrade-integration-services-packages.md)。  
   
@@ -113,14 +112,14 @@ ms.locfileid: "62768066"
   
 -   執行可執行封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。  
   
--   使用[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]來管理[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]儲存在或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]實例中的封裝。 您必須修改服務設定檔，才可將 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 執行個體加入此服務所管理的位置清單。  
+-   使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 儲存在或實例中的封裝 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 您必須修改服務設定檔，才可將 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 執行個體加入此服務所管理的位置清單。  
   
     > [!NOTE]  
     >  舊版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 無法連接到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 服務。  
   
 -   檢查 packageformat 資料行中的值，以識別 msdb.dbo.sysssispackages 系統資料表中的封裝版本。 此資料表有一個 packageformat 資料行可識別每一個封裝的版本。 packageformat 資料行中的值 2 表示 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 封裝，而值 3 則表示 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 封裝。 在您將封裝移轉至新的封裝格式之前，packageformat 資料行中的值都不會變更。  
   
--   您不能使用[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]工具來設計、執行或管理[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具包含各自對應的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 版本、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈，以及封裝執行公用程式 (dtexecui.exe)。 升級程式不會移除[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]工具。 不過，您無法在已經升級的伺服器上使用這些工具來繼續使用 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 封裝。  
+-   您不能使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具來設計、執行或管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具包含各自對應的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 版本、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈，以及封裝執行公用程式 (dtexecui.exe)。 升級程式不會移除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具。 不過，您無法在已經升級的伺服器上使用這些工具來繼續使用 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 封裝。  
   
 -   依預設，在升級安裝中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會設定為將與封裝執行相關的事件記錄至應用程式事件記錄檔。 當您使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的資料收集器功能時，這個設定可能會產生過多的事件記錄項目。 記錄的事件包括 EventID 12288 "封裝已啟動" 和 EventID 12289 "封裝已成功完成"。 若要停止將這兩個事件記錄到應用程式事件記錄檔，請開啟登錄進行編輯。 在登錄中找出 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS 節點，然後將 LogPackageExecutionToEventLog 設定的 DWORD 值從 1 變更為 0。  
   
@@ -132,14 +131,14 @@ ms.locfileid: "62768066"
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體位於某部電腦上，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和用戶端工具則位於另一部電腦上。  
   
 ### <a name="what-you-can-do-after-upgrading"></a>升級之後可以執行的工作  
- 將封裝儲存於已升級之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中的系統資料表，與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中所用的系統資料表不同。 因此， [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]版本的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]和[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]無法在已升級之實例上的系統資料表中探索封裝。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 由於找不到這些封裝，所以可以對這些封裝處理的動作也會受到限制：  
+ 將封裝儲存於已升級之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中的系統資料表，與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中所用的系統資料表不同。 因此， [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和無法在已 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 升級之實例上的系統資料表中探索封裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 由於找不到這些封裝，所以可以對這些封裝處理的動作也會受到限制：  
   
 -   您無法使用其他電腦上的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具 ([!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)])，從已升級的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體載入或管理封裝。  
   
     > [!NOTE]  
     >  雖然已升級之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中的封裝尚未移轉成新的封裝格式，但是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具還是無法找到這些封裝。 因此，[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具無法使用這些封裝。  
   
--   您無法在[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]其他[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]電腦上使用或，在升級的實例上執行儲存在 msdb 中的封裝[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+-   您無法 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 在其他電腦上使用或，在升級的實例上執行儲存在 msdb 中的封裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
 -   您無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 電腦上的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Agent 作業來執行已升級之 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 執行個體中所儲存的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 封裝。  
   

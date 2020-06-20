@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b74de0c0ac044f3bdcadf3381976dcecc777e36c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190354"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037187"
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
   安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集之前，您必須先選取硬體以及要執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的作業系統。 您也必須設定 Windows Server 容錯移轉叢集 (WSFC)，並檢閱要在容錯移轉叢集上執行之其他軟體的網路、安全性及考量。  
@@ -45,9 +44,9 @@ ms.locfileid: "63190354"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式將不再安裝 Windows PowerShell。 Windows PowerShell 2.0 是安裝 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] 元件和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的必要條件。 如果您的電腦沒有 Windows PowerShell 2.0，可以遵循 [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) 頁面上的指示啟用此元件。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式不再安裝 .NET Framework 3.5 SP1，但是在較舊的 Windows 作業系統上安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，可能需要 .NET Framework 3.5 SP1。 如需詳細資訊， [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]請參閱[版本](https://go.microsoft.com/fwlink/?LinkId=296445)資訊。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式不再安裝 .NET Framework 3.5 SP1，但是在較舊的 Windows 作業系統上安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，可能需要 .NET Framework 3.5 SP1。 如需詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [版本](https://go.microsoft.com/fwlink/?LinkId=296445)資訊。  
   
-    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)]更新套件：** 為避免電腦在安裝期間因 .NET Framework 4 安裝而重新[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]啟動，安裝[!INCLUDE[msCoName](../../../includes/msconame-md.md)]程式需要在電腦上安裝更新。  如果您是在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，則會包含這項更新。 如果您是在較舊的 Windows 作業系統上安裝，請從 [Windows Vista 和 Windows Server 2008 上之 .NET Framework 4.0 適用的 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)下載此更新。  
+    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新套件：** 為避免在安裝期間因 .NET Framework 4 安裝而重新開機電腦， [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝程式需要在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 電腦上安裝更新。  如果您是在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，則會包含這項更新。 如果您是在較舊的 Windows 作業系統上安裝，請從 [Windows Vista 和 Windows Server 2008 上之 .NET Framework 4.0 適用的 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)下載此更新。  
   
     -   .NET Framework 4：安裝程式會在叢集作業系統上安裝 .NET Framework 4。 若要縮短安裝時間，您可以考慮在執行安裝程式前先安裝 .NET Framework 4。  
   
@@ -199,7 +198,7 @@ ms.locfileid: "63190354"
   
  <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WOW 模式不支援叢集。 其中包括來自原先安裝在 WOW 中之舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的升級。 對於這些版本而言，唯一的升級選項就是並存安裝新的版本並進行移轉。  
   
- <sup>2</sup>支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]多重子網容錯移轉叢集。  
+ <sup>2</sup>支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網容錯移轉叢集。  
   
   
   
@@ -220,7 +219,7 @@ ms.locfileid: "63190354"
   
 1.  在一個多重子網路設定中，IP 位址資源相依性乃設為 OR。 如需詳細資訊，請參閱[建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
-2.  不支援混合的 AND-OR IP 位址相依性。 例如，不支援 \<IP1> AND \<IP2> OR \<IP3>。  
+2.  不支援混合的 AND-OR IP 位址相依性。 例如， \<IP1> \<IP2> \<IP3> 不支援和或。  
   
 3.  不支援每個子網路有多個 IP 位址。  
   

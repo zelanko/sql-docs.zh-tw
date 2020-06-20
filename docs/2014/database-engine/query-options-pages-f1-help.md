@@ -8,16 +8,15 @@ helpviewer_keywords:
 ms.assetid: fad98caa-8a29-4b88-8464-f60a5c4fc00e
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 9ae4a5009c33067dcb5db2d26ff3e287b31b8768
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1c7a5084f3525c88a08b3fb45b5b29e693ea86a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71118128"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034878"
 ---
 # <a name="query-options-pages-f1-help"></a>查詢選項頁面 F1 說明
 

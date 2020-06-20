@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58d94afea9c6801d75a67f6f9136441d536eb696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81ceb839aa789985bd9de2d43c28c9f01c99af3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62956150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066382"
 ---
 # <a name="add-existing-items-to-a-project"></a>將現有的項目加入至專案
   請將新的項目加入專案中，來延伸應用程式功能。 現有項目可以是查詢或其他檔案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有兩種專案類型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案和 Analysis Services 指令碼專案。 專案類型決定了可以加入專案中的查詢檔。 例如，您可以將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 (副檔名是 .sql 的檔案) 加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案中，但您不能將它加入 Analysis Services 指令碼專案中。 若要將其他副檔名與專案類型產生關聯，請參閱[使副檔名與程式碼編輯器產生關聯](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  

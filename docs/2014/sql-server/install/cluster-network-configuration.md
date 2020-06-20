@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: 579482ef-a023-45b2-9176-b4a4188adf9d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48dca8e9ce522f2520521441b2e7eea349ff099b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04b0d412cd577fb0869f2188d99c1ea6a5646d2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096440"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037169"
 ---
 # <a name="cluster-network-configuration"></a>叢集網路組態
   使用 **[叢集網路選取]** 頁面，即可指定容錯移轉叢集執行個體的網路資源。  
   
-## <a name="options"></a>選項。  
- **容錯移轉叢集網路名稱-這是用來在網路上識別容錯移轉叢集實例的名稱。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
+## <a name="options"></a>選項  
+ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集網路名稱**-這是用來在網路上識別容錯移轉叢集實例的名稱。  
   
  **網路設定** ：指定容錯移轉叢集執行個體的 IP 類型和 IP 位址。  
   

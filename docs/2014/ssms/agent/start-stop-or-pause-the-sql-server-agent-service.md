@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c95a9759-dd30-4ab6-9ab0-087bb3bfb97c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f21d13149ffa90a2383e8f090b205b50efa54641
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f11ef36d72a029a906da29467fd9e4fe3a0cf8ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63246134"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067538"
 ---
 # <a name="start-stop-or-pause-the-sql-server-agent-service"></a>啟動、停止或暫停 SQL Server Agent 服務
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中啟動、停止或重新啟動 SQL Server Agent 服務。  
@@ -57,7 +56,7 @@ ms.locfileid: "63246134"
   
 -   調整處理序的記憶體配額 (SeIncreaseQuotaPrivilege)  
   
- 如需[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶所需之 Windows 許可權的詳細資訊，請參閱[選取 SQL Server Agent 服務的帳戶](select-an-account-for-the-sql-server-agent-service.md)和[設定 windows 服務帳戶與許可權](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+ 如需 Agent 服務帳戶所需之 Windows 許可權的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[選取 SQL Server Agent 服務的帳戶](select-an-account-for-the-sql-server-agent-service.md)和[設定 Windows 服務帳戶與許可權](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -71,7 +70,7 @@ ms.locfileid: "63246134"
   
 4.  當系統提示您是否要執行動作時，請按一下 **[是]**。  
   
- 如需詳細資訊，請參閱：  
+ 如需詳細資訊，請參閱  
   
 -   [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   

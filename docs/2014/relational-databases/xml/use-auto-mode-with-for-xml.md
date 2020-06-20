@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8b1acd069ebbb64c090cd167b2f6feb2903af3b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 232cc046667c6d31cb9657a7abdc862204507d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702423"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059409"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>搭配 FOR XML 使用 AUTO 模式
   如同 [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)中所述，AUTO 模式會將查詢結果當作巢狀 XML 元素傳回。 這對於從查詢結果產生出來的 XML 外觀，並未提供很大的控制權。 如果您想要產生簡單的階層，AUTO 模式查詢會很有用。 不過， [搭配 FOR XML 使用 EXPLICIT 模式](use-explicit-mode-with-for-xml.md) 和 [搭配 FOR XML 使用 PATH 模式](use-path-mode-with-for-xml.md) 提供更多控制權和彈性來從查詢結果決定 XML 的形狀。  
@@ -121,7 +120,7 @@ FOR XML AUTO, ELEMENTS
 ...  
 ```  
   
- 在此查詢中，建立 \<Cust> 項目時，會一一比較資料列中的 CustomerID 值，因為 CustomerID 是資料表的主索引鍵。 若未將 CustomerID 識別成資料表的主索引鍵，則會一一比較資料列中的所有資料行值 (在此查詢中是 CustomerID、CustomerType)。 若值有所差異，就會加入新的 \<Cust> 項目至 XML。  
+ 在此查詢中，CustomerID 值會在建立元素時，從一個資料列進行比較， \<Cust> 因為 customerid 是資料表的主鍵。 若未將 CustomerID 識別成資料表的主索引鍵，則會一一比較資料列中的所有資料行值 (在此查詢中是 CustomerID、CustomerType)。 如果值不同，則會將新的專案 \<Cust> 加入至 XML。  
   
  在比較這些資料行的值時，如果所要比較的任何資料行中具有 **text**、 **ntext**、 **image**或 **xml**類型，FOR XML 就會認定該值是不同的 (即使該值可能是相同的)，而不加以比較。 這是因為不支援比較大型物件。 針對所選取的每個資料列，都會將元素加入結果中。 請注意， **(n)varchar(max)** 及 **varbinary(max)** 的資料行會進行比較。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 80b472ee00aba60e2bc01883b79b570dbed07b4f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c31d56f7dd577b4b5a5b582eb0e3b1db312109a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703388"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068151"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>註解的解譯 (SQLXML 4.0)
   本章節的主題描述 XML 大量載入要如何解譯 XSD 結構描述中的註解。 這裡所述的行為也適用於 XDR 結構描述中的註解。  

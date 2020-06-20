@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: faeb72f875fd5427536ddd72db03ca71a25b293e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36c06fda23fc11c76df4d278a18095659d433567
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925941"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>ADO NET 目的地編輯器 (連線管理員頁面)
   使用 [ADO NET 目的地編輯器]**** 對話方塊的 [連線管理員]**** 頁面，即可選取目的地的 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連線。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
@@ -46,7 +45,7 @@ ms.locfileid: "70154026"
  使用 [建立資料表]**** 對話方塊來建立新的資料表或檢視。  
   
 > [!NOTE]  
->  當您按一下**New**[新增[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ] 時，會根據連接的資料來源產生預設的 CREATE TABLE 語句。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+>  當您按一下 [**新增**] 時，會根據 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 連接的資料來源產生預設的 CREATE TABLE 語句。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **預覽**  
  使用 [預覽查詢結果]**** 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  

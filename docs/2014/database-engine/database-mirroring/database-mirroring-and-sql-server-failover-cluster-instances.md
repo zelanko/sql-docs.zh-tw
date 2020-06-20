@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d317e04251b3dedfc587d98898a366cf6a360bb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755593"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934322"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>資料庫鏡像及 SQL Server 容錯移轉叢集執行個體
   容錯移轉叢集是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集服務 (MSCS) 叢集群組 (即所謂的資源群組) 中一或多個實體磁碟的結合，它們是叢集的參與節點。 資源群組會設定為主控 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的容錯移轉叢集執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體會以單一電腦的型態出現在網路上，但是它具有在一個節點無法使用時，提供從一個節點容錯移轉到另一個節點的功能。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
- 相較于資料庫鏡像，容錯移轉叢集可[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為整個實例提供高可用性支援，這會為單一資料庫提供高可用性支援。 資料庫鏡像可在容錯移轉叢集之間運作，也可以在容錯移轉叢集與非叢集主機之間運作。  
+ 相較于資料庫鏡像，容錯移轉叢集可為整個實例提供高可用性支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這會為單一資料庫提供高可用性支援。 資料庫鏡像可在容錯移轉叢集之間運作，也可以在容錯移轉叢集與非叢集主機之間運作。  
   
 > [!NOTE]  
 >  如需資料庫鏡像的簡介，請參閱 [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)。  

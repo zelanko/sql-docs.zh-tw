@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 976597ccb9130220ca6fac7fd422c0daf3122845
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630697"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067695"
 ---
 # <a name="operator-properties-new-operator-notifications-page"></a>操作員屬性：新增操作員 (通知頁面)
   使用此頁面即可設定通知操作員的警示和作業。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **警示**  
  檢視執行個體中的警示。  
   
- **工作**  
+ **作業**  
  檢視執行個體中的作業。  
   
  **警示清單**  

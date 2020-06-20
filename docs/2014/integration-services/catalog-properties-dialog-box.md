@@ -12,16 +12,15 @@ f1_keywords:
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f5bf6ecd9b78e4e7c35c63a1b84316d59da7a10
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061106"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924559"
 ---
 # <a name="catalog-properties-dialog-box"></a>目錄屬性對話方塊
-  使用 [目錄屬性] 對話方塊來設定 SSISDB 目錄。 目錄屬性會定義機密資料的加密方式、保留作業和專案版本設定資料的方式，以及驗證作業何時超時。SSISDB 目錄是[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]專案、封裝、參數與環境的中央儲存和管理點。  
+  使用 [目錄屬性] 對話方塊來設定 SSISDB 目錄。 目錄屬性會定義機密資料的加密方式、保留作業和專案版本設定資料的方式，以及驗證作業何時超時。SSISDB 目錄是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案、封裝、參數與環境的中央儲存和管理點。  
   
  您也可以在 catalog.catalog_property 檢視表中檢視目錄屬性，以及使用 catalog.configure_catalog 預存程序來設定屬性。 如需詳細資訊，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) 和 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)。  
   

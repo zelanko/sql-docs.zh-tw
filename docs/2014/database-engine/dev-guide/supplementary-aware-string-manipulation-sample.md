@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2df5fa785f715dbf63c7682148c20bbaf971d0c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 51fe880ce3865e44620e0f7ae88c2103b0796f38
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76928097"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933259"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>增補感知的字串操作範例
-  這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範例會示範補充字元感知的字串處理。 此範例顯示五個 Transact-SQL 字串函數的實作，這些字串函數提供的字串操作函數與內建函數相同，但是具有用於處理 Unicode 和補充字串的額外補充字元感知功能。 這五個函數都是透鏡（ `lefts(), rights(), subs()` ） `replace_s()` ，而這相當於內建函數`LEN(), LEFT(), RIGHT(), SUBSTRING()`和`REPLACE()`字串函式。  
+  這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範例會示範補充字元感知的字串處理。 此範例顯示五個 Transact-SQL 字串函數的實作，這些字串函數提供的字串操作函數與內建函數相同，但是具有用於處理 Unicode 和補充字串的額外補充字元感知功能。 這五個函數都是透鏡（）， `lefts(), rights(), subs()` 而 `replace_s()` 這相當於內建函數 `LEN(), LEFT(), RIGHT(), SUBSTRING()` 和 `REPLACE()` 字串函式。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  若要建立並執行這個專案，您必須安裝下列軟體：  
@@ -78,7 +77,7 @@ ms.locfileid: "76928097"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  將[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令腳本複製到檔案中，並將`test.sql`它儲存成範例目錄中的。  
+7.  將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存成 `test.sql` 範例目錄中的。  
   
 8.  使用下列命令來執行測試指令碼  
   

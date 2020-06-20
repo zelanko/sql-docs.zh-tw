@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ce71d591dc8f72e6826f7bcd96628fb1898fd7bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0360cf7e40536740b934c737da6c8329991611b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067960"
 ---
 # <a name="setdefaults-method-clientsettings-class"></a>SetDefaults 方法 (ClientSettings 類別)
-  使用覆寫現有資料的選項，設定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端實例的所有預設值。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用覆寫現有資料的選項，設定用戶端實例的所有預設值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +39,7 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  代表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端執行個體的 `ClientSettings` 物件。  
   
 #### <a name="parameters"></a>參數  

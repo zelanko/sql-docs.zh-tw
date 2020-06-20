@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 548e894f64aba590475472d843337d8de1fe5e0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e91328f4f12f2a0a27f397c7bd95390a505f3998
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62760995"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068119"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>停用 INSERT 和 UPDATE 陳述式的外部索引鍵條件約束
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用 INSERT 和 UPDATE 交易期間的外部索引鍵條件約束。 如果您確知新資料將違反現有條件約束，或是條件約束只適用於已經在資料庫中的資料，請使用此選項。  

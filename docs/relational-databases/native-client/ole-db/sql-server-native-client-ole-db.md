@@ -1,5 +1,6 @@
 ---
 title: OLE DB
+description: SQL Server Native Client OLE DB 提供者是用來存取資料的 COM API，用於工具、公用程式或需要高效能的低層級元件。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,24 +20,24 @@ ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6df931b1d79d930aa7900e8fbc6980aec58b9171
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5f945ca5abaa515823ea81ad30ca4292cc42690
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387746"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948663"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者（SQLNCLI）是用來存取資料的低層級 COM API。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建議將 Native Client OLE DB 提供者用於開發工具、公用程式或需要高效能的低階元件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是原生、高效能的提供者，會直接存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格式資料流 (TDS) 通訊協定。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者（SQLNCLI）是用來存取資料的低層級 COM API。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建議將 Native Client OLE DB 提供者用於開發工具、公用程式或需要高效能的低階元件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是原生、高效能的提供者，會直接存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格式資料流 (TDS) 通訊協定。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會對連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的應用程式提供 OLE DB 支援。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是 OLE DB 版本2.0 相容提供者。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者是 OLE DB 版本2.0 相容提供者。  
  
 > [!IMPORTANT]
-> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB （SQLNCLI）仍會被取代，不建議將它用於新的開發工作。 請改為使用新的 [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL)，其會進行更新且具備最新的伺服器功能。
+> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB （SQLNCLI）仍會被取代，不建議將它用於新的開發工作。 請改為使用新的 [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL)，其會進行更新且具備最新的伺服器功能。
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -44,7 +45,7 @@ ms.locfileid: "81387746"
   
 -   [資料來源物件 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
--   [命令](../../../relational-databases/native-client-ole-db-commands/commands.md)  
+-   [指令](../../../relational-databases/native-client-ole-db-commands/commands.md)  
   
 -   [資料列集](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
@@ -66,7 +67,7 @@ ms.locfileid: "81387746"
   
 -   [FILESTREAM 支援 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
--   [異動](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+-   [交易](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
 -   [錯誤](../../../relational-databases/native-client-ole-db-errors/errors.md)  
   
@@ -76,7 +77,7 @@ ms.locfileid: "81387746"
   
 -   [SQL Server Native Client &#40;OLE DB&#41; 參考](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [OLE DB how to 主題](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+-   [OLE DB 的使用說明主題](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 程式設計](../../../relational-databases/native-client/sql-server-native-client-programming.md)  

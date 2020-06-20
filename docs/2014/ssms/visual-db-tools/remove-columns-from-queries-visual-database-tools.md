@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 08230f1937d42247f8eeff09014f7727c6ebfe43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8532f5240729a2516a0c07ae943dd42dc01d9c1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659633"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035561"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>移除查詢的資料行 (Visual Database Tools)
   如果您不想再使用查詢中的資料行，可以將其移除。 一旦移除了，查詢和檢視設計師會移除選取清單、排序規格、搜尋準則、[SQL 窗格]  和所有群組規則中有關此資料行的參考。  

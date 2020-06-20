@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 593e51e34be3b607af121bfcba92497e019eba3f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1b39f5347a7ace6dc449be804144b105957b33e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703384"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068202"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 大量載入的指導方針和限制 (SQLXML 4.0)
   當您使用 XML 大量載入時，應該先熟悉下列指導方針和限制：  
@@ -35,9 +34,9 @@ ms.locfileid: "82703384"
   
 -   系統會忽略任何 XML 初構資訊。  
   
-     XML 大量載入會忽略 \< xml 檔中根> 元素之前和之後的所有資訊。 例如，XML 大量載入會忽略任何 XML 宣告、內部 DTD 定義、外部 DTD 參考、註解等等。  
+     XML 大量載入會忽略 \<root> xml 檔中元素之前和之後的所有資訊。 例如，XML 大量載入會忽略任何 XML 宣告、內部 DTD 定義、外部 DTD 參考、註解等等。  
   
--   如果您擁有的對應結構描述會定義兩個資料表之間 (例如 Customer 和 CustOrder 之間) 的主索引鍵/外部索引鍵關聯性，則必須先在結構描述中描述具有主索引鍵的資料表。 包含外部索引鍵資料行的資料表稍後必須出現在結構描述中。 這是因為在架構中識別資料表的順序，是用來將它們載入資料庫的順序。例如，下列 XDR 架構在 XML 大量載入中使用時會產生錯誤，因為** \< Order>** 元素會在** \< Customer>** 元素之前描述。 在 CustOrder 中的 CustomerID 資料行是外部索引鍵資料行，它會參考在 Cust 資料表中的 CustomerID 主索引鍵資料行。  
+-   如果您擁有的對應結構描述會定義兩個資料表之間 (例如 Customer 和 CustOrder 之間) 的主索引鍵/外部索引鍵關聯性，則必須先在結構描述中描述具有主索引鍵的資料表。 包含外部索引鍵資料行的資料表稍後必須出現在結構描述中。 這是因為在架構中識別資料表的順序，是用來將它們載入資料庫的順序。例如，下列 XDR 架構在 XML 大量載入中使用時會產生錯誤，因為元素會在專案 **\<Order>** 之前描述 **\<Customer>** 。 在 CustOrder 中的 CustomerID 資料行是外部索引鍵資料行，它會參考在 Cust 資料表中的 CustomerID 主索引鍵資料行。  
   
     ```  
     <?xml version="1.0" ?>  
@@ -77,7 +76,7 @@ ms.locfileid: "82703384"
   
 -   如果結構描述沒有使用 `sql:overflow-field` 註解指定溢位資料行，XML 大量載入會忽略顯示在 XML 文件中的任何資料，但是不會在對應結構描述中描述。  
   
-     每當 XML 大量載入在 XML 資料流中碰到已知的標記時，會套用您所指定的對應結構描述。 它會忽略顯示在 XML 文件中的資料，但是不會在結構描述中描述。 例如，假設您有一個描述** \< 客戶>** 元素的對應架構。 XML 資料檔案具有** \< AllCustomers>** 根標記（未在架構中說明），其中包含所有** \< 客戶>** 元素：  
+     每當 XML 大量載入在 XML 資料流中碰到已知的標記時，會套用您所指定的對應結構描述。 它會忽略顯示在 XML 文件中的資料，但是不會在結構描述中描述。 例如，假設您有一個描述元素的對應架構 **\<Customer>** 。 XML 資料檔案具有括住 **\<AllCustomers>** 所有元素的根標記（未在架構中說明） **\<Customer>** ：  
   
     ```  
     <AllCustomers>  
@@ -87,9 +86,9 @@ ms.locfileid: "82703384"
     </AllCustomers>  
     ```  
   
-     在此情況下，XML 大量載入會忽略** \< AllCustomers>** 元素，並在** \< Customer>** 元素開始對應。 XML 大量載入會忽略結構描述中沒有描述但是顯示在 XML 文件中的元素。  
+     在此情況下，XML 大量載入會忽略 **\<AllCustomers>** 元素，並在專案開始對應 **\<Customer>** 。 XML 大量載入會忽略結構描述中沒有描述但是顯示在 XML 文件中的元素。  
   
-     請考慮另一個包含** \< Order>** 元素的 XML 源資料檔案。 這些元素不會在對應的結構描述中描述：  
+     請考慮包含元素的另一個 XML 源資料檔案 **\<Order>** 。 這些元素不會在對應的結構描述中描述：  
   
     ```  
     <AllCustomers>  
@@ -105,11 +104,11 @@ ms.locfileid: "82703384"
     </AllCustomers>  
     ```  
   
-     XML 大量載入會忽略這些** \< Order>** 元素。 但是，如果您在 `sql:overflow-field` 架構中使用批註來識別資料行做為溢位資料行，則 XML 大量載入會將所有未耗用的資料儲存在此資料行中。  
+     XML 大量載入會忽略這些 **\<Order>** 元素。 但是，如果您在 `sql:overflow-field` 架構中使用批註來識別資料行做為溢位資料行，則 XML 大量載入會將所有未耗用的資料儲存在此資料行中。  
   
 -   CDATA 區段和實體參考會在儲存在資料庫之前，先轉譯成其對等字串。  
   
-     在此範例中，CDATA 區段會包裝** \< City>** 元素的值。 XML 大量載入會先解壓縮字串值（"NY"），然後再將** \< City>** 元素插入資料庫中。  
+     在此範例中，CDATA 區段會包裝元素的值 **\<City>** 。 XML 大量載入會先解壓縮字串值（"NY"），然後再將 **\<City>** 元素插入資料庫。  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -142,7 +141,7 @@ ms.locfileid: "82703384"
     </Schema>  
     ```  
   
-     在此 XML 資料中，第二個** \< 客戶>** 元素中遺漏了「**雇用**項」屬性。 當 XML 大量載入將第二個** \< 客戶>** 元素插入資料庫時，它會使用架構中指定的預設值。  
+     在此 XML 資料中，第二個元素中遺漏了「**雇用**項」屬性 **\<Customers>** 。 當 XML 大量載入將第二個 **\<Customers>** 元素插入資料庫時，它會使用架構中指定的預設值。  
   
     ```  
     <ROOT>  

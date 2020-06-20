@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2b546ea99aac7d645cc41746bc0bae757f852050
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c71d2350b472c47f1d48b0b9279f457cd97d58af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702388"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059372"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>使用 XML 資料行進行全文檢索搜尋
   您可以在 XML 資料行上建立全文檢索索引，以檢索 XML 值的內容，但忽略 XML 標記。 元素標記會當做 Token 界限來使用。 其中會檢索下列項目：  

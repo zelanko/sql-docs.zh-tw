@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8a5eca5aef966d205ef550b05eff2d7055e4cb28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7fe32916e0199e846dc44c7f0c8da757d41b41c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127170"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050701"
 ---
 # <a name="srv_paramname-extended-stored-procedure-api"></a>srv_paramname (擴充預存程序 API)
     
@@ -52,7 +51,7 @@ SRV_PROC * srvproc,intn, int *len );
  *len*  
  提供包含參數名稱長度 (以位元組為單位) 之 `int` 變數的指標。 如果 *len* 為 NULL，則不會傳回遠端預存程序參數名稱的長度。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  包含參數名稱且以 Null 結束之字元字串的指標。 參數名稱的長度會儲存在 *len* 中。 如果沒有第 *n* 個參數或沒有任何遠端預存程序，其會傳回 NULL、將 *len* 設定為 -1，並會傳送參考用錯誤訊息。 如果參數名稱為 NULL，*len* 就會設定為 0，而且傳回以 Null 結束的空字串。  
   
 ## <a name="remarks"></a>備註  

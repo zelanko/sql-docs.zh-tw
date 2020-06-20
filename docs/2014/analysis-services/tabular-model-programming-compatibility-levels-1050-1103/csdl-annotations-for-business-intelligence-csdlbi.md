@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0348c262453d2de8e4db0c379b5bf70a2d7d7977
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3414b0d8b2614e83f62e85c4f750ee0e8c7397d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525449"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940169"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>商業智慧的 CSDL 註解 (CSDLBI)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援 XML 格式中稱為「概念結構定義語言商業智慧註解」(CSDLBI) 的表格式模型定義表示法。  
