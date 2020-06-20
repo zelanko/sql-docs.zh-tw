@@ -1,5 +1,5 @@
 ---
-title: '&lt;別名&gt;屬性（別名索引標籤） |Microsoft Docs'
+title: '&lt;別名 &gt; 屬性（別名索引標籤） |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ee874caeaa8be9e7b050336f74bab9487f15884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 559cc01b1fb2de42c061e21762495019e1896670
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035297"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008347"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; 屬性 ([別名] 索引標籤)
-  別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 使用 [**Alias name> Properties (<別名名稱> 內容)]** **\<** 對話方塊的 [別名]  頁面來指定別名的連接字串元素。  
+  別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 使用 [ ** \<**Alias name**> 屬性**] 對話方塊上的 [**別名**] 頁面，即可查看或指定別名的連接字串元素。  
   
 ## <a name="options"></a>選項。  
  **別名名稱**  

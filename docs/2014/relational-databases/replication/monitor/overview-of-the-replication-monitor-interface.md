@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b76d4df23f5d8bb25664ba0f1d294deca9be0418
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62668984"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057173"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>複寫監視器介面概觀
   「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」以兩個窗格來針對所有複寫活動呈現以「發行者」或「散發者」為焦點的檢視。 您可將發行者加入監視器的左窗格中，監視器的右窗格便會顯示關於發行者及其發行集、這些發行集的訂閱，以及各種複寫代理程式的資訊。 除了呈現複寫拓撲的資訊外，「複寫監視器」還可讓您執行一些工作，例如啟動和停止代理程式，以及驗證資料。  
@@ -225,7 +224,7 @@ ms.locfileid: "62668984"
   
      此對話方塊可讓您變更設定檔的屬性、建立及刪除設定檔、指定預設設定檔，以及指定所有特定類型的代理程式 (如快照集代理程式) 都應該使用給定的設定檔。  
   
--   **\<AgentProfileName> 屬性**  
+-   **\<AgentProfileName>屬性**  
   
      此對話方塊可讓您檢視和編輯設定檔中的參數設定。  
   

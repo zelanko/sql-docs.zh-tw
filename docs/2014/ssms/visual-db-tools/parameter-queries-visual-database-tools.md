@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03ede58be73ed422c4049eaabb789d09465129fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63194993"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001189"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>參數查詢 (Visual Database Tools)
   有時候您想要建立可以使用多次的查詢，但每次都使用不同的值。 例如，您可能經常執行查詢尋找由某位作者所寫的所有 `title_ids` 。 除了每次使用的作者 ID 或名稱不同外，每次要求時您可以執行相同的查詢。  

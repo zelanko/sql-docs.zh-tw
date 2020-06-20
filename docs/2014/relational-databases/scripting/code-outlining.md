@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 01383ffade91cde641018b90be30dc92e644b151
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 03abb1dc601c7b329742f290b9ce62aefd08e7bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704074"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056889"
 ---
 # <a name="code-outlining"></a>程式碼大綱
   您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 查詢編輯器中的大綱功能，在您編輯查詢時選擇性地隱藏程式碼。 這可讓您更輕易地檢視正在處理的程式碼，尤其是處理大型查詢檔案的情況。
@@ -36,7 +35,7 @@ ms.locfileid: "82704074"
 
  ![顯示大綱的 XML 程式碼](../../database-engine/media/editoutlinexmlfull.gif "顯示大綱的 XML 程式碼")
 
- 當您按一下 \<InnerTag> 行的減號時，只會摺疊 InnerTag，如下圖所示。
+ 當您按一下該行的減號時 \<InnerTag> ，只會折迭 g，如下圖所示。
 
  ![具有內部隱藏節點的 XML 程式碼](../../database-engine/media/editoutlinexmlinnercol.gif "具有內部隱藏節點的 XML 程式碼")
 
@@ -44,11 +43,11 @@ ms.locfileid: "82704074"
 
  ![顯示隱藏程式碼的 XML 程式碼工具提示](../../database-engine/media/editoutlinexmlmouse.gif "顯示隱藏程式碼的 XML 程式碼工具提示")
 
- 當您按一下 \<MiddleTag> 行的減號時，就會同時摺疊 MiddleTag 和 InnerTag，如下圖所示。
+ 當您按一下該行的減號時 \<MiddleTag> ，MiddleTag 和 g 都會折迭，如下圖所示。
 
  ![隱藏內部和中間標籤的 XML 程式碼](../../database-engine/media/editoutlinexmlmiddlecol.gif "具有內部及中間隱藏標籤的 XML 程式碼")
 
- 當您按一下 \<OuterTag> 行的減號時，就會摺疊這三行，如下圖所示。
+ 當您按一下該行的減號時，就會折迭 \<OuterTag> 這三行，如下圖所示。
 
  ![顯示所有三個隱藏標籤的 XML 程式碼](../../database-engine/media/editoutlinexmloutercol.gif "顯示所有三個隱藏標籤的 XML 程式碼")
 

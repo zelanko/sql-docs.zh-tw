@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 42e068120e3eae54580d58e0f4d525ab5451d864
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7bf434243cf02c3827e48feb4543339bfcfab32b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703718"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049023"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定中斷點篩選條件
   中斷點篩選條件會限制中斷點只能在指定的電腦、作業系統處理序和執行緒上運作。 中斷點篩選條件通常是在偵錯平行應用程式時使用。  

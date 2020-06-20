@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7c04fe1d-6669-44a1-8b73-36d469e9b002
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1b53076a7528d0e9eaff1244c206dee4127150e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93b2ab4279378b4cd392d97a9b65f299d0e9c6dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63063134"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057727"
 ---
 # <a name="xml-input-file-sample-with-inline-workload-dta"></a>含內嵌工作負載的 XML 輸入檔範例 (DTA)
   請複製利用 **EventString** 元素指定工作負載的這個 XML 輸入檔範例，再將它貼到您喜愛的 XML 編輯器或文字編輯器中。 您可以利用 **EventString** 元素，在 XML 輸入檔中指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作負載，而不使用個別的工作負載檔案。 將這個範例複製到編輯工具之後，請利用您的特定微調工作階段的各個值來取代指定給 **Server**、 **Database**、 **Schema**、 **Table**、 **Workload**、 **EventString**和 **TuningOptions** 等元素的值。 如需可以搭配這些元素來使用的所有屬性和子元素的詳細資訊，請參閱 [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)。 下列範例只用到部份可用的屬性及子元素選項。  
@@ -31,8 +30,8 @@ ms.locfileid: "63063134"
  `USE database_name` EventString **EventString** 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動並使用 Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
- [查看並使用 Database Engine Tuning Advisor 的輸出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
+ [啟動及使用 Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
+ [檢視及處理 Database Engine Tuning Advisor 的輸出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
  [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

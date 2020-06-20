@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40f9de4108be4defeb2353a9e7835c289641a819
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162409"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025554"
 ---
 # <a name="disable-indexes-and-constraints"></a>停用索引和條件約束
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用索引或條件約束。 停用索引會防止使用者存取索引，而停用叢集索引則會防止存取基礎資料表資料。 索引定義會保留在中繼資料內，而索引統計資料會保留在非叢集索引上。 停用檢視上的非叢集或叢集索引，實際上會刪除索引資料。 停用資料表上的叢集索引，則會防止存取資料；這些資料仍留在資料表中，但無法用於資料操作語言 (DML) 作業，除非卸除或重建索引。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5dfd7df8104519cf09ad72ffee3c5214af2a3d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63031965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058168"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>建立插入結果查詢 (Visual Database Tools)
   您可以使用插入結果查詢，將某個資料表的資料列複製到另一個資料表，或者在資料表中複製資料列。 例如，在 `titles` 資料表中，您可以使用插入結果查詢，將關於某個簽發者所有標題的資訊，複製到可供該簽發者使用的第二份資料表。 插入結果查詢與製成資料表查詢 (Make Table Query) 類似，但是可以將資料列複製到現有的資料表中。  
@@ -80,7 +79,7 @@ WHERE (pub_id = '0766')
   
      查詢和檢視表設計工具會將您選擇的資料行新增至 [準則] 窗格的 [資料行]  欄位中。  
   
-5.  在 [準則] 窗格的 [附加]  欄位中，在目的資料表中，為您要複製的每個資料行選取目標資料行。 如果您要複製整個資料列，請選擇*tablename。\* * 目的資料表的資料行必須與來源資料表的資料行具有相同 (或相容) 的資料類型。  
+5.  在 [準則] 窗格的 [附加]  欄位中，在目的資料表中，為您要複製的每個資料行選取目標資料行。 如果您要複製整個資料列，請選擇*tablename。 \* * 目的資料表的資料行必須與來源資料表的資料行具有相同 (或相容) 的資料類型。  
   
 6.  若要以特定次序複製資料列，請指定排序次序。 如需詳細資訊，請參閱[排序及分組查詢結果 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)。  
   

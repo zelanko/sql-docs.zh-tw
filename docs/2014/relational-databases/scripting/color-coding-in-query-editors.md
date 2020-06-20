@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 840096c197a2e827281bb0023ad03a6d407f3758
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b5391479ad7f1db64383049a5a6c9aefa3abadd4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704048"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056869"
 ---
 # <a name="color-coding-in-query-editors"></a>查詢編輯器中的色彩編碼
   在程式碼編輯器中輸入的文字會指派至類別目錄；每一個類別目錄都會以色彩識別。 這些色彩可協助您快速地找到程式碼中的文字。 例如，註解會以深綠色突顯出來。 下表將列出最常見的色彩。 您可以檢視色彩及其類別目錄的完整清單，也可以使用 [工具]  和 [選項]  功能表來設定自訂的色彩配置。 如需如何變更預設色彩的詳細資訊，請參閱 [變更字型色彩、大小與樣式](change-font-color-size-and-style.md)。  

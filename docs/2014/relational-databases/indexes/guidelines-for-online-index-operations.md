@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 907fe6a826607fe1cb403ad9b8debe6faf6771fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162480"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025415"
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
   當您執行線上索引作業時，下列指導方針將適用：  
   
--   當基礎資料表包含下列大型物件（LOB）資料類型時，必須離線建立、重建或卸載叢集索引： `image`、 **Ntext**和。 `text`  
+-   當基礎資料表包含下列大型物件（LOB）資料類型時，必須離線建立、重建或卸載叢集索引： `image` 、 **Ntext**和 `text` 。  
   
 -   您無法在線上建立、重建或卸除本機暫存資料表的索引。 此限制不適用於全域暫存資料表上的索引。  
   
 > [!NOTE]  
->  並非所有版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都可以使用線上索引作業。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都可以使用線上索引作業。 如需版本支援的功能清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  下表顯示可以線上執行的索引作業以及從這些線上作業排除的索引。 也包含其他限制。  
   

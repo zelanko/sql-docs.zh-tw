@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c99847dcb8d4d65272dd3660c7fd60d3efb8d951
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63036211"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049908"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>將現有的索引移至不同的檔案群組
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將目前檔案群組的現有索引移到不同的檔案群組。  
@@ -73,7 +72,7 @@ ms.locfileid: "63036211"
   
 8.  按一下 [關閉]  。  
   
-9. 在 [檔案]  功能表上，選取 [儲存 **table_name**]  。  
+9. 在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>若要在物件總管中將現有的索引移到不同的檔案群組  
   
@@ -95,7 +94,7 @@ ms.locfileid: "63036211"
   
      如果您要移動叢集索引，可使用線上處理。 線上處理允許並行使用者在索引作業期間，存取基礎資料和非叢集索引。 如需詳細資訊，請參閱 [Perform Index Operations Online](perform-index-operations-online.md)。  
   
-     在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多處理器電腦上，您可以指定平行處理原則的最大程度值，藉以設定用來執行索引陳述式的處理器數目。 並非每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本都可使用平行索引作業功能。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如需平行索引作業的詳細資訊，請參閱 [設定平行索引作業](configure-parallel-index-operations.md)。  
+     在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多處理器電腦上，您可以指定平行處理原則的最大程度值，藉以設定用來執行索引陳述式的處理器數目。 並非每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本都可使用平行索引作業功能。 如需版本支援的功能清單 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如需平行索引作業的詳細資訊，請參閱 [設定平行索引作業](configure-parallel-index-operations.md)。  
   
 8.  按一下 [確定]  。  
   

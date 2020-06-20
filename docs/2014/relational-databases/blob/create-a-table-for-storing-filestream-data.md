@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 029c3059-5c83-43e2-a859-9027031b7de1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b1a81cd7442e73723b9b1d7c4d0b0cd41101b95b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 484d7b58ce949df79dc7e17ee4dc7307b70c0154
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010324"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955604"
 ---
 # <a name="create-a-table-for-storing-filestream-data"></a>建立儲存 FILESTREAM 資料的資料表
   此主題說明如何建立儲存 FILESTREAM 資料的資料表。  

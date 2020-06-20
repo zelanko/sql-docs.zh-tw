@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bc0f9319e4d598548111b44b1a10542773a7daa4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aae8cc30028b4b6345db56994b2245a47a3b785d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049140"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058025"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>指定群組條件 (Visual Database Tools)
   您可以指定套用至整體群組的條件 (即 HAVING 子句)，以限制出現在查詢中的群組。 在資料經過分組及彙總 (Aggregate) 之後，便會套用 HAVING 子句中的條件。 只有符合條件的群組才會出現在查詢結果中。  

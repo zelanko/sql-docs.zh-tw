@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 561c0fc56e1f1749c57876f16c4d24dadfe4931d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184553"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024460"
 ---
 # <a name="maintenance-plan-design-tab"></a>維護計畫 (設計索引標籤)
   使用 [維護計畫 (設計索引標籤)]  可指定維護計畫及其子計畫的屬性。 將工作從工具箱拖曳至計畫設計師。 在工作群組按一下滑鼠右鍵，即可建立分支執行路徑。 維護計畫會儲存為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，然後由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行。  
@@ -58,7 +57,7 @@ ms.locfileid: "63184553"
  **設計師介面**  
  設計維護計畫並予以維護。 使用設計師介面即可將維護工作加入計畫、從計畫中移除工作、指定工作間的優先順序連結以及指出工作分支和平行處理原則。  
   
- 兩個工作間的優先順序連結會建立工作間的關聯性。 只有在第一個工作 (「前導工作」  ) 的執行結果符合指定的準則時，才會執行第二個工作 (「相依工作」  )。 一般而言，指定的執行結果會是 **[成功]** 、 **[失敗]** 或 **[完成]** 。 維護計畫設計師介面是以 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師介面為基礎。 如需詳細資訊，請參閱 [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)。  
+ 兩個工作間的優先順序連結會建立工作間的關聯性。 只有在第一個工作 (「前導工作」) 的執行結果符合指定的準則時，才會執行第二個工作 (「相依工作」)。 一般而言，指定的執行結果會是 **[成功]** 、 **[失敗]** 或 **[完成]** 。 維護計畫設計師介面是以 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師介面為基礎。 如需詳細資訊，請參閱 [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)。  
   
  例如，只有先前的 [檢查資料庫完整性] 工作順利完成之後，才能指定執行 [重組索引工作]。 工作優先順序連結功能，也可以在計畫中處理錯誤或失敗的狀況。 例如，如果 [檢查資料庫完整性] 工作失敗，[通知操作員] 工作可將失敗通知使用者或操作員。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "63184553"
   
  將維護工作放到設計介面中之後，就可以依需求編輯其屬性。 例如，將工作加入計畫之後，就可以在 [備份資料庫工作] 中指定要備份的特定資料庫。 設計介面上的工作如果設定不正確，會顯示包含白色 x 的紅色圖示。  
   
- 若要將維護工作加入計畫，請將工作的圖示從 [維護計畫工作]  工具箱拖曳到計畫設計介面，或按兩下工具箱中的工作，這會將該工作加入目前使用中的設計師介面。 如果看不到 [維護計畫工作]  工具箱，請從  **[檢視]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能表選擇 [工具箱]  。 在 [工具箱]  窗格中展開 [維護計畫工作]  節點。  
+ 若要將維護工作加入計畫，請將工作的圖示從 [維護計畫工作]  工具箱拖曳到計畫設計介面，或按兩下工具箱中的工作，這會將該工作加入目前使用中的設計師介面。 如果看不到 [維護計畫工作]  工具箱，請從  **[檢視]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能表選擇 [工具箱]  。 在 [工具箱] 窗格中展開 [維護計畫工作] 節點。  
   
  若要從計畫中移除工作，請在設計師介面選取該工作，然後按下 **DELETE** 鍵，或以滑鼠右鍵按一下該工作，然後按一下 [刪除]  。  
   

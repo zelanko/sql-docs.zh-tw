@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 169ab149df11de12e5cf5452b0f8176737fb5dba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdf21fd472d0a29172771883537c3c09489a5fe4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510010"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001434"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>視窗對話方塊 (Microsoft 文件總管說明)
   此對話方塊可以讓您顯示、關閉以及排列在編輯器和設計師中開啟的文件。 您可以在 [視窗]  功能表上按一下 [視窗]  來顯示此對話方塊。  

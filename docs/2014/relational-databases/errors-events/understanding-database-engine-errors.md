@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa8747066433488a8517d2931ad51f082075a66f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761675"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031273"
 ---
 # <a name="understanding-database-engine-errors"></a>了解 Database Engine 錯誤
   下表描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所引發錯誤的屬性。  

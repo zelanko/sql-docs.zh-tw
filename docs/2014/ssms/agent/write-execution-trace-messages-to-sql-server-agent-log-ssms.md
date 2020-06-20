@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fd21f4b08bf53d4715f2b99eefed523f3853c033
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa3c7b4800f95a9a6f32aab8cbd112902ac1fc52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001562"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
-  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在中設定 Agent 將執行追蹤訊息納入其錯誤記錄檔中。  
+  本主題描述如何使用， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在中設定 Agent 將執行追蹤訊息納入其錯誤記錄檔中 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
  **本主題內容**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63245436"
   
 -   調整處理序的記憶體配額 (SeIncreaseQuotaPrivilege)  
   
- 如需[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶所需之 Windows 許可權的詳細資訊，請參閱[選取 SQL Server Agent 服務的帳戶](select-an-account-for-the-sql-server-agent-service.md)和[設定 windows 服務帳戶與許可權](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+ 如需 Agent 服務帳戶所需之 Windows 許可權的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[選取 SQL Server Agent 服務的帳戶](select-an-account-for-the-sql-server-agent-service.md)和[設定 Windows 服務帳戶與許可權](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 ##  <a name="SSMSProcedure"></a>   
 #### <a name="to-write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>若要將執行追蹤訊息寫入 SQL Server Agent 錯誤記錄檔  
@@ -68,6 +67,6 @@ ms.locfileid: "63245436"
   
 3.  在 [ **SQL Server Agent 屬性-**_server_name_ ] 對話方塊的 [**一般**] 頁面的 [**錯誤記錄**檔] 底下，選取 [**包含執行追蹤訊息**] 核取方塊。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 97bf5b2f1838531c305cf663d050201d5f34ce82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79ad7f1f7df15fed21a132bbe253adc7185d8c06
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010926"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055475"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>檢視或變更已註冊的篩選與斷詞工具
   在系統上安裝或解除安裝任何斷詞工具或篩選器之後，這些變更不會自動在伺服器執行個體上生效。 此主題描述如何檢視目前已註冊的斷詞工具或篩選，以及如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上註冊新安裝的斷詞工具和篩選。  

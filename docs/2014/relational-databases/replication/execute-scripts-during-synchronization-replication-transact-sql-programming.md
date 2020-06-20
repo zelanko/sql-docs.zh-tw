@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2565eb2be68c1e964b82d46d9aa8fc9f39a01f70
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4bc217ad160a0238cc4247600d65eb32f156071f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010695"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>在同步處理期間執行指令碼 (複寫 Transact-SQL 程式設計)
   複寫可支援視需要針對交易式與合併式發行集的訂閱者執行指令碼。 這項功能會將指令碼複製到複寫工作目錄，然後使用 **sqlcmd** 將指令碼套用到訂閱者。 依預設，如果針對交易式發行集的訂閱套用指令碼時發生失敗，則散發代理程式將會停止。 您可以使用複寫預存程序以程式設計的方式指定要執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。  
@@ -32,7 +31,7 @@ ms.locfileid: "74165020"
   
 2.  將指令碼檔案儲存到可由發行集之快照集代理程式存取的位置。  
   
-3.  在發行集資料庫的發行者上，執行 [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql)。 針對** \@scriptfile**指定** \@發行**集、在步驟2中為其建立完整 UNC 路徑的指令檔名，以及** \@skiperror**的下列其中一個值：  
+3.  在發行集資料庫的發行者上，執行 [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql)。 針對** \@ scriptfile**指定** \@ 發行**集、在步驟2中為其建立完整 UNC 路徑的指令檔名，以及** \@ skiperror**的下列其中一個值：  
   
     -   **0** - 如果遇到錯誤，代理程式將會停止執行指令碼。  
   

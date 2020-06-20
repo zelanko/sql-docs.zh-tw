@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c39f3ec3-fc2c-4c12-940f-60d8d3d17660
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e16882247a123b32ba07fbbae0d1f3573fd2d678
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32188b1c47168aefbca914fa15f71850df716153
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036251"
 ---
 # <a name="sql-server-agent-service-cannot-use-sql-server-authentication"></a>SQL Server Agent 服務無法使用 SQL Server 驗證
   當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式服務連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式只支援 Windows 驗證。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a07ba7d4af55fa4215a7b08ae34b718d4de46cd4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6d4619dc87bf7dfbc34f4d835ee21bced27f1a52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694584"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056243"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode 提供了 [IBCPSession::BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md) 的替代方式，可用於指定資料行格式。 不同於設定個別資料行格式屬性的 IBCPSession::BCPColFmt，IBCPSession2::BCPSetBulkMode 會設定所有屬性。  
@@ -69,12 +68,12 @@ HRESULT BCPSetBulkMode (
   
  下表將列出 *property* 參數的常數。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP 中的-c 選項。EXE，並將*eUserDataType*屬性設定為，以 IBCPSession：： BCPColFmt `BCP_TYPE_SQLCHARACTER` 。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP 中的-w 選項。將*eUserDataType*屬性設定為的 EXE 和 IBCPSession：： BCPColFmt `BCP_TYPE_SQLNCHAR` 。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應至 BCP 中的-N 選項。*eUserDataType* `BCP_TYPE_SQLNCHAR` 如果資料行類型為字串，或如果不是字串，則為 eUserDataType 屬性設定為的 EXE 和 IBCPSession：： BCPColFmt `BCP_TYPE_DEFAULT` 。|  
-|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應至 BCP 中的-n 選項。將*eUserDataType*屬性設定為的 EXE 和 IBCPSession：： BCPColFmt `BCP_TYPE_DEFAULT` 。|  
+|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP.EXE 中的-c 選項，以及 IBCPSession：： BCPColFmt，並將*eUserDataType*屬性設定為 `BCP_TYPE_SQLCHARACTER` 。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP.EXE 和 IBCPSession：： BCPColFmt 中的-w 選項，並將*eUserDataType*屬性設定為 `BCP_TYPE_SQLNCHAR` 。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應至 BCP.EXE 和 IBCPSession：： BCPColFmt 中的-N 選項，其中*eUserDataType*屬性設定為， `BCP_TYPE_SQLNCHAR` 如果資料行類型是字串或 `BCP_TYPE_DEFAULT` 不是字串。|  
+|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應至 BCP.EXE 和 IBCPSession：： BCPColFmt 中的-n 選項，並將*eUserDataType*屬性設定為 `BCP_TYPE_DEFAULT` 。|  
   
  您可以針對不會與 IBCPSession2::BCPSetBulkMode 發生衝突的 IBCPSession::BCPControl 選項呼叫 IBCPSession::BCPControl 和 IBCPSession2::BCPSetBulkMode。 例如，您可以使用 `BCP_OPTION_FIRST` 和 IBCPSession2：： BCPSetBulkMode 來呼叫 IBCPSession：： BCPControl。  
   

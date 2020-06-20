@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d3f2412114e50292c91908b3a20c433d022b239
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057608"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>將已排程的原則部署至多個執行個體
   您可以使用已註冊的伺服器，將已排程的原則從中央位置部署到 Managed 伺服器。 您可以從本機伺服器群組，或從中央管理伺服器部署已排程的原則。  
@@ -28,7 +27,7 @@ ms.locfileid: "68185808"
   
  您必須在已完成本課程先前工作的電腦上執行這些工作。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  此工作的必要條件如下：  
   
 -   您必須先完成本課程先前的工作。  
@@ -92,10 +91,10 @@ ms.locfileid: "68185808"
 ## <a name="summary"></a>摘要  
  本教學課程已為您示範如何針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個或多個執行個體，視需要或按排程來執行最佳做法原則的評估。  
   
-## <a name="next"></a>下一頁  
+## <a name="next"></a>下一個  
  本教學課程已完成。 若要回到開頭，請參閱[教學課程：使用以原則為基礎的管理來評估最佳作法](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)。  
   
- 若要查看教學課程[!INCLUDE[ssDE](../includes/ssde-md.md)]的清單，請按一下 [[資料庫引擎教學](../relational-databases/database-engine-tutorials.md)課程]。  
+ 若要查看教學課程的清單 [!INCLUDE[ssDE](../includes/ssde-md.md)] ，請按一下 [[資料庫引擎教學](../relational-databases/database-engine-tutorials.md)課程]。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用原則式管理來管理伺服器](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

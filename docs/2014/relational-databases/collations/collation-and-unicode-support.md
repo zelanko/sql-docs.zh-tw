@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9a7c6c48229aa827aaed178e5ed4448c20431b9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970568"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的定序會提供資料的排序規則、大小寫和區分腔調字屬性。 與字元資料類型 (例如 `char` 和 `varchar`) 搭配使用的定序會指示字碼頁，以及可針對該資料類型表示的對應字元。 不論您是安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的新執行個體、還原資料庫備份，還是將伺服器連接至用戶端資料庫，請務必了解您即將使用之資料的地區設定需求、排序次序和區分大小寫與腔調字。 若要列出您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所提供的定序，請參閱 [sys。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)。  
@@ -135,7 +134,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  下表將提供搭配 Unicode 和非 Unicode 伺服器的各種組合來使用多國語言資料的相關資訊。  
   
-|Server (伺服器)|Client|好處或限制|  
+|伺服器|Client|好處或限制|  
 |------------|------------|-----------------------------|  
 |Unicode|Unicode|由於 Unicode 資料將在整個系統中使用，所以這個狀況可提供最佳效能，並防止所擷取的資料遭到損毀。 這是 ActiveX Data Objects (ADO)、OLE DB 和 ODBC 3.7 版或更新版本的情況。|  
 |Unicode|非 Unicode|在此狀況中，特別是執行新版作業系統的伺服器與執行舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或在舊版作業系統上執行的用戶端之間存在連接，當您將資料移至用戶端電腦時，可能會有一些限制或錯誤。 伺服器上的 Unicode 資料將嘗試對應至非 Unicode 用戶端上的對應字碼頁，以便轉換資料。|  
@@ -144,7 +143,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a>增補字元  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供資料類型（例如`nchar`和`nvarchar` ）以儲存 Unicode 資料。 這些資料類型會使用稱為 *UTF-16*的格式來編碼文字。 Unicode Consortium 會為每個字元配置唯一的字碼指標，其值介於 0x0000 到 0x10FFFF 的範圍。 最常用的字元具有可在記憶體和磁碟上納入 16 位元單字的字碼指標值，但是字碼指標值大於 0xFFFF 的字元則需要兩個連續的 16 位元單字。 這些字元稱為 *「增補字元」*(Supplementary Character)，而這兩個連續的 16 位元單字則稱為 *「Surrogate 字組」*(Surrogate Pair)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供資料類型（例如 `nchar` 和） `nvarchar` 以儲存 Unicode 資料。 這些資料類型會使用稱為 *UTF-16*的格式來編碼文字。 Unicode Consortium 會為每個字元配置唯一的字碼指標，其值介於 0x0000 到 0x10FFFF 的範圍。 最常用的字元具有可在記憶體和磁碟上納入 16 位元單字的字碼指標值，但是字碼指標值大於 0xFFFF 的字元則需要兩個連續的 16 位元單字。 這些字元稱為 *「增補字元」*(Supplementary Character)，而這兩個連續的 16 位元單字則稱為 *「Surrogate 字組」*(Surrogate Pair)。  
   
  如果您使用增補字元：  
   
@@ -175,7 +174,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |字串函數或運算子|搭配 SC 定序|不搭配 SC 定序|  
 |---------------------------------|--------------------------|-----------------------------|  
 |[CHARINDEX](/sql/t-sql/functions/charindex-transact-sql)<br /><br /> [LEN](/sql/t-sql/functions/len-transact-sql)<br /><br /> [PATINDEX](/sql/t-sql/functions/patindex-transact-sql)|將 UTF-16 Surrogate 字組視為單一字碼指標。|將 UTF-16 Surrogate 字組視為兩個字碼指標。|  
-|[LEFT](/sql/t-sql/functions/left-transact-sql)<br /><br /> [REPLACE](/sql/t-sql/functions/replace-transact-sql)<br /><br /> [REVERSE](/sql/t-sql/functions/reverse-transact-sql)<br /><br /> [RIGHT](/sql/t-sql/functions/right-transact-sql)<br /><br /> [SUBSTRING](/sql/t-sql/functions/substring-transact-sql)<br /><br /> [STUFF](/sql/t-sql/functions/stuff-transact-sql)|這些函數會將每個 Surrogate 字組視為單一字碼指標，並且如預期方式運作。|這些函數可能會將 Surrogate 字組拆開，造成無法預期的結果。|  
+|[LEFT](/sql/t-sql/functions/left-transact-sql)<br /><br /> [取代](/sql/t-sql/functions/replace-transact-sql)<br /><br /> [反向](/sql/t-sql/functions/reverse-transact-sql)<br /><br /> [RIGHT](/sql/t-sql/functions/right-transact-sql)<br /><br /> [子字串](/sql/t-sql/functions/substring-transact-sql)<br /><br /> [STUFF](/sql/t-sql/functions/stuff-transact-sql)|這些函數會將每個 Surrogate 字組視為單一字碼指標，並且如預期方式運作。|這些函數可能會將 Surrogate 字組拆開，造成無法預期的結果。|  
 |[NCHAR](/sql/t-sql/functions/nchar-transact-sql)|傳回對應至指定之 Unicode 字碼指標值 (在 0 到 0x10FFFF 的範圍內) 的字元。 如果指定的值位於 0 到 0xFFFF 的範圍內，就會傳回單一字元。 若為更高的值，則傳回對應的 Surrogate。|高於 0xFFFF 的值會傳回 NULL 而非對應的 Surrogate。|  
 |[消除](/sql/t-sql/functions/unicode-transact-sql)|傳回 UTF-16 字碼指標 (在 0 到 0x10FFFF 的範圍內)。|傳回 UCS-2 字碼指標 (在 0 到 0xFFFF 的範圍內)。|  
 |[符合單一萬用字元](/sql/t-sql/language-elements/wildcard-match-one-character-transact-sql)<br /><br /> [萬用字元 - 不相符的字元](/sql/t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql)|增補字元支援所有萬用字元作業。|增補字元不支援這些萬用字元作業， 但支援其他萬用字元運算子。|  

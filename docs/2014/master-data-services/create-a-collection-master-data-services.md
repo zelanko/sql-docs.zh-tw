@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7ea763aa9c0bd187b2207dc50a1f678c295f3b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92627b1f66b91af63979b25f5a8d69d1a341ec73
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483394"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971908"
 ---
 # <a name="create-a-collection-master-data-services"></a>建立集合 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要建立分頁成員和合併成員的一般清單時，請建立集合。 集合不必包含實體的所有成員。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
@@ -50,7 +49,7 @@ ms.locfileid: "65483394"
   
 8.  或者，在 **[描述]** 方塊中，輸入集合的描述。  
   
-9. 按一下 [確定]  。  
+9. 按一下 [確定]。  
   
 ## <a name="next-steps"></a>後續步驟  
   

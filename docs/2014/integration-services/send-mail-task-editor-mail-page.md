@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee2b7992065e31bc6ef57de9b22444cf2da1f963
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055824"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963484"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>傳送郵件工作編輯器 (郵件頁面)
   使用 [傳送郵件工作編輯器]**** 對話方塊的 [郵件]**** 頁面，即可指定收件者、訊息類型以及訊息的優先權。 您也可以附加檔案至訊息。 訊息文字可以是您提供的字串、包含文字之檔案的檔案連接，或包含文字之變數的名稱。  
@@ -28,7 +27,7 @@ ms.locfileid: "66055824"
   
 ## <a name="options"></a>選項。  
  **SMTPConnection**  
- 在清單中選取 SMTP 連線管理員，或按一下** \<[新增連接 ...] >** 建立新的連線管理員。  
+ 在清單中選取 SMTP 連線管理員，或按一下 **\<New connection...>** 以建立新的連線管理員。  
   
 > [!IMPORTANT]  
 >  SMTP 連接管理員僅支援匿名驗證和 Windows 驗證， 而不支援基本驗證。  
@@ -38,7 +37,7 @@ ms.locfileid: "66055824"
  **From**  
  指定寄件者的電子郵件地址。  
   
- **自**  
+ **若要**  
  提供收件者的電子郵件地址，以分號分隔。  
   
  **修**  
@@ -76,13 +75,13 @@ ms.locfileid: "66055824"
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 檔案連接  
  **MessageSource**  
- 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]****，即可建立新的連線管理員。  
+ 在清單中選取檔案連線管理員，或按一下 \<**New connection...**> 以建立新的連線管理員。  
   
  **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = 變數  
  **MessageSource**  
- 在清單中選取變數，或按一下 [\<新增變數...>]**** 建立新的變數。  
+ 在清單中選取變數，或按一下 \<**New variable...**> 以建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
   

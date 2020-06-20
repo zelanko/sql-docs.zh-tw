@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5f85df61f612cb91d39b15e6c91e2fb8495c2347
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fe1d4e6989984ef96d525adafc6518cb55b8576b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701934"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019133"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>從程式變數中大量複製資料 (ODBC)
   此範例會示範如何使用大量複製函數，透過 `bcp_bind` 和 `bcp_sendrow` 從程式變數大量複製資料到 SQL Server  (為了簡化這個範例會移除錯誤檢查程式碼)。  

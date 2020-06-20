@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 10ef11bf8d2620148f88392306aca4dbaace6f58
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 902110d601b9ea4b68fb04e8fb91e66400a452e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704364"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049613"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴展事件記錄檔中的診斷資訊
   從開始 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和資料存取追蹤（[資料存取追蹤](https://go.microsoft.com/fwlink/?LinkId=125805)）已更新，可讓您更輕鬆地從連接信號緩衝區取得連接失敗的診斷資訊，以及擴充事件記錄檔中的應用程式效能資訊。  

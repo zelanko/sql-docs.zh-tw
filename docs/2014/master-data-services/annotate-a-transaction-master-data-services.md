@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 87e33ff166f07c10ee8b0b32eac5590f486e70c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad76c2933cf39bf1a036995a09c3713e79f5db09
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483909"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972258"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>為交易加上註解 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要提供有關某個交易的支援詳細資料做為歷程記錄時，請為該交易加上註解。  
@@ -25,7 +24,7 @@ ms.locfileid: "65483909"
 > [!NOTE]  
 >  您無法刪除註解。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   若要為所建立的交易加上註解，您必須擁有存取 [總管]**** 功能區域的權限，而且至少必須擁有您要加上註解之模型物件的**更新**權限。  
   

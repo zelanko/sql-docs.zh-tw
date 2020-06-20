@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93ec7e88dba785b1559512601adebdee64ea9fdb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f6da29add8fd92530e40ebbfb7b94dedd619adf4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056436"
 ---
 # <a name="command-parameters"></a>命令參數
   在命令文字中，參數會以問號字元來標示。 例如，下列 SQL 陳述式是針對單一輸入參數標示：  

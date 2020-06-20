@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8448e133891d375a97010c15d2079335e473c6f1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9e7800193222b8c9060fee1b247cc5585654cde4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717059"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046953"
 ---
 # <a name="create-xml-indexes"></a>建立 XML 索引
   此主題描述如何建立主要和次要 XML 索引。  

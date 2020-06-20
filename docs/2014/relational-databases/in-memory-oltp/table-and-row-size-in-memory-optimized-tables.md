@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cf3b0fa3c74591a7919024f555fda2f65d89963d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eb509d4b3ba48bbd31b4246e66e024b0be1d49ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718792"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025632"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>記憶體最佳化資料表中的資料表和資料列大小
   記憶體最佳化的表格由資料列與索引 (包含資料列的指標) 的集合組成。 在記憶體最佳化的資料表中，資料列的長度不得超過 8,060 個位元組。 了解記憶體最佳化的資料表大小將有助於您了解電腦是否有足夠的記憶體。  
@@ -117,14 +116,14 @@ ms.locfileid: "82718792"
   
  對於大於 200 的時間，資料表包含下列資料列：  
   
-|Name|City|  
+|名稱|City|  
 |----------|----------|  
 |John|北京|  
 |Jane|Prague|  
   
  不過，開始時間為 100 的任何使用中交易都會看到下列版本的資料表：  
   
-|Name|City|  
+|名稱|City|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prague|  

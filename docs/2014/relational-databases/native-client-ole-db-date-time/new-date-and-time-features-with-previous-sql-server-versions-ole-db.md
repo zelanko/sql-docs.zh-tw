@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df9e157431a8330aed8357231c3b28d12cb4fbc1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 39f22fe37138fab22d79acc5bd667257f392737a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705015"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056302"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>舊版 SQL Server 的新日期和時間功能 (OLE DB)
   本主題描述當使用增強型日期和時間功能的用戶端應用程式與早于的版本進行通訊時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ，以及使用早于的 Native client 版本所編譯的用戶端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 將命令傳送到支援增強型日期和時間功能的伺服器時的預期行為。  
@@ -31,19 +30,19 @@ ms.locfileid: "82705015"
   
 |OLE DB 用戶端類型|SQL Server 2005 類型|SQL Server 2008 (或更新版本) 類型|結果轉換 (伺服器到用戶端)|參數轉換 (用戶端到伺服器)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|日期|確定|確定|  
+|DBTYPE_DBDATE|Datetime|Date|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果時間欄位不是零，IRowsetChange 將會因為字串截斷而失敗。|  
-|DBTYPE_DBTIME||Time(0)|確定|確定|  
+|DBTYPE_DBTIME||Time(0)|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||日期欄位設定為目前的日期。|如果小數秒不是零，IRowsetChange 將會因為字串截斷而失敗。<br /><br /> 忽略日期。|  
-|DBTYPE_DBTIME||Time(7)|失敗-不正確時間常值。|確定|  
-|DBTYPE_DBTIMESTAMP|||失敗-不正確時間常值。|確定|  
-|DBTYPE_DBTIMESTAMP||Datetime2 （3）|確定|確定|  
-|DBTYPE_DBTIMESTAMP||Datetime2 （7）|確定|確定|  
-|DBTYPE_DBDATE|Smalldatetime|日期|確定|確定|  
+|DBTYPE_DBTIME||Time(7)|失敗-不正確時間常值。|[確定]|  
+|DBTYPE_DBTIMESTAMP|||失敗-不正確時間常值。|[確定]|  
+|DBTYPE_DBTIMESTAMP||Datetime2 （3）|[確定]|[確定]|  
+|DBTYPE_DBTIMESTAMP||Datetime2 （7）|[確定]|[確定]|  
+|DBTYPE_DBDATE|Smalldatetime|Date|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果時間欄位不是零，IRowsetChange 將會因為字串截斷而失敗。|  
-|DBTYPE_DBTIME||Time(0)|確定|確定|  
+|DBTYPE_DBTIME||Time(0)|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||日期欄位設定為目前的日期。|如果小數秒不是零，IRowsetChange 將會因為字串截斷而失敗。<br /><br /> 忽略日期。|  
-|DBTYPE_DBTIMESTAMP||Datetime2(0)|確定|確定|  
+|DBTYPE_DBTIMESTAMP||Datetime2(0)|[確定]|[確定]|  
   
  OK 表示，如果它使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，則應該繼續使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本)。  
   

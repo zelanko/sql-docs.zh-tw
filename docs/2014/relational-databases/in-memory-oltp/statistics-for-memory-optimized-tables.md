@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1a15c617c2be877c19d447d615261a6d38eae9eb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0ae09d76c2642e23c56afcdd5ae4e1e468ef5883
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718951"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025774"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>記憶體最佳化資料表的統計資料
   查詢最佳化工具會使用有關資料行的統計資料來建立可改善查詢效能的查詢計劃。 統計資料是從資料庫中的資料表收集，並且儲存在資料庫中繼資料內。  

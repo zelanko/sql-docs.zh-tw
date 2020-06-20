@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e166be7ee2100945cc430a78e725630b1e8f6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b86ec76d75f58db7f8e2978764e8ce9c5ace2279
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055920"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963541"
 ---
 # <a name="select-variables"></a>選取變數
   使用 [選取變數]**** 對話方塊，即可指定在訊息佇列工作中用於傳送訊息作業的變數。 [可用的變數]**** 清單包含在訊息佇列工作或其父容器之範圍中的系統和使用者自訂變數。 此工作使用 [選取的變數]**** 清單中的變數。  
@@ -43,6 +42,6 @@ ms.locfileid: "66055920"
  **相關主題：** [加入變數](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Message Queue Task](control-flow/message-queue-task.md)  
+ [訊息佇列工作](control-flow/message-queue-task.md)  
   
   

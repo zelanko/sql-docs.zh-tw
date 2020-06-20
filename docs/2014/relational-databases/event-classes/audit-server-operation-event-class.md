@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6cc3dbb9-817e-4329-9f45-c3adcff3b511
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 99f3b353231da86af00bc4531e2645fe0a5b1994
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a3359de449dcce4a976dec2debd9b5be99addd2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012433"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031081"
 ---
 # <a name="audit-server-operation-event-class"></a>Audit Server Operation 事件類別
   使用安全性稽核作業 (例如改變設定、資源、外部存取或驗證) 時，就會發生 **稽核伺服器作業** 事件類別。  

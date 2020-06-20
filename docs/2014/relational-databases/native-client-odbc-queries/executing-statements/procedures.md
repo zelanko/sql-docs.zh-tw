@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 82f9d922d2192925033aceb6c253088ccb9f1d6f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a7ae4678d324ba7d07ae429793b1f75b57bb15e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700409"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056484"
 ---
 # <a name="procedures"></a>程序
   預存程序是包含一個或多個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式的先行編譯可執行物件。 預存程序可以有輸入和輸出參數，也可以輸出整數傳回碼。 應用程式可以使用目錄函數來列舉可用的預存程序。  

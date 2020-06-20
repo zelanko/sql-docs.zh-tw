@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ecbca9e7838c4c9395a8bcb6e11351c40f7037f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162441"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049885"
 ---
 # <a name="indexes-on-computed-columns"></a>計算資料行的索引
   只要符合下列要求，您就可以在計算資料行上定義索引：  
@@ -88,7 +87,7 @@ ms.locfileid: "63162441"
   
  **資料類型需求**  
   
--   為計算資料行定義的*computed_column_expression* `text`無法評估為、 `ntext`或`image`資料類型。  
+-   為計算資料行定義的*computed_column_expression*無法評估為 `text` 、 `ntext` 或 `image` 資料類型。  
   
 -   從 `image`、`ntext`、`text`、`varchar(max)`、`nvarchar(max)`、`varbinary(max)` 以及 `xml` 資料類型所衍生的計算資料行，只要其資料類型可作為索引鍵資料行，就可以製作成索引。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "63162441"
      當資料庫的相容性層級設定為 90 或以上時，將 ANSI_WARNINGS 設定為 ON 也會將 ARITHABORT 隱含設定為 ON。  
   
 ##  <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> 在保存的計算資料行上建立索引  
- 如果計算的資料行在 CREATE TABLE 或 ALTER TABLE 陳述式中是標示成 PERSISTED，就可在以具有決定性但不精確的運算式所定義的計算資料行上建立索引。 這表示當在[!INCLUDE[ssDE](../../../includes/ssde-md.md)]資料行上建立索引時，以及在查詢中參考索引時，會使用這些保存的值。 此選項可讓您在計算資料行上建立索引[!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]，但同時具有決定性且精確。  
+ 如果計算的資料行在 CREATE TABLE 或 ALTER TABLE 陳述式中是標示成 PERSISTED，就可在以具有決定性但不精確的運算式所定義的計算資料行上建立索引。 這表示當在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 資料行上建立索引時，以及在查詢中參考索引時，會使用這些保存的值。 此選項可讓您在計算資料行上建立索引 [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)] ，但同時具有決定性且精確。  
   
 ## <a name="related-content"></a>相關內容  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  

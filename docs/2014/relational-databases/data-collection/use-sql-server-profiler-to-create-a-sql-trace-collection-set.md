@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddfb1b83ccb225122edc19860c45480ec1c0c00a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873317"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970412"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>使用 SQL Server Profiler 來建立 SQL 追蹤收集組 (SQL Server Management Studio)
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您可以利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的伺服器端追蹤功能來匯出追蹤定義，以便用來建立使用一般 SQL 追蹤收集器類型的收集組。 這個程序可以分成兩個部分：  
@@ -72,7 +71,7 @@ ms.locfileid: "62873317"
   
     1.  在篩選清單中，按一下 [持續時間]  。  
   
-    2.  在布林運算子視窗中，展開 [**大於或等於**] 節點，輸入`80`做為值，然後按一下 **[確定]**。  
+    2.  在布林運算子視窗中，展開 [**大於或等於**] 節點，輸入 `80` 做為值，然後按一下 **[確定]**。  
   
 9. 按一下 **[執行]** 啟動追蹤。  
   

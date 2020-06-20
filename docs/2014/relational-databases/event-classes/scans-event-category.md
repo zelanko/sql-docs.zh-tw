@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 657aabe4-d3da-475e-87e5-cf9d33c976b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 676e0deaea8fa740a9b9fb007a6217b91f1e3863
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe85583f07db12a370db82a08636578ef174c5eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044086"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028715"
 ---
 # <a name="scans-event-category"></a>Scans 事件類別目錄
   **Scans** 事件類別目錄包含掃描事件。  

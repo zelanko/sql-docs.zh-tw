@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8042534c8b22863c5a00abf4969bdb9754cef892
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf3708a258e3bb97231e45b10bea2c59351a06a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702216"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025485"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>記憶體中 OLTP 的 Transact-SQL 支援
   您可以使用任何 Transact-SQL 查詢或 DML 陳述式 (SELECT、INSERT、UPDATE 或 DELETE)、特定陳述式及 SQL 模組 (例如預存程序、資料表值函數、純量函數、觸發程序和檢視表) 來存取記憶體最佳化的資料表。 如需詳細資訊，請參閱[使用已解讀的 Transact-sql 存取記憶體優化資料表](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)。  

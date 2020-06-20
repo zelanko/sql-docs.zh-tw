@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15f15ff1fd48321ed4f13826fb239b6cede46242
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489712"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006669"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>第 4 課：在 MDS 中儲存供應商資料
   Master Data Services (MDS) 是用於主要資料管理的 SQL Server 解決方案。 主要資料管理 (MDM) 會描述組織為了探索及定義非交易之資料清單所付出的心力。  
@@ -34,7 +33,7 @@ ms.locfileid: "65489712"
   
 1.  使用**主資料管理員 Web 應用程式**，在**MDS**中建立**供應商**模型。  
   
-2.  在 Excel 中開啟**清理並比對供應商資料 .xls** ，並使用**適用于 Excel 的 MDS 增益集**來建立名為**供應商**的實體，並將資料上傳至 MDS。  
+2.  在 Excel 中開啟**清理並比對供應商 Data.xls** ，並使用**適用于 Excel 的 MDS 增益集**來建立名為**供應商**的實體，並將資料上傳至 MDS。  
   
 3.  使用**主資料管理員**，確認已在 MDS 中建立資料。  
   

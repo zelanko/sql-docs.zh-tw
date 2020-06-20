@@ -11,21 +11,20 @@ helpviewer_keywords:
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 911bd20c7d232bca52fdf9dca294bd7a4924d984
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6266664bc4e1d1c782ce75a9de4edebe52d11f0c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054142"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972027"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>變更系統管理員帳戶 (Master Data Services)
-  您可以變更指定為[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]系統管理員的使用者帳戶。  
+  您可以變更指定為系統管理員的使用者帳戶 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
   
 > [!WARNING]  
 >  當您完成這個程序時，先前的系統管理員使用者帳戶會遭到刪除。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須將新的系統管理員使用者名稱加入 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者清單。 如需詳細資訊，請參閱[Add a User &#40;Master Data Services&#41;](add-a-user-master-data-services.md)。  
@@ -36,7 +35,7 @@ ms.locfileid: "66054142"
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 並且連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 資料庫的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 執行個體。  
   
-2.  在 [tblUser] 中，尋找將成為新系統管理員的使用者，並複製資料`SID`行中的值。  
+2.  在 [tblUser] 中，尋找將成為新系統管理員的使用者，並複製資料行中的值 `SID` 。  
   
 3.  建立新的查詢。  
   

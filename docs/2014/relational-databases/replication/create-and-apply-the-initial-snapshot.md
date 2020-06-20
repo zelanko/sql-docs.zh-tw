@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7ac008fe139adf55376bb50fbf60dddcd6b9ae5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721680"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010891"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>建立和套用初始快照集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立及套用初始快照集。 使用參數化篩選的合併式發行集需要一個兩段式快照集。 如需詳細資訊，請參閱 [使用參數化篩選建立合併式發行集的快照集](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
@@ -44,7 +43,7 @@ ms.locfileid: "62721680"
   
 3.  以滑鼠右鍵按一下您要為其建立快照集的發行集，然後按一下 **[檢視快照集代理程式的狀態]** 。  
   
-4.  在 [檢視快照集代理程式的狀態 - \<發行集>]  對話方塊中，按一下 [啟動]  。  
+4.  在 [**視圖快照集代理程式狀態 \<Publication> ** ] 對話方塊中，按一下 [**啟動**]。  
   
  快照集代理程式產生完快照集後，就會顯示一個訊息，例如「[100%] 已產生 17 個發行項的快照集」。  
   
@@ -78,13 +77,13 @@ ms.locfileid: "62721680"
   
 1.  建立快照式、交易式或合併式發行集。 如需詳細資訊，請參閱[建立發行集](publish/create-a-publication.md)。  
   
-2.  執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定**@publication**和下列參數：  
+2.  執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定 **@publication** 和下列參數：  
   
     -   **@job_login，它會指定**散發者上的快照集代理程式執行時所用的 Windows 驗證認證。  
   
     -   **@job_password**，它是提供之 Windows 認證的密碼。  
   
-    -   (選擇性) 如果代理程式在連接到發行者時將使用「SQL Server 驗證」，會將 **@publisher_security_mode** 設定為 **@publisher_security_mode** 的值。 在此情況下，您也必須指定**@publisher_login**和**@publisher_password**的 SQL Server Authentication 登入資訊。  
+    -   (選擇性) 如果代理程式在連接到發行者時將使用「SQL Server 驗證」，會將 **@publisher_security_mode** 設定為 **@publisher_security_mode** 的值。 在此情況下，您也必須指定和的 SQL Server Authentication 登入資訊 **@publisher_login** **@publisher_password** 。  
   
     -   (選擇性) 快照集代理程式作業的同步排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](specify-synchronization-schedules.md)。  
   
@@ -119,13 +118,13 @@ ms.locfileid: "62721680"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **0**  
+    -   **-DistributorSecurityMode**  = **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  = **0**  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  此範例會示範如何建立交易式發行集，並針對新的發行集加入快照集代理程式作業 (使用 **sqlcmd** 指令碼變數)。 此範例也會啟動此作業。  
@@ -240,6 +239,6 @@ ms.locfileid: "62721680"
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [複寫安全性最佳作法](security/replication-security-best-practices.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [搭配腳本變數使用 sqlcmd](../scripting/sqlcmd-use-with-scripting-variables.md)  
+ [以指令碼變數使用 sqlcmd](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

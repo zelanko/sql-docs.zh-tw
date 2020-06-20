@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1dfc6b5c-0a93-450f-b5b3-34ae0ca79717
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d088740fc6f1f72213c04866713a8579eb126d2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63312556"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058293"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>選取鍵盤快速鍵配置
   除了標準 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 鍵盤配置，您可以設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用與 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]相容的鍵盤配置。  
@@ -24,7 +23,7 @@ ms.locfileid: "63312556"
   
 #### <a name="to-apply-vs_dev10_long-compatible-keyboard-scheme"></a>若要套用 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 相容的鍵盤配置  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
 2.  展開 [環境]****，再按一下 [鍵盤]****。  
   

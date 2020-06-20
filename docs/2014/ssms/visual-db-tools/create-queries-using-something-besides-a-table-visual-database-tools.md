@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d28b8b6ba540ae361c3c6ab74a1a45763f7bee2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058127"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>使用資料表以外的項目建立查詢 (Visual Database Tools)
   當您編寫擷取查詢時，應該明白指出您要的資料行、您要的資料列和查詢處理器尋找原始資料的位置。 通常其原始資料是由某資料表組成或由數個資料表聯結在一起。 但原始資料可能源自資料表以外的來源。 其實，原始資料可以來自檢視、查詢、同義資料表或傳回資料表的使用者定義函數。  

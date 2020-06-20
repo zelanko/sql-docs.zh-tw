@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db6d6220fbb0f756b539e63dc2496d9ddb46d9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a7bab18952820a3dc49c9479797a411521f8e71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228496"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057697"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>修改篩選 (SQL Server Profiler)
   您可以將篩選加入包含追蹤定義的追蹤範本，以限制追蹤所蒐集的事件數目。 限制蒐集的事件數目可以降低追蹤的效能影響。 如果您設定追蹤範本的篩選，但發現追蹤並未蒐集您所需要的資訊種類，您就可以編輯篩選。  
@@ -28,7 +27,7 @@ ms.locfileid: "63228496"
   
 1.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，開啟您要修改的追蹤篩選範本。 在 [檔案]  功能表上，按一下 [範本]  ，然後選擇 [編輯範本]  。  
   
-2.  在 [追蹤範本屬性]  對話方塊的 [一般]  索引標籤中，從 [選取範本名稱]  清單中選取範本。  
+2.  在 [追蹤範本屬性] 對話方塊的 [一般] 索引標籤中，從 [選取範本名稱] 清單中選取範本。  
   
 3.  按一下 [事件選取範圍]  索引標籤。  
   

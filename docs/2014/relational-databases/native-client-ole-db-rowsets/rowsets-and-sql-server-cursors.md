@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c1499020839e615b757fbdbb3a75fc53272249bf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 667bee5e1f3a6fabe47f18a4c36fee5ab8d03382
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694346"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011240"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>資料列集和 SQL Server 資料指標
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用兩個方法將結果集傳回給取用者：  

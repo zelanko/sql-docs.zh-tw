@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d30a857647b9796afb919b078553ecce58344c21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73437390154de5f573a1ae5d68f7d0e7ae8dec37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63023396"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029660"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection 事件類別
   ExistingConnection 事件類別指出現有使用者連接在追蹤啟動時的屬性。 伺服器會為每個現有使用者連接引發一個 ExistingConnection 事件。  

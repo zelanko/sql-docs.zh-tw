@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b500c2c9a2e725577ac542b738f2ea6a536cfe34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175423"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024935"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>第 8 課： 將資料庫還原到 Azure 儲存體
   在這一課，您將學習如何在本機建立備份檔案，然後將它還原到 Azure 儲存體。 請注意，您可以將資料庫置於內部部署或 Azure 虛擬機器中。 進行這一課並不需要完成第 4、5、6 和 7 課。  
@@ -73,23 +72,23 @@ ms.locfileid: "70175423"
   
 2.  展開 [**資料庫**]，然後選取您的資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 [工作]****，然後按一下 [還原]****。  
+3.  以滑鼠右鍵按一下資料庫，指向 [工作]  ，然後按一下 [還原]  。  
   
 4.  在 [**一般**] 頁面的 [**還原**來源] 區段中，按一下 [**來源**裝置]。  
   
 5.  按一下 [**來源**裝置] 文字方塊的 [流覽] 按鈕，這會開啟 [**選取備份裝置**] 對話方塊。  
   
-6.  在 [備份媒體] 文字方塊中，**選取 [** 檔案]，然後按一下 [**新增**] 按鈕以尋找備份檔案（.bak）。 按一下 [確定]  。  
+6.  在 [備份媒體] 文字方塊中，**選取 [** 檔案]，然後按一下 [**新增**] 按鈕以尋找備份檔案（.bak）。 按一下 [確定]。  
   
 7.  按一下第一頁**上的 [** 檔案]。  
   
 8.  在 [將**資料庫檔案還原**為] 區段的 [**還原為**] 欄位底下，輸入下列內容：  
   
-     針對 [資料檔案]， `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`輸入：。 在 [記錄檔] 中`https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`，輸入：。  
+     針對 [資料檔案]，輸入： `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf` 。 在 [記錄檔] 中，輸入： `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf` 。  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   
-9. 按一下 [確定]  。  
+9. 按一下 [確定]。  
   
  還原完成時，登入管理入口網站。 您應該能夠在容器中看見 .mdf 和 .ldf 檔案，如下所示：  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 12304e532643e536981001da3886460848aec069
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5996971225ee0b300b307c5af24dec464dbfd43c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650209"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062168"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>從 SQL Server Agent 主要作業中移除步驟
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中移除 SQL Server Agent 主要作業的步驟。  

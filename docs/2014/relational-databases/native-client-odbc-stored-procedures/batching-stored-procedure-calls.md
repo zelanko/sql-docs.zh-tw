@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b7f53e11-15f0-4602-8134-b166160888f0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ce14de191cb8b57496cf2de87d241810e32624ec
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a0df58ce59853ee15b863cbc7bce34041c37fee4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709877"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039512"
 ---
 # <a name="batching-stored-procedure-calls"></a>批次預存程序呼叫
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會在適當時，自動將預存程序呼叫分批批次處理至伺服器。 只有在使用 ODBC CALL 逸出序列時，驅動程式才會執行此動作；它不會針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 陳述式執行此動作。 批次預存程序呼叫可以減少往返伺服器的次數，並明顯增加效能。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08f18b36-209d-4cf7-9623-ebc61859a91d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d16f4dc681042babcedc8d7ddffa8fbc0389506
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f8aeb34525bbe5c1b003e8fd95e7a414025965a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704103"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057202"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>使用 SQL Server Native Client 的時機
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是用來存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料的一種技術。  如需不同資料存取技術的討論內容，請參閱 [Data Access Technologies Road Map](https://go.microsoft.com/fwlink/?LinkID=179186) (資料存取技術藍圖)  
