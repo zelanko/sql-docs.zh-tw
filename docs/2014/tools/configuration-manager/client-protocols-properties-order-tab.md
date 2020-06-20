@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb3055780186c34f6ead494f702874fbc6329f5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4a2a7e56dc0f5b0b2c71361a4b47fb58c64c782
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011683"
 ---
 # <a name="client-protocols-properties-order-tab"></a>用戶端通訊協定屬性 (順序索引標籤)
   您可以使用 [用戶端通訊協定內容]**** 對話方塊上的 [順序]**** 頁面來檢視與啟用用戶端通訊協定。  
@@ -34,7 +33,7 @@ ms.locfileid: "63044175"
  列出已安裝但目前未使用的通訊協定。  
   
  **啟用的通訊協定**  
- 列出此電腦上用戶端[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可用的通訊協定。  
+ 列出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 此電腦上用戶端可用的通訊協定。  
   
  **>**  
  啟用目前 [停用的通訊協定]  方塊中反白顯示的通訊協定，並將它移到 [啟用的通訊協定]  方塊。  

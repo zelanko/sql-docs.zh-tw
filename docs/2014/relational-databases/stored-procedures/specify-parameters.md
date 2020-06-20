@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93a04281839c4db26cbab16ac166af3cdb7c9a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736361"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065660"
 ---
 # <a name="specify-parameters"></a>指定參數
   藉由指定程序參數，呼叫端程式就能夠將值傳入程序的主體。 這些值在程序執行期間可用於各種用途。 如果程序參數標示為 OUTPUT 參數，程序參數也可以將值傳回給呼叫端程式。  
@@ -126,7 +125,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- 雖然可以省略已提供預設值的參數，但只能截斷參數清單。 例如，如果程序有五個參數，第四個和第五個參數可以省略。 不過，除非以** \@parameter =**_value_形式提供參數，否則只要包含第五個參數，就無法略過第四個參數。  
+ 雖然可以省略已提供預設值的參數，但只能截斷參數清單。 例如，如果程序有五個參數，第四個和第五個參數可以省略。 不過，除非以** \@ parameter =**_value_形式提供參數，否則只要包含第五個參數，就無法略過第四個參數。  
   
 ## <a name="specifying-parameter-direction"></a>指定參數方向  
  參數的方向可以是輸入或輸出，前者指將值傳入程序的主體，後者則指程序傳回值給呼叫端程式。 預設是輸入參數。  
@@ -164,10 +163,10 @@ GO
   
 ```  
   
- 執行 `usp_GetList` 以傳回成本低於 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品 (自行車) 清單。 輸出參數** \@cost**和** \@compareprices**會搭配流程式控制制語言使用，以便在 [**訊息**] 視窗中傳回訊息。  
+ 執行 `usp_GetList` 以傳回成本低於 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品 (自行車) 清單。 輸出參數** \@ cost**和** \@ compareprices**會搭配流程式控制制語言使用，以便在 [**訊息**] 視窗中傳回訊息。  
   
 > [!NOTE]  
->  在建立程序過程以及在使用變數過程中，必須定義 OUTPUT 變數。 參數名稱和變數名稱不一定要相符。 不過，資料類型和參數定位必須相符（除非** \@使用 listprice =** _variable_ ）。  
+>  在建立程序過程以及在使用變數過程中，必須定義 OUTPUT 變數。 參數名稱和變數名稱不一定要相符。 不過，資料類型和參數定位必須相符（除非使用** \@ listprice =** _variable_ ）。  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 78377fe5eaf5b9f0639533f17fa7a45cca69a537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a92d6ee495c31e788e7924f00d5469d538155da3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833654"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920709"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 連接管理員
   MSMQ 連接管理員可讓封裝連接到使用 Message Queuing (又稱為 MSMQ) 的訊息佇列。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的「訊息佇列」工作會使用 MSMQ 連線管理員。  
@@ -37,8 +36,8 @@ ms.locfileid: "62833654"
   
 |佇列類型|範例路徑|  
 |----------------|-----------------|  
-|公開|\<電腦名稱>\\<佇列名稱\>|  
-|Private|\<電腦名稱>\Private$\\<佇列名稱\>|  
+|公開|\<computer name>\\<佇列名稱\>|  
+|Private|\<computer name>\Private $ \\<佇列名稱\>|  
   
  您可以使用句號 (.) 代表本機電腦。  
   

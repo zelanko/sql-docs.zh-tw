@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 74bcf1549cdd97752c805f1c6a9cc774ef1a9e52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8f545ac14aa0909abd835feea1293cb5030cb77
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968898"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>開發具有多個輸入的資料流程元件
   如果具有多個輸入的資料流程元件其多個輸入會以不平均的速率產生資料，可能會耗用過多的記憶體。 當您開發支援兩個或多個輸入的自訂資料流程元件時，可以使用 Microsoft.SqlServer.Dts.Pipeline 命名空間中的下列成員來管理記憶體壓力：  
@@ -54,9 +53,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  您的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法實作不應該呼叫基底類別中實作。 在基底類別中，這個方法的預設實作只會引發 `NotImplementedException`。  
   
- 實作這個方法時，您會針對每個元件的輸入設定布林值 *canProcess* 陣列中的元素狀態 （輸入是由其在*i*陣列中的識別碼值所識別）。當您將*canProcess*陣列中的元素值設定為做`true`為輸入時，資料流程引擎會呼叫元件的<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>方法，並為指定的輸入提供更多資料。  
+ 實作這個方法時，您會針對每個元件的輸入設定布林值 *canProcess* 陣列中的元素狀態 （輸入是由其在*i*陣列中的識別碼值所識別）。當您將*canProcess*陣列中的元素值設定為做 `true` 為輸入時，資料流程引擎會呼叫元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法，並為指定的輸入提供更多資料。  
   
- 當有更多上游資料可用時，至少一個輸入的*canProcess*陣列元素值必須一律為，否則`true`處理就會停止。  
+ 當有更多上游資料可用時，至少一個輸入的*canProcess*陣列元素值必須一律為 `true` ，否則處理就會停止。  
   
  資料流程引擎會在傳送資料的每個緩衝區之前，呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法，以判斷哪一個輸入正在等候接收更多資料。 當傳回值表示輸入遭到封鎖時，資料流程引擎就會為該輸入暫時快取資料的其他緩衝區，而不會將它們傳送到元件。  
   
@@ -70,9 +69,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
   
 -   元件目前沒有可用來處理元件已接收之緩衝區中的資料 (`inputBuffers[inputIndex].CurrentRow() == null`)。  
   
- 如果輸入正在等候接收更多資料，資料流程元件會將設定為對應至該輸入`true`之*canProcess*陣列中的專案值，以指出這種情況。  
+ 如果輸入正在等候接收更多資料，資料流程元件會將設定為 `true` 對應至該輸入之*canProcess*陣列中的專案值，以指出這種情況。  
   
- 相反地，當元件仍有可用於處理輸入的資料時，這個範例會暫停處理輸入。 這個範例會將設定為`false`對應至該輸入之*canProcess*陣列中的專案值，藉此執行這項工作。  
+ 相反地，當元件仍有可用於處理輸入的資料時，這個範例會暫停處理輸入。 這個範例會將設定為 `false` 對應至該輸入之*canProcess*陣列中的專案值，藉此執行這項工作。  
   
 ```csharp  
 public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)  
@@ -87,7 +86,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 }  
 ```  
   
- 前面的範例會使用布林 (Boolean) `inputEOR` 陣列來指出是否有更多的上游資料可供每個輸入使用。 陣列名稱中的 `EOR` 代表「資料列集結束」，也會參考資料流程緩衝區的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 屬性。 在這裡未包含的範例部分中，<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法會檢查它所接收資料的每個緩衝區之 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 屬性值。 當 `true` 的值表示沒有其他上游資料可供輸入使用時，範例會將該輸入的 `inputEOR` 陣列元素設定為 `true`。 此<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>方法的範例會在`inputEOR` array 元素的值指出沒有其他上游資料可供`false`輸入使用時，將*canProcess*陣列中對應元素的值設定為。  
+ 前面的範例會使用布林 (Boolean) `inputEOR` 陣列來指出是否有更多的上游資料可供每個輸入使用。 陣列名稱中的 `EOR` 代表「資料列集結束」，也會參考資料流程緩衝區的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 屬性。 在這裡未包含的範例部分中，<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法會檢查它所接收資料的每個緩衝區之 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 屬性值。 當 `true` 的值表示沒有其他上游資料可供輸入使用時，範例會將該輸入的 `inputEOR` 陣列元素設定為 `true`。 此方法的範例 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> *canProcess* `false` `inputEOR` 會在 array 元素的值指出沒有其他上游資料可供輸入使用時，將 canProcess 陣列中對應元素的值設定為。  
   
 ## <a name="implementing-the-getdependentinputs-method"></a>實作 GetDependentInputs 方法  
  當您的自訂資料元件支援超過兩個輸入時，您也必須針對 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 方法提供實作。  
@@ -95,7 +94,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 > [!NOTE]  
 >  您的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 方法實作不應該呼叫基底類別中實作。 在基底類別中，這個方法的預設實作只會引發 `NotImplementedException`。  
   
- 資料流程引擎只會在使用者將超過兩個輸入附加至元件時呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 方法。 當元件<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>只有兩個輸入，而且方法指出其中一個輸入遭到封鎖（*canProcess* = `false`）時，資料流程引擎會知道其他輸入正在等候接收更多資料。 但是，具有超過兩個輸入，而且 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法指出其中一個輸入遭到封鎖時，<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 中額外的程式碼就會識別哪一個輸入正在等候接收更多資料。  
+ 資料流程引擎只會在使用者將超過兩個輸入附加至元件時呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 方法。 當元件只有兩個輸入，而且 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法指出其中一個輸入遭到封鎖（*canProcess*  =  `false` ）時，資料流程引擎會知道其他輸入正在等候接收更多資料。 但是，具有超過兩個輸入，而且 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法指出其中一個輸入遭到封鎖時，<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 中額外的程式碼就會識別哪一個輸入正在等候接收更多資料。  
   
 > [!NOTE]  
 >  您不用在自己的程式碼中呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 或 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 方法。 資料流程引擎執行您的元件時，資料流程引擎會呼叫這些方法以及您所覆寫之 `PipelineComponent` 類別的其他方法。  

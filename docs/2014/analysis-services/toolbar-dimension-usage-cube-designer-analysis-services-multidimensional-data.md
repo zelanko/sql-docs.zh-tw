@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 23cb6106-8799-4157-ba5e-408b4fbd8fbb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e4205cc3a99e5ce5fb9e4309813531a451e7bd92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b8a02d4c645da4be23a0177b9a0f1516a019fdb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938389"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (維度使用方式索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   在 Cube 設計師的 **[維度使用方式]** 索引標籤上，使用 **[工具列]** 窗格即可執行一般動作，例如加入 Cube 維度或處理 Cube。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66533fb63a76bc92bcb45e7cb8feb058467e6583
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767370"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968184"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>步驟 4：新增一般檔案目的地
   [查閱貨幣索引鍵] 轉換的錯誤輸出，將使得查閱作業失敗的任何資料列重新導向至 [指令碼] 轉換。 為了加強所發生錯誤的相關資訊，[指令碼] 轉換執行一個取得錯誤描述的指令碼。  
@@ -36,11 +35,11 @@ ms.locfileid: "62767370"
   
 6.  在 **[一般檔案格式]** 對話方塊中，確認已選取 **[使用分隔符號]** ，然後按一下 **[確定]**。  
   
-7.  在 [一般檔案**連線管理員編輯器**] 的 [**連接管理員名稱**] `Error Data`方塊中，輸入。  
+7.  在 [一般檔案**連線管理員編輯器**] 的 [**連接管理員名稱**] 方塊中，輸入 `Error Data` 。  
   
 8.  在 **[一般檔案連接管理員編輯器]** 對話方塊中，按一下 **[瀏覽]**，並尋找儲存該檔案的資料夾。  
   
-9. 在 [**開啟**] 對話方塊中，針對 [**檔案名**] `ErrorOutput.txt`輸入，然後按一下 [**開啟**]。  
+9. 在 [**開啟**] 對話方塊中，針對 [**檔案名**] 輸入 `ErrorOutput.txt` ，然後按一下 [**開啟**]。  
   
 10. 在 **[一般檔案連接管理員編輯器]** 對話方塊中，確認 **[地區設定]** 方塊包含 [英文 (美國)]， **[字碼頁]** 包含 1252 [ANSI - 拉丁文 1]。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62767370"
   
      請注意，除了來源資料檔的資料行之外，還出現三個新的資料行：ErrorCode、ErrorColumn 和 ErrorDescription。 這些資料行是由 [查閱貨幣索引鍵] 轉換的錯誤輸出和 [取得錯誤描述] 轉換中的指令碼產生，而且可用來找出失敗資料列的原因並加以解決。  
   
-12. 按一下 [確定]  。  
+12. 按一下 [確定]。  
   
 13. 在 **[一般檔案目的地編輯器]** 中，清除 **[覆寫檔案中的資料]** 核取方塊。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62767370"
   
 14. 在 **[一般檔案目的地編輯器]** 中，按一下 **[對應]** 來確認所有資料行都正確。 您可以選擇性地重新命名目的地的資料行。  
   
-15. 按一下 [確定]  。  
+15. 按一下 [確定]。  
   
 ## <a name="next-steps"></a>後續步驟  
  [步驟 5：測試第 4 課的教學課程封裝](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dc29f3b9acf52172aa3d9fedecac752d419b2e55
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81bb8b079142b2b6c4597fa2fdfeddd034841f93
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176408"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968978"
 ---
 # <a name="developing-a-custom-destination-component"></a>開發自訂目的地元件
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可讓開發人員撰寫自訂目的地元件，以便連線到任何自訂資料來源中的資料，以及將資料儲存到任何自訂資料來源。 當您必須連接至無法使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的其中一個現有來源元件所存取的資料來源時，自訂目的地元件就很有用。
@@ -38,7 +37,7 @@ ms.locfileid: "78176408"
  實作目的地元件的設計階段功能包括指定外部資料來源的連接，以及驗證元件是否已正確設定。 根據定義，目的地元件具有一個輸入，而且可能具有一個錯誤輸出。
 
 ### <a name="creating-the-component"></a>建立元件
- 目的地元件會使用在封裝中定義的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件，連接至外部資料來源。 目的地元件會將元素新增至 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 集合，以向 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 設計工具和元件的使用者指出其連線管理員的需求。 這個集合有兩個目的：首先，它會向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師通告連接管理員的需求。然後，在使用者已選取或建立連接管理員之後，它會在封裝中保留元件所使用之連接管理員的參考。 將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 新增至集合時，[進階編輯器]  會顯示 [連線屬性]  索引標籤，提示使用者在套件中選取或建立連線以供元件使用。
+ 目的地元件會使用在封裝中定義的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件，連接至外部資料來源。 目的地元件會將元素新增至 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 集合，以向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具和元件的使用者指出其連線管理員的需求。 這個集合有兩個目的：首先，它會向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師通告連接管理員的需求。然後，在使用者已選取或建立連接管理員之後，它會在封裝中保留元件所使用之連接管理員的參考。 將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 新增至集合時，[進階編輯器]  會顯示 [連線屬性]  索引標籤，提示使用者在套件中選取或建立連線以供元件使用。
 
  下列程式碼範例會顯示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 的實作，它加入輸入並將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 物件加入至 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>。
 

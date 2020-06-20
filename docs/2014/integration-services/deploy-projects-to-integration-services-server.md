@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a41158c6ab83491c10c702619a9da46f096a4bfa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059582"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951680"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>將專案部署至 Integration Services 伺服器
   在目前版本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中，您可以將專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器可讓您管理封裝、執行封裝，以及利用環境設定封裝的執行值。  
@@ -70,7 +69,7 @@ ms.locfileid: "66059582"
   
      -或-  
   
-     在[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，展開[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  > 物件總管中的 [ **SSISDB** ] 節點，然後找出您要部署之專案的 [專案] 資料夾。 以滑鼠右鍵按一下 [專案]**** 資料夾，然後按一下 [部署專案]****。  
+     在中 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，展開 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  物件總管中的 [ **SSISDB** ] 節點，然後找出您要部署之專案的 [專案] 資料夾。 以滑鼠右鍵按一下 [專案]**** 資料夾，然後按一下 [部署專案]****。  
   
      -或-  
   

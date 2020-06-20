@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12fdb1a41ec764a0fee0817940f95a3d303777e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811015"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050195"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估計記憶體最佳化資料表的記憶體需求
-  不論您是建立新[!INCLUDE[hek_2](../../includes/hek-2-md.md)]的記憶體優化資料表，或是將現有的磁片資料表遷移至記憶體優化資料表，都一定要有合理的估計值來滿足每個資料表的記憶體需求，讓您可以使用足夠的記憶體來布建伺服器。 本節描述如何估計保存記憶體最佳化資料表的資料所需的記憶體數目。  
+  不論您是建立新的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體優化資料表，或是將現有的磁片資料表遷移至記憶體優化資料表，都一定要有合理的估計值來滿足每個資料表的記憶體需求，讓您可以使用足夠的記憶體來布建伺服器。 本節描述如何估計保存記憶體最佳化資料表的資料所需的記憶體數目。  
   
  如果您想從磁碟資料表移轉至記憶體最佳化資料表，請在進行本主題之前，先參閱 [判斷是否應將資料表或預存程序匯出至記憶體中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 主題，以取得最適合移轉之資料表的指引。 [移轉至 In-Memory OLTP](migrating-to-in-memory-oltp.md) 底下的所有主題，提供從磁碟資料表移轉至記憶體最佳化資料表的指引。  
   
@@ -119,7 +118,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  **設定雜湊索引陣列大小**  
   
- 雜湊陣列大小是由`(bucket_count= <value>)` \<值> 是大於零的整數值所設定。 如果\<值> 不是2的乘冪，則實際的 bucket_count 會無條件進位到下一個最接近的2乘冪。  在我們的範例資料表中（bucket_count = 5000000），因為5000000不是2的乘冪，所以實際的值區計數會無條件進位到8388608（2<sup>23</sup>）。  計算雜湊陣列所需的記憶體時，您必須使用此數值，而不是 5,000,000。  
+ 雜湊陣列大小是由 `(bucket_count= <value>)` 設定，其中 \<value> 是大於零的整數值。 如果 \<value> 不是 2 的乘冪，實際的 bucket_count 會無條件進位到下一個最接近的 2 的乘冪。  在我們的範例資料表中（bucket_count = 5000000），因為5000000不是2的乘冪，所以實際的值區計數會無條件進位到8388608（2<sup>23</sup>）。  計算雜湊陣列所需的記憶體時，您必須使用此數值，而不是 5,000,000。  
   
  因此在此範例中，每個雜湊陣列所需的記憶體為：  
   

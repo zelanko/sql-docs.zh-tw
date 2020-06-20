@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c5aa031804d2c5f4ad3a3679a6fe1cac96c63b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089442"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930649"
 ---
 # <a name="modify-the-trace-results-view"></a>修改追蹤結果檢視
   本主題描述如何透過執行下列工作，在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中修改擴充事件工作階段的追蹤結果檢視。  
@@ -54,7 +53,7 @@ ms.locfileid: "66089442"
   
 4.  在 **[選取的資料行]** 區段中，若要變更資料行排序顯示，請分別按一下 **[上移]** 或 **[下移]** 。 不能移動多個資料列。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
   
 ##  <a name="create-edit-or-delete-merged-columns"></a><a name="ChangeColumns"></a>建立、編輯或刪除合併的資料行  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66089442"
     > [!NOTE]  
     >  擴充事件最多只支援合併五個資料行。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 #### <a name="to-edit-merged-columns"></a>編輯合併的資料行  
   
@@ -143,7 +142,7 @@ ms.locfileid: "66089442"
   
      若要從群組移除資料行，請在 **[群組的資料行依據]** 方塊中選取要移除的資料行，然後按一下向左箭頭。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
 ##  <a name="aggregate-results"></a><a name="AggregateResults"></a>匯總結果  
  擴充事件支援五個彙總函式：  
@@ -182,7 +181,7 @@ ms.locfileid: "66089442"
   
 6.  選取 **[以遞減順序]** 選項，依遞減順序來排序彙總結果。  
   
-7.  按一下 [確定]  。  
+7.  按一下 [確定]。  
   
 ##  <a name="filter-results"></a><a name="Filter"></a>篩選結果  
  您可以套用篩選以縮小追蹤視窗中顯示的追蹤結果範圍。 顯示篩選包含時間篩選和進階篩選。 時間篩選可用來依事件時間戳記篩選追蹤結果，而進階篩選可用來透過事件欄位和動作建構篩選條件。 時間篩選和進階篩選之間有邏輯 AND 關聯性。  
@@ -229,7 +228,7 @@ ms.locfileid: "66089442"
   
     -   **詳細資料**。 使用此選項，在開啟 [**在擴充事件中尋找**] 對話方塊之前，搜尋已選取之追蹤視窗中的所有資料行（升級和非升級）。  
   
-    -   **>的事件資料行名稱。 \< ** 使用此選項可在下拉式清單的特定事件資料行中進行搜尋。  
+    -   **\<Event column name>**. 使用此選項可在下拉式清單的特定事件資料行中進行搜尋。  
   
 5.  使用下列選項，指定定義搜尋的方式：  
   

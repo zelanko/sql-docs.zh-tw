@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0e9f04742bbfabcfa0e351f25e9475a8022689e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14dce43963b0a531c3c71a1bf0c956fc4f10d5af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937919"
 ---
 # <a name="create-a-domain-rule"></a>建立定義域規則
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中建立定義域規則。 定義域規則是用來驗證、更正並標準化定義域值的條件。 定義域規則必須在定義域中成立，才能讓定義域值被視為正確且符合商務需求。 定義域規則所包含的驗證規則可用來驗證定義域值，但是無法用來更正資料品質專案中的資料。 此外，規則也包含針對有效資料套用以及用於資料更正的標準化規則。  
@@ -109,7 +108,7 @@ ms.locfileid: "65481036"
   
  您可以在建立定義域規則時選擇其他替代方式。 例如，若要驗證值的開頭是否為 A、B 或 C 字母，您可以建立包含複雜條件的簡單規則 (例如包含縱線字元的規則運算式)，也可以建立包含許多簡單條件的複雜規則。 第一項規則的範例為「值包含規則運算式 (^A|^B|^C)」。 第二項規則的範例為「‘值開頭為 A' OR '值開頭為 B' OR '值開頭為 C'」。  
   
-|狀況|說明|範例|  
+|條件|描述|範例|  
 |---------------|-----------------|-------------|  
 |長度等於|只有由運算元指定之字元數所組成的值才有效。|範例運算元：3<br /><br /> 有效值：BB1<br /><br /> 無效值：AA|  
 |長度大於或等於|只有由運算元指定之字元數或更多字元數所組成的值才有效。|範例運算元：3<br /><br /> 有效值：BB1、BBAA<br /><br /> 無效值：AA|  

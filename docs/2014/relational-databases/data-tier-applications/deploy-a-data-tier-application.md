@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00208b1c0f11faf8f392e47e275c7e239249d3d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2344ff0b95e82bd83e801df9ff6bd60328a2ae33
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783065"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970280"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署資料層應用程式
   您可以使用精靈或 PowerShell 指令碼，將 DAC 封裝中的資料層應用程式 (DAC) 部署到現有的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 部署程序會將 DAC 定義儲存到 **msdb** 系統資料庫 (**中則是** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) 來註冊 DAC 執行個體並建立資料庫，然後使用 DAC 內定義的所有資料庫物件來擴展資料庫。  
@@ -54,7 +53,7 @@ ms.locfileid: "72783065"
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  DAC 可部署至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 或更新版本的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體。 如果您使用更新版本建立 DAC，則 DAC 可能會包含 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]不支援的物件。 您無法將這些 DAC 部署至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]執行個體。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
  建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類封裝可能包含惡意程式碼，因此可能會執行非預期的 Transact-SQL 程式碼，或是修改結構描述而造成錯誤。 在您使用來源不明或來源不受信任的封裝之前，請解除封裝 DAC 並檢查程式碼，例如預存程序或其他使用者定義程式碼。 如需有關如何執行這些檢查的詳細資訊，請參閱＜ [Validate a DAC Package](validate-a-dac-package.md)＞。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
@@ -107,7 +106,7 @@ ms.locfileid: "72783065"
   
  **描述** - 當撰寫 DAC 或是從資料庫擷取 DAC 時，顯示撰寫之描述的唯讀方塊。  
   
- 上一步-返回 [**簡介**] 頁面。 ** \< **  
+ ** \< 上一步**-返回 [**簡介**] 頁面。  
   
  **下一步 >** - 將進度列顯示為確認選定檔案為有效 DAC 封裝的精靈。  
   
@@ -118,7 +117,7 @@ ms.locfileid: "72783065"
   
  **正在驗證 DAC 的內容** - 報告驗證程序之目前狀態的進度列。  
   
- 上一步-回到 [**選取封裝**] 頁面的初始狀態。 ** \< **  
+ ** \< 上一步**-回到 [**選取封裝**] 頁面的初始狀態。  
   
  **下一步 >** - 繼續進行最終版本的 [選取封裝]**** 頁面。  
   
@@ -133,7 +132,7 @@ ms.locfileid: "72783065"
   
  **忽略違反原則** - 使用這個核取方塊可在一個或多個原則條件失敗時繼續部署。 只有當您確定所有失敗的條件都不會阻礙 DAC 作業的成功時，才選取此選項。  
   
- 上一步-回到 [**選取封裝**] 頁面。 ** \< **  
+ ** \< 上一步**-回到 [**選取封裝**] 頁面。  
   
  **下一步 >** - 繼續進行 [更新組態]**** 頁面。  
   
@@ -158,7 +157,7 @@ ms.locfileid: "72783065"
   
  **記錄檔路徑和名稱:** - 為記錄檔指定完整路徑和檔案名稱。 此方塊中會填入預設路徑和檔案名稱。 在此方塊中編輯字串來變更預設值，或使用 **[瀏覽]** 按鈕導覽至放置記錄檔的資料夾。  
   
- 上一步-回到 [**選取 DAC 封裝**] 頁面。 ** \< **  
+ ** \< 上一步**-回到 [**選取 DAC 封裝**] 頁面。  
   
  **下一步 >** - 繼續進行 [摘要]**** 頁面。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "72783065"
   
  **將使用以下設定部署您的 DAC** - 檢閱顯示的資訊，以確保採取的動作將會是正確的。 此視窗會顯示您所選取的 DAC 封裝以及您針對部署的 DAC 執行個體所選取的名稱。 此視窗也會顯示當您建立與 DAC 相關聯的資料庫時，將要使用的設定。  
   
- 上一步-回到 [**更新**設定] 頁面，變更您的選擇。 ** \< **  
+ ** \< 上一步**-回到 [**更新**設定] 頁面，變更您的選擇。  
   
  **下一步 >** - 部署 DAC，並在 [部署 DAC]**** 頁面中顯示結果。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05b8211569b6ce83faaec043e5eb527a60f0ddab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918975"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970553"
 ---
 # <a name="set-or-change-the-column-collation"></a>設定或變更資料行定序
   您可以透過為資料表中特定資料行指定不同的定序並使用下列其中一種方法，覆寫 `char`、`varchar`、`text`、`nchar`、`nvarchar` 和 `ntext` 資料的資料庫定序：  
@@ -38,7 +37,7 @@ ms.locfileid: "62918975"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 如需詳細資訊，請參閱 [定序與 Unicode 支援](collation-and-unicode-support.md)。  
   
--   使用管理`Column.Collation`物件（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO）中的屬性。  
+-   使用 `Column.Collation` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件（SMO）中的屬性。  
   
  如果目前下列任何一個項目參考資料行定序的話，就無法變更其定序：  
   

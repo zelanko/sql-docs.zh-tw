@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f31f93ba468e6ffc91313e7ca653d122c1664ad2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a52039402c087a131e50878dc69ce6e16e4a54ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937679"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>從 .dqs 檔案匯入知識庫
   此主題描述如何從 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的 .dqs 資料檔匯入整個知識庫。 您從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式匯出現有的知識庫來建立此資料檔 (請參閱＜ [將知識庫匯出到.dqs 檔案](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)＞)。  
@@ -48,13 +47,13 @@ ms.locfileid: "65480658"
   
 5.  針對 **[選取資料檔]** 按一下 **[瀏覽]**。  
   
-6.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之 .dqs 檔案的資料夾，然後按一下檔案的名稱。 按一下 [開啟]  。  
+6.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之 .dqs 檔案的資料夾，然後按一下檔案的名稱。 按一下 [開啟] 。  
   
 7.  確認 **[定義域]** 清單中是否顯示正確的知識庫和定義域。  
   
 8.  請選取您要執行的活動，然後按一下 **[建立]**。  
   
-9. 在 **[匯入知識庫]** 對話方塊中，確認狀態行指出已完成匯入。 按一下 [確定]  。  
+9. 在 **[匯入知識庫]** 對話方塊中，確認狀態行指出已完成匯入。 按一下 [確定]。  
   
 10. 完成您需要執行的知識探索、定義域管理或比對原則工作，然後按一下 **[完成]**。  
   

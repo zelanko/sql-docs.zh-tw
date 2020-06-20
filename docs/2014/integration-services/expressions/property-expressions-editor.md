@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7539ae9426bfe480f7dbbe25ea1c3724815295e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b87040080e6aa88690d1368ab54e8dbcc8cae0df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768784"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969108"
 ---
 # <a name="property-expressions-editor"></a>屬性運算式編輯器
   使用 **[屬性運算式編輯器]** 對話方塊，即可建立、編輯或刪除用來更新屬性值的屬性運算式。  

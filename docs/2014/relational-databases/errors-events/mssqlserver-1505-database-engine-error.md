@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74c152404cf2d3710bbe98b29da7a96d86f58859
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67727737"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969522"
 ---
 # <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
@@ -50,7 +49,7 @@ ms.locfileid: "67727737"
   
  錯誤訊息 1505 會傳回違反唯一性條件約束的第一個資料列。 資料表可能含有其他重複的資料列。 若要尋找所有重複的資料列，請查詢指定的資料表並使用 GROUP BY 和 HAVING 子句來報告重複的資料列。 例如，下列查詢會傳回 **Employee** 資料表中具有重複名字和姓氏的資料列。  
   
- 選取 [LastName]、[FirstName\*]、[count] （）（來自 dbo）。Employee GROUP BY LastName，FirstName count （\*） > 1;  
+ 選取 [LastName]、[FirstName]、[count] （ \* ）（來自 dbo）。Employee GROUP BY LastName，FirstName count （ \* ） > 1;  
   
 ## <a name="user-action"></a>使用者動作  
  請考慮下列解決方案。  

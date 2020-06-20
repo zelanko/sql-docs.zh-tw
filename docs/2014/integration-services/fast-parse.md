@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b13ddc498962ca23e6bc1f5e7a10d88af47ff7d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bac087d9f4b086f2e50faef319208b52de19d766
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058873"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967138"
 ---
 # <a name="fast-parse"></a>Fast Parse
   快速剖析提供一組快速、簡單的常式用以剖析資料。 這些常式並不區分地區設定，而且只支援一組日期、時間和整數格式的子集。  

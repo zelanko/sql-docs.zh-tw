@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffbfaa1bda561240d64c7548752f0ae18ddddf3c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917590"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952578"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔
   Database Mail 訊息的副本及其附件會隨著 Database Mail 事件記錄檔一起保留在 **msdb** 資料表。 您可能需要定期減少資料表的大小，並封存不再需要的訊息和事件。 下列程序可建立 SQL Server Agent 作業以便自動執行程序。  
@@ -208,7 +207,7 @@ ms.locfileid: "62917590"
   
 5.  在 **[頻率]** 區域中，選取定期執行作業的選項 (例如一個月一次)。  
   
-6.  在 [**每日頻率**] 區域中，選取 [**一次發生一\<次]>**。  
+6.  在 [**每日頻率**] 區域中，選取 [**一次出現于 \<time> **]。  
   
 7.  視需要設定其他選項，然後按一下 **[確定]** 儲存排程。  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 392fcbf3a46b48b2032b5792321e9a22b3027341
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a39652e37144de604f277e37c81b1bb3e59cb32b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832773"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919964"
 ---
 # <a name="azure-blob-upload-task"></a>Azure Blob 上傳工作
   Azure Blob 上傳工作可讓 SSIS 封裝將檔案上傳到 Azure Blob 儲存體。   
@@ -28,7 +27,7 @@ ms.locfileid: "62832773"
   
 |||  
 |-|-|  
-|**欄位**|**描述**|  
+|**欄位**|**說明**|  
 |AzureStorageConnection|指定現有的 Azure 儲存體連線管理員，或建立參考 Azure 儲存體帳戶的新連線管理員，而該儲存體帳戶指向裝載 Blob 檔案之處。|  
 |BlobContainer|指定以 Blob 形式保存上傳之檔案的 Blob 容器名稱。|  
 |BlobDirectory|指定以區塊 Blob 形式儲存上傳之檔案的 Blob 目錄。 Blob 目錄是虛擬的階層式結構。 如果在 Blob 已存在，將會遭到取代。|  
