@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a145f97a8eb848f604833d1afe8e0afd27a50776
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 97aa2656ccde662a34e1dd80fd662b22f601d4ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704576"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018004"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>將資料行加入至 SQL Server 資料表
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會公開**ITableDefinition：： AddColumn**函數。 如此可讓取用者將資料行加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。  

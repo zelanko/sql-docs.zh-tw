@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65d4892b135ac78f0e35620a9013168228c84498
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823695"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058508"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>使用自訂報表搭配物件總管節點屬性
   如果自訂報表參考選定 [物件總管] 節點的報表參數，自訂報表就可以在該節點的內容中執行。 這可讓自訂報表使用目前的內容 (例如目前的資料庫) 或資料庫或伺服器物件。  
@@ -43,7 +42,7 @@ ms.locfileid: "62823695"
   
 2.  將報表檔案複製到您在資料庫伺服器上針對自訂報表所建立資料夾。  
   
-3.  在[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，以滑鼠右鍵按一下物件總管中的節點，指向 [**報表**]，然後按一下 [自訂報表]。 在 [開啟檔案]**** 對話方塊中，找出自訂報表資料夾並選取報表檔案，然後按一下 [開啟]****。  
+3.  在中 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ，以滑鼠右鍵按一下物件總管中的節點，指向 [**報表**]，然後按一下 [自訂報表]。 在 [開啟檔案]**** 對話方塊中，找出自訂報表資料夾並選取報表檔案，然後按一下 [開啟]****。  
   
      第一次從物件總管節點開啟新的自訂報表時，該報表會新增到該節點的快速鍵功能表中，[自訂報表]**** 下之最近使用的清單中。 第一次開啟標準報表時，該報表也會顯示在 [自訂報表]**** 下之最近使用的清單中。 如果您刪除了某個自訂報表檔，下次選取該項目時，系統就會提示您是否要從最近使用清單中刪除該項目。  
   

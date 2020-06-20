@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55c621f9f345f0863e6656b66a77a8ccc439b0bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768160"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965608"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>SQL Server 匯入和匯出精靈
-  [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出嚮導] 提供最簡單的方法[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，讓您建立可將資料從來源複製到目的地的封裝。  
+  [匯 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入和匯出嚮導] 提供最簡單的方法，讓您建立可 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 將資料從來源複製到目的地的封裝。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會在 64 位元電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈 (DTSWizard.exe) 的 64 位元版本。 不過，有些資料來源 (例如，Access 或 Excel) 只有 32 位元提供者。 若要使用這些資料來源，您可能必須安裝並執行此精靈的 32 位元版本。 若要安裝此精靈的 32 位元版本，您必須在安裝期間選取用戶端工具或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
@@ -50,7 +49,7 @@ ms.locfileid: "62768160"
   
  根據您啟動精靈的環境而定，某些精靈功能的運作方式不盡相同：  
   
--   如果您在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]啟動 [匯入和匯出嚮導]，請選取 [**立即執行**] 核取方塊以立即執行封裝。 根據預設，此核取方塊為選取狀態，而且此封裝會立即執行。  
+-   如果您在中啟動 [匯 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入和匯出嚮導] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，請選取 [**立即執行**] 核取方塊以立即執行封裝。 根據預設，此核取方塊為選取狀態，而且此封裝會立即執行。  
   
      您也可以決定要將封裝儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還是檔案系統。 如果您選擇要儲存封裝，還必須指定封裝保護等級。 如需封裝保護層級的詳細資訊，請參閱[封裝中的敏感性資料存取控制](../security/access-control-for-sensitive-data-in-packages.md)。  
   
@@ -74,12 +73,12 @@ ms.locfileid: "62768160"
   
 -   如果您想要建立新的目的地資料庫、資料表或檔案，就必須具備能夠建立新資料庫、資料表或檔案的足夠權限。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這需要 CREATE DATABASE 或 CREATE TABLE 權限。  
   
--   如果您想要儲存精靈所建立的封裝，就必須具備能夠寫入 msdb 資料庫或檔案系統的足夠權限。 在[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，這需要 msdb 資料庫的 INSERT 許可權。  
+-   如果您想要儲存精靈所建立的封裝，就必須具備能夠寫入 msdb 資料庫或檔案系統的足夠權限。 在中 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，這需要 msdb 資料庫的 INSERT 許可權。  
   
 ## <a name="mapping-data-types-in-the-import-and-export-wizard"></a>在匯入和匯出精靈中對應資料類型  
  「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈」提供最基本的轉換功能。 除了設定新目的地資料表和檔案中資料行的名稱、資料類型和資料類型屬性之外，「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈」不支援資料行層級的轉換。  
   
- 「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈」使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的對應檔案，對應兩個資料庫版本或系統之間的資料類型。 例如，它可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對應到 Oracle。 依預設，XML 格式的對應檔案會安裝在 C:\Program Files\Microsoft SQL Server\100\DTS\MappingFiles。 如果您的企業需要在資料類型之間進行不同的對應，您可以更新對應，以影響精靈執行的對應。 例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，如果您想要在將資料從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳送至 db2 時，將**Nchar**資料類型對應到 db2**圖形**資料類型，而不是 db2 **VARGRAPHIC**資料類型，您可以將 sqlclienttoibmdb2.xml 取代中的**Nchar**對應變更為使用**圖形**，而不是**VARGRAPHIC。**  
+ 「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈」使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的對應檔案，對應兩個資料庫版本或系統之間的資料類型。 例如，它可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對應到 Oracle。 依預設，XML 格式的對應檔案會安裝在 C:\Program Files\Microsoft SQL Server\100\DTS\MappingFiles。 如果您的企業需要在資料類型之間進行不同的對應，您可以更新對應，以影響精靈執行的對應。 例如，如果您想要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Nchar**資料類型在將資料從傳送至 db2 時，對應到 db2**圖形**資料類型，而不是 db2 **VARGRAPHIC**資料類型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您可以將 SqlClientToIBMDB2.xml 對應檔中的**Nchar**對應變更為使用**圖形**，而不是**VARGRAPHIC。**  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含許多常用來源和目的地組合之間的對應，您可以在對應檔目錄中加入新的對應檔，以支援其他來源和目的地。 新的對應檔必須符合已發行的 XSD 結構描述，並對應來源和目的地的唯一組合。  
   

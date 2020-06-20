@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 669bf07101a05f2646a0928405b1807dadf0b2ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c13c1d4cdf7b1bbc72c956652bb89c2014103d76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059459"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   SELECT 查詢會將結果以資料列集的形式傳回。 在查詢中指定 FOR XML 子句，您就可選擇以 XML 格式擷取 SQL 查詢的正式結果。 FOR XML 子句可以使用在最上層的查詢與子查詢中。 最上層的 FOR XML 子句只能用在 SELECT 陳述式中。 在子查詢中，FOR XML 可以在 INSERT、UPDATE 與 DELETE 陳述式中使用。 它也可用在指派陳述式中。  
@@ -39,7 +38,7 @@ ms.locfileid: "82716645"
   
 -   PATH  
   
- RAW 模式會對資料列集中 SELECT 陳述式傳回的每一個資料列，產生一個 \<資料列> 項目。 您可以撰寫巢狀 FOR XML 查詢來產生 XML 階層。  
+ RAW 模式 \<row> 會在 SELECT 語句所傳回之資料列集中的每個資料列產生單一元素。 您可以撰寫巢狀 FOR XML 查詢來產生 XML 階層。  
   
  AUTO 模式會使用啟發學習法 (根據 SELECT 陳述式的指定方式)，在所產生的 XML 中產生巢狀結構。 您對產生的 XML 之外觀只有最少的控制權。 您可以撰寫巢狀的 FOR XML 查詢，以產生 AUTO 模式啟發學習法所產生之 XML 外觀以外的 XML 階層。  
   

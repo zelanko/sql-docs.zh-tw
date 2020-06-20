@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 501c7931d651498fea49749be38af374c02424ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721402"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010781"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>SQL Server 複寫散發者屬性
 本主題討論 [散發者**屬性**] 視窗中 [**一般**]、[**發行者**] 和 [**散發資料庫**] 頁面上找到的屬性。 
@@ -30,7 +29,7 @@ ms.locfileid: "62721402"
   
  散發資料庫會儲存所有複寫類型的中繼資料和記錄資料，以及異動複寫的交易。 在許多情況下，單一散發資料庫即已足夠。 但是如果多個發行者使用單一散發者，請考慮為每個發行者建立散發資料庫。 這樣可以確保流經每個散發資料庫的資料都不同。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **資料庫**  
  **[資料庫]** 屬性方格會顯示散發者上之散發資料庫的名稱與保留屬性。 **[交易保留]** 是為異動複寫儲存交易的時間長度 (交易保留也稱為散發保留)。 **[記錄保留]** 是為所有的複寫類型儲存記錄中繼資料的時間長度。 如需散發保留的詳細資訊，請參閱[訂閱逾期與停用](subscription-expiration-and-deactivation.md)。  
   
@@ -49,11 +48,11 @@ ms.locfileid: "62721402"
 
   **[散發者屬性]** 對話方塊的 **[發行者]** 頁面可讓您啟用發行者，以使用此散發者。 您也可以設定與這些發行者相關聯的屬性。 請注意，讓發行者可以使用這個伺服器作為它的遠端散發者，並不會使該伺服器成為發行者。 您必須連接到發行者，設定其發行，並選擇此伺服器為散發者。 您可以透過新增發行集精靈來設定發行者和選擇散發者。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **發行者**  
  選取可使用這個散發者的伺服器。 按一下發行者旁的 [屬性] 按鈕 **(...)** ，以檢視和設定其他屬性。  
   
- **加入**  
+ **新增**  
  如果未列出您要允許的伺服器，請按一下 [加入]****，將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者或 Oracle 發行者加入可用發行者的清單中。 如果您加入的伺服器是第一部使用此散發者作為遠端散發者的伺服器，系統會提示您提供管理連結密碼。  
   
  **管理連結密碼**  
@@ -90,7 +89,7 @@ ms.locfileid: "62721402"
 -   代理程式會使用 **[發行者屬性]** 對話方塊中指定的認證來連接發行者，該對話方塊可以從 **[散發者屬性]** 對話方塊的 **[發行者]** 頁面存取。    
 -   代理程式會使用新增訂閱精靈中為散發代理程式指定的認證，來連接訂閱者。  
   
- 如需詳細資訊， \\請參閱[Replication Agent Security Model](security/replication-agent-security-model.md)。 
+ 如需詳細資訊，請參閱 \\ [Replication Agent Security Model](security/replication-agent-security-model.md)。 
 
   
 ## <a name="see-also"></a>另請參閱  

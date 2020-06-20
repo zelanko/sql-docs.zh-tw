@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77cf641ca84181496f26a995244029d0525ade63
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155381"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049955"
 ---
 # <a name="create-filtered-indexes"></a>建立篩選的索引
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立篩選索引。 篩選索引是最佳化的非叢集索引，特別適合涵蓋從妥善定義的資料子集選取而來的查詢。 篩選索引會使用篩選述詞對資料表中的部分資料列進行索引。 與完整資料表索引相較，設計良好的篩選索引可以提升查詢效能、降低索引維護成本和儲存成本。  
@@ -113,7 +112,7 @@ ms.locfileid: "63155381"
   
 7.  在 [從 <資料表名稱>__ 選取資料行]**** 對話方塊中，選取要加入唯一索引之一或多個資料表資料行的核取方塊。  
   
-8.  按一下 [確定]  。  
+8.  按一下 [確定]。  
   
 9. 在 [**篩選**] 頁面的 [**篩選運算式**] 底下，輸入您將用來建立篩選索引的 SQL 運算式。  
   

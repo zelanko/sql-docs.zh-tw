@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c0975dee640230880dfe05a7d86359172cfa157
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d09750c0cb81d64f5921ae2064b2e75edb6ca96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882231"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047580"
 ---
 # <a name="validate-replicated-data"></a>驗證複寫的資料
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中驗證訂閱者端的資料。  
@@ -42,7 +41,7 @@ ms.locfileid: "73882231"
   
  驗證資料是一個三部份式的處理：  
   
-1.  *「標示」* 要驗證之發行集的單個或所有訂閱。 在 [驗證單一訂閱]  、[驗證多個訂閱]  和 [驗證所有訂閱]  對話方塊 (位於  的 [本機發行集]  資料夾和 [本機訂閱][!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]資料夾) 中標示要驗證的訂閱。 您也可以從複寫監視器中的 **[所有訂閱]** 索引標籤、 **[訂閱監看清單]** 索引標籤和發行集節點標示訂閱。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](monitor/start-the-replication-monitor.md)。  
+1.  *「標示」* 要驗證之發行集的單個或所有訂閱。 在 [驗證單一訂閱] 、[驗證多個訂閱] 和 [驗證所有訂閱]  對話方塊 (位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [本機發行集]資料夾和 [本機訂閱]資料夾) 中標示要驗證的訂閱。 您也可以從複寫監視器中的 **[所有訂閱]** 索引標籤、 **[訂閱監看清單]** 索引標籤和發行集節點標示訂閱。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](monitor/start-the-replication-monitor.md)。  
   
 2.  在下一次由「散發代理程式」(用於異動複寫) 或「合併代理程式」(用於合併式複寫) 進行同步時，將對訂閱進行驗證。 「散發代理程式」通常連續執行，此時可立即進行驗證；「合併代理程式」通常視需要執行，此時驗證將在執行代理程式後進行。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "73882231"
 -   由於總和檢查碼與二進位總和檢查碼在驗證大型資料集時，可能需要使用大量的處理器資源，因此應該將驗證排在伺服器複寫活動最少的時間來進行。    
 -   複寫僅驗證資料表；它無法驗證只有結構描述的發行項 (例如預存程序) 在「發行者」與「訂閱者」上是否相同。    
 -   二進位總和檢查碼可以與任何已發行資料表一起使用。 總和檢查碼無法驗證具有資料行篩選或其中資料行位移不同 (由於 ALTER TABLE 陳述式卸除或新增資料行) 的邏輯資料表結構的資料表。    
--   複寫驗證會使用`checksum`和**binary_checksum**函數。 如需其行為的資訊，請參閱[總和檢查碼 &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) 和 [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql)。  
+-   複寫驗證會使用 `checksum` 和**binary_checksum**函數。 如需其行為的資訊，請參閱[總和檢查碼 &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) 和 [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql)。  
   
 -   如果「訂閱者」與「發行者」端的資料類型不同，則使用二進位總和檢查碼或總和檢查碼的驗證可能會誤報失敗。 如果執行下列任何一項作業，就可能發生上述情況：    
     -   將結構描述選項明確地設定為對應舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料類型。    
@@ -112,7 +111,7 @@ ms.locfileid: "73882231"
 
 #### <a name="all-articles"></a>所有發行項
   
-1.  在發行集資料庫的發行者端，執行 [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql)。 指定** \@發行**集，以及** \@rowcount_only**的下列其中一個值：    
+1.  在發行集資料庫的發行者端，執行 [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql)。 指定** \@ 發行**集，以及** \@ rowcount_only**的下列其中一個值：    
     -   **1** - 只限列數檢查 (預設值)    
     -   **2** - 列數及二進位總和檢查碼。  
   
@@ -124,7 +123,7 @@ ms.locfileid: "73882231"
   
 #### <a name="single-article"></a>單一發行項 
   
-1.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)。 指定** \@發行**集、發行** \@項的名稱，以及** ** \@rowcount_only**的下列其中一個值：    
+1.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)。 指定** \@ 發行**集、發行** \@ 項的名稱，以及** ** \@ rowcount_only**的下列其中一個值：    
     -   **1** - 只限列數檢查 (預設值)    
     -   **2** -資料列計數和二進位總和檢查碼。  
   
@@ -137,9 +136,9 @@ ms.locfileid: "73882231"
 #### <a name="single-subscriber"></a>單一訂閱者
   
 1.  在發行集資料庫的發行者端，使用 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql) 來開啟明確交易。    
-2.  在發行集資料庫的發行者端，執行 [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql)。 指定** \@發行**集、 ** \@訂閱**者的訂閱者名稱，以及** \@destination_db**的訂閱資料庫名稱。    
+2.  在發行集資料庫的發行者端，執行 [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql)。 指定** \@ 發行**集、 ** \@ 訂閱**者的訂閱者名稱，以及** \@ destination_db**的訂閱資料庫名稱。    
 3.  (選擇性) 針對每個要驗證的訂閱重複步驟 2。    
-4.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)。 指定** \@發行**集、發行** \@項的名稱，以及** ** \@rowcount_only**的下列其中一個值：    
+4.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)。 指定** \@ 發行**集、發行** \@ 項的名稱，以及** ** \@ rowcount_only**的下列其中一個值：    
     -   **1** - 只限列數檢查 (預設值)    
     -   **2** -資料列計數和二進位總和檢查碼。  
   
@@ -187,7 +186,7 @@ ms.locfileid: "73882231"
 
 ### <a name="using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL)
 
-1.  在發行集資料庫的發行者端，執行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql)。 指定** \@發行**集、 ** \@訂閱**者的訂閱者名稱、 ** \@subscriber_db**的訂閱資料庫名稱，以及** \@level**的下列其中一個值：   
+1.  在發行集資料庫的發行者端，執行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql)。 指定** \@ 發行**集、 ** \@ 訂閱**者的訂閱者名稱、 ** \@ subscriber_db**的訂閱資料庫名稱，以及** \@ level**的下列其中一個值：   
     -   **1** - 只驗證列數。    
     -   **3** - 驗證列數二進位總和檢查碼。  
   
@@ -218,7 +217,7 @@ ms.locfileid: "73882231"
 
 ### <a name="using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL)
 
-1.  在發行集資料庫的發行者端，執行 [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql)。 **為\@[層級**] 指定** \@[發行**集] 和下列其中一個值：    
+1.  在發行集資料庫的發行者端，執行 [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql)。 為 [ ** \@ 層級**] 指定 [ ** \@ 發行**集] 和下列其中一個值：    
     -   **1** - 只驗證列數。    
     -   **3** - 驗證列數二進位總和檢查碼。  
   

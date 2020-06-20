@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06e5403a9e490677e1cb5f88eb20ed8ffb967e15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e54cf82c9413b97599e6e06ad9a51be46cd822a9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939606"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965705"
 ---
 # <a name="sql-server-data-files-in-azure"></a>Azure 中的 SQL Server 資料檔案
   在 Azure 中 SQL Server 資料檔案可對儲存為 Azure Blob 的 SQL Server 資料庫檔案提供原生支援。 它可讓您在內部部署或 Azure 虛擬機器中執行的 SQL Server 中建立資料庫，其具有 Azure Blob 儲存體中資料的專用儲存位置。 此增強功能特別簡化了使用卸離和附加作業，在電腦之間移動資料庫的工作。 此外，它也可讓您從或 Azure 儲存體還原，為您的資料庫備份檔案提供替代儲存位置。 因此，它會針對資料虛擬化、資料移動、安全性和可用性提供許多優點，進而實現許多混合式方案，而且成本低廉、維護簡單，即可達到高可用性和彈性調整的效果。  
@@ -96,9 +95,9 @@ ON
   
 ###  <a name="limitations"></a><a name="bkmk_Limitations"></a> 限制  
   
--   在此功能的目前版本中，不`FileStream`支援將資料儲存在 Azure 儲存體中。 您可以將`Filestream`資料儲存在 Azure 儲存體整合的本機資料庫中，但是您無法使用 Azure 儲存體在電腦之間移動 Filestream 資料。 對於 `FileStream` 資料，我們建議您繼續使用傳統的技術，在不同的電腦之間移動與 Filestream 相關聯的檔案 (.mdf 和 .ldf)。  
+-   在此功能的目前版本中， `FileStream` 不支援將資料儲存在 Azure 儲存體中。 您可以將 `Filestream` 資料儲存在 Azure 儲存體整合的本機資料庫中，但是您無法使用 Azure 儲存體在電腦之間移動 Filestream 資料。 對於 `FileStream` 資料，我們建議您繼續使用傳統的技術，在不同的電腦之間移動與 Filestream 相關聯的檔案 (.mdf 和 .ldf)。  
   
--   目前，這項新增強功能不支援多個 SQL Server 執行個體同時存取 Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為**5120 無法開啟實體檔案 "%.\*ls "。作業系統錯誤% d： "% ls"**。  
+-   目前，這項新增強功能不支援多個 SQL Server 執行個體同時存取 Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為**5120 無法開啟實體檔案 "%. \*ls "。作業系統錯誤% d： "% ls"**。  
   
 -   透過使用 Azure 功能中的 SQL Server 資料檔案，僅能將 .mdf、.ldf 和 .ndf 檔案儲存在 Azure 儲存體中。  
   
@@ -106,9 +105,9 @@ ON
   
 -   每個 Blob 的大小最高可達 1 TB。 這會針對 Azure 儲存體可儲存的個別資料庫資料和記錄檔建立上限。  
   
--   您無法使用 Azure 儲存體功能中的 SQL Server 資料檔案，將記憶體內部 OLTP 資料儲存在 Azure Blob 中。 這是因為記憶體內部 OLTP 相依于`FileStream`和，而在目前版本的這項功能中，不支援`FileStream`將資料儲存在 Azure 儲存體中。  
+-   您無法使用 Azure 儲存體功能中的 SQL Server 資料檔案，將記憶體內部 OLTP 資料儲存在 Azure Blob 中。 這是因為記憶體內部 OLTP 相依于 `FileStream` 和，而在目前版本的這項功能中， `FileStream` 不支援將資料儲存在 Azure 儲存體中。  
   
--   使用 Azure 功能中 SQL Server 資料檔案時，SQL Server 會使用`master`資料庫中設定的定序來執行所有 URL 或檔案路徑比較。  
+-   使用 Azure 功能中 SQL Server 資料檔案時，SQL Server 會使用資料庫中設定的定序來執行所有 URL 或檔案路徑比較 `master` 。  
   
 -   只要您不要將新的資料庫檔案加入至主要資料庫，就支援 `AlwaysOn Availability Groups`。 如果資料庫作業需要在主要資料庫中建立新的檔案，請先在次要節點中停用 AlwaysOn 可用性群組。 然後，在主要資料庫上執行資料庫作業，並且備份主要節點中的資料庫。 接著，將資料庫還原到次要節點，並且在次要節點中啟用 AlwaysOn 可用性群組。 請注意，使用 Azure 功能中的 SQL Server 資料檔案時，不支援 AlwaysOn 容錯移轉叢集實例。  
   
@@ -141,7 +140,7 @@ ON
   
  **驗證錯誤**  
   
--   *無法卸載認證 '%。\*ls '，因為作用中的資料庫檔案正在使用它。*   
+-   *無法卸載認證 '%. \*ls '，因為作用中的資料庫檔案正在使用它。*   
     解決方式：當您嘗試卸除的認證仍然由 Azure 儲存體中的作用中資料庫檔案使用時，就可能會看見此錯誤。 若要卸除認證，您必須先刪除具有此資料庫檔案的相關聯 Blob。 若要刪除擁有使用中租用的 Blob，您必須先中斷租用。  
   
 -   *尚未在容器上正確建立共用存取簽章。*   
@@ -162,10 +161,10 @@ ON
 2.  *執行 Alter 語句時發生錯誤*   
     解決方式：請務必在資料庫上線時執行 Alter Database 陳述式。 將資料檔案複製到 Azure 儲存體時，一定要建立分頁 Blob 而非區塊 Blob。 否則，ALTER Database 將會失敗。 請參閱[教學課程：在 Azure 儲存體服務中 SQL Server 資料檔案](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)中的第7課所提供的指示。  
   
-3.  *錯誤碼5120無法開啟實體檔案 "%。\*ls "。作業系統錯誤% d： "% ls"*   
-    解決方式：目前，這項新的增強功能不支援多個 SQL Server 執行個體同時存取 Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為*5120 無法開啟實體檔案 "%.\*ls "。作業系統錯誤% d： "% ls"*。  
+3.  *錯誤碼5120無法開啟實體檔案 "%. \*ls "。作業系統錯誤% d： "% ls"*   
+    解決方式：目前，這項新的增強功能不支援多個 SQL Server 執行個體同時存取 Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為*5120 無法開啟實體檔案 "%. \*ls "。作業系統錯誤% d： "% ls"*。  
   
-     若要解決此問題，請先判斷您是否需要讓 ServerA 存取 Azure 儲存體中的資料庫檔案。 如果不需要，只要移除 ServerA 與 Azure 儲存體中資料庫檔案之間的任何連接即可。 若要這樣做，請執行下列步驟：  
+     若要解決此問題，請先判斷您是否需要讓 ServerA 存取 Azure 儲存體中的資料庫檔案。 如果不需要，只要移除 ServerA 與 Azure 儲存體中資料庫檔案之間的任何連接即可。 若要這樣做，請遵循下列步驟：  
   
     1.  使用 ALTER Database 陳述式，將 Server A 的檔案路徑設定為本機資料夾。  
   

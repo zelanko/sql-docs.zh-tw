@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: f3303072-2b44-4443-936c-f024b0b2a8c5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57d05a00a157a8e5bffec8720a4c8e0716a802f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce4fd6d84929ce7d1338f5fd688d3c24f1e1858a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051291"
 ---
 # <a name="localdb_error_caller_is_not_owner"></a>LOCALDB_ERROR_CALLER_IS_NOT_OWNER
     

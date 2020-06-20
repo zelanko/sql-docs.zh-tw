@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5df714d818949b921ff2236e50d58913eab0e0db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035653"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062562"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>被遺棄使用者疑難排解 (SQL Server)
-  若要登入 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，則主體必須提供有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 此登入是用於驗證處理序，可確認是否允許該主體連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 伺服器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例上的登入可以**server_principals**在 syslogins 目錄檢視和**sys.databases**相容性檢視中看見。  
+  若要登入 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，則主體必須提供有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 此登入是用於驗證處理序，可確認是否允許該主體連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]伺服器實例上的登入可以在**server_principals**目錄檢視和**sys.sys**登入相容性檢視中看見。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入會使用對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的資料庫使用者來存取個別資料庫。 這項規則有兩個例外狀況：  
   
@@ -58,7 +57,7 @@ GO;
  輸出會列出使用者及對應的安全性識別碼 (SID)，這些使用者皆為目前資料庫中的使用者，且並未與任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入有連結。 如需詳細資訊，請參閱[sp_change_users_login &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)。  
   
 > [!NOTE]  
->  **sp_change_users_login**不能與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從 Windows 建立的登入一起使用。  
+>  **sp_change_users_login**不能與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 從 Windows 建立的登入一起使用。  
   
 ## <a name="to-resolve-an-orphaned-user"></a>若要解析被遺棄使用者  
  若要解析被遺棄使用者，請使用以下程序：  
@@ -88,7 +87,7 @@ GO;
     >  只有具有 ALTER ANY LOGIN 權限的登入，才能夠變更其他使用者登入的密碼。 不過，只有 **sysadmin** 角色成員才能修改 **sysadmin** 角色成員的密碼。  
   
     > [!NOTE]  
-    >  **sp_password**無法用於[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶。 透過 Windows 網路帳戶連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的使用者是由 Windows 驗證，因此他們的密碼只能在 Windows 中變更。  
+    >  **sp_password**無法用於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶。 透過 Windows 網路帳戶連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的使用者是由 Windows 驗證，因此他們的密碼只能在 Windows 中變更。  
   
      如需詳細資訊，請參閱[sp_password &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)。  
   
@@ -99,7 +98,7 @@ GO;
  [sp_addlogin &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)   
  [sp_grantlogin &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql)   
  [sp_password &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)   
- [sysusers &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
- [syslogins &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
+ [sys.sys使用者 &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
+ [sys.sys登入 &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
   
   

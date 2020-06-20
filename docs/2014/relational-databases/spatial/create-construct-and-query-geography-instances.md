@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d744457cc517a6172cca96b27eae1f456deca24e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014300"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016067"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>建立、建構並查詢地理位置執行個體
   地理位置空間資料類型 (`geography`) 代表圓形表面座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中是實作為 .NET Common Language Runtime (CLR) 資料類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` 資料類型會儲存橢圓體 (圓形表面) 資料，例如 GPS 經緯度座標。  
@@ -103,7 +102,7 @@ ms.locfileid: "66014300"
  [STGeomCollFromWKB &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type)STGeomCollFromWKB (geography 資料類型)  
   
 ###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> 從 GML 文字輸入建構地理位置執行個體  
- `geography`資料類型提供從 GML 產生`geography`實例的方法，這是`geography`實例的 XML 標記法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援 GML 的子集。  
+ `geography`資料類型提供從 GML 產生實例的方法 `geography` ，這是實例的 XML 標記法 `geography` 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援 GML 的子集。  
   
  如需地理標記語言的詳細資訊，請參閱 OGC 規格： [OGC 規格、地理標記語言](https://go.microsoft.com/fwlink/?LinkId=93629)。  
   
@@ -128,7 +127,7 @@ ms.locfileid: "66014300"
  [AsGml &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
 ##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> 查詢地理位置執行個體的屬性和行為  
- 所有`geography`實例都有許多屬性，可以透過[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的方法來抓取。 下列主題定義地理位置類型的屬性和行為以及用來查詢每一個類型的方法。  
+ 所有 `geography` 實例都有許多屬性，可以透過提供的方法來抓取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 下列主題定義地理位置類型的屬性和行為以及用來查詢每一個類型的方法。  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> 有效性、執行個體類型和 GeometryCollection 資訊  
  建構 `geography` 執行個體之後，您就可以使用下列方法來傳回執行個體類型，或者，如果它是 `GeometryCollection` 執行個體，就會傳回特定的 `geography` 執行個體。  
@@ -146,7 +145,7 @@ ms.locfileid: "66014300"
  [STGeometryN &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stgeometryn-geography-data-type)STGeometryN (geography 資料類型)  
   
 ###  <a name="number-of-points"></a><a name="number"></a> 點數  
- 所有非`geography`空的實例都是由*點*組成。 這些點代表 `geography` 執行個體繪製所在之地球的經緯度座標。 `geography` 資料類型提供了許多內建方法來查詢執行個體的點。  
+ 所有非空 `geography` 的實例都是由*點*組成。 這些點代表 `geography` 執行個體繪製所在之地球的經緯度座標。 `geography` 資料類型提供了許多內建方法來查詢執行個體的點。  
   
  **傳回組成執行個體的點數**  
  [STNumPoints &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stnumpoints-geography-data-type)  
@@ -161,7 +160,7 @@ ms.locfileid: "66014300"
  [STEndpoint &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> 維度  
- 非空的 `geography` 執行個體可以是 0 維度、1 維度或 2 維度。 零維度`geography`的實例（例如`Point`和`MultiPoint`）沒有長度或區域。 一維度物件 (如 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString`) 具有長度。 二維度執行個體 (如 `Polygon, CurvePolygon` 和 `MultiPolygon`) 具有區域和長度。 空的執行個體會報告 -1 的維度，而 `GeometryCollection` 則會報告其內容的最大維度。  
+ 非空的 `geography` 執行個體可以是 0 維度、1 維度或 2 維度。 零維度的 `geography` 實例（例如 `Point` 和 `MultiPoint` ）沒有長度或區域。 一維度物件 (如 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString`) 具有長度。 二維度執行個體 (如 `Polygon, CurvePolygon` 和 `MultiPolygon`) 具有區域和長度。 空的執行個體會報告 -1 的維度，而 `GeometryCollection` 則會報告其內容的最大維度。  
   
  **傳回執行個體的維度**  
  [STDimension &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
@@ -173,13 +172,13 @@ ms.locfileid: "66014300"
  [STArea &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/starea-geography-data-type)  
   
 ###  <a name="empty"></a><a name="empty"></a> Empty  
- *空*`geography`的實例沒有任何點。 空的 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString` 執行個體的長度是 0。 空的 `Polygon, CurvePolygon` 和 `MultiPolygon` 執行個體的區域是 0。  
+ *空*的 `geography` 實例沒有任何點。 空的 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString` 執行個體的長度是 0。 空的 `Polygon, CurvePolygon` 和 `MultiPolygon` 執行個體的區域是 0。  
   
  **判斷執行個體是否為空的**  
  [STIsEmpty &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  
   
 ###  <a name="closure"></a><a name="closure"></a> 封閉性  
- *封閉式*`geography`實例是起始點和結束點相同的圖形。 `Polygon` 執行個體視為封閉式。 `Point` 執行個體視為非封閉式。  
+ *封閉式* `geography` 實例是起始點和結束點相同的圖形。 `Polygon` 執行個體視為封閉式。 `Point` 執行個體視為非封閉式。  
   
  環形是簡單、封閉的 `LineString` 執行個體。  
   

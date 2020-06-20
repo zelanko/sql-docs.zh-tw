@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8e0965ef-cc3a-43d5-82ad-01f525654b2f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff847756d8717184654d8d08c84222dc9e99b9ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63282025"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058302"
 ---
 # <a name="show-the-object-explorer-details-page"></a>顯示物件總管詳細資料頁面
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以針對物件總管中所選取的每個物件，各顯示一份報表。 這份報表稱為 [物件總管詳細資料] 頁面，是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所建立的，且會在文件視窗中開啟。  

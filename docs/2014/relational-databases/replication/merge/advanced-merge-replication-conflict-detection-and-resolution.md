@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7330e1e9f588ba2eb06e419289278a7636fb7184
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63000334"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049470"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Advanced Merge Replication Conflict Detection and Resolution
   發行者與訂閱者連接並進行同步處理時，合併代理程式會偵測是否有任何衝突。 如果偵測到衝突，「合併代理程式」會使用衝突解析程式 (在發行項加入發行集時指定)，決定要接受及傳播至其他站台的資料。  
@@ -59,7 +58,7 @@ ms.locfileid: "63000334"
   
  若要指定發行項的衝突追蹤與解決層級，請參閱＜ [指定合併發行項的衝突追蹤與解決層級](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution)＞。  
   
-## <a name="conflict-resolution"></a>衝突解決  
+## <a name="conflict-resolution"></a>衝突解決方法  
  在偵測到衝突後，「合併代理程式」會啟動選取的衝突解析程式，並使用該解析程式決定衝突成功者。 成功的資料列已套用至「發行者」與「訂閱者」，而失敗的資料列則已寫入衝突資料表。 衝突會在解析程式執行後立即解決，除非您選擇以互動方式解決衝突。  
   
 ### <a name="resolver-types"></a>解析程式類型  
@@ -81,7 +80,7 @@ ms.locfileid: "63000334"
   
 -   以 COM 為基礎的自訂解析程式  
   
-     合併式複寫提供一個 API，可將解析程式撰寫為語言（ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)]例如[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]或）中的 COM 物件。 如需詳細資訊，請參閱 [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md)。  
+     合併式複寫提供一個 API，可將解析程式撰寫為語言（例如或）中的 COM 物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 。 如需詳細資訊，請參閱 [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md)。  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]提供之以 COM 為基礎的解析程式。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "63000334"
   
  「衝突檢視器」會顯示下列三個系統資料表中的資訊：  
   
--   複寫會為合併發行項中的每個資料表建立衝突資料表，並使用格式為 **MSmerge_conflict_\<發行集名稱>_\<發行項名稱>** 的名稱。  
+-   複寫會針對合併發行項中的每個資料表建立衝突資料表，其名稱格式為**MSmerge_conflict_ \<PublicationName> _ \<ArticleName> **。  
   
      衝突資料表的結構與其所根據的資料表相同。 其中一個資料表內的資料列含有衝突資料列的失敗版本 (資料列的優先版本位在實際的使用者資料表中)。  
   

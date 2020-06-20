@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ca2e8dd516b995dcf3d2e48b1ed14209677d41f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766622"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963453"
 ---
 # <a name="package-management-ssis-service"></a>封裝管理 (SSIS 服務)
   封裝的管理包含下列工作：  
@@ -44,7 +43,7 @@ ms.locfileid: "62766622"
 >  本主題會討論 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]回溯相容。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
   
 ## <a name="package-store"></a>封裝存放區  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供用來存取[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝的兩個最上層資料夾：執行**封裝**和已儲存的**封裝**。 **[Running Packages]** 資料夾會列出伺服器上目前正在執行的封裝。 **[Stored Packages]** 資料夾會列出所有儲存在封裝存放區中的封裝。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務只會管理這些封裝。 封裝存放區可以只由 msdb 資料庫組成，或者由該資料庫和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務組態檔中所列之檔案系統資料夾所組成。 組態檔會指定要管理的 msdb 及檔案系統資料夾。 您可能還有不是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務所管理的封裝，而存放在檔案系統的其他位置。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供用來存取封裝的兩個最上層資料夾 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ：執行**封裝**和已**儲存的封裝**。 **[Running Packages]** 資料夾會列出伺服器上目前正在執行的封裝。 **[Stored Packages]** 資料夾會列出所有儲存在封裝存放區中的封裝。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務只會管理這些封裝。 封裝存放區可以只由 msdb 資料庫組成，或者由該資料庫和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務組態檔中所列之檔案系統資料夾所組成。 組態檔會指定要管理的 msdb 及檔案系統資料夾。 您可能還有不是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務所管理的封裝，而存放在檔案系統的其他位置。  
   
  您儲存到 msdb 的封裝會存放在名為 sysssispackages 的資料表中。 當您將封裝儲存到 msdb 時，還可以將它們群組成邏輯資料夾。 使用邏輯資料夾可以協助您依用途組織封裝，或是篩選 sysssispackages 資料表中的封裝。 您可以經由使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]建立新的邏輯資料夾。 依預設，您加入至 msdb 的任何邏輯資料夾都會自動納入封裝存放區。  
   

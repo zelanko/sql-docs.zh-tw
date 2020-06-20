@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0fb65d55d2b6b135c562f9dd4b02170de6b7df3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5fc0042e55a7c82f2a69b9d3100ac6a3573a396
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63297873"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066282"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>排列圖表中的資料表 (Visual Database Tools)
   您可快速地排列資料庫圖表中的資料表，以清楚地查看每個資料表與關聯性。  

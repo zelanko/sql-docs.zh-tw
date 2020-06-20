@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93881c4e9b91e7ace4c250fbf90b8913484f2ce2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966758"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>執行 SQL 工作編輯器 (參數對應頁面)
   使用 [執行 SQL 工作編輯器]**** 對話方塊的 [參數對應]**** 頁面，即可將變數對應到 SQL 陳述式中的參數。  
@@ -28,11 +27,11 @@ ms.locfileid: "66059034"
   
 ## <a name="options"></a>選項。  
  **變數名稱**  
- 按一下 [新增]**** 新增參數對應之後，請從清單中選取系統或使用者定義變數，或按一下 [\<新增變數...>]**** 以使用 [新增變數]**** 對話方塊新增新的變數。  
+ **按一下 [新增**] 新增參數對應之後，請從清單中選取系統或使用者自訂變數，或按一下 \<**New variable...**> 以使用 [**加入變數**] 對話方塊來加入新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)  
   
- **方向**  
+ [方向]  
  選取參數的方向。 將每個變數對應到輸入參數、輸出參數或傳回碼。  
   
  **資料類型**  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30a54064d398ec6db09a9ccd54eed9411a7f905a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780708"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933209"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Common Language Runtime (CLR) 整合的使用案例和範例
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括範例應用程式、封裝範例和許多編碼範例，可用於了解 Common Language Runtime (CLR) 整合的可程式性功能。  

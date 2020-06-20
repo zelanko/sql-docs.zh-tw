@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 205e4ae3d6f89f10a933bf357d1eeda458852584
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196680"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055030"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一條件約束與檢查條件約束
   UNIQUE 和 CHECK 是兩種類型的條件約束，可用來強制執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中的資料完整性。 這些都是重要的資料庫物件。  
@@ -51,7 +50,7 @@ ms.locfileid: "68196680"
 >  包括明確或隱含資料類型轉換的條件約束可能會導致某些作業失敗。 例如，在資料分割切換來源的資料表上所定義的此類條件約束，可能會導致 ALTER TABLE...SWITCH 作業失敗。 應避免在條件約束定義中進行資料類型轉換。  
   
 ### <a name="limitations-of-check-constraints"></a>CHECK 條件約束的限制  
- CHECK 條件約束會拒絕評估為 FALSE 的值。 因為 Null 值會評估為 UNKNOWN，所以若其出現於運算式中，可能會覆寫條件約束。 例如，假設您將條件約束放在資料`int`行**MyColumn**上，指定**MyColumn**只能包含10這個值（**MyColumn = 10**）。 如果您將 NULL 值插入 **MyColumn**，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會插入 NULL 且不會傳回錯誤。  
+ CHECK 條件約束會拒絕評估為 FALSE 的值。 因為 Null 值會評估為 UNKNOWN，所以若其出現於運算式中，可能會覆寫條件約束。 例如，假設您將條件約束放在資料 `int` 行**MyColumn**上，**指定 MyColumn**只能包含10這個值（**MyColumn = 10**）。 如果您將 NULL 值插入 **MyColumn**，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會插入 NULL 且不會傳回錯誤。  
   
  CHECK 條件約束會針對資料表中的所有資料列進行檢查，當檢查的條件不為 FALSE 時，會傳回 TRUE。 CHECK 條件約束可在資料列層級運作。 如果剛建立的資料表沒有任何資料列，則這個資料表上的任何 CHECK 條件約束都將視為有效。 這種情況可能會產生非預期結果，如下列範例所示。  
   

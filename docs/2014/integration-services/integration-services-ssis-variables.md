@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42dd04f4edf2d1e9b9b31b11ab96fcd97f9d21d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892268"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966178"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
   變數會儲存 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件及其容器、工作與事件處理常式在執行階段所能使用的值。 「指令碼」工作和「指令碼」元件中的指令碼也可以使用變數。 將工作和容器排序成工作流程的優先順序條件約束，可在其條件約束定義含有運算式時使用變數。  
@@ -52,7 +51,7 @@ ms.locfileid: "62892268"
   
  您可以為下列所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器類型建立使用者自訂變數：封裝、Foreach 迴圈容器、For 迴圈容器、時序容器、工作和事件處理常式。 使用者自訂變數是容器 Variables 集合的成員。  
   
- 如果您使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則可以在  **設計師之封裝總管** **索引標籤上的 [變數]** [!INCLUDE[ssIS](../includes/ssis-md.md)] 資料夾中，查看 Variables 集合的成員。 資料夾會列出使用者自訂變數和系統變數。  
+ 如果您使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師之封裝總管索引標籤上的 [變數] 資料夾中，查看 Variables 集合的成員。 資料夾會列出使用者自訂變數和系統變數。  
   
  您可以利用下列方式設定使用者自訂變數：  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62892268"
  指定變數的描述。  
   
  EvaluateAsExpression  
- 當屬性設定為`True`時，所提供的運算式會用來設定變數值。  
+ 當屬性設定為時 `True` ，所提供的運算式會用來設定變數值。  
   
  運算是  
  指定指派給變數的運算式。  
@@ -100,12 +99,12 @@ ms.locfileid: "62892268"
  RaiseChangedEvent  
  當此屬性設為 `True` 時，`OnVariableValueChanged` 事件會在變數將值變更時產生。  
   
- ReadOnly  
+ 唯讀  
  當此屬性設為 `False`，表示變數可讀取\寫入。  
   
  影響範圍  
  > [!NOTE]  
->  您只能透過按一下 [變數]  視窗中的 [移動變數]  來變更此屬性設定。  
+>  您只能透過按一下 [變數] 視窗中的 [移動變數] 來變更此屬性設定。  
   
  變數建立於封裝範圍之內，或封裝中的容器、工作或事件處理常式範圍之內。 因為封裝容器位於容器階層的最上層，所以具有封裝範圍的變數在功能上與全域變數相同，且可以由封裝內的所有容器使用。 同樣地，在容器 (例如「For 迴圈」容器) 範圍中定義的變數可由「For 迴圈」容器內的所有工作或容器使用。  
   
@@ -114,17 +113,17 @@ ms.locfileid: "62892268"
  IncludeInDebugDump  
  指出偵錯傾印檔案中是否要包含變數值。  
   
- 針對使用者自訂變數和系統變數， **InclueInDebugDump**選項的預設值為`true`。  
+ 針對使用者自訂變數和系統變數， **InclueInDebugDump**選項的預設值為 `true` 。  
   
- 不過，對於使用者定義的變數，系統會在符合**IncludeInDebugDump**下列條件時`false` ，將 IncludeInDebugDump 選項重設為：  
+ 不過，對於使用者定義的變數，系統會在**IncludeInDebugDump** `false` 符合下列條件時，將 IncludeInDebugDump 選項重設為：  
   
--   如果**EvaluateAsExpression**變數屬性設定為`true`，系統就會將**IncludeInDebugDump**選項重設為`false`。  
+-   如果**EvaluateAsExpression**變數屬性設定為，系統就會將 `true` **IncludeInDebugDump**選項重設為 `false` 。  
   
-     若要在 debug 傾印檔案中包含運算式的文字做為變數值，請將**IncludeInDebugDump**選項設定`true`為。  
+     若要在 debug 傾印檔案中包含運算式的文字做為變數值，請將**IncludeInDebugDump**選項設定為 `true` 。  
   
--   如果變數資料類型變更為字串，系統會將**IncludeInDebugDump**選項重設為`false`。  
+-   如果變數資料類型變更為字串，系統會將**IncludeInDebugDump**選項重設為 `false` 。  
   
- 當系統將**IncludeInDebugDump**選項重設為`false`時，這可能會覆寫使用者所選取的值。  
+ 當系統將**IncludeInDebugDump**選項重設為時 `false` ，這可能會覆寫使用者所選取的值。  
   
  值  
  使用者自訂變數值可以是常值或是運算式。 變數包含設定變數值和該值之資料類型的選項。 兩個屬性必須相容：例如，同時使用字串值和整數資料類型是無效的。  

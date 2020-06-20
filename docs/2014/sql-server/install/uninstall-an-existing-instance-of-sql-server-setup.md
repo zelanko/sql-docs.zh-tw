@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35970f3a78cad4a17fcfdcfb2d7b9aa91c9dd6e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990195"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062424"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)
   本文描述如何解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的獨立執行個體。 遵循本主題的步驟，也可以讓系統做好準備，以便可以重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -42,7 +41,7 @@ ms.locfileid: "62990195"
   
 ### <a name="before-you-uninstall"></a>解除安裝之前  
   
-1.  **備份資料。** 雖然這並非必要步驟，不過您可能會擁有要以目前狀態儲存的資料庫， 也可能想要儲存先前對系統資料庫所做的變更。 若符合其中任一情況，請務必在解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前先行備份資料。 或者，您也可以將所有資料和記錄檔的複本儲存在 MSSQL 資料夾以外的資料夾中。 解除安裝期間將會刪除 MSSQL 資料夾。  
+1.  **備份您的資料。** 雖然這並非必要步驟，不過您可能會擁有要以目前狀態儲存的資料庫， 也可能想要儲存先前對系統資料庫所做的變更。 若符合其中任一情況，請務必在解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前先行備份資料。 或者，您也可以將所有資料和記錄檔的複本儲存在 MSSQL 資料夾以外的資料夾中。 解除安裝期間將會刪除 MSSQL 資料夾。  
   
      您必須儲存的檔案包括下列資料庫檔案：  
   
@@ -66,7 +65,7 @@ ms.locfileid: "62990195"
   
     -   Templog.ldf  
   
-    -   `ReportServer[$InstanceName]`（Thisis [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]預設資料庫）。  
+    -   `ReportServer[$InstanceName]`（Thisis [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設資料庫）。  
   
     -   ReportServer[$InstanceName]TempDB (這是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設暫存資料庫)。  
   
@@ -80,11 +79,11 @@ ms.locfileid: "62990195"
   
 1.  若要開始解除安裝程序，請移至 **[控制台]** ，然後移至 **[程式和功能]**。  
   
-2.  按一下** [!INCLUDE[msCoName](../../includes/msconame-md.md)] **滑鼠右鍵，然後選取 [**卸載**]。 然後按一下 **[移除]**。 這樣就會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈。  
+2.  按一下滑鼠右鍵 **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** ，然後選取 [**卸載**]。 然後按一下 **[移除]**。 這樣就會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈。  
   
-     安裝程式支援規則將會執行，以便驗證您的電腦組態。 若要繼續，請按 [下一步]****。  
+     安裝程式支援規則將會執行，以便驗證您的電腦組態。 若要繼續進行，請按 **[下一步]** 。  
   
-3.  在 [選取執行個體] 頁面上，使用下拉式方塊來指定要移除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或指定僅移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用功能和管理工具的選項。 若要繼續，請按 [下一步]****。  
+3.  在 [選取執行個體] 頁面上，使用下拉式方塊來指定要移除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或指定僅移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用功能和管理工具的選項。 若要繼續進行，請按 **[下一步]** 。  
   
 4.  在 [選取功能] 頁面上，指定要從指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中移除的功能。  
   

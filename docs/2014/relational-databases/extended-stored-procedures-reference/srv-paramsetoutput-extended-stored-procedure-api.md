@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 26dd8add089f27c3ea9db22204548196bc887faf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1bfdd083973dd5dc3a27b9087ca912812815bca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127139"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050654"
 ---
 # <a name="srv_paramsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput (擴充預存程序 API)
     
@@ -73,7 +72,7 @@ fNull
  *fNull*  
  這是一個旗標，可指出傳回參數的值是否為 NULL。 如果此參數應該設定為 NULL，請將此旗標設定為 TRUE。 預設值為 FALSE。 如果 *fNull* 設定為 TRUE，*cbLen* 應該設定為 0，否則此函式將會失敗。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  如果成功設定參數資訊，則會傳回 SUCCEED，否則會傳回 FAIL。 在以下情況下會傳回 FAIL  
   
 -   此參數不是傳回參數，或是  

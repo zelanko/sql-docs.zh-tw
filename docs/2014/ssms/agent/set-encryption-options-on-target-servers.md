@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b27dd81df572e289d182fdaa637a3af972b3d603
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd10d2e05e59015542f41cc123de993e6128f9f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63244981"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067571"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>在目標伺服器上設定加密選項
   如果您無法在主要伺服器與部分或全部的目標伺服器之間，使用安全通訊端層 (SSL) 加密通訊的憑證，但是您想要加密它們之間的通道，請將目標伺服器設定為使用所需的安全性層級。  
   
- 若要設定特定主伺服器/目標伺服器通道所需的適當安全性層級，請將目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]伺服器上的 Agent 登錄子機碼**\\\HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server** * * > ** ** \<instance_name \SQLServerAgent\MsxEncryptChannelOptions （REG_DWORD）設為下列其中一個值。 \<*instance_name*> 的值是 **MSSQL.**_n_。 例如， **MSSQL.1** 或 **MSSQL.3**。  
+ 若要設定特定主伺服器/目標伺服器通道所需的適當安全性層級，請將目標伺服器上的 Agent 登錄子機碼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\ ** \<*instance_name*> **\SQLServerAgent\MsxEncryptChannelOptions （REG_DWORD）** 設為下列其中一個值。 的值 \<*instance_name*> 是**MSSQL。**_n_。 例如， **MSSQL.1** 或 **MSSQL.3**。  
   
 |值|描述|  
 |-----------|-----------------|  

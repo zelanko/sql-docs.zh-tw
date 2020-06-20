@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 023700b1922946cc1234468aeb0551785067666c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bf6051fe8c86728c2ebf0a0b2bc34fabb98edb9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128701"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050971"
 ---
 # <a name="localdbstoptracing-function"></a>LocalDBStopTracing 函數
   針對目前 Windows 使用者擁有的所有 SQL Server Express LocalDB 執行個體停用 API 呼叫的追蹤。  
@@ -34,7 +33,7 @@ ms.locfileid: "63128701"
 HRESULT LocalDBStopTracing();  
 ```  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

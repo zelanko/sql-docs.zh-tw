@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50c9419911f83c98fba5baf0f995ffbeafb916ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768022"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965648"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>選擇目的地 (SQL Server 匯入和匯出精靈)
   使用 [**選擇目的地**] 頁面，即可指定您想要複製之資料的目的地。  
@@ -28,7 +27,7 @@ ms.locfileid: "62768022"
   
 ## <a name="static-options"></a>靜態選項  
  **目的地**  
- 選擇符合目的地資料儲存格式的資料提供者。 您的資料來源可能有一個以上的提供者可用。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、SQL Server 的 .NET Framework Data Provider，或 SQL Server 的 Microsoft OLE DB 提供者。  
+ 選擇符合目的地資料儲存格式的資料提供者。 您的資料來源可能有一個以上的提供者可用。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、SQL Server 的 .NET Framework Data Provider，或 SQL Server 的 Microsoft OLE DB 提供者。  
   
 > [!NOTE]  
 >  若要將資料儲存到 ODBC 目的地，請選取 .NET Framework Data Provider for ODBC。  
@@ -55,7 +54,7 @@ ms.locfileid: "62768022"
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證時，請提供資料庫連接的密碼。  
   
  **Database**  
- 從指定之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例上的資料庫清單中選取，或按一下 [**新增**] 來建立新的資料庫。  
+ 從指定之實例上的資料庫清單中選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或按一下 [**新增**] 來建立新的資料庫。  
   
  **重新整理**  
  按一下 [重新整理]**** 來還原可用資料庫的清單。  
@@ -64,13 +63,13 @@ ms.locfileid: "62768022"
  使用 [**建立資料庫**] 對話方塊來建立新的目的地資料庫。  
   
 ### <a name="destination--flat-file-destination"></a>目的地 = 一般檔案目的地  
- [檔案名稱]****  
+ **檔案名稱**  
  指定儲存資料之檔案的路徑和檔案名稱。 或按一下 [瀏覽]**** 找出檔案。  
   
  **瀏覽**  
  使用 [開啟]**** 對話方塊來找出檔案。  
   
- **語言**  
+ **Locale**  
  指定用來定義字元排序順序及日期和時間格式的地區設定識別碼 (LCID)。  
   
  **Unicode**  
@@ -79,7 +78,7 @@ ms.locfileid: "62768022"
  **字碼頁**  
  指定您要使用之語言的字碼頁。  
   
- **編排**  
+ **[格式]**  
  指出是要使用分隔符號、固定寬度或不齊右的格式。  
   
 |值|描述|  
@@ -97,7 +96,7 @@ ms.locfileid: "62768022"
 ### <a name="destination--microsoft-excel"></a>目的地 = Microsoft Excel  
   
 > [!NOTE]  
->  只有當您想要連接到使用 Excel 2003 或更早版本的資料來源時，才選取 [ **Microsoft Excel** ]。 若要連接到使用 Excel 2007 的資料來源，請選取 [ **Microsoft Office 12.0 存取資料庫引擎 OLE DB 提供者**]，按一下 [**屬性**]，然後在 [**資料連結屬性**] 對話方塊的 [**全部**] 索引`Excel 12.0`標籤上，針對 [**擴充屬性**] 輸入。  
+>  只有當您想要連接到使用 Excel 2003 或更早版本的資料來源時，才選取 [ **Microsoft Excel** ]。 若要連接到使用 Excel 2007 的資料來源，請選取 [ **Microsoft Office 12.0 存取資料庫引擎 OLE DB 提供者**]，按一下 [**屬性**]，然後在 [**資料連結屬性**] 對話方塊的 [**全部**] 索引標籤上，針對 [**擴充屬性**] 輸入 `Excel 12.0` 。  
   
  **Excel 檔案路徑**  
  指定用來儲存資料之活頁簿的路徑和檔案名（例如，C:\MyData.xls、 \\\Sales\Database\Northwind.xls）。 或者，按一下 **[流覽]** 以找出活頁簿。  
@@ -116,8 +115,8 @@ ms.locfileid: "62768022"
 > [!NOTE]  
 >  只有當您想要連接到使用2003或更早版本的資料庫時，才選取 [ **Microsoft Access** ]。 若要連接到使用存取2007的資料庫，請選取 [ **Microsoft Office 12.0 存取資料庫引擎 OLE DB 提供者**]。  
   
- [檔案名稱]****  
- 指定儲存資料之資料庫檔案的路徑和檔案名（例如，C:\MyData.mdb、 \\\Sales\Database\Northwind.mdb）。 或者，按一下 **[流覽]** 以找出資料庫檔案。  
+ **檔案名稱**  
+ 指定儲存資料之資料庫檔案的路徑和檔案名（例如，C:\MyData.mdb、 \\ \Sales\Database\Northwind.mdb）。 或者，按一下 **[流覽]** 以找出資料庫檔案。  
   
  **瀏覽**  
  使用 [**開啟**] 對話方塊，流覽至資料庫檔案。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47dc8180fd6c8f59050520477724ff8adbc46a6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df2e0d9a4c077ff16eba09bc5ebb6447d5d27595
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061011"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051434"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures 事件類別目錄
   **Stored Procedures** 事件類別目錄包含一般的預存程序事件。  

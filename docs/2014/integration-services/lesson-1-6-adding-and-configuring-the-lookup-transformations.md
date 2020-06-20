@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53e12d2be6cc4829fd9fc983ca5a24e2057da4e8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891546"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966138"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>步驟 6：新增和設定查閱轉換
   在設定一般檔案來源從來源檔擷取資料之後，下一項工作是要定義所需要的查閱轉換來取得 **CurrencyKey** 和 **DateKey**的值。 查閱轉換是藉由聯結指定輸入資料行中的資料與參考資料集內的資料行來執行查閱。 參考資料集可以是現有的資料表或檢視、新資料表，或 SQL 陳述式的結果。 在此教學課程中，查閱轉換使用 OLE DB 連接管理員來連接到資料庫，該資料庫包含的資料就是參考資料集的來源。  
@@ -94,7 +93,7 @@ ms.locfileid: "62891546"
   
 9. 以滑鼠右鍵按一下 [Lookup Currency Key (查閱貨幣索引鍵)] 轉換，然後按一下 [屬性]****。  
   
-10. 在 [屬性視窗中，確認屬性`LocaleID`是設為 [**英文（美國）** ]，而 [ **DefaultCodePage** ] 屬性設定為**1252**。  
+10. 在 [屬性視窗中，確認 `LocaleID` 屬性是設為 [**英文（美國）** ]，而 [ **DefaultCodePage** ] 屬性設定為**1252**。  
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>若要加入和設定查閱日期索引鍵轉換  
   
@@ -128,7 +127,7 @@ ms.locfileid: "62891546"
   
 11. 以滑鼠右鍵按一下 [Lookup Date Key (查閱日期索引鍵)] 轉換，然後按一下 [屬性]****。  
   
-12. 在 [屬性視窗中，確認屬性`LocaleID`是設為 [**英文（美國）** ]，而 [ **DefaultCodePage** ] 屬性設定為**1252**。  
+12. 在 [屬性視窗中，確認 `LocaleID` 屬性是設為 [**英文（美國）** ]，而 [ **DefaultCodePage** ] 屬性設定為**1252**。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [步驟 7：新增和設定 OLE DB 目的地](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  

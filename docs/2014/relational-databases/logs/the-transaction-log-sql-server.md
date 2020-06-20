@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 025ef22e6dee1fcfaa1225a4709fa01b6c326b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289406"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049753"
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
   每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都有交易記錄來記錄所有交易及每項交易所作的資料庫修改。 必須定期截斷交易記錄，以免被填滿。 但是，某些因素會影響記錄的截斷，所以監控記錄大小非常重要。 某些作業可使用最低限度記錄，以減少其對交易記錄大小的影響。  
@@ -118,7 +117,7 @@ ms.locfileid: "79289406"
   
 -   插入或附加新資料時，在 [UPDATE](/sql/t-sql/queries/update-transact-sql) 陳述式中使用 .WRITE 子句，對大數值資料類型執行的部分更新。 請注意，更新現有值時不使用最低限度記錄。 如需有關大數值資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)。  
   
--   `text`將新`ntext`資料插入或附加至、和`image`資料類型資料行時， [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql)和[UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql)語句。 請注意，更新現有值時不使用最低限度記錄。  
+-   將新[UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql)資料插入或附加至[WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) `text` 、 `ntext` 和 `image` 資料類型資料行時，WRITETEXT 和 UPDATETEXT 語句。 請注意，更新現有值時不使用最低限度記錄。  
   
     > [!NOTE]  
     >  WRITETEXT 與 UPDATETEXT 陳述式已被取代，所以您應該避免在新的應用程式中使用它們。  
@@ -142,7 +141,7 @@ ms.locfileid: "79289406"
   
 -   [管理交易記錄檔的大小](manage-the-size-of-the-transaction-log-file.md)  
   
--   [針對完整交易記錄 &#40;SQL Server 錯誤 9002&#41; 進行疑難排解](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
  **備份交易記錄 (完整復原模式)**  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ee0ba17dc999c9076ca4622d47db28b8200b851
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637781"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928159"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>記憶體優化資料表中的交易隔離等級
 
@@ -39,7 +38,7 @@ ms.locfileid: "73637781"
   
 -   明確使用存取記憶體最佳化資料表的較高的隔離等級提示 (例如，WITH (SNAPSHOT) )。  
   
--   指定 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 設定選項，可以將記憶體最佳化之資料表的隔離等級，設定為 SNAPSHOT (等同於在每個記憶體最佳化之資料表中加入 WITH(SNAPSHOT) 提示)。 如需的詳細`MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`資訊，請參閱[ALTER DATABASE SET 選項 &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
+-   指定 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 設定選項，可以將記憶體最佳化之資料表的隔離等級，設定為 SNAPSHOT (等同於在每個記憶體最佳化之資料表中加入 WITH(SNAPSHOT) 提示)。 如需的詳細資訊 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` ，請參閱[ALTER DATABASE SET 選項 &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
  或者，如果工作階段的隔離等級為 READ COMMITTED，您可以使用自動認可交易。  
   

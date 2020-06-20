@@ -12,29 +12,28 @@ helpviewer_keywords:
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a85363b4971055b020314492db429b72447b6490
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 36b0f97ab4c6f36f5fc3f95e3eed3418ee0d88b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718611"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049008"
 ---
 # <a name="specify-a-breakpoint-action"></a>指定中斷點動作
   中斷點 [叫用時]  動作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具針對中斷點所執行的自訂工作。 如果已到達指定的叫用計數而且滿足任何指定的中斷點條件時，偵錯工具就會執行為中斷點指定的動作。  
   
 ##  <a name="action-considerations"></a><a name="BKMK_ActionConsiderations"></a> 動作考量因素  
- 中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 **偵錯工具中 [叫用時]** [!INCLUDE[tsql](../../includes/tsql-md.md)] 動作的主要用法是透過指定列印訊息，將資訊列印至偵錯工具 [輸出]  視窗。  
+ 中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具中 [叫用時] 動作的主要用法是透過指定列印訊息，將資訊列印至偵錯工具 [輸出] 視窗。  
   
  列印訊息是在 [列印訊息]  選項中指定，並指定為文字字串，其中的運算式包含來自偵錯中 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的資訊。 運算式包含：  
   
--   以大括號 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 括住的 {} 運算式。 運算式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數和內建函數。 範例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY('ProcessID')}。  
+-   以大括號 ({}) 括住的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 運算式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數和內建函數。 範例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY('ProcessID')}。  
   
 -   下列其中一個關鍵字：  
   
     1.  $ADDRESS 傳回設定中斷點之預存程序或使用者定義函數的名稱。 如果中斷點是在編輯器視窗中設定，$ADDRESS 會傳回編輯中指令碼檔案的名稱。 $ADDRESS 和 $FUNCTION 會在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具中傳回相同資訊。  
   
-    2.  $CALLER 傳回呼叫預存程序或函數之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼單元的名稱。 如果中斷點是在編輯器視窗中設定，$CALLER 會傳回 \<沒有可用的呼叫端>。 如果中斷點是在編輯器視窗中程式碼所呼叫的預存程序或使用者定義函數中，$CALLER 會傳回編輯中檔案的名稱。 如果中斷點是在另一個預存程序或函數所呼叫的預存程序或使用者定義函數中，$CALLER 會傳回呼叫程序或函數的名稱。  
+    2.  $CALLER 傳回呼叫預存程序或函數之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼單元的名稱。 如果中斷點是在編輯器視窗中，$CALLER 會傳回 \<No caller available> 。 如果中斷點是在編輯器視窗中程式碼所呼叫的預存程序或使用者定義函數中，$CALLER 會傳回編輯中檔案的名稱。 如果中斷點是在另一個預存程序或函數所呼叫的預存程序或使用者定義函數中，$CALLER 會傳回呼叫程序或函數的名稱。  
   
     3.  $CALLSTACK 傳回鏈結中呼叫目前預存程序或使用者定義函數之函數的呼叫堆疊。 如果中斷點是在編輯器視窗中，$CALLSTACK 會傳回編輯中指令碼檔案的名稱。  
   

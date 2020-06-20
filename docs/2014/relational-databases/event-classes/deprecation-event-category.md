@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 49364423-6aa9-40f3-914a-eca37be12b88
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ba973e51a7d3c86b9f1a15075b0a86ac94502cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d9db95a016fe9eda1c6128bac54847f717e6378
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662843"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053024"
 ---
 # <a name="deprecation-event-category"></a>Deprecation 事件類別目錄
   **Deprecation** 事件類別目錄包含一般取代 (Deprecation) 事件。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 170a6a85c0d4b3e969bd87356b562e4b96ded47f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240143"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048733"
 ---
 # <a name="open-with-new-file"></a>開啟方式 (新增檔案)
   按一下 [檔案]  功能表上的 [開啟]  ，然後按一下 [檔案]  ，就可以在一或多個編輯器中開啟文件。 在 [開啟檔案]  對話方塊中選取檔案，按一下 [開啟]  箭頭，然後按一下 [開啟方式]  。 在 [開啟方式]  對話方塊的 [選取要開啟的程式]  清單中，按一下慣用的程式，然後按一下 [開啟]  。  

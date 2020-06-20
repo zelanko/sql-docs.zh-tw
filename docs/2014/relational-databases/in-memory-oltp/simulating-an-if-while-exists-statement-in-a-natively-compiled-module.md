@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e187c1-cbd9-463c-b417-8a734574f102
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 892dd145ea19c40bada704387a4b2408e84d9522
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7b16491b9a3729ad4df71c7ddceaee6db21777ff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718938"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049953"
 ---
 # <a name="simulating-an-exists-clause-in-a-natively-compiled-stored-procedure"></a>在原生編譯預存程序中模擬 EXISTS 子句
   原生編譯預存程序不支援 `EXISTS` 子句，但是有解決方法：  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8843dac310d1e023fe7ce63eded02c9e1bed3731
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010875"
 ---
 # <a name="disable-publishing-and-distribution"></a>停用發行和散發
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用發行和散發。  
@@ -87,7 +86,7 @@ ms.locfileid: "73882378"
 7.  在散發者上，執行 [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) 從伺服器移除散發者的指定。  
   
     > [!NOTE]  
-    >  如果在您執行 [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) 和 [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)之前，尚未卸除所有複寫發行和散發物件，這些程序將會傳回錯誤。 若要在卸載發行者或散發者時卸載所有複寫相關的物件， ** \@no_checks**參數必須設定為**1**。 如果發行者或散發者已離線或無法連線， ** \@ignore_distributor**參數可以設定為**1** ，以便卸載。不過，必須以手動方式移除任何剩餘的發行和散發物件。  
+    >  如果在您執行 [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) 和 [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)之前，尚未卸除所有複寫發行和散發物件，這些程序將會傳回錯誤。 若要在卸載發行者或散發者時卸載所有複寫相關的物件， ** \@ no_checks**參數必須設定為**1**。 如果「發行者」或「散發者」已離線或無法存取， ** \@ ignore_distributor**參數可以設定為**1** ，以便卸載它們; 不過，您必須手動移除任何剩餘的發行和散發物件。  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  這個範例指令碼會從訂閱資料庫中移除複寫物件。  
@@ -112,11 +111,11 @@ ms.locfileid: "73882378"
   
 5.  (選擇性) 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法，以取得物件的屬性及確認發行者確實存在。 如果此方法傳回 `false`，則表示步驟 4 中設定的發行者名稱不正確，或是此散發者並未使用此發行者。  
   
-6.  呼叫 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 方法。 如果發行者和散發`true`者位於不同的伺服器上，以及應該在散發者端卸載發行者，而不需要先確認發行集已不存在於發行者端，請傳遞的值為*force* 。  
+6.  呼叫 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 方法。 `true`如果發行者和散發者位於不同的伺服器上，以及應該在散發者端卸載發行者，而不需要先確認發行集已不存在於發行者端，請傳遞的值為*force* 。  
   
 7.  建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞步驟 3 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件。  
   
-8.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 方法。 傳遞`true` for *force*的值，以在散發者端移除所有複寫物件，而不需要先確認是否已停用所有本機發行集資料庫，而且已卸載散發資料庫。  
+8.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 方法。 傳遞 `true` for *force*的值，以在散發者端移除所有複寫物件，而不需要先確認是否已停用所有本機發行集資料庫，而且已卸載散發資料庫。  
   
 ###  <a name="examples-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  此範例會移除散發者上的發行者註冊、捨棄散發資料庫，以及解除安裝散發者。  

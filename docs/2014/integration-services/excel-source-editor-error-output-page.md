@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 38181aca8a2946a9268f77560bdadcbc96e617bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f1f5983048c1301e210c2ac64e0a092898f31e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059225"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966808"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Excel 來源編輯器 (錯誤輸出頁面)
   使用 [Excel 來源編輯器]**** 對話方塊的 [錯誤輸出]**** 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
@@ -41,7 +40,7 @@ ms.locfileid: "66059225"
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **描述**  
+ **說明**  
  檢視錯誤的描述。  
   
  **將這個值設定到選取的資料格**  

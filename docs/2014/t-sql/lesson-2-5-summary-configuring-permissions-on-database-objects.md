@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d0ecf297-27af-43a4-918c-31c354b3a96e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb6265513d467f352b0ae890dd3f119a7f5fffb9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62642708"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054607"
 ---
 # <a name="summary-configuring-permissions-on-database-objects"></a>摘要：設定資料庫物件的權限
   登入可讓使用者有權連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 使用者就是可以存取特定資料庫的登入身分。 使用 GRANT 陳述式可授與使用者讀取資料以及存取和變更資料的權限。  

@@ -15,23 +15,22 @@ helpviewer_keywords:
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6220d6650d2be81cad3f38862ba74213219a28a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80a29b8e8cc5b53c09369156a5cf5f717e9447a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175923"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050034"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *記憶體*內部資料行存放區索引會使用以資料行為基礎的資料儲存和資料行為基礎的查詢處理來儲存和管理資料。 資料行存放區索引可在主要執行大量載入和唯讀查詢的資料倉儲工作負載中順利運作。 與傳統的資料列導向儲存相較之下，使用資料行存放區索引最高可達到 **10 倍查詢效能** 改善，與未壓縮資料大小相較之下，最高可達到 **7 倍資料壓縮** 。
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*記憶體*內部資料行存放區索引會使用以資料行為基礎的資料儲存和資料行為基礎的查詢處理來儲存和管理資料。 資料行存放區索引可在主要執行大量載入和唯讀查詢的資料倉儲工作負載中順利運作。 與傳統的資料列導向儲存相較之下，使用資料行存放區索引最高可達到 **10 倍查詢效能** 改善，與未壓縮資料大小相較之下，最高可達到 **7 倍資料壓縮** 。
 
 > [!NOTE]
 >  我們將叢集資料行存放區索引視為儲存大型資料倉儲事實資料表的標準，並期望它能廣泛用於資料倉儲案例中。 由於叢集資料行存放區索引可更新，工作負載可以執行大量的插入、更新和刪除作業。
 
-## <a name="contents"></a>內容
+## <a name="contents"></a>目錄
 
--   [基本概念](#basics)
+-   [操作](#basics)
 
 -   [載入資料](#dataload)
 
@@ -42,7 +41,7 @@ ms.locfileid: "78175923"
 ##  <a name="basics"></a><a name="basics"></a>操作
  *columnstore index* 是使用單欄式資料格式 (稱為「資料行存放區」) 來儲存、擷取及管理資料的一項技術。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 同時支援叢集和非叢集資料行存放區索引。 此兩者所用記憶體中的資料行存放區技術相同，但在用途和支援的功能上有所差異。
 
-###  <a name="benefits"></a><a name="benefits"></a>各種
+###  <a name="benefits"></a><a name="benefits"></a> 優點
  資料行存放區索引可在大部分對大型資料集執行分析的唯讀查詢中順利運作。 這一類通常是資料倉儲工作負載所使用的查詢。 資料行存放區索引對於使用完整資料表掃描的查詢可帶來極高的效能增益，但若查詢是要查找資料搜尋特定的值則不適用。
 
  資料行存放區索引的優點：

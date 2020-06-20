@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3136f7ae-b3f1-4932-a5da-95175907671c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9bdf5e50e994454db0793aacdd4a3f60f1b07f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55ca636a88abf7f0492947690a474023bea6cf1a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63309250"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064189"
 ---
 # <a name="sql-server-integration-services-100-sql-server-configuration-manager"></a>SQL Server Integration Services 10.0 (SQL Server 組態管理員)
   這是支援 [!INCLUDE[ssIS](../../includes/ssis-md.md)]的服務。 若要檢視服務的屬性，請以滑鼠右鍵按一下詳細資料窗格中的服務，然後按一下 **[屬性]** 。  

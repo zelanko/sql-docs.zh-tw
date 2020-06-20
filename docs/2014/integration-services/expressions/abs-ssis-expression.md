@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7fafc0ba09a8345e0639016aadfdef185900589d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79e0c524c2b74b76921f8eafe6f8e4cc47a9f6b5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769614"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966698"
 ---
 # <a name="abs-ssis-expression"></a>ABS (SSIS 運算式)
   傳回數值運算式的絕對正數值。  

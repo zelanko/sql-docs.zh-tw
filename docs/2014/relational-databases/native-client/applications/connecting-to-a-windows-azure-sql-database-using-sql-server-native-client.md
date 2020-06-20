@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c759cddb5f66f0dbee401e0e58bd6ad8590af8ff
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 177c655f97e32f2044460e87c6cd775cdf8fcde9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704445"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017641"
 ---
 # <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>使用 SQL Server Native Client 連線到 Azure SQL Database
   如需顯示如何使用 Native Client 連接至的 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 範例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請參閱[開發：如何主題（Azure SQL Database）](https://msdn.microsoft.com/library/ee621787.aspx)。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 909db99964faaf2fc3aec8196db929bf61fc7c09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96a6f55c5006eb050eed1c7cf296e3a96747348b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023492"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052925"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel 事件類別
   **Lock:Cancel** 事件類別指出已取消在資源上取得鎖定，例如，由於取消查詢所導致。  
@@ -33,7 +32,7 @@ ms.locfileid: "63023492"
 |**ClientProcessID**|`int`|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供用戶端處理序識別碼，這個資料行就會擴展。|9|是|  
 |**DatabaseID**|`int`|取得鎖定之資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**DatabaseName**|`nvarchar`|嘗試取得鎖定的資料庫名稱。|35|是|  
-|**期限**|`bigint`|發出鎖定要求的時間和取消鎖定的時間之間的時間量 (以百萬分之一秒為單位)。|13|是|  
+|**有效期間**|`bigint`|發出鎖定要求的時間和取消鎖定的時間之間的時間量 (以百萬分之一秒為單位)。|13|是|  
 |**EndTime**|`datetime`|事件結束的時間。|15|是|  
 |**EventClass**|`int`|事件類型 = 26。|27|否|  
 |**EventSequence**|`int`|要求中的給定事件順序。|51|否|  
@@ -56,7 +55,7 @@ ms.locfileid: "63023492"
 |**StartTime**|`datetime`|事件的開始時間 (如果可以取得的話)。|14|是|  
 |**TextData**|`ntext`|與取得的鎖定類型有關的文字值。 這和 **sys.dm_tran_locks** 中的 **resource_description**資料行是相同的值。|1|是|  
 |**TransactionID**|`bigint`|由系統指派給交易的識別碼。|4|是|  
-|**類型**|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|是|  
+|**型別**|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|是|  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

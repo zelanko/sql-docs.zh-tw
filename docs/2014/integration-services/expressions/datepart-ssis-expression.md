@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 22225f9a1791185ed78dfc75d92c3dbced7be3ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f86de70ec3a22e1cc8d8c58bd8c7568f9d2e602
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769335"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966658"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 運算式)
   傳回代表日期之日期部分的整數。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 83d8d4126ff7dbcd6e0d5b114626cd8acb1b8d20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd9ffb03358be051647322cd9cb5a125ddf239cf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966608"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE (SSIS 運算式)
   以 DT_DBTIMESTAMP 格式傳回目前的系統日期。 GETDATE 函數不採用引數。  

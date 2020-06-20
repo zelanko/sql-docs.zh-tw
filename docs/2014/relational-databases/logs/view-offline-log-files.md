@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac0f613a023261c79b3a5ee11458ecdbda86998d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144594"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024740"
 ---
 # <a name="view-offline-log-files"></a>檢視離線記錄檔
   從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，當目標執行個體已離線或無法啟動時，您就可以從本機或遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔。  
@@ -50,9 +49,9 @@ ms.locfileid: "63144594"
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 命名空間的讀取權限。 根據預設，每個人都可從啟用帳戶權限取得讀取權限。 如需詳細資訊，請參閱本節後面的＜若要確認 WMI 權限＞程序。  
   
--   包含錯誤記錄檔之資料夾的讀取權限。 根據預設，錯誤記錄檔會位於下列路徑 (其中 \<磁碟機>  表示已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的磁碟機，\<執行個體名稱  > 則是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體名稱)：  
+-   包含錯誤記錄檔之資料夾的讀取權限。 根據預設，錯誤記錄檔位於下列路徑中（其中 \<*Drive> * 代表您安裝的磁片磁碟機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，而 \<*InstanceName*> 是實例的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）：  
   
-     **\<磁片磁碟機>： \Program Files\Microsoft SQL Server\MSSQL12。\<InstanceName> \mssql\log**  
+     **\<Drive>： \Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName>\MSSQL\Log**  
   
  若要確認 WMI 命名空間安全性設定，您可以使用 [WMI 控制] 嵌入式管理單元。  
   
@@ -60,9 +59,9 @@ ms.locfileid: "63144594"
   
 1.  開啟 [WMI 控制] 嵌入式管理單元。 若要這樣做，請根據作業系統執行下列其中一項作業：  
   
-    -   按一下 [**開始**] `wmimgmt.msc` ，在 [**開始搜尋**] 方塊中輸入，然後按 enter。  
+    -   按一下 [**開始**]， `wmimgmt.msc` 在 [**開始搜尋**] 方塊中輸入，然後按 enter。  
   
-    -   依序按一下 [**開始**] 和`wmimgmt.msc`[**執行**]，輸入，然後按 enter。  
+    -   依序按一下 [**開始**] 和 [**執行**]，輸入 `wmimgmt.msc` ，然後按 enter。  
   
 2.  根據預設，[WMI 控制] 嵌入式管理單元會管理本機電腦。  
   

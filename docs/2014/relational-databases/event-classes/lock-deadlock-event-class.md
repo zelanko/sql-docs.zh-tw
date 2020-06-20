@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1834a4d3044dc8c444486d727274d6fa72a56a2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9012a73642f23fa502e4bc3c4d006d3ce6c7f543
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023428"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052936"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock 事件類別
   當試圖取得鎖定，而這項嘗試是死結的一部份且已選定為死結的犧牲者，使得這項嘗試遭到取消，則會產生 Lock:Deadlock 事件類別。  

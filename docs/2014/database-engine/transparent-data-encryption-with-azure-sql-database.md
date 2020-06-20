@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 541d6d27dc5dbc31dad98840e7ed6654f48a8dfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6af7c52741b85a2733b93c2b1ed8c03a14dd6343
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175388"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928209"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Azure SQL Database 的透明資料加密
   [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 透明資料加密 (預覽版) 可即時執行資料庫、相關聯備份及交易檔的即時加密與解密，完全無須變更應用程式，就能協助防範惡意活動所帶來的威脅。
@@ -50,7 +49,7 @@ ms.locfileid: "78175388"
 
 ##  <a name="sign-up-for-the-preview-of-tde-and-enable-tde-on-a-database"></a><a name="Preview"></a>註冊 TDE 的預覽，並在資料庫上啟用 TDE
 
-1.  請造訪 Azure 入口網站[https://portal.azure.com](https://portal.azure.com) ，並使用您的 Azure 系統管理員或參與者帳戶登入。
+1.  請造訪 Azure 入口網站 [https://portal.azure.com](https://portal.azure.com) ，並使用您的 Azure 系統管理員或參與者帳戶登入。
 
 2.  在左邊的橫幅中，按一下以**瀏覽**，然後按一下 [**SQL 資料庫**]。
 
@@ -68,9 +67,9 @@ ms.locfileid: "78175388"
 
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")
 
-     您也可以使用查詢工具 (例如 [!INCLUDE[ssSDS](../includes/sssds-md.md)] )，以具有 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] VIEW DATABASE STATE **權限的資料庫使用者身分，連接到** 監視加密進度。 查詢`encryption_state` [sys.databases dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)視圖的資料行。
+     您也可以使用查詢工具 (例如 [!INCLUDE[ssSDS](../includes/sssds-md.md)] )，以具有 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] VIEW DATABASE STATE **權限的資料庫使用者身分，連接到** 監視加密進度。 查詢 `encryption_state` [sys.databases dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)視圖的資料行。
 
-##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>使用 Transact-sql 啟用[!INCLUDE[ssSDS](../includes/sssds-md.md)]的 TDE
+##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>使用 Transact-sql 啟用的 TDE [!INCLUDE[ssSDS](../includes/sssds-md.md)]
  下列步驟中假設您已經註冊預覽版。
 
 ###  <a name="TsqlProcedure"></a>
@@ -90,7 +89,7 @@ ms.locfileid: "78175388"
     GO
     ```
 
-3.  [!INCLUDE[ssSDS](../includes/sssds-md.md)]若要監視的加密進度，具有**VIEW database STATE**許可權的資料庫使用者可以查詢`encryption_state` [sys.databases dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)視圖的資料行。
+3.  若要監視的加密進度 [!INCLUDE[ssSDS](../includes/sssds-md.md)] ，具有**VIEW database STATE**許可權的資料庫使用者可以查詢 `encryption_state` [sys.databases dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)視圖的資料行。
 
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>使用 PowerShell 啟用 SQL Database 的 TDE
  您可以使用 Azure PowerShell，執行下列命令開啟/關閉 TDE。 您必須將您的帳戶連接到 PS 視窗，才能執行此命令。 下列步驟中假設您已經註冊預覽版。 如需 PowerShell 的其他相關資訊，請參閱 [如何安裝及設定 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。
@@ -116,7 +115,7 @@ ms.locfileid: "78175388"
 
 #### <a name="to-disable-tde-by-using-the-azure-portal"></a>使用 Azure 入口網站停用 TDE
 
-1.  請造訪 Azure 入口網站[https://portal.azure.com](https://portal.azure.com) ，並使用您的 Azure 系統管理員或參與者帳戶登入。
+1.  請造訪 Azure 入口網站 [https://portal.azure.com](https://portal.azure.com) ，並使用您的 Azure 系統管理員或參與者帳戶登入。
 
 2.  在左邊的橫幅中，按一下以**瀏覽**，然後按一下 [**SQL 資料庫**]。
 
@@ -128,7 +127,7 @@ ms.locfileid: "78175388"
 
 6.  在 [透明資料加密預覽] **** 刀鋒視窗中，將 [資料加密] **** 按鈕移至 [關閉] ****，然後按一下 [儲存] **** (位於頁面頂端)，以套用此設定。 [加密狀態] **** 會顯示透明資料解密的概略進度。
 
-     您也可以使用查詢工具 (例如 [!INCLUDE[ssSDS](../includes/sssds-md.md)] )，以具有 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] VIEW DATABASE STATE **權限的資料庫使用者身分，連接到** 監視解密進度。 查詢`encryption_state` [sys.databases dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)視圖的資料行。
+     您也可以使用查詢工具 (例如 [!INCLUDE[ssSDS](../includes/sssds-md.md)] )，以具有 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] VIEW DATABASE STATE **權限的資料庫使用者身分，連接到** 監視解密進度。 查詢 `encryption_state` [sys.databases dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)視圖的資料行。
 
 #### <a name="to-disable-tde-by-using-transact-sql"></a>使用 TRANSACT-SQL 停用 TDE
 
@@ -142,7 +141,7 @@ ms.locfileid: "78175388"
     GO
     ```
 
-3.  [!INCLUDE[ssSDS](../includes/sssds-md.md)]若要監視的加密進度，具有**VIEW database STATE**許可權的資料庫使用者可以查詢`encryption_state` [sys.databases dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)視圖的資料行。
+3.  若要監視的加密進度 [!INCLUDE[ssSDS](../includes/sssds-md.md)] ，具有**VIEW database STATE**許可權的資料庫使用者可以查詢 `encryption_state` [sys.databases dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)視圖的資料行。
 
 ##  <a name="working-with-tde-protected-databases-on-sssds"></a><a name="Working"></a>使用上的 TDE 受保護資料庫[!INCLUDE[ssSDS](../includes/sssds-md.md)]
  您無須解密資料庫，即可在 Azure 執行作業。 目標會自動繼承來源資料庫或主要資料庫的 TDE 設定。 這包括下列作業：
