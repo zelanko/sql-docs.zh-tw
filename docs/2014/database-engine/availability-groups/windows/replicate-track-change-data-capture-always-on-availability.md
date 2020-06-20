@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8ea6257cb906177b9eb224d718eecf54fb94119
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936549"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>複寫、變更追蹤、變更資料擷取和 AlwaysOn 可用性群組 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 有助於提供高可用性以及其他資料庫復原功能。  
@@ -109,7 +108,7 @@ ms.locfileid: "62814054"
     ```  
   
     > [!NOTE]  
-    >  您應該在容錯移轉前於所有可能的容錯移轉目標上建立這些作業，並且將它們標示為停用，直到主機上的可用性複本變成新的主要複本為止。 當本機資料庫變成次要資料庫時，在舊主要資料庫上執行的 CDC 作業也應該停用。 若要停用和啟用作業， *@enabled*請使用[sp_update_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)的選項。 如需有關建立 CDC 作業的詳細資訊，請參閱 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。  
+    >  您應該在容錯移轉前於所有可能的容錯移轉目標上建立這些作業，並且將它們標示為停用，直到主機上的可用性複本變成新的主要複本為止。 當本機資料庫變成次要資料庫時，在舊主要資料庫上執行的 CDC 作業也應該停用。 若要停用和啟用作業，請使用 *@enabled* [Sp_update_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)的選項。 如需有關建立 CDC 作業的詳細資訊，請參閱 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。  
   
 -   **將 CDC 角色加入至 AlwaysOn 主要資料庫複本**  
   
@@ -156,7 +155,7 @@ ms.locfileid: "62814054"
   
      可用性群組接聽程式名稱或明確節點名稱都可用於找出次要複本。 如果使用可用性群組接聽程式名稱，則存取會導向至任何合適的次要複本。  
   
-     當`sp_addlinkedserver`用來建立連結的伺服器以存取次要複本時， *@datasrc*參數會用於可用性群組接聽程式名稱或明確伺服器名稱，而*@provstr*參數則是用來指定唯讀意圖。  
+     當 `sp_addlinkedserver` 用來建立連結的伺服器以存取次要複本時， *@datasrc* 參數會用於可用性群組接聽程式名稱或明確伺服器名稱，而 *@provstr* 參數則是用來指定唯讀意圖。  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -185,7 +184,7 @@ ms.locfileid: "62814054"
 ##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> 使用複寫的必要條件、限制和考量  
  本節描述使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]來部署複寫的考量，包括必要條件、限制和建議。  
   
-### <a name="prerequisites"></a>先決條件  
+### <a name="prerequisites"></a>Prerequisites  
   
 -   當使用異動複寫，而且發行集資料庫是在可用性群組時，發行者和散發者都必須至少執行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 訂閱者可以使用較低層級的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
@@ -214,7 +213,7 @@ ms.locfileid: "62814054"
   
  <sup>2</sup>容錯移轉至複本資料庫是手動程式。 沒有提供自動容錯移轉。  
   
- <sup>3</sup>散發者資料庫不支援搭配[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]或資料庫鏡像使用。  
+ <sup>3</sup>散發者資料庫不支援搭配 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或資料庫鏡像使用。  
   
 ### <a name="considerations"></a>考量  
   
@@ -241,7 +240,7 @@ ms.locfileid: "62814054"
   
 -   [使用變更資料 &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
- **變更追蹤**  
+ **Change tracking**  
   
 -   [啟用和停用變更追蹤 &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   

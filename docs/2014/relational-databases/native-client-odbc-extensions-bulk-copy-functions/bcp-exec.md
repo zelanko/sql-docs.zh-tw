@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f86c33fb96ddddcefd31227ac904157f3bd8c388
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8671ab15bc913917a558c9e1f90c15c0168e6cfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701957"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019524"
 ---
 # <a name="bcp_exec"></a>bcp_exec
   在資料庫資料表和使用者檔案間執行資料的完整大量複製。  

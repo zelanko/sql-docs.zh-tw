@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec7c5f8db1d8d1f3c675b267adb8345d086d0b80
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 22904e2e0dd7ed025dcf6ad3871969e2be6b2dfb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705283"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019248"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
   建立包含目前大量複製資料檔格式之描述的格式檔。  

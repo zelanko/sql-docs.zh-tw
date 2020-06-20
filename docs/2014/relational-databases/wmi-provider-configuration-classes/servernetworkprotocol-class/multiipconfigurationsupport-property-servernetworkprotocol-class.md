@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3a6813371e7641af1369f94f875ca0d9f96ad3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80401a607c9155451a869082162affcca401ebca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470055"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059913"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport 屬性 (ServerNetworkProtocol 類別)
   取得布林屬性，該屬性可指定伺服器網路通訊協定是否支援多個 IP 位址。  
@@ -37,8 +36,8 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
- 代表實例所使用之[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]網路通訊協定的[ProtocolName 屬性（ServerNetworkProtocol 類別）](servernetworkprotocol-class.md)物件。  
+ *object*  
+ 代表實例所使用之網路通訊協定的[ProtocolName 屬性（ServerNetworkProtocol 類別）](servernetworkprotocol-class.md)物件 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定伺服器網路通訊協定是否支援多個 IP 位址的布林值：如果伺服器網路通訊協定可支援多個 IP 位址為 `true`，如果伺服器網路通訊協定不支援多個 IP 位址則為 `false`。  

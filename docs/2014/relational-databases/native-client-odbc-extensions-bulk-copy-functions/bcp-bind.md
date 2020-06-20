@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07a7bb9026984ed830d0b146438d958739463109
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 87f06021e5a2f9e10f6b60836fe3889aab3e9f65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705330"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019811"
 ---
 # <a name="bcp_bind"></a>bcp_bind
   將程式變數中的資料繫結至資料表資料行，以便在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中進行大量複製。  
@@ -168,7 +167,7 @@ bcp_bind(hdbc, szName, 0,
   
 -   0xFFFFFFFFFFFFFFFE 會視為特殊的前置詞值，用於將區塊中的資料有效傳送到伺服器。 包含此特殊前置詞之資料的格式為：  
   
--   <SPECIAL_PREFIX> \< 0 個以上的資料區塊> <ZERO_CHUNK>：  
+-   <SPECIAL_PREFIX> \<0 or more  DATA CHUNKS> <ZERO_CHUNK> 位置：  
   
 -   SPECIAL_PREFIX 是 0xFFFFFFFFFFFFFFFE  
   

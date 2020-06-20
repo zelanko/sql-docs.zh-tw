@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 32af70857eac43a99257444081c1bcbdc842a2e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a38c151663dc76921e791b614922a8b52ecfadab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059985"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate 方法 (SecurityCertificate 類別)
   設定目前的安全性憑證。  
@@ -40,7 +39,7 @@ SHA , SQLInstance
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  代表安全性憑證的 [SecurityCertificate 類別] SecurityCertificate-class.md）物件。  
   
 #### <a name="parameters"></a>參數  

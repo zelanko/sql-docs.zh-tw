@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a109468616cb414fa2a4b3769af37626ff42ca85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d11fc83612e8a21a574b3639d912eb93b732042
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938947"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053279"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR 事件類別
   每當   任何使用者針對授與資料庫權限的資料庫專有動作對陳述式權限發出 GRANT、REVOKE 或 DENY 時，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)]Audit Database Scope GDR[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件類別。  

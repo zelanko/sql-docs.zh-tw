@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0fb7d422687d0bc956937b30bae261b28edb3931
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad89a668a36afa10bbf7b0e35a01226141b0c316
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788251"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936449"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>部分可用性複本未同步處理資料
     
@@ -29,7 +28,7 @@ ms.locfileid: "62788251"
 |-|-|  
 |**原則名稱**|可用性複本資料同步處理狀態|  
 |**問題**|某些可用性複本並未同步處理資料。|  
-|**類別**|**Warning**|  
+|**類別**|**警告**|  
 |**層面**|可用性群組|  
   
 ## <a name="description"></a>描述  

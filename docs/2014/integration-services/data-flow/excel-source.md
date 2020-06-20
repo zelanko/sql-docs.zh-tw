@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 37eb17ccaa418a6d81ef4caa461af50e505a8747
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ffedc7e90a31a33e05fc5b4bfe0b97c55be6a2a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82087148"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915783"
 ---
 # <a name="excel-source"></a>Excel 來源
   Excel 來源會從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿中的工作表或範圍擷取資料。  
@@ -51,7 +50,7 @@ ms.locfileid: "82087148"
   
 -   **資料來源**。 Excel 活頁簿中資料的來源可以是工作表 (必須附加 $ 符號，例如 Sheet1$) 或已命名的範圍 (例如 MyRange)。 在 SQL 陳述式中，工作表的名稱必須加以分隔 (例如 [Sheet1$])，以避免 $ 符號造成的語法錯誤。 「查詢產生器」會自動加入這些分隔符號。 當您指定工作表或範圍時，驅動程式會讀取連續的資料格區塊，從工作表或範圍左上角的第一個非空白資料格開始。 因此，來源資料的資料列不可以空白，或標題或標頭資料列與資料列之間不可以有空白資料列。  
   
--   **遺漏值**。 Excel 驅動程式會在指定來源中讀取特定資料列數目 (依預設為 8 個資料列)，以猜測各資料行的資料類型。 當資料行可能包含混合資料類型，尤其是數值資料與文字資料混合時，驅動程式會做出有利於大部分資料類型的決定，並於包含其他類型資料的資料格中傳回 Null 值。 (在繫結中，以數值類型優先)。Excel 工作表中大部分的資料格格式化選項，似乎都不會影響這項資料類型決定。 您可以藉由指定「匯入模式」來修改 Excel 驅動程式的這項行為。 若要指定匯入模式`IMEX=1` ，請在 [**屬性**] 視窗中，將加入至 Excel 連接管理員之連接字串中的 [擴充屬性] 的值。 如需詳細資訊，請參閱 [PRB: Excel Values Returned as NULL Using DAO OpenRecordset](https://support.microsoft.com/kb/194124)(PRB：使用 DAO OpenRecordset 以 NULL 形式傳回的 Excel 值)。  
+-   **遺漏值**。 Excel 驅動程式會在指定來源中讀取特定資料列數目 (依預設為 8 個資料列)，以猜測各資料行的資料類型。 當資料行可能包含混合資料類型，尤其是數值資料與文字資料混合時，驅動程式會做出有利於大部分資料類型的決定，並於包含其他類型資料的資料格中傳回 Null 值。 (在繫結中，以數值類型優先)。Excel 工作表中大部分的資料格格式化選項，似乎都不會影響這項資料類型決定。 您可以藉由指定「匯入模式」來修改 Excel 驅動程式的這項行為。 若要指定匯入模式，請 `IMEX=1` 在 [**屬性**] 視窗中，將加入至 Excel 連接管理員之連接字串中的 [擴充屬性] 的值。 如需詳細資訊，請參閱 [PRB: Excel Values Returned as NULL Using DAO OpenRecordset](https://support.microsoft.com/kb/194124)(PRB：使用 DAO OpenRecordset 以 NULL 形式傳回的 Excel 值)。  
   
 -   **截斷的文字**。 當驅動程式判斷出某個 Excel 資料行包含文字資料時，驅動程式將會根據其取樣的最長值來選取資料類型 (字串或備忘錄)。 如果驅動程式未在其取樣的資料列中發現任何長度超過 255 個字元的值，則會將該資料行視為 255 個字元字串資料行而非備忘錄資料行 因此，長度超過 255 個字元的值可能會被截斷。 若要以不截斷的方式從備忘資料行匯入資料，您必須確保至少在其中一個取樣資料列中的備忘錄資料行包含長度超過 255 個字元的值，否則您就必須增加驅動程式取樣的資料列數目，使其包含這類資料列。 您可以提高 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** 登錄機碼底下 **TypeGuessRows** 的值，藉以增加取樣的資料列數目。 如需詳細資訊，請參閱 [PRB︰從 Jet 4.0 OLEDB 來源傳送資料失敗，發生緩衝區溢位錯誤](https://support.microsoft.com/kb/281517)(PRB: Transfer of Data from Jet 4.0 OLEDB Source Fails w/ Error)。  
   

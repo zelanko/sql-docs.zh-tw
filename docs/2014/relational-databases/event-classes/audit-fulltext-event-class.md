@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 95e4c5fd-e16f-446e-b42b-105495a8f39a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ad7019b30555077d274af62156115cfb71944fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa74d8aa90b677fe7ccd5fe2619e51506a0abe17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938636"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053261"
 ---
 # <a name="audit-fulltext-event-class"></a>稽核全文檢索事件類別
   當 **連接至全文檢索篩選背景程式處理序並與之通訊時，會發生** Audit Fulltext [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件類別。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab0a4af42a6137a78d1d884d7f00dd37911f9ff4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fa9c65d02de70b93b97d4f31901ea7615574791
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316843"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040705"
 ---
 # <a name="rename-queries-visual-database-tools"></a>重新命名查詢 (Visual Database Tools)
   您可以為目前沒有開啟以供編輯的任何查詢重新命名。 下列的程序假設您要重新命名的查詢已經關閉。  

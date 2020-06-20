@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1609b61e0912065edb4a95c24d2f7ca9f36932cc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789078"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936644"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>原則評估結果 (AlwaysOn)
   使用 AlwaysOn 儀表板的 **[原則評估結果]** 頁面檢視任何目前的原則問題。  
@@ -34,10 +33,10 @@ ms.locfileid: "62789078"
 |![UI 圖示：錯誤](../../../relational-databases/replication/media/repl-icon-error.gif "UI 圖示：錯誤")|重大|  
 |![UI 圖示：警告](../../../relational-databases/replication/media/repl-icon-warn.gif "UI 圖示：警告")|警告|  
   
- **描述**  
+ **說明**  
  此方格會顯示所選問題的簡短說明。  
   
- **詳細資訊**  
+ **其他資訊**  
  按一下此連結可開啟所選問題的說明主題。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  

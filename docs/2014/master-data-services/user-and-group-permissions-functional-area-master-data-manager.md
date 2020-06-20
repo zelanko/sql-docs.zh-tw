@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d785b416e19c8a90060d6e9410f89f68acbee76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9de9cb5e23f14d0033040aa5111e3caa51137ae6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482556"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970950"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>使用者及群組的權限功能區域 (主資料管理員)
   在 [使用者及群組的權限] 功能區域中，管理員可以將權限授與功能區域、屬性 (在 [模型] 索引標籤上) 及成員 (在 [階層成員] 索引標籤上)， 並可以解決重疊的權限，以決定使用者對每個個別屬性值的權限。  

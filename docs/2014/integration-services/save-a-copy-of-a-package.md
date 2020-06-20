@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4725d05e41ae6335ceae19c46c2c36af14dbcf8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056270"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964388"
 ---
 # <a name="save-a-copy-of-a-package"></a>儲存封裝的複本
   此程序描述如何將封裝的複本儲存至檔案系統、封裝存放區，或 **** 中的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 當您指定儲存封裝副本的位置時，也可以更新封裝名稱。  
@@ -37,7 +36,7 @@ ms.locfileid: "66056270"
   
 1.  在 [方案總管] 中，按兩下要儲存副本的封裝。  
   
-2.  在 [檔案]**** 功能表上，按一下 [另存\<套件檔案> 的副本為]****。  
+2.  **在 [檔案**] 功能表上，按一下 [**另存複本 \<package file> 為**]。  
   
 3.  在 **[儲存封裝的副本]** 對話方塊中，從 **[封裝位置]** 清單選取封裝位置。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66056270"
   
     -   在 **[封裝保護等級]** 對話方塊中，選取不同的保護等級。  
   
-    -   按一下 [確定]  。  
+    -   按一下 [確定]。  
   
 9. 按一下 [確定]  。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b3d74dcc6be62ae8a01d911a8404c7bc32fd651
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63216004"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066616"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   「複寫合併代理程式」是一個公用程式可執行檔，它會將資料庫資料表中保存的初始快照集套用至「訂閱者」。 此外，它也會合併建立初始快照集之後在「發行者」端發生的累加資料變更，並根據您設定的規則或使用您建立的自訂解析程式來調解衝突。  
@@ -317,7 +316,7 @@ ms.locfileid: "63216004"
  指定合併代理程式從來源列舉變更所用的來源執行緒數目。 在上傳期間，來源是訂閱者，而在下載期間，來源則是發行者。 預設為 **3**。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 這是當執行中並行合併進程的數目是由**@max_concurrent_merge** **sp_addmergepublication**的屬性所設定的限制時，合併代理程式等待的最大秒數。 如果已到達最大秒數而且合併代理程式仍然等候中，它就會結束。 值為 0 表示代理程式會永遠等候，不過您可以取消它。  
+ 這是當執行中並行合併進程的數目是由 sp_addmergepublication 的屬性所設定的限制時，合併代理程式等待的最大秒數 **@max_concurrent_merge** 。 **sp_addmergepublication** 如果已到達最大秒數而且合併代理程式仍然等候中，它就會結束。 值為 0 表示代理程式會永遠等候，不過您可以取消它。  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  如果 **SubscriberType** 是 **2** (允許連接至沒有 ODBC 資料來源名稱 (DSN) 的 Jet 資料庫)，這就是 Jet 資料庫 (.mdb 檔) 的名稱。  

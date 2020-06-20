@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0290e656105ebb33a7f73fc043beed64f1c25bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0e4fe1f3c7920f034103a4fca6df3460ff4aea7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62520320"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915778"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 來源擷取變更資料
   若要加入及設定 CDC 來源，封裝至少必須包含一個資料流程工作及一個 CDC 控制工作。  
@@ -40,7 +39,7 @@ ms.locfileid: "62520320"
   
 7.  選取或輸入包含要讀取之 CDC 資料表的 **CDC 擷取執行個體** 名稱。  
   
-     擷取的來源資料表可以具有一個或兩個擷取執行個體，以便透過結構描述變更處理資料表定義的流暢轉換。 如果針對所擷取的來源資料表定義了多個擷取執行個體，請在此選取您想要使用的擷取執行個體。 [schema].[table] 資料表的預設擷取執行個體名稱是 \<結構描述>_\<資料表>，但是使用中的實際擷取執行個體名稱可能有所不同。 實際讀取的資料表是 CDC 資料表 **cdc .\<capture-instance>_CT**。  
+     擷取的來源資料表可以具有一個或兩個擷取執行個體，以便透過結構描述變更處理資料表定義的流暢轉換。 如果針對所擷取的來源資料表定義了多個擷取執行個體，請在此選取您想要使用的擷取執行個體。 資料表 [架構] 的預設 capture 實例名稱。[table] 是 \<schema> _ \<table> ，但是使用中的實際 capture 實例名稱可能不同。 從中讀取的實際資料表是 cdc 資料表**cdc。 \<capture-instance>_CT**。  
   
 8.  選取可有效處理處理需求的處理模式。 可能的選項包括：  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62520320"
   
     -   **淨**：只針對目前 CDC 處理範圍中修改的每個來源資料列傳回一項變更。 如果來源資料列更新了許多次，就會產生結合的變更 (例如，插入+更新會產生為單一更新，而更新+刪除則產生為單一刪除)。 在淨變更處理模式中工作時，您可以將變更分割成刪除、插入和更新輸出，並且以平行方式處理它們，因為單一來源資料列會出現在多個輸出中。  
   
-    -   **淨 (含更新遮罩)** ：這種模式與一般的淨模式很相似，但還新增了名稱模式為 **__$\<資料行名稱>\__Changed** 的布林資料行，表示目前變更資料列中的變更資料行。  
+    -   **Net with update mask**：此模式與一般的 net 模式相似，但它也會加入名稱模式為 **__ $ \<column-name> \_ _Changed**的布林資料行，指出目前變更資料列中已變更的資料行。  
   
     -   **淨 (含合併)** ：這種模式與一般的淨模式很相似，但是插入和更新作業會合併成單一合併作業 (UPSERT)。  
   

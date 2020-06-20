@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebe8924f46de15a3a34c0f49304c87a904919bdb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a26d0a70f65b6ff60dcf42ffb98e67dc0d2b52d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035035"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040309"
 ---
 # <a name="modify-trace-templates"></a>修改追蹤範本
   您可以在執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的本機電腦上，修改儲存於檔案中的範本。 您也可以修改從這些檔案中衍生的範本。 當您修改現有的範本時，可在 [追蹤屬性]  對話方塊的 [事件選取範圍]  索引標籤上，以原本設定屬性的相同順序來編輯範本屬性，如事件類別與資料行。 事件類別與資料行可以新增或移除，且篩選也可以變更。 範本遭修改後，即會建立使用者特定範本，而原始系統範本則不受影響。 如需詳細資訊，請參閱 [儲存追蹤及追蹤範本](save-traces-and-trace-templates.md)。  
@@ -40,13 +39,13 @@ ms.locfileid: "63035035"
   
  [使用 SQL Server Profiler](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
   
- [使用 Transact-sql](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
+ [使用 Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
   
  **若要從追蹤範本或追蹤檔中新增或移除事件**  
   
  [使用 SQL Server Profiler](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
- [使用 Transact-sql](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
+ [使用 Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動追蹤](start-a-trace.md)  

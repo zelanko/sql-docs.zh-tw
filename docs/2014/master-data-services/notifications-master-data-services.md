@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 54f8cdc55322144414be11dd837bd723b4ed3c10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6891bba64da82a1a83f5ea4a44bf3fa1f52ddd67
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478974"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971158"
 ---
 # <a name="notifications-master-data-services"></a>通知 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]可設定為在商務規則驗證失敗時傳送電子郵件通知，或模型版本的狀態變更。  
   
 ## <a name="how-notifications-are-sent"></a>通知的傳送方式  
- 您在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中設定通知。 通知[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]會在主控[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫的實例上，使用 Database Mail 來傳送電子郵件訊息。 如需詳細資訊，請參閱《 [線上叢書》中的](../relational-databases/database-mail/database-mail-configuration-objects.md) Database Mail 組態物件 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
+ 您在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中設定通知。 通知 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 會在主控資料庫的實例上，使用 Database Mail 來傳送電子郵件訊息 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。 如需詳細資訊，請參閱《 [線上叢書》中的](../relational-databases/database-mail/database-mail-configuration-objects.md) Database Mail 組態物件 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 ## <a name="when-notifications-are-sent"></a>通知的傳送時間  
  設定通知之後，在下列情況下會自動傳送電子郵件通知。  

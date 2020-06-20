@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c77414aac2b6b25d8b0c2ca774cac07c269f328
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72d48b2a07e425e0863084c700c4de93d2776739
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701947"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019562"
 ---
 # <a name="bcp_init"></a>bcp_init
   初始化大量複製作業。  

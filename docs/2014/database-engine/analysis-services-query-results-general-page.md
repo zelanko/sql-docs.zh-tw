@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 68e967fd-ae8d-4f02-bfb3-9ce301276b73
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04dd01f5a91e95152b66247182027c0ba8b5025c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17108f710fceebe3dccbe5f5fb58d813c8fdaa13
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065249"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937289"
 ---
 # <a name="analysis-services-query-results-general-page"></a>Analysis Services 查詢結果 (一般頁面)
   使用此頁面可指定執行 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 查詢的選項。  

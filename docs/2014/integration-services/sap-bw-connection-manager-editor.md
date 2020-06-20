@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf7788e58b24d45966b67e417d35f4b58927a39b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056274"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964392"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 連接管理員編輯器
   使用 [SAP BW 連線管理員編輯器]**** 可以指定要用來連接到 SAP Netweaver BW 版本 7 系統的屬性。  
@@ -59,7 +58,7 @@ ms.locfileid: "66056274"
   
  若要連接到負載平衡的伺服器群組，請改用 [使用負載平衡]**** 選項。  
   
- **主機**  
+ **主控件**  
  如果要連接到單一應用程式伺服器，請指定主機名稱。  
   
 > [!NOTE]  
@@ -82,7 +81,7 @@ ms.locfileid: "66056274"
 > [!NOTE]  
 >  只有當您已選取 [使用負載平衡]**** 選項時，才能使用此選項。  
   
- **群組**  
+ **小組**  
  如果要連接到負載平衡的伺服器群組，請指定伺服器群組的名稱。  
   
 > [!NOTE]  
