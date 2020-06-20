@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80fd692b-1cea-4139-8e80-454d3e81c76d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 68ef6a0d9f58c362f64721eea43c89c4a1ee27cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b1dd7c7ff564fc069e3a1ddecf1ff1ec9355d4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091894"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036093"
 ---
 # <a name="sql-server-native-soap-support-is-discontinued-in-this-version-of-sql-server"></a>這個版本的 SQL Server 已停止支援 SQL Server 原生 SOAP。
   Upgrade Advisor 偵測到您使用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生 XML Web Service。  

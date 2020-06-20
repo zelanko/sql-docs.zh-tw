@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ceb58c211b52c1fbd184aafe316e5ea77d364529
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284867"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938929"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 模式 (SSAS 表格式)
   Analysis Services 可讓您使用*DirectQuery 模式*直接從關係資料庫系統抓取資料和匯總，從表格式模型中取出資料和建立報表。 此主題介紹僅存在於記憶體中的標準表格式模型和可查詢關聯式資料來源的表格式模型之間的差異，並且說明如何撰寫和部署要在 DirectQuery 模式下使用的模型。  
@@ -82,7 +81,7 @@ ms.locfileid: "67284867"
   
 -   **用戶端限制：** 當模型處於 DirectQuery 模式時，只能使用 DAX 進行查詢。 不能使用 MDX 來建立查詢。 這表示您不能使用 Excel Pivot Client，因為 Excel 會使用 MDX。  
   
-     不過，如果您使用 DAX 資料表查詢當做 XMLA Execute [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]語句的一部分，您可以在中針對 DirectQuery 模型建立查詢。如需詳細資訊，請參閱 [Dax 查詢語法參考] （/dax/dax-syntax-reference
+     不過， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 如果您使用 DAX 資料表查詢當做 XMLA Execute 語句的一部分，您可以在中針對 DirectQuery 模型建立查詢。如需詳細資訊，請參閱 [Dax 查詢語法參考] （/dax/dax-syntax-reference
   
  在您解決了所有設計問題並且測試模型之後，就可以進行部署。 此時，您可以設定回應模型查詢的慣用方法。 您希望使用者有存取快取的權限，還是永遠只使用關聯式資料來源？  
   
@@ -144,7 +143,7 @@ ms.locfileid: "67284867"
   
  模擬設定屬性會指定當您使用 DirectQuery 連接到模型時所使用的認證，這適用於僅限 DirectQuery 模型或是使用 DirectQuery 回應查詢的混合模型。 此屬性有下列值：  
   
- **預設**  
+ **預設值**  
  使用匯入精靈中指定的認證來連接到資料來源。 這可以是特定的 Windows 使用者或服務帳戶。  
   
  `ImpersonateCurrentUser`  
@@ -166,7 +165,7 @@ ms.locfileid: "67284867"
   
 ##  <a name="related-topics-and-tasks"></a><a name="bkmk_related_tasks"></a>相關主題和工作  
   
-|主題|描述|  
+|主題|說明|  
 |-----------|-----------------|  
 |[資料分割和 DirectQuery 模式 &#40;SSAS 表格式&#41;](define-partitions-in-directquery-models-ssas-tabular.md)|描述如何在設定 DirectQuery 模式的模型中使用資料分割。|  
 |[DirectQuery 模式中的 DAX 公式相容性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|描述可在設定 DirectQuery 模式的模型中使用之公式的限制和相容性需求。|  

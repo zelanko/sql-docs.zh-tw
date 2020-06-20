@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 01721e60e2f70462d606586225ab98329dad7daa
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 43f97832e4afc7565c472d3da58127ea679d85c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000603"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929602"
 ---
 # <a name="options-text-editorxmltabs-page"></a>選項 (文字編輯器：XML：定位點頁面)
   這個對話方塊可以讓您變更在 XML 編輯器中按下 Tab 鍵的移動行為，這個編輯器會用來編輯 XML 文件。 若要顯示這些設定，請按一下 **[工具]** 功能表上的 **[選項]** ，展開 **[文字編輯器]** 資料夾，展開 **[XML]** 子資料夾，然後按一下 **[定位點]**。  
@@ -26,7 +25,7 @@ ms.locfileid: "83000603"
  XML 編輯器的選項也可以在 **[所有語言 - 一般]** 對話方塊中設定。 如果您使用 **[所有語言]** 對話方塊為其他 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 編輯器 (例如 DMX 或 MDX 編輯器) 設定不同的選項，則必須使用這個對話方塊重設 XML 編輯器選項。  
   
 ## <a name="indenting"></a>縮排  
- **無**  
+ **None**  
  如果選取此選項，當您按下 ENTER 時所建立的新行就不會縮排。 資料指標會放在新行的第一個資料行上。  
   
  **封鎖**  

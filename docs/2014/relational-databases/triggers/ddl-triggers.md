@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6cbcc9f1efc477b8c54ad131f9efa9ff49cc5845
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62654966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014605"
 ---
 # <a name="ddl-triggers"></a>DDL 觸發程序
   DDL 觸發程序則是為了回應各種資料定義語言 (DDL) 事件而引發的。 這些事件主要對應至以 CREATE、ALTER、DROP、GRANT、DENY、REVOKE 或 UPDATE STATISTICS 關鍵字開頭的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 執行類似 DDL 作業的某些系統預存程序也可能引發 DDL 觸發程序。  

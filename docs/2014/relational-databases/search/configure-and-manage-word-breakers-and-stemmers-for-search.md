@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: eaa80c71dcc58cbd780a664d2466a3bf3cec2a4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22cb7371a0215989d2759ddfb2c84f51ba5c3c31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011535"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997575"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>設定及管理搜尋的斷詞工具與字幹分析器
   斷詞工具及字幹分析器，會在所有全文檢索索引資料上執行語文分析。 語文分析包括找出文字分界 (斷詞) 以及動詞變化 (字根處理)。 斷詞工具與字幹分析器是語言特有的工具，而且語言分析的規則會因不同的語言而有所差異。 對於給定的語言而言， *「斷詞工具」* (Word Breaker) 會根據語言的語彙規則，判斷文字分界存在的位置，藉以識別個別單字。 每個單字 (也稱為 *Token*) 都會使用壓縮表示來插入全文檢索索引中，以便減少其大小。 *「字幹分析器」* (Stemmer) 會根據該語言的規則來產生特定單字的字形變化 (例如，"running"、"ran" 和 "runner" 是 "run" 單字的不同形態)。  
@@ -40,7 +39,7 @@ ms.locfileid: "66011535"
  如果您加入、移除或更改了斷詞工具，就必須重新整理支援全文檢索索引和查詢的 Microsoft Windows 地區設定識別碼 (LCID) 清單。 如需詳細資訊，請參閱 [檢視或變更已註冊的篩選與斷詞工具](view-or-change-registered-filters-and-word-breakers.md)。  
   
 ##  <a name="setting-the-default-full-text-language-option"></a><a name="default"></a>設定預設全文檢索語言選項  
- 若為當地語系化的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式會`default full-text language`將選項設定為伺服器的語言（如果有適當的相符項存在的話）。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為非當地語系化的版本時，則 `default full-text language` 選項會是英文。  
+ 若為當地語系化的版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會將 `default full-text language` 選項設定為伺服器的語言（如果有適當的相符項存在的話）。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為非當地語系化的版本時，則 `default full-text language` 選項會是英文。  
   
  建立或更改全文檢索索引時，您可以為每個全文檢索索引資料行指定不同的語言。 若沒有為資料行指定語言，則預設值會是組態選項 `default full-text language` 的值。  
   

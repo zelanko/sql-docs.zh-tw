@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a01524acf4fc72cb50732650f1f2e6f58b4ff74d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d15836fb551f5c7c0b04712dbcb0b783cc317a9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771524"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923599"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle 異動資料擷取服務
   Oracle CDC 服務是一種 Windows 服務，可掃描 Oracle 交易記錄，並將相關 Oracle 資料表的變更擷取到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 變更資料表中。 用來儲存從 Oracle 擷取之變更的 SQL 變更資料表與原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異動資料擷取功能中所使用的變更資料表類型相同。 如此一來，取用這些變更就像取用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫變更一樣輕鬆。  
@@ -25,7 +24,7 @@ ms.locfileid: "62771524"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle CDC 服務的安裝會將服務組態 UI 和服務程式放在選取的位置。 Oracle CDC 服務是使用 Oracle CDC 服務組態主控台所單獨設定。 如需有關設定 Oracle CDC 服務的詳細資訊，請參閱＜ [Attunity 的 Oracle 變更資料擷取 (CDC) 服務 F1 說明](change-data-capture-service-for-oracle-by-attunity-f1-help.md)＞。  
   
- 若要安裝 Oracle CDC 服務，請從 SQL Server 安裝媒體手動執行**attunityoraclecdcservice.msi。** X86 和 x64 的安裝套件位於 SQL Server 安裝媒體上的 **.\Tools\AttunityCDCOracle\\ **中。  
+ 若要安裝 Oracle CDC 服務，請從 SQL Server 安裝媒體手動執行**AttunityOracleCdcService.msi** 。 X86 和 x64 的安裝套件位於 SQL Server 安裝媒體上的 **.\Tools\AttunityCDCOracle \\ **中。  
   
  Oracle CDC 服務可以安裝在任何支援的 Windows 電腦上，該電腦上已安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client；此服務不需要安裝在目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝所在的相同電腦上。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62771524"
 -   Oracle Database 10x，任何版本  
   
 ### <a name="target-sql-server-database"></a>目標 SQL Server 資料庫  
- 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 如需版本支援的功能清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="running-the-installation-program"></a>執行安裝程式  
  若要安裝 Oracle CDC 服務，請開啟您所使用之 Windows 平台 (32/64 位元) 所適用的安裝精靈，然後依照畫面上的指示進行。  

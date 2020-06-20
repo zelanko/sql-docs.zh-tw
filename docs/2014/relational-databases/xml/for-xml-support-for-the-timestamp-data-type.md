@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e20326c1f91711580e102bd28a705a628fc472dc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: aa7326dbfb9eddde375050c81250e60c17b67f8b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716640"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065536"
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>Timestamp 資料類型的 FOR XML 支援
   在 FOR XML 轉換中， **timestamp** 類型值會被當作 **varbinary(8)** 資料來處理，而且一律為 Base 64 編碼。 XSD 或 XDR 結構描述 (若有要求時) 會反映此類型。  

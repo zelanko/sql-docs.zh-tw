@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c40ce510c86ab72ab0c35d60c8080dcf2f250f91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066896"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938809"
 ---
 # <a name="partitions-ssas-tabular"></a>分割區 (SSAS 表格式)
   分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 在模型製作期間，使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [分割區] 對話方塊建立的分割區，會套用至模型工作空間資料庫。 部署模型之後，為模型工作空間資料庫定義的分割區，會複製到已部署的模型資料庫中。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [分割區] 對話方塊，為已部署的模型資料庫進一步建立及管理分割區。  此主題中提供的資訊描述在模型製作期間，使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [分割區管理員] 對話方塊建立的分割區。 如需為已部署的模型建立及管理資料分割的相關資訊，請參閱[建立及管理表格式模型資料分割 &#40;SSAS 表格式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)。  
@@ -26,7 +25,7 @@ ms.locfileid: "66066896"
   
 -   [相關工作](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>各種  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 優點  
  表格式模型中的分割區，會將一個資料表分割成多個邏輯分割區物件。 接著，每個資料分割可以不受其他資料分割的影響，單獨進行處理。 例如，資料表的其中一些資料列集可能包含不常變更的資料，而其他一些資料列集則包含經常變更的資料。 在此情況下，如果您只想處理部分資料，則不需要處理所有資料。 分割區可讓您將需要經常處理的資料部分，與不常處理的資料加以分割。  
   
  有效的模型設計能善加利用分割區，以避免不必要的處理及 Analysis Services 伺服器上之後續處理器的負載，同時，還可確保資料的處理和重新整理頻率能反映資料來源的最新資料。 您在模型製作期間實作及利用分割區的方式，與針對已部署的模型實作及利用分割區的方式，可能大不相同。 請記住，在模型製作階段期間，您可能只會使用最後在已部署模型中之資料的子集。  

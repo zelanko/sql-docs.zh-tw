@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8a1e23399f91eace993f77dfc9a1ce7032bad222
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6920431686dc4e12fc5d2342744c17fc7b193ad8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698632"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039437"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>ODBC 資料表值參數 API 摘要
   本主題列出加強支援資料表值參數的 ODBC 函數。  

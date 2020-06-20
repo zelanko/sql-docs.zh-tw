@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f03266a5460e9e34a404256e5df415f799b29d98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7efbc045fc5f152f98ba7dbf2dfc686ff5e86a7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918934"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970588"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>監視與疑難排解 Managed 資料庫物件
   本主題提供可用於監視和疑難排解 Managed 資料庫物件以及在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中執行之組件的工具相關資訊。  

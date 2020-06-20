@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa56127f649d71bfcc8825322f8bf729175d41df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151039"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066043"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
   基數估計邏輯 (稱為基數估計工具) 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中經過重新設計，可改善查詢計劃的品質，從而提升查詢效能。 新的基數估計工具併入了可搭配新型 OLTP 和資料倉儲工作負載完善運作的假設和演算法。 這項發展乃是憑藉著我們針對新型工作負載進行深入的基數估計研究，以及過去 15 年來改進 SQL Server 基數估計工具的經驗。 由客戶的意見反應得知，儘管無論變更與否都能讓大多數的查詢獲益，但與舊版基數估計工具相比，少數的查詢可能會顯現效能退化。  
@@ -73,9 +72,9 @@ SELECT item, category, amount FROM dbo.Sales AS s WHERE Date = '2013-12-19';
 SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civic';  
 ```  
   
- 此行為已經變更。 現在，新的基數估計值會假設 Make 和 Model 資料行具有「若干」 ** 相互關聯性。 查詢最佳化工具會為估計方程式加入指數元件，以估計出較高的基數。 查詢最佳化工具現在會估計22.36 個數據列（.05 * SQRT （. \* 20）1000個數據列 = 22.36 個數據列）符合此述詞。 就此案例和具體資料分佈來看，22.36 個資料列更趨近於查詢將會傳回的實際數目 50 個資料列。  
+ 此行為已經變更。 現在，新的基數估計值會假設 Make 和 Model 資料行具有「若干」 ** 相互關聯性。 查詢最佳化工具會為估計方程式加入指數元件，以估計出較高的基數。 查詢最佳化工具現在會估計22.36 個數據列（.05 * SQRT （. 20）1000個數據 \* 列 = 22.36 個數據列）符合此述詞。 就此案例和具體資料分佈來看，22.36 個資料列更趨近於查詢將會傳回的實際數目 50 個資料列。  
   
- 請注意，新的基數估計工具邏輯會對述詞選擇性排序並增加指數乘冪。 例如，如果述詞選擇性是 .05、.20 和 .25，基數估計值會是（. 05 * SQRT （. 20） \* SQRT （SQRT （. 25）））。  
+ 請注意，新的基數估計工具邏輯會對述詞選擇性排序並增加指數乘冪。 例如，如果述詞選擇性是 .05、.20 和 .25，基數估計值會是（. 05 * SQRT （. 20） \* sqrt （SQRT （. 25）））。  
   
 ### <a name="example-c-new-cardinality-estimates-assume-filtered-predicates-on-different-tables-are-independent"></a>範例 C：新的基數估計值會假設不同資料表上的篩選述詞彼此無關  
  就此範例而言，舊版基數估計工具假設述詞篩選 s.type 和 r.date 相互關聯。 不過，對新型工作負載測試的結果顯示，不同資料表中各資料行的述詞篩選通常並非彼此相互關聯。  

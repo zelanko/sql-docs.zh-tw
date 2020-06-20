@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8de716da5a7f845f68bd50fa09b04594bf883ad6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171767"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035410"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>工作 3：建立及執行資料品質專案以進行比對
   在這項工作中，您會針對比對活動建立資料品質專案，並針對已清理的供應商資料執行比對程序，以移除資料中的任何重複項。
@@ -30,11 +29,11 @@ ms.locfileid: "78171767"
 
      ![新增資料品質專案 - 已選取 [比對]](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "新增資料品質專案 - 已選取 [比對]")
 
-5.  按 [下一步]  。
+5.  按 [下一步] 。
 
 6.  在 [對應] **** 頁面上，針對 [資料來源] **** 選取 [Excel 檔案] ****。
 
-7.  按一下 **[流覽]** 並選取 [**清理供應商清單 .xls**]，這是清理活動的輸出檔案。
+7.  按一下 **[流覽]** 並選取 [**清理供應商 List.xls**]，這是 [清理] 活動中的輸出檔案。
 
 8.  將 [供應商**識別碼**] 欄位、[**供應商名稱**] 資料**行對應至**供應商**名稱**網域，並將 [ **ContactEmailAddress** ] 資料行對應至 [**連絡人電子郵件**網域]
 

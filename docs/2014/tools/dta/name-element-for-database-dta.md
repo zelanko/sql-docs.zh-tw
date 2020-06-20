@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e871c4fa-3b57-46cf-b4f8-e3be86f92dc4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 01f0f192dbf931d5ad80c594b376973ee2db3f31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 554469d77ef7561711b8245e7bb736b6bcb0a58b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63297513"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011515"
 ---
 # <a name="name-element-for-database-dta"></a>資料庫的 Name 元素 (DTA)
   指定您要微調之資料庫的名稱。  

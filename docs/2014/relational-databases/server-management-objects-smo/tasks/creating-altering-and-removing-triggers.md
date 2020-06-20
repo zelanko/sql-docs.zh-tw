@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31430674d88d8aa5b820823a16dc18d110b9dd9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13b494e4c2d8d822eb6d25d53d3b50962a65ef49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037658"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>建立、改變和移除觸發程式
-  在 SMO 中，觸發程序是利用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 物件表示。 引發[!INCLUDE[tsql](../../../includes/tsql-md.md)]觸發程式時所執行的程式碼是由 trigger 物件的<xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A>屬性所設定。 觸發程序的類型是利用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 物件的其他屬性所設定，例如 <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> 屬性。 這是布林值屬性，指定觸發程序是否由記錄的 `UPDATE` 在父資料表上引發。  
+  在 SMO 中，觸發程序是利用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 物件表示。 [!INCLUDE[tsql](../../../includes/tsql-md.md)]引發觸發程式時所執行的程式碼是由 <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> trigger 物件的屬性所設定。 觸發程序的類型是利用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 物件的其他屬性所設定，例如 <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> 屬性。 這是布林值屬性，指定觸發程序是否由記錄的 `UPDATE` 在父資料表上引發。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Trigger> 物件代表傳統的資料操作語言 (DML) 觸發程式。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 和更新版本也支援資料定義語言 (DDL) 觸發程序。 DDL 觸發程序是由 <xref:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger> 物件和 <xref:Microsoft.SqlServer.Management.Smo.ServerDdlTrigger> 物件表示。  
   

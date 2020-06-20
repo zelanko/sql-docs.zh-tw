@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7d2b40ae9c5eda9288f86527c2cbf973a4106e09
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bb6567924747d9325610c23d1f11de8ced1bc017
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059489"
 ---
 # <a name="examples-using-auto-mode"></a>範例：使用 AUTO 模式
   下列範例說明 AUTO 模式的用法。 這些查詢中有許多是針對自行車製造說明的 XML 文件來指定的，而這些文件儲存在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中 ProductModel 資料表的 Instructions 資料行中。  
@@ -265,7 +264,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   在查詢結果中，所傳回之元素及屬性名稱中的 XML 與 URL 特殊字元，是使用對應之 Unicode 字元的十六進位值來進行編碼。 在上述結果中，元素名稱 <`Special Chars`> 在傳回時會變成 <`Special_x0020_Chars`>。 屬性名稱 <`Col#&2`> 會以 <`Col_x0023__x0026_2`> 形式傳回。 XML 和 URL 特殊字元都會加以編碼。  
   
--   如果項目或屬性的值包含五種標準 XML 字元實體 ('、""、\<、> 及 &) 的其中任何一種，則一律都會使用 XML 字元編碼方式來將這些 XML 特殊字元編碼。 在上述結果中，<`&`> 屬性值中的 `Col1` 值會編碼成 `&`。 不過，# 字元仍保留為 #，因為它是有效的 XML 字元，並非特殊 XML 字元。  
+-   如果元素或屬性的值包含五個標準 XML 字元實體（'、""、 \<, > 和 &）中的任何一個，這些特殊的 xml 字元一律會使用 XML 字元編碼進行編碼。 在上述結果中，<`&`> 屬性值中的 `Col1` 值會編碼成 `&`。 不過，# 字元仍保留為 #，因為它是有效的 XML 字元，並非特殊 XML 字元。  
   
 -   如果元素或屬性的值包含任何於 URL 中是具有特殊意義的 URL 特殊字元，則只有位於 DBOBJECT URL 值內且當特殊字元為資料表或資料行名稱的一部分時，才會對這些字元進行編碼。 在結果中，屬於資料表名稱 `#` 一部分的 `Col#&2` 字元會被編碼成 `_x0023_ in the DBOJBECT URL`。  
   

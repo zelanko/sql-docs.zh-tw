@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: ff67bda8-7e5c-4b06-8d7b-9985b6059a98
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b16cd79186357dafd07fa5f0f19dee05b03722f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 934683cfca1a9a9c0596071824c21a0045e6ebab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990444"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051155"
 ---
 # <a name="localdb_error_insufficient_buffer"></a>LOCALDB_ERROR_INSUFFICIENT_BUFFER
     

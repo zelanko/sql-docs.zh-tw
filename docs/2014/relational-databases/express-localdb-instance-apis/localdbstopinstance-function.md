@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6f28abbf9871d5f4e512e9c9ee0cfb5c7ad9db59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d4c19943bc79567a5e3abee0c19597247eb31bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135253"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050982"
 ---
 # <a name="localdbstopinstance-function"></a>LocalDBStopInstance 函數
   停止執行指定的 SQL Server Express LocalDB 執行個體。  
@@ -58,7 +57,7 @@ HRESULT LocalDBStopInstance(
  *ulTimeout*  
  [輸入] 等候此作業完成的時間 (以秒為單位)。 如果此值為 0，此函數會立即傳回，而不等候 LocalDB 執行個體停止。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

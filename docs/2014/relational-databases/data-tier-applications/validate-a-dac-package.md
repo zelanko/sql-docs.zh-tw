@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 078c7bfeef2ff8636243f4853c03de252c7b9289
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782673"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952984"
 ---
 # <a name="validate-a-dac-package"></a>驗證 DAC 封裝
   最好先檢閱 DAC 封裝的內容，再將它部署至實際執行環境，以及先驗證升級動作，再升級現有 DAC。 當您部署的封裝之前不是在組織內開發時，特別會是這個情況。  

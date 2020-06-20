@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2c858d0fa8579aff288efd7026ab4b65035bad8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c081ee21b3471656e368bfd31058c95e6aa7428b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050720"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen (擴充預存程序 API)
     
@@ -55,10 +54,10 @@ n
  *n*  
  這指出參數的數目。 第一個參數是 1。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  這是參數資料的實際長度 (以位元組為單位)。 如果沒有第 *n* 個參數或是沒有任何遠端預存程序，其會傳回 -1。 如果第 *n* 個參數為 NULL，其會傳回 0。  
   
- 如果參數是下列[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]其中一個系統資料類型，此函數會傳回下列值。  
+ 如果參數是下列其中一個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 系統資料類型，此函數會傳回下列值 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 |新的資料類型|輸入資料長度|  
 |--------------------|-----------------------|  

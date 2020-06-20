@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3823b6d55439aad860d9176933c348e44acc1ba5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6193c9962c0e7402e041f9359966cc9ebb736995
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922843"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960034"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>PowerShell 中的 SQL Server 識別碼
   適用於 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會使用 Windows PowerShell 路徑中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼可能包含 Windows PowerShell 路徑中不支援的字元。 當您使用 Windows PowerShell 路徑中的識別碼時，必須逸出這些字元或針對這些字元使用特殊編碼。  

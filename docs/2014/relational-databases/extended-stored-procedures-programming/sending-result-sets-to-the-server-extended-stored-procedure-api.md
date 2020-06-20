@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a58c8eca585bbbe2c935c524840bc465992d45c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82984440f96416189eb18f900764ee7bdaf05a01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62511843"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050857"
 ---
 # <a name="sending-result-sets-to-the-server-extended-stored-procedure-api"></a>將結果集傳送到伺服器 (擴充預存程序 API)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
- 將結果集傳送至[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，擴充預存程式應該呼叫適當的 API，如下所示：  
+ 將結果集傳送至時 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，擴充預存程式應該呼叫適當的 API，如下所示：  
   
 -   在使用**srv_sendrow**傳送所有資料列（如果有的話）之前或之後，可依任何順序呼叫**srv_sendmsg**函數。 在以**srv_senddone**傳送完成狀態之前，所有訊息都必須傳送至用戶端。  
   

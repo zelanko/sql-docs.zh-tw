@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa63a9f16507df8f0966d19323b2e110b7c84fcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060890"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921989"
 ---
 # <a name="conditional-split-transformation-editor"></a>條件式分割轉換編輯器
   使用 **[條件式分割轉換編輯器]** 對話方塊，即可建立運算式、設定評估運算式的順序，以及命名條件式分割的輸出。 此對話方塊包含可用來建立運算式的數學、字串，以及日期/時間函數與運算子。 評估為 True 的第一個條件會決定資料列的輸出導向。  
@@ -36,7 +35,7 @@ ms.locfileid: "66060890"
  **輸出名稱**  
  提供輸出名稱。 預設為已編號的案例清單；然而，您可選擇任何唯一的、描述性名稱。  
   
- **狀況**  
+ **條件**  
  輸入運算式或從可用的資料行、變數、函數以及運算子的清單中拖曳來建立運算式。  
   
  此屬性的值可以使用屬性運算式指定。  

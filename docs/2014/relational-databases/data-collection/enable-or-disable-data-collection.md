@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 61a5e8c1e3dad99318f14a49f1386757a4ebabe3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af5cc647a63d3a9451086fc9e2211dec809e88fb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873465"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970458"
 ---
 # <a name="enable-or-disable-data-collection"></a>啟用或停用資料收集
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中啟用或停用資料收集。  

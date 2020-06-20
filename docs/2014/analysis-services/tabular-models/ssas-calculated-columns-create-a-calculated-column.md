@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 60218cb5f50777ac07e9a2805d224d80bef7975d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a455cdda48fc74027dd22c4915d8384a8b4dae54
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066515"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938619"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>建立導出資料行 (SSAS 表格式)
   導出資料行可讓您將新資料加入至模型。 您可以建立 DAX 公式來定義資料行的資料列層級值，而不是將值貼入或匯入資料行。 當您建立有效的公式，然後按一下 ENTER 時，即會計算並填入導出資料行之每個資料列中的值。 然後導出資料行就可以像是其他任何資料行，加入至報表應用程式或分析應用程式。 此主題描述如何在模型設計師中使用 DAX 公式列，來建立新的導出資料行。  

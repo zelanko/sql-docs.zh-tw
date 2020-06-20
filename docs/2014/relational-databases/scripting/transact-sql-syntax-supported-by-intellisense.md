@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a5bf48818e6e1d0b5d92fbd04602d09a72276593
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b3d34fc79dd7817e64b34b61083415477860ce97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718240"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997928"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 所支援的 Transact-SQL 語法
   此主題描述 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中 IntelliSense 所支援的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]陳述式和語法。  
@@ -54,10 +53,10 @@ ms.locfileid: "82718240"
 |[設定@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|所有語法。|  
 |[執行 CREATE 陳述式之前，請先執行](/sql/t-sql/language-elements/execute-transact-sql)|可執行使用者定義的預存程序、系統預存程序、使用者定義的函數以及系統函數。|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|所有語法。|  
-|[建立視圖](/sql/t-sql/statements/create-view-transact-sql)|所有語法。|  
+|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|所有語法。|  
 |[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|所有語法，但有下列例外狀況：<br /><br /> EXTERNAL NAME 子句沒有任何 IntelliSense 支援。<br /><br /> 在 AS 子句中，IntelliSense 僅支援本主題所列的陳述式和語法。|  
 |[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|所有語法，但有下列例外狀況：<br /><br /> EXTERNAL NAME 子句沒有任何 IntelliSense 支援。<br /><br /> 在 AS 子句中，IntelliSense 僅支援本主題所列的陳述式和語法。|  
-|[USE](/sql/t-sql/language-elements/use-transact-sql)|所有語法。|  
+|[使用](/sql/t-sql/language-elements/use-transact-sql)|所有語法。|  
   
 ## <a name="intellisense-in-supported-statements"></a>支援陳述式中的 IntelliSense  
  當下列語法元素用於其中一個支援的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 陳述式時， [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器中的 IntelliSense 便支援這些元素：  

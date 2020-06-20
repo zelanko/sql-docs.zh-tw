@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a91faaa534c35e7affcdf11cb5174d8cb9e62fc6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eb08c4640265e311a36723af9985af006ec96c38
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704896"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039217"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取資料行 (OLE DB)
   `IRow` 介面允許直接存取結果集中單一資料列的資料行。 因此，`IRow` 是從包含一個資料列之結果集擷取資料行的有效方式。  

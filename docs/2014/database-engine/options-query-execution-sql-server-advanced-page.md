@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6fcb8be3b7803402d6e20510d95f293107b66540
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 3efc3dc8b42fc08969cc1afb85d4e629f6759e10
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000808"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930269"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>選項 (查詢執行：SQL Server：進階頁面)
   使用 SET 命令有許多選項可用。 使用此頁面來指定 **設定** 選項，以在 SQL Server 查詢編輯器中執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 它們對於其他程式碼編輯器沒有影響。 這些選項的變更僅適用於新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 **[查詢]** 功能表上的 **[查詢選項]** ，或按一下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗的快速鍵功能表。 在 **[執行]** 下，按一下 **[進階]**。 如需上述各項目的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **SET NOCOUNT**  
  不會以結果集的訊息傳回資料列數的計數。 依預設，不會勾選此核取方塊。  
   

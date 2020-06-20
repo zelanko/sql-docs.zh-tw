@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ed991d65858d40b96013659caa2d83c479ca1d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e647ed8d563bb922ee083d7a10a57429148e954a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782715"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953085"
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
-  您可以使用 [**註冊資料層應用程式]** 或 Windows PowerShell 腳本來建立資料層應用程式（DAC）定義，以描述現有資料庫中的物件，並在`msdb`系統資料庫（中[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的**master** ）中註冊 DAC 定義。  
+  您可以使用 [**註冊資料層應用程式]** 或 Windows PowerShell 腳本來建立資料層應用程式（DAC）定義，以描述現有資料庫中的物件，並在 `msdb` 系統資料庫（中的**MASTER** ）中註冊 DAC 定義 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  
   
 -   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
@@ -78,11 +77,11 @@ ms.locfileid: "72782715"
   
  **應用程式名稱。** - 字串，用來識別 DAC 定義的名稱，此欄位已經填入資料庫名稱。  
   
- **版本。** - 可識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 部署 DAC 時，版本會儲存在`msdb`資料庫中，並可于[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]稍後在的 [**資料層應用程式**] 節點下查看。  
+ **版本。** - 可識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 部署 DAC 時，版本會儲存在資料庫中， `msdb` 並可于稍後在的 [**資料層應用程式**] 節點下查看 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
- **描述.** - 選擇性。 說明 DAC 用途的文字。 部署 DAC 時，此描述會儲存在`msdb`資料庫中，並可于[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]稍後在的 [**資料層應用程式**] 節點下查看。  
+ **描述.** - 選擇性。 說明 DAC 用途的文字。 部署 DAC 時，此描述會儲存在資料庫中， `msdb` 並可于稍後在的 [**資料層應用程式**] 節點下查看 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
- 上一步-將您返回 [**簡介**] 頁面。 ** \< **  
+ ** \< 上一步**-將您返回 [**簡介**] 頁面。  
   
  **下一步 >** - 確認 DAC 可以從資料庫的物件建立而來，並在 [驗證與摘要]**** 頁面中顯示結果。  
   
@@ -94,7 +93,7 @@ ms.locfileid: "72782715"
 ### <a name="retrieving-objects"></a>擷取物件  
  **擷取資料庫與伺服器物件。** - 當精靈從資料庫及 Database Engine 執行個體擷取所有必要的物件時，將會顯示進度列。  
   
- 上一步-返回 [**設定屬性**] 頁面來變更您的專案。 ** \< **  
+ ** \< 上一步**-返回 [**設定屬性**] 頁面來變更您的專案。  
   
  **下一步 >** - 註冊 DAC，並在 [註冊 DAC]**** 頁面中顯示結果。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "72782715"
 ### <a name="validating-objects"></a>驗證物件  
  **檢查**  _SchemaName_ **.** _ObjectName_ **。** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 _SchemaName_**。**_ObjectName_識別目前正在驗證哪一個物件。  
   
- 上一步-返回 [**設定屬性**] 頁面來變更您的專案。 ** \< **  
+ ** \< 上一步**-返回 [**設定屬性**] 頁面來變更您的專案。  
   
  **下一步 >** - 註冊 DAC，並在 [註冊 DAC]**** 頁面中顯示結果。  
   
@@ -114,7 +113,7 @@ ms.locfileid: "72782715"
   
  **儲存報表** - 選取此按鈕可以將驗證報告複本儲存到 HTML 檔案。 預設資料夾是 Windows 帳戶的 [檔] 資料夾中的**SQL Server 管理 Studio\dac packages 套件**] 資料夾。  
   
- 上一步-返回 [**設定屬性**] 頁面來變更您的專案。 ** \< **  
+ ** \< 上一步**-返回 [**設定屬性**] 頁面來變更您的專案。  
   
  **下一步 >** - 註冊 DAC，並在 [註冊 DAC]**** 頁面中顯示結果。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "72782715"
   
  **註冊 DAC** - 報告為了註冊 DAC 所採取的每個動作成功或失敗。 檢閱資訊以判斷每個動作成功或失敗。 發生錯誤的所有動作在 **[結果]** 資料行中都會有一個連結。 選取連結來檢視該動作的錯誤報告。  
   
- **儲存報表** - 選取此按鈕可以將註冊報告儲存到 HTML 檔案。 此檔案會報告每個動作的狀態，包括所有動作所產生的所有錯誤。 預設資料夾是 Windows 帳戶的 [檔] 資料夾中的**SQL Server 管理 Studio\dac packages 套件**] 資料夾。 檔案名稱格式為 \<DACPackageName>_RegisterDACReport_yyyymmdd.html，其中 \<*DACPackageName*> 是要部署之套件的名稱、*yyyy* = 目前的年份、*mm* = 目前的月份，而 *dd* = 目前的日期。  
+ **儲存報表** - 選取此按鈕可以將註冊報告儲存到 HTML 檔案。 此檔案會報告每個動作的狀態，包括所有動作所產生的所有錯誤。 預設資料夾是 Windows 帳戶的 [檔] 資料夾中的**SQL Server 管理 Studio\dac packages 套件**] 資料夾。 檔案名的格式為 \<DACPackageName>_RegisterDACReport_yyyymmdd.html，其中 \<*DACPackageName*> 是要部署的封裝名稱， *yyyy* = 目前的年份， *mm* = 目前的月份，而*dd* = 目前的日期。  
   
  **完成** - 結束精靈。  
   

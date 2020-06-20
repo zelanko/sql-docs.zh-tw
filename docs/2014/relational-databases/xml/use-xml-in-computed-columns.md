@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b29be9c59a35120949966e840420b415dc3157c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 26fe0058a93e05d1533ed5332eeaa5054727f9bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702313"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012908"
 ---
 # <a name="use-xml-in-computed-columns"></a>使用計算資料行中的 XML
   XML 執行個體可依計算資料行的來源或依計算資料行的類型顯示。 本主題的範例將示範如何搭配計算資料行使用 XML。  

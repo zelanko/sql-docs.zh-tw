@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a1255a810c5d41dfe7c69dee781c670965f0756c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2408399c0c04338312f2076e42d3ac7de167f7aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703657"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037798"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>以指令碼變數使用 sqlcmd
   用於指令碼中的變數稱為指令碼變數。 指令碼變數可讓一個指令碼使用於多個狀況中。 例如，如果您想要針對多個伺服器執行一個指令碼，而不針對每個伺服器修改指令碼，您可以使用指令碼變數來代表伺服器名稱。 只要變更提供給指令碼變數的伺服器名稱，相同的指令碼就可以在不同的伺服器上執行。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdff4dcefb1fb6113869fa01e41f3c8690cfaf2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032002"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998225"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>開啟活動監視器 (SQL Server Management Studio)
   本主題描述如何開啟 [活動監視器] 來取得有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序以及這些處理序如何影響目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的資訊。 此外，本主題也描述如何設定 [活動監視器] 的重新整理間隔。  
@@ -33,7 +32,7 @@ ms.locfileid: "63032002"
   
 -   **若要使用下列項目來開啟活動監視器：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 -   **使用下列項目，設定重新整理間隔：**  [SQL Server Management Studio](#Refresh)  
   
@@ -63,7 +62,7 @@ ms.locfileid: "63032002"
   
 #### <a name="to-open-activity-monitor-when-opening-sql-server-management-studio"></a>若要在開啟 SQL Server Management Studio 時開啟活動監視器  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
 2.  在 **[選項]** 對話方塊中，展開 **[環境]**，然後選取 **[一般]**。  
   

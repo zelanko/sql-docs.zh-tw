@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d3aae50f173f306c47aae606ebad3ecf4f19e6a7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b4672bd51bb73bcd1af017e8ecd4ad8b6581302c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703963"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037949"
 ---
 # <a name="edit-a-breakpoint-location"></a>編輯中斷點位置
   中斷點位置會指定中斷點位於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案中的行和字元。 您可以編輯中斷點位址，將中斷點移至指令碼中的另一個位置，或移至不同的指令碼。  
@@ -35,7 +34,7 @@ ms.locfileid: "82703963"
   
 2.  在 [檔案中斷點]  對話方塊中，編輯 [檔案]  以指定新的檔案、編輯 [行]  以指定新的行，或編輯 [字元]  以指定該行中的新位置。 如果您所指定的新檔案已經開啟在 [查詢編輯器] 視窗中，中斷點就會移至該編輯器視窗。 如果該檔案尚未開啟，系統就會開啟新的編輯器視窗、載入該檔案，而且中斷點會移至新的位置。  
   
-     偵錯  **時，[允許原始程式碼與原始版本不同]** [!INCLUDE[tsql](../../includes/tsql-md.md)] 選項沒有任何作用。  
+     偵錯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 時，[允許原始程式碼與原始版本不同] 選項沒有任何作用。  
   
 ## <a name="see-also"></a>另請參閱  
  [指定叫用計數](specify-a-hit-count.md)   

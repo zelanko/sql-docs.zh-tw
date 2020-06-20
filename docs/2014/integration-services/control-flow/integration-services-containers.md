@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0afb0e4307b4bc2205e92700f6fc0ca580caa801
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831256"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918698"
 ---
 # <a name="integration-services-containers"></a>整合服務容器
   容器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的物件，可提供結構給套件，並提供服務給工作。 它們支援封裝中的重複控制流程，且會將工作和容器分組成有意義的工作單位。 除了工作外，容器還可包含其他容器。  
@@ -51,21 +50,21 @@ ms.locfileid: "62831256"
   
 |屬性|描述|  
 |--------------|-----------------|  
-|`DelayValidation`|布林值，指出是否延遲至執行階段才驗證容器。 這個屬性的預設值為 `False`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>。|  
-|`Description`|容器描述。 該屬性包含字串，但可能空白。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>。|  
-|`Disable`|布林值，指出容器是否執行。 這個屬性的預設值為 `False`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>。|  
+|`DelayValidation`|布林值，指出是否延遲至執行階段才驗證容器。 這個屬性的預設值為 `False`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A> 。|  
+|`Description`|容器描述。 該屬性包含字串，但可能空白。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A> 。|  
+|`Disable`|布林值，指出容器是否執行。 這個屬性的預設值為 `False`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A> 。|  
 |`DisableEventHandlers`|布林值，指出與該容器關聯的事件處理常式是否執行。 這個屬性的預設值為 `False`。|  
-|`FailPackageOnFailure`|布林值，指定如果容器中發生錯誤，封裝是否失敗。 這個屬性的預設值為 `False`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>。|  
-|`FailParentOnFailure`|布林值，指定如果容器中發生錯誤，父容器是否失敗。 這個屬性的預設值為 `False`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>。|  
-|`ForcedExecutionValue`|如果 `ForceExecutionValue` 設定為 `True`，則是包含容器之選擇性執行值的物件。 這個屬性的預設值為 **0**。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>。|  
+|`FailPackageOnFailure`|布林值，指定如果容器中發生錯誤，封裝是否失敗。 這個屬性的預設值為 `False`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A> 。|  
+|`FailParentOnFailure`|布林值，指定如果容器中發生錯誤，父容器是否失敗。 這個屬性的預設值為 `False`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A> 。|  
+|`ForcedExecutionValue`|如果 `ForceExecutionValue` 設定為 `True`，則是包含容器之選擇性執行值的物件。 這個屬性的預設值為 **0**。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A> 。|  
 |`ForcedExecutionValueType`|`ForcedExecutionValue` 的資料類型。 此屬性的預設值為 `Int32`。|  
-|`ForceExecutionResult`|指定執行封裝或容器之強制結果的值。 可能的值為 `None`、`Success`、`Failure` 和 `Completion`。 這個屬性的預設值為 `None`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>。|  
-|`ForceExecutionValue`|布林值，指定是否應該強制執行容器的選擇性執行值以包含特定值。 此屬性的預設值為 `False`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>。|  
+|`ForceExecutionResult`|指定執行封裝或容器之強制結果的值。 可能的值為 `None`、`Success`、`Failure` 和 `Completion`。 這個屬性的預設值為 `None`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A> 。|  
+|`ForceExecutionValue`|布林值，指定是否應該強制執行容器的選擇性執行值以包含特定值。 此屬性的預設值為 `False`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A> 。|  
 |`ID`|在建立封裝時所指派的容器 GUID。 這個屬性是唯讀的。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
-|`IsolationLevel`|容器交易的隔離等級。 可能的值為 `Unspecified`、`Chaos`、`ReadUncommitted`、`ReadCommitted`、`RepeatableRead`、`Serializable` 和 `Snapshot`。 此屬性的預設值為 `Serializable`。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
+|`IsolationLevel`|容器交易的隔離等級。 可能的值為 `Unspecified`、`Chaos`、`ReadUncommitted`、`ReadCommitted`、`RepeatableRead`、`Serializable` 和 `Snapshot`。 此屬性的預設值為 `Serializable`。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A> 。|  
 |`LocaleID`|Microsoft Win32 地區設定。 此屬性的預設值為本機電腦作業系統的地區設定。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>。|  
-|`LoggingMode`|指定容器記錄行為的值。 這些值為 `Disabled`、`Enabled` 和 `UseParentSetting`。 此屬性的預設值為 `UseParentSetting`。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>。|  
-|`MaximumErrorCount`|在容器停止執行之前，可發生的最大錯誤次數。 這個屬性的預設值為**1**。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>。|  
+|`LoggingMode`|指定容器記錄行為的值。 這些值為 `Disabled`、`Enabled` 和 `UseParentSetting`。 此屬性的預設值為 `UseParentSetting`。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> 。|  
+|`MaximumErrorCount`|在容器停止執行之前，可發生的最大錯誤次數。 這個屬性的預設值為**1**。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A> 。|  
 |`Name`|容器的名稱。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>。|  
 |`TransactionOption`|容器的交易式參與。 可能的值為 `NotSupported`、`Supported`、`Required`。 此屬性的預設值為 `Supported`。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>。|  
   

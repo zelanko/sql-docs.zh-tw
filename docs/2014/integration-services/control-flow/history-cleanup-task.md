@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a7664fb91c6e60789cd59aeef1d25c33409477a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5b71480ef7396e935e80f9d94633a5278446700
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831465"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918784"
 ---
 # <a name="history-cleanup-task"></a>記錄清除工作
   「記錄清除」工作會刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫中下列記錄資料表的項目。  

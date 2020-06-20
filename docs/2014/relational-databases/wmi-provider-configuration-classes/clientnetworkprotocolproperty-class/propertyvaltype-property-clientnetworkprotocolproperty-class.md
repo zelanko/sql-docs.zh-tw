@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 624b9bdd-ed93-4140-bd4e-00d714a2558c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8305fa86ed3db9e3c0e2f98fa80f8da7c59d1b5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51ecd9a040ab8f27d8bb2b9da4a9467aac9d14fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013971"
 ---
 # <a name="propertyvaltype-property-clientnetworkprotocolproperty-class"></a>PropertyValType 屬性 (ClientNetworkProtocolProperty 類別)
   取得儲存在[PropertyIdx 屬性（ClientNetworkProtocolProperty 類別）](clientnetworkprotocolproperty-class.md)值所參考的屬性中之值的資料類型。  
@@ -37,8 +36,8 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
- [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)物件，代表[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端所使用之網路通訊協定的屬性。  
+ *object*  
+ [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)物件，代表 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 用戶端所使用之網路通訊協定的屬性 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定屬性值之資料類型的 `uint32` 值。  

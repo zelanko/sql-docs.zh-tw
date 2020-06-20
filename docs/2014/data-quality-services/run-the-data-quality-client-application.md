@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bbb790fc5067d1544cd4b3d9d6e90b34be8e2b77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18054a5e6a2393a2a16baf81caa44a72489e7fc5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484144"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937419"
 ---
 # <a name="run-the-data-quality-client-application"></a>執行 Data Quality Client 應用程式
   您可以執行 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]，然後登入 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]，藉以使用 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (DQS)。  
@@ -40,7 +39,7 @@ ms.locfileid: "65484144"
   
 2.  在 **[連接到伺服器]** 對話方塊中：  
   
-    1.  指定您想要讓 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式連接的目標伺服器。 若要連接到本機電腦上的 **，請選取** [(LOCAL)] [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 。 您也可以按一下向下箭號，然後選取** \<[流覽網路以尋找更多伺服器]>** 連接到不同的伺服器（或依名稱連接到本機伺服器）。 此時會顯示 **[瀏覽伺服器]** 對話方塊。 您可以在 **[本機伺服器]** 索引標籤或 **[網路伺服器]** 索引標籤中選取伺服器。  
+    1.  指定您想要讓 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式連接的目標伺服器。 若要連接到本機電腦上的 **，請選取** [(LOCAL)] [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 。 您也可以按一下向下箭號，然後選取 **\<Browse network for more servers>** 以連接到不同的伺服器（或依名稱連接到本機伺服器）。 此時會顯示 **[瀏覽伺服器]** 對話方塊。 您可以在 **[本機伺服器]** 索引標籤或 **[網路伺服器]** 索引標籤中選取伺服器。  
   
     2.  如果您想要加密 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 與 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 之間的資料傳輸，請按一下 [選項]****，然後選取 [加密連接]**** 核取方塊。  
   

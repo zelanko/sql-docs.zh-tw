@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e8b5a8765523c91c00aae362ae311deff3179eb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c962d22b600eadc665fca31d274b423a25ea274b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718168"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997700"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>檢視物件總管中的空間資料
-  除了以方格格式顯示在 [結果]  視窗中的資料以外，查詢編輯器中的 [空間結果]  視窗還會提供檢視空間資料結果的視覺化對應工具。 若要在 [空間結果]  視窗中顯示空間資料，您的查詢結果至少必須包含一個具有幾何或地理位置資料的空間資料行。  
+  除了以方格格式顯示在 [結果] 視窗中的資料以外，查詢編輯器中的 [空間結果] 視窗還會提供檢視空間資料結果的視覺化對應工具。 若要在 [空間結果]  視窗中顯示空間資料，您的查詢結果至少必須包含一個具有幾何或地理位置資料的空間資料行。  
   
 ### <a name="to-view-spatial-data-in-the-spatial-results-window"></a>在空間結果視窗中檢視空間資料  
   

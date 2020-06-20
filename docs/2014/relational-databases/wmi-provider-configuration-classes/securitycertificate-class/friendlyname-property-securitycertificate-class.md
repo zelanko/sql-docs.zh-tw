@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ab80d077af7db8fe1162a725bb94f9eec032061c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a63a75ec225d905238695a8bc0e6eebf802a50a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63231260"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060052"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>FriendlyName 屬性 (SecurityCertificate 類別)
   取得或設定安全性憑證的替代易記名稱。  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  代表安全性憑證的 [SecurityCertificate 類別](securitycertificate-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

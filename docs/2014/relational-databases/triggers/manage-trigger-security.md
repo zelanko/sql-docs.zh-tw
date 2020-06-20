@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcdc2af7f67c1ea4bda49e09cfe92eda43c9dea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdc176dcad50c3bf28f058c3724a01267975bfc5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524124"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014322"
 ---
 # <a name="manage-trigger-security"></a>管理觸發程序安全性
   依預設，DML 與 DDL 觸發程序會在呼叫觸發程序的該使用者之環境下執行。 觸發程序的呼叫者是執行陳述式而引發觸發程序執行的使用者。 例如，如果使用者 **Mary** 執行 DELETE 陳述式而引發 DML 觸發程序 **DML_trigMary** 執行，就會在 **Mary** 使用者權限的環境下執行 **DML_trigMary**內的程式碼。 此預設行為有可能遭到居心不良的使用者加以利用，成為在資料庫或伺服器執行個體中導入惡意程式碼的漏洞。 例如，下列 DDL 觸發程序是由使用者 `JohnDoe`建立的：  

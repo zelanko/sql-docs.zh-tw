@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6b4be577d1499ea4809ee10b36343875253fc032
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2c411ff747536f0f27679c74a0d56b2f059df52e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717398"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059612"
 ---
 # <a name="add-business-logic-to-xml-data"></a>將商務邏輯加入至 XML 資料
   將商務邏輯加入至 XML 資料的方法有好幾種：  

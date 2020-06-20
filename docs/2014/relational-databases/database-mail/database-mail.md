@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97a5a459fafd80956a2b8d31c27b86169c6fa850
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917961"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952429"
 ---
 # <a name="database-mail"></a>Database Mail
   Database Mail 是從 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 傳送電子郵件訊息的企業解決方案。 使用 Database Mail，資料庫應用程式就能夠將電子郵件訊息傳送給使用者。 這類訊息能包含查詢結果，也可以包含來自網路上任何資源的檔案。  
@@ -63,7 +62,7 @@ ms.locfileid: "62917961"
   
 -   Database Mail 會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎服務帳戶執行。 若要從資料夾將檔案附加至電子郵件，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎帳戶應具備存取包含該檔案之資料夾的權限。  
   
-### <a name="supportability"></a>可支援性  
+### <a name="supportability"></a>支援能力  
   
 -   整合式組態：Database Mail 可維護 [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)]內電子郵件帳戶的資訊。  
   

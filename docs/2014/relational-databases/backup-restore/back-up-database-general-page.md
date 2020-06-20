@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c315c827e1c8b206b2098009510bf6468bd7d74
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155081"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959628"
 ---
 # <a name="back-up-database-general-page"></a>備份資料庫 (一般頁面)
   使用 **[備份資料庫]** 對話方塊上的 **[一般]** 頁面，檢視或修改資料庫備份作業設定。  
@@ -25,7 +24,7 @@ ms.locfileid: "70155081"
  如需基本備份概念的詳細資訊，請參閱[備份概觀 &#40;SQL Server&#41;](backup-overview-sql-server.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按一下 [指令碼]**** 按鈕，然後選取指令碼目的地來產生對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 指令碼。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按下 [指令碼]  按鈕，然後選取指令碼的目的地，以產生相對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 指令碼。  
   
  **若要使用 SQL Server Management Studio 建立備份**  
   
@@ -88,7 +87,7 @@ ms.locfileid: "70155081"
 |||  
 |-|-|  
 |**磁碟**|備份至磁碟。 這可能是針對資料庫所建立的系統檔案，或以磁碟為基礎的邏輯備份裝置。 目前選取的磁碟會出現在 **[備份至]** 清單中。 您最多可以為備份作業選取 64 個磁碟裝置。|  
-|**磁帶**|備份至磁帶。 這可能是針對資料庫所建立的本機磁帶機，或以磁帶為基礎的邏輯備份裝置。 目前選取的磁帶會出現在 **[備份至]** 清單中。 最大數目是 64。 如果伺服器上沒有附加磁帶裝置，則會停用此選項。 您選取的磁帶會列在 **[備份至]** 清單中。<br /><br /> 注意：未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
+|**磁帶**|備份至磁帶。 這可能是針對資料庫所建立的本機磁帶機，或以磁帶為基礎的邏輯備份裝置。 目前選取的磁帶會出現在 **[備份至]** 清單中。 最大數目是 64。 如果伺服器上沒有附加磁帶裝置，則會停用此選項。 您選取的磁帶會列在 **[備份至]** 清單中。<br /><br /> 注意:未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
 |**URL**|備份至 Azure Blob 儲存體。|  
   
  所顯示的下一組選項取決於選取的目的地類型。 如果選取 [磁碟] 或 [磁帶]，則會顯示下列選項。  
@@ -117,13 +116,13 @@ ms.locfileid: "70155081"
  指定 Azure 儲存體容器的名稱  
   
  **URL 前置詞：**  
- 這會根據儲存在 SQL 認證中的儲存體帳戶資訊，以及您指定的 Azure 儲存體容器名稱自動產生。 我們建議您不要編輯此欄位中的資訊，除非您使用的是使用** \<儲存體帳戶**以外之格式的網域> blob.core.windows.net。  
+ 這會根據儲存在 SQL 認證中的儲存體帳戶資訊，以及您指定的 Azure 儲存體容器名稱自動產生。 除非您使用的是使用** \<storage account> blob.core.windows.net**以外格式的網域，否則建議您不要編輯此欄位中的資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [備份交易記錄 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [備份檔案和檔案群組 &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
- [定義磁片檔案的邏輯備份裝置 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [定義磁帶磁片磁碟機的邏輯備份裝置 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [定義磁碟檔案的邏輯備份裝置 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [定義磁帶機的邏輯備份裝置 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [復原模式 &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

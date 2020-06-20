@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4cdadcb1301a5755b57485ac8e622cd66e850c57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec3677976a82cfb9237c4bcab267ae67f8f6cc5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059548"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>將現有資料行變更為 XML 資料行
   ALTER TABLE 陳述式支援 `xml` 資料類型。 例如，您可以將任何字串類型資料行修改成 `xml` 資料類型。 請注意在這些情況下，資料行中所包含的文件必須格式正確。 另外，如果您要將資料行的類型從字串變更為具 xml 類型，將會根據指定的 XSD 結構描述來驗證資料行中的文件。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 776a8319750721f3b489df1a3a4466c7dc36f15e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058222"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968318"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>透過設定登錄值實作簽署原則
   您可以使用選擇性登錄值來管理載入已簽署或未簽署之封裝的組織原則。 如果您使用這個登錄值，就必須在即將執行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝而且想要強制執行此原則的每部電腦上建立這個登錄值。 設定此登錄值之後， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 就會檢查或確認簽章，然後再載入封裝。  
@@ -48,7 +47,7 @@ ms.locfileid: "66058222"
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-2.  在 [執行] 對話方塊中， `Regedit`輸入，然後按一下 **[確定]**。  
+2.  在 [執行] 對話方塊中，輸入 `Regedit` ，然後按一下 **[確定]**。  
   
 3.  找出登錄機碼 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66058222"
   
 5.  將新值的名稱更新為 `BlockedSignatureStates`。  
   
-6.  按一下`BlockedSignatureStates`滑鼠右鍵，然後按一下 [**修改**]。  
+6.  按一下滑鼠右鍵 `BlockedSignatureStates` ，然後按一下 [**修改**]。  
   
 7.  在 [編輯 DWORD 值]  對話方塊中，輸入值 0、1、2 或 3。  
   

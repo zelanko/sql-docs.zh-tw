@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d40c76281b3368505caee55af3def9f7f61f1696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcde6185f25129596b4be7a150d4ee230c54c1a0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872416"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952085"
 ---
 # <a name="copy-databases-to-other-servers"></a>複製資料庫至其他伺服器
   有時候，將資料庫從某部電腦複製到另一部電腦很有用，包括測試、一致性檢查、開發軟體、執行報表、建立鏡像資料庫，或讓資料庫可用於遠端分支機構的作業。  

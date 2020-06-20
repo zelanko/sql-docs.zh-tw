@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6585733a4b864e14815990189fd6924e217de546
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc61f11a800a07a0b9a5ee1e9c3048a17bb36f13
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770653"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939268"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>使用條件式分割轉換來分割資料集
   若要加入及設定「條件式分割」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  

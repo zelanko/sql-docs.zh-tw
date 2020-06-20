@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b1dcc6e8a696d6a30be3d38bf30b653f24cac28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63280665"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040858"
 ---
 # <a name="use-the-toolbox"></a>使用工具箱
   您可以從 [工具箱] 中選取項目、文字和控制項，將它們拖曳到表單、頁面和設計師中；也可以從這些來源中，將項目拖回 [工具箱] 中，以便日後重複使用。 例如，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，您可以將工作拖回 [維護計畫] 中。  

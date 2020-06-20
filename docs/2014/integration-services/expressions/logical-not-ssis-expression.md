@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bfcd8337105766d91e097d35201d749c86ca840e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7af08250316936f855060686e960396bb3a9447
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969258"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (邏輯 Not) (SSIS 運算式)
   執行布林運算元的否定運算。  

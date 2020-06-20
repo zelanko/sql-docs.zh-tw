@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36246adc49870e9418765e37511e6d94cafe5c67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127416"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050763"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata (擴充預存程序 API)
     
@@ -55,10 +54,10 @@ n
  *n*  
  這是參數的數目。 第一個參數是數字 1。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  參數值的指標。 如果第 *n* 個參數為 NULL、沒有第 *n* 個參數，或是沒有任何遠端預存程序，會傳回 NULL。 如果參數值為字串，則可能不會以 Null 結束。 請使用 **srv_paramlen** 來判斷字串的長度。  
   
- 如果參數是其中一個[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型，此函數會傳回下列值。 指標資料包含資料類型的指標是否為有效 (VP)、NULL 或不適用 (N/A)，以及資料所指向的內容。  
+ 如果參數是其中一個資料類型，此函數會傳回下列值 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 指標資料包含資料類型的指標是否為有效 (VP)、NULL 或不適用 (N/A)，以及資料所指向的內容。  
   
 |新的資料類型|輸入資料長度|  
 |--------------------|-----------------------|  
@@ -69,7 +68,7 @@ n
 |BIGVARBINARY|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、0x00<br /><br /> **>=255：** VP、255 個位元組<br /><br /> **<255：** VP、實際資料|  
 |NCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、255 個空格<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料 + 填補 (最多 255)|  
 |NVARCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料|  
-|NTEXT|**NULL：** N/A<br /><br /> **ZERO：** N/A<br /><br /> **>= 255：** N/A<br /><br /> ** \<255：** N/A|  
+|NTEXT|**NULL：** N/A<br /><br /> **ZERO：** N/A<br /><br /> **>= 255：** N/A<br /><br /> ** \< 255：** N/A|  
   
  \*   資料不是以 Null 結束；在截斷 >255 個字元的資料時，不會發出警告。  
   

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10796dde3513e5c4b7970d1e4f6c4eedcad3c6c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4008df15ded37398ef8565bac759364699561fad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245596"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058693"
 ---
 # <a name="sql-server-agent-properties-history-page"></a>SQL Server Agent 屬性 (記錄頁面)
-  使用此頁面來查看和修改管理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務歷程記錄的設定。  
+  使用此頁面來查看和修改管理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務歷程記錄的設定。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **限制作業記錄大小**  
  對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 在記錄中所保留的作業記錄資訊量加以設限。  
   

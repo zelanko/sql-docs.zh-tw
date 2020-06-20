@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0145f973a2290d6fbe0c93139d42cd2298fa3cbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066910"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Database Engine Tuning Advisor (DTA) 會分析資料庫，並提出可用來最佳化查詢效能的建議。 Database Engine Tuning Advisor 在您尚未深入了解資料庫結構或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本質內容之前，就能夠選取及建立一組最佳的索引、索引檢視或資料表資料分割。 您可以使用 DTA 來執行下列工作。  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00645f619a89010bb4e2b112d50e00cbc6f40dce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76b651b3d9e5274c199b4c3aec43d90abcb8edbc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127151"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050671"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (擴充預存程序 API)
     
@@ -67,12 +66,12 @@ len
  *len*  
  指定要傳回之資料的實際長度。 如果參數的資料類型具有固定長度，而且不允許 null 值 (例如 *srvbit* 或 *srvint1*)，則會忽略 *len*。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  如果參數值設定成功則會傳回 SUCCEED，否則會傳回 FAIL。 目前沒有任何遠端預存程序、沒有第 *n* 個遠端預存程序參數、此參數並非傳回參數，以及 *len* 引數不合法時，會傳回 FAIL。  
   
  如果 *len* 是 0，它會傳回 NULL。 將 *len* 設定為 0 是將 NULL 傳回給用戶端的唯一方法。  
   
- 如果參數是其中一[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]種資料類型，此函數會傳回下列值。  
+ 如果參數是其中一種資料類型，此函數會傳回下列值 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 |新的資料類型|傳回資料長度|  
 |--------------------|------------------------|  
@@ -83,7 +82,7 @@ len
 |`BIGVARBINARY`|**NULL：** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO：** *len* = IG、data = IG、RET = 0<br /><br /> **>=255：** *len* = max8k、data = valid、RET = 0<br /><br /> **<255：** *len* = <8k、data = valid、RET = 1|  
 |NCHAR|**NULL：** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO：** *len* = IG、data = IG、RET = 0<br /><br /> **>=255：** *len* = max8k、data = valid、RET = 0<br /><br /> **<255：** *len* = <8k、data = valid、RET = 1|  
 |NVARCHAR|**NULL：** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO：** *len* = IG、data = IG、RET = 0<br /><br /> **>=255：** *len* = max8k、data = valid、RET = 0<br /><br /> **<255：** *len* = <8k、data = valid、RET = 1|  
-|`NTEXT`|**NULL：** *len* = IG、data = IG、RET = 0<br /><br /> **ZERO：** *len* = IG、data = IG、RET = 0<br /><br /> **>=255：** *len* = IG、data = IG、RET = 0<br /><br /> 255： *len* = IG、data = IG、RET = 0 ** \< **|  
+|`NTEXT`|**NULL：** *len* = IG、data = IG、RET = 0<br /><br /> **ZERO：** *len* = IG、data = IG、RET = 0<br /><br /> **>=255：** *len* = IG、data = IG、RET = 0<br /><br /> ** \< 255：** *len* = IG、data = IG、RET = 0|  
 |RET = srv_paramset 的傳回值||  
 |IG = 值將會被略過||  
 |valid = 資料的任何有效指標||  

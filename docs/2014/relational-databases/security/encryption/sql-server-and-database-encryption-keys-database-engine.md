@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f846e74e0afd89c6bb10a4aa9a23a6420b6a613a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957122"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060239"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和資料庫加密金鑰 (Database Engine)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用加密金鑰來保護儲存於伺服器資料庫中之資料、認證和連接資訊的安全。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有兩種類型的金鑰： *「對稱」* (Symmetric) 與 *「非對稱」*(Asymmetric)。 對稱金鑰會使用相同的密碼為資料加密與解密。 非對稱金鑰會使用某個密碼來加密資料 (稱為「公開」** 金鑰)，並使用另一個密碼來解密資料 (稱為「私密」** 金鑰)。  

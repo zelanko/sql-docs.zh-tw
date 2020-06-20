@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef15fccda450ccb94264f73289b77fce74789acc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873613"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970478"
 ---
 # <a name="data-collector-security"></a>資料收集器安全性
   資料收集器會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式所實作之以角色為基礎的安全性模型。 這個模型可讓資料庫管理員在只具有執行該工作所需權限的安全性內容中執行各種資料收集器工作。 這個方法也可用於牽涉到內部資料表的作業，這些資料表只能使用預存程序或檢視來存取。 系統不會授與任何權限給內部資料表。 不過，系統會針對用來存取資料表之預存程序或檢視表的使用者檢查權限。  
@@ -48,13 +47,13 @@ ms.locfileid: "62873613"
   
  這些角色儲存在 msdb 資料庫中。 根據預設，沒有任何使用者隸屬於這些資料庫角色的成員。 您必須明確授與這些角色的使用者成員資格。  
   
- 身為系統管理員（） `sysadmin`固定伺服器角色成員的使用者， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]擁有 Agent 物件和資料收集器視圖的完整存取權。 不過，您必須將他們明確加入至資料收集器角色。  
+ 身為系統管理員（ `sysadmin` ）固定伺服器角色成員的使用者，擁有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 物件和資料收集器視圖的完整存取權。 不過，您必須將他們明確加入至資料收集器角色。  
   
 > [!IMPORTANT]  
 >  db_ssisadmin 角色和 dc_admin 角色的成員可以將其權限提高為系統管理員 (sysadmin)。 之所以能夠進行此權限提高，是因為這些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，而且 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可藉由使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 sysadmin 安全性內容由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行。 若要在執行維護計畫、資料收集組和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時預防此權限提高，請將執行封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業設為使用有限權限的 Proxy 帳戶，或是只將系統管理員 (sysadmin) 成員加入 db_ssisadmin 和 dc_admin 角色。  
   
 ### <a name="dc_admin-role"></a>dc_admin 角色  
- 指派給`dc_admin`角色的使用者對於伺服器實例上的資料收集器設定具有完整的系統管理員存取權（建立、讀取、更新和刪除）。 這個角色的成員可以執行以下作業：  
+ 指派給角色的使用者對於 `dc_admin` 伺服器實例上的資料收集器設定具有完整的系統管理員存取權（建立、讀取、更新和刪除）。 這個角色的成員可以執行以下作業：  
   
 -   設定收集器層級的屬性。  
   
@@ -69,9 +68,9 @@ ms.locfileid: "62873613"
 -   **SQLAgentUserRole**。 這個角色是建立排程及執行作業所需的角色。  
   
     > [!NOTE]  
-    >  針對資料收集器所建立的 proxy 必須授`dc_admin`與的存取權，才能建立它們，並在任何需要 proxy 的作業步驟中使用它們。  
+    >  針對資料收集器所建立的 proxy 必須授與的存取權， `dc_admin` 才能建立它們，並在任何需要 proxy 的作業步驟中使用它們。  
   
--   **dc_operator**。 的`dc_admin`成員會繼承指定給**dc_operator**的許可權。  
+-   **dc_operator**。 的成員會 `dc_admin` 繼承指定給**dc_operator**的許可權。  
   
 ### <a name="dc_operator-role"></a>dc_operator 角色  
  **dc_operator** 角色的成員具有讀取和更新的存取權。 這個角色支援與執行和設定收集組有關的作業工作。 這個角色的成員可以執行以下作業：  
@@ -124,7 +123,7 @@ ms.locfileid: "62873613"
   
  這些角色儲存在 msdb 資料庫中。 根據預設，沒有任何使用者隸屬於這些資料庫角色的成員。 您必須明確授與這些角色的使用者成員資格。  
   
- 身為系統管理員（） `sysadmin`固定伺服器角色成員的使用者具有資料收集器視圖的完整存取權。 不過，您必須將他們明確加入至資料庫角色，才能執行其他作業。  
+ 身為系統管理員（ `sysadmin` ）固定伺服器角色成員的使用者具有資料收集器視圖的完整存取權。 不過，您必須將他們明確加入至資料庫角色，才能執行其他作業。  
   
 ### <a name="mdw_admin-role"></a>mdw_admin 角色  
  **mdw_admin** 角色的成員對於管理資料倉儲具有讀取、寫入、更新和刪除的存取權。  
@@ -134,7 +133,7 @@ ms.locfileid: "62873613"
 -   在需要時變更管理資料倉儲結構描述 (例如，在安裝新的集合類型時加入新的資料表)。  
   
     > [!NOTE]  
-    >  當架構變更時，使用者也必須是`dc_admin`角色的成員，才能安裝新的收集器型別，因為這個動作需要在 msdb 中更新資料收集器設定的許可權。  
+    >  當架構變更時，使用者也必須是角色的成員， `dc_admin` 才能安裝新的收集器型別，因為這個動作需要在 msdb 中更新資料收集器設定的許可權。  
   
 -   在管理資料倉儲上執行維護作業，例如封存或清除。  
   

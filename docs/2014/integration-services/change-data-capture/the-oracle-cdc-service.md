@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50ee8e81623fb4358cc9768d79a1f8b559a24685
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771074"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922259"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC 服務
   Oracle CDC 服務是執行 xdbcdcsvc.exe 程式的一種 Windows 服務。 Oracle CDC 服務可設定為在相同電腦上執行多個 Windows 服務，每一個服務都有不同的 Windows 服務名稱。 在單一電腦上建立多個 Oracle CDC Windows 服務通常是為了在服務之間達成更好的分隔效果，或是在每一個服務需要搭配不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體使用時。  
   
- Oracle CDC 服務是使用 Oracle CDC 服務組態主控台所建立，或是透過 xdbcdcsvc.exe 程式所內建的命令列介面所定義。 在這兩種情況下，每個建立的 Oracle CDC 服務[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都會與單一實例相關聯（可能是使用**AlwaysOn**設定進行叢集或鏡像處理），而且連接資訊（連接字串和存取認證）是服務設定的一部分。  
+ Oracle CDC 服務是使用 Oracle CDC 服務組態主控台所建立，或是透過 xdbcdcsvc.exe 程式所內建的命令列介面所定義。 在這兩種情況下，每個建立的 Oracle CDC 服務都會與單一實例相關聯 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （可能是使用**AlwaysOn**設定進行叢集或鏡像處理），而且連接資訊（連接字串和存取認證）是服務設定的一部分。  
   
  當啟動 Oracle CDC 服務時，它會嘗試連接到相關聯的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體、取得需要處理的 Oracle CDC 執行個體清單，然後執行初始環境驗證。 服務啟動期間的錯誤和任何啟動/停止資訊一定會寫入 Windows 應用程式事件記錄檔。 當建立與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連接時，所有錯誤和資訊訊息都會寫入 **執行個體之 MSXDBCDC 資料庫的** dbo.xdbcdc_trace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。 啟動期間所做的其中一項檢查就是確認目前沒有同名的其他 Oracle CDC 服務正在執行。 如果目前正從另一部電腦連接同名的服務，則 Oracle CDC 服務會進入等待迴圈、等候其他服務中斷連接，然後再繼續處理 Oracle CDC 工作。  
   

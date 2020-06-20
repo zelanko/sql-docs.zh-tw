@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a287950b-086f-4b6d-a2d8-4d3973bd1b21
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f3dee294e84ebe0fa8577630886ee00255e928ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f77b7a92fe226e349a03ffba03cfe8d67c280e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63055698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059872"
 ---
 # <a name="setenable-method-servernetworkprotocol-class"></a>SetEnable 方法 (ServerNetworkProtocol 類別)
   啟用伺服器網路通訊協定。  
@@ -38,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
- 代表實例所使用之[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]網路通訊協定的[ServerNetworkProtocol 類別](servernetworkprotocol-class.md)物件。  
+ *object*  
+ 代表實例所使用之網路通訊協定的[ServerNetworkProtocol 類別](servernetworkprotocol-class.md)物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  

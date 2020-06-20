@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6ec24cd980cbfc71c5b9ba834f01bd17eb422400
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4597c528f10e5461a7f11916fb173f16ff87b354
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768864"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969198"
 ---
 # <a name="-multiply-ssis-expression"></a>* (乘) (SSIS 運算式)
   將兩個數值運算式相乘。  

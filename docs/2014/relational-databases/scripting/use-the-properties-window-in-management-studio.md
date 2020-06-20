@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9c5b4f6b7c54b7bde76d61dc55b1b10f805dd87
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 208aadd4f082e92987a5f7dfce4668a7b1cf51c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997808"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>在 Management Studio 中使用屬性視窗
   [屬性] 視窗描述 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的項目狀態，如連接或執行程序表運算子，以及資料庫物件的詳細資訊，如資料表、檢視表及設計師。  
@@ -28,7 +27,7 @@ ms.locfileid: "82718188"
   
 ### <a name="to-view-properties-using-the-properties-window"></a>利用 [屬性] 視窗檢視屬性  
   
-1.  如果看不到 [屬性] 視窗，請按一下 [檢視]  功能表中的 [屬性視窗]  ，或按 F4。  
+1.  如果看不到 [屬性] 視窗，請按一下 [檢視] 功能表中的 [屬性視窗]，或按 F4。  
   
 2.  將焦點設在您要檢視的物件上。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "82718188"
   
 ### <a name="to-view-connection-properties-of-a-query-window"></a>檢視查詢視窗的連接屬性  
   
-1.  如果看不到 [屬性] 視窗，請按一下 [檢視]  功能表中的 [屬性視窗]  ，或按 F4。  
+1.  如果看不到 [屬性] 視窗，請按一下 [檢視] 功能表中的 [屬性視窗]，或按 F4。  
   
 2.  在 [屬性] 視窗中，您可以見到所有連接屬性。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "82718188"
   
 2.  在 [SQL 查詢編輯器] 中，輸入和執行查詢。  
   
-3.  如果看不到 [屬性] 視窗，請按一下 [檢視]  功能表中的 [屬性視窗]  ，或按 F4。  
+3.  如果看不到 [屬性] 視窗，請按一下 [檢視] 功能表中的 [屬性視窗]，或按 F4。  
   
 4.  在 [SQL 查詢編輯器] 的 [執行計畫]  索引標籤中，按一下運算子的圖示來檢視 [屬性] 視窗中之運算子的相關資訊。  
   

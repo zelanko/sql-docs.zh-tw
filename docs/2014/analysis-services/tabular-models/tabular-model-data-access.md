@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49ae9c1a0e9eac4c5fd8a47106a2d72dc880a856
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525469"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938579"
 ---
 # <a name="tabular-model-data-access"></a>表格式模型資料存取
   Analysis Services 中的表格式模型資料庫可由您用來擷取多維度模型中之資料或中繼資料的大部分相同用戶端、介面和語言所存取。 如需詳細資訊，請參閱[多維度模型資料存取 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
