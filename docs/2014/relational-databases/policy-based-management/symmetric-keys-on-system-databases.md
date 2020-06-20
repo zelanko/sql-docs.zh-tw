@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 28e25ae3-d3dc-45ec-b316-f219512a1a47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ac7d41bc693813f471caff7e746a44184146962
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81c657ededc694ed87df99e0739ff74b1eb9e39b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63252660"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066601"
 ---
 # <a name="symmetric-keys-on-system-databases"></a>系統資料庫上的對稱金鑰
   此規則會檢查 master、msdb、model 和 tempdb 資料庫中是否有使用者建立的對稱金鑰。  

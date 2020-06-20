@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d50863e7-50d9-4ab8-aabb-fd68e2d132a1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 478dea9095fe22a437aecf138c22374b5a70885b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d359084d1db778029046f925c630b001bb820f6b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054097"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971088"
 ---
 # <a name="set-up-the-database-and-website-for-master-data-services"></a>設定 Master Data Services 的資料庫與網站
   使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 設定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 的資料庫與網站  

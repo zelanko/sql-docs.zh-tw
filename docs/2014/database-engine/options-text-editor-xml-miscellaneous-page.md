@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 51ad78c95881daacebcb3f2b7999a299cd4ebd7d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 2e91eb8e0704b7c07fac285986a0827e4d79b160
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000588"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929591"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>選項 (文字編輯器 - XML - 其他頁面)
 
@@ -44,4 +43,4 @@ ms.locfileid: "83000588"
   
 ## <a name="caching"></a>Caching  
  **結構描述**  
- 指定結構描述快取的位置。 瀏覽按鈕 (...) 會在新視窗中開啟目前的結構描述快取位置。 預設位置是* \< Management Studio 安裝目錄>* \xml\schemas。  
+ 指定結構描述快取的位置。 瀏覽按鈕 (...) 會在新視窗中開啟目前的結構描述快取位置。 預設位置為 *\<Management Studio install directory>* \xml\schemas。  

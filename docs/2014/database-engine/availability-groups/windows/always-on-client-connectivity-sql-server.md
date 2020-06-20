@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8a1b81d60ef691e02d4b69cc71fa961bbaddf18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 446a0f709c35028efd5a39b347919b1e0b40b4b4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793428"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937176"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>AlwaysOn 用戶端連接性 (SQL Server)
   本主題描述 AlwaysOn 可用性群組之用戶端連接的考量，包括用戶端組態和設定的必要條件、限制和建議。  
@@ -41,9 +40,9 @@ ms.locfileid: "67793428"
 |具有連接修補程式的 .NET Framework 3.5 SP1 ADO.NET**<sup>**</sup>** |是|是|是|是|是|  
 |Microsoft JDBC Driver 4.0 for SQL Server|是|是|是|是|是|  
   
- **<sup>*</sup>** 下載 ADO .NET 的連線修補程式，.NET Framework 4.0： [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211)。  
+ **<sup>*</sup>** 下載 ADO .NET 的連線修補程式，.NET Framework 4.0： [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211) 。  
   
- **<sup>**</sup>* * 下載 ADO.NET 與 .NET Framework 3.5 SP1 的連線修補程式： [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)。  
+ **<sup>**</sup>* * 下載 ADO.NET 與 .NET Framework 3.5 SP1 的連線修補程式： [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347) 。  
   
 > [!IMPORTANT]  
 >  若要連接到可用性群組接聽程式，用戶端必須使用 TCP 連接字串。  
@@ -60,7 +59,7 @@ ms.locfileid: "67793428"
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server 的必要條件、限制和建議&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [可用性群組接聽程式、用戶端連接和應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
  [適用于高可用性和嚴重損壞修復的 Microsoft SQL Server AlwaysOn 解決方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)   
  [SQL Server AlwaysOn 小組 Blog：官方 SQL Server AlwaysOn 小組的 Blog](https://blogs.msdn.com/b/sqlalwayson/)   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f43c6f25d7360b558a8bbfb9887b6bd2d6362106
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060136"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917215"
 ---
 # <a name="create-parameters"></a>Create Parameters
   您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 來建立專案參數和封裝參數。 下列程序會提供建立封裝/專案參數的逐步指示。  

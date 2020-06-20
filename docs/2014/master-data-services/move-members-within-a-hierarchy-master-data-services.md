@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 049c9a15-89c1-478c-8438-028fffc9e187
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 58b39d2dc660fd51d1ba21308ff056874a239731
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ac35aa87c25e11b81a536297b893481c667363d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054084"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971148"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>在階層中移動成員 (Master Data Services)
   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中，移動階層中的成員來變更成員的位置或父系指派。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  

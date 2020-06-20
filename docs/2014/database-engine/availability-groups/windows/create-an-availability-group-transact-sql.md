@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57a494af168a8f5572bafe93f8fb47b22a954a19
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228785"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936899"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>建立可用性群組 (Transact-SQL)
   此主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上建立和設定已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
@@ -60,7 +59,7 @@ ms.locfileid: "75228785"
   
 1.  連接到裝載主要複本的伺服器執行個體。  
   
-2.  使用[create availability group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]語句建立可用性群組。  
+2.  使用[CREATE AVAILABILITY group](/sql/t-sql/statements/create-availability-group-transact-sql)語句建立可用性群組 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 。  
   
 3.  將新的次要複本加入可用性群組。 如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "75228785"
         GO  
         ```  
   
-    2.  下列程式碼範例會建立 *MyDb1* 與 *MyDb2*的完整資料庫備份。 此程式碼範例會使用\\ \\*虛構的備份共用（檔*\\伺服器*SQLbackups*）。  
+    2.  下列程式碼範例會建立 *MyDb1* 與 *MyDb2*的完整資料庫備份。 此程式碼範例會使用虛構的備份共用（檔案伺服器 \\ \\ *FILESERVER* \\ *SQLbackups*）。  
   
         ```sql
         -- Backup sample databases:  

@@ -1,5 +1,6 @@
 ---
 title: 高可用性、復原
+description: 瞭解 Always On 可用性群組的 SQL Server Native Client 支援，這是在 SQL Server 2012 中新增的。
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f940302db497dd02b3fc5ef89056aef29a6b64a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fb3d64842c1204706b9bb89f6f1a99bfb8ae6a9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388436"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949322"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>高可用性/災害復原的 SQL Server Native Client 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "81388436"
   
 -   連接到設定超過 64 個 IP 位址的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體會導致連接失敗。  
   
--   使用**MultiSubnetFailover**連接屬性之應用程式的行為不會根據驗證類型而受到影響： [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]驗證、Kerberos 驗證或 Windows 驗證。  
+-   使用**MultiSubnetFailover**連接屬性之應用程式的行為不會根據驗證類型而受到影響： [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證、Kerberos 驗證或 Windows 驗證。  
   
 -   您可以增加 **loginTimeout** 的值，以容納容錯移轉時間並減少應用程式連接重試次數。  
   

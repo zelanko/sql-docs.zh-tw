@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f7287091ddd64ef9df1c63706a2f562feed4a5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489099"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999668"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>工作 5：從 Excel 建立定義域屬性
   在這項工作中，您會將**供應商**實體的**State**屬性轉換為**網域屬性**。 在您將 State 屬性設定為網域型，並將其發行至 MDS 之後，將會在 MDS 伺服器上建立名為**State**的新實體，其中包含資料行中的所有值，而**供應商**實體的**State**屬性將會填入**State**實體中的值。 現在，**供應商**模型應該有兩個實體 **：供應商和****狀態**，其中**供應商**實體的**State**屬性是相依于**State**實體的網域屬性。  
   
-1.  切換至已**清理且符合供應商 .xlsx**的**Excel**視窗。  
+1.  切換至具有**清理和相符 Suppliers.xlsx**開啟的**Excel**視窗。  
   
 2.  按一下**功能**區上的 [重新整理] 按鈕，以從 MDS 取得最新的更新。 如果您已執行選用的工作**4**，您應該會看到這兩個記錄。  
   

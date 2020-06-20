@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49afe868a509f84160fc1ad154135e8e67f6900a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797958"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936389"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>暫止可用性資料庫 (SQL Server)
   您可以使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]的 PowerShell，暫停 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的可用性資料庫。 請注意，暫停命令必須在裝載要暫停或回復之資料庫的伺服器執行個體上發出。  
@@ -31,7 +30,7 @@ ms.locfileid: "72797958"
   
 |暫停的資料庫|暫停命令的效果|  
 |------------------------|-------------------------------|  
-|次要資料庫|只有本機次要資料庫會暫停，而且其同步處理狀態會變成 NOT SYNCHRONIZING。 其他次要資料庫不受影響。 暫停的資料庫會停止接收和套用資料 (記錄檔記錄)，並且開始落後於主要資料庫。 可讀取次要複本上的現有連接會保持可用狀態。 在資料移動繼續執行之前，不允許可讀取次要複本上已暫停之資料庫的新連接。<br /><br /> 主要資料庫仍然可用。 如果您暫停每個對應的次要資料庫，則主要資料庫會公開執行。<br /><br /> ** \* \*重要\*事項**當次要資料庫暫停時，對應主資料庫的傳送佇列將會累積未傳送的交易記錄檔記錄。 次要複本的連接會傳回在資料移動暫停時可用的資料。|  
+|次要資料庫|只有本機次要資料庫會暫停，而且其同步處理狀態會變成 NOT SYNCHRONIZING。 其他次要資料庫不受影響。 暫停的資料庫會停止接收和套用資料 (記錄檔記錄)，並且開始落後於主要資料庫。 可讀取次要複本上的現有連接會保持可用狀態。 在資料移動繼續執行之前，不允許可讀取次要複本上已暫停之資料庫的新連接。<br /><br /> 主要資料庫仍然可用。 如果您暫停每個對應的次要資料庫，則主要資料庫會公開執行。<br /><br /> ** \* \* 重要 \* 事項 \* **次要資料庫暫停時，對應主資料庫的傳送佇列將會累積未傳送的交易記錄檔記錄。 次要複本的連接會傳回在資料移動暫停時可用的資料。|  
 |主要資料庫|主要資料庫會停止將資料移動到每個連接的次要資料庫。 主要資料庫會繼續以公開模式執行。 主要資料庫仍然可供用戶端使用，而可讀取次要資料庫上的現有連接仍然可以使用，並且可以建立新連接。|  
   
 > [!NOTE]  
@@ -64,7 +63,7 @@ ms.locfileid: "72797958"
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  一旦裝載目標資料庫的複本接受 SUSPEND 命令之後，就會將其傳回，但暫停資料庫實際上是以非同步方式進行。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
  您必須連接到裝載要暫停之資料庫的伺服器執行個體。 若要暫停主要資料庫和對應的次要資料庫，請連接到裝載主要複本的伺服器執行個體。 若要暫停次要資料庫，同時保留主要資料庫可用狀態，請連接到次要複本。  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
@@ -137,7 +136,7 @@ ms.locfileid: "72797958"
   
  **若要對寫滿交易記錄進行疑難排解**  
   
--   [針對完整交易記錄 &#40;SQL Server 錯誤 9002&#41; 進行疑難排解](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   

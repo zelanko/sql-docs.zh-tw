@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0d153dce-6661-4c99-b1db-2bd3b5038b4f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5e889c4da9e20a547f5a512f4aab1ee823bde5f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f48fddf99a39db36a872d892c768b3df287a521
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056174"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964105"
 ---
 # <a name="script-task-editor-general-page"></a>指令碼工作編輯器 (一般頁面)
   使用 **[指令碼工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述指令碼工作。  
@@ -33,7 +32,7 @@ ms.locfileid: "66056174"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入指令碼工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

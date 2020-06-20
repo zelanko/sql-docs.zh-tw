@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02cd05baa6da57de6f90099d788d582821492d55
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815723"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937149"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>使用 [將資料庫加入至可用性群組] 精靈 (SQL Server Management Studio)
   使用 [將資料庫加入至可用性群組精靈] 可將一個或多個資料庫加入現有的 AlwaysOn 可用性群組。  
@@ -87,7 +86,7 @@ ms.locfileid: "62815723"
   
 5.  在 **[選取初始資料同步處理]** 頁面上，選擇您要如何建立新的次要資料庫並將它聯結至可用性群組。 選擇下列其中一個選項：  
   
-    -   **寫**  
+    -   **完整**  
   
          只有在您的環境符合自動啟動初始資料同步處理的需求時，才選取此選項 (如需詳細資訊，請參閱本主題稍早的 [必要條件、限制和建議](#Prerequisites))。  
   

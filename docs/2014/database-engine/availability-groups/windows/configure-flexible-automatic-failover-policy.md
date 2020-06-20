@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 452d3ac4dae2164fa0fa172528ae398ea91fed31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c938624a3ed39fe2d41f21a21af5231aa76a8c17
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797748"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936976"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>設定彈性容錯移轉原則以控制自動容錯移轉的條件 (AlwaysOn 可用性群組)
   本主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 來設定 AlwaysOn 可用性群組的彈性容錯移轉原則。 彈性容錯移轉原則可讓您更精確地控制造成可用性群組之自動容錯移轉的狀況。 透過變更觸發自動容錯移轉的失敗狀況和健全狀況檢查的頻率，您可以提高或降低自動容錯移轉的可能性，以便支援高可用性的 SLA。  
@@ -37,7 +36,7 @@ ms.locfileid: "72797748"
   
 -   如果可用性群組超過其 WSFC 失敗臨界值，WSFC 叢集將不會嘗試進行可用性群組的自動容錯移轉。 此外，可用性群組的 WSFC 資源群組會維持失敗狀態，直到叢集管理員手動讓失敗的資源群組上線，或者資料庫管理員執行可用性群組的手動容錯移轉為止。 *「WSFC 失敗臨界值」* (WSFC Failure Threshold) 定義為可用性群組在給定的時間週期內支援的失敗次數上限。 預設的時間週期為六小時，而且在這段時間內失敗次數上限的預設值為 *n*-1，其中 *n* 是 WSFC 節點的數目。 若要變更給定可用性群組得失敗臨界值，請使用 WSFC 容錯移轉管理員主控台。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
   
 -   您必須連接到裝載主要複本的伺服器執行個體。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "72797748"
   
 1.  連接到裝載主要複本的伺服器執行個體。  
   
-2.  若為新的可用性群組，請使用[CREATE availability group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]語句。 如果您要修改現有的可用性群組，請使用[ALTER availability group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]語句。  
+2.  若為新的可用性群組，請使用[CREATE AVAILABILITY group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 語句。 如果您要修改現有的可用性群組，請使用[ALTER AVAILABILITY group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 語句。  
   
     -   若要設定容錯移轉狀況層級，請使用 FAILURE_CONDITION_LEVEL = *n* 選項，其中 *n* 是介於 1 到 5 之間的整數。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "72797748"
   
 2.  將可用性複本加入至可用性群組時，請使用 `New-SqlAvailabilityGroup` 指令程式。 修改現有的可用性複本時，請使用 `Set-SqlAvailabilityGroup` 指令程式。  
   
-    -   若要設定容錯移轉狀況層級， `FailureConditionLevel`請使用*level*參數，其中*level*是下列其中一個值：  
+    -   若要設定容錯移轉狀況層級，請使用 `FailureConditionLevel` *level*參數，其中*level*是下列其中一個值：  
   
         |值|層級|起始自動容錯移轉的狀況|  
         |-----------|-----------|-------------------------------------------|  
@@ -113,7 +112,7 @@ ms.locfileid: "72797748"
          -FailureConditionLevel OnServerDown  
         ```  
   
-    -   若要設定健全狀況檢查超時閾值，請`HealthCheckTimeout`使用*n*參數，其中*n*是介於15000毫秒（15秒）到4294967295毫秒之間的整數。 預設值為 30000 毫秒 (30 秒)。  
+    -   若要設定健全狀況檢查超時閾值，請使用 `HealthCheckTimeout` *n*參數，其中*n*是介於15000毫秒（15秒）到4294967295毫秒之間的整數。 預設值為 30000 毫秒 (30 秒)。  
   
          例如，下列命令會將現有可用性群組 `AG1`的健全狀況檢查逾時臨界值變更為 120,000 毫秒 (兩分鐘)。  
   

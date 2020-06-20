@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f6f14d93e840b9a206e0b5261eb9efade0f0e28
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060559"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921504"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>設定 OLE DB 命令轉換
   若要加入及設定「OLE DB 命令」轉換，封裝必須至少已包含一個「資料流程」工作和一個來源 (例如「一般檔案」來源或 OLE DB 來源)。 此轉換通常用於執行參數化查詢。  
@@ -67,7 +66,7 @@ ms.locfileid: "66060559"
   
     -   按一下 **[資料行對應]** ，然後將 **[可用的輸入資料行]** 清單中的資料行對應至 **[可用的目的地資料行]** 清單中的參數。  
   
-14. 按一下 [確定]  。  
+14. 按一下 [確定]。  
   
 15. 若要儲存更新的封裝，請按一下 **[檔案]** 功能表上的 **[儲存]** 。  
   

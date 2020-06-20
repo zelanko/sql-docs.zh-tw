@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2ad4a7791f7bda19c7bec1887ca45d92943c04e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 056e541f6e1d297e086072dd01201fb670529056
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827967"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916378"
 ---
 # <a name="create-infopackage"></a>建立 InfoPackage
   使用 [建立 InfoPackage]  對話方塊可以在 SAP Netweaver BW 系統中建立新的 InfoPackage。  
   
- 您可以從 [SAP BW 目的地編輯器]  的 [連線管理員]  頁面開啟 [建立 InfoPackage]  對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](sap-bw-destination.md)。  
+ 您可以從 [SAP BW 目的地編輯器] 的 [連線管理員] 頁面開啟 [建立 InfoPackage] 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](sap-bw-destination.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  

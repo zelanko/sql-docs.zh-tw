@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97a0690775b7b6d95a257bc5f5ed0a6483e1c24a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 850c8f0f54339594b19debd48ebf4ac7021873d3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833860"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921226"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 連接管理員
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員可讓封裝使用 .NET 提供者來存取資料來源。 此連線管理員通常用於存取資料來源（例如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]），以及透過使用 c # 這類語言以 managed 程式碼撰寫之自訂工作中的 OLE DB 和 XML 公開的資料來源。  
+  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員可讓封裝使用 .NET 提供者來存取資料來源。 此連線管理員通常用於存取資料來源（例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ），以及透過使用 c # 這類語言以 managed 程式碼撰寫之自訂工作中的 OLE DB 和 XML 公開的資料來源。  
   
- 當您[!INCLUDE[vstecado](../../includes/vstecado-md.md)]將連線管理員加入封裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]會建立在執行時間解析為[!INCLUDE[vstecado](../../includes/vstecado-md.md)]連接的連線管理員、設定連線管理員屬性，並將連線管理員加入封裝上`Connections`的集合。  
+ 當您將 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員加入封裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行時間解析為連接的連線管理員 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 、設定連線管理員屬性，並將連線管理員加入 `Connections` 封裝上的集合。  
   
  連接管理員的 `ConnectionManagerType` 屬性會設為 `ADO.NET`。 系統會限定 `ConnectionManagerType` 的值，以包含連接管理員使用之 .NET 提供者的名稱。  
   

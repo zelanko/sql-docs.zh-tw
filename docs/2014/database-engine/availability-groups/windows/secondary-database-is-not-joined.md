@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ca86d30647ea0dd2841248a512725aabb5617b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c61f2466747141b3eae12dd0de457364f15ae7a0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788423"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936489"
 ---
 # <a name="secondary-database-is-not-joined"></a>次要資料庫未加入
     

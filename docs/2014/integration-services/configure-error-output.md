@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5f8da390-fab5-44f8-b268-d8fa313ce4b9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f61748b3a1a691a943deec67fcbcfba4ece682b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921569"
 ---
 # <a name="configure-error-output"></a>設定錯誤輸出
   使用 [設定錯誤輸出]**** 對話方塊，即可為支援錯誤輸出的資料流程轉換設定錯誤處理選項。  
@@ -41,7 +40,7 @@ ms.locfileid: "66060640"
   
  **相關主題** [處理資料中的錯誤](data-flow/error-handling-in-data.md)  
   
- **描述**  
+ **說明**  
  檢視作業的描述。  
   
  **將這個值設定到選取的資料格**  

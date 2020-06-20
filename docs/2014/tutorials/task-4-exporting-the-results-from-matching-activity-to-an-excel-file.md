@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4ed1d29af328a162eafadb1ce7a160c262bdcba3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd85a523804232deff14f2e1da5485229f943dd2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999661"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>工作 4：將比對活動的結果匯出到 Excel 檔案
   在這項工作中，您會將比對活動的結果匯出到 Excel 檔案。
@@ -26,7 +25,7 @@ ms.locfileid: "78177246"
 
 3.  按一下 **[流覽]** ，並流覽至您要儲存輸出檔案的資料夾。
 
-4.  輸入**清理並比對供應商 .xls**作為名稱，然後按一下 [**開啟**]。
+4.  針對名稱輸入**清理和相符的 Suppliers.xls** ，然後按一下 [**開啟**]。
 
 5.  確認已選取 [**生存] 規則**的 [**樞紐分析表記錄**]。 當您選取此選項時，便會針對叢集的輸出挑選每個叢集的樞紐記錄。 存活規則的其他選項包括：
 
@@ -44,7 +43,7 @@ ms.locfileid: "78177246"
 
 8.  按一下 **[完成]** 完成比對活動。
 
-9. 開啟**清理並比對供應商 .xlsx**檔案，並確認您看不到任何重複專案（[已供應商）]。
+9. 開啟**清理並**比對 Suppliers.xlsx檔案，並確認您看不到任何重複專案（已「可」）。
 
  現在，您的供應商資料已經清理和比對，以移除重複項。
 

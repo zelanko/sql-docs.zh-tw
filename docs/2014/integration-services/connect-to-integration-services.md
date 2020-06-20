@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2effee7d-16bc-46e1-913c-28470faea345
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f355527002ed6d3637a3d1d895eb776c620c971d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77c9d58a08e234840c4ee2a7afe2ae5e22e8ae0f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060373"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921235"
 ---
 # <a name="connect-to-integration-services"></a>連接到 Integration Services
   連接至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務之前，管理員必須授與您該服務的存取權。 如需詳細資訊，請參閱 [Grant Permissions to Integration Services Service](../../2014/integration-services/grant-permissions-to-integration-services-service.md)。  

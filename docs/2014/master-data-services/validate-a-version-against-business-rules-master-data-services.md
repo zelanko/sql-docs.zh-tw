@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e33526df02cff22adbd56bfbfc2f25cef1c1c052
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6947a01553ebc9bc99e1fef86cf1a6e46c13289
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482314"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970962"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>根據商務規則驗證版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，驗證版本，以便將商務規則套用到模型版本中的所有成員。  
@@ -30,7 +29,7 @@ ms.locfileid: "65482314"
 > [!NOTE]  
 >  所有成員都必須通過驗證之後，才能認可版本。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  

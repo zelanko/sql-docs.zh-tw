@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6cc5cf457b453cf2da6010af455b4f1d778f8be0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691711"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066719"
 ---
 # <a name="results-detailed-view-dialog-box"></a>結果詳細檢視對話方塊
   當您使用 **[評估原則]** 對話方塊來執行原則並按一下 **[評估]** 之後，此對話方塊會顯示原則評估的結果。 此對話方塊是唯讀的，而且可幫助您了解哪一個部分的屬性運算式可能失敗。  

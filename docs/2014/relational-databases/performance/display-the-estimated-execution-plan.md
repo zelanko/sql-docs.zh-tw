@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 555ded0e34c0dc13ce794cc6f3119af7b2688910
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79c0972661d40eb9e359cf43f7a1f0b1b2ae4b0c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150877"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066856"
 ---
 # <a name="display-the-estimated-execution-plan"></a>顯示估計的執行計畫
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]產生圖形化的估計執行計畫。 產生估計執行計畫時，不會執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或批次。 不過，所產生的執行計畫會顯示若是真的執行查詢， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 最有可能使用的查詢執行計畫。  

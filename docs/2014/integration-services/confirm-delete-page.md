@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 091def94-6c9c-4afc-92dc-4c2f4c2cafa0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bd8d4122dca96d49fa3351375f545d32273646c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8342d4d76ebba1faf68936d41c9b41fea73bbfa7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060477"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921379"
 ---
 # <a name="confirm-delete-page"></a>確認刪除頁面
   使用 **[確認刪除]** 頁面可指出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是否會在您刪除某些元件時顯示確認訊息。  

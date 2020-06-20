@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8f8ca9ce77e151e761e2cbb1f9128a44784af8ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43dbe6d3a1a239f7a094189219de12953807bedb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890396"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921189"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 連接管理員
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員能使套件連線到執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的伺服器，或連線到提供 Cube 和維度資料存取權的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中開發封裝時，您只能連接到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]專案。 在執行階段，封裝會連接到您部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的伺服器和資料庫。  
@@ -29,7 +28,7 @@ ms.locfileid: "68890396"
  如需 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的詳細資訊，請參閱[多維度模型資料庫 &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-databases-ssas)。  
   
 ## <a name="configuration-of-the-analysis-services-connection-manager"></a>Analysis Services 連接管理員的組態  
- 當您[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]將連線管理員加入封裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]會建立在執行時間解析為[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]連接的連線管理員、設定連線管理員屬性，並將連線管理員加入封裝上`Connections`的集合。 連接管理員的 `ConnectionManagerType` 屬性會設為 `MSOLAP100`。  
+ 當您將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員加入封裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行時間解析為連接的連線管理員 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、設定連線管理員屬性，並將連線管理員加入 `Connections` 封裝上的集合。 連接管理員的 `ConnectionManagerType` 屬性會設為 `MSOLAP100`。  
   
  您可以利用下列方式設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員：  
   

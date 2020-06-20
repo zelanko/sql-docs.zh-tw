@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 977c96b625ecb62f9f02d19e71df57cd17d8660f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69ce04217f2913214bbdd9de631c1ac339a39ce7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478497"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970998"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>升級資料庫精靈 (Master Data Services 組態管理員)
   使用 [升級資料庫精靈]**** 升級 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。  

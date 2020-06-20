@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46777707354b1379d50b6379e21aabd02ffb5097
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812928"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936315"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>在停機時間和資料遺失最少的情況下升級及更新可用性群組伺服器
   當您將伺服器執行個體從 SQL Server 2012 更新或升級至某個 Service Pack 或較新的版本時，您可以透過執行輪流更新或升級，將可用性群組的停機時間減少至只有單一手動容錯移轉的時間。 如果要升級 SQL Server 版本，這稱為輪流升級；如果要以 Hotfix 或 Service Pack 更新目前的 SQL Server 版本，則稱為輪流更新。  
@@ -115,7 +114,7 @@ ms.locfileid: "62812928"
   
 |可用性群組|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1|Primary|||  
+|AG1|主要|||  
 |AG2||Primary||  
 |AG3|||Primary|  
   
@@ -139,7 +138,7 @@ ms.locfileid: "62812928"
   
 |可用性群組|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1||Primary||  
+|AG1||主要||  
 |AG2|Primary|||  
 |AG3|||Primary|  
   

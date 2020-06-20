@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ae18871fd21ebb6909a45f7f2905d2b28bfc92bc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bfd3c1d1c35f311f2542366dc802c9a13fe858a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82714780"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019271"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>使用格式檔案進行大量複製 (ODBC)
   此範例顯示如何利用格式檔案使用 ODBC bcp_init 函數。  

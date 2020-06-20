@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32b2ab48c3406c9820ca264a1cef236a041a5924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcc51e3fc8269ef0035e52b040ca38eef0f23e84
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814549"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936609"
 ---
 # <a name="remote-blob-store-rbs-and-alwayson-availability-groups-sql-server"></a>遠端 BLOB 存放區 (RBS) 及 AlwaysOn 可用性群組 (SQL Server)
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]可以為[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][遠端 blob 存放區（RBS）](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) blob 物件（blob）提供高可用性和嚴重損壞修復解決方案。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會透過將儲存在可用性資料庫中的任何 RBS 中繼資料和結構描述複寫到次要複本，予以保護。 這是 SharePoint 內容資料庫。 一般而言， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分開儲存此 RBS 中繼資料與 BLOB。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]可以為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [遠端 Blob 存放區（RBS）](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) blob 物件（blob）提供高可用性和嚴重損壞修復解決方案。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會透過將儲存在可用性資料庫中的任何 RBS 中繼資料和結構描述複寫到次要複本，予以保護。 這是 SharePoint 內容資料庫。 一般而言， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分開儲存此 RBS 中繼資料與 BLOB。  
   
  RBD BLOB 資料的保護取決於 BLOB 存放區位置，如下所示：  
   

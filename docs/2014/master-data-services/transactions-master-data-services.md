@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8eebb47569a4ccc96437a3e16379c794b83642dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9502a9c0c300e1e239c8837b79c99f4c3e7a7eff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478498"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971014"
 ---
 # <a name="transactions-master-data-services"></a>交易 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，每次對成員採取動作時，就會記錄交易。 交易可由所有使用者檢視，並由系統管理員反轉。 交易會顯示日期、時間、採取動作的使用者以及其他詳細資料。 使用者可以在交易中加入註解，指出交易發生的原因。  

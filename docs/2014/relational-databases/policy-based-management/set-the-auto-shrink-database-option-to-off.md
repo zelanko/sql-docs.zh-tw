@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 16403850-d745-4754-b84f-5f01aaecd24e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c81885e5a3aaec197b8963c2e868b6f65a0b0544
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42d79ed13a691c3d39a28e7ab35a740a9f613fac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691516"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066680"
 ---
 # <a name="set-the-auto_shrink-database-option-to-off"></a>將 AUTO_SHRINK 資料庫選項設定為 OFF
   這個規則會檢查 AUTO_SHRINK 資料庫選項是否設定為 OFF。 通常壓縮和展開資料庫可能會導致實體片段。  

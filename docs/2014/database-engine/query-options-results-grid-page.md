@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1d5696dcc7b82844fad52754f3c4457344eca793
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 17a331fff0a4405fb1c43210b9c7e43c2f457625
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000578"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929489"
 ---
 # <a name="query-options-results-grid-page"></a>查詢選項結果 (方格頁面)
   使用這個頁面即可指定選項，使查詢結果集以方格的格式顯示。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **在結果集裡包含查詢**  
  將查詢的文字當成結果集的一部分傳回。  
   

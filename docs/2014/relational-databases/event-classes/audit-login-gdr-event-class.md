@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6788a2bdec8007b317e4f737ece44d8bd87dd3d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e62b9a0a93688f9f44a1ec86f879da1d072dd57
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012151"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053204"
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR 事件類別
   只要加入或移除 **Windows 登入權限，就會發生** Audit Login GDR [!INCLUDE[msCoName](../../includes/msconame-md.md)] 事件類別。 此事件類別供 **sp_grantlogin**、 **sp_revokelogin**和 **sp_denylogin** 預存程序使用。  

@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a96a7a7fcf6e4642ee9bd2d577e35dcbfb705fe4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150710"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066807"
 ---
 # <a name="monitor-and-tune-for-performance"></a>效能的監視與微調
   監視資料庫的目標在於評估伺服器的執行效能。 有效的監視包括定期建立目前效能的快照集以隔離造成問題的處理序，以及持續蒐集資料來追蹤效能趨勢。  
@@ -41,7 +40,7 @@ ms.locfileid: "63150710"
  持續進行的資料庫效能評估可協助您將回應時間降到最低並產生最大產能，以達最佳效能。 有效率的網路流量、磁碟 I/O 與 CPU 使用量是達到最佳效能的關鍵。 您必須徹底分析應用程式需求、了解資料的邏輯與實體結構、評估資料庫使用，以及商議使用衝突的折衷方案，如線上交易處理 (Online Transaction Processing，OLTP) 之於決策支援。  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>監視和微調資料庫效能的優點  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Microsoft Windows 作業系統提供公用程式，可讓您檢視資料庫的目前狀況，並隨著狀況變更來追蹤效能。 有各種工具和技巧可以用來監視[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 了解如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可協助您：  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Microsoft Windows 作業系統提供公用程式，可讓您檢視資料庫的目前狀況，並隨著狀況變更來追蹤效能。 有各種工具和技巧可以用來監視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 了解如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可協助您：  
   
 -   判斷是否可以改善效能。 例如，監視常用查詢的回應時間，您可以判斷是否需要變更資料表的查詢或索引。  
   

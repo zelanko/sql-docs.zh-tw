@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5fa4a428c1d1f290ceadee19d21f3b8f0b8bd942
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46d1f79079efd5b4816359cb97a14642f309cfbb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833840"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920977"
 ---
 # <a name="data-sources"></a>資料來源
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包含您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件中使用的設計階段物件：資料來源。  
@@ -36,7 +35,7 @@ ms.locfileid: "62833840"
 -   資料來源提供資料來源物件與其封裝參考之間的同步處理。 如果資料來源與參考資料來源的封裝位於同一專案，則資料來源參考的連接字串屬性便會在資料來源變更時自動更新。  
   
 ## <a name="reference-data-sources"></a>參考資料來源  
- 如果要將資料來源物件加入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，請以滑鼠右鍵按一下**方案總管**中的 [資料來源]  資料夾，然後按一下 [新增資料來源]  。 項目會隨即加入至 [資料來源]  資料夾。 如果您要使用在其他專案中建立的資料來源物件，您必須先將物件加入專案。  
+ 如果要將資料來源物件加入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，請以滑鼠右鍵按一下**方案總管**中的 [資料來源] 資料夾，然後按一下 [新增資料來源]。 項目會隨即加入至 [資料來源]  資料夾。 如果您要使用在其他專案中建立的資料來源物件，您必須先將物件加入專案。  
   
  如果您要在封裝中使用資料來源物件，可以將參考該資料來源物件的連接管理員新增至封裝中。 在建立封裝控制流程及資料流程之前，或作為建構控制流程或資料流程程序中的一個步驟，將它新增至封裝中。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 733827ecace64ef86b54831f63fd8c2889203919
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2846918b515bba16d12d48cd7058cf25863bf569
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478956"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971178"
 ---
 # <a name="model-permissions-master-data-services"></a>模型權限 (Master Data Services)
   模型權限適用於所有實體、衍生階層、明確階層及存在於模型內的集合。 可以針對任何個別的物件來覆寫指派給模型的權限。  
@@ -29,7 +28,7 @@ ms.locfileid: "65478956"
 |權限|描述|  
 |----------------|-----------------|  
 |**唯讀**|在**Explorer**中，會顯示模型，但是使用者無法加入或移除成員，也無法更新屬性值、階層成員資格或集合成員資格。|  
-|**更新**|在**Explorer**中，會顯示模型，而且使用者可以加入和移除成員、可以更新屬性值、階層成員資格和集合成員資格。|  
+|**Update**|在**Explorer**中，會顯示模型，而且使用者可以加入和移除成員、可以更新屬性值、階層成員資格和集合成員資格。|  
 |**拒絕**|不顯示模型。|  
   
  當您將權限指派給模型時，使用者會取得模型之所有版本的存取權。 您無法將權限指派給個別的版本。  

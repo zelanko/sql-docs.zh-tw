@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b41330bcb2fe007b1f666382719f98d39ec67438
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060424"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921352"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>使用預設的優先順序條件約束來連接工作和容器
   優先順序條件約束可以連接兩個可執行檔。 可執行檔可以是任何工作或「For 迴圈」、「Foreach 迴圈」或「時序」容器。 此程序描述如何設定優先順序條件約束的預設行為，及如何使用預設的優先順序條件約束來連接可執行檔。  
@@ -32,7 +31,7 @@ ms.locfileid: "66060424"
   
 1.  開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+2.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
 3.  在 [選項]**** 對話方塊中，展開 [商業智慧設計師]****，然後展開 [Integration Services 設計師]****。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66060424"
   
 5.  在下拉式清單中，選擇 [在新形狀使用「失敗」條件約束]**** 或 [在新形狀使用「完成」條件約束]****。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 #### <a name="to-create-a-default-precedence-constraint"></a>建立預設的優先順序條件約束  
   

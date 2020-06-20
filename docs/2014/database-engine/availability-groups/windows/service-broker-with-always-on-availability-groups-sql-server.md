@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fdf98d461039c5c6fb4f25c8cdf543422e5a0a2c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da179219363422c4ec242d29be61f35dd1609823
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788528"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936469"
 ---
 # <a name="service-broker-with-alwayson-availability-groups-sql-server"></a>Service Broker 與 AlwaysOn 可用性群組 (SQL Server)
   本主題包含將 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Service Broker 設定為使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的相關資訊。  
@@ -115,7 +114,7 @@ ms.locfileid: "62788528"
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性群組接聽程式、用戶端連接和應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../configure-windows/sql-server-service-broker.md)  
   
   

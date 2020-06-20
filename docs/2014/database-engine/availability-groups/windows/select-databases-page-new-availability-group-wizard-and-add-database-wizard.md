@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2c6cdeb27dfd1768c9a494497f5b2b1e0b7350a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab395a55e0734fcdf33bdf736dc2920584a8dab1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788485"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936479"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>選取資料庫頁面（新增可用性組嚮導-加入資料庫 Wizard）
    本描述主題描述 [指定資料庫]**** 頁面的選項。 此主題適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  

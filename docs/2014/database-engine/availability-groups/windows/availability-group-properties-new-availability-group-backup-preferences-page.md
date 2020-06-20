@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c60a2de7c36eef7f01338e2b8ea8abe29093490
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7914d4b1d7af06bcaf4f3fd05a260138e3edf5fc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62790217"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937109"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性群組屬性：新增可用性群組 (備份喜好設定頁面)
   使用此對話方塊可以檢視和變更所選可用性群組的備份喜好設定。  

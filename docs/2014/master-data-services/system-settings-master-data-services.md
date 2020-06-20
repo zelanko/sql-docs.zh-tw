@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a411290435a10e351c05e9dd1350bde597dbe449
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8c2ac713aaf490575447d9816cfc238b0399555
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289246"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971038"
 ---
 # <a name="system-settings-master-data-services"></a>系統設定 (Master Data Services)
   針對與 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫相關聯的所有 Web 應用程式和 Web 服務，您可以設定系統設定。  

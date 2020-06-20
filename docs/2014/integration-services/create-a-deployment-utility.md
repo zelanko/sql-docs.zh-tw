@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25effc199b1f8e525ceec78216e935e13afe2be2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060224"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917358"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   部署封裝的第一步是建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的部署公用程式。 部署公用程式是一個資料夾，包含在其他伺服器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中部署封裝所需的檔案。 部署公用程式在儲存 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的電腦上建立。  
@@ -35,7 +34,7 @@ ms.locfileid: "66060224"
 |[CreateDeploymentUtility]|指定建立專案時是否建立封裝部署公用程式的值。 此屬性必須為 `True`，才能建立部署公用程式。|  
 |DeploymentOutputPath|與部署公用程式之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案相關的位置。|  
   
- 建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案時，會建立資訊清單檔 \<專案名稱>.SSISDeploymentManifest.xml，以及專案套件和套件相依性的複本，並將資訊清單檔和這些複本新增至專案的 bin\Deployment 資料夾，或新增至 DeploymentOutputPath 屬性所指定的位置。 資訊清單檔會列出專案中的封裝、封裝組態和任何其他檔案。  
+ 當您建立專案時， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 系統會建立資訊清單檔（ \<project name>.SSISDeploymentManifest.xml），並將專案封裝和封裝相依性的複本連同專案套件和套件相依性的副本，加到專案中的 bin\Deployment 資料夾，或 DeploymentOutputPath 屬性中指定的位置。 資訊清單檔會列出專案中的封裝、封裝組態和任何其他檔案。  
   
  每次建立專案時，都會重新整理部署資料夾的內容。 這表示系統將會刪除儲存在這個資料夾，而建立程序並未重新複製到資料夾中的任何檔案。 例如，儲存在部署資料夾的封裝組態檔案將會被刪除。  
   
@@ -45,15 +44,15 @@ ms.locfileid: "66060224"
   
 2.  以滑鼠右鍵按一下專案，然後按一下 [屬性]****。  
   
-3.  在 [ ** \<專案名稱]> [屬性頁**] 對話方塊中，按一下 [**部署公用程式**]。  
+3.  在 [ ** \<project name> 屬性頁**] 對話方塊中，按一下 [**部署公用程式**]。  
   
-4.  若要在部署套件時更新封裝設定， **AllowConfigurationChanges**請將`True`AllowConfigurationChanges 設為。  
+4.  若要在部署套件時更新封裝設定，請將**AllowConfigurationChanges**設為 `True` 。  
   
 5.  將 `CreateDeploymentUtility` 設定為 `True`。  
   
 6.  選擇性地修改 `DeploymentOutputPath` 屬性，以更新部署公用程式的位置。  
   
-7.  按一下 [確定]  。  
+7.  按一下 [確定]。  
   
 8.  在方案總管中，以滑鼠右鍵按一下專案，然後按一下 [建立]****。  
   

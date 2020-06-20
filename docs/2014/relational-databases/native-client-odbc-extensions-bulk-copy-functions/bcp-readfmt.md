@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8ea8094778c8ccb204712536f01b13152c89c7a1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 55800012b84cf33908d9feddfdac63d85536e97d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701900"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019404"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
   從指定的格式檔案讀取資料檔格式定義。  

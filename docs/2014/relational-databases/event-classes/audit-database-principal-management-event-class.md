@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 594eec78-677c-4500-ae9b-e400abf6f39c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8dd06c632a20278f88403a0ec21d9a8b672c8b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8d3154a3385d152e97295bd2eee0864f28d39f51
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62961073"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053286"
 ---
 # <a name="audit-database-principal-management-event-class"></a>Audit Database Principal Management 事件類別
   從資料庫建立、改變或卸除主體 (例如使用者) 時，就會發生 **Audit Database Principal Management** 事件類別。  

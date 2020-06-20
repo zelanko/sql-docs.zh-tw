@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 31a24acb49abf4965e18443ef4c46ffd9a16f15c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c311f79f8495288f918ac57cda009d2a64f12b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176515"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921069"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 訂用帳戶連線管理員
   Azure HDInsight 連線管理員可使用您指定的屬性值，即 Azure 訂用帳戶識別碼和管理憑證，讓 SSIS 封裝連線到 Azure 訂用帳戶。
@@ -39,6 +38,6 @@ ms.locfileid: "78176515"
 
 5.  按一下 [**測試連接**] 來測試連接。
 
-6.  按一下 [確定]**** 關閉對話方塊。
+6.  按一下 [確定]  關閉對話方塊。
 
 

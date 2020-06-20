@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0341d9ba11cd66fdbfb72a05521028098c56c400
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019443"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   傳回指定之 BCP 類型 Token 的 SQL 類型名稱。  
@@ -75,7 +74,7 @@ fIsMaxType
 |`SQLVARCHAR`|否|**varchar**|  
 |`SQLTEXT`|之前或之後|**text**|  
 |`SQLBIGBINARY`|否|**binary**|  
-|`SQLBINARY`|否|**二**|  
+|`SQLBINARY`|否|**二進位**|  
 |`SQLBIGVARBINARY`|否|**Varbinary**|  
 |`SQLVARBINARY`|否|**Varbinary**|  
 |`SQLIMAGE`|之前或之後|**映像**|  
@@ -83,10 +82,10 @@ fIsMaxType
 |`SQLDATETIMN`|之前或之後|**datetime-null**|  
 |`SQLMONEYN`|之前或之後|**money-null**|  
 |`SQLFLTN`|之前或之後|**float-null**|  
-|`SQLAOPSUM`|之前或之後|**要求**|  
+|`SQLAOPSUM`|之前或之後|**Sum**|  
 |`SQLAOPAVG`|之前或之後|**Avg**|  
 |`SQLAOPCNT`|之前或之後|**Count**|  
-|`SQLAOPMIN`|之前或之後|**分鐘**|  
+|`SQLAOPMIN`|之前或之後|**最小值**|  
 |`SQLAOPMAX`|之前或之後|**讀數**|  
 |`SQLDATETIM4`|之前或之後|**smalldatetime**|  
 |`SQLMONEY4`|之前或之後|**Smallmoney**|  

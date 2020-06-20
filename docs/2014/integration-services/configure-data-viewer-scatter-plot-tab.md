@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9b1c002a7fcf0027f5169c4365c4ee1cd82f1a83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1111b0d8f2903de9b690f269498a93d01c2afa0c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060683"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921655"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>設定資料檢視器 (散佈圖索引標籤)
   使用 [設定資料檢視器]**** 對話方塊的 [散佈圖 (x,y)]**** 索引標籤，即可指定兩個資料行相對繪製成圖形。 散佈圖會將來自兩個數值資料行的資料值相對繪製成圖形。 每一筆資料記錄都變成圖中的一個點。 圖表只會反映一個緩衝區的內容。  

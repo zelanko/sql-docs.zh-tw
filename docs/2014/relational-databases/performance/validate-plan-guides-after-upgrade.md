@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a55ebd88-6f58-454d-b1c4-991b88add522
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c3f3f8fd278d1141417adec4f1ef6a1faced386c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18cc0f93ddec46025f659bcb9489bfff3ca846ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151208"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066750"
 ---
 # <a name="validate-plan-guides-after-upgrade"></a>升級之後驗證計畫指南
   建議您將應用程式升級為新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，重新評估和測試計畫指南定義。 效能微調需求和計畫指南符合的行為有可能會變更。 雖然無效的計畫指南不會導致查詢失敗，但是系統將不會使用此計畫指南來編譯計畫，而且此計畫可能不是最佳選擇。 將資料庫升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，我們建議您執行下列工作：  

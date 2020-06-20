@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e6cc08adc2682b65b1e2de9a2c3fd1d483a33c92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d6cc5a5fb14fff5fd92d5120f56c06d57ddcbaf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176483"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921389"
 ---
 # <a name="connect-components-with-paths"></a>以路徑連接元件
   您可以在 **設計師中** [資料流程] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤的設計介面上，建構封裝中的資料流程。 如果資料流程包含兩個資料流程元件，將來源或轉換的輸出連接到轉換或目的地的輸入，便可以連接這兩個元件。 兩個資料流程元件之間的連接子稱為路徑。

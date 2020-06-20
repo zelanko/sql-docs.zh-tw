@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9be9e7ef7d1cffb5c70836cf7594b39e2a1fe754
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68186117"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040048"
 ---
 # <a name="start-sql-server-profiler"></a>啟動 SQL Server Profiler
   您可以利用多種不同的方式來啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，以支援在各種狀況中收集追蹤輸出。 啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的方式包括：從 **[開始]** 功能表、從 **Tuning Advisor 中的** [工具] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 功能表，以及從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的數個位置。  
@@ -32,7 +31,7 @@ ms.locfileid: "68186117"
   
 ### <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>在 Database Engine Tuning Advisor 中啟動 SQL Server Profiler  
   
-1.  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的 **[工具]** 功能表上，按一下 **[SQL Server Profiler]**。  
+1.  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的 **[工具]** 功能表上，按一下 **[SQL Server Profiler]** 。  
   
 ## <a name="starting-sql-server-profiler-in-management-studio"></a>在 Management Studio 中啟動 SQL Server Profiler  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會在自己的執行個體中啟動每個分析工具工作階段，並在關閉 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]後繼續執行。  
@@ -41,13 +40,13 @@ ms.locfileid: "68186117"
   
 #### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>從工具功能表啟動 SQL Server Profiler  
   
-1.  在  [工具][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **** 功能表中，按一下 [SQL Server Profiler]****。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [工具] 功能表中，按一下 [SQL Server Profiler]。  
   
 #### <a name="to-start-sql-server-profiler-from-the-query-editor"></a>從查詢編輯器啟動 SQL Server Profiler  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能表列上，按一下 **[新增查詢]**。  
   
-2.  在查詢編輯器中按一下滑鼠右鍵，然後選取 [在 SQL Server Profiler 中追蹤查詢]  。  
+2.  在查詢編輯器中按一下滑鼠右鍵，然後選取 [在 SQL Server Profiler 中追蹤查詢]。  
   
     > [!NOTE]  
     >  連接內容是編輯器連接、追蹤範本為 TSQL_SPs，而套用的篩選為 SPID = 查詢視窗 SPID。  

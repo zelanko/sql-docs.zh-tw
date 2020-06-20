@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2b75519631269a1213077a4e295ac73fca1b950
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211031"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040120"
 ---
 # <a name="start-a-trace"></a>啟動追蹤
   在您使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來定義新追蹤或建立範本之後，即可使用新的追蹤定義或範本來啟動、暫停或停止擷取資料。  
