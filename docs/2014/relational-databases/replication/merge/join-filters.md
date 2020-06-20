@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f95392c4805df824418f3f9682f2f53b9589ea9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62629745"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010508"
 ---
 # <a name="join-filters"></a>聯結篩選
   聯結篩選可讓您根據發行集內相關資料表的篩選方式來篩選資料表。 通常，父資料表會使用參數化篩選進行篩選，然後一或多個聯結篩選會以您在資料表之間定義聯結的相同方式進行定義。 聯結篩選可以擴充參數化篩選，以便僅當資料與聯結篩選子句相符時，才複寫相關資料表中的資料。  

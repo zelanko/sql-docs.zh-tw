@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9dd0dc621b0d799398098cea6fb614d5021e6016
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7665894e3e7ce7a152631b584c35fcacbc8de707
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703755"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009557"
 ---
 # <a name="run-the-transact-sql-debugger"></a>執行 Transact-SQL 偵錯工具
   在您開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器視窗之後，就可以啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵錯工具。 然後，您可以在偵錯模式中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，直到停止偵錯工具為止。 您可以設定選項來自訂偵錯工具的執行方式。  

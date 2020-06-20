@@ -16,25 +16,24 @@ helpviewer_keywords:
 ms.assetid: a9e3d1c8-d492-4beb-93c7-f1bc40d4a910
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 697f70d4435213a991e55adecb51a98120d8df1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 692b06051872084ff5e1b16dfaf1f8198a649d62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091556"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062343"
 ---
 # <a name="upgrade-advisor-progress"></a>Upgrade Advisor 進度
   Upgrade Advisor 分析會以專用分析器開始，以便針對您所選取每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件執行分析。 分析元件時，會在 [**進度**] 對話方塊中報告進度。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **動作**  
  指定選取要分析的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。  
   
  **狀態**  
  顯示從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件進度介面傳回的狀態值。  
   
- **訊息**  
+ **Message**  
  顯示從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 個別分析器傳回的錯誤、失敗或成功訊息。  
   
 > [!NOTE]  

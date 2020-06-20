@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6e45b1f49c348e6cce329fb918479e92edbe9ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782312"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935333"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>啟用 Database Engine 的加密連接 (SQL Server 組態管理員)
   此主題描述如何使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 組態管理員指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的憑證，以啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的加密連接。 伺服器電腦必須提供憑證，且用戶端機器必須設定為信任該憑證的根授權單位。 提供是安裝憑證的處理序，方法是將它匯入 Windows。  
@@ -37,7 +36,7 @@ ms.locfileid: "62782312"
  用戶端必須可確認伺服器所使用之憑證的擁有權。 如果用戶端具有已簽署伺服器憑證之憑證授權單位的公開金鑰憑證，則不需要進一步進行組態設定。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 包含許多憑證授權單位的公開金鑰憑證。 如果伺服器憑證是由用戶端沒有公開金鑰憑證的公開或私人憑證授權單位所簽署，則您必須安裝已簽署伺服器憑證之憑證授權單位的公開金鑰憑證。  
   
 > [!NOTE]  
->  若要在容錯移轉叢集中使用加密功能，請務必在容錯移轉叢集中的所有節點上，對於虛擬伺服器使用完整的 DNS 名稱來安裝伺服器憑證。 例如，如果您有兩個節點的叢集，且節點名為 test1。您的公司>.com 和 test2。 * \< *您的公司>.com，而且您有名為 virtsql 的虛擬伺服器，您必須安裝 virtsql 的憑證。 * \< *您的公司在這兩個節點上>.com。 * \< * 您可以將 [[ForceEncryption]] **[ForceEncryption]** 選項的值設為 [是] **[是]**。  
+>  若要在容錯移轉叢集中使用加密功能，請務必在容錯移轉叢集中的所有節點上，對於虛擬伺服器使用完整的 DNS 名稱來安裝伺服器憑證。 例如，如果您有兩個節點的叢集，且節點名為 test1. *\<your company>* 。com 和 *\<your company>* test2。com，而且您有一個名為 virtsql 的虛擬伺服器，您必須安裝 virtsql 的 *\<your company>* 憑證。這兩個節點上的 com。 您可以將 [[ForceEncryption]] **[ForceEncryption]** 選項的值設為 [是] **[是]**。  
   
  **本主題內容**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62782312"
   
 ###  <a name="to-provision-install-a-certificate-on-the-server"></a><a name="Provision"></a> 若要在伺服器上提供 (安裝) 憑證  
   
-1.  在 [**開始**] 功能表上，按一下 [**執行**]，然後在 [ `MMC` **開啟**] 方塊中輸入，然後按一下 **[確定]**。  
+1.  在 [**開始**] 功能表上，按一下 [**執行**]，然後在 [**開啟**] 方塊中輸入， `MMC` 然後按一下 **[確定]**。  
   
 2.  在 MMC 主控台的 [檔案]  功能表上，按一下 [新增/移除嵌入式管理單元]  。  
   
@@ -83,9 +82,9 @@ ms.locfileid: "62782312"
   
 ###  <a name="to-configure-the-server-to-accept-encrypted-connections"></a><a name="ConfigureServerConnections"></a> 若要設定伺服器接受加密的連接  
   
-1.  在 [SQL Server 組態管理員]  中，展開 [SQL Server 網路組態]  ，並以滑鼠右鍵按一下 [\<伺服器執行個體>  的通訊協定]  ，然後選取 [屬性]  。  
+1.  在**SQL Server 組態管理員**中，展開 [ **SQL Server 網路**設定]，以滑鼠右鍵按一下 [**通訊協定**] _\<server instance>_ ，然後選取 [**屬性**]。  
   
-2.  在 [_\<實例名稱_的**通訊協定**>**屬性**] 對話方塊的 [**憑證**] 索引標籤上，從 [**憑證**] 方塊的下拉式方塊中選取所需的憑證，然後按一下 **[確定]**。  
+2.  在 [屬性的**通訊協定** _\<instance name>_ **Properties** ] 對話方塊的 [**憑證**] 索引標籤上，從 [**憑證**] 方塊的下拉式方塊中選取所需的憑證，然後按一下 **[確定]**。  
   
 3.  在 **[旗標]** 索引標籤的 **[ForceEncryption]** 方塊中選取 **[是]** ，然後按一下 **[確定]** 以關閉對話方塊。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 524e878933652699bef6e31da42d3a784b54df7c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51f195a9f5fbe97eadfc281ad50bd0de55d6151e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965528"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>指定資料表複製或查詢 (SQL Server 匯入和匯出精靈)
   使用 [**指定資料表複製或查詢**] 頁面，即可指定如何複製資料。 您可以使用圖形介面來選取要複製的現有資料庫物件，或使用 Transact-SQL 來建立更複雜的查詢。  
@@ -40,7 +39,7 @@ ms.locfileid: "62892640"
   
 -   System.Data.Odbc  
   
- 若要讓其他提供者可以使用 [**從一個或多個資料表或視圖來複製資料]** 選項，協力廠商可將自己的 ProviderDescriptor 區段新增至 providerdescriptors.xml。 根據預設，此\<檔案位於*磁片磁碟機*>： \Program Files\Microsoft SQL server\100\dts\providerdescriptors。 若要檢閱 ProviderDescriptor 區段的需求，請參閱 ProviderDescriptors.xsd 結構描述檔案 (預設與 ProviderDescriptors.xml 檔案位於相同的資料夾中)。  
+ 若要讓其他提供者可以使用 [**從一個或多個資料表或視圖來複製資料]** 選項，協力廠商可將自己的 ProviderDescriptor 區段新增至 ProviderDescriptors.xml 檔案。 根據預設，此檔案位於 \<*drive*> ： \Program FILES\MICROSOFT SQL server\100\dts\providerdescriptors。 若要檢閱 ProviderDescriptor 區段的需求，請參閱 ProviderDescriptors.xsd 結構描述檔案 (預設與 ProviderDescriptors.xml 檔案位於相同的資料夾中)。  
   
  **撰寫查詢來指定要傳送的資料**  
  使用 [**提供來源查詢**] 對話方塊來建立 SQL 語句，以取得資料列。 如果您要在進行複製作業時修改或限制來源資料，請使用此選項。 只有符合選取準則的資料列可供複製。  

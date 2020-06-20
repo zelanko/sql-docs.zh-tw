@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9af1d89e4bb53af3d3f640e7efb010e5ac8de35
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704619"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064409"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>新增作業排程：作業排程屬性
   使用此頁面來檢視和變更排程的屬性。  
@@ -55,7 +54,7 @@ ms.locfileid: "62704619"
  **星期四**  
  設定作業於星期四發生。 只有每週重複執行的排程可以使用。  
   
- **為止**  
+ **星期五**  
  設定作業於星期五發生。 只有每週重複執行的排程可以使用。  
   
  **星期六**  
@@ -64,13 +63,13 @@ ms.locfileid: "62704619"
  **星期日**  
  設定作業於星期日發生。 只有每週重複執行的排程可以使用。  
   
- **勞動節**  
+ **Day**  
  請選取排程每月在哪一日發生。 只有每月重複執行的排程可以使用。  
   
  **重複間隔**  
  請選取排程出現間隔的月數。 只有每月重複執行的排程可以使用。  
   
- **此**  
+ **星期**  
  指定排程，選擇月份中特定週數的特定星期幾。 只有每月重複執行的排程可以使用。  
   
  **執行一次於**  
@@ -92,7 +91,7 @@ ms.locfileid: "62704619"
  **日期**  
  選取作業要執行的日期。  
   
- **時間**  
+ **Time**  
  選取作業要執行的時間。  
   
 ## <a name="see-also"></a>另請參閱  

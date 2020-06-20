@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7eb1fa72d3ee607405a3ddc1dadafdac5d3e0088
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6076b28e932ac03d211ab6ba1a84fe6c832f72ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059203"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966848"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Excel 目的地編輯器 (錯誤輸出頁面)
   使用 [Excel 目的地編輯器]**** 對話方塊的 [進階]**** 頁面，即可指定錯誤處理的選項。  
@@ -41,7 +40,7 @@ ms.locfileid: "66059203"
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **描述**  
+ **說明**  
  檢視錯誤的描述。  
   
  **將這個值設定到選取的資料格**  

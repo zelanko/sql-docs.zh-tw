@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849526"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929089"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>針對可用性群組設定 SQL Server Managed Backup 到 Azure
   本主題是設定參與 AlwaysOn 可用性群組之資料庫的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]之教學課程。  
@@ -29,7 +28,7 @@ ms.locfileid: "82849526"
 -   網路頻寬：這適用于複本位於不同的實體位置（例如在混合式雲端中），或僅限雲端設定中的不同 Azure 區域的實施。 網路頻寬可能會影響次要複本的延遲，而且如果次要複本設定為同步複寫，這可能會導致主要複本上的記錄增加。 如果次要複本設定為同步複寫，次要複本可能會因為網路延遲的緣故而跟不上同步，萬一容錯移轉到次要複本就可能會發生資料遺失。  
   
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>設定可用性資料庫的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。  
- **無權**  
+ **權限：**  
   
 -   需要**db_backupoperator**資料庫角色中的成員資格、具有**ALTER ANY CREDENTIAL**許可權，以及 `EXECUTE` **sp_delete_backuphistory**預存程式的許可權。  
   

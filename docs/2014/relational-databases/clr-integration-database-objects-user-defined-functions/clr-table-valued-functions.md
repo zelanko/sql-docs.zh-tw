@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7dfd3db3a8193e92f9670213c602d55dc45f5c7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 192673590f5dccfcee3f7c49de7cda659f97b8c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232285"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970798"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 資料表值函式
   資料表值函式是會傳回資料表的使用者定義函數。  
@@ -45,7 +44,7 @@ ms.locfileid: "75232285"
  資料表值參數是傳入到程序或函數中的使用者定義資料表類型，能提供有效的方式將資料的多個資料列傳遞到伺服器。 資料表值參數提供的功能與參數陣列相似，但是具備了更大的彈性並且和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 更緊密地整合。 它們也能夠協助您獲得更佳的效能。 資料表值參數也可以減少與伺服器之間的往返次數。 資料能以資料表值參數的形式傳送到伺服器，而不是傳送多個要求到伺服器，例如一併傳送純量參數的清單。 使用者定義資料表類型無法以資料表值參數的形式傳遞到 Managed 預存程序或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中執行的函數，也無法從該預存程序或函數傳回。 如需詳細資訊，請參閱[使用資料表值參數 &#40;Database Engine&#41;](../tables/use-table-valued-parameters-database-engine.md)。  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>輸出參數和資料表值函式  
- 資訊可以使用輸出參數，從資料表值函式傳回。 實作程式碼資料表值函式中的對應參數應使用依參照傳遞的參數做為引數。 請注意，Visual Basic 不支援輸出參數的方式，與 Visual C# 所使用的方式不同。 您必須依參考指定參數，並套用\<Out （） > 屬性來表示輸出參數，如下所示：  
+ 資訊可以使用輸出參數，從資料表值函式傳回。 實作程式碼資料表值函式中的對應參數應使用依參照傳遞的參數做為引數。 請注意，Visual Basic 不支援輸出參數的方式，與 Visual C# 所使用的方式不同。 您必須依參考指定參數，並套用 \<Out()> 屬性來表示輸出參數，如下所示：  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -76,7 +75,7 @@ select * from table t cross apply function(t.column);
   
 -   當資料表值函式是從外部資料產生時。 例如，讀取事件記錄檔並將其以資料表的方式公開的資料表值函式。  
   
- **注意**資料表值函式只能透過[!INCLUDE[tsql](../../includes/tsql-md.md)] `InitMethod`方法中的查詢，而不是在`FillRow`方法中執行資料存取。 如果執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，應該以 `InitMethod` 屬性 (Attribute) 的屬性 (Property) 來標記 `SqlFunction.DataAccess.Read`。  
+ **注意**資料表值函式只能透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 方法中的查詢 `InitMethod` ，而不是在方法中執行資料存取 `FillRow` 。 如果執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，應該以 `InitMethod` 屬性 (Attribute) 的屬性 (Property) 來標記 `SqlFunction.DataAccess.Read`。  
   
 ## <a name="a-sample-table-valued-function"></a>資料表值函式範例  
  下列資料表值函式會從系統事件記錄檔傳回資訊。 該函數使用包含要讀取之事件記錄檔名稱的單一字串引數。  
@@ -175,7 +174,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>範例：傳回 SQL Server 查詢的結果  
- 下列範例示範查詢 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表值函式。 這個範例使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的 AdventureWorks Light 資料庫。 如[https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843)需下載 AdventureWorks 的詳細資訊，請參閱。  
+ 下列範例示範查詢 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表值函式。 這個範例使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的 AdventureWorks Light 資料庫。 [https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843)如需下載 AdventureWorks 的詳細資訊，請參閱。  
   
  將原始程式碼檔命名為 FindInvalidEmails.cs 或 FindInvalidEmails.vb。  
   

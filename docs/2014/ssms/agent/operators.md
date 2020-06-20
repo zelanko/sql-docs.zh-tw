@@ -1,5 +1,5 @@
 ---
-title: 操作員 | Microsoft Docs
+title: 運算子 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,14 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d141a2db9a69603701200bc50dcac57ef402968a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189023"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064424"
 ---
-# <a name="operators"></a>操作員
+# <a name="operators"></a>運算子
   操作員是人員或群組的別名，當作業完成或產生警示時，可收到電子通知。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務可支援透過操作員，發送通知給系統管理員。 操作員會啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的通知和監視功能。  
   
 ## <a name="operator-attributes-and-concepts"></a>操作員屬性和概念  
@@ -47,7 +46,7 @@ ms.locfileid: "68189023"
  操作員的連絡資訊會定義如何通知操作員。 您可以透過電子郵件、呼叫器或 **net send** 命令來通知操作員：  
   
 > [!IMPORTANT]  
->  在未來版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，將會從 Agent 移除 [呼機] 和 [ **net send** ] 選項。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
+>  在未來版本的中，將會從 Agent 移除 [呼機] 和 [ **net send** ] 選項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
   
 -   **電子郵件通知**  
   
@@ -117,7 +116,7 @@ ms.locfileid: "68189023"
   
 |||  
 |-|-|  
-|**工作**|**主題**|  
+|**工作**|**本文**|  
 |與建立操作員相關的工作|[建立操作員](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
 |與指派警示相關的工作|[指派警示給操作員](assign-alerts-to-an-operator.md)<br /><br /> [定義對警示的回應 &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [指派警示給操作員](assign-alerts-to-an-operator.md)|  
   

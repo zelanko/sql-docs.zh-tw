@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 061daaa3b44c151a1f77b075bef66ef90570af98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e1a6af8407813a2a712b0c43c0b06097477f00f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176343"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966509"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>開發自訂資料流程元件
   資料流程工作是由連接至各種資料來源然後以高速轉換和路由資料的元件組成。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所提供可延伸物件模型可讓開發人員建立可在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 及已部署套件中使用的自訂來源、轉換和目的地。 本章節包含將引導您開發自訂資料流程元件的主題。
@@ -37,7 +36,7 @@ ms.locfileid: "78176343"
 
  [執行計畫和緩衝區配置](execution-plan-and-buffer-allocation.md)說明資料流程執行計畫和資料緩衝區的配置。
 
- [使用資料流程中的資料類型](working-with-data-types-in-the-data-flow.md)說明資料流程如何將資料類型[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]對應到 .NET Framework 的 managed 資料類型。
+ [使用資料流程中的資料類型](working-with-data-types-in-the-data-flow.md)說明資料流程如何將 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型對應到 .NET Framework 的 managed 資料類型。
 
  [驗證資料流程元件](validating-a-data-flow-component.md)說明用來驗證元件設定以及重新設定元件中繼資料的方法。
 
@@ -62,14 +61,14 @@ ms.locfileid: "78176343"
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design>包含用來建立資料流程元件之使用者介面的類別和介面。
 
- [Integration Services 錯誤和訊息參考](../../integration-services-error-and-message-reference.md)列出預先定義[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]的錯誤碼及其符號名稱和描述。
+ [Integration Services 錯誤和訊息參考](../../integration-services-error-and-message-reference.md)列出預先定義的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 錯誤碼及其符號名稱和描述。
 
 ## <a name="related-sections"></a>相關章節
 
 ### <a name="information-common-to-all-custom-objects"></a>所有自訂物件的共通資訊
  如需有關 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中可以建立之所有類型自訂物件適用的共通資訊，請參閱下列主題：
 
- [開發 Integration Services 的自訂物件](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)說明為[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]執行所有類型之自訂物件的基本步驟。
+ [開發 Integration Services 的自訂物件](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)說明為執行所有類型之自訂物件的基本步驟 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 。
 
  [保存自訂物件](../../extending-packages-custom-objects/persisting-custom-objects.md)描述自訂持續性，並在必要時加以說明。
 

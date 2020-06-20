@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d1b66cbbed716a4ce7b2d5cf9611e161141f162
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065044"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934577"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>使追蹤與 Windows 效能記錄資料產生相互關聯 (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]可以讓 Microsoft Windows 系統監視器計數器與[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]或[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]事件相互關聯。 Windows 系統監視器可將指定計數器的系統活動記錄在效能記錄中。  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]可以讓 Microsoft Windows 系統監視器計數器與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或事件相互關聯 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 Windows 系統監視器可將指定計數器的系統活動記錄在效能記錄中。  
   
 > [!NOTE]  
 >  如需有關在不同 Windows 版本之間共用記錄的詳細資訊，請參閱本主題結尾處的程序。  
@@ -33,7 +32,7 @@ ms.locfileid: "66065044"
   
 3.  在 [開啟]**** 對話方塊中，選取含有效能記錄的檔案。 擷取效能記錄資料的期間必須與擷取追蹤資料的期間相同。  
   
-4.  在 [效能計數器限制]**** 對話方塊中，針對要顯示在追蹤旁的系統監視器物件與計數器，選取其對應的核取方塊。 按一下 [確定]****。  
+4.  在 [效能計數器限制]**** 對話方塊中，針對要顯示在追蹤旁的系統監視器物件與計數器，選取其對應的核取方塊。 按一下 [確定]   
   
 5.  選取追蹤事件視窗中的事件，或使用方向鍵來瀏覽追蹤事件視窗中相鄰的幾個資料列。 [系統監視器資料]**** 視窗中的紅色直條，代表已與所選追蹤事件產生相互關聯的效能記錄資料。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66065044"
 11. 按一下 [確定]**** 建立效能記錄。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Profiler 範本和許可權](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [啟動 SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   

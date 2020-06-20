@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60ebcc5ae689b6781a17cc7725020f6e2382e987
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284947"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919129"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
   「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -56,7 +55,7 @@ ms.locfileid: "67284947"
   
  或者，有時您可能希望父封裝和子封裝當作一個單位一起失敗，或是不要產生其他處理序的額外負擔。 例如，如果子處理序失敗，而父封裝處理序中的後續處理取決於子處理序的成功，則子封裝應該在父封裝的處理序中執行。  
   
- 根據預設，「執行封裝」工作的 ExecuteOutOfProcess 屬性會設定為`False`，而且子封裝會在與父封裝相同的進程中執行。 如果您將此屬性設定為 `True`，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 此外，如果您將此屬性設定為 `True`，則無法在僅限工具安裝中偵錯封裝。 您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 [安裝 Integration Services](../install-windows/install-integration-services.md)。  
+ 根據預設，「執行封裝」工作的 ExecuteOutOfProcess 屬性會設定為 `False` ，而且子封裝會在與父封裝相同的進程中執行。 如果您將此屬性設定為 `True`，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 此外，如果您將此屬性設定為 `True`，則無法在僅限工具安裝中偵錯封裝。 您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 [安裝 Integration Services](../install-windows/install-integration-services.md)。  
   
 ## <a name="extending-transactions"></a>延伸交易  
  父封裝使用的交易可延伸至子封裝；因此，這兩種封裝執行的工作都能認可或回復。 例如，根據子封裝執行的資料庫插入，可以認可或回復父封裝所執行的資料庫插入，反之亦然。 如需詳細資訊，請參閱＜ [繼承的事務](../inherited-transactions.md)＞。  

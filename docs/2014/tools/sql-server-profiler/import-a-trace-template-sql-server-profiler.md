@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b87822c99f9c3398f5a2dcda1725025895979d15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 899d7e1a00a18f320bfecd508e8d0c65be85a57c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228403"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999851"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>匯入追蹤範本 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來匯入追蹤範本檔案 (.tdf)。  
@@ -28,7 +27,7 @@ ms.locfileid: "63228403"
   
 1.  在 **[檔案]** 功能表上，按一下 **[範本]** ，然後按一下 **[匯入範本]** 。  
   
-2.  在 [開啟檔案]  對話方塊中，選取要匯入的追蹤範本檔案 (.tdf 檔案)，再按一下 [開啟]  。  
+2.  在 [開啟檔案] 對話方塊中，選取要匯入的追蹤範本檔案 (.tdf 檔案)，再按一下 [開啟]。  
   
      追蹤範本檔案會在 **[追蹤屬性]** 對話方塊的 **[使用範本]** 清單中，新增為可用範本。 使用者自訂範本會將 **(使用者)** 附加至範本名稱。  
   

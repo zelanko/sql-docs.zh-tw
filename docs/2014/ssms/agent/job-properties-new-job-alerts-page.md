@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 6d3f9b24-d214-4e82-b161-c00ff8eff813
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46e17ba7281e8289e2209d4e1dfc3ae40f5ef161
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189275"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062284"
 ---
 # <a name="job-properties-new-job-alerts-page"></a>作業屬性：新增作業 (警示頁面)
-  使用此頁面來查看和組織[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的警示。  
+  使用此頁面來查看和組織 Agent 作業的警示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **警示清單**  
  列出此作業的警示。  
   
- **加入**  
+ **新增**  
  為作業建立新警示。  
   
  **編輯**  

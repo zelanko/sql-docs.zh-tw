@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb2a248ea8fa0205f1db11df0589ab2b3da0ab9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067830"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940179"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>表格式模型設計師 (SSAS 表格式)
-  表格式模型設計師是與 Microsoft [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 或更新版本整合的一部分，具有特別用來開發專業表格式模型方案的額外專案類型範本。  
+  表格式模型設計師是 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 與 Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 或更新版本整合的一部分，具有特別用來開發專業表格式模型方案的額外專案類型範本。  
   
  本主題的章節：  
   
@@ -32,7 +31,7 @@ ms.locfileid: "66067830"
   
 -   [Visual Studio 整合](#bkmk_vsint)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>各種  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 優點  
  當您安裝 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]時，用來建立表格式模型的專案範本會加入至可用的專案類型中。 在使用其中一個範本建立新的表格式模型專案之後，您可以使用表格式模型設計師工具和精靈開始撰寫模型。  
   
  除了用於撰寫專業多維度和表格式模型方案的新範本和工具之外， [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 環境也提供偵錯和專案週期功能，確保您能為組織建立最強大的 BI 方案。 如需 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的詳細資訊，請參閱 [Visual Studio 使用者入門](https://go.microsoft.com/fwlink/?LinkId=206389)。  
@@ -61,7 +60,7 @@ ms.locfileid: "66067830"
  **資料檢視**  
  資料檢視以表格式的方格格式顯示資料表。 您也可以使用量值方格定義量值，僅針對 [資料檢視] 中的每個資料表顯示。  
   
- **圖表視圖**  
+ **圖表檢視**  
  此圖表檢視以圖形格式顯示資料表，以及資料表之間的關聯性。 您可以篩選資料行、量值、階層及 KPI，也可以選擇使用定義的檢視方塊來檢視模型。  
   
  您可以在上述任一檢視中，執行大部分的模型撰寫工作。  

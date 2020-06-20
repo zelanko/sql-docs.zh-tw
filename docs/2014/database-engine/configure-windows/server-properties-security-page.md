@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f45c0a04a0d7cc627901d8de24175f1d63a99fe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809002"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934889"
 ---
 # <a name="server-properties-security-page"></a>伺服器屬性 (安全性頁面)
   使用此頁面來檢視或修改伺服器安全性選項。  

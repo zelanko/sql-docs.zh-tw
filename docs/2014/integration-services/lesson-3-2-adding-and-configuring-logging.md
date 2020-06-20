@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 530a88929f2add4ff64a7495e5a81c50e552d0b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892433"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965258"
 ---
 # <a name="step-2-adding-and-configuring-logging"></a>步驟 2:新增和設定記錄
   在這項工作中，您將針對 Lesson 3.dtsx 封裝的資料流程啟用記錄。 然後，您會設定文字檔案記錄提供者來記錄 PipelineExecutionPlan 和 PipelineExecuteTrees 事件。 文字檔案記錄提供者會建立容易檢視及容易傳輸的記錄。 這些記錄檔的簡單性，使它們在封裝的基本測試階段特別有用。 您也可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師的 [記錄事件] 視窗中檢視記錄項目。  
@@ -30,15 +29,15 @@ ms.locfileid: "62892433"
   
      Integration Services 會將新的文字檔記錄提供者新增至封裝，並具有文字檔的預設名稱**SSIS 記錄提供者**。 現在您可以設定新的記錄提供者。  
   
-4.  在 [**名稱**] 資料行`Lesson 3 Log File`中，輸入。  
+4.  在 [**名稱**] 資料行中，輸入 `Lesson 3 Log File` 。  
   
 5.  可選擇性地修改 **[描述]**。  
   
-6.  在 [設定 **] 欄中**，按一下** \<[新增**連線] [>]，以指定寫入記錄資訊的目的地。  
+6.  在 [組態]**** 資料行中，按一下 [\<New Connection>]**** 來指定記錄資訊寫入的目的地。  
   
      在 **[檔案連接管理員編輯器]** 對話方塊中，對於 **[使用類型]** 選取 **[建立檔案]**，然後按一下 **[瀏覽]**。 依預設， **[選取檔案]** 對話方塊會開啟專案資料夾，但您可以將記錄資訊儲存至任何位置。  
   
-7.  在 [**選取**檔案] 對話方塊的 [**檔案名**] 方塊中， `TutorialLog.log`輸入，然後按一下 [**開啟**]。  
+7.  在 [**選取**檔案] 對話方塊的 [**檔案名**] 方塊中，輸入 `TutorialLog.log` ，然後按一下 [**開啟**]。  
   
 8.  按一下 **[確定]** 來關閉 **[檔案連接管理員編輯器]** 對話方塊。  
   
@@ -53,9 +52,9 @@ ms.locfileid: "62892433"
   
 12. 按一下 **[基本]** 來隱藏資訊類別目錄。  
   
-13. 在 [**提供者和記錄**檔] 索引**Name**標籤的 [ `Lesson 3 Log File`名稱] 欄中，選取 []。 建立封裝的記錄提供者之後，您就可以選擇性地取消選取它，來暫時關閉記錄，而不必刪除再重新建立記錄提供者。  
+13. 在 [**提供者和記錄**檔] 索引標籤的 [**名稱**] 欄中，選取 [] `Lesson 3 Log File` 。 建立封裝的記錄提供者之後，您就可以選擇性地取消選取它，來暫時關閉記錄，而不必刪除再重新建立記錄提供者。  
   
-14. 按一下 [確定]  。  
+14. 按一下 [確定]。  
   
 ## <a name="next-steps"></a>後續步驟  
  [步驟 3：測試第 3 課的教學課程封裝](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  

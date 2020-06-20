@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e63db637566cd9e2e481731c4d742f02c261ddd
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 02128dcaad829054fe513d8e5353223502cb1802
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856470"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964758"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
   [參數化]**** 對話方塊可讓您將新的或現有的參數與工作屬性產生關聯。 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，以滑鼠右鍵按一下工作或 [控制流程] 索引標籤，然後按一下 [參數化]**** 即可開啟此對話方塊。 下列清單描述對話方塊中的 UI 元素。 如需參數的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 參數](integration-services-ssis-package-and-project-parameters.md)。  
@@ -38,7 +37,7 @@ ms.locfileid: "83856470"
  **名稱**  
  指定您要建立之參數的名稱。  
   
- **描述**  
+ **說明**  
  指定參數的描述。  
   
  **ReplTest1**  

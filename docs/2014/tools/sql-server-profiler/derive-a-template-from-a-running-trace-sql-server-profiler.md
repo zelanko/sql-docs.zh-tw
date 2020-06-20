@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 25a3b845-affb-4b2a-a382-198a4bdd9ad1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 659a6d76fabd2b01d91ae993fc818d81874350c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72744ce942cc49038129cf6064349e23c3e9a41d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63276307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064023"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>從執行中追蹤衍生範本 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]從現有執行中的追蹤建立追蹤範本。  

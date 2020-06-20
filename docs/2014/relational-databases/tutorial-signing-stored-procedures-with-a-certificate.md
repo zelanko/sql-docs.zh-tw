@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fe387c43431436ba5fba5bcab879584ecdad533
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524091"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002511"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>教學課程：使用憑證簽署預存程序
   這個教學課程說明如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]產生的憑證來簽署預存程序。  
   
 > [!NOTE]  
->  若要執行本教學課程中的程式碼，您必須設定使用混合模式安全性，並已安裝 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。 案例  
+>  若要執行本教學課程中的程式碼，您必須設定使用混合模式安全性，並已安裝 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。 狀況  
   
  當您希望對預存程序加諸必要的權限，卻又不想明確將這些權限授與使用者時，使用憑證簽署預存程序就非常有用。 儘管透過其他方式也能達到這個目的 (比方使用 EXECUTE AS 陳述式)，使用憑證讓您得以利用追蹤找出預存程序的原始呼叫者。 這提供了更高層次的稽核，尤其是稽核安全性或資料定義語言 (DDL) 作業期間的一舉一動。  
   

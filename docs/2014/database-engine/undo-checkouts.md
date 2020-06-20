@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6596b20-3aa5-4dc4-a4c5-3649f1f5a20e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00662ef396ff114e4b77d70aa2f60863e8f94bd3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773394"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927841"
 ---
 # <a name="undo-checkouts"></a>復原簽出
   您可以使用 [**復原簽出**] 命令來取消現有的簽出。 當您修改且儲存了某個檔案之後，又需要回復這些變更時，這尤其有用。  
@@ -48,7 +47,7 @@ ms.locfileid: "62773394"
      **選項**  
      按一下按鈕右邊的箭頭之後，就會顯示原始檔控制外掛程式特定的恢復簽出選項。  
   
-     **Sort**  
+     **方式**  
      排序顯示資料行的順序。  
   
      **樹狀檢視**  

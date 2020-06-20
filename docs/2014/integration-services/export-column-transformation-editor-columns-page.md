@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0d5e37211471285e971ba29bc3419e759b0c7af7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2460e3a86c83dbd6b206bf173ac2c2691ecee685
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059004"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966728"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>匯出資料行轉換編輯器 (資料行頁面)
   使用 **[匯出資料行轉換編輯器]** 對話方塊的 **[資料行]** 頁面，即可指定資料流程中要擷取至檔案的資料行。 您可以指定匯出資料行轉換將資料附加至檔案或複寫現有的檔案。  

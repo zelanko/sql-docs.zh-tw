@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 22b7c9ea4012655043cac7eb7f3d432ef1e2e854
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c86dfee37e9b206643069a2d442b27575324ed17
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057051"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964978"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 來源編輯器 (連接管理員頁面)
   使用 [OLE DB 來源編輯器]**** 對話方塊的 [連接管理員]**** 頁面，來選取來源的 OLE DB 連接管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
@@ -63,7 +62,7 @@ ms.locfileid: "66057051"
  使用 [資料檢視]**** 對話方塊來預覽結果。 [預覽]**** 最多可顯示 200 個資料列。  
   
 > [!NOTE]  
->  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 而會顯示 \<數值太大而無法顯示> 或 System.Byte[]。 使用 SQL OLE DB 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
+>  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 相反地，values \<value too big to display> 或 system.string [] 會顯示。 使用 SQL OLE DB 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
   
 ## <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
   

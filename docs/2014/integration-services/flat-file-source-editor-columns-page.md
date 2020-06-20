@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f8fda95b51f568098b0ac9fc13b8a204adb71c51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f882aae9062d97914c86644a7be0ea126ed9dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058605"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966438"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>一般檔案來源編輯器 (資料行頁面)
   使用 [一般檔案來源編輯器]**** 對話方塊的 [資料行]**** 節點，將輸出資料行對應至每個外部 (來源) 資料行。  
   
 > [!NOTE]  
->  [ `FileNameColumnName`一般檔案**來源編輯器**] 中無法使用`FastParse`一般檔案來源的屬性和其輸出資料行的屬性，但是可以使用 [**進階編輯器**] 來設定。 如需這些屬性的詳細資訊，請參閱 [一般檔案自訂屬性](data-flow/flat-file-custom-properties.md)的＜一般檔案來源＞一節。  
+>  [一般檔案 `FileNameColumnName` 來源編輯器] 中無法使用一般檔案來源的屬性和 `FastParse` 其輸出資料行**Flat File Source Editor**的屬性，但是可以使用 [**進階編輯器**] 來設定。 如需這些屬性的詳細資訊，請參閱 [一般檔案自訂屬性](data-flow/flat-file-custom-properties.md)的＜一般檔案來源＞一節。  
   
  若要深入了解一般檔案來源，請參閱＜ [Flat File Source](data-flow/flat-file-source.md)＞。  
   
@@ -43,6 +42,6 @@ ms.locfileid: "66058605"
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[一般檔案來源編輯器] &#40;連線管理員頁面&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [一般檔案來源編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
- [一般檔案連接管理員](connection-manager/file-connection-manager.md)  
+ [一般檔案連線管理員](connection-manager/file-connection-manager.md)  
   
   

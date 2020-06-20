@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3b1e47f-2ba2-49af-b404-1aa231d4e4a0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07016bd61abc84617c8a32935417b7ec936d3dce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa94f6f8d7705a0784da66d3d353e9537bc7d1a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015861"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030928"
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Audit Server Scope GDR 事件類別
   發出 GRANT、REVOKE 或 DENY 以取得伺服器範圍中的權限時 (例如建立登入) 時，會發生 **Audit Server Scope GDR** 事件類別。  

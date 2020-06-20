@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ee0de3311eb6abffcdb71ab725d0650fe96b04c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761619"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009194"
 ---
 # <a name="create-foreign-key-relationships"></a>建立外部索引鍵關聯性
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立外部索引鍵關聯性。 當想要將一個資料表的資料列，與其他資料表的資料列建立相關時，可以建立兩者間的關聯性。  
@@ -79,7 +78,7 @@ ms.locfileid: "62761619"
   
 3.  在 [外部索引鍵關聯性]**** 對話方塊中，按一下 [加入]****。  
   
-     關聯性會出現在 [選取的關聯性]**** 清單中，並顯示系統提供的名稱，格式為 FK_\<資料表名稱>**>_\<資料表名稱**>，其中<資料表名稱>** 為外部索引鍵資料表的名稱。  
+     關聯性會出現在 [**選取的關聯**性] 清單中，並使用系統提供的名稱，格式為 FK_ \<*tablename*> _ \<*tablename*> ，其中*tablename*是外鍵資料表的名稱。  
   
 4.  在 [ **選取的關聯性** ] 清單中，按一下關聯性。  
   

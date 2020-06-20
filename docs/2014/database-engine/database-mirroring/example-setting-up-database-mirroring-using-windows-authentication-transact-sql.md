@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d52e94eb98bfe4e22a2acb879a393d289baf00bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95df855e8e41c5937aae02884c71792537eb2bfc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806824"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934180"
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>範例：使用 Windows 驗證設定資料庫鏡像 (Transact-SQL)
   此範例顯示使用 Windows 驗證建立具有見證的資料庫鏡像工作階段的所有必要階段。 此主題中的範例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 請注意，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟的另一種方法是，您可以使用 [設定資料庫鏡像安全性精靈] 來設定資料庫鏡像。 如需詳細資訊，請參閱本主題稍後的 [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)。  

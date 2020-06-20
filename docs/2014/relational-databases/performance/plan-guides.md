@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c97682163313a56acb8521174fa8d4012a69b529
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150823"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063897"
 ---
 # <a name="plan-guides"></a>計畫指南
   當您無法或不想要在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中直接變更實際查詢的文字時，您可以使用計畫指南來最佳化查詢的效能。 計畫指南是將查詢提示或固定的查詢計畫附加至查詢，藉以影響查詢的最佳化。 當協力廠商所提供的資料庫應用程式中有少量查詢子集的執行情況不如預期時，使用計畫指南會非常有用。 在計畫指南中，指定您要最佳化的 Transact-SQL 陳述式以及包含您想要使用之查詢提示的 OPTION 子句，或者是您想要用來將查詢進行最佳化的特定查詢計畫。 執行查詢時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會比對 Transact-SQL 陳述式與計畫指南，然後在執行階段中，將 OPTION 子句附加至查詢或使用指定的查詢計畫。  
@@ -33,7 +32,7 @@ ms.locfileid: "63150823"
  您可以建立的計畫指南總數僅限於可用的系統資源。 因此，您應該限制計畫指南，只用於可改善或穩定效能的關鍵任務查詢。 計畫指南不應用來影響已部署之應用程式的大部分查詢負載。  
   
 > [!NOTE]  
->  並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用計劃指南。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 在任何版本中都可以看到計畫指南。 您也可以將包含計畫指南的資料庫附加到任何版本中。 當您將資料庫還原或附加至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的升級版本時，計畫指南仍維持不變。  
+>  並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用計劃指南。 如需版本支援的功能清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 在任何版本中都可以看到計畫指南。 您也可以將包含計畫指南的資料庫附加到任何版本中。 當您將資料庫還原或附加至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的升級版本時，計畫指南仍維持不變。  
   
 ## <a name="types-of-plan-guides"></a>計畫指南的類型  
  您可以建立下列類型的計畫指南。  
@@ -125,7 +124,7 @@ sp_create_plan_guide
   
  對於以 SQL 或 TEMPLATE 為基礎的計畫指南而言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會逐字元比較查詢的 @module_or_batch 和 @params 引數值，使兩個值相符。 這表示您必須提供與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在實際批次中所收到的文字完全相符的文字。  
   
- 當@type = ' SQL ' 且@module_or_batch設定為 Null 時，的值@module_or_batch會設定為的值。 @stmt這表示，在提交給*statement_text*時，必須以與字元相同的格式來[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供 statement_text 的值。 不會執行內部轉換來簡化這個比對作業。  
+ 當 @type = ' SQL ' 且 @module_or_batch 設定為 Null 時，的值 @module_or_batch 會設定為的值 @stmt 。這表示，在提交給時，必須以與字元相同的格式來提供*statement_text*的值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不會執行內部轉換來簡化這個比對作業。  
   
  當一般 (SQL 或 OBJECT) 計畫指南和 TEMPLATE 計畫指南都適用於陳述式時，只會使用一般計畫指南。  
   
@@ -137,7 +136,7 @@ sp_create_plan_guide
   
 ## <a name="related-tasks"></a>相關工作  
   
-|工作|主題|  
+|Task|主題|  
 |----------|-----------|  
 |描述如何建立計畫指南。|[建立新的計畫指南](create-a-new-plan-guide.md)|  
 |描述如何建立參數化查詢的計畫指南。|[建立參數化查詢的計畫指南](create-a-plan-guide-for-parameterized-queries.md)|  
@@ -149,7 +148,7 @@ sp_create_plan_guide
 |描述如何驗證計畫指南。|[升級之後驗證計畫指南](validate-plan-guides-after-upgrade.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
  [sp_control_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
  [plan_guides &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   

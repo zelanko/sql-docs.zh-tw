@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1088aafc-14c5-4e7d-9930-606a24c3049b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e3654be0afe51be6566a09897a2656dd53c77696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad5bc2dbecd153192d7a2a3115d83ecfa1cb765c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062240"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926499"
 ---
 # <a name="access-to-the-integration-services-service"></a>對 Integration Services 服務的存取權
   封裝保護等級可限制已獲允許編輯和執行封裝的人員。 您需要額外的保護措施來限制有誰能夠檢視目前在伺服器上執行的封裝清單，以及有誰能夠停止目前在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中執行的封裝。  

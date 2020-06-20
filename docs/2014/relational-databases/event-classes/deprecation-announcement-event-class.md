@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16cb4a7d0ac1cec33f3f9907b1b49e5588f45247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c622d4d0c39d685b7808c6c4cf1bebbe7f455b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662999"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053047"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement 事件類別
   當您使用的功能將從 **未來版本中移除，但不會從下一個主要版本中移除時，就會發生** Deprecation Announcement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件類別。 為了使應用程式的使用壽命達到最久，請避免使用會造成 **Deprecation Announcement** 事件類別或 **Deprecation Final Support** 事件類別的功能。  
@@ -47,7 +46,7 @@ ms.locfileid: "62662999"
 |Offset|`int`|預存程序或批次內之陳述式的起始位移。|61|是|  
 |RequestID|`int`|包含陳述式之要求的識別碼。|49|是|  
 |ServerName|`nvarchar`|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
-|SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到，並以 Login2 的身分執行語句`SessionLoginName` ，則會`LoginName`顯示 Login1 並顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
+|SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到，並以 Login2 的身分 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行語句，則會 `SessionLoginName` 顯示 Login1 並 `LoginName` 顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |SqlHandle|`image`|可用於識別 SQL 批次或預存程序的二進位控制代碼。|63|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  

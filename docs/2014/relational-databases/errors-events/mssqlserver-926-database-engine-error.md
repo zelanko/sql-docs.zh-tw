@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 57e01668-883b-4be4-84a8-a111caaf0486
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4afdc9adae6f968ca89ff1a9b2bf9e5b67992037
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae6796c9f4869d45223ab1283a68fc2bfe78aa11
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912470"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031443"
 ---
 # <a name="mssqlserver_926"></a>MSSQLSERVER_926
     
@@ -51,7 +50,7 @@ ms.locfileid: "62912470"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 資料庫的備份與還原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [sysdatabases &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql)   
+ [sys.sys資料庫 &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql)   
  [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   

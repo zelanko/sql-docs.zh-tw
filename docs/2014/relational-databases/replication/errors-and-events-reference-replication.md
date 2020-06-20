@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d40f4f16c3ab8997ddee5c565a5ff3131e70a0f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721325"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010710"
 ---
 # <a name="errors-and-events-reference-replication"></a>錯誤和事件參考 (複寫)
   文件集的這一部分包含導致與複寫相關的許多錯誤之原因和解決方案的資訊。  

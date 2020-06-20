@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5e51cda61bb44d1f143cab50901276b927cca73a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae3b565f858c383775b4fcccfac236c316fcfa4e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176074"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927407"
 ---
 # <a name="what39s-new-database-engine"></a>新的&#39;（資料庫引擎）
   這個最新版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 導入了一些新功能和增強功能，可提升設計、開發和維護資料儲存系統之架構設計師、開發人員和管理員的能力和生產力。 以下是 [!INCLUDE[ssDE](../includes/ssde-md.md)] 已增強的範圍。  
@@ -30,11 +29,11 @@ ms.locfileid: "70176074"
  
   
 ###  <a name="sql-server-data-files-in-azure"></a><a name="DataFiles"></a>在 Azure 中 SQL Server 資料檔案  
- [在 azure 中 SQL Server 資料檔案](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)可讓您[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]以原生方式支援儲存為 Azure blob 的資料庫檔案。 這項功能可讓您在內部部署[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]或 Azure 中的虛擬機器中建立資料庫，並在 Azure Blob 儲存體中使用資料的專用儲存位置。  
+ [在 azure 中 SQL Server 資料檔案](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)可讓您以原生 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 方式支援儲存為 Azure blob 的資料庫檔案。 這項功能可讓您在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 內部部署或 Azure 中的虛擬機器中建立資料庫，並在 Azure Blob 儲存體中使用資料的專用儲存位置。  
   
   
 ###  <a name="host-a-sql-server-database-in-an-azure-virtual-machine"></a><a name="AzureVM"></a>在 Azure 虛擬機器中裝載 SQL Server 資料庫  
- 使用 [將[SQL Server 資料庫部署至 Azure 虛擬機器](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx)]，以在 Azure 虛擬機器中裝載實例[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的資料庫。  
+ 使用 [將[SQL Server 資料庫部署至 Azure 虛擬機器](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx)]，以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 azure 虛擬機器中裝載實例的資料庫。  
   
   
 ###  <a name="backup-and-restore-enhancements"></a><a name="Backup"></a>備份與還原增強功能  
@@ -42,11 +41,11 @@ ms.locfileid: "70176074"
   
 -   **SQL Server 備份至 URL**  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份至 URL 原本是在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 中導入，而且只有 [!INCLUDE[tsql](../includes/tsql-md.md)]、PowerShell 和 SMO 提供支援。 在[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中，您[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]可以使用來備份至 Azure Blob 儲存體服務或從中還原。 備份工作和維護計畫皆可使用這個新選項。 如需詳細資訊，請參閱[在 SQL Server Management Studio 中使用備份](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS)工作、[使用維護計畫 Wizard SQL SERVER 備份至 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)和[使用 SQL Server Management Studio 從 Azure 儲存體還原](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)。  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份至 URL 原本是在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 中導入，而且只有 [!INCLUDE[tsql](../includes/tsql-md.md)]、PowerShell 和 SMO 提供支援。 在中 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 來備份至 Azure Blob 儲存體服務或從中還原。 備份工作和維護計畫皆可使用這個新選項。 如需詳細資訊，請參閱[在 SQL Server Management Studio 中使用備份](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS)工作、[使用維護計畫 Wizard SQL SERVER 備份至 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)和[使用 SQL Server Management Studio 從 Azure 儲存體還原](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)。  
   
 -   **SQL Server 受控備份至 Azure**  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]建立在 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 備份至 URL 上，它是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供的服務，可用來管理及排程資料庫和記錄備份。 在此版本中，只支援備份至 Azure 儲存體。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]可以同時設定在資料庫和執行個體層級，這樣既可在資料庫層級更精確地控制，還可在執行個體層級自動化。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]可以在內部部署[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行的實例，以及[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在 Azure 虛擬機器上執行的實例上設定。 建議在 Azure 虛擬[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]機上執行的實例使用。 如需詳細資訊，請參閱[SQL Server 受控備份至 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]建立在 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 備份至 URL 上，它是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供的服務，可用來管理及排程資料庫和記錄備份。 在此版本中，只支援備份至 Azure 儲存體。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]可以同時設定在資料庫和執行個體層級，這樣既可在資料庫層級更精確地控制，還可在執行個體層級自動化。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 內部部署執行的實例，以及 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Azure 虛擬機器上執行的實例上設定。 建議 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Azure 虛擬機器上執行的實例使用。 如需詳細資訊，請參閱[SQL Server 受控備份至 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
   
 -   **備份的加密**  
   
@@ -104,7 +103,7 @@ ms.locfileid: "70176074"
    
   
 ###  <a name="buffer-pool-extension"></a><a name="Buffer"></a>緩衝集區延伸模組  
- [緩衝集區延伸](configure-windows/buffer-pool-extension.md)模組可將固態硬碟（SSD）緊密整合為[!INCLUDE[ssDE](../includes/ssde-md.md)]緩衝集區的非靜態隨機存取記憶體（NvRAM）延伸模組，以大幅提升 i/o 輸送量。  
+ [緩衝集區延伸](configure-windows/buffer-pool-extension.md)模組可將固態硬碟（SSD）緊密整合為緩衝集區的非靜態隨機存取記憶體（NvRAM）延伸模組， [!INCLUDE[ssDE](../includes/ssde-md.md)] 以大幅提升 i/o 輸送量。  
    
   
 ###  <a name="incremental-statistics"></a><a name="Stats"></a>累加統計資料  
@@ -133,13 +132,13 @@ ms.locfileid: "70176074"
  `SELECT ... INTO` 陳述式已經改良，現在可以平行操作。 資料庫相容性層級必須至少為 110。  
   
 ### <a name="tsql-enhancements-for-in-memory-oltp"></a>記憶體中 OLTP 的 [!INCLUDE[tsql](../includes/tsql-md.md)] 增強功能  
- 如需有關支援[!INCLUDE[tsql](../includes/tsql-md.md)]記憶體內部 oltp 之變更的詳細資訊，請參閱[記憶體內部 Oltp 的 transact-sql 支援](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)。  
+ 如需有關支援記憶體內部 OLTP 之變更的詳細資訊 [!INCLUDE[tsql](../includes/tsql-md.md)] ，請參閱[記憶體內部 Oltp 的 transact-sql 支援](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)。  
   
   
 ##  <a name="system-view-enhancements"></a><a name="SystemTable"></a>系統檢視增強功能  
   
 ### <a name="sysxml_indexes"></a>sys.xml_indexes  
- [xml_indexes &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql)有3個新的資料行： `xml_index_type`、 `xml_index_type_description`和。 `path_id`  
+ [sys.xml_indexes &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql)有3個新的資料行： `xml_index_type` 、 `xml_index_type_description` 和 `path_id` 。  
   
 ### <a name="sysdm_exec_query_profiles"></a>sys.dm_exec_query_profiles  
  [dm_exec_query_profiles &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql)會在執行查詢時監視即時查詢進度。  
@@ -148,7 +147,7 @@ ms.locfileid: "70176074"
  [column_store_row_groups &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)會以每個區段為基礎提供叢集資料行存放區索引資訊，以協助管理員做出系統管理決策。  
   
 ### <a name="sysdatabases"></a>sys.databases  
- [sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)有3個新的資料行： `is_auto_create_stats_incremental_on`、 `is_query_store_on`和。 `resource_pool_id`  
+ [sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)有3個新的資料行： `is_auto_create_stats_incremental_on` 、 `is_query_store_on` 和 `resource_pool_id` 。  
   
 ### <a name="system-view-enhancements-for-in-memory-oltp"></a>記憶體中 OLTP 的系統檢視表增強功能  
  如需支援記憶體內部 OLTP 之系統檢視增強功能的詳細資訊，請參閱[記憶體內部 oltp 的系統檢視、預存程式、dmv 和等候類型](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)。  
@@ -157,7 +156,7 @@ ms.locfileid: "70176074"
 ##  <a name="security-enhancements"></a><a name="Security"></a> 安全性增強功能  
   
 ### <a name="connect-any-database-permission"></a>CONNECT ANY DATABASE 權限  
- 新的伺服器層級權限。 將 **CONNECT ANY DATABASE** 授與登入，該登入必須連線到目前存在的所有資料庫，以及可能於日後建立的任何新資料庫。 不要在任何資料庫中授與超出連接的任何權限。 結合 [**選取所有使用者安全性實體**] `VIEW SERVER STATE`或以允許審核程式查看實例上的所有資料或所有資料庫狀態[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ 新的伺服器層級權限。 將 **CONNECT ANY DATABASE** 授與登入，該登入必須連線到目前存在的所有資料庫，以及可能於日後建立的任何新資料庫。 不要在任何資料庫中授與超出連接的任何權限。 結合 [**選取所有使用者安全性實體**] 或 `VIEW SERVER STATE` 以允許審核程式查看實例上的所有資料或所有資料庫狀態 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 ### <a name="impersonate-any-login-permission"></a>IMPERSONATE ANY LOGIN 權限  
  新的伺服器層級權限。 授與此權限時，可讓中間層程序在連接到資料庫時模擬連接的用戶端帳戶。 拒絕此權限時，高權限登入可能遭到封鎖，而無法模擬其他登入。 例如，具有 **CONTROL SERVER** 權限的登入可能遭到封鎖，而無法模擬其他登入。  
@@ -168,7 +167,7 @@ ms.locfileid: "70176074"
   
 ##  <a name="deployment-enhancements"></a><a name="Deployment"></a>部署增強功能  
 ### <a name="azure-vm"></a>Azure VM
-將[SQL Server 資料庫部署到 Microsoft Azure 虛擬機器](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)，可讓您將[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫部署到 Azure VM。  
+將[SQL Server 資料庫部署到 Microsoft Azure 虛擬機器](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)，可讓您將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫部署到 Azure VM。  
 
 ### <a name="refs"></a>ReFS
 現在支援在 ReFS 上部署資料庫。   

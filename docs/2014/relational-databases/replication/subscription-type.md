@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d936c1a1086f13d43bc38758f86a0ab80f757f7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18ccd93efe123d20415c3ce2cee2f0178b3d8620
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63249375"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063770"
 ---
 # <a name="subscription-type"></a>訂閱類型
   合併式複寫提供兩種訂閱類型：主訂閱與客訂閱 (對照舊版 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分別為全域與本機)。 擁有主訂閱的訂閱者可以：  

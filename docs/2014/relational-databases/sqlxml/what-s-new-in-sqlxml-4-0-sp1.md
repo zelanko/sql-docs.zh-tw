@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 76c0b882b6ff198a38c0903a51e15b4664aafc29
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 880937520385fbe6ce64be3fdfcbbf7d11c73741
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702825"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009454"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>SQLXML 4.0 SP1 的新功能&#39;
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 包含不同的更新和增強功能。 本主題摘要說明更新並提供詳細資訊的連結 (如果有的話)。 SQLXML 4.0 SP1 會提供其他的增強功能以支援 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中導入的新資料類型。 本主題包含下列主旨：  

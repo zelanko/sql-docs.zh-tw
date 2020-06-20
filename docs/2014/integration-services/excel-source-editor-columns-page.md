@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dba56ee39e710adc3973a00a0d84b1823ee74f1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3534ab746fd11786d02651f795d854b1a1466333
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059207"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966858"
 ---
 # <a name="excel-source-editor-columns-page"></a>Excel 來源編輯器 (資料行頁面)
   使用 [Excel 來源編輯器]**** 對話方塊的 [資料行]**** 頁面，將輸出資料行對應至每個外部 (來源) 資料行。  

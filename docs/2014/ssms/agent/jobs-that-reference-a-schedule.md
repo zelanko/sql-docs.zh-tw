@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efba2e73c3043ddbf25fef06b57ef039f6eacea5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03848f6f9cee7339f2148622a4b3b8bbd58a6351
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183465"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064453"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>參考排程的作業
   此對話方塊允許您檢視有關參考特定排程之作業的資訊。  
   
-## <a name="options"></a>選項。  
- **排程**  
+## <a name="options"></a>選項  
+ **[排程]**  
  顯示您正在檢視之排程的名稱。  
   
- **處於**  
+ **Selected**  
  唯讀。  
   
  **名稱**  
@@ -38,7 +37,7 @@ ms.locfileid: "63183465"
  **已啟用**  
  唯讀。 指出此作業目前是否為已啟用。  
   
- **類別**  
+ **類別目錄**  
  作業類別目錄。  
   
 ## <a name="see-also"></a>另請參閱  

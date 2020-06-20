@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d84f7fe551d83f609b2ffc3da92b51eb36b9a595
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43921efab592e6642fcc5adaef8caa869a1b524f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058970"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966748"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>執行 SQL 工作編輯器 (結果集頁面)
   使用 [執行 SQL 工作編輯器]**** 對話方塊的 [結果集]**** 頁面，即可將 SQL 陳述式的結果對應至新的或現有的變數。 如果 [一般] 頁面上的 [結果集]**** 已設定為 [無]****，就會停用此對話方塊中的選項。  
@@ -37,7 +36,7 @@ ms.locfileid: "66058970"
  **相關主題**： [執行 SQL 工作中的結果集](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
  **變數名稱**  
- 選取變數來將結果集對應至變數，或是按一下 [\<新增變數...>]****，使用 [新增變數]**** 對話方塊來新增新的變數。  
+ 選取變數來將結果集對應至變數，或按一下 \<**New variable...**> 以使用 [**加入變數**] 對話方塊來加入新的變數。  
   
  **加入**  
  按一下即可新增結果集對應。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 56ab8cb5fbfcd4562aa48ba80a83204a8ca97ad8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cea6e1b6aa5f9748be3f9117fe59b3cbec8b180
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058900"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966738"
 ---
 # <a name="expression-builder-integration-services"></a>運算式產生器 (Integration Services)
   **[運算式產生器]** 對話方塊提供圖形化使用者介面，用於建立屬性運算式所使用的運算式。 您可以從「 **設計師」中的自訂工作對話方塊，以及從** 中的 [!INCLUDE[ssIS](../includes/ssis-md.md)] [屬性] **視窗，存取** [運算式產生器] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]對話方塊。  

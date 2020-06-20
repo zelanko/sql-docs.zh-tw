@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c3a765f23b4bfcdd4d8f0ff84ac8d363424882bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdeb04558cf8544eb8aad5456ec42fed8160f025
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767443"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965158"
 ---
 # <a name="step-1-copying-the-lesson-3-package"></a>步驟 1:複製第 3 課的封裝
   在這項工作中，您將為第 3 課所建立的 Lesson 3.dtsx 套件建立複本。 另外，如果您並未完成第 3 課，可以將此教學課程中隨附之已完成的第 3 課封裝加入至專案中，然後建立該封裝的複本來使用。 在第 4 課的其餘課程中，您將使用這個新的複本。  
@@ -36,9 +35,9 @@ ms.locfileid: "62767443"
   
 6.  以滑鼠右鍵按一下 [控制流程]**** 索引標籤背景的任何位置，然後按一下 [屬性]****。  
   
-7.  在屬性視窗中，將`Name`屬性更新為`Lesson 4`。  
+7.  在屬性視窗中，將 `Name` 屬性更新為 `Lesson 4` 。  
   
-8.  按一下**ID**屬性的方塊，然後在清單中，按一下** \<[產生新的識別碼]>**。  
+8.  按一下 [識別碼]**** 屬性的方塊，然後在清單中按一下 [\<Generate New ID>]****。  
   
 ### <a name="to-add-the-completed-lesson-3-package"></a>新增已完成的第 3 課套件  
   

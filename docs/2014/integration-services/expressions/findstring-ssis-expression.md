@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7efc711e97abde1d33a7dd4194bd2953b959ef6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f1eec7ede1b4f48b53619280b4b618ff9b623df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769174"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966648"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS 運算式)
   傳回字元運算式中字串的指定出現位置。 傳回結果是以 1 為主的索引出現位置。 string 參數的評估結果必須為字串運算式，且 occurrence 參數的評估結果必須為整數。 如果找不到字串，傳回值將為 0。 如果字串出現的次數少於 occurrence 引數指定的次數，傳回值也是 0。  

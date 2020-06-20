@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a16d34ca8865174d9d05dc08f01402a9d87187b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046763"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052588"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed 事件類別
   RPC:Completed 事件類別表示已經完成遠端程序呼叫。  

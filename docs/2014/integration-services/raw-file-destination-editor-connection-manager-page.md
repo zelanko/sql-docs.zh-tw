@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2677d0dd1f4697177171ba0edd4641ec02110310
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a50ec57973deca40accbc98970919363681be63f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056570"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964628"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>原始檔案目的地編輯器 (連接管理員頁面)
   使用原始檔案目的地編輯器設定原始檔案目的地將，以便將原始資料寫入至檔案。  
@@ -62,6 +61,6 @@ ms.locfileid: "66056570"
  指定要做為輸出資料行使用的替代名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [Raw File Destination](data-flow/raw-file-destination.md)  
+ [原始檔案目的地](data-flow/raw-file-destination.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3826607072ad62af90c680572a42f5ffb3ab12a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75f79ec4e32ac56cf12e6211741d1e08273a375e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889783"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964518"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>以程式設計方式列舉可用的封裝
   當您以程式設計方式處理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時，可能會需要判別個別的封裝或資料夾是否存在，或是列舉可供載入與執行的預儲封裝。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別，提供各種方法以滿足這些需求。  

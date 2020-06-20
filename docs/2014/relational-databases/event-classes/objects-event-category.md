@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: acc1c7b0-4abf-42f8-b9a9-c383b715a735
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56a76c3675ceb3cf84c7812b4f9d95d61f9f830a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1fa100abd2fda4ff85e4153f0a9d7044bae8f46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62661949"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052840"
 ---
 # <a name="objects-event-category"></a>Objects 事件類別目錄
   **Objects** 事件類別目錄包含一般物件事件。  

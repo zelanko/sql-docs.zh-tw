@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80e858e75cec96b7e56e16fa7465a22048563726
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808396"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934602"
 ---
 # <a name="connection-properties-dialog-box"></a>連接屬性對話方塊
   使用此對話方塊來檢視目前的連接屬性。 當您在各個物件總管對話方塊中按一下 [檢視連接屬性]****，就會出現此對話方塊。 此頁面上顯示的屬性是唯讀的。  
@@ -29,7 +28,7 @@ ms.locfileid: "62808396"
  請注意，SQL Azure 的查詢逾時期限是 30 分鐘。  
   
 ## <a name="authentication"></a>驗證  
- 檢視目前連接的驗證屬性。 驗證屬性是建立連接時的登入和驗證方法。 若要變更驗證屬性，請中斷[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]與的連接，然後使用所需的連線選項，再次將物件總管連接到伺服器。  
+ 檢視目前連接的驗證屬性。 驗證屬性是建立連接時的登入和驗證方法。 若要變更驗證屬性，請中斷與的連接 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，然後使用所需的連線選項，再次將物件總管連接到伺服器。  
   
  **驗證方法**  
  目前連接所使用的驗證方法。  

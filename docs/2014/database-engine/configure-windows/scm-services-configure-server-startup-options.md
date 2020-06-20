@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 91a48d4acd771c19617bac26c1393f30334768e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af822eb405fb66f5e91340d42fc79bef0d769fbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810366"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935059"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>設定伺服器啟動選項 (SQL Server 組態管理員)
-  本主題描述如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration Manager，設定每次 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中啟動時要使用的啟動選項。 如需啟動選項的清單，請參閱 [Database Engine 服務啟動選項](database-engine-service-startup-options.md)。  
+  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager，設定每次 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中啟動時要使用的啟動選項。 如需啟動選項的清單，請參閱 [Database Engine 服務啟動選項](database-engine-service-startup-options.md)。  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
@@ -52,22 +51,22 @@ ms.locfileid: "62810366"
     >  因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理主控台程式的嵌入式管理單元，而不是獨立的程式，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。  
     >   
     >  -   **Windows 10**：  
-    >          若要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開啟 Configuration Manager，請在 [**開始] 頁面**上輸入 sqlservermanager12.msc （ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]適用于）。 針對先前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以較小的數字取代 12。 按一下 SQLServerManager12.msc 即可開啟 Configuration Manager。 若要將 Configuration Manager 釘選到起始頁或工作列，請在 [Sqlservermanager12.msc] 上按一下滑鼠右鍵，然後按一下 [**開啟檔案位置**]。 在 Windows 檔案瀏覽器中，以滑鼠右鍵按一下 [Sqlservermanager12.msc]，然後按一下 [**釘選到開始**] 或 [**釘選到工作列**]。  
+    >          若要開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager，請在 [**開始] 頁面**上輸入 sqlservermanager12.msc （適用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ）。 針對先前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以較小的數字取代 12。 按一下 SQLServerManager12.msc 即可開啟 Configuration Manager。 若要將 Configuration Manager 釘選到起始頁或工作列，請在 [Sqlservermanager12.msc] 上按一下滑鼠右鍵，然後按一下 [**開啟檔案位置**]。 在 Windows 檔案瀏覽器中，以滑鼠右鍵按一下 [Sqlservermanager12.msc]，然後按一下 [**釘選到開始**] 或 [**釘選到工作列**]。  
     > -   **Windows 8**：  
-    >          若要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開啟 Configuration Manager，請在 [**搜尋**] 快速鍵的 [**應用程式**] 下，輸入**SQLServerManager\<version>** `SQLServerManager12.msc`，例如，然後按**enter**。  
+    >          若要開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager，請在 [**搜尋**] 快速鍵的 [**應用程式**] 底下，輸入**SQLServerManager \<version> ** （例如 `SQLServerManager12.msc` ），然後按**enter**。  
   
 2.  在右窗格中，以滑鼠右鍵按一下 [ **SQL Server （***<instance_name>***）**]，然後按一下 [**屬性**]。  
   
 3.  在 **[啟動參數]** 索引標籤的 **[指定啟動參數]** 方塊中輸入參數，然後按一下 **[加入]**。  
   
-     例如，若要在單一使用者模式中啟動，請`-m`在 [**指定啟動參數**] 方塊中輸入，然後按一下 [**新增**]。 (當您以單一使用者模式重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，請先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。 否則， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可能會先進行連接，您就無法以另一個使用者的身分進行連接)。  
+     例如，若要在單一使用者模式中啟動，請 `-m` 在 [**指定啟動參數**] 方塊中輸入，然後按一下 [**新增**]。 (當您以單一使用者模式重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，請先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。 否則， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可能會先進行連接，您就無法以另一個使用者的身分進行連接)。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 5.  重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
     > [!WARNING]  
-    >  當您完成使用單一使用者模式之後，請在 [啟動參數] 方塊的 [ `-m` **現有參數**] 方塊中選取參數，然後按一下 [**移除**]。 重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還原為一般多使用者模式。  
+    >  當您完成使用單一使用者模式之後，請在 [啟動參數] 方塊的 `-m` [**現有參數**] 方塊中選取參數，然後按一下 [**移除**]。 重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還原為一般多使用者模式。  
   
 ## <a name="see-also"></a>另請參閱  
  [以單一使用者模式啟動 SQL Server](start-sql-server-in-single-user-mode.md)   

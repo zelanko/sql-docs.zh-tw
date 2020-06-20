@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 018ca302bf4d5fe8271369008ffbfec7d228cfbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc7281dab01d97df3608825a4e51c256f1b5296c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245736"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064438"
 ---
 # <a name="connect-to-server-database-engine"></a>連接到伺服器 (Database Engine)
   連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 時，使用此對話方塊來檢視或指定選項。 在大多數的情況下，您可以在 [伺服器名稱] 方塊中輸入資料庫伺服器的電腦名稱，然後按一下 [連接] 來進行連接。 如果要連接到 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，請使用電腦名稱並於後面加上 **\sqlexpress**。  

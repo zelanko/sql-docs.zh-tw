@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d67d036987fe92275b4cf524c15c1ebe083001b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a70c72647ad1b348a8f9c1fb6980626b5f1b178
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704954"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063819"
 ---
 # <a name="input-and-output-error-during-hard-page-fault"></a>硬性分頁錯誤期間的輸入和輸出錯誤
   這個規則會檢查系統事件記錄檔中是否有 EventId 51。 此錯誤是由硬分頁錯誤期間的錯誤所造成。  

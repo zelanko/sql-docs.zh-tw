@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84acc1541e8c66da15405330ca48b41f256811ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056887"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964876"
 ---
 # <a name="package-configurations"></a>封裝組態
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供封裝設定，可讓您在執行時間用來更新屬性的值。  
@@ -79,7 +78,7 @@ ms.locfileid: "66056887"
   
 -   您不能使用 **/ConfigFile** 選項來載入可取代您在設計階段指定之組態的組態。  
   
- 如需這些選項的詳細資訊，以及這些選項的行為在和舊版[!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]之間的差異，請參閱[SQL Server 2014 中 Integration Services 功能的行為變更](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)。  
+ 如需這些選項的詳細資訊，以及這些選項的行為 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 在和舊版之間的差異，請參閱[SQL Server 2014 中 Integration Services 功能的行為變更](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)。  
   
 ## <a name="package-configuration-types"></a>封裝組態類型  
  下表描述封裝組態類型。  
@@ -123,7 +122,7 @@ ms.locfileid: "66056887"
 ### <a name="registry-entry"></a>登錄項目  
  如果您想使用登錄項目儲存組態，可以使用現有的機碼或在 HKEY_CURRENT_USER 中建立新的機碼。 您所使用的登錄機碼必須具有名為 `Value` 的值。 該值可以是 DWORD 或字串。  
   
- 如果您選取 [登錄項目]**** 組態類型，就要在 [登錄項目] 方塊中輸入登錄機碼的名稱。 格式為 \<登錄機碼>。 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式識別該機碼。 例如，若要使用位於 SSISPackages 中的 MyPackage 機碼，請輸入 `SSISPackages\MyPackage`。  
+ 如果您選取 [登錄項目]**** 組態類型，就要在 [登錄項目] 方塊中輸入登錄機碼的名稱。 格式為 \<registry key>。 如果您想要使用不在 HKEY_CURRENT_USER 根目錄中的登錄機碼，請使用格式 \<Registry key\registry key\\...> 來識別金鑰。 例如，若要使用位於 SSISPackages 中的 MyPackage 機碼，請輸入 `SSISPackages\MyPackage`。  
   
 ### <a name="sql-server"></a>SQL Server  
  如果選取 [SQL Server]**** 組態類型，則需要指定要儲存組態之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的連接。 您可以將組態儲存至現有的資料表，或者在指定的資料庫中建立新的資料表。  

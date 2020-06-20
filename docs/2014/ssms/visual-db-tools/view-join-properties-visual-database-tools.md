@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a2bc6e2b1becdcecdd6ef7eef5635b6460440b40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 899bb71f6af9555925328042bcb6fc73a5251532
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63227005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064241"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>檢視聯結屬性 (Visual Database Tools)
   您可以在 [屬性] 視窗中檢視屬性的集合。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5be897bd-f36c-4c6a-a91a-13d0d016f8b6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 64c565c45288de157a3ba4c6c367ae7f8849dfee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b0d52d28440a92f79b08e90aff73b45fe643070
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808699"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934649"
 ---
 # <a name="connect-to-server-integration-services"></a>連線到伺服器 (Integration Services)
   連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 時，使用此對話方塊來檢視或指定選項。  
@@ -30,7 +29,7 @@ ms.locfileid: "62808699"
  選取要連接的伺服器。 預設會顯示上次連接的伺服器執行個體。  
   
 > [!NOTE]  
->  請勿使用* \<servername>* \\ * \<instancename>*，因為[!INCLUDE[ssIS](../includes/ssis-md.md)]不支援在電腦上有多個實例。  
+>  請勿使用 *\<servername>* \\ *\<instancename>* ，因為不 [!INCLUDE[ssIS](../includes/ssis-md.md)] 支援在電腦上有多個實例。  
   
  **驗證**  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 僅有 [!INCLUDE[ssIS](../includes/ssis-md.md)]Windows 驗證可用。 Windows 驗證模式允許使用者透過 Windows 使用者帳戶連接。  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ef98316982090d247c09ec887e0d00a5c895950b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61cc9b3b9a07bb20d8aa0defa28fdae133ae454f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74054851"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933265"
 ---
 # <a name="string-utility-functions-sample"></a>字串公用程式函數範例
   這個「字串公用程式」範例包含以 Visual C# 和 Visual Basic 撰寫的資料流資料表值函式，它會將逗號分隔字串分割成具有一個資料行的資料表。 它也包含彙總函式，可將字串資料行轉換為逗號分隔字串。  另外還實作純量函數和資料表值函式，它們提供規則運算式取代和規則運算式搜尋功能。  
@@ -80,7 +79,7 @@ ms.locfileid: "74054851"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-    -   將[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令腳本複製到檔案中，並將`test.sql`它儲存成範例目錄中的。  
+    -   將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存成 `test.sql` 範例目錄中的。  
   
 8.  使用下列命令來執行測試指令碼  
   

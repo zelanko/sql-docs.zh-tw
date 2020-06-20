@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 58b26088-f4b1-4962-b824-3e360e955671
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7541ba23401bf964f0aa5c8a0425719b89d96b43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bcb8c42be62264e9d4c0b43f84055d9e62d2b50
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067986"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940221"
 ---
 # <a name="storage-options-dialog-box-analysis-services---multidimensional-data"></a>儲存選項對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [儲存選項]**** 對話方塊，即可指定維度、Cube、量值群組以及資料分割的自訂儲存模式、主動式快取和通知選項。 您可以藉由在 [儲存設定]**** 對話方塊上按一下 [選項]****，來顯示 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [儲存選項]**** 對話方塊。 如需 [儲存設定]**** 對話方塊的詳細資訊，請參閱[儲存設定對話方塊 &#40;Analysis Services - 多維度資料&#41;](storage-settings-dialog-box-analysis-services-multidimensional-data.md)。  

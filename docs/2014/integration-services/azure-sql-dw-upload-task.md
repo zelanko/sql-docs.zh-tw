@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 112cf764-f85a-4c1a-b732-d299d717c0d4
 author: yualan
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c310ee1d60648ac4b1eb299a0fd291adb86aea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 249f29e40701658ddcc85f4a2a79fc8c0ac2cff5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061286"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925129"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上傳工作
 **Azure SQL DW 上傳工作** 讓 SSIS 套件能夠將本機資料上傳到 Azure SQL 資料倉儲 (DW) 中的資料表。 目前支援的來源資料檔案格式為使用 UTF8 編碼的分隔文字。 上傳程式會遵循有效率的 PolyBase 方法。 具體來說，資料會先上傳到 Azure Blob 儲存體，再到 Azure SQL DW。 因此，使用此工作會需要 Azure Blob 儲存體。
@@ -42,7 +41,7 @@ RetainFiles|指定是否要保留上傳到 Azure 儲存體的檔案。
 CompressionType|指定在將檔案上傳到 Azure 儲存體時要使用的壓縮格式。 本機來源不會受到影響。
 CompressionLevel|指定要用於壓縮格式的壓縮層級。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 連線管理員。
-TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 [ ** \<新增資料表 ...] >** 建立一個新的。
+TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇建立一個新的 **\<New Table ...>** 。
 TableDistribution|指定新資料表的發佈方法。 如果為 **TableName**指定了新的資料表名稱即適用。
 HashColumnName|指定用於雜湊表發佈的資料行。 如果為 **TableDistribution** 指定了 **HASH**即適用。
 
