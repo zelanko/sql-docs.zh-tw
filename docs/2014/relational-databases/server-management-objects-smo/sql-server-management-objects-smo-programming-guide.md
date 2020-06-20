@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4dfa741f79b0a6dec95250edd9f7eb8cee4afb1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 863e3fc90f750f91611a6fa75655783c7802ec23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655298"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055182"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>SQL Server 管理物件 (SMO) 程式設計指南
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件（SMO）是一種物件集合，其設計目的是為了進行管理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有層面。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects (RMO) 是封裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫管理的物件集合。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件（SMO）是一種物件集合，其設計目的是為了進行管理的所有層面 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects (RMO) 是封裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫管理的物件集合。  
   
 |主題|描述|  
 |-----------|-----------------|  

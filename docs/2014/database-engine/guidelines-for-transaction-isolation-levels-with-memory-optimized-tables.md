@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 834c5950a8f8b0ddf8854d06c6fb1073a264fc22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779153"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932879"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>搭配記憶體最佳化的資料表使用交易隔離等級的方針
   在許多情況下，您必須指定交易隔離等級。 記憶體最佳化資料表的交易隔離不同於磁碟基礎的資料表。  
@@ -56,7 +55,7 @@ ms.locfileid: "62779153"
   
  SNAPSHOT 隔離等級提供的保證 (記憶體最佳化資料表支援的最低隔離等級) 包含 READ COMMITTED 保證。 交易中的每個陳述式都會讀取資料庫的相同一致版本。 不只是交易所讀取的所有資料列都會認可至資料庫，所有讀取作業也會看到同一組交易所做的同一組變更。  
   
- **指導**方針：如果只需要讀取認可的隔離保證，請搭配原生編譯的預存程式使用快照集隔離，並透過解讀[!INCLUDE[tsql](../includes/tsql-md.md)]來存取記憶體優化的資料表。  
+ **指導**方針：如果只需要讀取認可的隔離保證，請搭配原生編譯的預存程式使用快照集隔離，並透過解讀來存取記憶體優化的資料表 [!INCLUDE[tsql](../includes/tsql-md.md)] 。  
   
  對於自動認可交易，READ COMMITTED 隔離等級隱含對應到記憶體最佳化資料表的 SNAPSHOT 隔離。 因此，如果 TRANSACTION ISOLATION LEVEL 工作階段設定為 READ COMMITTED，當存取記憶體最佳化的資料表時，不需要透過資料表提示指定隔離等級。  
   
@@ -123,7 +122,7 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>鎖定資料表提示  
- 鎖定提示（[資料表提示 &#40;transact-sql&#41;](/sql/t-sql/queries/hints-transact-sql-table)）（例如 HOLDLOCK 和 XLOCK）可搭配以磁片為基礎的資料表使用，使[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]其擁有比所指定隔離等級所需更多的鎖定。  
+ 鎖定提示（[資料表提示 &#40;transact-sql&#41;](/sql/t-sql/queries/hints-transact-sql-table)）（例如 HOLDLOCK 和 XLOCK）可搭配以磁片為基礎的資料表使用，使其擁有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 比所指定隔離等級所需更多的鎖定。  
   
  記憶體最佳化的資料表不使用鎖定。 可使用較高的隔離等級，例如 REPEATABLE READ 和 SERIALIZABLE，來宣告所需的保證。  
   

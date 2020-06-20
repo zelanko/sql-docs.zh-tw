@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0c859bdd982fa7de586c9230754c571eb750944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061619"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>訂閱和檢查 Finance Name 原則
   在這項工作中，您會將 Finance 資料庫設定為訂閱 Finance 原則類別目錄。 然後，您將測試 Finance Name 原則。  
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>訂閱 Finance 原則類別目錄  
   
-1.  在物件總管中，展開 [**資料庫**]， `Finance`以滑鼠右鍵按一下，指向 [**原則**]，然後按一下 [**類別**]。  
+1.  在物件總管中，展開 [**資料庫**]，以滑鼠右鍵按一下 `Finance` ，指向 [**原則**]，然後按一下 [**類別**]。  
   
-2.  針對`Finance`類別目錄選取 [已**訂閱**] 核取方塊。  
+2.  針對類別目錄選取 [已**訂閱**] 核取方塊 `Finance` 。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66090688"
 ## <a name="summary"></a>摘要  
  這個教學課程已經示範了如何建立以原則為基礎的管理條件、原則和原則群組，以及如何套用篩選和檢查以原則為基礎的管理目標是否符合。  
   
-## <a name="next"></a>下一頁  
+## <a name="next"></a>下一個  
  本教學課程已完成。 若要返回開頭，請按一下 [教學課程：使用以原則為基礎的管理來管理伺服器](tutorial-administering-servers-by-using-policy-based-management.md)。  
   
  如需教學課程的清單，請參閱[SQL Server 2014 的教學](../../tutorials/tutorials-for-sql-server-2014.md)課程。  

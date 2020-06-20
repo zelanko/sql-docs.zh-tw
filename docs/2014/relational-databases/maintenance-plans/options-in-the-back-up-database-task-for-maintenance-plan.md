@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 952730f09deeede360dff5e2bd83f8cdc8a20a67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205955"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024060"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>備份資料庫工作 (維護計畫)
   使用 [備份資料庫工作]  對話方塊，即可將備份工作加入維護計畫中。 萬一因為發生系統或硬體失敗 (或使用者錯誤) 而導致資料庫在某方面發生損毀，因此需要還原已備份副本時，備份資料庫就相當重要。 此工作讓您能夠執行完整、差異、檔案和檔案群組，以及交易記錄的備份。  

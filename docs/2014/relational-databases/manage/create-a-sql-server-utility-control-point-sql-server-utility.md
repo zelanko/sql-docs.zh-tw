@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: eefa464ae8cb694001d40c5ad9090f7f4efbd8e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 833c83868230c2ac05514db666bd4cab629d9588
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175877"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023565"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>建立 SQL Server 公用程式控制點 (SQL Server 公用程式)
   企業可以擁有多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式，每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式都可以管理多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和資料層應用程式。 每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式都只能有一個公用程式控制點 (UCP)。 您必須針對每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式建立新的 UCP。 每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體和每一個資料層應用程式都只是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式的成員，而且是由單一 UCP 所管理。
@@ -47,7 +46,7 @@ ms.locfileid: "78175877"
 
  在此版本中，UCP 必須滿足下列需求：
 
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體必須是受支援的版本。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體必須是受支援的版本。 如需版本支援的功能清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。
 
 -   我們建議您使用區分大小寫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體來主控 UCP。
 
@@ -161,7 +160,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |---------------------|-----------------------|
 |您必須在即將建立公用程式控制點的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上擁有系統管理員權限。|使用具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上系統管理員權限的帳戶登入。|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本必須是 10.50 或更高的版本。|指定要主控 UCP 的另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體必須是受支援的版本。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。|指定要主控 UCP 的另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體必須是受支援的版本。 如需版本支援的功能清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。|指定要主控 UCP 的另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體不得為使用任何其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 所註冊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|請指定不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體以裝載 UCP，或者從 UCP (目前為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的受管理的執行個體) 解除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的註冊。|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體不得主控公用程式控制點。|指定要主控 UCP 的另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|
 |指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體必須啟用 TCP/IP。|為指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體啟用 TCP/IP。|

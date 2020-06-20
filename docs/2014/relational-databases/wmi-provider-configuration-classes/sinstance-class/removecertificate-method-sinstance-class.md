@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e5dbafa-a634-4617-9622-510514fce0ce
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d98cff84b93a13daec7be86dbc24b5fe9556f76c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b876cd75778d1da9c9a46f65f39b915ebee0552
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720926"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061353"
 ---
 # <a name="removecertificate-method-sinstance-class"></a>RemoveCertificate 方法 (SInstance 類別)
   從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中移除目前的安全性憑證。  
@@ -38,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  代表 [執行個體上之伺服器設定的](sinstance-class.md) SInstance 類別 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

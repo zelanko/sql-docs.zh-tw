@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22b22251188f4b175c24610833aa1b74bdb0badb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131796"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055247"
 ---
 # <a name="overview-smo"></a>概觀 (SMO)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件（SMO）是針對以程式設計方式管理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的物件。 您可以使用 SMO 來建立自訂的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理應用程式。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是一種用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能強大且廣泛的應用程式，但是可能有時候 SMO 應用程式還是會提供比較好的服務。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件（SMO）是針對以程式設計方式管理的物件 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以使用 SMO 來建立自訂的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理應用程式。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是一種用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能強大且廣泛的應用程式，但是可能有時候 SMO 應用程式還是會提供比較好的服務。  
   
  例如，可能必須簡化控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工作的使用者應用程式，才能符合新使用者的需求及降低訓練成本。 您可能必須建立自訂的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，或是建立一個應用程式來建立及監視索引的效率。 也可能會使用 SMO 應用程式，將協力廠商硬體或軟體緊密地併入資料庫管理應用程式中。  
   
@@ -134,7 +133,7 @@ ms.locfileid: "63131796"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- 物件的 URN 可以藉由參考它的 URN 屬性來加以擷取。 Scripter 物件也會使用 URN 當做參數，將物件參考傳遞給 `Scripter` 物件的方法。 此外，也可以為`Server`物件的**GETSMOOBJECT**方法指定 URN。 這是用來建立 SMO 物件的執行個體。  
+ 物件的 URN 可以藉由參考它的 URN 屬性來加以擷取。 Scripter 物件也會使用 URN 當做參數，將物件參考傳遞給 `Scripter` 物件的方法。 此外，也可以為物件的**GetSmoObject**方法指定 URN `Server` 。 這是用來建立 SMO 物件的執行個體。  
   
 ## <a name="new-sql-server-features-represented-in-smo"></a>SMO 中表示的新 SQL Server 功能  
  **資料表和索引資料分割**  

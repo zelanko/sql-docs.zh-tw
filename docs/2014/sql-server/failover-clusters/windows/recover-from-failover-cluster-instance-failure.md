@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0c4da45e57342288cc23a9783709666f4c02d0bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a5f0f02e769845e289746a8e1ac13c9cfcb2ef3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050009"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062473"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>從容錯移轉叢集執行個體失敗的狀況復原
   此主題描述在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]發生容錯移轉之後，如何使用容錯移轉叢集管理員嵌入式管理單元，從叢集失敗中復原。 容錯移轉叢集管理員嵌入式管理單元是 Windows Server 容錯移轉叢集 (WSFC) 服務的叢集管理應用程式。  

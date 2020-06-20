@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9357a345593cd81c420b702a38a02c60da5aebcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ddc4021866d6b6622d6ad4aaacd00389da40ca0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009915"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970818"
 ---
 # <a name="set-up-filestream-on-a-failover-cluster"></a>設定容錯移轉叢集上的 FILESTREAM
   此主題描述如何在容錯移轉叢集上設定 FILESTREAM。 在您嘗試進行這個程序之前，應該先了解 [容錯移轉叢集](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 並啟用 FILESTREAM。 如需如何啟用 FILESTREAM 的相關資訊，請參閱 [啟用及設定 FILESTREAM](enable-and-configure-filestream.md)。  

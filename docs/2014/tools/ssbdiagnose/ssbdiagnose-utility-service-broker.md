@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8efc581eebd7d8fa7fa265abb54168af78b57ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211000"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057653"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 公用程式 [Service Broker]
   **ssbdiagnose** 公用程式會報告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務組態中的問題。 您可以針對兩個服務或單一服務進行組態檢查。 問題會在命令提示字元視窗中報告成人們可讀取的文字，或可重新導向至檔案或其他程式的格式化 XML。  
@@ -183,16 +182,16 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  可識別應用程式中某個交談端點的唯一識別碼。 交談控制代碼對於交談的某個端點而言是唯一的，而起始端和目標端點具有不同的交談控制代碼。  
   
- *@dialog_handle* **BEGIN DIALOG**語句的參數和`conversation_handle` **RECEIVE**語句結果集中的資料行，會將交談控制碼傳回到應用程式。  
+ *@dialog_handle* **BEGIN DIALOG**語句的參數和 `conversation_handle` **RECEIVE**語句結果集中的資料行，會將交談控制碼傳回到應用程式。  
   
- **Transmission_queue**和**sys.databases conversation_endpoints**目錄檢視`conversation_handle`的資料行中會報告交談控制碼。  
+ `conversation_handle` **Transmission_queue**和**sys.databases conversation_endpoints**目錄檢視的資料行中會報告交談控制碼。  
   
  *conversation_group_id*  
  識別交談群組且不重複的識別碼。  
   
- *@conversation_group_id* **GET 交談 group**語句的參數和`conversation_group_id` **RECEIVE**語句結果集中的資料行，會將交談群組識別碼傳回給應用程式。  
+ *@conversation_group_id* **GET 交談 group**語句的參數和 `conversation_group_id` **RECEIVE**語句結果集中的資料行，會將交談群組識別碼傳回給應用程式。  
   
- **Conversation_groups**和**sys.databases conversation_endpoints**目錄檢視的`conversation_group_id`資料行中，會報告交談群組識別碼。  
+ `conversation_group_id` **Conversation_groups**和**sys.databases conversation_endpoints**目錄檢視的資料行中，會報告交談群組識別碼。  
   
  *conversation_id*  
  識別交談且不重複的識別碼。 對於交談的起始端和目標端點而言，其交談識別碼都相同。  
@@ -243,7 +242,7 @@ WHERE database_id = DB_ID();
  **-S** *server_name*[\\*instance_name*]  
  指定保存要分析之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體。  
   
- 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的預設執行個體。 指定 *server_name***\\***instance_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的具名執行個體。 如未指定 **-S** ，則 **ssbdiagnose** 會使用 SQLCMDSERVER 環境變數的值。 如果也沒有設定 SQLCMDSERVER， **ssbdiagnose** 就會連接至本機電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 預設執行個體。  
+ 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的預設執行個體。 指定*server_name ***\\*** instance_name* ，以連接到該伺服器上之的已命名實例 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 如未指定 **-S** ，則 **ssbdiagnose** 會使用 SQLCMDSERVER 環境變數的值。 如果也沒有設定 SQLCMDSERVER， **ssbdiagnose** 就會連接至本機電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 預設執行個體。  
   
  **-d** *database_name*  
  指定保存要分析之 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務的資料庫。 如果此資料庫不存在，就會產生錯誤訊息。 如未指定 **-d** ，預設值就是登入之預設資料庫屬性中所指定的資料庫。  

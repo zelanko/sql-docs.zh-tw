@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d44d8d8bdda5f8c15fffe8f3aaf0eaf2d099e81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62805567"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040885"
 ---
 # <a name="create-custom-templates"></a>建立自訂範本
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了許多一般工作的範本，但範本真正的威力，在於能夠建立您經常需要建立之複雜指令碼的自訂範本。 在這個練習中，您將利用幾個參數來建立簡單的指令碼，但冗長而重複的指令碼也適合使用範本。  
@@ -67,7 +66,7 @@ ms.locfileid: "62805567"
   
 10. 在 [查詢編輯器] 中，輸入 **EXECUTE dbo.WorkOrdersForBlade**，然後按 F5 鍵來執行查詢。 確認 [結果]**** 窗格會傳回刀鋒視窗的工單清單。  
   
-11. 編輯範本腳本（步驟7中的腳本），以四個位置中的參數<strong> *<* product_name</strong>、 `nvarchar(50)`、<strong>名稱*>*</strong>取代 [產品名稱] 分葉。  
+11. 編輯範本腳本（步驟7中的腳本），以四個位置中的參數<strong> *<* product_name</strong>、 `nvarchar(50)` 、 <strong> *>* 名稱</strong>取代 [產品名稱] 分葉。  
   
     > [!NOTE]  
     >  參數具備三個元素：想要取代的參數名稱、參數的資料類型和參數的預設值。  
@@ -103,7 +102,7 @@ ms.locfileid: "62805567"
   
 3.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]**。  
   
-4.  在 [**取代範本參數**] 對話方塊中，針對`product_name` [值] 輸入**FreeWheel** （覆寫預設內容），然後按一下 **[確定]** 關閉 [**取代範本參數**] 對話方塊，並在 [查詢編輯器] 中修改腳本。  
+4.  在 [**取代範本參數**] 對話方塊中，針對 [ `product_name` 值] 輸入**FreeWheel** （覆寫預設內容），然後按一下 **[確定]** 關閉 [**取代範本參數**] 對話方塊，並在 [查詢編輯器] 中修改腳本。  
   
 5.  按 F5 鍵來執行這項查詢，建立程序。  
   

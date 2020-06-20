@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d388256f8c536724e0819704c268aaad379d85e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238139"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055464"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit 動作群組和動作
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和個別事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](sql-server-audit-database-engine.md)。  
@@ -88,9 +87,8 @@ ms.locfileid: "63238139"
 |DATABASE_OWNERSHIP_CHANGE_GROUP|當您使用 ALTER AUTHORIZATION 陳述式來變更資料庫擁有者，而且已檢查完成此作業所需的權限時，就會引發這個事件。 伺服器上任何資料庫的任何資料庫擁有權變更都會引發這個事件。 等於＜ [Audit Change Database Owner Event Class](../../event-classes/audit-change-database-owner-event-class.md)＞。|  
 |DATABASE_PERMISSION_CHANGE_GROUP|每當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的任何主體對陳述式權限發出 GRANT、REVOKE 或 DENY 時，就會引發這個事件 (這適用於僅限資料庫的事件，例如授與資料庫的權限)。<br /><br /> 伺服器上任何資料庫的任何資料庫權限變更 (GDR) 都會引發這個事件。 等於＜ [Audit Database Scope GDR Event Class](../../event-classes/audit-database-scope-gdr-event-class.md)＞。|  
 |DATABASE_PRINCIPAL_CHANGE_GROUP|從資料庫建立、改變或卸除類似使用者的主體時，就會引發這個事件。 等於＜ [Audit Database Principal Management Event Class](../../event-classes/audit-database-principal-management-event-class.md)＞。 (也等於 Audit Add DB Principal 事件類別，它發生於已被取代的 sp_grantdbaccess、sp_revokedbaccess、sp_addPrincipal 和 sp_dropPrincipal 預存程序上)。<br /><br /> 每當使用 sp_addrole、sp_droprole 預存程序來加入或移除資料庫角色時，就會引發這個事件。 每當從任何資料庫建立、改變或卸除任何資料庫主體時，就會引發這個事件。 等於＜ [Audit Add Role Event Class](../../event-classes/audit-add-role-event-class.md)＞。|  
-|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|當資料庫範圍內有模擬作業 (如 EXECUTE AS \<主體> 或 SETPRINCIPAL) 時，就會引發這個事件。 這個事件是針對任何資料庫中進行的模擬作業而引發。 等於＜ [Audit Database Principal Impersonation Event Class](../../event-classes/audit-database-principal-impersonation-event-class.md)＞。|  
-|DATABASE_ROLE_MEMBER_CHANGE_GROUP|每當從資料庫角色中加入或移除登入時，就會引發這個事件。 這個事件類別會針對 sp_addrolemember、sp_changegroup 及 sp_droprolemember 預存程序而引發。 任何資料庫中的任何資料庫角色成員變更都會引發這個事件。 等於＜ [Audit Add Member to DB Role 事件類別
-](../../event-classes/audit-add-member-to-db-role-event-class.md)＞。|  
+|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|當資料庫範圍內有模擬作業，例如 EXECUTE AS 或 SETPRINCIPAL) 時，就會引發這個事件 \<principal> 。 這個事件是針對任何資料庫中進行的模擬作業而引發。 等於＜ [Audit Database Principal Impersonation Event Class](../../event-classes/audit-database-principal-impersonation-event-class.md)＞。|  
+|DATABASE_ROLE_MEMBER_CHANGE_GROUP|每當從資料庫角色中加入或移除登入時，就會引發這個事件。 這個事件類別會針對 sp_addrolemember、sp_changegroup 及 sp_droprolemember 預存程序而引發。 任何資料庫中的任何資料庫角色成員變更都會引發這個事件。 等於＜ [Audit Add Member to DB Role 事件類別](../../event-classes/audit-add-member-to-db-role-event-class.md)＞。|  
 |DBCC_GROUP|每當主體發出任何 DBCC 命令時，就會引發這個事件。 等於＜ [Audit DBCC Event Class](../../event-classes/audit-dbcc-event-class.md)＞。|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|表示某個主體嘗試登入自主資料庫卻失敗。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。 等於＜ [Audit Login Failed Event Class](../../event-classes/audit-login-failed-event-class.md)＞。|  
 |FAILED_LOGIN_GROUP|表示主體嘗試登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 但失敗。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。 等於＜ [Audit Login Failed Event Class](../../event-classes/audit-login-failed-event-class.md)＞。|  
@@ -107,9 +105,8 @@ ms.locfileid: "63238139"
 |SERVER_OPERATION_GROUP|當使用安全性稽核作業 (如改變設定、資源、外部存取或權限) 時，將會引發這個事件。 等於＜ [Audit Server Operation Event Class](../../event-classes/audit-server-operation-event-class.md)＞。|  
 |SERVER_PERMISSION_CHANGE_GROUP|當發出 GRANT、REVOKE 或 DENY 以取得伺服器範圍的權限 (例如建立登入) 時，就會引發這個事件。 等於＜ [Audit Server Scope GDR Event Class](../../event-classes/audit-server-scope-gdr-event-class.md)＞。|  
 |SERVER_PRINCIPAL_CHANGE_GROUP|當建立、改變或卸除伺服器主體時，就會引發這個事件。 等於＜ [Audit Server Principal Management Event Class](../../event-classes/audit-server-principal-management-event-class.md)＞。<br /><br /> 每當主體發出 sp_defaultdb 或 sp_defaultlanguage 預存程序或是 ALTER LOGIN 陳述式時，就會引發這個事件。 等於＜ [Audit Addlogin Event Class](../../event-classes/audit-addlogin-event-class.md)＞。<br /><br /> 這個事件會在 sp_addlogin 和 sp_droplogin 預存程序上引發。 也等於＜ [Audit Login Change Property Event Class](../../event-classes/audit-login-change-property-event-class.md)＞。<br /><br /> 這個事件會針對 sp_grantlogin 或 sp_revokelogin 預存程式引發。 等於＜ [Audit Login GDR Event Class](../../event-classes/audit-login-gdr-event-class.md)＞。|  
-|SERVER_PRINCIPAL_IMPERSONATION_GROUP|當伺服器範圍內有模擬情況 (如 EXECUTE AS \<登入>) 時，就會引發這個事件。 等於＜ [Audit Server Principal Impersonation Event Class](../../event-classes/audit-server-principal-impersonation-event-class.md)＞。|  
-|SERVER_ROLE_MEMBER_CHANGE_GROUP|每當從固定伺服器角色中加入或移除登入時，就會引發這個事件。 此事件會針對 sp_addsrvrolemember 和 sp_dropsrvrolemember 預存程序而引發。 等於＜ [Audit Add Login to Server Role 事件類別
-](../../event-classes/audit-add-login-to-server-role-event-class.md)＞。|  
+|SERVER_PRINCIPAL_IMPERSONATION_GROUP|當伺服器範圍內有模擬，例如 EXECUTE AS 時，就會引發這個事件 \<login> 。 等於＜ [Audit Server Principal Impersonation Event Class](../../event-classes/audit-server-principal-impersonation-event-class.md)＞。|  
+|SERVER_ROLE_MEMBER_CHANGE_GROUP|每當從固定伺服器角色中加入或移除登入時，就會引發這個事件。 此事件會針對 sp_addsrvrolemember 和 sp_dropsrvrolemember 預存程序而引發。 等於＜ [Audit Add Login to Server Role 事件類別](../../event-classes/audit-add-login-to-server-role-event-class.md)＞。|  
 |SERVER_STATE_CHANGE_GROUP|當修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務狀態時，就會引發這個事件。 等於＜ [Audit Server Starts and Stops Event Class](../../event-classes/audit-server-starts-and-stops-event-class.md)＞。|  
 |SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|表示主體已成功登入自主資料庫。 等於稽核成功資料庫驗證事件類別。|  
 |SUCCESSFUL_LOGIN_GROUP|表示主體已成功登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。 等於＜ [Audit Login Event Class](../../event-classes/audit-login-event-class.md)＞。|  
@@ -142,7 +139,7 @@ ms.locfileid: "63238139"
 |DATABASE_OWNERSHIP_CHANGE_GROUP|當您使用 ALTER AUTHORIZATION 陳述式來變更資料庫擁有者，而且已檢查完成此作業所需的權限時，就會引發這個事件。 等於＜ [Audit Change Database Owner Event Class](../../event-classes/audit-change-database-owner-event-class.md)＞。|  
 |DATABASE_PERMISSION_CHANGE_GROUP|每當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的任何使用者對陳述式權限發出 GRANT、REVOKE 或 DENY 時，就會引發這個事件 (這適用於僅限資料庫的事件，例如授與資料庫的權限)。 等於＜ [Audit Database Scope GDR Event Class](../../event-classes/audit-database-scope-gdr-event-class.md)＞。|  
 |DATABASE_PRINCIPAL_CHANGE_GROUP|從資料庫建立、改變或卸除類似使用者的主體時，就會引發這個事件。 等於＜ [Audit Database Principal Management Event Class](../../event-classes/audit-database-principal-management-event-class.md)＞。 也相當於發生在已被取代之 sp_grantdbaccess、sp_revokedbaccess、sp_adduser 和 sp_dropuser 預存程序上的 [Audit Add DB User 事件類別](../../event-classes/audit-add-db-user-event-class.md)。<br /><br /> 每當使用已被取代的 sp_addrole 和 sp_droprole 預存程序來加入或移除資料庫角色時，就會引發這個事件。 等於＜ [Audit Add Role Event Class](../../event-classes/audit-add-role-event-class.md)＞。|  
-|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|當資料庫範圍內有模擬，例如 EXECUTE AS \<user> 或 SETUSER 時，就會引發這個事件。 等於＜ [Audit Database Principal Impersonation Event Class](../../event-classes/audit-database-principal-impersonation-event-class.md)＞。|  
+|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|當資料庫範圍內有模擬，例如 EXECUTE AS 或 SETUSER 時，就會引發這個事件 \<user> 。 等於＜ [Audit Database Principal Impersonation Event Class](../../event-classes/audit-database-principal-impersonation-event-class.md)＞。|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|每當從資料庫角色中加入或移除登入時，就會引發這個事件。 這個事件類別會與 sp_addrolemember、sp_changegroup 和 sp_droprolemember 預存程序搭配使用。相當於 [Audit Add Member to DB Role 事件類別](../../event-classes/audit-add-member-to-db-role-event-class.md)。|  
 |DBCC_GROUP|每當主體發出任何 DBCC 命令時，就會引發這個事件。 等於＜ [Audit DBCC Event Class](../../event-classes/audit-dbcc-event-class.md)＞。|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|表示某個主體嘗試登入自主資料庫卻失敗。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。 此時會引發此事件。|  
@@ -188,9 +185,9 @@ ms.locfileid: "63238139"
   
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-transact-sql)  
   
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
   
- [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-specification-transact-sql)  
   

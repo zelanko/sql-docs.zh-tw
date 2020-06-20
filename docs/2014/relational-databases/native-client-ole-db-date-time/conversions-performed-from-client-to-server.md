@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 85d152274847abb46ee14a9a878be8bdef5b80b3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 33655f1a5cc704907753ac1ab7ce43020c22fb3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705049"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043870"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>從用戶端到伺服器執行的轉換
   本主題描述在以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 撰寫之用戶端應用程式和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 之間執行的日期/時間轉換。  

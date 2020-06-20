@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 39f76bc7-94e6-4dbc-bfa5-d56f4430bb26
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2ba357fc3910779573ffa36f3070b55c08ced8ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ffea6cf93eb1e9e5f137c4151e0f0d9e4d2ca4a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388720"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045748"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>Deployment Topologies for SQL Server BI Features in SharePoint
   本主題說明在 SharePoint 2010 和 SharePoint 2013 環境中安裝 SQL Server 商業智慧功能 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] 的常見拓撲。 例如，單一伺服器和三層式安裝。  
@@ -53,7 +52,7 @@ ms.locfileid: "81388720"
 ##  <a name="sharepoint-2013-example-deployment-topologies"></a><a name="bkmk_example_deployments_2013"></a>SharePoint 2013 範例部署拓撲  
  SQL Server 安裝選項 **[PowerPivot for SharePoint]** 不會相依於 SharePoint。 它不會使用 SharePoint 物件模型或介面來支援整合。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以安裝在執行 Windows Server 2008 R2 或更新版本的任何電腦上。 它可以是 SharePoint 伺服器陣列中的應用程式伺服器，但這並非必要條件。 其中一個設定步驟是將 Excel Services 指向執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的伺服器。 如果需要負載平衡和容錯功能，建議您安裝並註冊多部以 SharePoint 模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。  
   
- Sharepoint 模式需要 sharepoint server 2013，並利用 sharepoint 服務應用程式架構。 ** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **  
+ ** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Sharepoint 模式**需要 sharepoint server 2013，並利用 Sharepoint 服務應用程式架構。  
   
  下列各節將說明一般部署拓撲：  
   
@@ -68,11 +67,11 @@ ms.locfileid: "81388720"
 |**2**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]**。|  
 |**第**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。|  
 |**4gb**|從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝媒體或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能套件安裝 SharePoint 的 Reporting Services 增益集。|  
-|**第**|執行**sppowerpivot.msi**以安裝資料提供者、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]設定工具、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資源庫和排程資料重新整理。|  
+|**第**|執行**spPowerPivot.msi**以安裝資料提供者、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 設定工具、資源 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 庫和排程資料重新整理。|  
 |**7**|SharePoint 模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 在 **[資料模型設定]** 中設定 Excel Services 應用程式使用此伺服器。|  
 |**utf-7**|SharePoint 內容、組態和服務應用程式資料庫。|  
   
- ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")會https://connect.microsoft.com/SQLServer/Feedback)[透過 Microsoft SQL Server Connect （）提交意見反應和連絡人資訊](https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")會[透過 Microsoft SQL Server Connect （）提交意見反應和連絡人資訊](https://connect.microsoft.com/SQLServer/Feedback) https://connect.microsoft.com/SQLServer/Feedback) 。  
   
 ###  <a name="powerpivot-for-sharepoint-2013-single-server-deployment"></a><a name="bkmk_powerpivot_sharepoint2013_1server"></a>PowerPivot for SharePoint 2013 單一伺服器部署  
  單一伺服器部署對於測試很有用，但是不建議用於實際部署。  
@@ -91,9 +90,9 @@ ms.locfileid: "81388720"
 ###  <a name="powerpivot-for-sharepoint-2013-two-server-deployment"></a><a name="bkmk_powerpivot_sharepoint2013_2server"></a>PowerPivot for SharePoint 2013 2 伺服器部署  
  在下列雙重伺服器部署中，SQL Server Database Engine 和 SharePoint 模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在與 SharePoint 不同的伺服器上執行。 若為 SharePoint 2013， [!INCLUDE[ssGeminiLongvnext](../../includes/ssgeminilongvnext-md.md)] 安裝程式套件 (**spPowerPivot.msi**) 是安裝在 SharePoint 伺服器上。  
   
- [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)]擴充 SharePoint Server 2013，以加入伺服器端資料重新整理處理、資料提供[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]者、資源庫和管理[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]支援，讓活頁簿與 Excel 活頁簿具有先進的資料模型。  
+ [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)]擴充 SharePoint Server 2013，以加入伺服器端資料重新整理處理、資料提供者、資源 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 庫和管理支援，讓活頁 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 簿與 Excel 活頁簿具有先進的資料模型。  
   
- 此安裝程式套件屬於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 功能套件的一部分。 此功能套件可以從下載中心的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [microsoft® SQL Server® 2014 PowerPivot® microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) （HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>）下載。  
+ 此安裝程式套件屬於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 功能套件的一部分。 此功能套件可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心的[microsoft® SQL Server® 2014 PowerPivot® Microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) （HYPERLINK " <https://go.microsoft.com/fwlink/?LinkID=296473> " \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473> ）下載。  
   
  ![SSAS PowerPivot 模式 2 伺服器部署](../../analysis-services/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot 模式 2 伺服器部署")  
   
@@ -133,7 +132,7 @@ ms.locfileid: "81388720"
 |**7**|SharePoint 模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 在 **[資料模型設定]** 中設定 Excel Services 應用程式使用此伺服器。|  
   
 ###  <a name="powerpivot-for-sharepoint-2013-and-reporting-services-two-server-deployment"></a><a name="bkmk_powerpivot_ssrs_sharepoint2013_2server"></a>PowerPivot for SharePoint 2013 和 Reporting Services 兩個伺服器部署  
- 在下列雙重伺服器部署中，SQL Server Database Engine 和以 SharePoint 模式執行的 Analysis Services 伺服器會與 SharePoint 在不同的伺服器上執行。 PowerPivot for SharePoint 2013 安裝程式套件 **（sppowerpivot.msi .msi）** 必須在 SharePoint 伺服器上執行。  
+ 在下列雙重伺服器部署中，SQL Server Database Engine 和以 SharePoint 模式執行的 Analysis Services 伺服器會與 SharePoint 在不同的伺服器上執行。 PowerPivot for SharePoint 2013 安裝程式封裝 **（spPowerPivot.msi）** 必須在 SharePoint 伺服器上執行。  
   
  ![SSAS 和 SSRS SharePoint 模式 2 伺服器部署](../../../2014/sql-server/install/media/as-and-rs-2server-deployment.gif "SSAS 和 SSRS SharePoint 模式 2 伺服器部署")  
   

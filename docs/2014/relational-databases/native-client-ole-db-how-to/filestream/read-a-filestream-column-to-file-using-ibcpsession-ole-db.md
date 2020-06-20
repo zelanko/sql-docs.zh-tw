@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f4c17d756297fc0916f9f9b3c7fa49b38c5d0f33
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3c290c659b7a023818051d3556b24fd011d8b372
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697615"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998749"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>使用 IBCPSession 將 FILESTREAM 資料行讀到檔案中 (OLE DB)
   此範例會使用 IBCPSession 介面將 Filestream 資料行讀到檔案中，並寫入格式檔案。  

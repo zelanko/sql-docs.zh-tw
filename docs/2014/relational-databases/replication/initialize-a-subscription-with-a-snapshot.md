@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23ad4cd92d186f43fb1a9dd81e1dbb0727170367
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df9cfb95144bbc7db16ff0bb72f96ff3e4465f89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721130"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043218"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>使用快照集初始化訂閱
   建立發行集之後，通常會建立初始快照集，並將其複製到快照集資料夾 (使用「新增發行集精靈」建立的合併式發行集預設均會發生此情況)。 然後，在訂閱的初始同步處理期間，由「散發代理程式」(針對交易式和快取式發行集) 或「合併代理程式」(針對合併式發行集) 套用至「訂閱者」。 快照集處理取決於發行集的類型：  

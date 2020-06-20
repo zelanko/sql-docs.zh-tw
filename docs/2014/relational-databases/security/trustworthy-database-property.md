@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 04f4dbeee8c160e968ee4b9df29e96d21d857e58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23391fe48037d4cd7f69aef7df6649949301a0f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184395"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055319"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY 資料庫屬性
   TRUSTWORTHY 資料庫屬性是用來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是否信任資料庫及其中的內容。 依預設，此設定為 OFF，但可使用 ALTER DATABASE 陳述式來將它設為 ON。 例如： `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;` 。  

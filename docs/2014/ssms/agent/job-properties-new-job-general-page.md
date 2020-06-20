@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c3427d8ab5956d4f95a42876b21ee309677f933
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211381"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062297"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>作業屬性及新增作業 (一般頁面)
-  使用此頁面來查看和修改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的一般屬性。  
+  使用此頁面來查看和修改 Agent 作業的一般屬性 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -29,22 +28,22 @@ ms.locfileid: "68211381"
  **擁有者**  
  選取作業的擁有者。  
   
- **類別**  
+ **類別目錄**  
  選取作業的作業類別目錄。  
   
  **...**  
  檢視選取之類別目錄中的作業。  
   
- **描述**  
+ **說明**  
  變更作業的描述。  
   
  **已啟用**  
  啟用作業。 未啟用作業時，則不會執行作業以回應排程或警示，但是您仍可以使用 **sp_start_job** 預存程序來啟動作業。  
   
- **來源**  
+ **Source**  
  顯示作業的主要伺服器。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
   
- **已**  
+ **建立日期**  
  顯示作業的建立日期和時間。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
   
  **上次修改時間**  

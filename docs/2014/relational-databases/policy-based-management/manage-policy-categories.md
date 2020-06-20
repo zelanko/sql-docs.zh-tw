@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d22ee5c7d66039a8c04daabe411a6ba0554e2849
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 168d05dd88286263da1dca5456a2c6072e946786
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210791"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061649"
 ---
 # <a name="manage-policy-categories"></a>管理原則類別目錄
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，將某個類別目錄中的任何或所有可用原則套用至 [!INCLUDE[tsql](../../includes/tsql-md.md)]的整個執行個體。  

@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeec8c832061756a818c9d2438df3046a29c1160
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918993"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970578"
 ---
 # <a name="clr-integration-security"></a>CLR 整合安全性
-  [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)]通用語言執行平臺（CLR）的安全性模型會管理和保護在[!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)]語句或伺服器中執行的另一個 clr 物件之間，不同類型的 clr 和非 CLR 物件之間的存取。 這些物件之間的呼叫稱為連結。 針對這些物件所執行的安全性檢查類型會因所涉及的連結類型而不同。  
+  通用語言執行平臺（CLR）的安全性模型會 [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] 管理和保護在 [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] 語句或伺服器中執行的另一個 clr 物件之間，不同類型的 clr 和非 CLR 物件之間的存取。 這些物件之間的呼叫稱為連結。 針對這些物件所執行的安全性檢查類型會因所涉及的連結類型而不同。  
   
  CLR 整合安全性模型具有下列目標：  
   
--   根據預設，在上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行 managed 使用者程式碼。 執行可能危害 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 健全性的作業應該透過適當的高層級權限保護。  
+-   根據預設，在上執行 managed 使用者程式碼 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 執行可能危害 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 健全性的作業應該透過適當的高層級權限保護。  
   
 -   Managed 使用者程式碼不應該取得資料庫中使用者資料或其他使用者程式碼的未經授權存取權。 使用者定義程式碼應該在叫用它之使用者工作階段的安全性內容底下執行，而且使用該安全性內容的正確權限執行。  
   

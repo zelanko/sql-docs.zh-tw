@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 37df9ccdd0bc2b44384bb9fd3d130c8d3bf8ca36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75c888b225901130eb0f28ea0f2bd21a106b2dc2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873434"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970492"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>設定資料收集器的屬性
   本主題討論如何設定資料收集器的屬性。  

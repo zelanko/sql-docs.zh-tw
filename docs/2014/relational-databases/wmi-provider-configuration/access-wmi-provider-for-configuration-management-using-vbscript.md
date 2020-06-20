@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f3a380f80b4ecc7540e29605543722edd55e226d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6a4b5fe474481288d8b8edd844be7af12ccbcd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705069"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061308"
 ---
 # <a name="modify-sql-server-service-advanced-properties-using-vbscript"></a>使用 VBScript 修改 SQL Server 服務進階屬性
-  本節說明如何建立 VBScript 程式，以列出在電腦上執行之[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已安裝實例的版本。  
+  本節說明如何建立 VBScript 程式，以列出在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 電腦上執行之已安裝實例的版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  此程式碼範例會列出在電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和它的版本。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62705069"
   
 5.  儲存檔案。  
   
-6.  在命令提示字元中`cscript test.vbs`輸入，以執行腳本。  
+6.  在命令提示字元中輸入，以執行腳本 `cscript test.vbs` 。  
   
 ## <a name="example"></a>範例  
   

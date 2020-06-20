@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9238898efd324fae1e4990405c90e31fb7876ca4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ab953952de1c288bcac31548c9562e9ae570bee6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705034"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043576"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>日期和時間與架構資料列集
   本主題提供有關 COLUMNS 資料列集和 PROCEDURE_PARAMETERS 資料列集的資訊。 這項資訊與 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引進的 OLE DB 日期和時間增強功能相關。  

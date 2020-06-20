@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8091d9ca86dc66763aee3fe08efa5cabeb2f7459
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d428dfd289a365d5a3aef315fafa1e0780d8ff59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704818"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056098"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
   等到非同步執行的作業完成或發生逾時為止。  

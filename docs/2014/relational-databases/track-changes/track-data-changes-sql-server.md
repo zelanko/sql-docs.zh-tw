@@ -32,16 +32,15 @@ helpviewer_keywords:
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e9fb2a89aff63a69d7ad8df111d36f2b7ccafdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63073899"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047180"
 ---
 # <a name="track-data-changes-sql-server"></a>追蹤資料變更 (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供兩個追蹤資料庫資料變更的功能： [異動資料擷取](#Capture) 和 [變更追蹤](#Tracking)。 這些功能可協助應用程式判斷對資料庫中使用者資料表所做的 DML 變更 (插入、更新和刪除作業)。 可在同一個資料庫上啟用異動資料擷取和變更追蹤；無需特殊考量。 針對支援變更資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]捕獲和變更追蹤的版本，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供兩個追蹤資料庫資料變更的功能： [異動資料擷取](#Capture) 和 [變更追蹤](#Tracking)。 這些功能可協助應用程式判斷對資料庫中使用者資料表所做的 DML 變更 (插入、更新和刪除作業)。 可在同一個資料庫上啟用異動資料擷取和變更追蹤；無需特殊考量。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援變更資料捕獲和變更追蹤的版本，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>使用異動資料擷取或變更追蹤的優點  
  在資料庫中查詢已經變更之資料的能力，是讓某些應用程式具有效率的重要需求。 一般而言，若要判斷資料變更，應用程式開發人員必須使用觸發程序、時間戳記資料行和其他資料表的組合，在其應用程式中實作自訂追蹤方法。 不過，建立這些應用程式通常需要實作大量工作、導致結構描述更新，而且經常會產生很高的效能負擔。  
@@ -65,7 +64,7 @@ ms.locfileid: "63073899"
 ## <a name="feature-differences-between-change-data-capture-and-change-tracking"></a>異動資料擷取與變更追蹤之間的功能差異  
  下表將列出異動資料擷取與變更追蹤之間的功能差異。 異動資料擷取中的追蹤機制包含從交易記錄中以非同步方式擷取變更，以便在 DML 作業之後可以使用變更。 但是，在變更追蹤中，其追蹤機制包含以同步方式追蹤變更而且與 DML 並列執行，以便可以立即使用變更資訊。  
   
-|功能|變更資料擷取|變更追蹤|  
+|功能|變更資料擷取|Change tracking|  
 |-------------|-------------------------|---------------------|  
 |**追蹤的變更**|||  
 |DML 變更|是|是|  
@@ -85,7 +84,7 @@ ms.locfileid: "63073899"
  本節描述異動資料擷取安全性模型。  
   
  **組態和管理**  
- 若要啟用或停用資料庫的變更資料捕獲， [sys. sp_cdc_enable_db 的呼叫端 &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)或[Sys.databases sp_cdc_disable_db &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)必須是固定伺服器`sysadmin`角色的成員。 若要在資料表層級啟用和停用變更資料捕獲，必須要有 sys.databases 的呼叫端[sp_cdc_enable_table &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)和[Sp_cdc_disable_table sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql)為系統管理員（sysadmin）角色的成員或資料庫`database db_owner`角色的成員。  
+ 若要啟用或停用資料庫的變更資料捕獲， [sys. sp_cdc_enable_db 的呼叫端 &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)或[Sys.databases sp_cdc_disable_db &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)必須是固定伺服器角色的成員 `sysadmin` 。 若要在資料表層級啟用和停用變更資料捕獲，必須要有 sys.databases 的呼叫端[sp_cdc_enable_table &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)和[Sp_cdc_disable_table sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql)為系統管理員（sysadmin）角色的成員或資料庫角色的成員 `database db_owner` 。  
   
  只有伺服器 `sysadmin` 角色的成員和 `database db_owner` 角色的成員才能使用這些預存程序來支援異動資料擷取作業的管理。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "63073899"
  如需資料庫鏡像的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 #### <a name="transactional-replication"></a>異動複寫  
- 雖然變更資料擷取和異動複寫可以同時存在同一個資料庫中，但是同時啟用這兩項功能時，系統會以不同的方式處理變更資料表的擴展。 變更資料擷取和異動複寫一定會使用相同的程序 [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)，從交易記錄中讀取變更。 單獨啟用變更資料擷取時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業就會呼叫 `sp_replcmds`。 當相同的資料庫上同時啟用這兩項功能時， `sp_replcmds`記錄讀取器代理程式會呼叫。 這個代理程式會同時擴展變更資料表和散發資料庫資料表。 如需詳細資訊，請參閱 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)。  
+ 雖然變更資料擷取和異動複寫可以同時存在同一個資料庫中，但是同時啟用這兩項功能時，系統會以不同的方式處理變更資料表的擴展。 變更資料擷取和異動複寫一定會使用相同的程序 [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)，從交易記錄中讀取變更。 單獨啟用變更資料擷取時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業就會呼叫 `sp_replcmds`。 當相同的資料庫上同時啟用這兩項功能時，記錄讀取器代理程式會呼叫 `sp_replcmds` 。 這個代理程式會同時擴展變更資料表和散發資料庫資料表。 如需詳細資訊，請參閱 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)。  
   
  假設您在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫上啟用了變更資料擷取，而且有兩份資料表啟用了擷取。 為了擴展變更資料表，擷取作業會呼叫 `sp_replcmds`。 資料庫啟用了異動複寫，而且建立了發行集。 此時，會針對資料庫建立記錄讀取器代理程式，並且刪除擷取作業。 記錄讀取器代理程式會繼續掃描記錄，從變更資料表所認可的最後一個記錄序號開始。 如此可確保變更資料表中的資料保持一致。 如果這個資料庫停用了異動複寫，系統就會移除記錄讀取器代理程式並且重新建立擷取作業。  
   
@@ -175,7 +174,7 @@ ms.locfileid: "63073899"
   
 |||  
 |-|-|  
-|**Task**|**主題**|  
+|**Task**|**本文**|  
 |提供異動資料擷取的概觀。|[關於異動資料擷取 &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)|  
 |描述如何在資料庫或資料表上啟用及停用異動資料擷取。|[啟用和停用異動資料擷取 &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)|  
 |描述如何管理及監視異動資料擷取。|[管理和監視異動資料擷取 &#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)|  

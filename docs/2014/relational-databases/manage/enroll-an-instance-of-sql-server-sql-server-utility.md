@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d276c4d879aeca6c019b00b9f57251db6b2bcb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798078"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023553"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>註冊 SQL Server 的執行個體 (SQL Server 公用程式)
   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體註冊到現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內，當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Managed 執行個體來監視它的效能和組態。 公用程式控制點 (UCP) 每隔 15 分鐘就會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Managed 執行個體收集組態和效能資訊。 這項資訊會儲存在 UCP 的公用程式管理資料倉儲 (UMDW) 中，而 UMDW 檔案名稱為 sysutility_mdw。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能資料會與原則相比較，有助於識別資源使用瓶頸及合併機會。  
@@ -44,7 +43,7 @@ ms.locfileid: "72798078"
   
  在此版本中，UCP 必須滿足下列需求：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體必須是受支援的版本。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體必須是受支援的版本。 如需版本支援的功能清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 -   我們建議您使用區分大小寫的 SQL Server 執行個體來主控 UCP。  
   
@@ -119,7 +118,7 @@ ms.locfileid: "72798078"
 |條件|更正動作|  
 |---------------|-----------------------|  
 |您必須在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和 UCP 上擁有系統管理員權限。|您必須使用具有指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和 UCP 上系統管理員權限的帳戶登入。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本必須支援執行個體註冊。|如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本必須支援執行個體註冊。|如需版本支援的功能清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 必須啟用 TCP/IP。|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 上啟用 TCP/IP。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體不能以其他任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 註冊。|如果您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體已經當做現有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式的一部分進行管理，您無法以不同的 UCP 註冊它。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體不得為 UCP。|如果您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體已經是與您所連接之 UCP 不同的 UCP，您無法在這個 UCP 中註冊它。|  
@@ -169,7 +168,7 @@ ms.locfileid: "72798078"
 >   
 >  執行 Transact-SQL 陳述式或批次時發生例外狀況。 (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  其他資訊：無法獲得 Windows NT 群組/使用者 '\<DomainName\AccountName>' 的相關資訊，錯誤碼 0x5。 (Microsoft SQL Server，錯誤：15404)  
+>  其他資訊：無法取得有關 Windows NT 群組/使用者 ' ' 的資訊 \<DomainName\AccountName> ，錯誤碼0x5。 (Microsoft SQL Server，錯誤：15404)  
 >   
 >  如需對這個失敗進行疑難排解的詳細資訊，請參閱 [疑難排解 SQL Server 公用程式](../../database-engine/troubleshoot-the-sql-server-utility.md)。  
   

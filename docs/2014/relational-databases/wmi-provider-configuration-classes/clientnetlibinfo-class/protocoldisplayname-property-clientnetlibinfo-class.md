@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 33113482d021b1f0aa105ccb039f8076cf6a6549
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81dc37daded9c368cf0d9cadb6b42b13731155c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062742"
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>ProtocolDisplayName 屬性 (ClientNetLibInfo 類別)
   取得或設定用來顯示通訊協定的名稱。  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  代表用戶端網路程式庫相關資訊的 [ClientNetLibInfo 類別](clientnetlibinfo-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

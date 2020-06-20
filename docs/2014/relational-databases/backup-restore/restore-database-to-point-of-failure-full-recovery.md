@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 83319e8eb1fe692bc55b764445ac155d9e1ad38d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95b73660ebb44f4daffe6eaefd873699cfbbd8ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920988"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956766"
 ---
 # <a name="restore-a-database-to-the-point-of-failure-under-the-full-recovery-model-transact-sql"></a>在完整復原模式下將資料庫還原至失敗點 (Transact-SQL)
   此主題說明如何還原到失敗點。 此主題只與使用完整或大量記錄復原模式的資料庫有關。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdc220e658cf7ad2153114510ab714ccec9c5572
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054450"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 安全性
   在安裝和使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能之前，您應該先檢閱本主題中的重要安全性資訊。 本主題描述的是使用 Distributed Replay 之前必須進行的安裝後安全性設定步驟。 本主題亦描述與資料保護和重要移除步驟有關的重要考量。  
@@ -29,7 +28,7 @@ ms.locfileid: "63150344"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務帳戶|可以是網域使用者帳戶或本機使用者帳戶。 如果您使用本機使用者帳戶，Controller、Client 和目標 SQL Server 都必須在同一部電腦上執行。<br /><br /> **\*\* 安全性注意事項 \*\*** 我們建議您不要將此帳戶設定為 Windows 本機 Administrators 群組的成員。|  
 |用來執行 Distributed Replay 管理工具的互動式使用者帳戶|可以是本機使用者或網域使用者帳戶。 若要使用本機使用者帳戶，管理工具和控制器必須在同一部電腦上執行。|  
   
- **重要事項**：當您設定 Distributed Replay Controller 時，可以指定將用來執行 Distributed Replay Client 服務的一個或多個使用者帳戶。 下列是支援帳戶的清單：  
+ **重要**：當您設定 Distributed Replay Controller 時，可以指定將用來執行 Distributed Replay Client 服務的一或多個使用者帳戶。 下列是支援帳戶的清單：  
   
 -   網域使用者帳戶  
   
@@ -47,13 +46,13 @@ ms.locfileid: "63150344"
   
 1.  請根據作業系統執行下列其中一項作業：  
   
-    -   按一下 [**開始**] `services.msc` ，在 [**搜尋**] 方塊中輸入，然後按 enter。  
+    -   按一下 [**開始**]， `services.msc` 在 [**搜尋**] 方塊中輸入，然後按 enter。  
   
-    -   依序按一下 [**開始**] 和`services.msc`[**執行**]，輸入，然後按 enter。  
+    -   依序按一下 [**開始**] 和 [**執行**]，輸入 `services.msc` ，然後按 enter。  
   
-2.  在 [服務]  對話方塊中，以滑鼠右鍵按一下您想要設定的服務，然後按一下 [內容]  。  
+2.  在 [服務] 對話方塊中，以滑鼠右鍵按一下您想要設定的服務，然後按一下 [內容]。  
   
-3.  在 [登入]  索引標籤上，按一下 [This account (這個帳戶)]  。  
+3.  在 [登入] 索引標籤上，按一下 [This account (這個帳戶)]。  
   
 4.  設定您想要使用的使用者帳戶。  
   
@@ -70,17 +69,17 @@ ms.locfileid: "63150344"
   
  若要設定 Controller DCOM 權限，請遵循下列步驟進行：  
   
-1.  **開啟 dcomcnfg.exe，亦即 [元件服務] 嵌入式管理單元**：這是用來設定 DCOM 權限的工具。  
+1.  **開啟 dcomcnfg.exe，[元件服務] 嵌入式管理單元**：此為用來設定 DCOM 權限的工具。  
   
-    1.  在 Controller 電腦上，按一下 [開始]  。  
+    1.  在 Controller 電腦上，按一下 [開始]。  
   
-    2.  在`dcomcnfg.exe` [**搜尋**] 方塊中輸入。  
+    2.  `dcomcnfg.exe`在 [**搜尋**] 方塊中輸入。  
   
     3.  按 ENTER 鍵。  
   
 2.  **設定整部電腦的 DCOM 權限**：針對下表所列的每個帳戶授與對應的整部電腦 DCOM 權限。 如需如何設定整部電腦權限的詳細資訊，請參閱 [檢查清單：管理 DCOM 應用程式](https://go.microsoft.com/fwlink/?LinkId=185842)。  
   
-3.  **設定應用程式特定的 DCOM 權限**：針對下表所列的每個帳戶授與對應的應用程式特定 DCOM 權限。 控制器服務的 DCOM 應用程式名稱是 **DReplayController**。 如需如何設定應用程式特定權限的詳細資訊，請參閱 [檢查清單：管理 DCOM 應用程式](https://go.microsoft.com/fwlink/?LinkId=185842)。  
+3.  **設定應用程式限定的 DCOM 權限**：針對下表所列的每個帳戶授與對應的應用程式限定的 DCOM 權限。 控制器服務的 DCOM 應用程式名稱是 **DReplayController**。 如需如何設定應用程式特定權限的詳細資訊，請參閱 [檢查清單：管理 DCOM 應用程式](https://go.microsoft.com/fwlink/?LinkId=185842)。  
   
  下表描述哪些 DCOM 權限是管理工具互動式使用者帳戶和 Client 服務帳戶所需的權限：  
   

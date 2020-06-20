@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6defada32a68472e4578cff1622288c973399118
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c10a4e762bbe3421e720753941f5e0a5702832ad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707446"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056364"
 ---
 # <a name="data-source-information-properties"></a>資料來源資訊屬性
   在提供者專用的屬性集 DBPROPSET_SQLSERVERDATASOURCEINFO 中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會定義下列資料來源資訊屬性。  

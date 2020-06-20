@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9dce05c1-c52f-455d-8b8d-6f303e242760
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 009f61563548e0c060350a75e9627804e18a7c54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fe1685bf1f56b2b2e7a0feac31ba3a601b0e51b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63222935"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041037"
 ---
 # <a name="adding-indentation"></a>加入縮排
   查詢編輯器可讓您利用單一步驟來縮排一大段的程式碼，而且您也可以變更縮排的量。  
@@ -46,13 +45,13 @@ ms.locfileid: "63222935"
   
 #### <a name="to-change-the-default-indentation"></a>若要變更預設縮排  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
 2.  依序展開 [文字編輯器]**** 和 [所有語言]****，然後按一下 [索引標籤]****，適當設定縮排的值。 請注意，您可以變更縮排大小，也可以變更 Tab 鍵距離，以及 Tab 鍵距離是否轉換成空格。  
   
      ![索引標籤的外觀對話方塊](media/tabsdialog.gif "索引標籤的外觀對話方塊")  
   
-3.  按一下 [確定]  。  
+3.  按一下 [確定]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [將查詢編輯器最大化](lesson-2-3-maximizing-query-editor.md)  

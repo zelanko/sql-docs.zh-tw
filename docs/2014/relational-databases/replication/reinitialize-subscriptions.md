@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c0ccfb05b7b9eb6244e6d403c8975c3af1358a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 189667ecd2756ebf0026a22d981f9bb0ddd347c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250663"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056977"
 ---
 # <a name="reinitialize-subscriptions"></a>重新初始化訂閱
   重新初始化訂閱涉及將一個或多個發行項的新快照集套用至一個或多個「訂閱者」：交易式和快照式複寫允許重新初始化個別發行項；合併式複寫要求重新初始化所有發行項。 無法重新初始化點對點異動複寫拓撲中的節點。 如果您必須確定節點有資料的新副本，請在節點還原備份。 發生重新初始化的情況有兩種：  

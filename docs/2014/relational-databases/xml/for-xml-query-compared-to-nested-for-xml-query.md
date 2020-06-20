@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5e5bb88f57d471a199d925039d551a1f206e511b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d1be9f993b9400d51f3f129d48a85bd92d99b2c2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702746"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054894"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>與巢狀 FOR XML 查詢比較的 FOR XML 查詢
   本主題會將單一層 FOR XML 查詢與巢狀 FOR XML 查詢做比較。 使用巢狀 FOR XML 查詢的其中一個好處，就是可以針對查詢結果指定屬性中心及元素中心 XML 的組合。 以下範例將提供示範。  

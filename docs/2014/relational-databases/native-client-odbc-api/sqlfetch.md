@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ba1b1bf96bfbee4d3625417706aad738a49fcf4f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3ad80fe0220adf76b83418c8875f18624a34468d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706111"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022480"
 ---
 # <a name="sqlfetch"></a>SQLFetch
   SQLFetch 支援增強的日期和時間功能。  

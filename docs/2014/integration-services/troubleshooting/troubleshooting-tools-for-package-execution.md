@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8293e8bb7cfcc941c952ddaed25907ef2eec7371
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7aac9aa2dc6c7675414354c729f4537479ee8a1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82087058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972688"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>封裝執行的疑難排解工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的功能與工具，可讓您在完成及部署封裝之後，用以疑難排解封裝的執行問題。  

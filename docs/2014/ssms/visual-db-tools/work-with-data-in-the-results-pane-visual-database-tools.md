@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beb3492409f24acb881f5461e554fd8a392dc361
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63313766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040476"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>使用結果窗格中的資料 (Visual Database Tools)
   在您執行查詢或檢視後，結果會顯示在 [結果] 窗格中。 接著您就可以使用這些結果。 例如，您可以加入與刪除資料列，輸入或變更資料，並且輕易地巡覽大筆的結果集。  
@@ -115,9 +114,9 @@ ms.locfileid: "63313766"
 ### <a name="what-can-not-be-represented-fully"></a>何者無法完整表示  
  從資料庫傳回 [結果] 窗格的資料，大部份是由您所使用之資料來源的提供者控制。 [結果] 窗格未必能轉譯來自所有資料庫管理系統之資料。 此處的範例即有這種情形。  
   
--   通常二進位資料類型對於在 [結果] 窗格中工作的人不太有用，而且下載要花費很長的時間。 因此，它們會以* \<二進位資料表示>* 或*Null*。  
+-   通常二進位資料類型對於在 [結果] 窗格中工作的人不太有用，而且下載要花費很長的時間。 因此，它們由 *\<Binary data>* 或 *Null*代表。  
   
--   有效位數與小數位數未必會被保留。 例如，[結果] 窗格支援 27 位數的有效位數。 如果資料的資料類型具有較高的有效位數，則資料可能會被截斷，或可能以* \<無法讀取資料>* 來表示。  
+-   有效位數與小數位數未必會被保留。 例如，[結果] 窗格支援 27 位數的有效位數。 若資料具有較高有效位數的資料類型，則資料可能會被截斷或由 *\<Unable to read data>* 代表。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 &#40;Visual Database Tools 的查詢來執行基本作業&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

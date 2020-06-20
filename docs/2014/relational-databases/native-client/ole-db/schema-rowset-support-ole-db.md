@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9624749eff8b455c7071d395ec91c96aeae9d32a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cd3efb1740b4919dedc3c5b8703ddd6ad92aeb5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998528"
 ---
 # <a name="schema-rowset-support-ole-db"></a>結構描述資料列集支援 (OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者在處理分散式查詢時，也支援從連結伺服器傳回架構資訊 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 。  

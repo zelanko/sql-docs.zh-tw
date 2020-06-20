@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cfaffaeec425542597aaa43498ec0222813a251e
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 8924b864d7cc8be078b370e3182713114f54ff6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925032"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062518"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>設定 FailureConditionLeve 屬性設定
   使用 FailureConditionLevel 屬性，即可將 AlwaysOn 容錯移轉叢集執行個體 (FCI) 的條件設定為容錯移轉或重新啟動。 對這個屬性的變更會立即套用，而不需要重新啟動 Windows Server 容錯移轉叢集 (WSFC) 服務或 FCI 資源。  
