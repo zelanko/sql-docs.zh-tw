@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2b489fda1c051ecd08b63f28d6232a0e213d9fcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f97044c0070d06d511348d182c2fc478a904db3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188869"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023541"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>修改資源健康情況原則定義 (SQL Server 公用程式)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 來修改 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的資源健全狀況原則定義。 在您於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內修改資源使用量原則之前，您必須先建立公用程式控制點 (UCP)。 如需詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](sql-server-utility-features-and-tasks.md)。  

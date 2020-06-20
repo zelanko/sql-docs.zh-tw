@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0a1842dab8f50ea99327ae3264622e319e6e5d1c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b392042d29b900760294bdd95a99ee656553bc00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703809"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009651"
 ---
 # <a name="navigate-code-and-text"></a>導覽程式碼與文字
   您可以利用下列方式在文字間移動：  
@@ -68,7 +67,7 @@ ms.locfileid: "82703809"
   
  **移至特定行號**  
   
-1.  在 [編輯]  功能表上，按一下 [移至]   
+1.  在 [編輯] 功能表上，按一下 [移至]  
   
 2.  輸入您想檢視的行號  
   

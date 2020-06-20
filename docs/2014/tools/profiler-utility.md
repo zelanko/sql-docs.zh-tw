@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bb4d4fc19471ce2bacc8b84f60a7e7082ad1ace
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211099"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064102"
 ---
 # <a name="profiler-utility"></a>Profiler 公用程式
   **profiler** 公用程式會啟動 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 工具。 這個主題稍後列出的選擇性引數可讓您控制應用程式啟動的方式。  
@@ -60,7 +59,7 @@ ms.locfileid: "68211099"
  這是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證的使用者登入識別碼。 登入識別碼會區分大小寫。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
  **/P** *password*  
  指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證之使用者指定的密碼。  
@@ -81,7 +80,7 @@ ms.locfileid: "68211099"
  指定啟動 Profiler 時所載入的追蹤資料表。 您必須指定資料庫、使用者或結構描述，以及資料表。  
   
  **/T"** *template_name* **"**  
- 指定將載入來設定追蹤的範本。 範本名稱必須用引號括住。 範本名稱必須在系統範本目錄中，或在使用者範本目錄中。 如果兩個目錄中有同名的兩個範本存在，就會載入系統目錄中的範本。 如果沒有含指定名稱的範本，便會載入標準範本。 請注意，在 <範本名稱>  中，不應指定範本的副檔名 (.tdf)。 例如：  
+ 指定將載入來設定追蹤的範本。 範本名稱必須用引號括住。 範本名稱必須在系統範本目錄中，或在使用者範本目錄中。 如果兩個目錄中有同名的兩個範本存在，就會載入系統目錄中的範本。 如果沒有含指定名稱的範本，便會載入標準範本。 請注意，在 <範本名稱> 中，不應指定範本的副檔名 (.tdf)。 例如：  
   
 ```  
 /T "standard"  
@@ -109,7 +108,7 @@ ms.locfileid: "68211099"
 |ss|兩位數的秒鐘|  
   
 > [!NOTE]  
->  只有當  **中已啟用 [使用地區設定顯示日期與時間值]** [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 選項時，才能使用 "MM-DD-YY hh:mm:ss" 格式。 如果這個選項未啟用，您必須使用 "YYYY-MM-DD hh:mm:ss" 日期和時間格式。  
+>  只有當 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中已啟用 [使用地區設定顯示日期與時間值] 選項時，才能使用 "MM-DD-YY hh:mm:ss" 格式。 如果這個選項未啟用，您必須使用 "YYYY-MM-DD hh:mm:ss" 日期和時間格式。  
   
  **/R**  
  啟用追蹤檔的換用。  

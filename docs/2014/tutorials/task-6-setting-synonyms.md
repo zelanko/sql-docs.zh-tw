@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4499a0a099c92a9b1802cc905da3d0a473808eeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6f4e870dca91e952fbeea95ef8f1198c64d8d6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177226"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054275"
 ---
 # <a name="task-6-setting-synonyms"></a>工作 6：設定同義字
   在這項工作中，您會將**Country**網域的兩個定義域值（**美國**和**美國**）設定為以**美國**做為前置值的同義字。 因為在建立**國家/地區**網域時選取了 [**使用前置值**] 選項，所以**country**網域的任何**美國**值都會輸出為**美國**（美國是前置值）。 如需詳細資訊，請參閱[變更定義域值](https://msdn.microsoft.com/library/hh510408.aspx)。

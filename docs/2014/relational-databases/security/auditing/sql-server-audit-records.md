@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d3462266279ed80e94871db4831918ad70b444be
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 19e9ba9013d592d752189adadfb761f1741fd91a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922140"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055456"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 記錄
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
@@ -29,7 +28,7 @@ ms.locfileid: "82922140"
 |**event_time**|可稽核的動作引發時的日期/時間。|`datetime2`|是|  
 |**sequence_no**|追蹤單一稽核記錄中太長而無法納入稽核寫入緩衝區內的記錄順序。|`int`|是|  
 |**action_id**|動作的識別碼<br /><br /> 提示：若要使用 **action_id** 作為述詞，您必須將它從字元字串轉換為數值。 如需詳細資訊，請參閱 [針對 action_id/class_type 述詞篩選 SQL Server Audit](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)。|`varchar(4)`|是|  
-|**成功**|指示觸發此事件的動作是否成功|`bit`-1 = 成功，0 = 失敗|是|  
+|**均**|指示觸發此事件的動作是否成功|`bit`-1 = 成功，0 = 失敗|是|  
 |**permission_bitmask**|當適用時，顯示已授與、拒絕或撤銷的權限|`bigint`|否|  
 |**is_column_permission**|指出資料行層級權限的旗標|`bit`-1 = True，0 = False|否|  
 |**session_id**|事件發生所在之工作階段的識別碼。|`int`|是|  
@@ -50,7 +49,7 @@ ms.locfileid: "82922140"
 |**database_name**|動作發生所在的資料庫環境。|`sysname`|否|  
 |**schema_name**|動作發生所在的結構描述環境。|`sysname`|否|  
 |**object_name**|稽核發生所在之實體的名稱。 這包括：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件<br /><br /> TSQL 陳述式 (如果有的話)|`sysname`|否|  
-|**句**|TSQL 陳述式 (如果有的話)|`nvarchar(4000)`|否|  
+|**陳述式**|TSQL 陳述式 (如果有的話)|`nvarchar(4000)`|否|  
 |**additional_information**|有關儲存為 XML 之事件的任何其他資訊。|`nvarchar(4000)`|否|  
   
 ## <a name="remarks"></a>備註  

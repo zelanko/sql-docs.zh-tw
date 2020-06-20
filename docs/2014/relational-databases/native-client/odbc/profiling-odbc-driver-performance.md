@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d3c5863489bcdda590137587273b9b31b4bae3cc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e2b1e0f8ba22eacff01929ed3364dcffe0cf815
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707068"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011112"
 ---
 # <a name="profiling-odbc-driver-performance"></a>分析 ODBC 驅動程式效能
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式可以分析兩種類型的效能資料：  

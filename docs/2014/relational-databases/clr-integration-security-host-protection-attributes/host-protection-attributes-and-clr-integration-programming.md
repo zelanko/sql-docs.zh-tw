@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 68f1f114002ab0ef38c7565a523723a06958048d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94b46ac1c923695abf4a8bbbb4f074f14593ddcd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874347"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954158"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>主機保護屬性和 CLR 整合程式設計
   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始，Common Language Runtime (CLR) 提供了一個機制來使用 CLR (如 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) 主機可能需要的某些屬性，為屬於 .NET Framework 之一部分的 Managed 應用程式開發介面 (API) 加註。 這類主機保護屬性 (HPA) 的範例包括：  
@@ -46,7 +45,7 @@ ms.locfileid: "62874347"
   
 -   可能會導致伺服器處理序本身的不穩定。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不`HostProtectionAttribute`允許使用具有的類型或成員，其指定的`System.Security.Permissions.HostProtectionResource`列舉值為`ExternalProcessMgmt`、 `ExternalThreading` `MayLeakOnAbort`、、 `SecurityInfrastructure`、 `SelfAffectingProcessMgmnt` `SelfAffectingThreading` `SharedState` `Synchronization`、、、或。 `UI` 這會讓組件無法呼叫可啟用共用狀態、執行同步處理、在終止時可能造成資源流失，或是會影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序完整性的成員。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不允許使用具有的類型或成員，其指定的列舉值為、、、、、、、 `HostProtectionAttribute` `System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt` `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading` `SharedState` `Synchronization` 或 `UI` 。 這會讓組件無法呼叫可啟用共用狀態、執行同步處理、在終止時可能造成資源流失，或是會影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序完整性的成員。  
   
 ### <a name="disallowed-types-and-members"></a>不允許的類型和成員  
  下列主題將識別一些類型和成員，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許使用它們的 `HostProtectionResource` 值。  

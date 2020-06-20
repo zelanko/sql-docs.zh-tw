@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a565915f4b48cabe5e657175fc1065302b7c7a79
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055486"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962888"
 ---
 # <a name="sort-transformation-editor"></a>排序轉換編輯器
   使用 **[排序轉換編輯器]** 對話方塊，即可選取要排序的資料行、設定排序順序和指定是否要移除重複的項目。  

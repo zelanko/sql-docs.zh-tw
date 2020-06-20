@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 0b03585b-a510-484d-8a63-9b32459def9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c55200e2121cf642df4ff3d974ec98c65a8760a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62695678"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062264"
 ---
 # <a name="job-properties-new-job-schedules-page"></a>作業屬性：新增作業 (排程頁面)
-  使用此頁面來查看和組織[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的排程。  
+  使用此頁面來查看和組織 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的排程。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **排程清單**  
  列出此作業的排程。  
   

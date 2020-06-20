@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 403e0af44fc1db7efaf674d02ed0e3b94e81a5b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a16d439d3b2bc59479866b7bb36295ec4fc8950
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916872"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965954"
 ---
 # <a name="estimate-the-size-of-a-table"></a>估計資料表的大小
   您可以使用下列步驟來估計將資料儲存於資料表中所需的空間量：  

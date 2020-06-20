@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 91def0dda11d1a16ceaac4d12a3c9294a084d247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46c61f8a5383c87d46fa0dbda18876b43ffb7739
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250384"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056924"
 ---
 # <a name="replication-over-the-internet"></a>透過網際網路的複寫
   透過網際網路複寫資料，可讓遠端、離線使用者在需要時使用網際網路連線存取資料。 使用下列方式，透過網際網路複寫資料：  

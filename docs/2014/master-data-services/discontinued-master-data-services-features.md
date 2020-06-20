@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba09ba6110f5da2082f13d8277a00bfb9d590d2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479447"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961918"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014 中已停止的 Master Data Services 功能
   本主題描述 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中不再可用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。  
@@ -58,11 +57,11 @@ ms.locfileid: "65479447"
  如果您擁有包含此類型之規則的 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 模型部署封裝，當您將資料庫升級到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 時，將會排除此商務規則。  
   
 ### <a name="bulk-updates-and-exporting"></a>大量更新及匯出  
- 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中，您無法再針對多個成員大量更新屬性值。 若要執行大量更新，請使用暫存進程或[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]。  
+ 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中，您無法再針對多個成員大量更新屬性值。 若要執行大量更新，請使用暫存進程或 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 。  
   
- 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中，您無法再將成員匯出到 Excel 中。 若要在 Excel 中使用成員，請[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]使用。  
+ 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中，您無法再將成員匯出到 Excel 中。 若要在 Excel 中使用成員，請使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 。  
   
-### <a name="transactions"></a>異動  
+### <a name="transactions"></a>交易  
  在 [ **Explorer** ] 功能區域中，使用者無法再還原自己的交易。 之前，使用者可以還原他們對**Explorer**中資料所做的變更。 系統管理員仍然可以還原 [**版本管理**] 功能區域中所有使用者的交易。  
   
  註解現在是永久的，而且無法刪除。 先前系統會將註解視為交易，因此可以透過還原交易來刪除。  

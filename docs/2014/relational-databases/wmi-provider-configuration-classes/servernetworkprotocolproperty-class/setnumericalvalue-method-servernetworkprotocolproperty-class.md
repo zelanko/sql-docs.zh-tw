@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e2b3318b9aae0412e827875af35cbdf0477e059f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5fe5915240130336bc1f16100a693e4b81e8d163
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736278"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056775"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>SetNumericalValue 方法 (ServerNetworkProtocolProperty 類別)
   設定參考之屬性的數值。  
@@ -40,8 +39,8 @@ NumValue
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
- [ServerNetworkProtocolProperty 類別] ServerNetworkProtocolProperty-class.md）物件，代表實例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上網路通訊協定的屬性。  
+ *object*  
+ [ServerNetworkProtocolProperty 類別] ServerNetworkProtocolProperty-class.md）物件，代表實例上網路通訊協定的屬性 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>參數  
   

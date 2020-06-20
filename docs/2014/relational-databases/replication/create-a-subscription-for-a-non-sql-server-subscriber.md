@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31a7d1e52c53cb858039f1fd0ed403f255ad5ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721670"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010921"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對非 SQL Server 訂閱者建立訂閱。 異動複寫與快照式複寫支援向非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者發行資料。 如需有關支援之訂閱者平台的資訊，請參閱＜ [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)中針對非 SQL Server 訂閱者建立訂閱。  
@@ -45,7 +44,7 @@ ms.locfileid: "62721670"
   
          為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者啟用發行集後建立快照集，以確定「快照集代理程式」會產生適用於非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的快照集與初始化指令碼。  
   
-3.  使用 [發行集屬性 - \<發行集名稱>]**** 對話方塊，啟用非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集。 如需有關此步驟的詳細資訊，請參閱＜ [Publication Properties, Subscription Options](publication-properties-subscription-options.md) ＞。  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 [**發行集屬性- \<PublicationName> ** ] 對話方塊，啟用非訂閱者的發行集。 如需有關此步驟的詳細資訊，請參閱＜ [Publication Properties, Subscription Options](publication-properties-subscription-options.md) ＞。  
   
 4.  使用「新增訂閱精靈」建立訂閱。 本主題提供有關這個步驟的詳細資訊。  
   
@@ -137,7 +136,7 @@ ms.locfileid: "62721670"
   
 2.  以滑鼠右鍵按一下發行集，然後再按一下 **[檢視快照集代理程式的狀態]**。  
   
-3.  在 [檢視快照集代理程式的狀態 - \<發行集>]  對話方塊中，按一下 [啟動]  。  
+3.  在 [**視圖快照集代理程式狀態 \<Publication> ** ] 對話方塊中，按一下 [**啟動**]。  
   
  「快照集代理程式」完成產生快照集後，會顯示一個訊息，例如「[100%] 已產生了 17 個發行項的快照集」。  
   
@@ -155,25 +154,25 @@ ms.locfileid: "62721670"
   
     -   如果 `enabled_for_het_sub` 的值為 1，表示支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。  
   
-    -   如果的值`enabled_for_het_sub`是0，請執行[sp_changepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，為指定`enabled_for_het_sub` ， **@property**並`true`針對。 **@value**  
+    -   如果的值 `enabled_for_het_sub` 是0，請執行[Sp_changepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，為指定， `enabled_for_het_sub` **@property** 並 `true` 針對 **@value** 。  
   
         > [!NOTE]  
         >  在將 `enabled_for_het_sub` 變更為 `true` 之前，您必須先卸除此發行集的任何現有訂閱。 當此發行集同時支援更新訂閱時，您無法將 `enabled_for_het_sub` 設定為 `true`。 變更 `enabled_for_het_sub` 會影響其他發行集屬性。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)。  
   
-3.  在發行集資料庫的發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定**@publication**、 **@subscriber**、的 **（預設目的地）** 值**@destination_db**、的**push**值**@subscription_type**，以及的值 3 **@subscriber_type** （指定 OLE DB 提供者）。  
+3.  在發行集資料庫的發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication** 、 **@subscriber** 、的 **（預設目的地）** 值、的 **@destination_db** **push**值 **@subscription_type** ，以及的值 3 **@subscriber_type** （指定 OLE DB 提供者）。  
   
 4.  在發行集資料庫的發行者端，執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定下列項目：  
   
-    -   **@subscriber**和**@publication**參數。  
+    -   **@subscriber**和 **@publication** 參數。  
   
     -   (選擇性) **[訂閱資料庫]** @property **@subscriber_db**、  
   
-    -   **@subscriber_provider**、 **@subscriber_datasrc**、 **@subscriber_location**、 **@subscriber_provider_string**和**@subscriber_catalog**之非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源的屬性。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **@subscriber_provider** 、、 **@subscriber_datasrc** **@subscriber_location** 、 **@subscriber_provider_string** 和 **@subscriber_catalog** 之非資料來源的屬性。  
   
-    -   在[!INCLUDE[msCoName](../../includes/msconame-md.md)]散發者端用來**@job_login**執行和**@job_password**之散發代理程式的 Windows 認證。  
+    -   在散發者端用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 來執行和之散發代理程式的 Windows **@job_login** 認證 **@job_password** 。  
   
         > [!NOTE]  
-        >  使用「Windows 整合式驗證」建立的連接一律使用由**@job_login**和**@job_password**指定的 Windows 認證。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
+        >  使用「Windows 整合式驗證」建立的連接一律使用由和指定的 Windows 認證 **@job_login** **@job_password** 。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
   
     -   (選擇性) **@subscriber_security_mode** @property **@subscriber_security_mode** ，以及 **@subscriber_login** 及 **@subscriber_password**中針對非 SQL Server 訂閱者建立訂閱。  
   

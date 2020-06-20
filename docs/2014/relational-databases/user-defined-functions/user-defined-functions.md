@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7e4b1a77f2fe5a13e21d8b3fe59e37931669b30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054991"
 ---
 # <a name="user-defined-functions"></a>使用者定義的函式
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者定義函數與程式語言函數類似，是可接受參數、執行動作 (如複雜計算) 以及傳回該動作所得值的常式。 傳回值可以是單一純量值或結果集。  
@@ -69,7 +68,7 @@ ms.locfileid: "68211692"
  系統函數  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供許多可用以執行各種作業的系統函數。 這些函數不能修改。 如需詳細資訊，請參閱[內建函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions)、[系統預存函式 &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql)，和[動態管理檢視與函數 &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views)。  
   
-##  <a name="guidelines"></a><a name="Guidelines"></a>規定  
+##  <a name="guidelines"></a><a name="Guidelines"></a> 指導方針  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 造成陳述式取消並且以模組中下一個陳述式繼續 (例如觸發程序或預存程序) 的錯誤會在函式內部以不同方式處理。 在函數中，這樣的錯誤會造成函數停止執行。 進而導致叫用該函數的陳述式取消。  
   
  BEGIN...END 區塊中的陳述式不能有任何副作用。 函數副作用是在函數的範圍外對資源狀態所做的任何永久變更，例如修改資料庫資料表。 在函數中陳述式只能變更函數的區域性物件，例如本機資料指標或變數。 在函數中不得執行的動作包括修改資料庫資料表、對函數的非本機資料指標進行運算、傳送電子郵件、試圖修改目錄，以及產生傳回給使用者的結果集。  
@@ -140,7 +139,7 @@ ms.locfileid: "68211692"
   
 |||  
 |-|-|  
-|**工作描述**|**主題**|  
+|**工作描述**|**本文**|  
 |描述如何建立 Transact-SQL 使用者定義函數。|[建立使用者定義函式 &#40;資料庫引擎&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |描述如何建立 CLR 函數。|[建立 CLR 函數](../user-defined-functions/create-clr-functions.md)|  
 |描述如何建立使用者定義的彙總函式。|[建立使用者定義彙總](../user-defined-functions/create-user-defined-aggregates.md)|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 018d5add95e5d0936f6055e1c6710b6a8ddabdab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63269884"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061467"
 ---
 # <a name="work-with-change-data-sql-server"></a>使用變更資料 (SQL Server)
   異動資料擷取取用者會透過資料表值函式 (TVF) 取得變更資料。 這些函數的所有查詢都需要使用兩個參數來定義開發傳回的結果集時適合用於考量的記錄序號 (LSN) 範圍。 限制間隔的上下 LSN 值會被視為包含在間隔內部。  
@@ -67,7 +66,7 @@ ms.locfileid: "63269884"
   
 -   [cdc.fn_cdc_get_all_changes_<capture_instance>](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) 函數會傳回在指定的間隔中發生的所有變更。 系統一定會產生這個函數。 傳回的項目一律會經過排序 (先依據變更的交易認可 LSN，然後再依據變更在交易內部排列順序的值)。 根據選擇的資料列篩選選項，系統會在更新時傳回最後一個資料列 (資料列篩選選項 "all") 或在更新時傳回全新和舊的值 (資料列篩選選項 "all update old")。  
   
--   啟用來源資料表時，如果將參數 [ 設定為 1，則會產生函式 ](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)cdc.fn_cdc_get_net_changes_<擷取執行個體>@supports_net_changes。  
+-   啟用來源資料表時，如果將參數 @supports_net_changes 設定為 1，則會產生函式 [cdc.fn_cdc_get_net_changes_<擷取執行個體>](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)。  
   
     > [!NOTE]  
     >  只有當來源資料表具有已定義的主索引鍵，或者 @index_name 參數已經用來識別唯一的索引時，才支援這個選項。  

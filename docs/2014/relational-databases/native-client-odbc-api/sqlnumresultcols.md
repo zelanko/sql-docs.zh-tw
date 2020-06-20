@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0eb6de956884eb66990459b8b4c6a6336c8ed8ac
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45e72165eef621dc377b02ed3d2e7e1e3cf7ab8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705946"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021871"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
   對於執行的語句， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式不會造訪伺服器來報告結果集中的資料行數目。 在此情況下， `SQLNumResultCols` 並不會造成伺服器往返。 如同[SQLDescribeCol](sqldescribecol.md)和[SQLColAttribute](sqlcolattribute.md)， `SQLNumResultCols` 在已備妥但未執行的語句上呼叫，會產生伺服器往返。  

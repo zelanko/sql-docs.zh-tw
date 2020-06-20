@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea6ec9f196acd0a64a0b785024bd6426cd6a5381
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922152"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959062"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>完整的資料庫還原 (完整復原模式)
   在完整資料庫還原中，目標是還原整個資料庫。 在還原期間，整個資料庫為離線狀態。 在讓資料庫的任何部分上線之前，所有的資料都必須復原到一致的位置；此時資料庫的所有部分都會回到相同的時間點，而且沒有未認可的交易存在。  
@@ -45,7 +44,7 @@ ms.locfileid: "62922152"
 > [!NOTE]  
 >  如需舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之備份支援的相關資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)的＜相容性支援＞一節。  
   
-##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a>將資料庫還原到失敗點  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a> 將資料庫還原到失敗點  
  一般而言，將資料庫復原至失敗點的作業，包含下列基本步驟：  
   
 1.  備份使用中的交易記錄檔 (即所謂的記錄檔結尾)。 這會建立結尾記錄備份。 如果沒有使用中的交易記錄，就會遺失該部分記錄中的所有交易。  
@@ -73,7 +72,7 @@ ms.locfileid: "62922152"
 >  當您將資料庫備份還原至不同的伺服器執行個體時，請參閱 [使用備份與還原複製資料庫](../databases/copy-databases-with-backup-and-restore.md)。  
   
 ###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> 基本 Transact-SQL RESTORE 語法  
- 上圖中還原順序的基本[restore](/sql/t-sql/statements/restore-statements-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)]語法如下：  
+ 上圖中還原順序的基本 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 語法如下：  
   
 1.  RESTORE DATABASE *&lt;database&gt;* FROM *full database backup* WITH NORECOVERY;  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62922152"
   
 4.  RESTORE DATABASE *&lt;database&gt;* WITH RECOVERY;  
   
-###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a>範例：復原到失敗點（Transact-sql）  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> 範例：復原到失敗點 (Transact-SQL)  
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例顯示將資料庫還原到失敗點之還原順序中的基本選項。 此範例會建立資料庫的結尾記錄備份。 接下來，此範例會還原完整的資料庫備份和記錄備份，然後還原結尾記錄備份。 此範例會在一個不同的最後步驟中復原資料庫。  
   
 > [!NOTE]  
@@ -171,16 +170,16 @@ GO
   
 -   [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
--   [復原包含標記之異動的相關資料庫](recovery-of-related-databases-that-contain-marked-transaction.md)  
+-   [復原包含標示之交易的相關資料庫](recovery-of-related-databases-that-contain-marked-transaction.md)  
   
 -   [復原到記錄序號 &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [將交易記錄備份套用 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [sp_addumpdevice &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [&#40;SQL Server&#41;的完整資料庫備份](full-database-backups-sql-server.md)   
+ [套用交易記錄備份 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [完整資料庫備份 &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [備份概觀 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [還原和復原概觀 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

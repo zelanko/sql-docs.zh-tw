@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9c4d9b65fed30d09bf739271131d3b83afcd0902
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 971f45fd69f381a8997bb2f8f08444f4d9c107c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010134"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955419"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   FILESTREAM 可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架構應用程式在檔案系統上儲存非結構化的資料，例如文件和影像。 應用程式可以利用檔案系統的豐富資料流 API 和效能，並同時維護非結構化資料與對應結構化資料之間的交易一致性。  
   
- FILESTREAM 會將[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]與 NTFS 檔案系統整合，方法`varbinary(max)`是將二進位大型物件（BLOB）資料儲存為檔案系統上的檔案。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以插入、更新、查詢、搜尋和備份 FILESTREAM 資料。 Win32 檔案系統介面提供了資料的資料流方式存取。  
+ FILESTREAM 會將 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 與 NTFS 檔案系統整合，方法是 `varbinary(max)` 將二進位大型物件（BLOB）資料儲存為檔案系統上的檔案。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以插入、更新、查詢、搜尋和備份 FILESTREAM 資料。 Win32 檔案系統介面提供了資料的資料流方式存取。  
   
  FILESTREAM 會使用 NT 系統快取來儲存檔案資料。 如此可減少 FILESTREAM 資料可能對 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 效能產生的任何影響。 並不會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區；因此，此記憶體可用於查詢處理。  
   
@@ -151,7 +150,7 @@ ms.locfileid: "66010134"
  使用 FILESTREAM 控制代碼來建立記憶體對應檢視 (記憶體對應 I/O) 不受到支援。 如果將記憶體對應用於 FILESTREAM 資料， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將無法保證資料的一致性與持續性或是資料庫的完整性。  
   
 ##  <a name="related-tasks"></a><a name="reltasks"></a> 相關工作  
- [啟用及設定 FILESTREAM](enable-and-configure-filestream.md)  
+ [啟用和設定 FILESTREAM](enable-and-configure-filestream.md)  
   [建立啟用 FILESTREAM 的資料庫](create-a-filestream-enabled-database.md)  
   [建立儲存 FILESTREAM 資料的資料表](create-a-table-for-storing-filestream-data.md)  
   [使用 Transact-SQL 存取 FILESTREAM 資料](access-filestream-data-with-transact-sql.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3fb5e3fa319259df5ba0da1d6234fedee9cb604
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144797"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025194"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 課：從另一部電腦連線
   為了加強安全性，初始安裝時，您不能從另一部電腦存取 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer Edition、Express Edition 和 Evaluation Edition 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 這一課教您如何啟用通訊協定、設定通訊埠以及設定 Windows 防火牆，以便從其他電腦連接。  
@@ -44,7 +43,7 @@ ms.locfileid: "63144797"
     > [!NOTE]  
     >  您必須同時能夠使用 32 位元和 64 位元選項。  
   
-2.  在**SQL Server 組態管理員**中，展開 [ **SQL Server 網路**設定]，然後按一下 [ _ \<InstanceName>_**的通訊協定**]。  
+2.  在**SQL Server 組態管理員**中，展開 [ **SQL Server 網路**設定]，然後按一下 [**的通訊協定**] _\<InstanceName>_ 。  
   
      預設執行個體 (未命名的執行個體) 是以 **MSSQLSERVER**列出。 如果您安裝了具名執行個體，則會列出您所提供的名稱。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)]會安裝成**SQLEXPRESS**，除非您在安裝期間變更了名稱。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63144797"
  為了加強安全性，Windows Server 2008、 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]和 Windows 7 都會開啟 Windows 防火牆。 若要從另一部電腦連接到這個執行個體，您必須在防火牆中開啟通訊埠。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體會接聽通訊埠 1433，因此，您不需要設定固定通訊埠。 但是，包括 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 在內的具名執行個體則會接聽動態通訊埠。 在防火牆中開啟通訊埠之前，您必須先設定 [!INCLUDE[ssDE](../includes/ssde-md.md)] 接聽特定的通訊埠 (稱為固定通訊埠或靜態通訊埠)，否則每次 [!INCLUDE[ssDE](../includes/ssde-md.md)] 啟動時可能會接聽不同的通訊埠。 如需防火牆、預設 Windows 防火牆設定的詳細資訊以及影響 Database Engine、Analysis Services、Reporting Services 和 Integration Services 之 TCP 通訊埠的描述，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 > [!NOTE]  
->  通訊埠編號指派是由網際網路指派的號碼授權單位所管理， [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844)列于。埠號碼應從數位49152到65535指派。  
+>  通訊埠編號指派是由網際網路指派的號碼授權單位所管理，列于 [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) 。埠號碼應從數位49152到65535指派。  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>設定 SQL Server 在特定通訊埠接聽  
   
@@ -67,13 +66,13 @@ ms.locfileid: "63144797"
   
 3.  在 [TCP/IP 屬性]**** 對話方塊中，按一下 [IP 位址]**** 索引標籤。  
   
-4.  在 [IPAll]**** 區段的 [TCP 通訊埠]**** 方塊中，輸入可用的通訊埠號碼。 在本教學課程中，我們`49172`將使用。  
+4.  在 [IPAll]**** 區段的 [TCP 通訊埠]**** 方塊中，輸入可用的通訊埠號碼。 在本教學課程中，我們將使用 `49172` 。  
   
 5.  按一下 [確定]**** 關閉對話方塊，再於提示您必須重新啟動服務的警告中按一下 [確定]****。  
   
 6.  在左窗格中，按一下 **[SQL Server 服務]**。  
   
-7.  在右窗格中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，然後按一下 [重新啟動]****。 當[!INCLUDE[ssDE](../includes/ssde-md.md)]重新開機時，它會接聽埠`49172`。  
+7.  在右窗格中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，然後按一下 [重新啟動]****。 當 [!INCLUDE[ssDE](../includes/ssde-md.md)] 重新開機時，它會接聽埠 `49172` 。  
   
 ##  <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>在防火牆中開啟埠  
  防火牆系統有助於預防未經授權存取電腦資源。 若要在防火牆開啟時從另一部電腦連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，您必須在防火牆中開啟通訊埠。  
@@ -91,7 +90,7 @@ ms.locfileid: "63144797"
   
 3.  在 **[規則類型]** 對話方塊中，選取 **[通訊埠]**，然後按 **[下一步]**。  
   
-4.  在 **[通訊協定及連接埠]** 對話方塊中，選取 **[TCP]**。 選取 [特定本機連接埠]****，然後輸入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的通訊埠編號。 輸入 1433 表示預設執行個體。 如果`49172`您要設定已命名的實例，並在上一個工作中設定固定通訊埠，請輸入。 按 [下一步]  。  
+4.  在 **[通訊協定及連接埠]** 對話方塊中，選取 **[TCP]**。 選取 [特定本機連接埠]****，然後輸入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的通訊埠編號。 輸入 1433 表示預設執行個體。 `49172`如果您要設定已命名的實例，並在上一個工作中設定固定通訊埠，請輸入。 按 [下一步] 。  
   
 5.  在 **[動作]** 對話方塊中，選取 **[允許連線]**，然後按 **[下一步]**。  
   

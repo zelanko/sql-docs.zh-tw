@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07e01e8069cce53d1c37d01cea7513fcbcdd1cb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 523c4fc30151acd3ee4df21f2fdaa2187e702870
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380749"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011033"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>針對 Web 同步處理設定 IIS
   本主題中的程序，會構成設定合併式複寫之 Web 同步處理時所採取的第二個步驟。 請在啟用 Web 同步處理的發行集之後執行這個步驟。 如需組態處理序的概觀，請參閱＜ [[設定 Web 同步處理]](configure-web-synchronization.md)＞。 完成本主題中的程序之後，請繼續執行第三個步驟，即設定訂閱來使用 Web 同步處理。 第三個步驟在下列主題中描述：  
@@ -42,7 +41,7 @@ ms.locfileid: "80380749"
   
 1.  設定安全通訊端層 (SSL)。 IIS 與所有訂閱者之間的通訊需要 SSL。  
   
-2.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈，在執行 IIS 的電腦上安裝連接元件。 如果您打算使用步驟 3 提到的「設定 Web 同步處理精靈」，您也必須將 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 安裝在執行 IIS 的電腦上。  
+2.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用安裝精靈，在執行 IIS 的電腦上安裝連接元件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果您打算使用步驟 3 提到的「設定 Web 同步處理精靈」，您也必須將 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 安裝在執行 IIS 的電腦上。  
   
 3.  設定執行 IIS 的電腦來進行 Web 同步處理。 您可以手動設定電腦，或使用「設定 Web 同步處理精靈」。 我們建議您使用精靈。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "80380749"
   
     1.  按一下 **[開始]** ，然後按一下 **[執行]** 。  
   
-    2.  在 [**開啟**] 方塊中`inetmgr`，輸入，然後按一下 **[確定]**。  
+    2.  在 [**開啟**] 方塊中，輸入 `inetmgr` ，然後按一下 **[確定]**。  
   
 3.  執行 IIS 憑證精靈：  
   
@@ -80,7 +79,7 @@ ms.locfileid: "80380749"
   
     4.  完成「Web 伺服器憑證精靈」。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
  如果您無法從 CA 取得伺服器憑證，您可以指定憑證來進行測試。 若要設定 IIS 6.0 來進行測試，請利用 SelfSSL 公用程式來安裝憑證。 IIS 6.0 資源套件中有提供此公用程式。 您可以從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=5135)下載這些工具。 如需 IIS 5.0，請移至 [Microsoft 說明及支援](https://go.microsoft.com/fwlink/?LinkId=46229)。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "80380749"
   
 1.  以管理員身分登入執行 IIS 的電腦。  
   
-2.  下載並安裝 SelfSSL。 依預設，應用程式會安裝到 \<*磁碟機*>:\Program Files\IIS Resources\SelfSSL。 應用程式與文件集快速鍵會複製到 \<*磁碟機*>:\Documents and Settings\All Users\Start Menu\Programs\IIS Resources\SelfSSL。  
+2.  下載並安裝 SelfSSL。 根據預設，應用程式會安裝到 \<*drive*> ： \Program Files\IIS resources\selfssl。 應用程式和檔快捷方式會複製到 \<*drive*> ： \Documents 和 Settings\All Settings\all users\start Menu\Programs\IIS resources\selfssl。  
   
 3.  執行 SelfSSL：  
   
@@ -100,7 +99,7 @@ ms.locfileid: "80380749"
         > [!NOTE]  
         >  依預設，SelfSSL 安裝的憑證在七天內有效。  
   
-    -   若要指定一或多個參數值：請按一下 **[開始]**，然後按一下 **[執行]**。 在 [**開啟**] 方塊中`cmd`，輸入，然後按一下 **[確定]**。 找出 SelfSSL 安裝目錄，輸入 `SelfSSL`，然後指定一或多個參數的值。 如需參數列表，請輸入 `SelfSSL -?`。  
+    -   若要指定一或多個參數值：請按一下 **[開始]**，然後按一下 **[執行]**。 在 [**開啟**] 方塊中，輸入 `cmd` ，然後按一下 **[確定]**。 找出 SelfSSL 安裝目錄，輸入 `SelfSSL`，然後指定一或多個參數的值。 如需參數列表，請輸入 `SelfSSL -?`。  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>安裝連接元件和 SQL Server Management Studio  
   
@@ -155,7 +154,7 @@ ms.locfileid: "80380749"
   
     1.  在 **[別名]** 方塊中輸入虛擬目錄的別名。  
   
-    2.  在 **[路徑]** 方塊中輸入虛擬目錄的路徑。 例如，如果您在 [ `websync1` **別名**] 方塊中輸入， `C:\Inetpub\wwwroot\websync1`請在 [**路徑**] 方塊中輸入。 按 [下一步]  。  
+    2.  在 **[路徑]** 方塊中輸入虛擬目錄的路徑。 例如，如果您 `websync1` 在 [**別名**] 方塊中輸入，請 `C:\Inetpub\wwwroot\websync1` 在 [**路徑**] 方塊中輸入。 按 [下一步] 。  
   
     3.  在兩個對話方塊中，按一下 **[是]**。 這會指定您要建立新資料夾，並指定您要複製 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL。 .  
   
@@ -179,11 +178,11 @@ ms.locfileid: "80380749"
   
 11. 如果執行 IIS 的電腦執行於 64 位元版本的 Windows 上，則必須將 replisapi.dll 複製到適當的目錄：  
   
-    1.  按一下 **[開始]** ，然後按一下 **[執行]** 。 在 [**開啟**] 方塊中`iisreset`，輸入，然後按一下 **[確定]**。  
+    1.  按一下 **[開始]** ，然後按一下 **[執行]** 。 在 [**開啟**] 方塊中，輸入 `iisreset` ，然後按一下 **[確定]**。  
   
     2.  停止並重新啟動 IIS 之後，請將 replisapi.dll 從 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi 複製到步驟 6b 中指定的目錄。  
   
-    3.  按一下 **[開始]** ，然後按一下 **[執行]** 。 在 [**開啟**] 方塊中`cmd`，輸入，然後按一下 **[確定]**。  
+    3.  按一下 **[開始]** ，然後按一下 **[執行]** 。 在 [**開啟**] 方塊中，輸入 `cmd` ，然後按一下 **[確定]**。  
   
     4.  於您在步驟 6b 中指定的目錄中，執行下列命令：  
   
@@ -194,7 +193,7 @@ ms.locfileid: "80380749"
   
 #### <a name="to-install-and-configure-the-sql-server-replication-listener"></a>若要安裝和設定 SQL Server Replication Listener  
   
-1.  在執行 IIS 的電腦上建立檔案目錄來容納 replisapi.dll。 您可以在任何位置建立該目錄，不過，建議您在 \<*磁碟機*>:\Inetpub 目錄底下建立該目錄。 例如，您可以建立 \<*磁碟機*>:\Inetpub\SQLReplication\\ 目錄。  
+1.  在執行 IIS 的電腦上建立檔案目錄來容納 replisapi.dll。 您可以在任何想要的位置建立目錄，但建議您在 \<*drive*> ： \Inetpub 目錄下建立目錄。 例如，建立目錄 \<*drive*> ： \Inetpub\SQLReplication \\ 。  
   
     > [!IMPORTANT]  
     >  強烈建議您在 NTFS 檔案系統資料分割 (而非 FAT 檔案系統) 上建立此目錄。 使用 NTFS 檔案系統時，可使用 NTFS 檔案系統權限，來準確控制可存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫的使用者。  
@@ -203,7 +202,7 @@ ms.locfileid: "80380749"
   
 3.  註冊 replisapi.dll：  
   
-    1.  按一下 **[開始]** ，然後按一下 **[執行]** 。 在 [**開啟**] 方塊中`cmd`，輸入，然後按一下 **[確定]**。  
+    1.  按一下 **[開始]** ，然後按一下 **[執行]** 。 在 [**開啟**] 方塊中，輸入 `cmd` ，然後按一下 **[確定]**。  
   
     2.  於您在步驟 1 中建立的目錄中，執行下列命令：  
   
@@ -224,7 +223,7 @@ ms.locfileid: "80380749"
 ## <a name="setting-permissions-for-the-sql-server-replication-listener"></a>設定 SQL Server Replication Listener 的權限  
  當訂閱者連接到執行 IIS 的電腦時，系統會利用您先前設定 IIS 時所指定的驗證類型來驗證訂閱者。 IIS 驗證訂閱者之後，IIS 會檢查訂閱者是否獲授權叫用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫。 您可藉由設定 replisapi.dll 的權限來控制可以叫用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫的使用者。 您必須適當地設定權限，才能避免未經授權的使用者存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫。  
   
- 若要設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener 執行時所用帳戶的最小權限，請完成下列程序。 此程式中的步驟適用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]于執行 IIS 6.0。  
+ 若要設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener 執行時所用帳戶的最小權限，請完成下列程序。 此程式中的步驟適用于執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] IIS 6.0。  
   
  除了執行下列步驟之外，請確保所需的登入位於發行集存取清單 (PAL) 中。 如需 PAL 的詳細資訊，請參閱[保護發行者](security/secure-the-publisher.md)。  
   
@@ -270,13 +269,13 @@ ms.locfileid: "80380749"
   
     6.  選取不需要存取目錄的使用者或群組，然後按一下 **[移除]**。  
   
-    7.  按一下 [確定]  。  
+    7.  按一下 [確定]。  
   
 4.  在 **[Internet Information Services (IIS) 管理員]** 中建立應用程式集區：  
   
     1.  按一下 **[開始]** ，然後按一下 **[執行]** 。  
   
-    2.  在 [**開啟**] 方塊中`inetmgr`，輸入，然後按一下 **[確定]**。  
+    2.  在 [**開啟**] 方塊中，輸入 `inetmgr` ，然後按一下 **[確定]**。  
   
     3.  在 **[Internet Information Services (IIS) 管理員]** 中，展開 **[本機電腦]** 節點。  
   
@@ -294,7 +293,7 @@ ms.locfileid: "80380749"
   
     4.  在 **[使用者名稱]** 和 **[密碼]** 欄位中，輸入步驟 1 中建立的帳戶和密碼。  
   
-    5.  按一下 [確定]  。  
+    5.  按一下 [確定]。  
   
 6.  將應用程式集區與 Web 同步處理所使用的虛擬目錄相關聯：  
   
@@ -302,9 +301,9 @@ ms.locfileid: "80380749"
   
     2.  展開您用於 Web 同步處理的網站，以滑鼠右鍵按一下您為 Web 同步處理建立的虛擬目錄，然後按一下 **[屬性]**。  
   
-    3.  在 [\<VirtualDirectoryName> 屬性]**** 對話方塊的 [虛擬目錄]**** 索引標籤上，從 [應用程式集區]**** 下拉式清單選取步驟 5 中建立的應用程式集區。  
+    3.  在 [ ** \<VirtualDirectoryName> 屬性**] 對話方塊的 [**虛擬目錄**] 索引標籤上，從 [**應用程式集**區] 下拉式清單中，選取在步驟5中建立的應用程式集區。  
   
-    4.  按一下 [確定]  。  
+    4.  按一下 [確定]。  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>測試與 replisapi.dll 的連接  
  在診斷模式下執行 Web 同步處理，以測試執行 IIS 之電腦的連接，並確定安全通訊端層 (SSL) 憑證已正確安裝。 若要在診斷模式下執行 Web 同步處理，您必須是執行 IIS 之電腦上的管理員。  
@@ -321,7 +320,7 @@ ms.locfileid: "80380749"
   
     4.  如果使用 Proxy 伺服器，請選取 **[在 LAN 中使用 Proxy 伺服器]** 和 **[本機位址不使用 Proxy 伺服器]**。  
   
-    5.  按一下 [確定]  。  
+    5.  按一下 [確定]。  
   
 2.  在訂閱者端的 Internet Explorer 中，將 `?diag` 附加至 replisapi.dll 的位址，以便在診斷模式下連接伺服器。 例如： `https://server.domain.com/directory/replisapi.dll?diag` 。  
   
@@ -347,7 +346,7 @@ ms.locfileid: "80380749"
     > [!NOTE]  
     >  將為使用者安裝憑證。 這項處理序必須針對將與 IIS 同步處理的每位使用者執行。  
   
-4.  在 [連接到 \<伺服器名稱>]  對話方塊中，指定合併代理程式要用來連接 IIS 的登入和密碼。 也可以在「新增訂閱精靈」中指定這些認證。  
+4.  在 [**連接到 \<ServerName> ** ] 對話方塊中，指定合併代理程式將用來連接到 IIS 的登入和密碼。 也可以在「新增訂閱精靈」中指定這些認證。  
   
 5.  在稱為 **[SQL Websync 診斷資訊]** 的 Internet Explorer 視窗中，確認頁面中每個 **[狀態]** 資料行中的值都是 **[SUCCESS]** 。  
   

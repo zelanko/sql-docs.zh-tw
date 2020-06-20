@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cd5575c94c9a74623efaa80c9470c54982a41d0d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efd59bc8c0d6bb748b9ae6c314b0a75cc6d98c5f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783105"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927864"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>使用 Database Engine Cmdlet
   Windows PowerShell Cmdlet 是單一功能的命令，通常具有動詞-名詞命名慣例，例如 **Get-Help** 或 **Set-MachineName**。 適用於 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]特有的指令程式。  

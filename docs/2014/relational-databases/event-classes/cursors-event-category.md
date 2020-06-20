@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd614cc08e22b936c0f5f5468ded70d2adb9726f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b31ff8ccb9c662a2f0ea54adc9cd2d466103be2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663203"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029968"
 ---
 # <a name="cursors-event-category"></a>Cursors 事件類別目錄
   **Cursors** 事件類別目錄包含用來監視資料指標行為的事件類別。  

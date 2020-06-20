@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: e153f619-0049-4162-9076-c24a454f3278
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 29da37c82339798df3ec47b4b611da948f974c53
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6f3460c892c182996a753c2a16076418a6b2008f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718333"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063324"
 ---
 # <a name="threads-window"></a>執行緒視窗
-  [執行緒]  視窗會顯示有關所偵錯之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器工作階段使用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行緒資訊。 您必須在偵錯模式中，才能顯示執行緒資訊。  
+  [執行緒] 視窗會顯示有關所偵錯之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器工作階段使用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行緒資訊。 您必須在偵錯模式中，才能顯示執行緒資訊。  
   
 ## <a name="task-list"></a>工作清單  
  **若要存取執行緒視窗**  

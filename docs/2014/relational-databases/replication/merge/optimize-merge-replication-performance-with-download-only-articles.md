@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c2b97db9db160f70463b885bcdb24c01ff9103f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63250373"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010402"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>使用僅限下載的發行項最佳化合併式複寫效能
   合併式複寫提供兩種不同類型的發行項，以滿足不同應用程式的需求。 發行集可包含這兩種類型的一種或兩種，以符合應用程式：  

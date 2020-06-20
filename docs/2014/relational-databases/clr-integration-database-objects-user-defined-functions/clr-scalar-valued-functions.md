@@ -16,19 +16,18 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cd2a71e6acd52ba92f44c26f184bbd3141de6f4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919595"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954672"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 純量值函式
-  純量值函式 (SVF) 傳回單一值，如字串、整數或位元值。您可以使用任何 .NET Framework 程式語言，以 Managed 程式碼建立純量值的使用者定義函數。 這些函數可供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他 Managed 程式碼存取。 如需 CLR 整合的優點，以及在 managed 程式碼和[!INCLUDE[tsql](../../includes/tsql-md.md)]之間選擇的詳細資訊，請參閱[CLR 整合的總覽](../clr-integration/clr-integration-overview.md)。  
+  純量值函式 (SVF) 傳回單一值，如字串、整數或位元值。您可以使用任何 .NET Framework 程式語言，以 Managed 程式碼建立純量值的使用者定義函數。 這些函數可供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他 Managed 程式碼存取。 如需 CLR 整合的優點，以及在 managed 程式碼和之間選擇的詳細資訊 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，請參閱[CLR 整合的總覽](../clr-integration/clr-integration-overview.md)。  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR 純量值函式的需求  
- .NET Framework SVF 會在 .NET Framework 組件中實作為類別上的方法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從 SVF 傳回的輸入參數和類型可以是所支援的任何純量資料類型，但、、 `varchar`、 `char` `rowversion` `text`、 `ntext` `image` `timestamp` `table`、、、或`cursor`除外。 SVF 必須確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型與實作方法的傳回資料類型相符。 如需類型轉換的詳細資訊，請參閱[對應 CLR 參數資料](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
+ .NET Framework SVF 會在 .NET Framework 組件中實作為類別上的方法。 從 SVF 傳回的輸入參數和類型可以是所支援的任何純量資料類型，但、、、、、、、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `varchar` `char` 或除外 `rowversion` `text` `ntext` `image` `timestamp` `table` `cursor` 。 SVF 必須確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型與實作方法的傳回資料類型相符。 如需類型轉換的詳細資訊，請參閱[對應 CLR 參數資料](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
  當以 .NET Framework 語言實作 .NET Framework SVF 時，您可藉由指定 `SqlFunction` 自訂屬性，併入有關此函數的其他資訊。 `SqlFunction` 屬性會指出當函數具有決定性或涉及浮點運算時，是否可以存取或修改資料。  
   

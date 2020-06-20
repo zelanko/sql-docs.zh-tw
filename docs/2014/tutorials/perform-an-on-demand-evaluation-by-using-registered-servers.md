@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3ffcef923eaeb3ba48eacaca870bd3355fb6661
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66822378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035583"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>使用已註冊的伺服器執行指定評估
 
@@ -24,7 +23,7 @@ ms.locfileid: "66822378"
 > [!NOTE]  
 >  您可以針對執行 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 更新版本的伺服器群組成員執行最佳作法原則的指定評估。 不過，如果有一些 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] 中不支援之原則參考的屬性，您可能會收到例外狀況錯誤。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行這個工作，必須已經在已註冊的伺服器中設定一個或多個伺服器註冊。 如需詳細資訊，請參閱下列主題：  
   
 -   [建立或編輯伺服器群組 &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
@@ -50,7 +49,7 @@ ms.locfileid: "66822378"
   
 4.  在 [**評估原則**] 對話方塊中，按一下 [**來源**] 方塊旁的省略號（**...**）按鈕。  
   
-5.  在 [**選取來源**] 對話方塊中，您可以選取 [檔案 **] 或 [** **伺服器**] 做為要評估之原則檔案的來源。 如果您按一下 [**伺服器**]，可以針對先前匯入本機或遠端伺服器上以原則為基礎之管理的任何最佳作法原則，執行視需要評估。 在本教學課程**中，您將按一下 [** 檔案]，然後選取您想要評估的個別原則檔案。 若要這樣做，請執行下列步驟：  
+5.  在 [**選取來源**] 對話方塊中，您可以選取 [檔案 **] 或 [** **伺服器**] 做為要評估之原則檔案的來源。 如果您按一下 [**伺服器**]，可以針對先前匯入本機或遠端伺服器上以原則為基礎之管理的任何最佳作法原則，執行視需要評估。 在本教學課程**中，您將按一下 [** 檔案]，然後選取您想要評估的個別原則檔案。 若要這樣做，請遵循下列步驟：  
   
     1.  按一下 **[** 檔案]。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "66822378"
 7.  對於某些原則失敗，以原則為基礎的管理可讓您立即強制符合目標上的原則。 若是此類失敗，失敗的原則旁邊會出現一個核取方塊。 如果您選取此核取方塊，或按一下具有失敗原則的資料列，核取方塊就會出現在評估失敗的目標實例旁的 [**目標詳細資料**] 窗格中。 如果選取了任何核取方塊，[套用]**按鈕就**會變成可用。 當**您按一下 [** 套用] 時，將會在您選取的目標實例上自動更新不符合規範的設定。  
   
     > [!CAUTION]  
-    >  請在自動更新目標執行個體之前，確認您完全了解原則設定。 我們建議您在選取一個或多個核取方塊後，按一下 [**腳本**]，然後選擇輸出位置，以便您可以在套用[!INCLUDE[tsql](../includes/tsql-md.md)]變更之前，先檢查基礎程式碼。  
+    >  請在自動更新目標執行個體之前，確認您完全了解原則設定。 我們建議您在選取一個或多個核取方塊後，按一下 [**腳本**]，然後選擇輸出位置，以便您可以在套用 [!INCLUDE[tsql](../includes/tsql-md.md)] 變更之前，先檢查基礎程式碼。  
   
 8.  若要查看原則的詳細結果，請按一下 [**結果**] 資料表中的原則。 [**目標詳細資料**] 資料表會顯示每個實例的詳細資料。  
   

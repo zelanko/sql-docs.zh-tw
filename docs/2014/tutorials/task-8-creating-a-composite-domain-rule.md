@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4766a1206eb09e98bb20d3712a63762126b682b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006242"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>工作 8：建立複合定義域規則
   在這項工作中，您會建立**位址驗證**複合定義域的規則。 您會定義跨定義域規則：如果**city**是**洛杉磯**，則**state**必須是**CA** ，其中**City**和**State**是兩個網域。  

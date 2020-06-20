@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebcdace31407c1b5ca8568595bb4b10e245b4da0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204589"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064274"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>查詢類型 (Visual Database Tools)
   [查詢和檢視設計師] 針對某些查詢類型 (選取、插入結果、插入值、更新、刪除和製成資料表) 提供內建功能，同時亦支援 UNION、全文檢索搜尋和 CASE 運算式查詢。  

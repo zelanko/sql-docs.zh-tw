@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2788847a52d47596c38a9f63161d122543fe8099
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a2721e3fc4d46d2cfbf5284986d343d5baca5862
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706000"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022153"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   資料表會顯示**SQLGetInfo**所傳回的值。 這些值可能會根據連接之伺服器的版本號碼而有所不同。  
   
- **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 SQLGetInfo 與 ODBC 驅動程式中的**SQLGetInfo**不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （SQLSRV32。DLL）時，使用 SQL_KEYWORDS 和0緩衝區長度來呼叫**SQLGetInfo** 。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驅動程式會傳回 SQL_SUCCESS，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式則會傳回 SQL_SUCCESS_WITH_INFO。  不過，使用小於輸出關鍵字字串的非零緩衝區長度呼叫時，Native Client 中的**SQLGetInfo**會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO，而 SQLState 則會傳回01004。  
+ **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當使用 SQL_KEYWORDS 和0個緩衝區長度呼叫**SQLGetInfo**時，Native Client 中的 SQLGetInfo 與 ODBC 驅動程式中的 SQLGetInfo （SQLSRV32.DLL）不同。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驅動程式會傳回 SQL_SUCCESS，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式則會傳回 SQL_SUCCESS_WITH_INFO。  不過，使用小於輸出關鍵字字串的非零緩衝區長度呼叫時，Native Client 中的**SQLGetInfo**會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO，而 SQLState 則會傳回01004。  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -117,7 +116,7 @@ ms.locfileid: "82706000"
 |SQL_IDENTIFIER_QUOTE_CHAR|" (雙引號字元)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|驅動程式不支援的要求。|  
-|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式特有的屬性。 由連接使用中的網路程式庫名稱。<br /><br /> 根據預設，會傳回 DBNETLIB。  在此情況下，DBNETLIB 指的是網路程式庫，而且與 DBNETLIB 無關。|  
+|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式特有的屬性。 由連接使用中的網路程式庫名稱。<br /><br /> 根據預設，會傳回 DBNETLIB。  在此情況下，DBNETLIB 會參照網路程式庫，且與 dbnetlib.dll 無關。|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  

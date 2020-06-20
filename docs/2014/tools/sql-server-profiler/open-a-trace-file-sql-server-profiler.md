@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f9ec6032-c961-4b00-ba38-208454fd2bdb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9c49ff9295904d8149f6050c0cb25de4d68cfe24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ae1779447ac2552fb929034e50733c76eadf2c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240550"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063995"
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>開啟追蹤檔案 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]開啟追蹤檔案。  

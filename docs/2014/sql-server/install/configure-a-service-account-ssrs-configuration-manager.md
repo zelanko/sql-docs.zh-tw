@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da8ada61df6a95a83f59bfb3791329728f2856c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952578"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036954"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>設定服務帳戶 (SSRS 組態管理員)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝中，報表伺服器 Web 服務、報表管理員和背景處理應用程式會在單一服務中執行。 當您在 [服務識別] 頁面中指定此服務執行所用的帳戶時，安裝期間會定義此帳戶，但是如果您想要使用不同的帳戶或更新密碼，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。  
@@ -44,7 +43,7 @@ ms.locfileid: "71952578"
   
      如果在支援 Kerberos 驗證的網路中部署報表伺服器，您就必須使用您剛剛指定的網域使用者帳戶來註冊報表伺服器的「服務主要名稱」(SPN)。 如需詳細資訊，請參閱[為報表伺服器註冊服務主體名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
   
-4.  按一下 [套用]  。  
+4.  按一下 [套用]。  
   
 5.  如果出現提示要求備份對稱金鑰，請輸入對稱金鑰備份的檔案名稱和位置，然後輸入用來鎖定和解除檔案鎖定的密碼，再按一下 **[確定]**。  
   

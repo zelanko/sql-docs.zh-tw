@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd1727ffaa24edf12ed7ad8a5fb4f55f4910855e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481232"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064820"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>工作 10：設定複合定義域使用參考資料服務
   在這項工作中，您會設定**位址驗證**複合定義域，以使用**Melissa 的資料位址檢查**服務。 在執行階段的清理活動期間，DQS 會將地址驗證定義域中的定義域值傳遞給服務以進行清理。 如需詳細資訊，請參閱[將定義域/複合定義域對應至參考資料](https://msdn.microsoft.com/library/hh213030.aspx)。  
@@ -46,7 +45,7 @@ ms.locfileid: "65481232"
   
      ![將 RDS 結構描述項目對應至定義域](../../2014/tutorials/media/et-configuringcdtouserds-05.jpg "將 RDS 結構描述項目對應至定義域")  
   
-9. 按一下 [確定]**** 關閉對話方塊。  
+9. 按一下 [確定]  關閉對話方塊。  
   
 ## <a name="next-step"></a>後續步驟  
  [工作 11：發行知識庫](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  

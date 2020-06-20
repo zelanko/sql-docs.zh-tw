@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c099bf9ea271b5ea93fdebfe8f35c98864bca09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63252861"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062544"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切換後針對登入和作業進行管理 (SQL Server)
    針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫部署高可用性或災害復原解決方案時，為該資料庫儲存的相關資訊務必完整重現於 **master** 或 **msdb** 資料庫中。 這類相關資訊通常包括主要/主體資料庫的各項作業，以及需要連接到該資料庫的使用者或處理序的登入。 您應將此資訊複寫於裝載次要/鏡像資料庫的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。 可能的話，最好在角色切換之後，以程式設計方式在新的主要/主體資料庫上重現此資訊。  

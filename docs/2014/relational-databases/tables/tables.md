@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22e417a535454f88d6475a97d2d17ad794404175
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211782"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055046"
 ---
 # <a name="tables"></a>資料表
   資料表是資料庫物件，其中包含資料庫內所有的資料。 在資料表中，會以邏輯的方式將資料整理成資料列與資料行格式，這與試算表相似。 每個資料列都代表唯一的記錄，而每個資料行則代表記錄中的一個欄位。 例如，包含公司員工資料的資料表可能會包含每個員工的資料列，並以資料行來顯示員工資訊 (例如，員工編號、姓名、地址、工作職稱和住家電話號碼)。  
@@ -85,6 +84,6 @@ ms.locfileid: "68211782"
   
 ## <a name="see-also"></a>另請參閱  
  [Primary 和 Foreign Key 條件約束](primary-and-foreign-key-constraints.md)   
- [唯一條件約束與檢查條件約束](unique-constraints-and-check-constraints.md)  
+ [Unique 條件約束和 Check 條件約束](unique-constraints-and-check-constraints.md)  
   
   

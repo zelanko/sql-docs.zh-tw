@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afb5c9d4d6272608249e095c694e0a9c48b37feb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78280835"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054777"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>以多維度及資料採礦模式安裝 Analysis Services
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供商業智慧應用程式的線上分析處理 (OLAP) 和資料採礦功能。 在此版本中，當您在多[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] *維度模式下*安裝時，可以使用 OLAP 資料庫和資料採礦模型的支援。 多維度模式是執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的三種伺服器模式之一， 也是預設模式。 如果您使用預設值安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，則會取得執行多維度資料庫和資料採礦模型的執行個體。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供商業智慧應用程式的線上分析處理 (OLAP) 和資料採礦功能。 在此版本中，當您 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在多*維度模式下*安裝時，可以使用 OLAP 資料庫和資料採礦模型的支援。 多維度模式是執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的三種伺服器模式之一， 也是預設模式。 如果您使用預設值安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，則會取得執行多維度資料庫和資料採礦模型的執行個體。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是一項多執行個體功能，表示您可以在單一電腦上安裝一個以上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，或是與舊版並存執行新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 每個執行個體會有特定的伺服器模式。 使用其他模式需要您安裝其他伺服器執行個體。  
   
- 您可以單獨安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，或是一併安裝其他元件。 如果您只[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]安裝，當您在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈的 [特徵選取] 頁面上選取 [ **Analysis Services** ] 時，會安裝下列功能：  
+ 您可以單獨安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，或是一併安裝其他元件。 如果您只安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，當您在安裝精靈的 [特徵選取] 頁面上選取 [ **Analysis Services** ] 時，會安裝下列功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
 -   用於執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫和資料採礦模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器  
   

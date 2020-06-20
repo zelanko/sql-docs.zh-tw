@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1d8d7d0684d528276cc18adfdd3df837a79d551
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197115"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047455"
 ---
 # <a name="stored-procedures-database-engine"></a>預存程序 (Database Engine)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預存程序是一或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的群組，或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 方法的參考。 預存程序類似於其他程式設計語言中的建構，因為這些程序可以：  
@@ -64,7 +63,7 @@ ms.locfileid: "68197115"
  暫存  
  暫存程序是一種使用者定義的程序。 暫存程序與永久程序類似，只不過暫存程序是儲存於 **tempdb**中。 暫存程序有兩種：本機與全域。 它們在名稱、可見性和可用性方面有些差異。 本機暫存程序是以單一數字符號 (#) 做為名稱的第一個字元；只有目前使用者連接才能看見，當連接中斷時，會將其刪除。 全域暫存程序是以兩個數字符號 (#) 做為名稱的前兩個字元；只要一建立好，任何使用者都能看見，只有當使用程序的最後一個工作階段結束時，才會將其刪除。  
   
- System  
+ 系統  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中包括系統程序。 它們實際上是儲存在內部隱藏的 **Resource** 資料庫中，但邏輯上會出現在每個系統和使用者定義資料庫的 **sys** 結構描述中。 此外， **msdb** 資料庫也包含 **dbo** 結構描述中用於排程警示和作業的系統預存程序。 因為系統程序會以 **sp_** 作為前置詞開頭，因此建議您命名使用者定義的程序時不要使用此前置詞。 如需系統程序的完整清單，請參閱[系統預存程序 &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援的系統程序，可對各種維護活動提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到外部程式的介面。 這些擴充程序會使用 xp_ 前置詞。 如需擴充程序的完整清單，請參閱[一般擴充預存程序 &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql)。  

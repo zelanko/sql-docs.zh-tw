@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 39d0a86147d40bb4f2eaf85dbf5b9ae92bfe540d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0f5d0261bd1968eb01ce8c394de4aeda1a02a22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62642904"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056791"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty 類別
   [ServerNetworkProtocolProperty 類別] ServerNetworkProtocolProperty-class.md）代表伺服器網路通訊協定的屬性。  

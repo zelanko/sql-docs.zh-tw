@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4c341fb8-7cb1-4cab-921b-e80b751d6c19
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c190e95df57c80d29428b39b72a4115ac7d23de1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c876eb6fdd466349ac369dcff8e292bc0839c669
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175347"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927769"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>使用非叢集資料行存放區索引
   描述在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表上使用非叢集資料行存放區索引的主要工作。
@@ -24,7 +23,7 @@ ms.locfileid: "78175347"
 
  如需有關叢集資料行存放區索引的詳細資訊，請參閱＜ [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)＞。
 
-## <a name="contents"></a>內容
+## <a name="contents"></a>目錄
 
 -   [建立非叢集資料行存放區索引](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)
 

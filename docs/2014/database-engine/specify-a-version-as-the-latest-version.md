@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 407dffb1-3ecf-461e-835d-124781f26ee7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d598ec6f828fc7d8d59b3f998b775a752b94c4a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773474"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928867"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>將版本指定為最新版
   當您將檔案簽入原始檔控制中，簽入的版本會成為最新的版本；簽出或擷取最新版本的使用者會收到最近簽入之項目的本機副本。  
@@ -40,7 +39,7 @@ ms.locfileid: "62773474"
   
 3.  **在 [檔案**] 功能表上，指向 [原始檔**控制**]，然後按一下 [ **ViewHistory**]。  
   
-4.  在 [ **History of** \<檔> 的歷程記錄] 對話方塊中，選取您要指定為最新的版本，然後按一下 [**釘**選]。  
+4.  在 [歷程**記錄** \<file> ] 對話方塊中，選取您要指定為最新的版本，然後按一下 [**釘**選]。  
   
      此時所選版本旁會出現圖釘符號，表示它是目前的檔案版本。 如果 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 載入了不同的版本，系統會提示您重新載入檔案。  
   

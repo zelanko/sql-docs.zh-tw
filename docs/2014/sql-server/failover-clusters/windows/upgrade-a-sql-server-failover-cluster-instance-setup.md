@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c393143fbd9f1cc32c9e9ae7c5c1c22fdd0b9447
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62680360"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046111"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>升級 SQL Server 容錯移轉叢集執行個體 (安裝程式)
   您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝精靈或命令提示字元，將 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 容錯移轉叢集升級為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
@@ -45,15 +44,15 @@ ms.locfileid: "62680360"
   
 -   若要確定 Visual Studio 元件可以正確安裝， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 需要安裝更新。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會檢查此更新的狀態，然後需要您下載並安裝更新才能繼續安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 若要避免 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式期間的中斷，您可以先下載並安裝更新，然後執行如下所述的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式 (或安裝 Windows Update 上可用 .NET 3.5 SP1 的所有更新)：  
   
-     如果您將[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]安裝在 Windows SERVER 2008 SP2 作業系統的電腦上，您可以從[這裡](https://go.microsoft.com/fwlink/?LinkId=198093)取得所需的更新  
+     如果您將安裝 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 在 Windows Server 2008 SP2 作業系統的電腦上，您可以從[這裡](https://go.microsoft.com/fwlink/?LinkId=198093)取得所需的更新  
   
      如果您將 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 安裝在 [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] SP1 作業系統的電腦上，則已包含此更新。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式不再安裝 .NET Framework 3.5 SP1，但是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 時，可能會需要 .NET Framework 3.5 SP1。 如需詳細資訊， [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]請參閱[版本](https://go.microsoft.com/fwlink/?LinkId=296445)資訊。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式不再安裝 .NET Framework 3.5 SP1，但是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 時，可能會需要 .NET Framework 3.5 SP1。 如需詳細資訊，請參閱 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [版本](https://go.microsoft.com/fwlink/?LinkId=296445)資訊。  
   
 -   若是本機安裝，您必須以管理員身分執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取權限的網域帳戶。  
   
--   若要將實例升級[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]為[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]容錯移轉叢集，要升級的實例必須是容錯移轉叢集。  
+-   若要將實例升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 為 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 容錯移轉叢集，要升級的實例必須是容錯移轉叢集。  
   
      若要將獨立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體移動到 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 容錯移轉叢集，請安裝新的 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 容錯移轉叢集，然後利用「複製資料庫精靈」，從獨立的執行個體移轉使用者資料庫。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "62680360"
   
  若要在升級程序期間控制叢集節點的容錯移轉行為，請從命令提示字元執行升級作業，然後使用 /FAILOVERCLUSTERROLLOWNERSHIP 參數。 如需詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2014](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
- **注意**如果有單一節點容錯移轉叢集， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝程式會讓[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資源群組離線。  
+ **注意**如果有單一節點容錯移轉叢集， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源群組離線。  
   
 ## <a name="considerations-when-upgrading-from-ssversion2005"></a>從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 升級時的考量  
  如果您為叢集安全性原則指定了網域群組，就無法在 [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] 上指定服務 SID。 如果您想要使用服務 SID，則需要執行並存升級。  
@@ -82,7 +81,7 @@ ms.locfileid: "62680360"
   
 2.  目前已使用延展 V-LAN 技術，將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集設定在多重子網路中：您必須先將現有的叢集升級到 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。 由於延伸 V-LAN 技術會設定單一子網路網路，網路組態必須變更為多重子網路，而且要使用 Windows 容錯移轉叢集管理工具變更 IP 位址資源相依性，並將 IP 相依性變更為 OR。  
   
-###  <a name="best-practices-before-upgrading-a-ssnoversion-failover-cluster"></a><a name="BestPractices"></a>升級容錯移轉叢集之前[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的最佳作法  
+###  <a name="best-practices-before-upgrading-a-ssnoversion-failover-cluster"></a><a name="BestPractices"></a>升級容錯移轉叢集之前的最佳作法 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  若要排除重新啟動所產生的非預期停機時間，請在所有容錯移轉叢集節點上預先安裝 .NET Framework 4.0 的不必重新開機封裝，然後在叢集節點上執行升級。 下面是預先安裝必要元件的建議步驟：  
   
 -   安裝 .NET 4.0 的不必重新開機封裝，並且只升級以被動節點開始的共用元件。 這樣會安裝 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 4.0、Windows Installer 4.5 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的支援檔案。  
@@ -108,19 +107,19 @@ ms.locfileid: "62680360"
 2.  > [!IMPORTANT]  
     >  如需步驟3和4的詳細資訊，請參閱[升級容錯移轉叢集之前的最佳作法](#BestPractices)一節。  
   
-3.  安裝必要元件之後，安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要升級現有[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的實例，請按一下 [**從[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]、、或升級]。**  
+3.  安裝必要元件之後，安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要升級現有的實例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請按一下 [**從、、或升級] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 。**  
   
 4.  如果需要安裝程式支援檔案， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式就會安裝這些檔案。 如果系統指示您重新啟動電腦，請先重新啟動，然後再繼續進行。  
   
 5.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   
-6.  在 [產品金鑰] 頁面上，針對符合舊產品版本的新版本輸入 PID 金鑰。 例如，若要升級 Enterprise 容錯移轉叢集，您必須提供 [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]的 PID 金鑰。 按 **[下一步]**，繼續進行。 請注意，您針對容錯移轉叢集升級所使用的 PID 金鑰在相同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有容錯移轉叢集節點之間必須一致。 如需詳細資訊，請參閱[SQL Server 2014 的版本和元件](../../editions-and-components-of-sql-server-2016.md)和[支援的版本與版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
+6.  在 [產品金鑰] 頁面上，針對符合舊產品版本的新版本輸入 PID 金鑰。 例如，若要升級 Enterprise 容錯移轉叢集，您必須提供 [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]的 PID 金鑰。 按一下 [下一步] 以繼續。 請注意，您針對容錯移轉叢集升級所使用的 PID 金鑰在相同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有容錯移轉叢集節點之間必須一致。 如需詳細資訊，請參閱[SQL Server 2014 的版本和元件](../../editions-and-components-of-sql-server-2016.md)和[支援的版本與版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
-7.  在 [授權條款] 頁面上，閱讀授權合約，然後選取要接受授權條款和條件的核取方塊。 若要協助提升 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 按一下 [下一步]****，繼續進行。 若要結束安裝程式，請按一下 **[取消]**。  
+7.  在 [授權條款] 頁面上，閱讀授權合約，然後選取要接受授權條款和條件的核取方塊。 若要協助提升 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 **按 [下一步] 繼續**。 若要結束安裝程式，請按一下 **[取消]**。  
   
-8.  在 [選取執行個體] 頁面中，指定要升級為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]執行個體。 按一下 [下一步]****，繼續進行。  
+8.  在 [選取執行個體] 頁面中，指定要升級為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]執行個體。 **按 [下一步] 繼續**。  
   
-9. 在 [特徵選取] 頁面上，系統會預先選取要升級的功能。 當您選取功能名稱之後，每一個元件群組的描述就會出現在右窗格中。 請注意，您無法變更要升級的功能，而且您無法在升級作業期間加入功能。 若要在升級作業完成後將[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]功能加入升級的實例，請參閱[將功能加入至 SQL Server 2014 的實例 &#40;安裝&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)。  
+9. 在 [特徵選取] 頁面上，系統會預先選取要升級的功能。 當您選取功能名稱之後，每一個元件群組的描述就會出現在右窗格中。 請注意，您無法變更要升級的功能，而且您無法在升級作業期間加入功能。 若要在升級作業完成後將功能加入升級的實例 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] ，請參閱[將功能加入至 SQL Server 2014 的實例 &#40;安裝&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)。  
   
      右窗格會顯示選取功能的必要條件。 SQL Server 安裝程式將會在這個程序稍後說明的安裝步驟期間安裝尚未安裝的必要條件。  
   
@@ -128,13 +127,13 @@ ms.locfileid: "62680360"
   
      **實例識別碼**-根據預設，實例名稱會當做實例識別碼使用。 這是用來識別 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果是預設執行個體，執行個體名稱和執行個體識別碼將會是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請選取 [執行個體識別碼]**** 核取方塊並提供值。 如果您覆寫預設值，就必須針對在所有容錯移轉叢集節點上升級的執行個體指定相同的執行個體識別碼。 升級之執行個體的執行個體識別碼在這些節點之間必須相符。  
   
-     偵測**到的實例和功能**-此方格會[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]顯示執行安裝程式之電腦上的實例。 按一下 [下一步]****，繼續進行。  
+     偵測**到的實例和功能**-此方格會顯示執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式之電腦上的實例。 **按 [下一步] 繼續**。  
   
 11. [磁碟空間需求] 頁面會計算您所指定之功能的所需磁碟空間，並且比較空間需求與執行安裝程式之電腦的可用磁碟空間。  
   
 12. 在 [全文檢索搜尋升級] 頁面上，針對升級的資料庫指定升級選項。 如需詳細資訊，請參閱 [全文檢索搜尋升級選項](../../install/full-text-search-upgrade-options.md)。  
   
-13. 在 [**錯誤報表**] 頁面上，指定您想要傳送給[!INCLUDE[msCoName](../../../includes/msconame-md.md)]的資訊，以便協助[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]改善。 錯誤報告選項預設為啟用。  
+13. 在 [**錯誤報表**] 頁面上，指定您想要傳送給的資訊， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 以便協助改善 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 錯誤報告選項預設為啟用。  
   
 14. 在升級作業開始之前，系統組態檢查會執行一組額外的規則，以便使用您已指定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能來驗證電腦組態。  
   
@@ -156,13 +155,13 @@ ms.locfileid: "62680360"
   
 #### <a name="to-upgrade-to-a-ssnoversion-multi-subnet-failover-cluster-existing-ssnoversion-cluster-is-a-non-multi-subnet-cluster"></a>若要升級到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集 (現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集為非多重子網路叢集)。  
   
-1.  遵循上面的[升級 SQL Server 容錯移轉](#UpgradeSteps)叢集一節中所述的步驟1到24，將您的[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]叢集升級至。  
+1.  遵循上面的[升級 SQL Server 容錯移轉](#UpgradeSteps)叢集一節中所述的步驟1到24，將您的叢集升級至 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 。  
   
 2.  使用 AddNode 安裝程式動作將節點加入到不同的子網路，並在 [叢集網路組態]**** 頁面確認 IP 位址資源相依性為 OR。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
 #### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>若要升級目前使用延展 V-Lan 的多重子網路叢集。  
   
-1.  遵循上面的[升級 SQL Server 容錯移轉](#UpgradeSteps)叢集一節中所述的步驟1到24，將您的[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]叢集升級至。  
+1.  遵循上面的[升級 SQL Server 容錯移轉](#UpgradeSteps)叢集一節中所述的步驟1到24，將您的叢集升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 。  
   
 2.  變更網路設定，將遠端節點移到不同的子網路。  
   
