@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5bf32c8427679b342bee89d6541b051beed2e8ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da332b609a42c5e03e9463333cf04956e690887e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952293"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036958"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>連接至原生模式報表伺服器
   使用此對話方塊可連接到本機或遠端 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器執行個體。 您無法使用此工具來連接到舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器。 您一次只能連接到一個執行個體。  
@@ -30,7 +29,7 @@ ms.locfileid: "71952293"
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員不會用來設定及管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。 您可以使用 SharePoint 管理中心和 PowerShell 指令碼，在 SharePoint 模式下設定報表伺服器。 如需詳細資訊，請參閱[安裝 sharepoint 2010 Reporting Services Sharepoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
 > [!TIP]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager （rsconfigtool.exe）是以 "highestAvailable" 的許可權層級來安裝。 這是設計的行為。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員需要與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API 進行通訊。 某些 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通訊需要更高層級或系統管理權限。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager （RSConfigTool.exe）是以 "highestAvailable" 的許可權層級來安裝。 這是設計的行為。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員需要與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API 進行通訊。 某些 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通訊需要更高層級或系統管理權限。  
   
 -   若要連接到本機報表伺服器執行個體，請使用預設值，然後按一下 **[連接]**。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會提供本機伺服器名稱，並偵測預設執行個體。 在大部分情況下，您可以按一下 **[連接]** 而不必變更值。 如果您安裝了一個以上的執行個體，您必須選取您想要使用的執行個體。  
   

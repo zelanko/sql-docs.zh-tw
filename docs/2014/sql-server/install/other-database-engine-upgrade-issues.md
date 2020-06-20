@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2890a61850526f7506713b3f900d67b8d41d0bfb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093703"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012141"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>其他 Database Engine 升級問題
   目前的 Upgrade Advisor 版本無法偵測到下列升級問題。 請檢閱下列問題，以便評估它們可能對您系統造成的影響。  

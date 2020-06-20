@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0592a7635b0208624ab511af4ef68382548090c8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e3db80333c74166301fcff7bb25edea4aca38a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702416"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059400"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>搭配 FOR XML 使用 EXPLICIT 模式
   如 [使用 FOR XML 建構 XML](../xml/for-xml-sql-server.md)主題中所述，RAW 和 AUTO 模式對從查詢結果產生之 XML 形式的控制不大。 但是，EXPLICIT 模式在由查詢結果產生想要的 XML 方面，可提供的彈性最大。  
@@ -111,7 +110,7 @@ ElementName!TagNumber!AttributeName!Directive
  以下是格式的部份描述。  
   
  *ElementName*  
- 是產生的元素一般識別碼。 例如，若將 **Customers** 指定為 *ElementName*，就會產生 \<Customers> 項目。  
+ 是產生的元素一般識別碼。 例如，如果將**Customers**指定為*ElementName*， \<Customers> 就會產生元素。  
   
  *TagNumber*  
  是指派給元素的唯一標記值。 此值搭配兩個中繼資料資料行 **Tag** 及 **Parent**，就可以決定結果 XML 中元素的巢狀結構。  

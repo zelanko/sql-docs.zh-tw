@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d7a6dbff-71d9-4297-8a4f-bfd2876fe204
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e957b4c775554869b04805f009d4daed4f1055a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1706732f48adadc000ac9a894068bd775ce27bae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127169"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050686"
 ---
 # <a name="srv_paramnumber-extended-stored-procedure-api"></a>srv_paramnumber (擴充預存程序 API)
     
@@ -61,7 +60,7 @@ namelen
  *namelen*  
  這是 *name* 的長度。 如果 *name* 是以 null 結尾，請將 *namelen* 設定為 SRV_NULLTERM。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  是具名參數的參數編號。 第一個參數是 1。 如果沒有命名為 *name* 的參數，或者沒有遠端預存程序，則會傳回 0，並且產生訊息。  
   
 ## <a name="remarks"></a>備註  

@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3e14f82e855cc29f83859d85dfdaaf85a1bda37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63261981"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005100"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>SQL Server 複寫發行者屬性
   本節包含散發者端和發行者端可用之發行者屬性的資訊。 
@@ -34,7 +33,7 @@ ms.locfileid: "63261981"
 ## <a name="distributor"></a>散發者
    [發行者屬性]**** 對話方塊可讓您檢視和修改與發行者及其散發者之間的關聯性建立關聯的屬性。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **代理程式至發行者的連接**  
  指定下列代理程式用來從散發者連接到發行者的內容。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63261981"
 ## <a name="publication-databases"></a>發行集資料庫
   **[發行者屬性]** 對話方塊的 **[發行集資料庫]** 頁面，可讓 **系統管理員 (sysadmin)** 固定伺服器角色中的使用者啟用資料庫供複寫。 啟用資料庫不會發行此資料庫；不過，它允許該資料庫之 **db_owner** 固定資料庫角色中的任何使用者在資料庫上建立一個或多個發行集。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **交易式**  
  選取此核取方塊即可讓 **db_owner** 固定資料庫角色中的使用者，在資料庫中建立快照式發行集或交易式發行集。 
   
@@ -68,11 +67,11 @@ ms.locfileid: "63261981"
 
   [發行者屬性]**** 對話方塊的 [訂閱者]**** 頁面，是用於執行  之前的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之發行者。 此頁面可讓您啟用訂閱者，以接收來自此發行者的發行集資料。 啟用訂閱者以接收來自此發行者的資料，並不會在此發行者上建立發行集的訂閱。 若要建立訂閱，您必須使用新增訂閱精靈。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **訂閱者**  
  **[訂閱者]** 屬性方格，會顯示已啟用來接收此發行者之發行集資料的訂閱者。 按一下訂閱者旁的屬性按鈕 (**...**)，即可檢視和設定其他屬性。  
   
- **加入**  
+ **新增**  
  按一下 **[加入]** 即可加入訂閱者，然後按一下 **[加入 SQL Server 訂閱者]** 或 **[加入非 SQL Server 訂閱者]**。  
 
 ## <a name="see-also"></a>另請參閱  

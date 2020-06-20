@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 817591cec64a4210c4cc573588be1b8ac6dfb8a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 241d0ce9695ba230585c55b16b5bc818f97f7318
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873802"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970613"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>CLR 常式的自訂屬性
-  列出的屬性可以套用至在中[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]註冊的 common language RUNTIME （CLR）常式、使用者定義型別和使用者定義匯總。 如果沒有套用屬性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會假設預設值。 列出的屬性是在 `Microsoft.SqlServer.Server` 命令空間中定義的。  
+  列出的屬性可以套用至在中註冊的 common language runtime （CLR）常式、使用者定義型別和使用者定義匯總 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] 。 如果沒有套用屬性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會假設預設值。 列出的屬性是在 `Microsoft.SqlServer.Server` 命令空間中定義的。  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 屬性  
  `SqlUserDefinedAggregate` 屬性會指出應該將方法註冊為使用者定義彙總。 每個使用者定義彙總都必須使用這個屬性加註。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 94f8edc0fe8b2505adc36705200e299f36b2dbf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16e3af1d37f177dfe6d4e0cb090e7b8b0a4988d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011124"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003928"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>管理及監視語意搜尋
   描述語意索引的程序，以及與管理及監視索引相關的工作。  
@@ -65,7 +64,7 @@ GO
 ```  
   
  **全文檢索目錄的全文檢索索引與語意索引的總大小為何？**  
- 查詢 **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** 中繼資料函數的 [IndexSize](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 屬性。  
+ 查詢 [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 中繼資料函數的 **IndexSize** 屬性。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
@@ -73,7 +72,7 @@ GO
 ```  
   
  **全文檢索目錄的全文檢索索引和語意索引中建立了多少項目的索引？**  
- 查詢 **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** 中繼資料函數的 [ItemCount](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 屬性。  
+ 查詢 [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 中繼資料函數的 **ItemCount** 屬性。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f3c89eb2e6f810902e28e01c7e5ffbcdcc0375c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0777758a8ce42fb5c213e9b1272bd59df7837e0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127180"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050708"
 ---
 # <a name="srv_paraminfo-extended-stored-procedure-api"></a>srv_paraminfo (擴充預存程序 API)
     
@@ -85,7 +84,7 @@ pfNull
  *pfNull*  
  null 旗標的指標。如果參數值為 NULL， **pfNull* 會設定為 TRUE。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  如果成功取得參數資訊，則會傳回 SUCCEED，否則會傳回 FAIL。 目前沒有任何遠端預存程序，且沒有第 *n* 個遠端預存程序參數時，會傳回 FAIL。  
   
 ## <a name="remarks"></a>備註  

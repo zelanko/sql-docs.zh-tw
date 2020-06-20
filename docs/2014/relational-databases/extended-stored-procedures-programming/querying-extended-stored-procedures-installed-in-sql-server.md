@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: e02348e6-dba6-438a-98b6-684244bb034d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9f62c0dea02ee4c6f9bccda0dfaf7e7932c1dab7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f44db9053ad18c3a6902a30aaab4f81610c5a8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62511931"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050832"
 ---
 # <a name="querying-extended-stored-procedures-installed-in-sql-server"></a>查詢 SQL Server 中安裝的擴充預存程序
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
- 已驗證的使用者可以藉由執行 sp_helpextendedproc 系統程式，顯示目前定義的擴充預存程式，以及每個所屬的 DLL 名稱。 **sp_helpextendedproc** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 例如，下列範例會傳回**xp_hello**所屬的 DLL：  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已驗證的使用者可以藉由執行**sp_helpextendedproc**系統程式，顯示目前定義的擴充預存程式，以及每個所屬的 DLL 名稱。 例如，下列範例會傳回**xp_hello**所屬的 DLL：  
   
 ```  
 sp_helpextendedproc 'xp_hello'  

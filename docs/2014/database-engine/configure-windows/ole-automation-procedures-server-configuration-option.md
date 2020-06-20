@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e8982e05-4984-4406-9760-285e8c028ddf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f00c238dfb32089261c51936b3937b0657c58b08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d34615ce1f808c1015c9c3d312a38a67dba291b4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935189"
 ---
 # <a name="ole-automation-procedures-server-configuration-option"></a>OLE Automation 程序伺服器組態選項
   使用 `Ole Automation Procedures` 選項可指定 OLE Automation 物件是否可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次內部啟動。 您也可以使用以原則為基礎的管理或 **sp_configure** 預存程序來設定這個選項。 如需詳細資訊，請參閱＜ [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)＞。  
@@ -32,7 +31,7 @@ ms.locfileid: "62782026"
   
  啟用 OLE Automation 程序時，對 **sp_OACreate** 的呼叫會啟動 OLE 共用執行環境。  
   
- 您可以使用**sp_configure**系統`Ole Automation Procedures`預存程式，來查看和變更選項的目前值。  
+ 您 `Ole Automation Procedures` 可以使用**sp_configure**系統預存程式，來查看和變更選項的目前值。  
   
 ## <a name="examples"></a>範例  
  下列範例顯示如何檢視 OLE Automation Procedures 的目前設定。  

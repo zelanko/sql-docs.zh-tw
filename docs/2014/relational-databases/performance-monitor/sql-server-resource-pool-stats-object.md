@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c2ca8360e752146dac13e9cc6a3737ac2373cc9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183015"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066102"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, Resource Pool Stats 物件
   SQLServer:Resource Pool Stats 物件包含效能計數器，可報告資源管理員資源集區統計資料的相關資訊。  
@@ -43,7 +42,7 @@ ms.locfileid: "63183015"
 |Target memory (KB)|根據資源集區設定和伺服器狀態，資源集區正嘗試取得的目標記憶體數量 (以 KB 為單位)。|  
 |磁碟讀取 IO/秒|上一秒從磁碟讀取的作業數目。|  
 |節流的磁碟讀取 IO/秒|上一秒讀取的節流作業數。|  
-|Disk Read Bytes/sec |上一秒從磁碟讀取的位元組數。|  
+|Disk Read Bytes/sec|上一秒從磁碟讀取的位元組數。|  
 |平均磁碟讀取 IO (毫秒)|從磁碟讀取作業的平均時間 (毫秒)。|  
 |磁碟寫入 IO/秒|上一秒寫入至磁碟的作業數目。|  
 |節流的磁碟寫入 IO/秒|上一秒寫入的節流作業數。|  

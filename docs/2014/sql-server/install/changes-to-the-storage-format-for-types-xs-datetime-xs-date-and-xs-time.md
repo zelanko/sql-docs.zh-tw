@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aacaaf8fc69f4b18154e5a4df9a3662fb9ae0650
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096611"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037155"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>針對 xs:dateTime、xs:date 和 xs:time 類型之儲存格式所做的變更
   XMLDATETIME 規則會識別您的資料庫是否包含升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後將成為無效的具類型 XML 資料。  
@@ -29,7 +28,7 @@ ms.locfileid: "66096611"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>描述  
- 類型 xs： dateTime [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、xs： date 和 xs： time 的中的儲存格式已變更為支援具有或不含時區資訊的值，並允許保留時區。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]類型 xs： dateTime、xs： date 和 xs： time 的中的儲存格式已變更為支援具有或不含時區資訊的值，並允許保留時區。  
   
  如果 XML 結構描述集合參考其中一種類型，在升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後，與此集合相關聯之所有資料行的 XML 索引都將停用。 您將能夠使用 SELECT 及/或 XQUERIES 來查詢它們，但是無法使用 XML 索引。 如果遇到負的年份值，將產生執行階段錯誤。  
   

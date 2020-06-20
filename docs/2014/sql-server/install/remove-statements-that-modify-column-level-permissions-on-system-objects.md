@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f4fbbef-2696-4911-903b-63f6d9e4484a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b377ac0b9baacdab6461a0e62174538902939bd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e55af3dca0c55c2babd09bc6cfc48ed0ddf3ad7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093024"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059164"
 ---
 # <a name="remove-statements-that-modify-column-level-permissions-on-system-objects"></a>移除在系統物件上修改資料行層級權限的陳述式
   Upgrade Advisor 偵測到系統物件上有非標準的資料行層級權限。 升級時，將無法保持這些權限的變更。 此外，將不再支援系統物件上的資料行層級權限。 請從設定系統物件之資料行層級權限的應用程式中移除陳述式。  

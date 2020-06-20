@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6f0ba7f39d3c95fe992d6603707b2a67d6726b7e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c857b9ebbe559de34fdac925642f9270d9cbf936
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717114"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059504"
 ---
 # <a name="create-instances-of-xml-data"></a>建立 XML 資料的執行個體
   這個主題描述如何產生 XML 執行個體。  

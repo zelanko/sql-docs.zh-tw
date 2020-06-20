@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ab93a3514fa260c8c3836da85c767da3c3051a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011182"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004056"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
   建立和維護全文檢索索引包括使用稱為「母體擴展」  (Population) (也稱為「搜耙」  (Crawl)) 的處理序來擴展索引。  
@@ -211,7 +210,7 @@ GO
 ##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>針對全文檢索擴展中的錯誤進行疑難排解（爬網）  
  搜耙發生錯誤時，「全文檢索搜尋」搜耙記錄功能會建立並維護搜耙記錄檔，此記錄檔是一個純文字檔。 每個搜耙記錄檔都對應至特定的全文檢索目錄。 根據預設，指定之執行個體的搜耙記錄檔 (在此範例中為第一個執行個體) 位於 %ProgramFiles%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG 資料夾中。 搜耙記錄檔會遵循下列命名結構：  
   
- SQLFT0000500008.2\<DatabaseID>\<FullTextCatalogID>。記錄檔\<[n>]  
+ SQLFT0000500008.2 \<DatabaseID> \<FullTextCatalogID> 。LOG [ \<n> ]  
   
  <`DatabaseID`>  
  資料庫的識別碼。 <`dbid`> 是前面加上零的五位數數位。  

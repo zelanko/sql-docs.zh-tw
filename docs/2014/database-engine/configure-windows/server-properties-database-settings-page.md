@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66487dd264f4733e0b8b3345aa5ebd5976165a42
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809530"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934949"
 ---
 # <a name="server-properties-database-settings-page"></a>伺服器屬性 (資料庫設定頁面)
   使用此頁面來檢視或修改您的資料庫設定。  

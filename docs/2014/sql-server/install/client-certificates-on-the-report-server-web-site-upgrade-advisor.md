@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ecce26b-99df-4109-8e51-d150d369dff7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5588930efbadf785e78aa115ad0021bce64bd7f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 563a64e695ef552a712a5678f56d38fdfbff619f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952606"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059362"
 ---
 # <a name="client-certificates-on-the-report-server-web-site-upgrade-advisor"></a>報表伺服器網站上的用戶端憑證 (Upgrade Advisor)
   Upgrade Advisor 在主控報表伺服器或報表管理員虛擬目錄的 IIS 網站上偵測到一或多個用戶端憑證。  
@@ -30,7 +29,7 @@ ms.locfileid: "71952606"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>描述  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]不支援使用用戶端憑證來驗證使用者。 雖然升級可以繼續進行，但是升級的報表伺服器將不會使用用戶端憑證。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]不 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援使用用戶端憑證來驗證使用者。 雖然升級可以繼續進行，但是升級的報表伺服器將不會使用用戶端憑證。  
   
 ## <a name="corrective-action"></a>更正動作  
  您必須使用個別的解決方案 (例如 ISA Server) 來確保任何用戶端憑證驗證需求都會獲得處理。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 262fd4ec636b147db0cb9de9e8b520f064e710af
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d0e1da6b7506e81cad50237cd54e8c67d39942c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717288"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059517"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>以萬用字元 (*) 指定名稱的資料行
   如果以萬用字元 (\*) 指定資料行名稱，則插入該資料行內容的方式，就像是沒有指定資料行名稱一樣。 如果此資料行是非 `xml` 類型的資料行，則會以文字節點插入資料行內容，如下列範例所示：  

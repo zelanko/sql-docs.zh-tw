@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9094fcbbede4c9bb6bac283129ed20ea4e3e910b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11ba6251788bd3317ae853e8fcc5f1f55ee6ec31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63261759"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005105"
 ---
 # <a name="publisher-information-agents"></a>發行者資訊，代理程式
   **[代理程式]** 索引標籤會顯示與發行者相關聯之代理程式和維護作業的相關資訊：  
