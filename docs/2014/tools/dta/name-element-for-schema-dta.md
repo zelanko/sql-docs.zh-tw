@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 01b536c24661ce223e91cbe791c70529558388ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43c02481623ea66dbf677c99ea2b3abf63c901fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62657272"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011499"
 ---
 # <a name="name-element-for-schema-dta"></a>結構描述的 Name 元素 (DTA)
   包含結構描述的名稱。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 18898388-5158-407b-9774-639af99e8f07
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 619cd537b5ecb45afe2dce3467caa64fc1e9a499
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95e77fe1743406d7206b05470b4559fcfb0a6d59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092752"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011853"
 ---
 # <a name="replication-upgrade-issues"></a>複寫升級問題
   下列主題描述的是可能會影響升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的複寫問題。 這些主題會描述一些可讓您採取的動作，以便減少這些變更對環境的影響。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3af9d31a54adc5645cab6fcc7104ae7ff27a61b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092854"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059103"
 ---
 # <a name="rename-user-sys"></a>重新命名使用者 sys
   Upgrade Advisor 偵測到資料庫中有使用者名稱**sys** 。 這個名稱是保留的。 請在升級之前重新命名使用者。 如果使用者未重新命名，在升級程序之後，資料庫將處於可疑狀態，要等到資料庫連線後才可供使用。  

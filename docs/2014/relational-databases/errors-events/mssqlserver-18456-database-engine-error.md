@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14b233839901167ca92a1d2aed5a8c1441fefe0e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034971"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
@@ -88,10 +87,10 @@ ms.locfileid: "62869593"
 ## <a name="examples"></a>範例  
  在此範例中，驗證錯誤狀態為 8。 這表示密碼不正確。  
   
-|日期|來源|訊息|  
+|Date|來源|訊息|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|登入|錯誤: 18456，嚴重性: 14，狀態: 8。|  
-|2007-12-05 20:12:56.34|登入|使用者 '<user_name>' 登入失敗。 [用戶端\<： ip 位址>]|  
+|2007-12-05 20:12:56.34|登入|使用者 '<user_name>' 登入失敗。 [CLIENT: \<ip address>]|  
   
 > [!NOTE]  
 >  若您使用 Windows 驗證模式來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並於之後將其變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 Windows 驗證模式，就會先停用 **sa** 登入。 這會導致狀態7錯誤：「使用者 ' sa ' 的登入失敗。」若要啟用**sa**登入，請參閱[變更伺服器驗證模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4dcab58a876881cc9ca76e9159d5bcc68ffd5fdb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58c5529d919861709f382f8cc594608e8c9981b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066504"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938586"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>資料表與資料行 (SSAS 表格式)
   在您使用 [資料表匯入精靈] 將資料表和資料加入模型之後，即可開始使用資料表，包括加入新資料行、建立資料表之間的關聯性、定義可擴充資料的計算，以及在資料表中篩選及排序資料以便於檢視。  
@@ -28,7 +27,7 @@ ms.locfileid: "66066504"
   
 -   [相關工作](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>各種  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 優點  
  表格式模型中的資料表提供定義資料行及其他中繼資料的架構。 資料表包括：  
   
  **資料表定義**  

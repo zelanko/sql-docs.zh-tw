@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7f6e8bda35964b03bf171ac62db7ff3119aa6e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066703"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938689"
 ---
 # <a name="relationships-ssas-tabular"></a>關聯性 (SSAS 表格式)
   在表格式模型中，關聯性是指兩個資料表之間的連接。 關聯性會建立兩個資料表中的資料相互關聯的方式。 例如，Customers 資料表和 Orders 資料表可以產生關聯，以便顯示彼此有關聯性的客戶名稱。  
@@ -43,10 +42,10 @@ ms.locfileid: "66066703"
   
 -   [相關工作](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="what"></a>各種  
+##  <a name="benefits"></a><a name="what"></a> 優點  
  關聯性是在兩個資料表之間，以每個資料表中的一個或多個資料行為基礎的連接。 若要了解為什麼關聯性是有用的，請假設您在追蹤自己商務中的客戶訂單資料。 您可以在具有類似下列結構的單一資料表中追蹤所有資料：  
   
-|CustomerID|名稱|EMail|DiscountRate|OrderID|OrderDate|Products|數量|  
+|CustomerID|名稱|EMail|DiscountRate|OrderID|OrderDate|產品|數量|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -70,7 +69,7 @@ ms.locfileid: "66066703"
   
 ### <a name="orders"></a>Orders  
   
-|[CustomerID]|OrderID|OrderDate|Products|數量|  
+|[CustomerID]|OrderID|OrderDate|產品|數量|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|2010-01-07|Compact Digital|11|  
 |1|255|2010-01-03|SLR Camera|15|  
@@ -112,7 +111,7 @@ ms.locfileid: "66066703"
 ### <a name="single-active-relationship-between-tables"></a>資料表之間的單一使用中關聯性  
  多個關聯性可能會在資料表之間造成模稜兩可的相依性。 若要建立精確的計算，您需要從一個資料表到下一個資料表的單一路徑。 因此，每一對資料表之間只能有一個使用中的關聯性。 例如，在 AdventureWorks DW 2012 中，資料表 DimDate 包含一個資料行 DateKey，這個資料行與資料表 FactInternetSales 中的三個不同資料行相關：OrderDate、DueDate 與 ShipDate。 如果您嘗試匯入這些資料表，會成功建立第一個關聯性，但是對於包含相同資料行的後續關聯性，則會收到下列錯誤：  
   
- \*關聯性：資料表 [資料行 1]-> 資料表 [資料行 2]-狀態：錯誤-原因：無法在資料表\<表 1> 和\<資料表 2> 之間建立關聯性。 兩個資料表之間只能有一個直接或間接關聯性。  
+ \*關聯性：資料表 [資料行 1]-> 資料表 [資料行 2]-狀態：錯誤-原因：無法在資料表和之間建立關聯性 \<table 1> \<table 2> 。 兩個資料表之間只能有一個直接或間接關聯性。  
   
  如果您有兩個資料表，而且在這兩個資料表之間有多個關聯性，則您需要匯入包含查閱資料行之資料表的多個複本，然後在每對資料表之間建立一個關聯性。  
   
@@ -177,7 +176,7 @@ ms.locfileid: "66066703"
 ##  <a name="duplicate-values-and-other-errors"></a><a name="bkmk_dupl_errors"></a>重複的值和其他錯誤  
  如果您選擇不能用於關聯性的資料行，資料行旁邊就會出現紅色的 X。 您可以將游標暫停在錯誤圖示上方，以檢視訊息，其中提供有關此問題的詳細資訊。 以下列出的問題，可能會使得所選資料行之間無法建立關聯性：  
   
-|問題或訊息|解決方法|  
+|問題或訊息|解決方案|  
 |------------------------|----------------|  
 |由於所選取的兩個資料行包含重複值，無法建立關聯性。|若要建立有效的關聯性，您所選取的一對中至少有一個資料行必須只包含唯一值。<br /><br /> 您可以編輯資料行以移除重複項目，也可以反轉資料行的順序，以便使用包含唯一值的資料行做為 **[相關查閱資料行]**。|  
 |資料行包含 Null 值或空白值。|資料行無法以 Null 值，彼此進行聯結。 針對每個資料列，在兩個資料行中都必須有在關聯性中用到的值。|  

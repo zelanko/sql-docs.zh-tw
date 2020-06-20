@@ -8,16 +8,15 @@ f1_keywords:
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b6ab8cc3c788e27946ddb68a3c926e8f926ebd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199322"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034922"
 ---
 # <a name="query-options-execution-advanced-page"></a>查詢選項執行 (進階頁面)
 
@@ -29,9 +28,9 @@ ms.locfileid: "71199322"
 
 **設定 PARSEONLY**檢查每個查詢的語法，但不執行查詢。 依預設，會清除此選項。  
 
-**設定 CONCAT_Null_YIELDS_Null**選取此核取方塊時，串連現有值與的`NULL`查詢，一律會傳回`NULL`做為結果。 如果清除此核取方塊，現有的值與 `NULL` 串連，則會傳回現有的值。 預設會選取此選項。
+**設定 CONCAT_Null_YIELDS_Null**選取此核取方塊時，串連現有值與的查詢，一律會傳回 `NULL` `NULL` 做為結果。 如果清除此核取方塊，現有的值與 `NULL` 串連，則會傳回現有的值。 預設會選取這個選項。
 
-**設定 ARITHABORT**當選取這個核取方塊時，當`INSERT`、 `DELETE`或`UPDATE`語句在運算式評估期間遇到算術錯誤（溢位、零除或網域錯誤）時，就會終止查詢或批次。 如果清除此核取方塊，在可能的情況下就會為該值提供 `NULL`，而查詢會繼續進行，並在結果中包含訊息。 請參閱線上叢書，以取得此行為的詳細描述。 預設會選取此選項。
+**設定 ARITHABORT**當選取這個核取方塊時，當 `INSERT` 、 `DELETE` 或 `UPDATE` 語句在運算式評估期間遇到算術錯誤（溢位、零除或網域錯誤）時，就會終止查詢或批次。 如果清除此核取方塊，在可能的情況下就會為該值提供 `NULL`，而查詢會繼續進行，並在結果中包含訊息。 請參閱線上叢書，以取得此行為的詳細描述。 預設會選取這個選項。
   
 **設定 SHOWPLAN_TEXT**選取這個核取方塊時，會以文字形式傳回查詢計劃與每個查詢。 依預設，會清除此選項。
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: de736c48763973b48be41d4d63f5237a10b3fff6
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 92eb3669930407b359b8eeed4d3df2e802bdacdf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000878"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930915"
 ---
 # <a name="manage-full-text-indexes"></a>管理全文檢索索引
      
@@ -46,7 +45,7 @@ ms.locfileid: "83000878"
   
  下表列出索引資料表和資料行的相關全文檢索屬性及其相關的 [!INCLUDE[tsql](../includes/tsql-md.md)] 函數。  
   
-|屬性|說明|函式|  
+|屬性|描述|函式|  
 |--------------|-----------------|--------------|  
 |`FullTextTypeColumn`|在資料表中，用來保存資料行文件類型資訊的 TYPE COLUMN。|[COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql)|  
 |`IsFulltextIndexed`|資料行是否已啟用全文檢索索引。|COLUMNPROPERTY|  

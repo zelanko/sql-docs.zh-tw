@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4cabfe4f0d28bb74ae1fae0b84de758e7dca565
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96845e99f9d183df8545b1da379ced41496923c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066825"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938729"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>處理表格式模型資料分割 (SSAS 表格式)
   分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 此主題中的工作描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [處理資料分割]**** 對話方塊，處理模型資料庫中的資料分割。  

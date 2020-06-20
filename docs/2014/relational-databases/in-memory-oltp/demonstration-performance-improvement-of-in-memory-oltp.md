@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4858e4c35263ab3dd1d9fdcf55a2b136dd8eeaf2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63071783"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050175"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>示範：記憶體中 OLTP 的效能改善
   此範例說明使用記憶體中 OLTP 時的效能改進，方法是比較對記憶體最佳化和傳統以磁碟為基礎的資料表執行相同的 Transact-SQL 查詢時，兩者的回應時間有何差異。 此外也會建立原生編譯的預存程序 (根據相同的查詢)，然後執行以示範您通常在使用原生編譯的預存程序來查詢記憶體最佳化資料表時，可獲得最佳的回應時間。 此範例僅顯示在記憶體最佳化資料表中存取資料時的其中一個效能改進層面；即執行插入時的資料存取效率。 此範例為單一執行緒且未利用記憶體中 OLTP 的並行優點。 工作負載若是使用並行作業，將會有更高幅度的效能提升。  
@@ -188,7 +187,7 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  [原生編譯的預存程式](natively-compiled-stored-procedures.md)   
  [使用記憶體優化資料表的需求](requirements-for-using-memory-optimized-tables.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [ALTER DATABASE File 和 Filegroup 選項 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
+ [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
  [建立程式和記憶體優化資料表](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

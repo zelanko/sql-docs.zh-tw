@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 752c825cb34fbf2afe5d2306afbd562a49f74b7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a61dedbbdbcdcd08651407ac1be4a2a35df883b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833143"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920319"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 連接管理員
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 連線管理員可讓封裝連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact 目的地使用此連線管理員將資料載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫中的資料表。  
@@ -28,7 +27,7 @@ ms.locfileid: "62833143"
 >  在 64 位元電腦上，您必須以 32 位元模式執行連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料來源的封裝。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用來連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact 資料來源的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 提供者只有提供 32 位元版本。  
   
 ## <a name="configuration-the-sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 連接管理員的組態  
- 當您將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 連線管理員加入封裝時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]會建立在執行時間解析為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 連接的連線管理員、設定連線管理員屬性，並將連線管理員加入封裝上`Connections`的集合。  
+ 當您將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 連線管理員加入封裝時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行時間解析為 Compact 連接的連線管理員 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、設定連線管理員屬性，並將連線管理員加入 `Connections` 封裝上的集合。  
   
  連接管理員的 `ConnectionManagerType` 屬性會設為 `SQLMOBILE`。  
   

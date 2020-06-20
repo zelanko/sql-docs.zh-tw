@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 64fa315457361e8d160735f38156e79ea667a4da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 472cff50c247d0dfc47c39cf6b6f3c2ca6c13d08
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774185"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931233"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>容錯移轉至記錄傳送次要 (SQL Server)
   如果主要伺服器執行個體失敗或需要維護，則容錯移轉至記錄傳送次要十分有用。  
@@ -46,7 +45,7 @@ ms.locfileid: "62774185"
 4.  在同步處理次要伺服器後，您就可以透過復原次要資料庫並將用戶端重新導向至該伺服器執行個體，藉以容錯移轉至偏好的伺服器。 復原會讓資料庫進入一致狀態，並使其連線。  
   
     > [!NOTE]  
-    >  當您讓次要資料庫可以使用時，就應該確保其中繼資料與原始主要資料庫的中繼資料一致。 如需詳細資訊，請參閱[在另一個伺服器實例上提供資料庫時管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+    >  當您讓次要資料庫可以使用時，就應該確保其中繼資料與原始主要資料庫的中繼資料一致。 如需詳細資訊，請參閱 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 5.  在復原次要資料庫後，您可以將它重新設定為當做其他次要資料庫的主要資料庫使用。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a2f439c1d3350a30f1bdd8fe8c3fe917686d2401
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 674801708b0ee4669523e5bbb7e8f8b359bc16d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63125961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011742"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>捨棄對圖表所做的變更 (Visual Database Tools)
   您可以捨棄在資料庫圖表中所做且不想儲存到資料庫的變更。  

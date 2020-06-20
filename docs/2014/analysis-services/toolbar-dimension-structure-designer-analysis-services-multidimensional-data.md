@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1770b9ab0284d203f7a5954dd369c5391984c12b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066044"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938409"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具列 (維度結構索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用此工具列，即可在 **[維度設計師]** 的 **[維度結構]** 頁面內執行一般作業。  
@@ -32,7 +31,7 @@ ms.locfileid: "66066044"
   
 -   清單  
   
-     顯示目前維度的屬性清單。 這是預設值。  
+     顯示目前維度的屬性清單。 此為預設值。  
   
 -   樹狀結構  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66066044"
  **尋找資料表**  
  顯示 [尋找資料表]**** 對話方塊，即可在 [資料來源檢視]**** 窗格中尋找資料表。  
   
- **縮放**  
+ **Zoom**  
  按一下即可循環顯示比例百分比，或選取可用的顯示比例選項。  
   
  **顯示**  
@@ -69,7 +68,7 @@ ms.locfileid: "66066044"
   
      顯示與目前維度相關聯之資料表與資料行的圖表。  
   
--   樹狀檢視  
+-   樹狀目錄檢視  
   
      顯示包含與目前維度相關聯之資料表與資料行的樹狀檢視。  
   

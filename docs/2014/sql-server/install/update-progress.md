@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: cbc4270e-6045-45b2-b429-2aec841ef758
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 619e5dda0111bba62682fe44b9d9bdd8d9be4e8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98dc95979444a2346a4d58bea93ca618d0e3c93e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091695"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011808"
 ---
 # <a name="update-progress"></a>更新進度
   使用 [安裝進度] 頁面，即可監視安裝程式將更新套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體及其元件時的狀況。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  此表格提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品名稱、執行個體名稱和安裝狀態。  
   
   

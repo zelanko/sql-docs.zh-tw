@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41a5d4530be6250795e083726df59acbd2f7f7aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890778"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939139"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>資料採礦查詢工作編輯器 (採礦模型索引標籤)
   使用 **[資料採礦查詢工作]** 對話方塊的 **[採礦模型]** 索引標籤，即可指定要使用的採礦結構和採礦模型。  
@@ -37,7 +36,7 @@ ms.locfileid: "68890778"
  輸入資料採礦查詢工作的描述。  
   
 ## <a name="mining-model-tab-options"></a>採礦模型索引標籤選項  
- **建立**  
+ **[連接]**  
  在清單中選取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 連線管理員，或按一下 [新增]**** 以建立新的連線管理員。  
   
  **相關主題：**  [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md) (Analysis Services 連線管理員)  

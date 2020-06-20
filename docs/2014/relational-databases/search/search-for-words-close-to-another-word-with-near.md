@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2d187ea3ed951ac6f17eb4babc5f4f77451d4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011070"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003999"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜尋靠近另一個單字的字詞
-  您可以在 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述詞或 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 函數中使用鄰近字詞 (NEAR)，以便搜尋彼此接近的單字或片語。 您也可以指定分隔第一個和最後一個搜尋詞彙之非搜尋詞彙的數目上限。 此外，您也可以依任何順序或是您所指定的順序來搜尋單字或片語。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支援舊版的[泛型相近詞彙](#Generic_NEAR)（現在已被取代）和[自訂鄰近詞彙](#Custom_NEAR)（中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]的新功能）。  
+  您可以在 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述詞或 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 函數中使用鄰近字詞 (NEAR)，以便搜尋彼此接近的單字或片語。 您也可以指定分隔第一個和最後一個搜尋詞彙之非搜尋詞彙的數目上限。 此外，您也可以依任何順序或是您所指定的順序來搜尋單字或片語。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支援舊版的[泛型相近詞彙](#Generic_NEAR)（現在已被取代）和[自訂鄰近詞彙](#Custom_NEAR)（中的新功能） [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。  
   
 ##  <a name="the-custom-proximity-term"></a><a name="Custom_NEAR"></a>自訂相近詞彙  
  自訂相近詞彙導入下列新功能：  
@@ -184,7 +183,7 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- 您無法將泛型相近詞彙與自訂相近詞彙結合，例如`NEAR((term1,term2),5)`加權詞彙（ISABOUT ...）或「代詞彙」（FORMSOF ...）。  
+ 您無法將泛型相近詞彙與自訂相近詞彙結合，例如 `NEAR((term1,term2),5)` 加權詞彙（ISABOUT ...）或「代詞彙」（FORMSOF ...）。  
   
 ### <a name="example-using-the-generic-proximity-term"></a>範例：使用泛型相近詞彙  
  下列範例會使用泛型相近詞彙來搜尋與 "bracket" 一字位於相同文件中的 "reflector" 一字。  

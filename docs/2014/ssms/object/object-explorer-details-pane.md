@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69e7c14ae42586b801b2956c224cc8350ac611c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999933"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058599"
 ---
 # <a name="object-explorer-details-pane"></a>物件總管詳細資料窗格
   [物件總管詳細資料] 是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的元件，它會提供伺服器中所有物件的表格式檢視，並且呈現可管理這些物件的使用者介面。 物件總管的功能會隨著伺服器的類型而稍有不同，不過，它通常會包括資料庫的開發功能，以及所有伺服器類型的管理功能。  

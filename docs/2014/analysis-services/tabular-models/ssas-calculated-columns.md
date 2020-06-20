@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c1e0a9435fd974044b71ac64c1e7762fc709ca9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284896"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938609"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>導出資料行 (SSAS 表格式)
   表格式模型中的導出資料行可讓您將新資料加入至模型。 您可以建立 DAX 公式來定義資料行的資料列層級值，而不是將值貼入或匯入資料行。 然後就可以像是其他任何資料行一樣，在報表、樞紐分析表或樞紐分析圖中使用導出資料行。  
@@ -33,7 +32,7 @@ ms.locfileid: "67284896"
   
 -   [相關工作](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>各種  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> 優點  
  導出資料行中的公式與 Excel 中的公式非常類似。 然而與 Excel 不同的是，您不能為資料表中不同的資料列建立不同的公式，DAX 公式會自動套用到整個資料行。  
   
  當資料行包含公式時，會針對每個資料列計算其值。 當您輸入有效的公式時，即會計算資料行的結果。 資料行值日後將視需要進行重新計算，例如當基礎資料重新整理之時。  
