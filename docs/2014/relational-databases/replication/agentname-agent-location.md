@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8d6ee17a176c77bf29eb308d2af1bae364f37098
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7fc39541915b43abd024e1b02022f8a9e61580b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721870"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016648"
 ---
 # <a name="ltagentnamegt-agent-location"></a>&lt;代理程式名稱&gt; 代理程式位置
   合併代理程式 (用於合併訂閱) 和散發代理程式 (用於交易式與快照式訂閱) 會在散發者端或在訂閱者端執行。 如果代理程式是在散發者端執行，訂閱就稱為發送訂閱；如果代理程式是在訂閱者端執行，訂閱就稱為提取訂閱。 如需發送和提取訂閱的詳細資訊，請參閱[訂閱發行集](subscribe-to-publications.md)。 透過精靈在此過程中建立的所有訂閱，都屬於選取的類型。 若要建立兩種類型的訂閱，您就必須執行精靈兩次。  

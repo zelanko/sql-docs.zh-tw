@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 192c38bc189928cf980ab0141e53ab12f37d805c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5d74b9c4def9c0314569a8d0bd87939cdcb11b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175864"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038706"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
   查詢存放區功能為 DBA 提供查詢計劃選擇及效能的深入了解。 它能讓您快速找出因為查詢計劃中的變更所導致的效能差異，以簡化效能疑難排解。 該功能會自動擷取查詢、計劃及執行階段統計資料的記錄，並會保留這些記錄供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 使用 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 選項，可設定查詢存放區。
@@ -506,7 +505,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
  使用 `sp_query_store_force_plan` 時，只能強制執行查詢存放區所記錄的計劃，做為該查詢的計劃。 換句話說，可用於查詢的計劃，是已經用於執行 Q1 的計劃 (查詢存放區當時在作用中)。
 
- **為查詢移除強制執行計畫。** 若要再次依賴[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]查詢最佳化工具來計算最佳的查詢計劃，請`sp_query_store_unforce_plan`使用來取消強制執行針對查詢所選取的計畫。
+ **為查詢移除強制執行計畫。** 若要再次依賴 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 查詢最佳化工具來計算最佳的查詢計劃，請使用 `sp_query_store_unforce_plan` 來取消強制執行針對查詢所選取的計畫。
 
 ```
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;

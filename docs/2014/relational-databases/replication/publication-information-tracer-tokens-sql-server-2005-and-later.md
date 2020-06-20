@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 520db8f10b9a60d2c8bd48771a5660402be835ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021691"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016500"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>發行集資訊、追蹤 Token (交易式發行集、SQL Server 2005 和更新的版本)
    [追蹤 Token]**** 索引標籤，可讓您驗證連線並測量使用異動複寫之系統的延遲。 Token (即少量的資料) 會寫入發行集資料庫的交易記錄，會標示為典型的已複寫交易並且會透過系統傳送，它可允許計算：  
@@ -32,7 +31,7 @@ ms.locfileid: "63021691"
   
 -   預期會收到追蹤 Token 的訂閱者中，哪些沒有接收到 (如果有的話)？  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
 -   **排序**：在 **[排序資料行]** 對話方塊中排序一個或多個資料行。  
@@ -54,7 +53,7 @@ ms.locfileid: "63021691"
 > [!NOTE]  
 >  追蹤 Token 資訊與其他記錄資料的保留時間週期相同，這會由散發資料庫的記錄保留期限控制。 如需變更散發資料庫屬性的詳細資訊，請參閱[檢視及修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)。  
   
- **訂閱帳戶**  
+ **訂用帳戶**  
  發行集之每個訂閱的名稱。  
   
  **發行者到散發者**  

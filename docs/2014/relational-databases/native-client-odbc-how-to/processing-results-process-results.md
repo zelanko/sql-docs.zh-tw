@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 060709db7842173f6f30e78a6384a4b9489dfb3d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3fddbc96086f13fbc8321f2b3424f1c6c2507df1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712833"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039671"
 ---
 # <a name="process-results-odbc"></a>處理結果 (ODBC)
     

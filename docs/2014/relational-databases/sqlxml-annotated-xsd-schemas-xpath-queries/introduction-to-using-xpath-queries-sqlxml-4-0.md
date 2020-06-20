@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69fe9c7decd7521ca752b0b5092748c907036f40
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9a32f28268d39b0cc93a315f45d775804eacdd98
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703123"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015399"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>使用 XPath 查詢的簡介 (SQLXML 4.0)
   您可以將 XML 路徑語言 (XPath) 查詢指定成 URL 的一部分或在範本中指定此查詢。 對應結構描述會決定這個產生片段的結構，而且系統會從資料庫中擷取值。 這個程序在概念上類似於使用 CREATE VIEW 陳述式來建立檢視，然後針對它們撰寫 SQL 查詢。  
@@ -45,9 +44,9 @@ ms.locfileid: "82703123"
 </root>  
 ```  
   
- 在本檔中， ** \< 客戶>** 是元素節點， **cid**是屬性節點，而「**重要**」則是文位元組點。  
+ 在本檔中， **\<Customer>** 是元素節點， **cid**是屬性節點，而「**重要**」是文位元組點。  
   
- XPath 是一種圖表導覽語言，可用來從 XML 文件中選取一組節點。 每個 XPath 運算子都會根據前一個 XPath 運算子所選取的節點集來選取節點集。 例如，假設有一組** \< 客戶>** 節點，則 XPath 可以選取**日期**屬性值為 **"7/14/1999"** 的所有** \< Order>** 節點。 產生的節點集會包含訂單日期為 7/14/1999 的所有訂單。  
+ XPath 是一種圖表導覽語言，可用來從 XML 文件中選取一組節點。 每個 XPath 運算子都會根據前一個 XPath 運算子所選取的節點集來選取節點集。 例如，假設有一組 **\<Customer>** 節點，則 XPath 可以選取 **\<Order>** **日期**屬性值為 **"7/14/1999"** 的所有節點。 產生的節點集會包含訂單日期為 7/14/1999 的所有訂單。  
   
  全球資訊網協會 (W3C) 將 XPath 語言定義成標準導覽語言。 SQLXML 4.0 會執行 W3C XPath 規格的子集，其位於 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "82703123"
   
 -   **根目錄查詢**  
   
-     SQLXML 4.0 不支援根目錄查詢 (/)。 每個 XPath 查詢都必須從架構中的最上層** \< ElementType>** 開始。  
+     SQLXML 4.0 不支援根目錄查詢 (/)。 每個 XPath 查詢都必須從架構的最上層開始 **\<ElementType>** 。  
   
 -   **報告錯誤**  
   
@@ -89,11 +88,11 @@ ms.locfileid: "82703123"
 ## <a name="supported-functionality"></a>支援的功能  
  下表將顯示在 SQLXML 4.0 中實作之 XPath 語言的功能。  
   
-|特徵|項目|範例查詢的連結|  
+|功能|Item|範例查詢的連結|  
 |-------------|----------|----------------------------|  
 |軸|`attribute`、`child`、`parent` 和 `self` 軸|[在 XPath 查詢中指定軸 &#40;SQLXML 4.0&#41;](samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |布林值述詞，包括連續和巢狀述詞||[在 XPath 查詢中指定算術運算子 &#40;SQLXML 4.0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|所有關係運算子|=、！ =、<、 \< =、>、>=|[在 XPath 查詢中指定關聯式運算子 &#40;SQLXML 4.0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|所有關係運算子|=、！ =、<、 \<=, > 、>=|[在 XPath 查詢中指定關聯式運算子 &#40;SQLXML 4.0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |算術運算子|+、-、*、div|[在 XPath 查詢中指定算術運算子 &#40;SQLXML 4.0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |明確轉換函數|`number()`, `string()`, `Boolean()`|[在 XPath 查詢中指定明確轉換函數 &#40;SQLXML 4.0&#41;](samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |布林運算子|AND、OR|[在 XPath 查詢中指定布林運算子 &#40;SQLXML 4.0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -103,7 +102,7 @@ ms.locfileid: "82703123"
 ## <a name="unsupported-functionality"></a>不支援的功能  
  下表將顯示沒有在 SQLXML 4.0 中實作之 XPath 語言的功能。  
   
-|特徵|項目|  
+|功能|Item|  
 |-------------|----------|  
 |軸|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
 |數值述詞||  

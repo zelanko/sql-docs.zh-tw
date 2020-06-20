@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c01abd0eb56be4b8037aa9e03465c00a169c9967
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0f83676f981742158ffad7f2d9ac5b50949172fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717518"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060080"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 刪除資料 (SQLXML 4.0)
-  當記錄實例出現在 [ ** \< before>** ] 區塊中，且** \<>區塊後**沒有對應的記錄時，updategram 表示刪除作業。 在此情況下，updategram 會從資料庫中刪除** \< 之前的>** 區塊中的記錄。  
+  當記錄實例出現在區塊中 **\<before>** ，但在區塊中沒有對應的記錄時，updategram 表示刪除作業 **\<after>** 。 在此情況下，updategram 會從資料庫中刪除區塊中的記錄 **\<before>** 。  
   
  下列是刪除作業的 Updategram 格式：  
   
@@ -41,9 +40,9 @@ ms.locfileid: "82717518"
 </ROOT>  
 ```  
   
- 如果 updategram 只執行刪除作業，您可以省略** \< after>** 標記。 如果您未指定選擇性的 `mapping-schema` 屬性，updategram 中指定的** \< ElementName>** 會對應到資料庫資料表，而子項目或屬性則會對應到資料表中的資料行。  
+ **\<after>** 如果 updategram 只執行刪除作業，您可以省略標記。 如果您沒有指定選擇性的 `mapping-schema` 屬性， **\<ElementName>** updategram 中指定的會對應至資料庫資料表，而子項目或屬性則會對應到資料表中的資料行。  
   
- 如果在 updategram 中指定的元素符合資料表中的多個資料列，或不符合任何資料列，則 updategram 會傳回錯誤，並取消整個** \< 同步處理>** 區塊。 Updategram 中的元素一次只能刪除一個記錄。  
+ 如果在 updategram 中指定的元素符合資料表中的多個資料列，或不符合任何資料列，則 updategram 會傳回錯誤並取消整個 **\<sync>** 區塊。 Updategram 中的元素一次只能刪除一個記錄。  
   
 ## <a name="examples"></a>範例  
  本章節中的範例會使用預設對應 (也就是說，Updategram 中不會指定任何對應結構描述)。 如需使用對應架構之 updategram 的更多範例，請參閱[在 Updategram 中指定批註式對應架構 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
@@ -55,7 +54,7 @@ ms.locfileid: "82717518"
   
  在這些範例中，Updategram 不會指定對應結構描述。 因此 Updategram 會使用預設對應，其中元素的名稱會對應到資料表名稱，而屬性或子元素則會對應到資料行。  
   
- 第一個 updategram 是以屬性為中心，並會在 [ ** \< 前>** ] 區塊中識別兩個移位（晚上和夜間）。 因為** \< after>** 區塊中沒有對應的記錄，所以這是刪除作業。  
+ 第一個 updategram 是以屬性為中心，並會識別區塊中的兩個移位（晚上和夜間） **\<before>** 。 因為區塊中沒有對應的記錄 **\<after>** ，所以這是刪除作業。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -82,7 +81,7 @@ ms.locfileid: "82717518"
   
 1.  [使用 XML updategram &#40;SQLXML 4.0&#41;來插入資料](inserting-data-using-xml-updategrams-sqlxml-4-0.md)，以完成範例 B （「使用 updategram 插入多筆記錄」）。  
   
-2.  將上述 updategram 複製到 [記事本]，並將它儲存為 Updategram-RemoveShifts，並在使用[Xml updategram &#40;SQLXML 4.0&#41;插入資料](inserting-data-using-xml-updategrams-sqlxml-4-0.md)中的相同資料夾中，將其另存為。  
+2.  將上述 updategram 複製到 [記事本]，並將它儲存為與用來完成的相同資料夾中的 Updategram-RemoveShifts.xml （「使用 updategram 插入多筆記錄」），並[使用 XML updategram &#40;SQLXML 4.0&#41;來插入資料](inserting-data-using-xml-updategrams-sqlxml-4-0.md)。  
   
 3.  建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行 Updategram。  
   

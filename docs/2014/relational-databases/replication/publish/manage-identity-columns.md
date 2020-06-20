@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cbfad718850df4c66572999735fbee58fb530424
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b9a7b28c288ef80d24fb67479727d94c3c09fa5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882297"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060524"
 ---
 # <a name="manage-identity-columns"></a>管理識別欄位
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中管理識別欄位。 當訂閱者插入複寫回發行者時，必須管理識別欄位，以免在訂閱者和發行者上指派相同的識別值。 複寫可以自動管理識別範圍，或者您可以選擇手動處理識別範圍管理。  如需複寫提供之識別範圍管理選項的詳細資訊，請參閱[複寫識別欄位](replicate-identity-columns.md)。  
@@ -36,13 +35,13 @@ ms.locfileid: "73882297"
 -   若要建立可用於多個資料表中或可在不參考任何資料表的情況下從應用程式進行呼叫的自動遞增數字，請參閱 [序號](../../sequence-numbers/sequence-numbers.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在 [新增發行集精靈] 的 [發行項屬性 - \<發行項>]**** 對話方塊的 [屬性]**** 索引標籤上，指定識別欄位管理選項。 如需使用此精靈的詳細資訊，請參閱[建立發行集](create-a-publication.md)。 在「新增發行集精靈」中：  
+ 在 [新增發行集嚮導] 之 [發行項**屬性- \<Article> ** ] 對話方塊的 [**屬性**] 索引標籤上，指定識別欄位管理選項。 如需使用此精靈的詳細資訊，請參閱[建立發行集](create-a-publication.md)。 在「新增發行集精靈」中：  
   
 -   如果在 **[發行集類型]** 頁面中選取 **[合併式發行集]** 或 **[具更新訂閱的交易式發行集]** ，請選取自動或手動識別範圍管理 (依預設為自動，建議使用)。 發行資料表後，將無法修改其屬性，但是可以修改其他相關屬性。  
   
 -   如果選取其他發行集類型，應將識別範圍管理設定為手動。  
   
- 在 [發行項屬性 - \<發行項>]**** 對話方塊的 [屬性]**** 索引標籤上修改識別範圍和臨界值，其可於 [發行集屬性 - \<發行集>]**** 對話方塊中提供。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](view-and-modify-publication-properties.md)＞。  
+ 在 [發行項** \<Article> 屬性**-] 的 [**屬性**] 索引標籤上修改識別範圍和臨界值，這可在 [**發行集 \<Publication> 屬性-** ] 對話方塊中取得。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](view-and-modify-publication-properties.md)＞。  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>若要指定識別欄位管理選項  
   
@@ -52,7 +51,7 @@ ms.locfileid: "73882297"
   
 3.  按一下 **[發行項屬性]**，然後按一下 **[設定反白顯示資料表發行項的屬性]**。  
   
-4.  在 [發行項屬性 - \<發行項>]**** 對話方塊的 [屬性]**** 索引標籤上，於 [識別範圍管理]**** 區段中，將 [自動管理識別範圍]**** 屬性設定為 [自動]**** 或 [手動]**** (針對執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的發行者) 或是 [True]**** 或 [False]**** (針對執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的發行者)。  
+4.  在 [發行項**屬性- \<Article> ** ] 對話方塊的 [**屬性**] 索引標籤上，于 [**識別範圍管理**] 區段中，將 [**自動管理識別範圍**] 屬性設定為 [**自動**] 或 [**手動**] （針對執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的發行者）或 [ **True** ] 或 [ **False** ] （針對執行之前版本的發行者 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ）。  
   
 5.  如果在步驟 4 中選取了 **[自動]** 或 **[True]** ，請在下表中輸入選項的值。 如需如何使用這些設定的詳細資訊，請參閱[複寫識別欄位](replicate-identity-columns.md)中的＜指派識別範圍＞一節。  
   
@@ -69,42 +68,42 @@ ms.locfileid: "73882297"
   
 #### <a name="to-modify-identity-ranges-and-thresholds-after-a-table-is-published"></a>若要在發行資料表後修改識別範圍和臨界值  
   
-1.  在 [發行集屬性 - \<發行集>]**** 對話方塊的 [發行項]**** 頁面上，選取具有識別欄位的資料表。  
+1.  在 [**發行集屬性- \<Publication> ** ] 對話方塊的 [發行項] 頁面上，選取具有識別欄位的資料表。 **Articles**  
   
 2.  按一下 **[發行項屬性]**，然後按一下 **[設定反白顯示資料表發行項的屬性]**。  
   
-3.  在 [發行項屬性 - \<發行項>]**** 對話方塊的 [屬性]**** 索引標籤上，於 [識別範圍管理]**** 區段中輸入下列其中一或多個屬性的值：[發行者範圍大小]****、[訂閱者範圍大小]**** 和 [範圍臨界值百分比]****。  
+3.  在 [發行項**屬性 \<Article> -** ] 對話方塊的 [**屬性**] 索引標籤上，于 [**識別範圍管理**] 區段中，輸入下列一個或多個屬性的值： **[發行者範圍大小]、[****訂閱者範圍大小**] 和 [**範圍臨界值百分比**]。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  在 [發行集屬性 - \<發行集>]**** 對話方塊上，按一下 [確定]****。  
+5.  在 [發行集**屬性- \<Publication> ** ] 對話方塊上，按一下 **[確定]** 。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以在建立發行項時，使用複寫預存程序來指定識別範圍管理選項。  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>在針對交易式發行集定義發行項時，啟用自動識別範圍管理  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)。 如果所發行的來源資料表具有識別欄位，**請為** ** \@identityrangemanagementoption**指定一個值、指派給發行者的** \@** 識別值範圍 pub_identity_range、 ** \@identity_range**的每個訂閱者指派的識別值範圍，以及在指派新的** \@** 識別範圍之前，所使用的總識別值百分比。 如需定義發行項的詳細資訊，請參閱[定義發行項](define-an-article.md)。  
+1.  在發行集資料庫的發行者上，執行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)。 如果所發行的來源資料表具有識別欄位，**請為** ** \@ identityrangemanagementoption**指定一個值、指派給發行者的識別值範圍** \@ Pub_identity_range**、 ** \@ identity_range**的每個訂閱者指派的識別值範圍，以及在指派新的識別範圍之前，所** \@ 使用的總**識別值百分比。 如需定義發行項的詳細資訊，請參閱[定義發行項](define-an-article.md)。  
   
     > [!NOTE]  
     >  請確定識別欄位的資料類型夠大，足以支援指派給所有訂閱者的識別總範圍。  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>在針對交易式發行集定義發行項時，停用自動識別範圍管理  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)。 **為\@identityrangemanagementoption**指定**manual**的值。 如需定義發行項的詳細資訊，請參閱[定義發行項](define-an-article.md)。  
+1.  在發行集資料庫的發行者上，執行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)。 為** \@ identityrangemanagementoption**指定**manual**的值。 如需定義發行項的詳細資訊，請參閱[定義發行項](define-an-article.md)。  
   
 2.  在訂閱者上指派識別發行項欄位的範圍，以免產生更新訂閱者的衝突。 如需詳細資訊，請參閱[複寫識別欄位](replicate-identity-columns.md)主題中的＜為手動識別範圍管理指派範圍＞一節。  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>在針對合併式發行集定義發行項時，啟用自動識別範圍管理  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 如果所發行的來源資料表具有識別欄位，**請為** ** \@identityrangemanagementoption**指定一個值、指派給** \@pub_identity_range**的伺服器訂閱的識別值範圍、指派給「發行者」的識別值範圍和** \@identity_range**的每個用戶端訂閱，以及在新的識別範圍指派給「 ** \@閾值**」之前所使用的總識別值百分比。 如需要指派哪些新識別範圍的詳細資訊，請參閱[複寫識別欄位](replicate-identity-columns.md)主題中的＜指派識別範圍＞。 如需定義發行項的詳細資訊，請參閱[定義發行項](define-an-article.md)。  
+1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 如果所發行的來源資料表具有識別欄位，**請為** ** \@ identityrangemanagementoption**指定一個值、指派給** \@ pub_identity_range**的伺服器訂閱的識別值範圍、指派給「發行者」的識別值範圍和** \@ identity_range**的每個用戶端訂閱，以及在新的識別範圍指派給「 ** \@ 閾值**」之前所使用的總識別值百分比。 如需要指派哪些新識別範圍的詳細資訊，請參閱[複寫識別欄位](replicate-identity-columns.md)主題中的＜指派識別範圍＞。 如需定義發行項的詳細資訊，請參閱[定義發行項](define-an-article.md)。  
   
     > [!NOTE]  
     >  請確定識別欄位的資料類型夠大，足以支援指派給所有訂閱者的識別總範圍，特別是具有伺服器訂閱的訂閱者  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>在針對合併式發行集定義發行項時，停用自動識別範圍管理  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 針對** \@identityrangemanagementoption**指定下列其中一個值：  
+1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 針對** \@ identityrangemanagementoption**指定下列其中一個值：  
   
     -   **manual** - 必須手動指派識別範圍來更新訂閱者。  
   
@@ -120,9 +119,9 @@ ms.locfileid: "73882297"
   
 2.  如果結果集中 **identityrangemanagementoption** 的值為 **1**，請依照以下方式變更設定：  
   
-    -   若要變更指派的識別範圍，請在發行集資料庫的發行者上，執行 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 。 針對** \@ ** **identity_range** **[屬性] 指定 [identity_range] 或 [pub_identity_range] 值，並針對 [值] 指定新的\@ ** [範圍] 值**pub_identity_range**  
+    -   若要變更指派的識別範圍，請在發行集資料庫的發行者上，執行 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 。 針對 [ ** \@ 屬性**] 指定 [ **identity_range** ] 或 [ **pub_identity_range** ] 值，並針對 [ ** \@ 值**] 指定新的 [範圍] 值  
   
-    -   若要變更指派新範圍的臨界值，請在發行集資料庫的發行者上，執行 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 。 針對 [ ** \@屬性**] 指定 [**閾值**] 的值，並針對** \@[值**] 指定新的臨界值。  
+    -   若要變更指派新範圍的臨界值，請在發行集資料庫的發行者上，執行 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 。 針對 [ ** \@ 屬性**] 指定 [**閾值**] 的值，並針對 [ ** \@ 值**] 指定新的臨界值。  
   
 #### <a name="to-change-automatic-identity-range-management-settings-for-an-existing-article-in-a-merge-publication"></a>針對合併式發行集中的現有發行項，變更自動識別範圍管理設定  
   
@@ -130,11 +129,11 @@ ms.locfileid: "73882297"
   
 2.  如果結果集中 **identity_support** 的值為 **1**，請依照以下方式變更設定：  
   
-    -   若要變更指派的識別範圍，請在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 。 針對** \@ ** **identity_range** **[屬性] 指定 [identity_range] 或 [pub_identity_range] 值，並針對 [值] 指定新的\@ ** [範圍] 值**pub_identity_range**  
+    -   若要變更指派的識別範圍，請在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 。 針對 [ ** \@ 屬性**] 指定 [ **identity_range** ] 或 [ **pub_identity_range** ] 值，並針對 [ ** \@ 值**] 指定新的 [範圍] 值  
   
-    -   若要變更指派新範圍的臨界值，請在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 。 針對 [ ** \@屬性**] 指定 [**閾值**] 的值，並針對** \@[值**] 指定新的臨界值。 如需要指派哪些新識別範圍的詳細資訊，請參閱[複寫識別欄位](replicate-identity-columns.md)主題中的＜指派識別範圍＞。  
+    -   若要變更指派新範圍的臨界值，請在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 。 針對 [ ** \@ 屬性**] 指定 [**閾值**] 的值，並針對 [ ** \@ 值**] 指定新的臨界值。 如需要指派哪些新識別範圍的詳細資訊，請參閱[複寫識別欄位](replicate-identity-columns.md)主題中的＜指派識別範圍＞。  
   
-    -   若要停用自動識別範圍管理，請在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 。 針對 [ ** \@屬性**] 指定**identityrangemanagementoption**的值，並為** \@[值**] 選擇 [**手動**] 或 [**無**]。  
+    -   若要停用自動識別範圍管理，請在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 。 針對 [ ** \@ 屬性**] 指定**identityrangemanagementoption**的值，並為 [ ** \@ 值**] 選擇 [**手動**] 或 [**無**]。  
   
 ## <a name="see-also"></a>另請參閱  
  [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)   

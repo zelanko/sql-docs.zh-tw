@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 757c70398afe0f88d535b6853abe29b79e9617bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac7c811c6f823b20a99fa590b48448d4b8ca3dbf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482560"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961098"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>篩選對話方塊 (適用於 Excel 的 MDS 增益集)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]在中，您可以使用 [**篩選**] 對話方塊，在將 MDS 管理的資料載入 Excel 之前縮小其清單範圍。  
+  在中 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] ，您可以使用 [**篩選**] 對話方塊，在將 MDS 管理的資料載入 Excel 之前縮小其清單範圍。  
   
  這個對話方塊包含三個區段：[資料行]****、[資料列]**** 和 [摘要]****。  
   

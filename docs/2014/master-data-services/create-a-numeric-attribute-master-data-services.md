@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 484774165ea1997b98fc9dc0919f5be7450dd4c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e56d68cc46da72de21f07559b7ccb2aa9ac6fda
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483358"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971778"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>建立數值屬性 (Master Data Services)
   當您想要讓使用者輸入數字作為屬性值時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立數值屬性。  
@@ -26,7 +25,7 @@ ms.locfileid: "65483358"
 > [!NOTE]  
 >  數值屬性有限制。 如需詳細資訊，請參閱 [屬性 &#40;Master Data Services&#41;](attributes-master-data-services.md)。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

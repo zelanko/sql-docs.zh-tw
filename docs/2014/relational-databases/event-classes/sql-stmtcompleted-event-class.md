@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 62dc29f8143f92fc9674ed10c092dc6ad08570fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85bd8f79f7be5a46e8f714f69a0b61de560a0aed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63060359"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051686"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted 事件類別
   SQL:StmtCompleted 事件類別指出已完成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  

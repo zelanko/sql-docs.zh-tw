@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fe6e5bc6e4f60bc0703482f3bf4d761104b3c5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010321"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955658"
 ---
 # <a name="create-a-filestream-enabled-database"></a>建立啟用 FILESTREAM 的資料庫
   此主題說明如何建立支援 FILESTREAM 的資料庫。 因為 FILESTREAM 使用特殊類型的檔案群組，所以當您在建立資料庫時，至少必須針對一個檔案群組指定 CONTAINS FILESTREAM 子句。  
@@ -28,7 +27,7 @@ ms.locfileid: "66010321"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，按一下 **[新增查詢]** 顯示 [查詢編輯器]。  
   
-2.  複製程式[!INCLUDE[tsql](../../includes/tsql-md.md)]代碼會建立稱為 Archive 的啟用 FILESTREAM 資料庫。  
+2.  複製 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼會建立稱為 Archive 的啟用 FILESTREAM 資料庫。  
   
     > [!NOTE]  
     >  在這個指令碼中，目錄 C:\Data 必須存在。  

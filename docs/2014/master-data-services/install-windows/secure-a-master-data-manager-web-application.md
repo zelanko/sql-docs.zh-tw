@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2bcbdacd6d08a6139975c20bb8f1d5010195375b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2653ec7ef399083f750d80d9ba7a27e361ecc327
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479349"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961638"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保護主資料管理員 Web 應用程式
   您可以使用 HTTPS 保護 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式。  
@@ -23,7 +22,7 @@ ms.locfileid: "65479349"
 > [!NOTE]  
 >  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式可以使用 HTTP 或 HTTPS，但不能同時使用兩者。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須是 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 安裝所在之 Web 伺服器的系統管理員。  
@@ -38,13 +37,13 @@ ms.locfileid: "65479349"
   
 3.  在 [動作]**** 窗格中，按一下 [繫結]****。  
   
-4.  按一下 **[新增]** 。  
+4.  按一下 [新增] 。  
   
 5.  從清單中選取 [https]****。  
   
 6.  選取 SSL 憑證。  
   
-7.  按一下 [確定]  。  
+7.  按一下 [確定]。  
   
 8.  選擇性。 若要移除 HTTP，讓使用者只能使用 HTTPS 存取網站，請從清單中按一下含有 **http**的資料列。 按一下 [移除]****，然後在確認對話方塊中按一下 [是]****。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "65479349"
   
 9. 若要關閉 [網站繫結]**** 對話方塊，請按一下 [關閉]****。  
   
-10. 現在開啟*磁片磁碟機*： \PROGRAM Files\Microsoft SQL Server\120\Master Data services\webapplication。的 web.config 檔案。  
+10. 現在開啟*磁片磁碟機*： \PROGRAM Files\Microsoft SQL Server\120\Master Data services\webapplication。中的 web.config 檔案  
   
 11. 尋找字串 `<security mode="Message">` ，並將其變更為 `<security mode="Transport">`。  
   

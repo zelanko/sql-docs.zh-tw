@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7924570253bf2f805d91c4dfabc3d5facf44cccc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b8dbb9847f3591d0f26a2dc7ca6e31f1b22da83
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054464"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972448"
 ---
 # <a name="web-service-task-editor-output-page"></a>Web 服務工作編輯器 (輸出頁面)
   使用 [Web 服務工作編輯器]**** 對話方塊的 [輸出]**** 頁面，即可指定 Web 方法傳回的結果之儲存位置。  
@@ -39,13 +38,13 @@ ms.locfileid: "66054464"
   
 ### <a name="outputtype--file-connection"></a>OutputType = 檔案連接  
  **檔案**  
- 在清單中選取檔案連線管理員，或\<按一下 [**新增連接 ...** ]> 建立新的連線管理員。  
+ 在清單中選取檔案連線管理員，或按一下 \<**New Connection...**> 以建立新的連線管理員。  
   
  **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="outputtype--variable"></a>OutputType = 變數  
  **變數**  
- 在清單中選取變數，或按一下\<[**新增變數 ...** ]> 建立新的變數。  
+ 在清單中選取變數，或按一下 \<**New Variable...**> 以建立新的變數。  
   
  **相關主題：**  [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
   

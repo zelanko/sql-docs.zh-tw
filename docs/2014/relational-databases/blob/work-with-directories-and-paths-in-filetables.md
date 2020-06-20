@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 52e486dc6cb6c3da45d590d4ba2e557c87c1a556
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4641159e894b764cbee4d7f02085f3ceb8e6d87d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970826"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>使用 FileTables 中的目錄與路徑
   描述在 FileTable 中儲存檔案的目錄結構。  
@@ -60,7 +59,7 @@ GO
 > [!IMPORTANT]  
 >  NTFS 檔案系統支援遠超過 Windows Shell 和大多數 Windows API 的 260 字元限制的路徑名稱。 因此，可以使用 Transact-SQL 建立 FileTable 檔案階層中完整路徑名稱超過 260 字元的檔案，但卻無法以 Windows 檔案總管或許多其他 Windows 應用程式檢視或開啟這些檔案。 不過，您可以繼續使用 Transact-SQL 存取這些檔案。  
   
-##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a>FileTable 中儲存之專案的完整路徑  
+##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a> FileTable 中儲存之項目的完整路徑  
  FileTable 中儲存之檔案或目錄的完整路徑，由下列元素做為開頭：  
   
 1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體層級為 FILESTREAM 檔 I/O 存取啟用共用。  
@@ -77,7 +76,7 @@ GO
   
  請務必牢記，於此執行個體層級的 FILESTREAM 共用之下所建立的目錄階層，是一個虛擬的目錄階層。 此階層儲存於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，且不會實際於 NTFS 檔案系統中呈現出來。 所有存取 FILESTREAM 共用之下以及其所包含之 FileTables 中檔案與目錄的作業，都會由檔案系統中內嵌的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所攔截與處理。  
   
-##  <a name="the-semantics-of-the-root-directories-at-the-instance-database-and-filetable-levels"></a><a name="roots"></a>實例、資料庫和 FileTable 層級上根目錄的語義  
+##  <a name="the-semantics-of-the-root-directories-at-the-instance-database-and-filetable-levels"></a><a name="roots"></a> 執行個體、資料庫與 FileTable 層級上根目錄的語意  
  此目錄階層結構遵循下列語義：  
   
 -   執行個體層級的 FILESTREAM 共用由管理員所設定，而且會儲存為伺服器屬性。 您可使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，重新命名此共用。 伺服器重新啟動之前重新命名作業不會生效。  
@@ -90,18 +89,18 @@ GO
   
 -   您無法以獨佔的檔案控制開啟這些根目錄。  
   
-##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a>FileTable 架構中的 is_directory 資料行  
+##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a> FileTable 結構描述中的 is_directory 資料行  
  下表描述 **is_directory** 資料行以及與將 FILESTREAM 資料包含於 FileTable 中的 **file_stream** 資料行之間的互動。  
   
 ||||  
 |-|-|-|  
 |*is_directory* **value**|*file_stream* **value**|**行為**|  
 |FALSE|NULL|此為無效的組合，將由系統定義的條件約束所攔截。|  
-|FALSE|\<值>|該項目代表檔案。|  
+|FALSE|\<value>|該項目代表檔案。|  
 |TRUE|NULL|該項目代表目錄。|  
-|TRUE|\<值>|此為無效的組合，將由系統定義的條件約束所攔截。|  
+|TRUE|\<value>|此為無效的組合，將由系統定義的條件約束所攔截。|  
   
-##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a>搭配 AlwaysOn 可用性群組使用虛擬網路名稱（Vnn）  
+##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a> 使用虛擬網路名稱 (VNN) 搭配 AlwaysOn 可用性群組  
  當包含 FILESTREAM 或 FileTable 資料的資料庫屬於 AlwaysOn 可用性群組時：  
   
 -   FILESTREAM 和 FileTable 函數會接受或傳回虛擬網路名稱 (VNN) 而非電腦名稱。 如需有關這些函數的詳細資訊，請參閱 [Filestream and FileTable Functions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filestream-and-filetable-functions-transact-sql) (Filestream 和 FileTable 函數 (Transact-SQL))。  
@@ -110,8 +109,8 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [啟用 FileTable 的必要條件](enable-the-prerequisites-for-filetable.md)   
- [Create、Alter 和 Drop Filetable](create-alter-and-drop-filetables.md)   
- [使用 Transact-sql 存取 Filetable](access-filetables-with-transact-sql.md)   
+ [建立、改變及卸除 FileTable](create-alter-and-drop-filetables.md)   
+ [利用 Transact-SQL 存取 FileTable](access-filetables-with-transact-sql.md)   
  [使用檔案輸入輸出 API 存取 FileTable](access-filetables-with-file-input-output-apis.md)  
   
   

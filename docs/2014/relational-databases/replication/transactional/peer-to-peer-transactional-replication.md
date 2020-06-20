@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c781435bdf8458b7f2714141d659750b0f31055
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793919"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998048"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   點對點複寫藉由維護多個伺服器執行個體之間的資料複本 (也稱為 *「節點」* ) 來提供向外延展和高可用性解決方案。 點對點複寫是以異動複寫為基礎，會以接近即時、交易式的方式傳播一致的變更。 如此可讓需要向外延展讀取作業的應用程式將來自用戶端的讀取散發到多個節點之間。 由於會以接近即時的方式在節點之間維護資料，所以點對點複寫會提供資料備援性，這樣可提高資料的可用性。  
@@ -137,24 +136,24 @@ ms.locfileid: "67793919"
   
 -   散發代理程式參數 **-SubscriptionStreams** 和記錄讀取器代理程式參數 **-MaxCmdsInTran**。  
   
--   發行項屬性** \@destination_owner**和** \@destination_table**。  
+-   發行項屬性** \@ destination_owner**和** \@ destination_table**。  
 
 -   點對點異動複寫不支援建立點對點發行集的單向交易式訂閱
   
  下列屬性有特殊考量：  
   
--   發行集屬性** \@allow_initialize_from_backup**需要的`true`值。  
+-   發行集屬性** \@ allow_initialize_from_backup**需要的值 `true` 。  
   
--   發行項屬性** \@replicate_ddl**需要的`true`值為;identityrangemanagementoption 需要的`manual`值為; ** \@ **而** \@狀態**則需要設定選項**24** 。  
+-   發行項屬性** \@ replicate_ddl**需要的值 `true` 為;** \@ identityrangemanagementoption**需要的值 `manual` 為;而** \@ 狀態**則需要設定選項**24** 。  
   
--   發行項** \@** 屬性的值 ins_cmd、 ** \@del_cmd**和** \@upd_cmd**不能設定為。 `SQL`  
+-   發行項屬性的值** \@ ins_cmd**、 ** \@ del_cmd**和** \@ upd_cmd**不能設定為 `SQL` 。  
   
--   ** \@Sync_type**的訂用帳戶屬性需要`none`或`automatic`的值。  
+-   ** \@ Sync_type**的訂用帳戶屬性需要或的值 `none` `automatic` 。  
   
 ### <a name="maintenance-considerations"></a>維護考量  
  下列動作需要停止系統。 這表示停止所有節點上已發行之資料表的活動，並確定每個節點都已收到來自其他所有節點的所有變更。  
   
--   將[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]節點加入至現有的拓撲  
+-   將 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 節點加入至現有的拓撲  
   
 -   將發行項新增至現有的發行集  
   

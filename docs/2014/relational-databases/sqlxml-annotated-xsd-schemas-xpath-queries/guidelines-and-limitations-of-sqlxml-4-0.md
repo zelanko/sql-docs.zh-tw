@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7a6bce4d8a3cdf86e18fead1c33d86346061511
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e020cbf0ac32e4c878b0b74b67e7c9c679d5d178
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703127"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015385"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0 的指導方針和限制
   當您使用 SQLXML 4.0 時，請記住以下事項：  

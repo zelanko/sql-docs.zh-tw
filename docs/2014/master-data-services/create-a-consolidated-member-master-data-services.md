@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 588295d0705ec9c556c85eb5bef1d96d8128b580
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c41673f6f3bf1f4de2a831ecd659321b273b6af9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176067"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971888"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]當您需要明確階層的父節點時，可以在 中建立合併成員。 合併成員可以有自己的屬性。 它們可用於群組。 如下列範例所示，合併成員可以用於具有帳戶的帳戶群組。
@@ -45,13 +44,13 @@ ms.locfileid: "78176067"
 
 5.  在方格上方，選取 **[合併成員]** 或 **[階層中的所有合併成員]** 選項。
 
-6.  按一下 **[新增]** 。
+6.  按一下 [新增] 。
 
 7.  填完右邊窗格中的欄位。
 
 8.  選擇性。 在 **[註解]** 方塊中，輸入有關加入此成員之原因的註解。 可存取成員的所有使用者都可以檢視註解。
 
-9. 按一下 [確定]  。
+9. 按一下 [確定]。
 
 ## <a name="next-steps"></a>後續步驟
 

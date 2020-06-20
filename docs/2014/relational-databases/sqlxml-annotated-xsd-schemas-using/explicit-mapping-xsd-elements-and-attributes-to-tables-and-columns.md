@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11144714addb50dc4c481512399228802390f2f3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 267f9044505126cbe7f865e6577da3cbe2f26bcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703613"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055150"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和屬性對資料表和資料行的明確對應 (SQLXML 4.0)
   使用 XSD 結構描述提供關聯式資料庫的 XML 檢視表時，必須將結構描述的元素但屬性對應到資料庫的資料表和資料行。 資料庫資料表/檢視表中的資料列將會對應到 XML 文件中的元素。 資料庫中的資料行值會對應到屬性或元素。  
@@ -58,9 +57,9 @@ ms.locfileid: "82703613"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. 指定 sql:relation 和 sql:field 註解  
- 在此範例中，XSD 架構是由具有** \< FName>** 和** \< LName>** 子專案和**ContactID**屬性的複雜類型的** \< 連絡人>** 元素所組成。  
+ 在此範例中，XSD 架構是由複雜類型的元素所組成， **\<Contact>** 其中包含 **\<FName>** 和子專案 **\<LName>** ，以及**ContactID**屬性。  
   
- 批註會將 `sql:relation` ** \< Contact>** 元素對應到 AdventureWorks 資料庫中的 Person. contact 資料表。 批註會將 `sql:field` ** \< FName>** 元素對應至 FirstName 資料行，並將** \< LName>** 元素對應至 LastName 資料行。  
+ 批註會將 `sql:relation` **\<Contact>** 元素對應至 AdventureWorks 資料庫中的 Person. Contact 資料表。 批註會將 `sql:field` **\<FName>** 元素對應至 FirstName 資料行，並將 **\<LName>** 元素對應至 LastName 資料行。  
   
  未指定**ContactID**屬性的注釋。 這會導致將屬性預設對應到具有相同名稱的資料行。  
   

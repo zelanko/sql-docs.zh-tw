@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b810a3785c41356042639c4fdb79b4f6cf28d871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a10e6333f6dd38a850a832b82a7cb7a0e0bf698
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76934804"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955578"
 ---
 # <a name="create-alter-and-drop-filetables"></a>建立、改變及卸除 FileTable
   描述如何建立新的 FileTable，或是改變或卸除現有的 FileTable。  
@@ -37,7 +36,7 @@ ms.locfileid: "76934804"
   
 ###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> 如何：建立 FileTable  
  **使用 Transact-SQL 建立 FileTable**  
- 您可以使用 [AS FileTable](/sql/t-sql/statements/create-table-transact-sql) 選項來呼叫 **CREATE TABLE &#40;Transact-SQL&#41;** 陳述式，藉以建立 FileTable。 因為 FileTable 具有固定的結構描述，所以您不需要指定資料行的清單。 您可以針對新的 FileTable 指定下列設定：  
+ 您可以使用 **AS FileTable** 選項來呼叫 [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) 陳述式，藉以建立 FileTable。 因為 FileTable 具有固定的結構描述，所以您不需要指定資料行的清單。 您可以針對新的 FileTable 指定下列設定：  
   
 1.  **FILETABLE_DIRECTORY**。 指定目錄，以做為 FileTable 中儲存之所有檔案和目錄的根目錄。 在資料庫的所有 FileTable 目錄名稱之間，此名稱必須是唯一的。 不論目前的定序設定為何，唯一性的比較都不區分大小寫。  
   
@@ -175,11 +174,11 @@ GO
 |檢查條件約束|系統定義的檢查條件約束會強制執行下列需求：<br /><br /> 有效的檔案名稱。<br /><br /> 有效的檔案屬性。<br /><br /> 父物件必須是目錄。<br /><br /> 在檔案操作期間，會鎖定命名空間階層。|  
   
  **系統定義之條件約束的命名慣例**  
- 上述系統定義條件約束的命名格式為 **\<條件約束類型>_\<資料表名稱>[\_\<資料行名稱>]\_\<唯一碼>** ，其中：  
+ 如上所述的系統定義條件約束是以** \<constraintType> _ \<tablename> [ \_ \<columnname> ] \_ \<uniquifier> **格式命名，其中：  
   
 -   其中的 <條件約束類型>  是 CK (檢查條件約束)、DF (預設條件約束)、FK (外部索引鍵)、PK (主索引鍵) 或 UQ (唯一條件約束)。  
   
--   *\<唯一碼>* 是讓名稱成為唯一名稱的系統產生字串。 這個字串可能會包含 FileTable 名稱和唯一識別碼。  
+-   *\<uniquifier>* 這是系統產生的字串，可讓名稱成為唯一的。 這個字串可能會包含 FileTable 名稱和唯一識別碼。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 FileTable](manage-filetables.md)  

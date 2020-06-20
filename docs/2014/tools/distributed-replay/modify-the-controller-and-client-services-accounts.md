@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5273340ce44cc360c332d926fd89b52988fa76b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62505988"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054422"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>修改控制器服務帳戶與用戶端服務帳戶
   在本主題中，您將了解如何修改 Distributed Replay Controller 和用戶端服務帳戶，然後重新套用存取控制清單 (ACL)。  
@@ -24,17 +23,17 @@ ms.locfileid: "62505988"
   
 1.  在安裝 Distributed Replay 服務的電腦上，於命令提示字元中輸入 `dcomcnfg`。  
   
-2.  按兩下 [服務]  ，向下捲動並以滑鼠右鍵按一下 [ **Distributed Replay [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務名稱>]\<** ，然後按一下 [啟動]  或 [停止]  。  
+2.  按兩下 [**服務**]，並在** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<service name> **按一下滑鼠右鍵，然後按一下 [**開始**] 或 [**停止**]。  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>若要修改 Distributed Replay Controller 服務  
   
 1.  在控制器電腦上，停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務。  
   
-2.  在 [服務]  底下，以滑鼠右鍵按一下 [ **Distributed Replay Controller][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ，然後選取 [內容]  。  
+2.  在 [服務]  底下，以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller]  ，然後選取 [內容]  。  
   
-3.  在 [ **Distributed Replay Controller 內容][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 視窗的 [登入]  索引標籤上選取 [這個帳戶]  ，輸入或按一下 [瀏覽]  輸入新的登入帳戶，然後按一下 [確定]  。  
+3.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 內容]  視窗的 [登入]  索引標籤上選取 [這個帳戶]  ，輸入或按一下 [瀏覽]  輸入新的登入帳戶，然後按一下 [確定]  。  
   
-     **重要事項**：當您設定 Distributed Replay Controller 時，可以指定將用來執行 Distributed Replay Client 服務的一或多個使用者帳戶。 下列是支援帳戶的清單：  
+     **重要**：當您設定 Distributed Replay Controller 時，可以指定要用來執行 Distributed Replay Client 服務的一或多個使用者帳戶。 下列是支援帳戶的清單：  
   
     -   網域使用者帳戶  
   
@@ -76,7 +75,7 @@ ms.locfileid: "62505988"
   
 2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務。  
   
-3.  在 [ **Distributed Replay Client 內容][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 視窗的 [登入]  索引標籤上選取 [這個帳戶]  ，輸入或按一下 [瀏覽]  輸入新的登入帳戶，然後按一下 [確定]  。  
+3.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 內容]  視窗的 [登入]  索引標籤上選取 [這個帳戶]  ，輸入或按一下 [瀏覽]  輸入新的登入帳戶，然後按一下 [確定]  。  
   
 4.  啟動 Distributed Replay Client 服務。  
   

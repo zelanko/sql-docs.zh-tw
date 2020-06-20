@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4941a02deb770678f4efcf4d2dfc7b08243fff54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022597"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005402"
 ---
 # <a name="configure-an-oracle-publisher"></a>設定 Oracle 發行者
   「Oracle 發行者」之發行集的建立方式與典型的快照式及交易式發行集的建立方式相同，但是在從「Oracle 發行者」端建立發行集之前，您必須完成下列步驟 (步驟一、三和四在本主題中有詳細描述)：  
@@ -41,7 +40,7 @@ ms.locfileid: "63022597"
 > [!NOTE]  
 >   用 **CASCADE** 選項來卸除 **MSSQLSERVERDISTRIBUTOR** 公用同義字和設定的 Oracle 複寫使用者，會從「Oracle 發行者」移除所有的複寫物件。  
   
- 在 Oracle 複寫使用者結構描述的安裝程式中會提供範例指令碼進行輔助。 安裝之後，可在下列目錄中取得此腳本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]： * \<磁片磁碟機>*：\\\Program Files\Microsoft\\SQL Server*\<InstanceName>* \mssql\install\oracleadmin.sql。 它也包含在＜ [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)＞主題中。  
+ 在 Oracle 複寫使用者結構描述的安裝程式中會提供範例指令碼進行輔助。 安裝之後，可在下列目錄中取得此腳本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ： *\<drive>* ： \\ \Program Files\Microsoft SQL Server \\ *\<InstanceName>* \mssql\install\oracleadmin.sql。 它也包含在＜ [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)＞主題中。  
   
  使用具有 DBA 權限的帳戶連接到 Oracle 資料庫並執行指令碼。 此指令碼會提示輸入複寫管理使用者結構描述的使用者與密碼，以及要在其中建立物件的預設資料表空間 (資料表空間必須已經存在於 Oracle 資料庫中)。 如需如何為物件指定其他資料表空間的資訊，請參閱[管理 Oracle 資料表空間](manage-oracle-tablespaces.md)。 可以選擇任何使用者名稱和增強式密碼，但是需將兩者都記下來，因為稍後當您將 Oracle 資料庫設為「發行者」時會提示需要此資訊。 建議僅將結構描僅用於複寫所需的物件；不要建立資料表來發行於此結構描述中。  
   
@@ -105,7 +104,7 @@ ms.locfileid: "63022597"
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     例如：`sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     例如： `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
 4.  如果網路組態成功，登入將會成功，您也會看到 `SQL` 提示字元。  
   

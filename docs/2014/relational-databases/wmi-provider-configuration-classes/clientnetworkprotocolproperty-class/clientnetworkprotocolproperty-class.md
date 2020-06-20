@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 05bd3c59428b719e5d292dd3d122e5c8af0b7b79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad9e96e32649f16d9bed35b8ec044ab13a4d7e03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826669"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061364"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>ClientNetworkProtocolProperty 類別
   [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)代表用戶端網路通訊協定的屬性。  

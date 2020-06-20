@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b8000c1c28d5a1d3d129b6e8d01c4ab2fbbbc7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919629"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954700"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Null 屬性和三值邏輯比較
   如果您熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，就會在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的 `System.Data.SqlTypes` 命名空間中找到類似的語意和有效位數。 不過，其中仍有一些差異，而且本主題將涵蓋最重要的差異。  
@@ -36,9 +35,9 @@ ms.locfileid: "62919629"
  `System.Data.SqlTypes` 命名空間導入了 `SqlBoolean` 類型來代表這個 3 值邏輯。 任何 `SqlTypes` 之間的比較都會傳回 `SqlBoolean` 值類型。 UNKNOWN 值是由 `SqlBoolean` 類型的 Null 值所代表。 系統提供了 `IsTrue`、`IsFalse` 和 `IsNull` 屬性來檢查 `SqlBoolean` 類型的值。  
   
 ## <a name="operations-functions-and-null-values"></a>作業、函數和 NULL 值  
- 如果的任何運算元或引數為\*null，則所有算術運算子（+、-、、/、%）、位運算子（~、& 和 |）和大部分函數`SqlTypes`都會傳回 null。 `IsNull` 屬性一律會傳回 true 或 false 值。  
+ 如果的任何運算元或引數為 Null，則所有算術運算子（+、-、 \* 、/、%）、位運算子（~、& 和 |）和大部分函數 `SqlTypes` 都會傳回 null。 `IsNull` 屬性一律會傳回 true 或 false 值。  
   
-## <a name="precision"></a>Precision  
+## <a name="precision"></a>準確率  
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 中的十進位資料類型與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的數值和十進位資料類型具有不同的最大值。 此外，[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 十進位資料類型會採用最大有效位數。 不過，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 CLR 中，`SqlDecimal` 會提供相同的最大有效位數和小數位數，以及與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中十進位資料類型相同的語意。  
   
 ## <a name="overflow-detection"></a>溢位偵測  

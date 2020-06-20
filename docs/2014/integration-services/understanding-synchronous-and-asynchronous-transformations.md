@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33037538a773d27c32522238b14e6ebfc2557eaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e2c771dc186fb520c1b59961c523b16a9efa83f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176097"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972668"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和非同步轉換
   如需了解 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 之同步與非同步轉換間的差異，可以從了解同步轉換開始著手。 如果同步轉換不符合您的需求，您的設計可能需要非同步轉換。
@@ -30,7 +29,7 @@ ms.locfileid: "78176097"
 
  同步轉換的一個範例為資料轉換。 對於每一個內送的資料列而言，它都會轉換指定之資料行中的值，並依照其方式來傳送此資料列。 每一個離散轉換作業都與資料集內的所有其他資料列無關。
 
- 在[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]腳本和程式設計中，您可以藉由查詢元件輸入的識別碼，並將它指派給元件輸出的`SynchronousInputID`屬性，來指定同步轉換。 這樣會告訴資料流程引擎要處理輸入中的每一個資料列，並將每一個資料列自動傳送給指定的輸出。 如果您希望每一個資料列都能進入到每一個輸出，您不需要撰寫任何其他程式碼，也可以輸出資料。 如果您使用 `ExclusionGroup` 屬性來指定資料列應該只能進入到某一組輸出 (如同「條件式分割」轉換中的處理方式)，您必須呼叫 `DirectRow` 方法，才能為每一個資料列選取適當的目的地。 當您有錯誤輸出時，您必須呼叫 `DirectErrorRow`，將有問題的資料列傳送到錯誤輸出，而不是預設輸出。
+ 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 腳本和程式設計中，您可以藉由查詢元件輸入的識別碼，並將它指派給元件輸出的屬性，來指定同步轉換 `SynchronousInputID` 。 這樣會告訴資料流程引擎要處理輸入中的每一個資料列，並將每一個資料列自動傳送給指定的輸出。 如果您希望每一個資料列都能進入到每一個輸出，您不需要撰寫任何其他程式碼，也可以輸出資料。 如果您使用 `ExclusionGroup` 屬性來指定資料列應該只能進入到某一組輸出 (如同「條件式分割」轉換中的處理方式)，您必須呼叫 `DirectRow` 方法，才能為每一個資料列選取適當的目的地。 當您有錯誤輸出時，您必須呼叫 `DirectErrorRow`，將有問題的資料列傳送到錯誤輸出，而不是預設輸出。
 
 ## <a name="asynchronous-transformations"></a>非同步轉換
  當您無法將每一個資料列與所有其他資料列分開處理時，您可能會決定您的設計需要非同步處理。 換句話說，當您處理每一個資料列時，您無法在資料流程中傳遞它，但是必須改為以非同步方式輸出資料，或是讓輸出與輸入的時間不同。 例如，下列案例需要非同步轉換：

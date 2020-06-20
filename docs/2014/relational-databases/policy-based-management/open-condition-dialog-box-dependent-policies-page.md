@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 939e18e8a92ae9ac831b177b6fa8afd905d93a44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63182926"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038485"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>開啟條件對話方塊，相依原則頁面
   使用此對話方塊可顯示目前參考這個以原則為基礎之管理條件的原則清單。 如需條件如何與 Facet 和原則相關的詳細資訊，請參閱 [使用原則式管理來管理伺服器](administer-servers-by-using-policy-based-management.md)。  
@@ -32,7 +31,7 @@ ms.locfileid: "63182926"
  **History**  
  按一下 [檢視記錄] 超連結可顯示執行記錄報表。  
   
- **已**  
+ **建立日期**  
  此原則的建立日期。  
   
 ## <a name="see-also"></a>另請參閱  

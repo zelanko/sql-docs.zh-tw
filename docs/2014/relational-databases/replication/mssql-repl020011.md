@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 481e0b383fd877ec81385bcd4ca4ee37106bb298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 646f25740ebb007f8d04a89690d3b712781efcc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022761"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060722"
 ---
 # <a name="mssql_repl020011"></a>MSSQL_REPL020011
     
@@ -33,7 +32,7 @@ ms.locfileid: "63022761"
 |訊息文字|該處理無法執行 '%1' (在 '%2')。|  
   
 ## <a name="explanation"></a>說明  
- 在許多情況下，異動複寫處理期間都會出現此錯誤，例如當記錄讀取器代理程式執行 **sp_replcmds** (處理序無法在 \<伺服器名稱> 上執行 'sp_replcmds') 或 **sp_repldone** (處理序無法在 \<伺服器名稱> 上執行 'sp_repldone' ) 時。  
+ 這項錯誤可能會在異動複寫處理期間的許多情況下引發，例如當記錄讀取器代理程式執行時**sp_replcmds** （進程無法執行 ' sp_replcmds ' \<ServerName> ）或**sp_repldone** （進程無法在上執行 ' sp_repldone ' \<ServerName> ）。  
   
 ## <a name="user-action"></a>使用者動作  
  如果在您剛從備份還原的資料庫中發生此錯誤，請務必按照備份與還原文件集中所述的步驟進行操作，包括執行 **sp_replrestart** (如有必要)。 如需詳細資訊，請參閱 [備份與還原快照式和異動複寫的策略](administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  

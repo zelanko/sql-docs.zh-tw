@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d4dc78d946f76161cbe7210e183d9b3b77be955
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d364290ed14ae972327486c5b3da23c57e0a7657
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699289"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039545"
 ---
 # <a name="fetching-result-data"></a>提取結果資料
   ODBC 應用程式具備三個提取結果資料的選項。  

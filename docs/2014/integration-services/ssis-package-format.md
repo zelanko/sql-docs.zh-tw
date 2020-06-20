@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32a3b5a0c32949239488b86dc1209183e95ac9ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055344"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962468"
 ---
 # <a name="ssis-package-format"></a>SSIS 封裝格式
   在目前的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]版本中，已經對封裝格式 (.dtsx 檔案) 做了重大變更，讓您更輕鬆地讀取此格式及比較封裝。 您也可以更可靠地合併不包含衝突變更的封裝，或以二進位格式儲存的變更。  
   
- 若要查看目前的 .dtsx 封裝檔案格式，請參閱[ \[.dtsx\]：資料轉換服務封裝 XML 檔案格式規格](https://go.microsoft.com/fwlink/?LinkId=233251)。  
+ 若要查看目前的 .DTSX 封裝檔案格式，請參閱[ \[ .Dtsx \] ：資料轉換服務封裝 XML 檔案格式規格](https://go.microsoft.com/fwlink/?LinkId=233251)。  
   
  下列清單概述檔案格式變更。 若要檢視這些變更的程式碼範例，請參閱 [SQL Server 2012 中的封裝格式變更](https://go.microsoft.com/fwlink/?LinkId=233255)。  
   

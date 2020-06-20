@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 310e32b2804664c4189e8e677227018d853f934a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62989060"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060550"
 ---
 # <a name="filter-published-data"></a>篩選發行的資料
   篩選資料表發行項可讓您建立即將發行的資料分割。 利用篩選發行的資料，您可以：  
@@ -100,7 +99,7 @@ ms.locfileid: "62989060"
 |SQL Server 7.0 合併式發行集中的所有資料行|在 SQL Server 7.0 合併式發行集中無法篩選資料行。|  
 |時間戳記|允許可更新訂閱的 SQL Server 7.0 快照式或交易式發行集|  
   
- <sup>1</sup>如果您要發行合併式發行集中的資料表，且該資料表已包含已設定`uniqueidentifier` `ROWGUIDCOL`屬性之資料類型的資料行，則複寫可以使用此資料行，而不是建立名為**rowguid**的其他資料行。 在此情況下，必須發行現有資料行。  
+ <sup>1</sup>如果您要發行合併式發行集中的資料表，且該資料表已包含已設定屬性之資料類型的資料行，則複寫 `uniqueidentifier` `ROWGUIDCOL` 可以使用此資料行，而不是建立名為**rowguid**的其他資料行。 在此情況下，必須發行現有資料行。  
   
  若要定義或修改資料行篩選，請參閱＜ [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)＞中的「使用 HOST_NAME() 進行篩選」一節。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "62989060"
   
 -   異動複寫可讓您將索引檢視複寫為檢視或資料表。 如果將檢視複寫為資料表，則無法從資料表篩選資料行。  
   
- 資料列篩選並非設計為跨資料庫運作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會刻意將 `sp_replcmds` (在底下執行的篩選) 的執行範圍限制為資料庫擁有者 (`dbo`)。 `dbo` 沒有跨資料庫權限。 透過 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 加入的 CDC (異動資料擷取)，`sp_replcmds` 邏輯會將使用者可以傳回及查詢的資訊填入變更追蹤資料表。 基於安全性理由， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會限制這個邏輯的執行，讓惡意`dbo`的無法劫持此執行路徑。 例如，惡意 `dbo` 可能會加入 CDC 資料表的觸發程序，然後這些觸發程序就會在呼叫 `sp_replcmds` 的使用者內容底下執行 (在本例中，即為 Logreader 代理程式)。  如果用來執行代理程式的帳戶擁有更高的權限，惡意 `dbo` 可能會提高其權限。  
+ 資料列篩選並非設計為跨資料庫運作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會刻意將 `sp_replcmds` (在底下執行的篩選) 的執行範圍限制為資料庫擁有者 (`dbo`)。 `dbo` 沒有跨資料庫權限。 透過 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 加入的 CDC (異動資料擷取)，`sp_replcmds` 邏輯會將使用者可以傳回及查詢的資訊填入變更追蹤資料表。 基於安全性理由， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會限制這個邏輯的執行，讓惡意的 `dbo` 無法劫持此執行路徑。 例如，惡意 `dbo` 可能會加入 CDC 資料表的觸發程序，然後這些觸發程序就會在呼叫 `sp_replcmds` 的使用者內容底下執行 (在本例中，即為 Logreader 代理程式)。  如果用來執行代理程式的帳戶擁有更高的權限，惡意 `dbo` 可能會提高其權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [發行資料和資料庫物件](publish-data-and-database-objects.md)  
