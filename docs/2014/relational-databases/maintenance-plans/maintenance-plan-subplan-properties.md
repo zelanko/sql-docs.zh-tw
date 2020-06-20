@@ -12,16 +12,15 @@ f1_keywords:
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c58cea8755a7f1d859c1730d79567797547ccaf9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024135"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>維護計畫 (子計畫屬性)
-  使用 [維護計畫 (子計畫屬性)]  對話方塊可指定維護計畫子計畫的名稱、描述和排程。 按一下維護計畫 [設計]  索引標籤上的 [子計畫屬性]  ，或按兩下設計工具方格中的子計畫，來顯示這個對話方塊。  
+  使用 [維護計畫 (子計畫屬性)]  對話方塊可指定維護計畫子計畫的名稱、描述和排程。 按一下維護計畫 [設計] 索引標籤上的 [子計畫屬性]，或按兩下設計工具方格中的子計畫，來顯示這個對話方塊。  
   
 ## <a name="options"></a>選項。  
  **名稱**  

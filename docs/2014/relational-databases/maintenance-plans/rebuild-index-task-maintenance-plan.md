@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f38b504943dafd97c39ef66cd1ab903cafe18dd6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bc9d7c85a72c34cee1ef7af8cb4b4f25f918a3fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706428"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024015"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>重建索引工作 (維護計畫)
   使用 [重建索引工作]  對話方塊，以新的填滿因數重新建立資料庫資料表上的索引。 填滿因數會決定索引中每頁的空白數量，以配合未來擴充需要。 將資料加入資料表時，因為沒有維護填滿因數，所以可用空間都會填滿。 重新組織資料與索引頁面可以重新建立可用空間。  
@@ -28,7 +27,7 @@ ms.locfileid: "82706428"
  [重建索引工作]  會使用 ALTER INDEX 陳述式。  
   
 ## <a name="options"></a>選項  
- **建立**  
+ **[連接]**  
  選取執行此工作時要使用的伺服器連接。  
   
  **新增**  
@@ -56,10 +55,10 @@ ms.locfileid: "82706428"
     > [!NOTE]  
     >  維護計畫只針對相容性層級設為 80 (含) 以上的資料庫來執行。 不會顯示相容性層級設為 70 或更低的資料庫。  
   
- **目標**  
+ **Object**  
  限制 [選取範圍]**** 格線僅顯示資料表、檢視或兩者。  
   
- **選取項目**  
+ **選項**  
  指定受此工作影響的資料表或索引。 [物件] 方塊中的 **[資料表和檢視]** 為選取狀態時無法使用。  
   
  **使用預設的可用空間量重新組織頁面**  
@@ -109,7 +108,7 @@ ms.locfileid: "82706428"
  提供驗證時要使用的密碼。 無法使用此選項。  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER INDEX &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [DBCC DBREINDEX &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [索引的 SORT_IN_TEMPDB 選項](../indexes/indexes.md)   
