@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d25a77fd9a3fce701f65eca580647b193a6c0276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48227317d06df138010b6d265b299dc803004547
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054410"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972418"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>WMI 資料讀取器工作編輯器 (一般頁面)
   使用 **[WMI 資料讀取器工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述 WMI 資料讀取器工作。  
@@ -33,7 +32,7 @@ ms.locfileid: "66054410"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入 WMI 資料讀取器工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

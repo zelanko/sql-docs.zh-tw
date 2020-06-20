@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ee3228eea9970563540be9bc6a4c3b9a3677112
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45ffb520e240dfd97002060370ff6dcf7c60d083
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048780"
 ---
 # <a name="edit-an-operator"></a>編輯操作員
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中編輯操作員的可用性，以供接收通知及其電子郵件、呼叫器和 Net Send 位址。  
@@ -43,7 +42,7 @@ ms.locfileid: "68189332"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
--   在未來版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，將會從 Agent 移除 [呼機] 和 [ **net send** ] 選項。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
+-   在未來版本的中，將會從 Agent 移除 [呼機] 和 [ **net send** ] 選項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
   
 -   請注意，必須設定 SQL Server Agent 使用 Database Mail，才能將電子郵件及呼叫器通知傳送給操作員。 如需詳細資訊，請參閱＜ [指派警示給操作員](assign-alerts-to-an-operator.md)＞。  
   

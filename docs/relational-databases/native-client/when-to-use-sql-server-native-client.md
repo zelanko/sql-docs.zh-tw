@@ -1,5 +1,6 @@
 ---
 title: 使用時機
+description: 決定是否要使用 SQL Server Native Client，這是您可以用來存取 SQL Server 資料庫中資料的數種技術之一。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 08f18b36-209d-4cf7-9623-ebc61859a91d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86e27f10e2cb56164b21c1488022df600bb87c59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe5cd81b041e1e3bdd619897c7f2063c85b84ed
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387738"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950102"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>使用 SQL Server Native Client 的時機
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,15 +33,15 @@ ms.locfileid: "81387738"
   
  如果您正在開發以 COM 為基礎的應用程式，而且需要存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所導入的新功能，則應該使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。 如果您不需要存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新功能，可以繼續使用 Windows Data Access Components (WDAC)。  
   
- 對於現有的 OLE DB 和 ODBC 應用程式而言，主要的問題在於您是否需要存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新功能。 如果您有一個不需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之新功能的完整應用程式，就可以繼續使用 WDAC。 但是，如果您需要存取這些新功能（例如[xml 資料類型](../../t-sql/xml/xml-transact-sql.md)），您應該使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。  
+ 對於現有的 OLE DB 和 ODBC 應用程式而言，主要的問題在於您是否需要存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新功能。 如果您有一個不需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之新功能的完整應用程式，就可以繼續使用 WDAC。 但是，如果您需要存取這些新功能（例如[xml 資料類型](../../t-sql/xml/xml-transact-sql.md)），您應該使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 MDAC 都可使用資料列版本設定來支援讀取認可的交易隔離，但是只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 可支援快照集交易隔離  (在程式設計的詞彙中，含有資料列版本設定的讀取認可交易隔離與讀取認可的交易相同)。  
   
- 如需 Native Client 與 MDAC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之間差異的詳細資訊，請參閱將[應用程式更新為從 MDAC SQL Server Native Client](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)。  
+ 如需 Native Client 與 MDAC 之間差異的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱將[應用程式更新為從 MDAC SQL Server Native Client](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 程式設計](../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [ODBC 的使用說明主題](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [OLE DB how to 主題](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB 的使用說明主題](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

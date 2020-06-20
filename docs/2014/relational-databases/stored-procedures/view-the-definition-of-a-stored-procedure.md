@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4da455d38f984b08ee1f396f26cd4cc85411be92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62856508"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047450"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>檢視預存程序的定義
     

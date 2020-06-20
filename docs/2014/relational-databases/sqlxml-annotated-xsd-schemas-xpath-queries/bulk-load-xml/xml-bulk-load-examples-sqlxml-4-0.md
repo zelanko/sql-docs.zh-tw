@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fed14f30b7580f94d2ac93224b84fdc02d254fd8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c7eaec77ef068efd28c4da65833afa5047b222f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016075"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 大量載入範例 (SQLXML 4.0)
   下列範例說明 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 XML 大量載入功能。 每個範例都會提供一個 XSD 結構描述及其等同的 XDR 結構描述。  
@@ -111,7 +110,7 @@ End Function
 ```  
   
 ## <a name="a-bulk-loading-xml-in-a-table"></a>A. 將 XML 大量載入到資料表中  
- 這個範例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會建立 ConnectionString 屬性（MyServer）中所指定之實例的連接。 此範例也會指定 ErrorLogFile 屬性。 因此，錯誤輸出會儲存在指定的檔案 ("C:\error.log") 中，您也可以決定變更到不同的位置。 同時也請注意，Execute 方法的參數都是對應架構檔案（Sampleschema.xml）和 XML 資料檔（Samplexmldata.xml）。 當大量載入執行時，您在**tempdb**資料庫中建立的「使用者」資料表會根據 XML 資料檔案的內容包含新的記錄。  
+ 這個範例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會建立 ConnectionString 屬性（MyServer）中所指定之實例的連接。 此範例也會指定 ErrorLogFile 屬性。 因此，錯誤輸出會儲存在指定的檔案 ("C:\error.log") 中，您也可以決定變更到不同的位置。 同時也請注意，Execute 方法的參數都是對應架構檔案（SampleSchema.xml）和 XML 資料檔案（SampleXMLData.xml）。 當大量載入執行時，您在**tempdb**資料庫中建立的「使用者」資料表會根據 XML 資料檔案的內容包含新的記錄。  
   
 #### <a name="to-test-a-sample-bulk-load"></a>測試大量載入範例  
   
@@ -199,7 +198,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. 將 XML 資料大量載入到多個資料表中  
- 在此範例中，XML 檔是由** \< Customer>** 和** \< Order>** 元素所組成。  
+ 在此範例中，XML 檔是由 **\<Customer>** 和元素所組成 **\<Order>** 。  
   
 ```  
 <ROOT>  
@@ -231,7 +230,7 @@ Cust(CustomerID, CompanyName, City)
 CustOrder(OrderID, CustomerID)  
 ```  
   
- 下列 XSD 結構描述會定義這些資料表的 XML 檢視。 架構會指定** \< 客戶>** 與** \< Order>** 元素之間的父子式關聯性。  
+ 下列 XSD 結構描述會定義這些資料表的 XML 檢視。 架構會指定和元素之間的父子式關聯 **\<Customer>** 性 **\<Order>** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -270,7 +269,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- XML 大量載入會使用在客戶** \<>** 和** \< CustOrder>** 元素之間指定的主鍵/外鍵關聯性，將資料大量載入到這兩個數據表。  
+ XML 大量載入會使用上述和專案之間指定的主鍵/外鍵關聯性， **\<Cust>** **\<CustOrder>** 將資料大量載入到這兩個數據表。  
   
 #### <a name="to-test-a-sample-bulk-load"></a>測試大量載入範例  
   
@@ -383,7 +382,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- 架構會指定具有** \< 產品>** 子專案的** \< Order>** 元素。 ** \< Order>** 元素會對應到 Ord 資料表，而** \< Product>** 元素則會對應至資料庫中的 product 資料表。 在** \< Product>** 專案上指定的鏈關聯性會識別 OrderDetail 資料表所代表的 M:N 關聯性。 (一個訂單可以包含許多產品，而一個產品可以包含在許多訂單中)。  
+ 架構會指定 **\<Order>** 具有子專案的元素 **\<Product>** 。 **\<Order>** 元素會對應至 Ord 資料表，而 **\<Product>** 元素會對應至資料庫中的 Product 資料表。 在元素上指定的鏈關聯性會 **\<Product>** 識別 OrderDetail 資料表所代表的 M:N 關聯性。 (一個訂單可以包含許多產品，而一個產品可以包含在許多訂單中)。  
   
  當您要使用此結構描述大量載入 XML 文件時，會將記錄加入到 Ord、Product 和 OrderDetail 資料表中。  
   
@@ -456,7 +455,7 @@ OrderDetail (OrderID, ProductID)
   
  在此情況下，XML 大量載入會在資料表之間識別主索引鍵/外部索引鍵關聯性。 大量載入會先將記錄插入具有主索引鍵的資料表，然後再將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所產生的識別值傳播到具有外部索引鍵資料行的資料表中。 在下列範例中，XML 大量載入會以下列順序，將資料插入資料表中。  
   
-1.  產品  
+1.  Products  
   
 2.  Ord  
   
@@ -587,7 +586,7 @@ Set objBL = Nothing
   
 1.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 SampleSchema.xml。 將稍早範例「使用結構描述中的鏈結關聯性大量載入 XML」中提供的 XSD 結構描述加入到檔案中。  
   
-2.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 SampleXMLData.xml。 將稍早範例「使用結構描述中的鏈結關聯性大量載入 XML」中提供的 XML 文件加入到檔案中。 \<從檔中移除根> 元素（使其成為片段）。  
+2.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 SampleXMLData.xml。 將稍早範例「使用結構描述中的鏈結關聯性大量載入 XML」中提供的 XML 文件加入到檔案中。 \<ROOT>從檔中移除元素（使其成為片段）。  
   
 3.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 ValidateAndBulkload.vbs。 將此範例中的 VBScript 程式碼加入到此檔案中。 修改連接字串以提供適當的伺服器和資料庫名稱。 針對指定為 Execute 方法參數的檔案指定適當的路徑。  
   
@@ -845,7 +844,7 @@ End Sub
 </xsd:schema>  
 ```  
   
- 此結構描述會識別 Cust 資料表的溢位資料行 (OverflowColumn)。 因此，每個** \<>客戶**的所有未耗用的 XML 資料都會新增至此資料行。  
+ 此結構描述會識別 Cust 資料表的溢位資料行 (OverflowColumn)。 如此一來，每個元素所有未耗用的 XML 資料 **\<Customer>** 就會加入至此資料行。  
   
 > [!NOTE]  
 >  所有的抽象元素（已指定**abstract = "true"** 的專案）和所有禁止的屬性（指定**禁止 = "true"** 的屬性）都會被 XML 大量載入視為溢位，而且會加入至溢位資料行（如果有指定的話）。 (否則便會予以忽略)。  
@@ -1245,7 +1244,7 @@ End Sub
 ## <a name="j-bulk-loading-in-xml-data-type-columns"></a>J. 大量載入到 xml 資料類型資料行  
  如果對應架構使用批註來指定[xml 資料類型資料](/sql/t-sql/xml/xml-transact-sql)行 `sql:datatype="xml"` ，xml 大量載入可以將來源文件中的對應欄位之 xml 子專案複製到這個資料行。  
   
- 請考慮使用下列 XSD 結構描述，該結構描述會對應 AdventureWorks 範本資料庫中的 Production.ProductModel 資料表檢視。 在此資料表中，資料類型的 CatalogDescription 欄位 `xml` 會使用和注釋對應到** \< Desc>** 專案 `sql:field` `sql:datatype="xml"` 。  
+ 請考慮使用下列 XSD 結構描述，該結構描述會對應 AdventureWorks 範本資料庫中的 Production.ProductModel 資料表檢視。 在此資料表中，資料類型的 CatalogDescription 欄位 `xml` 會 **\<Desc>** 使用和注釋對應到元素 `sql:field` `sql:datatype="xml"` 。  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fb5c40db46772cabcb5d1df19e03aced749e1c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63272818"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997853"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>在異動複寫中發行預存程序執行
   如果您有一或多個預存程序在「發行者」端執行並且影響到已發行的資料表，請考慮在發行集中包含這些預存程序，以做為預存程序執行發行項。 初始化訂閱時，會將程序的定義 (CREATE PROCEDURE 陳述式) 複寫到訂閱者；在發行者端執行程序時，複寫會在訂閱者端執行對應的程序。 這可在執行大批量作業時大幅提升效能，因為只會複寫程序執行，而無需複寫每個資料列的個別變更。 例如，假設您在發行集資料庫中建立了下列預存程序：  
@@ -52,7 +51,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio：[在交易式發行集中發行預存程序的執行項 &#40;SQL Server Management Studio&#41;](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   複寫 Transact-sql 程式設計：執行[sp_addarticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) ，並為參數**@type**指定 ' serializable proc exec ' （建議）或 ' proc exec ' 值。 如需定義發行項的詳細資訊，請參閱[定義發行項](../publish/define-an-article.md)。  
+-   複寫 Transact-sql 程式設計：執行[sp_addarticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) ，並為參數指定 ' serializable proc exec ' （建議）或 ' proc exec ' 值 **@type** 。 如需定義發行項的詳細資訊，請參閱[定義發行項](../publish/define-an-article.md)。  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>在訂閱者端修改程序  
  根據預設值，「發行者」的預存程序定義會傳播到各個「訂閱者」。 但是，您也可以在「訂閱者」端修改預存程序。 若您想在「發行者」和「訂閱者」執行不同的邏輯，這個方式就非常有幫助。 例如，考慮 **sp_big_delete**這個「發行者」的預存程序有兩個功能：它會從複寫資料表 **big_table1** 刪除 1,000,000 個資料列，然後更新非複寫的資料表 **big_table2**。 若要降低網路資源的需求，您應該透過發行 **sp_big_delete**，將一百萬個資料列刪除做為預存程序傳播。 在「訂閱者」端，您可以將 **sp_big_delete** 修改為只刪除一百萬個資料列，並且不執行後續對 **big_table2**的更新。  

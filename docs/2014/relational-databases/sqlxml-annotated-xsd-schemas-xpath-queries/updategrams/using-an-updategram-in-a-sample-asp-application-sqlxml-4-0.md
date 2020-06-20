@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe8c047bfeed326fe28ffe71407c6dee614271e0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2cb730ab0dacc1f0d62a26076b240f9f104cc730
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702999"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014941"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>在範例 ASP 應用程式中使用 Updategram (SQLXML 4.0)
   這個 Active Server Pages (ASP) 應用程式可讓您在 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之 AdventureWorks 範例資料庫的 Person.Contact 資料表中更新客戶資訊。 此應用程式會進行下列作業：  

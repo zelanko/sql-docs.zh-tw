@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cd83011fc7fd5b85efb5f20545dd80bb3d6dd43e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 153ef21209ff4261020e26aca3bc52d28dc852a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175924"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026245"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式檔案以略過資料表資料行 (SQL Server)
   本主題將說明格式檔案。 當欄位不存在於資料檔案中時，您就可以使用格式檔案來略過資料表資料行的匯入。 只有在略過的資料行可為 Null 和/或有預設值時，資料檔案所包含的欄位才可以少於資料表中的資料行數目。

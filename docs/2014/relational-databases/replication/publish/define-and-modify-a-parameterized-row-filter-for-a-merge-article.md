@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 86a96f938a036edf39b3602278f9b6b6d2d46719
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d80ad53661aced22795220507398e2fcc510edd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047682"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>針對合併發行項定義及修改參數化資料列篩選
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義及修改參數化資料列篩選。  
@@ -44,11 +43,11 @@ ms.locfileid: "68212110"
   
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在 [新增發行集精靈] 的 [篩選資料表的資料列]**** 頁面上，或是在 [發行集屬性 - \<發行集>]**** 對話方塊的 [篩選資料列]**** 頁面上，定義、修改及刪除參數化資料列篩選。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。  
+ 在 [新增發行集嚮導] 的 [**篩選資料表資料列**] 頁面或 [**發行集屬性- \<Publication> ** ] 對話方塊的 [篩選資料**列**] 頁面上，定義、修改和刪除參數化資料列篩選器。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-parameterized-row-filter"></a>若要定義參數化資料列篩選器  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]**** 頁面上，或是在 [發行集屬性 - \<發行集>]**** 的 [篩選資料列]**** 頁面上，按一下 [加入]****，然後按一下 [加入篩選]****。  
+1.  在 [新增發行集嚮導] 的 [**篩選資料表**的資料列] 頁面或**發行集屬性 \<Publication> **的 [篩選資料**列**] 頁面上，按一下 [**加入**]，然後按一下 [**加入篩選**]。  
   
 2.  在 **[加入篩選]** 對話方塊中，從下拉式清單方塊中選取要篩選的資料表。  
   
@@ -78,11 +77,11 @@ ms.locfileid: "68212110"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  如果您在 [發行集屬性 - \<發行集>]  對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
+6.  如果您位於 [**發行集屬性- \<Publication> ** ] 對話方塊中，請按一下 **[確定**] 以儲存並關閉對話方塊。  
   
 #### <a name="to-modify-a-parameterized-row-filter"></a>若要修改參數化資料列篩選器  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  的 [篩選資料列]  頁面上，從 [已篩選的資料表]  窗格中選取一個篩選，然後按一下 [編輯]  。  
+1.  在 [新增發行集嚮導] 的 [**篩選資料表**的資料列] 頁面或 [**發行集屬性 \<Publication> **] 的 [**篩選資料列**] 頁面上，于 [已**篩選的資料表**] 窗格中選取篩選，然後按一下 [**編輯**]。  
   
 2.  在 **[編輯篩選]** 對話方塊中，修改篩選。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "68212110"
   
 #### <a name="to-delete-a-parameterized-row-filter"></a>若要刪除參數化資料列篩選器  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  的 [篩選資料列]  頁面上，從 [已篩選的資料表]  窗格中選取一個篩選，然後按一下 [刪除]  。  
+1.  在 [新增發行集嚮導] 的 [**篩選資料表**的資料列] 頁面或 [**發行集屬性 \<Publication> **] 的 [**篩選資料列**] 頁面上，于 [已**篩選的資料表**] 窗格中選取篩選，然後按一下 [**刪除**]。  
   
 
   
@@ -99,7 +98,7 @@ ms.locfileid: "68212110"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>針對合併式發行集中的發行項定義參數化資料列篩選器  
   
-1.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 指定**@publication**、 **@article**發行項的名稱、針對指定發行的**@source_object**資料表、針對**@subset_filterclause** （不包括`WHERE`）定義參數化篩選的 WHERE 子句，以及下列其中一個值**@partition_options**，其中描述將會從參數化資料列篩選器產生的資料分割類型：  
+1.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 指定 **@publication** 、發行項的名稱、針對指定 **@article** 發行的資料表、針對 **@source_object** （不包括）定義參數化篩選的 WHERE 子句， **@subset_filterclause** `WHERE` 以及下列其中一個值 **@partition_options** ，其中描述將會從參數化資料列篩選器產生的資料分割類型：  
   
     -   **0** - 發行項的篩選是靜態的，或是不產生每個資料分割的唯一資料子集 (也就是「重疊」的資料分割)。  
   
@@ -111,9 +110,9 @@ ms.locfileid: "68212110"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>針對合併式發行集中的發行項變更參數化資料列篩選器  
   
-1.  在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定**@publication**、 **@article**、的值`subset_filterclause` **@property**、定義**@value** （不包含`WHERE`）之參數化篩選的運算式， **@force_invalidate_snapshot**以及和**@force_reinit_subscription**的值**1** 。  
+1.  在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定 **@publication** 、 **@article** 、的值 `subset_filterclause` **@property** 、定義（不包含）之參數化篩選的運算式，以及 **@value** `WHERE` 和的值**1** **@force_invalidate_snapshot** **@force_reinit_subscription** 。  
   
-2.  如果此變更會產生不同的資料分割行為，則再次執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 。 指定**@publication**、 **@article**、的值`partition_options` **@property**，以及最適合的資料分割選項**@value**，它可以是下列其中一項：  
+2.  如果此變更會產生不同的資料分割行為，則再次執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 。 指定 **@publication** 、 **@article** 、的值 `partition_options` **@property** ，以及最適合的資料分割選項， **@value** 它可以是下列其中一項：  
   
     -   **0** - 發行項的篩選是靜態的，或是不產生每個資料分割的唯一資料子集 (也就是「重疊」的資料分割)。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e7c2a5b5-83f4-4c72-9aca-7b9fb4748b11
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 36a5d580b6edb04f51d2fcf77dcc8ff0c8ba042f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 68188506546e7b4a5dd4c05bc9a94cbf34300001
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706142"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022572"
 ---
 # <a name="sqlexecdirect"></a>SQLExecDirect
   如果語句屬性 SQL_SOPT_SS_PARAM_FOCUS 不是0，則 SQLExecDirect 會傳回 SQL_ERROR，並產生含有 SQLSTATE = HY024 的診斷記錄，以及訊息「不正確屬性值，SQL_SOPT_SS_PARAM_FOCUS （在執行時間必須為零）」。 如需 SQL_SOPT_SS_PARAM_FOCUS 的詳細資訊，請參閱[SQLSetStmtAttr](sqlsetstmtattr.md)。  

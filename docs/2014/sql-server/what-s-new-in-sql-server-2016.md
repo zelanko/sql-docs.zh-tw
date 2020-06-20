@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dfee15f0f8b657074bab4104edb4833bd8e2f05f
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: cee52973ec114fc52aac17b9c7e4c51e66920269
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001061"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041340"
 ---
 # <a name="whats-new-in-sql-server-2014"></a>SQL Server 2014 的新功能
 

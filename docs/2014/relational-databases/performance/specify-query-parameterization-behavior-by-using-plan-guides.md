@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f595b9f0e0a6d7bceffc5cb283c60b6f40e025b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150601"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047823"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>使用計畫指南指定查詢參數化行為
   當 PARAMETERIZATION 資料庫選項設定為 SIMPLE 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具可能會選擇將查詢參數化。 這意謂著任何包含在查詢中的常值將會以參數替代。 此處理序稱為簡易參數化。 當 SIMPLE 參數化生效時，您無法控制哪些查詢要參數化以及哪些查詢不要參數化。 但是，您可以將 PARAMETERIZATION 資料庫選項設定為 FORCED，藉以指定要參數化資料庫中的所有查詢。 此處理序稱為強制參數化。  
@@ -53,7 +52,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  在查詢的參數化格式上建立計畫指南，以指定 PARAMETERIZATION FORCED 查詢提示。  
   
     > [!IMPORTANT]  
-    >  在參數化查詢時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指派資料類型給取代常值的參數，端視常值的值與大小而定。 相同的程式會發生在傳遞至**@stmt** **sp_get_query_template**之輸出參數的常數常值。 因為在**@params** **sp_create_plan_guide**的引數中指定的資料類型必須符合參數化[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時的查詢，所以您可能必須建立一個以上的計劃指南，以涵蓋查詢的可能參數值的完整範圍。  
+    >  在參數化查詢時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指派資料類型給取代常值的參數，端視常值的值與大小而定。 相同的程式會發生在傳遞至 sp_get_query_template 之輸出參數的常數常值 **@stmt** 。 **sp_get_query_template** 因為在 sp_create_plan_guide 的引數中指定的資料類型 **@params** 必須符合參數化時的查詢，所以**sp_create_plan_guide** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您可能必須建立一個以上的計劃指南，以涵蓋查詢的可能參數值的完整範圍。  
   
  下列指令碼可用以擷取參數化查詢，並在該查詢上建立計畫指南：  
   

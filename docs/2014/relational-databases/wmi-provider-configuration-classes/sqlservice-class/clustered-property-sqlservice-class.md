@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f714e7f5-c2db-45c6-9536-6ca2cb5b42aa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 065440d834033d1c1c999ea9d38d321be9a6278c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86fdc87bb7b691580f7efd5ccd7b333d88a3aa78
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042696"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Clustered 屬性 (SqlService 類別)
   取得可指定服務是否為叢集執行個體之一部分的布林屬性值。  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  表示此服務的 [SqlService 類別](sqlservice-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

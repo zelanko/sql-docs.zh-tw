@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0a9b52652ec3e684c75a790f41899db2c117b62c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84f201c67610b6f178b612f1ecf83ee98da076e0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63243162"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067904"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>ClientSettingsGeneralFlag 類別
-  [ClientSettingsGeneralFlag 類別](clientsettingsgeneralflag-class.md)代表[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端實例上的一般旗標設定。  
+  [ClientSettingsGeneralFlag 類別](clientsettingsgeneralflag-class.md)代表 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 用戶端實例上的一般旗標設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  [ClientSettingsGeneralFlag 類別](clientsettingsgeneralflag-class.md)可以用來執行下列動作：  
   

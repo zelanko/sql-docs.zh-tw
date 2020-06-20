@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b1d115dacc53cb074080931c2ebad88dcaf1c68d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beae2f836de16dedf3be6d8c196910c53be02266
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011570"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026290"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>使用 Unicode 原生格式匯入或匯出資料 (SQL Server)
   當必須從某個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝將資訊複製到其他安裝時，Unicode 原生格式很有用。 對非字元的資料使用原生格式可節省時間，消除在資料類型與字元格式之間，不必要的來回轉換。 對所有字元資料使用 Unicode 字元格式，可以防止在使用不同字碼頁的伺服器之間大量傳送資料期間，失去任何擴充字元。 任何大量匯入方法都可以讀取以 Unicode 原生格式表示的資料檔。  
@@ -34,7 +33,7 @@ ms.locfileid: "66011570"
   
 |Command|選項|說明|  
 |-------------|------------|-----------------|  
-|**bcp**|**-N**|使**bcp**公用程式使用 Unicode 原生格式，其會針對所有的字元（`char`、 `nchar`、 `varchar` `nvarchar` `text`、、和`ntext`）資料使用原生（資料庫）資料類型做為所有的非字元資料和 unicode 字元資料格式。|  
+|**bcp**|**-N**|使**bcp**公用程式使用 Unicode 原生格式，其會針對所有的字元（ `char` 、、、、 `nchar` `varchar` `nvarchar` `text` 和 `ntext` ）資料使用原生（資料庫）資料類型做為所有的非字元資料和 unicode 字元資料格式。|  
 |BULK INSERT|DATAFILETYPE **= '** widenative **'**|當大量匯入資料時，使用 Unicode 原生格式。|  
   
  如需詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  

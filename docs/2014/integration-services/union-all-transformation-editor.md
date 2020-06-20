@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b62fb5e33311f1011911c40fc858723b218bac55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6414b887ee88ddc0281ee86fd3236f026b8a3f28
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054825"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972638"
 ---
 # <a name="union-all-transformation-editor"></a>聯集全部轉換編輯器
   使用 **[聯集全部轉換編輯器]** 對話方塊，即可將數個輸入資料列集合併至單一輸出資料列集。 藉由在資料流程中包含聯集全部轉換，您可以合併多個資料流程中的資料、藉由巢狀聯集全部轉換來建立複雜資料集、以及更正資料中的錯誤之後重新合併資料列。  
@@ -40,6 +39,6 @@ ms.locfileid: "66054825"
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [使用聯集全部轉換來合併資料](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
  [合併轉換](data-flow/transformations/merge-transformation.md)   
- [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md)  
+ [合併聯結轉換](data-flow/transformations/merge-join-transformation.md)  
   
   

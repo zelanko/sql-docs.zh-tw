@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 77cbc826-f47f-4803-8e7a-223d6df069b1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b9612fbd7dd50ffeec812532e25a63eecca26571
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7232a921027246c3ceb7d0ae1ffd5efbd3672895
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705357"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019985"
 ---
 # <a name="native-error-numbers"></a>原生錯誤號碼
   對於發生在資料來源中的錯誤（由傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會傳回由傳回的原生錯誤號碼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 對於驅動程式所偵測到的錯誤， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式會傳回原生錯誤號碼0。 如需原生錯誤號碼清單的詳細資訊，請參閱中**master**資料庫內**sysmessages**系統資料表的 error 資料行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

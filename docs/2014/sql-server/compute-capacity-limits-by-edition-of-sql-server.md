@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a32b00ec6ad34095a17816406eb5516207fafa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013023"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server 版本的計算容量限制
   本主題討論不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本的計算容量限制以及它們在具有超執行緒處理器的實體和虛擬化環境中有何差異。  
@@ -83,16 +82,16 @@ ms.locfileid: "62714758"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|單一執行個體所使用的計算容量上限 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|單一執行個體所使用的計算容量上限 (AS、RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition：以核心為基礎的授權<sup>1</sup>|作業系統最大值|作業系統最大值|  
-|Developer|作業系統最大值|作業系統最大值|  
+|開發人員|作業系統最大值|作業系統最大值|  
 |評估|作業系統最大值|作業系統最大值|  
 |商業智慧|限制為 4 個插槽或 16 個核心的較小者|作業系統最大值|  
-|Standard|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|  
+|標準|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|  
 |Web|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|  
 |Express|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
 |Express with Tools|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
 |Express with Advanced Services|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
   
- <sup>1</sup> Enterprise Edition （含伺服器 + 用戶端存取許可證（CAL））型授權（不適用於新合約）僅限每個[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]實例最多20個核心。 核心伺服器授權模式之下沒有任何限制。  
+ <sup>1</sup> Enterprise Edition （含伺服器 + 用戶端存取許可證（CAL））型授權（不適用於新合約）僅限每個實例最多20個核心 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 核心伺服器授權模式之下沒有任何限制。  
   
  在虛擬化環境中，計算容量限制是以邏輯處理器 (而非核心) 的數目為基礎，因為客體應用程式看不見處理器架構。  例如，如果一部伺服器的四個插槽都插入四核心處理器，而且能夠針對每個核心啟用兩個超執行緒，則在啟用超執行緒的情況下，總共包含 32 個邏輯處理器，但是在停用超執行緒的情況下，只包含 16 個邏輯處理器。 這些邏輯處理器可對應至伺服器上的虛擬機器，而該邏輯處理器上的虛擬機器計算負載會對應到主機伺服器中實體處理器上的執行執行緒。  
   

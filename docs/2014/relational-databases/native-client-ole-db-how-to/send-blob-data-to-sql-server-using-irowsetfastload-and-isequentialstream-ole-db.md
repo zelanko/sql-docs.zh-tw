@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 88fc03c20977f4c6be8d4aef96c2909e2b78b35f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2521d4e3344e78d408e8b105dff5f7dc46f07d59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696506"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049692"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 將 BLOB 資料傳送到 SQL SERVER (OLE DB)
   此範例會示範如何使用 IRowsetFastLoad 來串流處理每個資料列中不同長度的 BLOB 資料。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11f0ba7a901a3e55644b3129ebbd9d9e2d3e2944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67624402"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025831"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 所使用的記憶體比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更多，而且使用方式也不同。 您所安裝並配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的記憶體數量可能會變得不足以支應成長的需求。 若是如此，您可能會用完記憶體。 本主題將說明如何從 OOM 情況中復原。 如需可協助您避免多種 OOM 情況的指引，請參閱 [監視與疑難排解記憶體使用量](monitor-and-troubleshoot-memory-usage.md) 。  
@@ -24,12 +23,12 @@ ms.locfileid: "67624402"
   
 |主題|概觀|  
 |-----------|--------------|  
-| [解決由於 OOM 所造成的資料庫還原失敗](#resolve-database-restore-failures-due-to-oom) |若您收到錯誤訊息：「資料庫 '\<資料庫名稱>  ' 的還原作業因為資源集區 '\<資源集區名稱>  ' 中的記憶體不足而失敗」，該怎麼辦。|  
+| [解決由於 OOM 所造成的資料庫還原失敗](#resolve-database-restore-failures-due-to-oom) |如果您收到錯誤訊息：「資料庫 ' ' 的還原作業失敗， *\<databaseName>* 因為資源集區 ' ' 中的記憶體不足」，該怎麼辦 *\<resourcePoolName>* 。|  
 | [解決低記憶體或 OOM 狀況對於工作負載的影響](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|如果您發現低記憶體問題對於效能造成負面影響，該怎麼辦。|  
-| [解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |若您收到錯誤訊息：「不允許資料庫 '\<資料庫名稱>  ' 的頁面配置，因為資源集區 '\<資源集區名稱>  ' 中的記憶體不足」，該怎麼辦。 ...」(前提是可用的記憶體足夠供執行作業)。|  
+| [解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |如果您收到錯誤訊息：「不允許資料庫 ' ' 的頁面配置， *\<databaseName>* 因為資源集區 ' ' 中的記憶體不足」，該怎麼辦 *\<resourcePoolName>* 。 ...」(前提是可用的記憶體足夠供執行作業)。|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>解決由於 OOM 所造成的資料庫還原失敗  
- 當您嘗試還原資料庫時，可能會收到錯誤訊息：「資料庫 '*\<databaseName>*' 的還原作業失敗，因為資源集區 '*\<名稱>*' 中的記憶體不足。」在您成功還原資料庫之前，您必須藉由提供更多記憶體來解決記憶體不足的問題。  
+ 當您嘗試還原資料庫時，可能會收到錯誤訊息：「資料庫 ' ' 的還原作業失敗， *\<databaseName>* 因為資源集區 ' ' 中的記憶體不足」 *\<resourcePoolName>* 。在您成功還原資料庫之前，您必須藉由提供更多記憶體來解決記憶體不足的問題。  
   
  若要解決由於 OOM 所造成的復原失敗，請使用下列任何或所有方法來暫時增加復原作業可用的記憶體。  
   
@@ -128,14 +127,14 @@ GO
  如需 MAX_MEMORY_PERCENT 之最大值的資訊，請參閱主題章節： [可用於記憶體最佳化資料表和索引的記憶體百分比](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes)。  
   
 ##### <a name="install-additional-memory"></a>安裝額外記憶體  
- 最佳的終極解決方案還是安裝額外的實體記憶體 (如果可行)。 如果您這樣做，請記住，您可能也會增加 MAX_MEMORY_PERCENT 的值（請參閱[變更現有集區的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)子主題），因為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不太可能需要更多記憶體，因此您可以將大部分新安裝的記憶體提供給資源集區。  
+ 最佳的終極解決方案還是安裝額外的實體記憶體 (如果可行)。 如果您這樣做，請記住，您可能也會增加 MAX_MEMORY_PERCENT 的值（請參閱[變更現有集區的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)子主題） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，因為不太可能需要更多記憶體，因此您可以將大部分新安裝的記憶體提供給資源集區。  
   
 > [!IMPORTANT]  
 >  如果伺服器是在 VM 上執行，而且不是專用的，請將 MIN_MEMORY_PERCENT 與 MAX_MEMORY_PERCENT 設為相同值。   
 > 如需詳細資訊，請參閱[最佳做法：在 VM 環境中使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)主題。  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗  
- 如果您收到錯誤訊息：「不允許資料庫 '*\<databaseName>*' 的頁面配置，因為資源集區 '*\<名稱>*' 中的記憶體不足。 如需<https://go.microsoft.com/fwlink/?LinkId=330673>詳細資訊，請參閱 ' '。 在錯誤記錄檔中，可用的實體記憶體已足夠配置頁面時，它可能是因為已停用的資源管理員。 若資源管理員已停用，MEMORYBROKER_FOR_RESERVE 會誘發不實的記憶體壓力。  
+ 如果您收到錯誤訊息：「不允許資料庫 ' ' 的頁面配置， *\<databaseName>* 因為資源集區 ' ' 中的記憶體不足 *\<resourcePoolName>* 。」 如需詳細資訊，請參閱 ' <https://go.microsoft.com/fwlink/?LinkId=330673> '。 在錯誤記錄檔中，可用的實體記憶體已足夠配置頁面時，它可能是因為已停用的資源管理員。 若資源管理員已停用，MEMORYBROKER_FOR_RESERVE 會誘發不實的記憶體壓力。  
   
  為了解決此問題，您必須啟用資源管理員。  
   

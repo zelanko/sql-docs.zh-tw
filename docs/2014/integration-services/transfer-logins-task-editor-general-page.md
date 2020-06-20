@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4574053bacafe97a9c6242246a48e2e65599b6a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7be36c5818bbcf4855c90ba2fc16b0ba083cf39
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054955"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972798"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>傳送登入工作編輯器 (一般頁面)
   使用 **[傳送登入工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述傳送登入工作。 如需這項工作的詳細資訊，請參閱 [傳送登入工作](control-flow/transfer-logins-task.md)。  
@@ -31,7 +30,7 @@ ms.locfileid: "66054955"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入傳送登入工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

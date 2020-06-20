@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: e14aafe004ffd94f0711161fac73ce59c57cd810
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c701cdc2e8538a5b91093e17714fd9f6508d1c4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176718"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016015"
 ---
 # <a name="circularstring"></a>CircularString
   `CircularString` 是零個或多個連續圓弧線段的集合。 圓弧線段是指由二維平面中三個點所定義的弧形線段。第一個點不得與第三個點相同。 如果圓弧線段的三個點都是共線，此圓弧線段就會被視為直線線段。
 
 > [!IMPORTANT]
->  如需中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]引進的新空間功能（包括`CircularString`子類型）的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。
+>  如需中引進的新空間功能（包括子類型）的詳細描述和範例，請下載技術白皮書 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] `CircularString` ： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。
 
 ## <a name="circularstring-instances"></a>CircularString 執行個體
  下圖顯示有效的 `CircularString` 執行個體：
@@ -29,7 +28,7 @@ ms.locfileid: "78176718"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")
 
 ### <a name="accepted-instances"></a>已接受的執行個體
- 如果`CircularString`實例是空的或包含奇數的點（n），其中 n > 1，則會接受實例。 下面是已接受的 `CircularString` 執行個體。
+ `CircularString`如果實例是空的或包含奇數的點（n），其中 n > 1，則會接受實例。 下面是已接受的 `CircularString` 執行個體。
 
 ```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';
@@ -133,7 +132,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685
 ```
 
- 請注意，此`CircularString`範例的值接近 2&#x03c0; （2 * pi），這是圓形的實際圓周。
+ 請注意，此範例的值 `CircularString` 接近 2&#x03c0; （2 * pi），這是圓形的實際圓周。
 
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. 在相同的陳述式中使用 CircularString 來宣告和具現化 Geometry 執行個體
  這個程式碼片段會示範如何在相同的陳述式中使用 `geometry` 來宣告和具現化 `CircularString` 執行個體：

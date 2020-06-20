@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4e15cc28354d8dc77b579008feabbc6d13efb63d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: cc145da0b6296d3f6e048905e4ab4e649294d38a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939089"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048494"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>SQL Server 屬性 (AlwaysOn 高可用性索引標籤)
   在 Configuration Manager 中，使用 [ **SQL Server 屬性**] 對話方塊的 [ **AlwaysOn 高可用性**] 索引標籤 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，啟用或停用中的 [AlwaysOn 可用性群組] 功能 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 啟用 AlwaysOn 可用性群組是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體將可用性群組做為高可用性和災害復原方案的必要條件。  
   
-##  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  若要啟用 AlwaysOn 可用性群組，伺服器執行個體必須符合下列必要條件：  
   
 -   此伺服器執行個體必須位於 Windows Server 容錯移轉叢集 (WSFC) 節點上。  

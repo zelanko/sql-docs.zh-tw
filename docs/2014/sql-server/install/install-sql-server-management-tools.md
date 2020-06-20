@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: af68d59a-a04d-4f23-9967-ad4ee2e63381
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3831943533939f7b9f8e31f09b80c71cc61b8d3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef3d6fe660b563ceb8f86b2d3cce123447de5366
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094425"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042541"
 ---
 # <a name="install-sql-server-management-tools"></a>安裝 SQL Server 管理工具
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具包括下列元件：  
@@ -30,13 +29,13 @@ ms.locfileid: "66094425"
   
 -   命令提示字元工具，例如 sqlcmd.exe 和 osql.exe。  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]增益集[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]增益集 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
  請注意，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間的個別選項。  
   
  不論電腦上所安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體有多少，系統都只會安裝一份 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 管理工具。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]管理工具可以與舊版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理工具並存在同一部電腦上執行。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]管理工具可以與舊版管理工具並存在同一部電腦上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2014 版本所支援的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

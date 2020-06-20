@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed348a4525024052946ac30bfe6ec780ca86a4b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2eeacf8b8e722898485871c9f2c469e780e15c78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054632"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972535"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>檢視記錄事件視窗中的記錄項目
   此程序描述如何執行封裝並檢視封裝寫入的記錄項目。 您可以即時檢視記錄項目， 也可以複製及儲存寫入 [記錄事件]**** 視窗中的記錄項目，以執行進一步的分析。  

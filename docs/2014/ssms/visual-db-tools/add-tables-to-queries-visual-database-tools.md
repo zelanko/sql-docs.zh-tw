@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ba3957eb5b0c88396376d615033107b13d0621ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db979203f45897644fa22f011000b6d4d7e3b712
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63297859"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044515"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>將資料表加入查詢 (Visual Database Tools)
   建立查詢時，您會從資料表或結構與資料表類似的其他物件 (檢視和某些使用者定義函式) 擷取資料。 若要在查詢中使用上述物件，請將這些物件新增到 [圖表窗格]  。  

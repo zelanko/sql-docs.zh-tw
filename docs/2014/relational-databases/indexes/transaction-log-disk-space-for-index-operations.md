@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 986f464752f631d55b994469b733a3374a1926a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c34c9ff7a9494496d6c60d5920184c0ce86131d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161829"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025071"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>索引作業的交易記錄磁碟空間
   大規模的索引作業會產生大量資料載入，而造成交易記錄檔迅速填滿。 為了確保索引作業可以回復，在索引作業完成之前，交易記錄檔不得遭到截斷；不過，在索引作業期間可以備份記錄檔。 因此，交易記錄檔必須有足夠空間來儲存索引作業交易，以及索引作業期間的任何並行使用者交易。 不管是離線或線上索引作業都是如此。 因為在離線索引作業期間無法存取基礎資料表，所以使用者交易不多，記錄檔應該不會成長太快。 線上索引作業並不禁止並行使用者活動，因此大規模的線上索引作業若再結合大量的並行使用者交易，會造成交易記錄檔持續成長，同時又無法截斷記錄檔。  

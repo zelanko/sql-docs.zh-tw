@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b1ac80773b28538f29837973d94f1b50b79f0788
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 06443d18b12d0445021001c3bd30d4614b6daebc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702783"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067749"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>範例：指定 ID 和 IDREFS 指示詞
   元素屬性可以指定為 `ID` 類型屬性，然後可以使用 `IDREFS` 屬性來參考它。 這會啟用內部文件連結，而且與關聯式資料庫中的主索引鍵及外部索引鍵關聯性類似。  

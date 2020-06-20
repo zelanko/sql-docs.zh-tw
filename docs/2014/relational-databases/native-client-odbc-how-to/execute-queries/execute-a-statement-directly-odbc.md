@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 938108021d6545a62124aeb4f7e60ea74ca70b0f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 85a86527c027ea73524fa993c6ecdd125d200ee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701461"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018810"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>直接執行陳述式 (ODBC)
     

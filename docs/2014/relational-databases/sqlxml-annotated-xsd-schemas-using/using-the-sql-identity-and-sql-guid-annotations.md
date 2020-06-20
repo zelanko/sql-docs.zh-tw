@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 48e36f7532a3f81df1784b3e2108d3c06ed84987
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e8faa6c9faada65a86f41a552ebe497b40b18663
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703467"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002971"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>使用 sql:identity 和 sql:guid 註解
   您可以在 `sql:identity` `sql:guid` 對應至中資料庫資料行的任何節點上，于 XSD 架構中指定和批註 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 updategram 格式支援 `updg:at-identity` 和 `updg:guid` 屬性，而 DiffGram 格式則不支援。 `updg:at-identity` 屬性會定義更新 IDENTITY 類型之資料行時的行為。 `updg:guid` 屬性可讓您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 取得 GUID 值，並將其用在 updategram 中。 如需詳細資訊和工作範例，請參閱[使用 XML Updategram 插入資料 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36f7f8cadcba5e114feee4a3c42de6f40070ce72
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096884"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045679"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>升級之後無法將保留關鍵字當做識別碼
   Upgrade Advisor 偵測到有使用保留關鍵字。 保留關鍵字無法當做識別碼或物件名稱使用，除非您分隔此名稱。  
@@ -49,7 +48,7 @@ ms.locfileid: "66096884"
   
 -   保留資料庫相容性層級設定 90 或更低。  
   
--   使用分隔識別碼來參考物件。 例如，語句`CREATE TABLE [MERGE] ([MERGE] int);`會使用括弧來分隔物件名稱 MERGE。  
+-   使用分隔識別碼來參考物件。 例如，語句會 `CREATE TABLE [MERGE] ([MERGE] int);` 使用括弧來分隔物件名稱 MERGE。  
   
 ## <a name="external-resources"></a>外部資源  
  [保留關鍵字 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  

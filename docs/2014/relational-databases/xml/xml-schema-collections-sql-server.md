@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3ee4757f1353278447ee55e97c8d4ba23aa2d649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702265"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046495"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 結構描述集合 (SQL Server)
   如[xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)主題中所述，SQL Server 透過資料類型提供 xml 資料的原生儲存 `xml` 。 您可以選擇透過 XML 架構集合，將 XSD 架構與變數或類型的資料行 `xml` 產生關聯。 XML 結構描述集合會儲存匯入的 XML 結構描述，然後用來執行下列作業：  
@@ -119,7 +118,7 @@ ms.locfileid: "82702265"
   
 -   **Customer** 是 ELEMENT 元件。  
   
- 當您將結構描述匯入資料庫後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會儲存結構描述本身。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會儲存各種個別的元件。 也就是說，並未儲存 \<Schema> 標記，只是保留定義於其中的元件。 所有的結構描述元素都沒有保留。 如果 \<Schema> 標記包含指定其元件預設行為的屬性，則這些屬性會在匯入程序期間移到標記內的結構描述元件，如下表所示。  
+ 當您將結構描述匯入資料庫後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會儲存結構描述本身。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會儲存各種個別的元件。 也就是說， \<Schema> 標記不會儲存，只會保留其中所定義的元件。 所有的結構描述元素都沒有保留。 如果 \<Schema> 標記包含指定其元件預設行為的屬性，這些屬性會在匯入程式期間移到其內的架構元件，如下表所示。  
   
 |屬性名稱|行為|  
 |--------------------|--------------|  

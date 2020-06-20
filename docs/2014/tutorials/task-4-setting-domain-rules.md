@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0104fe6b64ff2ecc1a37bb1da9691e34d7913f21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061084"
 ---
 # <a name="task-4-setting-domain-rules"></a>工作 4：設定定義域規則
-  在這項工作中，您會建立**連絡人電子郵件**網域的規則，以驗證電子郵件地址的結尾是否為** \@adventure-works.com**。 如需此頁面的詳細資訊，請參閱[建立定義域規則](https://msdn.microsoft.com/library/hh510397.aspx)主題。  
+  在這項工作中，您會建立**連絡人電子郵件**網域的規則，以驗證電子郵件地址的結尾是否為** \@ adventure-works.com**。 如需此頁面的詳細資訊，請參閱[建立定義域規則](https://msdn.microsoft.com/library/hh510397.aspx)主題。  
   
 1.  按一下 [**網域] 清單**中的 [**連絡人電子郵件**]。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "72381735"
   
 5.  在 [**建立規則**] 窗格中，按一下**向下箭**號，然後選取 [**值結尾為**]。  
   
-6.  在文字方塊中輸入** \@adventure-works.com** ，然後按**tab**鍵。 您可以在 [**建立規則**] 窗格中，按一下 **[將新條件新增至選取的子句**] 工具列按鈕來新增更多條件。  
+6.  在文字方塊中輸入** \@ adventure-works.com** ，然後按**tab**鍵。 您可以在 [**建立規則**] 窗格中，按一下 **[將新條件新增至選取的子句**] 工具列按鈕來新增更多條件。  
   
      ![電子郵件驗證規則](../../2014/tutorials/media/et-settingdomainrules-02.jpg "電子郵件驗證規則")  
   
@@ -44,9 +43,9 @@ ms.locfileid: "72381735"
   
      ![[測試定義域規則] 對話方塊](../../2014/tutorials/media/et-settingdomainrules-04.jpg "[測試定義域規則] 對話方塊")  
   
-9. 在 [**連絡人電子郵件**] 資料行中輸入**\@frank7 adventure-works.com** （有效的值）。  
+9. 在 [**連絡人電子郵件**] 資料行中輸入**frank7 \@ adventure-works.com** （有效的值）。  
   
-10. 重複先前的兩個步驟，以新增**joe2\@adventure-work.com** （不含 ' s ' 的無效值）。  
+10. 重複先前的兩個步驟，以新增**joe2 \@ adventure-work.com** （不含 ' s ' 的無效值）。  
   
 11. 按一下工具列上的 [最後一個] 按鈕（**針對所有詞彙測試定義域規則**），以根據規則測試輸入資料。  
   

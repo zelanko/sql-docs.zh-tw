@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 90ecf9d2f9c677351a4c199414be25d753fe5346
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c831ab360f2cbe4b32834ae2a280b961d2bac1e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479959"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971868"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>建立衍生階層 (Master Data Services)
   當您需要以層級為基礎的階層，確保成員存在於正確層級時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立衍生階層。 衍生階層是以模型中存在的網域屬性關聯性為基礎。  
@@ -26,7 +25,7 @@ ms.locfileid: "65479959"
 > [!NOTE]  
 >  如果成員沒有網域屬性值，衍生階層中不會包含此成員。 若需要求所有成員的網域屬性值，請參閱[要求屬性值 &#40;Master Data Services&#41;](require-attribute-values-master-data-services.md)。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

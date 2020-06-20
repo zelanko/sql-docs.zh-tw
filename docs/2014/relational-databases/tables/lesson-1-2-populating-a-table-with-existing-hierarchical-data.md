@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 966548b11ad4697abc06de5c5c239a511f80b7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110170"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068090"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>使用現有的階層式資料填入資料表
    此工作會建立一個新的資料表，並以 **EmployeeDemo** 資料表中的資料填入該資料表。 此工作的步驟如下：  
@@ -113,7 +112,7 @@ ms.locfileid: "66110170"
   
      `10        4         2`  
   
-3.  填入**NewOrg**資料表。 使用 GetRoot 和 ToString 方法，將**Num**值串連成`hierarchyid`格式，然後以產生的階層式值更新**OrgNode**資料行：  
+3.  填入**NewOrg**資料表。 使用 GetRoot 和 ToString 方法，將**Num**值串連成 `hierarchyid` 格式，然後以產生的階層式值更新**OrgNode**資料行：  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -151,7 +150,7 @@ ms.locfileid: "66110170"
   
     ```  
   
-     **LogicalNode**資料行會將此`hierarchyid`資料行轉換成更容易閱讀的文字格式，以代表階層。 在其餘工作中，您將使用 `ToString()` 方法，顯示 `hierarchyid` 資料行的邏輯格式。  
+     **LogicalNode**資料行會將此資料 `hierarchyid` 行轉換成更容易閱讀的文字格式，以代表階層。 在其餘工作中，您將使用 `ToString()` 方法，顯示 `hierarchyid` 資料行的邏輯格式。  
   
 5.  卸除不再需要的暫存資料表：  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 841ba81e4459fe08b207ee87c2c27f1fbe7ba73e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5aea14840dd92c0fa6fb571081044e2d84e0f27b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700814"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018713"
 ---
 # <a name="use-a-statement-odbc"></a>使用陳述式 (ODBC)
     

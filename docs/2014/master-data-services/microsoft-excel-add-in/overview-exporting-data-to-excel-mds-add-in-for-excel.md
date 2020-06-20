@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40c16c0afd90bd7042f387fd40f48dbb0237027e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482806"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961008"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>載入資料 (適用於 Excel 的 MDS 增益集)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]在中，您必須先將資料從 MDS 儲存機制載入作用中的 Excel 工作表，才能使用它。 當您使用資料完成之後，請將它發行至 MDS 儲存機制，讓其他使用者能夠共用資料。  
+  在中 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] ，您必須先將資料從 MDS 儲存機制載入作用中的 Excel 工作表，才能使用它。 當您使用資料完成之後，請將它發行至 MDS 儲存機制，讓其他使用者能夠共用資料。  
   
  您可以載入的資料限制為您有權存取的資料。 存取資料的權限是在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式中設定，或以程式設計方式設定。  
   

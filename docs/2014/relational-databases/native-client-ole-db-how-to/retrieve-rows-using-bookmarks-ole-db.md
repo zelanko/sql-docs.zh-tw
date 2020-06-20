@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d20cd5deb0e94fa120d42f33d4b995ffd22620d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f6d2f72dd135a92c0eb03f61c1f88698116e117e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696582"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043498"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>使用書籤擷取資料列 (OLE DB)
   取用者會將繫結結構的 `dwFlag` 欄位值設定為 DBCOLUMNSINFO_ISBOOKMARK，表示該資料行會當做書籤使用。 取用者也會將資料列集屬性 DBPROP_BOOKMARKS 設定為 VARIANT_TRUE。 這可讓資料行 0 出現在資料列集中。 然後使用 `IRowsetLocate::GetRowsAt` 來提取資料列，從書籤中位移所指定的資料列開始。  

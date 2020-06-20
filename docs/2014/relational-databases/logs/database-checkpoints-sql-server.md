@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5776d4a23223637c50ac40098fa44342d5cd94a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289396"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024825"
 ---
 # <a name="database-checkpoints-sql-server"></a>資料庫檢查點 (SQL Server)
   本主題提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫檢查點的概觀。 *「檢查點」* (Checkpoint) 會建立一個已知的恰當起點， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以從這個點開始套用發生非預期的關機或損毀之後，於復原期間包含在記錄檔中的變更。  
@@ -44,7 +43,7 @@ ms.locfileid: "79289396"
   
 |名稱|[!INCLUDE[tsql](../../includes/tsql-md.md)] 介面|描述|  
 |----------|----------------------------------|-----------------|  
-|自動|EXEC sp_configure **'`recovery interval`'，'*`seconds`*'**|在背景自動發出，以符合`recovery interval`伺服器設定選項所建議的時間上限。 自動檢查點會執行到完成為止。  自動檢查點的調節是根據未完成的寫入數目以及 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是否偵測到超過 20 毫秒的寫入延遲有增加。<br /><br /> 如需詳細資訊，請參閱 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。|  
+|自動|EXEC sp_configure **' `recovery interval` '，' *`seconds`* '**|在背景自動發出，以符合伺服器設定選項所建議的時間上限 `recovery interval` 。 自動檢查點會執行到完成為止。  自動檢查點的調節是根據未完成的寫入數目以及 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是否偵測到超過 20 毫秒的寫入延遲有增加。<br /><br /> 如需詳細資訊，請參閱 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。|  
 |間接|ALTER DATABASE .。。設定 TARGET_RECOVERY_TIME **=** _target_recovery_time_ {秒數 &#124; 分鐘}|在背景發出，以符合使用者對給定資料庫所指定的目標復原時間。 預設目標復原時間為 0，這會導致自動檢查點啟發學習法在資料庫上使用。 如果您已使用 ALTER DATABASE 將 TARGET_RECOVERY_TIME 設定為 >0，則會使用這個值，而不是針對伺服器執行個體指定的復原間隔。<br /><br /> 如需詳細資訊，請參閱 [變更資料庫的目標復原時間 &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md)伺服器組態選項。|  
 |手動|CHECKPOINT [ *checkpoint_duration* ]|當您執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 命令時發出。 手動檢查點會發生在連接的目前資料庫中。 根據預設，手動檢查點會執行到完成為止。 調節的運作方式與自動檢查點相同。  *checkpoint_duration* 參數可選擇性地指定要求的時間量 (以秒為單位)，好讓檢查點得以完成。<br /><br /> 如需詳細資訊，請參閱 [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)。|  
 |內部|無。|由各種伺服器作業 (例如備份和資料庫快照集建立) 發出，以保證磁碟映像符合目前的記錄檔狀態。|  
@@ -60,7 +59,7 @@ ms.locfileid: "79289396"
   
   
 ###  <a name="interaction-of-the-target_recovery_time-and-recovery-interval-options"></a><a name="InteractionBwnSettings"></a> TARGET_RECOVERY_TIME 和 'recovery interval' 選項的互動  
- 下表摘要說明伺服器範圍**sp_configure '`recovery interval`'** 設定與資料庫特有的 ALTER database 之間的互動 .。。TARGET_RECOVERY_TIME 設定。  
+ 下表摘要說明伺服器範圍**sp_configure ' `recovery interval` '** 設定與資料庫特有的 ALTER database 之間的互動 .。。TARGET_RECOVERY_TIME 設定。  
   
 |target_recovery_time|'recovery interval'|使用的檢查點類型|  
 |----------------------------|-------------------------|-----------------------------|  
@@ -69,17 +68,17 @@ ms.locfileid: "79289396"
 |>0|不適用。|由 TARGET_RECOVERY_TIME 設定決定目標復原時間 (以秒鐘表示) 的間接檢查點。|  
   
 ###  <a name="automatic-checkpoints"></a><a name="AutomaticChkpt"></a>自動檢查點  
- 每次記錄檔記錄數目到達[!INCLUDE[ssDE](../../includes/ssde-md.md)]預估它在`recovery interval`伺服器設定選項中指定的時間內可以處理的數目時，就會發生自動檢查點。 在沒有使用者定義之目標復原時間的每個資料庫中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 都會產生自動檢查點。 自動檢查點的頻率取決於`recovery interval` advanced server configuration 選項，它會指定給定伺服器實例在系統重新開機期間應該用來復原資料庫的最長時間。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會預估它在復原間隔內可以處理的記錄檔記錄數目上限。 當使用自動檢查點的資料庫到達這個記錄檔數目上限時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會發出資料庫的檢查點。 自動檢查點之間的時間間隔可能會有很大的變化。 具有大量交易工作負載的資料庫所擁有的檢查點會比主要用於唯讀作業的資料庫更頻繁。  
+ 每次記錄檔記錄數目到達 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 預估它在伺服器設定選項中指定的時間內可以處理的數目時，就會發生自動檢查點 `recovery interval` 。 在沒有使用者定義之目標復原時間的每個資料庫中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 都會產生自動檢查點。 自動檢查點的頻率取決於 `recovery interval` advanced server configuration 選項，它會指定給定伺服器實例在系統重新開機期間應該用來復原資料庫的最長時間。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會預估它在復原間隔內可以處理的記錄檔記錄數目上限。 當使用自動檢查點的資料庫到達這個記錄檔數目上限時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會發出資料庫的檢查點。 自動檢查點之間的時間間隔可能會有很大的變化。 具有大量交易工作負載的資料庫所擁有的檢查點會比主要用於唯讀作業的資料庫更頻繁。  
   
  此外，在簡單復原模式下，如果記錄檔已填滿百分之 70，則自動檢查點也會排入佇列。  
   
  在簡單復原模式下，除非某些因素延遲了記錄截斷，否則自動檢查點會截斷交易記錄的未使用區段。 相反地，在完整復原模式和大量記錄復原模式下，一旦建立了記錄備份鏈，自動檢查點就不會導致記錄截斷。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](the-transaction-log-sql-server.md)。  
   
- 當系統損壞時，復原給定資料庫所需的時間長度大部分取決於重做損壞時已變更之頁面所需的隨機 I/O 數量。 這表示`recovery interval`設定不可靠。 它無法判斷精確的復原持續時間。 此外，當自動檢查點正在進行時，資料的一般 I/O 活動會大幅增加而且無法預測。  
+ 當系統損壞時，復原給定資料庫所需的時間長度大部分取決於重做損壞時已變更之頁面所需的隨機 I/O 數量。 這表示 `recovery interval` 設定不可靠。 它無法判斷精確的復原持續時間。 此外，當自動檢查點正在進行時，資料的一般 I/O 活動會大幅增加而且無法預測。  
   
   
 ####  <a name="impact-of-recovery-interval-on-recovery-performance"></a><a name="PerformanceImpact"></a>復原間隔對復原效能的影響  
- 針對使用簡短交易的線上交易處理（OLTP）系統， `recovery interval`是決定復原時間的主要因素。 不過，此`recovery interval`選項不會影響復原長時間執行之交易所需的時間。 復原具有長時間執行之交易的資料庫，所`recovery interval`花費的時間可能比選項中指定的還要多。 例如，如果長時間執行的交易在伺服器實例停用之前，花了兩個小時來執行更新，則實際的復原所花`recovery interval`的時間會比復原長交易的值長得多。 如需長時間執行的交易對復原時間之影響的詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](the-transaction-log-sql-server.md)。  
+ 針對使用簡短交易的線上交易處理（OLTP）系統， `recovery interval` 是決定復原時間的主要因素。 不過，此 `recovery interval` 選項不會影響復原長時間執行之交易所需的時間。 復原具有長時間執行之交易的資料庫，所花費的時間可能比選項中指定的還要多 `recovery interval` 。 例如，如果長時間執行的交易在伺服器實例停用之前，花了兩個小時來執行更新，則實際的復原所花的時間會比 `recovery interval` 復原長交易的值長得多。 如需長時間執行的交易對復原時間之影響的詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](the-transaction-log-sql-server.md)。  
   
  一般來說，預設值會提供最佳復原效能。 但是在以下情況下，變更復原間隔可能會提升效能：  
   
@@ -87,7 +86,7 @@ ms.locfileid: "79289396"
   
 -   如果您注意到頻繁的檢查點損害了資料庫的效能。  
   
- 如果您決定增加 `recovery interval` 設定，我們建議您逐漸少量增加此設定，並評估每次累加對於復原效能的影響。 這種方法很重要，因為`recovery interval`當設定增加時，資料庫復原所花的時間會比完成許多倍。 例如，如果您變更`recovery interval` 10，則完成復原所花的時間會比設定為`recovery interval`零時要長大約10倍。  
+ 如果您決定增加 `recovery interval` 設定，我們建議您逐漸少量增加此設定，並評估每次累加對於復原效能的影響。 這種方法很重要，因為當 `recovery interval` 設定增加時，資料庫復原所花的時間會比完成許多倍。 例如，如果您變更 `recovery interval` 10，則完成復原所花的時間會比設定為零時要長大約10倍 `recovery interval` 。  
   
   
 ###  <a name="indirect-checkpoints"></a><a name="IndirectChkpt"></a>間接檢查點  

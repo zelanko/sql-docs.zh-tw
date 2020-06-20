@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5abd2e60f4f9bb5290b47f95349782f8b26ad8bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211999"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043203"
 ---
 # <a name="create-a-resource-pool"></a>建立資源集區
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]來建立資源集區。  
@@ -71,15 +70,15 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Resource Governor](resource-governor.md)   
- [啟用 Resource Governor](enable-resource-governor.md)   
- [Resource Governor 資源集區](resource-governor-resource-pool.md)   
+ [資源管理員](resource-governor.md)   
+ [啟用資源管理員](enable-resource-governor.md)   
+ [資源管理員資源集區](resource-governor-resource-pool.md)   
  [變更資源集區設定](change-resource-pool-settings.md)   
  [刪除資源集區](delete-a-resource-pool.md)   
- [使用範本設定 Resource Governor](configure-resource-governor-using-a-template.md)   
- [Resource Governor 工作負載群組](resource-governor-workload-group.md)   
+ [使用範本來設定資源管理員](configure-resource-governor-using-a-template.md)   
+ [資源管理員工作負載群組](resource-governor-workload-group.md)   
  [Resource Governor 分類函數](resource-governor-classifier-function.md)   
- [建立資源集區 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

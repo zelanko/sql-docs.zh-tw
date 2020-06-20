@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb07987bfdca341a01a523c13db3e346ab5085f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655673"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016574"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>指定交易式發行項變更的傳播方式
   異動複寫可讓您指定資料變更從「發行者」傳播到「訂閱者」的方式。 對於每個發行的資料表，您都可以指定四種方法之一來傳播每個要傳播到「訂閱者」的作業 (INSERT、UPDATE 或 DELETE)：  
@@ -37,13 +36,13 @@ ms.locfileid: "62655673"
 ## <a name="default-and-custom-stored-procedures"></a>預設與自訂預存程序  
  依預設，複寫為每個資料表發行項建立的三個程序為：  
   
--   處理插入的 **sp_MSins_\<** *tablename* **>**。  
+-   **sp_MSins_ \<** *tablename* **> **，用來處理插入。  
   
--   處理更新的 **sp_MSupd_\<** *tablename* **>**。  
+-   **sp_MSupd_ \<** *tablename* **> **，用來處理更新。  
   
--   處理刪除的 **sp_MSdel_\<** *tablename* **>**。  
+-   **sp_MSdel_ \<** *tablename* **> **，它會處理刪除。  
   
- 程式中使用的** ***tablename*** >取決於發行項加入至發行集的方式，以及訂閱資料庫是否包含與不同擁有者具有相同名稱的資料表。 \< **  
+ 程式 **\<***tablename***>** 中使用的取決於發行項加入至發行集的方式，以及訂閱資料庫是否包含與不同擁有者具有相同名稱的資料表。  
   
  以上任何程序均可取代為您在將發行項新增至發行集時指定的自訂程序。 如果應用程式需要自訂邏輯，例如在「訂閱者」端更新資料列時將資料插入稽核資料表，就要使用自訂程序。 如需指定自訂預存程序的詳細資訊，請參閱以上所列的「如何」主題。  
   

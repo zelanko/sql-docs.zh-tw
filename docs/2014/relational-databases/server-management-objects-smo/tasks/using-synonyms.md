@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a96f6ee89b920ec668af21ce625694fc31ce13bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e8416dc3daea3b173fae92e5454a8a65c399e53
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781872"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003441"
 ---
 # <a name="using-synonyms"></a>使用同義字
   同義字是結構描述範圍物件的替代名稱。 在 SMO 中，同義字是由 <xref:Microsoft.SqlServer.Management.Smo.Synonym> 物件表示。 <xref:Microsoft.SqlServer.Management.Smo.Synonym> 物件是 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件的子系。 這表示同義字只有在其定義所在的資料庫範圍內才有效。 不過，同義字可以參考另一個資料庫或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]遠端執行個體上的物件。  

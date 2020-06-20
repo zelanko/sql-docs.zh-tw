@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ca5ab2c7c3b92f30701fd51ddef95eccff4842fd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4fd131050930cda981ebbd0e82daea46776dfa07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699706"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039601"
 ---
 # <a name="assigning-storage"></a>指派儲存體
   應用程式可以在執行 SQL 陳述式之前或之後指派結果的儲存體。 如果應用程式先準備或執行 SQL 陳述式，它就可以查詢結果集的相關資訊，然後再指派結果的儲存體。 例如，如果結果集是未知的，應用程式就必須擷取資料行的數目，然後才能指派它們的儲存體。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7427c05643a8619a5913f568ec50fb7ecf4ae34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011493"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016254"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>管理登入、使用者與結構描述的使用說明主題
   本頁面提供的主題連結，將會為您示範如何管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入、資料庫使用者和資料庫結構描述，以及如何加入角色和將權限授與主體。  

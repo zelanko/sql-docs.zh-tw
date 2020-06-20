@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4e3cd4cecd88bcad83c6e9f2a59ecd5f225fb02a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e825829eb70b695a619df8caaa59788d0ad413f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064770"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>工作 2：使用適用於 Excel 的 MDS 增益集將供應商資料上傳到 MDS
   在這項工作中，您會使用**適用于 Excel 的 MDS 增益集**，將清理和供應商資料發行至**mds** 。 您會在上一課建立的**供應商**模型中，建立名為**供應商**的實體。 此實體將會針對 Excel 檔案中的每個資料行具有一個屬性。 [供應商] 實體的 [程式碼] 和 [名稱] 屬性會對應到 Excel 中的 [供貨**商** **] 和 [**  
   
-1.  開啟清理，並比對**Excel**中的**供應商 .xls。**  
+1.  在**Excel**中開啟**清理和相符的 Suppliers.xls** 。  
   
 2.  按**CTRL + A**選取整個資料。 請**務必**選取試算表中的完整資料。  
   
@@ -34,9 +33,9 @@ ms.locfileid: "81487692"
   
     1.  選取 [**建立新的連接**]，然後按一下 [**新增**] 按鈕。  
   
-    2.  在 [**加入新連接**] 對話方塊中，針對 [**描述**] 輸入**本機 Mds 伺服器**，並針對 [ **mds 伺服器位址**] 輸入**HTTP：\//localhost/MDS** ，然後按一下 **[確定**] 關閉對話方塊。  
+    2.  在 [**加入新連接**] 對話方塊中，針對 [**描述**] 輸入**本機 Mds 伺服器**，並針對 [ **mds 伺服器位址**] 輸入**HTTP： \/ /localhost/MDS** ，然後按一下 **[確定**] 關閉對話方塊。  
   
-6.  在 [**管理連接**] 對話方塊中，選取 [**本機 MDS 伺服器**（）]，然後按一下 [`http://localhost/MDS`**測試**] 來測試連接。 在訊息方塊上按一下 **[確定]** 。  
+6.  在 [**管理連接**] 對話方塊中，選取 [**本機 MDS 伺服器**（ `http://localhost/MDS` ）]，然後按一下 [**測試**] 來測試連接。 在訊息方塊上按一下 **[確定]** 。  
   
 7.  按一下 **[連接**]，連接到 MDS 伺服器。  
   

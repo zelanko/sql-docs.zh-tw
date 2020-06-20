@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 567ff9a01bd93323149168b9e3aa0f34d78aee39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155377"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049982"
 ---
 # <a name="create-clustered-indexes"></a>建立叢集索引
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的資料表上建立叢集索引。 除了極少數的例外狀況之外，每個資料表都應該要有叢集索引。 除了可以改善查詢效能以外，叢集索引還能夠視需要加以重建或重新組織，以便控制資料表分散程度。 檢視上也可以建立叢集索引。 (叢集索引是在 [叢集與非叢集索引說明](clustered-and-nonclustered-indexes-described.md)主題中進行定義。)  

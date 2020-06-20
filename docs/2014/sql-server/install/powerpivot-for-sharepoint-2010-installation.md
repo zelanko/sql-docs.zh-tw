@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8d47dde7-c941-4280-a934-e2fe3f9a938f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0bb88370db889eac44e3ce71ad498779e55e4d7d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6591890be1d514e9c1dd3b23233420971c4b8889
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952056"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041977"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>PowerPivot for SharePoint 2010 安裝
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是一種伺服器元件的集合，針對發行至 SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿提供查詢處理和管理控制。 服務包括 Analysis Services 引擎和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務。  

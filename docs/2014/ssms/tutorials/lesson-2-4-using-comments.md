@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e9e6eab-0343-4840-9690-1736552ce371
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f09d6099ea9c80e9ce237e3462cec93fa66626b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67e251af883eaffb4d826249a7fd6e5147cd0fad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63164028"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040978"
 ---
 # <a name="using-comments"></a>使用註解
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可讓您輕易地將部分指令碼註解化。  

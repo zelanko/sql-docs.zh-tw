@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59bb28e8afbee86a901e69ea745b13352ff0f438
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068692"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>不使用快照集初始化交易式訂閱
   依預設，會使用快照集來初始化交易式發行集的訂閱，此快照集由「快照集代理程式」產生並由「散發者代理程式」套用。 在某些狀況下，例如那些牽涉到大型初始資料集的狀況，最好使用其他方法初始化訂閱。 其他初始化「訂閱者」的方法包括：  

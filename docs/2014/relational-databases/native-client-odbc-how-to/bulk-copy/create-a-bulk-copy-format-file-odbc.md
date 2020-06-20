@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5c85e0663b5fa9961793cc30bb4a0986b64077bd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07674cef07116f47f4538d5913e002f20ca61282
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82715003"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019099"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>建立大量複製格式檔案 (ODBC)
   此範例將示範如何使用大量複製函數來建立資料檔案和格式檔案。 此範例是針對 ODBC 3.0 版或更新版本所開發。  

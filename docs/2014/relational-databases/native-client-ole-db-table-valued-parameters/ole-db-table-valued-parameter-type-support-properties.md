@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: abe342538fd191d2992e852e3cdcb09926725e49
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bda93e970e933f1db604fa529133e6d023b3337e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704617"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043340"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 資料表值參數類型支援 (屬性)
   本主題提供與資料表值參數資料列集物件相關聯之 OLE DB 屬性和屬性集的相關資訊。  

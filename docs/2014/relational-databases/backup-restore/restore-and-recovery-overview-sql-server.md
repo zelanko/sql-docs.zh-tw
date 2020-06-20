@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2175ae19218592a2742aa1404ffa6620da333846
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 2b8f032dce4f2eb09ef80cfa8c6333de2d563a81
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925082"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957128"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>還原和復原概觀 (SQL Server)
   若要從失敗復原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，資料庫管理員必須依邏輯正確和有意義的還原順序來還原一組 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還原及復原，可從一整個資料庫、單一資料檔或資料頁面的備份還原資料，如下所示：  

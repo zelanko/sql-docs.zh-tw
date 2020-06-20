@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 19ebeac45f7596de42add894922838864f62546e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ef142bf30473222bb39babce35b6bac59a6b848
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054304"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972358"
 ---
 # <a name="xml-source-editor-error-output-page"></a>XML 來源編輯器 (錯誤輸出頁面)
   使用 **[XML 來源編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
@@ -41,7 +40,7 @@ ms.locfileid: "66054304"
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **描述**  
+ **說明**  
  檢視錯誤的描述。  
   
  **將這個值設定到選取的資料格**  

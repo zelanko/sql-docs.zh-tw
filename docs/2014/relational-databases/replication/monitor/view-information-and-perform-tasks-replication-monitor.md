@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60586083e8bdfe7f0227db605d9f36d50a59ef0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049362"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>使用複寫監視器來檢視資訊及執行工作
 複寫監視器提供一些索引標籤和選項，來檢視資訊及執行各種工作。 本文說明使用「複寫監視器」時，可以檢視和完成的各種不同項目。
@@ -64,7 +63,7 @@ ms.locfileid: "62667126"
   
 -   發行集-此索引標籤會顯示所選發行者端所有發行**集的相關**資訊。  
   
--   **訂閱監看清單**-此索引標籤是用來顯示所選發行者端可用的所有發行集之訂閱的相關資訊，其中包含錯誤、警告或效能最差效能。 執行之前[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本的散發者不會顯示此索引標籤。  
+-   **訂閱監看清單**-此索引標籤是用來顯示所選發行者端可用的所有發行集之訂閱的相關資訊，其中包含錯誤、警告或效能最差效能。 執行之前版本的散發者不會顯示此索引標籤 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 。  
   
 -   [**代理**程式] 索引標籤-此索引標籤會顯示有關所有複寫類型所使用之代理程式和作業的詳細資訊。 您也可以用這個索引標籤來啟動和停止每個代理程式和工作。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62667126"
   
 1.  在左窗格中展開發行者群組，然後按一下發行者。   
 2.  若要檢視有關訂閱的資訊，請按一下 **[訂閱監看清單]** 索引標籤。  
-3.  從 [顯示 \<訂閱類型> 訂閱]  下拉式清單中選取要顯示的訂閱類型。 若只要檢視給定狀態中的訂閱，如同步處理，請從 **[顯示]** 下拉式清單中選取某選項。    
+3.  從 [**顯示 \<SubscriptionType> 訂閱**] 下拉式清單中選取要顯示的訂用帳戶類型。 若只要檢視給定狀態中的訂閱，如同步處理，請從 **[顯示]** 下拉式清單中選取某選項。    
 4.  若要檢視和修改訂閱屬性，以滑鼠右鍵按一下訂閱，然後按一下 **[屬性]** 。 您也可以存取更詳細的資訊，並在此索引標籤上執行工作。如需詳細資訊，請參閱[使用複寫監視器來查看資訊及執行](view-information-and-perform-tasks-replication-monitor.md)工作。  
 
 ## <a name="for-publication-agents"></a>針對發行集代理程式

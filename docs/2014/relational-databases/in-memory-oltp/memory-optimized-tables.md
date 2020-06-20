@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 77cb4a57afcc40c15341a64dfd841e97b551bc81
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63566d7759c3a88f6c088707d6c7724cb4087f05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706482"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050069"
 ---
 # <a name="memory-optimized-tables"></a>記憶體最佳化的資料表
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體中 OLTP 可透過有效率的記憶體最佳化資料存取、商務邏輯的原生編譯以及不需鎖定與閂鎖的演算法，協助提升 OLTP 應用程式的效能。 記憶體中 OLTP 功能包括記憶體最佳化資料表和資料表類型，以及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序的原生編譯，能夠有效率地存取這些資料表。  

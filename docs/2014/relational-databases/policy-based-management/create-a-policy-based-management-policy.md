@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2b81fb13b8b8635bd5e5cecde801b4123fc74c99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2b775a281de5927bd298b85fbc96e271e1d4a09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253530"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068894"
 ---
 # <a name="create-a-policy-based-management-policy"></a>建立原則式管理原則
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中建立原則式管理原則。  

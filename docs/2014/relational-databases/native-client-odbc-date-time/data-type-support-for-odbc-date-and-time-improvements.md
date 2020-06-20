@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49f5e5d90a24aed8a717edb2f1c4efe4a2fd5e07
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fb3e72250e9fcc389b42db3e614671e414487e66
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705504"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020446"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>資料類型對 ODBC 日期和時間支援的改善
   本主題提供有關支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和時間資料類型之 ODBC 類型的資訊。  
@@ -36,7 +35,7 @@ ms.locfileid: "82705504"
 |--------------------------|-------------------|-----------|  
 |Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-|日期|SQL_TYPE_DATE<br /><br /> SQL_DATE|91（sql .h）<br /><br /> 9（sqlext.h .h）|  
+|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91（sql .h）<br /><br /> 9（sqlext.h .h）|  
 |Time|SQL_SS_TIME2|-154 （SQLNCLI .h）|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
@@ -59,7 +58,7 @@ ms.locfileid: "82705504"
 |--------------------------|--------------------|------------------------------------------|  
 |Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 針對 Datetime，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最多支援三個小數秒位數。|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 此資料類型的精確度為一分鐘。 輸出時，秒數元件為零，而在輸入時，將會由伺服器捨去。|  
-|日期|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
+|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' yyyy-mm-dd hh： mm： ss [. 9999999] '<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  

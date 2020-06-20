@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a9ed4aad31f5a4697a268d82e282a135ea85c37c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eb0319285e6e8cf6e8b3e70f3eb6b9923de06f55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717574"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048938"
 ---
 # <a name="updategram-security-considerations-sqlxml-40"></a>Updategram 安全性考量 (SQLXML 4.0)
   下面是使用 Updategram 的安全性指導方針：  

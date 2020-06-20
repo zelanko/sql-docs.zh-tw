@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f37bcaf8719f4a2f3b1e7fbca1cf332717bd936e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62743164"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049777"
 ---
 # <a name="control-transaction-durability"></a>控制交易持久性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易認可可能是完全持久 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設值) 或延遲的持久 (也稱為延遲認可)。  
@@ -185,7 +184,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **容錯移轉叢集**  
  某些延遲的持久交易寫入可能會遺失。  
   
- **交易複寫**  
+ **異動複寫**  
  異動複寫不支援延遲的持久交易。  
   
  **記錄傳送**  

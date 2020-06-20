@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 270df8181fe42f48619736ba858dc0c16d9e30c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d32daf928392d94fd4d62def6b667892abf0b686
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781806"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003447"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>使用檔案群組和檔案來儲存資料
   資料檔案可用於儲存資料庫檔案。 資料檔案被分成檔案群組。  物件具有  屬性，這個屬性會參考  物件。 該集合中的每個 <xref:Microsoft.SqlServer.Management.Smo.FileGroup> 物件都具有 <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A> 屬性。 這個屬性會參考 <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> 集合，其中包含資料庫所屬的所有資料檔。 檔案群組的主要功能是將用於儲存資料庫物件的檔案放入群組。 將一個資料庫物件散佈到數個檔案的其中一個理由就是改善效能，特別是如果檔案儲存在不同的磁碟機上。  

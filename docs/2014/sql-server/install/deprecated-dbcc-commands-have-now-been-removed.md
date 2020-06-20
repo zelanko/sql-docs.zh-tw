@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: affb6da7-c9ba-401c-ab7f-0d2f4ab93e2d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ea195f2316e888882fdfad693a39b1b29bb031d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95c5c33536ce33824cc80bb452dafcf17719fbac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095574"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012626"
 ---
 # <a name="deprecated-dbcc-commands-have-now-been-removed"></a>已經移除已被取代的 DBCC 命令
   下表列出已宣佈在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中被取代的 DBCC 命令。 這些命令已從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本中移除了。 您應該更新應用程式和指令碼，以便移除這些已被取代之命令的參考。  

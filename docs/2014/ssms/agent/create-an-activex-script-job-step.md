@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f065793a86eb5c4c6ebb55883e2e206ccff9b9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6604ba75af7acdd5bd2521433e8310c74150ce8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798272"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041265"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
-  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理物件，在中建立和定義執行 ActiveX script 的 Agent 作業步驟。  
+  本主題描述如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、或 SQL Server 管理物件，在中建立和定義執行 ActiveX script 的 Agent 作業步驟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
 -   **開始之前：**  
   

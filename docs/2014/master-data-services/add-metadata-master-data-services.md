@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 74599a76-3fa4-4ac9-9d16-e0a03c15a762
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64093c4a0db4a4fc31f287fe908757de13a3462e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054285"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972295"
 ---
 # <a name="add-metadata-master-data-services"></a>加入中繼資料 (Master Data Services)
-  在[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，將使用者定義的中繼資料加入至**中繼資料**模型，以描述您的模型物件。  
+  在中 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，將使用者定義的中繼資料加入至**中繼資料**模型，以描述您的模型物件。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
@@ -34,7 +33,7 @@ ms.locfileid: "66054285"
   
 ### <a name="to-add-metadata"></a>若要加入中繼資料  
   
-1.  在首頁上，從 [**模型**] 清單中選取**中繼資料**模型。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]  
+1.  在首頁上 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ，從 [**模型**] 清單中選取**中繼資料**模型。  
   
 2.  從 **[版本]** 清單中選取版本。  
   
