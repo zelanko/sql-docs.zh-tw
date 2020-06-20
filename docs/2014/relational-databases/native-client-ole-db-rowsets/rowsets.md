@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b32491262bf843cd1ab7fb4d6fd3a0c9c39e4da8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c81f2f4e0cfda66ad67d05b8fe5ce62052c85f23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011219"
 ---
 # <a name="rowsets"></a>資料列集
   資料列集是一組資料列，其中包含資料的資料行。 資料列集是能讓所有 OLE DB 資料提供者公開表格形式結果集資料的核心物件。  
