@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4657bf58a7160f075759a265fef883c92fee0c9
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: f24ea0800107caf026105e306ae39e1461077de5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921710"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924251"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
   `SSISDB`目錄是處理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 您已部署至伺服器之（SSIS）專案的中心點 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器作業。  
@@ -36,7 +35,7 @@ ms.locfileid: "82921710"
 >  您無法重新命名 `SSISDB` 資料庫。  
   
 > [!NOTE]  
->  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫所連接的實例 `SSISDB` 已停止或沒有回應，isserverexec.exe 程式就會結束。 會在 Windows 事件記錄檔中寫入一則訊息。  
+>  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫所連接的實例 `SSISDB` 已停止或沒有回應，ISServerExec.exe 進程就會結束。 會在 Windows 事件記錄檔中寫入一則訊息。  
 >   
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的容錯移轉是叢集容錯移轉的一部分，就不會重新啟動執行中的封裝。 您可以使用檢查點重新啟動封裝。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../packages/restart-packages-by-using-checkpoints.md)。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "82921710"
 ### <a name="folder-project-environment"></a>資料夾、專案、環境  
  在重新命名資料夾、專案或環境時，請考慮以下規則。  
   
--   無效的字元包括 ASCII/Unicode 字元 1 到 31、引號 (")、小於 (\<)、大於 (>)、直立線符號 (|)、退格鍵 (\b)、null (\0) 和 Tab 鍵 (\t)。  
+-   不正確字元包括 ASCII/Unicode 字元1到31、引號（"）、小於（ \<), greater than (> ）、分隔號（|）、倒退鍵（\b）、null （\ 0）和 tab （\t）。  
   
 -   名稱不得包含開頭或尾端空格。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "82921710"
 ### <a name="environment-variable"></a>環境變數  
  在命名環境變數時，請考慮以下規則。  
   
--   無效的字元包括 ASCII/Unicode 字元 1 到 31、引號 (")、小於 (\<)、大於 (>)、直立線符號 (|)、退格鍵 (\b)、null (\0) 和 Tab 鍵 (\t)。  
+-   不正確字元包括 ASCII/Unicode 字元1到31、引號（"）、小於（ \<), greater than (> ）、分隔號（|）、倒退鍵（\b）、null （\ 0）和 tab （\t）。  
   
 -   名稱不得包含開頭或尾端空格。  
   
@@ -131,7 +130,7 @@ ms.locfileid: "82921710"
   
  變更加密演算法是需要大量時間的作業。 首先，伺服器必須使用先前指定的演算法來解密所有組態值。 然後，伺服器必須使用新的演算法來重新加密值。 在這段期間，伺服器上不能有其他的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 作業。 因此，為了讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 作業持續不受干擾，在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的此對話方塊中，加密演算法會是唯讀值。  
   
- 若要變更 [**加密演算法]** 屬性設定，請將 `SSISDB` 資料庫設定為單一使用者模式，然後呼叫 catalog. configure_catalog 預存程式。 使用 ENCRYPTION_ALGORITHM 指定 *property_name* 引數。 如需支援的屬性值，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)。 如需預存程序的詳細資訊，請參閱 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)。  
+ 若要變更 [**加密演算法]** 屬性設定，請將 `SSISDB` 資料庫設定為單一使用者模式，然後呼叫 catalog.configure_catalog 預存程式。 使用 ENCRYPTION_ALGORITHM 指定 *property_name* 引數。 如需支援的屬性值，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)。 如需預存程序的詳細資訊，請參閱 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)。  
   
  如需單一使用者模式的詳細資訊，請參閱 [將資料庫設定為單一使用者模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中加密和加密演算法的資訊，請參閱 [SQL Server 加密](../../relational-databases/security/encryption/sql-server-encryption.md)一節中的主題。  
   

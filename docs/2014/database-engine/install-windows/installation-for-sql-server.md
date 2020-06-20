@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dafb1e971b85adfee2ecb3579ac20b83906b9dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228405"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932369"
 ---
 # <a name="installation-for-sql-server-2014"></a>SQL Server 2014 安裝
  ## <a name="download-sql-server-2014-express"></a>[下載 SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
@@ -45,7 +44,7 @@ ms.locfileid: "75228405"
   
 -   連接元件  
   
- 您可以個別安裝每個元件，也可以選取上面所列出元件的組合。 若要在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的版本和元件之間做出最佳選擇，請參閱[SQL Server 2014 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[SQL Server 2014 版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 有 32 位元和 64 位元兩種版本。
+ 您可以個別安裝每個元件，也可以選取上面所列出元件的組合。 若要在中提供的版本和元件之間做出最佳選擇 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[SQL Server 2014 版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 有 32 位元和 64 位元兩種版本。
  
  **試試看：**  
   

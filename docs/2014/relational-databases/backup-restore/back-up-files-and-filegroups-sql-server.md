@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c686e5eb9bb44517aa1636dc28c972f6782f8bfe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7affc90b064febaa70e0a67108074f412b4bbf00
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782753"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959634"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>備份檔案和檔案群組 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中備份檔案與檔案群組。 當完整的資料庫備份因資料庫大小和效能需求而變得不可行時，您可以建立檔案備份來代替。 *「檔案備份」* (File Backup) 包含一或多個檔案 (或檔案群組) 中的所有資料。 如需詳細資訊，請參閱 [完整檔案備份 &#40;SQL Server&#41;](full-file-backups-sql-server.md) 和 [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)。  
@@ -63,7 +62,7 @@ ms.locfileid: "72782753"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。  
   
- 備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)並 不會 檢查檔案存取權限。 當您嘗試備份或還原時，存取實體資源之前不一定會出現備份裝置實體檔案的這些問題。  
+ 備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)並不會檢查檔案存取權限。 當您嘗試備份或還原時，存取實體資源之前不一定會出現備份裝置實體檔案的這些問題。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -71,15 +70,15 @@ ms.locfileid: "72782753"
   
 1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，請在 [物件總管] 中按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  展開 [**資料庫**]，然後視資料庫而定，選取使用者資料庫，或展開 [**系統**資料庫] 並選取系統資料庫。  
+2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
 3.  以滑鼠右鍵按一下資料庫，指向 **[工作]** ，然後按一下 **[備份]** 。 會出現 **[備份資料庫]** 對話方塊。  
   
-4.  在 [資料庫]**** 清單中，確認資料庫名稱。 您可以選擇性從清單中選取不同的資料庫。  
+4.  在 **[資料庫]** 清單中，確認資料庫名稱。 您可以選擇性從清單中選取不同的資料庫。  
   
-5.  在 **[備份類型]** 清單中，選取 **[完整]** 或 **[差異]**。  
+5.  在 **[備份類型]** 清單中，選取 **[完整]** 或 **[差異]** 。  
   
-6.  若是 **[備份元件]** 選項，請按一下 **[檔案與檔案群組]**。  
+6.  若是 **[備份元件]** 選項，請按一下 **[檔案與檔案群組]** 。  
   
 7.  在 **[選取檔案與檔案群組]** 對話方塊中，選取您要備份的檔案及檔案群組。 您可以選取一或多個個別檔案，或選取檔案群組的方塊，以便自動選取該檔案群組中的所有檔案。  
   
@@ -91,11 +90,11 @@ ms.locfileid: "72782753"
   
     -   若要讓備份組在特定天數後過期，請按一下 [於指定天數之後]**** (預設選項)。 然後，輸入此備份組在建立之後將會到期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
   
-         預設值會在 **[伺服器屬性]** 對話方塊 ( **[資料庫設定]** 頁面) 的 **[預設備份媒體保留 (以天為單位)]** 選項中設定。 若要存取此選項，請以滑鼠右鍵按一下物件總管中的伺服器名稱，然後選取 [資料庫設定]**** 頁面。  
+         預設值會在 **[伺服器屬性]** 對話方塊 ( **[資料庫設定]** 頁面) 的 **[預設備份媒體保留 (以天為單位)]** 選項中設定。 若要存取此選項，請以滑鼠右鍵按一下物件總管中的伺服器名稱，然後選取 [資料庫設定]  頁面。  
   
     -   若要讓備份組在特定日期過期，請按一下 **[於]** ，然後輸入備份組將過期的日期。  
   
-11. 按一下 **[磁碟]** 或 **[磁帶]** ，以選擇備份目的地的類型。 若要選取包含單一媒體集的磁碟或磁帶機 (最多 64 個) 的路徑，請按一下 **[加入]**。 選取的路徑會在 **[備份至]** 清單中顯示。  
+11. 按一下 **[磁碟]** 或 **[磁帶]** ，以選擇備份目的地的類型。 若要選取包含單一媒體集的磁碟或磁帶機 (最多 64 個) 的路徑，請按一下 **[加入]** 。 選取的路徑會在 **[備份至]** 清單中顯示。  
   
     > [!NOTE]  
     >  若要移除備份目的地，請選取目的地，然後按一下 **[移除]** 。 若要檢視備份目的地的內容，請選取目的地，然後按一下 **[內容]** 。  
@@ -129,7 +128,7 @@ ms.locfileid: "72782753"
     > [!NOTE]  
     >  除非您備份的是交易記錄檔 (依 [一般]  頁面的 [備份類型]  區段中的指定)，否則 [交易記錄檔]  區段中的選項為非使用中。  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]和更新的版本支援[備份壓縮](backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 **備份壓縮預設** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 [壓縮備份]  壓縮備份，而且可以透過核取 [不要壓縮備份]  防止壓縮。  
+16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更新版本支援 [備份壓縮](backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 **備份壓縮預設** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 [壓縮備份]  壓縮備份，而且可以透過核取 [不要壓縮備份]  防止壓縮。  
   
      **檢視目前的 backup compression default**  
   
@@ -151,20 +150,20 @@ ms.locfileid: "72782753"
   
      BACKUP DATABASE *database*  
   
-     {FILE **=** _logical_file_name_ |FILEGROUP **=** _logical_filegroup_name_ } [ **，**.。。*f* ]  
+     { FILE **=** _logical_file_name_ | FILEGROUP **=** _logical_filegroup_name_ } [ **,** ...*f* ]  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **,** ...*n* ]  
   
-     [ WITH *with_options* [ **,**...*o* ] ] ;  
+     [ WITH *with_options* [ **,** ...*o* ] ] ;  
   
     |選項|描述|  
     |------------|-----------------|  
     |*database*|這是要備份交易記錄、部分資料庫或完整資料庫的來源資料庫。|  
-    |**=** 檔案_logical_file_name_|指定要包含在檔案備份中檔案的邏輯名稱。|  
-    |**=** 檔案群組_logical_filegroup_name_|指定要包含在檔案備份中的檔案群組的邏輯名稱。 在簡單復原模式之下，只允許唯讀檔案群組使用檔案群組備份。|  
-    |[ **,**...*f* ]|這是一個預留位置，表示可以指定多個檔案和檔案群組。 檔案或檔案群組的數目沒有限制。|  
-    |*backup_device* [ **,** ...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> {DISK &#124; 磁帶}**=** _physical_backup_device_name_<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
-    |WITH *with_options* [ **,**...*o* ]|另外，也可以指定一個或多個其他選項，如 DIFFERENTIAL。<br /><br /> 注意：差異檔案備份需要以完整檔案備份作為基底。 如需詳細資訊，請參閱[建立差異資料庫備份 &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)。|  
+    |FILE **=** _logical_file_name_|指定要包含在檔案備份中檔案的邏輯名稱。|  
+    |FILEGROUP **=** _logical_filegroup_name_|指定要包含在檔案備份中的檔案群組的邏輯名稱。 在簡單復原模式之下，只允許唯讀檔案群組使用檔案群組備份。|  
+    |[ **,** ...*f* ]|這是一個預留位置，表示可以指定多個檔案和檔案群組。 檔案或檔案群組的數目沒有限制。|  
+    |*backup_device* [ **,** ...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> { DISK &#124; TAPE } **=** _physical_backup_device_name_<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
+    |WITH *with_options* [ **,** ...*o* ]|另外，也可以指定一個或多個其他選項，如 DIFFERENTIAL。<br /><br /> 注意：差異檔案備份需要以完整檔案備份作為基底。 如需詳細資訊，請參閱[建立差異資料庫備份 &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)。|  
   
 2.  在完整復原模式下，您還必須備份交易記錄。 若要使用一組完整的完整檔案備份來還原資料庫，您還必須有足夠的記錄備份，才能從第一個檔案備份開始涵蓋所有的檔案備份。 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)資料庫還原至新位置，並選擇性地重新命名資料庫。  
   
@@ -217,9 +216,9 @@ GO
   
 使用 `Backup-SqlDatabase` 指令程式，並且為 `Files` 參數指定 `-BackupAction` 值。 另外再指定下列其中一個參數：  
   
-    -   若要備份特定檔案，請指定`-DatabaseFile`*字串*參數，其中*string*是要備份的一個或多個資料庫檔案。  
+    -   若要備份特定檔案，請指定 `-DatabaseFile` *字串*參數，其中*string*是要備份的一個或多個資料庫檔案。  
   
-    -   若要備份指定檔案群組中的所有檔案，請指定`-DatabaseFileGroup` *string*參數，其中*string*是要備份的一個或多個資料庫檔案群組。  
+    -   若要備份指定檔案群組中的所有檔案，請指定 `-DatabaseFileGroup` *string*參數，其中*string*是要備份的一個或多個資料庫檔案群組。  
   
      以下範例會為 `MyDB` 資料庫內的次要檔案群組 'FileGroup1' 和 'FileGroup2' 建立其中每個檔案的完整檔案備份。 備份是建立在伺服器執行個體 `Computer\Instance`的預設備份位置。  
   
@@ -233,12 +232,12 @@ GO
  [備份概觀 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [備份歷程記錄和標頭資訊 &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)   
+ [備份記錄與標頭資訊 &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)   
  [備份資料庫 &#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [備份資料庫 &#40;備份選項頁面&#41;](back-up-database-backup-options-page.md)   
  [完整檔案備份 &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
- [&#40;完整復原模式的檔案還原&#41;](file-restores-full-recovery-model.md)   
+ [檔案還原 &#40;完整復原模式&#41;](file-restores-full-recovery-model.md)   
  [檔案還原 &#40;簡單復原模式&#41;](file-restores-simple-recovery-model.md)  
   
   

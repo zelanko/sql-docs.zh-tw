@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f409e978bf977d48fbfc3a9ec56d5ebfe2b545ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064089"
 ---
 # <a name="workload-element-dta"></a>Workload 元素 (DTA)
   指定微調工作階段所用的工作負載。  
@@ -57,7 +56,7 @@ ms.locfileid: "62678716"
  每個微調工作階段都必須指定一個工作負載。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例會指定`Workload`元素的**MyDatabase. mydatabase.mydbowner.tuningtable001. TuningTable001**追蹤資料表。 搭配 SQL Server Profiler 使用微調範本來建立 **TuningTable001** ，並將這份追蹤輸出儲存成一份資料表。  
+ 下列程式碼範例會指定元素的**MyDatabase. mydatabase.mydbowner.tuningtable001. TuningTable001**追蹤資料表 `Workload` 。 搭配 SQL Server Profiler 使用微調範本來建立 **TuningTable001** ，並將這份追蹤輸出儲存成一份資料表。  
   
 ```  
 <DTAXML ...>  

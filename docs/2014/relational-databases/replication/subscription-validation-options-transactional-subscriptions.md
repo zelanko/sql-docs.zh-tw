@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a82e13202209121897a5e5878a141c8d53800a47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40a617dd1beff24f8f072f5d139bec7c1ca65f33
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745419"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063697"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>訂閱驗證選項 (交易式訂閱)
   使用 [**訂閱驗證選項**] 對話方塊，即可指定驗證應該只使用資料列計數，或資料列計數與二進位總和檢查碼。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **確認訂閱者與發行者的複寫資料列數相同。**  
  選取要執行之資料列計數驗證的類型。 對於 Oracle 發行集，唯一可用的選項是 **[直接查詢資料表來計算實際資料列計數]**。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af064de0f89d515f2afb87eb2a6d683d7179e4dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811235"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056909"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>複寫至記憶體最佳化資料表訂閱者
   做為異動複寫訂閱者的資料表 (不包括點對點異動複寫) 可以設定為記憶體最佳化資料表。 其他複寫組態與記憶體最佳化資料表不相容。  
@@ -59,7 +58,7 @@ ms.locfileid: "68811235"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  導覽到快照集資料夾。 預設位置為 "C:\Program Files\Microsoft SQL Server\MSSQL12。\<實例> \mssql\repldata\unc\xxx\yyyymmddhhmmss\\"。  
+2.  導覽到快照集資料夾。 預設位置為 "C:\Program Files\Microsoft SQL Server\MSSQL12. \<INSTANCE>\MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS \\ "。  
   
 3.  找出 **。.SCH**您資料表的檔案，並在 Management Studio 中開啟它。 變更資料表結構描述並更新預存程序，如下所述。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d407cc3c0324b80ff63484f4e7c39ea30575ebc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057636"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967038"
 ---
 # <a name="msmq-connection-manager-editor"></a>MSMQ 連線管理員編輯器
   使用 [MSMQ 連線管理員]**** 對話方塊，來指定 Message Queuing (又稱為 MSMQ) 訊息佇列的路徑。  
@@ -33,7 +32,7 @@ ms.locfileid: "66057636"
  **名稱**  
  提供唯一的名稱給工作流程中的 MSMQ 連線管理員。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
- **描述**  
+ **說明**  
  描述連接管理員。 最佳作法是以其用途描述連接管理員，使封裝可以自我記錄並易於維護。  
   
  **路徑**  
@@ -41,8 +40,8 @@ ms.locfileid: "66057636"
   
 |佇列類型|範例路徑|  
 |----------------|-----------------|  
-|Public|\<電腦名稱>\\<佇列名稱\>|  
-|Private|\<電腦名稱>\Private$\\<佇列名稱\>|  
+|公用|\<computer name>\\<佇列名稱\>|  
+|Private|\<computer name>\Private $ \\<佇列名稱\>|  
   
  您可以使用 "." 代表本機電腦。  
   

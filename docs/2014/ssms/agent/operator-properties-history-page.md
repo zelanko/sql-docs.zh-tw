@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: d25f79da-1ec1-4683-8ceb-5026b62b7364
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b190471ffa985c0f76bc44ce46acea0cd73a7ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63301725"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064354"
 ---
 # <a name="operator-properties-history-page"></a>操作員屬性 (記錄頁面)
   使用此頁面即可檢視最近傳送給操作員之通知的日期、時間及類型。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用電子郵件傳送**  
  最近嘗試發送的電子郵件通知；若此操作員從未發送過電子郵件通知，即是 [(未曾使用電子郵件傳送)]****。  
   

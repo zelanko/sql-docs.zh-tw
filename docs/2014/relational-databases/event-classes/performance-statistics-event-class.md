@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fc22c4af9980eb5c1c365c0ce2d0e2f6c8462e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827191"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029002"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 事件類別
   Performance Statistics 事件類別可用來監視正在執行之查詢、預存程序和觸發程序的效能。 其六個事件子類別分別表示了系統中查詢、預存程序和觸發程序存留期間內的一項事件。 您可以使用這些事件子類別以及關聯 sys.dm_exec_query_stats、sys.dm_exec_procedure_stats 和 sys.dm_exec_trigger_stats 動態管理檢視的組合，重新組成任何給定查詢、預存程序或觸發程序的效能記錄。  
@@ -81,7 +80,7 @@ ms.locfileid: "62827191"
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |EventSubClass|`int`|事件子類別的類型。<br /><br /> 2 = 特定 SQL 陳述式內的已編譯查詢。<br /><br /> 特定批次的追蹤會產生下列 EventSubClass 類型。<br /><br /> 針對查詢數目為 *n* 的隨選批次：<br /><br /> 數目為*n* 的類型 2|21|是|  
 |IntegerData2|`int`|批次內的陳述式結尾。<br /><br /> -1 代表批次的結尾。|55|是|  
-|ObjectID|`int`|不適用|22|是|  
+|ObjectID|`int`|N/A|22|是|  
 |Offset|`int`|批次內的陳述式起始位移。<br /><br /> 0 代表批次的開頭。|61|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |SqlHandle|`image`|SQL 控制代碼。 這可用來透過 dm_exec_sql_text 動態管理檢視取得批次 SQL 文字。|63|是|  

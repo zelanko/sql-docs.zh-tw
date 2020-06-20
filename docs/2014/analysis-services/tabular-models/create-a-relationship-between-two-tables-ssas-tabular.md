@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afd264701c8e74d4fdb99d186e3bb5be8d2b5e15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067542"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939836"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>建立兩個資料表之間的關聯性 (SSAS 表格式)
   如果您資料來源中的資料表並沒有關聯性存在，或如果您要新增資料表，則可以使用模型設計師中的工具來建立新的關聯性。 如需如何在表格式模型中使用關聯性的資訊，請參閱 [關聯性 &#40;SSAS 表格式&#41;](relationships-ssas-tabular.md)。  
@@ -49,7 +48,7 @@ ms.locfileid: "66067542"
   
 6.  針對 **[相關查閱資料行]** 選取資料行，其唯一值與針對 **[資料行]** 選取之資料行中的值相符。  
   
-7.  按一下 [建立]  。  
+7.  按一下頁面底部的 [新增] 。  
   
 #### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>在資料檢視中建立兩個資料表之間的關聯性  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66067542"
   
 5.  針對 **[相關查閱資料行]** 選取資料行，其唯一值與針對 **[資料行]** 選取之資料行中的值相符。  
   
-6.  按一下 [建立]  。  
+6.  按一下頁面底部的 [新增] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;中刪除關聯性](delete-relationships-ssas-tabular.md)   

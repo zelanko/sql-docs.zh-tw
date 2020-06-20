@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 78d9f0e8-eca8-458e-a1ad-29ffa0838ef7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 663e313ad64ecc3f27a4004fb47ea2f4abfe46f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a46a9a925dbe1f97957ad8c3662de0325f693c51
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63254493"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064205"
 ---
 # <a name="notification-services-sql-server-configuration-manager"></a>Notification Services (SQL Server 組態管理員)
   這是支援 [!INCLUDE[ssNS](../../includes/ssns-md.md)]的服務。 若要檢視服務的屬性，請以滑鼠右鍵按一下詳細資料窗格中的服務，然後按一下 **[屬性]** 。  

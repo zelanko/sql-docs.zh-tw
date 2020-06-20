@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9f220f8908e92eaa861f64b0f896f78547b950e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068157"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940269"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>指定資料行&#39;的內容和資料類型（資料採礦 Wizard）
   使用 [指定資料行的內容和資料類型]**** 頁面，即可修改精靈已經設定的資料行和內容類型。 精靈會使用來源資料行的資料類型和選取之演算法的功能，來決定每個資料行的預設資料和內容類型。  
@@ -34,7 +33,7 @@ ms.locfileid: "66068157"
  **資料類型**  
  指派給每個資料行的資料類型。 按一下資料格內部，即可變更資料類型。 如需資料類型的詳細資訊，請參閱[資料類型 &#40;資料採礦&#41;](data-mining/data-types-data-mining.md)。  
   
- **Detect**  
+ **偵測**  
  按一下即可自動偵測數值資料行的連續和分隔內容類型。 此選項不適用於以 OLAP 資料來源為基礎的採礦結構。 針對 OLAP 採礦結構，精靈會自動偵測內容類型並選擇與選取之演算法相容的類型。  
   
 ## <a name="see-also"></a>另請參閱  

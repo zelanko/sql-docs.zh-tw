@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49ddbbbff88ca0ae33caf4230954df710f29365
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e781e1ed4e632b11bff6f559392d829ec57bed94
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62665320"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029554"
 ---
 # <a name="lockacquired-event-class"></a>Lock:Acquired 事件類別
   Lock:Acquired 事件類別指出已完成對資源 (例如資料頁) 取得鎖定。  

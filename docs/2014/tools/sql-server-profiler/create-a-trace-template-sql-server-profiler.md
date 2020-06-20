@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f37369821585845d63bd4d416b1868364045680f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31d90f0577101e0fb01d012434b756f4f318198b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255773"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064041"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>建立追蹤範本 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來建立新追蹤範本。  

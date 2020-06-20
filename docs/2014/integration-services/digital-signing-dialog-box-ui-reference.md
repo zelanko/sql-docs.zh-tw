@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7e676368ccdd28a195f3a50208e3ca1c0703214
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f89d495aa8826250c04f3e0cfe5979d5f202ac8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059452"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966988"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>數位簽章對話方塊 UI 參考
   使用 **[數位簽章]** 對話方塊，即可使用數位簽章來簽署封裝，或是移除簽章。 在 **中，可從** [SSIS] **功能表的** [數位簽章] **選項來使用** [數位簽章] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]對話方塊。  

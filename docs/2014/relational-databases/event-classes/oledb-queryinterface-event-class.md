@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b420e0b4b9c9531209f3d3227f534116e26dd206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d02437d6faeb00b55771f7ef13725a23b3a1f92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032421"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029045"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface 事件類別
   **OLEDB QueryInterface** 事件類別會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對分散式查詢和遠端預存程序發出 OLE DB **QueryInterface** 呼叫時發生。 將這個事件類別納入追蹤，追蹤會監視與分散式查詢和遠端預存程序相關聯的問題。  

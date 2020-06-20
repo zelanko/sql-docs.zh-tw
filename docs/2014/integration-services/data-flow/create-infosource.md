@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eba2d2d28c06a60cc8269a349996646726f59142
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e953cf4c8b3001b199523a747f934283e60473b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827950"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916248"
 ---
 # <a name="create-infosource"></a>建立 InfoSource
   使用 [建立 InfoSource]  對話方塊可以建立新的 InfoSource。 若要建立新的 InfoSource，您可以使用 [建立交易資料的 InfoSource]  或 [建立主要資料的 InfoSource]  對話方塊。  
   
- 您可以從 [SAP BW 目的地編輯器]  的 [連線管理員]  頁面開啟 [建立 InfoSource]  對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](sap-bw-destination.md)。  
+ 您可以從 [SAP BW 目的地編輯器] 的 [連線管理員] 頁面開啟 [建立 InfoSource] 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](sap-bw-destination.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  

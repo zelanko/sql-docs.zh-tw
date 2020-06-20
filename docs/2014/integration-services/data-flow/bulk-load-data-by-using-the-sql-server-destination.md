@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ad0e0c5fc4aec54e9da3333994bf25a34d51acd1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c76318277d718f93bb5d33746a9bf3d62c9bf28
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828131"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916708"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目的地來大量載入資料
   若要加入及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，封裝至少必須包含一個「資料流程」工作及一個資料來源。  
@@ -32,13 +31,13 @@ ms.locfileid: "62828131"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 [資料流程]  索引標籤，然後將  **目的地從 [工具箱]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拖曳到設計介面。  
+3.  按一下 [資料流程] 索引標籤，然後將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地從 [工具箱] 拖曳到設計介面。  
   
 4.  將連接子拖曳到目的地，以便將目的地連接到資料流程中的來源或前一個轉換。  
   
 5.  按兩下目的地。  
   
-6.  在 [連線管理員]  頁面上的 [SQL Server 目的地編輯器]  中，選取現有的 OLE DB 連線管理員，或按一下 [新增]  以新建連線管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
+6.  在 [連線管理員] 頁面上的 [SQL Server 目的地編輯器] 中，選取現有的 OLE DB 連線管理員，或按一下 [新增] 以新建連線管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
   
 7.  若要指定載入資料的資料表或檢視，請執行下列其中之一：  
   

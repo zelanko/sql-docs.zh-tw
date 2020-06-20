@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7bcc8cdc62616dd26eb714b78ad07296a794b55f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50a4fc1d3fdc5feacd13e516cfe3b5ddd02277bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028405"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed 事件類別
   SP:Completed 事件類別指出預存程序已完成執行。  

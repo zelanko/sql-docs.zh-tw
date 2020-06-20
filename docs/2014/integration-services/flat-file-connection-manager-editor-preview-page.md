@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 233bc63102243c60c7ed74b5beeadd2c921f399a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff01832b565b0cca2e1a2550606307552ee63a33
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967088"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>一般檔案連接管理員編輯器 (預覽頁面)
   使用 [一般檔案連線管理員編輯器]**** 對話方塊的 [預覽]**** 節點，即可以表格式格式來檢視來源檔案的內容。  
@@ -30,7 +29,7 @@ ms.locfileid: "66058743"
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
- **描述**  
+ **說明**  
  描述連接。 最佳作法是以其用途描述連接，使封裝可以自我記錄並易於維護。  
   
  **略過的資料列數**  

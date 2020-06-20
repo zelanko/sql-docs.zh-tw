@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7537a892e5453bb66c07ab4b2c6bd6513b754c7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835644"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923239"
 ---
 # <a name="error-handling"></a>錯誤處理
   Oracle CDC 執行個體會針對單一 Oracle 來源資料庫中的變更進行採礦處理 (Oracle RAC 叢集會視為單一資料庫)，並將認可的變更寫入目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 CDC 資料庫內的變更資料表。  
@@ -26,11 +25,11 @@ ms.locfileid: "62835644"
   
  對於每個狀態而言，將會針對 cdc.xdbcdc_state 資料表中的對應資料行顯示以下兩個指標：  
   
--   執行個體未在使用中 (目前沒有任何 Windows 處理序正在處理它)。 如果 [使用中]  資料行值為 1，則表示處理這個特定 Oracle CDC 執行個體之 Oracle CDC 服務的子處理序正在執行中。  
+-   執行個體未在使用中 (目前沒有任何 Windows 處理序正在處理它)。 如果 [使用中]**** 資料行值為 1，則表示處理這個特定 Oracle CDC 執行個體之 Oracle CDC 服務的子處理序正在執行中。  
   
--   如果 [錯誤]  資料行值為 0，則表示 Oracle CDC 執行個體不在錯誤狀況中。 如果 [錯誤]  資料行值為 1，則表示有錯誤阻止 Oracle CDC 執行個體處理變更。  
+-   如果 [錯誤]**** 資料行值為 0，則表示 Oracle CDC 執行個體不在錯誤狀況中。 如果 [錯誤]**** 資料行值為 1，則表示有錯誤阻止 Oracle CDC 執行個體處理變更。  
   
-     如果 [錯誤]  資料行的值為 1 而且 [使用中]  資料行值也是 1，則表示 Oracle CDC 執行個體發生了可以復原的錯誤，而且系統可以自動解決此錯誤。 如果 [錯誤] 資料行的值為 1 而且 [使用中] 資料行的值是 0，則在大多數情況下可能需要採取手動因應措施來解決問題，然後才可以繼續處理。  
+     如果 [錯誤]**** 資料行的值為 1 而且 [使用中]**** 資料行值也是 1，則表示 Oracle CDC 執行個體發生了可以復原的錯誤，而且系統可以自動解決此錯誤。 如果 [錯誤] 資料行的值為 1 而且 [使用中] 資料行的值是 0，則在大多數情況下可能需要採取手動因應措施來解決問題，然後才可以繼續處理。  
   
  下表描述 Oracle CDC 執行個體可能會在其狀態資料表中報告的各種狀態碼。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62835644"
   
 -   MSXDBCDC.dbo.xdbcdc_trace 資料表，它是由 Oracle CDC 服務主要處理序用於一般記錄和追蹤。  
   
--   \<cdc-database>.cdc.xdbcdc_trace 資料表，它是由 Oracle CDC 執行個體用於一般記錄和追蹤。 這表示與特定 Oracle CDC 執行個體相關之錯誤都會記錄到該執行個體的追蹤資料表。  
+-   \<cdc-database>Cdc. xdbcdc_trace 資料表，用於 ORACLE Cdc 實例的一般記錄和追蹤。 這表示與特定 Oracle CDC 執行個體相關之錯誤都會記錄到該執行個體的追蹤資料表。  
   
  當 Oracle CDC 服務在以下情況時會記錄資訊：  
   

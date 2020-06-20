@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 167e799c873d586b06300a7e9433324391968d32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43855c0c13052598de5e2c96ffc8cae5f289d249
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827933"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916429"
 ---
 # <a name="create-infocube-for-transaction-data"></a>建立交易資料的 InfoCube
   使用 [建立交易資料的 InfoCube]  對話方塊可以在 SAP Netweaver BW 系統中建立交易資料的新 InfoCube。  
   
- 您可以從 [SAP BW 目的地編輯器]  的 [連線管理員]  頁面開啟 [建立交易資料的 InfoCube]  對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](sap-bw-destination.md)。  
+ 您可以從 [SAP BW 目的地編輯器] 的 [連線管理員] 頁面開啟 [建立交易資料的 InfoCube] 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](sap-bw-destination.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  

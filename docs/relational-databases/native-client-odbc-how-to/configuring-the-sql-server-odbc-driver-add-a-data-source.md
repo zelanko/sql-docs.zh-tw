@@ -1,5 +1,6 @@
 ---
 title: 加入資料來源（ODBC） |Microsoft Docs
+description: 瞭解 SQL Server ODBC 驅動程式如何使用遠端預存程序呼叫機制，以 SQL Server 中的遠端預存程式來呼叫預存程式。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: b4ac6f0e-8e6a-4b1a-9a7e-60e0a69b2180
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55ae4f357aa850f6b3ff4ba9cca0b59a2ccbc570
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f96a581a822b61e28831ff5eef61b77310f89344
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298314"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967630"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>設定 SQL Server ODBC 驅動程式 - 新增資料來源
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

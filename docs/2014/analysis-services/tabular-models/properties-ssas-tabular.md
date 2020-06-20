@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbaf5c82f386330fc632c55aab3cd3ec5a3d07b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1d8c77ffbe8e185e15b716819498fe48295348e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066709"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938702"
 ---
 # <a name="properties-ssas-tabular"></a>屬性 (SSAS 表格式)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的表格式模型專案包含各種屬性，可定義專案、模型、報表及部署的行為。 屬性設定會以 XML 格式儲存在 Model.bim 檔案中，但是本節所述的所有屬性都可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [屬性]**** 視窗中設定。  

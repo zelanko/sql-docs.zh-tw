@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdcf47e483c3a52879c66838a657b51d65bff8f8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284866"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938699"
 ---
 # <a name="roles-ssas-tabular"></a>角色 (SSAS 表格式)
   表格式模型中的角色定義模型的成員權限。 每個角色都包含成員 (依 Windows 使用者名稱或 Windows 群組列出) 和權限 (讀取、處理、系統管理員)。 角色的成員可以依角色權限所定義，對模型執行動作。 以讀取權限定義的角色也可以使用資料列層級篩選，在資料列層級提供額外的安全性。  
@@ -40,7 +39,7 @@ ms.locfileid: "67284866"
 -   [相關工作](#bkmk_rt)  
   
 ##  <a name="understanding-roles"></a><a name="bkmk_underst"></a>瞭解角色  
- 在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，會使用角色來管理[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和資料的安全性。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]有兩種角色類型：  
+ 在中，會使用角色 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 來管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和資料的安全性。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]有兩種角色類型：  
   
 -   伺服器角色，這是一種固定角色，提供對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的管理員存取權。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "67284866"
 |None|成員無法對模型資料庫結構描述進行任何修改，也無法查詢資料。|不會套用資料列篩選。 此角色的使用者看不到任何資料|  
 |讀取|允許成員查詢資料 (根據資料列篩選)，但是無法在 SSMS 中看到模型資料庫，也無法對模型資料庫結構描述做任何變更，使用者也無法處理模型。|可套用資料列篩選。 使用者只能看到資料列篩選 DAX 公式中指定的資料。|  
 |讀取和處理|成員可以查詢資料 (根據資料列層級篩選)，並透過執行指令碼或包含處理命令的封裝來執行處理作業，但無法對資料庫進行任何變更。 無法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中檢視模型資料庫。|可套用資料列篩選。 只能查詢資料列篩選 DAX 公式中指定的資料。|  
-|Process|成員可以透過執行指令碼或包含處理命令的封裝來執行處理作業。 無法修改模型資料庫結構描述。 無法查詢資料。 無法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查詢模型資料庫。|不會套用資料列篩選。 無法查詢此角色中的任何資料|  
+|程序|成員可以透過執行指令碼或包含處理命令的封裝來執行處理作業。 無法修改模型資料庫結構描述。 無法查詢資料。 無法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查詢模型資料庫。|不會套用資料列篩選。 無法查詢此角色中的任何資料|  
 |系統管理員|成員可以對模型結構描述進行修改，也可以在模型設計師、報表用戶端及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查詢所有資料。|不會套用資料列篩選。 可以查詢此角色中的所有資料。|  
   
 ##  <a name="row-filters"></a><a name="bkmk_rowfliters"></a>資料列篩選  
@@ -83,7 +82,7 @@ ms.locfileid: "67284866"
 |-----------|--------------------|  
 |區域|=Region[Country]="USA"|  
 |ProductCategory|=ProductCategory[Name]="Bicycles"|  
-|異動|=Transactions[Year]=2008|  
+|交易|=Transactions[Year]=2008|  
   
  對 Transactions 資料表套用這些權限的結果如下：成員可以查詢美國客戶、自行車產品類別目錄及 2008 年的資料列。 使用者將無法查詢美國以外地區、非自行車及非 2008 年的任何交易，除非成為授與這些權限的其他角色成員。  
   
@@ -113,20 +112,20 @@ ms.locfileid: "67284866"
 |--------------|---------------|-------------|--------------------|------------------|  
 |Brown|Kevin|Adventure-works\kevin0|Marketing|7|  
 |Bradley|David|Adventure-works\david0|Marketing|7|  
-|Dobney|JoLynn|Adventure-works\JoLynn0|Production|4|  
+|Dobney|JoLynn|Adventure-works\JoLynn0|生產|4|  
 |Baretto DeMattos|Paula|Adventure-works\Paula0|Human Resources|2|  
   
  **dimDepartment**  
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|1|Corporate|  
+|1|公司|  
 |2|Executive General and Administration|  
 |3|Inventory Management|  
-|4|製造|  
+|4|製造業|  
 |5|品質保證|  
 |6|研究與開發|  
-|7|Sales and Marketing|  
+|7|銷售與行銷|  
   
 ##  <a name="testing-roles"></a><a name="bkmk_testroles"></a>測試角色  
  在撰寫模型專案時，您可以使用 [在 Excel 中進行分析] 功能，測試所定義之角色的效用。 請從模型設計師中的 **[模型]** 功能表，按一下 **[在 Excel 中進行分析]**， **[選擇認證和檢視方塊]** 對話方塊即會在 Excel 開啟前出現。 在這個對話方塊中，您可指定目前的使用者名稱、其他使用者名稱、角色，以及您想用來連接至做為資料來源之工作空間模型的檢視方塊。 如需詳細資訊，請參閱本主題稍後的 [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)中的 [角色管理員] 對話方塊來定義角色的表格式模型作者。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 398b24ddbb9d128446012d36f4b691596433054c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a093432acae5f2ac41a9a8136db047130d7548c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662222"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028535"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile 事件類別
   當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 編譯 SQL 陳述式時，就會發生 Showplan All for Query Compile 事件類別。 加入此事件類別，可識別 Showplan 運算子。 所包含的資訊，是 Showplan XML For Query Compile 事件類別中可用資訊的子集。  

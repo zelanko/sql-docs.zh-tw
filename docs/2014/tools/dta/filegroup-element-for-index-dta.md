@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a320b0cea686cdec953b2a508d7f0c277fc2e817
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63154602"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048388"
 ---
 # <a name="filegroup-element-for-index-dta"></a>索引的 Filegroup 元素 (DTA)
   指定要針對使用者指定的組態來建立索引的檔案群組。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 88f9fff576b52e83073bbf917a43edf0a7648086
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d33ade7e7eea9fa9e95453a5b232447f7b222b18
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023583"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057159"
 ---
 # <a name="mssql_eng021797"></a>MSSQL_ENG021797
     
@@ -33,7 +32,7 @@ ms.locfileid: "63023583"
 |訊息文字|'%s' 必須是有效的 Windows 登入，其格式為：'MACHINE\Login' 或 'DOMAIN\Login'。 請參閱 '%s' 的文件集。|  
   
 ## <a name="explanation"></a>說明  
- 如果為**@job_login**參數指定的值為 null 或無效，下列複寫預存程式就會引發此錯誤。 如果 **db_owner** 固定資料庫角色成員從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行指令碼，則可能發生此錯誤。 安全性模型在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中已變更，同時必須更新這些指令碼。  
+ 如果為參數指定的值 **@job_login** 為 null 或無效，下列複寫預存程式就會引發此錯誤。 如果 **db_owner** 固定資料庫角色成員從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行指令碼，則可能發生此錯誤。 安全性模型在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中已變更，同時必須更新這些指令碼。  
   
 -   [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)  
   
@@ -52,7 +51,7 @@ ms.locfileid: "63023583"
  這些預存程序可由適當伺服器上的 **sysadmin** 固定伺服器角色之成員執行，或可由適當資料庫中的 **db_owner** 固定資料庫角色之成員來執行。 每個預存程序均會建立一個代理程式作業，並允許您指定代理程式執行所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶。 對於 **sysadmin** 角色中的使用者，即使未指定 Windows 帳戶(如果帳戶已指定，則其必須是有效帳戶)，也會隱含建立代理程式作業；代理程式會在適當伺服器端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式服務帳戶內容下執行。 雖然不需要此帳戶，但安全性最佳做法是為代理程式指定不同的帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](security/replication-agent-security-model.md)。  
   
 ## <a name="user-action"></a>使用者動作  
- 請確定您為每個程式的**@job_login**參數指定有效的 Windows 帳戶。 若您有上一版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]複寫指令碼，請更新這些指令碼以納入 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]所需的預存程序和參數。 如需詳細資訊，請參閱[升級複寫指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)。  
+ 請確定您為每個程式的參數指定有效的 Windows 帳戶 **@job_login** 。 若您有上一版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]複寫指令碼，請更新這些指令碼以納入 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]所需的預存程序和參數。 如需詳細資訊，請參閱[升級複寫指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤和事件參考 &#40;複寫&#41;](errors-and-events-reference-replication.md)  

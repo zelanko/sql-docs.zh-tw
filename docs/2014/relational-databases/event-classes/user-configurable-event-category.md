@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1791785b-d67d-4cab-8acc-b3cf13af7a1f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3a50b7ce1db0aa390d4fee9fa4e5752c1444dfe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11f3c05128a0bf0b460137e94c94529631042e67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62864559"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027813"
 ---
 # <a name="user-configurable-event-category"></a>User-Configurable 事件類別目錄
   **User-Configurable** 事件類別目錄包含 **User-Configurable** 事件類別。  

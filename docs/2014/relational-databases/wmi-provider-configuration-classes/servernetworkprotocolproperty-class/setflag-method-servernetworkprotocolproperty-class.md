@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 95682cc34f67a0d65f62afdc52ec09c5209e3ba4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bca152482145b06aaa4aa89fd035812279bff4fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62642680"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056794"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>SetFlag 方法 (ServerNetworkProtocolProperty 類別)
   設定參考之屬性的旗標。  
@@ -40,8 +39,8 @@ BoolValue
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
- [ServerNetworkProtocolProperty 類別] ServerNetworkProtocolProperty-class.md）物件，代表實例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上網路通訊協定的屬性。  
+ *object*  
+ [ServerNetworkProtocolProperty 類別] ServerNetworkProtocolProperty-class.md）物件，代表實例上網路通訊協定的屬性 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>參數  
   

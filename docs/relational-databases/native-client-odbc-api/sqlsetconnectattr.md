@@ -1,5 +1,6 @@
 ---
 title: SQLSetConnectAttr |Microsoft Docs
+description: 瞭解 SQLSetConnectAttr 中的連接屬性，包括其設定時間和 SQL Server Native Client ODBC 驅動程式中的可能值。
 ms.custom: ''
 ms.date: 01/09/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17a63a481837894addbd8b626fac015025314099
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3008664916a8863a00dd36772e4b83cf27e845d5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301917"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967731"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -49,22 +50,22 @@ ms.locfileid: "81301917"
 |SQL_COPT_SS_BROWSE_CONNECT|之前|  
 |SQL_COPT_SS_BROWSE_SERVER|之前|  
 |SQL_COPT_SS_CONCAT_NULL|之前|  
-|SQL_COPT_SS_CONNECTION_DEAD|After|  
+|SQL_COPT_SS_CONNECTION_DEAD|在|  
 |SQL_COPT_SS_ENCRYPT|之前|  
-|SQL_COPT_SS_ENLIST_IN_DTC|After|  
-|SQL_COPT_SS_ENLIST_IN_XA|After|  
+|SQL_COPT_SS_ENLIST_IN_DTC|在|  
+|SQL_COPT_SS_ENLIST_IN_XA|在|  
 |SQL_COPT_SS_FALLBACK_CONNECT|之前|  
 |SQL_COPT_SS_FAILOVER_PARTNER|之前|  
 |SQL_COPT_SS_INTEGRATED_SECURITY|之前|  
 |SQL_COPT_SS_MARS_ENABLED|之前|  
 |SQL_COPT_SS_MULTISUBNET_FAILOVER|之前|  
 |SQL_COPT_SS_OLDPWD|之前|  
-|SQL_COPT_SS_PERF_DATA|After|  
-|SQL_COPT_SS_PERF_DATA_LOG|After|  
-|SQL_COPT_SS_PERF_DATA_LOG_NOW|After|  
-|SQL_COPT_SS_PERF_QUERY|After|  
-|SQL_COPT_SS_PERF_QUERY_INTERVAL|After|  
-|SQL_COPT_SS_PERF_QUERY_LOG|After|  
+|SQL_COPT_SS_PERF_DATA|在|  
+|SQL_COPT_SS_PERF_DATA_LOG|在|  
+|SQL_COPT_SS_PERF_DATA_LOG_NOW|在|  
+|SQL_COPT_SS_PERF_QUERY|在|  
+|SQL_COPT_SS_PERF_QUERY_INTERVAL|在|  
+|SQL_COPT_SS_PERF_QUERY_LOG|在|  
 |SQL_COPT_SS_PRESERVE_CURSORS|之前|  
 |SQL_COPT_SS_QUOTED_IDENT|之前或之後|  
 |SQL_COPT_SS_TRANSLATE|之前或之後|  
@@ -102,7 +103,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- 預設值為 **ReadWrite**。 如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 對[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ag 支援的詳細資訊，請參閱[高可用性和嚴重損壞修復的 SQL Server Native Client 支援](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
+ 預設值為 **ReadWrite**。 如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 對 ag 支援的詳細資訊 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ，請參閱[高可用性和嚴重損壞修復的 SQL Server Native Client 支援](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
 
 <a name="sqlcoptssattachdbfilename"></a>
 ## <a name="sql_copt_ss_attachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
@@ -136,7 +137,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |值|描述|  
 |-----------|-----------------|  
-|computername|**SQLBrowseConnect**會傳回指定電腦[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的實例清單。 雙反斜線\\\\（）不應該用於伺服器名稱（例如，而不是\\\MyServer，應使用 MyServer）。|  
+|computername|**SQLBrowseConnect**會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定電腦上的實例清單。 雙反斜線（ \\ \\ ）不應該用於伺服器名稱（例如，而不是 \\ \MyServer，應使用 MyServer）。|  
 |NULL|預設值。 **SQLBrowseConnect**會傳回網域中所有伺服器的資訊。|  
 
 <a name="sqlcoptssconcatnull"></a>
@@ -157,7 +158,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |值|描述|  
 |-----------|-----------------|  
 |SQL_EN_ON|連接將會加密。|  
-|SQL_EN_OFF|連接將不會加密。 這是預設值。|  
+|SQL_EN_OFF|連接將不會加密。 此為預設值。|  
 
 <a name="sqlcoptssenlistindtc"></a>
 ## <a name="sql_copt_ss_enlist_in_dtc"></a>SQL_COPT_SS_ENLIST_IN_DTC  
@@ -211,7 +212,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
 ```  
   
- 如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 對[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ag 支援的詳細資訊，請參閱[高可用性和嚴重損壞修復的 SQL Server Native Client 支援](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
+ 如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 對 ag 支援的詳細資訊 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ，請參閱[高可用性和嚴重損壞修復的 SQL Server Native Client 支援](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -286,7 +287,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 
 <a name="sqlcoptsstranslate"></a>
 ## <a name="sql_copt_ss_translate"></a>SQL_COPT_SS_TRANSLATE  
- SQL_COPT_SS_TRANSLATE 會在交換 MBCS 資料時，讓驅動程式在用戶端與伺服器字碼頁之間轉譯字元。 屬性只會影響儲存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char**、 **Varchar**和**text**資料行中的資料。  
+ SQL_COPT_SS_TRANSLATE 會在交換 MBCS 資料時，讓驅動程式在用戶端與伺服器字碼頁之間轉譯字元。 屬性只會影響儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char**、 **Varchar**和**text**資料行中的資料。  
   
 |值|描述|  
 |-----------|-----------------|  

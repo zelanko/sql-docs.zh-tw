@@ -1,5 +1,6 @@
 ---
 title: SQLDriverConnect |Microsoft Docs
+description: 深入瞭解 SQLDriverConnect 連線屬性，並支援 SQL Server Native Client ODBC 驅動程式中的高可用性/嚴重損壞修復和 Spn。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,23 +15,23 @@ ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d1455f0b91313ea137ec9c13a2d318fba0807b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b2df8cd200acec558e2fb522bfbc43f3a4975d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302544"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967730"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會定義可取代或增強連接字串關鍵字的連接屬性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式已經指定數個連接字串關鍵字的預設值。  
   
- 如需[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式中可用的關鍵字清單，請參閱搭配[使用連接字串關鍵字與 SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+ 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式中可用的關鍵字清單，請參閱搭配[使用連接字串關鍵字與 SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
- 如需[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連接屬性和驅動程式預設行為的詳細資訊，請參閱[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)。  
+ 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接屬性和驅動程式預設行為的詳細資訊，請參閱[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)。  
   
- 如需對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 有效之連接字串關鍵字的討論，請參閱搭配[使用連接字串關鍵字與 SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+ 如需對 Native Client 有效之連接字串關鍵字的討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱搭配[使用連接字串關鍵字與 SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
  當**SQLDriverConnect**_DriverCompletion_參數值 SQL_DRIVER_PROMPT、SQL_DRIVER_COMPLETE 或 SQL_DRIVER_COMPLETE_REQUIRED 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會從顯示的對話方塊中抓取關鍵字值。 如果在連接字串中傳遞關鍵字值，而且使用者沒有在對話方塊中變更關鍵字的值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會使用連接字串中的值。 如果沒有在連接字串中設定值，而且使用者沒有在對話方塊中進行指派，驅動程式會使用預設值。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "81302544"
  如果*DriverCompletion*參數值 SQL_DRIVER_COMPLETE 或 SQL_DRIVER_PROMPT，而且如果語言或資料庫無效， **SQLDriverConnect**會重新引發對話方塊。  
   
 ## <a name="sqldriverconnect-support-for-high-availability-disaster-recovery"></a>高可用性/災害復原的 SQLDriverConnect 支援  
- 如需使用**SQLDriverConnect**連線到[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]叢集的詳細資訊，請參閱[高可用性和嚴重損壞修復 SQL Server Native Client 支援](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
+ 如需使用**SQLDriverConnect**連線到叢集的詳細資訊 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ，請參閱[高可用性和嚴重損壞修復 SQL Server Native Client 支援](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
   
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>服務主要名稱 (SPN) 的 SQLDriverConnect 支援  
  SQLDDriverConnect 將會使用 [ODBC 登入] 對話方塊 boxwhen 提示已啟用。 如此可允許同時針對主體伺服器和它的容錯移轉夥伴來輸入 SPN。  

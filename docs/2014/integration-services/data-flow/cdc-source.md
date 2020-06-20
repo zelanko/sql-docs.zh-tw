@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3452e504072188ea5f4bacf3fa6f10002335fb4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828122"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916638"
 ---
 # <a name="cdc-source"></a>CDC 來源
   CDC 來源會從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 變更資料表中讀取變更資料的範圍，並將這些變更向下游傳遞至其他 SSIS 元件。  
@@ -38,7 +37,7 @@ ms.locfileid: "62828122"
   
 -   做為決定 CDC 處理範圍之依據的 CDC 狀態封裝變數名稱。 CDC 來源不會修改該變數。  
   
- CDC 來源傳回的資料與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 函式 **cdc.fn_cdc_get_all_changes_\<擷取執行個體名稱>** 或 **cdc.fn_cdc_get_net_changes_\<擷取執行個體名稱>** (如果有) 傳回的資料相同。 唯一的選擇性附加資料行是 **__$initial_processing** ，表示目前處理範圍是否可與資料表的初始載入重疊。 如需初始處理的詳細資訊，請參閱 [CDC 控制工作](../control-flow/cdc-control-task.md)。  
+ CDC 來源傳回的資料與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cdc 函數**cdc. fn_cdc_get_all_changes_ \<capture-instance-name> **或 cdc 所傳回的資料相同。 **fn_cdc_get_net_changes_ \<capture-instance-name> ** （如果有的話）。 唯一的選擇性附加資料行是 **__$initial_processing** ，表示目前處理範圍是否可與資料表的初始載入重疊。 如需初始處理的詳細資訊，請參閱 [CDC 控制工作](../control-flow/cdc-control-task.md)。  
   
  CDC 來源有一個一般輸出和一個錯誤輸出。  
   
@@ -75,20 +74,20 @@ use <cdc-enabled-database-name>
   
  其中：  
   
--   \<cdc-enabled-database-name> 是包含變更資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫名稱。  
+-   \<cdc-enabled-database-name>這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含變更資料表的資料庫名稱。  
   
--   \<value-from-state-cs> 是在 CDC 狀態變數中顯示為 CS/\<value-from-state-cs>/ 的值 (CS 代表 Current-processing-range-Start)。  
+-   \<value-from-state-cs>這是 CDC 狀態變數中顯示為 CS/ \<value-from-state-cs> /（cs 代表目前處理範圍開始）的值。  
   
--   \<value-from-state-ce> 是在 CDC 狀態變數中顯示為 CE/\<value-from-state-cs>/ 的值 (CE 代表 Current-processing-range-End)。  
+-   \<value-from-state-ce>這是 CDC 狀態變數中顯示為 CE/ \<value-from-state-cs> /（ce 代表目前處理範圍結束）的值。  
   
--   \<模式> 是 CDC 處理模式。 處理模式有下列其中一個值：[全部]  、[全部 (含舊值)]  、[淨]  、[淨 (含更新遮罩)]  、[淨 (含合併)]  。  
+-   \<mode>這是 CDC 處理模式。 處理模式有下列其中一個值：[全部]  、[全部 (含舊值)]  、[淨]  、[淨 (含更新遮罩)]  、[淨 (含合併)]  。  
   
  此指令碼會在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中重現問題，協助您輕鬆重現及識別錯誤以隔離問題。  
   
 #### <a name="sql-server-error-message"></a>SQL Server 錯誤訊息  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能會傳回下列訊息：  
   
- **提供給程序或函式 cdc.fn_cdc_get_net_changes_\<..>** 的引數數量不足。  
+ **為程式或函數 cdc 提供的引數數目不足。 fn_cdc_get_net_changes_ \<..> 。**  
   
  此錯誤並不表示缺少引數。 它表示 CDC 狀態變數中的開始或結束 LSN 值無效。  
   

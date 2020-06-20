@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e47c9640c314ad28ae64ef105d723b77695e644d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f30221e3afb898834fcc13476760499fd3a5f9e8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176448"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951828"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS 教學課程：部署封裝
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供數個工具，可讓您輕鬆地將套件部署到另一部電腦。 部署工具也可以用來管理任何相依性，例如封裝所需的組態和檔案。 在這個教學課程中，您會學到如何使用這些工具，將封裝及其相依性安裝到目標電腦上。
@@ -43,10 +42,10 @@ ms.locfileid: "78176448"
  這個教學課程的目標是，模擬在實際部署時可能遇到的各種問題的複雜性。 但是，如果您無法將封裝部署到其他電腦上，仍然可以進行這個教學課程，只要將封裝安裝在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]本機執行個體上的 msdb 資料庫中，然後從本機執行個體上的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 執行封裝就可以了。
 
 ## <a name="what-you-will-learn"></a>學習內容
- 若要熟悉中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供的新工具、控制項和功能，最好的方法就是使用它們。 這個教學課程會逐步解說各個步驟，教您建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，然後將封裝和其他必要檔案加入至專案中。 當專案完成之後，您還要建立部署配套、將部署配套複製到目的地電腦，然後將封裝安裝到目的地電腦上。
+ 若要熟悉中提供的新工具、控制項和功能，最好的方法 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 就是使用它們。 這個教學課程會逐步解說各個步驟，教您建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，然後將封裝和其他必要檔案加入至專案中。 當專案完成之後，您還要建立部署配套、將部署配套複製到目的地電腦，然後將封裝安裝到目的地電腦上。
 
 ## <a name="requirements"></a>需求
- 本教學課程的主要物件是已經熟悉基本檔案系統作業，但對提供[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的新功能有所限制的使用者。 若要進一步瞭解[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]您將在本教學課程中使用的基本概念，您可能會發現，首先要完成下列[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]教學課程：[執行 SQL Server 匯入和匯出嚮導](import-export-data/start-the-sql-server-import-and-export-wizard.md)和[SSIS 教學課程：建立簡單的 ETL 封裝](../integration-services/ssis-how-to-create-an-etl-package.md)。
+ 本教學課程的主要物件是已經熟悉基本檔案系統作業，但對提供的新功能有所限制的使用者 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。 若要進一步瞭解 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 您將在本教學課程中使用的基本概念，您可能會發現，首先要完成下列 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教學課程：[執行 SQL Server 匯入和匯出嚮導](import-export-data/start-the-sql-server-import-and-export-wizard.md)和[SSIS 教學課程：建立簡單的 ETL 封裝](../integration-services/ssis-how-to-create-an-etl-package.md)。
 
  **來源電腦。** 要用來建立部署配套的電腦必須安裝下列元件：
 
@@ -68,14 +67,14 @@ ms.locfileid: "78176448"
 
 -   您必須具有在 AdventureWorks 中建立和卸除資料表以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中執行封裝的權限。
 
--   您必須具有 msdb[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]系統資料庫中 sysssispackages 資料表的 [讀取] 和 [寫入] 許可權。
+-   您必須具有 msdb 系統資料庫中 sysssispackages 資料表的 [讀取] 和 [寫入] 許可權 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。
 
  如果您計畫將封裝部署到建立部署配套時所使用的同一部電腦，則該部電腦必須同時符合來源電腦和目的地電腦的需求。
 
  **完成這個教學課程的估計時間：** 2 小時
 
 ## <a name="lessons-in-this-tutorial"></a>本教學課程中的課程
- [第1課：準備建立部署](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)配套在這一課，您將建立新[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的專案，並將封裝和其他必要檔案加入至專案，以準備部署 ETL 解決方案。
+ [第1課：準備建立部署](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)配套在這一課，您將建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，並將封裝和其他必要檔案加入至專案，以準備部署 ETL 解決方案。
 
  [第2課：建立部署](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)配套在這一課，您將建立部署公用程式，並確認部署配套包含必要的檔案。
 

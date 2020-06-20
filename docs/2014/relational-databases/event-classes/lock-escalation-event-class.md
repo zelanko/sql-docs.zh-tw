@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bf476175245000ba63e058ca333953d07276076
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662365"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029425"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation 事件類別
   **Lock:Escalation** 事件類別指出細粒鎖定已經轉換成粗粒鎖定；例如，轉換成物件鎖定的資料列鎖定。 擴大事件類別是事件識別碼 60。  
@@ -58,7 +57,7 @@ ms.locfileid: "62662365"
 |**StartTime**|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
 |**TextData**|`ntext`|導致鎖定擴大之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的文字。|1|是|  
 |**TransactionID**|`bigint`|由系統指派給交易的識別碼。|4|是|  
-|**類型**|`int`|鎖定擴大資料粒度：<br /><br /> 1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT (資料表層級)<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=HOBT<br /><br /> 13=ALLOCATION_UNIT|57|是|  
+|**型別**|`int`|鎖定擴大資料粒度：<br /><br /> 1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT (資料表層級)<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=HOBT<br /><br /> 13=ALLOCATION_UNIT|57|是|  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `sp_trace_create` 程序來建立追蹤、使用 `sp_trace_setevent` 將鎖定擴大資料行加入至追蹤，然後使用 `sp_trace_setstatus` 來啟動追蹤。 在 `EXEC sp_trace_setevent @TraceID, 60, 22, 1`等陳述式中，數字 `60` 表示擴大事件類別、 `22` 表示 **ObjectID** 資料行，而 `1` 會將追蹤事件設定為 ON。  

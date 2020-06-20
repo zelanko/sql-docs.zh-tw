@@ -1,5 +1,6 @@
 ---
 title: 執行大量複製作業（ODBC） |Microsoft Docs
+description: 瞭解 SQL Server Native Client ODBC 驅動程式如何支援執行 SQL Server 大量複製作業的 DB-LIBRARY 函數。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58c355c437d325e2a0db228f8ed4af83956fecf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 45e7ac1eb4497c055f5dfdce1057541b42f4015b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785040"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967702"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>執行大量複製作業 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "73785040"
      在執行時間必須存在。 sqlncli11.dll 是透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式散發。  
   
 > [!NOTE]  
->  ODBC **SQLBulkOperations**函數與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大量複製函數沒有任何關聯性。 應用程式必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專用的大量複製函數才能執行大量複製作業。  
+>  ODBC **SQLBulkOperations**函數與大量複製函數沒有任何關聯性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 應用程式必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專用的大量複製函數才能執行大量複製作業。  
   
 ## <a name="minimally-logging-bulk-copies"></a>最低限度記錄的大量複製  
  利用完整復原模式，大量載入所執行的所有資料列插入作業都會完整記錄在交易記錄檔中。 對於大型資料載入，這可能會導致交易記錄檔迅速填滿。 在某些情況下，可以用最低限度記錄。 最低限度記錄會降低大量載入作業填滿記錄檔空間的可能性，而且也比完整記錄更有效率。  

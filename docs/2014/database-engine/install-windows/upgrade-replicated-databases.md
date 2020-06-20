@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 326a94820876b40128428aac58e47c650ce122b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775314"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931849"
 ---
 # <a name="upgrade-replicated-databases"></a>升級複寫的資料庫
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級複寫資料庫。升級節點時，不需要停止其他節點上的活動。 請確定您遵守有關拓撲中支援之版本的規則：  

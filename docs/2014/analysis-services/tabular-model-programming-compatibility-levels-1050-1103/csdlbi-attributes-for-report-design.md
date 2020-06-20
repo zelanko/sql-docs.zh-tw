@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b7d2a9f075879ce1bfa0c0e7257ea8a2495562c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee53cb3e4910e988403350bac5c993ef68b5170d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757931"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940124"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>報表設計的 CSDLBI 屬性
   本節描述表格式模型化的 CSDL 延伸模組中影響 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 查詢設計的屬性。  
@@ -51,20 +50,20 @@ ms.locfileid: "62757931"
 |屬性名稱|資料類型|描述|  
 |--------------------|---------------|-----------------|  
 |`ReferenceName`|Text|用於在 DAX 查詢中參考此實體的識別碼。 如果省略，則使用欄位名稱。|  
-|`Caption`|Text|實體的顯示名稱。 如果省略，則會使用`ReferenceName`欄位的。|  
+|`Caption`|Text|實體的顯示名稱。 如果省略，則 `ReferenceName` 會使用欄位的。|  
 |`Documentation`|Text|協助商務使用者了解欄位意義的描述性文字。|  
 |`Hidden`|Boolean|表示是否應顯示欄位。 預設值為 `false`，表示會顯示欄位。|  
 |`DisplayFolder`|Text|在其中顯示此欄位的資料夾的名稱 (完整路徑)。 如果省略，則在模型根中顯示欄位。|  
-|`ContextualNameRule`|例舉|值，表示是否應該根據使用內容來修改屬性名稱及其修改方式。 可能的值為：`None`、`Role`、`Merge`。|  
-|`Alignment`|例舉|值，表示在表格式簡報中對齊欄位值的方式。 可能的值為 `Default`、`Center`、`Left`、`Right`。 如果省略，預設值會根據欄位的資料類型決定對齊方式。|  
+|`ContextualNameRule`|列舉|值，表示是否應該根據使用內容來修改屬性名稱及其修改方式。 可能的值為：`None`、`Role`、`Merge`。|  
+|`Alignment`|列舉|值，表示在表格式簡報中對齊欄位值的方式。 可能的值為 `Default`、`Center`、`Left`、`Right`。 如果省略，預設值會根據欄位的資料類型決定對齊方式。|  
 |`FormatString`|Text|.NET 格式字串，指出欄位的值應該如何根據預設格式化。 如果省略，則採用下列格式：<br /><br /> -Datetime 欄位：地區簡短日期或 "d"<br />-具有預設彙總函式的浮點欄位和整數位段：區域號碼或 "n"<br />-沒有預設彙總函式的整數：區域十進位數或 "d"<br /><br /> 如果是所有其他類型的欄位，則不套用任何格式字串。|  
 |`Units`|Text|套用至欄位值以表示單位的符號。 如果省略，則假設單位為未知。|  
 |`Width`|整數|慣用的寬度（以字元為單位），應保留以在表格式呈現中顯示欄位的值。 如果省略，則預設寬度是以欄位的資料類型為基礎。|  
-|`SortDirection`|例舉|值，表示一般的欄位值排序方式。 可能的值為 `Default`、`Ascending`、`Descending`。 如果省略，預設值會根據欄位的資料類型來指派排序方向。|  
+|`SortDirection`|列舉|值，表示一般的欄位值排序方式。 可能的值為 `Default`、`Ascending`、`Descending`。 如果省略，預設值會根據欄位的資料類型來指派排序方向。|  
 |`IsRightToLeft`|Boolean|表示欄位是否包含應該由右至左讀取的文字。 如果省略，則採用模型設定。|  
 |`OrderBy`|MemberRef|模型中另一個欄位的參考，可定義此欄位值的排序次序。 這兩個欄位的值必須具有 1:1 對應，否則排序行為是未定義的。 如果省略，欄位就會根據自己的值來排序。|  
-|`Contents`|例舉|列舉，描述欄位的子類型或內容。 如果省略，則不會假設任何特定的子類型，除非欄位的資料類型是 Binary，在此情況下會採用影像。 如需支援的內容類型完整清單，請參閱 AMO 文件集。|  
-|`DefaultAggregateFunction`|例舉|值，表示通常用於彙總此欄位的預設函數 (如果有)。 可能的值為 `None`、`Sum`、`Average`、`Count`、`Min`、`Max`。 如果省略，對於數值欄位採用 `Sum`，對於所有其他欄位則採用 `None`。|  
+|`Contents`|列舉|列舉，描述欄位的子類型或內容。 如果省略，則不會假設任何特定的子類型，除非欄位的資料類型是 Binary，在此情況下會採用影像。 如需支援的內容類型完整清單，請參閱 AMO 文件集。|  
+|`DefaultAggregateFunction`|列舉|值，表示通常用於彙總此欄位的預設函數 (如果有)。 可能的值為 `None`、`Sum`、`Average`、`Count`、`Min`、`Max`。 如果省略，對於數值欄位採用 `Sum`，對於所有其他欄位則採用 `None`。|  
 |`IsSimpleMeasure`|Boolean|表示量值是否只是數值欄位的簡單彙總。 這類彙總可以視需要在查詢中輕鬆地定義，因此應該從模型定義中省略以提高效能。 如果省略，則假設為 `false`。|  
 |`Kpi`<br /><br /> `KpiGoal`<br /><br /> `KpiStatus`|Subelement|表示量值元素要做為 KPI。 KPI 子元素使用 KpiGoal 和 KpiStauts 元素以定義相關的顯示影像和目標範圍。|  
   
