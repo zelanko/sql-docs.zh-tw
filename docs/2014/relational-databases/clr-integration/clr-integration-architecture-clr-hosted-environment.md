@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11eae15e50c26c4abde212ef273d6ede63ffe30d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953879"
 ---
 # <a name="clr-hosted-environment"></a>CLR 主控環境
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR) 是一個執行許多新式程式語言的環境，包括 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++。 CLR 具備記憶體回收的記憶體、先佔式執行緒、中繼資料服務 (類型反映)、程式碼可驗證性以及程式碼存取安全性。 CLR 會使用中繼資料來找出並載入類別、配置記憶體中的執行個體、解析方法引動過程、產生機器碼、強制使用安全性，和設定執行階段內容界限。  
@@ -123,7 +122,7 @@ ms.locfileid: "62922562"
 |-|-|-|-|  
 |權限集合|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |程式碼存取安全性|僅限 Execute|對外部資源的 Execute + 存取權|不受限制|  
-|程式設計模型限制|是|是|無限制|  
+|程式設計模型限制|是|是|沒有限制|  
 |可驗證性需求|是|是|否|  
 |呼叫機器碼的能力|否|否|是|  
   

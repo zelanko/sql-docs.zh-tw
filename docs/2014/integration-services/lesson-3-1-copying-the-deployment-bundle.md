@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1d28a85e4dccaa6165d96046848513879998136f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8f443c6525743dfd00849459cee210eb87a0062
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968219"
 ---
 # <a name="step-1-copying-the-deployment-bundle"></a>步驟 1:複製部署套件組合
   在這項工作中，您會將部署配套複製到目的地電腦。  

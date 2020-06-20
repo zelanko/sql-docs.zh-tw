@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5663ff72d643cb1488bbf2b2866e2cdd94a0f56f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797766"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960528"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>編碼及解碼 SQL Server 識別碼
   SQL Server 分隔識別碼有時會包含 Windows PowerShell 路徑中不支援的字元。 編碼這些字元的十六進位值，就可以指定這些字元。  
@@ -25,7 +24,7 @@ ms.locfileid: "72797766"
 2.  **處理特殊字元：**  [編碼識別碼](#EncodeIdent)、 [解碼識別碼](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>開始之前  
- Windows PowerShell 路徑名稱中不支援的字元可以表示或編碼為 "%" 字元，後面接著代表該字元之位模式的十六進位值，如 "**%** xx"。 編碼一定可以用來處理 Windows PowerShell 路徑中不支援的字元。  
+ Windows PowerShell 路徑名稱中不支援的字元可以表示或編碼為 "%" 字元，後面接著代表該字元之位模式的十六進位值，如 " **%** xx"。 編碼一定可以用來處理 Windows PowerShell 路徑中不支援的字元。  
   
  **Encode-SqlName** Cmdlet 會將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼作為輸入。 它會輸出一個字串，其中包含編碼為 "%xx" 之 Windows PowerShell 語言不支援的所有字元。 **Decode-SqlName** Cmdlet 會將編碼的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼作為輸入，並傳回原始識別碼。  
   

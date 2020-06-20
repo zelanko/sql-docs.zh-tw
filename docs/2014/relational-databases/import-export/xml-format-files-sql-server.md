@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e323d686d739f832a6ae70707e4393a22a78b27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cc1e8de30fa582898ef8516b9767dec14c4fa81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011561"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050460"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式檔案 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供 XML 結構描述，以定義撰寫 *「XML 格式檔案」* (XML format file) 用於將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的語法。 XML 格式檔案必須遵守以 XML 結構描述定義語言 (XSDL) 定義的這個結構描述。 只有在同時安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 時，才能支援 XML 格式檔案。  
@@ -55,36 +54,36 @@ ms.locfileid: "66011561"
 ##  <a name="structure-of-xml-format-files"></a><a name="StructureOfXmlFFs"></a> XML 格式檔案的結構  
  就像非 XML 格式檔案一樣，XML 格式檔案也定義資料檔中資料欄位的格式和結構，並將那些資料欄位對應到單一目標資料表中的資料行。  
   
- XML 格式檔案擁有兩個主要元件：\<記錄> 和 \<資料列>：  
+ XML 格式檔案擁有兩個主要元件， \<RECORD> 和 \<ROW> ：  
   
--   \<記錄> 描述儲存在資料檔案中的資料。  
+-   \<RECORD>描述儲存在資料檔案中的資料。  
   
-     每個 \<記錄> 項目包含一或多個 \<欄位> 項目組成的集合。 這些元素對應到資料檔案中的欄位。 基本語法如下：  
+     每個 \<RECORD> 元素都包含一組或多個 \<FIELD> 元素。 這些元素對應到資料檔案中的欄位。 基本語法如下：  
   
-     \<記錄>  
+     \<RECORD>  
   
-     \<欄位 .../> [ ...*n* ]  
+     \<FIELD .../>[ ...*n* ]  
   
-     \</記錄>  
+     \</RECORD>  
   
-     每一個 \<欄位> 項目描述特定資料欄位的內容。 一個欄位只能對應到資料表的一個資料行。 並非所有欄位都需要對應到資料行。  
+     每個 \<FIELD> 元素都會描述特定資料欄位的內容。 一個欄位只能對應到資料表的一個資料行。 並非所有欄位都需要對應到資料行。  
   
      資料檔中的欄位可以是固定/可變長度或以字元終止。 「欄位值」  可以如此表示：一個字元 (使用單一位元組表示法)、一個寬字元 (使用 Unicode 雙位元組表示法)、原生資料庫格式或一個檔案名稱。 如果欄位值是以檔案名稱表示，則檔案名稱指向包含目標資料表中 BLOB 資料行的值的檔案。  
   
--   \<資料列> 描述當資料檔案中的資料匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的語法。  
+-   \<ROW>描述當檔案中的資料匯入資料表時，如何從資料檔中建立資料列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-     \<資料列> 項目包含一組 \<資料行> 項目。 這些元素對應到資料表資料行。 基本語法如下：  
+     \<ROW>元素包含一組 \<COLUMN> 元素。 這些元素對應到資料表資料行。 基本語法如下：  
   
-     \<資料列>  
+     \<ROW>  
   
-     \<資料行 .../> [ ...*n* ]  
+     \<COLUMN .../>[ ...*n* ]  
   
-     \</資料列>  
+     \</ROW>  
   
-     每個 \<資料行> 項目都只能對應至資料檔案中的一個欄位。 \<ROW> 元素中的 \<COLUMN> 元素順序會定義大量作業傳回這些元素的順序。 XML 格式檔案會將本機名稱指派給每個 \<COLUMN> 元素，而此名稱與大量匯入作業之目標資料表中的資料行沒有任何關聯性。  
+     每個專案只能 \<COLUMN> 對應至資料檔案中的一個欄位。 \<COLUMN>元素在專案中的順序 \<ROW> 會定義大量作業傳回這些專案的順序。 XML 格式檔案 \<COLUMN> 會將本機名稱指派給每個元素，這與大量匯入作業之目標資料表中的資料行沒有任何關聯性。  
   
 ##  <a name="schema-syntax-for-xml-format-files"></a><a name="SchemaSyntax"></a> XML 格式檔案的結構描述語法  
- 本節包含 XML 格式檔案之 XML 結構描述的元素和屬性摘要。 格式檔案的語法與作業方向無關；也就是說，不管是大量匯出還是大量匯入作業，語法都相同。 本節也探討大量匯入如何使用 \<資料列> 與 \<資料行> 項目，以及如何將項目的 xsi:type 值放入資料集中。  
+ 本節包含 XML 格式檔案之 XML 結構描述的元素和屬性摘要。 格式檔案的語法與作業方向無關；也就是說，不管是大量匯出還是大量匯入作業，語法都相同。 本節也會考慮大量匯入如何使用 \<ROW> 和專案 \<COLUMN> ，以及如何將元素的 xsi： type 值放入資料集。  
   
  若要了解語法如何對應到實際 XML 格式檔案，請參閱本主題後面的 [範例 XML 格式檔案](#SampleXmlFFs)。  
   
@@ -94,99 +93,99 @@ ms.locfileid: "66011561"
   
   
 ###  <a name="basic-syntax-of-the-xml-schema"></a><a name="BasicSyntax"></a> XML 結構描述的基本語法  
- 此語法陳述式只會顯示項目 (\<BCP 格式>、\<錄>、\<欄位>、\<資料行> 和 \<資料行>) 及其基本屬性。  
+ 這個語法語句只會顯示元素（ \<BCPFORMAT> 、 \<RECORD> 、 \<FIELD> 、 \<ROW> 和 \<COLUMN> ）及其基本屬性。  
   
- \<BCP 格式 ...>  
+ \<BCPFORMAT ...>  
   
- \<記錄>  
+ \<RECORD>  
   
  \<欄位識別碼 = "*fieldID*" xsi:type = "*fieldType*" [...]  
   
  />  
   
- \</記錄>  
+ \</RECORD>  
   
- \<資料列>  
+ \<ROW>  
   
  \<資料行來源 = "*fieldID*" NAME = "*columnName*" xsi:type = "*columnType*" [...]  
   
  />  
   
- \</資料列>  
+ \</ROW>  
   
- \</BCP 格式>  
+ \</BCPFORMAT>  
   
 > [!NOTE]  
->  本主題稍後將會描述與 \<欄位> 或 \<> 項目中的 xsi:type 值相關聯的其他屬性。  
+>  \<FIELD>本主題稍後將描述與或元素中的 xsi： type 值相關聯的其他屬性 \<COLUMN> 。  
   
 
   
 ####  <a name="schema-elements"></a><a name="SchemaElements"></a> Schema 元素  
  本節摘要說明 XML 結構描述為 XML 格式檔案定義之每個元素的目的。 稍後會在此主題另一節說明屬性。  
   
- \<BCP 格式>  
+ \<BCPFORMAT>  
  格式檔案元素，它定義所指定資料檔的記錄結構，以及它和資料表中資料表資料列的資料行之對應關係。  
   
- \<記錄 .../>  
- 定義包含一或多個 \<欄位> 項目的複雜項目。 格式檔案中欄位的宣告順序是欄位出現在資料檔中的順序。  
+ \<RECORD .../>  
+ 定義包含一或多個元素的複雜元素 \<FIELD> 。 格式檔案中欄位的宣告順序是欄位出現在資料檔中的順序。  
   
- \<欄位 .../>  
+ \<FIELD .../>  
  定義資料檔中包含資料的欄位。  
   
- 這個項目的屬性將在本主題稍後的 [\<欄位> 項目的屬性](#AttrOfFieldElement)中加以討論。  
+ 此元素的屬性會在本主題稍後的[ \<FIELD> 元素的屬性](#AttrOfFieldElement)中討論。  
   
- \<資料列 .../>  
- 定義包含一或多個 \<資料行> 項目的複雜項目。 \<資料行> 項目的順序與 RECORD 定義中的 \<欄位> 項目順序無關。 相反的，格式檔案中的 \<資料行> 項目順序會決定結果資料列集中的資料行順序。 資料欄位會以對應的 \<資料行> 項目在 \<資料行> 項目中宣告的順序載入。  
+ \<ROW .../>  
+ 定義包含一或多個元素的複雜元素 \<COLUMN> 。 元素的順序 \<COLUMN> 與記錄定義中的專案順序無關 \<FIELD> 。 相反地，格式檔案中的元素順序會 \<COLUMN> 決定結果資料列集的資料行順序。 資料欄位會依照對應元素在專案中宣告的順序載入 \<COLUMN> \<COLUMN> 。  
   
- 如需詳細資訊，請參閱本主題稍後的[大量匯入如何使用 \<資料列> 項目](#HowUsesROW)。  
+ 如需詳細資訊，請參閱本主題稍後的[大量匯入如何使用 \<ROW> 元素](#HowUsesROW)。  
   
- \<資料行>  
- 定義資料行作為項目 (\<資料行>)。 每個 \<COLUMN> 元素都會對應到 \<FIELD> 元素 (其識別碼是在 \<COLUMN> 元素的 SOURCE 屬性中指定)。  
+ \<COLUMN>  
+ 將資料行定義為元素（ \<COLUMN> ）。 每個專案都 \<COLUMN> 對應至專案 \<FIELD> （其識別碼是在元素的 SOURCE 屬性中指定 \<COLUMN> ）。  
   
- 這個項目的屬性將在本主題稍後的 [\<資料行> 項目的屬性](#AttrOfColumnElement)中加以討論。 另請參閱本主題稍後的[大量匯入如何使用 \<資料行> 項目](#HowUsesColumn)。  
+ 此元素的屬性會在本主題稍後的[ \<COLUMN> 元素的屬性](#AttrOfColumnElement)中討論。 另請參閱本主題稍後的[大量匯入如何使用 \<COLUMN> 元素](#HowUsesColumn)。  
   
- \</BCP 格式>  
+ \</BCPFORMAT>  
  結束格式檔案時需要用到。  
   
-####  <a name="attributes-of-the-field-element"></a><a name="AttrOfFieldElement"></a>\<欄位> 項目的屬性  
- 本節描述 \<欄位> 項目的屬性，這些屬性會摘要在下列的結構描述語法中：  
+####  <a name="attributes-of-the-field-element"></a><a name="AttrOfFieldElement"></a>元素的屬性 \<FIELD>  
+ 本章節描述元素的屬性 \<FIELD> ，其摘要在下列的架構語法中：  
   
  <FIELD  
   
- 識別碼 **= "*`fieldID`*"**  
+ 識別碼 **= " *`fieldID`* "**  
   
- xsi **：** type **= "*`fieldType`*"**  
+ xsi **：** type **= " *`fieldType`* "**  
   
  [ LENGTH **="*`n`*"** ]  
   
- [PREFIX_LENGTH **= "*`p`*"** ]  
+ [PREFIX_LENGTH **= " *`p`* "** ]  
   
- [MAX_LENGTH **= "*`m`*"** ]  
+ [MAX_LENGTH **= " *`m`* "** ]  
   
- [定序 **=*`collationName`*""** ]  
+ [定序 **= " *`collationName`* "** ]  
   
- [結束字元 **= "*`terminator`*"** ]  
+ [結束字元 **= " *`terminator`* "** ]  
   
  />  
   
- 每個 \<欄位> 項目都與其他項目無關。 以下透過屬性來說明欄位：  
+ 每個專案 \<FIELD> 都與其他元素無關。 以下透過屬性來說明欄位：  
   
 |FIELD 屬性|描述|選擇性 /<br /><br /> 必要|  
 |---------------------|-----------------|------------------------------|  
-|識別碼 **= "*`fieldID`*"**|指定資料檔中欄位的邏輯名稱。 欄位識別碼是用來參考該欄位的索引鍵。<br /><br /> <欄位識別碼 **= "*`fieldID`*"**/> 對應到 <資料行來源 **=*`fieldID`*""**/>|必要|  
-|xsi： type **= "*`fieldType`*"**|這是識別元素執行個體之類型的 XML 建構 (如同屬性般使用)。 *fieldType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。|必要 (視資料類型而定)|  
-|LENGTH **="*`n`*"**|此屬性定義固定長度資料類型的執行個體之長度。<br /><br /> *n* 的值必須為正整數。|除非 xsi:type 值有要求，否則是選擇性的|  
-|PREFIX_LENGTH **= "*`p`*"**|此屬性定義二進位資料代表的前置長度。 PREFIX_LENGTH 值 *p* 必須是下列其中一個：1、2、4 或 8。|除非 xsi:type 值有要求，否則是選擇性的|  
-|MAX_LENGTH **= "*`m`*"**|此屬性是可儲存在給定欄位中的最大位元組數。 若沒有目標資料表，則無法取得資料行最大長度。 MAX_LENGTH 屬性會限制輸出字元資料行的最大長度，因而限制為資料行值配置的儲存區。 在 ELECT FROM 子句中使用 OPENROWSET 函數的 BULK 選項時，這樣做特別方便。<br /><br /> *m* 的值必須為正整數。 根據預設， **char** 資料行的最大長度是 8000 個字元，而 **nchar** 資料行的最大長度是 4000 個字元。|選擇性|  
-|定序 **=*`collationName`*""**|COLLATION 只能用於字元欄位。 如需 SQL 定序名稱的清單，請參閱 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)。|選用|  
-|結束字元 **= "*`terminator`*"**|此屬性會指定資料欄位的結束字元。 結束字元可以是任何字元。 結束字元必須是不包含於資料之任何部分的唯一字元。<br /><br /> 根據預設，欄位結束字元是定位字元 (以 \t 表示)。 若要表示段落標記，請使用 \r\n。|只能搭配字元資料的 xsi:type 使用，字元資料需要此屬性。|  
+|識別碼 **= " *`fieldID`* "**|指定資料檔中欄位的邏輯名稱。 欄位識別碼是用來參考該欄位的索引鍵。<br /><br /> <欄位識別碼 **= " *`fieldID`* "**/> 對應到 <資料行來源 **= " *`fieldID`* "**/>|必要|  
+|xsi： type **= " *`fieldType`* "**|這是識別元素執行個體之類型的 XML 建構 (如同屬性般使用)。 *fieldType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。|必要 (視資料類型而定)|  
+|長度 **= " *`n`* "**|此屬性定義固定長度資料類型的執行個體之長度。<br /><br /> *n* 的值必須為正整數。|除非 xsi:type 值有要求，否則是選擇性的|  
+|PREFIX_LENGTH **= " *`p`* "**|此屬性定義二進位資料代表的前置長度。 PREFIX_LENGTH 值 *p* 必須是下列其中一個：1、2、4 或 8。|除非 xsi:type 值有要求，否則是選擇性的|  
+|MAX_LENGTH **= " *`m`* "**|此屬性是可儲存在給定欄位中的最大位元組數。 若沒有目標資料表，則無法取得資料行最大長度。 MAX_LENGTH 屬性會限制輸出字元資料行的最大長度，因而限制為資料行值配置的儲存區。 在 ELECT FROM 子句中使用 OPENROWSET 函數的 BULK 選項時，這樣做特別方便。<br /><br /> *m* 的值必須為正整數。 根據預設， **char** 資料行的最大長度是 8000 個字元，而 **nchar** 資料行的最大長度是 4000 個字元。|選用|  
+|定序 **= " *`collationName`* "**|COLLATION 只能用於字元欄位。 如需 SQL 定序名稱的清單，請參閱 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)。|選用|  
+|結束字元 **= " *`terminator`* "**|此屬性會指定資料欄位的結束字元。 結束字元可以是任何字元。 結束字元必須是不包含於資料之任何部分的唯一字元。<br /><br /> 根據預設，欄位結束字元是定位字元 (以 \t 表示)。 若要表示段落標記，請使用 \r\n。|只能搭配字元資料的 xsi:type 使用，字元資料需要此屬性。|  
   
-#####  <a name="xsitype-values-of-the-field-element"></a><a name="XsiTypeValuesOfFIELD"></a>\<欄位> 項目的 xsi:type 值  
+#####  <a name="xsitype-values-of-the-field-element"></a><a name="XsiTypeValuesOfFIELD"></a>元素的 Xsi： type 值 \<FIELD>  
  xsi:type 值是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 如需有關使用「將 xsi:type 值放入資料集」的資訊，請參閱本節稍後的部分。  
   
- \<欄位> 項目的 xsi:type 值支援下列資料類型。  
+ 元素的 xsi： type 值 \<FIELD> 支援下列資料類型。  
   
-|\<欄位> xsi:type 值|必要的 XML 屬性<br /><br /> 適用於資料類型|選擇性 XML 屬性<br /><br /> 適用於資料類型|  
+|\<FIELD>xsi： type 值|必要的 XML 屬性<br /><br /> 適用於資料類型|選擇性 XML 屬性<br /><br /> 適用於資料類型|  
 |-------------------------------|---------------------------------------------------|---------------------------------------------------|  
 |**NativeFixed**|`LENGTH`|無。|  
 |**NativePrefix**|`PREFIX_LENGTH`|MAX_LENGTH|  
@@ -199,8 +198,8 @@ ms.locfileid: "66011561"
   
  如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)。  
   
-####  <a name="attributes-of-the-column-element"></a><a name="AttrOfColumnElement"></a>\<資料行> 項目的屬性  
- 本節描述 \<資料行> 項目的屬性，這些屬性會摘要在下列的結構描述語法中：  
+####  <a name="attributes-of-the-column-element"></a><a name="AttrOfColumnElement"></a>元素的屬性 \<COLUMN>  
+ 本章節描述元素的屬性 \<COLUMN> ，其摘要在下列的架構語法中：  
   
  \<元素的 xsi:type 值  
   
@@ -226,20 +225,20 @@ ms.locfileid: "66011561"
   
 |COLUMN 屬性|描述|選擇性 /<br /><br /> 必要|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **= "*`fieldID`*"**|指定對應到資料行的欄位識別碼。<br /><br /> <資料行來源 **=*`fieldID`*""**/> 對應到 <欄位識別碼 **=*`fieldID`*""**/>|必要|  
+|SOURCE **= " *`fieldID`* "**|指定對應到資料行的欄位識別碼。<br /><br /> <資料行來源 **= " *`fieldID`* "**/> 對應到 <欄位識別碼 **= " *`fieldID`* "**/>|必要|  
 |NAME = "*columnName*"|指定資料列集中由格式檔案代表的資料行名稱。 此資料行名稱會用來識別結果集中的資料行，而且它不需要對應到用於目標資料表中的資料行名稱。|必要|  
-|xsi **：** type **= "*`ColumnType`*"**|這是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 *ColumnType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。<br /><br /> 注意：下表列出*ColumnType*的可能值及其相關聯的屬性。|選擇性|  
-|LENGTH **="*`n`*"**|定義固定長度資料類型的長度。 只有當 xsi:type 是字串資料類型時，才會使用 LENGTH。<br /><br /> *n* 的值必須為正整數。|選用 (只在 xsi:type 是字串資料類型時才可使用)|  
+|xsi **：** type **= " *`ColumnType`* "**|這是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 *ColumnType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。<br /><br /> 注意：下表列出*ColumnType*的可能值及其相關聯的屬性。|選用|  
+|長度 **= " *`n`* "**|定義固定長度資料類型的長度。 只有當 xsi:type 是字串資料類型時，才會使用 LENGTH。<br /><br /> *n* 的值必須為正整數。|選用 (只在 xsi:type 是字串資料類型時才可使用)|  
 |PRECISION **="*`n`*"**|指定數字中的位數。 例如，數字 123.45 的精確度是 5。<br /><br /> 其值必須為正整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
-|SCALE **= "*`int`*"**|指定數字中小數點右方的位數。 例如，數字 123.45 的小數位數是 2。<br /><br /> 值必須是整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
+|SCALE **= " *`int`* "**|指定數字中小數點右方的位數。 例如，數字 123.45 的小數位數是 2。<br /><br /> 值必須是整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|指定資料行是否可指定 NULL 值。 此屬性完全與 FIELDS 無關。 然而，若資料行並非 NULLABLE 且欄位指定 NULL (未指定任何值)，則會導致執行階段錯誤。<br /><br /> 只有當您執行一般的 SELECT FROM OPENROWSET(BULK...) 陳述式時，才會使用 NULLABLE 屬性。|選用 (可用於任何資料類型)|  
   
-#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a>\<資料行> 項目的 xsi:type 值  
+#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a>元素的 Xsi： type 值 \<COLUMN>  
  xsi:type 值是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 如需有關使用「將 xsi:type 值放入資料集」的資訊，請參閱本節稍後的部分。  
   
- \<資料行> 項目支援原生 SQL 資料類型，如下所示：  
+ \<COLUMN>元素支援原生 SQL 資料類型，如下所示：  
   
-|類型類別目錄|\<資料行> 資料類型|必要的 XML 屬性<br /><br /> 適用於資料類型|選擇性 XML 屬性<br /><br /> 適用於資料類型|  
+|類型類別目錄|\<COLUMN>資料類型|必要的 XML 屬性<br /><br /> 適用於資料類型|選擇性 XML 屬性<br /><br /> 適用於資料類型|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
 |已修正|`SQLBIT`、`SQLTINYINT`、`SQLSMALLINT`、`SQLINT`、`SQLBIGINT`、`SQLFLT4`、`SQLFLT8`、`SQLDATETIME`、`SQLDATETIM4`、`SQLDATETIM8`、`SQLMONEY`、`SQLMONEY4`、`SQLVARIANT` 和 `SQLUNIQUEID`|無。|NULLABLE|  
 |變數數字|`SQLDECIMAL` 和 `SQLNUMERIC`|無。|NULLABLE、PRECISION、SCALE|  
@@ -253,24 +252,24 @@ ms.locfileid: "66011561"
   
  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的詳細資訊，請參閱 [資料類型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)＞。  
   
-###  <a name="how-bulk-import-uses-the-row-element"></a><a name="HowUsesROW"></a> 大量匯入如何使用 \<資料列> 項目  
- 某些內容會略過 \<資料列> 項目。 \<資料列> 項目是否會影響大量匯入作業，視作業執行方式而定：  
+###  <a name="how-bulk-import-uses-the-row-element"></a><a name="HowUsesROW"></a>大量匯入如何使用 \<ROW> 元素  
+ \<ROW>在某些內容中，會忽略元素。 元素是否 \<ROW> 會影響大量匯入作業，取決於作業的執行方式：  
   
 -   **bcp** 命令  
   
-     將資料載入目標資料表時，**P** 會略過 \<資料列> 元件。 相反地， **bcp** 會根據目標資料表的資料行類型來載入資料。  
+     將資料載入目標資料表時， **bcp**會忽略此 \<ROW> 元件。 相反地， **bcp** 會根據目標資料表的資料行類型來載入資料。  
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式 (BULK INSERT 和 OPENROWSET 的 Bulk 資料列集提供者)  
   
-     大量匯入資料到資料表時，[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式會使用 \<資料列> 元件來產生輸入資料列集。 此外，[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式會根據在目標資料表中 \<資料列> 與對應資料行中指定的資料行類型，執行適當的類型轉換。 若格式檔案中指定的資料行類型與目標資料表不同，會發生額外的類型轉換。 此額外類型轉換可能會導致 BULK INSERT 或 OPENROWSET 的 Bulk 資料列集提供者發生某些不一致 (亦即，遺失精確度) 的行為 (與 **bcp**相較)。  
+     當大量匯入資料到資料表時， [!INCLUDE[tsql](../../../includes/tsql-md.md)] 語句會使用 \<ROW> 元件來產生輸入資料列集。 此外， [!INCLUDE[tsql](../../../includes/tsql-md.md)] 語句會根據所指定的資料行類型 \<ROW> 和目標資料表中的對應資料行，執行適當的類型轉換。 若格式檔案中指定的資料行類型與目標資料表不同，會發生額外的類型轉換。 此額外類型轉換可能會導致 BULK INSERT 或 OPENROWSET 的 Bulk 資料列集提供者發生某些不一致 (亦即，遺失精確度) 的行為 (與 **bcp**相較)。  
   
-     \<資料列> 項目中的資訊可讓您建構資料列，而不需要任何額外資訊。 因此，您可以使用 SELECT 陳述式 (SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*) 來產生資料列集。  
+     元素中的資訊 \<ROW> 允許資料列的建立，而不需要任何額外的資訊。 因此，您可以使用 SELECT 陳述式 (SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*) 來產生資料列集。  
   
     > [!NOTE]  
     >  OPENROWSET BULK 子句需要格式檔案 (請注意，要有 XML 格式檔案才能將欄位的資料類型轉換為資料行的資料類型)。  
   
-###  <a name="how-bulk-import-uses-the-column-element"></a><a name="HowUsesColumn"></a> 大量匯入如何使用 \<資料行> 項目  
- 若要大量匯入資料至資料表中，格式檔案中的 \<資料行> 項目會藉由指定下列各項，將資料檔案欄位對應到資料表資料行：  
+###  <a name="how-bulk-import-uses-the-column-element"></a><a name="HowUsesColumn"></a>大量匯入如何使用 \<COLUMN> 元素  
+ 若要將資料大量匯入資料表，格式檔案中的元素會藉 \<COLUMN> 由指定下列專案，將資料檔案欄位對應到資料表資料行：  
   
 -   資料檔的資料列中每一個欄位的位置。  
   
@@ -278,7 +277,7 @@ ms.locfileid: "66011561"
   
  若沒有任何資料行對應到欄位，則該欄位不會被複製到產生的資料列。 此行為可讓資料檔產生具有不同資料行的資料列 (在不同的資料表中)。  
   
- 同樣地，從資料表大量匯出資料時，格式檔案中的每一個 \<資料行> 會將輸入資料表資料列中的資料行對應到輸出資料檔案中的對應欄位。  
+ 同樣地，若要從資料表大量匯出資料，格式檔案中的每個都會將 \<COLUMN> 輸入資料表資料列中的資料行對應到輸出資料檔案中的對應欄位。  
   
 ###  <a name="putting-the-xsitype-value-into-a-data-set"></a><a name="PutXsiTypeValueIntoDataSet"></a> 將 xsi:type 值放到資料集中  
  當您使用 XML Schema Definition (XSD) 語言來驗證 XML 文件時，xsi:type 值不會放到資料集中。 然而，您可以透過將 XML 格式檔案載入到 XML 文件 (例如： `myDoc`)，來將 xsi:type 資訊放到資料集中，如以下程式碼片段所示：  
@@ -310,7 +309,7 @@ for(int i=0;i<ColumnList.Count;i++)
   
  **資料表 (資料列)：** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **資料檔 (記錄)：** Age\<tab>Firstname\<tab>Lastname\<return>  
+ **資料檔案（記錄）：** 年齡 \<tab> Firstname \<tab> Lastname\<return>  
   
  下列 XML 格式檔案會將資料檔中的資料讀入資料表。  
   
@@ -348,7 +347,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  **資料表 (資料列)：** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **資料檔 (記錄)：** Age\<tab>Lastname\<tab>Firstname\<return>  
+ **資料檔案**（記錄）：年齡 \<tab> 姓氏 \<tab> Firstname\<return>  
   
  在 `<RECORD>` 元素中，格式檔案是以字元資料來表示這三個欄位內的資料值。  
   
@@ -383,7 +382,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  **資料表 (資料列)：** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
   
- **資料檔 (記錄)：** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
+ **資料檔案（記錄）：** 年齡 \<tab> 員工 \<tab> 姓名 \<tab> 姓氏 Lastname\<return>  
   
  在 `<RECORD>` 元素中，格式檔案是以字元資料來表示這四個欄位內的資料值。 每一個欄位的 TERMINATOR 屬性，都會指出跟在資料值後面的結束字元。  
   
@@ -417,7 +416,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  如需參考相等的 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 範例，請參閱 [使用格式檔案略過資料欄位 &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)＞。  
   
-###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> D. 將 \<欄位> xsi:type 對應到 \<資料行> xsi:type  
+###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> D. \<FIELD>將 xsi： type 對應到 \<COLUMN> xsi： type  
  下列範例顯示不同類型的欄位，以及它們與資料行的對應關係。  
   
 ```  

@@ -14,24 +14,23 @@ helpviewer_keywords:
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 342624645e9bd88d0a7afd08b3c18225fc2c14ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dac1363ce1c2f9ec1a82f7bb1b699b0f23240f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245366"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058638"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>從 SQL Server Management Studio 連接到任何 SQL Server 元件
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之各項元件所需的功能。 請利用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來連接到：  
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體。  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
  雖然 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您在沒有先建立資料來源連接的情況下，直接使用查詢，但大部分其他工作都需要連接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供 [連接到伺服器]  對話方塊，可讓您設定對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的連線屬性。 當 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 啟動時，便會開啟 [連接到伺服器]  對話方塊，提示您連線到伺服器。 [連接到伺服器]  對話方塊會保留上次使用的連線設定。  
   

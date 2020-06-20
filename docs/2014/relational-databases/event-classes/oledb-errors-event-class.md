@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a0f4e99247fe1a4a80734e56d8db1e05b961e43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97918f1be9c5256fe05c873841ceca98fff3917f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62961064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052852"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors 事件類別
   對 OLE DB 提供者的呼叫若傳回錯誤，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中就會發生 OLEDB Errors 事件類別。 在追蹤中包含此事件類別，以檢視 OLE DB 提供者的失敗 HRESULT。  

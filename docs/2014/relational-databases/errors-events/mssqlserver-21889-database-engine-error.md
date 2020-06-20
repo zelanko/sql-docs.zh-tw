@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 262b2c795da92b2ef32c6956d9a2deda0e45a39d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c152a542550d7b81af880545f526037baeb4644e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915225"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034641"
 ---
 # <a name="mssqlserver_21889"></a>MSSQLSERVER_21889
     
@@ -36,6 +35,6 @@ ms.locfileid: "62915225"
  若要裝載發行者資料庫，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體必須是複寫發行者。 `sp_validate_redirected_publisher` 會呼叫遠端伺服器上的 `sp_helpdistributor`，以便判斷伺服器是否為複寫發行者。 當 `sp_helpdistributor` 預存程序的執行結果表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目標執行個體不是複寫發行者時，就會傳回此錯誤。  
   
 ## <a name="user-action"></a>使用者動作  
- 請在裝載發行者資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上執行 `sp_adddistributor`。 執行 `sp_adddistributor` 時，請指定正確的散發者。 針對*@password*參數使用與一開始在散發者端執行`sp_adddistributor`時所使用的相同值。  
+ 請在裝載發行者資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上執行 `sp_adddistributor`。 執行 `sp_adddistributor` 時，請指定正確的散發者。 針對參數使用與一開始在散發者端執行時所使用的相同值 *@password* `sp_adddistributor` 。  
   
   

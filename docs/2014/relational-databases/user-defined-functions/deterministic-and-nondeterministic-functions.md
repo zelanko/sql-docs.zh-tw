@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5463ac19caf9a82e48dd59c4ba05873587b74324
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e755532e06d64e273408c7e81936a1c2d370697
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714725"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066409"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定性與非決定性函數
   假設資料庫狀態相同，任何時候以特定的輸入值集來呼叫決定性函數時，一律會傳回相同的結果。 即使所存取的資料庫維持在相同的狀態，每次以特定的輸入值集來呼叫非決定性函數時，都會傳回不同的結果。 例如，在上述限定情況下，AVG 函數一律傳回相同的結果，而傳回目前日期時間值的 GETDATE 函數則一律傳回不同的結果。  

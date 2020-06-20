@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 77571ccd-bdba-4e07-af55-465509dc6a33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e6874d2fc2fd0206e7fe61d4e217820b4171a13e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3ca6d787616821532b30af0fe3591f79d6dbea6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067845"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940159"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>資料表屬性對話方塊 (SSAS - 表格式)
   使用 **中的** [資料表屬性] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可檢視表格式模型資料庫中資料表的屬性。 所有屬性都是唯讀的。  
@@ -30,7 +29,7 @@ ms.locfileid: "66067845"
 |----------|----------------|  
 |**名稱**|顯示資料表的名稱。|  
 |**識別碼**|顯示資料表的識別碼。|  
-|**描述**|顯示資料表的描述。|  
+|**說明**|顯示資料表的描述。|  
 |**建立時間戳記**|顯示建立資料表的日期和時間。|  
 |**上次結構描述更新**|顯示上次更新資料表之中繼資料的日期和時間。|  
 |**State**|顯示資料表的處理狀態。 如需有關此屬性之值的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>＞。|  

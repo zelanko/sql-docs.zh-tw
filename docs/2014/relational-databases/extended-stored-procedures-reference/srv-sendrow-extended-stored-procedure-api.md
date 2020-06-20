@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f39355222b491be27cc1b914401dcc459151e4bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35e640b00c0479d7db1d9a151aa6dcdc0eb67cc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62718055"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050531"
 ---
 # <a name="srv_sendrow-extended-stored-procedure-api"></a>srv_sendrow (擴充預存程序 API)
     
@@ -48,7 +47,7 @@ srvproc
  *srvproc*  
  這是 SRV_PROC 結構的指標，也是特定用戶端連接的控制代碼 (此案例中為接收語言要求的控制代碼)。 此結構包含了一些資訊，擴充預存程序 API 程式庫會使用這些資訊來管理應用程式與用戶端之間的通訊和資料。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  

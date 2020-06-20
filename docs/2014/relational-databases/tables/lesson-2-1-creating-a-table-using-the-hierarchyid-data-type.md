@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0d1f361f-336c-4571-99d1-f4813b2d9fc4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98ce16a3630032001a1191b09b1b0ade13aacb73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92d07c0c4525c08960f8e36c551852ff501648af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110122"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068040"
 ---
 # <a name="creating-a-table-using-the-hierarchyid-data-type"></a>使用 hierarchyid 資料類型建立資料表
   以下範例會建立名稱為 EmployeeOrg 的資料表，其中同時包含員工資料及其回報的階層。 這個範例會在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中建立資料表，但是這是選擇性的。 為了要維持此範例的簡單性，此資料表僅包含五個資料行：  

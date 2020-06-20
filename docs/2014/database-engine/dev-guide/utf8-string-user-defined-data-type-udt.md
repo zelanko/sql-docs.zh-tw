@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a983d8c4488cf9830a3dd7b63a6ad8d3fe1e5fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9676f321604516dd369cfffbdf449acc55c25f2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637626"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933179"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 字串使用者自訂資料類型 (UDT)
   SQL Server 的 UTF8String 範例會示範使用者定義資料類型的實作。 此範例示範 UTF8 使用者自訂資料類型的實作，即擴充資料庫的類型系統來為 UTF8 編碼值提供儲存體。 此類型也會實作程式碼，在 Unicode 與 UTF8 之間轉換字串。  
@@ -78,7 +77,7 @@ ms.locfileid: "73637626"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-10. 將[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令腳本複製到檔案中，並將`test.sql`它儲存成範例目錄中的。  
+10. 將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存成 `test.sql` 範例目錄中的。  
   
 11. 使用下列命令來執行測試指令碼  
   

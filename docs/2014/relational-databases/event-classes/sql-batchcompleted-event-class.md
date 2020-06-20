@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94127112d214ba976e3b517bdf91a7d6b26b2d1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9d4e156f090501a79f2a2d8cef7822e8dc6a81b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050687"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051620"
 ---
 # <a name="sqlbatchcompleted-event-class"></a>SQL:BatchCompleted 事件類別
   SQL:BatchCompleted 事件類別代表已完成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次。  

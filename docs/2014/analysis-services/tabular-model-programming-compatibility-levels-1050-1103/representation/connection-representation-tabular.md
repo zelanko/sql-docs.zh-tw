@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ffd99068db329ea8e9066c6bd9508dc13f239690
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60f3fdc10baf5dc3be9cd1b0ee6196d2a8da3d2f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757774"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940099"
 ---
 # <a name="connection-representation-tabular"></a>連接表示法 (表格式)
   定義填入表格式模型之資料來源的連接物件。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f0cc47-52f9-413d-8c7a-b4298dd874ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a5fa76e11cf7d04c5fa2068cf8ea8ea40939f0e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068061"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940249"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>標準檢視 (彙總索引標籤，Cube 設計師)
   使用彙總設計師的 **[標準檢視]** 來檢視彙總。 您也可以在這個檢視中，使用 **[彙總設計精靈]** 或 **[基於使用方式的最佳化精靈]** 來建立和修改彙總設計。  

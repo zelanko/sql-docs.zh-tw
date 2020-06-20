@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4967d494f381b7562c1bbecdd04811d22239e66
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809341"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934929"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>伺服器屬性 (一般頁面) - SQL Server Management Studio
   使用此頁面檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的唯讀資訊。  

@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c48db11ae347d1fb1c2a393e440aebb0c80def54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afeb7605c544ee1442a7f7ace91cdd91ad97db95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912120"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013876"
 ---
 # <a name="sqlservice-class"></a>SqlService 類別
-  [SqlService 類別](sqlservice-class.md)代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務的實例。  
+  [SqlService 類別](sqlservice-class.md)代表服務的實例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
- [SqlService 類別](sqlservice-class.md)是用來以程式設計方式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理服務。 使用[SqlService 類別](sqlservice-class.md)物件，您可以執行下列工作：  
+ [SqlService 類別](sqlservice-class.md)是用來以程式設計方式管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務。 使用[SqlService 類別](sqlservice-class.md)物件，您可以執行下列工作：  
   
 -   連接到服務。  
   

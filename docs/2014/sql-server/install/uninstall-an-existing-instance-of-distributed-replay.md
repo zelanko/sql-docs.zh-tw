@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 418af5b3-b8d8-45ba-9219-24ac2a348c29
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 45fddb470ce7bee4dd84cbcc3c656e33d30e3166
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa0dd504e38944f314896ac825c7e25709790e25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035809"
 ---
 # <a name="uninstall-an-existing-instance-of-distributed-replay"></a>解除安裝 Distributed Replay 的現有執行個體
   解除安裝 Distributed Replay 元件 (控制器或用戶端) 將會移除下列項目：  
@@ -30,9 +29,9 @@ ms.locfileid: "66091770"
   
 1.  在 [**開始**] 功能表中，按一下 [**控制台**]，然後按兩下 [**新增或移除程式**]。  
   
-     在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [**卸載或變更程式**] 視窗中選取，然後在對話方塊[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中按一下 [**移除**]。  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在 [**卸載或變更程式**] 視窗中選取，然後在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 對話方塊中按一下 [**移除**]。  
   
-2.  依照[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]嚮導中的步驟操作，然後在 [**選取功能**] 頁面上，選取您要移除的 Distributed Replay 元件，然後按 **[下一步]**。  
+2.  依照嚮導中的步驟操作 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，然後在 [**選取功能**] 頁面上，選取您要移除的 Distributed Replay 元件，然後按 **[下一步]**。  
   
 3.  完成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈，解除安裝選取的 Distributed Replay 功能。  
   

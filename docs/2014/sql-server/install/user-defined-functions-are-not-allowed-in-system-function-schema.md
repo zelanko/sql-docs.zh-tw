@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7242f9fda74288a2b7354ac0550ff4966e05c555
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091325"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058779"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-system_function_schema"></a>system_function_schema 中不允許有使用者定義函數
   Upgrade Advisor 偵測到使用者定義的函數，這些函式是由未記載的使用者**system_function_schema**所擁有。 您無法藉由指定這個使用者建立使用者定義的系統函數。 **System_function_schema**的使用者名稱不存在，而且與此名稱相關聯的使用者識別碼（UID = 4）是保留供**sys**架構使用，而且僅限於內部使用。  
@@ -39,9 +38,9 @@ ms.locfileid: "66091325"
   
  這些變更對於使用者自訂系統函數具有下列影響：  
   
--   參考**system_function_schema**的資料定義語言（DDL）語句將會失敗。 例如，\_ `schema.fn`語句`CREATE FUNCTION system`_`function` \_ `MySystemFunction`將不會成功。  
+-   參考**system_function_schema**的資料定義語言（DDL）語句將會失敗。 例如，語句 `CREATE FUNCTION system` _ `function` \_ `schema.fn` \_ `MySystemFunction` .。。將不會成功。  
   
--   升級[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至之後， **system_function_schema**所擁有的現有物件只會包含在**master**資料庫的**sys**架構中。 由於無法修改系統物件，因此這些函數永遠不會變更或從**master**資料庫中卸載。 此外，您無法透過只指定單部分函數名稱，從其他資料庫叫用這些函數。  
+-   升級至之後 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ， **system_function_schema**所擁有的現有物件只會包含在**master**資料庫的**sys**架構中。 由於無法修改系統物件，因此這些函數永遠不會變更或從**master**資料庫中卸載。 此外，您無法透過只指定單部分函數名稱，從其他資料庫叫用這些函數。  
   
 ## <a name="corrective-action"></a>更正動作  
  在升級之前，請完成下列工作：  

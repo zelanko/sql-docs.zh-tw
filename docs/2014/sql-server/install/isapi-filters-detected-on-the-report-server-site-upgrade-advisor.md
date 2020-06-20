@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: dd30560d-9e16-47c7-ba68-a9743a657e4e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a2b811955839eb22e3325d64c55454b92a6b1b8c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bff1834ddf1b8f90787a47a8fd58a240d2b715d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952437"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059233"
 ---
 # <a name="isapi-filters-detected-on-the-report-server-site-upgrade-advisor"></a>在報表伺服器站台上偵測到 ISAPI 篩選器 (Upgrade Advisor)
-  Upgrade Advisor 在主控報表伺服器和報表管理員虛擬目錄的網站上偵測到一個或多個 ISAPI 篩選器。 中[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]不支援 ISAPI 篩選器。  
+  Upgrade Advisor 在主控報表伺服器和報表管理員虛擬目錄的網站上偵測到一個或多個 ISAPI 篩選器。 中不支援 ISAPI 篩選器 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
   
 ||  
 |-|  

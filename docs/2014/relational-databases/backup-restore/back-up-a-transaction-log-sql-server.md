@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 78472cf0a270ffbb83ddf744956e7d2c5a1a1f64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b57ca40b08718cda5095249991e0d424e6593a24
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783115"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959888"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>備份交易記錄 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中備份交易記錄。  
@@ -64,7 +63,7 @@ ms.locfileid: "72783115"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。  
   
- 備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)並 不會 檢查檔案存取權限。 當您嘗試備份或還原時，存取實體資源之前不一定會出現備份裝置實體檔案的這些問題。  
+ 備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)並不會檢查檔案存取權限。 當您嘗試備份或還原時，存取實體資源之前不一定會出現備份裝置實體檔案的這些問題。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -72,17 +71,17 @@ ms.locfileid: "72783115"
   
 1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，請在 [物件總管] 中按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  展開 [**資料庫**]，然後視資料庫而定，選取使用者資料庫，或展開 [**系統**資料庫] 並選取系統資料庫。  
+2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
 3.  以滑鼠右鍵按一下資料庫，指向 **[工作]** ，然後按一下 **[備份]** 。 會出現 **[備份資料庫]** 對話方塊。  
   
 4.  在 **[資料庫]** 清單方塊中確認資料庫名稱。 您可以選擇性從清單中選取不同的資料庫。  
   
-5.  確認復原模式是否為 **[FULL]** 或 **[BULK_LOGGED]**。  
+5.  確認復原模式是否為 **[FULL]** 或 **[BULK_LOGGED]** 。  
   
-6.  在 **[備份類型]** 清單方塊中，選取 **[交易記錄]**。  
+6.  在 **[備份類型]** 清單方塊中，選取 **[交易記錄]** 。  
   
-7.  或者，您也可以選取 **[僅複製備份]** 來建立僅複製備份。 「只複製備份」** 是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)。  
+7.  或者，您也可以選取 **[僅複製備份]** 來建立僅複製備份。 「只複製備份」  是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)。  
   
     > [!NOTE]  
     >  選取 **[差異]** 選項時，您無法建立「只複製」備份。  
@@ -99,7 +98,7 @@ ms.locfileid: "72783115"
   
     -   若要讓備份組在特定日期過期，請按一下 **[於]** ，然後輸入備份組將過期的日期。  
   
-11. 按一下 **[磁碟]**、 **[URL]** 或 **[磁帶]**，以選擇備份目的地的類型。 若要選取包含單一媒體集的磁碟或磁帶機 (最多 64 個) 的路徑，請按一下 **[加入]**。 選取的路徑會在 **[備份至]** 清單方塊中顯示。  
+11. 按一下 **[磁碟]** 、 **[URL]** 或 **[磁帶]** ，以選擇備份目的地的類型。 若要選取包含單一媒體集的磁碟或磁帶機 (最多 64 個) 的路徑，請按一下 **[加入]** 。 選取的路徑會在 **[備份至]** 清單方塊中顯示。  
   
      若要移除備份目的地，請選取目的地，然後按一下 **[移除]** 。 若要檢視備份目的地的內容，請選取目的地，然後按一下 **[內容]** 。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "72783115"
   
 15. 在 **[交易記錄]** 區段中：  
   
-    -   對於例行的記錄備份，請保留預設選項 **[移除非使用中的項目以截斷交易記錄]**。  
+    -   對於例行的記錄備份，請保留預設選項 **[移除非使用中的項目以截斷交易記錄]** 。  
   
     -   若要備份記錄的結尾 (亦即，使用中的記錄)，請勾選 **[備份記錄檔的結尾，並讓資料庫保持在還原狀態]**。  
   
@@ -143,7 +142,7 @@ ms.locfileid: "72783115"
   
     -   [檢視或設定 backup compression default 伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
- [加密]****  
+ **加密**  
   
  若要加密備份檔案，請核取 **[加密備份]** 核取方塊。 選取要用於加密備份檔案的加密演算法，並提供憑證或非對稱金鑰。 可用於加密的演算法包括：  
   
@@ -196,10 +195,10 @@ GO
   
 -   [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
--   [針對完整交易記錄 &#40;SQL Server 錯誤 9002&#41; 進行疑難排解](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [將交易記錄備份套用 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [套用交易記錄備份 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [維護計畫](../maintenance-plans/maintenance-plans.md)   
  [完整檔案備份 &#40;SQL Server&#41;](full-file-backups-sql-server.md)  

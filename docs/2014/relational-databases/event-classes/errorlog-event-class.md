@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0153a31-5794-410b-8816-d9f1290a5b36
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a1509f9debebe1370c416bc780e4a367d3d88db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f718c40a990ecd6ef080a4611303db08518ea1b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662823"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052991"
 ---
 # <a name="errorlog-event-class"></a>ErrorLog 事件類別
   ErrorLog 事件類別指出已將訊息記錄在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中。  

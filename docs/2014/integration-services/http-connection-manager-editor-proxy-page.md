@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f5fa616116b4a6842143b6950905de4b8db0063
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058254"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968338"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP 連接管理員編輯器 (Proxy 頁面)
   使用 **[HTTP 連接管理員編輯器]** 對話方塊的 **[Proxy]** 索引標籤，來設定 HTTP 連接管理員使用 Proxy 伺服器。 HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。  
@@ -45,7 +44,7 @@ ms.locfileid: "66058254"
  **密碼**  
  如果 HTTP 連接管理員使用認證，您必須指定使用者名稱、密碼，以及網域。  
   
- **Domain**  
+ **網域**  
  如果 HTTP 連接管理員使用認證，您必須指定使用者名稱、密碼，以及網域。  
   
  **Proxy 略過清單**  

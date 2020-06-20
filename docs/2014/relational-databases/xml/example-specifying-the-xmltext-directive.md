@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3b76d727657530cfd872b04535f9413f86ff32b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 541e214399a0f91c63c5cf053f5a99dafe9fb837
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013340"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>範例：指定 XMLTEXT 指示詞
   此範例說明如何在使用 EXPLICIT 模式的 `SELECT` 陳述式中，使用 `XMLTEXT` 指示詞將溢位資料行中的資料定址。  

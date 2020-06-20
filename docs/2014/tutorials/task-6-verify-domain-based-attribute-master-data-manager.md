@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 56418adbefec0dc996fd83ce70415e86ec9509a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 056241a30261e5cbd2244eeaefc3e13b83f0d54b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171658"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035203"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>工作 6：確認已使用主資料管理員建立定義域屬性
   在這項工作中，您會透過 [主資料管理員]**** 來確認 **MDS** 中已建立 **State** 實體，而且 **Supplier** 實體的 **State** 屬性為相依於 **State** 實體的網域屬性。
@@ -56,7 +55,7 @@ ms.locfileid: "78171658"
     |NY|紐約|
     |OH|Ohio|
     |[確定]|Oklahoma|
-    |或者|Oregon|
+    |或|Oregon|
     |PA|Pennsylvania|
     |SC|South Carolina|
     |KS|Kansas|

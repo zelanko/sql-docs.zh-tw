@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c17dd78c42427027ebbac181b4f42edff082439e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068070"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940259"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>指定培訓資料 (資料採礦精靈)
   使用 [指定定型資料]**** 頁面，即可識別要在採礦結構中包含什麼資料行。 您可以選取要包含在結構中的資料行，即使不會在所有模型中使用也是如此。 例如，如果想要從採礦模型鑽研資料行，則可將這些資料行包含在結構中 (而非模型中)。  
@@ -33,7 +32,7 @@ ms.locfileid: "66068070"
  **資料表/資料行**  
  顯示在精靈的上一頁上所選取的資料表和資料行。  
   
- **\<核取方塊>**  
+ **\<check box>**  
  選取要包含在採礦結構中的資料行。  
   
  如果資料來源包含巢狀資料表或多個檢視，請展開資料行清單來檢視巢狀資料表。  

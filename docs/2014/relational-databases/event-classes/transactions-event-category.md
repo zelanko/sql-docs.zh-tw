@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfc75c5b-7115-49d8-9148-a0c84ee66a9a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 076e68de4dc5d4e25f6cabe6b39ac4a61a05033a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b68a91fb166797c220cb0c4f5cf2607ca267538
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062226"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051324"
 ---
 # <a name="transactions-event-category"></a>Transaction 事件類別目錄
   **Transactions** 事件類別可以用來監視交易狀態。 以 **TM:** 作為前置詞的事件類別名稱是用來追蹤與交易相關的作業，這些作業是透過交易管理介面來傳送。  

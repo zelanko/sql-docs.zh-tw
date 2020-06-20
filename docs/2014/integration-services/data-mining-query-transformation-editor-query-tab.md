@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f6d8958c-0a70-41ab-b6d9-b42cf3194d37
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 431e01df40ab3a531af21977b85253d84768118f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77dca7daad7a26700b68a786f844062c761a8149
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059746"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939100"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>資料採礦查詢轉換編輯器 (查詢索引標籤)
   使用 **[資料採礦查詢轉換編輯器]** 對話方塊的 **[查詢]** 索引標籤，即可建立預測查詢。  

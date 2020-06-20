@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3983e75bdde3379fac48a74a595959af2568a3ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059573"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951648"
 ---
 # <a name="derived-column-transformation-editor"></a>衍生的資料行轉換編輯器
   使用 [衍生的資料行轉換編輯器]**** 對話方塊，即可建立會擴展新的資料行或取代資料行的運算式。  
@@ -39,7 +38,7 @@ ms.locfileid: "66059573"
  **衍生的資料行**  
  從清單中選取衍生的資料行。 選擇是否要將衍生的資料行加入為新的輸出資料行，或是要取代現有資料行中的資料。  
   
- **運算式**  
+ **運算是**  
  輸入運算式，或是從先前的可用資料行、變數、函數以及運算子清單中拖曳過來，以建立一個運算式。  
   
  此屬性的值可以使用屬性運算式指定。  
@@ -55,7 +54,7 @@ ms.locfileid: "66059573"
  **有效位數**  
  如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動根據資料類型來設定數值資料的有效位數。 這個資料行的值是唯讀的。  
   
- **調整**  
+ **縮放比例**  
  如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動根據資料類型來設定數值資料的小數位數。 這個資料行的值是唯讀的。  
   
  **字碼頁**  

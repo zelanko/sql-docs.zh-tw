@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a79010a4fa59eaebfc743543799a1e83cc5e687d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8bc9d0fb639770d33507c29a6ec67f60bd0434a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754933"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934392"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>變更資料庫鏡像工作階段中的異動安全性 (Transact-SQL)
   交易安全性是控制工作階段作業模式的屬性。 不過，資料庫擁有者可隨時變更交易安全性。 依預設，交易安全性的等級會設定為 FULL (同步作業模式)。  
@@ -34,7 +33,7 @@ ms.locfileid: "62754933"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     其中* \<，database>* 是鏡像資料庫的名稱。  
+     其中 *\<database>* 是鏡像資料庫的名稱。  
   
 ### <a name="to-turn-off-transaction-safety"></a>關閉交易安全性  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62754933"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     其中* \<資料庫>* 是鏡像資料庫。  
+     其中 *\<database>* 是鏡像資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE 資料庫鏡像 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   

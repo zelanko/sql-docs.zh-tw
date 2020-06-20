@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9189617e7d572cd46805e34eaa258e81362827d7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 364515afaea17ce403f8eb38cb10bbe6003dfe2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037340"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大量載入物件模型 (SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 大量載入物件模型是由 sqlxmlbulkload.sqlxmlbulkload.4.0 物件所組成。 這個物件支援下列方法和屬性。  

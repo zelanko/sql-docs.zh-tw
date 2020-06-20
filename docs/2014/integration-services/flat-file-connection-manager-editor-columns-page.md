@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6dad0ca9855cfad8811b1598356ab624ea3fc5ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc4c008445837341dca21211e2c5e943afe50dc7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058730"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967108"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>一般檔案連接管理員編輯器 (資料行頁面)
   使用 **[一般檔案連接管理員編輯器]** 對話方塊的 **[資料行]** 頁面來指定資料列和資料行資訊，以及預覽檔案。  
@@ -30,7 +29,7 @@ ms.locfileid: "66058730"
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
- **描述**  
+ **說明**  
  描述連接。 最佳作法是以其用途描述連接，使封裝可以自我記錄並易於維護。  
   
 ## <a name="flat-file-format-dynamic-options"></a>一般檔案格式動態選項  

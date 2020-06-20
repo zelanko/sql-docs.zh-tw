@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: 0d6b863d-5972-4a20-9990-64ee8016fea6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 156c17d7dae5c4de07033a96f2e936448d8d02ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f53d6d3f623254d2b17996be7fd5b8235dca223
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096499"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037120"
 ---
 # <a name="cluster-disk-selection"></a>叢集磁碟選取
   您可以使用 **安裝精靈的** [叢集磁碟選取] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面來選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集的共用叢集磁碟資源。 叢集磁碟就是即將放置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料的位置。  
   
- 共用叢集磁片不是叢集安裝的必要條件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 SMB 檔案伺服器是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]容錯移轉叢集安裝的支援儲存體，而且可以在完成安裝之前，使用 [**資料庫引擎-資料目錄**] 頁面來指定。  
+ 共用叢集磁片不是叢集安裝的必要條件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 SMB 檔案伺服器是容錯移轉叢集安裝的支援儲存體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，而且可以在完成安裝之前，使用 [**資料庫引擎-資料目錄**] 頁面來指定。  
   
 > [!WARNING]  
 >  如果您已經選取了要安裝 Analysis Services，就必須指定共用叢集磁碟。  
 >   
 >  如果您計畫在這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體上啟用 FILESTREAM，就必須指定共用叢集磁碟。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **共用磁片**  
  從清單中選取單一磁碟。 叢集磁碟就是即將放置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料的位置。  
   

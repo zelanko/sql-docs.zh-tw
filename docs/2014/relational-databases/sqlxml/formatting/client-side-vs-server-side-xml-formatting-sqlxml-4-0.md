@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b721a2abeaf941cd7169b731b5d1a74e15c4396
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bec00de11d0873577cbb71f9c830b7df2be9e2a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702877"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996124"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>用戶端和伺服器端的 XML 格式化 (SQLXML 4.0)
   本主題描述 SQLXML 中用戶端與伺服器端 XML 格式化之間的一般差異。  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>用戶端格式中不支援多個資料列集查詢  
- 當您使用用戶端 XML 格式化時，不支援會產生多個資料列集的查詢。 例如，假設您有一個虛擬目錄，您已在其中指定用戶端格式。 請考慮這個範例範本，其中在** \< sql： query>** 區塊中有兩個 SELECT 語句：  
+ 當您使用用戶端 XML 格式化時，不支援會產生多個資料列集的查詢。 例如，假設您有一個虛擬目錄，您已在其中指定用戶端格式。 請考慮這個範例範本，其中在區塊中有兩個 SELECT 語句 **\<sql:query>** ：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -40,7 +39,7 @@ ms.locfileid: "82702877"
 </ROOT>  
 ```  
   
- 您可以在應用程式的程式碼中執行這個範本，而且會傳回錯誤，因為用戶端 XML 格式化不支援多個資料列集的格式。 如果您在兩個不同的** \< sql：查詢>** 區塊中指定查詢，您會得到所要的結果。  
+ 您可以在應用程式的程式碼中執行這個範本，而且會傳回錯誤，因為用戶端 XML 格式化不支援多個資料列集的格式。 如果您在兩個不同的區塊中指定查詢 **\<sql:query>** ，將會得到所需的結果。  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>時間戳記在用戶端與伺服器端格式中的對應不同  
  在伺服器端 XML 格式化中，`timestamp` 類型的資料庫資料行會對應到 i8 XDR 類型 (在查詢中指定 XMLDATA 選項時)。  

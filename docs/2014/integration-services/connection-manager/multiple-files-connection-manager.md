@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 086790cbd654a101d4bced989848d9aaac80d7ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20be558522d0f5df2aa4f5bcd0557626cff0e64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833611"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920609"
 ---
 # <a name="multiple-files-connection-manager"></a>多個檔案連接管理員
   「多個檔案」連接管理員會啟用封裝以參考現有的檔案和資料夾，或是在執行階段建立檔案和資料夾。  
@@ -59,7 +58,7 @@ ms.locfileid: "62833611"
   
  \<*path*>|\<*path*>  
   
- 您也可以使用萬用字元來指定多個檔案或資料夾。 例如，若要參考 C 磁片磁碟機上的所有文字檔， `ConnectionString`屬性的值可以設定為 c：\\* .txt。  
+ 您也可以使用萬用字元來指定多個檔案或資料夾。 例如，若要參考 C 磁片磁碟機上的所有文字檔，屬性的值 `ConnectionString` 可以設定為 c： \\ * .txt。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   

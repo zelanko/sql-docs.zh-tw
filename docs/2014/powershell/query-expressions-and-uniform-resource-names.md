@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e53b659fdd5d572d4f76e9a1979e6639ea33d060
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782756"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960169"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查詢運算式和統一的資源名稱
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件 (SMO) 模型和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元會使用與 XPath 運算式類似的兩種運算式字串類型。 查詢運算式是字串，其中指定一組用來列舉物件模型階層中之一個或多個物件的準則。 統一資源名稱 (URN) 是可唯一識別單一物件的特定查詢運算式字串類型。  
@@ -63,7 +62,7 @@ ms.locfileid: "72782756"
  例如，您可以指定 Server 來代表 **ServerCollection** 類別，或指定 Database 來代表 **DatabaseCollection** 類別。  
   
  \@*PropertyName*  
- 指定與 *Object*中指定物件相關聯之類別的其中一個屬性名稱。 屬性的名稱必須以 \@ 字元當作前置詞。 例如，針對 [ \@**資料庫**類別] 屬性 [ **IsAnsiNull**] 指定 IsAnsiNull。  
+ 指定與 *Object*中指定物件相關聯之類別的其中一個屬性名稱。 屬性的名稱必須以 \@ 字元當作前置詞。 例如，針對 \@ [**資料庫**類別] 屬性 [ **IsAnsiNull**] 指定 IsAnsiNull。  
   
  \@*BooleanPropertyName*= true （）  
  列舉指定之布林屬性設定為 TRUE 的所有物件。  
@@ -95,7 +94,7 @@ ms.locfileid: "72782756"
  is_null(\@*PropertyName*)  
  列舉指定之屬性具有 NULL 值的所有物件。  
   
- not(\<*PropertyExpression*>)  
+ 不是（ \<*PropertyExpression*> ）  
  執行 *PropertyExpression*評估值的否定運算，並且列舉不符合 *PropertyExpression*中指定之條件的所有物件。 例如，not(contains(\@Name, 'xyz')) 會列舉名稱中沒有 xyz 字串的所有物件。  
   
 ## <a name="remarks"></a>備註  
@@ -103,7 +102,7 @@ ms.locfileid: "72782756"
   
  查詢運算式必須以伺服器物件的絕對參考為開頭。 不允許使用含有前置 / 的相對運算式。 在查詢運算式中指定之物件的順序必須遵循相關聯物件模型中之集合物件的階層。 例如，在 Microsoft.SqlServer.Management.Smo 命名空間中參考物件的查詢運算式必須以伺服器節點為開頭，後面接著資料庫節點等項目。  
   
- 如果未指定物件的* \<FilterExpression>* ，則會列舉該節點上的所有物件。  
+ 如果 *\<FilterExpression>* 未指定物件的，則會列舉該節點上的所有物件。  
   
 ## <a name="uniform-resource-names-urn"></a>統一資源名稱 (URN)  
  URN 是查詢運算式的子集。 每個 URN 都會構成單一物件的完整參考。 一般的 URN 會使用 Name 屬性來識別位於每個節點的單一物件。 例如，這個 URN 會參考特定資料行：  

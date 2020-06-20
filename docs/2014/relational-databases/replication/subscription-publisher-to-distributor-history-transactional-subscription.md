@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a4e91d05bf851d425bf61dba0037cee8c48eb5ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c206dfb30cd3ac2db3ec95f3b6c07bcef8b09f6a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626773"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004565"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>訂閱，發行者到散發者記錄 (交易式訂閱)
   **[發行者到散發者記錄]** 索引標籤會顯示關於記錄讀取器代理程式的詳細資訊，其中包括狀態、記錄、資訊性訊息，以及任何錯誤訊息。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  從 **[檢視]** 功能表選取要檢視的記錄讀取器代理程式工作階段，然後在標示為 **[記錄讀取器代理程式的工作階段]** 的方格中，選取一個特定的工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[所選取工作階段中的動作]** 之方格中。 如果選取的工作階段結束時發生錯誤， **[所選取之工作階段的錯誤詳細資料或訊息]** 的文字區域也會顯示。  
   
  **檢視**  
@@ -45,7 +44,7 @@ ms.locfileid: "62626773"
  **結束時間**  
  工作階段的結束時間。 如果代理程式未停止，則這個欄位是空的。  
   
- **期限**  
+ **有效期間**  
  記錄讀取器代理程式已在這個工作階段執行的時間量。 如果代理程式目前正在執行，則時間代表經過時間，如果代理程式工作階段已結束，則時間代表工作階段總共花費的時間。  
   
  **錯誤訊息**  

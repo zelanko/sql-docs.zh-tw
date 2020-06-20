@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d7dceef4651804dabf4080d6f8b85d0597b1957b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45d02cbb57459a4c1c11330446021c32dc897353
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919624"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953788"
 ---
 # <a name="dropping-an-assembly"></a>卸除組件
   如果您不再需要已經使用 CREATE ASSEMBLY 陳述式在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中註冊之組件所提供的功能，就可以刪除或卸除這些組件。 卸除組件會從資料庫中移除組件及其所有相關聯的檔案 (例如偵錯檔案)。 若要卸除組件，請使用 DROP ASSEMBLY 陳述式搭配下列語法：  
@@ -43,7 +42,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   使用 WITH SCHEMABINDING 子句在資料庫中建立的函數、預存程序或觸發程序 (這些項目會使用 UDT 變數或參數)。  
   
 ### <a name="finding-udt-dependencies"></a>尋找 UDT 相依性  
- 您必須先卸除所有相依物件，然後再執行 DROP TYPE 陳述式。 下列[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢會尋找在**AdventureWorks**資料庫中使用 UDT 的所有資料行和參數。  
+ 您必須先卸除所有相依物件，然後再執行 DROP TYPE 陳述式。 下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢會尋找在**AdventureWorks**資料庫中使用 UDT 的所有資料行和參數。  
   
 ```  
 USE Adventureworks;  

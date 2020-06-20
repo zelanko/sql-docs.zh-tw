@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4003c60117165e6f12b0ab128a0545d3afca507f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900313"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939532"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
   「模糊查閱」轉換會執行資料清除工作，例如標準化資料、更正資料及提供遺漏值。  
@@ -51,7 +50,7 @@ ms.locfileid: "62900313"
   
  此轉換有一個輸入和一個輸出。  
   
- 只有具有 `DT_WSTR` 和 `DT_STR` 資料類型的輸入資料行可用於模糊比對。 完全比對可使用任何 DTS 資料類型，但 `DT_TEXT`、`DT_NTEXT` 和 `DT_IMAGE` 除外。 如需詳細資訊，請參閱 [Integration Services 資料類型](../integration-services-data-types.md)。 參與輸入與參考資料表之間聯結的資料行必須具有相容的資料類型。 例如，將具有`DT_WSTR` DTS 資料類型的資料行聯結到具有[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar`資料類型的資料行是有效的，但將具有`DT_WSTR`資料類型的資料行聯結到具有`int`資料類型的資料行則是不正確。  
+ 只有具有 `DT_WSTR` 和 `DT_STR` 資料類型的輸入資料行可用於模糊比對。 完全比對可使用任何 DTS 資料類型，但 `DT_TEXT`、`DT_NTEXT` 和 `DT_IMAGE` 除外。 如需詳細資訊，請參閱 [Integration Services 資料類型](../integration-services-data-types.md)。 參與輸入與參考資料表之間聯結的資料行必須具有相容的資料類型。 例如，將具有 DTS 資料類型的資料行聯結 `DT_WSTR` 到具有資料類型的資料行是有效的， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` 但將具有資料類型的資料行聯結 `DT_WSTR` 到具有 `int` 資料類型的資料行則是不正確。  
   
  您可以指定最大記憶體數量、資料列比較演算法，以及轉換使用的索引和參考資料表快取，以自訂此轉換。  
   
@@ -109,12 +108,12 @@ ms.locfileid: "62900313"
 >  因為 **[維護儲存的索引]** 選項需要 CLR 整合，因此只有當您在已啟用 CLR 整合的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上選取參考資料表時，這項功能才有效。  
   
 ## <a name="row-comparison"></a>資料列比較  
- 設定模糊查閱轉換時，您可以指定轉換在參考資料表中尋找相符記錄時所使用的比較演算法。 如果您將 [詳盡] 屬性`True`設為，則轉換會比較輸入中的每個資料列與參考資料表中的每個資料列。 此比較演算法可產生更精確的結果，但很可能會讓轉換的執行速度更慢，除非參考資料表中的資料列數目較小。 如果徹底的屬性設定為`True`，則會將整個參考資料表載入記憶體中。 為避免效能問題，建議您只在封裝開發期間將詳盡`True`的屬性設為。  
+ 設定模糊查閱轉換時，您可以指定轉換在參考資料表中尋找相符記錄時所使用的比較演算法。 如果您將 [詳盡] 屬性設為 `True` ，則轉換會比較輸入中的每個資料列與參考資料表中的每個資料列。 此比較演算法可產生更精確的結果，但很可能會讓轉換的執行速度更慢，除非參考資料表中的資料列數目較小。 如果徹底的屬性設定為 `True` ，則會將整個參考資料表載入記憶體中。 為避免效能問題，建議您 `True` 只在封裝開發期間將詳盡的屬性設為。  
   
- 如果徹底的屬性設定為`False`，模糊查閱轉換只會傳回至少有一個索引 token 或子字串（子字串稱為*q-語法*）的相符專案，而且與輸入記錄相同。 為了達到最高的查閱效率，模糊查閱轉換只會在它用來尋找相符項目的反向索引結構中，檢索資料表內每個資料列中的一個 Token 子集。 如果輸入資料集很小，您可以將詳盡設定`True`為，以避免遺漏索引資料表中沒有通用標記的相符專案。  
+ 如果徹底的屬性設定為 `False` ，模糊查閱轉換只會傳回至少有一個索引 token 或子字串（子字串稱為*q-語法*）的相符專案，而且與輸入記錄相同。 為了達到最高的查閱效率，模糊查閱轉換只會在它用來尋找相符項目的反向索引結構中，檢索資料表內每個資料列中的一個 Token 子集。 如果輸入資料集很小，您可以將詳盡設定為， `True` 以避免遺漏索引資料表中沒有通用標記的相符專案。  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>索引和參考資料表的快取  
- 設定「模糊查閱」轉換時，您可以指定在轉換執行其工作之前，是否在記憶體中部分快取索引和參考資料表。 如果您將 WarmCaches 屬性設定為`True`，則會將索引和參考資料表載入記憶體中。 當輸入有許多資料列時，將 WarmCaches 屬性設定`True`為可以改善轉換的效能。 當輸入資料列的數目很小時，將 WarmCaches 屬性設定`False`為，可以更快速地重複使用大型索引。  
+ 設定「模糊查閱」轉換時，您可以指定在轉換執行其工作之前，是否在記憶體中部分快取索引和參考資料表。 如果您將 WarmCaches 屬性設定為 `True` ，則會將索引和參考資料表載入記憶體中。 當輸入有許多資料列時，將 WarmCaches 屬性設定為 `True` 可以改善轉換的效能。 當輸入資料列的數目很小時，將 WarmCaches 屬性設定為， `False` 可以更快速地重複使用大型索引。  
   
 ## <a name="temporary-tables-and-indexes"></a>暫存資料表和索引  
  在執行階段，「模糊查閱」轉換會在轉換連接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中建立暫存物件，例如資料表和索引。 這些暫存資料表和索引的大小，與參考資料表中的資料列和 Token 數目，以及「模糊查閱」轉換所建立的 Token 數目成正比，因此它們會佔用相當大的磁碟空間。 轉換還會查詢這些暫存資料表。 因此，您應該考量將「模糊查閱」轉換連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的非生產執行個體，特別是當生產伺服器的可用磁碟空間十分有限時。  
