@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1404b0ab91c4812b5b08576818bfa8e74dcb664c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 740e132845a738101a38248da41fc0b53d1acecc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716912"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067869"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>範例：使用 EXPLICIT 模式建構同層級
   假設您想要建構提供銷售訂單資訊的 XML。 請注意，<`SalesPerson`> 與 <`OrderDetail`> 元素為同層級。 每個 Order 都有一個 <`OrderHeader`> 元素、一個 <`SalesPerson`> 元素，以及一或多個 <`OrderDetail`> 元素。  

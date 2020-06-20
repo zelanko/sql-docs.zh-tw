@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f395000888cccb52356b4e89e1331e1c86ea7e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068204"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940329"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>指定報表貨幣 (商業智慧精靈)
   使用 [定義報表貨幣]**** 頁面來定義貨幣轉換功能的報表貨幣，其中涵蓋 [選取轉換類型]**** 頁面上所指定的多對多或一對多轉換類型。 （報表貨幣是在 [**選取量值**] 頁面上所選取量值用於轉換的貨幣。）從 [貨幣] 維度選取的成員會針對 [商業智慧嚮導] 所產生的貨幣轉換定義報表貨幣維度。  

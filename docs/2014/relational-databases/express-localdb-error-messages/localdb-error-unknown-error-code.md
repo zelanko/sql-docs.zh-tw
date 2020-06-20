@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 8f8472b6-e6fc-44f3-82c7-25f127461fa8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff7116a6f6dc9407e5782ce3f5d9bce23e527380
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1d53e508de72f47828a46f7569d053d4001813b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051092"
 ---
 # <a name="localdb_error_unknown_error_code"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE
     

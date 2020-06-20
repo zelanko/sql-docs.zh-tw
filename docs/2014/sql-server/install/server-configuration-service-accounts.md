@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 405e1f8509e67518711eb2330c5f58961a3be77b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a894475f9dbdc95396f27b32f25f56bc409f0348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76921142"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036719"
 ---
 # <a name="server-configuration---service-accounts"></a>伺服器組態 - 服務帳戶
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [伺服器組態] 頁面，即可為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務指派登入帳戶。 設定在這個頁面上的實際服務隨著您選取要安裝的功能而不同。  
   
-用來啟動和執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的啟動帳戶可以是網域使用者帳戶、本機使用者帳戶、受管理的服務帳戶、虛擬帳戶或內建的系統帳戶。  
+用來啟動和執行的啟動帳戶 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以是網域使用者帳戶、本機使用者帳戶、受管理的服務帳戶、虛擬帳戶或內建的系統帳戶。  
   
 ## <a name="options"></a>選項  
  您可以將相同登入帳戶指派給所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，或個別設定每一個服務帳戶。 此外，您也可以指定要自動啟動服務、手動啟動服務或停用服務。 大部分安裝都建議使用預設帳戶。  
@@ -31,7 +30,7 @@ ms.locfileid: "76921142"
   
  如果您將服務設定為使用網域帳戶， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您個別設定服務帳戶，以便為每一個服務提供最低權限，其中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務會被授與完成其工作所需的最低權限。 如需詳細資訊，包括帳戶類型的說明，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
- **個別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定服務帳戶（建議選項）**  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]個別設定服務帳戶（建議選項）**  
  使用此方格來為每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務提供登入使用者名稱和密碼，並為該服務設定啟動類型。 您可以將內建系統帳戶、本機帳戶、本機群組、網域群組或是網域使用者帳戶用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
   
  選取下列任何一項服務來自訂其設定。  

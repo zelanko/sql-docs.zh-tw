@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9c2962ab632ba9ac8464fdd1c9ae8f2bda30744
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809756"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935105"
 ---
 # <a name="remote-servers"></a>遠端伺服器
   基於回溯相容性，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支援遠端伺服器。 新應用程式應該改用連結的伺服器。 如需詳細資訊，請參閱 [連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
@@ -57,7 +56,7 @@ ms.locfileid: "62809756"
 >  盡可能使用 Windows 驗證。  
   
 ### <a name="remote-server-security-example"></a>遠端伺服器安全性的範例  
- 請考量這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝： **serverSend** 和 **serverReceive**。 **serverReceive** 的設定是將來自 **serverSend** 的內送登入 (稱為 **Sales_Mary**) 對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]serverReceive**中的** 驗證登入 (稱為 **Alice**)。 另一個來自 **serverSend** 的內送登入 (稱為 **Joe**)，則會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]serverReceive**中的** 驗證登入 (稱為 _Joe_)  。  
+ 請考量這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝： **serverSend** 和 **serverReceive**。 **serverReceive** 的設定是將來自 **serverSend** 的內送登入 (稱為 **Sales_Mary**) 對應到 **serverReceive** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 (稱為 **Alice**)。 另一個來自 **serverSend** 的內送登入 (稱為 **Joe**)，則會對應到 **serverReceive** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 (稱為 **Joe**)。  
   
  下列的 Transact-SQL 程式碼範例會將 `serverSend` 設定為對 `serverReceive` 執行 RPC。  
   

@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d140eccd547de3be0a62db331416fc9b6bfc8300
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45972029fdb06f447492ec75e1ab64a54f4adce5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050958"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 函數
   停止共用指定的 SQL Server Express LocalDB 執行個體。  
@@ -44,7 +43,7 @@ HRESULT LocalDBUnShareInstance(
  *dwFlags*  
  [輸入] 保留供日後使用。 目前應設為 0。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

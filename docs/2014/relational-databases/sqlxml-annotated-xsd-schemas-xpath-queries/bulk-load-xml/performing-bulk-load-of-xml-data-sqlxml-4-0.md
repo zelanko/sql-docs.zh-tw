@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b021cbb72405c5bfcabffbd438842de43c0d6689
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec540ff082b02fa43b9abd9f294752073eb68d5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703353"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068139"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>執行 XML 資料的大量載入 (SQLXML 4.0)
   XML 大量載入是獨立的 COM 物件，可讓您將半結構化的 XML 資料載入至 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。  

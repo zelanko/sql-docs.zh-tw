@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1b2e30534fb5e0232ff2046e30e2e14075dfb807
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b11493b5b04fa9308e3afbe56176251225248338
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011323"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004178"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>使用語意搜尋尋找相似及相關的文件
   描述如何在設定進行統計語意索引的資料行中尋找相似或相關的文件或文字值，以及相似或相關程度的詳細資訊。  
@@ -37,7 +36,7 @@ ms.locfileid: "66011323"
 >  您設定為目標的資料行必須已啟用全文檢索和語意索引。  
   
 ###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a>範例：尋找與另一份檔相似的前幾個檔  
- 下列範例會*@CandidateID*從 AdventureWorks2012 範例資料庫的 humanresources.jobcandidate 資料表中，抓取與指定的候選項目類似的前10名候選物件。  
+ 下列範例會 *@CandidateID* 從 AdventureWorks2012 範例資料庫的 humanresources.jobcandidate 資料表中，抓取與指定的候選項目類似的前10名候選物件。  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  

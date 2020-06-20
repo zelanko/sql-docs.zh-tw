@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0a1b0b28afbb83028af8d71644af08ca660a0b36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1a7286f15af28f97e488b8b40fd745a0d320108
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997144"
 ---
 # <a name="files-and-version-numbers"></a>檔案和版本號碼
-  所有必要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的管理物件（SMO）元件都會安裝為[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端或伺服器實例的一部分。 SMO 是實作於數個 Managed 組件中。 您可以在用戶端或伺服器上開發 SMO 應用程式。  
+  所有必要的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件（SMO）元件都會安裝為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端或伺服器實例的一部分。 SMO 是實作於數個 Managed 組件中。 您可以在用戶端或伺服器上開發 SMO 應用程式。  
   
 |目錄|檔案|描述|  
 |---------------|----------|-----------------|  

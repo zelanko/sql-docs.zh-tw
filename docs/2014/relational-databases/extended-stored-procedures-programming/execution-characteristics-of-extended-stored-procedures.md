@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d21f002ca6b7ea185df2e01f66abf0e1ef5cfd1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62c95f0cb6c8239fee86b27b231e3e1830fb5009
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512212"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050895"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>擴充預存程序的執行特性
     
@@ -27,7 +26,7 @@ ms.locfileid: "62512212"
   
  擴充預存程序的執行具有下列特性：  
   
--   擴充預存程式函數會在的安全性內容[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]下執行。  
+-   擴充預存程式函數會在的安全性內容下執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   擴充預存程序函數會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的處理序空間中執行。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62512212"
   
 -  
   
- 載入擴充預存程式 DLL 之後，DLL 會保持載入伺服器的位址空間中，直到停止， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或系統管理員使用 DBCC *DLL_name* （FREE）明確卸載 DLL 為止。  
+ 載入擴充預存程式 DLL 之後，DLL 會保持載入伺服器的位址空間中，直到停止， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或系統管理員使用 DBCC *DLL_name* （FREE）明確卸載 DLL 為止。  
   
  擴充預存程序可以使用 EXECUTE 陳述式，從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 當做預存程序執行：  
   

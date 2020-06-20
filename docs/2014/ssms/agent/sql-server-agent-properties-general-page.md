@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 66a7b7cd9328f70e5b5ca374a04ad5e9dd6e079a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 667a07744acf4b6d8b0dfa1e83adca738add0b4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245775"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058709"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>SQL Server Agent 屬性 (一般頁面)
-  使用此頁面來查看和修改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的一般屬性。  
+  使用此頁面來查看和修改 Agent 服務的一般屬性 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **服務狀態**  
  顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的目前狀態。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "63245775"
  **如果 SQL Server Agent 非預期地停止，則自動予以重新啟動**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 非預期地停止，就會重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。  
   
- **名稱**  
+ **檔案名稱**  
  指定錯誤記錄檔的檔案名稱。  
   
  **...**  

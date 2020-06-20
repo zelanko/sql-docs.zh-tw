@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: d133a9ed99cc270c9a2f7826f231086e3eb141c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b2c5292b4a00a3ad81e53fdbc603bb584130613
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957252"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997361"
 ---
 # <a name="choose-an-encryption-algorithm"></a>選擇加密演算法
   加密是全面防禦中的一環，可提供給想要維護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體安全的管理員使用。  

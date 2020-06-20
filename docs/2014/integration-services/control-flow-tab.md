@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 986e8fbe-f6ca-469a-9c7b-ad9b0b89f832
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dd46efd60d81134f04a6bbc44e47c1fe8b5f342e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8df8182305eb90be3286a8281169f075555306f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060356"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920159"
 ---
 # <a name="control-flow-tab"></a>控制流程索引標籤
   使用 **設計師的** [控制流程] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤，即可在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中建立控制流程。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2cd0ea9764007784fb6f999c3115e0a2997d8e2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f11ba654f7cc34f521990e8c420d41885d3c55b9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004421"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>在資料表和資料行上啟用語意搜尋
   描述如何針對包含文件或文字的選取資料行啟用或停用統計語意索引。  
@@ -113,7 +112,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 建立新的語意索引**  
- 您可以針對想要建立語意索引的每個資料行執行 [全文檢索索引精靈]，並在 [選取資料表資料行]  頁面上啟用 [統計語意]  。 如需詳細資訊，包含如何啟動 [全文檢索索引精靈] 的相關資訊，請參閱 [使用全文檢索索引精靈](use-the-full-text-indexing-wizard.md)。  
+ 您可以針對想要建立語意索引的每個資料行執行 [全文檢索索引精靈]，並在 [選取資料表資料行] 頁面上啟用 [統計語意]。 如需詳細資訊，包含如何啟動 [全文檢索索引精靈] 的相關資訊，請參閱 [使用全文檢索索引精靈](use-the-full-text-indexing-wizard.md)。  
   
 ###  <a name="how-to-create-a-semantic-index-when-there-is-an-existing-full-text-index"></a><a name="HowToEnableAlter"></a>如何：在有現有全文檢索索引時建立語義索引  
  當您使用 **ALTER FULLTEXT INDEX** 陳述式來改變現有的全文檢索索引時，可以加入語意索引。 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的各種對話方塊來加入語意索引。  
@@ -142,7 +141,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 加入語意索引**  
- 您可以在 [全文檢索索引屬性]  對話方塊的 [全文檢索索引資料行]  頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](../../database-engine/manage-full-text-indexes.md)。  
+ 您可以在 [全文檢索索引屬性] 對話方塊的 [全文檢索索引資料行] 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](../../database-engine/manage-full-text-indexes.md)。  
   
 ###  <a name="requirements-and-restrictions-for-altering-an-existing-index"></a><a name="addreq"></a>改變現有索引的需求和限制  
   
@@ -181,7 +180,7 @@ GO
     ```  
   
  **使用 SQL Server Management Studio 卸除語意索引**  
- 您可以在 [全文檢索索引屬性]  對話方塊的 [全文檢索索引資料行]  頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](../../database-engine/manage-full-text-indexes.md)。  
+ 您可以在 [全文檢索索引屬性] 對話方塊的 [全文檢索索引資料行] 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](../../database-engine/manage-full-text-indexes.md)。  
   
 ###  <a name="requirements-and-restrictions-for-dropping-a-semantic-index"></a><a name="dropreq"></a>卸載語義索引的需求和限制  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f65976d2f517137e23bd9e5e1c98cc76324bc49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014533"
 ---
 # <a name="get-information-about-dml-triggers"></a>取得關於 DML 觸發程序的詳細資訊
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 取得有關 [!INCLUDE[tsql](../../includes/tsql-md.md)]中 DML 觸發程序的資訊。 這項資訊可能包括資料表上觸發程序的類型、觸發程序的名稱、其擁有者，以及建立或修改的日期。 如果觸發程序建立時並未加密，則您會取得觸發程序的定義。 定義可幫助您了解觸發程序如何影響本身定義所在的資料表。 另外，您可以找出特定觸發程序所使用的物件。 有了這項資訊，您就可以識別影響觸發程序的物件 (如果已在資料庫中變更或刪除這些物件)。  
@@ -71,9 +70,9 @@ ms.locfileid: "62698735"
   
 3.  展開 [觸發程序]  ，以滑鼠右鍵按一下您要的觸發程序，然後按一下 [檢視相依性]  。  
   
-4.  在 [物件相依性]  視窗中，若要檢視相依於 DML 觸發程序的物件，請選取 [相依於 **DML 觸發程序名稱> 的物件]\<** 。 物件會出現在 **[相依性]** 區域中。  
+4.  在 [**物件**相依性] 視窗中，若要查看相依于 DML 觸發程式的物件，請選取 [相依于的**物件 \<DML trigger name> **]。 物件會出現在 **[相依性]** 區域中。  
   
-     若要檢視 DML 所相依的物件，請選取 [**DML 觸發程序名稱> 所相依的物件]\<** 。 物件會出現在 **[相依性]** 區域中。 展開每個節點，查看所有物件。  
+     若要查看 DML 所相依的物件，請選取 [ ** \<DML trigger name> 相依于**] 的 [物件]。 物件會出現在 **[相依性]** 區域中。 展開每個節點，查看所有物件。  
   
 5.  若要取得出現在 **[相依性]** 區域中之物件的相關資訊，請按一下該物件。 **[選取的物件]** 欄位的 **[名稱]** 、 **[類型]** 和 **[相依性類型]** 方塊中會提供資訊。  
   

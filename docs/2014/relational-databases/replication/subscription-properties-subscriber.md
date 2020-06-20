@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a37f7b086f33719d7e55826ff40f2202093119a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250264"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004600"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>SQL Server 複寫訂用帳戶屬性 
 本節提供有關 [**訂閱屬性**] 對話方塊的資訊。 

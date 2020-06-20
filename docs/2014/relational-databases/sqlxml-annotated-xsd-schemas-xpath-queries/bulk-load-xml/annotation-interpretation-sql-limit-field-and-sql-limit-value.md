@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: acfab7fa03a2f811e161b1e1cd3f38c0708ef5ec
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4e54d543ca97612cff08013e26c8fb8088f10f28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703437"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068235"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field 和 sql:limit-value (SQLXML 4.0)
   XML 大量載入會根據 `sql:limit-field` 和 `sql:limit-value` 註解的定義來處理這些註解。 如需詳細資訊，請參閱[使用 sql： limit-field 和 sql： limit-value 來篩選值 &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)。  

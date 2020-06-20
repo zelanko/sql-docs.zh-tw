@@ -1,5 +1,6 @@
 ---
 title: 使用 Multiple Active Result Set (MARS) | Microsoft Docs
+description: SQL Server 支援 multiple active result sets。 應用程式可以有一個以上的暫止要求和每個連接的作用中預設結果集。
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdf953bd5cb1835b2d2f6cc0e868a3687e53e852
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b83a79a92680c6499a4f2270ad3707082b324938
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303191"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950463"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>使用 Multiple Active Result Sets (MARS)
 
@@ -50,7 +51,7 @@ ms.locfileid: "81303191"
 -   在 MARS 中，當執行並行批次時會禁止工作階段範圍的模擬。  
 
 > [!NOTE]
-> 根據預設，驅動程式不會啟用 MARS 功能。 若要在使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 連接到時使用 mars，您必須在連接字串中特別啟用 mars。 不過，如果應用程式偵測到驅動程式支援 MARS，某些應用程式可能會預設啟用 MARS。 針對這些應用程式，您可以視需要停用連接字串中的 MARS。 如需詳細資訊，請參閱本主題稍後的「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者」和「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式」章節。
+> 根據預設，驅動程式不會啟用 MARS 功能。 若要在使用 Native Client 連接到時使用 MARS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，您必須在連接字串中特別啟用 mars。 不過，如果應用程式偵測到驅動程式支援 MARS，某些應用程式可能會預設啟用 MARS。 針對這些應用程式，您可以視需要停用連接字串中的 MARS。 如需詳細資訊，請參閱本主題稍後的「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者」和「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式」章節。
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不會限制連接上作用中陳述式的數目。  
   
@@ -77,7 +78,7 @@ ms.locfileid: "81303191"
   
  如需從 ADO 使用 MARS 的範例，請參閱搭配[使用 ado 與 SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)。  
   
-## <a name="in-memory-oltp"></a>記憶體內部 OLTP  
+## <a name="in-memory-oltp"></a>記憶體中的 OLTP  
  記憶體內部 OLTP 使用查詢和原生編譯的預存程序來支援 MARS。 MARS 可讓您從多個查詢中要求資料，而不需在傳送要求以從新的結果集擷取資料列之前完整擷取每個結果集。 若要成功讀取多個開啟的結果集，您必須使用已啟用 MARS 的連接。  
   
  MARS 預設為停用，因此，您必須將 `MultipleActiveResultSets=True` 新增至連接字串，明確地加以啟用。 下列範例示範如何連線到 SQL Server 的執行個體，並指定啟用 MARS：  
@@ -113,14 +114,14 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
  SQL Server (從 2016 年開始) 支援具有資料行存放區索引的 MARS。 SQL Server 2014 使用 MARS 來與具有資料行存放區索引的資料表進行唯讀連線。    不過，SQL Server 2014 不支援 MARS 在具備資料行存放區索引的資料表上，進行並行資料操作語言 (DML) 作業。 發生這種情況時，SQL Server 會終止連接並中止交易。   SQL Server 2012 具有唯讀的資料行存放區索引，而 MARS 不適用。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 提供者  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者透過加入 SSPROP_INIT_MARSCONNECTION 資料來源初始化屬性（在 DBPROPSET_SQLSERVERDBINIT 屬性集內執行）來支援 MARS。 此外，也已經加入新的連接字串關鍵字 **MarsConn**。 其可接受 **true** 或 **false** 值；**false** 是預設值。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者透過加入 SSPROP_INIT_MARSCONNECTION 資料來源初始化屬性（在 DBPROPSET_SQLSERVERDBINIT 屬性集內執行）來支援 MARS。 此外，也已經加入新的連接字串關鍵字 **MarsConn**。 其可接受 **true** 或 **false** 值；**false** 是預設值。  
   
  資料來源屬性 DBPROP_MULTIPLECONNECTIONS 預設為 VARIANT_TRUE。 這表示，為了支援多個並行命令和資料列集物件，此提供者將會繁衍多個連接。 當 MARS 啟用時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 可以在單一連接上支援多個命令和資料列集物件，因此 MULTIPLE_CONNECTIONS 預設會設定為 VARIANT_FALSE。  
   
  如需對 DBPROPSET_SQLSERVERDBINIT 屬性集所做之增強功能的詳細資訊，請參閱[初始化和授權屬性](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>SQL Server Native Client OLE DB 提供者範例  
- 在此範例中，會使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生 OLE DB 提供者建立資料來源物件，而且在建立會話物件之前，會使用 DBPROPSET_SQLSERVERDBINIT 屬性集來啟用 MARS。  
+ 在此範例中，會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生 OLE DB 提供者建立資料來源物件，而且在建立會話物件之前，會使用 DBPROPSET_SQLSERVERDBINIT 屬性集來啟用 MARS。  
   
 ```cpp
 #include <sqlncli.h>  
@@ -206,7 +207,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驅動程式  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式透過[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)函式的新增功能支援 MARS。 已經加入 SQL_COPT_SS_MARS_ENABLED 來接受 SQL_MARS_ENABLED_YES 或 SQL_MARS_ENABLED_NO，而預設值為 SQL_MARS_ENABLED_NO。 此外，也會加入新的連接字串關鍵字**Mars_Connection**。 它可接受 "yes" 或 "no" 值；預設值是 "no"。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式透過[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)函式的新增功能支援 MARS。 已經加入 SQL_COPT_SS_MARS_ENABLED 來接受 SQL_MARS_ENABLED_YES 或 SQL_MARS_ENABLED_NO，而預設值為 SQL_MARS_ENABLED_NO。 此外，也會加入新的連接字串關鍵字**Mars_Connection**。 它可接受 "yes" 或 "no" 值；預設值是 "no"。  
   
 ### <a name="sql-server-native-client-odbc-driver-example"></a>SQL Server Native Client ODBC 驅動程式範例  
  在此範例中， **SQLSetConnectAttr**函數是用來在呼叫**SQLDriverConnect**函式來連接資料庫之前啟用 MARS。 一旦建立連接，就會呼叫兩個**SQLExecDirect**函數，以在相同的連接上建立兩個不同的結果集。  

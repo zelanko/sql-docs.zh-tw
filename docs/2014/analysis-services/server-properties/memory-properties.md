@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f1ffd3bd5a41b141e81fcb37b064e5cc4f35f84
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068887"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940635"
 ---
 # <a name="memory-properties"></a>記憶體屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器記憶體屬性。 如需設定這些屬性的指引，請參閱《 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)》。  
@@ -37,7 +36,7 @@ ms.locfileid: "66068887"
   
  **適用物件：** 多維度和表格式伺服器模式（除非另有指示）。  
   
-## <a name="properties"></a>屬性  
+## <a name="properties"></a>[內容]  
  `LowMemoryLimit`  
  帶正負號的 64 位元雙精確度浮點數屬性，此屬性定義一個臨界值，低於此值即表示伺服器記憶體不足 (以總實體記憶體的百分比表示)。 達到此限制時，執行個體將會開始關閉到期的工作階段並卸載未使用的計算，藉以緩慢地將記憶體清出快取。 伺服器不會在低於此限制時釋出記憶體。 預設值 65，表示記憶體下限為實體記憶體或虛擬位址空間的 65%，以較少者為準。  
   

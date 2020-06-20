@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f500eb460cab8734a062ddf6561cbdf01d0f773
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62773424"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927569"
 ---
 # <a name="view-a-list-of-modified-files"></a>檢視修改檔案清單
   您可以使用 [**暫止簽入**] 視窗，隨時顯示目前方案中的簽出檔案清單，並在按一下按鈕的情況下簽入這些檔案。  
@@ -30,9 +29,9 @@ ms.locfileid: "62773424"
   
 1.  在 [ **View** ] 功能表上，按一下 [**暫止簽入**]。  
   
-2.  若要簽入選取的檔案，請按一下 [**簽入**]。 或者，您可以將 [**暫止簽入**] 視窗停駐在[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]環境的右側，讓您可以在工作完成時簽入檔案。  
+2.  若要簽入選取的檔案，請按一下 [**簽入**]。 或者，您可以將 [**暫止簽入**] 視窗停駐在環境的右側， [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 讓您可以在工作完成時簽入檔案。  
   
-     **簽入**  
+     **登記**  
      簽入方案。  
   
      **註解**  
@@ -45,7 +44,7 @@ ms.locfileid: "62773424"
   
          指定您的變更應該寫入原始檔控制提供者，但檔案應保持簽出。  
   
-     **Sort**  
+     **方式**  
      指定項目清單中所顯示資料行的排序順序。  
   
      **資料行**  

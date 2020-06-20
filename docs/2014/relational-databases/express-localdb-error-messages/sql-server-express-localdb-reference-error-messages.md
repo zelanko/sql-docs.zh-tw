@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98c76925063c332ef2f537d427ae62bb83bc7024
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d73ae981f4fc1b04a63fcc34673ceae98fe8d89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62714905"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051031"
 ---
 # <a name="sql-server-express-localdb-error-message-reference"></a>SQL Server Express LocalDB 錯誤訊息參考
   本節提供有關下列 SQL Server Express LocalDB 錯誤訊息的參考資訊：  

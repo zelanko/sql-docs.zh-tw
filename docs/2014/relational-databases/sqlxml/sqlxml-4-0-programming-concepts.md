@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea7fe33f087fd814d44592677cc70b9ba1e7e244
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 88bf17fd4b907fe28a49d1ced8300d71eaec6709
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702836"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037210"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 程式設計概念
   SQLXML 3.0 會以 Web 發行的形式提供了額外的用戶端 XML 功能以及現有功能的增強功能，例如註解 XSD 結構描述、XML 大量載入、Web 服務 (SOAP) 支援和 Updategram。  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe0ed680e7050c58738301256575e4138f21276f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874534"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970804"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework 的 SQL Server 資料類型
   `SqlTypes` 程式庫是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 基底類別庫的一部分。 其設計為提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中之資料類型具有相同語意及精確度的資料類型。 本主題描述 .NET Framework 程式設計人員的新語意，並介紹 `System.Data.SqlTypes` 程式庫隨附之 `System.Data` 命名空間中實作的類型。  

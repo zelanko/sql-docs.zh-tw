@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 451b79659ff0909baf7d373dcca37ae509a94079
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cc2e24304679a7648f18148eb45f33b9bf719a9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703159"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015458"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>使用 DiffGram 來修改 SQLXML 4.0 中的資料
   DiffGram 格式是在 .NET Framework 的**資料集**元件中引進 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 您可以在 .NET Framework 內建立 DiffGram，並用其修改 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中資料表的資料。  

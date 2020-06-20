@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7fadcfbc6249ca15ecd9581cc50d58d0e3a09a5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 890d87b22e4d91fd50793b5f3cf5ac697fdf8b89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127208"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050745"
 ---
 # <a name="srv_parammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (擴充預存程序 API)
     
@@ -55,10 +54,10 @@ n
  *n*  
  這指出參數的數目。 第一個參數是 1。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  這是參數資料的最大長度 (以位元組為單位)。 如果沒有第 *n* 個參數或是沒有任何遠端預存程序，其會傳回 -1。  
   
- 如果參數是下列[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]其中一種資料類型，此函數會傳回下列值。  
+ 如果參數是下列其中一種資料類型，此函數會傳回下列值 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 |新的資料類型|輸入資料長度|  
 |--------------------|-----------------------|  
@@ -69,7 +68,7 @@ n
 |`BIGVARBINARY`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255:** 255|  
 |`NCHAR`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255:** 255|  
 |`NVARCHAR`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255:** 255|  
-|`NTEXT`|**Null：** -1<br /><br /> **ZERO：**-1<br /><br /> **>= 255：** -1<br /><br /> 255：-1 ** \< **|  
+|`NTEXT`|**Null：** -1<br /><br /> **ZERO：**-1<br /><br /> **>= 255：** -1<br /><br /> ** \< 255：** -1|  
   
 ## <a name="remarks"></a>備註  
  每個遠端預存程序參數都具有實際和最大的資料長度。 對於不允許 null 值的標準固定長度資料類型，實際和最大的長度是相同的。 對於可變長度資料類型，長度則可以有所不同。 例如，宣告為 **varchar(30)** 的參數可能擁有只有 10 個位元組長的資料。 參數的實際長度為 10，而其最大長度為 30。 **srv_parammaxlen** 函式會取得遠端預存程序的最大資料長度。 若要取得參數的實際長度，請使用 **srv_paramlen**。  

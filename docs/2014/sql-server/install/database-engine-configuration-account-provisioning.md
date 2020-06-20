@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 834b26bc-49de-4033-88d5-6aa7b1609720
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd3e075f187118c6c2ab7f6898b911be44d2cf31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095866"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012888"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>Database Engine 組態 - 帳戶提供
   您可以使用此頁面來設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性模式，以及加入 Windows 使用者或群組做為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的管理員。  
@@ -23,7 +22,7 @@ ms.locfileid: "66095866"
 ## <a name="considerations-for-running-sscurrent"></a>執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 時的考量  
  在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上， **BUILTIN\Administrators** 群組是提供成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的登入，而且本機 Administrators 群組的成員可以使用其管理員認證登入。 使用較高的權限並非最佳做法。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中， **BUILTIN\Administrators** 群組並未提供成登入。 因此，您應該為每個管理使用者建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，並在安裝新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體期間，將該登入加入至系統管理員 (sysadmin) 固定伺服器角色。 您也應該針對用來執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業的 Windows 帳戶進行上述作業。 這些作業包括複寫代理程式作業。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **安全性模式** - 為您的安裝選取 Windows 驗證或混合模式驗證。  
   
  **Windows 主體提供** - 在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，Windows Builtin\Administrator 本機群組置於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員伺服器角色中，可有效授與 Windows 管理員對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的存取權。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，Builtin\Administrator 群組不會提供在系統管理員 (sysadmin) 伺服器角色中。 您應該改在安裝期間針對新的安裝明確提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員。  
@@ -49,7 +48,7 @@ ms.locfileid: "66095866"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 絕對不可設定空白或弱式 sa 密碼。  
   
- **混合模式（Windows 驗證或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證）**  
+ **混合模式（Windows 驗證或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證）**  
  允許使用者利用 Windows 驗證或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來連接。 透過 Windows 使用者帳戶連接的使用者可以使用 Windows 已驗證的信任連接。  
   
  如果您必須選擇混合模式驗證，而且需要使用 SQL 登入來配合舊版應用程式，則您必須為所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶設定增強式密碼。  

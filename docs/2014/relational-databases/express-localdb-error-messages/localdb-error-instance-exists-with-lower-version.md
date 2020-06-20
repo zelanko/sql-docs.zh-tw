@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a7c5ce08-8841-49a3-b252-116807ba469a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b3bc344e3e23ce965a2057628e4662ebe41508d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa6db2af138bb2aeefb1a922e55db56c4ea821f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990938"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051188"
 ---
 # <a name="localdb_error_instance_exists_with_lower_version"></a>LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION
     

@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d229d490a9f3a7bc6f613259ee0535218de47975
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874085"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970643"
 ---
 # <a name="data-access-from-clr-database-objects"></a>從 CLR 資料庫物件進行資料存取
-  Common language runtime （CLR）常式可以輕鬆存取儲存在其執行之實例中[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]的資料，以及儲存在遠端實例中的資料。 常式可以存取的特定資料取決於藉以執行程式碼的使用者內容。 使用來自 managed 用戶端和仲介層應用程式之[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料的 .NET Framework Data Provider，從 CLR 資料庫物件中存取資料。 因為這個緣故，您可以將 ADO.NET 和 `SqlClient` 的知識運用在用戶端和中間層應用程式。  
+  Common language runtime （CLR）常式可以輕鬆存取儲存在其執行之實例中的資料 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] ，以及儲存在遠端實例中的資料。 常式可以存取的特定資料取決於藉以執行程式碼的使用者內容。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 來自 managed 用戶端和仲介層應用程式之資料的 .NET Framework Data Provider，從 CLR 資料庫物件中存取資料。 因為這個緣故，您可以將 ADO.NET 和 `SqlClient` 的知識運用在用戶端和中間層應用程式。  
   
 > [!NOTE]  
 >  根據預設，執行資料存取不允許使用使用者定義型別方法與使用者定義函數。 您必須將 `DataAccess` 或 `SqlMethodAttribute` 的 `SqlFunctionAttribute` 屬性設定為 `DataAccessKind.Read` 才能使用者定義型別 (UDT) 方法或使用者定義函數進行唯讀的資料存取。 資料修改作業無法從 UDT 或使用者定義函數進行，如果嘗試進行，則會在執行階段擲回例外狀況。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1f4328c6a70c00766979a13bbcf8dc2b8bd77f42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44333d778753a2f8761d32d181681b798e3bc409
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096323"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037090"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>ORDER BY 子句中資料行別名的前置詞不可以是資料表別名
   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本中，ORDER BY 子句中資料行別名的前置詞不可以是資料表別名。  

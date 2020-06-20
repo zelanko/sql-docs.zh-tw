@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8a2006947cf4e4bffee0365ffbbf0b3b1c76bbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069065"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940729"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>伺服器組態公用程式 (適用於 Excel 的資料採礦增益集)
-  當您安裝適用于 Excel 的資料採礦增益集時，也會一併安裝伺服器設定公用程式，而且會在您第一次開啟增益集時執行。本主題描述如何使用公用程式連接到的實例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，並設定資料庫以使用資料採礦模型。  
+  當您安裝適用于 Excel 的資料採礦增益集時，也會一併安裝伺服器設定公用程式，而且會在您第一次開啟增益集時執行。本主題描述如何使用公用程式連接到的實例 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，並設定資料庫以使用資料採礦模型。  
   
 
   
