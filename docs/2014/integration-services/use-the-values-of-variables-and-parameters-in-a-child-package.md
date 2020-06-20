@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19f96adc9932b888f3304257fb9a23a22b06cc87
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054725"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972608"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>在子封裝中使用變數和參數的值
   此程序描述如何建立使用父變數組態類型的封裝組態。 此組態類型可讓從父封裝執行的子封裝存取父變數。  
@@ -89,11 +88,11 @@ ms.locfileid: "66054725"
   
     -   選取 [組態位置儲存在環境變數中]****，然後在 [環境變數清單]**** 中選取包含變數名稱的環境變數。  
   
-7.  按 [下一步]  。  
+7.  按 [下一步] 。  
   
 8.  在 [選取目標屬性] 頁面上，依序展開 [變數]**** 節點及要設定之變數的 [屬性]**** 節點，然後按一下組態所要設定的屬性。  
   
-9. 按 [下一步]  。  
+9. 按 [下一步] 。  
   
 10. (選擇性) 在 [正在完成精靈] 頁面上，修改組態的預設名稱並檢閱組態資訊。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66054725"
   
 12. 在 [封裝組態組合管理]**** 對話方塊中，[組態]**** 方塊會列出新的組態。  
   
-13. 按一下 **關閉**。  
+13. 按一下 [關閉] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [套件設定](../../2014/integration-services/package-configurations.md)   

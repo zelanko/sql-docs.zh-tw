@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dfe835b1-ea52-4e18-a23a-5188c5b6f013
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9837eb1c58facb76eef5885012920b294674f7fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0244760e6fadc421854e13869ad1e973d7ed12f0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055290"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962348"
 ---
 # <a name="standard-parse"></a>Standard Parse
   標準剖析是一組區分地區設定的剖析常式，它支援 Oleaut32.dll 和 Ole2dsip.dll 中可用的 Automation 資料類型轉換 API 所提供的所有資料類型轉換。 標準剖析相當於 OLE DB 剖析 API。  

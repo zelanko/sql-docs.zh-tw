@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2f67c88be66be069a48d008ba6889a81dfda8ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489275"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061107"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>工作 4 (選擇性)：結合、比對及發行新的資料集
   經過一段時間後，您需要將更多的資料加入至 MDS 儲存機制。 在加入資料之前，比較新資料與已在 MDS 中管理的資料可能會很有用，以確保您不會加入重複或不正確的資料。 在適用於 Excel 的 Master Data Services 增益集中，您可以結合兩個工作表中的資料然後比較資料，以識別重複項並加以移除，之後再將資料發行到 MDS。 MDS Excel 增益集的比對功能會使用 DQS 比對功能來識別資料中的相符內容。 在這項工作中，您會將兩個工作表中的資料結合到一個工作表，然後執行比對活動來識別重複項並加以移除，之後再將資料發行到 MDS。 如需詳細資訊，請參閱[適用于 Excel 的 MDS 增益集中的資料品質](https://msdn.microsoft.com/library/hh548681.aspx)比對和[合併資料](https://msdn.microsoft.com/library/hh548680.aspx)主題。  
@@ -38,7 +37,7 @@ ms.locfileid: "65489275"
   
 7.  按一下底部的 [ **sheet2** ] 以切換至 [ **sheet2** ] 索引標籤。如果您沒有看到 [ **Sheet2**]，請加入新的工作表。  
   
-8.  開啟**供應商 .xls**檔案（包含在教學課程檔案中的原始輸入檔），並將所有（三個）資料列從**CombineAndCleanse**工作表複製到**Sheet2**。  
+8.  開啟**Suppliers.xls**檔案（包含在教學課程檔案中的原始輸入檔），並將所有（三個）資料列從**CombineAndCleanse**工作表複製到**Sheet2**。  
   
 9. 切換回已連接至**MDS**的**第1冊-Microsoft Excel** （而非**清理和相符的供應商清單**Excel）中的**供應商**工作表。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "65489275"
   
 24. 輸入 [ **70%** ] 作為 [**供應商名稱**] 的**權數**，而**30%** 作為 [**連絡人電子郵件**] 的**權數**（如圖所示）。  
   
-25. 按一下 [確定]  。  
+25. 按一下 [確定]。  
   
 26. 比對程式應該會為供應商識別一個重複的**代碼： S1**。  
   

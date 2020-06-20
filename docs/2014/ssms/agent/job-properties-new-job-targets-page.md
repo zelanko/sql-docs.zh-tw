@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f47054e2f0260db272ad25cbed549fd14df8c8e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7da2e71078badde3bb0bbd1bab0ecc64e3bf875
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62695442"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062216"
 ---
 # <a name="job-properties-new-job-targets-page"></a>作業屬性：新增作業 (目標頁面)
   使用此頁面來管理作業的目標伺服器。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **目標本機伺服器**  
  在本機伺服器上執行作業。 如果沒有編列目標伺服器，這是唯一可用的選項。  
   

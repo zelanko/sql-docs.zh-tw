@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d13feb3a13cb96ec3cf0a3006b807740944434b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62927221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962368"
 ---
 # <a name="system-variables"></a>系統變數
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組系統變數來儲存執行套件及其物件的資訊。 這些變數可以用於運算式及屬性運算式，以自訂封裝、容器、工作及事件處理常式。  
@@ -41,7 +40,7 @@ ms.locfileid: "62927221"
 |`ExecutionInstanceGUID`|String|執行封裝之執行個體的唯一識別碼。|  
 |`FailedConfigurations`|String|失敗的封裝組態名稱。|  
 |`IgnoreConfigurationsOnLoad`|Boolean|指出載入封裝時是否忽略封裝組態。|  
-|**InteractiveMode**|Boolean|指示封裝是否以互動模式執行。 如果封裝在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中執行，則此屬性設為 `True`。 如果封裝是使用**DTExec**命令提示字元公用程式來執行，則屬性會設定`False`為。|  
+|**InteractiveMode**|Boolean|指示封裝是否以互動模式執行。 如果封裝在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中執行，則此屬性設為 `True`。 如果封裝是使用**DTExec**命令提示字元公用程式來執行，則屬性會設定為 `False` 。|  
 |`LocaleId`|Int32|封裝使用的地區設定。|  
 |**MachineName**|String|執行封裝之電腦的名稱。|  
 |**OfflineMode**|Boolean|指出封裝是否處於離線模式。 離線模式不會取得與資料來源的連接。|  
@@ -80,7 +79,7 @@ ms.locfileid: "62927221"
 |系統變數|資料類型|描述|事件處理常式|  
 |---------------------|---------------|-----------------|-------------------|  
 |**取消**|Boolean|指示當發生錯誤、警告或查詢取消時，事件處理常式是否停止執行。|OnError 事件處理常式<br /><br /> OnWarning 事件處理常式<br /><br /> OnQueryCancel 事件處理常式|  
-|**錯誤碼**|Int32|錯誤識別碼。|OnError 事件處理常式<br /><br /> OnInformation 事件處理常式<br /><br /> OnWarning 事件處理常式|  
+|**ErrorCode**|Int32|錯誤識別碼。|OnError 事件處理常式<br /><br /> OnInformation 事件處理常式<br /><br /> OnWarning 事件處理常式|  
 |**ErrorDescription**|String|錯誤的描述。|OnError 事件處理常式<br /><br /> OnInformation 事件處理常式<br /><br /> OnWarning 事件處理常式|  
 |**ExecutionStatus**|Boolean|目前執行狀態。|OnExecStatusChanged 事件處理常式|  
 |`ExecutionValue`|DBNull|執行值。|OnTaskFailed 事件處理常式|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7bb7aebed25c571108e4b0d7e7366fc52c45e3c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d13fd93b6afdcce6b55e9b181f52087fd620913c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882302"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060604"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>定義及修改靜態資料列篩選
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義及修改靜態資料列篩選。  
@@ -51,11 +50,11 @@ ms.locfileid: "73882302"
 -   由於這些篩選都是靜態的，所以所有訂閱者都將收到相同子集的資料。 如果您需要動態篩選屬於合併式發行集之資料表發行項內的資料，好讓每一個訂閱者都會收到不同的資料分割，請參閱＜ [針對合併發行項定義及修改參數化資料列篩選](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)＞。 合併式複寫也可讓您根據現有的資料列篩選來篩選相關的資料列。 如需詳細資訊，請參閱 [定義和修改合併發行項之間的聯結篩選](define-and-modify-a-join-filter-between-merge-articles.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - **發行集>]** **對話方塊的 [篩選資料列]\<** 頁面上，定義、修改及刪除靜態資料列篩選。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。  
+ 在 [新增發行集嚮導] 的 [**篩選資料表資料列**] 頁面或 [**發行集屬性- \<Publication> ** ] 對話方塊的 [篩選資料**列**] 頁面上，定義、修改和刪除靜態資料列篩選。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-static-row-filter"></a>若要定義靜態資料列篩選  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - **發行集>]** **對話方塊的 [篩選資料列]\<** 頁面上，您所採取的動作會視發行集類型而定：  
+1.  在 [新增發行集嚮導] 的 [**篩選資料表**的資料列] 頁面或 [**發行集屬性 \<Publication> -** ] 對話方塊的 [**篩選資料列**] 頁面上，您所採取的動作取決於發行集的類型：  
   
     -   對於快照式或交易式發行集，請按一下 **[加入]** 。  
   
@@ -88,11 +87,11 @@ ms.locfileid: "73882302"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  如果您在 [發行集屬性 - **發行集>]\<** 對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
+5.  如果您位於 [**發行集屬性- \<Publication> ** ] 對話方塊中，請按一下 **[確定**] 以儲存並關閉對話方塊。  
   
 #### <a name="to-modify-a-static-row-filter"></a>若要修改靜態資料列篩選  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - **發行集>]** **對話方塊的 [篩選資料列]\<** 頁面上，從 [已篩選的資料表]  窗格中選取一個篩選，然後按一下 [編輯]  。  
+1.  在 [新增發行集嚮導] 的 [**篩選資料表**的資料列] 頁面上，或在 [**發行 \<Publication> 集屬性-** ] 對話方塊的 [篩選資料**列**] 頁面上，選取 [篩選的**資料表**] 窗格中的篩選，然後按一下 [**編輯**]  
   
 2.  在 **[編輯篩選]** 對話方塊中，修改篩選。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "73882302"
   
 #### <a name="to-delete-a-static-row-filter"></a>若要刪除靜態資料列篩選  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - **發行集>]** **對話方塊的 [篩選資料列]\<** 頁面上，從 [已篩選的資料表]  窗格中選取一個篩選，然後按一下 [刪除]  。  
+1.  在 [新增發行集嚮導] 的 [**篩選資料表**的資料列] 頁面上，或在 [**發行 \<Publication> 集屬性-** ] 對話方塊的 [篩選資料**列**] 頁面上，選取 [篩選的**資料表**] 窗格中的篩選，然後按一下 [**刪除**]  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  當您建立資料表發行項時，可以定義 WHERE 子句從發行項篩選資料列。 您也可以在定義資料列篩選之後，加以變更。 您可以使用複寫預存程序來以程式設計的方式建立及修改靜態資料列篩選。  
@@ -115,7 +114,7 @@ ms.locfileid: "73882302"
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>為快照式或交易式發行集修改靜態資料列篩選  
   
-1.  在發行集資料庫的發行者端，執行 [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)。 為 **\@article** 指定發行項的名稱、為 **\@publication** 指定發行集的名稱、為 **\@filter_name** 指定新的篩選名稱，並為 **\@filter_clause** (不包括 `WHERE`) 指定新的篩選子句。 由於這項變更將會讓現有訂閱中的資料失效，所以請為  force_reinit_subscription **指定 \@1** 值。  
+1.  在發行集資料庫的發行者端，執行 [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)。 為 **\@article** 指定發行項的名稱、為 **\@publication** 指定發行集的名稱、為 **\@filter_name** 指定新的篩選名稱，並為 **\@filter_clause** (不包括 `WHERE`) 指定新的篩選子句。 由於這項變更將會讓現有訂閱中的資料失效，所以請為 **\@force_reinit_subscription** 指定 **1** 值。  
   
 2.  在發行集資料庫的發行者端，執行 [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)。 為 **\@publication** 指定發行集的名稱、為 **\@article** 指定篩選的發行項名稱，並為 **\@filter_clause** 指定步驟 1 中所指定的篩選子句。 這樣會重新建立可定義篩選之發行項的檢視。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "73882302"
   
 #### <a name="to-delete-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>為快照式或交易式發行集刪除靜態資料列篩選  
   
-1.  在發行集資料庫的發行者端，執行 [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)。 為 **\@article** 指定發行項的名稱、為 **\@publication** 指定發行集的名稱、為 **\@filter_name** 指定 NULL 的值，並為 **\@filter_clause** 指定 NULL 的值。 由於這項變更將會讓現有訂閱中的資料失效，所以請為  force_reinit_subscription **指定 \@1** 值。  
+1.  在發行集資料庫的發行者端，執行 [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)。 為 **\@article** 指定發行項的名稱、為 **\@publication** 指定發行集的名稱、為 **\@filter_name** 指定 NULL 的值，並為 **\@filter_clause** 指定 NULL 的值。 由於這項變更將會讓現有訂閱中的資料失效，所以請為 **\@force_reinit_subscription** 指定 **1** 值。  
   
 2.  針對此發行集重新執行快照集代理程式作業，以產生更新的快照集。 如需詳細資訊，請參閱 [建立和套用初始快照集](../create-and-apply-the-initial-snapshot.md)。  
   
@@ -139,7 +138,7 @@ ms.locfileid: "73882302"
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>為合併式發行集修改靜態資料列篩選  
   
-1.  在發行集資料庫的發行者端，執行 [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 為 **\@publication** 指定發行集的名稱、為 **\@article** 指定篩選的發行項名稱、為  property **指定 \@subset_filterclause** 值，並為 **\@value** (不包括 `WHERE`) 指定新的篩選子句。 由於這項變更將會讓現有訂閱中的資料失效，所以請為 **\@force_reinit_subscription** 指定 1 值。  
+1.  在發行集資料庫的發行者端，執行 [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 為 **\@publication** 指定發行集的名稱、為 **\@article** 指定篩選的發行項名稱、為 **\@property** 指定 **subset_filterclause** 值，並為 **\@value** (不包括 `WHERE`) 指定新的篩選子句。 由於這項變更將會讓現有訂閱中的資料失效，所以請為 **\@force_reinit_subscription** 指定 1 值。  
   
 2.  針對此發行集重新執行快照集代理程式作業，以產生更新的快照集。 如需詳細資訊，請參閱 [建立和套用初始快照集](../create-and-apply-the-initial-snapshot.md)。  
   

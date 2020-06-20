@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 123cc4cc977e52334b085691caa74e853d5f3fb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39c5dda7122cf6d4020a5d2977553f43c7cd5d2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015929"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053179"
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission 事件類別
   **Audit Object Derived Permission** 事件類別會記錄何時對指定的物件發出 CREATE、ALTER 或 DROP 命令。 只有當物件沒有直接關聯的權限或擁有者時，才會發生此事件。  

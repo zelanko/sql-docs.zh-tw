@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b20ebca153e9aa1eead2e288831a26c40e2dbd5d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926279"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>將事件處理常式加入封裝中
   在執行階段，容器及工作會引發事件。 藉由在引發事件時執行工作流程，您可以建立自訂事件處理常式，以回應這些事件。 例如，您可以建立在工作失敗時傳送電子郵件訊息的事件處理常式。  

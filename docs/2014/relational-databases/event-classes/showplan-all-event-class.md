@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ee341319-c34a-43e3-ad33-6bfb1f85e314
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 487aaee17be13727f2c23de42b95afcc27b0b939
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07777c543534af1794b13a09090a47aee76e79a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662192"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052568"
 ---
 # <a name="showplan-all-event-class"></a>Showplan All 事件類別
   當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan All 事件類別。 包含的資訊是 Showplan XML Statistics Profile 或 Showplan XML 事件類別中可用資訊的子集。  

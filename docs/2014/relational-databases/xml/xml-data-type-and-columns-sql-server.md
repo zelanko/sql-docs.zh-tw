@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f96d90f620f563877e554c282d9443313bad1b14
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5596a8d4d4bad18c1adc03a5280e199d0fe91e0a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702237"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046326"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 資料類型和資料行 (SQL Server)
   本主題討論中資料類型的優點和限制 `xml` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並協助您選擇儲存 XML 資料的方式。  
@@ -114,7 +113,7 @@ ms.locfileid: "82702237"
  當您的 XML 文件有一個結構範圍，或是您的 XML 文件符合相異或複雜的結構描述，而這些結構描述難以對應到關聯式結構時，原生 XML 儲存是很有用的。  
   
 #### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>範例：使用 xml 資料類型來將 XML 資料模型化  
- 假設有一個 XML 格式的產品手冊，其中每個主題各成一章，每一章中有好幾節。 每一節中還可包含小節。 因此，\<section> 就是遞迴項目。 產品手冊包含大量的混合內容、圖表和技術資料；資料是半結構化的。 使用者可能會想要在內容中搜尋感興趣的主題，例如，在有關「檢索」的那一章中搜尋有關「叢集索引」的那一節，並查詢技術數量。  
+ 假設有一個 XML 格式的產品手冊，其中每個主題各成一章，每一章中有好幾節。 每一節中還可包含小節。 因此， \<section> 是遞迴元素。 產品手冊包含大量的混合內容、圖表和技術資料；資料是半結構化的。 使用者可能會想要在內容中搜尋感興趣的主題，例如，在有關「檢索」的那一章中搜尋有關「叢集索引」的那一節，並查詢技術數量。  
   
  您的 XML 文件所適合的儲存模式就是 `xml` 資料類型資料行。 這樣可以保持 XML 資料的 InfoSet 內容。 檢索 XML 資料行對於查詢效能是很有益的。  
   

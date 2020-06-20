@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44843764b7eed26bfd424ee61f2534aae42b9a73
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843097"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928979"
 ---
 # <a name="solution-explorer-source-control"></a>方案總管原始檔控制
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]方案總管可以整合到不同的原始檔控制系統中。 將方案或專案整合為原始檔控制系統之後，就可以控制專案中指令碼和查詢的檔案存取權和版本設定。  

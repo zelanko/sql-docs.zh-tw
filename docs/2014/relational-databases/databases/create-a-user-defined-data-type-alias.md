@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35db332c23e2df5a8e67c3677cd2411768816765
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917442"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970231"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>建立使用者定義資料類型別名
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立新的使用者定義資料類型別名。  
@@ -71,7 +70,7 @@ ms.locfileid: "62917442"
      `nvarchar(max)`、`varchar(max)` 或 `varbinary(max)` 資料類型不會顯示長度。  
   
      **名稱**  
-     如果您正在建立新的使用者定義資料類型別名，請輸入跨資料庫使用以代表使用者定義資料類型的唯一名稱。 字元數目上限必須符合系統`sysname`資料類型。 無法編輯現有的使用者定義資料類型別名的名稱。  
+     如果您正在建立新的使用者定義資料類型別名，請輸入跨資料庫使用以代表使用者定義資料類型的唯一名稱。 字元數目上限必須符合系統 `sysname` 資料類型。 無法編輯現有的使用者定義資料類型別名的名稱。  
   
      **規則**  
      選擇性地選取繫結到使用者定義資料類型別名的規則。  
@@ -92,7 +91,7 @@ ms.locfileid: "62917442"
     |20 - 28|13|  
     |29 - 38|17|  
   
-     針對`nchar`和`nvarchar`資料類型，儲存體值一律為 [**長度**] 值的兩倍。  
+     針對 `nchar` 和 `nvarchar` 資料類型，儲存體值一律為 [**長度**] 值的兩倍。  
   
      `nvarchar(max)`、`varchar(max)` 或 `varbinary(max)` 資料類型不會顯示儲存體。  
   

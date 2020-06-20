@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ad13821341291a91a989297f29e1459a40de5afe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e1d3b9a65af98f5843cc765a406cfa5ada203a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720944"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061336"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>SetDefaults 方法 (SInstance 類別)
-  使用覆寫現有資料的選項，設定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例的所有預設值。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用覆寫現有資料的選項，設定實例的所有預設值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +39,7 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  代表伺服器實例的[SInstance 類別](sinstance-class.md)物件。  
   
 #### <a name="parameters"></a>參數  

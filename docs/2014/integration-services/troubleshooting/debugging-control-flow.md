@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a7417a3f5792be0838d421ca0115935ae190f49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1795af295d8a7d77a71fbdfdfc9a433ed39b58f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176598"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972745"
 ---
 # <a name="debugging-control-flow"></a>偵錯控制流程
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含許多功能和工具，可讓您用來對 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 套件中的控制流程進行疑難排解。
@@ -50,7 +49,7 @@ ms.locfileid: "78176598"
 |工作或容器接收到 `OnTaskFailed` 事件時。|由工作主機在失敗時呼叫。|
 |工作或容器接收到 `OnProgress` 事件時。|呼叫以更新工作執行相關的進度。|
 |工作或容器接收到 `OnQueryCancel` 事件時。|在可取消執行之工作處理期間的任何時間呼叫。|
-|工作或容器接收到 `OnVariableValueChanged` 事件時。|當變數的值變更時由 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段呼叫。 變數的 RaiseChangeEvent 必須設定為`true` ，才能引發這個事件。<br /><br /> **&#42;&#42; 警告 &#42;&#42;** 與此中斷點相關聯的變數必須在**容器**範圍定義。 如果變數在封裝範圍定義，則中斷點不會出現。|
+|工作或容器接收到 `OnVariableValueChanged` 事件時。|當變數的值變更時由 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段呼叫。 變數的 RaiseChangeEvent 必須設定為， `true` 才能引發這個事件。<br /><br /> **&#42;&#42; 警告 &#42;&#42;** 與此中斷點相關聯的變數必須在**容器**範圍定義。 如果變數在封裝範圍定義，則中斷點不會出現。|
 |工作或容器接收到 `OnCustomEvent` 事件時。|由工作呼叫，以引發自訂工作定義的事件。|
 
  除可用於所有工作及容器的中斷條件之外，部份工作及容器還包含用於設定中斷點的特殊中斷條件。 例如，您可以在「For 迴圈」容器上啟用中斷條件，以設定在迴圈的每個反覆運算開始時暫停執行的中斷點。

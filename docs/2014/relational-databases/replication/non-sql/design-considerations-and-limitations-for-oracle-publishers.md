@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2776452e0da93cb1f170b6ee3356d95158df6b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022518"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005384"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 發行者的設計考量與限制
-  從 Oracle 資料庫發行的設計，幾乎與從[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫發行的效果相同。 但應該注意下列限制和問題：  
+  從 Oracle 資料庫發行的設計，幾乎與從資料庫發行的效果相同 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 但應該注意下列限制和問題：  
   
 -   Oracle Gateway 選項提供比 Oracle Complete 選項更好的效能；不過此選項不可用於多個交易式發行集內發行同一資料表。 資料表最多可以出現在單一交易式發行集，以及任意多個快照集發行集內。 若您需要在多個交易式發行集內發行同一資料表，請選擇 Oracle Complete 選項。  
   
@@ -119,7 +118,7 @@ ms.locfileid: "63022518"
   
 -   標準異動複寫支援含多達 1000 個資料行的資料表。 Oracle 交易式發行集支援 995 個資料行 (複寫會在每個發行資料表中新增五個資料行)。  
   
--   定序子句會新增到 CREATE TABLE 陳述式中以啟用大小寫比較，此功能對主索引鍵和唯一條件約束很重要。 此行為是使用架構選項0x1000 來控制，這是使用**@schema_option** [sp_addarticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)的參數所指定。  
+-   定序子句會新增到 CREATE TABLE 陳述式中以啟用大小寫比較，此功能對主索引鍵和唯一條件約束很重要。 此行為是使用架構選項0x1000 來控制，這是使用 **@schema_option** [Sp_addarticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)的參數所指定。  
   
 -   如果使用預存程序來設定或維護「Oracle 發行者」，請勿在明確交易中使用該程序。 用於連接到「Oracle 發行者」連結伺服器不支援此功能。  
   
@@ -149,7 +148,7 @@ ms.locfileid: "63022518"
   
 -   「快照集代理程式」和「記錄讀取器代理程式」建立從「發散者」至「訂閱者」連接所使用的帳戶透過下列方法之一指定：  
   
-    -   **@security_mode** [Sp_adddistpublisher &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)的參數（您也可以指定的**@login**值，以及**@password**是否使用 Oracle 驗證）  
+    -   **@security_mode** [Sp_adddistpublisher &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)的參數（您也可以指定的值 **@login** ，以及 **@password** 是否使用 Oracle 驗證）  
   
     -   位於 SQL Server Management Studio 的 **[連接到伺服器]** 對話方塊中，會在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端設定「Oracle 發行者」時用到。  
   
@@ -157,11 +156,11 @@ ms.locfileid: "63022518"
   
 -   快照集代理程式和記錄讀取器代理程式建立連線所使用的帳戶無法使用 [sp_changedistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) 或透過屬性表進行變更，但可以變更密碼。  
   
--   如果您為 sp_adddistpublisher 的**@security_mode**參數指定1（Windows 整合式驗證）值[&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)：  
+-   如果您為 sp_adddistpublisher 的參數指定1（Windows 整合式驗證）值 **@security_mode** [&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)：  
   
-    -   用於快照集代理程式和記錄讀取器代理程式**@job_login** **@job_password** （ [sp_addpublication_snapshot &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)和[sp_addlogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)）的處理帳戶和密碼，必須與用來連接到「Oracle 發行者」的帳戶和密碼相同。  
+    -   用於快照集代理程式和記錄讀取器代理程式（ **@job_login** **@job_password** [sp_addpublication_snapshot &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)和[sp_addlogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)）的處理帳戶和密碼，必須與用來連接到「Oracle 發行者」的帳戶和密碼相同。  
   
-    -   您無法透過**@job_login** [sp_changepublication_snapshot &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql)或[sp_changelogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql)變更參數，但可以變更密碼。  
+    -   您無法 **@job_login** 透過[Sp_changepublication_snapshot &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql)或[sp_changelogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql)變更參數，但可以變更密碼。  
   
  如需複寫安全性的詳細資訊，請參閱[SQL Server 複寫安全性](../security/view-and-modify-replication-security-settings.md)。  
   

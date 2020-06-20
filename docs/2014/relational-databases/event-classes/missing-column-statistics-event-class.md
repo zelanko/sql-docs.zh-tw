@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43a83d0b20bbcdb0b95dd727a51d59353f7675bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d69196824600d3281663b461465419f16001b8ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023424"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052885"
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics 事件類別
   Missing Column Statistics 事件類別指出無法取得原本對最佳化工具非常有用的資料行統計資料。  

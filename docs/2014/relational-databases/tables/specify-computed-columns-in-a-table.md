@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22e4df8d67b61e50383ffd8e33f982990ff3f2ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211800"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055089"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定資料表中的計算資料行
-  計算資料行是一個虛擬資料行，除非資料行標示了 PERSISTED，否則，並未實際儲存在資料表中。 計算資料行運算式可以使用來自其他資料行的資料來計算其所屬資料行的值。 您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中指定計算資料行的運算式。  
+  計算資料行是一個虛擬資料行，除非資料行標示了 PERSISTED，否則，並未實際儲存在資料表中。 計算資料行運算式可以使用來自其他資料行的資料來計算其所屬資料行的值。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中指定計算資料行的運算式。  
   
  **本主題內容**  
   
@@ -84,7 +83,7 @@ ms.locfileid: "68211800"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例會建立包含計算資料行的資料表，該計算資料行會乘以 `QtyAvailable` 資料行的值乘 `UnitPrice` 資料行的值。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 此範例會建立包含計算資料行的資料表，該計算資料行會乘以 `QtyAvailable` 資料行的值乘 `UnitPrice` 資料行的值。  
   
     ```  
     CREATE TABLE dbo.Products   
@@ -111,7 +110,7 @@ ms.locfileid: "68211800"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 下列範例會將新的資料行加入至上一個範例中建立的資料表。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 下列範例會將新的資料行加入至上一個範例中建立的資料表。  
   
     ```  
     ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
@@ -124,7 +123,7 @@ ms.locfileid: "68211800"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  若要將現有的資料行變更為計算資料行，您必須卸除並重新建立計算資料行。 將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 下列範例會修改上一個範例中加入的資料行。  
+3.  若要將現有的資料行變更為計算資料行，您必須卸除並重新建立計算資料行。 將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 下列範例會修改上一個範例中加入的資料行。  
   
     ```  
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  

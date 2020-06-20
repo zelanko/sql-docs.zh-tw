@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d4a9e07006444cf85a6d453e6dc8e2956d55e78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78964363"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971818"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>建立模型管理員 (Master Data Services)
-  當[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]您希望群組或使用者擁有一或多個模型中所有物件的 [**更新**] 許可權時，可以在中建立模型管理員。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]當您希望群組或使用者擁有一或多個模型中所有物件的 [**更新**] 許可權時，可以在中建立模型管理員。  
   
 > [!TIP]  
 >  若要簡化管理，請建立 Windows 或本機群組，並將它設定為模型管理員。 然後不需存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]，您就可以在群組中加入及移除使用者。  
@@ -44,7 +43,7 @@ ms.locfileid: "78964363"
   
 5.  (選擇性) 從 **[模型]** 清單中選取模型。  
   
-6.  按一下 **[編輯]**。  
+6.  按一下 **[編輯]** 。  
   
 7.  按一下您要授與權限的模型。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "78964363"
   
 9. 針對您希望群組或使用者成為其管理員的每個模型，完成步驟 7 和 8。  
   
-10. 按一下 [檔案]  。  
+10. 按一下 [檔案] 。  
   
 ## <a name="remarks"></a>備註  
  請不要指派模型物件或階層成員的任何其他權限。 如果您這樣做，使用者就不再是系統管理員，也無法在**Explorer**以外的任何功能區域中查看模型。  

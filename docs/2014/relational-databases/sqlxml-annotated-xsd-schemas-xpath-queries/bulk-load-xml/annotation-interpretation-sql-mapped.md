@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b0fda8000105573a11c1ca6a460e47a100bc885
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bec8be3253811018dac345abdefda8f560e9dc2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703433"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068230"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
   XML 大量載入 `sql:mapped` 會如預期般處理 XSD 架構中的注釋，也就是說，如果對應架構指定 `sql:mapped="false"` 了任何元素或屬性，則 Xml 大量載入不會嘗試將相關聯的資料儲存在對應的資料行中。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 774dc4ec4a02c72420d004909cb7e6ee1b31f3a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049334"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046065"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>檢視及閱讀容錯移轉叢集執行個體診斷記錄檔
   SQL Server 資源 DLL 的所有重大錯誤和警告事件都會寫入 Windows 事件記錄檔。 SQL Server 的特定診斷資訊執行記錄檔是由 [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 系統預存程序所擷取，並且會寫入 SQL Server 容錯移轉叢集診斷 (也稱為 *SQLDIAG* 記錄) 記錄檔。  
@@ -29,7 +28,7 @@ ms.locfileid: "63049334"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
- 根據預設，SQLDIAG 會儲存在 SQL Server 實例目錄的本機 LOG 資料夾底下，例如 ' C\Program Files\Microsoft SQL Server\MSSQL12。\<AlwaysOn 容錯移轉叢集實例（FCI）之擁有節點的 InstanceName> \mssql\log '。 每個 SQLDIAG 記錄檔的大小會固定為 100 MB。 電腦上會儲存十個此類型的記錄檔，再將它們回收以用於新的記錄檔。  
+ 根據預設，SQLDIAG 會儲存在 SQL Server 實例目錄的本機 LOG 資料夾底下，例如 ' C\Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName>AlwaysOn 容錯移轉叢集實例之擁有節點的 \MSSQL\LOG ' （FCI）。 每個 SQLDIAG 記錄檔的大小會固定為 100 MB。 電腦上會儲存十個此類型的記錄檔，再將它們回收以用於新的記錄檔。  
   
  記錄檔會使用擴充的事件檔案格式。 **sys.fn_xe_file_target_read_file** 系統函數可用來讀取擴充事件所建立的檔案。 系統會以 XML 格式針對每個資料列傳回一個事件。 查詢系統檢視，即可將 XML 資料剖析為結果集。 如需詳細資訊，請參閱 [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)。  
   
@@ -93,7 +92,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  如需這個程序的範例，請參閱本節稍後的 [範例 &#40;Transact-SQL&#41;](#TsqlExample)。  
   
- 使用資料定義語言（DDL）語句`ALTER SERVER CONFIGURATION`（），您可以啟動或停止[sp_server_diagnostics &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)程式所捕捉的記錄診斷資料，並設定 SQLDIAG 記錄檔配置參數，例如記錄檔換用計數、記錄檔大小和檔案位置。 如需語法的詳細資料，請參閱 [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic)。  
+ 使用資料定義語言（DDL）語句（）， `ALTER SERVER CONFIGURATION` 您可以啟動或停止[Sp_server_diagnostics &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)程式所捕捉的記錄診斷資料，並設定 SQLDIAG 記錄檔配置參數，例如記錄檔換用計數、記錄檔大小和檔案位置。 如需語法的詳細資料，請參閱 [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic)。  
   
 ###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> 範例 (Transact-SQL)  
   

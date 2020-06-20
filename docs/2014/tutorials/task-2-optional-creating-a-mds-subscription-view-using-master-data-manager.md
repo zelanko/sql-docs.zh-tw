@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cc923792adc3fefb5ebaab9e225169648394c71f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 598b7bab60cad5d0c391e5e8aeec9fa3b7b9b97f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484708"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006534"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>工作 2 (選擇性)：使用主資料管理員建立 MDS 訂閱檢視
   在這項工作中，您會建立訂閱視圖，將**供應商**模型中的**供應商**實體公開給其他應用程式。 您不會在目前的教學課程版本中使用這個檢視。  
   
-1.  按一下頂端的 [ **SQL Server 2012** ] Master Data Services`http://localhost/MDS`，切換到**主資料管理員**的主頁面（）。  
+1.  按一下頂端的 [SQL Server 2012] Master Data Services，切換到**主資料管理員**的主頁面（ `http://localhost/MDS` ）。 **SQL Server 2012 Master Data Services**  
   
 2.  按一下 [**整合管理**]。  
   

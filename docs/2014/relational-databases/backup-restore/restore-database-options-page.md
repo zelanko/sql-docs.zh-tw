@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d60474b5d72ab9745500325dfd523f83f155343c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875637"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956838"
 ---
 # <a name="restore-database-options-page"></a>還原資料庫 (選項頁面)
   使用 [還原資料庫]  對話方塊的 [選項]  頁面，即可修改還原作業的行為和結果。  

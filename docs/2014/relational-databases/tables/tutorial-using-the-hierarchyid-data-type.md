@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3718b45b69870969dae85b4eb1ad2e9e80adc85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a735b4c2b51e1c680c8129647733ce1efd9f9984
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211779"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055042"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>教學課程：使用 hierarchyid 資料類型
   本教學課程的主要對象是對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 有經驗，但對 `hierarchyid` 資料類型是新手的使用者。  
