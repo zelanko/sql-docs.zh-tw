@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 86806efb-8cf4-4f9d-9824-1152cb4c495c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 14edf3c34278ce89686a390c5b69662753ae653d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33eb116ec2824af31eae236a8efd4038a9cbbb68
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056483"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964578"
 ---
 # <a name="redeployment-of-packages"></a>封裝的重新部署
   在部署專案後，您可能需要更新或擴充封裝功能，然後部署包含已更新封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 做為重新部署封裝處理的一部分，您應該檢視包含在部署公用程式中的組態屬性。 例如，您可能不允許組態在重新部署封裝之後變更。  

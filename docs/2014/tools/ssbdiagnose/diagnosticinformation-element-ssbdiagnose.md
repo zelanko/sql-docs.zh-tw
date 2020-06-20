@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 55da8efd6ee5b330e259ed78bdd152720403f310
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0ba141e3f04eaf1b6edfc1a2427ed75793bceb3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186913"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006783"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation 元素 (ssbdiagnose)
   **DiagnosticInformation** 元素包含報告此公用程式找到之診斷資訊的所有元素。 **DiagnosticInformation** 是 **ssbdiagnostic** XML 輸出檔的根元素。  
@@ -37,7 +36,7 @@ ms.locfileid: "63186913"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`None`|不適用|  
+|`None`|N/A|  
   
 ## <a name="element-characteristics"></a>元素特性  
   
@@ -45,7 +44,7 @@ ms.locfileid: "63186913"
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
-|**次出現**|每個 **ssbdiagnose** XML 輸出檔發生一次。|  
+|**出現次數**|每個 **ssbdiagnose** XML 輸出檔發生一次。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   

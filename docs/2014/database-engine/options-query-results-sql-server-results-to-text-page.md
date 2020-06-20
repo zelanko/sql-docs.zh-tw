@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f5cdfc761b3b8c19e07b1818c2732414b03258cc
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: b7d785a7b8c2ce424f2f88b23024b0d22f399149
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856560"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929989"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>選項（查詢結果-SQL Server-以文字表示結果頁面）
   使用此頁面，即可指定以文字格式顯示查詢結果集的選項。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [**查詢**] 功能表上的 [**查詢選項**]，或在查詢視窗中按一下滑鼠右鍵 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，然後選取 [**查詢選項**]。 在 **[查詢選項]** 對話方塊中，於 **[結果]** 之下，按一下 **[文字]**。  

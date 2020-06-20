@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1d190d55c45530adde1b41658c975bbfc19c0b91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f056b5b8c29f90589568785e94426fa271ff8cb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482630"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971138"
 ---
 # <a name="navigational-access-master-data-services"></a>導覽存取權 (Master Data Services)
   導覽存取權會套用至模型物件安全性 (在 **[模型]** 索引標籤上指派)。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 400a57693fbea10270a51f5735a19b9639112ce9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211201"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000737"
 ---
 # <a name="creating-a-login"></a>建立登入
   若要存取 [!INCLUDE[ssDE](../includes/ssde-md.md)]，使用者需要登入。 登入可以用 Windows 帳戶或 Windows 群組的成員來代表使用者的身分識別，或者登入也可以是只存在於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登入。 請盡可能使用「Windows 驗證」。  
@@ -26,7 +25,7 @@ ms.locfileid: "68211201"
   
 ### <a name="to-create-a-new-windows-account"></a>若要建立新的 Windows 帳戶  
   
-1.  按一下 [**開始**]，按一下 [**執行**]，在 [ `%SystemRoot%\system32\compmgmt.msc /s`**開啟**] 方塊中輸入，然後按一下 **[確定]** 以開啟 [電腦管理] 程式。  
+1.  按一下 [**開始**]，按一下 [**執行**]，在 [**開啟**] 方塊中輸入 `%SystemRoot%\system32\compmgmt.msc /s` ，然後按一下 **[確定]** 以開啟 [電腦管理] 程式。  
   
 2.  在 [系統工具]**** 底下，展開 [本機使用者和群組]****，以滑鼠右鍵按一下 [使用者]****，然後按一下 [新增使用者]****。  
   

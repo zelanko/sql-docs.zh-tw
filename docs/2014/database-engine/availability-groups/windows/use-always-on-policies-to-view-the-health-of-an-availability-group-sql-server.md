@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 090c6fb7e19099ed5ad2650a99aa12f9ae3d5033
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: c58c415bd7bb95221c523290a9a311d4dccb18b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921967"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936309"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>使用 AlwaysOn 原則檢視可用性群組的健全狀況 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 AlwaysOn 原則或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，判斷 AlwaysOn 可用性群組的作業健全狀況。 如需 AlwaysOn 原則式管理的詳細資訊，請參閱[AlwaysOn 可用性群組（SQL Server）操作問題的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
@@ -88,7 +87,7 @@ ms.locfileid: "82921967"
   
      這些指令程式接受下列選項：  
   
-    |選項|說明|  
+    |選項|描述|  
     |------------|-----------------|  
     |`AllowUserPolicies`|執行 AlwaysOn 原則類別目錄中的使用者原則。|  
     |`InputObject`|表示可用性群組、可用性複本或可用性資料庫狀態的物件集合 (依據使用的指令程式而定)。 指令程式會計算指定之物件的健全狀況。|  

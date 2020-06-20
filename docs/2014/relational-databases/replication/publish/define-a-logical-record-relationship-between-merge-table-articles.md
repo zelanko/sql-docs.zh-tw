@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60c92a237562704e5bc5d43717f863aa78a14b55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691665"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066591"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>定義合併資料表發行項之間的邏輯記錄關聯性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義合併資料表發行項之間的邏輯記錄關聯性。  
@@ -50,13 +49,13 @@ ms.locfileid: "62691665"
 -   如果您在初始化發行集的訂閱後，新增、修改或刪除邏輯記錄，則必須在進行變更後產生新的快照集並重新初始化所有訂閱。 如需屬性變更需求的詳細資訊，請參閱[變更發行集與發行項屬性](change-publication-and-article-properties.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在位於 [新增發行集精靈] 和 [發行集屬性 - \<發行集>]**** 對話方塊的 [加入聯結]**** 對話方塊中，定義邏輯記錄。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。  
+ 在 [新增發行集嚮導] 和 [**發行集屬性 \<Publication> -** ] 對話方塊的 [**加入聯結**] 對話方塊中，定義邏輯記錄。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。  
   
  只有將邏輯記錄套用至合併式發行集中的聯結篩選，並且該發行集符合使用預先計算的資料分割要求時，方可在 **[加入聯結]** 對話方塊中定義這些邏輯記錄。 若要定義未套用至聯結篩選的邏輯記錄，並在邏輯記錄層級設定衝突偵測和解決方案，您必須使用預存程序。  
   
 #### <a name="to-define-a-logical-record-relationship"></a>若要定義邏輯記錄關聯性  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]**** 頁面上，或是在 [發行集屬性 - \<發行集>]**** 對話方塊的 [篩選資料列]**** 頁面上，從 [已篩選的資料表]**** 窗格中選取一個資料列篩選。  
+1.  在 [新增發行集嚮導] 的 [**篩選資料表**的資料列] 頁面或 [**發行集屬性 \<Publication> -** ] 對話方塊的 [**篩選資料列**] 頁面上，于 [已**篩選的資料表**] 窗格中選取資料列篩選  
   
      邏輯記錄關聯性與聯結篩選相關聯，這會擴充資料列篩選。 因此，您必須在使用聯結擴充篩選並套用邏輯記錄關聯性之前，先定義資料列篩選。 定義好一個聯結篩選後，您可以以另一個聯結篩選擴充這個聯結篩選。 如需定義聯結篩選的詳細資訊，請參閱＜ [定義和修改合併發行項之間的聯結篩選](define-and-modify-a-join-filter-between-merge-articles.md)＞。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62691665"
   
 3.  在 **[加入聯結]** 對話方塊中定義聯結篩選，然後選取 **[邏輯記錄]** 核取方塊。  
   
-4.  如果您在 [發行集屬性 - \<發行集>]  對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
+4.  如果您位於 [**發行集屬性- \<Publication> ** ] 對話方塊中，請按一下 **[確定**] 以儲存並關閉對話方塊。  
   
 #### <a name="to-delete-a-logical-record-relationship"></a>若要刪除邏輯記錄關聯性  
   
@@ -72,7 +71,7 @@ ms.locfileid: "62691665"
   
      若要僅刪除邏輯記錄關聯性：  
   
-    1.  在 [新增發行集精靈] 的 [篩選資料列]**** 頁面上，或是在 [發行集屬性 - \<發行集>]**** 對話方塊的 [篩選資料列]**** 頁面上，從 [已篩選的資料表]**** 窗格中選取與邏輯記錄關聯性相關聯的聯結篩選，然後按一下 [編輯]****。  
+    1.  在 [新增發行集嚮導] 的 [**篩選資料列**] 頁面上，或 [**發行集 \<Publication> 屬性-** ] 對話方塊的 [**篩選資料列**] 頁面上，于 [已**篩選的資料表**] 窗格中選取與邏輯記錄關聯性相關聯的聯結篩選，然後按一下 [**編輯**]  
   
     2.  在 **[編輯聯結]** 對話方塊中，清除 **[邏輯記錄]** 核取方塊。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "62691665"
   
      若要刪除邏輯記錄關聯性及與其關聯的聯結篩選：  
   
-    -   在 [新增發行集精靈] 或 [發行集屬性 - \<發行集>]**** 對話方塊的 [篩選資料列]**** 頁面上，從 [已篩選的資料表]**** 窗格中選取一個篩選，然後按一下 [刪除]****。 如果您刪除的聯結篩選本身已由其他聯結擴充，也會一併刪除這些聯結。  
+    -   在 [新增發行集嚮導] 或 [發行集**屬性- \<Publication> ** ] 對話方塊的 [**篩選資料列**] 頁面上，于 [已篩選的**資料表**] 窗格中選取篩選，然後按一下 [**刪除**]。 如果您刪除的聯結篩選本身已由其他聯結擴充，也會一併刪除這些聯結。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序，以程式設計方式指定發行項之間的邏輯記錄關聯性。  
@@ -102,11 +101,11 @@ ms.locfileid: "62691665"
   
     -   若要偵測及解決邏輯記錄中相關資料列內所發生的衝突，請為 **@value** 指定 **@logical_record_level_conflict_detection** ＞和＜ **@logical_record_level_conflict_resolution**。  
   
-    -   若要使用標準資料列或資料行層級的衝突偵測和解決方法，請`false`為**@logical_record_level_conflict_detection**和**@logical_record_level_conflict_resolution**指定的值，這是預設值。  
+    -   若要使用標準資料列或資料行層級的衝突偵測和解決方法，請 `false` 為和指定的值 **@logical_record_level_conflict_detection** **@logical_record_level_conflict_resolution** ，這是預設值。  
   
 3.  針對組成此邏輯記錄的每一個發行項重複步驟 2。 您必須針對此邏輯記錄中的每一個發行項使用相同的衝突偵測和解決選項。 如需詳細資訊，請參閱 [偵測和解決邏輯記錄中的衝突](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
   
-4.  在發行集資料庫的發行者上，執行 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)。 指定**@publication**、的關聯性中的一個發行項名稱**@article**、的第二個發行項名稱**@join_articlename** **@filtername**、的關聯性名稱、定義兩個發行項之關聯性的子句、的聯結**@join_filterclause**類型， **@join_unique_key**以及下列專案的其中一個值： **@filter_type**  
+4.  在發行集資料庫的發行者上，執行 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)。 指定 **@publication** 、的關聯性中的一個發行項名稱 **@article** 、的第二個發行項名稱、的關聯性名稱、定義兩個發行項之關聯性的子句、的 **@join_articlename** **@filtername** **@join_filterclause** 聯結類型，以及下列專案的 **@join_unique_key** 其中一個值 **@filter_type** ：  
   
     -   **2** - 定義邏輯關聯性。  
   
@@ -127,9 +126,9 @@ ms.locfileid: "62691665"
   
 2.  若要使用標準資料列層級或資料行層級的衝突偵測與解決方式：  
   
-    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 針對**@property**指定 [ `false` **logical_record_level_conflict_detection** ] 的值，並針對**@value**[] 指定的值。 請為 **1** 指定 **@force_invalidate_snapshot** ＞和＜ **@force_reinit_subscription**。  
+    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 針對指定 [ **logical_record_level_conflict_detection** ] 的值 **@property** ，並針對 [] 指定的值 `false` **@value** 。 請為 **1** 指定 **@force_invalidate_snapshot** ＞和＜ **@force_reinit_subscription**。  
   
-    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 針對**@property**指定 [ `false` **logical_record_level_conflict_resolution** ] 的值，並針對**@value**[] 指定的值。 請為 **1** 指定 **@force_invalidate_snapshot** ＞和＜ **@force_reinit_subscription**。  
+    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 針對指定 [ **logical_record_level_conflict_resolution** ] 的值 **@property** ，並針對 [] 指定的值 `false` **@value** 。 請為 **1** 指定 **@force_invalidate_snapshot** ＞和＜ **@force_reinit_subscription**。  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>移除邏輯記錄關聯性  
   
@@ -142,7 +141,7 @@ ms.locfileid: "62691665"
     > [!NOTE]  
     >  此查詢會傳回與 [sp_helpmergefilter](/sql/relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql)相同的資訊，但是此系統預存程序只會傳回也屬於聯結篩選之邏輯記錄關聯性的相關資訊。  
   
-2.  在發行集資料庫的發行者上，執行 [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)。 指定**@publication**、關聯性中的其中一個發行項名稱**@article**，以及步驟1中的關聯性名稱。 **@filtername**  
+2.  在發行集資料庫的發行者上，執行 [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)。 指定 **@publication** 、關聯性中的其中一個發行項名稱 **@article** ，以及步驟1中的關聯性名稱 **@filtername** 。  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  這個範例會在現有的發行集上啟用預先計算的資料分割，並針對 `SalesOrderHeader` 和 `SalesOrderDetail` 資料表建立組成兩個新發行項的邏輯記錄。  

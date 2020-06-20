@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68a24366ff96c7e6f4784a5fa989f45ed136e74e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791998"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936839"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (也就是 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中所引進的高可用性和災害復原解決方案) 需要 Windows Server 容錯移轉叢集 (WSFC)。 此外，雖然 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依賴 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，但是您可以使用容錯移轉叢集執行個體 (FCI) 來裝載可用性群組的可用性複本。 請務必了解每個叢集技術的角色，也要知道設計您的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境時所必須考量的事項。  
@@ -65,7 +64,7 @@ ms.locfileid: "62791998"
 |-|-------------------------|-------------------------------------------|  
 |**使用 WSFC 叢集**|是|是|  
 |**保護等級**|執行個體|資料庫|  
-|**儲存類型**|Shared|非共用<br /><br /> 請注意，雖然可用性群組中的複本不會共用儲存體，但是 FCI 裝載的複本會使用該 FCI 所需的共用儲存方案。 只有 FCI 內的節點共用儲存方案，可用性群組的複本之間不共用儲存方案。|  
+|**儲存體類型**|Shared|非共用<br /><br /> 請注意，雖然可用性群組中的複本不會共用儲存體，但是 FCI 裝載的複本會使用該 FCI 所需的共用儲存方案。 只有 FCI 內的節點共用儲存方案，可用性群組的複本之間不共用儲存方案。|  
 |**儲存方案**|直接附加、SAN、掛接點、SMB|取決於節點類型|  
 |**可讀取次要**|否*|是|  
 |**適用的容錯移轉原則設定**|WSFC 仲裁<br /><br /> FCI 特定<br /><br /> 可用性群組設定**|WSFC 仲裁<br /><br /> 可用性群組設定|  
@@ -76,7 +75,7 @@ ms.locfileid: "62791998"
  **可用性群組的容錯移轉原則設定適用於所有複本，無論複本裝載於獨立執行個體或 FCI 執行個體。  
   
 > [!NOTE]  
->  如需容錯移轉叢集內**的節點數目**和不同版本**AlwaysOn 可用性群組**的詳細資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)（。https://go.microsoft.com/fwlink/?linkid=232473)  
+>  如需容錯移轉叢集內**的節點數目**和不同版本**AlwaysOn 可用性群組**的詳細資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)（ https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 裝載可用性複本的考量  
   

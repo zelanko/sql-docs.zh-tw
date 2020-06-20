@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a97bb9ab3fcf5aa3ec9e3177a8f4b319c98e1988
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1528dcec50a662524531065d597b004fe7f59e5f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197145"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060097"
 ---
 # <a name="rename-statistics"></a>重新命名統計資料
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]  

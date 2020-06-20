@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: be8b05a3dc706d23f0e1328f4e8bdd38ed368ede
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cf0299f4ba1eeb3f60ad2f24737b136a482a6b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150904"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066837"
 ---
 # <a name="identify-bottlenecks"></a>找出瓶頸
   同時存取共用資源會產生瓶頸。 通常，每個軟體系統中都會有瓶頸存在，而且這是無法避免的。 但是，過量要求共用資源會讓回應時間變差，這時就必須找出問題並進行微調。  

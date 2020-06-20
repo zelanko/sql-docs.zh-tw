@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b03b4d9ecf31e9953fd3e22cec5c51bbacc0c25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957163"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060298"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，透過透明資料加密 (TDE) 保護資料庫，然後將資料庫移到另一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 加密會使用資料庫加密金鑰 (DEK)，此金鑰會儲存在資料庫開機記錄中，以在復原期間提供可用性。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 `master` 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。  
@@ -47,7 +46,7 @@ ms.locfileid: "74957163"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
--   移動 TDE 保護的資料庫時，您也必須移動用來開啟 DEK 的憑證或非對稱金鑰。 憑證或非對稱金鑰必須安裝在目的地伺服器`master`的資料庫中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]才能存取資料庫檔案。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](transparent-data-encryption.md)。  
+-   移動 TDE 保護的資料庫時，您也必須移動用來開啟 DEK 的憑證或非對稱金鑰。 憑證或非對稱金鑰必須安裝在 `master` 目的地伺服器的資料庫中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 才能存取資料庫檔案。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](transparent-data-encryption.md)。  
   
 -   您必須同時保留憑證檔案和私密金鑰檔案的副本，才能復原憑證。 私密金鑰的密碼不必與資料庫主要金鑰密碼相同。  
   
@@ -57,9 +56,9 @@ ms.locfileid: "74957163"
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
   
--   需要`CONTROL DATABASE`資料庫的`master`許可權，才能建立資料庫主要金鑰。  
+-   需要 `CONTROL DATABASE` 資料庫的許可權 `master` ，才能建立資料庫主要金鑰。  
   
--   需要`CREATE CERTIFICATE` `master`資料庫的許可權，才能建立保護 DEK 的憑證。  
+-   需要 `CREATE CERTIFICATE` 資料庫的許可權 `master` ，才能建立保護 DEK 的憑證。  
   
 -   需要加密資料庫的 `CONTROL DATABASE` 權限，以及用於加密資料庫加密金鑰之憑證或非對稱金鑰的 `VIEW DEFINITION` 權限。  
   
@@ -67,9 +66,9 @@ ms.locfileid: "74957163"
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> 使用 SQL Server Management Studio  
   
-1.  在`master`資料庫中建立資料庫主要金鑰和憑證。 如需詳細資訊，請參閱下面的 **使用 Transact-SQL** 。  
+1.  在資料庫中建立資料庫主要金鑰和憑證 `master` 。 如需詳細資訊，請參閱下面的 **使用 Transact-SQL** 。  
   
-2.  在`master`資料庫中建立伺服器憑證的備份。 如需詳細資訊，請參閱下面的 **使用 Transact-SQL** 。  
+2.  在資料庫中建立伺服器憑證的備份 `master` 。 如需詳細資訊，請參閱下面的 **使用 Transact-SQL** 。  
   
 3.  在 [物件總管] 中，以滑鼠右鍵按一下 **[資料庫]** 資料夾，並選取 **[新增資料庫]**。  
   
@@ -143,7 +142,7 @@ ms.locfileid: "74957163"
     GO  
     ```  
   
- 如需詳細資訊，請參閱：  
+ 如需詳細資訊，請參閱  
   
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
@@ -186,7 +185,7 @@ ms.locfileid: "74957163"
      **狀態**  
      顯示下列狀態其中之一： **就緒** 或 **未就緒**。  
   
-     **訊息**  
+     **Message**  
      **[訊息]** 資料行可以顯示有關資料庫的資訊，如下所示：  
   
     -   當資料庫涉及複寫時， **[狀態]** 為 **[尚未備妥]** 且 **[訊息]** 資料行會顯示 **[資料庫已複寫]**。  
@@ -195,7 +194,7 @@ ms.locfileid: "74957163"
   
      若要取得有關訊息的詳細資訊，請按一下超連結文字，以開啟活動監視器。  
   
-2.  按一下 [確定]  。  
+2.  按一下 [確定]。  
   
 3.  使用 [Windows 檔案總管]，將資料庫檔案從來源伺服器移動或複製到目的地伺服器上相同的位置。  
   
@@ -216,7 +215,7 @@ ms.locfileid: "74957163"
      **[要附加的資料庫]**  
      顯示有關所選資料庫的資訊。  
   
-     \<無資料行標頭>  
+     \<no column header>  
      顯示指出附加作業之狀態的圖示。 可能的圖示將在以下的 **[狀態]** 描述中加以描述。  
   
      **MDF 檔案位置**  
@@ -238,12 +237,12 @@ ms.locfileid: "74957163"
     |----------|-----------------|-----------------|  
     |(無圖示)|(沒有文字)|附加作業尚未啟動或是針對此物件進行暫止。 當對話方塊開啟時，這是預設的動作。|  
     |綠色、指向右方的三角形|進行中|附加作業已啟動，但尚未完成。|  
-    |綠色的核取記號|成功|已順利附加物件。|  
+    |綠色的核取記號|Success|已順利附加物件。|  
     |包含白色十字的紅色圓圈|錯誤|附加作業發生錯誤，且未順利完成。|  
     |包含兩個黑色的象限 (在左方和右方) 以及兩個白色的象限 (在上方和下方)|已停止|附加作業未順利完成，因為使用者已停止作業。|  
     |包含指向逆時針方向之彎曲箭頭的圓圈|已回復|附加作業已順利完成，但是因為在附加其他物件的期間發生了錯誤，所以已將其回復。|  
   
-     **訊息**  
+     **Message**  
      顯示空白訊息或「找不到檔案」超連結。  
   
      **加入**  
@@ -252,8 +251,8 @@ ms.locfileid: "74957163"
      **移除**  
      從 **[要附加的資料庫]** 方格中移除選取的檔案。  
   
-     **"** 「 _<database_name>_ 」**資料庫詳細資料**  
-     顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下**流覽**按鈕（**...**）。  
+     **"** _<database_name>_ **" database details**  
+     顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下 [瀏覽]  按鈕 ( **...** )。  
   
     > [!NOTE]  
     >  如果檔案不存在， **[訊息]** 資料行就會顯示「找不到」。 如果找不到記錄檔，它就存在於其他目錄中，或是已遭刪除。 您必須更新 **[資料庫詳細資料]** 方格中的檔案路徑，以指向正確的位置，或是從方格中移除該記錄檔。 如果找不到 .ndf 資料檔，您就必須更新該檔案在方格中的路徑，以指向正確的位置。  
@@ -268,7 +267,7 @@ ms.locfileid: "74957163"
      顯示選取之資料庫檔案的路徑。 路徑可以用手動的方式編輯。  
   
      **訊息**  
-     顯示空白訊息或「找**不到**檔案」超連結。  
+     顯示空白訊息或 **「找不到檔案」** 超連結。  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> 使用 Transact-SQL  
   
@@ -311,7 +310,7 @@ ms.locfileid: "74957163"
     GO  
     ```  
   
- 如需詳細資訊，請參閱：  
+ 如需詳細資訊，請參閱  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   

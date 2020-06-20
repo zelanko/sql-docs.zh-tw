@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3da3f7332bdabce65785b2844157dd4639389254
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797647"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936739"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>針對可用性群組手動準備次要資料庫 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中準備 AlwaysOn 可用性群組的次要資料庫。 準備次要資料庫需要進行兩個步驟：(1) 使用 RESTORE WITH NORECOVERY，將主要資料庫的最新資料庫備份和後續記錄備份還原至裝載次要複本的每個伺服器執行個體，以及 (2) 將還原的資料庫聯結至可用性群組。  
@@ -195,7 +194,7 @@ ms.locfileid: "72797647"
         > [!IMPORTANT]  
         >  如果主要與次要資料庫的路徑名稱不同，您將無法加入檔案。 這是因為接收加入檔案作業的記錄時，次要複本的伺服器執行個體會嘗試將新檔案放在主要資料庫所使用的相同路徑中。  
   
-         例如，下列命令會還原位於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]預設執行個體資料目錄 (C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) 中之主要資料庫的備份。 還原資料庫作業必須將資料庫移至[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]名為（*AlwaysOn1*）之遠端實例的資料目錄，其裝載另一個叢集節點上的次要複本。 其中，資料和記錄檔會還原至*C:\Program FILES\MICROSOFT SQL Server\MSSQL12。ALWAYSON1\MSSQL\DATA*目錄。 此還原作業會使用 WITH NORECOVERY，將次要資料庫保留在還原資料庫中。  
+         例如，下列命令會還原位於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]預設執行個體資料目錄 (C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) 中之主要資料庫的備份。 還原資料庫作業必須將資料庫移至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 名為（*AlwaysOn1*）之遠端實例的資料目錄，其裝載另一個叢集節點上的次要複本。 其中，資料和記錄檔會還原至*C:\Program FILES\MICROSOFT SQL Server\MSSQL12。ALWAYSON1\MSSQL\DATA*目錄。 此還原作業會使用 WITH NORECOVERY，將次要資料庫保留在還原資料庫中。  
   
         ```sql
         RESTORE DATABASE MyDB1  
@@ -282,6 +281,6 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [&#40;Transact-sql&#41;還原引數](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [RESTORE 引數 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [針對失敗的新增檔案作業進行疑難排解 &#40;AlwaysOn 可用性群組&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

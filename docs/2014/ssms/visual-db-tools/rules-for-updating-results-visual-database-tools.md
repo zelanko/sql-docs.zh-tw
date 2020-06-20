@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f1814c96a5f58052be6271d2a35c1bbf78f87b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 855d754750e9c5e58c63a3cfd2dee4ac7f9ce3e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63066476"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067115"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新結果的規格 (Visual Database Tools)
   大多數的情形下，您可以更新 [結果窗格](visual-database-tools.md)所顯示的結果集。 不過也有些情形無法更新。  

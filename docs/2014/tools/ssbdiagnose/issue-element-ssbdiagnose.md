@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2f182c7974eaf26cca2b666fcf9740dee675830
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63285765"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006765"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 元素 (ssbdiagnose)
   報告 **ssbdiagnose** 公用程式所發現的問題。 **ssbdiagnose** XML 輸出檔案中每個報告的問題都有一個 Issue 元素。  
@@ -54,7 +53,7 @@ ms.locfileid: "63285765"
 |--------------------|-----------------|  
 |**資料類型和長度**|`string`，沒有長度限制。|  
 |**ReplTest1**|傳回錯誤訊息的文字。|  
-|**次出現**|每個報告的錯誤出現一次。|  
+|**出現次數**|每個報告的錯誤出現一次。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   

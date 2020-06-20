@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49727ad5168bbd5438a57ae161f669482e412cae
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 198505c5d14b9fda510d4635dbaa3d3d49483ddf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856812"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930139"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>選項（查詢執行-SQL Server-ANSI 頁面）
   這些 ANSI (ISO) 標準 SET 選項共同定義了使用者查詢的查詢處理環境是執行觸發，還是預存程序。 不過，這些 SET 選項並沒有包含符合 ISO 標準所需的所有選項。 使用此頁面來指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 將使用 ISO 標準中指定的全部或部分設定來執行查詢。 這些選項的變更僅適用於新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [**查詢**] 功能表上的 [**查詢選項**]，或在查詢視窗中按一下滑鼠右鍵， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 然後選取 [**查詢選項**]。 在 **[查詢選項]** 對話方塊中，於 **[執行]** 之下，按一下 **[ANSI]**。  

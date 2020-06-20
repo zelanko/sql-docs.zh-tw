@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf5fbc6c3a01b39079c8f63a2998490025c85e8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210813"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066924"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server 的 Plan Cache 物件
   **Plan Cache** 物件所提供的計數器，可監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用記憶體來儲存物件，例如預存程序、特定與備妥 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以及觸發程序。 可同時監視 **Plan Cache** 物件的多個執行個體，每個執行個體都代表所要監視的不同計畫類型。  
@@ -28,7 +27,7 @@ ms.locfileid: "68210813"
 |SQL Server Plan Cache 計數器|描述|  
 |------------------------------------|-----------------|  
 |**Cache Hit Ratio**|快取叫用數和查閱數之間的比率|  
-|**Cache Object Counts**|快取中的快取物件數。|  
+|**快取物件計數**|快取中的快取物件數。|  
 |**快取頁面**|快取物件所用的 8 KB 分頁數。|  
 |**Cache Objects in use**|使用中的快取物件數目。|  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 388d400160e3fa7b3240c7a9c014bcf36ae25f3a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca32ef4936f31ca5c75dfc2df1eb965d17f7b039
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212098"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060386"
 ---
 # <a name="specify-a-merge-article-resolver"></a>指定合併發行項解析程式
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定合併發行項解析程式。  
@@ -46,7 +45,7 @@ ms.locfileid: "68212098"
   
     -   您撰寫的自訂解決器可以是商務邏輯處理常式 (以 Managed 程式碼撰寫) 或是以 COM 為基礎的自訂解決器。 如需詳細資訊，請參閱[Advanced Merge Replication 衝突偵測和解決](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)方式。 如果您需要實作針對每一個複寫之資料列執行的自訂邏輯，而不只是針對衝突的資料列，請參閱＜ [為合併發行項實作商務邏輯處理常式](../implement-a-business-logic-handler-for-a-merge-article.md)中指定合併發行項解析程式。  
   
-    -   以 COM 為基礎的標準解決器，包含[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在中。  
+    -   以 COM 為基礎的標準解決器，包含在中 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 -   若要使用預設解決器以外的其他解決器，您必須將解決器複製到執行「合併代理程式」的電腦，然後註冊它 (如果您使用的是商務邏輯處理常式，則還必須在「發行者」端對其進行註冊)。 「合併代理程式」在以下位置上執行：  
   
@@ -57,15 +56,15 @@ ms.locfileid: "68212098"
     -   使用 Web 同步處理來提取訂閱的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 註冊解析程式之後，您可以指定發行項應該使用 [發行項屬性 - \<發行項>]**** 對話方塊之 [解析程式]**** 索引標籤上的解析程式，此對話方塊位於 [新增發行集精靈] 和 [發行集屬性 - \<發行集>]**** 對話方塊中。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。  
+ 註冊解析程式之後，請在 [發行項**屬性 \<Article> -** ] 對話方塊的 [**解析程式**] 索引標籤中指定發行項應該使用解析程式，這可以在 [新增發行集嚮導] 和 [**發行集屬性- \<Publication> ** ] 對話方塊中找到。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-a-resolver"></a>若要指定解決器  
   
-1.  在 [新增發行集精靈] 的 [發行項]**** 頁面上，或是在 [發行集屬性 - \<發行集>]**** 對話方塊中，選取一個資料表。  
+1.  在 [新增發行集嚮導] 或 [發行集**屬性- \<Publication> ** ] 對話方塊的 [發行項 **] 頁面上**，選取資料表。  
   
 2.  按一下 **[發行項屬性]**，然後按一下 **[設定反白顯示資料表發行項的屬性]**。  
   
-3.  在 [發行項屬性 - \<發行項>]**** 頁面上，按一下 [解析程式]**** 索引標籤。  
+3.  在 [發行項**屬性 \<Article> -** ] 頁面上，按一下 [**解析程式**] 索引標籤。  
   
 4.  選取 **[使用自訂解決器 (已在散發者註冊)]**，然後在清單中按一下解決器。  
   
@@ -87,10 +86,10 @@ ms.locfileid: "68212098"
   
 2.  若要判斷是否已經註冊想要的解決程式，請在任何資料庫的發行者端執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)。 這樣會顯示自訂解決器的描述以及在散發者上註冊之每一個以 COM 為基礎之解決器的類別識別碼 (CLSID)，或是在散發者上註冊之每一個商務邏輯處理常式的 Managed 組件相關資訊。  
   
-3.  如果尚未註冊所要的自訂解析程式，請在散發者端執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)。 針對**@article_resolver**指定解析程式的名稱;對於商務邏輯處理常式而言，這是元件的易記名稱。 如果是以 COM 為基礎的解析程式，請針對**@resolver_clsid**指定 DLL 的 CLSID，針對商務邏輯處理常式，指定的`true`值**@is_dotnet_assembly**、的元件**@dotnet_assembly_name**名稱，以及覆寫<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>之類別的完整名稱。 **@dotnet_class_name**  
+3.  如果尚未註冊所要的自訂解析程式，請在散發者端執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)。 指定解析程式的名稱; 如果 **@article_resolver** 是商務邏輯處理常式，這是元件的易記名稱。 如果是以 COM 為基礎的解析程式，請針對指定 DLL 的 CLSID， **@resolver_clsid** 針對商務邏輯處理常式，指定的值、的 `true` **@is_dotnet_assembly** 元件名稱 **@dotnet_assembly_name** ，以及覆寫之類別的完整名稱 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> **@dotnet_class_name** 。  
   
     > [!NOTE]  
-    >  如果商務邏輯處理常式元件未部署在與合併代理程式可執行檔相同的目錄中、與同步啟動合併代理程式之應用程式相同的目錄中，或在全域組件快取（GAC）中，您就必須指定具有元件名稱的完整路徑**@dotnet_assembly_name**。  
+    >  如果商務邏輯處理常式元件未部署在與合併代理程式可執行檔相同的目錄中、與同步啟動合併代理程式之應用程式相同的目錄中，或在全域組件快取（GAC）中，您就必須指定具有元件名稱的完整路徑 **@dotnet_assembly_name** 。  
   
 4.  如果此解決器是以 COM 為基礎的解決器：  
   
@@ -105,7 +104,7 @@ ms.locfileid: "68212098"
         regsvr32 ssradd.dll  
         ```  
   
-5.  如果解析程式是商務邏輯處理常式，請將元件部署在與合併代理程式可執行檔（replmerg.exe）相同的資料夾中、與叫用合併代理程式之應用程式相同的資料夾中，或在步驟3中為**@dotnet_assembly_name**參數指定的資料夾中。  
+5.  如果解析程式是商務邏輯處理常式，請將元件部署在與合併代理程式可執行檔（replmerg.exe）相同的資料夾中、與叫用合併代理程式的應用程式相同的資料夾中，或在步驟3中為參數指定的資料夾中 **@dotnet_assembly_name** 。  
   
     > [!NOTE]  
     >  合併代理程式可執行檔的預設安裝位置為 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM。  
@@ -116,7 +115,7 @@ ms.locfileid: "68212098"
   
 2.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)，並記下結果集中 [value]**** 欄位內所需的自訂解析程式名稱。  
   
-3.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 針對**@article_resolver**指定步驟2中的解決器名稱，並使用**@resolver_info**參數指定自訂解決器的任何必要輸入。 對於以預存程式為基礎的**@resolver_info**自訂解析程式，是預存程式的名稱。 如需 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 提供之解析程式所需輸入的詳細資訊，請參閱 [Microsoft 以 COM 為基礎的解析程式](../merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
+3.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 針對指定步驟2中的解決器名稱 **@article_resolver** ，並使用參數指定自訂解決器的任何必要輸入 **@resolver_info** 。 對於以預存程式為基礎的自訂解析程式， **@resolver_info** 是預存程式的名稱。 如需 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 提供之解析程式所需輸入的詳細資訊，請參閱 [Microsoft 以 COM 為基礎的解析程式](../merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
 #### <a name="to-specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>針對現有的合併發行項指定或變更自訂解決器  
   
@@ -126,13 +125,13 @@ ms.locfileid: "68212098"
   
 3.  在發行集資料庫的發行者端，執行 [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 針對 **article_resolver**指定 **@property**的值，包括商務邏輯處理常式的完整路徑，並針對 **@value**中指定合併發行項解析程式。  
   
-4.  若要變更自訂解析程式的任何必要輸入，請再次執行 [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 針對 **resolver_info** @is_dotnet_assembly **@property** 的值，並針對 **@value**中指定合併發行項解析程式。 對於以預存程式為基礎的**@resolver_info**自訂解析程式，是預存程式的名稱。 如需必要輸入的詳細資訊，請參閱 [Microsoft 以 COM 為基礎的解析程式](../merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
+4.  若要變更自訂解析程式的任何必要輸入，請再次執行 [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 針對 **resolver_info** @is_dotnet_assembly **@property** 的值，並針對 **@value**中指定合併發行項解析程式。 對於以預存程式為基礎的自訂解析程式， **@resolver_info** 是預存程式的名稱。 如需必要輸入的詳細資訊，請參閱 [Microsoft 以 COM 為基礎的解析程式](../merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
 #### <a name="to-unregister-a-custom-conflict-resolver"></a>取消註冊自訂衝突解決器  
   
 1.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)，並記下結果集中 [value]**** 欄位內所需的自訂解析程式名稱。  
   
-2.  在散發者端，執行 [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql)。 針對**@article_resolver**，指定步驟1中自訂解決器的完整名稱。  
+2.  在散發者端，執行 [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql)。 針對，指定步驟1中自訂解決器的完整名稱 **@article_resolver** 。  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  此範例會建立新的發行項，並指定在發生衝突時，應該使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Averaging Conflict Resolver 來計算 **UnitPrice** 資料行的平均值。  

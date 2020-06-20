@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 51185be7-7092-480a-a52c-cf7786c4a0a0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 973680d07c3bd6a304e63f4b3fde0e228f0f7bff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c706613c828ce579af27a8c5a6890936a31814ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088874"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929259"
 ---
 # <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler-來源資料表-Database Engine Tuning Advisor-選取工作負載資料表
   Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 和 [!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor 使用此對話方塊來選取資料表。  
@@ -39,12 +38,12 @@ ms.locfileid: "66088874"
  **擁有者**  
  指定追蹤資料表的擁有者。 此欄位會自動擴展為 **dbo**。  
   
- **目錄**  
+ **資料表**  
  指定從中讀取追蹤的追蹤資料表名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [將追蹤結果儲存至資料表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [SQL Server Profiler 範本和許可權](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [將追蹤結果儲存到資料表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

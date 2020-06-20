@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 439cfab5-c049-43a8-8617-59eaa8d24873
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7a9f116ccd65e4763e382d1125ca0a8424ecd97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470025"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040963"
 ---
 # <a name="lesson-2-writing-transact-sql"></a>第 2 課：撰寫 Transact-SQL
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用來撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 查詢及 SQLCMD 命令的整合式開發環境。 此教學課程說明如何使用 Database Engine 查詢編輯器撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。  

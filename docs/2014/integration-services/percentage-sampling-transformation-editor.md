@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c40d804-26a3-4d35-809b-bc923d83d451
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0366ecb08281a28d43bc98639bf4b11e60aea402
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1734dd95a0744e08e57bcdff3a80f882b926c2ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056714"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964689"
 ---
 # <a name="percentage-sampling-transformation-editor"></a>百分比取樣轉換編輯器
   使用 **[百分比取樣轉換編輯器]** 對話方塊，即可依指定的資料列百分比，將輸入的一部分分割為取樣。 這個轉換會將輸入分成兩個不同的輸出。  

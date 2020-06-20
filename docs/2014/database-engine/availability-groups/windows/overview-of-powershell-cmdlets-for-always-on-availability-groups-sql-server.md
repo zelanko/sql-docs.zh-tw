@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eecbdf1bd3d3859e272ce2216bde660910795c97
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789455"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936689"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀 (SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell 是以工作為基礎的命令列介面和指令碼語言，專為系統管理所設計。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中提供一組 PowerShell 指令程式，可讓您部署、管理和監視可用性群組、可用性複本以及可用性資料庫。  
@@ -44,14 +43,14 @@ ms.locfileid: "62789455"
 -   [監視可用性群組健全狀況](#MonitorTblshtAGs)  
   
 > [!NOTE]  
->  如需《線上叢書》 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中描述如何使用 Cmdlet 來執行[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]工作的主題清單，請參閱[AlwaysOn 可用性群組 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)的「相關工作」一節。  
+>  如需 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 《線上叢書》中描述如何使用 Cmdlet 來執行工作的主題清單 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，請參閱[AlwaysOn 可用性群組 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)的「相關工作」一節。  
   
 ##  <a name="configuring-a-server-instance-for-alwayson-availability-groups"></a><a name="ConfiguringServerInstance"></a>設定 AlwaysOn 可用性群組的伺服器實例  
   
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|  
 |`Disable-SqlAlwaysOn`|在伺服器執行個體上停用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|`Path`、`InputObject` 或 `Name` 參數所指定的伺服器執行個體  (必須是支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本)。|  
-|`Enable-SqlAlwaysOn`|在支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 如需有關支援的[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]詳細資訊，請參閱[AlwaysOn 可用性群組 &#40;SQL Server&#41;的必要條件、限制和建議](prereqs-restrictions-recommendations-always-on-availability.md)。|支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
+|`Enable-SqlAlwaysOn`|在支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 如需有關支援的詳細資訊 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，請參閱[AlwaysOn 可用性群組 &#40;SQL Server&#41;的必要條件、限制和建議](prereqs-restrictions-recommendations-always-on-availability.md)。|支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
 |`New-SqlHadrEndPoint`|在伺服器執行個體上建立新的資料庫鏡像端點。 在主要與次要資料庫之間進行資料移動時需要這個端點。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|變更現有資料庫鏡像端點的屬性，例如名稱、狀態或驗證屬性。|支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 且缺少資料庫鏡像端點的伺服器執行個體|  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62789455"
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|建立資料或記錄備份。|任何線上資料庫 (若為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，則為裝載主要複本之伺服器執行個體的資料庫)|  
-|`Restore-SqlDatabase`|還原備份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (若為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，則為裝載次要複本的伺服器執行個體)<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 準備次要資料庫時，您必須在每個`-NoRecovery` `Restore-SqlDatabase`命令中使用參數。|  
+|`Restore-SqlDatabase`|還原備份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (若為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，則為裝載次要複本的伺服器執行個體)<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 準備次要資料庫時，您必須 `-NoRecovery` 在每個命令中使用參數 `Restore-SqlDatabase` 。|  
   
  如需使用這些 Cmdlet 來準備次要資料庫的相關資訊，請參閱[針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   

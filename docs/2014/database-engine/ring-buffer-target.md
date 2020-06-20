@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 186e847bb9f9b621543119c25510dc5d6107e274
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088963"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929440"
 ---
 # <a name="ring-buffer-target"></a>環緩衝區目標
   信號緩衝區目標會短暫地將事件資料保留在記憶體中， 此目標可以在兩個模式的其中一個之下管理事件。  
@@ -31,9 +30,9 @@ ms.locfileid: "66088963"
   
 |選項|允許的值|描述|  
 |------------|--------------------|-----------------|  
-|max_memory|任何32位整數。 此為選用值。|要使用的最大記憶體數量 (以 KB 為單位)。 根據先達到的限制，卸除現有事件：max_event_limit 或 max_memory。 最大值為 4194303 KB。 將信號緩衝區大小設定為 GB 範圍的限制之前應謹慎考慮，因為它可能會影響中的其他記憶體取用者 SQL Server|  
-|max_event_limit|任何32位整數。 此為選用值。|保留在 ring_buffer 中的最大事件數目。 根據先達到的限制，卸除現有事件：max_event_limit 或 max_memory。 預設值 = 1000。|  
-|occurrence_number|下列其中一個值：<br /><br /> 0 (預設值) = 當使用配置給目標的所有記憶體時，將會捨棄最舊的事件。<br /><br /> 任何32位整數 = 要在每個事件 FIFO 之後捨棄之每個類型的事件數目。<br /><br /> <br /><br /> 此為選用值。|要使用的 FIFO 模式，如果設定為大於 0 的值，則為要保留在緩衝區內之每一個類型的慣用事件數目。|
+|max_memory|任何32位整數。 這是選擇性的值。|要使用的最大記憶體數量 (以 KB 為單位)。 根據先達到的限制，卸除現有事件：max_event_limit 或 max_memory。 最大值為 4194303 KB。 將信號緩衝區大小設定為 GB 範圍的限制之前應謹慎考慮，因為它可能會影響中的其他記憶體取用者 SQL Server|  
+|max_event_limit|任何32位整數。 這是選擇性的值。|保留在 ring_buffer 中的最大事件數目。 根據先達到的限制，卸除現有事件：max_event_limit 或 max_memory。 預設值 = 1000。|  
+|occurrence_number|下列其中一個值：<br /><br /> 0 (預設值) = 當使用配置給目標的所有記憶體時，將會捨棄最舊的事件。<br /><br /> 任何32位整數 = 要在每個事件 FIFO 之後捨棄之每個類型的事件數目。<br /><br /> <br /><br /> 這是選擇性的值。|要使用的 FIFO 模式，如果設定為大於 0 的值，則為要保留在緩衝區內之每一個類型的慣用事件數目。|
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="adding-the-target-to-a-session"></a>將目標加入至工作階段  

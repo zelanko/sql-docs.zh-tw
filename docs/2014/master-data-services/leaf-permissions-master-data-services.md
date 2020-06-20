@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ee587881b95821c2ae23580b54d298fa496cec15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf091886adb0a7fe484b2b62f44eb51b6c58d8bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479174"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971268"
 ---
 # <a name="leaf-permissions-master-data-services"></a>分葉權限 (Master Data Services)
   分葉權限適用於某個實體所有分葉成員的屬性值。  
@@ -37,7 +36,7 @@ ms.locfileid: "65479174"
 |權限|描述|  
 |----------------|-----------------|  
 |**唯讀**|顯示分葉成員，但使用者無法加入、移除或變更這些成員。<br /><br /> 如果合併成員存在，將會顯示 Name 和 Code，但是使用者無法將其加入、移除或變更。|  
-|**更新**|顯示分葉成員，而且使用者可以加入、移除及變更這些成員。<br /><br /> 如果合併成員存在，將會顯示 Name 和 Code，但是使用者無法將其加入、移除或變更。|  
+|**Update**|顯示分葉成員，而且使用者可以加入、移除及變更這些成員。<br /><br /> 如果合併成員存在，將會顯示 Name 和 Code，但是使用者無法將其加入、移除或變更。|  
 |**拒絕**|不顯示實體的分葉成員。|  
   
 ## <a name="attribute-permissions"></a>屬性權限  
@@ -46,7 +45,7 @@ ms.locfileid: "65479174"
 |權限|描述|  
 |----------------|-----------------|  
 |**唯讀**|顯示屬性，但使用者無法變更屬性值。|  
-|**更新**|顯示屬性，而且使用者可以變更屬性值。|  
+|**Update**|顯示屬性，而且使用者可以變更屬性值。|  
 |**拒絕**|不顯示屬性。<br /><br /> 注意：您無法明確拒絕存取 Name 和 Code 屬性。|  
   
 ### <a name="example"></a>範例  

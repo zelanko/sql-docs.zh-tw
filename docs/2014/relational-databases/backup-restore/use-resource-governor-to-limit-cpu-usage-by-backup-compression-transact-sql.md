@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19a95cfa5c6780fbdf71ae58bd141aa9aa351efa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920793"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956168"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL)
   根據預設，使用壓縮來備份會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，如果發生 CPU 爭用的情況，您可能會想要在[資源管理員](../resource-governor/resource-governor.md) 限制 CPU 使用量的工作階段中，建立低優先權的壓縮備份。 這個主題所展示的狀況會將特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的工作階段對應至在這類情況中限制 CPU 使用量的資源管理員工作負載群組，藉以分類這些工作階段。  
@@ -259,7 +258,7 @@ GO
  [[頁首]](#Top)  
   
 ##  <a name="compressing-backups-using-a-session-with-limited-cpu"></a><a name="creating_compressed_backup"></a> 使用含有限制 CPU 的工作階段來壓縮備份  
- 若要在含有限制最大 CPU 的工作階段中建立壓縮備份，請以您在分類函數中指定之使用者的身分登入。 在備份命令中，指定 WITH COMPRESSION （[!INCLUDE[tsql](../../includes/tsql-md.md)]）或選取 [**壓縮備份**][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]（）。 若要建立壓縮的資料庫備份，請參閱[建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)。  
+ 若要在含有限制最大 CPU 的工作階段中建立壓縮備份，請以您在分類函數中指定之使用者的身分登入。 在備份命令中，指定 WITH COMPRESSION （ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）或選取 [**壓縮備份**] （ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ）。 若要建立壓縮的資料庫備份，請參閱[建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)。  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>範例 C：建立壓縮備份 (Transact-SQL)  
  下列 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 範例會在最近格式化的備份檔案 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 中建立 `Z:\SQLServerBackups\AdvWorksData.bak`資料庫的完整壓縮備份。  

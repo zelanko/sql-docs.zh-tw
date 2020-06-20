@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 26409a60-9616-484b-b608-ca554aef08f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14284d0c89037664000ded35e09e4256bfe6a544
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 427d48eaa8f4c0812a86ab7c85851ed61afe1d1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698979"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053321"
 ---
 # <a name="audit-database-object-take-ownership-event-class"></a>Audit Database Object Take Ownership 事件類別
   **Audit Database Object Take Ownership** 事件類別會在資料庫範圍內的物件擁有者有所變更時發生。  

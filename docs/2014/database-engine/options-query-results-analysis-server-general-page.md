@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: caef9e71dedb4b974f05e1e7fbca861ec51f3585
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 599b73a97e55204a808aa4e35a085cc5be9f785c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856510"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930085"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>選項（查詢結果-Analysis Server-一般頁面）
   使用此頁面，即可決定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 查詢之查詢結果視窗的預設行為。 若要顯示這些設定，請選取 [工具]**** 功能表中的 [選項]****。 在 [查詢結果]**** 資料夾內展開 [Analysis Server]**** 子資料夾，然後選擇 [一般]****。  

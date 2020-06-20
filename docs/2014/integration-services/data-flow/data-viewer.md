@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b5696b55252a6053b7501eee08dfbe4365678a26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f45a99b149feb0c0609aac88660ad7e62ca425f2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916018"
 ---
 # <a name="data-viewer"></a>資料檢視器
   如果路徑設定為使用資料檢視器，當資料在資料流程元件之間移動時，資料檢視器會一一顯示緩衝區的資料。  

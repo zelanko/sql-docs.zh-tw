@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56118ef2db319abd270ff51259e3537864fdd57e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010362"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955916"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用檔案輸入輸出 API 存取 FileTable
   描述檔案系統 I/O 如何在 FileTable 上運作。  
@@ -25,7 +24,7 @@ ms.locfileid: "66010362"
 ##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> 開始使用 FileTable 檔案的 I/O API  
  FileTable 的主要用法是透過 Windows 檔案系統和檔案 I/O API。 FileTable 支援透過一系列可用檔案 I/O API 的非交易式存取。  
   
-1.  檔案 I/O API 存取通常一開始會先取得檔案或目錄的邏輯 UNC 路徑。 應用程式可以搭配 [!INCLUDE[tsql](../../includes/tsql-md.md)]GetFileNamespacePath &#40;Transact-SQL&#41;[ 函數使用 ](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 陳述式，以取得檔案或目錄的邏輯路徑。 如需詳細資訊，請參閱 [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)。  
+1.  檔案 I/O API 存取通常一開始會先取得檔案或目錄的邏輯 UNC 路徑。 應用程式可以搭配 [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 函數使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以取得檔案或目錄的邏輯路徑。 如需詳細資訊，請參閱 [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)。  
   
 2.  然後應用程式會使用此邏輯路徑以取得檔案或目錄控制代碼，並對物件進行操作。 該路徑可傳遞至任何支援的檔案系統 API 函數，例如 CreateFile() 或 CreateDirectory()，以建立或開啟檔案並取得控制代碼。 控制代碼隨後便可用於以資料流形式處理資料、列舉或組織目錄、取得或設定檔案屬性、刪除檔案或目錄等。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66010362"
   
 ##  <a name="additional-considerations-for-file-io-access-to-filetables"></a><a name="considerations"></a> FileTable 之檔案 I/O 存取的其他考量  
   
-###  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="vnn"></a>搭配 AlwaysOn 可用性群組使用虛擬網路名稱（Vnn）  
+###  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="vnn"></a> 使用虛擬網路名稱 (VNN) 搭配 AlwaysOn 可用性群組  
  當包含 FILESTREAM 或 FileTable 資料的資料庫屬於 AlwaysOn 可用性群組時，透過檔案系統 API 對 FILESTREAM 或 FileTable 資料進行的所有存取都應該使用 VNN 而非電腦名稱。 如需詳細資訊，請參閱 [FILESTREAM 和 FileTable 與 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)。  
   
 ###  <a name="partial-updates"></a><a name="partial"></a> 部分更新  

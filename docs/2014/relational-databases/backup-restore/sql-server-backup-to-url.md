@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6918a099e00b1de9e773320b5c6c0e4089859e02
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289226"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956344"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
   本主題將介紹使用 Azure Blob 儲存體服務作為備份目的地所需的概念、需求和元件。 使用磁碟或磁帶時，備份和還原功能相同或類似，只有些許的差異。 這些差異在於許多顯而易見的例外狀況，本主題中將內含某些程式碼範例。  
@@ -47,12 +46,12 @@ ms.locfileid: "79289226"
 -   建立 Azure Blob 儲存體服務的容器時，建議您將存取權設定為 [**私**用]。 將存取權設定為 [私用] 可限制只有能夠提供必要資訊向 Azure 帳戶驗證的使用者或帳戶，才有存取權。  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要將 Azure 帳戶名稱和存取金鑰驗證儲存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認證中。 此資訊會在執行備份或還原作業時，用來向 Azure 帳戶進行驗證。  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要將 Azure 帳戶名稱和存取金鑰驗證儲存在認證中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 此資訊會在執行備份或還原作業時，用來向 Azure 帳戶進行驗證。  
   
 -   用來發出 BACKUP 或 RESTORE 命令的使用者帳戶應該位於擁有 **改變任何認證** 權限的 **db_backup 運算子** 資料庫角色中。  
   
 ###  <a name="introduction-to-key-components-and-concepts"></a><a name="intorkeyconcepts"></a>重要元件和概念簡介  
- 下列兩節將介紹 Azure Blob 儲存體服務，以及備份至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] azure blob 儲存體服務或從中還原時使用的元件。 請務必瞭解這些元件，以及它們之間的互動，以執行 Azure Blob 儲存體服務的備份或還原。  
+ 下列兩節將介紹 Azure Blob 儲存體服務，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份至 Azure blob 儲存體服務或從中還原時使用的元件。 請務必瞭解這些元件，以及它們之間的互動，以執行 Azure Blob 儲存體服務的備份或還原。  
   
  建立 Azure 帳戶是此程式的第一個步驟。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會使用**Azure 儲存體帳戶名稱**及其**存取金鑰**值來驗證和讀取 blob，並將其寫入儲存體服務。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證會儲存這項驗證資訊，並且在備份或還原作業期間使用。 如需建立儲存體帳戶和執行簡單還原的完整逐步解說，請參閱[使用 Azure 儲存體服務進行 SQL Server 備份和還原的教學](https://go.microsoft.com/fwlink/?LinkId=271615)課程。  
   
@@ -61,9 +60,9 @@ ms.locfileid: "79289226"
 ###  <a name="azure-blob-storage-service"></a><a name="Blob"></a>Azure Blob 儲存體服務  
  **儲存體帳戶：** 儲存體帳戶是所有儲存體服務的起點。 若要存取 Azure Blob 儲存體服務，請先建立 Azure 儲存體帳戶。 必須要有**儲存體帳戶名稱**及其**存取金鑰**屬性，才能向 Azure Blob 儲存體服務及其元件進行驗證。  
   
- **容器：** 容器提供一組 Blob 的群組，而且可以儲存不限數目的 Blob。 若要將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份寫入 Azure Blob 服務，您至少必須建立根容器。  
+ **容器：** 容器提供一組 Blob 的群組，而且可以儲存不限數目的 Blob。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份寫入 Azure Blob 服務，您至少必須建立根容器。  
   
- **Blob：** 任何類型和大小的檔案。 有兩種類型的 blob 可儲存在 Azure Blob 儲存體服務中：區塊和分頁 blob。  備份會使用分頁 Blob 做為 Blob 類型。 您可以使用下列 URL 格式來定址 blob：\<HTTPs://儲存體帳戶>.\<blob.core.windows.net/容器>\</blob>  
+ **Blob：** 任何類型和大小的檔案。 有兩種類型的 blob 可儲存在 Azure Blob 儲存體服務中：區塊和分頁 blob。  備份會使用分頁 Blob 做為 Blob 類型。 您可以使用下列 URL 格式來定址 blob： HTTPs:// \<storage account> . blob.core.windows.net/\<container>/\<blob>  
   
  ![Azure Blob 儲存體](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob 儲存體")  
   
@@ -77,9 +76,9 @@ ms.locfileid: "79289226"
 > [!WARNING]  
 >  如果您選擇將備份檔案複製並上傳至 Azure Blob 儲存體服務，請使用分頁 Blob 作為儲存體選項。 不支援從區塊 Blob 還原。 從區塊 Blob 類型進行 RESTORE 會失敗，並出現錯誤。  
   
- 以下是 URL 值範例： HTTP [s]：//ACCOUNTNAME.Blob.core.windows.net/\<CONTAINER>/\<FILENAME .bak>。 HTTPS 不是必要項目，但是建議使用。  
+ 以下是 URL 值範例： HTTP [s]：//ACCOUNTNAME.Blob.core.windows.net/ \<CONTAINER> / \<FILENAME.bak> 。 HTTPS 不是必要項目，但是建議使用。  
   
- **認證：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是用來儲存連線到 SQL Server 外部資源所需之驗證資訊的物件。  在這裡[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，備份和還原程式會使用認證來向 Azure Blob 儲存體服務進行驗證。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何查看、複製或重新產生儲存體帳戶**存取金鑰**的詳細資訊，請參閱[儲存體帳戶存取金鑰](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
+ **認證：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是用來儲存連線到 SQL Server 外部資源所需之驗證資訊的物件。  在這裡， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原程式會使用認證來向 Azure Blob 儲存體服務進行驗證。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何查看、複製或重新產生儲存體帳戶**存取金鑰**的詳細資訊，請參閱[儲存體帳戶存取金鑰](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
   
  如需有關如何建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證的逐步指示，請參閱本主題稍後的＜ [建立認證](#credential) ＞範例。  
   

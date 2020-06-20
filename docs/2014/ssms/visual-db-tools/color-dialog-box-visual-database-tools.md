@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 29d748f6ff75fc46bef3f667e50aa9cbd92bff5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d93a9f9a75bd869fd8ecc9bc17ec42750c4a94f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62936693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067224"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>色彩對話方塊 (Visual Database Tools)
   [色彩]  對話方塊會傳回使用者所選取之色彩的 RGB 值。 使用者可從一組由顯示驅動程式所判斷的基本色彩或一組自訂色彩中進行選取。 請從基本色彩中進行選取，或建立自訂色彩。 按一下色彩矩陣，或輸入 [色調]  、[濃度]  、[亮度]  、[紅]  、[綠]  和 [藍]  方塊，即可定義色彩。  

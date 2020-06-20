@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: facde89ad6b476fa01b34badce10dd3cae52ecac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2c8cae3e47a6f48014cbafe588dde782c097260
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68186121"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040107"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>在連接伺服器之後自動啟動追蹤 (SQL Server Profiler)
   此主題描述如何在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接到 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]執行個體之後，自動啟動追蹤。  
@@ -28,10 +27,10 @@ ms.locfileid: "68186121"
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  選取 [進行連接後立即啟動追蹤]  核取方塊。  
+2.  選取 [進行連接後立即啟動追蹤] 核取方塊。  
   
 > [!NOTE]  
->  如果選取 [進行連接後立即啟動追蹤]  ，將不會顯示 [追蹤屬性]  對話方塊，而是開始追蹤。 若要編輯追蹤屬性，您必須先關閉此設定。  
+>  如果選取 [進行連接後立即啟動追蹤]，將不會顯示 [追蹤屬性] 對話方塊，而是開始追蹤。 若要編輯追蹤屬性，您必須先關閉此設定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](sql-server-profiler.md)  

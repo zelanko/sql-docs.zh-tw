@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0016fc3cdd93ea78ceed56efa076a01bd85be50
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196541"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042835"
 ---
 # <a name="create-nested-triggers"></a>建立巢狀觸發程序
   觸發程序執行用來起始另一個觸發程序的動作時，DML 和 DDL 觸發程序就是巢狀觸發程序。 這些動作可以起始化其他觸發程序等等。 DML 與 DDL 觸發程序最多可以巢狀方式嵌套多達 32 層。 您可以透過 [巢狀觸發程序]  伺服器組態選項來控制 AFTER 觸發程序是否可為巢狀。 不論此設定為何，INSTEAD OF 觸發程序 (只有 DML 觸發程序可為 INSTEAD OF 觸發程序) 均可為巢狀。  
