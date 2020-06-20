@@ -1,5 +1,6 @@
 ---
 title: 處理錯誤和訊息 |Microsoft Docs
+description: 瞭解當應用程式呼叫 ODBC 函數時所傳回的診斷資訊，包括成功或失敗，以及詳細資訊。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59bb40dbfc7f8596968d2dc441396dc9c076bb82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c79fbd493906280c6503509309b9efc7a3216f8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967668"
 ---
 # <a name="handling-errors-and-messages"></a>處理錯誤與訊息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,11 +37,11 @@ ms.locfileid: "81291658"
   
  例如，在應用程式呼叫**SQLFetch**以抓取結果集中的資料列之後，傳回碼會指出是否已達到結果集的結尾（SQL_NO_DATA）、是否已傳回任何參考用訊息（SQL_SUCCESS_WITH_INFO），或者是否發生錯誤（SQL_ERROR）。  
   
- 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式傳回 SQL_SUCCESS 以外的任何專案，應用程式可以呼叫**SQLGetDiagRec**來取得任何資訊或錯誤訊息。 如果有一個以上的訊息，請使用**SQLGetDiagRec**來向上和向下移動訊息集。  
+ 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式傳回 SQL_SUCCESS 以外的任何專案，應用程式可以呼叫**SQLGetDiagRec**來取得任何資訊或錯誤訊息。 如果有一個以上的訊息，請使用**SQLGetDiagRec**來向上和向下移動訊息集。  
   
  傳回碼 SQL_INVALID_HANDLE 永遠會指出程式設計錯誤，而且絕不會在執行階段發生。 雖然 SQL_ERROR 可能會指出程式設計錯誤，其他所有傳回碼還是會提供執行階段資訊。  
   
- 原始的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生 API （適用于 C 的 db-library）可讓應用程式安裝回呼錯誤處理，以及傳回錯誤或訊息的訊息處理函式。 有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (例如，PRINT、RAISERROR、DBCC 和 SET) 會將其結果傳回 DB-Library 訊息處理常式函數，而非結果集。 不過，ODBC API 沒有此種回撥能力。 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式偵測到來自的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訊息時，它會將 ODBC 傳回碼設定為 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，並傳回訊息做為一或多個診斷記錄。 因此，ODBC 應用程式必須仔細測試這些傳回碼，並呼叫**SQLGetDiagRec**來捕獲訊息資料。  
+ 原始的原 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生 API （適用于 C 的 db-library）可讓應用程式安裝回呼錯誤處理，以及傳回錯誤或訊息的訊息處理函式。 有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (例如，PRINT、RAISERROR、DBCC 和 SET) 會將其結果傳回 DB-Library 訊息處理常式函數，而非結果集。 不過，ODBC API 沒有此種回撥能力。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式偵測到來自的訊息時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，它會將 ODBC 傳回碼設定為 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，並傳回訊息做為一或多個診斷記錄。 因此，ODBC 應用程式必須仔細測試這些傳回碼，並呼叫**SQLGetDiagRec**來捕獲訊息資料。  
   
  如需追蹤錯誤的資訊，請參閱 [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805) (資料存取追蹤)。 如需有關 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中加入之錯誤追蹤增強功能的詳細資訊，請參閱[存取擴充事件記錄檔中的診斷資訊](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d1d198bd-6730-4394-bd5f-28f320c01a38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 871c5961b1c878e8eaad9d536731c57e71bb40ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 609b9cea138db15cefd002f494620b5a1da7b208
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915317"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967878"
 ---
 # <a name="mssqlserver_17132"></a>MSSQLSERVER_17132
     

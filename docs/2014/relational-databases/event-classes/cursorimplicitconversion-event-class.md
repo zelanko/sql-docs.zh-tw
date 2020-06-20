@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efc615e9aa873a322ef9a31b2c293e6c5c4793da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 410ce293d126190971f3c463d5611761033f6c3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663524"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030180"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion 事件類別
   **CursorImplicitConversion** 事件類別描述應用程式開發介面 (API) 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料指標中所發生的資料指標隱含轉換事件。 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行的 Transact-SQL 陳述式不被所要求的伺服器資料指標類型支援時，就會發生資料指標隱含轉換事件。 此時 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回一個錯誤訊息，指出資料指標類型已經變更。  

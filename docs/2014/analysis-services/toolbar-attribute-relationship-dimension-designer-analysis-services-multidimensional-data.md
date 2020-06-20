@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff0c172301b1c11a500258e67f4e8f5c69bd3ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066230"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938459"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具列 (屬性關聯性設計師索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用 [維度設計師] 之 **[屬性關聯性]** 索引標籤上的工具列，即可進行下列程序：  
@@ -44,7 +43,7 @@ ms.locfileid: "66066230"
  **新增屬性關聯性**  
  開啟 [建立屬性關聯性]**** 對話方塊，而且您可以在其中定義新的屬性關聯性。  
   
- **縮放**  
+ **Zoom**  
  循環顯示比例百分比，或顯示可用顯示比例選項的清單。  
   
  **展開所有形狀**  

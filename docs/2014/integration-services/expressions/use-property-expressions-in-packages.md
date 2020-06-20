@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a926405f2c35ff62b3589003ebe015fe920b743
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 157f45cd6d6fd7f201998cb3798440573654be58
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176418"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968988"
 ---
 # <a name="use-property-expressions-in-packages"></a>在封裝中使用屬性運算式
   屬性運算式是指派給屬性的運算式，用於在執行階段啟用該屬性的動態更新。 例如，屬性運算式可更新「收件者」欄位，傳送郵件工作透過插入儲存在變數中的電子郵件地址來使用該欄位。
@@ -69,9 +68,9 @@ ms.locfileid: "78176418"
 
  ![屬性運算式的使用者介面](../media/ssis-propertyexpressionui.gif "屬性運算式的使用者介面")
 
- 在 [屬性]  視窗和 [運算式]  頁面上，按一下 [運算式]  集合層級上的瀏覽按鈕 ([...])  ，以開啟 [屬性運算式編輯器]  對話方塊。 [屬性運算式編輯器] 可讓您將屬性對應至運算式，並輸入屬性運算式。 如果您想要使用圖形運算式工具來建立並驗證運算式，請按一下運算式層級上的瀏覽按鈕 ([...])  ，以開啟 [運算式產生器]  對話方塊，然後再建立或修改並選擇性地驗證運算式。
+ 在 [屬性] 視窗和 [運算式] 頁面上，按一下 [運算式] 集合層級上的瀏覽按鈕 ([...])，以開啟 [屬性運算式編輯器] 對話方塊。 [屬性運算式編輯器] 可讓您將屬性對應至運算式，並輸入屬性運算式。 如果您想要使用圖形運算式工具來建立並驗證運算式，請按一下運算式層級上的瀏覽按鈕 ([...])  ，以開啟 [運算式產生器]  對話方塊，然後再建立或修改並選擇性地驗證運算式。
 
- 您還可以從 [屬性運算式編輯器]  對話方塊，開啟 [運算式產生器]  對話方塊。
+ 您還可以從 [屬性運算式編輯器] 對話方塊，開啟 [運算式產生器] 對話方塊。
 
 #### <a name="to-work-with-property-expressions"></a>處理屬性運算式
 
@@ -92,7 +91,7 @@ ms.locfileid: "78176418"
  屬性運算式會在載入封裝組態之後載入。 例如，變數會先由其組態進行更新，然後再評估並載入使用這些變數的屬性運算式。 這表示屬性運算式永遠都會使用組態所設定的變數值。
 
 > [!NOTE]
->  您不能使用`Set` **dtexec**公用程式的選項來填入屬性運算式。
+>  您不能使用 `Set` **dtexec**公用程式的選項來填入屬性運算式。
 
  下表摘要說明評估與載入 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 之屬性運算式的時機。
 
@@ -114,7 +113,7 @@ ms.locfileid: "78176418"
  下列範例運算式顯示如何在屬性運算式中使用系統變數、運算子、函數和字串常值。
 
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>封裝之 LoggingMode 屬性的屬性運算式
- 下列屬性運算式可用以設定封裝的 LoggingMode 屬性。 此運算式使用 DAY 和 GETDATE 函數來取得代表日期之日 (Day) 部分的整數。 如果日期是 1 日或 15 日，記錄功能將會啟用，否則便會停用記錄功能。 值1是 LoggingMode 枚舉器成員`Enabled`的整數對應項，而值2則是成員`Disabled`的整數對應項。 您必須在運算式中使用數值代替列舉值成員名稱。
+ 下列屬性運算式可用以設定封裝的 LoggingMode 屬性。 此運算式使用 DAY 和 GETDATE 函數來取得代表日期之日 (Day) 部分的整數。 如果日期是 1 日或 15 日，記錄功能將會啟用，否則便會停用記錄功能。 值1是 LoggingMode 枚舉器成員的整數對應項 `Enabled` ，而值2則是成員的整數對應項 `Disabled` 。 您必須在運算式中使用數值代替列舉值成員名稱。
 
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`
 
@@ -155,7 +154,7 @@ ms.locfileid: "78176418"
  `@[User::myfilenamefull]`
 
 > [!NOTE]
->  連接管理員的屬性運算式只可使用 [屬性] 視窗進行存取。 若要檢視連線管理員的屬性，您必須在 [屬性] 視窗開啟時，在 [ **設計師] 的 [連線管理員]** [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 區域中選取連線管理員，或以滑鼠右鍵按一下連線管理員並選取 [屬性]  。
+>  連接管理員的屬性運算式只可使用 [屬性] 視窗進行存取。 若要檢視連線管理員的屬性，您必須在 [屬性] 視窗開啟時，在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 的 [連線管理員] 區域中選取連線管理員，或以滑鼠右鍵按一下連線管理員並選取 [屬性]。
 
 ### <a name="property-expression-for-the-configstring-property-of-a-text-file-log-provider"></a>文字檔記錄提供者之 ConfigString 屬性的屬性運算式
  下列屬性運算式可用以設定文字檔記錄提供者的 ConfigString 屬性。 該運算式會使用 `varConfigString`單一使用者定義變數，該變數包含要使用之檔案連線管理員的名稱。 檔案連接管理員會指定要在其中寫入記錄項目之文字檔的路徑。
@@ -163,7 +162,7 @@ ms.locfileid: "78176418"
  `@[User::varConfigString]`
 
 > [!NOTE]
->  記錄提供者的屬性運算式只可使用 [屬性] 視窗進行存取。 若要檢視記錄提供者的屬性，您必須在 [屬性] 視窗開啟時，在 [ **設計師] 的封裝總管**[!INCLUDE[ssIS](../../../includes/ssis-md.md)]索引標籤上選取記錄提供者，或以滑鼠右鍵按一下封裝總管中的記錄提供者，並按一下 [屬性]  。
+>  記錄提供者的屬性運算式只可使用 [屬性] 視窗進行存取。 若要檢視記錄提供者的屬性，您必須在 [屬性] 視窗開啟時，在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 的封裝總管索引標籤上選取記錄提供者，或以滑鼠右鍵按一下封裝總管中的記錄提供者，並按一下 [屬性]。
 
 ## <a name="external-resources"></a>外部資源
 

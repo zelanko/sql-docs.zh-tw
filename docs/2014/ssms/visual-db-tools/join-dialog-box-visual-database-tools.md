@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e266d398debd65a8a03f73d7f8726899c97b7e13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4228b249a49d2efc54fdd6cbda983ef8651b6d2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711131"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048602"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>聯結對話方塊 (Visual Database Tools)
   使用此對話方塊可指定聯結資料表的選項。 若要存取此對話方塊，請在 [設計]  窗格中選取聯結線 (Join Line)。 然後，在 [屬性]  視窗中按一下 [聯結條件及類型]  ，並按一下顯示在屬性右邊的省略符號 **(...)** 。  
@@ -34,10 +33,10 @@ ms.locfileid: "62711131"
 |**Table**|聯結中相關資料表或資料表值物件的名稱。 不能在這裡變更資料表的名稱 - 此資訊的顯示僅供參考。|  
 |**資料行**|用於聯結資料表的資料行名稱。 運算子清單中的運算子會指定各資料行中資料之間的關係。 不能在這裡變更資料行的名稱 - 此資訊的顯示僅供參考。|  
 |**運算子**|指定用於關聯聯結資料行的運算子。 若要指定等於 (=) 之外的運算子，請從清單中選取。 關閉屬性頁時，您選取的運算子會出現在聯結線的菱形圖中，如下所示：<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbii.gif "Visual Database Tools 圖示")|  
-|**Table1 中的\<所有資料列>**|指定輸出中顯示左邊資料表裡全部的資料列，即使右邊資料表中沒有對應的符合也一樣。 右邊資料表中沒有符合資料的資料行會顯示為 null。 選擇此選項就等於在 SQL 陳述式中指定 LEFT OUTER JOIN。|  
-|**Table2 中的\<所有資料列>**|指定輸出中顯示右邊資料表裡全部的資料列，即使左邊資料表中沒有對應的符合也一樣。 左邊資料表中沒有符合資料的資料行會顯示為 null。 選擇此選項就等於在 SQL 陳述式中指定 RIGHT OUTER JOIN。|  
+|**選取所有資料列，從 \<table1>**|指定輸出中顯示左邊資料表裡全部的資料列，即使右邊資料表中沒有對應的符合也一樣。 右邊資料表中沒有符合資料的資料行會顯示為 null。 選擇此選項就等於在 SQL 陳述式中指定 LEFT OUTER JOIN。|  
+|**選取所有資料列，從 \<table2>**|指定輸出中顯示右邊資料表裡全部的資料列，即使左邊資料表中沒有對應的符合也一樣。 左邊資料表中沒有符合資料的資料行會顯示為 null。 選擇此選項就等於在 SQL 陳述式中指定 RIGHT OUTER JOIN。|  
   
- **從\<Table1>** 的所有資料列，以及**table2>\<中的所有資料列**，都相當於在 SQL 語句中指定完整外部聯結。  
+ 同時選取 [選取所有資料列，從 \<table1>] 和 [選取所有資料列，從 \<table2>]，與在 SQL 陳述式中指定 FULL OUTER JOIN 相同。  
   
  選取某個選項建立外部聯結時，聯結線中的菱形圖就會改變，以指示聯結為左邊外部、右邊外部或完整外部聯結。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a0f52b9bd12a91d546e33787853dd8883d77b48
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894782"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968448"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>以指令碼工作處理 Excel 檔案
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 Excel 連接管理員、Excel 來源和 Excel 目的地，以處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 檔案格式試算表中儲存的資料。 本主題所述的技術會使用指令碼工作取得有關可用 Excel 資料庫 (活頁簿檔案) 與資料表 (工作表與具名範圍) 的相關資訊。 您可以輕鬆地修改這些範例，使其可與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB Provider 所支援的其他以檔案為基礎之資料來源搭配使用。  
@@ -79,7 +78,7 @@ ms.locfileid: "62894782"
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
-1.  將新的腳本工作加入封裝，並將其名稱變更`ExcelFileExists`為。  
+1.  將新的腳本工作加入封裝，並將其名稱變更為 `ExcelFileExists` 。  
   
 2.  在 [指令碼工作編輯器]**** 的 [指令碼]**** 索引標籤上，按一下 **ReadOnlyVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -87,7 +86,7 @@ ms.locfileid: "62894782"
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中選取`ExcelFile`變數。  
+    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中選取 `ExcelFile` 變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62894782"
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中選取`ExcelFileExists`變數。  
+    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中選取 `ExcelFileExists` 變數。  
   
 4.  按一下 [編輯指令碼]****，以開啟指令碼編輯器。  
   
@@ -149,15 +148,15 @@ public class ScriptMain
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
-1.  將新的腳本工作加入封裝，並將其名稱變更`ExcelTableExists`為。  
+1.  將新的腳本工作加入封裝，並將其名稱變更為 `ExcelTableExists` 。  
   
 2.  在 [指令碼工作編輯器]**** 的 [指令碼]**** 索引標籤上，按一下 **ReadOnlyVariables**，並使用下列其中一項方法輸入屬性值：  
   
-    -   輸入`ExcelTable`並`ExcelFile`以逗號分隔`.`  
+    -   輸入 `ExcelTable` 並 `ExcelFile` 以逗號分隔`.`  
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中，選取`ExcelTable`和`ExcelFile`變數。  
+    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中，選取 `ExcelTable` 和 `ExcelFile` 變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -165,7 +164,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中選取`ExcelTableExists`變數。  
+    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中選取 `ExcelTableExists` 變數。  
   
 4.  按一下 [編輯指令碼]****，以開啟指令碼編輯器。  
   

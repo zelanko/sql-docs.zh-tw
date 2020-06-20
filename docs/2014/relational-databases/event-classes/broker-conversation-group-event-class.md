@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23e39e48b8c4c20ab0e847d87b7193179e8d74ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85cb959cfa53491aa4d7d3653f995bcf5fffbdf0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664231"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030547"
 ---
 # <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **Broker:Conversation Group** 事件。  

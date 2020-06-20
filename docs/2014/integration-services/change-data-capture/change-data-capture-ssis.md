@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7ad456034902c2d3793100e93e370453348a1451
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e6b2080053231f9a5326f35d47ab598c2c5f35d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176528"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923609"
 ---
 # <a name="change-data-capture-ssis"></a>異動資料擷取 (SSIS)
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，異動資料擷取會針對將累加式載入從來源資料表有效執行到資料超市和資料倉儲的挑戰，提供有效的方案。
@@ -29,7 +28,7 @@ ms.locfileid: "78176528"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的異動資料擷取功能會擷取套用到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表的插入、更新與刪除活動，並以容易取用的關聯式格式，提供變更的詳細資料。 異動資料擷取所使用的變更資料表包含鏡像追蹤來源資料表之資料行結構的資料行，以及了解逐資料列發生之變更所需的中繼資料。
 
 > [!NOTE]
->  並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本中都無法異動資料擷取。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。
+>  並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本中都無法異動資料擷取。 如需版本支援的功能清單 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。
 
 ## <a name="how-change-data-capture-works-in-integration-services"></a>異動資料擷取在 Integration Services 中的運作方式
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝可以輕易地收集 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中的異動資料，從而對資料倉儲執行有效率的累加式載入。 不過，在您可以使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 載入變更資料前，管理員必須在您要擷取變更的資料庫和資料表上啟用異動資料擷取。 如需如何在資料庫上設定異動資料擷取的詳細資訊，請參閱[啟用和停用異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)。

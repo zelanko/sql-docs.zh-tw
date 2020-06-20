@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97c41b4ca75336f70b049239112132c89b05fba5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a05344f1fc20e575566d0a0fa527ac64b32363f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768484"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968396"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>在指令碼工作和指令碼元件中設定中斷點來偵錯指令碼
   此程序描述如何在用於指令碼工作和指令碼元件的指令碼中設定中斷點。  
   
- 在指令碼中設定中斷點後，[設定中斷點 - **物件名稱>]\<** 對話方塊會列出中斷點與內建的中斷點。  
+ 在腳本中設定中斷點之後，[**設定中斷點- \<object name> ** ] 對話方塊會列出中斷點，以及內建的中斷點。  
   
 > [!IMPORTANT]  
 >  在某些情況下，會忽略指令碼工作和指令碼元件的中斷點。 如需詳細資訊，請參閱撰寫腳本工作的程式碼和偵錯工具中**的腳本工作一節** [，以及 [](../control-flow/script-task.md)編碼和偵測腳本元件] （. 中的**腳本元件**一節。/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
@@ -48,6 +47,6 @@ ms.locfileid: "62768484"
   
 8.  按一下 [確定]  。  
   
-9. 若要儲存封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
+9. 若要儲存封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
   
   

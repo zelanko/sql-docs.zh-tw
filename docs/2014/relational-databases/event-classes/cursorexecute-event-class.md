@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f9cc17fb916bad5879c4f55737b72f9a1013de51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb8fb3ffafc001ed6bd63a10f8f1620521cc0435
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663504"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030225"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute 事件類別
   **CursorExecute** 事件類別描述出現在應用程式開發介面 (API) 資料指標中的資料指標執行事件。 在資料指標準備事件所建立的執行計畫中，當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 建立及擴展資料指標時，就會發生資料指標執行事件。  

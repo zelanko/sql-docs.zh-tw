@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcca4bfbf68bb74b8d0c61c0f434e1b0958d58da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191931"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063130"
 ---
 # <a name="handling-smo-events"></a>處理 SMO 事件
   有些伺服器事件類型可以藉由事件處理常式和 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件進行訂閱。  
@@ -37,7 +36,7 @@ ms.locfileid: "63191931"
   
  您必須撰寫事件處理常式類別，才能處理事件。 事件處理常式類別可以包含一個以上的事件處理常式函數，而且必須加以安裝，才能處理事件。 事件處理常式函式會從*ServerEventNotificatificationArgs*參數接收事件的相關資訊，可用來報告事件的相關資訊。  
   
- 可以處理的資料庫和伺服器事件種類會列在<xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet>類別和<xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>類別中。  
+ 可以處理的資料庫和伺服器事件種類會列在 <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> 類別和 <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> 類別中。  
   
 ## <a name="example"></a>範例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

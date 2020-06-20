@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a218855202eec9109718d5090acf16e80da42b6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c65fe8a302afd15bc406e0785407865c928797fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284923"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938519"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>了解表格式模型中的 DAX (SSAS 表格式)
   資料分析運算式 (DAX) 是公式語言，可用來在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel 活頁簿和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型專案中建立自訂計算。 DAX 公式包含函數、運算子和值，可對資料表和資料行中的資料執行進階計算。  
@@ -101,11 +100,11 @@ ms.locfileid: "67284923"
 |------------------------|----------------------|-----------------|  
 |整數|64 位元 (八位元組) 整數值 <sup>1、2</sup>|沒有小數位數的數字。 整數可以是正數或負數，但必須是 -9,223,372,036,854,775,808 (-2^63) 到 9,223,372,036,854,775,807 (2^63-1) 之間的整數。|  
 |十進位數字|64 位元 (八位元組) 實數 <sup>1、2</sup>|實數是可以有小數位數的數字。 實數涵蓋極廣的值範圍：<br /><br /> 負值是從 -1.79E + 308 到 -2.23E - 308<br /><br /> 零<br /><br /> 正值是從 2.23E -308 到 1.79E + 308<br /><br /> 不過，有效位數的數目限制為 17 個小數位數。|  
-|Boolean|Boolean|True 或 False 值。|  
+|布林值|布林值|True 或 False 值。|  
 |Text|String|Unicode 字元資料字串。 可以是字串或數字，或以文字格式表示的日期。|  
-|日期|Date/time|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
+|Date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
 |貨幣|貨幣|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
-|不適用|Blank|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
+|N/A|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
   
  表格式模型也包含資料表資料類型，做為許多 DAX 函數的輸入或輸出。 例如，FILTER 函數會採用資料表做為輸入，並輸出只包含符合篩選條件之資料列的另一份資料表。 您可以結合資料表函數與彙總函式，透過動態定義的資料集執行複雜的計算。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "67284923"
   
  如需 DAX 中表格式模型之資料類型與資料類型的明確和隱含轉換的詳細資訊，請參閱[支援的資料類型 &#40;SSAS 表格式&#41;](data-types-supported-ssas-tabular.md)。  
   
-##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a> DAX 運算子  
+##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a>DAX 運算子  
  DAX 語言會在公式中使用四種不同類型的計算運算子：  
   
 -   比較運算子，用於比較值並傳回全域 TRUE\FALSE 值。  
@@ -136,7 +135,7 @@ ms.locfileid: "67284923"
   
 |||  
 |-|-|  
-|公式|描述|  
+|Formula|描述|  
 |`=TODAY()`|在資料行的每個資料列中插入今天的日期。|  
 |`=3`|在資料行的每個資料列中，插入 3 這個值。|  
 |`=[Column1] + [Column2]`|將 [Column1] 和 [Column2] 同一資料列中的值相加，並將結果放在相同資料列的導出資料行中。|  
@@ -227,7 +226,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  資訊函數會查看當做引數提供的資料格或資料列，然後告訴您該值是否符合預期的類型。 例如，如果您參考的值包含錯誤，ISERROR 函數會傳回 TRUE。 如需詳細資訊，請參閱[&#40;DAX&#41;的資訊函數](/dax/information-functions-dax)。  
   
 ### <a name="logical-functions"></a>邏輯函數  
- 邏輯函數會在運算式上作用，以傳回運算式中值的相關資訊。 例如，TRUE 函數會讓您知道您所評估的運算式是否會傳回 TRUE 值。 如需詳細資訊，請參閱[&#40;DAX&#41;的邏輯函數](/dax/logical-functions-dax)。  
+ 邏輯函數會在運算式上作用，以傳回運算式中值的相關資訊。 例如，TRUE 函式可讓您知道正在求解的運算式是否會傳回 TRUE 值。 如需詳細資訊，請參閱[&#40;DAX&#41;的邏輯函數](/dax/logical-functions-dax)。  
   
 ### <a name="mathematical-and-trigonometric-functions"></a>數學和三角函數  
  DAX 中的數學函數與 Excel 的數學和三角函數非常類似。 在 DAX 函數所使用的數值資料類型中有一些小差異。 如需詳細資訊，請參閱[&#40;DAX&#41;的數學和三角函數](/dax/math-and-trig-functions-dax)。  
@@ -239,7 +238,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  DAX 中的文字函數與其在 Excel 中的對應項目非常類似。 您可以傳回字串的一部分、搜尋字串中的文字，或串連字串值。 DAX 也提供了用來控制日期、時間和數字之格式的函數。 如需詳細資訊，請參閱[&#40;DAX&#41;的文字函數](/dax/text-functions-dax)。  
   
 ### <a name="time-intelligence-functions"></a>時間智慧函數  
- DAX 中所提供的時間智慧函數可讓您建立使用行事曆與日期之內建知識的計算。 若將時間和日期範圍與彙總或計算搭配使用，您可以針對銷售量、存貨等等，根據類似的時間範圍建立有意義的比較。 如需詳細資訊，請參閱[&#40;DAX&#41;的時間智慧函數](/dax/time-intelligence-functions-dax)。  
+ DAX 中所提供的時間智慧函數可讓您建立使用行事曆與日期之內建知識的計算。 使用時間和日期範圍結合彙總或計算，您可以針對銷售、清查等，在可比較的時間週期內建置有意義的比較。 如需詳細資訊，請參閱[&#40;DAX&#41;的時間智慧函數](/dax/time-intelligence-functions-dax)。  
   
 ###  <a name="table-valued-functions"></a><a name="bkmk_TableFunc"></a>資料表值函式  
  有 DAX 函數可以輸出資料表並 (或) 採用資料表做為輸入。 資料表可能會只有單一資料行，因此資料表值函式也會採用單一資料行做為輸入。 了解如何使用這些資料表值函式對於善用 DAX 公式相當重要。 DAX 包括下列類型的資料表值函式：  
@@ -416,7 +415,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="additional-resources"></a><a name="bkmk_addional_resources"></a> 其他資源  
  [表格式模型化 &#40;Adventure Works 教學課程&#41;](../tabular-modeling-adventure-works-tutorial.md) 對於如何建立在導出資料行、量值和資料列篩選中包含許多計算的表格式模型，提供逐步指示。 對於大部分的公式，則會提供該公式用途的描述。  
   
- [Analysis Services 和 Powerpivot 小組的 Blog](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)會提供和 powerpivot 的相關[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]資訊、提示、新聞和公告。  
+ [Analysis Services 和 Powerpivot 小組的 Blog](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)會提供和 powerpivot 的相關資訊、提示、新聞和公告 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 。  
   
  [DAX 資源中心](https://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 會提供關於 DAX 的內外部資訊，包括由主要的 Business Intelligence 專業人員所提交的多個 DAX 解決方案。  
   

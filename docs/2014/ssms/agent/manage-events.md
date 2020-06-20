@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ca6d56440b06d285cbb90f8d92325d59a452c16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188206"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008567"
 ---
 # <a name="manage-events"></a>管理事件
   您可以將達到或超過特定錯誤嚴重性層級的所有事件訊息轉送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 這稱為「事件轉送」**。 轉送伺服器是一個專用的伺服器，它也可以當做主要伺服器。 您可以利用事件轉送功能將伺服器群組的警示管理集中化，藉以減輕使用頻繁之伺服器的工作負載。  
@@ -73,7 +72,7 @@ ms.locfileid: "63188206"
   
  **若要指定警示管理伺服器**  
   
--   [Transact-SQL](../sql-server-management-studio-ssms.md)  
+-   [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
  **若要定義對警示的回應**  
   
@@ -88,6 +87,6 @@ ms.locfileid: "63188206"
 >  因為作業可能引發事件，請小心不要建立遞迴式警示作業迴圈。  
   
 ## <a name="see-also"></a>另請參閱  
- [sysmessages &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
+ [sys.sys訊息 &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
   
   

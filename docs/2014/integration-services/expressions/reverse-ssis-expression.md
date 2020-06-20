@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ce882ae32718f634efb6b2f39ed397dfb9cbf785
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b8a65119f52302c12211ea0e33ac18aa1ce9676
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897331"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969078"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (SSIS 運算式)
   傳回反向順序的字元運算式。  
