@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b51049f0a55a10ae83af9e0f253c1c717f6d4962
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056832"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964855"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>封裝安裝精靈 UI 參考
   使用 [封裝安裝精靈]**** 來部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，包括其內含的封裝和其他檔案，以及任何封裝的相依性。  
@@ -61,7 +60,7 @@ ms.locfileid: "66056832"
  **路徑**  
  檢視要設定之屬性的路徑。  
   
- **類型**  
+ **型別**  
  檢視屬性的資料類型。  
   
  **ReplTest1**  

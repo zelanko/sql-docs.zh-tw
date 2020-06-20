@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ea97a56ad10fd0545e9a550defcf673f05542c8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964778"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>使用檢查點來重新啟動封裝
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以從失敗點重新啟動失敗的封裝，而無需重新執行整個封裝。 如果封裝設定為使用檢查點，則封裝執行的相關資訊會寫入檢查點檔案。 當失敗的封裝重新執行時，檢查點檔案會用於從失敗點重新啟動封裝。 如果封裝順利執行，則會刪除檢查點檔案，然後在下次封裝執行時重新建立檢查點檔案。  
@@ -59,7 +58,7 @@ ms.locfileid: "62767030"
 |CheckpointUsage|指定是否使用檢查點。|  
 |SaveCheckpoints|指出封裝是否儲存檢查點。 必須將此屬性設為 True，才能從失敗點重新啟動封裝。|  
   
- 此外，您必須針對封裝中要識別`true`為重新啟動點的所有容器，將 FailPackageOnFailure 屬性設定為。  
+ 此外，您必須 `true` 針對封裝中要識別為重新啟動點的所有容器，將 FailPackageOnFailure 屬性設定為。  
   
  可以使用 ForceExecutionResult 屬性來測試封裝中檢查點的使用。 將工作或容器的 ForceExecutionResult 設為 [Failure]，可以模擬即時失敗。 當重新執行封裝時，會重新執行失敗的工作和容器。  
   
@@ -73,7 +72,7 @@ ms.locfileid: "62767030"
 |`IfExists`|指定如果存在檢查點檔案，就使用該檔案。 如果存在檢查點檔案，則封裝會從上一個執行失敗點重新啟動，否則，封裝會從封裝工作流程的開始點執行。|  
   
 > [!NOTE]  
->  Dtexec 的 **/checkpointing on**選項相當於將封裝的`SaveCheckpoints`屬性設定為`True`，並將`CheckpointUsage`屬性設為 Always。 如需詳細資訊，請參閱 [dtexec Utility](dtexec-utility.md)。  
+>  Dtexec 的 **/checkpointing on**選項相當於將封裝的屬性設定 `SaveCheckpoints` 為 `True` ，並將屬性設 `CheckpointUsage` 為 Always。 如需詳細資訊，請參閱 [dtexec Utility](dtexec-utility.md)。  
   
 ## <a name="securing-checkpoint-files"></a>保護檢查點檔案  
  封裝等級保護並不包括檢查點檔案的保護，因此您必須個別保護這些檔案。 檢查點資料只能儲存在檔案系統中，而且您應該使用作業系統存取控制清單 (ACL) 來保護儲存檔案之位置或資料夾的安全。 請務必保護檢查點檔案的安全，因為它們包含有關封裝狀態的資訊，包括變數目前的值。 例如，變數包含的資料錄集可能具有許多私密資料 (例如電話號碼) 的資料列。 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../access-to-files-used-by-packages.md)。  

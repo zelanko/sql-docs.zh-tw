@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4782a640d38c4f7a282f37fecb4765ce7677f93e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8a2e93ee36eb4bfadf18c5b78f552380d1c94266
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707217"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043550"
 ---
 # <a name="using-large-value-types"></a>使用大數值類型
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，使用大數值資料類型時需要進行特殊處理。 大數值資料類型是指那些最大資料列大小超過 8 KB 的資料類型。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引進**Varchar**、 **Nvarchar**和**Varbinary**資料類型的 max 規範，允許儲存**最**大可達 2 ^ 31-1 個位元組的值。 資料表資料行和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 變數可以指定**Varchar （max）**、 **Nvarchar （max）** 或**Varbinary （max）** 資料類型。  

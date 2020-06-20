@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: deb9ddbc59e8ff76c8c459022d73cca7e7de81d3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eba957ad1b5b9648bdc6676cd33a33afedc8c158
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022888"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   您可以使用 `SQLColAttribute` ，針對已備妥或已執行的 ODBC 語句，抓取結果集資料行的屬性。 `SQLColAttribute`在備妥的語句上呼叫會導致往返 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會在執行語句時接收結果集資料行資料，因此，在 `SQLColAttribute` **SQLExecute**或**SQLExecDirect**完成時呼叫之後，不會牽涉到伺服器往返。  

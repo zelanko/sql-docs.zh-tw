@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f99e6a65a699bae09df61f1de8a1a7c1ee88c52
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289266"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922319"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 資料庫
   Oracle CDC 執行個體與目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上同名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關聯。 此資料庫稱為 Oracle CDC 資料庫 (或 CDC 資料庫)。  
@@ -45,7 +44,7 @@ ms.locfileid: "79289266"
  當建立 CDC 資料庫及設定 CDC 來源 Oracle 資料表時，CDC 資料庫擁有者可以授與鏡像資料表的 SELECT 權限，並定義 SQL Server CDC 控制角色來控制存取變更資料的人。  
   
 ## <a name="mirror-tables"></a>鏡像資料表  
- 對於每一個擷取的資料表 \<結構描述名稱>.\<資料表名稱> 而言 (在 Oracle 來源資料庫中)，都會在 CDC 資料庫中建立類似的空白資料表，而且具有相同的結構描述與資料表名稱。 無法擷取結構描述名稱為 `cdc` (不區分大小寫) 的 Oracle 來源資料表，因為會保留 `cdc` 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 結構描述給 SQL Server CDC。  
+ 對於每個已捕獲的資料表 \<schema-name> \<table-name> 而言，在 Oracle 源資料庫中，會在 CDC 資料庫中建立類似的空白資料表，而且具有相同的架構和資料表名稱。 無法擷取結構描述名稱為 `cdc` (不區分大小寫) 的 Oracle 來源資料表，因為會保留 `cdc` 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 結構描述給 SQL Server CDC。  
   
  鏡像資料表是空的，其中不會儲存任何資料。 鏡像資料表是用來啟用 Oracle CDC 執行個體所使用的標準 SQL Server CDC 基礎結構。 為了避免將資料插入或更新到鏡像資料表中，PUBLIC 拒絕所有的 UPDATE、DELETE 和 INSERT 作業。 這可確保無法修改這些資料表。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "79289266"
 ###  <a name="change-tables-_ct"></a><a name="bkmk_change_tables_ct"></a> 變更資料表 (_CT)  
  變更資料表是從鏡像資料表建立而來。 其中包含擷取自 Oracle 資料庫的變更資料。 這些資料表是根據以下慣例所命名：  
   
- **[cdc].[\<capture-instance>_CT]**  
+ **[cdc]。[ \<capture-instance> _CT]**  
   
  一開始為資料表 `<schema-name>.<table-name>`啟用擷取時，預設擷取執行個體名稱為 `<schema-name>_<table-name>`。 例如，Oracle HR.EMPLOYEES 資料表的預設擷取執行個體名稱為 HR_EMPLOYEES 而且關聯的變更資料表為 [cdc]。 [HR_EMPLOYEES_CT]。  
   

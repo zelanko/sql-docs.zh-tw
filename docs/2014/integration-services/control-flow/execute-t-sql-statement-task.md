@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f20f64c9a26d1e9b030c01618a63157757c0b205
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a79cbc796efe01813f7a785e674519524afd4f8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831733"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919019"
 ---
 # <a name="execute-t-sql-statement-task"></a>執行 T-SQL 陳述式工作
   「執行 T-SQL 陳述式」工作會執行 Transact-SQL 陳述式。 如需詳細資訊，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](/sql/t-sql/language-reference) 和 [Integration Services &#40;SSIS&#41; 查詢](../integration-services-ssis-queries.md)。  

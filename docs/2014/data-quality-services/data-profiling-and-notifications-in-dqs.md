@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 53fbe246db44b8aaa1dfda1e79d543f063919ede
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6c6a8643f3e0a09abba424498c258ae4bb91d37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480804"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937839"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS 中的資料分析與通知
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的資料分析程序會分析現有資料來源中的資料，以及顯示有關 DQS 活動資料的統計資料。 此程序為您提供資料品質的自動化度量。 DQS 分析會整合到 DQS 知識管理與資料品質專案中。 它是動態的，而且可以調整。 分析有兩個主要目標：首先是在資料品質程序中引導您並支援您的決策，第二個目標是評估程序的效用。 DQS 分析程序的優點如下：  

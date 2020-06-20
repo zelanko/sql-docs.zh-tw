@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a82e0c98-efaa-4b0b-9582-3c879ee42444
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 907840b051a4230a06525e8c3d6574aee4f40bcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81605229acc7dccdcd77a3b3f001bf13fc6bf273
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035267"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008211"
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>Analysis Server 屬性 (登入索引標籤)
   您可以使用 **[Analysis Server 屬性]** 對話方塊的 **[登入]** 索引標籤，來指定要供 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 服務使用的帳戶，以及啟動和停止該服務。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d46820f3542e562f43fc4ae4c4d4ee1f91fcdf3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175971"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956438"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳作法和疑難排解
   本主題包含從 SQL Server 備份及還原至 Azure Blob 服務的最佳做法和疑難排解提示。  
@@ -71,13 +70,13 @@ ms.locfileid: "70175971"
   
  **備份錯誤/失敗：**  
   
--   相同 Blob 的平行備份會導致其中一個備份失敗並出現 [初始化失敗]**** 錯誤。  
+-   相同 Blob 的平行備份會導致其中一個備份失敗並出現 [初始化失敗]  錯誤。  
   
 -   使用下列錯誤記錄來協助疑難排解備份錯誤：  
   
     -   您可以使用下列格式來設定追蹤旗標 3051，以便記錄至特定錯誤記錄：  
   
-         BackupToUrl-\<執行個體>-\<資料庫名稱>-action-\<PID>.log 其中 \<action> 是下列其中之一：  
+         BackupToUrl- \<instname> - \<dbname> -action- \<PID> .log，其中 \<action> 是下列其中一個：  
   
         -   `DB`  
   
@@ -94,11 +93,11 @@ ms.locfileid: "70175971"
 -   從壓縮備份還原時，您可能會看見下列錯誤：  
   
     -   **發生 SqlException 3284。嚴重性：16狀態：5**  
-        **裝置 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' 上的訊息標記未對齊。以用來建立 backupset 的相同區塊大小重新發出 Restore 語句： ' 65536 ' 看起來像是可能的值。**  
+        **裝置 ' ' 上的訊息標記 https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak 未對齊。以用來建立 backupset 的相同區塊大小重新發出 Restore 語句： ' 65536 ' 看起來像是可能的值。**  
   
          若要解決此錯誤，請重新發出指定 `BACKUP` 的 `BLOCKSIZE = 65536` 陳述式。  
   
--   備份期間發生錯誤，因為 Blob 擁有使用中租用：失敗的備份活動可能會產生擁有使用中租用的 Blob。  
+-   含有使用中租用的 Blob 導致備份期間發生錯誤：失敗的備份活動可能會產生含有使用中租用的 Blob。  
   
      如果重新嘗試執行 Backup 陳述式，備份作業可能會失敗並出現類似以下的錯誤：  
   
@@ -117,7 +116,7 @@ ms.locfileid: "70175971"
   
  Proxy 伺服器可能有限制每分鐘連接數目的設定。 備份至 URL 處理序是一個多執行緒處理序，因此可能會超出此限制。 如果發生這種情況，Proxy 伺服器會清除該連接。 若要解決這個問題，請變更 Proxy 設定，讓 SQL Server 不使用 Proxy。   以下是您可能在錯誤記錄檔中看到的類型或錯誤訊息的部分範例：  
   
--   "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" 的寫入失敗：備份至 URL 收到來自遠端端點的例外狀況。 例外狀況訊息: 無法讀取傳輸連線的資料: 此連接已經關閉。  
+-   "" 的寫入 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 失敗：備份至 URL 收到來自遠端端點的例外狀況。 例外狀況訊息: 無法讀取傳輸連線的資料: 此連接已經關閉。  
   
 -   檔案 "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" 上發生無法復原的 I/O 錯誤。無法從遠端端點收集錯誤。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "70175971"
   
      備份資料庫正在異常結束。  
   
--   BackupIoRequest：： ReportIoError：備份裝置 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak' 上的寫入失敗。 作業系統錯誤。備份至 URL 時收到來自遠端端點的例外狀況。 例外狀況訊息: 無法讀取傳輸連線的資料: 此連接已經關閉。  
+-   BackupIoRequest：： ReportIoError：備份裝置 ' ' 上的寫入失敗 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 。 作業系統錯誤。備份至 URL 時收到來自遠端端點的例外狀況。 例外狀況訊息: 無法讀取傳輸連線的資料: 此連接已經關閉。  
   
  如果您使用追蹤旗標 3051 開啟詳細資訊記錄，可能也會在記錄檔中看到下列資訊：  
   
@@ -133,7 +132,7 @@ ms.locfileid: "70175971"
   
  **預設 Proxy 設定未收取：**  
   
- 有時不會收取預設設定，導致 proxy 驗證錯誤，如下所示：檔案 *"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" 上發生無法容錯的 I/o 錯誤。備份至 URL 時收到來自遠端端點的例外狀況。例外狀況訊息：遠端伺服器傳回錯誤：（407）* **需要 Proxy 驗證**。  
+ 有時不會收取預設設定，導致 proxy 驗證錯誤，如下所示：檔案 *"" 上發生無法容錯的 i/o 錯誤 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: 。備份至 URL 時收到來自遠端端點的例外狀況。例外狀況訊息：遠端伺服器傳回錯誤：（407）* **需要 Proxy 驗證**。  
   
  若要解決這個問題，使用下列步驟建立組態檔，讓備份至 URL 處理序可以使用預設 Proxy 設定：  
   
@@ -151,9 +150,9 @@ ms.locfileid: "70175971"
   
     ```  
   
-2.  將組態檔放在 SQL Server 執行個體的 Binn 資料夾。 例如，如果我的 SQL Server 安裝在電腦的 C 磁片磁碟機上，請將設定檔放在此處： *C:\Program FILES\MICROSOFT SQL\< Server\MSSQL12。InstanceName> \MSSQL\Binn*。  
+2.  將組態檔放在 SQL Server 執行個體的 Binn 資料夾。 例如，如果我的 SQL Server 安裝在電腦的 C 磁片磁碟機上，請將設定檔放在此處： *C:\Program FILES\MICROSOFT SQL Server\MSSQL12. \<InstanceName>\MSSQL\Binn*。  
   
-## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>針對 SQL Server 受控備份至 Azure 進行疑難排解  
+## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>SQL Server Managed Backup 到 Azure 的疑難排解  
  因為 SQL Server Managed Backup 會建置在「備份至 URL」之上，所以稍早章節所述的疑難排解提示適用於使用 SQL Server Managed Backup 的資料庫或執行個體。  針對[SQL Server 受控備份至 azure](sql-server-managed-backup-to-microsoft-azure.md)中的疑難排解，會詳細說明針對 SQL Server 受控備份至 azure 進行疑難排解的相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  

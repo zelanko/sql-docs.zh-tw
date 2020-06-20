@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061214"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924639"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>大量插入工作編輯器 (連接頁面)
   使用 [大量插入工作編輯器]**** 對話方塊的 [連接]**** 頁面，即可指定大量插入作業的來源和目的地，以及要使用的格式。  
@@ -27,24 +26,24 @@ ms.locfileid: "66061214"
  若要了解如何使用大量插入，請參閱[大量插入工作](control-flow/bulk-insert-task.md)和[匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
   
 ## <a name="options"></a>選項。  
- **建立**  
- 在清單中選取 OLE DB 連線管理員，或按一下\<[**新增連接 ...** ]> 建立新的連接。  
+ **[連接]**  
+ 在清單中選取 OLE DB 連線管理員，或按一下 \<**New connection...**> 以建立新的連接。  
   
  **相關主題** [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)、 [設定 OLE DB 連接管理員](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **DestinationTable**  
  輸入目的地資料表或檢視的名稱，或在清單中選取資料表或檢視。  
   
- **編排**  
+ **[格式]**  
  選取大量插入的格式來源。 這個屬性具有下表中所列的選項。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**使用檔案**|選取包含格式規格的檔案。 選取此選項會顯示動態選項 [FormatFile]****。|  
-|**指定**|指定格式。 選取此選項會顯示動態選項 [ `RowDelimiter`和`ColumnDelimiter`]。|  
+|**指定**|指定格式。 選取此選項會顯示動態選項 [ `RowDelimiter` 和] `ColumnDelimiter` 。|  
   
  **檔案**  
- 在清單中選取檔案或一般檔案連線管理員，或按一下\<[**新增連接 ...** ]> 建立新的連接。  
+ 在清單中選取檔案或一般檔案連線管理員，或按一下 \<**New connection...**> 以建立新的連接。  
   
  檔案位置相對於在此工作之連接管理員中指定的 SQL Server Database Engine。 SQL Server Database Engine 必須可以在伺服器上的本機硬碟，或透過 SQL Server 的共用或對應磁碟機，存取文字檔。 SSIS 執行階段無法存取檔案。  
   

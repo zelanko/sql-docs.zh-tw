@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bf00ecd74b64b3910ba19365920baf914f86939c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 67a932996ccbf52f5ab21fd6aa62381184ebc510
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705892"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021814"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   資料表可能會有一個或多個資料行可以做為唯一的資料列識別碼，而不含 PRIMARY KEY 條件約束建立的資料表則會將空的結果集傳回給 SQLPrimaryKeys。 ODBC 函數[SQLSpecialColumns](sqlspecialcolumns.md)會報告沒有主鍵之資料表的資料列識別碼候選項。  

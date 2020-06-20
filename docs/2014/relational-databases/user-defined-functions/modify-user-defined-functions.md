@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 77fbdc3bf2f579d585a802d5ed137cfe2a149c2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cf25fef91834e237f5cbaac26350220840830bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196456"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009141"
 ---
 # <a name="modify-user-defined-functions"></a>修改使用者定義函數
   您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的使用者定義函數。 如下述修改使用者定義函數不會變更函數的權限，也不會影響任何相依函數、預存程序或觸發程序。  
@@ -70,7 +69,7 @@ ms.locfileid: "68196456"
   
 5.  在查詢視窗中，對 ALTER FUNCTION 陳述式進行必要的變更。  
   
-6.  在 [檔案]  功能表上，按一下 [儲存 **function_name**]  。  
+6.  在 [檔案] 功能表上，按一下 [儲存 _function_name_]。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e05d920b21a2e99f5daed06f00183ce8bed85754
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667416"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060820"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>從複寫監視器加入及移除發行者
   從中啟動「複寫監視器」的伺服器會自動新增至監視器 (如果它是「發行者」)。 其他「發行者」可透過 **[加入發行者]** 對話方塊來新增。 在新增「發行者」之後，它會顯示在監視器左窗格的群組中。 依預設會包括 **[我的發行者]** 群組，但您可以建立新的群組來管理一個或多個複寫拓撲。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](start-the-replication-monitor.md)。  
@@ -92,7 +91,7 @@ ms.locfileid: "62667416"
   
 1.  以滑鼠右鍵按一下左窗格中的「發行者」：  
   
-2.  按一下 [移除]****。  
+2.  按一下 **[移除]** 。  
   
 ### <a name="to-add-a-publisher-group-to-replication-monitor"></a>若要新增發行者群組至複寫監視器  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cbe8746faeba10fa023aa51e7d91a6fb074776e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094800"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042439"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>如何：檢視 Upgrade Advisor 報表
   Upgrade Advisor 會針對您選取要分析的每個元件建立報表。 此主題描述如何從 Upgrade Advisor 開始頁面檢視 Upgrade Advisor 報表。  
@@ -31,7 +30,7 @@ ms.locfileid: "66094800"
   
 ### <a name="to-view-a-report"></a>若要檢視報表  
   
-1.  依序按一下 [**開始**]、[ **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]****所有程式**]、[]，然後按一下** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Upgrade Advisor**]。  
+1.  依序按一下 [**開始**]、[**所有程式**]、[] **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** ，然後按一下 [ ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**]。  
   
 2.  在 Upgrade Advisor 開始頁面上，按一下 [**啟動 Upgrade Advisor 報表檢視器]**。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66094800"
   
     -   [**重要性**]，表示修正問題的重要程度。  
   
-    -   **修正**時機，這表示您應該（或必須）在升級至[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前或之後，或在遷移應用程式或資料之前或之後，或在任何時間之前，修正此問題。  
+    -   **修正**時機，這表示您應該（或必須）在升級至之前或之後，或在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 遷移應用程式或資料之前或之後，或在任何時間之前，修正此問題。  
   
     -   問題的簡短描述。  
   

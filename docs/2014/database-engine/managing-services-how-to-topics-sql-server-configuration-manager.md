@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 78dee169-df0c-4c95-9af7-bf033bc9fdc6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93235916075c02f1aa1f756a0f3f6affe6ea6e10
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f046eab684ece1d6a6a8b5f38db8965d277db897
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000868"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930846"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>管理服務的如何主題 (SQL Server 組態管理員)
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 會在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 作業系統上以服務的形式來執行。 如需服務的詳細資訊，請參閱 [管理 Database Engine Services](configure-windows/manage-the-database-engine-services.md)。  

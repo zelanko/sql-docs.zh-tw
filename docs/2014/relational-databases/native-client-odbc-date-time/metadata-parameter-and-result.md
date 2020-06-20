@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fcac538ee01da719d43015408337f63a09f15d18
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 94cce7c3debc467d2c06f97d9a390455245f5606
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705437"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020150"
 ---
 # <a name="parameter-and-result-metadata"></a>參數和結果中繼資料
   本主題將描述在日期和時間資料類型之實作參數描述項 (IPD) 與實作資料列描述項 (IRD) 欄位中傳回的資訊。  

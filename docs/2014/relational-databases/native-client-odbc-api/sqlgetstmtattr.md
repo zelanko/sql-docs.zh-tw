@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11c5048cd197643823bb6b0fc8e8247983666d8c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b7bd7f5e1e04254a5fb6f2a228191b3ff7845af4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022058"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會擴充 SQLGetStmtAttr，以公開驅動程式特定的語句屬性。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b635716617c84185efdef0e2e23d2f3b65bbac91
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d3e1a4a09d13e6bae34e77aa12e8df994ecf3eaf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706042"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022320"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式只會針對「執行資料列描述元」（IRD）公開驅動程式特定的描述項欄位。 在 IRD 內， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會透過驅動程式特有的資料行屬性來參考描述項欄位。 如需可用驅動程式專屬描述項欄位的完整清單的詳細資訊，請參閱[SQLColAttribute](sqlcolattribute.md)。  

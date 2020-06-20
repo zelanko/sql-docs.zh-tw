@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5f5ef42a9d04a4d1ae72382f44fdf01b62fc6b14
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 40691dfb381883b59155607fb56f4933820e3e44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706273"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022635"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會定義可取代或增強連接字串關鍵字的連接屬性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式已經指定數個連接字串關鍵字的預設值。  

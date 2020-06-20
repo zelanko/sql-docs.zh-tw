@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b4518884b3fe17ea3a638ed21210775af7c4921c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 668fc8f9478c66ea7564d99c455ac43dc905de4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62640334"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023434"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>將 UCP 從一個 SQL Server 執行個體移到另一個 (SQL Server 公用程式)
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行個體之間移動公用程式控制點 (UCP)。  
@@ -30,7 +29,7 @@ ms.locfileid: "62640334"
   
 3.  從舊的 UCP 中移除所有受管理的執行個體。 如需詳細資訊，請參閱 [從 SQL Server 公用程式中移除 SQL Server 執行個體](remove-an-instance-of-sql-server-from-the-sql-server-utility.md)。  
   
-4.  從舊的 UCP 備份公用程式的管理資料倉儲 (UMDW)。 檔案名稱為 Sysutility_mdw_\<GUID>_DATA，資料庫預設位置為 \<系統磁碟機>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\，其中 \<系統磁碟機> 通常是 C:\ 磁碟機。 如需詳細資訊，請參閱 [使用備份與還原複製資料庫](../databases/copy-databases-with-backup-and-restore.md)。  
+4.  從舊的 UCP 備份公用程式的管理資料倉儲 (UMDW)。 檔案名是 Sysutility_mdw_ \<GUID> _DATA，而資料庫預設位置是 \<System drive> ： \Program Files\Microsoft SQL Server \ MSSQL10_50。 <UCP_Name> \mssql\data \\ ，其中 \<System drive> 通常是 C：\硬碟磁碟機. 如需詳細資訊，請參閱 [使用備份與還原複製資料庫](../databases/copy-databases-with-backup-and-restore.md)。  
   
 5.  將 UMDW 的備份還原到新的 UCP。 如需詳細資訊，請參閱 [使用備份與還原複製資料庫](../databases/copy-databases-with-backup-and-restore.md)。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62640334"
   
 8.  大約等候 1 小時，讓資料收集和彙總作業完成。  
   
-9. 若要重新整理資料，請以滑鼠右鍵按一下 [公用程式總管]  中的 [受管理的執行個體]  節點，然後選取 [重新整理]  。 清單檢視資料會顯示在 **[公用程式總管]** 內容窗格中。 如需詳細資訊，請參閱[檢視資源健全狀況原則結果 &#40;SQL Server 公用程式&#41;](view-resource-health-policy-results-sql-server-utility.md)。  
+9. 若要重新整理資料，請以滑鼠右鍵按一下 [公用程式總管] 中的 [受管理的執行個體] 節點，然後選取 [重新整理]。 清單檢視資料會顯示在 **[公用程式總管]** 內容窗格中。 如需詳細資訊，請參閱[檢視資源健全狀況原則結果 &#40;SQL Server 公用程式&#41;](view-resource-health-policy-results-sql-server-utility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 公用程式的功能與工作](sql-server-utility-features-and-tasks.md)   

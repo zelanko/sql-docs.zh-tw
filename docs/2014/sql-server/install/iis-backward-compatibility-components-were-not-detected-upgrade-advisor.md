@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e794185a-0a77-480a-9aea-d09f8760a6b8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dbf5686d4a947cb8629675368c59c8039c93835e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b5557b86eb52416d77b46301be3601848079d2e0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952498"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042490"
 ---
 # <a name="iis-backward-compatibility-components-were-not-detected-upgrade-advisor"></a>未偵測到 IIS 回溯相容性元件 (Upgrade Advisor)
   Upgrade Advisor 並未偵測到可提供安裝程式用來建立新 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 之資訊的 IIS 元件和設定。  
@@ -35,7 +34,7 @@ ms.locfileid: "71952498"
 ## <a name="corrective-action"></a>更正動作  
  升級完成之後，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來設定報表伺服器或報表管理員的 URL。 您可以使用 IIS 管理員來移除不再需要的虛擬目錄。  
   
- 如需詳細資訊，請參閱《線上叢書》中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的[Configure a URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) 。  
+ 如需詳細資訊，請參閱《線上叢書》中的[Configure a URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Upgrade Advisor Reporting Services 升級問題&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24bd24e4247fb739441f041c38907580ba157629
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060673"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921749"
 ---
 # <a name="configure-data-viewer-general-tab"></a>設定資料檢視器 (一般索引標籤)
   在封裝執行期間，當資料移動通過連接兩個資料流程元件的路徑時，資料檢視器會顯示該資料。  
@@ -30,10 +29,10 @@ ms.locfileid: "66060673"
  **名稱**  
  提供資料檢視器的唯一名稱。  
   
- **類型**  
+ **型別**  
  列出資料檢視器的類型。 按一下某個類型，即可顯示範例圖表。  
   
- **描述**  
+ **說明**  
  顯示範例圖表，後面接著描述。  
   
 ## <a name="see-also"></a>另請參閱  

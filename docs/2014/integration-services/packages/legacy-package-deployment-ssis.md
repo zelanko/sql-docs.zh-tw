@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c912d4417842bc332262549cc604b97eaa50a44d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cde55936feb7a18bd7f9a0330721016fcffe7184
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767087"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964805"
 ---
 # <a name="package-deployment-ssis"></a>封裝部署 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含工具和精靈可以簡化將套件從開發電腦部署到實際伺服器或部署到其他電腦的流程。  

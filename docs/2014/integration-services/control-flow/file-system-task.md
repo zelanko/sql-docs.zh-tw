@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbe47dbba2def9a40caf506fe9d0b5cb914d1052
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918898"
 ---
 # <a name="file-system-task"></a>檔案系統工作
   「檔案系統」工作會在檔案系統中的檔案和目錄上執行作業。 例如，封裝可使用「檔案系統」工作建立、移動或刪除目錄和檔案。 您也可以使用「檔案系統」工作設定檔案和目錄的屬性。 例如，「檔案系統」工作可將檔案設為隱藏或唯讀。  

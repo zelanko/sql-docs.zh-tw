@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3d242351927276120b8d8f67c94eab9d60db7fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022559"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060625"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle 發行者的管理考量
   在設定「Oracle 發行者」並且複寫變更追蹤機制到位之後，Oracle 資料庫系統的管理員仍可使用標準 Oracle 資料庫公用程式並執行一般的系統管理工作。 但是，您應該留意執行特定管理工作對已發行資料的影響。  

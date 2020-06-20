@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0ee899153db7ade8530addbedc13e9faa2bd59e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771646"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924189"
 ---
 # <a name="validate-dialog-box"></a>驗證對話方塊
   使用 **[驗證]** 對話方塊檢查 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案或封裝中的常見問題。  

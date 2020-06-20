@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c04b5cc4dd75d2f9f8305b7af00e389317a92537
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952674"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045784"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>進階多重網站組態 (SSRS 原生模式)
   使用此對話方塊可建立及管理用來存取報表伺服器或報表管理員的 URL。 **[進階多重網站組態]** 對話方塊是用來建立其他 URL (亦即包含主機標頭名稱的自訂 URL)，或是指定 IPv4 或 IPv6 格式的 IP 位址。  
@@ -40,12 +39,12 @@ ms.locfileid: "71952674"
   
 -   **[127.0.0.1]** 是用來存取 localhost， 它可支援報表伺服器電腦上的本機管理。 如果您只選取這個值，則只有在本機登入報表伺服器電腦的使用者才會擁有此應用程式的存取權。  
   
--   *Nnn.nnn.nnn.nnn* 是電腦網路卡的 IPv4 位址。 如果您的網路使用 IPv6 位址，則 IP 位址會是 8 4 位元組欄位的128位值，如下格式所示： \<標頭>：*nnnn： nnnn： nnnn： nnnn*。  
+-   *Nnn.nnn.nnn.nnn* 是電腦網路卡的 IPv4 位址。 如果您的網路使用 IPv6 位址，則 IP 位址會是 8 4 位元組欄位的128位值，類似下列格式： \<header> ：*nnnn： nnnn： nnnn*： nnnn。  
   
      如果您有多張網路卡，您會看到每一張網路卡都有一個 IP 位址。 如果您只選取這個值，它會將應用程式存取限制為只有該 IP 位址 (以及網域名稱伺服器對應至該位址的任何主機名稱)。 您無法使用 localhost 來存取報表伺服器，而且也不能使用安裝於報表伺服器電腦上之其他網路卡的 IP 位址。  
   
  **通訊埠**  
- 指定報表伺服器用來監視要求的通訊埠。 通訊埠 80 是預設通訊埠。 如果您使用通訊埠 80，您不需要在 URL 中包含此通訊埠。 如果您使用任何其他埠號碼，則必須一律將它包含在 URL 中（例如） http://localhost:8181/reports)。  
+ 指定報表伺服器用來監視要求的通訊埠。 通訊埠 80 是預設通訊埠。 如果您使用通訊埠 80，您不需要在 URL 中包含此通訊埠。 如果您使用任何其他埠號碼，則必須一律將它包含在 URL 中（例如） http://localhost:8181/reports) 。  
   
  **主機標頭**  
  如果您已經在網域名稱伺服器上定義解析為電腦的主機標頭，您可以在設定報表伺服器存取的 URL 中指定該主機標頭。  
@@ -65,7 +64,7 @@ ms.locfileid: "71952674"
  **發給**  
  顯示建立憑證的電腦名稱。  
   
- **加入**  
+ **新增**  
  定義其他 URL。  
   
  **編輯**  

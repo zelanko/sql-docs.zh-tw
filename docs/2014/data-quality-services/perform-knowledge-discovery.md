@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cc2eac8564c08831527d71ee5942c37b618aedcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28ac1abc1780953a93615120f4020d80a2021f17
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481301"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937439"
 ---
 # <a name="perform-knowledge-discovery"></a>執行知識探索
   此主題描述如何透過知識探索來建立知識庫。 在探索程序中， [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 會透過電腦輔助的程序來分析範例資料來源中的資料，並將它所獲得的知識加入至知識庫。 您可以在知識探索活動或定義域管理活動的 **[管理定義域值]** 步驟中修改及增強這項知識。  
@@ -180,7 +179,7 @@ ms.locfileid: "65481301"
   
 8.  **從 Excel 匯入定義域值**：若要從 Excel 試算表加入新的值，請按一下 **[匯入值]** 圖示的向下箭號，然後選取 **[從 Excel 匯入定義域值]**。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 如需詳細資訊，請參閱 [將 Excel 檔案中的值匯入定義域中](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
   
-9. **匯入專案值**：若要從資料品質專案加入新的值，請按一下 **[匯入值]** 圖示的向下箭號，然後選取 **[匯入專案值]**。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 選取要匯入的值來自於哪一個專案，然後按一下 **[確定]**。 隨即顯示匯入的值。 按一下 [完成]  。 如需詳細資訊，請參閱＜將專案值匯入定義域＞。  
+9. **匯入專案值**：若要從資料品質專案加入新的值，請按一下 **[匯入值]** 圖示的向下箭號，然後選取 **[匯入專案值]**。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 選取要匯入的值來自於哪一個專案，然後按一下 **[確定]**。 隨即顯示匯入的值。 按一下 [完成] 。 如需詳細資訊，請參閱＜將專案值匯入定義域＞。  
   
 10. **刪除選取的定義域值**：若要從定義域中移除一個或多個現有的值，請選取值，然後按一下 **[刪除選取的定義域值]** 按鈕。 DQS_NULL 的項目無法刪除，所以如果您選擇多個要刪除的值，而且 DQS_NULL 的項目是其中一個，此作業將會失敗。  
   

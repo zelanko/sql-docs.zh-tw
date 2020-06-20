@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 183862eadad3661353228bbcde132b6cd8241501
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7730b3cc75c45d0a6a4240a333b0d869a17c26b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061446"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925549"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 處理工作編輯器 (一般頁面)
   使用 [Analysis Services 處理工作編輯器]**** 對話方塊的 [一般]**** 頁面，即可命名和描述 Analysis Services 處理工作。  
@@ -33,7 +32,7 @@ ms.locfileid: "66061446"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入 Analysis Services 處理工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

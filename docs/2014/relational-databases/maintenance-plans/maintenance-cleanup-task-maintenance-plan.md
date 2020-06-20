@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96b3628576e430c2a9d7b5ab7211b3b42229af6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035705"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024423"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>維護清除工作 (維護計畫)
   使用 **[維護清除工作]** ，即可移除與維護計畫相關的舊檔案 (包括維護計畫和資料庫備份檔案所建立的文字報表)。  
@@ -96,6 +95,6 @@ ms.locfileid: "63035705"
  提供驗證時要使用的密碼。 無法使用此選項。  
   
 ## <a name="see-also"></a>另請參閱  
- [維護計畫](maintenance-plans.md)  
+ [維護計劃](maintenance-plans.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ca851a07-e4e5-439c-8da5-d8e97aaf4873
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6e016b8fb3986b4fa9431a1d223335affa72d3d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2fa78a493385b62b5833be5592db1355618ccce3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023483"
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>監視 SQL Server 公用程式中的 SQL Server 執行個體
   

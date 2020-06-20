@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44781385a12f880e71e635d2d5e6f76809923453
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061695"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925829"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>ADO NET 來源編輯器 (資料行頁面)
   使用 [ADO NET 來源編輯器]**** 對話方塊的 [資料行]**** 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
@@ -45,6 +44,6 @@ ms.locfileid: "66061695"
 ## <a name="see-also"></a>另請參閱  
  [ADO NET 來源編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
  [ADO NET 來源編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
- [ADO.NET 連接管理員](connection-manager/ado-net-connection-manager.md)  
+ [ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)  
   
   

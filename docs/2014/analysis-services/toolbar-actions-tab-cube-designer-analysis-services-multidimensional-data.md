@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4ef65300-abce-43a6-8119-cb3f962dd564
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7e65fce75803445e233ee40890cdefefe8cdd96d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1121ca9cdc1c81bfc0e7be9d53041d1aa9144f34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066213"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938489"
 ---
 # <a name="toolbar-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (動作索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   使用 [工具列]**** 窗格，即可在 Cube 設計師的 [動作]**** 索引標籤上執行一般動作。  

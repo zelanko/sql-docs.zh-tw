@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 850a978d-5dba-45b6-a10e-306aafbc353d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dfeade50b36e39f9a4bfa354f71a6bca53e03c16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f4a54b2b7c7f809c570eacd0541d798b3f583a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061372"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925247"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Azure HDInsight 連線管理員
 **Azure HDInsight 連線管理員**可讓 SSIS 套件連線到 Azure HDInsight 叢集。
@@ -27,5 +26,5 @@ ms.locfileid: "66061372"
 
 1. 在 [新增 SSIS 連線管理員]**** 對話方塊中，選取 [AzureHDInsight]****，然後按一下 [新增]****。
 2. 在 [Azure HDInsight Connection Manager Editor] (Azure HDInsight 連線管理員編輯器)**** 對話方塊中，指定 HDInsight 叢集要連線的**叢集 DNS 名稱** (前面不加上通訊協定)、**使用者名稱**和**密碼**。
-3. 按一下 [確定]**** 關閉對話方塊。
+3. 按一下 [確定]  關閉對話方塊。
 4. 您可以在 [屬性] **** 視窗中看到您建立的連線管理員屬性。

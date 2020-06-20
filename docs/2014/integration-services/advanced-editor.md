@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fe860a52cb847aec473763c02f24348701766478
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f84e430e59c0acba99c4a1e9d6fe501f81d1997
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62772188"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925689"
 ---
 # <a name="advanced-editor"></a>進階編輯器
   使用 **[進階編輯器]** 對話方塊設定所選取之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件的屬性。  

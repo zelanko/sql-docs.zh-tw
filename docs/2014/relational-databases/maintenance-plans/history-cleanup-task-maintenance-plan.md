@@ -13,13 +13,12 @@ ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 ms.reviewer: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96d63f314fd72ba91985d8e2f16759ef05ed9fc2
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 03ff35b14fc13d2b4446b15501114489b52c421e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859250"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024525"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>記錄清除工作 (維護計畫)
 

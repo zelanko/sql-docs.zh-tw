@@ -42,13 +42,12 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8a76bb95fb3689e6dc7f6de71373152ce36ebd14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fddd9efeea8d0cb00bbe421e5638b60cc508d832
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022573"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060648"
 ---
 # <a name="new-publication-wizard"></a>新增發行集精靈
   此章節提供有關新增發行集精靈之下列頁面的資訊。  

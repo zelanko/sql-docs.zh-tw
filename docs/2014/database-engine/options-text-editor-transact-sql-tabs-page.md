@@ -13,13 +13,12 @@ dev_langs:
 ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 761c84612c207397e33ae96dfcfb088b05bc24b8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5a713b3c3f98d2510fa63ddd6a58e2f48f3b3495
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000663"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929699"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>選項（文字編輯器-Transact-sql-索引標籤頁面）
   使用這個對話方塊可以變更在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器中按下 Tab 鍵的移動行為，這個編輯器會用來撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼。 若要顯示這些設定，請按一下 [工具]**** 功能表上的 [選項]****，並展開 [文字編輯器]**** 資料夾，再展開 [Transact-SQL]**** 子資料夾，然後按一下 [定位點]****。  
@@ -28,7 +27,7 @@ ms.locfileid: "83000663"
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器的選項也可以在 [所有語言 - 索引標籤]**** 對話方塊中設定。 如果您使用 **[所有語言]** 對話方塊為其他 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 編輯器 (例如 DMX 或 MDX 編輯器) 設定不同的選項，則必須使用這個對話方塊重設 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器選項。  
   
 ## <a name="indenting"></a>縮排  
- **無**  
+ **None**  
  如果選取此選項，當您按下 ENTER 時所建立的新行就不會縮排。 資料指標會放在新行的第一個資料行上。  
   
  **封鎖**  

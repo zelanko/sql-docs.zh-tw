@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ff7f60ce2ed883c47ef608c0964703bd1b98518d
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: b997d5144b113102ba0ed2d9d1df59b6707acbee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859270"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024546"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>執行 SQL Server Agent 作業工作 (維護計畫)
   使用 [執行 SQL Server Agent 作業工作]  對話方塊，即可在維護計畫內執行 Microsoft SQL Server Agent 作業。 如果選取的連接上沒有 SQL Server Agent 作業，將無法使用此選項。  

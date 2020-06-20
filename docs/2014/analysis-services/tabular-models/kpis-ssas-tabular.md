@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdfbc4825908f409392f7dcca67749cbe08a407c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066996"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938831"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI (SSAS 表格式)
   表格式模型中的「關鍵效能指標」(KPI)** 可用來針對由量值或絕對值定義的「目標」** 值，量測由「基底」** 量值定義之值的績效。 本主題為表格式模型作者提供對於表格式模型中 KPI 的基本了解。  
@@ -30,7 +29,7 @@ ms.locfileid: "66066996"
   
 -   [相關工作](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>各種  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 優點  
  在商務用語中，關鍵效能指標 (KPI) 是量測商務目標的可量化度量。 KPI 通常會在一段時間內進行評估。 例如，組織的銷售部門可以使用 KPI，針對預計的毛利來測量每月的毛利。 會計部門可以針對營收測量每月支出，以評估成本，而人力資源部門可以測量每季員工營業額。 每一個都是 KPI 的範例。 商務專業人員經常會使用在商務計分卡中分組的 KPI，以取得商務成就之快速與精確的記錄摘要，或識別趨勢。  
   
  表格式模型中的 KPI 包括：  

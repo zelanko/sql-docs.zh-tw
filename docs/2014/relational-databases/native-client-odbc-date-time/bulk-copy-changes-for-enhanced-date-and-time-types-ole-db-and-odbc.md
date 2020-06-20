@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0cf98fadc2f194390f87bca14afcac545ac51df1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 73b901a60a6dd634857b72a67f7f2a2490483cff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705535"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020436"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>增強型日期和時間類型的大量複製變更 (OLE DB 和 ODBC)
   本主題描述可支援大量複製功能的日期/時間增強功能。 本主題中的資訊同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 和 ODBC。  
@@ -26,11 +25,11 @@ ms.locfileid: "82705535"
 ## <a name="format-files"></a>格式檔案  
  以互動方式建立格式檔案時，下表描述用於指定日期/時間類型與對應主檔資料類型名稱的輸入。  
   
-|檔案儲存類型|主檔案資料類型|提示的回應：「請輸入欄位 <field_name> [\<default>] 的檔案儲存類型:」|  
+|檔案儲存類型|主檔案資料類型|提示的回應：「輸入欄位的檔案儲存類型 <field_name> [ \<default> ]： "|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|日期|SQLDATE|de|  
+|Date|SQLDATE|de|  
 |Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -94,7 +93,7 @@ ms.locfileid: "82705535"
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|日期|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -106,7 +105,7 @@ ms.locfileid: "82705535"
   
 |目標 --><br /><br /> 從|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|日期|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  

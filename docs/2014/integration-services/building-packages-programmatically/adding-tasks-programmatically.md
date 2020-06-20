@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: da9a2e5bf8338b8188f00f3c340d50ef32f1204f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db7f6d541462348d464f69f6abf122aaa2acca7d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771834"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925089"
 ---
 # <a name="adding-tasks-programmatically"></a>以程式設計方式加入工作
   在執行階段引擎中可以將工作加入下列類型的物件：  

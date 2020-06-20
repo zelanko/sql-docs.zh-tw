@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 88b80e0eeba26e1a2c03f795d7ae3ce6fa796f10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e63bb2670cc852d68b1ad6ed5651f2d1cc667428
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480487"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937579"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>執行 DQSInstaller.exe 完成 Data Quality Server 安裝
   若要完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝，您必須在安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，執行 DQSInstaller.exe 檔案。 本主題描述如何從 **[開始]** 畫面、 **[開始]** 功能表、Windows [檔案總管] 或 [命令提示字元] 執行 DQSInstaller.exe。您可以任選一種方法執行 DQSInstaller.exe 檔案。  
   
-##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
   
 -   安裝 SQL Server 時，必須先在 SQL Server 設定的 [特徵選取] 頁面中，選取 **[Database Engine Services]** 之下的 **[Data Quality Services]** ，而且必須先完成 SQL Server 安裝。 如需詳細資訊，請參閱 [安裝 Data Quality Services](install-data-quality-services.md)。  
   
@@ -28,7 +27,7 @@ ms.locfileid: "65480487"
   
 -   您必須以您要執行 DQSInstaller.exe 所在電腦上的管理員群組成員的身分登入。  
   
-##  <a name="run-dqsinstallerexe-from-start-screen-start-menu-or-windows-explorer"></a><a name="WindowsExplorer"></a>從 [開始] 畫面、[開始] 功能表或 Windows Explorer 執行 Dqsinstaller.exe  
+##  <a name="run-dqsinstallerexe-from-start-screen-start-menu-or-windows-explorer"></a><a name="WindowsExplorer"></a>從 [開始] 畫面、[開始] 功能表或 Windows Explorer 執行 DQSInstaller.exe  
   
 1.  在您選擇要安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]的電腦上，使用下列任一適用的方法執行 DQSInstaller.exe 檔案：  
   
@@ -52,7 +51,7 @@ ms.locfileid: "65480487"
 3.  您會收到提示要求您輸入資料庫主要金鑰的密碼。 稍後當您在 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 中設定參考資料庫提供者時，必須使用資料庫主要金鑰加密參考資料服務提供者金鑰，而此金鑰將儲存在 DQS_MAIN 資料庫中。  
   
     > [!IMPORTANT]  
-    >  密碼長度至少必須為8個字元，且必須包含下列四種類別的其中三種字元：英文大寫字母（A、B、C,.。。Z）、英文小寫字母（a、b、c,.。。z）、數位（0、1、2,.。。9）和非英數位元或特殊字元（~！ @ # $% ^& * （） _-+\\ = |{}[]:;"'<>,。?/). 例如：P@ssword。 如果目前的密碼不符合要求，安裝程式將會提示您輸入其他密碼。  
+    >  密碼長度至少必須為8個字元，且必須包含下列四種類別的其中三種字元：英文大寫字母（A、B、C,.。。Z）、英文小寫字母（a、b、c,.。。z）、數位（0、1、2,.。。9）和非英數位元或特殊字元（~！ @ # $% ^& * （） _-+ = | \\ {}[]:;"'<>,。?/). 例如： P@ssword 。 如果目前的密碼不符合要求，安裝程式將會提示您輸入其他密碼。  
   
 4.  請提供並確認密碼，然後按 ENTER 繼續安裝。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "65480487"
   
 6.  當安裝成功地完成之後，將會顯示完成訊息。 按任意鍵關閉命令提示字元視窗。  
   
-##  <a name="run-dqsinstallerexe-from-command-prompt"></a><a name="CommandPrompt"></a>從命令提示字元執行 Dqsinstaller.exe  
+##  <a name="run-dqsinstallerexe-from-command-prompt"></a><a name="CommandPrompt"></a>從命令提示字元執行 DQSInstaller.exe  
  您可以在命令提示字元中使用下列命令列參數執行 DQSInstaller.exe：  
   
 |DQSInstaller.exe 參數|描述|範例語法|  
@@ -73,7 +72,7 @@ ms.locfileid: "65480487"
 |-exportkbs|將所有知識庫匯出到 DQS 備份檔 (.dqsb)。 您還必須指定要匯出所有知識庫的目標完整路徑和檔案名稱。<br /><br /> 如需詳細資訊，請參閱 [使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)。|`dqsinstaller.exe -exportkbs <path><filename>`<br /><br /> 例如， `dqsinstaller.exe -exportkbs c:\DQSBackup.dqsb`|  
 |-importkbs|完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝後，從 DQS 備份檔 (.dqsb) 匯入所有知識庫。 您還必須指定要匯入所有知識庫的來源完整路徑和檔案名稱。<br /><br /> 如需詳細資訊，請參閱 [使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)。|`dqsinstaller.exe -importkbs <path><filename>`<br /><br /> 例如， `dqsinstaller.exe -importkbs c:\DQSBackup.dqsb`|  
 |-upgrade|升級 DQS 資料庫結構描述。 在先前設定的 DQS 執行個體上安裝 SQL Server 更新之後，您必須使用這個參數。 如需詳細資訊，請參閱＜ [在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述](upgrade-dqs-databases-schema-after-installing-sql-server-update.md)＞。|`dqsinstaller.exe -upgrade`|  
-|-uninstall|從目前的 SQL Server 執行個體解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。<br /><br /> 您也可以將現有資料品質伺服器安裝中的所有知識庫匯出到 DQS 備份檔，然後解除安裝資料品質伺服器。 如需詳細資訊，請參閱 [使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)。<br /><br /> ** \* \*重要\*事項**如果您使用[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] `-uninstall`命令列參數卸載 SQL server 實例，則在卸載過程中將刪除所有 DQS 物件。 如 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 移除 Data Quality Server 物件 [中所述，您不必在解除安裝](../../sql-server/install/remove-data-quality-server-objects.md)之後手動刪除這些物件。|**若只要解除安裝資料品質伺服器：** <br /> `dqsinstaller.exe -uninstall`<br /><br /> **若要將所有知識庫匯出到檔案，然後解除安裝資料品質伺服器：** <br /> `dqsinstaller.exe -uninstall <path><filename>` <br />例如， `dqsinstaller.exe -uninstall c:\DQSBackup.dqsb`|  
+|-uninstall|從目前的 SQL Server 執行個體解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。<br /><br /> 您也可以將現有資料品質伺服器安裝中的所有知識庫匯出到 DQS 備份檔，然後解除安裝資料品質伺服器。 如需詳細資訊，請參閱 [使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)。<br /><br /> ** \* \* 重要 \* 事項 \* **如果您 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 使用命令列參數卸載 SQL server 實例中的 `-uninstall` ，所有 DQS 物件都會在卸載過程中刪除。 如 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 移除 Data Quality Server 物件 [中所述，您不必在解除安裝](../../sql-server/install/remove-data-quality-server-objects.md)之後手動刪除這些物件。|**若只要解除安裝資料品質伺服器：** <br /> `dqsinstaller.exe -uninstall`<br /><br /> **若要將所有知識庫匯出到檔案，然後解除安裝資料品質伺服器：** <br /> `dqsinstaller.exe -uninstall <path><filename>` <br />例如， `dqsinstaller.exe -uninstall c:\DQSBackup.dqsb`|  
   
  **若要從命令提示字元執行 DQSInstaller.exe：**  
   

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 050c00e1-78bd-4d9c-affe-40e22feb4d94
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51e5ec3832d497f342c4fc3132a75261f6c3c154
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef3f20d6757b056abe925e087e81e07ad6358696
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022682"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060661"
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>新的對等 (Peer) 初始化 (點對點複寫)
   您可以使用 **[新的對等 (Peer) 初始化]** 頁面來指定對等 (Peer) 資料庫的初始化方式 （必須先初始化對等，才能完成此嚮導）。對等會以手動方式初始化，或使用由異動複寫所提供的「**使用初始化」和「備份**」功能。 （點對點異動複寫不支援使用快照集初始化對等）。如果必須使用不同的方法來初始化不同的對等，您必須執行嚮導多次來個別新增對等。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **指定要如何初始化新的對等 (Peer) 資料庫**  
  所有發行物件的結構描述和資料，都必須存在於每一個對等 (Peer) 上。 選取下列其中一個選項：  
   
@@ -36,7 +35,7 @@ ms.locfileid: "63022682"
   
     |新節點|第一個節點|其他節點|選項|  
     |--------------|----------------|----------------------|------------|  
-    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|停用|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|已停用|  
     |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|已停用|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|已停用|  
     |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|啟用|  

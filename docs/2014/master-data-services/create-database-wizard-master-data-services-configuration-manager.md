@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7207cd8e3a087ed0aa85931254754d4009d73c53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92de52229959559a03dac29e40035fbe4438ebc7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479874"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971688"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>建立資料庫精靈 (Master Data Services 組態管理員)
   使用 [建立資料庫精靈]**** 可建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。  
@@ -27,9 +26,9 @@ ms.locfileid: "65479874"
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
-|**SQL Server 執行個體**|指定您想要主控 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 資料庫的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 執行個體名稱。 這可以是本機或遠端電腦上的預設或具名執行個體。 輸入以下項目來指定資訊：<br /><br /> 句點 (.)，可連接到您本機電腦上的預設執行個體。<br /><br /> 伺服器名稱或 IP 位址，可連接到指定之本機或遠端電腦上的預設執行個體。<br /><br /> 伺服器名稱或 IP 位址，以及連接到指定之本機或遠端電腦上具名執行個體的執行個體名稱。 以*server_name*\\*instance_name*格式指定這項資訊。|  
+|**SQL Server 執行個體**|指定您想要主控 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 資料庫的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 執行個體名稱。 這可以是本機或遠端電腦上的預設或具名執行個體。 輸入以下項目來指定資訊：<br /><br /> 句點 (.)，可連接到您本機電腦上的預設執行個體。<br /><br /> 伺服器名稱或 IP 位址，可連接到指定之本機或遠端電腦上的預設執行個體。<br /><br /> 伺服器名稱或 IP 位址，以及連接到指定之本機或遠端電腦上具名執行個體的執行個體名稱。 以*server_name*instance_name 格式指定這項資訊 \\ * *。|  
 |**驗證類型**|選取連接到指定的 SQL Server 執行個體時所要使用的驗證類型。 您用來連接的認證必須屬於指定之 **執行個體的** 系統管理員 (sysadmin) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 伺服器角色。 如需有關 系統管理員 角色的詳細資訊，請參閱 [伺服器層級角色](../relational-databases/security/authentication-access/server-level-roles.md)。 驗證類型包括：<br /><br /> **目前使用者-整合式安全性**：使用整合式 Windows 驗證，透過目前 Windows 使用者帳戶的認證來連接。 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 會使用登入電腦及開啟應用程式之使用者的 Windows 認證。 您不能在應用程式中指定不同的 Windows 認證。 如果您想要使用不同的 Windows 認證來連接，您必須以該使用者的身分登入電腦，然後開啟 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]。<br /><br /> **SQL Server 帳戶**：使用 SQL Server 帳戶來連接。 當您選取這個選項時，將會啟用 [使用者名稱]**** 和 [密碼]**** 欄位，而且您必須為指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 帳戶指定認證。|  
-|**使用者名稱**|指定將要用來連接指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的使用者帳戶名稱。 此帳戶必須屬於指定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]之實例上的**系統管理員（sysadmin** ）角色。<br /><br /> 當 [**驗證類型**] 為 [**目前使用者-整合式安全性**] 時，[**使用者名稱**] 方塊會是唯讀的，並顯示登入電腦的 Windows 使用者帳戶名稱。<br /><br /> [驗證類型]**** 為 [SQL Server 帳戶]**** 時，將會啟用 [使用者名稱]**** 方塊，而且您必須針對指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 帳戶指定認證。|  
+|**使用者名稱**|指定將要用來連接指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的使用者帳戶名稱。 此帳戶必須屬於指定之實例上的**系統管理員（sysadmin** ）角色 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。<br /><br /> 當 [**驗證類型**] 為 [**目前使用者-整合式安全性**] 時，[**使用者名稱**] 方塊會是唯讀的，並顯示登入電腦的 Windows 使用者帳戶名稱。<br /><br /> [驗證類型]**** 為 [SQL Server 帳戶]**** 時，將會啟用 [使用者名稱]**** 方塊，而且您必須針對指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 帳戶指定認證。|  
 |**密碼**|指定與使用者帳戶有關聯的密碼。<br /><br /> 當 [**驗證類型**] 為 [**目前使用者-整合式安全性**] 時，[**密碼**] 方塊是唯讀的，而且會使用指定的 Windows 使用者帳戶的認證來進行連線。<br /><br /> [驗證類型]**** 為 [SQL Server 帳戶]**** 時，將會啟用 [密碼]**** 方塊，而且您必須指定與指定的使用者帳戶有關聯的密碼。|  
 |**測試連接**|確認指定的使用者帳戶可以連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，而且此帳戶擁有建立該執行個體之 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的權限。 如果您沒有按一下 [測試連接]****，則按 [下一步]**** 時將會測試連接。|  
   
@@ -46,7 +45,7 @@ ms.locfileid: "65479874"
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
-|**使用者名稱**|指定要成為 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統管理員的網域使用者帳戶。 對於與[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]此資料庫相關聯的所有 Web 應用程式，此使用者可以更新所有功能區域中的所有模型和所有資料。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。|  
+|**使用者名稱**|指定要成為 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統管理員的網域使用者帳戶。 對於 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 與此資料庫相關聯的所有 Web 應用程式，此使用者可以更新所有功能區域中的所有模型和所有資料。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。|  
   
 ## <a name="summary"></a>摘要  
  顯示選取之選項的摘要。 檢閱您的選擇，然後按一下 [下一步]****，開始使用指定的設定建立資料庫。  

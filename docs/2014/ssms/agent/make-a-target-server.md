@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 744ebc5411e626c083676440502489029e888a28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd60a19234d186bb0912978589fa60fd8e8a8c22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798192"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008657"
 ---
 # <a name="make-a-target-server"></a>設為目標伺服器
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 管理物件 (SMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定目標伺服器。  
@@ -48,7 +47,7 @@ ms.locfileid: "72798192"
 ###  <a name="security"></a><a name="Security"></a> Security  
  具有與 Proxy 相關聯之步驟的散發式作業，而該 Proxy 是在目標伺服器上的 Proxy 帳戶內容下執行 。 請確保符合以下條件，否則與 Proxy 相關聯之作業步驟將不會從主要伺服器下載至目標：  
   
--   主伺服器登錄子機碼**\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\<SQL Server*instance_name*> \sql server Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）已設定為1（true）。 依預設，這個子機碼設為 0 (False)。  
+-   主伺服器登錄子機碼**\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\ < *instance_name*> \sql server Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）已設定為1（true）。 依預設，這個子機碼設為 0 (False)。  
   
 -   存在於目標伺服器上的 Proxy 帳戶，而該帳戶名稱與執行作業步驟之主要伺服器上的 Proxy 帳戶名稱相同。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2d206de44f9408e932d91a0097c1228b112b05ba
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 16bb9e98691aea829eb71a16ddabddb371d7bcf3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705037"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043753"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>日期和時間改善 (OLE DB)
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了新的日期和時間資料類型。 本章節描述如何將這些新類型公開為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的延伸模組。 如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新日期和時間資料類型之 Native Client 支援的總覽，請參閱[日期和時間改善](../native-client/features/date-and-time-improvements.md)。 如需範例，請參閱[使用增強型日期和時間功能 &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)。  
