@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b4ee09b1cd960a58dbf26ecc1b1cc898af4fad96
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: e204585892fd71ff807361c75e703afcc6208d98
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857840"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063346"
 ---
 # <a name="error-list-window-management-studio"></a>錯誤清單視窗 (Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [錯誤清單]  會顯示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中有哪些 IntelliSense 程式碼產生的語法和語意錯誤。  

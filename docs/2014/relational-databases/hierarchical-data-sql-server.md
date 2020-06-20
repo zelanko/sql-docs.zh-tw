@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 351a5a4aa6bc1655b8da5fced3e51385dd498bdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289186"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027097"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層式資料 (SQL Server)
-  內`hierarchyid`建的資料類型可讓您更輕鬆地儲存及查詢階層式資料。 `hierarchyid`已針對表示樹狀結構（這是最常見的階層式資料類型）進行優化。  
+  內建的 `hierarchyid` 資料類型可讓您更輕鬆地儲存及查詢階層式資料。 `hierarchyid`已針對表示樹狀結構（這是最常見的階層式資料類型）進行優化。  
   
  階層式資料的定義為一組資料項目，這些資料項目會依據階層式關聯性，彼此相關。 階層式關聯性表示資料的一個項目是另一個項目的父代。 通常儲存在資料庫的階層式資料範例包含下列：  
   
@@ -50,7 +49,7 @@ ms.locfileid: "79289186"
   
 -   比較是按照深度優先順序  
   
-     假設有`hierarchyid`兩個值**a**和**b**， **<b**表示在樹狀目錄的深度優先的遍歷中，b 之前。 `hierarchyid` 資料類型的索引採用深度優先順序，而且在深度優先周遊中彼此接近的節點會以彼此接近的方式儲存。 例如，某筆記錄的子系會儲存在該記錄旁。  
+     假設有兩個 `hierarchyid` 值**a**和**b**， **<b**表示在樹狀目錄的深度優先的遍歷中，b 之前。 `hierarchyid` 資料類型的索引採用深度優先順序，而且在深度優先周遊中彼此接近的節點會以彼此接近的方式儲存。 例如，某筆記錄的子系會儲存在該記錄旁。  
   
 -   支援任意插入和刪除  
   
@@ -108,7 +107,7 @@ GO
   
 -   查詢很少會查詢整個階層的區段。 換句話說，查詢通常只處理階層中的單一點。 在這些情況下，共同位置就不重要。 例如，如果組織資料表僅用於處理個別員工的薪資，最好使用 [父子式]。  
   
--   非分葉的子樹會經常移動，因此效能非常重要。 在父子式表示中，變更資料列在階層中的位置會影響單一資料列。 變更`hierarchyid`使用方式中資料列的位置會影響*n*個數據列，其中*n*是要移動之子樹中的節點數目。  
+-   非分葉的子樹會經常移動，因此效能非常重要。 在父子式表示中，變更資料列在階層中的位置會影響單一資料列。 變更使用方式中資料列的位置 `hierarchyid` 會影響*n*個數據列，其中*n*是要移動之子樹中的節點數目。  
   
      如果非分葉子樹經常移動且效能非常重要，但是大部分的移動都是在定義良好的階層層級進行時，請考慮將較高和較低的層級分割為兩個階層。 這樣會全部移到較高階層的分葉層級中。 例如，請考慮由服務主控之網站的階層。 網站包含許多以階層方式排列的頁面。 主控的網站可能會移到網站階層的其他位置，但是從屬的頁面很少會重新排列。 這可能會透過下列方式表示：  
   
@@ -122,7 +121,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- XML 文件是一個樹狀結構，因此，單一的 XML 資料類型執行個體可以代表一個完整的階層。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]建立 XML 索引時， `hierarchyid`會在內部使用值來代表階層中的位置。  
+ XML 文件是一個樹狀結構，因此，單一的 XML 資料類型執行個體可以代表一個完整的階層。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 建立 XML 索引時，會在 `hierarchyid` 內部使用值來代表階層中的位置。  
   
  如果以下所有狀況成立，使用 XML 資料類型可能比較好：  
   
@@ -319,7 +318,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>使用序列化交易的範例  
- **Org_BreadthFirst** 索引可確定判斷 **@last_child** 會使用範圍搜尋。 除了應用程式可能想要檢查的其他錯誤情況之外，插入後的重複索引鍵違規會指出嘗試加入具有相同識別碼的多個員工，因此**@last_child**必須重新計算。 下列程式碼使用序列化交易與廣度優先索引來計算新的節點值：  
+ **Org_BreadthFirst** 索引可確定判斷 **@last_child** 會使用範圍搜尋。 除了應用程式可能想要檢查的其他錯誤情況之外，插入後的重複索引鍵違規會指出嘗試加入具有相同識別碼的多個員工，因此 **@last_child** 必須重新計算。 下列程式碼使用序列化交易與廣度優先索引來計算新的節點值：  
   
 ```  
 CREATE TABLE Org_T2  
@@ -389,7 +388,7 @@ GO
   
   
 ###  <a name="finding-ancestors-by-using-the-clr"></a><a name="findclr"></a> 透過使用 CLR 尋找上階  
- 與階層中兩個節點相關的常見作業就是尋找最低通用上階。 這可以寫入[!INCLUDE[tsql](../includes/tsql-md.md)]或 CLR，因為這兩種`hierarchyid`類型都有提供。 因為效能將會更快，因此建議使用 CLR。  
+ 與階層中兩個節點相關的常見作業就是尋找最低通用上階。 這可以寫入 [!INCLUDE[tsql](../includes/tsql-md.md)] 或 CLR，因為 `hierarchyid` 這兩種類型都有提供。 因為效能將會更快，因此建議使用 CLR。  
   
  使用下列的 CLR 程式碼，列出上階並尋找最低通用上階：  
   
@@ -497,7 +496,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> 移動子樹  
- 另一個常見的作業是移動子樹。 下列程式會採用的子樹**@oldMgr** ，並使其（ **@oldMgr**包括）的子**@newMgr**樹。  
+ 另一個常見的作業是移動子樹。 下列程式會採用的子樹 **@oldMgr** ，並使其（包括 **@oldMgr** ）的子樹 **@newMgr** 。  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

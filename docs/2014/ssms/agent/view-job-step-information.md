@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8123a523a0fa5212b4c0ffc8d98c6a90aef3396c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b1a4519fa83b85493cc16395e1f7c2948a84d1b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245925"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001606"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
   本主題說明如何檢視 [作業步驟屬性] 對話方塊中的作業步驟詳細資料。 其中還包括檢視作業步驟輸出的相關資訊。  
@@ -33,7 +32,7 @@ ms.locfileid: "63245925"
   
 -   **若要使用下列項目檢視作業步驟資訊：**  
   
-     [Transact-SQL](#SSMS)  
+     [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   

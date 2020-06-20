@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: abe35e51764a7d16c49c8d15d9e2031e0cdabe05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9fd6535c8f2c0f77efc1cc2871de77d29cd6615
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067330"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939717"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>刪除關聯性 (SSAS 表格式)
   您可以刪除現有的關聯性，方法是使用 [圖表檢視] 中的模型設計師或使用 [管理關聯性] 對話方塊。 如需如何在表格式模型中使用關聯性的資訊，請參閱 [關聯性 &#40;SSAS 表格式&#41;](relationships-ssas-tabular.md)。  

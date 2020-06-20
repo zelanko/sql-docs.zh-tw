@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea3aedff3f7bfa931b900bdeab59495a35853ae1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065564"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938239"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>基於使用方式的最佳化精靈 F1 說明
-  基於使用方式的最佳化精靈，在輸出方面類似於彙總設計精靈，並可用於設計資料分割的彙總。 然而，基於使用方式的最佳化精靈會依據查詢的特定使用模式來設計彙總，而這些使用模式是記錄於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的查詢記錄檔中。 匯總藉由允許[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]直接從 cube 儲存體抓取預先計算的總計，而不需要重新計算每個查詢之基礎資料來源中的資料，來改善效能。  
+  基於使用方式的最佳化精靈，在輸出方面類似於彙總設計精靈，並可用於設計資料分割的彙總。 然而，基於使用方式的最佳化精靈會依據查詢的特定使用模式來設計彙總，而這些使用模式是記錄於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的查詢記錄檔中。 匯總藉由允許 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 直接從 cube 儲存體抓取預先計算的總計，而不需要重新計算每個查詢之基礎資料來源中的資料，來改善效能。  
   
- 若要從開啟 [基於使用方式的優化[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]嚮導]，請開啟[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案的 cube 設計師，然後按一下 [**匯總] 索引**標籤。按一下工具列中的 [以使用量為基礎的**優化**] 按鈕。  
+ 若要從開啟 [基於使用方式的優化嚮導] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ，請開啟專案的 cube 設計師 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，然後按一下 [ **Aggregations**匯總] 索引標籤。按一下工具列中的 [以使用量為基礎的**優化**] 按鈕。  
   
  若要從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 開啟 [基於使用方式的最佳化精靈]，請連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，然後開啟 [Cubes]**** 資料夾。 選取一個 Cube，接著開啟 **[Measure Groups]** 資料夾，並展開您要修改的量值群組。 以滑鼠右鍵按一下 [資料分割]**** 資料夾，然後選取 [基於使用方式的最佳化]****。  
   

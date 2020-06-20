@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ba55a2a8fe0ad873c4b5433a53972c441b535333
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cdb17f0d2104373ea797ff9403cc417dfaa3d868
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704993"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056256"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>OLE DB API 對日期和時間增強功能的支援
   下列 OLE DB API 支援日期/時間增強功能。  
   
-|函式|說明|  
+|函式|描述|  
 |--------------|-----------------|  
 |IAccessor::CreateAccessor|在 DBBINDING 結構中加入一個旗標，好讓應用程式可以區分 `datetime`、`datetime2` 和 `smalldatetime` 值。 如需詳細資訊，請參閱[參數和資料列集中繼資料](metadata-parameter-and-rowset.md)。|  
 |IBCPSession::BCPColFmt|如需詳細資訊，請參閱[增強型日期和時間類型的大量複製變更 &#40;OLE DB 和 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。|  

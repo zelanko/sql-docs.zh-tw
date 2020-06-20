@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffd527ba4334244c7fd4c5d4a73099093cb8520b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876861"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959638"
 ---
 # <a name="back-up-database-backup-options-page"></a>備份資料庫 (備份選項頁面)
   使用 [備份資料庫]  對話方塊的 [備份選項]  頁面，即可檢視或修改資料庫備份選項。  
@@ -33,7 +32,7 @@ ms.locfileid: "62876861"
 >  您可以定義資料庫維護計畫來建立資料庫備份。 如需詳細資訊，請參閱[維護計劃](../maintenance-plans/maintenance-plans.md)和[使用維護計畫精靈](../maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按下 [指令碼][!INCLUDE[tsql](../../includes/tsql-md.md)][ 按鈕，然後選取指令碼的目的地，以產生相對應的 ](/sql/t-sql/statements/backup-transact-sql)**BACKUP** 指令碼。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按下 [指令碼]  按鈕，然後選取指令碼的目的地，以產生相對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 指令碼。  
   
 ## <a name="options"></a>選項。  
   

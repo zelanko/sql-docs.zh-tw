@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bae68c2d507e1dd3809e76a9d842b765d72234e9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762339"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952087"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>建立資料庫快照集 (Transact-SQL)
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是建立 [!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫快照集的唯一方式。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支援建立資料庫快照集。  
   
 -   **開始之前：**  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
      [安全性](#Security)  
   
@@ -37,7 +36,7 @@ ms.locfileid: "62762339"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  可使用任何復原模式的來源資料庫必須符合下列必要條件：  
   
--   伺服器執行個體必須執行支援資料庫快照集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 如需中[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]資料庫快照集支援的詳細資訊，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+-   伺服器執行個體必須執行支援資料庫快照集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 如需中資料庫快照集支援的詳細資訊 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 -   除非來源資料庫是資料庫鏡像工作階段中的鏡像資料庫，否則該資料庫必須處於線上狀態。  
   

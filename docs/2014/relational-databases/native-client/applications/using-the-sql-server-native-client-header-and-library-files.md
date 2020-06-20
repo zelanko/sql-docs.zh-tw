@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a772188438d0dcd29b97e5233eac1152a2998e21
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 245dd5a511b9366a80d1e57aa0d7bc3d21d8f23d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704375"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049619"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>使用 SQL Server Native Client 標頭檔與程式庫檔案
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 標頭檔與程式庫檔案會與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起安裝。 開發應用程式時，將開發所需的所有檔案複製並安裝到您的開發環境相當重要。 如需安裝和重新發佈 Native Client 的詳細資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請參閱[安裝 SQL Server Native Client](installing-sql-server-native-client.md)。  

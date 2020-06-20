@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f4387b3311c4b2157ba202890c2a190e83e7ad5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058746"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967098"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>一般檔案連接管理員編輯器 (一般頁面)
   使用 **[一般檔案連接管理員編輯器]** 對話方塊的 **[一般]** 頁面，來選取檔案和資料格式。 一般檔案連接可以讓封裝連接到文字檔。  
@@ -30,16 +29,16 @@ ms.locfileid: "66058746"
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
- **描述**  
+ **說明**  
  描述連接。 最佳作法是以其用途描述連接，使封裝可以自我記錄並易於維護。  
   
- [檔案名稱]****  
+ **檔案名稱**  
  輸入在一般檔案連接中要使用的路徑和檔案名稱。  
   
  **瀏覽**  
  尋找在一般檔案連接中要使用的檔案名稱。  
   
- **語言**  
+ **Locale**  
  指定地區設定以提供排序以及日期和時間格式的特定語言資訊。  
   
  **Unicode**  
@@ -48,7 +47,7 @@ ms.locfileid: "66058746"
  **字碼頁**  
  指定非 Unicode 文字的字碼頁。  
   
- **編排**  
+ **[格式]**  
  指出檔案是要使用分隔符號、固定寬度或不齊右的格式。  
   
 |值|描述|  

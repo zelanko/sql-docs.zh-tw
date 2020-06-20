@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc839659d289eeccfe2e7893f054699e34b1fc0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889188"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932049"
 ---
 # <a name="upgrade-analysis-services"></a>升級 Analysis Services
-  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式來升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關以 SharePoint [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]模式升級的詳細資訊，請參閱[升級 PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)。 如需升級現有 SQL Server 實例的詳細資訊，請參閱[使用安裝精靈升級至 SQL Server 2014 &#40;安裝程式&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)。  
+  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式來升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關以 SharePoint 模式升級的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[升級 PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)。 如需升級現有 SQL Server 實例的詳細資訊，請參閱[使用安裝精靈升級至 SQL Server 2014 &#40;安裝程式&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)。  
   
 ## <a name="known-upgrade-issues"></a>已知的升級問題  
  在升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之前，請檢閱下列文章：  
   
 -   [SQL Server 2014 版本](https://go.microsoft.com/fwlink/?LinkID=296445)資訊。  
   
--   若要瞭解[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]哪些特性和功能已停止、已被取代或變更，請參閱[Analysis Services 回溯相容性](https://docs.microsoft.com/analysis-services/analysis-services-backward-compatibility)。  
+-   若要瞭解哪些 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 特性和功能已停止、已被取代或變更，請參閱[Analysis Services 回溯相容性](https://docs.microsoft.com/analysis-services/analysis-services-backward-compatibility)。  
   
 ## <a name="pre-upgrade-checklist"></a>升級前檢查清單  
  升級之前，請先檢閱下列資訊：  
@@ -55,14 +54,14 @@ ms.locfileid: "68889188"
 ## <a name="upgrading-analysis-services"></a>升級 Analysis Services  
  您可以選擇許多方式來升級伺服器和資料：  
   
--   **就地升級**會以[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]程式檔案取代現有的程式檔案。 資料庫會保持在相同的位置。 程式資料夾會更新以反映新的名稱。  
+-   **就地升級**會以程式檔案取代現有的程式檔案 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 資料庫會保持在相同的位置。 程式資料夾會更新以反映新的名稱。  
   
--   **並存升級**是指[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在具有現有 Analysis Services 實例的同一部電腦上的新安裝。 您可以將資料庫移至相同電腦上的新執行個體，然後解除安裝舊版 (如果不再使用它的話)。  
+-   **並存升級**是指 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在具有現有 Analysis Services 實例的同一部電腦上的新安裝。 您可以將資料庫移至相同電腦上的新執行個體，然後解除安裝舊版 (如果不再使用它的話)。  
   
 -   您也可以在新的硬體上安裝 Analysis Services，然後將現有的資料庫移轉至該伺服器。  
   
 ## <a name="in-place-upgrade"></a>就地升級  
- 您可以將現有的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]實例升級至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，而在升級過程中，會將現有的資料庫從舊的實例自動遷移到新的實例。 由於這兩個版本之間的中繼資料和二進位資料是相容的，所以在您升級之後將會保留資料，而且不必手動移轉資料。  
+ 您可以將現有的實例升級 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 至， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 而在升級過程中，會將現有的資料庫從舊的實例自動遷移到新的實例。 由於這兩個版本之間的中繼資料和二進位資料是相容的，所以在您升級之後將會保留資料，而且不必手動移轉資料。  
   
  若要升級現有的執行個體，請執行安裝程式，並指定現有執行個體的名稱做為新執行個體的名稱。  
   

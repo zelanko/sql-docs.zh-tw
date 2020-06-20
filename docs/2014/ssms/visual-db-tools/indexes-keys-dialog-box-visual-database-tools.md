@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68c9022f3ea7803f372e7c349e0dc75b1fc56adc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048637"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>索引和索引鍵對話方塊 (Visual Database Tools)
   使用此對話方塊可建立或修改索引、主索引鍵和唯一鍵。 若要存取此對話方塊，請開啟具有索引或索引鍵之資料表的資料表定義，在資料表定義方格上按一下滑鼠右鍵，再按一下 [索引/索引鍵]  。  

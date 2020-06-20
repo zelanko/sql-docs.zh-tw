@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b9f282f9f95c971c4ab5007a947e94848e9b8ad6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3709b32e8db1027bce963f22b6fe282e120ad4f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048011"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
   初始化大量複製結構、執行一些錯誤檢查、確認資料和格式檔案名稱正確無誤，然後開啟這些項目。  

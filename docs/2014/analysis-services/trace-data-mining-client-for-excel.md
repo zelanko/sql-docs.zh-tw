@@ -12,24 +12,23 @@ helpviewer_keywords:
 ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f394e54252c382bb2f70dccc531f306f7264d87f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175567"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938359"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>追蹤 (適用於 Excel 的資料採礦用戶端)
   ![追蹤按鈕](media/misc-trace.gif "追蹤按鈕")
 
- [**追蹤**] 對話方塊可協助您監視要用於資料採礦的實例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]所傳送的語句。 當您建立與實例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]連接之後，用戶端與伺服器之間的所有互動都會記錄在 [**追蹤**] 窗格中，包括建立結構、加入採礦模型及進行預測的語句，以及從伺服器傳回的一些訊息。
+ [**追蹤**] 對話方塊可協助您監視要用於資料採礦的實例所傳送的語句 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 當您建立與實例的連接之後 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，用戶端與伺服器之間的所有互動都會記錄在 [**追蹤**] 窗格中，包括建立結構、加入採礦模型及進行預測的語句，以及從伺服器傳回的一些訊息。
 
  根據要求的動作，陳述式可能是資料採礦延伸模組 (DMX) 資料定義查詢或資料操作查詢、Analysis Services 指令碼語言 (ASSL) 封包，或 Analysis Services 預存程序的呼叫。 但是，實際的數值結果和資料值則不會顯示。
 
  **追蹤**只會監視目前的連接，而且不會儲存 [**追蹤**] 對話方塊的內容。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
  [追蹤] 窗格會列出從 Excel 用戶端傳送到伺服器的所有語句。
 
  根據要求的動作，陳述式可能是 DMX 資料操作或資料定義陳述式、Analysis Services 預存程序的呼叫，或 XML/A 封包。

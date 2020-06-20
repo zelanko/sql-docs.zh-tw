@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6087d5fa39dd023d13ce3f49fbdfb855f12b921c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fbc0d47c523be7a6a1dd421535862ac30748168a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067444"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939809"
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>建立及管理量值 (SSAS 表格式)
   量值是為了在報表或 Excel 樞紐分析表 (或樞紐分析圖) 中使用而建立的公式。 量值可以用標準彙總函式 (例如 COUNT 或 SUM) 做為基礎，或者，您也可以使用 DAX 自行定義公式。 本主題中的工作描述如何使用資料表的量值方格來建立和管理量值。  

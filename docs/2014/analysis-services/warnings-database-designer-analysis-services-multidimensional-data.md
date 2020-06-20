@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 113f644d9f1da48790e7c8d59d34e6b143a1175a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065432"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938119"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>警告 (資料庫設計工具) (Analysis Services - 多維度資料)
   使用 [警告]**** 索引標籤，即可檢視和解除全域規則，以及檢視和重新啟用已解除警告的特定執行個體。 **[警告]** 索引標籤會顯示兩個方格： **[設計警告規則]** 和 **[已解除的警告]**。  
@@ -33,7 +32,7 @@ ms.locfileid: "66065432"
   
  **[設計警告規則]** 方格具有下列資料行：  
   
- **描述**  
+ **說明**  
  顯示規則的名稱。 規則會依類別分組。  
   
  **重要性**  
@@ -47,13 +46,13 @@ ms.locfileid: "66065432"
   
  **[已解除的警告]** 方格具有下列項目：  
   
- **目標**  
+ **Object**  
  顯示代表物件類型和物件名稱的圖示。  
   
- **類型**  
+ **型別**  
  顯示物件類型。  
   
- **描述**  
+ **說明**  
  顯示規則的名稱。  
   
  **重要性**  

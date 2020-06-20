@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5c51426bd68a4e1bd69aa4f81d097e7af3fe6f5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872052"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952079"
 ---
 # <a name="contained-database-collations"></a>自主資料庫定序
   許多屬性會影響文字資料的排序次序和相等語意，包括區分大小寫、區分腔調字和使用的基底語言。 這些品質會透過資料的定序選擇表達至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需定序本身的更深入討論，請參閱 [定序與 Unicode 支援](../collations/collation-and-unicode-support.md)。  
@@ -58,7 +57,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- 這段程式碼似乎相當簡單，不過卻引發許多問題。 因為資料行的定序相依于建立資料表所在的資料庫，所以使用儲存在中`tempdb`的臨時表就會發生問題。 的定序`tempdb`通常符合實例的定序，而不需要符合資料庫定序。  
+ 這段程式碼似乎相當簡單，不過卻引發許多問題。 因為資料行的定序相依于建立資料表所在的資料庫，所以使用儲存在中的臨時表就會發生問題 `tempdb` 。 的定序 `tempdb` 通常符合實例的定序，而不需要符合資料庫定序。  
   
 ### <a name="example-2"></a>範例 2  
  例如，假設上述 (中文) 資料庫使用於具有 **Latin1_General** 定序的執行個體上：  
@@ -111,14 +110,14 @@ AS BEGIN
 END;  
 ```  
   
- 這是相當罕見的函數。 在區分大小寫的定序中@i ，return 子句中的無法系結@I至或 @??。 在不區分大小寫的 Latin1_General 定序中，@i 會繫結至 @I，而且函數會傳回 1。 但在不區分大小寫的土耳其文@i定序中，會系結至 @??,，而函式會傳回2。 這在具有不同定序之執行個體之間移動的資料庫上可能會造成破壞。  
+ 這是相當罕見的函數。 在區分大小寫的定序中， @i return 子句中的無法系結至 @I 或 @??。 在不區分大小寫的 Latin1_General 定序中，@i 會繫結至 @I，而且函數會傳回 1。 但在不區分大小寫的土耳其文定序中，會系結 @i 至 @??,，而函式會傳回2。 這在具有不同定序之執行個體之間移動的資料庫上可能會造成破壞。  
   
 ## <a name="contained-databases"></a>自主資料庫  
  因為自主資料庫的設計目標是要讓它們各自獨立，所以必須切斷執行個體和 `tempdb` 定序的相依性。 為了達到此目的，自主資料庫導入了目錄定序的概念。 目錄定序會用於系統中繼資料和暫時性物件。 下面將提供詳細資料。  
   
  在自主資料庫中，目錄定序 **Latin1_General_100_CI_AS_WS_KS_SC**。 對於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上之所有自主資料庫而言，這個定序都相同，而且無法變更。  
   
- 雖然資料庫定序會保留下來，不過只當做使用者資料的預設定序使用。 根據預設，資料庫定序等於模型資料庫定序，但是使用者可透過`CREATE`或`ALTER DATABASE`命令加以變更，就如同非自主資料庫一樣。  
+ 雖然資料庫定序會保留下來，不過只當做使用者資料的預設定序使用。 根據預設，資料庫定序等於模型資料庫定序，但是使用者可透過或命令加以變更， `CREATE` `ALTER DATABASE` 就如同非自主資料庫一樣。  
   
  `CATALOG_DEFAULT` 子句提供了新的關鍵字 `COLLATE`。 在包含和非自主資料庫中，這個關鍵字會當做中繼資料之目前定序的捷徑使用。 也就是說，在非自主資料庫中，`CATALOG_DEFAULT` 將傳回目前資料庫定序，因為中繼資料已在資料庫定序中定序。 在自主資料庫中，這兩個值可能會不同，因為使用者可以變更資料庫定序，讓它不符合目錄定序。  
   
@@ -235,7 +234,7 @@ GO
  無效的物件名稱 '#A'。  
   
 ### <a name="example-3"></a>範例 3  
- 下列範例將說明參考會尋找原本不同的多個相符項目的案例。 首先，我們從`tempdb` （與實例具有相同的區分大小寫定序）開始，然後執行下列語句。  
+ 下列範例將說明參考會尋找原本不同的多個相符項目的案例。 首先，我們從 `tempdb` （與實例具有相同的區分大小寫定序）開始，然後執行下列語句。  
   
 ```  
 USE tempdb;  

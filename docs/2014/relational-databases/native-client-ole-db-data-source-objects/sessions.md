@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ae9b5b908e4f4c6104d2639c7d0032a3b1f2087c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b3b31c9ee3d14dcc65b44194b5e9cc2aff85215b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056346"
 ---
 # <a name="sessions"></a>工作階段
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會話代表實例的單一連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

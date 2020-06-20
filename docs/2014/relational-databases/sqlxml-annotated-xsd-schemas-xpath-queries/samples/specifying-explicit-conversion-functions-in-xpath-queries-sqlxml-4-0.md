@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d2153e92f87e87ef152542a1934b9cdfd596fef9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07e2e67c1c30302c6d3e758f76805e92e509f6c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717752"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002871"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定明確轉換函數 (SQLXML 4.0)
   下列範例將示範如何在 XPath 查詢中指定明確轉換函數。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱[XPath 範例的範例批註式 XSD 架構 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -30,7 +29,7 @@ ms.locfileid: "82717752"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. 使用 number() 明確轉換函數  
  `number()` 函數會將引數轉換成數字。  
   
- 假設**ContactID**的值為非數值，則下列查詢會將**ContactID**轉換成數位，並將它與值4進行比較。 然後，此查詢會傳回內容節點的所有** \< Employee>** 專案子系，其**ContactID**屬性的數值為4：  
+ 假設**ContactID**的值為非數值，則下列查詢會將**ContactID**轉換成數位，並將它與值4進行比較。 然後，此查詢會傳回內容節點的所有元素子系，其 **\<Employee>** **ContactID**屬性的數值為4：  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -79,7 +78,7 @@ ms.locfileid: "82717752"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. 使用 string() 明確轉換函數  
  `string()` 函數會將引數轉換成字串。  
   
- 下列查詢會將**ContactID**轉換成字串，並將它與字串值 "4" 進行比較。 此查詢會傳回內容節點的所有** \< Employee>** 專案子系，且**ContactID**的字串值為 "4"：  
+ 下列查詢會將**ContactID**轉換成字串，並將它與字串值 "4" 進行比較。 此查詢會傳回 **\<Employee>** 內容節點的所有元素子系，並具有字串值為 "4" 的**ContactID** ：  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

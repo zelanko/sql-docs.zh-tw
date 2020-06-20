@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4f56e11e7c6e60a1a0144de7d42cc726323e80e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3574463c7efa461ded4e9216319d0cc476966b38
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735718"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056694"
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>FlagName 屬性 (ServerSettingsGeneralFlag 類別)
   取得旗標的名稱。  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  表示伺服器設定之一般旗標的 [ServerSettingsGeneralFlag 類別](serversettingsgeneralflag-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

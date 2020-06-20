@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 67d05389-81ae-4a6b-947b-986d37ec72b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7f8ea36c8c3d49d4903379ed4450548fc760937a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca06f4267edd65885bf4fec1838ecc4360c304fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067873"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940149"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>資料表繫結詳細資料 (資料分割來源對話方塊) (Analysis Services - 多維度資料)
   使用 **[資料分割來源]** 對話方塊中的 **[資料表繫結]** 選項，即可指定提供資料給資料分割的事實資料表。 您可以從 **[資料分割來源]** 對話方塊的 **[繫結類型]** 選項中，選取 **[資料表繫結]** 來顯示此窗格。  

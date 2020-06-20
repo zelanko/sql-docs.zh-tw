@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3186cbac127244131f45e2cbe7e3131b2e6d4895
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488477"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063975"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>第 2 課：使用供應商知識庫清理供應商資料
   在這一課，您會使用您在第一課建立的**供應商**知識庫來清理 Excel 檔案中的供應商資料。 DQS 中的資料清理包含**電腦輔助**的程式，可分析資料符合知識庫中知識的方式，以及可讓您從電腦輔助的程式中檢查和修改結果的**互動式進程**。 資料清理功能會識別資料來源中不正確的資料，然後針對不正確的資料進行更正或建議更正。 它也會使用定義域值、同義字的前置值、定義域規則、以詞彙為主的關聯及參考資料來標準化及豐富客戶資料。 您可以用互動方式核准或拒絕電腦輔助程序所提議的變更。 如需詳細資訊，請參閱[資料清理](https://msdn.microsoft.com/library/gg524800.aspx)。  

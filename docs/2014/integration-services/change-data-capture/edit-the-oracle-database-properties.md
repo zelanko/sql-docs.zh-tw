@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c9ebad419585de0136708ea85e522f890dceac38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07144e6ead5d968ec116b9cc0ef2abd6736657b0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835574"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923279"
 ---
 # <a name="edit-the-oracle-database-properties"></a>編輯 Oracle 資料庫屬性
   在屬性編輯器中使用 [Oracle] 索引標籤，以變更您在新增執行個體精靈中 [建立 CDC 資料庫] 頁面上提供的描述，以及變更 Oracle 記錄採礦資料庫連接資訊。  

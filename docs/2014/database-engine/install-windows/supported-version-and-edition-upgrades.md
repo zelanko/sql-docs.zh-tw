@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53fbe7568050927e8ddd43085181125214e7f86a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775216"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932219"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>支援的版本與版本升級
   您可以從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]升級。 本主題列出這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的支援升級路徑，以及可以升級至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的支援版本。  
@@ -73,7 +72,7 @@ ms.locfileid: "62775216"
   
  下表列出從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的支援案例。  
   
-|升級來源|支援的升級路徑|  
+|從|支援的升級路徑|  
 |------------------|----------------------------|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br />  Business Intelligence|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
@@ -121,7 +120,7 @@ ms.locfileid: "62775216"
   
 -   使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]2014 連接到 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 。  
   
- 當 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫升級到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 時，資料庫的相容性層級將會從 90 變更為 100。 （在[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]中，資料庫相容性層級的有效值為100、110和120）。[ALTER Database 相容性層級 &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)討論相容性層級變更如何影響[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]應用程式。  
+ 當 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫升級到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 時，資料庫的相容性層級將會從 90 變更為 100。 （在中 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ，資料庫相容性層級的有效值為100、110和120）。[ALTER Database 相容性層級 &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)討論相容性層級變更如何影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式。  
   
  未在上面清單中指定的任何情況都不受支援，包含但不限於以下項目：  
   
@@ -167,9 +166,9 @@ ms.locfileid: "62775216"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise （Server + CAL 授權） <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Core 授權)|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Core 授權)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Server+CAL 授權)|  
   
- <sup>1</sup>也適用于[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] express with Tools 和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] express with Advanced Services。  
+ <sup>1</sup>也適用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] express with Tools 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] express with Advanced Services。  
   
- <sup>2</sup>變更[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]容錯移轉叢集的版本有所限制。 下列狀況不支援 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 容錯移轉叢集：  
+ <sup>2</sup>變更容錯移轉叢集的版本 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 有所限制。 下列狀況不支援 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 容錯移轉叢集：  
   
 -   SQL Server 2014 Enterprise 至 SQL Server 2014 Developer、Standard 和 Enterprise Evaluation。  
   

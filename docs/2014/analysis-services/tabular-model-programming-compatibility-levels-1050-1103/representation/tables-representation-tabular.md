@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c733fbf1e8a075d0d240f5cb69d888310fc6009f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46ede058446778ad7e0d1a980bdd93bf5d72b966
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757695"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939989"
 ---
 # <a name="tables-representation-tabular"></a>資料表表示法 (表格式)
   在表格式模型中，資料表是資料的基本表示法。  

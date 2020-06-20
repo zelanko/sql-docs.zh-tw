@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e90afe2092623fa1dd356e51af5fff7a19e9a2ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b4e7611270135735cf3f7aada808a0a27ba927c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012114"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027085"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>資料的大量匯入及匯出 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表匯出大量資料 (「大量資料」  )，以及將大量資料匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或未分割的檢視。 大量匯入和大量匯出對於在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與異質資料來源間有效傳送資料，是必要條件。 *「大量匯出」* 代表將資料從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表複製到資料檔。 *「大量匯入」* 代表從資料檔載入資料至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 例如，您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 應用程式中將資料匯出至資料檔，然後將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。  
@@ -122,7 +121,7 @@ ms.locfileid: "66012114"
  [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)   
  [大量匯入和匯出 XML 檔的範例 &#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)   
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)   
- [將資料庫複製到其他伺服器](../databases/copy-databases-to-other-servers.md)   
+ [複製資料庫至其他伺服器](../databases/copy-databases-to-other-servers.md)   
  [執行 XML 資料的大量載入 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)   
  [執行大量複製作業](../native-client/features/performing-bulk-copy-operations.md)   
  [bcp 公用程式](../../tools/bcp-utility.md)   

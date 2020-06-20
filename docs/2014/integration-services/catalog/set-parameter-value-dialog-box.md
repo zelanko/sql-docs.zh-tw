@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5e5bfe3faf83b0873a8b47c348df9cfd8138dacb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 857b31d844f7ab317167ee10c03cffef0d436cca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771624"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924261"
 ---
 # <a name="set-parameter-value-dialog-box"></a>設定參數值對話方塊
   使用 **[設定參數值]** 對話方塊來針對專案和封裝設定參數與連接管理員屬性的值。  

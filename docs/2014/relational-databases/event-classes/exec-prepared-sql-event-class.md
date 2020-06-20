@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c61859b-00c9-4267-aef3-bc3ad075db69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4d4559c13091f809cc222128d0f9e991ea424628
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6eb7faad6f5e3f3742a97dcbda0548242c5f6cc9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62663969"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029752"
 ---
 # <a name="exec-prepared-sql-event-class"></a>Exec Prepared SQL 事件類別
   Exec Prepared SQL 事件類別代表 SqlClient、ODBC、OLE DB 或 DB-Library 已經執行備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  

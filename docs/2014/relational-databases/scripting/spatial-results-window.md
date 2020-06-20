@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 27865055bec4312b9e969da096829af6c8ba60db
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d4a438cdaf0025397faec463f99e91a4c349d1b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049001"
 ---
 # <a name="spatial-results-window"></a>空間結果視窗
   [空間結果]  視窗會提供檢視空間資料的視覺化對應工具。 若要檢視空間結果，您的查詢結果必須包含一個具有幾何或地理位置資料的空間資料行。  
   
 > [!NOTE]  
->  只有當您的結果傳回至 [結果]  視窗中的方格時，才能使用 [空間結果]  視窗。 如果您指定要將結果傳回成文字，就無法使用這個視窗。  
+>  只有當您的結果傳回至 [結果] 視窗中的方格時，才能使用 [空間結果] 視窗。 如果您指定要將結果傳回成文字，就無法使用這個視窗。  
   
 ## <a name="options"></a>選項。  
  **選取空間資料行**  

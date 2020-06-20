@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 548beeae68f5585c5cf2ba56b67027532ab43b71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011849"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026585"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定欄位與資料列結束字元 (SQL Server)
   針對字元資料欄位，選擇性結束字元可讓您使用「欄位結束字元」  標示資料檔案中每個欄位的結尾，並使用「資料列結束字元」  標示每個資料列的結尾。 結束字元是指示程式從欄位或資料列結束與開始的交接處讀取資料檔的一種方法。  
@@ -56,7 +55,7 @@ ms.locfileid: "66011849"
 >  以互動方式使用 **bcp** 並指定 \n (新行) 作為資料列結束字元時， **bcp** 會自動以 \r (歸位字元) 字元當作前置詞，而產生資料列結束字元 \r\n。  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>指定大量匯出的結束字元  
- 當您大容量`char`匯出`nchar`或資料，而且想要使用非預設的結束字元時，您必須指定**bcp**命令的結束字元。 您可以使用下列方式指定結束字元：  
+ 當您大量匯出 `char` 或 `nchar` 資料，而且想要使用非預設的結束字元時，您必須指定**bcp**命令的結束字元。 您可以使用下列方式指定結束字元：  
   
 -   使用格式檔案，按個別欄位逐一指定結束字元。  
   
@@ -127,8 +126,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifier|描述|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **= '*`field_terminator`*'**|指定要用於字元和 Unicode 字元資料檔中的欄位結束字元。<br /><br /> 預設值是 \t (定位字元)。|  
-    |ROWTERMINATOR **= '*`row_terminator`*'**|指定要用於字元和 Unicode 字元資料檔中的資料列結束字元。<br /><br /> 預設值是 \n (新行字元)。|  
+    |FIELDTERMINATOR **= ' *`field_terminator`* '**|指定要用於字元和 Unicode 字元資料檔中的欄位結束字元。<br /><br /> 預設值是 \t (定位字元)。|  
+    |ROWTERMINATOR **= ' *`row_terminator`* '**|指定要用於字元和 Unicode 字元資料檔中的資料列結束字元。<br /><br /> 預設值是 \n (新行字元)。|  
   
      如需詳細資訊，請參閱 [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
@@ -169,7 +168,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
 |選項|屬性|  
 |------------|---------------|  
-|DATAFILETYPE **= '`char`'**|指定以字元資料載入資料欄位。|  
+|DATAFILETYPE **= ' `char` '**|指定以字元資料載入資料欄位。|  
 |FIELDTERMINATOR **='** `,` **'**|指定逗號 (`,`) 作為欄位結束字元。|  
 |ROWTERMINATOR **='** `\n` **'**|指定資料列結束字元為新行字元。|  
   

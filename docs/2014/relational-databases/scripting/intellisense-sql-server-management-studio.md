@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2ddfb8c7f0db110f2129aeb0e216904d1b507eda
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 58c1c769d8120dc0be08508e3595d98c092ff116
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703865"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063429"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的編輯器支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項，而此選項可減少輸入、提供語法資訊的快速存取，或簡化複雜運算式之分隔符號的檢視。  

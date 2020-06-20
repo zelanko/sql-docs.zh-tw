@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c715ac28-3c5d-4e4b-8104-f97b79150654
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd6af62200b5d640c67321165eae941986e18892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c58fc8d77bccb072d0999d2e6e0c4f545712f522
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069353"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940899"
 ---
 # <a name="select-nested-table-key-add-new-nested-table-wizard"></a>選取巢狀資料表索引鍵 (加入新的巢狀資料表精靈)
   使用 [選取巢狀資料表索引鍵]**** 頁面，即可選取會成為巢狀資料表之索引鍵的屬性。  

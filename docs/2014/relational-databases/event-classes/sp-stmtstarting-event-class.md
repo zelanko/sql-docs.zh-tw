@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7acd72b5386eed5e78ddcd2fe1cd0344905fa833
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a69956a87414c073a49e5a92e81c6b85ce5bb720
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050974"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028353"
 ---
 # <a name="spstmtstarting-event-class"></a>SP:StmtStarting 事件類別
   SP:StmtStarting 事件類別指出已啟動預存程序內的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
