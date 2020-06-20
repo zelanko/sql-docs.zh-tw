@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eef4cc29bdcda107bba55ceab14aa7984fc420a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff84dff8f89fb31a83a618825e366b3236df153
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480397"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937479"
 ---
 # <a name="managing-a-composite-domain"></a>管理複合定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用複合定義域。 有時單一定義域無法滿意地表示欄位中的資料，您只能透過群組單一定義域來表示該資料。 若要這樣做，請建立複合定義域。 複合定義域是由兩個或多個單一定義域所組成，而且會對應至由多個相關詞彙所組成的資料欄位，這些詞彙未經過剖析，但是包含在單一複合值中。 此值中的每一個詞彙將由不同的單一定義域表示。 一旦您將單一定義域併入複合定義域，然後將複合定義域對應至資料欄位之後，您就可以藉由在單一定義域中建立知識，於知識庫中建立有關該欄位中之資料的知識。 複合定義域就像單一定義域一樣，都是單一資料欄位中資料的語意表示法。  

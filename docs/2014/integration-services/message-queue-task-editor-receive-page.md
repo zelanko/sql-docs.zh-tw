@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b30a7863fe50843f4408931b2b766bcb520f3a2c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057666"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950988"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>訊息佇列工作編輯器 (接收頁面)
   使用 [訊息佇列工作編輯器]**** 對話方塊的 [接收]**** 頁面，即可設定訊息佇列工作，以接收 [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) 訊息。  
@@ -85,7 +84,7 @@ ms.locfileid: "66057666"
 |**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
   
  **變數**  
- 鍵入變數名稱，或按一下 [\<新增變數…>]****，然後設定新的變數。  
+ 輸入變數名稱，或按一下 \<**New variable...**> ，然後設定新的變數。  
   
  **相關主題：** [加入變數](../../2014/integration-services/add-variable.md)  
   
@@ -130,7 +129,7 @@ ms.locfileid: "66057666"
  除非 [比較]**** 選項設定為 [無]****，否則請提供訊息要比較的字串。  
   
  **變數**  
- 鍵入要保存已接收訊息的變數名稱，或按一下 [\<新增變數…>]****，然後設定新的變數。  
+ 輸入要保存已接收之訊息的變數名稱，或按一下 \<**New variable...**> 然後設定新的變數。  
   
  **相關主題：** [加入變數](../../2014/integration-services/add-variable.md)  
   
@@ -139,6 +138,6 @@ ms.locfileid: "66057666"
  [[訊息佇列工作編輯器] &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [[訊息佇列工作編輯器] &#40;傳送頁面&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [運算式頁面](expressions/expressions-page.md)   
- [Message Queue Task](control-flow/message-queue-task.md)  
+ [訊息佇列工作](control-flow/message-queue-task.md)  
   
   

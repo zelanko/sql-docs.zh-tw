@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6eeb8a12980b5c82e0f1d9a90651f54c92cf8d5e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6dfbb6c237c63d3a6d7b8e324bde42d4e8851abe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703507"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003015"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>使用 sql:max-depth 來指定遞迴關聯性的深度
   在關聯式資料庫中，當某份資料表與本身具有關聯性時，它就稱為遞迴關聯性。 例如，在監督者-被監督者的關聯性中，儲存員工記錄的資料表會與本身具有關聯。 在此情況下，員工資料表在關聯性的一端扮演監督者的角色，而同一份資料表在另一端則扮演被監督者的角色。  
@@ -59,7 +58,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  在這個片段中，員工 5 會向員工 4 報告、員工 4 會向員工 3 報告，而員工 3 和 2 會向員工 1 報告。  
   
- 若要產生這種結果，您可以使用下列 XSD 結構描述並針對它指定 XPath 查詢。 架構會描述 EmployeeType 類型的** \< emp>** 元素，此專案是由相同類型 EmployeeType 的** \< emp>** 子項目所組成。 這就是遞迴關聯性 (元素及其上階屬於相同的類型)。 此外，架構會使用** \< sql： relationship>** 來描述監督員和被監督者之間的父子式關聯性。 請注意，在這個** \< sql： relationship>** 中，Emp 同時是父系和子資料工作表。  
+ 若要產生這種結果，您可以使用下列 XSD 結構描述並針對它指定 XPath 查詢。 架構會描述 **\<Emp>** EmployeeType 類型的元素，其中包含 **\<Emp>** 相同類型的子項目 EmployeeType。 這就是遞迴關聯性 (元素及其上階屬於相同的類型)。 此外，架構會使用 **\<sql:relationship>** 來描述監督員和被監督者之間的父子式關聯性。 請注意，在此中 **\<sql:relationship>** ，Emp 同時是父系和子資料工作表。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -169,7 +168,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  若要在結果中產生不同的階層深度，請在結構描述中變更 `sql:max-depth` 註解的值，然後在每次變更之後再次執行此範本。  
   
- 在先前的架構中，所有** \< Emp>** 元素都具有一組相同的**屬性（專案**集、 **FirstName**和**LastName**）。 下列架構已稍微修改，以針對向管理員報告的所有** \< Emp>** 元素傳回額外的 [**上級**] 屬性。  
+ 在先前的架構中，所有 **\<Emp>** 元素都有完全相同的屬性集（[**員工**]、[ **FirstName**] 和 [ **LastName**]）。 下列架構已稍微修改，以針對向管理員報告的所有元素傳回額外的 [**上級**] 屬性 **\<Emp>** 。  
   
  例如，這個 XML 片段會顯示員工 1 的部屬：  
   
@@ -241,7 +240,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  您可以在任何複雜內容元素上指定 `sql:max-depth` 註解。  
   
 ### <a name="recursive-elements"></a>遞迴元素  
- 如果您同時在遞迴關聯性中的父元素和子元素上指定了 `sql:max-depth`，就會優先使用在父系上指定的 `sql:max-depth` 註解。 例如，在下列結構描述中，同時在父和子員工元素上指定了 `sql:max-depth` 註解。 在此情況下， `sql:max-depth=4` 會優先使用** \< Emp>** 父元素（扮演監督員的角色）上指定的。 `sql:max-depth`子系** \< Emp>** 專案（扮演被監督者的角色）上指定的會被忽略。  
+ 如果您同時在遞迴關聯性中的父元素和子元素上指定了 `sql:max-depth`，就會優先使用在父系上指定的 `sql:max-depth` 註解。 例如，在下列結構描述中，同時在父和子員工元素上指定了 `sql:max-depth` 註解。 在此情況下， `sql:max-depth=4` **\<Emp>** 會優先使用在父元素（扮演監督員的角色）上指定的。 `sql:max-depth` **\<Emp>** 會忽略子項目（扮演被監督者的角色）上指定的。  
   
 #### <a name="example-b"></a>範例 B  
   
@@ -281,9 +280,9 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  若要測試這個結構描述，請遵循本主題前面針對「範例 A」所提供的步驟。  
   
 ### <a name="nonrecursive-elements"></a>非遞迴元素  
- 如果您在結構描述中不會導致任何遞迴的元素上指定了 `sql:max-depth` 註解，系統就會忽略此註解。 在下列架構中， ** \< Emp>** 元素是由** \< 常數>** 子專案所組成，而後者又具有** \< Emp>** 的子項目。  
+ 如果您在結構描述中不會導致任何遞迴的元素上指定了 `sql:max-depth` 註解，系統就會忽略此註解。 在下列架構中， **\<Emp>** 元素是由子專案所組成，而 **\<Constant>** 該子項目又會有 **\<Emp>** 子專案。  
   
- 在此架構中， `sql:max-depth` 因為** \< Emp>** 父系和** \< 常數>** 子專案之間沒有遞迴，所以會忽略在** \< 常數>** 專案上指定的注釋。 但是** \< emp>** 上階和** \< emp>** 子系之間有遞迴。 此結構描述會同時在這兩個項目上指定 `sql:max-depth` 註解。 因此，在 `sql:max-depth` 上階（** \< Emp>** 的監督員角色中指定的注釋）會優先使用。  
+ 在此架構中， `sql:max-depth` 會忽略在元素上指定的注釋， **\<Constant>** 因為 **\<Emp>** 父元素和子專案之間沒有遞迴 **\<Constant>** 。 但是上階 **\<Emp>** 和子系之間有遞迴 **\<Emp>** 。 此結構描述會同時在這兩個項目上指定 `sql:max-depth` 註解。 因此，在 `sql:max-depth` 上階（ **\<Emp>** 在監督員角色中）指定的注釋會優先使用。  
   
 #### <a name="example-c"></a>範例 C  
   
@@ -327,11 +326,11 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  若要測試這個結構描述，請遵循本主題前面針對「範例 A」所提供的步驟。  
   
 ## <a name="complex-types-derived-by-restriction"></a>限制所衍生的複雜類型  
- 如果您有透過** \< 限制>** 衍生的複雜類型，對應之基底複雜類型的元素就無法指定 `sql:max-depth` 批註。 在這些情況下，您可以將 `sql:max-depth` 註解加入至衍生類型的元素。  
+ 如果您有衍生的複雜類型 **\<restriction>** ，對應之基底複雜類型的元素就無法指定 `sql:max-depth` 批註。 在這些情況下，您可以將 `sql:max-depth` 註解加入至衍生類型的元素。  
   
- 另一方面，如果您有由** \< 延伸模組>** 衍生的複雜類型，對應之基底複雜類型的元素就可以指定 `sql:max-depth` 批註。  
+ 另一方面，如果您有衍生的複雜型別 **\<extension>** ，則對應之基底複雜型別的專案可以指定 `sql:max-depth` 批註。  
   
- 例如，下列 XSD 結構描述會產生錯誤，因為在基底類型上指定了 `sql:max-depth` 註解。 從另一個類型的** \< 限制>** 衍生的類型不支援這個注釋。 若要修正這個問題，您必須變更此結構描述並且在衍生類型的元素上指定 `sql:max-depth` 註解。  
+ 例如，下列 XSD 結構描述會產生錯誤，因為在基底類型上指定了 `sql:max-depth` 註解。 從另一個型別衍生的型別不支援這個注釋 **\<restriction>** 。 若要修正這個問題，您必須變更此結構描述並且在衍生類型的元素上指定 `sql:max-depth` 註解。  
   
 #### <a name="example-d"></a>範例 D  
   
@@ -375,7 +374,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- 在此結構描述中，`sql:max-depth` 指定於 `CustomerBaseType` 複雜類型上。 架構也會指定** \< 客戶>** 類型為的元素 `CustomerType` ，此專案衍生自 `CustomerBaseType` 。 在這類結構描述上指定的 XPath 查詢將會產生錯誤，因為定義於限制基底類型中的元素不支援 `sql:max-depth`。  
+ 在此結構描述中，`sql:max-depth` 指定於 `CustomerBaseType` 複雜類型上。 此架構也會指定 **\<Customer>** 類型的元素 `CustomerType` ，此專案衍生自 `CustomerBaseType` 。 在這類結構描述上指定的 XPath 查詢將會產生錯誤，因為定義於限制基底類型中的元素不支援 `sql:max-depth`。  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>具有深度階層的結構描述  
  您可能會擁有一個包括深度階層的結構描述，其中某個元素包含子元素，而後者又包含其他子元素，依此類推。 如果在這類結構描述中指定的 `sql:max-depth` 註解產生了包含超過 500 個層級之階層的 XML 文件 (最上層元素位於第 1 層，其子系位於第 2 層，依此類推)，系統就會傳回錯誤。  

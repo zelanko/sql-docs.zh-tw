@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c9f022f0ed2ba9b7bc320407526af0c12ce4073b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94c387915d4962eba4d97aa758ca5d5a2aa74b13
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483924"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972238"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>將旗標指派給版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，將旗標指派給版本，指出使用者或訂閱系統應該使用的版本。  
@@ -26,7 +25,7 @@ ms.locfileid: "65483924"
 > [!NOTE]  
 >  版本旗標一次只能指派給一個版本。 如果指派的旗標已指派給另一個版本，該旗標會移至選取的版本。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  

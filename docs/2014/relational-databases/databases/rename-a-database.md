@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd25a78e3d3b9be2e7191ce6ed3d6bdcbb0f9606
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916767"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965808"
 ---
 # <a name="rename-a-database"></a>重新命名資料庫
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新命名使用者定義資料庫。 資料庫的名稱可以包含任何依照識別碼規則的字元。  
@@ -54,7 +53,7 @@ ms.locfileid: "62916767"
   
 #### <a name="to-rename-a-database"></a>若要重新命名資料庫  
   
-1.  在**物件總管**中，連接到的實例[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，然後展開該實例。  
+1.  在**物件總管**中，連接到的實例 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，然後展開該實例。  
   
 2.  確定沒有人使用此資料庫，然後 [將資料庫設定為單一使用者模式](set-a-database-to-single-user-mode.md)。  
   

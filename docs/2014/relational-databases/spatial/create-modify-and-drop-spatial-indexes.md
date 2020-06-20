@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88de17e8c487d9a965f2e236edac064dc2fe4c7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014274"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996518"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>建立、修改及卸除空間索引
-  空間索引可以更有效率地在`geometry`或`geography`資料類型（空間資料*行*）的資料行上執行某些作業。 可以在空間資料行上指定一個以上的空間索引。 這對於類似在單一資料行上為不同鑲嵌式參數建立索引會很有用處。  
+  空間索引可以更有效率地在 `geometry` 或 `geography` 資料類型（*空間資料行*）的資料行上執行某些作業。 可以在空間資料行上指定一個以上的空間索引。 這對於類似在單一資料行上為不同鑲嵌式參數建立索引會很有用處。  
   
  建立空間索引有一些限制。 如需詳細資訊，請參閱本主題中的 [空間索引的限制](#restrictions) 。  
   
@@ -54,15 +53,15 @@ ms.locfileid: "66014274"
   
 7.  若要指定您要建立索引的空間資料行，請按一下 [加入]  。  
   
-8.  在 [**從** * \<資料表名稱*選取資料行>] 對話方塊中，選取對應的`geometry`複選`geography`框來選取或類型的資料行。 任何其他的空間資料行就會變成無法編輯。 如果您想要選取不同的空間資料行，就必須先清除目前選取的資料行。 完成後，請按一下 **[確定]** 。  
+8.  在 [**從選取資料行** *\<table name>* ] 對話方塊中，選取對應的 `geometry` `geography` 核取方塊來選取或類型的資料行。 任何其他的空間資料行就會變成無法編輯。 如果您想要選取不同的空間資料行，就必須先清除目前選取的資料行。 完成後，請按一下 **[確定]** 。  
   
 9. 在 [索引鍵資料行]  方格中確認您的資料行選取。  
   
-10. 在 [索引屬性]  對話方塊的 [選取頁面]  窗格中，按一下 [空間]  。  
+10. 在 [索引屬性] 對話方塊的 [選取頁面] 窗格中，按一下 [空間]。  
   
 11. 在 [空間]  頁面上，指定您想要用於索引之空間屬性的值。  
   
-     在`geometry`類型資料行上建立索引時，您必須指定周框方塊的***`X-min`*（，*`Y-min`*）** 和 **（*`X-max`*，*`Y-max`*）** 座標。 若為`geography`類型資料行上的索引，在您指定**地理方格**鑲嵌式配置之後，周框方塊欄位會變成隻讀，因為地理方格鑲嵌不會使用周框方塊。  
+     在類型資料行上建立索引時 `geometry` ，您必須指定周框方塊的 **（ *`X-min`* ， *`Y-min`* ）** 和 **（ *`X-max`* ， *`Y-max`* ）** 座標。 若為類型資料行上的索引 `geography` ，在您指定**地理方格**鑲嵌式配置之後，周框方塊欄位會變成隻讀，因為地理方格鑲嵌不會使用周框方塊。  
   
      您可以選擇性地針對 [每一物件的資料格]  欄位及鑲嵌式配置的任何方格密度等級指定非預設值。 每一物件的資料格預設數目為 16 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 或 8 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) 或更高，而預設方格密度是 [中]  ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])。  
   

@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea8b678731a10b483c233cdb17b394a22f647060
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f06e60f052dad10b0e69ef0aa6a879e3d29d1f86
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768050"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965628"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>轉換類型但不檢查轉換 (SQL Server 匯入和匯出精靈)
-  使用 [**轉換類型但不轉換**] 頁面，即可在 wizard 找不到一或多個[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]資料類型轉換和對應檔案時，檢查 wizard 所執行的對應。 這個頁面含有一些資訊，可協助您識別遺失的檔案。  
+  使用 [**轉換類型但不轉換**] 頁面，即可在 wizard 找不到一或多個 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型轉換和對應檔案時，檢查 wizard 所執行的對應。 這個頁面含有一些資訊，可協助您識別遺失的檔案。  
   
  若要深入瞭解此嚮導，請參閱[SQL Server 匯入和匯出嚮導](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要瞭解啟動精靈的選項，以及成功執行嚮導所需的許可權，請參閱[執行 SQL Server 匯入和匯出嚮導](start-the-sql-server-import-and-export-wizard.md)。  
   

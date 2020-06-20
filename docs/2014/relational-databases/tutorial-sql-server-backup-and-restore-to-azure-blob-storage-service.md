@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3eee1449ec42285d5a95ac33d91f439dcd131ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176120"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002490"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>教學課程：SQL Server 備份及還原至 Azure Blob 儲存體服務
   歡迎使用 SQL Server 備份和還原與 Azure Blob 儲存體服務的消費者入門教學課程。 本教學課程可協助您了解如何將備份寫入 Azure Blob 儲存體服務以及從中還原。  
@@ -23,7 +22,7 @@ ms.locfileid: "70176120"
 ## <a name="what-you-will-learn"></a>學習內容  
  本教學課程會為您示範如何建立 Windows 儲存體帳戶和 Blob 容器、建立認證以存取儲存體帳戶、將備份寫入 Blob 服務，以及執行簡單還原。 這個教學課程分成四個課程：  
   
- [第 1 課：建立 Azure 儲存體物件](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
+ [第1課：建立 Azure 儲存體物件](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  在這一課，您會建立 Azure 儲存體帳戶和 Blob 容器。  
   
  [第 2 課：建立 SQL Server 認證](../tutorials/lesson-2-create-a-sql-server-credential.md)  
@@ -51,6 +50,6 @@ ms.locfileid: "70176120"
   
 1.  [使用 Azure Blob 儲存體服務的 SQL Server 備份及還原](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
-2.  [SQL Server 備份至 URL 的最佳作法和疑難排解](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+2.  [SQL Server 備份至 URL 的最佳做法和疑難排解](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

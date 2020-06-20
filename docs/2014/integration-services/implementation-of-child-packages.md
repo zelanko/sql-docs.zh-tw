@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7390434b1565c64b63e62c89d1e61b13f18cd6a6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058184"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965696"
 ---
 # <a name="implementation-of-child-packages"></a>子封裝的實作
   使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]實作負載平衡時，其他伺服器上會安裝子封裝，以充分利用可用的 CPU 或伺服器時間。 建立及執行子封裝需要下列步驟：  
@@ -51,7 +50,7 @@ ms.locfileid: "66058184"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>偵錯 SQL Server Agent 作業和子封裝  
  您可以使用下列其中一種方法來建立 SQL Server Agent 作業及其子封裝：  
   
--   在 SSIS 設計師中執行每個子封裝，方法是按一下 [ **Debug** / ] [**啟動但不進行調試**]。  
+-   在 SSIS 設計師中執行每個子封裝，方法是按一下 [ **Debug**] [  /  **啟動但不進行調試**]。  
   
 -   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]執行遠端電腦上的個別 SQL Server Agent 作業，以確定封裝執行無誤。  
   

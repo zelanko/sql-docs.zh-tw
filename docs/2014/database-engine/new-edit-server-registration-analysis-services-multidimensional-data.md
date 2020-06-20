@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ca6aed42-8940-4f41-beb7-619e084cd850
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9d3d13ac64edbdbec4f131a09949e5724ab2932b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f10267bc90b30f2dbc46622a6e46fa44e1838b9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930569"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>新增或編輯伺服器註冊 (一般索引標籤) (Analysis Services - 多維度資料)
   當您註冊 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體時，請使用此索引標籤來指定選項。  

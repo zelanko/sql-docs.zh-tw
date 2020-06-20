@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 903afa9ef25afcba7818862bc73dc33bf677b47a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93bfda24b0de9c3c4e621900037f59981899b626
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67140813"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965509"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>互通性與共存性 (Integration Services)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) 可以和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services 與 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services 並存。  
@@ -28,7 +27,7 @@ ms.locfileid: "67140813"
   
 |功能|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
 |-------------|-------------------------------|---------------------------------|---------------------------------|  
-|開發環境|[舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)](https://docs.microsoft.com/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi?view=sql-server-2014)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[Visual Studio 2010 的 SQL Server Data Tools](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools-Visual Studio 2012 的商業智慧](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio （[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]）|  
+|開發環境|[舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)](https://docs.microsoft.com/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi?view=sql-server-2014)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[Visual Studio 2010 的 SQL Server Data Tools](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools-Visual Studio 2012 的商業智慧](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio （ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] ）|  
 |管理環境|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |msdb 中用來儲存封裝的主要系統資料表|sysssispackages|sysssispackages|sysssispackages|  
 |用來執行封裝的主要命令提示字元公用程式|**dtexec** (dtexec.exe)，2014 版|**dtexec** (dtexec.exe)，2012 版|**dtexec** (dtexec.exe)，2008 版|  

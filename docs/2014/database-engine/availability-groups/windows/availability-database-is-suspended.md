@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2656c53dd151825cd10e54e5b63e5ac0a2cee1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815763"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937139"
 ---
 # <a name="availability-database-is-suspended"></a>可用性資料庫已暫停
     
@@ -29,7 +28,7 @@ ms.locfileid: "62815763"
 |-|-|  
 |**原則名稱**|可用性資料庫暫停狀態|  
 |**問題**|可用性資料庫已暫停。|  
-|**類別**|**Warning**|  
+|**類別**|**警告**|  
 |**層面**|可用性資料庫|  
   
 ## <a name="description"></a>描述  

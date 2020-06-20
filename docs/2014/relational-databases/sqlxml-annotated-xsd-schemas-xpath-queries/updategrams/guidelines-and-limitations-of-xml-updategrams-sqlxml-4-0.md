@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c525b22c68313fb47bd7db4fc5e547735435839
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2e28f4258aef27403c107158dd13efe5ada02c03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717493"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996235"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML Updategram 的指導方針和限制 (SQLXML 4.0)
   使用 XML Updategram 時，請記住下列事項：  
   
--   如果您使用 updategram 進行插入作業，且** \< 在>之前**和** \<>區塊之後**，則可以省略** \< before>** 區塊。 相反地，在刪除作業時，可以省略** \< after>** 區塊。  
+-   如果您針對僅具有一組和區塊的插入作業使用 updategram **\<before>** **\<after>** ，則 **\<before>** 可以省略區塊。 相反地，在刪除作業時， **\<after>** 可以省略區塊。  
   
--   如果您使用具有多個** \<>** 的 updategram ** \< ** ，以及在同步處理** \<>** 標記中的>區塊** \< 之後**，必須在>和>組之前，指定>區塊** \< ** ** \<>之前**和之後的。 ** \< **  
+-   如果您在標記中使用具有多個 **\<before>** 和區塊的 updategram，則 **\<after>** **\<sync>** **\<before>** 必須同時 **\<after>** 指定區塊和區塊來形成 **\<before>** 和 **\<after>** 配對。  
   
 -   Updategram 中的更新會套用到 XML 結構描述所提供的 XML 檢視。 因此，若要讓預設的對應成功，您必須在 Updategram 中指定結構描述檔案名稱，或者，如果沒有提供檔案名稱，元素和屬性名稱必須符合資料庫中的資料表和資料行名稱。  
   
@@ -44,9 +43,9 @@ ms.locfileid: "82717493"
   
 -   在更新期間，Updategram 不允許將 `image` 類型資料當做參數傳遞。  
   
--   使用 updategram 時，不應該在中>使用二進位大型物件（BLOB）型別（例如 `text/ntext` 和影像），因為這會包含這些型別，以便在並行控制中使用。 ** \< ** 這可能會因為 BLOB 類型的比較限制而造成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的問題。 例如，WHERE 子句中的 LIKE 關鍵字用於 `text` 資料類型之資料行間的比較，不過，如果 BLOB 類型中，資料大小大於 8K，則比較將會失敗。  
+-   使用 updategram 時，不應該在中的區塊中使用二進位大型物件（BLOB）類型（例如 `text/ntext` 和影像） **\<before>** ，因為這會包含它們以用於並行控制。 這可能會因為 BLOB 類型的比較限制而造成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的問題。 例如，WHERE 子句中的 LIKE 關鍵字用於 `text` 資料類型之資料行間的比較，不過，如果 BLOB 類型中，資料大小大於 8K，則比較將會失敗。  
   
--   `ntext` 資料中的特殊字元可能會因為 BLOB 類型的比較限制而造成 SQLXML 4.0 的問題。 例如，在類型的資料行並行檢查中使用 updategram 時，使用 "[Serializable]" 的** \< before>** 區塊時，將會 `ntext` 失敗，並出現下列 SQLOLEDB 錯誤描述：  
+-   `ntext` 資料中的特殊字元可能會因為 BLOB 類型的比較限制而造成 SQLXML 4.0 的問題。 例如，在類型資料行的並行檢查中使用 "[Serializable]" 時，在 updategram 的區塊中使用 "[Serializable]" **\<before>** `ntext` 將會失敗，並出現下列 SQLOLEDB 錯誤描述：  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  

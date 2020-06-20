@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c7966d9d4a517902cf857856fd9bdeac7684de2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3edb481894bdf9c4b9ff6228abb27c51b1affc75
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637690"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933216"
 ---
 # <a name="unused-assembly-cleanup"></a>未使用的組件清除
   這個 `AssemblyCleanup` 範例包含一個 .NET 預存程序，該預存程序會查詢中繼資料目錄，藉以在目前的資料庫中清除未使用的組件。 其唯一的參數 `visible_assemblies` 用於指定是否應該卸除未使用的可見組件。 'false' 這個值表示預設只會卸除未使用的不可見組件，否則，將會卸除所有未使用的組件。 未使用組件的集合就是尚未定義任何進入點 (常式/類型和彙總)，而且沒有已使用的組件直接或間接參考它們的組件。  
@@ -78,7 +77,7 @@ ms.locfileid: "73637690"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-8.  將[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令腳本複製到檔案中，並將`test.sql`它儲存成範例目錄中的。  
+8.  將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存成 `test.sql` 範例目錄中的。  
   
 9. 使用下列命令來執行測試指令碼  
   

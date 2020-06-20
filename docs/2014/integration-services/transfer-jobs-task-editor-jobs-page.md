@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43066d036a23a063c218234b3a346bf89560994f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c430f08b4a86c981df5138c7f78e76b54e7de28
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054993"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972825"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>傳送作業工作編輯器 (作業頁面)
   使用 [傳送作業工作編輯器]**** 對話方塊的 [作業]**** 頁面，即可指定屬性用來將一或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個。 如需有關傳送作業工作的詳細資訊，請參閱＜ [Transfer Jobs Task](control-flow/transfer-jobs-task.md)＞。  
@@ -29,10 +28,10 @@ ms.locfileid: "66054993"
   
 ## <a name="options"></a>選項。  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下** \<[新增連接 ...] >** ，建立與來源伺服器的新連接。  
+ 在清單中選取 SMO 連線管理員，或按一下 **\<New connection...>** 以建立與來源伺服器的新連接。  
   
  **[Destinationconnection**  
- 在清單中選取 SMO 連線管理員，或按一下** \<[新增連接 ...] >** ，以建立目的地伺服器的新連接。  
+ 在清單中選取 SMO 連線管理員，或按一下 **\<New connection...>** 以建立目的地伺服器的新連接。  
   
  **TransferAllJobs**  
  選取工作是否應將所有作業或只有指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業，從來源複製到目的地伺服器。  
@@ -61,7 +60,7 @@ ms.locfileid: "66054993"
 |-----------|-----------------|  
 |**FailTask**|如果具有相同名稱的作業己經存在於目的地伺服器上，工作就會失敗。|  
 |**改寫**|工作會覆寫目的地伺服器上具有相同名稱的作業。|  
-|**過**|工作會略過存在於目的地伺服器上具有相同名稱的作業。|  
+|**略過**|工作會略過存在於目的地伺服器上具有相同名稱的作業。|  
   
  **EnableJobsAtDestination**  
  選取是否應啟用已複製到目的地伺服器的作業。  

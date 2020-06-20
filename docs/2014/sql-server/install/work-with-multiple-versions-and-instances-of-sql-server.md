@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec56d95cdd0550fb15d6a28eca683a8136ffdd6e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76c0ec3da8661db4b7d132d27f5759d1d3571774
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205317"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041703"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>使用 SQL Server 的多個版本和執行個體
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援同一部電腦上的多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 您也可以升級舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或在已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版的電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需支援的升級案例，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
@@ -70,7 +69,7 @@ ms.locfileid: "63205317"
   
  範例：Microsoft Sync Framework、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact。  
   
- 如需[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 安裝的詳細資訊，請參閱[Install SQL Server 2014 From the 安裝 Wizard &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。 如需如何解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 的詳細資訊，請參閱[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)。  
+ 如需 Compact 安裝的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[Install SQL Server 2014 From The 安裝 Wizard &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。 如需如何解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 的詳細資訊，請參閱[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)。  
   
 ## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>並存使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  您可以在已執行舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果預設執行個體已存在於電腦上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須安裝成具名執行個體。  

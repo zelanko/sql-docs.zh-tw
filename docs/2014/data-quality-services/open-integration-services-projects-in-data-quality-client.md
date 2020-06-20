@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aac86ed6438197bc788f08cf9bc618608a65475f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: faeb664a99b0d47406b7fb3a42f5834acd135323
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480377"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937449"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在 Data Quality Client 中開啟 Integration Services 專案
   [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 可讓您以批次模式執行清理專案。 但是，有時您可能會想要在 Integration Services 封裝中檢閱清理結果，類似於在 DQS 中，於資料品質專案中清理活動內的 **[管理和檢視結果]** 索引標籤中檢閱清理結果。 DQS 可讓您在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中開啟 Integration Services 專案，就像從 **[開啟專案]** 畫面開啟其他任何資料品質專案，並讓您擁有在 Integration Services 專案中清理結果的互動式清理體驗。  
@@ -30,7 +29,7 @@ ms.locfileid: "65480377"
   
 -   您無法從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]刪除鎖定的 Integration Services 專案。 您必須先解除鎖定，然後才能刪除。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
  您必須已經順利執行完 Integration Services 專案 (其中包含的封裝具有 DQS 清理元件)，才能在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中加以查看及開啟。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
@@ -42,11 +41,11 @@ ms.locfileid: "65480377"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在首頁[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]畫面中，按一下 [**開啟資料品質專案**]。 **[開啟專案]** 畫面隨即出現。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 [**開啟資料品質專案**]。 **[開啟專案]** 畫面隨即出現。  
   
 3.  在 **[開啟專案]** 畫面上，您可以依照以下其中一種方式來識別 Integration Services 專案：  
   
-    1.  **專案名稱**：Integration Services 專案會使用以下命名術語列出："Package.DQS Cleansing_*\<DATE>**\<TIME>*_{GUID}"。 每次在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中成功執行相同的封裝時，新的專案會列在 [開啟專案] **** 畫面中。  
+    1.  **專案名稱**： Integration Services 專案會使用下列命名詞彙列出： "PACKAGE. DQS Cleansing_ *\<DATE>**\<TIME>* _ {GUID}"。 每次在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中成功執行相同的封裝時，新的專案會列在 [開啟專案] **** 畫面中。  
   
     2.  **專案類型**：Integration Services 專案在 **[開啟專案]** 畫面上擁有 **[SSIS]** 專案類型。  
   
