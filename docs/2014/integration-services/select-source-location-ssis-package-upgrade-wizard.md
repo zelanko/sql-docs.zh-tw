@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90cb7110a6b4e9372fe5397ba050f91535a58f94
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055936"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963668"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>選取來源位置 (SSIS 封裝升級精靈)
   使用 **[選取來源位置]** 頁面，指定升級封裝的來源。  

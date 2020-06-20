@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c1ed99e6ee3ef6385e6041044e9b2cb829b1b3ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fedf315703e64ea162f668494bd9929a06d6085
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151147"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066061"
 ---
 # <a name="considerations-for-using-test-servers"></a>使用測試伺服器的考量
   使用測試伺服器微調實際伺服器上的資料庫，是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的重要優點。 您可利用這項功能，在不需將實際資料從實際伺服器複製到測試伺服器的情況下，將微調負擔卸載到測試伺服器上。  

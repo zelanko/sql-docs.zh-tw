@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bc74731e0ecb5487d3f52db1af3a7f20c85bd0f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054474"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972428"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI 連接管理員編輯器
   使用 [WMI 連線管理員]**** 對話方塊，以指定 Microsoft Windows Management Instrumentation (WMI) 與伺服器的連線。  
@@ -30,7 +29,7 @@ ms.locfileid: "66054474"
  **名稱**  
  提供唯一的名稱給連接管理員。  
   
- **描述**  
+ **說明**  
  描述連接管理員。 最佳作法是以其用途描述連接管理員，使封裝可以自我記錄並易於維護。  
   
  **伺服器名稱**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d55bd667909721a68d51bcd1db7128b809118843
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64eb0087a9261502900c1b1f29d6ce5d2a0cd976
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755283"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934829"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO 和 DMO XPs 伺服器組態選項
   使用 SMO 和 DMO XP 選項可啟用此伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object (SMO) 擴充預存程序。  

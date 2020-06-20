@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf9a33bc18790bf8821d778746a708f78bbb3d8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702279"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046360"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
   XML 索引可建立在 `xml` 資料類型資料行上。 它們會在資料行中為整個 XML 執行個體的所有標記、值和路徑編制索引，進而提高查詢效能。 在下列情況下，您的應用程式可從 XML 索引獲益：  
@@ -132,7 +131,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   如果您的工作負載使用路徑運算式，從個別的 XML 執行個體中擷取多個值，則在 PROPERTY 索引中將路徑叢集在每個 XML 執行個體中，可能會有所幫助。 當物件的屬性被提取，且已知其主索引鍵值時，此案例通常會發生在屬性包案例中。  
   
--   如果您的工作負載需要查詢 XML 執行個體中的值，但您不知道含有那些值的元素或屬性名稱，您可能會想要建立 VALUE 索引。 這通常會發生在子系座標軸查閱，例如 //author[last-name="Howard"]，其中 \<author> 項目可出現在階層中的任何層級。 這也會發生在萬用字元查詢中，例如 /book [@* = "novel"]，此查詢是要尋找屬性中具有 "novel" 值的 \<book> 項目。  
+-   如果您的工作負載需要查詢 XML 執行個體中的值，但您不知道含有那些值的元素或屬性名稱，您可能會想要建立 VALUE 索引。 這通常會發生在子系軸查閱中，例如//author last-name [last-name = "Howard"]，其中 \<author> 元素可以發生在階層的任何層級。 它也會發生在萬用字元查詢中，例如/book [@ * = "novel"]，其中查詢會尋找 \<book> 具有某個屬性值為 "novel" 的元素。  
   
 ### <a name="path-secondary-xml-index"></a>PATH 次要 XML 索引  
  如果您的查詢通常會在 `xml` 類型資料行上指定路徑運算式，則使用 PATH 次要索引將可使搜尋速度變快。 如本主題前面所述，當您的查詢在 WHERE 子句中指定 **exist()** 方法時，主索引就非常有用。 如果您加入 PATH 次要索引，也可以改善這類查詢的搜尋效能。  

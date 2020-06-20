@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b97dda18082c38f25362142b8a570863c51940bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62629687"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047635"
 ---
 # <a name="subscribe-to-publications"></a>訂閱發行集
   訂閱是指要求一份發行集中的資料和資料庫物件。 訂閱會定義將收到的發行集，以及收到的位置和時間。 規劃訂閱時，請考慮要執行代理程式處理的位置。 您選擇的訂閱類型會控制代理程式執行的位置。 若為發送訂閱，則「合併代理程式」或「散發代理程式」會在「散發者」執行；若為提取訂閱，則代理程式會在「訂閱者」執行。 建立訂閱之後，就不能變更訂閱的類型。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 92cd4d2357d8908ac8944883772fd2639ee30b11
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1d8633a66b9c6d1896f95275380d73ab69cb873d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706056"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022258"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData**是用來在不系結資料行值的情況下，抓取結果集資料。 可以在相同資料行上連續呼叫**SQLGetData** ，以從具有**text**、 **Ntext**或**image**資料類型的資料行中取出大量資料。  

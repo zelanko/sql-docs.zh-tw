@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a97732878a8cf0f5113f22eec0289af20184e19d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807449"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934429"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>加入或取代資料庫鏡像見證 (SQL Server Management Studio)
   如果資料庫鏡像端點使用 Windows 驗證，您就可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來加入或取代見證。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中加入見證也會將作業模式變更為具有自動容錯移轉的高安全性模式。  
@@ -40,15 +39,15 @@ ms.locfileid: "62807449"
   
 6.  在 **[包含見證伺服器]** 對話方塊中，按一下 **[是]**，然後按 **[下一步]**。  
   
-7.  在 **[選擇要設定的伺服器]** 對話方塊中，會自動核取 **[見證伺服器執行個體]** 核取方塊。 按 [下一步]  。  
+7.  在 **[選擇要設定的伺服器]** 對話方塊中，會自動核取 **[見證伺服器執行個體]** 核取方塊。 按 [下一步] 。  
   
-8.  在 **[主體伺服器執行個體]** 對話方塊中，保留現有的通訊埠和端點。 按 [下一步]  。  
+8.  在 **[主體伺服器執行個體]** 對話方塊中，保留現有的通訊埠和端點。 按 [下一步] 。  
   
 9. 在 **[見證伺服器執行個體]** 對話方塊中，按一下 **[連接]**。  
   
 10. 在 [連接到伺服器]**** 對話方塊的 [伺服器名稱]**** 欄位中，指定見證伺服器執行個體，並使用 Windows 驗證 (預設值)。 按一下 [ **連接**]。  
   
-11. 一旦連接建立後， **[見證伺服器執行個體]** 對話方塊中就會顯示見證伺服器執行個體的接聽程式通訊埠和資料庫鏡像端點。 按 [下一步]  。  
+11. 一旦連接建立後， **[見證伺服器執行個體]** 對話方塊中就會顯示見證伺服器執行個體的接聽程式通訊埠和資料庫鏡像端點。 按 [下一步] 。  
   
 12. **[服務帳戶]** 對話方塊會包含主體、鏡像及見證伺服器執行個體之網域服務帳戶的欄位。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62807449"
   
          網域名稱必須使用大寫。  
   
-     按 [下一步]  。  
+     按 [下一步] 。  
   
 13. 在 **[完成精靈]** 摘要畫面中，選擇性地驗證見證組態，然後按一下 **[完成]**。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4dd5d28bb3b40417ab9c16b957b48db04f44599f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5576331004eca44bc32dbde8f430284f75e6eb70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047612"
 ---
 # <a name="types-of-replication"></a>複寫類型
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供下列可用於分散式應用程式的複寫類型：  

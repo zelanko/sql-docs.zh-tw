@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f81b196ee1b686fbe2dd3563f694411a0e00d962
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79669c847a1606ef1e7dcbd2f5e2150d203b8154
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663042"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053086"
 ---
 # <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change 事件類別
   **Database Mirroring State Change** 事件類別指出鏡像資料庫狀態的變更。 請在監視鏡像資料庫狀況的追蹤中包含此事件類別。  

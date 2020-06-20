@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1034c021c35efa7c7fb7c6a7090f61c848aa224e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18c78f2ba914dc5b65bba9d11de2a697c7038d5c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895007"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968412"
 ---
 # <a name="comparing-scripting-solutions-and-custom-objects"></a>比較指令碼方案和自訂物件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 指令碼工作或是指令碼元件可以實作許多可能會應用於自訂 Managed 工作或資料流程元件的相同功能。 以下是可協助您針對需求選擇適當類型之工作的一些考量：  

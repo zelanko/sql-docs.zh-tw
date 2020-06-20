@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3494f4f5b13c422efb8e2a39597e131c10d81ed1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047215"
 ---
 # <a name="synonyms-database-engine"></a>同義字 (Database Engine)
   同義字是具有下列用途的資料庫物件：  
@@ -112,7 +111,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  如需結構描述繫結函數的詳細資訊，請參閱[建立使用者定義函數 &#40;Database Engine&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)。  
   
 ## <a name="getting-information-about-synonyms"></a>取得同義字的相關資訊  
- Sys.synonyms 目錄檢視含有一個關於給定資料庫中各個同義字的項目。 此目錄檢視會公開同義字中繼資料，例如同義字的名稱與基底物件的名稱。 如需`sys.synonyms`目錄檢視的詳細資訊，請參閱[&#40;transact-sql&#41;的 sys.databases ](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)。  
+ Sys.synonyms 目錄檢視含有一個關於給定資料庫中各個同義字的項目。 此目錄檢視會公開同義字中繼資料，例如同義字的名稱與基底物件的名稱。 如需目錄檢視的詳細資訊 `sys.synonyms` ，請參閱[&#40;transact-sql&#41;的 sys.databases ](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)。  
   
  透過擴充屬性的運用，您可以將描述性或指示性文字、輸入遮罩以及格式化規則新增為同義字的屬性。 由於屬性儲存在資料庫中，因此讀取屬性的所有應用程式都能夠以同樣的方式評估物件。 如需詳細資訊，請參閱 [sp_addextendedproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql)。  
   

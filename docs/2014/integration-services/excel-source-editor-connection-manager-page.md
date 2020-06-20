@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c154b22d6469df034f4ec7cc6be77b2e7192913
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059172"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966818"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Excel 來源編輯器 (連接管理員頁面)
   使用 **[Excel 來源編輯器]** 對話方塊的 **[連接管理員]** 節點，以選取來源要使用的 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 活頁簿。 Excel 來源會從工作表或現有活頁簿的具名範圍中讀取資料。  
   
 > [!NOTE]  
->  [ `CommandTimeout` Excel**來源編輯器**] 中無法使用 excel 來源的屬性，但是可以使用 [**進階編輯器**] 來設定它。 如需有關這個屬性的詳細資訊，請參閱＜ [Excel Custom Properties](data-flow/excel-custom-properties.md)＞的＜Excel 來源＞一節。  
+>  [Excel `CommandTimeout` **來源編輯器**] 中無法使用 excel 來源的屬性，但是可以使用 [**進階編輯器**] 來設定它。 如需有關這個屬性的詳細資訊，請參閱＜ [Excel Custom Properties](data-flow/excel-custom-properties.md)＞的＜Excel 來源＞一節。  
   
  若要深入了解 Excel 來源，請參閱＜ [Excel Source](data-flow/excel-source.md)＞。  
   

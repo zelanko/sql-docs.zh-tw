@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f567c92632e99bef38fc1a6eb7a0179929f467c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac69e4bd2db3ef7fe0815d235dd1de7d3396b302
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871206"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965728"
 ---
 # <a name="shrink-a-file"></a>壓縮檔案
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中壓縮資料或記錄檔。  
@@ -131,7 +130,7 @@ ms.locfileid: "62871206"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 下列範例會使用 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) ，將 `DataFile1` 資料庫中名為 `UserDB` 之資料檔大小壓縮成 7 MB。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 下列範例會使用 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) ，將 `UserDB` 資料庫中名為 `DataFile1` 之資料檔大小壓縮成 7 MB。  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
   

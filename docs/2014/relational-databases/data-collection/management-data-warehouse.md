@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96eb26c3e273832aead4aa0421304df17dc5b8ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918336"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970438"
 ---
 # <a name="management-data-warehouse"></a>管理資料倉儲
   管理資料倉儲是一種關聯式資料庫，其中包含從伺服器 (它是資料收集目標) 收集而來的資料。 這項資料是用來產生系統資料收集組的報表，而且也可用來建立自訂報表。  

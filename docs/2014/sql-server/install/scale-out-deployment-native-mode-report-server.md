@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a04a0d0e08804724def9e586c05bb4b6e72cdbd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952423"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058943"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>向外延展部署 (原生模式報表伺服器)
   請使用 **組態管理員中的** [向外延展部署] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面檢視向外延展部署的初始化狀態，或將報表伺服器聯結到向外延展部署。 *「向外延展部署」* (Scale-out Deployment) 是指共用單一報表伺服器資料庫的兩個或多個報表伺服器執行個體。  
@@ -38,7 +37,7 @@ ms.locfileid: "71952423"
   
 ## <a name="options"></a>選項  
  **SQL Server 名稱**  
- 指定主控報表伺服器資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]之實例的名稱。  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 主控報表伺服器資料庫之實例的名稱。  
   
  **Database Name**  
  指定報表伺服器執行個體目前連接的資料庫名稱。  

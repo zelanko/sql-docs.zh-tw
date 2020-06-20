@@ -13,25 +13,24 @@ helpviewer_keywords:
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 79f3f41d4224baacd485c7d2151db0f3f2059f86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23cc38bbec77b01a1e8a7d09dddfe70b46844920
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150623"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047869"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>個別儲存 Showplan XML 統計資料設定檔事件 (SQL Server Profiler)
   此主題描述如何使用 **，將在追蹤中所擷取的** Showplan XML Statistics Profile [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件，儲存至個別的 .SQLPlan 檔案中。 您可以在 **中開啟** Showplan XML Statistics Profile [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]事件檔案，以便檢視每個事件的圖形執行計畫。  
   
 ### <a name="to-save-showplan-xml-statistics-events-separately"></a>若要個別儲存 Showplan XML Statistics 事件  
   
-1.  在 [檔案]**** 功能表上，按一下 [新增追蹤]****，接著連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
+1.  在 [檔案] 功能表上，按一下 [新增追蹤]，接著連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
      會出現 [追蹤屬性]  對話方塊。  
   
     > [!NOTE]  
-    >  若選取了 [進行連接後立即啟動追蹤]****，則不會出現 [追蹤屬性]**** 對話方塊，而會開始進行追蹤。 於 [工具]**** 功能表，按一下 [選項]****，並清除 [連接後立即啟動追蹤]**** 核取方塊，以關閉這項設定。  
+    >  若選取了 [進行連接後立即啟動追蹤]****，則不會出現 [追蹤屬性]**** 對話方塊，而會開始進行追蹤。 於 [工具] 功能表，按一下 [選項]，並清除 [連接後立即啟動追蹤] 核取方塊，以關閉這項設定。  
   
 2.  在 **[追蹤屬性]** 對話方塊的 **[追蹤名稱]** 方塊中，輸入追蹤的名稱。  
   

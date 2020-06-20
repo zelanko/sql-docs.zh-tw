@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 876e61b7-875c-43f4-bbce-d7eeb90f6730
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 911e40506891894213040a02cb439daa6997701a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059679"
 ---
 # <a name="set-breakpoints"></a>[設定中斷點]
   使用 **[設定中斷點]** 對話方塊，即可指定要啟用中斷點的事件並控制中斷點的行為。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **已啟用**  
  選取即可在事件上啟用中斷點。  
   

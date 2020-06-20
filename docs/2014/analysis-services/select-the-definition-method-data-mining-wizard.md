@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 20cb0018-56dd-497e-b019-8f7cc3610cba
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 279302423cfe6c1fb9ecf28128b48c153e694e72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09b1750081198a258d1b49231324dd296084f6cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069210"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940789"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>選取定義方法 (資料採礦精靈)
   使用 **[選取定義方法]** 頁面，即可選取建立新採礦模型的來源。 視選取項目而定，透過精靈進行的路徑會有所不同。因為以 Cube 為基礎的採礦結構與以關聯式資料來源為基礎的採礦結構，需要不同的建構步驟。  

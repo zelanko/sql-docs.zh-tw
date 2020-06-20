@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1a0464cd8a91db43f9629bed3cc9e45e48a8f7c3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e37f15841a36eb95c1e9263d137ba2734d622367
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021800"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序都會傳回值。 **SQLProcedures** PROCEDURE_TYPE 結果集資料行的報表 SQL_PT_FUNCTION。  

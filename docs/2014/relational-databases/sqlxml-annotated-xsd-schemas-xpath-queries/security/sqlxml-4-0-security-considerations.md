@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a90d9de052399f47ac0f62a13fbb6e65a6077c97
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 54f9fb551cf8a53d8184ca22812c7ce01822d41c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717608"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048985"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 安全性考量
   本節提供與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 之安全性相關考量的資訊。  

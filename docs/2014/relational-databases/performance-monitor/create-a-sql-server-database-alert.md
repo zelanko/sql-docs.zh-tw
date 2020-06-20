@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0511136a-1b6b-4095-aa45-39e77b67aba2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7c95605ed1a0ab42340713c5c5fa635b09d4a8ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd0cc926412d64f7686744ee60840a32473d2386
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63249483"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043509"
 ---
 # <a name="create-a-sql-server-database-alert"></a>建立 SQL Server 資料庫警示
   您可以使用「系統監視器」來建立警示，讓它在達到「系統監視器」計數器的臨界值時引發。 為了回應此警示，「系統監視器」可啟動某個應用程式，諸如撰寫來處理此警示條件的自訂應用程式。 例如，您可以建立一個警示，讓它在死結 (Deadlock) 個數超過特定數值時引發。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9cfcd243-c9d4-4c2a-abc4-399dbabe5f6b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6489fcee1a8faa3f1205c8418e329182c41e376c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: def05f478c16dcbcdc91771925a11b0b91da2e9e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705548"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020541"
 ---
 # <a name="bookmarking-rows-in-odbc"></a>在 ODBC 中的資料列上加上書籤
   書籤是用來識別資料列的值。 書籤值的意義僅適用於驅動程式或資料來源。 例如，書籤可能跟資料列號碼一樣簡單，也可能跟磁碟位址一樣複雜。 在 ODBC 中，應用程式會要求特定資料列的書籤、將其儲存起來，然後將其傳回資料指標，即可傳回到資料列。  

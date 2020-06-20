@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4be434e4d80a8146b58beb0ae0de07e62415a6ad
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63718cf227197cfe6c009311339924a05fd6c665
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701575"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018914"
 ---
 # <a name="use-cursors-odbc"></a>使用資料指標 (ODBC)
     
@@ -27,7 +26,7 @@ ms.locfileid: "82701575"
   
      設定 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY 屬性 (這是慣用的選項)。  
   
-     或  
+     Or  
   
      設定 SQL_CURSOR_SCROLLABLE 和 SQL_CURSOR_SENSITIVITY 屬性。  
   

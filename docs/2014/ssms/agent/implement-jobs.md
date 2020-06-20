@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2e85b77997e0bba765a1c877311e1336364eaa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63074011"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044978"
 ---
 # <a name="implement-jobs"></a>實作作業
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，使例行性管理工作自動化，並重複執行它們，使管理更有效率。  
@@ -33,7 +32,7 @@ ms.locfileid: "63074011"
   
 |||  
 |-|-|  
-|**描述**|**主題**|  
+|**說明**|**本文**|  
 |包含有關建立作業及指派擁有權的資訊。|[建立作業](create-jobs.md)|  
 |包含有關將作業組織成類別目錄的資訊。|[組織作業](organize-jobs.md)|  
 |包含關於您可以建立的不同種類作業步驟及如何管理它們的資訊。|[管理作業步驟](manage-job-steps.md)|  

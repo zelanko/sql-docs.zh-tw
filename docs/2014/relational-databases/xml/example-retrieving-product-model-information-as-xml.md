@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8cc5eb38cf23b82f61d48941fbf828ff494f3049
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f72bcde1cf180b321c25cff7d3185b540083c0f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716829"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067858"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>範例：將產品型號資訊當做 XML 來擷取
   下列查詢會傳回產品型號資訊。 `RAW` 模式是在 `FOR XML` 子句中指定。  

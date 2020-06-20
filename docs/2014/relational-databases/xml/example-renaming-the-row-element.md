@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3780bb0f35c65003f7a5bdb126ca7597786758a9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 867fafaa85e1113a60517311b789bd7cc47d19f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716911"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048738"
 ---
 # <a name="example-renaming-the-ltrowgt-element"></a>範例：重新命名 &lt;資料列&gt; 項目
   如果是結果集中的每一個資料列，RAW 模式會產生一個 `<row>`元素。 您可以將一個選擇性引數指定給 RAW 模式，選擇性地為此元素指定另一個名稱，如下列查詢所示。 此查詢會針對資料列集的每一個資料列，各傳回一個 <`ProductModel`> 元素。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3d0efc3d22fcba588c1104d716cbab0f26eff374
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8b18de84c0b218866f456f50916c9b6882ac947
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811256"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052764"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>進度報表：線上索引作業事件類別
   Progress Report: Online Index Operation 事件類別指出在執行建立程序時，線上索引建立作業的進度。  

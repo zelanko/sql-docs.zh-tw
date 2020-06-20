@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0ebbe0c5-07ad-4a76-a918-e379930adf71
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 37a68a1dbc3a35ba4e72b173b1785efd1108241b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3176227aba4de1e5aca1be35ec1f071a15caa49e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63143441"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059861"
 ---
 # <a name="setdisable-method-servernetworkprotocol-class"></a>SetDisable 方法 (ServerNetworkProtocol 類別)
   停用伺服器網路通訊協定。  
@@ -38,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
- 代表實例所使用之[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]網路通訊協定的 [ServerNetworkProtocol 類別] ServerNetworkProtocol-class.md）物件。  
+ *object*  
+ 代表實例所使用之網路通訊協定的 [ServerNetworkProtocol 類別] ServerNetworkProtocol-class.md）物件 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  uint32 值，如果已成功修改此服務為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  

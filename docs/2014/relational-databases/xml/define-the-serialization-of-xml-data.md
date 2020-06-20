@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eec4a1b93be27ca49122e576107f2856dda9f7ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: df87dddd9fd4cf067125314c9d798eaa42523576
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717022"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046764"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>定義 XML 資料的序列化
   將 XML 資料類型明確或隱含轉換成 SQL 字串或二進位類型時，會根據本主題中所列的規則來序列化 XML 資料類型的內容。  
@@ -75,7 +74,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>XML 字元在序列化期間的實體化  
  每一個已序列化的 XML 結構應該能夠加以重新剖析。 因此，有些字元必須以實體化方式來序列化，以透過 XML 剖析器的正規化階段保留字元的反覆存取功能。 不過，有些字元必須實體化，使文件能夠有完善的格式，以便加以剖析。 以下是在序列化期間所套用的實體化規則：  
   
--   若字元 &、\< 和 > 是出現在屬性值或元素內容中，則一律分別實體化成 &amp;、&lt; 和 &gt;。  
+-   \<, and > &amp; &lt; &gt; 如果這些字元出現在屬性值或專案內容中，&，一律會分別實體化至、和。  
   
 -   因為 SQL Server 使用引號 (U+0022) 來括住屬性值，所以屬性值中的引號會實體化成 &quot;。  
   

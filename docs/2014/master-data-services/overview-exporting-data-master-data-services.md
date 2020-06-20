@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f92a74caa74c5cf15e917cd6c15aef9506a60180
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3449aa76e596eebc77ad56e9c38ab2c0b0a0d615
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482844"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960748"
 ---
 # <a name="exporting-data-master-data-services"></a>匯出資料 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 您可以建立訂閱檢視，將  資料匯出至訂閱系統。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 然後，任何訂閱系統可以檢視  資料庫中的已發行資料。 如需檢視的更多資訊，請參閱[檢視](../relational-databases/views/views.md)。  

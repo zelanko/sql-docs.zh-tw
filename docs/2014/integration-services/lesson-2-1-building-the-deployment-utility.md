@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8c0cc7df39c8b5bac3ff216aa3d61975c707207
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767580"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966088"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>步驟 1:建置部署公用程式
   在這項工作中，您將設定並建立「部署教學課程」專案的部署公用程式。  
@@ -34,7 +33,7 @@ ms.locfileid: "62767580"
   
 4.  在 [Deployment Tutorial Property Pages (部署教學課程屬性頁)]  對話方塊中，展開 [組態屬性]，然後按一下 [部署公用程式]。  
   
-5.  在 [**部署教學課程屬性頁**] 對話方塊的右窗格中，確認`AllowConfigurationChanges`已設定為`true`、將`CreateDeploymentUtility`設`true`為，並選擇性地更新的預設`DeploymentOutputPath`值。  
+5.  在 [**部署教學課程屬性頁**] 對話方塊的右窗格中，確認 `AllowConfigurationChanges` 已設定為 `true` 、將設 `CreateDeploymentUtility` 為 `true` ，並選擇性地更新的預設值 `DeploymentOutputPath` 。  
   
 6.  按一下 [確定]  。  
   

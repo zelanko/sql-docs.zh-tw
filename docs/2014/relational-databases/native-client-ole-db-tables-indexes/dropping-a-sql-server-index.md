@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: add3ba14-10b1-4723-b7c0-3e83689e9fdd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9be4e3607097c476f083c32eed9f13fecc0d3842
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1267cc92645ff8b28757ad2d266e58917fcb4b28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704518"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017971"
 ---
 # <a name="dropping-a-sql-server-index"></a>卸除 SQL Server 索引
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會公開**IIndexDefinition：:D ropindex**函數。 如此可讓取用者從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中移除索引。  

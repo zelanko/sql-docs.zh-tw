@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e60ebbf-8f2d-4d77-a859-e47e0f605cb2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 50a054bbe83c7873d1da93909bc57331fcf4a635
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: daaad6f1c340d92f7bdc6f0b4faf46598cdae31c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055863"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963516"
 ---
 # <a name="send-mail-task-editor-general-page"></a>傳送郵件工作編輯器 (一般頁面)
   使用 [傳送郵件工作編輯器]**** 對話方塊的 [一般]**** 頁面，即可命名和描述傳送郵件工作。  
@@ -32,7 +31,7 @@ ms.locfileid: "66055863"
   
  **注意** ：工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入傳送郵件工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

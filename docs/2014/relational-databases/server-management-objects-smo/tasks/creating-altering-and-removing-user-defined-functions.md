@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: edde17b3339a6a78f81ddf92da95afb2f8ba851c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5094900a0efdbd25973ccf0763facd1de18d5233
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782353"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037665"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>建立、改變和移除使用者定義函數
-  物件<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>所提供的功能，可讓使用者以程式設計方式管理[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的使用者定義函數。 使用者定義函數支援輸入和輸出參數，也支援資料表資料行的直接參考。  
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>物件所提供的功能，可讓使用者以程式設計方式管理中的使用者定義函數 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 使用者定義函數支援輸入和輸出參數，也支援資料表資料行的直接參考。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 需要先在資料庫內註冊組件，然後才能在預存程序、使用者定義函數、觸發程序和使用者定義資料類型中使用組件。 SMO 以 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 物件支援此功能。  
   

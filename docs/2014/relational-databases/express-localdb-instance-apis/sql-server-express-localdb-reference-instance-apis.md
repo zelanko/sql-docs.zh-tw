@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: adfddc5de02f13b592b1f03107a67c4a3c449d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42b71df860f82fe470cbd01dbd9e1c0f6c07e2a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128632"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050936"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>SQL Server Express LocalDB 執行個體 API 參考
   在傳統、服務架構的 SQL Server 環境中，安裝在單一電腦上的個別 SQL Server 執行個體實體上是分隔的；亦即，每個執行個體必須個別予以安裝及移除、具有獨立的一組二進位檔，以及在個別的服務處理序下執行。 SQL Server 執行個體名稱可用來指定使用者想要連接的 SQL Server 執行個體。  
@@ -64,7 +63,7 @@ ms.locfileid: "63128632"
 ### <a name="named-instance-naming-rules"></a>具名執行個體命名規則  
  LocalDB 執行個體名稱最多可以包含共 128 個字元 (這是 `sysname` 資料類型加諸的限制)。 這與傳統的 SQL Server 執行個體名稱相較下十分不同，傳統的執行個體限制使用 16 個 ASCII 字元的 NetBIOS 名稱。 這項差異的原因在於 LocalDB 會將資料庫視為檔案，因此意指以檔案為基礎的語義，因此使用者可以更輕鬆地選擇實例名稱。  
   
- LocalDB 執行個體名稱可以在檔案名稱元件內包含合法的任何 Unicode 字元。 檔案名元件中不合法的字元通常包含下列字元： ASCII/Unicode 字元1到31，以及引號（"）、小於（\<）、大於（>）、管道（|）、倒退鍵（\b）、定位字元（\t）、冒號（:)、星號（*）、問號（？）、反斜線（\\）和正斜線（/）。 請注意，由於 Null 字元 (\0) 用於字串結束字元，因此允許使用；將忽略第一個 Null 字元之後的所有字元。  
+ LocalDB 執行個體名稱可以在檔案名稱元件內包含合法的任何 Unicode 字元。 檔案名元件中不合法的字元通常包含下列字元： ASCII/Unicode 字元1到31，以及引號（"）、小於（ \<), greater than (> ）、pipe （|）、倒退鍵（\b）、定位字元（\t）、冒號（:)、星號（*）、問號（？）、反斜線（ \\ ）和正斜線（/）。 請注意，由於 Null 字元 (\0) 用於字串結束字元，因此允許使用；將忽略第一個 Null 字元之後的所有字元。  
   
 > [!NOTE]  
 >  不合法的字元清單可能取決於作業系統，並且可能在未來版本中變更。  

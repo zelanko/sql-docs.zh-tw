@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 645f5c0a-e949-4e87-8988-85e4d6128464
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79909fcdb09e349798edfe285475f8a898c3bf04
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843554"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929019"
 ---
 # <a name="share-files"></a>共用檔案
   您可以利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 來跨越不同的原始檔控制專案共用項目。 當您共用某個項目時，這個項目的任何變更都會反映在共用這個項目的每個專案中。  

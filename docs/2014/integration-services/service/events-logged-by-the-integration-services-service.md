@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dedffe0f30c62399e4d694f7ee1bf5247222e87d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 851320618ad8eec3e1f8a7de9bfe2d6d379c65d1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889269"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963480"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services 服務所記錄的事件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會將各種訊息記錄至 Windows 應用程式事件記錄檔。 當服務啟動、停止以及發生特定問題時，此服務就會記錄這些訊息。  

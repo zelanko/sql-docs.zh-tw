@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 760e4c00401e42b6d6ccca8bd7c7acd7ec0d5b86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9680243a53af46aed1464d31fdeedeeaa0791f0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176325"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966478"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>開發資料流程元件的使用者介面
   元件開發人員可為元件提供自訂使用者介面，當編輯此元件時會在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中顯示此使用者介面。 實作自訂使用者介面會為您提供通知功能，讓您知道何時在資料流程工作中加入及刪除此元件，以及何時要求此元件的協助。

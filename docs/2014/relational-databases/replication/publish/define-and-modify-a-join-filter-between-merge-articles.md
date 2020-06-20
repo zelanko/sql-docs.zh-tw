@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf8b3b4f00ad2e8a3b9236292ee20948c852b6ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0770a17ce4c50c9c0e3b8728db85c0f9e80b555b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68199550"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049120"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>定義和修改合併發行項之間的聯結篩選
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義及修改合併發行項之間的聯結篩選。 合併式複寫支援聯結篩選，聯結篩選通常會配合參數化篩選一起使用，以將資料表資料分割擴充到其他相關的資料表發行項。  
@@ -52,11 +51,11 @@ ms.locfileid: "68199550"
 -   可以為一組資料表手動建立聯結篩選，或者根據資料表中定義的外部索引鍵與主索引鍵之間的關聯性自動產生篩選。 如需自動產生一組聯結篩選的詳細資訊，請參閱[在合併發行項之間自動產生一組聯結篩選 &#40;SQL Server Management Studio&#41;](automatically-generate-join-filters-between-merge-articles.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  對話方塊的 [篩選資料列]  頁面上，定義、修改及刪除聯結篩選。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。  
+ 在 [新增發行集嚮導] 的 [**篩選資料表**的資料列] 頁面或 [**發行集屬性 \<Publication> -** ] 對話方塊的 [篩選資料**列**] 頁面上，定義、修改和刪除聯結篩選。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-join-filter"></a>若要定義聯結篩選  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  對話方塊的 [篩選資料列]  頁面上，從 [已篩選的資料表]  窗格中選取一個現有的資料列篩選或聯結篩選。  
+1.  在 [新增發行集] 或 [**發行集屬性 \<Publication> **] 的 [篩選資料**列**] 頁面的 [**篩選資料表**的資料列] 頁面上，于 [已**篩選的資料表**] 窗格中選取現有的資料列篩選或聯結篩選。  
   
 2.  按一下 **[加入]** ，然後按一下 **[加入聯結以擴充選取的篩選]** 。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "68199550"
   
     -   如果選取使用產生器，請使用方格中的資料行 ([結合]  、[已篩選的資料表資料行]  、[運算子]  和 [聯結的資料表資料行]  ) 來建立聯結陳述式。  
   
-         方格中的每個資料行都包含下拉式方塊，可讓您選取兩個資料行和一個運算子 ( **=** 、[已篩選的資料表資料行] **<>** 、[已篩選的資料表資料行] **<=** 、[已篩選的資料表資料行] **\<** 、[已篩選的資料表資料行] **>=** 、[已篩選的資料表資料行] **>** 和 [聯結的資料表資料行] **like**)。 結果會在 **[預覽]** 文字區域中顯示。 如果聯結涉及多對資料行，請從 **[結合]** 資料行中選取一個結合 (AND 或 OR)，然後輸入兩個或更多的資料行及一個運算子。  
+         方格中的每個資料行都包含一個下拉式方塊，可讓您選取兩個數據行和一個運算子（ **=** 、 **<>** 、 **<=** 、、 **\<**, **>=** **>** 和**like**）。 結果會在 **[預覽]** 文字區域中顯示。 如果聯結涉及多對資料行，請從 **[結合]** 資料行中選取一個結合 (AND 或 OR)，然後輸入兩個或更多的資料行及一個運算子。  
   
     -   如果選取手動寫入陳述式，請在 **[聯結陳述式]** 文字區域寫入聯結陳述式。 使用 **[已篩選的資料表資料行]** 清單方塊與 **[聯結的資料表資料行]** 清單方塊將資料行拖放到 **[Join 陳述式]** 文字區域。  
   
@@ -87,11 +86,11 @@ ms.locfileid: "68199550"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  如果您在 [發行集屬性 - \<發行集>]  對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
+6.  如果您位於 [**發行集屬性- \<Publication> ** ] 對話方塊中，請按一下 **[確定**] 以儲存並關閉對話方塊。  
   
 #### <a name="to-modify-a-join-filter"></a>若要修改聯結篩選  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  的 [篩選資料列]  頁面上，從 [已篩選的資料表]  窗格中選取一個篩選，然後按一下 [編輯]  。  
+1.  在 [新增發行集嚮導] 的 [**篩選資料表**的資料列] 頁面或 [**發行集屬性 \<Publication> **] 的 [**篩選資料列**] 頁面上，于 [已**篩選的資料表**] 窗格中選取篩選，然後按一下 [**編輯**]。  
   
 2.  在 **[編輯聯結]** 對話方塊中，修改篩選。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "68199550"
   
 #### <a name="to-delete-a-join-filter"></a>若要刪除聯結篩選  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  的 [篩選資料列]  頁面上，從 [已篩選的資料表]  窗格中選取一個篩選，然後按一下 [刪除]  。 如果您刪除的聯結篩選本身已由其他聯結擴充，也會一併刪除這些聯結。  
+1.  在 [新增發行集嚮導] 的 [**篩選資料表**的資料列] 頁面或 [**發行集屬性 \<Publication> **] 的 [**篩選資料列**] 頁面上，于 [已**篩選的資料表**] 窗格中選取篩選，然後按一下 [**刪除**]。 如果您刪除的聯結篩選本身已由其他聯結擴充，也會一併刪除這些聯結。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  這些程序顯示父發行項上的參數化篩選，其中包含此發行項與相關子發行項之間的聯結篩選。 您可以使用複寫預存程序來以程式設計的方式定義及修改聯結篩選。  
@@ -114,7 +113,7 @@ ms.locfileid: "68199550"
   
 2.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 來針對發行集定義一個或多個相關發行項，這些發行項也稱為子發行項。 如需詳細資訊，請參閱 [定義發行項](define-an-article.md)。  
   
-3.  在發行集資料庫的發行者端，執行 [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)。 針對**@publication**指定**@filtername**此篩選的唯一名稱、針對指定步驟**@article**2 中建立的子發行項名稱、針對指定聯結**@join_articlename**的父發行項名稱，並針對**@join_unique_key**下列其中一個值：  
+3.  在發行集資料庫的發行者端，執行 [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)。 針對指定 **@publication** 此篩選的唯一名稱、針對指定 **@filtername** 步驟2中建立的子發行項名稱、針對 **@article** 指定聯結的父發行項名稱， **@join_articlename** 並針對下列其中一個值 **@join_unique_key** ：  
   
     -   **0** - 指示父發行項與子發行項之間的多對一或多對多的聯結。  
   
@@ -123,7 +122,7 @@ ms.locfileid: "68199550"
      這樣會定義兩個發行項之間的聯結篩選。  
   
     > [!CAUTION]  
-    >  只有在**@join_unique_key**保證唯一性的父發行項之基礎資料表中的聯結資料行上有條件約束時，才會設定為**1** 。 如果**@join_unique_key**未正確設定為**1** ，可能會發生非聚合的資料。  
+    >  只有在 **@join_unique_key** 保證唯一性的父發行項之基礎資料表中的聯結資料行上有條件約束時，才會設定為**1** 。 如果 **@join_unique_key** 未正確設定為**1** ，可能會發生非聚合的資料。  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  這個範例會針對合併式發行集定義發行項，其中會針對 `SalesOrderDetail` 資料表篩選 `SalesOrderHeader` 資料表發行項 (前者資料表本身會使用靜態資料列篩選來進行篩選)。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。  

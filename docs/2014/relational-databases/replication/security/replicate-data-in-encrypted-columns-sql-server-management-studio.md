@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e1528d81faa352fdcdf37abe9ad93fda190445c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62955841"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004845"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>複寫加密資料行中的資料 (SQL Server Management Studio)
   複寫讓您可以發行加密的資料行資料。 若要在訂閱者端解密及使用此資料，於發行者端用來加密資料的金鑰也必須存在訂閱者端。 複寫並不會提供用於傳輸加密金鑰的安全機制。 您必須以手動方式於訂閱者端重新建立加密金鑰。 本主題示範如何於發行者端加密資料行，並確定訂閱者端可使用加密金鑰。  

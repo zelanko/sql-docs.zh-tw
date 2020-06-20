@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 645ba8428dddb36de9a3edeb784d64f96b5c0603
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1c2a0a3447c8fd52b2266c363405b55200e2610
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797035"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996874"
 ---
 # <a name="creating-altering-and-removing-databases"></a>建立、改變和移除資料庫
   在 SMO 中，資料庫是由 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件表示。  

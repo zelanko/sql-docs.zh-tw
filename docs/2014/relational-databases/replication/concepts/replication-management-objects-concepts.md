@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edb36bbf0f1a637551a7316748f58f9ed1c7f912
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721790"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047731"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   Replication Management Objects (RMO) 是一種 Managed 程式碼組件，用以封裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的複寫功能。 RMO 是由 <xref:Microsoft.SqlServer.Replication> 命名空間實作。  
@@ -140,7 +139,7 @@ ms.locfileid: "62721790"
     ```  
   
 ## <a name="connecting-to-a-replication-server"></a>連接至複寫伺服器  
- RMO 程式設計物件需要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 類別的執行個體，來建立 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 執行個體的連接。 這個伺服器連接會獨立於任何 RMO 程式設計物件之外建立。 接著會在執行個體建立期間將它傳遞到 RMO 物件，或是將它指派到物件的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性。 以此方式，就可以個別建立和管理 RMO 程式設計物件與連接物件執行個體，而且多個 RMO 程式設計物件可以重複使用單一連接物件。 下列規則適用於應用程式伺服器的連接：  
+ RMO 程式設計物件需要使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體，來建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。 這個伺服器連接會獨立於任何 RMO 程式設計物件之外建立。 接著會在執行個體建立期間將它傳遞到 RMO 物件，或是將它指派到物件的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性。 以此方式，就可以個別建立和管理 RMO 程式設計物件與連接物件執行個體，而且多個 RMO 程式設計物件可以重複使用單一連接物件。 下列規則適用於應用程式伺服器的連接：  
   
 -   連接的所有屬性是針對指定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件所定義。  
   

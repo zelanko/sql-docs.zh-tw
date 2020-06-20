@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 20bd8904f8dfabd81f3f16ef7bed4c6bf1084c0d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2cf03fdc9031ce9761125d95619438837f2959bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798226"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067782"
 ---
 # <a name="give-others-ownership-of-a-job"></a>將作業擁有權授與其他人
-  本主題描述如何將 Agent 作業的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]擁有權重新指派給另一位使用者。  
+  本主題描述如何將 Agent 作業的擁有權重新指派 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 給另一位使用者。  
   
 -   **開始之前：**  [限制事項](#Restrictions)、[安全性](#Security)  
   

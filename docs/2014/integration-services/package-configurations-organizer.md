@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b880e23bdc191da1f34f2261d7c87a32f03fb42
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056971"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964898"
 ---
 # <a name="package-configurations-organizer"></a>[封裝組態組合管理]
   使用 **[封裝組態組合管理]** 對話方塊，即可啟用封裝組態、檢視目前封裝的組態清單，以及指定載入組態的喜好順序。  
@@ -50,7 +49,7 @@ ms.locfileid: "66056971"
  **目標物件**  
  檢視組態所更新之物件的名稱。 如果組態是 XML 組態檔或 SQL Server 資料表，則資料行是空白的，因為該組態可包含多個物件。  
   
- **目標屬性**  
+ **Target 屬性**  
  檢視組態所修改之屬性的名稱。 如果組態類型支援多個組態，則此資料行是空白。  
   
  **加入**  

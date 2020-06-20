@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51d955e53e8a84365b60af5bd7aba68263a468fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211975"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055415"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>將 SQL Server Audit 事件寫入安全性記錄檔
   在高度安全性的環境中，Windows 安全性記錄檔是寫入記錄物件存取之事件的適當位置。 雖然支援其他稽核位置，但是這些位置容易遭算改。  

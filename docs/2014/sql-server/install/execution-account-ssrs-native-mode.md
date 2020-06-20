@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cb210be7856566c16f615d90cf879dcae5d6306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952539"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042719"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>執行帳戶 (SSRS 原生模式)
   使用此頁面，即可設定自動處理所使用的帳戶。 當其他認證來源無法使用的特殊情況下，請使用此帳戶：  
@@ -44,7 +43,7 @@ ms.locfileid: "71952539"
  選取此項目來指定帳戶。  
   
  **帳戶**  
- 輸入 Windows 網域使用者帳戶。 請使用此格式： * \<網域\\><使用者\>帳戶*。  
+ 輸入 Windows 網域使用者帳戶。 請使用此格式： * \<domain> \\<使用者 \> 帳戶*。  
   
  **密碼**  
  輸入密碼。  

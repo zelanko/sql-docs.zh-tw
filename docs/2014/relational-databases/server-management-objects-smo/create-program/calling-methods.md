@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fb29b1514ca415003aaac483c089b292adf78a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192166"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055264"
 ---
 # <a name="calling-methods"></a>呼叫方法
-  方法會執行與物件相關的特定工作，例如`Checkpoint`在資料庫上發出，或要求實例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的登入列舉清單。  
+  方法會執行與物件相關的特定工作，例如 `Checkpoint` 在資料庫上發出，或要求實例的登入列舉清單 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  方法會在物件上執行作業。 方法可以採用參數，而且通常有一個傳回值。 傳回值可以是簡單資料類型、複雜物件，或包含許多成員的結構。  
   

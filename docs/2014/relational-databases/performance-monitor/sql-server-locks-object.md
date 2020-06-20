@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd7773177f6ec9d02df9d3d669abf561919ffe0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a9d3a934e7b08e863c4ca5241c6bfc20600a539
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250605"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047884"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server 的 Locks 物件
   Microsoft **中的** SQLServer:Locks [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件會提供有關個別資源類型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定資訊。 鎖定發生於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源上，例如交易期間讀取或修改的資料列，以避免不同交易同時使用資源。 例如，若某個交易將資料表內的資料列獨佔 (X) 鎖定，就沒有其他交易可修改該資料列，直到鎖定解除為止。 將鎖定減至最少可增加並行 (Concurrency)，以改善效能。 您可同時監視 **Locks** 物件的多個執行個體，每個執行個體都代表一種資源類型的鎖定。  
@@ -33,11 +32,11 @@ ms.locfileid: "63250605"
 |**Lock Timeouts/sec**|已逾時的每秒鎖定要求數，包括 NOWAIT 鎖定的要求。|  
 |**Lock Wait Time (ms)**|最後一秒內的鎖定總等候時間 (以毫秒為單位)。|  
 |**Lock Waits/sec**|每秒需要呼叫者等候的鎖定要求次數。|  
-|**Number of Deadlocks/sec**|造成死結的每秒鎖定要求數。|  
+|**每秒的鎖死數目**|造成死結的每秒鎖定要求數。|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可鎖定這些資源。  
   
-|項目|描述|  
+|Item|描述|  
 |----------|-----------------|  
 |**_Total**|所有鎖定的資訊。|  
 |**AllocUnit**|配置單位的鎖定。|  
@@ -48,7 +47,7 @@ ms.locfileid: "63250605"
 |**Heap/BTree**|堆積或 BTree (HOBT)。 資料頁堆積的鎖定，或是索引之 BTree 結構的鎖定。|  
 |**關鍵**|索引中之資料列的鎖定。|  
 |**中繼資料**|一項目錄資訊 (亦稱為中繼資料) 的鎖定。|  
-|**目標**|資料表、預存程序、檢視等 (包括所有資料和索引) 的鎖定。 物件可以是在 **sys.all_objects**中擁有項目的任何東西。|  
+|**Object**|資料表、預存程序、檢視等 (包括所有資料和索引) 的鎖定。 物件可以是在 **sys.all_objects**中擁有項目的任何東西。|  
 |**頁面**|資料庫中 8 KB 分頁的鎖定。|  
 |**掉**|資料庫識別碼。 堆積中單一資料列的鎖定。|  
   

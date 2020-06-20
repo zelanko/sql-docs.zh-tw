@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e04a36ca687c57daae2f286025add57a32632c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cc6274933a8399fc9cc60b91135cd24894a842e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767330"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951378"
 ---
 # <a name="step-4-deploying-the-lesson-6-package"></a>步驟 4：部署第 6 課的封裝
   部署封裝時，需要將封裝新增至 SSISDB 目錄中的 SQL Server 執行個體上的整合服務。 在本課程中您會將第 6 課封裝加入至 SSISDB 目錄、 設定參數，以及執行封裝。 本課程中引導您使用 SQL Server Management Studio 來將第 6 課封裝加入至 SSISDB 目錄，以及部署封裝。 在部署封裝之後，您將修改參數指向新位置，然後執行封裝。  
@@ -62,7 +61,7 @@ ms.locfileid: "62767330"
   
 6.  在 [瀏覽資料夾] 對話方塊中，瀏覽至包含 SSIS 教學課程專案的資料夾，然後按一下 [確定]。  
   
-7.  按 [下一步]。  
+7.  按一下 [下一步]。  
   
 8.  在 [選取封裝] 頁面上，您應該看到從 SSIS 教學課程的所有六個封裝。 在封裝清單中，選取 [Lesson 6.dtsx]，然後按一下 [下一步]。  
   

@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0354f0e55111e078f1682e38c3fb51aea8c365b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055353"
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
   為了輕鬆管理資料庫中的權限， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了幾個 *「角色」* (Role)，這些角色是分組其他主體的安全性主體。 它們就像是 ***Windows 作業系統中的*** 群組 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 資料庫層級角色的權限範圍為整個資料庫。  
@@ -79,7 +78,7 @@ ms.locfileid: "63011726"
 |`dc_admin`<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|這些資料庫角色的成員可以管理和使用資料收集器。 如需相關資訊，請參閱 [Data Collection](../../data-collection/data-collection.md)。|  
 |**PolicyAdministratorRole**|**db_ PolicyAdministratorRole** 資料庫角色的成員可以在以原則為基礎的管理原則和條件上執行所有組態和維護活動。 如需詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../policy-based-management/administer-servers-by-using-policy-based-management.md)。|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|這些資料庫角色的成員可以管理和使用已註冊的伺服器群組。|  
-|**dbm_monitor**|當第一個`msdb`資料庫在 [資料庫鏡像監視器] 中註冊時，在資料庫中建立。 **dbm_monitor** 角色沒有任何成員，必須由系統管理員指派使用者給該角色。|  
+|**dbm_monitor**|`msdb`當第一個資料庫在 [資料庫鏡像監視器] 中註冊時，在資料庫中建立。 **dbm_monitor** 角色沒有任何成員，必須由系統管理員指派使用者給該角色。|  
   
 > [!IMPORTANT]  
 >  db_ssisadmin 角色和 dc_admin 角色的成員可以將其權限提高為系統管理員 (sysadmin)。 之所以能夠進行此權限提高，是因為這些角色可以修改 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝，而且 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 可藉由使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 的 sysadmin 安全性內容由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行。 若要在執行維護計畫、資料收集組和其他 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝時預防此權限提高，請將執行封裝的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業設為使用有限權限的 Proxy 帳戶，或是只將系統管理員 (sysadmin) 成員加入 db_ssisadmin 和 dc_admin 角色。  
@@ -95,12 +94,12 @@ ms.locfileid: "63011726"
 |[sp_helprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)|中繼資料|傳回目前資料庫中角色成員的相關資訊。|  
 |[sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)|中繼資料|針對每個資料庫角色的每個成員，各傳回一個資料列。|  
 |[IS_MEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-member-transact-sql)|中繼資料|指出目前使用者是指定之 Microsoft Windows 群組或 Microsoft SQL Server 資料庫角色的成員。|  
-|[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|命令|在目前資料庫中建立新的資料庫角色。|  
-|[ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql)|命令|變更資料庫角色的名稱。|  
-|[DROP ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|命令|從資料庫中移除角色。|  
-|[sp_addrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|命令|在目前資料庫中建立新的資料庫角色。|  
-|[sp_droprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|命令|從目前資料庫移除資料庫角色。|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|命令|在目前資料庫的資料庫角色中，加入資料庫使用者、資料庫角色、Windows 登入或 Windows 群組。|  
+|[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|Command|在目前資料庫中建立新的資料庫角色。|  
+|[ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql)|Command|變更資料庫角色的名稱。|  
+|[DROP ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|Command|從資料庫中移除角色。|  
+|[sp_addrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Command|在目前資料庫中建立新的資料庫角色。|  
+|[sp_droprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Command|從目前資料庫移除資料庫角色。|  
+|[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|Command|在目前資料庫的資料庫角色中，加入資料庫使用者、資料庫角色、Windows 登入或 Windows 群組。|  
 |[sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|Command|從目前資料庫中的 SQL Server 角色移除安全性帳戶。|  
   
 ## <a name="public-database-role"></a>public 資料庫角色  

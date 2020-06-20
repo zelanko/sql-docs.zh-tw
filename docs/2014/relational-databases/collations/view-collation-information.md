@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cb0f104d1555b18d18df38027c240a392d2ac66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 995e559cfd7ca871f5abd90751f2f79167bdf76f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918699"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970549"
 ---
 # <a name="view-collation-information"></a>檢視定序資訊
     

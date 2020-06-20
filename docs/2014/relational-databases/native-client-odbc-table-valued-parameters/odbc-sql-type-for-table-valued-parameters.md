@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c9ba511746375a902a1643631c86ec8c72dbd02
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f37bee770c40235817b2b492ee34f89082012309
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698859"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018273"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>資料表值參數的 ODBC SQL 類型
   資料表值參數的支援是由新的 ODBC SQL 類型，也就是 SQL_SS_TABLE 所提供。  

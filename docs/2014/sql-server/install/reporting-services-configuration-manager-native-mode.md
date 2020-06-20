@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e7b5e46b90702bf39bf2902eed3e5a6c609757e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3dc4e2b2df66b9670bf00e39e6f4a2624c4105e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952487"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059055"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 組態管理員 (原生模式)
   您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式安裝。 如果您是利用僅限檔案安裝選項來安裝報表伺服器，就必須利用組態管理員來設定伺服器，才能使用該伺服器。 如果您使用預設組態安裝選項來安裝報表伺服器，則可以使用組態管理員來驗證或修改在安裝過程中所指定的設定。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員可用於設定本機或遠端報表伺服器執行個體。  
@@ -87,7 +86,7 @@ ms.locfileid: "71952487"
   
 -   設定報表伺服器電子郵件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含報表伺服器電子郵件傳遞延伸模組，可使用簡易郵件傳送通訊協定 (SMTP) 將報表或報表處理通知傳遞到電子郵件信箱中。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員指定要使用您網路上的哪個 SMTP 伺服器或閘道傳遞電子郵件。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員不會協助您管理報表伺服器內容、啟用其他功能，或授與伺服器的存取權。 完整部署需要您也使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]來啟用其他功能或修改預設值，並報表管理員來授與使用者對伺服器的存取權。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員不會協助您管理報表伺服器內容、啟用其他功能，或授與伺服器的存取權。 完整部署需要您也使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來啟用其他功能或修改預設值，並報表管理員來授與使用者對伺服器的存取權。  
   
 ##  <a name="requirements"></a><a name="bkmk_requirements"></a> 需求  
   組態管理員為特定版本所專用。 隨著這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本一起安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員無法用來設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果您在相同電腦上並存執行舊版和新版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就必須使用每一個版本所隨附的 Reporting Service 組態管理員來設定每一個執行個體。  

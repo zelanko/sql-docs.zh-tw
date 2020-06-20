@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7985f713093e839d258a0c9b80bb5d4e6e58f37f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ace9abbbb16f7b2d048dc5ddc41b217c1dafaaee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057946"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966028"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>查閱轉換編輯器 (連接頁面)
   使用 **[查閱轉換編輯器]** 對話方塊的 **[連接]** 頁面，來選取連接管理員。 如果您選取 OLE DB 連接管理員，也可以選取查詢、資料表或檢視來產生參考資料集。  

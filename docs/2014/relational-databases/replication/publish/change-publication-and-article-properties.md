@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 185e5d0beb9df2ec8a3dcf263632c1d260a3bcd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882341"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038056"
 ---
 # <a name="change-publication-and-article-properties"></a>變更發行集與發行項屬性
   在建立發行集後，可以變更大多數發行集與發行項屬性，但某些屬性要求重新產生快照集和 (或) 重新初始化訂閱。 本主題提供在變更時需要執行一個或兩個動作的所有屬性之資訊。  
@@ -56,7 +55,7 @@ ms.locfileid: "73882341"
 |變更 INSERT、UPDATE 或 DELETE 命令。|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |變更目的地資料表名稱|**sp_changearticle**|**dest_table**|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |變更目的地資料表擁有者 (結構描述)。|**sp_changearticle**|**destination_owner**|新的快照集。<br /><br /> 重新初始化訂閱。|  
-|變更資料類型對應 (僅套用至 Oracle 發行)。|**sp_changearticlecolumndatatype**|**\@type**<br /><br /> **\@長**<br /><br /> **\@有效位數**<br /><br /> **\@尺度**|新的快照集。<br /><br /> 重新初始化訂閱。|  
+|變更資料類型對應 (僅套用至 Oracle 發行)。|**sp_changearticlecolumndatatype**|**\@型**<br /><br /> **\@長**<br /><br /> **\@精密**<br /><br /> **\@尺度**|新的快照集。<br /><br /> 重新初始化訂閱。|  
   
 ## <a name="publication-properties-for-merge-replication"></a>合併式複寫的發行集屬性  
   
@@ -73,7 +72,7 @@ ms.locfileid: "73882341"
 |變更聯結篩選或邏輯記錄。|**sp_changemergefilter**|**\@property**<br /><br /> **\@value**|新增快照集<br /><br /> 重新初始化訂閱。|  
 |停用參數化篩選 (啟用參數化篩選不需要執行任何特殊動作)。|**sp_changemergepublication**|**false** 的 **false**值|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |啟用或停用預先計算的資料分割。|**sp_changemergepublication**|**use_partition_groups**|新的快照集。|  
-|啟用或停[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]用資料分割優化。|**sp_changemergepublication**|**keep_partition_changes**|重新初始化訂閱。|  
+|啟用或停用資料 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 分割優化。|**sp_changemergepublication**|**keep_partition_changes**|重新初始化訂閱。|  
 |啟用或停用「訂閱者」資料分割驗證。|**sp_changemergepublication**|**validate_subscriber_info**|重新初始化訂閱。|  
 |將發行集相容性層級變更為 80sp3 或更低。|**sp_changemergepublication**|**publication_compatibility_level**|新的快照集。|  
   

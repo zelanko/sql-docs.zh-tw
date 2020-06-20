@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1880ceffb03389bc87ee8f25d1817a5e4f593566
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a393352f7ec0f9384ed2d30b2909c9d9f2c1dc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056636"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964618"
 ---
 # <a name="query-builder"></a>查詢產生器
   使用 **[查詢產生器]** 對話方塊，即可建立要在執行 SQL 工作中使用的查詢、OLE DB 來源和 OLE DB 目的地，以及查閱轉換。  
@@ -43,7 +42,7 @@ ms.locfileid: "66056636"
  「查閱」和「模糊」查閱轉換也可以使用具有參數和傳回碼的變數。 OLE DB 來源的相關資訊也適用於這兩個轉換。  
   
 ## <a name="options"></a>選項。  
- **Toolbar**  
+ **工具列**  
  使用工具列來管理資料集、選取要顯示的窗格，以及控制查詢功能。  
   
 |值|描述|  
@@ -52,7 +51,7 @@ ms.locfileid: "66056636"
 |**顯示/隱藏方格窗格**|顯示或隱藏 **[方格]** 窗格。|  
 |**顯示/隱藏 SQL 窗格**|顯示或隱藏 [ **SQL** ] 窗格。|  
 |**顯示/隱藏結果窗格**|顯示或隱藏 **[結果]** 窗格。|  
-|**進行**|執行查詢。 結果會顯示在結果窗格中。|  
+|**執行**|執行查詢。 結果會顯示在結果窗格中。|  
 |**確認 SQL**|確認 SQL 陳述式有效。|  
 |**昇冪**|在方格窗格中之選取的資料行上，依遞增順序排序輸出資料列。|  
 |**遞減排序**|在方格窗格中之選取的資料行上，依遞減順序排序輸出資料列。|  
@@ -76,6 +75,6 @@ ms.locfileid: "66056636"
  [OLE DB 目的地](data-flow/ole-db-destination.md)   
  [查閱轉換](data-flow/transformations/lookup-transformation.md)   
  [Integration Services &#40;SSIS&#41; 查詢](integration-services-ssis-queries.md)   
- [MERGE in Integration Services Packages](control-flow/merge-in-integration-services-packages.md)  
+ [Integration Services 套件中的 MERGE](control-flow/merge-in-integration-services-packages.md)  
   
   

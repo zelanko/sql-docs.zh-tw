@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: c178a308-8d99-47fc-8a49-5a480dc592f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94439a6981a2cf891a55bcbda7498db83e1fa52e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32ae8ebe102008d08a6059328ed57cd118ece019
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990572"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051179"
 ---
 # <a name="localdb_error_instance_folder_path_too_long"></a>LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
     
@@ -27,7 +26,7 @@ ms.locfileid: "62990572"
 |事件識別碼|260|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  
 |元件|本機資料庫執行階段 API|  
-|訊息文字|本機資料庫執行個體資料夾的完整路徑長度比 MAX_PATH 還長。 實例必須儲存在資料夾：%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server 本機 DB\Instances\\<實例名稱。\>|  
+|訊息文字|本機資料庫執行個體資料夾的完整路徑長度比 MAX_PATH 還長。 實例必須儲存在資料夾：%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server 本機 DB\Instances \\<實例名稱 \> 。|  
   
 ## <a name="explanation"></a>說明  
  應儲存執行個體的路徑長度超過 MAX_PATH。  

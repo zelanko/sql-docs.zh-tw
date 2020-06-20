@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c2513dab-8415-4e0c-9475-6d4ab97fea7c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f46eb5206e666caeb928c3718c75f093beb6bf4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755244"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934659"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>連接到伺服器 (連接屬性頁面) Integration Services
   連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 或在 [已註冊的伺服器]**** 中註冊 [!INCLUDE[ssIS](../includes/ssis-md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接時，[連接]**** 和 [選項]**** 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssIS](../includes/ssis-md.md)] 時，[測試]**** 和 [儲存]**** 才會出現在這個對話方塊中。  

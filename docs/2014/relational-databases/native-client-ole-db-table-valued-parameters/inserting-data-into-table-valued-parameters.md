@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f89e074e8431d9d421b9168e43522412c152e55f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f8685b5180d4c8dc91d0199030ecd04fdcbec994
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704636"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039019"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>將資料插入至資料表值參數
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者支援兩種模型，供取用者指定資料表值參數資料列的資料：推送模型和提取模型。 您可使用示範提取模型的範例，請參閱 [SQL Server 資料程式設計範例](https://msftdpprodsamples.codeplex.com/)。  

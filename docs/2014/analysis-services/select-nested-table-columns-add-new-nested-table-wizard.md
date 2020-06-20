@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 911525abdf78472cde7c8467357ce846daafc3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 737a2e6c837baea373262e586e528a7307b1db6e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069360"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940919"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>選取巢狀資料表資料行 (加入新的巢狀資料表精靈)
   使用 [選取巢狀資料表資料行]**** 頁面，即可選取要包含在巢狀資料表中的屬性和量值，並定義採礦模型使用屬性和量值的方式。  

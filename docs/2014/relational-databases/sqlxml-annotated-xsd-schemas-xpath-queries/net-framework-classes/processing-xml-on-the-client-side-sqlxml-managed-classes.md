@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dc166322bd65342567ebb160766a530da939ad8e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 22c8b5e11ced4cdff95a6cc2d8aeeaa7e25a4d90
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015309"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>在用戶端上處理 XML (SQLXML Managed 類別)
   這個範例說明如何使用 ClientSideXml 屬性。 應用程式會在伺服器上執行預存程序。 預存程序的結果 (兩個資料行的資料列集) 會在用戶端上進行處理以產生 XML 文件。  

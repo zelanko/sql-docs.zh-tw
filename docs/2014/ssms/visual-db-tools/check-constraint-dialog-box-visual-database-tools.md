@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d41cc9f3b52c0c5e70ead6b93c0b929ef521f673
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7244984b869a1c68e597984a1cd03e16e53d0306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067454"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066248"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>檢查條件約束對話方塊 (Visual Database Tools)
   當您在資料表設計工具的資料表定義方格上按一下滑鼠右鍵，再按 [檢查條件約束]  時，這個對話方塊便會出現。 此對話方塊包含一組附加至資料庫資料表的非唯一條件約束的屬性。 套用至唯一條件約束的屬性會出現在 [索引/索引鍵]  對話方塊中。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f2b84ce093c25faa284033065c329bb14f254a8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5fd79d47d0a3bd9ac80c2f66ff54cc096fcca88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676856"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047695"
 ---
 # <a name="view-facets-dialog-box"></a>檢視 Facet 對話方塊
   使用此對話方塊可檢視以原則為基礎之管理 Facet 的屬性。 建立 Facet 時會定義 Facet 的屬性，而且不能使用這個對話方塊加以變更。  

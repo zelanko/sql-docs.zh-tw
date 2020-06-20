@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8d33448c7e17897fd1b5fb7f3aa22c302cdcfdc7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717951"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015144"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 物件 (SQLXML Managed 類別)
   這是 SqlXmlCommand 物件的構造函式：  
@@ -63,7 +62,7 @@ public SqlXmlCommand(string cnString)
  將查詢結果寫入現有的資料流。 當您有需要附加結果的資料流程時（例如，將查詢結果寫入 HttpResponse. OutputStream），這個方法就很有用。 如需實用範例，請參閱[&#40;SQLXML Managed 類別&#41;執行 SQL 查詢](sqlxml-4-0-net-framework-support-managed-classes.md)。  
   
  XmlReader ExecuteXmlReader （）  
- 傳回 XmlReader 物件。 您可以使用這個方法直接操作 XmlReader 物件中的資料，或插入 system.string 的可鏈結架構。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 文件集。 如需實用範例，請參閱[使用 ExecuteXMLReader 方法執行 SQL 查詢](executing-sql-queries-by-using-the-executexmlreader-method.md)。  
+ 傳回 XmlReader 物件。 您可以使用這個方法直接操作 XmlReader 物件中的資料，或插入 System.Xml 的可鏈結架構。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 文件集。 如需實用範例，請參閱[使用 ExecuteXMLReader 方法執行 SQL 查詢](executing-sql-queries-by-using-the-executexmlreader-method.md)。  
   
  TheSqlXmlCommand 物件也支援下列其他方法：  
   
