@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ff3e97a3a784bc61a20de9c65a4381c81078480
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667181"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060811"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在複寫監視器中設定臨界值和警告
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 「複寫監視器」會顯示發行集和訂閱的狀態資訊。 依預設，複寫監視器只針對未初始化的訂閱顯示警告，但您可以啟用於其他條件下發出警告。 建議您啟用拓撲警告，這樣您才能收到即時的狀態和效能資訊。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]「複寫監視器」會顯示發行集 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和訂閱的狀態資訊。 依預設，複寫監視器只針對未初始化的訂閱顯示警告，但您可以啟用於其他條件下發出警告。 建議您啟用拓撲警告，這樣您才能收到即時的狀態和效能資訊。  
   
  在您啟用警告時，必須指定臨界值。 達到或超過臨界值時，會顯示警告 (除非有更高優先順序的問題需要顯示)。 除了在複寫監視器顯示警告外，達到臨界值也會觸發警示。 您可啟用滿足下列條件時的警告：  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62667181"
   
      這個對話方塊會顯示所有發行集類型的警示，包括與監視臨界值無關的警示。 如需詳細資訊，請參閱[使用複寫代理程式事件的警示](../agents/use-alerts-for-replication-agent-events.md)。  
   
-3.  在 [ ** \<AlertName> 警示屬性**] 對話方塊中設定選項：  
+3.  設定 [ ** \<AlertName> 警示屬性**] 對話方塊中的選項：  
   
     -   在 **[一般]** 頁面上，按一下 **[啟用]**；指定警示應套用至哪個資料庫。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62667181"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  按一下 **關閉**。  
+5.  按一下 [關閉] 。  
   
 ##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a>設定合併式發行集的臨界值和警告  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62667181"
   
      這個對話方塊會顯示所有發行集類型的警示，包括與監視臨界值無關的警示。  
   
-3.  在 [ ** \<AlertName> 警示屬性**] 對話方塊中設定選項：  
+3.  設定 [ ** \<AlertName> 警示屬性**] 對話方塊中的選項：  
   
     -   在 **[一般]** 頁面上，按一下 **[啟用]**；指定警示應套用至哪個資料庫。  
   
@@ -127,7 +126,7 @@ ms.locfileid: "62667181"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  按一下 **關閉**。  
+5.  按一下 [關閉] 。  
   
 ##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a>設定快照式發行集的臨界值和警告  
   
@@ -149,7 +148,7 @@ ms.locfileid: "62667181"
   
      這個對話方塊會顯示所有發行集類型的警示，包括與監視臨界值無關的警示。 如需詳細資訊，請參閱[使用複寫代理程式事件的警示](../agents/use-alerts-for-replication-agent-events.md)。  
   
-3.  在 [ ** \<AlertName> 警示屬性**] 對話方塊中設定選項：  
+3.  設定 [ ** \<AlertName> 警示屬性**] 對話方塊中的選項：  
   
     -   在 **[一般]** 頁面上，按一下 **[啟用]**；指定警示應套用至哪個資料庫。  
   
@@ -159,7 +158,7 @@ ms.locfileid: "62667181"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  按一下 **關閉**。  
+5.  按一下 [關閉] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [監視複寫](../monitoring-replication.md)  

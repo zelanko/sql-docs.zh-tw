@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c71ff6e75cbbf27042c1eac70b1f97076290865
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957179"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>將 SQL Server 資料庫還原至某個時間點 (完整復原模式)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將資料庫還原至時間點。 本主題僅與使用完整或大量記錄復原模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫相關。  
@@ -132,9 +131,9 @@ ms.locfileid: "62921059"
   
  **基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法**  
   
- RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT ** = *`time`*，** RECOVERY .。。  
+ RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT ** = *`time`* ，** RECOVERY .。。  
   
- 復原點是在由`datetime` *時間*指定的值之前或之前發生的最新交易認可。  
+ 復原點是在 `datetime` 由*時間*指定的值之前或之前發生的最新交易認可。  
   
  若只要還原特定時間點之前進行的修改，請為您要還原的每個備份指定 WITH STOPAT **=** *time*。 這樣可確保您不會還原到超過目標時間。  
   
@@ -152,7 +151,7 @@ ms.locfileid: "62921059"
   
 3.  還原上一次的差異資料庫備份 (如有)，但不復原資料庫 (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  依建立的相同順序，套用每個交易記錄備份，並指定您想要停止還原記錄的時間（RESTORE DATABASE *database_name*從 <backup_device> WITH STOPAT**=*`time`*，** RECOVERY）。  
+4.  依建立的相同順序，套用每個交易記錄備份，並指定您想要停止還原記錄的時間（RESTORE DATABASE *database_name*從 <backup_device> WITH STOPAT** = *`time`* ，** RECOVERY）。  
   
     > [!NOTE]  
     >  RECOVERY 及 STOPAT 選項。 如果交易記錄備份中不含所要求的時間 (例如指定的時間超出交易記錄的結束時間)，則會產生警告訊息，且此資料庫會維持未復原狀態。  
@@ -193,7 +192,7 @@ GO
 -   [復原到記錄序號 &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [backupset &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
+ [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a8b2131e4c3c2070bb03018c48294543b9baef02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9eb59f03b1526153bec88039a0d619bac8ad6368
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066983"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server 的 General Statistics 物件
   **的** SQLServer:General Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件提供計數器來監視整個伺服器範圍的一般活動，例如目前的連接數目，以及每秒與執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之電腦連接與中斷連接的使用者數目。 當您處理大型線上交易處理 (OLTP) 類型的系統時，這類系統中有許多用戶端會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體連接與中斷連接，這時就會相當有用。  
@@ -46,7 +45,7 @@ ms.locfileid: "63250634"
 |**Temp Tables Creation Rate**|每秒建立的暫存資料表數目/資料表變數數目。|  
 |**Temp Tables For Destruction**|等候清除系統執行緒終結的暫存資料表數目/資料表變數數目。|  
 |**Trace Event Notifications Queue**|在內部佇列中等候透過 Service Broker 傳送的追蹤事件通知執行個體數目。|  
-|**異動**|交易編列數目 (結合本機、DTC、繫結)。|  
+|**交易**|交易編列數目 (結合本機、DTC、繫結)。|  
 |**使用者連接**|計算目前已連線到 SQL Server 的使用者數目。|  
   
 ## <a name="see-also"></a>另請參閱  

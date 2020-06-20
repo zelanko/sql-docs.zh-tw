@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae8ebf56e4ae7c4fce3566cb7688d203b8ceb318
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67c81901e454c4e7a47e5d448f2aa17d6a8820fa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054930"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972808"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>傳送登入工作編輯器 (登入頁面)
   使用 [傳送登入工作編輯器]**** 對話方塊的 [登入]**** 頁面，即可指定屬性將一個或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個執行個體。 如需這項工作的詳細資訊，請參閱 [傳送登入工作](control-flow/transfer-logins-task.md)。  
@@ -29,10 +28,10 @@ ms.locfileid: "66054930"
   
 ## <a name="options"></a>選項。  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下** \<[新增連接 ...] >** ，建立與來源伺服器的新連接。  
+ 在清單中選取 SMO 連線管理員，或按一下 **\<New connection...>** 以建立與來源伺服器的新連接。  
   
  **[Destinationconnection**  
- 在清單中選取 SMO 連線管理員，或按一下** \<[新增連接 ...] >** ，以建立目的地伺服器的新連接。  
+ 在清單中選取 SMO 連線管理員，或按一下 **\<New connection...>** 以建立目的地伺服器的新連接。  
   
  **LoginsToTransfer**  
  選取要從來源複製到目的地伺服器的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入。 此屬性具有下表所列的選項：  
@@ -58,7 +57,7 @@ ms.locfileid: "66054930"
 |-----------|-----------------|  
 |**FailTask**|如果具有相同名稱的登入已經存在於目的地伺服器上，工作就會失敗。|  
 |**改寫**|工作會覆寫目的地伺服器上具有相同名稱的登入。|  
-|**過**|工作會略過目的地伺服器上具有相同名稱的登入。|  
+|**略過**|工作會略過目的地伺服器上具有相同名稱的登入。|  
   
  **CopySids**  
  選取與登入相關聯的安全性識別碼，是否應複製到目的地伺服器。 如果「傳送登入」工作是與「傳送資料庫」工作一併使用，[CopySids]**** 就必須設定為 [True]****。 否則，已傳送的資料庫就無法辨識被複製的登入。  

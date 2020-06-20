@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: becfebbfe57e00b9abcc3cec29364f6b65fb1dfc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08b322b5eb6658dfa44dfd1734a5e5d721674630
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316145"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044418"
 ---
 # <a name="design-tables-visual-database-tools"></a>設計資料表 (Visual Database Tools)
   [資料表設計工具] 提供完整的視窗，供您設計個別的資料表。 本節的主題說明如何使用 [資料表設計工具] 建立及修改資料庫資料表。  

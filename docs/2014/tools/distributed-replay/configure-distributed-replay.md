@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 40cbece7c2ee5aad3b65a0b4066b409d9f0b6b6e
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 90fb604545b8f349368c8edb3dfcebe58dd00762
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925052"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007701"
 ---
 # <a name="configure-distributed-replay"></a>設定 Distributed Replay
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 組態詳細資料指定於 Distributed Replay Controller、用戶端，以及安裝了管理工具的 XML 檔案中。 這些檔案包括下列各項：  
@@ -31,13 +30,13 @@ ms.locfileid: "82925052"
 ##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> 控制器設定檔：DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務啟動時，會從控制器組態檔 `DReplayController.config`載入記錄層次。 這個檔案位於您安裝 Distributed Replay Controller 服務的資料夾中：  
   
- **\<控制器安裝路徑>\DReplayController.config**  
+ **\<controller installation path>\DReplayController.config**  
   
  控制器組態檔所指定的記錄層次包括：  
   
 |設定|XML 元素|描述|允許的值|必要|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|記錄層級|`<LoggingLevel>`|指定控制器服務的記錄層次。|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|不會。 根據預設，此值是 `CRITICAL`。|  
+|記錄層級|`<LoggingLevel>`|指定控制器服務的記錄層次。|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|否。 根據預設，此值是 `CRITICAL`。|  
   
 ### <a name="example"></a>範例  
  此範例會顯示已經修改為隱藏 `INFORMATION` 和 `WARNING` 記錄項目的控制器組態檔。  
@@ -52,16 +51,16 @@ ms.locfileid: "82925052"
 ##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> 用戶端設定檔：DReplayClient.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務啟動時，會從用戶端組態檔 ( `DReplayClient.config`) 載入組態設定。 這個檔案位於每個用戶端上您安裝 Distributed Replay Client 服務的資料夾中：  
   
- **\<用戶端安裝路徑>\DReplayClient.config**  
+ **\<client installation path>\DReplayClient.config**  
   
  用戶端組態檔所指定的設定包括：  
   
 |設定|XML 元素|描述|允許的值|必要|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|控制器|`<Controller>`|指定控制器的電腦名稱。 用戶端會嘗試連絡控制器，藉以向 Distributed Replay 環境註冊。|您可以使用 "`localhost`" 或 "`.`" 表示本機電腦。|不會。 根據預設，用戶端會嘗試向本機執行的 Controller 執行個體 ("`.`") 註冊 (如果它存在的話)。|  
-|用戶端工作目錄|`<WorkingDirectory>`|這是在用戶端上儲存分派檔案的本機路徑。<br /><br /> 下一次重新執行時，就會覆寫這個目錄中的檔案。|完整目錄名稱，以磁碟機代號為開頭。|不會。 如果未指定值，則分派檔案與預設用戶端組態檔會儲存在相同的位置。 如果有指定值，而且該資料夾不存在用戶端上，用戶端服務就不會啟動。|  
+|控制器|`<Controller>`|指定控制器的電腦名稱。 用戶端會嘗試連絡控制器，藉以向 Distributed Replay 環境註冊。|您可以使用 "`localhost`" 或 "`.`" 表示本機電腦。|否。 根據預設，用戶端會嘗試向本機執行的 Controller 執行個體 ("`.`") 註冊 (如果它存在的話)。|  
+|用戶端工作目錄|`<WorkingDirectory>`|這是在用戶端上儲存分派檔案的本機路徑。<br /><br /> 下一次重新執行時，就會覆寫這個目錄中的檔案。|完整目錄名稱，以磁碟機代號為開頭。|否。 如果未指定值，則分派檔案與預設用戶端組態檔會儲存在相同的位置。 如果有指定值，而且該資料夾不存在用戶端上，用戶端服務就不會啟動。|  
 |用戶端結果目錄|`<ResultDirectory>`|這是在用戶端上儲存重新執行活動之結果追蹤檔案 (針對用戶端) 的本機路徑。<br /><br /> 下一次重新執行時，就會覆寫這個目錄中的檔案。|完整目錄名稱，以磁碟機代號為開頭。|否。 如果未指定值，則結果追蹤檔案與預設用戶端組態檔會儲存在相同的位置。 如果有指定值，而且該資料夾不存在用戶端上，用戶端服務就不會啟動。|  
-|記錄層級|`<LoggingLevel>`|這是用戶端服務的記錄層次。|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|不會。 根據預設，此值是 `CRITICAL`。|  
+|記錄層級|`<LoggingLevel>`|這是用戶端服務的記錄層次。|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|否。 根據預設，此值是 `CRITICAL`。|  
   
 ### <a name="example"></a>範例  
  此範例會顯示已經修改為指定控制器服務在不同電腦 (名為 `Controller1`的電腦) 上執行的用戶端組態檔。 `WorkingDirectory` 和 `ResultDirectory` 項目已經分別設定成使用 `c:\ClientWorkingDir` 和 `c:\ResultTraceDir`資料夾。 記錄層次已經從預設值變更為隱藏 `INFORMATION` 和 `WARNING` 記錄項目。  
@@ -83,13 +82,13 @@ ms.locfileid: "82925052"
   
  預設前置處理組態檔位於您安裝管理工具的資料夾中：  
   
- **\<系統管理工具安裝路徑>\DReplayAdmin\DReplay.exe.preprocess.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
  前置處理組態設定指定於前置處理組態檔中屬於 `<PreprocessModifiers>` 元素子系的 XML 元素中。 這些設定包括：  
   
 |設定|XML 元素|描述|允許的值|必要|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|包含系統工作階段活動|`<IncSystemSession>`|指出是否要在重新執行期間包含擷取期間進行的系統工作階段活動。|`Yes` &#124; `No`|不會。 根據預設，此值是 `No`。|  
+|包含系統工作階段活動|`<IncSystemSession>`|指出是否要在重新執行期間包含擷取期間進行的系統工作階段活動。|`Yes` &#124; `No`|否。 根據預設，此值是 `No`。|  
 |最大閒置時間|`<MaxIdleTime>`|將閒置時間的上限設定為絕對數字 (以秒為單位)。|>=-1 的整數<br /><br /> `-1` 表示沒有變更原始追蹤檔案的原始值。<br /><br /> `0` 表示在任何給定的時間點有某個活動進行中。|否。 根據預設，此值是 `-1`。|  
   
 ### <a name="example"></a>範例  
@@ -112,32 +111,32 @@ ms.locfileid: "82925052"
   
  預設重新執行組態檔位於您安裝管理工具的資料夾中：  
   
- **\<系統管理工具安裝路徑>\DReplayAdmin\DReplay.exe.replay.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.replay.config**  
   
  重新執行組態設定指定於重新執行組態檔中屬於 `<ReplayOptions>` 和 `<OutputOptions>` 元素子系的 XML 元素中。  
   
-### <a name="replayoptions-element"></a>\<ReplayOptions > 元素  
+### <a name="replayoptions-element"></a>\<ReplayOptions> 項目  
  重新執行組態檔在 `<ReplayOptions>` 元素中指定的設定如下：  
   
 |設定|XML 元素|描述|允許的值|必要|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目標執行個體 (測試伺服器)|`<Server>`|指定伺服器名稱以及要連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|*server_name*[\\*instance_name*]<br /><br /> 您無法使用 "`localhost`" 或 "`.`" 來代表本機主機。|否，如果已經搭配使用 **-s**_目標伺服器_ 參數與管理工具的 [重新執行]  選項來指定伺服器名稱。|  
-|順序模式|`<SequencingMode>`|指定用於事件排程的模式。|`synchronization` &#124; `stress`|不會。 根據預設，此值是 `stress`。|  
+|順序模式|`<SequencingMode>`|指定用於事件排程的模式。|`synchronization` &#124; `stress`|否。 根據預設，此值是 `stress`。|  
 |壓力規模粒度|`<StressScaleGranularity>`|指定服務設定檔識別碼 (SPID) 上的所有連接是應該在壓力模式下同時 (SPID) 還是個別 (連接) 調整。|SPID &#124; 連接|是。 根據預設，此值是 `SPID`。|  
-|連接時間間隔|`<ConnectTimeScale>`|這是用來在壓力模式中設定連接時間的間隔。|介於 `1` 與 `100`之間的整數。|不會。 根據預設，此值是 `100`。|  
-|考慮時間間隔|`<ThinkTimeScale>`|這是用來在壓力模式中設定考慮時間的間隔。|介於 `0` 與 `100`之間的整數。|不會。 根據預設，此值是 `100`。|  
+|連接時間間隔|`<ConnectTimeScale>`|這是用來在壓力模式中設定連接時間的間隔。|介於 `1` 與 `100`之間的整數。|否。 根據預設，此值是 `100`。|  
+|考慮時間間隔|`<ThinkTimeScale>`|這是用來在壓力模式中設定考慮時間的間隔。|介於 `0` 與 `100`之間的整數。|否。 根據預設，此值是 `100`。|  
 |使用連接共用|`<UseConnectionPooling>`|指定是否要在每個 Distributed Replay Client 上啟用連接共用。|是 &#124; 否|是。 根據預設，此值是 `Yes`。|  
 |健全狀況監視器間隔|`<HealthmonInterval>`|表示要執行健全狀況監視器的頻率 (以秒為單位)。<br /><br /> 此值只用於同步處理模式中。|>= 1 的整數<br /><br /> (`-1` 表示停用)|否。 根據預設，此值是 `60`。|  
 |查詢逾時|`<QueryTimeout>`|指定查詢逾時值 (以秒為單位)。 此值只在傳回第一個資料列之前有效。|>= 1 的整數<br /><br /> (`-1` 表示停用)|否。 根據預設，此值是 `3600`。|  
 |每個用戶端的執行緒|`<ThreadsPerClient>`|指定要用於每個重新執行用戶端的重新執行執行緒數目。|介於 `1` 與 `512`之間的整數。|否。 如果未指定，則 Distributed Replay 會使用值 `255`。|  
   
-### <a name="outputoptions-element"></a>\<OutputOptions > 元素  
+### <a name="outputoptions-element"></a>\<OutputOptions> 項目  
  重新執行組態檔在 `<OutputOptions>` 元素中指定的設定如下：  
   
 |設定|XML 元素|描述|允許的值|必要|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|記錄資料列計數|`<RecordRowCount>`|指出是否應該針對每個結果集記錄資料列計數。|`Yes` &#124; `No`|不會。 根據預設，此值是 `Yes`。|  
-|記錄結果集|`<RecordResultSet>`|指出是否應該記錄所有結果集的內容。|`Yes` &#124; `No`|不會。 根據預設，此值是 `No`。|  
+|記錄資料列計數|`<RecordRowCount>`|指出是否應該針對每個結果集記錄資料列計數。|`Yes` &#124; `No`|否。 根據預設，此值是 `Yes`。|  
+|記錄結果集|`<RecordResultSet>`|指出是否應該記錄所有結果集的內容。|`Yes` &#124; `No`|否。 根據預設，此值是 `No`。|  
   
 ### <a name="example"></a>範例  
  預設重新執行組態檔：  

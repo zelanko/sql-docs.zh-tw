@@ -1,5 +1,6 @@
 ---
 title: 安裝
+description: SQL Server Native Client 11.0 是與 SQL Server 2016 一起安裝。 瞭解元件的安裝位置。 另外還有一個可轉散發套件安裝程式。
 ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77d5bcf0d1000b0ceee182ba043f81b4c1221ae8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6ecaaa2abcc65c24519a1d078bb5792b4cd8173
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388229"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965180"
 ---
 # <a name="installing-sql-server-native-client"></a>安裝 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "81388229"
  
  沒有 SQL Server 2016 Native Client。 如需詳細資訊，請參閱 [SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client.md)。 
  
-您也可以從 SQL Server 2012 功能套件網頁取得 sqlncli.msi。 若要下載最新版本的 SQL Server Native Client，請移至[Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/confirmation.aspx?id=29065)。 如果電腦上也安裝[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]了早于 SQL Server 2012 之前的 native client 版本， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 11.0 將會與舊版並存安裝。  
+您也可以從 SQL Server 2012 功能套件網頁取得 sqlncli.msi。 若要下載最新版本的 SQL Server Native Client，請移至[Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/confirmation.aspx?id=29065)。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦上也安裝了早于 SQL Server 2012 之前的 Native client 版本， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 11.0 將會與舊版並存安裝。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 檔案 (sqlncli11.dll、sqlnclir11.rll 和 s11ch_sqlncli.chm) 會安裝到下列位置：  
   
@@ -55,7 +56,7 @@ ms.locfileid: "81388229"
   
  x64 和 Itanium 版本的 sqlncli.msi 會安裝 32 位元版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 如果應用程式的目標使用平台與當初開發時的平台不同，您可以從 Microsoft 下載中心下載 x64、Itanium 和 x86 版本的 sqlncli.msi。  
   
- 當您叫用 sqlncli.msi 時，依預設會安裝用戶端元件。 用戶端元件是支援執行使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client 開發之應用程式的檔案。 如果也要安裝 SDK 元件，請在命令列上指定 `ADDLOCAL=All`。 例如：  
+ 當您叫用 sqlncli.msi 時，依預設會安裝用戶端元件。 用戶端元件是支援執行使用 Native Client 開發之應用程式的檔案 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 如果也要安裝 SDK 元件，請在命令列上指定 `ADDLOCAL=All`。 例如：  
   
  `msiexec /i sqlncli.msi ADDLOCAL=ALL APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   
@@ -63,7 +64,7 @@ ms.locfileid: "81388229"
  如果您搭配 msiexec 使用 /passive、/qn、/qb 或 /qr 選項，則也必須指定 IACCEPTSQLNCLILICENSETERMS=YES，以明確指出您接受使用者授權條款。 此選項必須以全部大寫的字母指定。  
   
 ## <a name="uninstalling-sql-server-native-client"></a>解除安裝 SQL Server Native Client  
- 因為[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]伺服器和工具之類的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]應用程式相依于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client，所以在卸載所有相依的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]應用程式之前，請務必不要卸載 native client。 若要提供應用程式相依于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的警告給使用者，請使用 MSI 中的 APPGUID 安裝選項，如下所示：  
+ 因為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 伺服器和工具之類的應用程式相依 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client，所以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 卸載所有相依的應用程式之前，請務必不要卸載 native client。 若要提供應用程式相依于 Native Client 的警告給使用者 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請使用 MSI 中的 APPGUID 安裝選項，如下所示：  
   
  `msiexec /i sqlncli.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   

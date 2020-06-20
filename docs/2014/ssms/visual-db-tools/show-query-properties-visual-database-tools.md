@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 35092821d2407e90e550a4351f186de6a585cd64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f59a311acb80448e712ba05aea0a6bd8f1fa8104
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63071793"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000995"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>顯示查詢屬性 (Visual Database Tools)
   您可以在 [查詢和檢視設計師] 的 [屬性] 視窗中顯示查詢的屬性。  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce8e7428aaf8ba459bcf6831988c61da3f192bac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008760"
 ---
 # <a name="make-a-master-server"></a>設定為主要伺服器
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設為主要伺服器 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
@@ -48,7 +47,7 @@ ms.locfileid: "68189138"
 ###  <a name="security"></a><a name="Security"></a> Security  
  具有與 Proxy 相關聯之步驟的散發式作業，而該 Proxy 是在目標伺服器上的 Proxy 帳戶內容下執行 。 請確保符合以下條件，否則與 Proxy 相關聯之作業步驟將不會從主要伺服器下載至目標：  
   
--   主伺服器登錄子機碼**\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\<SQL Server*instance_name*> \sql server Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）已設定為1（true）。 依預設，這個子機碼設為 0 (False)。  
+-   主伺服器登錄子機碼**\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\ < *instance_name*> \sql server Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）已設定為1（true）。 依預設，這個子機碼設為 0 (False)。  
   
 -   存在於目標伺服器上的 Proxy 帳戶，而該帳戶名稱與執行作業步驟之主要伺服器上的 Proxy 帳戶名稱相同。  
   
@@ -107,7 +106,7 @@ ms.locfileid: "68189138"
      **加入連接**  
      將伺服器加入目標伺服器清單中，但不註冊伺服器。  
   
-     **建立**  
+     **[連接]**  
      變更選取之伺服器的連接屬性。  
   
 5.  從 **[主要伺服器登入認證]** 頁面指定在必要時，是否要為目標伺服器建立新的登入，並指派存取主要伺服器的權限給該登入。  

@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeedc1f735fd296169f704b794d1bb0e69adab22
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480011"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972268"
 ---
 # <a name="administrators-master-data-services"></a>管理員 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，有兩種管理員類型：模型管理員及 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統管理員。  
   
 ## <a name="model-administrators"></a>模型管理員  
- 在[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，模型系統管理員是在 [**模型物件**] 索引標籤上獲派最上層模型物件之 [**更新**] 許可權，而且沒有其他指派許可權的使用者。  
+ 在中 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，模型系統管理員是在 [**模型物件**] 索引標籤上獲派最上層模型物件之 [**更新**] 許可權，而且沒有其他指派許可權的使用者。  
   
 -   如果使用者可以存取總管**** 功能區域，即可加入、刪除及更新此區域中的所有主要資料。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "65480011"
  使用者可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中或透過程式設計方式設定為模型管理員。 如需詳細資訊，請參閱 [建立模型管理員 &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md)。  
   
 ## <a name="master-data-services-system-administrator"></a>Master Data Services 系統管理員  
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統管理員只有一個。 系統管理員是您在建立[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫時，針對**administrator 帳戶**指定的使用者。  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統管理員只有一個。 系統管理員是您在建立資料庫時，針對**Administrator 帳戶**指定的使用者 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統管理員：  
   

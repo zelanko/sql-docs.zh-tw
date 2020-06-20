@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a12a46c1a250ce3d93c9ec2091dc5048ceebd61e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d543045fc5aac67b266ceb94c569a226bfd36f53
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483728"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972218"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>指派階層成員權限 (Master Data Services)
   指派階層成員的權限，提供使用者或群組存取權，以便在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的總管**** 功能區域中檢視資料。  
   
  階層成員權限為選擇性。 它們為必要的模型物件權限提供更細微的控制。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
@@ -48,13 +47,13 @@ ms.locfileid: "65483728"
   
 7.  從 [階層]**** 清單中選取階層。  
   
-8.  按一下 **[編輯]**。  
+8.  按一下 **[編輯]** 。  
   
 9. 展開樹狀結構，然後按一下要指派權限的階層節點。  
   
 10. 從功能表中，選取 [**唯讀**]、[**更新**] 或 [**拒絕**]。  
   
-11. 按一下 **[儲存]** 。  
+11. 按一下 [檔案] 。  
   
     > [!NOTE]  
     >  階層成員權限不會立即生效。 如需詳細資訊，請參閱[立即套用成員權限 &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md)。  

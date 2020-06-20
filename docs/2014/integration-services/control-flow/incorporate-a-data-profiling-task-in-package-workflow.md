@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 969f7d7fb40f4fc40c3735f73699effe9803bbf5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831617"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918838"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>在封裝工作流程中納入資料分析工作
   在早期階段中，資料分析和清除並非自動化處理序的候選項目。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，資料分析工作的輸出通常需要進行視覺化分析和人為判斷，才能決定報告的違規項目是否有意義，或是否為過度報告。 甚至在辨識出資料品質問題之後，您仍然必須仔細地全盤規劃，尋求最佳的清除方法。  
@@ -85,7 +84,7 @@ ms.locfileid: "62831617"
   
 2.  將 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員加入至封裝。 將這個連線管理員設定為使用 NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 並連接至 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的可用執行個體。  
   
-     根據預設，此連線管理員具有下列名稱：\<伺服器名稱>.AdventureWorks1。  
+     根據預設，連接管理員具有下列名稱： \<server name> 。AdventureWorks1.  
   
 3.  將檔案連接管理員加入至封裝。 將這個連接管理員設定為建立資料分析工作的輸出檔。  
   
@@ -102,9 +101,9 @@ ms.locfileid: "62831617"
   
 -   在 **[變數]** 視窗中，加入並設定下列兩個封裝變數：  
   
-    -   為其中一個變數`ProfileConnectionName`輸入名稱，並將此變數的類型設定為 [**字串**]。  
+    -   `ProfileConnectionName`為其中一個變數輸入名稱，並將此變數的類型設定為 [**字串**]。  
   
-    -   輸入其他變數的`AddressLine2NullRatio`名稱，並將此變數的類型設定為**Double**。  
+    -   輸入其他變數的名稱， `AddressLine2NullRatio` 並將此變數的類型設定為**Double**。  
   
 ### <a name="configure-the-data-profiling-task"></a>設定資料分析工作  
  您必須以下列方式來設定資料分析工作：  
@@ -142,9 +141,9 @@ ms.locfileid: "62831617"
   
 4.  在 **[指令碼]** 頁面中，選取您慣用的程式語言。 然後，讓這兩個封裝變數可供指令碼使用：  
   
-    1.  針對`ReadOnlyVariables`選取`ProfileConnectionName`[]。  
+    1.  針對 `ReadOnlyVariables` 選取 [] `ProfileConnectionName` 。  
   
-    2.  針對 [ **ReadWriteVariables**] `AddressLine2NullRatio`，選取。  
+    2.  針對 [ **ReadWriteVariables**]，選取 `AddressLine2NullRatio` 。  
   
 5.  選取 **[編輯指令碼]** 以便開啟指令碼開發環境。  
   

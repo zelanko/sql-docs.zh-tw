@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7119b421f1207a60970e14077bc8c316e998e13f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77cb816a2ecf86b2a535b2e15e34271982ae39fa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893069"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966188"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>完成精靈 (SQL Server 匯入和匯出精靈)
   使用 [**完成嚮導]** 頁面，即可確認您在嚮導中所做的選擇，然後再複製資料。  

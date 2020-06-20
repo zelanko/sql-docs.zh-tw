@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60a56b6d64957198292146d392ea22a572fb8a4e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 9e2411daea2d4b1c4028e9ed0b3143762f2db592
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000958"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933019"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>全文檢索目錄屬性 (一般頁面)
   本章節會顯示在 **[全文檢索目錄屬性]** 對話方塊的 **[一般]** 頁面上，可以使用的選項和功能。  
@@ -25,9 +24,9 @@ ms.locfileid: "83000958"
 > [!NOTE]  
 >  對於 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料庫而言，全文檢索目錄是參考一組全文檢索索引的邏輯概念。 全文檢索目錄是不屬於任何檔案群組的虛擬物件。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
-### <a name="properties"></a>屬性  
+### <a name="properties"></a>[內容]  
  **預設目錄**  
  顯示目錄是否為資料庫的預設目錄。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "83000958"
   
 -   **磁片已滿已暫停**  
   
--   **變更追蹤**  
+-   **Change tracking**  
   
  **項目計數**  
  顯示目錄中全文檢索項目的數目。  
@@ -85,7 +84,7 @@ ms.locfileid: "83000958"
   
 |||  
 |-|-|  
-|**無**|不會執行 **最佳化目錄**、 **重建目錄**，或 **重新擴展目錄** 等作業。|  
+|**None**|不會執行 **最佳化目錄**、 **重建目錄**，或 **重新擴展目錄** 等作業。|  
 |**最佳化目錄**|最佳化目錄的空間利用，並改善查詢的效能。 它還會改善搜尋結果之次序相關性的精確性。<br /><br /> 此動作會執行 ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE。|  
 |**重建目錄**|刪除並重建全文檢索目錄。 如果已變更基礎的目錄屬性 (例如區分腔調字)，就必須執行此項作業。<br /><br /> 為了使重建能順利完成，全文檢索目錄所存在的檔案群組必須在線上，或者可供讀寫。 重建之後，就會重新擴展全文檢索的索引。<br /><br /> 此動作會執行 ALTER FULLTEXT CATALOG *catalog_name* REBUILD。|  
 |**重新擴展目錄**|用資料最近的變更來更新目錄。 此選項不需要關閉目錄。|  

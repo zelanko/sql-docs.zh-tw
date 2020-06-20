@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f78f4bdf08b9a5caf9b2654289bf181080efff02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc52821deeb879022881f838c61823b23c0c10c8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871512"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965864"
 ---
 # <a name="modified-features-contained-database"></a>修改的功能 (自主資料庫)
   下列功能已經修改成部分自主資料庫所支援的功能。 由於功能通常會進行修改，因此它們不會跨越資料庫界限。  

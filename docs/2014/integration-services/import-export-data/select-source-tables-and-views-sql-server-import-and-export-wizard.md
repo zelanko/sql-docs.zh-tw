@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aee638291a4aee2c4ea5d60a69fc206af613e15d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892666"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965548"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>選取來源資料表和檢視 (SQL Server 匯入和匯出精靈)
   使用 [**選取來源資料表和資料檢視**] 頁面，即可指定要從資料來源複製到目的地的資料表和 views。  
   
 > [!NOTE]  
->  當您選取 [資料表複製] 選項時，並不必複製資料表中的所有資料行。 選取目的地資料表之後，請按一下 [編輯對應] 以顯示 [資料**行**對應] 對話方塊。 針對您要略過的資料行，在 [資料**行**對應] 對話方塊的 [**目的地**] 資料行中，選取** \<[忽略>** ]。  
+>  當您選取 [資料表複製] 選項時，並不必複製資料表中的所有資料行。 選取目的地資料表之後，請按一下 [編輯對應] 以顯示 [資料**行**對應] 對話方塊。 **\<ignore>** 針對您要略過的資料行，在 [資料**行**對應] 對話方塊的 [**目的地**] 資料行中選取。  
   
  若要深入瞭解此嚮導，請參閱[SQL Server 匯入和匯出嚮導](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要瞭解啟動精靈的選項，以及成功執行嚮導所需的許可權，請參閱[執行 SQL Server 匯入和匯出嚮導](start-the-sql-server-import-and-export-wizard.md)。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "62892666"
 ## <a name="options"></a>選項。  
   
 ### <a name="tables-and-views-list"></a>資料表和檢視表清單  
- **來源**  
+ **Source**  
  使用這些核取方塊，從可用的資料表和檢視清單中選取要複製到目的地的項目。 如果您選取來源資料表或檢視，並且未執行其他任何動作，就會複製來自來源的結構描述和資料，而不會進行變更。  
   
  **Destination**  
@@ -43,7 +42,7 @@ ms.locfileid: "62892666"
   
 ### <a name="other-options"></a>其他選項  
  **編輯對應**  
- 使用 [資料**行**對應] 對話方塊，即可指定要接收來源資料的目的地資料行。 您可以針對想要略過的資料行\<，在 [資料**行**對應] 對話方塊的 [**目的地**] 資料行中，選取 [忽略>]，只複製資料行的子集。  
+ 使用 [資料**行**對應] 對話方塊，即可指定要接收來源資料的目的地資料行。 您可以 \<ignore> 針對想要略過的資料行，在 [資料**行**對應] 對話方塊的 [**目的地**] 資料行中選取，只複製資料行的子集。  
   
  **預覽**  
  在執行匯入或匯出之前，預覽 [**預覽資料**] 對話方塊中的來源資料以進行驗證。 [**預覽資料**] 對話方塊會顯示多達200個數據列。  

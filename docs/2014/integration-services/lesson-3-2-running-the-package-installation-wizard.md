@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cab0c8a25f4dd95c205c63db1ae056468ebe61c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891576"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965238"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>步驟 2:執行封裝安裝精靈
   在這項工作中，您會執行「封裝安裝精靈」，將「部署教學課程」專案中的封裝部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體上。 只有封裝可以安裝在 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的 sysssispackages 資料表中，部署配套所包含的支援檔案則會部署到檔案系統中。  
@@ -36,7 +35,7 @@ ms.locfileid: "62891576"
   
 4.  在 [部署 SSIS 封裝] 頁面上，選取 [SQL Server 部署]  選項，再選取 [安裝之後驗證封裝]  核取方塊，然後按一下 [下一步]  。  
   
-5.  在 [指定目標 SQL Server] 頁面上的 [伺服器名稱]  方塊中，指定 **(local)** 。  
+5.  在 [指定目標 SQL Server] 頁面上的 [伺服器名稱] 方塊中，指定 **(local)** 。  
   
 6.  如果 SQL Server 的執行個體支援 Windows 驗證，請選取 [使用 Windows 驗證]  ，否則請選取 [使用 SQL Server 驗證]  並提供使用者名稱和密碼。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62891576"
   
 10. 在 [瀏覽資料夾]  對話方塊中，展開 [我的電腦]  ，然後按一下 [本機磁碟 (C:)]  。  
   
-11. 按一下 [建立新資料夾]  ，並且以 **DeploymentTutorialInstall** 取代新資料夾的**新增資料夾**預設名稱。  
+11. 按一下 [建立新資料夾]，並且以 **DeploymentTutorialInstall** 取代新資料夾的**新增資料夾**預設名稱。  
   
     > [!IMPORTANT]  
     >  在組態使用的環境變數值中會參考這個名稱， 因此資料夾和參考的名稱必須相符，否則封裝無法執行。  

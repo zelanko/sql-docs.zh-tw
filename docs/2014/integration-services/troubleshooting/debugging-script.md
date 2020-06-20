@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c8eee57be7c7bb9167c24bec117fd2f88a5bb745
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efc89f76bb3a1ccfd04b63a359befb646b446aa4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62926329"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972728"
 ---
 # <a name="debugging-script"></a>偵錯指令碼
   您可以撰寫指令碼工作和指令碼元件在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中使用的指令碼。  
   
- 您可以在 VSTA 中設定中斷點和編寫中斷點指令碼。 您可以在 VSTA 中管理中斷點，但您也可以使用「 **設計師」提供的 [設定中斷點]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 對話方塊管理中斷點。 如需詳細資訊，請參閱 [偵錯控制流程](debugging-control-flow.md)。  
+ 您可以在 VSTA 中設定中斷點和編寫中斷點指令碼。 您可以在 VSTA 中管理中斷點，但您也可以使用「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供的 [設定中斷點] 對話方塊管理中斷點。 如需詳細資訊，請參閱 [偵錯控制流程](debugging-control-flow.md)。  
   
  [設定中斷點]  對話方塊包含指令碼中斷點。 這些中斷點出現在中斷點清單的底部，並顯示中斷點所在之函數的行號和名稱。 您可以從 [設定中斷點]  對話方塊刪除指令碼中斷點。  
   

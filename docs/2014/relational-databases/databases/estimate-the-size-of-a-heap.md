@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 814175fa78176d14167355bfe188179552c545c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965978"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>估計堆積的大小
   您可以使用下列步驟，估計儲存堆積中的資料所需的空間量：  
@@ -57,13 +56,13 @@ ms.locfileid: "62916742"
      加入至 ***Max_Var_Size*** 的位元組是用於追蹤每個可變長度的資料行。 這個公式假設所有可變長度的資料行是 100% 填滿的。 如果您預期可變長度資料行儲存所佔空間的百分比會比較低，您可以經由調整百分比所得的 ***Max_Var_Size*** 值，取得更精確的整體資料表大小。  
   
     > [!NOTE]  
-    >  您可以結合使定義的資料表總寬度超過 8,060 個位元組的 `varchar`、`nvarchar`、`varbinary` 或 `sql_variant` 資料行。 這些資料行的每個長度仍然必須落在`varchar`、 `nvarchar,``varbinary`或`sql_variant`資料行的8000位元組限制內。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。  
+    >  您可以結合使定義的資料表總寬度超過 8,060 個位元組的 `varchar`、`nvarchar`、`varbinary` 或 `sql_variant` 資料行。 這些資料行的每個長度仍然必須落在、或資料行的8000位元組限制 `varchar` 內 `nvarchar,``varbinary` `sql_variant` 。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。  
   
      如果沒有可變長度資料行，請將 ***Variable_Data_Size*** 設成 0。  
   
 5.  計算資料列總大小：  
   
-     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
+     ***Row_Size***   = ***Fixed_Data_Size***  + ***Variable_Data_Size***  + ***Null_Bitmap*** + 4  
   
      公式中 4 這個值是資料列的資料列標頭負擔。  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62916742"
   
 -   大型物件 (LOB) 值  
   
-     判斷要使用多少空間來儲存 LOB 資料類型`varchar(max)`、 `varbinary(max)`、 `nvarchar(max)`、 `text`、 **Ntextxml**和`image`值的演算法是很複雜的。 只要加入預期的 LOB 值平均大小，並將此值加入堆積大小總計，這樣就已足夠。  
+     判斷要使用多少空間來儲存 LOB 資料類型 `varchar(max)` 、、 `varbinary(max)` `nvarchar(max)` 、 `text` 、 **Ntextxml**和值的演算法 `image` 是很複雜的。 只要加入預期的 LOB 值平均大小，並將此值加入堆積大小總計，這樣就已足夠。  
   
 -   壓縮  
   

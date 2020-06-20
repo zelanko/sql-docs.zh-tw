@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 325242c6660aa49c9358399b38c92d72e21aaf46
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 344c5fd0639876998f1585c32fac5f7599f664e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061661"
 ---
 # <a name="guest-permissions-on-user-databases"></a>使用者資料庫的 Guest 權限
   此規則會判斷 guest 使用者是否有權存取資料庫。 此規則只適用於使用者資料庫。  

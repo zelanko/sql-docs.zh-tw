@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 340e250fde61f8c246099eadafc148278288dee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0548d974e83bfe2b1e103d4458b17078fba8014
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176648"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996473"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
   空間資料有兩種類型：  資料類型支援平面或 Euclidean (扁平表面) 資料。  資料類型同時符合開放式地理空間協會 (Open Geospatial Consortium，OGC) 的 SQL 簡單特徵規格 1.1.0 版，而且符合 SQL MM (ISO 標準)。
@@ -30,19 +29,19 @@ ms.locfileid: "78176648"
 >  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中空間功能 (包括空間資料類型的增強功能) 的詳細描述和範例，請下載技術白皮書： [New Spatial Features in SQL Server Code-Named "Denali"](https://go.microsoft.com/fwlink/?LinkId=226407)(SQL Server 代號 "Denali" 中的新空間功能)。
 
 ##  <a name="spatial-data-objects"></a><a name="objects"></a> 空間資料物件
- `geometry` 和 `geography` 資料類型支援十六種空間資料物件或執行個體類型。 但是，其中只有十一種執行個體類型「可具現化」**；因此，您可以在資料庫中建立及處理這些執行個體 (或加以具現化)。 這些實例會從父資料類型衍生某些屬性，以將其`Points`區分為、 **linestring、CircularStrings** `CompoundCurves`、、 `Polygons`， `CurvePolygons`或`geometry`做`geography`為中的`GeometryCollection`多個或實例。 `Geography` 類型具有一種額外的執行個體類型：`FullGlobe`。
+ `geometry` 和 `geography` 資料類型支援十六種空間資料物件或執行個體類型。 但是，其中只有十一種執行個體類型「可具現化」  ；因此，您可以在資料庫中建立及處理這些執行個體 (或加以具現化)。 這些實例會從父資料類型衍生某些屬性，以將其區分為 `Points` 、 **linestring、CircularStrings**、 `CompoundCurves` 、 `Polygons` ， `CurvePolygons` 或做為 `geometry` 中的多個或 `geography` 實例 `GeometryCollection` 。 `Geography` 類型具有一種額外的執行個體類型：`FullGlobe`。
 
- 下圖說明 `geometry` 和 `geometry` 資料類型所根據的 `geography` 階層。 `geometry`和`geography`的可具現化類型會以藍色表示。
+ 下圖說明 `geometry` 和 `geometry` 資料類型所根據的 `geography` 階層。 和的可具 `geometry` 現化類型 `geography` 會以藍色表示。
 
  ![Geometry 類型的階層](../../database-engine/media/geom-hierarchy.gif "Geometry 類型的階層")
 
- 如圖`geometry`所示，和`geography`資料類型的十種可具現化`Point`類型`MultiPoint`為`LineString`、 `CircularString`、 `MultiLineString`、 `CompoundCurve`、 `Polygon` `CurvePolygon` `MultiPolygon`、、、、 `GeometryCollection`和。 geography 資料類型還有一種額外的可具現化類型：`FullGlobe`。 `geometry`和`geography`類型可以辨識特定的實例（只要它是格式正確的實例），即使未明確定義實例亦然。 例如，如果您使用 STPointFromText （ `Point` ）方法明確定義實例， `geometry`並`geography`將實例辨識為`Point`，只要方法輸入的格式正確。 如果您使用 `STGeomFromText()` 方法定義相同的執行個體，`geometry` 和 `geography` 資料類型都會將此執行個體辨識為 `Point`。
+ 如圖所示，和資料類型的十種 `geometry` 可具現化類型 `geography` 為 `Point` 、 `MultiPoint` 、、 `LineString` 、 `CircularString` `MultiLineString` `CompoundCurve` `Polygon` `CurvePolygon` `MultiPolygon` `GeometryCollection` 、、、、和。 geography 資料類型還有一種額外的可具現化類型：`FullGlobe`。 `geometry`和 `geography` 類型可以辨識特定的實例（只要它是格式正確的實例），即使未明確定義實例亦然。 例如，如果您 `Point` 使用 STPointFromText （）方法明確定義實例， `geometry` 並將 `geography` 實例辨識為 `Point` ，只要方法輸入的格式正確。 如果您使用 `STGeomFromText()` 方法定義相同的執行個體，`geometry` 和 `geography` 資料類型都會將此執行個體辨識為 `Point`。
 
  geometry 和 geography 類型的子類型可區分為簡單與集合類型。  某些方法 (例如 `STNumCurves()` ) 只能使用簡單類型。
 
  簡單類型包括：
 
--   [Point](../spatial/point.md)
+-   [點](../spatial/point.md)
 
 -   [LineString](../spatial/linestring.md)
 
@@ -84,22 +83,22 @@ ms.locfileid: "78176648"
 
  在橢圓體系統中，多邊形如果沒有方向的話，將沒有任何意義或是會模稜兩可。 例如，包圍赤道的環形是要描述北半球還是南半球？ 如果我們使用 `geography` 資料類型來儲存空間執行個體，就必須指定此環形的方向，並正確描述此執行個體的位置。 在橢圓體系統中，多邊形的內部是由左側規則定義。
 
- 當相容性層級為100或以下[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的時`geography` ，資料類型會有下列限制：
+ 當相容性層級為100或以下的時 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ， `geography` 資料類型會有下列限制：
 
 -   每一個 `geography` 執行個體都必須納入單一半球。 大於半球的空間物件將無法儲存。
 
 -   當來自開放式地理空間協會 (Open Geospatial Consortium，OGC) 已知的文字 (Well-Known Text，WKT) 或已知的二進位 (Well-Known Binary，WKB) 表示法的任何 `geography` 執行個體產生大於半球的物件時，都會擲回 `ArgumentException`。
 
--   如果`geography`方法的結果無法納入單一半球中， `geography`則需要兩個實例輸入的資料類型方法（例如 STIntersection （）、STUnion （）、STDifference （）和 STSymDifference （））將會傳回 null。 如果輸出超過單一半球，STBuffer() 也會傳回 null。
+-   `geography`如果方法的結果無法納入單一半球中，則需要兩個實例輸入的資料類型方法（ `geography` 例如 STIntersection （）、STUnion （）、STDifference （）和 STSymDifference （））將會傳回 null。 如果輸出超過單一半球，STBuffer() 也會傳回 null。
 
  在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中，`FullGlobe` 是一種特殊類型的多邊形，它涵蓋了整個地球。 `FullGlobe` 有面積，但沒有框線或頂點。
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>外部和內部環形在 geography 資料類型中不重要
- 適用于 SQL 規格的 OGC 簡單功能會討論外部環形和內部環形，但是這種區別對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography`資料類型而言並沒有意義;可以將多邊形的任何環形視為外部環形。
+ 適用于 SQL 規格的 OGC 簡單功能會討論外部環形和內部環形，但是這種區別對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` 資料類型而言並沒有意義; 任何多邊形的環形都可以成為外部環形。
 
  如需有關 OGC 規格的詳細資訊，請參閱下列主題：
 
--   [OGC 規格，簡單功能存取第 1 部份 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93627)
+-   [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93627)
 
 -   [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628) \(英文\)
 
@@ -111,7 +110,7 @@ ms.locfileid: "78176648"
 
  圖 C 和 D 顯示如何將直線線段定義為圓弧線段。  請注意，仍然需要三個點才能定義圓弧線段，這與只由兩個點定義的一般直線線段不同。
 
- 在圓弧線段類型上運作的方法會使用直線線段來估計圓弧。用來估計弧線的線段數目將取決於弧線的長度和曲率。您可以針對每個圓弧線段類型來儲存 Z 值;不過，方法不會在計算中使用 Z 值。
+ 在圓弧線段類型上運作的方法會使用直線線段來模擬圓弧。用於模擬弧形的直線線段數目將取決於弧形的長度和曲度。您可以針對每種圓弧線段類型儲存 Z 值。不過，方法不會在計算中使用 Z 值。
 
 > [!NOTE]
 >  如果針對圓弧線段提供了 Z 值，則圓弧線段中所有點的這些值都必須相同，系統才會接受輸入。 例如：系統可接受 `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` ，但無法接受 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` 。
@@ -152,7 +151,7 @@ LS LengthCS Length
 5.65685...6.28318...
 ```
 
- 下圖顯示每種類型的儲存方式（紅線顯示`LineString``@g1`，藍線顯示`CircularString``@g2`）：
+ 下圖顯示每種類型的儲存方式（紅線顯示 `LineString``@g1` ，藍線顯示 `CircularString``@g2` ）：
 
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")
 
@@ -192,7 +191,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
- `CompoundCurve`實例允許`LineString`和`CircularString`元件，因此只需要知道圓形圖配量之直線線段的兩個點。  此程式碼範例會示範如何使用 `CompoundCurve` 來儲存相同的圖形：
+ `CompoundCurve`實例允許 `LineString` 和 `CircularString` 元件，因此只需要知道圓形圖配量之直線線段的兩個點。  此程式碼範例會示範如何使用 `CompoundCurve` 來儲存相同的圖形：
 
 ```sql
 DECLARE @g geometry;

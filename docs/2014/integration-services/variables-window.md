@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 258fdee44c2ab67babfa366f627b7b297c5f1535
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877873"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972558"
 ---
 # <a name="variables-window"></a>變數視窗
   使用 [變數]  視窗，即可建立和修改使用者定義的變數，並檢視系統變數。  
   
- 依預設，[變數]  視窗位於  **中 [SSIS 設計師] 的 [連線管理員]** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 區域下方。 如果您未看見 [變數]  視窗，請按一下 [SSIS]  功能表上的 [變數]  來顯示視窗。  
+ 依預設，[變數] 視窗位於 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中 [SSIS 設計師] 的 [連線管理員] 區域下方。 如果您未看見 [變數] 視窗，請按一下 [SSIS] 功能表上的 [變數] 來顯示視窗。  
   
- 您可以將 View.Variables 命令對應到您在 [選項]  對話方塊的 [鍵盤]  頁面中所選擇的組合鍵，以選擇性地顯示 [變數]  視窗。  
+ 您可以將 View.Variables 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [變數] 視窗。  
   
 > [!NOTE]
 >  `Name` 和 `Namespace` 屬性的值必須以 Unicode Standard 2.0 中定義的字母字元或底線 (_) 為開頭。 後續的字元可以是 Unicode Standard 2.0 中定義的字母或數字，或是底線 (\_)。  
@@ -64,15 +63,15 @@ ms.locfileid: "62877873"
  檢視變數值。 您可以更新使用者定義變數的值。 此值可以是常值或運算式，而且此值可以是多行字串。 若要將運算式指派給變數，請按一下 [變數]**** 視窗中 [運算式]**** 資料行旁邊的省略符號按鈕。  
   
  `Namespace`  
- 檢視命名空間名稱。 使用者自訂變數一開始是在**使用者**命名空間中建立，但是您可以變更`Namespace`欄位中的命名空間名稱。 若要顯示此資料行，請按一下 [方格選項]****。  
+ 檢視命名空間名稱。 使用者自訂變數一開始是在**使用者**命名空間中建立，但是您可以變更欄位中的命名空間名稱 `Namespace` 。 若要顯示此資料行，請按一下 [方格選項]****。  
   
  **引發變更事件**  
  指出某個值變更時，是否要引發 `OnVariableValueChanged` 事件。 您可以更新使用者定義及系統變數的值。 依預設，[變數]**** 視窗不會列出此資料行。 若要顯示此資料行，請按一下 [方格選項]****。  
   
- **描述**  
+ **說明**  
  檢視變數描述。 您可以變更使用者定義變數的描述。 依預設，[變數]**** 視窗不會列出此資料行。 若要顯示此資料行，請按一下 [方格選項]****。  
   
- **運算式**  
+ **運算是**  
  檢視指派給變數的運算式。 若要指派運算式，請按一下省略符號按鈕。  
   
  若您將運算式指派給變數，變數旁邊會顯示特殊圖示標記。 此特殊圖示標記也會顯示在已經設定運算式的連接管理員及工作旁邊。  

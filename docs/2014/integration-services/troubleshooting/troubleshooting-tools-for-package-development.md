@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e29d088b8ea61c0d7fc58b45097f703a67bd1df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62885569"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972708"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>疑難排解封裝開發的工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中開發封裝時可以用於疑難排解封裝的功能和工具。  
@@ -41,7 +40,7 @@ ms.locfileid: "62885569"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含以下額外的功能，以協助您避免驗證錯誤：  
   
--   **無法使用資料來源時，將所有封裝和所有連線設為離線工作**。 您可以從 **[SSIS]** 功能表啟用 **[離線工作]** 。 與`DelayValidation`屬性不同的是，即使在開啟封裝之前，仍可使用 [**離線工作**] 選項。 您也可以啟用 **[離線工作]** 來加速設計師中的作業，並只有在想要驗證封裝時才停用這個功能。  
+-   **無法使用資料來源時，將所有封裝和所有連線設為離線工作**。 您可以從 **[SSIS]** 功能表啟用 **[離線工作]** 。 與屬性不同的 `DelayValidation` 是，即使在開啟封裝之前，仍可使用 [**離線工作**] 選項。 您也可以啟用 **[離線工作]** 來加速設計師中的作業，並只有在想要驗證封裝時才停用這個功能。  
   
 -   **在執行階段前無效的封裝元素上設定 DelayValidation 屬性**。 您可以將封裝元素 (其組態在設計階段無效) 的 `DelayValidation` 設為 `True`，以避免發生驗證錯誤。 例如，您可能有一項會使用目的地資料表的資料流程工作，而這個目的地資料表卻要等到執行 SQL 工作在執行階段建立資料表後才會存在。 `DelayValidation` 屬性可以在封裝層級啟用，也可以在封裝所包含的個別工作和容器層級啟用。 一般而言，當您部署封裝時，必須讓相同封裝元素上的這個屬性設為 `True`，以避免在執行階段發生相同的驗證錯誤。  
   

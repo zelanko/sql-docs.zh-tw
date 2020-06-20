@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 719b0b357767fcc4412663449a6a7bd929b34cd3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965288"
 ---
 # <a name="step-4-adding-package-configurations"></a>步驟 4：新增封裝組態
   在這項工作中，您會為每個封裝加入組態。 組態會在執行階段更新封裝屬性和封裝物件的值。  
@@ -42,12 +41,12 @@ ms.locfileid: "62767640"
   
 5.  在 [封裝組態精靈] 的歡迎使用頁面上，按一下 [下一步]  。  
   
-6.  在 [選取設定類型] 頁面上，選取 [設定**類型**] 清單中的 [ **XML 設定檔**]，選取 [設定**位置儲存在環境變數**中] 選項，然後在清單中輸入`DataTransfer,`或選取**DataTransfer**環境變數。  
+6.  在 [選取設定類型] 頁面上，選取 [設定**類型**] 清單中的 [ **XML 設定檔**]，選取 [設定**位置儲存在環境變數**中] 選項，然後 `DataTransfer,` 在清單中輸入或選取**DataTransfer**環境變數。  
   
     > [!NOTE]  
     >  若要在清單中提供環境變數，可能必須在加入變數之後重新啟動電腦。 如果不想要重新啟動電腦，可以輸入環境變數的名稱。  
   
-7.  按 [下一步]  。  
+7.  按 [下一步] 。  
   
 8.  在 [正在完成精靈] 頁面的 [組態名稱]  方塊中，輸入「DataTransfer 環境變數組態」  、在 [預覽]  窗格中檢閱組態內容，然後按一下 [完成]  。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62767640"
   
 10. 在 [連接管理員] 內，展開 [NewCustomers]，然後選取 [連接字串]  核取方塊。  
   
-11. 按 [下一步]  。  
+11. 按 [下一步] 。  
   
 12. 在 [正在完成精靈] 頁面的 [組態名稱]  方塊中，輸入「DataTransfer 組態」  、檢閱組態的內容，然後按一下 [完成]  。  
   
@@ -93,12 +92,12 @@ ms.locfileid: "62767640"
   
 5.  在 [封裝組態精靈] 的歡迎使用頁面上，按一下 [下一步]  。  
   
-6.  在 [選取設定類型] 頁面上，選取 [設定**類型**] 清單中的 [ **XML 設定檔**]，選取 [設定**位置儲存在環境變數**中] 選項，然後輸入`LoadXMLData`或選取清單中的`LoadXMLData`環境變數。  
+6.  在 [選取設定類型] 頁面上，選取 [設定**類型**] 清單中的 [ **XML 設定檔**]，選取 [設定**位置儲存在環境變數**中] 選項，然後輸入 `LoadXMLData` 或選取 `LoadXMLData` 清單中的環境變數。  
   
     > [!NOTE]  
     >  若要在清單中提供環境變數，可能必須在加入變數之後重新啟動電腦。  
   
-7.  按 [下一步]  。  
+7.  按 [下一步] 。  
   
 8.  在 [正在完成精靈] 頁面的 [組態名稱]  方塊中，輸入「LoadXMLData EV 組態」  、檢閱組態的內容，然後按一下 [完成]  。  
   

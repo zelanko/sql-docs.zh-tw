@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da56673e05c092c965554b76572ac3b0486d2110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210949"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044164"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>使用物件總管執行視需要評估
   在這項工作中，您將使用 [物件總管]，針對 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的單一執行個體，為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行最佳作法原則的視需要評估。  
@@ -23,11 +22,11 @@ ms.locfileid: "68210949"
 > [!NOTE]  
 >  您也可以透過已註冊的伺服器評估單一執行個體的原則。 如需詳細資訊，請參閱[使用已註冊的伺服器執行隨選評估](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md)。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  這一課是以 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本為基礎。  
   
 > [!NOTE]  
->  若要針對執行[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]中的實例執行最佳作法原則的視需要評估，您必須使用使用[已註冊的伺服器執行隨選評估](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md)主題中的程式。  
+>  若要針對執行中的實例執行最佳作法原則的視需要評估 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] ，您必須使用使用[已註冊的伺服器執行隨選評估](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md)主題中的程式。  
   
 ### <a name="to-perform-an-on-demand-evaluation-by-using-object-explorer"></a>若要使用物件總管執行視需要評估  
   
@@ -40,7 +39,7 @@ ms.locfileid: "68210949"
   
 3.  在 [**評估原則**] 對話方塊中，按一下 [**來源**] 方塊旁的省略號（**...**）按鈕。  
   
-4.  在 [**選取來源**] 對話方塊中，您可以選取 [檔案 **] 或 [** **伺服器**] 做為要評估之原則檔案的來源。 如果您按一下 [**伺服器**]，可以針對先前匯入本機或遠端伺服器上以原則為基礎之管理的任何最佳作法原則，執行視需要評估。 在本教學課程**中，您將按一下 [** 檔案]，然後選取您想要評估的個別原則檔案。 若要這樣做，請執行下列步驟：  
+4.  在 [**選取來源**] 對話方塊中，您可以選取 [檔案 **] 或 [** **伺服器**] 做為要評估之原則檔案的來源。 如果您按一下 [**伺服器**]，可以針對先前匯入本機或遠端伺服器上以原則為基礎之管理的任何最佳作法原則，執行視需要評估。 在本教學課程**中，您將按一下 [** 檔案]，然後選取您想要評估的個別原則檔案。 若要這樣做，請遵循下列步驟：  
   
     1.  按一下 **[** 檔案]。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "68210949"
 6.  對於某些原則失敗，以原則為基礎的管理可讓您立即強制符合目標上的原則。 若是此類失敗，失敗的原則旁邊會出現一個核取方塊。 如果您**選取此核取方塊，[套用**] 按鈕就會變成可用。 當**您按一下 [** 套用] 時，將會自動更新目標實例上不符合規範的設定。  
   
     > [!CAUTION]  
-    >  請在自動更新目標執行個體之前，確認您完全了解原則設定。 我們建議您在選取一個或多個核取方塊後，按一下 [**腳本**]，然後選擇輸出位置，以便您可以在套用[!INCLUDE[tsql](../includes/tsql-md.md)]變更之前，先檢查基礎程式碼。  
+    >  請在自動更新目標執行個體之前，確認您完全了解原則設定。 我們建議您在選取一個或多個核取方塊後，按一下 [**腳本**]，然後選擇輸出位置，以便您可以在套用 [!INCLUDE[tsql](../includes/tsql-md.md)] 變更之前，先檢查基礎程式碼。  
   
 7.  若要查看原則的詳細結果，請按一下 [**結果**] 資料表中的原則。  
   

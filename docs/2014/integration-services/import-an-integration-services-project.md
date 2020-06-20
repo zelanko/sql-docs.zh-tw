@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 3301c328-b0f5-4517-915c-93713413e453
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ac28a67051299b0dbdfc7010d9abe20d0d2d2493
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5191da78fc32d72c54fa6da925bd419685b90152
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058167"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965658"
 ---
 # <a name="import-an-integration-services-project"></a>匯入 Integration Services 專案
   使用 [[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 匯入專案精靈]**** 從現有的部署檔 (.ispac)，或從部署到 Integration Services 目錄的專案建立一個專案。 當您沒有專案的原始副本，但又想從 .ispac 檔或 SSISDB 目錄建立一個專案時，此功能特別有用。  
   
 ### <a name="to-import-a-project"></a>若要匯入專案  
   
-1.  在[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中，**按一下 [檔案**] 功能表上的 [**新增** > **專案**]。  
+1.  在中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ， **New**按一下 [檔案]  >  功能表上的 [新增**專案**]。 **File**  
   
 2.  在 **[新增專案]** 視窗的 **[已安裝的範本]** 區域中，展開 **[Business Intelligence]**，然後按一下 **[Integration Services]**。  
   

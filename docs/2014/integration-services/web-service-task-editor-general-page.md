@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 254680ce380b88aca01184bb744a7dde1b8e5611
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054534"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972476"
 ---
 # <a name="web-service-task-editor-general-page"></a>Web 服務工作編輯器 (一般頁面)
   使用 [Web 服務工作編輯器]**** 對話方塊的 [一般]**** 頁面，來指定 HTTP 連接管理員、指定 Web 服務工作使用的 Web 服務描述語言 (WSDL) 檔案的位置、描述 Web 服務工作，以及下載 WSDL 檔案。  
@@ -28,7 +27,7 @@ ms.locfileid: "66054534"
   
 ## <a name="options"></a>選項。  
  **HTTPConnection**  
- 在清單中選取連線管理員，或按一下\<[**新增連接 ...** ]> 建立新的連線管理員。  
+ 在清單中選取連接管理員，或按一下 \<**New connection...**> 以建立新的連線管理員。  
   
 > [!IMPORTANT]  
 >  HTTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
@@ -44,7 +43,7 @@ ms.locfileid: "66054534"
   
 -   在 [WSDLFile]**** 選項中選取此空白檔案。  
   
--   將**OverwriteWSDLFile**的值設定為`True` ，即可讓空的檔案以實際的 WSDL 檔案覆寫。  
+-   將**OverwriteWSDLFile**的值設定為 `True` ，即可讓空的檔案以實際的 WSDL 檔案覆寫。  
   
 -   按一下 [下載 WSDL]****，下載實際的 WSDL 檔案並覆寫空白檔案。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66054534"
  **OverwriteWSDLFile**  
  指出是否可以覆寫 Web 服務工作的 WSDL 檔案。  
   
- 如果您想要使用 [**下載 wsdl** ] 按鈕來下載 wsdl 檔案，請將此值`True`設定為。  
+ 如果您想要使用 [**下載 wsdl** ] 按鈕來下載 wsdl 檔案，請將此值設定為 `True` 。  
   
  **名稱**  
  為 Web 服務工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
@@ -62,7 +61,7 @@ ms.locfileid: "66054534"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入 Web 服務工作的描述。  
   
  **下載 WSDL**  

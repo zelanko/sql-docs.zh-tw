@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 768a70dfe94af6f8d65f7c76fa08d3dff650fe7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917081"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965888"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>使用卸離與附加移動資料庫 (Transact-SQL)
   此主題描述如何將卸離的資料庫移動到另一個位置，再重新附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中相同或不同的伺服器執行個體。 不過，建議您使用 ALTER DATABASE 計畫的重新放置程序來移動資料庫，而不要使用卸離和附加。 如需詳細資訊，請參閱 [移動使用者資料庫](move-user-databases.md)。  
@@ -49,9 +48,9 @@ ms.locfileid: "62917081"
 3.  附加複製的檔案。 如需詳細資訊，請參閱 [Attach a Database](attach-a-database.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會在 [查詢編輯器] [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]視窗中執行語句的複本，並連接到附加的伺服器實例。  
+ 下列範例 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 會在 [查詢編輯器] 視窗中執行語句的複本，並連接到附加的伺服器實例。  
   
-1.  卸離[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]語句：  
+1.  卸離 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 語句：  
   
     ```  
     USE master;  

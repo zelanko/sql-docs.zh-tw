@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6053418c624c2ab107a35a02c382576dcb41a534
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877699"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972438"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>以程式設計方式使用連接管理員
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，當您在受控碼使用連線管理員時，最常呼叫的方法是相關聯之連線管理員類別的 AcquireConnection 方法。 當您撰寫受控碼時，必須呼叫 AcquireConnection 方法才能使用連線管理員的功能。 不論是在指令碼工作、指令碼元件、自訂物件或是自訂應用程式中撰寫 Managed 程式碼，都必須呼叫這個方法。  
@@ -61,7 +60,7 @@ ms.locfileid: "62877699"
 |MULTIFILE|多個檔案連接管理員|`System.String`|其中一個檔案的路徑。|  
 |MULTIFLATFILE|多個一般檔案連接管理員|`System.String`|其中一個檔案的路徑。|  
 |SMOServer|SMO 連線管理員|`Microsoft.SqlServer.Management.Smo.Server`||  
-|SMTP|SMTP 連接管理員|`System.String`|例如：`SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|SMTP 連接管理員|`System.String`|例如： `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|WMI 連接管理員|`System.Management.ManagementScope`||  
 |SQLMOBILE|SQL Server Compact 連接管理員|`System.Data.SqlServerCe.SqlCeConnection`||  
   

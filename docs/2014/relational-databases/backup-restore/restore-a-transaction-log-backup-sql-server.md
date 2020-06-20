@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68fe4bbc199d6555bd490d25f92491100b8bbfcf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875676"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957151"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>還原交易記錄備份 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中還原交易記錄備份。  
@@ -100,7 +99,7 @@ ms.locfileid: "62875676"
     |------------|-----------|  
     |**Restore**|選取的核取方塊表示要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
-    |**元件**|備份的元件：**資料庫** **檔案**，或 \<空白> (適用於交易記錄)。|  
+    |**元件**|已**備份的元件**：**資料庫**、檔案或 \<blank> （適用于交易記錄）。|  
     |**Database**|執行備份所涉及的資料庫名稱。|  
     |**開始日期**|備份作業開始的日期和時間，以用戶端的區域設定表示。|  
     |**完成日期**|備份作業完成的日期和時間，以用戶端的區域設定表示。|  
@@ -130,7 +129,7 @@ ms.locfileid: "62875676"
   
         |頁首|值|  
         |------------|-----------|  
-        |\<空白>|顯示選取標示的核取方塊。|  
+        |\<blank>|顯示選取標示的核取方塊。|  
         |**交易標示**|在認可交易時，由使用者所指定之標示交易的名稱。|  
         |**日期**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中記錄的顯示，而非依照用戶端電腦的日期和時間。|  
         |**說明**|在認可交易時，由使用者所指定之標示交易的描述 (如果有的話)。|  
@@ -146,9 +145,9 @@ ms.locfileid: "62875676"
   
          將發行資料庫還原至並非建立該資料庫的伺服器時，就會保留複寫設定。  
   
-         這個選項只能搭配 [**回復未認可的交易，讓資料庫保持備**妥可用 ...] 選項使用（稍後會說明），這相當於使用`RECOVERY`選項還原備份。  
+         這個選項只能搭配 [**回復未認可的交易，讓資料庫保持備**妥可用 ...] 選項使用（稍後會說明），這相當於使用選項還原備份。 `RECOVERY`  
   
-         核取此選項相當於在`KEEP_REPLICATION` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`語句中使用選項。  
+         核取此選項相當於 `KEEP_REPLICATION` 在語句中使用選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 。  
   
     -   **還原每個備份之前先提示**  
   
@@ -162,19 +161,19 @@ ms.locfileid: "62875676"
   
          僅有 **db_owner**、 **dbcreator**或 **系統管理員**的成員可以使用還原資料庫。  
   
-         核取此選項相當於在`RESTRICTED_USER` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`語句中使用選項。  
+         核取此選項相當於在 `RESTRICTED_USER` 語句中使用選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 。  
   
 10. 針對 **[復原狀態]** 選項，指定資料庫在還原作業之後的狀態。  
   
     -   **回復未認可的交易，讓資料庫保持備妥可用。無法還原其他交易記錄。(RESTORE WITH RECOVERY)**  
   
-         復原資料庫。 此選項相當於`RECOVERY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`語句中的選項。  
+         復原資料庫。 此選項相當於 `RECOVERY` 語句中的選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 。  
   
          只有當您沒有任何要還原的記錄檔時，才選擇這個選項。  
   
     -   **讓資料庫保持不運作，且不回復未認可的交易。可以還原其他交易記錄。(RESTORE WITH NORECOVERY)**  
   
-         讓資料庫處於無法復原狀態，也就是 `RESTORING` 的狀態。 此選項相當於在`NORECOVERY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`語句中使用選項。  
+         讓資料庫處於無法復原狀態，也就是 `RESTORING` 的狀態。 此選項相當於 `NORECOVERY` 在語句中使用選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 。  
   
          選擇這個選項時，將無法使用 **[保留複寫設定]** 選項。  
   
@@ -183,7 +182,7 @@ ms.locfileid: "62875676"
   
     -   **讓資料庫保持唯讀模式。恢復未認可的交易，但是將恢復動作儲存在檔案中，以便能夠反轉復原結果。(RESTORE WITH STANDBY)**  
   
-         讓資料庫處於待命狀態。 此選項相當於在`STANDBY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`語句中使用選項。  
+         讓資料庫處於待命狀態。 此選項相當於 `STANDBY` 在語句中使用選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 。  
   
          您必須指定待命資料庫檔案，才能選擇此選項。  
   

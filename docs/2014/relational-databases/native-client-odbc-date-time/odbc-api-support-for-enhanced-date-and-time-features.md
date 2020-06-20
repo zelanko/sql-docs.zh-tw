@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 02bfbf76b460a74e01311edd59de9d1d3322c089
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fc11dfbc9c6a54ae2c85bb9d7efbe08bc09fe369
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020090"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>增強型日期和時間功能的 ODBC API 支援
   下列 ODBC API 支援增強的日期和時間功能：  

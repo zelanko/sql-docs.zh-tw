@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23d45b761909896009e614a8501e728d86b424b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061174"
 ---
 # <a name="manage-files-with-encoding"></a>利用編碼管理檔案
   為了有助於在特定語言和特定平台中顯示您的程式碼，您可以建立檔案與特定字元編碼的關聯。  
@@ -42,7 +41,7 @@ ms.locfileid: "62823795"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>利用不同編碼或行尾結束符號類型來儲存檔案  
   
-1.  **在 [檔案**] 功能表上，按一下 [**將檔案名儲存\<> 為**]。  
+1.  在 [檔案]  功能表上按一下 [另存新檔] **\<filename>** 。  
   
 2.  在 [另存新檔]  對話方塊中，展開 [儲存]  按鈕，再按一下 [使用編碼方式儲存]  。  
   

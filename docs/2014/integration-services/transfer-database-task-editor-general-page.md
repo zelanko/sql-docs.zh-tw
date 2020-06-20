@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f65927a-5835-45ee-9c19-e33f00d0755c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4a78fb3dd052a7e275b91073ccf2089510b97e44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36f27bc789a5af9077225e3c507fadf54fb9ddfa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055101"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972856"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>傳送資料庫工作編輯器 (一般頁面)
   使用 **[傳送資料庫工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述傳送資料庫工作。 傳送資料庫工作會在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的兩個執行個體間，複製或移動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫。 這項工作也可用來在同一部伺服器內複製資料庫。 如需這項工作的詳細資訊，請參閱 [傳送資料庫工作](control-flow/transfer-database-task.md)。  
@@ -31,7 +30,7 @@ ms.locfileid: "66055101"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入傳送資料庫工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

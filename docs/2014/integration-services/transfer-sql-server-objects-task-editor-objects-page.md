@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9115b2a41111d65c4855cffcdc44e7fcd755285b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054870"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972740"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>傳送 SQL Server 物件工作編輯器 (物件頁面)
   使用 [傳送 SQL Server 物件工作編輯器]**** 對話方塊的 [物件]**** 頁面，即可指定用於從某個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體將一或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件複製到另一個執行個體的屬性。 資料表、檢視、預存程序和使用者自訂函數是您可以複製的一些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件範例。 如需有關這項工作的詳細資訊，請參閱＜ [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)＞。  
@@ -29,13 +28,13 @@ ms.locfileid: "66054870"
   
 ## <a name="static-options"></a>靜態選項  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下** \<[新增連接 ...] >** ，建立與來源伺服器的新連接。  
+ 在清單中選取 SMO 連線管理員，或按一下 **\<New connection...>** 以建立與來源伺服器的新連接。  
   
  **SourceDatabase**  
  在來源伺服器上選取會從中複製物件的資料庫。  
   
  **[Destinationconnection**  
- 在清單中選取 SMO 連線管理員，或按一下** \<[新增連接 ...] >** ，以建立目的地伺服器的新連接。  
+ 在清單中選取 SMO 連線管理員，或按一下 **\<New connection...>** 以建立目的地伺服器的新連接。  
   
  **DestinationDatabase**  
  在目的地伺服器上選取物件會被複製到的資料庫。  
@@ -55,7 +54,7 @@ ms.locfileid: "66054870"
 |值|描述|  
 |-----------|-----------------|  
 |**取代**|目的地伺服器上的資料會被覆寫。|  
-|**追加**|從來源伺服器複製的資料會附加至目的地伺服器上的現有資料。|  
+|**Append**|從來源伺服器複製的資料會附加至目的地伺服器上的現有資料。|  
   
 > [!NOTE]  
 >  只有 [CopyData]**** 設定為 [True]**** 時，才能使用 [ExistingData]**** 選項。  

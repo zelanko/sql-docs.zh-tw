@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c59a0444fc0a7b1b685b5a4f6b30a835165fae0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049132"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000893"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>空間索引對話方塊 (Visual Database Tools)
   使用 [空間索引]  對話方塊來建立 **geometry** 或 **geography** 資料類型之資料行 (「空間資料行」  (Spatial Column)) 的索引，該資料行無法使用 [索引/索引鍵]  對話方塊來建立索引。 每一個空間資料行都可以有一個以上的空間索引，但是一次只能建立一個。  

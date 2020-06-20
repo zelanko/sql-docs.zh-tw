@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a9dc6aadde75d1d4df797f85c0343bb11083b80f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5db3b83ab65d854f3a4d2182d9a4a1314e097681
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702056"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021057"
 ---
 # <a name="disconnecting-from-a-data-source"></a>從資料來源中斷連接
   當應用程式完成使用資料來源時，它會呼叫**SQLDisconnect**。 **SQLDisconnect**會釋放在連接上配置的任何語句，並中斷驅動程式與資料來源的連線。 中斷連線之後，應用程式可以呼叫[SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md)來釋放連接控制碼。 在結束之前，應用程式也會呼叫**SQLFreeHandle**來釋放環境控制碼。  

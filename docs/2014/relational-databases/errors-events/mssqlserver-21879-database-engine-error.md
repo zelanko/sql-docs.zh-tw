@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bda15bcb4d96cc126aa87a986fa667a56730637
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054224"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
     
@@ -52,10 +51,10 @@ ms.locfileid: "62869175"
   
  在散發者以外之節點上執行的複寫代理程式 (例如在訂閱者端執行的合併代理程式) 所起始的 `sp_get_redirected_publisher` 呼叫傳回錯誤 21879 時，就會存在一些特殊考量。 如果 Windows 驗證用於重新導向發行者的連接，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就必須設定為 Kerberos 驗證，才能成功建立連接。 當您使用 Windows 驗證而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並未設定為 Kerberos 驗證時，在訂閱者端執行的合併代理程式就會收到表示 'NT AUTHORITY\ANONYMOUS LOGON' 登入失敗的錯誤 18456。 可解決此問題的方式有三種：  
   
--   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為 Kerberos 驗證。 請參閱 **線上叢書中的**Kerberos 驗證和 SQL Server[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為 Kerberos 驗證。 請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書中的 **Kerberos 驗證和 SQL Server**。  
   
--   使用`sp_changedistpublisher`來變更與 msdb.dbo.msdistpublishers 中原始發行者相關聯的安全性模式，以及指定用於連接的登入和密碼。  
+-   使用 `sp_changedistpublisher` 來變更與 msdb.dbo.msdistpublishers 中原始發行者相關聯的安全性模式，以及指定用於連接的登入和密碼。  
   
--   在「合併代理程式」命令列上指定命令列參數*BypassPublisherValidation* ，以`sp_get_redirected_publisher`在「散發者」端呼叫時略過驗證。  
+-   在「合併代理程式」命令列上指定命令列參數*BypassPublisherValidation* ，以在「散發者」端呼叫時略過驗證 `sp_get_redirected_publisher` 。  
   
   

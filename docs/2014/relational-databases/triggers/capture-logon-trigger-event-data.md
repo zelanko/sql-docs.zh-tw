@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e9ee204d55114b7e31a9a9550d86cae3baa4dffc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b11323702d7468d07783b4d1c763dba691479d9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130362"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043055"
 ---
 # <a name="capture-logon-trigger-event-data"></a>擷取登入觸發程序事件資料
   若要擷取有關 LOGON 事件的 XML 資料，以用於登入觸發程序內部，請使用 [EVENTDATA](/sql/t-sql/functions/eventdata-transact-sql) 函式。 LOGON 事件會傳回下列事件資料結構描述：  

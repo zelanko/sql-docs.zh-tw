@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a71ac4d6bcc887257ea5bfbc1523e327fc03b16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 983b02865c0564919259f896bf09d8bdb0cd969f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060513"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選管理合併式發行集的資料分割
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中使用參數化篩選管理合併式發行集的資料分割。 參數化資料列篩選器可用來產生非重疊的資料分割。 這些資料分割可以限制為只有一個訂閱能收到給定資料分割。 在這種狀況中，大量的訂閱者會導致大量的資料分割，而這種情況則需要同等數量的資料分割快照集。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../merge/parameterized-filters-parameterized-row-filters.md)＞。  
@@ -47,11 +46,11 @@ ms.locfileid: "74479314"
 -   當發行集擁有會產生具有非重疊資料分割之訂閱的參數化篩選時，以及遺失了特定訂閱而需要重新建立時，您必須執行下列作業：移除先前訂閱的資料分割、重新建立訂閱，然後重新建立資料分割。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../merge/parameterized-filters-parameterized-row-filters.md)＞。 複寫會在發行集建立指令碼產生時，針對現有的「訂閱者」資料分割產生建立指令碼。 如需詳細資訊，請參閱 [Scripting Replication](../scripting-replication.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在 [發行集屬性 - \<發行集>]**** 對話方塊的 [資料分割]**** 頁面上，管理資料分割。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](view-and-modify-publication-properties.md)＞。 您可以在此頁面中：建立和刪除資料分割；允許「訂閱者」初始化快照集產生和傳遞；為一個或多個資料分割產生快照集；清除快照集。  
+ 在 [**發行集屬性- \<Publication> ** ] 對話方塊的 [**資料**分割] 頁面上管理分割區。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](view-and-modify-publication-properties.md)＞。 您可以在此頁面中：建立和刪除資料分割；允許「訂閱者」初始化快照集產生和傳遞；為一個或多個資料分割產生快照集；清除快照集。  
   
 #### <a name="to-create-a-partition"></a>若要建立資料分割  
   
-1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [資料分割]  頁面上，按一下 [新增]  。  
+1.  在 [**發行集屬性 \<Publication> -** ] 對話方塊的 [**資料**分割] 頁面上，按一下 [**加入**]。  
   
 2.  在 **[加入資料分割]** 對話方塊中，輸入與您要建立之資料分割相關聯的 **[HOST_NAME()]** 和/或 **[SUSER_SNAME()]** 值。  
   
@@ -100,25 +99,25 @@ ms.locfileid: "74479314"
   
 #### <a name="to-view-information-on-existing-partitions"></a>若要在現有的資料分割上檢視資訊  
   
-1.  在發行集資料庫的發行者端，執行 [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql)。 指定** \@發行**集的名稱。 選擇性指定** \@suser_sname**或** \@host_name** ，以根據單一篩選準則僅傳回信息。  
+1.  在發行集資料庫的發行者端，執行 [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql)。 指定** \@ 發行**集的名稱。 選擇性指定** \@ suser_sname**或** \@ host_name** ，以根據單一篩選準則僅傳回信息。  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>若要定義新的資料分割並產生新的資料分割快照集  
   
-1.  在發行集資料庫的發行者端，執行 [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql)。 針對** \@發行**集指定發行集的名稱，並針對下列其中一項定義資料分割的參數化值：  
+1.  在發行集資料庫的發行者端，執行 [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql)。 針對** \@ 發行**集指定發行集的名稱，並針對下列其中一項定義資料分割的參數化值：  
   
-    -   suser_sname-當參數化篩選是由[SUSER_SNAME &#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)所傳回的值所定義時。 ** \@ **  
+    -   ** \@ suser_sname** -當參數化篩選是由[SUSER_SNAME &#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)所傳回的值所定義時。  
   
-    -   host_name-當參數化篩選是由[HOST_NAME &#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)所傳回的值所定義時。 ** \@ **  
+    -   ** \@ host_name** -當參數化篩選是由[HOST_NAME &#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)所傳回的值所定義時。  
   
 2.  建立並初始化這個新資料分割的參數化快照集。 如需詳細資訊，請參閱 [使用參數化篩選建立合併式發行集的快照集](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 #### <a name="to-delete-a-partition"></a>若要刪除資料分割  
   
-1.  在發行集資料庫的發行者端，執行 [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql)。 針對 [發行集] 指定發行** \@** 集的名稱，並針對下列其中一個定義資料分割的參數化值：  
+1.  在發行集資料庫的發行者端，執行 [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql)。 針對 [ ** \@ 發行**集] 指定發行集的名稱，並針對下列其中一個定義資料分割的參數化值：  
   
-    -   suser_sname-當參數化篩選是由[SUSER_SNAME &#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)所傳回的值所定義時。 ** \@ **  
+    -   ** \@ suser_sname** -當參數化篩選是由[SUSER_SNAME &#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)所傳回的值所定義時。  
   
-    -   host_name-當參數化篩選是由[HOST_NAME &#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)所傳回的值所定義時。 ** \@ **  
+    -   ** \@ host_name** -當參數化篩選是由[HOST_NAME &#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)所傳回的值所定義時。  
   
      這也會移除資料分割的快照集作業和快照集檔案。  
   

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ed0cd8bad3a99c7f1f59b5121aafb06ccdee63b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20d32f3a050e79aef90eb8df302bd7a590cead3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045150"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>部署檢查清單：PowerPivot for SharePoint 2010 的多伺服器安裝
-  此檢查清單會引導您完成將 for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sharepoint 加入至您從頭建立的三層式 sharepoint 2010 伺服器陣列的步驟。 三層伺服陣列包含資料庫、應用程式和 Web 層。 若[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]要新增至此拓撲，您必須執行 SQL Server 安裝程式[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ，才能在應用層上安裝。 PowerPivot 程式檔案會加入至 web 層，但只會在您部署 web 應用程式方案時做為後續安裝工作。 即使有部署步驟，但是在您需要執行的 Web 層或資料層並沒有個別的安裝步驟。 您需要執行的唯一安裝步驟是在應用程式[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]伺服器上安裝。  
+  此檢查清單會引導您完成將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] For sharepoint 加入至您從頭建立的三層式 sharepoint 2010 伺服器陣列的步驟。 三層伺服陣列包含資料庫、應用程式和 Web 層。 若要新增 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 至此拓撲，您必須執行 SQL Server 安裝程式，才能 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 在應用層上安裝。 PowerPivot 程式檔案會加入至 web 層，但只會在您部署 web 應用程式方案時做為後續安裝工作。 即使有部署步驟，但是在您需要執行的 Web 層或資料層並沒有個別的安裝步驟。 您需要執行的唯一安裝步驟是 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 在應用程式伺服器上安裝。  
   
 ||  
 |-|  
@@ -102,7 +101,7 @@ ms.locfileid: "71952238"
   
     4.  在 [規則類型] 中，按一下 [**自訂**]。  
   
-    5.  按 [下一步]  。  
+    5.  按 [下一步] 。  
   
     6.  在 [程式] 的 [服務] 區段中，按一下 [**自訂**]。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "71952238"
   
     8.  如果您已安裝 SQL Server 做為預設實例，請選取 [ **SQL Server （MSSQLSERVER）** ]，然後按一下 **[確定]**。  
   
-    9. 按 [下一步]  。  
+    9. 按 [下一步] 。  
   
     10. 在 [通訊協定和埠] 中，接受預設設定，然後按 **[下一步]**。  
   
@@ -122,7 +121,7 @@ ms.locfileid: "71952238"
   
     14. 在 [名稱] 中，輸入輸入規則的描述性名稱（例如， **SQL Server**）。  
   
-    15. 按一下 [完成]  。  
+    15. 按一下 [完成] 。  
   
 ##  <a name="install-and-configure-a-three-tier-sharepoint-2010-farm"></a><a name="installsp"></a>安裝和設定三層式 SharePoint 2010 伺服器陣列  
  在您要當做 SharePoint 伺服器使用的每部電腦上，執行 SharePoint 必要條件安裝程式，然後再執行 SharePoint Server 安裝程式。  
@@ -189,7 +188,7 @@ ms.locfileid: "71952238"
   
  若要確認 PowerPivot 可與 SharePoint 網站整合，請執行下列動作：  
   
-1.  在瀏覽器中，開啟您建立的 Web 應用程式。 如果您使用預設值，您可以在 URL\<位址中指定 HTTP://電腦名稱稱>。  
+1.  在瀏覽器中，開啟您建立的 Web 應用程式。 如果您使用預設值，您可以 \<your computer name> 在 URL 位址中指定 HTTP://。  
   
 2.  確認應用程式中可以使用 PowerPivot 資料存取和處理功能。 若要這樣做，您可以確認 PowerPivot 提供的文件庫範本是否存在：  
   
@@ -209,9 +208,9 @@ ms.locfileid: "71952238"
   
 5.  在 [開始] 功能表中，從 Microsoft SQL Server 2008 R2 程式群組啟動 SQL Server Management Studio。 如果伺服器上未安裝這個工具，您可以跳到最後一個步驟，確認快取檔案存在。  
   
-6.  在 [伺服器類型] 中，選取 [Analysis Services]****。  
+6.  在 [伺服器類型] 中，選取 [ **Analysis Services**]。  
   
-7.  在 [伺服器名稱] 中，輸入** \<伺服器名稱> \powerpivot**，其中** \<伺服器名稱>** 是具有 PowerPivot for SharePoint 安裝的電腦名稱稱。  
+7.  在 [伺服器名稱] 中，輸入** \<server-name> \powerpivot**，其中 **\<server-name>** 是具有 PowerPivot for SharePoint 安裝的電腦名稱稱。  
   
 8.  按一下 [ **連接**]。  
   
@@ -241,7 +240,7 @@ ms.locfileid: "71952238"
   
 5.  輸入應該擁有加入或移除文件之權限的 Windows 網域使用者或群組帳戶。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 7.  選取 [網站集合**訪客**] 群組的核取方塊。  
   
@@ -249,7 +248,7 @@ ms.locfileid: "71952238"
   
 9. 輸入應該擁有檢視文件之權限的 Windows 網域使用者或群組帳戶。 如同上面所述，如果應用程式有設定傳統驗證，請勿使用電子郵件地址或通訊群組。  
   
-10. 按一下 [確定]  。  
+10. 按一下 [確定]。  
   
 #### <a name="install-adonet-data-services-35-sp1"></a>安裝 ADO.NET Data Services 3.5 SP1  
  從 SharePoint 清單匯出資料摘要需要 ADO.NET Data Services。 SharePoint 2010 不會在 PrerequisiteInstaller 程式中包含這個元件，所以您必須手動安裝它。 如需有關如何安裝 ADO.NET 資料服務的詳細資訊，請參閱[安裝 ADO.NET 資料服務以支援 SharePoint 清單的資料摘要匯出](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)。  
