@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aa2f1121be229c3679237542bc8cf3384ba425b4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8657c439d35a539892e7f166d8a0a443a5fb759b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699871"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049730"
 ---
 # <a name="using-statement-parameters"></a>使用陳述式參數
   參數是 SQL 陳述式內的變數，可讓 ODBC 應用程式進行以下作業：  

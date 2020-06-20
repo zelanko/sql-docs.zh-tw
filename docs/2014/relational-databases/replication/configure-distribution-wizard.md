@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c77f6ce464540cd74f67af73d63a20f5d94fdfc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab9e8da49f665e92dbcb98f3b91370742c2e9eaf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721853"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064644"
 ---
 # <a name="configure-distribution-wizard"></a>設定散發精靈
   此章節提供設定散發精靈之下列頁面的資訊：  

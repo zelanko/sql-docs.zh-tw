@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2b4a5094f8bac1e3972b4d0b2daa7a0da9fa3629
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eecf9714a97577ff490b642cee5b9c380333e40b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706136"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022507"
 ---
 # <a name="sqlfetchscroll"></a>SQLFetchScroll
   **SQLFetchScroll**會將一個資料列集傳回給應用程式。 資料列集的大小是使用[SQLSetStmtAttr](sqlsetstmtattr.md)設定的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式支援所有定義的提取指示（例如，SQL_FETCH_RELATIVE），但有下列限制：  

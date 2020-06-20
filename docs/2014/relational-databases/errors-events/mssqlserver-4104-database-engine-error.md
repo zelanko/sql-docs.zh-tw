@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd364a08781c00eaaf42eb0b1c15e7e5011ed432
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0de7821aa966ecf52eeb214cf5b7fb0fe6eabef2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62867995"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85033248"
 ---
 # <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
     
@@ -79,7 +78,7 @@ ms.locfileid: "62867995"
     SELECT a.c2 FROM a, b;   
     ```  
   
-     假設 UDT `myudt2` 沒有名為 `c2` 的屬性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法判斷識別碼 `a.c2` 會參考資料表 `c2` 中的資料行 `a`，還是資料表 `a` 中屬性 `c2` 的資料行 `b`。  
+     假設 UDT `myudt2` 沒有名為 `c2` 的屬性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法判斷識別碼 `a.c2` 會參考資料表 `a` 中的資料行 `c2`，還是資料表 `b` 中屬性 `c2` 的資料行 `a`。  
   
 ## <a name="user-action"></a>使用者動作  
   

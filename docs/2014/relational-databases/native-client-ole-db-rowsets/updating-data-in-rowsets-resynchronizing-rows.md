@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2d30505-a878-4aa9-b821-53d8118a45a5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 39579347453fd7e40e4d8c03fe2ebb8eca3fe5a9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 47c628ae583f3e635f422d5146f64508372a1114
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011210"
 ---
 # <a name="resynchronizing-rows"></a>重新同步處理資料列
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者只支援資料指標支援的資料列集上的**IRowsetResynch** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **IRowsetResynch** 無法視需要提供。 取用者必須在開啟資料列集前要求此介面。  

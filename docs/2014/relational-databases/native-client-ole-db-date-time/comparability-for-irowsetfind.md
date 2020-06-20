@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 46391974a8c1a3b9e915330b3ce86d86f005aea7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8e7978cc2cfeaa369d813c07fa618aac3303f767
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705075"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011225"
 ---
 # <a name="comparability-for-irowsetfind"></a>IRowsetFind 的相容性
   IRowsetFind 僅針對日期/時間類型，支援下列比較：  

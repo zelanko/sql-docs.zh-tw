@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bcc2ddcb8c8fbf33c51fb82d1b1c2fd8308bd28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481308"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064839"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>工作 1：定義比對原則
   在這項工作中，您會建立包含一個規則的比對原則。 此規則會有一個必要條件：**供應商識別碼**，這表示供應商識別碼必須符合，才能使用規則中的其他網域。 此規則會使用其他兩個網域： [**具有相似性**的**供應商名稱**] 值設為 [ **70%** ] **，並將**[**相似性**] 值設為**30%**。  
@@ -26,7 +25,7 @@ ms.locfileid: "65481308"
   
 2.  在 [**對應**] 頁面上，針對 [**資料來源**] 選取 [ **Excel**檔案]。  
   
-3.  按一下 **[流覽]**，確認 [篩選] 設定為 [ **Excel 活頁簿**]，然後選取您在執行清理活動之後所匯出的**清理供應商清單 .xls**檔案。  
+3.  按一下 **[流覽]**，確認 [篩選] 設定為 [ **Excel 活頁簿**]，然後選取您在執行清理活動之後所匯出的**清理供應商 List.xls**檔案。  
   
     > [!NOTE]  
     >  在此活動結束時，您將無法匯出結果，因為此活動主要著重於定義比對原則。 您將會針對比對活動建立資料品質專案，並在下一課使用這個比對原則來執行專案，以便從供應商清單中移除重複項。  

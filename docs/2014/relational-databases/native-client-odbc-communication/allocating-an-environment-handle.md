@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 173211cfa6c1e70d979f908c88433857fccd0201
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1c655b5e9a406c3e1881c9dd199a92666377918f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705742"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021124"
 ---
 # <a name="allocating-an-environment-handle"></a>配置環境控制代碼
   應用程式必須先初始化 ODBC 環境並配置環境控制代碼，然後才能呼叫任何 ODBC 函數。 在 ODBC 中，這是其他控制代碼的全域內容控制代碼和預留位置。 若要這麼做，您可以呼叫**SQLAllocHandle**並將*HandleType*參數設定為 SQL_HANDLE_ENV，並將*InputHandle*設定為 SQL_Null_HANDLE。  

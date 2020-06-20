@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 01e5393ae638ddcecd04211a0a7e01e8116346a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f72b7f40c6733c48bb2d7fa2867799d7ad99d4f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952358"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065077"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web 服務 URL (SSRS 原生模式)
   使用 [Web 服務 URL] 頁面可設定或修改用來存取報表伺服器的 URL。 將會根據您指定的 URL 來建立 *「URL 保留項目」* 。 此 URL 保留項目會針對後續可用來存取報表伺服器 Web 服務的所有 URL 來定義語法和規則。 它會針對此報表伺服器 Web 服務指定前置詞、主機、通訊埠和虛擬目錄。 根據您指定主機的方式而定，單一保留項目可能會有多個 URL。 主機的預設值會指定強式萬用字元， 強式萬用字元可讓您在 URL 中指定任何可解析為主控報表伺服器之電腦的主機名稱。 如需 URL 設定和保留的詳細資訊，請參閱[configure a url &#40;ssrs Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)和[configure &#40;ssrs Configuration Manager&#41;的報表伺服器 url ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。  
@@ -47,7 +46,7 @@ ms.locfileid: "71952358"
   
 -   **[127.0.0.1]** 是用來存取 localhost， 它可支援報表伺服器電腦上的本機管理。 如果您只選取這個值，則只有在本機登入報表伺服器電腦的使用者才會擁有此應用程式的存取權。  
   
--   *Nnn.nnn.nnn.nnn* 是電腦網路卡的 IPv4 位址。 如果您的網路使用 IPv6 位址，則 IP 位址會是 8 4 位元組欄位的128位值，如下格式所示： \<標頭>：*nnnn： nnnn： nnnn： nnnn*  
+-   *Nnn.nnn.nnn.nnn* 是電腦網路卡的 IPv4 位址。 如果您的網路使用 IPv6 位址，則 IP 位址會是 8 4 位元組欄位的128位值，如下格式所示： \<header> ：*nnnn： nnnn： nnnn* ： nnnn  
   
      如果您有多張網路卡，您會看到每一張網路卡都有一個 IP 位址。 如果您只選取這個值，它會將應用程式存取限制為只有該 IP 位址 (以及網域名稱伺服器對應至該位址的任何主機名稱)。 您無法使用 localhost 來存取報表伺服器，而且也不能使用安裝於報表伺服器電腦上之其他網路卡的 IP 位址。  
   
@@ -55,14 +54,14 @@ ms.locfileid: "71952358"
  指定報表伺服器用來監視 HTTP 要求的通訊埠，看看是否有包含報表伺服器虛擬目錄名稱的 URL。  
   
  **SSL 憑證**  
- 將憑證繫結至您所指定的 IP 位址。 您必須在電腦上安裝及設定此憑證。 Reporting Services 不提供用來管理憑證的功能。 此憑證必須發行到解析為 IP 位址的主機名稱或電腦名稱。 例如，若要使用發行給http://salesreports的憑證，您指定的 IP 位址必須解析為名為 "salesreports" 的伺服器。  
+ 將憑證繫結至您所指定的 IP 位址。 您必須在電腦上安裝及設定此憑證。 Reporting Services 不提供用來管理憑證的功能。 此憑證必須發行到解析為 IP 位址的主機名稱或電腦名稱。 例如，若要使用發行給的憑證 http://salesreports ，您指定的 IP 位址必須解析為名為 "salesreports" 的伺服器。  
   
  如果您要使用憑證，也必須修改 RSReportServer.config 檔案中的 `UrlRoot` 組態設定，使它指定註冊憑證之電腦的完整名稱。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 在原生模式報表伺服器上設定 SSL 連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **SSL 通訊埠**  
  為 SSL 連接指定通訊埠。  
   
- **URL**  
+ **Url**  
  顯示為目前報表伺服器執行個體定義的 URL。  
   
  **進階**  

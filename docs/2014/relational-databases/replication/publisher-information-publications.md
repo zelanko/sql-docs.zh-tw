@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 344b899905e844312ee6e5a66455fc2fa14b446f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4a9a6a82fb8460d12c117184c955fc98823e21d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63462521"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005138"
 ---
 # <a name="sql-server-replication-publisher-information-dialog-box"></a>SQL Server 複寫 [發行者資訊] 對話方塊
   **[發行集]** 索引標籤可以提供在左窗格中所選取發行者之所有發行集的摘要資訊。  

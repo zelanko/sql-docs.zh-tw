@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9f6f6ee0d881f470f1251c99f17212f1648b85c4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f82a0fb71103e811b36280f9722c160791023e44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706080"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022374"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會定義驅動程式特有的連接屬性。 有些屬性可供使用 `SQLGetConnectAttr` ，而函數則用來報告其目前的設定。 在建立連接或使用[SQLSetConnectAttr](sqlsetconnectattr.md)設定屬性之前，不保證會針對這些屬性回報的值。  

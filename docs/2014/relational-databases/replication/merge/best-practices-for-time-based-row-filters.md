@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ccaafe71d4137fd4b31eec412c1e35595861bdd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "68210719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049404"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>以時間為基礎之資料列篩選的最佳做法
   應用程式使用者通常需要來自資料表中以時間為基礎的資料子集。 例如，業務員可能需要上週的訂單資料，或事件計劃者可能需要未來一週的事件資料。 許多狀況下，應用程式會使用包含 `GETDATE()` 函數的查詢來達成這個目的。 請考量下列資料列篩選陳述式：  
@@ -26,7 +25,7 @@ ms.locfileid: "68210719"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- 使用這種類型的篩選時，通常假設合併代理程式執行時一律會發生兩件事：滿足這個篩選的資料列會複寫至訂閱者，以及不再滿足這個篩選的資料列會從訂閱者端清除 （如需使用`HOST_NAME()`進行篩選的詳細資訊，請參閱[參數化資料列篩選器](parameterized-filters-parameterized-row-filters.md)）。不過，合併式複寫只會複寫和清除自從上次同步處理後已變更的資料，不論您如何定義該資料的資料列篩選。  
+ 使用這種類型的篩選時，通常假設合併代理程式執行時一律會發生兩件事：滿足這個篩選的資料列會複寫至訂閱者，以及不再滿足這個篩選的資料列會從訂閱者端清除 （如需使用進行篩選的詳細資訊 `HOST_NAME()` ，請參閱[參數化資料列篩選器](parameterized-filters-parameterized-row-filters.md)）。不過，合併式複寫只會複寫和清除自從上次同步處理後已變更的資料，不論您如何定義該資料的資料列篩選。  
   
  若要合併式複寫處理資料列，資料列中的資料必須滿足資料列篩選，並且自上次同步處理後必須已變更。 在 **SalesOrderHeader** 資料表的案例中， **OrderDate** 是在插入資料列時所輸入的。 資料列會如預期複寫至訂閱者，因為插入動作是資料變更。 然而，如果訂閱者端有不再滿足篩選的資料列 (超過七天以上的訂單資料列)，除非這些資料列因其他原因而更新，否則不會從訂閱者端移除。  
   

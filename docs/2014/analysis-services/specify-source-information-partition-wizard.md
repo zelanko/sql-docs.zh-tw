@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a597d1f8f3b5720f2f7a688fdf2aabc7941a0ce1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068165"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940299"
 ---
 # <a name="specify-source-information-partition-wizard"></a>指定來源資訊 (資料分割精靈)
   使用 [指定來源資訊]**** 頁面，即可選取要在其中建立資料分割 (以及該資料分割的資料來源檢視和篩選資料表) 的量值群組。  
