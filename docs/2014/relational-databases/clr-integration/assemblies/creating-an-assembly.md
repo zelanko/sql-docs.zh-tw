@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 995c3a621e6de5d1b878f28c7c0fffaae3311bd2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232299"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953856"
 ---
 # <a name="creating-an-assembly"></a>建立組件
-  預存程序或觸發程序之類的 Managed 資料庫物件會經過編譯，然後再稱為組件的單元中進行部署。 Managed DLL 元件必須先在中[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]註冊，然後才能使用元件提供的功能。 若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中註冊組件，請使用 CREATE ASSEMBLY 陳述式。 本主題討論如何在資料庫中使用 CREATE ASSEMBLY 陳述式註冊組件，以及如何指定組件的安全性設定。  
+  預存程序或觸發程序之類的 Managed 資料庫物件會經過編譯，然後再稱為組件的單元中進行部署。 Managed DLL 元件必須先在中註冊， [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] 然後才能使用元件提供的功能。 若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中註冊組件，請使用 CREATE ASSEMBLY 陳述式。 本主題討論如何在資料庫中使用 CREATE ASSEMBLY 陳述式註冊組件，以及如何指定組件的安全性設定。  
   
 ## <a name="the-create-assembly-statement"></a>CREATE ASSEMBLY 陳述式  
  CREATE ASSEMBLY 陳述式用於在資料庫中註冊組件。 範例如下：  
@@ -39,7 +38,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不允許註冊具有相同名稱、文化特性及公開金鑰之不同版本的組件。  
   
- 您可以建立參考其他組件的組件。 當中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]建立元件時，如果參考的元件尚未建立到資料庫中，則也會建立根層級元件所參考的元件。  
+ 您可以建立參考其他組件的組件。 當中建立元件時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，如果參考的元件尚未建立到資料庫中，則也會建立根層級元件所參考的元件。  
   
  資料庫使用者或使用者角色擁有建立並因而擁有資料庫中之組件的權限。 若要建立組件，資料庫使用者或角色應該擁有 CREATE ASSEMBLY 權限。  
   
@@ -78,13 +77,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
 1.  組件是用強式名稱簽署，或用包含憑證的 Authenticode 簽署。 此強式名稱 (或憑證) 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中會當做非對稱金鑰 (或憑證) 建立，而且擁有包含 `EXTERNAL ACCESS ASSEMBLY` 權限 (用於外部存取組件) 或 `UNSAFE ASSEMBLY` 權限 (用於不安全的組件) 的對應登入。  
   
-2.  資料庫擁有者（DBO）擁有`EXTERNAL ACCESS ASSEMBLY` （適用`EXTERNAL ACCESS`于元件） `UNSAFE ASSEMBLY`或（ `UNSAFE`適用于元件）許可權，而且資料庫的 [可信任的資料庫`ON`][屬性](../../security/trustworthy-database-property.md)設定為。  
+2.  資料庫擁有者（DBO）擁有 `EXTERNAL ACCESS ASSEMBLY` （適用于 `EXTERNAL ACCESS` 元件）或 `UNSAFE ASSEMBLY` （適用于 `UNSAFE` 元件）許可權，而且資料庫的 [可[信任的資料庫] 屬性](../../security/trustworthy-database-property.md)設定為 `ON` 。  
   
  以上列出的兩個條件也會在組件載入時間 (包括執行) 進行檢查。 若要載入組件，至少必須符合其中一個條件。  
   
- 我們建議您不要將資料庫上的 [可[信任的資料庫](../../security/trustworthy-database-property.md)] `ON`屬性設為 [僅]，以便在伺服器進程中執行 COMMON language runtime （CLR）程式碼。 但是，建議從 master 資料庫的組件檔中建立非對稱金鑰。 接著，必須建立對應到此非對稱金鑰的登入，並授與登入 `EXTERNAL ACCESS ASSEMBLY` 或 `UNSAFE ASSEMBLY` 權限。  
+ 我們建議您不要將資料庫上的 [可[信任的資料庫] 屬性](../../security/trustworthy-database-property.md)設為 `ON` [僅]，以便在伺服器進程中執行 common LANGUAGE runtime （CLR）程式碼。 但是，建議從 master 資料庫的組件檔中建立非對稱金鑰。 接著，必須建立對應到此非對稱金鑰的登入，並授與登入 `EXTERNAL ACCESS ASSEMBLY` 或 `UNSAFE ASSEMBLY` 權限。  
   
- 執行 CREATE [!INCLUDE[tsql](../../../includes/tsql-md.md)] ASSEMBLY 語句之前的下列語句。  
+ 執行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] CREATE ASSEMBLY 語句之前的下列語句。  
   
 ```  
 USE master;   
@@ -107,7 +106,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
- 執行 CREATE [!INCLUDE[tsql](../../../includes/tsql-md.md)] ASSEMBLY 語句之前的下列語句。  
+ 執行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] CREATE ASSEMBLY 語句之前的下列語句。  
   
 ```  
 USE master;   

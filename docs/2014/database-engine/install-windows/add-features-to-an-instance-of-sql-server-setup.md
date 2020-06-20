@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e84867e56a66a6f35c4de6c95d7cdbc0bfd72769
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779369"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932809"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>將功能加入至 SQL Server 2014 的執行個體 (安裝程式)
-  本主題提供將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體的逐步程序。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件或服務是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所特有， 也可感知執行個體。 這些元件或服務也會與裝載它們的執行個體共用相同的版本，並專門用於該執行個體。 如果還未安裝感知執行個體元件及其共用元件，可以將其加入執行個體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+  本主題提供將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體的逐步程序。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件或服務是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所特有， 也可感知執行個體。 這些元件或服務也會與裝載它們的執行個體共用相同的版本，並專門用於該執行個體。 如果還未安裝感知執行個體元件及其共用元件，可以將其加入執行個體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需版本支援的功能清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
- 若要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從命令提示字元將功能加入至的實例，請參閱[從命令提示字元安裝 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
+ 若要從命令提示字元將功能加入至的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[從命令提示字元安裝 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  在繼續進行之前，請檢閱 [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)中的主題。  
@@ -33,7 +32,7 @@ ms.locfileid: "62779369"
 >  如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取權限的網域帳戶。  
   
 > [!NOTE]  
->  當您將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的執行個體時，現有的使用方式報表設定會套用至新加入的功能。 若要變更這些設定，請使用 [ **組態工具][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 功能表中的 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤和使用方式報表]  工具。  
+>  當您將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的執行個體時，現有的使用方式報表設定會套用至新加入的功能。 若要變更這些設定，請使用 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態工具] 功能表中的 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤和使用方式報表] 工具。  
   
 ## <a name="procedures"></a>程序  
   
@@ -45,13 +44,13 @@ ms.locfileid: "62779369"
   
 3.  系統組態檢查將會在電腦上執行探索作業。 若要檢視驗證詳細資料，請按一下 [檢視詳細資料]  。 若要繼續，請[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
-4.  最新可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新會隨即顯示在 [產品更新] 頁面上。 如果不想包含更新，請清除 包含  **產品更新程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 核取方塊。 如果未偵測到任何產品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將不會顯示此頁面，而會自動前往 **[安裝安裝程式檔案]** 頁面。  
+4.  最新可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新會隨即顯示在 [產品更新] 頁面上。 如果不想包含更新，請清除 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新程式 核取方塊。 如果未偵測到任何產品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將不會顯示此頁面，而會自動前往 **[安裝安裝程式檔案]** 頁面。  
   
 5.  安裝程式會在 [安裝安裝程式檔案] 頁面上，顯示下載、擷取及安裝安裝程式檔案的進度。 如有找到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的更新，並指定要包含該更新，將會一併安裝。 按一下 [安裝]  ，以安裝安裝程式支援檔案。  
   
 6.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。  
   
-7.  在 [安裝類型] 頁面上，選取 [將功能加入到現有的  **執行個體][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 選項，然後選取要更新的執行個體。  
+7.  在 [安裝類型] 頁面上，選取 [將功能加入到現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體] 選項，然後選取要更新的執行個體。  
   
 8.  在 [特徵選取] 頁面上，選取要安裝的元件。 當您選取功能名稱之後，每一個元件群組的描述就會出現在右手邊窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱[SQL Server 2014 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)。 在給定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上，每個元件都只能安裝一次。 若要安裝多個元件，您必須安裝其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
   
@@ -115,15 +114,15 @@ ms.locfileid: "62779369"
   
 20. 您可以使用 [Distributed Replay Client 組態] 頁面，指定要授與 Distributed Replay Client 服務之管理權限的使用者。 擁有管理權限的使用者將可不受限制地存取 Distributed Replay Client 服務。  
   
-     [控制器名稱]  是選擇性參數，預設值為 \<空白  >。 針對 Distributed Replay Client 服務，輸入將與用戶端電腦進行通訊之控制器的名稱。 請注意：  
+     [**控制器名稱**] 是選擇性參數，預設值是 \<*blank*> 。 針對 Distributed Replay Client 服務，輸入將與用戶端電腦進行通訊之控制器的名稱。 請注意：  
   
     -   如果您已經設定了控制器，請在設定每個用戶端時輸入該控制器的名稱。  
   
     -   如果您尚未設定控制器，則可以將控制器名稱留白。 不過，您必須在 [用戶端組態]  檔中，手動輸入控制器名稱。  
   
-     指定 Distributed Replay Client 服務的 **工作目錄** 。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\。  
+     指定 Distributed Replay Client 服務的 **工作目錄** 。 預設工作目錄為 \<*drive letter*> ： \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\WorkingDir \\ 。  
   
-     指定 Distributed Replay Client 服務的 **結果目錄** 。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
+     指定 Distributed Replay Client 服務的 **結果目錄** 。 預設結果目錄為 \<*drive letter*> ： \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\ResultDir \\ 。  
   
      若要繼續進行，請按 **[下一步]** 。  
   

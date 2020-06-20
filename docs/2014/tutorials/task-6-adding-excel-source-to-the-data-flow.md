@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eff79fb144c2bbc4d31a21b2dc263c4ccb087104
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bbb134106fde9607bd51bc84bcd49969aec19ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177236"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064725"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>工作 6：將 Excel 來源新增至資料流程
   在這項工作中，您會將 Excel 來源加入至資料流程，以便從來源 Excel 檔案讀取供應商資料。 Excel 來源會從 Microsoft Excel 活頁簿中的工作表或範圍擷取資料。 如需詳細資訊，請參閱[Excel 來源](../integration-services/data-flow/excel-source.md)主題。
@@ -30,7 +29,7 @@ ms.locfileid: "78177236"
 
 5.  在 [ **Excel 來源編輯器**] 對話方塊中，按一下 [**新增**] 以建立 Excel 連接。
 
-6.  在 [ **Excel 連接管理員**] 對話方塊中，按一下 [**流覽]**，然後選取 [ **EIM 教學**課程] 資料夾中的**供應商 .xls**檔案。 確認已在 [ **Excel 版本**] 方塊中選取 [ **Microsoft Excel 97-2003** ]，然後按一下 **[確定]**。
+6.  在 [ **Excel 連接管理員**] 對話方塊中，按一下 [**流覽]**，然後選取 [ **EIM 教學**課程] 資料夾中的**Suppliers.xls**檔案。 確認已在 [ **Excel 版本**] 方塊中選取 [ **Microsoft Excel 97-2003** ]，然後按一下 **[確定]**。
 
      ![Excel 連接管理員對話方塊](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "Excel 連接管理員對話方塊")
 
@@ -40,7 +39,7 @@ ms.locfileid: "78177236"
 
 8.  按一下 [**預覽**] 以預覽 Excel 檔案中的資料。
 
-9. 按一下 [確定]**** 關閉對話方塊。
+9. 按一下 [確定]  關閉對話方塊。
 
 10. 在 [ **SSIS 工具箱**] 的**其他轉換**中，將**DQS 清理**轉換拖放至 [**從 Excel 檔案讀取供應商資料**] 底下的 [**資料流程**] 索引標籤。 DQS 清理轉換會使用 Data Quality Services (DQS)，藉由套用知識庫中核准的規則來更正資料。 這項轉換在執行階段會在 DQS 伺服器上建立 DQS 清理專案。 如需詳細資訊，請參閱[DQS 清理轉換](https://msdn.microsoft.com/library/ee677619.aspx)主題。
 

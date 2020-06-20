@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e878d31ec926f8b2cc460854f422b4d01d32d414
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779592"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932783"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>在鏡像資料庫停機時間最少的情況下於系統上安裝 Service Pack
   此主題描述如何在您安裝 Service Pack 和 Hotfix 時，將鏡像資料庫的停機時間減至最少。 這個程序牽涉到循序升級參與資料庫鏡像的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 執行個體。 這種形式的更新（稱為「輪流*更新*」）可將停機時間縮短為只有單一容錯移轉。 請注意，在高效能模式的工作階段中，如果鏡像伺服器與主體伺服器之間的地理位置遙遠，輪流更新可能不適合。  
@@ -125,7 +124,7 @@ ms.locfileid: "62779592"
   
     -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性]**** 對話方塊的[鏡像頁面](../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式]**** 選項變更為 [高效能 (非同步)]****。  
   
-    -   在[!INCLUDE[tsql](../includes/tsql-md.md)]中：使用[ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)將交易安全性設定為 OFF。  
+    -   在中 [!INCLUDE[tsql](../includes/tsql-md.md)] ：使用[ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)將交易安全性設定為 OFF。  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>讓見證回到鏡像工作階段  
   

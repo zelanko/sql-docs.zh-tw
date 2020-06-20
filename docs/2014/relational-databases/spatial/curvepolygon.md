@@ -8,21 +8,20 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b90fdbd9a0bc80dfc6a82416d0193b2951fe13ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996399"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   `CurvePolygon` 是由一個外部週框環形以及零或多個內部環形所定義的拓撲封閉介面。  
   
 > [!IMPORTANT]  
->  如需中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]引進的空間功能（包括`CurvePolygon`子類型）的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  如需中引進的空間功能（包括子類型）的詳細描述和範例，請下載技術白皮書 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] `CurvePolygon` ： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
- 下列準則會定義`CurvePolygon`實例的屬性：  
+ 下列準則會定義實例的屬性 `CurvePolygon` ：  
   
 -   `CurvePolygon` 執行個體的界限是由外部環形和所有內部環形所定義。  
   

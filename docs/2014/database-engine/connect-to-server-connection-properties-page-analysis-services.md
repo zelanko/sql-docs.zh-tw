@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 26cf53e3-3bcb-4697-8a88-53e93bc68b56
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8a898990af62b66bb330ad490bc614f23a479ad4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9812887ba47b4072236b14b404669c5666dc74b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755226"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934669"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>連接到伺服器 (連接屬性頁面) Analysis Service
   連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或在 [已註冊的伺服器]**** 中註冊 [!INCLUDE[ssAS](../includes/ssas-md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接時，[連接]**** 和 [選項]**** 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssAS](../includes/ssas-md.md)] 時，[測試]**** 和 [儲存]**** 才會出現在這個對話方塊中。  
   
 ## <a name="options"></a>選項。  
  **連線到資料庫**  
- 從清單中選取要連接的資料庫。 如果您選取** \<[預設>**]，則會連接到伺服器的預設資料庫。 如果您選取** \<[流覽伺服器>**]，則可以流覽伺服器，尋找您想要連接的資料庫。  
+ 從清單中選取要連接的資料庫。 如果您選取 **\<default>** ，您將會連接到伺服器的預設資料庫。 如果您選取 **\<Browse server>** ，您可以流覽伺服器，尋找您想要連接的資料庫。  
   
  **連接逾時**  
  輸入在超時之前，等候連線建立的秒數。預設值為15秒。  

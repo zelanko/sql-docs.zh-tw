@@ -12,16 +12,15 @@ f1_keywords:
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53a9793fc2a8770c8d926c945ba31a335bdfed3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f6ead7090e0ffc3efaa3fbf979d4012d2a43388
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808725"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934619"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>連接到伺服器 (登入頁面) Integration Services
-  連接到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]時，使用此索引標籤來查看或指定下列選項。  
+  連接到時，使用此索引標籤來查看或指定下列選項 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。  
   
 ## <a name="options"></a>選項。  
  **伺服器類型**  
@@ -31,7 +30,7 @@ ms.locfileid: "62808725"
  選取要連接的伺服器。 預設會顯示上次連接的伺服器執行個體。  
   
 > [!NOTE]  
->  請勿使用* \<servername>* \\ * \<instancename>*，因為[!INCLUDE[ssIS](../includes/ssis-md.md)]不支援在電腦上有多個實例。  
+>  請勿使用 *\<servername>* \\ *\<instancename>* ，因為不 [!INCLUDE[ssIS](../includes/ssis-md.md)] 支援在電腦上有多個實例。  
   
  **驗證**  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 僅有 [!INCLUDE[ssIS](../includes/ssis-md.md)]Windows 驗證可用。 Windows 驗證模式允許使用者透過 Windows 使用者帳戶連接。  

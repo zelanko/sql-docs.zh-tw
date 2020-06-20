@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2d6f29eba93e7841d2d64db57266d8f2ad859377
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f488f28f210826613b9fa3e8029121ab1f858e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664364"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030640"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生 **Broker:Conversation** 事件以報告 Service Broker 交談的進度。  
@@ -48,25 +47,25 @@ ms.locfileid: "62664364"
 |**嚴重性**|`int`|如果此事件報告錯誤，即為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤嚴重性。|29|否|  
 |**SPID**|`int`|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端相關之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|**TextData**|`ntext`|交談的目前狀態。 下列其中之一：<br /><br /> **因此**。 已開始傳出。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已處理此交談的 BEGIN CONVERSATION，但尚未傳送任何訊息。<br /><br /> **SI**。 已起始傳入。 另一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體啟動了與目前執行個體的新交談，但是目前的執行個體尚未完成第一個訊息的接收動作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果第一個訊息被分割或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到訊息的順序不正確，就可能會建立處於此狀態的交談。 然而，如果收到交談的第一次傳輸包含完整的第一則訊息，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會建立 CO 狀態的交談。<br /><br /> **CO**。 正在交談。 已建立交談，且交談兩端可以傳送訊息。 一般服務的大部分通訊都發生在這個狀態的交談中。<br /><br /> **DI**。 已中斷傳入。 交談的遠端發出了 END CONVERSATION。 交談會保留在這個狀態中，直到交談的本機端發出 END CONVERSATION 為止。 應用程式仍可接收交談的訊息。 由於交談的遠端已經結束交談，所以應用程式無法在此交談中傳送訊息。 當應用程式發出 END CONVERSATION 時，交談會移到已關閉 (CD) 狀態。<br /><br /> **執行**。 已中斷傳出。 交談的本機端發出了 END CONVERSATION。 交談會保留在這個狀態中，直到交談的遠端收到 END CONVERSATION 為止。 應用程式無法傳送或接收交談的訊息。 當交談的遠端收到 END CONVERSATION 時，交談會移到已關閉 (CD) 狀態。<br /><br /> **ER**。 錯誤。 這個端點發生錯誤。 錯誤、嚴重性和狀態資料行包含有關發生之特定錯誤的資訊。<br /><br /> **CD**。 已關閉。 交談端點已不在使用中。|1|是|  
-|**交易識別碼**|`bigint`|系統指派的交易識別碼。|4|否|  
+|**TextData**|`ntext`|交談的目前狀態。 發生下列情形之一：<br /><br /> **因此**。 已開始傳出。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已處理此交談的 BEGIN CONVERSATION，但尚未傳送任何訊息。<br /><br /> **SI**。 已起始傳入。 另一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體啟動了與目前執行個體的新交談，但是目前的執行個體尚未完成第一個訊息的接收動作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果第一個訊息被分割或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到訊息的順序不正確，就可能會建立處於此狀態的交談。 然而，如果收到交談的第一次傳輸包含完整的第一則訊息，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會建立 CO 狀態的交談。<br /><br /> **CO**。 正在交談。 已建立交談，且交談兩端可以傳送訊息。 一般服務的大部分通訊都發生在這個狀態的交談中。<br /><br /> **DI**。 已中斷傳入。 交談的遠端發出了 END CONVERSATION。 交談會保留在這個狀態中，直到交談的本機端發出 END CONVERSATION 為止。 應用程式仍可接收交談的訊息。 由於交談的遠端已經結束交談，所以應用程式無法在此交談中傳送訊息。 當應用程式發出 END CONVERSATION 時，交談會移到已關閉 (CD) 狀態。<br /><br /> **執行**。 已中斷傳出。 交談的本機端發出了 END CONVERSATION。 交談會保留在這個狀態中，直到交談的遠端收到 END CONVERSATION 為止。 應用程式無法傳送或接收交談的訊息。 當交談的遠端收到 END CONVERSATION 時，交談會移到已關閉 (CD) 狀態。<br /><br /> **ER**。 錯誤。 這個端點發生錯誤。 錯誤、嚴重性和狀態資料行包含有關發生之特定錯誤的資訊。<br /><br /> **CD**。 已關閉。 交談端點已不在使用中。|1|是|  
+|**Transaction ID**|`bigint`|系統指派的交易識別碼。|4|否|  
   
  下表列出此事件類別的子類別值。  
   
 |ID|子類別|描述|  
 |--------|--------------|-----------------|  
-|1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當執行 SEND 語句時， [!INCLUDE[ssDE](../../includes/ssde-md.md)]會產生**send Message**事件。|  
-|2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當執行不包含 WITH ERROR 子句[!INCLUDE[ssDE](../../includes/ssde-md.md)]的 end 交談語句時，會產生**結束交談**事件。|  
-|3|END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當[!INCLUDE[ssDE](../../includes/ssde-md.md)]執行包含 WITH error 子句的 end 交談語句時，會產生**end 交談並出現錯誤**事件。|  
-|4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每當[!INCLUDE[ssSB](../../includes/sssb-md.md)]建立錯誤訊息時，就會產生**Broker 起始的錯誤**事件。 例如，當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 未能成功地路由傳送對話的訊息時，Broker 會針對該對話建立一個錯誤訊息，並產生此事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果應用程式結束交談時發生錯誤，不會產生此事件。|  
+|1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當執行 SEND 語句時，會產生**Send Message**事件 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。|  
+|2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當**END CONVERSATION** [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行不包含 WITH ERROR 子句的 end 交談語句時，會產生結束交談事件。|  
+|3|END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當執行包含 WITH ERROR 子句的 END 交談語句時，會產生**END 交談並出現錯誤**事件 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。|  
+|4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每當建立錯誤訊息時，就會產生**Broker 起始的錯誤**事件 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。 例如，當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 未能成功地路由傳送對話的訊息時，Broker 會針對該對話建立一個錯誤訊息，並產生此事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果應用程式結束交談時發生錯誤，不會產生此事件。|  
 |5|Terminate Dialog|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會結束此對話。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對於無法繼續使用對話的情況 (但並不是錯誤或正常結束交談的情況)，會終止對話來加以回應。 例如，卸除服務會導致 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 終止該項服務的所有對話。|  
-|6|Received Sequenced Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當收到**Received Sequenced Message**包含訊息序號的訊息時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，會產生 Received sequence Message 事件類別。 所有使用者定義的訊息類型都是循序訊息。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在兩個情況下產生非循序訊息：<br /><br /> 由 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 產生的錯誤訊息即非循序。<br /><br /> 訊息收條可能為非循序。 為了提高效率， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將任何可用的收條當做循序訊息的一部分併入訊息中。 但是，如果應用程式未能在某一段時間內，將循序訊息傳送到遠端端點， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 就會為訊息收條建立非循序訊息。|  
+|6|Received Sequenced Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當收到包含訊息序號的訊息時，會產生 Received sequence **Message**事件類別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 所有使用者定義的訊息類型都是循序訊息。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在兩個情況下產生非循序訊息：<br /><br /> 由 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 產生的錯誤訊息即非循序。<br /><br /> 訊息收條可能為非循序。 為了提高效率， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將任何可用的收條當做循序訊息的一部分併入訊息中。 但是，如果應用程式未能在某一段時間內，將循序訊息傳送到遠端端點， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 就會為訊息收條建立非循序訊息。|  
 |7|Received END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到交談另一端的「結束對話」訊息時，會產生 Received END CONVERSATION 事件。|  
-|8|Received END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當收到來自交談另一端的使用者定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤時，會產生**接收的結束交談，並出現錯誤**事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到 Broker 定義的錯誤時，不會產生此事件。|  
-|9|Received Broker Error Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當收到來自交談另一端的 broker [!INCLUDE[ssSB](../../includes/sssb-md.md)]定義錯誤訊息時，會產生**Received broker error message**事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 收到由應用程式產生的錯誤訊息時，不會產生此事件。<br /><br /> 例如，如果目前的資料庫包含轉寄資料庫的預設路由， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會以未知的服務名稱將訊息路由傳送到轉寄資料庫。 如果那個資料庫無法路由訊息，則資料庫中的 Broker 就會建立錯誤訊息，然後將該錯誤訊息傳回目前的資料庫。 當目前的資料庫從轉寄資料庫收到 Broker 產生的錯誤，目前的資料庫就會產生 **Received Broker Error Message** 事件。|  
+|8|Received END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當收到來自交談另一端的使用者定義錯誤時，會產生**接收的結束交談，並出現錯誤**事件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到 Broker 定義的錯誤時，不會產生此事件。|  
+|9|Received Broker Error Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當收到來自交談另一端的 broker 定義錯誤訊息時，會產生**Received Broker Error message**事件 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 收到由應用程式產生的錯誤訊息時，不會產生此事件。<br /><br /> 例如，如果目前的資料庫包含轉寄資料庫的預設路由， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會以未知的服務名稱將訊息路由傳送到轉寄資料庫。 如果那個資料庫無法路由訊息，則資料庫中的 Broker 就會建立錯誤訊息，然後將該錯誤訊息傳回目前的資料庫。 當目前的資料庫從轉寄資料庫收到 Broker 產生的錯誤，目前的資料庫就會產生 **Received Broker Error Message** 事件。|  
 |10|Received END CONVERSATION Ack|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當交談的另一端認可由交談的這一端傳送的結束對話或錯誤訊息時，會產生**已接收的「結束對話 Ack** 」事件類別。|  
 |11|BEGIN DIALOG|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當資料庫引擎執行 BEGIN DIALOG 命令時，會產生**BEGIN dialog**事件。|  
-|12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當建立對話方塊的端點時[!INCLUDE[ssSB](../../includes/sssb-md.md)] ，會產生**對話方塊建立**的事件。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 每當建立新的對話時，就會建立一個端點，不論目前的資料庫是否為該對話的起始端或目標。|  
+|12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當建立對話方塊的端點時，會產生**對話方塊建立**的事件 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 每當建立新的對話時，就會建立一個端點，不論目前的資料庫是否為該對話的起始端或目標。|  
 |13|END CONVERSATION WITH CLEANUP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行包括 WITH CLEANUP 子句的 END CONVERSATION 陳述式時，會產生 END CONVERSATION WITH CLEANUP 事件。|  
   
 ## <a name="see-also"></a>另請參閱  

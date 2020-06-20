@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: be6f421b-5697-4a52-8cab-ed5f90c3f506
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c49b343e9eb04a349219b9a5a752496c9bc0abda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 965bdc8e261fc17d044265cad17bf8d97caa7017
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63297580"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058236"
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>將相關的資料表加入圖表 (Visual Database Tools)
   您可將與已選取之資料表有關聯性的所有資料表，快速加入至資料庫圖表。  

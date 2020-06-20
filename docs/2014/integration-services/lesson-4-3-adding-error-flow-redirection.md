@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c2d7be5fa95e92b97e76e28647f4406ee356c5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891400"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968248"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>步驟 3：新增錯誤流程重新導向
   如上一項工作所示範的，當 [查閱貨幣索引鍵] 轉換試圖處理已損毀範例一般檔案 (其產生錯誤) 時，不會產生相符者。 因為轉換使用錯誤輸出的預設值，所以任何錯誤都會造成轉換失敗。 當轉換失敗時，封裝的其餘部分也會失敗。  
@@ -24,7 +23,7 @@ ms.locfileid: "62891400"
   
  在這項工作中，您將設定查閱貨幣索引鍵轉換，將失敗的資料列重新導向至錯誤輸出。 在資料流程的錯誤分支中，會將這些資料列寫入檔案。  
   
- 根據預設， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]錯誤輸出中的兩個額外資料行： **ErrorCode**和**ErrorColumn**，只包含代表錯誤號碼的數位代碼，以及發生錯誤的資料行識別碼。 這些數值若無對應的錯誤描述，則用途有限。  
+ 根據預設，錯誤輸出中的兩個額外資料行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ： **ErrorCode**和**ErrorColumn**，只包含代表錯誤號碼的數位代碼，以及發生錯誤的資料行識別碼。 這些數值若無對應的錯誤描述，則用途有限。  
   
  為了加強錯誤輸出的有用性，在此封裝將失敗資料列寫至檔案之前，您將使用指令碼元件來存取 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] API 及取得該錯誤的描述。  
   
@@ -48,9 +47,9 @@ ms.locfileid: "62891400"
   
 8.  在 **[輸入和輸出]** 頁面，展開 **[Output 0]**，按一下 **[輸出資料行]**，然後按一下 **[加入資料行]**。  
   
-9. 在`Name`屬性中，輸入**ErrorDescription** ，並將`DataType`屬性設定為 **[Unicode 字串 [DT_WSTR]]**。  
+9. 在 `Name` 屬性中，輸入**ErrorDescription** ，並將 `DataType` 屬性設定為 **[Unicode 字串 [DT_WSTR]]**。  
   
-10. 在 [**腳本**] 頁面上，確認`LocaleID`屬性是設為 [**英文（美國**）]。  
+10. 在 [**腳本**] 頁面上，確認 `LocaleID` 屬性是設為 [**英文（美國**）]。  
   
 11. 按一下 [編輯指令碼]**** 以開啟 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 在 `Input0_ProcessInputRow` 方法中，輸入或剖析下列程式碼。  
   

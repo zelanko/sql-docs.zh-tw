@@ -1,5 +1,5 @@
 ---
-title: Mscorlib.dll 中不允許的類型和成員 |Microsoft Docs
+title: mscorlib.dll 中不允許的類型和成員 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: daf82d4b-2f6d-44ca-9148-75193321b6d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 43f71d7dc73239b240b841e14a11f3f28f755b61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc4e42a0f900231bdd28417420cdab19b7345e66
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874358"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954286"
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>在 mscorlib.dll 中不允許的類型和成員
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通用`HostProtectionAttribute`語言整合（CLR）程式設計不允許使用具有之的類型或成員，其會指定`System.Security.Permissions.HostProtectionResource`具有、 `ExternalProcessMgmt` `ExternalThreading` `MayLeakOnAbort`、、 `SecurityInfrastructure`、 `SelfAffectingProcessMgmnt`、 `SelfAffectingThreading`、 **SharedState**、 `Synchronization`或`UI`值的列舉。 下列資料表所列出 mscorlib.dll 組件的成員和類型之主機保護屬性 (HPA) 值是不允許的。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通用語言整合（CLR）程式設計不允許使用具有之的類型或成員，其 `HostProtectionAttribute` 會指定 `System.Security.Permissions.HostProtectionResource` 具有 `ExternalProcessMgmt` 、 `ExternalThreading` 、、 `MayLeakOnAbort` `SecurityInfrastructure` 、、、 `SelfAffectingProcessMgmnt` `SelfAffectingThreading` **SharedState**、 `Synchronization` 或 `UI` 值的列舉。 下列資料表所列出 mscorlib.dll 組件的成員和類型之主機保護屬性 (HPA) 值是不允許的。  
   
 > [!NOTE]  
 >  此清單是根據支援的組件產生的。 如需詳細資訊，請參閱[支援的 .NET Framework 程式庫](../clr-integration/database-objects/supported-net-framework-libraries.md)。  
@@ -30,11 +29,11 @@ ms.locfileid: "62874358"
 |--------------------|--------------------|  
 |SyncStream.BeginRead()|ExternalThreading|  
 |SyncStream.BeginWrite()|ExternalThreading|  
-|System.Collections.ArrayList.Synchronized()|Synchronization|  
-|System.Collections.Hashtable.Synchronized()|Synchronization|  
-|System.Collections.Queue.Synchronized()|Synchronization|  
-|System.Collections.SortedList.Synchronized()|Synchronization|  
-|System.Collections.Stack.Synchronized()|Synchronization|  
+|System.Collections.ArrayList.Synchronized()|同步處理|  
+|System.Collections.Hashtable.Synchronized()|同步處理|  
+|System.Collections.Queue.Synchronized()|同步處理|  
+|System.Collections.SortedList.Synchronized()|同步處理|  
+|System.Collections.Stack.Synchronized()|同步處理|  
 |System.Console.Beep()|UI|  
 |System.Console.get_Error()|UI|  
 |System.Console.get_In()|UI|  
@@ -54,9 +53,9 @@ ms.locfileid: "62874358"
 |System.Diagnostics.LogMessageEventHandler|ExternalThreading, Synchronization|  
 |System.IO.FileStream.BeginRead()|ExternalThreading|  
 |System.IO.FileStream.BeginWrite()|ExternalThreading|  
-|System.IO.Stream.Synchronized()|Synchronization|  
-|System.IO.TextReader.Synchronized()|Synchronization|  
-|System.IO.TextWriter.Synchronized()|Synchronization|  
+|System.IO.Stream.Synchronized()|同步處理|  
+|System.IO.TextReader.Synchronized()|同步處理|  
+|System.IO.TextWriter.Synchronized()|同步處理|  
 |System.Reflection.Emit.AssemblyBuilder|MayLeakOnAbort|  
 |System.Reflection.Emit.ConstructorBuilder|MayLeakOnAbort|  
 |System.Reflection.Emit.CustomAttributeBuilder|MayLeakOnAbort|  
@@ -100,9 +99,9 @@ ms.locfileid: "62874358"
   
 ## <a name="see-also"></a>另請參閱  
  [主機保護屬性和 CLR 整合程式設計](host-protection-attributes-and-clr-integration-programming.md)   
- [在 Microsoft 中不允許的類型和成員](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [系統中不允許的類型和成員](disallowed-types-and-members-in-system-dll.md)   
- [System.object 中不允許的類型和成員](disallowed-types-and-members-in-system-data-dll.md)   
+ [Microsoft.VisualBasic.dll中不允許的類型和成員](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [System.dll中不允許的類型和成員](disallowed-types-and-members-in-system-dll.md)   
+ [System.Data.dll中不允許的類型和成員](disallowed-types-and-members-in-system-data-dll.md)   
  [System.Core.dll 中不允許的類型和成員](disallowed-types-and-members-in-system-core-dll.md)  
   
   

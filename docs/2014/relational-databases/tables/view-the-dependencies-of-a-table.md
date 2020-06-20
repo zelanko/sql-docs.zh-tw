@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20f54b913124cdaa8a7dfeebac01ba070cc37d88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196615"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002637"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>檢視資料表的相依性
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中檢視資料表的相依性。  
@@ -52,7 +51,7 @@ ms.locfileid: "68196615"
   
 2.  以滑鼠右鍵按一下資料表，然後按一下 [檢視相依性]  。  
   
-3.  在 [**物件**相依性_\<物件名稱>_ ] 對話方塊中，選取 [**依存于** _ \<物件名稱_的物件>] 或 [_\<物件名稱>_**所依存****的**物件]。  
+3.  在 [**物件**相依性 _\<object name>_ ] 對話方塊中，選取 [相依于的**物件**] _\<object name>_ 或 [相依的**物件**] _\<object name>_ ** **。  
   
 4.  選取 **[相依性]** 方格中的物件。 物件類型 (如「觸發程序」或「預存程序」) 會出現在 [類型]  方塊中。  
   

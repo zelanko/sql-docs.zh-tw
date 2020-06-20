@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a809aa628b90d73bed6eecd2d23cdec4dff6aea
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892656"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968278"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 錯誤和訊息參考
   下表列出預先定義的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤、警告和參考用訊息 (依據每一個類別內的遞增號碼順序)，連同這些訊息的數字代碼和符號名稱。 每一個錯誤都會以欄位形式定義於 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別內。  
@@ -230,7 +229,7 @@ ms.locfileid: "62892656"
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|這個查詢的執行沒有相關聯的結果資料列集。 未正確指定結果。|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|未正確產生偵錯傾印檔案。 hresult 為 0x%1!8.8X!。|  
 |0xC0016001|-1073651711|DTS_E_INVALIDURL|指定的 URL 無效。 當伺服器或 Proxy URL 為 Null 或格式不正確時，就會發生這個問題。 有效 URL 格式的形式是 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath 。|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|URL %1 無效。 當指定 http 或 https 以外的配置或 URL 的格式不正確時，就會發生這個問題。 有效 URL 格式的形式是 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath。|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|URL %1 無效。 當指定 http 或 https 以外的配置或 URL 的格式不正確時，就會發生這個問題。 有效 URL 格式的形式是 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath 。|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|無法建立與伺服器 %1 的連接。 當伺服器不存在或 Proxy 設定不正確時，就會發生這個錯誤。|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|已經重設或結束與伺服器的連接。 請稍後再試一次。|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|"%1" 的登入嘗試失敗。 當提供的登入憑證不正確時，就會發生這個錯誤。 請驗證登入認證。|  

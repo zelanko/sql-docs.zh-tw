@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47951e101a5f8f480496c8570a22cd1a950b3309
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84a0fb2152a7e05b853abd28b94e82bffa32273b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270577"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058049"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>建立更新查詢 (Visual Database Tools)
   您可以使用更新查詢，在一次作業中變更多個資料列的內容。 例如，在 `titles` 資料表中，您可以使用更新查詢，將特定發行者所有書籍的價格增加 10%。  

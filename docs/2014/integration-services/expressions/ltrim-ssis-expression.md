@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 541531de470991c84d04a60d6829e3333c78ae3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b42d9d90efebb9da9d8a9fcb4e41e81562e4389
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897495"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969238"
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM (SSIS 運算式)
   傳回移除開頭空白之後的字元運算式。  

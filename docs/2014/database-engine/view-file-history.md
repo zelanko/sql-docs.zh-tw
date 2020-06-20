@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9d80d4ea-a0f6-4a79-885d-79143ca09c00
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e766b8fbea0aa1e7e1e804474cd8dfa9be92832
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62773294"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927549"
 ---
 # <a name="view-file-history"></a>檢視檔案記錄
   您可以使用 [歷程**記錄**] 命令來查看原始檔控制檔案的版本歷程記錄。 這個記錄包括檔案加入或簽入原始檔控制中的日期和時間。  

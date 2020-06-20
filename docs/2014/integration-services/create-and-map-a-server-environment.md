@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4043075208fb4435fb777214733dad1d93113452
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060153"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917279"
 ---
 # <a name="create-and-map-a-server-environment"></a>建立和對應伺服器環境
   您可以建立伺服器環境，針對已部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器之專案中所包含的封裝，指定執行值。 接著您可以針對特定封裝、進入點封裝，或給定專案中的所有封裝，將環境變數對應至參數。 進入點封裝通常是執行子封裝的父封裝。  
@@ -32,7 +31,7 @@ ms.locfileid: "66060153"
   
 ### <a name="to-create-and-use-a-server-environment"></a>若要建立和使用伺服器環境  
   
-1.  在[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中，展開[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]物件總管中的 [目錄> **SSISDB** ] 節點，然後找出您想要為其建立環境之專案的 [**環境**] 資料夾。  
+1.  在中 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ，展開 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件總管中的 [目錄> **SSISDB** ] 節點，然後找出您想要為其建立環境之專案的 [**環境**] 資料夾。  
   
 2.  在以滑鼠右鍵按一下 [環境]**** 資料夾，然後按一下 [建立環境]****。  
   

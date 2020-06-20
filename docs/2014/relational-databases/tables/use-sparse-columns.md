@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3068ac7a3094605bb809ac84c63766b64fda486
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196666"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002904"
 ---
 # <a name="use-sparse-columns"></a>使用疏鬆資料行
   疏鬆資料行為已最佳化儲存位置來保存 Null 值的一般資料行。 疏鬆資料行會減少 Null 值的空間需求，但要付出擷取非 Null 值的更多成本負擔。 當空間至少節省了百分之 20 到 40 時，請考慮使用疏鬆資料行。 疏鬆資料行和資料行集是使用 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 或 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 陳述式所定義。  
@@ -166,7 +165,7 @@ ms.locfileid: "68196666"
   
      合併式複寫不支援疏鬆資料行或資料行集。  
   
--   變更追蹤  
+-   Change tracking  
   
      變更追蹤可支援疏鬆資料行和資料行集。 在資料表中更新資料行集時，變更追蹤會將此動作視為整個資料列的更新。 不會提供任何詳細的變更追蹤來取得透過資料行集更新作業所更新的明確疏鬆資料行集合。 如果透過 DML 陳述式明確更新疏鬆資料行，其上的變更追蹤將會正常運作，而且可以識別明確的已變更資料行集合。  
   

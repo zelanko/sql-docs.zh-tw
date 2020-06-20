@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e34f46200f12861183c4da27863f47f19974dbf1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012367"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030738"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件類別
   **Auto Stats** 事件類別表示索引和資料行統計資料已發生自動更新。  
@@ -32,7 +31,7 @@ ms.locfileid: "63012367"
 |**ClientProcessID**|**int**|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供用戶端處理序識別碼，這個資料行就會擴展。|9|是|  
 |**DatabaseID**|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**DatabaseName**|**nvarchar**|正在執行使用者陳述式的資料庫名稱。|35|是|  
-|**期限**|**bigint**|事件所花費的時間量 (以百萬分之一秒為單位)。|13|是|  
+|**有效期間**|**bigint**|事件所花費的時間量 (以百萬分之一秒為單位)。|13|是|  
 |**EndTime**|**datetime**|事件結束的時間。|15|是|  
 |**錯誤**|**int**|給定事件的錯誤號碼。 通常這是存放在 **sys.messages** 目錄檢視中的錯誤號碼。|31|是|  
 |**EventClass**|**int**|事件類型 = 58。|27|否|  
@@ -57,7 +56,7 @@ ms.locfileid: "63012367"
 |「成功」 |**int**|0 = 錯誤。<br /><br /> 1 = 成功。<br /><br /> 2 = 因伺服器調整流速而略過 (MSDE)。|23|是|  
 |**TextData**|**ntext**|此資料行的內容需視統計資料是採同步更新 (**EventSubClass** 1) 或非同步更新 (**EventSubClass** 2、3 或 4) 而定：<br /><br /> 1：列出已更新/建立的統計資料<br /><br /> 2、3 或 4：NULL； **IndexID** 資料行中會填入已更新之統計資料的索引/統計資料識別碼。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
-|**類型**|**int**|作業類型。|57|是|  
+|**型別**|**int**|作業類型。|57|是|  
   
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../extended-events/extended-events.md)   

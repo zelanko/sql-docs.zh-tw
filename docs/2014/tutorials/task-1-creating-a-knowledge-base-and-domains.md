@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7ad3b085178c0d0cfe3ece010a571992e7fdb99
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064854"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>工作 1：建立知識庫和定義域
   在這項工作中，您會建立**供應商**知識庫，並建立用於清理資料和比對資料以移除重複專案的定義域。  

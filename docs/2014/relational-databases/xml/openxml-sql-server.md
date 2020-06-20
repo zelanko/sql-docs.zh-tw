@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc2a5b9d56f5c4d07c4e998439bd3b38d3c06058
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1849029e6654fcd629499cceeff9957e5389370f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702575"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065549"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML 是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字，可透過類似資料表或檢視表的記憶體中 XML 文件，提供資料列集。 OPENXML 允許對 XML 資料的存取像是關聯式資料列集一樣。 其做法是，提供 XML 文件內部表示法的資料列集檢視。 資料列集的記錄可以儲存在資料庫的資料表中。
@@ -38,7 +37,7 @@ ms.locfileid: "82702575"
  若要使用 OPENXML 針對 XML 檔撰寫查詢，您必須先呼叫 `sp_xml_preparedocument` 。 這樣會剖析 XML 文件，並將控制代碼傳回至準備要使用的已剖析文件。 剖析過的文件就是 XML 文件中，各種節點的文件物件模型 (DOM) 樹狀表示法。 接著文件控制代碼會傳遞至 OPENXML。 然後 OPENXML 會依據傳給它的參數，提供該文件的資料列集檢視。
 
 > [!NOTE]
->  `sp_xml_preparedocument`會使用 SQL 更新版本的 MSXML 剖析器（Msxmlsql.dll）。 這個版本的 MSXML 剖析器的設計目的，是要支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並維持與 MSXML 2.6 舊版的相容性。
+>  `sp_xml_preparedocument`會使用 SQL 更新版本的 MSXML 剖析器，Msxmlsql.dll。 這個版本的 MSXML 剖析器的設計目的，是要支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並維持與 MSXML 2.6 舊版的相容性。
 
  若要釋放記憶體空間，必須呼叫 **sp_xml_removedocument** 系統預存程序，將 XML 文件的內部表示法從記憶體中移除。
 

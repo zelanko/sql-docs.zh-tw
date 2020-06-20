@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bae6a0354fc7d24471aa7cb7877fe066421d8b5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755329"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934409"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>將用戶端連接至資料庫鏡像工作階段 (SQL Server)
   若要連接至資料庫鏡像工作階段，用戶端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 針對 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫設定之後，這兩個資料存取提供者就會完全支援資料庫鏡像。 如需使用鏡像資料庫之程式設計考量的詳細資訊，請參閱＜ [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)＞。 此外，目前的主體伺服器執行個體必須可以使用，而且必須在此伺服器執行個體上建立用戶端的登入。 如需詳細資訊，請參閱[孤立的使用者疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 資料庫鏡像工作階段的用戶端連接不會涉及見證伺服器執行個體 (如果此執行個體存在的話)。  
@@ -85,7 +84,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 屬性  
  連接字串必須包含 `Server` 屬性，以便提供初始夥伴名稱 (應該可識別目前的主體伺服器執行個體)。  
   
- 識別伺服器實例最簡單的方式是指定其名稱， *<server_name>*[**\\** _<SQL_Server_instance_name>_]。 例如：  
+ 識別伺服器實例最簡單的方式是指定其名稱， *<server_name>*[ **\\** _<SQL_Server_instance_name>_]。 例如：  
   
  `Server=Partner_A;`  
   
@@ -98,7 +97,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  如果連接字串指定了具名執行個體的名稱而非通訊埠，SQL Server Browser 查詢就是必要項目。  
   
- 若要指定 IP 位址和埠， `Server`屬性會採用下列格式， `Server=` *<ip_address>* `,` * \<埠>*，例如：  
+ 若要指定 IP 位址和埠， `Server` 屬性會採用下列格式 `Server=` ： *<ip_address>* `,` *\<port>* ，例如。。  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -118,7 +117,7 @@ Server=123.34.45.56,4724;
 >  此字串省略了驗證資訊。  
   
 > [!IMPORTANT]  
->  將通訊協定前置詞與`Server`屬性（`Server=tcp:`*\<servername>*）結合，與**Network**屬性不相容，而且在兩個位置指定通訊協定可能會導致錯誤。 因此，我們建議連接字串使用**Network**屬性來指定`Server`通訊協定，並在屬性中僅指定伺服器名稱（`"Network=dbmssocn; Server=`*\<servername>* `"`）。  
+>  將通訊協定前置詞與 `Server` 屬性（ `Server=tcp:` *\<servername>* ）結合，與**Network**屬性不相容，而且在兩個位置指定通訊協定可能會導致錯誤。 因此，我們建議連接字串使用**Network**屬性來指定通訊協定，並在屬性中僅指定伺服器名稱 `Server` （ `"Network=dbmssocn; Server=` *\<servername>* `"` ）。  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 屬性  
  除了初始夥伴名稱以外，用戶端也可以指定容錯移轉夥伴名稱 (應該可識別目前的鏡像伺服器執行個體)。 容錯移轉夥伴是由 Failover Partner 屬性的其中一個關鍵字指定的。 這個屬性的關鍵字會因您所使用的 API 而不同。 下表將列出這些關鍵字：  
@@ -129,7 +128,7 @@ Server=123.34.45.56,4724;
 |ODBC 驅動程式|`Failover_Partner`|  
 |ActiveX Data Objects (ADO)|`Failover Partner`|  
   
- 識別伺服器實例最簡單的方式是使用其系統名稱， *<server_name>*[**\\** _<SQL_Server_instance_name>_]。  
+ 識別伺服器實例最簡單的方式是使用其系統名稱， *<server_name>*[ **\\** _<SQL_Server_instance_name>_]。  
   
  此外，您可以在 `Failover Partner` 屬性中提供 IP 位址和通訊埠編號。 如果第一次連接至資料庫時，初始連接嘗試失敗，連接至容錯移轉夥伴的嘗試將不再仰賴 DNS 和 SQL Server Browser。 建立連接後，就會以容錯移轉夥伴名稱覆寫容錯移轉夥伴名稱，因此當容錯移轉發生時，重新導向的連接就會需要 DNS 和 SQL Server Browser。  
   
@@ -166,7 +165,7 @@ Server=123.34.45.56,4724;
   
  重試時間是使用下列公式計算的：  
   
- _RetryTime_ **=** _previousretrytime 最初_ **+ （** 0.08 **&#42;** _LoginTimeout_**）**  
+ _RetryTime_ **=**_Previousretrytime 最初_ **+ （** 0.08 **&#42;** _LoginTimeout_**）**  
   
  其中 *PreviousRetryTime* 最初是 0。  
   

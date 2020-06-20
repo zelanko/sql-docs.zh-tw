@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c0dbc5c5c72b6c69a6d2d390ac6c2c8920a19332
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f76636fa25b9a061f8e152c7df2eb583a386004
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062186"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926525"
 ---
 # <a name="access-to-files-used-by-packages"></a>對封裝使用之檔案的存取權
   封裝保護等級不會保護儲存於封裝之外的檔案。 這些檔案包括下列各項：  

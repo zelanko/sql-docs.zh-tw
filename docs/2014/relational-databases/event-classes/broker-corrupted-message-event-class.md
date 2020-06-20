@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 710112cfd4ab902c4c92a87602f6e362f3078d93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664083"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030525"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立 **Broker:Corrupted Message** 事件。  
@@ -52,7 +51,7 @@ ms.locfileid: "62664083"
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**State**|**int**|指出產生事件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原始程式碼內的位置。 每個可能產生此事件的位置都有不同的狀態碼。 Microsoft 支援工程師可以使用此狀態碼來尋找產生事件的位置。|30|否|  
 |**TextData**|**ntext**|偵測到的損毀之描述。|1|是|  
-|**交易識別碼**|**bigint**|系統指派的交易識別碼。|4|否|  
+|**Transaction ID**|**bigint**|系統指派的交易識別碼。|4|否|  
   
  此事件的 **TextData** 資料行包含描述此訊息問題的訊息。  
   

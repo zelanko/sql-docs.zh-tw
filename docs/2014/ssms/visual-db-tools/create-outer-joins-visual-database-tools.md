@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bf9d2d4332721f8c0e61e9838f11a40cbfe2850
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058134"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>建立外部聯結 (Visual Database Tools)
   在預設狀況下， [查詢和檢視表設計工具](visual-database-tools.md) 會在資料表之間建立內部聯結 (Inner Join)。 內部聯結將刪除不符合其他資料表之資料列的資料列。 然而，外部聯結則至少傳回 FROM 子句提到的一個資料表或檢視，只要這些資料列符合任何 WHERE 或 HAVING 搜尋條件。 若要在不具有符合聯結資料表中資料的結果集中包含資料列，就可以建立外部聯結。  
@@ -29,7 +28,7 @@ ms.locfileid: "63184318"
   
 1.  自動或手動建立聯結。 如需詳細資訊，請參閱[自動聯結資料表 &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md) 或[手動聯結資料表 &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)。  
   
-2.  在 [圖表] 窗格中選取聯結線，然後從 [**查詢設計**工具] 功能表中，選擇 [**選取 Tablename 中的所有資料\<列>**]，選取包含您想要包含其額外資料列之資料表的命令。  
+2.  選取 [圖表] 窗格中的聯結線 (Join Line)，然後從 [查詢設計工具] 功能表選擇 [選取 \<tablename> 中所有的資料列]，以選取包含您要併入其額外資料列之資料表的命令。  
   
     -   選擇第一個資料表以建立左外部聯結。  
   

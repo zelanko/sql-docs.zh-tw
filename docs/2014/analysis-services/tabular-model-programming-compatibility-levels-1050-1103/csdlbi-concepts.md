@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 16c6597171eef10da67ad497e4303b3716298e6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525439"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940119"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
   具有 BI 註解的概念結構定義語言 (CSDLBI) 是以實體資料架構為基礎，這是一種用於表示資料摘要，以便用程式設計方式存取、查詢或匯出不同的資料集。 CSDLBI 可用來表示使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立的資料模型，因為它支援豐富的資料驅動報表和應用程式。  
@@ -123,7 +122,7 @@ ms.locfileid: "79525439"
 ## <a name="additions-to-support-multidimensional-models"></a>支援多維度模型的新增功能  
  CSDLBI 1.0 版註解僅支援表格式模型。 1.1 版中已加入使用傳統 BI 開發工具所建立之多維度模型 (OLAP Cube) 的支援。 因此，現在您可以對多維度模型發出 XML 要求，並且接收模型的 CSDLBI 定義，以便於報表中使用。  
   
- **Cube：** SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表格式資料庫只能包含一個模式。 相反地，每個多維度資料庫都可包含多個 Cube，且每個資料庫會與預設 Cube 產生關聯。 因此，對多維度伺服器發出 XML 要求時，必須指定 Cube，否則將會傳回預設 Cube 的 XML。  
+ **Cube：** SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式資料庫只能包含一個模式。 相反地，每個多維度資料庫都可包含多個 Cube，且每個資料庫會與預設 Cube 產生關聯。 因此，對多維度伺服器發出 XML 要求時，必須指定 Cube，否則將會傳回預設 Cube 的 XML。  
   
  另外，Cube 的表示法非常類似表格式模型資料庫的表示法。 Cube 名稱和 Cube 會對應表格式資料庫名稱和資料庫識別碼。  
   
