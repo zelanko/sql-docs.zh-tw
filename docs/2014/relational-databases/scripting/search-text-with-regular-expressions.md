@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34d97e58469469b929e0b7a2e25d52a9c7c3e3fe
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a63035355cafdbb08c469a093407b7ce2c12e6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718672"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060316"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用規則運算式搜尋文字
   規則運算式是在尋找及取代文字模式時所使用，為既簡明、又有彈性的標記法。 特定的規則運算式集可用在  **[尋找和取代]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊的 [尋找目標]  欄位。  
   
 #### <a name="to-find-using-regular-expressions"></a>若要使用規則運算式來尋找  
   
-1.  若要啟用於 [快速尋找]  、[檔案中尋找]  、[快速取代]  或 [檔案中取代]  等作業期間，在 [尋找目標]  欄位使用規則運算式，請選取 [尋找選項]  下的 [使用]  選項，然後選擇 [規則運算式]  。  
+1.  若要啟用於 [快速尋找]、[檔案中尋找]、[快速取代] 或 [檔案中取代] 等作業期間，在 [尋找目標] 欄位使用規則運算式，請選取 [尋找選項] 下的 [使用] 選項，然後選擇 [規則運算式]。  
   
 2.  之後，就可以使用 **[尋找目標]** 欄位旁三角形的 **[參考清單]** 按鈕。 請按一下這個按鈕來顯示最常用的規則運算式清單。 當您從「運算式產生器」中選擇任何項目時，項目會插入 [尋找目標]  字串中。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "82718672"
 |不佔空間符號|:Mn|符合不佔空間符號。|  
 |組合符號|:Mc|符合組合符號。|  
 |含括符號|:Me|符合含括符號。|  
-|數學符號|:Sm|符合 +、=、~、&#124;、\< 及 >。|  
+|數學符號|:Sm|符合 +、=、~、&#124;、 \<, and > 。|  
 |貨幣符號|:Sc|符合 $ 及其他貨幣符號。|  
 |修飾符號|:Sk|符合修飾符號，如曲折符號 (^)、抑音節符號和長音符號。|  
 |其他符號|:So|符合其他符號，如版權符號、段落符號 (i) 以及溫度符號。|  

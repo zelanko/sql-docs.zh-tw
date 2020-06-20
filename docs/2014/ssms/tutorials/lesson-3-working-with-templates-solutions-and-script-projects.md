@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: edac948a-18bb-4301-9504-945056727f63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a8a1825f00676618b9bcc98c774e7facd6f0e078
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfbe5679a530c569d4e39b7405740506d2293a30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753015"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067269"
 ---
 # <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>第 3 課：使用範本、方案和指令碼專案
   您可以利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立自訂範本以及建立方案和指令碼專案。  

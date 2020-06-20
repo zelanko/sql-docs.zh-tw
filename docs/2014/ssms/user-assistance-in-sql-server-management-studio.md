@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b1bd7492ada156584b05ebaf2a8afc6dd294f49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74684453"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067290"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的使用者協助
   您可以利用 [說明] 功能表和《[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 線上叢書》，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中取得使用者輔助程式。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的 [說明] 功能表提供了幾個不同的路徑，供您取得 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相關資訊。 您也可以利用它來存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社群和 MSDN Online 資源，先前的 [說明] 環境並未提供這項功能。 另外，您現在也可以將 [說明] 環境設定成在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境內啟動，或在它自己的相關外部視窗中啟動。  
@@ -44,7 +43,7 @@ ms.locfileid: "74684453"
   
      將使用者主題書籤儲存起來，以便日後方便存取。  
   
- [如何使用輔助說明] ([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer 說明) 會將使用者連結到說明檢視器的相關文件集，但主題是在《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》以外的集合中。 如需有關說明檢視器的資訊，請參閱《 **線上叢書》之 [說明] 功能表中的 [如何使用輔助說明]** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需有關將主題的 [說明] 集合加入線上叢書集合的詳細資訊，請參閱[新增或移除 SQL Server 的產品檔](../2014-toc/index.yml)。  
+ [如何使用輔助說明] ([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer 說明) 會將使用者連結到說明檢視器的相關文件集，但主題是在《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》以外的集合中。 如需有關說明檢視器的資訊，請參閱《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》之 [說明] 功能表中的 [如何使用輔助說明]。 如需有關將主題的 [說明] 集合加入線上叢書集合的詳細資訊，請參閱[新增或移除 SQL Server 的產品檔](../2014-toc/index.yml)。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online 和 SQL Server 社群  
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的說明也提供了若干方式，供使用者連絡 Web 中的 MSDN Online 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]焦點社群，以取得相關資訊。 您可以：  
@@ -66,7 +65,7 @@ ms.locfileid: "74684453"
   
 #### <a name="to-enable-online-search"></a>啟用線上搜尋  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。 在 [選項]**** 對話方塊中，展開 [環境]**** 和 [說明]**** 節點 (必要的話)，再按一下 [線上]****。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。 在 [選項]**** 對話方塊中，展開 [環境]**** 和 [說明]**** 節點 (必要的話)，再按一下 [線上]****。  
   
 2.  在 [載入說明內容時]**** 區域中，選取線上選項。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "74684453"
   
 4.  如果 [Codezone 社群]**** 是您選取的其中一個搜尋提供者，請在 [Codezone 社群]**** 清單中選取及清除適當的項目。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>從 [搜尋] 頁面搜尋 MSDN Online 和 SQL Server 焦點社群  
   

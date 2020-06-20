@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: baf606baa029024369a00e44293873ecc7b33d1b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4108e195c16d321578a70852dd990f4f8d658832
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705635"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020823"
 ---
 # <a name="cursor-programming-details-odbc"></a>資料指標程式設計詳細內容 (ODBC)
   選擇正確的資料指標類型可以改善應用程式效能。 在某些情況下，當您執行所要求之資料指標類型不支援的 SQL 陳述式時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可能會隱含轉換資料指標類型。  

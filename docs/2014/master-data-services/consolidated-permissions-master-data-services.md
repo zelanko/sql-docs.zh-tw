@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 66224262c88176fe0d0ddd1f4291b12213aed928
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b40598eaa81ce0a1d890ef8ec37a12fada0fa458
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054104"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971898"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>合併的權限 (Master Data Services)
   合併的權限適用於某個實體所有合併成員的屬性值。  
@@ -36,7 +35,7 @@ ms.locfileid: "66054104"
 |權限|描述|  
 |----------------|-----------------|  
 |**唯讀**|顯示合併成員，但使用者無法加入、移除或變更這些成員。|  
-|**更新**|顯示合併成員，而且使用者可以加入、移除及變更這些成員。|  
+|**Update**|顯示合併成員，而且使用者可以加入、移除及變更這些成員。|  
 |**拒絕**|不顯示實體的合併成員。|  
   
 ## <a name="attribute-permissions"></a>屬性權限  
@@ -45,7 +44,7 @@ ms.locfileid: "66054104"
 |權限|描述|  
 |----------------|-----------------|  
 |**唯讀**|顯示屬性，但使用者無法變更屬性值。|  
-|**更新**|顯示屬性，而且使用者可以變更屬性值。|  
+|**Update**|顯示屬性，而且使用者可以變更屬性值。|  
 |**拒絕**|不顯示屬性。<br /><br /> 注意：您無法明確拒絕存取 Name 和 Code 屬性。|  
   
 ## <a name="see-also"></a>另請參閱  

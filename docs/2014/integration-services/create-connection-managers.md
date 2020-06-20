@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed61dbba038068b8584d8d73893e48adb832683b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aca9aeb899d24d5f9516716e02fadc0fcf7f7c7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176478"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917323"
 ---
 # <a name="create-connection-managers"></a>建立連接管理員
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含各種連接管理員，以符合連接到不同類型伺服器和資料來源之工作的需要。 連接管理員可由在不同類型資料儲存區中擷取和載入之資料的資料流程元件使用，也可由將記錄寫入伺服器、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表或檔案的記錄提供者使用。 例如，具有傳送郵件工作的封裝使用 SMTP 連接管理員類型，來連接到 Simple Mail Transfer Protocol (SMTP) 伺服器。 具有執行 SQL 工作的封裝，可以使用 OLE DB 連線管理員來連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](connection-manager/integration-services-ssis-connections.md)。
@@ -52,7 +51,7 @@ ms.locfileid: "78176478"
 
  執行階段中會使用正確的版本，而且就算您在設計階段中指定了 32 位元版本的提供者也沒有關係。 即使封裝是在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中執行，還是可以執行 64 位元版本的提供者。
 
- 兩個版本的提供者具有相同的識別碼。 若要指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 執行階段是否使用可用的 64 位元版本提供者，請設定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的 Run64BitRuntime 屬性。 如果 Run64BitRuntime 屬性設定為`true`，執行時間會尋找並使用64位提供者;如果 Run64BitRuntime 為`false`，則執行時間會尋找並使用32位提供者。 如需可在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案上設定之屬性的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 和 Studio 環境](integration-services-ssis-development-and-management-tools.md)。
+ 兩個版本的提供者具有相同的識別碼。 若要指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 執行階段是否使用可用的 64 位元版本提供者，請設定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的 Run64BitRuntime 屬性。 如果 Run64BitRuntime 屬性設定為 `true` ，執行時間會尋找並使用64位提供者; 如果 Run64BitRuntime 為 `false` ，執行時間會尋找並使用32位提供者。 如需可在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案上設定之屬性的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 和 Studio 環境](integration-services-ssis-development-and-management-tools.md)。
 
 ## <a name="see-also"></a>另請參閱
  [&#40;SSIS&#41; 事件處理常式](integration-services-ssis-event-handlers.md)的[控制流程](control-flow/control-flow.md)[資料流程](data-flow/data-flow.md)Integration Services

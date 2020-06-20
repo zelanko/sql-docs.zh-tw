@@ -10,13 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1611f35e4004383c4da9949d4162051caf7b61e5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767310"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951248"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
 
@@ -81,7 +80,7 @@ ms.locfileid: "62767310"
 
 -   本機電腦上的檔案為 **C:\\TestData.xlsx**。
 
--   若為網路共用上的檔案， ** \\ \\銷售\\資料\\TestData .xlsx**。
+-   對於網路共用上的檔案， ** \\ \\ 銷售 \\ 資料 \\TestData.xlsx**。
 
 或者，按一下 [瀏覽]**** 以使用 [開啟]**** 對話方塊找出試算表。  
   
@@ -247,7 +246,7 @@ Excel 驅動程式會在指定來源中讀取特定資料列數目 (依預設為
 如需本文中所述的元件和程序的詳細資訊，請參閱下列文章：
 
 ### <a name="about-ssis"></a>關於 SSIS
-[Excel 連接管理員](connection-manager/excel-connection-manager.md)  
+[Excel 連線管理員](connection-manager/excel-connection-manager.md)  
 [Excel 來源](data-flow/excel-source.md)  
 [Excel 目的地](data-flow/excel-destination.md)  
 [使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  

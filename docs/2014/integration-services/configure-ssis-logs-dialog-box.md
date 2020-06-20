@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060584"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921609"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>設定 SSIS 記錄對話方塊
   使用 **[設定 SSIS 記錄]** 對話方塊定義封裝的記錄選項。  
@@ -69,11 +68,11 @@ ms.locfileid: "66060584"
  **名稱**  
  使用這些核取方塊，啟用或停用容器的記錄，或是 [設定 SSIS 記錄]**** 對話方塊的 [容器]**** 窗格中選取之工作的記錄。 名稱欄位是可編輯的。 使用提供者的預設名稱，或輸入唯一的描述性名稱。  
   
- **描述**  
+ **說明**  
  描述欄位是可編輯的。 按一下，然後修改記錄的預設描述。  
   
  **設定**  
- 在清單中選取現有的連線管理員，或\<按一下 [**新增連接 ...** ]> 建立新的連線管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
+ 在清單中選取現有的連線管理員，或按一下 \<**New connection...**> 以建立新的連線管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
   
  相關主題： [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) 、 [File Connection Manager](connection-manager/file-connection-manager.md)  
   
@@ -87,7 +86,7 @@ ms.locfileid: "66060584"
  **事件**  
  啟用或停用記錄事件。  
   
- **描述**  
+ **說明**  
  檢視事件的描述。  
   
  **進階**  

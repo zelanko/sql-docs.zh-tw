@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 098d9b589396ebd6a9c622f921efd97d0b000929
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d8efab57dd195993ab9ab12c0cb9b3f167bd796
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067040"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938839"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>使用 SSMS 管理角色 (SSAS 表格式)
   對於部署的表格式模型，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]建立、編輯和管理角色。  
@@ -58,12 +57,12 @@ ms.locfileid: "66067040"
   
 6.  在成員資格設定視窗中，按一下 [加入]****，然後在 [選取使用者或群組]**** 對話方塊中，加入您要當做成員加入的 Windows 使用者或群組。  
   
-7.  如果您建立的角色具有「讀取」權限，您可以使用 DAX 公式加入任何資料表的資料列篩選。 若要加入資料列篩選，請在 [**角色屬性- \<共同工作>** ] 對話方塊的 [**選取頁面**] 中，按一下 [資料**列篩選**]。  
+7.  如果您建立的角色具有「讀取」權限，您可以使用 DAX 公式加入任何資料表的資料列篩選。 若要加入資料列篩選，請在 [**角色屬性- \<rolename> ** ] 對話方塊的 [**選取頁面**] 中，按一下 [資料**列篩選**]。  
   
-8.  在 [資料列篩選] 視窗中，選取資料表，然後按一下 [ **Dax 篩選**] 欄位，然後在 [ **dax 篩選\<-tablename>** ] 欄位中，輸入 DAX 公式。  
+8.  在 [資料列篩選] 視窗中，選取資料表，然後按一下 [ **Dax 篩選**] 欄位，然後在 [ **dax 篩選 \<tablename> 條件-** ] 欄位中輸入 DAX 公式。  
   
     > [!NOTE]  
-    >  [DAX 篩選- \<tablename>] 欄位不包含自動完成查詢編輯器或插入函數功能。 若要在撰寫 DAX 公式時使用自動完成功能，您必須在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用 DAX 公式編輯器。  
+    >  [DAX 篩選準則] \<tablename> 欄位不包含 [自動完成查詢編輯器] 或 [插入函數] 功能。 若要在撰寫 DAX 公式時使用自動完成功能，您必須在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用 DAX 公式編輯器。  
   
 9. 按一下 [確定]****，儲存角色。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66067040"
   
 -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，展開包含您要編輯之角色的表格式模型資料庫，然後展開 [角色]****，再以滑鼠右鍵按一下此角色，然後按一下 [屬性]****。  
   
-     在 [**角色屬性** \<] [使用者>] 對話方塊中，您可以變更許可權、加入或移除成員，以及加入/編輯資料列篩選。  
+     在 [**角色屬性** \<rolename> ] 對話方塊中，您可以變更許可權、加入或移除成員，以及加入/編輯資料列篩選。  
   
 ###  <a name="to-delete-a-role"></a><a name="bkmk_deletet_role"></a>若要刪除角色  
   

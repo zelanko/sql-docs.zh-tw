@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11884b2bb52c2c38fcae708346afa54151502ffc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056194"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964068"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>指令碼轉換編輯器 (連接管理員頁面)
   使用 [指令碼轉換編輯器]**** 的 [連線管理員]**** 頁面，即可指定指令碼將要使用的任何連接。  
@@ -34,9 +33,9 @@ ms.locfileid: "66056194"
  輸入連接的唯一和描述性名稱。  
   
  **連線管理員**  
- 從可用的連線管理員清單中選取，或選取** \<[新增連接>** ] 以開啟 [**加入 SSIS 連線管理員**] 對話方塊。  
+ 從可用的連線管理員清單中選取，或選取 **\<New connection>** 以開啟 [**加入 SSIS 連線管理員**] 對話方塊。  
   
- **描述**  
+ **說明**  
  輸入連接的描述。  
   
  **加入**  

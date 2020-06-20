@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2b70684a74677437d0491e1fc724c832bb7e0a67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 916458d2d6b8fbba81940257ee85ffe014d1f12e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797695"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936939"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>設定 AlwaysOn 可用性群組的複寫 (SQL Server)
   設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫和 AlwaysOn 可用性群組包含七個步驟。 下列各節將詳細說明每個步驟。  
@@ -29,7 +28,7 @@ ms.locfileid: "72797695"
   
  散發者不應該是發行資料庫屬於 (或即將成為) 其成員之可用性群組任何目前 (或預期) 複本的主機。  
   
-1.  在散發者端設定散發。 如果預存程序正用於組態設定，請執行 `sp_adddistributor`。 使用*@password*參數來識別遠端發行者連接到散發者時將使用的密碼。 設定遠端散發者時，每個遠端發行者也需要此密碼。  
+1.  在散發者端設定散發。 如果預存程序正用於組態設定，請執行 `sp_adddistributor`。 使用 *@password* 參數來識別遠端發行者連接到散發者時將使用的密碼。 設定遠端散發者時，每個遠端發行者也需要此密碼。  
   
     ```sql
     USE master;  
@@ -49,7 +48,7 @@ ms.locfileid: "72797695"
         @security_mode = 1;  
     ```  
   
-3.  設定遠端發行者。 如果預存程序正用於設定散發者，請執行 `sp_adddistpublisher`。 *@security_mode*參數是用來決定從複寫代理程式執行的發行者驗證預存程式如何連接到目前的主要複本。 如果設定為 1，就會使用 Windows 驗證來連接到目前主要複本。 如果設定為0， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]則會使用驗證搭配指定*@login*的*@password*和值。 在每個次要複本上指定的登入和密碼必須有效，才能讓驗證預存程序成功連接到該複本。  
+3.  設定遠端發行者。 如果預存程序正用於設定散發者，請執行 `sp_adddistpublisher`。 *@security_mode*參數是用來決定從複寫代理程式執行的發行者驗證預存程式如何連接到目前的主要複本。 如果設定為 1，就會使用 Windows 驗證來連接到目前主要複本。 如果設定為0， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 則會使用驗證搭配指定的 *@login* 和 *@password* 值。 在每個次要複本上指定的登入和密碼必須有效，才能讓驗證預存程序成功連接到該複本。  
   
     > [!NOTE]  
     >  如果任何修改的複寫代理程式在散發者以外的電腦上執行，則使用 Windows 驗證來連接到主要複本時，就必須針對複本主機電腦之間的通訊設定 Kerberos 驗證。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入來連接到目前主要複本時，不需要 Kerberos 驗證。  
@@ -69,7 +68,7 @@ ms.locfileid: "72797695"
   
 ### <a name="configure-the-publisher-at-the-original-publisher"></a>在原始發行者端設定發行者
   
-1.  設定遠端散發。 如果預存程序正用於設定發行者，請執行 `sp_adddistributor`。 指定與在散發者*@password*端執行時`sp_adddistrbutor`所使用的相同值，以設定散發。  
+1.  設定遠端散發。 如果預存程序正用於設定發行者，請執行 `sp_adddistributor`。 指定與在散發者端 *@password* 執行時所使用的相同值， `sp_adddistrbutor` 以設定散發。  
   
     ```sql
     exec sys.sp_adddistributor  
@@ -118,10 +117,10 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- 如果*@installed*為0，則必須將複寫加入至[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝。  
+ 如果 *@installed* 為0，則必須將複寫加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝。  
   
 ##  <a name="4-configure-the-secondary-replica-hosts-as-replication-publishers"></a><a name="step4"></a>4. 將次要複本主機設定為複寫發行者  
- 次要複本無法做為複寫發行者或重新發行者，但是您必須設定複寫，才能讓次要複本在容錯移轉之後接管。 在散發者端，設定每個次要複本主機的散發。 請指定當原始發行者加入至散發者時指定的相同散發資料庫和工作目錄。 如果您要使用預存程序來設定散發，請使用 `sp_adddistpublisher`，讓遠端發行者與散發者產生關聯。 如果*@login*和*@password*已用於原始發行者，請在您加入次要複本主機做為發行者時，為每個指定相同的值。  
+ 次要複本無法做為複寫發行者或重新發行者，但是您必須設定複寫，才能讓次要複本在容錯移轉之後接管。 在散發者端，設定每個次要複本主機的散發。 請指定當原始發行者加入至散發者時指定的相同散發資料庫和工作目錄。 如果您要使用預存程序來設定散發，請使用 `sp_adddistpublisher`，讓遠端發行者與散發者產生關聯。 如果 *@login* 和 *@password* 已用於原始發行者，請在您加入次要複本主機做為發行者時，為每個指定相同的值。  
   
 ```sql
 EXEC sys.sp_adddistpublisher  
@@ -132,7 +131,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- 在每個次要複本主機上，設定散發。 您可以將原始發行者的散發者識別為遠端散發者。 請使用當 `sp_adddistributor` 原本在散發者端執行時使用的相同密碼。 如果預存程式正用於設定散發，則*@password* `sp_adddistributor`會使用的參數來指定密碼。  
+ 在每個次要複本主機上，設定散發。 您可以將原始發行者的散發者識別為遠端散發者。 請使用當 `sp_adddistributor` 原本在散發者端執行時使用的相同密碼。 如果預存程式正用於設定散發，則 *@password* `sp_adddistributor` 會使用的參數來指定密碼。  
   
 ```sql
 EXEC sp_adddistributor   
@@ -172,7 +171,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
     @redirected_publisher = @redirected_publisher output;  
 ```  
   
- 在每個可用性群組複本主機上，`sp_validate_replica_hosts_as_publishers` 預存程序應該從具有足夠授權的登入執行，以便查詢可用性群組的相關資訊。 與`sp_validate_redirected_publisher`不同的是，它會使用呼叫端的認證，而且不會使用 msdb.dbo.msdistpublishers 中保留的登入來連接可用性群組複本。  
+ 在每個可用性群組複本主機上，`sp_validate_replica_hosts_as_publishers` 預存程序應該從具有足夠授權的登入執行，以便查詢可用性群組的相關資訊。 與不同的是 `sp_validate_redirected_publisher` ，它會使用呼叫端的認證，而且不會使用 msdb.dbo.msdistpublishers 中保留的登入來連接可用性群組複本。  
   
 > [!NOTE]  
 >  在驗證不允許讀取存取或需要指定讀取意圖的次要複本主機時，`sp_validate_replica_hosts_as_publishers` 會失敗並發生下列錯誤。  
@@ -183,7 +182,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  複本主機 'MyReplicaHostName' 發生了一個或多個發行者驗證錯誤。  
   
- 這是預期行為。 您必須直接在主機上查詢 sysserver 項目，藉以確認訂閱者伺服器項目是否存在這些次要複本主機上。  
+ 這是正常的現象。 您必須直接在主機上查詢 sysserver 項目，藉以確認訂閱者伺服器項目是否存在這些次要複本主機上。  
   
 ##  <a name="7-add-the-original-publisher-to-replication-monitor"></a><a name="step7"></a> 7.將原始發行者加入至複寫監視器  
  在每個可用性群組複本上，將原始發行者加入至複寫監視器。  

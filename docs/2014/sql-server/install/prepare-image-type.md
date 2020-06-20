@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: b61a6d14-eabb-4b09-ab18-683a037f8ca4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d2070ff33a17aaf690c3154a2aa16343e55405f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73c0e6e5f5c423876191a536083b149c01ba3181
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093476"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041833"
 ---
 # <a name="prepare-image-type"></a>準備映像類型
   使用 **安裝精靈的** [準備映像類型] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面，即可指定要安裝新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，或是將功能加入至現有的執行個體。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  選取指定您選擇的選項按鈕：  
   
 -   準備新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  

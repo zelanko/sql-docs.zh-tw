@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: acf6d033595952186b411ef0e547858f8b59771b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49f49b514edbeac06d5a7af9008ba4209be2978d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62657233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040350"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning 元素 (DTA)
   包含在分析期間，Database Engine Tuning Advisor 所要使用的資料分割配置。  

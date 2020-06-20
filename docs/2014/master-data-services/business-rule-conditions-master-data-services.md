@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7c824c1298a9bd5c0fd0564688ea76c48e8975c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12ba98331d2002dab10d462398f7e77389888e32
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480084"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972128"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>商務規則條件 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，商務規則條件會確定條件必須為 true，才可以採取一個或多個動作。  
@@ -35,7 +34,7 @@ ms.locfileid: "65480084"
 |**小於或等於**|選取的屬性 **小於或等於** 特定的屬性、特定的屬性值或空白。<br /><br /> 此條件僅適用於文字、數字及日期值。|  
 |**開頭為**|選取的屬性 **開頭為** 特定的屬性、特定的屬性值或空白。<br /><br /> 此條件僅適用於文字及連結值。|  
 |**結尾為**|選取的屬性 **結尾為** 特定的屬性、特定的屬性值或空白。<br /><br /> 此條件僅適用於文字及連結值。|  
-|**包含**|選取的屬性 **包含** 特定的屬性、特定的屬性值或空白。<br /><br /> 此條件僅適用於文字及連結值。|  
+|**contains**|選取的屬性 **包含** 特定的屬性、特定的屬性值或空白。<br /><br /> 此條件僅適用於文字及連結值。|  
 |**包含模式**|選取的屬性 **包含特定屬性、特定屬性值或空白的模式** 。 使用 .NET Framework 規則運算式來指定模式。<br /><br /> 如需正則運算式的詳細資訊，請參閱 MSDN Library 中的[正則運算式語言元素](https://go.microsoft.com/fwlink/?LinkId=164401)。<br /><br /> 此條件僅適用於文字及連結值。|  
 |**包含子集**|選取的屬性 **包含特定屬性或特定屬性值的子集** 。 您必須指定搜尋的起始位置 (例如，1 表示從第一個字元開始搜尋)。<br /><br /> 此條件僅適用於文字及連結值。|  
 |**已變更**|選取的屬性自上次商務規則套用到成員之後 **已經變更** 。 您必須指定此屬性所隸屬的變更群組。<br /><br /> 如需變更追蹤群組的詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](add-attributes-to-a-change-tracking-group-master-data-services.md)。<br /><br /> 此條件適用於文字、數字、日期及連結值。|  

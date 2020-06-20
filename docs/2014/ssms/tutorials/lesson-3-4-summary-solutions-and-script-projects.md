@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9421d20f-0c8b-48e2-8e97-31f3047b8177
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4438dc445a9e1fc72fdb48b0863b75f041e2253f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b15f5100bbd04556295d76b02772bbbd8c56e02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753025"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067276"
 ---
 # <a name="summary-solutions-and-script-projects"></a>摘要：方案及指令碼專案
    利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 廣泛的開發人員功能，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供開發人員在企業層級管理程式碼時所需要的功能。 您可以建立自訂範本來支援重複的工作，在集中式與協調環境中儲存和管理複雜指令碼專案。  
@@ -26,6 +25,6 @@ ms.locfileid: "62753025"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2014 的教學課程](tutorial-sql-server-management-studio.md)   
  [資料庫引擎教學課程](../../relational-databases/database-engine-tutorials.md)   
- [Transact-SQL](../sql-server-management-studio-ssms.md)  
+ [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
   

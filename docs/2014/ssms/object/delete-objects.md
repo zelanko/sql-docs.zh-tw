@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6e1326a00a940b488487f9d602595e6528cb048
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: e7b20d1eee3e48c5531b6b788e125b943f7606d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856531"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067326"
 ---
 # <a name="delete-objects"></a>刪除物件
   使用此對話方塊來刪除資料庫或資料庫物件。  

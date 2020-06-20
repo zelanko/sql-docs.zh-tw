@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2c48ef876dbe3843715496751205f24fcf26f12
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774741"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929681"
 ---
 # <a name="password-expired"></a>密碼已過期
-  當您[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證連接到伺服器，而且提供的密碼正確但已過期時，就會出現。 當您使用新的帳戶連接到伺服器，且該帳戶是以 [使用者必須在下次登入時變更密碼]**** 選項建立時，也會出現此訊息。 使用 [密碼已過期]**** 對話方塊來變更此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證登入的密碼。  
+  當您使用驗證連接到伺服器 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，而且提供的密碼正確但已過期時，就會出現。 當您使用新的帳戶連接到伺服器，且該帳戶是以 [使用者必須在下次登入時變更密碼]**** 選項建立時，也會出現此訊息。 使用 [密碼已過期]**** 對話方塊來變更此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證登入的密碼。  
   
 ## <a name="options"></a>選項。  
  **登入**  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b40ec59f8d0f845528bb644631142ee89af03dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d14f0992c76934088a7bccf6d2b5a05b2db57ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912162"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053460"
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin 事件類別
   當新增或移除   登入時，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)]Audit Addlogin[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件類別。  

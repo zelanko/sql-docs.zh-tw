@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6f6bc24d0224e31f008be0ffaf77266446c15527
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aec23d32216a0c9dcdd4189c662f9da4cd5ddf57
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481098"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937379"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>使用複合定義域中的值關聯
   此主題描述如何檢視在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知識探索程序期間針對複合定義域找到的值組合。 這個頁面會顯示值組合出現的次數。 複合定義域不支援值管理，所以您無法針對這些值執行任何作業。  
@@ -47,7 +46,7 @@ ms.locfileid: "65481098"
     > [!NOTE]  
     >  **[值]** 資料表會顯示存在於複合定義域中的每一個值組合。 每一個值都會顯示在它所適用的單一定義域中。 值關聯資料表預設會依據頻率排序，但是您可以按一下另一個資料行，依據該資料行排序。 只會顯示頻率大於或等於 20 的值。  
   
-6.  您不能變更資料表中的任何值。 如果您已執行其他作業，請按一下 **[完成]** ，完成定義域管理活動。 否則，請按一下 **[取消]**。  
+6.  您不能變更資料表中的任何值。 如果您已執行其他作業，請按一下 **[完成]** ，完成定義域管理活動。 否則，請按一下 [**取消**]。  
   
 ##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a>後續操作：查看值關聯之後  
  在檢視值關聯之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)或[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)。  

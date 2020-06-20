@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6d14371c1db5273d66fee327cc03d2b2e2de3edb
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 97fe66f317db25ab36f3e55cf2396f1252f66571
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000791"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930179"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>選項（查詢執行-SQL Server-一般頁面）
   使用此頁面可指定執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢的選項。 這些選項的變更僅適用於新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢]**** 功能表上的 [查詢選項]****，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]****。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **SET ROWCOUNT**  
  預設值 0 指出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 將等候結果，直到所有結果都收到為止。 如果您要 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在取得指定的資料列數後停止查詢，請提供大於 0 的值。 若要關閉此選項 (以便傳回所有資料列)，請指定 SET ROWCOUNT 0。  
   

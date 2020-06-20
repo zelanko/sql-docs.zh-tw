@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db804d25ce3129ebb177b021a64f5a63d0620940
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006790"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 元素 (ssbdiagnose)
   識別產生 **ssbdiagnose** 輸出 XML 檔的公用程式。  
@@ -48,7 +47,7 @@ ms.locfileid: "63186874"
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
-|**次出現**|每個 **ssbdiagnose** 輸出 XML 檔各出現一次。|  
+|**出現次數**|每個 **ssbdiagnose** 輸出 XML 檔各出現一次。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   

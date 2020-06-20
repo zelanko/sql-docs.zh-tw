@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d52773fd-0e13-44a2-a5f2-69d6974bb08f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95d1ca08bcc92a8eeeebfcfbd1f8646cf5add4c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1941fb85a576835739f1cd975ff93ff336f42065
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093535"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042042"
 ---
 # <a name="overview-of-upgrade-advisor"></a>Upgrade Advisor 的概觀
   此章節會提供升級程序的概觀，以及協助您了解和使用 Upgrade Advisor 分析精靈與 Upgrade Advisor 報表檢視器的資訊。  
