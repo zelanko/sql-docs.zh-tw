@@ -20,18 +20,18 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8e1cf6bdf4270759a94761e67b94009576ef6ad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77429013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84941076"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行之每個要求的相關資訊。 如需有關要求的詳細資訊，請參閱[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
+傳回在中執行之每個要求的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需有關要求的詳細資訊，請參閱[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
    
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -41,8 +41,8 @@ ms.locfileid: "77429013"
 |status|**nvarchar(30)**|要求的狀態。 這可以是下列項目之一：<br /><br /> 背景<br />執行中<br />可執行的<br />休眠中<br />暫止<br /><br /> 不可為 Null。|  
 |命令|**nvarchar(32)**|識別目前所處理命令的類型。 常見命令類型包括下列項目：<br /><br /> SELECT<br />Insert<br />UPDATE<br />刪除<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 要求的文字可使用 sys.dm_exec_sql_text 加上要求的對應 sql_handle 來擷取。 內部系統處理序會根據其所執行工作的類型來設定命令。 工作包括下列項目：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可為 Null。|  
 |sql_handle|**varbinary(64)**|這是一個標記，可唯一識別查詢所屬的批次或預存程式。 可為 Null。| 
-|statement_start_offset|**int**|表示目前執行之批次或保存物件的目前執行語句的開始位置（以位元組為單位，從0開始）。 可以與`sql_handle`、和`statement_end_offset` `sys.dm_exec_sql_text`動態管理函數一起使用，以取得要求的目前執行語句。 可為 Null。|  
-|statement_end_offset|**int**|表示目前執行之批次或保存物件的目前執行語句的結束位置（以位元組為單位，從0開始）。 可以與`sql_handle`、和`statement_start_offset` `sys.dm_exec_sql_text`動態管理函數一起使用，以取得要求的目前執行語句。 可為 Null。|  
+|statement_start_offset|**int**|表示目前執行之批次或保存物件的目前執行語句的開始位置（以位元組為單位，從0開始）。 可以與 `sql_handle` 、 `statement_end_offset` 和 `sys.dm_exec_sql_text` 動態管理函數一起使用，以取得要求的目前執行語句。 可為 Null。|  
+|statement_end_offset|**int**|表示目前執行之批次或保存物件的目前執行語句的結束位置（以位元組為單位，從0開始）。 可以與 `sql_handle` 、 `statement_start_offset` 和 `sys.dm_exec_sql_text` 動態管理函數一起使用，以取得要求的目前執行語句。 可為 Null。|  
 |plan_handle|**varbinary(64)**|這是一個標記，可唯一識別目前執行之批次的查詢執行計畫。 可為 Null。|  
 |database_id|**smallint**|要求執行目標的資料庫識別碼。 不可為 Null。|  
 |user_id|**int**|提交要求之使用者的識別碼。 不可為 Null。|  
@@ -94,17 +94,20 @@ ms.locfileid: "77429013"
 |parallel_worker_count |**int** |**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。<br /><br /> 如果這是平行查詢，則為保留的平行背景工作數目。  |  
 |external_script_request_id |**uniqueidentifier** |**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。<br /><br /> 與目前要求相關聯的外部腳本要求識別碼。 |  
 |is_resumable |**bit** |**適用對象**：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 及更新版本。<br /><br /> 指出要求是否為可繼續的索引作業。 |  
-|page_resource |**binary （8）** |**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果資料`wait_resource`行包含頁面，則為頁面資源的8位元組十六進位標記法。 如需詳細資訊，請參閱[sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
+|page_resource |**binary （8）** |**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果資料行包含頁面，則為頁面資源的8位元組十六進位標記法 `wait_resource` 。 如需詳細資訊，請參閱[sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
 |page_server_reads|**bigint**|**適用于**： Azure SQL Database 超大規模資料庫<br /><br /> 此要求所執行的頁面伺服器讀取數目。 不可為 Null。|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>備註 
 若要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部的程式碼 (例如，擴充預存程序和分散式查詢)，執行緒必須在非先佔式排程器的控制之外執行。 若要這麼做，工作者必須切換到先佔式模式。 這個動態管理檢視傳回的時間值不包括先佔式模式所花費的時間。
 
-在資料[列模式](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)中執行平行要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，會指派背景工作執行緒來協調負責完成指派給它們之工作的工作者執行緒。 在此 DMV 中，只會顯示要求的協調器執行緒。 系統**不**會針對協調器執行緒更新資料行 [**讀取**]、[**寫入**]、[ **logical_reads**] 和 [ **row_count** ]。 只有協調器執行緒**才會更新** **wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**和**granted_query_memory**資料行。 如需詳細資訊，請參閱[執行緒與工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
+在資料[列模式](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)中執行平行要求時，會指派背景工作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行緒來協調負責完成指派給它們之工作的工作者執行緒。 在此 DMV 中，只會顯示要求的協調器執行緒。 系統**不**會針對協調器執行緒更新資料行 [**讀取**]、[**寫入**]、[ **logical_reads**] 和 [ **row_count** ]。 只有協調器執行緒**才會更新** **wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**和**granted_query_memory**資料行。 如需詳細資訊，請參閱[執行緒與工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
 
 ## <a name="permissions"></a>權限
-如果使用者具有`VIEW SERVER STATE`伺服器的許可權，則使用者會在實例上看到所有執行中的會話[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];否則，使用者只會看到目前的會話。 `VIEW SERVER STATE`無法在 Azure SQL Database 中授與`sys.dm_exec_requests` ，因此一律會限制為目前的連接。
+如果使用者具有 `VIEW SERVER STATE` 伺服器的許可權，則使用者會看到實例上所有執行中的會話 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; 否則，使用者只會看到目前的會話。 `VIEW SERVER STATE`無法在 Azure SQL Database 中授與，因此 `sys.dm_exec_requests` 一律會限制為目前的連接。
+
+在 Always On 案例中，如果次要複本設定為**僅限讀取意圖**，則與次要資料庫的連接必須藉由新增，在連接字串參數中指定其應用程式意圖 `applicationintent=readonly` 。 否則， `sys.dm_exec_requests` 即使有許可權，也不會針對可用性群組中的資料庫傳遞的存取檢查 `VIEW SERVER STATE` 。
+
   
 ## <a name="examples"></a>範例  
   
@@ -126,14 +129,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 尋找執行中批次持有的所有鎖定
 
-下列範例會查詢**dm_exec_requests sys.databases** ，以尋找感興趣的批次， `transaction_id`並從輸出複製其。
+下列範例會查詢**dm_exec_requests sys.databases** ，以尋找感興趣的批次，並 `transaction_id` 從輸出複製其。
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-然後，若要尋找鎖定資訊，請使用`transaction_id`以系統函數**sys.databases dm_tran_locks**複製的。  
+然後，若要尋找鎖定資訊，請使用 `transaction_id` 以系統函數**sys.databases dm_tran_locks**複製的。  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks

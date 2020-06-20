@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cba1d6b4c9fb116d90bc68925c8f27d446c73c54
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 80eded31ebae744e272757a53a7fd1f4b56bf358
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704224"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998481"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>LINKEDSERVERS 資料列集 (OLE DB)
   **LINKEDSERVERS** 資料列集會列舉可以參與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散式查詢的組織資料來源。  
   
  **LINKEDSERVERS** 資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|說明|  
+|資料行名稱|類型指標|描述|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|連結伺服器的名稱。|  
 |SVR_PRODUCT|DBTYPE_WSTR|製造商或是識別由連結伺服器名稱表示之資料存放區類型的其他名稱。|  

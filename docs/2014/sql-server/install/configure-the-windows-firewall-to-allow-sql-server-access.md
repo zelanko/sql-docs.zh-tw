@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5dcbf0aae9c96e788fdbf9544114d226fa8f0bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1a0bc32040fc90e5f73faa708f314722bc8f3b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637851"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036995"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   防火牆系統有助於預防未經授權存取電腦資源。 如果防火牆已開啟，但是設定不正確，則嘗試連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行為可能會被封鎖。  
@@ -91,7 +90,7 @@ ms.locfileid: "73637851"
   
     -   設定某些範圍限制  
   
-     [控制台] 中的 **[Windows 防火牆]** 項目最適合沒有防火牆組態設定經驗的使用者，以及針對非行動式電腦設定基本防火牆選項的使用者。 您也可以使用下列程式， `run`從命令開啟 [控制台] 中的 [ **Windows 防火牆**] 專案：  
+     [控制台] 中的 **[Windows 防火牆]** 項目最適合沒有防火牆組態設定經驗的使用者，以及針對非行動式電腦設定基本防火牆選項的使用者。 您也可以使用下列程式，從命令開啟 [控制台] 中的 [ **Windows 防火牆**] 專案 `run` ：  
   
     #### <a name="to-open-the-windows-firewall-item"></a>開啟 Windows 防火牆項目  
   
@@ -159,7 +158,7 @@ ms.locfileid: "73637851"
   
 1.  在 [控制台] 中，於 **[Windows 防火牆]** 項目的 **[例外]** 索引標籤上，按一下 **[新增程式]**。  
   
-2.  流覽至您想要允許通過防火牆[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的實例位置，例如**C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \mssql\binn**]、選取 [ **sqlservr.exe**]，然後按一下 [**開啟**]。  
+2.  流覽至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您想要允許通過防火牆的實例位置，例如**C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \mssql\binn**]、選取 [ **sqlservr.exe**]，然後按一下 [**開啟**]。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -323,4 +322,4 @@ ms.locfileid: "73637851"
 -   **PortQry** 公用程式可用於將 TCP/IP 通訊埠的狀態回報為接聽中、未接聽或已篩選。 (若為已篩選狀態，表示通訊埠不一定是接聽中。此狀態會指出公用程式未接收到通訊埠的回應)。**PortQry** 公用程式可從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=17148)下載。  
   
 ## <a name="see-also"></a>另請參閱  
- [Windows Server 系統的服務概觀和網路通訊埠需求 (機器翻譯)](https://support.microsoft.com/kb/832017)  
+ [Windows Server System 的服務概觀和網路連接埠需求](https://support.microsoft.com/kb/832017)  

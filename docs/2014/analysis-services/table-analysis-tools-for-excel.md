@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af4c8ae7c2ba827e6110602bd21432fec4f74393
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c8610fd3ac9ee92d6e08084c48f14298cb3203f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067966"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940189"
 ---
 # <a name="table-analysis-tools-for-excel"></a>適用於 Excel 的資料表分析工具
   [**分析**] 工具列中的資料採礦工具是開始使用資料採礦的最簡單方式。 每個工具都會自動分析資料的散發和類型，並設定參數以確保結果是有效的。 您不需選取演算法或設定複雜參數。  

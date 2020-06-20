@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: d2287e10-4007-4ba4-ad84-4e2b6adfede5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0805ef503f7206ffeb1f7ccaf85fd09e808ac554
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe236138242400dd5078877385dddd9fb1b1815d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780406"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933221"
 ---
 # <a name="updategram-sample-applications-sqlxml-40"></a>Updategram 範例應用程式 (SQLXML 4.0)
   本節提供使用 Updategram 的範例。  
   
- 本節中的所有範例都會使用中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 AdventureWorks 範例資料庫。 所有的更新都會套用到 AdventureWorks 資料庫內的資料表。  
+ 本節中的所有範例都會使用中的 AdventureWorks 範例資料庫 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 所有的更新都會套用到 AdventureWorks 資料庫內的資料表。  
   
 ## <a name="in-this-section"></a>本節內容  
  [使用 ADO &#40;SQLXML 4.0&#41;執行 Updategram](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ado-sqlxml-4-0.md)  

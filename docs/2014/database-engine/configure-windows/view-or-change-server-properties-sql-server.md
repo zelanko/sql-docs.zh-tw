@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 415d4e2d1aaa3166ae4df2dea53b34e064544e06
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783131"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934742"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>檢視或變更伺服器屬性 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 組態管理員檢視或變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]執行個體的屬性。  
@@ -59,7 +58,7 @@ ms.locfileid: "72783131"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  如需詳細資訊，請參閱 [伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)。  
   
- 預設會將`sp_configure`不含參數或只含第一個參數的執行許可權授與給所有使用者。 若要`sp_configure`使用這兩個參數來執行，以變更設定選項，或執行重新設定語句，必須將 ALTER SETTINGS 伺服器層級許可權授與使用者。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
+ `sp_configure`預設會將不含參數或只含第一個參數的執行許可權授與給所有使用者。 若要 `sp_configure` 使用這兩個參數來執行，以變更設定選項，或執行重新設定語句，必須將 ALTER SETTINGS 伺服器層級許可權授與使用者。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -148,9 +147,9 @@ GO
   
 2.  在 **[SQL Server 組態管理員]** 中，按一下 **[SQL Server 服務]** 。  
   
-3.  在詳細資料窗格中，以滑鼠右鍵按一下 [ **SQL Server （\<***instancename***>）**]，然後按一下 [**屬性**]。  
+3.  在詳細資料窗格中，以滑鼠右鍵按一下 [ **SQL Server （ \<***instancename***> ）**]，然後按一下 [**屬性**]。  
   
-4.  在 [ **SQL Server （\<***instancename***>）屬性**] 對話方塊中，變更 [**服務**] 索引標籤或 [ **Advanced** ] 索引標籤上的伺服器屬性，然後按一下 **[確定**]。  
+4.  在 [ **SQL Server （ \<***instancename***> ）屬性**] 對話方塊中，變更 [**服務**] 索引標籤或 [ **Advanced** ] 索引標籤上的伺服器屬性，然後按一下 **[確定**]。  
   
 ##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a> 後續操作：變更伺服器屬性之後  
  對於某些屬性，伺服器可能必須重新啟動，變更才會生效。  

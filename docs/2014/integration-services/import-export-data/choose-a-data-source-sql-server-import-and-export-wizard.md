@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4298cfec7478560c2cef01e7d3c6df577a2a8f16
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893593"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966260"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>選擇資料來源 (SQL Server 匯入和匯出精靈)
   使用 [**選擇資料來源**] 頁面，即可指定您想要複製之資料的來源。  
@@ -28,7 +27,7 @@ ms.locfileid: "62893593"
   
 ## <a name="options"></a>選項。  
  **資料來源**  
- 選擇符合來源之資料儲存格式的資料提供者。 您的資料來源可能有一個以上的提供者可用。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、SQL Server 的 .NET Framework Data Provider，或 SQL Server 的 Microsoft OLE DB 提供者。  
+ 選擇符合來源之資料儲存格式的資料提供者。 您的資料來源可能有一個以上的提供者可用。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、SQL Server 的 .NET Framework Data Provider，或 SQL Server 的 Microsoft OLE DB 提供者。  
   
  [**資料來源**] 屬性具有數量不定的選項，視電腦上安裝的提供者而定。 下表列出一些經常使用之目的地的選項。 若為其他提供者，請參閱提供者特定文件集。  
   
@@ -80,10 +79,10 @@ ms.locfileid: "62893593"
 ### <a name="data-source--microsoft-excel"></a>資料來源 = Microsoft Excel  
   
 > [!NOTE]  
->  只有當您想要連接到使用 Excel 2003 或更早版本的資料來源時，才選取 [ **Microsoft Excel** ]。 若要連接到使用 Excel 2007 的資料來源，請選取 [ **Microsoft Office 12.0 存取資料庫引擎 OLE DB 提供者**]，按一下 [**屬性**]，然後在 [**資料連結屬性**] 對話方塊的`Excel 12.0` [**全部**] 索引標籤上，輸入作為 [**擴充屬性**] 的值。  
+>  只有當您想要連接到使用 Excel 2003 或更早版本的資料來源時，才選取 [ **Microsoft Excel** ]。 若要連接到使用 Excel 2007 的資料來源，請選取 [ **Microsoft Office 12.0 存取資料庫引擎 OLE DB 提供者**]，按一下 [**屬性**]，然後在 [**資料連結屬性**] 對話方塊的 [**全部**] 索引標籤上，輸入 `Excel 12.0` 作為 [**擴充屬性**] 的值。  
   
  **Excel 檔案路徑**  
- 指定要從中匯入資料之試算表的路徑和檔案名稱。 例如， **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**。 或按一下 [瀏覽]****。  
+ 指定要從中匯入資料之試算表的路徑和檔案名稱。 例如， **C:\MyData.xls， \\\Sales\Database\Northwind.xls**。 或按一下 [瀏覽]****。  
   
  **瀏覽**  
  使用 [開啟]**** 對話方塊來找出試算表。  
@@ -99,7 +98,7 @@ ms.locfileid: "62893593"
 > [!NOTE]  
 >  只有當您想要連接到使用2003或更早版本的資料庫時，才選取 [ **Microsoft Access** ]。 若要連接到使用存取2007的資料庫，請改為選取 [ **Microsoft Office 12.0 存取資料庫引擎 OLE DB 提供者**]。  
   
- [檔案名稱]****  
+ **檔案名稱**  
  指定要從中匯入資料之資料庫檔案的路徑和檔案名稱。 例如 **C:\MyData.mdb, \\\Sales\Database\Northwind.mdb**。 或按一下 [瀏覽]****。  
   
  **瀏覽**  

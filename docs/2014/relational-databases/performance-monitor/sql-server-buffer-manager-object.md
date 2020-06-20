@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ed9c8ff90798205f9db02ae4b4b47eb4310d4b06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc473447934b6274e0d202f6240634fb00d90491
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250754"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998179"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server 的 Buffer Manager 物件
   **Buffer Manager** 物件提供了可監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用情形的計數器：  
@@ -57,8 +56,8 @@ ms.locfileid: "63250754"
 |**Lazy writes/sec**|表示每秒鐘由緩衝區管理員的延遲寫入器所寫入的緩衝區數目。 「延遲寫入器」** 是一種系統處理序，可排清整批已變更且過時的緩衝區 (這種緩衝區包含必須重新寫入磁碟以便讓緩衝區可重複用於其他頁面的變更)，使其可供使用者處理序使用。 使用延遲寫入器，即不需經常執行檢查點來建立可用的緩衝區。|  
 |**Page life expectancy**|表示頁面停留在這個沒有參考之緩衝集區中的秒數。|  
 |**Page lookups/sec**|表示每秒鐘在緩衝集區中尋找頁面的要求數。|  
-|**Page reads/sec**|表示每秒鐘發出的實體資料庫頁面讀取數。 這項統計資料可顯示所有資料庫的實體頁面讀取總數。 由於實體 I/O 成本很高，因此您可以藉由使用較大的資料快取、智慧型索引、和較有效的查詢，或藉由變更資料庫設計，盡可能降低成本。|  
-|**Page writes/sec**|表示每秒鐘發出的實體資料庫頁面寫入數。|  
+|**分頁讀取數/秒**|表示每秒鐘發出的實體資料庫頁面讀取數。 這項統計資料可顯示所有資料庫的實體頁面讀取總數。 由於實體 I/O 成本很高，因此您可以藉由使用較大的資料快取、智慧型索引、和較有效的查詢，或藉由變更資料庫設計，盡可能降低成本。|  
+|**分頁寫入數/秒**|表示每秒鐘發出的實體資料庫頁面寫入數。|  
 |**Readahead pages/sec**|表示每秒鐘預期會使用而讀取的頁數。|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 266687488dbd12b504b079314cc9d07b801b4f28
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4ff27a1258d5164e3e93d34b6ff757993d6f6363
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000858"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932939"
 ---
 # <a name="full-text-stoplist-properties"></a>全文檢索停用字詞表屬性
   使用此對話方塊可加入或刪除個別停用字詞、刪除特定語言的所有停用字詞，或是清除目前的停用字詞表。 停用字詞是停用字詞表內所包含的常用字。 使用某停用字詞表之資料表的全文檢索索引中會省略該停用字詞表內的停用字詞。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)。  
@@ -27,7 +26,7 @@ ms.locfileid: "83000858"
   
 -   [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **動作**  
  指定您要執行的動作。  
   

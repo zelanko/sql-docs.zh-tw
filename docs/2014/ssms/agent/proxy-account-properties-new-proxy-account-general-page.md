@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4770c05b28f4a45ad6cdad0af5a8f0207c1357ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067659"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Proxy 帳戶屬性及新增 Proxy 帳戶 (一般頁面)
-  使用此頁面來查看或變更[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy 帳戶的屬性。  
+  使用此頁面來查看或變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy 帳戶的屬性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Proxy 名稱**  
  鍵入 Proxy 的名稱。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62650199"
  **...**  
  啟動 [選取認證]**** 對話方塊。  
   
- **描述**  
+ **說明**  
  輸入 Proxy 的描述。  
   
  **對下列子系統有效**  

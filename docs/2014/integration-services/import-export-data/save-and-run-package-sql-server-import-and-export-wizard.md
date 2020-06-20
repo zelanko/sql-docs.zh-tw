@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3b1be3f11e3a53ad291ff774cc72468af0d66ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894762"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966206"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>儲存並執行封裝 (SQL Server 匯入和匯出精靈)
   使用 [**儲存並執行封裝**] 對話方塊，即可立即執行封裝、儲存以供稍後執行或兩者。  
@@ -40,7 +39,7 @@ ms.locfileid: "62894762"
 >  在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中，無法使用儲存此精靈所建立之封裝的選項。  
   
  **SQL Server**  
- 選取此選項可將封裝儲存至[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb`資料庫。  
+ 選取此選項可將封裝儲存至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` 資料庫。  
   
 > [!NOTE]  
 >  只有當您已選取 [**儲存 SSIS 封裝**] 選項時，才能使用此選項。  

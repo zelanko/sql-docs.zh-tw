@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc37fbade038b39d6d05cb5b51ecc3e8ba405e2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7cad94527d9191609a6920b5dfa200a98cd8bbd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871571"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965998"
 ---
 # <a name="file-states"></a>檔案狀態
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，資料庫檔案的狀態是與資料庫的狀態分開維護。 檔案永遠處於特定狀態，例如 ONLINE 或 OFFLINE。 若要檢視檔案目前的狀態，請使用 [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) 或 [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) 目錄檢視。 如果資料庫是離線的，就可以從 [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) 目錄檢視來檢視檔案的狀態。  
@@ -46,9 +45,9 @@ ms.locfileid: "62871571"
 |State|定義|  
 |-----------|----------------|  
 |ONLINE|檔案可供所有的作業使用。 如果資料庫本身是在線上，則主要檔案群組中的檔案將永遠在線上。 如果在主要檔案群組中的檔案不在線上，則資料庫也不會在線上且次要檔案的狀態是未定義的。|  
-|OFFLINE|檔案無法存取且可能不在磁碟上。 明確的使用者動作會使檔案變成離線，而且在採取其他使用者動作之前都是離線狀態。<br /><br /> ** \*注意\* \* **只有當檔案損毀時，才應該將檔案設為離線狀態，但是可以還原檔案。 設為離線的檔案只能透過從備份還原檔案來將它設為線上。 如需有關還原單一檔案的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)。|  
+|OFFLINE|檔案無法存取且可能不在磁碟上。 明確的使用者動作會使檔案變成離線，而且在採取其他使用者動作之前都是離線狀態。<br /><br /> 注意當檔案損毀時，應該只能將檔案設為離線狀態，但是可以還原。 ** \* \* \* \* ** 設為離線的檔案只能透過從備份還原檔案來將它設為線上。 如需有關還原單一檔案的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)。|  
 |RESTORING|正在還原檔案。 檔案會輸入還原狀態，因為還原命令會影響整個檔案，而不是只有頁面還原，而且會一直保留此狀態，直到完成還原並復原檔案為止。|  
-|RECOVERY PENDING|已延遲檔案復原。 檔案會自動輸入此狀態，因為在分次還原處理序中，有未還原和未復原的檔案。 需要使用者執行其他動作以解決錯誤並允許完成復原處理。 如需詳細資訊，請參閱分次[還原 &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md)。|  
+|RECOVERY PENDING|已延遲檔案復原。 檔案會自動輸入此狀態，因為在分次還原處理序中，有未還原和未復原的檔案。 需要使用者執行其他動作以解決錯誤並允許完成復原處理。 如需詳細資訊，請參閱[分次還原 &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md)。|  
 |SUSPECT|在線上還原處理期間檔案復原失敗。 如果檔案是在主要檔案群組中，資料庫也會標示為有疑問。 否則，只有檔案是有疑問的，資料庫仍會在線上。<br /><br /> 檔案仍然會在有疑問的狀態下，直到可以使用下列其中一個方法：<br /><br /> 還原和復原<br /><br /> DBCC CHECKDB with REPAIR_ALLOW_DATA_LOSS|  
 |DEFUNCT|當它在線上時，就會卸除檔案。 當移除了離線檔案群組，在檔案群組中的所有檔案就會變成無用。|  
   

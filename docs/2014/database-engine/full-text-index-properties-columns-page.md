@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 75e52edb-0d07-4393-9345-8b5af4561e35
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5eac064dbcb727542969095906260ee962bb44af
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 2d626ca1a162881be28401dd698ceb7db4e59e64
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932989"
 ---
 # <a name="full-text-index-properties-columns-page"></a>全文檢索索引屬性 (資料行頁面)
   **若要檢視或變更全文檢索索引的屬性**  

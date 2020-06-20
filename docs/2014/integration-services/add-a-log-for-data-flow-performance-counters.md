@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c397a5e4361c1aca4edfc32807045e3da9cbed0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062062"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926389"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>加入資料流程效能計數器的記錄檔
   此程序描述如何加入資料流程引擎提供之效能計數器的記錄檔。  
@@ -35,7 +34,7 @@ ms.locfileid: "66062062"
   
 3.  在 [效能]**** 對話方塊中，展開 [效能記錄檔及警示]****，以滑鼠右鍵按一下 [計數器記錄檔]****，然後按一下 [新記錄檔設定]****。 鍵入記錄檔的名稱。 例如，輸入 **MyLog**。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
 5.  在 [MyLog]**** 對話方塊中，按一下 [加入計數器]****。  
   
@@ -49,15 +48,15 @@ ms.locfileid: "66062062"
   
     -   選取 [從清單選取計數器]****，並選取要使用的效能計數器。  
   
-9. 按一下 **[新增]** 。  
+9. 按一下 [新增] 。  
   
-10. 按一下 **關閉**。  
+10. 按一下 [關閉] 。  
   
 11. 在 [MyLog]**** 對話方塊中，檢閱 [計數器]**** 清單中記錄效能計數器的清單。  
   
 12. 若要加入其他計數器，請重複步驟 5 至 10。  
   
-13. 按一下 [確定]  。  
+13. 按一下 [確定]。  
   
     > [!NOTE]  
     >  您必須使用 Administrators 群組成員的本機帳戶或網域帳戶，啟動「效能記錄檔及警示」服務。  

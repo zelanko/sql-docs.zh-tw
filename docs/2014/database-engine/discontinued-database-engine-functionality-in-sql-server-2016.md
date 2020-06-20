@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14924dedee04345c593683752baff4161c8d270d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67463462"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933149"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 中已停止的 Database Engine 功能
   本主題描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
@@ -66,7 +65,7 @@ ms.locfileid: "67463462"
 |記憶體管理|32 位元 Address Windowing Extensions (AWE) 和 32 位元 Hot Add Memory 支援。|使用 64 位元作業系統。|  
 |中繼資料|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |可程式性|SQL Server Distributed Management Objects (SQL-DMO)|SQL Server 管理物件 (SMO)|  
-|查詢提示|`FASTFIRSTROW` 提示|`OPTION (FAST`*n* `)`。|  
+|查詢提示|`FASTFIRSTROW` 提示|`OPTION (FAST`*n* `)` 。|  
 |遠端伺服器|使用者已無法使用 `sp_addserver` 建立新的遠端伺服器。 `sp_addserver` 與 'local' 選項仍可使用。 升級期間所保留或複寫所建立的遠端伺服器仍然可以使用。|使用連結的伺服器取代遠端伺服器。|  
 |安全性|`sp_dropalias`|以使用者帳戶和資料庫角色的組合來取代別名。 請使用 `sp_dropalias`，在升級的資料庫中移除別名。|  
 |安全性|代表早於 **2000 之登入值的版本參數** PWDCOMPARE [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已停止。|None|  
@@ -75,7 +74,7 @@ ms.locfileid: "67463462"
 |系統資料表|sys.database_principal_aliases|請使用角色，而非別名。|  
 |Transact-SQL|`RAISERROR` 格式的 `RAISERROR integer 'string'` 已停止。|請使用目前的**RAISERROR （...）** 語法重寫語句。|  
 |Transact-SQL 語法|`COMPUTE / COMPUTE BY`|使用`ROLLUP`|  
-|Transact-SQL 語法|使用和 **=&#42;** ** \* **|使用 ANSI 聯結語法。 如需詳細資訊，請參閱 [FROM (Transact-SQL)。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Transact-SQL 語法|使用 **\*=** 和 **=&#42;**|使用 ANSI 聯結語法。 如需詳細資訊，請參閱 [FROM (Transact-SQL)。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed、databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|已取代為 database_file_size_change event、database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **其他 XEvent 變更**  

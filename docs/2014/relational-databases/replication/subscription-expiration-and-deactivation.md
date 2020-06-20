@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89818f172ee9af09a44654dffc800bf6adc35de4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d81e8b5c02fcfe5399be9e63c8160036a999547
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630372"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997938"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>訂閱逾期與停用
   如果訂閱在指定 *「保留期限」* 內未執行同步處理，則可以停用訂閱或使訂閱過期。 發生的動作依複寫類型及超過的保留期限而定。  
@@ -33,7 +32,7 @@ ms.locfileid: "62630372"
  若要設定保留期限，請參閱[設定訂閱的逾期期限](publish/set-the-expiration-period-for-subscriptions.md)、[設定交易式發行集的散發保留期限 &#40;SQL Server Management Studio&#41;](set-distribution-retention-period-for-transactional-publications.md) 和[設定發行與散發](configure-publishing-and-distribution.md)。  
   
 ## <a name="transactional-replication"></a>異動複寫  
- 異動複寫會使用最大散發保留期限（ **@max_distretention** [sp_adddistributiondb &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)）和發行集保留期限（Sp_addpublication 的**@retention**參數[&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)）：  
+ 異動複寫會使用最大散發保留期限（ **@max_distretention** [Sp_adddistributiondb &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)）和發行集保留期限（ **@retention** Sp_addpublication 的參數[&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)）：  
   
 -   如果在最高散發保留期限內 (預設值為 72 小時) 未同步處理訂閱，並且散發資料庫中有變更尚未傳遞至「訂閱者」，則「散發者」上執行的 **Distribution clean up** 工作會將訂閱標記為停用。 訂閱必須重新初始化。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62630372"
   
     -   複寫無法在發行集和訂閱資料庫中清除中繼資料，直到到達保留期限為止。 小心指定保留期限的高數值，因為此值可能對複寫效能產生負面影響。 若您能夠確實預測所有訂閱者都會在該時間週期內定期同步處理，建議您使用較低設定。  
   
-    -   您可以指定訂閱永不過期（的值為**@retention**0），但強烈建議您不要使用此值，因為中繼資料無法清除。  
+    -   您可以指定訂閱永不過期（的值為 0 **@retention** ），但強烈建議您不要使用此值，因為中繼資料無法清除。  
   
 -   任何重新發行者的保留期限必須設定為等於或少於原始「發行者」的設定值。 對所有的「發行者」及其替代性同步處理夥伴，也應該使用相同的發行保留值。 使用不同值可能會導致非交集的情況。 若您需要變更發行集保留值，請重新初始化訂閱者，以避免資料無法聚合。  
   

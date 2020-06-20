@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b00b44ebe66a372b2037e62dc589afa35003495e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fae9ca930bd8741a1332b61c8272f2133590483e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717201"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013536"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>比較具類型的 XML 與不具類型的 XML
   您可以建立 `xml` 類型的變數、參數和資料行。 此外，也可以選擇性地將 XML 結構描述的集合與 `xml` 類型的變數、參數和資料行建立關聯。 在此情況下， `xml` 資料類型實例稱為「具*類型*」。 非此種情況下的 XML 執行個體則稱為「不具類型」  。  

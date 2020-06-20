@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e850b7c-4b89-42ad-b0a6-d63ac7cc9568
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b162ebfa6d888460b49f0877d634c88bba47464a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce970f4e944fbc4d940d1021a48600be9cd47967
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062141"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926299"
 ---
 # <a name="add-a-source-using-source-assistant"></a>使用來源小幫手加入來源
   本主題提供使用來源小幫手加入新來源的步驟，也會列出可以在 [加入新來源]**** 對話方塊上使用的選項。當您將來源小幫手拖放至 SSIS 設計師，即會顯示此對話方塊。  
@@ -28,10 +27,10 @@ ms.locfileid: "66062141"
   
 3.  在 [類型]**** 清單中選取目的地的類型。  
   
-4.  在 [**連接管理員**] 清單中選取現有的連線管理員，或選取** \<[新增>** ] 來建立新的連線管理員。  
+4.  在 [**連接管理員**] 清單中選取現有的連線管理員，或選取 **\<New>** 以建立新的連線管理員。  
   
 5.  如果您選取現有的連線管理員，請按一下 [確定]****，以關閉 [加入新目的地]**** 對話方塊。 您應該會看到目的地和連線管理員已加入資料流程。  
   
-6.  如果您按一下** \<[新增>** 建立新的連線管理員，您應該會看到 [**連線管理員**] 對話方塊，可讓您指定連接的參數。 完成建立新的連接管理員之後，您會在 SSIS 設計師中看到目的地和連接管理員。  
+6.  如果您按一下 **\<New>** 以建立新的連線管理員，您應該會看到 [**連線管理員**] 對話方塊，可讓您指定連接的參數。 完成建立新的連接管理員之後，您會在 SSIS 設計師中看到目的地和連接管理員。  
   
   

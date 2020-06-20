@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6fe7d2bf1ef6b8932704242e94c377a2b11c0619
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c4529d7a7d52687c5ea648a5e401cc309ea1f0c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061393"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags 屬性 (SInstance 類別)
-  取得實例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的旗標數目。  
+  取得實例的旗標數目 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  代表伺服器實例的[SInstance 類別](sinstance-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

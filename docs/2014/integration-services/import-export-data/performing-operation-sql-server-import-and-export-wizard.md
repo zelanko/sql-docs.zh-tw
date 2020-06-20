@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 948588ef8cfec8e3b3a5d689068bdff5d4396cc6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767900"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965566"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>正在執行作業 (SQL Server 匯入和匯出精靈)
   使用 [**正在執行**作業] 頁面，即可查看匯入/匯出作業的進度和結果，並在必要時中斷操作。  
@@ -33,7 +32,7 @@ ms.locfileid: "62767900"
  **狀態**  
  顯示每個動作是成功或失敗。  
   
- **訊息**  
+ **Message**  
  顯示動作可能產生的參考訊息或錯誤訊息。  
   
  **Filter**  

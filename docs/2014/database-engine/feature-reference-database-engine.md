@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 844795b57c69fa003140fb42453cb59b138ffcc7
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 54cc9e8a704dbeab670d5e9fc7eaad4d599ef7cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933029"
 ---
 # <a name="feature-reference-database-engine"></a>功能參考 (Database Engine)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包含可用來建立、管理以及檢視資料庫物件與資料的數個工具和應用程式。 此外，還有您可以用來監視並疑難排解伺服器和資料庫效能，以及啟用和停用功能、服務與網路通訊協定的工具。 本節提供描述這些工具和應用程式之對話方塊的特定主題。  

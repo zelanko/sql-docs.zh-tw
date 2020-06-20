@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f74d9089bf6c2a87edaeaee80c95757982f6c2a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892749"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966202"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>儲存 SSIS 封裝 (SQL Server 匯入和匯出精靈)
-  使用 [**儲存 SSIS 封裝**] 頁面，即可命名、描述[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services （[!INCLUDE[ssIS](../../includes/ssis-md.md)]）封裝，並將其[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb`儲存至資料庫或副檔名為 .dtsx 的檔案。  
+  使用 [**儲存 SSIS 封裝**] 頁面，即可命名、描述 Integration Services （）封裝，並將其儲存 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` 資料庫或副檔名為 .dtsx 的檔案。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中，無法使用儲存此精靈所建立之封裝的選項。  
@@ -33,7 +32,7 @@ ms.locfileid: "62892749"
  **名稱**  
  提供封裝的唯一名稱。  
   
- **描述**  
+ **說明**  
  提供封裝的描述。 最佳作法是以其用途描述封裝，使封裝可以自我記錄並易於維護。  
   
  **目標**  
@@ -58,7 +57,7 @@ ms.locfileid: "62892749"
  當您已經選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，並且指定 SQL Server 驗證時，請輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 密碼。  
   
 ### <a name="target--file-system"></a>目標 = 檔案系統  
- [檔案名稱]****  
+ **檔案名稱**  
  當您選取檔案目的地時，請輸入目的地檔案的路徑，或使用 [**流覽]** 按鈕。  
   
  **瀏覽**  

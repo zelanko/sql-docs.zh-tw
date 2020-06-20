@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f2833f1f342aa212b73611d257b8e29606a14cce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09910ec1da0b6d157a3a0a53953f2650a924c314
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662979"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053018"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support 事件類別
   當您使用將從 **的下一個主要版本移除的功能時，就會發生** Deprecation Final Support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件類別。 為了使應用程式的使用壽命達到最久，請勿使用會造成 **Deprecation Final Support** 事件類別或 **Deprecation Announcement** 事件類別的功能。 請盡快修改使用最終取代功能的應用程式。  

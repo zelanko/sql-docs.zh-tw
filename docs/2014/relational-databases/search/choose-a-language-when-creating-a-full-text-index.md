@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b514820ad64cbf17df209cbda552e4c5182b75fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997781"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>選擇建立全文檢索索引時的語言
   建立全文檢索索引時，您必須針對索引資料行指定資料行層級語言。 此資料行的全文檢索查詢將會使用指定之語言的 [斷詞工具與詞幹分析器](configure-and-manage-word-breakers-and-stemmers-for-search.md) 。 在建立全文檢索索引並選擇資料行語言時，必須考慮一些事項。 這些考量與文字如何 Token 化，然後如何由全文檢索引擎編製索引有關。  
@@ -61,7 +60,7 @@ ms.locfileid: "66012726"
   
 -   大部分語言的斷詞工具都已包含在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中而且預設已啟用。  
   
- 如需[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]包含斷詞工具和字幹分析器的語言清單，請參閱[fulltext_languages &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。  
+ 如需包含斷詞工具和字幹分析器的語言清單 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請參閱[Fulltext_languages &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。  
   
 
   
@@ -108,7 +107,7 @@ ms.locfileid: "66012726"
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> 資料行類型對全文檢索搜尋的影響  
  選擇語言時的另一個考量與呈現資料的方式有關。 對於儲存在 `varbinary(max)` 資料行以外的資料而言，系統不會執行特殊篩選。 相反地，文字可以其原始格式傳送，而不會受限於文字分隔元件。  
   
- 此外，斷詞工具主要設計成處理一般撰寫內容。 所以，如果您的文字上有任何類型的標記 (如 HTML)，則在編製索引和搜尋語言時可能會不夠精確。 在此情況下，您有兩個選擇：慣用的方法是將文字資料儲存在`varbinary(max)`資料行中，並指示其檔案類型，以便進行篩選。 如果不使用這個選項，您可以考慮使用中性斷詞工具，而且若可行的話，請將標記資料 (例如 HTML 中的 'br') 加入至非搜尋字清單。  
+ 此外，斷詞工具主要設計成處理一般撰寫內容。 所以，如果您的文字上有任何類型的標記 (如 HTML)，則在編製索引和搜尋語言時可能會不夠精確。 在此情況下，您有兩個選擇：慣用的方法是將文字資料儲存在資料 `varbinary(max)` 行中，並指示其檔案類型，以便進行篩選。 如果不使用這個選項，您可以考慮使用中性斷詞工具，而且若可行的話，請將標記資料 (例如 HTML 中的 'br') 加入至非搜尋字清單。  
   
 > [!NOTE]  
 >  當您指定中性語言時，以語言為基礎的字根檢索功能將不會發生作用。  
