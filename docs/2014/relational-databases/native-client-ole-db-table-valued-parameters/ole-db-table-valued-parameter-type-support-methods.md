@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3f0ea289b75085cd4b7e90531eeaf592979707c2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8c7ca5946228ea05708984fb89ebc603061d983d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704637"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049631"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-methods"></a>OLE DB 資料表值參數類型支援 (方法)
   下列標準 OLE DB 方法支援資料表值參數：  

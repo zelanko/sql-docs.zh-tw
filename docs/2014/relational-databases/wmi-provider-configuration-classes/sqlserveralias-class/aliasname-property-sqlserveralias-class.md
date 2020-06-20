@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1115707b08c3068b27d83e3e292e6baf64e6cbeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10ea5b8f6145df5caadc229c96ea3de3fda406f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035660"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047022"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName 屬性 (SqlServerAlias 別名)
   取得伺服器連接別名的名稱。  
@@ -37,8 +36,8 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
- 代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]別名的[SqlServerAlias 類別](sqlserveralias-class.md)物件。  
+ *object*  
+ 代表別名的[SqlServerAlias 類別](sqlserveralias-class.md)物件 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定伺服器連接別名名稱的 `string` 值。  

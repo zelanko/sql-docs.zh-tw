@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: c036d1c9-83d1-4a95-b67e-29d283b1a046
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8d339867a7b8183b00f7825c2f5059dddd2ed9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067740"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>操作員屬性及新增操作員 (一般頁面)
-  使用此頁面來查看和修改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 操作員的一般屬性。  
+  使用此頁面來查看和修改 Agent 操作員的一般屬性 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="options"></a>選項。  
  **名稱**  

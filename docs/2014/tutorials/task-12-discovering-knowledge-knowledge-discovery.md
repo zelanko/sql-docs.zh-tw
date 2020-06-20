@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bad2760a5dc9b16b24d75bb35617759543205f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484687"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064776"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>工作 12：探索知識 (知識探索)
   在這項工作中，您會對**供應商識別碼**和**供應商名稱**網域執行**知識探索**活動。 在此案例中，知識探索程序主要會匯入這兩個定義域的值。  
@@ -28,7 +27,7 @@ ms.locfileid: "65484687"
   
 2.  針對 [**資料來源**] 選取 [ **Excel**檔案]。  
   
-3.  按一下 **[流覽]**，流覽並選取 [**供應商 .xls**]，然後按一下 [**開啟**]。  
+3.  按一下 **[流覽]**，流覽並選取 [ **Suppliers.xls**]，然後按一下 [**開啟**]。  
   
 4.  針對 [**工作表**] 選取 [**探索供應商**]。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "65484687"
   
 6.  按 **[下一步]** 切換至 [**探索**] 頁面。  
   
-7.  在 [**探索**] 頁面上，按一下 [**啟動**] 以啟動探索程式。 探索會在**供應商 .xls**檔案中的**資料行 [** 已廠商] 和 [**供應商名稱**] 上執行。 **供應商識別碼**和**供應商名稱**網域應該填入從探索所繪製的知識。  
+7.  在 [**探索**] 頁面上，按一下 [**啟動**] 以啟動探索程式。 探索會針對**Suppliers.xls**檔案中的 [**資料行]** 、[廠商] 和 [**供應商名稱**] 執行。 **供應商識別碼**和**供應商名稱**網域應該填入從探索所繪製的知識。  
   
      ![探索程序的 [探索] 頁面](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "探索程序的 [探索] 頁面")  
   
@@ -58,7 +57,7 @@ ms.locfileid: "65484687"
   
      ![定義域值和 [更正為] 值](../../2014/tutorials/media/et-discoveringknowledge-06.jpg "定義域值和 [更正為] 值")  
   
-13. 按一下 [完成]  。  
+13. 按一下 [完成] 。  
   
 14. 在**SQL Server Data Quality Services** ] 對話方塊上，按一下 [**發佈**]。  
   

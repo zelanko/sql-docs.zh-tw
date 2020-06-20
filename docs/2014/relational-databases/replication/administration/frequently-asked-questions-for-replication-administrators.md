@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02f12008b9ab8e9cd4c7d08ed81a902629b90827
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207055"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063840"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
   透過下列問題和答覆可以了解複寫的資料庫管理員所面臨的各種工作。  
@@ -26,7 +25,7 @@ ms.locfileid: "63207055"
 ## <a name="configuring-replication"></a>設定複寫  
   
 ### <a name="does-activity-need-to-be-stopped-on-a-database-when-it-is-published"></a>當活動發行後，是否需要在資料庫中停止該活動？  
- 不可以。 在建立發行集期間，可在資料庫中繼續保留活動。 請注意，產生快照集可能需要大量資源，因此最好在資料庫中活動較少的時間產生快照集 (依預設，在您完成「新增發行集精靈」時產生快照集)。  
+ 否。 在建立發行集期間，可在資料庫中繼續保留活動。 請注意，產生快照集可能需要大量資源，因此最好在資料庫中活動較少的時間產生快照集 (依預設，在您完成「新增發行集精靈」時產生快照集)。  
   
 ### <a name="are-tables-locked-during-snapshot-generation"></a>資料表是否在快照集產生期間鎖定？  
  鎖定的時間長短視所用的複寫類型而定：  
@@ -94,7 +93,7 @@ ms.locfileid: "63207055"
  此資訊可透過 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]和數個複寫預存程序獲得。 如需詳細資訊，請參閱 [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md)。  
   
 ### <a name="does-replication-encrypt-data"></a>複寫是否會加密資料？  
- 不可以。 複寫不會對儲存在資料庫或透過網路傳送的資料加密。 如需詳細資訊，請參閱[SQL Server 複寫安全性](../security/view-and-modify-replication-security-settings.md)主題的「加密」一節。  
+ 否。 複寫不會對儲存在資料庫或透過網路傳送的資料加密。 如需詳細資訊，請參閱[SQL Server 複寫安全性](../security/view-and-modify-replication-security-settings.md)主題的「加密」一節。  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>如何透過網際網路複寫資料？  
  使用下列方式，透過網際網路複寫資料：  
@@ -103,7 +102,7 @@ ms.locfileid: "63207055"
   
 -   合併式複寫的 Web 同步處理選項。 如需詳細資訊，請參閱＜ [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)＞。  
   
- 所有類型的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]複寫都可以透過 VPN 複寫資料，但如果您使用合併式複寫，則應考慮 Web 同步處理。  
+ 所有類型的複寫都 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以透過 VPN 複寫資料，但如果您使用合併式複寫，則應考慮 Web 同步處理。  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>如果連接斷開，則複寫是否會繼續？  
  是。 如果連接斷開，複寫處理會從它停止的地方繼續。 如果您在不可靠的網路中使用合併式複寫，請考慮使用邏輯記錄，它可確保相關變更作為一個單位進行處理。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../merge/group-changes-to-related-rows-with-logical-records.md)。  
@@ -114,14 +113,14 @@ ms.locfileid: "63207055"
 ## <a name="logins-and-object-ownership"></a>登入和物件擁有權  
   
 ### <a name="are-logins-and-passwords-replicated"></a>登入和密碼是否會被複寫？  
- 不可以。 您可以建立 DTS 封裝以將登入和密碼從「發行者」傳送給一個或多個「訂閱者」。  
+ 否。 您可以建立 DTS 封裝以將登入和密碼從「發行者」傳送給一個或多個「訂閱者」。  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>結構描述什麼是以及它們是如何進行複寫的？  
  從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 開始，「結構描述」** 有兩種意義：  
   
 -   物件的定義，例如 CREATE TABLE 陳述式。 依預設，複寫將所有複寫物件的定義複製到「訂閱者」。  
   
--   在其中建立物件的命名空間：\<資料庫>.\<結構描述>.\<物件>。 結構描述使用 CREATE SCHEMA 陳述式來定義。  
+-   要在其中建立物件的命名空間： \<Database> ... \<Schema> \<Object>架構是使用 CREATE SCHEMA 語句來定義的。  
   
 -   針對結構描述和物件擁有權，複寫在新增複寫精靈中具有下列預設行為：  
   
@@ -133,7 +132,7 @@ ms.locfileid: "63207055"
   
 -   針對使用字元模式快照集之發行集內的發行項 (用於非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者和 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 訂閱者)：依預設，會將擁有者保留空白。 擁有者預設為與散發代理程式或合併代理程式用於連接到訂閱者之帳戶相關聯的擁有者。  
   
- 物件擁有者可以透過 **[發行項屬性 -\<***發行項***>] **對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../publish/view-and-modify-publication-properties.md)、[定義發行項](../publish/define-an-article.md)和[檢視和修改發行項屬性](../publish/view-and-modify-article-properties.md)。  
+ 物件擁有者可以透過 [發行**項屬性- \<***Article***> ** ] 對話方塊，以及透過下列預存程式進行變更： **sp_addarticle**、 **sp_addmergearticle**、 **sp_changearticle**和**sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../publish/view-and-modify-publication-properties.md)、[定義發行項](../publish/define-an-article.md)和[檢視和修改發行項屬性](../publish/view-and-modify-article-properties.md)。  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>如何將訂閱資料庫中的授權設定為與發行集資料庫中的授權相符？  
  依預設，複寫不執行訂閱資料庫中的 GRANT 陳述式。 如果您要使訂閱資料庫中的授權與發行集資料庫中的授權相符，請使用以下其中一種方法：  
@@ -151,9 +150,9 @@ ms.locfileid: "63207055"
   
 -   指定在重新初始化訂閱時不應卸除物件。 在重新初始化之前，執行下列其中一項：  
   
-    -   執行 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 或 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 為參數指定 ' pre_creation_cmd ' （**sp_changearticle**）或 ' pre_creation_command ' （**sp_changemergearticle**）的值， **@property**並為參數**@value**指定 ' none '、' delete ' 或 ' 截斷 ' 的值。  
+    -   執行 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 或 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 為參數指定 ' pre_creation_cmd ' （**sp_changearticle**）或 ' pre_creation_command ' （**sp_changemergearticle**）的值， **@property** 並為參數指定 ' none '、' delete ' 或 ' 截斷 ' 的值 **@value** 。  
   
-    -   在 [發行項**屬性\<-** 發行項>] 對話方塊的 [**目的地物件**] 區段中，選取 [**保留現有的物件不變**，刪除資料] 的值 **。如果發行項有資料列篩選，請只刪除符合篩選的資料。** 或 [截斷現有物件中的所有資料]**** 作為 [如果名稱使用中，則採取動作]**** 選項的值。 如需存取這個對話方塊的詳細資訊，請參閱[檢視和修改發行集屬性](../publish/view-and-modify-publication-properties.md)。  
+    -   在 [發行項**屬性 \<Article> -** ] 對話方塊的 [**目的地物件**] 區段中，選取 [**保留現有物件不變**] 的值，**刪除 [資料]。如果發行項有資料列篩選，請只刪除符合篩選的資料。** 或 [截斷現有物件中的所有資料]**** 作為 [如果名稱使用中，則採取動作]**** 選項的值。 如需存取這個對話方塊的詳細資訊，請參閱[檢視和修改發行集屬性](../publish/view-and-modify-publication-properties.md)。  
   
 ## <a name="database-maintenance"></a>資料庫維護  
   
@@ -181,7 +180,7 @@ ms.locfileid: "63207055"
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，移動或重新命名資料庫檔案需要卸離及重新附加資料庫。 因為複寫的資料庫無法卸離，所以必須先從這些資料庫中移除複寫。 從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始，您可以在不卸離或重新附加資料庫的情況下移動或重新命名檔案，而不會影響複寫。 如需移動和重新命名檔案的詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)。  
   
 ### <a name="how-do-i-drop-a-table-that-is-being-replicated"></a>如何卸除正在複寫的資料表？  
- 首先使用 [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)、[sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 或 [發行集屬性 - \<發行集>]**** 對話方塊從發行集中卸除發行項，然後使用 `DROP <Object>` 將其從資料庫中卸除。 訂閱已加入之後，不可從快照集或交易式發行集卸除發行項，必須先卸除訂閱。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
+ 請先使用[sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)、 [Sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)或 [發行集屬性] 對話方塊來卸載發行集中的發行**項 \<Publication> ** ，然後使用將其從資料庫中卸載 `DROP <Object>` 。 訂閱已加入之後，不可從快照集或交易式發行集卸除發行項，必須先卸除訂閱。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>如何在已發行的資料表中新增或卸除資料行？  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援在已發行物件上進行各種結構描述變更，包括新增和卸除資料行。 例如，執行 ALTER TABLE .。。在發行者端放置資料行，並將語句複寫至訂閱者，然後執行以卸載資料行。 執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的「訂閱者」支援透過預存程序 [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) 和 [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql)新增和卸除資料行。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../publish/make-schema-changes-on-publication-databases.md)。  
@@ -192,10 +191,10 @@ ms.locfileid: "63207055"
  使用驗證。 驗證將報告給定「訂閱者」是否與「發行者」同步。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-data-at-the-subscriber.md)。 驗證不會提供未正確同步之資料列 (若有的話) 的資訊，但 [tablediff 公用程式](../../../tools/tablediff-utility.md) 可以提供。  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>如何將資料表新增至現有的發行集？  
- 新增資料表 (或其他物件) 時不必停止發行集或訂閱資料庫中的活動。 透過 [發行集屬性 - \<發行集>]**** 對話方塊或預存程序 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 和 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)，將資料表新增至發行集。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
+ 新增資料表 (或其他物件) 時不必停止發行集或訂閱資料庫中的活動。 透過 [**發行集屬性 \<Publication> -** ] 對話方塊或預存程式[sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)和[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)，將資料表加入至發行集。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="how-do-i-remove-a-table-from-a-publication"></a>如何從發行集中移除資料表？  
- 使用 [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)、[sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 或 [發行集屬性 - \<發行集>]**** 對話方塊從發行集中移除資料表。 訂閱已加入之後，不可從快照集或交易式發行集卸除發行項，必須先卸除訂閱。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
+ 使用 [ [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)]、[ [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)] 或 [**發行集屬性- \<Publication> ** ] 對話方塊，從發行集中移除資料表。 訂閱已加入之後，不可從快照集或交易式發行集卸除發行項，必須先卸除訂閱。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="what-actions-require-subscriptions-to-be-reinitialized"></a>哪些動作需要重新初始化訂閱？  
  有許多發行項和發行集變更需要重新初始化訂閱。 如需詳細資訊，請參閱[變更發行集與發行項屬性](../publish/change-publication-and-article-properties.md)。  

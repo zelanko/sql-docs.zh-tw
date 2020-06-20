@@ -11,24 +11,23 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c8f8bc17b6a4c4792858c64144788aa12b858a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510952"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062249"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>作業步驟屬性：新增作業步驟 (一般頁面)
-  使用此頁面來查看和變更[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的屬性，或定義新的作業步驟。  
+  使用此頁面來查看和變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的屬性，或定義新的作業步驟。  
   
  若要導覽至此頁面，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中，展開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，以滑鼠右鍵按一下 [作業]****，按一下 [新增作業]****，選取 [步驟]**** 頁面，然後按一下 [新增]****。 您也可用滑鼠右鍵按一下物件總管中的作業，按一下 [屬性]****、選取 [步驟]**** 頁面，然後按一下 [新增]****、[插入]**** 或 [編輯]****，以導覽至此頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **步驟名稱**  
  設定作業步驟的名稱。  
   
- **類型**  
+ **型別**  
  設定作業步驟使用的子系統。 根據您選擇的子系統，會顯示定義作業步驟變更的選項。  
   
  **執行身分**  
@@ -237,7 +236,7 @@ ms.locfileid: "62510952"
  **組態檔**  
  列出封裝的組態檔。  
   
- **加入**  
+ **新增**  
  加入封裝的組態檔。  
   
  **移除**  
@@ -255,7 +254,7 @@ ms.locfileid: "62510952"
  **命令檔**  
  列出封裝的命令檔。  
   
- **加入**  
+ **新增**  
  加入命令檔。  
   
  **移除**  
@@ -273,7 +272,7 @@ ms.locfileid: "62510952"
  **連線管理員**  
  檢視資料來源的名稱。  
   
- **描述**  
+ **說明**  
  檢視資料來源的描述。  
   
  **連接字串**  

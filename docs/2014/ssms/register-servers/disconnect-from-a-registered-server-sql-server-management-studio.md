@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 328d795f692597689628f6fa189d597f73fbb76a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80a1884206e4f8fb49bf6aadb57ab7dde8ffa829
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244615"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058402"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>中斷與註冊伺服器的連接 (SQL Server Management Studio)
   本主題描述如何 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中隨時從伺服器中斷 [物件總管] 的連接。 中斷 [物件總管] 的連接，並不會中斷其他 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 元件 (例如 SQL 編輯器) 的連接。  

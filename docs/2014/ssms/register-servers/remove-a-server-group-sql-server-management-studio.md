@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 00ddaf35a859c0d95172e240537f825b3e9e8b1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c842e142dbf57dda870dbaf0834ae36974614996
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058355"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>移除伺服器群組 (SQL Server Management Studio)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中移除 [已註冊的伺服器] 中的伺服器群組。 您可以隨時刪除伺服器群組。 如果不是空的伺服器群組，那麼被刪除的伺服器群組內包含的伺服器或伺服器群組，也將會一併刪除。 刪除伺服器群組織前，請將想要保留的伺服器或伺服器群組移動到新的伺服器群組。  

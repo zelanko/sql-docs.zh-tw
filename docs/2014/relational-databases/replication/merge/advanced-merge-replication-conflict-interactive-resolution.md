@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 43347190c53331d0a30ba0f29d795cce981eec34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57d0de17c4d958a1b842748810ba24717e6866e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63245123"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049455"
 ---
 # <a name="interactive-conflict-resolution"></a>Interactive Conflict Resolution
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫提供互動式解決器，可讓您在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同步處理管理員中於需要同步處理期間手動解決衝突。 「互動解析程式」是圖形介面，會在執行時期啟動並顯示各衝突資料列的資料，以及提供檢視及編輯衝突資料的選項，然後個別解決每項衝突。  

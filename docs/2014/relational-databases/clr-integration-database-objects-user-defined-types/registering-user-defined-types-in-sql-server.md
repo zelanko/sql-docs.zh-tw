@@ -32,16 +32,15 @@ helpviewer_keywords:
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d24f7948e093335eff708f3c4a8a7361cfc156f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919944"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954617"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中註冊使用者定義型別
-  若要在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用使用者定義型別（UDT），您必須註冊它。 註冊 UDT 包括註冊組件，以及在要使用該型別的資料庫中建立它。 UDT 的使用範圍為單一資料庫，而且除非已經向每個資料庫註冊相同的組件及 UDT，否則無法在多個資料庫中使用。 一旦註冊 UDT 組件並建立此型別之後，您便可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及用戶端程式碼中使用該 UDT。 如需詳細資訊，請參閱 [CLR 使用者定義型別](clr-user-defined-types.md)。  
+  若要在中使用使用者定義型別（UDT） [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您必須註冊它。 註冊 UDT 包括註冊組件，以及在要使用該型別的資料庫中建立它。 UDT 的使用範圍為單一資料庫，而且除非已經向每個資料庫註冊相同的組件及 UDT，否則無法在多個資料庫中使用。 一旦註冊 UDT 組件並建立此型別之後，您便可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及用戶端程式碼中使用該 UDT。 如需詳細資訊，請參閱 [CLR 使用者定義型別](clr-user-defined-types.md)。  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>使用 Visual Studio 部署 UDT  
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 是部署 UDT 最簡單的方式。 但是，若為較複雜的部署案例而且需要最大的彈性，請使用本主題稍後將要討論的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
@@ -69,7 +68,7 @@ ms.locfileid: "62919944"
  當使用 SAFE 或 EXTERNAL_ACCESS 權限集合執行 CREATE ASSEMBLY 時，系統會檢查組件，以確定它可進行驗證且型別是安全的。 如果您省略指定使用權限集合，則會假設為 SAFE。 系統不會檢查使用 UNSAFE 權限集合的程式碼。 如需有關組件權限集合的詳細資訊，請參閱[設計組件](../../relational-databases/clr-integration/assemblies-designing.md)。  
   
 #### <a name="example"></a>範例  
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]語句會使用 SAFE 許可權集合， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在**AdventureWorks**資料庫中註冊 Point 元件。 如果省略 WITH PERMISSION_SET 子句，將會使用 SAFE 權限集合註冊該組件。  
+ 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 SAFE 許可權集合，在**AdventureWorks**資料庫中註冊 Point 元件。 如果省略 WITH PERMISSION_SET 子句，將會使用 SAFE 權限集合註冊該組件。  
   
 ```  
 USE AdventureWorks;  
@@ -78,7 +77,7 @@ FROM '\\ShareName\Projects\Point\bin\Point.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]語句會使用 FROM 子句中的 *<assembly_bits>* 引數來註冊元件。 此 `varbinary` 值將檔案表示為位元組的資料流。  
+ 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句會使用 FROM 子句中的 *<assembly_bits>* 引數來註冊元件。 此 `varbinary` 值將檔案表示為位元組的資料流。  
   
 ```  
 USE AdventureWorks;  
@@ -123,7 +122,7 @@ DROP ASSEMBLY Point;
 ### <a name="finding-udt-dependencies"></a>尋找 UDT 相依性  
  如果有相依物件存在 (如具有 UDT 資料行定義的資料表)，則 DROP TYPE 陳述式會失敗。 如果資料庫中有使用 WITH SCHEMABINDING 子句所建立的函數、預存程序或觸發程序，而且這些常式使用使用者定義型別的變數或參數，該陳述式也會失敗。 您必須先卸除所有相依物件，然後再執行 DROP TYPE 陳述式。  
   
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢會尋找在**AdventureWorks**資料庫中使用 UDT 的所有資料行和參數。  
+ 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢會尋找在**AdventureWorks**資料庫中使用 UDT 的所有資料行和參數。  
   
 ```  
 USE Adventureworks;  
@@ -159,7 +158,7 @@ FROM '\\Projects\Point\bin\Point.dll'
 ### <a name="using-alter-assembly-to-add-source-code"></a>使用 ALTER ASSEMBLY 加入原始程式碼  
  ALTER ASSEMBLY 語法中的 ADD FILE 子句不存在於 CREATE ASSEMBLY 中。 您可以使用它來加入原始程式碼，或與組件相關聯的任何其他檔案。 這些檔案會從原始位置複製，並儲存在資料庫的系統資料表中。 如此可在您需要重新建立或記載 UDT 的目前版本時，確保您一定有原始程式碼或其他檔案可用。  
   
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 語句會加入`Point` UDT 的 Point.cs 類別原始碼。 這會複製 Point.cs 檔案中包含的文字，並將它儲存在名為 PointSource 的資料庫中。  
+ 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 語句會加入 UDT 的 Point.cs 類別原始碼 `Point` 。 這會複製 Point.cs 檔案中包含的文字，並將它儲存在名為 PointSource 的資料庫中。  
   
 ```  
 ALTER ASSEMBLY Point  
@@ -213,7 +212,7 @@ SELECT CAST(content AS varchar(8000))
   
  在這些情況下，伺服器所需的任何轉換都會自動發生。 您將無法使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函數明確地執行轉換。  
   
- 請注意，在[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **tempdb**系統資料庫中建立工作資料表時，您不需要採取任何動作來使用 udt。 這包括處理資料指標、資料表變數，以及使用者定義的資料表值函式，這些函數包含 Udt，而且會以透明的方式使用**tempdb**。 不過，如果您在**tempdb**中明確建立定義 UDT 資料行的臨時表，則 UDT 必須以和使用者資料庫相同的方式，在**tempdb**中註冊。  
+ 請注意，在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **tempdb**系統資料庫中建立工作資料表時，您不需要採取任何動作來使用 udt。 這包括處理資料指標、資料表變數，以及使用者定義的資料表值函式，這些函數包含 Udt，而且會以透明的方式使用**tempdb**。 不過，如果您在**tempdb**中明確建立定義 UDT 資料行的臨時表，則 UDT 必須以和使用者資料庫相同的方式，在**tempdb**中註冊。  
   
 ## <a name="see-also"></a>另請參閱  
  [CLR 使用者定義型別](clr-user-defined-types.md)  

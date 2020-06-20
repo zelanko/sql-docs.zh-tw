@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0359ca10e7279f4a80bec082a8e049f4641c9b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf9e435156d452a83b50adcf34771c7dd45b7bfd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767627"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965350"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 交易
   封裝使用交易將工作執行的資料庫動作繫結至原子單位，這樣可以保持資料的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器類型 (套件、For 迴圈、Foreach 迴圈和時序容器，以及套件每個工作的工作主機) 皆可設定成使用交易。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供三個設定交易的選項，分別是 **NotSupported**、 **Supported**及 **Required**。  
@@ -34,7 +33,7 @@ ms.locfileid: "62767627"
  您可以設定容器上的 TransactionOption 屬性來設定交易。 使用 **中的** [屬性] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]視窗，可以設定此屬性，也可以程式設計方式設定屬性。  
   
 > [!NOTE]  
->  `TransactionOption` 屬性會影響是否會套用容器所要求的 `IsolationLevel` 屬性值。 如需詳細資訊，請參閱`IsolationLevel` [設定封裝屬性](set-package-properties.md)主題中的屬性說明。  
+>  `TransactionOption` 屬性會影響是否會套用容器所要求的 `IsolationLevel` 屬性值。 如需詳細資訊，請參閱 `IsolationLevel` [設定封裝屬性](set-package-properties.md)主題中的屬性說明。  
   
 ### <a name="to-configure-a-package-to-use-transactions"></a>若要設定封裝使用交易  
   

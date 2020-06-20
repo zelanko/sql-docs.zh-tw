@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95cff841-c2d5-4e1e-a18d-f3d4696a5b85
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec3c40d7821c86f3f5c5a7eb0d63ab48904513e2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e5d44756131b6133baec69e34da11055a965e2da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706269"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022731"
 ---
 # <a name="sqlendtran"></a>SQLEndTran
   根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當**SQLEndTran**認可或回復作業時，Native Client ODBC 驅動程式會關閉語句的相關資料指標。 除非伺服器資料指標是靜態的，否則會關閉它們。 當**SQLEndTran**認可或回復作業時，語句相關資料指標的行為是由驅動程式特定的 ODBC 連接屬性值所決定，SQL_COPT_SS_PRESERVE_CURSORS，由[SQLSetConnectAttr](sqlsetconnectattr.md)設定。  

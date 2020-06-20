@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05b11804630de6bd57681a569225971864c15814
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952176"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036900"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>加密金鑰 (SSRS 原生模式)
   使用 [加密金鑰] 頁面，即可管理用來加密和解密報表伺服器中之資料的對稱金鑰。 管理加密金鑰是報表伺服器組態之很重要的一部分。 當您建立報表伺服器資料庫時，就會自動建立並套用對稱金鑰。 請建立對稱金鑰的備份副本，以便執行例行維護作業。 您必須擁有對稱金鑰的有效副本，才能執行下列維護工作：  
@@ -48,12 +47,12 @@ ms.locfileid: "71952176"
  **Backup**  
  將對稱金鑰複製到您指定的檔案。 對稱金鑰絕不會以純文字的方式儲存。 您必須輸入密碼來保護該檔案。  
   
- **還原**  
+ **Restore**  
  將對稱金鑰先前儲存的副本套用到報表伺服器資料庫。 您必須提供密碼來解除鎖定該檔案。  
   
  您目前連接到報表伺服器執行個體之對稱金鑰的先前副本，已用還原的版本加以覆寫。 還原對稱金鑰之後，您必須初始化使用報表伺服器資料庫的所有報表伺服器。 如需初始化報表伺服器的詳細資訊，請參閱[&#40;SSRS Configuration Manager&#41;初始化報表伺服器](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
- **更改**  
+ **變更**  
  重新建立對稱金鑰，並重新加密報表伺服器資料庫中的所有加密值。 請務必在重新建立對稱金鑰之前，先停止報表伺服器服務。  
   
  在向外延展部署中，對稱金鑰的所有副本都已用較新的版本取代。 變更對稱金鑰之前，請確定要檢閱已聯結至向外延展部署之伺服器的清單，來確認唯有有效的報表伺服器執行個體，才能夠存取新的金鑰。 成為向外延展部署之一部分的伺服器會列在 **[向外延展部署]** 頁面中。 重新建立金鑰之前，請先停止部署中每一部報表伺服器上的服務。  

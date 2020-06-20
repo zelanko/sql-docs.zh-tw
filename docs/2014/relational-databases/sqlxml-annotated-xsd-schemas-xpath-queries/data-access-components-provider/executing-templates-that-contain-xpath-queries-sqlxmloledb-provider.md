@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60b20a1ee5a90b2b51abbe71a189add066e1b7e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 227c8a5b3222bdddab9632ec2e80f0bb4dd54250
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703253"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015595"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>執行包含 XPath 查詢的範本 (SQLXMLOLEDB 提供者)
   此範例顯示如何使用下列 SQLXMLOLEDB 提供者專屬的屬性：  
@@ -34,7 +33,7 @@ ms.locfileid: "82703253"
   
 -   對應結構描述  
   
- 在此範例 ADO 應用程式中，由 XPath 查詢（root）所組成的 XML 範本是針對 XSD 對應架構（MySchema）所指定，在[&#40;SQLXMLOLEDB 提供者&#41;中執行 XPath 查詢](executing-xpath-queries-sqlxmloledb-provider.md)中所述。  
+ 在此範例 ADO 應用程式中，由 XPath 查詢（root）所組成的 XML 範本是針對 XSD 對應架構（MySchema.xml）所指定，在[&#40;SQLXMLOLEDB 提供者&#41;中執行 XPath 查詢](executing-xpath-queries-sqlxmloledb-provider.md)中所述。  
   
  對應架構屬性會提供執行 XPath 查詢所針對的 XSD 對應架構。 [基底路徑] 屬性會提供對應架構的檔案路徑。  
   

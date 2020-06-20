@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97ba04b8d41c3e5ca4927abb53cf27cfa3013fcd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211507"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036985"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>設定多重主目錄電腦進行 SQL Server 存取
   當伺服器必須提供兩個或多個網路或子網路的連接時，一般會使用多重主目錄電腦。 這部電腦通常位於周邊網路 (也稱為 DMZ 或篩選的子網路) 中。 此主題描述如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路連接。  
@@ -55,7 +54,7 @@ ms.locfileid: "68211507"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>若要判斷電腦可用的 IP 位址  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在安裝的電腦上，依序按一下 [**開始**] 和 [**執行**]，輸入`cmd` ，然後。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  在安裝的電腦上，依序按一下 [開始] 和 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **執行**]，輸入， **Start** `cmd` 然後 [!INCLUDE[clickOK](../../includes/clickok-md.md)] 。  
   
 2.  在 [命令提示字元] 視窗中，輸入 `ipconfig,`，然後按下 ENTER，即可列出這部電腦可用的 IP 位址。  
   
@@ -66,9 +65,9 @@ ms.locfileid: "68211507"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>判斷使用的 IP 位址和連接埠 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  按一下 [開始]  並依序指向 [所有程式]  、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]  ，然後按一下 [ **組態管理員][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 。  
+1.  按一下 [開始] 並依序指向 [所有程式]、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]，然後按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員]。  
   
-2.  在 [ **組態管理員][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 的主控台窗格中，展開 [ **網路組態][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ，再展開 [**執行個體名稱> 的通訊協定]\<** ，然後按兩下 [TCP/IP]  。  
+2.  在** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**的主控台窗格中，展開 [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 網路**設定]，展開 [**通訊協定 \<instance name> **]，然後按兩下 [ **tcp/ip**]。  
   
 3.  在 [TCP/IP 內容]  對話方塊的 [IP 位址]  索引標籤上會出現數個 IP 位址，這些 IP 位址的格式是 **IP1**、**IP2** 到 **IPAll**。 其中一個是供回送介面卡的 IP 位址 127.0.0.1 使用。 此時會出現額外的 IP 位址，代表電腦上設定的每個 IP 位址。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "68211507"
   
 1.  在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦上，以管理員身分登入。  
   
-2.  依序按一下 [**開始**] 和`wf.msc`[**執行**]，輸入，然後按一下 **[確定]**。  
+2.  依序按一下 [**開始**] 和 [**執行**]，輸入 `wf.msc` ，然後按一下 **[確定]**。  
   
 3.  在 [使用者帳戶控制]  對話方塊中，按一下 [繼續]  ，即可使用管理員認證來開啟 [具有進階安全性的 Windows 防火牆] 嵌入式管理單元。  
   
@@ -120,7 +119,7 @@ ms.locfileid: "68211507"
   
 #### <a name="to-configure-the-firewall-rule-for-a-specific-ip-addresses"></a>若要針對特定的 IP 位址設定防火牆規則  
   
-1.  在 [具有進階安全性的 Windows 防火牆]  的 [輸入規則]  頁面上，以滑鼠右鍵按一下您剛建立的規則，然後按一下 [內容]  。  
+1.  在 [具有進階安全性的 Windows 防火牆] 的 [輸入規則] 頁面上，以滑鼠右鍵按一下您剛建立的規則，然後按一下 [內容]。  
   
 2.  在 [規則內容]  對話方塊中，選取 [範圍]  索引標籤。  
   

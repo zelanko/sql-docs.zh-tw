@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b1d5ad992c59f252f485f2d65451a72f150bef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711433"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046243"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票組態 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 容錯移轉叢集執行個體 (FCI) 都會利用 Windows Server 容錯移轉叢集 (WSFC) 做為平台技術。  WSFC 使用以仲裁為基礎的方法，監視整體叢集健全狀況並最大化節點層級容錯能力。 WSFC 仲裁模式和節點投票組態的基礎了解，對於 AlwaysOn 高可用性和災害復原方案的設計、操作和疑難排解非常重要。  
@@ -55,7 +54,7 @@ ms.locfileid: "62711433"
   
  下列仲裁模式可用於決定何者構成投票仲裁：  
   
--   **節點多數：** 叢集中超過一半的投票節點必須投票肯定，叢集才是狀況良好。  
+-   **節點多數。** 叢集中超過一半的投票節點必須投票肯定，叢集才是狀況良好。  
   
 -   **節點與檔案共用多數。** 類似於節點多數仲裁模式，不過遠端檔案共用也會設定為投票見證，而且從任何節點至該共用的連接也會列入肯定投票。  超過一半的可能投票必須是肯定，叢集才是狀況良好。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "62711433"
 > [!IMPORTANT]  
 >  為了能夠使用 NodeWeight 設定，必須將以下 Hotfix 套用至 WSFC 叢集中的所有伺服器：  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036)：可用來讓您設定在[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]和中沒有仲裁投票的叢集節點[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036)：可用來讓您設定在和中沒有仲裁投票的叢集節點 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)][!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="recommended-adjustments-to-quorum-voting"></a><a name="RecommendedAdjustmentstoQuorumVoting"></a> 建議的仲裁投票調整  
  在啟用或停用指定 WSFC 節點的投票時，請遵循下列方針：  

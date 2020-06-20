@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 503cc731ede59b4cc3cf70e9cf2daafec436243c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cadbc9e06530706f0b1e1406af7b38b72246303f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716740"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067829"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>範例：指定 ELEMENT 指示詞及實體編碼
-  此範例說明 **ELEMENT** 與 **XML** 指示詞之間的相異處。 **ELEMENT** 指示詞會將資料實體化，但 **XML** 指示詞則否。 已將 \<摘要> 項目指派給查詢中的 XML `<Summary>This is summary description</Summary>`。  
+  此範例說明 **ELEMENT** 與 **XML** 指示詞之間的相異處。 **ELEMENT** 指示詞會將資料實體化，但 **XML** 指示詞則否。 在 \<Summary> 查詢中，會將 XML 指派給元素 `<Summary>This is summary description</Summary>` 。  
   
  請考量這項查詢：  
   

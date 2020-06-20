@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b2cabbd38f05ffd45976eac6d18c8ea5f6615816
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 5eee59aae7ca1b448b448b4e8f69fca55c664772
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048680"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>選項（設計工具-資料表和資料庫設計工具頁面）
   使用此頁面來決定設計師的預設行為。 若要存取設定，請在 [工具]  功能表上按一下 [選項]  、展開 [設計工具]  資料夾，然後按一下 [資料表設計工具]  。  

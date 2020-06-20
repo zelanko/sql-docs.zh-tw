@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 219ba0605d60bab0b13675f7f9f7ff01cace5755
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049744"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
   在部分情況下，實際壓縮或擴充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之交易記錄的實體記錄檔十分有用。 本主題包含下列作業的資訊：如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄大小、壓縮交易記錄、加入或加大交易記錄檔、最佳化 **tempdb** 交易記錄成長率，以及控制交易記錄檔的成長。  
@@ -55,7 +54,7 @@ ms.locfileid: "63144329"
 -   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (請參閱一或多個記錄檔的 **size**、**max_size** 和 **growth** 資料行。)  
   
 > [!NOTE]  
->  壓縮資料庫和記錄檔的作業可設定為自動進行。 不過，我們建議您不要進行自動壓縮，而且 `autoshrink` 資料庫屬性預設為 FALSE。 如果 `autoshrink` 設定為 TRUE，只有當超過 25% 的空間未使用時，自動壓縮才會減少檔案的大小。 此時，檔案會壓縮成只有 25% 的檔案是未使用空間的大小，或檔案的原始大小，以較大者為準。 如需變更`autoshrink`屬性之設定的詳細資訊，請參閱[View Or Change a Database Properties](../databases/view-or-change-the-properties-of-a-database.md)-使用 [**選項**] 頁面上的 [**自動壓縮**] 屬性，或 [ [ALTER database SET Options] &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-使用 [AUTO_SHRINK] 選項。  
+>  壓縮資料庫和記錄檔的作業可設定為自動進行。 不過，我們建議您不要進行自動壓縮，而且 `autoshrink` 資料庫屬性預設為 FALSE。 如果 `autoshrink` 設定為 TRUE，只有當超過 25% 的空間未使用時，自動壓縮才會減少檔案的大小。 此時，檔案會壓縮成只有 25% 的檔案是未使用空間的大小，或檔案的原始大小，以較大者為準。 如需變更屬性之設定的詳細資訊 `autoshrink` ，請參閱[View or Change a Database Properties](../databases/view-or-change-the-properties-of-a-database.md)-使用 [**選項**] 頁面上的 [**自動壓縮**] 屬性，或 [ [ALTER database SET Options] &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-使用 [AUTO_SHRINK] 選項。  
   
   
 ##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a>新增或加大記錄檔  
@@ -84,6 +83,6 @@ ms.locfileid: "63144329"
   
 ## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [針對完整交易記錄 &#40;SQL Server 錯誤 9002&#41; 進行疑難排解](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+ [寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9a41bde545463964d01e8f0b32a476ee08118eb7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 356a627105c6e6dabbf4b55a5d43f8b37d2712b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706021"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022300"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會針對指定下列額外的診斷欄位 `SQLGetDiagField` 。 這些欄位支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的豐富錯誤報告功能，並且可用於在連接的 ODBC 連接控制代碼和 ODBC 陳述式控制代碼上產生的所有診斷記錄。 欄位會定義在 sqlncli.h 中。  

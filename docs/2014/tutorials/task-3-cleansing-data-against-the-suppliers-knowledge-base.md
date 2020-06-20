@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b13e3d30ac0afce5293cc0e104aa2b291112647f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13201a8b904a5fc5232b9fa860710e4e39cce67a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177278"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064761"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>工作 3：針對供應商知識庫清理資料
   在這項工作中，您會執行電腦輔助的清理程序。 DQS 會根據為了針對選取的知識庫分析及清理資料所指定的臨界值，使用進階演算法與信賴等級。 如需詳細資訊，請參閱[使用 DQS （內部）知識清理資料](https://msdn.microsoft.com/library/hh213061.aspx)。

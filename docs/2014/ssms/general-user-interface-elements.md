@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47ce33e0d0a8cf76a90beb1fa3cc6ddfda27606f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02ace1911238a994785189d2d0911ac7d687dade
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316137"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064341"
 ---
 # <a name="general-user-interface-elements"></a>一般使用者介面元素
   在**編輯器**中，[屬性]  視窗和 [工具箱]  是 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的一些基本項目。  
@@ -31,7 +30,7 @@ ms.locfileid: "63316137"
  描述 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何在文件視窗中主控 Web 瀏覽器。  
   
  [外部工具對話方塊](external-tools-dialog-box.md)  
- 可讓您將工具新增至  **所沒有的 [工具]** [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 功能表中。  
+ 可讓您將工具新增至 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 所沒有的 [工具] 功能表中。  
   
  [屬性視窗 &#40;Management Studio&#41;](properties-window-management-studio.md)  
  可讓您檢視在編輯器和設計師中之所選物件的屬性和事件。 另外，它也可讓您編輯和檢視檔案、專案和方案的屬性。 您可以在 [屬性] 視窗中，編輯某些屬性。  

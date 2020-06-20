@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aeb4d01cae7c09c27cafa8284638bf0a7de9691
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058214"
 ---
 # <a name="column-properties-visual-database-tools"></a>資料行屬性 (Visual Database Tools)
   系統提供兩組資料行屬性：您可以在資料表設計工具的 [資料行屬性]  索引標籤中看到整組屬性 (僅適用於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫)，並可以使用伺服器總管在 [屬性] 視窗中看到子集。  
@@ -179,12 +178,12 @@ ms.locfileid: "62990198"
  顯示此資料行是否在其他位置已複寫。  
   
  **為 RowGuid**  
- 指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否會使用資料行當做 ROWGUID。 您只能針對資料類型為的資料行，將此值設定為 **[是]** `uniqueidentifier`。 若要編輯這個屬性，請按一下該屬性的值，並展開下拉式清單，然後選擇另一個值。  
+ 指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否會使用資料行當做 ROWGUID。 您只能針對資料類型為的資料行，將此值設定為 **[是]** `uniqueidentifier` 。 若要編輯這個屬性，請按一下該屬性的值，並展開下拉式清單，然後選擇另一個值。  
   
  **大小**  
  以位元組為單位，顯示資料行之資料類型所允許的大小。 例如，`nchar` 資料類型的長度可能是 10 (字元數)，但是針對 Unicode 字元集，大小就會是 20。  
   
 > [!NOTE]  
->  每個資料列的 `varchar(max)` 資料類型長度都會不同。 sp_help 會傳回（-1）做為資料`varchar(max)`行的長度。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會顯示 -1 當作資料行大小。  
+>  每個資料列的 `varchar(max)` 資料類型長度都會不同。 sp_help 會傳回（-1）做為資料 `varchar(max)` 行的長度。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會顯示 -1 當作資料行大小。  
   
   

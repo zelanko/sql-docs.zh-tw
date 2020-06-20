@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58f04e83541f218a4cdcfbd99d6b3de12bf38b2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211373"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064980"
 ---
 # <a name="job-activity-monitor"></a>作業活動監視器
   使用此頁面即可檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的目前活動。 按一下 [篩選]**** 即可限制顯示的作業。 [代理程式作業活動]**** 方格是唯讀的。 按一下資料行標頭即可排序方格。 若要修改作業，請按兩下作業以開啟 [作業屬性]**** 對話方塊。 以滑鼠右鍵按一下方格中的作業，即可開始執行所有作業步驟、於特定作業步驟開始、停用或啟用作業、重新整理作業、刪除作業、檢視作業的記錄或檢視作業的屬性。 按一下 [重新整理]****，以最新資訊更新方格。  
@@ -42,16 +41,16 @@ ms.locfileid: "68211373"
  **下次執行** <sup>1</sup>  
  下次排程為使用伺服器的當地日期和時間執行作業的日期和時間。  
   
- **類別**  
+ **類別目錄**  
  指派給作業的作業類別目錄。  
   
  **可執行的**  
  [是]**** 如果作業可執行；[否]**** 如果作業無法執行。 如果作業沒有任何步驟，或者沒有目標伺服器，就無法執行此作業。  
   
- **排程**  
+ **已排程**  
  [是]**** 表示作業已指派給作業排程；[否]**** 表示作業沒有排程。  
   
- <sup>1</sup>只有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統管理員（sysadmin）固定伺服器角色和伺服器管理員群組的成員，才能夠看到此資料行中的值。 SQLAgentOperatorRole 角色的成員無法看到此資料行中的值。  
+ <sup>1</sup>只有系統管理員（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin）固定伺服器角色和伺服器管理員群組的成員，才能夠看到此資料行中的值。 SQLAgentOperatorRole 角色的成員無法看到此資料行中的值。  
   
 #### <a name="to-open-the-job-activity-monitor"></a>若要開啟作業活動監視器  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f7992965-42c1-4eb8-a7fb-afb38b67c740
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 743c7153b034cf5e1267c6a0da1e585845800980
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fbd5e3133ed87fed9bdaf6d668df62c6471df766
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095203"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012460"
 ---
 # <a name="full-text-indexes-on-master-tempdb-and-model-databases-are-not-supported"></a>不支援 master、tempdb 和 model 資料庫的全文檢索索引
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許在任何系統資料庫上使用全文檢索索引。  

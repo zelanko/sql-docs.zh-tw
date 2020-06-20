@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b0e2519-998d-40d5-b8ba-5e6a773f91a6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 948ef7eb5fdfeabdbb2ba3829e172f7c9f4028da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d4b4bebb2a3e05e3de12e59c53ccca9c980afd5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064027"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>建立 Transact-SQL 指令碼以執行追蹤 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，從現有的追蹤檔或資料表建立 Transact-SQL 指令碼。  

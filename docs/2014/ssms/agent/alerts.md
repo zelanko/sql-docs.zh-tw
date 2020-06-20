@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 946bfd0c05e7739af4bfebf799980a0dc27de245
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473129"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065023"
 ---
 # <a name="alerts"></a>警示
   事件會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生，並輸入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會讀取應用程式記錄檔，然後比較寫入其中的事件與您所定義的警示。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 找到相符項目時，即會發出警示，這是對事件的自動回應。 除了監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 還可以監視效能條件與 Windows Management Instrumentation (WMI) 事件。  
@@ -76,7 +75,7 @@ ms.locfileid: "62473129"
 ## <a name="selecting-a-performance-condition"></a>選取效能條件  
  您可以指定一個為回應特定效能條件而產生的警示。 此時您必須指定所要監視的效能計數器、警示的臨界值以及計數器在警示產生時必須顯示的行為。 若要設定效能條件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般]**** 頁面上定義 [新增警示]**** 或 [警示屬性]**** 對話方塊中的下列項目：  
   
--   **目標**  
+-   **Object**  
   
      此物件為要監視的效能區域。  
   
@@ -104,7 +103,7 @@ ms.locfileid: "62473129"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會對可用的 WMI 命名空間註冊為 WMI 用戶端，以進行事件查詢。  
   
--   **查詢**  
+-   **Query**  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會使用可用的 Windows Management Instrumentation 查詢語言 (WQL) 陳述式來識別特定的事件。  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: edee56c6d162f92234e235f9369a0ab91457639e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8ced6d387dd6ba14ab997aefbe7f2b43426c868e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707325"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049594"
 ---
 # <a name="changing-passwords-programmatically"></a>以程式設計方式變更密碼
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，當使用者密碼到期時，只有系統管理員可以重設密碼。 從開始 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 支援透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB 提供者和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client ODBC 驅動程式，以及透過變更**SQL Server 登**入對話方塊，以程式設計方式處理密碼到期。  

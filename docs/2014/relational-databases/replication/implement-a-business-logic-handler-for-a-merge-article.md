@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2996a8ca8471ef59d4781e21239a72262daa759
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068697"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>為合併發行項實作商務邏輯處理常式
   本主題描述如何使用複寫程式設計或 Replication Management Objects (RMO)，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中實作合併發行項的商務邏輯處理常式。  
@@ -58,7 +57,7 @@ ms.locfileid: "62721199"
   
 2.  針對下列命名空間加入此專案的參考。  
   
-    |組件參考|位置|  
+    |組件參考|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (預設安裝)|  
     |<xref:System.Data>|GAC (.NET Framework 的元件)|  
@@ -99,10 +98,10 @@ ms.locfileid: "62721199"
   
 1.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)，以確定此組件尚未註冊為商務邏輯處理常式。  
   
-2.  在散發者上，執行[sp_registercustomresolver &#40;transact-sql&#41;，並](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)針對**@article_resolver**指定商務邏輯處理常式的易記名稱、 `true`針對指定、針對**@is_dotnet_assembly**指定元件**@dotnet_assembly_name**的名稱，並針對覆寫<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>的類別提供完整名稱。 **@dotnet_class_name**  
+2.  在散發者上，執行[sp_registercustomresolver &#40;transact-sql&#41;，並](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)針對指定商務邏輯處理常式的易記名稱 **@article_resolver** 、針對指定、針對指定元件的名稱，並針對 `true` **@is_dotnet_assembly** **@dotnet_assembly_name** 覆寫的類別提供完整名稱 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> **@dotnet_class_name** 。  
   
     > [!NOTE]  
-    >  如果元件未部署在與合併代理程式可執行檔相同的目錄中、與同步啟動合併代理程式之應用程式相同的目錄中，或在全域組件快取（GAC）中，您就必須使用的元件名稱來指定完整路徑**@dotnet_assembly_name**。 當您正在使用 Web 同步處理時，必須指定組件在 Web 伺服器上的位置。  
+    >  如果元件未部署在與合併代理程式可執行檔相同的目錄中、與同步啟動合併代理程式之應用程式相同的目錄中，或在全域組件快取（GAC）中，您就必須使用的元件名稱來指定完整路徑 **@dotnet_assembly_name** 。 當您正在使用 Web 同步處理時，必須指定組件在 Web 伺服器上的位置。  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>搭配新的資料表發行項使用商務邏輯處理常式  
   
@@ -110,7 +109,7 @@ ms.locfileid: "62721199"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>搭配現有的資料表發行項使用商務邏輯處理常式  
   
-1.  執行[sp_changemergearticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)、 **@publication**指定、 **@article**、的**article_resolver**值**@property**，以及的商務邏輯處理常式的易記名稱。 **@value**  
+1.  執行[sp_changemergearticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)、指定 **@publication** 、、的 **@article** **article_resolver**值 **@property** ，以及的商務邏輯處理常式的易記名稱 **@value** 。  
   
 ###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> 範例 (複寫程式設計)  
  這個範例會示範建立稽核記錄的商務邏輯處理常式。  
@@ -131,7 +130,7 @@ ms.locfileid: "62721199"
   
 2.  針對下列命名空間加入此專案的參考。  
   
-    |組件參考|位置|  
+    |組件參考|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (預設安裝)|  
     |<xref:System.Data>|GAC (.NET Framework 的元件)|  

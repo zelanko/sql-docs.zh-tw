@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef2599ea202fad2b85881951692f1f04898e94e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313652"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006566"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>工作 4：管理和檢視結果
   在這項工作中，您會檢閱電腦輔助清理的結果，同時針對供應商資料執行互動式清理。 如需詳細資訊，請參閱[互動式清理階段](https://msdn.microsoft.com/library/hh213061.aspx#Interactive)。  
   
 1.  從網域清單中選取 [**連絡人電子郵件**網域]。  
   
-2.  切換至右窗格中的 [**無效**] 索引標籤。 請注意，結尾處遺漏字元 ' 的兩個電子郵件地址。 這兩個電子郵件是由要求所有電子郵件地址以** \@adventure-works.com**結尾的網域規則所無效（含 ' s '）。 DQS 會在清理時使用此定義域規則，以判斷電子郵件是否有效。 此索引標籤會顯示在知識庫中標示為無效或未能通過定義域規則的定義域值。 在此情況下，這些值未通過定義域規則 (電子郵件驗證)。  
+2.  切換至右窗格中的 [**無效**] 索引標籤。 請注意，結尾處遺漏字元 ' 的兩個電子郵件地址。 這兩個電子郵件是由要求所有電子郵件地址以** \@ adventure-works.com**結尾的網域規則所無效（含 ' s '）。 DQS 會在清理時使用此定義域規則，以判斷電子郵件是否有效。 此索引標籤會顯示在知識庫中標示為無效或未能通過定義域規則的定義域值。 在此情況下，這些值未通過定義域規則 (電子郵件驗證)。  
   
-3.  在 [**更正為**] 資料行中，輸入以** \@adventure-works.com**結尾的正確電子郵件地址（具有 ' s '）。  
+3.  在 [**更正為**] 資料行中，輸入以** \@ adventure-works.com**結尾的正確電子郵件地址（具有 ' s '）。  
   
      ![電子郵件驗證提供的更正規則](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "電子郵件驗證提供的更正規則")  
   
@@ -32,7 +31,7 @@ ms.locfileid: "72313652"
   
 5.  切換至右窗格中的 [**新增**] 索引標籤。 此索引標籤的值是 DQS 在知識庫中還沒有足夠資訊的值，因此無法判斷這些值是否正確。 因此，它無法變更或建議定義域值的變更。  
   
-6.  請檢查這些值，以確認所有電子郵件的結尾都是** \@adventure-works.com** ，然後按一下工具列上的 [**核准所有詞彙**]。 此索引標籤中的核准值會移至**正確**的索引標籤。  
+6.  請檢查這些值，以確認所有電子郵件的結尾都是** \@ adventure-works.com** ，然後按一下工具列上的 [**核准所有詞彙**]。 此索引標籤中的核准值會移至**正確**的索引標籤。  
   
 7.  從網域清單中選取 [**國家/地區**] 網域。  
   

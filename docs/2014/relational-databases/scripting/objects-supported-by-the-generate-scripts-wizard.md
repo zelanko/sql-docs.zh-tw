@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1cfee492433da4a9812a6961d34b741cf8bff089
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5ddc1da0d2f87fc12dfbe034a683802f54b7d34f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703826"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009751"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>指令碼產生精靈支援的物件
   [產生和發佈指令碼精靈] 支援 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]支援的物件子集。  

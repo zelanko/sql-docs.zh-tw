@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87df538858c9294cb8986da3df0d2b3814411326
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62661830"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057754"
 ---
 # <a name="database-element-for-server-dta"></a>伺服器的 Database 元素 (DTA)
   指定特定伺服器中需要微調的資料庫。  
@@ -52,7 +51,7 @@ ms.locfileid: "62661830"
  在 Database Engine Tuning Advisor XML 結構描述中，這個元素的名稱為 **DatabaseDetailsTypecomplexType** 。 請勿混淆這個 `Database` 元素與根父系是 `Configuration` 元素的元素。 如需詳細資訊，請參閱[組態的 Database 元素 &#40;DTA&#41;](database-element-for-configuration-dta.md)。  
   
 ## <a name="example"></a>範例  
- 如需`Database`元素的使用範例，請參閱[SERVER 元素 &#40;DTA&#41;](server-element-dta.md)。  
+ 如需元素的使用範例 `Database` ，請參閱[Server 元素 &#40;DTA&#41;](server-element-dta.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

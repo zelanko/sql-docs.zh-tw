@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e14fefc-4e0b-4847-a833-4cf0abe65d50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e2d7de652fb84ad769ccb448c065794fc9b0df73
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b3c3c2d34897b1e88894f67118fe51bd35a01089
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707420"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049680"
 ---
 # <a name="data-source-properties-ole-db"></a>資料來源屬性 (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會依照下列方式實作為資料來源屬性。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 597d138832ab5234d0059c25e91fd4d830be255c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6370b5c7d70346ccd801d1800c8411f93d897e9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711084"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018623"
 ---
 # <a name="executing-queries-odbc"></a>執行查詢 (ODBC)
   當 ODBC 應用程式將連接控制代碼初始化並連接資料來源後，會在連接控制代碼上配置一個或多個陳述式控制代碼。 然後，應用程式可以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在語句控制碼上執行語句。 執行 SQL 陳述式的一般事件序列是：  

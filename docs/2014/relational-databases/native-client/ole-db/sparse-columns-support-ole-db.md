@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60d7224a764cd0ab506d03cb154cb06456a8c408
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 825482d26d8b1fb071e802534a3166e61a4e20b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704207"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005972"
 ---
 # <a name="sparse-columns-support-ole-db"></a>疏鬆資料行支援 (OLE DB)
   本主題提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 對於疏鬆資料行支援的相關資訊。 如需稀疏資料行的詳細資訊，請參閱[SQL Server Native Client 中的稀疏資料行支援](../features/sparse-columns-support-in-sql-server-native-client.md)。 如需範例，請參閱[顯示資料行與疏鬆資料行的目錄中繼資料 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)。  
@@ -47,7 +46,7 @@ ms.locfileid: "82704207"
 ## <a name="ole-db-support-for-sparse-columns"></a>疏鬆資料行的 OLE DB 支援  
  下列 OLE DB 介面會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中修改以支援疏鬆資料行：  
   
-|類型或成員函數|說明|  
+|類型或成員函數|描述|  
 |-----------------------------|-----------------|  
 |IColumnsInfo::GetColumnsInfo|已針對 DwFlags 中的資料行設定新的 DBCOLUMNFLAGS 旗標值 DBCOLUMNFLAGS_SS_ISCOLUMNSET `column_set` 。 *dwFlags*<br /><br /> `column_set` 資料行會設定 DBCOLUMNFLAGS_WRITE。|  
 |IColumsRowset::GetColumnsRowset|在 DBCOLUMN_FLAGS 中，系統會設定 `column_set` 資料行的新 DBCOLUMNFLAGS 旗標值 DBCOLUMNFLAGS_SS_ISCOLUMNSET。<br /><br /> DBCOLUMN_COMPUTEMODE 會針對 `column_set` 資料行，設定為 DBCOMPUTEMODE_DYNAMIC。|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 13afe8de4806b76328288c0d910a244e293109c5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3b8d1de2ad5e95ea83d323c6e5e772f31f59c549
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704387"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049635"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>搭配 SQL Server Native Client 使用連接字串關鍵字
   某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client API 會使用連接字串來指定連接屬性。 連接字串是關鍵字和關聯值的清單，每一個關鍵字都會識別特定的連接屬性。  
@@ -53,7 +52,7 @@ ms.locfileid: "82704387"
 |`Addr`|"Address" 的同義字。|  
 |`Address`|執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之伺服器的網路位址。 雖然 `Address` 通常是伺服器的網路名稱，不過也可能是其他名稱，例如管道、IP 位址，或 TCP/IP 通訊埠和通訊端位址。<br /><br /> 若您指定 IP 位址，請確定在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員中已啟用 TCP/IP 或具名管道通訊協定。<br /><br /> 當使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 時，`Address` 的值優先於 ODBC 連接字串中傳遞給 `Server` 的值。 同時請注意，`Address=;` 將會連接到 `Server` 關鍵字中指定的伺服器，而 `Address= ;, Address=.;`、`Address=localhost;` 和 `Address=(local);` 都會造成與本機伺服器的連接。<br /><br /> `Address` 關鍵字的完整語法如下：<br /><br /> [*通訊協定* `:` ]*位址*[ `,` *連接埠 &#124;\pipe\pipename*]<br /><br /> *通訊協定*可以是 `tcp` （tcp/ip）、 `lpc` （共用記憶體）或 `np` （具名管道）。 如需有關通訊協定的詳細資訊，請參閱[設定用戶端通訊協定](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果沒有指定*通訊協定*或 `Network` 關鍵字， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 將會使用 Configuration Manager 中指定的通訊協定順序 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。<br /><br /> *port* 是在指定伺服器上所要連接的通訊埠。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用通訊埠 1433。|  
 |`AnsiNPW`|如果為 "yes"，此驅動程式就會使用 ANSI 定義的行為來處理 NULL 比較、字元資料填補、警告和 NULL 串連。 當為 "no" 時，將不會公開 ANSI 定義的行為。 如需有關 ANSI NPW 行為的詳細資訊，請參閱[ISO 選項的效果](../../native-client-odbc-queries/executing-statements/effects-of-iso-options.md)。|  
-|`APP`|呼叫[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)的應用程式名稱（選擇性）。 如果指定的話，這個值會儲存在**sysprocesses 資料**行**program_name**中，而且會由[sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)和[APP_NAME](/sql/t-sql/functions/app-name-transact-sql)函數傳回。|  
+|`APP`|呼叫[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)的應用程式名稱（選擇性）。 如果指定的話，這個值會儲存在 [ **master.dbo.sys處理**程式] 資料行中**program_name**並由[sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)和[APP_NAME](/sql/t-sql/functions/app-name-transact-sql)函數傳回。|  
 |`ApplicationIntent`|宣告連接到伺服器時的應用程式工作負載類型。 可能的值是 `ReadOnly` 和 `ReadWrite`。 例如： ApplicationIntent = ReadOnly<br /><br /> 預設值為 `ReadWrite`。 如需有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支援的詳細資訊 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，請參閱[高可用性和嚴重損壞修復 SQL Server Native Client 支援](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |`AttachDBFileName`|可附加資料庫的主要檔案名稱。 包含完整路徑，而且會使用 C 字元字串變數逸出任何 \ 字元：<br /><br /> `AttachDBFileName=c:\\MyFolder\\MyDB.mdf`<br /><br /> 此資料庫會附加，而且變成連接的預設資料庫。 若要使用 `AttachDBFileName` ，您也必須在[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)資料庫參數或 SQL_COPT_CURRENT_CATALOG 連接屬性中指定資料庫名稱。 如果之前已附加資料庫，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會重新附加它，它會使用附加的資料庫當做連接的預設值。|  
 |`AutoTranslate`|當為 "yes" 時，如果要轉譯用戶端與伺服器之間傳送的 ANSI 字元字串，則會透過 Unicode 來進行轉換，好讓用戶端與伺服器之字碼頁之間的比對擴充字元問題減至最少。<br /><br /> 傳送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **CHAR**、 **Varchar**或**text**變數、參數或資料行的用戶端 SQL_C_CHAR 資料會使用用戶端 ANSI 字碼頁（ACP）從字元轉換成 Unicode，然後使用伺服器的 ACP，從 unicode 轉換成字元。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]傳送至用戶端 SQL_C_CHAR 變數的**char**、 **Varchar**或**TEXT**資料會使用伺服器 ACP，從字元轉換成 UNICODE，然後使用用戶端 ACP 從 unicode 轉換成字元。<br /><br /> 這些轉換會由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式在用戶端上執行。 這會要求在伺服器上使用的相同 ANSI 字碼頁 (ACP) 必須也可以在用戶端上使用。<br /><br /> 這些設定對於進行下列傳輸時所發生的轉換沒有作用：<br /><br /> -Unicode SQL_C_WCHAR 用戶端資料傳送至伺服器上的**char**、 **Varchar**或**text** 。<br />-   傳送至用戶端上 Unicode SQL_C_WCHAR 變數的**char**、 **Varchar**或**text**伺服器資料。<br />-ANSI SQL_C_CHAR 在伺服器上傳送至 Unicode **Nchar**、 **Nvarchar**或**Ntext**的用戶端資料。<br />-傳送至用戶端上 ANSI SQL_C_CHAR 變數的 Unicode **Nchar**、 **Nvarchar**或**Ntext**伺服器資料。<br /><br /> 當為 "no" 時，不會執行字元轉譯。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式不會將用戶端 ANSI 字元轉譯 SQL_C_CHAR 的資料傳送至伺服器上的**CHAR**、 **Varchar**或**text**變數、參數或資料行。 不會在從伺服器傳送到用戶端上 SQL_C_CHAR 變數的**char**、 **Varchar**或**text**資料上執行任何轉譯。<br /><br /> 如果用戶端和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用不同的 ACP，可能會將擴充字元解譯錯誤。|  
@@ -85,7 +84,7 @@ ms.locfileid: "82704387"
 |`TrustServerCertificate`|當搭配 `Encrypt` 使用時，會利用自行簽署的伺服器憑證啟用加密。|  
 |`UID`|有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入帳戶。 使用 Windows 驗證時不需要指定 UID。|  
 |`UseProcForPrepare`|這個關鍵字已被取代，而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會忽略它的設定。|  
-|`WSID`|工作站識別碼。 一般而言，這是應用程式所在之電腦的網路名稱 (選擇性)。 如果指定，這個值會儲存在**sysprocesses 資料**行**主機名稱**中，而且會由[sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)和[HOST_NAME](/sql/t-sql/functions/host-name-transact-sql)函數傳回。|  
+|`WSID`|工作站識別碼。 一般而言，這是應用程式所在之電腦的網路名稱 (選擇性)。 如果指定的話，這個值會儲存在**master.dbo.sys處理**資料行**主機名稱**，並由[sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)和[HOST_NAME](/sql/t-sql/functions/host-name-transact-sql)函數傳回。|  
   
  **地區轉換設定適用于貨幣、數值、日期和時間資料類型。轉換設定只適用于輸出轉換，而且只有在貨幣、數值、日期或時間值轉換為字元字串時才會顯示**。  
   

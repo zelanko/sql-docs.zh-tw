@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7894850c-91fe-47c0-a03c-baacbc10d29c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 392cd07148516c4c61ed39cba4b34d81bcf4c5c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6373db514bcd6a0d0691eb812f4d5521f2017f4a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012428"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030916"
 ---
 # <a name="audit-server-principal-management-event-class"></a>Audit Server Principal Management 事件類別
   在建立、改變或卸除伺服器主體時，會發生 **Audit Server Principal Management** 事件類別。  

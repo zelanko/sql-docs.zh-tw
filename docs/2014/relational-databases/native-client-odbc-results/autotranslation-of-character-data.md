@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 134c37bf2e509c44bfe459638e24ad24f4128aa0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cbced1bb62dcacb896a7ff30fdbd6b5aa28f20e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699674"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039585"
 ---
 # <a name="autotranslation-of-character-data"></a>字元資料的自動轉譯
   字元資料（例如使用 SQL_C_CHAR 所宣告的 ANSI 字元變數，或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**CHAR**、 **Varchar**或**text**資料類型儲存在中的資料）只能代表有限的字元數。 每個字元使用一個位元組儲存的字元資料僅能代表 256 個字元。 儲存在 SQL_C_CHAR 變數中的值會使用用戶端電腦的 ANSI 字碼頁 (ACP) 解譯。 在伺服器上使用**char**、 **Varchar**或**text**資料類型所儲存的值，會使用伺服器的 ACP 進行評估。  

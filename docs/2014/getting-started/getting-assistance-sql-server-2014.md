@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c8509282897c1938d357f347ada98f7f2c3be4b4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ce3a9e88e9de4bf3a825b5f5a02e4268f4f137d0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706955"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926996"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>取得協助 (SQL Server 2014)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 提供三個有關 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要資訊來源：  
@@ -33,7 +32,7 @@ ms.locfileid: "82706955"
  [取得 SQL Server 協助](../../2014/getting-started/getting-sql-server-assistance.md)  
  包含 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之主要資訊來源的連結。 該主題也包含支援網站的連結。  
   
- [殘障人士的協助工具](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  
+ [行動不便人士的協助工具](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  
  描述產品、功能和服務，讓行動不便人士更方便使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  [提供關於 SQL Server 2014 的回函](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  

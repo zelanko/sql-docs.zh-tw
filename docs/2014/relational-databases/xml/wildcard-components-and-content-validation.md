@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fa9d36a446645b289f2c182e90782d6932cf20ef
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07cff70d32d7d39619ecf3ee4ce36e37f2dee924
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702250"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012878"
 ---
 # <a name="wildcard-components-and-content-validation"></a>萬用字元元件和內容驗證
   萬用字元元件可用以增加可出現在內容模型中的內容彈性。 在 XSD 語言中，可透過下列方式支援這些元件：  
   
--   元素萬用字元元件。 這些是以 **\<xsd:any>** 項目表示。  
+-   元素萬用字元元件。 這些是由元素表示 **\<xsd:any>** 。  
   
--   屬性萬用字元元件。 這些是以 **\<xsd:anyAttribute>** 項目表示。  
+-   屬性萬用字元元件。 這些是由元素表示 **\<xsd:anyAttribute>** 。  
   
- **\<xsd:any>** 和 **\<xsd:anyAttribute>** 這兩個萬用字元項目都支援使用 **processContents** 屬性。 這可讓您指定一個值，以指出 XML 應用程式如何處理與這些萬用字元元素關聯的文件內容驗證。 以下是不同的值所產生的效果：  
+ 和這兩個萬用字元元素都 **\<xsd:any>** **\<xsd:anyAttribute>** 支援使用**processContents**屬性。 這可讓您指定一個值，以指出 XML 應用程式如何處理與這些萬用字元元素關聯的文件內容驗證。 以下是不同的值所產生的效果：  
   
 -   **strict** 值指定完整驗證內容。  
   

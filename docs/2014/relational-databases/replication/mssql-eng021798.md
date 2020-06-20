@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 596f5092-75ab-4a19-8582-588687c7b089
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51cf4acc8ed270c8302137fe5050c06cb35e91ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 327b4a373c28376701ea12400215ab00367df66a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023526"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057134"
 ---
 # <a name="mssql_eng021798"></a>MSSQL_ENG021798
     
@@ -39,12 +38,12 @@ ms.locfileid: "63023526"
   
 -   執行預存程序 **sp_addpublication** 之後，再執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)。 適用於所有交易式發行集。  
   
--   執行預存程序 **sp_addpublication** 之後，再執行 [sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql)。 這適用于已針對佇列更新訂閱啟用的交易式發行集（ **@allow_queued_tran** **sp_addpublication**的參數值為 TRUE）。  
+-   執行預存程序 **sp_addpublication** 之後，再執行 [sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql)。 這適用于已針對佇列更新訂閱啟用的交易式發行集（sp_addpublication 的參數值為 TRUE **@allow_queued_tran** ）。 **sp_addpublication**  
   
  預存程序 **sp_addlogreader_agent** 和 **sp_addqreader_agent** 將分別建立一個代理程式作業，可讓您指定執行代理程式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶。 對於 **sysadmin** 角色的使用者，如果 **sp_addlogreader_agent** 和 **sp_addqreader_agent** 未執行，代理程式作業將以隱含的方式建立；代理程式會在「散發者」端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶內容中執行。 儘管 **sysadmin** 角色的使用者不需要 **sp_addlogreader_agent** 和 **sp_addqreader_agent** ，但基於安全性考量，最好是為代理程式指定單獨的帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](security/replication-agent-security-model.md)。  
   
 ## <a name="user-action"></a>使用者動作  
- 確保您以正確的順序執行程序。 如需詳細資訊，請參閱[建立發行](publish/create-a-publication.md)集、更新這些腳本以包含[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本所需的預存程式和參數。 如需詳細資訊，請參閱[升級複寫指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)。  
+ 確保您以正確的順序執行程序。 如需詳細資訊，請參閱[建立發行](publish/create-a-publication.md)集、更新這些腳本以包含 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本所需的預存程式和參數。 如需詳細資訊，請參閱[升級複寫指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤和事件參考 &#40;複寫&#41;](errors-and-events-reference-replication.md)  

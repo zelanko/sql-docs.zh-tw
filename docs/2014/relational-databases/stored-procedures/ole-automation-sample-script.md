@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d4cfe904cc6a808efc6c8a7208b3825117b2909d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3893bc337ad4e274967b6b06838c9e5bdb47277e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062770"
 ---
 # <a name="ole-automation-sample-script"></a>OLE Automation 範例指令碼
   此主題包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次的範例，該批次使用 OLE Automation 預存程序建立並使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)]本機執行個體中的 SQL-DMO SQLServer 物件。 部分程式碼是用來當做 OLE Automation 系統預存程序參考主題的範例。  

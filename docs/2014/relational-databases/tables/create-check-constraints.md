@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7795ee6eca85a22bdd4e84c90ce49a9449ddff28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047138"
 ---
 # <a name="create-check-constraints"></a>建立檢查條件約束
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立資料表的檢查條件約束，以便指定一個或多個資料行可接受的資料值。  

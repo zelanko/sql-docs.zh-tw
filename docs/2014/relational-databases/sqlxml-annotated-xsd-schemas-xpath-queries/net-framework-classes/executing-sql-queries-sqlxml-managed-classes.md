@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07de51d3a5880b6b0d4ab6561fcf333a99387598
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 16dc1f6136956bb16c68806b35ac5a21d86cf179
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718068"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062894"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>執行 SQL 查詢 (SQLXML Managed 類別)
   此範例示範：  

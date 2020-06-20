@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0290f033be47bec61e9ccce8465892d8cc98608c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec3d7aa164cc75485ba7d7d7b5a6533e7d4f30cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484628"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064832"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>工作 1 (必要)：在 MDS 中移除供應商資料
   在這項工作中，您會移除儲存在 MDS 中的供應商資料。 您在上一課使用**MDS Excel 增益集**手動上傳資料。 您在這一課建立的 SSIS 封裝會將資料自動上傳至 MDS。 因此，在測試 SSIS 封裝之前，您必須從 MDS 中移除供應商資料、移除衍生階層、移除 supplier 和 state 實體，並且建立不含任何資料的 supplier 實體。  
   
-1.  流覽**Master Data Manager**至或您在`http://localhost/MDS`設定 MDS 時所指定的網站和應用程式，以啟動主資料管理員。 如果您將**主資料管理員**保持開啟，請按一下頂端的 [ **SQL Server 2012 Master Data Services** ，以切換至**首頁**。  
+1.  流覽**Master Data Manager**至 `http://localhost/MDS` 或您在設定 MDS 時所指定的網站和應用程式，以啟動主資料管理員。 如果您將**主資料管理員**保持開啟，請按一下頂端的 [ **SQL Server 2012 Master Data Services** ，以切換至**首頁**。  
   
 2.  按一下 [**管理**工作] 區段中的 [**系統管理**]。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "81484628"
   
 9. 請勿關閉**主資料管理員**。  
   
-10. 切換至已開啟**清理且符合供應商 .xls**檔案的 Excel 視窗。 切換至底部的 [ **Sheet1** ] 索引標籤。  
+10. 切換至已開啟**清理且符合 Suppliers.xls**檔案的 Excel 視窗。 切換至底部的 [ **Sheet1** ] 索引標籤。  
   
 11. 僅選取**具有標頭的第一個資料列**。 不要選取任何其他資料列。 您想要根據 Excel 資料行建立實體，但不想上傳任何資料。 因此，您只選取有標頭的第一個資料列。  
   
@@ -50,9 +49,9 @@ ms.locfileid: "81484628"
   
     1.  選取 [**建立新的連接**]，然後按一下 [**新增**] 按鈕。  
   
-    2.  在 [加入新連接] 對話方塊中，針對 [**描述**] 輸入**本機 mds 伺服器**，並針對 [ **mds 伺服器位址**] 輸入**Http：\//localhost/MDS** ，然後按一下 **[確定**] 關閉對話方塊。  
+    2.  在 [加入新連接] 對話方塊中，針對 [**描述**] 輸入**本機 mds 伺服器**，並針對 [ **mds 伺服器位址**] 輸入**Http： \/ /localhost/MDS** ，然後按一下 **[確定**] 關閉對話方塊。  
   
-15. 在 [**管理連接**] 對話方塊中，選取 [**本機 MDS 伺服器**（）]，然後按一下 [`http://localhost/MDS`**測試**] 來測試連接。 在訊息方塊上按一下 **[確定]** 。  
+15. 在 [**管理連接**] 對話方塊中，選取 [**本機 MDS 伺服器**（ `http://localhost/MDS` ）]，然後按一下 [**測試**] 來測試連接。 在訊息方塊上按一下 **[確定]** 。  
   
 16. 按一下 **[連接]** ，建立與 MDS 伺服器的連接。  
   

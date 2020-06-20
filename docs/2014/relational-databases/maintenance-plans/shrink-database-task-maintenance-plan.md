@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6f96e45cdf5f94e3e8b71514e1bb3e7ed4d99cfb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8ee6060a4ee6ca3272434cf3d9115638a675e62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806739"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023929"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>壓縮資料庫工作 (維護計畫)
   使用 [壓縮資料庫工作]  對話方塊來建立嘗試縮減選取之資料庫大小的工作。 使用下列選項以決定將資料庫縮小之後，要在資料庫中保留的未使用空間數量 (百分比愈大，資料庫可縮小的程度愈小)。 這個值是根據資料庫中實際資料的百分比而取得。 例如：一個 100 MB 的資料庫，包含 60 MB 的資料及 40 MB 的可用空間，設定可用空間的百分比為 50 時，則結果為 60 MB 的資料及 30 MB 的可用空間 (因為 60 MB 的百分之 50 為 30 MB)。 只有資料庫中超出的空間會被刪除。 有效的數值範圍為 0 到 100。  
