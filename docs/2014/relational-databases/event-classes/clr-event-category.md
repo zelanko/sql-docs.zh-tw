@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a98bdf472c86a3e608da768d884897600efa476
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663643"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030309"
 ---
 # <a name="clr-event-category"></a>CLR 事件類別目錄
   **CLR** 事件類別目錄包含了在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Common Language Runtime (CLR) 物件時，所產生的事件類別。  

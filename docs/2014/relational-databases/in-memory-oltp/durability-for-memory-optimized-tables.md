@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1d48d671b23d7b7b17557e7829d6f2522c375acd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175943"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050219"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>記憶體最佳化資料表的持久性
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 為記憶體最佳化的資料表提供完整的持久性。 當變更記憶體最佳化資料表的交易認可時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (對磁碟基礎的資料表也一樣) 會保證這些變更是永久的 (即使資料庫重新啟動後也會存在)，前提是要提供基礎儲存。 持久性有兩個重要元件：交易記錄及磁碟儲存的保存資料變更。
@@ -52,7 +51,7 @@ ms.locfileid: "78175943"
 
  合併作業：作業會合並一或多個資料和差異檔案組，並建立新的資料檔案和差異檔案組。
 
- 當重新開機或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫恢復連線時，當機復原期間，會使用資料檔案和差異檔案組來填入記憶體優化資料。 從對應的資料檔案讀取資料列時，差異檔案會當做已刪除之資料列的篩選條件。 因為每個資料和差異檔案組是獨立的，所以這些檔案會平行載入，以減少將資料擴展到記憶體所花的時間。 資料載入記憶體之後，記憶體中 OLTP 引擎會套用檢查點檔案仍未涵蓋的使用中交易記錄，使記憶體最佳化資料完成。
+ 當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 重新開機或資料庫恢復連線時，當機復原期間，會使用資料檔案和差異檔案組來填入記憶體優化資料。 從對應的資料檔案讀取資料列時，差異檔案會當做已刪除之資料列的篩選條件。 因為每個資料和差異檔案組是獨立的，所以這些檔案會平行載入，以減少將資料擴展到記憶體所花的時間。 資料載入記憶體之後，記憶體中 OLTP 引擎會套用檢查點檔案仍未涵蓋的使用中交易記錄，使記憶體最佳化資料完成。
 
  在還原作業期間，會從資料庫備份建立記憶體內部 OLTP 檢查點檔案，然後套用一或多個交易記錄備份。 就像進行當機復原一樣，記憶體中 OLTP 引擎會將資料平行載入記憶體中，以減少對復原時間的衝擊。
 

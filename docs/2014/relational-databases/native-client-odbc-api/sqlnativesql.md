@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2d999fec-9e22-4514-ad5f-22a64b82f95b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8329eac48b395467c8c9c7354f28649d44149248
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 433b086dc36a79cb82868edebac9f0a4814c21fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021980"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會滿足**SQLNativeSql**要求，而不需造訪伺服器。 此函數可有效率地測試 SQL 陳述式的語法。 語法檢查不會判斷 SQL 語句中的識別碼或運算式結果是否有效，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLNativeSql**所傳回的原生 SQL 可能無法執行。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f9237c5a92367769674d585b11f0d930b2d6fbbd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 91d158f687b0a55c873b7d7e068d5fb36c8bd499
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82715038"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019107"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>配置控制代碼並連接到 SQL Server (ODBC)
     
@@ -41,7 +40,7 @@ ms.locfileid: "82715038"
   
 8.  呼叫 SQLConnect，以使用現有的資料來源連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-     或  
+     Or  
   
      呼叫[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) ，以使用連接字串連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

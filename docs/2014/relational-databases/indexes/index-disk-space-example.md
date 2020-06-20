@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 107ba245f19ae77eec2be82d63c62e5c3d45d092
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161804"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025248"
 ---
 # <a name="index-disk-space-example"></a>索引磁碟空間範例
   無論何時建立、重建或卸除索引，舊結構 (來源) 和新結構 (目標) 兩者在它們適當的檔案和檔案群組中都需要磁碟空間。 舊結構要到索引建立交易認可時才會取消配置。 此時也可能會需要額外暫存磁碟空間，以供排序作業。 如需詳細資訊，請參閱 [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)。  
@@ -96,7 +95,7 @@ ms.locfileid: "63161804"
   
 -   決定暫存對應索引的空間。  
   
-     在此範例中，舊的書簽是堆積（8位元組）的資料列識別碼（RID），而新的書簽是叢集索引鍵（24個位元組`uniqueifier`，包括）。 舊書籤和新書籤之間沒有重疊的資料行。  
+     在此範例中，舊的書簽是堆積（8位元組）的資料列識別碼（RID），而新的書簽是叢集索引鍵（24個位元組，包括 `uniqueifier` ）。 舊書籤和新書籤之間沒有重疊的資料行。  
   
      暫存對應索引大小 = 1 百萬 * (8 位元組 + 24 位元組) / 80% ~ 40 MB。  
   

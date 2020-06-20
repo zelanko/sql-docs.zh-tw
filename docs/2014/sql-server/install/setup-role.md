@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 555c6946a9732d478d9e7dca76b84ce17d0e90e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092226"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036271"
 ---
 # <a name="setup-role"></a>安裝程式角色
   您可以使用此頁面來指定要使用 [特徵選取] 頁面選取個別功能，還是使用安裝程式角色進行安裝。  
   
  `setup role` 是實作預先定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態所需之所有功能與共用元件的固定選項。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能安裝**  
  選擇此選項來選取個別功能與共用元件。 執行個體功能包括 Database Engine Services、Analysis Services (原生模式) 和 Reporting Services。  
   

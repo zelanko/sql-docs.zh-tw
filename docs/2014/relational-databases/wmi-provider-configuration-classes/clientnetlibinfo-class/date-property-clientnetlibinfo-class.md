@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 31bb3835202d752a067fc47c8afac32b9107bd7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6631dbf3162fcf3ded326bb386014d2c58d7642a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191167"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062761"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Date 屬性 (ClientNetLibInfo 類別)
   取得用戶端網路程式庫檔案的日期。  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  代表用戶端網路程式庫相關資訊的 [ClientNetLibInfo 類別](clientnetlibinfo-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 51784663fdfec66f851bed479184ae21170a3681
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3996850833efdc8737febec4691353d1c0a835f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664004"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030489"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 Service Broker 轉寄訊息時，會產生 Broker:Forwarded Message Sent 事件。  
@@ -51,7 +50,7 @@ ms.locfileid: "62664004"
 |ServerName|`nvarchar`|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |SPID|`int`|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|成功|`int`|在轉寄處理序期間所耗用的時間量。|23|否|  
+|Success|`int`|在轉寄處理序期間所耗用的時間量。|23|否|  
 |TargetLoginName|`nvarchar`|此執行個體要傳送訊息的網路位址。 請注意這個位址有可能與訊息的最終目的地不同。|42|否|  
 |TargetUserName|`nvarchar`|訊息的起始端服務名稱。|39|否|  
 |TransactionID|`bigint`|系統指派的交易識別碼。|4|否|  

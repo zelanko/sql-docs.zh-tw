@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9786faaf44724b1a2452bd5304b63deb2c9ea54e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8d8271b6279910321058d01c7b2f96b1df62bd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015310"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003345"
 ---
 # <a name="get-information-about-event-notifications"></a>取得事件通知詳細資訊
   下列目錄檢視可用以查詢事件通知的中繼資料。  

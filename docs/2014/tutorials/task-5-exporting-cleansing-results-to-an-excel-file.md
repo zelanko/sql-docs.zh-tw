@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44c926d2429a0d9842e9e9202568f73f72c89d9a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489119"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064752"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>工作 5：將清理結果匯出到 Excel 檔案
   在這項工作中，您會將清理活動的結果匯出到 Excel 檔案。 如需詳細資訊，請參閱[匯出階段](https://msdn.microsoft.com/library/hh213061.aspx#Export)主題。  
   
 1.  在右窗格中，選取 [ **Excel** ] 作為 [**目的地類型**]。  
   
-2.  按一下 **[流覽]**，將輸出檔案名指定為**清理供應商清單 .xls**，然後按一下 [**開啟**]。  
+2.  按一下 **[流覽]**，將輸出檔案名指定為**清理供應商 List.xls**，然後按一下 [**開啟**]。  
   
 3.  僅針對**輸出**格式選取 [**資料**]，只匯出清理的資料。 第二個選項 [**資料和清理資訊**] 可讓您連同清理資料一起匯出清理活動詳細資訊。 [**標準化格式**] 選項可讓您將在網域上定義的任何輸出格式套用至該定義域的值。 在本教學課程中，您尚未在任何定義域定義輸出格式。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "65489119"
   
 6.  按一下 **[完成]** 以完成活動。 如果您在按一下 **[完成]** 之前忘記匯出結果，請在**DQS 用戶端**的主頁面中，按一下 [**開啟資料品質專案**]，從專案清單中選取 [**清理供應商清單**]，然後按一下畫面底部的 **[下一步]** ，再次進入清理程式的 [**匯出**] 階段。 您也可以按一下 [**上一步**] 按鈕，切換到 [**管理和查看結果**] 索引標籤。  
   
-7.  開啟**清理供應商清單 .xls** ，然後執行下列動作：  
+7.  開啟**清理供應商 List.xls** ，然後執行下列動作：  
   
     1.  藉由在工作表中搜尋 adventure-work.com，確保沒有任何以 adventure-work.com 結尾的電子郵件地址（不含字元的 '）。  
   

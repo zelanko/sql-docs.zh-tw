@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 958f5d4c-d9c1-4b38-83c3-ebac60e2a9b6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8bca81e9e02cf7f2bfed14b05a5842ca52a6d44d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d66b3aa474fe7cc39042680c514ad94627e2eefb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091037"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065088"
 ---
 # <a name="web-assistant-stored-procedures-have-been-removed"></a>已經移除了 Web 助理預存程序
   Upgrade Advisor 偵測到您使用了 Web 助理預存程序。  

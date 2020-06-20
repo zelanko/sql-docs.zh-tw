@@ -20,19 +20,18 @@ helpviewer_keywords:
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 809705e50e9337a63bf33c2883a1e5d43197be09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811095"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036282"
 ---
 # <a name="sql-server-components"></a>SQL Server 元件
-  您可以[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]針對已安裝、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]的本機或遠端電腦執行 Upgrade Advisor 分析 Wizard。 升級前分析的第一個步驟是識別要分析的電腦和元件。  
+  您可以針對已 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 安裝、、或的本機或遠端電腦執行 Upgrade Advisor 分析 Wizard [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。 升級前分析的第一個步驟是識別要分析的電腦和元件。  
   
 ## <a name="options"></a>選項  
- **電腦名稱稱**  
+ **電腦名稱**  
  指定要分析之電腦的名稱。 Upgrade Advisor 會在 [**伺服器名稱**] 方塊中填入本機電腦名稱稱。 您也可以使用 "." 和 "localhost" 來連接至本機電腦。  
   
  若要分析不同的電腦，請使用下列指導方針：  
@@ -50,7 +49,7 @@ ms.locfileid: "68811095"
   
  若要掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，您必須指定本機電腦的名稱。 Upgrade Advisor 只會掃描本機報表伺服器。  
   
- **Detect**  
+ **偵測**  
  [偵測 **] 按鈕會**存取指定的電腦，並偵測要分析的元件：  
   
 -   如果要分析遠端電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，則必須在遠端電腦上啟用遠端登錄服務。  
@@ -61,7 +60,7 @@ ms.locfileid: "68811095"
   
 -   如果在電腦的登錄中找到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，就會偵測出 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 不過，Upgrade Advisor 只會掃描本機報表伺服器。  
   
- **元件**  
+ **Components**  
  選取要分析的元件。 您可以按一下 [偵測] 按鈕，以選取安裝在電腦**上的所有**元件。 偵測出安裝在電腦上的元件旁將顯示一個核取記號。 您也可以選取或清除每個元件旁的核取方塊，藉以手動選取要分析的元件。  
   
 ## <a name="see-also"></a>另請參閱  

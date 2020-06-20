@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2bce064ee38082861e9b6c5d4f2c6e28bf41dded
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa71ebe23557ab470748b3108fc1263469a193cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745519"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050560"
 ---
 # <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone (擴充預存程序 API)
     
@@ -72,7 +71,7 @@ count
  *計數*  
  這是用來指示目前結果集計數的 4 位元組欄位。 如果在 *status* 欄位中設定 SRV_DONE_COUNT 旗標，*count* 會保留有效的計數。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL  
   
 ## <a name="remarks"></a>備註  

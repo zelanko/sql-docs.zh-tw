@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 32e1546af52fb411564c2b6d1635971b9f73fc60
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 46e6e7a966db29299c298cb16e460e0a9212e8fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716665"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011673"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>用戶端通訊協定 - TCP 和 IP 屬性 (通訊協定索引標籤)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，您可以使用 [TCP/IP 內容]**** 對話方塊的 [通訊協定]**** 索引標籤來檢視或指定下列選項。 若要連接到其他通訊埠，請在 **[預設通訊埠]** 方塊內輸入通訊埠編號。 如需連接字串的詳細資訊，請參閱 [使用 TCP/IP 建立有效的連接字串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[預設通訊埠]**  
  指定 TCP/IP 網路程式庫嘗試連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的目標執行個體時，要使用的預設通訊埠。 預設的通訊埠值為 1433。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "84716665"
  **已啟用**  
  可能的值為 **[是] 和 [** **否**]。  
   
- **Keep Alive**  
+ **保持運作**  
  此參數 (以毫秒為單位) 藉由傳送 **KEEPALIVE** 封包，來控制 TCP 嘗試驗證閒置連線是否仍完整無缺的頻率。 預設為 30000 毫秒。  
   
  **保持運作的間隔**  

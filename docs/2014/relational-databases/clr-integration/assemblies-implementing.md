@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dc1bfce77a089b24e68613c94af6e2886e6b5952
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cb3818ed644eede3cf4f2c256a0dcb94ec58c3a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874464"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954098"
 ---
 # <a name="implementing-assemblies"></a>實作組件
   本主題提供下列部分的資訊，協助您實作和使用資料庫中的組件：  
@@ -31,7 +30,7 @@ ms.locfileid: "62874464"
 -   管理組件版本  
   
 ## <a name="creating-assemblies"></a>建立組件  
- 組件是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CREATE ASSEMBLY 陳述式在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立，或使用 Assembly Assisted Editor 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立。 此外，在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]部署 SQL Server 專案，會在指定給專案的資料庫中註冊元件。 如需詳細資訊，請參閱 [Deploying CLR Database Objects](deploying-clr-database-objects.md)。  
+ 組件是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CREATE ASSEMBLY 陳述式在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立，或使用 Assembly Assisted Editor 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立。 此外，在中部署 SQL Server 專案， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 會在指定給專案的資料庫中註冊元件。 如需詳細資訊，請參閱 [Deploying CLR Database Objects](deploying-clr-database-objects.md)。  
   
  **若要使用 Transact-SQL 建立組件**  
   
@@ -71,14 +70,14 @@ ms.locfileid: "62874464"
   
 -   [刪除物件](../../ssms/object/delete-objects.md)  
   
- 依預設，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立的所有組件都會停用執行。 您可以使用**sp_configure**系統預存程式的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **clr enabled**選項，來停用或啟用在中上傳的所有元件的執行。 停用組件的執行可防止執行 Common Language Runtime (CLR) 函數、預存程序、觸發程序、彙總和使用者定義型別，並可停止那些正在執行的。 停用組件的執行並不會停用建立、修改或卸除組件的功能。 如需詳細資訊，請參閱[clr 已啟用伺服器設定選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)。  
+ 依預設，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立的所有組件都會停用執行。 您可以使用**sp_configure**系統預存程式的**clr enabled**選項，來停用或啟用在中上傳的所有元件的執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 停用組件的執行可防止執行 Common Language Runtime (CLR) 函數、預存程序、觸發程序、彙總和使用者定義型別，並可停止那些正在執行的。 停用組件的執行並不會停用建立、修改或卸除組件的功能。 如需詳細資訊，請參閱[clr 已啟用伺服器設定選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)。  
   
  **若要停用和啟用組件執行**  
   
 -   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
 ##  <a name="managing-assembly-versions"></a><a name="_managing"></a>管理元件版本  
- 在將組件上傳至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，組件是在資料庫系統目錄中儲存和管理。 在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]對元件定義所做的任何變更，都應該傳播至儲存在資料庫目錄中的元件。  
+ 在將組件上傳至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，組件是在資料庫系統目錄中儲存和管理。 在中對元件定義所做的任何變更，都 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 應該傳播至儲存在資料庫目錄中的元件。  
   
  當您必須修改組件時，您必須發出 ALTER ASSEMBLY 陳述式來更新資料庫中的組件。 這將會使組件更新至保存其實作的最新 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模組副本。  
   

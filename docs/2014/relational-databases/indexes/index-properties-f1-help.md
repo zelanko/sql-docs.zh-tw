@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 390a63d21dc72e052017f2d30b061d71de863bc1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161894"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049897"
 ---
 # <a name="index-properties-f1-help"></a>索引屬性 F1 說明
   本主題中的章節參考使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊提供的各種不同索引屬性。  
@@ -93,7 +92,7 @@ ms.locfileid: "63161894"
  顯示參與索引鍵的資料行是否允許在資料表或檢視資料行中儲存 NULL 值。  
   
  **加入**  
- 將資料行加入索引鍵。 請從您按一下 [新增]  時所出現的 [從 *資料表名稱> 選取資料行]\<*  對話方塊中，選取資料表資料行。 如果是空間索引，在您選取一個資料行之後，此按鈕會呈暗灰色。  
+ 將資料行加入索引鍵。 **Select Columns from** *\<table name>* 當您按一下 [**新增**] 時，從 [選取資料行] 對話方塊中選取 [資料表資料行]。 如果是空間索引，在您選取一個資料行之後，此按鈕會呈暗灰色。  
   
  **移除**  
  從索引鍵中的參與裡移除選取的資料行。  
@@ -180,7 +179,7 @@ ms.locfileid: "63161894"
 ### <a name="bounding-box"></a>週框方塊  
  *「週框方塊」* (Bounding Box) 是幾何平面最上層方格的周邊。 週框方塊參數只存在於幾何方格鑲嵌內。 如果 **[鑲嵌式配置]** 為 **[地理方格]**，就無法使用這些參數。  
   
- 此面板會顯示周框方塊的***`X-min`*（，*`Y-min`*）** 和 **（*`X-max`*，*`Y-max`*）** 座標。 沒有預設座標值。 因此，當您在 `geometry` 類型資料行上建立新的空間索引時，您必須指定座標值。  
+ 此面板會顯示周框方塊的 **（ *`X-min`* ， *`Y-min`* ）** 和 **（ *`X-max`* ， *`Y-max`* ）** 座標。 沒有預設座標值。 因此，當您在 `geometry` 類型資料行上建立新的空間索引時，您必須指定座標值。  
   
  `X-min`  
  週框方塊左下角的 X 座標。  
@@ -226,7 +225,7 @@ ms.locfileid: "63161894"
  **層級2**  
  第二層方格的密度。  
   
- **層級3**  
+ **Level 3**  
  第三層方格的密度。  
   
  **層級 4**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e7eb4324d56c3ab45486063cb8097603ac3a416b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702219"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050010"
 ---
 # <a name="supported-sql-server-features"></a>支援的 SQL Server 功能
   本主題會討論在使用記憶體最佳化的物件時，所支援或不支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
@@ -33,7 +32,7 @@ ms.locfileid: "82702219"
   
 -   多重版本設定和開放式並行存取控制。 如需詳細資訊，請參閱 [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md)。  
   
--   備份和還原包含記憶體最佳化之資料檔案群組的資料庫。 如需詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
+-   備份和還原包含記憶體最佳化之資料檔案群組的資料庫。 如需詳細資訊，請參閱[SQL Server 資料庫的備份與還原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
 -   為了可支援性而提供的目錄檢視、動態管理檢視和擴充的事件。 如需詳細資訊，請參閱[記憶體內部 OLTP 的系統檢視表、預存程序、DMV 和等待類型](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "82702219"
 |連結的伺服器|如需詳細資訊，請參閱 [連結的伺服器 &#40;Database Engine&#41;](../linked-servers/linked-servers-database-engine.md)。|  
 |大量記錄|無論資料庫使用何種復原模式，所有在持久性記憶體最佳化的資料表上的作業，一律會完整記錄。|  
 |最低限度記錄|記憶體最佳化資料表不支援最低限度記錄。 如需最低限度記錄的詳細資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md) 和[大量匯入採用最低限度記錄的必要條件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。|  
-|變更追蹤|變更追蹤可在具有記憶體中 OLTP 物件的資料庫上啟用。 不過，記憶體最佳化的資料表中的變更不會受到追蹤。|  
+|Change tracking|變更追蹤可在具有記憶體中 OLTP 物件的資料庫上啟用。 不過，記憶體最佳化的資料表中的變更不會受到追蹤。|  
 |DDL 觸發程序|記憶體中 OLTP 資料表和原生編譯預存程序中不支援資料庫層級與伺服器層級的 DDL 觸發程序。|  
 |異動資料擷取 (CDC)|CDC 不應在具有記憶體中 OLTP 物件的資料庫上啟用，因為它會阻止特定作業，例如 DROP。|  
 |資料庫內含項目|具有原生編譯的預存程序和記憶體最佳化資料表的資料庫不支援資料庫內含項目。 如需相關資訊，請參閱 [Contained Databases](../databases/contained-databases.md)|  
@@ -105,7 +104,7 @@ ms.locfileid: "82702219"
   
  有一些例外狀況，不支援跨資料庫的交易。 下表描述支援的案例和對應的限制。 (另請參閱 [跨資料庫查詢](cross-database-queries.md))。  
   
-|資料庫|允許|說明|  
+|資料庫|允許|描述|  
 |---------------|-------------|-----------------|  
 |使用者資料庫、模型和 msdb|否|不支援跨資料庫的查詢和交易。<br /><br /> 存取記憶體最佳化的資料表或原生編譯的預存程序的查詢和交易都無法存取其他資料庫，但是系統資料庫 master (用於唯讀存取) 和 tempdb 例外。|  
 |資源資料庫和 tempdb|是|跨資料庫交易並沒有限制，除了單一使用者資料庫以外，只能使用資源資料庫和 tempdb。|  

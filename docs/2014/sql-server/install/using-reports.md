@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f52afcfdaa7de33d83d64a049f9a350f0463b4c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091224"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062353"
 ---
 # <a name="using-reports"></a>使用報表
   Upgrade Advisor 分析精靈會為伺服器上分析的每個元件和每個執行個體 (如有必要) 產生個別報表。 報表會提供影響升級之已知問題的詳細資料。 報表還會提供解決識別問題之資訊和建議動作的連結。  
@@ -77,7 +76,7 @@ ms.locfileid: "66091224"
  您可以展開問題來顯示其他資訊、展開連結來顯示有關解決問題的詳細資訊，還可以展開連結來顯示問題詳細資料。 當您按一下連結以取得問題的詳細資訊時，即會顯示「說明」主題並提供問題的資訊以及解決問題的指示。 修正問題或管理您的動作專案之後，您可以選取 [已**解決這個問題**] 核取方塊，將問題標示為完成。 如果您想要從升級問題清單中移除已解決的問題，請**按一下 [** 重新整理]。 在您針對同一個元件執行 Upgrade Advisor 分析嚮導，或從 [**篩選依據**] 選項套用 [**已解決的問題**] 篩選器之前，不會再次顯示此問題。  
   
 ## <a name="report-files"></a>報表檔案  
- Upgrade Advisor 分析 Wizard 會在 [我的文件\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ] 升級 upgrade advisor\110\reports 目錄中建立報表，並為您分析的每部伺服器建立子目錄。 這些報表檔案是遵循特定命名慣例的 XML 檔案。 當您啟動 Upgrade Advisor 報表檢視器時，就會顯示預設目錄中的報表檔案。 如果您將報表檔案複製到這個資料夾中，它們必須遵守命名慣例，否則報表檢視器將不會自動顯示它們。  
+ Upgrade Advisor 分析 Wizard 會在 [我的文件] \\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級 upgrade advisor\110\reports 目錄中建立報表，並為您分析的每部伺服器建立子目錄。 這些報表檔案是遵循特定命名慣例的 XML 檔案。 當您啟動 Upgrade Advisor 報表檢視器時，就會顯示預設目錄中的報表檔案。 如果您將報表檔案複製到這個資料夾中，它們必須遵守命名慣例，否則報表檢視器將不會自動顯示它們。  
   
  如果您想要與其他人共用這項資訊，可以將 XML 報表傳送給他們。 或者，如果您想要使用其他應用程式，就可以將報表匯出成逗號分隔值檔案，以便用來建立試算表、文字檔或電子郵件訊息。  
   

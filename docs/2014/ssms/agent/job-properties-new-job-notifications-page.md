@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10cee6f0d5bf62178c71d25b8eb5682c22bbbe3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8fafac7faaf98fd8cf9bd3b0bf772dc77324bae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062279"
 ---
 # <a name="job-properties-new-job-notifications-page"></a>作業屬性：新增作業 (通知頁面)
-  使用此頁面來設定當作業[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]完成時，Agent 要執行的動作。  
+  使用此頁面來設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當作業完成時，Agent 要執行的動作。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **位址**  
  選取此選項，即可在作業完成時傳送電子郵件。 選取此選項之後，請選擇要通知的操作員及觸發通知的條件：[當作業成功時]****、[當作業失敗時]**** 或 [作業完成時]****。  
   

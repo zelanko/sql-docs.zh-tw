@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59ab03f1c869f37ea92b3be1fe0fc30d86284a03
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232234"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953184"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>匯入 BACPAC 檔案以建立新的使用者資料庫
   匯入資料層應用程式 (DAC) 檔案 (.bacpac 檔案)，可在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上，建立原始資料庫連同其資料的複本，或將該檔案匯入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC 或資料庫，或建立邏輯備份 (例如建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署資料庫的內部部署複本)。  
@@ -124,24 +123,24 @@ ms.locfileid: "75232234"
   
 -   **新資料庫名稱** - 針對匯入的資料庫提供名稱。  
   
--   版本-指定[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business 或[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web。 ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** 如需有關 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]版本的詳細資訊，請參閱這個 [SQL 資料庫](https://www.windowsazure.com/home/tour/database/) 網站。  
+-   **的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 版本**-指定 [ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business] 或 [Web] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 如需有關 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]版本的詳細資訊，請參閱這個 [SQL 資料庫](https://www.windowsazure.com/home/tour/database/) 網站。  
   
 -   **最大資料庫大小（GB）** -使用下拉式功能表來指定資料庫的大小上限。  
   
- 若要繼續，請按 [下一步]****。  
+ 若要繼續進行，請按 **[下一步]** 。  
   
 ### <a name="validation-page"></a>驗證頁面  
  您可以使用此頁面檢閱造成此作業無法執行的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 **[重新執行驗證]** 確定驗證成功。  
   
- 若要繼續，請按 [下一步]****。  
+ 若要繼續進行，請按 **[下一步]** 。  
   
 ###  <a name="summary-page"></a><a name="Summary"></a> 摘要頁面  
  您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成匯入作業，請按一下 **[完成]**。 若要取消匯入作業並結束精靈，請按一下 **[取消]**。  
   
-###  <a name="progress-page"></a><a name="Progress"></a>進度頁面  
+###  <a name="progress-page"></a><a name="Progress"></a> 進度頁面  
  此頁面會顯示進度列，指出作業的狀態。 若要檢視詳細狀態，請按一下 **[檢視詳細資料]** 選項。  
   
- 若要繼續，請按 [下一步]****。  
+ 若要繼續進行，請按 **[下一步]** 。  
   
 ###  <a name="results-page"></a><a name="Results"></a>結果頁面  
  此頁面會報告匯入和建立資料庫作業成功或失敗，並顯示每個動作成功或失敗。 發生錯誤的所有動作在 **[結果]** 資料行中都會有一個連結。 按一下連結，即可檢視該動作的錯誤報告。  

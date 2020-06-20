@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 306abff20146ec5004b515578f5c71b8cb574bba
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 20a91d26ac8c2d1201386cb19bde13b49a3dbada
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718865"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999005"
 ---
 # <a name="bound-vs-unbound-text-and-image-columns"></a>繫結與未繫結的 Text 和 Image 資料行
   使用伺服器資料指標時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式已優化，而不會在執行**SQLFetch**時傳送未系結之**text**、 **Ntext**或**image**資料行的資料。 在應用程式發出資料行的[SQLGetData](../native-client-odbc-api/sqlgetdata.md)之前，不會實際從伺服器抓取**text**、 **Ntext**或**image**資料。  

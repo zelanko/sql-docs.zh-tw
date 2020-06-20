@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c439a424c409522eee696d0161c94251e82fb35
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ba83dbb706b674581a35d5927639208adc061122
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718821"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025645"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>原生編譯的預存程序上支援的建構
   本主題列出原生編譯預存程序所支援的建構。  

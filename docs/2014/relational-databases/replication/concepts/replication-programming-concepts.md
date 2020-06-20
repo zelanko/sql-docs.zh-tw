@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db4ab6196c138eaf21de08afc27731225df398e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721803"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064693"
 ---
 # <a name="replication-programming-concepts"></a>複寫程式設計概念
   在開發使用複寫功能的應用程式之前，您應該遵循下列一般規劃步驟：  

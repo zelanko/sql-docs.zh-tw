@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fbf267591ccd85b31bd8436a773e2337e292d0b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72db4beceba50cac053e3d3a6fcadafa3cf28663
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62866213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011513"
 ---
 # <a name="name-element-for-index-dta"></a>索引的 Name 元素 (DTA)
   在使用者指定的組態中，指定索引的名稱。  

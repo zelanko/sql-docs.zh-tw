@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d83c2aa530fa0c0f6bff515ce4ed669fcef7dae3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee48107177cef7a38daf0e7b0080c08db23b2367
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253143"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068980"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>非對稱金鑰加密強度
   此規則會檢查非對稱金鑰是否使用 1024 位元或更強的加密所建立。  

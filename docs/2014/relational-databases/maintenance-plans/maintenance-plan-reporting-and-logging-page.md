@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 623507b4d9e52da376d4c83e4ee5c4d51b15dc39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82da951eb38ead64b154b98b138ffd6c0cfaa605
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186268"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024267"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>維護計畫 (報告與記錄頁面)
   使用 **[報表與記錄]** 對話方塊設定執行維護計畫時產生的報表和記錄。  

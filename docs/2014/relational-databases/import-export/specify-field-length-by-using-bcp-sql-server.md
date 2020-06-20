@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13343b4f3778df1bbe7ef1c99b3d06338f18631c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011834"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050421"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定欄位長度 (SQL Server)
-  欄位長度會指出以字元格式表現資料所需的最大字元數。 如果是以原生格式儲存資料的話，欄位長度眾所皆知；例如，`int` 資料類型會佔用 4 個位元組。 如果您針對前置長度指定為0， **bcp**命令會提示您輸入欄位長度、預設欄位長度，以及欄位長度對包含`char`資料之資料檔案中資料儲存的影響。  
+  欄位長度會指出以字元格式表現資料所需的最大字元數。 如果是以原生格式儲存資料的話，欄位長度眾所皆知；例如，`int` 資料類型會佔用 4 個位元組。 如果您針對前置長度指定為0， **bcp**命令會提示您輸入欄位長度、預設欄位長度，以及欄位長度對包含資料之資料檔案中資料儲存的影響 `char` 。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>bcp 提示輸入欄位長度  
  如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 ( **-f**) 或資料格式參數 ( **-n**、 **-c**、 **-w** 或 **-N**)，此命令就會提示您輸入每個資料欄位的欄位長度，如下所示：  
@@ -47,10 +46,10 @@ ms.locfileid: "66011834"
 ## <a name="using-default-field-lengths"></a>使用預設的欄位長度  
  一般而言， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您接受 **bcp**所建議的欄位長度預設值。 已建立字元模式資料檔案時，使用預設的欄位長度可確定不會截斷資料，而且不會發生數值溢位錯誤。  
   
- 如果指定不正確的欄位長度，就會發生問題。 例如，如果複製數值資料，而對該資料來說指定的欄位長度太短， **bcp** 公用程式就會印出溢位訊息，而且不會複製該資料。 此外，如果您匯出`datetime`資料並為字元字串指定少於26個位元組的欄位長度， **bcp**公用程式就會截斷資料，而不會出現錯誤訊息。  
+ 如果指定不正確的欄位長度，就會發生問題。 例如，如果複製數值資料，而對該資料來說指定的欄位長度太短， **bcp** 公用程式就會印出溢位訊息，而且不會複製該資料。 此外，如果您匯出 `datetime` 資料並為字元字串指定少於26個位元組的欄位長度， **bcp**公用程式就會截斷資料，而不會出現錯誤訊息。  
   
 > [!IMPORTANT]  
->  使用預設的大小選項時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預期會讀取整個字串。 在某些狀況下，使用預設欄位長度卻會導致發生「未預期的檔案結尾」錯誤。 一般來說，當資料檔案中只有`money`部分`datetime`預期的欄位出現時，和資料類型會發生此錯誤;例如，如果指定的`datetime` *mm*/*dd*/*yy*值沒有時間元件，而且是，則短于`datetime` `char`格式的值所預期的24個字元長度。 若要避免此種錯誤類型，請使用欄位結束字元或固定長度資料欄位，或指定其他的值以變更預設的欄位長度。  
+>  使用預設的大小選項時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預期會讀取整個字串。 在某些狀況下，使用預設欄位長度卻會導致發生「未預期的檔案結尾」錯誤。 一般來說， `money` `datetime` 當資料檔案中只有部分預期的欄位出現時，和資料類型會發生此錯誤; 例如， `datetime` 指定*mm* / *dd* / *yy*的值而沒有時間元件時，則會比格式的值所預期的24個字元長度短 `datetime` `char` 。 若要避免此種錯誤類型，請使用欄位結束字元或固定長度資料欄位，或指定其他的值以變更預設的欄位長度。  
   
 ### <a name="default-field-lengths-for-character-file-storage"></a>字元檔案儲存的預設欄位長度  
  下表列出資料的預設欄位長度，以儲存為字元檔案儲存類型。 可為 Null 的資料長度與非 Null 的資料長度相同。  
@@ -87,7 +86,7 @@ ms.locfileid: "66011834"
 |UDT|使用者自訂術語 (UDT) 資料行的長度|  
 |XML|0|  
   
- \*如需`decimal`和`numeric`資料類型的詳細資訊，請參閱[decimal 和 numeric &#40;transact-sql&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。  
+ \*如需 `decimal` 和資料類型的詳細資訊 `numeric` ，請參閱[decimal 和 numeric &#40;transact-sql&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。  
   
 > [!NOTE]  
 >  `tinyint` 類型的資料行可包含 0 到 255 的數值；因此代表該範圍內任意數值所需的最大字元數為 3 (代表數值 100 到 255)。  
@@ -116,7 +115,7 @@ ms.locfileid: "66011834"
 |`uniqueidentifier`|16|  
 |`timestamp`|8|  
   
- <sup>1</sup>如需`decimal`和`numeric`資料類型的詳細資訊，請參閱[decimal 和 numeric &#40;transact-sql&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。  
+ <sup>1</sup>如需 `decimal` 和資料類型的詳細資訊 `numeric` ，請參閱[decimal 和 numeric &#40;transact-sql&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。  
   
  在先前的所有案例中，若要建立一個資料檔案，之後重新載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以將所佔用的儲存空間保持在最低，請搭配預設的檔案儲存類型與預設的欄位長度和長度前置詞一起使用。  
   

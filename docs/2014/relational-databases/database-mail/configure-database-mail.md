@@ -38,13 +38,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cbf9af4b5af3043c6ca8fa2cba01ebe43019fb41
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68418880"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952736"
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
   本主題說明如何使用 Database Mail 組態精靈來啟用及設定 Database Mail，並使用範本建立 Database Mail 組態指令碼。  
@@ -129,7 +128,7 @@ ms.locfileid: "68418880"
  鍵入將用來回覆給由這個帳戶傳送之電子郵件訊息的電子郵件地址。 回覆電子郵件是選擇性的。 例如，回覆給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 帳戶的郵件，可能會傳送給資料庫管理員 danw@Adventure-Works.com。  
   
  **伺服器名稱**  
- 輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 通常這種格式類似`smtp.`于 *<your_company>* `.com`。 如需相關說明，請洽詢您的郵件管理員。  
+ 輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 通常這種格式類似于 `smtp.` *<your_company>* `.com` 。 如需相關說明，請洽詢您的郵件管理員。  
   
  **連接埠號碼**  
  輸入此帳戶之 SMTP 伺服器的通訊埠編號。 多數的 SMTP 伺服器使用通訊埠 25。  
@@ -170,13 +169,13 @@ ms.locfileid: "68418880"
  檢視或更新帳戶的描述。 描述是選擇性的。  
   
  **電子郵件地址**  
- 檢視或更新帳戶之電子郵件地址的名稱。 這是電子郵件傳送來自的電子郵件地址。 例如，Microsoft SQL Server 代理程式的帳戶可能會從位址**SqlAgent@Adventure-Works.com**傳送電子郵件。  
+ 檢視或更新帳戶之電子郵件地址的名稱。 這是電子郵件傳送來自的電子郵件地址。 例如，Microsoft SQL Server 代理程式的帳戶可能會從位址傳送電子郵件 **SqlAgent@Adventure-Works.com** 。  
   
  **顯示名稱**  
  檢視或更新名稱，以顯示在由這個帳戶傳送的電子郵件訊息上。 顯示名稱是選擇性的。 這是顯示於由這個帳戶傳送之訊息上的名稱。 例如，SQL Server Agent 的帳戶在電子郵件訊息上顯示的名稱可能會是 **SQL Server Agent Automated Mailer** 。  
   
  **回覆電子郵件**  
- 檢視或更新電子郵件地址，這將用於回覆給由這個帳戶傳送的電子郵件訊息。 回覆電子郵件是選擇性的。 例如，回復 SQL Server Agent 的帳戶可能會前往資料庫管理員**danw@Adventure-Works.com**。  
+ 檢視或更新電子郵件地址，這將用於回覆給由這個帳戶傳送的電子郵件訊息。 回覆電子郵件是選擇性的。 例如，回復 SQL Server Agent 的帳戶可能會前往資料庫管理員 **danw@Adventure-Works.com** 。  
   
  **伺服器名稱**  
  檢視或更新帳戶用來傳送電子郵件的 SMTP 伺服器名稱。 一般而言，此格式類似於 **smtp.<貴公司>.com**。 如需相關說明，請洽詢您的郵件管理員。  
@@ -316,7 +315,7 @@ ms.locfileid: "68418880"
   
  設定檔可能是預設設定檔。 在此情況下，使用者或角色不必明確指定設定檔，就能使用設定檔傳送電子郵件。 如果傳送電子郵件訊息的使用者或角色有預設的私人設定檔，Database Mail 就會使用該設定檔。 如果使用者或角色沒有預設的私人設定檔， **sp_send_dbmail** 會使用 **msdb** 資料庫的預設公用設定檔。 如果沒有使用者或角色的預設私人設定檔，而且沒有資料庫的預設公用設定檔， **sp_send_dbmail** 會傳回錯誤。 只有一個設定檔可以標示為預設的設定檔。  
   
- **公開**  
+ **公用**  
  選取此選項使指定的設定檔成為公用的。  
   
  **設定檔名稱**  
@@ -399,13 +398,13 @@ ms.locfileid: "68418880"
  **Database Mail 設定檔**  
  從清單中選取 Database Mail 設定檔。 這是必要的欄位。 如果未顯示任何設定檔，就表示沒有設定檔，或者您沒有設定檔的存取權限。 使用 **[Database Mail 組態精靈]** 來建立及設定設定檔。 如果未列出任何設定檔，請使用 Database Mail 組態精靈來建立供您使用的設定檔。  
   
- **自**  
+ **若要**  
  訊息收件者的電子郵件地址。 至少需要一位收件者。  
   
  **主旨**  
  測試電子郵件的主旨列。 變更預設主旨，以便更適當地識別您的電子郵件進行疑難排解。  
   
- **人體**  
+ **本文**  
  測試電子郵件的本文。 變更預設主旨，以便更適當地識別您的電子郵件進行疑難排解。  
   
  [Database Mail 測試電子郵件]**** 對話方塊會確認 Database Mail 已嘗試傳送測試訊息，並提供測試電子郵件訊息的 **mailitem_id**。 與收件者聯繫來判斷電子郵件是否送達。 電子郵件一般都會在數分鐘內收到，但是電子郵件可能因為緩慢的網路效能、在郵件伺服器上積存訊息，或伺服器暫時不能使用等原因而延遲。 使用 **mailitem_id** 來進行疑難排解。  

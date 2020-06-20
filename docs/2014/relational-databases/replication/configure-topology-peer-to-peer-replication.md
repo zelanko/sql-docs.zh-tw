@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c41bc845e7b02959f25aa8282452db64f819558
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2dfc09f5ae7f488afd46f29c301d11b7687e0a4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176568"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010980"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>設定拓撲 (點對點複寫)
   您可以使用 **[設定拓撲]** 頁面來執行一些常見的組態設定工作，例如加入新的節點、刪除節點，以及在現有節點之間加入新連接。 您在此精靈之 **[發行集]** 頁面上選取的節點會顯示在設計介面上。 若要指定組態選項，請以滑鼠右鍵按一下節點、連接或設計介面。
@@ -43,7 +42,7 @@ ms.locfileid: "78176568"
 
  如果精靈要求拓撲資訊，然後您在所有節點回應要求之前關閉精靈並重新開啟，這個頁面可能會無法顯示拓撲中的所有節點。
 
- **加入新的對等節點**將的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例加入至點對點拓撲。 如果您加入執行個體當做節點，系統會在精靈完成之後，於該執行個體上建立發行集。 在您加入節點之後，請以滑鼠右鍵按一下它，以便在新節點與現有節點之間加入連接。
+ **加入新的對等節點**將的實例加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 至點對點拓撲。 如果您加入執行個體當做節點，系統會在精靈完成之後，於該執行個體上建立發行集。 在您加入節點之後，請以滑鼠右鍵按一下它，以便在新節點與現有節點之間加入連接。
 
  若要參與點對點拓撲，這個執行個體必須符合下列需求：
 

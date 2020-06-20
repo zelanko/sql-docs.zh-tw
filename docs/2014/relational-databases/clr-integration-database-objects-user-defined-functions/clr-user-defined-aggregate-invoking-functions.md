@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81ddf552e71bdd0b83c8082c2bd84450f6088e5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919598"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954669"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>叫用 CLR 使用者定義彙總函式
   您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式中叫用 Common Language Runtime (CLR) 使用者定義彙總，依套用至系統彙總函式的所有規則而定。  
@@ -34,9 +33,9 @@ ms.locfileid: "62919598"
   
 -   使用者定義匯總必須使用*schema_name. udagg_name*格式的兩部分名稱來叫用。  
   
--   使用者定義匯總的引數類型必須符合或可以隱含地轉換成匯總的*input_type* ，如`CREATE AGGREGATE`語句中所定義。  
+-   使用者定義匯總的引數類型必須符合或可以隱含地轉換成匯總的*input_type* ，如語句中所定義 `CREATE AGGREGATE` 。  
   
--   使用者定義匯總的傳回類型必須符合`CREATE AGGREGATE`語句中的*return_type* 。  
+-   使用者定義匯總的傳回類型必須符合語句中的*return_type* `CREATE AGGREGATE` 。  
   
 ## <a name="example-1"></a>範例 1  
  以下是使用者定義彙總函式的範例，此函數會串連取自資料表之資料行的一組字串值：  
@@ -196,7 +195,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 將程式碼編譯為**myagg.dll 之後**之後，您可以在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]註冊匯總，如下所示：  
+ 將程式碼編譯成**MyAgg.dll**之後，您就可以在中註冊匯總，如下所示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  

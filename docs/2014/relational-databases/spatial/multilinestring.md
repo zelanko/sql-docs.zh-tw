@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdd093d99d055df8e15fc22e3e570e6805e35d6e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003310"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  `MultiLineString`是零個或多個`geometry`或**geographyLineString**實例的集合。  
+  `MultiLineString`是零個或多個 `geometry` 或**geographyLineString**實例的集合。  
   
 ## <a name="multilinestring-instances"></a>MultiLineString 執行個體  
  下圖顯示 `MultiLineString` 執行個體的範例。  
@@ -29,7 +28,7 @@ ms.locfileid: "66014213"
   
  如本圖所示：  
   
--   [圖 1] 是`MultiLineString`一個簡單的實例，其界限是其兩`LineString`個元素的四個端點。  
+-   [圖 1] 是一個簡單的 `MultiLineString` 實例，其界限是其兩個元素的四個端點 `LineString` 。  
   
 -   圖 2 是簡單 `MultiLineString` 執行個體，因為只有 `LineString` 元素的端點才會相交。 界限是兩個非重疊的端點。  
   
@@ -37,12 +36,12 @@ ms.locfileid: "66014213"
   
 -   圖 4 是非簡單、非封閉的 `MultiLineString` 執行個體。  
   
--   圖 5 是簡單、非封閉的 `MultiLineString`。 它不會關閉，因為`LineStrings`它的元素不會關閉。 因為任何 `LineStrings` 執行個體的內部都不相交，所以它是簡單的。  
+-   圖 5 是簡單、非封閉的 `MultiLineString`。 它不會關閉，因為它的 `LineStrings` 元素不會關閉。 因為任何 `LineStrings` 執行個體的內部都不相交，所以它是簡單的。  
   
 -   圖 6 是簡單、封閉的 `MultiLineString` 執行個體。 它是封閉的，因為它的所有元素都是封閉的。 因為它的所有元素在內部都不相交，所以它是簡單的。  
   
 ### <a name="accepted-instances"></a>已接受的執行個體  
- 若要接受 `MultiLineString`執行個體，則該執行個體必須是空的，或是僅由可接受的 `LineString` 執行個體組成。 如需已接受`LineString`之實例的詳細資訊，請參閱[LineString](../spatial/linestring.md)。 以下為可接受之 `MultiLineString` 執行個體的範例。  
+ 若要接受 `MultiLineString`執行個體，則該執行個體必須是空的，或是僅由可接受的 `LineString` 執行個體組成。 如需已接受之實例的詳細資訊 `LineString` ，請參閱[LineString](../spatial/linestring.md)。 以下為可接受之 `MultiLineString` 執行個體的範例。  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
