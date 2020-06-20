@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42538ac6566b70105fd183da1cadd00f7fd0c13b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472987"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011785"
 ---
 # <a name="automatically-delete-a-job"></a>自動刪除作業
-  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 管理物件， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在中設定 Agent 在作業成功、失敗或完成時自動予以刪除。  
+  本主題描述如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用或 SQL Server 管理物件，在中設定 Agent 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 作業成功、失敗或完成時自動予以刪除 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
  作業回應可確保資料庫管理員知道作業已完成，以及作業的執行頻率。 典型的作業回應包括：  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62472987"
   
 -   **若要使用下列項目指定作業回應：**  
   
-     [Transact-SQL](#SSMS)  
+     [SQL Server Management Studio](#SSMS)  
   
      [SQL Server 管理物件](#SMO)  
   

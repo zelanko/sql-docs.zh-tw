@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1ca545e081826f1b81117e377f370136a7b4998
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c42809ab5057d4234b992ec81db0b6571c3e68c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067005"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938819"
 ---
 # <a name="measures-ssas-tabular"></a>量值 (SSAS 表格式)
   在表格式模型中，量值是透過報表用戶端內使用的 DAX 公式所建立的計算。 量值會以使用者在報表用戶端應用程式中選取的欄位、篩選及交叉分析篩選器為依據來計算。  
@@ -32,7 +31,7 @@ ms.locfileid: "66067005"
   
 -   [相關工作](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>各種  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> 優點  
  量值可以用標準彙總函式 (例如 AVERAGE、COUNT 或 SUM) 做為基礎，或者，您也可以使用 DAX 自行定義公式。 除了公式以外，每個量值都具備由量值資料類型定義的屬性，如名稱、資料表詳細資料、格式及小數位數。  
   
  若模型中已定義量值，使用者即可將其加入報表或樞紐分析表。 視檢視方塊與角色而定，量值會與其相關聯的資料表一起出現在欄位清單中，且可供模型中的所有使用者使用。 量值通常會在事實資料表中建立；不過，量值也可以獨立於其相關聯的資料表之外。  
@@ -84,9 +83,9 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 |屬性|預設設定|描述|  
 |--------------|---------------------|-----------------|  
-|**描述**|Blank|量值的說明。 報表用戶端中不會顯示量值說明。|  
-|**編排**|在公式運算式中，自動從參考資料行的資料類型來判斷。|量值的格式。 例如，貨幣或百分比。|  
-|**公式**|量值建立時，在公式列中輸入的公式。|量值的公式。|  
+|**說明**|空白|量值的說明。 報表用戶端中不會顯示量值說明。|  
+|**[格式]**|在公式運算式中，自動從參考資料行的資料類型來判斷。|量值的格式。 例如，貨幣或百分比。|  
+|**Formula**|量值建立時，在公式列中輸入的公式。|量值的公式。|  
 |**[量值名稱]**|若使用自動加總，量值名稱後面會接著資料行名稱和冒號。 若是輸入自訂公式，請輸入名稱，後面接著冒號，然後再輸入公式。|量值名稱就是報表用戶端欄位清單中顯示的名稱。|  
   
 ##  <a name="using-a-measure-in-a-kpi"></a><a name="bkmk_KPI"></a>在 KPI 中使用量值  

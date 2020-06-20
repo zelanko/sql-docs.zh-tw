@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4580b41b9854b749f4ed6f66d2c7bea77647cef1
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: f6c4a3e51745ab0f2c67dcba88f71b79f031d7ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058593"
 ---
 # <a name="name-not-found-dialog-box"></a>找不到名稱對話方塊
   在對話方塊中找不到一或多個物件名稱。 選取一個選項以繼續進行。  
@@ -37,7 +36,7 @@ ms.locfileid: "83859210"
  **輸入物件名稱**  
  包含找不到之物件的名稱。 請更正物件的名稱，或鍵入新的物件名稱。  
   
- **從選取範圍****移除*** \< 物件名稱>*      
+ **移除** *\<object name>***從選取範圍**      
  選取以關閉 [找不到名稱]  對話方塊，並從 [選取物件]  對話方塊中移除項目。  
   
   

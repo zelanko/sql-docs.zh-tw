@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8d17d074-9937-422c-965a-0f0b31a30d37
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5a6c9c1b30adee7b42f9424d648d33dacc52e0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0be233b164d68bc93caa0484e59fb2196497a3b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780264"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933169"
 ---
 # <a name="wmi-provider-events-and-errors"></a>WMI 提供者事件和錯誤
   本主題包含數個與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相關之 WMI 錯誤的原因和解決方案資訊。  
@@ -29,6 +28,6 @@ ms.locfileid: "62780264"
  登入失敗: 使用者帳戶限制。 可能的原因為不允許空的密碼，登入時數限制，或強制的原則限制。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 事件和錯誤](../../relational-databases/native-client-ole-db-errors/errors.md)  
+ [資料庫引擎事件和錯誤](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

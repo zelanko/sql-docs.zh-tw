@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 384234072c312fca2c91da8ab4e6ac09eb0f79fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011589"
 ---
 # <a name="review-the-replay-results"></a>檢閱重新執行結果
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能完成分散式重新執行之後，即可擷取每個用戶端的重新執行活動，並將其儲存在每個用戶端的結果追蹤檔案中。 若要擷取此活動，您必須在以 **replay** 選項執行管理工具時使用 **-o** 參數。 如需詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](replay-option-distributed-replay-administration-tool.md)。  
@@ -71,15 +70,15 @@ ms.locfileid: "63149699"
 |ConnectionID|`int`|事件的擷取連接識別碼。|11|  
 |ReplaySPID|`int`|事件的重新執行工作階段識別碼。|12|  
 |DatabaseName|`nvarchar`|正在其中執行使用者陳述式的資料庫名稱。|13|  
-|LoginName|`nvarchar`|使用者登入名稱。 這可以是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安全性登入或 Microsoft Windows 登入認證，格式*domain_name*\\*user_name*。|14|  
+|LoginName|`nvarchar`|使用者登入名稱。 這可以是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] domain_name *user_name*\\*格式的*安全性登入或 Microsoft Windows 登入認證。|14|  
 |CaptureHostName|`nvarchar`|擷取期間用戶端服務執行所在之電腦的名稱。|15|  
 |ReplayHostName|`nvarchar`|重新執行期間用戶端執行所在的電腦名稱。|16|  
 |ApplicationName|`nvarchar`|擷取期間建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連線的用戶端應用程式名稱。|17|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Distributed Replay 需求](distributed-replay-requirements.md)   
- [系統管理工具命令列選項 &#40;Distributed Replay 公用程式&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [設定 Distributed Replay](configure-distributed-replay.md)  
   
   

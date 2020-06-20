@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 474e910a-6abb-4e28-acc2-055338c011d4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3ee155c70a8b10d4437d6b2f374c8b9497bf3faa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0528d19de17781d863e3a42fdef7db558fe5d190
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059126"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>移除以保留的 ORDPATH 資料類型命名的 UDT&#39;
   Upgrade Advisor 偵測到依據為 `ORDPATH` 資料類型保留之詞彙所命名的使用者定義型別 (UDT)。  

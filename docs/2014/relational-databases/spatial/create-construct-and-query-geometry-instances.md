@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 539f3f8bb1d9a1c277d6317cc571cf8bcb281833
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014305"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996579"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>建立、建構及查詢幾何執行個體
   平面空間資料類型 (`geometry`) 代表 Euclidean (平面) 座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中是實作為 Common Language Runtime (CLR) 資料類型。  
@@ -129,7 +128,7 @@ ms.locfileid: "66014305"
   
   
 ###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> 從 GML 文字輸入建構 geometry 執行個體  
- `geometry`資料類型提供的方法會從 GML 產生`geometry`實例，這是幾何物件的 XML 標記法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援 GML 的子集。  
+ `geometry`資料類型提供的方法會 `geometry` 從 GML 產生實例，這是幾何物件的 XML 標記法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援 GML 的子集。  
   
  **從 GML 輸入建構任何類型的 geometry 執行個體**  
  [GeomFromGml &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/geomfromgml-geometry-data-type)  
@@ -156,7 +155,7 @@ ms.locfileid: "66014305"
   
   
 ##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> 查詢 geometry 執行個體的屬性和行為  
- 所有`geometry`實例都有許多屬性，可以透過[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的方法來抓取。 下列主題定義幾何類型的屬性和行為以及用來查詢每一個類型的方法。  
+ 所有 `geometry` 實例都有許多屬性，可以透過提供的方法來抓取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 下列主題定義幾何類型的屬性和行為以及用來查詢每一個類型的方法。  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> 有效性、執行個體類型和 GeometryCollection 資訊  
  一旦建構了 `geometry` 執行個體之後，您就可以使用下列方法來判斷它的格式是否正確、傳回執行個體類型，或者如果它是集合執行個體，就會傳回特定的 `geometry` 執行個體。  
@@ -182,7 +181,7 @@ ms.locfileid: "66014305"
   
   
 ###  <a name="number-of-points"></a><a name="number"></a> 點數  
- 所有非`geometry`空的實例都是由*點*組成。 這些點代表幾何繪製所在平面的 X 和 Y 座標。 `geometry`提供許多內建方法來查詢執行個體的點。  
+ 所有非空 `geometry` 的實例都是由*點*組成。 這些點代表幾何繪製所在平面的 X 和 Y 座標。 `geometry`提供許多內建方法來查詢執行個體的點。  
   
  **傳回組成執行個體的點數**  
  [STNumPoints &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)  
@@ -225,7 +224,7 @@ ms.locfileid: "66014305"
   
   
 ###  <a name="empty"></a><a name="empty"></a> Empty  
- *空*`geometry`的實例沒有任何點。 空的 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString` 執行個體的長度是零。 空的 `Polygon`、`CurvePolygon` 和 `MultiPolygon` 執行個體的區域是 0。  
+ *空*的 `geometry` 實例沒有任何點。 空的 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString` 執行個體的長度是零。 空的 `Polygon`、`CurvePolygon` 和 `MultiPolygon` 執行個體的區域是 0。  
   
  **判斷執行個體是否為空的**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type)。  
@@ -248,7 +247,7 @@ ms.locfileid: "66014305"
   
   
 ###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> 界限、內部和外部  
- 實例的內部是實例所佔用的空間，而*外部*則是未佔用的空間。 *interior* `geometry`  
+ 實例的*內部* `geometry` 是實例所佔用的空間，而*外部*則是未佔用的空間。  
   
  *「界限」* (Boundary) 是由 OGC 定義如下：  
   
@@ -276,7 +275,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="envelope"></a><a name="envelope"></a> 範圍  
- 實例的信封（也稱為周*框*方塊）是由實例的最小和最大（X，Y）座標所組成的軸對齊矩形。 *envelope* `geometry`  
+ 實例的*信封* `geometry` （也稱為周*框*方塊）是由實例的最小和最大（X，Y）座標所組成的軸對齊矩形。  
   
  **傳回執行個體的範圍**  
  [STEnvelope](/sql/t-sql/spatial-geometry/stenvelope-geometry-data-type)  
@@ -284,7 +283,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a><a name="closure"></a> 封閉性  
- *封閉式*`geometry`實例是起始點和結束點相同的圖形。 `Polygon` 執行個體視為封閉式。 `Point` 執行個體視為非封閉式。  
+ *封閉式* `geometry` 實例是起始點和結束點相同的圖形。 `Polygon` 執行個體視為封閉式。 `Point` 執行個體視為非封閉式。  
   
  環形是簡單、封閉的 `LineString` 執行個體。  
   

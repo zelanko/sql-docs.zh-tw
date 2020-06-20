@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3694eeb93e9edbc053a8534841a1edf438489ca9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058248"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968328"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>HTTP 連接管理員編輯器 (伺服器頁面)
   使用 [HTTP 連接管理員編輯器]**** 對話方塊的 [伺服器]**** 索引標籤指定各項屬性，例如 URL 和安全性認證，以設定 HTTP 連接管理員。 HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。 設定 HTTP 連接管理員之後，可以同時測試連接。  
@@ -44,13 +43,13 @@ ms.locfileid: "66058248"
  **密碼**  
  如果 HTTP 連接管理員使用認證，您必須指定使用者名稱、密碼，以及網域。  
   
- **Domain**  
+ **網域**  
  如果 HTTP 連接管理員使用認證，您必須指定使用者名稱、密碼，以及網域。  
   
  **使用用戶端憑證**  
  指定 HTTP 連接管理員是否使用用戶端憑證進行驗證。  
   
- **憑證**  
+ **[MSSQLSERVER 的通訊協定內容]**  
  使用 [選取憑證]**** 對話方塊，即可從清單中選取憑證。 文字方塊會顯示與此憑證相關聯的名稱。  
   
  **逾時 (以秒為單位)**  

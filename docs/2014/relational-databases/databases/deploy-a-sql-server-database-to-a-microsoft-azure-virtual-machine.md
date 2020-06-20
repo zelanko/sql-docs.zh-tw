@@ -41,16 +41,15 @@ helpviewer_keywords:
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 085f8ae1699e6a7bc1ceecb31075dff83d2b79ea
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970040"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>將 SQL Server Database 部署到 Microsoft Azure 虛擬機器
-  使用 [將**SQL Server 資料庫部署到 AZURE VM** ] wizard，將實例中的資料庫部署[!INCLUDE[ssDE](../../includes/ssde-md.md)]到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] azure 虛擬機器（VM）中的。 此精靈會利用完整的資料庫備份作業，因此它一定會從 SQL Server 使用者資料庫複製完整的資料庫結構描述和資料。 此精靈也會為您執行所有的 Azure VM 組態設定，因此不需要進行 VM 的預先組態設定。  
+  使用 [將**SQL Server 資料庫部署到 AZURE VM** ] wizard，將實例中的資料庫部署 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE 虛擬機器（VM）中的。 此精靈會利用完整的資料庫備份作業，因此它一定會從 SQL Server 使用者資料庫複製完整的資料庫結構描述和資料。 此精靈也會為您執行所有的 Azure VM 組態設定，因此不需要進行 VM 的預先組態設定。  
   
  您不能針對差異備份使用此精靈，因為此精靈將不會覆寫資料庫名稱相同的現有資料庫。 若要取代 VM 上現有的資料庫，您必須先卸除現有資料庫或變更資料庫的名稱。 如果進行中部署作業的資料庫名稱與 VM 上的現有資料庫發生名稱衝突，此精靈將會建議針對進行中的資料庫附加資料庫名稱，好讓您完成作業。  
   
@@ -148,19 +147,19 @@ ms.locfileid: "70175735"
   
         -   <OtherSettings  
   
-            -   TraceLevel="偵錯" \<!-- 記錄層次 -->  
+            -   TraceLevel = "Debug"\<!-- Logging level -->  
   
-            -   BackupPath="\\\\[伺服器名稱]\\[磁碟區]\\" \<!-- 上次使用的備份路徑。 做為精靈中的預設值使用。 -->  
+            -   BackupPath = " \\ \\ [伺服器名稱] \\ [磁片區] \\ "\<!-- The last used path for backup. Used as default in the wizard. -->  
   
-            -   CleanupDisabled = False/> \<!--Wizard 不會刪除中繼檔案和 Azure 物件（VM、CS、SA）。 -->  
+            -   CleanupDisabled = False/>\<!-- Wizard will not delete intermediate files and Azure objects (VM, CS, SA). -->  
   
-        -   <PublishProfile \<!-- 上次使用的發行設定檔資訊。 -->  
+        -   <PublishProfile\<!-- The last used publish profile information. -->  
   
-            -   Certificate="12A34B567890123ABCD4EF567A8" \<!-- 精靈中使用的憑證。 -->  
+            -   Certificate = "12A34B567890123ABCD4EF567A8"\<!-- The certificate for use in the wizard. -->  
   
-            -   Subscription="1a2b34c5-67d8-90ef-ab12-xxxxxxxxxxxxx" \<!-- 精靈中使用的訂閱。 -->  
+            -   訂用帳戶 = "1a2b34c5-67d8-90ef-ab12-xxxxxxxxxxxxx-67d8-90ef-ab12-1a2b34c5-67d8-90ef-ab12-xxxxxxxxxxxxx"\<!-- The subscription for use in the wizard. -->  
   
-            -   Name="My Subscription" \<!-- 訂閱的名稱。 -->  
+            -   名稱 = "我的訂用帳戶"\<!-- The name of the subscription. -->  
   
             -   Publisher="" />  
   
@@ -196,11 +195,11 @@ ms.locfileid: "70175735"
 -   說明 **-啟動**嚮導的 MSDN 說明主題。  
   
 ##  <a name="source-settings"></a><a name="Source_settings"></a>來源設定  
- 使用此頁面來連接到裝載您想[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要部署至 Azure VM 之資料庫的實例。 您也會指定暫存位置，以便從本機電腦儲存檔案，然後再將它們傳輸至 Azure。 這個位置可以是共用的網路位置。  
+ 使用此頁面來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 裝載您想要部署至 AZURE VM 之資料庫的實例。 您也會指定暫存位置，以便從本機電腦儲存檔案，然後再將它們傳輸至 Azure。 這個位置可以是共用的網路位置。  
   
  **選項**  
   
--   按一下 [**連接 ...]** ，然後針對裝載要部署之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫的實例指定連接詳細資料。  
+-   按一下 [**連接 ...]** ，然後針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 裝載要部署之資料庫的實例指定連接詳細資料。  
   
 -   使用 **[選取資料庫]** 下拉式清單來指定要部署的資料庫。  
   

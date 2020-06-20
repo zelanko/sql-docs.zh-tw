@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2439b19c4550d07b8d50a0bed6d72b603b1601a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1302f8bcd6a427d5225f6936b0adf158d0ed6ee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050554"
 ---
 # <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype (擴充預存程序 API)
     
@@ -55,17 +54,17 @@ user_type
  *srvproc*  
  是 SRV_PROC 結構的指標，也是特定用戶端連接的控制代碼。 擴充預存程序 API 程式庫會使用該結構所包含的資訊來管理應用程式與用戶端之間的通訊和資料。  
   
- *排*  
+ *column*  
  指出要設定的資料行。 資料行的編號會從 1 開始。  
   
  *user_type*  
  指定使用者定義資料類型程式碼。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL。 如果此資料行不存在，則會傳回 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 一個資料行有兩個資料類型：其實際資料類型與其使用者定義資料類型。 使用者定義資料類型是由[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用來儲存資料行的實際使用者定義資料類型（如果有的話）以及資料行描述資訊，例如資料行的 null 屬性和可更新性。  
+ 一個資料行有兩個資料類型：其實際資料類型與其使用者定義資料類型。 使用者定義資料類型是由用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存資料行的實際使用者定義資料類型（如果有的話）以及資料行描述資訊，例如資料行的 null 屬性和可更新性。  
   
  利用 **srv_describe** 定義 *column* 時，以及最後一個資料列送出之前，可以呼叫 **srv_setutype** 函式。  
   

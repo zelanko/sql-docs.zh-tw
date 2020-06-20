@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bebddfcb9f6dc433831e2649428bd9c99646628f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d70e4f9330db23c9cce54f7c615163c4dcee4f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482859"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960858"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>儲存捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您經常需要存取相同的資料集時，可儲存捷徑查詢檔案。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   使用中工作表必須使用您想要的格式包含 MDS 管理的資料。 例如，您應該依照您想要的順序 (套用任何想要的篩選) 來檢視資料行。 如需詳細資訊，請參閱[&#40;適用于 excel 的 Mds 增益集&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)和[重新排序 &#40;適用于 Excel 的 mds 增益集&#41;中](reorder-columns-mds-add-in-for-excel.md)的資料行。  

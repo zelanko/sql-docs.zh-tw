@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 86805eeb-6972-45d8-8369-16ededc535c7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7dbb63c958b50d3fac51cd8686b8580c93dacdb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c629b1397cbe4ff938052770aa6a605b631a00fa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778958"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932799"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>記憶體最佳化資料表上的索引
   本節包含有關記憶體最佳化資料表的索引主題：  

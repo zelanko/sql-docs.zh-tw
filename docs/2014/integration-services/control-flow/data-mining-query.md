@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2fe6e1d06f7c996d5221b591c872d651a375033
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890322"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919310"
 ---
 # <a name="data-mining-query"></a>資料採礦查詢
   設計窗格包含資料採礦預測查詢產生器，您可以使用該產生器來建立資料採礦預測查詢。 您可以依據輸入資料表來設計預測查詢，或設計單一預測查詢。 切換到結果檢視以執行查詢並檢視結果。 查詢檢視會顯示預測查詢產生器所建立的資料採礦延伸模組 (DMX) 查詢。  
@@ -45,7 +44,7 @@ ms.locfileid: "68890322"
  可以將資料行從包含採礦模型和輸入資料行的資料表，拖曳至資料格。  
   
  **欄位**  
- 從衍生自來源資料表的資料行清單中，選取一個資料行。 如果在 [來源]  中選取 [預測函數]  ，則此資料格會包含選取的採礦模型可用之預測函數的下拉式清單。  
+ 從衍生自來源資料表的資料行清單中，選取一個資料行。 如果在 [來源] 中選取 [預測函數]，則此資料格會包含選取的採礦模型可用之預測函數的下拉式清單。  
   
  **別名**  
  伺服器所傳回之資料行的名稱。  

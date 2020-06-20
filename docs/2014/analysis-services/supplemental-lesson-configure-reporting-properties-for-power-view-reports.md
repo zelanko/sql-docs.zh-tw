@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03afd5bdafe30a8684165fef5febae49f210f042
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067963"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940209"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>設定 Power View 報表的報表屬性
   在此補充課程中，我們將會針對 Adventure Works Internet Sales Model 專案設定報表屬性。 報表屬性讓使用者能夠更輕鬆地在 Power View 中選取及顯示模型資料。 您也會設定屬性來隱藏某些資料行和資料表，並建立新的資料供圖表使用。  
@@ -26,7 +25,7 @@ ms.locfileid: "66067963"
   
  這堂課的預估完成時間：**30 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  這個補充課程是表格式模型教學課程的一部分，必須依序完成。 在此補充課程中執行工作之前，您必須已完成所有前面的課程。  
   
  為了完成這個特殊補充課程，您也必須具備以下條件：  
@@ -70,7 +69,7 @@ ms.locfileid: "66067963"
   
 2.  在公式列使用以下公式加入兩個新的導出資料行：  
   
-    |資料行名稱|公式|  
+    |資料行名稱|Formula|  
     |-----------------|-------------|  
     |Year Quarter|=[Calendar Year] & " Q" & [Calendar Quarter]|  
     |Year Month|=[Calendar Year] & FORMAT([Month],"#00")|  
@@ -164,7 +163,7 @@ ms.locfileid: "66067963"
   
     |資料行|屬性|值|  
     |------------|--------------|-----------|  
-    |日期|資料格式|簡短日期|  
+    |Date|資料格式|簡短日期|  
     |Day Number of Week|Hidden|True|  
     |Day Name|依資料行排序|Day Number of Week|  
     |Day of Week|Hidden|True|  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d52bfd22-7a7c-4ab0-af65-df96ff359e6f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7eb462881ab9ae5d6221498a84fc2b79e0524bc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 581b8b6514ddeb7f6a55ac797ab838f933a702f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050627"
 ---
 # <a name="srv_rpcdb-extended-stored-procedure-api"></a>srv_rpcdb (擴充預存程序 API)
     
@@ -49,7 +48,7 @@ SRV_PROC * srvproc,int *len );
  *len*  
  `int` 變數的指標，此變數會接收資料庫名稱的長度。 如果 *len* 為 NULL，則不會傳回資料庫名稱的長度。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  目前遠端預存程序的資料庫名稱部分以 null 結尾字串的 DBCHAR 指標。 如果沒有目前遠端預存程序，則會傳回 NULL 且 *len* 參數設定為 - 1。  
   
 ## <a name="remarks"></a>備註  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61a49ccb89343984b29018f293656fd2a9137b37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770214"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939189"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>教學課程：使用 OData 來源 [SSIS]
   本教學課程將逐步引導您進行從範例 **Northwind** OData 服務 (http://services.odata.org/V3/Northwind/Northwind.svc/) 擷取 **Employees** 集合，然後將該集合載入一般檔案的程序。  
@@ -44,7 +43,7 @@ ms.locfileid: "62770214"
   
 5.  按一下 [新增...]**** 以新增 OData 連接管理員。  
   
-6.  輸入 **[服務文件位置]** 的 OData 服務 URL。 這可以是服務文件的 URL，或是特定摘要或實體的 URL。 基於本教學課程的目的，請[http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)輸入。  
+6.  輸入 **[服務文件位置]** 的 OData 服務 URL。 這可以是服務文件的 URL，或是特定摘要或實體的 URL。 基於本教學課程的目的，請輸入 [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/) 。  
   
 7.  確認已選取 **[Windows 驗證]** 做為用來存取 OData 服務的 **[驗證]** 。 **[Windows 驗證]** 預設為選取狀態。 若要使用基本驗證，請選取 **[使用此使用者名稱和密碼]**。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62770214"
   
 10. 從 **[集合]** 下拉式清單中選取 **[Employees]**。  
   
-11. 針對 **[查詢選項]** 輸入任何其他 OData 查詢選項或篩選。 例如： $orderby=CompanyName&$top=100。 針對本教學課程的用途，輸入 **$top=5**。  
+11. 針對 **[查詢選項]** 輸入任何其他 OData 查詢選項或篩選。 例如 $orderby=CompanyName&$top=100。 針對本教學課程的用途，輸入 **$top=5**。  
   
 12. 按一下 **[預覽]** 預覽資料。  
   

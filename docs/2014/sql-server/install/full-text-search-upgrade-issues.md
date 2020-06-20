@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d104a0c3-0492-4de6-8ce5-eacee47c978f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d907c9b440053b0c0fc110fa02ca3de4e993905c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 512f75c7086a8b9c2510552f4888c5cf2eac3116
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095116"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012310"
 ---
 # <a name="full-text-search-upgrade-issues"></a>全文檢索搜尋升級問題
   本節的主題描述可能影響升級的全文檢索搜尋問題。 這些主題會描述一些可讓您採取的動作，以便減輕這些變更對環境的影響。  

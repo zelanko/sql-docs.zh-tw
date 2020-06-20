@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 96a5e6f6-d320-4623-b96e-0a856e3abebb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 83f1368984737759eb64a5feaf31bd1ac7c79e37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2303ad02f6b50ecf1e3b0b43c91aab7dc4bd2b22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62740663"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050567"
 ---
 # <a name="srv_rpcparams-extended-stored-procedure-api"></a>srv_rpcparams (擴充預存程序 API)
     
@@ -48,7 +47,7 @@ srvproc
  *srvproc*  
  是 SRV_PROC 結構的指標，也是特定用戶端連接的控制代碼 (在這個狀況之下，該控制代碼會收到遠端預存程序)。 此結構包含了一些資訊，擴充預存程序 API 程式庫會使用這些資訊來管理應用程式與用戶端之間的通訊和資料。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  遠端預存程序中的參數數目。 如果在遠端預存程序中沒有參數，或者沒有目前的遠端預存程序，則會傳回 -1，並發生資訊錯誤。  
   
 ## <a name="remarks"></a>備註  

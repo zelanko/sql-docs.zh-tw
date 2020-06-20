@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd163c5d3bc7a2cd9051b8d37b8127a1cc88c30b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050351"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>將包含記憶體最佳化資料表的資料庫繫結至資源集區
   資源集區代表可受管制的實體資源子集。 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫會繫結至預設資源集區並取用其資源。 為了防止一個或多個記憶體最佳化資料表取用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有資源，以及避免其他記憶體使用者耗用記憶體最佳化資料表所需的記憶體，您應該針對具有記憶體最佳化資料表的資料庫建立另一個資源集區來管理記憶體耗用量。  
@@ -31,7 +30,7 @@ ms.locfileid: "63158807"
  您可以按照任何順序建立資料庫和資源集區。 重點在於這兩者必須事先存在，才能將資料庫繫結至資源集區。  
   
 ### <a name="create-the-database"></a>建立資料庫  
- 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 會建立名為 IMOLTP_DB 的資料庫，其中將包含一個或多個記憶體最佳化資料表。 執行此命令之前，路徑 \<磁碟機和路徑> 必須存在。  
+ 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 會建立名為 IMOLTP_DB 的資料庫，其中將包含一個或多個記憶體最佳化資料表。 在執行 \<driveAndPath> 此命令之前，路徑必須存在。  
   
 ```sql  
 CREATE DATABASE IMOLTP_DB  
@@ -142,7 +141,7 @@ GO
 ## <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a>可用於記憶體最佳化資料表和索引的記憶體百分比  
  如果您將具有記憶體最佳化資料表的資料庫和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載對應至相同的資源集區，資源管理員就會設定 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 使用的內部臨界值，避免集區的使用者在集區使用量上發生衝突。 一般而言， [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 使用的臨界值大約是 80% 的集區。 下表顯示各種記憶體大小的實際臨界值。  
   
- 您為 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 資料庫建立專用資源集區時，在考量資料列版本和資料成長之後，需要估計記憶體中資料表所需的實體記憶體數量。 估計所需的記憶體之後，您可以建立資源集區，其中包含 SQL 實例的認可目標記憶體百分比，如 DMV `sys.dm_os_sys_info`中的資料行 ' committed_target_kb ' 所反映（請參閱[dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)）。 例如，您可以建立資源集區 P1，其中有 40% 的總記憶體可供執行個體使用。 在此 40% 之中， [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎會取用較小的百分比來儲存 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 資料。  這樣做可確保 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 不會耗用此集區中的所有記憶體。  這個較小的百分比值取決於目標認可的記憶體。 下表描述在 OOM 錯誤引發之前，資源集區 (具名或預設) 中可供 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 資料庫使用的記憶體。  
+ 您為 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 資料庫建立專用資源集區時，在考量資料列版本和資料成長之後，需要估計記憶體中資料表所需的實體記憶體數量。 估計所需的記憶體之後，您可以建立資源集區，其中包含 SQL 實例的認可目標記憶體百分比，如 DMV 中的資料行 ' committed_target_kb ' 所反映 `sys.dm_os_sys_info` （請參閱[dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)）。 例如，您可以建立資源集區 P1，其中有 40% 的總記憶體可供執行個體使用。 在此 40% 之中， [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎會取用較小的百分比來儲存 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 資料。  這樣做可確保 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 不會耗用此集區中的所有記憶體。  這個較小的百分比值取決於目標認可的記憶體。 下表描述在 OOM 錯誤引發之前，資源集區 (具名或預設) 中可供 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 資料庫使用的記憶體。  
   
 |目標認可的記憶體|記憶體中資料表可用的百分比|  
 |-----------------------------|---------------------------------------------|  
@@ -187,8 +186,8 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
 ## <a name="see-also"></a>另請參閱  
  [sp_xtp_bind_db_resource_pool &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
  [sp_xtp_unbind_db_resource_pool &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
- [Resource Governor](../resource-governor/resource-governor.md)   
- [Resource Governor 資源集區](../resource-governor/resource-governor-resource-pool.md)   
+ [資源管理員](../resource-governor/resource-governor.md)   
+ [資源管理員資源集區](../resource-governor/resource-governor-resource-pool.md)   
  [建立資源集區](../resource-governor/create-a-resource-pool.md)   
  [變更資源集區設定](../resource-governor/change-resource-pool-settings.md)   
  [刪除資源集區](../resource-governor/delete-a-resource-pool.md)  

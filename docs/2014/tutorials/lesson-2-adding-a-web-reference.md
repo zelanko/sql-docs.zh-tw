@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e455dd25c2b5d4ffa28bd2bdc28ff679861f1f1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316013"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011407"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>第 2 課：新增 Web 參考
   Web 服務探索是用戶端用來尋找 Web 服務及取得服務描述的程序。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的 Web 服務探索程序牽涉到依照預先定義的演算法來詢問網站。 此程序的目的是尋找服務描述，也就是使用 Web 服務描述語言 (WSDL) 的 XML 文件集。  
@@ -32,7 +31,7 @@ ms.locfileid: "63316013"
   
 3.  在 [**服務參考設定**] 對話方塊中，按一下 [**加入 Web 參考**]。  
   
-4.  在 [**加入 Web 參考**] 對話方塊的 [ http://localhost/reportserver/reportservice2010.asmx **url** ] 方塊中，輸入 url 以取得報表伺服器 Web 服務的服務描述，例如。 然後**按一下 [執行] 按鈕，以**取得有關 Web 服務的資訊。  
+4.  在 [**加入 Web 參考**] 對話方塊的 [ **url** ] 方塊中，輸入 Url 以取得報表伺服器 Web 服務的服務描述，例如 http://localhost/reportserver/reportservice2010.asmx 。 然後**按一下 [執行] 按鈕，以**取得有關 Web 服務的資訊。  
   
      \- 或 -  
   

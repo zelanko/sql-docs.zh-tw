@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3f7ebe0c0c5d23210a5111e8b4daaa69f8c73bb0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c3b94bef3cf3549720321a0bcd47f7314ff1ff8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836385"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924914"
 ---
 # <a name="creating-a-package-programmatically"></a>以程式設計方式建立封裝
   <xref:Microsoft.SqlServer.Dts.Runtime.Package> 物件是 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 專案方案中所有其他物件的最上層容器。 做為最上層容器，封裝是第一個建立的物件，而且後續的物件會加入其中，然後在封裝的內容中執行。 封裝本身不會移動或是轉換資料。 封裝依賴它所含的工作 (Task) 以執行工作 (Work)。 工作 (Task) 會執行封裝所執行的大部分工作 (Work)，並定義封裝的功能。 只需要三行程式碼就可以建立和執行封裝，但是還需要將各種工作與 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件加入，以便為您的封裝提供其他功能。 本節討論如何以程式設計方式建立封裝。 有關如何建立工作或 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 的詳細資訊並非在此提供， 這些內容將於後續章節說明。  
@@ -63,13 +62,13 @@ Module Module1
 End Module  
 ```  
   
- 若要編譯和執行範例，請在 Visual Studio 中按 F5。 若要使用 C# 編譯器 **csc.exe** 建置程式碼，請在要編譯的命令提示字元之下，使用下列命令與檔案參考，以 .cs 或 .vb 檔案的名稱取代 *filename>\<* ，並提供您所選擇的 *\<outputfilename>* 。  
+ 若要編譯和執行範例，請在 Visual Studio 中按 F5。 若要使用 c # 編譯器建立程式碼**csc.exe**，請在要編譯的命令提示字元中，使用下列命令和檔案參考，將取代為 *\<filename>* .cs 或 .vb 檔案的名稱，並為其提供 *\<outputfilename>* 您選擇的。  
   
- **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
+ **csc/target： library/out： \<outputfilename> .dll \<filename> . .cs/r： DTS.dll "/r:System.dll**  
   
  若要使用 Visual Basic .NET 編譯器 **vbc.exe** 建置程式碼，請在要編譯的命令提示字元之下，使用下列命令與檔案參考。  
   
- **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
+ **vbc/target： library/out： \<outputfilename> .dll \<filename> 。 .vb/r： DTS.dll "/r:System.dll**  
   
  您也可以載入儲存在磁碟上、在檔案系統或是儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的現有封裝以建立封裝。 其差異在於會先建立 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 物件，然後其中一個應用程式的多載方法會填入封裝物件：`LoadPackage` 用於一般檔案、`LoadFromSQLServer` 用於儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的封裝，或是 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 用於儲存到檔案系統的封裝。 下列範例會從磁碟載入現有封裝，然後檢視封裝上的數個屬性。  
   

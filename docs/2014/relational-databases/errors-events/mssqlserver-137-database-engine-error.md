@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0142cd53006609e9274972e4f5964132f5982c2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915685"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967968"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
     
@@ -33,13 +32,13 @@ ms.locfileid: "62915685"
 |訊息文字|必須宣告純量變數 "%.*ls"。|  
   
 ## <a name="explanation"></a>說明  
- 當您在 SQL 指令碼中使用某個變數，但卻沒有先宣告該變數時，就會發生這個錯誤。 下列範例會針對 SET 和 SELECT 語句傳回錯誤137，因為**@mycol**未宣告。  
+ 當您在 SQL 指令碼中使用某個變數，但卻沒有先宣告該變數時，就會發生這個錯誤。 下列範例會針對 SET 和 SELECT 語句傳回錯誤137，因為 **@mycol** 未宣告。  
   
  SET @mycol = 'ContactName';  
   
  SELECT @mycol;  
   
- 導致這個錯誤的其中一個更複雜原因包括使用了在 EXECUTE 陳述式外部宣告的變數。 例如，select 語句中**@mycol**指定的變數是 select 語句的區域變數;因此，它位於 EXECUTE 語句外部。  
+ 導致這個錯誤的其中一個更複雜原因包括使用了在 EXECUTE 陳述式外部宣告的變數。 例如，select **@mycol** 語句中指定的變數是 select 語句的區域變數，因此它位於 EXECUTE 語句之外。  
   
  USE AdventureWorks2012;  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5583137d4c159756246938a83bf8c8e1fad6cdea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156829"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050339"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>從資料存取應用程式呼叫原生編譯預存程序
   本主題討論從資料存取應用程式呼叫原生編譯之預存程序的相關指引。  
@@ -36,7 +35,7 @@ ms.locfileid: "63156829"
   
  下列建議適用於使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式時的原生編譯預存程序呼叫。  
   
- 呼叫一次預存程序的最有效率的方式是使用 `SQLExecDirect` 和 ODBC CALL 子句來發出直接 RPC 呼叫。 請勿使用[!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE`語句。 如果預存程序多次呼叫，備妥的執行更有效率。  
+ 呼叫一次預存程序的最有效率的方式是使用 `SQLExecDirect` 和 ODBC CALL 子句來發出直接 RPC 呼叫。 請勿使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` 語句。 如果預存程序多次呼叫，備妥的執行更有效率。  
   
  多次呼叫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序最有效率的方式是透過備妥的 RPC 程序呼叫。 備妥的 RPC 呼叫是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式，執行如下：  
   

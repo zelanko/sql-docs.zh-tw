@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3fc1a9beb0468f50291854d8eb5cd0e3bf9ba8d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50d18745a064ed8d9550017ce1fcfef8c2c0805d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768804"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969138"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (括號) (SSIS 運算式)
   識別運算式的評估順序。 加上括號的運算式擁有最高的評估優先順序。 加上括號的巢狀運算式會以由內向外的順序評估。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52fc203075b06485c89fe4d2d3149472c57719f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780691"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933403"
 ---
 # <a name="program-exception-message-box"></a>程式例外狀況訊息方塊
   您可以在應用程式中使用例外狀況訊息方塊，此訊息方塊對訊息經驗所提供的控制要比 <xref:System.Windows.Forms.MessageBox> 類別所提供的高出許多。 如需詳細資訊，請參閱[例外狀況訊息方塊程式設計](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)。 如需有關如何取得及部署例外狀況訊息方塊 .dll 的詳細資訊，請參閱＜ [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)＞。  
@@ -29,11 +28,11 @@ ms.locfileid: "62780691"
   
 1.  在 Managed 程式碼專案中加入 Microsoft.ExceptionMessageBox.dll 組件的參考。  
   
-2.  選擇性新增`using` （c #）或`Imports` （[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net）指示詞，以<xref:Microsoft.SqlServer.MessageBox>使用命名空間。  
+2.  選擇性新增 `using` （c #）或 `Imports` （ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net）指示詞，以使用 <xref:Microsoft.SqlServer.MessageBox> 命名空間。  
   
 3.  建立 try-catch 區塊來處理預期的例外狀況。  
   
-4.  在 `catch` 區塊內建立 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 類別的執行個體。 傳遞由`try` - <xref:System.Exception> `catch`區塊處理的物件。  
+4.  在 `catch` 區塊內建立 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 類別的執行個體。 傳遞 <xref:System.Exception> 由區塊處理的物件 `try` - `catch` 。  
   
 5.  (選擇性) 在 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 上設定下列其中一個或多個屬性：  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62780691"
   
 1.  在 Managed 程式碼專案中加入 Microsoft.ExceptionMessageBox.dll 組件的參考。  
   
-2.  選擇性新增`using` （c #）或`Imports` （Visual Basic .net）指示詞，以<xref:Microsoft.SqlServer.MessageBox>使用命名空間。  
+2.  選擇性新增 `using` （c #）或 `Imports` （Visual Basic .net）指示詞，以使用 <xref:Microsoft.SqlServer.MessageBox> 命名空間。  
   
 3.  建立 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 類別的執行個體。 將訊息文字當做 <xref:System.String> 值傳遞。  
   
@@ -77,11 +76,11 @@ ms.locfileid: "62780691"
   
 1.  在 Managed 程式碼專案中加入 Microsoft.ExceptionMessageBox.dll 組件的參考。  
   
-2.  選擇性新增`using` （c #）或`Imports` （Visual Basic .net）指示詞，以<xref:Microsoft.SqlServer.MessageBox>使用命名空間。  
+2.  選擇性新增 `using` （c #）或 `Imports` （Visual Basic .net）指示詞，以使用 <xref:Microsoft.SqlServer.MessageBox> 命名空間。  
   
 3.  以下列兩種方式中的一種來建立 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 類別的執行個體：  
   
-    -   傳遞由`try` - <xref:System.Exception> `catch`區塊處理的物件。  
+    -   傳遞 <xref:System.Exception> 由區塊處理的物件 `try` - `catch` 。  
   
     -   將訊息文字當做 <xref:System.String> 值傳遞。  
   
@@ -111,11 +110,11 @@ ms.locfileid: "62780691"
   
 1.  在 Managed 程式碼專案中加入 Microsoft.ExceptionMessageBox.dll 組件的參考。  
   
-2.  選擇性新增`using` （c #）或`Imports` （Visual Basic .net）指示詞，以<xref:Microsoft.SqlServer.MessageBox>使用命名空間。  
+2.  選擇性新增 `using` （c #）或 `Imports` （Visual Basic .net）指示詞，以使用 <xref:Microsoft.SqlServer.MessageBox> 命名空間。  
   
 3.  以下列兩種方式中的一種來建立 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 類別的執行個體：  
   
-    -   傳遞由`try` - <xref:System.Exception> `catch`區塊處理的物件。  
+    -   傳遞 <xref:System.Exception> 由區塊處理的物件 `try` - `catch` 。  
   
     -   將訊息文字當做 <xref:System.String> 值傳遞。  
   

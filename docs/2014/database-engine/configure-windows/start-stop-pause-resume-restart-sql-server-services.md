@@ -39,16 +39,15 @@ helpviewer_keywords:
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 11d146144a05c9185a360b2791f9e162a94ff59a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4b102c8fd81923d7386c8e556896e715311a07e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797950"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934769"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務
-  本[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]主題描述如何從命令提示字元、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]或 PowerShell 使用 Configuration Manager、、 **net**命令，啟動、停止、暫停、繼續或重新開機、代理程式或 Browser 服務。  
+  本主題描述如何 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 從命令提示字元、或 PowerShell 使用 Configuration Manager、、 **net**命令 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，啟動、停止、暫停、繼續或重新開機、代理程式或 Browser 服務。  
   
 -   **開始之前：**  
   
@@ -62,7 +61,7 @@ ms.locfileid: "72797950"
   
     -   [SQL Server 組態管理員](#SSCMProcedure)  
   
-    -   [Transact-SQL](#SSMSProcedure)  
+    -   [SQL Server Management Studio](#SSMSProcedure)  
   
     -   [命令提示字元視窗中的 net 命令](#CommandPrompt)  
   
@@ -79,7 +78,7 @@ ms.locfileid: "72797950"
  當做 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的可執行處理序。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以是預設執行個體 (每部電腦只限一個執行個體)，或者可以是許多具名 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的其中一個。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來判斷哪些 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體會安裝在電腦上。 預設實例（如果安裝的話）會列為** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （MSSQLSERVER）**。 已命名的實例（如果安裝的話）會列為** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （<instance_name>）**。 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝為** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （SQLEXPRESS）**。  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式服務**  
- 一種 Windows 服務，它會執行排程的管理工作 (稱為作業和警示)。 如需詳細資訊，請參閱 [SQL Server Agent](../../ssms/agent/sql-server-agent.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 一種 Windows 服務，它會執行排程的管理工作 (稱為作業和警示)。 如需詳細資訊，請參閱 [SQL Server Agent](../../ssms/agent/sql-server-agent.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需版本支援的功能清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 服務**  
  一種 Windows 服務，它會接聽 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的內送要求，並為用戶端提供有關電腦上所安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊。 單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務執行個體會用於電腦上所安裝的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
@@ -117,13 +116,13 @@ ms.locfileid: "72797950"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  根據預設，只有本機 Administrators 群組的成員能夠啟動、停止、暫停、繼續或重新啟動服務。 若要將管理服務的能力授與非系統管理員，請參閱 [How to grant users rights to manage services in Windows Server 2003](https://support.microsoft.com/kb/325349)(如何在 Windows Server 2003 中，將管理服務的權限授與使用者)。 (其他 Windows 版本的程序都很相似)。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]使用`SHUTDOWN`命令停止，需要**sysadmin**或**serveradmin**固定伺服器角色中的成員資格，而且無法轉移。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]使用命令停止， [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` 需要**sysadmin**或**serveradmin**固定伺服器角色中的成員資格，而且無法轉移。  
   
 ##  <a name="using-ssnoversion-configuration-manager"></a><a name="SSCMProcedure"></a> 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員  
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-ssdenoversion"></a>若要啟動、停止、暫停、繼續或重新啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
-1.  指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
+1.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
 2.  如果出現 **[使用者帳戶控制]** 對話方塊，請按一下 **[是]** 。  
   
@@ -138,13 +137,13 @@ ms.locfileid: "72797950"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-ssnoversion-browser-or-an-instance-of-the-ssnoversion-agent"></a>若要啟動、停止、暫停、繼續或重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 或是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的執行個體  
   
-1.  指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
+1.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
 2.  如果出現 **[使用者帳戶控制]** 對話方塊，請按一下 **[是]** 。  
   
 3.  在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員] 中，按一下左窗格中的 **[SQL Server 服務]**。  
   
-4.  在 [結果] 窗格中，以滑鼠右鍵按一下** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [瀏覽器**] 或** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [agent （MSSQLServer）** ] 或** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [代理程式（<instance_name>）** ]，然後按一下 [**啟動**]、[**停止**]、[**暫停**]、[**繼續**] 或 [**重新開機**]  
+4.  在 [結果] 窗格中，以滑鼠右鍵按一下 [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器**] 或 [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent （MSSQLServer）** ] 或 [代理程式（ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <Instance_name>）** ]，然後按一下 [**啟動**]、[**停止**]、[**暫停**]、[**繼續**] 或 [**重新開機**]  
   
 5.  按一下 **[確定]** ，即可關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
@@ -165,7 +164,7 @@ ms.locfileid: "72797950"
   
 #### <a name="to-start-stop-or-restart-the-an-instance-of-the-ssnoversion-agent"></a>若要啟動、停止或重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的執行個體  
   
-1.  在[!INCLUDE[ssDE](../../includes/ssde-md.md)]物件總管中，連接到的實例，以滑鼠右鍵按一下** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [代理程式**]，然後按一下 [**啟動**]、[**停止**] 或 [**重新開機**]。  
+1.  在物件總管中，連接到的實例 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，以滑鼠右鍵按一下 [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式**]，然後按一下 [**啟動**]、[**停止**] 或 [**重新開機**]。  
   
 2.  如果出現 **[使用者帳戶控制]** 對話方塊，請按一下 **[是]** 。  
   
@@ -186,7 +185,7 @@ ms.locfileid: "72797950"
   
 ###  <a name="to-start-a-named-instance-of-the-ssde"></a><a name="dbNamed"></a> 若要啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   從命令提示字元，輸入下列其中一個命令。 以您要管理之執行個體的名稱取代 \<執行個體名稱>  。  
+-   從命令提示字元，輸入下列其中一個命令。 取代 *\<instancename>* 為您要管理之實例的名稱。  
   
      **net start "SQL Server (** *instancename* **)"**  
   
@@ -264,7 +263,7 @@ ms.locfileid: "72797950"
     SHUTDOWN WITH NOWAIT;   
     ```  
   
- 如需`SHUTDOWN`語句的詳細資訊，請參閱[SHUTDOWN &#40;transact-sql&#41;](/sql/t-sql/language-elements/shutdown-transact-sql)。  
+ 如需語句的詳細資訊 `SHUTDOWN` ，請參閱[SHUTDOWN &#40;transact-sql&#41;](/sql/t-sql/language-elements/shutdown-transact-sql)。  
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
   
