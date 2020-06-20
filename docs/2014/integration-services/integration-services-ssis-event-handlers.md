@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 41a6ae9c6462beecaa244694bd8679df88aefc47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2aab5732a667dfe9e26a89048991900148077df3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176129"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965398"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件處理常式
   在執行階段，可執行檔 (封裝和「Foreach 迴圈」、「For 迴圈」、「時序」，以及工作主機容器) 會引發事件。 例如，當發生錯誤時，會引發 OnError 事件。 您可以建立這些事件的自訂事件處理常式，以擴充封裝功能，並使封裝在執行階段易於管理。 事件處理常式可以執行下列工作：
@@ -49,7 +48,7 @@ ms.locfileid: "78176129"
 
  ![事件處理常式流程](media/mw-dts-eventhandlers.gif "事件處理常式流程")
 
- 事件處理常式是事件處理常式集合的成員，所有容器都包含此集合。 如果使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則您可以在  **設計師之 [封裝總管]** **索引標籤上的 [事件處理常式]** [!INCLUDE[ssIS](../includes/ssis-md.md)] 資料夾中，查看事件處理常式集合的成員。
+ 事件處理常式是事件處理常式集合的成員，所有容器都包含此集合。 如果使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師之 [封裝總管] 索引標籤上的 [事件處理常式] 資料夾中，查看事件處理常式集合的成員。
 
  您可以利用下列方式設定事件處理常式容器：
 
@@ -83,7 +82,7 @@ ms.locfileid: "78176129"
 |**OnProgress**|**OnProgress** 事件的事件處理常式。 可執行檔的進度可測量時，它會引發此事件。|
 |**OnQueryCancel**|**OnQueryCancel** 事件的事件處理常式。 可執行檔會引發此事件，以判斷其是否應停止執行。|
 |**OnTaskFailed**|**OnTaskFailed** 事件的事件處理常式。 工作失敗時，它引發此事件。|
-|**OnVariableValueChanged**|**OnVariableValueChanged** 事件的事件處理常式。 當變數變更時，可執行檔會引發此事件。 定義變數所在的可執行檔會引發此事件。 如果您將變數的**RaiseChangeEvent**屬性設定為`False`，則不會引發這個事件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)。|
+|**OnVariableValueChanged**|**OnVariableValueChanged** 事件的事件處理常式。 當變數變更時，可執行檔會引發此事件。 定義變數所在的可執行檔會引發此事件。 如果您將變數的**RaiseChangeEvent**屬性設定為，則不會引發這個事件 `False` 。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)。|
 |**OnWarning**|**OnWarning** 事件的事件處理常式。 當發生警告時，可執行檔會引發此事件。|
 
 ## <a name="configuration-of-an-event-handler"></a>設定事件處理常式

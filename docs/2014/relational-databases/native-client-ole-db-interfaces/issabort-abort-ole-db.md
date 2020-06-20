@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e36bb4cff26213467f30dd58b4d172be7d8a38d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a2055514d3ce5e2fdc9d6220a79f489fc64e9c55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056153"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
   取消目前的資料列集加上與目前命令相關聯之任何批次處理的命令。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d91ae9fc1bbb404e63abaa2b5037164460d01a25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688907"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063805"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>備份與還原合併式複寫的策略
   對於合併式複寫，請定期備份下列資料庫：  
@@ -56,7 +55,7 @@ ms.locfileid: "62688907"
 > [!IMPORTANT]  
 >  同步處理發行集資料庫與訂閱資料庫，可能會導致發行的資料表還原到的時間點比從備份處還原的其他未發行的資料表的時間點要新。  
   
- 如果您與執行之前[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本的訂閱者同步處理，則訂閱不可以是匿名的;它必須是用戶端訂閱或伺服器訂閱（在先前的版本中稱為本機訂閱和全域訂閱）。  
+ 如果您與執行之前版本的訂閱者同步處理 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ，則訂閱不可以是匿名的，而必須是用戶端訂閱或伺服器訂閱（在先前版本中稱為本機訂閱和全域訂閱）。  
   
  若要同步處理訂閱，請參閱＜ [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) ＞和＜ [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md)＞。  
   

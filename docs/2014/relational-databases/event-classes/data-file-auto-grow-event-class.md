@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d08322000a92c3870f410652b728de0fc844104
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a144918bc1d146857fb25bf44892239157270ed4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663180"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029934"
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow 事件類別
   **Data File Auto Grow** 事件類別指出資料檔自動成長。 如果使用 ALTER DATABASE 陳述式讓資料檔明確成長，則不會觸發這個事件。  

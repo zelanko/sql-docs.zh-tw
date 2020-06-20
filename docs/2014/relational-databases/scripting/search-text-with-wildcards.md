@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 565fb54d1ec91920b83a11989f0dd3416bec9491
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cc4e24c3dce73e46350b0c106429c42ab5f0edb2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718652"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049025"
 ---
 # <a name="search-text-with-wildcards"></a>使用萬用字元搜尋文字
   下列運算式可以取代  **[尋找和取代]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊中 [尋找目標]  欄位的字元或數字。  

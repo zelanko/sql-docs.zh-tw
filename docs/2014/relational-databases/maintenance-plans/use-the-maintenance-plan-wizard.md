@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac134bbd4c65da4700990b69b09134230e98903f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289166"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023833"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用維護計畫精靈
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的維護計畫精靈，建立單一伺服器或多伺服器維護計畫。 [維護計畫精靈] 會建立可讓 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 定期執行的維護計畫。 這樣可讓您依指定間隔執行各種資料庫管理工作，包括備份、資料庫完整性檢查，或資料庫統計資料更新。  
@@ -104,7 +103,7 @@ ms.locfileid: "79289166"
   
             -   **重複執行**： 這是預設選項。  
   
-            -   **一次性**  
+            -   **一次**  
   
         3.  選取或清除 **[已停用]** 核取方塊，以啟用或停用排程。  
   
@@ -136,9 +135,9 @@ ms.locfileid: "79289166"
   
         6.  在 **[摘要]** 底下的 **[描述]**，確認所有作業排程設定是否都正確。  
   
-        7.  按一下 [確定]  。  
+        7.  按一下 [確定]。  
   
-    6.  按 [下一步]  。  
+    6.  按 [下一步] 。  
   
 6.  在 **[選取目標伺服器]** 頁面上，選取要執行維護計畫所在的伺服器。 只有設定為主要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體才會顯示這個頁面。  
   
@@ -294,7 +293,7 @@ ms.locfileid: "79289166"
   
 #### <a name="define-the-history-cleanup-task"></a>定義記錄清除工作  
   
-1.  在 **[定義記錄清除工作]** 頁面上，定義要捨棄其中舊工作記錄的資料庫。 此工作會使用 `EXEC sp_purge_jobhistory`、 `EXEC sp_maintplan_delete_log`和 `EXEC sp_delete_backuphistory` 陳述式移除 **msdb** 資料表中的記錄資訊。 完成後，按一下 [下一步]****。  
+1.  在 **[定義記錄清除工作]** 頁面上，定義要捨棄其中舊工作記錄的資料庫。 此工作會使用 `EXEC sp_purge_jobhistory`、 `EXEC sp_maintplan_delete_log`和 `EXEC sp_delete_backuphistory` 陳述式移除 **msdb** 資料表中的記錄資訊。 完成後，請按一下 [下一步]  。  
   
      此頁面提供下列選項。  
   
@@ -319,7 +318,7 @@ ms.locfileid: "79289166"
   
 #### <a name="define-backup-tasks"></a>定義備份工作  
   
-1.  在 [Define Backup Database (Full) Task] (定義備份資料庫 (完整) 工作)**** 頁面上，選取要執行完整備份的資料庫。 此工作會使用 `BACKUP DATABASE` 陳述式。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。 完成後，按一下 [下一步]****。  
+1.  在 [Define Backup Database (Full) Task] (定義備份資料庫 (完整) 工作)**** 頁面上，選取要執行完整備份的資料庫。 此工作會使用 `BACKUP DATABASE` 陳述式。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。 完成後，請按一下 [下一步]  。  
   
      此頁面提供下列選項。  
   
@@ -373,7 +372,7 @@ ms.locfileid: "79289166"
      指定 Azure 儲存體容器的名稱  
   
      **URL 前置詞：**  
-     這會根據儲存在 SQL 認證中的儲存體帳戶資訊，以及您指定的 Azure 儲存體容器名稱自動產生。 我們建議您不要編輯此欄位中的資訊，除非您使用的是使用** \<儲存體帳戶**以外之格式的網域> blob.core.windows.net。  
+     這會根據儲存在 SQL 認證中的儲存體帳戶資訊，以及您指定的 Azure 儲存體容器名稱自動產生。 除非您使用的是使用** \<storage account> blob.core.windows.net**以外格式的網域，否則建議您不要編輯此欄位中的資訊。  
   
      [備份副檔名]**** 方塊  
      指定備份檔案所用的副檔名。 預設值是 .bak。  
@@ -382,7 +381,7 @@ ms.locfileid: "79289166"
      確認備份組是完整的，且所有磁碟區都可以讀取。  
   
      **備份加密**  
-     若要建立加密的備份，請核取 [加密備份]**** 核取方塊。 選取要加密步驟所要使用的加密演算法，並提供現有憑證或非對稱金鑰清單中的憑證或非對稱金鑰。 可用於加密的演算法包括：  
+     若要建立加密的備份，請核取 [加密備份]  核取方塊。 選取要加密步驟所要使用的加密演算法，並提供現有憑證或非對稱金鑰清單中的憑證或非對稱金鑰。 可用於加密的演算法包括：  
   
     -   AES 128  
   
@@ -403,17 +402,17 @@ ms.locfileid: "79289166"
   
     |||  
     |-|-|  
-    |**使用預設伺服器設定**|按一下即可使用伺服器層級的預設值。 此預設值是由 [備份壓縮預設]**** 伺服器組態選項所設定。 如需如何查看此選項目前設定的詳細資訊，請參閱[view Or Configure the backup compression Default Server Configuration option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。|  
-    |**壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可壓縮備份。<br /><br /> ** \* \*重要\*事項**根據預設，壓縮會大幅增加 CPU 使用量，而且壓縮程式所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，您可能會想要在資源管理員限制 CPU 使用量的工作階段中建立低優先權的壓縮備份。 如需詳細資訊，請參閱本主題稍後介紹的＜ [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制的工作階段中，建立低優先權的壓縮備份。|  
+    |**使用預設伺服器設定**|按一下即可使用伺服器層級的預設值。 此預設值是由 [備份壓縮預設]  伺服器組態選項所設定。 有關如何檢視這個選項目前之設定的詳細資訊，請參閱 [檢視或設定備份壓縮預設伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。|  
+    |**壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可壓縮備份。<br /><br /> 重要根據預設，壓縮會大幅增加 CPU 使用量，而且壓縮程式所耗用的額外 CPU 可能會對並行作業造成不良的影響。 ** \* \* \* \* ** 因此，您可能會想要在資源管理員限制 CPU 使用量的工作階段中建立低優先權的壓縮備份。 如需詳細資訊，請參閱本主題稍後介紹的＜ [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制的工作階段中，建立低優先權的壓縮備份。|  
     |**不要壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可建立未壓縮備份。|  
   
-2.  在 [Define Backup Database (Differential) Task (定義備份資料庫 (差異式) 工作)]**** 頁面上，選取要執行部分備份的資料庫。 如需有關此頁面上可用選項的詳細資訊，請參閱上述步驟 16 中的定義清單。 此工作會使用 `BACKUP DATABASE ... WITH DIFFERENTIAL` 陳述式。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。  完成後，按一下 [下一步]****。  
+2.  在 [Define Backup Database (Differential) Task (定義備份資料庫 (差異式) 工作)]**** 頁面上，選取要執行部分備份的資料庫。 如需有關此頁面上可用選項的詳細資訊，請參閱上述步驟 16 中的定義清單。 此工作會使用 `BACKUP DATABASE ... WITH DIFFERENTIAL` 陳述式。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。  完成後，請按一下 [下一步]  。  
   
-3.  在 [Define Backup Database (Transaction Log) Task (定義備份資料庫 (交易記錄) 工作)]**** 頁面上，選取要執行交易記錄備份的資料庫。 如需有關此頁面上可用選項的詳細資訊，請參閱上述步驟 16 中的定義清單。 此工作會使用 `BACKUP LOG` 陳述式。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。 完成後，按一下 [下一步]****。  
+3.  在 [Define Backup Database (Transaction Log) Task (定義備份資料庫 (交易記錄) 工作)]**** 頁面上，選取要執行交易記錄備份的資料庫。 如需有關此頁面上可用選項的詳細資訊，請參閱上述步驟 16 中的定義清單。 此工作會使用 `BACKUP LOG` 陳述式。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。 完成後，請按一下 [下一步]  。  
   
 #### <a name="define-maintenance-cleanup-tasks"></a>定義維護清除工作  
   
-1.  在 **[定義維護清除工作]** 頁面上，指定維護計畫中要刪除的檔案類型，包括維護計畫和資料庫備份檔案所建立的文字報表。 此工作會使用 `EXEC xp_delete_file` 陳述式。 完成後，按一下 [下一步]****。  
+1.  在 **[定義維護清除工作]** 頁面上，指定維護計畫中要刪除的檔案類型，包括維護計畫和資料庫備份檔案所建立的文字報表。 此工作會使用 `EXEC xp_delete_file` 陳述式。 完成後，請按一下 [下一步]  。  
   
     > [!IMPORTANT]  
     >  此工作不會自動刪除所指定目錄的子資料夾中的檔案。 這項預防措施可降低利用「維護清除」工作刪除檔案這類惡意攻擊的可能性。 如果您要刪除第一層子資料夾中的檔案，必須選取 [包含第一層的子資料夾]****。  
@@ -489,7 +488,7 @@ ms.locfileid: "79289166"
      指定每個動作的類型和名稱。  
   
      **狀態**  
-     指出整個精靈動作傳回 [成功]**** 或 [失敗]**** 的值。  
+     指出整個精靈動作傳回 [成功]  或 [失敗]  的值。  
   
      **訊息**  
      提供從程序所傳回的任何錯誤或警告訊息。  
@@ -503,10 +502,10 @@ ms.locfileid: "79289166"
      **將報表儲存到檔案**  
      開啟 [另存報表]**** 對話方塊。  
   
-     **[複製報表到剪貼簿]**  
+     **複製報表到剪貼簿**  
      將精靈進度報表的結果複製到剪貼簿。  
   
-     **以電子郵件傳送報表**  
+     **[以電子郵件傳送報表]**  
      將精靈進度報表的結果複製到電子郵件。  
   
   

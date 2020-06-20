@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f6677fad3df1d1f99e2f78257ea85551f8ae8db3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 433158341f4b07eaa26c7588472e4e7e1c1f0e7b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057334"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965088"
 ---
 # <a name="odata-source-editor-columns-page"></a>OData 來源編輯器 (資料行頁面)
   使用 [OData 來源編輯器]**** 對話方塊的 [資料行]**** 頁面，選取要包含在輸出中的外部 (來源) 資料行，並將其對應到輸出資料行。  

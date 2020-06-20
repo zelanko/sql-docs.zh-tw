@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93ecd0b99ad355e38194afc338201790fba97684
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965578"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>執行 SQL Server 匯入和匯出精靈
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈提供最簡單的方法，讓您在資料來源之間複製資料以及建構基本封裝。 如需有關 wizard 的詳細資訊，請參閱[SQL Server 匯入和匯出 wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。  
@@ -33,15 +32,15 @@ ms.locfileid: "62768025"
   
      -或-  
   
-     在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，以滑鼠右鍵按一下 [ **SSIS 封裝**] 資料夾，然後按一下 [ **SSISImport 和匯出嚮導]**。  
+     在中 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，以滑鼠右鍵按一下 [ **SSIS 封裝**] 資料夾，然後按一下 [ **SSISImport 和匯出嚮導]**。  
   
      -或-  
   
-     在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [**專案**] 功能表上，按一下 [ **SSISImport 和匯出嚮導]**。  
+     在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [**專案**] 功能表上，按一下 [ **SSISImport 和匯出嚮導]**。  
   
      -或-  
   
-     在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]伺服器類型，展開 [資料庫]，以滑鼠右鍵按一下資料庫，指向 [工作 **]，然後**按一下 [匯**入資料**] 或 [**匯出資料**]。  
+     在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 伺服器類型，展開 [資料庫]，以滑鼠右鍵按一下資料庫， **Tasks**指向 [工作]，然後按一下 [匯**入資料**] 或 [**匯出資料**]。  
   
      -或-  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62768025"
   
 6.  儲存並執行封裝。  
   
-     如果從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或命令提示字元啟動精靈，此封裝便可立即執行。 您可以選擇性地將封裝儲存到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb**資料庫或檔案系統。 如需**msdb**資料庫的詳細資訊，請參閱[套件管理 &#40;SSIS 服務&#41;](../service/package-management-ssis-service.md)。  
+     如果從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或命令提示字元啟動精靈，此封裝便可立即執行。 您可以選擇性地將封裝儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb**資料庫或檔案系統。 如需**msdb**資料庫的詳細資訊，請參閱[套件管理 &#40;SSIS 服務&#41;](../service/package-management-ssis-service.md)。  
   
      當您儲存封裝時，可以設定封裝保護等級，而如果保護等級使用密碼，請提供密碼。 如需封裝保護層級的詳細資訊，請參閱[封裝中的敏感性資料存取控制](../security/access-control-for-sensitive-data-in-packages.md)。  
   

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 20f624c2-0036-4f44-a2a8-a041af0a0966
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 714dcdef73a48d80166b1888bc67e13e66303a44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5e8717db0cad9ee6465b0b92ab44e308536b062
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093944"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045079"
 ---
 # <a name="licensing-considerations-for-sql-server"></a>SQL Server 的授權考量
-  如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]授權選項的詳細資訊，請參閱[此 Microsoft SQL Server Web 網站](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)。  
+  如需有關授權選項的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[此 Microsoft SQL Server Web 網站](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
  [關於 SQL Server 授權條款](../../../2014/getting-started/about-the-sql-server-license-terms.md)   

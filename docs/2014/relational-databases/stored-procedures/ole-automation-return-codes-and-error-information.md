@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aecdbaedca42b7456dbdbda0407760959e546f97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011264"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062791"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE Automation 傳回碼與錯誤資訊
-  OLE Automation 系統預存程序將傳回 `int` 傳回碼，這是底下的 OLE Automation 操作所傳回的 HRESULT。 若 HRESULT 為 0 代表成功。 非零的 HRESULT 是十六進位格式 0x800*nnnnn*的 OLE 錯誤碼，但當當做預存程式傳回`int`碼中的值傳回時，HRESULT 的格式為 214*nnnnnnn*。  
+  OLE Automation 系統預存程序將傳回 `int` 傳回碼，這是底下的 OLE Automation 操作所傳回的 HRESULT。 若 HRESULT 為 0 代表成功。 非零的 HRESULT 是十六進位格式 0x800*nnnnn*的 OLE 錯誤碼，但當當做預存程式傳回 `int` 碼中的值傳回時，HRESULT 的格式為 214*nnnnnnn*。  
   
- 例如，傳遞不正確物件名稱（SQLDMO.H。Sqldmo.xyzzy 傳） sp_OACreate 會使程式`int`傳回2147221005的 HRESULT，其以十六進位0x800401f3。  
+ 例如，傳遞不正確物件名稱（SQLDMO.H。Sqldmo.xyzzy 傳） sp_OACreate 會使程式傳回 `int` 2147221005 的 HRESULT，其以十六進位0x800401f3。  
   
- 您可以使用 `CONVERT(binary(4), @hresult)` 將 `int` HRESULT 轉換為 `binary` 值。 但是，使用 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 會產生無法讀取的字串，因為 HRESULT 的每個位元組將轉換成一個 ASCII 字元。 您可以使用下列範例 HexToChar 預存程式，將`int` HRESULT 轉換成包含`char`可讀取之十六進位字串的值。  
+ 您可以使用 `CONVERT(binary(4), @hresult)` 將 `int` HRESULT 轉換為 `binary` 值。 但是，使用 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 會產生無法讀取的字串，因為 HRESULT 的每個位元組將轉換成一個 ASCII 字元。 您可以使用下列範例 HexToChar 預存程式，將 HRESULT 轉換成 `int` `char` 包含可讀取之十六進位字串的值。  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,7 +75,7 @@ SELECT @BinVariable AS BinaryValue,
 GO  
 ```  
   
- 您可以使用下列的預存程序範例 ( **sp_displayoaerrorinfo** )，在某個 OLE Automation 程序傳回非零的 HRESULT 傳回碼時顯示 OLE Automation 錯誤訊息。 這個範例預存程式`HexToChar`會使用。  
+ 您可以使用下列的預存程序範例 ( **sp_displayoaerrorinfo** )，在某個 OLE Automation 程序傳回非零的 HRESULT 傳回碼時顯示 OLE Automation 錯誤訊息。 這個範例預存程式會使用 `HexToChar` 。  
   
 ```  
 CREATE PROCEDURE dbo.sp_DisplayOAErrorInfo  

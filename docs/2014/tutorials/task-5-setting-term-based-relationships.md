@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6569d512-637d-4f7b-82e1-1e8582278b37
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0e9a6a1a96d208077e70c0cf1835cff6e34650dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f10c82ef5e0b63e0b81b630ed0340545c876661
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489115"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064737"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>工作 5：設定以詞彙為主的關聯
   在這項工作中，您會針對**供應商名稱**網域的值定義幾個以詞彙為主的關聯。 以詞彙為主的關聯可讓您針對屬於定義域值的詞彙進行更正。 它會啟用多個值，這些值除了被視為相同同義字的共同部分拼字以外，都是相同的。 例如， **inc.** 可以更正為已**納入**。 DQS 會在知識探索、清理或比對程序中使用這些關聯。 如需詳細資訊，請參閱[建立以詞彙為基礎](https://msdn.microsoft.com/library/hh510404.aspx)的關聯。  

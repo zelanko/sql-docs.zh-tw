@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 183bf1031740a8e8af283048013f1f548a29072e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afa2f8009a3cb6cb0b60a671e94fc80892f640aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484731"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064850"
 ---
 # <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>工作 1：使用主資料管理員建立供應商模型
   在這項工作中，您會使用**主資料管理員**在 MDS 中建立名為「**供應商**」的模型。  
   
-1.  流覽至`http://localhost/MDS`以啟動**主資料管理員**。 如果您已經使用不同的名稱或在不同網站上設定 Web 應用程式，請替換此 URL。  
+1.  流覽至 `http://localhost/MDS` 以啟動**主資料管理員**。 如果您已經使用不同的名稱或在不同網站上設定 Web 應用程式，請替換此 URL。  
   
      ![主資料管理員 - 系統管理](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-01.jpg "主資料管理員 - 系統管理")  
   

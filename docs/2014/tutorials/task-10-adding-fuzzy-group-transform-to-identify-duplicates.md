@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 90b2b323-babd-464a-8914-9dc5e66aca74
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 48e233c6f2c7a55bf2420825b9fb3064db6e89e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e7091c4dbb8244476357afba18e973535def8baa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481255"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064804"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>工作 10：新增模糊群組轉換來識別重複項
   在這項工作中，您會將模糊群組轉換加入至資料流程。 模糊群組轉換有助於識別來源資料中的重複項。 如需詳細資訊，請參閱[模糊群組轉換](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)。  

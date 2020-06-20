@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 283fd67d14d57c3d1d5d60dd9d8de2a159ca6d5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d98a80be52ae77cbdaf1581a5b3397f9d11af4fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721369"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010833"
 ---
 # <a name="distribution-database"></a>散發資料庫
   散發資料庫會儲存所有複寫類型的中繼資料和記錄資料，以及異動複寫的交易。  

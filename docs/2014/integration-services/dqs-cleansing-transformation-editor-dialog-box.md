@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eaff1c5ac8ae5a804f546fc5e551dcb62e2fda7a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059423"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966904"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>DQS 清理轉換編輯器對話方塊
   使用 [DQS 清理轉換編輯器]**** 對話方塊，即可更正使用 Data Quality Services (DQS) 的資料。 如需詳細資訊，請參閱 [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md)。  
@@ -54,7 +53,7 @@ ms.locfileid: "66059423"
  針對連接的資料來源選取現有的 DQS 知識庫。 如需有關 DQS 知識庫的詳細資訊，請參閱＜ [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)＞。  
   
  **加密連接**  
- 指定是否要加密連接，以便加密 DQS 伺服器與[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]之間的資料傳輸。  
+ 指定是否要加密連接，以便加密 DQS 伺服器與之間的資料傳輸 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。  
   
  **可用的定義域**  
  針對選取的知識庫列出可用的定義域。 定義域有二種類型：單一定義域以及包含兩個或多個單一定義域的複合定義域。  
@@ -81,7 +80,7 @@ ms.locfileid: "66059423"
  **輸入資料行**  
  列出您在 [可用的輸入資料行]**** 區域中選取的輸入資料行。  
   
- **Domain**  
+ **網域**  
  選取要對應至輸入資料行的定義域。  
   
  **來源別名**  
@@ -126,7 +125,7 @@ ms.locfileid: "66059423"
   
 2.  以滑鼠右鍵按一下連接區域、按一下 [新增連接]****，然後按一下 [DQS]****。  
   
-3.  按一下 **[新增]** 。  
+3.  按一下 [新增] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [將資料品質規則套用至資料來源](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  

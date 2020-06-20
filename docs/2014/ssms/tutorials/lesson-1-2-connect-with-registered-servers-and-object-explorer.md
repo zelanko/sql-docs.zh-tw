@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3854950962caf61de0edc7c5a910675fdd7ef37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62636422"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061929"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>連接已註冊的伺服器和物件總管
   本教學課程示範已註冊的伺服器和物件總管的用法。  
@@ -37,7 +36,7 @@ ms.locfileid: "62636422"
   
 5.  在 [已註冊的伺服器名稱]**** 方塊中，輸入 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]。  
   
-6.  在 [**連接屬性**] 索引標籤的 [**連接到資料庫**] 清單中，選取** \<[流覽伺服器 ...] >**。  
+6.  在 [**連接屬性**] 索引標籤的 [**連接到資料庫**] 清單中，選取 [] **\<Browse server...>** 。  
   
 7.  在 [瀏覽資料庫]**** 對話方塊中，按一下 [是]****。  
   

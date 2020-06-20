@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e9f8e5d5f196452a8cd0f56e26aac40895bcd9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 155d3d70144c28a050c6d309c1dd3a484d6b3201
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68188538"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048715"
 ---
 # <a name="options-environment-help-general-page"></a>選項（環境-說明-一般頁面）
   使用 [選項]  對話方塊來選擇文件集，並決定是否要在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或在不同的視窗中顯示主題。 若要存取此對話方塊，請按一下 [工具]  功能表上的 [選項]  ，展開 [環境]  節點中的 [說明]  ，然後按一下 [一般]  。  

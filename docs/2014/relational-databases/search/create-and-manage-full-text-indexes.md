@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 603b5e6b929259dc8b1408c0c2a1afab383446e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011550"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055514"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
   全文檢索引擎會使用全文檢索索引中的資訊來編譯全文檢索查詢，以便快速地在資料表中搜尋特定字詞或字詞組合。 全文檢索索引會儲存重要單字及這些單字在資料庫資料表之一或多個資料行內位置的相關資訊。 全文檢索索引是一種特殊類型的 Token 式功能索引，由 Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所建立與維護。 建立全文檢索索引的程序與建立其他索引類型的程序大不相同。 全文檢索引擎會根據個別 Token 從索引中的文字建立反向、堆疊以及壓縮的索引結構，而不是根據特定資料列中所儲存的值來建構 B 型樹狀結構。  全文檢索索引的大小只受限於執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的可用記憶體資源。  
@@ -51,7 +50,7 @@ ms.locfileid: "66011550"
   
  就本例而言，我們會假設已經在 **Title** 資料行中建立了全文檢索索引。  
   
-|DocumentID|標題|  
+|DocumentID|Title|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -78,7 +77,7 @@ ms.locfileid: "66011550"
 |Reflector|1|3|2|  
 |Bracket|1|2|3|  
 |Bracket|1|3|3|  
-|Assembly|1|2|6|  
+|組件|1|2|6|  
 |3|1|2|7|  
 |安裝|1|3|4|  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66011550"
   
  **ColId** 資料行所包含的值會對應到已建立全文檢索索引的特定資料行。  
   
- 此`DocId`資料行包含八個位元組整數的值，對應到全文檢索索引資料表中的特定全文檢索索引鍵值。 當全文檢索索引鍵不是整數資料類型時，這項對應就是必要的。 在這種情況下，全文檢索索引鍵值與`DocId`值之間的對應會保留在稱為 DocId Mapping 資料表的個別資料表中。 若要查詢這些對應，請使用 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 系統預存程序。 為了滿足搜尋條件，上述資料表中的 DocId 值必須與 DocId Mapping 資料表聯結，以便從查詢的基底資料表中擷取資料列。 如果基底資料表的全文檢索索引鍵值是整數類型，此值就會直接當做 DocId 而且不需要任何對應。 因此，使用整數全文檢索索引鍵值有助於最佳化全文檢索查詢。  
+ 此 `DocId` 資料行包含八個位元組整數的值，對應到全文檢索索引資料表中的特定全文檢索索引鍵值。 當全文檢索索引鍵不是整數資料類型時，這項對應就是必要的。 在這種情況下，全文檢索索引鍵值與值之間的 `DocId` 對應會保留在稱為 DocId Mapping 資料表的個別資料表中。 若要查詢這些對應，請使用 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 系統預存程序。 為了滿足搜尋條件，上述資料表中的 DocId 值必須與 DocId Mapping 資料表聯結，以便從查詢的基底資料表中擷取資料列。 如果基底資料表的全文檢索索引鍵值是整數類型，此值就會直接當做 DocId 而且不需要任何對應。 因此，使用整數全文檢索索引鍵值有助於最佳化全文檢索查詢。  
   
  **Occurrence** 資料行包含整數值。 針對每個 DocId 值，都會有一個對應到該 DocId 內特定關鍵字之相對單字位移的出現次數值清單。 出現次數值有助於決定詞句或相似的相符項目，例如，具有鄰近發生次數值的片語。 它們也有助於計算相關分數。例如，在 DocId 中的關鍵字出現次數可用來計分。  
   
@@ -95,7 +94,7 @@ ms.locfileid: "66011550"
 ##  <a name="full-text-index-fragments"></a><a name="fragments"></a>全文檢索索引片段  
  邏輯全文檢索索引通常會在多份內部資料表之間分割。 每份內部資料表會稱為全文檢索索引片段。 其中某些片段可能包含比其他片段更新的資料。 例如，如果使用者更新 DocId 為 3 的下列資料列，而且資料表已進行自動變更追蹤，就會建立新的片段。  
   
-|DocumentID|標題|  
+|DocumentID|Title|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   
@@ -108,7 +107,7 @@ ms.locfileid: "66011550"
 |Rear|1|3|1|  
 |Reflector|1|3|2|  
   
- 如片段 2 所示，全文檢索查詢必須在內部查詢每個片段並捨棄較舊的項目。 因此，如果全文檢索索引包含過多全文檢索索引片段，可能會導致查詢效能大幅降低。 若要減少片段的數目，請使用[ALTER 全文檢索目錄](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)]語句的 [重新組織] 選項來重新組織全文檢索目錄。 這個陳述式會執行「主要合併」**，將片段合併成較大的單一片段，然後從全文檢索索引中移除所有已過時的項目。  
+ 如片段 2 所示，全文檢索查詢必須在內部查詢每個片段並捨棄較舊的項目。 因此，如果全文檢索索引包含過多全文檢索索引片段，可能會導致查詢效能大幅降低。 若要減少片段的數目，請使用[ALTER 全文檢索目錄](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)語句的 [重新組織] 選項來重新組織全文檢索目錄 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 這個陳述式會執行「主要合併」**，將片段合併成較大的單一片段，然後從全文檢索索引中移除所有已過時的項目。  
   
  重新組織之後，範例索引就會包含下列資料列：  
   
@@ -124,7 +123,7 @@ ms.locfileid: "66011550"
 |Reflector|1|2|5|  
 |Reflector|1|3|2|  
 |Bracket|1|2|3|  
-|Assembly|1|2|6|  
+|組件|1|2|6|  
 |3|1|2|7|  
   
  [本主題內容](#top)  

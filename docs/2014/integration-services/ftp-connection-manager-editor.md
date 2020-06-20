@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20d50565b9687f18af95e820be90d16ab643de28
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058492"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966358"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP 連接管理員編輯器
   使用 [FTP 連線管理員編輯器]**** 對話方塊來指定連接到 FTP 伺服器的屬性。  

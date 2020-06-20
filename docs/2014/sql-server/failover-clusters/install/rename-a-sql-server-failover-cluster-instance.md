@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96bd1cc82f73fd78bd16d0d3fe2f2015fabe4995
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63125998"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062599"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重新命名 SQL Server 容錯移轉叢集執行個體
   當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體是容錯移轉叢集的一部份時，重新命名虛擬伺服器的程序會不同於重新命名獨立執行個體的程序。 如需詳細資訊，請參閱 [重新命名主控 SQL Server 獨立執行個體的電腦](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)。  
@@ -63,9 +62,9 @@ ms.locfileid: "63125998"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>重新命名作業之後的其他考量  
  將容錯移轉叢集的網路名稱重新命名之後，我們必須確認並執行下列指示，才能啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中的所有案例。  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** 當您使用 Windows 叢集系統管理員工具[!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)]來變更容錯移轉叢集實例的網路名稱之後，未來的升級或卸載操作可能會失敗。 若要解決此問題，請依照[此](https://go.microsoft.com/fwlink/?LinkId=244002)（https://go.microsoft.com/fwlink/?LinkId=244002)的解決方式一節中的指示來更新**ClusterName**登錄專案。  
+ ** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ：** 在您 [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 使用 Windows 叢集系統管理員工具來變更容錯移轉叢集實例的網路名稱之後，未來的升級或卸載作業可能會失敗。 若要解決此問題，請依照[此](https://go.microsoft.com/fwlink/?LinkId=244002)（的解決方式一節中的指示來更新**ClusterName**登錄專案 https://go.microsoft.com/fwlink/?LinkId=244002) 。  
   
- 代理程式服務： ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **確認並執行下列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 服務的其他動作：  
+ ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程式服務：** 確認並執行下列其他動作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理程式服務：  
   
 -   如果 SQL 代理程式設定為事件轉送，請修正登錄設定。 如需詳細資訊，請參閱[指定事件轉送伺服器 &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md)。  
   

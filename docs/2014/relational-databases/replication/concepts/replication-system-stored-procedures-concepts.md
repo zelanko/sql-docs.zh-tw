@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50536e5b6816c84dff26c9c9f99c46d02272b7de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721940"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064661"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，系統預存程序可提供複寫拓撲中所有使用者可設定的功能之程式存取權。 雖然使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或是 sqlcmd 命令列公用程式，可以個別執行預存程序，但是撰寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼檔案對於執行一連串的邏輯複寫工作非常有幫助。  
@@ -48,7 +47,7 @@ ms.locfileid: "62721940"
   
 -   使用在複寫精靈中提供的指令碼產生功能或是  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。 如需詳細資訊，請參閱 [Scripting Replication](../scripting-replication.md)。  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。 如需詳細資訊，請參閱 [Scripting Replication](../scripting-replication.md)。  
   
 -   使用 Replication Management Objects (RMO) 以程式設計的方式產生指令碼來建立 RMO 物件。  
   
@@ -127,7 +126,7 @@ GO
  建立之後，複寫指令碼可以用下列其中一種方式來執行：  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中建立 SQL 查詢檔案  
- 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 專案中，可以將複寫 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 指令碼檔案建立成 SQL 查詢檔案。 在寫入指令碼之後，可以為此查詢檔案建立資料庫的連接，而且可以執行指令碼。 如需如何使用[!INCLUDE[tsql](../../../includes/tsql-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]建立腳本的詳細資訊，請參閱[查詢和文字編輯器 &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)）。  
+ 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 專案中，可以將複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼檔案建立成 SQL 查詢檔案。 在寫入指令碼之後，可以為此查詢檔案建立資料庫的連接，而且可以執行指令碼。 如需如何使用建立腳本的詳細資訊 [!INCLUDE[tsql](../../../includes/tsql-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，請參閱[查詢和文字編輯器 &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)）。  
   
  若要使用包含指令碼變數的指令碼，[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 必須在 **sqlcmd** 模式下執行。 在 **sqlcmd** 模式中，查詢編輯器會接受 **sqlcmd** 特有的其他語法，例如 `:setvar`，它是用於變數值。 如需 **sqlcmd** 模式的詳細資訊，請參閱[使用查詢編輯器編輯 SQLCMD 指令碼](../../scripting/edit-sqlcmd-scripts-with-query-editor.md)。 在下列指令碼中，`:setvar` 是用以提供 `$(DistPubServer)` 變數的值。  
   
@@ -153,13 +152,13 @@ SET @publisher = $(DistPubServer);
 ```  
   
 ### <a name="using-the-sqlcmd-utility-from-the-command-line"></a>從命令列使用 sqlcmd 公用程式  
- 下列範例示範如何在命令列使用 `instdistpub.sql`sqlcmd 公用程式[來執行 ](../../../tools/sqlcmd-utility.md) 指令碼檔案：  
+ 下列範例示範如何在命令列使用 [sqlcmd 公用程式](../../../tools/sqlcmd-utility.md)來執行 `instdistpub.sql` 指令碼檔案：  
   
 ```  
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
 ```  
   
- 在此範例中，`-E` 參數指出連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時所使用的 Windows 驗證。 在使用 Windows 驗證時，在指令碼檔案中不需要儲存使用者名稱與密碼。 指令碼檔案的名稱與路徑是由 `-i` 參數所指定，而輸出檔案的名稱則是由 `-o` 參數所指定 (使用這個參數時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的輸出會寫入這個檔案，而不是主控台)。 `sqlcmd` 公用程式可讓您在執行階段，使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 參數，將指令碼變數傳遞到 `-v` 指令碼。 在此範例中，`sqlcmd` 會在執行之前，以值 `$(DistPubServer)` 取代指令碼中 `N'MyDistributorAndPublisher'` 的每個執行個體。  
+ 在此範例中，`-E` 參數指出連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時所使用的 Windows 驗證。 在使用 Windows 驗證時，在指令碼檔案中不需要儲存使用者名稱與密碼。 指令碼檔案的名稱與路徑是由 `-i` 參數所指定，而輸出檔案的名稱則是由 `-o` 參數所指定 (使用這個參數時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的輸出會寫入這個檔案，而不是主控台)。 `sqlcmd` 公用程式可讓您在執行階段，使用 `-v` 參數，將指令碼變數傳遞到 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼。 在此範例中，`sqlcmd` 會在執行之前，以值 `N'MyDistributorAndPublisher'` 取代指令碼中 `$(DistPubServer)` 的每個執行個體。  
   
 > [!NOTE]  
 >  `-X` 參數會停用指令碼變數。  

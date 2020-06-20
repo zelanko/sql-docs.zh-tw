@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a0cc475-e6ee-430c-975c-73716d81d563
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd6afc441b66225bdf1696020916f701b6041db6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d1861531dd32660dfb36fd9adcdd36601acef7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044163"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028839"
 ---
 # <a name="scanstarted-event-class"></a>Scan:Started 事件類別
   啟動資料表或索引掃描時，會發生 Scan:Started 事件類別。  

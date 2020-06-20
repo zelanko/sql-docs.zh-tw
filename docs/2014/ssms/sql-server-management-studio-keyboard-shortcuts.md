@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f960b871591785c81bcef84ce1b9cbacd4ba99f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127041"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062030"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 鍵盤快速鍵
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 為使用者提供了兩種鍵盤配置。 預設使用 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 配置，其鍵盤快速鍵是以 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 為基礎。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 也提供了類似於 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]中標準配置的鍵盤配置。 若要變更鍵盤配置或加入其他鍵盤快速鍵，請在 [工具]  功能表上，按一下 [選項]  。 請在 [環境]  、[鍵盤]  頁面上，選取所需要的鍵盤配置。  
@@ -248,7 +247,7 @@ ms.locfileid: "63127041"
 |刪除游標左側的單字|CTRL+空白鍵|CTRL+空白鍵|  
 |在游標的任何一側調換單字 (不適用於 SQL 編輯器)。|CTRL+SHIFT+T|CTRL+SHIFT+T|  
 |將包含游標的那一行移到下一行底下|SHIFT+ALT+T|沒有對等項目|  
-|在 [選項]  對話方塊的 [文字編輯器]  區段中，針對語言的 [格式化]  窗格上所指定的語言套用縮排和空格格式。 只適用於文字編輯器。|CTRL+K、CTRL+D|沒有對等項目|  
+|在 [選項] 對話方塊的 [文字編輯器] 區段中，針對語言的 [格式化] 窗格上所指定的語言套用縮排和空格格式。 只適用於文字編輯器。|CTRL+K、CTRL+D|沒有對等項目|  
 |根據程式碼周圍的行，讓選取的程式碼行正確縮排|CTRL+K、CTRL+F|沒有對等項目|  
 |設定或移除目前這一行的捷徑|CTRL+K、CTRL+H|沒有對等項目|  
 |從目前這一行移除註解語法|CTRL+K、CTRL+U|沒有對等項目|  
@@ -360,7 +359,7 @@ ms.locfileid: "63127041"
 |動作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |顯示 [尋找]  對話方塊|CTRL+F|CTRL+F|  
-|顯示 [尋找]  對話方塊的 [檔案中尋找]  索引標籤。|||  
+|顯示 [尋找] 對話方塊的 [檔案中尋找] 索引標籤。|||  
 |顯示選定符號的定義。|F12|沒有對等項目|  
 |顯示選定符號的參考清單。|SHIFT+F12|沒有對等項目|  
 |顯示 [取代]  對話方塊|CTRL+H|CTRL+H|  
@@ -371,10 +370,10 @@ ms.locfileid: "63127041"
 |尋找目前選取之文字的上一個出現項目|CTRL+SHIFT+F3|CTRL+SHIFT+F3|  
 |顯示 [檔案中取代]  對話方塊|CTRL+SHIFT+H|CTRL+SHIFT+H|  
 |反向累加搜尋，使它從檔案底端開始，向上搜尋到頂端|CTRL+SHIFT+I|CTRL+SHIFT+I|  
-|選取或清除 [尋找和取代]  中的 [向上搜尋]  選項|ALT+F3、B|ALT+F3、B|  
+|選取或清除 [尋找和取代] 中的 [向上搜尋] 選項|ALT+F3、B|ALT+F3、B|  
 |停止 [檔案中尋找]  的搜尋動作|ALT+F3、S|ALT+F3、S|  
-|選取或清除 [尋找和取代]  中的 [全字拼寫須相符]  選項|ALT+F3、W|ALT+F3、W|  
-|選取或清除 [尋找和取代]  中的 [萬用字元]  選項|ALT+F3、P|ALT+F3、P|  
+|選取或清除 [尋找和取代] 中的 [全字拼寫須相符] 選項|ALT+F3、W|ALT+F3、W|  
+|選取或清除 [尋找和取代] 中的 [萬用字元] 選項|ALT+F3、P|ALT+F3、P|  
 |將插入號放在標準工具列的 [尋找]/[命令] 方塊中|CTRL+/|沒有對等項目|  
   
 ## <a name="cut-and-paste-keyboard-shortcuts"></a>剪下和貼上鍵盤快速鍵  

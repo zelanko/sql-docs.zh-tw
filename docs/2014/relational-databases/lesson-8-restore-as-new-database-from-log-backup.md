@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 37d8344323add8b9b6f520d59862cdd978823e4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175352"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049769"
 ---
 # <a name="lesson-9-restore-a-database-from-azure-storage"></a>第 9 課： 從 Azure 儲存體還原資料庫
   在這一課，您將瞭解如何將資料庫備份檔案從 Azure 儲存體還原到資料庫，此資料庫位於內部部署或 Azure 中的虛擬機器。 進行這一課並不需要完成第 4、5、6、7 和 8 課。  
@@ -42,7 +41,7 @@ ms.locfileid: "70175352"
   
 3.  將下列完整指令碼複製並貼入查詢視窗中。 視需要修改腳本。  
   
-     **注意：** 您會執行`RESTORE`語句，將 Azure 儲存體中的資料庫備份（.bak）還原到另一部電腦中的資料庫實例。  
+     **注意：** 您會執行 `RESTORE` 語句，將 Azure 儲存體中的資料庫備份（.bak）還原到另一部電腦中的資料庫實例。  
   
     ```sql  
   

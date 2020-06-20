@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9e321507e8531f9732ae1096ebfc9c0d31031ec8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e5ce667a34bc9ebff01e97b31205f7a3629c147
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056085"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963968"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>指令碼轉換編輯器 (輸入資料行頁面)
   使用 [指令碼轉換編輯器]**** 對話方塊的 [輸入資料行]**** 頁面，對輸入資料行設定屬性。  

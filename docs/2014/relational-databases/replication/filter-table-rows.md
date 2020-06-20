@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eafa0dc2be5ee9ceffd86185399168589fdd8b1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd8d9242b688592870b568db0df27b20f6040d63
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721217"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010600"
 ---
 # <a name="filter-table-rows"></a>篩選資料表的資料列
   **[篩選資料表的資料列]** 頁面可以讓您：  
@@ -72,7 +71,7 @@ ms.locfileid: "62721217"
  **尋找資料表**  
  僅適用於具有聯結篩選的合併式發行集。 按一下 **[尋找資料表]** ，即可在複雜篩選樹中尋找資料表。 在含有複雜關聯性的資料庫中，因為資料表可以聯結到多個資料表，所以資料表可能重複出現在篩選樹的多個位置。  
   
- 實際資料表只出現在篩選樹的一個位置，而在其他位置，資料表是以捷徑方式顯示。 資料表的捷徑只是資料表的參考，它不會顯示資料表的子節點。 捷徑節點會以捷徑箭頭標示，展開該節點會顯示這段文字：按一下 [尋找資料表]，以檢視 **資料表名稱> 的資料表\<** 。  
+ 實際資料表只出現在篩選樹的一個位置，而在其他位置，資料表是以捷徑方式顯示。 資料表的捷徑只是資料表的參考，它不會顯示資料表的子節點。 快捷方式節點會以快捷方式箭頭標示，展開該節點會顯示文字**按一下 [尋找資料表]，以查看 \<tablename> 的資料表**。  
   
  在窗格中選取捷徑節點，然後按一下 **[尋找資料表]** 。 窗格會展開，且反白資料表。 如果您按一下 **[尋找資料表]** 但未選取捷徑節點，則會啟動 **[尋找資料表]** 對話方塊。  
   
