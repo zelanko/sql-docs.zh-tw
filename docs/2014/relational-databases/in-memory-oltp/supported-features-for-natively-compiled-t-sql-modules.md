@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 65e6e794c5858a68c4b2a9b298513911b487cf52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025732"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>原生編譯的預存程序中支援的建構
   本主題包含原生編譯預存程式支援的功能清單（[CREATE PROCEDURE &#40;transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql)）：  
@@ -66,7 +65,7 @@ ms.locfileid: "82718808"
 ##  <a name="supported-operators"></a><a name="so"></a>支援的運算子  
  下列為支援的運算子。  
   
--   條件（IF，WHILE）中支援[transact-sql&#41;&#40;的比較運算子](/sql/t-sql/language-elements/comparison-operators-transact-sql)（例如，>、 \< 、>= 和 <=）。  
+-   條件（IF，WHILE）中支援[transact-sql&#41;&#40;的比較運算子](/sql/t-sql/language-elements/comparison-operators-transact-sql)（例如，>、 \<, > = 和 <=）。  
   
 -   一元運算子 (+、-)。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "82718808"
   
 -   篩選器述詞 IS [NOT] NULL  
   
--   從 \< 記憶體優化資料表>  
+-   FROM \<memory optimized table>  
   
 -   支援[GROUP BY &#40;transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql) ，以及彙總函式 AVG、COUNT、COUNT_BIG、MIN、MAX 和 SUM。 nvarchar、char、varchar、varchar、varbinary 和 binary 類型不支援 MIN 和 MAX。 如果 ORDER BY 清單中的運算式逐字出現在 GROUP BY 清單中，則[order By 子句 &#40;transact-sql&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)就會受到[Group by &#40;transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql)的支援。 例如，支援 GROUP BY a + b ORDER BY a + b，但不支援 GROUP BY a, b ORDER BY a + b。  
   
@@ -172,7 +171,7 @@ ms.locfileid: "82718808"
 ##  <a name="limitations-on-sorting"></a><a name="los"></a>排序的限制  
  在使用 [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) 的查詢中，您可以排序 8000 多個資料列。 但是沒有 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)，[TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 最多只能排序 8000 個資料列 (如果有聯結則資料列更少)。  
   
- 如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過 8192 個資料列，則會收到錯誤訊息：**Msg 41398，層級 16，狀態 1、程序 *\<程序名稱>*、行 *\<行號>*。TOP 運算子最多可以傳回 8192 個資料列；要求 *\<數字>*。**  
+ 如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過8192個數據列，就會收到錯誤訊息：訊息**41398，層級16，狀態1，程式 *\<procedureName>* ，第一行 *\<lineNumber>* 運算子最多可以傳回8192個數據列; *\<number>* 已要求。**  
   
  如果您沒有 TOP 子句，則可以使用 ORDER BY 排序任意數目的資料列。  
   

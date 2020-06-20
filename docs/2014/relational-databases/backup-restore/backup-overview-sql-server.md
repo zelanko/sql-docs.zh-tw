@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60fbd0341c4e29c6f98cc4d5fe5a2cfabc9b703f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959060"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   本主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份元件。 備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫對於保護資料非常重要。 此討論涵蓋備份類型和備份限制。 本主題同時介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份裝置和備份媒體。  
@@ -57,7 +56,7 @@ ms.locfileid: "70175990"
   
  **備份類型**  
   
- [僅複本備份](copy-only-backups-sql-server.md)  
+ [僅複製備份](copy-only-backups-sql-server.md)  
  不受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一般備份順序影響的特殊用途備份。  
   
  資料備份  
@@ -67,7 +66,7 @@ ms.locfileid: "70175990"
  資料庫的備份。 完整資料庫備份代表備份完成時的整個資料庫。 差異資料庫備份僅包含自其最近的完整資料庫備份以來，對資料庫所做的變更。  
   
  [差異備份](full-database-backups-sql-server.md)  
- 一種資料備份，是以整個或部分資料庫或一組資料檔案或檔案群組 (「差異基底」**) 的最新完整備份為基礎，而且只包含自差異基底以來變更的資料範圍。  
+ 一種資料備份，是以整個或部分資料庫或一組資料檔案或檔案群組 (「差異基底」  ) 的最新完整備份為基礎，而且只包含自差異基底以來變更的資料範圍。  
   
  差異部分備份僅記錄自上一次部分備份後在檔案群組中變更過的資料範圍，稱為差異基底。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "70175990"
  [部分備份](partial-backups-sql-server.md)  
  僅包含資料庫中某些檔案群組中的資料，包括主要檔案群組、每個讀取/寫入檔案群組，以及任何選擇性指定之唯讀檔案中的資料。  
   
- **備份媒體詞彙和定義**  
+ **備份媒體詞匯和定義**  
   
  [備份裝置](backup-devices-sql-server.md)  
  寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份並從中進行還原的磁碟或磁帶裝置。 SQL Server 備份也可以寫入 Azure Blob 儲存體服務，而且會使用 **URL** 格式來指定備份檔案的目的地和名稱。 如需詳細資訊，請參閱 [SQL Server 備份及還原與 Azure Blob 儲存體服務](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
@@ -133,7 +132,7 @@ ms.locfileid: "70175990"
   
 -   如果在備份作業進行當中試圖建立或刪除資料庫檔案，建立或刪除作業會失敗。  
   
- 如果備份作業與檔案管理或壓縮作業重疊，便會發生衝突。 不論哪一個衝突的作業先開始，第二個作業都會等待第一個作業所設定的鎖定超時。（超時時間是由會話超時設定所控制）。如果在超時期間釋放鎖定，則會繼續進行第二個作業。 如果鎖定逾時，第二項作業就會失敗。  
+ 如果備份作業與檔案管理或壓縮作業重疊，便會發生衝突。 不論哪一個衝突的作業先開始，第二項作業都會等候第一項作業設定的鎖定逾時(逾時期間由工作階段逾時設定控制)。如果在逾時期間解除鎖定，第二項作業就會繼續下去。 如果鎖定逾時，第二項作業就會失敗。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要使用備份裝置和備份媒體**  

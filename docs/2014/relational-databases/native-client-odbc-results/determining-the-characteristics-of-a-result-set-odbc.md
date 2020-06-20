@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b93a0386c921a863e310e99164d654c7d84e357b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5957092cdddfbcbce904d9a6483914672565d337
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999114"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>決定結果集的特性 (ODBC)
   中繼資料是描述其他資料的資料。 例如，結果集中繼資料會描述結果集的特性，例如，結果集中的資料行數目、這些資料行的資料類型、其名稱、有效位數，以及 Null 屬性。  

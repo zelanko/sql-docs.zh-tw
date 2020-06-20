@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: a9797d01-1050-442c-9038-ed4bfee1e76a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 535ae5f92fea0222468ed64f567154495e329a61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3754afbc5d8f0f67dac61e785a4626c8ced4c2e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044193"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995295"
 ---
 # <a name="format-pager-addresses-for-alerts"></a>設定警示的呼叫器位址格式
-  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中格式化 Agent 警示的呼機位址。  
+  本主題描述如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用或，在中格式化 Agent 警示的呼機位址 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  **本主題內容**  
   
@@ -35,7 +34,7 @@ ms.locfileid: "63044193"
   
 -   **若要使用下列項目，格式化呼叫器號碼：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   

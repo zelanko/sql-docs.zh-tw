@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87dcc1df096d72610be680013776748aca1a11ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7ea078b34dee99b3bc2b97f6c0ce2a6ee8d25113
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704606"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018123"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB 資料表值參數類型支援
   本主題描述資料表值參數的 OLE DB 類型支援。  

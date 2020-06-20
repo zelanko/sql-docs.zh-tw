@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a0df84bb0a4ee7e933666705a9d1a1d8fb31edf2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e47843558b485bca12f2e15d406f5a7a47db24cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698172"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999055"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>使用記憶體中的所有值，將資料當做資料表值參數傳送 (ODBC)
   本主題描述所有的值都在記憶體中時，如何將資料當做資料表值參數傳送至預存程序。 如需示範資料表值參數的另一個範例，請參閱[使用資料表值參數 &#40;ODBC&#41;](table-valued-parameters-odbc.md)。  

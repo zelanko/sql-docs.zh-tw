@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f54f2a3520a0d34290cb81b411a5ce41a59d7c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255066"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062180"
 ---
 # <a name="manage-schedules"></a>管理排程
-  可讓您查看和變更 Agent 作業[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]排程的屬性。  
+  可讓您查看和變更 Agent 作業排程的屬性 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的排程**  
  列出此使用者可以使用的排程。 請注意，作業和排程的擁有者必須相同。 所以此清單只會包含作業之擁有者所擁有的排程。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "63255066"
  **已啟用**  
  選取此選項來啟用排程。  
   
- **描述**  
+ **說明**  
  描述排程執行作業所用的條件。  
   
  **排程中的作業**  

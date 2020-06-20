@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e9df2b0158504577630caa6830687a2665c91327
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8d441e5627280cb46168d9ff187d7f43da8b26a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050079"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062500"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 中，一個給定時間只能有一個節點可以擁有 Windows Server 容錯移轉叢集 (WSFC) 叢集資源群組。 用戶端要求都是透過 FCI 中的此節點提供服務。 萬一發生失敗而且重新啟動不成功，群組擁有權會移至 FCI 中的另一個 WSFC 節點。 這項程序就稱為容錯移轉。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 提高失敗偵測的可靠性，並提供靈活的容錯移轉原則。  
@@ -70,7 +69,7 @@ ms.locfileid: "63050079"
   
 1.  系統  
   
-2.  資源  
+2.  resource  
   
 3.  查詢處理序  
   
@@ -92,7 +91,7 @@ ms.locfileid: "63050079"
   
  請檢閱 [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)，此系統預存程序在失敗狀況層級扮演重要角色。  
   
-|層級|狀況|說明|  
+|層級|條件|描述|  
 |-----------|---------------|-----------------|  
 |0|沒有自動的容錯移轉或重新啟動|指出任何失敗狀況都不會自動觸發容錯移轉或重新啟動。 這個等級只會用於系統維護的用途。|  
 |1|伺服器關閉的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列狀況時觸發：<br /><br /> SQL Server 服務已關閉。|  
@@ -104,7 +103,7 @@ ms.locfileid: "63050079"
  *預設值  
   
 ####  <a name="responding-to-failures"></a><a name="respond"></a>回應失敗  
- 在偵測到一個或多個失敗狀況後，WSFC 服務回應失敗的方式取決於 WSFC 仲裁狀態以及 FCI 資源群組的重新啟動和容錯移轉設定。 如果 FCI 已經失去其 WSFC 仲裁，整個 FCI 就會離線，而且 FCI 已經失去其高可用性。 如果 FCI 仍然保留其 WSFC 仲裁，WSFC 服務的回應方式可能會先嘗試重新啟動失敗的節點，如果重新啟動嘗試不成功則容錯移轉。 重新啟動和容錯移轉設定是在容錯移轉叢集管理員嵌入式管理單元中進行設定。 如需這些設定的詳細資訊，請參閱[ \<資源> 屬性：原則]](https://technet.microsoft.com/library/cc725685.aspx)索引標籤。  
+ 在偵測到一個或多個失敗狀況後，WSFC 服務回應失敗的方式取決於 WSFC 仲裁狀態以及 FCI 資源群組的重新啟動和容錯移轉設定。 如果 FCI 已經失去其 WSFC 仲裁，整個 FCI 就會離線，而且 FCI 已經失去其高可用性。 如果 FCI 仍然保留其 WSFC 仲裁，WSFC 服務的回應方式可能會先嘗試重新啟動失敗的節點，如果重新啟動嘗試不成功則容錯移轉。 重新啟動和容錯移轉設定是在容錯移轉叢集管理員嵌入式管理單元中進行設定。 如需這些設定的詳細資訊，請參閱[ \<Resource> 屬性：原則](https://technet.microsoft.com/library/cc725685.aspx)索引標籤。  
   
  如需維護仲裁健全狀況的詳細資訊，請參閱 [WSFC 仲裁模式和投票組態 &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 788defce7f897e4da3a3680118c573b5a73ac3b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dcf8810d43f69acc858a0882ad17aa1056014ca7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917051"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965928"
 ---
 # <a name="log-shipping-monitor-settings"></a>記錄傳送監視器設定
   使用此頁面來設定和修改記錄傳送監視伺服器的屬性。  

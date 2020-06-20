@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 060525c9231159cb419caab29cfb70aeef30bb54
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6fd6984768c38b998ee077e5ff9f5ac83d257d8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701916"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019075"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>大量複製 SELECT 結果集 (ODBC)
   此範例會示範如何使用大量複製函數來大量複製 SELECT 陳述式的結果集。 此範例是針對 ODBC 3.0 版或更新版本所開發。  

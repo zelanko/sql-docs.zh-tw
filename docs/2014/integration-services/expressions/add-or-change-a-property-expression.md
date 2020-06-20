@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bd9095a11ef304c256b6c5a60560a71866e744fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d07a3a347e4b67f1b84db9f5aba43f638ec640a1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966708"
 ---
 # <a name="add-or-change-a-property-expression"></a>加入或變更屬性運算式
   您可以為封裝、工作、「Foreach 迴圈」容器、「For 迴圈」容器、「時序」容器、事件處理常式、封裝和專案層級的連接管理員和記錄提供者建立屬性運算式。  
   
- 若要建立或變更屬性運算式，您可以使用 [屬性運算式編輯器]  或 [運算式產生器]  。 您可以從適用於工作的自訂編輯器或 [屬性]  視窗存取 [屬性運算式編輯器]  。 您可以從 [屬性運算式編輯器]  內部存取 [運算式產生器]  。 雖然您可以在 [屬性運算式編輯器]  或 [運算式產生器]  中撰寫運算式，但是 [運算式產生器]  會提供一組圖形工具，讓您輕鬆地建立複雜運算式。  
+ 若要建立或變更屬性運算式，您可以使用 [屬性運算式編輯器]  或 [運算式產生器]  。 您可以從適用於工作的自訂編輯器或 [屬性] 視窗存取 [屬性運算式編輯器]。 您可以從 [屬性運算式編輯器] 內部存取 [運算式產生器]。 雖然您可以在 [屬性運算式編輯器]  或 [運算式產生器]  中撰寫運算式，但是 [運算式產生器]  會提供一組圖形工具，讓您輕鬆地建立複雜運算式。  
   
  如需深入了解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的語法、運算子和函數，請參閱[運算子 &#40;SSIS 運算式&#41;](operators-ssis-expression.md) 和[函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)。 每個運算子或函數的主題都包含了在運算式中使用該運算子或函數的範例。 如需更複雜之運算式的相關範例，請參閱 [在封裝中使用屬性運算式](use-property-expressions-in-packages.md)。  
   

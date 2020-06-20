@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e8be13e95cbf47a0769be20d6b0e55b39e9b7a57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 09fc6ad073b12df2f9fbd8ebc6a59149f6154ced
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054936"
 ---
 # <a name="examples-using-openxml"></a>範例：使用 OPENXML
   在此主題下的範例將說明如何使用 OPENXML 來建立 XML 文件的資料列集檢視。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)。 範例中將說明 OPENXML 的各個方面，但是不指定 OPENXML 的中繼屬性。 如需如何指定 OPENXML 的中繼屬性的詳細資訊，請參閱 [在 OPENXML 中指定中繼屬性](specify-metaproperties-in-openxml.md)。  
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
 -   針對資料列集內的**ProdID**資料行指定為 *ColPattern* 的 XPath 模式 ( **.** ) 識別內容節點，即目前節點。 根據所指定的 *rowpattern*，這是 < **> 元素的** ProductID`OrderDetail` 屬性。  
   
--   針對資料列集內的 *Qty* 資料行所指定的 **ColPattern\@、** ../**Quantity**，識別內容節點 **ProductID> 之父節點 <** > 的 `OrderDetail`Quantity \<屬性。  
+-   *ColPattern*， **.。/ \@ Quantity**：針對資料列集中的 [**數量**] 資料行所指定，可識別內容節點之父系、<>、節點的**Quantity**屬性 `OrderDetail` \<ProductID> 。  
   
 -   同樣地，針對資料列集內的 *OID* 資料行所指定的 **ColPattern\@、** ../../**OrderID**，識別內容節點的父節點之父系 < **> 的** OrderID`Order` 屬性。 父節點是 <`OrderDetail`>，內容節點是 <`ProductID`>。  
   
@@ -604,25 +603,25 @@ id  lname   xmlname                   OverFlow
 -   假如 WITH 子句中的資料行是具類型的 XML 資料行，但 XML 執行個體不符合此結構描述，則會傳回錯誤。  
   
 ### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. 從多值屬性中擷取個別的值  
- XML 文件可以擁有多重值的屬性。 例如， **IDREFS** 屬性可為多重值。 在 XML 文件中，多重值的屬性值是指定為字串，並以空格區隔其值。 在下列 XML 文件中，**學生> 項目的** attends\< 屬性與 **班級> 的** attendedBy\< 屬性為多重值。 從多重值 XML 屬性中擷取個別的值，並將每個值儲存於資料庫中的個別資料列需要額外的工作。 此範例顯示其處理過程。  
+ XML 文件可以擁有多重值的屬性。 例如， **IDREFS** 屬性可為多重值。 在 XML 文件中，多重值的屬性值是指定為字串，並以空格區隔其值。 在下列 XML 檔中，專案的**出席**屬性 \<Student> 和的**attendedBy**屬性 \<Class> 為多重值。 從多重值 XML 屬性中擷取個別的值，並將每個值儲存於資料庫中的個別資料列需要額外的工作。 此範例顯示其處理過程。  
   
  此範例 XML 文件由下列元素構成：  
   
--   \<學生>  
+-   \<Student>  
   
      **id** (學生識別碼)、 **name**與 **attends** 屬性。 **attends** 屬性為多重值屬性。  
   
--   \<班級>  
+-   \<Class>  
   
      **id** (班級識別碼)、 **name**與 **attendedBy** 屬性。 **attendedBy** 屬性為多重值屬性。  
   
- **學生> 中的** attends\< 屬性與 **班級> 中的** attendedBy\< 屬性代表學生與類別資料表之間的 **m:n** 關聯性。 一位學生可以選擇多種學科而一種學科可以收授多位學生。  
+ 中的**出席**屬性 \<Student> 和中的**attendedBy**屬性 \<Class> 代表 Student 和類別資料表之間的**m:n**關聯性。 一位學生可以選擇多種學科而一種學科可以收授多位學生。  
   
  假設您要切割此文件並將文件儲存於資料庫，如下所示：  
   
--   將 \<學生> 資料儲存於 Students 資料表中。  
+-   將 \<Student> 資料儲存在 [學生] 資料表中。  
   
--   將 \<班級> 資料儲存於 Courses 資料表中。  
+-   儲存 \<Class> [課程] 資料表中的資料。  
   
 -   將 Student 與 Class 之間的 **m:n** 關聯性資料儲存於 CourseAttendence 資料表中。 取出這些值需要額外的工作。 若要擷取此資訊並將之儲存於資料表，請使用下列預存程序：  
   
@@ -632,9 +631,9 @@ id  lname   xmlname                   OverFlow
   
     -   **Extract_idrefs_values**  
   
-         從每個 \<課程> 項目中擷取個別的學生識別碼。 使用邊緣資料表來擷取這些值。  
+         從每個元素中，解壓縮個別的學生識別碼 \<Course> 。 使用邊緣資料表來擷取這些值。  
   
- 以下為其步驟：  
+ 步驟如下：  
   
 ```  
 -- Create these tables:  
@@ -801,9 +800,9 @@ Col1        BinaryCol
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_xml_preparedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
- [sp_xml_removedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
- [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
+ [sp_xml_preparedocument &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
+ [sp_xml_removedocument &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
+ [OPENXML &#40;Transact-sql&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [OPENXML &#40;SQL Server&#41;](openxml-sql-server.md)  
   
   

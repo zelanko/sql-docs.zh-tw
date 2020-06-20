@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82e5eb63122f6a965e3a001b8124445cbe91675
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057981"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965414"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services 專案轉換精靈
   [Integration Services 專案轉換精靈]**** 會將專案轉換為專案部署模型。  
@@ -103,7 +102,7 @@ ms.locfileid: "66057981"
  **狀態**  
  指出封裝是否就緒，可以轉換成專案部署模型。  
   
- **訊息**  
+ **Message**  
  顯示與封裝相關聯的訊息。  
   
  **密碼**  
@@ -168,7 +167,7 @@ ms.locfileid: "66057981"
  **套件**  
  列出封裝檔案。  
   
- **類型**  
+ **型別**  
  列出組態類型，例如 XML 組態檔。  
   
  **組態字串**  
@@ -233,7 +232,7 @@ ms.locfileid: "66057981"
  **動作**  
  列出特定的轉換步驟。  
   
- **Result**  
+ **結果**  
  列出每個轉換步驟的狀態。 如需詳細資訊，請按一下狀態訊息。  
   
  在專案儲存到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中之前，不會儲存專案轉換。  

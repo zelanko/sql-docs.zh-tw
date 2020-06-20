@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f91b32a292975ec19b21dbd855f6c5c182738aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d26cda51087ff0bf0cbe648e74e09332724c1d10
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058675"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966448"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>一般檔案目的地編輯器 (對應頁面)
   使用 [一般檔案目的地編輯器]**** 對話方塊的 [對應]**** 頁面，即可將輸入資料行對應到目的地資料行。  
@@ -34,7 +33,7 @@ ms.locfileid: "66058675"
  檢視可用的目的地資料行清單。 使用拖放作業，即可將可用的目的地資料行對應到輸入資料行。  
   
  **輸入資料行**  
- 檢視在這個主題中稍早選取的輸入資料行。 您可以使用 **[可用的輸入資料行]** 清單來變更對應。 選取** \<[略過>** ]，將資料行從輸出中排除。  
+ 檢視在這個主題中稍早選取的輸入資料行。 您可以使用 **[可用的輸入資料行]** 清單來變更對應。 選取 **\<ignore>** 即可從輸出中排除資料行。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論是否已經對應。  

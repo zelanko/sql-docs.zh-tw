@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9e114802c6e69467ba9438ee4c525ef85e73024
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059063"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966828"
 ---
 # <a name="execute-package-task-editor"></a>執行封裝工作編輯器
   使用「執行封裝工作編輯器」設定「執行封裝」工作。 「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -47,7 +46,7 @@ ms.locfileid: "66059063"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入「執行封裝」工作的描述。  
   
 ##  <a name="set-the-options-on-the-package-page"></a><a name="package"></a>設定 [封裝] 頁面上的選項  
@@ -61,7 +60,7 @@ ms.locfileid: "66059063"
  如果子封裝受到密碼保護，請提供子封裝的密碼，或按一下省略符號 ([...]) 按鈕，然後建立子封裝的新密碼。  
   
  `ExecuteOutOfProcess`  
- 指定子封裝是在父封裝的處理序中執行，還是在個別的處理序中執行。 根據預設，「執行封裝」工作的 ExecuteOutOfProcess 屬性會設定為`False`，而且子封裝會在與父封裝相同的進程中執行。 如果您將此屬性設定為 `true`，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 另外，如果此屬性設定為 `true`，則無法在僅限工具安裝中偵錯封裝；您必須安裝 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 產品。 如需詳細資訊，請參閱[安裝 Integration Services](install-windows/install-integration-services.md)。  
+ 指定子封裝是在父封裝的處理序中執行，還是在個別的處理序中執行。 根據預設，「執行封裝」工作的 ExecuteOutOfProcess 屬性會設定為 `False` ，而且子封裝會在與父封裝相同的進程中執行。 如果您將此屬性設定為 `true`，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 另外，如果此屬性設定為 `true`，則無法在僅限工具安裝中偵錯封裝；您必須安裝 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 產品。 如需詳細資訊，請參閱[安裝 Integration Services](install-windows/install-integration-services.md)。  
   
 ### <a name="referencetype-dynamic-options"></a>ReferenceType 動態選項  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66059063"
 |**SQL Server**|設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的位置。|  
 |**檔案系統**|設定檔案系統的位置。|  
   
- **建立**  
+ **[連接]**  
  選取子封裝的儲存位置類型。  
   
  **PackageNameReadOnly**  
@@ -87,8 +86,8 @@ ms.locfileid: "66059063"
 ### <a name="location-dynamic-options"></a>位置動態選項  
   
 #### <a name="location--sql-server"></a>位置 = SQL Server  
- **建立**  
- 在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連線…>]**** 建立新的連線管理員。  
+ **[連接]**  
+ 在清單中選取 OLE DB 連線管理員，或按一下 \<**New connection...**> 以建立新的連線管理員。  
   
  **相關主題** [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)、 [設定 OLE DB 連接管理員](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
@@ -96,8 +95,8 @@ ms.locfileid: "66059063"
  輸入子封裝的名稱，或按一下省略符號 ([...])，然後找出該封裝。  
   
 #### <a name="location--file-system"></a>位置 = 檔案系統  
- **建立**  
- 在清單中選取檔案連線管理員，或按一下\<[**新增連接 ...** ]> 建立新的連線管理員。  
+ **[連接]**  
+ 在清單中選取檔案連線管理員，或按一下 \<**New connection...**> 以建立新的連線管理員。  
   
  **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   

@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f7c2e734fdb332199595a0236d7d86666f4429fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a933163ffc46972577bbb34b282300351e56c55f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191334"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062797"
 ---
 # <a name="clientnetlibinfo-class"></a>ClientNetLibInfo 類別
   [ClientNetLibInfo 類別](clientnetlibinfo-class.md)代表用戶端網路程式庫的相關資訊。  
   
- 用戶端網路程式庫檔案可讓用戶端實例透過網路與[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用特定網路通訊協定的實例進行通訊。  
+ 用戶端網路程式庫檔案可讓用戶端實例透過網路與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用特定網路通訊協定的實例進行通訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)  

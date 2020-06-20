@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64b1945ba990278241d38cebb029feab86d6d7bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab35cd849d020a265fac097f2a0314a81c20dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058024"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965438"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services 功能及工作
-  尋找任何人（設計師、開發人員、分析師或系統管理員）建立及開發[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]封裝所需的資訊。 然後了解如何將這些封裝併入您的應用程式和網站中。  
+  尋找任何人（設計師、開發人員、分析師或系統管理員）建立及開發封裝所需的資訊 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。 然後了解如何將這些封裝併入您的應用程式和網站中。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Integration Services &#40;SSIS&#41; 和 Studio 環境](integration-services-ssis-development-and-management-tools.md)  

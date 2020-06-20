@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f4f291e5dc4aaa8a240757713cc65bd2a6a8230
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055492"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
   「稽核」  [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 執行個體或個別資料庫會在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 上發生追蹤及記錄事件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核可讓您建立伺服器稽核，其中可包含伺服器層級事件的伺服器稽核規格，以及資料庫層級事件的資料庫稽核規格。 稽核的事件可以寫入事件記錄或稽核檔案。  
@@ -61,7 +60,7 @@ ms.locfileid: "68198417"
 > [!IMPORTANT]  
 >  任何經過驗證的使用者都可以讀寫 Windows 應用程式事件記錄檔。 應用程式事件記錄檔所需的權限低於 Windows 安全性事件記錄檔，所以比起 Windows 安全性事件記錄檔是較不安全的。  
   
- 寫入到 Windows 安全性記錄檔需要將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶加入 [產生安全性稽核] **** 原則。 根據預設，本機系統、本機服務和網路服務都是此原則的一部分。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 此外，[稽核物件存取] **** 安全性原則必須已啟用 [成功] **** 和 [失敗] ****。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 在[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]或 Windows Server 2008 中，您可以使用稽核原則程式（`AuditPol.exe)`）從命令列設定更細微的**應用程式產生**原則。 如需啟用寫入 Windows 安全性記錄檔之步驟的詳細資訊，請參閱 [將 SQL Server Audit 事件寫入安全性記錄檔](write-sql-server-audit-events-to-the-security-log.md)。 如需 Auditpol.exe 程式的詳細資訊，請參閱知識庫文章 921469： [如何使用「群組原則」進行詳細的安全性稽核設定](https://support.microsoft.com/kb/921469/)。 Windows 事件記錄檔在 Windows 作業系統中為全域的範圍。 如需 Windows 事件記錄檔的詳細資訊，請參閱 [事件檢視器概觀](https://go.microsoft.com/fwlink/?LinkId=101455)。 如果您需要更精確的稽核權限，請使用二進位檔案目標。  
+ 寫入到 Windows 安全性記錄檔需要將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶加入 [產生安全性稽核] **** 原則。 根據預設，本機系統、本機服務和網路服務都是此原則的一部分。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 此外，[稽核物件存取] **** 安全性原則必須已啟用 [成功] **** 和 [失敗] ****。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 在 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008 中，您可以使用稽核原則程式（）從命令列設定更細微的**應用程式產生**原則 `AuditPol.exe)` 。 如需啟用寫入 Windows 安全性記錄檔之步驟的詳細資訊，請參閱 [將 SQL Server Audit 事件寫入安全性記錄檔](write-sql-server-audit-events-to-the-security-log.md)。 如需 Auditpol.exe 程式的詳細資訊，請參閱知識庫文章 921469： [如何使用「群組原則」進行詳細的安全性稽核設定](https://support.microsoft.com/kb/921469/)。 Windows 事件記錄檔在 Windows 作業系統中為全域的範圍。 如需 Windows 事件記錄檔的詳細資訊，請參閱 [事件檢視器概觀](https://go.microsoft.com/fwlink/?LinkId=101455)。 如果您需要更精確的稽核權限，請使用二進位檔案目標。  
   
  當您將稽核資訊儲存到檔案時，為了避免遭到篡改，您可以使用以下方式來限制對檔案位置的存取：  
   
@@ -119,14 +118,14 @@ ms.locfileid: "68198417"
 ### <a name="database-mirroring-and-sql-server-audit"></a>資料庫鏡像和 SQL Server Audit  
  已定義資料庫稽核規格而且使用資料庫鏡像的資料庫將會包含資料庫稽核規格。 若要在鏡像的 SQL 執行個體上正確運作，必須設定下列項目：  
   
--   鏡像伺服器必須具有相同 GUID 的稽核，才能讓資料庫稽核規格寫入稽核記錄。 您可以使用 [`=`*\<從來源伺服器 audit*> 建立 AUDIT WITH guid guid] 命令來設定此項。  
+-   鏡像伺服器必須具有相同 GUID 的稽核，才能讓資料庫稽核規格寫入稽核記錄。 您可以使用 CREATE AUDIT WITH GUID 命令來設定此項 `=` * \<GUID from source Server Audit*> 。  
   
 -   如果是二進位檔案目標，鏡像伺服器服務帳戶必須具有寫入稽核記錄之位置的適當權限。  
   
 -   如果是 Windows 事件記錄檔目標，鏡像伺服器所在之電腦的安全性原則必須允許服務帳戶存取安全性或應用程式事件記錄檔。  
   
 ### <a name="auditing-administrators"></a>稽核系統管理員  
- 系統會將`sysadmin`固定伺服器角色的成員識別為每個資料庫中的**dbo**使用者。 若要稽核系統管理員的動作，請稽核 **dbo** 使用者的動作。  
+ `sysadmin`系統會將固定伺服器角色的成員識別為每個資料庫中的**dbo**使用者。 若要稽核系統管理員的動作，請稽核 **dbo** 使用者的動作。  
   
 ## <a name="creating-and-managing-audits-with-transact-sql"></a>使用 Transact-SQL 建立及管理稽核  
  您可以使用 DDL 陳述式、動態管理檢視和函數及目錄檢視來實作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的所有層面。  

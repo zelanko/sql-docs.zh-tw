@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c0f364b15053e589d87b715d124bae48a87461e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253504"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039865"
 ---
 # <a name="lesson-1-create-azure-storage-account-and-container"></a>第 1 課：建立 Azure 儲存體帳戶和容器
   您必須先建立 Azure 儲存體帳戶和 blob 容器以及共用存取簽章，才能開始在 Azure 儲存體中儲存 SQL Server 的資料檔案。 第1課會逐步引導您登入 Azure 管理入口網站、建立儲存體帳戶、blob 容器，以及共用存取簽章。  

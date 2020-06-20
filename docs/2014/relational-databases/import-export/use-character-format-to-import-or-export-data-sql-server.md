@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88e16e3ea97b0a2348d3fd41ff7b980055c8c206
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011673"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026281"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字元格式匯入或匯出資料 (SQL Server)
   若要將資料大量匯出到用於其他程式的文字檔，或是要從其他程式產生的文字檔大量匯入資料，建議您使用字元格式。  
@@ -44,7 +43,7 @@ ms.locfileid: "66011673"
   
 -   所有儲存在字元格式檔案中的 `sql_variant` 資料，會在沒有中繼資料的情況下儲存。 每個資料值會根據隱含資料轉換的規則，轉換成 `char` 格式。 匯入至 `sql_variant` 資料行時，資料會以 `char` 格式匯入。 要匯入的資料行如果不是採用 `sql_variant` 資料類型，則會使用隱含轉換將資料從 `char` 轉換過來。 如需資料轉換的詳細資訊，請參閱[資料類型轉換 &#40;Database Engine&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)。  
   
--   **Bcp**公用程式會`money`將值匯出為小數點後有四位數的字元格式資料檔案，但不含任何數位群組符號（例如逗號分隔符號）。 例如，`money` 資料行包含的值 1,234,567.123456，會採用 1234567.1235 的字元字串，大量匯出到資料檔。  
+-   **Bcp**公用程式 `money` 會將值匯出為小數點後有四位數的字元格式資料檔案，但不含任何數位群組符號（例如逗號分隔符號）。 例如，`money` 資料行包含的值 1,234,567.123456，會採用 1234567.1235 的字元字串，大量匯出到資料檔。  
   
 ## <a name="command-options-for-character-format"></a>字元格式的命令選項  
  您可以使用**bcp**、BULK INSERT 或 INSERT ...，將字元格式資料匯入資料表中。SELECT \* FROM OPENROWSET （BULK ...）。對於**bcp**命令或 BULK INSERT 語句，您可以在命令列上指定資料格式。 對於 INSERT...SELECT * FROM OPENROWSET(BULK...) 陳述式，您必須在格式檔案中指定資料格式。  
@@ -56,7 +55,7 @@ ms.locfileid: "66011673"
 |**bcp**|**-c**|使**bcp**公用程式使用字元資料。<sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|於大量匯入資料時使用字元格式。|  
   
- <sup>1</sup>若要將字元（**-c**）資料載入與舊版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端相容的格式，請使用 **-V**參數。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ <sup>1</sup>若要將字元（**-c**）資料載入與舊版用戶端相容的格式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請使用 **-V**參數。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
  如需詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
   

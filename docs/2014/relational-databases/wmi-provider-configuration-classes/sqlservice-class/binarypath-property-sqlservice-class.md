@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0444399eb056b733bf0c9f9e7506b434e06b84db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1e6e193319a8a4139ebf974d7235fc59e39418d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223283"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062623"
 ---
 # <a name="binarypath-property-sqlservice-class-"></a>BinaryPath 屬性 (SqlService 類別)
   取得服務的二進位路徑。  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  表示此服務的 [SqlService 類別](sqlservice-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

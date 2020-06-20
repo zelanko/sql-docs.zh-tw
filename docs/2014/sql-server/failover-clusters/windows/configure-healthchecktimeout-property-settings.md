@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 435aa6a89b1b7aafd243efbc6de86bcb8f731346
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: a38cd6e9e4718a2f1c136e5412cde340e92f14c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925009"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062510"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>設定 HealthCheckTimeout 屬性設定
   HealthCheckTimeout 設定是用來指定在將 AlwaysOn 容錯移轉叢集實例（FCI）回報為沒有回應之前，SQL Server 資源 DLL 應該等候[sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)預存程式傳回信息的時間長度（以毫秒為單位）。 針對逾時設定值所做的變更會立即生效，且不需要重新啟動 SQL Server 資源。  

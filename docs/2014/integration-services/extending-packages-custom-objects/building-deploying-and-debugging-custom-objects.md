@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89d1e2fd7c4f0e414424ad678c7ea9f3936b02f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 044d4bcb17144b4fcb6e233b1aadec84e20f2876
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176378"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966618"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>建立、部署和偵錯自訂物件
   撰寫 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之自訂物件的程式碼之後，必須建立並部署組件，以及將其整合到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具，其才可供封裝使用，並進行測試及偵錯。
@@ -70,7 +69,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ```
 
 ##  <a name="deploying-the-assembly"></a><a name="deploying"></a> 部署組件
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]設計工具會藉由列舉在安裝時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]所建立的一系列資料夾中找到的檔案，來尋找可在封裝中使用的自訂物件。 使用預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝設定時，這組資料夾位於**C:\Program Files\Microsoft SQL Server\120\DTS**。 不過，如果您為自訂物件建立安裝程式，則應該檢查**HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath**登錄機碼的值，以確認此資料夾的位置。
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)]設計工具會藉由列舉在安裝時所建立的一系列資料夾中找到的檔案，來尋找可在封裝中使用的自訂物件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用預設安裝設定時，這組資料夾位於**C:\PROGRAM Files\Microsoft SQL Server\120\DTS**。 不過，如果您為自訂物件建立安裝程式，則應該檢查**HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath**登錄機碼的值，以確認此資料夾的位置。
 
  您可以透過下列兩種方式將組件放入資料夾中：
 
@@ -115,7 +114,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing-and-debugging-your-code"></a><a name="testing"></a> 測試和偵錯您的程式碼
  在建置自訂物件以及執行可使用該元件的套件之後，從 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 啟動 **dtexec.exe** 是偵錯自訂物件之執行階段方法的最簡單方法。
 
- 如果您想要對元件的設計階段方法（例如`Validate`方法）進行偵錯工具，請開啟使用第二個實例中之元件的封裝[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，並附加至其**devenv**進程。
+ 如果您想要對元件的設計階段方法（例如方法）進行偵錯工具，請 `Validate` 開啟使用第二個實例中之元件的封裝 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ，並附加至其**devenv.exe**進程。
 
  如果您也想要在套件於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中開啟與執行時偵錯元件的執行階段方法，則必須在執行套件時強制暫停，才可附加到 **DtsDebugHost.exe** 處理序。
 
@@ -123,7 +122,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 1.  在偵錯組態中簽署和建立專案，然後加以部署，並將它安裝在全域組件快取中，如本主題所述。
 
-2.  在 [**專案屬性**] 的 [**調試**程式] 索引標籤上，選取 [**啟動外部程式**] 作為 [**起始動作**]，並尋找預設安裝在 C:\Program Files\Microsoft SQL server\120\dts\binn 中的**dtexec .exe。**
+2.  在 [**專案屬性**] 的 [**調試**程式] 索引標籤上，選取 [**啟動外部程式**] 做為 [**起始動作**]，然後找出預設會安裝在 C:\Program Files\Microsoft SQL server\120\dts\binn 中的**dtexec.exe**。
 
 3.  在 [命令列選項]**** 文字方塊的 [起始選項]**** 之下，輸入執行可使用您的元件之套件所需的命令列引數。 通常命令列引數是由 /F[ILE] 參數以及緊接在後面之 .dtsx 檔案的路徑與檔案名稱所組成。 如需詳細資訊，請參閱 [dtexec Utility](../packages/dtexec-utility.md)。
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a62d8fbafc353e2d71223506b7fb4516d184b494
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 08b79888eb47634deaccc910b2ea3c93800b7c78
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717095"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046814"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>建立 XML 資料類型變數與資料行
   `xml` 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且與其他內建類型有些相似，例如 `int` 與 `varchar`。 如同其他內建類型， `xml` 當您建立資料表作為變數類型、參數類型、函數傳回類型，或是在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)中時，您可以使用資料類型做為資料行類型。  

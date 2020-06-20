@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7e9c170a187fc3ccf28301a2ee1c9ee7b626169f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4446f3b3a132488fdac6e859f30abaca40a193d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196438"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055011"
 ---
 # <a name="execute-user-defined-functions"></a>執行使用者定義函數
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中執行使用者定義的函數。  

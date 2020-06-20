@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 097c0e5568ba17b12f83d09e347eb3bf8b0bd7da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054123"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965965"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>估計非叢集索引的大小
   請遵循下列步驟來估計儲存非叢集索引所需的空間量：  
@@ -181,7 +180,7 @@ ms.locfileid: "66054123"
   
 5.  計算索引資料列的大小：  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size***Fixed_Leaf_Size + ***Variable_Leaf_Size***Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 （索引資料列的資料列行首額外負荷） + 6 （子頁面識別碼指標）  
+     ***Leaf_Row_Size***   = ***Fixed_Leaf_Size***  + ***Variable_Leaf_Size***  + ***Leaf_Null_Bitmap*** + 1 （索引資料列的資料列行首額外負荷） + 6 （子頁面識別碼指標）  
   
 6.  計算每個分頁的索引資料列數目 (每個分頁包含 8096 個可用位元組)：  
   
@@ -210,7 +209,7 @@ ms.locfileid: "66054123"
   
 1.  計算索引中的非分葉層級數目：  
   
-     ***非分葉層級***= 1 + 記錄 Index_Rows_Per_Page （***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***）  
+     ***非分葉層級***= 1 + 記錄 Index_Rows_Per_Page （***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***）  
   
      將這個值無條件向上進位到最近的整數。 此值不包含非叢集索引的分葉層級。  
   

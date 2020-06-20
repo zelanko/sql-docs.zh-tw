@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c1fad6175b6330b35264d8558fa7b52f86b85a9c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a87497d52e8f011b35933c8e1cea9cd8269a4617
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699282"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039445"
 ---
 # <a name="mapping-data-types-odbc"></a>對應資料類型 (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 資料類型對應至 ODBC sql 資料類型。 下列章節討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 資料類型和它們所對應的 ODBC SQL 資料類型。 這些章節也討論 ODBC SQL 資料類型及其對應的 ODBC C 資料類型，以及支援的和預設的轉換。  

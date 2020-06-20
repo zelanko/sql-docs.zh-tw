@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 294836625075a70b8e101afef2bb9221a177ca47
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058994"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966775"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>執行 SQL 工作編輯器 (一般頁面)
   使用 [執行 SQL 工作編輯器]**** 對話方塊的 [一般]**** 頁面，即可設定「執行 SQL」工作和提供該工作執行的 SQL 陳述式。  
@@ -30,11 +29,11 @@ ms.locfileid: "66058994"
  **名稱**  
  提供唯一的名稱給工作流程中的執行 SQL 工作。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
- **描述**  
+ **說明**  
  描述執行 SQL 工作。 最佳作法是以其用途描述工作，使封裝可以自我記錄並易於維護。  
   
  **限制**  
- 指定工作將在超時前執行的最大秒數。值為0表示無限時間。 預設值為 0。  
+ 指定工作將在超時前執行的最大秒數。值為0表示無限時間。 預設值是 0。  
   
 > [!NOTE]  
 >  如果預存程序藉由提供大於 [逾時]**** 指定的秒數之連接時間與交易完成時間，使預存程序模擬睡眠功能，就不會發生逾時。 不過，執行查詢的預存程序一律會受到 [逾時]**** 所指定的時間限制。  
@@ -56,8 +55,8 @@ ms.locfileid: "66058994"
   
  **相關主題** [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)、 [ODBC 連線管理員](connection-manager/odbc-connection-manager.md)、 [ADO 連線管理員](connection-manager/ado-connection-manager.md)、 [ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)、 [SQL Server Compact Edition 連線管理員](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **建立**  
- 從已定義的連接管理員清單中選擇連接。 若要建立新的連線，請選取 [\<新增連線...>]****。  
+ **[連接]**  
+ 從已定義的連接管理員清單中選擇連接。 若要建立新的連接，請選取 \<**New connection...**> 。  
   
  **SQLSourceType**  
  選取工作執行之 SQL 陳述式的來源類型。  
@@ -101,13 +100,13 @@ ms.locfileid: "66058994"
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 檔案連接  
  **FileConnection**  
- 選取現有的檔案連線管理員，或按一下 [\<新增連線...>]**** 建立新的連線管理員。  
+ 選取現有的檔案連線管理員，或按一下 \<**New connection...**> 以建立新的連線管理員。  
   
  **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = 變數  
  **SourceVariable**  
- 選取現有的變數，或按一下 [\<新增變數...>]**** 以建立新的變數。  
+ 選取現有的變數，或按一下 \<**New variable...**> 以建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
   

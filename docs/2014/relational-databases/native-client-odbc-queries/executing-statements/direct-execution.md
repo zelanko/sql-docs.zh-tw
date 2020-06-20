@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: de740430601e3b596a1d4d9717a8e23ef1e528cf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 29153f3e4e9265e87feb0e23ba9ae97118691e95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82710388"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018485"
 ---
 # <a name="direct-execution"></a>直接執行
   直接執行是執行陳述式的一種最基本的方式。 應用程式會建立包含語句的字元字串 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ，並使用**SQLExecDirect**函數提交它以供執行。 當此陳述式到達伺服器時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將它編譯成執行計畫，然後立即執行此執行計畫。  

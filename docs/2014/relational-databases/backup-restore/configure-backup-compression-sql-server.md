@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bcfc0dea167b972f4e463333ab6851b038a284ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f70994eb64cb6a50b538fd87f03ce7ea2fafe857
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922239"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958919"
 ---
 # <a name="configure-backup-compression-sql-server"></a>設定備份壓縮 (SQL Server)
   進行安裝時，備份壓縮預設是關閉的。 備份壓縮的預設行為是透過 [備份壓縮預設]  伺服器層級組態選項所定義。 不過，您可以在建立單一備份或排程一系列例行備份時，覆寫此伺服器層級預設值。 若要變更伺服器層級的預設值，請參閱 [檢視或設定備份壓縮預設伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  

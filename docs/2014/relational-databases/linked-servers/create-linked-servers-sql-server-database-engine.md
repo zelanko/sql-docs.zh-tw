@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b28468db1024a9789364e5b6e5c115cba71fa9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62743486"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024973"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
   此主題說明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，建立連結的伺服器以及存取來自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的資料。 透過建立連結的伺服器，您可以處理多個來源的資料。 連結的伺服器不必是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的另一個執行個體，但那是常見狀況。  
@@ -35,7 +34,7 @@ ms.locfileid: "62743486"
 ##  <a name="security"></a><a name="Security"></a> Security  
   
 ### <a name="permissions"></a>權限  
- 使用[!INCLUDE[tsql](../../includes/tsql-md.md)]語句時，需要`ALTER ANY LINKED SERVER`伺服器的許可權或**setupadmin**固定伺服器角色中的成員資格。 使用[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]時， `CONTROL SERVER`需要**系統管理員（sysadmin** ）固定伺服器角色的許可權或成員資格。  
+ 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句時，需要 `ALTER ANY LINKED SERVER` 伺服器的許可權或**setupadmin**固定伺服器角色中的成員資格。 使用時 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] `CONTROL SERVER` ，需要**系統管理員（sysadmin** ）固定伺服器角色的許可權或成員資格。  
   
 ##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> 如何建立連結的伺服器  
  您可以使用下列任一項：  
@@ -99,7 +98,7 @@ ms.locfileid: "62743486"
      **遠端密碼**  
      指定遠端使用者的密碼。  
   
-     **加入**  
+     **新增**  
      加入新的本機登入。  
   
      **移除**  
@@ -152,7 +151,7 @@ ms.locfileid: "62743486"
   
      若為 0，則使用 **sp_configure** 的預設 [remote query timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) 選項值。  
   
-     **查詢超時**  
+     **查詢逾時**  
      針對連結伺服器進行查詢的逾時值 (以秒為單位)。  
   
      如果為 0，則使用 **sp_configure** 預設 [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) 選項值。  
@@ -160,7 +159,7 @@ ms.locfileid: "62743486"
      **啟用分散式交易的升級**  
      使用此選項，透過 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易，保護伺服器對伺服器程序的動作。 此選項為 TRUE 時，呼叫遠端預存程序就會啟動分散式交易，而且會利用 MS DTC 來編列這項交易。 如需詳細資訊，請參閱 [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)的資料。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 ##### <a name="to-view-the-provider-options"></a>若要檢視提供者選項  
   

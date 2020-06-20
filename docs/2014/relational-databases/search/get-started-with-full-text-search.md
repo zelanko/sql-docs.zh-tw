@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eec806bffba330ac3ab995c1b3bfd3504589ecfd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011291"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063290"
 ---
 # <a name="get-started-with-full-text-search"></a>全文檢索搜尋使用者入門
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料庫預設會啟用全文檢索。 不過，若要針對資料表使用全文檢索索引，您必須在要以全文檢索引擎存取的資料表資料行中設定全文檢索索引功能。  
@@ -34,7 +33,7 @@ ms.locfileid: "66011291"
   
     1.  識別您想要包含在全文檢索索引中的每個文字資料行。  
   
-    2.  如果給定的資料行包含儲存為二進位資料（`varbinary(max)`或`image`資料）的檔，您就必須指定資料表資料行（*類型資料行*），以識別要編制索引之資料行中每個檔的類型。  
+    2.  如果給定的資料行包含儲存為二進位資料（ `varbinary(max)` 或 `image` 資料）的檔，您就必須指定資料表資料行（*類型資料行*），以識別要編制索引之資料行中每個檔的類型。  
   
     3.  指定您想讓全文檢索搜尋用於資料行中文件的語言。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66011291"
   
  當您將資料表指派給全文檢索目錄時，請考量下列指導方針：  
   
--   永遠選取最小的唯一索引，做為全文檢索唯一索引鍵。 （4位元組、以整數為基礎的索引是最佳的）。這會大幅減少[!INCLUDE[msCoName](../../includes/msconame-md.md)]搜尋服務在檔案系統中所需的資源。 如果主索引鍵較大 (超過 101 個位元組) 時，可考慮選擇資料表中其他的唯一索引，做為全文檢索唯一的索引鍵 (或建立另一個唯一索引)。 若全文檢索唯一索引鍵的大小超過允許的最大值 (900 個位元組) 時，將無法執行全文檢索的母體擴展作業。  
+-   永遠選取最小的唯一索引，做為全文檢索唯一索引鍵。 （4位元組、以整數為基礎的索引是最佳的）。這會 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大幅減少搜尋服務在檔案系統中所需的資源。 如果主索引鍵較大 (超過 101 個位元組) 時，可考慮選擇資料表中其他的唯一索引，做為全文檢索唯一的索引鍵 (或建立另一個唯一索引)。 若全文檢索唯一索引鍵的大小超過允許的最大值 (900 個位元組) 時，將無法執行全文檢索的母體擴展作業。  
   
 -   如果您正在針對包含數百萬資料列的資料表建立索引，請將此資料表指派給它本身的全文檢索目錄。  
   
@@ -101,14 +100,14 @@ ms.locfileid: "66011291"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>將停用字詞表與全文檢索索引產生關聯  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了停用字詞表。 *「停用字詞表」* (Stoplist) 是停用字詞 (也稱為非搜尋字) 的清單。 停用字詞表會與每個全文檢索索引相關聯，而且該停用字詞表中的字詞會套用至該索引的全文檢索查詢。 根據預設，系統停用字詞表會與新的全文檢索索引相關聯。 不過，您可以改為建立並使用自己的停用字詞表。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
- 例如，下列[建立全文](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]檢索停用字詞表語句會從系統停用字詞表中複製，以建立名為 myStoplist3 的新全文檢索停用字詞表：  
+ 例如，下列[建立全文](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)檢索停用字詞表 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 語句會從系統停用字詞表中複製，以建立名為 myStoplist3 的新全文檢索停用字詞表：  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- 下列[ALTER 全文](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]檢索停用字詞表語句會改變名為 myStoplist 的停用字詞表，並加入 ' en ' 這個字，第一個是針對西班牙文，再針對法文  
+ 下列[ALTER 全文](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)檢索停 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 用字詞表語句會改變名為 myStoplist 的停用字詞表，並加入 ' en ' 這個字，第一個是針對西班牙文，再針對法文  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ddbc29c1895ad57ad191604fec228109c8c7c55e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3e4c45cf608c78715abd7c5075d4cd7fb2e162a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698794"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018393"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>資料表值參數組成資料行的描述項欄位
   本節中所述的資料表值參數描述項欄位是使用[SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md)和[SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md)搭配執行參數描述元（IPD）的控制碼來進行操作。  
@@ -25,13 +24,13 @@ ms.locfileid: "82698794"
 ## <a name="remarks"></a>備註  
  SQL_DESC_AUTO_UNIQUE_VALUE 用於資料表值參數與其他功能。  
   
-|屬性名稱|類型|說明|  
+|屬性名稱|類型|描述|  
 |--------------------|----------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE 表示此資料行是識別資料行。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以使用此資訊來優化效能，但不需要應用程式來設定識別欄位。|  
   
  下列屬性會加入到應用程式參數描述項 (APD) 和實作參數描述項 (IPD) 的所有參數類型中：  
   
-|屬性名稱|類型|說明|  
+|屬性名稱|類型|描述|  
 |--------------------|----------|-----------------|  
 |SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE 表示此資料行是計算資料行。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以使用這種資訊來優化效能，但是應用程式不需要針對計算資料行設定它。<br /><br /> 若是非資料表值參數資料行的繫結，會忽略此屬性。|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE 表示資料表值參數資料行參與唯一的索引鍵。 這會使查詢效能更好。 若是非資料表值參數資料行的繫結，會忽略此屬性。|  
@@ -41,7 +40,7 @@ ms.locfileid: "82698794"
   
  這些屬性只適用於資料表值參數資料行。 若是其他參數，則會忽略這些屬性。  
   
- 如果針對資料表值參數資料行設定 SQL_CA_SS_COL_HAS_DEFAULT_VALUE，該資料行的 SQL_DESC_DATA_PTR 必須為 Null 指標。 否則，SQLExecute 或 SQLExecDirect 會傳回 SQL_ERROR。 將會產生含有 SQLSTATE = 07S01 的診斷記錄，以及「參數 p>，資料行 c>」的預設參數用法無效 \< \< ，其中 \< p> 是參數序數，而 \< c> 是資料行序數。  
+ 如果針對資料表值參數資料行設定 SQL_CA_SS_COL_HAS_DEFAULT_VALUE，該資料行的 SQL_DESC_DATA_PTR 必須為 Null 指標。 否則，SQLExecute 或 SQLExecDirect 會傳回 SQL_ERROR。 將會產生含有 SQLSTATE = 07S01 的診斷記錄，以及「參數、資料行的預設參數用法無效」訊息 \<p> \<c> ，其中 \<p> 是參數序數，而 \<c> 是資料行序數。  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC&#41;&#40;的資料表值參數](table-valued-parameters-odbc.md)  

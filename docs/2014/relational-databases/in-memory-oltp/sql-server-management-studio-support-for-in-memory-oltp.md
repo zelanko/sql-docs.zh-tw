@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 644ba0cfdbe2f0043364c633676bbc536c641efa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62468188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025790"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio 對記憶體中 OLTP 的支援
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用於管理您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構的整合式環境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供工具來設定、監視以及管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 如需詳細資訊，請參閱 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
@@ -42,7 +41,7 @@ ms.locfileid: "62468188"
   
      隨即顯示建立記憶體最佳化資料表的範本。  
   
-2.  若要取代範本參數，請在 [查詢]  功能表上，按一下 [指定範本參數的值]  。  
+2.  若要取代範本參數，請在 [查詢] 功能表上，按一下 [指定範本參數的值]。  
   
      如需有關如何使用範本的詳細資訊，請參閱[範本總管](../../ssms/template/template-explorer.md)。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62468188"
   
      建立原生編譯預存程序的範本會顯示。  
   
-2.  若要取代範本參數，請在 [查詢]  功能表上，按一下 [指定範本參數的值]   
+2.  若要取代範本參數，請在 [查詢] 功能表上，按一下 [指定範本參數的值]  
   
      如需有關如何建立新的預存程序的詳細資訊，請參閱[建立預存程序](../stored-procedures/create-a-stored-procedure.md)。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62468188"
   
      建立使用者定義的記憶體最佳化資料表類型的範本隨即顯示。  
   
-2.  若要取代範本參數，請在 [查詢]  功能表上，按一下 [指定範本參數的值]  。  
+2.  若要取代範本參數，請在 [查詢] 功能表上，按一下 [指定範本參數的值]。  
   
      如需有關如何建立新的預存程序的詳細資訊，請參閱 [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)。  
   
@@ -126,7 +125,7 @@ ms.locfileid: "62468188"
   
         -   產生指令碼。  
   
-             在 [產生和發佈指令碼精靈]  中，[檢查物件是否存在]  指令碼選項的預設值為 FALSE。 如果精靈的 [設定指令碼編寫選項]  畫面將 [檢查物件是否存在]  指令碼選項的值設為 TRUE，則產生的指令碼會包含 "CREATE PROCEDURE <procedure_name> AS" 和 "ALTER PROCEDURE <procedure_name> <procedure_definition>"。 在執行時，產生的指令碼將傳回錯誤，因為原生編譯預存程序不支援 ALTER PROCEDURE。  
+             在 [產生和發佈指令碼精靈]  中，[檢查物件是否存在]  指令碼選項的預設值為 FALSE。 如果精靈的 [設定指令碼編寫選項] 畫面將 [檢查物件是否存在] 指令碼選項的值設為 TRUE，則產生的指令碼會包含 "CREATE PROCEDURE <procedure_name> AS" 和 "ALTER PROCEDURE <procedure_name> <procedure_definition>"。 在執行時，產生的指令碼將傳回錯誤，因為原生編譯預存程序不支援 ALTER PROCEDURE。  
   
              若要變更每一個原生編譯預存程序其產生的指令碼：  
   
@@ -136,9 +135,9 @@ ms.locfileid: "62468188"
   
         -   複製資料庫。 對於具有記憶體最佳化之物件的資料庫，交易時不會在目的伺服器上建立資料庫及傳送資料。  
   
-        -   匯入和匯出資料。 使用 [**匯入和匯出精靈] 的 [從一個或多個資料表或檢視表複製資料][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 選項。 如果目的地資料表是不存在於目的地資料庫中的記憶體最佳化資料表：  
+        -   匯入和匯出資料。 使用 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈] 的 [從一個或多個資料表或檢視表複製資料] 選項。 如果目的地資料表是不存在於目的地資料庫中的記憶體最佳化資料表：  
   
-            1.  在 [**匯入和匯出精靈][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 的 [指定資料表複製或查詢]  畫面，選取 [從一個或多個資料表或檢視表複製資料]  。 然後按一下 [下一步]  。  
+            1.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈] 的 [指定資料表複製或查詢] 畫面，選取 [從一個或多個資料表或檢視表複製資料]。 然後按一下 [下一步]  。  
   
             2.  按一下 [編輯對應]  。 然後選取 [建立目的資料表]  並按一下 [編輯 SQL]  。 輸入 CREATE TABLE 語法，在目的地資料庫上建立記憶體最佳化的資料表。 按一下 [確定]  並完成此精靈中的其餘步驟。  
   
@@ -153,7 +152,7 @@ ms.locfileid: "62468188"
 ## <a name="unsupported-features-in-ssmanstudiofull"></a>不為下列項目所支援的功能： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  對於記憶體中 OLTP 物件， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支援 Database Engine 所不支援的功能和作業。  
   
- 如需不支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能的詳細資訊，請參閱支援的[SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)。  
+ 如需不支援功能的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[支援的 SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體中 OLTP 的 SQL Server 支援](sql-server-support-for-in-memory-oltp.md)  

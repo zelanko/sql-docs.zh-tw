@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ace29bf0-705a-434f-82e4-db99d01c5008
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ab758f83bde2cb587d3cfab8764fd7eb8fe2577
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54c1cb71a3a5ed546c7408d3fcb747792e9cc248
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063108"
 ---
 # <a name="using-capture-mode"></a>使用擷取模式
   SMO 程式可以擷取與記錄程式所發出的相等 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式來取代程式所執行的陳述式，或是加上程式所執行的陳述式。 您可以使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件，或使用 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Server> 屬性來啟用擷取模式。  

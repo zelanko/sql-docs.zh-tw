@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 86b67202537e650619f835e9c64d2c35a8e78fc2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 464c03bf597fe677579b2a2201db49ab810d2895
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796613"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063103"
 ---
 # <a name="managing-users-roles-and-logins"></a>管理使用者、角色和登入
   在 SMO 中，登入是由 <xref:Microsoft.SqlServer.Management.Smo.Login> 物件表示。 當登入存在於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時，可以加入至伺服器角色。 伺服器角色是由 <xref:Microsoft.SqlServer.Management.Smo.ServerRole> 物件表示， 資料庫角色是由 <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> 物件表示，應用程式角色則是由 <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> 物件表示。  

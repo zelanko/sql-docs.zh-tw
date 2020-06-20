@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 127044042eed7f082b6f1f7ba7ae6918232ba9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c035446034c5f9f8dfdeeed6a9b6b4be2ea77d72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891764"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966048"
 ---
 # <a name="step-2-verifying-the-deployment-bundle"></a>步驟 2:確認部署套件組合
   在第 1 課中，您建立了「部署教學課程」專案，並且將封裝和輔助檔案加入至專案中。在上一項工作中，您為專案建立了部署公用程式。  
@@ -50,7 +49,7 @@ ms.locfileid: "62891764"
   
      `<?xml version="1.0"?><DTSDeploymentManifest GeneratedBy="Domain\UserName" GeneratedFromProjectName="Deployment Tutorial" GeneratedDate="2006-02-24T13:29:02.6537669-08:00" AllowConfigurationChanges="true"><Package>DataTransfer.dtsx</Package><Package>LoadXMLData.dtsx</Package><ConfigurationFile>datatransferconfig.dtsconfig</ConfigurationFile><ConfigurationFile>loadxmldataconfig.dtsconfig</ConfigurationFile><MiscellaneousFile>Readme.txt</MiscellaneousFile><MiscellaneousFile>orders.xml</MiscellaneousFile><MiscellaneousFile>NewCustomers.txt</MiscellaneousFile><MiscellaneousFile>orders.xsd</MiscellaneousFile></DTSDeploymentManifest>`  
   
-4.  請`AllowConfigurationChanges`確認屬性的值為**TRUE** ，而且 XML 包含兩個封裝`Package`的元素，分別是`MiscellaneousFile`四個非封裝檔案的專案，以及`ConfigurationFile`兩個 XML 設定檔中每一個的元素。  
+4.  請確認屬性的值 `AllowConfigurationChanges` 為**true** ，而且 XML 包含兩個封裝的元素，分別是四個非封裝檔案的專案， `Package` `MiscellaneousFile` 以及兩個 `ConfigurationFile` XML 設定檔中每一個的元素。  
   
 5.  結束 Internet Explorer 或文字編輯器。  
   

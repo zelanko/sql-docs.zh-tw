@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 97b13e8ccf7ef331320d15254dde3480331c4bb0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d73ac83f6d6ac77a4cd7b70d48bb13896c277a54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470355"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037775"
 ---
 # <a name="strong-passwords"></a>增強式密碼
   密碼會是伺服器安全性部署中最薄弱的連結。 您在選取密碼的時候，應該始終保持小心謹慎的態度。 增強式密碼具有下列特性：  

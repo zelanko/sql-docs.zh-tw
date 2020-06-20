@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b4b920b17e960059e1212be7dd15c176c0b25a47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12a6666357bf4e8a6dc68f395a1e2e8e1fd8fcaf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059190"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966868"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   使用 **[執行封裝]** 對話方塊，即可執行儲存在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上的封裝。  

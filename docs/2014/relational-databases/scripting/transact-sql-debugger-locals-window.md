@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 70beb09d12cab07290d38178cad296509a914983
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6f8f62eb69a50d7543af41dddb9c62c842d17151
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718364"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063294"
 ---
 # <a name="locals-window"></a>本機視窗
   [區域變數]  視窗會顯示有關 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具目前範圍中之區域運算式的資訊。 此範圍會設定為 [呼叫堆疊]  視窗內選取的目前呼叫堆疊框架。 您必須在偵錯模式中，才能顯示本機運算式。  

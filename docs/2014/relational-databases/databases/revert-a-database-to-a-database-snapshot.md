@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c78da3d7c559309c0563760e7062f01cf784648
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916706"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965768"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>將資料庫還原成資料庫快照集
   如果線上資料庫中的資料已經損毀，在某些情況下，將資料庫還原成發生損毀之前的資料庫快照集可能是從備份還原資料庫的正確替代方式。 例如，還原資料庫可用於反轉最近發生的嚴重使用者錯誤，例如誤將資料表卸除。 不過，在快照集之後進行的所有變更都將遺失。  

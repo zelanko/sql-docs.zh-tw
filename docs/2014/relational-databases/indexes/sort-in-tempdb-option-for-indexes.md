@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8feccc5b1d29617193f481569e10648c6ed77242
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035597"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025223"
 ---
 # <a name="sort_in_tempdb-option-for-indexes"></a>索引的 SORT_IN_TEMPDB 選項
   當您建立或重建索引時，可將 SORT_IN_TEMPDB 選項設為 ON，以便指示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用 **tempdb** 來儲存用來建立索引的中繼排序結果。 雖然此選項會增加建立索引所使用的暫存磁碟空間數量，但只要 **tempdb** 所在的磁碟集與使用者資料庫不同，該選項就會減少建立或重建索引所需的時間。 如需 **tempdb**的詳細資訊，請參閱 [設定 index create memory 伺服器組態選項](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)。  

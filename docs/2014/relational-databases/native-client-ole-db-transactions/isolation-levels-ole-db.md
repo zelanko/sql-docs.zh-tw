@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4026154204cf6de95711a3014b069c34a29d9922
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c7f6cbff4e68eaedd3e78a82cddd872ba5f8f19e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704515"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017824"
 ---
 # <a name="isolation-levels-ole-db"></a>隔離等級 (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端可以控制連線的交易隔離等級。 若要控制交易隔離等級， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者取用者會使用：  

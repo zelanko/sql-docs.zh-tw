@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b51762f8fd25ce6fe83ba3f26c8f0200e6938cf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 43ccc0f4b72b8ddd6f1fed66ead95d19247dc5c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706628"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027267"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 擴充的事件引擎
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充的事件引擎是執行以下作業之服務與物件的集合：  

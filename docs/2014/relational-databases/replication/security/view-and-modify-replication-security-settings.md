@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 923d137b4b884300b2fb31cbacf2ee7dff1a6621
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8da4a6e8093c6f04e06b68448660e4096e9e5c22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73912795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055721"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>檢視及修改複寫安全性設定
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中檢視及修改複寫安全性設定。 例如，您可能要將「記錄讀取器代理程式」到「發行者」的連接從 SQL Server 驗證變更為 Windows 整合式驗證，或者在 Windows 帳戶密碼變更後，可能需要變更用來執行代理程式作業的認證。 如需有關各代理程式需要的權限資訊，請參閱＜ [複寫代理程式安全性模型](replication-agent-security-model.md)＞。  
@@ -62,13 +61,13 @@ ms.locfileid: "73912795"
   
 1.  **[更新複寫密碼]** 對話方塊，可從 **的** [複寫] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]資料夾開啟。 如果變更複寫拓撲中伺服器上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 帳戶或 Windows 帳戶的密碼，請使用此對話方塊，而非更新使用該帳戶之每個代理程式的密碼。 如果多個伺服器上的代理程式使用同一個帳戶，則必須連接到每個伺服器並變更密碼。 密碼在複寫使用密碼的所有位置更新。 而並不會在其他位置更新，例如連結的伺服器。  
   
-2.  [發行集屬性 - \<發行集>]  對話方塊的 [代理程式安全性]  頁面。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md)＞。  
+2.  [**發行集屬性- \<Publication> ** ] 對話方塊的 [**代理程式安全性**] 頁面。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md)＞。  
   
-3.  [訂閱屬性 - \<訂閱>]  對話方塊。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) ＞與＜ [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)＞。  
+3.  [**訂閱屬性- \<Subscription> ** ] 對話方塊。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) ＞與＜ [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)＞。  
   
-4.  [散發者屬性 - \<散發者>]  和 [散發資料庫屬性 - \<資料庫>]  對話方塊。 如需存取這些對話方塊的詳細資訊，請參閱＜ [View and Modify Distributor and Publisher Properties](../view-and-modify-distributor-and-publisher-properties.md)＞。  
+4.  [散發者**屬性 \<Distributor> ** ] 和 [ ** \<Database> 散發資料庫屬性**] 對話方塊。 如需存取這些對話方塊的詳細資訊，請參閱＜ [View and Modify Distributor and Publisher Properties](../view-and-modify-distributor-and-publisher-properties.md)＞。  
   
-5.  [發行者屬性 - \<發行者>]  對話方塊。 如需存取此對話方塊的詳細資訊，請參閱＜ [View and Modify Distributor and Publisher Properties](../view-and-modify-distributor-and-publisher-properties.md)＞。  
+5.  [**發行者屬性- \<Publisher> ** ] 對話方塊。 如需存取此對話方塊的詳細資訊，請參閱＜ [View and Modify Distributor and Publisher Properties](../view-and-modify-distributor-and-publisher-properties.md)＞。  
   
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>若要變更一個或多個代理程式使用的帳戶之密碼  
   
@@ -87,7 +86,7 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>變更快照集代理程式的安全性設定  
   
-1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [代理程式安全性]  頁面上，按一下 [快照集代理程式]  文字方塊旁的 [安全性設定]  按鈕。  
+1.  在 [**發行集 \<Publication> 屬性-** ] 對話方塊的 [**代理程式安全性**] 頁面上，按一下 [**快照集代理程式**] 文字方塊旁的 [**安全性設定**] 按鈕。  
   
 2.  在 **[快照集代理程式安全性]** 對話方塊中，指定代理程式執行時所使用的帳戶：  
   
@@ -102,13 +101,13 @@ ms.locfileid: "73912795"
     -   在 **[密碼]** 和 **[確認密碼]** 文字方塊中輸入新的增強式密碼。  
   
     > [!NOTE]  
-    >  若發行者是 Oracle 發行者，則連接內容指定於 [散發者屬性 - \<散發者>]  對話方塊中。 請參閱下面用於變更內容的程序。  
+    >  如果發行者是 Oracle 發行者，則連接內容會指定于 [散發者**屬性- \<Distributor> **] 對話方塊中。 請參閱下面用於變更內容的程序。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>變更記錄讀取器代理程式的安全性設定  
   
-1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [代理程式安全性]  頁面上，按一下 [記錄讀取器代理程式]  文字方塊旁的 [安全性設定]  按鈕。  
+1.  在 [**發行集 \<Publication> 屬性-** ] 對話方塊的 [**代理程式安全性**] 頁面上，按一下 [**記錄讀取器代理程式**] 文字方塊旁的 [**安全性設定**] 按鈕。  
   
 2.  在 **[記錄讀取器代理程式安全性]** 對話方塊中，指定代理程式執行時所使用的帳戶：  
   
@@ -123,7 +122,7 @@ ms.locfileid: "73912795"
     -   在 **[密碼]** 和 **[確認密碼]** 文字方塊中輸入新的增強式密碼。  
   
     > [!NOTE]  
-    >  若發行者是 Oracle 發行者，則連接內容指定於 [散發者屬性 - \<散發者>]  對話方塊中。 使用下一個程序變更內容。  
+    >  如果發行者是 Oracle 發行者，則連接內容會指定于 [散發者**屬性- \<Distributor> **] 對話方塊中。 使用下一個程序變更內容。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -132,7 +131,7 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-the-context-under-which-the-snapshot-agent-and-log-reader-agent-for-an-oracle-publication-make-connections-to-the-publisher"></a>若要變更 Oracle 發行集的快照集代理程式與記錄讀取器代理程式連接到發行者所使用的內容  
   
-1.  在 [散發者屬性 - \<散發者>]  對話方塊的 [發行者]  頁面上，按一下發行者旁的屬性按鈕 ( **...** )。  
+1.  在 [散發者**屬性- \<Distributor> ** ] 對話方塊的 [**發行者**] 頁面上，按一下發行者旁的屬性按鈕（**...**）。  
   
 2.  在 **[代理程式至發行者的連接]** 區段，指定您設定的複寫管理使用者結構描述所使用之登入與密碼。 如需詳細資訊，請參閱[設定 Oracle 發行者](../non-sql/configure-an-oracle-publisher.md)。  
   
@@ -140,7 +139,7 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>變更發送訂閱之散發代理程式的安全性設定  
   
-1.  在發行者端的 [訂閱屬性 - \<訂閱>]  對話方塊中，可做下列變更：  
+1.  在「發行者」**端 \<Subscription> 的 [訂閱屬性**] 對話方塊中，您可以進行下列變更：  
   
     -   若要變更散發代理程式執行和連接到散發者時所使用的帳戶，請按一下 [代理程式處理帳戶]  資料列，然後按一下資料列中的屬性 ( **...** ) 按鈕。 在 **[散發代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
@@ -152,7 +151,7 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>變更提取訂閱之散發代理程式的安全性設定  
   
-1.  在訂閱者端的 [訂閱屬性 - \<訂閱>]  對話方塊中，可做下列變更：  
+1.  在訂閱者**端 \<Subscription> 的 [訂閱屬性**] 對話方塊中，您可以進行下列變更：  
   
     -   若要變更散發代理程式執行和連接到訂閱者時所使用的帳戶，請按一下 [代理程式處理帳戶]  資料列，然後按一下資料列中的屬性 ( **...** ) 按鈕。 在 **[散發代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
@@ -164,7 +163,7 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription"></a>變更發送訂閱之合併代理程式的安全性設定  
   
-1.  在發行者端的 [訂閱屬性 - \<訂閱>]  對話方塊中，可做下列變更：  
+1.  在「發行者」**端 \<Subscription> 的 [訂閱屬性**] 對話方塊中，您可以進行下列變更：  
   
     -   若要變更合併代理程式執行和連接到發行者與散發者時所使用的帳戶，請按一下 [代理程式處理帳戶]  資料列，然後按一下資料列中的屬性 ( **...** ) 按鈕。 在 **[合併代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
@@ -174,7 +173,7 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>變更提取訂閱之合併代理程式的安全性設定  
   
-1.  在訂閱者端的 [訂閱屬性 - \<訂閱>]  對話方塊中，可做下列變更：  
+1.  在訂閱者**端 \<Subscription> 的 [訂閱屬性**] 對話方塊中，您可以進行下列變更：  
   
     -   若要變更合併代理程式執行和連接到訂閱者時所使用的帳戶，請按一下 [代理程式處理帳戶]  資料列，然後按一下資料列中的屬性 ( **...** ) 按鈕。 在 **[合併代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
@@ -184,9 +183,9 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>若要變更佇列讀取器代理程式執行時所使用的帳戶  
   
-1.  在 [散發者屬性 - \<散發者>]  對話方塊的 [一般]  頁面上，按一下散發資料庫旁的屬性 ( **...** ) 按鈕。  
+1.  在 [散發者**屬性- \<Distributor> ** ] 對話方塊的 [**一般**] 頁面上，按一下散發資料庫旁的屬性（**...**）按鈕。  
   
-2.  在 [散發資料庫屬性 - \<資料庫>]  對話方塊中，按一下 [代理程式處理帳戶]  文字方塊旁的 [安全性設定]  按鈕。  
+2.  在 [**散發資料庫屬性- \<Database> ** ] 對話方塊中，按一下 [**代理程式處理帳戶**] 文字方塊旁的 [**安全性設定**] 按鈕。  
   
 3.  在 **[佇列讀取器代理程式安全性]** 對話方塊中，指定代理程式執行和連接到「散發者」時所使用的帳戶：  
   
@@ -201,7 +200,7 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-the-context-under-which-the-queue-reader-agent-makes-connections-to-the-publisher"></a>若要變更佇列讀取器代理程式連接到發行者所使用的內容  
   
-1.  在 [散發者屬性 - \<散發者>]  對話方塊的 [發行者]  頁面上，按一下發行者旁的屬性按鈕 ( **...** )。  
+1.  在 [散發者**屬性- \<Distributor> ** ] 對話方塊的 [**發行者**] 頁面上，按一下發行者旁的屬性按鈕（**...**）。  
   
 2.  在 **[代理程式至發行者的連接 ]** 區段，指定 **[代理程式連接模式]** 選項中 **[模擬代理程式處理帳戶]** 或 **[SQL Server 驗證]** 的值。 如果指定 **[SQL Server 驗證]** ，還要輸入 **[登入]** 與 **[密碼]** 的值。  
   
@@ -216,7 +215,7 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>若要變更立即更新提取訂閱的安全性設定  
   
-1.  在訂閱者端的 [訂閱屬性 - \<訂閱>]**** 對話方塊中，按一下 [發行者連接]**** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。  
+1.  在訂閱者**端的 \<Subscription> [訂閱屬性-** ] 對話方塊中，按一下 [**發行者連接]** 資料列，然後按一下資料列中的屬性（**...**）按鈕。  
   
 2.  在 **[輸入連接資訊]** 對話方塊中，選取下列其中一個選項：  
   
@@ -233,11 +232,11 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>變更從發行者到散發者之管理連接的密碼  
   
-1.  在 [散發者屬性 - \<散發者>]  對話方塊的 [發行者]  頁面上，於 [密碼]  與 [確認密碼]  文字方塊中輸入強式密碼。  
+1.  在 [**散發者****屬性- \<Distributor> ** ] 對話方塊的 [發行者] 頁面上，于 [**密碼**] 和 [**確認密碼**] 文字方塊中輸入強式密碼。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-3.  在 [發行者屬性 - \<發行者>]  對話方塊的 [一般]  頁面上，於 [密碼]  與 [確認密碼]  文字方塊中輸入強式密碼。  
+3.  在 [**發行者屬性 \<Publisher> -** ] 對話方塊的 [**一般**] 頁面上，于 [**密碼**] 和 [**確認密碼**] 文字方塊中輸入強式密碼。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -248,10 +247,10 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-all-instances-of-a-stored-password-at-a-replication-server"></a>變更複寫伺服器上儲存的所有密碼執行個體  
   
-1.  在 master 資料庫複寫拓撲中的伺服器上，執行 [sp_changereplicationserverpasswords](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql)。 指定要[!INCLUDE[msCoName](../../../includes/msconame-md.md)]變更其密碼[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的** \@ ** ** \@ ** Windows 帳戶或登入，以及帳戶的新密碼或密碼登入。 這樣會變更當連接到拓撲中的其他伺服器時，由此伺服器上的所有代理程式所使用的每一個密碼執行個體。  
+1.  在 master 資料庫複寫拓撲中的伺服器上，執行 [sp_changereplicationserverpasswords](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql)。 指定 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 要變更其密碼的 Windows 帳戶或登入， ** \@ **以及帳戶的新密碼或** \@ 密碼**登入。 這樣會變更當連接到拓撲中的其他伺服器時，由此伺服器上的所有代理程式所使用的每一個密碼執行個體。  
   
     > [!NOTE]  
-    >  若只要針對拓撲中特定伺服器的連接變更登入和密碼（例如「散發者」或「訂閱者」），請為** \@伺服器**指定此伺服器的名稱。  
+    >  若只要針對拓撲中特定伺服器的連接變更登入和密碼（例如「散發者」或「訂閱者」），請為** \@ 伺服器**指定此伺服器的名稱。  
   
 2.  在必須更新密碼的複寫拓撲中，於每一部伺服器上重複步驟 1。  
   
@@ -260,30 +259,30 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>變更快照集代理程式的安全性設定  
   
-1.  在發行者上，執行[sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql)，並指定** \@發行**集。 這樣會傳回快照集代理程式目前的安全性設定。  
+1.  在發行者上，執行[sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql)，並指定** \@ 發行**集。 這樣會傳回快照集代理程式目前的安全性設定。  
   
-2.  在發行者上，執行[sp_changepublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql)，指定** \@發行**集，以及下列一或多個要變更的安全性設定：  
+2.  在發行者上，執行[sp_changepublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql)，指定** \@ 發行**集，以及下列一或多個要變更的安全性設定：  
   
-    -   若要變更代理程式執行時所用的 Windows 帳戶，或只是此帳戶的密碼，請指定** \@job_login**和** \@job_password**。  
+    -   若要變更代理程式執行時所用的 Windows 帳戶，或只是此帳戶的密碼，請指定** \@ job_login**和** \@ job_password**。  
   
-    -   若要變更連接到發行者時所使用的安全性模式，請為** \@publisher_security_mode**指定**1**或**0**的值。  
+    -   若要變更連接到發行者時所使用的安全性模式，請為** \@ publisher_security_mode**指定**1**或**0**的值。  
   
-    -   當您將連接到發行者時所使用的安全性模式**從 1**變更為**0**時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]或在變更用於此連接的登入時，請指定** \@publisher_login**和** \@publisher_password**。  
+    -   當您將連接到發行者時所使用的安全性模式從**1**變更為**0**時，或在變更 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用於此連接的登入時，請指定** \@ publisher_login**和** \@ publisher_password**。  
   
     > [!IMPORTANT]  
     >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>變更記錄讀取器代理程式的安全性設定  
   
-1.  在發行者上，執行[sp_helplogreader_agent](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql)，並指定** \@Publisher**。 這樣會傳回記錄讀取器代理程式目前的安全性設定。  
+1.  在發行者上，執行[sp_helplogreader_agent](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql)，並指定** \@ Publisher**。 這樣會傳回記錄讀取器代理程式目前的安全性設定。  
   
-2.  在發行者上，執行[sp_changelogreader_agent](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql)，指定** \@發行**集，以及下列一或多個要變更的安全性設定：  
+2.  在發行者上，執行[sp_changelogreader_agent](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql)，指定** \@ 發行**集，以及下列一或多個要變更的安全性設定：  
   
-    -   若要變更代理程式執行時所用的 Windows 帳戶，或只是此帳戶的密碼，請指定** \@job_login**和** \@job_password**。  
+    -   若要變更代理程式執行時所用的 Windows 帳戶，或只是此帳戶的密碼，請指定** \@ job_login**和** \@ job_password**。  
   
-    -   若要變更連接到發行者時所使用的安全性模式，請為** \@publisher_security_mode**指定**1**或**0**的值。  
+    -   若要變更連接到發行者時所使用的安全性模式，請為** \@ publisher_security_mode**指定**1**或**0**的值。  
   
-    -   當您將連接到發行者時所使用的安全性模式**從 1**變更為**0**時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]或在變更用於此連接的登入時，請指定** \@publisher_login**和** \@publisher_password**。  
+    -   當您將連接到發行者時所使用的安全性模式從**1**變更為**0**時，或在變更 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用於此連接的登入時，請指定** \@ publisher_login**和** \@ publisher_password**。  
   
     > [!NOTE]  
     >  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。  
@@ -293,17 +292,17 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>變更發送訂閱之散發代理程式的安全性設定  
   
-1.  在發行集資料庫的發行者上，執行[sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)，並指定** \@發行**集和** \@訂閱者**。 這樣會傳回訂閱屬性，包括在散發者上執行之散發代理程式的安全性設定。  
+1.  在發行集資料庫的發行者上，執行[sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)，並指定** \@ 發行**集和** \@ 訂閱者**。 這樣會傳回訂閱屬性，包括在散發者上執行之散發代理程式的安全性設定。  
   
-2.  在發行集資料庫的發行者上，執行[sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql)、指定** \@發行**集、 ** \@訂閱者**、 ** \@subscriber_db**、發行項的**所有** ** \@值、** ** \@屬性**的安全性屬性名稱，以及** \@value**的屬性新值。  
+2.  在發行集資料庫的發行者上，執行[sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql)、指定** \@ 發行**集、 ** \@ 訂閱者**、 ** \@ subscriber_db**、發行項的**所有**值、 ** \@ 屬性**的安全性屬性名稱，以及** \@ value**的屬性新值。 ** \@ **  
   
 3.  針對以下變更的每一個安全性屬性重複步驟 2：  
   
-    -   若要變更代理程式執行時所使用的 Windows 帳戶，或只是此帳戶的密碼，請為 [ ** \@屬性**] 指定 [ **distrib_job_password** ] 的值，並為 [ ** \@值**] 指定新的 [密碼]。 變更帳戶本身時，請重複步驟2，針對** \@[屬性**] 指定 [ **distrib_job_login** ] 的值，然後針對 [ ** \@值**] 輸入新的 Windows 帳戶。  
+    -   若要變更代理程式執行時所使用的 Windows 帳戶，或只是此帳戶的密碼，請為 [ ** \@ 屬性**] 指定 [ **distrib_job_password** ] 的值，並為 [ ** \@ 值**] 指定新的 [密碼]。 變更帳戶本身時，請重複步驟2，針對 [ ** \@ 屬性**] 指定 [ **distrib_job_login** ] 的值，然後針對 [ ** \@ 值**] 輸入新的 Windows 帳戶。  
   
-    -   若要變更連接到訂閱者時所使用的安全性模式，請針對** \@ **[ ** \@屬性**] 指定 [ **subscriber_security_mode** ] 的值，並為 [值] 指定 [ **1** （Windows 整合式驗證）] 或 [ **0** （SQL Server 驗證）]。  
+    -   若要變更連接到訂閱者時所使用的安全性模式，請針對 [ ** \@ 屬性**] 指定 [ **subscriber_security_mode** ] 的值，並為 [ ** \@ 值**] 指定 [ **1** （Windows 整合式驗證）] 或 [ **0** （SQL Server 驗證）]。  
   
-    -   將訂閱者安全性模式變更為 SQL Server 驗證，或變更 SQL Server authentication 的登入資訊時，請為** \@[屬性**] 指定 [ **subscriber_password** ] 的值，並針對** \@[值**] 指定新的密碼。 重複步驟2，針對** \@[屬性**] 指定**subscriber_login**的值，並為** \@[值**] 指定新的登入。  
+    -   將訂閱者安全性模式變更為 SQL Server 驗證，或變更 SQL Server Authentication 的登入資訊時，請為 [ ** \@ 屬性**] 指定 [ **subscriber_password** ] 的值，並針對 [ ** \@ 值**] 指定新的密碼。 重複步驟2，針對 [ ** \@ 屬性**] 指定**subscriber_login**的值，並為 [ ** \@ 值**] 指定新的登入。  
   
     > [!NOTE]  
     >  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。  
@@ -313,38 +312,38 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>變更提取訂閱之散發代理程式的安全性設定  
   
-1.  在訂閱者上，執行[sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql)，並指定** \@發行**集。 這樣會傳回訂閱屬性，包括在訂閱者上執行之散發代理程式的安全性設定。  
+1.  在訂閱者上，執行[sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql)，並指定** \@ 發行**集。 這樣會傳回訂閱屬性，包括在訂閱者上執行之散發代理程式的安全性設定。  
   
-2.  在訂閱資料庫的訂閱者上，執行[sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql)、指定** \@發行者**、 ** \@publisher_db**、 ** \@發行**集、 ** \@屬性**的安全性屬性名稱，以及** \@value**的屬性新值。  
+2.  在訂閱資料庫的訂閱者上，執行[sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql)、指定** \@ 發行者**、 ** \@ publisher_db**、 ** \@ 發行**集、 ** \@ 屬性**的安全性屬性名稱，以及** \@ value**的屬性新值。  
   
 3.  針對以下變更的每一個安全性屬性重複步驟 2：  
   
-    -   若要變更代理程式執行時所使用的 Windows 帳戶，或只是此帳戶的密碼，請為 [ ** \@屬性**] 指定 [ **distrib_job_password** ] 的值，並為 [ ** \@值**] 指定新的 [密碼]。 變更帳戶本身時，請重複步驟2，針對** \@[屬性**] 指定 [ **distrib_job_login** ] 的值，然後針對 [ ** \@值**] 輸入新的 Windows 帳戶。  
+    -   若要變更代理程式執行時所使用的 Windows 帳戶，或只是此帳戶的密碼，請為 [ ** \@ 屬性**] 指定 [ **distrib_job_password** ] 的值，並為 [ ** \@ 值**] 指定新的 [密碼]。 變更帳戶本身時，請重複步驟2，針對 [ ** \@ 屬性**] 指定 [ **distrib_job_login** ] 的值，然後針對 [ ** \@ 值**] 輸入新的 Windows 帳戶。  
   
-    -   若要變更連接到散發者時使用的安全性模式，請針對** \@ **[ ** \@屬性**] 指定 [ **distributor_security_mode** ] 的值，並為 [值] 指定 [ **1** （Windows 整合式驗證）] 或 [ **0** （SQL Server Authentication）]。  
+    -   若要變更連接到散發者時使用的安全性模式，請針對 [ ** \@ 屬性**] 指定 [ **distributor_security_mode** ] 的值，並為 [ ** \@ 值**] 指定 [ **1** （Windows 整合式驗證）] 或 [ **0** （SQL Server Authentication）]。  
   
-    -   將散發者的安全性模式變更為 SQL Server 驗證，或是變更 SQL Server 驗證的登入資訊時，請為** \@[屬性**] 指定 [ **distributor_password** ]，並針對** \@[值**] 指定新的密碼。 重複步驟2，針對** \@[屬性**] 指定**distributor_login**的值，並為** \@[值**] 指定新的登入。  
+    -   將散發者的安全性模式變更為 SQL Server 驗證，或是變更 SQL Server 驗證的登入資訊時，請為 [ ** \@ 屬性**] 指定 [ **distributor_password** ]，並針對 [ ** \@ 值**] 指定新的密碼。 重複步驟2，針對 [ ** \@ 屬性**] 指定**distributor_login**的值，並為 [ ** \@ 值**] 指定新的登入。  
   
     > [!NOTE]  
     >  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription"></a>變更發送訂閱之合併代理程式的安全性設定  
   
-1.  在發行集資料庫的發行者上，執行[sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql)，並指定** \@發行**集、 ** \@訂閱者**和** \@subscriber_db**。 這樣會傳回訂閱屬性，包括在散發者上執行之合併代理程式的安全性設定。  
+1.  在發行集資料庫的發行者上，執行[sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql)，並指定** \@ 發行**集、 ** \@ 訂閱者**和** \@ subscriber_db**。 這樣會傳回訂閱屬性，包括在散發者上執行之合併代理程式的安全性設定。  
   
-2.  在發行集資料庫的發行者上，執行[sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql)、指定** \@發行**集、 ** \@訂閱者**、 ** \@subscriber_db**、 ** \@屬性**的安全性屬性名稱，以及** \@value**的屬性新值。  
+2.  在發行集資料庫的發行者上，執行[sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql)、指定** \@ 發行**集、 ** \@ 訂閱者**、 ** \@ subscriber_db**、 ** \@ 屬性**的安全性屬性名稱，以及** \@ value**的屬性新值。  
   
 3.  針對以下變更的每一個安全性屬性重複步驟 2：  
   
-    -   若要變更代理程式執行時所使用的 Windows 帳戶，或只是此帳戶的密碼，請針對** \@[屬性**] 指定 [ **merge_job_password** ] 的值，並針對** \@[值**] 指定新的 [密碼]。 變更帳戶本身時，請重複步驟2，針對** \@[屬性**] 指定 [ **merge_job_login** ] 的值，然後針對 [ ** \@值**] 輸入新的 Windows 帳戶。  
+    -   若要變更代理程式執行時所使用的 Windows 帳戶，或只是此帳戶的密碼，請針對 [ ** \@ 屬性**] 指定 [ **merge_job_password** ] 的值，並針對 [ ** \@ 值**] 指定新的 [密碼]。 變更帳戶本身時，請重複步驟2，針對 [ ** \@ 屬性**] 指定 [ **merge_job_login** ] 的值，然後針對 [ ** \@ 值**] 輸入新的 Windows 帳戶。  
   
-    -   若要變更連接到訂閱者時所使用的安全性模式，請針對** \@ **[ ** \@屬性**] 指定 [ **subscriber_security_mode** ] 的值，並為 [值] 指定 [ **1** （Windows 整合式驗證）] 或 [ **0** （SQL Server 驗證）]。  
+    -   若要變更連接到訂閱者時所使用的安全性模式，請針對 [ ** \@ 屬性**] 指定 [ **subscriber_security_mode** ] 的值，並為 [ ** \@ 值**] 指定 [ **1** （Windows 整合式驗證）] 或 [ **0** （SQL Server 驗證）]。  
   
-    -   將訂閱者安全性模式變更為 SQL Server 驗證，或變更 SQL Server authentication 的登入資訊時，請為** \@[屬性**] 指定 [ **subscriber_password** ] 的值，並針對** \@[值**] 指定新的密碼。 重複步驟2，針對** \@[屬性**] 指定**subscriber_login**的值，並為** \@[值**] 指定新的登入。  
+    -   將訂閱者安全性模式變更為 SQL Server 驗證，或變更 SQL Server Authentication 的登入資訊時，請為 [ ** \@ 屬性**] 指定 [ **subscriber_password** ] 的值，並針對 [ ** \@ 值**] 指定新的密碼。 重複步驟2，針對 [ ** \@ 屬性**] 指定**subscriber_login**的值，並為 [ ** \@ 值**] 指定新的登入。  
   
-    -   若要變更連接到發行者時所使用的安全性模式，請針對** \@ **[ ** \@屬性**] 指定 [ **publisher_security_mode** ] 的值，並為 [值] 指定 [ **1** （Windows 整合式驗證）] 或 [ **0** （SQL Server Authentication）]。  
+    -   若要變更連接到發行者時所使用的安全性模式，請針對 [ ** \@ 屬性**] 指定 [ **publisher_security_mode** ] 的值，並為 [ ** \@ 值**] 指定 [ **1** （Windows 整合式驗證）] 或 [ **0** （SQL Server Authentication）]。  
   
-    -   將發行者安全性模式變更為 SQL Server 驗證，或變更 SQL Server authentication 的登入資訊時，請為** \@[屬性**] 指定 [ **publisher_password** ] 的值， ** \@** 並針對 [值] 指定新的密碼。 重複步驟2，針對** \@[屬性**] 指定**publisher_login**的值，並為** \@[值**] 指定新的登入。  
+    -   將發行者安全性模式變更為 SQL Server 驗證，或變更 SQL Server Authentication 的登入資訊時，請為 [ ** \@ 屬性**] 指定 [ **publisher_password** ] 的值，並針對 [ ** \@ 值**] 指定新的密碼。 重複步驟2，針對 [ ** \@ 屬性**] 指定**publisher_login**的值，並為 [ ** \@ 值**] 指定新的登入。  
   
     > [!NOTE]  
     >  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。  
@@ -354,30 +353,30 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>變更提取訂閱之合併代理程式的安全性設定  
   
-1.  在訂閱者上，執行[sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql)，並指定** \@發行**集。 這樣會傳回訂閱屬性，包括在訂閱者上執行之合併代理程式的安全性設定。  
+1.  在訂閱者上，執行[sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql)，並指定** \@ 發行**集。 這樣會傳回訂閱屬性，包括在訂閱者上執行之合併代理程式的安全性設定。  
   
-2.  在訂閱資料庫的訂閱者上，執行[sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql)、指定** \@發行者**、 ** \@publisher_db**、 ** \@發行**集、 ** \@屬性**的安全性屬性名稱，以及** \@value**的屬性新值。  
+2.  在訂閱資料庫的訂閱者上，執行[sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql)、指定** \@ 發行者**、 ** \@ publisher_db**、 ** \@ 發行**集、 ** \@ 屬性**的安全性屬性名稱，以及** \@ value**的屬性新值。  
   
 3.  針對以下變更的每一個安全性屬性重複步驟 2：  
   
-    -   若要變更代理程式執行時所使用的 Windows 帳戶，或只是此帳戶的密碼， ** \@請針對**[ ** \@屬性**] 和 [新密碼] 指定值的 [ **merge_job_password** ]。 變更帳戶本身時，請重複步驟2，針對** \@[屬性**] 指定 [ **merge_job_login** ] 的值，然後針對 [ ** \@值**] 輸入新的 Windows 帳戶。  
+    -   若要變更代理程式執行時所使用的 Windows 帳戶，或只是此帳戶的密碼，請針對 [ ** \@ 屬性**] 和 [新密碼] 指定值的 [ **merge_job_password** ** \@ ]。** 變更帳戶本身時，請重複步驟2，針對 [ ** \@ 屬性**] 指定 [ **merge_job_login** ] 的值，然後針對 [ ** \@ 值**] 輸入新的 Windows 帳戶。  
   
-    -   若要變更連接到散發者時使用的安全性模式，請針對** \@ **[ ** \@屬性**] 指定 [ **distributor_security_mode** ] 的值，並為 [值] 指定 [ **1** （Windows 整合式驗證）] 或 [ **0** （SQL Server Authentication）]。  
+    -   若要變更連接到散發者時使用的安全性模式，請針對 [ ** \@ 屬性**] 指定 [ **distributor_security_mode** ] 的值，並為 [ ** \@ 值**] 指定 [ **1** （Windows 整合式驗證）] 或 [ **0** （SQL Server Authentication）]。  
   
-    -   將散發者的安全性模式變更為 SQL Server 驗證，或是變更 SQL Server 驗證的登入資訊時，請為** \@[屬性**] 指定 [ **distributor_password** ]，並針對** \@[值**] 指定新的密碼。 重複步驟2，針對** \@[屬性**] 指定**distributor_login**的值，並為** \@[值**] 指定新的登入。  
+    -   將散發者的安全性模式變更為 SQL Server 驗證，或是變更 SQL Server 驗證的登入資訊時，請為 [ ** \@ 屬性**] 指定 [ **distributor_password** ]，並針對 [ ** \@ 值**] 指定新的密碼。 重複步驟2，針對 [ ** \@ 屬性**] 指定**distributor_login**的值，並為 [ ** \@ 值**] 指定新的登入。  
   
-    -   若要變更連接到發行者時所使用的安全性模式，請針對** \@ **[ ** \@屬性**] 指定 [ **publisher_security_mode** ] 的值，並為 [值] 指定 [ **1** （Windows 整合式驗證）] 或 [ **0** （SQL Server Authentication）]。  
+    -   若要變更連接到發行者時所使用的安全性模式，請針對 [ ** \@ 屬性**] 指定 [ **publisher_security_mode** ] 的值，並為 [ ** \@ 值**] 指定 [ **1** （Windows 整合式驗證）] 或 [ **0** （SQL Server Authentication）]。  
   
-    -   將發行者安全性模式變更為 SQL Server 驗證，或是變更 SQL Server 驗證的登入資訊時，請為** \@[屬性**] 指定 [ **publisher_password** ] 的值，並為** \@[值**] 指定新的密碼。 重複步驟2，針對** \@[屬性**] 指定**publisher_login**的值，並為** \@[值**] 指定新的登入。  
+    -   將發行者安全性模式變更為 SQL Server 驗證，或是變更 SQL Server 驗證的登入資訊時，請為 [ ** \@ 屬性**] 指定 [ **publisher_password** ] 的值，並為 [ ** \@ 值**] 指定新的密碼。 重複步驟2，針對 [ ** \@ 屬性**] 指定**publisher_login**的值，並為 [ ** \@ 值**] 指定新的登入。  
   
     > [!NOTE]  
     >  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。  
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent-to-generate-a-filtered-snapshot-for-a-subscriber"></a>變更快照集代理程式的安全性設定，為訂閱者產生篩選過的快照集  
   
-1.  在發行者上，執行[sp_helpdynamicsnapshot_job](/sql/relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql)，並指定** \@發行**集。 在結果集中，注意訂閱者要變更之資料分割的 **job_name** 值。  
+1.  在發行者上，執行[sp_helpdynamicsnapshot_job](/sql/relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql)，並指定** \@ 發行**集。 在結果集中，注意訂閱者要變更之資料分割的 **job_name** 值。  
   
-2.  在發行者上，執行[sp_changedynamicsnapshot_job](/sql/relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql)，指定** \@發行**集、針對** \@dynamic_snapshot_jobname**從步驟1取得的值，以及針對** \@ ** ** \@ ** job_login 和** \@job_password**用於執行代理程式之 Windows 帳戶的新密碼 job_password 或登入和密碼。  
+2.  在發行者上，執行[sp_changedynamicsnapshot_job](/sql/relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql)，指定** \@ 發行**集、針對** \@ dynamic_snapshot_jobname**從步驟1取得的值，以及針對** \@ job_login**和** \@ job_password**用於執行代理程式之 Windows 帳戶的新密碼** \@ job_password**或登入和密碼。  
   
     > [!IMPORTANT]  
     >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -386,7 +385,7 @@ ms.locfileid: "73912795"
   
 1.  在散發者上，執行 [sp_helpqreader_agent](/sql/relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql)。 這樣會傳回佇列讀取器代理程式執行時所用的目前 Windows 帳戶。  
   
-    -   在散發者上，執行[sp_changeqreader_agent](/sql/relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql)，並指定** \@job_login**和** \@job_passwsord**的 Windows 帳戶設定。  
+    -   在散發者上，執行[sp_changeqreader_agent](/sql/relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql)，並指定** \@ Job_login**和** \@ job_passwsord**的 Windows 帳戶設定。  
   
     > [!NOTE]  
     >  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。 每個散發資料庫都會有一個佇列讀取器代理程式。 變更此代理程式的安全性設定時，會影響使用此散發資料庫之所有發行者上的所有發行集設定。  
@@ -395,9 +394,9 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-security-mode-used-by-an-immediate-updating-subscriber-when-connecting-to-the-publisher"></a>變更立即更新訂閱者連接到發行者時所用的安全性模式  
   
-1.  在訂閱資料庫的訂閱者上，執行 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)。 指定** \@發行者**、 ** \@發行集、** ** \@publisher_db**的發行集資料庫名稱，以及** \@security_mode**的下列其中一個值：  
+1.  在訂閱資料庫的訂閱者上，執行 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)。 指定** \@ 發行者**、**發行集、 \@ ** ** \@ publisher_db**的發行集資料庫名稱，以及** \@ security_mode**的下列其中一個值：  
   
-    -   **0** - 在發行者上進行更新時使用「SQL Server 驗證」。 此選項要求您在發行者上指定** \@登**入和** \@密碼**的有效登入。  
+    -   **0** - 在發行者上進行更新時使用「SQL Server 驗證」。 此選項要求您在發行者上指定** \@ 登**入和** \@ 密碼**的有效登入。  
   
     -   **1** - 在連接到發行者時，使用在訂閱者上進行變更之使用者的安全性內容。 如需與此安全性模式有關的限制，請參閱 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) 。  
   
@@ -405,12 +404,12 @@ ms.locfileid: "73912795"
   
 #### <a name="to-change-the-password-for-a-remote-distributor"></a>變更遠端散發者的密碼  
   
-1.  在散發資料庫的「散發者」端，執行[sp_changedistributor_password](/sql/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql)，為** \@密碼**指定此登入的新密碼。  
+1.  在散發資料庫的「散發者」端，執行[sp_changedistributor_password](/sql/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql)，為** \@ 密碼**指定此登入的新密碼。  
   
     > [!IMPORTANT]  
     >  請勿直接變更 **distributor_admin** 的密碼。  
   
-2.  在每個使用此遠端散發者的發行者上，執行[sp_changedistributor_password](/sql/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql)，並為** \@密碼**指定步驟1中的密碼。  
+2.  在每個使用此遠端散發者的發行者上，執行[sp_changedistributor_password](/sql/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql)，並為** \@ 密碼**指定步驟1中的密碼。  
   
 ##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
   
@@ -455,7 +454,7 @@ ms.locfileid: "73912795"
   
     -   若要指定「Windows 整合式驗證」當做代理程式連接到訂閱者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 欄位設定為 `true`。  
   
-    -   若要指定 SQL Server Authentication 當做代理程式連接到訂閱者時所使用的驗證類型<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> ，請將<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A>屬性的欄位設定為`false`，並針對<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>欄位指定訂閱者登入認證。  
+    -   若要指定 SQL Server Authentication 當做代理程式連接到訂閱者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的欄位設定 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 為 `false` ，並針對和欄位指定訂閱者登入 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 認證 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 。  
   
         > [!NOTE]  
         >  與散發者的代理程式連接一律使用 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
@@ -478,7 +477,7 @@ ms.locfileid: "73912795"
   
     -   若要指定「Windows 整合式驗證」當做代理程式連接到散發者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 欄位設定為 `true`。  
   
-    -   若要指定 SQL Server Authentication 當做代理程式連接到散發者時所使用的驗證類型<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> ，請將<xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A>屬性的欄位設定為`false`，並針對<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>欄位指定散發者登入認證。  
+    -   若要指定 SQL Server Authentication 當做代理程式連接到散發者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的欄位設定 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 為 `false` ，並針對和欄位指定散發者登入 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 認證 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 。  
   
         > [!NOTE]  
         >  與訂閱者的代理程式連接一律使用 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
@@ -501,11 +500,11 @@ ms.locfileid: "73912795"
   
     -   若要指定「Windows 整合式驗證」當做代理程式連接到散發者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 欄位設定為 `true`。  
   
-    -   若要指定 SQL Server Authentication 當做代理程式連接到散發者時所使用的驗證類型<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> ，請將<xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A>屬性的欄位設定為`false`，並針對<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>欄位指定散發者登入認證。  
+    -   若要指定 SQL Server Authentication 當做代理程式連接到散發者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的欄位設定 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 為 `false` ，並針對和欄位指定散發者登入 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 認證 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 。  
   
     -   若要指定「Windows 整合式驗證」當做代理程式連接到發行者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> 欄位設定為 `true`。  
   
-    -   若要指定 SQL Server Authentication 當做代理程式連接到發行者時所使用的驗證類型<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> ，請將<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A>屬性的欄位設定為`false`，並針對<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>欄位指定發行者登入認證。  
+    -   若要指定 SQL Server Authentication 當做代理程式連接到發行者時所使用的驗證類型，請將屬性的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 欄位設定 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> 為 `false` ，並針對和欄位指定發行者登入認證 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 。  
   
         > [!NOTE]  
         >  與訂閱者的代理程式連接一律使用 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
@@ -528,11 +527,11 @@ ms.locfileid: "73912795"
   
     -   若要指定「Windows 整合式驗證」當做代理程式連接到訂閱者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 欄位設定為 `true`。  
   
-    -   若要指定 SQL Server Authentication 當做代理程式連接到訂閱者時所使用的驗證類型<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> ，請將<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A>屬性的欄位設定為`false`，並針對<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>欄位指定訂閱者登入認證。  
+    -   若要指定 SQL Server Authentication 當做代理程式連接到訂閱者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的欄位設定 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 為 `false` ，並針對和欄位指定訂閱者登入 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 認證 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 。  
   
     -   若要指定「Windows 整合式驗證」當做代理程式連接到發行者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> 欄位設定為 `true`。  
   
-    -   若要指定 SQL Server Authentication 當做代理程式連接到發行者時所使用的驗證類型<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> ，請將<xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A>屬性的欄位設定為`false`，並針對<xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A>欄位指定發行者登入認證。  
+    -   若要指定 SQL Server Authentication 當做代理程式連接到發行者時所使用的驗證類型，請將屬性的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 欄位設定 <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> 為 `false` ，並針對和欄位指定發行者登入認證 <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A> <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> 。  
   
         > [!NOTE]  
         >  與散發者的代理程式連接一律使用 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
