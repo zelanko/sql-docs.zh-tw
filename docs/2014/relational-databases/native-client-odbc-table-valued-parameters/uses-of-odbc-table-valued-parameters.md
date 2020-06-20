@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: adec9c7bfc72c05e3bdd5c5f1c6ea6523fe6ac73
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d9021482f6c656820998977a7385622a4b8d0ff2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718872"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998963"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>使用 ODBC 資料表值參數
   本主題將討論搭配 ODBC 使用資料表值參數的主要使用者案例：  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0f6248636338d810127d7006ca87fd91ab359069
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5699ba1f3ef8582cbdbbd41a5f849ff02440d9dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704493"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017715"
 ---
 # <a name="supporting-distributed-transactions"></a>支援分散式交易
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者取用者可以使用**ITransactionJoin：： JoinTransaction**方法，參與由 Microsoft 分散式交易協調器（MS DTC）協調的分散式交易。  
@@ -34,7 +33,7 @@ ms.locfileid: "82704493"
   
  若為分散式交易， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會依照下列方式來執行**ITransactionJoin：： JoinTransaction**參數。  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|MS DTC 交易物件的指標。|  
 |*IsoLevel*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者已忽略。 取用者從 MS DTC 取得交易物件時，會判斷 MS DTC 協調交易的隔離等級。|  

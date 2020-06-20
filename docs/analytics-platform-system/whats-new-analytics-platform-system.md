@@ -2,7 +2,6 @@
 title: 新功能
 description: 請參閱 Microsoft Analytics Platform System 的新功能，這是裝載 MPP SQL Server 平行處理資料倉儲的向外延展內部部署應用裝置。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: faf3bd1f487fb5c850759fdde3ddecd32bdd3b1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625545"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039831"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System 的新功能，向外延展 MPP 資料倉儲
 請參閱 Microsoft Analytics Platform System （AP）最新設備更新的新功能。 「AP」是一種向外延展內部部署應用裝置，其裝載 MPP SQL Server 平行處理資料倉儲。 
@@ -155,7 +154,7 @@ AP 2016 是升級至 AU7 的必要條件。 以下是 AP AU7 中的新功能：
 根據預設，[AP] AU7 會自動建立和更新統計資料。 若要更新統計資料設定，系統管理員可以在[Configuration Manager](appliance-configuration.md#CMTasks)中使用新的功能切換功能表項目。 [功能參數](appliance-feature-switch.md)會控制統計資料的自動建立、自動更新和非同步更新行為。 您也可以使用[ALTER DATABASE （平行處理資料倉儲）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)語句來更新統計資料設定。
 
 ### <a name="t-sql"></a>T-SQL
-現在@var支援 Select。 如需詳細資訊，請參閱[選取本機變數](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
+@var現在支援 Select。 如需詳細資訊，請參閱[選取本機變數](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
 現在支援查詢提示雜湊和訂單群組。 如需詳細資訊，請參閱[提示（transact-sql）-查詢](/sql/t-sql/queries/hints-transact-sql-query)
 
@@ -263,7 +262,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [bcp 公用程式]:/sql/tools/bcp-utility
 [唯一]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
-[NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[數值]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [資料列或範圍]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql

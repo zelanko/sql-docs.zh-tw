@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2008ec0db5612b7ceb95fe9a8bbf970e19a31a91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6df7faa3dbb88ba8df836b59c47cad6a391e0d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058632"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966408"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>一般檔案來源編輯器 (錯誤輸出頁面)
   使用 [一般檔案來源編輯器]**** 對話方塊的 [錯誤輸出]**** 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
@@ -41,7 +40,7 @@ ms.locfileid: "66058632"
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **描述**  
+ **說明**  
  檢視錯誤的描述。  
   
  **將這個值設定到選取的資料格**  
@@ -54,6 +53,6 @@ ms.locfileid: "66058632"
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[一般檔案來源編輯器] &#40;連線管理員頁面&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [[一般檔案來源編輯器] &#40;[資料行] 頁面&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [一般檔案連接管理員](connection-manager/file-connection-manager.md)  
+ [一般檔案連線管理員](connection-manager/file-connection-manager.md)  
   
   

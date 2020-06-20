@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 649ab6329c0bdc2f059b8be0e282e0e68f33e2d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dec12ec13882f779709295c53f77ebc52b78e3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051424"
 ---
 # <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting 事件類別
   TM：Begin Tran Starting 事件類別指出正在開始 BEGIN TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。  

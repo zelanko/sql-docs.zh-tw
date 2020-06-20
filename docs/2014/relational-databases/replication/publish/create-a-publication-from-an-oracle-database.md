@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 61f7e509b715b1156b06362f8e9bcd4a634de0c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29e299e6f2a3b271fe682b319a2f22a671cbd19d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63020861"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037974"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>從 Oracle 資料庫建立發行集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中從 Oracle 資料庫建立發行集。  
@@ -44,7 +43,7 @@ ms.locfileid: "63020861"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  使用「新增發行集精靈」從「Oracle 資料庫」建立快照式或交易式發行集。  
   
- 第一次從 Oracle 資料庫建立發行集時，必須在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端識別「Oracle 發行者」(如果是同一資料庫的後續發行集，則不需要執行這個動作)。 可以從 [新增發行集精靈] 或 [散發者屬性 - **散發者>]\<** 對話方塊來完成 Oracle 發行者的識別；本主題會顯示 [散發者屬性 - **散發者>]\<** 對話方塊。  
+ 第一次從 Oracle 資料庫建立發行集時，必須在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端識別「Oracle 發行者」(如果是同一資料庫的後續發行集，則不需要執行這個動作)。 您可以從 [新增發行集] 或 [散發者**屬性- \<Distributor> ** ] 對話方塊來完成 Oracle 發行者的識別; 本主題會顯示 [散發者**屬性- \<Distributor> ** ] 對話方塊。  
   
 #### <a name="to-identify-the-oracle-publisher-at-the-sql-server-distributor"></a>若要在 SQL Server 散發者端識別 Oracle 發行者  
   
@@ -52,7 +51,7 @@ ms.locfileid: "63020861"
   
 2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[散發者屬性]** 。  
   
-3.  在 [散發者屬性 - **散發者>]** **對話方塊的 [發行者]\<** 頁面上，按一下 [加入]  ，然後按一下 [加入 Oracle 發行者]  。  
+3.  在 [**散發者****屬性- \<Distributor> ** ] 對話方塊的 [發行者] 頁面上，按一下 [**加入**]，然後按一下 **[加入 Oracle 發行者]**。  
   
 4.  在 **[連接到伺服器]** 對話方塊上，按一下 **[選項]** 按鈕。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "63020861"
   
      **[完整]** 選項可以為 Oracle 發行提供具有完整支援功能的快照式和交易式發行集。 **[閘道]** 選項可以在複寫作為系統之間的閘道時，提供特定的設計最佳化以提升效能。 如果您計畫在多個交易式發行集內發行相同的資料表，就無法使用 **[閘道]** 選項。 如果您選取 **[閘道]** ，則資料表最多只能在一個交易式發行集裡出現，但可以在任意數目的快照式發行集裡出現。  
   
-7.  按一下 **[連接]** ，建立與「Oracle 發行者」的連接，並為複寫設定該連接。 [連接到伺服器]  對話方塊隨即關閉，並將您返回至 [散發者屬性 - **散發者>]\<** 對話方塊。  
+7.  按一下 **[連接]** ，建立與「Oracle 發行者」的連接，並為複寫設定該連接。 [**連接到伺服器**] 對話方塊隨即關閉，而您會返回 [散發者**屬性- \<Distributor> ** ] 對話方塊。  
   
     > [!NOTE]  
     >  如果網路組態有問題，此時您會收到一條錯誤訊息。 如果您遇到連接到 Oracle 資料庫的問題，請參閱在＜ [Troubleshooting Oracle Publishers](../non-sql/troubleshooting-oracle-publishers.md)＞中的「SQL Server 散發者無法連接到 Oracle 資料庫執行個體」一節。  
@@ -114,7 +113,7 @@ ms.locfileid: "63020861"
   
 2.  如果遠端散發者不存在，請設定遠端散發者。 如需詳細資訊，請參閱 [Configure Publishing and Distribution](../configure-publishing-and-distribution.md)。  
   
-3.  在 Oracle 發行者將使用的遠端散發者端，執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)。 針對**@publisher**指定 Oracle 資料庫實例的「透明網路基底」（TNS）名稱，並針對`ORACLE` **@publisher_type**@ `ORACLE GATEWAY` value 或。 `Specify` 指定當從 Oracle 發行者連接到遠端 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者時所使用的安全性模式，如下列其中一項：  
+3.  在 Oracle 發行者將使用的遠端散發者端，執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)。 針對指定 Oracle 資料庫實例的「透明網路基底」（TNS）名稱 **@publisher** ，並針對 @ value `ORACLE` 或 `ORACLE GATEWAY` **@publisher_type** 。 `Specify` 指定當從 Oracle 發行者連接到遠端 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者時所使用的安全性模式，如下列其中一項：  
   
     -   若要使用預設值 Oracle 標準驗證，請將 **@security_mode** 指定 **@security_mode**的值、將 **@login**指定為組態設定期間在 Oracle 發行者上建立之複寫管理使用者結構描述的登入，並將 **@password**中從 Oracle 資料庫建立發行集。  
   
@@ -128,18 +127,18 @@ ms.locfileid: "63020861"
   
 4.  針對發行集資料庫建立記錄讀取器代理程式作業。  
   
-    -   如果您不確定發行的資料庫是否有記錄讀取器代理程式作業存在，請在散發資料庫上由 Oracle 發行者使用的散發者端執行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql)。 針對**@publisher**指定 Oracle 發行者的名稱。 如果結果集是空的，就必須建立記錄讀取器代理程式作業。  
+    -   如果您不確定發行的資料庫是否有記錄讀取器代理程式作業存在，請在散發資料庫上由 Oracle 發行者使用的散發者端執行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql)。 針對指定 Oracle 發行者的名稱 **@publisher** 。 如果結果集是空的，就必須建立記錄讀取器代理程式作業。  
   
     -   如果記錄讀取器代理程式作業已存在發行集資料庫中，請繼續進行步驟 5。  
   
-    -   在散發資料庫上由 Oracle 發行者使用的散發者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)。 針對**@job_login**和**@job_password**指定執行代理程式所用的 Windows 認證。  
+    -   在散發資料庫上由 Oracle 發行者使用的散發者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)。 針對和指定執行代理程式所用的 Windows **@job_login** 認證 **@job_password** 。  
   
         > [!NOTE]  
         >  **@job_login**參數必須符合步驟3中所提供的登入。 請勿提供發行者安全性資訊。 記錄讀取器代理程式會使用步驟 3 中所提供的安全性資訊連接到發行者。  
   
 5.  在散發資料庫的散發者端，執行 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 來建立發行集。 如需詳細資訊，請參閱[建立發行集](create-a-publication.md)。  
   
-6.  在散發資料庫的散發者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 針對**@publication**指定步驟4中所使用的發行集名稱，以及針對**@job_name**和**@password**執行快照集代理程式的 Windows 認證。 若要在連接到發行者時使用「Oracle 標準驗證」，您也必須針對 **@security_mode** 指定 **@publisher_security_mode** 的值，以及針對 **@publisher_login** ＞和＜ **@publisher_password**中從 Oracle 資料庫建立發行集。 這麼做會為發行集建立快照集代理程式作業。  
+6.  在散發資料庫的散發者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 針對指定步驟4中所使用的發行集名稱 **@publication** ，以及針對和執行快照集代理程式的 Windows **@job_name** 認證 **@password** 。 若要在連接到發行者時使用「Oracle 標準驗證」，您也必須針對 **@security_mode** 指定 **@publisher_security_mode** 的值，以及針對 **@publisher_login** ＞和＜ **@publisher_password**中從 Oracle 資料庫建立發行集。 這麼做會為發行集建立快照集代理程式作業。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Oracle 發行者](../non-sql/configure-an-oracle-publisher.md)   

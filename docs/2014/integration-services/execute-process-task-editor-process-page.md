@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6f072f8d748b24489ab68f971abd4872edffdf6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059024"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966788"
 ---
 # <a name="execute-process-task-editor-process-page"></a>執行處理工作編輯器 (處理頁面)
   使用 **[執行處理工作編輯器]** 對話方塊的 **[處理]** 頁面，即可設定執行處理的選項。 這些選項包括要執行的可執行檔、其位置、命令提示字元引數，以及提供輸入和擷取輸出的變數。  
@@ -40,15 +39,15 @@ ms.locfileid: "66059024"
  輸入包含可執行檔的資料夾路徑，或按一下瀏覽按鈕 **（...）** ，然後找出資料夾。  
   
  **StandardInputVariable**  
- 選取變數以提供該進程的輸入，或按一下\<[**新增變數 ...** ]> 建立新的變數：  
+ 選取變數以提供該進程的輸入，或按一下 \<**New variable...**> 以建立新的變數：  
   
  **相關主題：**  [加入變數](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
- 選取一個變數來捕捉進程的輸出，或按一下\<[**新增變數 ...** ]> 建立新的變數。  
+ 選取一個變數來捕捉進程的輸出，或按一下 \<**New variable...**> 以建立新的變數。  
   
  **StandardErrorVariable**  
- 選取一個變數來捕獲處理器的錯誤輸出，或按一下\<[**新增變數 ...** ]> 建立新的變數。  
+ 選取一個變數來捕獲處理器的錯誤輸出，或按一下 \<**New variable...**> 以建立新的變數。  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  指出如果處理序的結束碼和 **SuccessValue**中指定的值不同時，工作是否失敗。  

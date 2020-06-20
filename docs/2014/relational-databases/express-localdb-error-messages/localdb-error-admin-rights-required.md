@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2414167c-33cb-4103-8105-994cbda29b9d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69907816ca0cfc95eb567af869980d1ae318ce1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39b57e1cef97387a17f2ad7f61d0d1043d4b1e06
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061927"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051313"
 ---
 # <a name="localdb_error_admin_rights_required"></a>LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
     

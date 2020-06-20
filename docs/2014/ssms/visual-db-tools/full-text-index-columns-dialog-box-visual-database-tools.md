@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ece0e6856f43e2296fb0feab4abe38ffbba568b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4d77bb77ab3cf0fecc2e254af53782f982923ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63028325"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054584"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>全文檢索索引資料行對話方塊 (Visual Database Tools)
   這個對話方塊會列出 [資料表設計工具] 開啟的資料表中，參與全文檢索索引的資料行。 若要存取這個對話方塊，請在資料表設計工具中的資料表上按一下滑鼠右鍵、選擇 [全文檢索索引]  ，然後在 [全文檢索索引]  對話方塊中，依序按一下想要檢視或編輯的資料行索引、右側方格的 [資料行]  欄位，再按一下省略符號 ( **...** )。  
@@ -40,7 +39,7 @@ ms.locfileid: "63028325"
  **統計語意**  
  選取是否要針對選取的資料行啟用語意索引。 如需詳細資訊，請參閱[語意搜尋 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)。  
   
- 如果您在選取 **[統計語意]** 之前選取 **[語言]** ，而且選取的語言沒有相關聯的語意語言模型，則會停用 **[統計語意]** 核取方塊。 如果您在選取 [語言]  之前選取 [統計語意]  ，則下拉式方塊中提供的語言將受限為有語意語言模型支援的語言。  
+ 如果您在選取 **[統計語意]** 之前選取 **[語言]** ，而且選取的語言沒有相關聯的語意語言模型，則會停用 **[統計語意]** 核取方塊。 如果您在選取 [語言] 之前選取 [統計語意]，則下拉式方塊中提供的語言將受限為有語意語言模型支援的語言。  
   
 ## <a name="see-also"></a>另請參閱  
  [全文檢索索引對話方塊 &#40;Visual Database Tools&#41;](visual-database-tools.md)  

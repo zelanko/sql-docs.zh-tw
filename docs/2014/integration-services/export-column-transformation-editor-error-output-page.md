@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eeb6984a0e7ef15b52fd349bccdf3c1bf78f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ae69c24138749fa1f3718c94147cd1db12abd1d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966718"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>匯出資料行轉換編輯器 (錯誤輸出頁面)
   使用 **[匯出資料行轉換編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，即可指定如何處理錯誤。  
@@ -39,7 +38,7 @@ ms.locfileid: "66058943"
  **截斷**  
  指定您要在截斷發生時採取什麼動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **描述**  
+ **說明**  
  檢視作業的描述。  
   
  **將這個值設定到選取的資料格**  

@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: ddda92fa-5bb9-45dd-b421-243b02db4caf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 12918f817277eb35f32d96eefeea40c4b4d36bda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50bdac5bdc646c9b152347c161b7dcbdde9ea2f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720995"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009133"
 ---
 # <a name="sinstance-class"></a>SInstance 類別
-  [SInstance 類別](sinstance-class.md)代表的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例。  
+  [SInstance 類別](sinstance-class.md)代表的實例 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
- [SInstance 類別](sinstance-class.md)可以用來管理與實例相關聯的通訊協定和網路程式庫[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 也可以為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體指定安全性憑證。  
+ [SInstance 類別](sinstance-class.md)可以用來管理與實例相關聯的通訊協定和網路程式庫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 也可以為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體指定安全性憑證。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定伺服器網路通訊協定與網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

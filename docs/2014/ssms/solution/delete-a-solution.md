@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28bbed5e92bf6301ad50486c5679e468c626e572
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63043943"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062019"
 ---
 # <a name="delete-a-solution"></a>刪除方案
   永久刪除方案，會從實體儲存體中清除檔案，也會從方案中清除檔案項目。  

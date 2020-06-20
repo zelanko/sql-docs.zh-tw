@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f72f15886e7105dde8d0e15dd0598a7474ed7e39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038129"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在現有發行集中加入和卸除發行項
   建立發行集後，可以新增或卸除發行項。 發行項可以隨時新增，但卸除發行項所需的動作取決於複寫的類型以及卸除發行項的時機。  
@@ -56,7 +55,7 @@ ms.locfileid: "73882332"
 ## <a name="dropping-articles"></a>卸除發行項  
  發行項可以隨時從發行集中卸除，但必須考慮下列行為：  
   
--   從發行集中卸除發行項不會從發行集資料庫中移除物件，或從訂閱資料庫中移除對應物件。 必要時請使用 DROP \<物件> 來移除這些物件。 透過外部索引鍵條件約束來卸除與其他已發行之發行項相關的發行項時，建議您手動或使用視需要的指令碼執行在訂閱者端卸除資料表：指定包含適當的 DROP \<物件> 陳述式的指令碼。 如需詳細資訊，請參閱[在同步處理期間執行指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md)。  
+-   從發行集中卸除發行項不會從發行集資料庫中移除物件，或從訂閱資料庫中移除對應物件。 如有必要，請使用 DROP \<Object> 來移除這些物件。 當您透過 foreign key 條件約束來卸載與其他已發行之發行項相關的發行項時，建議您手動或使用視需要的腳本執行，在訂閱者端卸載資料表：指定包含適當 DROP 語句的腳本 \<Object> 。 如需詳細資訊，請參閱[在同步處理期間執行指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md)。  
   
 -   如果合併式發行集的相容性層級為 90RTM 或更高，可以隨時卸除發行項，但需要一個新快照集。 此外：  
   

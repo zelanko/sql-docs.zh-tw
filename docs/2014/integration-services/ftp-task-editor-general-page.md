@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02ffd6309ae31f538fecdf6af2cb8475608d6cf5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058425"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966335"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 工作編輯器 (一般頁面)
   使用 **[FTP 工作編輯器]** 對話方塊的 **[一般]** 頁面，即可指定 FTP 連接管理員，以連接到工作進行通訊的 FTP 伺服器。 您也可以命名和描述 FTP 工作。  
@@ -28,7 +27,7 @@ ms.locfileid: "66058425"
   
 ## <a name="options"></a>選項。  
  **FtpConnection**  
- 選取現有的 FTP 連線管理員，或\<按一下 [**新增連接 ...** ]> 建立連線管理員。  
+ 選取現有的 FTP 連線管理員，或按一下 \<**New connection...**> 以建立連線管理員。  
   
 > [!IMPORTANT]  
 >  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
@@ -44,7 +43,7 @@ ms.locfileid: "66058425"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入 FTP 工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

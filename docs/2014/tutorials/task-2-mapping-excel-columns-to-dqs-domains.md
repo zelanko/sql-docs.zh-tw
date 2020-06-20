@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 646204e2c40c09ac0fac9259f5acc43c7f422894
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006648"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>工作 2：將 Excel 資料行對應到 DQS 定義域
     
 1.  在 [對應] **** 頁面上，針對 [資料來源] **** 選取 [Excel 檔案] ****。  
   
-2.  按一下 **[流覽]**，選取 [**供應商 .xlsx**]，然後按一下 [**開啟**]。  
+2.  按一下 **[流覽]**，選取 [ **Suppliers.xlsx**]，然後按一下 [**開啟**]。  
   
 3.  針對**工作表**選取 [ **IncomingSuppliers $** ]。  
   

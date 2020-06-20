@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 921f8cde043bab21a0ef2d2a54440b07a826a52c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183000"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038662"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server 的 Transactions 物件
-  Microsoft  **中的 Transactions**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件會提供計數器，可監視 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的使用中交易數，以及這些交易在資源上產生的影響，例如 **tempdb** 中的快照隔離資料列版本存放區。 交易是邏輯工作單位；必須全部成功或全部從資料庫清除的一組作業，才能維持資料的邏輯完整性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的所有資料修改都是透過交易來完成。  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 Transactions 物件會提供計數器，可監視 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的使用中交易數，以及這些交易在資源上產生的影響，例如 **tempdb** 中的快照隔離資料列版本存放區。 交易是邏輯工作單位；必須全部成功或全部從資料庫清除的一組作業，才能維持資料的邏輯完整性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的所有資料修改都是透過交易來完成。  
   
  資料庫設定為允許快照隔離等級時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須維護資料庫中每個資料列的修改記錄。 每次修改資料列時， **tempdb**的資料列版本存放區會記錄修改之前的資料列副本。 **Transaction** 物件中有許多計數器，可用來監視 **tempdb**中資料列版本存放區的大小和成長率。  
   

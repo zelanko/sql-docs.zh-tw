@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 947866923053c025d125d36bda5eb514ae6c2005
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 155fb8e9dca4f95496196ad167f7976115cef1f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662411"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052973"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings 事件類別
   Execution Warnings 事件類別指出在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式或預存程序期間發生的記憶體授與警告。 可監視此事件類別以判定繼續進行之前，查詢是否需等待可供使用的記憶體，或者取得記憶體的初始嘗試是否失敗。 有關查詢等候期間的資訊可協助發現系統中會影響效能的競爭問題。  

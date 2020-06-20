@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa6898db-f54b-4e98-84e4-ac64e48c3561
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11d5ab92a0f974e58b48734fc739ba63660a4e5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488379"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006659"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>工作 2：手動新增定義域值
   在這項工作中，您會手動新增**Country**網域的值。 如需此頁面上欄位的詳細資訊，請參閱[變更定義域值](https://msdn.microsoft.com/library/hh510408.aspx)主題。  

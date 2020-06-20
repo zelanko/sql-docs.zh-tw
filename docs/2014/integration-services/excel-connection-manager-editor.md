@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08dc39cb21eec03a7cbdc5bd56c68212044dd211
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059272"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966888"
 ---
 # <a name="excel-connection-manager-editor"></a>Excel 連接管理員編輯器
   使用 [Excel 連線管理員編輯器]**** 對話方塊，將連接加入現有或新的 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 活頁簿檔案。  

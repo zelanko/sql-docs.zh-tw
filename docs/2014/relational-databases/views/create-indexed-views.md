@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d33ff37caca04f46edd6ad92d0686713829bb270
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196434"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061520"
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立索引檢視表。 對檢視建立的第一個索引必須是唯一的叢集索引。 建好唯一的叢集索引後，才可以建立其他非叢集索引。 為檢視表建立唯一的叢集索引，可以提升查詢效能，因為檢視表儲存在資料庫中的方式與包含叢集索引之資料表的儲存方式一樣。 查詢最佳化工具可以利用索引檢視表來加快查詢執行的速度。 不必在查詢中參考此檢視表，最佳化工具仍會考慮以該檢視表做為替代方式。  
@@ -98,7 +97,7 @@ ms.locfileid: "68196434"
   
 -   用於檢視定義中的 CLR 函數和 CLR 使用者定義型別的方法必須有下表所示的屬性。  
   
-    |屬性|注意|  
+    |屬性|附註|  
     |--------------|----------|  
     |DETERMINISTIC = TRUE|必須明確宣告為 Microsoft .NET Framework 方法的屬性。|  
     |PRECISE = TRUE|必須明確宣告為 .NET Framework 方法的屬性。|  
@@ -116,7 +115,7 @@ ms.locfileid: "68196434"
     |COUNT|ROWSET 函數 (OPENDATASOURCE、OPENQUERY、OPENROWSET 和 OPENXML)|OUTER 聯結 (LEFT、RIGHT 或 FULL)|  
     |衍生資料表 (藉由在 FROM 子句中指定 SELECT 陳述式定義)|自我聯結|使用 SELECT \* 或 SELECT *table_name** 指定資料行。|  
     |DISTINCT|STDEV、STDEVP、VAR、VARP 或 AVG|通用資料表運算式 (CTE)|  
-    |`float`\*、 `text`、 `ntext`、 `image`、 `XML`或`filestream`資料行|子查詢|OVER 子句，其中包含次序或彙總視窗函數|  
+    |`float`\*、 `text` 、 `ntext` 、 `image` 、 `XML` 或資料 `filestream` 行|子查詢|OVER 子句，其中包含次序或彙總視窗函數|  
     |全文檢索述詞 (CONTAIN、FREETEXT)|SUM 函數，參考可為 Null 值的運算式|排序依據|  
     |CLR 使用者定義彙總函式|頂端|CUBE、ROLLUP 或 GROUPING SETS 運算子|  
     |MIN、MAX|UNION、EXCEPT 或 INTERSECT 運算子|TABLESAMPLE|  
@@ -124,7 +123,7 @@ ms.locfileid: "68196434"
     |疏鬆資料行集合|內嵌或多重陳述式資料表值函式|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*索引視圖可以包含`float`資料行;不過，這類資料行不能包含在叢集索引鍵中。  
+     \*索引視圖可以包含資料 `float` 行; 不過，這類資料行不能包含在叢集索引鍵中。  
   
 -   如果有 GROUP BY，VIEW 定義必須包含 COUNT_BIG(*)，且不能包含 HAVING。 GROUP BY 限制只適用於索引檢視表定義。 即使索引檢視表不符合這些 GROUP BY 限制，查詢還是可以在它的執行計畫中使用索引檢視表。  
   

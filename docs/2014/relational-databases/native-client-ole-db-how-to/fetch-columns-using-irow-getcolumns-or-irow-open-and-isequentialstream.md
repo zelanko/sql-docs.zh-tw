@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 86d2627354fcf3ec6ed80675abeb552f3ff888da
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b843710b9418cfd3f40411e49a30a1c23b7b8113
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704883"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039131"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns (或 IRow::Open) 和 ISequentialStream 來提取資料行
   您可以使用 `ISequentialStream` 介面來繫結或擷取大型資料。 若為繫結資料行，狀態旗標 DBSTATUS_S_TRUNCATED 會指出資料是否遭到截斷。  

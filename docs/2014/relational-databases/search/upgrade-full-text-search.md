@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2bdf0bdee452101bbafb8108426faf6604e7626
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010954"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016512"
 ---
 # <a name="upgrade-full-text-search"></a>升級全文檢索搜尋
   將全文檢索搜尋升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的作業會在安裝期間完成，而且當您使用 [複製資料庫精靈] 以附加、還原或複製舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料庫檔案和全文檢索目錄時，也會完成此作業。  
@@ -135,7 +134,7 @@ ms.locfileid: "66010954"
   
  **變更伺服器執行個體的全文檢索升級行為**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]：使用[sp\_全文\_檢索服務](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)的**\_升級選項**動作  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]：使用[sp \_ 全文檢索 \_ 服務](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)的**升級 \_ 選項**動作  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **：** 使用 [伺服器屬性]**** 對話方塊的 [全文檢索升級選項]****。 如需詳細資訊，請參閱 [管理及監視伺服器執行個體的全文檢索搜尋](manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
@@ -150,7 +149,7 @@ ms.locfileid: "66010954"
   
  如需備份和還原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄的詳細資訊，請參閱《 [線上叢書》中的](https://go.microsoft.com/fwlink/?LinkId=121052) 備份與還原全文檢索目錄 [和](https://go.microsoft.com/fwlink/?LinkId=121053)檔案備份、還原及全文檢索目錄 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中還原資料庫時，系統會針對此全文檢索目錄建立新的資料庫檔案。 這個檔案的預設名稱為 ftrow_*catalog-name*.ndf。 例如，如果您的 *catalog-name* 是 `cat1`， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫檔案的預設名稱會是 `ftrow_cat1.ndf`。 但是，如果預設名稱已經用於目標目錄中，新的資料庫檔案就會命名為`ftrow_` *catalog-name*`{`*guid*`}.ndf`，其中*guid*是新檔案的全域唯一識別碼。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中還原資料庫時，系統會針對此全文檢索目錄建立新的資料庫檔案。 這個檔案的預設名稱為 ftrow_*catalog-name*.ndf。 例如，如果您的 *catalog-name* 是 `cat1`， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫檔案的預設名稱會是 `ftrow_cat1.ndf`。 但是，如果預設名稱已經用於目標目錄中，新的資料庫檔案就會命名為 `ftrow_` *catalog-name* `{` *guid* `}.ndf` ，其中*guid*是新檔案的全域唯一識別碼。  
   
  匯入目錄之後，會更新 **sys.database_files** 和 **sys.master_files**以移除目錄項目，而且 **sys.fulltext_catalogs** 中的 **path** 資料行會設成 NULL。  
   
@@ -171,7 +170,7 @@ ms.locfileid: "66010954"
   
 -   資料庫檔案 `ftdb1.mdf`會移至 `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL12.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`。  
   
--   記錄`ftdb1_log.ldf`檔會移至記錄磁片磁碟機上的記錄檔目錄， *log_drive*`:\`*log_directory*`\ftdb1_log.ldf`。  
+-   記錄檔 `ftdb1_log.ldf` 會移至記錄磁片磁碟機上的記錄檔目錄， *log_drive* `:\` *log_directory* `\ftdb1_log.ldf` 。  
   
 -   對應至 `sysft_cat90` 目錄的目錄檔案會移至 `C:\temp`。 匯入全文檢索索引之後，它們會自動放置於資料庫檔案 C:\ftrow_sysft_cat90.ndf 中，而且系統會刪除 C:\temp。  
   

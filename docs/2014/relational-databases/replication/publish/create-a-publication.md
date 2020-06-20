@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87fc7802ea79a73c452f515f72f553850f017bb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14d8b3f1a998b18ae0153c1771fa11afd925da9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882327"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038073"
 ---
 # <a name="create-a-publication"></a>建立發行集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來建立 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的發行集。  
@@ -45,13 +44,13 @@ ms.locfileid: "73882327"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
--   發行集與發行項名稱不能包含下列任何字元：%、\*、[、]、|、:、"、? 、'、\、/、 \< >。 如果資料庫中的物件包含這些字元的任何一個，而且您要複寫它們，則必須指定一個不同於 [發行項屬性 - **發行項>]\<** 對話方塊中之物件名稱的發行項名稱，您可以從精靈的 [發行項]  頁面存取此對話方塊。  
+-   發行集與發行項名稱不能包含下列任何字元：%、\*、[、]、|、:、"、? , ' , \ , / , \< , >. 如果資料庫中的物件包含這些字元的任何一個，而且您要複寫它們，則必須在 [發行項**屬性- \<Article> ** ] 對話方塊中指定與物件名稱不同的發行項名稱，這可從 wizard**的 [發行**項] 頁面取得。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 使用「新增發行集精靈」建立發行集並定義發行項。 建立發行集之後，您可以在 [發行集屬性 - **發行集>]\<** 對話方塊中，檢視及修改發行集屬性。 如需從 Oracle 資料庫建立發行集的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](create-a-publication-from-an-oracle-database.md)。  
+ 使用「新增發行集精靈」建立發行集並定義發行項。 建立發行集之後，請在 [**發行集屬性- \<Publication> ** ] 對話方塊中，查看及修改發行集屬性。 如需從 Oracle 資料庫建立發行集的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](create-a-publication-from-an-oracle-database.md)。  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>建立發行集並定義發行項  
   
@@ -108,16 +107,16 @@ ms.locfileid: "73882327"
   
     -   如果您不確定發行的資料庫是否有記錄讀取器代理程式作業存在，請在發行集資料庫的發行者端執行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql)。  
   
-    -   如果結果集是空的，請建立記錄讀取器代理程式作業。 在發行者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)。 為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]**job_name\@ 和** **password\@ 指定執行代理程式所使用的**  Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為  publisher_security_mode **指定 \@0** 值，並為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]publisher_login **和 \@** publisher_password**指定 \@**  的登入資訊。 請繼續進行步驟 3。  
+    -   如果結果集是空的，請建立記錄讀取器代理程式作業。 在發行者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)。 為 **\@job_name** 和 **\@password** 指定執行代理程式所使用的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為  publisher_security_mode **指定 \@0** 值，並為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]publisher_login **和 \@** publisher_password**指定 \@**  的登入資訊。 請繼續進行步驟 3。  
   
-3.  在發行者端，執行 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 指定** \@發行**集的發行集名稱，並針對** \@repl_freq**參數，針對快照式發行集`snapshot`指定的值，或`continuous`針對交易式發行集指定的值。 指定任何其他發行集選項。 這樣會定義此發行集。  
+3.  在發行者端，執行 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 指定** \@ 發行**集的發行集名稱，並針對** \@ repl_freq**參數，針對快照式發行集指定的值， `snapshot` 或針對交易式發行集指定的值 `continuous` 。 指定任何其他發行集選項。 這樣會定義此發行集。  
   
     > [!NOTE]  
     >  發行集名稱不能包含下列字元：  
     >   
     >  % * [ ] | : " ? \ / \< >  
   
-4.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 為 **\@publication** 指定步驟 3 中所使用的發行集名稱，並為 **\@snapshot_job_name** 和 **\@password** 指定快照集代理程式執行時所使用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為  publisher_security_mode **指定 \@0** 值，並為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ 和** **publisher_password\@ 指定**  的登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
+4.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 為 **\@publication** 指定步驟 3 中所使用的發行集名稱，並為 **\@snapshot_job_name** 和 **\@password** 指定快照集代理程式執行時所使用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為 **\@publisher_security_mode** 指定 **0** 值，並為 **\@publisher_login** 和 **\@publisher_password** 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
   
     > [!IMPORTANT]  
     >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -137,7 +136,7 @@ ms.locfileid: "73882327"
     >   
     >  % * [ ] | : " ? \ / \< >  
   
-3.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 為 **\@publication** 指定步驟 2 中所使用的發行集名稱，並為 **\@snapshot_job_name** 和 **\@password** 指定快照集代理程式執行時所使用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為  publisher_security_mode **指定 \@0** 值，並為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ 和** **publisher_password\@ 指定**  的登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
+3.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 為 **\@publication** 指定步驟 2 中所使用的發行集名稱，並為 **\@snapshot_job_name** 和 **\@password** 指定快照集代理程式執行時所使用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為 **\@publisher_security_mode** 指定 **0** 值，並為 **\@publisher_login** 和 **\@publisher_password** 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
   
     > [!IMPORTANT]  
     >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  

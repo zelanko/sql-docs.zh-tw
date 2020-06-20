@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5a1b4986efe0047d210410b848f1174fdb9ea1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255230"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005739"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>建立新原則或開啟原則對話方塊，描述頁面
   使用此對話方塊可在以原則為基礎的管理原則中加入描述和其他資訊。  
   
-## <a name="options"></a>選項。  
- **類別**  
+## <a name="options"></a>選項  
+ **類別目錄**  
  當您正在建立新的原則時，請選取原則類別目錄。  
   
- **描述**  
+ **說明**  
  輸入原則的描述。  
   
  **其他說明超連結: 要顯示的文字**  
@@ -39,7 +38,7 @@ ms.locfileid: "63255230"
  **建立日期**  
  此原則的建立日期。  
   
- **建立者**  
+ **建立者為**  
  建立此原則的登入。  
   
  **修改日期**  

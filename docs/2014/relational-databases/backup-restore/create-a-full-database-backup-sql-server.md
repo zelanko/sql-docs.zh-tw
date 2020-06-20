@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4c750f4230cc83467cc5993d2a6ab571a06d2f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f406464680a1669133dc87bdfb231c644d33fbdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958908"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>建立完整資料庫備份 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立完整資料庫備份。  
@@ -60,7 +59,7 @@ ms.locfileid: "72798028"
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
--   資料庫的大小增加時，完整資料庫備份就需要更多的時間才能完成，同時也需要更多的儲存空間。 因此，若為大型資料庫，您可能會想透過一系列的 *「差異資料庫備份」*(Differential database backups) 補充完整資料庫備份。 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)。  
+-   資料庫的大小增加時，完整資料庫備份就需要更多的時間才能完成，同時也需要更多的儲存空間。 因此，若為大型資料庫，您可能會想透過一系列的 *「差異資料庫備份」* (Differential database backups) 補充完整資料庫備份。 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)。  
   
 -   您可以使用 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 系統預存程序來估計完整資料庫備份的大小。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "72798028"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。  
   
- 備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)並 不會 檢查檔案存取權限。 當您嘗試備份或還原時，存取實體資源之前不一定會出現備份裝置實體檔案的這些問題。  
+ 備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)並不會檢查檔案存取權限。 當您嘗試備份或還原時，存取實體資源之前不一定會出現備份裝置實體檔案的這些問題。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -89,7 +88,7 @@ ms.locfileid: "72798028"
   
 3.  以滑鼠右鍵按一下資料庫，指向 **[工作]** ，然後按一下 **[備份]** 。 會出現 **[備份資料庫]** 對話方塊。  
   
-4.  在`Database`清單方塊中，確認資料庫名稱。 您可以選擇性從清單中選取不同的資料庫。  
+4.  在 `Database` 清單方塊中，確認資料庫名稱。 您可以選擇性從清單中選取不同的資料庫。  
   
 5.  您可以針對任何復原模式 (**完整**、**大量記錄**或**簡單**) 執行資料庫備份。  
   
@@ -97,18 +96,18 @@ ms.locfileid: "72798028"
   
      請注意，您可在建立完整資料庫備份之後，建立差異資料庫備份。如需詳細資訊，請參閱[建立差異資料庫備份 &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)。  
   
-7.  或者，您也可以選取 **[僅複製備份]** 來建立僅複製備份。 「只複製備份」** 是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)。  
+7.  或者，您也可以選取 **[僅複製備份]** 來建立僅複製備份。 「只複製備份」  是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)。  
   
     > [!NOTE]  
     >  選取 **[差異]** 選項時，您無法建立「只複製」備份。  
   
-8.  針對 [**備份元件**] `Database`，按一下。  
+8.  針對 [**備份元件**]，按一下 `Database` 。  
   
 9. 接受 **[名稱]** 文字方塊中建議的預設備份組名稱，或者輸入不同的備份組名稱。  
   
 10. (選擇性) 在 **[描述]** 文字方塊中輸入備份組的描述。  
   
-11. 按一下 **[磁碟]**、 **[磁帶]** 或 **[URL]** 來選擇備份目的地的類型。 若要選取包含單一媒體集的磁碟或磁帶機 (最多 64 個) 的路徑，請按一下 **[加入]**。 選取的路徑會在 **[備份至]** 清單方塊中顯示。  
+11. 按一下 **[磁碟]**、 **[磁帶]** 或 **[URL]** 來選擇備份目的地的類型。 若要選取包含單一媒體集的磁碟或磁帶機 (最多 64 個) 的路徑，請按一下 **[加入]** 。 選取的路徑會在 **[備份至]** 清單方塊中顯示。  
   
      若要移除備份目的地，請選取目的地，然後按一下 **[移除]** 。 若要檢視備份目的地的內容，請選取目的地，然後按一下 **[內容]** 。  
   
@@ -184,15 +183,15 @@ ms.locfileid: "72798028"
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **,** ...*n* ]  
   
-     [ WITH *with_options* [ **,**...*o* ] ] ;  
+     [ WITH *with_options* [ **,** ...*o* ] ] ;  
   
     |選項|描述|  
     |------------|-----------------|  
     |*database*|為要備份的資料庫。|  
-    |*backup_device* [ **,** ...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> {DISK &#124; 磁帶}**=** _physical_backup_device_name_<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
-    |WITH *with_options* [ **,**...*o* ]|或者，也可以指定一個或多個其他選項 *o*。 如需有關選項基本概念的詳細資訊，請參閱步驟 2。|  
+    |*backup_device* [ **,** ...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> { DISK &#124; TAPE } **=** _physical_backup_device_name_<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
+    |WITH *with_options* [ **,** ...*o* ]|或者，也可以指定一個或多個其他選項 *o*。 如需有關選項基本概念的詳細資訊，請參閱步驟 2。|  
   
 2.  選擇性地指定一或多個 WITH 選項。 這裡描述的是一些基本的 WITH 選項。 如需所有 WITH 選項的資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。  
   
@@ -204,10 +203,10 @@ ms.locfileid: "72798028"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          只有在 SQL Server 2014 或更新的版本中，才能指定要使用的加密演算法以及憑證或非對稱金鑰來維護加密的安全。  
   
-         描述**=** { **'*`text`*'** | **@**_text_variable_ }  
+         描述 **=** { **' *`text`* '**  |  **@** _text_variable_ }  
          指定描述備份組的自由形式文字。 這個字串最多可有 255 個字元。  
   
-         名稱**=** { *backup_set_name* | **@**_backup_set_name_var_ }  
+         名稱 **=** { *backup_set_name*  |  **@** _backup_set_name_var_ }  
          指定備份組的名稱。 名稱最多可有 128 個字元。 如果未指定 NAME，它就是空白。  
   
     -   基本備份組 WITH 選項：  
@@ -216,7 +215,7 @@ ms.locfileid: "72798028"
   
          另外，若要格式化備份媒體，請使用 FORMAT 選項：  
   
-         FORMAT [ **，** MEDIANAME**=** { *media_name* | **@**_media_name_variable_ }] [ **，** MEDIADESCRIPTION **=** { *text* | **@**_text_variable_ }]  
+         FORMAT [ **，** MEDIANAME **=** { *media_name*  |  **@** _media_name_variable_ }] [ **，** MEDIADESCRIPTION **=** { *text*  |  **@** _text_variable_ }]  
          當您第一次使用媒體或是想要覆寫所有現有的資料時，請使用 FORMAT 子句。 選擇性地為新的媒體指派媒體名稱和描述。  
   
         > [!IMPORTANT]  
@@ -272,7 +271,7 @@ GO
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
   
-1.  使用 `Backup-SqlDatabase` 指令程式。 若要明確指出這是完整資料庫備份，請指定 **-BackupAction**參數及其預設值`Database`。 此參數在完整資料庫備份下是選擇性的。  
+1.  使用 `Backup-SqlDatabase` 指令程式。 若要明確指出這是完整資料庫備份，請指定 **-BackupAction**參數及其預設值 `Database` 。 此參數在完整資料庫備份下是選擇性的。  
   
      下列範例會在伺服器執行個體 `MyDB` 的預設備份位置，建立 `Computer\Instance`資料庫的完整資料庫備份。 這個範例指定了選擇性的 `-BackupAction Database`。  
   
@@ -304,7 +303,7 @@ GO
  [備份概觀 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [交易記錄備份 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
- [sp_addumpdevice &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [備份資料庫 &#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [備份資料庫 &#40;備份選項頁面&#41;](back-up-database-backup-options-page.md)   

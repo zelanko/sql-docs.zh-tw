@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b87c66eab08243a6339f1eb2bc1912e469f2b80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5087a925ac163281f4326a5f952c11ce2953c6dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929909"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965943"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 (SQL Server)
   此主題與下列情況有關：  
@@ -124,7 +123,7 @@ ms.locfileid: "76929909"
 ##  <a name="database-ownership"></a><a name="database_ownership"></a>資料庫擁有權  
  當資料庫在另一部電腦上還原時，起始還原作業的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 使用者會自動變成新資料庫的擁有者。 還原資料庫時，系統管理員或新的資料庫擁有者可以變更資料庫擁有權。  
   
-##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a>分散式查詢和連結的伺服器  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a> 分散式查詢和連結的伺服器  
  OLE DB 應用程式支援分散式查詢和連結的伺服器。 分散式查詢會從相同或不同電腦上的多重異質資料來源存取資料。 連結伺服器的組態可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對遠端伺服器上的 OLE DB 資料來源執行命令。 如需這些功能的詳細資訊，請參閱[連結的伺服器 &#40;Database Engine&#41;](../linked-servers/linked-servers-database-engine.md)。  
   
  [[頁首]](#information_entities_and_objects)  
@@ -354,7 +353,7 @@ ms.locfileid: "76929909"
   
 ## <a name="see-also"></a>另請參閱  
  [自主資料庫](contained-databases.md)   
- [將資料庫複製到其他伺服器](copy-databases-to-other-servers.md)   
+ [複製資料庫至其他伺服器](copy-databases-to-other-servers.md)   
  [資料庫卸離和附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [故障切換至記錄傳送次要 &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
  [資料庫鏡像會話期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   

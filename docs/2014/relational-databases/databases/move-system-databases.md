@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 748d781d6bbefb0dc710427a34ebd71ec7037fdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871535"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965835"
 ---
 # <a name="move-system-databases"></a>移動系統資料庫
   本主題將描述如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中移動系統資料庫。 在下列狀況下移動系統資料庫可能非常有用：  
@@ -50,7 +49,7 @@ ms.locfileid: "62871535"
 > [!IMPORTANT]  
 >  如果您移動了系統資料庫，接著重建 master 資料庫，就必須再次移動系統資料庫，因為重建作業會將所有系統資料庫安裝到預設的位置。  
   
-##  <a name="in-this-topic"></a><a name="Intro"></a> **本主題內容**  
+##  <a name="in-this-topic"></a><a name="Intro"></a>**本主題中的**  
   
 -   [規劃的重新配置和排程的磁片維護程式](#Planned)  
   
@@ -194,7 +193,7 @@ ms.locfileid: "62871535"
     ```  
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a>移動 Resource 資料庫  
- Resource 資料庫的位置是 \<*磁碟機*>:\Program Files\Microsoft SQL Server\MSSQL\<版本>.\<*執行個體名稱*>\MSSQL\Binn\\。 此資料庫無法移動。  
+ Resource 資料庫的位置是 \<*drive*> ： \Program FILES\MICROSOFT SQL Server\MSSQL \<version> 。 \<*instance_name*>\MSSQL\Binn \\ 。 此資料庫無法移動。  
   
 ##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> 後續工作：移動所有系統資料庫之後  
  如果您將所有系統資料庫移動至新的磁碟機或磁碟區，或是移動至使用不同磁碟機代號的另一部伺服器，請進行下列更新。  
@@ -209,7 +208,7 @@ ms.locfileid: "62871535"
   
 2.  以滑鼠右鍵按一下 **[錯誤記錄檔]** ，然後按一下 **[設定]**。  
   
-3.  在 **[設定 SQL Server Agent 錯誤記錄檔]** 對話方塊中，指定 SQLAGENT.OUT 檔的新位置。 預設位置為 C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Log\\。  
+3.  在 **[設定 SQL Server Agent 錯誤記錄檔]** 對話方塊中，指定 SQLAGENT.OUT 檔的新位置。 預設位置為 C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Log \\ 。  
   
 #### <a name="change-the-database-default-location"></a>變更資料庫預設位置  
   
@@ -268,7 +267,7 @@ ms.locfileid: "62871535"
  [tempdb 資料庫](tempdb-database.md)   
  [master 資料庫](master-database.md)   
  [msdb 資料庫](msdb-database.md)   
- [model 資料庫](model-database.md)   
+ [Model 資料庫](model-database.md)   
  [移動使用者資料庫](move-user-databases.md)   
  [移動資料庫檔案](move-database-files.md)   
  [啟動、停止、暫停、繼續、重新開機資料庫引擎、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   

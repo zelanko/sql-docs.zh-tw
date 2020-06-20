@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8e457601eafcdd8e363d931d53dfea673254b29f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60c5fdc74e68970f7c62d83f9eeb65ce6db7d41c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896965"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966568"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (SSIS 運算式)
   傳回數值運算式的平方。  

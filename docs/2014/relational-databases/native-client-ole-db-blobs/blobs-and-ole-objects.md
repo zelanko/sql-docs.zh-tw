@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1bdea3453c38303dc6aaa6989f905db243d0be90
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e96267a04c12c1a27684009d6cb206415a9b7a1f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998842"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 與 OLE 物件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會公開**ISequentialStream**介面，以支援取用者存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Ntext**、 **text**、 **image**、 **Varchar （max）**、 **Nvarchar （max）**、 **Varbinary （max）** 和 xml 資料類型做為二進位大型物件（blob）。 **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  

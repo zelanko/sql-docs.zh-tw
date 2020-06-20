@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c0b625ac90e968cd68911a6527b82da6a988f7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094894"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059303"
 ---
 # <a name="how-to-export-reports"></a>如何：匯出報表
   「Upgrade Advisor 報表檢視器」可以讓您匯出一般檔案版本的報表。 這樣做可讓您在試算表或文字處理文件中使用該項資訊，或將該項資訊以電子郵件寄給其他人。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51d9f20436bb7009c8439d1b53b9757e044002a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270597"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061830"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>準則窗格 (Visual Database Tools)
   只要將您的選擇輸入於類似方格的試算表，[準則] 窗格便可以讓您指定查詢選項 (例如，要顯示的資料行、如何排序結果，以及要選取的資料列)。 您可以在 [準則窗格] 中指定下列項目：  
@@ -63,7 +62,7 @@ ms.locfileid: "63270597"
 |輸出|SELECT、INSERT FROM、MAKE TABLE|指定查詢輸出中是否出現資料行。<br /><br /> 注意：若資料庫允許，您無須在結果集中顯示資料行，就能使用資料行來排序或搜尋子句。|  
 |排序類型|SELECT、INSERT FROM|指定使用關聯資料欄來排序查詢結果，及其排序是否為遞增或遞減排序。|  
 |排序次序|SELECT、INSERT FROM|指定用來排序結果集的資料行之排序優先順序。 當您變更資料行的排序次序時，所有其他資料行的排序次序也會一併更新。|  
-|群組依據|SELECT、INSERT FROM、MAKE TABLE|指定使用關聯資料行來建立彙總查詢。 僅當您從 [工具]  功能表中選擇 [群組依據]  ，或將 GROUP BY 子句新增到 [SQL 窗格] 中，才會顯示格線欄。<br /><br /> 此資料行的預設值為 [群組依據]  ，而且此資料行將會成為 GROUP BY 子句的一部分。<br /><br /> 當您移到這個資料行的資料格並選取要套用到關聯資料行的彙總函式時，依照預設，其產生的運算式將加入至結果集並成為輸出資料行。|  
+|群組依據|SELECT、INSERT FROM、MAKE TABLE|指定使用關聯資料行來建立彙總查詢。 僅當您從 [工具] 功能表中選擇 [群組依據]，或將 GROUP BY 子句新增到 [SQL 窗格] 中，才會顯示格線欄。<br /><br /> 此資料行的預設值為 [群組依據]  ，而且此資料行將會成為 GROUP BY 子句的一部分。<br /><br /> 當您移到這個資料行的資料格並選取要套用到關聯資料行的彙總函式時，依照預設，其產生的運算式將加入至結果集並成為輸出資料行。|  
 |準則|全部|指定關聯資料行的搜尋條件 (篩選條件)。 輸入運算子 (預設值為「=」) 及要搜尋的值。 使用單引號括住文字值。<br /><br /> 如果關聯資料行為 GROUP BY 子句的一部份，您輸入的運算式將供 HAVING 子句使用。<br /><br /> 若您在 [準則]  格線欄中，為多個資料格輸入值，產生的搜尋條件將會自動連結到邏輯 AND。<br /><br /> 若要為單一資料庫資料行指定多個搜尋條件運算式 (例如 (fname > 'A') AND (fname < 'M'))，可將資料行新增到 [準則窗格] 兩次，再個別於 [準則]  格線欄中，為每個資料行執行個體輸入值。|  
 |或...|全部|指定資料行的其他搜尋條件運算式，連結至之前使用邏輯 OR 的運算式。 您可以按最右邊 [或...]  資料行中的 TAB 鍵，新增更多的 [或...]  格線欄。|  
 |附加|INSERT FROM|指定相關資料行的目標資料行名稱。 當您建立 Insert From 查詢時，查詢和檢視設計工具將嘗試比對來源和正確的目標資料行。 如果查詢和檢視設計工具無法選擇符合的項目，您必須提供資料行名稱。|  

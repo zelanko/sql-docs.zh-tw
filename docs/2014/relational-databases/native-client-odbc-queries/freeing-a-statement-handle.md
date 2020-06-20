@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 96fdff84-0ca7-460a-a240-94ee826ea41c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6d6fcb06aaabaa927ea9b330ba8e52c27ba8dcdb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8d7a1e93d222e2b87058bc878f7eca85313b4108
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699815"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018337"
 ---
 # <a name="freeing-a-statement-handle"></a>釋放陳述式控制代碼
   重複使用陳述式控制代碼比卸除陳述式控制代碼然後再配置新的陳述式控制代碼更有效率。 針對陳述式控制代碼執行新的 SQL 陳述式之前，應用程式應該確認目前的陳述式設定是否恰當。 這些包括陳述式屬性、參數繫結，以及結果集繫結。 一般來說，舊 SQL 語句的參數和結果集必須解除系結，方法是使用 SQL_RESET_PARAMS 和 SQL_UNBIND 選項呼叫[SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md) ，然後重新系結新的 sql 語句。  

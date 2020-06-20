@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2149e0434c13ccc9e284385999cf94c98fb937fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952591"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059381"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>在報表伺服器上偵測到自訂延伸模組 (Upgrade Advisor)
   Upgrade Advisor 偵測到組態檔中有自訂延伸模組設定，表示您的安裝包括用於資料處理、傳遞、轉譯、安全性或驗證的一個或多個自訂延伸模組。 升級作業將會一起移動延伸模組的組態設定與升級的報表伺服器。 不過，如果自訂延伸模組安裝在現有的報表伺服器安裝資料夾中，這些自訂延伸模組的組件檔將不會在升級程序期間移至新的安裝資料夾。 升級完成之後，您必須將這些組件檔移至新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝資料夾。  
@@ -71,7 +70,7 @@ ms.locfileid: "71952591"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>自訂資料處理或傳遞延伸模組的升級後步驟  
   
-1.  將延伸模組檔案移至報表伺服器的新程式資料夾。 根據預設，報表伺服器程式資料夾位於 \Program Files\Microsoft SQL Server \ MSRS10_50。\< *instance_name*> \report sample 伺服器。  
+1.  將延伸模組檔案移至報表伺服器的新程式資料夾。 根據預設，報表伺服器程式資料夾位於 \Program Files\Microsoft SQL Server \ MSRS10_50。 \<*instance_name*>\report sample 伺服器。  
   
  如需詳細資訊，請參閱《SQL Server 線上叢書》中的＜部署資料處理延伸模組＞和＜實作傳遞延伸模組＞。  
   
