@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae5924e5fc1cad91b5e1511c61556ece70138dcb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056416"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964544"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中執行套件
   在開發、偵錯和測試封裝期間，您通常會在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中執行封裝。 當您從「 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」執行封裝時，封裝一定會立即執行。  
   
- 當封裝正在執行時， [!INCLUDE[ssIS](../includes/ssis-md.md)]設計師會在 [**進度**] 索引標籤上顯示封裝執行的進度。除了封裝中失敗的任何工作或容器的相關資訊之外，您還可以查看封裝及其工作和容器的開始和結束時間。 在封裝執行完成之後，執行時間資訊會在 [**執行結果**] 索引標籤上保持可用狀態。如需詳細資訊，請參閱[偵錯工具控制流程](control-flow/control-flow.md)主題中的「進度報告」一節。  
+ 當封裝正在執行時， [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師會在 [**進度**] 索引標籤上顯示封裝執行的進度。除了封裝中失敗的任何工作或容器的相關資訊之外，您還可以查看封裝及其工作和容器的開始和結束時間。 在封裝執行完成之後，執行時間資訊會在 [**執行結果**] 索引標籤上保持可用狀態。如需詳細資訊，請參閱[偵錯工具控制流程](control-flow/control-flow.md)主題中的「進度報告」一節。  
   
  **設計階段部署**。 當您在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中執行封裝時，會建立封裝，然後部署至資料夾。 在執行封裝之前，您可以指定要用來部署封裝的資料夾。 如果未指定資料夾，預設將會使用 **bin** 資料夾。 這種類型的部署稱為設計階段部署。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66056416"
   
 1.  在方案總管中，以滑鼠右鍵按一下包含您要執行之封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案資料夾，然後按一下 [屬性]****。  
   
-2.  在 [ ** \<專案名稱]> [屬性頁**] 對話方塊中，按一下 [**建立**]。  
+2.  在 [ ** \<project name> 屬性頁**] 對話方塊中，按一下 [**建立**]。  
   
 3.  更新 OutputPath 屬性中的值，以指定要用於設計階段部署的資料夾，然後按一下 [確定]****。  
   

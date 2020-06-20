@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e3aec7e136b656b7f33646d50b746e410263059a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12e61f909d7961851983212cd61b709f8a781c25
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284993"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971292"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>整合管理功能區域 (主資料管理員)
   在 [整合管理] 功能區域中，管理員可以從暫存資料表匯入資料，並建立要用於訂閱系統的訂閱檢視。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  

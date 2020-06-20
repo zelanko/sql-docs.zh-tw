@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 535ab473d8fe6cf9a89fafa1fc0c9f45b0096f7e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056433"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964568"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>執行 SQL 工作中的結果集
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中，結果集是否會傳回到執行 SQL 工作，端視工作所使用的 SQL 命令類型而定。 例如，SELECT 陳述式通常會傳回結果集，INSERT 陳述式則不會。  
@@ -51,15 +50,15 @@ ms.locfileid: "66056433"
   
  如果結果集類型為 **Single row**，則可以藉由使用資料行名稱做為結果集名稱將傳回結果中的資料行繫結至變數，或者可以使用資料行清單中資料行的序數位置做為結果集名稱。 例如，查詢 `SELECT Color FROM Production.Product WHERE ProductID = ?` 的結果集名稱可以為 **Color** 或 **0**。 如果查詢傳回多個資料行，並且您要存取所有資料行中的值，則您必須將每個資料行繫結至不同的變數。 如果您透過使用數字做為結果集名稱將資料行對應至變數，則該數字會反映資料行在查詢的資料行清單中所顯示的順序。 例如，在查詢 `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`中，您將 0 用於 **Color** 資料行，將 1 用於 **ListPrice** 資料行。 使用資料行名稱做為結果集名稱的功能取決於將該工作設定為使用的提供者。 並非所有的提供者可以使用資料行名稱做為結果集名稱。  
   
- 部分傳回單一值的查詢可能不包含資料行名稱。 例如， `SELECT COUNT (*) FROM Production.Product` 陳述式不會傳回任何資料行名稱。 您可以使用序數位置 0 做為結果名稱來存取傳回的結果。 若要依據資料行名稱存取傳回的結果，查詢必須包含用來提供資料行名稱的 AS \<別名名稱> 子句。 `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`陳述式會提供 **CountOfProduct** 資料行。 接著您可以使用 **CountOfProduct** 資料行名稱或序數位置 0 來存取傳回結果資料行。  
+ 部分傳回單一值的查詢可能不包含資料行名稱。 例如， `SELECT COUNT (*) FROM Production.Product` 陳述式不會傳回任何資料行名稱。 您可以使用序數位置 0 做為結果名稱來存取傳回的結果。 若要依據資料行名稱存取傳回的結果，查詢必須包含 AS \<alias name> 子句來提供資料行名稱。 `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`陳述式會提供 **CountOfProduct** 資料行。 接著您可以使用 **CountOfProduct** 資料行名稱或序數位置 0 來存取傳回結果資料行。  
   
  如果結果集類型為 **完整結果集** 或 **XML**，則必須使用 0 作為結果集名稱。  
   
- 當您將變數對應至結果集類型為 **Single row** 的結果集時，此變數須具有與結果集包含的資料行之資料類型相容的資料類型。 例如，包含資料類型為 `String` 之資料行的結果集不能對應至數值資料類型的變數。 當您將**TypeConversionMode**屬性設定為`Allowed`時，「執行 SQL」工作會嘗試將輸出參數和查詢結果轉換為指派結果之變數的資料類型。  
+ 當您將變數對應至結果集類型為 **Single row** 的結果集時，此變數須具有與結果集包含的資料行之資料類型相容的資料類型。 例如，包含資料類型為 `String` 之資料行的結果集不能對應至數值資料類型的變數。 當您將**TypeConversionMode**屬性設定為時 `Allowed` ，「執行 SQL」工作會嘗試將輸出參數和查詢結果轉換為指派結果之變數的資料類型。  
   
  XML 結果集只可對應至資料類型為 `String` 或 `Object` 的變數。 如果變數有 `String` 資料類型，則執行 SQL 工作會傳回字串，且 XML 來源可使用 XML 資料。 如果變數有 `Object` 資料類型，則執行 SQL 工作會傳回「文件物件模組 (DOM)」物件。  
   
- **完整結果集**必須對應至`Object`資料類型的變數。 傳回結果為資料列集物件。 您可以使用 Foreach 迴圈容器，將儲存在 Object 變數中的資料表資料列值，擷取到封裝變數中，然後使用指令碼工作，將儲存在封裝變數中的資料寫入檔案。 如需如何使用 Foreach 迴圈容器和指令碼工作執行此作業的示範，請參閱 msftisprodsamples.codeplex.com 上的 CodePlex 範例 [執行 SQL 參數及結果集](https://go.microsoft.com/fwlink/?LinkId=157863)(英文)。  
+ **完整結果集**必須對應至 `Object` 資料類型的變數。 傳回結果為資料列集物件。 您可以使用 Foreach 迴圈容器，將儲存在 Object 變數中的資料表資料列值，擷取到封裝變數中，然後使用指令碼工作，將儲存在封裝變數中的資料寫入檔案。 如需如何使用 Foreach 迴圈容器和指令碼工作執行此作業的示範，請參閱 msftisprodsamples.codeplex.com 上的 CodePlex 範例 [執行 SQL 參數及結果集](https://go.microsoft.com/fwlink/?LinkId=157863)(英文)。  
   
  下表列出可對應至結果集之變數的資料類型。  
   

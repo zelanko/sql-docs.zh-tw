@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0b0340c33f5a53ba75cb42fa16e08b8b45f92da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889620"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964493"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以程式設計方式載入和執行遠端封裝
   若要從沒有安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的本機電腦執行遠端封裝，請啟動封裝，讓它們在已安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的遠端電腦上執行。 完成這項工作的方法是讓本機電腦使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、Web 服務或遠端元件來啟動遠端電腦上的封裝。 如果您嘗試直接從本機電腦啟動遠端封裝，該封裝將載入並嘗試從本機電腦執行。 如果本機電腦沒有安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，封裝將不會執行。  
@@ -36,7 +35,7 @@ ms.locfileid: "62889620"
   
 -   [以程式設計方式使用 Web 服務或遠端元件執行遠端套件](#service)  
   
- 本主題中幾乎所有用以載入和儲存封裝的方法，都需要 `Microsoft.SqlServer.ManagedDTS` 組件的參考。 例外狀況是本主題中針對執行**sp_start_job**預存程式所示範的 ADO.NET 方法，這只需要的參考`System.Data`。 在新專案中加入 `Microsoft.SqlServer.ManagedDTS` 組件的參考之後，請使用 `using` 或 `Imports` 陳述式來匯入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空間。  
+ 本主題中幾乎所有用以載入和儲存封裝的方法，都需要 `Microsoft.SqlServer.ManagedDTS` 組件的參考。 例外狀況是本主題中針對執行**sp_start_job**預存程式所示範的 ADO.NET 方法，這只需要的參考 `System.Data` 。 在新專案中加入 `Microsoft.SqlServer.ManagedDTS` 組件的參考之後，請使用 `using` 或 `Imports` 陳述式來匯入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空間。  
   
 ###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> 以程式設計方式使用 SQL Server Agent 在伺服器上執行遠端套件  
  下列程式碼範例示範如何以程式設計方式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，在伺服器上執行遠端封裝。 程式碼範例會呼叫系統預存程序 **sp_start_job**，它將會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 程序所啟動的作業其名稱為 `RunSSISPackage`，而且此作業是在遠端電腦上。 `RunSSISPackage` 作業接著會在遠端電腦上執行封裝。  
@@ -164,7 +163,7 @@ namespace LaunchSSISPackageAgent_CS
   
 1.  使用您慣用的程式語言，開啟 Visual Studio 並建立 Web 服務專案。 範例程式碼使用 LaunchSSISPackageService 做為專案的名稱。  
   
-2.  `Microsoft.SqlServer.ManagedDTS`加入的參考，並`Imports`將或`using`語句加入至**Microsoft**的程式碼檔案。  
+2.  加入的參考 `Microsoft.SqlServer.ManagedDTS` ，並將 `Imports` 或語句加入 `using` 至**Microsoft**的程式碼檔案。  
   
 3.  將 LaunchPackage Web 服務方法的範例程式碼貼到類別中 (範例顯示程式碼視窗的整個內容)。  
   

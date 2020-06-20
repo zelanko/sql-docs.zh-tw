@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d19228fdf17788e9118367a6f0f0eb3be90cb72a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481199"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930129"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>選項 (查詢結果和相依性服務頁面)
-  使用此頁面可指定要針對相依性服務連接的伺服器。 相依性服務可讓您擷取在不同伺服器上儲存的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件之間的相依性資訊。 您可以使用中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的 [**物件**相依性] 對話方塊來查看物件相依性。  
+  使用此頁面可指定要針對相依性服務連接的伺服器。 相依性服務可讓您擷取在不同伺服器上儲存的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件之間的相依性資訊。 您可以使用中的 [**物件**相依性] 對話方塊來查看物件相依性 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 。  
   
  **您想要做什麼事？**  
   
@@ -30,7 +29,7 @@ ms.locfileid: "65481199"
   
 ##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>開啟 [選項（查詢結果/相依性服務頁面）] 對話方塊  
   
-1.  在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中，按一下 [**工具**] 功能表上的 [**選項**]。  
+1.  在中 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ，按一下 [**工具**] 功能表上的 [**選項**]。  
   
 2.  展開 [查詢結果]****，然後按一下 [相依性服務]****。  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 96773f6ed74282cfd1610fc0b297b7e78e892c42
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9bcf209096b1929938affcec6a12ce608e54f799
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705346"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019732"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
   在使用者檔案中指定資料的來源或目標格式。 當做來源格式使用時， **bcp_colfmt**會將當做大量複製中資料來源使用之現有資料檔案的格式指定為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 當做目標格式使用時，會使用以**bcp_colfmt**指定的資料行格式建立資料檔案。  

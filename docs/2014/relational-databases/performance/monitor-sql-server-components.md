@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67dad84ff115607894e29776deec9c23add83969
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150756"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066787"
 ---
 # <a name="monitor-sql-server-components"></a>監視 SQL Server 元件
   因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是在動態環境下提供服務，所以監視很重要。 應用程式中的資料會變更。 使用者需要的存取類型會變更。 使用者的連接方式會變更。 甚至存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的應用程式類型也可能變更，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動管理系統層級的資源，例如記憶體和磁碟空間，以便將系統層級的密集手動微調需求降到最低。 監視可讓管理員識別效能趨勢，以決定是否需要變更。  
@@ -90,7 +89,7 @@ ms.locfileid: "63150756"
   
 -   Database Console Commands (DBCC)  
   
--   內建函數  
+-   內建函式  
   
 -   追蹤旗標  
   

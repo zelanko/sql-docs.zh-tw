@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b563160c9cd41a449b4669bb6b17ca43d427ff6e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889786"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964708"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用於在套件、容器和工作中實作記錄的記錄提供者。 使用記錄，可以擷取有關封裝的執行階段資訊，藉此幫助您在每次執行封裝時對其進行稽核和疑難排解。 例如，記錄可以擷取執行封裝之操作員的名稱，以及封裝開始和結束的時間。  
@@ -52,13 +51,13 @@ ms.locfileid: "62889786"
     > [!NOTE]  
     >  您無法在以 64 位元模式執行的封裝中使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 記錄提供者。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄提供者，它會將記錄專案寫入`sysssislog` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中的資料表。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄提供者，它會將記錄專案寫入 `sysssislog` 資料庫中的資料表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   「Windows 事件」記錄提供者，它可將項目寫入本機電腦上之「Windows 事件」記錄的「應用程式」記錄中。  
   
 -   「XML 檔案」記錄提供者，它可將記錄檔寫入 XML 檔案中。 此提供者的預設副檔名為 .xml。  
   
- 如果您將記錄提供者加入封裝或以程式設計的方式設定記錄，則可以使用 ProgID 或 ClassID 來識別記錄提供者，以取代使用 [設定 SSIS 記錄][!INCLUDE[ssIS](../../includes/ssis-md.md)] **對話方塊中所顯示之 [** 設計師] 的名稱。  
+ 如果您將記錄提供者加入封裝或以程式設計的方式設定記錄，則可以使用 ProgID 或 ClassID 來識別記錄提供者，以取代使用 [設定 SSIS 記錄] 對話方塊中所顯示之 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的名稱。  
   
  下表列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含之記錄提供者的 ProgID 和 ClassID，以及記錄提供者寫入記錄檔的位置。  
   
@@ -72,7 +71,7 @@ ms.locfileid: "62889786"
   
  您還可以建立自訂記錄提供者。 如需詳細資訊，請參閱 [建立自訂記錄提供者](../extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)。  
   
- 封裝中的記錄提供者是此封裝之記錄提供者集合的成員。 使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 建立封裝並實作記錄時，您可在  **設計師的 [封裝總管]** **索引標籤上，看到 [記錄提供者]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 資料夾中集合成員的清單。  
+ 封裝中的記錄提供者是此封裝之記錄提供者集合的成員。 使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 建立封裝並實作記錄時，您可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [封裝總管] 索引標籤上，看到 [記錄提供者] 資料夾中集合成員的清單。  
   
  您可以藉由提供記錄提供者的名稱和描述，並指定記錄提供者使用的連接管理員，來設定記錄提供者。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄提供者會使用 OLE DB 連接管理員。 「文字檔」、「 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]」和「XML 檔案」記錄提供者全都使用「檔案」連線管理員。 Windows 事件記錄檔提供者不使用連接管理員，因為它會直接寫入「Windows 事件記錄檔」中。 如需詳細資訊，請參閱 [OLE DB 連線管理員](../connection-manager/ole-db-connection-manager.md) 和 [檔案連線管理員](../connection-manager/file-connection-manager.md)。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62889786"
 |MessageText|與記錄項目相關聯的訊息。|  
 |DataBytes|記錄項目特定的位元組陣列。 此欄位的意義會因記錄項目的不同而不同。|  
   
- 下表描述記錄結構描述中，在 [設定 SSIS 記錄]  對話方塊的 [詳細資料]  索引標籤上沒有提供的三個額外元素。  
+ 下表描述記錄結構描述中，在 [設定 SSIS 記錄] 對話方塊的 [詳細資料] 索引標籤上沒有提供的三個額外元素。  
   
 |元素|描述|  
 |-------------|-----------------|  
@@ -109,7 +108,7 @@ ms.locfileid: "62889786"
 |DataCode|選擇性的整數值，一般會包含 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 列舉的值，指出執行容器或工作的結果：<br /><br /> 0 - 成功<br /><br /> 1 - 失敗<br /><br /> 2 - 已完成<br /><br /> 3 - 已取消|  
   
 ##### <a name="log-entries"></a>記錄項目  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援預先定義事件上的記錄項目，並為許多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件提供自訂記錄項目。 在 [ **設計師] 中的 [設定 SSIS 記錄]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 對話方塊會列出這些事件和自訂記錄項目。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援預先定義事件上的記錄項目，並為許多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件提供自訂記錄項目。 在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中的 [設定 SSIS 記錄] 對話方塊會列出這些事件和自訂記錄項目。  
   
  下表描述的預先定義事件可在發生執行階段事件時寫入記錄項目。 這些記錄項目會套用至可執行檔、封裝和封裝所包含的工作和容器。 記錄項目的名稱與引發並造成寫入記錄項目之執行階段事件的名稱相同。  
   
@@ -168,7 +167,7 @@ ms.locfileid: "62889786"
   
 |步驟|描述|  
 |----------|-----------------|  
-|Validate|元件會檢查有效的屬性值和組態設定。|  
+|驗證|元件會檢查有效的屬性值和組態設定。|  
 |PreExecute|元件會在開始處理資料列之前，執行一次處理。|  
 |PostExecute|元件會在已經處理所有資料列之後，執行一次處理。|  
 |ProcessInput|轉換或目的地元件會處理上游來源或轉換傳遞給它的傳入資料列。|  

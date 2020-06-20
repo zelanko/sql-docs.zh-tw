@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b0862c3a-926b-490c-a37f-382e50146a3e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1b2c130ace15d6bd4afec307824099c649214e0d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5534748fbbf810539f2dcfc22239e4b987cf0f77
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066653"
 ---
 # <a name="sql-server-login-password-strength"></a>SQL Server 登入密碼強度
   此規則會檢查每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的「強制執行密碼原則」是否已啟用。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證已啟用，而且作業系統版本比 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]舊，則攻擊者可能會重複利用已知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入密碼。  

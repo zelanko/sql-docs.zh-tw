@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 648aa642f380d042091005cf9dbd8e6d8d61add9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056436"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964588"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Integration Services 伺服器的報表
   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的目前版本中， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中提供標準報表，協助您監視已部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 這些報表可協助您檢視封裝狀態及記錄，如有必要，也可協助您識別封裝執行失敗的原因。  
@@ -71,7 +70,7 @@ ms.locfileid: "66056436"
  [所有驗證]**** 報表會顯示伺服器上已執行之所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 驗證的摘要。 此摘要會顯示每個驗證的資訊，例如狀態、開始時間和結束時間。 每個摘要項目都包含一個指向驗證期間產生之訊息的連結。 就如同 Integration Services 儀表板一樣，您可以將篩選套用至資料表，以縮小顯示的資訊範圍。  
   
 ## <a name="custom-reports"></a>自訂報表  
- 您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，將自訂報表 (.rdl 檔案) 加入 [Integration Services 目錄]**** 節點底下的 [SSISDB]**** 目錄節點。 加入報表之前，請確認您正在使用三部分命名慣例來完整限定您所參考的物件，例如來源資料表。 否則， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 將會顯示錯誤。 此命名慣例是 \<資料庫>.\<擁有者>.\<物件>。 SSISDB.internal.executions 就是範例。  
+ 您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，將自訂報表 (.rdl 檔案) 加入 [Integration Services 目錄]**** 節點底下的 [SSISDB]**** 目錄節點。 加入報表之前，請確認您正在使用三部分命名慣例來完整限定您所參考的物件，例如來源資料表。 否則， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 將會顯示錯誤。 命名 \<database> 慣例為 ... \<owner> \<object>例如，SSISDB.internal.executions。  
   
 > [!NOTE]  
 >  當您將自訂報表加入 [資料庫]**** 節點底下的 [SSISDB]**** 節點時，不需要使用 SSISDB 前置詞。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9bde39c64fdf2fbabaec85772d4bfa44d86fd1da
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 5678c146dfffc4cf907e0050b2017208a0c7f141
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856613"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930049"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>選項（查詢結果-SQL Server-以方格顯示結果頁面）
   使用這個頁面即可指定選項，使查詢結果集以方格的格式顯示。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [**查詢**] 功能表上的 [**查詢選項**]，或在查詢視窗中按一下滑鼠右鍵， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 然後選取 [**查詢選項**]。 在 [查詢選項]**** 對話方塊的左窗格中，於 [結果]**** 之下，按一下 [方格]****。  

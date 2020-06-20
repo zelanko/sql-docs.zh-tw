@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0ad01826b563a53713ed0bec69092115ab5cd53
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971208"
 ---
 # <a name="models-master-data-services"></a>模型 (Master Data Services)
   模型是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中最高層級的資料組織。 模型定義主要資料管理方案中的資料結構。 模型包含下列物件：  

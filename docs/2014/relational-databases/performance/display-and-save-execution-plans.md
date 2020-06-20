@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 869c74a0a739ce95ccb91861d031da1d5d0c6510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e236ed2a298bc8fc9a829948a864f6f5c27a2ba2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151049"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066871"
 ---
 # <a name="display-and-save-execution-plans"></a>顯示並儲存執行計畫
   本節將說明如何顯示執行計畫，以及如何使用 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]將執行計畫儲存到 XML 格式的檔案中。  

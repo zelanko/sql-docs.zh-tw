@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: de23ecd1201d7ce0e24638cf9e64c63cb782face
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 200ef467f5c1fc64e4d5056cb60fc442ec998f77
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912103"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053393"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker 登入事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立 **Audit Broker Login** 事件，以報告與 Service Broker 傳輸安全性相關的稽核訊息。  

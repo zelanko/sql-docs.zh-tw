@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 97cc4c9955b64583571a63fa72df4663c1acd812
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03ceaab6fad6b5c1ff09000046e347ef537645c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479148"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971255"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>讓使用者看到屬性群組 (Master Data Services)
   當您希望使用者在總管**** 功能區域的方格上方有索引標籤時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中對使用者或群組顯示屬性群組。  
   
  當您建立屬性群組時，它會自動隱藏起來不讓所有使用者看到，除了建立它的使用者以外。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -51,7 +50,7 @@ ms.locfileid: "65479148"
   
 9. 按一下 [**可用**] 方塊中的 [使用者或群組]，然後按一下 [**新增**] 箭號。 若要全部加入，請按一下 [全部加入]**** 箭號。  
   
-10. 按一下 **[儲存]** 。  
+10. 按一下 [檔案] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性群組 &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   

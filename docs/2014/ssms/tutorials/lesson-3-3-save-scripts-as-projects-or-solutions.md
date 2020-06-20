@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24e204c7282cb9228fb81d1c63cc4bf51f6286ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753037"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040969"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>將指令碼儲存成專案或方案
   熟悉 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 的開發人員會欣然接受 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 [方案總管]。 支援您商務的指令碼可以分組成不同的指令碼專案，而且這些指令碼專案可以當作一個方案來一起管理。 當您將指令碼放在指令碼專案和方案中時，您可以將它們當作一個群組來一起開啟，也可以將它們一起儲存在 Visual SourceSafe 之類的原始檔控制產品中。 指令碼專案包括適當執行指令碼所需要的連接資訊，且可以包括支援文字檔之類的非指令碼檔案。  

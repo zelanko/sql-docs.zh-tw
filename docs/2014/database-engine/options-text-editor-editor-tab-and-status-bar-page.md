@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7a64d8fe198b5660715488b6e1b15d5e4831a99
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b1b79ada7ce4b2f2b256cfc7e7d20b0e7d5f9bc5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000718"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929875"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>選項 (文字編輯器：編輯器索引標籤和狀態列頁面)
   [編輯器索引標籤和狀態列]**** 頁面可讓您自訂 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 查詢編輯器所顯示的資訊。 您可以指定 [查詢編輯器] 視窗的索引標籤和狀態列中顯示的資訊層級，以及狀態列出現在編輯器視窗頂端或底部。  
@@ -34,10 +33,10 @@ ms.locfileid: "83000718"
  **顯示執行時間**  
  包括指令碼執行時間。 設定如下：  
   
- **無**  
+ **None**  
  狀態列不會顯示任何時間資訊。  
   
- **成品**  
+ **結束**  
  狀態列會在指令碼執行時顯示目前當日時間。 當指令碼完成時，則會顯示指令碼完成的當日時間。  
   
  **總值**  

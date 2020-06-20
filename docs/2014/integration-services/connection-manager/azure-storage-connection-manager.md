@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6b6c86aa3f76088ff3cb0e36a1a111b325944ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833556"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921089"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 儲存體連線管理員
   Azure 儲存體連線管理員可讓 SSIS 封裝使用您指定的屬性值連接到 Azure 儲存體帳戶︰儲存體帳戶名稱和帳戶金鑰。  
@@ -33,7 +32,7 @@ ms.locfileid: "62833556"
   
     2.  如果您想要使用 HTTPS 而非 HTTP連接到 Azure 儲存體服務，請選取 [使用 HTTPS]****。  
   
-4.  按一下 [確定]**** 關閉對話方塊。  
+4.  按一下 [確定]  關閉對話方塊。  
   
 5.  您可以在 [屬性] **** 視窗中看到您建立的連線管理員屬性。  
   

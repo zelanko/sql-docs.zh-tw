@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b452acb2e9d168910fec06d959ce3a1c1704b814
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060046"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917078"
 ---
 # <a name="data-conversion-transformation-editor"></a>資料轉換編輯器
   使用 [資料轉換編輯器]**** 對話方塊，即可選取要轉換的資料行、選取資料行要轉換成哪一種資料類型，以及設定轉換屬性。  
   
 > [!NOTE]  
->  [ `FastParse`資料轉換**編輯器**] 中無法使用資料轉換之輸出資料行的屬性，但是可以使用 [**進階編輯器**] 來設定它。 如需這個屬性的詳細資訊，請參閱 [轉換自訂屬性](data-flow/transformations/transformation-custom-properties.md)的＜資料轉換＞一節。  
+>  [資料轉換 `FastParse` **編輯器**] 中無法使用資料轉換之輸出資料行的屬性，但是可以使用 [**進階編輯器**] 來設定它。 如需這個屬性的詳細資訊，請參閱 [轉換自訂屬性](data-flow/transformations/transformation-custom-properties.md)的＜資料轉換＞一節。  
   
  若要深入了解資料轉換，請參閱 [資料轉換](data-flow/transformations/data-conversion-transformation.md)。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66060046"
  **有效位數**  
  設定數值資料的有效位數。  
   
- **調整**  
+ **縮放比例**  
  設定數值資料的小數位數。  
   
  **字碼頁**  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9403e6e2cf1c341780a06bbdff1c5f38685dd34a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f384e2d2752b7601fbb46b8ee7f7b56a2615651c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150975"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066879"
 ---
 # <a name="display-an-actual-execution-plan"></a>顯示實際執行計畫
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]產生實際的圖形執行計畫。 產生實際執行計畫後，就會執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或批次。 所產生的執行計畫會顯示實際查詢執行計畫， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 將用來執行查詢。  
@@ -29,7 +28,7 @@ ms.locfileid: "63150975"
   
 ### <a name="to-include-an-execution-plan-for-a-query-during-execution"></a>若要在執行期間包括查詢的執行計畫  
   
-1.  在工具列[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]上，按一下 [**資料庫引擎查詢**]。 您也可以按一下 [開啟檔案]**** 工具列按鈕並找出現有的查詢，以開啟現有的查詢並顯示估計的執行計畫。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 工具列上，按一下 [**資料庫引擎查詢**]。 您也可以按一下 [開啟檔案]**** 工具列按鈕並找出現有的查詢，以開啟現有的查詢並顯示估計的執行計畫。  
   
 2.  輸入您希望顯示其實際執行計畫的查詢。  
   

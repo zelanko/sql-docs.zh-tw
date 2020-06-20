@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd7c505701a4edb1f66ca516d06179b2eb1a222d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920675"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956242"
 ---
 # <a name="tail-log-backups-sql-server"></a>結尾記錄備份 (SQL Server)
   本主題僅與使用完整或大量記錄復原模式備份和還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。  
@@ -37,7 +36,7 @@ ms.locfileid: "62920675"
 ##  <a name="scenarios-that-require-a-tail-log-backup"></a><a name="TailLogScenarios"></a> 需要結尾記錄備份的實例  
  建議您在下列實例中進行結尾記錄備份：  
   
--   如果資料庫在線上，而且您打算執行資料庫的還原作業，請從備份記錄結尾開始。 若要避免線上資料庫發生錯誤，您必須使用 .。。WITH [BACKUP](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)]語句的 NORECOVERY 選項。  
+-   如果資料庫在線上，而且您打算執行資料庫的還原作業，請從備份記錄結尾開始。 若要避免線上資料庫發生錯誤，您必須使用 .。。WITH [BACKUP](/sql/t-sql/statements/backup-transact-sql)語句的 NORECOVERY 選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
 -   如果資料庫離線且無法啟動，並且需要還原資料庫，請先備份記錄結尾。 因為這段時間不會發生交易，所以使用 WITH NORECOVERY 是選擇性的。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62920675"
   
 |BACKUP LOG 選項|註解|  
 |-----------------------|--------------|  
-|NORECOVERY|每當您打算在資料庫上繼續還原作業時，請使用 NORECOVERY。 NORECOVERY 會讓資料庫進入還原狀態。 這樣可以保證資料庫不會在結尾記錄備份之後變更。  除非也指定了 NO_TRUNCATE 選項或 COPY_ONLY 選項，否則會截斷記錄。<br /><br /> ** \* \*重要\*事項**我們建議您避免使用 NO_TRUNCATE，除非資料庫損毀。|  
+|NORECOVERY|每當您打算在資料庫上繼續還原作業時，請使用 NORECOVERY。 NORECOVERY 會讓資料庫進入還原狀態。 這樣可以保證資料庫不會在結尾記錄備份之後變更。  除非也指定了 NO_TRUNCATE 選項或 COPY_ONLY 選項，否則會截斷記錄。<br /><br /> ** \* \* 重要 \* 事項 \* ** ：我們建議您避免使用 NO_TRUNCATE，除非資料庫損毀。|  
 |CONTINUE_AFTER_ERROR|只有在您要備份受損資料庫的結尾時，才使用 CONTINUE_AFTER_ERROR。<br /><br /> 注意：當您在損毀的資料庫上使用備份記錄的結尾時，某些通常會在記錄備份中捕捉到的中繼資料可能無法使用。 如需詳細資訊，請參閱本節稍後的[具有不完整備份中繼資料的結尾記錄備份](#IncompleteMetadata)。|  
   
 ##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a>具有不完整備份中繼資料的尾記錄備份  
@@ -78,7 +77,7 @@ ms.locfileid: "62920675"
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [SQL Server 資料庫的備份與還原](back-up-and-restore-of-sql-server-databases.md)   
- [僅限複本備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)   
+ [只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)   
  [交易記錄備份 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [套用交易記錄備份 &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  
   

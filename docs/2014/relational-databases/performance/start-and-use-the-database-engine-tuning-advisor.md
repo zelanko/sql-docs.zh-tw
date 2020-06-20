@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2421ceaff8b2f54c1371f44e80b4a1774b64f829
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150630"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066798"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>啟動及使用 Database Engine Tuning Advisor
   此主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中啟動及使用 Database Engine Tuning Advisor。 如需如何在微調資料庫後檢視及處理結果的資訊，請參閱 [檢視及處理 Database Engine Tuning Advisor 的輸出](database-engine-tuning-advisor.md)。  
@@ -175,7 +174,7 @@ ms.locfileid: "63150630"
   
 2.  建立工作負載。 如需詳細資訊，請參閱本主題前面的＜ [建立工作負載](#Create) ＞。  
   
-3.  啟動 Database Engine Tuning Advisor，並登入的實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱本主題前面的＜ [啟動 Database Engine Tuning Advisor](#Start) ＞。  
+3.  啟動 Database Engine Tuning Advisor，並登入的實例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需詳細資訊，請參閱本主題前面的＜ [啟動 Database Engine Tuning Advisor](#Start) ＞。  
   
 4.  在 **[一般]** 索引標籤的 **[工作階段名稱]** 中輸入名稱，以建立新的微調工作階段。  
   
@@ -298,7 +297,7 @@ ms.locfileid: "63150630"
 ##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a>建立 XML 輸入檔  
  如果您是有經驗的 XML 開發人員，即可建立 XML 格式的檔案供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 用以微調工作負載。 若要建立這些 XML 檔案，請使用您喜好的 XML 工具來編輯範例檔，或是根據 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML 結構描述產生執行個體。  
   
- 在[!INCLUDE[ssDE](../../includes/ssde-md.md)]您的安裝中，您[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以在下列位置取得微調建議程式 XML 架構：  
+ 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 您的安裝中，您可以在下列位置取得微調建議程式 XML 架構 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -353,7 +352,7 @@ ms.locfileid: "63150630"
  **檔案**  
  指定工作負載的 .sql 指令碼或追蹤檔案。 在相關聯的文字方塊中，指定路徑和檔名。 Database Engine Tuning Advisor 會假設工作負載追蹤檔案為換用檔案。 如需有關換用檔案的詳細資訊，請參閱＜ [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md)＞。  
   
- **目錄**  
+ **資料表**  
  指定工作負載的追蹤資料表。 指定相關聯的文字方塊中之追蹤資料表的完整限定名稱如下：  
   
 ```  
@@ -436,10 +435,10 @@ database_name.owner_name.table_name
  **停止時間**  
  提供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 應該停止的日期和時間。  
   
- **索引與索引檢視**  
+ **索引和索引的視圖**  
  核取此方塊以包含加入叢集索引、非叢集索引以及索引檢視的建議。  
   
- **索引視圖**  
+ **索引檢視**  
  只包含加入索引檢視的建議。 不建議叢集與非叢集索引。  
   
  **包含篩選的索引**  
@@ -454,7 +453,7 @@ database_name.owner_name.table_name
  **只評估現有 PDS 的使用情形**  
  評估目前索引的效能，但不建議其他索引或索引檢視。  
   
- **沒有資料分割。**  
+ **沒有資料分割**  
  不建議資料分割。  
   
  **完整資料分割**  
@@ -499,14 +498,14 @@ database_name.owner_name.table_name
  **狀態**  
  顯示動作步驟的狀態。  
   
- **訊息**  
+ **Message**  
  包含動作步驟所傳回的任何訊息。  
   
  **微調記錄**  
  包含此微調工作階段的相關資訊。 若要列印此記錄，請以滑鼠右鍵按一下記錄，然後按一下 [列印]****。  
   
 ## <a name="see-also"></a>另請參閱  
- [查看並使用 Database Engine Tuning Advisor 的輸出](database-engine-tuning-advisor.md)   
+ [檢視及處理 Database Engine Tuning Advisor 的輸出](database-engine-tuning-advisor.md)   
  [dta 公用程式](../../tools/dta/dta-utility.md)  
   
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1ca7eb5b4883edf9ab718c731049da4c3be44324
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d83154a1453dce3b4d338c6823a3e1d1b714114
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835796"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923442"
 ---
 # <a name="connect-to-oracle"></a>連接到 Oracle
   當您初次加入或編輯 CDC 執行個體中使用的資料表時，系統可能會要求您連接到 Oracle 資料庫。 您應該輸入可以存取要擷取之資料表結構描述的 Oracle 使用者認證。 請在此對話方塊中輸入以下資訊：  

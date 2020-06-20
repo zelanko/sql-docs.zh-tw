@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3122ddb64d9f86bd70e5b444bd7bd7fce44956de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175982"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971168"
 ---
 # <a name="data-import-master-data-services"></a>資料匯入 (Master Data Services)
   為 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的資料建立模型之後，即可開始加入資料，並對 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的資料進行變更。   可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 暫存資料表、預存程序及主資料管理員。
 
- 您也[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]可以使用，將資料加入至 MDS 儲存機制（[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫）。 如需詳細資訊，請參閱[發行 Data &#40;適用于 Excel 的 MDS 增益集&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。
+ 您也可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] ，將資料加入至 MDS 儲存機制（ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫）。 如需詳細資訊，請參閱[發行 Data &#40;適用于 Excel 的 MDS 增益集&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。
 
  當您新增及更新資料時，可以執行下列作業。
 
@@ -83,11 +82,11 @@ ms.locfileid: "78175982"
 
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包含下列幾種類型的暫存預存程序。
 
--   stg.udp_\<名稱>_Leaf
+-   stg.< _Leaf udp_ \<name>
 
--   stg.udp_\<名稱>_Consolidated
+-   stg.< _Consolidated udp_ \<name>
 
--   stg.udp_\<名稱>_Relationship
+-   stg.< _Relationship udp_ \<name>
 
  模型中的每個實體，都有三個對應至分葉成員、合併的成員以及關聯性暫存資料表的預存程序。  下圖顯示貨幣、客戶及產品實體的暫存預存程序。
 

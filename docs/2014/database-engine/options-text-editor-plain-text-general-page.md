@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4253bf2395fc33ecf315a1f092e0203513de90e5
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8a3a172a29949db0ab83bce0d771c98afa6ef64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000687"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929829"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>選項 (文字編輯器 - 純文字 - 一般頁面)
   使用這個對話方塊可變更文字編輯器的一般編輯行為，這個文字編輯器是用來編輯與特定開發語言沒有關聯的文件。 若要顯示這些設定，請按一下 **[工具]** 功能表上的 **[選項]** ，展開 **[文字編輯器]**，展開 **[純文字]** ，然後按一下 **[一般]**。  

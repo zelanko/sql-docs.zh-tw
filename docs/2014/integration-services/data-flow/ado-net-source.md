@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 296163b64d565ae3a65a16f1dbbf002bfc464bee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c35f135671411b34394a885ef3f857e516dea298
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70153964"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916854"
 ---
 # <a name="ado-net-source"></a>ADO NET 來源
   ADO NET 來源會從 .NET 提供者取用資料，並使該資料可供資料流程使用。  

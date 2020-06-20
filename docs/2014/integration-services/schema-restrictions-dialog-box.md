@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6d72b7f8cbb4aead7dfb87eb44fb5d943672433
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056152"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964128"
 ---
 # <a name="schema-restrictions-dialog-box"></a>結構描述限制對話方塊
   使用 [結構描述限制]**** 對話方塊，即可設定要套用至 Foreach ADO.NET 結構描述資料列集列舉值的結構描述限制。  
@@ -33,7 +32,7 @@ ms.locfileid: "66056152"
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)  
   
- **Text**  
+ **文字**  
  提供文字以定義限制。  
   
 ## <a name="see-also"></a>另請參閱  

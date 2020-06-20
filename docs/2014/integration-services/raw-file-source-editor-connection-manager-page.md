@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ea79c73d-37fc-44fd-bc6e-bcefc23235c9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 009a8ad4466c40d9f6199aff57fcbea74f6606e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1700804c9fc3b9106d444b9183f16092d2675451
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056484"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964598"
 ---
 # <a name="raw-file-source-editor-connection-manager-page"></a>原始檔案來源編輯器 (連接管理員頁面)
   「原始檔案」來源會從檔案讀取原始資料。 由於資料的表示法對於來源而言是原生的，因此資料不需翻譯，也幾乎不需要剖析。 如需相關資訊，請參閱 [Raw File Source](data-flow/raw-file-source.md)。  

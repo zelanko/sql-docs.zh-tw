@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ba45350-dae8-437a-8984-64e6d8d180c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07077fabaca18170496a1b4e972da7b7e34cd4fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0ee3775732fcce9fb0de2af2cedde0827bfa9e8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056259"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964241"
 ---
 # <a name="save-a-package-to-the-file-system"></a>將封裝儲存至檔案系統
   此程序描述如何將現有封裝儲存為檔案系統中的 .dtsx 檔案。  

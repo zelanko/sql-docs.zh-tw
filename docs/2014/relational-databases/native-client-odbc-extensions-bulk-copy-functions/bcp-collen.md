@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e46f3c241d44033194c484b8955389fba972fd22
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3fe50863656db9faf60613c0ff9f4de7a9d18875
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705317"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019721"
 ---
 # <a name="bcp_collen"></a>bcp_collen
   設定目前大量複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之程式變數中的資料長度。  

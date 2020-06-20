@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e9e9aef856276508ef557d465c20210e16f3073
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056192"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964188"
 ---
 # <a name="script-task-editor-script-page"></a>指令碼工作編輯器 (指令碼頁面)
   使用 **[指令碼工作編輯器]** 對話方塊的 **[指令碼]** 頁面，即可設定指令碼屬性以及指定指令碼可存取的變數。  
@@ -37,8 +36,8 @@ ms.locfileid: "66056192"
   
  若要為指令碼工作設定預設指令碼語言，請使用 **[選項]** 對話方塊上 **[一般]** 頁面上的 **[指令碼語言]** 選項。 如需相關資訊，請參閱 [General Page](general-page-of-integration-services-designers-options.md)。  
   
- **入口**  
- 將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 執行階段呼叫的方法指定為指令碼工作程式碼的進入點。 指定的方法必須位於[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications （VSTA）專案的 ScriptMain 類別中。 ScriptMain 類別是腳本範本所產生的預設類別。  
+ **EntryPoint**  
+ 將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 執行階段呼叫的方法指定為指令碼工作程式碼的進入點。 指定的方法必須位於 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for APPLICATIONS （VSTA）專案的 ScriptMain 類別中。 ScriptMain 類別是腳本範本所產生的預設類別。  
   
  如果您在 VSTA 專案內變更此方法的名稱，您就必須變更 **[EntryPoint]** 屬性的值。  
   

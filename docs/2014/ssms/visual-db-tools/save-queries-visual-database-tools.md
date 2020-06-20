@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ba330636d325a992389fdc54c1a6516546f717e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63284467"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040699"
 ---
 # <a name="save-queries-visual-database-tools"></a>儲存查詢 (Visual Database Tools)
   儲存您的查詢以便在稍後使用。 請注意，執行查詢並不會儲存您的變更。  

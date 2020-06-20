@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bdb65c464e63f8e7ab248c49f6dca729add3004
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827560"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915988"
 ---
 # <a name="define-a-state-variable"></a>定義狀態變數
   此程序描述如何定義 CDC 狀態儲存所在的封裝變數。  
@@ -37,7 +36,7 @@ ms.locfileid: "62827560"
 |`<ir-start>`|此為初始載入剛要開始前之異動的 LSN。|  
 |`<ir-end>`|此為初始載入才剛結束後之異動的 LSN。|  
 |`TS`|此標示上次 CDC 狀態更新的時間戳記。|  
-|**\<時間戳記>**|此為 64 位元 System.DateTime.UtcNow 屬性的十進位表示法。|  
+|**\<timestamp>**|此為 64 位元 System.DateTime.UtcNow 屬性的十進位表示法。|  
 |`ER`|此將在上次作業失敗時出現，且包含錯誤原因的簡短描述。 若存在此元件，則其一定出現於最後。|  
 |`<short-error-text>`|此為簡短的錯誤描述。|  
   

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c6b848163d01d49d4151fa628ab81e867cb69c18
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f1016a9602a664455e0904b6957b8f8e5acdf15d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705393"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019970"
 ---
 # <a name="processing-statements-that-generate-messages"></a>處理產生訊息的陳述式
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SET 陳述式選項 STATISTICS TIME 和 STATISTICS IO 用於取得協助診斷長時間執行之查詢的資訊。 舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也支援 SHOWPLAN 選項來分析查詢計畫。 ODBC 應用程式可以執行下列陳述式來設定這些選項：  

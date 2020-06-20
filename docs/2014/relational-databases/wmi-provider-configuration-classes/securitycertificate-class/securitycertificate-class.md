@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66168258fb795f8d35b7aa7ac4dcadcf33fed46c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270764"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060033"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate 類別
-  [SecurityCertificate 類別] SecurityCertificate-class.md）代表安全性憑證。 憑證是經過數位簽署的語句，會將公開金鑰的值系結至的實例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，以保存對應的私密金鑰。 憑證是從憑證授權單位發出。  
+  [SecurityCertificate 類別] SecurityCertificate-class.md）代表安全性憑證。 憑證是經過數位簽署的語句，會將公開金鑰的值系結至的實例 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，以保存對應的私密金鑰。 憑證是從憑證授權單位發出。  
   
  使用 [SecurityCertificate 類別] SecurityCertificate-class.md），您可以執行下列工作：  
   
