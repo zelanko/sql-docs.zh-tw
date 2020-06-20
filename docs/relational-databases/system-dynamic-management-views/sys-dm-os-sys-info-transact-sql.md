@@ -22,12 +22,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4e624323c2794afc38a9d8dcf948db69282af0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 55e5892b9183ab2455cee7aa39a34de0d7bb28bf
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827915"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107039"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "82827915"
 |**physical_memory_kb**|**bigint**|**適用物件：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本。<br /><br /> 指定電腦上實體記憶體的總數。 不可為 Null。|  
 |**virtual_memory_in_bytes**|**bigint**|**適用物件：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。<br /><br /> 使用者模式之處理序可用的虛擬記憶體數量。 這可用來判斷 SQL Server 是否藉由使用 3-GB 參數來啟動。|  
 |**virtual_memory_kb**|**bigint**|**適用物件：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本。<br /><br /> 指定使用者模式之處理序可用的虛擬位址空間總數。 不可為 Null。|  
-|**bpool_commited**|**int**|**適用物件：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。<br /><br /> 代表記憶體管理員中已認可的記憶體 (KB)。 不包含記憶體管理員中的保留記憶體。 不可為 Null。|  
+|**bpool_committed**|**int**|**適用物件：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。<br /><br /> 代表記憶體管理員中已認可的記憶體 (KB)。 不包含記憶體管理員中的保留記憶體。 不可為 Null。|  
 |**committed_kb**|**int**|**適用物件：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本。<br /><br /> 代表記憶體管理員中已認可的記憶體 (KB)。 不包含記憶體管理員中的保留記憶體。 不可為 Null。|  
 |**bpool_commit_target**|**int**|**適用物件：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。<br /><br /> 代表可由 SQL Server 記憶體管理員耗用的記憶體數量 (KB)。|  
 |**committed_target_kb**|**int**|**適用物件：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本。<br /><br /> 代表可由 SQL Server 記憶體管理員耗用的記憶體數量 (KB)。 目標數量是透過各種輸入來計算，例如：<br /><br /> -系統的目前狀態，包括其負載<br /><br /> -目前進程所要求的記憶體<br /><br /> -電腦上安裝的記憶體數量<br /><br /> -設定參數<br /><br /> 如果**committed_target_kb**大於**committed_kb**，記憶體管理員會嘗試取得額外的記憶體。 如果**committed_target_kb**小於**committed_kb**，記憶體管理員會嘗試壓縮已認可的記憶體數量。 **Committed_target_kb**一定會包含遭竊和保留的記憶體。 不可為 Null。|  
