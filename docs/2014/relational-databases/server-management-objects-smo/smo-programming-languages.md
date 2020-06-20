@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49c6031d15a2140f5a5c269d90cce0cd230eee1b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211922"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055229"
 ---
-# <a name="programming-languages"></a>程式語言
-  本節說明如何在 Visual Basic .NET [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c # .Net 和[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 中設計管理物件（SMO）的程式。  
+# <a name="programming-languages"></a>程式語言：
+  本節說明如何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .Net、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c # .net 和 Visual C++ 中設計管理物件（SMO）的程式 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 |主題|描述|  
 |-----------|-----------------|  

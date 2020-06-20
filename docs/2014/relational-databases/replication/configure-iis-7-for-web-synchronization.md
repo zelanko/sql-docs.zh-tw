@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c130d3e9ef5be0d60ab19aa4fb16c33ad9426a4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 807c3e955f4772b5263cfee95b3bc5ebbff2a146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486987"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011024"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>針對 Web 同步處理設定 IIS 7
   本主題中的程序將逐步引導您完成手動設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 7 及更新版本的程序，以搭配使用 Web 同步處理，並進行合併式複寫。 
@@ -48,13 +47,13 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 1. 在 IIS 電腦上安裝 SQL Server 複寫。
 
-2.  在執行 IIS 的電腦上，針對 replisapi.dll 建立新的檔案目錄。 您可以在任何位置建立該目錄，不過，建議您在 \<*磁碟機*>:\Inetpub 目錄底下建立該目錄。 例如，您可以建立 \<*磁碟機*>:\Inetpub\SQLReplication\\ 目錄。  
+2.  在執行 IIS 的電腦上，針對 replisapi.dll 建立新的檔案目錄。 您可以在任何想要的位置建立目錄，但建議您在 \<*drive*> ： \Inetpub 目錄下建立目錄。 例如，建立目錄 \<*drive*> ： \Inetpub\SQLReplication \\ 。  
   
 3.  將 replisapi.dll 從目錄 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]com\ 複製到步驟 1 中建立的檔案目錄。  
   
 4.  註冊 replisapi.dll：  
   
-    1.  按一下 **[開始]** ，然後按一下 **[執行]** 。 在 [**開啟**] 方塊中`cmd`，輸入，然後按一下 **[確定]**。  
+    1.  按一下 **[開始]** ，然後按一下 **[執行]** 。 在 [**開啟**] 方塊中，輸入 `cmd` ，然後按一下 **[確定]**。  
   
     2.  在步驟 1 中建立的目錄中，執行下列命令：  
   
@@ -66,9 +65,9 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
     1.  在 **[Internet Information Services (IIS) 管理員]** 的 **[連線]** 窗格中，以滑鼠右鍵按一下 **[預設的網站]** ，然後選取 **[新增虛擬目錄]** 。  
   
-    2.  針對 [**別名**] `SQLReplication`，輸入。  
+    2.  針對 [**別名**]，輸入 `SQLReplication` 。  
   
-    3.  針對 [實體路徑]  ，輸入 **\<磁碟機>:\Inetpub\SQLReplication\\** ，然後按一下 [確定]  。  
+    3.  針對 [**實體路徑**]，輸入** \<drive> ： \Inetpub\SQLReplication \\ **，然後按一下 **[確定]**。  
   
 7.  設定 IIS，使 replisapi.dll 能夠執行。  
   
@@ -78,13 +77,13 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
     3.  在 **[動作]** 窗格中，按一下 **[新增模組對應]** 。  
   
-    4.  針對 [**要求**路徑] `replisapi.dll`，輸入。  
+    4.  針對 [**要求**路徑]，輸入 `replisapi.dll` 。  
   
     5.  從 **[模組]** 下拉式清單中選取 **[IsapiModule]** 。  
   
-    6.  針對 [可執行檔]  ，輸入 **\<磁碟機>:\Inetpub\SQLReplication\replisapi.dll**。  
+    6.  針對 [**可執行檔**]，輸入** \<drive>:\Inetpub\SQLReplication\replisapi.dll**。  
   
-    7.  針對 [名稱]  輸入 `Replisapi`。  
+    7.  針對 [名稱] 輸入 `Replisapi`。  
   
     8.  按一下 **[要求限制]** 按鈕、按一下 **[存取]** 索引標籤，然後按一下 **[執行]** 。  
   
@@ -218,7 +217,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
     2.  在 **[安全性]** 索引標籤上，按一下 **[編輯]** 。  
   
-    3.  在 [\<資料夾名稱> 的權限]  對話方塊中，按一下 [新增]  以新增步驟 1 建立的帳戶。  
+    3.  在 [的**許可權 \<foldername> ** ] 對話方塊中，按一下 [**新增**] 以新增您在步驟1中建立的帳戶。  
   
     4.  確認 **[從這個位置]** 顯示本機電腦的名稱 (而非網域)。 如果此欄位沒有顯示本機電腦名稱，請按一下 **[位置]** 。 在 **[位置]** 對話方塊中，選取本機電腦，然後按一下 **[確定]** 。  
   
@@ -307,7 +306,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
     > [!NOTE]  
     >  將為使用者安裝憑證。 這項處理序必須針對將與 IIS 同步處理的每位使用者執行。  
   
-4.  在 [連接到 \<伺服器名稱>]  對話方塊中，指定合併代理程式要用來連接 IIS 的登入和密碼。 也可以在「新增訂閱精靈」中指定這些認證。  
+4.  在 [**連接到 \<ServerName> ** ] 對話方塊中，指定合併代理程式將用來連接到 IIS 的登入和密碼。 也可以在「新增訂閱精靈」中指定這些認證。  
   
 5.  在稱為 **[SQL Websync 診斷資訊]** 的 Internet Explorer 視窗中，確認頁面中每個 **[狀態]** 資料行中的值都是 **[SUCCESS]** 。  
   

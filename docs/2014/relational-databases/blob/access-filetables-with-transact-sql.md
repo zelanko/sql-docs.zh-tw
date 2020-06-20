@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c47751ef34747e1b3742accf5040846ecde074f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010433"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955868"
 ---
 # <a name="access-filetables-with-transact-sql"></a>利用 Transact-SQL 存取 FileTable
   描述 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料操作語言 (DML) 命令如何與 FileTable 搭配使用。  
@@ -29,7 +28,7 @@ ms.locfileid: "66010433"
   
 -   若 INSERT 陳述式設定 **name**、**path_locator**、**parent_path_locator** 或檔案屬性，則會強制執行系統定義的條件約束。  
   
--   提供 **GetPathLocator &#40;Transact-SQL&#41;** 函數的檔案系統路徑，應用程式就可以取得檔案或目錄的 [path_locator](/sql/relational-databases/system-functions/getpathlocator-transact-sql)。  
+-   提供 [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 函數的檔案系統路徑，應用程式就可以取得檔案或目錄的 **path_locator**。  
   
 ##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> FileTable 上的 UPDATE 作業  
  下列考量適用於 FileTable 上的 **UPDATE** 作業：  

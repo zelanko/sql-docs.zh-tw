@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22b5877fb70a66fd9864e52223b30eca4b01b6db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62937191"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064479"
 ---
 # <a name="job-step-properties-new-job-step-advanced-page"></a>作業步驟屬性：新增作業步驟 (進階頁面)
-  使用此頁面來查看和變更[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的屬性。  
+  使用此頁面來查看和變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的屬性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **成功時的動作**  
  設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 在作業步驟成功時要執行的動作。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "62937191"
  瀏覽作業步驟輸出所用的檔案。  
   
  **檢視**  
- 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，已停用此按鈕來查看輸出檔案。 而改用 [記事本] 來檢視作業步驟輸出檔。  
+ 在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，已停用此按鈕來查看輸出檔案。 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
  **將輸出附加至現有檔案**  
  將輸出附加至現有的檔案內容。 否則，每次執行作業步驟時會覆寫先前的檔案內容。  
@@ -71,7 +70,7 @@ ms.locfileid: "62937191"
  瀏覽作業步驟輸出所用的檔案。  
   
  **檢視**  
- 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，已停用此按鈕來查看輸出檔案。 而改用 [記事本] 來檢視作業步驟輸出檔。  
+ 在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，已停用此按鈕來查看輸出檔案。 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
  **將輸出附加至現有檔案**  
  每次執行作業步驟時，將作業步驟輸出附加至先前的檔案內容。  
@@ -96,7 +95,7 @@ ms.locfileid: "62937191"
  瀏覽作業步驟輸出所用的檔案。  
   
  **檢視**  
- 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，已停用此按鈕來查看輸出檔案。 而改用 [記事本] 來檢視作業步驟輸出檔。  
+ 在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，已停用此按鈕來查看輸出檔案。 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
  **將輸出附加至現有檔案**  
  每次執行作業步驟時，將作業步驟輸出附加至先前的檔案內容。  

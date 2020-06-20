@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e529f26ca6a0e032d9a6d580330ea4a4f968ce6d
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 6ae9d3763ef66c0a7580cc516169c2f273f36528
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859160"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058239"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>加入資料表對話方塊 (資料庫設計工具) (Visual Database Tools)
   讓您在 [資料庫設計工具] 中加入資料表。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 09aea8e66b76103c27bdc44ade4df48a1e505e7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68edbeac50e02e827418c2a213b706162f623b0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021621"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064584"
 ---
 # <a name="publication-peer-to-peer-replication"></a>發行集 (點對點複寫)
   **[發行集]** 頁面會顯示已啟用點對點複寫的交易式發行集。 發行集可以在 **[發行集屬性]** 對話方塊的 **[訂閱選項]** 頁面上啟用。  

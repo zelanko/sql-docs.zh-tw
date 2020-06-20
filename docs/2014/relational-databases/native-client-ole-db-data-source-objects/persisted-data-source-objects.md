@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3e4eaf05eb6334a9df316642adbeb4086be079ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 584032b958494e6b33b729a8d0657a4ee544a86e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707408"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056354"
 ---
 # <a name="persisted-data-source-objects"></a>保存的資料來源物件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者支援使用**IPersistFile**介面保存的資料來源物件。  

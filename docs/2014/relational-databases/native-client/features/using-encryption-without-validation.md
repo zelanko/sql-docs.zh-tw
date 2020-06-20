@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e1fbea13b0ad9744e1cbe6240c9084f8fda6dc2e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 396cf66a3aa4650f60f818d5a9b6a783cf1a8349
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704309"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011140"
 ---
 # <a name="using-encryption-without-validation"></a>使用加密而不需驗證
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一律會加密與登入有關的網路封包。 如果當它啟動時未在伺服器上提供任何憑證，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會產生自行簽署的憑證，該憑證會用來加密登入封包。  

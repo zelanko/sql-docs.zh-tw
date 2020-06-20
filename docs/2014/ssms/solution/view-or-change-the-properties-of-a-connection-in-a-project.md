@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 636fe00c73e508363eaab385f6acd9909374166c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e4b1de28ca94e244d4a172e37672260d65b9d54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058276"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>檢視或變更專案中連接的屬性
   您可以檢視專案中所儲存之連接的屬性，也可以修改其中的部份屬性。  

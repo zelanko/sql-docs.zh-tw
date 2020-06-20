@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2498fbad-b3db-4bea-8fc6-fef5317d3eba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3bb77a93bff358f052d480b74fa33d8021b1754e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 99f2bc6def0f470f653446c87216c3e854b2f819
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705152"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056337"
 ---
 # <a name="session-properties"></a>工作階段屬性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會解讀 OLE DB 會話屬性，如下所示。  

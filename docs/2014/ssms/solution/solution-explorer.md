@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 023e7296e1e83cb7fae5becc3e846930c73ab257
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63025717"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058342"
 ---
 # <a name="solution-explorer"></a>方案總管
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [方案總管] 窗格提供的容器稱為專案，可用來管理資料庫指令碼、查詢、資料連線和檔案等項目。 一個或多個彼此相關的專案會合併到稱為方案的容器。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a485cc23a399496a4c86cc2eab0e8d26b360066e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58ce18de91773a5bea31074ac81c726b0aed3fd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056721"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>SetCurrentCertificate 方法 (ServerSettings 類別)
   設定目前的安全性憑證。  
@@ -40,8 +39,8 @@ SHA
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
- [ServerSettings 類別] ServerSettings-class.md）物件，代表實例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的伺服器設定。  
+ *object*  
+ [ServerSettings 類別] ServerSettings-class.md）物件，代表實例上的伺服器設定 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>參數  
   

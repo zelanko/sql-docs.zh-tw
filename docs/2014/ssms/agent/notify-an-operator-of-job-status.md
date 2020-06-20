@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a202327ad63cf7ef8f51d3572b257816ee6d9419
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064457"
 ---
 # <a name="notify-an-operator-of-job-status"></a>通知操作員作業狀態
-  本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]主題描述如何使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理物件，在中設定通知選項，讓[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可以將有關作業的通知傳送給操作員。  
+  本主題描述如何 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用、或 SQL Server 管理物件，在中設定通知選項 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ，讓 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可以將有關作業的通知傳送給操作員。  
   
  **本主題內容**  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 08b27cdf4c3b50e1605a9e35f54eaebbdc2bb5bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ceec604d9fe07b339af11ed69226d41a7f616678
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63182901"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058552"
 ---
 # <a name="select-objects-object-explorer"></a>選取物件 (物件總管)
   使用 [選取物件]  對話方塊，即可將物件新增至另一個對話方塊中的清單。 對話方塊中可用的對話方塊標題和選項，會視其如何開啟而定。 只有可用的選項會出現；例如，當您選取新物件的擁有者時，只可以使用登入。  

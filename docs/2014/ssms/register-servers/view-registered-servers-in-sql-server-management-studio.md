@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
-ms.openlocfilehash: 48025902ba8a59ec364fa5ba355f471eeeef4efe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6584d56c8a92264a7fbec697836d23d109b1ba4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058370"
 ---
 # <a name="view-registered-servers-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中檢視已註冊的伺服器
   本主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中檢視已註冊的伺服器。  
