@@ -1,7 +1,7 @@
 ---
 title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 06/16/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c4b141520b21902c4dadb26a3ac013b1ee334928
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 89e8424532f12a4111e5a535a8016f3a4fe5ac6a
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818222"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85196029"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "84818222"
 |**server_id**|**int**|連結伺服器的本機識別碼。|  
 |**name**|**sysname**|當**server_id** = 0 時，傳回的值就是伺服器名稱。<br /><br /> 當**server_id** > 0 時，傳回的值就是連結伺服器的本機名稱。|  
 |**基礎**|**sysname**|連結伺服器的產品名稱。 "SQL Server" 的值表示的另一個實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|**provider**|**sysname**|連接連結伺服器所用的 OLE DB 提供者名稱。|  
+|**那裡**|**sysname**|連接連結伺服器所用的 OLE DB 提供者名稱。<br /><br />從開始 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ，預設值 "SQLNCLI" 會對應到[適用于 SQL SERVER （內含 msoledbsql.h）的 Microsoft OLE DB 驅動程式](../../connect/oledb/oledb-driver-for-sql-server.md)。 在舊版中，"SQLNCLI" 值會對應至[SQL Server Native Client OLE DB 提供者（SQLNCLI11）](../../relational-databases/native-client/sql-server-native-client.md)。|  
 |**data_source**|**nvarchar(4000)**|OLE DB 資料來源連接屬性。|  
 |**location**|**nvarchar(4000)**|OLE DB 位置連接屬性。 如果沒有，則為 NULL。|  
-|**provider_string**|**nvarchar(4000)**|OLE DB 提供者字串連接屬性。<br /><br /> 除非呼叫端具有 ALTER ANY LINKED SERVER 權限，否則為 NULL。|  
-|**目錄**|**sysname**|OLEDB 目錄連接屬性。 如果沒有，則為 NULL。|  
+|**provider_string**|**nvarchar(4000)**|OLE DB 提供者字串連接屬性。<br /><br /> 除非呼叫端具有許可權，否則為 Null `ALTER ANY LINKED SERVER` 。|  
+|**目錄**|**sysname**|OLE DB 目錄連接屬性。 如果沒有，則為 NULL。|  
 |**connect_timeout**|**int**|連接逾時 (以秒為單位)，如果沒有，則為 0。|  
 |**query_timeout**|**int**|查詢逾時 (以秒為單位)，如果沒有，則為 0。|  
 |**is_linked**|**bit**|0 = 是使用**sp_addserver**新增的舊樣式伺服器，其具有不同的 RPC 和分散式交易行為。<br /><br /> 1 = 標準連結伺服器。|  
@@ -59,7 +59,7 @@ ms.locfileid: "84818222"
 |**is_nonsql_subscriber**|**bit**|伺服器是非 SQL Server 複寫訂閱者。|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|如果是 1，呼叫遠端預存程序就會啟動分散式交易，而且會利用 MS DTC 來編列這項交易。 如需詳細資訊，請參閱 [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)的資料。|  
 |**modify_date**|**datetime**|上次變更伺服器資訊的日期。|  
-|**is_rda_server**|**bit**|伺服器為遠端資料封存啟用（已啟用延展功能）。 如需詳細資訊，請參閱在[伺服器上啟用 Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer)。 適用于 SQL Server 2016 和更新版本。|
+|**is_rda_server**|**bit**|**適用物件：** 從開始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br />伺服器為遠端資料封存啟用（已啟用延展功能）。 如需詳細資訊，請參閱在[伺服器上啟用 Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer)。|
   
 ## <a name="permissions"></a>權限  
  除非呼叫端具有 ALTER ANY 連結伺服器許可權，否則**provider_string**中的值一律為 Null。  
@@ -79,4 +79,4 @@ ms.locfileid: "84818222"
  [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
-  
+ 

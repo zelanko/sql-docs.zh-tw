@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7970efdbfb2bd32da52f0a27620bf4b729716c54
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: fcfbbfb755892d710fef45554a87492ca2c37339
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818390"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85196056"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys.databases dm_db_column_store_row_group_physical_stats （Transact-sql）
 
@@ -47,8 +47,8 @@ ms.locfileid: "84818390"
 |**total_rows**|**bigint**|實際儲存在資料列群組中的資料列數目。 適用于壓縮的資料列群組。 包含標示為已刪除的資料列。|  
 |**deleted_rows**|**bigint**|實際儲存在標示為要刪除之已壓縮資料列群組的資料列數目。<br /><br /> 0 代表位於差異存放區中的資料列群組。|  
 |**size_in_bytes**|**bigint**|此資料列群組中所有頁面的組合大小（以位元組為單位）。 此大小不包含儲存中繼資料或共用字典所需的大小。|  
-|**trim_reason**|**tinyint**|觸發壓縮資料列群組小於資料列數目上限的原因。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1-NO_TRIM<br /><br /> 2-BULKLOAD<br /><br /> 3-REORG<br /><br /> 4-DICTIONARY_SIZE<br /><br /> 5-MEMORY_LIMITATION<br /><br /> 6-RESIDUAL_ROW_GROUP<br /><br /> 7-STATS_MISMATCH<br /><br /> 8-溢出|  
-|**trim_reason_desc**|**nvarchar(60)**|*Trim_reason*的描述。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION：從舊版升級時發生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 1-NO_TRIM：未修剪資料列群組。 已壓縮資料列群組，最大值為1048476個數據列。  如果在差異資料列群組關閉後刪除資料列子集，資料列數目可能會較少<br /><br /> 2-BULKLOAD：大量載入批次大小限制資料列數目。<br /><br /> 3-REORG：強制壓縮作為 REORG 命令的一部分。<br /><br /> 4-DICTIONARY_SIZE：字典大小成長太大，無法一起壓縮所有的資料列。<br /><br /> 5-MEMORY_LIMITATION：沒有足夠的可用記憶體可將所有資料列壓縮在一起。<br /><br /> 6-RESIDUAL_ROW_GROUP：在索引建立作業期間，以資料列 < 1000000 的最後一個資料列群組的一部分關閉<br /><br /> 7-STATS_MISMATCH：僅適用于記憶體內部資料表上的資料行存放區。 如果統計資料未正確指出 >= 結尾的1000000個限定資料列，但我們發現較少，則壓縮的資料列群組會有 < 1000000 個數據列<br /><br /> 8-溢出：僅適用于記憶體內部資料表上的資料行存放區。 如果 tail 具有 > 1000000 限定的資料列，則最後一個批次的資料列會壓縮（如果計數介於100k 到1000000之間）|  
+|**trim_reason**|**tinyint**|觸發壓縮資料列群組小於資料列數目上限的原因。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1-NO_TRIM<br /><br /> 2-BULKLOAD<br /><br /> 3-REORG<br /><br /> 4-DICTIONARY_SIZE<br /><br /> 5-MEMORY_LIMITATION<br /><br /> 6-RESIDUAL_ROW_GROUP<br /><br /> 7-STATS_MISMATCH<br /><br /> 8-溢出<br /><br /> 9-AUTO_MERGE|  
+|**trim_reason_desc**|**nvarchar(60)**|*Trim_reason*的描述。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION：從舊版升級時發生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 1-NO_TRIM：未修剪資料列群組。 已壓縮資料列群組，最大值為1048476個數據列。  如果在差異資料列群組關閉後刪除資料列子集，資料列數目可能會較少<br /><br /> 2-BULKLOAD：大量載入批次大小限制資料列數目。<br /><br /> 3-REORG：強制壓縮作為 REORG 命令的一部分。<br /><br /> 4-DICTIONARY_SIZE：字典大小成長太大，無法一起壓縮所有的資料列。<br /><br /> 5-MEMORY_LIMITATION：沒有足夠的可用記憶體可將所有資料列壓縮在一起。<br /><br /> 6-RESIDUAL_ROW_GROUP：在索引建立作業期間，以資料列 < 1000000 的最後一個資料列群組的一部分關閉<br /><br /> 7-STATS_MISMATCH：僅適用于記憶體內部資料表上的資料行存放區。 如果統計資料未正確指出 >= 結尾的1000000個限定資料列，但我們發現較少，則壓縮的資料列群組會有 < 1000000 個數據列<br /><br /> 8-溢出：僅適用于記憶體內部資料表上的資料行存放區。 如果 tail 具有 > 1000000 限定的資料列，則最後一個批次的資料列會壓縮（如果計數介於100k 到1000000之間）<br /><br /> 9-AUTO_MERGE：在背景中執行的 Tuple Mover MERGE 作業會將一或多個資料列群組合並至此資料列群組。|  
 |**transition_to_compressed_state**|TINYINT|顯示如何將此資料列群組從差異存放區移至資料行存放區中的壓縮狀態。<br /><br /> 1-NOT_APPLICABLE<br /><br /> 2-INDEX_BUILD<br /><br /> 3-TUPLE_MOVER<br /><br /> 4-REORG_NORMAL<br /><br /> 5-REORG_FORCED<br /><br /> 6-BULKLOAD<br /><br /> 7-合併|  
 |**transition_to_compressed_state_desc**|nvarchar(60)| 1-NOT_APPLICABLE-此作業不會套用至差異存放區。 或者，在升級至之前，資料列群組已經過壓縮， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 在此情況下不會保留歷程記錄。<br /><br /> 2-INDEX_BUILD-索引建立或索引重建已壓縮資料列群組。<br /><br /> 3-TUPLE_MOVER-在背景中執行的元組移動器會壓縮資料列群組。 在資料列群組變更狀態從開啟到已關閉之後，元組移動器就會發生。<br /><br /> 4-REORG_NORMAL-重新組織作業，ALTER INDEX .。。REORG，將已關閉的資料列群組從差異存放區移至資料行存放區。 這是在元組-移動器有時間移動資料列群組之前發生。<br /><br /> 5-REORG_FORCED-此資料列群組已在差異存放區中開啟，並已強制進入資料行存放區，然後才擁有完整的資料列數目。<br /><br /> 6-BULKLOAD-大量載入作業會直接壓縮資料列群組，而不使用差異存放區。<br /><br /> 7-MERGE-合併作業會將一或多個資料列群組合並至此資料列群組，然後執行資料行存放區壓縮。|  
 |**has_vertipaq_optimization**|bit|VertiPaq 優化藉由重新排列資料列群組中的資料列順序來改善資料行存放區壓縮，以達到更高的壓縮。 這項優化會在大部分情況下自動進行。 在兩種情況下，不會使用 VertiPaq 優化：<br/>  a. 當差異資料列群組移至資料行存放區，且資料行存放區索引上有一或多個非叢集索引時-在此情況下，會略過 VertiPaq 優化，將對應索引的變更降至最低。<br/> b. 適用于記憶體優化資料表上的資料行存放區索引。 <br /><br /> 0 = 否<br /><br /> 1 = 是|  
