@@ -13,12 +13,12 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a0dffa0dc53cb8ded9f388199bef35a73a52577
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66102127"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263882"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>設定報表伺服器上的 Windows 驗證
   依預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會接受可指定交涉驗證或 NTLM 驗證的要求。 如果您的部署包括了使用這些安全性提供者的用戶端應用程式和瀏覽器，您可以使用預設值，而不需要進行額外的組態設定。 如果您想要針對 Windows 整合式安全性使用不同的安全性提供者 (例如，如果您想要直接使用 Kerberos)，或是您修改了預設值而且想要還原原始設定，您可以使用本主題的資訊來指定報表伺服器上的驗證設定。  
@@ -32,9 +32,9 @@ ms.locfileid: "66102127"
     > [!IMPORTANT]  
     >  如果您設定報表伺服器服務使用網域使用者帳戶執行，而且您並未針對此帳戶註冊服務主要名稱 (SPN)，則使用 `RSWindowsNegotiate` 將會產生 Kerberos 驗證錯誤。 如需詳細資訊，請參閱本主題的 [在連接報表伺服器時解決 Kerberos 驗證錯誤](#proxyfirewallRSWindowsNegotiate) 。  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 必須設定 Windows 驗證。 根據預設，報表伺服器 Web 服務和報表管理員的 web.config 檔案會包含\<驗證模式 = "Windows" > 設定。 如果您將它變更為 \<authentication mode="Forms">，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 Windows 驗證將會失敗。  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 必須設定 Windows 驗證。 根據預設，報表伺服器 Web 服務和報表管理員的 Web.config 檔案包含 \<authentication mode="Windows"> 設定。 如果您將它變更為 \<authentication mode="Forms"> ，則的 Windows 驗證 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將會失敗。  
   
--   報表伺服器 Web 服務和報表管理員的 web.config 檔案必須有\<identity 模擬 = "true"/>。  
+-   報表伺服器 Web 服務和報表管理員的 Web.config 檔必須具有 \<identity impersonate= "true" /> 。  
   
 -   用戶端應用程式或瀏覽器必須支援 Windows 整合式安全性。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66102127"
           <EnableAuthPersistence>true</EnableAuthPersistence>  
     ```  
   
-     \</驗證>  
+     \</Authentication>  
   
      第三個 XML 結構會指定用於 Windows 整合式安全性的所有安全性封裝：  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66102127"
           </AuthenticationTypes>  
     ```  
   
-4.  將它貼到 <`Authentication`> 的現有專案上。  
+4.  將它貼到 <> 的現有專案上 `Authentication` 。  
   
      請注意，您不能搭配 `Custom` 型別使用 `RSWindows`。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "66102127"
   
  如果您啟用 Kerberos 記錄，就可以偵測此錯誤。 此錯誤的其他徵兆是系統會提示您輸入多次認證，然後您會看到空白瀏覽器視窗。  
   
- 您可以從設定檔中移除 < `RSWindowsNegotiate` /> 並重新嘗試連線，以確認您遇到 Kerberos 驗證錯誤。  
+ 您可以 `RSWindowsNegotiate` 從設定檔中移除 </> 並重新嘗試連線，以確認您遇到 Kerberos 驗證錯誤。  
   
  在您確認問題之後，可以透過以下方式來解決：  
   
@@ -160,14 +160,8 @@ ms.locfileid: "66102127"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務，並在追蹤記錄檔中尋找類似以下的項目：  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - <HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   \<明確> 底下的值將會包含 Active Directory 中針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務帳戶設定的 SPN。  
-  
+-   重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務。
+
  如果您不想要繼續使用擴充保護，請將組態值設回預設值，並重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務帳戶。  
   
 ```  
