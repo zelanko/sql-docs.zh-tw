@@ -1,5 +1,6 @@
 ---
 title: 使用 WQL 存取 WMI 提供者
+description: 使用此範例來瞭解如何在 SQL Server 中執行用於電腦管理的 WMI 提供者 Windows Management Instrumentation 查詢語言語句。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53ade765b0f6b6710a12da06ae0b7470b55d9400
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b9fa96f19bc0675a1e83db858e16605338b3899
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658946"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295441"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>使用 WQL 存取組態管理的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "73658946"
   
 3.  在第一個文字欄位中，輸入電腦管理的 WMI 提供者命名空間：root\Microsoft\SqlServer\ComputerManagement11。 按一下 [ **連接**]。  
   
-4.  按一下 **[查詢]**。 輸入會傳回目前在本機電腦上執行之服務的查詢：**選取\* [從 SqlService]。** 按一下 [套用]  。  
+4.  按一下 **[查詢]**。 輸入會傳回目前在本機電腦上執行之服務的查詢：**選取 [ \* 從 SqlService]。** 按一下 [套用]。  
   
 5.  藉由新增**WHERE ServiceName = "MSSQLSERVER"** 來進一步調整查詢。  
   

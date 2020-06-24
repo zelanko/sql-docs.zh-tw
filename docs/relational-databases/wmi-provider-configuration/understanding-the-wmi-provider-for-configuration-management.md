@@ -1,5 +1,6 @@
 ---
 title: 組態管理的 WMI 提供者
+description: 瞭解設定管理的 WMI 提供者如何使用 WMI 來管理 SQL Server 中的服務、伺服器別名和用戶端/伺服器網路設定。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92323972-7943-4208-bbf4-050774fb6027
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21ca5f7039b11b30c11a0fb707f6b6e89244bae2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4795ee1d456e5f4b823c24fc1ad48e81c9d6541e
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658910"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295431"
 ---
 # <a name="understanding-the-wmi-provider-for-configuration-management"></a>了解用於組態管理的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "73658910"
   
  如需使用 WMI 提供者進行設定管理的管理應用程式範例，請參閱搭配[Wmi 提供者使用 WQL 和指令碼語言來進行設定管理](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)。  
   
- 如需有關使用 WMI 提供者進行程式設計管理應用程式的詳細資訊，請[!INCLUDE[msCoName](../../includes/msconame-md.md)]參閱 .NET Framework SDK 中的 WMI 檔。  
+ 如需有關使用 WMI 提供者進行程式設計管理應用程式的詳細資訊，請參閱 .NET Framework SDK 中的 WMI 檔 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 WMI 提供者進行設定管理](../../relational-databases/wmi-provider-configuration/working-with-the-wmi-provider-for-configuration-management.md)   

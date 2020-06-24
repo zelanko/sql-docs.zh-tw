@@ -1,5 +1,6 @@
 ---
 title: 使用 WMI 提供者進行設定管理
+description: 瞭解用於設定管理的 WMI 提供者，包括系結、指定連接字串，以及許可權/伺服器驗證。
 ms.custom: seo-lt-2019
 ms.date: 04/12/2019
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d76cc006e2f8638de9b6d3c21660806239022ec0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c064c2927919ab4760903a9a3457f9c0be816647
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73657369"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295391"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>針對組態管理使用 WMI 提供者
 
@@ -39,13 +40,13 @@ ms.locfileid: "73657369"
 
 應用程式會藉由連接到組態管理的 WMI 提供者所定義的 WMI 命名空間，將該提供者導向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 Windows WMI 服務會將此命名空間對應至提供者 DLL，並將 DLL 載入記憶體中。 所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體都會以單一的 WMI 命名空間代表。
 
-命名空間預設為下列格式。 在格式中， `VV`是 SQL Server 的主要版本號碼。 執行可探索此數目`SELECT @@VERSION;`。
+命名空間預設為下列格式。 在格式中， `VV` 是 SQL Server 的主要版本號碼。 執行可探索此數目 `SELECT @@VERSION;` 。
 
 ```console
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
 ```
 
-當您使用 PowerShell 進行連接時，必須`\\.\`移除前置。 例如，下列 PowerShell 程式碼會列出 SQL Server 2016 的所有 WMI 類別，也就是主要版本13。
+當您使用 PowerShell 進行連接時， `\\.\` 必須移除前置。 例如，下列 PowerShell 程式碼會列出 SQL Server 2016 的所有 WMI 類別，也就是主要版本13。
 
 ```powershell
 Get-WmiObject -Namespace 'root\Microsoft\SqlServer\ComputerManagement13' -List
@@ -69,7 +70,7 @@ where `instance_name` defaults to `MSSQLSERVER` in a default installation of [!I
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **注意：** 如果您是透過 Windows 防火牆進行連線，則必須確定您的電腦已正確設定。 請參閱 MSDN [!INCLUDE[msCoName](../../includes/msconame-md.md)] [網站](https://go.microsoft.com/fwlink/?linkid=15426)上 Windows Management Instrumentation 檔中的「透過 Windows 防火牆連線」文章。  
+ **注意：** 如果您是透過 Windows 防火牆進行連線，則必須確定您的電腦已正確設定。 請參閱 MSDN 網站上 Windows Management Instrumentation 檔中的「透過 Windows 防火牆連線」文章 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 [Web site](https://go.microsoft.com/fwlink/?linkid=15426)  
   
 ## <a name="permissions-and-server-authentication"></a>權限和伺服器驗證  
  若要存取組態管理的 WMI 提供者，用戶端 WMI 管理指令碼必須在目標電腦的管理員內容中執行。 您在要管理的電腦上必須是本機 Windows 管理員群組的成員。  
