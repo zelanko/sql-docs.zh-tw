@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services], creating
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d9226cfd55b6851779564baced0c745e8a17686b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78b344d355a048a9933648283af4654f8ff692cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968760"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427525"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>建立自訂 Foreach 列舉值
   建立自訂 Foreach 列舉值的步驟，與建立 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 之其他自訂物件的步驟類似：  

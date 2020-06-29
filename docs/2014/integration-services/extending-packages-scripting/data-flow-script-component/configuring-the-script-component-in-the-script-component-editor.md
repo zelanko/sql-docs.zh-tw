@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SSIS Script component, configuring
 - Script component [Integration Services], configuring
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2544c0249567e05eb3a3e3d7a297ec45fdedc8d8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e322478509ca27abf090f528d6b0d67b6340499b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967298"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426395"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在指令碼元件編輯器中設定指令碼元件
   您在指令碼元件中撰寫自訂程式碼之前，必須選取您要建立的資料流程元件的類型 (來源、轉換或是目的地)，然後在 [指令碼轉換編輯器]  中設定元件的中繼資料與屬性。

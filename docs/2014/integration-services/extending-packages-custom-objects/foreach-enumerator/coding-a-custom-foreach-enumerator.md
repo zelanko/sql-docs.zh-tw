@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services], coding
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d760636fbb80da36f7efe7c3dc6d04b1fe92cf92
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f1edd30c7891b830063b4dc344a353c968342a51
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968778"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427515"
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>撰寫自訂 Foreach 列舉值的程式碼
   建立繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator> 基底類別的類別，並將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 屬性 (attribute) 套用到類別之後，必須覆寫基底類別的屬性 (properties) 與方法的實作，才可提供自訂功能。  

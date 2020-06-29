@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Script task [Integration Services], performance counters
 - counters [Integration Services]
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1cd8b10fb17288806234db923e2ed087f2bd27c8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1d81d3bb3b532908de61cc7569456041b4e14803
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968498"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426635"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>以指令碼工作監視效能計數器
   系統管理員可能需要監視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝在大量資料執行複雜轉換時的效能。   的 [!INCLUDE[msCoName](../../includes/msconame-md.md)]System.Diagnostics[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空間提供可讓您使用現有效能計數器或建立自訂效能計數器的類別。  

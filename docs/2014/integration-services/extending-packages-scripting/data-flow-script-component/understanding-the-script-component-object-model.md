@@ -11,14 +11,14 @@ dev_langs:
 helpviewer_keywords:
 - Script component [Integration Services], object model
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 80d61a4b4742163d999aa2f5d70e70336e680e27
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 950754193be1aaad13423b371af0175a0370f473
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967244"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426095"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解指令碼元件物件模型
   如 [腳本元件的程式碼撰寫和偵錯工具] （.）中所述。/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md，腳本元件專案包含三個專案專案：

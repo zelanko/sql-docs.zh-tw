@@ -13,14 +13,14 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - sources [Integration Services], components
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8b82b7776bf9a56e5c72b5ffabdf6d8398b5d183
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ce3cd275cea40ad3485066157b3fe02ceedd98ad
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968568"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426955"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>以指令碼元件建立來源
   您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用來源元件，以從資料來源載入資料，進而將其傳遞至下游轉換與目的地。 通常您會透過現有的連接管理員來連接到資料來源。

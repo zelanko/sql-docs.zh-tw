@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 142cef139d315d3db492651716c2ec8fb9b6e03c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 59dff6c5cfd9b00052f45f3c08c56e0b1f461c1c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968488"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426605"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>以指令碼工作查詢 Active Directory
   企業資料處理應用程式 (例如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝) 通常需要根據儲存在 Active Directory 中的職等、工作職稱或是員工的其他特色，以不同的方式處理資料。 Active Directory 是一種 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 目錄服務，可集中儲存中繼資料，這些資料不僅有關使用者，而且還有關電腦與印表機等其他組織資產。 在 Microsoft .NET Framework 中的 `System.DirectoryServices` 命名空間提供使用 Active Directory 的類別，以協助您根據它所儲存的資訊來指示資料處理工作流程。  

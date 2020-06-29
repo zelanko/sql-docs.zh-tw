@@ -18,14 +18,14 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ce4e1a0483d02a3d263f8359369ccb448f4bf65f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1603dae5be4e0ee5f3b2867fbaf2c063cc140263
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968688"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427265"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>新增自訂工作中的偵錯支援
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段引擎允許在執行期間，使用中斷點暫停封裝、工作和其他類型的容器。 使用中斷點可讓您檢閱和修正妨礙應用程式或工作正確執行的錯誤。 中斷點架構可讓用戶端在定義的執行點暫停工作處理，以評估封裝中物件的執行階段值。  

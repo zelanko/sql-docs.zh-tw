@@ -14,14 +14,14 @@ helpviewer_keywords:
 - packages [Integration Services], logs
 - Integration Services packages, log providers
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 257fec0f1d7ce59ce84cc3c54b9b5d105440a6f1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2bd0daad6090b5ad55144f74d513c7c698783700
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968712"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427415"
 ---
 # <a name="developing-a-custom-log-provider"></a>開發自訂記錄提供者
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 具有多種記錄功能，可以擷取在封裝執行期間所發生的事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括各種記錄提供者，讓記錄可以 XML、文字、資料庫或 Windows 事件記錄檔格式加以建立並儲存記錄檔。 如果所提供的記錄提供者與輸出格式並未完全符合您的需求，可以建立自訂記錄提供者。
@@ -37,7 +37,7 @@ ms.locfileid: "84968712"
 
  [開發自訂記錄提供者的使用者介面](developing-a-user-interface-for-a-custom-log-provider.md)中不支援自訂記錄提供者的自訂使用者介面 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 。
 
-## <a name="related-topics"></a>[相關主題]
+## <a name="related-topics"></a>相關主題
 
 ### <a name="information-common-to-all-custom-objects"></a>自訂物件的共通資訊
  如需有關 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中可以建立之所有類型自訂物件適用的共通資訊，請參閱下列主題：

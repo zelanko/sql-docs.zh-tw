@@ -13,14 +13,14 @@ helpviewer_keywords:
 - destinations [Integration Services], components
 - input columns [Integration Services]
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f4151c889e83555e81352f606bd1876961a933fe
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c20fbb5ade8d9ba37e463426cb49b2591b9da785
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968566"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426975"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>以指令碼元件建立目的地
   您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用目的地元件，以便將從上游來源和轉換收到的資料儲存至資料來源。 通常，目的地元件會透過現有的連接管理員連接到資料來源。
