@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4b8dbb9847f3591d0f26a2dc7ca6e31f1b22da83
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c6d753b7ef37d515140a3fc32137dd4680fa3079
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972448"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439815"
 ---
 # <a name="web-service-task-editor-output-page"></a>Web 服務工作編輯器 (輸出頁面)
   使用 [Web 服務工作編輯器]**** 對話方塊的 [輸出]**** 頁面，即可指定 Web 方法傳回的結果之儲存位置。  
@@ -32,7 +32,7 @@ ms.locfileid: "84972448"
 |值|描述|  
 |-----------|-----------------|  
 |**檔案連接**|在檔案中儲存結果。 選取此值會顯示動態選項 [檔案]****。|  
-|**變數**|在變數中儲存結果。 選取此值會顯示動態選項 [變數]****。|  
+|**變**|在變數中儲存結果。 選取此值會顯示動態選項 [變數]****。|  
   
 ## <a name="outputtype-dynamic-options"></a>OutputType 動態選項  
   
@@ -43,7 +43,7 @@ ms.locfileid: "84972448"
  **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="outputtype--variable"></a>OutputType = 變數  
- **變數**  
+ **變**  
  在清單中選取變數，或按一下 \<**New Variable...**> 以建立新的變數。  
   
  **相關主題：**  [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  

@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1111b0d8f2903de9b690f269498a93d01c2afa0c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d9001c5f3890bfb3623715ff6c6deeb70116bb73
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921655"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438495"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>設定資料檢視器 (散佈圖索引標籤)
   使用 [設定資料檢視器]**** 對話方塊的 [散佈圖 (x,y)]**** 索引標籤，即可指定兩個資料行相對繪製成圖形。 散佈圖會將來自兩個數值資料行的資料值相對繪製成圖形。 每一筆資料記錄都變成圖中的一個點。 圖表只會反映一個緩衝區的內容。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **X 軸資料行**  
  選取要作為 X 軸的資料行。 每個軸只能選取一個資料行。  
   

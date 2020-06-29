@@ -11,13 +11,13 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPADLSDEST.F1
 ms.assetid: d0e86032-2a6b-48b2-898f-e94328474fde
 author: yualan
-ms.author: janinez
-ms.openlocfilehash: 1d8e506f95200ecd2f9813ae37e4ac6ffb26afb3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.author: chugu
+ms.openlocfilehash: 14248d14b6a944250c33a19c8cf83ab0e0330587
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925399"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439415"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store 目的地
   **Azure Data Lake Store 目的地** 元件可讓 SSIS 套件將資料寫入 Azure Data Lake Store。 支援的檔案格式為文字、Avro 和 ORC。 

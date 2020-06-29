@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 43921efab592e6642fcc5adaef8caa869a1b524f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 027f3c77e84b47958e9fb6567acdb308c14eb1e7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966748"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437355"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>執行 SQL 工作編輯器 (結果集頁面)
   使用 [執行 SQL 工作編輯器]**** 對話方塊的 [結果集]**** 頁面，即可將 SQL 陳述式的結果對應至新的或現有的變數。 如果 [一般] 頁面上的 [結果集]**** 已設定為 [無]****，就會停用此對話方塊中的選項。  
   
  如需這項工作的詳細資訊，請參閱[執行 SQL 工作](control-flow/execute-sql-task.md)和[執行 SQL 工作中的結果集](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **結果名稱**  
  按一下 [加入]**** 加入結果集對應集之後，請為結果提供名稱。 您必須根據結果集類型來使用特定的結果名稱。  
   

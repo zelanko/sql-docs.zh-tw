@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: a0c62698f1aed231128803cb91c80264a2fbdbf4
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 44698c89eff608d6c993c3cec030098883eb5aee
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544830"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469003"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>附加和卸離 Analysis Services 資料庫
   通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓資料庫保持離線一段時間，然後在相同或不同的伺服器執行個體上，讓該資料庫恢復連線狀態。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。 對於所有這些案例和其他情況， `Attach` 和 `Detach` 命令可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 讓資料庫離線，並輕鬆地使其恢復上線。  
@@ -57,7 +57,7 @@ ms.locfileid: "84544830"
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft.analysisservices。卸離 *](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [移動 Analysis Services 資料庫](move-an-analysis-services-database.md)   
  [資料庫 Readwritemode](database-readwritemodes.md)   
  [在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   

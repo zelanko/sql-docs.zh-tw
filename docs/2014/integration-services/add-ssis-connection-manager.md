@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Add SSIS Connection Manager
 ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d3ffccf359e96583ba6d480b1ae46947c5e468b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d0c0e836392b0578636acfac3f70f96bc3110333
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925850"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439555"
 ---
 # <a name="add-ssis-connection-manager"></a>加入 SSIS 連接管理員
   使用 [加入 SSIS 連線管理員]**** 對話方塊來選取要加入封裝的連接類型。  
   
  若要深入了解連線管理員，請參閱 [Integration Services &#40;SSIS&#41; 連接](connection-manager/integration-services-ssis-connections.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **連線管理員類型**  
  選取連接類型，然後按一下 [加入]****，或按兩下連接類型，以使用每個連接類型的編輯器來指定連接屬性。  
   

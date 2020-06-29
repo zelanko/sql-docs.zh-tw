@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4ebdb6750c61373041653d7c65df01fa866b9b68
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a5180f3bf0064c9f77c4a093cc56e0294337a93
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921685"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438525"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>設定資料檢視器 (方格索引標籤)
   使用 [設定資料檢視器]**** 對話方塊的 [方格]**** 索引標籤，即可指定要顯示的資料行。 方格圖表會將資料記錄顯示為方格中的資料列。 圖表只會反映一個緩衝區的內容。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **未使用的資料行**  
  選取資料行，然後按一下單一箭頭將其移至 [顯示的資料行]**** 清單；或者按一下雙箭頭將所有資料行移至 [顯示的資料行]**** 清單。  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: e904333dc25e7ae58d8eae29ba00279d7e599033
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4373c881fae6599b0a470d154153250614b50627
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547100"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468983"
 ---
 # <a name="database-storage-location"></a>資料庫儲存位置
   通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓特定資料庫放置於伺服器資料夾外部。 這些情況通常是由商務需求所驅使，例如改善效能或展開儲存體。 在這些情況下， `DbStorageLocation` 資料庫屬性可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 指定本機磁片或網路裝置中的資料庫位置。  
@@ -41,7 +41,7 @@ ms.locfileid: "84547100"
 >  您不應該使用 `Alter` 命令來變更資料庫儲存位置。 相反地，我們建議您使用一連串的 `Detach` / `Attach` 資料庫命令（請參閱[移動 Analysis Services 資料庫](move-an-analysis-services-database.md)、[附加和卸離 Analysis Services 資料庫](attach-and-detach-analysis-services-databases.md)）。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
+ [Microsoft.analysisservices. DbStorageLocation *](/dotnet/api/microsoft.analysisservices.core.database.dbstoragelocation)   
  [附加和卸離 Analysis Services 資料庫](attach-and-detach-analysis-services-databases.md)   
  [移動 Analysis Services 資料庫](move-an-analysis-services-database.md)   
  [DbStorageLocation 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   

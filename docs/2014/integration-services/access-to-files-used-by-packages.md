@@ -16,14 +16,14 @@ helpviewer_keywords:
 - files [Integration Services], security
 - SQL Server Integration Services packages, security
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f76636fa25b9a061f8e152c7df2eb583a386004
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8db9511c91c9f229b7002f5b16cf077910a4ccf0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926525"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439775"
 ---
 # <a name="access-to-files-used-by-packages"></a>對封裝使用之檔案的存取權
   封裝保護等級不會保護儲存於封裝之外的檔案。 這些檔案包括下列各項：  

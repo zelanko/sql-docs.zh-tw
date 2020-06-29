@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afppigtask.f1
 - sql11.dts.designer.afppigtask.f1
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b4d57be12cf63a6f9211125b9795f4dc60253f3e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 214db5e83272b1fa70c9e70eef8f8b9a43bac095
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919880"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438225"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig 工作
 使用 **Azure HDInsight Pig 工作** ，在 Azure HDInsight 叢集上執行 Pig 指令碼。

@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Send Mail Task Editor
 ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ee2b7992065e31bc6ef57de9b22444cf2da1f963
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3beaed3fa3e03ddf9fa9b90349a3aa57a131c9b0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963484"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440055"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>傳送郵件工作編輯器 (郵件頁面)
   使用 [傳送郵件工作編輯器]**** 對話方塊的 [郵件]**** 頁面，即可指定收件者、訊息類型以及訊息的優先權。 您也可以附加檔案至訊息。 訊息文字可以是您提供的字串、包含文字之檔案的檔案連接，或包含文字之變數的名稱。  
   
  若要了解這項工作，請參閱 [傳送郵件工作](control-flow/send-mail-task.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **SMTPConnection**  
  在清單中選取 SMTP 連線管理員，或按一下 **\<New connection...>** 以建立新的連線管理員。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "84963484"
 |-----------|-----------------|  
 |**直接輸入**|將來源設定為訊息文字。 選取此值會顯示動態選項 [MessageSource]****。|  
 |**檔案連接**|將來源設定為包含訊息文字的檔案。 選取此值會顯示動態選項 [MessageSource]****。|  
-|**變數**|將來源設定為包含訊息文字的變數。 選取此值會顯示動態選項 [MessageSource]****。|  
+|**變**|將來源設定為包含訊息文字的變數。 選取此值會顯示動態選項 [MessageSource]****。|  
   
  **優先順序**  
  設定訊息的優先權。  

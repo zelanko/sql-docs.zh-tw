@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 08dc39cb21eec03a7cbdc5bd56c68212044dd211
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d9951d9bfe7e95499c2b967e6329d206cdc4aa44
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966888"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437405"
 ---
 # <a name="excel-connection-manager-editor"></a>Excel 連接管理員編輯器
   使用 [Excel 連線管理員編輯器]**** 對話方塊，將連接加入現有或新的 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 活頁簿檔案。  
@@ -28,7 +28,7 @@ ms.locfileid: "84966888"
 > [!NOTE]  
 >  您不能連接到受密碼保護的 Excel 檔案。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Excel 檔案路徑**  
  輸入現有或新的 Excel 活頁簿檔案 (.xls) 的路徑和檔案名稱。  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data flow [Integration Services], data viewers
 - adding data viewers
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3a7698276ece16f3c1c9db53deec94912c89db01
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e04e678dfb2b98e5304f9f7c9f0cfe2a858b6485
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926429"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439765"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>將資料檢視器加入資料流程
   本主題描述如何在資料流程中加入和設定資料檢視器。 資料檢視器可以顯示在兩個資料流程元件之間移動的資料。 例如，在資料流程中的轉換修改從資料來源擷取的資料之前，資料檢視器可以先顯示該資料。  

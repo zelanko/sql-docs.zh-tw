@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3fa7119ba9a8321e2b3bb8cbe1015271c9a3c95e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed53af447271aad48abd08e8e98b0fd11bbcf7c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965192"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440495"
 ---
 # <a name="lesson-3-installing-packages"></a>第 3 課：安裝套件
   在[第2課：建立部署](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)配套中，您建立了部署公用程式，並建立了部署配套，其中包含您必須在另一部電腦上安裝套件的專案。 此外，您也確認了部署配套中的檔案清單，並且檢查了建立部署公用程式時所建立的資訊清單檔內容。  

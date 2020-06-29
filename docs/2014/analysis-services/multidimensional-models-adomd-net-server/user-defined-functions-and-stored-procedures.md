@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0dcf79644ba3e9bc337b14e4ff28fe703e81564d
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: a49aa41d158bf2c9fd1ebb1a711d6ff35c0df98b
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545430"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469013"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>使用者定義函數和預存程序
   透過 ADOMD.NET 伺服器物件，您可以建立使用者定義函數（UDF）或預存程式，以便 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 與來自伺服器的中繼資料和資料互動。 這些同處理序 (In-Process) 方法是透過「多維度運算式」(Multidimensional Expressions，MDX) 或「資料採礦延伸模組」(Data Mining Extensions，DMX) 陳述式來呼叫，以提供附加功能，並不會有與網路通訊關聯的延遲。  
@@ -28,7 +28,7 @@ ms.locfileid: "84545430"
 ## <a name="udf-examples"></a>UDF 範例  
  UDF 是一種可以在 MDX 或 DMX 陳述式的內容中呼叫的方法，可以使用任何數目的參數，並且可以傳回任何類型的資料。  
   
- 使用 MDX 建立的 UDF 類似於為 DMX 建立的 UDF。 主要的差異在於 <xref:Microsoft.AnalysisServices.AdomdServer.Context> 物件的某些屬性 (例如 <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentCube%2A> 與 <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentMiningModel%2A> 屬性)，只能供一個指令碼語言或是其他指令碼語言使用。  
+ 使用 MDX 建立的 UDF 類似於為 DMX 建立的 UDF。 主要的差別在於[microsoft.analysisservices. AdomdServer.](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120)) coNtext 物件的某些屬性（例如[microsoft.analysisservices. AdomdServer](/previous-versions/sql/sql-server-2014/ms137081(v=sql.120)) ）僅適用于一種指令碼語言或另一種語言版本。 CurrentCube [*](/previous-versions/sql/sql-server-2014/ms137178(v=sql.120))屬性。（英文）。  
   
  下列範例示範如何使用 UDF 傳回節點描述、篩選 Tuple 以及將篩選套用至 Tuple。  
   

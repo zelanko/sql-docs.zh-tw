@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 8454d2cbe9153c6a547ae2813c85bf1e45f269ad
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 33a8f420f985c9e62c7d7f275e7de370a6988e8d
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84537383"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469053"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET 伺服器物件架構
   ADOMD.NET 伺服器物件是 helper 物件，可用來在中建立使用者定義函數（Udf）或預存程式 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
@@ -32,11 +32,11 @@ ADOMD.NET 物件模型
   
 |至|使用此物件|  
 |--------|---------------------|  
-|評估多維度運算式 (MDX) 的運算式|<xref:Microsoft.AnalysisServices.AdomdServer.Expression><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Expression> 物件提供執行 MDX 運算式的方法，並在指定的 Tuple 之下評估該運算式。|  
-|提供執行 MDX 函數的支援，而無須建構完整的 MDX 陳述式。|<xref:Microsoft.AnalysisServices.AdomdServer.MDX><br /> <xref:Microsoft.AnalysisServices.AdomdServer.MDX> 物件方便您呼叫預先定義的 MDX 函數，而無須使用 <xref:Microsoft.AnalysisServices.AdomdServer.Expression> 物件。 <xref:Microsoft.AnalysisServices.AdomdServer.MDX> 物件的其他功能會在未來的版本中提供。|  
-|表示 UDF 目前的執行內容|<xref:Microsoft.AnalysisServices.AdomdServer.Context><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Context> 物件會公開目前 Cube 或是採礦模型以及各種中繼資料集合等資訊。 <xref:Microsoft.AnalysisServices.AdomdServer.Context> 物件的一個主要用法，是 <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy.CurrentMember%2A> 物件的 <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy> 屬性。 這個主要用法可讓 UDF 或是預存程序的作者，根據查詢的對象是來自某個維度的哪個成員來做決定。|  
-|建立集合和 Tuple|<xref:Microsoft.AnalysisServices.AdomdServer.SetBuilder>, <xref:Microsoft.AnalysisServices.AdomdServer.TupleBuilder><br /> <xref:Microsoft.AnalysisServices.AdomdServer.SetBuilder> 提供建立不可變集合的方法，而 <xref:Microsoft.AnalysisServices.AdomdServer.TupleBuilder> 則提供建立不可變 Tuple 的方法。|  
-|支援隱含轉換以及 MDX 語言的六個基本類型之間轉換。|<xref:Microsoft.AnalysisServices.AdomdServer.MDXValue><br /> <xref:Microsoft.AnalysisServices.AdomdServer.MDXValue> 物件提供隱含轉換以及在下列類型之間轉換：<br /><br /> -   <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Level><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Member><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Tuple><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Set><br />-純量或實數值型別|  
+|評估多維度運算式 (MDX) 的運算式|[Microsoft.analysisservices. AdomdServer. 運算式](/previous-versions/sql/sql-server-2014/ms143609(v=sql.120))<br /> [Microsoft.analysisservices. AdomdServer 運算式](/previous-versions/sql/sql-server-2014/ms143609(v=sql.120))物件提供一種方法，可執行 MDX 運算式，並在指定的元組下評估該運算式。|  
+|提供執行 MDX 函數的支援，而無須建構完整的 MDX 陳述式。|[Microsoft.analysisservices. AdomdServer. MDX](/previous-versions/sql/sql-server-2014/ms143616(v=sql.120))<br /> [Microsoft.analysisservices. AdomdServer](/previous-versions/sql/sql-server-2014/ms143616(v=sql.120))物件很方便呼叫預先定義的 MDX 函式，而不使用[microsoft.analysisservices. AdomdServer. Expression](/previous-versions/sql/sql-server-2014/ms143609(v=sql.120))物件。 在未來的版本中，應該可以使用[microsoft.analysisservices. AdomdServer](/previous-versions/sql/sql-server-2014/ms143616(v=sql.120))物件的其他函數。|  
+|表示 UDF 目前的執行內容|[Microsoft.analysisservices. AdomdServer. 內容](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120))<br /> [Microsoft.analysisservices. AdomdServer 內容](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120))物件會公開資訊，例如目前的 cube 或模型和各種元資料集合。 [Microsoft.analysisservices. AdomdServer. CoNtext](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120))物件的其中一個主要用途，就是 microsoft.analysisservices. CurrentMember. [microsoft.analysisservices. 階層物件的](/previous-versions/sql/sql-server-2014/ms143578(v=sql.120)) [AdomdServer *](/previous-versions/sql/sql-server-2014/ms137044(v=sql.120))屬性。 這個主要用法可讓 UDF 或是預存程序的作者，根據查詢的對象是來自某個維度的哪個成員來做決定。|  
+|建立集合和 Tuple|[Microsoft.analysisservices. AdomdServer. SetBuilder](/previous-versions/sql/sql-server-2014/ms144510(v=sql.120))、 [microsoft microsoft.analysisservices.](/previous-versions/sql/sql-server-2014/ms145407(v=sql.120)) AdomdServer. TupleBuilder<br /> [Microsoft.analysisservices. AdomdServer. SetBuilder](/previous-versions/sql/sql-server-2014/ms144510(v=sql.120))提供建立不可變集合的方法，而[Microsoft microsoft.analysisservices. AdomdServer](/previous-versions/sql/sql-server-2014/ms145407(v=sql.120))則提供建立不可變元組的方式。|  
+|支援隱含轉換以及 MDX 語言的六個基本類型之間轉換。|[Microsoft.analysisservices. AdomdServer. MDXValue](/previous-versions/sql/sql-server-2014/ms143573(v=sql.120))<br /> [Microsoft.analysisservices. AdomdServer. MDXValue](/previous-versions/sql/sql-server-2014/ms143573(v=sql.120))物件提供下列類型之間的隱含轉換和轉換：<br /><br /> -   [Microsoft.analysisservices. AdomdServer. 階層架構](/previous-versions/sql/sql-server-2014/ms143578(v=sql.120))<br />-   [Microsoft.analysisservices. AdomdServer. Level](/previous-versions/sql/sql-server-2014/ms143581(v=sql.120))<br />-   [Microsoft.analysisservices. AdomdServer. Member](/previous-versions/sql/sql-server-2014/ms143820(v=sql.120))<br />-   [Microsoft.analysisservices. AdomdServer. 元組](/previous-versions/sql/sql-server-2014/ms145330(v=sql.120))<br />-   [Microsoft.analysisservices. AdomdServer. Set](/previous-versions/sql/sql-server-2014/ms144530(v=sql.120))<br />-純量或實數值型別|  
   
 ## <a name="see-also"></a>另請參閱  
  [ADOMD.NET 伺服器程式設計](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  

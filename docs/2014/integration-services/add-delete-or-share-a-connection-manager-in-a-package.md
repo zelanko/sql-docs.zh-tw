@@ -10,14 +10,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4c132bc1715292a1dbd88d84813cefb3ca8616a4
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a44a97ce85fc78a115d89a488aea8d170ef3b36
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926219"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439715"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>加入、刪除或共用封裝中的連接管理員
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括用來連接到其他資料來源 (例如，關聯式資料庫、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，以及 CSV 和 XML 格式的檔案) 的各種連線管理員類型。 您可以在封裝層級或專案層級建立連接管理員。 在專案層級建立的連接管理員可在專案中的所有封裝上使用。 而在封裝層級建立的連接管理員則可在該特定封裝上使用。  
@@ -67,7 +67,7 @@ ms.locfileid: "84926219"
   
      已選取連接管理員類型的自訂對話方塊隨即開啟。 如需有關連接管理員類型和可用選項的詳細資訊，請參閱下列選項表。  
   
-    |[ODBC 來源編輯器]|選項。|  
+    |[ODBC 來源編輯器]|選項|  
     |------------------------|-------------|  
     |[ADO 連線管理員](connection-manager/ado-connection-manager.md)|[設定 OLE DB 連接管理員](configure-ole-db-connection-manager.md)|  
     |[ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)|[設定 ADO.NET 連接管理員](configure-ado-net-connection-manager.md)|  
@@ -103,7 +103,7 @@ ms.locfileid: "84926219"
   
      已選取連接管理員類型的自訂對話方塊隨即開啟。 如需有關連接管理員類型和可用選項的詳細資訊，請參閱下列選項表。  
   
-    |[ODBC 來源編輯器]|選項。|  
+    |[ODBC 來源編輯器]|選項|  
     |------------------------|-------------|  
     |[ADO 連線管理員](connection-manager/ado-connection-manager.md)|[設定 OLE DB 連接管理員](configure-ole-db-connection-manager.md)|  
     |[ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)|[設定 ADO.NET 連接管理員](configure-ado-net-connection-manager.md)|  

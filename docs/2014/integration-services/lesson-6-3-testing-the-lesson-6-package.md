@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c78ccd21b39cd882c037f44c0b37c5deb3bc06d8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 37c4bbccc7c63ab2c2fdc6f64793281cf4c88349
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951478"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440325"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>步驟 3：測試第 6 課的封裝
   在執行階段，您的封裝會從 VarFolderName 參數取得目錄屬性的值。  

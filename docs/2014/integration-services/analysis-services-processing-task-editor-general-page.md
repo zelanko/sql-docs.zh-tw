@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7730b3cc75c45d0a6a4240a333b0d869a17c26b1
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e9c17eebec3b8155d464c4bc358b4186f0255408
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925549"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439445"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 處理工作編輯器 (一般頁面)
   使用 [Analysis Services 處理工作編輯器]**** 對話方塊的 [一般]**** 頁面，即可命名和描述 Analysis Services 處理工作。  

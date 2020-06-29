@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2cd722fd8520ff011c0d57040a55d624178e15e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924639"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439165"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>大量插入工作編輯器 (連接頁面)
   使用 [大量插入工作編輯器]**** 對話方塊的 [連接]**** 頁面，即可指定大量插入作業的來源和目的地，以及要使用的格式。  
   
  若要了解如何使用大量插入，請參閱[大量插入工作](control-flow/bulk-insert-task.md)和[匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[連接]**  
  在清單中選取 OLE DB 連線管理員，或按一下 \<**New connection...**> 以建立新的連接。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "84924639"
  **DestinationTable**  
  輸入目的地資料表或檢視的名稱，或在清單中選取資料表或檢視。  
   
- **[格式]**  
+ **格式**  
  選取大量插入的格式來源。 這個屬性具有下表中所列的選項。  
   
 |值|描述|  

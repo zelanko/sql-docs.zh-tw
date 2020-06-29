@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], adding
 ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eadb27485ac92aa10b22ad3f59cf9ac6029a851e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 946a9f3ccecfcad30042d0264942836522e64c7d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926139"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439685"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>加入、刪除、變更封裝中使用者定義變數的範圍
   這些程序描述如何使用 [變數]**** 視窗，在封裝中加入、刪除及變更使用者定義變數的範圍。  

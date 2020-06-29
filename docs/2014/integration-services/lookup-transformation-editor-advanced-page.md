@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2f73f8e1e4dbbadc4b73a487d433fc8ab1913b5f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 02aa291ef4d282fa77c21f93cc0700cbe1a3032c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951228"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440275"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>查閱轉換編輯器 (進階頁面)
   使用 [查閱轉換編輯器]**** 對話方塊的 [進階]**** 頁面，即可設定部分快取並修改查閱轉換的 SQL 陳述式。  
   
  若要深入了解查閱轉換，請參閱＜ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **快取大小 (32 位元)**  
  調整 32 位元電腦的快取大小 (以 MB 為單位)。 預設值是 5 MB。  
   

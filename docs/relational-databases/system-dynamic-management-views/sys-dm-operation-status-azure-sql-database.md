@@ -19,12 +19,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833754"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440705"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
 
@@ -32,7 +32,7 @@ ms.locfileid: "82833754"
 
   傳回 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 伺服器中的資料庫上所執行之作業的相關資訊。  
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|作業的識別碼。 非 Null。|  
 |resource_type|**int**|表示執行作業所在資源的類型。 非 Null。 在目前的版本中，這個檢視只會追蹤 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上所執行的作業，對應的整數值為 0。|  
@@ -40,7 +40,7 @@ ms.locfileid: "82833754"
 |major_resource_id|**sql_variant**|執行作業所在的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的名稱。 非 Null。|  
 |minor_resource_id|**sql_variant**|僅供內部使用。 非 Null。|  
 |operation (作業)|**nvarchar(60)**|在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上執行的運算，例如 CREATE 或 ALTER。|  
-|State|**tinyint**|作業的狀態。<br /><br /> 0 = 暫止<br />1 = 進行中<br />2 = 已完成<br />3 = 失敗<br />4 = 已取消|  
+|state|**tinyint**|作業的狀態。<br /><br /> 0 = 暫止<br />1 = 進行中<br />2 = 已完成<br />3 = 失敗<br />4 = 已取消|  
 |state_desc|**nvarchar(120)**|PENDING = 作業正在等候可用的資源或配額。<br /><br /> IN_PROGRESS = 作業已開始且正在進行。<br /><br /> COMPLETED = 作業已成功完成。<br /><br /> FAILED = 作業失敗。 如需詳細資訊，請參閱**error_desc**資料行。<br /><br /> CANCELLED = 使用者要求停止作業。|  
 |percent_complete|**int**|已完成作業的百分比。 值不是連續的，而且有效的值如下所示。 Not Null。<br/><br/>0 = 作業未啟動<br/>50 = 作業進行中<br/>100 = 作業完成|  
 |error_code|**int**|表示在作業失敗期間發生之錯誤的代碼。 如果這個值為 0，就表示作業已順利完成。|  
@@ -73,7 +73,9 @@ ms.locfileid: "82833754"
 -   對話方塊的  
   
 -   刪除資料庫  
-  
+
+此視圖中的資訊大約會保留1小時。 請使用[Azure 活動記錄](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log)來查看過去90天的作業詳細資料。 若保留超過90天，請考慮將[活動記錄](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace)專案傳送至 Log Analytics 工作區。
+
 ## <a name="example"></a>範例  
  顯示與資料庫 ' mydb ' 相關聯的最近異地複寫作業。  
   

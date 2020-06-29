@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfertasks.selectobjectsmodaldialogs.f1
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b2423afc2a16751ddb60c6ca679a2ee21121d238
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e631b902cad9735cafba28b72357be674d6497a7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918255"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438165"
 ---
 # <a name="select-objects-to-transfer"></a>選取要傳送的物件
   使用此對話方塊，即可透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳輸工作，選取要從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行個體傳輸到其他執行個體的物件。  

@@ -9,19 +9,19 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.eventhandlerwindow.f1
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4bd7e159a148b134d744481a76ac910af572c0c2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8777e6c0515a602198e3ed393714544d774f9958
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969408"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437415"
 ---
 # <a name="event-handlers-tab"></a>事件處理常式索引標籤
   使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師的 [事件處理常式]**** 索引標籤，即可在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中建立控制流程。 執行事件處理常式以回應封裝所引發的事件，或回應封裝中的工作或容器所引發生的事件。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可執行檔**  
  選取要建立事件處理常式的可執行檔。 可執行檔可以是封裝，或封裝中的工作或容器。  
   

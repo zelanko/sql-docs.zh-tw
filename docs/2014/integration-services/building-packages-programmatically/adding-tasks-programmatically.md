@@ -13,14 +13,14 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: db7f6d541462348d464f69f6abf122aaa2acca7d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2cb0f2d50b77e16396d831ce351263a12443aab6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925089"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439295"
 ---
 # <a name="adding-tasks-programmatically"></a>以程式設計方式加入工作
   在執行階段引擎中可以將工作加入下列類型的物件：  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ec17acfb9be26fc08274d285cf98897768633b9b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6317ca0b8b53e3d9b70caf71d47b3b8bdb39d0b4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925759"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439535"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>ADO NET 來源編輯器 (錯誤輸出頁面)
   使用 [ADO NET 來源編輯器]**** 對話方塊的 [錯誤輸出]**** 頁面，即可選取錯誤處理選項，並設定錯誤輸出資料行的屬性。  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dcabeab37e3fc82807958cc7c1f5772b4ada0347
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eeed332d6b41d8b81105b005df3011a39d0e084e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923612"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438835"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Attunity Oracle Change Data Capture (CDC) 服務使用說明指南
   本章節描述如何在 CDC 服務組態主控台中執行工作。  

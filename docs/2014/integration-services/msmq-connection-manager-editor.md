@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - MSMQ Connection Manager Editor
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4d407cc3c0324b80ff63484f4e7c39ea30575ebc
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d452aa1edc21af067f1deac0e4544b117cecf13b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967038"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440195"
 ---
 # <a name="msmq-connection-manager-editor"></a>MSMQ 連線管理員編輯器
   使用 [MSMQ 連線管理員]**** 對話方塊，來指定 Message Queuing (又稱為 MSMQ) 訊息佇列的路徑。  
@@ -40,7 +40,7 @@ ms.locfileid: "84967038"
   
 |佇列類型|範例路徑|  
 |----------------|-----------------|  
-|公用|\<computer name>\\<佇列名稱\>|  
+|公開|\<computer name>\\<佇列名稱\>|  
 |Private|\<computer name>\Private $ \\<佇列名稱\>|  
   
  您可以使用 "." 代表本機電腦。  

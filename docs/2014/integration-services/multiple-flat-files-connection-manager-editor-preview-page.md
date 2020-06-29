@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f16df0120e58b987009f0e8e674901e27bbfbe43
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 192620afe223b6c11e8ce646a15da3ddcc3258e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965128"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440105"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>多個一般檔案連接管理員編輯器 (預覽頁面)
   使用 [多個一般檔案連線管理員編輯器]**** 對話方塊的 [預覽]**** 頁面，即可根據您定義的資料行分隔，來檢視第一個所選取來源檔的內容。  
   
  若要深入了解多個一般檔案連接管理員，請參閱＜ [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師的 [連線管理員]**** 區域內。  
   

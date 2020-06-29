@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multicast Transformation Editor
 ms.assetid: 96155ed9-6597-4fe1-8f9f-b741b18ba2c1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1bbc845ac8ccf2d60a218f34770cf8f2483ff57b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cfe53eaf946af96a9f49398e50aed0fdf53727f8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967028"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440155"
 ---
 # <a name="multicast-transformation-editor"></a>多點傳送轉換編輯器
   使用 **[多點傳送轉換編輯器]** 對話方塊檢視和設定每個轉換輸出的屬性。  

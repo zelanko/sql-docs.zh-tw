@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9c00aa838b5bf420862cfe2793c404989ad911c9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53e41dd7a3c2d3613244be402ee070630647ff19
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962083"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439965"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>詞彙查閱轉換編輯器 (參考資料表索引標籤)
   使用 [詞彙查閱轉換編輯器]**** 對話方塊的 [參考資料表]**** 索引標籤，即可指定參考 (查閱) 資料表的連接。  
   
  若要深入了解模糊查閱轉換，請參閱＜ [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **OLE DB 連線管理員**  
  從清單中選取現有的連線管理員，或按一下 [新增]**** 來建立新的連線。  
   

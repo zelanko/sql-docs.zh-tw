@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 67c81901e454c4e7a47e5d448f2aa17d6a8820fa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c849c57c0854757a75eecf163a384c06ae8f1c47
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972808"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439995"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>傳送登入工作編輯器 (登入頁面)
   使用 [傳送登入工作編輯器]**** 對話方塊的 [登入]**** 頁面，即可指定屬性將一個或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個執行個體。 如需這項工作的詳細資訊，請參閱 [傳送登入工作](control-flow/transfer-logins-task.md)。  
@@ -26,7 +26,7 @@ ms.locfileid: "84972808"
 > [!IMPORTANT]  
 >  執行傳送登入工作時，目的地伺服器上會建立具隨機密碼的登入，且會停用這些密碼。 若要使用這些登入， **系統管理員** 固定伺服器角色的成員就必須變更密碼，然後啟用密碼。 無法傳送**sa**登入。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **SourceConnection**  
  在清單中選取 SMO 連線管理員，或按一下 **\<New connection...>** 以建立與來源伺服器的新連接。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "84972808"
 |值|描述|  
 |-----------|-----------------|  
 |**FailTask**|如果具有相同名稱的登入已經存在於目的地伺服器上，工作就會失敗。|  
-|**改寫**|工作會覆寫目的地伺服器上具有相同名稱的登入。|  
+|**Overwrite**|工作會覆寫目的地伺服器上具有相同名稱的登入。|  
 |**略過**|工作會略過目的地伺服器上具有相同名稱的登入。|  
   
  **CopySids**  

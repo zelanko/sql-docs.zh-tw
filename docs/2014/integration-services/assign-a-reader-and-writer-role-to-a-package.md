@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c9c96ca-81cb-48e2-a71b-0657439a4c51
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 31c36bd0f961c0338c6468d658ed26fa3c83ac86
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 43c620eb5cd6df8ac58b4408a8a18b2ddd3e2e49
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925523"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439455"
 ---
 # <a name="assign-a-reader-and-writer-role-to-a-package"></a>指派讀取器和寫入器角色給封裝
   您可將讀取器和寫入器角色指派給每個封裝。  

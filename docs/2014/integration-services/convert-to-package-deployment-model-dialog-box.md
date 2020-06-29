@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.bids.converttolegacydeployment.f1
 ms.assetid: 9e60a34a-10f7-48d1-966f-b3ff236ab4b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 73f1242b9756828b330d0386d93e3c8e8e4f2220
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b52932ad26f8cebd2e67b0025f4b881241119f6e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917608"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437995"
 ---
 # <a name="convert-to-package-deployment-model-dialog-box"></a>轉換成封裝部署模型對話方塊
   **[轉換成封裝部署模型]** 命令可讓您在檢查專案和專案中的每個封裝是否與該模型相容之後，將封裝轉換成封裝部署模型。 如果某個封裝使用專案部署模型獨有的功能 (例如參數)，則無法轉換該封裝。  

@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Export Package dialog box
 ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: be6942f419e8b13df12268363520c0f293e1a429
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6085a6fde388cf65ed9fa8eddaf8ffc898a29999
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966768"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437395"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>匯出封裝對話方塊 UI 參考
   使用 **[匯出封裝]** 對話方塊 (可以從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中存取)，即可匯出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝到不同的位置，並選擇性地修改封裝的保護等級。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **封裝位置**  
  選取要用來儲存所匯出之封裝的儲存體類型。 有下列選項可供使用：  
   

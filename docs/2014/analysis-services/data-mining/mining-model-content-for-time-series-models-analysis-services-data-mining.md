@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 550dd2bad920dc3538de011b7841c0174912e718
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: fc9186b0250f0bdb8dd5ad91cc7e84782218bbc2
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521251"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468903"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>時間序列模型的採礦模型內容 (Analysis Services - 資料採礦)
   所有採礦模型都會使用相同的結構來儲存其內容。 這個結構是根據資料採礦內容結構描述資料列集所定義。 不過，在該標準結構內，包含資訊的節點會以不同的方式排列，以便代表各種樹狀結構。 本主題描述如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法為基礎的採礦模型組織節點，以及每個節點的意義。  
@@ -120,7 +120,7 @@ ms.locfileid: "84521251"
   
  **ARTXP**  
   
-|節點類型識別碼|Description|  
+|節點類型識別碼|描述|  
 |------------------|-----------------|  
 |1 (模型)|時間序列|  
 |3 (內部)|代表 ARTXP 時間序列樹中的內部分支。|  
@@ -129,7 +129,7 @@ ms.locfileid: "84521251"
   
  **ARIMA**  
   
-|節點類型識別碼|Description|  
+|節點類型識別碼|描述|  
 |------------------|-----------------|  
 |27 (ARIMA 根)|ARIMA 樹狀結構的最上層節點。|  
 |28 (ARIMA 週期結構)|描述單一週期結構之 ARIMA 樹狀結構的元件。|  
@@ -423,7 +423,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  「差異順序」** 的值表示比較或區分數列的次數。  
   
- 如需可能值類型的列舉，請參閱 <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>。  
+ 如需可能數值型別的列舉，請參閱[microsoft.analysisservices. AdomdServer. miningvaluetype 下列](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120))。  
   
 ### <a name="using-the-arima-tree-information"></a>使用 ARIMA 樹狀結構資訊  
  如果您在商務方案中使用以 ARIMA 演算法為基礎的預測，可能會想要將此方程式貼入報表中，以便示範用來建立預測的方法。 您可以使用標題或描述，分別以簡短或冗長的格式呈現這些公式。  

@@ -15,17 +15,17 @@ helpviewer_keywords:
 - validation [Integration Services], design-time tasks
 - SSIS custom tasks, validating
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2ac0429b744f9ba14798ca1f402261f16aae34a8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a6f26fc245e69093474ce33f80ab82e5be95781
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968678"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469293"
 ---
 # <a name="coding-a-custom-task"></a>撰寫自訂工作的程式碼
-  建立繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基底類別的類別，並將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 屬性 (attribute) 套用到類別之後，必須覆寫基底類別的屬性 (properties) 與方法的實作，才可提供自訂功能。
+  建立繼承[自的類別，並將](/dotnet/api/microsoft.sqlserver.dts.runtime.task)屬性（attribute）套用至類別之後， <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 您必須覆寫基類的屬性和方法的實作為，以提供您的自訂功能。
 
 ## <a name="configuring-the-task"></a>設定工作
 
@@ -35,7 +35,7 @@ ms.locfileid: "84968678"
  您可以在自訂程式碼中使用 `Validate` 方法來實作驗證。 執行階段引擎會透過呼叫在工作上的 `Validate` 方法來驗證工作。 工作開發人員的責任就是要定義可判斷工作成功或失敗的驗證準則，並通知執行階段引擎此驗證的結果。
 
 #### <a name="task-abstract-base-class"></a>工作抽象基底類別
- <xref:Microsoft.SqlServer.Dts.Runtime.Task> 抽象基底類別提供的 `Validate` 方法，可由工作覆寫以定義其驗證準則。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師會自動在封裝設計期間呼叫 `Validate` 方法多次，並在警告或錯誤發生時，提供視覺提示給使用者，以協助識別工作組態中的問題。 工作透過從 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 列舉傳回值，以及透過引發警告和錯誤事件，來提供驗證結果。 這些事件包含對 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中的使用者顯示的資訊。
+ [ [] 抽象基類提供了](/dotnet/api/microsoft.sqlserver.dts.runtime.task) `Validate` 方法，每個工作都會覆寫以定義其驗證準則。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師會自動在封裝設計期間呼叫 `Validate` 方法多次，並在警告或錯誤發生時，提供視覺提示給使用者，以協助識別工作組態中的問題。 工作透過從 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 列舉傳回值，以及透過引發警告和錯誤事件，來提供驗證結果。 這些事件包含對 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中的使用者顯示的資訊。
 
  以下是一些驗證範例：
 
@@ -54,7 +54,7 @@ ms.locfileid: "84968678"
 -   在執行工作之前，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 也會呼叫 `Validate` 方法中的程式碼，而且如果驗證失敗，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 會取消執行。
 
 #### <a name="user-interface-considerations-during-validation"></a>在驗證期間的使用者介面考量
- <xref:Microsoft.SqlServer.Dts.Runtime.Task> 包含 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面以做為 `Validate` 方法的參數。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面包含工作向執行階段引擎引發事件所呼叫的方法。 當警告或是錯誤狀況在驗證期間發生時，會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法。 這兩個警告方法都需要相同的參數，包含錯誤碼、來源元件、描述、說明檔以及說明內容資訊。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師使用此資訊在設計介面上顯示視覺提示。 設計師提供的視覺提示包括出現在設計師介面上工作旁邊的驚嘆號圖示。 此視覺提示提醒使用者工作需要其他組態，執行才可以繼續。
+ 此工作[會將](/dotnet/api/microsoft.sqlserver.dts.runtime.task)介面當做 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 參數包含在 `Validate` 方法中。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面包含工作向執行階段引擎引發事件所呼叫的方法。 當警告或是錯誤狀況在驗證期間發生時，會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法。 這兩個警告方法都需要相同的參數，包含錯誤碼、來源元件、描述、說明檔以及說明內容資訊。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師使用此資訊在設計介面上顯示視覺提示。 設計師提供的視覺提示包括出現在設計師介面上工作旁邊的驚嘆號圖示。 此視覺提示提醒使用者工作需要其他組態，執行才可以繼續。
 
  驚嘆號圖示也會顯示包含錯誤訊息的工具提示。 工作會在事件的描述參數中提供錯誤訊息。 錯誤訊息也會顯示在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的 [工作清單] 窗格中，這個窗格為使用者提供檢視所有驗證錯誤的集中位置。
 
@@ -158,7 +158,7 @@ End Class
 ### <a name="execute-method"></a>Execute 方法
  包含在封裝中的工作會在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段呼叫其 `Execute` 方法時執行。 工作會在此方法中執行其核心商務邏輯和功能，並藉由張貼訊息、從列舉傳回值 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> ，以及覆寫屬性的屬性，來提供執行結果 `get` `ExecutionValue` 。
 
- <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基底類別提供 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法的預設實作。 自訂工作會覆寫此方法以定義其執行階段功能。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 物件會包裝工作，將工作與執行階段引擎和封裝中的其他物件隔離。 因為此隔離，工作不會知道它在封裝中與執行順序有關的位置，而且只會在執行階段呼叫工作時才執行。 這個架構可預防工作在執行期間修改封裝時可能發生的問題。 只有透過將封裝中的其他物件當做 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法中的參數提供給工作，該工作才能夠存取這些物件。 這些參數可以讓工作引發事件、將項目寫入事件記錄檔、存取變數集合以及將連接編列到交易中的資料來源，同時仍保有可保障封裝的穩定性和可靠性所需的隔離。
+ [][工作基底](/dotnet/api/microsoft.sqlserver.dts.runtime.task)類別提供方法的預設執行 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 。 自訂工作會覆寫此方法以定義其執行階段功能。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 物件會包裝工作，將工作與執行階段引擎和封裝中的其他物件隔離。 因為此隔離，工作不會知道它在封裝中與執行順序有關的位置，而且只會在執行階段呼叫工作時才執行。 這個架構可預防工作在執行期間修改封裝時可能發生的問題。 只有透過將封裝中的其他物件當做 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法中的參數提供給工作，該工作才能夠存取這些物件。 這些參數可以讓工作引發事件、將項目寫入事件記錄檔、存取變數集合以及將連接編列到交易中的資料來源，同時仍保有可保障封裝的穩定性和可靠性所需的隔離。
 
  下表列出 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法中提供給工作的參數。
 

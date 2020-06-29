@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 761407023130b2bc18c8e1b64d09d9b30155c3b3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 77aac43aa6fc00a408c049ea7f6d078417a8d4dd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966064"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440615"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步驟 2:新增和設定 Foreach 迴圈容器
   在這項工作中，您將加入功能，於一般檔案的資料夾中形成迴圈，並對每個一般檔案套用在第 1 課使用的相同資料流程轉換。 您的作法是在控制流程中加入和設定 Foreach 迴圈容器。  
@@ -42,7 +42,7 @@ ms.locfileid: "84966064"
   
 3.  以滑鼠右鍵按一下剛新增的 [Foreach 迴圈容器]****，並選取 [編輯]****。  
   
-4.  在 [ **Foreach 迴圈編輯器**] 對話方塊的 [**一般**] 頁面上，針對 [**名稱**] 輸入 `Foreach File in Folder` 。 按一下 [確定]。  
+4.  在 [ **Foreach 迴圈編輯器**] 對話方塊的 [**一般**] 頁面上，針對 [**名稱**] 輸入 `Foreach File in Folder` 。 按一下 [確定]****。  
   
 5.  以滑鼠右鍵按一下 [Foreach 迴圈] 容器，按一下 [**屬性**]，然後在 [屬性視窗中，確認 `LocaleID` 屬性是設為 [**英文（美國）**]。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "84966064"
     > [!IMPORTANT]  
     >  變數名稱會區分大小寫。  
   
-4.  按一下 [確定]。  
+4.  按一下 [確定]****。  
   
 5.  再按一下 [確定]**** 來結束 [Foreach 迴圈編輯器]**** 對話方塊。  
   

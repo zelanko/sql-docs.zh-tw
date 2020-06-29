@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7cb1c84cccf4123f6ca1894baba5676937d80a15
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 923a5d549cff00af096b905ac6dc06f20e132a80
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925629"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439515"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Analysis Services 執行 DDL 工作編輯器 (DDL 頁面)
   使用 [Analysis Services 執行 DDL 工作編輯器]**** 對話方塊的 [DDL]**** 頁面，即可指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的連接，並提供資料定義語言 (DDL) 陳述式來源的相關資訊。  
@@ -38,7 +38,7 @@ ms.locfileid: "84925629"
 |-----------|-----------------|  
 |**直接輸入**|將來源設定為 [SourceDirect]**** 文字方塊中所儲存的 DDL 陳述式。 選取這個值就會顯示在下列章節中的動態選項。|  
 |**檔案連接**|將來源設定為包含 DDL 陳述式的檔案。 選取這個值就會顯示在下列章節中的動態選項。|  
-|**變數**|將來源設定為變數。 選取這個值就會顯示在下列章節中的動態選項。|  
+|**變**|將來源設定為變數。 選取這個值就會顯示在下列章節中的動態選項。|  
   
 ## <a name="dynamic-options"></a>動態選項  
   

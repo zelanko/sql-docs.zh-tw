@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5539544afba4e2752baaefb2324b33d3ac897b0a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e4597f3100e7c867b888d8af1d05204e2c271208
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962238"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440035"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>詞彙擷取轉換編輯器 (排除索引標籤)
   使用 **[詞彙擷取轉換編輯器]** 對話方塊的 **[排除]** 索引標籤，可設定排除資料表的連接，並指定包含排除詞彙的資料行。  
   
  若要深入了解詞彙擷取轉換，請參閱＜ [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用排除詞彙**  
  藉由指定包含排除詞彙的資料行，指出是否要在詞彙擷取期間排除特定詞彙。 如果您選擇要排除詞彙，就必須指定下列來源屬性。  
   

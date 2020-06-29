@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a3ee27ca4f92efb950c35ab0d8174676246c14b3
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 62dfd50adf25d3e203c2bbf50c58579c65332606
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818048"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440805"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.databases dm_pdw_exec_requests （Transact-sql）
 
@@ -35,7 +35,7 @@ ms.locfileid: "84818048"
 |end_compile_time|**datetime**|引擎完成編譯要求的時間。|Null 表示尚未編譯的要求;否則，有效的**日期時間**小於 start_time，且小於或等於目前的時間。|
 |end_time|**datetime**|要求執行完成、失敗或已取消的時間。|針對已佇列或作用中的要求，則為 Null;否則，有效的**日期時間**就會小於或等於目前的時間。|  
 |total_elapsed_time|**int**|自要求開始後執行所經過的時間（以毫秒為單位）。|介於0和 submit_time 與 end_time 之間的差異。</br></br> 如果 total_elapsed_time 超過整數的最大值，total_elapsed_time 會繼續成為最大值。 此狀況會產生「已超過最大值」的警告。</br></br> 最大值（以毫秒為單位）與24.8 天相同。|  
-|label|**nvarchar(255)**|與某些 SELECT 查詢語句相關聯的選擇性標籤字串。|包含 ' a-z '、' A-z '、' 0-9 '、' _ ' 的任何字串。|  
+|標籤|**nvarchar(255)**|與某些 SELECT 查詢語句相關聯的選擇性標籤字串。|包含 ' a-z '、' A-z '、' 0-9 '、' _ ' 的任何字串。|  
 |error_id|**Nvarchar （36）**|與要求相關聯之錯誤的唯一識別碼（如果有的話）。|請參閱[dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md);如果未發生錯誤，則設為 Null。|  
 |database_id|**int**|明確內容所使用之資料庫的識別碼（例如，使用 DB_X）。|如[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)，請參閱 sys.databases 中的識別碼。|  
 |命令|**nvarchar(4000)**|保留使用者提交之要求的完整文字。|任何有效的查詢或要求文字。 長度超過4000個位元組的查詢會被截斷。|  
@@ -52,18 +52,18 @@ ms.locfileid: "84818048"
 
  Result_cache_hit 是查詢使用結果集快取的位元遮罩。  此資料行可以是[|（位 OR）](../../t-sql/language-elements/bitwise-or-transact-sql.md)下列其中一個或多個值的乘積：  
   
-|值|描述|  
+|十六進位值（十進位）|描述|  
 |-----------|-----------------|  
 |**1**|結果集快取點擊|  
-|-**0x00**|結果集快取遺漏|  
-|-**0x01**|資料庫上的結果集快取已停用。|  
-|-**0x02**|會話上的結果集快取已停用。 | 
-|-**0x04**|結果集快取已停用，因為沒有查詢的資料來源。|  
-|-**0x08**|結果集快取已停用，因為資料列層級安全性述詞。|  
-|-**0x10**|結果集快取已停用，因為在查詢中使用系統資料表、臨時表或外部資料表。|  
-|-**0x20**|結果集快取已停用，因為查詢包含執行時間常數、使用者定義函數或不具決定性的函數。|  
-|-**0x40**|結果集快取已停用，因為估計的結果集大小為 >10GB。|  
-|-**0x80**|結果集快取已停用，因為結果集包含大小龐大（>64kb）的資料列。|  
+|**0x00** （**0**）|結果集快取遺漏|  
+|-**0x01** （**-1**）|資料庫上的結果集快取已停用。|  
+|-**0x02** （**-2**）|會話上的結果集快取已停用。 | 
+|-**0x04** （**-4**）|結果集快取已停用，因為沒有查詢的資料來源。|  
+|-**0x08** （**-8**）|結果集快取已停用，因為資料列層級安全性述詞。|  
+|-**0x10** （**-16**）|結果集快取已停用，因為在查詢中使用系統資料表、臨時表或外部資料表。|  
+|-**0x20** （**-32**）|結果集快取已停用，因為查詢包含執行時間常數、使用者定義函數或不具決定性的函數。|  
+|-**0x40** （**-64**）|結果集快取已停用，因為估計的結果集大小為 >10GB。|  
+|-**0x80** （**-128**）|結果集快取已停用，因為結果集包含大小龐大（>64kb）的資料列。|  
   
 ## <a name="permissions"></a>權限
 

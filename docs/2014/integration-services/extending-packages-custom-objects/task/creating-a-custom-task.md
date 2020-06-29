@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dc1aeb650810f9b6d580dabcd22091a2e1eb9d49
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: b1e6079d12de5468a654e646c434ae72596f62dc
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427255"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469273"
 ---
 # <a name="creating-a-custom-task"></a>建立自訂工作
   建立自訂工作的步驟，與建立 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 之其他自訂物件的步驟類似：  
   
--   建立繼承自基底類別的新類別。 對於工作而言，基底類別是 <xref:Microsoft.SqlServer.Dts.Runtime.Task>。  
+-   建立繼承自基底類別的新類別。 就工作而言，基類是[Microsoft. SqlServer](/dotnet/api/microsoft.sqlserver.dts.runtime.task)。  
   
 -   將可識別物件類型的屬性套用至類別。 對於工作而言，屬性是 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "85427255"
 ## <a name="getting-started-with-a-custom-task"></a>自訂工作使用者入門  
   
 ### <a name="creating-projects-and-classes"></a>建立專案和類別  
- 因為所有的 Managed 工作都是從 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基底類別衍生，所以建立自訂工作時的第一個步驟是以慣用的 Managed 程式語言建立類別庫專案，並建立從基底類別繼承的類別。 在此衍生的類別中，您將覆寫基底類別的方法與屬性，以實作自訂功能。  
+ 因為所有的 managed 工作都是衍生[自，所以](/dotnet/api/microsoft.sqlserver.dts.runtime.task)當您建立自訂工作時，第一個步驟是以慣用的 managed 程式設計語言建立類別庫專案，並建立繼承自基類的類別。 在此衍生的類別中，您將覆寫基底類別的方法與屬性，以實作自訂功能。  
   
  在相同的方案中，為自訂使用者介面建立另一個類別庫專案。 建議為使用者介面使用不同的組件以便能輕鬆地部署，因為它允許您獨立地更新和重新部署連接管理員或是其使用者介面。  
   

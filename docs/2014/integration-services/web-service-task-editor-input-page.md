@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fa1858469ec8756f05e186ca1cb50c966ee47268
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a0ff06e9001c943c294b9c7ba8f93d9cad21e9c3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972458"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439835"
 ---
 # <a name="web-service-task-editor-input-page"></a>Web 服務工作編輯器 (輸入頁面)
   使用 [Web 服務工作編輯器]**** 對話方塊的 [輸入]**** 頁面，即可指定 Web 服務、Web 方法，以及提供給 Web 方法的輸入值。 在 [值] 資料行中直接輸入字串，或是在 [值] 資料行中選取變數，即可提供這些值。  
   
  若要了解這個工作，請參閱 [Web 服務工作](control-flow/web-service-task.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **服務**  
  從清單中選取要用於執行 Web 方法的 Web 服務。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "84972458"
 > [!NOTE]  
 >  「Web 服務」工作只支援下列資料類型的參數：基本類型 (如整數和字串)、基本類型的陣列和順序以及列舉。  
   
- **變數**  
+ **變**  
  選取該核取方塊，即可使用變數來提供輸入。  
   
  **ReplTest1**  

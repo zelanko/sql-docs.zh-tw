@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 1088aafc-14c5-4e7d-9930-606a24c3049b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ad5bc2dbecd153192d7a2a3115d83ecfa1cb765c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7dd6fbed4bedc285069306ab4c400f0f67f9f293
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926499"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439785"
 ---
 # <a name="access-to-the-integration-services-service"></a>對 Integration Services 服務的存取權
   封裝保護等級可限制已獲允許編輯和執行封裝的人員。 您需要額外的保護措施來限制有誰能夠檢視目前在伺服器上執行的封裝清單，以及有誰能夠停止目前在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中執行的封裝。  

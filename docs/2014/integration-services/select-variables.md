@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Select Variables dialog box
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b86ec76d75f58db7f8e2978764e8ce9c5ace2279
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 47bf9fcd831cc8ca0a56b7687013104ba6b30c68
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963541"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440065"
 ---
 # <a name="select-variables"></a>選取變數
   使用 [選取變數]**** 對話方塊，即可指定在訊息佇列工作中用於傳送訊息作業的變數。 [可用的變數]**** 清單包含在訊息佇列工作或其父容器之範圍中的系統和使用者自訂變數。 此工作使用 [選取的變數]**** 清單中的變數。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的變數**  
  選取一個或多個變數。  
   

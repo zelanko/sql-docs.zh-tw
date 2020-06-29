@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f24ea0800107caf026105e306ae39e1461077de5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e3f141ae1d77e5c346fe03e74366b0d94f4ca354
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924251"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439055"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
   `SSISDB`目錄是處理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 您已部署至伺服器之（SSIS）專案的中心點 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器作業。  
@@ -44,7 +44,7 @@ ms.locfileid: "84924251"
   
 -   資料夾  
   
--   Project  
+-   專案  
   
 -   環境  
   

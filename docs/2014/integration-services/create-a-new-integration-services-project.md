@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQL Server Integration Services projects, creating
 - SSIS projects, creating
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e677162d88fd1f724b53e0d1838eefd16d1a87af
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 524bea3f8b2c4e9770892f8936951a1d387dfc6f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917378"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437945"
 ---
 # <a name="create-a-new-integration-services-project"></a>建立新的 Integration Services 專案
   此程序會建立新的專案和新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 方案。  

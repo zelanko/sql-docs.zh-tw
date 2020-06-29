@@ -14,14 +14,14 @@ helpviewer_keywords:
 - copying packages
 - data source views [Integration Services], copying
 ms.assetid: 1606c54d-20f9-49f3-a4ef-caad83a772aa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 32b5f3f11bb15576ca30b83f1c0709cb4b77ff6d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3456209c467c3b8474e130181d02304911098d2c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917478"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437975"
 ---
 # <a name="copy-project-items"></a>複製專案項目
   本主題描述如何在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案內或在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案之間複製物件。 您也可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 專案的其他類型之間、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]之間複製物件。 若要在兩個專案之間進行複製，專案必須在同一個 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 方案中。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 專案](integration-services-ssis-projects-and-solutions.md)。  

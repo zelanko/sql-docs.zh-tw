@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6076b28e932ac03d211ab6ba1a84fe6c832f72ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4c57cccb71819c86874e83bb105c9270ec456648
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966848"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437375"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Excel 目的地編輯器 (錯誤輸出頁面)
   使用 [Excel 目的地編輯器]**** 對話方塊的 [進階]**** 頁面，即可指定錯誤處理的選項。  
   
  若要深入了解 Excel 目的地，請參閱＜ [Excel Destination](data-flow/excel-destination.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **輸入或輸出**  
  檢視資料來源的名稱。  
   

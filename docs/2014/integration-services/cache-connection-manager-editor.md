@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 403210fd8a60cdfb7e92b18f9bb66ccb0a6f1f4c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d22744bd83daa70994e552965ea96d148800afef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924619"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439145"
 ---
 # <a name="cache-connection-manager-editor"></a>快取連接管理員編輯器
   快取連接管理員會從快取轉換或快取檔案 (.caw) 中讀取參考資料集，而且可以將資料儲存至快取檔案。 資料永遠會儲存在記憶體中。  
@@ -37,7 +37,7 @@ ms.locfileid: "84924619"
 ##  <a name="general-tab"></a><a name="generaltab"></a>[一般] 索引標籤  
  使用 [快取連線管理員編輯器]**** 對話方塊的 [一般]**** 索引標籤即可指出要從檔案中讀取快取，還是要將快取儲存至檔案。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的快取連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "84924619"
 ##  <a name="columns-tab"></a><a name="columnstab"></a>資料行索引標籤  
  使用 **[快取連接管理員編輯器]** 對話方塊的 **[資料行]** 索引標籤即可設定快取中每個資料行的屬性。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **資料行**  
  指定資料行名稱。  
   

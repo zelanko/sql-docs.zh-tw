@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Copy Column Transformation Editor
 ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 317748ee2e5df7f64c15afd5f4d5661a739f4f88
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7647d25891b37e5f09356d427072e84b45882e4c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917508"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437965"
 ---
 # <a name="copy-column-transformation-editor"></a>複製資料行轉換編輯器
   使用 **[複製資料行轉換編輯器]** 對話方塊，即可選取要複製的資料行，並為新的輸出資料行指派名稱。  

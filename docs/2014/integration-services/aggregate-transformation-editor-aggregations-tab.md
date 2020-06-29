@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4799df229e96ce8488614d8ec7b0755332360fbc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 59bf17aa0c13fcc771a75253d5ac9f46a160c57c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925589"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439505"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>彙總轉換編輯器 (彙總索引標籤)
   使用 [彙總轉換編輯器]**** 對話方塊的 [彙總]**** 索引標籤，即可指定彙總的資料行與彙總屬性。 您可以套用多個彙總。 此轉換不會產生錯誤輸出。  
@@ -30,7 +30,7 @@ ms.locfileid: "84925589"
   
  若要了解有關彙總轉換的詳細資訊，請參閱＜ [Aggregate Transformation](data-flow/transformations/aggregate-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **進階 / 基本**  
  顯示或隱藏設定多個輸出之多個彙總的選項。 依預設，會隱藏 [進階] 選項。  
   
@@ -72,8 +72,8 @@ ms.locfileid: "84925589"
 |**Average**|傳回資料行中資料行值的平均。 只能平均具有數值資料類型的資料行。 如需詳細資訊，請參閱 AVG。|  
 |**Count**|傳回群組中的項目數。 如需詳細資訊，請參閱 COUNT。|  
 |**CountDistinct**|傳回群組中唯一非 Null 值的數目。 如需詳細資訊，請參閱 COUNT 和 Distinct。|  
-|**最小值**|傳回群組中的最小值。 限制為數值資料類型。|  
-|**最大值**|傳回群組中的最大值。 限制為數值資料類型。|  
+|**至少**|傳回群組中的最小值。 限制為數值資料類型。|  
+|**高**|傳回群組中的最大值。 限制為數值資料類型。|  
   
  **比較旗標**  
  如果您選擇 [群組依據]****，請使用核取方塊來控制轉換執行比較的方式。 如需字串比較選項的資訊，請參閱 [比較字串資料](data-flow/comparing-string-data.md)。  

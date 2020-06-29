@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 747a0de0-3c2f-4d31-a692-7111fc0911d8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5c6ffb11f208236ccf95371e8162550d8f221cfb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cd36828a7bab7fb33b86765f9f064b6406a17a9a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926395"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439755"
 ---
 # <a name="add-a-destination-using-destination-assistant"></a>使用目的地小幫手來加入目的地
   本主題提供使用目的地小幫手來加入新目的地的步驟，也會列出可在 [加入新目的地]**** 對話方塊上使用的選項。當您將目的地小幫手拖放至 SSIS 設計師時，即會顯示此對話方塊。  

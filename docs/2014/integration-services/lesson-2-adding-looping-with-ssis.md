@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ed2089257af4f82b0bbb863731a17d396dc8795c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4023db85af32babf04de54efbceb6130d7f979ea
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968258"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440585"
 ---
 # <a name="lesson-2-adding-looping"></a>第 2 課：新增迴圈
   在[第1課：建立專案和基本套件](lesson-1-create-a-project-and-basic-package-with-ssis.md)中，您建立了一個封裝，它會從單一一般檔案來源解壓縮資料、使用查閱轉換來轉換資料，最後將資料載入**AdventureWorksDW2012**範例資料庫的**FactCurrency**事實資料表中。  

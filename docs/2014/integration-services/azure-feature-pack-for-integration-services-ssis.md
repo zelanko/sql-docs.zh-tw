@@ -10,14 +10,14 @@ f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7c99d4c9c561345a49faa595e080985731656bc3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: abcad704ed02655c03a970d3fe4b80556b96cf69
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925419"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439395"
 ---
 # <a name="azure-feature-pack"></a>Azure 功能套件
 SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模組，可提供此頁面上所列的元件，以便讓 SSIS 連接到 Azure 服務、在 Azure 和內部部署資料來源之間轉送資料，以及處理儲存在 Azure 中的資料。
@@ -72,7 +72,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模
   
 -   [Azure 的 Microsoft SQL Server 2014 Integration Services 功能套件](https://www.microsoft.com/download/details.aspx?id=47366)  
 
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 您必須先安裝下列必要條件，再安裝這個功能套件。  
   
 -   SQL Server Integration Services  

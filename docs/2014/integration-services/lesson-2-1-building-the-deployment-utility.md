@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c8c0cc7df39c8b5bac3ff216aa3d61975c707207
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4a8782742ebc287e4f7ac9112387b084fb0e3dfd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966088"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440635"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>步驟 1:建置部署公用程式
   在這項工作中，您將設定並建立「部署教學課程」專案的部署公用程式。  

@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 11c56c29f685eb8f3746431a79b4d6a42a4b9fe5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53d684e6f48f3f81ae23c34c23eed11789d4a1fe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965138"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440115"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>多個一般檔案連線管理員編輯器 (一般頁面)
   使用 **[多個一般檔案連線管理員編輯器]** 對話方塊的 **[一般]** 頁面，即可選取一組具有相同資料格式的檔案，並指定其資料格式。 多個一般檔案連接，可以讓封裝連接到一組具有相同格式的文字檔。  
   
  若要深入了解多個一般檔案連接管理員，請參閱＜ [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "84965138"
  **字碼頁**  
  指定非 Unicode 文字的字碼頁。  
   
- **[格式]**  
+ **格式**  
  指出是要使用分隔符號、固定寬度或不齊右的格式。 所有檔案必須有相同的資料格式。  
   
 |值|描述|  
@@ -65,7 +65,7 @@ ms.locfileid: "84965138"
 |值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|標頭資料列是以歸位字元和換行字元的組合分隔。|  
-|**{CR}**|標頭資料列是以歸位字元分隔。|  
+|**符**|標頭資料列是以歸位字元分隔。|  
 |**分行符號**|標頭資料列是以換行字元分隔。|  
 |**分號 {;}**|標頭資料列是以分號分隔。|  
 |**冒號 {:}**|標頭資料列是以冒號分隔。|  

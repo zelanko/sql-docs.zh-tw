@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetranscon.f1
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cc44af33e79f1c419a13444cca021da59f4917ba
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 04a127d8d2da6f10053067584b35c650c61bf845
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924567"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439125"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>快取轉換編輯器 (連接管理員頁面)
   使用 **[快取轉換編輯器]** 對話方塊的 **[連接管理員]** 索引標籤，即可選取現有的快取連接管理員或建立新的快取連接管理員。  
@@ -25,7 +25,7 @@ ms.locfileid: "84924567"
   
  若要深入了解快取連接管理員，請參閱＜ [Cache Connection Manager](connection-manager/cache-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **快取連線管理員**  
  使用清單方塊來選取現有的快取連線管理員，或使用 [新增]**** 按鈕來建立新的連線。  
   
