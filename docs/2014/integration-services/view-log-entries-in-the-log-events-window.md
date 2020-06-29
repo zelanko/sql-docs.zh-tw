@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Integration Services packages, logs
 - packages [Integration Services], logs
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2eeacf8b8e722898485871c9f2c469e780e15c78
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7a2fddc08a92477d18f4bf7ce14312d1ef531fae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972535"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420085"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>檢視記錄事件視窗中的記錄項目
   此程序描述如何執行封裝並檢視封裝寫入的記錄項目。 您可以即時檢視記錄項目， 也可以複製及儲存寫入 [記錄事件]**** 視窗中的記錄項目，以執行進一步的分析。  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], adding expressions
 - expressions [Integration Services], adding
 ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2fd5c1f75a0085767ade60f6010e446b70e60840
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 00a4fde0563330d7673c90cc90af8b947fe9e2dd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972618"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420295"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>在優先順序條件約束中使用運算式
   此程序描述如何使用 [優先順序條件約束編輯器]**** 對話方塊，將運算式加入優先順序條件約束。 封裝必須包括至少兩個可執行檔 (工作或容器)，且這兩個可執行檔必須由優先順序條件約束連接，您才可以將運算式加入優先順序條件約束。  

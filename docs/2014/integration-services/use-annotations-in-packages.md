@@ -11,14 +11,14 @@ helpviewer_keywords:
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a5a454e34a9a81e90a0f02de7a640631ab8ce027
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 27c7df6afd894ea9730027da1d54786ed8397fad
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972598"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420226"
 ---
 # <a name="use-annotations-in-packages"></a>使用封裝中的註解
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師會提供註解，可用於使封裝自我記錄並易於了解及維護。 您可以將註解加入「 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」的控制流程、資料流程及事件處理常式設計介面。 註解 (Annotation) 可以包含任何類型的文字，而且它們可用於將標籤、註解 (Comment) 及其他描述性資訊加入至封裝。 註解只是設計階段功能。 例如，註解不寫入記錄檔中。  

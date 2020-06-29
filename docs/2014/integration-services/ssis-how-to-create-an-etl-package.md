@@ -14,14 +14,14 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b67e2308c95db109c89bd2c3ff61f311e83fb898
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a515ed058f35fe3a6d7e042c61b23bbda7429b3d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962578"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421125"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS 教學課程：建立簡易 ETL 封裝
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] （SSIS）是一個平臺，可用於建立高效能資料整合解決方案，包括資料倉儲的擷取、轉換和下載（ETL）封裝。 SSIS 包含建立和偵錯封裝的圖形工具及精靈；執行工作流程功能 (例如 FTP 作業、執行 SQL 陳述式和傳送電子郵件訊息) 的工作；擷取和載入資料的資料來源和目的地；清除、彙總、合併和複製資料的轉換；管理封裝執行和儲存的管理服務 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ；以及設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型之程式的應用程式開發介面 (API)。  

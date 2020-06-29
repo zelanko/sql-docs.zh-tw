@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages Task Editor
 ms.assetid: 67b21f48-4795-4128-81dc-743f7a95ef74
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3a89818eac194ff6d980fcfc801014584ee1f724
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c656b2399586025a316bb32c97496efad0648e93
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972848"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420765"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>傳送錯誤訊息工作編輯器 (一般頁面)
   使用 [傳送錯誤訊息工作編輯器]**** 對話方塊的 [一般]**** 頁面，即可命名和描述傳送錯誤訊息工作。 [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用者自訂的錯誤訊息。 如需這項工作的詳細資訊，請參閱 [傳送錯誤訊息工作](control-flow/transfer-error-messages-task.md)。  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c930d9c75be324e920f4fa2a5368b20c14741bf0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 049197a6b1b862dccd2ae1c8c89d939bf050469d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962614"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421095"
 ---
 # <a name="ssis-designer"></a>SSIS 設計師
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師是可以用於建立及維護 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的圖形工具。 [!INCLUDE[ssIS](../includes/ssis-md.md)][!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供的設計師是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的一部分。

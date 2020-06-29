@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.dts.designer.toolbox.F1
 - sql12.dts.designer.toolboxfavorites.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5ed9a0b96fced32a761e41d31c06447511fb4334
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed35218c84c77d3116ab8c897fe51fab5d6359aa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962398"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420885"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
   安裝在本機電腦上的所有元件 (包括針對 SQL Server 2008 和 2008 R2 建立的協力廠商元件)，現在都會自動出現在新的 [SSIS 工具箱]**** 中。 當您安裝其他元件時，在此工具箱內按一下滑鼠右鍵，然後按一下 [重新整理工具箱]  即可加入元件。  

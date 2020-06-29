@@ -10,14 +10,14 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - expressions [Integration Services], data flow components
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d08d256946fbeb2f5b70057fc0d6992758b3a211
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0c996889b6127bb8ea16bab077bfd9d757921b11
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972628"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420345"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>在資料流程元件中使用運算式
   此程序描述如何將運算式加入「條件式分割」轉換或「衍生的資料行」轉換。 「條件式分割」轉換會使用運算式，定義將資料列導向轉換輸出的條件，而「衍生的資料行」轉換則使用運算式，定義指派給資料行的值。  

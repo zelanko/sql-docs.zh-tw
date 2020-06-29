@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Data Reader Task Editor
 ms.assetid: 4b8d4716-882d-41b0-b77e-e0e2741a2cd5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 08418775cc0b1f865d75cb07536a60956ea4ff0a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 434e6f1c0e1646bed78a527892f31e22879edb93
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972398"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419955"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>WMI 資料讀取器工作編輯器 (WMI 選項頁面)
   使用 [WMI 資料讀取器工作編輯器]**** 對話方塊的 [WMI 選項]**** 頁面，來指定 Windows Management Instrumentation 查詢語言 (WQL) 查詢的來源和查詢結果的目的地。  
@@ -38,7 +38,7 @@ ms.locfileid: "84972398"
 |-----------|-----------------|  
 |**直接輸入**|設定 WQL 查詢的來源。 選取這個值就會顯示 **[WQLQuerySourceType]** 動態選項。|  
 |**檔案連接**|選取包含 WQL 查詢的檔案。 選取這個值就會顯示 **[WQLQuerySourceType]** 動態選項。|  
-|**變數**|將來源設定為定義 WQL 查詢的變數。 選取這個值就會顯示 **[WQLQuerySourceType]** 動態選項。|  
+|**變**|將來源設定為定義 WQL 查詢的變數。 選取這個值就會顯示 **[WQLQuerySourceType]** 動態選項。|  
   
  **OutputType**  
  指定輸出應為資料表、屬性值或屬性名稱和值。  
@@ -52,7 +52,7 @@ ms.locfileid: "84972398"
 |值|描述|  
 |-----------|-----------------|  
 |**檔案連接**|選取檔案以儲存 WQL 查詢的結果。 選取此值會顯示動態選項 **[DestinationType]**。|  
-|**變數**|設定變數以儲存 WQL 查詢的結果。 選取此值會顯示動態選項 **[DestinationType]**。|  
+|**變**|設定變數以儲存 WQL 查詢的結果。 選取此值會顯示動態選項 **[DestinationType]**。|  
   
 ## <a name="wqlquerysourcetype-dynamic-options"></a>WQLQuerySourceType 動態選項  
   

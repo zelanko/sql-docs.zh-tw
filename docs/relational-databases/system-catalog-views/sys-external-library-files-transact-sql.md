@@ -1,7 +1,7 @@
 ---
 title: sys.databases external_library_files （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 06/25/2020
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: language-reference
@@ -17,23 +17,23 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2f1bbdc3936dc6295b9ecc51b937e50cae20670
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 8068df01ade7361c542150a3ee1f98ac137110e8
+ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80664233"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409357"
 ---
 # <a name="sysexternal_library_files-transact-sql"></a>sys.external_library_files (Transact-SQL)  
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 列出組成外部程式庫之每個檔案的資料列。
 
 |資料行名稱 |資料類型 |描述|
 |------|------|-----|
 |external_library_id | int |外部程式庫物件的識別碼。 |
-|內容 |varbinary(max) |外部程式庫檔案成品的內容。 |
+|content |varbinary(max) |外部程式庫檔案成品的內容。 |
 |平台 |TINYINT |安裝 SQL Server 之主機平臺的識別碼。 |
 |platform_desc | nvarchar(60) |主機平臺的名稱。 有效的值為 ' WINDOWS '、' LINUX '。 |
 
@@ -41,4 +41,3 @@ ms.locfileid: "80664233"
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
 [建立外部程式庫](../../t-sql/statements/create-external-library-transact-sql.md)  
-

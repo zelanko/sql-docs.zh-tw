@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs Task Editor
 ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0c430f08b4a86c981df5138c7f78e76b54e7de28
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 25a9e2a023c5b677fb36ad51d9d1b50f217e50a5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972825"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420645"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>傳送作業工作編輯器 (作業頁面)
   使用 [傳送作業工作編輯器]**** 對話方塊的 [作業]**** 頁面，即可指定屬性用來將一或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個。 如需有關傳送作業工作的詳細資訊，請參閱＜ [Transfer Jobs Task](control-flow/transfer-jobs-task.md)＞。  
@@ -26,7 +26,7 @@ ms.locfileid: "84972825"
 > [!NOTE]  
 >  若要存取來源伺服器上的作業，使用者就必須至少是伺服器上之 **SQLAgentUserRole** 固定資料庫角色的成員。 若要在目的地伺服器上順利建立作業，使用者就必須是 **sysadmin** 固定伺服器角色的成員，或是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 固定資料庫角色的成員。 如需 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 固定資料庫角色及其權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **SourceConnection**  
  在清單中選取 SMO 連線管理員，或按一下 **\<New connection...>** 以建立與來源伺服器的新連接。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "84972825"
   
 |值|描述|  
 |-----------|-----------------|  
-|**真正**|複製所有作業。|  
+|**True**|複製所有作業。|  
 |**False**|只複製指定的作業。|  
   
  **JobsList**  
@@ -59,7 +59,7 @@ ms.locfileid: "84972825"
 |值|描述|  
 |-----------|-----------------|  
 |**FailTask**|如果具有相同名稱的作業己經存在於目的地伺服器上，工作就會失敗。|  
-|**改寫**|工作會覆寫目的地伺服器上具有相同名稱的作業。|  
+|**Overwrite**|工作會覆寫目的地伺服器上具有相同名稱的作業。|  
 |**略過**|工作會略過存在於目的地伺服器上具有相同名稱的作業。|  
   
  **EnableJobsAtDestination**  
@@ -69,7 +69,7 @@ ms.locfileid: "84972825"
   
 |值|描述|  
 |-----------|-----------------|  
-|**真正**|啟用目的地伺服器上的作業。|  
+|**True**|啟用目的地伺服器上的作業。|  
 |**False**|停用目的地伺服器上的作業。|  
   
 ## <a name="see-also"></a>另請參閱  

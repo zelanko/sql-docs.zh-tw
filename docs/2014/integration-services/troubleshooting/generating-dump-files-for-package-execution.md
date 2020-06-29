@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b3a44a21e375d37115f71ff8762b941bd87ef2ae
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61e511aaff6c3c77338211537a685f8a1dc82981
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972716"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420605"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>產生封裝執行的傾印檔案
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您可以建立偵錯傾印檔案，以便提供封裝執行的資訊。 這些檔案中的資訊可協助您疑難排解封裝執行問題。  

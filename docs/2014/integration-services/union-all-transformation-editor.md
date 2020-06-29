@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Union All Transformation Editor
 ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6414b887ee88ddc0281ee86fd3236f026b8a3f28
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a7e84c106767aa897b2e419b51ca5b5c538501cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972638"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420335"
 ---
 # <a name="union-all-transformation-editor"></a>聯集全部轉換編輯器
   使用 **[聯集全部轉換編輯器]** 對話方塊，即可將數個輸入資料列集合併至單一輸出資料列集。 藉由在資料流程中包含聯集全部轉換，您可以合併多個資料流程中的資料、藉由巢狀聯集全部轉換來建立複雜資料集、以及更正資料中的錯誤之後重新合併資料列。  
   
  若要深入了解聯集全部轉換，請參閱＜ [Union All Transformation](data-flow/transformations/union-all-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **輸出資料行名稱**  
  輸入每個資料行的別名。 預設值為第一個 (參考) 輸入的輸入資料行名稱；不過，您也可以選擇任何唯一的、描述性的名稱。  
   

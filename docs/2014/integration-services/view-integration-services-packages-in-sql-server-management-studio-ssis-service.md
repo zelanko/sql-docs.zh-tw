@@ -10,14 +10,14 @@ helpviewer_keywords:
 - viewing packages
 - connections [Integration Services], packages
 ms.assetid: 783e653c-0f1f-45ed-b3ef-5ba07b019f27
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 55ed3c5e5910438a601a649d80706967cf415e8e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 190ba24d6f13d51233e21f8a829e3ce05d31b4b3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972548"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420155"
 ---
 # <a name="view-integration-services-packages-in-sql-server-management-studio-ssis-service"></a>在 SQL Server Management Studio 中檢視 Integration Services 封裝 (SSIS 服務)
     

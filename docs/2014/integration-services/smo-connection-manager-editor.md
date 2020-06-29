@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - SMO Connection Manager Editor
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fd7d4696015110fc2df11bea87f045580424c361
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2dd9b6d61c5c00fc1330aa23a385d335dd164ada
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962948"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421405"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO 連接管理員編輯器
   使用 [SMO 連線管理員編輯器]**** 來設定傳送 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件的各種工作所使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 連接。  
   
  若要深入了解 SMO 連線管理員，請參閱 [SMO 連線管理員](connection-manager/smo-connection-manager.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **伺服器名稱**  
  輸入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱，或從清單中選取伺服器名稱。  
   

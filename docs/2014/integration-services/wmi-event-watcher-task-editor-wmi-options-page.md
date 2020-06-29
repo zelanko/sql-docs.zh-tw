@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Event Watcher Task Editor
 ms.assetid: 525f3de7-a021-4e52-9939-3a83c88f131a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b330e63d802d0801f4473bb1a1422c5bf79c35e2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a64ac51999d15ad226894540d3eb2819164e90e2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972408"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419845"
 ---
 # <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>WMI 事件監看員工作編輯器 (WMI 選項頁面)
   使用 [WMI 事件監看員工作編輯器]**** 對話方塊的 [WMI 選項]**** 頁面，即可指定 Windows Management Instrumentation 查詢語言 (WQL) 查詢的來源，以及 WMI 事件監看員工作如何回應 Microsoft Windows Instrumentation (WMI) 事件。  
@@ -38,7 +38,7 @@ ms.locfileid: "84972408"
 |-----------|-----------------|  
 |**直接輸入**|設定 WQL 查詢的來源。 選取此值會顯示動態選項 [WQLQuerySource]****。|  
 |**檔案連接**|選取包含 WQL 查詢的檔案。 選取此值會顯示動態選項 [WQLQuerySource]****。|  
-|**變數**|將來源設定為定義 WQL 查詢的變數。 選取此值會顯示動態選項 [WQLQuerySource]****。|  
+|**變**|將來源設定為定義 WQL 查詢的變數。 選取此值會顯示動態選項 [WQLQuerySource]****。|  
   
  **ActionAtEvent**  
  指定 WMI 事件是否記錄事件並起始 [!INCLUDE[ssIS](../includes/ssis-md.md)] 動作，或僅記錄事件。  

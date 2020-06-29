@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data flow components [Integration Services], synchronous and asynchronous
 - synchronous transformations [Integration Services]
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5e2c771dc186fb520c1b59961c523b16a9efa83f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3d18f66d3522aa072993bd602dad7e19951de5eb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972668"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420405"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和非同步轉換
   如需了解 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 之同步與非同步轉換間的差異，可以從了解同步轉換開始著手。 如果同步轉換不符合您的需求，您的設計可能需要非同步轉換。

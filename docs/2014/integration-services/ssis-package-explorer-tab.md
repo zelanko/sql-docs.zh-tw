@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.treeview.f1
 ms.assetid: fdcd93fc-fe9a-40ec-bac3-5f303cd83eaf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c09a6f967b85d19a8d07563862537787d45f1b42
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fd0842cc37bfde02d47be6f7cf9dcebc7241006b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962478"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420965"
 ---
 # <a name="ssis-package-explorer-tab"></a>SSIS 封裝總管索引標籤
   使用 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計工具] 的封裝總管**** 索引標籤，即可查看封裝中所有元素的階層式檢視：組態、連接、事件處理常式、可執行的物件 (例如：工作和容器)、記錄提供者、優先順序條件約束，以及變數。 如果封裝包含資料流程工作，封裝總管**** 索引標籤就會包括其中含有資料流程元件之階層式檢視的節點。  

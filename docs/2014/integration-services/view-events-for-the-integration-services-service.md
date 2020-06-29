@@ -11,14 +11,14 @@ helpviewer_keywords:
 - service [Integration Services], events
 - Integration Services service, events
 ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5d79e68ddd375a0e61a07a48dec413034a822419
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 57340afcbe1914b5e54ded06c8a7384ff33fd901
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972568"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420135"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>檢視 Integration Services 服務的事件
   目前有兩個工具可讓您用來檢視 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的事件：  
@@ -57,7 +57,7 @@ ms.locfileid: "84972568"
   
 7.  選擇使用位元組或文字顯示事件資料。  
   
-8.  按一下 [確定]。  
+8.  按一下 [確定]****。  
   
 9. 在 **[檔案]** 功能表上，按一下 **[結束]** ，以關閉 **[事件檢視器]** 對話方塊。  
   

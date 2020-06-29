@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 44b7a2b45ca77af87457ae0f4e908ec0a667ff79
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9d11bf1042b19831e09739bc3b08d6a242404b70
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962808"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421285"
 ---
 # <a name="sql-destination-editor-connection-manager-page"></a>SQL 目的地編輯器 (連接管理員頁面)
   使用 **[SQL 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可指定資料來源資訊並預覽結果。 目的地會將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料載入資料庫中的資料表或 views [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  若要深入了解 SQL Server 目的地，請參閱＜ [SQL Server Destination](data-flow/sql-server-destination.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **OLE DB 連線管理員**  
  從清單中選取現有的連接，或按一下 [新增]**** 來建立新的連接。  
   
