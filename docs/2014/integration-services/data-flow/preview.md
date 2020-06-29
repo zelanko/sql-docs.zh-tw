@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fe4af63e4252f95bd0e234d318e264ff0adc7017
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 16e970112cbf55adf68ddf3bb246aa46a04a2f33
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914848"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431655"
 ---
 # <a name="preview"></a>預覽
   使用 **[預覽]** 對話方塊可以預覽 SAP BW 來源即將擷取的資料。  
@@ -45,7 +45,7 @@ ms.locfileid: "84914848"
     > [!NOTE]  
     >  按一下 **[預覽]** 也會開啟 **[要求記錄檔]** 對話方塊。 如需有關此對話方塊的詳細資訊，請參閱＜ [Request Log](request-log.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[預覽]** 對話方塊會顯示向 SAP Netweaver BW 系統要求的資料列。 顯示的資料行就是來源資料中定義的資料行。  
   
  這個對話方塊沒有其他選項。  

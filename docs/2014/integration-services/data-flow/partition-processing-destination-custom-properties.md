@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b159eaf782724466906110ae8f3ed42d2eb6f9c0
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 04d5f9a669fbccc798698914c919e63d90e04591
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914880"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431595"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>資料分割處理目的地自訂屬性
   資料分割處理目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  
