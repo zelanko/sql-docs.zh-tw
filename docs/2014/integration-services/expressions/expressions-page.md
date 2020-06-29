@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Expressions Page dialog box
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c1aeecb2bc6d4932c9b5fffcc36e29cb75a921bd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba4e73ea495456e8f9e452108ab09106a65543ae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969328"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428715"
 ---
 # <a name="expressions-page"></a>運算式頁面
   使用 [運算式]  頁面，即可編輯屬性運算式，並存取 [屬性運算式編輯器]  和 [屬性運算式產生器]  對話方塊。  

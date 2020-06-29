@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b8f545ac14aa0909abd835feea1293cb5030cb77
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 86a3fc9a1ad5978e7bc27f233c3d5c92d23afcef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968898"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427945"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>開發具有多個輸入的資料流程元件
   如果具有多個輸入的資料流程元件其多個輸入會以不平均的速率產生資料，可能會耗用過多的記憶體。 當您開發支援兩個或多個輸入的自訂資料流程元件時，可以使用 Microsoft.SqlServer.Dts.Pipeline 命名空間中的下列成員來管理記憶體壓力：  

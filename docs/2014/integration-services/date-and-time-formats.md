@@ -12,14 +12,14 @@ helpviewer_keywords:
 - date data types
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9db752a0910abb1a671e50b3a7a34fd2fd9cff68
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a5f880de91cad3925e43a65e6282319dbb1e57ee
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967008"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429705"
 ---
 # <a name="date-and-time-formats"></a>日期和時間格式
   快速剖析提供一組快速、簡單的常式用以剖析資料。 快速剖析可支援下列格式的日期和時間資料類型。  
@@ -124,7 +124,7 @@ ms.locfileid: "84967008"
 |秒|加入 00。|  
 |分鐘|加入 00:00。|  
 |小時|加入 00:00:00。|  
-|Day|加入 01 做為此月的某個日期。|  
+|天|加入 01 做為此月的某個日期。|  
 |Month|加入 01 做為此年份的某個月份。|  
   
  如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  

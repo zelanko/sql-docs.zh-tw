@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 294836625075a70b8e101afef2bb9221a177ca47
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 32bec035646c976442eb66ff1270b961835b243b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966775"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429195"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>執行 SQL 工作編輯器 (一般頁面)
   使用 [執行 SQL 工作編輯器]**** 對話方塊的 [一般]**** 頁面，即可設定「執行 SQL」工作和提供該工作執行的 SQL 陳述式。  
@@ -71,7 +71,7 @@ ms.locfileid: "84966775"
 |-----------|-----------------|  
 |**直接輸入**|將來源設定為 Transact-SQL 陳述式。 選取此值會顯示動態選項 [SQLStatement]****。|  
 |**檔案連接**|選取包含 Transact-SQL 陳述式的檔案。 選取此選項會顯示動態選項 [FileConnection]****。|  
-|**變數**|將來源設定為定義 Transact-SQL 陳述式的變數。 選取此值會顯示動態選項 [SourceVariable]****。|  
+|**變**|將來源設定為定義 Transact-SQL 陳述式的變數。 選取此值會顯示動態選項 [SourceVariable]****。|  
   
  **QueryIsStoredProcedure**  
  指出要執行之指定的 SQL 陳述式是否為預存程序。 只有工作使用 ADO 連接管理員時，此屬性才會是讀取/寫入。 否則此屬性是唯讀的，且其值為 `false`。  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DAY function
 - dates [Integration Services], DAY
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: def17bae422ca35d994f4b4133568a1b220403a0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3f2597c456a3b71318b068f6ac4ffa8a4f46b894
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967380"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428815"
 ---
 # <a name="day-ssis-expression"></a>DAY (SSIS 運算式)
   傳回代表日期之日部分的整數。  

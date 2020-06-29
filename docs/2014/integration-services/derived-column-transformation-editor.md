@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Derived Column Transformation Editor
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3983e75bdde3379fac48a74a595959af2568a3ab
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0d866559ebb185321b0e30b4f4df1454da4c0a03
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951648"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429555"
 ---
 # <a name="derived-column-transformation-editor"></a>衍生的資料行轉換編輯器
   使用 [衍生的資料行轉換編輯器]**** 對話方塊，即可建立會擴展新的資料行或取代資料行的運算式。  
   
  若要深入了解「衍生的資料行」轉換，請參閱 [衍生的資料行轉換](data-flow/transformations/derived-column-transformation.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **變數和資料行**  
  將變數或資料行從可用之變數與資料行清單中拖曳至下面窗格中現有的資料表資料列，或是拖曳至清單底部的新資料列，即可建立使用變數或輸入資料行的運算式。  
   

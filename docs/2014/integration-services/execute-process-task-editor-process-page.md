@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c6f072f8d748b24489ab68f971abd4872edffdf6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 51b06136ce1380f04f64bc079f5db41f3d851c8a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966788"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429175"
 ---
 # <a name="execute-process-task-editor-process-page"></a>執行處理工作編輯器 (處理頁面)
   使用 **[執行處理工作編輯器]** 對話方塊的 **[處理]** 頁面，即可設定執行處理的選項。 這些選項包括要執行的可執行檔、其位置、命令提示字元引數，以及提供輸入和擷取輸出的變數。  
   
  若要了解這個工作，請參閱＜ [Execute Process Task](control-flow/execute-process-task.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **RequireFullFileName**  
  指出如果在指定位置找不到可執行檔時，工作是否失敗。  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 88ad528bfe581639dfa7e5dde35a7b53278b44b7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d541e0c6143c9652629f80d911bf42db26e9a4ef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951832"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429715"
 ---
 # <a name="data-profile-viewer-f1-help"></a>資料設定檔檢視器 F1 說明
   您可以使用資料設定檔檢視器來檢視資料分析工作的輸出。  
@@ -68,7 +68,7 @@ ms.locfileid: "84951832"
  **Count**  
  顯示已分析資料行的值具有 [長度]**** 資料行中所顯示之長度的資料列數目。  
   
- **比例**  
+ **百分比**  
  顯示已分析資料行的值具有 [長度]**** 資料行中所顯示之長度的資料列百分比。  
   
 ### <a name="profile-type--column-null-ratio-profile"></a>設定檔類型 = 資料行 Null 比例設定檔  
@@ -93,16 +93,16 @@ ms.locfileid: "84951832"
  **模式**  
  顯示針對已分析資料行所計算的模式。  
   
- **比例**  
+ **百分比**  
  顯示值符合 [模式]**** 資料行中所顯示之模式的資料列百分比。  
   
 ### <a name="profile-type--column-statistics-profile"></a>設定檔類型 = 資料行統計資料設定檔  
   
 #### <a name="column-statistics-profile---column-pane"></a>資料行統計資料設定檔- \<column> 窗格  
- **最小值**  
+ **至少**  
  顯示在已分析資料行中找到的最小值。  
   
- **最大值**  
+ **高**  
  顯示在已分析資料行中找到的最大值。  
   
  **表明**  
@@ -127,7 +127,7 @@ ms.locfileid: "84951832"
  **Count**  
  顯示已分析資料行具有 [值]**** 資料行中所顯示之值的資料列數目。  
   
- **比例**  
+ **百分比**  
  顯示已分析資料行具有 [值]**** 資料行中所顯示之值的資料列百分比。  
   
 ### <a name="profile-type--candidate-key-profile"></a>設定檔類型 = 候選索引鍵設定檔  

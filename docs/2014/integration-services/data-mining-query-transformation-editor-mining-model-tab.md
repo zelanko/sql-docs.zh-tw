@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2a994ee7b9e01b310ba9d90c5acf35ba93877c0a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 062ca99578895b8e8ce30094aead02ece95e1ac0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939104"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429735"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>資料採礦查詢轉換編輯器 (採礦模型索引標籤)
   使用 **[資料採礦查詢轉換編輯器]** 對話方塊的 **[採礦模型]** 索引標籤，來選取資料採礦結構及其採礦模型。  
   
  若要深入了解資料採礦查詢轉換，請參閱＜ [Data Mining Query Transformation](data-flow/transformations/data-mining-query-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[連接]**  
  使用清單方塊來選取現有的 Analysis Services 連接，或使用 [新增]**** 按鈕來建立新的連接，如下所述。  
   

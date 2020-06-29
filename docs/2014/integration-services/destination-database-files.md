@@ -9,21 +9,21 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.destdbfiles.f1
 ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fe81b8a54f92d32c71d84987f5841679580b4f77
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 10adc503f5b6c7212d582bfe7d625db51486092a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967508"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429535"
 ---
 # <a name="destination-database-files"></a>目的地資料庫檔案
   使用 **[目的地資料庫檔案]** 對話方塊，即可檢視或變更目的地伺服器上的資料庫檔案名稱和位置，或是指定傳送資料庫工作的網路檔案位置。 如需這項工作的詳細資訊，請參閱 [傳送資料庫工作](control-flow/transfer-database-task.md)。  
   
  若要使用來源伺服器上的資料庫檔案名稱和位置，來自動擴展此對話方塊，請先在 **[傳送資料庫工作編輯器]** 對話方塊的 **[資料庫]** 頁面中，指定 **[SourceConnection]** 、 **[SourceDatabaseName]** 和 **[SourceDatabaseFiles]** 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **目的地檔案**  
  目的地伺服器上已傳送資料庫檔案的名稱。  
   

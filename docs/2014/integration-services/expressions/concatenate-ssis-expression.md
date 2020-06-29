@@ -11,14 +11,14 @@ helpviewer_keywords:
 - + (concatenate operator)
 - concatenate operator (+)
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 124071d10424e9b8ee33d1d8966bc6f543533efb
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3597f70682b346dc0c2ae5e2bbfa4bef5cc14412
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967436"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428985"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (串連) (SSIS 運算式)
   將兩個運算式串連成一個運算式。  

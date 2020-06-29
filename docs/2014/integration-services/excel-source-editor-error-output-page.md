@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f1f5983048c1301e210c2ac64e0a092898f31e0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 74e252782a40039e4d5709fabc4ae6ecd7a37932
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966808"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429265"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Excel 來源編輯器 (錯誤輸出頁面)
   使用 [Excel 來源編輯器]**** 對話方塊的 [錯誤輸出]**** 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
   
  若要深入了解 Excel 來源，請參閱＜ [Excel Source](data-flow/excel-source.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **輸入或輸出**  
  檢視資料來源的名稱。  
   

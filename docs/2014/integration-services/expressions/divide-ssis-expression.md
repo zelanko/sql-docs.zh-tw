@@ -10,14 +10,14 @@ helpviewer_keywords:
 - / (divide)
 - divide operator (/)
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a58c7776fa09e158b56e4a3182b3f61eebd12c71
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7a834ce32959e81293a29d45613f941903e37f7e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969388"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428805"
 ---
 # <a name="divide-ssis-expression"></a>Divide (SSIS 運算式)
   將第一個數值運算式除以第二個數值運算式。  

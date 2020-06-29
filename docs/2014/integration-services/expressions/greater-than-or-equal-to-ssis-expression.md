@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - greater than or equal to (>=)
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cbf78e3ccc56268304440ebacb0b8dfd2bc953b3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 02d29866e0bee42f37cefa96df6bacc848c0cb15
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967368"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428605"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (大於或等於) (SSIS 運算式)
   執行比較來決定第一個運算式是否大於或等於第二個運算式。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。  

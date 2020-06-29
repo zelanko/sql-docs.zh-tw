@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 13b2a300f36696f24ac36f5ca922e6d5d642c031
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 37f5c1e09464e08932527a667dfc6f8fe306a3ef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969318"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428375"
 ---
 # <a name="left-ssis-expression"></a>LEFT (SSIS 運算式)
   傳回來自給定字元運算式最左邊部分的指定字元數。  

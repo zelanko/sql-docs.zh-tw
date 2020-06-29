@@ -10,14 +10,14 @@ helpviewer_keywords:
 - hexadecimal data
 - HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b1aeeaf3231d727d610ac51a476bf32bbd9a549b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6605fb7e0aadcd3ada4e48f3d4e78f7a808bcc46
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967328"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428515"
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS 運算式)
   傳回代表整數的十六進位值的字串。  

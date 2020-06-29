@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 044d4bcb17144b4fcb6e233b1aadec84e20f2876
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e3af4d446e33dcfa251020778c047bcfac71a05
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966618"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427935"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>建立、部署和偵錯自訂物件
   撰寫 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之自訂物件的程式碼之後，必須建立並部署組件，以及將其整合到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具，其才可供封裝使用，並進行測試及偵錯。
@@ -81,7 +81,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 |自訂物件|部署資料夾|
 |-------------------|-----------------------|
-|工作|工作|
+|Task|工作|
 |[ODBC 來源編輯器]|連接|
 |記錄提供者|LogProviders|
 |資料流程元件|PipelineComponents|

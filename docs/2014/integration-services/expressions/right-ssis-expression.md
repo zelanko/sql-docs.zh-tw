@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 88e16b32bf470d7a4c7db14c7bbe9f1c062c86da
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b84cdce4bd540c285211d012a8c08ee364b833de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969068"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428245"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (SSIS 運算式)
   傳回來自給定字元運算式最右邊部分的指定字元數。  
