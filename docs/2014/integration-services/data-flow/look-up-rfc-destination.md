@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ae4c22636095f211eef836b709beac269938c730
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 072b6e6f2e7d98b5c6b8967dfab6a5aafe7e6d8c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915248"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432065"
 ---
 # <a name="look-up-rfc-destination"></a>查閱 RFC 目的地
   使用 [查閱 RFC 目的地]  對話方塊可以查閱 SAP Netweaver BW 系統中定義的 RFC 目的地。 出現可用的 RFC 目的地清單時，請選取您要的目的地，然後此元件就會將必要的值填入相關聯的選項。  

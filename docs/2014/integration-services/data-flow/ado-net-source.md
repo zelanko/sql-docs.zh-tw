@@ -15,14 +15,14 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c35f135671411b34394a885ef3f857e516dea298
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ad603915ae20c7959a5cd74e441135f88fd3ebfc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916854"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432475"
 ---
 # <a name="ado-net-source"></a>ADO NET 來源
   ADO NET 來源會從 .NET 提供者取用資料，並使該資料可供資料流程使用。  

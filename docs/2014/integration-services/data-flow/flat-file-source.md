@@ -14,14 +14,14 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c013a531fe5e432da690bf10c6c1463d375af1ee
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2aed708179edf8359f7943afa6b00edc0a997e51
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915498"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432155"
 ---
 # <a name="flat-file-source"></a>一般檔案來源
   「一般檔案」來源會從文字檔讀取資料。 文字檔可以是使用分隔符號、固定寬度或混合的格式。  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - converting string data
 - string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 99d1954d2509b15591239e14727cf9c88eb26054
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fbfb92a70f795cc3098303d666b59ebfc0bebc74
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916518"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432345"
 ---
 # <a name="comparing-string-data"></a>比較字串資料
   字串比較是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]執行之許多轉換中的重要部分，此外在評估變數的運算式和屬性運算式時也會使用字串比較。 例如，「排序」轉換會比較資料集中的值，並以遞增或遞減的順序對資料進行排序。  

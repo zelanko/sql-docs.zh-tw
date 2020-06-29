@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 230378a1073516c35d2df5bd48a449aaed610823
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b40ffa639b693af18752a34b8f57be90c679027f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916320"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432275"
 ---
 # <a name="create-infosource-for-transaction-data"></a>建立交易資料的 InfoSource
   使用 [建立交易資料的 InfoSource]  對話方塊可以在 SAP Netweaver BW 系統中建立交易資料的新 InfoSource。  

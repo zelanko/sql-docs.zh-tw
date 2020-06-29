@@ -13,14 +13,14 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c9544f7ae00d3a0eda732b43e9485cafa23536ed
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ec872407dbec3885f72c4300b90cb3e11d1bcf92
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918956"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433035"
 ---
 # <a name="for-loop-container"></a>For 迴圈容器
   「For 迴圈」容器定義封裝中重複的控制流程。 迴圈實作與程式設計語言中 **For** 迴圈的結構類似。 在每次迴圈重複中，「For 迴圈」容器都會評估運算式並重複其工作流程，直到運算式評估為 `False` 為止。  

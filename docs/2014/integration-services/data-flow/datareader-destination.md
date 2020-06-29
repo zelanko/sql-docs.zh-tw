@@ -12,14 +12,14 @@ helpviewer_keywords:
 - DataReader destination
 - destinations [Integration Services], DataReader
 ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 85e1a9e6ab979f74d2fb628a883950d94138ad66
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 40cfe5d99c33eb19d415f204173005a64bde7855
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916068"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432255"
 ---
 # <a name="datareader-destination"></a>DataReader 目的地
   DataReader 目的地使用 ADO.NET `DataReader` 介面公開資料流程中的資料。 然後，資料可以由其他應用程式取用。 例如，您可以設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表的資料來源，以使用執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件的結果。 若要這樣做，請建立實作 DataReader 目的地的資料流程。  

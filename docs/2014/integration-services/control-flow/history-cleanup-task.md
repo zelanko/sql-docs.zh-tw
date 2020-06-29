@@ -12,14 +12,14 @@ helpviewer_keywords:
 - history tables [SQL Server]
 - History Cleanup task [Integration Services]
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a5b71480ef7396e935e80f9d94633a5278446700
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84bc697b7fb18269fc581cea51e111aebc82c15e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918784"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432927"
 ---
 # <a name="history-cleanup-task"></a>記錄清除工作
   「記錄清除」工作會刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫中下列記錄資料表的項目。  

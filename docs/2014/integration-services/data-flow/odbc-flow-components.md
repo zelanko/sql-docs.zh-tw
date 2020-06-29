@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5fd09f209ac08674253d454817a6e512535dd6dc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 987b2726802888e4f69f801f72591bbb76d52ac5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915178"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431965"
 ---
 # <a name="odbc-flow-components"></a>ODBC 流程元件
   此主題描述使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  

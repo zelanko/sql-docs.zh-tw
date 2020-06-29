@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ec0fe7952fbcca3be13d93c24247cc0434232096
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2683b86699da075be54f6d5ad6720beccbee1add
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918779"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432955"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>功能相依性設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [功能相依性設定檔要求] 設定選項。 功能相依性設定檔會報告某個資料行 (相依資料行) 中的值相依於另一個資料行或資料行集合 (行列式資料行) 中之值的程度。 這個設定檔也可協助您識別資料中的問題，例如無效的值。 舉例來說，您分析了「郵遞區號」資料行與「美國州名」資料行之間的相依性。 在這個設定檔中，相同的郵遞區號應該永遠具有相同的州名，但是此設定檔卻發現了相依性的違規。  

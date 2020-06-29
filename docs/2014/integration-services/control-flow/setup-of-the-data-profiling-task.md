@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 54422b13b39de1e39f86ad653ecea95cdca02784
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d0780e96d2779fadba7110b8eae02c5fe095d4b5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918286"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433015"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>資料分析工作的設定
   在您可以檢閱來源資料的設定檔前，第一個步驟是設定並執行「資料分析」工作。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部建立這個工作。 若要設定「資料分析」工作，您可以使用「資料分析工作編輯器」。 此編輯器可讓您選取要輸出設定檔的位置以及要計算的設定檔。 設定工作後，您可以執行封裝以計算資料設定檔。  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - containers [Integration Services], Sequence
 - subset control flow [Integration Services]
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c380921202b1037c3bd066f4aef0610703a75a91
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9769eddb7c10492f867395dfc1fa69b6b1260060
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918198"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432695"
 ---
 # <a name="sequence-container"></a>時序容器
   「時序」容器會定義屬於封裝控制流程子集的控制流程。 「時序」容器會將封裝納入多個不同的控制流程中，而各流程中包含在整個封裝控制流程內執行的一項或多項工作和容器。  

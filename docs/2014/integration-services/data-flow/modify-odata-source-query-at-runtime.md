@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2c355c95c5e6c686a063c4c32081aa0740f8e2fd
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 51f92ddc8903a5c9dea9982866a22a19b013f41a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915208"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431975"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>在執行階段修改 OData 來源查詢
   您可以在執行階段修改 OData 來源查詢，修改的方式是將運算式加入資料流程工作的 **[OData Source].[Query]** 屬性。  
@@ -59,7 +59,7 @@ ms.locfileid: "84915208"
   
 6.  輸入**運算式**。  
   
-7.  按一下 [確定]。  
+7.  按一下 [確定]****。  
   
 > [!WARNING]  
 >  請注意，當您使用這種方法時，您必須確定設定的值具有正確的 URL 編碼。 當從使用者輸入接受值時 (例如，從參數設定個別查詢選項值)，您必須確定這些值已經過驗證，以免可能發生 SQL 資料隱碼類型的攻擊。  

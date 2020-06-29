@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e3452e504072188ea5f4bacf3fa6f10002335fb4
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5ccf1342a5c58f957da4b807a7585884586b6912
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916638"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432395"
 ---
 # <a name="cdc-source"></a>CDC 來源
   CDC 來源會從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 變更資料表中讀取變更資料的範圍，並將這些變更向下游傳遞至其他 SSIS 元件。  

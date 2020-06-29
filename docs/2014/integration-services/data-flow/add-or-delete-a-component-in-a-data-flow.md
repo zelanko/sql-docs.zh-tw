@@ -10,14 +10,14 @@ helpviewer_keywords:
 - adding components
 - components [Integration Services], data flow
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1d66397729b4263cfed4a2911417b932d049fd30
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d68c57031b830fd891b4e2f0bcd8df87aa06732f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916850"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432445"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>在資料流程中加入或刪除元件
   資料流程元件指資料流程中的來源、目的地和轉換。 封裝中的控制流程必須包含「資料流程」工作，您才能將元件加入到資料流程中。  

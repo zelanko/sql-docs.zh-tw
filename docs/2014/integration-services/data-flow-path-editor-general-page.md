@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7b640ed65fed0b12e63317f3af87ecff5c246102
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 85382ac1f2c61b603fe56065236645efcab19c16
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917038"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432595"
 ---
 # <a name="data-flow-path-editor-general-page"></a>資料流程路徑編輯器 (一般頁面)
   使用 **[資料流程路徑編輯器]** 對話方塊，即可設定路徑屬性、檢視資料行中繼資料，以及管理附加至路徑的資料檢視器。  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 22722605b266f28981457ce0c6839ad14279a434
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 909c8a7d6bb9959a66681c317d5ba05b76028e91
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916768"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432415"
 ---
 # <a name="cdc-flow-components"></a>CDC 流程元件
   Change Data Capture Components by Attunity for Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 可協助 SSIS 開發人員使用 CDC 並且降低 CDC 封裝的複雜性。  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f45a99b149feb0c0609aac88660ad7e62ca425f2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 11fec821580189c1efe17134d7ee33d111350f89
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916018"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432205"
 ---
 # <a name="data-viewer"></a>資料檢視器
   如果路徑設定為使用資料檢視器，當資料在資料流程元件之間移動時，資料檢視器會一一顯示緩衝區的資料。  

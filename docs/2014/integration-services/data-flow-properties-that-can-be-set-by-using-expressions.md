@@ -16,14 +16,14 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3d23037bc09b735fc28e52eabb1852d1af303d15
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6cf52a4488cb90d65c373111babd359da612668d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916948"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432465"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>可以使用運算式設定的資料流程屬性
   可使用「資料流程」工作容器上提供的屬性運算式，以指定資料流程物件的某些屬性值。  

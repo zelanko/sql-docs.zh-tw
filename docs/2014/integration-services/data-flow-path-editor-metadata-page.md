@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9441d9cc13ce509183d25359323df16152998581
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 060933ad5e7be5d55ba0d44de1343668e9bd66e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916998"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432485"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>資料流程路徑編輯器 (中繼資料頁面)
   使用 [資料流程路徑編輯器]**** 對話方塊的 [中繼資料]**** 頁面，即可檢視路徑資料行的中繼資料。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **路徑中繼資料**  
  列出資料行中繼資料。 按一下資料行標題來排序資料行資料。  
   

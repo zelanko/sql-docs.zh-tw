@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ffeb4a86677e1a39efaf296fa874ca65e31762a5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e398766c827f7611432f5ecd94353f1168e136b4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915148"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431895"
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
   ODBC 目的地會將資料大量載入到 ODBC 支援的資料庫資料表。 ODBC 目的地使用 ODBC 連接管理員來連接到資料來源。  

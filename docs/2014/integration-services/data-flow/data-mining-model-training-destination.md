@@ -14,14 +14,14 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 86fd70a516bfa6a449bfd9146e439b60dcbbbbf1
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ff3e455e5d98d9edc812d80c6851026286986338
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916138"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432235"
 ---
 # <a name="data-mining-model-training-destination"></a>資料採礦模型定型目的地
   「資料採礦模型培訓」目的地藉由傳送目的地接收的資料至資料採礦模型演算法，來培訓資料採礦模型。 如果多個資料採礦模型建立於同一資料採礦結構上，則可以由一個目的地來培訓這些模型。 如需詳細資訊，請參閱 [採礦結構資料行](https://docs.microsoft.com/analysis-services/data-mining/mining-structure-columns) 和 [採礦模型資料行](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
