@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02cd814a3b4e52c8685d0df654c6e74071db9907
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba2c9c0c870294069dd1feb4eaabb72211877cc4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964648"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423195"
 ---
 # <a name="precedence-constraint-editor"></a>優先順序條件約束編輯器
   使用 **[優先順序條件約束編輯器]** 對話方塊，即可設定優先順序條件約束。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **評估作業**  
  指定優先順序條件約束所使用的評估作業。 這些作業有： **[條件約束]**、 **[運算式]**、 **[運算式與條件約束]**，以及 **[運算式或條件約束]**。  
   

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 89b1e347-9579-4f6b-af74-c6519ea08eea
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bdd4c6f134af120b70546f6d27f0f8fc8aac672d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca263b866fb6d5d7ceb6352f708f387d79cad4f7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964738"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423465"
 ---
 # <a name="path-properties"></a>路徑屬性
   物件模型中的資料流程物件 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 具有元件層級、輸入和輸出，以及輸入資料行和輸出資料行的通用屬性和自訂屬性。 許多屬性都有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  

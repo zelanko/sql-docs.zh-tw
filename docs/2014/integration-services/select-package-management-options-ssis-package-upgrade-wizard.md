@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackagemgtoptions.f1
 ms.assetid: 810fc020-51cd-43ed-9f35-af99b4f35947
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3e3a7d2ec134ff9b7a3fb63aed29a029ef6fc9bf
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38bb9102551c56d82bc3cf32ca31e02f7eed4625
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963778"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421995"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>選取封裝管理選項 (SSIS 封裝升級精靈)
   使用 [選取封裝管理選項]  頁面，指定用來升級封裝的選項。  

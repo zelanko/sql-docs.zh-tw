@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5e5ce667a34bc9ebff01e97b31205f7a3629c147
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7f622056f25c47cb22a0fbe24f21799cc92d644a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963968"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422105"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>指令碼轉換編輯器 (輸入資料行頁面)
   使用 [指令碼轉換編輯器]**** 對話方塊的 [輸入資料行]**** 頁面，對輸入資料行設定屬性。  
@@ -28,7 +28,7 @@ ms.locfileid: "84963968"
   
  若要深入了解指令碼元件，請參閱＜ [Script Component](data-flow/transformations/script-component.md) ＞和＜ [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **輸入名稱**  
  從可用輸入的清單中選取。  
   

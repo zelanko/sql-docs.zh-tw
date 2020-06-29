@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Integration Services service, configuring
 - Integration Services service, properties
 ms.assetid: 3a8ad546-0f58-4b31-ab56-58d6313b1098
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 29e57da658b97d4ed3d9867dfee51644f0af9ddc
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e31cdf067585b6494a884a1d9ade7570e2246172
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963145"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421555"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>設定 Integration Services 服務的屬性
     
@@ -45,7 +45,7 @@ ms.locfileid: "84963145"
         > [!NOTE]  
         >  [進階]**** 索引標籤不包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的資訊。  
   
-4.  按一下 [確定]。  
+4.  按一下 [確定]****。  
   
 5.  在 [檔案]**** 功能表上，按一下 [結束]****，以關閉 [SQL Server 組態管理員]**** 嵌入式管理單元。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "84963145"
   
     -   按一下 **[相依性]** 索引標籤，以檢視相依性服務的清單。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務不具有相依性。  
   
-5.  按一下 [確定]。  
+5.  按一下 [確定]****。  
   
 6.  或者，如果啟動類型是 [手動] 或 [自動]，則可以用滑鼠右鍵按一下 [SQL Server Integration Services]****，然後按一下 [啟動]、[停止] 或 [重新啟動]****。  
   

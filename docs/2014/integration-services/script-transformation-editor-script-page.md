@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f172aa778cbaa959671da870521641147186f571
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 31dc7fca17ea5e00a242e8c32fb2a3514c5e7732
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964038"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422205"
 ---
 # <a name="script-transformation-editor-script-page"></a>指令碼轉換編輯器 (指令碼頁面)
   使用 **[指令碼轉換編輯器]** 對話方塊的 **[指令碼]** 索引標籤，來指定指令碼和相關的屬性。  
   
  若要深入了解指令碼元件，請參閱＜ [Script Component](data-flow/transformations/script-component.md) ＞和＜ [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **屬性**  
  檢視和修改指令碼轉換的屬性。 顯示的許多屬性是唯讀的。 您可以修改下列屬性：  
   

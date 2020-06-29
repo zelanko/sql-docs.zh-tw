@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 56fc015eb3bf089e573ece9df73f8ff08c3423be
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f4dd958ebeae0a62f73e23e5b8fad66c3ec4e665
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964299"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422495"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>使用 SQL Server Agent 排程封裝
   下列程序會使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業步驟執行封裝，藉此提供自動化封裝執行的步驟。  
@@ -64,7 +64,7 @@ ms.locfileid: "84964299"
   
      **封裝來源**：SSIS 目錄  
   
-    |索引標籤|選項。|  
+    |索引標籤|選項|  
     |---------|-------------|  
     |**套件**|**Server**<br /><br /> 輸入或選取主控 SSISDB 目錄之資料庫伺服器執行個體的名稱。<br /><br /> 如果 [SSIS 目錄]**** 是封裝來源，您只能使用 Microsoft Windows 使用者帳戶登入伺服器。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法使用驗證。|  
     ||**套件**<br /><br /> 按一下省略符號按鈕並選取封裝。<br /><br /> 您會在**物件總管**的 [Integration Services 目錄]**** 節點下，選取資料夾中的封裝。|  
@@ -79,7 +79,7 @@ ms.locfileid: "84964299"
   
      您可以針對儲存在 SQL Server、SSIS 封裝存放區或檔案系統中的封裝設定的多數選項，都會對應 `dtexec` 命令提示字元公用程式的命令列選項。 如需公用程式和命令列選項的詳細資訊，請參閱 [dtexec 公用程式](packages/dtexec-utility.md)。  
   
-    |索引標籤|選項。|  
+    |索引標籤|選項|  
     |---------|-------------|  
     |**套件**<br /><br /> 這些是儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區之封裝的索引標籤選項。|**Server**<br /><br /> 輸入或選取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務之資料庫伺服器執行個體的名稱。|  
     ||**[使用 Windows 驗證]**<br /><br /> 選取此選項即可使用 Microsoft Windows 使用者帳戶登入伺服器。|  

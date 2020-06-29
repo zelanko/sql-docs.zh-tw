@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8e9e9aef856276508ef557d465c20210e16f3073
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 743f6dcd75cc43bc3aa603ccb5d8733d983c8f97
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964188"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422335"
 ---
 # <a name="script-task-editor-script-page"></a>指令碼工作編輯器 (指令碼頁面)
   使用 **[指令碼工作編輯器]** 對話方塊的 **[指令碼]** 頁面，即可設定指令碼屬性以及指定指令碼可存取的變數。  
@@ -28,7 +28,7 @@ ms.locfileid: "84964188"
   
  若要深入了解指令碼工作，請參閱＜ [Script Task](control-flow/script-task.md) ＞和＜ [在指令碼工作編輯器設定指令碼工作](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼工作，請參閱＜ [Extending the Package with the Script Task](extending-packages-scripting/task/extending-the-package-with-the-script-task.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **ScriptLanguage**  
  為此工作選取指令碼語言，可以是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#。  
   

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 535ab473d8fe6cf9a89fafa1fc0c9f45b0096f7e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aaca4db8a4ae135424a49fb42a1a0918bdc931b7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964568"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422965"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>執行 SQL 工作中的結果集
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中，結果集是否會傳回到執行 SQL 工作，端視工作所使用的 SQL 命令類型而定。 例如，SELECT 陳述式通常會傳回結果集，INSERT 陳述式則不會。  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1a393352f7ec0f9384ed2d30b2909c9d9f2c1dc0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 81be066d92ef1e19a141414dad4359b60efca2f9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964618"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423155"
 ---
 # <a name="query-builder"></a>查詢產生器
   使用 **[查詢產生器]** 對話方塊，即可建立要在執行 SQL 工作中使用的查詢、OLE DB 來源和 OLE DB 目的地，以及查閱轉換。  
@@ -41,7 +41,7 @@ ms.locfileid: "84964618"
   
  「查閱」和「模糊」查閱轉換也可以使用具有參數和傳回碼的變數。 OLE DB 來源的相關資訊也適用於這兩個轉換。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **工具列**  
  使用工具列來管理資料集、選取要顯示的窗格，以及控制查詢功能。  
   

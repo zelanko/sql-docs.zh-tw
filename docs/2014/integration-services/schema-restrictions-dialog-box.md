@@ -11,23 +11,23 @@ f1_keywords:
 helpviewer_keywords:
 - Schema Restrictions dialog box
 ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e6d72b7f8cbb4aead7dfb87eb44fb5d943672433
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7746ef8a7fd0782524f9a6ecff194503cf3882d9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964128"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422295"
 ---
 # <a name="schema-restrictions-dialog-box"></a>結構描述限制對話方塊
   使用 [結構描述限制]**** 對話方塊，即可設定要套用至 Foreach ADO.NET 結構描述資料列集列舉值的結構描述限制。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **限制**  
  選取要套用至結構描述的條件約束。  
   
- **變數**  
+ **變**  
  使用變數以定義限制。 在清單中選取變數，或按一下 [**新增變數 ...** ] 以建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)  

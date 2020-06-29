@@ -10,14 +10,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], modifying
 - modifying connection managers
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c8581771394ed40f740ea83407b9acd47c6f4ddd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e435d5f3ea00707ba1b392058b118a06cfd7ce83
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963232"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421605"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>設定連線管理員的屬性
   所有連接管理員都可以使用 [屬性]**** 視窗進行設定。  
@@ -36,7 +36,7 @@ ms.locfileid: "84963232"
   
 5.  在 [屬性]**** 視窗中編輯屬性值。 針對部分無法在連接管理員之標準編輯器中設定的屬性，[屬性]**** 視窗提供了對這些屬性的存取權。  
   
-6.  按一下 [確定]。  
+6.  按一下 [確定]****。  
   
 7.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "84963232"
   
 4.  在 [連接管理員]**** 區域中，按兩下連接管理員，以開啟 [連接管理員]**** 對話方塊。 如需有關特定連接管理員類型以及每種類型可用之選項的詳細資訊，請參閱下表。  
   
-    |[ODBC 來源編輯器]|選項。|  
+    |[ODBC 來源編輯器]|選項|  
     |------------------------|-------------|  
     |[ADO 連線管理員](connection-manager/ado-connection-manager.md)|[設定 OLE DB 連接管理員](configure-ole-db-connection-manager.md)|  
     |[ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)|[設定 ADO.NET 連接管理員](configure-ado-net-connection-manager.md)|  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.progress.f1
 ms.assetid: a59cc952-fb73-4bd3-b5d2-f8397701e5d2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 27da51dc89038493d24447c402e2d4e2b79c4679
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3848ce670f54ebc509a901eacbe71a07be715f27
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964658"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423255"
 ---
 # <a name="progress-tab"></a>進度索引標籤
   當您在 **中執行封裝時，使用** 設計師的 [!INCLUDE[ssIS](../includes/ssis-md.md)] [進度] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 索引標籤，即可檢視執行 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]封裝的進度。 **[進度]** 索引標籤會列出開始時間、完成時間，以及驗證和執行封裝及其可執行檔的經過時間；封裝的任何資訊或警告；進度通知；封裝是成功還是失敗；以及在封裝執行期間所產生的任何錯誤訊息。  

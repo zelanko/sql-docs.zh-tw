@@ -12,14 +12,14 @@ helpviewer_keywords:
 - security [Integration Services],protection levels
 - protection level for packages [Integration Services]
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bcb8f4da5f39647665b3f07355ea8eed2506cda5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ae909a1f7a61c5ae2aa3d6319fd03c54dd70b0e1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963398"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421825"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>設定或變更封裝的保護等級
   若要控制封裝內容以及其中包含之機密值 (例如密碼) 的存取權，請設定 `ProtectionLevel` 屬性的值 包含在專案中的封裝需要有和專案相同的保護層級，才能建立專案。 如果您變更專案上的 `ProtectionLevel` 屬性設定，就需要手動更新封裝的屬性設定。  

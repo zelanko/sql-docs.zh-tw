@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 49c4814daf0463c99c7ccda6f16adb039fd58d64
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9919db21f87b5b178d8893b55f0db93f9a48f23e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964488"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422785"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>載入本機封裝的輸出
   使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 將輸出儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地時，或使用 **System.IO** 命名空間，將輸出儲存到一般檔案目的地時，用戶端應用程式可以讀取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件的輸出。 但用戶端應用程式也可直接從記憶體讀取封裝的輸出，而無須在程序中間執行保存資料的步驟。 此解決方案的關鍵在於 `Microsoft.SqlServer.Dts.DtsClient` 命名空間，其中包含 `IDbConnection` `IDbCommand` 來自**system.web**命名空間的、和**IDbDataParameter**介面的特製化執行。 預設會在 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** 中安裝 Microsoft.SqlServer.Dts.DtsClient.dll 組件。

@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 11884b2bb52c2c38fcae708346afa54151502ffc
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d4884ca83b1fc8dd53a0483d98920501c356a6bf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964068"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422145"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>指令碼轉換編輯器 (連接管理員頁面)
   使用 [指令碼轉換編輯器]**** 的 [連線管理員]**** 頁面，即可指定指令碼將要使用的任何連接。  
   
  若要深入了解指令碼元件，請參閱＜ [Script Component](data-flow/transformations/script-component.md) ＞和＜ [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **連接管理員**  
  檢視指令碼使用的可用連接清單。  
   

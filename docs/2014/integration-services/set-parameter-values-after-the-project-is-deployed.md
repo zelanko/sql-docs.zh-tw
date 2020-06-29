@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c9dcca4d-f1a0-45ec-b078-f4d372589baf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2b81223d0ecfc27ce249e80bfde350336cae2f1f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 39572594e429b61de0641c6e6929e84105138f1f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963248"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421615"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>部署專案之後設定參數值
   部署精靈可讓您在將專案部署到目錄時，設定伺服器預設參數值。 專案在目錄中之後，您可以使用 SQL Server Management Studio (SSMS) 物件總管或 Transact-SQL 來設定伺服器預設值。  

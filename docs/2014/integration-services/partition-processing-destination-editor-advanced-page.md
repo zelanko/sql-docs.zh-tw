@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2fd341302c20d0ac79dad4169c13d1e1bca45d6c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53db6110e47f5664e7107090179b6ac7bcf4a361
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964729"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423455"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>資料分割處理目的地編輯器 (進階頁面)
   使用 **[資料分割處理目的地編輯器]** 對話方塊的 **[進階]** 頁面，來設定錯誤處理。  
@@ -28,7 +28,7 @@ ms.locfileid: "84964729"
 > [!NOTE]  
 >  此處描述的工作不適用於 Analysis Services 表格式模型。  您無法針對表格式模型，將輸入資料行對應至資料分割資料行。 您可以改用 Analysis Services 執行 DDL 工作 ( [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) ) 來處理資料分割。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用預設錯誤組態。**  
  指定是否要使用預設的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 錯誤處理。 根據預設，此值為 `True`。  
   

@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Select SMO Enumeration dialog box
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9b112669457f9e9f675e00466896e4da91abd53d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 01f8570d0a4d16cf49654e13913ec8b819bb37bd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963671"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421885"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>選取 SMO 列舉對話方塊
   使用 [選取 SMO 列舉]**** 對話方塊，即可在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件 (SMO) 物件，以列舉和選取列舉類型。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **列舉**  
  展開伺服器並選取 SMO 物件。  
   
