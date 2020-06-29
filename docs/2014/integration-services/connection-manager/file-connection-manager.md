@@ -14,14 +14,14 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - File connection manager
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eb8cd4b29b7d3502fb4bca9db1434c66da305159
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 603882e23d25710fc90d1a516134b156cd05105d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920924"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438515"
 ---
 # <a name="file-connection-manager"></a>檔案連接管理員
   「檔案」連接管理員會啟用封裝以參考現有的檔案或資料夾，或是在執行階段建立檔案或資料夾。 例如，您可以參考 Excel 檔案。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的某些元件會使用檔案中資訊來執行其工作。 例如，「執行 SQL」工作可參考包含工作執行的 SQL 陳述式之檔案。 有些元件則會對檔案執行作業。 例如，檔案系統工作可參考某個檔案以將其複製到新位置。  

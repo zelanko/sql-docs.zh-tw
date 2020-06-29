@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: 47b1446d-5331-473c-9cb5-a98b1f55bf5f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8b06f9202bc158d1f64a11c9814792c7fe63ee9d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2a8b0af9f36fdd386f7da375184fd4e4ec5c4be
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966328"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425295"
 ---
 # <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>模糊群組轉換編輯器 (連接管理員索引標籤)
   使用 **[模糊群組轉換編輯器]** 對話方塊的 **[連接管理員]** 索引標籤，來選取現有的連接或建立新的連接。  
@@ -28,7 +28,7 @@ ms.locfileid: "84966328"
   
  若要深入了解模糊群組轉換，請參閱＜ [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **OLE DB 連線管理員**  
  使用清單方塊來選取現有的 OLE DB 連接管理員，或使用 [新增]**** 按鈕來建立新的連接。  
   

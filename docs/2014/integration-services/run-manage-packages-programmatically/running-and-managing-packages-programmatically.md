@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 985c43aa81400904cb7b3c7c304ca52481dbb330
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 18a19848db8050cfbcdf5889c545a4e0666eb593
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964448"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422645"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>以程式設計方式執行及管理封裝
   如果您需要在開發環境以外的地方管理和執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，可以使用程式設計方式操作封裝。 在這種方法中，您有許多的選擇：  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ebdddaaef7c0b87ff25e639fff26a2b858ed6a1e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 066e50249d8f39303e98ff7647c3cf88b8202095
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914359"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437735"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 來源編輯器 (資料行頁面)
   使用 [SAP BW 來源編輯器] 的 [資料行] 頁面可以將輸出資料行對應至每個外部 (來源) 資料行。  

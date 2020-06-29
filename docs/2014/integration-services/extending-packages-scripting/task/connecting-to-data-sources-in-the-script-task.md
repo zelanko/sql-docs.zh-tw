@@ -20,14 +20,14 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connections
 - SSIS Script task, connections
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 50d0914efce0fd8b91d0a4ac2e93d01d910849e4
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 24013f8e0e60e7a441df09fc4ec5bd320318afe6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967202"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425945"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>連接至指令碼工作中的資料來源
   連接管理員會提供已在封裝中設定的資料來源存取權。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../connection-manager/integration-services-ssis-connections.md)。  

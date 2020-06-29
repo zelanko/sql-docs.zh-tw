@@ -11,14 +11,14 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9a809aa628b90d73bed6eecd2d23cdec4dff6aea
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 73186e55435f22545c5779ccd1925b4cb8be6d75
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968278"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436635"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 錯誤和訊息參考
   下表列出預先定義的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤、警告和參考用訊息 (依據每一個類別內的遞增號碼順序)，連同這些訊息的數字代碼和符號名稱。 每一個錯誤都會以欄位形式定義於 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別內。  

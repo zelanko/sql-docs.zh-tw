@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b563160c9cd41a449b4669bb6b17ca43d427ff6e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 30f65b7bfd4563bbc9ada1d615f0d48af225895d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964708"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423405"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用於在套件、容器和工作中實作記錄的記錄提供者。 使用記錄，可以擷取有關封裝的執行階段資訊，藉此幫助您在每次執行封裝時對其進行稽核和疑難排解。 例如，記錄可以擷取執行封裝之操作員的名稱，以及封裝開始和結束的時間。  
@@ -167,7 +167,7 @@ ms.locfileid: "84964708"
   
 |步驟|描述|  
 |----------|-----------------|  
-|驗證|元件會檢查有效的屬性值和組態設定。|  
+|Validate|元件會檢查有效的屬性值和組態設定。|  
 |PreExecute|元件會在開始處理資料列之前，執行一次處理。|  
 |PostExecute|元件會在已經處理所有資料列之後，執行一次處理。|  
 |ProcessInput|轉換或目的地元件會處理上游來源或轉換傳遞給它的傳入資料列。|  

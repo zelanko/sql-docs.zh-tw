@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 56dc1bf8-99d4-41dc-bdc4-f64f1ccfd688
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eeaea0d2fd211d1aa89b21422e62110f816f31a5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d17009988dea54621d4fd7ef542cf452bfe95c6e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964538"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422955"
 ---
 # <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 在 SSIS 伺服器上執行套件
   將專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器之後，即可在伺服器上執行封裝。  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b2645be842f64fae50013146a9f8f1d8aa73898a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f82c2ca9e541981adee1eea129d86dcb645b59aa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919999"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438255"
 ---
 # <a name="bulk-insert-task"></a>大量插入工作
   「大量插入」工作提供有效的方式，將大量資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或檢視。 例如，假設您的公司將百萬個資料列的產品清單儲存在大型電腦系統上，但公司的電子商務系統是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴展網頁。 您必須在晚上以大型電腦的主產品清單更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品資料表。 若要更新資料表，請以 Tab 分隔的格式儲存產品清單，並使用「大量插入」工作將資料直接複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。  

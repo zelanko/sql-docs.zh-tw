@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 126fb8796cc08263f0fb90bd7e8faa66b0e4de7b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0a6d2f0c03b01f93fc8a86bbe0abbb17a580996e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920390"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438315"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 連接管理員
   SAP BW 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的連接管理員元件。 因此，SAP BW 連接管理員會提供 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 來源和目的地元件所需之 SAP Netweaver BW 版本 7 系統的連接 (使用 SAP BW 連線管理員的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 元件只有屬於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Connector 1.1 for SAP BW 封裝一部分的 SAP BW 來源和目的地)。  

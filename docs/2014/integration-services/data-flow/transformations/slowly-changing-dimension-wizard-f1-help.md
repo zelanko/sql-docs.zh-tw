@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ae8bbd7b0b6a07193987dae5f5fe99d3244bfe3c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d377fe18423ba24252afcfa1634713798f815dd3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939299"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430155"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>緩時變維度精靈 F1 說明
   使用 **[緩時變維度精靈]** ，以設定將資料載入至各種類型的緩時變維度。 此章節提供 **[緩時變維度精靈]** 之頁面的 F1 說明。 下表描述此章節的主題。  

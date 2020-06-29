@@ -11,14 +11,14 @@ helpviewer_keywords:
 - transformations [Integration Services], about transformations
 - transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5f5edb7d2ab4fafa9c86b648ae38ef4330119bf7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fa5d7788650cd1a36dfcf3f59531ff4b09182b61
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939239"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437535"
 ---
 # <a name="transform-data-with-transformations"></a>使用轉換來轉換資料
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含三種類型的資料流程元件：來源、轉換與目的地。  

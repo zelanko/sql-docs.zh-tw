@@ -11,27 +11,27 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a5d8fd967b70b0b3470ceee0c6a6311499ed4696
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6076670e37e128fb31bd6f2cbe1147073f1ac634
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966348"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425325"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>FTP 工作編輯器 (檔案傳輸頁面)
   使用 **[FTP 工作編輯器]** 對話方塊的 **[檔案傳輸]** 頁面，來設定工作執行的 FTP 作業。  
   
  若要深入了解此工作，請參閱 [FTP 工作](control-flow/ftp-task.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **IsRemotePathVariable**  
  指出遠端路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**真正**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[RemoteVariable]**。|  
+|**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[RemoteVariable]**。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[RemotePath]**。|  
   
  **OverwriteFileAtDestination**  
@@ -42,7 +42,7 @@ ms.locfileid: "84966348"
   
 |值|描述|  
 |-----------|-----------------|  
-|**真正**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[LocalVariable]**。|  
+|**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[LocalVariable]**。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[LocalPath]**。|  
   
  **運算**  

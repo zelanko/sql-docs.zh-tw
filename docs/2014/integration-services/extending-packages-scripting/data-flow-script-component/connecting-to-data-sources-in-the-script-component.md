@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], connecting to data sources
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0fb6ccc97c2f0f5a3a69d2caa61ca67327015415
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f5618c83e680ba01a477d553dd13b1bb2571eea9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967278"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426265"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>連接到指令碼元件中的資料來源
   連接管理員只是一種便利的單位，用以封裝和儲存連接至特定類型的資料來源所需的資訊。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../connection-manager/integration-services-ssis-connections.md)。  

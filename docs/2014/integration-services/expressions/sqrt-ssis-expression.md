@@ -10,14 +10,14 @@ helpviewer_keywords:
 - SQRT function
 - square root of given expression
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cc94a4834108f63b1e07d9fbc3daf025b31b49de
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06e899be27df88a628f8e45493452a66739f30a4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969048"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428175"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (SSIS 運算式)
   傳回數值運算式的平方根。  

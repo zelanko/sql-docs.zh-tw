@@ -16,14 +16,14 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8bb5501cf910a0e56fbfec1bee05095daf5033c8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 59a8762cab8952dc667ae6b0605e7422fd88733c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924839"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439205"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>以程式設計方式探索資料流程元件
   在將資料流程工作加入封裝之後，下一步可能就是要判斷有哪些資料流程元件可供您使用。 您可以使用程式設計方式探索安裝在本機電腦上可供使用的資料流程來源、轉換和目的地。 如需將資料流程工作新增套件的資訊，請參閱[以程式設計方式新增資料流程工作](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)。  

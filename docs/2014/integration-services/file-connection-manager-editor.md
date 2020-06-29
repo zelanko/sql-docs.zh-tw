@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File Connection Manager Editor
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9128f73dc8fec388ae111781b9beeb52bbab138b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5ae883d085b1f6416096255a3b87d6e5872bc5e9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967148"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425705"
 ---
 # <a name="file-connection-manager-editor"></a>檔案連接管理員編輯器
   使用 **[檔案連接管理員編輯器]** 對話方塊，以指定用來連接到檔案或資料夾的屬性。  
@@ -28,7 +28,7 @@ ms.locfileid: "84967148"
   
  若要深入了解檔案連接管理員，請參閱＜ [File Connection Manager](connection-manager/file-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用類型**  
  指定 [檔案連線管理員]**** 是否連接到現有的檔案或資料夾，或者建立新檔案或資料夾。  
   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2c75a48868398b2a59673208fa55dbf4fc026221
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c96b23a8807741429eaee00dace7c22f1cd540c5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965338"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436225"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>步驟 1:建立新的 Integration Services 專案
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝的第一步就是建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 這個專案包含物件的範本 (資料來源、資料來源檢視和封裝)，您在資料轉換方案中會用到它們。  
@@ -38,7 +38,7 @@ ms.locfileid: "84965338"
   
 5.  接受預設位置，或按一下 **[瀏覽]** 來瀏覽並尋找您要使用的資料夾。 在 **[專案位置]** 對話方塊中，按一下該資料夾，然後按一下 **[選取資料夾]**。  
   
-6.  按一下 [確定]。  
+6.  按一下 [確定]****。  
   
      根據預設，系統會建立標題為 **Package.dtsx**的空白封裝，並加入至 SSIS 封裝底下的專案。  
   

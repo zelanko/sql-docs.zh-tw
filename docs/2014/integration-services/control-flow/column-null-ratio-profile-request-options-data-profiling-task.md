@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2c8efa2db8a602b2cbed08e8731c4137a132495f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 50aeb80d600c1e5f85cd13dc36a041c459a3df1c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919581"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433705"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>資料行 Null 比例設定檔要求選項 (資料分析工作)
   您可以使用 **[設定檔要求]** 頁面的 **[要求屬性]** 窗格，針對要求窗格中選取的 **[資料行 Null 比例要求]** 設定選項。 資料行 Null 比例設定檔會報告選取之資料行中 Null 值的百分比。 這個設定檔可協助您識別資料中的問題，例如某個資料行中 Null 值的比例過高。 舉例來說，資料行 Null 比例設定檔可能會分析「郵遞區號」資料行並發現遺漏郵遞區號的百分比過高。  

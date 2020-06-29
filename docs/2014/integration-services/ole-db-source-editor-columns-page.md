@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0fb65c49a1a7c24f579c49fd5340c6137e09190b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 575a5a02198606d2412ff187750963ccb171e338
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964948"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424135"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>OLE DB 來源編輯器 (資料行頁面)
   使用 [OLE DB 來源編輯器]**** 對話方塊的 [資料行]**** 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  

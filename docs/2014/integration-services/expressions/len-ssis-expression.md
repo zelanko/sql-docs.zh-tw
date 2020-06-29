@@ -10,14 +10,14 @@ helpviewer_keywords:
 - LEN function
 - number of characters
 ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 605b6cc30d0b711239c6005e6fc8474aff05b7d3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2f5063ee6d9abf0f7e91ce8f111f1f4539dae80c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967308"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437295"
 ---
 # <a name="len-ssis-expression"></a>LEN (SSIS 運算式)
   傳回字元運算式中的字元數。 如果字串包含開頭和尾端空白，則函數會將它們加入計數中。 LEN 會針對單位元組和雙位元組字元的相同字串傳回完全相同的值。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SMTP connection manager [Integration Services]
 - connection managers [Integration Services], SMTP
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2751fe472c144622fa9062e6539871ec6456c6ae
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c20efc67ec0ade640edfefc84d01762a6aa767f8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920349"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438335"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 連接管理員
   SMTP 連接管理員可讓封裝連接到 Simple Mail Transfer Protocol (SMTP) 伺服器。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的「傳送郵件」工作會使用 SMTP 連線管理員。  

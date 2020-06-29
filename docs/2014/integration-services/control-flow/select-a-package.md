@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Select a Package dialog box
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 53b81c8c1ecf6d0399066fee9cdb779d7ac556d2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b858b22244691a527c5e3aad909f046683487b9b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918248"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438155"
 ---
 # <a name="select-a-package"></a>選取封裝
   使用 **[選取封裝]** 對話方塊，即可指定訊息佇列工作可以接收訊息的來源封裝。  

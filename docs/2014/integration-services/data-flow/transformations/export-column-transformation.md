@@ -16,14 +16,14 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7279b3b40bbf7805d04aedbce6e86ff67862b76a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2914c6a23a326f4d312c2784eaad2b84fdad0b0e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939579"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430645"
 ---
 # <a name="export-column-transformation"></a>匯出資料行轉換
   「匯出資料行」轉換會讀取資料流程中的資料，並將資料插入檔案中。 例如，如果資料流程包含產品資訊 (例如每一項產品的圖片)，則可使用「匯出資料行」轉換將影像儲存到檔案中。  

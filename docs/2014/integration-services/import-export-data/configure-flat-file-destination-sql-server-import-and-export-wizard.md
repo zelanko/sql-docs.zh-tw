@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2584cb4a6867d4af3b3f6bc1feff167c900a166d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fc1a9102a8fa4ee834663ae839940e2db9b469e1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965611"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424975"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>設定一般檔案目的地 (SQL Server 匯入和匯出精靈)
   使用 [**設定**一般檔案目的地] 頁面，即可指定目的地一般檔案的格式化選項，並在繼續之前預覽結果。  
@@ -25,7 +25,7 @@ ms.locfileid: "84965611"
   
  「SQL Server 匯入和匯出精靈」的用途在於將資料從來源複製到目的地。 這個精靈也可以為您建立目的地資料庫和目的地資料表。 不過，如果您必須複製多個資料庫或資料表，或複製其他種類的資料庫物件，則應該改用「複製資料庫精靈」。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **來源一般檔案**  
  目的地檔案的名稱。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "84965611"
 |值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
-|**{CR}**|資料列是以歸位字元分隔。|  
+|**符**|資料列是以歸位字元分隔。|  
 |**分行符號**|資料列是以換行字元分隔。|  
 |**分號 {;}**|資料列是以分號分隔。|  
 |**冒號 {:}**|資料列是以冒號分隔。|  
@@ -49,7 +49,7 @@ ms.locfileid: "84965611"
 |值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料行是以歸位字元和換行字元的組合分隔。|  
-|**{CR}**|資料行是以歸位字元分隔。|  
+|**符**|資料行是以歸位字元分隔。|  
 |**分行符號**|資料行是以換行字元分隔。|  
 |**分號 {;}**|資料行是以分號分隔。|  
 |**冒號 {:}**|資料行是以冒號分隔。|  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 679e61c37df7d31b80f47fff186589ce0081f838
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 55e71b6615afc15c2963b4dbb9bfbf2790e90b3b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963118"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421550"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>設定優先順序條件約束的屬性
   若要設定優先順序條件約束的屬性，您可以使用下列其中一項工具：  

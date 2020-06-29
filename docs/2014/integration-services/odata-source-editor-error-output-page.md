@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.erroroutput.f1
 ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 180d54647f2913e3cf4db1ddfed314215820b648
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f433d70a934bcc6784a81cd4d2a602ecb7338b69
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965068"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424405"
 ---
 # <a name="odata-source-editor-error-output-page"></a>OData 來源編輯器 (錯誤輸出頁面)
   使用 [OData 來源編輯器]**** 對話方塊的 [錯誤輸出]**** 頁面，選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  

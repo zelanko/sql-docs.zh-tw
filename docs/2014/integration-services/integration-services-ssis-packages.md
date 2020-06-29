@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 72dfbb5873728efb87a797f1fee9fb4aa469275c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4f2a7c3c1e70e8d402bcd73add2be04d93d182fe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965408"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436495"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 封裝
   套件是指經過組織的連線、控制流程項目、資料流程項目、事件處理常式、變數、參數及組態集合，可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的圖形化設計工具來組合，或以程式設計方式來建立。  然後將完成的封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區或檔案系統中，或者您可以將 ssISnoversion 專案部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器。 封裝是所擷取、執行和儲存的工作單位。  

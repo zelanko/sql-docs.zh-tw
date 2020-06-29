@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b51049f0a55a10ae83af9e0f253c1c717f6d4962
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cc500615774a67bae70e9c9fa8845db166f44466
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964855"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423875"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>封裝安裝精靈 UI 參考
   使用 [封裝安裝精靈]**** 來部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，包括其內含的封裝和其他檔案，以及任何封裝的相依性。  
@@ -51,7 +51,7 @@ ms.locfileid: "84964855"
 ## <a name="configure-packages-page"></a>設定封裝頁面  
  使用 [設定封裝]**** 頁面即可編輯封裝組態。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **組態檔**  
  從清單中選取檔案來編輯組態檔的內容。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "84964855"
 ## <a name="deploy-ssis-packages-page"></a>部署 SSIS 封裝頁面  
  使用 [部署 SSIS 封裝]**** 頁面，來指定安裝 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝及其相依性的位置。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **檔案系統部署**  
  將封裝及相依性部署到檔案系統的指定資料夾中。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "84964855"
 ## <a name="select-installation-folder-page"></a>選取安裝資料夾頁面  
  使用 [選取安裝資料夾]**** 頁面，即可指定安裝封裝及其相依性的檔案系統資料夾。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **資料夾**  
  指定複製封裝及其相依性的路徑和資料夾。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "84964855"
 ## <a name="specify-target-sql-server-page"></a>指定目標 SQL Server 頁面  
  使用 [指定目標 SQL Server]**** 頁面，即可指定將封裝部署至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的選項。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **伺服器名稱**  
  指定部署封裝目的地之伺服器的名稱。  
   

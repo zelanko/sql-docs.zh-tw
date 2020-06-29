@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d689824674c1e14f2051deafbdc9ca58f302441
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d1ae4e7a49d0ae2fe84c7f726a91fb3c5f7fc4ba
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967058"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424555"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)]適用于 SAP BW 的連接器1.1 是由三個元件所組成，可讓您將資料從 SAP NETWEAVER BW 版本7系統中提取或載入資料。  

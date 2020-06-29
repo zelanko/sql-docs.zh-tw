@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e9109b4dc77dd55e3f0e0500324f0853c915c272
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4eb8396eb5d644b6287e9ed2a81f7fa1dc881958
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939159"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429845"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>資料採礦模型培訓編輯器 (連接索引標籤)
   使用 **[資料採礦模型培訓編輯器]** 對話方塊的 **[連接]** 頁面，選取要培訓的採礦模型。  

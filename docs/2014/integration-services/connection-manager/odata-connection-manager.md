@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3c20d069a419a4d9f95a31489449a4726e25c304
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 57f87ec28e6c32f8e44abb3567878b85416ccd5e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920454"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434095"
 ---
 # <a name="odata-connection-manager"></a>OData 連接管理員
   OData 連接管理員可讓封裝連接到 OData 來源。 OData 來源元件會使用 OData 連接管理員連接到 OData 來源，並取用此服務中的資料。 如需詳細資訊（包括這些元件的安裝指示），請參閱[OData 來源](../data-flow/odata-source.md)一節。  

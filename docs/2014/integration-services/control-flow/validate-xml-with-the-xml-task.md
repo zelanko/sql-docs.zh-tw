@@ -10,14 +10,14 @@ helpviewer_keywords:
 - XML validation
 - XML, validating
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4f34e133e7aa7699f49660684cafce6c3a9e2fde
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 94238bae73b2493a3868cd2ba1775bfab0d3ce9d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917911"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438095"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   驗證 XML 文件，並啟用 XML 工作的 `ValidationDetails` 屬性以取得詳細的錯誤輸出。

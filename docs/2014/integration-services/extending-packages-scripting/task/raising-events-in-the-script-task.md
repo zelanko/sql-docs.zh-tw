@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Events property
 - Script task [Integration Services], events
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f5bf4a5de8fc27773dfebec4fdae96edea944ed
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 242abf4fa10487f55d8741ea3a815086fbaf16d6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967178"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425835"
 ---
 # <a name="raising-events-in-the-script-task"></a>在指令碼工作中引發事件
   事件會提供向包含封裝報告錯誤、警告和其他資訊 (例如工作進度或狀態) 的方法。 封裝提供管理事件通知的事件處理常式。 指令碼工作可以呼叫 `Dts` 物件之 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 屬性上的方法來引發事件。 如需 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 套件如何處理事件的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 事件處理常式](../../integration-services-ssis-event-handlers.md)。  

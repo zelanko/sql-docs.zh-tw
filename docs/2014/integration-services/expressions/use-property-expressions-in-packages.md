@@ -16,14 +16,14 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 157f45cd6d6fd7f201998cb3798440573654be58
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 432231bc768d635d9ff511a2847bfb97ce8cdefb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968988"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437095"
 ---
 # <a name="use-property-expressions-in-packages"></a>在封裝中使用屬性運算式
   屬性運算式是指派給屬性的運算式，用於在執行階段啟用該屬性的動態更新。 例如，屬性運算式可更新「收件者」欄位，傳送郵件工作透過插入儲存在變數中的電子郵件地址來使用該欄位。

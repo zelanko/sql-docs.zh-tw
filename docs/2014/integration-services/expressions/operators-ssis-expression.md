@@ -12,14 +12,14 @@ helpviewer_keywords:
 - operators [Integration Services]
 - expressions [Integration Services], operators
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4908c50e3714229cae689adc3eee473e05dee184
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2851d5b0f8681b46a8c5b4efc714620fa5cd64f0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969148"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428305"
 ---
 # <a name="operators-ssis-expression"></a>運算子 (SSIS 運算式)
   本節描述運算式語言提供的運算子，以及運算式評估工具使用的運算子優先順序和關聯性。  

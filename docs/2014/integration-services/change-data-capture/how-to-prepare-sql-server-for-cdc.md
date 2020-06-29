@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 10ef71a7e5bd285ecdd9e47787e55d27a3615fc8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38e13d715eaeee5e9ec5dc53c2297b0bbb697260
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923016"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435715"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>如何為 CDC 準備 SQL Server
   Oracle CDC 服務要求所有目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體都必須包含 MSXDBCDC 資料庫。 您可在 CDC 服務組態主控台中使用「準備 SQL Server」動作來建立這個資料庫。每一個目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體只會執行這項工作一次。  

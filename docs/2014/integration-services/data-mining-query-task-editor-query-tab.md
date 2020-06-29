@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 86441b7ec5750ca4b7fce07fb7e0b5025e8a6eef
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6005c92d0d48850461c01353ddf94c61140d0f2e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939119"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437445"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>資料採礦查詢工作編輯器 (查詢索引標籤)
   使用 [資料採礦查詢工作]**** 對話方塊的 [查詢]**** 索引標籤，即可依據採礦模型建立預測查詢。 在此對話方塊中，您也可以將參數和結果集繫結到變數。  

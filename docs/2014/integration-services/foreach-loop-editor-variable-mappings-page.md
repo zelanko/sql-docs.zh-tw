@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.mapping.f1
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 396c43f0b7adaf9d2a9dcd6124194aa82a9f8cc0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 043077496e1ec1a1cad147725d7f722364f6a54c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966378"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425495"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Foreach 迴圈編輯器 (變數對應頁面)
   使用 [Foreach 迴圈編輯器]**** 對話方塊的 [變數對應]**** 頁面，即可將變數對應至集合值。 會用迴圈之每個反覆運算上的集合值來更新變數的值。  
@@ -25,8 +25,8 @@ ms.locfileid: "84966378"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 建立簡單的 ETL 封裝教學課程中，包含一個教您加入和設定 Foreach 迴圈的課程。  
   
-## <a name="options"></a>選項。  
- **變數**  
+## <a name="options"></a>選項  
+ **變**  
  選取現有的變數，或按一下 \<**New variable...**> 以建立新的變數。  
   
 > [!NOTE]  

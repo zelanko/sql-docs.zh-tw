@@ -15,14 +15,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], creating
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: aca9aeb899d24d5f9516716e02fadc0fcf7f7c7a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca9b79f3c5ee171aac90f15f196b06c212a3f838
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917323"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437925"
 ---
 # <a name="create-connection-managers"></a>建立連接管理員
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含各種連接管理員，以符合連接到不同類型伺服器和資料來源之工作的需要。 連接管理員可由在不同類型資料儲存區中擷取和載入之資料的資料流程元件使用，也可由將記錄寫入伺服器、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表或檔案的記錄提供者使用。 例如，具有傳送郵件工作的封裝使用 SMTP 連接管理員類型，來連接到 Simple Mail Transfer Protocol (SMTP) 伺服器。 具有執行 SQL 工作的封裝，可以使用 OLE DB 連線管理員來連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](connection-manager/integration-services-ssis-connections.md)。

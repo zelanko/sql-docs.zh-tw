@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 0d153dce-6661-4c99-b1db-2bd3b5038b4f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f48fddf99a39db36a872d892c768b3df287a521
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e416ba5191908f37191a2a697cedd9dc4c82e828
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964105"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422245"
 ---
 # <a name="script-task-editor-general-page"></a>指令碼工作編輯器 (一般頁面)
   使用 **[指令碼工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述指令碼工作。  

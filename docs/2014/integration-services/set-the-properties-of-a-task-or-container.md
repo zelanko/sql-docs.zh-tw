@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], properties
 ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2116f6b07ae47325972c82f8b04ae027530a5a52
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 278ce3d1a7f1fafeb3c378559e5ec88da62895c8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963086"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421465"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>設定工作或容器的屬性
   您可以使用 [屬性]**** 視窗來設定工作和容器的大部分屬性。 例外的是工作集合的屬性，以及因太複雜而無法使用 [屬性]**** 視窗設定的屬性。 例如，您無法在 [屬性]**** 視窗中設定「Foreach 迴圈」容器所使用的列舉值。 您必須使用工作或容器編輯器來設定這些複雜屬性。 大部分工作和容器編輯器都具有多個節點，而且每個節點都包含相關的屬性。 節點的名稱表示此節點所包含之屬性的主旨。  
