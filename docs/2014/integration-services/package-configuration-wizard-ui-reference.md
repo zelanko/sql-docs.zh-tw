@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.dts.configwizard.finishdtsconfiguration.f1
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8179e5caddbd104fdf35598b7ea25e0f32fd9e84
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70576676604340a3239d4903d895f1dd385882d6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964908"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424045"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>封裝組態精靈 UI 參考
   使用 **[封裝組態精靈]** ，即可建立在執行階段更新 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝及其物件之屬性的組態。 當您在 **[封裝組態組合管理]** 對話方塊中加入新的組態或修改現有的組態時，這個精靈便會執行 若要開啟 **[封裝組態組合管理]** 對話方塊，請在 **中選取** [SSIS] **功能表上的** [封裝組態] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 如需詳細資訊，請參閱 [建立封裝組態](../../2014/integration-services/create-package-configurations.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "84964908"
 ## <a name="welcome-to-the-package-configuration-wizard-page"></a>歡迎使用封裝組態精靈頁面  
  使用 **[SSIS 組態精靈]** ，即可建立在執行階段更新封裝及其物件之屬性的組態。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **不要再顯示此頁面**  
  下次開啟精靈時略過歡迎頁面。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "84964908"
 ## <a name="select-objects-to-export-page"></a>選取要匯出的物件頁面  
  使用 **[選取目標屬性] 或 [選取要匯出的屬性]** 頁面，即可指定組態包含的物件屬性。 只有選取 XML 組態類型時，才能選取多個屬性。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **物件**  
  展開封裝階層，並選取要匯出的屬性。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "84964908"
 ## <a name="completing-the-wizard-page"></a>正在完成精靈頁面  
  使用 **[正在完成精靈]** 頁面，即可提供組態的名稱，並檢視精靈用來建立組態的設定。 在精靈完成之後，就會顯示 **[封裝組態組合管理]** ，其中會列出封裝的所有組態。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **設定名稱**  
  鍵入組態的名稱。  
   

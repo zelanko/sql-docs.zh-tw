@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e25d8b904faaeff05620386e984ddc5bdd99fdf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a8064a36bce9be9cfa5e2cc88c5f23806932d2c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967118"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425685"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>一般檔案連接管理員編輯器 (進階頁面)
   您可以使用 [一般檔案連線管理員編輯器]**** 對話方塊的 [進階]**** 頁面設定屬性，以指定 Integration Services 讀取及寫入一般檔案的方式。 您可以變更一般檔案中的資料行名稱，並設定屬性以包含檔案中每個資料行的資料類型和分隔符號。  
@@ -27,7 +27,7 @@ ms.locfileid: "84967118"
   
  若要深入了解一般檔案連接管理員，請參閱＜ [Flat File Connection Manager](connection-manager/file-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的一般檔案連接管理員。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   

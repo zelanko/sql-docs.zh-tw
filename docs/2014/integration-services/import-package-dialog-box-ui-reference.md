@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Import Package dialog box
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: da790644cbd29bc38a89899e02d50aac58228a0e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2765eef14ac8c3e84684e95f67bcd7e837e5cdea
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965511"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424885"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>匯入封裝對話方塊 UI 參考
   使用 **[匯入封裝]** 對話方塊 (可以從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]存取)，即可匯入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝，並設定或修改封裝的保護等級。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **封裝位置**  
  選取要匯入封裝之儲存位置的類型。 有下列選項可供使用：  
   

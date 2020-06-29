@@ -15,14 +15,14 @@ helpviewer_keywords:
 - installing Integration Services
 - Setup [Integration Services]
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bd3c15610065c4c26da0476d50cac9bd4bd1dacc
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7cc7cb929aa34c9226dbdff9efb6b0c918b546f1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966261"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425055"
 ---
 # <a name="install-integration-services"></a>安裝 Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了單一安裝程式，以安裝它的任何或所有元件，包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]在內。 您可以使用安裝程式來安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，不論單一電腦上是否有其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。  

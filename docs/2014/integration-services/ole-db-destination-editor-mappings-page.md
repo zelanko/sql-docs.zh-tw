@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 8cfddd4d-f605-4913-9648-66e8e41417e1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6afcec22eb14686c0bd7e65cdf10be0075f31577
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7a72829bd456bbf899149555fe77916913521db5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964958"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424155"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>OLE DB 目的地編輯器 (對應頁面)
   使用 [OLE DB 目的地編輯器]**** 對話方塊的 [對應]**** 頁面，將輸入資料行對應至目的地資料行。  

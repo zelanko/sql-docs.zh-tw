@@ -10,19 +10,19 @@ f1_keywords:
 - sql12.dts.designer.packagepassword.f1
 - sql12.ssis.bids.projectpassword.f1
 ms.assetid: 090277a5-4659-461d-944c-eb9b26167720
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 35edfb66f52d5811ff24d85be3d2e403e5fa6121
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: abf8e2721d47b56c829843d49cca02e783ed8339
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964928"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424005"
 ---
 # <a name="package-and-project-password"></a>封裝與專案密碼
   使用 **[封裝密碼]** 對話方塊，即可為使用密碼加密的封裝提供封裝密碼。 如果封裝使用 **[機密資料以密碼加密]** 或 **[所有資料以密碼加密]** 保護等級，則必須提供密碼。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **密碼**  
  輸入密碼。  
   

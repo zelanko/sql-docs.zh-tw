@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0f4387b3311c4b2157ba202890c2a190e83e7ad5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 82181fad0220ad73804c23d7ebce2fbe6994d820
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967098"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425655"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>一般檔案連接管理員編輯器 (一般頁面)
   使用 **[一般檔案連接管理員編輯器]** 對話方塊的 **[一般]** 頁面，來選取檔案和資料格式。 一般檔案連接可以讓封裝連接到文字檔。  
   
  若要深入了解一般檔案連接管理員，請參閱＜ [Flat File Connection Manager](connection-manager/file-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "84967098"
  **字碼頁**  
  指定非 Unicode 文字的字碼頁。  
   
- **[格式]**  
+ **格式**  
  指出檔案是要使用分隔符號、固定寬度或不齊右的格式。  
   
 |值|描述|  
@@ -68,7 +68,7 @@ ms.locfileid: "84967098"
 |值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|標頭資料列是以歸位字元和換行字元的組合分隔。|  
-|**{CR}**|標頭資料列是以歸位字元分隔。|  
+|**符**|標頭資料列是以歸位字元分隔。|  
 |**分行符號**|標頭資料列是以換行字元分隔。|  
 |**分號 {;}**|標頭資料列是以分號分隔。|  
 |**冒號 {:}**|標頭資料列是以冒號分隔。|  

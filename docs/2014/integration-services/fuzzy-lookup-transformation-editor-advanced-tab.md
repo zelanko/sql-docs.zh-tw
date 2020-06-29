@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: 0a2919be-2ea7-4c06-82b8-0ffad5f0dd83
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 24c35eb9b1df9f250d21e95b591ec2cc40026038
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 68f53eb2735dc07656fc8ff2b81c3259caa4847b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966298"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425255"
 ---
 # <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>模糊查閱轉換編輯器 (進階索引標籤)
   使用 **[模糊查閱轉換編輯器]** 對話方塊的 **[進階]** 索引標籤，即可設定模糊查閱的參數。  
   
  若要深入了解模糊查閱轉換，請參閱＜ [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **每次查閱輸出的相符項目上限**  
  指定轉換針對每一個輸入資料列，可以傳回的相符項目上限。 預設為 **1**。  
   

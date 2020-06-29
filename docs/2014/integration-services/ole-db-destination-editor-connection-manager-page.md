@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b19c61cf736ad888cdcb2ecb1f36060eebf30812
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 21ec7d4d38996ecf4cb5522fcfdf29fb6e80db89
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964988"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424165"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>OLE DB 目的地編輯器 (連接管理員頁面)
   使用 **[OLE DB 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面來選取目的地的 OLE DB 連接。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  

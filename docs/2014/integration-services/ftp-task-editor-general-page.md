@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02ffd6309ae31f538fecdf6af2cb8475608d6cf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 381493758306e3f7c638f46f7c331f0e6cc3e83f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966335"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425315"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 工作編輯器 (一般頁面)
   使用 **[FTP 工作編輯器]** 對話方塊的 **[一般]** 頁面，即可指定 FTP 連接管理員，以連接到工作進行通訊的 FTP 伺服器。 您也可以命名和描述 FTP 工作。  
   
  若要深入了解此工作，請參閱 [FTP 工作](control-flow/ftp-task.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **FtpConnection**  
  選取現有的 FTP 連線管理員，或按一下 \<**New connection...**> 以建立連線管理員。  
   

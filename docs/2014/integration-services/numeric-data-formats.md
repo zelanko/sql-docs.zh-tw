@@ -12,14 +12,14 @@ helpviewer_keywords:
 - locale-sensitive parsing [Integration Services]
 - fast parse [Integration Services]
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1f9e37d3062bba763f44e0eef14b216972b29f1d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a0096f34a5815237ed3865e298ecc628083ce408
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965108"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424505"
 ---
 # <a name="numeric-data-formats"></a>數值資料格式
   快速剖析提供一組快速、簡易且區分區域設定的常式集，以剖析資料。 快速剖析僅支援整數資料類型的有限格式集。  

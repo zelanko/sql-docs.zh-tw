@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c7d2c37e38386f7e46c1b8a0800d45dfc0b9b0dd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 83c3553916ba629382256c0d2c1c7a89131df071
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967076"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425535"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>一般檔案目的地編輯器 (連接管理員頁面)
   使用 [一般檔案目的地編輯器]**** 對話方塊的 [連線管理員]**** 頁面，來選取目的地的一般檔案連接，以及指定是否要覆寫或附加至現有的目的地檔案。 一般檔案目的地會將資料寫入文字檔。 此文字檔的格式可以是分隔、固定寬度、固定寬度且具有資料列分隔符號或不齊右格式。  
   
  若要深入了解一般檔案目的地，請參閱 [一般檔案目的地](data-flow/flat-file-destination.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **一般檔案連線管理員**  
  使用清單方塊選取現有的連線管理員，或按一下 [新增]**** 建立新的連接。  
   

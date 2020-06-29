@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 15d3e66e300e5e4acf2d852fc84abd35261b52cc
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fd23e24bb1c66b6d45bc4a0c3b413c55415ca3ce
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950968"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424565"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-components"></a>Microsoft Connector 1.1 for SAP BW 元件
   本節包含描述 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 之三個元件的主題：  

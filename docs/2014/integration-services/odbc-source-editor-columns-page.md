@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.columns.f1
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 61311dfa6428c9dd1e67fe783389c2a4b20ac1d8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 52e05d125710e8dc5efba7e2efc7420f68686c71
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965028"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424265"
 ---
 # <a name="odbc-source-editor-columns-page"></a>ODBC 來源編輯器 (資料行頁面)
   使用 [ODBC 來源編輯器]**** 對話方塊的 [資料行]**** 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
@@ -32,7 +32,7 @@ ms.locfileid: "84965028"
   
 3.  在 **[ODBC 來源編輯器]** 中，按一下 **[資料行]**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 ### <a name="available-external-columns"></a>可用的外部資料行  
  資料來源中可用的外部資料行清單。 您無法使用此資料表來加入或刪除資料行。 請從來源選取要使用的資料行。 選取的資料行就會依照選取的順序加入至 **[外部資料行]** 清單。  

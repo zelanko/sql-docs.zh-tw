@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 64d40dd2a6f0f2568e7e7817a3a9366be8f83cc4
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e06b670e80d1f63d35d4d37b264c8dd9c9d9ad4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965078"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424425"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 來源編輯器 (連接頁面)
   使用 **[OData 來源編輯器]** 對話方塊的 **[連接]** 頁面，選取 OData 來源的 OData 連接管理員。 此頁面也可讓您指定集合或資源路徑及任何查詢選項，以指示需要從 OData 來源擷取哪些資料。 若要深入了解 OData 來源，請參閱＜ [OData Source](data-flow/odata-source.md)＞。  

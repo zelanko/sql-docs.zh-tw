@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cef1d05182edd02c9b0cdb0e6237c09473041dde
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 43a0251b63d7a0519a2a19b6bec4c5117f0dcef0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966425"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425485"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>一般檔案來源編輯器 (連接管理員頁面)
   使用 **[一般檔案來源編輯器]** 對話方塊的 **[連接管理員]** 頁面，以選取一般檔案來源將要使用的連接管理員。 一般檔案來源會從文字檔讀取資料，其格式可以是分隔、固定寬度或混合格式。  
@@ -31,7 +31,7 @@ ms.locfileid: "84966425"
   
  若要深入了解一般檔案來源，請參閱＜ [Flat File Source](data-flow/flat-file-source.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **一般檔案連線管理員**  
  從清單中選取現有的連線管理員，或按一下 [新增]**** 建立新的連線管理員。  
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - restoring packages [Integration Services]
 - Integration Services packages, backup and restore
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 16ffb226202bb4ed52fd01e5e6376accfe6b6558
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c4cd6f3856b69485c01e4b38d89e2f7e2ec56f74
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964912"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424035"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>封裝備份和還原 (SSIS 服務)
     

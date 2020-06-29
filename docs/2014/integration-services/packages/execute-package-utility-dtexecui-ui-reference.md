@@ -20,14 +20,14 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 59ce040242b87cfc955054e062a09fd579f77a14
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eae2f119e2d1fb8c52c00fc7dbe96af1d593193d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964838"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423845"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>執行封裝公用程式 (DtExecUI) UI 參考
   您可使用 **[執行封裝公用程式]** 來執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 此公用程式會執行儲存在下列三個位置之一的套件：[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、[!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件存放區及檔案系統。 此使用者介面可以從開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] `dtexecui` ，或在命令提示字元中輸入，這是使用**DTExec**命令提示字元工具執行封裝的替代方法。  

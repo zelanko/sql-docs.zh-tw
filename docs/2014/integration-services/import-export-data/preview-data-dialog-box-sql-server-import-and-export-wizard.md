@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 49566ab97aa832c7e61d4056749fcfa90af1b167
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17debc001d8ba7826fe845c006e944e5a3dc87a0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965558"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424825"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>預覽資料對話方塊 (SQL Server 匯入和匯出精靈)
   使用 [**預覽資料**] 對話方塊，即可查看匯 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入和匯出嚮導將傳送至資料來源的查詢。 您還可以使用此對話方塊，最多預覽 200 個取樣資料的資料列。  
@@ -29,7 +29,7 @@ ms.locfileid: "84965558"
   
 -   在 [匯入和匯出嚮導] 的 [**選取來源資料表和視圖**] 頁面上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，按一下 [**預覽**]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Source**  
  顯示此精靈將傳送至資料來源的查詢。  
   

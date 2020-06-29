@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77604faa4cb32fc7babf273717422621b39648aa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 36e2c705382d553c9833776badfacd32aed7f6d6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966418"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425515"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach 迴圈編輯器 (集合頁面)
   使用 [Foreach 迴圈編輯器]**** 對話方塊的 [集合]**** 頁面，即可指定列舉值類型和設定列舉值。  
@@ -63,7 +63,7 @@ ms.locfileid: "84966418"
  **瀏覽**  
  瀏覽以尋找根資料夾。  
   
- **檔案儲存體**  
+ **檔案**  
  指定要列舉的檔案。  
   
 > [!NOTE]  
@@ -152,7 +152,7 @@ ms.locfileid: "84966418"
 ### <a name="enumerator--foreach-from-variable-enumerator"></a>列舉值 = Foreach From Variable 列舉值  
  Foreach From Variable 列舉值可用來列舉所指定之變數中可列舉的物件。 例如，如果 Foreach 迴圈包括執行查詢並將結果儲存在變數中的「執行 SQL」工作，您可以使用 Foreach From Variable 列舉值來列舉查詢結果。  
   
- **變數**  
+ **變**  
  在清單中選取變數，或按一下 \<**New variable...**> 以建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
@@ -171,7 +171,7 @@ ms.locfileid: "84966418"
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
-|**變數**|設定包含 XML 文件的變數來源。|  
+|**變**|設定包含 XML 文件的變數來源。|  
   
  **DocumentSource**  
  如果 [ **[documentsourcetype]** ] 設定為 [**直接輸入**]，請提供 XML 程式碼，或按一下省略號（...）按鈕，使用 [**檔來源編輯器**] 對話方塊來提供 xml。  
@@ -201,7 +201,7 @@ ms.locfileid: "84966418"
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
-|**變數**|設定包含 XML 文件的變數來源。|  
+|**變**|設定包含 XML 文件的變數來源。|  
   
  `OuterXPathString`  
  如果 [OuterXPathStringSourceType]**** 設定為 [直接輸入]****，請提供 XPath 字串。  
@@ -224,7 +224,7 @@ ms.locfileid: "84966418"
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
-|**變數**|設定包含 XML 文件的變數來源。|  
+|**變**|設定包含 XML 文件的變數來源。|  
   
  `InnerXPathString`  
  如果 [InnerXPathStringSourceType]**** 設定為 [直接輸入]****，請提供 XPath 字串。  

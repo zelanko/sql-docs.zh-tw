@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bc4c008445837341dca21211e2c5e943afe50dc7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1b2a60f82e354513d25003b035bfbb689858107
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967108"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425665"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>一般檔案連接管理員編輯器 (資料行頁面)
   使用 **[一般檔案連接管理員編輯器]** 對話方塊的 **[資料行]** 頁面來指定資料列和資料行資訊，以及預覽檔案。  
@@ -41,7 +41,7 @@ ms.locfileid: "84967108"
 |值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
-|**{CR}**|資料列是以歸位字元分隔。|  
+|**符**|資料列是以歸位字元分隔。|  
 |**分行符號**|資料列是以換行字元分隔。|  
 |**分號 {;}**|資料列是以分號分隔。|  
 |**冒號 {:}**|資料列是以冒號分隔。|  
@@ -55,7 +55,7 @@ ms.locfileid: "84967108"
 |值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料行是以歸位字元和換行字元的組合分隔。|  
-|**{CR}**|資料行是以歸位字元分隔。|  
+|**符**|資料行是以歸位字元分隔。|  
 |**分行符號**|資料行是以換行字元分隔。|  
 |**分號 {;}**|資料行是以分號分隔。|  
 |**冒號 {:}**|資料行是以冒號分隔。|  
@@ -102,7 +102,7 @@ ms.locfileid: "84967108"
 |值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
-|**{CR}**|資料列是以歸位字元分隔。|  
+|**符**|資料列是以歸位字元分隔。|  
 |**分行符號**|資料列是以換行字元分隔。|  
 |**分號 {;}**|資料列是以分號分隔。|  
 |**冒號 {:}**|資料列是以冒號分隔。|  

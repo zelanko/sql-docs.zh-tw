@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Configure ODBC Connection Manager dialog box
 ms.assetid: a596eeaf-68b2-4560-b77d-d2f72ddba926
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9e928c72fa3bf372646ecac79bbc6ad33d4a0f2c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 678b01939afb4d7234f9736b289e4a1e9ce95b8a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965058"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424345"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>ODBC 連接管理員 UI 參考
   使用 **[設定 ODBC 連接管理員]** 對話方塊，將連接加入 ODBC 資料來源。  
   
  若要深入了解 ODBC 連接管理員，請參閱＜ [ODBC Connection Manager](connection-manager/odbc-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料連接**  
  從清單中選取現有的 ODBC 連接管理員。  
   

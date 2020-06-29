@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 14a38f66dbad9b30e1b9300e16682546b7b865de
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a657425f4e21c8e81932bcc657ac4aa9884cca8b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968397"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425265"
 ---
 # <a name="general-page"></a>一般頁面
   在 [選項] 對話方塊上使用 [Integration Services 設計師] 頁面上的 [一般] 頁面，指定用來載入、顯示及升級封裝的選項。  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - containers [Integration Services], grouping
 - grouping tasks
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0beeed1beea03f3acdb869fcd10cef163eaedb9d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e2c613671b12991e4819937f8be61f26a25cdf12
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968353"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425105"
 ---
 # <a name="group-or-ungroup-components"></a>將元件分組或取消分組
   **設計師中的**[控制流程] **、** [資料流程] **和** [事件處理常式] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤都支援可摺疊的群組。 如果封裝具有許多元件，這些索引標籤可能會變得十分擁擠，因而難以同時檢視所有元件並找到您要使用的項目。 可摺疊的群組功能可以節省工作介面的空間，讓您更輕易地使用大型封裝。  

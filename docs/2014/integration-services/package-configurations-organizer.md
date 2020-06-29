@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Package Configurations Organizer dialog box
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3b880e23bdc191da1f34f2261d7c87a32f03fb42
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c50a1cba2a2fcc44fab6a9836704c9da8d9798bf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964898"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423975"
 ---
 # <a name="package-configurations-organizer"></a>[封裝組態組合管理]
   使用 **[封裝組態組合管理]** 對話方塊，即可啟用封裝組態、檢視目前封裝的組態清單，以及指定載入組態的喜好順序。  
@@ -33,7 +33,7 @@ ms.locfileid: "84964898"
   
  封裝組態會在執行階段更新封裝物件的屬性值。 載入封裝時，組態值將會取代開發封裝時所設定的值。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援不同的組態類型。 例如，您可以使用包含多個組態的 XML 檔案，或是包含單一組態的環境變數。 如需相關資訊，請參閱 [Package Configurations](../../2014/integration-services/package-configurations.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **啟用封裝組態**  
  選取即可使用封裝的組態。  
   

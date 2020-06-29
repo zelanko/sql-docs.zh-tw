@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cf0c153168c513c98f8b9ac58984cb88ae1811da
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 342a718e1d72a257e469cd855ffd60fff6c5704d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967128"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425675"
 ---
 # <a name="file-system-task-editor-general-page"></a>檔案系統工作編輯器 (一般頁面)
   使用 [檔案系統工作編輯器]**** 對話方塊的 [一般]**** 頁面，即可設定工作執行的檔案系統作業。  
@@ -35,13 +35,13 @@ ms.locfileid: "84967128"
   
  您可以使用運算式，將不同的變數用於  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **IsDestinationPathVariable**  
  指出目的地路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**真正**|目的地路徑儲存在變數中。 選取這個值會顯示動態選項 [DestinationVariable]****。|  
+|**True**|目的地路徑儲存在變數中。 選取這個值會顯示動態選項 [DestinationVariable]****。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項： `DestinationConnection` 。|  
   
  **OverwriteDestination**  
@@ -77,7 +77,7 @@ ms.locfileid: "84967128"
   
 |值||  
 |-----------|-|  
-|**真正**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 [SourceVariable]****。|  
+|**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 [SourceVariable]****。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取這個值會顯示動態選項 [DestinationVariable]****。|  
   
 ## <a name="isdestinationpathvariable-dynamic-options"></a>IsDestinationPathVariable 動態選項  
@@ -117,7 +117,7 @@ ms.locfileid: "84967128"
  **ReadOnly**  
  指出檔案是否為唯讀。  
   
- **存檔**  
+ **封存**  
  指出檔案或目錄是否準備就緒，可供封存。  
   
  **系統**  

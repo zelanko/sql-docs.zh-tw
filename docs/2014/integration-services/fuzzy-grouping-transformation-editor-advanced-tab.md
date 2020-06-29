@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6a476770e120cd620f01096cc20f9eab7f9f4404
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 30bac381b301de4d94f8b587f324b41985dd221f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966308"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425305"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊群組轉換編輯器 (進階索引標籤)
   使用 **[模糊群組轉換編輯器]** 對話方塊的 **[進階]** 索引標籤，即可指定輸入和輸出資料行、設定類似度臨界值，以及定義分隔符號。  
@@ -28,7 +28,7 @@ ms.locfileid: "84966308"
   
  若要深入了解模糊群組轉換，請參閱＜ [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **輸入索引鍵資料行名稱**  
  針對每個輸入資料列，指定包含資料列之唯一識別碼的輸出資料行名稱。 `_key_in` 資料行具有能唯一識別每個資料列的值。  
   

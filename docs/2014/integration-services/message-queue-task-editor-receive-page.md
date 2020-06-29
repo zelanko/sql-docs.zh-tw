@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b30a7863fe50843f4408931b2b766bcb520f3a2c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53a392a09e2120c08c43b1e373c942ff9c60e148
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950988"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424585"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>訊息佇列工作編輯器 (接收頁面)
   使用 [訊息佇列工作編輯器]**** 對話方塊的 [接收]**** 頁面，即可設定訊息佇列工作，以接收 [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) 訊息。  
   
  若要了解這個工作，請參閱＜ [Message Queue Task](control-flow/message-queue-task.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **RemoveFromMessageQueue**  
  指出接收訊息之後，是否從佇列中移除該訊息。 依預設，此值設定為 `False`。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "84950988"
  **SaveFileAs**  
  鍵入要使用的檔案路徑，或按一下省略符號按鈕 **(...)**，然後尋找檔案。  
   
- **改寫**  
+ **Overwrite**  
  指出儲存資料檔訊息的內容時，是否要覆寫現有檔案中的資料。 預設值為 `False`。  
   
  **Filter**  
@@ -69,7 +69,7 @@ ms.locfileid: "84950988"
  此選項是唯讀的。 當先前有設定篩選屬性時，此選項可能是空白或包含封裝的 GUID。  
   
 #### <a name="filter--from-package"></a>篩選 = 來自封裝  
- **標識**  
+ **識別碼**  
  如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)**，然後指定套件。  
   
  **相關主題：** [選取封裝](control-flow/select-a-package.md)  
@@ -83,7 +83,7 @@ ms.locfileid: "84950988"
 |**沒有篩選**|工作不會篩選訊息。 選取此值會顯示動態選項 **IdentifierReadOnly**。|  
 |**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
   
- **變數**  
+ **變**  
  輸入變數名稱，或按一下 \<**New variable...**> ，然後設定新的變數。  
   
  **相關主題：** [加入變數](../../2014/integration-services/add-variable.md)  
@@ -95,7 +95,7 @@ ms.locfileid: "84950988"
  此選項是空白。  
   
 #### <a name="filter--from-package"></a>篩選 = 來自封裝  
- **標識**  
+ **識別碼**  
  如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)**，然後指定套件。  
   
  **相關主題：** [選取封裝](control-flow/select-a-package.md)  
@@ -128,7 +128,7 @@ ms.locfileid: "84950988"
  **CompareString**  
  除非 [比較]**** 選項設定為 [無]****，否則請提供訊息要比較的字串。  
   
- **變數**  
+ **變**  
  輸入要保存已接收之訊息的變數名稱，或按一下 \<**New variable...**> 然後設定新的變數。  
   
  **相關主題：** [加入變數](../../2014/integration-services/add-variable.md)  

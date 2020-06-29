@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - FTP Connection Manager Editor
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 20d50565b9687f18af95e820be90d16ab643de28
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f5aebb659db6eabd79c6e707b8b47abf21909a88
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966358"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425335"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP 連接管理員編輯器
   使用 [FTP 連線管理員編輯器]**** 對話方塊來指定連接到 FTP 伺服器的屬性。  
@@ -28,11 +28,11 @@ ms.locfileid: "84966358"
   
  若要深入了解 FTP 連線管理員，請參閱 [FTP 連線管理員](connection-manager/ftp-connection-manager.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **伺服器名稱**  
  提供 FTP 伺服器的名稱。  
   
- **伺服器通訊埠**  
+ **伺服器埠**  
  指定 FTP 伺服器上用來連接的通訊埠編號。 這個屬性的預設值為 **21**。  
   
  **使用者名稱**  
