@@ -10,14 +10,14 @@ helpviewer_keywords:
 - leading blanks
 - LTRIM function
 ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9b42d9d90efebb9da9d8a9fcb4e41e81562e4389
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cc2cef2a298b78d3f2186b269b0feb21d3400bcb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969238"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437235"
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM (SSIS 運算式)
   傳回移除開頭空白之後的字元運算式。  

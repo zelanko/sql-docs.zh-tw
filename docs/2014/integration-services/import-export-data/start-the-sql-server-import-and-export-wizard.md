@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93ecd0b99ad355e38194afc338201790fba97684
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b1803dd3357d2a725f2196e2c692f7470e27a03f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965578"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436855"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>執行 SQL Server 匯入和匯出精靈
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈提供最簡單的方法，讓您在資料來源之間複製資料以及建構基本封裝。 如需有關 wizard 的詳細資訊，請參閱[SQL Server 匯入和匯出 wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。  

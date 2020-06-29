@@ -10,14 +10,14 @@ helpviewer_keywords:
 - base-10 logarithms
 - LOG function
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1345b1dfb7962bfcc153a6ac40c7abc5b63f036e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d51e9674a15377a62a8e116b2b4d1f60e2322de3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969288"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437275"
 ---
 # <a name="log-ssis-expression"></a>LOG (SSIS 運算式)
   傳回數值運算式以 10 為底的對數。  

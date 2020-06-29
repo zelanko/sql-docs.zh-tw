@@ -10,14 +10,14 @@ helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 636a51af831476b691fa6e95adbba24c6ff80585
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba982d62816ae984c741a7023d3166c7a1a2d5f6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969178"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437185"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS 運算式)
   傳回所要求資料類型的 Null 值。  

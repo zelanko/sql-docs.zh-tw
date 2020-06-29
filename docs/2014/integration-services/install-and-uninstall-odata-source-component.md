@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eeeea240761915fae8489072cc71d697b988ce7e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c22c7c88e57c354b92bcb69429a9ab6c06ca368d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965458"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436575"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>安裝及解除安裝 OData 來源元件
   本主題提供在電腦上安裝或移除 OData 來源元件的指示。  

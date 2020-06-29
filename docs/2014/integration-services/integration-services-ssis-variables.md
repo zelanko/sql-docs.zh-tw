@@ -15,14 +15,14 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 42dd04f4edf2d1e9b9b31b11ab96fcd97f9d21d6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a3565f98786b02eaeacb1140e34f862102ca2463
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966178"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436265"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
   變數會儲存 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件及其容器、工作與事件處理常式在執行階段所能使用的值。 「指令碼」工作和「指令碼」元件中的指令碼也可以使用變數。 將工作和容器排序成工作流程的優先順序條件約束，可在其條件約束定義含有運算式時使用變數。  

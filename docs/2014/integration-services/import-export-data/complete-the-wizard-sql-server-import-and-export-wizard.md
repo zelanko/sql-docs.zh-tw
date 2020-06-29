@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77cb816a2ecf86b2a535b2e15e34271982ae39fa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fe5409fd131c7a5b532ecfb462c530c88d0faacd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966188"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436775"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>完成精靈 (SQL Server 匯入和匯出精靈)
   使用 [**完成嚮導]** 頁面，即可確認您在嚮導中所做的選擇，然後再複製資料。  

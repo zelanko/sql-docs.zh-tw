@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 807f3df9f83454a55e4b112f05731c3f56b463f3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 642b5df45407146654cdea842e3818acf3b9484c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922989"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435635"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>如何從 CDC 設計工具主控台管理 CDC 服務
   此程序描述如何使用 CDC 設計工具主控台來管理 CDC 服務。  

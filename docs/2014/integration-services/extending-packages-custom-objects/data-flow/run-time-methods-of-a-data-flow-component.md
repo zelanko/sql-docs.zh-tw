@@ -13,14 +13,14 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 656acd0802eb08e7b32c2d6b4dbee2129682d298
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b7c5e6a413a2bcf647752d2a1ad4c4f77ac3560b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968830"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436945"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>資料流程元件的執行階段方法
   在執行階段，資料流程工作會檢查元件的順序、準備執行計畫，以及管理執行工作計畫的工作者執行緒集區。 此工作會從來源載入資料列、透過轉換處理它們，然後將它們儲存到目的地。  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - REVERSE function
 - reverse character expressions
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5b8a65119f52302c12211ea0e33ac18aa1ce9676
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 173f77891698c5be34ec1eff16c83b9c35742899
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969078"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437125"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (SSIS 運算式)
   傳回反向順序的字元運算式。  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.importprojectwizard.f1
 ms.assetid: 9247ad6c-4bd1-43ab-b347-583181cb9917
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ec71ccf6434cd892be7c44fd4957099965dff6de
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8b9f20115010f2ad51159f29a4b64da195938969
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965478"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436645"
 ---
 # <a name="import-project-wizard"></a>匯入專案精靈
   使用 [ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 匯入專案精靈] 即可根據現有的 Integration Services 專案建立新的專案。 您可以匯入已部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目錄的專案，或從專案部署檔案 (副檔名為 .ispac) 匯入專案。  

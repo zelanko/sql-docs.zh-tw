@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.issuedetails.f1
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dd4e53a1e6485d74ba2aff4039108b357d9c0c92
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9207e76191060c56acad37db734827579a83aae0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966223"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436825"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>資料行轉換詳細資訊對話方塊 (SQL Server 匯入和匯出精靈)
   使用 [**資料行轉換詳細資訊**] 對話方塊，即可查看有關個別資料行的詳細轉換資訊。 這項轉換資訊包含來源和目的地的資料行資料類型，以及精靈將要執行的轉換。 此外，這個頁面也會列出精靈用來判斷所需資料類型轉換的資料類型對應檔案。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會在安裝期間安裝這些資料類型對應檔案。  

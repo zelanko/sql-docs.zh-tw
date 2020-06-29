@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e635be21bd93b5ed08426cf38b86dc69d024ef6b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8605866ecffb9f7351e9633c5dd26d83a3ef75c8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923059"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435705"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>如何編輯 CDC 執行個體屬性
   此程序描述如何使用 CDC 設計工具主控台來編輯 CDC 執行個體的組態屬性。  

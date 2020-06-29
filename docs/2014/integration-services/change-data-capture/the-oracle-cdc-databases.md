@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f99e6a65a699bae09df61f1de8a1a7c1ee88c52
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7313fb40ec44873e980d3063219c9c9ca55bff1c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922319"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435305"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 資料庫
   Oracle CDC 執行個體與目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上同名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關聯。 此資料庫稱為 Oracle CDC 資料庫 (或 CDC 資料庫)。  
@@ -108,7 +108,7 @@ ms.locfileid: "84922319"
   
 |名稱|預設|最小值|最大值|靜態|描述|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|追蹤|False|-|-|False|可用的值：<br /><br /> **真正**<br /><br /> **False**<br /><br /> **的**<br /><br /> **停止**|  
+|追蹤|False|-|-|False|可用的值：<br /><br /> **True**<br /><br /> **False**<br /><br /> **的**<br /><br /> **停止**|  
 |cdc_update_state_interval|10|1|120|False|配置給交易的記憶體區塊大小，以 KB 為單位 (一筆交易可以配置一個以上的區塊)。 請參閱 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) 資料表中的 memory_limit 資料行。|  
 |target_max_batched_transactions|100|1|1000|True|可以在 SQL Server CT 資料表更新中當做一筆交易來處理的最大 Oracle 交易數目。|  
 |target_idle_lsn_update_interval|10|0|1|False|當擷取的資料表沒有活動時，用來更新 **lsn_time_mapping** 資料表的間隔 (以秒數為單位)。|  

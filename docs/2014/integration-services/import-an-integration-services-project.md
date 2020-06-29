@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3301c328-b0f5-4517-915c-93713413e453
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5191da78fc32d72c54fa6da925bd419685b90152
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: af91900ce22ecd3d42a8d83557e1780e30c5ca73
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965658"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436845"
 ---
 # <a name="import-an-integration-services-project"></a>匯入 Integration Services 專案
   使用 [[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 匯入專案精靈]**** 從現有的部署檔 (.ispac)，或從部署到 Integration Services 目錄的專案建立一個專案。 當您沒有專案的原始副本，但又想從 .ispac 檔或 SSISDB 目錄建立一個專案時，此功能特別有用。  

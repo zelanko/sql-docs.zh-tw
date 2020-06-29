@@ -10,14 +10,14 @@ helpviewer_keywords:
 - dates [Integration Services], MONTH
 - MONTH function
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 55a96f60731e6fc1d4d5879f2fc431fdc7fbec64
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d587a860ad402c8a7458bb148741b753f3aeb2ae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969208"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437225"
 ---
 # <a name="month-ssis-expression"></a>MONTH (SSIS 運算式)
   傳回代表日期之月份部分的整數。  

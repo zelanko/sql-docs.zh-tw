@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 79967f4244749f5e0e14d823b4e04832e8ccb3e0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d07502256418b1d528f73bac3296045c393ddc1b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965328"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436115"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>步驟 2:新增和設定一般檔案連線管理員
   在這項工作中，您將一般檔案連接管理員加入您剛才建立的封裝中。 一般檔案連接管理員可讓封裝從一般檔案擷取資料。 使用一般檔案連接管理員，您可以指定當封裝從一般檔案擷取資料時，要套用的檔案名稱和位置、地區設定和字碼頁及檔案格式 (包括資料行分隔符號)。 此外，您可以手動指定個別資料行的資料類型，或使用 [建議資料行類型]  對話方塊，將所擷取資料的資料行自動對應至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 資料類型。  
@@ -95,7 +95,7 @@ ms.locfileid: "84965328"
   
 3.  在 [屬性] 窗格中，將 [date [DT_DATE] 資料行的資料類型變更 `CurrencyDate` 為 [資料庫日期 [DT_DBDATE]]。  
   
-4.  按一下 [確定]。  
+4.  按一下 [確定]****。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [步驟 3：新增和設定 OLE DB 連線管理員](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  

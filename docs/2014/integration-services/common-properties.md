@@ -16,14 +16,14 @@ helpviewer_keywords:
 - input properties [Integration Services]
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77bb61af021bb7499f6656d2fd604f4bdc06bfeb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06b9c8378d08f8eb1e27df8b545acc12ceaa7e2b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922099"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435095"
 ---
 # <a name="common-properties"></a>通用屬性
   物件模型中的資料流程物件 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 具有元件、輸入和輸出，以及輸入資料行和輸出資料行層級的通用屬性和自訂屬性。 許多屬性都有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 25700bfb9e2cd28fd18efe59a2df4e68f468d39b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 27ce934ae2ad13c55a331fd03f76cccd6f4a5c4d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965351"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436195"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>步驟 1:建立工作資料夾和環境變數
   在這項工作中，您將建立工作資料夾 (C:\DeploymentTutorial) 和新的系統環境變數 (`DataTransfer` 與 `LoadXMLData`)，並稍後在教學課程工作中使用。  

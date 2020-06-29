@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3694eeb93e9edbc053a8534841a1edf438489ca9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ab0e8bfe2d0cda5ded11566023406b73ed7058c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968328"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436885"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>HTTP 連接管理員編輯器 (伺服器頁面)
   使用 [HTTP 連接管理員編輯器]**** 對話方塊的 [伺服器]**** 索引標籤指定各項屬性，例如 URL 和安全性認證，以設定 HTTP 連接管理員。 HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。 設定 HTTP 連接管理員之後，可以同時測試連接。  
@@ -28,7 +28,7 @@ ms.locfileid: "84968328"
   
  若要深入了解 HTTP 連接管理員，請參閱＜ [HTTP Connection Manager](connection-manager/http-connection-manager.md)＞。 若要深入了解 HTTP 連接管理員的常見使用案例，請參閱＜ [Web Service Task](control-flow/web-service-task.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **伺服器 URL**  
  輸入伺服器的 URL。  
   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 108256e1d8a3638da5cd676a0ee57894b3ee874c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 68a9517222c6d5a3c2fecbddff9d3e811f3c2280
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966200"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436795"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>檢閱資料類型對應 (SQL Server 匯入和匯出精靈)
   使用 [**審核資料類型對應**] 頁面，即可查看 wizard 為了讓來源資料與目的地相容，而必須執行之資料類型轉換的詳細資訊。 這項資訊包括視覺提示，可區別預期會成功的轉換與可能導致錯誤或截斷的轉換。 針對每個轉換，您可以決定是否要接受精靈所建議的轉換，而且可以指定如何處理發生的任何錯誤。  
@@ -25,7 +25,7 @@ ms.locfileid: "84966200"
   
  「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈」的用途是將資料從來源複製到目的地。 這個精靈也可以為您建立目的地資料庫和目的地資料表。 不過，如果您必須複製多個資料庫或資料表，或複製其他種類的資料庫物件，則應該改用「複製資料庫精靈」。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[檢閱資料類型對應]** 頁面包含 **[資料表]** 清單、 **[資料類型對應]** 清單和錯誤處理選項。  
   
 ### <a name="table-list"></a>資料表清單  

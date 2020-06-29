@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cb8b61bf8cfa9a2b26646df19810a94705a30d14
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 92e3b83a4d580859132c2dc31e841046155dcd5a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922139"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435235"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服務
   本章節描述 Oracle CDC 服務的一些重要概念。 本章節包含的概念如下：  

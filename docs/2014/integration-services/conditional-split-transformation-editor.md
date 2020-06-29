@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fa63a9f16507df8f0966d19323b2e110b7c84fcc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 405d20ce5711f3e3378b0037b6d4c1f753a8f09c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921989"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434915"
 ---
 # <a name="conditional-split-transformation-editor"></a>條件式分割轉換編輯器
   使用 **[條件式分割轉換編輯器]** 對話方塊，即可建立運算式、設定評估運算式的順序，以及命名條件式分割的輸出。 此對話方塊包含可用來建立運算式的數學、字串，以及日期/時間函數與運算子。 評估為 True 的第一個條件會決定資料列的輸出導向。  
@@ -28,7 +28,7 @@ ms.locfileid: "84921989"
   
  若要深入了解條件式分割轉換，請參閱 [條件式分割轉換](data-flow/transformations/conditional-split-transformation.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **訂單**  
  選取資料列並使用右邊的方向鍵來變更評估運算式的順序。  
   

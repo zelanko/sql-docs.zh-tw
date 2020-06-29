@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 795285a6aaceb3e74e80f5cad71d54c72c756ae2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f1f50c3aed4429a3ba05a23a969d050c45778c34
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966148"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435845"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>步驟 5：新增和設定一般檔案來源
   在這項工作中，您會在封裝中加入和設定一般檔案來源。 一般檔案來源是一個資料流程元件，它使用一般檔案連接管理員所定義的中繼資料，來指定轉換處理序要從一般檔案擷取之資料的格式和結構。 一般檔案來源可設定為使用一般檔案連接管理員提供的檔案格式定義，從單個一般檔案擷取資料。  
@@ -35,7 +35,7 @@ ms.locfileid: "84966148"
   
 6.  按一下 **[資料行]** 並確認資料行的名稱正確無誤。  
   
-7.  按一下 [確定]。  
+7.  按一下 [確定]****。  
   
 8.  以滑鼠右鍵按一下一般檔案來源，然後按一下 **[屬性]**。  
   

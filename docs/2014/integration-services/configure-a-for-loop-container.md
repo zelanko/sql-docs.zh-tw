@@ -10,14 +10,14 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 24e2fe71b958395a5be35afad32804d2a748348d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3b162c6d93e00900cc8393cdec0539d3cd495a32
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921977"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434945"
 ---
 # <a name="configure-a-for-loop-container"></a>設定 For 迴圈容器
   此程序描述如何使用 [For 迴圈編輯器]  對話方塊設定「For 迴圈」容器。  

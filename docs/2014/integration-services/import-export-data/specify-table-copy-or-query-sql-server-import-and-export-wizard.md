@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 51f195a9f5fbe97eadfc281ad50bd0de55d6151e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 784bd4649fb2169c78f38414c6c400e34582aa99
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965528"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436725"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>指定資料表複製或查詢 (SQL Server 匯入和匯出精靈)
   使用 [**指定資料表複製或查詢**] 頁面，即可指定如何複製資料。 您可以使用圖形介面來選取要複製的現有資料庫物件，或使用 Transact-SQL 來建立更複雜的查詢。  
@@ -25,7 +25,7 @@ ms.locfileid: "84965528"
   
  「SQL Server 匯入和匯出精靈」的用途在於將資料從來源複製到目的地。 這個精靈也可以為您建立目的地資料庫和目的地資料表。 不過，如果您必須複製多個資料庫或資料表，或複製其他種類的資料庫物件，則應該改用「複製資料庫精靈」。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **從一或多個資料表或視圖複製資料**  
  使用 [**選取來源資料表和流覽**器] 對話方塊，將欄位從選取的來源資料表和視圖複製到指定的目的地或目的地。 如果您要複製來源的所有資料，但不要篩選或排序記錄，請使用此選項。  
   

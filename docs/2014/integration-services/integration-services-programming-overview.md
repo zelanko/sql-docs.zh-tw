@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data flow engine [Integration Services]
 - languages [Integration Services]
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 21459ff6295fce745a380dfb25650d9bbd971de8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a0f7c24eb26cfcf7b834be52b765ce8d31a0a0e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965448"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436565"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 程式設計概觀
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的架構會區隔資料移動和轉換與套件控制流程和管理。 定義這個架構的是兩個不同的引擎，當您針對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 進行程式設計時，可以將這兩個引擎自動化及擴充。 執行階段引擎會實作控制流程和封裝管理基礎結構，該基礎結構可讓開發人員控制執行流程及設定記錄、事件處理常式和變數的選項。 資料流程引擎是一種特殊且高效率的引擎，它是專門用來擷取、轉換及載入資料。 在針對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 進行程式設計時，您將會針對這兩個引擎進行程式設計。  

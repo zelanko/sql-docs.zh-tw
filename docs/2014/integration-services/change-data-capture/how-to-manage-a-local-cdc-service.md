@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3ead520cb30cf01f67ac0559b9783b0bd52488ac
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d1c870e23f30c4281367087b514081181a6c1baa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923009"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435725"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>如何管理本機 CDC 服務
   此程序描述如何使用 CDC 服務組態主控台來管理特定的 CDC 服務。  

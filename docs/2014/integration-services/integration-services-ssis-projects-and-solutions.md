@@ -13,14 +13,14 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e48dfbf5420c6032b8185cf59b2b132df2c82cf2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 21c87a2b8697c3c9e83bc82edac79dacd3481b35
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966233"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436405"
 ---
 # <a name="integration-services-ssis-projects"></a>Integration Services (SSIS) 專案
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 以用於開發 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。

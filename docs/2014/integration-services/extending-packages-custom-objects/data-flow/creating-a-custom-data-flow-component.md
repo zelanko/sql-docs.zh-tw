@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data flow components [Integration Services]
 - data flow components [Integration Services], developing
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 181e9d2d812dbf6ff4e3d232b5e48cdc1e63e0b3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7c07b0d7b87df5ca0bae63543f94e0371a61e79e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966548"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437035"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>建立自訂資料流程元件
   在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中，資料流程工作會公開物件模型，讓開發人員透過使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 與受控碼來建立自訂資料流程元件 (來源、轉換和目的地)。  

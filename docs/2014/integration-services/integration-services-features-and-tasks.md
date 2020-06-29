@@ -10,14 +10,14 @@ helpviewer_keywords:
 - development [Integration Services]
 - Integration Services, programming
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5ab35cd849d020a265fac097f2a0314a81c20dd8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70747bd224d58379696ed81ff751f1969e14220f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965438"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436455"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services 功能及工作
   尋找任何人（設計師、開發人員、分析師或系統管理員）建立及開發封裝所需的資訊 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。 然後了解如何將這些封裝併入您的應用程式和網站中。  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 776a8319750721f3b489df1a3a4466c7dc36f15e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95a812cf5c5faa7e367d4e39a8edac8d7bab89de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968318"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436895"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>透過設定登錄值實作簽署原則
   您可以使用選擇性登錄值來管理載入已簽署或未簽署之封裝的組織原則。 如果您使用這個登錄值，就必須在即將執行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝而且想要強制執行此原則的每部電腦上建立這個登錄值。 設定此登錄值之後， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 就會檢查或確認簽章，然後再載入封裝。  

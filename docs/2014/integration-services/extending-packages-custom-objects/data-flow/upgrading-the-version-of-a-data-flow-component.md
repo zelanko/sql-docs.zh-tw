@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4d55463001f880cdc831a9c49ad86c5978c5e1d3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70796501bfe397cd2d8526944a17de5d4dc021be
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968824"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436935"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>升級資料流程元件的版本
   使用舊版元件建立的封裝，可能包含不再有效的中繼資料，例如在新版元件中使用方式已有所修改的自訂屬性。 您可以覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> 基底類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 方法，以更新之前儲存在舊封裝的中繼資料，從而反映元件的目前屬性。  
