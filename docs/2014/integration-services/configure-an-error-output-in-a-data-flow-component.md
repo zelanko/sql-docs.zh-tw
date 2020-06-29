@@ -11,14 +11,14 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - error outputs [Integration Services]
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dc318c3278f7f86aa4946380daffa0652882c0fb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6f5db0ec29fb6900dbe74ea021f31d0afc5551d7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921879"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434885"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>在資料流程元件中設定錯誤輸出
   許多資料流程元件都支援錯誤輸出，因元件的不同， [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師會以不同的方式設定錯誤輸出。 除了設定錯誤輸出以外，您也可以設定錯誤輸出的資料行。 其中包括設定此元件所加入的 **ErrorCode** 和 **ErrorColumn** 資料行。  
@@ -64,7 +64,7 @@ ms.locfileid: "84921879"
   
 6.  為每個資料行設定 [截斷]**** 選項。  
   
-7.  按一下 [確定]。  
+7.  按一下 [確定]****。  
   
 8.  若要儲存已更新的封裝，請按一下 [檔案]**** 功能表上的 [儲存選取項目]****。  
   

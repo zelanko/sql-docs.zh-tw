@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0de63b2c4d438faa0dea8b8fdefa5f50d071c7e4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921609"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434805"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>設定 SSIS 記錄對話方塊
   使用 **[設定 SSIS 記錄]** 對話方塊定義封裝的記錄選項。  
@@ -43,7 +43,7 @@ ms.locfileid: "84921609"
 ##  <a name="configure-the-options-in-the-containers-pane"></a><a name="container"></a>設定 [容器] 窗格中的選項  
  使用 **[設定 SSIS 記錄]** 對話方塊的 **[容器]** 窗格，即可啟用封裝及其容器以進行記錄。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **容器**  
  在階層式檢視中選取核取方塊，即可啟用封裝及其容器以進行記錄：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "84921609"
 ##  <a name="configure-the-options-on-the-providers-and-logs-tab"></a><a name="provider"></a>設定 [提供者與記錄] 索引標籤上的選項  
  使用 [設定 SSIS 記錄]**** 對話方塊的 [提供者與記錄]**** 索引標籤，即可建立和設定用於擷取執行階段事件的記錄。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **提供者類型**  
  從清單中選取記錄提供者的類型。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "84921609"
  **說明**  
  描述欄位是可編輯的。 按一下，然後修改記錄的預設描述。  
   
- **設定**  
+ **Configuration**  
  在清單中選取現有的連線管理員，或按一下 \<**New connection...**> 以建立新的連線管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
   
  相關主題： [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) 、 [File Connection Manager](connection-manager/file-connection-manager.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "84921609"
 ##  <a name="configure-the-options-on-the-details-tab"></a><a name="detail"></a>設定 [詳細資料] 索引標籤上的選項  
  使用 **[設定 SSIS 記錄]** 對話方塊的 **[詳細資料]** 索引標籤，即可指定要啟用記錄的事件以及要記錄的資訊詳細資料。 您選取的資訊適用於封裝中的所有記錄提供者。 例如，您無法寫入部份資訊到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，而寫入不同資訊到文字檔。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **事件**  
  啟用或停用記錄事件。  
   

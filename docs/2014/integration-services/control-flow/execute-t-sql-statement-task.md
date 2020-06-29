@@ -13,14 +13,14 @@ helpviewer_keywords:
 - statements [Integration Services]
 - Execute T-SQL Statement task [Integration Services]
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3a79cbc796efe01813f7a785e674519524afd4f8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7ebc73ad843ac7fcf1dfbe7699ecd8ea53edcdad
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919019"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433175"
 ---
 # <a name="execute-t-sql-statement-task"></a>執行 T-SQL 陳述式工作
   「執行 T-SQL 陳述式」工作會執行 Transact-SQL 陳述式。 如需詳細資訊，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](/sql/t-sql/language-reference) 和 [Integration Services &#40;SSIS&#41; 查詢](../integration-services-ssis-queries.md)。  

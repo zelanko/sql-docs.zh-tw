@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a00c72e6f444ec1e62082f254d6b77894b479d09
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 831350b3ab54f84236f7f258415aeb782539cdb5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919615"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433755"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>資料行模式設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [資料行模式設定檔要求] 設定選項。 資料行模式設定檔會報告一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。 這個設定檔可協助您識別資料中的問題，例如無效的字串，而且可以建議未來可用於驗證新值的規則運算式。 舉例來說，「美國郵遞區號」資料行的模式設定檔可能會產生規則運算式 \d{5}-\d{4}、\d{5} 和 \d{9}。 如果您看見其他規則運算式，表示您的資料可能包含無效或格式錯誤的值。  
@@ -111,7 +111,7 @@ ms.locfileid: "84919615"
  **RequestID**  
  輸入描述性名稱，以便識別這個設定檔要求。 一般而言，您不需要變更自動產生的值。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **MaxNumberOfPatterns**  
  指定您想讓設定檔計算的模式數目上限。 這個選項的預設值為 10。 最大值為 100。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "84919615"
   
  如需詳細資訊，請參閱本主題前面的「了解分隔符號和符號的使用方式」。  
   
- **標點符號**  
+ **符號**  
  列出應該保留成為模式一部分的符號。 範例可能包括 "/" (代表日期)、":" (代表時間) 和 ‘\@’ (代表電子郵件地址)。 根據預設，**符號**清單包含下列字元： `,.;:-"'` ~ =&/@！？（） <> [] {} | # * ^% '。  
   
  如需詳細資訊，請參閱本主題前面的「了解分隔符號和符號的使用方式」。  

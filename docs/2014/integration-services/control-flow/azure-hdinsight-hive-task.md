@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afphivetask.f1
 - sql11.dts.designer.afphivetask.f1
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 428677947f864175c97c52ed2687c4ffcf952703
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5905dee4a7a195a16d217b28b59cc10bb74dd9a9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919904"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433875"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Azure HDInsight Hive 工作
 使用 **Azure HDInsight Hive 工作** ，在 Azure HDInsight 叢集上執行 Hive 指令碼。
