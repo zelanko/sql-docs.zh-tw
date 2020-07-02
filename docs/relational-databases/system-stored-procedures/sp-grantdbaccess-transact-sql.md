@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 3b88badb8b1852617d9edd8acd31f2c19258cca7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85ab6ead295b4459890a61deccdac3dc2775033a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304861"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646010"
 ---
 # <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   將資料庫使用者加入目前資料庫中。  
   
@@ -43,9 +43,9 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @loginame = ] 'login_ '`這是要對應至新資料庫使用者的 Windows 群組[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、windows 登入或登入名稱。 Windows 群組和 windows 登入的名稱必須以*網域*\\*login*格式的 windows 功能變數名稱加以限定。例如， **LONDON\Joeb**。 登入不能已對應至資料庫中的使用者。 *登*入是**sysname**，沒有預設值。  
+`[ @loginame = ] 'login_ '`這是要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對應至新資料庫使用者的 windows 群組、windows 登入或登入名稱。 Windows 群組和 windows 登入的名稱必須以*domain*login 格式的 windows 功能變數名稱限定，例如 \\ *login* **LONDON\Joeb**。 登入不能已對應至資料庫中的使用者。 *登*入是**sysname**，沒有預設值。  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``這是新資料庫使用者的名稱。 *name_in_db*是輸出變數，其資料類型為**sysname**，預設值為 Null。 如果未指定，則會使用*登*入。 如果指定為具有 Null 值的輸出變數， ** \@name_in_db**會設定為*login*。 *name_in_db*不能已存在於目前的資料庫中。  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``這是新資料庫使用者的名稱。 *name_in_db*是輸出變數，其資料類型為**sysname**，預設值為 Null。 如果未指定，則會使用*登*入。 如果指定為具有 Null 值的輸出變數， ** \@ name_in_db**會設定為*login*。 *name_in_db*不能已存在於目前的資料庫中。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -59,7 +59,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
  需要**db_owner**固定資料庫角色或**db_accessadmin**固定資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用`CREATE USER` ，將 Windows 登`Edmonds\LolanSo`入的資料庫使用者加入目前資料庫中。 新使用者名叫 `Lolan`。 這是建立資料庫使用者的慣用方法。  
+ 下列範例會使用 `CREATE USER` ，將 Windows 登入的資料庫使用者加入 `Edmonds\LolanSo` 目前資料庫中。 新使用者名叫 `Lolan`。 這是建立資料庫使用者的慣用方法。  
   
 ```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  

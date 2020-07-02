@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e790d110fc45708c7aa2be76db3890c8d1bc7f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c966899707c7e37dee82dda9c678b4ac40df026f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834444"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626979"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   將訂閱的相關資訊傳回合併式發行集，發送和提取訂閱都包括在內。 這個預存程序執行於發行集資料庫的發行者端，或訂閱資料庫的重新發行訂閱者端。  
   
@@ -76,9 +76,9 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**status**|**int**|訂閱的狀態：<br /><br /> **0** = 所有作業都在等候啟動<br /><br /> **1** = 一或多個作業正在啟動<br /><br /> **2** = 所有作業都已成功執行<br /><br /> **3** = 至少有一項作業正在執行<br /><br /> **4** = 所有作業都已排程且閒置<br /><br /> **5** = 在上一次失敗之後，至少有一個作業嘗試執行<br /><br /> **6** = 至少有一項作業無法成功執行|  
 |**subscriber_type**|**int**|訂閱者的類型。|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> **0** = 推播<br /><br /> **1** = 提取<br /><br /> **2** = 兩者|  
-|**優先順序**|**float （8）**|表示訂閱優先權的數字。|  
+|**priority**|**float （8）**|表示訂閱優先權的數字。|  
 |**sync_type**|**tinyint**|訂閱同步處理類型。|  
-|**描述**|**nvarchar(255)**|這項合併訂閱的簡要描述。|  
+|**description**|**nvarchar(255)**|這項合併訂閱的簡要描述。|  
 |**merge_jobid**|**binary(16)**|合併代理程式的作業識別碼。|  
 |**full_publication**|**tinyint**|這是指訂閱完整或篩選發行集。|  
 |**offload_enabled**|**bit**|指定是否已將複寫代理程式的卸載執行設成執行於訂閱者端。 如果是 NULL，就是執行於發行者端。|  

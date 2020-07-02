@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 957bbdc43c0f0adf3a545fee76e9f69df130d8f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81237214608b6fb0c04fa0857203d0488db375ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633549"
 ---
 # <a name="xp_grantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權授與 Windows 群組或使用者。  
   
@@ -42,9 +42,9 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @loginame = ] 'login'`這是要加入的 Windows 使用者或組名。 Windows 使用者或群組必須以*網域*\\*使用者*格式的 windows 功能變數名稱加以限定。 *login*是**sysname**，沒有預設值。  
+`[ @loginame = ] 'login'`這是要加入的 Windows 使用者或組名。 Windows 使用者或群組必須以*網域*使用者格式的 windows 功能變數名稱加以限定 \\ * *。 *login*是**sysname**，沒有預設值。  
   
-`[ @logintype = ] 'logintype'`這是要被授與存取權之登入的安全性層級。 *logintype*是**Varchar （5）**，預設值是 Null。 只有系統**管理員**可以指定。 如果**指定 admin** ，則會將存取權授[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與*登*入，並將其新增為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
+`[ @logintype = ] 'logintype'`這是要被授與存取權之登入的安全性層級。 *logintype*是**Varchar （5）**，預設值是 Null。 只有系統**管理員**可以指定。 如果指定**admin** ，則會將存取權授與*登*入，並將其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新增為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e228f2a2363cab777c2b7ae44185e3c215e8f93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116774"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633699"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   提供本機 Microsoft Windows 群組的清單或在特定 Windows 網域中定義的全域群組清單。  
   
@@ -53,9 +53,9 @@ xp_enumgroups [ 'domain_name' ]
 |**加以**|**sysname**|Windows 提供的 Windows 群組描述|  
   
 ## <a name="remarks"></a>備註  
- 如果*domain_name*是實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行所在之 Windows 電腦的名稱，或未指定功能變數名稱， **xp_enumgroups**會從執行的電腦列舉本機群組[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 如果*domain_name*是實例執行所在之 Windows 電腦的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或未指定功能變數名稱， **xp_enumgroups**會從執行的電腦列舉本機群組 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- **xp_enumgroups**當的實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在 Windows 98 上執行時，無法使用 xp_enumgroups。  
+ 當的實例正在 Windows 98 上執行時，無法使用**xp_enumgroups** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="permissions"></a>權限  
  需要**master**資料庫中**db_owner**固定資料庫角色的成員資格，或**系統管理員（sysadmin** ）固定伺服器角色的成員資格。  

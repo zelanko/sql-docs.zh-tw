@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40eaf88f2bd0824d133571e53fd4d9b9831454b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646532"
 ---
 # <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   加入維護計畫和傳回計畫識別碼。  
   
@@ -47,7 +47,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="arguments"></a>引數  
 `[ @plan_name = ] 'plan_name'`指定要加入之維護計畫的名稱。 *plan_name*為**Varchar （128）**。  
   
- *plan_id* ** @plan_id = '** plan_id **'**  
+ ** @plan_id = '** *plan_id* **'**  
  指定維護計畫的識別碼。 *plan_id*是**uniqueidentifier**。  
   
 ## <a name="return-code-values"></a>傳回碼值  

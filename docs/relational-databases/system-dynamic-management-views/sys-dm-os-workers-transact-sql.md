@@ -20,15 +20,15 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf694bcd82d57b0c021797677674ceb418f875a2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3534afe09635fdc626c51b63469c801a0c3ac418
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648600"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   針對系統中每一個工作者，各傳回一個資料列。 如需背景工作角色的詳細資訊，請參閱[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。 
   
@@ -58,11 +58,11 @@ ms.locfileid: "82811440"
 |exception_severity|**int**|這個工作者遇到之最後例外狀況的嚴重性。|  
 |exception_address|**varbinary(8)**|擲出例外狀況的程式碼位址|  
 |affinity|**bigint**|工作者的執行緒相似性。 符合 sys.databases 中的執行緒親[和性 dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)。|  
-|State|**nvarchar(60)**|工作者狀態。 可以是下列值之一：<br /><br /> INIT = 目前正在初始化的工作者。<br /><br /> RUNNING = 工作者目前以非先佔式或先佔式執行。<br /><br /> RUNNABLE = 工作者準備在排程器執行。<br /><br /> SUSPENDED = 工作者目前暫停，等待事件傳送信號給它。|  
+|state|**nvarchar(60)**|工作者狀態。 可以是下列其中一個值：<br /><br /> INIT = 目前正在初始化的工作者。<br /><br /> RUNNING = 工作者目前以非先佔式或先佔式執行。<br /><br /> RUNNABLE = 工作者準備在排程器執行。<br /><br /> SUSPENDED = 工作者目前暫停，等待事件傳送信號給它。|  
 |start_quantum|**bigint**|此工作者目前執行的開始時間 (以毫秒為單位)。|  
 |end_quantum|**bigint**|此工作者目前執行的結束時間 (以毫秒為單位)。|  
 |last_wait_type|**nvarchar(60)**|最後等待的類型。 如需等候類型的清單，請參閱[dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
-|return_code|**int**|從最後等待傳回值。 可以是下列值之一：<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|return_code|**int**|從最後等待傳回值。 可以是下列其中一個值：<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|僅供內部使用。|  
 |max_quantum|**bigint**|僅供內部使用。|  
 |boost_count|**int**|僅供內部使用。|  

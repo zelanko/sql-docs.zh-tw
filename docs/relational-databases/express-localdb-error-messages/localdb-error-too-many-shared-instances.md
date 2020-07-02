@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: c1595263-6264-4a43-9535-5eb76ece3a57
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 86a76c02f6fbd2d4d47772950fa08af656701ac0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d6927c17ed19c0721f0ec90c4e74664e79287ea8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68011016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641304"
 ---
 # <a name="localdb_error_too_many_shared_instances"></a>LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細資料  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a8cfbee720288fe848a5197e91d5ed0f455cb86
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e4396000a80305429ded759b964c1533d9ebc460
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824787"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633419"
 ---
 # <a name="msrepl_originators-transact-sql"></a>MSrepl_originators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSrepl_originators**資料表會針對產生交易的每個可更新的訂閱者，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80170f22636b9542524f8ce97b6fe8a5e595953c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f89b6d7e2e4843ba252f884f02a6944de57a8326
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827833"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648397"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對事件封裝所公開的每個物件，各傳回一個資料列。 物件可以是下列其中一項：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82827833"
  |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |NAME|**nvarchar(60)**|物件的名稱。 名稱在特定物件類型的封裝內是唯一的。 不可為 Null。|  
-|object_type|**nvarchar(60)**|物件的型別。 object_type 為下列其中一項：<br /><br /> event<br /><br /> 動作<br /><br /> 目標<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 類型<br /><br /> 不可為 Null。|  
+|object_type|**nvarchar(60)**|物件的型別。 object_type 為下列其中一項：<br /><br /> event<br /><br /> 動作<br /><br /> 目標<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> 不可為 Null。|  
 |package_guid|**uniqueidentifier**|公開此動作之封裝的 GUID。 這與 sys.dm_xe_packages.package_id 之間是多對一的關聯性。 不可為 Null。|  
 |description|**nvarchar(256)**|動作的描述。 描述是由封裝作者所設定。 不可為 Null。|  
 |capabilities|**int**|描述此物件之功能的點陣圖。 可為 Null。|  

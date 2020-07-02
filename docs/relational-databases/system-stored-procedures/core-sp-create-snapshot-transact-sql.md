@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4ba72a35ba3b8339a1ebc919327ce353b2c7697
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831845"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646939"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在管理資料倉儲的 core.snapshots 檢視表中，插入資料列。 每次上傳封裝開始將資料上傳至管理資料倉儲時，就會呼叫這個程序。  
   
@@ -60,7 +60,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  收集組的執行個體名稱。 *named_instance*是**sysname**，沒有預設值。  
   
  [ @log_id =] *log_id*  
- 在收集資料的伺服器上對應至收集組事件記錄檔的唯一識別碼。 *log_id*是**Bigint** ，沒有預設值。 若要取得*log_id*的值，請在 msdb 資料庫中查詢 dbo. syscollector_execution_log view。  
+ 在收集資料的伺服器上對應至收集組事件記錄檔的唯一識別碼。 *log_id*是**Bigint** ，沒有預設值。 若要取得*log_id*的值，請在 msdb 資料庫中查詢 dbo.syscollector_execution_log view。  
   
  [ @snapshot_id =] *snapshot_id*  
  插入至「核心快照集」中的資料列之唯一識別碼。 *snapshot_id*是**int** ，且會當做 OUTPUT 傳回。  

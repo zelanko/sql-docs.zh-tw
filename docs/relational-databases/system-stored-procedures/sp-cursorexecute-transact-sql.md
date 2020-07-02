@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3152e180ceb1681f259f0b1cfcfbccce224a68c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3da197547fcc0b08cb1154c6f32b11a65247304e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646263"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   根據 sp_cursorprepare 所建立的執行計畫來建立及擴展資料指標。 此程式與 sp_cursorprepare 結合，具有與 sp_cursoropen 相同的功能，但會分割成兩個階段。 sp_cursorexecute 的叫用方式是在表格式資料流程（TDS）封包中指定 ID = 4。  
   

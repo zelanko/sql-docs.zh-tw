@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e26fa9b22578d91636eb554c75a55f184869d529
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ec2f258b02df154c2c629f19f8ea99f1a3950d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046207"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647366"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   設定記錄傳送的次要資料庫。  
   
@@ -55,7 +55,7 @@ sp_add_log_shipping_secondary_database
 ## <a name="arguments"></a>引數  
 `[ @secondary_database = ] 'secondary_database'`這是次要資料庫的名稱。 *secondary_database*是**sysname**，沒有預設值。  
   
-`[ @primary_server = ] 'primary_server'`記錄傳送設定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中之主要實例的名稱。 *primary_server*是**sysname** ，不能是 Null。  
+`[ @primary_server = ] 'primary_server'`記錄傳送設定中之主要實例的名稱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。 *primary_server*是**sysname** ，不能是 Null。  
   
 `[ @primary_database = ] 'primary_database'`這是主伺服器上的資料庫名稱。 *primary_database*是**sysname**，沒有預設值。  
   
@@ -77,7 +77,7 @@ sp_add_log_shipping_secondary_database
   
 `[ @buffer_count = ] 'buffer_count'`備份或還原作業所用的緩衝區總數。 *buffer_count*是**int** ，預設值為-1。  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]向備份裝置發出的最大輸入或輸出要求大小（以位元組為單位）。 *max_transfersize*是**int** ，而且可以是 Null。  
+`[ @max_transfer_size = ] 'max_transfer_size'`向備份裝置發出的最大輸入或輸出要求大小（以位元組為單位） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *max_transfersize*是**int** ，而且可以是 Null。  
   
 `[ @restore_threshold = ] 'restore_threshold'`在產生警示之前，還原作業之間允許經過的分鐘數。 *restore_threshold*是**int** ，而且不能是 Null。  
   
@@ -108,7 +108,7 @@ sp_add_log_shipping_secondary_database
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  
- 這個範例說明如何使用**sp_add_log_shipping_secondary_database**預存程式，在記錄傳送設定中，將資料庫**LogShipAdventureWorks**當做次要資料庫加入至主伺服器[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tribeca 有上的主資料庫。  
+ 這個範例說明如何使用**sp_add_log_shipping_secondary_database**預存程式，在記錄傳送設定中，將資料庫**LogShipAdventureWorks**當做次要資料庫加入至 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 主伺服器 tribeca 有上的主資料庫。  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_database   

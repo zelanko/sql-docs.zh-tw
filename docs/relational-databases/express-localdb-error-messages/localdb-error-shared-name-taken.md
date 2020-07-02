@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: f679fe4e-0ed1-4e2c-8fe1-e6b3d55c8d42
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9f53c220dfa53675e59416de4615415006fac08c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9827736f197e31cb30ce807070609499f5004737
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68011117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641429"
 ---
 # <a name="localdb_error_shared_name_taken"></a>LOCALDB_ERROR_SHARED_NAME_TAKEN
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細資料  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7550a640b723e77f3bfbc9b3473e762962ae2da3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820595"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646415"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   要求定點更新。 這個程序會針對資料指標的提取緩衝區內的一個或多個資料列執行作業。 sp_cursor 的叫用方式是在表格式資料流程（TDS）封包中指定 ID = 1。  
   
@@ -89,7 +89,7 @@ sp_cursor  cursor, optype, rownum, table
  *table*  
  當資料指標定義牽涉到聯結或不明確的資料行名稱由*value*參數傳回時，用來識別*optype*適用之資料表的資料表名稱。 如果未指定特定的資料表，預設值為 FROM 子句內的第一個資料表。 *table*是需要字串輸入值的選擇性參數。 此字串可以指定為任何字元或 UNICODE 資料類型。 *資料表*可以是多部分資料表名稱。  
   
- *值*  
+ *value*  
  用來插入或更新值。 *值*字串參數僅適用于 UPDATE 和 INSERT *optype*值。 此字串可以指定為任何字元或 UNICODE 資料類型。  
   
 > [!NOTE]  
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  如果 \< 指定了更新資料表名稱>，將會忽略為*table*參數指定的任何值。  
+>  如果 \<table name> 已指定 UPDATE，則會忽略為*table*參數指定的任何值。  
   
  當使用多個參數時，第一個參數必須是以下格式的字串：  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- 在此情況下，在已建立的 \< update 語句中，資料表名稱> 是*資料表*參數所指定或預設的。  
+ 在此情況下， \<table name> 結構化 update 語句中的是由*table*參數指定或預設為的。  
   
  如果是 INSERT：  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  如果指定了 INSERT * \< table name>* ，將會忽略為*table*參數指定的任何值。  
+>  如果 *\<table name>* 指定 INSERT，將會忽略為*table*參數指定的任何值。  
   
  當使用多個參數時，第一個參數必須是以下格式的字串：  
   
@@ -168,7 +168,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- 除非在指定 VALUES 的情況下，此時最後一個運算式後面必須有尾端 ")"。 在此情況下，在已建立的 UPDATE 語句中， * \< 資料表名稱>* 是*資料表*參數所指定或預設的。  
+ 除非在指定 VALUES 的情況下，此時最後一個運算式後面必須有尾端 ")"。 在此情況下， *\<table name>* 結構化 UPDATE 語句中的是由*table*參數指定或預設為的。  
   
 > [!NOTE]  
 >  可以將一個參數當做具名參數來提交，也就是 "`@VALUES`"。 在此情況下，無法使用其他具名參數。  

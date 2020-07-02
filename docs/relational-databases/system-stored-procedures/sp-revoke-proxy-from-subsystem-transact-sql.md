@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a6654fb7bd83f3c247c972c3c044af7b0a2d932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645434"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   撤銷 Proxy 的子系統存取權  
   
@@ -51,7 +51,7 @@ sp_revoke_proxy_from_subsystem
   
 |值|描述|  
 |-----------|-----------------|  
-|**2**|ActiveX Script<br /><br /> ** \* \*重要\*事項**在未來版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，將會從 Agent 中移除 ActiveX 腳本子系統。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
+|**2**|ActiveX Script<br /><br /> ** \* \* 重要 \* 事項 \* ** ：在未來版本的中，將會從 Agent 中移除 ActiveX 腳本子系統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
 |**3**|作業系統 (CmdExec)|  
 |**4**|複寫快照集代理程式|  
 |**5**|複寫記錄讀取器代理程式|  
@@ -83,7 +83,7 @@ sp_revoke_proxy_from_subsystem
  撤銷對子系統的存取權，並不會變更 Proxy 所指定之主體的權限。  
   
 > [!NOTE]  
->  若要判斷哪些作業步驟參照 proxy，請以滑鼠右鍵**按一下 [** **SQL Server Agent** ] 底下的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][proxy] 節點，然後按一下 [**屬性**]。 在 [ **Proxy 帳戶屬性**] 對話方塊中，選取 [**參考**] 頁面，以查看參考此 Proxy 的所有作業步驟。  
+>  若要判斷哪些作業步驟參照 proxy，請以滑鼠右鍵**按一下 [** **SQL Server Agent** ] 底下的 [proxy] 節點，然後 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 按一下 [**屬性**]。 在 [ **Proxy 帳戶屬性**] 對話方塊中，選取 [**參考**] 頁面，以查看參考此 Proxy 的所有作業步驟。  
   
 ## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_revoke_proxy_from_subsystem**。  

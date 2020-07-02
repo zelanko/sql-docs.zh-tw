@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac9221ee6a2e9b50cec8800ebb4e611211634b60
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ecb59448ff76114d25dbb8422cf7dc1fefc44e15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828309"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640263"
 ---
 # <a name="sp_mergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   執行給定資料列的虛擬更新，以便在下次合併期間重新傳送它。 這個預存程序可執行於發行集資料庫的發行者端，或訂閱資料庫的訂閱者端。  
   
@@ -47,7 +47,7 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ## <a name="remarks"></a>備註  
  **sp_mergedummyupdate**用於合併式複寫中。  
   
- 如果您自行撰寫複寫衝突檢視器的替代方法（Wzcnflct）， **sp_mergedummyupdate**會很有用。  
+ 如果您自行撰寫複寫衝突檢視器（Wzcnflct.exe）的替代方案， **sp_mergedummyupdate**會很有用。  
   
 ## <a name="permissions"></a>權限  
  只有**db_owner**固定資料庫角色的成員，才能夠執行**sp_mergedummyupdate**。  

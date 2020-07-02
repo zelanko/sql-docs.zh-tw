@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: e33f3809-0175-4d83-b1b7-b29d23238846
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 85de85cae9ee90e5a3a28b3a3b069ae76553237d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b97623e425600484db78afe2cdd629dc3353ad28
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640933"
 ---
 # <a name="localdb_error_xevent_failed"></a>LOCALDB_ERROR_XEVENT_FAILED
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細資料  
   

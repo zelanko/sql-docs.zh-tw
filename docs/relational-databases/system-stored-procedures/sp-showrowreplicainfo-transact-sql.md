@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 74a5865151cb283aed16efe8ef2ea2908a9f56c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626630"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   顯示有關資料表中之資料列的資訊，用來作為合併式複寫的發行項。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -56,7 +56,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|建立這個項目的資料庫名稱。|  
 |**db_nickname**|**binary(6)**|建立這個項目的資料庫暱稱。|  
 |**version**|**int**|項目的版本。|  
-|**current_state**|**Nvarchar （9）**|傳回資料列目前狀態的相關資訊。<br /><br /> **y** -row 資料代表資料列的目前狀態。<br /><br /> **n** -row 資料不代表資料列的目前狀態。<br /><br /> ** \< n/a>** -不適用。<br /><br /> ** \< 未知的>** -無法判斷目前的狀態。|  
+|**current_state**|**Nvarchar （9）**|傳回資料列目前狀態的相關資訊。<br /><br /> **y** -row 資料代表資料列的目前狀態。<br /><br /> **n** -row 資料不代表資料列的目前狀態。<br /><br /> **\<n/a>**-不適用。<br /><br /> **\<unknown>**-無法判斷目前的狀態。|  
 |**rowversion_table**|**Nchar （17）**|指出資料列版本是否儲存在[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)資料表或[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)資料表中。|  
 |**加以**|**nvarchar(255)**|這個資料列版本項目的其他相關資訊。 這個欄位通常是空的。|  
   

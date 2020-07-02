@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7da7068d-6388-465a-b708-a2f27ded1efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 128d62aceec5a847e721d6227372e1ff115706ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65cafaf2a4ea26b620bbcf5932031a8781cb9a14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647017"
 ---
 # <a name="change-data-capture-stored-procedures-transact-sql"></a>異動資料擷取預存程序 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   異動資料擷取會以便利的關聯式格式提供在啟用資料表上發生之資料操作語言 (DML) 活動的歷程記錄。 下列預存程序可用來設定異動資料擷取、管理異動資料擷取代理程式作業，以及將目前的中繼資料提供給變更資料取用者。  
   

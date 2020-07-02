@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9bf35753bbe72fef2211485ec723bfa42ba08eb7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 50dd13235c0b583b7e3c3f5869b9df60648f1549
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831386"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648837"
 ---
 # <a name="sysserver_events-transact-sql"></a>sys.server_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對伺服器層級事件通知或伺服器層級 DDL 觸發程序所引發的每個事件，各包含一個資料列。 **Object_id**和**類型**的資料行可唯一識別伺服器事件。  
 
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|引發之伺服器層級事件通知或伺服器層級 DDL 觸發程序的識別碼。|  
+|object_id|**int**|引發之伺服器層級事件通知或伺服器層級 DDL 觸發程序的識別碼。|  
 |**type**|**int**|導致事件通知或 DDL 觸發程序引發的事件類型。|  
 |**type_desc**|**nvarchar(60)**|導致 DDL 觸發程序或事件通知引發的事件描述。|  
 |**event_group_type**|**int**|觸發程序或事件通知建立所在的事件群組，如果未在事件群組上建立則為 null。|  

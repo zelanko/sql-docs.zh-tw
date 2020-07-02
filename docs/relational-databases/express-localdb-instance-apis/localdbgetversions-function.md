@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5263215c8ccac3d9337f415fe9c279bb3f3ad3ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1548b23aceb5eb4f622ada1289df88ff790c8645
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091213"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640848"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 函數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   傳回電腦上所有可用的 SQL Server Express LocalDB 版本。  
   
  **標頭檔：** sqlncli。h  
@@ -42,7 +42,7 @@ ms.locfileid: "68091213"
  [輸入/輸出]在輸入時，會保留*pVersionNames*緩衝區中版本的插槽數目。   
 在輸出時，保存現有 LocalDB 版本的數目。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

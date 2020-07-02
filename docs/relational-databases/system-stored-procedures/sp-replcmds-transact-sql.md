@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c11132450e88326740af485a7293dd5a27b8326b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645648"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   傳回含複寫標示之交易的命令。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -48,7 +48,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |-----------------|---------------|-----------------|  
 |**發行項識別碼**|**int**|發行項的識別碼。|  
 |**partial_command**|**bit**|指出這是否為部分命令。|  
-|**命令**|**Varbinary （1024）**|命令值。|  
+|**command**|**Varbinary （1024）**|命令值。|  
 |**xactid**|**binary(10)**|交易識別碼。|  
 |**xact_seqno**|**varbinary(16)**|交易序號。|  
 |**publication_id**|**int**|發行集的識別碼。|  

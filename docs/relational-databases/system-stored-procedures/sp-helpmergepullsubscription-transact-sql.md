@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af38463c5104da636d04f961b0cee5210369e38d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e0abc3934e1cfec8e37a4b1f3060a7aeef38a06e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834494"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626938"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回存在於訂閱者端之提取訂閱的相關資訊。 這個預存程序執行於訂閱資料庫的訂閱者端。  
   
@@ -61,9 +61,9 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**status**|**int**|訂閱狀態：<br /><br /> **0** = 非使用中的訂用帳戶<br /><br /> **1** = 使用中的訂用帳戶<br /><br /> **2** = 已刪除的訂用帳戶<br /><br /> **3** = 卸離訂閱<br /><br /> **4** = 附加的訂用帳戶<br /><br /> **5** = 訂用帳戶已標示為要重新初始化，使用上傳<br /><br /> **6** = 附加訂閱失敗<br /><br /> **7** = 從備份還原的訂用帳戶|  
 |**subscriber_type**|**int**|訂閱者的類型：<br /><br /> **1** = 全域<br /><br /> **2** = 本機<br /><br /> **3** = 匿名|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> **0** = 推播<br /><br /> **1** = 提取<br /><br /> **2** = 匿名|  
-|**優先順序**|**float （8）**|訂閱優先權。 此值必須小於**100.00**。|  
+|**priority**|**float （8）**|訂閱優先權。 此值必須小於**100.00**。|  
 |**sync_type**|**tinyint**|訂閱同步處理類型：<br /><br /> **1** = 自動<br /><br /> **2** = 不使用快照集。|  
-|**描述**|**nvarchar(255)**|這項提取訂閱的簡要描述。|  
+|**description**|**nvarchar(255)**|這項提取訂閱的簡要描述。|  
 |**merge_jobid**|**binary(16)**|合併代理程式的作業識別碼。|  
 |**enabled_for_syncmgr**|**int**|是否能夠利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronization Manager 同步處理訂閱。|  
 |**last_updated**|**Nvarchar （26）**|合併代理程式上次成功進行訂閱同步處理的時間。|  

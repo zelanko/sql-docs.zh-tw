@@ -20,15 +20,15 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50385161b417d02db2dc44ad1172910d31f198b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dbeed2c84db6a94237df6878fba688c6ed08a66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625942"
 ---
 # <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 從伺服器上的受信任元件清單中卸載元件。
 
@@ -43,7 +43,7 @@ sp_drop_trusted_assembly
 
 ## <a name="arguments"></a>引數
 
-[ @hash = ]'*value*'  
+[ @hash =] '*值*'  
 要從伺服器的信任元件清單中卸載之元件的 SHA2_512 雜湊值。 當 clr strict 安全性啟用時，即使元件不帶正負號或資料庫未標示為值得信任，也可能會載入受信任的元件。
 
 ## <a name="remarks"></a>備註  
@@ -52,7 +52,7 @@ sp_drop_trusted_assembly
 
 ## <a name="permissions"></a>權限
 
-需要固定伺服器角色`sysadmin`或`CONTROL SERVER`許可權中的成員資格。
+需要 `sysadmin` 固定伺服器角色或許可權中的成員資格 `CONTROL SERVER` 。
 
 ## <a name="examples"></a>範例  
 

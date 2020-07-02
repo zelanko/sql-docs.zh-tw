@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 965fc3fe168ecd6027c2c1fc2ebad92bc334e383
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e1b8659d7828feaab219ce5c2b883137f252314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816795"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645370"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   產生腳本，其中包含要在訂閱者端針對可更新訂閱套用的**sp_addsynctrigger**呼叫。 發行集中的每個發行項都有一個**sp_addsynctrigger**呼叫。 產生的腳本也會包含**sp_addqueued_artinfo**呼叫，以建立處理佇列發行集所需的**MSsubsciption_articles**資料表。 這個預存程序執行於發行集資料庫的發行者端。  
   

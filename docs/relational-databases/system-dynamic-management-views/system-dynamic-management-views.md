@@ -24,15 +24,15 @@ ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05d1cde6aa017bdfa34ed6efd724f258e16f9aeb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 898910181aa15ee00658f29fd3551454453ec17f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828959"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647992"
 ---
 # <a name="system-dynamic-management-views"></a>系統動態管理檢視
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   動態管理檢視和函數傳回伺服器狀態資訊，這項資訊可用來監視伺服器執行個體的健全狀況、診斷問題和調整效能。  
   

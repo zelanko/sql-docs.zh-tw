@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3d1c93bb6fecea955e139688b1a8f4f2c1dccc75
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25d3c2133ee02bc25a869ad3a465081de4d7d38e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634496"
 ---
 # <a name="sp_help_log_shipping_primary_secondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   這個預存程序會傳回給定主要資料庫的所有次要資料庫的相關資訊。  
   
@@ -49,7 +49,7 @@ sp_help_log_shipping_primary_secondary
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
-|**secondary_server**|記錄傳送設定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中之次要實例的名稱。|  
+|**secondary_server**|記錄傳送設定中之次要實例的名稱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。|  
 |**secondary_database**|記錄傳送組態中之次要資料庫的名稱。|  
   
 ## <a name="remarks"></a>備註  
@@ -59,7 +59,7 @@ sp_help_log_shipping_primary_secondary
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  
- 這個範例說明如何使用**sp_help_log_shipping_primary_secondary**來抓取與主資料庫[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]相關聯的次要資料庫清單。  
+ 這個範例說明如何使用**sp_help_log_shipping_primary_secondary**來抓取與主資料庫相關聯的次要資料庫清單 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
   
 ```  
 EXECUTE master.dbo.sp_help_log_shipping_primary_secondary @primary_database=N'AdventureWorks';  

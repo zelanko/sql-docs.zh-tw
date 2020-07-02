@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: 12adc059-ad8e-4bc9-9693-79cc3e7eaff0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a85e9253eab47e445943e2d0a49972bd86f4b1b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ed1177b91f03cbb8c73ef4be4e9359d5fb149db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641245"
 ---
 # <a name="localdb_error_version_requested_not_installed"></a>LOCALDB_ERROR_VERSION_REQUESTED_NOT_INSTALLED
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細資料  
   

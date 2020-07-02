@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d07956f6-9543-4476-9426-536f95991150
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0941ca2f5fc1a05397dd3dbec5e0dd27c6e5d815
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b10ac8c1ac9ccba804b892617df0b8d6c0d2f14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637484"
 ---
 # <a name="handling-large-object-lob-parameters-in-the-clr"></a>處理 CLR 中的大型物件 (LOB) 參數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用**SqlBytes**和**SqlChars** ，分別傳遞大型物件（LOB）二進位類型（**Varbinary （max）**）和 LOB 字元類型（**Nvarchar （max）**）參數。 這些類型允許將 LOB 值從資料庫串流到 Common Language Runtime (CLR) 常式，而非將整個值複製到 Managed 空間。 **SqlBinary**和**SqlString**只能用於小型二進位和字元字串值。  
   
 ## <a name="see-also"></a>另請參閱  

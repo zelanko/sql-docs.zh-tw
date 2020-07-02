@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c88a4ac30ba51cdfdbd9a9d711a141044d099a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937919"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634543"
 ---
 # <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   擷取主要資料庫設定。  
   
@@ -60,7 +60,7 @@ sp_help_log_shipping_primary_database
 |**backup_compression**|指出記錄傳送設定是否使用[備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。<br /><br /> **0** = 已停用。 永遠不會壓縮記錄備份。<br /><br /> **1** = 已啟用。 一定會壓縮記錄備份。<br /><br /> **2** = 使用 View 的設定，[或設定備份壓縮預設伺服器設定選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。 這是預設值。<br /><br /> 只有 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (或更新版本) 才支援備份壓縮。 在其他版本中，此值一定是 2。|  
 |**backup_job_id**|與主要伺服器上之備份作業相關聯的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業識別碼。|  
 |**monitor_server**|在記錄傳送組態中，用於做為監視伺服器之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體的名稱。|  
-|**monitor_server_security_mode**|用於連接到監視伺服器的安全性模式。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
+|**monitor_server_security_mode**|用於連接到監視伺服器的安全性模式。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  
 |**backup_threshold**|在產生警示之前，備份作業之間所能經歷的時間 (以分鐘為單位)。|  
 |**threshold_alert**|當超出備份臨界值時，所產生的警示。|  
 |**threshold_alert_enabled**|決定是否啟用備份臨界值警示。<br /><br /> **1** = 已啟用。<br /><br /> **0** = 已停用。|  
@@ -76,7 +76,7 @@ sp_help_log_shipping_primary_database
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  
- 這個範例說明如何使用**sp_help_log_shipping_primary_database**來抓取資料庫[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]的主資料庫設定。  
+ 這個範例說明如何使用**sp_help_log_shipping_primary_database**來抓取資料庫的主資料庫設定 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
   
 ```  
 EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks2012';  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbba9ea2f9df7e9a9fd154193c8f52fe904899c7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3fe885be9072f24c18e6115efcf511faea2d8908
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634364"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   報告一份給定操作員的警示清單，或一份給定警示的操作員清單。  
   
@@ -58,7 +58,7 @@ sp_help_notification
   
 `[ @notification_method = ] notification_method`數值，決定要傳回的通知方法資料行。 *notification_method*是**Tinyint**，它可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|電子郵件：只傳回**use_email**的資料行。|  
 |**2**|呼機：只傳回**use_pager**資料行。|  
