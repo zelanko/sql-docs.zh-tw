@@ -3,7 +3,7 @@ title: sys.databases fn_get_audit_file （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c8aeffd66f812b682610ad16abc6c4336b77b9c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: aa14b65d527de3efa82f54212e6668e232197486
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813898"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]    
 
   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器稽核建立的稽核檔案中傳回資訊。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
@@ -51,19 +51,19 @@ fn_get_audit_file ( file_pattern,
     
     這個引數必須同時包含路徑 (磁碟機代號或網路共用位置) 以及可包含萬用字元的檔案名稱。 您可以使用單一星號（*），從 audit 檔案集收集多個檔案。 例如：  
   
-    -   ** \< 路徑 \\>\* ** -收集指定位置中的所有 audit 檔案。  
+    -   **\<path>\\\***-收集指定位置中的所有 audit 檔案。  
   
-    -   ** \< path> \ LOGINSAUDIT_ {GUID}***-收集所有具有指定之名稱和 GUID 配對的 audit 檔案。  
+    -   ** \<path> \ LOGINSAUDIT_ {GUID}***-收集所有具有指定之名稱和 GUID 配對的 audit 檔案。  
   
-    -   ** \< path> \ LOGINSAUDIT_ {GUID} _00_29384。 .Sqlaudit** -收集特定的 audit 檔案。  
+    -   ** \<path> \ LOGINSAUDIT_ {GUID} _00_29384. .Sqlaudit** -收集特定的 audit 檔案。  
   
  - **Azure SQL Database**：
  
     這個引數是用來指定 blob URL （包括儲存體端點和容器）。 雖然它不支援星號萬用字元，但是您可以使用部分檔案（blob）名稱前置詞（而不是完整 blob 名稱）來收集以這個前置詞開頭的多個檔案（blob）。 例如：
  
-      - ** \< Storage_endpoint \> / \< 容器 \> / \< ServerName \> / \< DatabaseName \> - / **收集特定資料庫的所有 audit files （blob）。    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/**-收集特定資料庫的所有 audit 檔案（blob）。    
       
-      - ** \< Storage_endpoint \> / \< Container \> / \< ServerName \> / \< DatabaseName \> / \< AuditName \> / \< CreationDate \> / \< FileName \> . .xel** -收集特定的 audit file （blob）。
+      - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . .xel** -收集特定的 audit 檔案（blob）。
   
 > [!NOTE]  
 >  如果傳遞路徑而沒有包含檔案名稱模式，則會產生錯誤。  
@@ -83,7 +83,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>傳回的資料表  
  下表描述這個函數可傳回的稽核檔案內容。  
   
-| 資料行名稱 | 類型 | Description |  
+| 資料行名稱 | 類型 | 描述 |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | 動作的識別碼。 不可為 Null。 |  
 | additional_information | **nvarchar(4000)** | 只套用到單一事件的唯一資訊會以 XML 形式傳回。 少量的可稽核動作有包含這類資訊。<br /><br /> 針對具有相關聯 TSQL 堆疊的動作，以 XML 格式顯示 TSQL 堆疊的單一層級。 此 XML 格式為：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 表示框架的目前巢狀層級。 模組名稱會以三部分格式表示 (database_name、schema_name 和 object_name)。  模組名稱將會被剖析，以轉義不正確 xml 字元 `'\<'` ，例如、 `'>'` 、 `'/'` 、 `'_x'` 。 它們會被轉義為 `_xHHHH\_` 。 HHHH 代表字元的四位數十六進位 UCS-2 碼。<br /><br /> 可為 Null。 當此事件未報告其他資訊時，則會傳回 NULL。 |
@@ -102,8 +102,8 @@ fn_get_audit_file ( file_pattern,
 | event_time | **datetime2** | 可稽核的動作引發時的日期和時間。 不可為 Null。 |  
 | file_name | **varchar(260)** | 記錄來自之稽核記錄檔的路徑和名稱。 不可為 Null。 |
 | is_column_permission | **bit** | 指出這是否為資料行層級權限的旗標。 不可為 Null。 當 permission_bitmask = 0 時會傳回 0。<br /> 1 = true<br /> 0 = false |
-| object_id | **int** | 稽核發生所在之實體的識別碼。 其中包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 不可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 0。 例如驗證。 |  
-| object_name | **sysname** | 稽核發生所在之實體的名稱。 其中包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 NULL。 例如驗證。 |
+| object_id | **int** | 稽核發生所在之實體的識別碼。 這包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 不可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 0。 例如驗證。 |  
+| object_name | **sysname** | 稽核發生所在之實體的名稱。 這包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 NULL。 例如驗證。 |
 | permission_bitmask | **varbinary(16)** | 在某些動作中，這就是已授與、拒絕或撤銷的權限。 |
 | response_rows | **bigint** | **適用**于： AZURE SQL DB 和受控實例<br /><br /> 結果集中傳回的資料列數目。 |  
 | schema_name | **sysname** | 動作發生所在的結構描述環境。 可為 Null。 針對在架構外發生的審核傳回 Null。 |  

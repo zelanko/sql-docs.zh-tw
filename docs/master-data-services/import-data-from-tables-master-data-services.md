@@ -11,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6e10a3facdec9b5b412b1c9b93396d2d0a94886e
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 119ee04be796eb58e0661f02e001ac0b1a2e7a85
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812964"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>從資料表匯入資料 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   您可以將大量資料加入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的模型中，也可對模型中的資料進行大量變更。  
   
- **先決條件**  
+ **必要條件**  
   
 -   您必須具有將資料插入 stg.< 的許可權。 \<name>_Leaf，stg.<。 \<name>_Consolidated，stg.<。 \<name>資料庫中 _Relationship 資料表 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
   

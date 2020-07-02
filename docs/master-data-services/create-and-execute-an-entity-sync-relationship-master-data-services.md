@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1036d8b05bf3dfca825f88d562c89dbce7f6b538
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1dee8767cc5d8d975ef327073d5767967207eed2
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729529"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813031"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>建立及執行實體同步關係 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   實體同步是實體版本間單向且可重複的同步處理。 它提供不同模型間共用實體資料的方法。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  建立實體同步關係的必要條件：  
   
 -   您必須擁有存取系統管理功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -80,7 +80,7 @@ ms.locfileid: "73729529"
   
 10. 選取 [隨需同步處理] ****，或選取 [自動同步處理] **** 並設定頻率。  
   
-11. 按一下 [檔案]  。  
+11. 按一下 [檔案] 。  
   
  **執行實體同步關係**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "73729529"
   
 3.  在 [實體同步維護] **** 業面上，選取方格中的同步關係。  
   
-4.  按一下 **[執行]**。  
+4.  按一下 **[執行]** 。  
   
 ## <a name="sync-relationship-information"></a>同步關係資訊  
  對於每個建立的同步關係，會新增含有十個資料行的資料列到方格。 下表描述該資料行。  

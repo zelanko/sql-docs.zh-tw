@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ce0f10316be9aa9f9b2b23a24642d8cd7d0eda1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18c64bacdec9e0d8640b5b5884a6dcaf04f99214
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175140"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813104"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>建立檔案屬性 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立檔案屬性，以使用檔案來擴展屬性值。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
  若要執行此程序：
 
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。
@@ -88,7 +88,7 @@ ms.locfileid: "78175140"
 
 11. (選擇性) 選取 **[啟用變更追蹤]** 以追蹤屬性群組的變更。 如需詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。
 
-12. 按一下 [檔案]  。
+12. 按一下 [檔案] 。
 
 ## <a name="see-also"></a>另請參閱
  [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md) [變更屬性名稱和資料類型 &#40;Master Data Services](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)&#41;[建立以網域為基礎的屬性 &#40;](../master-data-services/create-a-domain-based-attribute-master-data-services.md) Master Data Services&#41;[建立 &#40;Master Data Services 的文字屬性](../master-data-services/create-a-text-attribute-master-data-services.md)&#41;

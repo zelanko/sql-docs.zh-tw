@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ac272f3087d970c22d30fd3d4b9f105855d783f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4437060371cb15daa68df439b9fe4d679710f8f
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728659"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813652"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>變更衍生階層名稱 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更衍生階層的名稱。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -42,7 +42,7 @@ ms.locfileid: "73728659"
   
 4.  選取要重新命名之衍生階層的資料列。  
   
-5.  按一下 **[編輯]**。  
+5.  按一下 **[編輯]** 。  
   
 6.  在 [編輯衍生階層]**** 頁面上，按一下衍生階層名稱旁邊的鉛筆圖示。  
   

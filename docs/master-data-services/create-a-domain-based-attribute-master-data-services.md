@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7bc13897797e8f782a1dbe83401fa658107eb5b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7446ea090bb0776b2a55e7be10e9c35bc566c8b1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813117"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>建立網域屬性 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立網域屬性，以使用實體成員來擴展屬性值。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
  若要執行此程序：
 
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。
@@ -95,9 +95,9 @@ ms.locfileid: "78177388"
 
      如需限制允許的值的資訊，請參閱 Master Data Services 部落格上的 [How to filter Domain Based Attribute drop down lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/)(如何篩選網域屬性下拉式清單)。
 
-12. **選擇性。** 選取 [啟用變更追蹤]**** 以追蹤屬性群組的變更。 如需詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。
+12. **選擇性.** 選取 [啟用變更追蹤]**** 以追蹤屬性群組的變更。 如需詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。
 
-13. 按一下 [檔案]  。
+13. 按一下 [檔案] 。
 
 ## <a name="see-also"></a>另請參閱
  以[網域為基礎的屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md) [建立衍生階層 &#40;Master Data Services](../master-data-services/create-a-derived-hierarchy-master-data-services.md)&#41;[變更屬性名稱和資料類型 &#40;Master Data Services](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)&#41;[刪除屬性 &#40;Master Data Services](../master-data-services/delete-an-attribute-master-data-services.md)&#41;

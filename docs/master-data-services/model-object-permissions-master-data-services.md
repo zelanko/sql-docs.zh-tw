@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0243df5cd71ed667219b3e4e1b4a8ff6d1115f25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56977e8fe5e14a873c0d87588f78132b77816894
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813242"
 ---
 # <a name="model-object-permissions-master-data-services"></a>模型物件權限 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   模型物件權限是強制性的。 這些權限會決定使用者可以在此 UI 的 [總管]**** 功能區域中存取的屬性。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "73727975"
   
  若要授與使用者對 [總管]**** 以外功能區域的存取權，使用者必須是模型系統管理員，因為也需要指派物件模型的系統管理員權限。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
- 在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]使用者介面（UI）中，會在 [**模型**] 索引標籤的 [**使用者和群組的許可權**] 功能區域中指派模型物件使用權限。在此索引標籤上，模型是以樹狀結構表示。 當您將權限指派給樹狀結構中的物件時，底下的所有物件都會繼承該權限。 您可以將權限指派給個別物件來覆寫該項繼承。  
+ 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者介面（UI）中，會在 [**模型**] 索引標籤的 [**使用者和群組的許可權**] 功能區域中指派模型物件使用權限。在此索引標籤上，模型是以樹狀結構表示。 當您將權限指派給樹狀結構中的物件時，底下的所有物件都會繼承該權限。 您可以將權限指派給個別物件來覆寫該項繼承。  
   
  您可以指派模型物件的 [讀取]、[建立]、[更新] 和 [刪除] 或 [拒絕] 權限的組合。 如果您未在 [模型]**** 索引標籤上指派任何權限，使用者就無法在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中檢視任何模型或資料。  
   

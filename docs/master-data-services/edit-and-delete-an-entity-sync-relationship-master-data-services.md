@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92b67b981c5eb7dbd1e05b1d18af291cae78aaa1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813978"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>編輯和刪除實體同步關係 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   實體同步是實體版本間單向且可重複的同步處理。 它提供不同模型間共用實體資料的方法。 您可以編輯和刪除您已建立的同步關係。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  編輯實體同步關係的必要條件。  
   
 -   您必須擁有存取系統管理功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -66,11 +66,11 @@ ms.locfileid: "73728233"
   
 3.  在 [實體同步維護] **** 業面上，選取方格中的同步關係。  
   
-4.  按一下 **[編輯]**。 隨即會在右側顯示面板。  
+4.  按一下 **[編輯]** 。 隨即會在右側顯示面板。  
   
 5.  變更 [頻率]****。 選取 [隨需同步處理] ****，或選取 [自動同步處理] **** 並設定頻率。  
   
-6.  按一下 **[儲存]** 。  
+6.  按一下 [檔案] 。  
   
  **刪除實體同步關係**  
   

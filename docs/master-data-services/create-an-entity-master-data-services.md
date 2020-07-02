@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a43ffa259fd30d7aeaf4e2336780a2b92b2ef289
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 8618b0dfc4488f3862366ac873e8cd38e1086e51
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796391"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813361"
 ---
 # <a name="create-an-entity-master-data-services"></a>建立實體 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立實體以包含成員及其屬性。  
   
@@ -70,11 +70,11 @@ ms.locfileid: "84796391"
 ## <a name="grid-columns"></a>方格資料行  
  對於每個建立的實體，會將含有十三個資料行的資料列加入格線。 以下是資料行。  
   
-|Name|描述|  
+|名稱|描述|  
 |----------|-----------------|  
 |狀態|實體狀態。 當您按一下 [儲存]**** 時，下列影像隨即顯示，指出正在更新實體。<br /><br /> ![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")<br /><br /> 如果建立或編輯實體時發生錯誤，則會顯示下列影像。<br /><br /> ![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")|  
-|Name|實體名稱。|  
-|Description|實體描述。|  
+|名稱|實體名稱。|  
+|描述|實體描述。|  
 |暫存資料表|此資料表的前置名稱用於儲存資料。|  
 |交易記錄類型|實體的交易記錄類型。|  
 |自動建立代碼|指定是否啟用自動建立程式碼。|  

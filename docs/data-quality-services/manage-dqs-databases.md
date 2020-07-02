@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ce7b0239168a0a85e5d0f559b042dac0562ead94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3bf01fad638c5ab88f96f5d438ed6f29b28f93a4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814072"
 ---
 # <a name="manage-dqs-databases"></a>管理 DQS 資料庫
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本節針對 DQS 資料庫提供可執行之資料庫管理活動的相關資訊，如備份/還原或卸離/附加等。  
   

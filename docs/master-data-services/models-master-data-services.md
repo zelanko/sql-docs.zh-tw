@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ba07d02389ed15b93e8a67992514c76f80906224
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 072228f2a0538915b8ad1a657a205a676b159ca2
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84800545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813227"
 ---
 # <a name="models-master-data-services"></a>模型 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   模型是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中最高層級的資料組織。 模型定義主要資料管理方案中的資料結構。 模型包含下列物件：  
   

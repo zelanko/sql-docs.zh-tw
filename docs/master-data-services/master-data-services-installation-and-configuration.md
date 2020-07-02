@@ -2,7 +2,7 @@
 title: 安裝和設定
 description: 瞭解如何在 Windows Server 2012 R2 電腦上安裝 Master Data Services、設定 MDS 資料庫和網站，以及部署範例模型和資料。
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 777d0b497bae5e52c49fb95e1e7ff3e7387ea676
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796279"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834769"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本文說明如何在 Windows Server 2012 R2 電腦上安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 、設定 MDS 資料庫與網站，以及部署範例模型和資料。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 可讓您的組織管理受信任的資料版本。   
   
@@ -90,7 +90,7 @@ ms.locfileid: "84796279"
    
 9. 在 [功能]**** 頁面上，確認已選取下列功能，然後按一下 [下一步]****。 在 [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] 上，[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 需要這些功能。
   
-    |功能|功能|  
+    |特性|特性|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
@@ -130,7 +130,7 @@ ms.locfileid: "84796279"
   
 3.  在 [**資料庫伺服器**] 頁面上，指定 SQL Server 實例。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]新增 SQL Server 受控執行個體的支援。 將**SQL Server 實例**的值設定為 Azure SQL Database 受控實例的主機。 例如： `xxxxxx.xxxxxx.database.windows.net` 。
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]新增 SQL Server 受控執行個體的支援。 將**SQL Server 實例**的值設定為 Azure SQL Database 受控實例的主機。 例如 `xxxxxx.xxxxxx.database.windows.net`。
 
 4. 選取**驗證類型**，然後按一下 [**測試連接**]，確認您可以使用所選驗證類型的認證連接到資料庫。 按 [下一步] 。
 
@@ -204,12 +204,12 @@ ms.locfileid: "84796279"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. 按一下 [套用]。 [組態完成]**** 訊息方塊隨即顯示。 按一下訊息方塊中的 [確定]****，以啟動 Web 應用程式。 網站位址為 [HTTPs://*server name* / *web application*/]。 
+15. 按一下 [套用] 。 [組態完成]**** 訊息方塊隨即顯示。 按一下訊息方塊中的 [確定]****，以啟動 Web 應用程式。 網站位址為 [HTTPs://*server name* / *web application*/]。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
   
-     For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+如需 [Web 組態] 頁面中的設定詳細資訊，請參閱 [Web 組態頁面 &#40;Master Data Services 組態管理員&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)。  
   
  您也可以使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 指定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之相關聯 Web 應用程式與服務的其他設定。 例如，您可以指定載入資料的頻率，或傳送驗證電子郵件的頻率。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
@@ -217,9 +217,7 @@ ms.locfileid: "84796279"
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]包含下列三個範例模型套件。   這些範例模型都含有資料。 **範例模型套件的預設位置是 %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages。**
   
 -   chartofaccounts_en.pkg  
-  
 -   customer_en.pkg  
-  
 -   product_en.pkg  
   
  您可以使用 MDSModelDeploy 工具來部署套件。 MDSModelDeploy 工具的預設位置是 <磁碟機>** \Program Files\Microsoft SQL Server\ 140\Master Data Services\Configuration。  
@@ -248,28 +246,26 @@ ms.locfileid: "84796279"
     >  `MDSModelDeploy listservices`  
     >   
     >  傳回的值清單中的第一個服務值，就是您指定要部署模型的目標。  
-    >
+
     > [!NOTE]
     > 若要深入了解範例模型的中繼資料資訊，請參閱下列位置中的讀我檔案："c:\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration"
-    >
    
      **若要部署 chartofaccounts_en.pkg 範例模型**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package chartofaccounts_en.pkg -model ChartofAccounts -service MDS1  
     ```  
   
      **若要部署 customer_en.pkg 範例模型**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package customer_en.pkg -model Customer -service MDS1  
     ```  
   
      **若要部署 product_en.pkg 範例模型**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package product_en.pkg -model Product -service MDS1  
-  
     ```  
   
      成功部署模型時，即會顯示 [MDSModelDeploy 作業成功完成]**** 訊息。  

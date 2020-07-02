@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e128ba2b53383c83bc58ba66526e9768355e140b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a43fa563892d1c48941c016e661f52e899989daf
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813214"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>系統管理功能區域 (主資料管理員)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [系統管理] 功能區域中，管理員可以建立模型及其所有物件， 也可以建立商務規則，並建立及部署模型封裝。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
-## <a name="model"></a>模型  
+## <a name="model"></a>型號  
  [模型 &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   
  [建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)  

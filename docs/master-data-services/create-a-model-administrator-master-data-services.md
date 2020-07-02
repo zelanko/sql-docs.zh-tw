@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: eacd28629c8e4fdeb9de17147a315b172aa3bbd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a81be69eee7a0fa8ea61b4491a296552aca51ff
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78937696"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814031"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>建立模型管理員 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   當您希望群組或使用者擁有一個或多個模型中所有物件的所有權限時，請在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立模型管理員。  
   
 > [!TIP]  
 >  若要簡化管理，請建立 Windows 或本機群組，並將它設定為模型管理員。 然後不需存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]，您就可以在群組中加入及移除使用者。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [使用者及群組的權限]**** 功能區域的權限。  
@@ -47,7 +47,7 @@ ms.locfileid: "78937696"
   
 5.  (選擇性) 從 **[模型]** 清單中選取模型。  
   
-6.  按一下 **[編輯]**。  
+6.  按一下 **[編輯]** 。  
   
 7.  按一下您要授與權限的模型。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "78937696"
   
 9. 針對您希望群組或使用者成為其管理員的每個模型，完成步驟 7 和 8。  
   
-10. 按一下 [檔案]  。  
+10. 按一下 [檔案] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   

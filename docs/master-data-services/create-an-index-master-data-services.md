@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a18de9c33def5b0603f4460f87e7c5589ead4521
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da814796cb4f03008857b20d6f8f7d00b70a8b4a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813068"
 ---
 # <a name="create-an-index-master-data-services"></a>建立索引 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在您經常查詢的屬性清單上建立自訂索引，以提升查詢效能。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取系統管理功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "73728428"
   
 7.  按一下 [可用屬性]**** 方塊中的屬性，然後按一下 [加入]**** 箭號。 若要加入所有屬性，請按一下 [全部加入]**** 箭號。  
   
-8.  按一下 [檔案]  。  
+8.  按一下 [檔案] 。  
   
  對於每個建立的索引，含有四個資料行的資料列會加入格線中。 下表描述該資料行。  
   

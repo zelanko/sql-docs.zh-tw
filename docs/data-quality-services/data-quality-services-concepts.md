@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24227f2afa1f48afe18e5334bfa176d22e59c6a7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251715"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813838"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主題將提供知識管理、資料品質專案和資料品質管理中 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 概念的簡短摘要。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75251715"
   
  活動監控會顯示在某個資料範圍內執行之每項活動的狀態、提供每項活動的資料，並且讓 DQS 系統管理員控制活動。 如需詳細資訊，請參閱 [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md)。  
   
- **設定**  
+ **Configuration**  
   
  [組態] 選項可讓您：  
   

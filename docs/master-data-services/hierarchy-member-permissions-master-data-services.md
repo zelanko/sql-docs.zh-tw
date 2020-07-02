@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 41fe545d2a70ea1cbe3ccd05bbbd06174552d3b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 39470b09370db89cdba3e8c8f26e8b08376c1c07
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729232"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813306"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   階層成員權限為選擇性，而且只有當您希望使用者擁有特定成員的受限存取權時，才應該使用。 如果您未在 [階層成員]**** 索引標籤上指派權限，則使用者的權限完全是根據 [模型]**** 索引標籤上指派的權限。  
   
- 階層成員許可權會在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]使用者介面（UI）中，于 [階層**成員**] 索引標籤上的 [**使用者和群組的許可權**] 功能區域中指派。這些許可權會決定使用者可以在 UI 的 [ **Explorer** ] 功能區域中存取哪些成員。  
+ 階層成員許可權會在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者介面（UI）中，于 [階層**成員**] 索引標籤上的 [**使用者和群組的許可權**] 功能區域中指派。這些許可權會決定使用者可以在 UI 的 [ **Explorer** ] 功能區域中存取哪些成員。  
   
  在 [階層成員]**** 索引標籤上，每一個階層會表示為一個樹狀結構。 當您將權限指派給樹狀結構中的節點時，所有子項都會繼承該權限，除非在較低層級明確指派權限。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "73729232"
   
 -   如果一個階層節點被指派 [更新]**** 和 [建立]**** 權限，另一個節點被指派 [更新]**** 和 [刪除]**** 權限，則該節點中的成員為可以更新。  
   
--   如果一個階層節點被指派 [**建立**/**讀取**/**更新**/**刪除**] 許可權的任何組合，而且另一個節點被指派 [**拒絕**] 許可權，則會拒絕存取節點中的成員。  
+-   如果一個階層節點被指派 [**建立** / **讀取**更新刪除] 許可權的任何組合， / **Update** / **Delete**而且另一個節點被指派 [**拒絕**] 許可權，則會拒絕存取節點中的成員。  
   
 ## <a name="external-resources"></a>外部資源  
  請參考 msdn.com 上的 [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(安全性改進) 部落格文章。  

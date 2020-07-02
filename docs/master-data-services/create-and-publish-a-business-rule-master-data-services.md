@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2dfc03bc292d7c39024116eca9cf49a5179a5b7c
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 39fdd6cebd0c27ec4a27a4543129a659bcdb22a3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796392"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813033"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>建立及發行商務規則 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立商務規則，確保主要資料的正確性。 建立規則之後，您必須發行它，才能將它套用至資料。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "84796392"
   
 5.  從 [成員類型] **** 下拉式清單中，選取要套用商務規則的成員類型。  
   
-6.  按一下 [新增] 。  
+6.  按一下 **[新增]** 。  
   
 7.  在 [名稱] **** 方塊中，輸入商務規則的名稱。  
   
@@ -103,11 +103,11 @@ ms.locfileid: "84796392"
 ## <a name="grid-columns"></a>方格資料行  
  對於每個建立的商務規則，會將含有六個資料行的資料列加入方格中。 以下是資料行。  
   
-|Name|描述|  
+|名稱|描述|  
 |----------|-----------------|  
 |狀態|當您按一下 [儲存]****，下列影像隨即顯示，指出正在更新商務規則。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 如果建立或編輯商務規則時發生錯誤，則會顯示下列影像。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|Name|商務規則名稱。|  
-|Description|商務規則描述。|  
+|名稱|商務規則名稱。|  
+|描述|商務規則描述。|  
 |商務規則狀態|下列商務規則狀態之一：未定義規則、使用中、排除、暫止變更、暫止排除及暫止刪除。|  
 |已排除|指定商務規則是否已排除。|  
 |通知|指定選取傳送電子郵件通知的使用者或群組。|  

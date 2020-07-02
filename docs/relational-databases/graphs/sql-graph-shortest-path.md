@@ -1,7 +1,7 @@
 ---
 title: 最短路徑（SQL Graph） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b959348aaf7ca293a9d475a8b4eb6cb5cfdee7aa
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753257"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834632"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH （Transact-sql）
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
@@ -62,7 +62,7 @@ LAST_NODE （）函數可允許兩個任意長度的遍歷模式的連結。 它
 ## <a name="graph-path-aggregate-functions"></a>圖形路徑彙總函式
 由於與任意長度模式相關的節點和邊緣會傳回集合（在該路徑中所進行的節點和邊緣），因此使用者無法直接使用傳統的 attributename 語法來投影屬性。 針對需要從中繼節點或邊緣資料表投影屬性值的查詢，在所進行的路徑中，請使用下列圖形路徑彙總函式： STRING_AGG、LAST_VALUE、SUM、AVG、MIN、MAX 和 COUNT。 在 SELECT 子句中使用這些彙總函式的一般語法為：
 
-```
+```syntaxsql
 <GRAPH_PATH_AGGREGATE_FUNCTION>(<expression> , <separator>)  <order_clause>
 
     <order_clause> ::=
@@ -95,8 +95,9 @@ STRING_AGG 函式會採用運算式和分隔符號做為輸入，並傳回字串
 ### <a name="count"></a>COUNT
 此函式會傳回路徑中所需節點/邊緣屬性的非 null 值數目。 COUNT 函數支援 \* 具有節點或邊緣資料表別名的 ' ' 運算子。 如果沒有節點或邊緣資料表別名，的使用方式 \* 就不明確，而且會導致錯誤。
 
-    {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
-
+```syntaxsql
+{  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
+```
 
 ### <a name="avg"></a>平均
 傳回所提供節點/邊緣屬性值的平均值，或出現在所遍歷路徑中的運算式。
@@ -120,7 +121,7 @@ shortest_path 函式只能用在 MATCH 內部。
 ### <a name="a--find-shortest-path-between-2-people"></a>A.  尋找2人之間最短的路徑
  在下列範例中，我們會找到 Jacob 與 Alice 之間的最短路徑。 我們將需要從 graph 範例腳本建立的 Person 節點和 FriendOf edge。 
 
- ```
+```sql
 SELECT PersonName, Friends
 FROM (  
     SELECT
@@ -135,12 +136,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
  ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  尋找從指定節點到圖形中所有其他節點的最短路徑。 
  下列範例會尋找 Jacob 在圖形中連接的所有人員，以及從 Jacob 開始到所有這些人員的最短路徑。 
 
- ```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -150,12 +151,12 @@ FROM
     Person FOR PATH  AS Person2
 WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2)+))
 AND Person1.name = 'Jacob'
- ```
+```
 
 ### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  計算從某個人員到圖形中另一個人所往返的躍點/層級數目。
  下列範例會尋找 Jacob 與 Alice 之間的最短路徑，並列印從 Jacob 到 Alice 所需的躍點數目。 
 
- ```
+```sql
  SELECT PersonName, Friends, levels
 FROM (  
     SELECT
@@ -171,12 +172,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
 ### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. 尋找特定人員的1-3 躍點
 下列範例會尋找 Jacob 與他在 graph 1-3 躍點中連線的所有人員之間的最短路徑。 
 
-```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -191,7 +192,7 @@ AND Person1.name = 'Jacob'
 ### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>E. 從特定人員找出剛好2個躍點的使用者
 下列範例會尋找 Jacob 之間的最短路徑，以及與他在圖形中剛好2個躍點的人。 
 
-```
+```sql
 SELECT PersonName, Friends
 FROM (
     SELECT
