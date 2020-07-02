@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 902685dcf1f8c743453285820faa67bb70830614
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dc38fc39a0f4d876adc99a0aff87d2acaad1545
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258347"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789564"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>利用 Common Language Runtime (CLR) 整合建置資料庫物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  您可以搭配 .NET Framework Common Language Runtime (CLR) 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 整合來建立資料庫物件。 在中執行的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Managed 程式碼稱為「CLR 常式」。 這些常式包括：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  您可以搭配 .NET Framework Common Language Runtime (CLR) 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 整合來建立資料庫物件。 在中執行的 Managed [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 程式碼稱為「CLR 常式」。 這些常式包括：  
   
 -   純量值的使用者定義函數 (純量 UDF)  
   

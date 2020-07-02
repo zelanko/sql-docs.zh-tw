@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c2b94b4c76054fb1e9ce6e078f3490ad263a52c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1ed475c78decb3891185b90d3dc032ab896bdf0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085196"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790352"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   協助您輸入空間索引的方格參數。  
   
@@ -56,7 +56,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|代表每一個資料格的唯一識別碼，從 1 開始計數。|  
-|**格值**|**geography**|這是表示每個資料格的矩形多邊形。 資料格形狀與空間索引所使用的資料格形狀相同。|  
+|**格值**|**區域**|這是表示每個資料格的矩形多邊形。 資料格形狀與空間索引所使用的資料格形狀相同。|  
 |**row_count**|**bigint**|指出觸及或包含資料格之空間物件的數目。|  
   
 ## <a name="permissions"></a>權限  
@@ -71,7 +71,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  **Geography**類型的周框方塊是整個地球。  
   
 ## <a name="examples"></a>範例  
- 下列範例會在**sp_help_spatial_geography_histogram** `Person.Address` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫的資料表上呼叫 sp_help_spatial_geography_histogram。  
+ 下列範例會在資料庫的資料表上呼叫**sp_help_spatial_geography_histogram** `Person.Address` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 。  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  

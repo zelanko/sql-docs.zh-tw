@@ -33,17 +33,17 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1e4af8a90a4f83d8200f02910f3e445b49fca91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3107dbb5771731fd15bb1432b2a180af612c86fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790446"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  針對資料行傳回含有零個、一個或多個資料列的資料表，這些資料行包含與單一文字或詞組的精確或模糊 (較不精確) 相符、單字彼此在一定距離之間的接近度，或加權相符。 CONTAINSTABLE 用於[!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 語句的[from 子句](../../t-sql/queries/from-transact-sql.md)中，其參考方式就像是一般資料表名稱一樣。 它會在包含以字元為基礎之資料類型的全文檢索索引資料行上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索搜尋。  
+  針對資料行傳回含有零個、一個或多個資料列的資料表，這些資料行包含與單一文字或詞組的精確或模糊 (較不精確) 相符、單字彼此在一定距離之間的接近度，或加權相符。 CONTAINSTABLE 用於 SELECT 語句的[from 子句](../../t-sql/queries/from-transact-sql.md)中 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，其參考方式就像是一般資料表名稱一樣。 它會在包含以字元為基礎之資料類型的全文檢索索引資料行上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索搜尋。  
   
  CONTAINSTABLE 適用于與[contains](../../t-sql/queries/contains-transact-sql.md)述詞相同的相符專案類型，並使用與 contains 相同的搜尋條件。  
   
@@ -132,9 +132,9 @@ CONTAINSTABLE
   
  如果不同語言的文件當做二進位大型物件 (BLOB) 一起儲存在單一資料行中，給定文件的地區設定識別碼 (LCID) 會判斷要建立其內容索引所使用的語言。 查詢這類資料行時，指定 *LANGUAGE**language_term* 可以增加完全相符的機率。  
   
- 當指定為字串時， *language_term*對應至[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)相容性檢視中的**alias**資料行值。  字串必須以單引號括住，如 '*language_term*'。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
+ 當指定為字串時， *language_term*對應到[sys.sys語言](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)相容性檢視中的**alias**資料行值。  字串必須以單引號括住，如 '*language_term*'。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
   
- 如果這個值是雙位元組字集（DBCS）格式， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會將它轉換成 Unicode。  
+ 如果這個值是雙位元組字集（DBCS）格式， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將它轉換成 Unicode。  
   
  如果指定的語言無效，或尚未安裝對應於這個語言的資源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳回錯誤。 若要使用中性語言資源，請將 0x0 指定為 *language_term*。  
   

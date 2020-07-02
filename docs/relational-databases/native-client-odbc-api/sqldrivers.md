@@ -14,15 +14,15 @@ ms.assetid: 775bbbef-3d34-4b1c-b494-73ddad83206f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 838604dd896de595fd585b63c9b95e86dbef291c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61bd4432444b61984c4f13bd71b641657097e414
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789317"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   ODBC 驅動程式管理員會傳回所有**SQLDrivers**屬性規格字串。 如需屬性字串和值定義的詳細資訊，請參閱[資料存取和儲存開發人員中心](https://go.microsoft.com/fwlink/?LinkId=4173)，或您可以在線上查看 ODBC 程式設計人員[的參考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
   

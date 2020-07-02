@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a6cf13ee2f083a26d871272f5197b550cdf3dd49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cb0a52e4a9b65f2b874d7e0419ff6221889ba98
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790388"
 ---
 # <a name="distributed-queries-stored-procedures-transact-sql"></a>分散式查詢預存程序 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列用來實作和管理分散式查詢的系統預存程序。  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 224ee81383c247d3b2ba8d02aaa99f5a649d0e74
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d68443daf5f6e694dc0da8e838dfad897739af05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816368"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790340"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更新收集項的收集器型別。 指定收集器型別的名稱和 GUID 之後，就會更新收集器型別組態，包括收集和上傳封裝、參數結構描述，以及參數格式器結構描述。  
   
@@ -50,9 +50,9 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
   
 `[ @parameter_schema = ] 'parameter_schema'`這是此收集器型別的 XML 架構。 *parameter_schema*是**xml** ，某些收集器型別可能需要它。 如果它不是必要項目，這個引數就可能是 NULL。  
   
-`[ @collection_package_id = ] collection_package_id`這是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集組所使用之集合封裝的本機唯一識別碼。 *collection_package_id*是**uniqueidentifier** ，而且是必要的。 若要取得*collection_package_id*的值，請在 msdb 資料庫中查詢 dbo. syscollector_collector_types 系統檢視。  
+`[ @collection_package_id = ] collection_package_id`這是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集組所使用之集合封裝的本機唯一識別碼。 *collection_package_id*是**uniqueidentifier** ，而且是必要的。 若要取得*collection_package_id*的值，請在 msdb 資料庫中查詢 dbo.syscollector_collector_types 系統檢視。  
   
-`[ @upload_package_id = ] upload_package_id`這是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集組所使用之上傳封裝的本機唯一識別碼。 *upload_package_id*是**uniqueidentifier** ，而且是必要的。 若要取得*upload_package_id*的值，請在 msdb 資料庫中查詢 dbo. syscollector_collector_types 系統檢視。  
+`[ @upload_package_id = ] upload_package_id`這是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集組所使用之上傳封裝的本機唯一識別碼。 *upload_package_id*是**uniqueidentifier** ，而且是必要的。 若要取得*upload_package_id*的值，請在 msdb 資料庫中查詢 dbo.syscollector_collector_types 系統檢視。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

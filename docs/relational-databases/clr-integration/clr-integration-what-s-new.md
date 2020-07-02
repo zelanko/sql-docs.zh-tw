@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d27bf0d925d3a98dda488fb85aff7446434cc8ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dfa53b1f40402189a6dc7c316d3d366addbab963
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488087"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789596"
 ---
 # <a name="clr-integration---what39s-new"></a>CLR 整合-新功能&#39;
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   以下是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中 CLR 整合的新功能：  
   
--   在 CLR 的版本 4 中，CLR 資料庫物件不再攔截損壞的狀態例外狀況。 這些例外狀況現在會在 CLR 整合裝載層中攔截。 CLR 資料庫元件仍然可以藉由設定 code 屬性（[\<legacyCorruptedStateExceptionsPolicy> 元素](https://go.microsoft.com/fwlink/?LinkId=204954)）來攔截這些例外狀況。 但是不建議您這樣做，因為當發生損壞的狀態例外狀況時，結果就不可靠。  
+-   在 CLR 的版本 4 中，CLR 資料庫物件不再攔截損壞的狀態例外狀況。 這些例外狀況現在會在 CLR 整合裝載層中攔截。 CLR 資料庫元件仍然可以藉由設定程式碼屬性（專案）來攔截這些[ \<legacyCorruptedStateExceptionsPolicy> ](https://go.microsoft.com/fwlink/?LinkId=204954)例外狀況。 但是不建議您這樣做，因為當發生損壞的狀態例外狀況時，結果就不可靠。  
   
 -   由於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的安全性要求很嚴格，所以 CLR 資料庫元件將會繼續使用 CLR 2.0 版中所定義的程式碼存取安全性模型。  
   

@@ -14,17 +14,17 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74122d531eba1f714e16c168838ee1653a8f1293
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc270cb83833e3fcfc54ef4721a62ccaf3980729
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789432"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  **SQLBindParameter**當用來提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式的資料時，SQLBindParameter 可以消除資料轉換的負擔，進而大幅提升應用程式的用戶端和伺服器元件的效能。 其他優點包括插入或更新近似的數值資料類型時，降低有效位數的損失。  
+  當用來提供 Native Client ODBC 驅動程式的資料時， **SQLBindParameter**可以消除資料轉換的負擔 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，進而大幅提升應用程式的用戶端和伺服器元件的效能。 其他優點包括插入或更新近似的數值資料類型時，降低有效位數的損失。  
   
 > [!NOTE]  
 >  將**char**和**wchar**類型的資料插入至影像資料行時，會使用傳入的資料大小，而不是轉換成二進位格式之後的資料大小。  
@@ -33,7 +33,7 @@ ms.locfileid: "81302679"
   
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式，指定繫結輸入參數時的 SQL_PARAM_INPUT。 繫結使用 OUTPUT 關鍵字定義的預存程序參數時，只會指定 SQL_PARAM_OUTPUT 或 SQL_PARAM_INPUT_OUTPUT。  
   
- [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)如果系結參數陣列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的陣列元素導致語句執行發生錯誤，則 SQLROWCOUNT 與 Native Client ODBC 驅動程式不可靠。 ODBC 陳述式屬性 SQL_ATTR_PARAMS_PROCESSED_PTR 會報告錯誤發生前處理的資料列數目。 接著，如果需要，此應用程式可以周遊其參數狀態陣列以探索成功執行的陳述式數目。  
+ [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)如果系結 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 參數陣列的陣列元素導致語句執行發生錯誤，則 SQLRowCount 與 Native Client ODBC 驅動程式不可靠。 ODBC 陳述式屬性 SQL_ATTR_PARAMS_PROCESSED_PTR 會報告錯誤發生前處理的資料列數目。 接著，如果需要，此應用程式可以周遊其參數狀態陣列以探索成功執行的陳述式數目。  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>SQL 字元類型的繫結參數  
  如果傳入的 SQL 資料類型是字元類型，則*ColumnSize*是以字元（不是位元組）為單位的大小。 如果資料字串的長度（以位元組為單位）大於8000， *ColumnSize*應該設定為**SQL_SS_LENGTH_UNLIMITED**，表示 SQL 類型的大小沒有任何限制。  

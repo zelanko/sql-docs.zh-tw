@@ -22,15 +22,15 @@ ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffa67137c4b7d99cd0aa394319e9415a72b73103
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3ec0ed5aa4ddedd7e3fcfd544d53a270eb9e3372
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790461"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   如果裝載已啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 本機執行個體的 WSFC 節點有 WSFC 仲裁，則針對構成仲裁的每個成員及其狀態各傳回一個資料列。 這包括叢集中的所有節點（以**Clusterenum**函式所傳回的 CLUSTER_ENUM_NODE 類型）和磁片或檔案共用見證（如果有的話）。 針對給定成員傳回的資料列包含有關該成員之狀態的資訊。 例如，對於具有多數節點仲裁（其中一個節點已關閉）的五個節點叢集，當**sys. dm_hadr_cluster_members**是從已啟用的伺服器實例進行查詢，而該實例是 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 在具有仲裁的節點上，則**dm_hadr_cluster_members**會將下節點的狀態反映為 "NODE_DOWN"。  
   

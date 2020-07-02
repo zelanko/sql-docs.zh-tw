@@ -13,15 +13,15 @@ ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7134f0689701c663133e52dd9face50e99ef3102
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec1628907bec95b5d8416bda3abd4a9b65e9074c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787847"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>資料表值參數 (SQL Server Native Client)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   資料表值參數是在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中導入，而且會提供有效的方式將資料的多個資料列傳遞至伺服器。 資料表值參數會提供類似參數陣列的功能，但是提供了更多的彈性，並與 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 更緊密地整合在一起，而且時常可以增進效能。 資料表值參數也可以參與以集合為基礎的作業，而參數陣列則不行。  
   

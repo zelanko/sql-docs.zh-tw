@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b96875c1e8f105cbda0298c5b058e21913a8c8c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70e6244254c221ff12c37c04d83bf294b41acfec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091286"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789495"
 ---
 # <a name="localdbdeleteinstance-function"></a>LocalDBDeleteInstance 函數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   移除指定的 SQL Server Express LocalDB 執行個體。  
   
  **標頭檔：** sqlncli。h  
@@ -44,7 +44,7 @@ HRESULT LocalDBDeleteInstance(
  *dwFlags*  
  [輸入] 保留供日後使用。 目前應設為 0。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

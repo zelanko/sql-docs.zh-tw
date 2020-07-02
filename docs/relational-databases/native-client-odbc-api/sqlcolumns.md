@@ -14,15 +14,15 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abce98b64da8de6039f81025201cce25269763a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feae55d486eae6b269cef94320fe9468edb6e672
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789374"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLColumns**會傳回 SQL_SUCCESS *CatalogName*、 *TableName*或*ColumnName*參數的值是否存在。 當這些參數中使用了不正確值時， **SQLFetch**會傳回 SQL_NO_DATA。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "81302604"
   
  **SQLColumns**可以在靜態伺服器資料指標上執行。 嘗試在可更新的（動態或索引鍵集）資料指標上執行**SQLColumns**時，將會傳回 SQL_SUCCESS_WITH_INFO，表示資料指標類型已變更。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式藉由接受*CatalogName*參數的兩部分名稱，支援連結伺服器上之資料表的報告資訊： *Linked_Server_Name. Catalog_Name*。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式藉由接受*CatalogName*參數的兩部分名稱，支援連結伺服器上之資料表的報告資訊： *Linked_Server_Name. Catalog_Name*。  
   
  適用于 ODBC 2。*x*應用程式不在*TableName*中使用萬用字元， **SQLColumns**會傳回名稱符合*tablename*且由目前使用者擁有之任何資料表的相關資訊。 如果目前使用者沒有任何資料表的名稱符合*tablename*參數， **SQLColumns**會傳回其他使用者所擁有的任何資料表的相關資訊，其中資料表名稱符合*tablename*參數。 適用于 ODBC 2。使用萬用字元的*x*應用程式， **SQLColumns**會傳回名稱符合*TableName*的所有資料表。 適用于 ODBC 3。*x*應用程式**SQLColumns**會傳回名稱符合*TableName*的所有資料表，不論擁有者或是否使用萬用字元。  
   
@@ -56,12 +56,12 @@ ms.locfileid: "81302604"
   
  對於參數的 UDT，如果伺服器傳回或要求此資訊，您可以使用以上定義的新驅動程式專用描述項來取得或設定 UDT 的額外中繼資料屬性。  
   
- 當用戶端連接至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並呼叫 SQLColumns 時，針對目錄輸入參數使用 Null 或萬用字元值，將不會傳回其他目錄的資訊。 系統只會傳回目前目錄的相關資訊。 用戶端可以先呼叫 SQLTables 來判斷所需資料表的所在目錄。 然後，用戶端可以在其對 SQLColumns 的呼叫中，將該目錄值用於目錄輸入參數，以取得該資料表中資料行的相關資訊。  
+ 當用戶端連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並呼叫 SQLColumns 時，針對目錄輸入參數使用 Null 或萬用字元值，將不會傳回其他目錄的資訊。 系統只會傳回目前目錄的相關資訊。 用戶端可以先呼叫 SQLTables 來判斷所需資料表的所在目錄。 然後，用戶端可以在其對 SQLColumns 的呼叫中，將該目錄值用於目錄輸入參數，以取得該資料表中資料行的相關資訊。  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns 和資料表值參數  
  SQLColumns 所傳回的結果集會根據 SQL_SOPT_SS_NAME_SCOPE 的設定而定。 如需詳細資訊，請參閱[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。 系統已針對資料表值參數加入下列資料行：  
   
-|資料行名稱|資料類型|內容|  
+|資料行名稱|資料類型|目錄|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|對於 TABLE_TYPE 中的資料行，如果資料行為計算資料行，這是 SQL_TRUE，否則為 SQL_FALSE。|  
 |SS_IS_IDENTITY|Smallint|如果資料行是識別資料行，則為 SQL_TRUE，否則為 SQL_FALSE。|  
@@ -77,14 +77,14 @@ ms.locfileid: "81302604"
  **SQLColumns**支援大型 CLR 使用者定義型別（udt）。 如需詳細資訊，請參閱[&#40;ODBC&#41;的大型 CLR 使用者定義類型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>疏鬆資料行的 SQLColumns 支援  
- 已[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將兩個特定資料行加入至 SQLColumns 的結果集：  
+ 已將兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定資料行加入至 SQLColumns 的結果集：  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|如果資料行為疏鬆資料行，這是 SQL_TRUE，否則為 SQL_FALSE。|  
 |SS_IS_COLUMN_SET|**Smallint**|如果資料行是**column_set**資料行，則會 SQL_TRUE。否則，SQL_FALSE。|  
   
- 與 ODBC 規格一致，SS_IS_SPARSE 和 SS_IS_COLUMN_SET 會出現在所有已新增至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前版本的驅動程式特定資料行之前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，以及 odbc 本身所規定的所有資料行之後。  
+ 與 ODBC 規格一致，SS_IS_SPARSE 和 SS_IS_COLUMN_SET 會出現在所有已新增至之前版本的驅動程式特定資料行之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ，以及 odbc 本身所規定的所有資料行之後。  
   
  SQLColumns 所傳回的結果集會根據 SQL_SOPT_SS_NAME_SCOPE 的設定而定。 如需詳細資訊，請參閱[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
   

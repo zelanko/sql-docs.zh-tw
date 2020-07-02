@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d5aa59cdb3b1c59b78a0ef99fb7d375275d370e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57c110763c38f1d400d03178568ff955a9c1840b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091235"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789477"
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 函數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   傳回指定之 SQL Server Express LocalDB 錯誤的當地語系化文字描述。  
   
  **標頭檔：** sqlncli。h  
@@ -61,7 +61,7 @@ HRESULT LocalDBFormatMessage(
  *lpcchMessage*  
  [輸入/輸出][輸入] 包含*wszMessage*緩衝區的大小（以字元為單位）。 輸出時，如果指定的緩衝區大小太小，則會包含所需的緩衝區大小 (以字元為單位)，包括尾端的 Null。 如果函數成功，則會在訊息中包含字元數，尾端的 Null 不計。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

@@ -18,17 +18,17 @@ ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f435b0ba0d7474867af20aea1d59bd6118035623
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 456a610af836c3e5b7d9e4fd76492ff00eeea132
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73783227"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787961"
 ---
 # <a name="bcp_batch"></a>bcp_batch
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  認可先前從程式變數大量複製並由[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)傳送至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有資料列。  
+  認可先前從程式變數大量複製並由 bcp_sendrow 傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)所有資料列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +42,7 @@ DBINT bcp_batch (HDBC
  *hdbc*  
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  最後一次呼叫**bcp_batch**之後所儲存的資料列數，如果發生錯誤，則為-1。  
   
 ## <a name="remarks"></a>備註  

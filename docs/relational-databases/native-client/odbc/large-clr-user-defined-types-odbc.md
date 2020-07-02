@@ -14,15 +14,15 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce374aad4581d9bf53ecb5b072ae04316765076
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7e07912f0f2f524759d866a5099345f1816913a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787802"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 使用者定義型別 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   本主題討論 SQL Server Native Client 中 ODBC 的變更，以支援大型 Common Language Runtime (CLR) 使用者定義型別 (UDT)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "81303668"
   
 |SQL 資料類型|記憶體配置|C 資料類型|值 (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * （不帶\*正負號的字元）|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * （不帶正負號的字元 \* ）|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>參數的描述項欄位  
  IPD 欄位中傳回的資訊如下所示：  
@@ -213,7 +213,7 @@ ms.locfileid: "81303668"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  針對 UDT 傳回的值如下所示：  
   
-|SQL 資料類型|類型|子類型|長度|Precision|調整|  
+|SQL 資料類型|類型|子類型|長度|準確率|調整|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -233,7 +233,7 @@ ms.locfileid: "81303668"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT 允許的值如下所示：  
   
-|SQL 資料類型|類型|子類型|長度|Precision|調整|  
+|SQL 資料類型|類型|子類型|長度|準確率|調整|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

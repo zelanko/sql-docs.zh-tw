@@ -18,15 +18,15 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7cf91baeb6771f0abb52fb5b8f4c4dc2bddafe0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc87b341a4ca9685e070395e003d8187e8593b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785277"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787991"
 ---
 # <a name="using-data-files-and-format-files"></a>使用資料檔案與格式檔案
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   最簡單的大量複製程式會執行下列動作：  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73785277"
   
  從格式檔案所描述的資料檔案中大量複製時，請在**bcp_init**之後，但在**bcp_exec**之前呼叫[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) ，以讀取格式檔案。  
   
- 從**bcp_control**資料檔案大量複製到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，bcp_control 函數會控制數個選項。 **bcp_control**設定選項，例如終止前的錯誤最大數目、開始大量複製之檔案中的資料列、停止的資料列，以及批次大小。  
+ 從資料檔案大量複製到時， **bcp_control**函數會控制數個選項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **bcp_control**設定選項，例如終止前的錯誤最大數目、開始大量複製之檔案中的資料列、停止的資料列，以及批次大小。  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;ODBC&#41;執行大量複製作業](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  

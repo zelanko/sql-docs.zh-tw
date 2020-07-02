@@ -14,25 +14,25 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efe1fdccbef4f5c4a393083f6eb81efee759be5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7612fc4da7cb12b4e38f20404cbf9481d610877c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302574"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789334"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  為了描述任何 SQL 語句的參數， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會在備妥的[!INCLUDE[tsql](../../includes/tsql-md.md)] ODBC 語句控制碼上呼叫 SQLDescribeParam 時，建立並執行 SELECT 語句。 結果集的中繼資料則會決定已備妥之陳述式中的參數特性。 SQLDescribeParam 可能會傳回 SQLExecute 或 SQLExecDirect 可能傳回的任何錯誤碼。  
+  為了描述任何 SQL 語句的參數， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 會在備妥的 ODBC 語句控制碼上呼叫 SQLDescribeParam 時，建立並執行 SELECT 語句。 結果集的中繼資料則會決定已備妥之陳述式中的參數特性。 SQLDescribeParam 可能會傳回 SQLExecute 或 SQLExecDirect 可能傳回的任何錯誤碼。  
   
- 從開始，database engine 的改進[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]可讓 SQLDescribeParam 取得預期結果的更精確描述。 這些更精確的結果可能與舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLDescribeParam 所傳回的值不同。 如需詳細資訊，請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
+ 從開始，database engine 的改進 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可讓 SQLDescribeParam 取得預期結果的更精確描述。 這些更精確的結果可能與舊版的 SQLDescribeParam 所傳回的值不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需詳細資訊，請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
   
- 此外[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， *ParameterSizePtr*現在也會傳回一個值，以與[ODBC 規格](https://go.microsoft.com/fwlink/?LinkId=207044)中所定義之對應參數標記的資料行或運算式大小（以字元為單位）的定義對齊。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]舊版 Native Client 中， *ParameterSizePtr*可以是類型的**SQL_DESC_OCTET_LENGTH**對應值，或是針對類型提供給 SQLBindParameter 的不相關資料行大小值，應該忽略的值（例如，**SQL_INTEGER**）。  
+ 此外 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ， *ParameterSizePtr*現在也會傳回一個值，以與[ODBC 規格](https://go.microsoft.com/fwlink/?LinkId=207044)中所定義之對應參數標記的資料行或運算式大小（以字元為單位）的定義對齊。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中， *ParameterSizePtr*可以是類型的**SQL_DESC_OCTET_LENGTH**對應值，或是針對類型提供給 SQLBindParameter 的不相關資料行大小值，應該忽略的值（例如，**SQL_INTEGER**）。  
   
  在下列情況下，驅動程式不支援呼叫 SQLDescribeParam：  
   
--   在 SQLExecDirect 包含 FROM [!INCLUDE[tsql](../../includes/tsql-md.md)]子句的任何 UPDATE 或 DELETE 子句之後。  
+-   在 SQLExecDirect [!INCLUDE[tsql](../../includes/tsql-md.md)] 包含 from 子句的任何 UPDATE 或 DELETE 子句之後。  
   
 -   針對在 HAVING 子句中包含參數或與 SUM 函數的結果相比較的任何 ODBC 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
@@ -42,9 +42,9 @@ ms.locfileid: "81302574"
   
 -   針對其中一個參數為函數參數的任何查詢。  
   
--   當[!INCLUDE[tsql](../../includes/tsql-md.md)]命令中有批註（/ \**/）時。  
+-   當命令中有批註（/* \* /）時 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
- 在處理[!INCLUDE[tsql](../../includes/tsql-md.md)]語句批次時，驅動程式也不支援在批次中的第一個語句之後，針對語句中的參數標記呼叫 SQLDescribeParam。  
+ 在處理語句批次時 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，驅動程式也不支援在批次中的第一個語句之後，針對語句中的參數標記呼叫 SQLDescribeParam。  
   
  在描述已備妥預存程式的參數時，SQLDescribeParam 會使用系統預存程式[sp_sproc_columns](../../relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql.md)來取得參數特性。 sp_sproc_columns 可以報告目前使用者資料庫內預存程式的資料。 準備完整的預存程式名稱，可讓 SQLDescribeParam 跨資料庫執行。 例如，您可以在任何資料庫中準備和執行系統預存程式[sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) ，如下所示：  
   
@@ -58,7 +58,7 @@ SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);
 SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);  
 ```  
   
- 對於大數值資料類型，在*DataTypePtr*中傳回的值是 SQL_VARCHAR、SQL_VARBINARY 或 SQL_NVARCHAR。 若要指出大數值資料類型參數的大小為「無限制」， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會將*ParameterSizePtr*設定為0。 標準**Varchar**參數會傳回實際的大小值。  
+ 對於大數值資料類型，在*DataTypePtr*中傳回的值是 SQL_VARCHAR、SQL_VARBINARY 或 SQL_NVARCHAR。 若要指出大數值資料類型參數的大小為「無限制」， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式會將*ParameterSizePtr*設定為0。 標準**Varchar**參數會傳回實際的大小值。  
   
 > [!NOTE]  
 >  如果參數已與 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR 參數的最大大小繫結，則會傳回參數的繫結大小，而不是「無限制」。  

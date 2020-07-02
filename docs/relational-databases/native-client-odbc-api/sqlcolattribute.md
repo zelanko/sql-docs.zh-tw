@@ -14,17 +14,17 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6113316f3be68ca03b5c107ed54965577b6963c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b539e532d6de43bf646652a1d4845eaf38d8bd2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789389"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  您可以使用**SQLColAttribute** ，針對已備妥或已執行的 ODBC 語句，抓取結果集資料行的屬性。 在備妥的語句上呼叫**SQLColAttribute**會[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]導致往返。 Native Client ODBC 驅動程式會在語句執行過程中接收結果集資料行資料，因此在**SQLExecute**或**SQLExecDirect**完成後呼叫 SQLColAttribute，並不會牽涉到伺服器往返。 **SQLColAttribute** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+  您可以使用**SQLColAttribute** ，針對已備妥或已執行的 ODBC 語句，抓取結果集資料行的屬性。 在備妥的語句上呼叫**SQLColAttribute**會導致往返 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會在語句執行過程中接收結果集資料行資料，因此在**SQLExecute**或**SQLExecDirect**完成後呼叫**SQLColAttribute** ，並不會牽涉到伺服器往返。  
   
 > [!NOTE]  
 >  ODBC 資料行識別碼屬性並非在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 結果集上都有提供。  
@@ -56,7 +56,7 @@ ms.locfileid: "81302618"
   
  對於所有版本，當已備妥的 SQL 陳述式批次產生多個結果集時，只有第一個結果集會報告資料行屬性。  
   
- 下列資料行屬性是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式所公開的延伸模組。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會傳回*NumericAttrPtr*參數中的所有值。 除了 SQL_CA_SS_COMPUTE_BYLIST (WORD 陣列的指標) 之外，這些值會當做 SDWORD (signed long) 傳回。  
+ 下列資料行屬性是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式所公開的延伸模組。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會傳回*NumericAttrPtr*參數中的所有值。 除了 SQL_CA_SS_COMPUTE_BYLIST (WORD 陣列的指標) 之外，這些值會當做 SDWORD (signed long) 傳回。  
   
 |欄位識別碼|傳回的值|  
 |----------------------|--------------------|  

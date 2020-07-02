@@ -19,22 +19,22 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 143ed8e5487772a39e4e98c92f8f07d78de7f370
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c57cc780bc3e05347daf8dd7778e7e5de274d303
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823369"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790495"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys.databases index_resumable_operations （Transact-sql）
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 **index_resumable_operations**是系統檢視，會監視並檢查目前的執行狀態，以取得可繼續的索引重建或建立。  
 **適用**于： SQL Server （2017和更新版本）和 Azure SQL Database
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|此索引所屬物件的識別碼（不可為 null）。|  
+|object_id|**int**|此索引所屬物件的識別碼（不可為 null）。|  
 |**index_id**|**int**|索引的識別碼（不可為 null）。 **index_id**只有在物件內才是唯一的。|
 |**name**|**sysname**|索引的名稱。 **name**只有在物件內才是唯一的。|  
 |**sql_text**|**nvarchar(max)**|DDL T-sql 語句文字|
@@ -63,7 +63,7 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 ## <a name="see-also"></a>另請參閱
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
-- [建立索引](../../t-sql/statements/create-index-transact-sql.md)
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
 - [目錄檢視](catalog-views-transact-sql.md)
 - [物件目錄檢視](object-catalog-views-transact-sql.md)
 - [sys.indexes](sys-xml-indexes-transact-sql.md)

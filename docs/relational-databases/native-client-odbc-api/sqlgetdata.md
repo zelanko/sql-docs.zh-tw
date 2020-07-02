@@ -14,23 +14,23 @@ ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ebda3de96cbd9a4a1ceadd62093420cc372a169
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b351ded757bc424b5ae37459ce14fd3f1bd45f73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789180"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLGetData**是用來在不系結資料行值的情況下，抓取結果集資料。 可以在相同資料行上連續呼叫**SQLGetData** ，以從具有**text**、 **Ntext**或**image**資料類型的資料行中取出大量資料。  
   
- 不會要求應用程式繫結變數來擷取結果集資料。 您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLGetData**，從 Native Client ODBC 驅動程式中取出任何資料行的資料。  
+ 不會要求應用程式繫結變數來擷取結果集資料。 您可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**SQLGetData**，從 Native Client ODBC 驅動程式中取出任何資料行的資料。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式不支援使用**SQLGetData**以隨機的資料行順序來取得資料。 所有使用**SQLGetData**處理的未系結資料行，都必須具有比結果集中系結資料行更高的資料行序數。 應用程式必須處理從最低未繫結序數資料行值到最高值的資料。 嘗試從編號序數較低的資料行擷取資料將會產生錯誤。 如果應用程式使用伺服器資料指標來報告結果集資料列，則應用程式可以提取目前的資料列，然後再提取資料行的值。 如果語句是在預設的唯讀、順向資料指標上執行，您必須重新執行語句來備份**SQLGetData**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式不支援使用**SQLGetData**以隨機的資料行順序來取得資料。 所有使用**SQLGetData**處理的未系結資料行，都必須具有比結果集中系結資料行更高的資料行序數。 應用程式必須處理從最低未繫結序數資料行值到最高值的資料。 嘗試從編號序數較低的資料行擷取資料將會產生錯誤。 如果應用程式使用伺服器資料指標來報告結果集資料列，則應用程式可以提取目前的資料列，然後再提取資料行的值。 如果語句是在預設的唯讀、順向資料指標上執行，您必須重新執行語句來備份**SQLGetData**。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會使用**SQLGetData**，正確地報告**text**、 **Ntext**和**image**資料的長度。 應用程式可以充分利用*StrLen_or_IndPtr*參數 return 來快速取出長資料。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會使用**SQLGetData**，正確地報告**text**、 **Ntext**和**image**資料的長度。 應用程式可以充分利用*StrLen_or_IndPtr*參數 return 來快速取出長資料。  
   
 > [!NOTE]  
 >  對於大數數值型別， *StrLen_or_IndPtr*將會在資料截斷的情況下傳回 SQL_NO_TOTAL。  

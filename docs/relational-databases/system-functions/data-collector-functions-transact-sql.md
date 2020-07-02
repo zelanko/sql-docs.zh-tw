@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8efe8bb4-face-4608-83f4-cc7c6e9faf31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6098b0a94947ddca1c35f91ed02469c7d23d3be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62c544840fccd63dfdd1313db662900c01ed0320
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790436"
 ---
 # <a name="data-collector-functions--transact-sql"></a>資料收集器函數（Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   資料收集器會使用幾個函數來取得資料收集和資料收集器統計資料的相關資訊，或是取得資料。  
   
