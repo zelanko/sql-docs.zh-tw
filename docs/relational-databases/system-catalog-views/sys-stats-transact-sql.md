@@ -20,15 +20,15 @@ ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c6d5a67293cd03bc7d20150bbff177b0391113c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eb1d43e7cfd9892b7146ecbe551ecb7b42625981
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783943"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中資料表、索引和索引檢視表的每個統計資料物件，各包含一個資料列。 每個索引都會有一個具有相同名稱和識別碼（**index_id**stats_id）的對應統計資料列  =  ** **，但並非每個統計資料列都有對應的索引。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82833939"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|這些統計資料所屬物件的識別碼。|  
+|object_id|**int**|這些統計資料所屬物件的識別碼。|  
 |**name**|**sysname**|統計資料的名稱。 在物件中，這是唯一的。|  
 |**stats_id**|**int**|統計資料的識別碼。 在物件中，這是唯一的。<br /><br />如果統計資料對應到索引，則*stats_id*值與[sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目錄檢視中的*index_id*值相同。|  
 |**auto_created**|**bit**|指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否自動建立統計資料。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未自動建立統計資料。<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自動建立統計資料。|  

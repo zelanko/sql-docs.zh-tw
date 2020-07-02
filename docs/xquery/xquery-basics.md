@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92882722baab0284f421989ba4906e60e777049e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4d0568988fc1652005b036cefebe507b9a47f82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775440"
 ---
 # <a name="xquery-basics"></a>XQuery 基本概念
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   本節描述 XQuery 的基礎觀念。  
   

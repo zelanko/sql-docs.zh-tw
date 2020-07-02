@@ -15,15 +15,15 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d26af711c07c4ea296d5351d0fcb0d1f9710706
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9adc8ed5547691f693a88a5d468581022afd363e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783352"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>配置控制代碼並連接到 SQL Server (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 ### <a name="to-allocate-handles-and-connect-to-sql-server"></a>配置控制代碼並連接到 SQL Server  
@@ -42,11 +42,11 @@ ms.locfileid: "81294459"
   
 7.  （選擇性）呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)來設定連接選項，或呼叫[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)來取得連接選項。  
   
-8.  呼叫 SQLConnect，以使用現有的資料來源連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+8.  呼叫 SQLConnect，以使用現有的資料來源連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
      Or  
   
-     呼叫[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) ，以使用連接字串連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     呼叫[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) ，以使用連接字串連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
      完整的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接字串至少擁有下列其中一種形式：  
   
@@ -59,13 +59,13 @@ ms.locfileid: "81294459"
   
      \- 或 -  
   
-     以反復方式多次呼叫[SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) ，以建立連接字串並連接至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     以反復方式多次呼叫[SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) ，以建立連接字串並連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-9. （選擇性）呼叫[SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)以取得資料來源的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驅動程式屬性和行為。  
+9. （選擇性）呼叫[SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)以取得資料來源的驅動程式屬性和行為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 10. 配置與使用陳述式。  
   
-11. 呼叫 SQLDisconnect 以中斷與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的連線，並讓連接控制碼可用於新的連接。  
+11. 呼叫 SQLDisconnect 以中斷與的連線 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並讓連接控制碼可用於新的連接。  
   
 12. 以 SQL_HANDLE_DBC 的**HandleType**呼叫[SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) ，以釋放連接控制碼。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "81294459"
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
   
 ## <a name="example"></a>範例  
- 這個範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會示範如何呼叫**SQLDriverConnect**來連接實例，而不需要現有的 ODBC 資料來源。 藉由將不完整的連接字串傳遞至**SQLDriverConnect**，它會導致 ODBC 驅動程式提示使用者輸入遺漏的資訊。  
+ 這個範例會示範如何呼叫**SQLDriverConnect**來連接實例， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而不需要現有的 ODBC 資料來源。 藉由將不完整的連接字串傳遞至**SQLDriverConnect**，它會導致 ODBC 驅動程式提示使用者輸入遺漏的資訊。  
   
 ```  
 #define MAXBUFLEN   255  

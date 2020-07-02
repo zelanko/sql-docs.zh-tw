@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36c7e512c1e691d0341cb802a61e57d46d4b076a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 1171740ae04b4fc03609659fa27a711bf36fa6f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775449"
 ---
 # <a name="xqueries-involving-order"></a>與順序有關的 XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   關聯式資料庫沒有順序的概念。 例如，您不能提出像「從資料庫取得第一個客戶」之類的要求。 不過，您可以查詢 XML 檔並抓取第一個 \<Customer> 元素。 如此一來，您會一直擷取相同客戶。  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd37e1f39291e12bd313b03b556506eb51eb131d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dfb1a973e9c86fa67b4e3495f77dff42273d8bc5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829356"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783921"
 ---
 # <a name="sysdm_hadr_cluster_networks-transact-sql"></a>sys.dm_hadr_cluster_networks (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對參與可用性群組之子網路組態的每個 WSFC 叢集成員，各傳回一個資料列。 您可以使用此動態管理檢視來驗證為每個可用性複本所設定的網路虛擬 IP。  
   

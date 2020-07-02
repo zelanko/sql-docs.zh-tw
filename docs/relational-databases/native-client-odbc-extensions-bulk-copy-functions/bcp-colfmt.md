@@ -18,17 +18,17 @@ ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 857022f04047178f9eaf2db2c59d2d99987afbaa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9bebe50f7a31168455d21c45aa28cc7c0efa796e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73783147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783452"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  在使用者檔案中指定資料的來源或目標格式。 當做來源格式使用時， **bcp_colfmt**會將當做大量複製中資料來源使用之現有資料檔案的格式指定為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。 當做目標格式使用時，會使用以**bcp_colfmt**指定的資料行格式建立資料檔案。  
+  在使用者檔案中指定資料的來源或目標格式。 當做來源格式使用時， **bcp_colfmt**會將當做大量複製中資料來源使用之現有資料檔案的格式指定為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 當做目標格式使用時，會使用以**bcp_colfmt**指定的資料行格式建立資料檔案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,11 +57,11 @@ RETCODE bcp_colfmt (
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]在*eUserDataType*參數中引進了 SQLXML 和 SQLUDT 資料類型標記的支援。  
   
- *EUserDataType*參數是由 sqlncli 中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型標記所列舉，而不是 ODBC C 資料類型枚舉器。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLCHARACTER 來指定字元字串 ODBC type SQL_C_CHAR。  
+ *EUserDataType*參數是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlncli 中的資料類型標記所列舉，而不是 ODBC C 資料類型枚舉器。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLCHARACTER 來指定字元字串 ODBC type SQL_C_CHAR。  
   
  若要指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的預設資料表示法，將此參數設定為 0。  
   
- 當 EUserDataType 為 SQLDECIMAL 或 SQLNUMERIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，將大量複製*eUserDataType*到檔案中：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當*EUSERDATATYPE*為 SQLDECIMAL 或 SQLNUMERIC 時，將大量複製到檔案中：  
   
 -   如果來源資料行不是**decimal**或**numeric**，就會使用預設的有效位數和小數位數。  
   
@@ -85,7 +85,7 @@ RETCODE bcp_colfmt (
   
  將*cbUserData*設定為 SQL_VARLEN_DATA 表示系統應該決定每個資料行中的資料長度。 對於某些資料行，這可能表示長度/null 指標會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複本之資料前產生，或者表示該指標應該會在複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料中出現。  
   
- 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是字元和二進位資料類型， *cbUserData*可以是 SQL_VARLEN_DATA、SQL_Null_DATA、0或某個正數值。 如果*cbUserData*為 SQL_VARLEN_DATA，則系統會使用長度指標（如果有的話）或結束字元序列來決定資料的長度。 如果同時提供長度指標與結束字元順序，大量複製會使用導致複製最少量資料者。 如果*cbUserData*為 SQL_VARLEN_DATA，則資料類型為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字元或二進位類型，而且長度指標和結束字元順序都未指定，系統會傳回錯誤訊息。  
+ 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是字元和二進位資料類型， *cbUserData*可以是 SQL_VARLEN_DATA、SQL_Null_DATA、0或某個正數值。 如果*cbUserData*為 SQL_VARLEN_DATA，則系統會使用長度指標（如果有的話）或結束字元序列來決定資料的長度。 如果同時提供長度指標與結束字元順序，大量複製會使用導致複製最少量資料者。 如果*cbUserData*為 SQL_VARLEN_DATA，則資料類型為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元或二進位類型，而且長度指標和結束字元順序都未指定，系統會傳回錯誤訊息。  
   
  如果 *cbUserData* 為 0 或正值，則系統會使用 *cbUserData* 當作最大的資料長度。 不過，如果除了正的 *cbUserData* 之外，也提供長度指標或結束字元順序，系統會使用導致複製最少量資料的方式決定資料長度。  
   
@@ -108,7 +108,7 @@ RETCODE bcp_colfmt (
   
  如果此值為 0，大量複製在資料檔案中會忽略資料行。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  

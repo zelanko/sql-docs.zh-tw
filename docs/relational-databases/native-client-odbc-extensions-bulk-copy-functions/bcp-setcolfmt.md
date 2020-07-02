@@ -18,21 +18,21 @@ ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e2942f60e1bb41edfcd2d474619867d35806660
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f48f5cf3bfc75bb8aa52d981a42aa83b8007e09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783387"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **Bcp_setcolfmt**函式會取代[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 在指定資料行定序時，必須使用**bcp_setcolfmt**函數。 [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)可以用來指定一個以上的資料行格式。  
   
  此函數會提供彈性的方法來指定大量複製作業中的資料行格式。 它會用來設定個別的資料行格式屬性。 **Bcp_setcolfmt**的每個呼叫都會設定一個資料行格式屬性。  
   
- **Bcp_setcolfmt**函數會指定使用者檔案中資料的來源或目標格式。 當做來源格式使用時， **bcp_setcolfmt**會將當做大量複製中資料來源使用之現有資料檔案的格式，指定為中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料表。 當做目標格式使用時，會使用以**bcp_setcolfmt**指定的資料行格式建立資料檔案。  
+ **Bcp_setcolfmt**函數會指定使用者檔案中資料的來源或目標格式。 當做來源格式使用時， **bcp_setcolfmt**會將當做大量複製中資料來源使用之現有資料檔案的格式，指定為中的資料表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當做目標格式使用時，會使用以**bcp_setcolfmt**指定的資料行格式建立資料檔案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -71,7 +71,7 @@ RETCODE bcp_setcolfmt (
  *cbvalue*  
  這是屬性緩衝區的長度 (以位元組為單位)。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  

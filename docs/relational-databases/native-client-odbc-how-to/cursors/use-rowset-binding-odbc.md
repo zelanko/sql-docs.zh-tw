@@ -13,15 +13,15 @@ ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05277e548dab36b22c023fe674e404d8b9014c7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29f8f52426c8c241f4b4bf43d14aabcb209ceddc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783342"
 ---
 # <a name="use-rowset-binding-odbc"></a>使用資料列集繫結 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 ### <a name="to-use-column-wise-binding"></a>使用資料行取向的繫結  

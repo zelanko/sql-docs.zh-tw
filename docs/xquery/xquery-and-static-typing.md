@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b5d39e560b3137daf711ea49794fe6a2a0499743
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 1a0b9cf43331e45d4aa1253fe5ad4b90d0bbea92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529716"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775461"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 與靜態類型
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 是靜態類型的語言。 也就是，它會在查詢編譯期間，當特定函數或運算子不接受運算式傳回含有類型或基數的值時，就會引發類型錯誤。 除此之外，如果在具類型的 XML 文件中的路徑運算式之類型為錯誤的，靜態類型檢查也可以偵測到。 XQuery 編譯器首先會套用加入如自動化等隱含作業的正規化階段，然後執行靜態類型推斷和靜態類型檢查。  
   

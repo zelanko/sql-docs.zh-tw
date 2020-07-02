@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 257592ce6bd3c8080a6f4244a7528e79259e5cfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933827"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783788"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   移除對應至本機登入的遠端登入，它可以對執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機伺服器執行遠端預存程序。  
   

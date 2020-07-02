@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b158c4571deadadeaee23ffa6e46eb48a8c8446e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba0a1d118ce62912e082b0553f000018e5d8233e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783723"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   啟動目前資料庫中，與應用程式角色相關聯的權限。  
   
@@ -55,14 +55,14 @@ sp_setapprole [ @rolename = ] 'role',
 > ODBC **encrypt**函數不提供加密。 您不應該依賴這個函數來保護透過網路傳輸的密碼。 如果此資訊會透過網路傳輸，請使用 TLS 或 IPSec。
   
  **@encrypt= ' none '**  
- 指定不使用模糊化。 密碼會以純文字格式傳遞至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 這是預設值。  
+ 指定不使用模糊化。 密碼會以純文字格式傳遞至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此為預設值。  
   
  **@encrypt= ' odbc '**  
- 指定在將密碼傳送至之前，ODBC 會使用 ODBC **encrypt**函數來模糊處理密碼[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 只有在使用 ODBC 用戶端或 SQL Server 的 OLE DB Provider 時才可以作這項指定。  
+ 指定在將密碼傳送至之前，ODBC 會使用 ODBC **encrypt**函數來模糊處理密碼 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。 只有在使用 ODBC 用戶端或 SQL Server 的 OLE DB Provider 時才可以作這項指定。  
   
 `[ @fCreateCookie = ] true | false`指定是否要建立 cookie。 **true**會隱含地轉換成1。 **false**會隱含地轉換為0。  
   
-`[ @cookie = ] @cookie OUTPUT`指定要包含 cookie 的輸出參數。 只有當** \@當 fcreatecookie**的值為**true**時，才會產生 cookie。 **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT`指定要包含 cookie 的輸出參數。 只有當** \@ 當 fcreatecookie**的值為**true**時，才會產生 cookie。 **varbinary(8000)**  
   
 > [!NOTE]  
 > **sp_setapprole** 的 Cookie **OUTPUT** 參數目前記載成 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(50)** 。 應用程式應該繼續保留**Varbinary （8000）** ，讓應用程式在未來版本中的 cookie 傳回大小增加時，繼續正常運作。
@@ -73,13 +73,13 @@ sp_setapprole [ @rolename = ] 'role',
   
 ## <a name="remarks"></a>備註
 
- 使用**sp_setapprole**啟動應用程式角色之後，角色會保持作用中狀態，直到使用者中斷伺服器連線或執行**sp_unsetapprole**為止。 **sp_setapprole**只能由直接[!INCLUDE[tsql](../../includes/tsql-md.md)]語句執行。 **sp_setapprole**無法在另一個預存程式或使用者自訂交易內執行。  
+ 使用**sp_setapprole**啟動應用程式角色之後，角色會保持作用中狀態，直到使用者中斷伺服器連線或執行**sp_unsetapprole**為止。 **sp_setapprole**只能由直接 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句執行。 **sp_setapprole**無法在另一個預存程式或使用者自訂交易內執行。  
   
  如需應用程式角色的總覽，請參閱[應用程式角色](../../relational-databases/security/authentication-access/application-roles.md)。  
   
 > [!IMPORTANT]  
 > 若要在透過網路傳輸時保護應用程式角色密碼，在啟用應用程式角色時，您應該一律使用加密的連接。
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] **SqlClient**不支援 ODBC **encrypt**選項。 如果必須保存認證，請利用 crypto API 函數來加密認證。 參數*密碼*會儲存為單向雜湊。 為了保留與舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相容性， **sp_addapprole**不會強制執行密碼複雜性原則。 若要強制執行密碼複雜性原則，請使用 [[建立應用程式角色](../../t-sql/statements/create-application-role-transact-sql.md)]。  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] **SqlClient**不支援 ODBC **encrypt**選項。 如果必須保存認證，請利用 crypto API 函數來加密認證。 參數*密碼*會儲存為單向雜湊。 為了保留與舊版的相容性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， **sp_addapprole**不會強制執行密碼複雜性原則。 若要強制執行密碼複雜性原則，請使用 [[建立應用程式角色](../../t-sql/statements/create-application-role-transact-sql.md)]。  
   
 ## <a name="permissions"></a>權限
 

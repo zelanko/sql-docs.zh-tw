@@ -18,15 +18,15 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12c4be2e1145d488ed057df5b206042b31bdb5b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782652"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774283"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   傳回指定之 BCP 類型 Token 的 SQL 類型名稱。  
   
@@ -46,7 +46,7 @@ RETCODE bcp_gettypename (
  *欄位*  
  指出要求的 Token 是否為最大值類型。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  包含對應到 BCP 類型之 SQL 類型名稱的字串。 如果指定無效的 BCP 類型，則傳回空字串。  
   
 ## <a name="remarks"></a>備註  
@@ -72,10 +72,10 @@ RETCODE bcp_gettypename (
 |**SQLVARCHAR**|否|**varchar**|  
 |**SQLTEXT**|之前或之後|**text**|  
 |**SQLBIGBINARY**|否|**binary**|  
-|**SQLBINARY**|否|**二**|  
+|**SQLBINARY**|否|**二進位**|  
 |**SQLBIGVARBINARY**|否|**Varbinary**|  
 |**SQLVARBINARY**|否|**Varbinary**|  
-|**SQLIMAGE**|之前或之後|**影像**|  
+|**SQLIMAGE**|之前或之後|**映像**|  
 |**SQLINTN**|之前或之後|**int-null**|  
 |**SQLDATETIMN**|之前或之後|**datetime-null**|  
 |**SQLMONEYN**|之前或之後|**money-null**|  

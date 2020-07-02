@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b28d7e40-5fd8-4aad-a2a6-b4131d8152b2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d38a9cfd11f3f48c2e5827f58e525deacab56c60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62661cc17950f32fb55733cb32c93a3c97a70a18
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73657568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775702"
 ---
 # <a name="protocolname-property-servernetworkprotocolproperty-class"></a>ProtocolName 屬性 (ServerNetworkProtocolProperty 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   取得擁有參考之屬性的通訊協定名稱。  
   
 ## <a name="syntax"></a>語法  
@@ -36,8 +36,8 @@ object.PropertyName [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
- 代表實例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上網路通訊協定之屬性的[ServerNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)物件。  
+ *object*  
+ 代表實例上網路通訊協定之屬性的[ServerNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定擁有此屬性之通訊協定名稱的字串值。  

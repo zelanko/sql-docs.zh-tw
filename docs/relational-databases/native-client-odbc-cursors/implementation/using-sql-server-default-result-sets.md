@@ -18,15 +18,15 @@ ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08926660face8061abdf8352d0c4a84ad7e67f8a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3e410f33be5b11d96055a3aac8d86fb1ef1c73e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305377"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774434"
 ---
 # <a name="using-sql-server-default-result-sets"></a>使用 QL Server 預設結果集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   預設的 ODBC 資料指標屬性為：  
   
@@ -36,7 +36,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_CONCURRENCY, SQL_CONCUR_READ_ONLY, SQL_IS_INTEGER
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_ARRAY_SIZE, 1, SQL_IS_INTEGER);  
 ```  
   
- 每當這些屬性設定為預設值時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式就會[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用預設的結果集。 預設結果集可用於任何受到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的 SQL 陳述式，而且是將整個結果集傳送到用戶端的最有效率的方法。  
+ 每當這些屬性設定為預設值時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式就會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設的結果集。 預設結果集可用於任何受到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的 SQL 陳述式，而且是將整個結果集傳送到用戶端的最有效率的方法。  
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引進了 multiple active result sets （MARS）的支援;應用程式現在每個連接都可以有一個以上的使用中預設結果集。 預設不會啟用 MARS。  
   

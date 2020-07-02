@@ -20,16 +20,16 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05901a97ea85deb6f45b5ee440d0eefaac1c8fd6
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7bc0873bcafa37c0fa35118fcd033caae2049449
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785010"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的每個資料庫，各包含一個資料列。  
   
@@ -93,8 +93,8 @@ ms.locfileid: "84529370"
 |**log_reuse_wait_desc**|**nvarchar(60)**|描述交易記錄空間的重複利用正等待最後一個檢查點。|  
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION 是 ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION 是 OFF|  
 |**is_cdc_enabled**|**bit**|1 = 資料庫已啟用異動資料擷取。 如需詳細資訊，請參閱[sp_cdc_enable_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)。|  
-|**is_encrypted**|**bit**|指出資料庫是否已加密（反映上次使用子句所設定的狀態 `ALTER DATABASE SET ENCRYPTION` ）。 可以是下列值之一：<br /> 1 = 已加密<br /> 0 = 未加密<br /> 如需資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。<br /> 如果資料庫正在進行解密，會 `is_encrypted` 顯示值為0。 您可以使用 [ [dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)動態管理] 視圖來查看加密程式的狀態。|  
-|**is_honor_broker_priority_on**|**bit**|指出資料庫是否接受交談優先權（反映上次使用子句所設定的狀態 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` ）。 可以是下列值之一：<br /> 1 = HONOR_BROKER_PRIORITY 為 ON<br /> 0 = HONOR_BROKER_PRIORITY 為 OFF<br /> 根據預設，還原或附加的資料庫會有 broker 優先權。|  
+|**is_encrypted**|**bit**|指出資料庫是否已加密（反映上次使用子句所設定的狀態 `ALTER DATABASE SET ENCRYPTION` ）。 可以是下列其中一個值：<br /> 1 = 已加密<br /> 0 = 未加密<br /> 如需資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。<br /> 如果資料庫正在進行解密，會 `is_encrypted` 顯示值為0。 您可以使用 [ [dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)動態管理] 視圖來查看加密程式的狀態。|  
+|**is_honor_broker_priority_on**|**bit**|指出資料庫是否接受交談優先權（反映上次使用子句所設定的狀態 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` ）。 可以是下列其中一個值：<br /> 1 = HONOR_BROKER_PRIORITY 為 ON<br /> 0 = HONOR_BROKER_PRIORITY 為 OFF<br /> 根據預設，還原或附加的資料庫會有 broker 優先權。|  
 |**replica_id**|**uniqueidentifier**|資料庫正在參與之可用性群組 (如果有) 的本機 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]可用性複本的唯一識別碼。<br /> NULL = 資料庫不是可用性群組中可用性複本的一部分。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|資料庫正在參與之 Always On 可用性群組（如果有的話）內資料庫的唯一識別碼。 對於主要複本上的這個資料庫和資料庫已加入可用性群組的每個次要複本而言， **group_database_id**都相同。<br /> NULL = 資料庫不是任何可用性群組中可用性複本的一部分。<br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|對應到這個資料庫之資源集區的識別碼。 這個資源集區會控制可供這個資料庫中記憶體最佳化資料表使用的記憶體總量。<br /> **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本|  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8241e15643eb4aa25912451ddfed94699954797f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52d3c9676adbd95d219221270090dbcedc798bfb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775418"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery 擴充函式 - sql:variable()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   在 XQuery 運算式內公開含有 SQL 關聯值的變數。  
   
@@ -55,7 +55,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
 -   取自 [!INCLUDE[tsql](../includes/tsql-md.md)] 變數的值 (`DiscountPrice`)。 會使用 `sql:variable()` 方法在 XML 中繫結此值。  
   
--   Xml 類型資料`ProductModelName`行中的**xml**值（），讓查詢更有趣。  
+-   `ProductModelName` **Xml**類型資料行中的值（），讓查詢更有趣。  
   
  此查詢如下：  
   
@@ -97,7 +97,7 @@ WHERE ProductID=771
  [SQL Server XQuery 擴充功能函式](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [比較具類型的 XML 與不具類型的 XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [建立 XML 資料的實例](../relational-databases/xml/create-instances-of-xml-data.md)   
+ [建立 XML 資料的執行個體](../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 資料類型方法](../t-sql/xml/xml-data-type-methods.md)   
  [XML 資料修改語言 &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   

@@ -18,15 +18,15 @@ ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 388b51c79681589d3caec2ee3ea03b1ece6ff459
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e95fa5bb0948661faf9f8575557a39b90528879c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782340"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783380"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   建立包含目前大量複製資料檔格式之描述的格式檔。  
   
@@ -46,7 +46,7 @@ RETCODE bcp_writefmt (
  *szFormatFile*  
  這是用來接收資料檔格式值之使用者檔案的路徑和檔案名稱。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
@@ -57,7 +57,7 @@ RETCODE bcp_writefmt (
  若要載入儲存的格式檔案，請使用[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)。  
   
 > [!NOTE]  
->  只有與7.0 版和更新版本一起[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]散發的**bcp**公用程式版本才支援**bcp_writefmt**所產生的格式檔案。  
+>  只有與7.0 版和更新版本一起散發的**bcp**公用程式版本才支援**bcp_writefmt**所產生的格式檔案 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="example"></a>範例  
   

@@ -18,15 +18,15 @@ ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c32df055ea1330fb0d1bdd32b2a3860519d2575
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 38b55369478638e4c736e4f9d4002f5227a1d699
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782722"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774269"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   用來尋找資料行格式屬性值。  
   
@@ -62,13 +62,13 @@ RETCODE bcp_getcolfmt (
  *pcbLen*  
  屬性緩衝區中傳回之資料長度的指標。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
  資料行格式屬性值列在[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)主題中。 資料行格式屬性值是藉由呼叫**bcp_setcolfmt**函數來設定，而**bcp_getcolfmt**函數則是用來尋找資料行格式屬性值。  
   
- 相較于舊版[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，連接到（或更新版本）伺服器電腦時，可能會觀察到行為變更。 如需詳細資訊，請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]相較于舊版，連接到（或更新版本）伺服器電腦時，可能會觀察到行為變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需詳細資訊，請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
   
 ## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt 對於增強型日期和時間功能的支援  
  與日期/時間類型的**BCP_FMT_TYPE**屬性搭配使用的類型，會如[針對增強型日期和時間類型的大量複製變更（&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)中所指定）。  

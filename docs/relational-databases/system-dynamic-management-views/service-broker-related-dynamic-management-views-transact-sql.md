@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0464f42ee99555b27919c58297054ff72faaeabe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f586cfb2556d863680d8513e8266761debac3255
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784904"
 ---
 # <a name="service-broker-related-dynamic-management-views-transact-sql"></a>Service Broker 相關的動態管理檢視 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   此章節包含下列動態管理檢視。  
   

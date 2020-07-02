@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 098d027ff74bad7b4215a96044f4044fda9ee98e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b8075648f4f3ce87b0ee34ba28479d1f8e20cd50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775164"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更新操作員 (通知收件者) 的相關資訊，以搭配警示和作業使用。  
   
@@ -95,7 +95,7 @@ sp_update_operator
 |**2**|星期一|  
 |**4**|Tuesday|  
 |**8**|星期三|  
-|**1600**|Thursday|  
+|**16**|Thursday|  
 |**32**|星期五|  
 |**64**|星期六|  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa242b7adf46269402b28d459eace429fd247bc1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0c12c9fd481b8fdef50f9a2e0339b276598cd69a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783805"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   從 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體中，卸除指定的使用者自訂錯誤訊息。 您可以使用**sys.databases**目錄檢視來查看使用者定義的訊息。  
   

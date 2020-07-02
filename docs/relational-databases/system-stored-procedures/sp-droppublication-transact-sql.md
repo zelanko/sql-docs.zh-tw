@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46faa94ed9a85433b9212856ea5d95f43fb01972
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 980b40421b51594ef0d687521ba9e436c2a16c4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807801"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783829"
 ---
 # <a name="sp_droppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   卸除發行集及其相關快照集代理程式。 在卸除發行集之前，必須先卸除所有訂閱。 發行集中的發行項會自動卸除。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -51,7 +51,7 @@ sp_droppublication [ @publication= ] 'publication'
   
  **sp_droppublication**會以遞迴方式卸載與發行集相關聯的所有文章，然後卸載發行集本身。 如果發行集有一或多項訂閱，便不能移除它。 如需如何移除訂閱的詳細資訊，請參閱[刪除發送訂閱](../../relational-databases/replication/delete-a-push-subscription.md)和[刪除提取訂閱](../../relational-databases/replication/delete-a-pull-subscription.md)。  
   
- 執行**sp_droppublication**來卸載發行集並不會從發行集資料庫中移除發行的物件，也不會從訂閱資料庫中移除對應的物件。 \<如有必要，請使用 DROP object> 以手動方式移除這些物件。  
+ 執行**sp_droppublication**來卸載發行集並不會從發行集資料庫中移除發行的物件，也不會從訂閱資料庫中移除對應的物件。 如有需要，請使用 DROP \<object> 來手動移除這些物件。  
   
 ## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_droppublication**。  

@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7a0a99f46cdd3ec5d2b6b9ac96cae7a1dc5c55e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dca09294b86e1654cab12331b2b72462dd1598f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832703"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775208"
 ---
 # <a name="sysserver_triggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含所有 object_type 為 TR 或 TA 的伺服器層級 DDL 觸發程序組。 在 CLR 觸發程式的情況下，必須將元件載入到**master**資料庫中。 所有的伺服器層級 DDL 觸發程序名稱，都在一個全域範圍內。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|觸發程序的名稱。|  
-|**object_id**|**int**|物件的識別碼。|  
+|object_id|**int**|物件的識別碼。|  
 |**parent_class**|**tinyint**|父系的類別。 它一律是：<br /><br /> 100 = 伺服器|  
 |**parent_class_desc**|**nvarchar(60)**|父類別的描述。 它一律是：<br /><br /> SERVER。|  
 |**parent_id**|**int**|SERVER 上的觸發程序，一律為 0。|  

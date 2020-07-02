@@ -11,15 +11,15 @@ ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba9829fc2273959f2292d8a3e9ed8e3975c0a525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d58e2658f4dde3cbbe083c73b203b1a3f803a13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783244"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>利用 FILESTREAM 累加地傳送和接收資料 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   此範例會示範如何使用 FILESTREAM 功能，以 SQLPutData 和 SQLGetData 累加地傳送和接收資料。  
   
@@ -28,11 +28,11 @@ ms.locfileid: "81281752"
 ## <a name="example"></a>範例  
  編譯並執行此範例之前，請先啟用 FILESTREAM 支援 ([啟用及設定 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
- 第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)]）程式代碼清單會建立此範例所使用的資料庫。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體必須擁有執行這個指令碼的寫入存取權 (例如，以本機系統帳戶的身分登入)。  
+ 第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會建立此範例所使用的資料庫。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體必須擁有執行這個指令碼的寫入存取權 (例如，以本機系統帳戶的身分登入)。  
   
  第二個程式碼清單是 C++ 程式碼。 您必須指定伺服器，然後在 C++ 程式碼清單中，將 "MyServer" 變更為有效的伺服器名稱。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。 請使用 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib 和 /EHsc 編譯 C++ 程式碼清單。  
   
- 第三個[!INCLUDE[tsql](../../includes/tsql-md.md)]（）程式代碼清單會刪除此範例所使用的資料庫。  
+ 第三個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會刪除此範例所使用的資料庫。  
   
 ```sql
 USE master  

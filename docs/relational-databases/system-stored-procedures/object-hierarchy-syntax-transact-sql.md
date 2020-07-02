@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3405621d604e6450756520f6d93b66a51d4d66c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5cd7b04ebf16ce11791bf1d7caeb0d1012c5d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941980"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783045"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>物件階層語法 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Sp_OAGetProperty 和 sp_OASetProperty 的*propertyname*參數和 sp_OAMethod 的*方法名稱*參數，支援類似[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]的物件階層語法。 使用這個特殊語法時，這些參數具有下列一般格式。  
+  Sp_OAGetProperty 和 sp_OASetProperty 的*propertyname*參數和 sp_OAMethod 的*方法名稱*參數，支援類似的物件階層語法 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 。 使用這個特殊語法時，這些參數具有下列一般格式。  
   
 ## <a name="syntax"></a>語法  
   

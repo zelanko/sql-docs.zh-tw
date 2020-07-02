@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3698431316b86a40e70e144bfac23d81678db45c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68122627"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783092"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回有效授與安全性實體上主體的權限清單。 [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)相關的函式。  
   
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. 列出 XML 結構描述集合的有效權限  
- 下列範例會傳回`ProductDescriptionSchemaCollection` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫中名為之 XML 架構集合上呼叫端的有效許可權清單。  
+ 下列範例會傳回資料庫中名為之 XML 架構集合上呼叫端的有效許可權清單 `ProductDescriptionSchemaCollection` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
   
 ```  
 USE AdventureWorks2012;  

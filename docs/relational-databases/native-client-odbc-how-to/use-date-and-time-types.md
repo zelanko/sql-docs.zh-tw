@@ -11,15 +11,15 @@ ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79ace76e1652cad35c3c04a78e767c0e9a6b4228
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f86bf7fc6e473685d918e7109180e2bdb8bdb86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298278"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783219"
 ---
 # <a name="use-date-and-time-types"></a>使用日期和時間類型
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   此範例顯示如何初始化在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中加入的日期/時間資料結構。 接著，它會準備輸入值、繫結參數，然後執行查詢。 如需有關使用這些類型的詳細資訊，請參閱[ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
@@ -30,11 +30,11 @@ ms.locfileid: "81298278"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)]）程式代碼清單會建立此範例所使用的資料表。  
+ 第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會建立此範例所使用的資料表。  
   
  使用 odbc32.lib 和 user32.lib 編譯第二個 (C++) 程式碼清單。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
- 第三個[!INCLUDE[tsql](../../includes/tsql-md.md)]（）程式代碼清單會刪除此範例所使用的資料表。  
+ 第三個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會刪除此範例所使用的資料表。  
   
 ```sql
 use tempdb  

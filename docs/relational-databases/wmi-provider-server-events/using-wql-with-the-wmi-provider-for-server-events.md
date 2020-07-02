@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6fae362d3a8d1fe387dd7561b1476bb37f0c255
-ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
+ms.openlocfilehash: 692eda0029e60121422244f8829bac9785269423
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775634"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>搭配伺服器事件的 WMI 提供者使用 WQL
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   管理應用程式可藉由發出 WMI 查詢語言 (WQL) 陳述式，使用 WMI Provider for Server Events 來存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 WQL 是結構化查詢語言 (SQL) 的簡化子集，具有一些 WMI 特定的延伸模組。 在使用 WQL 時，應用程式會針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的特定執行個體、資料庫或資料庫物件 (目前唯一支援的物件是佇列) 來擷取事件類型。 伺服器事件的 WMI 提供者會將查詢轉譯為在目標資料庫中針對資料庫範圍或物件範圍的事件通知所建立的事件通知，或用於伺服器範圍事件通知的**master**資料庫中。  
   
  例如，請看下列的 WQL 查詢：  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bc65cd70-6ef2-4c17-be11-877ecf4efe50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ea1dea0b8846d5c307650fab56527edfac251c1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2eced90d1404d76ad6de01ca6243b4be8ba12a95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825808"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784789"
 ---
 # <a name="sysdbmaintplan_jobs-transact-sql"></a>sysdbmaintplan_jobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   這個資料表會包含在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，以保存從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級而來之執行個體的現有資訊。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會變更此資料表的內容。 此資料表會儲存在**msdb**資料庫中。  
   

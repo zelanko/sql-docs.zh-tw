@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1e9069b8d8503b2229c15c25edd70dcc53acc6a0
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cca6fe4ea0cd6e81fb59dcae3b2f566015dbdf9b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775176"
 ---
 # <a name="key_column_usage-transact-sql"></a>KEY_COLUMN_USAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   針對目前資料庫中被限制為索引鍵的每個資料行，各傳回一個資料列。 這個資訊結構描述檢視會傳回目前使用者有權限的物件之相關資訊。  
   

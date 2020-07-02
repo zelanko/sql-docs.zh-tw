@@ -20,16 +20,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e6eb1173bf191ae319dc257c42199f02a05c9455
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 52bc643e1af6f09c0f1ab8e90021ae949310968c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831996"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784928"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   傳回成功 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的資料庫連接、連接失敗和鎖死。 您可以使用這項資訊追蹤 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的資料庫活動或進行疑難排解。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82831996"
   
  `sys.event_log` 檢視包含以下資料行。  
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|資料庫的名稱。 如果連接失敗且使用者未指定資料庫名稱，則這個資料行會是空白。|  
 |**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 對於彙總的事件，這個時間永遠是 5 分鐘的倍數。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -49,7 +49,7 @@ ms.locfileid: "82831996"
 |**event_subtype_desc**|**Nvarchar （64）**|事件子類型的描述。<br /><br /> 如需可能值的清單，請參閱[事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
 |**severity**|**int**|錯誤的嚴重性。 可能的值包括：<br /><br /> 0 = 資訊<br />1 = 警告<br />2 = 錯誤|  
 |**event_count**|**int**|在指定的時間間隔內，這個事件針對指定的資料庫所發生的次數（**start_time**和**end_time**）。|  
-|**描述**|**nvarchar(max)**|事件的詳細描述。<br /><br /> 如需可能值的清單，請參閱[事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
+|**description**|**nvarchar(max)**|事件的詳細描述。<br /><br /> 如需可能值的清單，請參閱[事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
 |**additional_data**|**XML**|*注意： Azure SQL Database V12 的此值一律為 Null。請參閱[範例](#Deadlock)一節，以瞭解如何取得 V12 的鎖死事件。*<br /><br /> 對於**鎖死**事件，此資料行包含鎖死圖形。 對於其他事件類型，這個資料行為 NULL。 |  
   
 ##  <a name="event-types"></a><a name="EventTypes"></a>事件種類
@@ -61,7 +61,7 @@ ms.locfileid: "82831996"
 > [!NOTE]  
 > 這個檢視不包括所有可能發生的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料庫事件，只包括這裡列出的事件。 其他類別目錄、事件類型和子類型會在未來的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 版本中加入。  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**描述**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**description**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**技術**|**connection_successful**|0|**connection_successful**|0|已成功連接資料庫。|  
 |**技術**|**connection_failed**|0|**invalid_login_name**|2|登入名稱在這個版本的 SQL Server 中無效。|  
@@ -76,13 +76,13 @@ ms.locfileid: "82831996"
 |**技術**|**connection_failed**|9|**—**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 連接失敗，因為資料庫當時正在進行重新組態。|  
 |**技術**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 連接已閒置超過系統定義的臨界值。|  
 |**技術**|**connection_terminated**|1|**—**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 由於資料庫重新設定，已終止工作階段。|  
-|**技術**|**調節**|*\<原因代碼>*|**reason_code**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 要求已節流。  節流原因代碼： * \< 原因代碼>*。 如需詳細資訊，請參閱[引擎節流](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
+|**技術**|**調節**|*\<reason code>*|**reason_code**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 要求已節流。  節流原因代碼： *\<reason code>* 。 如需詳細資訊，請參閱[引擎節流](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
 |**技術**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 工作階段已終止，因為您有長時間執行的交易。 請嘗試縮短您的交易。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**技術**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它取得太多鎖定。 請嘗試在單一交易中讀取或修改較少的資料列。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**技術**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用 TEMPDB。 請嘗試修改查詢，減少使用暫存資料表空間。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**技術**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用交易記錄檔空間。 請嘗試在單一交易中修改較少的資料列。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**技術**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用記憶體。 請嘗試修改查詢以處理較少的資料列。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**搜尋引擎優化**|**死**|0|**死**|2|發生死結。|  
+|**搜尋引擎優化**|**deadlock**|0|**deadlock**|2|發生死結。|  
   
 ## <a name="permissions"></a>權限
 
@@ -99,7 +99,7 @@ ms.locfileid: "82831996"
   
  例如，如果使用者因為登入名稱無效，而在連接到 Database1 資料庫時於 2012 年 2 月 5 日 11:00 到 11:05 (UTC) 之間失敗七次，這項資訊會在這個檢視的單一資料列中提供：  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**描述**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**description**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   

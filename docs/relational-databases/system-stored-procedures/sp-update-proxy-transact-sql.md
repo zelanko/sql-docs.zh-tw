@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec6c40abd080c86722565762fab3b4f9d30bd0c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 66ca1f35a5920f6f6d26bea0663e51d305fc1c3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305312"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775153"
 ---
 # <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   變更現有 Proxy 的屬性。  
   
@@ -65,9 +65,9 @@ sp_update_proxy
  **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- 必須指定** \@proxy_name**或** \@proxy_id** 。 如果同時指定了兩個引數，這兩個引數都必須參考相同的 Proxy，否則，預存程序會失敗。  
+ 必須指定** \@ proxy_name**或** \@ proxy_id** 。 如果同時指定了兩個引數，這兩個引數都必須參考相同的 Proxy，否則，預存程序會失敗。  
   
- 必須指定** \@credential_name**或** \@credential_id** ，才能變更 proxy 的認證。 如果同時指定了兩個引數，這兩個引數必須參考相同的認證，否則，預存程序會失敗。  
+ 必須指定** \@ credential_name**或** \@ credential_id** ，才能變更 proxy 的認證。 如果同時指定了兩個引數，這兩個引數必須參考相同的認證，否則，預存程序會失敗。  
   
  這個程序會變更 Proxy，但不會變更 Proxy 的存取權。 若要變更 proxy 的存取權，請使用**sp_grant_login_to_proxy**並**sp_revoke_login_from_proxy**。  
   

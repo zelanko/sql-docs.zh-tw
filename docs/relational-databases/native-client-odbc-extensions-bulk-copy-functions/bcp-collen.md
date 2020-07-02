@@ -18,15 +18,15 @@ ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d26efd0d7ebd395dd4453e773bc5bb089ae3792
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c391185e26ec769eff93bc655b90d29012dd27ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73783199"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783442"
 ---
 # <a name="bcp_collen"></a>bcp_collen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   設定目前大量複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之程式變數中的資料長度。  
   
@@ -50,11 +50,11 @@ RETCODE bcp_collen (
  *idxServerCol*  
  這是資料表中要將資料複製到其中之資料行的序數位置。 第一個資料行是 1。 資料行的序數位置是由[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)所報告。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- **Bcp_collen**函數可讓您在使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)將資料複製到時，變更特定資料行之程式變數中的資料長度。  
+ **Bcp_collen**函數可讓您在使用 bcp_sendrow 將資料複製到時，變更特定資料行之程式變數中的資料長度 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)  
   
  一開始，資料長度是在呼叫[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)時決定。 如果**bcp_sendrow**的呼叫之間的資料長度變更，且未使用長度前置詞或結束字元，您可以呼叫**bcp_collen**以重設長度。 下一次呼叫**bcp_sendrow**會使用**bcp_collen**的呼叫所設定的長度。  
   

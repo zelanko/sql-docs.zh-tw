@@ -11,15 +11,15 @@ ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ebd3d8439b70930039ec6fee37c7195dbb23ca0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d7ea543843d22433072867a30df814a6bd095f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783240"
 ---
 # <a name="support-for-large-udts"></a>支援大型 UDT
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   此範例方案包含兩個專案， 其中一個專案從 C# 原始程式碼建立組件 (DLL)。 這個組件包含 CLR 類型。 將會在資料庫中加入一個資料表。 資料表中的資料行屬於組件中所定義的類型，根據預設，此範例將會使用 master 資料庫。 第二個專案是原生的 C 應用程式，可從資料表讀取資料。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "81281750"
 ## <a name="example"></a>範例  
  第一個程式碼清單是 C# 原始程式碼。 請將它貼入名為 LargeStringUDT.cs 的檔案，然後將它編譯成 DLL。 接著，將 LargeStringUDT.dll 複製到 C 磁碟機的根目錄。  
   
- 第二個[!INCLUDE[tsql](../../includes/tsql-md.md)]（）程式代碼清單會在 master 資料庫中建立元件。  
+ 第二個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會在 master 資料庫中建立元件。  
   
  使用 odbc32.lib 和 user32.lib 編譯第二個 (C++) 程式碼清單。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81281750"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 第四個[!INCLUDE[tsql](../../includes/tsql-md.md)]（）程式代碼清單會從 master 資料庫中刪除元件。  
+ 第四個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會從 master 資料庫中刪除元件。  
   
 ```  
 // LargeStringUDT.cs  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ff51a836-7cff-4ddc-a92a-893f86e637cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbcf48a0656de22465de5976bd7073e5b7556cd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac3124d62e04aa7dac94d51127989ccbe1d0042c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784778"
 ---
 # <a name="protocoldisplayname-property-servernetworkprotocol-class"></a>ProtocolDisplayName 屬性 (ServerNetworkProtocol 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   取得伺服器網路通訊協定的顯示名稱。  
   
 ## <a name="syntax"></a>語法  
@@ -36,8 +36,8 @@ object.ProtocolDisplayName [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
- 代表實例所使用之[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]網路通訊協定的[ServerNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)物件。  
+ *object*  
+ 代表實例所使用之網路通訊協定的[ServerNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定伺服器網路通訊協定之顯示名稱的字串值。  

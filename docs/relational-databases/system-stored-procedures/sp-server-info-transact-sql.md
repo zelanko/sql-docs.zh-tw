@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a83d216b0830b035da72ad579a2448a12f41adba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a711624214b262560766f49e8294b36291ad9d91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810307"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783730"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、資料庫閘道或基礎資料來源的屬性名稱和相符值的清單。  
   
@@ -43,7 +43,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 `[ @attribute_id = ] 'attribute_id'`這是屬性的整數識別碼。 *attribute_id*是**int**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無  
+ None  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -62,10 +62,10 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**10**|OWNER_TERM|owner|  
 |**11**|TABLE_TERM|資料表|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
-|**十三**|TABLE_LENGTH<br /><br /> 指定資料表名稱的最大字元數目。|128|  
+|**13**|TABLE_LENGTH<br /><br /> 指定資料表名稱的最大字元數目。|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> 指定資料表限定詞 (三部份資料表名稱的第一部份) 名稱的最大長度。|128|  
 |**15**|COLUMN_LENGTH<br /><br /> 指定資料行名稱的最大字元數目。|128|  
-|**1600**|IDENTIFIER_CASE<br /><br /> 指定資料庫 (系統目錄中的物件案例) 中的使用者自訂名稱 (資料表名稱、資料行名稱、預存程序名稱)。|SENSITIVE|  
+|**16**|IDENTIFIER_CASE<br /><br /> 指定資料庫 (系統目錄中的物件案例) 中的使用者自訂名稱 (資料表名稱、資料行名稱、預存程序名稱)。|SENSITIVE|  
 |**17**|TX_ISOLATION<br /><br /> 指定伺服器假設的初始交易隔離等級，它對應於 SQL-92 所定義的隔離等級。|2|  
 |**18**|COLLATION_SEQ<br /><br /> 指定這部伺服器的字元集排序。|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> 指定基礎 DBMS 是否支援具名儲存點。|Y|  

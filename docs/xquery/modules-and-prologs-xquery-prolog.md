@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3c1d73fca8bdc91205110d89cceb3a694725c18
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: ece175be7fa0791bf1355ed6020121999d62660b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775482"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>模組和初構 - XQuery 初構
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 查詢是由初構及主體所組成。 XQuery 初構是一系列的宣告和定義，由這二者共同建立查詢處理所需的環境。 在 SQL Server 中，XQuery 初構可以包含命名空間宣告。 XQuery 主體則由一系列的運算式所組成，可指定所想要得到的查詢結果。  
   

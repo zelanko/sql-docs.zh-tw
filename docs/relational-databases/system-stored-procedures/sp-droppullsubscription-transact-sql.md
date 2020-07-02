@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d003270b0856da0c833b6e96e8adf54a014d4b9b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12215e39e90586bf8346c96cde3f0f3f5f386e6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829988"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783794"
 ---
 # <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   在訂閱者的目前資料庫卸除訂閱。 這個預存程序執行於提取訂閱資料庫的訂閱者端。  
   

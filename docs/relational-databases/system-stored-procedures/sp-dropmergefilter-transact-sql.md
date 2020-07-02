@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c4e95865ea3c3b56c4d48036715b05a306f8b0a2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8af47dea0174f094221ac3cdede781f3738b3fd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830079"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783842"
 ---
 # <a name="sp_dropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   卸除合併篩選。 **sp_dropmergefilter**會卸載要卸載的合併篩選所定義的所有合併篩選資料行。 這個預存程序執行於發行集資料庫的發行者端。  
   

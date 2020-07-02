@@ -20,15 +20,15 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a87be6fe0a68172a99ade4704ae4111cabbe95f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e051d7351e5279bef3980d8fc8bfd77d20984eff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775252"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   針對資料庫中每個權限或資料行例外狀況權限，各傳回一個資料列。 針對資料行，與對應物件層級權限不同的每個權限，各有一個資料列。 如果資料行許可權與對應的物件使用權限相同，就不會有任何資料列，而且所套用的許可權會是物件。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73982731"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|識別權限所在的類別。<br /><br /> 0 = 資料庫<br />1 = 物件或資料行<br />3 = 結構描述<br />4 = 資料庫主體<br />5 = 元件-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />6 = 類型<br />10 = XML 架構集合- <br />                      **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br />15 = 訊息類型-**適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />16 = 服務合約-**適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />17 = Service-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />18 = 遠端服務系結-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />19 = Route-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />23 = 全文檢索目錄-**適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本。<br />24 = 對稱金鑰-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />25 = 憑證-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />26 = 非對稱金鑰-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。|  
+|**class**|**tinyint**|識別權限所在的類別。<br /><br /> 0 = 資料庫<br />1 = 物件或資料行<br />3 = 結構描述<br />4 = 資料庫主體<br />5 = 元件-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br />6 = 類型<br />10 = XML 架構集合- <br />                      **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br />15 = 訊息類型-**適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br />16 = 服務合約-**適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br />17 = Service-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br />18 = 遠端服務系結-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br />19 = Route-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br />23 = 全文檢索目錄-**適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本。<br />24 = 對稱金鑰-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br />25 = 憑證-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br />26 = 非對稱金鑰-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。|  
 |**class_desc**|**nvarchar(60)**|權限所在類別的描述。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|權限所在項目的識別碼，它是根據類別加以解譯。 一般來說， **major_id**只是適用于類別所代表之識別碼的類型。 <br /><br /> 0 = 資料庫本身 <br /><br /> >0 = 使用者物件的物件識別碼 <br /><br /> \<0 = 系統物件的物件識別碼 |  
 |**minor_id**|**int**|權限所在項目的次要識別碼，它是根據類別加以解譯。 **Minor_id**通常是零，因為物件的類別沒有可用的子類別。 否則，它是資料表的資料行識別碼。|  

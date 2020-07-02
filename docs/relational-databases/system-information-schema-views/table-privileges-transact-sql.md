@@ -19,15 +19,15 @@ ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25706317e628e0f6d5eb864deaac8deb3656e35c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 86bd404320063ec134f18c1707ff8c12470e42a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783061"
 ---
 # <a name="table_privileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   針對授與目前資料庫中的目前使用者，或是被目前資料庫中的目前使用者所授與的每一個資料表權限，各傳回一個資料列。  
   

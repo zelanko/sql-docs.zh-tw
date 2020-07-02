@@ -20,15 +20,15 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51c090baea876c662b3fa31210d1eec59139bf4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ab99e0ce3e63a42795d17fc859bbbd3b6c8059d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785016"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   依照資料庫本身的儲存情況，針對資料庫的每個檔案，各包含一個資料列。 這是針對個別資料庫的檢視。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82823483"
 |**type_desc**|**nvarchar(60)**|檔案類型的描述：<br /><br /> ROWS <br /><br /> 記錄<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|此值可能是 0 或大於 0。 值為 0 代表資料庫記錄檔，而大於 0 的值則代表儲存這個資料檔之檔案群組的識別碼。|  
 |**name**|**sysname**|資料庫中之檔案的邏輯名稱。|  
-|**physical_name**|**nvarchar(260)**|作業系統檔案名稱。 如果資料庫是由 AlwaysOn[可讀取的次要複本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)所主控， **physical_name**會指出主要複本資料庫的檔案位置。 如需可讀取次要資料庫的正確檔案位置，請查詢[sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)。|  
+|**physical_name**|**nvarchar(260)**|作業系統檔案名稱。 如果資料庫是由 AlwaysOn[可讀取的次要複本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)所主控， **physical_name**會指出主要複本資料庫的檔案位置。 如需可讀取次要資料庫的正確檔案位置，請查詢[sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)。|  
 |**state**|**tinyint**|檔案狀態：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|檔案狀態的描述：<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 如需詳細資訊，請參閱[檔案狀態](../../relational-databases/databases/file-states.md)。|  
 |**size**|**int**|目前的檔案大小 (以 8 KB 頁數為單位)。<br /><br /> 0 = 不適用<br /><br /> 如果是資料庫快照集，size 會反映快照集可以使用的最大檔案空間。<br /><br /> 針對 FILESTREAM 檔案群組容器，大小會反映容器目前使用的大小。|  
@@ -68,7 +68,7 @@ ms.locfileid: "82823483"
 >  當您卸除或重建大型索引時，或卸除或截斷大型資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會延遲取消配置實際的頁面及其相關聯鎖定，直到認可交易之後。 延遲的卸除作業並不會立即釋出已配置的空間。 因此，在卸除或截斷大型物件之後，sys.database_files 傳回的值不一定能反映實際可用的磁碟空間。  
   
 ## <a name="permissions"></a>權限  
- 需要 **public** 角色的成員資格。  如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 需要 **public** 角色的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
 
 ## <a name="examples"></a>範例  
 下列語句會傳回每個資料庫檔案的名稱、檔案大小和空格數量。

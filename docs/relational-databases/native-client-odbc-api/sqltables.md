@@ -14,15 +14,15 @@ ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f3fa2b053c41facba7d608b2352772abd3ff103
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf32a7f0bc0bcdbe5dc1d45a34f71d7c13fdc7d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291736"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783469"
 ---
 # <a name="sqltables"></a>SQLTables
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   SQLTables 可以在靜態伺服器資料指標上執行。 嘗試在可更新的（動態或索引鍵集）資料指標上執行 SQLTables 時，將會傳回 SQL_SUCCESS_WITH_INFO，表示資料指標類型已變更。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "81291736"
   
  若要報告可用的目錄、架構和資料表類型，SQLTables 會特別使用空字串（長度為零的位元組指標）。 空字串不是預設值 (NULL 指標)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式藉由接受*CatalogName*參數的兩部分名稱，支援連結伺服器上之資料表的報告資訊： *Linked_Server_Name. Catalog_Name*。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式藉由接受*CatalogName*參數的兩部分名稱，支援連結伺服器上之資料表的報告資訊： *Linked_Server_Name. Catalog_Name*。  
   
  SQLTables 會傳回名稱符合*TableName*且由目前使用者擁有之任何資料表的相關資訊。  
   

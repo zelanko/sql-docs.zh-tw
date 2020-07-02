@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: dc2a85c48e404fa717b001482bbe5fc8f8356e99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689769"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775496"
 ---
 # <a name="numeric-values-functions---ceiling"></a>數值函式 - ceiling 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   傳回不含小數的最小數字，不小於其引數的值。 如果引數是空的序列，它會傳回空的序列。  
   
@@ -76,9 +76,9 @@ WHERE ProductModelID=7
   
 -   **指示**是**xml**類型資料行。 因此， [query （）方法（XML 資料類型）](../t-sql/xml/query-method-xml-data-type.md)會用來指定 XQuery。 XQuery 陳述式是指定成查詢方法的引數。  
   
--   **針對 .。。return**是迴圈結構。 在查詢中， **for**迴圈會識別 \<> 元素的位置清單。 針對每個工作中心位置，「 **for**迴圈」中的**return**語句描述要產生的 XML：  
+-   **針對 .。。return**是迴圈結構。 在查詢中， **for**迴圈會識別元素的清單 \<Location> 。 針對每個工作中心位置，「 **for**迴圈」中的**return**語句描述要產生的 XML：  
   
-    -   \<具有 LocationID 和 LaborHrs 屬性的位置> 元素。 大括號 ({ }) 內的相對應運算式從文件中擷取必要值。  
+    -   \<Location>具有 LocationID 和 LaborHrs 屬性的元素。 大括號 ({ }) 內的相對應運算式從文件中擷取必要值。  
   
     -   {$ i/@LotSize } 運算式會從檔中抓取 LotSize 屬性（如果有的話）。  
   

@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f047007397eb302859f80bb5efe4b106a33ae61
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 78c3fb8530875120aac2936f36770d9de936332d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783902"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，針對每一個以原則為基礎的管理條件各顯示一個資料列。 syspolicy_conditions 屬於 msdb 資料庫內的 dbo 結構描述。 下表描述 syspolicy_conditions 檢視表中的資料行。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |condition_id|**int**|此條件的識別碼。 每一個條件都代表一或多個條件運算式的集合。|  
-|name|**sysname**|此條件的名稱。|  
+|NAME|**sysname**|此條件的名稱。|  
 |date_created|**datetime**|建立此條件的日期和時間。|  
 |description|**nvarchar(max)**|此條件的描述 描述資料行為選擇性，而且可為 NULL。|  
 |created_by|**sysname**|建立此條件的登入。|  

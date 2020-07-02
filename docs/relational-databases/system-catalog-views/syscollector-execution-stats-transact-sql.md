@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d4ab4827ab9d9a86936a8562b0e4765b492acd15
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84e98a443e9ed54e81ec3ebca3e0b3780177a04b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784917"
 ---
 # <a name="syscollector_execution_stats-transact-sql"></a>syscollector_execution_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   提供收集組或封裝之工作執行的相關資訊。  
   

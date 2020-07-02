@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3dd772a1519ea856cac0302d31be9eb7d0f9d782
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df0cbdda40b8e473ce81bf95b7c38e1cd2ec75c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783681"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   變更現有 Database Mail 帳戶中的資訊。  
  
@@ -64,7 +64,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @description = ] 'description'`帳戶的新描述。 *description*是**Nvarchar （256）**，預設值是 Null。  
   
-`[ @mailserver_name = ] 'server_name'`要用於此帳戶的 SMTP 郵件伺服器的新名稱。 執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦必須能夠將*SERVER_NAME*解析為 IP 位址。 *server_name*是**sysname**，沒有預設值。  
+`[ @mailserver_name = ] 'server_name'`要用於此帳戶的 SMTP 郵件伺服器的新名稱。 執行的電腦 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠將*server_name*解析為 IP 位址。 *server_name*是**sysname**，沒有預設值。  
   
 `[ @mailserver_type = ] 'server_type'`郵件伺服器的新類型。 *server_type*是**sysname**，沒有預設值。 只支援 **' SMTP '** 值。  
   
@@ -76,7 +76,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @password = ] 'password'`用來登入郵件伺服器的新密碼。 *password*是**sysname**，沒有預設值。  
   
-`[ @use_default_credentials = ] use_default_credentials`指定是否使用[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服務的認證將郵件傳送至 SMTP 伺服器。 **use_default_credentials**是 bit，沒有預設值。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的認證。 當此參數為0時，Database Mail 會在 SMTP 伺服器上使用使用者** \@名稱**和** \@密碼**進行驗證。 如果** \@使用者名稱**和** \@密碼**為 Null，則會使用匿名驗證。 在指定此參數之前，請洽 SMTP 管理員。  
+`[ @use_default_credentials = ] use_default_credentials`指定是否使用服務的認證將郵件傳送至 SMTP 伺服器 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。 **use_default_credentials**是 bit，沒有預設值。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的認證。 當此參數為0時，Database Mail 會在 SMTP 伺服器上使用使用者** \@ 名稱**和** \@ 密碼**進行驗證。 如果使用者** \@ 名稱**和** \@ 密碼**為 Null，則會使用匿名驗證。 在指定此參數之前，請洽 SMTP 管理員。  
   
 `[ @enable_ssl = ] enable_ssl`指定 Database Mail 是否使用傳輸層安全性（TLS）來加密通訊，先前稱為安全通訊端層（SSL）。 如果您的 SMTP 伺服器需要 TLS，請使用此選項。 **enable_ssl**是 bit，沒有預設值。  
   
@@ -94,7 +94,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ## <a name="examples"></a>範例  
   
 ### <a name="a-changing-the-information-for-an-account"></a>A. 變更帳戶的資訊  
- 下列範例會更新**msdb**資料庫`AdventureWorks Administrator`中的帳戶。 帳戶資訊設成所提供的值。  
+ 下列範例會更新 `AdventureWorks Administrator` **msdb**資料庫中的帳戶。 帳戶資訊設成所提供的值。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 246081eb5c362cb76a4c037693ee6c40b999fcdd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24c6674c35bdbe626cc703e84e773d33d3b7f47a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783655"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更新 Database Mail 設定檔內的帳戶序號。  
   
@@ -71,7 +71,7 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
  此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
- 下列範例會變更**msdb**資料庫中設定檔`AdventureWorks Administrator`內`Admin-BackupServer`的帳戶序號。 執行這個程式碼之後，帳戶的序號是 `3`，表示如果前面兩個帳戶失敗，就輪到它。  
+ 下列範例會變更 `Admin-BackupServer` `AdventureWorks Administrator` **msdb**資料庫中設定檔內的帳戶序號。 執行這個程式碼之後，帳戶的序號是 `3`，表示如果前面兩個帳戶失敗，就輪到它。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profileaccount_sp  

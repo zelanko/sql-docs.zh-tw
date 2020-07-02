@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7392ec41759116b350047302cfe770da006e6c66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2da024366da5789631aee147ab25d89a5103b40e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388732"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785053"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>使用 ADO 執行 Updategram (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   這個 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 應用程式會使用 ADO 來建立 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接，然後執行 updategram。 updategram 會更新特定員工的姓氏。 這個範例會使用 AdventureWorks 範例資料庫。  
   
  在此範例應用程式中：  
   
--   **Conn**物件（**ADODB。連接**）與特定伺服器電腦[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的執行中實例建立連接。  
+-   **Conn**物件（**ADODB。連接**）與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定伺服器電腦上的執行中實例建立連接。  
   
 -   **Cmd**物件（**ADODB**）會在已建立的連接上執行。  
   

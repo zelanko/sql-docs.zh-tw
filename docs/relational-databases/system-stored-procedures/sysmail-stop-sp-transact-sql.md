@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 753375d139a03d5c0cec20dc994d83399e04f094
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6ed9d4a05759495090a35224e5aa5ef805e520f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783703"
 ---
 # <a name="sysmail_stop_sp-transact-sql"></a>sysmail_stop_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   停止外部程式使用的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 物件來停止 Database Mail。  
   
@@ -51,7 +51,7 @@ sysmail_stop_sp
   
  當佇列停止時，Database Mail 外部程式不會處理訊息。 這個預存程序可讓您停止 Database Mail 來進行疑難排解或維護。  
   
- 若要開始 Database Mail，請使用**sysmail_start_sp**。 請注意**sp_send_dbmail** ，當[!INCLUDE[ssSB](../../includes/sssb-md.md)]物件停止時，sp_send_dbmail 仍接受 mail。  
+ 若要開始 Database Mail，請使用**sysmail_start_sp**。 請注意，當物件停止時， **sp_send_dbmail**仍接受 mail [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。  
   
 > [!NOTE]  
 >  這個預存程序只會停止 Database Mail 的佇列。 這個預存程序不會停用資料庫中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 訊息傳遞。 這個預存程序不會停用 Database Mail 擴充預存程序來縮減介面區域。 若要停用擴充預存程式，請參閱**sp_configure**系統預存程式的[Database Mail xp 選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)。  

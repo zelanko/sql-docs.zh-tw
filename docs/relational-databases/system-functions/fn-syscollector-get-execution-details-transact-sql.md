@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44180a30c69a8da47cfad77c07f86ee6b9b8bfaa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775178"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對指定的封裝，傳回符合 package_execution_id 的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 記錄 (sysssislog) 部分。 此資料表會針對封裝或它們的工作和容器在執行階段所產生的每個記錄項目，各包含一個資料列。  
   
@@ -57,7 +57,7 @@ fn_syscollector_get_execution_details ( log_id )
 |endtime|**datetime**|封裝完成的時間。|  
 |datacode|**int**|識別記錄項目相關事件的整數值。 "0" 表示事件沒有提供任何識別碼。|  
 |databytes|**image**|識別傳回值的位元組陣列。|  
-|訊息|**nvarchar**|事件的描述以及與此事件相關的資訊。|  
+|message|**nvarchar**|事件的描述以及與此事件相關的資訊。|  
   
 ## <a name="permissions"></a>權限  
  需要**dc_operator**的 SELECT 許可權。  

@@ -11,15 +11,15 @@ ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f27ac32da560316806086f51c69cd2a374eb1a15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a09ef17dcbfb2bd98d40371a7af49827207e8e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775312"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>將資料傳送到 FILESTREAM - 繫結至 ICommandText 的 ISequentialStream
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   此範例會使用繫結至 ICommandText 參數的 ISequentialStream 介面，將介於 4MB 與 4GB 之間的資料傳送到 Filestream 資料行。  
   

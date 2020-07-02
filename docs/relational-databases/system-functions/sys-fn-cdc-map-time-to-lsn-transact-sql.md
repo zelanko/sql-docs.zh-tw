@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea779dfb66d9fce2053fcee0b6fd3eedbc26a4ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784847"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對指定的時間，從[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)系統資料表中的**start_lsn**資料行傳回記錄序號（LSN）值。 您可以使用此函式，有系統地將日期時間範圍對應至變更資料捕獲列舉函數 cdc 所需的 LSN 型範圍[fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)和[cdc。 fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>傳回該範圍內的資料變更。  
   
@@ -75,13 +75,13 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
   
  `SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@begin_lsn, @end_lsn, 'all` `');`  
   
- 關係運算子 '`smallest greater than`' 是用來限制前一天午夜之後所發生的變更。 如果具有不同 LSN 值的多個專案共用[lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)資料表中識別為下限的**tran_end_time**值，函數會傳回最小的 lsn，確保包含所有的專案。 若為上限，則會使用關聯式運算子`largest less than or equal to`' ' 來確保範圍包含一天中的所有專案，包括以午夜做為其**tran_end_time**值的時間。 如果具有不同 LSN 值的多個專案共用識別為上限的**tran_end_time**值，函數會傳回最大的 lsn，確保包含所有的專案。  
+ 關係運算子 '`smallest greater than`' 是用來限制前一天午夜之後所發生的變更。 如果具有不同 LSN 值的多個專案共用[lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)資料表中識別為下限的**tran_end_time**值，函數會傳回最小的 lsn，確保包含所有的專案。 若為上限，則會使用關聯式運算子 ' `largest less than or equal to` ' 來確保範圍包含一天中的所有專案，包括以午夜做為其**tran_end_time**值的時間。 如果具有不同 LSN 值的多個專案共用識別為上限的**tran_end_time**值，函數會傳回最大的 lsn，確保包含所有的專案。  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用`sys.fn_cdc_map_time_lsn`函數來判斷[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)資料表中是否有任何資料列的**tran_end_time**值大於或等於午夜。 例如，這個查詢可用來判斷擷取處理序是否已經處理了直到前一天午夜所認可的變更，如此當天的變更資料擷取才能繼續進行。  
+ 下列範例 `sys.fn_cdc_map_time_lsn` 會使用函數來判斷[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)資料表中是否有任何資料列的**tran_end_time**值大於或等於午夜。 例如，這個查詢可用來判斷擷取處理序是否已經處理了直到前一天午夜所認可的變更，如此當天的變更資料擷取才能繼續進行。  
   
 ```  
 DECLARE @extraction_time datetime, @lsn binary(10);  

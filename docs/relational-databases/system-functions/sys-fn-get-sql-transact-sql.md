@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8ba54cf16819164bb8d356cae0a5a1b7569a373
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120256"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783927"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回指定 SQL 控制代碼之 SQL 陳述式的文字。  
   
@@ -61,14 +61,14 @@ sys.fn_get_sql ( SqlHandle )
 |objectid|**int**|資料庫物件的識別碼。 特定 SQL 陳述式的這個值是 NULL。|  
 |number|**smallint**|如果將程序分組的話，便指出群組數目。<br /><br /> 0 = 項目不是程序。<br /><br /> NULL = 特定 SQL 陳述式。|  
 |encrypted|**bit**|指出物件是否已經加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密|  
-|文字|**text**|這是 SQL 陳述式的文字。 加密物件的這個值是 NULL。|  
+|text|**text**|這是 SQL 陳述式的文字。 加密物件的這個值是 NULL。|  
   
 ## <a name="remarks"></a>備註  
  您可以從 dm_exec_requests sys.databases 的 sql_handle 資料行取得有效的 SQL 控制碼[&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)動態管理檢視。  
   
  如果您傳遞不再存在於快取中的控制碼，fn_get_sq**l**會傳回空的結果集。 如果您傳遞無效的控制代碼，批次會停止，且會傳回錯誤訊息。  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]無法快取某些[!INCLUDE[tsql](../../includes/tsql-md.md)]語句，例如具有大於 8 KB 之字串常值的大量複製語句和語句。 這些陳述式的控制代碼無法利用 fn_get_sql 來擷取。  
+ 無法快取 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句，例如具有大於 8 KB 之字串常值的大量複製語句和語句。 這些陳述式的控制代碼無法利用 fn_get_sql 來擷取。  
   
  結果集的**文字**資料行會針對可能包含密碼的文字進行篩選。 如需未受監視之安全性相關預存程式的詳細資訊，請參閱[篩選追蹤](../../relational-databases/sql-trace/filter-a-trace.md)。  
   
@@ -95,7 +95,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [DBCC INPUTBUFFER &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sysprocesses &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.sys進程 &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

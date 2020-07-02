@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9faca4ae8492f7ec0c784b05b16799c5b5b398ae
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61c12650d6453d792e17008676838d769608b3fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784832"
 ---
 # <a name="msmerge_past_partition_mappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_past_partition_mappings**資料表會針對指定的已變更資料列所屬的每個資料分割識別碼，各儲存一個資料列，但不再屬於。 這份資料表儲存在發行集資料庫中。  
   

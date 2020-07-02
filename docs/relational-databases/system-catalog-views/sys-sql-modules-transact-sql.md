@@ -20,15 +20,15 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11c4b17c786506f3cad456a766fa6b0394ef3e72
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dd05afece6814beb84e3fa079b02f661f14990bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833931"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783950"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   針對屬於中 SQL 語言定義模組的每個物件，各傳回一個資料列，包括原生編譯的純量 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者定義函數。 類型 P、RF、V、TR、FN、IF、TF 和 R 的物件，各有一個相關聯的 SQL 模組。 獨立預設值，即類型 D 的物件，在這份檢視中也有 SQL 模組定義。 如需這些類型的說明，請參閱[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目錄檢視中的**類型**資料行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82833931"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|包含物件的物件識別碼。 在資料庫中，這是唯一的。|  
+|object_id|**int**|包含物件的物件識別碼。 在資料庫中，這是唯一的。|  
 |**definition**|**nvarchar(max)**|定義這個模組的 SQL 文字。 這個值也可以使用[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)內建函數來取得。<br /><br /> NULL = 已加密。|  
 |**uses_ansi_nulls**|**bit**|模組是以 SET ANSI_NULLS ON 加以建立。<br /><br /> 如果是規則和預設值，則永遠 = 0。|  
 |**uses_quoted_identifier**|**bit**|模組是以 SET QUOTED_IDENTIFIER ON 加以建立。|  
@@ -44,7 +44,7 @@ ms.locfileid: "82833931"
 |**uses_database_collation**|**bit**|1 = 結構描述繫結模組定義為了正確評估，必須依據資料庫的預設定序而定；否則為 0。 這種相依性可以防止資料庫的預設定序變更。|  
 |**is_recompiled**|**bit**|程序是以 WITH RECOMPILE 選項加以建立。|  
 |**null_on_null_input**|**bit**|模組宣告的目的不是為了因應任何 NULL 輸入而產生 NULL 輸出。|  
-|**execute_as_principal_id**|**整數**|EXECUTE AS 資料庫主體的識別碼。<br /><br /> 在預設或 EXECUTE AS CALLER 的情況下為 NULL。<br /><br /> 如果 EXECUTE AS SELF 或 EXECUTE AS principal>，則為指定主體的識別碼 \< 。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**整數**|EXECUTE AS 資料庫主體的識別碼。<br /><br /> 在預設或 EXECUTE AS CALLER 的情況下為 NULL。<br /><br /> 如果 EXECUTE AS SELF 或 EXECUTE AS 時，指定主體的識別碼 \<principal> 。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**uses_native_compilation**|**bit**|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。<br /><br /> 0 = 不是原生編譯<br /><br /> 1 = 是原生編譯<br /><br /> 預設值為 0。|  
 |**is_inlineable**|**bit**|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 及更新版本。<br/><br />指出模組是否內嵌。 Inlineability 是以[此處](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)指定的條件為基礎。<br /><br /> 0 = 未內嵌<br /><br /> 1 = 是內嵌。 <br /><br /> 針對純量 Udf，如果 UDF 是內嵌，此值將會是1，否則為0。 內嵌 Tvf 的值一律為1，而所有其他模組類型則包含0。<br />|  
 |**inline_type**|**bit**|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 及更新版本。<br /><br />指出目前是否已開啟模組的內嵌功能。 <br /><br />0 = 關閉內嵌功能<br /><br /> 1 = 已開啟內嵌功能。<br /><br /> 針對純量 Udf，如果已開啟內嵌（明確或隱含），此值會是1。 內嵌 Tvf 的值一律為1，而其他模組類型則為0。<br />|  

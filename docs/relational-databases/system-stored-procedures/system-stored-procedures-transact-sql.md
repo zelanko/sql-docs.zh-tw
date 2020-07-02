@@ -22,15 +22,15 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6d46a0e06f96f646ebd68e383ad26f99e309082
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783641"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>系統預存程序 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，許多管理和參考活動，都可以利用系統預存程序加以執行。 系統預存程序是以下表所示的類別目錄加以分組。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68037325"
 >  除非特別說明，否則所有系統預存程序都會傳回 0 值，以表示成功。 若要表示失敗，則傳回非零值。  
   
 ## <a name="api-system-stored-procedures"></a>API 系統預存程序  
- 對 ADO、OLE DB 和 ODBC 應用程式執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的使用者，可能會注意到這些使用系統預存程序的應用程式沒有涵蓋在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 參考中。 Native client OLE DB 提供者和[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client ODBC 驅動程式會使用這些預存程式來執行資料庫 API 的功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 這些預存程序只是提供者或驅動程式將使用者要求傳給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所用的機制。 它們只做為提供者或驅動程式內部使用。 不支援從以為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基礎的應用程式明確呼叫它們。  
+ 對 ADO、OLE DB 和 ODBC 應用程式執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的使用者，可能會注意到這些使用系統預存程序的應用程式沒有涵蓋在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 參考中。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者和 NATIVE client ODBC 驅動程式會使用這些預存程式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來執行資料庫 API 的功能。 這些預存程序只是提供者或驅動程式將使用者要求傳給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所用的機制。 它們只做為提供者或驅動程式內部使用。 不支援從以為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎的應用程式明確呼叫它們。  
   
  Sp_createorphan 和 sp_droporphans 預存程式是用於 ODBC **Ntext**、 **text**和**image**處理。  
   

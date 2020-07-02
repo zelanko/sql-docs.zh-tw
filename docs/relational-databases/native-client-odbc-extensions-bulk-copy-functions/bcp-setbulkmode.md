@@ -13,15 +13,15 @@ ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9935a3faa08b8aa14b4f8c80182a2a005853666
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782393"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783397"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   bcp_setbulkmode 可讓您在大量複製作業中指定資料行格式，在單一函數呼叫中設定所有資料行屬性。  
   
@@ -58,7 +58,7 @@ RETCODE bcp_setbulkmode (
  *cbRow*  
  資料列結束字元值的長度 (以位元組為單位)。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL  
   
 ## <a name="remarks"></a>備註  
@@ -70,10 +70,10 @@ RETCODE bcp_setbulkmode (
   
 |屬性|描述|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP 中的-c 選項。EXE，並 bcp_setcolfmt **BCP_FMT_TYPE**屬性設定為**SQLCHARACTER**。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP 中的-w 選項。**BCP_FMT_TYPE**屬性設定為**SQLNCHAR**的 EXE 和 bcp_setcolfmt。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應至 BCP 中的-N 選項。如果資料行類型是字串，則 EXE 和 bcp_setcolfmt 的**BCP_FMT_TYPE**屬性會設定為**SQLNCHAR** （如果不是字串，則為預設值）。|  
-|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應至 BCP 中的-n 選項。具有**BCP_FMT_TYPE**屬性設定為預設值的 EXE 和 bcp_setcolfmt。|  
+|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP.EXE 中的-c 選項，而若要 bcp_setcolfmt， **BCP_FMT_TYPE**屬性設定為**SQLCHARACTER**。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP.EXE 和 bcp_setcolfmt 中的-w 選項，並將**BCP_FMT_TYPE**屬性設定為**SQLNCHAR**。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應至 BCP.EXE 中的-N 選項 bcp_setcolfmt，而且如果資料行類型是字串，則**BCP_FMT_TYPE**屬性會設定為**SQLNCHAR** （如果不是字串，則為預設值）。|  
+|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應至 BCP.EXE 和 bcp_setcolfmt 中的-n 選項，並將**BCP_FMT_TYPE**屬性設定為預設值。|  
   
  您不應將 bcp_setbulkmode 與包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函式呼叫順序搭配使用。 例如，您不應該呼叫 bcp_control （BCPTEXTFILE）和 bcp_setbulkmode。  
   

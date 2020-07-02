@@ -19,15 +19,15 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47f622c287eb0e32e1c5db2d33b64af2de3e379b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 87b905aa178aec6aa10d4d7585384183bdb5d6c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783009"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 更新目前資料庫中指定非架構系結預存程式、使用者定義函數、view、DML 觸發程式、資料庫層級 DDL 觸發程式或伺服器層級 DDL 觸發程式之參數的 Always Encrypted 中繼資料。 
 

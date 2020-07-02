@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9f1e69c10e4930a4a039528cffc4dbb13a67548
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 5ebd9c4d2bae1c491d2bd7a23e52c83457942fb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775473"
 ---
 # <a name="xqueries-handling-relational-data"></a>XQueries 處理關聯式資料
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   您可以使用其中一種[Xml 資料類型方法](../t-sql/xml/xml-data-type-methods.md)，針對**xml**類型資料行或變數指定 XQuery。 這些包括**query （）**、 **value （）**、**存在（）** 或**modify （）**。 對查詢中所識別出的 XML 執行個體執行 XQuery，以產生 XML 。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dd9644253302c6a577c6cc3923bb3a9e3a0d8c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f488c50518f0a1dd06d72532f1e9edad865e26a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037386"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783671"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更新主體與設定檔之間關聯的資訊。  
   
@@ -62,7 +62,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  當關聯的主體名稱為**public** ，或關聯的主體識別碼為**0**時，這個預存程式會變更公用設定檔。 只能有一個預設公用設定檔。  
   
- 當** \@is_default**為 '**1**'，且主體與一個以上的設定檔相關聯時，指定的設定檔會成為主體的預設設定檔。 先前是預設設定檔的設定檔仍會關聯於這個主體，但已不再是預設設定檔。  
+ 當** \@ is_default**為 '**1**'，且主體與一個以上的設定檔相關聯時，指定的設定檔會成為主體的預設設定檔。 先前是預設設定檔的設定檔仍會關聯於這個主體，但已不再是預設設定檔。  
   
  預存程式**sysmail_update_principalprofile_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
   
@@ -72,7 +72,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="examples"></a>範例  
  **A. 將設定檔設為資料庫的預設公用設定檔**  
   
- 下列範例會將設定檔`General Use Profile`設為**msdb**資料庫中之使用者的預設公用設定檔。  
+ 下列範例會將設定檔設 `General Use Profile` 為**msdb**資料庫中之使用者的預設公用設定檔。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
   
  **B. 將設定檔設為使用者的預設私人設定檔**  
   
- 下列範例會將設定檔`AdventureWorks Administrator`設為`ApplicationUser` **msdb**資料庫中主體的預設設定檔。 這個設定檔必須已關聯於這個主體。 先前是預設設定檔的設定檔仍會關聯於這個主體，但已不再是預設設定檔。  
+ 下列範例會將設定檔設 `AdventureWorks Administrator` 為 `ApplicationUser` **msdb**資料庫中主體的預設設定檔。 這個設定檔必須已關聯於這個主體。 先前是預設設定檔的設定檔仍會關聯於這個主體，但已不再是預設設定檔。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  

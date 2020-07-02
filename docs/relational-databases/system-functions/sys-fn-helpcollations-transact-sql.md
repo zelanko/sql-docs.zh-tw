@@ -20,16 +20,16 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee626b9eef8cf2f2e80217b2a3709271a227f293
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa2a3f7436574d43f0cfc04d5cb7147b1c15f629
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906118"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783137"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   傳回所有支援之定序的清單。  
   
@@ -50,7 +50,7 @@ fn_helpcollations ()
 |名稱|**sysname**|標準定序名稱|  
 |描述|**nvarchar(1000)**|定序的描述|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 Windows 定序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也支援稱為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定序的有限數量（<80）定序，這些定序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是在支援的 Windows 定序之前所開發。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定序仍然支援回溯相容性，但不應用於新的開發工作。 如需 Windows 定序的詳細資訊，請參閱 [Windows 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)。 如需定序的詳細資訊，請參閱[定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 Windows 定序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也支援稱為定序的有限數量（<80）定序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這些定序是在支援的 Windows 定序之前所開發 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定序仍然支援回溯相容性，但不應用於新的開發工作。 如需 Windows 定序的詳細資訊，請參閱 [Windows 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)。 如需定序的詳細資訊，請參閱[定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>範例
 

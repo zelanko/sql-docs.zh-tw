@@ -18,17 +18,17 @@ ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 91c3a4101f19afe4a986514fea8dab207c6d9b48
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98845a3733477c13761dfdf236685be9edce2b4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775233"
 ---
 # <a name="sysfirewall_rules-azure-sql-database"></a>sys.firewall_rules (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  傳回與您[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的相關聯之伺服器層級防火牆設定的詳細資訊。  
+  傳回與您的相關聯之伺服器層級防火牆設定的詳細資訊 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  
   
   檢視表包含下列資料行：  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70155545"
 |id|**INT**|伺服器層級防火牆設定的識別碼。|  
 |NAME|**NVARCHAR （128）**|您選擇用來描述和區分伺服器層級防火牆設定的名稱。|  
 |start_ip_address|**VARCHAR （45）**|伺服器層級防火牆設定範圍中最低的 IP 位址。 等於或大於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器。 可能的最低 IP 位址為 `0.0.0.0`。|  
-|end_ip_address|**VARCHAR （45）**|伺服器層級防火牆設定範圍中最高的 IP 位址。 等於或小於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器。 可能的最高 IP 位址為 `255.255.255.255`。<br /><br /> 注意：當此欄位和 [ **start_ip_address** ] 欄位等於`0.0.0.0`時，便允許 Azure 連接嘗試。|  
+|end_ip_address|**VARCHAR （45）**|伺服器層級防火牆設定範圍中最高的 IP 位址。 等於或小於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器。 可能的最高 IP 位址為 `255.255.255.255`。<br /><br /> 注意：當此欄位和 [ **start_ip_address** ] 欄位等於時，便允許 Azure 連接嘗試 `0.0.0.0` 。|  
 |create_date|**從中**|建立伺服器層級防火牆設定時的 UTC 日期和時間。<br /><br /> 注意： UTC 是國際標準時間的縮寫。|  
 |modify_date|**從中**|上次修改伺服器層級防火牆設定時的 UTC 日期和時間。|  
   

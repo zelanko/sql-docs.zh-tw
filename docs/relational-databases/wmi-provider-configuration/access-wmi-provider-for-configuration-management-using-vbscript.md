@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd515a60802f429611c1ae272216fac93642093e
-ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
+ms.openlocfilehash: fd1633699f6035d03066bcbd38f6ce3882b9cb68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784681"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>使用 VBScript 存取組態管理的 WMI 提供者
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   本節說明如何建立 VBScript 程式，以列出在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 電腦上執行之已安裝實例的版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  此程式碼範例會列出在電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和它的版本。  

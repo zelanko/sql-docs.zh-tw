@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 044b5e79ba558dd5bb38331d9b2a07410a3a50de
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 6524de89a96f64d2eed6a9f01b38b492ffb0fc04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294003"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783734"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 擷取有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的診斷資料和健全狀況資訊，以偵測潛在的失敗。 此程序會以重複模式執行，並定期傳送結果。 它可以從一般或 DAC 連接來叫用。  
   
@@ -60,7 +60,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |------------|---------------|-----------------|  
 |**create_time**|**datetime**|表示資料列建立的時間戳記。 單一資料列集的每個資料列都有相同的時間戳記。|  
 |**component_type**|**sysname**|指出資料列是否包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例層級元件或 Always On 可用性群組的資訊：<br /><br /> instance<br /><br /> Always On： AvailabilityGroup|  
-|**component_name**|**sysname**|指出元件的名稱或可用性群組的名稱：<br /><br /> 系統<br /><br /> 資源<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 活動<br /><br /> *\<name of the availability group>*|  
+|**component_name**|**sysname**|指出元件的名稱或可用性群組的名稱：<br /><br /> 系統<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 活動<br /><br /> *\<name of the availability group>*|  
 |**state**|**int**|指出元件的健全狀態：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|描述狀態資料行。 對應至狀態資料行值的描述如下：<br /><br /> 0：未知<br /><br /> 1：清除<br /><br /> 2：警告<br /><br /> 3：錯誤|  
 |**資料**|**Varchar （max）**|指定元件的相關資料。|  
@@ -87,7 +87,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |元件|乾淨 (1)|警告 (2)|錯誤 (3)|未知 (0) |  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |系統|x|x|x||  
-|資源|x|x|x||  
+|resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
 |活動||||x|  

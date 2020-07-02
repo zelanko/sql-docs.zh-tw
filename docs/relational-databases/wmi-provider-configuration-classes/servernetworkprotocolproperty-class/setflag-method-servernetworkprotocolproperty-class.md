@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b341456d2135206083e632b6bbf6dd97f12ca50
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 853b9f401d08692efe737a66107ebf2e27150f5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775689"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>SetFlag 方法 (ServerNetworkProtocolProperty 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   設定參考之屬性的旗標。  
   
 ## <a name="syntax"></a>語法  
@@ -36,8 +36,8 @@ object.SetFlag(BoolValue)
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
- 代表實例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上網路通訊協定之屬性的[ServerNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)物件。  
+ *object*  
+ 代表實例上網路通訊協定之屬性的[ServerNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>參數  
   

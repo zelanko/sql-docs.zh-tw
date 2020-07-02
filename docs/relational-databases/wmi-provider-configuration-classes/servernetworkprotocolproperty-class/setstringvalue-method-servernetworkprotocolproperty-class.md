@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0911df30-55f7-4fca-a1fb-01d2c91c1467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94f03fc874a9032177ec12b9dd4b86c40792656f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86308f871e18abf12bbb6e46ab252fee7864499d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775672"
 ---
 # <a name="setstringvalue-method-servernetworkprotocolproperty-class"></a>SetStringValue 方法 (ServerNetworkProtocolProperty 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   設定參考之屬性的字串值。  
   
 ## <a name="syntax"></a>語法  
@@ -36,8 +36,8 @@ object.SetStringValue(StrValue)
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
- 代表實例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上網路通訊協定之屬性的[ServerNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)物件。  
+ *object*  
+ 代表實例上網路通訊協定之屬性的[ServerNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>參數  
   
