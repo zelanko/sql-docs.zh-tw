@@ -13,15 +13,15 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e272f7c545130ac5a0f6d66ec6991037123ed8c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e26d334a360b42ba1bdaa6311eb09bcffd70489
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773439"
 ---
 # <a name="metadata---parameter-and-rowset"></a>中繼資料 - 參數和資料列集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   本主題提供有關下列與 OLE DB 日期和時間增強功能相關之類型和類型成員的資訊。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "81301013"
   
  已忽略 *bPrecision* 參數。  
   
- 當傳送資料到伺服器時，"DBPARAMFLAGS_SS_ISVARIABLESCALE" 會被忽略。 應用程式可以使用提供者特定的類型名稱 "**datetime**" 和 "**smalldatetime**" 來強制使用舊版的表格式資料流 (TDS) 類型。 當連接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 伺服器時，會使用 "**datetime2**" 格式，而且當類型名稱為 "**datetime2**" 或 "DBTYPE_DBTIMESTAMP" 時，會發生隱含的伺服器轉換 (如有必要)。 如果使用了提供者特定的類型名稱 "**datetime**" 或 "**smalldatetime**"，就會忽略 *bScale*。 否則，html5 應用程式必須確定已正確設定*bScale* 。 從 MDAC 升級的應用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程式以及使用[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] "DBTYPE_DBTIMESTAMP" 的 Native Client，如果未正確設定*bScale* ，將會失敗。 連接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前版本的伺服器執行個體時，*bScale* 值如果不是 0 或 3 且具有 "DBTYPE_DBTIMESTAMP"，便是錯誤且會傳回 E_FAIL。  
+ 當傳送資料到伺服器時，"DBPARAMFLAGS_SS_ISVARIABLESCALE" 會被忽略。 應用程式可以使用提供者特定的類型名稱 "**datetime**" 和 "**smalldatetime**" 來強制使用舊版的表格式資料流 (TDS) 類型。 當連接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 伺服器時，會使用 "**datetime2**" 格式，而且當類型名稱為 "**datetime2**" 或 "DBTYPE_DBTIMESTAMP" 時，會發生隱含的伺服器轉換 (如有必要)。 如果使用了提供者特定的類型名稱 "**datetime**" 或 "**smalldatetime**"，就會忽略 *bScale*。 否則，html5 應用程式必須確定已正確設定*bScale* 。 從 MDAC 升級的應用程式以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 使用 "DBTYPE_DBTIMESTAMP" 的 Native Client，如果未正確設定*bScale* ，將會失敗。 連接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前版本的伺服器執行個體時，*bScale* 值如果不是 0 或 3 且具有 "DBTYPE_DBTIMESTAMP"，便是錯誤且會傳回 E_FAIL。  
   
  未呼叫 ICommandWithParameters：： SetParameterInfo 時，提供者會依照 IAccessor：： CreateAccessor 中的指定，從系結類型推斷伺服器類型，如下所示：  
   

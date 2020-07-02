@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1c775e48-9898-4149-b9d1-04d465f23438
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12609ac7173b80f1ea6d41fd9e1ecb57a2d50a8a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ba7b3396a9ac54a2d5d68c040a93122d4651a8b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773731"
 ---
 # <a name="log_shipping_monitor_alert-transact-sql"></a>log_shipping_monitor_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   儲存用來傳送記錄的警示作業識別碼。 此資料表會儲存在**msdb**資料庫中。   
   

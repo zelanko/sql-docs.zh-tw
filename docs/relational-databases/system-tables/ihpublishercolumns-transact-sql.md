@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6abe1290b0d635a615a4c83709a8e208bab2b487
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1de331740a0c67642de314155bfdd4ee53ef8f3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773791"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHpublishercolumns**系統資料表代表儲存在發行者端的中繼資料。 這份資料表會針對使用目前散發者，從非 SQL Server 發行者複寫的每個資料行，各包含一個資料列。 **IHpublishercolumns**中的資料類型資訊專屬於發行資料的非 SQL Server 資料庫管理系統（DBMS）所特有。 這份資料表儲存在散發資料庫中。  
   

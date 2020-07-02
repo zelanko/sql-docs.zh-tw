@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9035598991b846fa36edf17631b9d9bf9ec878e3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 57a3e336b5b3183d10a6284ecb19d84eabcf1b4d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773762"
 ---
 # <a name="ihpublishers-transact-sql"></a>IHpublishers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHpublishers**系統資料表會針對使用目前散發者的每個非 SQL Server 發行者，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82832354"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|識別非 SQL Server 發行者。|  
-|**vendor**|**sysname**|非 SQL Server 資料庫的供應商名稱。|  
+|**製造商**|**sysname**|非 SQL Server 資料庫的供應商名稱。|  
 |**publisher_guid**|**uniqueidentifier**|識別非 SQL Server 發行者的 GUID。|  
 |**flush_request_time**|**datetime**|指出上次變更發行項中繼資料的日期和時間，這項變更要求記錄讀取器代理程式更新它的中繼資料快取。|  
 |**version**|**sysname**|指出非 SQL Server 發行者版本的文字字串。|  

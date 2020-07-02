@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7313e3784c5af9922fb5301b339087510a98e91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773832"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務用來執行自動化活動之作業步驟的資訊。  
   
@@ -65,7 +65,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**step_id**|**int**|步驟的唯一識別碼。|  
 |**step_name**|**sysname**|作業中的步驟名稱。|  
 |**子系統**|**nvarchar(40)**|在其中執行步驟命令的子系統。|  
-|**命令**|**nvarchar(max)**|在步驟中執行的命令。|  
+|**command**|**nvarchar(max)**|在步驟中執行的命令。|  
 |**flags**|**int**|這是一個位元遮罩，用來控制步驟行為的值。|  
 |**cmdexec_success_code**|**int**|在**CmdExec**步驟中，這是成功命令的進程結束碼。|  
 |**on_success_action**|**tinyint**|步驟成功時所採取的動作：<br /><br /> **1** = 結束作業報告成功。<br /><br /> **2** = 結束作業報告失敗。<br /><br /> **3** = 移至下一個步驟。<br /><br /> **4** = 移至步驟。|  

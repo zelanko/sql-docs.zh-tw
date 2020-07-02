@@ -14,17 +14,17 @@ ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b52f83e36c315ccd86d1516df9e11b913c80ba8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b9777fb07714eb0d3c23c6ad4e9385921746771
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304529"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773480"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>其他資料表值參數中繼資料
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  為了取得資料表值參數的中繼資料，應用程式會呼叫 SQLProcedureColumns。 若為數據表值參數，SQLProcedureColumns 會傳回單一資料列。 已加入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]兩個額外的特定資料行 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME，以提供與資料表值參數相關聯之資料表類型的架構和目錄資訊。 依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式專用資料行之前，以及 ODBC 本身所託管的所有資料行之後。  
+  為了取得資料表值參數的中繼資料，應用程式會呼叫 SQLProcedureColumns。 若為數據表值參數，SQLProcedureColumns 會傳回單一資料列。 已加入兩個額外 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的特定資料行 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME，以提供與資料表值參數相關聯之資料表類型的架構和目錄資訊。 依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式專用資料行之前，以及 ODBC 本身所託管的所有資料行之後。  
   
  下表列出對於資料表值參數相當重要的資料行。  
   

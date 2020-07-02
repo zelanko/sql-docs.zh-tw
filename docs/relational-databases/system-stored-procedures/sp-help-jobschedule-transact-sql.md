@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30ffe0203b3f9aacf23d811e48e6e6d8094a4ee2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 34cc7495b526b75f8da55046393aa45f3fd9a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773869"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 用來執行自動化活動之工作排程的相關資訊。  
  
@@ -77,13 +77,13 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|排程開始的日期時間。|  
 |**active_end_time**|**int**|排程結束的日期時間。|  
 |**date_created**|**datetime**|排程的建立日期。|  
-|**schedule_description**|**nvarchar(4000)**|排程的英文描述，衍生自**msdb. sysschedules**中的值。 當*include_description*為**0**時，這個資料行會包含文字，指出未要求描述。|  
+|**schedule_description**|**nvarchar(4000)**|排程的英文描述，衍生自**msdb.dbo.sys**排程中的值。 當*include_description*為**0**時，這個資料行會包含文字，指出未要求描述。|  
 |**next_run_date**|**int**|排程下次執行作業的日期。|  
 |**next_run_time**|**int**|排程下次執行作業的時間。|  
 |**schedule_uid**|**uniqueidentifier**|排程的識別碼。|  
 |**job_count**|**int**|傳回的作業計數。|  
   
-> **注意： sp_help_jobschedule**會從**msdb**中的**sysjobschedules**和**sysschedules**系統資料表傳回值。 **sysjobschedules**每20分鐘更新一次。 這可能會影響這個預存程序所傳回的值。  
+> **注意： sp_help_jobschedule**會從**dbo.sysjobschedules**傳回值，並**dbo.sys**排程**msdb**中的系統資料表。 **sysjobschedules**每20分鐘更新一次。 這可能會影響這個預存程序所傳回的值。  
   
 ## <a name="remarks"></a>備註  
  **Sp_help_jobschedule**的參數只能用在某些組合中。 如果指定了*schedule_id* ， *job_id*或*job_name*都不能指定。 否則， *job_id*或*job_name*參數可以與*schedule_name*搭配使用。  
