@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4645b9faca312eb5bee12eef1130893785c327d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6c70b57cb50ae8134fa04f2bab4073dced40091
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728561"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812021"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>設定商務規則來傳送通知 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要通知使用者屬性值變更時，請設定商務規則來傳送通知。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理]**** 和 [使用者及群組的權限]**** 功能區域的權限。 如果您沒有 [使用者及群組的權限]**** 功能區域的權限，就無法檢視傳送通知的目標使用者和群組清單。  
@@ -56,7 +56,7 @@ ms.locfileid: "73728561"
   
 7.  選取 [傳送通知]**** 核取方塊，然後從下拉式清單選取要向其傳送電子郵件通知的使用者或群組。  
   
-8.  按一下 [檔案]  。  
+8.  按一下 [檔案] 。  
   
 9. 按一下 [全部發行] ****。  
   

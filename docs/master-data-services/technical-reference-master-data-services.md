@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 397526d89ed6e89eb90f619b3bf891bf156e61be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3bc96e3289c7e1c0013e08531b77994a76650907
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727856"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812699"
 ---
 # <a name="technical-reference-master-data-services"></a>技術參考 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   尋找有關 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 元件的技術參考資訊。  
   

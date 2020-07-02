@@ -12,16 +12,16 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8f122f6fbc746b025b0354265ff9e176845333f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84999958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812914"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>在受控實例上裝載 MDS 資料庫
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本文涵蓋如何在受控實例上設定 Master Data Services （MDS）資料庫。
   
@@ -110,9 +110,9 @@ ms.locfileid: "84999958"
 
 1. 開啟 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ，然後在左窗格中選取 [**資料庫**設定]。
 
-1. 選取 [**建立資料庫**] 以開啟 [**建立資料庫]**。 選取 [下一步] 。
+1. 選取 [**建立資料庫**] 以開啟 [**建立資料庫]**。 選取 [下一步]。
 
-1. 在 [**資料庫伺服器**] 頁面上，完成 [ **SQL Server 實例**] 欄位，然後選擇 [**驗證類型**]。 選取 [**測試連接**]，確認您可以透過所選的驗證類型，使用您的認證來連線到資料庫。 選取 [下一步] 。
+1. 在 [**資料庫伺服器**] 頁面上，完成 [ **SQL Server 實例**] 欄位，然後選擇 [**驗證類型**]。 選取 [**測試連接**]，確認您可以透過所選的驗證類型，使用您的認證來連線到資料庫。 選取 [下一步]。
 
    > [!NOTE]
    > - SQL Server 實例看起來像 `xxxxxxx.xxxxxxx.database.windows.net` 。
@@ -123,7 +123,7 @@ ms.locfileid: "84999958"
 
    ![mds-SQLServer2019-Config-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "mds-SQLServer2019-Config-MI_CreateDBConnect")  
 
-1. 在 [資料庫名稱]**** 欄位中輸入名稱。 （選擇性）若要選取 Windows 定序，請清除 [ **SQL Server 預設定序]** 核取方塊，然後選取一個或多個可用的選項。 例如，區分**大小寫**。 選取 [下一步] 。
+1. 在 [資料庫名稱]**** 欄位中輸入名稱。 （選擇性）若要選取 Windows 定序，請清除 [ **SQL Server 預設定序]** 核取方塊，然後選取一個或多個可用的選項。 例如，區分**大小寫**。 選取 [下一步]。
 
    ![mds-SQLServer2019-Config-MI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "mds-SQLServer2019-Config-MI_CreatedDBName")
 

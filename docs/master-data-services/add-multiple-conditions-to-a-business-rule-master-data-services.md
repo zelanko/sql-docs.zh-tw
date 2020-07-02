@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dca2f4877a172b7fd75025e226459c699ea7d13b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812073"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>將多個條件加入至商務規則 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   如果您想要比較複雜的規則，請在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中將多個 **AND** 或 **OR** 條件新增至商務規則。  
   
 > [!NOTE]  
 >  如果您建立使用 **OR** 運算子的商務規則，請考慮為每個可獨立評估的條件陳述式建立不同的規則。 然後您可以視需要排除規則，提供更多彈性和輕鬆疑難排解。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -51,7 +51,7 @@ ms.locfileid: "73728805"
   
 6.  按一下您想要編輯之商務規則的資料列。  
   
-7.  按一下 **[編輯]**。  
+7.  按一下 **[編輯]** 。  
   
 8.  在 [If]**** 區塊下，從左側的邏輯運算子下拉式清單中選取 [AND/OR/ NOT]****。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73728805"
   
 12. 完成所有必要的欄位。  
   
-13. 按一下 [檔案]  。 新的資料列就會新增至 [If]**** 方格中。  
+13. 按一下 [檔案] 。 新的資料列就會新增至 [If]**** 方格中。  
   
 14. 或者若要加入更多條件，請完成步驟 8-13。  
   

@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5e792a15670c50b918eabbf371258aa9b62cab82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0f9b77a5df341bbf57d103797d5808b8b7a5d511
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812187"
 ---
 # <a name="change-domain-values"></a>變更定義域值
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中變更及增加知識庫內的中繼資料。 在您藉由知識探索產生知識、將知識匯入知識庫或定義域，或是讓知識庫根據另一個知識庫之後，您可以互動方式變更資料值。 知識庫產生不但會利用電腦輔助程序，也會提供您使用自己知識的方式，依照以下方式驗證資料值並加以變更：  
   
@@ -96,7 +96,7 @@ ms.locfileid: "75242134"
   
 9. **從 Excel 匯入定義域值**：若要從 Excel 試算表加入新的值，請按一下 **[匯入值]** 圖示的向下箭號，然後選取 **[從 Excel 匯入定義域值]**。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 如需詳細資訊，請參閱 [將 Excel 檔案中的值匯入定義域中](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
   
-10. **匯入專案值**：若要從資料品質專案加入新的值，請按一下 **[匯入值]** 圖示的向下箭號，然後選取 **[匯入專案值]**。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 選取要匯入的值來自於哪一個專案，然後按一下 **[確定]**。 隨即顯示匯入的值。 按一下 [完成]  。 如需詳細資訊，請參閱＜將專案值匯入定義域＞。  
+10. **匯入專案值**：若要從資料品質專案加入新的值，請按一下 **[匯入值]** 圖示的向下箭號，然後選取 **[匯入專案值]**。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 選取要匯入的值來自於哪一個專案，然後按一下 **[確定]**。 隨即顯示匯入的值。 按一下 [完成] 。 如需詳細資訊，請參閱＜將專案值匯入定義域＞。  
   
 11. **刪除選取的定義域值**：若要從定義域中移除一個或多個現有的值，請選取 [值] 資料表中的值，然後按一下 **[刪除選取的定義域值]** 圖示。 DQS_NULL 的項目無法刪除，所以如果您選擇多個要刪除的值，而且 DQS_NULL 的項目是其中一個，此作業將會失敗。  
   

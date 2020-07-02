@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ce0686211440291711815fa3b1d76641a374da8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812603"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>備份及還原 DQS 資料庫
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   此主題描述如何備份及還原 DQS 資料庫。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "75258854"
   
 10. 在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]**。  
   
-11. 在 [查詢編輯器] 視窗中，複製下列 SQL 語句，並將* \<password>* 取代為您在 DQS 安裝期間為資料庫主要金鑰提供的密碼：  
+11. 在 [查詢編輯器] 視窗中，複製下列 SQL 語句，並將取代為 *\<PASSWORD>* 您在 DQS 安裝期間為資料庫主要金鑰提供的密碼：  
   
     ```  
     USE [DQS_MAIN]  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2e125f1dc6b4cb9f30a69c7410c5c404b38d42ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4183f8be34e7322af72a76297631df2b4060421c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728193"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811503"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>資料夾和檔案的權限 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   當您安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]時，資料夾和檔案會安裝在檔案系統中針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共用功能所指定的安裝路徑。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共用功能的預設安裝路徑， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的安裝路徑為 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services。 雖然您可以變更共用功能的安裝路徑，但請注意繼承自父資料夾的權限以及為 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]明確設定的權限。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73728193"
 |---------------------------|-----------------|  
 |CREATOR OWNER|特殊權限|  
 |系統|特殊權限|  
-|Administrators|特殊權限|  
+|系統管理員|特殊權限|  
 |使用者|讀取與執行、列出資料夾內容、讀取|  
 |TrustedInstaller|列出資料夾內容、特殊權限|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73728193"
 |群組或帳戶名稱|權限|  
 |---------------------------|-----------------|  
 |系統|修改、讀取與執行、列出資料夾內容、讀取、寫入|  
-|Administrators|修改、讀取與執行、列出資料夾內容、讀取、寫入|  
+|系統管理員|修改、讀取與執行、列出資料夾內容、讀取、寫入|  
 |MDS_ServiceAccounts|修改、讀取與執行、列出資料夾內容、讀取、寫入|  
   
 ###### <a name="webconfig-permissions"></a>Web.config 的權限  
@@ -59,7 +59,7 @@ ms.locfileid: "73728193"
 |群組或帳戶名稱|權限|  
 |---------------------------|-----------------|  
 |系統|完全控制、修改、讀取與執行、讀取、寫入|  
-|Administrators|完全控制、修改、讀取與執行、讀取、寫入|  
+|系統管理員|完全控制、修改、讀取與執行、讀取、寫入|  
 |MDS_ServiceAccounts|讀取與執行、讀取|  
   
  如需 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config 檔案內容的詳細資訊，請參閱 [Web 組態參考 &#40;Master Data Services&#41;](../master-data-services/web-configuration-reference-master-data-services.md)。  

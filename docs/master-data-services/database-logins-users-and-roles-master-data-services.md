@@ -18,36 +18,36 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 54d0d7db0f76407836b266c3534198d0e177c679
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 0c2f275fe85c7813a64790f864b462aa3bfc6775
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796379"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812387"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>資料庫登入、使用者和角色 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包含的登入、使用者和角色會自動安裝在主控 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 資料庫的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 執行個體上。 不應對這些登入、使用者和角色進行修改。  
   
 ## <a name="logins"></a>登入  
   
-|登入|Description|  
+|登入|描述|  
 |-----------|-----------------|  
 |**mds_dlp_login**|允許建立 UNSAFE 組件。 如需詳細資訊，請參閱 [建立組件](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。<br /><br /> -具有隨機產生之密碼的已停用登入。<br /><br /> -對應至 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 dbo。<br /><br /> -若是 msdb，mds_clr_user 會對應至此登入。|  
 |**mds_email_login**|用於通知的已啟用登入。<br /><br /> 若是 msdb 和 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，mds_email_user 會對應至此登入。|  
   
 ## <a name="msdb-users"></a>msdb 使用者  
   
-|User|Description|  
+|User|描述|  
 |----------|-----------------|  
 |**mds_clr_user**|未使用。 對應至 mds_dlp_login。|  
 |**mds_email_user**|用於通知。<br /><br /> -對應至 mds_email_login。<br /><br /> -為 DatabaseMailUserRole 角色的成員。|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services 資料庫使用者  
   
-|User|Description|  
+|User|描述|  
 |----------|-----------------|  
 |**mds_email_user**|用於通知。<br /><br /> -具有 mdm 結構描述的 SELECT 權限。<br /><br /> -具有 mdm.MemberGetCriteria 使用者定義資料表類型的 EXECUTE 權限。<br /><br /> -具有 mdm.udpNotificationQueueActivate 預存程序的 EXECUTE 權限。|  
 |**mds_schema_user**|擁有 mdm 和 mdq 結構描述。 預設結構描述為 mdm。<br /><br /> 沒有對應的登入。|  
