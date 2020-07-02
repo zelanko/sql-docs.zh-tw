@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 20421ab3584eac51feb09ba717f293449825574c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eead2ec7e87b11c742adbcf35c681d2645211077
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85810552"
 ---
 # <a name="create-a-knowledge-base"></a>建立知識庫
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中建立知識庫，並預備此知識庫進行定義域管理、知識探索或是加入比對原則。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75247327"
   
     -   選取 **[比對原則]** 建立比對原則，並將其加入至知識庫。  
   
-6.  按一下頁面底部的 [新增]  。  
+6.  按一下 [建立]。  
   
 ##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a> 後續操作：建立知識庫之後  
  建立知識庫之後，系統會顯示可用來執行知識探索的精靈、建立比對原則的精靈或是執行定義域管理的頁面。 如需有關知識探索、定義域管理或比對原則的詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  

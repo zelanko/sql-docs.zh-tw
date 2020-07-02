@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 91f5e7effe54b9955537d90d639a820b5428a5c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d6eebcf079fbb509838e2a3c08efbee5340c4ff
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85809794"
 ---
 # <a name="open-a-knowledge-base"></a>開啟知識庫
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中開啟現有的知識庫，並預備此知識庫進行定義域管理、知識探索或是加入比對原則。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "75246013"
   
     -   選取 **[比對原則]** 建立比對原則，並將其加入至知識庫。  
   
-5.  按一下 [開啟]  。  
+5.  按一下 [開啟] 。  
   
     > [!NOTE]  
     >  若要開啟知識庫，您也可以在知識庫上按一下滑鼠右鍵，然後按一下 [開啟]。 內容功能表中的其他命令可讓您以另一個名稱儲存、解除鎖定、捨棄工作、重新命名或顯示其屬性。  
@@ -79,7 +79,7 @@ ms.locfileid: "75246013"
 ##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>知識庫的狀態  
  狀態欄位會指示知識庫位於活動的哪一個階段。 如果您開啟知識庫，它將會開啟到這個階段。  
   
--   空白>：知識庫的 [狀態] 欄位是空的，如果已在 [定義域管理] 活動中按一下 [**發行**]，然後按一下 [**是-發行知識庫並結束]** 來發行知識庫。 ** \< **  
+-   **\<Empty>**：知識庫的 [狀態] 欄位是空的，如果已在 [定義域管理] 活動中按一下 [**發行**]，然後按一下 [**是-發行知識庫並結束]** 來發行知識庫。  
   
 -   **工作中**：已在 [定義域管理] 活動中按一下 [**發行**]，然後按一下 [**否-儲存知識庫工作並**結束] 來儲存知識庫工作。  
   

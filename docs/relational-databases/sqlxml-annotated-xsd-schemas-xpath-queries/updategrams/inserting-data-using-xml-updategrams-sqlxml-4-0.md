@@ -35,15 +35,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 305a167d233ee5a11348b0cc8a050dc2f61548ae
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 88e1f334629482182fb182dde60f715c0d122d25
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84883214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790605"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 插入資料 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   當記錄實例出現在區塊中， **\<after>** 但不在對應的區塊中時，updategram 表示插入作業 **\<before>** 。 在此情況下，updategram 會將區塊中的記錄插入 **\<after>** 資料庫中。  
   
  下列是插入作業的 Updategram 格式：  

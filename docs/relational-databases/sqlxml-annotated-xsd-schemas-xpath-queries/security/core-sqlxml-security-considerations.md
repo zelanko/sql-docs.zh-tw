@@ -14,15 +14,15 @@ ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eafd432d96ad17a3ec0187c6c0e58103a7c9c6b1
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 40f3ef6735bb2de27fd4fda07c3f508717f52515
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84883589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790682"
 ---
 # <a name="core-sqlxml-security-considerations"></a>SQLXML 的核心安全性考量
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   下面是使用 SQLXML 進行資料存取的安全性指導方針。  
   
 -   SQLXMLOLEDB 提供者會公開**StreamFlags**屬性，它可讓您設定旗標，以指出應針對每個特定實例啟用或停用的 SQLXML 功能。 您可以使用這個屬性來自訂 SQLXML 的使用，並確定只有您所要的元件啟用。 如需詳細資訊，請參閱[SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)。  
