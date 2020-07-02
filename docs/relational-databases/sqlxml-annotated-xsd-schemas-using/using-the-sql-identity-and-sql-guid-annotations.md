@@ -25,16 +25,16 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f581c1a5c0d925d48df5a16d95cdb141e2d48f83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2d1d8c72851c945f178bb9e206ad536a23f24891
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724757"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>使用 sql:identity 和 sql:guid 註解
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您可以在對應至中資料庫資料行的任何節點上，于 XSD 架構中指定**sql： identity**和**sql： guid**批註。 Updategram 格式支援**updg： identity**和**updg： guid**屬性，而 DiffGram 格式則否。 **Updg： at identity**屬性會定義更新 identity 類型資料行時的行為。 **Updg： guid**屬性可讓您從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取得 guid 值，並在 updategram 中使用它。 如需詳細資訊和工作範例，請參閱[使用 XML Updategram 插入資料 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)。  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  您可以在對應至中資料庫資料行的任何節點上，于 XSD 架構中指定**sql： identity**和**sql： guid**批註 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 Updategram 格式支援**updg： identity**和**updg： guid**屬性，而 DiffGram 格式則否。 **Updg： at identity**屬性會定義更新 identity 類型資料行時的行為。 **Updg： guid**屬性可讓您從取得 guid 值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並在 updategram 中使用它。 如需詳細資訊和工作範例，請參閱[使用 XML Updategram 插入資料 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)。  
   
  **Sql： identity**和**sql： guid**批註會將此功能延伸至 diffgram。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81388100"
  **Sql： identity**和**sql： guid**批註可以在複雜的 content 元素上定義。  
   
 ## <a name="sqlidentity-annotation"></a>sql:identity 註解  
- 您可以在對應到 IDENTITY 類型之資料庫資料行的任何節點上，于 XSD 架構中指定**sql： identity**注釋。 針對此批註指定的值會定義如何更新 IDENTITY 類型的資料行（藉由使用 updategram 中提供的值來修改資料行，或忽略值，在此情況下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，會針對此資料行使用產生的值）。  
+ 您可以在對應到 IDENTITY 類型之資料庫資料行的任何節點上，于 XSD 架構中指定**sql： identity**注釋。 針對此批註指定的值會定義如何更新 IDENTITY 類型的資料行（藉由使用 updategram 中提供的值來修改資料行，或忽略值，在此情況下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對此資料行使用產生的值）。  
   
  **Sql： identity**注釋可以被指派兩個值：  
   

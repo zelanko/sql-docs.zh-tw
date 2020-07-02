@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d14e4e85d6ee52955ba17f42d288e0c770a183a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b9de9ca9259ed89e4965a1659f46031e74cac3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724611"
 ---
 # <a name="sysfn_cdc_is_bit_set-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   透過檢查擷取資料行的序數位置是否設定於提供的位元遮罩內，指出該擷取資料行是否已經更新。  
   
@@ -42,7 +42,7 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ```  
   
 ## <a name="arguments"></a>引數  
- *移動*  
+ *position*  
  這是遮罩中要檢查的序數位置。 *position*為**int**。  
   
  *update_mask*  

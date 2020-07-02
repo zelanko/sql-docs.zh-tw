@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60b6557bdc8db86ef1d8092220fb91e7e506193f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 359c039f0e3534628483bd866200f5f1056cc378
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820047"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725367"
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對資料庫中每個已定義的發行集，各包含一個資料列。 這份資料表儲存在發行集資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**描述**|**nvarchar(255)**|發行集的描述性項目。|  
+|**description**|**nvarchar(255)**|發行集的描述性項目。|  
 |**name**|**sysname**|與發行集相關聯的唯一名稱。|  
 |**pubid**|**int**|提供發行集唯一識別碼的識別欄位。|  
 |**repl_freq**|**tinyint**|複寫頻率：<br /><br /> **0** = 以交易為基礎。<br /><br /> **1** = 已排程的資料表重新整理。|  

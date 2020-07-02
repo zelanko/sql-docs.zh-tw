@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15bdca46fc62832ecd97932b1b71f999f1f80324
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: cf7943cbcef462dbdf73e72357f28e4f4e3eb20d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524405"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724208"
 ---
 # <a name="numeric-values-functions---floor"></a>數值函式 - floor
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   傳回不含小數、不大於其引數值的最大數字。 如果引數是空的序列，它會傳回空的序列。  
   

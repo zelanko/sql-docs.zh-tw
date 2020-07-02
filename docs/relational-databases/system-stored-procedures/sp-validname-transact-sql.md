@@ -18,15 +18,15 @@ ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c559c8a6af6add669e1cc4630b7bcfc9fc0aacc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86b1c7ec67a19e18dcc5daa6d14e55acc9b34c64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936730"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722983"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   檢查有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼名稱。 所有的非二進位和非零資料（包括可使用**Nchar**、 **Nvarchar**或**Ntext**資料類型儲存的 Unicode 資料）都會接受為識別碼名稱的有效字元。  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9375be2a2af2b7653b3f0f036405533f1571ff3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58d93574b2e9b71b47e9c145619e9fb153c6e91d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75319995"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723038"
 ---
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **sp_validate_replica_hosts_as_publishers**是**sp_validate_redirected_publisher**的延伸，可讓所有次要複本進行驗證，而不只是目前的主要複本。 **sp_validate_replicat_hosts_as_publisher**會驗證整個 Always On 複寫拓撲。 **sp_validate_replica_hosts_as_publishers**必須使用遠端桌面會話直接在散發者端執行，以避免雙躍點安全性錯誤（21892）。  
   
@@ -41,7 +41,7 @@ sp_validate_replica_hosts_as_publishers
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @original_publisher = ] 'original_publisher'`原先發行資料庫之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的名稱。 *original_publisher*是**sysname**，沒有預設值。  
+`[ @original_publisher = ] 'original_publisher'`原先發行資料庫之實例的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *original_publisher*是**sysname**，沒有預設值。  
   
 `[ @publisher_db = ] 'publisher_db'`要發行之資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
@@ -54,7 +54,7 @@ sp_validate_replica_hosts_as_publishers
  無。  
   
 ## <a name="remarks"></a>備註  
- 如果發行者和發行資料庫沒有專案存在， **sp_validate_redirected_publisher**會針對輸出參數* \@redirected_publisher*傳回 null。 否則會在成功和失敗時都傳回相關聯且重新導向的發行者。  
+ 如果發行者和發行資料庫沒有專案存在， **sp_validate_redirected_publisher**會針對輸出參數* \@ redirected_publisher*傳回 null。 否則會在成功和失敗時都傳回相關聯且重新導向的發行者。  
   
  如果驗證成功， **sp_validate_redirected_publisher**會傳回成功指示。  
   

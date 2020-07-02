@@ -16,15 +16,15 @@ ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32000dbe2cd4a01b544bd11f6c5b282933dc013
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d03eea8744bce4176551264b10cf2b90507b3473
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724839"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   在程式變數與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行之間建立繫結。  
   
@@ -77,7 +77,7 @@ HRESULT BCPColFmt(
  使用者的資料檔案中的欄位索引。  
   
  *eUserDataType*[in]  
- 使用者的資料檔案中欄位的資料類型。 可用的資料類型會列在具有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] BCP_TYPE_XXX 格式的 Native Client 標頭檔（sqlncli）中，例如 BCP_TYPE_SQLINT4。 如果指定了 BCP_TYPE_DEFAULT 值，提供者會嘗試使用與資料表或檢視表資料行類型相同的類型。 當 **eUserDataType** 引數為 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 時，要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行大量複製作業，並複製到檔案中：  
+ 使用者的資料檔案中欄位的資料類型。 可用的資料類型會列在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有 BCP_TYPE_XXX 格式的 Native Client 標頭檔（sqlncli）中，例如 BCP_TYPE_SQLINT4。 如果指定了 BCP_TYPE_DEFAULT 值，提供者會嘗試使用與資料表或檢視表資料行類型相同的類型。 當 **eUserDataType** 引數為 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 時，要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行大量複製作業，並複製到檔案中：  
   
 -   如果來源資料行不是小數或數值，便會使用預設的有效位數和小數位數。  
   

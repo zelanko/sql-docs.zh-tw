@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfca5caa10e36196f38817c828cbd4d062763107
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e80d631e4470e04d0ab5ab7edf6883350335586e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824897"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724636"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對每個由 Database Mail 系統傳回的 Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訊息，各包含一個資料列。 （此內容中的訊息是指訊息，例如錯誤訊息，而不是電子郵件訊息）。使用 [Database Mail Configuration Wizard] 的 [**設定系統參數**] 對話方塊或[sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)預存程式，來設定**記錄層級**參數，以決定要傳回的訊息。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82824897"
 |**Log_id**|**int**|記錄中項目的識別碼。|  
 |**event_type**|**Varchar （11）**|插入記錄中通知的類型。 可能的值有錯誤、警告、參考訊息、成功訊息和其他內部訊息。|  
 |**log_date**|**datetime**|產生記錄項目的日期和時間。|  
-|**描述**|**nvarchar(max)**|記錄的訊息文字。|  
+|**description**|**nvarchar(max)**|記錄的訊息文字。|  
 |**process_id**|**int**|Database Mail 外部程式的處理序識別碼。 這通常在每一次 Database Mail 外部程式啟動時都會變更。|  
 |**mailitem_id**|**int**|郵件佇列中郵件項目的識別碼。 如果訊息與特定電子郵件項目無關，則為 NULL。|  
 |**account_id**|**int**|與事件相關之帳戶的**account_id** 。 如果訊息與特定帳戶無關，則為 NULL。|  

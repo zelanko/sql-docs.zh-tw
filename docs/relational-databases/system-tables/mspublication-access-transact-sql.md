@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be3ae4494dd8cebf53c4c7beeec8a9b6c99b7a05
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c22e44c6ad72c36552c6b749bbc0ceab5d6a75d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725426"
 ---
 # <a name="mspublication_access-transact-sql"></a>MSpublication_access (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSpublication_access**資料表會針對每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有特定發行集或發行者存取權的登入，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   

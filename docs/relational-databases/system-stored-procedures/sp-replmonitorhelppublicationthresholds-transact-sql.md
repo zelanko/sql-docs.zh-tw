@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef69c7a4b9c0284772204981e8d01c793a683e19
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ebf0d2071d0687535479d8899c6f7c9b0f6b1eec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720194"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   傳回針對監視發行集設定的臨界值標準。 這個預存程序用來監視複寫，執行於散發資料庫的散發者端。  
   
@@ -50,7 +50,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`如果發行集的類型，則為。 *publication_type*是**int**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|交易式發行集。|  
 |**1**|快照式發行集。|  
@@ -63,7 +63,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|複寫效能標準的識別碼，它可以是下列項目之一。<br /><br /> **1expiration** -監視交易式發行集的訂閱是否即將到期。<br /><br /> **2latency** -監視交易式發行集之訂閱的效能。<br /><br /> **4mergeexpiration** -監視合併式發行集的訂閱是否即將到期。<br /><br /> **5mergeslowrunduration** -監視透過低頻寬（撥號）連接進行合併同步處理的持續時間。<br /><br /> **6mergefastrunduration** -監視透過高頻寬（LAN）連接進行合併同步處理的持續時間。<br /><br /> **7mergefastrunspeed** -監視透過高頻寬（LAN）連接進行合併同步處理的同步處理速率。<br /><br /> **8mergeslowrunspeed** -監視透過低頻寬（撥號）連接進行合併同步處理的同步處理速率。|  
 |**title**|**sysname**|複寫效能標準的名稱。|  
-|**值**|**int**|效能標準的臨界值。|  
+|**value**|**int**|效能標準的臨界值。|  
 |**shouldalert**|**bit**|這是指當計量超出此發行集定義的臨界值時，是否應該產生警示;值為**1**表示應該引發警示。|  
 |**isenabled**|**bit**|這是指是否針對此發行集的這個複寫效能標準啟用監視;值為**1**表示已啟用監視。|  
   

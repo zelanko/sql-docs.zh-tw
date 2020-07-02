@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d374b244b265d6bc46ca9e6073f9a688fcd2b4a5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c6a542e44f33a64b5cdd4727aab891592338b880
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724622"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對伺服器中每一個應用程式定義域，各傳回一個資料列。 應用程式域（**AppDomain**）是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 通用語言執行時間（CLR）中的結構，也就是應用程式的隔離單位。 您可以使用此視圖來瞭解和疑難排解在中執行的 CLR 整合物件 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "82824752"
 |**strong_refcount**|**int**|這個**AppDomain**的強式參考數目。 這會反映使用此**AppDomain**的目前執行中批次數目。 請注意，執行此視圖將會建立**強式 refcount**;即使目前沒有正在執行的程式碼， **strong_refcount**的值會是1。|  
 |**weak_refcount**|**int**|此**AppDomain**的弱式參考數目。 這表示要快取**AppDomain**內的多少個物件。 當您執行 managed 資料庫物件時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將它快取到**AppDomain**內，以供日後重複使用。 這樣可以提高執行效能。|  
 |**cost**|**int**|**AppDomain**的成本。 成本愈高，就越可能在記憶體不足的壓力下卸載此**AppDomain** 。 成本通常取決於重新建立此**AppDomain**所需的記憶體數量。|  
-|**值**|**int**|**AppDomain**的值。 值越低，就越可能在記憶體不足的壓力下卸載此**AppDomain** 。 值通常取決於使用此**AppDomain**的連接或批次數目。|  
+|**value**|**int**|**AppDomain**的值。 值越低，就越可能在記憶體不足的壓力下卸載此**AppDomain** 。 值通常取決於使用此**AppDomain**的連接或批次數目。|  
 |**total_processor_time_ms**|**bigint**|自處理序啟動以來，在目前應用程式定義域中執行之所有執行緒所用的處理器總時間 (以毫秒為單位)。 這相當於**MonitoringTotalProcessorTime**。|  
 |**total_allocated_memory_kb**|**bigint**|自應用程式定義域建立以來，它所進行的所有記憶體配置總大小 (以 KB 為單位)，不減去已回收的記憶體。 這相當於**MonitoringTotalAllocatedMemorySize**。|  
 |**survived_memory_kb**|**bigint**|在上次完整區塊回收中存活下來且已知為目前應用程式定義域所參考的 KB 數。 這相當於**MonitoringSurvivedMemorySize**。|  
@@ -58,13 +58,13 @@ ms.locfileid: "82824752"
   
 ## <a name="appdomain-initialization"></a>AppDomain 初始化  
   
-|州|描述|  
+|State|描述|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|正在建立**AppDomain** 。|  
   
 ## <a name="appdomain-usage"></a>AppDomain 使用方式  
   
-|州|描述|  
+|State|描述|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|執行時間**AppDomain**已準備好供多個使用者使用。|  
 |E_APPDOMAIN_SINGLEUSER|**AppDomain**已準備好在 DDL 作業中使用。 這些與 E_APPDOMAIN_SHARED 不同，因為共用的 AppDomains 是用於 CLR 整合執行，與 DDL 作業相反。 這類的 AppDomains 會與其他的並行作業隔離。|  
@@ -72,7 +72,7 @@ ms.locfileid: "82824752"
   
 ## <a name="appdomain-cleanup"></a>AppDomain 清除  
   
-|州|描述|  
+|State|描述|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已要求 CLR 卸載**AppDomain**，通常是因為包含 managed 資料庫物件的元件已改變或卸載。|  
 |E_APPDOMAIN_UNLOADED|CLR 已卸載**AppDomain**。 這通常是因為**ThreadAbort**、 **OutOfMemory**或使用者程式碼中未處理的例外狀況而產生的問題。|  

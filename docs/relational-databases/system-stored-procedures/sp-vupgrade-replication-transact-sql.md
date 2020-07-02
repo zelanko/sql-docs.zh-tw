@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c63f54756d3bde1ab3c79a0beee9cc06b709d05
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: aa15ada3a85a828133ca68a3c3c8ee43e365b344
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722963"
 ---
 # <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   當升級複寫伺服器時，由安裝程式啟動。 依照支援在目前產品層級進行複寫所需，來升級結構描述和系統資料。 在系統和使用者資料庫中，建立新的複寫系統物件。 這個預存程序執行於進行複寫升級的機器。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa6a12a45a5c0609b4b717ccdf90af63ea53776b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 02697937d5a0402edbaf959ed52731010eab1ce6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723067"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   變更用來執行自動化活動之作業步驟的設定。  
   
@@ -125,7 +125,7 @@ sp_update_jobstep
 |**2**|附加至輸出檔。|  
 |**4**|將 Transact-SQL 作業步驟輸出寫入步驟記錄。|  
 |**8**|將記錄寫入資料表 (覆寫現有的記錄)。|  
-|**1600**|將記錄寫入資料表 (附加至現有的記錄)。|  
+|**16**|將記錄寫入資料表 (附加至現有的記錄)。|  
   
 `[ @proxy_id = ] proxy_id`執行作業步驟之 proxy 的 ID 編號。 *proxy_id*的類型為**int**，預設值為 Null。 如果未指定任何*proxy_id* 、未指定任何*proxy_name* ，而且未指定任何*user_name* ，則作業步驟會以 Agent 的服務帳戶執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

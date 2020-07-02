@@ -11,15 +11,15 @@ ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23eefe3de50b14eec61849075fe430b362324b2e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6863cb3a257a5f34e233198ebb561bc4a365ae03
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305048"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724873"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>使用增強型日期和時間功能 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   此範例會示範如何使用在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中導入的日期/時間功能。 此範例使用四個新的日期和時間類型 (**date**、**time**、**datetime2** 和 **datetimeoffset**) 執行包含參數的命令，並擷取資料列集結果。  
   

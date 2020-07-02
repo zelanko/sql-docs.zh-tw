@@ -1,5 +1,5 @@
 ---
-title: dbo. syscategories （Transact-sql） |Microsoft Docs
+title: dbo.sys分類（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc4d6f55ca4e131abef21772911da923b854c81b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 50d79a9043c952fe124b2cfca1917df29a76394f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813866"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722936"
 ---
 # <a name="dbosyscategories-transact-sql"></a>dbo.syscategories (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 用來組織作業、警示和運算子的類別目錄。 此資料表會儲存在**msdb**資料庫中。  
   

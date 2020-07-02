@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09ef147b9051ecbacdc1a33468100f4be2b372e9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8a38d4a197b5e86b41b8a7b791321d8a7ded7ab3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723032"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   請確認發行之資料庫的目前主機是否能夠支援複寫。 必須從散發資料庫執行。 這個程式是由**sp_get_redirected_publisher**所呼叫。  
   

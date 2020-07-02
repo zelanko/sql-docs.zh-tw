@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7c949e62261e710854aefda9b83a7ca20c222b78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b46db697c7f8d6a7f402d98093323f47ece47d69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78866478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722952"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  提供實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中目前使用者、會話和進程的相關資訊。 您可以篩選資訊，只傳回屬於特定使用者或屬於特定工作階段的非閒置處理序。  
+  提供實例中目前使用者、會話和進程的相關資訊 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。 您可以篩選資訊，只傳回屬於特定使用者或屬於特定工作階段的非閒置處理序。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  *login*是**sysname** ，可識別屬於特定登入的進程。  
   
- *會話識別碼*是屬於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的會話識別碼。 *會話識別碼*為**Smallint**。  
+ *會話識別碼*是屬於實例的會話識別碼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *會話識別碼*為**Smallint**。  
   
  [作用中]**會排除等待**使用者下一個命令的會話。  
   
@@ -67,7 +67,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |**cmd**|**nchar(16)**|針對處理序來執行的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 命令 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、內部 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序等等)。 在 SQL Server 2019 中，資料類型已變更為**Nchar （26）**。|  
 |**request_id**|**int**|在特定工作階段中執行的要求識別碼。|  
   
- 發生平行處理時，會針對特定的工作階段識別碼建立子執行緒。 主要執行緒會以 `spid = <xxx>` 和 `ecid =0` 的方式指出。 另一個子執行緒具有相同`spid = <xxx>`的，但**ecid** > 0。  
+ 發生平行處理時，會針對特定的工作階段識別碼建立子執行緒。 主要執行緒會以 `spid = <xxx>` 和 `ecid =0` 的方式指出。 另一個子執行緒具有相同的 `spid = <xxx>` ，但**ecid** > 0。  
   
 ## <a name="remarks"></a>備註  
  進行封鎖的處理序 (可能擁有獨佔鎖定) 為持有另一處理序所需要之資源的處理序。  
@@ -121,7 +121,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [sp_lock &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sysprocesses &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.sys進程 &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

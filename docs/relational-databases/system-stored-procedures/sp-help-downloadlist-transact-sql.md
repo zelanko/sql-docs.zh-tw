@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9dd52e6d2e4bf8a1a099ea2391a2c6ce2d6decdc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dee2cdf797bb3336bdf2645c42435ae441c63607
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827722"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724564"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   列出所提供之作業的**sysdownloadlist**系統資料表中的所有資料列，如果未指定任何工作，則為所有資料列。  
   
@@ -90,7 +90,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**source_server**|**nvarchar(30)**|指示的來源伺服器電腦名稱。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版中，這一律是主伺服器（MSX）的電腦名稱稱。|  
 |**operation_code**|**nvarchar(4000)**|指示的作業碼。|  
 |**object_name**|**sysname**|指示所影響的物件。|  
-|**object_id**|**uniqueidentifier**|受指令影響的物件識別碼（工作物件的**job_id** ，或伺服器物件的0x00），或**operation_code**特定的資料值。|  
+|object_id|**uniqueidentifier**|受指令影響的物件識別碼（工作物件的**job_id** ，或伺服器物件的0x00），或**operation_code**特定的資料值。|  
 |**target_server**|**nvarchar(30)**|將下載這個指示的目標伺服器。|  
 |**error_message**|**nvarchar(1024)**|當目標伺服器在處理這個指示發生問題時，所發出的錯誤訊息 (如果有的話)。<br /><br /> 注意：任何錯誤訊息都會封鎖目標伺服器所有進一步的下載。|  
 |**date_posted**|**datetime**|將指示公佈到資料表中的日期。|  

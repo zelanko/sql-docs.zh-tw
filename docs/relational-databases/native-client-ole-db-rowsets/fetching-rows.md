@@ -17,15 +17,15 @@ ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dee6b8b6967046bb8ce69984fe29b71f223789d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 37018708e8f54b37041a5c25c8a8e0ec5a79ee68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298879"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724831"
 ---
 # <a name="fetching-rows"></a>提取資料列
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **IRowset** 介面是基底資料列集介面。 **IRowset** 介面提供的方法會循序擷取資料列、從這些資料列中取得資料，以及管理資料列。 取用者會使用 **IRowset** 中的方法，進行所有基本資料列集作業。 這包括提取與釋放資料列，以及取得資料行值。  
   

@@ -17,24 +17,24 @@ helpviewer_keywords:
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 965d8530b38aad7d01d9735e603eb3c3a7be0876
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0e7d5c15bd0ff4a20b4b8fe93719c573e03e2cd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820993"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722871"
 ---
 # <a name="mssub_identity_range-transact-sql"></a>MSsub_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsub_identity_range**表提供訂閱的識別範圍管理支援。 這份資料表儲存在訂閱資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**objid**|**int**|具有複寫所管理的識別欄位之資料表的識別碼。|  
-|**格或**|**bigint**|控制將在調整時，在訂閱者端進行指派的連續識別值的範圍大小。|  
+|**range**|**bigint**|控制將在調整時，在訂閱者端進行指派的連續識別值的範圍大小。|  
 |**last_seed**|**bigint**|目前範圍的下限。|  
-|**閾值**|**int**|用來控制散發代理程式指派新識別範圍之時機的百分比值。 使用 [*臨界*值] 中指定的百分比時，散發代理程式會建立新的識別範圍。|  
+|**threshold**|**int**|用來控制散發代理程式指派新識別範圍之時機的百分比值。 使用 [*臨界*值] 中指定的百分比時，散發代理程式會建立新的識別範圍。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c757e46f861d6652b3c8c151c3e002dba13e84ef
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 9fa783dfb2ac1d7e3cbca735c9f2a2cbca19dbda
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720029"
 ---
 # <a name="functions-on-string-values---upper-case"></a>字串值的相關函式 - upper-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   此函式會將 *$arg*中的每個字元轉換為其大小寫相等。 Microsoft Windows Unicode 字碼元素的二進位大小寫轉換會指定字元如何轉換成大寫。 這項標準與 Unicode 標準字碼元素標準的對應不同。  
   

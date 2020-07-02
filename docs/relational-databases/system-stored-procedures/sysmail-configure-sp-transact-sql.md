@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6e0f410a73d010d2931cfda2e87a4a4b4cbc1c64
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e3ca89ab5974dbe53b12a2b5b369958ab38755c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832498"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720162"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   變更 Database Mail 的組態設定。 使用**sysmail_configure_sp**指定的設定會套用到整個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例。  
   
@@ -68,7 +68,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 |*DefaultAttachmentEncoding*|電子郵件附件的預設編碼。|MIME|  
 |*MaxFileSize*|附件的大小上限 (以位元組為單位)。|**1000000**|  
 |*ProhibitedExtensions*|無法作為電子郵件訊息附件來傳送的副檔名清單 (以逗號分隔)。|**exe,dll,vbs,js**|  
-|*Logginglevel.information*|指定哪些訊息要記錄在 Database Mail 記錄中。 下列其中一個數值：<br /><br /> 1 - 這是標準模式。 只記錄錯誤。<br /><br /> 2 - 這是擴充模式。 記錄錯誤、警告和參考訊息。<br /><br /> 3 - 這是詳細資訊模式。 記錄錯誤、警告、參考訊息、成功訊息和其他內部訊息。 進行疑難排解時，請使用此模式。|**2**|  
+|*LoggingLevel*|指定哪些訊息要記錄在 Database Mail 記錄中。 下列其中一個數值：<br /><br /> 1 - 這是標準模式。 只記錄錯誤。<br /><br /> 2 - 這是擴充模式。 記錄錯誤、警告和參考訊息。<br /><br /> 3 - 這是詳細資訊模式。 記錄錯誤、警告、參考訊息、成功訊息和其他內部訊息。 進行疑難排解時，請使用此模式。|**2**|  
   
  預存程式**sysmail_configure_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
   

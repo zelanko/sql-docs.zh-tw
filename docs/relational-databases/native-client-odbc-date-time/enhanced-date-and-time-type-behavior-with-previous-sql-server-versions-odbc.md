@@ -13,15 +13,15 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e5147a8eef08c70605bf13f6c1cb04887d0d926
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a73fbe7709e30156f198205a21644153fad10240
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301876"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725182"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>舊版 SQL Server 的增強型日期/時間類型行為 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   本主題描述使用增強型日期和時間增強功能的用戶端應用程式與早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本進行通訊時，以及使用 Microsoft Data Access Components、Windows Data Access Components，或早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本的應用程式將命令傳送到支援增強型日期和時間功能的伺服器時的預期行為。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "81301876"
   
  SQLDescribeCol、SQLDescribeParam、SQGetDescField 和 SQLColAttribute 所傳回的語句中繼資料，會傳回與下層類型一致的中繼資料，包括類型名稱。 這類下層類型的範例是**Nvarchar**。  
   
- 當下層用戶端應用程式針對已建立日期[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] /時間類型的架構變更的（或更新版本）伺服器執行時，預期的行為如下所示：  
+ 當下層用戶端應用程式針對 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 已建立日期/時間類型的架構變更的（或更新版本）伺服器執行時，預期的行為如下所示：  
   
 |SQL Server 2005 類型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 類型|ODBC 用戶端類型|結果轉換 (SQL 到 C)|參數轉換 (C 到 SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  

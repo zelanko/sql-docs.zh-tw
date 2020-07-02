@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 3b6ba41157e7e13651eb5810502a41e7c8abde67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689236"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724701"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>註解解譯 - sql:overflow-field
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   在結構描述中，您可以將資料行識別為溢位資料行，以便從 XML 文件中接收所有未耗用的資料。 此資料行是使用**sql：溢位欄位**注釋，在架構中指定。 具有多個溢位資料行是可行的。  
   
  每當定義了**sql：溢位欄位**注釋的 XML 節點（元素或屬性）進入範圍時，就會啟動溢位資料行並接收未耗用的資料。 當此節點離開範圍時，此溢位資料行就不再處於使用中狀態，而且 XML 大量載入會讓之前的溢位欄位 (如果有的話) 變成使用中。  
   
  當它將資料儲存在溢位資料行時，XML 大量載入也會儲存父元素的開頭和結束記號，其中定義了**sql：溢位欄位**。  
   
- 例如，下列架構會描述** \< 客戶>** 和** \< CustOrder>** 元素。 每一個元素都可識別溢位資料行：  
+ 例如，下列架構會描述 **\<Customers>** 和 **\<CustOrder>** 元素。 每一個元素都可識別溢位資料行：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -76,9 +76,9 @@ ms.locfileid: "83689236"
 </xsd:schema>  
 ```  
   
- 在此架構中， ** \< Customer>** 專案會對應到「客戶」資料表，而** \< Order>** 元素則會對應至 CustOrder 資料表。  
+ 在架構中，專案會 **\<Customer>** 對應至 [加入至] 資料表，而元素則會 **\<Order>** 對應至 CustOrder 資料表。  
   
- ** \< Customer>** 和** \< Order>** 元素都會識別溢位資料行。 因此，XML 大量載入會將** \<>Customer**的所有未耗用的子項目和屬性儲存在 CustOrder 資料表的溢位資料行中，而且** \< Order>** 元素的所有未耗用子項目和屬性。  
+ **\<Customer>** 和元素都會 **\<Order>** 識別溢位資料行。 因此，XML 大量載入會將元素的所有未耗用的子項目和屬性儲存在「已在」資料表的溢位資料 **\<Customer>** 行中，並將專案的所有未耗用的子項目和屬性儲存在 **\<Order>** CustOrder 資料表的溢位資料行中。  
   
 ### <a name="to-test-a-working-sample"></a>測試工作範例  
   

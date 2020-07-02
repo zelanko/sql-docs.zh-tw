@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c9539157207e458f6a5d7d587709a94dfdc4912
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70af60ce6ae633adf339f81216b461e052f6f8e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659105"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722763"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>SetCurrentCertificate 方法 (ServerSettings 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   設定目前的安全性憑證。  
   
 ## <a name="syntax"></a>語法  
@@ -36,8 +36,8 @@ object.SetCurrentCertificate(SHA)
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
- 代表實例上之[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]伺服器設定的[ServerSettings 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)物件。  
+ *object*  
+ 代表實例上之伺服器設定的[ServerSettings 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>參數  
   

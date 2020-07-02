@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8c58657eda708965821c4739f76b49c558c8e76
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 387e4a0a30f5681391bb5891dc772f7c9f04790c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723081"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在追蹤中加入或移除事件或事件資料行。 **sp_trace_setevent**只能在已停止的現有追蹤上執行（*狀態*為**0**）。 如果在不存在的追蹤上執行這個預存程式，或其*狀態*不是**0**，則會傳回錯誤。  
   
@@ -51,7 +51,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  這份資料表會列出能夠在追蹤中新增或移除的事件。  
   
-|事件編號|事件名稱|說明|  
+|事件編號|事件名稱|描述|  
 |------------------|----------------|-----------------|  
 |0-9|Reserved|Reserved|  
 |10|RPC:Completed|發生在遠端程序呼叫 (RPC) 已完成之時。|  
@@ -254,7 +254,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |10|**ApplicationName**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|  
 |11|**LoginName**|用戶端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。|  
 |12|**SPID**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|  
-|13|**Duration**|事件所經歷的時間 (以百萬分之一秒為單位)。 這個資料行不是由 Hash Warning 事件來擴展。|  
+|13|**有效期間**|事件所經歷的時間 (以百萬分之一秒為單位)。 這個資料行不是由 Hash Warning 事件來擴展。|  
 |14|**StartTime**|事件的開始時間 (如果可以取得的話)。|  
 |15|**EndTime**|事件結束的時間。 啟動事件類別 (如 **SQL:BatchStarting** 或 **SP:Starting**) 不會擴展這個資料行。 **雜湊警告**事件也不會填入此專案。|  
 |16|**顯示**|伺服器代表事件執行的邏輯磁碟讀取數。 **Lock：已釋放**事件不會填入此資料行。|  
@@ -264,7 +264,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |20|**嚴重性**|例外狀況的嚴重性層級。|  
 |21|**EventSubClass**|事件子類別的類型。 所有事件類別的這個資料行都不會擴展。|  
 |22|**ObjectID**|系統指派給物件的識別碼。|  
-|23|「成功」 |嘗試使用權限成功；用來進行稽核。<br /><br /> **1** = 成功**0** = 失敗|  
+|23|「成功」|嘗試使用權限成功；用來進行稽核。<br /><br /> **1** = 成功**0** = 失敗|  
 |24|**IndexID**|事件所影響之物件的索引識別碼。 若要確定物件的索引識別碼，請使用 **sysindexes** 系統資料表的 **indid** 資料行。|  
 |25|**IntegerData**|這是一個整數值，會隨著追蹤所擷取的事件類別而不同。|  
 |26|**ServerName**|正在追蹤之實例的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，也就是*servername*或*servername\instancename*。|  
@@ -298,11 +298,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|這是一個 GUID 值，會隨著追蹤所擷取的事件類別而不同。|  
 |55|**IntegerData2**|這是一個整數值，會隨著追蹤所擷取的事件類別而不同。|  
 |56|**ObjectID2**|相關物件或實體的識別碼 (如果可以取得的話)。|  
-|57|**類型**|這是一個整數值，會隨著追蹤所擷取的事件類別而不同。|  
+|57|**型別**|這是一個整數值，會隨著追蹤所擷取的事件類別而不同。|  
 |58|**OwnerID**|擁有鎖定的物件類型。 只適用於鎖定事件。|  
 |59|**ParentName**|物件所在結構描述的名稱。|  
 |60|**IsSystem**|指出事件是發生在系統處理序或使用者處理序。<br /><br /> **1** = 系統<br /><br /> **0** = 使用者。|  
-|61|**投影**|預存程序或批次內之陳述式的起始位移。|  
+|61|**Offset**|預存程序或批次內之陳述式的起始位移。|  
 |62|**SourceDatabaseID**|物件來源所在的資料庫識別碼。|  
 |63|**SqlHandle**|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 此值可以傳遞給**sys.databases dm_exec_sql_text （）** ，以取得相關聯的 sql 文字。|  
 |64|**SessionLoginName**|引發工作階段的使用者登入名稱。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **連接到** ，卻以 **Login2**執行陳述式，則 **SessionLoginName** 會顯示 **Login1**，而 **LoginName** 會顯示 **Login2**。 此資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|  
@@ -326,7 +326,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>傳回碼值  
  下表描述在預存程序完成之後，使用者可能得到的代碼值。  
   
-|傳回碼|說明|  
+|傳回碼|描述|  
 |-----------------|-----------------|  
 |0|沒有錯誤。|  
 |1|未知的錯誤。|  

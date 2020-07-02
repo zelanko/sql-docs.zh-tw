@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ae9ce16e-6ee9-4c7c-8210-a9bf2c7efdf0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5283de7327958f369e78670aefff2c46a480f253
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 362cdb0fac2a30f80a5c1cd1c9d441d81522a6c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824779"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725401"
 ---
 # <a name="sysmergeschemachange-transact-sql"></a>sysmergeschemachange (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含快照集代理程式所產生之已發行的發行項之相關資訊。 這份資料表儲存在發行集和訂閱資料庫中。  
   

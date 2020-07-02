@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9963058caa3c027a294fac5828b39990bb344f5f
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 788dd201372524b85ce3cd13d998f5f09a1ca287
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215728"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724690"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>註解解譯 - sql:relationship 和索引鍵順序規則
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   由於 XML 大量載入會產生記錄做為其節點進入範圍，並將這些記錄傳送到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 做為其節點離開範圍，因此用於記錄的資料必須存在於節點的範圍內。  
   
  請考慮下列 XSD 架構，其中和元素之間的一對多關聯性 **\<Customer>** **\<Order>** （一位客戶可以下多個訂單）是使用元素指定的 **\<sql:relationship>** ：  

@@ -23,15 +23,15 @@ ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1d9fdfcd7bcc4f86afacc75dff5b40b77bb7b2a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 00a3245009d7f7db437a990fdf5dc814d6b19f7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724994"
 ---
 # <a name="fetching-result-data"></a>提取結果資料
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   ODBC 應用程式具備三個提取結果資料的選項。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "81304607"
   
  使用 SQL_C_DEFAULT 來指定 C 變數的類型時請務必小心。 SQL_C_DEFAULT 指定 C 變數的類型必須符合資料行或參數的 SQL 資料類型。 如果為**Ntext**、 **Nchar**或**Nvarchar**資料行指定了 SQL_C_DEFAULT，則會將 Unicode 資料傳回給應用程式。 如果尚未撰寫應用程式的程式碼來處理 Unicode 資料，這可能會導致各種問題。 **Uniqueidentifier** （SQL_GUID）資料類型可能會發生相同類型的問題。  
   
- **text**、 **Ntext**和**image**資料通常太大，無法放入單一程式變數中，而且通常會使用**SQLGetData** （而非**SQLBindCol**）進行處理。 使用伺服器資料指標時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會經過優化，而不會在提取資料列時傳送未系結之**text**、 **Ntext**或**image**資料行的資料。 在應用程式發出資料行的**SQLGetData**之前，不會實際從伺服器抓取**text**、 **Ntext**或**image**資料。  
+ **text**、 **Ntext**和**image**資料通常太大，無法放入單一程式變數中，而且通常會使用**SQLGetData** （而非**SQLBindCol**）進行處理。 使用伺服器資料指標時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式會經過優化，而不會在提取資料列時傳送未系結之**text**、 **Ntext**或**image**資料行的資料。 在應用程式發出資料行的**SQLGetData**之前，不會實際從伺服器抓取**text**、 **Ntext**或**image**資料。  
   
  這種優化可以套用至應用程式，如此一來，當使用者在游標上向上和向下滾動時，就不會顯示**text**、 **Ntext**或**image**資料。 在使用者選取資料列之後，應用程式可以呼叫**SQLGetData**來取出**text**、 **Ntext**或**image**資料。 這會儲存使用者未選取之任何資料列的**text**、 **Ntext**或**image**資料傳輸，而且可以節省非常大量資料的傳輸。  
   

@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95bb4ed6469c51abcffa20cf5f8cbd1132e9d182
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7f293b40fbd4d8cbdd8062679b139a4955fc0ecb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488445"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719912"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework 的 SQL Server 資料類型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **SqlTypes**程式庫是[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 基類庫的一部分。 其設計為提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中之資料類型具有相同語意及精確度的資料類型。 本主題描述 .NET Framework 程式設計人員的新語義，並介紹在**SqlTypes**命名空間中所包含的**類型。**  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  **SqlTypes**程式庫是 .NET Framework 基類庫的一部分 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 其設計為提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中之資料類型具有相同語意及精確度的資料類型。 本主題描述 .NET Framework 程式設計人員的新語義，並介紹在**SqlTypes**命名空間中所包含的**類型。**  
   
  下表列出本節中的主題。  
   

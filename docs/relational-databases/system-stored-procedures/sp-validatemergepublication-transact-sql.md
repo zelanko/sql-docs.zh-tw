@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6a0ca36329c8ddb68c9727fe1b9d2cf17674c93a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fd8e069c1029e2b715772b0dbcc9d0495ad0f0d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723006"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   執行全發行集的驗證，所有訂閱 (發送、提取和匿名) 都要驗證一次。 這個預存程序執行於發行集資料庫的發行者端。  
   

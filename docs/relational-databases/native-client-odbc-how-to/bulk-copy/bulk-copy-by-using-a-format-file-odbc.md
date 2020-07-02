@@ -14,15 +14,15 @@ ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46639c02c606ed317d0d0bfe94bcf0ae9734a62b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 01221bcb23dea7dc78777620fe580bcf0e1287c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725151"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>使用格式檔案進行大量複製 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   此範例顯示如何利用格式檔案使用 ODBC bcp_init 函數。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "81299613"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 執行第一個（ [!INCLUDE[tsql](../../../includes/tsql-md.md)]）程式代碼清單，以建立範例將使用的資料表。  
+ 執行第一個（ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ）程式代碼清單，以建立範例將使用的資料表。  
   
  複製第二個程式碼清單並將它貼入名為 Bcpfmt.fmt 的檔案中。 資料表中的每個資料行都以定位字元分隔。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "81299613"
   
  使用 odbc32.lib 和 odbcbcp.lib 編譯第四個 (C++) 程式碼清單。 如果您使用 MSBuild.exe 建立，請將 Bcpfmt.fmt 和 Bcpodbc.bcp 從專案目錄複製到具有該 .exe 的目錄，然後叫用該 .exe。  
   
- 執行第五個[!INCLUDE[tsql](../../../includes/tsql-md.md)]（）程式代碼清單，以刪除此範例所使用的資料表。  
+ 執行第五個（ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ）程式代碼清單，以刪除此範例所使用的資料表。  
   
 ```  
 use AdventureWorks  

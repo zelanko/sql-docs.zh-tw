@@ -14,15 +14,15 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ebabedb2c801881a4dc908ead93515dc9119fc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62951ec956282201ae2b61a82c6a72dcd2831307
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725145"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>從程式變數中大量複製資料 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   這個範例會示範如何使用大量複製函數，從程式變數大量複製資料到使用**bcp_bind**和**bcp_sendrow**的 SQL Server。 (為了簡化這個範例會移除錯誤檢查程式碼)。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "81299603"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 執行第一個（ [!INCLUDE[tsql](../../../includes/tsql-md.md)]）程式代碼清單，以建立範例將使用的資料表。  
+ 執行第一個（ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ）程式代碼清單，以建立範例將使用的資料表。  
   
  使用 odbc32.lib 和 odbcbcp.lib 編譯第二個 (C++) 程式碼清單。 如果您使用 MSBuild.exe 建立，請將 Bcpfmt.fmt 和 Bcpodbc.bcp 從專案目錄複製到具有該 .exe 的目錄，然後叫用該 .exe。  
   
- 執行第三個[!INCLUDE[tsql](../../../includes/tsql-md.md)]（）程式代碼清單，以刪除此範例所使用的資料表。  
+ 執行第三個（ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ）程式代碼清單，以刪除此範例所使用的資料表。  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

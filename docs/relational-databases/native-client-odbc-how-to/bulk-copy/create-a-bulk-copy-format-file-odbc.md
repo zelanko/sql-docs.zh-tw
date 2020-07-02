@@ -14,15 +14,15 @@ ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a696107a82b5f64109b115e3e1c360d81117344
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9634cf553750045c6c773ee9f804dc5358883852
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725109"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>建立大量複製格式檔案 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   此範例將示範如何使用大量複製函數來建立資料檔案和格式檔案。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
   
@@ -62,11 +62,11 @@ ms.locfileid: "81298335"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 執行第一個（ [!INCLUDE[tsql](../../../includes/tsql-md.md)]）程式代碼清單，以建立範例將使用的資料表。  
+ 執行第一個（ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ）程式代碼清單，以建立範例將使用的資料表。  
   
  使用 odbc32.lib 和 odbcbcp.lib 編譯第二個 (C++) 程式碼清單。  
   
- 執行第三個[!INCLUDE[tsql](../../../includes/tsql-md.md)]（）程式代碼清單，以刪除此範例所使用的資料表。  
+ 執行第三個（ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ）程式代碼清單，以刪除此範例所使用的資料表。  
   
 ```  
 use AdventureWorks  

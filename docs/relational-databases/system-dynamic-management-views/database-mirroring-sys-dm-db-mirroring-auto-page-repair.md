@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 83dc24f312b1fa527804a1d7716ea3e754e97038
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b030903602a5356d273e3bd5ce46995a83ea9bf3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720337"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>資料庫鏡像-sys. dm_db_mirroring_auto_page_repair
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對在伺服器執行個體之任何鏡像資料庫上進行的每個自動修復頁面嘗試行為，各傳回一個資料列。 這個檢視包含在指定鏡像資料庫上進行最新自動修復頁面嘗試行為的資料列，而且每個資料庫最多 100 個資料列。 一旦資料庫到達上限時，下一個自動修復頁面嘗試行為的資料列就會取代其中一個現有的項目。 下表定義各資料行的意義。  
   

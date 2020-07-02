@@ -13,15 +13,15 @@ ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab3541f354af26f32f4071c2a6d09648cd53af6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1c474427c4c62b667e27f299e2e7b4d9a65e1b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283080"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719659"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>建立資料表值參數資料列集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   雖然取用者可以提供資料表值參數的任何資料列集物件，但是一般的資料列集物件都會針對後端資料存放區來實作，因此所提供的效能會受到限制。 基於這個原因，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會讓取用者在記憶體中的資料之上建立特殊的資料列集物件。 這個特殊的記憶體內部資料列集物件是新的 COM 物件，稱為資料表值參數資料列集。 它會提供類似參數集的功能。  
   
@@ -42,14 +42,14 @@ ms.locfileid: "81283080"
   
  若要取得每個資料行之 null、唯一、計算和更新狀態的相關資訊，取用者會使用 IColumnsRowset：： GetColumnsRowset 或 IColumnsInfo：： GetColumnInfo。 這些方法會提供有關每一個資料表值參數資料列集資料行的詳細資訊。  
   
- 取用者會指定資料表值參數之每一個資料行的類型。 這類似於在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立資料表時指定資料行的方式。 取用者會透過[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *ppRowset*輸出參數，從 Native Client OLE DB 提供者取得資料表值參數資料列集物件。  
+ 取用者會指定資料表值參數之每一個資料行的類型。 這類似於在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立資料表時指定資料行的方式。 取用者會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 透過*ppRowset*輸出參數，從 Native Client OLE DB 提供者取得資料表值參數資料列集物件。  
   
 ## <a name="dynamic-scenario"></a>動態案例  
  當取用者沒有類型資訊時，它應該使用 IOpenRowset：： OpenRowset 來具現化資料表值參數資料列集物件。 取用者只需要提供類型名稱給提供者。  
   
  在此案例中，提供者會代表取用者包含來自伺服器之資料表值參數資料列集物件的相關類型資訊。  
   
- *pTableID* 和 *pUnkOuter* 參數的設定應該與靜態案例相同。 接著[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Native Client OLE DB 提供者會從伺服器取得類型資訊（資料行資訊和條件約束），並透過*ppRowset*參數傳回資料表值參數資料列集物件。 這項作業需要與伺服器通訊，因此其效能不比靜態案例。 動態案例只適用於參數化程序呼叫。  
+ *pTableID* 和 *pUnkOuter* 參數的設定應該與靜態案例相同。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接著，Native Client OLE DB 提供者會從伺服器取得類型資訊（資料行資訊和條件約束），並透過*ppRowset*參數傳回資料表值參數資料列集物件。 這項作業需要與伺服器通訊，因此其效能不比靜態案例。 動態案例只適用於參數化程序呼叫。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料表值參數 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

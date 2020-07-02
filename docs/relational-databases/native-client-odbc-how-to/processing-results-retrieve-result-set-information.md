@@ -14,15 +14,15 @@ ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1c65841db0fdfd386891cfbd03bdee483ce25f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5500a8a0575e04df01989b2a8ab8b81d67468f32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300368"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725003"
 ---
 # <a name="processing-results---retrieve-result-set-information"></a>處理結果 - 擷取結果集資訊
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 ### <a name="to-get-information-about-a-result-set"></a>取得結果集的相關資訊  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 31f7d9c3e5d297a39fd0278c51014793a4b8dbd0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ab6ea491a766bdb829a152ed02f92fcd2e71d39c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829232"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725421"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSpublications**資料表會針對發行者所複寫的每個發行集，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82829232"
 |**allow_push**|**bit**|指出是否能夠建立給定發行集的發送訂閱。|  
 |**allow_pull**|**bit**|指出是否能夠建立給定發行集的提取訂閱。|  
 |**allow_anonymous**|**bit**|指出是否能夠建立給定發行集的匿名訂閱。|  
-|**描述**|**nvarchar(255)**|發行集的描述。|  
+|**description**|**nvarchar(255)**|發行集的描述。|  
 |**vendor_name**|**Nvarchar （100）**|如果發行者不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，這便是供應商的名稱。|  
 |**保存**|**int**|發行集的保留期限 (以小時為單位)。|  
 |**sync_method**|**int**|同步處理方法：<br /><br /> **0** = 原生（產生所有資料表的原生模式大量複製輸出）。<br /><br /> **1** = 字元（產生所有資料表的字元模式大量複製輸出）。<br /><br /> **3** = 並行（產生所有資料表的原生模式大量複製輸出，但在快照集期間，不會鎖定資料表）。<br /><br /> **4** = Concurrent_c （產生所有資料表的字元模式大量複製輸出，但不會在快照集期間鎖定資料表）<br /><br /> **3**和**4**值適用于異動複寫和合併式複寫，但不適用於快照式複寫。|  

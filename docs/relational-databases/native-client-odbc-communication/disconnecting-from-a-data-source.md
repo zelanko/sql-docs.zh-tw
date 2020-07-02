@@ -24,15 +24,15 @@ ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de6722994ca31af3fef9a359f4bb01b5f1fc64c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2a949cbd38229abda7c604f70fd58d5b5cee3b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719826"
 ---
 # <a name="disconnecting-from-a-data-source"></a>從資料來源中斷連接
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   當應用程式完成使用資料來源時，它會呼叫**SQLDisconnect**。 **SQLDisconnect**會釋放在連接上配置的任何語句，並中斷驅動程式與資料來源的連線。 中斷連線之後，應用程式可以呼叫[SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)來釋放連接控制碼。 在結束之前，應用程式也會呼叫**SQLFreeHandle**來釋放環境控制碼。  
   

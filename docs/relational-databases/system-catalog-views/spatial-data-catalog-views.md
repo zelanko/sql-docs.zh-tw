@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96ee4f06c35a229fdebd6469e2c23b0343f4d29f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e56798156950b4d616ee1df3ceab5ccf7306567c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829742"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720392"
 ---
 # <a name="spatial-data-catalog-views"></a>空間資料目錄檢視
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本節描述可提供空間資料資訊的目錄檢視。  
   

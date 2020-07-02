@@ -24,15 +24,15 @@ ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae59e0bdb005d296341970f4582100b15a0dfdf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd54f05b336284f08892022537641a1e1af99712
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307709"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719839"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>連接至資料來源 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   配置環境與連接控制代碼，並設定任何連接屬性之後，應用程式會連接到資料來源或驅動程式。 您可以用來連接的函數有三種：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "81307709"
   
 -   不使用 ODBC 資料來源連接。  
   
- **SQLDriverConnect**連接字串包含一系列的關鍵字-值組，可指定 ODBC 驅動程式支援的所有連接資訊。 除了供驅動程式支援之所有連接資訊使用的驅動程式專屬關鍵字之外，每個驅動程式還支援標準 ODBC 關鍵字 (DSN、FILEDSN、DRIVER、UID、PWD 和 SAVEFILE)。 **SQLDriverConnect**可以用來連接，而不需要資料來源。 例如，設計用來對實例進行「無 DSN」連接的應用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以使用連接字串來呼叫**SQLDriverConnect** ，以定義登入識別碼、密碼、網路程式庫、要連接的伺服器名稱，以及要使用的預設資料庫。  
+ **SQLDriverConnect**連接字串包含一系列的關鍵字-值組，可指定 ODBC 驅動程式支援的所有連接資訊。 除了供驅動程式支援之所有連接資訊使用的驅動程式專屬關鍵字之外，每個驅動程式還支援標準 ODBC 關鍵字 (DSN、FILEDSN、DRIVER、UID、PWD 和 SAVEFILE)。 **SQLDriverConnect**可以用來連接，而不需要資料來源。 例如，設計用來對實例進行「無 DSN」連接的應用程式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用連接字串來呼叫**SQLDriverConnect** ，以定義登入識別碼、密碼、網路程式庫、要連接的伺服器名稱，以及要使用的預設資料庫。  
   
  使用**SQLDriverConnect**時，有兩個選項可提示使用者輸入任何需要的連接資訊：  
   
@@ -81,7 +81,7 @@ ms.locfileid: "81307709"
   
  當**SQLBrowseConnect**完成成功的連接時，它會傳回可在後續呼叫**SQLDriverConnect**時使用的連接字串。  
   
- Native Client ODBC 驅動程式一律會傳回成功**SQLConnect**、 **SQLDriverConnect**或 SQLBrowseConnect 上的 SQL_SUCCESS_WITH_INFO。 **SQLBrowseConnect** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 ODBC 應用程式在取得 SQL_SUCCESS_WITH_INFO 之後呼叫**SQLGetDiagRec**時，它會收到下列訊息：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式一律會傳回成功**SQLConnect**、 **SQLDriverConnect**或**SQLBrowseConnect**上的 SQL_SUCCESS_WITH_INFO。 當 ODBC 應用程式在取得 SQL_SUCCESS_WITH_INFO 之後呼叫**SQLGetDiagRec**時，它會收到下列訊息：  
   
  5701  
  表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將使用者的內容放入資料來源中定義的預設資料庫，或在資料來源沒有預設資料庫時，放入針對連接中所使用之登入識別碼所定義的預設資料庫中。  
@@ -100,7 +100,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
        Changed language setting to 'us_english'."  
 ```  
   
- 您可以忽略訊息 5701 和 5703；這些訊息僅供參考。 不過，您不得忽略 SQL_SUCCESS_WITH_INFO 傳回碼，因為可能會傳回 5701 或 5703 之外的訊息。 例如，如果驅動程式連接到執行具有過時目錄預存程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之實例的伺服器，在 SQL_SUCCESS_WITH_INFO 之後，透過**SQLGetDiagRec**傳回的其中一個錯誤就是：  
+ 您可以忽略訊息 5701 和 5703；這些訊息僅供參考。 不過，您不得忽略 SQL_SUCCESS_WITH_INFO 傳回碼，因為可能會傳回 5701 或 5703 之外的訊息。 例如，如果驅動程式連接到執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有過時目錄預存程式之實例的伺服器，在 SQL_SUCCESS_WITH_INFO 之後，透過**SQLGetDiagRec**傳回的其中一個錯誤就是：  
   
 ```  
 SqlState:   01000  
@@ -112,7 +112,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- 連接之應用程式的錯誤處理函式應該會呼叫 SQLGetDiagRec，直到它傳回 SQL_NO_DATA 為止。 **SQLGetDiagRec** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接著，它應該對*pfNative*碼為5701或5703的任何訊息採取動作。  
+ 連接之應用程式的錯誤處理函式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該會呼叫**SQLGetDiagRec** ，直到它傳回 SQL_NO_DATA 為止。 接著，它應該對*pfNative*碼為5701或5703的任何訊息採取動作。  
   
 ## <a name="see-also"></a>另請參閱  
  [與 SQL Server &#40;ODBC&#41;通訊](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  

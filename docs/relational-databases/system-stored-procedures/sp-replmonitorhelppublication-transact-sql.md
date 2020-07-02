@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8651f7ff86a8e8fdeed07358d0b97be8b01be145
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6468bcb1c97b6f995afadfe422e11dec98463620
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834297"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720205"
 ---
 # <a name="sp_replmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   傳回在發行者端一或多個發行集的目前狀態資訊。 這個預存程序用來監視複寫，執行於散發資料庫的散發者端。  
   
@@ -49,7 +49,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`如果發行集的類型，則為。 *publication_type*是**int**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|交易式發行集。|  
 |**1**|快照式發行集。|  

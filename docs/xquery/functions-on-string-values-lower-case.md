@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9202f357ebf09bef666edfe9a9e18d6dc685545
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 0f6e179612b11b1238d017fb81db2f6fbc6b661a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886588"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720067"
 ---
 # <a name="functions-on-string-values---lower-case"></a>字串值的相關函式 - lower-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   小寫函式會將 *$arg*中的每個字元轉換成其對等的小寫字母。 Microsoft Windows Unicode 字碼元素的二進位大小寫轉換會指定字元如何轉換成小寫。 這項標準與 Unicode 字碼元素標準的對應有所不同。  
   

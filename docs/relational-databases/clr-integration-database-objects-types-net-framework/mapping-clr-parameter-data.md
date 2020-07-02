@@ -26,63 +26,63 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 360a94229b107e9f24bb2a769157c75cdeb3c143
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 911b56023ea78ec75e605a39a39b705724101dee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719934"
 ---
 # <a name="mapping-clr-parameter-data"></a>對應 CLR 參數資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  下[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表列出資料類型、在**SqlTypes**命名空間中的 common language runtime （CLR） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的對等專案，以及其在[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 中的原生 CLR 對應項。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  下表列出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型、在 SqlTypes 命名空間中的 common language RUNTIME （CLR）中的對等專案， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以及其在 .NET Framework 中的原生 CLR 對應項**System.Data.SqlTypes** [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 ||||  
 |-|-|-|  
 |**SQL Server 資料類型**|類型 (在 System.Data.SqlTypes 或 Microsoft.SqlServer.Types 中)|**CLR 資料類型 (.NET Framework)**|  
-|**bigint**|**SqlInt64**|**Int64、可\<為 null 的 int64>**|  
-|**binary**|**SqlBytes、SqlBinary**|**Byte []**|  
-|**bit**|**SqlBoolean**|**布林值、\<可為 null 的布林值>**|  
+|**bigint**|**SqlInt64**|**Int64、Nullable\<Int64>**|  
+|**binary**|**SqlBytes、SqlBinary**|**Byte[]**|  
+|**bit**|**SqlBoolean**|**布林值，可為 Null\<Boolean>**|  
 |**char**|None|None|  
 |**cursor**|None|None|  
-|**date**|**SqlDateTime**|**DateTime、可\<為 null 的 datetime>**|  
-|**datetime**|**SqlDateTime**|**DateTime、可\<為 null 的 datetime>**|  
-|**datetime2**|None|**DateTime、可\<為 null 的 datetime>**|  
-|**DATETIMEOFFSET**|**None**|**DateTimeOffset、可\<為 null 的 datetimeoffset>**|  
-|**decimal**|**SqlDecimal**|**十進位、可\<為 null 的十進位>**|  
-|**float**|**SqlDouble**|**Double、可\<為 null 的 double>**|  
-|**geography**|**SqlGeography**<br /><br /> **SqlGeography**是定義在與 SQL Server 一起安裝，而且可以從[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [功能套件](https://www.microsoft.com/download/details.aspx?id=52676)下載的。|None|  
-|**幾何**|**SqlGeometry**<br /><br /> **SqlGeometry**是定義在與 SQL Server 一起安裝，而且可以從[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [功能套件](https://www.microsoft.com/download/details.aspx?id=52676)下載的。|None|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId**是定義在與 SQL Server 一起安裝，而且可以從[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [功能套件](https://www.microsoft.com/download/details.aspx?id=52676)下載的。|None|  
+|**date**|**SqlDateTime**|**DateTime，Nullable\<DateTime>**|  
+|**datetime**|**SqlDateTime**|**DateTime，Nullable\<DateTime>**|  
+|**datetime2**|None|**DateTime，Nullable\<DateTime>**|  
+|**DATETIMEOFFSET**|**None**|**DateTimeOffset，Nullable\<DateTimeOffset>**|  
+|**decimal**|**SqlDecimal**|**十進位、可為 Null\<Decimal>**|  
+|**float**|**SqlDouble**|**Double、Nullable\<Double>**|  
+|**區域**|**SqlGeography**<br /><br /> **SqlGeography**會定義在 Microsoft.SqlServer.Types.dll 中，這會與 SQL Server 一起安裝，而且可以從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [功能套件](https://www.microsoft.com/download/details.aspx?id=52676)下載。|None|  
+|**性質**|**SqlGeometry**<br /><br /> **SqlGeometry**會定義在 Microsoft.SqlServer.Types.dll 中，這會與 SQL Server 一起安裝，而且可以從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [功能套件](https://www.microsoft.com/download/details.aspx?id=52676)下載。|None|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId**會定義在 Microsoft.SqlServer.Types.dll 中，這會與 SQL Server 一起安裝，而且可以從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [功能套件](https://www.microsoft.com/download/details.aspx?id=52676)下載。|None|  
 |**image**|None|None|  
-|**int**|**SqlInt32**|**Int32、可\<為 null 的 int32>**|  
-|**money**|**SqlMoney**|**十進位、可\<為 null 的十進位>**|  
-|**nchar**|**SqlChars、SqlString**|**字串，Char []**|  
+|**int**|**SqlInt32**|**Int32，Nullable\<Int32>**|  
+|**money**|**SqlMoney**|**十進位、可為 Null\<Decimal>**|  
+|**nchar**|**SqlChars、SqlString**|**String, Char[]**|  
 |**ntext**|None|None|  
-|**numeric**|**SqlDecimal**|**十進位、可\<為 null 的十進位>**|  
-|**nvarchar**|**SqlChars、SqlString**<br /><br /> **SQLChars**是較佳的資料傳輸和存取比對，而**SQLString**則是更符合執行字串作業的結果。|**字串，Char []**|  
-|**Nvarchar （1）、Nchar （1）**|**SqlChars、SqlString**|**Char、String、Char []、可\<為 null 的 Char>**|  
-|**real**|**SqlSingle** （不過， **SqlSingle**的範圍大於**real**）|**單一、可\<為 null 的單一>**|  
-|**rowversion**|None|**Byte []**|  
-|**smallint**|**SqlInt16**|**Int16、可\<為 null 的 int16>**|  
-|**smallmoney**|**SqlMoney**|**十進位、可\<為 null 的十進位>**|  
+|**numeric**|**SqlDecimal**|**十進位、可為 Null\<Decimal>**|  
+|**nvarchar**|**SqlChars、SqlString**<br /><br /> **SQLChars**是較佳的資料傳輸和存取比對，而**SQLString**則是更符合執行字串作業的結果。|**String, Char[]**|  
+|**Nvarchar （1）、Nchar （1）**|**SqlChars、SqlString**|**Char、String、Char []、Nullable\<char>**|  
+|**real**|**SqlSingle** （不過， **SqlSingle**的範圍大於**real**）|**單一、可為 Null\<Single>**|  
+|**rowversion**|None|**Byte[]**|  
+|**smallint**|**SqlInt16**|**Int16，Nullable\<Int16>**|  
+|**smallmoney**|**SqlMoney**|**十進位、可為 Null\<Decimal>**|  
 |**sql_variant**|None|**Object**|  
 |**table**|None|None|  
 |**text**|None|None|  
-|**time**|None|**TimeSpan、可\<為 null 的 timespan>**|  
+|**time**|None|**TimeSpan、可為 Null\<TimeSpan>**|  
 |**timestamp**|None|None|  
-|**tinyint**|**SqlByte**|**Byte、可\<為 null 的 byte>**|  
-|**uniqueidentifier**|**SqlGuid**|**Guid、可\<為 null 的 guid>**|  
+|**tinyint**|**SqlByte**|**Byte、Nullable\<Byte>**|  
+|**uniqueidentifier**|**SqlGuid**|**Guid，可為 Null\<Guid>**|  
 |**使用者定義型別（UDT）**|None|繫結到相同組件或相依組件中之使用者定義型別的相同類別。|  
-|**varbinary**|**SqlBytes、SqlBinary**|**Byte []**|  
-|**Varbinary （1）、binary （1）**|**SqlBytes、SqlBinary**|**byte、Byte []、可\<為 null 的 byte>**|  
+|**varbinary**|**SqlBytes、SqlBinary**|**Byte[]**|  
+|**Varbinary （1）、binary （1）**|**SqlBytes、SqlBinary**|**byte、Byte []、Nullable\<byte>**|  
 |**varchar**|None|None|  
 |**xml**|**SqlXml**|None|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>利用 Out 參數自動轉換資料類型  
- 如果輸入參數是系統中的 CLR 資料類型，CLR 方法可以將輸入參數標記為**out**修飾詞（microsoft Visual c #）或** \<out （） > ByRef** （microsoft Visual Basic），藉以將資訊傳回給呼叫程式碼或程式 **。 SqlTypes**命名空間和呼叫程式會將其對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]等的資料類型指定為輸入參數，當 CLR 方法傳回資料類型時，會自動發生類型轉換。  
+ 如果輸入參數是**SqlTypes**命名空間中的 CLR 資料類型，而且呼叫程式指定其對等的資料類型做為輸入參數，則 clr 方法可以將輸入參數以**out**修飾詞（microsoft Visual c #）或** \<Out()> ByRef** （microsoft Visual Basic）標記，藉以將資訊傳回給呼叫程式碼或程式： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 clr 方法傳回資料類型時，會自動發生類型轉換。  
   
- 例如，下列 clr 預存程式有一個**SqlInt32** CLR 資料類型的輸入參數，其標記為**out** （c #）或** \<out （） > ByRef** （Visual Basic）：  
+ 例如，下列 CLR 預存程式具有以**out** （c #）或** \<Out()> ByRef** （Visual Basic）標記之**SqlInt32** CLR 資料類型的輸入參數：  
   
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
@@ -97,7 +97,7 @@ Public Shared Sub PriceSum( \<Out()> ByRef value As SqlInt32)
 End Sub  
 ```  
   
- 在資料庫中建立並建立元件之後，會在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用下列 transact-sql 來建立預存程式，其會將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **int**的資料類型指定為輸出參數：  
+ 在資料庫中建立並建立元件之後，會在中使用下列 Transact-sql 來建立預存程式，其會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **int**的資料類型指定為輸出參數：  
   
 ```  
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
@@ -114,7 +114,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |**十進位**|SMALLMONEY|  
 |**SqlMoney**|SMALLMONEY|  
 |**十進位**|money|  
-|**從中**|smalldatetime|  
+|**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   
 ## <a name="change-history"></a>變更記錄  

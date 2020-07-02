@@ -14,19 +14,19 @@ ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76bc7c1f39fe0cca0badcf0b768b5a65dbe6d02f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a90a9bd5e3259e80dcd16550e3553c9c3dbdaf34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298317"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725120"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>利用 SQL Server ODBC 驅動程式進行大量複製的使用說明主題 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   搭配 Microsoft® SQL Server™ 2005 使用時，SQL Server ODBC 驅動程式支援 DB-Library API 所支援的相同大量複製函數。  
   
- 如需從開始大量複製的重大變更相關資訊[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，請參閱[&#40;ODBC&#41;執行大量複製作業](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 如需從開始大量複製的重大變更相關資訊 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ，請參閱[&#40;ODBC&#41;執行大量複製作業](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
