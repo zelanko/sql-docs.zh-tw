@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 4fd1ec7f-b9dc-4ddb-ab3a-0d59ab05ad20
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b120c992cdf1418cb6c4b5d5699e3990d4d9f342
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f443c4a8f581862926f5881799ee538952338d7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725833"
 ---
 # <a name="syscolumn_xml_schema_collection_usages-transact-sql"></a>sys.column_xml_schema_collection_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對每個 XML 結構描述所驗證的資料行，各傳回一個資料列。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|這個資料行所屬的物件識別碼。|  
+|object_id|**int**|這個資料行所屬的物件識別碼。|  
 |**column_id**|**int**|資料行的識別碼。 在物件中，這是唯一的。|  
 |**xml_collection_id**|**int**|這是集合的識別碼，這個集合包含該資料行之正在驗證的 XML 結構描述命名空間。|  
   

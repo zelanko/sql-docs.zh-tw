@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e917afd75495ed2e6c2506bc0c012d4bfa7a8e4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71174265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727224"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   建立警示。  
   
@@ -53,14 +53,14 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'`警示的名稱。 這個名稱會出現在回應警示所傳送的電子郵件或呼叫器訊息中。 它必須是唯一的，而且可以包含百分比**%**（）字元。 *名稱*是**sysname**，沒有預設值。  
+`[ @name = ] 'name'`警示的名稱。 這個名稱會出現在回應警示所傳送的電子郵件或呼叫器訊息中。 它必須是唯一的，而且可以包含百分比（ **%** ）字元。 *名稱*是**sysname**，沒有預設值。  
   
 `[ @message_id = ] message_id`定義警示的訊息錯誤號碼。 （它通常會對應至**sysmessages**資料表中的錯誤號碼）。*message_id*是**int**，預設值是**0**。 如果使用*嚴重性*來定義警示， *message_id*必須是**0**或 Null。  
   
 > [!NOTE]  
 >  只有寫入 Microsoft Windows 應用程式記錄檔的**sysmessages**錯誤可能會導致傳送警示。  
   
-`[ @severity = ] severity`定義警示的嚴重性層級（從**1**到**25**）。 儲存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在**sysmessages**資料表中的任何訊息若以[!INCLUDE[msCoName](../../includes/msconame-md.md)]指定的嚴重性傳送至 Windows 應用程式記錄檔，就會導致傳送警示。 *嚴重性*是**int**，預設值是0。 如果*message_id*用來定義警示，*嚴重性*必須是**0**。  
+`[ @severity = ] severity`定義警示的嚴重性層級（從**1**到**25**）。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]儲存在**sysmessages**資料表中的任何訊息若以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 指定的嚴重性傳送至 Windows 應用程式記錄檔，就會導致傳送警示。 *嚴重性*是**int**，預設值是0。 如果*message_id*用來定義警示，*嚴重性*必須是**0**。  
   
 `[ @enabled = ] enabled`指出警示的目前狀態。 [*已啟用*] 是**Tinyint**，預設值是1（已啟用）。 若為**0**，則不會啟用警示，也不會引發。  
   
@@ -74,10 +74,10 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @notification_message = ] 'notification_message'`這是一項選擇性的額外訊息，會在電子郵件、 **net send**或呼機通知中傳送給操作員。 *notification_message*是**Nvarchar （512）**，預設值是 Null。 指定*notification_message*有助於新增特殊的附注，例如補救程式。  
   
-`[ @include_event_description_in = ] include_event_description_in`這是指是否應將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤的描述包含在通知訊息中。 *include_event_description_in*是**Tinyint**，預設值是**5** （電子郵件和**net send**），而且可以將其中一或多個值與**or**邏輯運算子結合。  
+`[ @include_event_description_in = ] include_event_description_in`這是指是否 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應將錯誤的描述包含在通知訊息中。 *include_event_description_in*是**Tinyint**，預設值是**5** （電子郵件和**net send**），而且可以將其中一或多個值與**or**邏輯運算子結合。  
   
 > [!IMPORTANT]
->  在未來版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，將會從 Agent 移除 [呼機] 和 [ **net send** ] 選項。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
+>  在未來版本的中，將會從 Agent 移除 [呼機] 和 [ **net send** ] 選項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -88,7 +88,7 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @database_name = ] 'database'`必須發生錯誤，才會引發警示的資料庫。 如果未提供*資料庫*，不論發生錯誤的位置為何，都會引發警示。 *資料庫*為**sysname**。 不允許以括號 ([ ]) 括住的名稱。 預設值是 NULL。  
   
-`[ @event_description_keyword = ] 'event_description_keyword_pattern'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤描述的字元順序必須類似。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 運算式模式比對字元。 *event_description_keyword_pattern*是**Nvarchar （100）**，預設值是 Null。 此參數適用于篩選物件名稱（例如 **% customer_table%**）。  
+`[ @event_description_keyword = ] 'event_description_keyword_pattern'`錯誤描述的字元順序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須類似。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 運算式模式比對字元。 *event_description_keyword_pattern*是**Nvarchar （100）**，預設值是 Null。 此參數適用于篩選物件名稱（例如 **% customer_table%**）。  
   
 `[ @job_id = ] job_id`回應此警示所要執行之作業的作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 Null。  
   
@@ -97,13 +97,13 @@ sp_add_alert [ @name = ] 'name'
 > [!NOTE]  
 >  必須指定*job_id*或*job_name* ，但不能同時指定兩者。  
   
-`[ @raise_snmp_trap = ] raise_snmp_trap`未在 7.0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版中執行。 *raise_snmp_trap*是**Tinyint**，預設值是0。  
+`[ @raise_snmp_trap = ] raise_snmp_trap`未在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版中執行。 *raise_snmp_trap*是**Tinyint**，預設值是0。  
   
 `[ @performance_condition = ] 'performance_condition'`這是以 '*itemcomparatorvalue*' 格式表示的值。 *performance_condition*是**Nvarchar （512）** ，預設值是 Null，且由這些元素組成。  
   
 |格式元素|描述|  
 |--------------------|-----------------|  
-|*項目*|計數器的效能物件、效能計數器或具名執行個體|  
+|*Item*|計數器的效能物件、效能計數器或具名執行個體|  
 |*比較子*|下列其中一個運算子： >、< 或 =|  
 |*ReplTest1*|計數器的數值|  
   
@@ -172,7 +172,7 @@ GO
  [sp_delete_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [sp_update_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [sysperfinfo &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [sys.sysperfinfo &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

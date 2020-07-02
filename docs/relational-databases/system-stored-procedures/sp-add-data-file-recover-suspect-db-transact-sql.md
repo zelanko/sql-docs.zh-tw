@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2c95b74b5c1875f2a1f1db40ec42e3f3ada87a63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 144d563bf27f0d6133da0ab4facb26edd3a23d44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942367"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731746"
 ---
 # <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   當因為檔案群組空間不足 (1105 錯誤) 而無法完成資料庫的復原作業時，將資料檔加入檔案群組中。 加入檔案之後，這個預存程序會關閉受到質疑的設定，再完成資料庫的復原。 這些參數與 ALTER DATABASE *database_name* ADD FILE 的參數相同。  
   
@@ -49,7 +49,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
   
 `[ @filegroup = ] 'filegroup_name_ '`這是要加入檔案的檔案群組。 *filegroup_name*是**Nvarchar （260）**，預設值是 Null，表示主要檔案。  
   
-`[ @name = ] 'logical_file_name_ '`這是在中用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來參考檔案的名稱。 在伺服器中，這個名稱必須是唯一的。 *logical_file_name*是**Nvarchar （260）**，沒有預設值。  
+`[ @name = ] 'logical_file_name_ '`這是在中用來參考檔案的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在伺服器中，這個名稱必須是唯一的。 *logical_file_name*是**Nvarchar （260）**，沒有預設值。  
   
 `[ @filename = ] 'os_file_name_ '`這是作業系統用於檔案的路徑和檔案名。 這個檔案必須在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體中。 *os_file_name*是**Nvarchar （260）**，沒有預設值。  
   

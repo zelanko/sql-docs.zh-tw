@@ -27,20 +27,20 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 108698da668928d4412eb7ba42621b539850b26c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04e60b218439a67e0fd0d57f6c36cc725217931b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488149"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727643"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 整合架構 - CLR 主控環境
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 .NET Framework Common Language Runtime (CLR) 整合可讓資料庫程式設計人員使用 Visual C#、Visual Basic .NET 和 Visual C++ 等語言。 程式設計人員可以使用這些語言所撰寫的商務邏輯種類包括函數、預存程序、觸發程序、資料類型和彙總。  
   
   CLR 會功能垃圾收集的記憶體、先占式執行緒、中繼資料服務（型別反映）、程式碼可驗證性和代碼啟用安全性。 CLR 會使用中繼資料來找出並載入類別、配置記憶體中的執行個體、解析方法引動過程、產生機器碼、強制使用安全性，和設定執行階段內容界限。  
   
- CLR 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行階段環境不同之處在於處理記憶體、執行緒與同步的方式。 本文描述這兩個執行時間的整合方式，以便一致地管理所有系統資源。 本文也涵蓋了 CLR 代碼啟用安全性（CAS）與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安全性的整合方式，以提供可靠且安全的使用者程式碼執行環境。  
+ CLR 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行階段環境不同之處在於處理記憶體、執行緒與同步的方式。 本文描述這兩個執行時間的整合方式，以便一致地管理所有系統資源。 本文也涵蓋了 CLR 代碼啟用安全性（CAS）與安全性的整合方式， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以提供可靠且安全的使用者程式碼執行環境。  
   
 ## <a name="basic-concepts-of-clr-architecture"></a>CLR 架構的基本概念  
  在 .NET Framework 中，程式設計人員會以高階語言撰寫，實作定義其結構 (例如，類別的欄位或屬性) 和方法的類別。 這些方法中有部分可以是靜態函數。 編譯程式會產生一個稱為組件的檔案，其中包含利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中繼語言 (MSIL) 編譯的程式碼，以及包含相依組件所有參考的資訊清單。  
@@ -101,10 +101,10 @@ ms.locfileid: "81488149"
  當提供了這些屬性時，主機可以指定 HPA (如 SharedState 屬性) 的清單，在主控環境內應該不允許使用這些 HPA。 在此情況下，CLR 會拒絕使用者程式碼嘗試呼叫 HPA 在禁止清單中加註的 API。 如需詳細資訊，請參閱[主控制項保護屬性和 CLR 整合程式設計](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)。  
   
 ## <a name="how-sql-server-and-the-clr-work-together"></a>SQL Server 和 CLR 如何一起運作  
- 本節討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何整合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 的執行緒、排程、同步處理以及記憶體管理模型。 特別是，本節會按照延展性、可靠性以及安全性目標來檢查整合效果。 當 CLR 裝載到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實質上會當做它的作業系統。 CLR 會針對執行緒、排程、同步處理與記憶體管理，呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所實作的低階常式。 這些常式與其余[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]引擎所使用的基本類型相同。 此方法提供數個延展性、可靠性與安全性優勢。  
+ 本節討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何整合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 的執行緒、排程、同步處理以及記憶體管理模型。 特別是，本節會按照延展性、可靠性以及安全性目標來檢查整合效果。 當 CLR 裝載到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實質上會當做它的作業系統。 CLR 會針對執行緒、排程、同步處理與記憶體管理，呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所實作的低階常式。 這些常式與其余引擎所使用的基本類型相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 此方法提供數個延展性、可靠性與安全性優勢。  
   
 ###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>延展性：一般執行緒、排程與同步處理  
- CLR 會呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API 來建立執行緒，以便同時用於執行中的使用者程式碼和自己的內部用途。 若要在多個執行緒之間同步處理，CLR 會呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同步處理物件。 這種作法可[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]讓排程器線上程等候同步處理物件時，排定其他工作。 例如，當 CLR 起始記憶體回收時，其所有執行緒都會等待記憶體回收完成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程器知道它們所等待的 CLR 執行緒與同步處理物件，因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以排程正在執行與 CLR 無關之其他資料庫工作的執行緒。 這也可以讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 偵測到包含 CLR 同步處理物件所採用之鎖定的死結，並採用傳統的技術來移除死結。  
+ CLR 會呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API 來建立執行緒，以便同時用於執行中的使用者程式碼和自己的內部用途。 若要在多個執行緒之間同步處理，CLR 會呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同步處理物件。 這種作法可讓排程器在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行緒等候同步處理物件時，排定其他工作。 例如，當 CLR 起始記憶體回收時，其所有執行緒都會等待記憶體回收完成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程器知道它們所等待的 CLR 執行緒與同步處理物件，因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以排程正在執行與 CLR 無關之其他資料庫工作的執行緒。 這也可以讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 偵測到包含 CLR 同步處理物件所採用之鎖定的死結，並採用傳統的技術來移除死結。  
   
  Managed 程式在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中會以先佔式執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程器可以偵測和停止需要大量時間產生的執行緒。 能夠將 CLR 執行緒攔截到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行緒意味著 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程器可以在 CLR 中識別「失控的」執行緒，並管理其優先順序。 這種失控的執行緒會暫停，並放回到佇列中。 系統不允許重複識別為失控執行緒的執行緒在給定的期間內執行，讓其他執行中的工作者得以執行。  
   
@@ -158,7 +158,7 @@ Thread.EndThreadAffinity();
 |-|-|-|-|  
 |權限集合|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |程式碼存取安全性|僅限 Execute|對外部資源的 Execute + 存取權|不受限制|  
-|程式設計模型限制|是|是|無限制|  
+|程式設計模型限制|是|是|沒有限制|  
 |可驗證性需求|是|是|否|  
 |呼叫機器碼的能力|否|否|是|  
   

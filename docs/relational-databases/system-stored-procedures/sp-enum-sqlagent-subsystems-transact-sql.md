@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 356357df8d2c8a3202a5ff088ba2c277aa9fd73c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3e3cb3c3a3d5b623bdac08f2cf97d203db632ebd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731703"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 子系統。  
   
@@ -39,7 +39,7 @@ sp_enum_sqlagent_subsystems
 ```  
   
 ## <a name="arguments"></a>引數  
- 無  
+ None  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -49,7 +49,7 @@ sp_enum_sqlagent_subsystems
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**子系統**|**nvarchar(40)**|子系統的名稱。|  
-|**描述**|**nvarchar(512)**|子系統的描述。|  
+|**description**|**nvarchar(512)**|子系統的描述。|  
 |**subsystem_dll**|**Nvarchar （510）**|子系統所在的 DLL 模組。|  
 |**agent_exe**|**Nvarchar （510）**|子系統所用的可執行模組。|  
 |**start_entry_point**|**nvarchar(30)**|在作業步驟執行期間，SQL Server Agent 所呼叫的程序。|  

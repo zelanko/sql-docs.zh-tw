@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e1360140898495518485394878cc74f04ee35923
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 35aa02236cf3e8a11d03539042ccdaf9049dd8f9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731714"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   建立一個發行項，將它加入發行集中。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -152,7 +152,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|**無**|不使用命令。|  
+|無|不使用命令。|  
 |**delete**|在套用快照集之前，從目的地資料表中刪除資料。 當水平篩選發行項時，只刪除篩選子句指定的資料行中之資料。 當定義水平篩選時，不支援 Oracle 發行者使用這個值。|  
 |**drop** （預設值）|卸除目的地資料表。|  
 |**各**|截斷目的地資料表。 對 ODBC 或 OLE DB 訂閱者無效。|  
@@ -219,7 +219,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @destination_owner = ] 'destination_owner'`這是目的地物件的擁有者名稱。 *destination_owner*是**sysname**，預設值是 Null。 若未指定*destination_owner* ，則會根據下列規則自動指定擁有者：  
   
-|狀況|目的地物件擁有者|  
+|條件|目的地物件擁有者|  
 |---------------|------------------------------|  
 |發行集利用原生模式大量複製來產生初始快照集，這只支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。|預設為*source_owner*的值。|  
 |從非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者發行。|預設為目的地資料庫的擁有者。|  
@@ -287,7 +287,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|**無**|複寫未執行明確識別範圍管理。 建議您只將這個選項用於與舊版 SQL Server 的回溯相容性。 對等複寫不允許這個值。|  
+|無|複寫未執行明確識別範圍管理。 建議您只將這個選項用於與舊版 SQL Server 的回溯相容性。 對等複寫不允許這個值。|  
 |**手動**|利用 NOT FOR REPLICATION 來標示識別欄位，以啟用手動的識別範圍處理。|  
 |**自動**|指定自動管理識別範圍。|  
 |Null （預設值）|當*auto_identity_range*的值不是**true**時，預設值為**none** 。 對等拓朴預設值為**手動**（會忽略*auto_identity_range* ）。|  

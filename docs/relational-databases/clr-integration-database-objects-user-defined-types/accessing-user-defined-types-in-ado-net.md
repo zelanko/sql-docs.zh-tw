@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 4b0d876c-8066-490e-8e18-327c0e942b19
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d14205a6fb506f5d4fddaac1ab601ff1ee9205b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cbbff72ab506238ec2134da8a91f91e3a315eb3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488237"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727855"
 ---
 # <a name="accessing-user-defined-types-in-adonet"></a>存取 ADO.NET 中的使用者定義型別
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用者定義類型（Udt）是使用產生可驗證程式代碼的[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common language RUNTIME （CLR）所支援的任何語言所撰寫。 這包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic。 UDT 允許在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中儲存物件及自訂資料結構。 資料會做為 .NET Framework 類別或結構的公用成員而公開，行為可使用類別或結構的方法來定義。 UDT 可用作資料表的資料行定義、[!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中的變數，或是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式或預存程序的引數。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  使用者定義類型（Udt）是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 產生可驗證程式代碼的 .NET Framework common language runtime （CLR）所支援的任何語言所撰寫。 這包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic。 UDT 允許在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中儲存物件及自訂資料結構。 資料會做為 .NET Framework 類別或結構的公用成員而公開，行為可使用類別或結構的方法來定義。 UDT 可用作資料表的資料行定義、[!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中的變數，或是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式或預存程序的引數。  
   
  在 ADO.NET 中， **SqlClient**提供者會以下列方式公開 udt：  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc69a273dfa331e558f076429be95c2462b551d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827638"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730041"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的自動化活動之作業的相關資訊。  
   
@@ -81,7 +81,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status`作業的執行狀態。 *status*是**int**，預設值是 Null，它可以是下列值之一。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**0**|只傳回未閒置或暫停的作業。|  
 |**1**|執行中。|  
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|已暫停。|  
 |**7**|正在執行完成動作。|  
   
-`[ @date_comparator = ] 'date_comparison'`比較運算子，用於*date_created*和*date_modified*的比較。 *date_comparison*是**char （1）**，而且可以是 =、 \< 或 >。  
+`[ @date_comparator = ] 'date_comparison'`比較運算子，用於*date_created*和*date_modified*的比較。 *date_comparison*是**char （1）**，而且可以是 =、 \<, or > 。  
   
 `[ @date_created = ] date_created`作業的建立日期。 *date_created*是**datetime**，預設值是 Null。  
   
@@ -111,7 +111,7 @@ sp_help_job { [ @job_id = ] job_id
 |**originating_server**|**nvarchar(30)**|作業的來源伺服器名稱。|  
 |**name**|**sysname**|作業的名稱。|  
 |**後**|**tinyint**|指出是否啟用作業，以便執行。|  
-|**描述**|**nvarchar(512)**|作業的描述。|  
+|**description**|**nvarchar(512)**|作業的描述。|  
 |**start_step_id**|**int**|應該作為執行起點的作業步驟識別碼。|  
 |**類別**|**sysname**|作業類別目錄。|  
 |**主人**|**sysname**|作業擁有者。|  
@@ -149,7 +149,7 @@ sp_help_job { [ @job_id = ] job_id
 |**step_id**|**int**|步驟的唯一 (針對這項作業) 識別碼。|  
 |**step_name**|**sysname**|步驟的名稱。|  
 |**子系統**|**nvarchar(40)**|在其中執行步驟命令的子系統。|  
-|**命令**|**Nvarchar （3200）**|要執行的命令。|  
+|**command**|**Nvarchar （3200）**|要執行的命令。|  
 |**flags**|**nvarchar(4000)**|控制步驟行為之值的**位元遮罩**。|  
 |**cmdexec_success_code**|**int**|在**CmdExec**步驟中，這是成功命令的進程結束碼。|  
 |**on_success_action**|**nvarchar(4000)**|作業成功時要執行什麼動作。<br /><br /> **1** = 結束並成功。<br /><br /> **2** = 結束但失敗。<br /><br /> **3** = 移至下一個步驟。<br /><br /> **4** = 移至步驟。|  

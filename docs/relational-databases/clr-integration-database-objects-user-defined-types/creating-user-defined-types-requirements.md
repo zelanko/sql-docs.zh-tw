@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b19a9179cba2225a2209255ce48220669e4bbef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b20192a3804dfba713b04706d528738ceb8768c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486967"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727814"
 ---
 # <a name="creating-user-defined-types---requirements"></a>建立使用者定義型別 - 需求
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  建立要安裝在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的使用者定義型別（UDT）時，您必須進行幾項重要的設計決策。 對於大部分的 UDT 而言，雖然將 UDT 當做類別來建立也是一種選擇，但是建議將 UDT 當做結構來建立。 UDT 定義必須符合建立 UDT 的規格，才能讓它使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  建立要安裝在中的使用者定義型別（UDT）時，您必須進行幾項重要的設計決策 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 對於大部分的 UDT 而言，雖然將 UDT 當做類別來建立也是一種選擇，但是建議將 UDT 當做結構來建立。 UDT 定義必須符合建立 UDT 的規格，才能讓它使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊。  
   
 ## <a name="requirements-for-implementing-udts"></a>實作 UDT 的需求  
  若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行，UDT 必須實作 UDT 定義中的下列需求：  
   
  此 UDT 必須指定**SqlUserDefinedTypeAttribute**。 **SerializableAttribute**是選擇性的，但建議使用。  
   
--   UDT 必須藉由建立公用**靜態**（在 Visual Basic [!INCLUDE[msCoName](../../includes/msconame-md.md)]中為**Shared** ） **Null**方法，在類別或結構中執行**SqlTypes. INullable**介面。 依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠辨識 Null。 若要讓在 UDT 中執行的程式碼能夠辨識 Null 值，此為必要選項。  
+-   UDT 必須藉由建立公用**靜態**（在 Visual Basic 中為**Shared** ） Null 方法，在類別或結構中執行**SqlTypes. INullable**介面 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 **Null** 依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠辨識 Null。 若要讓在 UDT 中執行的程式碼能夠辨識 Null 值，此為必要選項。  
   
 -   UDT 必須包含可支援從進行剖析的公用**靜態**（或**共用**） **Parse**方法，以及用來轉換為物件之字串表示的公用**ToString**方法。  
   
 -   具有使用者定義序列化格式的 UDT 必須執行**IBinarySerialize**介面，並提供**讀取**和**寫入**方法。  
   
--   UDT 必須執行 system.string，否則所有公用欄位和屬性都必須是 XML 可序列化的類型，或者，如果需要覆寫標準**序列化，則**會以**XmlIgnore**屬性裝飾。  
+-   UDT 必須執行**System.Xml。** 如果需要覆寫標準序列化，則序列化 IXmlSerializable 或所有公用欄位和屬性都必須是可序列化的 XML 類型，或以**XmlIgnore**屬性裝飾。  
   
 -   一個 UDT 物件必須僅有一個序列化。 如果序列化或還原序列化常式識別一個以上的特定物件表示法，則驗證會失敗。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "81486967"
   
 -   UDT 必須將資料元素公開為公用欄位或屬性程序。  
   
--   公用名稱的長度不能超過128個字元，而且必須符合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [資料庫識別碼](../../relational-databases/databases/database-identifiers.md)中所定義之識別碼的命名規則。  
+-   公用名稱的長度不能超過128個字元，而且必須符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [資料庫識別碼](../../relational-databases/databases/database-identifiers.md)中所定義之識別碼的命名規則。  
   
 -   **SQL_variant**的資料行不能包含 UDT 的實例。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "81486967"
 >  雖然伺服器不會使用它來執行比較，但是您可以選擇性地執行**CompareTo****的 system.servicemodel 介面，** 它會公開單一方法。 在需要對 UDT 值進行精確比較或排序的情況下，將會在用戶端上使用它。  
   
 ## <a name="native-serialization"></a>原生序列化  
- 若要為 UDT 選擇正確的序列化屬性，必須視您嘗試建立的 UDT 型別而定。 **原生**序列化格式會利用非常簡單的結構， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]讓能夠將有效的 UDT 原生標記法儲存在磁片上。 如果 UDT 很簡單，而且只包含下列類型的欄位，則建議使用**原生**格式：  
+ 若要為 UDT 選擇正確的序列化屬性，必須視您嘗試建立的 UDT 型別而定。 **原生**序列化格式會利用非常簡單的結構，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠將有效的 UDT 原生標記法儲存在磁片上。 如果 UDT 很簡單，而且只包含下列類型的欄位，則建議使用**原生**格式：  
   
  **bool**、 **byte**、 **sbyte**、 **short**、 **ushort**、 **int**、 **uint**、 **long**、 **ulong**、 **float**、 **double**、 **SqlByte**、 **SqlInt16**、 **SqlInt32**、 **SqlInt64**、 **SqlDateTime**、 **SqlSingle**、 **SqlDouble**、 **SqlMoney**、 **SqlBoolean**  
   
@@ -99,15 +99,15 @@ ms.locfileid: "81486967"
 >  UDT 欄位必須使用原生序列化，或保存下來進行索引。  
   
 ## <a name="serialization-attributes"></a>序列化屬性  
- 屬性會決定如何使用序列化來建構 UDT 的儲存表示，並將 UDT 以傳值方式傳輸到用戶端。 在建立 UDT 時，您必須指定**SqlUserDefinedTypeAttribute** 。 **SqlUserDefinedTypeAttribute**屬性會指出類別是 udt，並指定 udt 的儲存區。 您可以選擇性地指定**Serializable**屬性，但[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不需要這個。  
+ 屬性會決定如何使用序列化來建構 UDT 的儲存表示，並將 UDT 以傳值方式傳輸到用戶端。 在建立 UDT 時，您必須指定**SqlUserDefinedTypeAttribute** 。 **SqlUserDefinedTypeAttribute**屬性會指出類別是 udt，並指定 udt 的儲存區。 您可以選擇性地指定**Serializable**屬性，但不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要這個。  
   
  **SqlUserDefinedTypeAttribute**具有下列屬性：。  
   
- **[格式]**  
+ **編排**  
  指定序列化格式，可以是**原生**或**使用者**設定的，視 UDT 的資料類型而定。  
   
  **IsByteOrdered**  
- **布林**值，決定如何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 UDT 上執行二進位比較。  
+ **布林**值，決定如何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 UDT 上執行二進位比較。  
   
  **IsFixedLength**  
  表示此 UDT 的所有執行個體是否為相同長度。  
@@ -146,13 +146,13 @@ ms.locfileid: "81486967"
 -   小於或等於 (&lt;=)  
   
 ### <a name="implementing-nullability"></a>實作 Null 屬性  
- 除了必須正確地指定組件的屬性外，您的類別還必須能夠支援 Null 屬性。 載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 udt 可感知 null，但為了讓 UDT 能夠辨識 null 值，此類別必須實**INullable**介面。 如需詳細資訊以及如何在 UDT 中執行 null 屬性的範例，請參閱撰寫[使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)的程式碼。  
+ 除了必須正確地指定組件的屬性外，您的類別還必須能夠支援 Null 屬性。 載入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 udt 可感知 null，但為了讓 UDT 能夠辨識 null 值，此類別必須實**INullable**介面。 如需詳細資訊以及如何在 UDT 中執行 null 屬性的範例，請參閱撰寫[使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)的程式碼。  
   
 ### <a name="string-conversions"></a>字串轉換  
  若要支援從 UDT 來回轉換的字串，您必須在類別中提供**Parse**方法和**ToString**方法。 **Parse**方法可讓字串轉換成 UDT。 它必須宣告為**靜態**（或在 Visual Basic 中**共用**），並採用**SqlTypes. SqlString**類型的參數。 如需如何執行**Parse**和**ToString**方法的詳細資訊和範例，請參閱撰寫[使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)的程式碼。  
   
 ## <a name="xml-serialization"></a>XML 序列化  
- Udt 必須符合 XML 序列化的合約，才能支援**xml**資料類型的轉換。 **System.web**命名空間包含用來將物件序列化為 Xml 格式檔或資料流程的類別。 您可以選擇使用**IXmlSerializable**介面來執行**xml**序列化，以提供 xml 序列化和還原序列化的自訂格式。  
+ Udt 必須符合 XML 序列化的合約，才能支援**xml**資料類型的轉換。 **System.Xml。序列化**命名空間包含用來將物件序列化為 XML 格式檔或資料流程的類別。 您可以選擇使用**IXmlSerializable**介面來執行**xml**序列化，以提供 xml 序列化和還原序列化的自訂格式。  
   
  除了執行從 UDT 到**xml**的明確轉換之外，xml 序列化還可讓您：  
   

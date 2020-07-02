@@ -19,15 +19,15 @@ ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097629a1642c952384ed96ac8349f241237332b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2878d206d4bc90d801e1e8f42f4f3f2c04d2c121
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733197"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   報告特定替代語言或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中所有語言的相關資訊。  
   
@@ -41,7 +41,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @language = ] 'language'`這是要顯示資訊的替代語言名稱。 *language*是**sysname**，預設值是 Null。 如果指定*language* ，則會傳回指定語言的相關資訊。 如果未指定 language，則會傳回**sys.syslanguages**相容性檢視中所有語言的相關資訊。  
+`[ @language = ] 'language'`這是要顯示資訊的替代語言名稱。 *language*是**sysname**，預設值是 Null。 如果指定*language* ，則會傳回指定語言的相關資訊。 如果未指定 language，則會傳回**sys.sys語言**相容性檢視中所有語言的相關資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -53,7 +53,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**langid**|**smallint**|語言識別碼。|  
 |**dateformat**|**nchar(3)**|日期的格式。|  
 |**datefirst**|**tinyint**|每週第一天：1 代表星期一，2 代表星期二，依此類推，7 則代表星期日。|  
-|**更新**|**int**|這個語言最後升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
+|**升級**|**int**|這個語言最後升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
 |**name**|**sysname**|語言名稱。|  
 |**alias**|**sysname**|語言的替代名稱。|  
 |**months**|**nvarchar(372)**|月份名稱。|  

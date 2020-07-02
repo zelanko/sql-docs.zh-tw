@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 74860a8f4c8dee263ea7ee0eea75679c721d1fa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28eb993cc6755d596d49e7930a3fd68b884b8f29
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68032986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731720"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   將應用程式角色加入至目前資料庫中。  
   
@@ -44,7 +44,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="arguments"></a>引數  
 `[ @rolename = ] 'role'`這是新應用程式角色的名稱。 *role*是**sysname**，沒有預設值。 *角色*必須是有效的識別碼，而且不能已存在於目前的資料庫中。  
   
- 應用程式角色名稱可包含 1 到 128 個字元，其中包括字母、符號和數字。 角色名稱不能包含反斜線\\（），也不能是 Null 或空字串（' '）。  
+ 應用程式角色名稱可包含 1 到 128 個字元，其中包括字母、符號和數字。 角色名稱不能包含反斜線（），也不能 \\ 是 Null 或空字串（' '）。  
   
 `[ @password = ] 'password'`這是啟動應用程式角色所需的密碼。 *password*是**sysname**，沒有預設值。 *密碼*不可以是 Null。  
   
@@ -54,7 +54,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="remarks"></a>備註  
  在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者 (和角色) 並未與結構描述完全區分。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，結構描述就與角色完全分開。 這個新架構會反映在 CREATE APPLICATION ROLE 的行為上。 這個語句會取代**sp_addapprole**。  
   
- 為了維持與舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]回溯相容性， **sp_addapprole**將會執行下列動作：  
+ 為了維持與舊版的回溯相容性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， **sp_addapprole**將會執行下列動作：  
   
 -   如果尚未有與應用程式角色同名的結構描述，就會建立這類結構描述。 新的結構描述是由應用程式角色所擁有，它會是應用程式角色的預設結構描述。  
   
@@ -73,7 +73,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
  需要資料庫的 ALTER ANY APPLICATION ROLE 權限。 如果尚未有與新角色同名以及同一個擁有者的結構描述，也會需要資料庫的 CREATE SCHEMA 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會將具有密碼`SalesApp` `x97898jLJfcooFUYLKm387gf3`的新應用程式角色加入至目前的資料庫。  
+ 下列範例會將具有密碼的新應用程式角色加入 `SalesApp` `x97898jLJfcooFUYLKm387gf3` 至目前的資料庫。  
   
 ```  
 EXEC sp_addapprole 'SalesApp', 'x97898jLJfcooFUYLKm387gf3' ;  

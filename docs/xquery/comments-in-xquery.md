@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05205d44c6d05729e1dc6ea7e17c867c0b7b28f0
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 67f2ad02eb9486508840f0b731b1d6e705d94f7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726746"
 ---
 # <a name="comments-in-xquery"></a>XQuery 中的註解
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   您可以將註解加入到 XQuery。 註解字串是利用 "`(:`" 和 "`:)`" 分隔符號來加入。 例如：  
   

@@ -22,18 +22,18 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe5409120a3d0c5df3cf05318b0b85fd22d07bdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bf9f98482ad83d1cf5104f9379ac294f2064c62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725879"
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>針對 sql:relationship 指定 sql:inverse 屬性 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  只有當 XSD 架構用於大量載入或 updategram 時， **sql：反向**屬性才有用。 可以在** \<sql： relationship>** 元素上指定**sql：反函數**屬性。 在 Updategram 中，Updategram 邏輯會解譯結構描述，以便判斷 Updategram 作業所更新的資料表和資料行。 在結構描述中指定的父子式關聯性會判斷修改記錄 (插入或刪除) 的順序。  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  只有當 XSD 架構用於大量載入或 updategram 時， **sql：反向**屬性才有用。 可以在元素上指定**sql：反函數**屬性 **\<sql:relationship>** 。 在 Updategram 中，Updategram 邏輯會解譯結構描述，以便判斷 Updategram 作業所更新的資料表和資料行。 在結構描述中指定的父子式關聯性會判斷修改記錄 (插入或刪除) 的順序。  
   
- 如果您有 XSD 結構描述，而且其父子式關聯性是以對應資料庫資料行之間主索引鍵/外部索引鍵關聯性的反向順序所指定，則插入或刪除 Updategram 作業將會由於主索引鍵/外部索引鍵違規而失敗。 在這種情況下 **，sql： attribute 會**在** \<sql： relationship>** 元素中指定（**sql：反函數 = "true"**），而 updategram 邏輯會反轉其在架構中指定之父子式關聯性的轉譯。  
+ 如果您有 XSD 結構描述，而且其父子式關聯性是以對應資料庫資料行之間主索引鍵/外部索引鍵關聯性的反向順序所指定，則插入或刪除 Updategram 作業將會由於主索引鍵/外部索引鍵違規而失敗。 在這種情況下，會在元素中指定**sql：反函數**屬性（**sql：反函數 = "true"**） **\<sql:relationship>** ，而 updategram 邏輯會反轉其在架構中指定之父子式關聯性的轉譯。  
   
  **Sql：反函數**屬性會接受布林值（0 = false，1 = true）。 可接受的值為 0、1、true 和 false。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 155f59426e8167d5d888f3890089dd4b2ea3bf7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87c243c1eaffdcbf471347a677bb7e5d9c9ffbb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731744"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   設定主要資訊、加入本機和遠端監視器連結，以及在次要伺服器上建立所指定主要資料庫的複製和還原作業。  
   
@@ -53,7 +53,7 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @primary_server = ] 'primary_server'`記錄傳送設定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中之主要實例的名稱。 *primary_server*是**sysname** ，不能是 Null。  
+`[ @primary_server = ] 'primary_server'`記錄傳送設定中之主要實例的名稱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。 *primary_server*是**sysname** ，不能是 Null。  
   
 `[ @primary_database = ] 'primary_database'`這是主伺服器上的資料庫名稱。 *primary_database*是**sysname**，沒有預設值。  
   
@@ -61,11 +61,11 @@ sp_add_log_shipping_secondary_primary
   
 `[ @backup_destination_directory = ] 'backup_destination_directory'`將備份檔案複製到其中的次要伺服器目錄。 *backup_destination_directory*是**Nvarchar （500）** ，不能是 Null。  
   
-`[ @copy_job_name = ] 'copy_job_name'`要用來建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的名稱，以便將交易記錄備份複製到次要伺服器。 *copy_job_name*是**sysname** ，不能是 Null。  
+`[ @copy_job_name = ] 'copy_job_name'`要用來 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立 Agent 作業的名稱，以便將交易記錄備份複製到次要伺服器。 *copy_job_name*是**sysname** ，不能是 Null。  
   
-`[ @restore_job_name = ] 'restore_job_name'`這是次要伺服器上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的代理程式作業名稱，可將備份還原至次要資料庫。 *restore_job_name*是**sysname** ，不能是 Null。  
+`[ @restore_job_name = ] 'restore_job_name'`這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次要伺服器上的代理程式作業名稱，可將備份還原至次要資料庫。 *restore_job_name*是**sysname** ，不能是 Null。  
   
-`[ @file_retention_period = ] 'file_retention_period'`在刪除之前，備份檔案在@backup_destination_directory參數所指定的路徑中保留在次要伺服器上的時間長度（以分鐘為單位）。 *history_retention_period*是**int**，預設值是 Null。 若未指定，則使用 14420。  
+`[ @file_retention_period = ] 'file_retention_period'`在刪除之前，備份檔案在參數所指定的路徑中保留在次要伺服器上的時間長度（以分鐘為單位） @backup_destination_directory 。 *history_retention_period*是**int**，預設值是 Null。 若未指定，則使用 14420。  
   
 `[ @monitor_server = ] 'monitor_server'`這是監視伺服器的名稱。 *Monitor_server*是**sysname**，沒有預設值，而且不能是 Null。  
   
@@ -114,7 +114,7 @@ sp_add_log_shipping_secondary_primary
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  
- 這個範例說明如何使用**sp_add_log_shipping_secondary_primary**預存程式來設定次要伺服器上主資料庫[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]的資訊。  
+ 這個範例說明如何使用**sp_add_log_shipping_secondary_primary**預存程式來設定次要伺服器上主資料庫的資訊 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   

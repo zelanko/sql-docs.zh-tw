@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d275b0666ae80ff933d7d236d0d04f2648b744fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6e128b63ebe77467e7c3fd6ea2486f3fdc043334
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834282"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725716"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   傳回有關用來監視合併式複寫之特定複寫合併代理程式工作階段的詳細發行項層級資訊。 結果集包含在工作階段期間同步處理的每個發行項各一個詳細資料列。 同時也包含代表工作階段初始化的一個資料列，以及摘要工作階段之上傳和下載階段的資料列。 這個預存程序執行於散發資料庫的散發者端，或訂閱資料庫的訂閱者端。  
   
@@ -48,7 +48,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**ArticleName**|**sysname**|這是正在同步處理的發行項名稱。 **ArticleName**也包含結果集中不代表發行項詳細資料之資料列的摘要資訊。|  
 |**百分比**|**decimal**|針對目前執行中或已失敗的工作階段，指出套用在給定發行項詳細資料列的總變更量之百分比。|  
 |**RelativeCost**|**decimal**|指出同步處理發行項所花的時間，相當於該工作階段同步處理總時間的百分比。|  
-|**Duration**|**int**|代理程式工作階段的長度。|  
+|**有效期間**|**int**|代理程式工作階段的長度。|  
 |**Inserts**|**int**|工作階段中的插入數。|  
 |**更新**|**int**|工作階段中的更新數。|  
 |**Deletes**|**int**|工作階段中的刪除數。|  

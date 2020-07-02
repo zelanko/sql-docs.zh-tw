@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 812be95c9584e75d8452c946d1935625468a79a1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 70c59031b56b4ec7a5f670ecc3a9c5692181d8d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733188"
 ---
 # <a name="sp_helpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回目前資料庫之相關檔案的實體名稱和屬性。 請利用這個預存程序來判斷伺服器所要附加或卸離的檔案名稱。  
   
@@ -50,7 +50,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|邏輯檔案名稱。|  
 |**fileid**|**smallint**|檔案的數值識別碼。 如果已指定*name* ，則不會傳回 *。*|  
-|**名稱**|**Nchar （260）**|實體檔案名稱。|  
+|**filename**|**Nchar （260）**|實體檔案名稱。|  
 |**filegroup**|**sysname**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
 |**size**|**Nvarchar （15）**|檔案大小 (以 KB 為單位)。|  
 |**maxsize**|**Nvarchar （15）**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  

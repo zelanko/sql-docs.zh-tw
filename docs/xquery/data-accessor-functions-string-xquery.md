@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59c90ce7e0bdbe46fa1ca577e2b16e6576650751
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: d4c0dee40eb08aac425f93570c98fc88d32bcc60
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730966"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>資料存取子函式 - string (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   傳回以字串表示的 *$arg*值。  
   

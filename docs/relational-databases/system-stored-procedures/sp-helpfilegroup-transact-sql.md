@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c212c587efbf32067d575f488416256f35312f2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c59a7c87c2252497a8a7865c179939a601039157
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832621"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733181"
 ---
 # <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回目前資料庫之相關檔案群組的名稱和屬性。  
   
@@ -58,7 +58,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|檔案群組中該檔案的邏輯名稱。|  
 |**fileid**|**smallint**|數值檔案識別碼。|  
-|**名稱**|**Nchar （260）**|檔案的實體名稱 (包含目錄路徑在內)。|  
+|**filename**|**Nchar （260）**|檔案的實體名稱 (包含目錄路徑在內)。|  
 |**size**|**Nvarchar （15）**|檔案大小 (以 KB 為單位)。|  
 |**maxsize**|**Nvarchar （15）**|檔案的大小上限。<br /><br /> 這是檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
 |**growth**|**Nvarchar （15）**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。<br /><br /> 0 = 檔案是固定大小，不會成長。|  

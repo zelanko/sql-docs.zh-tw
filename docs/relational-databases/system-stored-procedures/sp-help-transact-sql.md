@@ -18,17 +18,17 @@ ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac6e69db443bd23c3e9b1119b21d8fd98ebe39c4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 57a435db1aca6c2ab9f093792e26f7e88dcbf21a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727176"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  報告資料庫物件（ **sysobjects**相容性檢視中所列的任何物件）、使用者定義資料類型或資料類型的相關資訊。  
+  報告資料庫物件（ **sys.sys物件**相容性檢視中所列的任何物件）、使用者定義資料類型或資料類型的相關資訊。  
   
  
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -78,7 +78,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**名稱**|**Nvarchar （** 128 **）**|資料表名稱|  
     |**擁有者**|**Nvarchar （** 128 **）**|資料表擁有者|  
-    |**類型**|**Nvarchar （** 31 **）**|資料表類型|  
+    |**型別**|**Nvarchar （** 31 **）**|資料表類型|  
     |**Created_datetime**|**datetime**|資料表的建立日期|  
   
      視指定的資料庫物件而定， **sp_help**會傳回額外的結果集。  
@@ -90,7 +90,7 @@ sp_help [ [ @objname = ] 'name' ]
         |資料行名稱|資料類型|描述|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**Nvarchar （** 128 **）**|資料行名稱。|  
-        |**類型**|**Nvarchar （** 128 **）**|資料行資料類型。|  
+        |**型別**|**Nvarchar （** 128 **）**|資料行資料類型。|  
         |**過**|**Varchar （** 35 **）**|指出是否計算資料行中的值：[是] 或 [否]。|  
         |**長度**|**int**|資料行長度 (以位元組為單位)。<br /><br /> 注意：如果資料類型是大數數值型別（**Varchar （max）**、 **Nvarchar （max）**、 **Varbinary （max）** 或**xml**），此值會顯示為-1。|  
         |**Prec**|**char （** 5 **）**|資料行有效位數。|  
@@ -152,7 +152,7 @@ sp_help [ [ @objname = ] 'name' ]
         |資料行名稱|資料類型|描述|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**Nvarchar （** 128 **）**|預存程序參數名稱。|  
-        |**類型**|**Nvarchar （** 128 **）**|預存程序參數的資料類型。|  
+        |**型別**|**Nvarchar （** 128 **）**|預存程序參數的資料類型。|  
         |**長度**|**smallint**|最大的實體儲存體長度 (以位元組為單位)。|  
         |**Prec**|**int**|有效位數或總位數。|  
         |**縮放比例**|**int**|小數點右側的位數。|  
@@ -198,6 +198,6 @@ GO
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sysobjects &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [&#40;Transact-sql 的sys.sys物件&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 687a624eea351433407ee88298a6520ceb213841
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6fae0542a38a215d79228674fa6b2a9fbe4b9eb7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728196"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回目前資料庫中所有全文檢索目錄所用的所有元件 (篩選、斷詞工具和通訊協定處理常式) 的清單。  
   
@@ -47,7 +47,7 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**全文檢索目錄名稱**|**int**|全文檢索目錄的名稱。|  
 |**全文檢索目錄識別碼**|**sysname**|全文檢索目錄的識別碼。|  
-|**componenttype**|**sysname**|這是元件的類型， 發生下列情形之一：<br /><br /> 篩選<br /><br /> 通訊協定處理常式<br /><br /> 斷詞工具|  
+|**componenttype**|**sysname**|這是元件的類型， 發生下列情形之一：<br /><br /> Filter<br /><br /> 通訊協定處理常式<br /><br /> 斷詞工具|  
 |**componentname**|**sysname**|元件的名稱。|  
 |**clsid**|**uniqueidentifier**|元件的類別識別碼。|  
 |**fullpath**|**nvarchar(256)**|元件位置的路徑。<br /><br /> Null = 呼叫端不是**serveradmin**固定伺服器角色的成員。|  

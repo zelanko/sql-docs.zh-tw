@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 286967567a48b35252f097ce6b88193c4e3bcb95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e28d6e5a83595cc052d25f0c2e425c041a89932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488407"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727886"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 使用者定義彙總 - 叫用函式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式中叫用 Common Language Runtime (CLR) 使用者定義彙總，依套用至系統彙總函式的所有規則而定。  
   
  適用下列其他規則：  
@@ -197,7 +197,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 將程式碼編譯為**myagg.dll 之後**之後，您可以在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]註冊匯總，如下所示：  
+ 將程式碼編譯成**MyAgg.dll**之後，您就可以在中註冊匯總，如下所示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8657fda01875b6c0ec78ecad0334f9f74b3e7eab
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 01bbcce9c632bce61cf0417b940d7b938c2dd6d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833162"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733115"
 ---
 # <a name="sp_helpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回發行集中發生衝突的發行項。 這個預存程序執行於發行集資料庫的發行者端，或合併訂閱資料庫的訂閱者端。  
   
@@ -49,7 +49,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**篇**|**sysname**|發行項的名稱。|  
+|**文章**|**sysname**|發行項的名稱。|  
 |**source_owner**|**sysname**|來源物件的擁有者。|  
 |**source_object**|**Nvarchar （386）**|來源物件的名稱。|  
 |**conflict_table**|**nvarchar(258)**|儲存插入或更新衝突的資料表名稱。|  

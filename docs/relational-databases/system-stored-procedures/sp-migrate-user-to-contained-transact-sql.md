@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a641f363b4a39b28b7a7ea767914d952c83d697e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d3faf15999e0c157859e3d2eee9c4119ab344844
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828279"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727151"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   將對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的資料庫使用者移轉為具有密碼之自主資料庫使用者。 在自主資料庫中，使用這個程序來移除已安裝資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的相依性。 **sp_migrate_user_to_contained**會將使用者與原始登入區隔開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以便為自主資料庫個別管理密碼和預設語言等設定。 在將自主資料庫移至不同的實例之前，可以使用**sp_migrate_user_to_contained** ， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以排除目前實例登入的相依性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

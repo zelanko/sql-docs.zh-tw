@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2bbdd0932b38efdb305a592f1e18174e1c39f554
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f448e7027b69d81f9f2690eff1b431837320aa51
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725751"
 ---
 # <a name="sp_remoteoption-transact-sql"></a>sp_remoteoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   顯示或變更執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機伺服器上所定義的遠端登入選項。  
   

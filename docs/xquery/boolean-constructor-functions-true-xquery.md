@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb3625b1377d11907ca118faee8d81c06b8d6af6
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 614128995edaefae4fb5f6746d092a6d3f74c1ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886566"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726758"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>布林建構函式 - true (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   傳回 xs:boolean 值 True。 這相當於 `xs:boolean("1")`。  
   

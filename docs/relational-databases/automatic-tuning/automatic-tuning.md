@@ -14,15 +14,15 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c76481db7044deb3cc7f9c4e1c99230ef16ea3a3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 5617630853a700c906949cfa9a9bc2acf719c2ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727913"
 ---
 # <a name="automatic-tuning"></a>自動微調
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 「自動調整」是一種資料庫功能，可深入探索潛在的查詢效能問題、建議解決方法，並且自動修正找到的問題。
 
@@ -90,7 +90,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 在中 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] ，您可以使用查詢存放區系統檢視來尋找計畫選擇回歸。 在中 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ， [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會偵測並顯示潛在的計畫選擇回歸，以及應該在[dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)視圖中套用的建議動作。 此視圖會顯示問題的相關資訊、問題的重要性，以及詳細資料，例如已識別的查詢、回歸計畫的識別碼、做為比較基準使用的計畫識別碼，以及 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 可執行以修正問題的語句。
 
-| 類型 | description | Datetime | score | 詳細資料 | ... |
+| type | description | Datetime | score | 詳細資料 | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間已從4毫秒變更為14毫秒 | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間已從37毫秒變更為84毫秒 | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |

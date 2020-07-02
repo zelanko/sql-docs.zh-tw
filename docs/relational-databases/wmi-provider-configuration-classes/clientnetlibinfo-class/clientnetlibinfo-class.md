@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3507079371ee02f7d73652989c5020110338d41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c9d450f018e02392528fcb8164f247fa03a78a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731524"
 ---
 # <a name="clientnetlibinfo-class"></a>ClientNetLibInfo 類別
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   [ClientNetLibInfo 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)代表用戶端網路程式庫的相關資訊。  
   
- 用戶端網路程式庫檔案可讓用戶端實例透過網路與[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用特定網路通訊協定的實例進行通訊。  
+ 用戶端網路程式庫檔案可讓用戶端實例透過網路與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用特定網路通訊協定的實例進行通訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)  

@@ -18,16 +18,16 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7123c1bd3fee61a3d0671a0d8fbe27c2943ba7ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c21a740f3c4496db871b2602b001df80d3628ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727208"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   從目前資料庫中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色移除安全性帳戶。  
   
@@ -65,7 +65,7 @@ sp_droprolemember 'role' ,
   
  若要從固定伺服器角色中移除使用者，請使用 sp_dropsrvrolemember。 您無法從 public 角色中移除使用者，也不能從任何角色中移除 dbo。  
   
- 使用 sp_helpuser 查看[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]角色的成員，並使用 ALTER role 將成員新增至角色。  
+ 使用 sp_helpuser 查看角色的成員 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並使用 ALTER role 將成員新增至角色。  
   
 ## <a name="permissions"></a>權限  
  需要角色的 ALTER 權限。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5692aa5b46d79c68165fa6f1320034fdb7e03b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3fc0fece7f57957f38344a557c88fbedb908090
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388306"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730954"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>針對 xml 資料類型的 XQuery 運算子
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 支援下列運算子：  
   
@@ -33,7 +33,7 @@ ms.locfileid: "81388306"
   
 -   用於值比較的運算子 (eq, ne, lt, gt, le, ge)  
   
--   一般比較的運算子（=，！ =， \<，>， \<=，>=）  
+-   一般比較的運算子（=、！ =、 \<, > 、 \<=, > =）  
   
  如需這些運算子的詳細資訊，請參閱[&#40;XQuery 的比較運算式&#41;](../xquery/comparison-expressions-xquery.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "81388306"
 ### <a name="a-using-general-operators"></a>A. 使用一般運算子  
  此查詢會說明套用到序列與比較序列的一般運算子使用方式。 此查詢會從**Contact**資料表的**AdditionalContactInfo**資料行中，抓取每個客戶的電話號碼序列。 然後，將此序列和這兩個電話號碼的序列 ("111-111-1111", "222-2222") 比較。  
   
- 查詢會使用**=** 比較運算子。 **=** 運算子右邊順序中的每個節點會與左側序列中的每個節點進行比較。 如果節點相符，節點的比較就會是**TRUE**。 接著會轉換為整數並和 1 進行比較，然後查詢會傳回客戶識別碼。  
+ 查詢會使用 **=** 比較運算子。 運算子右邊順序中的每個節點 **=** 會與左側序列中的每個節點進行比較。 如果節點相符，節點的比較就會是**TRUE**。 接著會轉換為整數並和 1 進行比較，然後查詢會傳回客戶識別碼。  
   
 ```sql
 WITH XMLNAMESPACES (  
@@ -79,7 +79,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-using-a-value-operator"></a>C. 使用值運算子  
- 下列查詢會抓取產品型號`Picture`的 <> 元素，其中的圖片大小為「小型」：  
+ 下列查詢 `Picture` 會抓取產品型號的 <> 元素，其中的圖片大小為「小型」：  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -92,7 +92,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 因為**eq**運算子的兩個運算元都是不可部分完成的值，所以在查詢中會使用 value 運算子。 您可以使用一般比較運算子（ **=** ）撰寫相同的查詢。  
+ 因為**eq**運算子的兩個運算元都是不可部分完成的值，所以在查詢中會使用 value 運算子。 您可以使用一般比較運算子（）撰寫相同的查詢 **=** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)   

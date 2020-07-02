@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf88421f5f7d54beab0dcc69ac37858817d43bd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b97d327f22cd51a90fccbfe0e9e7008e62a42cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659628"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731535"
 ---
 # <a name="cinstance-class---instancename-property"></a>CInstance 類別 - InstanceName 屬性
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  取得[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端實例的名稱。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+  取得用戶端實例的名稱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *object*  
  代表 [用戶端執行個體的](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) CInstance 類別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

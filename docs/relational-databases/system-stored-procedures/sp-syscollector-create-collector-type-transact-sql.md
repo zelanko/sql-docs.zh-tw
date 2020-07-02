@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4290d2ecff4b76675f464c5e2a396703e7fc370c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4db22cb0d886a4b0ed1213998d334d4b20ce90f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725601"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   建立資料收集器的收集器型別。 收集器型別是封裝周圍的邏輯包裝函式 [!INCLUDE[ssIS](../../includes/ssis-md.md)] ，可提供實際機制來收集資料，並將它上傳到管理資料倉儲。  
   

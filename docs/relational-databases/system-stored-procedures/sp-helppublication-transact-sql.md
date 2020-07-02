@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59f47194e94e256ddb6e2ded61dc61198dea26b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b4c5d3157c6683a793f30eccd878aa9e691c7023
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729218"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   傳回有關發行集的資訊。 若是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集，這個預存程式會在發行集資料庫的發行者端執行。 如果是 Oracle 發行集，這個預存程序執行於任何資料庫中的散發者端。  
   
@@ -53,7 +53,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|發行集的識別碼。|  
-|name|**sysname**|發行集的名稱。|  
+|NAME|**sysname**|發行集的名稱。|  
 |restricted|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**tinyint**|發行集的目前狀態。<br /><br /> **0** = 非使用中。<br /><br /> **1** = 使用中。|  
 |工作 (task)||使用這個項目的目的，是為了與舊版相容。|  

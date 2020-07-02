@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5af11c14c7b0bf3b8e32d503c4b77e59623ce9ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee4fd4f6b8ea67fd9e1b973fd2b283a10d525437
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731781"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   設定記錄傳送組態的主要資料庫，其中包括備份作業、本機監視記錄，以及遠端監視記錄。  
   
@@ -71,7 +71,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
  1 = Windows 驗證。  
   
- 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 *monitor_server_security_mode*是**bit** ，不能是 Null。  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 *monitor_server_security_mode*是**bit** ，不能是 Null。  
   
 `[ @monitor_server_login = ] 'monitor_server_login'`這是用來存取監視伺服器之帳戶的使用者名稱。  
   
@@ -85,7 +85,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 `[ @history_retention_period = ] history_retention_period`這是保留記錄的時間長度（以分鐘為單位）。 *history_retention_period*是**int**，預設值是 Null。 若未指定，則使用 14420。  
   
-`[ @backup_job_id = ] backup_job_id OUTPUT`與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主伺服器上的備份作業相關聯的代理程式作業識別碼。 *backup_job_id*是**uniqueidentifier** ，不能是 Null。  
+`[ @backup_job_id = ] backup_job_id OUTPUT`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與主伺服器上的備份作業相關聯的代理程式作業識別碼。 *backup_job_id*是**uniqueidentifier** ，不能是 Null。  
   
 `[ @primary_id = ] primary_id OUTPUT`記錄傳送設定之主資料庫的識別碼。 *primary_id*是**uniqueidentifier** ，不能是 Null。  
   

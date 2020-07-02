@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 386e1980ae19ba4f98222b51a4955b024f815083
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 399c1dca1657c95edd70dcec0ba26619f6001180
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727683"
 ---
 # <a name="assemblies-database-engine"></a>組件 (Database Engine)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本節中的主題提供可協助您了解、設計和實作組件的資訊。  
   
- 元件是在實例中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用來部署函式、預存程式、觸發程式、使用者定義匯總和使用者定義型別（以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime （CLR）所裝載的其中一個 managed 程式碼語言撰寫），而不是在中[!INCLUDE[tsql](../../includes/tsql-md.md)]的 DLL 檔案。  
+ 元件是在實例中用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來部署函式、預存程式、觸發程式、使用者定義匯總和使用者定義型別（以 common language runtime （CLR）所裝載的其中一個 managed 程式碼語言撰寫） [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ，而不是在中的 DLL 檔案 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的組件是會參考 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime 中所建立 Managed 應用程式模組 (.dll 檔案) 的物件。 組件包含類別中繼資料及 Managed 程式碼。 將組件上傳到 SQL Server 的執行個體是建立下列任何一個資料庫物件的首要步驟：  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 88ec07ae0655f6a4617f15ed5f486a8fbb1b61d4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 66a4d334719707d8f906b6026737037d7ea28175
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725649"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 停止執行作業。  
 
@@ -64,7 +64,7 @@ sp_stop_job
 ## <a name="remarks"></a>備註  
  **sp_stop_job**將停止信號傳送到資料庫。 有些進程可以立即停止，有些則必須達到穩定的點（或程式碼路徑的進入點），才會停止。 某些長時間執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (如 BACKUP、RESTORE) 和某些 DBCC 命令可能需要一段很長的時間才能完成。 當這些執行時，可能需要一段時間才會取消工作。 停止作業會造成「作業取消」項目記錄在作業記錄中。  
   
- 如果作業目前正在執行**CmdExec**或**PowerShell**類型的步驟，執行中的進程（例如 myprogram.exe）會強制提前結束。 提前結束可能造成無法預期的行為，例如，有保留開啟狀態的處理序在使用檔案。 因此，如果作業包含**CmdExec**或**PowerShell**類型的步驟，應該只在極端情況下使用**sp_stop_job** 。  
+ 如果作業目前正在執行**CmdExec**或**PowerShell**類型的步驟，執行中的進程（例如 MyProgram.exe）會強制提前結束。 提前結束可能造成無法預期的行為，例如，有保留開啟狀態的處理序在使用檔案。 因此，如果作業包含**CmdExec**或**PowerShell**類型的步驟，應該只在極端情況下使用**sp_stop_job** 。  
   
 ## <a name="permissions"></a>權限  
  依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  

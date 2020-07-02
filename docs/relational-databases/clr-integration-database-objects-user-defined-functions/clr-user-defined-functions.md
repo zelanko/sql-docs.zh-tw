@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0da524de3a21a97daf6e3b2d2e0277631a4467c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe481b1a49f8eba69bbf913e49f398c86244b952
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727865"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 使用者定義函數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用者定義函數是可以使用參數、執行計算或其他動作，並傳回結果的常式。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，您可以使用任何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程式設計語言 (例如，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#) 撰寫使用者定義函數。  
   
  函數有兩種類型：傳回單一值的純量值函式，以及傳回一組資料列的資料表值函式。  

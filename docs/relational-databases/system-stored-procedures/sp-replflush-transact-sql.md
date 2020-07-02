@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a95b0ac89751e284537eda5e44ec9a7bb0efe712
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eb038176fb0a2d81f2c643e9e21cc336c97d48ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725726"
 ---
 # <a name="sp_replflush-transact-sql"></a>sp_replflush (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   排清發行項快取。 這個預存程序執行於發行集資料庫的發行者端。  
   

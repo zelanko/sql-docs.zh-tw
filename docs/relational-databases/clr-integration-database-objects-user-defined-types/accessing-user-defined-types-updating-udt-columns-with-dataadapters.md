@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08c36963088684d415534e091a2764f576a86d22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07b1dc9d3f7beca9f048ec0e367c33922e388f32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727833"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>存取使用者定義型別 - 使用 DataAdapter 更新 UDT 資料行
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用者定義型別（Udt）可透過使用**SqlClient 和 SqlDataAdapter**來取得及修改**資料，藉**此提供支援。  
   
 ## <a name="populating-a-dataset"></a>填入資料集  
- 您可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式來選取 UDT 資料行值，以使用資料配接器填入資料集。 下列範例假設您的**Points**資料表定義了下列結構和一些範例資料。 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]語句會建立**Points**資料表並插入幾個資料列。  
+ 您可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式來選取 UDT 資料行值，以使用資料配接器填入資料集。 下列範例假設您的**Points**資料表定義了下列結構和一些範例資料。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句會建立**Points**資料表並插入幾個資料列。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -68,7 +68,7 @@ da.Fill(datTable);
   
 -   提供**SqlDataAdapter**物件的自訂**InsertCommand**、 **UpdateCommand**和**DeleteCommand**物件。  
   
--   使用命令產生器（**SqlClient. SqlCommandBuilder**）為您自動建立 INSERT、UPDATE 和 DELETE 命令。 若要進行衝突偵測，請將**時間戳記**資料行（別名**rowversion**）新增[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至包含 UDT 的資料表。 **Timestamp**資料類型可讓您針對資料表中的資料列進行版本戳記，並保證它在資料庫中是唯一的。 當資料表中的值變更時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動更新受此變更影響之資料列的 8 位元組二進位數字。  
+-   使用命令產生器（**SqlClient. SqlCommandBuilder**）為您自動建立 INSERT、UPDATE 和 DELETE 命令。 若要進行衝突偵測，請將**時間戳記**資料行（別名**rowversion**）新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含 UDT 的資料表。 **Timestamp**資料類型可讓您針對資料表中的資料列進行版本戳記，並保證它在資料庫中是唯一的。 當資料表中的值變更時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動更新受此變更影響之資料列的 8 位元組二進位數字。  
   
  請注意，除非基礎資料表中有**timestamp**資料行，否則**SqlCommandBuilder**不會考慮衝突偵測的 UDT。 因為 UDT 不一定可比較，所以當使用「比較原始值」選項來產生命令時，不會包括在 WHERE 子句中。  
   

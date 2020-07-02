@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c1afca8eed465c191fccb4d24e79a7bd95af9aa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 31b4811542fa291fd1ff61368e6c5ac3ce9e714a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728131"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回發行集資料庫的記錄讀取器代理程式作業的屬性。 這個預存程序執行於發行集資料庫的發行者端。  
   

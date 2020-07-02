@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 082fb2d1afdfa8824ea6f3d6e7bd3e4c484e281e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db27f240030115ea24d8d32e2ffa1d5e4bf8921e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388161"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729514"
 ---
 # <a name="comparison-expressions-xquery"></a>比較運算式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 提供下列類型的比較運算子：  
   
@@ -80,7 +80,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- 下列查詢會從 AdventureWorks 範例資料庫所提供的產品目錄，傳回產品型號的小型圖片。 該查詢會將 `PD:ProductDescription/PD:Picture/PD:Size` 所傳回的不可部份完成值序列與單一序列 "small" 進行比較。 如果比較結果為 True，則會傳回 <Picture\>元素。  
+ 下列查詢會從 AdventureWorks 範例資料庫所提供的產品目錄，傳回產品型號的小型圖片。 該查詢會將 `PD:ProductDescription/PD:Picture/PD:Size` 所傳回的不可部份完成值序列與單一序列 "small" 進行比較。 如果比較結果為 True，則會傳回 <Picture \> 元素。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -91,7 +91,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- 下列查詢會將 <數位元素中的一系列電話\>號碼，與字串常值 "112-111-1111" 進行比較。 該查詢會比較 AdditionalContactInfo 資料行中電話號碼元素的序列，以判斷在文件中是否存在特定客戶的特定電話號碼。  
+ 下列查詢會將 <數位元素中的一系列電話號碼 \> ，與字串常值 "112-111-1111" 進行比較。 該查詢會比較 AdditionalContactInfo 資料行中電話號碼元素的序列，以判斷在文件中是否存在特定客戶的特定電話號碼。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -104,7 +104,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- 此查詢會傳回 True。 這表示文件中存在該號碼。 下列查詢是前一個查詢的稍微修改版。 在此查詢中，將從文件中擷取的電話號碼值與兩個電話號碼值之序列進行比較。 如果比較結果為 True，則會傳回\> <number 元素。  
+ 此查詢會傳回 True。 這表示文件中存在該號碼。 下列查詢是前一個查詢的稍微修改版。 在此查詢中，將從文件中擷取的電話號碼值與兩個電話號碼值之序列進行比較。 如果比較結果為 True，則 \> 會傳回 <number 元素。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -153,7 +153,7 @@ WHERE ContactID=1
   
  這些運算子只能在單一不可部份完成值上運算。 也就是，您無法將某個序列指定為其中一個運算元。  
   
- 例如，下列查詢會抓取產品\<型號的圖片> 元素，其中的圖片大小為「小型：  
+ 例如，下列查詢 \<Picture> 會抓取產品型號的元素，其中的圖片大小為「小型：  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -170,7 +170,7 @@ WHERE ProductModelID=19
   
 -   `declare namespace` 定義後續用於查詢中的命名空間前置詞。  
   
--   \<大小> 元素值會與指定的不可部份完成值 "small" 進行比較。  
+-   \<Size>元素值會與指定的不可部份完成值 "small" 進行比較。  
   
 -   請注意，因為值運算子僅適用于不可部分完成的值，所以會隱含地使用**data （）** 函數來抓取節點值。 也就是，`data($P/PD:Size) eq "small"` 會產生相同的結果。  
   
@@ -225,7 +225,7 @@ ProductModelID       Result
   
 -   `>>`：**運算元 1**會遵循檔順序中的**運算元 2** 。  
   
- 如果產品目錄描述的瑕疵\<擔保> 專案出現在特定產品之檔順序中的\<維護> 元素之前，則下列查詢會傳回 True。  
+ 如果產品目錄描述的專案 \<Warranty> 出現在 \<Maintenance> 特定產品之檔順序中的元素前面，下列查詢會傳回 True。  
   
 ```  
 WITH XMLNAMESPACES (  

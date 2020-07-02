@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2eeeae39d23cf611aa57cd2853e911ad7b22c391
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f61de8794969712c6a448cbcee59c70b7156028f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725680"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 立即執行作業。  
   

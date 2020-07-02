@@ -21,15 +21,15 @@ ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d7aa19c18a2ff53667b393d5c2e3a0afe557c83
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fb174a88cf8d4d32c7c20000f930140a55b5e01e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730004"
 ---
 # <a name="sp_query_store_flush_db-transact-sql"></a>sp_query_store_flush_db （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   將查詢存放區資料的記憶體中部分排清至磁片。  
   

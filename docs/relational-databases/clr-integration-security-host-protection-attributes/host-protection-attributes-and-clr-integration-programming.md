@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2aeaeb5d4eb06d6d632a59300225d01cc4376369
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 593318f929f3e0cb7862aab957e8864a35a618e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488047"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727689"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>主機保護屬性和 CLR 整合程式設計
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始，Common Language Runtime (CLR) 提供了一個機制來使用 CLR (如 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) 主機可能需要的某些屬性，為屬於 .NET Framework 之一部分的 Managed 應用程式開發介面 (API) 加註。 這類主機保護屬性 (HPA) 的範例包括：  
   
 -   **SharedState**，它會指出 API 是否會公開建立或管理共用狀態的功能（例如，靜態類別欄位）。  
@@ -34,7 +34,7 @@ ms.locfileid: "81488047"
   
 -   **ExternalProcessMgmt**，指出 API 是否公開控制主機進程的方法。  
   
- 當提供了這些屬性時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指定 HPA 的清單，這些 HPA 是透過程式碼存取安全性 (CAS) 的主控環境內所不允許的。 CA 需求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是由三個許可權集合的其中一個所指定： **SAFE**、 **EXTERNAL_ACCESS**或**UNSAFE**。 當元件在伺服器上註冊時，會使用**CREATE assembly**語句來指定這三個安全性層級的其中一個。 在**SAFE**或**EXTERNAL_ACCESS**許可權集合內執行的程式碼，必須避免已套用**HostProtectionAttribute**屬性的特定類型或成員。 如需詳細資訊，請參閱[建立元件](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)和[CLR 整合程式設計模型限制](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)。  
+ 當提供了這些屬性時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指定 HPA 的清單，這些 HPA 是透過程式碼存取安全性 (CAS) 的主控環境內所不允許的。 CA 需求是由三個許可權集合的其中一個所指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ： **SAFE**、 **EXTERNAL_ACCESS**或**UNSAFE**。 當元件在伺服器上註冊時，會使用**CREATE assembly**語句來指定這三個安全性層級的其中一個。 在**SAFE**或**EXTERNAL_ACCESS**許可權集合內執行的程式碼，必須避免已套用**HostProtectionAttribute**屬性的特定類型或成員。 如需詳細資訊，請參閱[建立元件](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)和[CLR 整合程式設計模型限制](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)。  
   
  **HostProtectionAttribute**並不是提升可靠性的安全性許可權，因為它會識別主機可能不允許的特定程式碼結構，也就是類型或方法。 使用**HostProtectionAttribute**會強制執行程式設計模型，以協助保護主機的穩定性。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "81488047"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不允許使用具有**HostProtectionAttribute**的類型或成員，其指定的**HostProtectionResource**列舉值為**ExternalProcessMgmt**、 **ExternalThreading**、 **MayLeakOnAbort**、 **SecurityInfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **SharedState**、**同步**處理或**UI**。 這會讓組件無法呼叫可啟用共用狀態、執行同步處理、在終止時可能造成資源流失，或是會影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序完整性的成員。  
   
 ### <a name="disallowed-types-and-members"></a>不允許的類型和成員  
- 下列主題會識別不允許其**HostProtectionResource**值的類型和成員[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 下列主題會識別不允許其**HostProtectionResource**值的類型和成員 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!NOTE]  
 >  這些主題中的清單是根據支援的組件產生的。  如需詳細資訊，請參閱[支援的 .NET Framework 程式庫](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2567640f49beb0c1921811a9d04671833dca11be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c471e1bf5c2e3eac60d47418dc3957cef2209b02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730021"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回附加了特定排程之作業的相關資訊。  
   
@@ -57,7 +57,7 @@ sp_help_jobs_in_schedule
 |**originating_server**|**nvarchar(30)**|作業的來源伺服器名稱。|  
 |**name**|**sysname**|作業的名稱。|  
 |**後**|**tinyint**|指出是否啟用作業，以便執行。|  
-|**描述**|**nvarchar(512)**|作業的描述。|  
+|**description**|**nvarchar(512)**|作業的描述。|  
 |**start_step_id**|**int**|應該作為執行起點的作業步驟識別碼。|  
 |**類別**|**sysname**|作業類別目錄。|  
 |**主人**|**sysname**|作業擁有者。|  

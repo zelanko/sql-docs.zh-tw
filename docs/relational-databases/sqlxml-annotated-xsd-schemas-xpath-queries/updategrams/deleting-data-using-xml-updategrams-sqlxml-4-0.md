@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f32c1107d886b7bc84590abbd6bab5343d2a2b8b
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7f0b469e9fb07a0cf250feefa67b85b09627ddd1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529816"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730165"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 刪除資料 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   當記錄實例出現在區塊中 **\<before>** ，但在區塊中沒有對應的記錄時，updategram 表示刪除作業 **\<after>** 。 在此情況下，updategram 會從資料庫中刪除區塊中的記錄 **\<before>** 。  
   
  下列是刪除作業的 Updategram 格式：  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e31f785d1b1fa205a9498889f814a0a0bc32e9a8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 305b7a0e2c9d83fe33a6d571198b205f7452ba44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725694"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   傳回有關某個給定複寫合併代理程式過去的工作階段，只要符合篩選準則的每個工作階段，都會傳回一個資料列。 這個預存程序用來監視合併式複寫，它執行於散發資料庫的散發者端，或是訂閱資料庫的訂閱者端。  
   
@@ -73,7 +73,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**狀態**|**int**|代理程式執行狀態：<br /><br /> **1** = 啟動<br /><br /> **2** = 成功<br /><br /> **3** = 進行中<br /><br /> **4** = 閒置<br /><br /> **5** = 重試<br /><br /> **6** = 失敗|  
 |**StartTime**|**datetime**|時間代理程式作業工作階段已開始。|  
 |**EndTime**|**datetime**|時間代理程式作業工作階段已完成。|  
-|**Duration**|**int**|這個作業工作階段的累加持續時間 (以秒為單位)。|  
+|**有效期間**|**int**|這個作業工作階段的累加持續時間 (以秒為單位)。|  
 |**UploadedCommands**|**int**|代理程式工作階段期間所上傳的命令數。|  
 |**DownloadedCommands**|**int**|代理程式工作階段期間所下載的命令數。|  
 |**ErrorMessages**|**int**|代理程式工作階段期間所產生的錯誤訊息數。|  

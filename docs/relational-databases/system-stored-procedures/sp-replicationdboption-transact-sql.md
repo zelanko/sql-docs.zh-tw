@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 819c6c91b2fc57ca077b82797626cf255dcc6357
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056767"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725701"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   設定指定資料庫的複寫資料庫選項。 這個預存程序執行於任何資料庫的發行者端或訂閱者端。  
   
@@ -49,7 +49,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |-----------|-----------------|  
 |**合併發行**|可用於合併式發行集的資料庫。|  
 |**公佈**|資料庫可用於其他類型的發行集。|  
-|**訂閱**|資料庫是訂閱資料庫。|  
+|**預定**|資料庫是訂閱資料庫。|  
 |**sync with backup**|啟用資料庫的協調備份。 如需詳細資訊，請參閱為[異動複寫啟用協調備份 &#40;複寫 transact-sql 程式設計&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)。|  
   
 `[ @value = ] 'value'`這是指是否要啟用或停用給定的複寫資料庫選項。 *值*為**sysname**，而且可以是**true**或**false**。 當此值為**false**且*optname*為**merge publish**時，也會卸載合併發行資料庫的訂閱。  
