@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 96cd2abcc3e9bc76b2dd32026fedfe6ad774c19b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820697"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716586"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   建立發送或提取合併訂閱。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -124,7 +124,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|Last|  
+|**16**|Last|  
 |NULL (預設值)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**，預設值是 Null。  

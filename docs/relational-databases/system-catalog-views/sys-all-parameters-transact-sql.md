@@ -20,21 +20,21 @@ ms.assetid: eecbb68e-9b4c-4243-94e2-8096a9cc7892
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc5c7fff4b0226012e82d103dc9f52d84036c218
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3651de5aba112eb48fcb49a066ab409c396d6f14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718931"
 ---
 # <a name="sysall_parameters-transact-sql"></a>sys.all_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   顯示所有屬於使用者自訂物件或系統物件的參數聯集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|這個參數所屬物件的識別碼。|  
+|object_id|**int**|這個參數所屬物件的識別碼。|  
 |**name**|**sysname**|參數的名稱。 在物件中，這是唯一的。 如果物件是純量函數，參數名稱就是代表傳回值之資料列中的空字串。|  
 |**parameter_id**|**int**|參數的識別碼。 在物件中，這是唯一的。 如果物件是純量函數， **parameter_id** = 0 代表傳回值。|  
 |**system_type_id**|**tinyint**|參數系統類型的識別碼。|  
@@ -57,6 +57,6 @@ ms.locfileid: "82822155"
  [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [&#40;Transact-sql&#41;的 sys.databases 參數](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)   
- [system_parameters &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
+ [sys.system_parameters &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
   
   

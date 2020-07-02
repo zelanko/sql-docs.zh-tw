@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cd8e54f8de50ffe1912dd58abc6484198fac46c9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e44f9ec66a45b7ba399c1bc4abb2154bc6dd0349
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833602"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716317"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   
 **適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
 
@@ -49,7 +49,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ## <a name="arguments"></a>引數  
 `[ @devtype = ] 'device_type'`這是備份裝置的類型。 *device_type*為**Varchar （20）**，沒有預設值，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**硬碟**|做為備份裝置的硬碟檔。|  
 |**錄影帶**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 所支援的任何磁帶裝置。<br /><br /> 注意:未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  

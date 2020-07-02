@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c876b024b0e8dd218064999adde4a43a18404829
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d8d8626c8f4b3d256899514d14494b119ee8149c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716326"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   建立別名資料型別。  
   

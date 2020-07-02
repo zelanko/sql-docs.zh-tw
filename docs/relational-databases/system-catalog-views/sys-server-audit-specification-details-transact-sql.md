@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68283872613baf6cb64546ef79a9f03996815439
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 39caf91dc69639be4207e3417982acfccf429bea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834061"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717549"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含伺服器執行個體上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核內之伺服器稽核規格詳細資料 (動作) 的資訊。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 如需所有 audit_action_id 及其名稱的清單，請查詢[sys.databases&#41;dm_audit_actions &#40;transact-sql ](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)。  
   

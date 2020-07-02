@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eecd689b38ffbc1236925423df6af84e17ddf410
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 037812be8b38c9be107197a72bd7a161e56904c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716233"
 ---
 # <a name="sp_articlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   篩選基於資料表發行項而發行的資料。 這個預存程序執行於發行集資料庫的發行者端。  
   

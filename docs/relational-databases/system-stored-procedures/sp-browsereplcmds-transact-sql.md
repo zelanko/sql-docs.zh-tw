@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e4f5b003eccda5fdada81e49d2a1f5347591869
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 695a45248185fe2c064cf94a9cf616efce475ecf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831784"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716061"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   傳回散發資料庫所儲存的複寫命令之可讀取版本中的結果集，它用來作為一項診斷工具。 這個預存程序執行於散發資料庫的散發者端。  
   
@@ -77,7 +77,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_publication_id**|**int**|引發交易的發行集識別碼。|  
 |**originator_db_version**|**int**|引發交易的資料庫版本。|  
 |**originator_lsn**|**varbinary(16)**|識別命令在原始發行集中的記錄序號 (LSN)。 用於點對點異動複寫中。|  
-|**命令**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。|  
 |**command_id**|**int**|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)中的命令識別碼。|  
   
  在結果集中，較長的命令可能會分成許多資料列。  

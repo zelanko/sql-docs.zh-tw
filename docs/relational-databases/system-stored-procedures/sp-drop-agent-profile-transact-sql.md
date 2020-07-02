@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36ffa90eeb79316ed886990568ba81184d129b05
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 57815e94737837ec9beb096f1a1840ffc46ad6a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826112"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717316"
 ---
 # <a name="sp_drop_agent_profile-transact-sql"></a>sp_drop_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   卸載**MSagent_profiles**資料表中的設定檔。 這個預存程序執行於任何資料庫中的散發者端。  
   

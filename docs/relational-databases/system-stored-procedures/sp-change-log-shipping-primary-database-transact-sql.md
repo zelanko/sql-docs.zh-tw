@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 244811989bd5ab58a3ab1f6ffdfcf82649af1916
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02ba9c11d9c74daa6cc88051ada7037edc16f35b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715935"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   變更主要資料庫設定。  
   
@@ -111,7 +111,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  
- 這個範例說明如何使用**sp_change_log_shipping_primary_database**來更新與主資料庫[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]相關聯的設定。  
+ 這個範例說明如何使用**sp_change_log_shipping_primary_database**來更新與主資料庫相關聯的設定 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_primary_database   

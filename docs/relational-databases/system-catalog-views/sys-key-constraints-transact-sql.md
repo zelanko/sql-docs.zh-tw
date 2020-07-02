@@ -20,21 +20,21 @@ ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16278985512b127d51187b289fcf89a4eff9adbb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 540290b18915c785dfa6b12f61a9443f9ce745c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825103"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718866"
 ---
 # <a name="syskey_constraints-transact-sql"></a>sys.key_constraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   針對每個本身是主索引鍵或唯一條件約束的物件，各包含一個資料列。 包含**sys.databases。類型**PK 和 UQ。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<繼承自 sys.databases 的資料行>**||如需此視圖所繼承之資料行的清單，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**\<Columns inherited from sys.objects>**||如需此視圖所繼承之資料行的清單，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**unique_index_id**|**int**|在為了強制執行這個條件約束而建立的父物件中，對應的唯一索引鍵之識別碼。|  
 |**is_system_named**|**bit**|1 = 名稱是系統所產生。<br /><br /> 0 = 名稱是使用者所提供。|  
   

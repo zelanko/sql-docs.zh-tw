@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96ab4f3fa8d3b756a40b4ca0aa347f2827aab66e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fb643c0be953bcff19341f681654f2565be3d9e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716375"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   新增散發代理程式和合併代理程式的排程。 這個預存程序執行於任何資料庫的發行者端。  
   
@@ -60,13 +60,13 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type`這是用來排程散發代理程式的頻率。 *frequency_type*是**int**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|隨選|  
 |**4**|每日|  
 |**8**|每週|  
-|**1600**|每月|  
+|**16**|每月|  
 |**32**|每月相對|  
 |**64** （預設值）|自動啟動|  
 |**128**|重複執行|  
@@ -75,19 +75,19 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`這是散發代理程式的日期。 當*frequency_type*設定為**32** （每月相對）時，會使用這個參數。 *frequency_relative_interval*是**int**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**1** (預設值)|First|  
 |**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|Last|  
+|**16**|Last|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**，預設值是**0**。  
   
 `[ @frequency_subday = ] frequency_subday`這是在定義的期間內重新排定的頻率。 *frequency_subday*是**int**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|單次|  
 |**2**|Second|  

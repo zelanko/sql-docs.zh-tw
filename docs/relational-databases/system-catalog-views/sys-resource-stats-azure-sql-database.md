@@ -19,15 +19,15 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a72bb16eddc55f5cf741a7809665b44ada4a7a30
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246905"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717580"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   傳回 Azure SQL Database 的 CPU 使用量和儲存體資料。 於五分鐘間隔內收集及彙總資料。 針對每個使用者資料庫，每五分鐘的報告時間範圍都會有一個資料列，其中資源耗用量有變更。 傳回的資料包括 CPU 使用量、儲存體大小變更和資料庫 SKU 修改。 沒有變更的閒置資料庫，每隔五分鐘不會有資料列。 歷程記錄資料大約會保留 14 天。  
   

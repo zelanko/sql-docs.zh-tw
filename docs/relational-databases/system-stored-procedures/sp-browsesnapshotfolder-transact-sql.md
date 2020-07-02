@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67d4520998dd87c14a817ec05bc14c987e4810a1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ea912014440191f1d5e200ed583366ad43ecb27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716004"
 ---
 # <a name="sp_browsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   傳回針對發行集而產生之最新快照集的完整路徑。 這個預存程序執行於發行集資料庫的發行者端。  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21f2bf7a43bd391044deb03d08cc86ebc9a772bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 67cf4522b88e9922027a671feeda02b3305dbfc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828230"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718640"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   以可讀取格式傳回已標記為要進行複寫的交易命令。 只有在用戶端連接（包括目前的連接）並未從記錄檔讀取複寫的交易時，才可以執行**sp_replshowcmds** 。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -49,7 +49,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**publisher_database_id**|**int**|發行者資料庫的識別碼，一律為**0**。|  
 |**article_id**|**int**|發行項的識別碼。|  
 |**type**|**int**|命令的類型。|  
-|**命令**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。|  
   
 ## <a name="remarks"></a>備註  
  **sp_replshowcmds**用於異動複寫中。  

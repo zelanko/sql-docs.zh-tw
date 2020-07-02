@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1bc6139afdf99fad7a6abcf5134e3341e7a8082c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 102698d7efffa753510f3e3b9af6fe40e35408fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828802"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715161"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   從多伺服器作業中移除目前的伺服器。  
   

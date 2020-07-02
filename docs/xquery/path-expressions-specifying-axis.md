@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f8e753f4961d33251120151bff6db1f8cd5e14c
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 96240f605762be382065268fa39198baeeaaa53f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215753"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717179"
 ---
 # <a name="path-expressions---specifying-axis"></a>路徑運算式 - 指定軸
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   路徑運算式中的軸步包含下列部份：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "84215753"
   
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 實作支援下列軸步。  
   
-|軸|Description|  
+|軸|描述|  
 |----------|-----------------|  
 |**child**|傳回內容節點的子系。|  
 |**descendant**|傳回內容節點的所有下階。|  

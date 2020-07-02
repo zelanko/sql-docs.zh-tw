@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a079a279c9d342033086c565203f85ad360e753
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ec133e7424a6c2a947b5f0f7a6ed52505c37fb1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716073"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   將會話系結或解除系結至相同實例中的其他會話 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 繫結工作階段可讓兩個或更多工作階段參與相同的交易和共用鎖定，直到發出 ROLLBACK TRANSACTION 或 COMMIT TRANSACTION 為止。  
   
@@ -76,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_getbindtoken &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
+ [sp_getbindtoken &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
  [srv_getbindtoken &#40;擴充預存程式 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

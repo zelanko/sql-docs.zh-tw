@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1711ec3941a5fced5ef9e0c32808d6153b673e2b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c4c882111446a24ca0dc8e0ac5ec8c0c28abbd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030912"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716412"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在目前資料庫中建立新的資料庫角色。  
   
 > [!IMPORTANT]
->  包含**sp_addrole**以提供與舊版的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相容性，未來的版本可能不支援此功能。 請改用[CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md) 。  
+>  包含**sp_addrole**以提供與舊版的相容性 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，未來的版本可能不支援此功能。 請改用[CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色的名稱，可以包含 1 到 128 個字元，其中包括字母、符號和數字。 資料庫角色的名稱不能：包含反斜線字元（\\）、為 Null 或空字串（**' '**）。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色的名稱，可以包含 1 到 128 個字元，其中包括字母、符號和數字。 資料庫角色的名稱不能：包含反斜線字元（ \\ ）、為 Null 或空字串（**' '**）。  
   
  在您加入資料庫角色之後，請使用[sp_addrolemember &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)將主體新增至角色。 當您使用 GRANT、DENY 或 REVOKE 陳述式將權限套用至資料庫角色時，資料庫角色的成員會繼承那些權限，如同這些權限是直接套用至其帳戶。  
   

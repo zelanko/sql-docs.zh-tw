@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eb45ce1c3e1786eb5a9a3cd630741dd4df773c40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b4a3586625fa0a20d59ca0222ea1abbde6a6fef5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030965"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716430"
 ---
 # <a name="sp_addremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在本機伺服器上加入新的遠端登入識別碼。 此舉可讓遠端伺服器連接及執行遠端程序呼叫。  
   
@@ -45,13 +45,13 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="arguments"></a>引數  
  [ @remoteserver **=** ] **'**_remoteserver_**'**  
- 這是遠端登入所套用的遠端伺服器名稱。 *remoteserver*是**sysname**，沒有預設值。 如果只指定*remoteserver* ， *remoteserver*上的所有使用者都會對應至本機伺服器上相同名稱的現有登入。 本機伺服器必須知道這部伺服器。 它可以利用 sp_addserver 加入。 當*remoteserver*上的使用者連接到執行的本機伺服器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來執行遠端預存程式時，它們會以本機登入連接，以符合他們在*remoteserver*上的登入。 *remoteserver*是起始遠端程序呼叫的伺服器。  
+ 這是遠端登入所套用的遠端伺服器名稱。 *remoteserver*是**sysname**，沒有預設值。 如果只指定*remoteserver* ， *remoteserver*上的所有使用者都會對應至本機伺服器上相同名稱的現有登入。 本機伺服器必須知道這部伺服器。 它可以利用 sp_addserver 加入。 當*remoteserver*上的使用者連接到執行的本機伺服器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來執行遠端預存程式時，它們會以本機登入連接，以符合他們在*remoteserver*上的登入。 *remoteserver*是起始遠端程序呼叫的伺服器。  
   
- [ @loginame **=** ] **[**_登_**'** 入]  
- 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體上的使用者登入識別碼。 *login* 是預設值為 NULL 的 **sysname**。 *登*入必須已經存在於的本機實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上。 如果指定*login* ， *remoteserver*上的所有使用者都會對應到該特定的本機登入。 當*remoteserver*上的使用者連接到的本機實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來執行遠端預存程式時，就會以*登*入的方式連接。  
+ [ @loginame **=** ] ** **[_登_**'** 入]  
+ 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體上的使用者登入識別碼。 *login* 是預設值為 NULL 的 **sysname**。 *登*入必須已經存在於的本機實例上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果指定*login* ， *remoteserver*上的所有使用者都會對應到該特定的本機登入。 當*remoteserver*上的使用者連接到的本機實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來執行遠端預存程式時，就會以*登*入的方式連接。  
   
  [ @remotename **=** ] **'**_remote_name_**'**  
- 這是遠端伺服器上的使用者登入識別碼。 *remote_name*是**sysname**，預設值是 Null。 *remote_name*必須存在於*remoteserver*上。 如果指定了*remote_name* ，特定的使用者*remote_name*會對應到本機伺服器上的*登*入。 當*remoteserver*上的*remote_name*連接到的本機實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以執行遠端預存程式時，它會以*登*入的方式連接。 *Remote_name*的登入識別碼可以與遠端伺服器上的登入識別碼（*登*入）不同。  
+ 這是遠端伺服器上的使用者登入識別碼。 *remote_name*是**sysname**，預設值是 Null。 *remote_name*必須存在於*remoteserver*上。 如果指定了*remote_name* ，特定的使用者*remote_name*會對應到本機伺服器上的*登*入。 當*remoteserver*上的*remote_name*連接到的本機實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以執行遠端預存程式時，它會以*登*入的方式連接。 *Remote_name*的登入識別碼可以與遠端伺服器上的登入識別碼（*登*入）不同。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

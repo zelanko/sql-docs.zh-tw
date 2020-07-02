@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d5a65254061160374120ef1d7cf54974f7a3dc2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a906e3b74e4682883dbddaf89ba58b5d4069936
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716219"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   建立在進行資料表的垂直或水平篩選時，用來定義所發行之發行項的檢視。 這份檢視用來作為目的地資料表之結構描述和資料的篩選來源。 這個預存程序只能修改未訂閱的發行項。 這個預存程序執行於發行集資料庫的發行者端。  
   

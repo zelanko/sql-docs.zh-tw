@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: db8a79e723d76cdf54377618cc94cb6a4b5431d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826004"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715185"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   針對指定發行集中的每個發行項來初始化發行項驗證要求。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -56,7 +56,7 @@ sp_publication_validation [ @publication = ] 'publication'
 |值|描述|  
 |-----------|-----------------|  
 |**0**|利用 COUNT(*) 執行完整計數。|  
-|**1**|會從**sysindexes**快速計數。 計算[sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)中的資料列，比計算實際資料表中的資料列快很多。 不過，因為[sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)會延遲更新，所以資料列計數可能不正確。|  
+|**1**|會從**sysindexes**快速計數。 計算[sys.sys索引](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)中的資料列，比計算實際資料表中的資料列快很多。 不過，因為[sys.sys的索引](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)會延遲更新，所以資料列計數可能不正確。|  
 |**2** (預設值)|先嘗試快速方法來執行條件式快速計數。 如果快速方法有不同結果，便轉換成完整方法。 如果*expected_rowcount*是 Null，而預存程式是用來取得值，則一律會使用完整的 COUNT （*）。|  
   
 `[ @shutdown_agent = ] 'shutdown_agent'`這是指在驗證完成時，散發代理程式是否應立即關閉。 *shutdown_agent*是**bit**，預設值是**0**。 如果是**0**，就不會關閉複寫代理程式。 如果是**1**，則複寫代理程式會在驗證最後一篇文章之後關閉。  

@@ -22,16 +22,16 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718771"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.databases dm_os_spinlock_stats （Transact-sql）
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 傳回依類型組織之所有 spinlock 等候的相關資訊。  
   
@@ -47,14 +47,14 @@ ms.locfileid: "68265692"
 
 
 ## <a name="permissions"></a>權限  
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。    
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
+在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。    
   
 ## <a name="remarks"></a>備註  
  
  dm_os_spinlock_stats 可以用來識別 spinlock 爭用的來源。 在某些情況下，您或許能夠解決或減少 spinlock 競爭。 不過有些時候您可能還是必須連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶支援服務部門。  
   
- 您可以使用`DBCC SQLPERF`重設 sys. dm_os_spinlock_stats 的內容，如下所示：  
+ 您可以使用重設 sys. dm_os_spinlock_stats 的內容 `DBCC SQLPERF` ，如下所示：  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -120,7 +120,7 @@ GO
 |DBSEEDING_OPERATION|僅供內部使用。|
 |DBT_HASH|僅供內部使用。|
 |DBT_IO_LIST|僅供內部使用。|
-|DBTABLE|針對包含該資料庫屬性的 SQL Server 中的每個資料庫，控制記憶體內部資料結構的存取。 如需詳細資訊，請參閱[這篇文章](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)。 |
+|DBTABLE|針對包含該資料庫屬性的 SQL Server 中的每個資料庫，控制記憶體內部資料結構的存取。 如需詳細資訊，請參閱[本文](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)。 |
 |DEFERRED_WF_EXT_DROP|僅供內部使用。|
 |DEK_INSTANCE|僅供內部使用。|
 |DELAYED_PARTITIONED_STACK|僅供內部使用。|
@@ -130,7 +130,7 @@ GO
 |DIGEST_CACHE|僅供內部使用。|
 |DINPBUF|僅供內部使用。|
 |DIRECTLOGCONSUMER|僅供內部使用。|
-|DP_LIST|針對已開啟間接檢查點的資料庫，控制其中途分頁清單的存取權。 如需詳細資訊，請參閱[這篇文章](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)。|
+|DP_LIST|針對已開啟間接檢查點的資料庫，控制其中途分頁清單的存取權。 如需詳細資訊，請參閱[本文](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)。|
 |DROP|僅供內部使用。|
 |DROP_TEMPO|僅供內部使用。|
 |DROPPED_ALLOC_UNIT|僅供內部使用。|
@@ -187,7 +187,7 @@ GO
 |LANG_RES_LOAD|僅供內部使用。|
 |LIVE_TARGET_TVF|僅供內部使用。|
 |LOCK_FREE_LIST|僅供內部使用。|
-|LOCK_HASH|保護對鎖定管理員雜湊表的存取，此資料表會儲存在資料庫中保留之鎖定的相關資訊。 如需詳細資訊，請參閱[這篇文章](https://support.microsoft.com/kb/2926217)。|
+|LOCK_HASH|保護對鎖定管理員雜湊表的存取，此資料表會儲存在資料庫中保留之鎖定的相關資訊。 如需詳細資訊，請參閱[本文](https://support.microsoft.com/kb/2926217)。|
 |LOCK_NOTIFICATION|僅供內部使用。|
 |LOCK_RESOURCE_ID|僅供內部使用。|
 |LOCK_RW_ABTX_HASH_SET|僅供內部使用。|
@@ -307,7 +307,7 @@ GO
 |SOS_ACTIVEDESCRIPTOR|僅供內部使用。|
 |SOS_BLOCKALLOCPARTIALLIST|僅供內部使用。|
 |SOS_BLOCKDESCRIPTORBUCKET|僅供內部使用。|
-|SOS_CACHESTORE|同步處理 SQL Server 中各種記憶體內部快取的存取，例如計畫快取或臨時表快取。 對於此 spinlock 類型的嚴重爭用，可能表示有許多不同的專案，視競爭中的特定快取而定。 請[!INCLUDE[msCoName](../../includes/msconame-md.md)]洽詢客戶支援服務，以取得疑難排解此 spinlock 類型的協助。 |
+|SOS_CACHESTORE|同步處理 SQL Server 中各種記憶體內部快取的存取，例如計畫快取或臨時表快取。 對於此 spinlock 類型的嚴重爭用，可能表示有許多不同的專案，視競爭中的特定快取而定。 請洽詢 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶支援服務，以取得疑難排解此 spinlock 類型的協助。 |
 |SOS_CACHESTORE_CLOCK|僅供內部使用。|
 |SOS_CLOCKALG_INTERNODE_SYNC|僅供內部使用。|
 |SOS_DEBUG_HOOK|僅供內部使用。|

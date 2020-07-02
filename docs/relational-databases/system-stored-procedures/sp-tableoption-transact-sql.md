@@ -18,15 +18,15 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2e822d1ca6aff1e91a848f839b824bb4476fc5a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84e6c530b4887502346b69adcf2590bce9d0e8fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834196"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718685"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   設定使用者定義資料表的選項值。 sp_tableoption 可用來控制含有**Varchar （max）**、 **Nvarchar （max）**、 **Varbinary （max）**、 **xml**、 **text**、 **Ntext**、 **image**或大型使用者定義型別資料行之資料表的同資料列行為。  
   
@@ -52,7 +52,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] '*option_name*'  
  這是資料表選項名稱。 *option_name*為**Varchar （35）**，沒有預設值 Null。 *option_name*可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |table lock on bulk load|當停用 (預設值) 時，它會讓使用者定義資料表上的大量載入程序取得資料列鎖定。 當啟用時，使用者定義資料表的大量載入處理序會取得大量更新鎖定。|  
 |insert row lock|不再支援。<br /><br /> 這個選項對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的鎖定行為沒有影響，併入它的目的，只是為了與現有的指令碼和程序相容。|  

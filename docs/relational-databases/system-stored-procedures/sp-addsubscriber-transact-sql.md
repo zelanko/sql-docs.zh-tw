@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf49c44ca3de4325c8d5c6ecab22adc3ac0614cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 462fe9e3634ea1dfa844fe4a97f1086bdef82cba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833625"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716367"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   將訂閱者加入發行者中，使它能夠接收發行集。 針對快照集和交易式發行集，這個預存程序執行於發行集資料庫的發行者端；如果是使用遠端散發者的合併式發行集，這個預存程序便執行於散發者端。  
   
@@ -101,13 +101,13 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type`這是複寫代理程式的排程頻率。 *frequency_type*是**int**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|隨選|  
 |**4**|每日|  
 |**8**|每週|  
-|**1600**|每月|  
+|**16**|每月|  
 |**32**|每月相對|  
 |**64** （預設值）|自動啟動|  
 |**128**|重複執行|  
@@ -122,13 +122,13 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`這是複寫代理程式的日期。 當*frequency_type*設定為**32** （每月相對）時，會使用這個參數。 *frequency_relative_interval*是**int**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**1** (預設值)|First|  
 |**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|Last|  
+|**16**|Last|  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時，現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
@@ -140,7 +140,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_subday = ] frequency_subday`這是在定義的期間內重新排定的頻率。 *frequency_subday*是**int**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|單次|  
 |**2**|Second|  

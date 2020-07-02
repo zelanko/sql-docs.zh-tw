@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65a1f4d2098e55c7007bd04e2fef00bcbac30ffc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12d66cfa4668c8ca91d82d00cfa5abd4504e76eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824413"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719290"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回目前資料庫中直屬角色成員的相關資訊。  
   
@@ -49,7 +49,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|目前資料庫中角色的名稱。|  
-|**MemberName**|**sysname**|DbRole 成員的名稱 **。**|  
+|**基**|**sysname**|DbRole 成員的名稱 **。**|  
 |**MemberSID**|**Varbinary （85）**|**成員名稱**的安全識別碼。|  
   
 ## <a name="remarks"></a>備註  

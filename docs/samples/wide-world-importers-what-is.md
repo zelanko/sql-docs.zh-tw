@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2fb0c990c03e0dfbf1cd279efa7a249bb5bc9645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adc2e7d74f8479384bd9f34b5442e796e4b74d66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718544"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>適用于 Microsoft SQL 的 Wide World 匯入範例資料庫
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 這是針對 SQL Server 和 Azure SQL Database 在 WideWorldImporters 範例資料庫中解決的虛構全公司匯入工具和工作流程的總覽。  
 
 Wide World 匯入工具（WWI）是一家批發的 novelty 商品匯入工具，以及從三藩市廳區域運作的散發者。
@@ -63,6 +63,6 @@ SQL Server Analysis Services 是用來從維度資料模型中的資料建立分
 
 ## <a name="terms-of-use"></a>使用規定
 
-範例資料庫和範例程式碼的授權如下所述： [license .txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
+範例資料庫和範例程式碼的授權如下所述： [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
 範例資料庫包含已從 data.gov 和天然 EarthData 載入的公用資料。 使用條款如下：[https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

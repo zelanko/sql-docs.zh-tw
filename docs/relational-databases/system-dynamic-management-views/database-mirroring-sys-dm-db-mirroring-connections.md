@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b5bf53dae1a86b41ac1a04435f02547fe7bb002
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 64a927e78ab37f3cf9f79921b2b2f3bf08af92a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718855"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>資料庫鏡像-sys. dm_db_mirroring_connections
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對為資料庫鏡像建立的每個連接，各傳回一個資料列。  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf8c3510ffbd2d40c882061cc81bb8f6a80d294f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ebef567c36028f63317be3e00ea4c8078a765b6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719474"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   從[MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)資料表中抓取安全性資訊。 這個預存程序執行於訂閱者端。  
   

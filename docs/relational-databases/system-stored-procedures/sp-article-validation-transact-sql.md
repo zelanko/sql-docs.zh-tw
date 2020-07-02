@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f4d1b571bd32023b6ea47331c2757c814dc00ac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a3fa3274901d881be7d52ecd62c60a802b597a0a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716256"
 ---
 # <a name="sp_article_validation-transact-sql"></a>sp_article_validation (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   起始指定發行項的資料驗證要求。 這個預存程序執行於發行集資料庫的發行者端，以及訂閱資料庫的訂閱者端。  
   
@@ -58,7 +58,7 @@ sp_article_validation [ @publication = ] 'publication'
   
 `[ @full_or_fast = ] full_or_fast`這是用來計算資料列計數的方法。 *full_or_fast*是**Tinyint**，而且可以是下列其中一個值。  
   
-|**ReplTest1**|**說明**|  
+|**ReplTest1**|**描述**|  
 |---------------|---------------------|  
 |**0**|利用 COUNT(*) 執行完整計數。|  
 |**1**|從**sysindexes**執行快速計數。 計算**sysindexes**中的資料列，比計算實際資料表中的資料列快。 不過， **sysindexes**會延遲更新，而且資料列計數可能不正確。|  

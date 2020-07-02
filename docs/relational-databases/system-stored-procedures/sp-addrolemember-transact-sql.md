@@ -18,15 +18,15 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87fbcab87999c83c688ec4fa9e46f1aeed033bcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030897"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716421"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   在目前資料庫的資料庫角色中，加入資料庫使用者、資料庫角色、Windows 登入或 Windows 群組。  
   
@@ -43,10 +43,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ```    
   
 ## <a name="arguments"></a>引數  
- [ @rolename= ]「*角色*」  
+ [ @rolename =] '*角色*'  
  這是目前資料庫中的資料庫角色名稱。 「*角色*」是一種**sysname**，沒有預設值。  
   
- [ @membername= ]'*security_account*'  
+ [ @membername =] '*security_account*'  
  這是加入角色的安全性帳戶。 *security_account*是**sysname**，沒有預設值。 *security_account*可以是資料庫使用者、資料庫角色、windows 登入或 windows 群組。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -75,7 +75,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ## <a name="examples"></a>範例  
   
 ### <a name="a-adding-a-windows-login"></a>A. 加入 Windows 登入  
- 下列範例會將 Windows 登`Contoso\Mary5`入加入至`AdventureWorks2012`資料庫，做`Mary5`為使用者。 然後會將 `Mary5` 使用者加入到 `Production` 角色。  
+ 下列範例會將 Windows 登入加入 `Contoso\Mary5` 至 `AdventureWorks2012` 資料庫，做為使用者 `Mary5` 。 然後會將 `Mary5` 使用者加入到 `Production` 角色。  
   
 > [!NOTE]  
 >  由於 `Contoso\Mary5` 也稱為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的資料庫使用者 `Mary5`，因此必須指定 `Mary5` 使用者名稱。 除非 `Contoso\Mary5` 登入存在，否則此陳述式會失敗。 請從您的網域使用登入來測試。  
@@ -97,10 +97,10 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 ## <a name="examples-sspdw"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. 加入 Windows 登入  
- 下列範例會將登`LoginMary`入新增至`AdventureWorks2008R2`資料庫做為`UserMary`使用者。 然後會將 `UserMary` 使用者加入到 `Production` 角色。  
+ 下列範例會將登入新增 `LoginMary` 至 `AdventureWorks2008R2` 資料庫做為使用者 `UserMary` 。 然後會將 `UserMary` 使用者加入到 `Production` 角色。  
   
 > [!NOTE]  
->  因為登`LoginMary`入稱為`UserMary` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫中的資料庫使用者，所以必須指定使用者名稱。 `UserMary` 除非 `Mary5` 登入存在，否則此陳述式會失敗。 登入和使用者通常具有相同的名稱。 這個範例會使用不同的名稱來區分影響登入與使用者的動作。  
+>  因為登 `LoginMary` 入稱為資料庫中的資料庫使用者 `UserMary` ，所以 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] `UserMary` 必須指定使用者名稱。 除非 `Mary5` 登入存在，否則此陳述式會失敗。 登入和使用者通常具有相同的名稱。 這個範例會使用不同的名稱來區分影響登入與使用者的動作。  
   
 ```  
 -- Uses AdventureWorks  

@@ -20,15 +20,15 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3557f9f77a310a9e72e8a9fb1e11a6976256d2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811363"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717441"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   針對在目前資料庫中依據名稱參考其他使用者定義實體的每個實體，各傳回一個資料列。 當一個實體（稱為受*參考的實體*）以名稱出現在另一個實體的持續性 SQL 運算式中（稱為「*參考實體*」）時，就會建立兩個實體之間的相依性。 例如，如果使用者定義型別 (UDT) 指定為受參考的實體，這個函數就會傳回在定義中依據名稱參考該類型的每個使用者自訂實體。 此函數不會傳回其他資料庫中可能參考指定實體的實體。 這個函數必須在 master 資料庫的內容中執行，以便傳回伺服器層級 DDL 觸發程序當做參考實體。  
   
@@ -101,7 +101,7 @@ sys.dm_sql_referencing_entities (
   
 |實體類型|參考實體|受參考的實體|  
 |-----------------|------------------------|-----------------------|  
-|資料表|是*|是|  
+|Table|是*|是|  
 |檢視|是|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序**|是|是|  
 |CLR 預存程序|否|是|  

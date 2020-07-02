@@ -21,21 +21,21 @@ ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5afddee7cf2d8d5e61db8833df45b839e6f70eca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a6588e142fb17f0b90dfb302dda242255513ed3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815809"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717566"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   針對資料庫中的每個順序物件包含一個資料列。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|\<繼承的資料行>||從[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)繼承所有資料行。|  
+|\<inherited columns>||從[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)繼承所有資料行。|  
 |**start_value**|**SQL_variant NOT Null**|順序物件的起始值。 如果順序物件是藉由使用 ALTER SEQUENCE 重新啟動，它會從這個值重新啟動。 當順序物件迴圈時，它會繼續進行**minimum_value**或**maximum_value**，而不是**start_value**。|  
 |**increment**|**SQL_variant NOT Null**|每次產生值之後，用來遞增順序物件的值。|  
 |**minimum_value**|**SQL_variant Null**|可由順序物件產生的最小值。 達到此值之後，順序物件在嘗試產生更多的值時會傳回錯誤，如果已指定 CYCLE 選項則會重新啟動。 如果未指定任何 MINVALUE，此資料行會傳回序列產生器的資料類型所支援的最小值。|  
@@ -52,7 +52,7 @@ ms.locfileid: "82815809"
 |**last_used_value**|**SQL_variant Null**|傳回[Next Value For](../../t-sql/functions/next-value-for-transact-sql.md)函數所產生的最後一個值。 適用于 SQL Server 2017 和更新版本。|  
   
 ## <a name="permissions"></a>權限  
- 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新的版本中，目錄檢視內中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。  如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新的版本中，目錄檢視內中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [序號](../../relational-databases/sequence-numbers/sequence-numbers.md)   

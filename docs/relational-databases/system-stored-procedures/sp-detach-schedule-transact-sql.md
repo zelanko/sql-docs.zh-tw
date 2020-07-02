@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0941103ab9dc8037c3036290bd35bba9c4b85866
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b183a121981cc32ca7cdd3857c4e9ee10fa7f83e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826622"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717346"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   移除排程和作業之間的關聯。  
   

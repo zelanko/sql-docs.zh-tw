@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ecd2576cac046984394b093832769363968e637a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79448337"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715886"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   將現有的資料庫使用者對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 
   
@@ -47,23 +47,23 @@ sp_change_users_login [ @Action = ] 'action'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @Action= ][*動作*]  
+ [ @Action =] '*action*'  
  描述此程序所要執行的動作。 *動作*為**Varchar （10）**。 *動作*可以有下列其中一個值。  
   
 |值|說明|  
 |-----------|-----------------|  
 |**Auto_Fix**|將目前資料庫中 sys.database_principals 系統目錄檢視的使用者項目連結到相同名稱的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果沒有相同名稱的登入，則會建立一個。 檢查**Auto_Fix**語句的結果，以確認確實已進行正確的連結。 避免在安全性敏感的情況下使用**Auto_Fix** 。<br /><br /> 當您使用**Auto_Fix**時，如果登入不存在，您必須指定*使用者*和*密碼*; 否則，您必須指定*使用者*，但將忽略*密碼*。 *登*入必須是 Null。 *使用者*必須是目前資料庫中的有效使用者。 不能有其他使用者對應至登入。|  
 |**Report**|列出目前資料庫中未連結至任何登入的使用者和對應的安全性識別碼 (SID)。 *使用者*、*登*入和*密碼*必須是 Null 或未指定。<br /><br /> 若要將報表選項取代為使用系統資料表的查詢，請將**server_prinicpals sys.databases**中的專案與 sys.databases 中的專案進行比較。 **database_principals**。|  
-|**Update_One**|將目前資料庫中指定的*使用者*連結到現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的*登*入。 必須指定*使用者*和*登*入。 *密碼*必須是 Null 或未指定。|  
+|**Update_One**|將目前資料庫中指定的*使用者*連結到現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *登*入。 必須指定*使用者*和*登*入。 *密碼*必須是 Null 或未指定。|  
   
- [ @UserNamePattern= ]'*使用者*'  
+ [ @UserNamePattern =] '*使用者*'  
  這是目前資料庫中的使用者名稱。 *user*是**sysname**，預設值是 Null。  
   
- [ @LoginName= ]「*登*入」  
+ [ @LoginName =] '*login*'  
  這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的名稱。 *login* 是預設值為 NULL 的 **sysname**。  
   
- [ @Password= ]'*password*'  
- 這是指派給新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入的密碼，由指定**Auto_Fix**來建立。 如果相符的登入已經存在，則會對應使用者和登入，並忽略*密碼*。 如果符合的登入不存在，sp_change_users_login 會建立新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登入，並指派*密碼*做為新登入的密碼。 *password*為**sysname**，而且不得為 Null。  
+ [ @Password =] '*密碼*'  
+ 這是指派給新登入的密碼， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 由指定**Auto_Fix**來建立。 如果相符的登入已經存在，則會對應使用者和登入，並忽略*密碼*。 如果符合的登入不存在，sp_change_users_login 會建立新的登入， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並指派*密碼*做為新登入的密碼。 *password*為**sysname**，而且不得為 Null。  
   
 > **重要！！** 一律使用[強式密碼！](../../relational-databases/security/strong-passwords.md)
   

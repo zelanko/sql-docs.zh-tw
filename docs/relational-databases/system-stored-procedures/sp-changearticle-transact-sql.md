@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829696"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717396"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   變更交易式或快照式發行集中之發行項的屬性。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -57,7 +57,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |--------------|------------|-----------------|  
 |**creation_script**||用來建立目標資料表之發行項結構描述指令碼的路徑和名稱。 預設值是 NULL。|  
 |**del_cmd**||要執行的 DELETE 陳述式；否則，便從記錄檔中建構它。|  
-|**描述**||發行項的新描述項目。|  
+|**description**||發行項的新描述項目。|  
 |**dest_object**||提供這個項目的目的，是為了與舊版相容。 使用**dest_table**。|  
 |**dest_table**||新的目的地資料表。|  
 |**destination_owner**||目的地物件的擁有者名稱。|  
@@ -67,7 +67,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**identity_range**||控制在訂閱者端指派的指派識別範圍大小。 不支援點對點複寫使用這個項目。|  
 |**ins_cmd**||要執行的 INSERT 陳述式；否則，便從記錄檔中建構它。|  
 |**pre_creation_cmd**||可以在套用同步處理之前，卸除、刪除或截斷目的地資料表的預先建立命令。|  
-||**無**|不使用命令。|  
+||無|不使用命令。|  
 ||**下拉式**|卸除目的地資料表。|  
 ||**delete**|刪除目的地資料表。|  
 ||**各**|截斷目的地資料表。|  
@@ -123,12 +123,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**include column names**|資料行名稱包括在複寫的 INSERT 陳述式中。|  
 ||**no column names**|資料行名稱不包括在複寫的 INSERT 陳述式中。|  
 ||**no dts horizontal partitions**|發行項的水平資料分割並非由可轉換的訂閱來定義。|  
-||**無**|清除[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表中的所有狀態選項，並將發行項標示為非作用中。|  
-||**參數**|利用參數化的命令，將變更傳播到訂閱者。 這是新發行項的預設值。|  
+||無|清除[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表中的所有狀態選項，並將發行項標示為非作用中。|  
+||**parameters**|利用參數化的命令，將變更傳播到訂閱者。 這是新發行項的預設值。|  
 ||**字串常值**|利用字串常值，將變更傳播到訂閱者。|  
 |**sync_object**||用於產生同步處理輸出檔之資料表或檢視的名稱。 預設值是 NULL。 不支援 Oracle 發行者使用這個值。|  
 |**表**||識別 Oracle 資料庫發行的發行項之記錄資料表所用的資料表空間。 如需詳細資訊，請參閱[管理 Oracle 資料表空間](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
-|**閾值**||用來控制散發代理程式指派新識別範圍之時機的百分比值。 不支援點對點複寫使用這個項目。|  
+|**threshold**||用來控制散發代理程式指派新識別範圍之時機的百分比值。 不支援點對點複寫使用這個項目。|  
 |**type**||不支援 Oracle 發行者使用這個值。|  
 ||**logbased**|記錄式發行項。|  
 ||**logbased manualboth**|記錄式且含有手動篩選準則和手動檢視的發行項。 此選項需要同時設定 [ *sync_object* ] 和 [*篩選*] 屬性。 不支援 Oracle 發行者使用這個值。|  
@@ -212,7 +212,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 |發行項類型|複寫類型||  
 |------------------|----------------------|------|  
-||交易式|快照集|  
+||交易式|快照式|  
 |**logbased**|所有選項|所有選項，但**0x02**|  
 |**logbased manualfilter**|所有選項|所有選項，但**0x02**|  
 |**logbased manualview**|所有選項|所有選項，但**0x02**|  

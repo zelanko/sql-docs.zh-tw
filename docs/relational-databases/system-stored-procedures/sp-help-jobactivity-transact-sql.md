@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 755ba9552945e0e983fa5eef6cc53de1c29be5e3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 35de5fe106b437429265fcce03d49a9cb1b61401
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827630"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715186"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業之執行階段狀態的相關資訊。  
   
@@ -78,7 +78,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>備註  
  這個程序提供作業目前狀態的快照集。 傳回的結果代表處理要求時的資訊。  
   
- 每當代理程式服務啟動時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 都會建立一個工作階段識別碼。 會話識別碼會儲存在**syssessions**資料表中。  
+ 每當代理程式服務啟動時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 都會建立一個工作階段識別碼。 會話識別碼會儲存在資料表**msdb.dbo.sys會話**中。  
   
  未提供任何*session_id*時，會列出最近會話的相關資訊。  
   

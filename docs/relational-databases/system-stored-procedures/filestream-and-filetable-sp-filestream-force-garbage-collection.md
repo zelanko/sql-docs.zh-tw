@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cbf1658fd1567d9cdd3c35e02195435b6e86adcc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bc56f1434c0b1670495d30accdb70e0456295b01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830393"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717437"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   強制執行 FILESTREAM 記憶體回收行程，刪除任何不必要的 FILESTREAM 檔案。  
   
@@ -55,13 +55,13 @@ sp_filestream_force_garbage_collection
   
 |||  
 |-|-|  
-|值|說明|  
+|值|描述|  
 |0|作業成功|  
 |1|作業失敗|  
   
 ## <a name="result-sets"></a>結果集  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*file_name*|指出 FILESTREAM 容器名稱|  
 |*num_collected_items*|指出在這個容器中已進行記憶體回收 (已刪除) 的 FILESTREAM 項目 (檔案/目錄) 的數目。|  

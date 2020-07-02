@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fac92658366cceffc3d4fac5ba650f9a14501185
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5491e736bfa075c4cc9f001bc2515184de865ee2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717901"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>內容連線和一般連線 - 限制
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題討論透過內容和一般連接在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]進程中執行之程式碼的相關限制。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  本主題討論 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 透過內容和一般連接在進程中執行之程式碼的相關限制。  
   
 ## <a name="restrictions-on-context-connections"></a>內容連接的限制  
  開發應用程式時，請考慮下列適用於內容連接的限制：  
@@ -41,7 +41,7 @@ ms.locfileid: "81485270"
   
 -   當您使用 "context connection=true" 時，無法使用其他連接字串關鍵字。  
   
--   如果**sqlconnection**的連接字串為 "coNtext connection = true"，而不是實例的名稱，則[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlconnection**屬性會傳回 null。  
+-   如果**sqlconnection**的連接字串為 "coNtext connection = true"，而不是實例的名稱，則**sqlconnection**屬性會傳回 null [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 -   在針對內容連接執行命令時，設定**CommandTimeout**屬性沒有作用。  
   

@@ -20,15 +20,15 @@ ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 552ca2de9ac8077beb25b9ad77f259790b92a1be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4d6484d5f9762590f3bef941f7deff5092c720ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818959"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718708"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   針對產生版本存放區中大部分版本的物件，傳回一份虛擬資料表。 **dm_tran_top_version_generators**會傳回依**database_id**和**rowset_id**分組的前256匯總記錄長度。 **dm_tran_top_version_generators**藉由查詢**dm_tran_version_store**虛擬資料表來抓取資料。 **dm_tran_top_version_generators**是執行效率不佳的視圖，因為此視圖會查詢版本存放區，而版本存放區可能非常大。 建議您使用這個函數，尋找版本存放區的最大取用者。  
   

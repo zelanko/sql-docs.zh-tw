@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b209f6d46c47de5a604eee3c14c681a333bcdec8
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 1f2fc71e138fc2377d8f09c50250bbfe39077686
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529959"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718157"
 ---
 # <a name="aggregate-functions---min"></a>彙總函式 - min
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   從不可部份完成值的序列傳回， *$arg*，其值小於所有其他專案的一個專案。  
   

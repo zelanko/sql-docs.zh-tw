@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b5f70fa8b486688a6c83133781b63d188742e345
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5587ec9d2df061ebc7e979e55010f9945628127e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816087"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718894"
 ---
 # <a name="sysbackup_devices-transact-sql"></a>sys.backup_devices (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對使用**sp_addumpdevice**或在中建立的每個備份裝置，各包含一個資料列 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   

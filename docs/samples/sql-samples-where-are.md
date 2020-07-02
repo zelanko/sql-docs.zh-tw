@@ -9,16 +9,16 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 457cc9b1aa1055992322fb34ccc95b042f167604
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ea8f0ae2c998b02343ae3a7575325afe2ef6820
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74318988"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718583"
 ---
 # <a name="sql-samples"></a>SQL 範例
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 範例資料庫的位置和 Microsoft SQL 產品的程式碼範例。
 
@@ -26,9 +26,9 @@ ms.locfileid: "74318988"
 
 SQL 產品的程式碼範例位於[Microsoft SQL Server 範例](https://github.com/microsoft/sql-server-samples)GitHub 存放庫中。 每個範例都包含一個讀我檔案，說明如何執行和使用範例。 範例存放庫的主要讀我檔案說明如何參與。 
 
-範例和範本都是以 MIT 授權為依據。 請參閱根目錄中的授權 .txt 檔案。
+範例和範本都是以 MIT 授權為依據。 請參閱根目錄中的 license.txt 檔案。
 
-電子郵件問題： sqlserversamples@microsoft.com。
+電子郵件問題： sqlserversamples@microsoft.com 。
 
 
 ## <a name="wideworldimporters-sample-database"></a>WideWorldImporters 範例資料庫
@@ -49,7 +49,7 @@ AdventureWorks 資料庫可以在 [[安裝](adventureworks-install-configure.md)
 
 
 ## <a name="azure-samples-and-templates"></a>Azure 範例和範本
-在 Github 上有一些可在 .NET、JAVA、Python、node.js、PHP 和 Ruby 中使用的 Microsoft Azure 程式碼範例和範例。 此外，Azure Resource Manager 可讓您使用宣告式範本布建應用程式。 在單一的範本中，您可以部署多個服務及其相依性。 您可以使用相同的範本，在應用程式生命週期的每個階段重複部署應用程式。
+在 Github 上有許多 Microsoft Azure 的程式碼範例和範例，適用于 .NET、JAVA、Python、Node.js、PHP 和 Ruby。 此外，Azure Resource Manager 可讓您使用宣告式範本布建應用程式。 在單一的範本中，您可以部署多個服務及其相依性。 您可以使用相同的範本，在應用程式生命週期的每個階段重複部署應用程式。
 
 - [Azure 範例](https://github.com/Azure-Samples)
 - [Azure 快速入門範本](https://azure.microsoft.com/resources/templates/)

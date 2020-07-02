@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 037ba2877b8bbcd3de1378de7e39d1f007a95c52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3bf50a8a44f70f39cbd09fc44637478c68a1eb9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717191"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>SetNumValue 方法 (SqlServiceAdvancedProperty 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   設定屬性的數值。  
   
 ## <a name="syntax"></a>語法  
@@ -36,7 +36,7 @@ object.SetNumValue(NumValue)
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *object*  
  代表進階屬性的 [SqlServiceAdvancedProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 物件。  
   
 #### <a name="parameters"></a>參數  

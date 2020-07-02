@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9af57e2f3a3bcf6554e88d8c6f9d54b8ec069009
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 845fe5389792dbe4c1df7bb9cf3e920073cd23ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827810"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717383"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   報告伺服器資料指標所參考的物件或基底資料表。  
   
@@ -64,7 +64,7 @@ sp_describe_cursor_tables
  這是與開啟的資料指標相關聯的資料指標變數名稱。 *input_cursor_variable*為**Nvarchar （128）**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無  
+ None  
   
 ## <a name="cursors-returned"></a>傳回的資料指標  
  sp_describe_cursor_tables 會將其報表封裝為數據 [!INCLUDE[tsql](../../includes/tsql-md.md)] **指標**輸出參數。 這樣 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、預存程序和觸發程序就能夠一次處理一個資料列的輸出。 另外，這也表示無法直接從 API 函數呼叫程序。 **游標**輸出參數必須系結至程式變數，但 api 不支援系結資料**指標**參數或變數。  

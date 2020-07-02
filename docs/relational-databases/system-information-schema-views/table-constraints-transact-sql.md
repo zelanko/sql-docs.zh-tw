@@ -19,15 +19,15 @@ ms.assetid: 687f3284-2849-4853-8a5c-fc936deceae0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93e899ee3eb6dd76dfc4c73a4e631d0b569c362
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 5e5aad6bb6984f48a781302480771e12cc1c428d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716600"
 ---
 # <a name="table_constraints-transact-sql"></a>TABLE_CONSTRAINTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   針對目前資料庫中的每個資料表條件約束，各傳回一個資料列。 這個資訊結構描述檢視會傳回目前使用者有權限的物件之相關資訊。  
   

@@ -20,22 +20,22 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 98d71c76b927e0dcb7cfdf87459f15eb82ef3c9e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2c90c3a6e6251da7b8e318a57002f224e074ac5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824663"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717478"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   針對目前參與異地複寫連續複製關聯性的每個使用者資料庫（V11），各傳回一個資料列。 如果給定的主要資料庫起始一個以上的連續複製關聯性，這個資料表會針對每個使用中的次要資料庫各包含一個資料列。  
   
 如果您使用 SQL Database V12，您應該使用[sys.databases dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) （因為*dm_continuous_copy_status sys.databases*僅適用于 V11）。
 
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|複本資料庫的唯一識別碼。|  
 |**partner_server**|**sysname**|連結的 SQL Database 伺服器的名稱。|  

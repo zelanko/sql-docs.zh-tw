@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98ce2b9aa11b2e1381da1f16455df8a2c0d3f243
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1dfba407449b9517af2ed899f49387732c48353b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718525"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 工作流程
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 當資料變更時，請使用*WWI_Integration* ETL 封裝，將資料從 WideWorldImporters 資料庫移轉到 WideWorldImportersDW 資料庫。 封裝會定期執行（通常是每天）。
 
 封裝會使用 SQL Server Integration Services 來協調大量 T-sql 作業（而不是 Integration Services 中的個別轉換），以確保高效能。
@@ -35,7 +35,7 @@ ms.locfileid: "81487427"
 
 接下來，一系列的資料流程工作會載入每個維度。 然後，他們會載入每個事實。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - SQL Server 2016 （或更新版本），其中包含 WideWorldImporters 和 WideWorldImportersDW 資料庫（在相同或不同的 SQL Server 實例中）
 - SQL Server Management Studio
@@ -59,11 +59,11 @@ ms.locfileid: "81487427"
    5. 選取 [**部署**] 以完成嚮導。
 
 2. 建立 ETL 進程的 SQL Server Agent 作業：
-   1. 在 Management Studio 中，以滑鼠右鍵按一下 [ **SQL Server Agent**]，然後選取 [**新增** > **作業**]。
+   1. 在 Management Studio 中，以滑鼠右鍵按一下 [ **SQL Server Agent**]，然後選取 [**新增**  >  **作業**]。
    2. 輸入名稱，例如*WIDEWORLDIMPORTERS ETL*。
    3. 新增**SQL Server Integration Services 封裝**類型的**作業步驟**。
    4. 選取具有 [Integration Services 目錄] 的伺服器，然後選取 [*每日 ETL* ] 套件。
-   5. 在 [設定**連線管理員**] 下，確定已正確設定與來源和目標的連接。 **Configuration**  >  預設值是連接到本機實例。
+   5. 在**Configuration**[  >  設定**連線管理員**] 下，確定已正確設定與來源和目標的連接。 預設值是連接到本機實例。
    6. 選取 **[確定]** 以建立作業。
 
 3. 執行或排程工作。

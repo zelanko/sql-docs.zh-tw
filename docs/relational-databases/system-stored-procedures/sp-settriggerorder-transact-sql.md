@@ -18,15 +18,15 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad5239e2761ed1cc788f7826a054ac0e038d9e79
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7b90b91773ab0497452e0c12c5f485a36f81b6e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824293"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719190"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定第一個或最後一個引發的 AFTER 觸發程序。 在第一個及最後一個觸發程序之間啟動的 AFTER 觸發程序，會以未定義的順序執行。  
   
@@ -53,8 +53,8 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |值|描述|  
 |-----------|-----------------|  
 |**頭**|最先引發觸發程序。|  
-|**Last**|最後引發觸發程序。|  
-|**無**|觸發程序的引發，沒有任何既定順序。|  
+|**次**|最後引發觸發程序。|  
+|**None**|觸發程序的引發，沒有任何既定順序。|  
   
 `[ @stmttype = ] 'statement_type'`指定引發觸發程式的 SQL 語句。 *statement_type*為**Varchar （50）** ，而且可以是 INSERT、UPDATE、DELETE、LOGON，或 [!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 事件](../../relational-databases/triggers/ddl-events.md)中所列的任何語句事件。 您不能指定事件群組。  
   

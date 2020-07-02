@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73f6af5cb03c19c106e55b074c402aa2cf4f4c65
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c7924044720c001951ac80e303ac8fe19fc3e489
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718766"
 ---
 # <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回包含資訊的資料列，該資訊的目的是為了提供您 Windows Server 容錯移轉叢集 (WSFC) 叢集中每個 Always On 可用性群組內 AlwaysOn 可用性群組的可用性資料庫健康情況見解。 查詢**sys. dm_hadr_database_replica_states**以回答下列問題：  
   

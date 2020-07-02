@@ -16,15 +16,15 @@ ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09a018250887ecf88e6a48c49222046699a14763
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 7276b0c4962af71002b5a6203ad0e887e596072c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967654"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718966"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 資料類型轉換 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   下列轉換已由 ODBC 定義，或為一致的 ODBC 延伸模組。 每個提供者所提供的轉換取決於提供者所服務的社群，因此在提供者之間通常會發生不一致。 方括號中的值是選擇性的。  
   

@@ -14,17 +14,17 @@ ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94a9b8517ebd2539250995fea896c53a376fc65d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8be645c807a86e90dd4e71a8d46c11d995b61319
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718980"
 ---
 # <a name="date-and-time-improvements-odbc"></a>日期和時間改善 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了新的日期和時間資料類型。 本章節描述如何將這些新類型公開為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的延伸模組。 如需有關新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期和時間資料類型之 Native Client 支援的總覽，請參閱[日期和時間改善](../../relational-databases/native-client/features/date-and-time-improvements.md)。 如需示範 ODBC 日期/時間支援的範例，請參閱[使用日期和時間類型](../../relational-databases/native-client-odbc-how-to/use-date-and-time-types.md)。  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了新的日期和時間資料類型。 本章節描述如何將這些新類型公開為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的延伸模組。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有關新日期和時間資料類型之 Native Client 支援的總覽，請參閱[日期和時間改善](../../relational-databases/native-client/features/date-and-time-improvements.md)。 如需示範 ODBC 日期/時間支援的範例，請參閱[使用日期和時間類型](../../relational-databases/native-client-odbc-how-to/use-date-and-time-types.md)。  
   
  如需更多日期和時間資料類型的一般資訊，請參閱 [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e7ba3827b9a659c0100805d0a9895fad503b2a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68117896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716296"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   將新的使用者加入目前資料庫中。  
   
@@ -44,7 +44,7 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @loginame = ] 'login'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 登入的名稱。 *登*入是**sysname**，沒有預設值。 *login*必須是現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登入或 Windows 登入。  
+`[ @loginame = ] 'login'`這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 登入的名稱。 *登*入是**sysname**，沒有預設值。 *login*必須是現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 登入。  
   
 `[ @name_in_db = ] 'user'`這是新資料庫使用者的名稱。 *user*是**sysname**，預設值是 Null。 如果未指定*user* ，新資料庫使用者的名稱就會預設為*登*入名稱。 指定*user*可讓新使用者在資料庫中的名稱與伺服器層級的登入名稱不同。  
   

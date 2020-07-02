@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9a7cb410a1e520ee05b7f93263dcc46750dfb87
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b5c067b42d61c2dae1dbe247a6212611d155348
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833453"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716134"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回資料列集，其中包含批次中所包含之參數的相關資訊 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 **sp_batch_params**只會剖析指定的批次，並傳回內嵌參數值的相關資訊。 它不會執行批次或修改執行環境。  
   
@@ -42,7 +42,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 `[ @tsqlbatch = ] 'tsqlbatch'`這是一個 Unicode 字串，其中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 您想要的參數資訊所屬的語句或批次。 *tsqlbatch*是**Nvarchar （max）** 或可隱含轉換為**Nvarchar （max）**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無  
+ None  
   
 ## <a name="result-sets"></a>結果集  
   

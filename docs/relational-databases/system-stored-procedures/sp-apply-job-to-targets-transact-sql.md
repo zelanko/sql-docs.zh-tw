@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 64da8efb8018748a6fe114d5ee719d71f9940e92
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a0670c096c863ed54559e49d131fda0d134f1e17
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716272"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   將作業套用在一或多部目標伺服器上，或套用在屬於一或多個目標伺服器群組的目標伺服器上。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a6f56713f2ac50a5e367f23a7987b62e2fb9a78b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719243"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   取得 OLE Automation 錯誤資訊。  
   
@@ -72,7 +72,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |資料行名稱|資料類型|描述|  
 |------------------|---------------|-----------------|  
 |**錯誤**|**binary （4）**|錯誤號碼的二進位表示法。|  
-|**來源**|**Nvarchar （nn）**|錯誤的來源。|  
+|**Source**|**Nvarchar （nn）**|錯誤的來源。|  
 |**描述**|**Nvarchar （nn）**|錯誤的描述。|  
 |**説明**|**Nvarchar （nn）**|來源的說明檔。|  
 |**HelpID**|**int**|說明來源檔案中的說明內容識別碼。|  
@@ -86,7 +86,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |-----------------------|------------------|  
 |**不正確的變數類型 (0x80020008)**|當做 [!INCLUDE[tsql](../../includes/tsql-md.md)] 方法參數傳遞之值的資料類型不符合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 方法參數的資料類型，或傳遞 Null 值做為方法參數。|  
 |**未知名稱 (0x8002006)**|找不到指定物件的指定屬性或方法名稱。|  
-|**無效的類別字串 (0x800401f3)**|指定的 ProgID 或 CLSID 未登錄為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 OLE 物件。 您必須先註冊自訂 OLE automation 伺服器，才能使用**sp_OACreate**來將它們具現化。 使用同進程（.dll）伺服器的 Regsvr32 公用程式或本機（.exe）伺服器的 **/REGSERVER**命令列參數，即可完成這項作業。|  
+|**無效的類別字串 (0x800401f3)**|指定的 ProgID 或 CLSID 未登錄為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 OLE 物件。 您必須先註冊自訂 OLE automation 伺服器，才能使用**sp_OACreate**來將它們具現化。 使用適用于同進程（.dll）伺服器的 Regsvr32.exe 公用程式，或本機（.exe）伺服器的 **/REGSERVER**命令列參數，即可完成這項作業。|  
 |**伺服器執行失敗 (0x80080005)**|指定的 OLE 物件已登錄成本機 OLE 伺服器 (.exe 檔)，但找不到或無法啟動 .exe 檔。|  
 |**找不到指定的模組 (0x8007007e)**|指定的 OLE 物件已登錄成同處理序 OLE 伺服器 (.dll 檔)，但找不到或無法載入 .dll 檔。|  
 |**類型不符 (0x80020005)**|用來儲存傳回的屬性值或方法傳回值之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 本機變數的資料類型不符合屬性或方法傳回值的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 資料類型。 或要求了屬性或方法的傳回值，但它沒有傳回值。|  

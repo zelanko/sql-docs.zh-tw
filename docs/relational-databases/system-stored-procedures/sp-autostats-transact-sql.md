@@ -18,15 +18,15 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b56b53b90bc8c66b72d68de4b83def5712cdc54
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ef219cd00c8603fce6c03e92bb5f540bd954e81a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716162"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   顯示或變更索引、統計資料物件、資料表或索引檢視表的自動統計資料更新選項 AUTO_UPDATE_STATISTICS。  
   

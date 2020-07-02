@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0347a7346e42e212775267fc5849360abaa75423
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1758f6cd269c911ea582577721d29e6534910e91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820643"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716454"
 ---
 # <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   加入給定散發者的佇列讀取器代理程式。 這個預存程序執行於散發資料庫的散發者端，或發行集資料庫的發行者端。  
   

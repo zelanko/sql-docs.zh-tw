@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b1acf456bda88eeee0493d3f9d7ccc063a5bda50
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f7c3f1a4406ec64417c96fbc11387eb1b07f4eb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001005"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715871"
 ---
 # <a name="sp_help_log_shipping_monitor_secondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   從監視資料表傳回次要資料庫的相關資訊。  
   
@@ -53,7 +53,7 @@ sp_help_log_shipping_monitor_secondary
   
 |資料行|描述|  
 |------------|-----------------|  
-|**secondary_server**|記錄傳送設定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中之次要實例的名稱。|  
+|**secondary_server**|記錄傳送設定中之次要實例的名稱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。|  
 |**secondary_database**|記錄傳送組態中之次要資料庫的名稱。|  
 |**secondary_id**|記錄傳送組態中之次要伺服器的識別碼。|  
 |**primary_server**|記錄傳送組態中之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 主要執行個體的名稱。|  

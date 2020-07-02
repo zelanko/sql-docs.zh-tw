@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ea2b5a6120395ad287a372b9d0edb3de7cb2b71
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ab5a5937b2f3baf3b97aeacbee79424f9a701d3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719265"
 ---
 # <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   將目前開啟交易標示成指定訂閱者的訂閱層級驗證交易。 這個預存程序執行於發行集資料庫的發行者端。  
   

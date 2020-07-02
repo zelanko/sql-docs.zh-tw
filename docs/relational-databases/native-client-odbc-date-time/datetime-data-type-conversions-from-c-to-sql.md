@@ -13,19 +13,19 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f8161ea07e394192e972caf4f772d9e7def36e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97867fb2debffab4684aaef302773ebe531d820b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719016"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime 資料類型從 C 轉換成 SQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  本主題列出當您從 C 類型轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/時間類型時所要考慮的問題。  
+  本主題列出當您從 C 類型轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/時間類型時所要考慮的問題。  
   
- 下表描述的轉換會套用到用戶端上進行的轉換。 如果用戶端指定的參數小數秒有效位數與伺服器上定義的不同，用戶端轉換可能會成功，但在呼叫**SQLExecute**或**SQLExecuteDirect**時，伺服器將會傳回錯誤。 特別是，ODBC 會將小數秒的任何截斷視為錯誤，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行為則是舍入;例如，當您從**datetime2 （6）** 移至**datetime2 （2）** 時，就會進行舍入。 Datetime 資料行值會捨去為一秒的 1/300，而 smalldatetime 資料行的秒數會由伺服器設定為零。  
+ 下表描述的轉換會套用到用戶端上進行的轉換。 如果用戶端指定的參數小數秒有效位數與伺服器上定義的不同，用戶端轉換可能會成功，但在呼叫**SQLExecute**或**SQLExecuteDirect**時，伺服器將會傳回錯誤。 特別是，ODBC 會將小數秒的任何截斷視為錯誤，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行為則是舍入; 例如，當您從**datetime2 （6）** 移至**datetime2 （2）** 時，就會進行舍入。 Datetime 資料行值會捨去為一秒的 1/300，而 smalldatetime 資料行的秒數會由伺服器設定為零。  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -90,7 +90,7 @@ ms.locfileid: "81301776"
   
      資料行大小為零暗示 ODBC 中變數長度字元類型的大小無限制 (除非 SQL_C_TYPE_TIMESTAMP 套用 3 位數規則，否則為 9 位數)。 利用固定的長度字元類型將資料行大小指定為零是錯誤。  
   
--   **N/A**：保留[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]現有和舊版的行為。  
+-   **N/A**： [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 保留現有和舊版的行為。  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

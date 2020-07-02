@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ae92407c52d84acaebbe157568e6d6476e4aa73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717260"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sysmergepartitioninfoview** view 會公開資料表發行項的資料分割資訊。 這份檢視儲存在發行者端的發行集資料庫以及訂閱者端的訂閱資料庫中。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68094819"
 |**sync_objid**|**int**|代表同步處理資料集的檢視之物件識別碼。|  
 |**view_type**|**tinyint**|檢視的類型：<br /><br /> **0** = 不是 view;使用所有基底物件。<br /><br /> **1** = 永久視圖。<br /><br /> **2** = 暫時視圖。|  
 |**artid**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
-|**描述**|**nvarchar(255)**|發行項的簡要描述。|  
+|**description**|**nvarchar(255)**|發行項的簡要描述。|  
 |**pre_creation_command**|**tinyint**|當在訂閱資料庫中建立發行項時，所採取的預設動作。<br /><br /> **0** = 無-如果資料表已存在於訂閱者端，則不會採取任何動作。<br /><br /> **1** = 卸載-卸載資料表後再重新建立。<br /><br /> **2** = 刪除-根據子集篩選中的 WHERE 子句發出刪除。<br /><br /> **3** = 截斷-與2相同，但會刪除頁面而不是資料列。 不過，它不用 WHERE 子句。|  
 |**pubid**|**uniqueidentifier**|目前發行項所屬發行集的識別碼。|  
 |**昵稱**|**int**|發行項識別的暱稱對應。|  
@@ -86,8 +86,8 @@ ms.locfileid: "68094819"
 |**delete_tracking**|**bit**|指出是否複寫刪除。<br /><br /> **0** = 不復寫刪除。<br /><br /> **1** = 已複寫刪除，這是合併式複寫的預設行為。<br /><br /> 當*delete_tracking*的值為**0**時，必須在發行者端手動移除在訂閱者端刪除的資料列，而且必須在訂閱者端手動移除在發行者端刪除的資料列。<br /><br /> 注意： **0**值會導致非聚合。|  
 |**compensate_for_errors**|**bit**|指出在同步處理期間發現錯誤時，是否採取補償動作。<br /><br /> **0** = 補償動作已停用。<br /><br /> **1** = 無法在訂閱者或發行者端套用的變更，一律會導致補償動作復原這些變更，這是合併式複寫的預設行為。<br /><br /> 注意： **0**值會導致非聚合。|  
 |**pub_range**|**bigint**|發行者識別範圍大小。|  
-|**格或**|**bigint**|將在調整中指派給訂閱者的連續識別值大小。|  
-|**閾值**|**int**|識別範圍臨界值百分比。|  
+|**range**|**bigint**|將在調整中指派給訂閱者的連續識別值大小。|  
+|**threshold**|**int**|識別範圍臨界值百分比。|  
 |**stream_blob_columns**|**bit**|指出是否使用二進位大型物件資料行的資料流最佳化。 **1**表示嘗試優化。|  
 |**preserve_rowguidcol**|**bit**|指出複寫是否使用現有的 rowguid 資料行。 值為**1**表示使用現有的 ROWGUIDCOL 資料行。 **0**表示複寫已加入 ROWGUIDCOL 資料行。|  
 |**partition_view_id**|**int**|識別用來定義訂閱者資料分割的檢視。|  

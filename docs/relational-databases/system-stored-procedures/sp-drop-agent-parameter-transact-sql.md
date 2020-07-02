@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce01a218fd2185c5904baf41014bc0c7caa5ec25
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4f0e89192e985463ecfbce622629a35215f5ec36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830201"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717340"
 ---
 # <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   從**MSagent_parameters**資料表中的設定檔卸載一或所有參數。 這個預存程序執行於在任何資料庫執行代理程式的散發者端。  
   

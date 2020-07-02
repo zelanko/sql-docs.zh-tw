@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: f3303072-2b44-4443-936c-f024b0b2a8c5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e220b6e5c07d7b6e8fdfdf32f5e6a8923c4d6e19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 949c03aefc35b7ff99320bfbff980210dff092dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67996020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717683"
 ---
 # <a name="localdb_error_caller_is_not_owner"></a>LOCALDB_ERROR_CALLER_IS_NOT_OWNER
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細資料  
   

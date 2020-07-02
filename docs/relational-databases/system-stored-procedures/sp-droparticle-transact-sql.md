@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8f9e7e8124ec0aa1246a7ef9805ad9761ec9baf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1b150636804bc4d312f6f6bfbe046ef7e9612207
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830196"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717296"
 ---
 # <a name="sp_droparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   從快照式或交易式發行集中卸除發行項。 如果發行項有一或多項訂閱，便不能移除它。 這個預存程序執行於發行集資料庫的發行者端。  
   

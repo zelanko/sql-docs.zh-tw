@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1d4dedd9a7451daa97b3e1ad130f7f6dd95d8dd9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b0084338c2629b8ffeb208edc5ac7532105e1271
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715942"
 ---
 # <a name="sp_change_agent_profile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   變更儲存在[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)資料表中之複寫代理程式設定檔的參數。 這個預存程序執行於任何資料庫中的散發者端。  
   
@@ -47,9 +47,9 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
  這份資料表描述可變更的設定檔屬性。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
-|**描述**|設定檔的描述。|  
+|**description**|設定檔的描述。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

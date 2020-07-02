@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22957ce497f47c56ace0f264cc2068014a2f43af
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: f9ff6619109e198a50d15c21aecbe958a6183d2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716459"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   加入一項新排程的代理程式作業，以便用來同步處理發送訂閱與交易式發行集。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -107,7 +107,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**2**|隨選|  
 |**4**|每日|  
 |**8**|每週|  
-|**1600**|每月|  
+|**16**|每月|  
 |**32**|每月相對|  
 |**64** （預設值）|自動啟動|  
 |**128**|重複執行|  
@@ -125,7 +125,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|Last|  
+|**16**|Last|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**，預設值是0。  
   

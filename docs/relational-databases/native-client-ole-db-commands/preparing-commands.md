@@ -16,15 +16,15 @@ ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ebeae6c016746f9c6b43dcb700acedea8e6688b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0297fe59e998afd50eb7bb2320c59ab54e59b0e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715305"
 ---
 # <a name="preparing-commands"></a>準備命令
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援針對單一命令的最佳化多次執行進行命令準備。不過，命令準備會產生負擔，而且取用者不需要準備命令，即可多次執行命令。 一般而言，如果某個命令將執行三次以上，您就應該準備此命令。  
   

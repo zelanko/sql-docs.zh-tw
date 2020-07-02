@@ -13,22 +13,22 @@ ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fa94f57a783fc4bdb12f17baa0dbbcb54f61ee4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 571affb61db00386bc7e325c5491e5364d526ee2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719009"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>增強型日期和時間類型的大量複製變更 (OLE DB 和 ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   本主題描述可支援大量複製功能的日期/時間增強功能。 本主題中的資訊同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 和 ODBC。  
   
 ## <a name="format-files"></a>格式檔案  
  以互動方式建立格式檔案時，下表描述用於指定日期/時間類型與對應主檔資料類型名稱的輸入。  
   
-|檔案儲存類型|主檔案資料類型|提示的回應：「請輸入欄位 <field_name> [\<default>] 的檔案儲存類型:」|  
+|檔案儲存類型|主檔案資料類型|提示的回應：「輸入欄位的檔案儲存類型 <field_name> [ \<default> ]： "|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
@@ -66,7 +66,7 @@ ms.locfileid: "81301829"
 ## <a name="character-data-files"></a>字元資料類型  
  在字元資料檔中，日期和時間值會以 odbc[日期和時間改善的資料類型支援](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)的「資料格式：字串和常值」一節中所述的方式表示，或是 OLE DB 的[OLE DB 日期和時間改善的資料類型支援](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
   
- 在原生資料檔中，四個新類型的日期和時間值會表示為其 TDS 標記法，其小數位數為7（因為這[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是所支援的最大值，而且 bcp 資料檔案不會儲存這些資料行的小數位數）。 現有 **datetime** 和 **smalldatetime** 類型的儲存或其表格式資料流 (TDS) 表示法沒有變更。  
+ 在原生資料檔中，四個新類型的日期和時間值會表示為其 TDS 標記法，其小數位數為7（因為這是所支援的最大值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，而且 bcp 資料檔案不會儲存這些資料行的小數位數）。 現有 **datetime** 和 **smalldatetime** 類型的儲存或其表格式資料流 (TDS) 表示法沒有變更。  
   
  對於 OLE DB，不同儲存類型的儲存大小如下所示：  
   

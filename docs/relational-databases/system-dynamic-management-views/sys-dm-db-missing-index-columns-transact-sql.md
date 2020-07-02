@@ -21,15 +21,15 @@ ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b917a22efd85cf1dcc83f358d334683c579ee6d4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 23574f5bf194ca0d3bdc6b301cdb17b7be933ecd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718827"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回有關遺漏索引 (不包括空間索引) 之資料庫表格資料行的資訊。 **dm_db_missing_index_columns**是動態管理函數。  
 

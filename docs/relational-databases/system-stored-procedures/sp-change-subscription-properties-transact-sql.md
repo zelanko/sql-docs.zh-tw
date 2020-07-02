@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 511276581464f366214bfd9bdd8543e3fb339ab8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 35943489c707d5a1b84313bb7ef6eca9113e36ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715902"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更新提取訂閱的資訊。 這個預存程序執行於訂閱資料庫的訂閱者端。  
   
@@ -57,7 +57,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |值|發行集類型|  
 |-----------|----------------------|  
 |**0**|交易式|  
-|**1**|快照集|  
+|**1**|快照式|  
 |**2**|合併|  
 |NULL (預設值)|複寫決定了發行集的類型。 由於預存程序必須查看多份資料表，因此，相較於提供確實的發行集類型，這個選項會比較慢。|  
   

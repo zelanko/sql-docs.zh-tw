@@ -24,15 +24,15 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e65eaac59bcc16e123bda3e47af29dc4a836ce5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d393936953ead282578f69e8ad1945914a252e66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388392"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719563"
 ---
 # <a name="creating-a-driver-application"></a>建立驅動程式應用程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   ODBC 架構包含四個執行下列函數的元件。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81388392"
 |驅動程式|處理來自應用程式的所有 ODBC 函數呼叫、連接到資料來源、將 SQL 陳述式從應用程式傳遞到資料來源，以及將結果傳回到應用程式。 如果必要，取動程式會將 ODBC SQL 從應用程式轉譯成資料來源所使用的原生 SQL。|  
 |資料來源|包含驅動程式在 DBMS 中存取特定資料執行個體所需的所有資訊。|  
   
- 使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式與實例進行通訊的應用程式會[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行下列工作：  
+ 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式與實例進行通訊的應用程式會 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行下列工作：  
   
 -   與資料來源連接  
   
@@ -55,7 +55,7 @@ ms.locfileid: "81388392"
   
 -   結束資料來源的連接  
   
- 針對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式撰寫的更複雜應用程式可能也會執行下列工作：  
+ 針對 Native Client ODBC 驅動程式撰寫的更複雜應用程式 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可能也會執行下列工作：  
   
 -   使用資料指標控制結果集中的位置  
   
@@ -77,7 +77,7 @@ ms.locfileid: "81388392"
   
  若要進行 ODBC 函數呼叫，C 或 C++ 應用程式必須包含 sql.h、sqlext.h 和 sqltypes.h 標頭檔。 若要呼叫 ODBC 安裝程式 API 函數，應用程式必須包含 odbcinst.h 標頭檔。 Unicode ODBC 應用程式必須包含 sqlucode.h 標頭檔。 ODBC 應用程式必須與 odbc32.lib 檔連結。 呼叫 ODBC 安裝程式 API 函數的 ODBC 應用程式必須與 odbccp32.lib 檔連結。 這些檔案包含在 Windows Platform SDK 中。  
   
- 許多 ODBC 驅動程式（包括[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client odbc 驅動程式）都會提供驅動程式專屬的 odbc 延伸模組。 若要利用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式特定的擴充功能，應用程式應該包含 sqlncli 標頭檔。 這個標頭檔包含：  
+ 許多 ODBC 驅動程式（包括 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT odbc 驅動程式）都會提供驅動程式專屬的 odbc 延伸模組。 若要利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式特定的擴充功能，應用程式應該包含 sqlncli 標頭檔。 這個標頭檔包含：  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式特定的連接屬性。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "81388392"
   
 -   針對連結之伺服器及其目錄的清單，呼叫分散式查詢中繼資料 API 函數。  
   
- 任何使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式之大量複製功能的 c 或 c + + ODBC 應用程式，都必須與 sqlncli11 連結。 呼叫分散式查詢中繼資料 API 函數的應用程式也必須與 sqlncli11.lib 連結。 Sqlncli 和 sqlncli11 檔案會散發為[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]開發人員工具的一部分。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Include 和 Lib 目錄應該位於編譯器的 INCLUDE 和 LIB 路徑，如下所示：  
+ 任何使用 Native Client ODBC 驅動程式之大量複製功能的 C 或 c + + ODBC 應用程式，都 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 必須與 sqlncli11 連結。 呼叫分散式查詢中繼資料 API 函數的應用程式也必須與 sqlncli11.lib 連結。 Sqlncli 和 sqlncli11 檔案會散發為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 開發人員工具的一部分。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Include 和 Lib 目錄應該位於編譯器的 INCLUDE 和 LIB 路徑，如下所示：  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  

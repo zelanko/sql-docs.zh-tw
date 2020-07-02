@@ -20,22 +20,22 @@ ms.assetid: 40e04fe9-0b64-4799-84c0-57f128b2bdc2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15278192b1d6df497ee37220a08fa38474184e4a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 94164da2778b3224806c52cc089d4d401803e0c1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718950"
 ---
 # <a name="sysall_columns-transact-sql"></a>sys.all_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   顯示屬於使用者自訂物件和系統物件之所有資料行的聯集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|這個資料行所屬的物件識別碼。|  
-|name|**sysname**|資料行的名稱。 在物件中，這是唯一的。|  
+|NAME|**sysname**|資料行的名稱。 在物件中，這是唯一的。|  
 |column_id|**int**|資料行的識別碼。 在物件中，這是唯一的。<br /><br /> 資料行識別碼不一定會循序排列。|  
 |system_type_id|**tinyint**|資料行的系統類型識別碼。|  
 |user_type_id|**int**|使用者所定義的資料行類型識別碼。<br /><br /> 若要傳回類型的名稱，請在此資料行上加入[sys.databases](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目錄檢視。|  
@@ -70,7 +70,7 @@ ms.locfileid: "82823400"
  [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [system_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)   
+ [sys.system_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)   
  [computed_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
   
   

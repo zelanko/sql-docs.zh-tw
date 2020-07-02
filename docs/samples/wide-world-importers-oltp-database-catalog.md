@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9dc40928fddda2708a23a7fc927627cf0e9450d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718574"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 資料庫目錄
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 WideWorldImporters 資料庫包含銷售和購買的所有交易資訊和每日資料，以及車輛和冷室的感應器資料。
 
 ## <a name="schemas"></a>結構描述
@@ -82,7 +82,7 @@ WideWorldImporters 會使用架構來進行不同的用途，例如儲存資料�
 
 |Table|描述|
 |-----------------------------|---------------------|
-|Suppliers|供應商的主要實體資料表（組織）|
+|供應商|供應商的主要實體資料表（組織）|
 |SupplierCategories|供應商的類別（例如，novelties、玩具、服裝、包裝等等）|
 |SupplierTransactions|與供應商相關的所有財務交易（發票、付款）|
 |Purchaseorders.xaml|供應商採購訂單的詳細資料|
@@ -155,7 +155,7 @@ WideWorldImporters 會使用少數的架構，讓您輕鬆瞭解資料庫系統�
 
 `Website`架構包含 Web 前端可使用的預存程式。
 
-`Reports`和`PowerBI`架構適用于 reporting services 和 PowerBI 用途。 建議使用這些架構的任何延伸模組，以供報告之用。
+`Reports`和 `PowerBI` 架構適用于 reporting Services 和 PowerBI 用途。 建議使用這些架構的任何延伸模組，以供報告之用。
 
 ### <a name="website-schema"></a>網站架構
 
@@ -163,12 +163,12 @@ WideWorldImporters 會使用少數的架構，讓您輕鬆瞭解資料庫系統�
 
 |程序|目的|
 |-----------------------------|---------------------|
-|ActivateWebsiteLogon|允許個人（從`Application.People`）存取網站。|
+|ActivateWebsiteLogon|允許個人（從 `Application.People` ）存取網站。|
 |ChangePassword|變更使用者的密碼（適用于未使用外部驗證機制的使用者）。|
 |InsertCustomerOrders|允許插入一或多個客戶訂單（包括訂單行）。|
 |InvoiceCustomerOrders|取得要開票並處理發票的訂單清單。|
-|RecordColdRoomTemperatures|採用感應器資料清單做為資料表值參數（TVP），並將資料套用至`Warehouse.ColdRoomTemperatures`時態表。|
-|RecordVehicleTemperature|採用 JSON 陣列，並使用它來更新`Warehouse.VehicleTemperatures`。|
+|RecordColdRoomTemperatures|採用感應器資料清單做為資料表值參數（TVP），並將資料套用至 `Warehouse.ColdRoomTemperatures` 時態表。|
+|RecordVehicleTemperature|採用 JSON 陣列，並使用它來更新 `Warehouse.VehicleTemperatures` 。|
 |SearchForCustomers|依名稱或部分名稱（公司名稱或人員名稱）來搜尋客戶。|
 |SearchForPeople|依名稱或部分名稱搜尋人員。|
 |SearchForStockItems|依名稱或部分名稱或行銷批註，搜尋股票專案。|
@@ -181,7 +181,7 @@ ETL 進程會使用此架構中的預存程式。 他們會針對[ETL 套件](wi
 
 ### <a name="dataloadsimulation-schema"></a>DataLoadSimulation 架構
 
-模擬插入銷售和購買的工作負載。 主要的預存程式`PopulateDataToCurrentDate`是，用來將範例資料插入到目前的日期為止。
+模擬插入銷售和購買的工作負載。 主要的預存程式是 `PopulateDataToCurrentDate` ，用來將範例資料插入到目前的日期為止。
 
 |程序|目的|
 |-----------------------------|---------------------|
@@ -200,12 +200,12 @@ ETL 進程會使用此架構中的預存程式。 他們會針對[ETL 套件](wi
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|如果成員尚未存在於角色中，則將成員新增至角色|
 |Configuration_ApplyAuditing|加入審核。 適用于 standard edition 資料庫的伺服器審核;已針對 enterprise edition 新增額外的資料庫審核。|
-|Configuration_ApplyColumnstoreIndexing|將資料行存放`Sales.OrderLines`區`Sales.InvoiceLines`索引編制套用至和，並適當地重新編制。|
-|Configuration_ApplyFullTextIndexing|將全文檢索索引`Application.People`套用`Sales.Customers`至`Purchasing.Suppliers`、、 `Warehouse.StockItems`和。 `Website.SearchForStockItemsByTags`以`Website.SearchForPeople`使用`Website.SearchForSuppliers`全文`Website.SearchForCustomers`檢索`Website.SearchForStockItems`索引的取代程式來取代、、、和。|
-|Configuration_ApplyPartitioning|將資料表資料分割`Sales.CustomerTransactions`套用`Purchasing.SupplierTransactions`至和，並重新排列要符合的索引。|
+|Configuration_ApplyColumnstoreIndexing|將資料行存放區索引編制套用至 `Sales.OrderLines` 和 `Sales.InvoiceLines` ，並適當地重新編制。|
+|Configuration_ApplyFullTextIndexing|將全文檢索索引套用至 `Application.People` 、 `Sales.Customers` 、 `Purchasing.Suppliers` 和 `Warehouse.StockItems` 。 `Website.SearchForPeople` `Website.SearchForSuppliers` `Website.SearchForCustomers` `Website.SearchForStockItems` `Website.SearchForStockItemsByTags` 以使用全文檢索索引的取代程式來取代、、、和。|
+|Configuration_ApplyPartitioning|將資料表資料分割套用至 `Sales.CustomerTransactions` 和 `Purchasing.SupplierTransactions` ，並重新排列要符合的索引。|
 |Configuration_ApplyRowLevelSecurity|套用資料列層級安全性，依據銷售領域的相關角色來篩選客戶。|
 |Configuration_ConfigureForEnterpriseEdition|套用資料行存放區索引、全文檢索、記憶體內部、polybase 和資料分割。|
-|Configuration_EnableInMemory|新增記憶體優化檔案群組（在 Azure 中無法運作時）、將`Warehouse.ColdRoomTemperatures`取代`Warehouse.VehicleTemperatures`為記憶體中的對等專案，並遷移資料、重新`Website.OrderIDList`建立`Website.OrderList`、 `Website.OrderLineList`、 `Website.SensorDataList` 、具有記憶體優化對應的資料表類型、卸載並重新建立`Website.InvoiceCustomerOrders`使用`Website.InsertCustomerOrders`這些資料表`Website.RecordColdRoomTemperatures`類型的程式。|
+|Configuration_EnableInMemory|新增記憶體優化檔案群組（在 Azure 中無法運作時）、將取代為記憶體中的對等專案， `Warehouse.ColdRoomTemperatures` `Warehouse.VehicleTemperatures` 並遷移資料、重新建立 `Website.OrderIDList` 、 `Website.OrderList` 、 `Website.OrderLineList` 、 `Website.SensorDataList` 具有記憶體優化對應的資料表類型、卸載並重新建立 `Website.InvoiceCustomerOrders` `Website.InsertCustomerOrders` `Website.RecordColdRoomTemperatures` 使用這些資料表類型的程式。|
 |Configuration_RemoveAuditing|移除審核設定。|
 |Configuration_RemoveRowLevelSecurity|移除資料列層級安全性設定（關聯資料表的變更需要此設定）。|
 |CreateRoleIfNonExistant|建立資料庫角色（如果尚未存在的話）。|

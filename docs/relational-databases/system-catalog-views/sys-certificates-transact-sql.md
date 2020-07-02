@@ -20,15 +20,15 @@ ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08193bd8f9b6dfd3aace80315c75bbb88e076f3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbba738f10f570af693cc126cb20f0f857e405aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255845"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718901"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   針對資料庫中的每個憑證，各傳回一個資料列。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75255845"
 |**主題**|**nvarchar(4000)**|這個憑證的主旨。|  
 |**expiry_date**|**datetime**|當憑證逾期時。|  
 |**start_date**|**datetime**|當憑證生效時。|  
-|**thumbprint**|**varbinary(32)**|憑證的 SHA-1 雜湊。 SHA-1 雜湊在全域範圍內是唯一的。|  
+|**特徵**|**varbinary(32)**|憑證的 SHA-1 雜湊。 SHA-1 雜湊在全域範圍內是唯一的。|  
 |**attested_by**|**nvarchar(260)**|僅供系統使用。|  
 |**pvt_key_last_backup_date**|**datetime**|上次匯出憑證私密金鑰的日期和時間。|  
   

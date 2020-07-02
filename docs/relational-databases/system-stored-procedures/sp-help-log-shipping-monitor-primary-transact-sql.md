@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9dfcb8f-1da6-49ca-a2c8-411574915434
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b3f579fb9a263b69755baaa1be84f6d51e9beac1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 881da9925aba395afa04555c752157f99f700dd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68113837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715856"
 ---
 # <a name="sp_help_log_shipping_monitor_primary-transact-sql"></a>sp_help_log_shipping_monitor_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   從監視資料表傳回主要資料庫的相關資訊。  
   
@@ -41,7 +41,7 @@ sp_help_log_shipping_monitor_primary
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @primary_server = ] 'primary_server'`記錄傳送設定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中之主要實例的名稱。 *primary_server*是**sysname** ，不能是 Null。  
+`[ @primary_server = ] 'primary_server'`記錄傳送設定中之主要實例的名稱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。 *primary_server*是**sysname** ，不能是 Null。  
   
 `[ @primary_database = ] 'primary_database'`這是主伺服器上的資料庫名稱。 *primary_database*是**sysname**，沒有預設值。  
   
