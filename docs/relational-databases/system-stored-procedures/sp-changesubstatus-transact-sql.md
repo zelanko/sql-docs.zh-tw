@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2daa7d007783434e0994846e41300c31b3e35162
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771359"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   變更現有訂閱者的狀態。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -75,7 +75,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |值|描述|  
 |-----------|-----------------|  
 |**active**|已同步處理訂閱者，正在接收資料。|  
-|**非使用**|訂閱者項目存在，但不含訂閱。|  
+|**inactive**|訂閱者項目存在，但不含訂閱。|  
 |**subscribed**|訂閱者在要求資料，但尚未同步處理。|  
   
 `[ @previous_status = ] 'previous_status'`這是訂用帳戶的先前狀態。 *previous_status*是**sysname**，預設值是 Null。 這個參數可讓您變更目前具有該狀態的任何訂用帳戶，藉此允許一組特定訂用帳戶的群組函式（例如，將所有作用中的訂閱設定回**訂閱**）。  
@@ -94,7 +94,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|Last|  
+|**16**|Last|  
 |NULL (預設值)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**，預設值是 Null。  

@@ -18,15 +18,15 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbc724b9178ec867768fde3dc3d9ff58add554e9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1ffce9dd6a06b433e183570767bf165c9e6b75d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771237"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   傳回目前環境中所能查詢之指定物件的資料行資訊。  
   
@@ -58,7 +58,7 @@ sp_columns [ @table_name = ] object
 `[ \@ODBCVer = ] ODBCVer`這是正在使用的 ODBC 版本。 *ODBCVer*是**int**，預設值是2。 這表示 ODBC 2。 有效值是 2 或 3。 如需版本2和3之間的行為差異，請參閱 ODBC **SQLColumns**規格。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無  
+ None  
   
 ## <a name="result-sets"></a>結果集  
  **Sp_columns**目錄預存程式相當於 ODBC 中的**SQLColumns** 。 傳回的結果會依**TABLE_QUALIFIER**、 **TABLE_OWNER**和**TABLE_NAME**排序。  
@@ -82,7 +82,7 @@ sp_columns [ @table_name = ] object
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime**和 SQL-92 **interval**資料類型的子類型代碼。 其他資料類型的這個資料行都會傳回 NULL。|  
 |**CHAR_OCTET_LENGTH**|**int**|字元或整數資料類型資料行的最大長度 (以位元組為單位)。 其他所有資料類型的這個資料行都會傳回 NULL。|  
 |**ORDINAL_POSITION**|**int**|資料行在物件中的序數位置。 物件中的第一個資料行是 1。 這個資料行一律會傳回值。|  
-|**IS_NullABLE**|**Varchar （254）**|物件中資料行的 Null 屬性。 遵照 ISO 規則來決定 Null 屬性。 ISO SQL 標準 DBMS 無法傳回空字串。<br /><br /> YES = 資料行可以包括 NULLS。<br /><br /> NO = 資料行不能包括 NULLS。<br /><br /> 如果 Null 屬性不明，這個資料行會傳回長度為零的字串。<br /><br /> 為此資料行傳回的值與**可為 null**資料行傳回的值不同。|  
+|**IS_NULLABLE**|**Varchar （254）**|物件中資料行的 Null 屬性。 遵照 ISO 規則來決定 Null 屬性。 ISO SQL 標準 DBMS 無法傳回空字串。<br /><br /> YES = 資料行可以包括 NULLS。<br /><br /> NO = 資料行不能包括 NULLS。<br /><br /> 如果 Null 屬性不明，這個資料行會傳回長度為零的字串。<br /><br /> 為此資料行傳回的值與**可為 null**資料行傳回的值不同。|  
 |**SS_DATA_TYPE**|**tinyint**|擴充預存程序所用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|  
   
  <sup>1</sup>如需詳細資訊，請參閱 Microsoft ODBC 檔集。  

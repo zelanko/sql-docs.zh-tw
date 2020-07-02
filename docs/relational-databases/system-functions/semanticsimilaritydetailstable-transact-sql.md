@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b264f5276ad9d9f411fcdd14550130eb412a1b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771561"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   會傳回零個、一個或多個主要片語的資料列，而這些主要片語對於兩個內容語意類似之文件 (來源文件與比對文件) 來說是共同的主要片語。  
   
@@ -74,7 +74,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 |Column_name|類型|描述|  
 |------------------|----------|-----------------|  
 |**keyphrase**|**NVARCHAR**|來源文件與比對文件中出現類似度的主要片語。|  
-|**成績**|**real**|此主要片語與兩份文件中所有其他類似片語之關聯性的相對值。<br /><br /> 此值是 [0.0, 1.0] 範圍內的小數值，分數愈高表示權重愈高。1.0 為滿分。|  
+|**成績**|**即時**|此主要片語與兩份文件中所有其他類似片語之關聯性的相對值。<br /><br /> 此值是 [0.0, 1.0] 範圍內的小數值，分數愈高表示權重愈高。1.0 為滿分。|  
   
 ## <a name="general-remarks"></a>一般備註  
  如需詳細資訊，請參閱[使用語義搜尋尋找相似及相關的檔](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
@@ -92,7 +92,7 @@ SEMANTICSIMILARITYDETAILSTABLE
  需要建立全文檢索和語意索引之基底資料表的 SELECT 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會抓取5個主要片語，其在 AdventureWorks2012 範例資料庫的**HumanResources humanresources.jobcandidate**資料表中的指定候選項目之間具有最高的相似性分數。 @CandidateId和@MatchedID變數代表全文檢索索引之索引鍵資料行中的值。  
+ 下列範例會抓取5個主要片語，其在 AdventureWorks2012 範例資料庫的**HumanResources humanresources.jobcandidate**資料表中的指定候選項目之間具有最高的相似性分數。 @CandidateId和 @MatchedID 變數代表全文檢索索引之索引鍵資料行中的值。  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

@@ -19,31 +19,31 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e81cb385da40b5d8aff52368bb59d0c91322321d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e946748b7374863e5981924671884e1621cf644d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832710"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772996"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器實例上 audit 中 file audit 類型的擴充資訊。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|稽核的識別碼。|  
-|name|**sysname**|稽核的名稱。|  
+|NAME|**sysname**|稽核的名稱。|  
 |audit_guid|**uniqueidentifier**|稽核的 GUID。|  
 |create_date|**datetime**|建立檔案稽核時的 UTC 日期。|  
 |modify_date|**datatime**|上次修改檔案稽核的 UTC 日期。|  
 |principal_id|**int**|在伺服器上註冊之稽核擁有者的識別碼。|  
-|類型|**char(2)**|稽核類型：<br /><br /> 0 = NT 安全性事件記錄檔<br /><br /> 1 = NT 應用程式事件記錄檔<br /><br /> 2 = 檔案系統上的檔案|  
+|type|**char(2)**|稽核類型：<br /><br /> 0 = NT 安全性事件記錄檔<br /><br /> 1 = NT 應用程式事件記錄檔<br /><br /> 2 = 檔案系統上的檔案|  
 |type_desc|**nvarchar(60)**|稽核類型描述。|  
 |on_failure|**tinyint**|失敗時條件。<br /><br /> 0 = 繼續<br /><br /> 1 = 關閉伺服器執行個體<br /><br /> 2 = 讓作業失敗|  
 |on_failure_desc|**nvarchar(60)**|寫入動作項目失敗：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
-|is_state_enabled|**tinyint**|0 = 已停用<br /><br /> 1 = 已啟用|  
+|is_state_enabled|**tinyint**|0 = 停用<br /><br /> 1 = 啟用|  
 |queue_delay|**int**|寫入磁碟前等候的最大時間建議值 (以毫秒計)。 如果為 0，則表示稽核將會保證寫入，然後事件才可以繼續。|  
 |predicate|**Nvarchar （8000）**|套用至事件的述詞運算式。|  
 |max_file_size|**bigint**|稽核的大小上限 (以 MB 為單位)：<br /><br /> 0 = 選定稽核的類型無限制/不適用。|  

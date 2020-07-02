@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 34bab6de111498369c9fd7e53ae53df5ef0425ac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 99f0eba106e13f222419edc43bf9745bbb3247bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820379"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772121"
 ---
 # <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   將目前的伺服器加入至主要伺服器上的可用伺服器清單。  
   

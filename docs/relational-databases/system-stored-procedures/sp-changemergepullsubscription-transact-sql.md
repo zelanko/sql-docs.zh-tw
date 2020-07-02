@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2182e922599e81a2333fcbf4da5970b55d7e5bc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fdd889b1c28b037f4ab1d4f609cf93b19617e5b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823468"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771466"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   變更合併提取訂閱的屬性。 這個預存程序執行於訂閱資料庫的訂閱者端。  
   
@@ -51,10 +51,10 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'`這是指定之屬性的新值。 *value*是**Nvarchar （255）**，它可以是資料表中的其中一個值。  
   
-|屬性|值|說明|  
+|屬性|值|描述|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||當位置不是預設位置，或在預設位置之外還有其他位置時，快照集資料夾的儲存位置。|  
-|**描述**||這個合併提取訂閱的描述。|  
+|**description**||這個合併提取訂閱的描述。|  
 |**伺服器**||散發者的名稱。|  
 |**distributor_login**||用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼|  
 |**distributor_password**||用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
@@ -74,14 +74,14 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||代表 Web 同步處理之複寫接聽程式位置的 URL。|  
 |**merge_job_login**||用來執行代理程式之 Windows 帳戶的登入。|  
 |**merge_job_password**||用來執行代理程式之 Windows 帳戶的密碼。|  
-|**優先順序**||僅適用于回溯相容性;請改為在發行者端執行[sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) ，以修改訂閱的優先順序。|  
+|**priority**||僅適用于回溯相容性;請改為在發行者端執行[sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) ，以修改訂閱的優先順序。|  
 |**publisher_login**||用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**publisher_password**||用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
 |**publisher_security_mode**|**0**|當連接到發行者時，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  
 ||**1**|當連接到發行者時，使用 Windows 驗證。|  
 ||**2**|同步處理觸發程式會使用靜態**sysservers**專案來執行遠端程序呼叫（RPC），而且必須在**sysservers**資料表中將發行者定義為遠端伺服器或連結的伺服器。|  
 |**sync_type**|**自動**|先將發行資料表的結構描述和初始資料傳送給訂閱者。|  
-||**無**|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
+||無|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
 |**use_ftp**|**true**|利用 FTP 而不是一般通訊協定來擷取快照集。|  
 ||**false**|利用一般通訊協定來擷取快照集。|  
 |**use_web_sync**|**true**|訂閱可以透過 HTTP 來同步處理。|  

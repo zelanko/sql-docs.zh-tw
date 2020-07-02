@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7b427dfa3756b83eb3d0a73f6ff5dd0be23b0c7
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 6a6f5a6dbe1db85dc5f25e9d68fa94dcd245e5a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880710"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772919"
 ---
 # <a name="handling-namespaces-in-xquery"></a>處理 XQuery 中的命名空間
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   這個主題所提供的範例將說明如何處理查詢中的命名空間。  
   

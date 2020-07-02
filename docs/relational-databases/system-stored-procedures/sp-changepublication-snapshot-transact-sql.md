@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef9a2fd87ac283ee2a7072cfccac838df7f16d04
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 547b524a35970f18cb1e3d1d4dbd3679267695a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771432"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   變更指定發行集的快照集代理程式屬性。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -67,7 +67,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**2**|隨選|  
 |**4**|每日|  
 |**8**|每週|  
-|**1600**|每月|  
+|**16**|每月|  
 |**32**|每月相對|  
 |**64**|自動啟動|  
 |**128**|重複執行|  

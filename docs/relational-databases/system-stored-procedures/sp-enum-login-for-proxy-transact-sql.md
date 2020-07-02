@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a26f9ab251bbea3de121a26035d397d17cee5f24
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124676"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771135"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   列出安全性主體和 Proxy 之間的關聯。  
   
@@ -42,7 +42,7 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'`要列出 proxy 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主體、登入、伺服器角色或**msdb**資料庫角色的名稱。 名稱是**Nvarchar （256）**，預設值是 Null。  
+`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要列出 proxy 的主體、登入、伺服器角色或**msdb**資料庫角色的名稱。 名稱是**Nvarchar （256）**，預設值是 Null。  
   
 `[ @proxy_id = ] id`要列出資訊之 proxy 的 proxy 識別碼。 *Proxy_id*是**int**，預設值是 Null。 可以指定*識別碼*或*proxy_name* 。  
   
@@ -58,7 +58,7 @@ sp_enum_login_for_proxy
 |**proxy_id**|**int**|Proxy 識別碼。|  
 |**proxy_name**|**sysname**|Proxy 的名稱。|  
 |**name**|**sysname**|關聯的安全性主體名稱。|  
-|**flags**|**int**|安全性主體的類型。<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入<br /><br /> **1** = 固定系統角色<br /><br /> **2** = **msdb**中的資料庫角色|  
+|**flags**|**int**|安全性主體的類型。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入<br /><br /> **1** = 固定系統角色<br /><br /> **2** = **msdb**中的資料庫角色|  
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>備註  

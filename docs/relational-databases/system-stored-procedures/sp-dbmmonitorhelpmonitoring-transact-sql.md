@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b16c77357795ed3c7e11454016663befcf4ae329
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d44bde22c00e2169d2f3aa74f935f18abae52923
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826161"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772242"
 ---
 # <a name="sp_dbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回目前的更新週期。  
   
@@ -40,10 +40,10 @@ sp_dbmmonitorhelpmonitoring
 ```  
   
 ## <a name="arguments"></a>引數  
- 無  
+ None  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無  
+ None  
   
 ## <a name="result-sets"></a>結果集  
  傳回目前的更新週期，也就是資料庫鏡像狀態資料表更新之間的分鐘數。 這個值介於 1 和 120 分鐘之間。  

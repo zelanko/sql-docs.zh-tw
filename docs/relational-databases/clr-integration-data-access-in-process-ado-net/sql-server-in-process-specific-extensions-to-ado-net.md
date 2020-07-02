@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3c1729d216a1456551da3699c286385694e558a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8265a79c58f94eea59b0776910eda6e4902d5989
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765448"
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>ADO.NET 的 SQL Server 同處理序特定擴充
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ADO.NET 有四個專門用於同處理序的主要功能擴充。 下列主題將詳細說明這些擴充功能。  
   
 ## <a name="in-this-section"></a>本節內容  

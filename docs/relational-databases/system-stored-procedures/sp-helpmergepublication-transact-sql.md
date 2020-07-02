@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26480fa1adb8493a1c29e5b67a163e9cbff54920
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9e821b1ea7688ed80adba7385e465366e7f69e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772968"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回有關合併式發行集的資訊。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -65,7 +65,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |id|**int**|結果集清單中的發行集循序排列順序。|  
-|name|**sysname**|發行集的名稱。|  
+|NAME|**sysname**|發行集的名稱。|  
 |description|**nvarchar(255)**|發行集的描述。|  
 |status|**tinyint**|指示發行集資料的可用時機。|  
 |retention|**int**|儲存發行集中的發行項變更相關中繼資料時，所需的時間。 這段時間的單位可以是天、週、月或年。 如需有關單位的資訊，請參閱 retention_period_unit 欄。|  

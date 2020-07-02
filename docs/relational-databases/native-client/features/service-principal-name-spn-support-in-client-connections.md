@@ -16,15 +16,15 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0aa184d2ee8ea61162a15319f3df3696824b135
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: b7ca9a1106746ed631917c7da921c5b27809f216
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84949432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773176"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>用戶端連接中的服務主要名稱 (SPN) 支援
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   從 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 開始，已經擴充服務主體名稱 (SPN) 的支援以便跨所有通訊協定進行相互驗證。 在舊版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的預設 SPN 使用 Active Directory 註冊時，Kerberos 才能透過 TCP 支援 SPN。  
   

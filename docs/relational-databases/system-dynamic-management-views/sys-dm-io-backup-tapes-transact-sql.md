@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7d0e9c5198b65a6e4ddce148dbafd46821e2f40
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 745ad11ccb8b06471ac07477739580558475e363
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830529"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771586"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回磁帶裝置的清單和掛載要求的狀態，作為備份。   
  
@@ -40,7 +40,7 @@ ms.locfileid: "82830529"
 |**mount_expiration_time**|**datetime**|掛載要求將到期 (逾時) 的時間。 如果沒有暫止的掛接（**狀態！ = 2**），則為 Null。 可為 Null。|  
 |**database_name**|**nvarchar(256)**|將備份至這個裝置中的資料庫。 可為 Null。|  
 |**spid**|**int**|工作階段識別碼。 這用來識別磁帶的使用者。 可為 Null。|  
-|**命令**|**int**|執行備份的命令。 可為 Null。|  
+|**command**|**int**|執行備份的命令。 可為 Null。|  
 |**command_desc**|**nvarchar(120)**|命令的描述。 可為 Null。|  
 |**media_family_id**|**int**|媒體家族的索引（1 ...*n*）， *n*是媒體集中的媒體家族數目。 可為 Null。|  
 |**media_set_name**|**nvarchar(256)**|媒體集的名稱 (如果有的話)，依照建立媒體集時，MEDIANAME 選項中的指定。 可為 Null。|  

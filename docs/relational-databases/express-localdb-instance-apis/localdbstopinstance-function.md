@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 89db6e2a85e502b675db2006a682ff6b35fb4491
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b37d78138a3bea5abdffc9acdd8ea9b1ba392262
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022064"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765203"
 ---
 # <a name="localdbstopinstance-function"></a>LocalDBStopInstance 函數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   停止執行指定的 SQL Server Express LocalDB 執行個體。  
   
  **標頭檔：** sqlncli。h  
@@ -58,7 +58,7 @@ HRESULT LocalDBStopInstance(
  *ulTimeout*  
  [輸入] 等候此作業完成的時間 (以秒為單位)。 如果此值為 0，此函數會立即傳回，而不等候 LocalDB 執行個體停止。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

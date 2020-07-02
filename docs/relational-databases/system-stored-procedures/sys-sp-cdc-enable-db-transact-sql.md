@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f9947372ca0c92d7daaef19fafb2f7e3ee4a84f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9a7a07452a0dcb9ebfe91e7e51b10239b3eb3f15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769636"
 ---
 # <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   啟用目前資料庫的異動資料擷取。 您必須先針對資料庫執行這個程序，然後才能針對該資料庫中的任何資料表啟用異動資料擷取。 異動資料擷取會記錄套用至已啟用資料表的插入、更新和刪除活動，並以方便取用的關聯式格式提供變更的詳細資料。 系統會針對修改的資料列擷取鏡像追蹤來源資料表之資料行結構的資料行資訊，以及將變更套用至目標環境所需的中繼資料。  
   

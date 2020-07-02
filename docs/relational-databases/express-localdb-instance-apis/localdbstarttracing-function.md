@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fd4d94debcaaaa90447b3bc85621ae973d7f70d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ece276dca136aaa5f21f9fdc1ab16ffad9ba2d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022067"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765208"
 ---
 # <a name="localdbstarttracing-function"></a>LocalDBStartTracing 函數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   針對目前 Windows 使用者擁有的所有 SQL Server Express LocalDB 執行個體啟用 API 呼叫的追蹤。  
   
  **標頭檔：** sqlncli。h  
@@ -34,7 +34,7 @@ ms.locfileid: "68022067"
 HRESULT LocalDBStartTracing();  
 ```  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

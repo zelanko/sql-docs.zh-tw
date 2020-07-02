@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d5c08e0a844348210ae011e395c04de5b4cdcdd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1b2fb1031c3090046bc509acc3c0cd1779db1836
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771429"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   變更發行集的屬性。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -72,7 +72,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**sub reinit**|對於更新訂閱者，如果發生衝突，訂閱就必須重新初始化。 只有在沒有使用中的訂閱時，才能改變這個屬性。 不支援 Oracle 發行者使用這個值。|  
 ||**sub wins**|更新訂閱者的衝突解決原則，訂閱者在衝突中獲勝。 只有在沒有使用中的訂閱時，才能改變這個屬性。 不支援 Oracle 發行者使用這個值。|  
 |**conflict_retention**||**int** ，指定衝突保留期限（以天為單位）。 預設保留 14 天。 **0**表示不需要清除衝突。 不支援 Oracle 發行者使用這個值。|  
-|**描述**||描述發行集的選擇性項目。|  
+|**description**||描述發行集的選擇性項目。|  
 |**enabled_for_het_sub**|**true**|啟用發行集以支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 當發行集有訂閱時，就無法變更**enabled_for_het_sub** 。 將**enabled_for_het_sub**設定為 true 之前，您可能需要執行複寫[預存程式（transact-sql）](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)以符合下列需求：<br /> - **allow_queued_tran**必須為**false**。<br /> - **allow_sync_tran**必須為**false**。<br /> 變更**enabled_for_het_sub**為**true**可能會變更現有的發行集設定。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 ||**false**|發行集不支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 |**enabled_for_internet**|**true**|啟用發行集的網際網路功能，以及可以利用檔案傳輸通訊協定 (FTP)，將快照集檔案傳送給訂閱者。 發行集的同步處理檔案會放在下列目錄中：C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp。 *ftp_address*不可以是 Null。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
@@ -105,7 +105,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**snapshot_in_defaultfolder**|**true**|快照集檔案儲存在預設快照集資料夾中。 如果也指定了*alt_snapshot_folder*，快照集檔案就會同時儲存在預設和替代位置中。|  
 ||**false**|快照集檔案會儲存在*alt_snapshot_folder*所指定的替代位置中。|  
 |**status**|**active**|當建立發行集時，訂閱者可以立即使用發行集資料。 不支援 Oracle 發行者使用這個值。|  
-||**非使用**|當建立發行集時，訂閱者無法使用發行集資料。 不支援 Oracle 發行者使用這個值。|  
+||**inactive**|當建立發行集時，訂閱者無法使用發行集資料。 不支援 Oracle 發行者使用這個值。|  
 |**sync_method**|**native**|當同步處理訂閱時，使用所有資料表的原生模式大量複製輸出。|  
 ||**字母**|當同步處理訂閱時，使用所有資料表的字元模式大量複製輸出。|  
 ||**位**|使用所有資料表的原生模式大量複製程式輸出，但在快照集的產生程序中，不鎖定資料表。 這個項目對快照式複寫無效。|  

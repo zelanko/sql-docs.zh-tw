@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9feddab12ea972ea4d7764fccfdd91a7f9b89cec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3f992fefc04de89fcfa9e077d01641fa538ea40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762246"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771403"
 ---
 # <a name="sp_changereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  變更複寫代理程式連接[!INCLUDE[msCoName](../../includes/msconame-md.md)]到複寫拓撲[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的伺服器時，所使用之 Windows 帳戶或登入的儲存密碼。 通常您必須變更在伺服器執行的每個個別代理程式的密碼，即使它們都使用相同的登入或帳戶也不例外。 這個預存程序可讓您變更所有在伺服器執行的複寫代理程式所用的給定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 帳戶之所有執行個體的密碼。 這個預存程序執行於 master 資料庫複寫拓撲中的任何一部伺服器。  
+  變更複寫 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式連接到複寫拓撲中的伺服器時，所使用之 Windows 帳戶或登入的儲存密碼。 通常您必須變更在伺服器執行的每個個別代理程式的密碼，即使它們都使用相同的登入或帳戶也不例外。 這個預存程序可讓您變更所有在伺服器執行的複寫代理程式所用的給定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 帳戶之所有執行個體的密碼。 這個預存程序執行於 master 資料庫複寫拓撲中的任何一部伺服器。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +44,9 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **1** = Windows 整合式驗證  
   
- **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證  
+ **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證  
   
-`[ @login = ] 'login'`這是要變更的 Windows 帳戶或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入名稱。 *登*入是**Nvarchar （257）**，沒有預設值  
+`[ @login = ] 'login'`這是要變更的 Windows 帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 *登*入是**Nvarchar （257）**，沒有預設值  
   
 `[ @password = ] 'password'`這是要針對指定的*登*入儲存的新密碼。 *password*是**sysname**，沒有預設值。  
   
@@ -58,7 +58,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 |值|描述|  
 |-----------|-----------------|  
 |**伺服器**|所有與散發者的代理程式連接。|  
-|**發行者**|所有與發行者的代理程式連接。|  
+|**publisher**|所有與發行者的代理程式連接。|  
 |**預訂**|所有與訂閱者的代理程式連接。|  
 |**%** 預設|所有與複寫拓撲中所有伺服器的代理程式連接。|  
   

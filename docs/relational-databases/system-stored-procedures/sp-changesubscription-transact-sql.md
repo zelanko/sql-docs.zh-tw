@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c88e0f545a19c1f486c5c6927c11fd2707112963
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b33103bc84e6354e99ac04e73fa20a0f99725a6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824081"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771388"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   變更快照集或交易式發送訂閱的屬性，或變更佇列更新異動複寫所涉及的提取訂閱的屬性。 若要變更所有其他類型之提取訂閱的屬性，請使用[sp_change_subscription_properties &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)。 **sp_changesubscription**是在發行集資料庫的發行者端執行。  
   

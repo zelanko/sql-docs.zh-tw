@@ -20,15 +20,15 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd9339c8d0ef678b021c3c2887963c487681eeac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bd504c18b41480b2d384efc5546f10b957a43bac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819125"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764314"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   傳回有關 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中目前使用中鎖定管理員資源的資訊。 每一個資料列皆代表一個對鎖定管理員針對已經授與或在等待授與的鎖定的目前使用中要求。  
   
@@ -206,7 +206,7 @@ ms.locfileid: "82819125"
 |KEY|<hash_value>|代表這項資源所代表之資料列的索引鍵資料行雜湊。|  
 |EXTENT|<file_id>:<page_in_files>|代表這項資源所代表之範圍的檔案和頁面識別碼。 這個範圍識別碼，與範圍中第一頁的頁面識別碼相同。|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|代表這項資源所代表之資料列的頁面識別碼和資料列識別碼。 請注意，如果相關聯的物件識別碼是 99，這項資源就代表 IAM 鏈結的第一個 IAM 頁面上，八個混合頁面位置之一。|  
-|APPLICATION|\<DbPrincipalId>：最多 \< 32 個字元>:(<hash_value>）|代表制定這個應用程式鎖定資源範圍所用之資料庫主體的識別碼。 其中包含來自對應於這個應用程式鎖定資源的資源字串，最多可以包含 32 個字元。 在某些情況下，由於完整字串已經無法使用，因此只能顯示 2 個字元。 這個行為只發生在資料庫復原時，復原程序必須重新取得應用程式鎖定。 雜湊值代表對應於這個應用程式鎖定資源的完整資源字串雜湊。|  
+|APPLICATION|\<DbPrincipalId>： \<upto 32 characters> :(<hash_value>）|代表制定這個應用程式鎖定資源範圍所用之資料庫主體的識別碼。 其中包含來自對應於這個應用程式鎖定資源的資源字串，最多可以包含 32 個字元。 在某些情況下，由於完整字串已經無法使用，因此只能顯示 2 個字元。 這個行為只發生在資料庫復原時，復原程序必須重新取得應用程式鎖定。 雜湊值代表對應於這個應用程式鎖定資源的完整資源字串雜湊。|  
 |HOBT|不適用|HoBt 識別碼會當做 **resource_associated_entity_id** 加入。|  
 |ALLOCATION_UNIT|不適用|配置單位識別碼會被當做 **resource_associated_entity_id** 併入。|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

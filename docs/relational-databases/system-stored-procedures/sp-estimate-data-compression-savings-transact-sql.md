@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37c6a32b7970d8bfb0a44eaf407914c5de27f593
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04201e9127f5de173767f7b2071088f2bd4f2828
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831088"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772178"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回要求之物件目前的大小，並針對要求的壓縮狀態預估物件大小。 可以針對整個資料表或部分資料表評估壓縮， 這包括堆積、叢集索引、非叢集索引、資料行存放區索引、索引視圖，以及資料表和索引資料分割。 您可以使用資料列、頁面、資料行存放區或資料行存放區封存壓縮來壓縮物件。 如果資料表、索引或資料分割已經壓縮，您可以使用此程序來估計已重新壓縮之資料表、索引或資料分割的大小。  
   

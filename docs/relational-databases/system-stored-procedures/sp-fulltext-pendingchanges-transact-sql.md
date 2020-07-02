@@ -18,15 +18,15 @@ ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b360a899ed17f0b1b82a5ebcdfbd664803ed8d93
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a86792b69e9bdd00c41c9ed5582046aee634d533
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772185"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   針對使用變更追蹤的指定資料表，傳回未處理的變更 (例如，暫止插入、更新和刪除)。  
   
@@ -47,7 +47,7 @@ sp_fulltext_pendingchanges table_id
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**關鍵**|*|這是來自指定資料表的全文檢索索引鍵值。|  
+|**索引鍵**|*|這是來自指定資料表的全文檢索索引鍵值。|  
 |**DocId**|**bigint**|這是對應至索引鍵值的內部文件識別碼 (DocId) 資料行。|  
 |**狀態**|**int**|0 = 資料列會從全文檢索索引中移除。<br /><br /> 1 = 資料列會被編製成全文檢索索引。<br /><br /> 2 = 資料列是最新的。<br /><br /> -1 = 資料列是處於過渡 (批次，但未認可) 狀態，或是錯誤狀態。|  
 |**DocState**|**tinyint**|這是內部文件識別碼 (DocId) 對應狀態資料行的原始傾印。|  

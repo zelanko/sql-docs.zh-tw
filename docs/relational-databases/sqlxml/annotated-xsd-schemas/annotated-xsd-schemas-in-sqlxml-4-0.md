@@ -19,15 +19,15 @@ ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2792bb40ec870f82694e82b291d55be4b9e9dddd
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: bdb5a36fe5e5f7c81e43ca43a76b59f52ad70674
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689554"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764850"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 中的註解式 XSD 結構描述
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   本章節提供在 SQLXML 4.0 中使用註解式 XSD 結構描述的相關資訊。 在舊版的 SQLXML 中，XML-Data Reduced (XDR) 結構描述有提供類似的功能。 本章節也提供用於舊版應用程式的 XDR 資訊。  
   
 ## <a name="in-this-section"></a>本節內容  

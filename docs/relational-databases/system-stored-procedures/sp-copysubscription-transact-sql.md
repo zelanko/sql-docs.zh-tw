@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3a2a2405b4ca22f780576135c66ee32d058ed10
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 80927c19376e97b25c21af1f93faedd5637eb8bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771202"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
     
 > [!IMPORTANT]  

@@ -22,22 +22,22 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c139a45df1031ac47750d995780f8e13ea64f2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ffc3f9823bbdf176b639c28b805a997f868e364
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133808"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764734"
 ---
 # <a name="sysfulltext_index_columns-transact-sql"></a>sys.fulltext_index_columns (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   屬於全文檢索索引一部分的每個資料行各有一個資料列。    
  
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|所屬物件的識別碼。|  
+|object_id|**int**|所屬物件的識別碼。|  
 |**column_id**|**int**|屬於全文檢索索引一部份的資料行識別碼。|  
 |**type_column_id**|**int**|類型資料行的識別碼，這個資料行會儲存使用者提供的檔副檔名-".doc"、".xls"，而在給定的資料列中則是檔。 只有在全文檢索索引時需要篩選資料的資料行，才能指定這個類型資料行。 如果不適用，則傳回 NULL。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)。|  
 |**language_id**|**int**|用於檢索這個全文檢索資料行之斷詞工具的語言識別碼。<br /><br /> 0 = 中性語言。<br /><br /> 如需詳細資訊，請參閱[fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。|  

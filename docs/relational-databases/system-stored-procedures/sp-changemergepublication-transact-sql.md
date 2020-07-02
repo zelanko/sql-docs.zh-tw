@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8f9260aad5b07e57ff3d95b8943d85a15756077d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829593"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771478"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   變更合併式發行集的屬性。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -78,7 +78,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**預訂**|衝突記錄會儲存在造成衝突的訂閱者端。 [!INCLUDE[ssEW](../../includes/ssew-md.md)]訂閱者不支援 *。*|  
 ||**既**|衝突記錄會儲存在發行者端和訂閱者端。|  
 |**conflict_retention**||**Int** ，指定保留衝突的保留期限（以天為單位）。 將*conflict_retention*設定為**0** ，表示不需要清除衝突。|  
-|**描述**||發行集的描述。|  
+|**description**||發行集的描述。|  
 |**dynamic_filters**|**true**|根據動態子句來篩選發行集。|  
 ||**false**|不動態篩選發行集。|  
 |**enabled_for_internet**|**true**|不啟用發行集的網際網路功能。 檔案傳輸通訊協定 (FTP) 可用來將快照集檔案傳送至訂閱者。 發行集的同步處理檔案會放在 C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp 目錄中。|  
@@ -111,7 +111,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**snapshot_ready**|**true**|可以使用發行集的快照集。|  
 ||**false**|無法使用發行集的快照集。|  
 |**status**|**active**|發行集在使用狀態中。|  
-||**非使用**|發行集在非使用狀態中。|  
+||**inactive**|發行集在非使用狀態中。|  
 |**sync_mode**|**原生**或<br /><br /> **bcp native**|所有資料表的原生模式大量複製程式輸出會用在初始快照集上。|  
 ||**字母**<br /><br /> 或**bcp 字元**|所有資料表的字元模式大量複製程式輸出會用在初始快照集上，所有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者也需要如此。|  
 |**use_partition_groups**<br /><br /> 注意：使用 partition_groups 之後，如果您要還原為使用**setupbelongs**，並在**changemergearticle**中設定**use_partition_groups = false** ，則在建立快照集之後可能無法正確反映這種情況。 快照集所產生的觸發程序與資料分割群組相容。<br /><br /> 此案例的因應措施是將狀態設定為非作用中、修改**use_partition_groups**，然後將狀態設定為 [作用中]。|**true**|發行集使用預先計算的資料分割。|  

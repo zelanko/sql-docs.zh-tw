@@ -1,5 +1,5 @@
 ---
-title: sysaltfiles （Transact-sql） |Microsoft Docs
+title: sys.sysaltfiles （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 891e88761cac47be83fb69debbbc5e4cb6c401c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c79b582eaf6ba6f4fef568af11110fcb6ea17c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764399"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在特殊情況之下，包含對應於資料庫中之檔案的資料列。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68006971"
 |**效能**|**int**|已保留。|  
 |**dbid**|**smallint**|這個檔案所屬的資料庫之資料庫識別碼。|  
 |**name**|**sysname**|檔案的邏輯名稱。|  
-|**名稱**|**nvarchar(260)**|實體裝置的名稱。 其中包括檔案的完整路徑。|  
+|**filename**|**nvarchar(260)**|實體裝置的名稱。 其中包括檔案的完整路徑。|  
   
 ## <a name="see-also"></a>另請參閱  
  [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

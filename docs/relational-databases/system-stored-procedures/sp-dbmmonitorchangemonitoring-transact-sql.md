@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaabc73c78b16a2babac681c87504da8d38a935a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b208b33cba633a168c9a0c2d77f71ae84d592ff2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826186"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772271"
 ---
 # <a name="sp_dbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   變更資料庫鏡像監視參數的值。  
   
@@ -48,7 +48,7 @@ sp_dbmmonitorchangemonitoring parameter
   
  資料庫鏡射狀態資料表更新之間的分鐘數。 預設間隔是 1 分鐘。  
   
- *值*  
+ *value*  
  為正在變更之參數指定新值。  
   
 |參數|值描述|  
@@ -56,7 +56,7 @@ sp_dbmmonitorchangemonitoring parameter
 |1|在 1 到 120 範圍中的整數，以分鐘數為單位指定新的更新週期。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無  
+ None  
   
 ## <a name="result-sets"></a>結果集  
  None  

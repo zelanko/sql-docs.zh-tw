@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 414ff1ab9c5b9ba717af4010520dadcacc50fdd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af397ecb708a8876b779bb2fe27ba7dca83f82f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660652"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768257"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>InstanceName 屬性 (ServerNetworkProtocolIPAddress 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  取得伺服器網路通訊協定安裝所在之[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例的名稱。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 伺服器網路通訊協定安裝所在之實例的名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *object*  
  [ServerNetworkProtocolIPAdress 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

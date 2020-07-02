@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a85a911d4c9f5cd4565e9839f3be44a4e2366079
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f342fd9dcf89b5d9862a2ed51718b09aae2e991
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68067747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771525"
 ---
 # <a name="snapshotsfn_trace_getdata-transact-sql"></a>snapshots.fn_trace_getdata (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   這個函數會傳回針對指定之追蹤所擷取的所有事件。  
   
@@ -51,7 +51,7 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|\<> 的所有追蹤資料行|\<> 變化|管理資料倉儲資料庫內 snapshots.trace_data 資料表中的追蹤資料。<br /><br /> 您可以使用下列查詢取得指定之追蹤的資料行清單：<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **注意：** 快照集所傳回的資料行。 fn_trace_gettable 函式會對應到 sys.databases trace_columns 系統檢視中 [名稱] 欄中的值。 唯一的差異在於此函數不會傳回 GroupID 資料行。|  
+|\<All trace columns>|\<Varies>|管理資料倉儲資料庫內 snapshots.trace_data 資料表中的追蹤資料。<br /><br /> 您可以使用下列查詢取得指定之追蹤的資料行清單：<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **注意：** 快照集所傳回的資料行。 fn_trace_gettable 函式會對應到 sys.databases trace_columns 系統檢視中 [名稱] 欄中的值。 唯一的差異在於此函數不會傳回 GroupID 資料行。|  
   
 ## <a name="permissions"></a>權限  
  需要 mdw_reader 的 SELECT 權限。  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1761c3546d043dd74a3fe2b491618140635fe61c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4b8c7157eac444815eae0b4846519b93389be2f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823453"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771312"
 ---
 # <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   移除資料庫頁面上因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中資料修改例行工作所留下的剩餘資訊。 sp_clean_db_file_free_space 只會清除資料庫的一個檔案中的所有頁面。  
   

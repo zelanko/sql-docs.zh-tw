@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd0d08a045f67b436bd732b01a2279c923fc9461
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d721bf729d99a60a32693ddbe609cfcee01ba701
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824068"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771366"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   變更訂閱的 Data Transformation Services (DTS) 封裝屬性。 這個預存程序執行於訂閱資料庫的訂閱者端。  
   

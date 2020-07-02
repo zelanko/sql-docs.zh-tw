@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 151b0f504080523e99fad839c17e02b786b619c0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7b69de24d9b92e82d624a694800988cdf74180c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831098"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771099"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對特定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者帳戶所執行的伺服器，傳回所有已定義之 ODBC 和 OLE DB 資料來源名稱的清單。 這個預存程序執行於任何資料庫的發行者端。  
   
@@ -45,7 +45,7 @@ sp_enumdsn
 |-----------------|---------------|-----------------|  
 |**資料來源名稱**|**sysname**|資料來源的名稱。|  
 |**描述**|**varchar(255)**|資料來源的描述。|  
-|**類型**|**int**|資料來源的類型：<br /><br /> **1** = ODBC DSN<br /><br /> **3** = OLE DB 資料來源|  
+|**型別**|**int**|資料來源的類型：<br /><br /> **1** = ODBC DSN<br /><br /> **3** = OLE DB 資料來源|  
 |**提供者名稱**|**varchar(255)**|OLE DB 提供者的名稱。 ODBC DSN 的這個值是 NULL。|  
   
 ## <a name="remarks"></a>備註  

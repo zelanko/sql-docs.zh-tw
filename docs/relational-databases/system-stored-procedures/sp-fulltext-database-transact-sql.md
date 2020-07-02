@@ -18,15 +18,15 @@ ms.assetid: eeb1e151-eb00-484c-8fd1-5641e621ffc6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 105582d8e172849d4296486557984550a032dd72
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ee0918a0b190b7b058f38eac4152dfb952f214bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771063"
 ---
 # <a name="sp_fulltext_database-transact-sql"></a>sp_fulltext_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   對於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本中的全文檢索目錄沒有任何影響，而且是為了回溯相容性才提供支援。 **sp_fulltext_database**不會停用指定資料庫的全文檢索引擎。  中所有使用者建立的資料庫一定會啟用全文檢索索引。  
   
@@ -45,7 +45,7 @@ sp_fulltext_database [@action=] 'action'
 ## <a name="arguments"></a>引數  
 `[ @action = ] 'action'`這是要執行的動作。 **action**是**Varchar （20）**，它可以是下列值之一。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**enable**|支援這個項目的目的，只是為了與舊版相容。 對於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本中的全文檢索目錄沒有任何影響。|  
 |**disable**|支援這個項目的目的，只是為了與舊版相容。 對於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本中的全文檢索目錄沒有任何影響。|  

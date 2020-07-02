@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3f7597272a1547a11f2c76e65fab391e2fbcd05
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3e0d230046fa06ad220c24c0f33616be213b6563
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771447"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   變更合併發送訂閱的所選屬性。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -54,8 +54,8 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 |屬性|值|描述|  
 |--------------|-----------|-----------------|  
-|**描述**||這個合併訂閱的描述。|  
-|**優先順序**||這是訂閱優先權。 在偵測到衝突時，預設解析程式會利用優先權挑選贏的一方。|  
+|**description**||這個合併訂閱的描述。|  
+|**priority**||這是訂閱優先權。 在偵測到衝突時，預設解析程式會利用優先權挑選贏的一方。|  
 |**merge_job_login**||用來執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的登入。|  
 |**merge_job_password**||用來執行代理程式之 Windows 帳戶的密碼。|  
 |**publisher_security_mode**|**1**|當連接到發行者時，使用 Windows 驗證。|  
@@ -67,7 +67,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |**subscriber_login**||訂閱者的登入名稱。|  
 |**subscriber_password**||提供之訂閱者登入的增強式密碼。|  
 |**sync_type**|**自動**|先將發行資料表的結構描述和初始資料傳送給訂閱者。|  
-||**無**|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
+||無|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
 |**use_interactive_resolver**|**true**|可讓您以互動方式來解決接受互動式解決之所有發行項的衝突。|  
 ||**false**|衝突是利用預設解析程式或自訂解析程式加以自動解析。|  
 |NULL (預設值)|NULL (預設值)||  

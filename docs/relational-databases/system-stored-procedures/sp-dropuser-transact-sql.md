@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d4f4b08f21d29fead3f2cebf477be69cfaf766ad
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a231ed2809f387f58ccedef9acb8555a6569e992
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772211"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   從目前資料庫移除資料庫使用者。 **sp_dropuser**提供與舊版的相容性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

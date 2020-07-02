@@ -29,15 +29,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17ad196110a68a83618e5048f53bfa84fb7e0f51
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: eade5e3328993176f8795d27e511902a42468192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764864"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 資料類型 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath 和 XML 架構（XSD）具有非常不同的資料類型。 例如，XPath 沒有整數或日期資料類型，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 XSD 則有許多。 XSD 會將奈秒的有效位數用於時間值，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則至多使用 1/300 秒的有效位數。 因此，並非永遠都能將一個資料類型對應到另一個。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將資料類型對應到 XSD 資料類型的詳細資訊，請參閱[資料類型強制型轉和 sql： datatype 注釋 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
   
  XPath 有三種資料類型：**字串**、**數位**和**布林值**。 **Number**資料類型一律是 IEEE 754 雙精確度浮點數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float （53）** 資料類型是最接近 XPath 的**數位**。 不過， **float （53）** 不是與 IEEE 754 完全相同。 例如，不會使用 NaN (非數字的值)，也不會使用無限。 嘗試將非數值字串轉換成**數位**並嘗試零除時，會產生錯誤。  
@@ -74,7 +74,7 @@ ms.locfileid: "84306017"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會在節點集上執行位置選取：例如，XPath 查詢 `Customer[3]` 表示第三個客戶；在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支援此種類型的位置選取。 因此，不會實作為 XPath 規格所描述的節點集對**字串**或節點集對**數位**的轉換。 在 XPath 規格指定 "first" 語意的每個地方，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會使用 "any" 語意。 例如，根據 W3C XPath 規格，XPath 查詢 `Order[OrderDetail/@UnitPrice > 10.0]` 會選取具有大於10.0 之**單價**的第一個**OrderDetail**的訂單。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此 XPath 查詢會選取具有大於10.0 之**單價**的任何**OrderDetail**訂單。  
   
- 轉換成**布林值**會產生存在測試;因此，XPath 查詢 `Products[@Discontinued=true()]` 相當於 sql 運算式「產品. 已中止不是 null」，而非 sql 運算式「產品. 已中止 = 1」。 若要讓查詢等同于後者 SQL 運算式，請先將節點集轉換為非**布林值**類型，例如**number**。 例如： `Products[number(@Discontinued) = true()]` 。  
+ 轉換成**布林值**會產生存在測試;因此，XPath 查詢 `Products[@Discontinued=true()]` 相當於 sql 運算式「產品. 已中止不是 null」，而非 sql 運算式「產品. 已中止 = 1」。 若要讓查詢等同于後者 SQL 運算式，請先將節點集轉換為非**布林值**類型，例如**number**。 例如 `Products[number(@Discontinued) = true()]`。  
   
  對於節點集中的任何一個節點或其中一個節點，如果運算子為 TRUE，則大部分會定義為 TRUE，所以如果節點集是空的，這些運算永遠會評估為 FALSE。 因此，如果 A 是空的，`A = B` 和 `A != B` 都為 FALSE，而 `not(A=B)` 和 `not(A!=B)` 都為 TRUE。  
   

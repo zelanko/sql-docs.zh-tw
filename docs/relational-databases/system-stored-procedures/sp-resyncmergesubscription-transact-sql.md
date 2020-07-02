@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a20fd73874ddb93af5224c3ce6c86383c0e15ace
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eb9512bcf60d7a82d19cb383a87618c7d4c30393
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767473"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   將合併訂閱重新同步處理到您指定的已知驗證狀態。 這可讓您將訂閱資料庫強制聚合或同步處理到某個特定的時間點，如上次驗證成功或指定的日期。 當利用這個方法來重新同步處理訂閱時，不會重新套用快照集。 快照式複寫訂閱或異動複寫訂閱不使用這個預存程序。  這個預存程序執行於發行集資料庫的發行者端，或訂閱資料庫的訂閱者端。  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df38bbb333e3cadb328b9701c19f21ae657a544b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 872b11372a8051d7a2cd7fcea7fe3bc6106762f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830473"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764332"
 ---
 # <a name="sysdm_resource_governor_configuration-transact-sql"></a>sys.dm_resource_governor_configuration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回資料列，其中包含資源管理員的目前記憶體中組態狀態。  
   

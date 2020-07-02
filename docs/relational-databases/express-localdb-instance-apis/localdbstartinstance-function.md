@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b06364adefd62b4267d43bac50d79f8f1d37958a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b228c97280a2152f14a2ea97d9b1ac56c567afdd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765220"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 函數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   啟動指定的 SQL Server Express LocalDB 執行個體。  
   
  **標頭檔：** sqlncli。h  
@@ -52,7 +52,7 @@ HRESULT LocalDBStartInstance(
  *lpcchSqlConnection*  
  [輸入/輸出][輸入] 包含*wszSqlConnection*緩衝區的大小（以字元為單位），包括任何尾端的 null。 輸出時，如果指定的緩衝區大小太小，則會包含所需的緩衝區大小 (以字元為單位)，包括尾端的 Null。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

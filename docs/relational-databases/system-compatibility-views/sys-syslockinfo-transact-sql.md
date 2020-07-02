@@ -1,5 +1,5 @@
 ---
-title: syslockinfo （Transact-sql） |Microsoft Docs
+title: sys.syslockinfo （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90573a28292ac4f4de973dc2a5a0c5e1f331d2f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053346"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764390"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含所有授與、轉換及等待鎖定要求的相關資訊。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68053346"
 |**req_refcnt**|**smallint**|鎖定參考計數。 每當交易要求對特定資源的鎖定時，參考計數就會累加。 參考計數等於 0 之前不會釋放鎖定。|  
 |**req_cryrefcnt**|**smallint**|保留供日後使用。 一律設為 0。|  
 |**req_lifetime**|**int**|鎖定存留期間點陣圖。 在某些查詢處理策略進行期間，必須維持對資源的鎖定，直到查詢處理器已完成特定的查詢階段為止。 查詢處理器和交易管理員會利用鎖定存留期間點陣圖，指出某查詢階段的執行已完成時可以釋放的鎖定群組。 點陣圖中的某些位元用來指出即使其參考計數等於 0 也會一直保留到交易結束為止的鎖定。|  
-|**req_spid**|**int**|要求[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]鎖定之會話的內部處理序識別碼。|  
+|**req_spid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 要求鎖定之會話的內部處理序識別碼。|  
 |**req_ecid**|**int**|執行內容識別碼 (ECID)。 用來指出平行作業中的哪個執行緒擁有特定鎖定。|  
 |**req_ownertype**|**smallint**|關聯於鎖定的物件類型。<br /><br /> 1 = 交易<br /><br /> 2 = 資料指標<br /><br /> 3 = 工作階段<br /><br /> 4 = ExSession<br /><br /> 請注意，3 和 4 分別代表特殊版本的工作階段鎖定、追蹤資料庫和檔案群組鎖定。|  
 |**req_transactionID**|**bigint**|**Syslockinfo**和 profiler 事件中使用的唯一交易識別碼|  

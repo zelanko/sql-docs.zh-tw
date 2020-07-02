@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fb2592a1-1fad-41f9-8ff8-74c5905dbae9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc909fcf942bc73bed6c39357b494ecaeabcb97c
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: ba7b28277db82a39de449a51776b9893419d9db6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765568"
 ---
 # <a name="validate-expressions-xquery"></a>驗證運算式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   在此執行中，不支援**驗證**運算式。 XQuery 建構運算式的結果永遠都是不具類型的。 如果 XQuery 運算式的結果應為類型，請使用 SQL CAST 運算式，將結果轉換成具有慣用架構集合的**xml**資料類型。  
   

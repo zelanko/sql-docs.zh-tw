@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f951aaee96bccf0c2876c781aaebdd2a009b51d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11af27e5b94f7fa95c66e13b198ff6134df23912
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772280"
 ---
 # <a name="sp_add_log_file_recover_suspect_db-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   當因為記錄空間不足 (9002 錯誤) 而無法完成資料庫的復原作業時，將記錄檔加入檔案群組中。 新增檔案之後， **sp_add_log_file_recover_suspect_db**關閉可疑的設定，並完成資料庫的復原。 這些參數與 ALTER DATABASE *database_name*新增記錄檔相同。  
   
@@ -46,7 +46,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ## <a name="arguments"></a>引數  
 `[ @dbName = ] 'database'`這是資料庫的名稱。 *資料庫*是**sysname**，沒有預設值。  
   
-`[ @name = ] 'logical_file_name'`這是參考檔案時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在中使用的名稱。 在伺服器中，這個名稱必須是唯一的。 *logical_file_name*是**Nvarchar （260）**，沒有預設值。  
+`[ @name = ] 'logical_file_name'`這是參考檔案時，在中使用的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在伺服器中，這個名稱必須是唯一的。 *logical_file_name*是**Nvarchar （260）**，沒有預設值。  
   
 `[ @filename = ] 'os_file_name'`這是作業系統用於檔案的路徑和檔案名。 這個檔案必須在安裝了 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的伺服器中。 *os_file_name*是**Nvarchar （260）**，沒有預設值。  
   

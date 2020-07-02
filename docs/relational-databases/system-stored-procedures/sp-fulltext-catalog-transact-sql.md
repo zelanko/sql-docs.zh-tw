@@ -18,15 +18,15 @@ ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a180f10f0b0ac4bb1836d529ac437d917b559e16
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 42985c60b7057904291bbf196e3faae27e77ae68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771082"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   建立和卸除全文檢索目錄，以及啟動和停止目錄的索引動作。 每個資料庫都可以建立多個全文檢索目錄。  
   
@@ -52,7 +52,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 > [!NOTE]  
 >  您可以依照需要來建立、卸除和修改全文檢索目錄。 不過，請避免同時變更多個目錄的結構描述。 您可以使用**sp_fulltext_table**預存程式來執行這些動作，這是建議的方法。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**建立**|在檔案系統中建立空白的新全文檢索目錄，並在**sysfulltextcatalogs**中加入關聯的資料列，其中包含*fulltext_catalog_name*和*root_directory*（如果有的話）。 *fulltext_catalog_name*在資料庫中必須是唯一的。|  
 |**下拉式**|卸載*fulltext_catalog_name* ，方法是將它從檔案系統中移除，並刪除**sysfulltextcatalogs**中的相關資料列。 如果這個目錄包含一個或多個資料表的索引，這個動作便會失敗。 **sp_fulltext_table**應該執行 '*table_name*'、' drop ' 來卸載目錄中的資料表。<br /><br /> 如果目錄不存在，就會出現錯誤。|  

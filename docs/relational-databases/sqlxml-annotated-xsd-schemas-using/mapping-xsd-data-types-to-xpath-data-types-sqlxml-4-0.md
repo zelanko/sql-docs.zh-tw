@@ -21,23 +21,23 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dd2800d89016223e172e11ebde2cc3f8332e7d4
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 4bc4f771d2afaefa3e214008c59c6200ebd29549
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215703"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764933"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>將 XSD 資料類型對應到 XPath 資料類型 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   針對 XSD 架構執行 XPath 查詢，並在**xsd： type**屬性中指定 xsd 類型時，xpath 會使用處理查詢時指定的資料類型。  
   
  節點的 XPath 資料類型衍生自結構描述中的 XSD 資料類型，如下表所示  (EmployeeID 節點用於提供說明)。  
   
 |XSD 資料類型|XDR 資料類型|對等用法<br /><br /> XPath 資料類型|SQL Server<br /><br /> 所使用的轉換|  
 |-------------------|-------------------|------------------------------------|--------------------------------------------|  
-|**Base64Binary**<br /><br /> **HexBinary**|**無**<br /><br /> **base64bin. hex**|**不適用**|None<br /><br /> EmployeeID|  
-|**布林值**|**boolean**|**boolean**|CONVERT(bit, EmployeeID)|  
+|**Base64Binary**<br /><br /> **HexBinary**|**None**<br /><br /> **base64bin. hex**|**不適用**|None<br /><br /> EmployeeID|  
+|**True**|**boolean**|**boolean**|CONVERT(bit, EmployeeID)|  
 |**Decimal、integer、float、byte、short、int、long、float、double、unsignedByte、unsignedShort、unsignedInt、unsignedLong**|**number、int、float、i1、i2、i4、i8、r4、r8ui1、ui2、ui4、ui8**|**number**|CONVERT(float(53), EmployeeID)|  
 |**id、idref、idrefsentity、entities、notation、nmtoken、nmtokens、DateTime、string、AnyURI**|**id、idref、idrefsentity、entities、enumeration、notation、nmtoken、nmtokens、char、dateTime、dateTime.tz、string、uri、uuid**|**string**|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |**decimal**|**fixed14.4**|**不適用 (在 XPath 中沒有相當於 fixed14.4 XDR 資料類型的資料類型。)**|CONVERT(money, EmployeeID)|  

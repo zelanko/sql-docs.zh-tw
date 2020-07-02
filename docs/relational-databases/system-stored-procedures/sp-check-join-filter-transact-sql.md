@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c15b8e79dc683c299a1a3f0407b401b2565faffb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e06efc20893454c4057b85ae2f3ca6d45cd150c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771326"
 ---
 # <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   用來驗證兩個資料表之間的聯結篩選，以判斷聯結篩選子句是否有效。 這個預存程序也會傳回有關所提供之聯結篩選的資訊，包括它是否能夠搭配使用給定資料表之預先計算的資料分割。 這個預存程序執行於發行集的發行者端。 如需詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   

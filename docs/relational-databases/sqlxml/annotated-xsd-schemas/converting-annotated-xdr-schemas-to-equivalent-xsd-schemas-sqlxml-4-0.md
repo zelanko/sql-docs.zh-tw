@@ -20,15 +20,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e0932bc7a7bd1b40f260d0eda130aea0711d069
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: d39fc016514076ed4b0c4722e3da32b6f6d7e09b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84883042"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764836"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>將註解式 XDR 結構描述轉換為等效 XSD 結構描述 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XML 結構描述定義 (XSD) 語言是 XML-Data Reduced (XDR) 結構描述定義語言的後續版本。 透過在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 中導入的 XSD 支援，系統會假設新的註解式結構描述是使用 XSD 建立的。 SQLXML 4.0 包含 XDR 轉成 XSD 轉換器工具，這項工具是設計來協助您將現有的註解式 XDR 結構描述轉換成對等的 XSD 結構描述。  
   
 > [!IMPORTANT]  

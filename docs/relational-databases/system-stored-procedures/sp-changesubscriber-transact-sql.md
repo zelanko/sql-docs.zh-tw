@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2cd1e4126c1a9da57a6bda6195be78d996e101d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833392"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771372"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   變更訂閱者的選項。 這個發行者之訂閱者的任何散發工作都會更新。 這個預存程式會寫入散發資料庫中的**MSsubscriber_info**資料表。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -78,7 +78,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**2**|隨選|  
 |**4**|每日|  
 |**8**|每週|  
-|**1600**|每月|  
+|**16**|每月|  
 |**32**|每月相對|  
 |**64**|自動啟動|  
 |**128**|重複執行|  
@@ -93,7 +93,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|Last|  
+|**16**|Last|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是在定義的*frequency_type*期間，散發工作應重複發生的頻率。 *frequency_recurrence_factor*是**int**，預設值是 Null。  
   
@@ -120,7 +120,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @security_mode = ] security_mode`是實作為安全性模式。 *security_mode*是**int**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證|  
 |**1**|Windows 驗證|  

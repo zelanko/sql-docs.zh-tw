@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: beb51ea7270fdbeb96dc858c2ef4e65c386726ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddc3dc3d718b67af16af0d213923c94d504af391
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660236"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768284"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>ProtocolName 屬性 (ClientNetworkProtocol 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   取得[設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)所指定的目前網路通訊協定名稱。  
   
 ## <a name="syntax"></a>語法  
@@ -36,8 +36,8 @@ object.ProtocolName [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)]代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端所使用之網路通訊協定的[ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)物件。  
+ *object*  
+ 代表用戶端所使用之網路通訊協定的[ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  字串值，指定[SetOrderValue 方法（ClientNetworkProtocol 類別）](https://technet.microsoft.com/library/ms179295.aspx)所參考之目前用戶端網路通訊協定的名稱。  

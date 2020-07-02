@@ -21,22 +21,22 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981769"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764709"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  這份目錄檢視會針對其斷詞工具向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊的每種語言，各包含一個資料列。 每個資料列都會顯示語言的 LCID 和名稱。 為語言註冊斷詞工具時，其其他語言資源（字幹分析器、非搜尋字（停用字詞）和同義字檔案）就會變成可供全文檢索索引/查詢作業使用。 可以在全文檢索查詢**lcid**和全文檢索索引[!INCLUDE[tsql](../../includes/tsql-md.md)]語句中指定**name**或 lcid 的值。  
+  這份目錄檢視會針對其斷詞工具向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊的每種語言，各包含一個資料列。 每個資料列都會顯示語言的 LCID 和名稱。 為語言註冊斷詞工具時，其其他語言資源（字幹分析器、非搜尋字（停用字詞）和同義字檔案）就會變成可供全文檢索索引/查詢作業使用。 可以在全文檢索查詢和全文檢索索引語句中指定**name**或**lcid**的值 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
    
 |資料行|資料類型|描述|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|語言的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 地區設定識別碼 (LCID)。|  
-|**name**|**sysname**|這是[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)中對應至**lcid**值的別名值，或是數值 lcid 的字串表示。|  
+|**name**|**sysname**|這是[sys.sys語言](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)中的別名值，其對應于**lcid**的值或數值 lcid 的字串表示。|  
   
 ## <a name="values-returned-for-default-languages"></a>針對預設語言傳回的值  
  下表顯示預設註冊其斷詞工具之語言的值。  
@@ -60,7 +60,7 @@ ms.locfileid: "73981769"
 |德文|1031|  
 |**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 希臘文|1032|  
 |古吉拉特文|1095|  
-|Hebrew|1037|  
+|希伯來文|1037|  
 |Hindi|1081|  
 |冰島文|1039|  
 |印尼文|1057|  

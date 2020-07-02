@@ -19,15 +19,15 @@ ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 993715676a6abd5d6687b7b1adbbeb3ab121d39f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764689"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回有關目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上安裝之語義語言統計資料庫的資料列。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68133785"
   
 ||||  
 |-|-|-|  
-|**資料行名稱**|**類型**|**說明**|  
+|**資料行名稱**|**型別**|**說明**|  
 |**database_id**|**int**|資料庫的識別碼，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內是唯一的。|  
 |**register_date**|**datetime**|註冊資料庫用於語意處理的日期。|  
 |**registered_by**|**int**|註冊資料庫用於語意處理的伺服器主體識別碼。|  
@@ -54,7 +54,7 @@ ms.locfileid: "68133785"
  目錄檢視內中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。  
   
 ## <a name="examples"></a>範例  
- 下列範例顯示如何查詢**fulltext_semantic_language_statistics_database sys.databases** ，以取得在目前實例上註冊之語義語言統計資料庫的相關資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 下列範例顯示如何查詢**fulltext_semantic_language_statistics_database sys.databases** ，以取得在目前實例上註冊之語義語言統計資料庫的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  

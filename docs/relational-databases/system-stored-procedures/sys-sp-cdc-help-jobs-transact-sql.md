@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: beca05cca35d0c410f7e9671d011d913c5ac2f22
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 77595c353522dc2db3452b51f3a0395346c85619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768632"
 ---
 # <a name="syssp_cdc_help_jobs-transact-sql"></a>sys.sp_cdc_help_jobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   報告目前資料庫中所有異動資料擷取清除或擷取作業的相關資訊。  
   
@@ -54,7 +54,7 @@ sys.sp_cdc_help_jobs
 |**系列**|**bit**|旗標，指出擷取作業是連續執行 (1)，還是僅執行一次 (0)。 如需詳細資訊，請參閱[sp_cdc_add_job &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)。<br /><br /> 「**連續**」只對「捕獲」作業有效。|  
 |**pollinginterval**|**bigint**|記錄掃描循環之間的秒數。<br /><br /> **pollinginterval**只對 capture 作業有效。|  
 |**保存**|**bigint**|變更資料列要保留在變更資料表中的分鐘數。<br /><br /> **保留**僅適用于清除作業。|  
-|**閾值**|**bigint**|可以使用單一清除陳述式來刪除的最大刪除項目數。|  
+|**threshold**|**bigint**|可以使用單一清除陳述式來刪除的最大刪除項目數。|  
   
 ## <a name="permissions"></a>權限  
  需要**db_owner**固定資料庫角色中的成員資格。  

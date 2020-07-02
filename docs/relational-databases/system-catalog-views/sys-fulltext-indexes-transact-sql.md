@@ -21,21 +21,21 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b240c74abde034f5008416994ca9cb497e6e64f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca20bc73e071fea4a1a0f01acf2c0701b15aca25
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133795"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764702"
 ---
 # <a name="sysfulltext_indexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   針對表格式物件的每個全文檢索索引，各包含一個資料列。  
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|這個全文檢索索引所屬的物件識別碼。|  
+|object_id|**int**|這個全文檢索索引所屬的物件識別碼。|  
 |**unique_index_id**|**int**|相對應的唯一、非全文檢索索引的識別碼，該索引可將全文檢索索引關聯到資料列。|  
 |**fulltext_catalog_id**|**int**|全文檢索索引所在的全文檢索目錄之識別碼。|  
 |**is_enabled**|**bit**|1 = 全文檢索索引目前是在啟用狀態。|  

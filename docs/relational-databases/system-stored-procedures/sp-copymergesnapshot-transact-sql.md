@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8658790dc80ecdae843104f5ed1dd8be2684963
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 64d4a6bb067c53b13592074fc1c08b2e35fc4830
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820620"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771230"
 ---
 # <a name="sp_copymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   將指定發行集的快照集資料夾複製到** \@ destination_folder**中列出的資料夾。 這個預存程序執行於發行集資料庫的發行者端。  
   

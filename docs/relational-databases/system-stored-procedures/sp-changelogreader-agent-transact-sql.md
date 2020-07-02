@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c3fda7373aba20102a7842ba955d1275bae8e842
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c776d68cb997f5f360e7b79180a8dfaea86fd6e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829633"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771497"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   變更記錄讀取器代理程式的安全性屬性。 這個預存程序執行於發行集資料庫的發行者端。  
   

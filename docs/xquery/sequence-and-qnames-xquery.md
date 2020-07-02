@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 017c2289864b8d2d475bea63a5828d37543b7292
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: dbf165b1121b35ccc1b68578841108866832bb80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765605"
 ---
 # <a name="sequence-and-qnames-xquery"></a>順序和 QName (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   此主題描述下列 XQuery 基礎概念：  
   

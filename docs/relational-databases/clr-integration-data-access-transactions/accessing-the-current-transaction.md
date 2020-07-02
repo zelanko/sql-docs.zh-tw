@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad8c499355ada4ab84c0f7e2016bbb363c71e779
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c82c4e4f5b1f1af6194ff409a684ca239881487a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765398"
 ---
 # <a name="accessing-the-current-transaction"></a>存取目前交易
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  如果在輸入執行的 common language runtime （CLR） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程式碼時，交易處於作用中狀態，則會透過 system.string 類別公開交易 **。** **Transaction. current**屬性是用來存取目前的交易。 在大部分情況下，您不需要明確存取交易。 若為資料庫連接，ADO.NET 會在呼叫**connection. Open**方法時自動檢查**transaction** ，並在該交易中明確登記連接（除非連接字串中的**登錄關鍵字設**為 false）。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  如果在輸入執行的 common language runtime （CLR）程式碼時，交易處於作用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中狀態，則會透過 system.string 類別公開交易 **。** **Transaction. current**屬性是用來存取目前的交易。 在大部分情況下，您不需要明確存取交易。 若為資料庫連接，ADO.NET 會在呼叫**connection. Open**方法時自動檢查**transaction** ，並在該交易中明確登記連接（除非連接字串中的**登錄關鍵字設**為 false）。  
   
  在下列案例中，您可能會想要直接使用**交易**物件：  
   
@@ -42,9 +42,9 @@ ms.locfileid: "81487472"
 ## <a name="canceling-an-external-transaction"></a>取消外部交易  
  您可以使用下列方式，從 Managed 程序或函數取消外部交易：  
   
--   Managed 程序或函數可以使用輸出參數來傳回值。 呼叫[!INCLUDE[tsql](../../includes/tsql-md.md)]程式可以檢查傳回的值，並在適當的情況下執行**ROLLBACK TRANSACTION**。  
+-   Managed 程序或函數可以使用輸出參數來傳回值。 呼叫程式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可以檢查傳回的值，並在適當的情況下執行**ROLLBACK TRANSACTION**。  
   
--   Managed 程序或函數可以擲回自訂例外狀況。 呼叫[!INCLUDE[tsql](../../includes/tsql-md.md)]程式可以攔截 try/catch 區塊中的 managed 程式或函數所擲回的例外狀況，並執行**ROLLBACK TRANSACTION**。  
+-   Managed 程序或函數可以擲回自訂例外狀況。 呼叫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式可以攔截 try/catch 區塊中的 managed 程式或函數所擲回的例外狀況，並執行**ROLLBACK TRANSACTION**。  
   
 -   Managed 程式或函式可以在符合特定條件時呼叫**transaction**方法，以取消目前的交易。  
   

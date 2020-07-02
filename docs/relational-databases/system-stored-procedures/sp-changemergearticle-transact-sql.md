@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c59b4ba84981ff4cb1240d78e1d6d472be61289
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 97c6a7d309578ebe0cc6e93b5408ad6d9fad6296
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829635"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771507"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   變更合併發行項的屬性。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -68,11 +68,11 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**creation_script**||在訂閱資料庫中，用來建立發行項的選擇性發行項結構描述指令碼的路徑和名稱。|  
 |**delete_tracking**|**true**|複寫 DELETE 陳述式，這是預設行為。|  
 ||**false**|不複寫 DELETE 陳述式。<br /><br /> ** \* \* 重要 \* 設定 \* ** **delete_tracking**為**false**會導致無法聚合，而且已刪除的資料列必須以手動方式移除。|  
-|**描述**||發行項的描述項目。|  
+|**description**||發行項的描述項目。|  
 |**destination_owner**||訂閱資料庫中物件的擁有者名稱（如果不是**dbo**）。|  
 |**identity_range**||當發行項的**identityrangemanagementoption**設為**auto** ，或**auto_identity_range**設定為**true**時，指定指派新識別值時所要使用之範圍大小的**Bigint** 。 只適用於資料表發行項。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
 |**identityrangemanagementoption**|**手動**|停用自動識別範圍的管理。 利用 NOT FOR REPLICATION 來標示識別欄位，以啟用手動識別範圍的處理。 如需詳細資訊，請參閱[複寫識別資料欄](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
-||**無**|停用所有識別範圍的管理。|  
+||無|停用所有識別範圍的管理。|  
 |**logical_record_level_conflict_detection**|**true**|如果在邏輯記錄的任何位置進行變更，便會偵測到衝突。 要求**logical_record_level_conflict_resolution**必須設定為**true**。|  
 ||**false**|預設的衝突偵測會依照**column_tracking**所指定的方式來使用。|  
 |**logical_record_level_conflict_resolution**|**true**|用整個優先邏輯記錄來覆寫遺失的邏輯記錄。|  
@@ -81,7 +81,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|資料分割重疊，在訂閱者端進行的 DML 更新並不會變更資料列所屬的資料分割。|  
 ||**2**|發行項的篩選會產生非重疊的資料分割，但多個訂閱者可以接收相同的資料分割。|  
 ||**3**|發行項的篩選會產生對每項訂閱而言都是唯一的非重疊資料分割。<br /><br /> 注意：如果您針對**partition_options**指定**3**的值，則該發行項中的每個資料分割都只能有單一訂用帳戶。 如果建立第二項訂閱，將新訂閱的篩選準則解析成現有訂閱的相同資料分割，就會卸除現有的訂閱。|  
-|**pre_creation_command**|**無**|如果訂閱者端已有資料表，就不會採取任何動作。|  
+|**pre_creation_command**|無|如果訂閱者端已有資料表，就不會採取任何動作。|  
 ||**delete**|根據子集篩選中的 WHERE 子句來發出一項刪除。|  
 ||**下拉式**|在重新建立資料表之前，先卸除資料表。|  
 ||**各**|截斷目的地資料表。|  
@@ -139,7 +139,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|允許客訂閱在訂閱者端進行變更；但它們不會上傳到發行者。|  
 ||**2**|不允許客訂閱在訂閱者端進行變更。|  
 |**subset_filterclause**||指定水平篩選的 WHERE 子句。 只適用於資料表發行項。<br /><br /> ** \* \* 重要 \* 事項 \* ** ：基於效能考慮，建議您不要在參數化資料列篩選器子句（例如）中，將函數套用至資料行名稱 `LEFT([MyColumn]) = SUSER_SNAME()` 。 如果您在篩選子句中使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)並覆寫 HOST_NAME 值，您可能必須使用[convert](../../t-sql/functions/cast-and-convert-transact-sql.md)來轉換資料類型。 如需有關此案例之最佳做法的詳細資訊，請參閱[參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的「覆寫 HOST_NAME （）值」一節。|  
-|**閾值**||執行或舊版的訂閱者所使用的百分比值 [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當合併代理程式指派新的識別範圍時，**臨界值**控制。 當使用 threshold 指定的百分比值，合併代理程式會建立新的識別範圍。 當**identityrangemanagementoption**設定為**auto**或**auto_identity_range**設定為**true**時使用。 只適用於資料表發行項。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
+|**threshold**||執行或舊版的訂閱者所使用的百分比值 [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當合併代理程式指派新的識別範圍時，**臨界值**控制。 當使用 threshold 指定的百分比值，合併代理程式會建立新的識別範圍。 當**identityrangemanagementoption**設定為**auto**或**auto_identity_range**設定為**true**時使用。 只適用於資料表發行項。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
 |**verify_resolver_signature**|**1**|驗證自訂解析程式的數位簽章來判斷它是否來自信任來源。|  
 ||**0**|不驗證自訂解析程式的數位簽章來判斷它是否來自信任來源。|  
 |NULL (預設值)||傳回*屬性*的支援值清單。|  

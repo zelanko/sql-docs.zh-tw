@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e35b0c9b806b435a4a98a319180801094068caf1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d26d5a7dd54adaae212a840e3183ff3f098d845
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765186"
 ---
 # <a name="localdbstoptracing-function"></a>LocalDBStopTracing 函數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   針對目前 Windows 使用者擁有的所有 SQL Server Express LocalDB 執行個體停用 API 呼叫的追蹤。  
   
  **標頭檔：** sqlncli。h  
@@ -34,7 +34,7 @@ ms.locfileid: "68022038"
 HRESULT LocalDBStopTracing();  
 ```  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

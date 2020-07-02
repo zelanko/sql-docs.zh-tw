@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e965a11708b2d4bbb72903a05846cb14300a5c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6fa9117891f9d9350e58a2c8233dcffe05c8cfc8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826095"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772130"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   報告有關特定遠端或複寫伺服器的資訊，或這兩種類型之所有伺服器的相關資訊。 提供伺服器名稱、伺服器的網路名稱、伺服器的複寫狀態、伺服器的識別碼，以及定序名稱。 另外，也提供連接到連結伺服器或查詢連結伺服器的逾時值。  
   
@@ -41,7 +41,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @server = ] 'server'`這是要報告資訊的伺服器。 若未指定*伺服器*，則會報告有關**sys.databases**中所有伺服器的資訊。 *伺服器*是**sysname**，預設值是 Null。  
+`[ @server = ] 'server'`這是要報告資訊的伺服器。 未指定*伺服器*時，會報告**master.sys**中的所有伺服器。 *伺服器*是**sysname**，預設值是 Null。  
   
 `[ @optname = ] 'option'`這是描述伺服器的選項。 *option*是**Varchar （** 35 **）**，預設值是 Null，它必須是下列值之一。  
   

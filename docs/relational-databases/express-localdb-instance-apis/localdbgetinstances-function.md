@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04554c7aa9f891aab414ae5ae77f3c92bb86ac4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b7804207c887d95a719575406cfc85ae78d1bd7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036056"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765233"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 函數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   傳回指定之版本的所有 SQL Server Express LocalDB 執行個體。  
   
  **標頭檔：** sqlncli。h  
@@ -45,7 +45,7 @@ HRESULT LocalDBGetInstances(
  *lpdwNumberOfInstances*  
  [輸入/輸出]在輸入時，包含*pInstanceNames*緩衝區中實例名稱的位置數目。 輸出時，包含在使用者工作站上找到的 LocalDB 實例數目。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

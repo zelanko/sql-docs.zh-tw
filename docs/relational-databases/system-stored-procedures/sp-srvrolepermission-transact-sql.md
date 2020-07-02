@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7f158839f45b3b890c0ae46aee1d74f4e6a3e59b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032816"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772954"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   顯示固定伺服器角色的權限。  
   
@@ -63,7 +63,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**ServerRole**|**sysname**|固定伺服器角色的名稱|  
-|[權限]****|**sysname**|與**ServerRole**相關聯的許可權|  
+|**權限**|**sysname**|與**ServerRole**相關聯的許可權|  
   
 ## <a name="remarks"></a>備註  
  列出的權限包括可以執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以及固定伺服器角色成員可以執行的其他特殊活動。 若要顯示固定伺服器角色的清單，請執行**sp_helpsrvrole**。  

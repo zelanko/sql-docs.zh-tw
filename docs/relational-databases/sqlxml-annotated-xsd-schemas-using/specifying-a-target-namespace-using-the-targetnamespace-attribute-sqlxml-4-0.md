@@ -21,15 +21,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3daeaabe86d91d0986fb764c3a60304ec5e09faf
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: bfa6234aae5e2744a88c4fcfb158575cb07000f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84885163"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764897"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>使用 targetNamespace 屬性來指定目標命名空間 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   在撰寫 XSD 架構時，您可以使用 XSD **targetNamespace**屬性來指定目標命名空間。 本主題描述 XSD **targetNamespace**、 **elementFormDefault**和**attributeFormDefault**屬性如何作用、它們如何影響所產生的 XML 實例，以及如何使用命名空間來指定 XPath 查詢。  
   
  您可以使用**xsd： targetNamespace**屬性，將預設命名空間中的元素和屬性放入不同的命名空間。 您也可以指定本機宣告的元素及結構描述的屬性是否應該以命名空間限定的形式出現 (使用前置詞明確限定或是依照預設的隱含方式限定)。 您可以在專案上使用**elementFormDefault**和**attributeFormDefault**屬性 **\<xsd:schema>** ，以全域指定本機專案和屬性的限定性，也可以使用**form**屬性來分別指定個別的元素和屬性。  

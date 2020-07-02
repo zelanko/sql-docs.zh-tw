@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ff791855f7e65652f64d18f3128831172da9229
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3806476ffec61c155121f3238fefa8e08f689ad2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828873"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772141"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回報表，報表中有目前資料庫中之物件的使用者權限或陳述式權限的相關資訊。  
   
@@ -65,7 +65,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**擁有者**|**sysname**|物件擁有者的名稱。|  
-|**目標**|**sysname**|物件的名稱。|  
+|**Object**|**sysname**|物件的名稱。|  
 |**者**|**sysname**|對其授與權限之主體的名稱。|  
 |**授與者**|**sysname**|對指定的被授與者授與權限之主體的名稱。|  
 |**ProtectType**|**Nvarchar （10）**|保護類型的名稱：<br /><br /> GRANT REVOKE|  
@@ -81,7 +81,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 EXEC sp_helprotect NULL, NULL, dbo;  
 ```  
   
- 或  
+ Or  
   
 ```  
 EXEC sp_helprotect @grantorname = 'dbo';  
@@ -92,7 +92,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
   
- 傳回的資訊受限於中繼資料存取限制。 主體對其沒有權限的實體不會出現。  如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 傳回的資訊受限於中繼資料存取限制。 主體對其沒有權限的實體不會出現。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>範例  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e3dabb640d17d7d9b81273ce37382799a7d84389
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1bb86a3b0f51484183f1c09ff0013f1081e35e86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768245"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>IpAddressName 屬性 (ServerNetworkProtocolIPAddress 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   取得 IP 位址的名稱。  
   
 ## <a name="syntax"></a>語法  
@@ -36,8 +36,8 @@ object.IpAddressName [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
- 代表實例上網路通訊協定之[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]IP 位址的[ServerNetworkProtocolIPAdress 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)物件。  
+ *object*  
+ 代表實例上網路通訊協定之 IP 位址的[ServerNetworkProtocolIPAdress 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)物件 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定此 IP 位址之名稱的字串值。  

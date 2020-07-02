@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6ec79ad00de37b7887164795752b350630193f8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 106c295d200ce823f80988be2276a927aba8126d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833959"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764461"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   依照定義某些其他參考物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式或陳述式所參考，針對受參考之實體的每個相依性，各包含一個資料列。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82833959"
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|識別受參考實體的類別：<br /><br /> 0 = 物件或資料行 (只限於非結構描述繫結參考)<br /><br /> 1 = 物件或資料行 (結構描述繫結參考)<br /><br /> 2 = 類型 (結構描述繫結參考)<br /><br /> 3 = XML 結構描述集合 (結構描述繫結參考)<br /><br /> 4 = 資料分割函數 (結構描述繫結參考)|  
 |**class_desc**|**nvarchar(60)**|受參考實體之類別的描述：<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  
-|**object_id**|**int**|參考物件的識別碼。|  
+|object_id|**int**|參考物件的識別碼。|  
 |**column_id**|**int**|如果參考識別碼是資料行，便是參考資料行的識別碼，否則為 0。|  
 |**referenced_major_id**|**int**|受參考實體的識別碼，由類別值來解譯，依據如下：<br /><br /> 0、1 = 物件或資料行的物件識別碼。<br /><br /> 2 = 類型識別碼。<br /><br /> 3 = XML 結構描述集合識別碼。|  
 |**referenced_minor_id**|**int**|受參考實體的次要識別碼，由類別值來解譯，顯示如下。<br /><br /> 當類別 =：<br /><br /> 0， **referenced_minor_id**是資料行識別碼;或者，如果不是資料行，則為0。<br /><br /> 1， **referenced_minor_id**是資料行識別碼;或者，如果不是資料行，則為0。<br /><br /> 否則， **referenced_minor_id** = 0。|  
@@ -48,7 +48,7 @@ ms.locfileid: "82833959"
 |**is_select_all**|**bit**|在 SELECT * 子句中使用物件 (只限物件層級)。|  
   
 ## <a name="permissions"></a>權限  
- 需要 **public** 角色的成員資格。  如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 需要 **public** 角色的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

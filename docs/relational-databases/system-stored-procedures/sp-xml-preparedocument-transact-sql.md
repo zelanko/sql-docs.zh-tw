@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65ec62997eb25564e19696a8df2895b980d728be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1232f5eb7917606d7f7e88c912be163d13de33ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767482"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   讀取以輸入提供的 XML 文字、使用 MSXML 剖析器 (Msxmlsql.dll) 剖析文字，以及以隨時可取用的狀態來提供已剖析的文件。 這份已剖析的文件是以樹狀表示 XML 文件中的不同節點：元素、屬性、文字、註解等等。  
   
@@ -71,7 +71,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  指定使用於 OPENXML 中之資料列和資料行 XPath 運算式中的命名空間宣告。 *xpath_namespaces*是文字參數： **char**、 **Nchar**、 **Varchar**、 **Nvarchar**、 **text**、 **Ntext**或**xml**。  
   
- 預設值為** \< root xmlns： mp = "urn：架構-microsoft-com： xml-xml-metaprop" >**。 *xpath_namespaces*會藉由格式正確的 XML 檔，提供 OPENXML 中 xpath 運算式中使用之前置詞的命名空間 uri。 *xpath_namespaces*宣告必須用來參考命名空間**urn：架構-microsoft-com： xml-xml-metaprop**; 的前置詞。這會提供有關已剖析之 XML 元素的中繼資料。 雖然您可以使用這個技巧來重新定義中繼屬性命名空間的命名空間前置詞，但不會失去這個命名空間。 前置詞**mp**仍然適用于**urn：架構-microsoft-com： xml-xml-metaprop** ，即使*xpath_namespaces*不含這類宣告。  
+ 預設值是 **\<root xmlns:mp="urn:schemas-microsoft-com:xml-metaprop">** 。 *xpath_namespaces*會藉由格式正確的 XML 檔，提供 OPENXML 中 xpath 運算式中使用之前置詞的命名空間 uri。 *xpath_namespaces*宣告必須用來參考命名空間**urn：架構-microsoft-com： xml-xml-metaprop**; 的前置詞。這會提供有關已剖析之 XML 元素的中繼資料。 雖然您可以使用這個技巧來重新定義中繼屬性命名空間的命名空間前置詞，但不會失去這個命名空間。 前置詞**mp**仍然適用于**urn：架構-microsoft-com： xml-xml-metaprop** ，即使*xpath_namespaces*不含這類宣告。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0（成功）或 >0 （失敗）  

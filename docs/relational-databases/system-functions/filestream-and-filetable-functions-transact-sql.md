@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 71f729df-d340-4cf9-9a6d-305fcb39b009
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d75b811ba670c72aa4ce1ed15041b0b628f3f529
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ffef051395e52a5d0c2d9e458c64633632ecba59
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042879"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771567"
 ---
 # <a name="filestream-and-filetable-functions-transact-sql"></a>Filestream 和 FileTable 函數 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   本節描述與 FILESTREAM 和 FileTable 功能相關的系統函數。  
   

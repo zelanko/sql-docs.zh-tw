@@ -19,15 +19,15 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e85a74b203d270223d215ace08a58a0eea980fa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772984"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats （Azure SQL Database）
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 傳回 Azure SQL 受控執行個體的 CPU 使用量、IO 和儲存體資料。 於五分鐘間隔內收集及彙總資料。 每隔15秒報告就會有一個資料列。 傳回的資料包括 CPU 使用量、儲存體大小、IO 使用率和受控實例 SKU。 歷程記錄資料大約會保留 14 天。
 

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d440b710d5f8c5693308500c01b7339c33943b0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064275"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767753"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode 資料和伺服器字碼頁
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
@@ -40,7 +40,7 @@ ms.locfileid: "68064275"
   
 -   資料行名稱中繼資料會傳遞至**srv_describe**做為多位元組資料。  
   
-     擴充預存程式會呼叫**srv_pfield**並將 field 參數設定為 SRV_SPROC_CODEPAGE，以取得的多位元組[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字碼頁。  
+     擴充預存程式會呼叫**srv_pfield**並將 field 參數設定為 SRV_SPROC_CODEPAGE，以取得的多位元組字碼頁 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   錯誤訊息會以多位元組資料的形式傳遞至**srv_sendmsg** 。  
   

@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80cb0fbbd3c6052ebe2d129a31f582c4aa1ee1ef
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e4cdea3abd58e6eb9d61eeec3e7bba91e80c97db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824040"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771347"
 ---
 # <a name="sp_check_dynamic_filters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   顯示發行集之參數化資料列篩選器屬性的相關資訊，尤其是用來產生發行集篩選資料分割的函數，以及發行集是否適合使用預先計算的資料分割。 這個預存程序執行於發行集資料庫的發行者端。  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a332257b640124c04ed339ff11473b89a7c3b83b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5bd9def04c3d80bdc57ac4e7fe9a9d67be49a3c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771212"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對點對點異動複寫拓撲中所包含的發行集設定衝突偵測。 如需相關資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。 這個預存程序執行於發行集資料庫的發行者端。  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d69a2355f18a162f3e7a6b76b07bbb7cd6a597a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7ccd7c93d42cb30eeb2fc24b79c358d519579b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764769"
 ---
 # <a name="syscolumn_store_dictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   包含各資料列，分別代表 xVelocity 記憶體最佳化資料行存放區索引所使用的每一部字典。 字典是用於編碼部分的資料類型而非全部，因此資料行存放區索引中並非所有資料行都有字典。 字典存在的形式可能是主要字典 (適用所有區段)，且或許另有其他次要字典用於資料行各區段的特定子集。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75656613"
 |**partition_id**|**bigint**|指出資料分割識別碼。 在資料庫中，這是唯一的。|  
   
 ## <a name="permissions"></a>權限  
-必須具備資料表的`VIEW DEFINITION`權限。 除非使用者也具有`SELECT`許可權，否則下列資料行會傳回 null： last_id、entry_count data_ptr。  
+必須具備資料表的`VIEW DEFINITION`權限。 除非使用者也具有許可權，否則下列資料行會傳回 null `SELECT` ： last_id、entry_count data_ptr。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

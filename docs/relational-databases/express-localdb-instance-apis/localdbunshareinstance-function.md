@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9eacc8a0dc5801ad2642dc7ffec0b31c3de040f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 76693483dd8dd2f7e063f31d3e5739cbec9e2b1e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765148"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 函數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   停止共用指定的 SQL Server Express LocalDB 執行個體。  
   
  **標頭檔：** sqlncli。h  
@@ -44,7 +44,7 @@ HRESULT LocalDBUnShareInstance(
  *dwFlags*  
  [輸入] 保留供日後使用。 目前應設為 0。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  S_OK  
  此函數已成功。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7b64251d139b34f0a23cec49ffbb4dcbf0384a0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2aa75e2f742cbafd64f5bb8d76d7cd8dbf4028ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771255"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回指定之連結伺服器資料表的資料行資訊，每個資料行一個資料列。 **sp_columns_ex**只有在指定資料*行*時，才會傳回特定資料行的資料行資訊。  
   
@@ -57,7 +57,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 `[ @ODBCVer = ] 'ODBCVer'`這是正在使用的 ODBC 版本。 *ODBCVer*是**int**，預設值是2。 這表示 ODBC 2。 有效值是 2 或 3。 如需有關 2 和 3 版之間行為差異的詳細資訊，請參閱 ODBC SQLColumns 規格。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無  
+ None  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -80,7 +80,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime**和 SQL-92 **interval**資料類型的子類型代碼。 其他資料類型的這個資料行都會傳回 NULL。|  
 |**CHAR_OCTET_LENGTH**|**int**|字元或整數資料類型資料行的最大長度 (以位元組為單位)。 其他所有資料類型的這個資料行都會傳回 NULL。|  
 |**ORDINAL_POSITION**|**int**|資料行在資料表中的序數位置。 資料表中的第一個資料行是 1。 這個資料行一律會傳回值。|  
-|**IS_NullABLE**|**Varchar （** 254 **）**|資料表中資料行的 Null 屬性。 遵照 ISO 規則來決定 Null 屬性。 ISO SQL 標準 DBMS 無法傳回空字串。<br /><br /> YES = 資料行可以包括 NULLS。<br /><br /> NO = 資料行不能包括 NULLS。<br /><br /> 如果 Null 屬性不明，這個資料行會傳回長度為零的字串。<br /><br /> 為此資料行傳回的值與**可為 null**資料行傳回的值不同。|  
+|**IS_NULLABLE**|**Varchar （** 254 **）**|資料表中資料行的 Null 屬性。 遵照 ISO 規則來決定 Null 屬性。 ISO SQL 標準 DBMS 無法傳回空字串。<br /><br /> YES = 資料行可以包括 NULLS。<br /><br /> NO = 資料行不能包括 NULLS。<br /><br /> 如果 Null 屬性不明，這個資料行會傳回長度為零的字串。<br /><br /> 為此資料行傳回的值與**可為 null**資料行傳回的值不同。|  
 |**SS_DATA_TYPE**|**tinyint**|擴充預存程序所用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。|  
   
  如需詳細資訊，請參閱 Microsoft ODBC 文件集。  
