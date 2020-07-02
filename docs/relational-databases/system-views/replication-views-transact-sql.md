@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae0c1245bdf9ff7fe1d1eb712745cbc15d2479af
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 01c5c21ef7886773e162fe1f17cbcbaae177075b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807941"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692668"
 ---
 # <a name="replication-views-transact-sql"></a>複寫檢視表 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   這些 views 包含中複寫所使用的資訊 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 這些視圖可讓您更輕鬆地存取複寫[系統資料表](../../relational-databases/system-tables/replication-tables-transact-sql.md)中的資料。 檢視是在使用者資料庫被當作發行集或訂閱資料庫啟用時，在該資料庫中建立。 當使用者資料庫從複寫拓撲中移除時，所有的複寫物件都會從使用者資料庫中一併移除。 存取複寫中繼資料的慣用方法是使用複寫[預存程式](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。  
   

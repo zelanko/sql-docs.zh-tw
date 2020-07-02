@@ -1,5 +1,5 @@
 ---
-title: syscacheobjects （Transact-sql） |Microsoft Docs
+title: sys.syscacheobjects （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df4b83cb7b1e69191e8964730a534c1b24fbac2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b33ff1cb4b46334f0b42d81f87920ef666a82e81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663437"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含如何使用快取的相關資訊。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68010786"
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|值區識別碼。 值表示 0 至 (目錄大小 - 1) 的範圍。 目錄大小是雜湊表的大小。|  
 |**cacheobjtype**|**nvarchar(17)**|快取中的物件類型：<br /><br /> 編譯的計畫<br /><br /> 可執行的計畫<br /><br /> 剖析樹狀結構<br /><br /> 資料指標<br /><br /> 擴充預存程序|  
-|**objtype**|**nvarchar(8)**|物件的類型：<br /><br /> 預存程序<br /><br /> 準備陳述式<br /><br /> 臨機操作查詢[!INCLUDE[tsql](../../includes/tsql-md.md)] （從**sqlcmd**或**osql**公用程式提交為語言事件，而不是遠端程序呼叫）<br /><br /> ReplProc (複寫程序)<br /><br /> 觸發程序<br /><br /> 檢視<br /><br /> 預設<br /><br /> 使用者資料表<br /><br /> 系統資料表<br /><br /> 勾選<br /><br /> 規則|  
+|**objtype**|**nvarchar(8)**|物件的類型：<br /><br /> 預存程序<br /><br /> 準備陳述式<br /><br /> 臨機操作查詢（ [!INCLUDE[tsql](../../includes/tsql-md.md)] 從**sqlcmd**或**osql**公用程式提交為語言事件，而不是遠端程序呼叫）<br /><br /> ReplProc (複寫程序)<br /><br /> 觸發程序<br /><br /> 檢視<br /><br /> 預設<br /><br /> 使用者資料表<br /><br /> 系統資料表<br /><br /> 勾選<br /><br /> 規則|  
 |**objid**|**int**|用來查閱快取中物件的主要索引鍵之一。 這是儲存在**sysobjects**中的物件識別碼，適用于資料庫物件（程式、視圖、觸發程式等等）。 對於像是臨機操作或備妥的 SQL 等快取物件， **objid**是內部產生的值。|  
 |**dbid**|**smallint**|快取物件編譯所在的資料庫識別碼。|  
 |**dbidexec**|**smallint**|執行查詢時所在的資料庫識別碼。<br /><br /> 對於大部分的物件而言， **dbidexec**的值與**dbid**相同。<br /><br /> 針對系統檢視， **dbidexec**是執行查詢的資料庫識別碼。<br /><br /> 若為特定查詢， **dbidexec**為0。 這表示**dbidexec**的值與**dbid**相同。|  

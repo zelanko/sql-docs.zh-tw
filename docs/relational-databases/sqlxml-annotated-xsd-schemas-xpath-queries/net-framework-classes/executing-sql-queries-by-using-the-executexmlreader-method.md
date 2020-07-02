@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9acfa4eecb97902f20a0ba25762e2b14f2d5c756
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 214c7b27c06ba9b8ba19c86dcd8474da7f0c720f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387992"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649654"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>使用 ExecuteXMLReader 方法執行 SQL 查詢
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   您可以使用 SqlXmlCommand 物件的 ExecuteXmlReader 方法來執行命令，而不是使用 ExecuteToStream 方法。 這個方法會傳回可用於進一步處理結果的 XmlReader 物件（在此範例中，會列印元素或屬性名稱和值）。  
   
 > [!NOTE]  

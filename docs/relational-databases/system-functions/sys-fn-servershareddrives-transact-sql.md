@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71858ee3c57af8d94bdf4ef4addad720655942f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce7301325f8cf6ec782b9c9850399617171146f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68122547"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652008"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回叢集伺服器所用的共用磁碟機的名稱。  
   
@@ -50,7 +50,7 @@ fn_servershareddrives()
  如果目前的伺服器實例不是叢集伺服器， **fn_servershareddrives**會傳回空的資料列集。  
   
 ## <a name="remarks"></a>備註  
- `fn_servershareddrives` 會傳回這個叢集伺服器所用的共用磁碟機清單。 這些共用磁片磁碟機屬於與[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資源相同的叢集群組。 另外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源會相依於這些磁碟機。  
+ `fn_servershareddrives` 會傳回這個叢集伺服器所用的共用磁碟機清單。 這些共用磁片磁碟機屬於與資源相同的叢集群組 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 另外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源會相依於這些磁碟機。  
   
  在識別使用者是否能夠使用的磁碟機時，這項功能很有用。  
   

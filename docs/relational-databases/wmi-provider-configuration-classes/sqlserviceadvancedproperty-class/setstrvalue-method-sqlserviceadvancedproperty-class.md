@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02e0e825b52263acb819c4fedaa73efc6944741b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 760b2ebef2163dce2ea41fb41b93e6213d03c7d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692341"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>SetStrValue 方法 (SqlServiceAdvancedProperty 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   設定屬性的字串值。  
   
 ## <a name="syntax"></a>語法  
@@ -36,7 +36,7 @@ object.SetStrValue(StrValue)
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *object*  
  代表進階屬性的 [SqlServiceAdvancedProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 物件。  
   
 #### <a name="parameters"></a>參數  

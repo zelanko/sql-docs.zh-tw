@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 466dc68da1c5cef56a7debe3953ba38956bb2993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9eb123194e6ea69a6260f9eed4f02a07a9e819ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652212"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>系統相容性檢視（Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的許多系統資料表現在都當做一組檢視進行實作。 這些檢視就是所謂的相容性檢視，而且只是為了與舊版相容。 相容性檢視所公開的中繼資料與 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 提供的中繼資料相同。 然而，相容性檢視並不會公開與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本中所導入之功能相關的任何中繼資料。 因此，當您使用新功能時 (例如 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 或分割)，必須改用目錄檢視。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68018029"
   
  在使用者資料庫中參考時，在 SQL Server 2000 （例如**sys.syslanguages**或**syscacheobjects**）中宣告為已被取代的系統資料表，現在已系結至**sys**架構中的後置相容性檢視。 由於 SQL Server 2000 的系統資料表已經過多個版本取代，所以此變更並非視為重大變更。  
   
- 範例：如果使用者在使用者資料庫中建立名為**sys.syslanguages**的使用者資料表，在 SQL Server 2008 中，該資料庫中`SELECT * from dbo.syslanguages;`的語句會傳回使用者資料表中的值。 從 SQL Server 2012 開始，這種作法會從系統**sys.syslanguages**傳回資料。  
+ 範例：如果使用者在使用者資料庫中建立名為**sys.syslanguages**的使用者資料表，在 SQL Server 2008 中， `SELECT * from dbo.syslanguages;` 該資料庫中的語句會傳回使用者資料表中的值。 從 SQL Server 2012 開始，這種作法會從 system view **sys.sys語言**傳回資料。  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

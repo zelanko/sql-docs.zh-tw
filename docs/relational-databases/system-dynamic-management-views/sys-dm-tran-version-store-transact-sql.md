@@ -20,15 +20,15 @@ ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab88fb855a67f7d4a8a6426c3a250a3d464bf2d5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ccd2b0e596fc9787a655aa7ef6f612327f7f41b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818800"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676339"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回在版本存放區中顯示所有版本記錄的虛擬資料表。 **dm_tran_version_store**的執行效率不佳，因為它會查詢整個版本存放區，而版本存放區可能非常大。  
   

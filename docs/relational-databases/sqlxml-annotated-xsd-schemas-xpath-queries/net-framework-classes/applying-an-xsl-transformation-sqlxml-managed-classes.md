@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83195bfb2e06efe5e5c0b1c4fb6105091283e23e
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 6ecdb718dec421703ffe97ec1b36617476b99ed3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649717"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>套用 XSL 轉換 (SQLXML Managed 類別)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   在本範例中，SQL 查詢會針對 AdventureWorks 資料庫執行。 XSL 轉換會套用到查詢結果以產生員工名字和姓氏之兩個資料行的資料表。  
   
  SqlXmlCommand 物件的 XslPath 屬性是用來指定 XSL 檔案及其目錄路徑。  

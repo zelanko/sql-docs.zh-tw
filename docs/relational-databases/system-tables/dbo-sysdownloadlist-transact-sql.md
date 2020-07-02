@@ -1,5 +1,5 @@
 ---
-title: dbo. sysdownloadlist （Transact-sql） |Microsoft Docs
+title: dbo.sysdownloadlist （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3b87a32aec99b0b5775e492191683dd1b3b2366
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1c3918f18076767e8fb198d21ee01d92c0e7cdd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675057"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   存放所有目標伺服器的下載指示佇列。  
   

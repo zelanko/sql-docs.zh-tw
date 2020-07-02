@@ -15,15 +15,15 @@ ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1302798ac92456b4b2ce483ddcc2ae2e3b4f6067
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 5b321928d3e898edfcbae041391a85152d69e058
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882135"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665972"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 程式設計概念
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   SQLXML 3.0 會以 Web 發行的形式提供了額外的用戶端 XML 功能以及現有功能的增強功能，例如註解 XSD 結構描述、XML 大量載入、Web 服務 (SOAP) 支援和 Updategram。  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入了 SQLXML 4.0，繼續提供與 SQLXML 3.0 相同的功能，以及配合 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所導入之新功能的其他更新。  

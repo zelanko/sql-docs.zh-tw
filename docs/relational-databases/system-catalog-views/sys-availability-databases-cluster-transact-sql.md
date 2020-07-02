@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c36c1574ae1ad289c9980e1df9bfbe3b241e164
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c520cf9e836f8db051599ed00735763c85632aab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829148"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649128"
 ---
 # <a name="sysavailability_databases_cluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 裝載 Windows Server 容錯移轉叢集（WSFC）叢集中任何 Always On 可用性群組之可用性複本的實例上的每個可用性資料庫，各包含一個資料列，無論本機複製資料庫是否已經聯結至可用性群組。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "82829148"
  如果**availability_databases_cluster sys.databases**的呼叫端不是資料庫的擁有者，則查看對應資料列所需的最小許可權是 ALTER any DATABASE 或 VIEW any database 伺服器層級許可權，或是**master**資料庫中的 CREATE database 許可權。  
   
 ## <a name="see-also"></a>另請參閱  
- [availability_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [dm_hadr_database_replica_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)   
  [dm_hadr_database_replica_cluster_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)   

@@ -15,15 +15,15 @@ ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: afaee239422b557b53117441f36c79d1180802db
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 8dbebdd4908b4721ce91cd5994a6a25975ebdd42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306097"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665508"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>xml 資料類型在 SQLXML 4.0 中的支援
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   從開始 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用**xml**資料類型的 xml 類型資料。 本主題提供 SQLXML 4.0 如何辨識**xml**資料類型的實例，並為其執行支援的相關資訊。  
   
 ## <a name="working-with-xml-data-types"></a>使用 xml 資料類型  

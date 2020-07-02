@@ -1,5 +1,5 @@
 ---
-title: sys.databases system_parameters （Transact-sql） |Microsoft Docs
+title: sys.system_parameters （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,21 +20,21 @@ ms.assetid: 0d135c5f-68b5-4009-a0da-35e6abfee0ff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc4c95926f066fbf99bd6975b80c99c1438d8396
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fb412eaaa2efc36c80e16183e7e55bfe48f765a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821317"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664392"
 ---
 # <a name="syssystem_parameters-transact-sql"></a>sys.system_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   針對每個含有參數的系統物件，各包含一個資料列。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|這個參數所屬物件的識別碼。|  
+|object_id|**int**|這個參數所屬物件的識別碼。|  
 |**name**|**sysname**|參數的名稱。 在物件中，這是唯一的。<br /><br /> 如果物件是純量函數，參數名稱就是代表傳回值之資料列中的空字串。|  
 |**parameter_id**|**int**|參數的識別碼。 在物件中，這是唯一的。 如果物件是純量函數， **parameter_id** = 0 代表傳回值。|  
 |**system_type_id**|**tinyint**|參數系統類型的識別碼。|  

@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f1724f86f9bfc34e505b9ba6ecddae4104270cd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a1048a31ab0970165a82abb332e29c7f814e5f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692630"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (系統檢視) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Syspublications** view 會公開發行集資訊。 這份檢視儲存在散發資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**描述**|**nvarchar(255)**|發行集的描述性項目。|  
+|**description**|**nvarchar(255)**|發行集的描述性項目。|  
 |**name**|**sysname**|與發行集相關聯的唯一名稱。|  
 |**pubid**|**int**|提供發行集唯一識別碼的識別欄位。|  
 |**repl_freq**|**tinyint**|複寫頻率：<br /><br /> **0** = 以交易為基礎（交易式）。<br /><br /> **1** = 已排程的資料表重新整理（快照集）。|  
@@ -53,7 +53,7 @@ ms.locfileid: "68094773"
 |**alt_snapshot_folder**|**Nvarchar （510）**|指定快照集替代資料夾的位置。|  
 |**pre_snapshot_script**|**Nvarchar （510）**|指定 **.sql**檔案位置的指標。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。|  
 |**post_snapshot_script**|**Nvarchar （510）**|指定 **.sql**檔案位置的指標。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。|  
-|**compress_snapshot**|**bit**|指定要將寫入*alt_snapshot_folder*位置的快照集壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。 **1**表示將壓縮快照集。|  
+|**compress_snapshot**|**bit**|指定要將寫入*alt_snapshot_folder*位置的快照集壓縮成 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。 **1**表示將壓縮快照集。|  
 |**ftp_address**|**sysname**|散發者之 FTP 服務的網路位址。 指定發行集快照集檔案所在的位置，以便散發代理程式能夠加以收取。|  
 |**ftp_port**|**int**|散發者的 FTP 服務通訊埠編號。 指定發行集快照集檔案所在的位置，以便散發代理程式能夠加以收取。|  
 |**ftp_subdirectory**|**Nvarchar （510）**|指定在發行集支援利用 FTP 來傳播快照集時，散發代理程式能夠從中收取快照集檔案的位置。|  
@@ -64,13 +64,13 @@ ms.locfileid: "68094773"
 |**centralized_conflicts**|**bit**|指定是否將衝突記錄儲存在發行者端：<br /><br /> **0** = 衝突記錄會同時儲存在發行者端和造成衝突的訂閱者端。<br /><br /> **1** = 衝突記錄儲存在發行者端。|  
 |**conflict_retention**|**int**|指定衝突記錄的保留期限 (以天為單位)。|  
 |**conflict_policy**|**int**|指定使用佇列更新訂閱者選項時，所遵照的衝突解決原則。 它可以是下列值之一：<br /><br /> **1** = 發行者在衝突中獲勝。<br /><br /> **2** = 訂閱者在衝突中獲勝。<br /><br /> **3** = 重新初始化訂閱。|  
-|**queue_type**|**int**|指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **1** =. msmq，使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]訊息佇列來儲存交易。<br /><br /> **2** = .sql，用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。<br /><br /> 注意：使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]訊息佇列已被取代，不再受到支援。|  
+|**queue_type**|**int**|指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **1** =. msmq，使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 訊息佇列來儲存交易。<br /><br /> **2** = .sql，用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存交易。<br /><br /> 注意：使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 訊息佇列已被取代，不再受到支援。|  
 |**ad_guidname**|**sysname**|指定發行集是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行。 有效的全域唯一識別碼 (GUID) 指定發行集發行在 Active Directory 中，GUID 是對應的 Active Directory 發行集物件 objectGUID。 如果是 NULL，發行集就不會發行在 Active Directory 中。<br /><br /> 注意：不再支援發行至 Active Directory。|  
-|**backward_comp_level**|**int**|資料庫相容性層級，它可以是下列值之一：<br /><br /> **90**  = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **100**  = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。|  
+|**backward_comp_level**|**int**|資料庫相容性層級，它可以是下列值之一：<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。|  
 |**allow_initialize_from_backup**|**bit**|指出訂閱者是否能夠從備份中，而不是從初始快照集中，對這個發行集的訂閱進行初始化。 **1**表示可以從備份初始化訂閱，而**0**表示它們不能。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。|  
 |**min_autonosync_lsn**|**二進位（1）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|指出是否支援發行集的結構描述複寫。<br /><br /> **1** = 複寫在發行者端執行的 DDL 語句。<br /><br /> **0** = 表示不復寫 DDL 語句。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。|  
-|**options**|**int**|指定其他發行選項的點陣圖，位元選項值如下：<br /><br /> **0x1** -啟用點對點複寫。<br /><br /> **0x2** -僅發行對等複寫的本機變更。<br /><br /> **0x4** -針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者啟用。<br /><br /> **0x8** -啟用點對點衝突偵測。|  
+|**options**|**int**|指定其他發行選項的點陣圖，位元選項值如下：<br /><br /> **0x1** -啟用點對點複寫。<br /><br /> **0x2** -僅發行對等複寫的本機變更。<br /><br /> **0x4** -針對非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者啟用。<br /><br /> **0x8** -啟用點對點衝突偵測。|  
 |**originator_id**|**smallint**|針對衝突偵測的目的，識別點對點複寫拓撲中的每個節點。 如需相關資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
   
 ## <a name="see-also"></a>另請參閱  

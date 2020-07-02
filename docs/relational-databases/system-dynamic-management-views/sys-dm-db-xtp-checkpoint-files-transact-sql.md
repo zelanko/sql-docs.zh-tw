@@ -1,5 +1,6 @@
 ---
 title: sys.databases dm_db_xtp_checkpoint_files （Transact-sql） |Microsoft Docs
+description: 顯示檢查點檔案的相關資訊，包括檔案大小、實體位置和交易識別碼。 瞭解此視圖與 SQL Server 版本的差異。
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,12 +21,12 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3db08ac05d88bcea9f6b138ab08a48fd61a675fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ddf365b81a6e973da8348ad011dea9e23aabba50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830842"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677519"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "82830842"
 ##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更新版本  
  下表描述的資料行 `sys.dm_db_xtp_checkpoint_files` ，從開始 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 。  
   
-|資料行名稱|類型|說明|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|資料或差異檔案所屬之容器的識別碼 (以 sys.database_files 中的 FILESTREAM 類型檔案來表示)。 與 sys.databases 中的 file_id 的聯結[database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。|  
 |container_guid|**uniqueidentifier**|容器的 GUID，根、資料或差異檔案是其中的一部分。 在 sys.databases database_files 資料表中與 file_guid 的聯結。|  
@@ -56,7 +57,7 @@ ms.locfileid: "82830842"
 |file_size_in_bytes|**bigint**|磁片上的檔案大小。|  
 |file_size_used_in_bytes|**bigint**|針對仍在擴展的檢查點檔案組，這個資料行會在下一個檢查點之後更新。|  
 |logical_row_count|**bigint**|針對 [資料]，插入的資料列數目。<br /><br /> 若為 Delta，則為 drop table 的帳戶處理後所刪除的資料列數目。<br /><br /> 針對 Root，Null。|  
-|State|**smallint**|0-預先建立<br /><br /> 1-在結構下<br /><br /> 2 - 使用中<br /><br /> 3-合併目標<br /><br /> 8-等待記錄截斷|  
+|state|**smallint**|0-預先建立<br /><br /> 1-在結構下<br /><br /> 2 - 使用中<br /><br /> 3-合併目標<br /><br /> 8-等待記錄截斷|  
 |state_desc|**nvarchar(60)**|預先建立-已預先配置數個檢查點檔案，以在執行交易時，最小化或刪除任何等候來配置新檔案。 視工作負載的預估需求而定，這些預先建立檔案的大小可能有所不同，但不包含任何資料。 這是具有 MEMORY_OPTIMIZED_DATA 檔案群組之資料庫的儲存額外負荷。<br /><br /> 在 [結構] 下-這些檢查點檔案正在進行中，這表示它們會根據資料庫所產生的記錄檔記錄填入，而且還不是檢查點的一部分。<br /><br /> ACTIVE-這些包含先前已關閉檢查點的已插入/已刪除資料列。 其中包含在資料庫重新開機時套用交易記錄的使用中部分之前，將區域讀入記憶體中的資料表內容。 我們預期這些檢查點檔案的大小大約是記憶體優化資料表的記憶體中大小的2倍，假設合併作業會與交易式工作負載保持一致。<br /><br /> 合併目標-合併作業的目標-這些檢查點檔案會儲存合併原則所識別之來源檔案中的合併資料列。 一旦安裝合併之後，「合併目標」就會轉換為「使用中」狀態。<br /><br /> 等待記錄截斷-一旦安裝合併且合併目標 CFP 是永久性檢查點的一部分，合併來源檢查點檔案就會轉換成此狀態。 具有記憶體優化資料表之資料庫的操作正確性需要此狀態的檔案。  例如，若要從持久性檢查點復原來回到過去。|  
 |lower_bound_tsn|**bigint**|檔案中交易的下限。如果狀態不在（1，3），則為 null。|  
 |upper_bound_tsn|**bigint**|檔案中交易的上限;如果狀態不在（1，3），則為 null。|  
@@ -69,7 +70,7 @@ ms.locfileid: "82830842"
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  下表描述的資料行 `sys.dm_db_xtp_checkpoint_files` ，適用于 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 。  
   
-|資料行名稱|類型|說明|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|資料或差異檔案所屬之容器的識別碼 (以 sys.database_files 中的 FILESTREAM 類型檔案來表示)。 與 sys.databases 中的 file_id 的聯結[database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。|  
 |container_guid|**uniqueidentifier**|資料或差異檔案所屬之容器的 GUID。|  
@@ -84,7 +85,7 @@ ms.locfileid: "82830842"
 |inserted_row_count|**bigint**|資料檔案中的資料列數。|  
 |deleted_row_count|**bigint**|差異檔案中已刪除的資料列數。|  
 |drop_table_deleted_row_count|**bigint**|資料檔案中受到卸除資料表影響的資料列數目。 當 state 資料行等於 1 時，適用於資料檔案。<br /><br /> 顯示已卸除的資料表中刪除的資料列計數。 在完成已卸除之資料表中資料列的記憶體回收及取得檢查點之後，就會編譯 drop_table_deleted_row_count 統計資料。 如果您在卸除資料表統計資料反映於這個資料行之前重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，統計資料將會在復原期間更新。 復原程序不會從已卸除的資料表中載入資料列。 載入階段會編譯已卸除之資料表的統計資料，並在復原完成時於這個資料行中報告。|  
-|State|**int**|0-預先建立<br /><br /> 1-在結構下<br /><br /> 2 - 使用中<br /><br /> 3-合併目標<br /><br /> 4-合併來源<br /><br /> 5-備份/高可用性所需<br /><br /> 6-轉換成標記<br /><br /> 7-標記|  
+|state|**int**|0-預先建立<br /><br /> 1-在結構下<br /><br /> 2 - 使用中<br /><br /> 3-合併目標<br /><br /> 4-合併來源<br /><br /> 5-備份/高可用性所需<br /><br /> 6-轉換成標記<br /><br /> 7-標記|  
 |state_desc|**nvarchar(60)**|預先建立-一小組資料檔案和差異檔案組（也稱為檢查點檔案配對（Cfp））會保留預先配置，以在執行交易時，儘量減少或去除任何等候來配置新檔案。 其為配置全額，即資料檔案大小為 128MB 且差異檔案大小為 8 MB 但不含資料。 CFP 數目是依邏輯處理器或排程器的數目來計算 (每個核心一個，無上限)，最少為 8 個。 這是具有記憶體最佳化資料表的資料庫固定的儲存負擔。<br /><br /> 在 Cfp 的結構底下，用於儲存自最後一個檢查點之後的新插入和可能刪除的資料列。<br /><br /> 使用中 - 包含來自先前已關閉之檢查點的已插入和刪除的資料列。 這些 CFP 包含了在資料庫重新啟動時套用交易記錄的使用中部分之前所需的所有已插入和刪除的資料列。 這些 CFP 的大小大約是記憶體最佳化資料表的記憶體中大小的兩倍，前提是合併作業透過交易式工作負載維持在最新狀態。<br /><br /> 合併目標-CFP 會儲存合併原則所識別之 CFP 中的合併資料列。 一旦安裝合併之後，「合併目標」就會轉換為「使用中」狀態。<br /><br /> 合併的來源-一旦安裝合併作業之後，來源 Cfp 就會標示為 [已合併來源]。 請注意，合併原則評估工具可識別多個合併，但是 CFP 只能參與一個合併作業。<br /><br /> 備份/高可用性所需-一旦安裝合併而且合併目標 CFP 是持久檢查點的一部分，合併來源 Cfp 就會轉換成此狀態。 包含記憶體最佳化資料表的資料庫需要這個狀態下的 CFP 來確定其作業的正確性。  例如，若要從持久性檢查點復原來回到過去。 CFP 要等到記錄截斷點移出其交易範圍後才可標示為記憶體回收。<br /><br /> 轉換成標記時-記憶體內部 OLTP 引擎不需要這些 Cfp，而且可以進行垃圾收集。 此狀態表示這些 CFP 正在等候背景執行緒將其轉換到下一個狀態，也就是「標記」。<br /><br /> 標記-這些 Cfp 正在等候 filestream 垃圾收集行程進行垃圾收集。 （[sp_filestream_force_garbage_collection &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)）|  
 |lower_bound_tsn|**bigint**|檔案中包含之交易的下限。 如果 state 資料行不是 2、3 或 4 則為 Null。|  
 |upper_bound_tsn|**bigint**|檔案中包含之交易的上限。 如果 state 資料行不是 2、3 或 4 則為 Null。|  

@@ -20,15 +20,15 @@ ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb6f8c3efcf1f4ac84e521c323933c491c40a63c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 390b7d0c1fd34827580562b16074028465cb8ae3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831452"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678412"
 ---
 # <a name="sysplan_guides-transact-sql"></a>sys.plan_guides (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   針對資料庫中每份計畫指南，各包含一個資料列。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82831452"
 |**scope_type_desc**|**nvarchar(60)**|計畫指南範圍的描述。<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
 |**scope_object_id**|**整數**|定義計畫指南範圍之物件的 object_id (如果範圍是 OBJECT)。<br /><br /> 如果計畫指南的範圍不是 OBJECT，則為 NULL。|  
 |**scope_batch**|**nvarchar(max)**|批次文字（如果**scope_type**是 SQL）。<br /><br /> NULL (如果批次類型不是 SQL)。<br /><br /> 如果 Null 和**scope_type**是 SQL，則會套用**query_text**的值。|  
-|**參數**|**nvarchar(max)**|定義與計畫指南相關參數清單的字串。<br /><br /> NULL = 沒有一個參數清單與計畫指南相關。|  
+|**parameters**|**nvarchar(max)**|定義與計畫指南相關參數清單的字串。<br /><br /> NULL = 沒有一個參數清單與計畫指南相關。|  
 |**技巧**|**nvarchar(max)**|與計畫指南相關的 OPTION 子句提示。|  
   
 ## <a name="permissions"></a>權限  

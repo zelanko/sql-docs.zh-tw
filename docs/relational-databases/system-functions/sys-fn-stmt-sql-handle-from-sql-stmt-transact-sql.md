@@ -13,17 +13,17 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f7111f4e0f67e1102712c140737b68914feada6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652015"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
-  取得指定**stmt_sql_handle**參數化型[!INCLUDE[tsql](../../includes/tsql-md.md)]別（simple 或強制）下之語句的 stmt_sql_handle。 這可讓您在知道儲存在查詢存放區中的查詢，方法是在您知道其文字時使用它們的**stmt_sql_handle** 。  
+  取得**stmt_sql_handle** [!INCLUDE[tsql](../../includes/tsql-md.md)] 指定參數化型別（simple 或強制）下之語句的 stmt_sql_handle。 這可讓您在知道儲存在查詢存放區中的查詢，方法是在您知道其文字時使用它們的**stmt_sql_handle** 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 |資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|SQL 控制碼。|  
-|**query_sql_text**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]語句的文字。|  
+|**query_sql_text**|**nvarchar(max)**|語句的文字 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
 |**query_parameterization_type**|**tinyint**|查詢參數化型別。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -72,7 +72,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
  需要資料庫的**EXECUTE**許可權，以及查詢存放區目錄檢視的**刪除**許可權。  
   
 ## <a name="examples"></a>範例  
- 下列範例會執行語句，然後使用`sys.fn_stmt_sql_handle_from_sql_stmt`傳回該語句的 SQL 控制碼。  
+ 下列範例會執行語句，然後使用傳回 `sys.fn_stmt_sql_handle_from_sql_stmt` 該語句的 SQL 控制碼。  
   
 ```  
 SELECT * FROM sys.databases;   

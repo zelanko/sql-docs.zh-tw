@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91b6f1ac9d8fcf551ebc786368791354a7d6c27e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8abc88b653c372849f5a3d7eb9d62f00abb64e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678868"
 ---
 # <a name="srv_alloc-extended-stored-procedure-api"></a>srv_alloc (擴充預存程序 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
@@ -47,7 +47,7 @@ size
  *size*  
  指定要配置的位元組數。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  新配置空間的指標。 如果無法配置 *size* 個位元組，就會傳回 Null 指標。  
   
 ## <a name="remarks"></a>備註  

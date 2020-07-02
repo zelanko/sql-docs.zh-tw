@@ -17,15 +17,15 @@ ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8cd9e57f2ca7b9da3f13ef0438b7aa8ffc01b3a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: aefb58e8f483c22772bf228dc7707efff50ee47f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666164"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>執行 SQLXML 範例的需求
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [SQLXML 4.0 程式設計](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)一節提供許多範例。 本主題會列出從這些範例建立工作範例的需求。  
   
  若要使用 SQLXML 4.0 範例建立工作範例，您必須已經安裝下列項目。  

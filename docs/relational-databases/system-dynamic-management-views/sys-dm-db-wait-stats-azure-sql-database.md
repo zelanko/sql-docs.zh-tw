@@ -19,15 +19,15 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 56dd563d63518c18db6448d2c86f21e6ad676144
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677581"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   傳回作業期間執行的執行緒所遇到之所有等候的相關資訊。 您可以使用這份彙總檢視來診斷 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的效能問題，以及特定查詢和批次的效能問題。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "82830852"
   
  下表列出工作會遇到的等候類型。  
   
-|等候類型|說明|  
+|等候類型|描述|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|在組件載入的獨佔存取期間發生。|  
@@ -154,7 +154,7 @@ ms.locfileid: "82830852"
 |EE_SPECPROC_MAP_INIT|在同步處理內部程序雜湊表的建立時發生。 這個等候只可能會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體開始之後初次存取雜湊表時發生。|  
 |ENABLE_VERSIONING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在宣告資料庫可以轉移到允許快照集隔離的狀態之前，等候這個資料庫中所有的更新交易完成時發生。 這個狀態是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用 ALTER DATABASE 陳述式啟用快照集隔離時所使用。|  
 |ERROR_REPORTING_MANAGER|在同步處理多個並行錯誤記錄檔的初始化時發生。|  
-|EXCHANGE |在平行查詢期間同步處理查詢處理器交換重複時發生。|  
+|EXCHANGE|在平行查詢期間同步處理查詢處理器交換重複時發生。|  
 |EXECSYNC |平行查詢期間在與交換重複無關之區域的查詢處理器中進行同步處理時發生。 這類區域的範例包括點陣圖、大型二進位物件 (LOB) 和多工緩衝處理重複。 LOB 可能會經常使用這個等候狀態。|  
 |EXECUTION_PIPE_EVENT_INTERNAL|在透過連接內容傳送的批次執行產生者與取用者部分之間同步處理期間發生。|  
 |FAILPOINT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

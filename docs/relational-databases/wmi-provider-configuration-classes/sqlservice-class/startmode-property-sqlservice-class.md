@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 31d2a413aa606bc6b7065126668fdeabdfacd7b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1adda63135bc85ae2d8a84a8e8744b04144781de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660863"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662112"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode 屬性 (SqlService 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   取得服務的啟動模式。  
   
 ## <a name="syntax"></a>語法  
@@ -36,7 +36,7 @@ object.StartMode [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *object*  
  表示此服務的 [SqlService 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
@@ -56,7 +56,7 @@ object.StartMode [= value]
  手動  
  值 = 3。 當進程呼叫**StartService**方法時，要由電腦系統管理員啟動的服務。  
   
- 停用  
+ 已停用  
  值 = 4。 無法啟動服務。  
   
 ## <a name="remarks"></a>備註  

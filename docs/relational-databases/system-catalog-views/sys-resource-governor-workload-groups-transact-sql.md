@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fac7eaf3916c773b86b59c6819d577fcc1b8a438
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a5438fc11b522471029fdb9c849912b5028e670d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665397"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中儲存的工作負載群組組態。 每個工作負載群組都可以訂閱一個資源集區，而且只能訂閱一個資源集區。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|工作負載群組的唯一識別碼。 不可為 Null。|  
-|name|**sysname**|工作負載群組的名稱。 不可為 Null。|  
+|NAME|**sysname**|工作負載群組的名稱。 不可為 Null。|  
 |importance|**sysname**|**注意：** 重要性僅適用于相同資源集區中的工作負載群組。<br /><br /> 要求在此工作負載群組中的相對重要性。 [重要性] 是下列其中之一，而 [中] 是預設值： [低]、[中]、[高]。<br /><br /> 不可為 Null。|  
 |request_max_memory_grant_percent|**int**|針對單一要求授與的最大記憶體 (以百分比為單位)。 預設值為 25。 不可為 Null。<br /><br /> **注意：** 如果此設定高於50%，則大型查詢會一次執行一個。 因此，查詢執行時，發生記憶體不足之錯誤的風險比較大。|  
 |request_max_cpu_time_sec|**int**|單一要求的最大 CPU 使用限制 (以秒為單位)。 預設值為 0 時，不會指定任何限制。 不可為 Null。<br /><br /> **注意：** 如需詳細資訊，請參閱[CPU 閾值已超過事件類別](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。|  

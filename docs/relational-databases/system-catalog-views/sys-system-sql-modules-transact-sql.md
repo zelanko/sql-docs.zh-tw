@@ -1,5 +1,5 @@
 ---
-title: sys.databases system_sql_modules （Transact-sql） |Microsoft Docs
+title: sys.system_sql_modules （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,21 +20,21 @@ ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd6f6d995fd1bbf4378525c2e767e0ce05bd908a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0462b231ee46a7e4ccce3bb498c6271d450c5e26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664329"
 ---
 # <a name="syssystem_sql_modules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  針對包含 SQL 語言定義模組的每個系統物件，各傳回一個資料列。 類型是 FN、IF、P、PC、TF、V 的系統物件具有關聯的 SQL 模組。 若要識別包含物件，您可以將此視圖聯結至[sys. system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)。  
+  針對包含 SQL 語言定義模組的每個系統物件，各傳回一個資料列。 類型是 FN、IF、P、PC、TF、V 的系統物件具有關聯的 SQL 模組。 若要識別包含物件，您可以將此視圖聯結至[sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|包含物件的物件識別碼，在資料庫中是唯一的。|  
+|object_id|**int**|包含物件的物件識別碼，在資料庫中是唯一的。|  
 |**definition**|**nvarchar(max)**|定義這個模組的 SQL 文字。|  
 |**uses_ansi_nulls**|**bit**|1 = 模組是在 SET ANSI_NULLS 資料庫選項為 ON 的情況下加以建立。<br /><br /> 一律傳回1。|  
 |**uses_quoted_identifier**|**bit**|1 = 模組是以 SET QUOTED_IDENTIFIER ON 加以建立。<br /><br /> 一律傳回1。|  

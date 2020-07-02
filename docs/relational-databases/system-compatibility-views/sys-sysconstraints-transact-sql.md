@@ -1,5 +1,5 @@
 ---
-title: sysconstraints （Transact-sql） |Microsoft Docs
+title: sys.sys條件約束（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dfd88dec92d2707b72c829aa53f2798d3d64fee3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3ee1ce24876eab6689da7432329a2788ce70c34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663361"
 ---
 # <a name="syssysconstraints-transact-sql"></a>sys.sysconstraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   包含條件約束到擁有資料庫條件約束之物件的對應。  
   

@@ -1,5 +1,5 @@
 ---
-title: dbo. sysalerts （Transact-sql） |Microsoft Docs
+title: dbo.sys警示（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 277cd9ae3fdbe2414c9c3eb96208e79730ebdde6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6169691af84576e37a8f4b5a7cfc09757305c95b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813889"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675319"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對每個警示各包含一個資料列。 警示是事件的回應所傳送的訊息。 警示可以將訊息轉送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境之外，它可能是電子郵件訊息，也可能是呼叫器訊息。 另外，警示也可以產生工作。  此資料表會儲存在**msdb**資料庫中。
   
@@ -61,7 +61,7 @@ ms.locfileid: "82813889"
   
  ## <a name="remarks"></a>備註
 
-下表顯示 include_event_description 位元遮罩的值。 十進位值是由 dbo. sysalerts 傳回。 
+下表顯示 include_event_description 位元遮罩的值。 dbo.sys警示會傳回十進位值。 
 
 |decimal | BINARY | 意義 |
 |------|------|------|

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 50a5ed42-2d5b-4a11-a0d2-9a02241b078d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aaabacb9e964e856fa8839bc03327fec850995a7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f6867550310ca322915bb2dea038b0a7dc688035
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652384"
 ---
 # <a name="sysassembly_references-transact-sql"></a>sys.assembly_references (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對每一對彼此直接參考之組件，各包含一個資料列。  
   

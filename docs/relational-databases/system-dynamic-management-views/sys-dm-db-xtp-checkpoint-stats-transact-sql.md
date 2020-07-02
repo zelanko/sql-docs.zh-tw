@@ -1,5 +1,6 @@
 ---
 title: sys.databases dm_db_xtp_checkpoint_stats （Transact-sql） |Microsoft Docs
+description: 傳回有關目前資料庫的記憶體中 OLTP 檢查點作業的統計資料。 瞭解此視圖與 SQL Server 版本的差異。
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c93cc5f34d86e15645b4d53c02244e2705bbeda5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 29e08f4fd023717a186a900f288e47f864af218e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830828"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677445"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本  
  下表描述中的資料行 `sys.dm_db_xtp_checkpoint_stats` ，從開始 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 。  
   
-|資料行名稱|類型|說明|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|控制器看到的最後一個 LSN。|  
 |end_of_log_lsn|**數位（38）**|記錄結尾的 LSN。|  
@@ -86,7 +87,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  下表描述中的資料行 `sys.dm_db_xtp_checkpoint_stats` ，適用于 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 。  
   
-|資料行名稱|類型|說明|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|執行緒目前的記錄序號 (LSN) 和記錄檔結束之間的記錄位元組數目。|  
 |total_log_blocks_processed|**bigint**|伺服器啟動後處理的記錄區塊總數。|  

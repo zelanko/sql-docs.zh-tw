@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee37996f4d22787c8379e6a887e23769a260b6b2
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 2ad966d5a6cc4a624310d7c20ed60ea8a9210137
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306170"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649427"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>使用 CommandText 屬性執行範本檔案
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   這個範例說明如何使用 CommandText 屬性來指定由 SQL 或 XPath 查詢所組成的範本檔案。 您可以指定檔案名做為值，而不是將 SQL 或 XPath 查詢指定為 CommandText 的值。 在下列範例中，CommandType 屬性指定為 SqlXmlCommandType. TemplateFile。  
   
  此範例應用程式會執行此範本：  

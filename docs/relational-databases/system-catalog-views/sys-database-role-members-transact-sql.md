@@ -20,17 +20,17 @@ ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bbbcf04cdb141cff25565360d82714eed1e98f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f41a5cc500ef8d893180804091e5f905961aa637
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079471"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665357"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  針對每個資料庫角色的每個成員，各傳回一個資料列。  資料庫使用者、應用程式角色和其他資料庫角色可以是資料庫角色的成員。 若要將成員加入至角色，請使用[ALTER role](../../t-sql/statements/alter-role-transact-sql.md)語句搭配`ADD MEMBER`選項。 與 sys.databases 聯結， [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)以傳回`principal_id`值的名稱。
+  針對每個資料庫角色的每個成員，各傳回一個資料列。  資料庫使用者、應用程式角色和其他資料庫角色可以是資料庫角色的成員。 若要將成員加入至角色，請使用[ALTER role](../../t-sql/statements/alter-role-transact-sql.md)語句搭配 `ADD MEMBER` 選項。 與 sys.databases 聯結， [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)以傳回值的名稱 `principal_id` 。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "68079471"
 |**member_principal_id**|**int**|成員的資料庫主體識別碼。|  
   
 ## <a name="permissions"></a>權限  
- 任何使用者都可以查看他們自己的角色成員資格。 若要查看其他角色成員資格，需要`db_securityadmin`固定資料庫角色或`VIEW DEFINITION`資料庫的成員資格。  
+ 任何使用者都可以查看他們自己的角色成員資格。 若要查看其他角色成員資格，需要 `db_securityadmin` 固定資料庫角色或資料庫的成員資格 `VIEW DEFINITION` 。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

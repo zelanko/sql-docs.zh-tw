@@ -20,15 +20,15 @@ ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd09fde00399dc2e96dc67334a0446ca9f618c3e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 214c5aed0447fe63b941e32a13a4306b1a0209a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830722"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676841"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快取的每個查詢計畫傳回一個資料列，加快查詢執行的速度。 您可以使用這個動態管理檢視尋找快取的查詢計畫、快取的查詢文字、快取計畫所使用的記憶體，以及快取計畫的重複使用計數。  
   

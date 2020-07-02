@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c23cd3918742984afdb70b84d7a9adcf5553c746
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ceb3178f8ee200b88bcb5968c110a72a7434320
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833191"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662412"
 ---
 # <a name="sp_getagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回在指定代理程式類型的代理程式設定檔中所能設定的所有複寫代理程式參數的清單。 這個預存程序執行於在任何資料庫執行代理程式的散發者端。  
   
@@ -41,7 +41,7 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
   
 |值|代理程式|  
 |-----------|-----------|  
-|**1**|快照集|  
+|**1**|快照式|  
 |**2**|記錄讀取器|  
 |**3**|散發|  
 |**4**|合併|  

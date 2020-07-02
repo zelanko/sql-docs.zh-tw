@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251957"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662890"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回 FILESTREAM 二進位大型物件 (BLOB) 的路徑。 OpenSqlFilestream API 會使用這個路徑來傳回一個控制碼，應用程式可以使用 Win32 Api 來處理 BLOB 資料。 PathName 是唯讀的。  
   
@@ -45,7 +45,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  針對任何其他資料類型或**Varbinary （max）** columnthat 的資料行要求路徑名稱時，不會有 FILESTREAM 儲存屬性會造成查詢編譯時期錯誤。  
   
  *\@件*  
- 定義路徑的伺服器元件如何格式化的整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 選項可以是下列其中一個值。 * \@ * 預設值為 0。  
+ 定義路徑的伺服器元件如何格式化的整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 * \@ 選項*可以是下列其中一個值。 預設值是 0。  
   
 |值|描述|  
 |-----------|-----------------|  

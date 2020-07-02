@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8904e3c08789eb0cb50b0f5a20b66c851578ac5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d6c181ad19d3027c5262b988a8c32fdcff52e901
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064118"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678595"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (擴充預存程序 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
@@ -98,7 +98,7 @@ srcdata
   
  如果 *desttype* 為 SRVDECIMAL 或 SRVNUMERIC，則 *srcdata* 參數必須是 DBNUMERIC 或 DBDECIMAL 結構的指標，而且此結構的有效位數及小數位數欄位已設定為您想要的值。 您可以使用 DEFAULTPRECISION 來指定預設有效位數，並使用 DEFAULTSCALE 來指定預設小數位數。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  所描述之資料行的編號。 第一個資料行為資料行 1。 若發生錯誤，就會傳回 0。  
   
 ## <a name="remarks"></a>備註  

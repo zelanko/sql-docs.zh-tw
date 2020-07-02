@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ae3e555f48958aec87ed012244fae9775fae1619
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 24a95d193d483c35dac0f94a839555fecb52afca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826094"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662444"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   顯示指定代理程式的設定檔。 這個預存程序執行於任何資料庫中的散發者端。  
   
@@ -57,8 +57,8 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_id**|**int**|設定檔的識別碼。|  
 |**profile_name**|**sysname**|對代理程式類型而言是唯一的。|  
 |**agent_type**|**int**|**1** = 快照集代理程式<br /><br /> **2** = 記錄讀取器代理程式<br /><br /> **3** = 散發代理程式<br /><br /> **4** = 合併代理程式<br /><br /> **9** = 佇列讀取器代理程式|  
-|**類型**|**int**|**0** = 系統<br /><br /> **1** = 自訂|  
-|**描述**|**Varchar （3000）**|設定檔的描述。|  
+|**型別**|**int**|**0** = 系統<br /><br /> **1** = 自訂|  
+|**description**|**Varchar （3000）**|設定檔的描述。|  
 |**def_profile**|**bit**|指定這個設定檔是否為這個代理程式類型的預設值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  

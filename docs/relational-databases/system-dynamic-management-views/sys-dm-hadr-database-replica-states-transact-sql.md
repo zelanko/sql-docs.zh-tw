@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2edfbd187835a321f513f3fb9d14aaa1aef65ec5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dbfd5f0fc29efd4d2f6a02d680c9a6df34c5392b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827953"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663028"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對參與 Always On 可用性群組的每個資料庫，各傳回一個資料列，其中的本機實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在裝載可用性複本。 此動態管理檢視會公開主要和次要複本的相關狀態資訊。 在次要複本上，這個檢視會針對伺服器執行個體上的每個次要資料庫各傳回一個資料列。 在主要複本上，這個檢視會針對每個主要資料庫各傳回一個資料列，並針對對應的次要資料庫傳回額外的資料列。  
   

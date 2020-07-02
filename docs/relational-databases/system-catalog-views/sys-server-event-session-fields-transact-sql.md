@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 260a0252d096a926eee8ea81c68320dc3b035b31
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 29fc1b3b62b78ef6a0380087c878a34773df7c13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664702"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對事件和目標上明確設定的每一個可自訂資料行傳回資料列。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82834017"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的識別碼。 不可為 Null。|  
 |object_id|**int**|這個欄位相關聯之物件的識別碼。 不可為 Null。|  
-|name|**sysname**|欄位的名稱。 不可為 Null。|  
+|NAME|**sysname**|欄位的名稱。 不可為 Null。|  
 |value|**sql_variant**|此欄位的值。 不可為 Null。|  
   
 ## <a name="permissions"></a>權限  

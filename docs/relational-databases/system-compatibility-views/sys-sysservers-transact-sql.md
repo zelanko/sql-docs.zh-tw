@@ -1,5 +1,5 @@
 ---
-title: sysservers （Transact-sql） |Microsoft Docs
+title: sys.sysserver （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 333be9cb6c86c1db3801ac50159610c6d19d1611
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5406f97a14d92aed63e60e946da9f16bd183d611
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68941106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652233"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體能夠將它當做 OLE DB 資料來源進行存取的每部伺服器，各包含一個資料列。  
   
@@ -48,24 +48,24 @@ ms.locfileid: "68941106"
 |**schemadate**|**datetime**|上次更新這個資料列的日期。|  
 |**topologyx**|**int**|未使用。|  
 |**topologyy**|**int**|未使用。|  
-|**目錄**|**sysname**|當建立通往 OLE DB 提供者的連接時所用的目錄。|  
+|**catalog**|**sysname**|當建立通往 OLE DB 提供者的連接時所用的目錄。|  
 |**srvcollation**|**sysname**|伺服器的定序。|  
 |**connecttimeout**|**int**|伺服器連接的逾時值設定。|  
 |**querytimeout**|**int**|針對伺服器進行查詢的逾時值設定。|  
 |**srvnetname**|**char(30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**bit**|1 = 伺服器是遠端伺服器。<br /><br /> 0 = 伺服器是連結伺服器。|  
-|**4**|**bit**|1 = **sp_serveroption\@的 rpc**設為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@rpc**設為**false**或**off**。|  
-|**pub**|**bit**|1 = **sp_serveroption\@pub**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@pub**設為**false**或**off**。|  
-|**sub**|**bit**|1 = **sp_serveroption\@子**集合設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@sub**設定為**false**或**off**。|  
-|**dist**|**bit**|1 = **sp_serveroption\@dist**設為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@dist**設為**false**或**off**。|  
-|**dpub**|**bit**|1 = **sp_serveroption\@dpub**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@dpub**設定為**false**或**off**。|  
-|**rpcout**|**bit**|1 = **sp_serveroption\@rpc out**設為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@rpc out**設為**false**或**off**。|  
-|**dataaccess**|**bit**|1 = **sp_serveroption\@資料存取**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@資料存取**設定為**false**或**off**。|  
-|**collationcompatible**|**bit**|1 = **sp_serveroption\@定序相容**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@定序相容**設定為**false**或**off**。|  
-|**系統**|**bit**|1 = **sp_serveroption\@系統**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@系統**設定為**false**或**off**。|  
-|**useremotecollation**|**bit**|1 = **sp_serveroption\@遠端定序**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@遠端定序**設為**false**或**off**。|  
-|**lazyschemavalidation**|**bit**|1 = **sp_serveroption\@延遲架構驗證**設為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@延遲架構驗證**設為**false**或**off**。|  
-|**定序**|**sysname**|依**\@sp_serveroption 定序名稱**設定的伺服器定序。|  
+|**4**|**bit**|1 = **sp_serveroption 的 \@ rpc**設為**true**或**on**。<br /><br /> 0 = **sp_serveroption \@ rpc**設為**false**或**off**。|  
+|**pub**|**bit**|1 = **sp_serveroption \@ pub**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption \@ pub**設為**false**或**off**。|  
+|**sub**|**bit**|1 = **sp_serveroption \@ 子**集合設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption \@ sub**設定為**false**或**off**。|  
+|**dist**|**bit**|1 = **sp_serveroption \@ dist**設為**true**或**on**。<br /><br /> 0 = **sp_serveroption \@ dist**設為**false**或**off**。|  
+|**dpub**|**bit**|1 = **sp_serveroption \@ dpub**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption \@ dpub**設定為**false**或**off**。|  
+|**rpcout**|**bit**|1 = **sp_serveroption \@ rpc out**設為**true**或**on**。<br /><br /> 0 = **sp_serveroption \@ rpc out**設為**false**或**off**。|  
+|**dataaccess**|**bit**|1 = **sp_serveroption \@ 資料存取**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption \@ 資料存取**設定為**false**或**off**。|  
+|**collationcompatible**|**bit**|1 = **sp_serveroption 定 \@ 序相容**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption 定 \@ 序相容**設定為**false**或**off**。|  
+|**系統**|**bit**|1 = **sp_serveroption \@ 系統**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption \@ 系統**設定為**false**或**off**。|  
+|**useremotecollation**|**bit**|1 = **sp_serveroption \@ 遠端定序**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption \@ 遠端定序**設為**false**或**off**。|  
+|**lazyschemavalidation**|**bit**|1 = **sp_serveroption \@ 延遲架構驗證**設為**true**或**on**。<br /><br /> 0 = **sp_serveroption \@ 延遲架構驗證**設為**false**或**off**。|  
+|**定序**|**sysname**|依**sp_serveroption 定 \@ 序名稱**設定的伺服器定序。|  
 |**nonsqlsub**|bit|0 = 伺服器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體<br /><br /> 1 = 伺服器不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體|  
   
 ## <a name="see-also"></a>另請參閱  

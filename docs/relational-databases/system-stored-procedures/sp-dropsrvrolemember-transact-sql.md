@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 2624ed4800a247b0847adc5839346758aa50f140
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 213b8301a471e00107ce7d3ac6bf493e6aea87c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67463568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662471"
 ---
 # <a name="sp_dropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 從固定伺服器角色移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 使用者或群組。
 
@@ -43,10 +43,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 
 ## <a name="arguments"></a>引數
 
-**[ @loginame = ]**「_登_入」  
+**[ @loginame =]** '_login_'  
 這是要從固定伺服器角色中移除的登入名稱。 *login*是**sysname**，沒有預設值。 *登*入必須存在。  
 
-**[ @rolename = ]**「_角色_」  
+**[ @rolename =]** '_角色_'  
 這是伺服器角色的名稱。 *role*是**sysname**，預設值是 Null。 *role*必須是下列其中一個值：  
 
 -   系統管理員 (sysadmin)  

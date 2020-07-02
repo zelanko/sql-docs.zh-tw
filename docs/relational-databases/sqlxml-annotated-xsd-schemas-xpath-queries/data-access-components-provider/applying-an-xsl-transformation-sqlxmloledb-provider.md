@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c02c5f41ec11ec15d849e5b7fc6897ee0c798d01
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 567eb423d4def73169fc8d06828af1c34e536136
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882710"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650413"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>套用 XSL 轉換 (SQLXMLOLEDB 提供者)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   在此範例 ADO 應用程式中，會執行 SQL 查詢，而且會將 XSL 轉換套用到結果中。 將 ClientSideXML 屬性設定為 True 會強制處理用戶端上的資料列集。 命令用語設定為 {5d531cb2-e6ed-11d2-b252-00c04f681b71}，因為 SQL 查詢是在範本中指定，而且此用語必須在執行範本時指定。 Xsl 屬性會指定要用來套用轉換的 XSL 檔案。 [基底路徑] 屬性的值是用來搜尋 XSL 檔案。 如果您在 [xsl] 屬性的值中指定路徑，則路徑會相對於 [基底路徑] 屬性中指定的路徑。  
   
  此範例顯示如何使用下列 SQLXMLOLEDB 提供者專屬的屬性：  

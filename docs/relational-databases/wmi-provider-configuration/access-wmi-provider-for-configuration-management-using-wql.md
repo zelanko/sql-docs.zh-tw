@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b9fa96f19bc0675a1e83db858e16605338b3899
-ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
+ms.openlocfilehash: 6e9dc2e3d0faee311945552c485187c8179f3615
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295441"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715145"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>使用 WQL 存取組態管理的 WMI 提供者
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   本節描述如何針對電腦管理的 WMI 提供者執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Management Instrumentation 查詢語言 (WQL) 陳述式。  
   
  此範例使用 WQL 編輯器 WBEMtest.exe 來針對 WMI 提供者執行 WQL 查詢，以列舉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務、網路通訊協定和別名。  
@@ -37,7 +37,7 @@ ms.locfileid: "85295441"
   
 3.  在第一個文字欄位中，輸入電腦管理的 WMI 提供者命名空間：root\Microsoft\SqlServer\ComputerManagement11。 按一下 [ **連接**]。  
   
-4.  按一下 **[查詢]**。 輸入會傳回目前在本機電腦上執行之服務的查詢：**選取 [ \* 從 SqlService]。** 按一下 [套用]。  
+4.  按一下 **[查詢]**。 輸入會傳回目前在本機電腦上執行之服務的查詢：**選取 [ \* 從 SqlService]。** 按一下 [套用] 。  
   
 5.  藉由新增**WHERE ServiceName = "MSSQLSERVER"** 來進一步調整查詢。  
   

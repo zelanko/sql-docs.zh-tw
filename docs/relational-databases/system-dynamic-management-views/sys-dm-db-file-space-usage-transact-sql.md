@@ -20,15 +20,15 @@ ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c235ebc59424eba97d985740a7cf8456eee53150
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: b451385df6189a6a81ddc04d0f402c770902a1b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663477"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   傳回資料庫中每個資料檔案的空間使用量資訊。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "83152029"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|資料庫識別碼。|  
-|file_id|**smallint**|檔案識別碼。<br /><br /> file_id 對應到[dm_io_virtual_file_stats sys.databases](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)中的 file_id，以及[sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)中的 fileid。|  
+|file_id|**smallint**|檔案識別碼。<br /><br /> file_id 對應到[dm_io_virtual_file_stats sys.databases](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)中的 file_id 和[sys.sys](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)檔案中的 fileid。|  
 |filegroup_id|**smallint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 檔案群組識別碼。|  
 |total_page_count|**bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 資料檔案中的總頁數。|  
 |allocated_extent_page_count|**bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 資料檔案中已配置之範圍內的總頁數。|  

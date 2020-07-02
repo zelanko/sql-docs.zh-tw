@@ -1,5 +1,5 @@
 ---
-title: sys.databases xml_schema_namespaces （Transact-sql） |Microsoft Docs
+title: sys.xml_schema_namespaces （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dde823a82557789f1f2c9142fcf91ca2335d8b6d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b4ba08afc2d0c4174b41b79181c438c9360a3758
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677938"
 ---
 # <a name="sysxml_schema_namespaces-transact-sql"></a>sys.xml_schema_namespaces (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對每一個 XSD 定義的 XML 命名空間，各傳回一個資料列。 下列元組是唯一的： **collection_id**、 **namespace_id**和**collection_id**，以及**名稱**。  
   

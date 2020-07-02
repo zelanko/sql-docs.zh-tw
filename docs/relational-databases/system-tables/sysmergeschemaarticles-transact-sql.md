@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d22d7f3b21e4bc02846df2b5f764a2fd5bca9dd0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d6ef37acf6e75d2a55a39995906cbda7a18b61d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675116"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   追蹤合併式複寫之僅限結構描述的發行項。 這份資料表儲存在發行集和訂閱資料庫中。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82829805"
 |**type**|**tinyint**|指出僅限結構描述的發行項之類型，它可以是下列項目之一：<br /><br /> **0x20** = 預存程式僅限架構的發行項。<br /><br /> **0x40** = View 僅限架構的發行項或索引視圖僅限架構的發行項。|  
 |**objid**|**int**|發行項基底物件的物件識別碼。 它可以是程序、檢視、索引檢視或使用者定義函數的物件識別碼。|  
 |**artid**|**uniqueidentifier**|發行項識別碼。|  
-|**描述**|**nvarchar(255)**|發行項的描述。|  
+|**description**|**nvarchar(255)**|發行項的描述。|  
 |**pre_creation_command**|**tinyint**|當在訂閱資料庫中建立發行項時，所採取的預設動作。<br /><br /> **0 =** 無-如果資料表已存在於訂閱者端，則不會採取任何動作。<br /><br /> **1** = Drop-卸載資料表，然後再重新建立。<br /><br /> **2** = 刪除-根據子集篩選中的 WHERE 子句發出刪除。<br /><br /> **3** = 截斷-與**2**相同，但會刪除頁面而不是資料列。 不過，它不用 WHERE 子句。|  
 |**pubid**|**uniqueidentifier**|發行集的唯一識別碼。|  
 |**status**|**tinyint**|指出僅限結構描述的發行項之狀態，它可以是下列項目之一：<br /><br /> **1** = 未同步-下一次執行快照集代理程式時，發行資料表的初始處理腳本會執行。<br /><br /> **2** = 主動-已執行發行資料表的初始處理腳本。<br /><br /> **5** = 要加入 New_inactive。<br /><br /> **6** = 要加入 New_active。|  

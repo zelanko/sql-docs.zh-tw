@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 79959d61b1753d833523e0618a41eef89dcb5e58
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5769ffe206c1fc84107707acc980ab94c51ac932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830637"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676607"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   傳回有關在不同資料庫開啟之資料指標的資訊。  
   
@@ -85,12 +85,12 @@ dm_exec_cursors (session_id | 0 )
 |----------|-----------------|  
 |索引鍵集|資料指標宣告為索引鍵集。|  
 |動態|資料指標宣告為動態。|  
-|快照集|資料指標宣告為快照集或靜態。|  
+|快照式|資料指標宣告為快照集或靜態。|  
 |Fast_Forward|資料指標宣告為向前快轉。|  
   
  下表提供有關資料指標並行的資訊，並包括屬性資料行的可能值。  
   
-|並行|說明|  
+|並行|描述|  
 |-----------------|-----------------|  
 |唯讀|資料指標宣告為唯讀。|  
 |捲動鎖定|資料指標使用捲動鎖定。|  

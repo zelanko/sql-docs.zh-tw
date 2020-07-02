@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e135e6706454fe1f03b4c7ab762e5234e1b7d35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b510e74d507cb540fa617b6c0da48c3090429192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679054"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>資料類型 (擴充預存程序 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
@@ -34,7 +34,7 @@ ms.locfileid: "68064211"
 |SRVBIGCHAR|**char**|**character** 資料類型，長度為 0 到 8000 個位元組。|  
 |SRVBIGVARBINARY|**varbinary**|可變長度的 **binary** 資料類型，長度為 0 到 8000 個位元組。|  
 |SRVBIGVARCHAR|**varchar**|可變長度的 **character** 資料類型，長度為 0 到 8000 個位元組。|  
-|SRVBINARY|**binary**|**binary** 資料類型。|  
+|SRVBINARY|**binary**|**binary**資料類型。|  
 |SRVBIT|**一些**|**bit**資料類型。|  
 |SRVBITN|**bit null**|**bit** 資料類型，允許 Null 值。|  
 |SRVCHAR|**char**|**character** 資料類型。|  

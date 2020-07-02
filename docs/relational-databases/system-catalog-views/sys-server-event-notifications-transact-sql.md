@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7bf9ae81bf9f6c65790bc05b7b21c14a106a90e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0a8268cd4796743afd0f71e59afc409a07c840d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664802"
 ---
 # <a name="sysserver_event_notifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對每個伺服器層級的事件通知物件，各傳回一個資料列。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|伺服器事件通知名稱。 這個名稱是跨越所有伺服器層級事件通知而為唯一的。|  
-|**object_id**|**int**|物件識別碼。 在**master**資料庫中是唯一的。|  
+|object_id|**int**|物件識別碼。 在**master**資料庫中是唯一的。|  
 |**parent_class**|**tinyint**|父系的類別。 它一律是 100 = 伺服器。|  
 |**parent_class_desc**|**nvarchar(60)**|父類別的描述。 它一律是 SERVER。|  
 |**parent_id**|**int**|它一律是 0。|  

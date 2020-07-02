@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f783e662-126c-4595-8e22-f9d05191f5d0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a958bf38af003fdbc76ebe3b33b5faabf8e5d11
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a8c60eca5c6306703f2ffd0ca7428422d8827851
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831342"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664517"
 ---
 # <a name="sysservice_contract_message_usages-transact-sql"></a>sys.service_contract_message_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   這份目錄檢視針對每個 (合約、訊息類型) 配對，各包含一個資料列。  
   

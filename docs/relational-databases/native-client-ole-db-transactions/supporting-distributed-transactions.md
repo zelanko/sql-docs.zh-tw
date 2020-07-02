@@ -19,19 +19,19 @@ ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fa228f7189e6940669f1cfbce2bb4a3e5763b22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19378c7ead1ca34a6e3c2b42cb0b725560fabd8f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81279985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85658206"
 ---
 # <a name="supporting-distributed-transactions"></a>支援分散式交易
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者取用者可以使用**ITransactionJoin：： JoinTransaction**方法，參與由 Microsoft 分散式交易協調器（MS DTC）協調的分散式交易。  
   
- MS DTC 會公開 COM 物件，讓用戶端跨各種資料存放區的多個連接，起始並參與協調的交易。 若要起始交易， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者取用者會使用 MS DTC **ITransactionDispenser**介面。 **ITransactionDispenser** 的 **BeginTransaction** 成員會傳回分散式交易物件的參考。 此參考會使用**JoinTransaction**傳遞[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至 Native Client OLE DB 提供者。  
+ MS DTC 會公開 COM 物件，讓用戶端跨各種資料存放區的多個連接，起始並參與協調的交易。 若要起始交易， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者取用者會使用 MS DTC **ITransactionDispenser**介面。 **ITransactionDispenser** 的 **BeginTransaction** 成員會傳回分散式交易物件的參考。 此參考會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**JoinTransaction**傳遞至 Native Client OLE DB 提供者。  
   
  MS DTC 在分散式交易上支援非同步認可和中止。 為取得非同步交易狀態的通知，取用者會實作 **ITransactionOutcomeEvents** 介面，並將介面連接到 MS DTC 交易物件。  
   
@@ -40,9 +40,9 @@ ms.locfileid: "81279985"
 |參數|描述|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|MS DTC 交易物件的指標。|  
-|*IsoLevel*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者已忽略。 取用者從 MS DTC 取得交易物件時，會判斷 MS DTC 協調交易的隔離等級。|  
-|*IsoFlags*|必須是 0。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取用者指定了任何其他值，Native Client OLE DB 提供者就會傳回 XACT_E_NOISORETAIN。|  
-|*POtherOptions*|如果不是 Null， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會向介面要求 options 物件。 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] options 物件的*ulTimeout*成員不是零，Native Client OLE DB 提供者會傳回 XACT_E_NOTIMEOUT。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會忽略*szDescription*成員的值。|  
+|*IsoLevel*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者已忽略。 取用者從 MS DTC 取得交易物件時，會判斷 MS DTC 協調交易的隔離等級。|  
+|*IsoFlags*|必須是 0。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果取用者指定了任何其他值，Native Client OLE DB 提供者就會傳回 XACT_E_NOISORETAIN。|  
+|*POtherOptions*|如果不是 Null， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會向介面要求 options 物件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果 options 物件的*ulTimeout*成員不是零，Native Client OLE DB 提供者會傳回 XACT_E_NOTIMEOUT。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會忽略*szDescription*成員的值。|  
   
  這個範例會使用 MS DTC 協調交易。  
   
@@ -142,6 +142,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [異動](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [交易](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

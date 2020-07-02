@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3782b8139b84d87a30ac575476f5535173cdc66a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140565"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662572"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   為關聯至指定資料表之資料行的主要片語，傳回包含零個、一個或多個資料列的資料表。  
   
@@ -50,7 +50,7 @@ SEMANTICKEYPHRASETABLE
   
  這個名稱可以是一到四個部分名稱，但不允許遠端伺服器名稱。  
   
- **排**  
+ **column**  
  應傳回結果之索引資料行的名稱。 資料行必須啟用語意索引。  
   
  **column_list**  
@@ -72,7 +72,7 @@ SEMANTICKEYPHRASETABLE
 |**column_id**|**int**|從中擷取及索引目前主要片語之資料行的識別碼。<br /><br /> 如需如何從 column_id 擷取資料行名稱 (反之亦然) 的詳細資料，請參閱 COL_NAME 及 COLUMNPROPERTY 函數。|  
 |**document_key**|**\***<br /><br /> 此索引鍵與來源資料表中的唯一索引鍵類型相同。|要從中索引目前主要片語之文件或資料列的唯一索引鍵值。|  
 |**keyphrase**|**NVARCHAR**|在 column_id 所指定之資料行中所找到，關聯至 document_key 指定之文件的主要片語。|  
-|**成績**|**real**|此主要片語與索引資料行的相同文件中所有其他主要片語之間關聯性的相對值。<br /><br /> 此值是 [0.0, 1.0] 範圍內的小數值，分數愈高表示權重愈高。1.0 為滿分。|  
+|**成績**|**即時**|此主要片語與索引資料行的相同文件中所有其他主要片語之間關聯性的相對值。<br /><br /> 此值是 [0.0, 1.0] 範圍內的小數值，分數愈高表示權重愈高。1.0 為滿分。|  
   
 ## <a name="general-remarks"></a>一般備註  
  如需詳細資訊，請參閱[使用語義搜尋在檔中尋找主要片語](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)。  
