@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98bd5295aadbe75928b4a05e7ec882235fb47313
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: daec387a9be288a44cbecc286bd77784ad776374
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832362"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753957"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSarticles**資料表會針對發行者所複寫的每個發行項，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   
@@ -34,12 +34,12 @@ ms.locfileid: "82832362"
 |**publisher_id**|**smallint**|發行者的識別碼。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
 |**publication_id**|**int**|發行集的識別碼。|  
-|**篇**|**sysname**|發行項的名稱。|  
+|**文章**|**sysname**|發行項的名稱。|  
 |**article_id**|**int**|發行項的識別碼。|  
 |**destination_object**|**sysname**|在訂閱者端建立之資料表的名稱。|  
 |**source_owner**|**sysname**|在發行者端的來源資料表之結構描述名稱。|  
 |**source_object**|**sysname**|加入發行項的來源物件名稱。|  
-|**描述**|**nvarchar(255)**|發行項的描述。|  
+|**description**|**nvarchar(255)**|發行項的描述。|  
 |**destination_owner**|**sysname**|在訂閱者端建立的資料表之結構描述名稱。|  
   
 ## <a name="see-also"></a>另請參閱  

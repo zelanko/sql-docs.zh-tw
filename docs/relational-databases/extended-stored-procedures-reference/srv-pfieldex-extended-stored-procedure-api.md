@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1333cfc819b8027260c715ed3398c0099f96a854
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2294e12af7e22a70ab064a2c3d1163007631eef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755909"
 ---
 # <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex (擴充預存程序 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
@@ -62,7 +62,7 @@ len
  *len*  
  這是指向 **int** 變數的指標，該變數含有傳回 *field* 值的長度 (以位元組為單位)。 如果 *len* 為 NULL，則不會傳回長度。 當傳回 NULL 時，**len* 會設定為 0。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  指向資料的指標，其資料類型取決於 *field*。 當 *len* 為 NULL 或 *srvproc* 為 NULL 時，會傳回 NULL。 如果 *field* 為未知，則傳回 NULL。 當傳回 NULL 時，**len* 會設定為 0。  
   
 > [!IMPORTANT]  

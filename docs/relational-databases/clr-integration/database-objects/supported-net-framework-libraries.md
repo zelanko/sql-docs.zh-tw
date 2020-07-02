@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a676688176e164736552460667432919250f8e99
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 610dcca5103e4a819b0e6c59629ddd4d510f5469
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82261845"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756351"
 ---
 # <a name="supported-net-framework-libraries"></a>支援的 .NET Framework 程式庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中裝載的 Common Language Runtime (CLR)，您能夠以 Managed 程式碼撰寫預存程序、觸發程序、使用者定義函數、使用者定義型別及使用者定義彙總。 藉由 .NET Framework 類別庫所提供的功能，您可以存取預先建立的類別，這些類別可提供字串操作、進階數學運算、檔案存取、加密等多項功能。 您可以透過任何 Managed 預存程序、使用者定義型別、觸發程序、使用者定義函數或使用者定義彙總來存取這些類別。  
   
 > [!NOTE]  
@@ -57,7 +57,7 @@ https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-d
 ## <a name="unsupported-libraries"></a>不支援的程式庫  
  不支援的程式庫仍可以從 Managed 預存程序、觸發程序、使用者定義函數、使用者定義型別和使用者定義彙總加以呼叫。 不支援的程式庫必須先 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用**CREATE ASSEMBLY**語句在資料庫中註冊，然後才能在程式碼中使用。 為了確保安全性和可靠性，任何在伺服器上註冊及執行的不支援程式庫都應該經過檢閱和測試。  
   
- 例如，不支援**microsoft.directoryservices**命名空間。 您必須先註冊具有**UNSAFE**許可權的 microsoft.directoryservices 元件，才能從程式碼呼叫它。 **UNSAFE**許可權是必要的，因為**microsoft.directoryservices**命名空間中的類別不符合**安全**或**EXTERNAL_ACCESS**的需求。 如需詳細資訊，請參閱[Clr 整合程式設計模型限制](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)和[clr 整合代碼啟用安全性](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)。  
+ 例如，不支援**microsoft.directoryservices**命名空間。 您必須先註冊具有**UNSAFE**許可權的 System.DirectoryServices.dll 元件，才能從程式碼呼叫它。 **UNSAFE**許可權是必要的，因為**microsoft.directoryservices**命名空間中的類別不符合**安全**或**EXTERNAL_ACCESS**的需求。 如需詳細資訊，請參閱[Clr 整合程式設計模型限制](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)和[clr 整合代碼啟用安全性](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立元件](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   

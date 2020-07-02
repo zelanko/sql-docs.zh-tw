@@ -1,5 +1,5 @@
 ---
-title: sys.databases xml_schema_collections （Transact-sql） |Microsoft Docs
+title: sys.xml_schema_collections （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ef3a2d6bca9591637223aa4f5659e42ac27c5d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 931eec7ff81ee34f5d686ff432a9f88c69874e96
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68115047"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754361"
 ---
 # <a name="sysxml_schema_collections-transact-sql"></a>sys.xml_schema_collections (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   針對每個 XML 結構描述集合，各傳回一個資料列。 XML 結構描述集合是 XSD 定義的具名集合。 XML 結構描述集合本身包含在關聯式結構描述中，由結構描述範圍 [!INCLUDE[tsql](../../includes/tsql-md.md)] 名稱加以識別。 下列 Tuple 是唯一的：xml_collection_id、schema_id 和 name。  
   

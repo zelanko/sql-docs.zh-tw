@@ -13,15 +13,15 @@ ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35d30dfa78ab43f8efe8d3a1cb6bbb9ad30188a7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9430c5c42f9b871457fdaae1386e198a176a0bba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754240"
 ---
 # <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys.databases dm_db_column_store_row_group_operational_stats （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   針對資料行存放區索引中的壓縮資料列群組，傳回目前的資料列層級 i/o、鎖定和存取方法活動。 使用**dm_db_column_store_row_group_operational_stats sys.databases**來追蹤使用者查詢必須等候讀取或寫入到資料行存放區索引之壓縮資料列群組或資料分割的時間長度，並找出遇到重要 i/o 活動或作用點的資料列群組。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "82824596"
  
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|具有資料行存放區索引之資料表的識別碼。|  
+|object_id|**int**|具有資料行存放區索引之資料表的識別碼。|  
 |**index_id**|**int**|資料行存放區索引的識別碼。|  
 |**partition_number**|**int**|在索引或堆積內，以 1 為基底的資料分割編號。|  
 |**row_group_id**|**int**|資料行存放區索引中資料列群組的識別碼。 這在資料分割內是唯一的。|  
@@ -56,7 +56,7 @@ ms.locfileid: "82824596"
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [索引相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [索引相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   

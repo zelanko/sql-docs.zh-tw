@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e258fbd2e0d7a9d15e3c8aa9c2ec3e7bcc7ddc0c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 62b63057e34c2d26ad9d8ee3689267c9a06c93dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754309"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   提供收集組的相關資訊，包括排程、收集模式及其狀態。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82824935"
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|收集組的本機識別碼。 不可為 Null。|  
 |collection_set_uid|**uniqueidentifier**|收集組的全域唯一識別碼。 不可為 Null。|  
-|name|**nvarchar(4000)**|收集組的名稱。 可為 Null。|  
+|NAME|**nvarchar(4000)**|收集組的名稱。 可為 Null。|  
 |目標|**nvarchar(max)**|識別收集組的目標。 可為 Null。|  
 |is_system|**bit**|開啟 (1) 表示收集組是由資料收集器提供，而關閉 (0) 則表示之後由 dc_admin 加入。 這可能是本廠開發或由協力廠商開發的自訂收集組。 不可為 Null。|  
 |is_running|**bit**|指出收集組是否正在執行。 不可為 Null。|  

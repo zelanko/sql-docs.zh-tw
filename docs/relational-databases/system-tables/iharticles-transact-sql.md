@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e5ccf91f17022ccf910c840c1af2abb7a4048dfb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 78d6dfdd7497bf8937e7f2c37e8460d883f43760
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829889"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753965"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHarticles**系統資料表會針對使用目前散發者從非 SQL Server 發行者所複寫的每個發行項，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "82829889"
 |**tablespace_name**|**nvarchar(255)**|識別發行項之記錄資料表所用的資料表空間。|  
 |**objid**|**int**|此資料行不會使用，而且只包含來使**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章（[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)）的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  
 |**sync_objid**|**int**|此資料行不會使用，而且只包含來使**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章（[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)）的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  
-|**描述**|**nvarchar(255)**|發行項的描述性項目。|  
+|**description**|**nvarchar(255)**|發行項的描述性項目。|  
 |**publisher_status**|**int**|這是用來指出是否已藉由呼叫[sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)來定義定義已發行文章的視圖。<br /><br /> **0**  = 已呼叫[sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 。<br /><br /> **1**  = 尚未呼叫[sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 。|  
 |**article_view_owner**|**nvarchar(255)**|記錄讀取器代理程式所用的發行者之同步處理物件的擁有者。|  
 |**article_view**|**nvarchar(255)**|記錄讀取器代理程式所用的發行者之同步處理物件。|  

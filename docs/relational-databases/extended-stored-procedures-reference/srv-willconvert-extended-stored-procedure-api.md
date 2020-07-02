@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f679300c1dbc6c8c0d0e2f3144035e99924d4dd5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d9ba59555ce590c460854481d916e30ef942cba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245055"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755804"
 ---
 # <a name="srv_willconvert-extended-stored-procedure-api"></a>srv_willconvert (擴充預存程序 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
@@ -54,7 +54,7 @@ desttype
  *desttype*  
  表示轉換來源資料的目標資料類型。 此參數可以是任何擴充預存程序 API 資料類型。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  支援資料類型轉換時為 TRUE；不支援資料類型轉換時則為 FALSE。  
   
 ## <a name="remarks"></a>備註  

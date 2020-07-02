@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 956151208b93a848219cdac2d897f132511e411d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a370385dbf385afeb821b3cd66ce683a04c18b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753715"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop 屬性 (SqlService 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   取得可指定是否可停止服務的布林屬性值。  
   
 ## <a name="syntax"></a>語法  
@@ -35,7 +35,7 @@ object.AcceptStop [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *object*  
  代表服務的[SqlService 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

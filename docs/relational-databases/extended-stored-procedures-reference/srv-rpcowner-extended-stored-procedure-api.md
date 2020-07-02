@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3bb52186b88b678f9abe276fb5f18f1dd7505b96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c427b572b6c9320c3ebe320c4469f3571641fa4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119693"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755876"
 ---
 # <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner (擴充預存程序 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
@@ -54,7 +54,7 @@ len
  *len*  
  這是整數變數的指標，此變數會接收擁有者名稱的長度。 參數 *len* 可以是 NULL，在此情況下將不會傳回擁有者元件的長度。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  DBCHAR 指標，指向目前遠端預存程序之以 null 結尾的擁有者元件。 如果目前沒有遠端預存程序，則會傳回 NULL 且 *len* 設定為 - 1。  
   
 ## <a name="remarks"></a>備註  

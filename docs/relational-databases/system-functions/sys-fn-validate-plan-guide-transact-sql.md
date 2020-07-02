@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7e0d440a453b0481a4440ec432669d3981b9da8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059205"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754004"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   確認指定之計畫指南的有效性。 當計畫指南套用到其查詢時，sys.fn_validate_plan_guide 函數會傳回所發生的第一個錯誤訊息。 當計畫指南有效時，會傳回空的資料列集。 當資料庫的實體設計變更後，計畫指南可能變成無效。 例如，如果計畫指南指定特定的索引，而且該索引接著遭到卸除，查詢將無法再使用該計畫指南。  
   
@@ -52,8 +52,8 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|錯誤訊息的識別碼。|  
 |severity|**tinyint**|訊息的嚴重性層級，介於 1 至 25 之間。|  
-|State|**smallint**|錯誤的狀態碼，可指出程式碼中的錯誤發生點。|  
-|訊息|**nvarchar(2048)**|錯誤的訊息文字。|  
+|state|**smallint**|錯誤的狀態碼，可指出程式碼中的錯誤發生點。|  
+|message|**nvarchar(2048)**|錯誤的訊息文字。|  
   
 ## <a name="permissions"></a>權限  
  OBJECT 範圍的計畫指南需要所參考物件的 VIEW DEFINITION 或 ALTER 權限，以及編譯計畫指南中所提供之查詢或批次的權限。 例如，如果批次包含 SELECT 陳述式，就會需要所參考物件的 SELECT 權限。  
@@ -75,7 +75,7 @@ GO
 ```  
   
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. 將變更實作至資料庫之前，先測試計畫指南驗證  
- 下列範例會使用明確的交易來卸除索引。 會`sys.fn_validate_plan_guide`執行函數來判斷此動作是否會使資料庫中的任何計劃指南失效。 根據函數的結果，會認可 `DROP INDEX` 陳述式或回復交易，而且索引不會遭到卸除。  
+ 下列範例會使用明確的交易來卸除索引。 `sys.fn_validate_plan_guide`會執行函數來判斷此動作是否會使資料庫中的任何計劃指南失效。 根據函數的結果，會認可 `DROP INDEX` 陳述式或回復交易，而且索引不會遭到卸除。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -94,7 +94,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [計劃指南](../../relational-databases/performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   
   

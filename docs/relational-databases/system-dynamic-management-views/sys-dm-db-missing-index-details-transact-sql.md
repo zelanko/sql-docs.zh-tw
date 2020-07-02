@@ -21,15 +21,15 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77b3faae57764a936e6115d22ac00ca855d3acb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 159390f64b00aa8bd72478552e37ceaaf26566bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754237"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回有關遺漏索引 (不包含空間索引) 的詳細資訊。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "82829432"
 |-----------------|---------------|-----------------|  
 |**index_handle**|**int**|識別特定的遺漏索引。 此識別碼在伺服器中是唯一的。 **index_handle**是此資料表的索引鍵。|  
 |**database_id**|**smallint**|識別具有遺漏索引之資料表的資料庫。|  
-|**object_id**|**int**|識別遺漏索引所在的資料表。|  
+|object_id|**int**|識別遺漏索引所在的資料表。|  
 |**equality_columns**|**nvarchar(4000)**|作為相等述詞之資料行的逗號分隔清單，述詞格式如下：<br /><br /> *資料表。資料行*  =*constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|作為不相等述詞之資料行的逗號分隔清單，例如，格式如下的述詞：<br /><br /> *資料表。資料行*  > *constant_value*<br /><br /> "=" 以外的其他任何比較運算子都可表示不相等。|  
 |**included_columns**|**nvarchar(4000)**|可作為查詢所需涵蓋資料行之資料行的逗號分隔清單。 如需涵蓋或包含之資料行的詳細資訊，請參閱[使用內含資料行建立索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。<br /><br /> 若為記憶體優化索引（雜湊和記憶體優化非叢集），請忽略**included_columns**。 每個記憶體最佳化的索引都包含資料表的所有資料行。|  
-|**句**|**nvarchar(4000)**|遺漏索引所在之資料表的名稱。|  
+|**陳述式**|**nvarchar(4000)**|遺漏索引所在之資料表的名稱。|  
   
 ## <a name="remarks"></a>備註  
  **sys.dm_db_missing_index_details** 傳回的資訊會在查詢最佳化工具進行最佳化查詢時更新，而不會一直保存。 遺漏索引資訊只會保留到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動為止。 如果資料庫管理員想要在伺服器回收之後保留遺漏索引資訊，應該定期製作該項資訊的備份副本。  

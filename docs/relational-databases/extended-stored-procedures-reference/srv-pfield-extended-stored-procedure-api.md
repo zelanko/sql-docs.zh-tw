@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8cb43ad9128160dfbd8e943ec3db02930eb3ac53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2711fa3c1e7035b75228b02e9d52de8fd3dcd6d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68131584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755929"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (擴充預存程序 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
@@ -57,7 +57,7 @@ len
  *欄位*  
  指定連接上要傳回的資料。  
   
-|值|傳回值|  
+|值|傳回|  
 |-----------|-------------|  
 |SRV_APPLNAME|用戶端建立連接時所提供的應用程式名稱。|  
 |SRV_BCPFLAG|如果用戶端正在準備進行大量複製作業，則為 TRUE 的旗標，否則為 FALSE 的旗標。|  
@@ -82,7 +82,7 @@ len
  *len*  
  這是指向 **int** 變數的指標，該變數含有傳回 *field* 值的長度。 如果 *len* 是 NULL，則不會傳回字串的長度。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  以 Null 結束的字串指標，其中包含指定之欄位在 SRV_PROC 結構中的目前值。 如果欄位是空的，則會傳回空字串的有效指標，而且 *len* 包含 0。 如果欄位不明，會傳回 NULL，而且 *len* 包含值 -1。  
   
 > [!IMPORTANT]  

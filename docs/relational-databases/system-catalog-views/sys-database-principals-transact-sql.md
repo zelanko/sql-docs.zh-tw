@@ -20,15 +20,15 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: feed483cf3ee08c0652e55de51b1f73fc087ed39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 634d0d69698503a4bc483c9803858e5cda4b515d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80873114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754469"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中每一個安全性主體，各傳回一個資料列。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "80873114"
 |**authentication_type_desc**|**nvarchar(60)**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 驗證類型的描述。 以下是可能的值及其描述。<br /><br /> 無：無驗證<br />實例：實例驗證<br />資料庫：資料庫驗證<br />WINDOWS： Windows 驗證<br />外部： Azure Active Directory 驗證|  
 |**default_language_name**|**sysname**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 表示此主體的預設語言。|  
 |**default_language_lcid**|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 表示此主體的預設 LCID。|  
-|**allow_encrypted_value_modifications**|**bit**|**適用**于： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]和更新版本[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，。<br /><br /> 在大量複製作業時隱藏伺服器上的密碼編譯中繼資料檢查。 這可讓使用者在不解密資料的情況下，使用 Always Encrypted 在資料表或資料庫之間大量複製已加密的資料。 預設值為 OFF。 |      
+|**allow_encrypted_value_modifications**|**bit**|**適用於**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 在大量複製作業時隱藏伺服器上的密碼編譯中繼資料檢查。 這可讓使用者在不解密資料的情況下，使用 Always Encrypted 在資料表或資料庫之間大量複製已加密的資料。 預設值為 OFF。 |      
   
 ## <a name="remarks"></a>備註  
  *PasswordLastSetTime*屬性可用於 SQL Server 的所有支援設定，但只有當 SQL Server 在 Windows Server 2003 或更新版本上執行，而且 CHECK_POLICY 和 CHECK_EXPIRATION 都已啟用時，才可以使用其他屬性。 如需詳細資訊，請參閱[密碼原則](../../relational-databases/security/password-policy.md)。
@@ -95,7 +95,7 @@ JOIN sys.schemas AS s
  下列查詢會列出已明確授與或拒絕資料庫主體的權限。  
   
 > [!IMPORTANT]  
->  固定資料庫角色的許可權不會出現在中`sys.database_permissions`。 因此，資料庫主體可能仍有其他未列於此處的權限。  
+>  固定資料庫角色的許可權不會出現在中 `sys.database_permissions` 。 因此，資料庫主體可能仍有其他未列於此處的權限。  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -106,7 +106,7 @@ JOIN sys.database_permissions AS pe
 ```  
   
 ### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D：列出資料庫內架構物件的許可權  
- 下列查詢會將`sys.database_principals`和`sys.database_permissions` `sys.objects` `sys.schemas`聯結至，並列出授與或拒絕特定架構物件的許可權。  
+ 下列查詢會將和聯結至，並 `sys.database_principals` `sys.database_permissions` `sys.objects` `sys.schemas` 列出授與或拒絕特定架構物件的許可權。  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

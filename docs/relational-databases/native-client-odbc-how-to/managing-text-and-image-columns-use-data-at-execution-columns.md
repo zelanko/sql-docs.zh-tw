@@ -13,15 +13,15 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78bfa4cd343fd13be121b660de700ef670f24adb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 741844bb8bcbf3e50b01ea4f3af0da6ad69e2567
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293728"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755708"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>管理 text 和 image 資料行 - 使用資料執行中資料行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 ### <a name="to-use-data-at-execution-text-ntext-or-image-columns"></a>若要使用資料執行中的 text、ntext 或 image 資料行  
@@ -49,11 +49,11 @@ ms.locfileid: "81293728"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 執行第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)]）程式代碼清單，以建立此範例所使用的資料表。  
+ 執行第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單，以建立此範例所使用的資料表。  
   
  使用 odbc32.lib 編譯第二個 (C++) 程式碼清單。 然後，執行此程式。  
   
- 執行第三個[!INCLUDE[tsql](../../includes/tsql-md.md)]（）程式代碼清單，以刪除此範例所使用的資料表。  
+ 執行第三個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單，以刪除此範例所使用的資料表。  
   
 ```  
 use AdventureWorks  

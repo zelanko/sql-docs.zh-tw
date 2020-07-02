@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58f0258843995acc82e84d69a4d2d101594fc313
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 30aa54e93b30d2067e2ab02ba8d264920724cead
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820804"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754129"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對已載入至伺服器位址空間的每一個模組，各傳回一個資料列。  
   
@@ -44,8 +44,8 @@ ms.locfileid: "82820804"
 |**private_build**|**bit**|1 = 模組是已載入模組的私用建置。|  
 |**special_build**|**bit**|1 = 模組是已載入模組的特殊建置。|  
 |**語言**|**int**|模組之版本資訊的語言。|  
-|**company**|**nvarchar(256)**|建立模組的公司名稱。|  
-|**描述**|**nvarchar(256)**|模組的描述。|  
+|**家**|**nvarchar(256)**|建立模組的公司名稱。|  
+|**description**|**nvarchar(256)**|模組的描述。|  
 |**name**|**nvarchar(255)**|模組的名稱。 包含模組的完整路徑。|  
 |**pdw_node_id**|**int**|**適用於**：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   

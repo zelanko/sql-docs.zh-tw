@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b80fda53a6ce0acfd326f6f897cb6cde1bf0e610
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: e7afd7743a7a158738b7b88cd20d33be3220ece0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753641"
 ---
 # <a name="error-handling-xquery"></a>錯誤處理 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   W3C 規格允許靜態或動態地引發類型錯誤，以及定義靜態、動態及類型錯誤。  
   
