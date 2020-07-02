@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f44209b2fb700bf885575f2ed4c0d2c65b82329b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9905b5f148ccbf94bb4ca85f85164b5289d0dcec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756692"
 ---
 # <a name="srv_paramname-extended-stored-procedure-api"></a>srv_paramname (擴充預存程序 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
@@ -52,7 +52,7 @@ SRV_PROC * srvproc,intn, int *len );
  *len*  
  提供包含參數名稱長度 (以位元組為單位) 之 **int** 變數的指標。 如果 *len* 為 NULL，則不會傳回遠端預存程序參數名稱的長度。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  包含參數名稱且以 Null 結束之字元字串的指標。 參數名稱的長度會儲存在 *len* 中。 如果沒有第 *n* 個參數或沒有任何遠端預存程序，其會傳回 NULL、將 *len* 設定為 -1，並會傳送參考用錯誤訊息。 如果參數名稱為 NULL，*len* 就會設定為 0，而且傳回以 Null 結束的空字串。  
   
 ## <a name="remarks"></a>備註  

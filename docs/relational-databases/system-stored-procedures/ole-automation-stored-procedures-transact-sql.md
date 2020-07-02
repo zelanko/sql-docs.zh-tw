@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e85a8d988b2f2f17cb77c08ca2c70da1a76164c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81820891cbd7d5dda273b633818f9ace057745ca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941959"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758043"
 ---
 # <a name="ole-automation-stored-procedures-transact-sql"></a>OLE Automation 預存程序 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中使用 OLE Automation 物件的系統預存程序。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會封鎖對 OLE Automation 預存程序的存取，因為在這部伺服器的安全性組態設定期間已關閉這個元件。 系統管理員可以使用 sp_configure 來啟用對 OLE Automation 程序的存取。 如需詳細資訊，請參閱＜ [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)＞。  
   

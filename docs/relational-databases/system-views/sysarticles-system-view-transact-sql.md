@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f0d1f6c1036d946088e2cc1aa91c08f620c3f597
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d947bdcf0e777d96c18551fafae61d3db9a930b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129542"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759979"
 ---
 # <a name="sysarticles-system-view-transact-sql"></a>sysarticles (系統檢視) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sysarticles** view 會公開發行項屬性。 這份檢視儲存在散發資料庫中。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68129542"
 |**artid**|**int**|提供發行項唯一識別碼的識別欄位。|  
 |**creation_script**|**nvarchar(255)**|發行項的結構描述指令碼。|  
 |**del_cmd**|**nvarchar(255)**|執行於 DELETE 的命令；否則，便從記錄檔中建構。|  
-|**描述**|**nvarchar(255)**|發行項的描述性項目。|  
+|**description**|**nvarchar(255)**|發行項的描述性項目。|  
 |**dest_table**|**sysname**|目的地資料表的名稱。|  
 |**出**|**int**|用來進行水平資料分割的預存處理序識別碼。|  
 |**filter_clause**|**ntext**|用來進行水平篩選的發行項 WHERE 子句。|  

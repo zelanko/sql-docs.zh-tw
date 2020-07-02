@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 5c82ffa7ad254fc56f1c544a714d8633b7d1a33c
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: af202181425b751d684d833946a52df036633afb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627174"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760237"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   在[sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md)資料表中建立專案（如果沒有的話），將伺服器專案標記為散發者，並儲存屬性資訊。 這個預存程序執行於 master 資料庫的散發者端，以便登錄伺服器，並將伺服器標示為散發者。 如果是遠端散發者，它也會在 master 資料庫的發行者端執行，以登錄遠端散發者。  
   

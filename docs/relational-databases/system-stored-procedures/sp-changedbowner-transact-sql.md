@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bca86b00ca5b2d84cc1c737ecf9d253a0451ea9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 084063f7209692bdf3ffd124b8e2b73194068686
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760192"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   變更目前資料庫的擁有者。  
   
@@ -43,11 +43,11 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @loginame= ]「*登*入」  
- 這是目前資料庫新擁有者的登入識別碼。 *login*是**sysname**，沒有預設值。 *login*必須是現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登入或 Windows 使用者。 如果*登*入已經透過資料庫中現有的使用者安全性帳戶來存取資料庫，就不能成為目前資料庫的擁有者。 若要防止這種情況，請先卸除目前資料庫的使用者。  
+ [ @loginame =] '*login*'  
+ 這是目前資料庫新擁有者的登入識別碼。 *login*是**sysname**，沒有預設值。 *login*必須是現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 使用者。 如果*登*入已經透過資料庫中現有的使用者安全性帳戶來存取資料庫，就不能成為目前資料庫的擁有者。 若要防止這種情況，請先卸除目前資料庫的使用者。  
   
- [ @map= ]*remap_alias_flag*  
- *Remap_alias_flag*參數已被取代，因為已從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移除登入別名。 使用*remap_alias_flag*參數並不會造成錯誤，但是沒有任何作用。  
+ [ @map =] *remap_alias_flag*  
+ *Remap_alias_flag*參數已被取代，因為已從移除登入別名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用*remap_alias_flag*參數並不會造成錯誤，但是沒有任何作用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

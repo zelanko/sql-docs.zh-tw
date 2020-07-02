@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e4c87a0695c57461f444c8be4318bcd06cfdefe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d1eccee8a5acfbb810ed7636f5d073c2644f0342
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388060"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759487"
 ---
 # <a name="path-expressions-xquery"></a>路徑運算式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 路徑運算式會找出文件中的節點，例如元素、屬性及文字節點。 路徑運算式的結果永遠發生在文件順序中，在結果時序中沒有重複的節點。 在指定的路徑中，您可以使用未縮寫或縮寫的語法。 下列資訊是著重在未縮寫的語法中。 本主題稍後將說明縮寫語法。  
   
@@ -34,17 +34,17 @@ ms.locfileid: "81388060"
   
  路徑運算式可以是相對或絕對。 下列是這兩種路徑的描述：  
   
--   相對路徑運算式是由一或多步所組成，並以一或兩個斜線分隔 (/ 或 //)。 例如，`child::Features` 是相對路徑運算式，其中 `Child` 只參考內容節點的子節點。 這是目前所處理的節點。 運算式會抓取內容\<節點之元素節點子系的功能>。  
+-   相對路徑運算式是由一或多步所組成，並以一或兩個斜線分隔 (/ 或 //)。 例如，`child::Features` 是相對路徑運算式，其中 `Child` 只參考內容節點的子節點。 這是目前所處理的節點。 運算式會抓取 \<Features> 內容節點的元素節點子系。  
   
--   以一或兩個斜線開頭的絕對路徑運算式，後面接著選擇性的相對路徑。 例如，運算式中的開頭斜線 `/child::ProductDescription`，表示它是絕對路徑運算式。 由於運算式開頭的斜線會傳回內容節點的檔根節點，因此運算式會傳回檔根目錄的所有\<ProductDescription> 元素節點子系。  
+-   以一或兩個斜線開頭的絕對路徑運算式，後面接著選擇性的相對路徑。 例如，運算式中的開頭斜線 `/child::ProductDescription`，表示它是絕對路徑運算式。 由於運算式開頭的斜線會傳回內容節點的檔根節點，因此運算式會傳回 \<ProductDescription> 檔根目錄的所有元素節點子系。  
   
      如果絕對路線是以單一斜線開頭，它後面可能會或可能不會接著相對路徑。 如果只指定單一斜線，運算式會傳回內容節點的根節點。 對於 XML 資料類型，這是文件節點。  
   
- 典型的路徑運算式是由數步所組成。 例如，絕對路徑運算式`/child::ProductDescription/child::Summary`包含以斜線分隔的兩個步驟。  
+ 典型的路徑運算式是由數步所組成。 例如，絕對路徑運算式 `/child::ProductDescription/child::Summary` 包含以斜線分隔的兩個步驟。  
   
--   第一個步驟會抓取\<檔根目錄的 ProductDescription> 元素節點子系。  
+-   第一個步驟會抓取 \<ProductDescription> 檔根目錄的元素節點子系。  
   
--   第二個步驟會\<針對每個抓取的\<ProductDescription> 元素節點，抓取摘要> 元素節點子系，而後者會成為內容節點。  
+-   第二個步驟 \<Summary> 會針對每個抓取的專案節點，抓取元素節點子系 \<ProductDescription> ，而後者接著會成為內容節點。  
   
  路徑運算式中的一步可以是一個軸步或一般步。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "81388060"
   
 -   相對路徑運算式 `child::ProductDescription/child::Features` 包含以斜線分隔的兩步。 兩步都指定子軸。 ProductDescription 與 Features 都是節點測試。  
   
--   相對路徑運算式`child::root/child::Location[attribute::LocationID=10]`包含以斜線分隔的兩個步驟。 第一步指定一個軸 (`child`) 及一個節點測試 (`root`)。 第二步指定一個軸步的所有三個元件：一個軸 (子系)、節點測試 (`Location`) 以及述詞 (`[attribute::LocationID=10]`)。  
+-   相對路徑運算式 `child::root/child::Location[attribute::LocationID=10]` 包含以斜線分隔的兩個步驟。 第一步指定一個軸 (`child`) 及一個節點測試 (`root`)。 第二步指定一個軸步的所有三個元件：一個軸 (子系)、節點測試 (`Location`) 以及述詞 (`[attribute::LocationID=10]`)。  
   
  如需軸步驟之元件的詳細資訊，請參閱在[路徑運算式步驟中指定軸](../xquery/path-expressions-specifying-axis.md)、[在路徑運算式步驟中指定節點測試](../xquery/path-expressions-specifying-node-test.md)和在[路徑運算式步驟中指定述](../xquery/path-expressions-specifying-predicates.md)詞。  
   

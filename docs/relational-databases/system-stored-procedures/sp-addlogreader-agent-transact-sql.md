@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: a50b989afef382a8315c29ea5257ad9b103e124c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b22bb48cd5bc48a3b1812dfd97fc2b56df8ba11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68769218"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757979"
 ---
 # <a name="sp_addlogreader_agent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   加入給定資料庫的記錄讀取器代理程式。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -46,10 +46,10 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_login = ] 'job_login'`這是用來執行[!INCLUDE[msCoName](../../includes/msconame-md.md)]代理程式之 Windows 帳戶的登入。 *job_login*是**Nvarchar （257）**，預設值是 Null。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。  
+`[ @job_login = ] 'job_login'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]這是用來執行代理程式之 Windows 帳戶的登入。 *job_login*是**Nvarchar （257）**，預設值是 Null。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。  
   
 > [!NOTE]
->  若為非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，這必須是[sp_adddistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)中指定的相同登入。  
+>  若為非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者，這必須是[sp_adddistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)中指定的相同登入。  
   
 `[ @job_password = ] 'job_password'`這是執行代理程式之 Windows 帳戶的密碼。 *job_password*是**sysname**，預設值是 Null。  
   
@@ -58,7 +58,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
   
 `[ @job_name = ] 'job_name'`這是現有代理程式作業的名稱。 *job_name*是**sysname**，預設值是 Null。 只有在利用現有的作業來啟動代理程式，而不用新建立的作業 (預設值) 時，才指定這個參數。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`這是連接到發行者時，代理程式所使用的安全性模式。 *publisher_security_mode*是**Smallint**，預設值是**1**。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證， **1**指定 Windows 驗證。 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者必須指定**0**的值。  
+`[ @publisher_security_mode = ] publisher_security_mode`這是連接到發行者時，代理程式所使用的安全性模式。 *publisher_security_mode*是**Smallint**，預設值是**1**。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證， **1**指定 Windows 驗證。 非發行者必須指定**0**的值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ @publisher_login = ] 'publisher_login'`這是連接到發行者時所使用的登入。 *publisher_login*是**sysname**，預設值是 Null。 當*publisher_security_mode*為**0**時，必須指定*publisher_login* 。 如果*publisher_login*是 Null，而且*publisher_security_mode*是**1**，則連接到發行者時，將會使用*job_login*中指定的 Windows 帳戶。  
   
@@ -67,7 +67,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 > [!IMPORTANT]  
 >  請勿將驗證資訊儲存在指令碼檔案中。 為了要有最佳的安全性，登入名稱和密碼應該在執行階段提供。  
   
-`[ @publisher = ] 'publisher'`這是非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者的名稱。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`這是非發行者的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
 >  您不應該將這個參數指定給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。  
@@ -78,7 +78,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ## <a name="remarks"></a>備註  
  **sp_addlogreader_agent**用於異動複寫中。  
   
- 如果您在**sp_addlogreader_agent**使用資料庫建立發行集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，將已啟用複寫的資料庫升級為此版本，您必須執行 Sp_addlogreader_agent 來加入記錄讀取器代理程式。  
+ 如果您在**sp_addlogreader_agent** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用資料庫建立發行集之前，將已啟用複寫的資料庫升級為此版本，您必須執行 Sp_addlogreader_agent 來加入記錄讀取器代理程式。  
   
 ## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_addlogreader_agent**。  

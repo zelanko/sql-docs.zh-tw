@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f605865b803aea86c08958462cfa85494a3bfc2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 835a62edd78dec85bb1d05fe40dfddbbf819bc6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757850"
 ---
 # <a name="sp_mshasdbaccess-transact-sql"></a>sp_MShasdbaccess (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   列出使用者可以存取之所有資料庫的名稱和擁有者。  
   

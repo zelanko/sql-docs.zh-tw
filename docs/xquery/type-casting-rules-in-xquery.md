@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c9dcae8facc642d43620bde77ab7f01467a8a54d
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: e7de4ccd0a7bba950767d9d9028e4635a10ee25d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84520125"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759467"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery 中的類型轉換規則
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   下列 W3C XQuery 1.0 與 XPath 2.0 函數與運算子規格圖表顯示內建資料類型。 這包含內建基本類型與內建衍生類型。  
   

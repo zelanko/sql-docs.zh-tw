@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac698d7fa655e47459b9de3af0f5896e038c0c0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee4fec9752a83fdda757b6ac50f5afddcdcb1efa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73657631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759891"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>ClientSettings 類別 - SetDefaults 方法
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  使用覆寫現有資料的選項，設定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端實例的所有預設值。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用覆寫現有資料的選項，設定用戶端實例的所有預設值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,8 +36,8 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
- 代表**ClientSettings** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端實例的 ClientSettings 物件。  
+ *object*  
+ 代表**ClientSettings** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端實例的 ClientSettings 物件。  
   
 #### <a name="parameters"></a>參數  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 44b95598af67b4842595d9570bcd57135924d6ad
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0276cc54809643ed53bd2ae30813e925b4d84475
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819696"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757735"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   追蹤交易式和快照式發行集之僅限結構描述的發行項。 這份資料表儲存在發行集資料庫中。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82819696"
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|發行項識別碼。|  
 |**creation_script**|**nvarchar(255)**|用來建立目標資料表的發行項結構描述指令碼之路徑和名稱。|  
-|**描述**|**nvarchar(255)**|發行項的描述性項目。|  
+|**description**|**nvarchar(255)**|發行項的描述性項目。|  
 |**dest_object**|**sysname**|如果發行項是僅限結構描述的發行項，如預存程序、檢視或 UDF，便是訂閱資料庫中之物件的名稱。|  
 |**name**|**sysname**|發行集中僅限結構描述的發行項之名稱。|  
 |**objid**|**int**|發行項基底物件的物件識別碼。 它可以是程序、檢視、索引檢視或 UDF 的物件識別碼。|  

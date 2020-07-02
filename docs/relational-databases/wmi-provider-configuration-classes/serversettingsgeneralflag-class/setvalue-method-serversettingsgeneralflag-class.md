@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70d0965a127d8eeea22e6eedc448bab68d0bf312
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4895dd1846cd97884bd1dc919bf085f547d97c25
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759865"
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>SetValue 方法 (ServerSettingsGeneralFlag 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   設定參考之旗標的所有值。  
   
 ## <a name="syntax"></a>語法  
@@ -36,7 +36,7 @@ object.SetValue(Value)
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *object*  
  表示伺服器設定之一般旗標的 [ServerSettingsGeneralFlag 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) 物件。  
   
 #### <a name="parameters"></a>參數  

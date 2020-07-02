@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13ba20770fd97d0db193ab492ae0958cf4c7ad35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771347"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758037"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   建立新的散發資料庫並安裝散發者結構描述。 散發資料庫會儲存複寫所用的預存程序、結構描述和中繼資料。 這個預存程序執行於 master 資料庫的散發者端，以便建立散發資料庫，它會安裝必要的資料表以及啟用複寫散發時所需要的預存程序。  
   
@@ -55,7 +55,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>引數  
 `[ @database = ] database'`這是要建立的散發資料庫名稱。 *資料庫*是**sysname**，沒有預設值。 如果指定的資料庫已經存在，且尚未標示為散發資料庫，便會安裝啟用散發所需要的物件，且會將資料庫標示為散發資料庫。 如果指定的資料庫已啟用為散發資料庫，就會傳回錯誤。  
   
-`[ @data_folder = ] 'data_folder'_`這是用來儲存散發資料庫資料檔案的目錄名稱。 *data_folder*是**Nvarchar （255）**，預設值是 Null。 如果[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是 Null，就會使用該實例的資料目錄，例如`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`。  
+`[ @data_folder = ] 'data_folder'_`這是用來儲存散發資料庫資料檔案的目錄名稱。 *data_folder*是**Nvarchar （255）**，預設值是 Null。 如果是 Null， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會使用該實例的資料目錄，例如 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` 。  
   
 `[ @data_file = ] 'data_file'`這是資料庫檔案的名稱。 *data_file*是**Nvarchar （255）**，預設值是**database**。 如果是 NULL，這個預存程序會利用資料庫名稱來建構檔案名稱。  
   
@@ -65,7 +65,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @log_file = ] 'log_file'`這是記錄檔的名稱。 *log_file*是**Nvarchar （255）**，預設值是 Null。 如果是 NULL，這個預存程序會利用資料庫名稱來建構檔案名稱。  
   
-`[ @log_file_size = ] log_file_size`這是初始記錄檔大小（以 mb 為單位）。 *log_file_size*是**int**，預設值是 0 MB，表示檔案大小是使用所允許的最小記錄檔大小所建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+`[ @log_file_size = ] log_file_size`這是初始記錄檔大小（以 mb 為單位）。 *log_file_size*是**int**，預設值是 0 MB，表示檔案大小是使用所允許的最小記錄檔大小所建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ @min_distretention = ] min_distretention`這是從散發資料庫中刪除交易之前的最小保留期限（以小時為單位）。 *min_distretention*是**int**，預設值是0小時。  
   
@@ -73,7 +73,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @history_retention = ] history_retention`這是要保留記錄的時數。 *history_retention*是**int**，預設值是48小時。  
   
-`[ @security_mode = ] security_mode`這是連接到散發者時所要使用的安全性模式。 *security_mode*是**int**，預設值是1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證;**1**指定 Windows 整合式驗證。  
+`[ @security_mode = ] security_mode`這是連接到散發者時所要使用的安全性模式。 *security_mode*是**int**，預設值是1。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證;**1**指定 Windows 整合式驗證。  
   
 `[ @login = ] 'login'`這是連接到散發者時所使用的登入名稱，用來建立散發資料庫。 如果*security_mode*設定為**0**，這就是必要的。 *login* 是預設值為 NULL 的 **sysname**。  
   

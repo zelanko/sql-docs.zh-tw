@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c89a9ddc1020f29bbcd661ec4c9672ba37f7770
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55d9c6bf2e64509872faf02fa653499a28efb300
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756720"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen (擴充預存程序 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
@@ -54,10 +54,10 @@ n
  *n*  
  這指出參數的數目。 第一個參數是 1。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  這是參數資料的實際長度 (以位元組為單位)。 如果沒有第 *n* 個參數或是沒有任何遠端預存程序，其會傳回 -1。 如果第 *n* 個參數為 NULL，其會傳回 0。  
   
- 如果參數是下列[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]其中一個系統資料類型，此函數會傳回下列值。  
+ 如果參數是下列其中一個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 系統資料類型，此函數會傳回下列值 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 |新的資料類型|輸入資料長度|  
 |--------------------|-----------------------|  
@@ -68,7 +68,7 @@ n
 |**BIGVARBINARY**|**NULL：** 0<br /><br /> **零：** 1<br /><br /> **>= 255：** 255<br /><br /> **<255：** 實際 *len*|  
 |**NCHAR**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255:** 255|  
 |**NVARCHAR**|**NULL：** 0<br /><br /> **零：** 1<br /><br /> **>= 255：** 255<br /><br /> **<255：** 實際 *len*|  
-|**NTEXT**|**Null：** -1<br /><br /> **ZERO：**-1<br /><br /> **>= 255：** -1<br /><br /> 255：-1 ** \< **|  
+|**NTEXT**|**Null：** -1<br /><br /> **ZERO：**-1<br /><br /> **>= 255：** -1<br /><br /> ** \< 255：** -1|  
   
  \*   實際 *len* = 多位元組字元字串 (cch) 的長度  
   

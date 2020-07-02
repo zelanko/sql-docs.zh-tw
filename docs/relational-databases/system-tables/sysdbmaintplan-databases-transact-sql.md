@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f8413a44-8fcc-4899-84f2-b4afe0f8ec08
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7e13af6a3cd091fb9b00eb6fcf0f668695062b3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1e7a5a8b9a595450888b9bb60e0680f1a1a2156e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825822"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758609"
 ---
 # <a name="sysdbmaintplan_databases-transact-sql"></a>sysdbmaintplan_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   此資料表包含在保留從舊版升級之實例的現有資訊 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本都不會變更此資料表的內容。 此資料表會儲存在**msdb**資料庫中。  
   

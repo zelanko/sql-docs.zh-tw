@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 912db3acb6f6dc21952e99da31a1484a9745ed0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f28692cd1a5c3f60e823d6071244ae822fc557a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759042"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 整合程式碼存取安全性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Common Language Runtime (CLR) 支援稱為 Managed 程式碼之程式碼存取安全性的安全性模型。 在此模型中，將會根據程式碼的識別來授與權限給組件。 如需詳細資訊，請參閱 .NET Framework 軟體開發套件中的＜程式碼存取安全性＞一節。  
   
  下列三個不同的位置會定義可決定授與給組件之權限的安全性原則：  
@@ -89,10 +89,10 @@ ms.locfileid: "81488305"
  **不安全**的元件會獲得**FullTrust**。  
   
 > [!IMPORTANT]  
->  **SAFE**對於執行計算和資料管理工作而不存取外部[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資源的元件而言，安全是建議的許可權設定。 **EXTERNAL_ACCESS**對於存取外部[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資源的元件，建議使用 EXTERNAL_ACCESS。 **EXTERNAL_ACCESS**元件預設會以[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務帳戶的身分執行。 **EXTERNAL_ACCESS**程式碼可以明確模擬呼叫者的 Windows 驗證安全性內容。 由於預設值是以[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務帳戶的身分執行，因此只能將執行**EXTERNAL_ACCESS**的許可權授與給以服務帳戶身分執行的登入。 從安全性的觀點來看， **EXTERNAL_ACCESS**和**UNSAFE**元件都相同。 不過， **EXTERNAL_ACCESS**元件提供各種可靠性和健全保護，而不是不**安全**元件。 指定**UNSAFE**可讓元件中的程式碼對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]進程空間執行不合法的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]作業，因此可能會危害的健全性和擴充性。 如需在中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]建立 clr 元件的詳細資訊，請參閱[管理 clr 整合元件](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)。  
+>  對於執行計算和資料管理工作而不存取外部資源的元件而言，**安全**是建議的許可權設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 對於存取外部資源的元件，建議使用**EXTERNAL_ACCESS** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 **EXTERNAL_ACCESS**元件預設會以服務帳戶的身分執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 **EXTERNAL_ACCESS**程式碼可以明確模擬呼叫者的 Windows 驗證安全性內容。 由於預設值是以服務帳戶的身分執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，因此只能將執行**EXTERNAL_ACCESS**的許可權授與給以服務帳戶身分執行的登入。 從安全性的觀點來看， **EXTERNAL_ACCESS**和**UNSAFE**元件都相同。 不過， **EXTERNAL_ACCESS**元件提供各種可靠性和健全保護，而不是不**安全**元件。 指定**UNSAFE**可讓元件中的程式碼對進程空間執行不合法 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的作業，因此可能會危害的健全性和擴充性 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 如需在中建立 CLR 元件的詳細資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請參閱[管理 Clr 整合元件](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)。  
   
 ## <a name="accessing-external-resources"></a>存取外部資源  
- 如果使用者定義型別（UDT）、預存程式或其他類型的結構元件都已向**安全**許可權集合註冊，則在結構中執行的受控碼就無法存取外部資源。 不過，如果指定了**EXTERNAL_ACCESS**或**UNSAFE**許可權集合，而 managed 程式碼嘗試存取外部資源， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]則會套用下列規則：  
+ 如果使用者定義型別（UDT）、預存程式或其他類型的結構元件都已向**安全**許可權集合註冊，則在結構中執行的受控碼就無法存取外部資源。 不過，如果指定了**EXTERNAL_ACCESS**或**UNSAFE**許可權集合，而 managed 程式碼嘗試存取外部資源，則會 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 套用下列規則：  
   
 |If|結果為|  
 |--------|----------|  
@@ -108,7 +108,7 @@ ms.locfileid: "81488305"
 |-|-|-|-|  
 ||**進入**|**EXTERNAL_ACCESS**|**不安全**|  
 |**代碼啟用安全性許可權**|僅限 Execute|對外部資源的 Execute + 存取權|不受限制 (包括 P/Invoke)|  
-|**程式設計模型限制**|是|是|無限制|  
+|**程式設計模型限制**|是|是|沒有限制|  
 |**可驗證性需求**|是|是|否|  
 |**本機資料存取**|是|是|是|  
 |**呼叫機器碼的能力**|否|否|是|  

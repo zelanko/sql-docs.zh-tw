@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aee1362bdb2f9b8060b6e57b438cf991b854a19a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1de77feeab3934700f82d3bf458fa9a27fbd1c55
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758524"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>ServiceName 屬性 (SqlServiceAdvancedProperty 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   取得與進階屬性相關之受管理服務的名稱。  
   
 ## <a name="syntax"></a>語法  
@@ -36,7 +36,7 @@ object.ServiceName [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *object*  
  代表進階屬性的 [SqlServiceAdvancedProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

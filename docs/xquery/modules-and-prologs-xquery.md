@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0f17b4a4-6234-41d4-a996-6db4e27bff7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 078cd9e29c917ce8842edd2269896debee074a91
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: c7d982e8c944ff1c596dfa4178ce613ec3be709e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759490"
 ---
 # <a name="modules-and-prologs-xquery"></a>模組和初構 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   [XQuery](../xquery/modules-and-prologs-xquery-prolog.md)初構是一系列的命名空間宣告。 在初構中使用宣告命名空間時，您可以指定命名空間繫結的前置詞並在查詢本文中使用該前置詞。  
   

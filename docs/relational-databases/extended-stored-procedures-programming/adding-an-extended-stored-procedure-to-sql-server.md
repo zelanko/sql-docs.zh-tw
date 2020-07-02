@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bba543dbf89cb1dd3c0eb8a456a54c3c31c51d02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22f2b2b5345d4d5cb11b96ecf7741ce144597548
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67903414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756769"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>將擴充預存程序加入至 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
- 包含擴充預存程序的 DLL 會當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的延伸模組。 若要安裝 DLL，請將檔案複製到包含標準[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 檔案的目錄（C:\PROGRAM Files\Microsoft SQL Server\MSSQL12.0.*x*預設為 x \MSSQL\Binn）。  
+ 包含擴充預存程序的 DLL 會當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的延伸模組。 若要安裝 DLL，請將檔案複製到包含標準 DLL 檔案的目錄 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （C:\Program FILES\MICROSOFT SQL Server\MSSQL12.0.*x*預設為 x \MSSQL\Binn）。  
   
  在擴充預存程序 DLL 已經複製到伺服器之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員必須向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊 DLL 中的每個擴充預存程序函數。 這項作業是使用 sp_addextendedproc 系統預存程序完成的。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67903414"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL13.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- 如果在 `sp_addextendedproc` 中指定的函數名稱並未與 DLL 中的函數名稱完全相符，系統將會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊新名稱，但是此名稱將無法使用。 例如，雖然會`xp_Hello`註冊為位於的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]擴充預存程式`xp_hello.dll`，但[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果您稍後使用`xp_Hello`呼叫函式，將無法在 DLL 中找到該函式。  
+ 如果在 `sp_addextendedproc` 中指定的函數名稱並未與 DLL 中的函數名稱完全相符，系統將會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊新名稱，但是此名稱將無法使用。 例如，雖然 `xp_Hello` 會註冊為位於的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充預存程式 `xp_hello.dll` ，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果您稍後使用呼叫函式，將無法在 DLL 中找到該函式 `xp_Hello` 。  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  

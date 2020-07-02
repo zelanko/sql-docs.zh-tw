@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 38013350a75e6632995d8025535ea115110894e0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 03dcac4c5e4a74503e7ad30cc499a2319375f950
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827178"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758687"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsubscription_properties**資料表包含在訂閱者端執行複寫代理程式所需之參數資訊的資料列。 這個資料表是儲存在「訂閱者」的訂閱資料庫中以供提取訂閱之用，或是儲存在「散發者」的散發資料庫中供發送訂閱之用。  
   

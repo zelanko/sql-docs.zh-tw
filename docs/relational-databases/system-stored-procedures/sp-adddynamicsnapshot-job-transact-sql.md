@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 48f94f7fcf823a9ed9acc519e393369e44b45302
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53af39302f88f88633896e54301501ead8ff6f9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760212"
 ---
 # <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   建立一項代理程式作業，利用參數化資料列篩選器，產生發行集篩選資料快照集。 這個預存程序執行於發行集資料庫的發行者端。 管理員利用這個預存程序，手動建立訂閱者的已篩選資料快照集作業。  
   
@@ -81,7 +81,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**2**|隨選|  
 |**4** （預設值）|每日|  
 |**8**|每週|  
-|**1600**|每月|  
+|**16**|每月|  
 |**32**|每月相對|  
 |**64**|自動啟動|  
 |**128**|重複執行|  
@@ -93,7 +93,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**1**|未使用*frequency_interval* 。|  
 |**4** （預設值）|每隔*frequency_interval*天，預設值為 [每天]。|  
 |**8**|*frequency_interval*是下列一或多個（與[&#124; &#40;位 or&#41; &#40;transact-sql&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)邏輯運算子結合）：<br /><br /> **1** = 星期日 &#124; **2** = 星期一 &#124; **4** = 星期二 &#124; **8** = 星期三 &#124; **16** = 星期四 &#124; **32** = 星期五 &#124; **64** = 星期六|  
-|**1600**|在當月的*frequency_interval*天。|  
+|**16**|在當月的*frequency_interval*天。|  
 |**32**|*frequency_interval*為下列其中一項：<br /><br /> **1** = 星期日 &#124; **2** = 星期一 &#124; **3** = 星期二 &#124; **4** = 星期三 &#124; **5** = 星期四 &#124; **6** = 星期五 &#124; **7** = 星期六 &#124; **8** = 日 &#124; **9** = 工作日 &#124; **10** = 週末日|  
 |**64**|未使用*frequency_interval* 。|  
 |**128**|未使用*frequency_interval* 。|  
@@ -105,7 +105,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**1**|單次|  
 |**2**|Second|  
 |**4** （預設值）|Minute|  
-|**8**|Hour|  
+|**8**|小時|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是在每次執行作業之間發生的*frequency_subday*週期數。 *frequency_subday_interval*是**int**，預設值是5。  
   
@@ -117,7 +117,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|Last|  
+|**16**|Last|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**，預設值是0。  
   
@@ -135,7 +135,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**id**|**int**|識別[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)系統資料表中已篩選的資料快照集作業。|  
 |**dynamic_snapshot_jobname**|**sysname**|已篩選資料快照集作業的名稱。|  
-|**dynamic_snapshot_jobid**|**uniqueidentifier**|在「散發[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]者」端唯一識別 Agent 作業。|  
+|**dynamic_snapshot_jobid**|**uniqueidentifier**|在「散發者」端唯一識別 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

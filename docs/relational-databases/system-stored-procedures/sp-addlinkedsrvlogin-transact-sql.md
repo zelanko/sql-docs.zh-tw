@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ee38ac3c19c9f5d5b36f896c1018a16e98e37cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758004"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   建立或更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體登入與遠端伺服器安全性帳戶之間的對應。  
   
@@ -51,10 +51,10 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  TRUE 值指定登入使用自己的認證來連接到*rmtsrvname*，並忽略*rmtuser*和*rmtpassword*引數。 FALSE 指定*rmtuser*和*rmtpassword*引數用來連接到指定*locallogin*的*rmtsrvname* 。 如果*rmtuser*和*rmtpassword*也設定為 Null，則不會使用登入或密碼來連接到連結的伺服器。  
   
  `[ @locallogin = ] 'locallogin'`  
- 這是本機伺服器上的登入。 *locallogin*是**sysname**，預設值是 Null。 Null 指定此專案會套用至所有連接到*rmtsrvname*的本機登入。 如果不是 Null， *locallogin*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 登入。 必須以直接方式或透過其被授與存取權限之 Windows 群組的成員資格，來授與 Windows 登入存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的權限。  
+ 這是本機伺服器上的登入。 *locallogin*是**sysname**，預設值是 Null。 Null 指定此專案會套用至所有連接到*rmtsrvname*的本機登入。 如果不是 Null， *locallogin*可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 登入。 必須以直接方式或透過其被授與存取權限之 Windows 群組的成員資格，來授與 Windows 登入存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的權限。  
   
  `[ @rmtuser = ] 'rmtuser'`  
- 這是當為 FALSE 時@useself ，用來連接到*rmtsrvname*的遠端登入。 當遠端伺服器是不使用 Windows 驗證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的實例時， *rmtuser*就是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。 *rmtuser*是**sysname**，預設值是 Null。  
+ 這是當為 FALSE 時，用來連接到*rmtsrvname*的遠端登入 @useself 。 當遠端伺服器是不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Windows 驗證的實例時， *rmtuser*就是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 *rmtuser*是**sysname**，預設值是 Null。  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
  這是與*rmtuser*相關聯的密碼。 *rmtpassword*是**sysname**，預設值是 Null。  
@@ -68,7 +68,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 > [!NOTE]  
 >  若要在連結的伺服器上使用資料表時建立最佳查詢計畫，查詢處理器必須具有連結伺服器的資料分佈統計資料。 對於資料表之任何資料行擁有受限權限的使用者可能沒有足夠的權限來取得所有有用的統計資料，而且可能會收到效率較低的查詢計畫並遇到效能不佳的情況。 如果連結的伺服器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，則使用者必須擁有資料表，或者使用者必須是連結伺服器之系統管理員 (sysadmin) 固定伺服器角色、db_owner 固定資料庫角色或 db_ddladmin 固定資料庫角色的成員，才能取得所有可用的統計資料。 SQL Server 2012 SP1 會修改取得統計資料的權限限制，以及允許具有 SELECT 權限的使用者存取可透過 DBCC SHOW_STATISTICS 提供的統計資料。 如需詳細資訊，請參閱[DBCC SHOW_STATISTICS &#40;transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)的許可權一節。  
   
- 藉由執行 sp_addlinkedserver，自動在本機伺服器的所有登入及連結伺服器的遠端登入之間建立預設對應。 預設對應指出代表登入連接至連結伺服器時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用本機登入的使用者認證。 這相當於針對連結伺服器執行@useself設定為**true**的 sp_addlinkedsrvlogin，而不指定本機使用者名稱。 sp_addlinkedsrvlogin 僅適用於變更預設對應或新增特定本機登入的對應。 若要刪除預設對應或任何其他對應，請使用 sp_droplinkedsrvlogin。  
+ 藉由執行 sp_addlinkedserver，自動在本機伺服器的所有登入及連結伺服器的遠端登入之間建立預設對應。 預設對應指出代表登入連接至連結伺服器時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用本機登入的使用者認證。 這相當於 @useself 針對連結伺服器執行設定為**true**的 sp_addlinkedsrvlogin，而不指定本機使用者名稱。 sp_addlinkedsrvlogin 僅適用於變更預設對應或新增特定本機登入的對應。 若要刪除預設對應或任何其他對應，請使用 sp_droplinkedsrvlogin。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不需要使用 sp_addlinkedsrvlogin 來建立預定的登入對應，而是在下列所有條件都存在時，可以自動利用發出查詢之使用者的 Windows 安全性認證 (Windows 使用者名稱及密碼) 來連接至連結伺服器：  
   

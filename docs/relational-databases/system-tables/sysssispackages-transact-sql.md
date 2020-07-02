@@ -17,30 +17,30 @@ helpviewer_keywords:
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e400905801f3186f2eb54956bad612c17d686d14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029637"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757748"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  針對儲存到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每個封裝，各包含一個資料列。 此資料表會儲存在**msdb**資料庫中。  
+  針對儲存到的每個封裝，各包含一個資料列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 此資料表會儲存在**msdb**資料庫中。  
   
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|封裝的唯一識別碼。|  
 |**id**|**uniqueidentifier**|封裝的 GUID。|  
-|**描述**|**nvarchar**|封裝的選擇性描述。|  
+|**description**|**nvarchar**|封裝的選擇性描述。|  
 |**createdate**|**datetime**|封裝的建立日期。|  
 |**folderid**|**uniqueidentifier**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 列出封裝所在之邏輯資料夾的 GUID。|  
 |**ownersid**|**varbinary**|建立封裝之使用者的唯一安全性識別碼。|  
 |**packagedata**|**image**|封裝。|  
-|**packageformat**|**int**|儲存封裝的格式：<br /><br /> 值為2表示封裝是以[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]格式儲存。<br /><br /> 值為3表示封裝是以或更新版本的[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]格式儲存。|  
-|**packagetype**|**int**|建立封裝的用戶端。 可能的值如下：<br /><br /> 0 (預設值)<br /><br /> 1（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出嚮導）<br /><br /> 3（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]複寫）<br /><br /> 5（[!INCLUDE[ssIS](../../includes/ssis-md.md)]設計工具）<br /><br /> 6 (維護計畫設計師或精靈)。<br /><br /> <br /><br /> 請注意，此資料行中的值會<xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>對應到列舉。|  
+|**packageformat**|**int**|儲存封裝的格式：<br /><br /> 值為2表示封裝是以 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 格式儲存。<br /><br /> 值為3表示封裝是以 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或更新版本的格式儲存。|  
+|**packagetype**|**int**|建立封裝的用戶端。 可能的值如下：<br /><br /> 0 (預設值)<br /><br /> 1（匯 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入和匯出嚮導）<br /><br /> 3（複寫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）<br /><br /> 5（ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具）<br /><br /> 6 (維護計畫設計師或精靈)。<br /><br /> <br /><br /> 請注意，此資料行中的值會對應到 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> 列舉。|  
 |**vermajor**|**int**|封裝的最新主要版本。|  
 |**verminor**|**int**|封裝的最新次要版本。|  
 |**verbuild**|**int**|封裝的最新組建。|  

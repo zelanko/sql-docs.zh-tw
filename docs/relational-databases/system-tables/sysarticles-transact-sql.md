@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 240fe92693fcd811c1f87744cb9a60dddda16369
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5cf27f5335cf0eb098c505ca6872564c172cf610
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833062"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758643"
 ---
 # <a name="sysarticles-transact-sql"></a>sysarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對本機資料庫中定義的每個發行項，各包含一個資料列。 這份資料表儲存在發行的資料庫中。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82833062"
 |**artid**|**int**|提供發行項唯一識別碼的識別欄位。|  
 |**creation_script**|**nvarchar(255)**|發行項的結構描述指令碼。|  
 |**del_cmd**|**nvarchar(255)**|當隨著資料表發行項而複寫刪除時，所用的複寫命令類型。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
-|**描述**|**nvarchar(255)**|發行項的描述性項目。|  
+|**description**|**nvarchar(255)**|發行項的描述性項目。|  
 |**dest_table**|**sysname**|目的地資料表的名稱。|  
 |**出**|**int**|用來進行水平資料分割的預存處理序識別碼。|  
 |**filter_clause**|**ntext**|用來進行水平篩選的發行項 WHERE 子句。|  

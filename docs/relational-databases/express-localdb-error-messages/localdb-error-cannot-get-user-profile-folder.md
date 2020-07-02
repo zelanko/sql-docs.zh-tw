@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: 3625c9cb-579c-4b4b-be74-0d4de7b64bb6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 09a3e7539b6248a8d8df515bd2765232834da183
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10b1fd976fb3189f3588b298179bb8d432a30b7e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67995896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756927"
 ---
 # <a name="localdb_error_cannot_get_user_profile_folder"></a>LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細資料  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea1769f7fc7e1baa58d4335c7a5ecfc99de78bb3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4f536248023e119584ee4545727b44d32ecbd394
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757793"
 ---
 # <a name="mssubscriber_info-transact-sql"></a>MSsubscriber_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsubscriber_info**資料表會針對正在從本機散發者發送訂閱的每個發行者/訂閱者組，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82820962"
 |**type**|**tinyint**|訂閱者類型：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。<br /><br /> **1** = ODBC 資料來源。|  
 |**登入**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入。 如果利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證模式來加入訂閱者，便以加密格式來儲存。|  
 |**password**|**Nvarchar （524）**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼。 如果利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證模式來加入訂閱者，便以加密格式來儲存。|  
-|**描述**|**nvarchar(255)**|訂閱者的描述。|  
+|**description**|**nvarchar(255)**|訂閱者的描述。|  
 |**security_mode**|**int**|實作的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
   
 ## <a name="see-also"></a>另請參閱  

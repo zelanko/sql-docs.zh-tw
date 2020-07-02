@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7cff85a61d7483be34852a79dfb8f3590eff0d4a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f94e292f9376abe583cc16ecef93437192d9568d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832422"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758699"
 ---
 # <a name="cdcddl_history-transact-sql"></a>cdc.ddl_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對在啟用異動資料擷取之資料表中所做的每個資料定義語言 (DDL) 變更，各傳回一個資料列。 您可以使用這個資料表來判斷來源資料表發生 DDL 變更的時間，以及變更的內容。 沒有 DDL 變更的來源資料表就不會在這份資料表中具有任何項目。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82832422"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**source_object_id**|**int**|套用 DDL 變更之來源資料表的識別碼。|  
-|**object_id**|**int**|與來源資料表擷取執行個體相關聯之變更資料表的識別碼。|  
+|object_id|**int**|與來源資料表擷取執行個體相關聯之變更資料表的識別碼。|  
 |**required_column_update**|**bit**|指出擷取資料行的資料類型已在來源資料表中修改。 這項修改會更改變更資料表中的資料行。|  
 |**ddl_command**|**nvarchar(max)**|套用至來源資料表的 DDL 陳述式。|  
 |**ddl_lsn**|**binary(10)**|與 DDL 修改之認可相關聯的記錄序號 (LSN)。|  

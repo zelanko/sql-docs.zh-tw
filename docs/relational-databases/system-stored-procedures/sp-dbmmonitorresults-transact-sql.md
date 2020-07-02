@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc35a4c163642f711810f49a816e6c553855b6d9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a26ca71a9db5d85f79787f19563e87ee7e49b78d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760129"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   從儲存資料庫鏡像監視記錄的狀態資料表傳回受監視資料庫的狀態資料列，並讓您選擇此程序是否要事前取得最新的狀態。  
   
@@ -76,7 +76,7 @@ sp_dbmmonitorresults database_name
  1 = 在計算結果之前，藉由呼叫**sp_dbmmonitorupdate**來更新資料庫的狀態。 不過，如果狀態資料表在前15秒內已更新，或使用者不是**系統管理員（sysadmin** ）固定伺服器角色的成員，則**sp_dbmmonitorresults**執行而不更新狀態。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無  
+ None  
   
 ## <a name="result-sets"></a>結果集  
  針對指定的資料庫傳回所要求的記錄狀態資料列數目。 每個資料列都包含下列資訊：  

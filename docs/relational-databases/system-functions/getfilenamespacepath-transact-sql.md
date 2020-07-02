@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43b89ff4421f7e015ae2320aca94b0c19d5dde52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "72278329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760259"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回 FileTable 中檔案或目錄的 UNC 路徑。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "72278329"
 |**1**|傳回以 `\\computer_name` 開始的完整 UNC 路徑。|  
   
  *\@件*  
- 定義路徑之伺服器元件格式化方式的整數運算式。 選項可以有下列其中一個值： * \@ *  
+ 定義路徑之伺服器元件格式化方式的整數運算式。 * \@ 選項*可以有下列其中一個值：  
   
 |值|描述|  
 |-----------|-----------------|  
