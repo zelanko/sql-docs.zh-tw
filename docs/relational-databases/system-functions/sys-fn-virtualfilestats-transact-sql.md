@@ -21,17 +21,17 @@ ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b805e9db3c9a5472f78cffd24624cf0a26a463dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059197"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738595"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  傳回資料庫檔案的 I/O 統計資料，其中包括記錄檔。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，您也可以從[dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)動態管理檢視取得這項資訊。  
+  傳回資料庫檔案的 I/O 統計資料，其中包括記錄檔。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您也可以從[dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)動態管理檢視取得這項資訊。  
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|資料庫識別碼。|  
 |**FileId**|**smallint**|檔案識別碼。|  
-|**TimeStamp**|**bigint**|取得資料的資料庫時間戳記。 **int**在之前[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]的版本中為 int。 |  
+|**戳**|**bigint**|取得資料的資料庫時間戳記。 在之前的版本中為**int** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 。 |  
 |**NumberReads**|**bigint**|對檔案發出的讀取數。|  
 |**BytesRead**|**bigint**|對檔案發出的讀取位元組數。|  
 |**IoStallReadMS**|**bigint**|使用者等待完成檔案讀取 I/O 的時間總量 (以毫秒為單位)。|  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. 顯示具名資料庫和檔案的統計資訊  
- 下列範例會顯示 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中之記錄檔的統計資訊。 系統函數`DB_ID`是用來指定*database_id*參數。  
+ 下列範例會顯示 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中之記錄檔的統計資訊。 系統函數 `DB_ID` 是用來指定*database_id*參數。  
   
 ```sql  
 SELECT *  

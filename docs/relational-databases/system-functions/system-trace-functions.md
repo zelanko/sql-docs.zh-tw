@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 166426e1-555d-4ce4-bae3-248dcac56883
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b5666ac53572ac728ff8bb0581eeafae9dce185e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da2149d7e1bf638aa2b79aa6ce620a7bfe7b1ae9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67950931"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734341"
 ---
 # <a name="system-trace-functions"></a>系統追蹤函數
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供下列系統追蹤函數。  
   

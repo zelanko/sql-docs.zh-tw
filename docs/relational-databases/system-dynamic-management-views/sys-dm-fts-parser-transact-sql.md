@@ -19,16 +19,16 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552dbdce5da12db4fedadecb5a4bd7e9c55c278
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900912"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738654"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   將指定的[斷詞](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)[工具、同義字和停](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)用[字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)詞表組合套用至查詢字串輸入之後，傳回最終的 token 化結果。 Token 化結果就相當於指定之查詢字串的全文檢索引擎輸出。  
   
@@ -61,7 +61,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |1|敏感<br /><br /> "café" 和 "cafe" 等字會視為不同。|  
   
 > [!NOTE]  
->  若要針對全文檢索目錄來查看此值的目前設定， [!INCLUDE[tsql](../../includes/tsql-md.md)]請執行下列語句： `SELECT fulltextcatalogproperty('` *catalog_name*`', 'AccentSensitivity');`。  
+>  若要針對全文檢索目錄來查看此值的目前設定，請執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句： `SELECT fulltextcatalogproperty('` *catalog_name* `', 'AccentSensitivity');` 。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -80,7 +80,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  **dm_fts_parser**支援全文檢索述詞的語法和功能，例如[CONTAINS](../../t-sql/queries/contains-transact-sql.md)和[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)，以及函式，例如[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)和[FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)。  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>使用 Unicode 剖析特殊字元  
- 當您剖析查詢字串時， **dm_fts_parser**會使用您所連接之資料庫的定序，除非您將查詢字串指定為 Unicode。 因此，對於包含特殊字元（例如ü或ç）的非 Unicode 字串，輸出可能會不預期，視資料庫的定序而定。 若要個別處理資料庫定序的查詢字串，請在字串前面`N`加上前置詞`N'`，也就是*query_string*`'`。  
+ 當您剖析查詢字串時， **dm_fts_parser**會使用您所連接之資料庫的定序，除非您將查詢字串指定為 Unicode。 因此，對於包含特殊字元（例如ü或ç）的非 Unicode 字串，輸出可能會不預期，視資料庫的定序而定。 若要個別處理資料庫定序的查詢字串，請在字串前面加上前置詞， `N` 也就是 `N'` *query_string* `'` 。  
   
  如需詳細資訊，請參閱本主題稍後的 「顯示包含特殊字元之字串的輸出」。  
   

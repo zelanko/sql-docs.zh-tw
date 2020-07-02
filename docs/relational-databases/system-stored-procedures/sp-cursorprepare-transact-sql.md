@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21710c1cda732c09eed0a71da2286a12b8496783
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733331"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   將資料指標陳述式或批次編譯成一個執行計畫，但是不建立資料指標。 之後 sp_cursorexecute 可以使用編譯過的陳述式。 此程式與 sp_cursorexecute 結合，具有與 sp_cursoropen 相同的功能，但會分割成兩個階段。 sp_cursorprepare 的叫用方式是在表格式資料流程（TDS）封包中指定 ID = 3。  
   
@@ -61,14 +61,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *options*  
  傳回資料指標結果集資料行描述的選擇性參數。 *選項*需要下列**int**輸入值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  捲動選項。 *scrollopt*是需要下列其中一個**int**輸入值的選擇性參數。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,7 +90,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  並行控制選項。 *ccopt*是需要下列其中一個**int**輸入值的選擇性參數。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (之前稱為 LOCKCC)|  
@@ -109,9 +109,9 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="remarks"></a>備註  
  RPC 狀態參數是下列其中一項：  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
-|0|Success|  
+|0|成功|  
 |0x0001|失敗|  
 |1FF6|無法傳回中繼資料。<br /><br /> 注意：這是因為語句不會產生結果集。例如，它是 INSERT 或 DDL 語句。|  
   
@@ -144,7 +144,7 @@ exec sp_cursorclose @p2
  
  當*stmt*參數化，且*scrollopt* PARAMETERIZED_STMT 值為 ON 時，字串的格式如下所示：  
   
- { * \< 本機變數名稱> * * \< 資料類型>* } [,.。。*n* ]  
+ { *\<local variable name>**\<data type>* } [ ,...*n* ]  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_cursorexecute &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

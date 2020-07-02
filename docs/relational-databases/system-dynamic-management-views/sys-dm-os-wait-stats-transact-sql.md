@@ -20,15 +20,15 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9f8bb7ab3cd8eb03bd0b8d3a41b5afa17c1c77a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c994be809f9f0376637b3397150600654e65cb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811759"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734468"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 傳回執行中之執行緒所遇到之所有等候的相關資訊。 您可以使用這份彙總檢視來診斷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的效能問題，以及特定查詢和批次的效能問題。 [dm_exec_session_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)依會話提供類似的資訊。  
   
@@ -88,7 +88,7 @@ GO
   
  下表列出工作會遇到的等候類型。  
 
-|類型 |描述| 
+|type |描述| 
 |-------------------------- |--------------------------| 
 |ABR |僅供參考之用。 不支援。 我們無法保證未來的相容性。| | 
 |AM_INDBUILD_ALLOCATION |僅供內部使用。 <br />**適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
@@ -216,7 +216,7 @@ GO
 |ENABLE_EMPTY_VERSIONING |僅供內部使用。 <br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |ENABLE_VERSIONING |當 SQL Server 等候這個資料庫中的所有更新交易完成，然後才宣告資料庫準備好轉換成快照隔離允許狀態時，就會發生這種情況。 當 SQL Server 使用 ALTER DATABASE 語句來啟用快照集隔離時，會使用此狀態。| 
 |ERROR_REPORTING_MANAGER |在同步處理多個並行錯誤記錄檔的初始化時發生。| 
-|EXCHANGE  |在平行查詢期間同步處理查詢處理器交換重複時發生。| 
+|EXCHANGE |在平行查詢期間同步處理查詢處理器交換重複時發生。| 
 |EXECSYNC  |平行查詢期間在與交換重複無關之區域的查詢處理器中進行同步處理時發生。 這類區域的範例包括點陣圖、大型二進位物件 (LOB) 和多工緩衝處理重複。 LOB 可能會經常使用這個等候狀態。| 
 |EXECUTION_PIPE_EVENT_INTERNAL |在透過連接內容傳送的批次執行產生者與取用者部分之間同步處理期間發生。| 
 |EXTERNAL_RG_UPDATE |僅供內部使用。 <br /> **適用對象**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更新版本。| 
@@ -332,7 +332,7 @@ GO
 |HADR_PARTNER_SYNC |夥伴清單上的並行控制等候。 <br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |HADR_READ_ALL_NETWORKS |等候取得 WSFC 網路清單的讀取或寫入存取權。 僅供內部使用。 注意：引擎會保留用於動態管理檢視中的 WSFC 網路清單（例如 sys. dm_hadr_cluster_networks），或用來驗證參考 WSFC 網路資訊的 Always On Transact-sql 語句。 這份清單會在引擎啟動、WSFC 相關的通知和內部 Always On 重新開機（例如，失去和重新取得 WSFC 仲裁）時更新。 當該清單的更新正在進行時，通常會封鎖工作。 , <br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |等候次要資料庫在執行復原之前連接到主要資料庫。 這是預期的等候，如果與主要複本的連線速度很慢，則可能會延長。 <br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
-|HADR_RECOVERY_WAIT_FOR_UNDO |資料庫復原正在等候次要資料庫完成還原和初始化階段，以便讓它返回與主要資料庫相同的記錄點。 這是在容錯移轉之後預期的等候。您可以透過 Windows 系統監視器（perfmon）和動態管理檢視來追蹤復原進度。 <br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
+|HADR_RECOVERY_WAIT_FOR_UNDO |資料庫復原正在等候次要資料庫完成還原和初始化階段，以便讓它返回與主要資料庫相同的記錄點。 這是在容錯移轉之後預期的等候。您可以透過 Windows 系統監視器（perfmon.exe）和動態管理檢視來追蹤復原進度。 <br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |HADR_REPLICAINFO_SYNC |正在等候並行存取控制更新目前的複本狀態。 <br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |HADR_SEEDING_CANCELLATION |僅供內部使用。 <br /> **適用對象**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更新版本。| 
 |HADR_SEEDING_FILE_LIST |僅供內部使用。 <br /> **適用對象**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更新版本。| 

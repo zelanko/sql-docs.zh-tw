@@ -23,16 +23,16 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9532ee19ec8489caa51d090feaff464e030a0da0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f53f49e8418b8fb178a8fd1689c3bc64a8b0a0a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733622"
 ---
 # <a name="system-catalog-views-transact-sql"></a>系統目錄 Views （Transact-sql）
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 目錄檢視會傳回 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所用的資訊。 建議您使用目錄檢視，因為它們是目錄中繼資料最一般性的介面，提供了取得、轉換和呈現這項資訊之自訂形式的最有效方法。 所有使用者能夠使用的目錄中繼資料都是利用目錄檢視公開的。
 
@@ -45,7 +45,7 @@ ms.locfileid: "68670551"
 - 衍生檢視包含資料行的超集和資料列的子集。
 
 > [!IMPORTANT]
-> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本中，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能會在資料行清單結尾加入資料行，擴充任何系統目錄檢視的定義。 我們建議您不要在生產環境\*程式碼中使用從*sys. catalog_view_name*的語法，因為傳回的資料行數可能會變更並中斷您的應用程式。
+> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本中，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能會在資料行清單結尾加入資料行，擴充任何系統目錄檢視的定義。 我們建議您不要在 \* 生產環境程式碼中使用從*sys. catalog_view_name*的語法，因為傳回的資料行數可能會變更並中斷您的應用程式。
 
  將目錄檢視組織成下列類別目錄：
 

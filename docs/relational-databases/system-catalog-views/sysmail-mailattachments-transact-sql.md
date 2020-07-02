@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab020c70d1d1062f507bbb745f2e5f00d9faba6a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2d5a9063447752406a2898f6d72ea6e43ff316ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824871"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733394"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對每個提交到 Database Mail 的附加檔案，各包含一個資料列。 當您想要 Database Mail 附加檔案的相關資訊時，請使用這份檢視。 若要檢查所有由 Database Mail 所處理的電子郵件，請使用[&#40;transact-sql&#41;的 sysmail_allitems ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82824871"
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|附加檔案的識別碼。|  
 |**mailitem_id**|**int**|包含附加檔案之郵件項目的識別碼。|  
-|**名稱**|**Nvarchar （520）**|附加檔案的檔案名稱。 當**attach_query_result**為1且**query_attachment_filename**為 Null 時，Database Mail 會建立任意檔案名。|  
+|**filename**|**Nvarchar （520）**|附加檔案的檔案名稱。 當**attach_query_result**為1且**query_attachment_filename**為 Null 時，Database Mail 會建立任意檔案名。|  
 |**filesize**|**int**|附加檔案的大小 (以位元組為單位)。|  
 |**附件**|**varbinary(max)**|附加檔案的內容。|  
 |**last_mod_date**|**datetime**|資料列上次修改的日期和時間。|  

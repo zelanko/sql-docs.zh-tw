@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 82f433d18ff0940c9283f93cfa5e3f87179d31ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cffa7327162b4ae333719ad0e50c02002d0a4528
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078547"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734550"
 ---
 # <a name="sysdm_fts_index_keywords_by_property-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回給定資料表之全文檢索索引中的所有屬性相關內容。 這包括與該全文檢索索引相關聯的搜尋屬性清單所註冊之任何屬性的一切所屬資料。  
   
@@ -85,7 +85,7 @@ OBJECT_ID('table_name')
   
  當全文檢索索引鍵資料行為整數資料類型時，建議您將 document_id 直接對應到基底資料表內的全文檢索索引鍵值。  
   
- 相反地，當全文檢索索引鍵資料行使用非整數資料類型時，document_id 就不表示基底資料表內的全文檢索索引鍵。 在此情況下，若要識別 dm_fts_index_keywords_by_property 所傳回之基表中的資料列，您需要將此視圖與[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)所傳回的結果聯結。 在您可以聯結之前，必須先將預存程序的輸出儲存到暫存資料表。 然後您可以聯結 dm_fts_index_keywords_by_property 的 document_id 資料行與此預存程式所傳回的 DocId 資料行。 請注意，**時間戳記**資料行無法在插入時接收值，因為它們是由自動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產生的。 因此，**時間戳記**資料行必須轉換成**Varbinary （8）** 資料行。 下列範例會示範這些步驟。 在此範例中， *table_id*是資料表的識別碼， *database_name*是您的資料庫名稱，而*table_name*則是資料表的名稱。  
+ 相反地，當全文檢索索引鍵資料行使用非整數資料類型時，document_id 就不表示基底資料表內的全文檢索索引鍵。 在此情況下，若要識別 dm_fts_index_keywords_by_property 所傳回之基表中的資料列，您需要將此視圖與[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)所傳回的結果聯結。 在您可以聯結之前，必須先將預存程序的輸出儲存到暫存資料表。 然後您可以聯結 dm_fts_index_keywords_by_property 的 document_id 資料行與此預存程式所傳回的 DocId 資料行。 請注意，**時間戳記**資料行無法在插入時接收值，因為它們是由自動產生的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 因此，**時間戳記**資料行必須轉換成**Varbinary （8）** 資料行。 下列範例會示範這些步驟。 在此範例中， *table_id*是資料表的識別碼， *database_name*是您的資料庫名稱，而*table_name*則是資料表的名稱。  
   
 ```  
 USE database_name;  
@@ -109,7 +109,7 @@ GO
  需要全文檢索索引和 CREATE FULLTEXT CATALOG 權限所涵蓋之資料行的 SELECT 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會從 `Author` 範例資料庫之 `Production.Document` 資料表傳回全文檢索索引中的 `AdventureWorks` 屬性。 此範例會使用 sys.databases `KWBPOP`所傳回之資料表的別名**dm_fts_index_keywords_by_property**。 此範例使用內部聯結來結合 sys.databases 的資料行[registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)和[sys.databases。 fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
+ 下列範例會從 `Author` 範例資料庫之 `Production.Document` 資料表傳回全文檢索索引中的 `AdventureWorks` 屬性。 此範例會使用 sys.databases 所傳回之資料表的別名 `KWBPOP` **dm_fts_index_keywords_by_property**。 此範例使用內部聯結來結合 sys.databases 的資料行[registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)和[sys.databases。 fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
   
 ```  
 -- Once the full-text index is configured to support property searching  

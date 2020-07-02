@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: feaf2a222df364a41e51969a2c95a978f2d0a289
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04cedd0df5552ee19f7fc98ecdd94ff2d9dc88fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900960"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734556"
 ---
 # <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>sys.databases dm_fts_index_keywords_position_by_document （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回已編制索引檔中的關鍵字位置資訊。  
   
@@ -64,7 +64,7 @@ OBJECT_ID('table_name')
  需要全文檢索索引和 CREATE FULLTEXT CATALOG 權限所涵蓋之資料行的 SELECT 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會從`Production.Document` `AdventureWorks`範例資料庫之資料表的全文檢索索引中，傳回關鍵字。  
+ 下列範例會從範例資料庫之資料表的全文檢索索引中，傳回關鍵字 `Production.Document` `AdventureWorks` 。  
   
 ```  
 USE AdventureWorks2012;  

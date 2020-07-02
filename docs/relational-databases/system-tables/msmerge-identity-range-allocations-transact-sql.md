@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9adbc21b0c226746c879bf1b32377c93b2d76c1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c2495cf2bc8941e2c619255f4328eba6be1942a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736727"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_identity_range_allocations**資料表是用來針對已發行的發行項，追蹤識別範圍指派的歷程記錄和發行者和訂閱者。 這份資料表儲存在散發資料庫中。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82829253"
 |**publisher_id**|**smallint**|發行者的識別碼。|  
 |**publisher_db**|**nvarchar(128)**|發行集資料庫的名稱。|  
 |**發行集**|**nvarchar(128)**|發行集的名稱。|  
-|**篇**|**nvarchar(128)**|發行項的名稱。|  
+|**文章**|**nvarchar(128)**|發行項的名稱。|  
 |**預訂**|**nvarchar(128)**|訂閱者的名稱。|  
 |**subscriber_db**|**nvarchar(128)**|訂閱資料庫的名稱。|  
 |**is_pub_range**|**bit**|列出識別範圍是否被指派給發行者。|  

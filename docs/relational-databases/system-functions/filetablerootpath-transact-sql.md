@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1311ddfe90beafa3f3d89b27e510eac34aa5ae94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734400"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回特定 FileTable 或目前資料庫的根層級 UNC 路徑。  
   
@@ -41,7 +41,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  FileTable 的名稱。 *FileTable_name*的類型為**Nvarchar**。 這是選擇性參數。 預設值為目前的資料庫。 指定*schema_name*也是選擇性的。 您可以為*FileTable_name*傳遞 Null 以使用預設參數值  
   
  *\@件*  
- 定義路徑之伺服器元件格式化方式的整數運算式。 選項可以有下列其中一個值： * \@ *  
+ 定義路徑之伺服器元件格式化方式的整數運算式。 * \@ 選項*可以有下列其中一個值：  
   
 |值|描述|  
 |-----------|-----------------|  

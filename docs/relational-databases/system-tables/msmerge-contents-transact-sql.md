@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d0dc39424f0636d975195b00580a4ff7649ec64
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 07ae3a15b05226ed6d518bbf70f22e4950c70fd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736783"
 ---
 # <a name="msmerge_contents-transact-sql"></a>MSmerge_contents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_contents**資料表會針對目前資料庫中每個已修改的資料列，各包含一個資料列，因為它已發行。 合併處理序利用這份資料表來判斷已變更的資料列。 這份資料表儲存在發行集和訂閱資料庫中。  
   

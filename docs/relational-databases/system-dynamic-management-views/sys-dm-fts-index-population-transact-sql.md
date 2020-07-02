@@ -20,15 +20,15 @@ ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7af62bc20e96d3c9ab9508b89244d6401356d7ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0326d5117371f23cd446caf2c17e0d832ea5cf4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734533"
 ---
 # <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中目前進行中之全文檢索索引和語意關鍵片語擴展的資訊。  
  
@@ -38,13 +38,13 @@ ms.locfileid: "73983108"
 |**catalog_id**|**int**|包含這個全文檢索索引之全文檢索目錄的識別碼。|  
 |**table_id**|**int**|要擴展全文檢索索引的資料表識別碼。|  
 |**memory_address**|**varbinary(8)**|用來表示使用中母體擴展之內部資料結構的記憶體位址。|  
-|**population_type**|**int**|母體擴展的類型。 下列其中之一：<br /><br /> 1 = 完整母體擴展。<br /><br /> 2 = 累加、以時間戳記為基礎的母體擴展<br /><br /> 3 = 追蹤變更的手動更新。<br /><br /> 4 = 追蹤變更的背景更新。|  
+|**population_type**|**int**|母體擴展的類型。 發生下列情形之一：<br /><br /> 1 = 完整母體擴展。<br /><br /> 2 = 累加、以時間戳記為基礎的母體擴展<br /><br /> 3 = 追蹤變更的手動更新。<br /><br /> 4 = 追蹤變更的背景更新。|  
 |**population_type_description**|**nvarchar(120)**|母體擴展類型的描述。|  
 |**is_clustered_index_scan**|**bit**|指出母體擴展是否涉及叢集索引上的掃描。|  
 |**range_count**|**int**|這個母體擴展平行處理的子範圍數目。|  
 |**completed_range_count**|**int**|完成處理的範圍數目。|  
 |**outstanding_batch_count**|**int**|目前此母體擴展未處理的批次數目。 如需詳細資訊，請參閱[dm_fts_outstanding_batches &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)。|  
-|**status**|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 這個母體擴展的狀態。 注意：有些狀態是暫時性。 下列其中之一：<br /><br /> 3 = 啟動中<br /><br /> 5 = 正常處理<br /><br /> 7 = 已停止處理<br /><br /> 例如，當自動合併正在進行時，就會發生這個狀態。<br /><br /> 11 = 母體擴展中止<br /><br /> 12 = 正在處理語意相似度擷取|  
+|**status**|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 這個母體擴展的狀態。 注意：有些狀態是暫時性。 發生下列情形之一：<br /><br /> 3 = 啟動中<br /><br /> 5 = 正常處理<br /><br /> 7 = 已停止處理<br /><br /> 例如，當自動合併正在進行時，就會發生這個狀態。<br /><br /> 11 = 母體擴展中止<br /><br /> 12 = 正在處理語意相似度擷取|  
 |**status_description**|**nvarchar(120)**|母體擴展狀態的描述。|  
 |**completion_type**|**int**|這個母體擴展如何完成的狀態。|  
 |**completion_type_description**|**nvarchar(120)**|完成類型的描述。|  
@@ -59,8 +59,8 @@ ms.locfileid: "73983108"
   
 ## <a name="permissions"></a>權限  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
+在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
   
 ## <a name="physical-joins"></a>實體聯結  
  ![這個動態管理檢視的重要聯結](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "這個動態管理檢視的重要聯結")  

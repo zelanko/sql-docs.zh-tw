@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 560c425c5bda4ee1f9dd7ecf454c65d3ba7eab1e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0bc0c7973ad8ac653c2d9e7f613a3ec0325c12fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831719"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733323"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   設定資料指標選項，或傳回由 sp_cursoropen 預存程式所建立的資料指標資訊。 sp_cursoroption 的叫用方式是在表格式資料流程（TDS）封包中指定 ID = 8。  
   
@@ -45,7 +45,7 @@ sp_cursoroption cursor, code, value
  *code*  
  用來保證資料指標的各種因數一定會傳回值。 程式*代碼*需要下列其中一個**int**輸入值：  
   
-|值|名稱|說明|  
+|值|名稱|描述|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|針對某些指定的 text 或 image 資料行傳回文字指標，而不是實際的資料。<br /><br /> TEXTPTR_ONLY 允許使用文字指標做為 blob 物件的*控制碼*，稍後可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 DBLIB 設施（例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT 或 DBLIB DBWRITETEXT）選擇性地抓取或更新它們。<br /><br /> 如果指派 "0" 值，選取清單中的所有 text 和 image 資料行將會傳回文字指標，而不是資料。|  
 |0x0002|CURSOR_NAME|將 [*值*] 中指定的名稱指派給資料指標。 接著，這可讓 ODBC [!INCLUDE[tsql](../../includes/tsql-md.md)] 在透過 sp_cursoropen 開啟的資料指標上使用定位 UPDATE/DELETE 子句。<br /><br /> 此字串可以指定為任何字元或 Unicode 資料類型。<br /><br /> 由於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定位的 update/delete 語句預設會在 fat 資料指標的第一個資料列上運作，因此在發出定位的 update/delete 語句之前，應該先使用 SP_CURSOR SETPOSITION 來定位資料指標。|  
@@ -54,7 +54,7 @@ sp_cursoroption cursor, code, value
 |0x0005|CCOPT|並行控制選項。 如需詳細資訊，請參閱這個主題稍後的「傳回碼值」。|  
 |0x0006|ROWCOUNT|目前結果集中的資料列數目。<br /><br /> 注意：如果正在使用非同步擴展，資料列計數可能會因為 sp_cursoropen 傳回的值而變更。 如果未知的資料列數目，則會傳回值-1。|  
   
- *值*  
+ *value*  
  指定程式*代碼*所傳回的值。 *value*是必要的參數，它會呼叫0x0001、0x0002 或0x0003 程式*代碼*輸入值。  
   
 > [!NOTE]  
@@ -63,7 +63,7 @@ sp_cursoroption cursor, code, value
 ## <a name="return-code-values"></a>傳回碼值  
  *Value*參數可能會傳回下列其中一個程式*代碼*值。  
   
-|傳回值|說明|  
+|傳回值|描述|  
 |------------------|-----------------|  
 |0x0004|SCROLLOPT|  
 |0X0005|CCOPT|  
@@ -71,7 +71,7 @@ sp_cursoroption cursor, code, value
   
  *Value*參數會傳回下列其中一個 SCROLLOPT 值。  
   
-|傳回值|說明|  
+|傳回值|描述|  
 |------------------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -80,7 +80,7 @@ sp_cursoroption cursor, code, value
   
  *Value*參數會傳回下列其中一個 CCOPT 值。  
   
-|傳回值|說明|  
+|傳回值|描述|  
 |------------------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS|  

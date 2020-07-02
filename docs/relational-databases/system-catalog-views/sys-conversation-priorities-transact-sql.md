@@ -21,22 +21,22 @@ helpviewer_keywords:
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9398862ba3c86496ce235efc53b750d2c5f91ccf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4d4590c88082a2788039c2e0ea2d1789703b4501
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733478"
 ---
 # <a name="sysconversation_priorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含目前資料庫中所建立之每一個交談優先權的資料列，如下表所示： 
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |Priority_id|**int**|用來唯一識別交談優先權的號碼。 不是 NULLABLE。|  
-|name|**sysname**|交談優先權的名稱。 不是 NULLABLE。|  
+|NAME|**sysname**|交談優先權的名稱。 不是 NULLABLE。|  
 |service_contract_id|**int**|為此交談優先權指定之合約的識別碼。 這可以在 sys.service_contracts 中的 service_contract_id 資料行上繫結。 NULLABLE。|  
 |local_service_id|**int**|針對此交談優先權指定為本機服務之服務的識別碼。 此資料行可以在 sys.services 中的 service_contract_id 資料行上繫結。 NULLABLE。|  
 |remote_service_name|**nvarchar(256)**|針對此交談優先權指定為遠端服務之服務的名稱。 NULLABLE。|  

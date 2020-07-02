@@ -22,17 +22,17 @@ ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ab1797fabd8fb7d77eab85c97604b77e72f25c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae1f88ba7694f99546382d9b1450aea4c555f4d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734376"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  這是在[!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 語句的[from 子句](../../t-sql/queries/from-transact-sql.md)中使用的函式，可[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在包含以字元為基礎之資料類型的全文檢索索引資料行上執行全文檢索搜尋。 此函式會傳回零個、一個或多個資料列的資料表，其中包含的值符合指定之*freetext_string*中文字的意義，而不只是確切的用語。 FREETEXTTABLE 參考方式就如同一般資料表名稱一樣。  
+  這是在 SELECT 語句的[from 子句](../../t-sql/queries/from-transact-sql.md)中使用的函式 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含以字元為基礎之資料類型的全文檢索索引資料行上執行全文檢索搜尋。 此函式會傳回零個、一個或多個資料列的資料表，其中包含的值符合指定之*freetext_string*中文字的意義，而不只是確切的用語。 FREETEXTTABLE 參考方式就如同一般資料表名稱一樣。  
   
  FREETEXTTABLE 適用于與[FREETEXT &#40;transact-sql&#41;](../../t-sql/queries/freetext-transact-sql.md)相同的比對類型。  
   
@@ -84,7 +84,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
  當指定為字串時，*language_term* 會對應到 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 相容性檢視表中的 **alias** 資料行值。  字串必須以單引號括住，如 '*language_term*'。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
   
- 如果這個值是雙位元組字集（DBCS）格式， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會將它轉換成 Unicode。  
+ 如果這個值是雙位元組字集（DBCS）格式， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將它轉換成 Unicode。  
   
  如果指定的語言無效，或尚未安裝對應於這個語言的資源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳回錯誤。 若要使用中性語言資源，請將 0x0 指定為 *language_term*。  
   
@@ -125,7 +125,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');
 ```  
   
 ### <a name="b-using-freetext-in-an-inner-join"></a>B. 在 INNER JOIN 中使用 FREETEXT  
- 下列範例會傳回任何產品的描述和排名，其描述項合的意義`high level of performance`。  
+ 下列範例會傳回任何產品的描述和排名，其描述項合的意義 `high level of performance` 。  
   
 ```  
 USE AdventureWorks2012;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ### <a name="c-specifying-language-and-highest-ranked-matches"></a>C. 指定語言和最高等級的相符項目  
- 下列範例完全相同，並顯示`LANGUAGE` *language_term*和*top_n_by_rank*參數的用法。  
+ 下列範例完全相同，並顯示 `LANGUAGE` *language_term*和*top_n_by_rank*參數的用法。  
   
 ```  
 USE AdventureWorks2012;  

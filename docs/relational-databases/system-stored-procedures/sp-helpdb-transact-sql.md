@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb3ab70170f1b96bcfd62a9d7108792871ccd5d7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3a31eb5fa85ab7634d6fc65ac446607117ec70ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738514"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   報告指定的資料庫或所有資料庫的相關資訊。  
   
@@ -62,7 +62,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**name**|**nchar(128)**|邏輯檔案名稱。|  
 |**fileid**|**smallint**|檔案識別碼。|  
-|**名稱**|**Nchar （260）**|作業系統檔案名稱 (實體檔案名稱)。|  
+|**filename**|**Nchar （260）**|作業系統檔案名稱 (實體檔案名稱)。|  
 |**filegroup**|**nvarchar(128)**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
 |**size**|**Nvarchar （18）**|檔案大小 (以 MB 為單位)。|  
 |**maxsize**|**Nvarchar （18）**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 640d292dfbef7adae9fc99b53cb3b450f698b651
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8829d5f259f9a2e2b26b1e3252907ba9bd0b25dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733253"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   協助您輸入空間索引的週框方塊和格線參數。  
   
@@ -68,7 +68,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|代表每一個資料格的唯一識別碼，從 1 開始計算。|  
-|**格值**|**幾何**|這是表示每個資料格的矩形多邊形。 資料格形狀與空間索引所使用的資料格形狀相同。|  
+|**格值**|**性質**|這是表示每個資料格的矩形多邊形。 資料格形狀與空間索引所使用的資料格形狀相同。|  
 |**row_count**|**bigint**|指出觸及或包含資料格之空間物件的數目。|  
   
 ## <a name="permissions"></a>權限  

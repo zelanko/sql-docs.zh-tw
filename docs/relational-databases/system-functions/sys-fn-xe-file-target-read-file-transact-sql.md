@@ -22,20 +22,20 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b4ee24b0ee74540a967c713579365c68aa849dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "73982986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738569"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   讀取擴充事件非同步檔案目標所建立的檔案。 系統會以 XML 格式針對每個資料列傳回一個事件。  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]接受以 .XEL 和 XEM 格式產生的追蹤結果。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]擴充事件僅支援 .XEL 格式的追蹤結果。 我們建議您使用 SQL Server Management Studio 來讀取 XEL 格式的追蹤結果。    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 接受以 .xel 和 XEM 格式產生的追蹤結果。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]擴充事件僅支援 .XEL 格式的追蹤結果。 我們建議您使用 SQL Server Management Studio 來讀取 XEL 格式的追蹤結果。    
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -79,7 +79,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 
   
 ## <a name="remarks"></a>備註  
- 藉由在中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]執行**fn_xe_file_target_read_file**來讀取大型結果集，可能會導致錯誤。 使用 [**結果至**檔案模式] （**Ctrl + Shift + F**）將大型結果集匯出至檔案，並改為使用其他工具來讀取檔案。  
+ 藉由在中執行**fn_xe_file_target_read_file**來讀取大型結果集， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可能會導致錯誤。 使用 [**結果至**檔案模式] （**Ctrl + Shift + F**）將大型結果集匯出至檔案，並改為使用其他工具來讀取檔案。  
   
 ## <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  

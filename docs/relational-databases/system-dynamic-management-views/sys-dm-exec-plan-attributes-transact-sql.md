@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734786"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對計畫控制代碼所指定計畫的每個計畫屬性，各傳回一個資料列。 您可以使用這個資料表值函式取得特定計畫的詳細資料，例如快取索引鍵值或目前同時執行計畫數目。  
   
 > [!NOTE]  
->  透過這個函數傳回的部分資訊會對應至[syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)回溯相容性檢視。
+>  透過此函式傳回的部分資訊會對應至[sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)回溯相容性檢視。
 
 ## <a name="syntax"></a>語法  
 ```  
@@ -59,7 +59,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |dbid|**int**|這是包含此計畫參考之實體的資料庫識別碼。<br /><br /> 若為特定或準備計畫，這是執行批次的來源資料庫識別碼。|  
 |dbid_execute|**int**|對於儲存在**Resource**資料庫中的系統物件，這是執行快取計畫的源資料庫識別碼。 在所有其他狀況下，就會是 0。|  
 |user_id|**int**|-2 值表示提交的批次不會隨著隱含的名稱解析而不同，不同的使用者可以共用這些批次。 這是慣用的方法。 任何其他值都代表在資料庫中提交查詢之使用者的使用者識別碼。| 
-|language_id|**smallint**|建立快取物件之連接的語言識別碼。 如需詳細資訊，請參閱[sys.syslanguages &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
+|language_id|**smallint**|建立快取物件之連接的語言識別碼。 如需詳細資訊，請參閱[sys.sys&#40;transact-sql&#41;的語言](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
 |date_format|**smallint**|建立快取物件之連接的日期格式。 如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)。|  
 |date_first|**tinyint**|先顯示日期的值。 如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)。|  
 |status|**int**|屬於快取查閱索引鍵一部分的內部狀態位元。|  
@@ -121,7 +121,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |選項|值|  
 |------------|-----------|  
-|無|0|  
+|None|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  

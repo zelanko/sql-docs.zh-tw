@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d7e4ac0e338ac556c88c8cc22d6a87a53c67d51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c93aec2d5246073073fefaaaf4b21d3d542416a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487473"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737658"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR 整合和交易
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [ **System.object** ] 命名空間提供與 ADO.NET 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] COMMON language runtime （CLR）整合完全整合的交易架構。 在受控應用程式**中，交易會和 ADO.NET**共同合作，以擴充和簡化本機和分散式交易的使用。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  [ **System.object** ] 命名空間提供與 ADO.NET 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common LANGUAGE runtime （CLR）整合完全整合的交易架構。 在受控應用程式**中，交易會和 ADO.NET**共同合作，以擴充和簡化本機和分散式交易的使用。  
   
 > [!NOTE]  
 >  CLR 使用者定義程序 (UDP) 不能與執行所在的同一台伺服器建立連接 (回送連接)，也不能編列在相同的交易中。 如果嘗試這麼做，系統就會封鎖連接嘗試，而控制權將不會傳回給 UDP。 這樣將導致 UDP 上產生逾時錯誤 (訊息 1206)。  

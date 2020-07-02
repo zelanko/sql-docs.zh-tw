@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 47d68b6b6322b7597bf27128942757c149fea877
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e95828dcee6ea75c24df350379e6ac1e3c43d5ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826240"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733294"
 ---
 # <a name="sp_cursorunprepare-transact-sql"></a>sp_cursorunprepare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   捨棄在 sp_cursorprepare 預存程式中開發的執行計畫。 sp_cursorunprepare 的叫用方式是在表格式資料流程（TDS）封包中指定 ID = 6。  
   

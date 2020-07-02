@@ -20,19 +20,19 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ce44d14573000e9880fb1daf3a1ddb42746ee85
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: eff5e947caed2471d63c980418688f6945c78b21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151967"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734684"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上經過驗證的各個工作階段傳回一個資料列。 sys.dm_exec_sessions 是伺服器範圍檢視表，會顯示所有作用中使用者連接和內部工作的相關資訊。 這些資訊包括用戶端版本、用戶端程式名稱、用戶端登入時間、登入使用者、目前工作階段設定等。 請先使用 sys.dm_exec_sessions 檢視目前系統負載和找出所需的工作階段，然後再使用其他動態管理檢視或動態管理函數，取得該工作階段的更多資訊。  
   
- Dm_exec_connections、sys.databases dm_exec_sessions 和 sys.databases dm_exec_requests 動態管理檢視會對應到[sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)系統資料表。  
+ Dm_exec_connections、sys.databases dm_exec_sessions 和 sys.databases dm_exec_requests 動態管理檢視會對應到[sys.sys進程](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)系統資料表。  
   
 > **注意：** 若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_exec_sessions**的名稱。  
   

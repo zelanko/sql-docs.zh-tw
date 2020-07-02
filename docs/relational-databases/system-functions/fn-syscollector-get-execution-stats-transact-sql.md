@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71a070de7c74d353be395628566c0bd3f63fd99a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dad75f84dd7696364528fe215bcf2665d78562c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68042737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734391"
 ---
 # <a name="fn_syscollector_get_execution_stats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回有關收集組或封裝的詳細統計資料，其中包括封裝資料流程工作所記錄的錯誤資料列數目。 資料流程工作是處理資料的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件。 這些資料為關聯式格式，所以其輸入和輸出資料集會由資料列組成。  
   
@@ -48,7 +48,7 @@ fn_syscollector_get_execution_stats ( log_id )
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|avg_row_count_in|**int**|進入封裝之資料流程工作的平均資料列數目。<br /><br /> 注意：「資料流程」工作是處理[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]資料的元件。 這些資料為關聯式格式，所以其輸入資料集是由資料列所組成。 這是進入此工作的資料列數目。 在轉換資料之後，這些資料會當做由資料列組成的結果集輸出。 資料流程工作會轉換資料，並輸出由資料列組成的結果集。 這個輸出是結束工作的資料列數目。|  
+|avg_row_count_in|**int**|進入封裝之資料流程工作的平均資料列數目。<br /><br /> 注意：「資料流程」工作是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 處理資料的元件。 這些資料為關聯式格式，所以其輸入資料集是由資料列所組成。 這是進入此工作的資料列數目。 在轉換資料之後，這些資料會當做由資料列組成的結果集輸出。 資料流程工作會轉換資料，並輸出由資料列組成的結果集。 這個輸出是結束工作的資料列數目。|  
 |min_row_count_in|**int**|進入封裝之資料流程工作的最小資料列數目。|  
 |max_row_count_in|**int**|進入封裝之資料流程工作的最大資料列數目。|  
 |avg_row_count_out|**int**|結束封裝之資料流程工作的平均資料列數目。|  

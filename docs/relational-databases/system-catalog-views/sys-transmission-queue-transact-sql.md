@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1d420ae3d04072af5b0ce4bbc7d31e09bef78d8d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8f336c91717a8842ff5d3b3da980b413a13296d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826435"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733431"
 ---
 # <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   這份目錄檢視會針對傳輸佇列中的每一則訊息，各包含一個資料列，如下表所示：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82826435"
 |**is_end_of_dialog**|**bit**|這則訊息是否代表交談訊息結束。 不是 NULLABLE。<br /><br /> 0 = 不代表交談訊息結束。<br /><br /> 1 = 代表交談訊息結束。<br /><br /> 不是 NULLABLE。|  
 |**message_body**|**varbinary(max)**|這則訊息的主體。 NULLABLE。|  
 |**transmission_status**|**nvarchar(4000)**|這則訊息進入佇列的理由。 它通常是錯誤訊息，說明傳送訊息為何失敗。 如果是空白，表示尚未傳送訊息。 NULLABLE。|  
-|**優先順序**|**tinyint**|指派給這個訊息的優先權等級。 不是 NULLABLE。|  
+|**priority**|**tinyint**|指派給這個訊息的優先權等級。 不是 NULLABLE。|  
   
 ## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

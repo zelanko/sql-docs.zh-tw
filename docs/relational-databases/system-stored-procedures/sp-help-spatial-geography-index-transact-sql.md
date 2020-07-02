@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73bb564880cae238cdbaa7e3c13a1f18ab95dc99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1864aec83a60c83a1ff10bb0c5e3f814631c27fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304871"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733264"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回關於**地理**空間索引之指定屬性集的名稱和值。 結果會以資料表格式傳回。 您可以選擇傳回核心屬性集或索引的所有屬性。  
   
@@ -53,7 +53,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>備註  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`sp_help_spatial_geography_index`來調查** \@qs**中給定查詢範例在資料表**geography_col**上定義的**地理位置**空間索引**SIndx_SpatialTable_geography_col2** 。 這個範例只會傳回指定索引的核心屬性。  
+ 下列範例會使用 `sp_help_spatial_geography_index` 來調查** \@ qs**中給定查詢範例在資料表**geography_col**上定義的**地理位置**空間索引**SIndx_SpatialTable_geography_col2** 。 這個範例只會傳回指定索引的核心屬性。  
   
 ```  
 declare @qs geography  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6304e6381b9bbfcc17b218122631d06293e15830
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180084"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734715"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys.databases dm_exec_query_statistics_xml （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 傳回進行中要求的查詢執行計畫。 使用此 DMV 來抓取具有暫時性統計資料的顯示計畫 XML。 
 
@@ -55,7 +55,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|包含指定之查詢執行計畫的執行時間執行程式表標記法，其*plan_handle*包含部分統計資料。 顯示計畫是 XML 格式。 每個包含諸如特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、預存程序呼叫和使用者自訂函數呼叫的批次，都會產生一份計畫。 可為 Null。|
 
 ## <a name="remarks"></a>備註
-從[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始提供此系統功能。 請參閱 KB [3190871](https://support.microsoft.com/help/3190871)
+從 SP1 開始提供此系統功能 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。 請參閱 KB [3190871](https://support.microsoft.com/help/3190871)
 
 此系統函數適用于**標準**和**輕量**查詢執行統計資料分析基礎結構。 如需詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。  
 
@@ -63,23 +63,23 @@ sys.dm_exec_query_statistics_xml(session_id)
   
 -   如果對應至指定之*session_id*的查詢計劃已不再執行，則傳回資料表的**query_plan**資料行就是 null。 例如，如果已捕捉到計畫控制碼的時間，以及搭配使用**dm_exec_query_statistics_xml**，就會發生這個狀況。  
     
-由於**xml**資料類型所允許的嵌套層級數目有限制，因此**dm_exec_query_statistics_xml**無法傳回符合或超過128個嵌套元素層級的查詢計劃。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這會讓查詢計畫無法傳回並產生錯誤 6335。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 和更新版本中， **query_plan**資料行傳回 Null。   
+由於**xml**資料類型所允許的嵌套層級數目有限制，因此**dm_exec_query_statistics_xml**無法傳回符合或超過128個嵌套元素層級的查詢計劃。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這會讓查詢計畫無法傳回並產生錯誤 6335。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 和更新版本中， **query_plan**資料行傳回 Null。   
 
 ## <a name="permissions"></a>權限  
-在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要伺服器的許可權。  
-在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。
+在上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 伺服器的許可權。  
+在高階 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。
 
 ## <a name="examples"></a>範例  
   
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. 查看執行中批次的即時查詢計劃和執行統計資料  
- 下列範例會查詢**dm_exec_requests sys.databases** ，以尋找有趣的查詢，並從`session_id`輸出複製其。  
+ 下列範例會查詢**dm_exec_requests sys.databases** ，以尋找有趣的查詢，並 `session_id` 從輸出複製其。  
   
 ```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
- 然後，若要取得即時查詢計劃和執行統計資料，請使用`session_id`以系統函數**sys.databases dm_exec_query_statistics_xml**複製的。  
+ 然後，若要取得即時查詢計劃和執行統計資料，請使用 `session_id` 以系統函數**sys.databases dm_exec_query_statistics_xml**複製的。  
   
 ```sql  
 --Run this in a different session than the session in which your query is running.

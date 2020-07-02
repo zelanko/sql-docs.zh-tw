@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 319b4a3008f398327459a0c90d7d69a4d6d97aef
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 82e4d489647838e6a0a84b98f82493a76b28417a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832294"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736738"
 ---
 # <a name="msmerge_current_partition_mappings"></a>MSmerge_current_partition_mappings
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_current_partition_mappings**資料表會針對給定的已變更資料列所屬的每個資料分割識別碼，各儲存一個資料列。 這份資料表儲存在發行集資料庫中。  
   

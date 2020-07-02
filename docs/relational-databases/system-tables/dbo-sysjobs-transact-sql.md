@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobs （Transact-sql） |Microsoft Docs
+title: dbo.sys作業（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fe374a81fc88b6591da8fb0303d5ea490cccac0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: adf7124fe37d506eb0ac9b3dcb0bab5d6e85423b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806938"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736866"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   儲存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所要執行之各項排程作業的資訊。 此資料表會儲存在**msdb**資料庫中。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82806938"
 |**originating_server_id**|**int**|作業的來源伺服器識別碼。|  
 |**name**|**sysname**|作業的名稱。|  
 |**後**|**tinyint**|指出是否啟用作業，以便執行。|  
-|**描述**|**nvarchar(512)**|作業的描述。|  
+|**description**|**nvarchar(512)**|作業的描述。|  
 |**start_step_id**|**int**|應該作為執行起點的作業步驟識別碼。|  
 |**category_id**|**int**|作業類別目錄的識別碼。|  
 |**owner_sid**|**Varbinary （85）**|作業擁有者的安全性識別碼 (SID)。|  

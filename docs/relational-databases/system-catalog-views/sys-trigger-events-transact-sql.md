@@ -20,15 +20,15 @@ ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a4a15ab9d38297ee1376d70a817efcf603d47df
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 71eefe5aca3271ca76f996ec255ce2f34c3a9ab1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833882"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733437"
 ---
 # <a name="systrigger_events-transact-sql"></a>sys.trigger_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   針對引發觸發程序的每個事件，各包含一個資料列。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82833882"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<繼承自 sys.databases 的資料行>**|不適用|從[sys. 事件](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)繼承**object_id**、**類型** **type_desc**資料行。|  
+|**\<Columns inherited from sys.events>**|不適用|從[sys. 事件](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)繼承**object_id**、**類型** **type_desc**資料行。|  
 |**is_first**|**bit**|觸發程序被標示為這個事件要引發的第一個觸發程序。|  
 |**is_last**|**bit**|觸發程序被標示為這個事件要引發的最後一個觸發程序。|  
 |**event_group_type**|**int**|觸發程序建立所在的事件群組，如果未在事件群組上建立則為 null。|  

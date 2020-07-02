@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7b44d76ad893775216e6566add3636603ea7dce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e27de1c2b303474117a0ea442dde81606a9f48f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830622"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734602"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   顯示命名空間擁有者 (NSO) 在給定時間處理之 I/O 要求的清單。  
   
-|資料行|類型|說明|  
+|資料行|類型|描述|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary(8)**|顯示 NSO 記憶體區塊的內部位址，該記憶體區塊包含來自驅動程式的 I/O 要求。 不可為 Null。|  
 |**current_spid**|**smallint**|顯示目前 SQL Server 連接的系統處理序識別碼（SPID）。 不可為 Null。|  

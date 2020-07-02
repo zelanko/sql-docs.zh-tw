@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35a1418e416e32ab5b8dc9647c4a9aa24700b624
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a50ed63856e9998066db0b4d0791feb79478726c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734156"
 ---
 # <a name="xquery-language-reference-sql-server"></a>Xquery 語言參考 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[tsql](../includes/tsql-md.md)]支援用來查詢**xml**資料類型之 XQuery 語言的子集。 此 XQuery 實作是與 XQuery 的 July 2004 Working Draft 合作。 該語言是由 World Wide Web Consortium (W3C) 以及所有主要資料庫廠商，還有 Microsoft 聯合開發。 因為 W3C 規格可能會在成為 W3C 建議之前會歷經數次修改，所以此實行可能會跟最終的建議不同。 此主題說明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援之 XQuery 子集的語意及語法。  
   
  如需詳細資訊，請參閱[W3C XQuery 1.0 語言規格](https://go.microsoft.com/fwlink/?LinkId=48846)。  
   
- XQuery 是可查詢結構化或半結構化 XML 資料的語言。 使用中提供的**xml**資料類型支援[!INCLUDE[ssDE](../includes/ssde-md.md)]，檔可儲存在資料庫中，然後使用 XQuery 進行查詢。  
+ XQuery 是可查詢結構化或半結構化 XML 資料的語言。 使用中提供的**xml**資料類型支援 [!INCLUDE[ssDE](../includes/ssde-md.md)] ，檔可儲存在資料庫中，然後使用 XQuery 進行查詢。  
   
  XQuery 是以現有的 XPath 查詢語言為基礎，加上額外支援以獲取更佳的反覆運算、更好的排序結果，以及建構必要 XML 的能力。 XQuery 可在 XQuery 資料模型上運作。 這是 XML 文件與已指定類型及不具類型之 XQuery 結果的摘要。 類型資訊是以 W3C XML 結構描述語言提供的類型為依據。 如果沒有類型資訊可用，XQuery 會將資料處理為不具類型。 這與 XPath 1.0 版處理 XML 的方式相似。  
   
@@ -53,7 +53,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- XQuery 包含命名空間宣告、 `declare namespace``AWMI=...`和查詢運算式。 `/AWMI:root/AWMI:Location[@LocationID=10]`  
+ XQuery 包含命名空間宣告、 `declare namespace``AWMI=...` 和查詢運算式 `/AWMI:root/AWMI:Location[@LocationID=10]` 。  
   
  請注意，XQuery 是針對**xml**類型的 [指示] 資料行所指定。 Xml 資料類型的[query （）方法](../t-sql/xml/query-method-xml-data-type.md)是用來指定 XQuery。  
   
@@ -61,12 +61,12 @@ WHERE ProductModelID=7
   
 |主題|描述|  
 |-----------|-----------------|  
-|[XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|說明中**xml**資料類型的支援[!INCLUDE[ssDE](../includes/ssde-md.md)] ，以及您可以針對此資料類型使用的方法。 **Xml**資料類型會形成執行 xquery 運算式所在的輸入 xquery 資料模型。|  
+|[XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|說明中**xml**資料類型的支援 [!INCLUDE[ssDE](../includes/ssde-md.md)] ，以及您可以針對此資料類型使用的方法。 **Xml**資料類型會形成執行 xquery 運算式所在的輸入 xquery 資料模型。|  
 |[XML 結構描述集合 &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)|描述如何指定資料庫中儲存之 XML 執行個體的類型。 這表示您可以將 XML 架構集合與**xml**類型資料行產生關聯。 資料行中儲存的所有執行個體，都是以集合中的結構描述進行驗證及指定類型，而且可為 XQuery 提供類型資訊。|  
 |||  
   
 > [!NOTE]  
->  本章節的組織是以 World Wide Web Consortium (W3C) XQuery Working Draft 規格為依據。 本章節中提供的部分圖表即採自上述規格。 本章節會比較 Microsoft XQuery 實作與 W3C 規格，描述 Microsoft XQuery 跟 W3C 的不同之處，以及指出不支援的 W3C 功能。 您可以從[http://www.w3.org/TR/2004/WD-xquery-20040723](https://go.microsoft.com/fwlink/?LinkId=48846)取得 W3C 規格。  
+>  本章節的組織是以 World Wide Web Consortium (W3C) XQuery Working Draft 規格為依據。 本章節中提供的部分圖表即採自上述規格。 本章節會比較 Microsoft XQuery 實作與 W3C 規格，描述 Microsoft XQuery 跟 W3C 的不同之處，以及指出不支援的 W3C 功能。 您可以從取得 W3C 規格 [http://www.w3.org/TR/2004/WD-xquery-20040723](https://go.microsoft.com/fwlink/?LinkId=48846) 。  
   
 ## <a name="in-this-section"></a>本節內容  
   

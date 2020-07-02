@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a432685809676f997049940ea5aa1ce43dc38a60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a965be50e45300aeca3ba158251c665e8204a6f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029634"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736672"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHsyscolumns** view 會公開從非 SQL Server 發行者發佈之發行項的資料行資訊。 這個視圖會儲存在散發資料庫中。  
   
@@ -33,10 +33,10 @@ ms.locfileid: "68029634"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|資料行或程序參數的名稱。|  
 |**id**|**int**|這個資料行所屬資料表的物件識別碼，或這個參數相關聯預存程序的識別碼。|  
-|**xtype**|**tinyint**|[Systypes &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)的實體儲存體類型。|  
+|**xtype**|**tinyint**|[sys.sys類型 &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)的實體儲存體類型。|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|擴充使用者自訂資料類型的識別碼。|  
-|**length**|**bigint**|[Systypes &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)的最大實體儲存體長度。|  
+|**length**|**bigint**|從[sys.sys類型 &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)的最大實體儲存體長度。|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**int**|資料行或參數識別碼。|  
@@ -45,16 +45,16 @@ ms.locfileid: "68029634"
 |**留**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|這個資料行之預設值的識別碼。|  
-|**網域**|**int**|這個資料行的規則或 CHECK 條件約束的識別碼。|  
+|**domain**|**int**|這個資料行的規則或 CHECK 條件約束的識別碼。|  
 |**number**|**int**|程式分組時的副程式號碼（**0**代表非程式專案）。|  
 |**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**位移**|**int**|這個資料行出現在其中的資料列內位移。|  
+|**offset**|**int**|這個資料行出現在其中的資料列內位移。|  
 |**collationid**|**int**|資料行定序的識別碼。 以非字元為基礎的資料行是 NULL。|  
 |**語言**|**int**|資料行的語言識別碼。|  
 |**status**|**int**|用來描述資料行或參數屬性的點陣圖：<br /><br /> **0x08** = 資料行允許 null 值。<br /><br /> **0x10** = 當加入**Varchar**或**Varbinary**資料行時，ANSI 填補已生效。 會保留**Varchar**的尾端空白，並保留**Varbinary**資料行的尾端零。<br /><br /> **0x40** = 參數是輸出參數。<br /><br /> **0x80** = 資料行是識別欄位。|  
-|**type**|**int**|[Systypes &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)的實體儲存體類型。|  
-|**usertype**|**tinyint**|[Systypes &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)的使用者定義資料類型識別碼。|  
+|**type**|**int**|[sys.sys類型 &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)的實體儲存體類型。|  
+|**usertype**|**tinyint**|來自sys.sys類型的使用者自訂資料類型的識別碼[&#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|這個資料行的有效位數層級。|  
 |**scale**|**int**|這個資料行的小數位數。|  

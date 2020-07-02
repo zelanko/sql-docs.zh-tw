@@ -28,15 +28,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e4cfa5ef312bc9048a53405a6c1083183b10054
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 01fd8e99d6eb770c2f5680ead1e2c4d9b9ec98b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733660"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新資料 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   當您更新現有的資料時，您必須同時指定 **\<before>** 和 **\<after>** 區塊。 和區塊中指定的元素會 **\<before>** **\<after>** 描述所需的變更。 Updategram 會使用區塊中指定的元素， **\<before>** 來識別資料庫中的現有記錄。 區塊中的對應元素 **\<after>** 會指出在執行更新作業之後，記錄的外觀。 在此資訊中，updategram 會建立符合區塊的 SQL 語句 **\<after>** 。 接著，Updategram 會使用此陳述式來更新資料庫。  
   
  下列是更新作業的 Updategram 格式：  

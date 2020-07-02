@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5720617f6652a8acb1ab8b6daf0e5e8919a86f8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 01b0a68658112ebde642dde3f9c1fa0fb1d73c57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734739"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.databases dm_exec_query_optimizer_memory_gateways （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 傳回用來節流並行查詢優化的資源信號目前狀態。
 
@@ -40,7 +40,7 @@ ms.locfileid: "74165006"
 |**active_count**|**int**|此閘道目前的使用中編譯計數|
 |**waiter_count**|**int**|此閘道中的等候者數目|
 |**threshold_factor**|**bigint**|此臨界值因數會定義查詢優化所使用的最大記憶體部分。  針對小型閘道，threshold_factor 會在需要取得小型閘道的存取權之前，指出一個查詢的最大優化工具記憶體使用量（以位元組為單位）。  對於中型和大型閘道，threshold_factor 會顯示此閘道可用的總伺服器記憶體的部分。 計算閘道的記憶體使用量臨界值時，會使用它做為除數。|
-|**閾值**|**bigint**|下一個閾值記憶體（以位元組為單位）。  如果此閘道的記憶體耗用量達到此閾值，則需要此查詢才能取得此閘道的存取權。  如果不需要查詢即可取得此閘道的存取權，則為 "-1"。|
+|**threshold**|**bigint**|下一個閾值記憶體（以位元組為單位）。  如果此閘道的記憶體耗用量達到此閾值，則需要此查詢才能取得此閘道的存取權。  如果不需要查詢即可取得此閘道的存取權，則為 "-1"。|
 |**is_active**|**bit**|查詢是否需要傳遞目前的閘道。|
 
 
@@ -71,5 +71,5 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 ## <a name="see-also"></a>另請參閱  
  [動態管理 Views 和函數 &#40;Transact-sql&#41;](./system-dynamic-management-views.md)   
  [執行相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[如何使用 DBCC MEMORYSTATUS 命令監視 SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
-上的記憶體使用量在[SQL Server 2014 中 RESOURCE_SEMAPHORE_QUERY_COMPILE 的大型查詢編譯等候](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)
+[如何使用 DBCC MEMORYSTATUS 命令監視 SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005) 
+ 上的記憶體使用量[大型查詢編譯會等候 SQL Server 2014 中的 RESOURCE_SEMAPHORE_QUERY_COMPILE](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

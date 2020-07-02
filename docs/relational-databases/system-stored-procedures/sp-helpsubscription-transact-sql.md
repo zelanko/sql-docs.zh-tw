@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43951ff65e904bcb0802f84793f9f2101bfd14e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736945"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   列出特定發行集、發行項、訂閱者或訂閱組的相關聯訂閱資訊。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -67,7 +67,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**預訂**|**sysname**|訂閱者的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
-|**篇**|**sysname**|發行項的名稱。|  
+|**文章**|**sysname**|發行項的名稱。|  
 |**目的地資料庫**|**sysname**|複寫的資料放在其中的目的地資料庫名稱。|  
 |**訂用帳戶狀態**|**tinyint**|訂閱狀態：<br /><br /> **0** = 非使用中<br /><br /> **1** = 已訂閱<br /><br /> **2** = 使用中|  
 |**同步處理類型**|**tinyint**|訂閱同步處理類型：<br /><br /> **1** = 自動<br /><br /> **2** = 無|  

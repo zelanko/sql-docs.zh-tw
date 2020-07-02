@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 9abc595c-346d-42dc-a227-a73cd0a356eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c50aa211af4a359357ae2d3aa9b892e9fc51983f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ed21f6458cfeb7b9a812a179339029846209344
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733561"
 ---
 # <a name="external-operations-catalog-views-transact-sql"></a>外部作業目錄檢視（Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   以下是外部資料物件的目錄檢視，例如資料來源、檔案格式和資料表。 您可以使用這些 views 來查詢專案的狀態，例如 PolyBase 作業中使用的 Hadoop 資料表。  
   

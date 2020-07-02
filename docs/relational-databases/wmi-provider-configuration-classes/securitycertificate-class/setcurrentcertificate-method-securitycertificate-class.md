@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17d637c2b5b4a8f65a2d2e843cdf439d856fdd3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de53ad9b1159428bf2695b6322a97ed83b3adeaa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736632"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate 方法 (SecurityCertificate 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   設定目前的安全性憑證。  
   
 ## <a name="syntax"></a>語法  
@@ -36,7 +36,7 @@ object.SetCurrentCertificate(SHA , SQLInstance)
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *object*  
  代表安全性憑證的 [SecurityCertificate 類別](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 物件。  
   
 #### <a name="parameters"></a>參數  
