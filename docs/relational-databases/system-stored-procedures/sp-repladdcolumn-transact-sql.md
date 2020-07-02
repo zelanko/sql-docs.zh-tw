@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08f459761c6e72063979bef6f7d9067611f2dd78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05c00137acdf989456903fedddcc45a7b79e0e61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751636"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   將資料行加入已發行的現有資料表發行項中。 它可讓您將新資料行加入發行這份資料表的所有發行者中，或只將資料行加入發行這份資料表的特定發行集。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -52,7 +52,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  [ @column =] ' 資料*行*'  
  這是複寫要加入之資料表中的資料行名稱。 資料*行*是**sysname**，沒有預設值。  
   
- [ @typetext =] '*typetext*'  
+ [ @typetext = ] '*typetext*'  
  這是要加入之資料行的定義。 *typetext*是**Nvarchar （3000）**，沒有預設值。 例如，如果正在加入資料行 order_filled，而且它是單一字元欄位，而非 Null，而且預設值是**N**，則 order_filled 會是資料*行*參數，而資料行的定義**CHAR （1） NOT Null 條件約束 constraint_name 預設的 ' N '** 則是*typetext*參數值。  
   
  [ @publication_to_add =] '*publication_to_add*'  

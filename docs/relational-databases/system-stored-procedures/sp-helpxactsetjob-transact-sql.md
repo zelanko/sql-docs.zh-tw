@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9fbc18b737c4c901527e6dc1684b75c2f5ddedda
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ac90a8a3e892aef0bb5d45a6864fb2291f52d60f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751730"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   顯示 Oracle 發行者的 Xactset 作業的相關資訊。 這個預存程序執行於任何資料庫中的散發者端。  
   
@@ -48,7 +48,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**thisdate**|**Varchar （22）**|變更的時間|  
 |**nextdate**|**Varchar （22）**|下次作業執行的日期。|  
 |**broken**|**varchar(1)**|指出作業是否中斷的旗標。|  
-|**interval**|**Varchar （200）**|作業的間隔時間。|  
+|**期間**|**Varchar （200）**|作業的間隔時間。|  
 |**故障**|**int**|作業的失敗次數。|  
 |**xactsetjobwhat**|**Varchar （200）**|作業所執行的程序名稱。|  
 |**xactsetjob**|**varchar(1)**|作業的狀態，它可以是下列項目之一：<br /><br /> **1** -已啟用作業。<br /><br /> **0** -作業已停用。|  

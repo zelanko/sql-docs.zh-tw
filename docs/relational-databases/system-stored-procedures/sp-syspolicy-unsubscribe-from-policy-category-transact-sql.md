@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 63fa5b02e681309e36b0c42ec5b504d9f07228ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d606cbca53810eaa9e19153e5de8b821391b2659
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752772"
 ---
 # <a name="sp_syspolicy_unsubscribe_from_policy_category-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   刪除目前資料庫的原則類別目錄訂閱。  
   
@@ -41,7 +41,7 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ## <a name="arguments"></a>引數  
 `[ @policy_category = ] 'policy_category'`這是您想要刪除之原則類別目錄訂用帳戶的名稱。 *policy_category*是**sysname**，而且是必要的。  
   
- 若要取得*policy_category*的值，請查詢 msdb. dbo. syspolicy_policy_categories 系統檢視。  
+ 若要取得*policy_category*的值，請查詢 msdb.dbo.syspolicy_policy_categories 系統檢視。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

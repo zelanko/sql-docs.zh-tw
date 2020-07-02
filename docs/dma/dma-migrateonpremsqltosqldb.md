@@ -1,7 +1,7 @@
 ---
 title: 使用 Data Migration Assistant，將 SQL Server 遷移至 Azure SQL Database
 description: 瞭解如何使用 Data Migration Assistant 將內部部署 SQL Server 遷移至 Azure SQL Database
-ms.date: 07/15/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6280a3ea803424dc2a6a72d673c59e1e48816601
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ec6b5ad0ab2047e72a1f3e3e5dfcd9fc49b954d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885925"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749783"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>使用 Data Migration Assistant，將內部部署 SQL Server 或 Azure Vm 上的 SQL Server 遷移至 Azure SQL Database
 
@@ -33,7 +33,7 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
 2. 將 [來源類型] 設定為**SQL Server** ，並將目標伺服器類型設為**Azure SQL Database**。
 
-3. 選取 [建立]  。
+3. 選取 [建立]。
 
    ![建立遷移專案](../dma/media/NewCreate1.png)
 
@@ -48,7 +48,7 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
     ![選取來源伺服器](../dma/media/select-source-server.png)
 
-3. 選取 [連接]  。
+3. 選取 [連接]。
 
 4. 選取要遷移至 Azure SQL Database 的單一源資料庫。
 
@@ -57,7 +57,7 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
     ![選取源資料庫](../dma/media/select-source-database.png)
 
-5. 選取 [下一步] 。
+5. 選取 [下一步]。
 
 ## <a name="specify-the-target-server-and-database"></a>指定目標伺服器和資料庫
 
@@ -70,7 +70,7 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
      ![選取目標伺服器](../dma/media/select-target-server.png)
 
-3. 選取 [連接]  。
+3. 選取 [連接]。
 
 4. 選取要移轉至的單一目標資料庫。
 
@@ -79,7 +79,7 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
     ![選取目標資料庫](../dma/media/select-target-database.png)
 
-5. 選取 [下一步] 。
+5. 選取 [下一步]。
 
 ## <a name="select-schema-objects"></a>選取結構描述物件
 
@@ -87,8 +87,8 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
     ![選取結構描述物件](../dma/media/select-schema-objects.png)
 
-       > [!NOTE]
-       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
+    > [!NOTE]
+    > 有些無法原樣轉換的物件會出現自動修正機會。 按一下左窗格上的這些物件，可在右窗格上顯示建議的修正程式。 檢閱修正程式，並選擇套用或忽略所有變更 (逐一物件)。 請注意，套用或忽略某個物件的所有變更，並不會影響其他資料庫物件的變更。 無法轉換或自動修正的陳述式會重製到目標資料庫，並加上註解。
 
     ![建議的修正](../dma/media/suggested-fix.png)
 

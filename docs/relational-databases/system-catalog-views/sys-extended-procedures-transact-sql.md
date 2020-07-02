@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42ecb7a4199bd42c6f522e447f260c37e3ba3368
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bcc9d30d457e9042f2a667a7a71f846f6e07eb63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738758"
 ---
 # <a name="sysextended_procedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對屬於擴充預存程式的每個物件，各包含一個資料列，其中具有**sys.databases。 type** = X。因為擴充預存程式是安裝在**master**資料庫中，所以只會顯示在該資料庫內容中。 從任何其他資料庫內容中的**sys.databases extended_procedures**視圖進行選取，將會傳回空的結果集。  
 
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<繼承自 sys.databases 的資料行>**||如需此視圖所繼承之資料行的清單，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**\<Columns inherited from sys.objects>**||如需此視圖所繼承之資料行的清單，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**dll_name**|**nvarchar(260)**|這個擴充預存程序之 DLL 的名稱，其中包括路徑。|  
   
 ## <a name="permissions"></a>權限  

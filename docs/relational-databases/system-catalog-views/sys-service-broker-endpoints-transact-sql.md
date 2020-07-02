@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 221a490f6accb13706c19860f70c1de2db6d2bf8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a59beeb51d59b00fbd902045f0f1aaebc9322a64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832666"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752907"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   這份目錄檢視會針對 Service Broker 端點，各包含一個資料列。 對於此視圖中的每個資料列，在包含 TCP 設定中繼資料的 [ **tcp_endpoints** ] 視圖中，都有一個具有相同**endpoint_id**的對應資料列。 TCP 是 Service Broker 唯一允許使用的通訊協定。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<繼承的資料行>**|**--**|從 sys.databases 繼承[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)的資料行。|  
+|**\<inherited columns>**|**--**|從 sys.databases 繼承[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)的資料行。|  
 |**is_message_forwarding_enabled**|**bit**|端點支援訊息轉送。 這一開始會設定為**0** （已停用）。 不是 NULLABLE。|  
 |**message_forwarding_size**|**int**|允許用於轉送訊息之**tempdb**空間的最大 mb 數。 這一開始會設定為**10**。 不是 NULLABLE。|  
 |**connection_auth**|**tinyint**|與這個端點連接所需的連接驗證類型，它有下列幾種：<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -NEGOTIATE<br /><br /> **4** -憑證<br /><br /> **5** -NTLM、憑證<br /><br /> **6** -KERBEROS、憑證<br /><br /> **7** -NEGOTIATE，憑證<br /><br /> **8** -憑證、NTLM<br /><br /> **9** -憑證、KERBEROS<br /><br /> **10** -CERTIFICATE、NEGOTIATE<br /><br /> 不是 NULLABLE。|  

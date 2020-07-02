@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e9c59c6347317d193eafe43c511c0ece3831e29c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828407"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750528"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   列出一或多個 Proxy 的資訊。  
   
@@ -55,7 +55,7 @@ sp_help_proxy
 |-----------|-----------------|  
 |ActiveScripting|ActiveX Script|  
 |CmdExec|作業系統 (CmdExec)|  
-|快照集|複寫快照集代理程式|  
+|快照式|複寫快照集代理程式|  
 |LogReader|複寫記錄讀取器代理程式|  
 |散發|複寫散發代理程式|  
 |合併|Replication Merge Agent|  
@@ -78,7 +78,7 @@ sp_help_proxy
 |**name**|**sysname**|Proxy 的名稱。|  
 |**credential_identity**|**sysname**|Proxy 相關認證的 Microsoft Windows 網域名稱和使用者名稱。|  
 |**後**|**tinyint**|是否啟用這個 Proxy。 { **0** = 未啟用， **1** = 已啟用}|  
-|**描述**|**nvarchar(1024)**|這個 Proxy 的描述。|  
+|**description**|**nvarchar(1024)**|這個 Proxy 的描述。|  
 |**user_sid**|**Varbinary （85）**|這個 Proxy 的 Windows 使用者之 Windows 安全性識別碼。|  
 |**credential_id**|**int**|這個 Proxy 的相關認證識別碼。|  
 |**credential_identity_exists**|**int**|credential_identity 是否存在。 { 0 = 不存在，1 = 存在 }|  

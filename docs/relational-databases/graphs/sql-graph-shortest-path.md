@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056405"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753257"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH （Transact-sql）
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
 
   指定以遞迴或重複方式搜尋之圖形的搜尋條件。 在 SELECT 語句中，可以在與圖形節點和邊緣資料表相符的 SHORTEST_PATH 中使用。 
   
@@ -85,7 +85,7 @@ STRING_AGG 函式會採用運算式和分隔符號做為輸入，並傳回字串
 ### <a name="last_value"></a>LAST_VALUE
 若要從已進行路徑的最後一個節點來投影屬性，可以使用 LAST_VALUE 彙總函式。 提供邊緣資料表別名做為此函式的輸入是錯誤的，只可以使用節點資料表名稱或別名。
 
-**最後一個節點**：最後一個節點會參考出現在路徑中的最後一個節點，而不考慮 MATCH 述詞中箭號的方向。 例如： `MATCH(SHORTEST_PATH(n(-(e)->p)+) )` 。 在這裡，路徑中的最後一個節點會是最後一次造訪的 P 節點。 
+**最後一個節點**：最後一個節點會參考出現在路徑中的最後一個節點，而不考慮 MATCH 述詞中箭號的方向。 例如：`MATCH(SHORTEST_PATH(n(-(e)->p)+) )`。 在這裡，路徑中的最後一個節點會是最後一次造訪的 P 節點。 
 
 不過，最後一個節點是此模式輸出圖形路徑中的最後 n 個節點：`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
@@ -93,7 +93,7 @@ STRING_AGG 函式會採用運算式和分隔符號做為輸入，並傳回字串
 此函式會傳回所提供節點/邊緣屬性值的總和，或出現在所遍歷路徑中的運算式。
 
 ### <a name="count"></a>COUNT
-此函式會傳回路徑中所需節點/邊緣屬性的非 null 值數目。 COUNT 函數支援具有節點或\*邊緣資料表別名的 ' ' 運算子。 如果沒有節點或邊緣資料表別名，的使用方式\*就不明確，而且會導致錯誤。
+此函式會傳回路徑中所需節點/邊緣屬性的非 null 值數目。 COUNT 函數支援 \* 具有節點或邊緣資料表別名的 ' ' 運算子。 如果沒有節點或邊緣資料表別名，的使用方式 \* 就不明確，而且會導致錯誤。
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 

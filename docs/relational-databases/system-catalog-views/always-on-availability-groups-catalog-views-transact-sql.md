@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c22f06547d1b51333b68efb300661763755fd843
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 107bf85ac92fc91aeed7fb5f4ab445e57605e39a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753021"
 ---
 # <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On 可用性群組目錄檢視（Transact-sql）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本節包含與 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 相關的目錄檢視和函數。  
   

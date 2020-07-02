@@ -1,5 +1,5 @@
 ---
-title: dbo. sysschedules （Transact-sql） |Microsoft Docs
+title: dbo.sys排程（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de79a475b8edb8f02eee15d79f1259b8032b60e8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 09ece580c45e1ec93b183f2d830c9daf68287ab1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750248"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業排程的相關資訊。 此資料表會儲存在**msdb**資料庫中。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82806670"
 |**freq_interval**|**int**|執行作業的天數。 取決於**freq_type**的值。 預設值為**0**，表示未使用**freq_interval** 。 如需可能的值及其效果，請參閱下表。|  
 |**freq_subday_type**|**int**|**Freq_subday_interval**的單位。 以下是可能的值及其描述。<br /><br /> <br /><br /> **1** ：在指定的時間<br /><br /> **2** ：秒<br /><br /> **4** ：分鐘<br /><br /> **8** ：小時|  
 |**freq_subday_interval**|**int**|每次執行作業之間所發生的**freq_subday_type**週期數。|  
-|**freq_relative_interval**|**int**|當每個月發生**freq_interval**時，如果**freq_type**為**32** （每月相對）。 可以是下列值之一：<br /><br /> **0**  = 未使用**freq_relative_interval**<br /><br /> **1** = 第一個<br /><br /> **2** = 秒<br /><br /> **4** = 第三個<br /><br /> **8** = 第四個<br /><br /> **16** = 最後|  
+|**freq_relative_interval**|**int**|當每個月發生**freq_interval**時，如果**freq_type**為**32** （每月相對）。 可以是下列其中一個值：<br /><br /> **0**  = 未使用**freq_relative_interval**<br /><br /> **1** = 第一個<br /><br /> **2** = 秒<br /><br /> **4** = 第三個<br /><br /> **8** = 第四個<br /><br /> **16** = 最後|  
 |**freq_recurrence_**<br /><br /> **在內**|**int**|作業的排程執行之間的週數或月數。 只有在**freq_type**是**8**、 **16**或**32**時，才會使用**freq_recurrence_factor** 。 如果此資料行包含**0**，則不會使用**freq_recurrence_factor** 。|  
 |**active_start_date**|**int**|可以開始執行作業的日期。 日期格式為 YYYYMMDD。 NULL 表示今天的日期。|  
 |**active_end_date**|**int**|可以停止執行作業的日期。 日期格式為 YYYYMMDD。|  
@@ -65,6 +65,6 @@ ms.locfileid: "82806670"
 |**128** （當電腦閒置時執行）|未使用**freq_interval** （**0**）|  
   
 ## <a name="see-also"></a>另請參閱  
- [sysjobschedules &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
+ [dbo.sysjobschedules &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

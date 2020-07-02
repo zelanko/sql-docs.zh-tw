@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb61b115689472c5be3ec14de2e7387de3317d4d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f5d5c822264682aa3fb6fd43d26f589aeb272f45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752741"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   列出 Database Mail 帳戶的相關資訊 (密碼除外)。  
   
@@ -54,13 +54,13 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |資料行名稱|資料類型|描述|  
 |**account_id**|**int**|帳戶的識別碼。|  
 |**name**|**sysname**|帳戶的名稱。|  
-|**描述**|**nvarchar(256)**|帳戶的描述。|  
+|**description**|**nvarchar(256)**|帳戶的描述。|  
 |**email_address**|**nvarchar(128)**|傳送訊息的來源電子郵件地址。|  
 |**display_name**|**nvarchar(128)**|帳戶的顯示名稱。|  
 |**replyto_address**|**nvarchar(128)**|這個帳戶發出的訊息之回應所要送往的地址。|  
 |**servertype**|**sysname**|帳戶的電子郵件伺服器類型。|  
 |**servername**|**sysname**|帳戶的電子郵件伺服器名稱。|  
-|**移植**|**int**|電子郵件伺服器所用的通訊埠編號。|  
+|**port**|**int**|電子郵件伺服器所用的通訊埠編號。|  
 |**username**|**nvarchar(128)**|如果電子郵件伺服器使用驗證的話，用來登入電子郵件伺服器的使用者名稱。 當**username**為 Null 時，Database Mail 不會對此帳戶使用驗證。|  
 |**use_default_credentials**|**bit**|指定是否要使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的認證將郵件傳送至 SMTP 伺服器。 **use_default_credentials**是 bit，沒有預設值。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務的認證。 當此參數為0時，Database Mail 會在 SMTP 伺服器上使用使用者** \@ 名稱**和** \@ 密碼**進行驗證。 如果** \@ username**和** \@ password**是 Null，則 Database Mail 使用匿名驗證。 在指定此參數之前，請洽詢 SMTP 管理員。|  
 |**enable_ssl**|**bit**|指定 Database Mail 是否使用傳輸層安全性（TLS）來加密通訊，先前稱為安全通訊端層（SSL）。 如果您的 SMTP 伺服器需要 TLS，請使用此選項。 **enable_ssl**是 bit，沒有預設值。 1表示 Database Mail 使用 TLS 加密通訊。 0表示 Database Mail 傳送不含 TLS 加密的郵件。|  

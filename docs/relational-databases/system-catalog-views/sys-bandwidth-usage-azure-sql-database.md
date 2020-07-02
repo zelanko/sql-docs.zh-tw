@@ -19,23 +19,23 @@ ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ea963c07a15cd5c2db3cca113680026d3100936b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54151b817b443d43f64e119841a7b69df7436d93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752923"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 > [!NOTE]
-> 這僅適用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11。 * *  
+> 這僅適用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11。 * *  
   
  傳回** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 資料庫伺服器**中每個資料庫所使用之網路頻寬的相關資訊。 針對所指資料庫傳回的每一個資料列都會摘要說明在一小時內的單一使用方向和類別。  
   
- **這在中已被取代[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。**  
+ **這在中已被取代 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。**  
   
  [ **Sys.databases bandwidth_usage** ] 視圖包含下列資料行。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67942570"
 |-----------------|-----------------|  
 |**time**|頻寬消耗的小時。 這個檢視中的資料列是以每小時為基礎。 例如，2009-09-19 02:00:00.000 表示頻寬是在 2009 年 9 月 19 日的上午 2:00  和 3:00 之間耗用。|  
 |**database_name**|使用頻寬的資料庫名稱。|  
-|**方向**|使用的頻寬類型，下列其中一個值：<br /><br /> 輸入：移入中的[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]資料。<br /><br /> 輸出：移出的資料[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
+|**direction**|使用的頻寬類型，下列其中一個值：<br /><br /> 輸入：移入中的資料 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 輸出：移出的資料 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|  
 |**class**|使用的頻寬類別，下列其中一個值：<br />內部：在 Azure 平臺中移動的資料。<br />External：從 Azure 平臺移出的資料。<br /><br /> 這個類別只會在資料庫參與區域 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) 之間的連續複製關聯性時傳回。 如果給定的資料庫未參與任何連續複製關聯性，則不會傳回 "Interlink" 資料列。 如需詳細資訊，請參閱本主題後面的＜備註＞一節。|  
 |**time_period**|發生使用時的時間週期為 Peak 或 OffPeak。 The Peak time is based on the region in which the server was created. 例如，如果伺服器是在 "US_Northwest" 區域中建立，則尖峰時間會定義為介於太平洋標準時間上午 10:00 到 和 06:00:00 執行報表， 之間。|  
 |**quantity**|使用的頻寬數量，以 KB 為單位。|  
@@ -58,7 +58,7 @@ ms.locfileid: "67942570"
 
  針對在指定時間使用的每個資料庫， **sys.databases bandwidth_usage**視圖會傳回資料列，以顯示頻寬使用量的類別和方向。 下列範例說明所指資料庫可能會公開的資料。 在這個範例中，時間是 2012-04-21 17:00:00，發生在尖峰時段。 資料庫名稱為 Db1。 在此範例中， **bandwidth_usage**已針對輸入和輸出方向以及外部和內部類別的四個組合傳回一個資料列，如下所示：  
   
-|time|database_name|direction|Class - 類別|time_period|quantity|  
+|time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  
 |2012-04-21 17:00:00|Db1|輸入|外部|Peak|66|  
 |2012-04-21 17:00:00|Db1|輸出|外部|Peak|741|  

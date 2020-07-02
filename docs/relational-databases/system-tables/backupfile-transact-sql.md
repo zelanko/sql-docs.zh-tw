@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85271f37c441ab88ce5ad14279c07f6feda3d95d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f122698756a6d2359112b535158dcb6ff89569b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750447"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對資料庫的每個資料或記錄檔，各包含一個資料列。 這些資料行用來描述取得備份時的檔案組態。 檔案是否包含在備份中是由 [ **is_present** ] 資料行所決定。 此資料表會儲存在**msdb**資料庫中。  
   

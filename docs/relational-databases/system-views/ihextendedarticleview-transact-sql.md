@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0abca8ca826ec986a9cbf71f4fb577291e095e39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36ffc832e8e79e93eb3b158e7f99cfb64cea2dd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752649"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHextendedArticleView** view 會公開非 SQL Server 發行集中之文章的相關資訊。 這個視圖會儲存在**散發**資料庫中。  
   
@@ -33,11 +33,11 @@ ms.locfileid: "68029540"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|發行者的唯一識別碼。|  
 |**publication_id**|**int**|發行集的唯一識別碼。|  
-|**篇**|**sysname**|發行項的名稱|  
+|**文章**|**sysname**|發行項的名稱|  
 |**destination_object**|**sysname**|在訂閱者端之已發行物件的名稱。|  
 |**source_owner**|**sysname**|在發行者端之已發行物件的擁有者。|  
 |**source_object**|**sysname**|在發行者端之已發行物件的名稱。|  
-|**描述**|**nvarchar(255)**|發行項的描述。|  
+|**description**|**nvarchar(255)**|發行項的描述。|  
 |**creation_script**|**nvarchar(255)**|建立發行項之結構描述的指令碼。|  
 |**del_cmd**|**nvarchar(255)**|針對 DELETE 來執行的命令。|  
 |**出**|**int**|用來定義水平資料分割之預存程序的識別碼。|  

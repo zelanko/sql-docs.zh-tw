@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5ae1ee49522e55a632ff876251a831bc7b071a1c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc84090e08c3c8890a4613e6f73e1914209c0ba7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750175"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHpublisherindexes**系統資料表會針對使用目前散發者從非 SQL Server 發行者所複寫的每個索引，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   

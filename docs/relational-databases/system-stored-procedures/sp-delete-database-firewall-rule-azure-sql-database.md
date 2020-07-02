@@ -18,17 +18,17 @@ ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 660405e7e7592557422e43655c35ec27c194aad3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b942b64b8d97ac69b03b9e1aef03056200f4eef4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130677"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750656"
 ---
 # <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  從中移除資料庫層級防火牆設定[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 您可以針對 master 資料庫和上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]的使用者資料庫，設定及刪除資料庫防火牆規則。   
+  從中移除資料庫層級防火牆設定 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。 您可以針對 master 資料庫和上的使用者資料庫，設定及刪除資料庫防火牆規則 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 。   
   
  
 ## <a name="syntax"></a>語法  
@@ -40,13 +40,13 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
   
 ## <a name="arguments"></a>引數  
  `[@name =] [N]'name'`  
- 要移除的資料庫層級防火牆設定的名稱。 *名稱*為**Nvarchar （128）** ，沒有預設值。 Unicode 識別碼`N`對[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]而言是選擇性的。 
+ 要移除的資料庫層級防火牆設定的名稱。 *名稱*為**Nvarchar （128）** ，沒有預設值。 Unicode 識別碼 `N` 對而言是選擇性的 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 。 
   
 ## <a name="permissions"></a>權限  
  只有由布建程式所建立的伺服器層級主體登入或指派為系統管理員的 Azure Active Directory 主體，才可以刪除資料庫層級防火牆規則。  
   
 ## <a name="example"></a>範例  
- 下列範例會移除名為`Example DB Setting 1`的資料庫層級防火牆設定。
+ 下列範例會移除名為的資料庫層級防火牆設定 `Example DB Setting 1` 。
   
 ```  
 -- Remove database-level firewall setting  

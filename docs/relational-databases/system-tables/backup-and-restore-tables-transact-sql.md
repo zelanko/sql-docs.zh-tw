@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9bd366cc3d78887959e7eb08d0a63aba156cb780
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8b3a8bf99bb51e5b2c4e9979266bd7252790315c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827342"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750393"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>備份及還原資料表 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本節中的主題介紹儲存資料庫備份與還原作業所用的資訊之系統資料表。  
   

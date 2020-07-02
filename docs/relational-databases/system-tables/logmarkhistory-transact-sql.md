@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61fcc848f8f962934744d7aaf69e1549a7e33485
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ef8a263edfb6902cd4f050cbe27b99062e5b5c20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750141"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對已認可的每個標示交易，各包含一個資料列。 此資料表會儲存在**msdb**資料庫中。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82827268"
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|發生標示的交易之本機資料庫。|  
 |**mark_name**|**nvarchar(128)**|使用者提供的標示交易名稱。|  
-|**描述**|**nvarchar(255)**|使用者提供的標示交易描述。 可以是 NULL。|  
+|**description**|**nvarchar(255)**|使用者提供的標示交易描述。 可以是 NULL。|  
 |**user_name**|**nvarchar(128)**|執行標示交易的資料庫使用者名稱。 可以是 NULL。|  
 |**lsn**|**numeric(25,0)**|標示所在之交易記錄的記錄序號。|  
 |**mark_time**|**datetime**|標示的交易之認可時間 (本機時間)。|  

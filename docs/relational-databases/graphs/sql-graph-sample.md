@@ -15,18 +15,18 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b08fdf07bf73b8d485ce9334d8998e055454dcb2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035870"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751148"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>使用 T-sql 建立圖形資料庫並執行一些模式比對查詢
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-這個範例會提供[!INCLUDE[tsql-md](../../includes/tsql-md.md)]一個腳本來建立具有節點和邊緣的圖形資料庫，然後使用新的 MATCH 子句來比對一些模式，並透過圖形進行遍歷。 這個範例腳本會在 Azure SQL Database 和[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+這個範例會提供一個 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 腳本來建立具有節點和邊緣的圖形資料庫，然後使用新的 MATCH 子句來比對一些模式，並透過圖形進行遍歷。 這個範例腳本會在 Azure SQL Database 和[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>範例架構
 
@@ -163,7 +163,7 @@ go
 ```
 
 ## <a name="script-explanation"></a>指令碼說明  
-此腳本會使用新的 T-sql 語法來建立節點和邊緣資料表。 示範如何使用`INSERT`語句將資料插入節點和邊緣資料表，同時示範如何使用`MATCH`子句進行模式比對和導覽。
+此腳本會使用新的 T-sql 語法來建立節點和邊緣資料表。 示範如何使用語句將資料插入節點和邊緣資料表 `INSERT` ，同時示範如何使用 `MATCH` 子句進行模式比對和導覽。
 
 |Command    |注意
 |---  |---  |

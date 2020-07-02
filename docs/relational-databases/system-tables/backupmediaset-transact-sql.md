@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4b268bf205245f8c63ca9e8273e4b80607282a00
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 86f1b7fcc8e801f70bf070911feadb059108dff5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807345"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750359"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   每個備份組各含一個資料列。 此資料表會儲存在**msdb**資料庫中。  
  
@@ -37,7 +37,7 @@ ms.locfileid: "82807345"
 |**media_uuid**|**uniqueidentifier**|媒體集的 UUID。 所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 媒體集都有 UUID。<br /><br /> 但是在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果媒體集只包含一個媒體家族， **media_uuid**的資料行可能會是 Null （**media_family_count**是1）。|  
 |**media_family_count**|**tinyint**|媒體集中的媒體家族數目。 可以是 NULL。|  
 |**name**|**nvarchar(128)**|媒體集的名稱。 可以是 NULL。<br /><br /> 如需詳細資訊，請參閱[BACKUP &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)中的 MEDIANAME 和 MEDIADESCRIPTION。|  
-|**描述**|**nvarchar(255)**|媒體集的文字描述。 可以是 NULL。<br /><br /> 如需詳細資訊，請參閱[BACKUP &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)中的 MEDIANAME 和 MEDIADESCRIPTION。|  
+|**description**|**nvarchar(255)**|媒體集的文字描述。 可以是 NULL。<br /><br /> 如需詳細資訊，請參閱[BACKUP &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)中的 MEDIANAME 和 MEDIADESCRIPTION。|  
 |**software_name**|**nvarchar(128)**|寫入媒體標籤的備份軟體名稱。 可以是 NULL。|  
 |**software_vendor_id**|**int**|寫入備份媒體標籤的軟體供應商識別碼。 可以是 NULL。<br /><br /> 的值 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是十六進位0x1200。|  
 |**MTF_major_version**|**tinyint**|用來產生這個媒體集之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format 的主要版本號碼。 可以是 NULL。|  

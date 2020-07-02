@@ -1,5 +1,5 @@
 ---
-title: dbo. sysproxylogin （Transact-sql） |Microsoft Docs
+title: dbo.sysproxylogin （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfa29500a798cdcfe535a377abd8c649972415b0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b798627a09a9bb96e753221750711dbfe465657f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750290"
 ---
 # <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   記錄與每個 SQL Server Agent Proxy 帳戶相關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 此資料表會儲存在**msdb**資料庫中。  
   
@@ -42,6 +42,6 @@ ms.locfileid: "82825942"
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠存取此資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [sysproxies &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
+ [dbo.sysproxy &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   

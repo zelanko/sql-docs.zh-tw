@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e9873045fd7e4fb11ad19bbbce953a086512df9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d6414be15bcd33e8ae2a0ab267baaa039761fc04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750456"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   修改和顯示當列出適合發行的 Oracle 資料表時所排除之結構描述的相關資訊。  
   
@@ -45,9 +45,9 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 `[ @operation = ] 'operation'`這是要對此架構採取的動作。 *operation*是**Nvarchar （4）**，它可以是下列值之一。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|**新增**|將指定的結構描述加入不適合發行的結構描述清單中。|  
+|**add**|將指定的結構描述加入不適合發行的結構描述清單中。|  
 |**下拉式**|從不適合發行的結構描述清單中，卸除指定的結構描述。|  
 |**說明**|傳回不適合發行的結構描述清單。|  
   

@@ -1,5 +1,5 @@
 ---
-title: dbo. systargetservergroups （Transact-sql） |Microsoft Docs
+title: dbo.systargetservergroups （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: df1195b1-62c3-4b94-8b2e-a646dcaf281b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 31796d4017fc3e74d588376bd87f429736d3ba4d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d71141bbd810160d9f667e3dc5efa8b6609f8368
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750218"
 ---
 # <a name="dbosystargetservergroups-transact-sql"></a>dbo.systargetservergroups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   記錄在這個多伺服器環境中，目前編列了哪些目標伺服器群組。  
   

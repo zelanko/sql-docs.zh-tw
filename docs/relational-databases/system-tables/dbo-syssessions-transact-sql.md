@@ -1,5 +1,5 @@
 ---
-title: dbo. syssessions （Transact-sql） |Microsoft Docs
+title: dbo.sys會話（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2019
 ms.prod: sql
@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf5ede04576a8d79611d7aea93f5963d25b73d55
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 91da4b73125c61f23d027bf99d2550a1d449a7a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806811"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750263"
 ---
 # <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 每次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 時，它都會建立新的工作階段。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 利用工作階段來保留 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務非預期地重新啟動或停止時的作業狀態。 **Syssessions**資料表的每個資料列都包含一個會話的相關資訊。 使用**sysjobactivity**資料表來查看每個會話結束時的作業狀態。  
   
@@ -42,6 +42,6 @@ ms.locfileid: "82806811"
  只有身為**系統管理員（sysadmin** ）固定伺服器角色成員的使用者，才能夠存取此資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [sysjobactivity &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
+ [dbo.sysjobactivity &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1e436807a5738a1ad844a07b3403eb99d1a5cf18
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3336905579401f17a5c3afa2509e64670e5ea1ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752646"
 ---
 # <a name="system-base-tables"></a>系統基底資料表
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   系統基底資料表其實是儲存特定資料庫之中繼資料的基礎資料表。 **Master**資料庫在這方面是特別的，因為它包含其他任何資料庫中都找不到的其他資料表。 這些資料表包含整個伺服器範圍所保存的中繼資料。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82819807"
 |基底資料表|描述|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|存在於每個資料庫中。 每一個資料列都代表資料庫中的一個物件。|  
-|**sys.sysbinobjs**|存在於每個資料庫中。 資料庫中的每個 Service Broker 實體都包含一個資料列。 Service Broker 實體包括下列各項：<br /><br /> 訊息類型<br /><br /> 服務合約<br /><br /> 服務<br /><br /> 名稱和類型會使用修復過的二進位定序。|  
+|**sys.sysbinobjs**|存在於每個資料庫中。 資料庫中的每個 Service Broker 實體都包含一個資料列。 Service Broker 實體包括下列各項：<br /><br /> 訊息類型<br /><br /> 服務合約<br /><br /> Service<br /><br /> 名稱和類型會使用修復過的二進位定序。|  
 |**sys.sysclsobjs**|存在於每個資料庫中。 每個分類的實體都包含一個資料列，該實體會共用相同的通用屬性，包括：<br /><br /> 組件<br /><br /> 備份裝置<br /><br /> 全文檢索目錄<br /><br /> 分割區函數<br /><br /> 分割區配置<br /><br /> 檔案群組<br /><br /> 模糊化索引鍵|  
 |**sys.sysnsobjs**|存在於每個資料庫中。 每個命名空間範圍的實體都包含一個資料列。 此資料表用於儲存 XML 集合實體。|  
 |**sys.syscolpars**|存在於每個資料庫中。 資料表、檢視或資料表值函數中的每個資料行都包含一個資料列。 對於程序或函數的每個參數，它也包含資料列。|  

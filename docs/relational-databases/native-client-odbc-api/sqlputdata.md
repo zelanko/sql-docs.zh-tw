@@ -14,29 +14,29 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e063d1053d8a6e5e10a1234d33893adf27fbc3ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241c7e6bd0bfbd3b0239e610606a26b50f6e112d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751923"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  當您使用 SQLPutData 來傳送超過65535個位元組的資料（適用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]于 4.21 a）或 400 KB 的資料（適用于 SQL Server 6.0 和更新版本） SQL_LONGVARCHAR （**text**）、SQL_WLONGVARCHAR （**Ntext**）或 SQL_LONGVARBINARY （**image**）資料行時，適用下列限制：  
+  當您使用 SQLPutData 來傳送超過65535個位元組的資料（適用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.21 a）或 400 KB 的資料（適用于 SQL Server 6.0 和更新版本） SQL_LONGVARCHAR （**text**）、SQL_WLONGVARCHAR （**Ntext**）或 SQL_LONGVARBINARY （**image**）資料行時，適用下列限制：  
   
 -   參考的參數可以是 INSERT 語句中的*insert_value* 。  
   
 -   參考的參數可以是 UPDATE 語句的 SET 子句中的*運算式*。  
   
- 在使用6.5 或更早版本時，取消將區塊中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供給執行之伺服器的 SQLPutData 呼叫順序，會造成資料行值的部分更新。 呼叫 SQLCancel 時所參考的**text**、 **Ntext**或**image**資料行，會設定為中繼預留位置值。  
+ 在使用6.5 或更早版本時，取消將區塊中的資料提供給執行之伺服器的 SQLPutData 呼叫順序， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會造成資料行值的部分更新。 呼叫 SQLCancel 時所參考的**text**、 **Ntext**或**image**資料行，會設定為中繼預留位置值。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 版和更早版本。  
   
 ## <a name="diagnostics"></a>診斷  
- 有一個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]適用于 SQLPutData 的原生用戶端特定 SQLSTATE：  
+ 有一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 適用于 SQLPutData 的原生用戶端特定 SQLSTATE：  
   
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  

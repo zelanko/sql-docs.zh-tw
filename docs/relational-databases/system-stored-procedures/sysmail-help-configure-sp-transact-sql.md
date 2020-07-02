@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a29933568cec147dc27ff7c9b5f026d62856e5b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 058d611f1ee9eaf73d8ca8c022728fb1920091ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807719"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752734"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   顯示 Database Mail 的組態設定。  
   
@@ -52,7 +52,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 |資料行名稱|資料類型|描述|  
 |**paramname**|**nvarchar(256)**|組態參數的名稱。|  
 |**paramvalue**|**nvarchar(256)**|組態參數值。|  
-|**描述**|**nvarchar(256)**|組態參數的描述。|  
+|**description**|**nvarchar(256)**|組態參數的描述。|  
   
 ## <a name="remarks"></a>備註  
  預存程式**sysmail_help_configure_sp**列出實例目前的 Database Mail 設定。  

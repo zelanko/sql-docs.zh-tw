@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4b315c70-7265-4acd-b35b-a4dbb7881d98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61a7bd0550a5f61aa8b3c1d15687aa4ba4b012b6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0d4aa527c1c1d7c77d637885e8d450a0a97188fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750163"
 ---
 # <a name="log_shipping_primary_secondaries-transact-sql"></a>log_shipping_primary_secondaries (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   將每個主要資料庫對應至它的次要資料庫。 此資料表會儲存在**msdb**資料庫中。  
 

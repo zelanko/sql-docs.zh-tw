@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b62346e11923a1c9e1683ae0ccff1b3898b528a2
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: f02b55e6b798bd66e7e13a8ba8a40329fc0255e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752804"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>複寫預存程序 (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   依照文件說明，複寫系統預存程序可用來做為完成一次工作 (如實作複寫) 的方法，或供批次檔或指令碼使用的方法。  
   

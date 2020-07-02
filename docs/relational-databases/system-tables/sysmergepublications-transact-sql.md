@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96708a8109594e0978757a163840d605d09cb522
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ae4203442a4596a8e52ab7212c21c7cc24759d50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829815"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751573"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對資料庫中每個已定義的合併式發行集，各包含一個資料列。 這份資料表儲存在發行集和訂閱資料庫中。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82829815"
 |**publisher**|**sysname**|預設伺服器的名稱。|  
 |**publisher_db**|**sysname**|預設發行者資料庫的名稱。|  
 |**name**|**sysname**|發行集的名稱。|  
-|**描述**|**nvarchar(255)**|發行集的簡要描述。|  
+|**description**|**nvarchar(255)**|發行集的簡要描述。|  
 |**保存**|**int**|整個發行集的保留週期，其中單位是以 [ **retention_period_unit** ] 資料行的值來表示。|  
 |**publication_type**|**tinyint**|指出發行集的篩選：<br /><br /> **0** = 未篩選。<br /><br /> **1** = 已篩選。|  
 |**pubid**|**uniqueidentifier**|這個發行集的唯一識別碼。 這是加入發行集時產生的識別碼。|  
@@ -65,7 +65,7 @@ ms.locfileid: "82829815"
 |**allow_synctoalternate**|**bit**|指定是否允許替代的同步處理夥伴與這個發行者同步。 **0**表示不允許同步處理夥伴。|  
 |**validate_subscriber_info**|**Nvarchar （500）**|列出用於擷取訂閱者資訊以及驗證訂閱者參數化資料列篩選器準則的函數。|  
 |**ad_guidname**|**sysname**|指定發行集是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行。 有效的 GUID 會指定發行集在 Active Directory 中發行，而 GUID 則是對應的 Active Directory 發行集物件**objectGUID**。 如果是 NULL，發行集就不會發行在 Active Directory 中。|  
-|**backward_comp_level**|**int**|資料庫相容性層級。 可以是下列值之一：<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。|  
+|**backward_comp_level**|**int**|資料庫相容性層級。 可以是下列其中一個值：<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。|  
 |**max_concurrent_merge**|**int**|允許使用的最大並行合併處理序數目。 這個屬性的值為**0**時，表示在任何給定時間執行的並行合併進程數目沒有限制。 這個屬性會設定能夠針對合併式發行集來同時執行的並行合併處理序的數目限制。 如果排程同時執行的快照集處理序數目超出允許執行的值，超出的作業便會放在佇列中，等到目前在執行中的合併處理序完成為止。|  
 |**max_concurrent_dynamic_snapshots**|**int**|允許針對合併式發行集來執行的最大並行已篩選資料快照集工作階段數目。 如果是**0**，在任何指定時間，可以同時針對發行集執行的並行已篩選資料快照集會話數目上限不受限制。 這個屬性會設定能夠針對合併式發行集來同時執行的並行快照集處理序的數目限制。 如果排程同時執行的快照集處理序數目超出允許執行的值，超出的作業便會放在佇列中，等到目前在執行中的合併處理序完成為止。|  
 |**use_partition_groups**|**smallint**|指定發行集是否使用預先計算的資料分割。|  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: faad3284619bfd3e7beaf5324ac107aed3ac2ff2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e09946d4a705aa695b4049ac887cbb0b465ee9d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834292"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749287"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   變更發行集的監視臨界值標準。 這個預存程序用來監視複寫，執行於散發資料庫的散發者端。  
   

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: bdfeab5754a2397c01ace2bb9f822fa168eeef6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7ac6bfbd157a72cee716b4a5a916cf2c7069ba8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72005862"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750543"
 ---
 # <a name="sp_grant_login_to_proxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   授與 Proxy 的安全性主體存取權。  
 
@@ -44,15 +44,15 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @login_name = ] 'login_name'`要授與存取權的登入名稱。 *Login_name*是**Nvarchar （256）**，預設值是 Null。 必須指定** \@login_name**、 ** \@fixed_server_role**或** \@msdb_role**的其中一個，否則預存程式會失敗。  
+`[ @login_name = ] 'login_name'`要授與存取權的登入名稱。 *Login_name*是**Nvarchar （256）**，預設值是 Null。 必須指定** \@ login_name**、 ** \@ fixed_server_role**或** \@ msdb_role**的其中一個，否則預存程式會失敗。  
   
-`[ @fixed_server_role = ] 'fixed_server_role'`要授與存取權的固定伺服器角色。 *Fixed_server_role*是**Nvarchar （256）**，預設值是 Null。 必須指定** \@login_name**、 ** \@fixed_server_role**或** \@msdb_role**的其中一個，否則預存程式會失敗。  
+`[ @fixed_server_role = ] 'fixed_server_role'`要授與存取權的固定伺服器角色。 *Fixed_server_role*是**Nvarchar （256）**，預設值是 Null。 必須指定** \@ login_name**、 ** \@ fixed_server_role**或** \@ msdb_role**的其中一個，否則預存程式會失敗。  
   
-`[ @msdb_role = ] 'msdb_role'`**Msdb**資料庫中要授與存取權的資料庫角色。 *Msdb_role*是**Nvarchar （256）**，預設值是 Null。 必須指定** \@login_name**、 ** \@fixed_server_role**或** \@msdb_role**的其中一個，否則預存程式會失敗。  
+`[ @msdb_role = ] 'msdb_role'`**Msdb**資料庫中要授與存取權的資料庫角色。 *Msdb_role*是**Nvarchar （256）**，預設值是 Null。 必須指定** \@ login_name**、 ** \@ fixed_server_role**或** \@ msdb_role**的其中一個，否則預存程式會失敗。  
   
-`[ @proxy_id = ] id`要授與存取權的 proxy 識別碼。 *識別碼*是**int**，預設值是 Null。 必須指定** \@proxy_id**或** \@proxy_name**的其中一個，否則預存程式會失敗。  
+`[ @proxy_id = ] id`要授與存取權的 proxy 識別碼。 *識別碼*是**int**，預設值是 Null。 必須指定** \@ proxy_id**或** \@ proxy_name**的其中一個，否則預存程式會失敗。  
   
-`[ @proxy_name = ] 'proxy_name'`要授與存取權的 proxy 名稱。 *Proxy_name*是**Nvarchar （256）**，預設值是 Null。 必須指定** \@proxy_id**或** \@proxy_name**的其中一個，否則預存程式會失敗。  
+`[ @proxy_name = ] 'proxy_name'`要授與存取權的 proxy 名稱。 *Proxy_name*是**Nvarchar （256）**，預設值是 Null。 必須指定** \@ proxy_id**或** \@ proxy_name**的其中一個，否則預存程式會失敗。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -64,7 +64,7 @@ sp_grant_login_to_proxy
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行**sp_grant_login_to_proxy**。  
   
 ## <a name="examples"></a>範例  
- 下列範例可讓登`adventure-works\terrid`入使用 proxy。 `Catalog application proxy`  
+ 下列範例可讓登入 `adventure-works\terrid` 使用 proxy `Catalog application proxy` 。  
   
 ```sql
 USE msdb ;  

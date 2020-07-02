@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 18d499e069d56ea5a378cff536b8066f84d2a600
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8c8cb57142832ce0e2caed5fe23b8a1e2e2cfdbe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823599"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752985"
 ---
 # <a name="data-spaces-transact-sql"></a>資料空間 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此章節包含下列目錄檢視。  
   
