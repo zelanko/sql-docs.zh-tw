@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27112115c6040e4c7eca21c752e1669a273f41bf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6fbae3f0c8e504227538f5fdd83ccce223fd1351
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831863"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764683"
 ---
 # <a name="sysfunction_order_columns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對屬於 common language runtime （CLR）資料表值函數之**ORDER**運算式一部分的每個資料行，各傳回一個資料列。  
 
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|定義順序所在之物件的識別碼 (CLR 資料表值函式)。|  
+|object_id|**int**|定義順序所在之物件的識別碼 (CLR 資料表值函式)。|  
 |**order_column_id**|**int**|排序資料行的識別碼。 **order_column_id**只有在**object_id**內才是唯一的。<br /><br /> **order_column_id**表示此資料行在排序中的位置。|  
 |**column_id**|**int**|**Object_id**中的資料行識別碼。<br /><br /> **column_id**只有在**object_id**內才是唯一的。|  
 |**is_descending**|**bit**|1 = 排序資料行是以遞減方式排序。<br /><br /> 0 = 排序資料行是以遞增方式排序。|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f876d32b-c07f-4ccc-a691-5e580bc50c40
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6a6cf76aa0d08d72cef9aef0943a467c1f97e66d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a5be26557f6147f98641ebefcf4f7c71600cdea8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764284"
 ---
 # <a name="io-related-dynamic-management-views-and-functions-transact-sql"></a>I/O 相關的動態管理檢視和函數 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此章節包含下列動態管理物件。  
   
