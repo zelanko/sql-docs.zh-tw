@@ -20,15 +20,15 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2b1ed24045f609b2feff1bfef6f288cd97047cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61a84a655bced5a053f47d0aae1493ec80dd9ff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827889"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787018"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回有關目前正在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區中所有資料頁的資訊。 這項檢視的輸出，可以用來決定依據資料庫、物件或是類型來散發緩衝集區中的資料頁。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，這個動態管理檢視也會傳回有關緩衝集區擴充檔中資料頁的資訊。 如需詳細資訊，請參閱[緩衝集區延伸](../../database-engine/configure-windows/buffer-pool-extension.md)模組。  
   
@@ -63,8 +63,8 @@ ms.locfileid: "82827889"
 |從|至|開啟|關聯性|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|多對一|  
-|sys.dm_os_buffer_descriptors|\<userdb> sys.databases allocation_units|allocation_unit_id|多對一|  
-|sys.dm_os_buffer_descriptors|\<userdb> sys.databases database_files|file_id|多對一|  
+|sys.dm_os_buffer_descriptors|\<userdb>HTTP.sys. allocation_units|allocation_unit_id|多對一|  
+|sys.dm_os_buffer_descriptors|\<userdb>HTTP.sys. database_files|file_id|多對一|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|多對一|  
   
 ## <a name="examples"></a>範例  

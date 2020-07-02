@@ -22,15 +22,15 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 437dbbc4ea7deb32a9723febb443cc67941fdc5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6660bc43a6db9437ba628c0856760aac4ccd52f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67940229"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787147"
 ---
-# <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>sys.databases\_自動\_tuning_options （transact-sql）
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+# <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>sys.databases \_ 自動 \_ Tuning_options （transact-sql）
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   傳回此資料庫的自動調整選項。  
 
@@ -42,7 +42,7 @@ ms.locfileid: "67940229"
 |**actual_state**|**smallint**|表示自動調整選項的作業模式。<br />0 = OFF<br />1 = ON |  
 |**actual_state_desc**|**nvarchar(60)**|自動調整選項實際作業模式的文字描述。<br />OFF<br />開啟|  
 |**原因**|**smallint**|指出實際和 desired 狀態為何不同。<br />2 = 已停用<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
-|**reason_desc**|**nvarchar(60)**|實際和所需狀態為何不同的文字描述。<br />DISABLED = 選項已由系統停用<br />QUERY_STORE_OFF = 查詢存放區已關閉<br />QUERY_STORE_READ_ONLY = 查詢存放區處於唯讀模式<br />NOT_SUPPORTED = 僅適用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition| 
+|**reason_desc**|**nvarchar(60)**|實際和所需狀態為何不同的文字描述。<br />DISABLED = 選項已由系統停用<br />QUERY_STORE_OFF = 查詢存放區已關閉<br />QUERY_STORE_READ_ONLY = 查詢存放區處於唯讀模式<br />NOT_SUPPORTED = 僅適用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition| 
   
 ## <a name="permissions"></a>權限  
  需要 `VIEW DATABASE STATE` 權限。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7faa6ad3c27022194ce7d90643733299ae3ae6ba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f5b44d91c1dda538963dedafd14c909afd72ceae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787214"
 ---
 # <a name="resource-governor-catalog-views-transact-sql"></a>資源管理員目錄檢視 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   此章節包含下列目錄檢視的資源管理員資訊。 這些檢視會針對效能與公用程式進行最佳化。 可能的話，請使用這些目錄檢視來存取資源管理員中繼資料。  
   

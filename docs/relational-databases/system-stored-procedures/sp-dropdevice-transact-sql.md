@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d9176624f661cb012fe8ed3124a1b868ec72195
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7b68a7497dc3ed64eaf1b9047d1489e38f99be6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786959"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  從的實例卸載資料庫裝置或備份裝置 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] ，並從**sysdevices**中刪除專案。  
+  從的實例卸載資料庫裝置或備份裝置 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] ，並從**master.dbo.sys裝置**中刪除專案。  
    
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @logicalname = ] 'device'`這是**master.dbo.sysdevices.name**中所列的資料庫裝置或備份裝置的邏輯名稱。 *裝置*為**sysname**，沒有預設值。  
+`[ @logicalname = ] 'device'`這是在**master.dbo.sysdevices.name**中列出的資料庫裝置或備份裝置的邏輯名稱。 *裝置*為**sysname**，沒有預設值。  
   
 `[ @delfile = ] 'delfile'`指定是否應該刪除實體備份裝置檔案。 *delfile*是**Varchar （7）**。 如果指定為**DELFILE**，則會刪除實體備份裝置磁片檔案。  
   

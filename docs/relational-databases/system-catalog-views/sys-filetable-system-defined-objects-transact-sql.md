@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 62022e6b-46f6-495f-b14b-53f41e040361
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5ed70162c89d9aa3a02d8d1fe5cb76f7031a806c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0232a635267dc97f53f67309fb59d06651d918ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786434"
 ---
 # <a name="sysfiletable_system_defined_objects-transact-sql"></a>sys.filetable_system_defined_objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   顯示與 FileTable 相關的系統定義物件清單。 針對每個系統定義物件，各包含一個資料列。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82828121"
   
 |資料行|資料類型|描述|  
 |------------|---------------|-----------------|  
-|**object_id**|**int**|與 FileTable 相關的系統定義物件的物件識別碼。<br /><br /> 參考**sys.databases**中的物件。|  
+|object_id|**int**|與 FileTable 相關的系統定義物件的物件識別碼。<br /><br /> 參考**sys.databases**中的物件。|  
 |**parent_object_id**|**int**|父 FileTable 的物件識別碼。<br /><br /> 參考**sys.databases**中的物件。|  
   
 ## <a name="see-also"></a>另請參閱  

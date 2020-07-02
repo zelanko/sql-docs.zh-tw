@@ -20,21 +20,21 @@ ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25661cc9d9166da61bd7cef8e3368c2a393a931e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc6b21029c829194c5287b450e266119b08a934f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821285"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787098"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每個使用者資料表，各傳回一個資料列。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|\<繼承的資料行>||如需此視圖所繼承之資料行的清單，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|\<inherited columns>||如需此視圖所繼承之資料行的清單，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |lob_data_space_id|**int**|非零值是存放這份資料表的大型物件二進位 (LOB) 資料之資料空間 (檔案群組或分割區配置) 的識別碼。 LOB 資料類型的範例包括**Varbinary （max）**、 **Varchar （max）**、 **geography**或**xml**。<br /><br /> 0 = 資料表沒有 LOB 資料。|  
 |filestream_data_space_id|**int**|這是 FILESTREAM 檔案群組的資料空間識別碼，或是由 FILESTREAM 檔案群組所組成的分割區配置。<br /><br /> 若要報告 FILESTREAM 檔案群組的名稱，請執行查詢 `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` 。<br /><br /> sys.tables 可以聯結到 filestream_data_space_id = data_space_id 上的下列檢視表。<br /><br /> -sys. filegroup<br /><br /> -sys. partition_schemes<br /><br /> -sys. 索引<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup （聯結 filegroup_id）|  
 |max_column_id_used|**int**|這份資料表用過的最大資料行識別碼。|  

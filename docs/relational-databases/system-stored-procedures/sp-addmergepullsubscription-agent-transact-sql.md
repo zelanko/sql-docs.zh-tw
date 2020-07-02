@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b9af4f3564c5834b856632db70bd6b12368a22c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786236"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   新增一項新的代理程式作業，以便用來排程合併式發行集提取訂閱的同步處理。 這個預存程序執行於訂閱資料庫的訂閱者端。  
   
@@ -155,7 +155,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**2**|隨選|  
 |**4**|每日|  
 |**8**|每週|  
-|**1600**|每月|  
+|**16**|每月|  
 |**32**|每月相對|  
 |**64**|自動啟動|  
 |**128**|重複執行|  
@@ -188,7 +188,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|Last|  
+|**16**|Last|  
 |NULL (預設值)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**，預設值是 Null。  
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`表示已啟用 Web 同步處理。 *use_web_sync*是**bit**，預設值是0。 **1**指定可使用 HTTP 透過網際網路同步處理提取訂閱。  
   
-`[ @internet_url = ] 'internet_url'`這是複寫接聽程式（REPLISAPI）的位置。DLL）進行 Web 同步處理。 *internet_url*是**Nvarchar （260）**，預設值是 Null。 *internet_url*是完整的 url，格式為 `http://server.domain.com/directory/replisapi.dll` 。 如果將伺服器設定成來接聽通訊埠 80 以外的通訊埠，就必須用 `http://server.domain.com:portnumber/directory/replisapi.dll` 格式來提供通訊埠編號，其中 `portnumber` 代表通訊埠。  
+`[ @internet_url = ] 'internet_url'`這是 Web 同步處理的複寫接聽程式（REPLISAPI.DLL）位置。 *internet_url*是**Nvarchar （260）**，預設值是 Null。 *internet_url*是完整的 url，格式為 `http://server.domain.com/directory/replisapi.dll` 。 如果將伺服器設定成來接聽通訊埠 80 以外的通訊埠，就必須用 `http://server.domain.com:portnumber/directory/replisapi.dll` 格式來提供通訊埠編號，其中 `portnumber` 代表通訊埠。  
   
 `[ @internet_login = ] 'internet_login'`這是當使用 HTTP 基本驗證來連接到主控 Web 同步處理的 Web 服務器時，合併代理程式所使用的登入。 *internet_login*是**sysname**，預設值是 Null。  
   

@@ -1,5 +1,5 @@
 ---
-title: syscurconfigs （Transact-sql） |Microsoft Docs
+title: sys.syscurconfigs （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,25 +20,25 @@ helpviewer_keywords:
 ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b0fad344831d8073badb2618eb2c34a1cdc2161
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea035c3dc7ec911034fff20fda22b60ef0ad0108
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089183"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786407"
 ---
 # <a name="syssyscurconfigs-transact-sql"></a>sys.syscurconfigs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  包含每個目前組態選項各一個項目。 同時，此檢視表含有描述組態結構的四個項目。 **syscurconfigs**是由使用者進行查詢時動態建立的。 如需詳細資訊，請參閱[sysconfigures &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md)。  
+  包含每個目前組態選項各一個項目。 同時，此檢視表含有描述組態結構的四個項目。 **syscurconfigs**是由使用者進行查詢時動態建立的。 如需詳細資訊，請參閱[sys.sys設定 &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**值**|**int**|使用者可以修改的變數值。 只有在執行 RECONFIGURE 時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 才會使用這個項目。|  
-|**web.config**|**smallint**|組態變數號碼。|  
+|**value**|**int**|使用者可以修改的變數值。 只有在執行 RECONFIGURE 時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 才會使用這個項目。|  
+|**config**|**smallint**|組態變數號碼。|  
 |**加以**|**nvarchar(255)**|組態選項的說明。|  
 |**status**|**smallint**|指出選項狀態的點陣圖。 可能的值如下：<br /><br /> 0 = 靜態。 設定在伺服器重新啟動時生效。<br /><br /> 1 = 動態。 變數在執行 RECONFIGURE 陳述式時生效。<br /><br /> 2 = 進階。 只有在已設定**show advanced 選項**時，才會顯示變數。<br /><br /> 3 = 動態和進階。|  
   

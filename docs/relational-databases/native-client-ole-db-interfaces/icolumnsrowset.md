@@ -11,15 +11,15 @@ ms.assetid: e35d37ed-dd9b-4a34-a76a-bc9251f06c4f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b288554ba1958880d9b172da2c827c447d6a08a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 388ba06ae72fd6e7d9ced8de50cf2af2af9d0cf3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307317"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785440"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會將 DBCOLUMN_BASETABLEINSTANCE 資料行加入至 IColumnsRowset::GetColumnRowset。 這個資料行會傳回 DBTYPE_I2 並保留給 Microsoft 使用。 在未來的版本中，這個資料行中的資訊可能會變更。  
   

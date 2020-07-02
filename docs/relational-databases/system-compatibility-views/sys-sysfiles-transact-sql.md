@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a3554e254be0623e36719fe76b2d811908a939d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23f0a88653887177a84da079d00550dc9915f0d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053474"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786388"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   針對資料庫中的每個檔案，各包含一個資料列。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68053474"
 |**status**|**int**|**成長**值的狀態位（以 mb 或 kb 為單位）。<br /><br /> 0x2 = 磁碟檔。<br /><br /> 0x40 = 記錄檔。<br /><br /> 0x100000 = 成長。 這個值是一個百分比，不是頁數。|  
 |**效能**|**int**|已保留。|  
 |**name**|**sysname**|檔案的邏輯名稱。|  
-|**名稱**|**nvarchar(260)**|實體裝置的名稱。 其中包括檔案的完整路徑。|  
+|**filename**|**nvarchar(260)**|實體裝置的名稱。 其中包括檔案的完整路徑。|  
   
 ## <a name="see-also"></a>另請參閱  
  [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

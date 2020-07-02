@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ae6596579942a3292c3467f4d3489346eb4aa42
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be04cfff11e30baf2212401bd07b9ca74782ca14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786216"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   建立一個快照式或交易式發行集。 這個預存程序執行於發行集資料庫的發行者端。  
   

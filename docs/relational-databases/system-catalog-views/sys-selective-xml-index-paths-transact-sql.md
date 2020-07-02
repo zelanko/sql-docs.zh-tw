@@ -19,15 +19,15 @@ ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 9ff85273a1e970b3bb891d1816a96019dd4f3ae5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55bb26edf9d51731a4a5986a8a6063f6214df1f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135186"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787079"
 ---
 # <a name="sysselective_xml_index_paths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 開始可供使用，sys.selective_xml_index_paths 中的每個資料列都代表特定選擇性 xml 索引的一個升級路徑。  
   
@@ -45,7 +45,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|具有 XML 資料行之資料表的識別碼。|  
+|object_id|**int**|具有 XML 資料行之資料表的識別碼。|  
 |**index_id**|**int**|選擇性 xml 索引的唯一識別碼。|  
 |**path_id**|**int**|升級 XML 路徑識別碼。|  
 |**path**|**nvarchar(4000)**|升級路徑。 例如，'/a/b/c/d/e'。|  

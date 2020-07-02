@@ -1,5 +1,5 @@
 ---
-title: sysindexes （Transact-sql） |Microsoft Docs
+title: sys.sys索引（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8ae519a06d98c3c70cdd01064c220e5f2e4ed424
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786327"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對目前資料庫中每個索引和資料表，各包含一個資料列。 這份檢視不支援 XML 索引。 在此視圖中，不會完全支援資料分割資料表和索引;請改用[sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目錄檢視。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68053442"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|索引所屬的資料表識別碼。|  
 |**status**|**int**|系統狀態資訊。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**頭**|**binary(6)**|指向第一個頁面或根頁面的指標。<br /><br /> 當**indid** = 0 時未使用。<br /><br /> Null = 索引會在**indid** > 1 時進行分割。<br /><br /> Null = 當**indid**為0或1時，資料表會進行分割。|  
+|**first**|**binary(6)**|指向第一個頁面或根頁面的指標。<br /><br /> 當**indid** = 0 時未使用。<br /><br /> Null = 索引會在**indid** > 1 時進行分割。<br /><br /> Null = 當**indid**為0或1時，資料表會進行分割。|  
 |**indid**|**smallint**|索引的識別碼：<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引<br /><br /> >1 = 非叢集索引|  
 |**root**|**binary(6)**|對於**indid** >= 1， **root**是根頁面的指標。<br /><br /> 當**indid** = 0 時未使用。<br /><br /> Null = 索引會在**indid** > 1 時進行分割。<br /><br /> Null = 當**indid**為0或1時，資料表會進行分割。|  
 |**minlen**|**smallint**|資料列的大小下限。|  
@@ -49,11 +49,11 @@ ms.locfileid: "68053442"
 |**留**|**int**|若為**indid** = 0 或**indid** = 1， **reserved**就是配置給所有索引和資料表資料的頁面計數。<br /><br /> 對於**indid** > 1， **reserved**是針對索引所配置的頁面計數。<br /><br /> 0 = 當**indid** > 1 時，索引會進行分割。<br /><br /> 0 = 當**indid**為0或1時，資料表會進行分割。<br /><br /> 如果發生資料列溢位，便不產生精確的結果。|  
 |**作為**|**int**|針對**indid** = 0 或**indid** = 1，**使用**的是所有索引和資料表資料所使用的總頁數。<br /><br /> 針對**indid** > 1，**使用**的是用於索引的頁面計數。<br /><br /> 0 = 當**indid** > 1 時，索引會進行分割。<br /><br /> 0 = 當**indid**為0或1時，資料表會進行分割。<br /><br /> 如果發生資料列溢位，便不產生精確的結果。|  
 |**rowcnt**|**bigint**|以**indid** = 0 和**indid** = 1 為基礎的資料層級資料列計數。<br /><br /> 0 = 當**indid** > 1 時，索引會進行分割。<br /><br /> 0 = 當**indid**為0或1時，資料表會進行分割。|  
-|**rowmodctr**|**int**|計算前次更新資料表的統計資料之後，插入、刪除或更新資料列的總數。<br /><br /> 0 = 當**indid** > 1 時，索引會進行分割。<br /><br /> 0 = 當**indid**為0或1時，資料表會進行分割。<br /><br /> 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本中， **rowmodctr**與舊版不完全相容。 如需詳細資訊，請參閱＜備註＞。|  
+|**rowmodctr**|**int**|計算前次更新資料表的統計資料之後，插入、刪除或更新資料列的總數。<br /><br /> 0 = 當**indid** > 1 時，索引會進行分割。<br /><br /> 0 = 當**indid**為0或1時，資料表會進行分割。<br /><br /> 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本中， **rowmodctr**與舊版不完全相容。 如需詳細資訊，請參閱＜備註＞。|  
 |**reserved3**|**int**|傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**reserved4**|**int**|傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xmaxlen**|**smallint**|資料列的大小上限|  
-|**maxirow**|**smallint**|非分葉索引資料列的大小上限。<br /><br /> 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本中， **maxirow**與舊版不完全相容。|  
+|**maxirow**|**smallint**|非分葉索引資料列的大小上限。<br /><br /> 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本中， **maxirow**與舊版不完全相容。|  
 |**OrigFillFactor**|**tinyint**|當建立索引時，所用的原始填滿因數值。 這個值並沒有維護；不過，如果您必須重建索引，且忘了所用的填滿因數值，它可能很有用。|  
 |**StatVersion**|**tinyint**|傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**reserved2**|**int**|傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -61,7 +61,7 @@ ms.locfileid: "68053442"
 |**impid**|**smallint**|索引實作旗標。<br /><br /> 傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|用來約束所考量的索引鎖定資料粒度。 例如，若要將鎖定成本降到最低，您可以將基本上是唯讀的參考表設為只執行資料表層級的鎖定。|  
 |**pgmodctr**|**int**|傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**快速鍵**|**varbinary(816)**|組成索引鍵的各個資料行之資料行識別碼清單。<br /><br /> 傳回 NULL。<br /><br /> 若要顯示索引鍵資料行，請使用[sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)。|  
+|**快速鍵**|**varbinary(816)**|組成索引鍵的各個資料行之資料行識別碼清單。<br /><br /> 傳回 NULL。<br /><br /> 若要顯示索引鍵資料行，請使用[sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)。|  
 |**name**|**sysname**|索引或統計資料的名稱。 當**indid** = 0 時，會傳回 Null。 請修改您的應用程式來查閱 NULL 堆積名稱。|  
 |**statblob**|**image**|統計資料二進位大型物件 (BLOB)。<br /><br /> 傳回 NULL。|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

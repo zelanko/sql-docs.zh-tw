@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ba2cebf6c4b779119696f19ee78b7ce8ec1cf66
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ebb47597b5d08e0f14d37490304001811d0b33e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831880"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786272"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   將發行項加入現有的合併式發行集中。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -81,7 +81,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`這是發行項的類型。 *類型*是**sysname**，預設值是**table**，它可以是下列值之一。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**table** （預設值）|含結構描述和資料的資料表。 複寫會監視資料表來判斷要複寫的資料。|  
 |**func schema only**|只含結構描述的函數。|  
@@ -101,9 +101,9 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`指定當套用快照集時，如果資料表存在於訂閱者，系統要執行的動作。 *pre_creation_cmd*是**Nvarchar （10）**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
-|**無**|如果訂閱者端已有資料表，就不會採取任何動作。|  
+|無|如果訂閱者端已有資料表，就不會採取任何動作。|  
 |**delete**|根據子集篩選中的 WHERE 子句來發出一項刪除。|  
 |**drop** （預設值）|在重新建立資料表之前，先卸除資料表。 支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者需要這個值。|  
 |**各**|截斷目的地資料表。|  
@@ -115,7 +115,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option`這是給定發行項之架構產生選項的點陣圖。 *schema_option*是**binary （8）**，而且可以是[|（位 OR）](../../t-sql/language-elements/bitwise-or-transact-sql.md)一或多個這些值的乘積。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0x00**|停用快照集代理程式的腳本，並使用*creation_script*中定義的提供的架構 precreation 腳本。|  
 |**0x01**|產生物件的建立作業 (CREATE TABLE、CREATE PROCEDURE 等)。 這是預存程序發行項的預設值。|  
@@ -212,7 +212,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions`這是當合併代理程式將變更套用至發行者時，所驗證之資料表層級許可權的點陣圖。 如果合併處理序所使用的發行者登入/使用者帳戶並沒有正確的資料表權限，就會將無效的變更記錄為衝突。 *check_permissions*是**int**，而且可以是[|（位 OR）](../../t-sql/language-elements/bitwise-or-transact-sql.md)下列一個或多個值的乘積。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0x00** （預設值）|不檢查權限。|  
 |**0x10**|先在發行者端檢查權限，之後才能上傳在訂閱者端進行的插入作業。|  
@@ -280,11 +280,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`指定如何處理髮行項的識別範圍管理。 *identityrangemanagementoption*是**Nvarchar （10）**，它可以是下列值之一。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
-|**無**|停用識別範圍的管理。|  
+|無|停用識別範圍的管理。|  
 |**手動**|利用 NOT FOR REPLICATION 來標示識別欄位，以啟用手動的識別範圍處理。|  
-|**auto**|指定自動管理識別範圍。|  
+|**自動**|指定自動管理識別範圍。|  
 |Null （預設值）|當*auto_identity_range*的值不是**true**時，預設值為**none**。|  
   
  為了與舊版相容，當*identityrangemanagementoption*的值為 Null 時，會檢查*auto_identity_range*的值。 不過，當*identityrangemanagementoption*的值不是 Null 時，就會忽略*auto_identity_range*的值。 如需詳細資訊，請參閱[複寫識別資料欄](../../relational-databases/replication/publish/replicate-identity-columns.md)。  

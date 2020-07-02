@@ -11,15 +11,15 @@ ms.assetid: 9b5c94d6-612c-4e0f-976d-ac6ba55da3ac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 910c4a6a8ebf40de23069ecbf3c96d8d67533efa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 818d2eb347539b6ea2452301bf153751184b433b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787105"
 ---
 # <a name="sysdatabase_event_session_fields-azure-sql-database"></a>sys.database_event_session_fields (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   針對事件和目標上明確設定的每一個可自訂資料行傳回資料列。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "82823540"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的識別碼。 不可為 Null。|  
 |object_id|**int**|這個欄位相關聯之物件的識別碼。 不可為 Null。|  
-|name|**sysname**|欄位的名稱。 不可為 Null。|  
+|NAME|**sysname**|欄位的名稱。 不可為 Null。|  
 |value|**sql_variant**|此欄位的值。 不可為 Null。|  
   
 ## <a name="permissions"></a>權限  
