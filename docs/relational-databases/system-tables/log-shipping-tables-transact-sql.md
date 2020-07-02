@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0631825c8d6320ca5dd868869764c2d06e00d638
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 965db8bf7af993c37551ddbc5e7c7343a85a2950
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805790"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764169"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>記錄傳送資料表 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   下列主題描述儲存記錄傳送作業所使用之資訊的系統資料表。  
   

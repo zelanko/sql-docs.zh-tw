@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6559be1c680c45b75154cea222ddfece355f49cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832542"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762745"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更新現有警示的設定。  
   
@@ -80,7 +80,7 @@ sp_update_alert
   
 |值|描述|  
 |-----------|-----------------|  
-|**0**|無|  
+|**0**|None|  
 |**1**|電子郵件|  
 |**2**|呼叫器|  
 |**4**|**net send**|  
@@ -112,11 +112,11 @@ sp_update_alert
   
 `[ @performance_condition = ] 'performance_condition'`以 **'**_itemcomparatorvalue_**'** 格式表示的值。 *performance_condition*是**Nvarchar （512）**，預設值是 Null，且由這些元素組成。  
   
-|格式元素|說明|  
+|格式元素|描述|  
 |--------------------|-----------------|  
-|*項目*|計數器的效能物件、效能計數器或具名執行個體|  
+|*Item*|計數器的效能物件、效能計數器或具名執行個體|  
 |*比較子*|下列其中一個運算子： **>** 、 **<** 、**=**|  
-|*值*|計數器的數值|  
+|*ReplTest1*|計數器的數值|  
   
 `[ @category_name = ] 'category'`警示類別目錄的名稱。 *category*是**sysname** ，預設值是 Null。  
   

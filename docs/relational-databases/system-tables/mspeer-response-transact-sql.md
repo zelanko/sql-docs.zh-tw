@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1be9d2d5420e3a105249b43195eba63eb273f81
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6f256fdf082e38aca85d1a002af13c8892f810de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764142"
 ---
 # <a name="mspeer_response-transact-sql"></a>MSpeer_response (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在點對點複寫中，會使用**MSpeer_response**資料表來儲存每個節點對發行集狀態要求的回應。 這份資料表儲存在發行集資料庫中。  
   

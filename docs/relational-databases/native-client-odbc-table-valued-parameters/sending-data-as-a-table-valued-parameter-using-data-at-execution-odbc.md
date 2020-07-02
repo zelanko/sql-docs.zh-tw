@@ -13,15 +13,15 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b07341dbf3beba66ee7ad6e7cc4861142792fa0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f2df587de4be458e520f8486b1e81e00916e6df8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760684"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用資料執行中 (ODBC) 以資料表值參數的方式傳送資料
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   這類似于「[全部在記憶體中](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)」程式，但會針對資料表值參數使用「資料執行中」。  
   
@@ -187,7 +187,7 @@ from @Items
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 這個範例會示範您可以使用 ODBC TVP，針對每個呼叫 SQLPutData 的資料列串流（一個資料列），類似于您可能會使用 BCP 載入資料庫的方式。  
+ 這個範例示範您可以使用 ODBC TVP，針對每個呼叫 SQLPutData 的資料列串流（一個資料列），類似于您可能會使用 BCP.exe 將資料載入資料庫的方式。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
   
@@ -375,7 +375,7 @@ EXIT:
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 這個範例會示範您可以使用 ODBC TVP，每次呼叫 SQLPutData 時，使用資料列串流、多個資料列，類似于您可以如何使用 BCP 將資料載入資料庫中。  
+ 這個範例會示範您可以使用 ODBC TVP，每次呼叫 SQLPutData 時，使用資料列串流、多個資料列，類似于您可能會使用 BCP.exe 將資料載入資料庫的方式。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98eaa39475b58c7fad5b20c4f6a65101d33b103d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b56b81563a693397156f0fe29fe7b3e6a430ef41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762791"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   修改指定追蹤的目前狀態。  
   
@@ -66,7 +66,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 |**1**|未知的錯誤。|  
 |**8**|指定的狀態無效。|  
 |**9**|指定的追蹤控制代碼無效。|  
-|**十三**|記憶體用完。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
+|**13**|記憶體用完。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
   
  如果追蹤已在指定的狀態中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則會傳回**0**。  
   

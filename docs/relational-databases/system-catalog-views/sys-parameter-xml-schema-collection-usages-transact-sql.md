@@ -20,21 +20,21 @@ ms.assetid: bffb91a3-492c-4375-bd2a-db8fc1a3ace4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae066013a49aa8bc22b227bf8a9b232e9b621ae5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e90629ef357d04b4161ca87d3d3f95a6e66ec487
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760283"
 ---
 # <a name="sysparameter_xml_schema_collection_usages-transact-sql"></a>sys.parameter_xml_schema_collection_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   針對每個 XML 結構描述所驗證的參數，傳回一個資料列。  
   
  |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|這個參數所屬物件的識別碼。|  
+|object_id|**int**|這個參數所屬物件的識別碼。|  
 |**parameter_id**|**int**|參數的識別碼。  在物件中，這是唯一的。|  
 |**xml_collection_id**|**int**|這是 XML 結構描述集合的識別碼，這個 XML 結構描述集合包含該參數之正在驗證的 XML 結構描述命名空間。|  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f862824d6fe4e35eef25cbca949971276f1d0acd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 47fcad03fb8329c3d39150aa0aaf9b5688e0456f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827292"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764249"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHcolumns**系統資料表會針對每個已發行的資料行，各包含一個資料列。 這份資料表用來定義 SQL Server 發行者中的資料行資料類型在發行時如何表示，基本上它是在非 SQL Server 資料庫管理系統 (DBMS) 和 SQL Server 之間對應資料類型。 這份資料表儲存在散發資料庫中。  
   

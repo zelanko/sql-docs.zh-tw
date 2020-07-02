@@ -13,21 +13,21 @@ ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f1f3e26ece880faf1c7f96e674d4f4f161790dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f97d723d027cb756e7a74b5f2aa58c06d0d63acd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760654"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>資料表值參數描述項欄位
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   資料表值參數的支援包含 ODBC 應用程式參數描述項 (APD) 和實作參數描述項 (IPD) 中新增的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定欄位。  
   
 ## <a name="remarks"></a>備註  
   
-|名稱|Location|類型|描述|  
+|名稱|位置|類型|描述|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR *|資料表值參數的伺服器類型名稱。<br /><br /> 當資料表值參數類型名稱是在呼叫 SQLBindParameter 時指定時，一定要將它指定為 Unicode 值，即使在以 ANSI 應用程式形式建立的應用程式中也是如此。 參數*StrLen_or_IndPtr*所使用的值應該是 SQL_NTS 或名稱的字串長度乘以 SIZEOF （WCHAR）。<br /><br /> 透過 SQLSetDescField 指定資料表值參數類型名稱時，可以使用符合應用程式建立方式的常值來指定。 ODBC 驅動程式管理員將會執行所有必要的 Unicode 轉換。|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (唯讀)|IPD|SQLTCHAR *|類型定義所在的目錄。|  
@@ -37,7 +37,7 @@ ms.locfileid: "81297791"
   
  當參數焦點設定為資料表值參數時，資料表值參數適用下列的陳述式屬性和描述項標頭欄位：  
   
-|名稱|Location|類型|描述|  
+|名稱|位置|類型|描述|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> (這相當於在 APD 中的 SQL_DESC_ARRAY_SIZE)。|APD|SQLUINTEGER|資料表值參數的緩衝區陣列的陣列大小。 這是緩衝區可容納的最大資料列數目，或者以資料列表示的緩衝區大小；資料表值參數值本身的資料列可能多於或少於緩衝區所能保存的資料列。 預設值為 1。<br /><br /> 注意：如果 SQL_SOPT_SS_PARAM_FOCUS 設定為預設值0，SQL_ATTR_PARAMSET_SIZE 會參考語句並指定參數集的數目。 如果 SQL_SOPT_SS_PARAM_FOCUS 設定為資料表值參數的序數，則它會參考資料表值參數並針對資料表值參數而指定每個參數集的資料列數。|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|預設值為 SQL_PARAM_BIND_BY_COLUMN。<br /><br /> 若要選取資料列繫結，這個欄位會設定為會繫結到資料表值參數資料列集之結構或緩衝區執行個體的長度。 這個長度會包含所有繫結資料行以及結構或緩衝區之任何填補的空間。 如此可確保在使用指定長度遞增繫結資料行的位址時，結果會指向下一個資料列中相同資料行的起始處。 在 ANSI C 中使用**sizeof**運算子時，會保證此行為。|  

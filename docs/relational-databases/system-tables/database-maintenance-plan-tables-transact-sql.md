@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 720d439449870e2b0e620f67cf0321b5c5cde043
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a561a2b6a00c87d213a08390ef3f12ab596d0c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762621"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>資料庫維護計畫資料表 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此章節的主題介紹儲存資料庫維護計畫所用的資訊之系統資料表。 這些資料表會保留從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級而來之執行個體的資訊。  
   
@@ -45,6 +45,6 @@ ms.locfileid: "82806949"
  針對每個升級的資料庫維護計畫，各包含一個資料列。  
   
 ## <a name="see-also"></a>另請參閱  
- [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [維護計劃](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

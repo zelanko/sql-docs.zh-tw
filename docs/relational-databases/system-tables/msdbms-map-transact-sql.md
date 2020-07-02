@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2634ff8b9e863c4eaf46e735f5505ac85d273331
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8d1f6b6a078aa8adf8e62663491714f14f7b0944
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827246"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762557"
 ---
 # <a name="msdbms_map-transact-sql"></a>MSdbms_map (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdbms_map**資料表包含源資料類型資訊，以及來源和目的地 DBMS 配對的預設目的地資料類型資訊的連結。 此資料表會儲存在**msdb**資料庫中，並用於進行異類發行。  
   

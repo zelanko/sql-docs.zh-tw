@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d5b8b0e237b25b36a48eea1fc168e52eeb3444e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8892fb92e9cbb2e2cbf3b8d9f47137af3a10fb90
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760272"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Always On 可用性群組動態管理 Views-函數
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本節包含與 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 有關的動態管理檢視和函數。  
   

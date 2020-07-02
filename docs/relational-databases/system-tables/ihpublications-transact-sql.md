@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 112d237781ecbe257ef0b9d8c3f4bdee37ca5bc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a8185249a40c11a031be8206a4a1ea016ed50faa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764241"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHpublications**系統資料表會針對使用目前散發者的每個非 SQL Server 發行集，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "82813530"
 |**queue_type**|**int**|指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **1** = msmq，使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 訊息佇列來儲存交易。<br /><br /> **2** = sql，用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存交易。<br /><br /> 非發行者不使用這個資料行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 注意：使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 訊息佇列已被取代，不再受到支援。<br /><br /> *非 SQL 發行者不支援此資料行。*|  
 |**ad_guidname**|**sysname**|指定發行集是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行。 有效的全域唯一識別碼（GUID）會指定在 Active Directory 中發行發行集 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ，而 GUID 是對應的 Active Directory 發行集物件**objectGUID**。 如果是 NULL，發行集就不會發行在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中。 *不支援非 SQL 發行者使用這個項目。*|  
 |**backward_comp_level**|**int**|資料庫相容性層級，它可以是下列值之一：<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。<br /><br /> *不支援非 SQL 發行者使用這個項目。*|  
-|**描述**|**nvarchar(255)**|發行集的描述項目。|  
+|**description**|**nvarchar(255)**|發行集的描述項目。|  
 |**independent_agent**|**bit**|指定這個發行集是否有獨立的散發代理程式。<br /><br /> **0** = 發行集使用共用的散發代理程式，而且每個發行者資料庫/訂閱者資料庫配對都有單一的共用代理程式。<br /><br /> **1** = 此發行集有一個獨立的散發代理程式。|  
 |**immediate_sync**|**bit**|指出每次執行快照集代理程式時，是否要建立或重新建立同步處理檔案， **1**表示每次執行代理程式時都會建立它們。|  
 |**allow_push**|**bit**|指出發行集是否允許發送訂閱， **1**表示允許。|  

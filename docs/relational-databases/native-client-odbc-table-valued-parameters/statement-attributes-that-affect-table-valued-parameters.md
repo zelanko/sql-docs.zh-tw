@@ -14,15 +14,15 @@ ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3344b0738b0b831240405fad50c4d055f0f9a9d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b4a6bfc8209946f6d550f243cc21a027c1f9fd6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760673"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>影響資料表值參數的陳述式屬性
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   下表將說明描述項欄位中的屬性。  
   

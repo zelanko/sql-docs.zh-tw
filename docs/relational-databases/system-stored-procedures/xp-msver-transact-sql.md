@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85552daa2dda14c6a7516c96f0f9fe6566f31111
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 385bae0bd40fd392f038ef4dd85204c853a81773
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73843904"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762628"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  傳回有關[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本資訊。 **xp_msver**也會傳回伺服器實際組建編號的相關資訊，以及伺服器環境的相關資訊。 **Xp_msver**傳回的資訊可用於語句、批[!INCLUDE[tsql](../../includes/tsql-md.md)]次、預存程式等中，以增強平臺獨立程式碼的邏輯。  
+  傳回有關的版本資訊 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **xp_msver**也會傳回伺服器實際組建編號的相關資訊，以及伺服器環境的相關資訊。 **Xp_msver**傳回的資訊可用於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句、批次、預存程式等中，以增強平臺獨立程式碼的邏輯。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,12 +44,12 @@ xp_msver [ optname ]
   
 |選項/資料行名稱|描述|  
 |-------------------------|-----------------|  
-|**ProductName**|產品名稱;例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**ProductName**|產品名稱;例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**ProductVersion**|產品版本。|  
 |**語言**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的語言版本。|  
 |**平台**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之電腦的作業系統名稱、製造商名稱和晶片家族名稱。|  
 |**註解**|有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他資訊。|  
-|**CompanyName**|產生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的公司名稱；例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation。|  
+|**公司**|產生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的公司名稱；例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation。|  
 |**FileDescription**|作業系統。|  
 |**FileVersion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔的版本。|  
 |**InternalName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部名稱；例如 SQLSERVR。|  
