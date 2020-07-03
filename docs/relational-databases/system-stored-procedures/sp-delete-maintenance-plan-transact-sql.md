@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b47506b193f2ec6a813aa4bfd97eabf81fcf3745
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9d993720a85508751b734322454d2f2d98be469c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772212"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862653"
 ---
 # <a name="sp_delete_maintenance_plan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   刪除指定的維護計畫。  
   

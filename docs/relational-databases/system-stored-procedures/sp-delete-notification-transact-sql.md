@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1546737884a815e77cf7f6a0337dd4933348018b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 05682482a720bbf14a17497299676ac6a0cc23d4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772198"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862639"
 ---
 # <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   移除特定警示和操作員的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 通知定義。  
   
