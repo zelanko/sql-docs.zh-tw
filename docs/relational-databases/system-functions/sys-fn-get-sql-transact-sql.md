@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8ba54cf16819164bb8d356cae0a5a1b7569a373
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a20cd13526bcee06e4f4ce3aa93c52a9fd156456
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783927"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898329"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回指定 SQL 控制代碼之 SQL 陳述式的文字。  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee13dd34ff87a68ed4dc1b07a4ff8c28ee6d4daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28353a7b2112be801f465b5a919b537f17a17f4d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647003"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898220"
 ---
 # <a name="coresp_add_collector_type-transact-sql"></a>core.sp_add_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在管理資料倉儲資料庫的 core.supported_collector_types 檢視表中加入新的項目。 此程序必須在管理資料倉儲資料庫的內容中執行。  
   

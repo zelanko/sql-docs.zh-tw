@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c40f335e4b40a1c15af6247439ac1f19e88d9d37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4a412ac614037a79e033636b20c21e2464c427ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730089"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898476"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys.databases fn_all_changes_ &lt; capture_instance &gt; （transact-sql）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **所有變更**查詢函數的包裝函式。 sys.sp_cdc_generate_wrapper_function 系統預存程序會產生建立這些函數所需的指令碼。  
   
@@ -83,7 +83,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料行類型|描述|  
+|資料行名稱|資料行類型|說明|  
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|與變更相關聯之交易的認可 LSN。 在相同交易中認可的所有變更都會共用相同的認可 LSN。|  
 |__CDC_SEQVAL|**binary(10)**|用來排序交易內資料列變更的序列值。|  

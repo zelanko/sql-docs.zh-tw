@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fbfbf38e084d147e13705ae76ac5367b697c5fe6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1ff2329d0070d554f87e405a6030b744e98d23a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730137"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896754"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   提供收集項之收集器類型的相關資訊。  
   

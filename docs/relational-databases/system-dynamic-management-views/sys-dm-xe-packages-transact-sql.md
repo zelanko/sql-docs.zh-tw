@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc554af539aca8579e02f36eca7bc02f7c3e5dac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a70105791ed9c6dea0371bd941dcae185ab05b2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648405"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898598"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   列出已向擴充的事件引擎註冊的所有封裝。  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e5ad2f17c31508b8d712474723af169becd794b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce79c24b75fb0efd3b9934e90c7cb748cfe2f154
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760245"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898383"
 ---
 # <a name="sysfn_cdc_has_column_changed-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   識別指定的更新遮罩是否表示指定的資料行已經在相關聯的變更資料列中更新。  
   

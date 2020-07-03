@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e84c7c7161d88120eccd204c2e24bed508abba7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 81fb3ac8d7bf843b9d64e4f0f10cff6abd83b042
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771607"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897689"
 ---
 # <a name="systrigger_event_types-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對可以引發觸發程序的每個事件或事件群組，各傳回一個資料列。  
   

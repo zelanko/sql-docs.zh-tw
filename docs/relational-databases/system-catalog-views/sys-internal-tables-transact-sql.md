@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf1406488424febe0ea98a686b91068fe2d07eda
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58e6166060c5e2099051403361b2eb2c51ad4c18
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725771"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898915"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對每個內部資料表物件，各傳回一個資料列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動產生內部資料表來支援各種功能。 例如，當您建立主要 XML 索引時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會自動建立內部資料表來保存零碎的 XML 文件資料。 內部資料表會出現在每個資料庫的**sys**架構中，而且具有系統產生的唯一名稱，以指出其函式，例如**xml_index_nodes_2021582240_32001**或**queue_messages_1977058079**  
   

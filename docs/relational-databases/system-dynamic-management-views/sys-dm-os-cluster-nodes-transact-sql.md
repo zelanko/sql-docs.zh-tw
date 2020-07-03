@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 384cfd63e613b419f87cac7ca60454ddd8a3c90c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2ca978e746ce9d702b8ec4e3ebc8680a702d49f2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754209"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898838"
 ---
 # <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對容錯移轉叢集執行個體組態中之每個節點傳回一個資料列。 如果目前的執行個體就是容錯移轉叢集執行個體，將會傳回定義有此容錯移轉叢集執行個體 (先前稱為「虛擬伺服器」) 之節點的清單。 如果目前的伺服器執行個體不是容錯移轉叢集執行個體，它會傳回空的資料列集。  
   

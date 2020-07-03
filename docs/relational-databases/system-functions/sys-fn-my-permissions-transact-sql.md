@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3698431316b86a40e70e144bfac23d81678db45c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9bb57e2d01c4942955e838cf358444636bf7aedb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783092"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898345"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回有效授與安全性實體上主體的權限清單。 [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)相關的函式。  
   
@@ -51,7 +51,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>傳回的資料行  
  下表列出**fn_my_permissions**傳回的資料行。 傳回的每個資料列都會描述安全性實體之目前安全性內容所持有的權限。 如果查詢失敗，則傳回 NULL。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|說明|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|有效授與列出權限的安全性實體名稱。|  
 |subentity_name|**sysname**|如果安全性實體有資料行，則為資料行名稱，否則為 NULL。|  

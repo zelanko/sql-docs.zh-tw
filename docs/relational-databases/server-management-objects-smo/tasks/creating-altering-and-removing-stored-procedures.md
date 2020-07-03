@@ -13,19 +13,19 @@ ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff489b218f783201d5ea3bd0a0165951f51ff4e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d62d3e7314f2ea9a7cbc5e2412a010b98c99fb89
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095497"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896358"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>建立、改變和移除預存程序
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 中，預存程序會由 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 物件表示。  
   
- 若要在 SMO 中建立 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 物件，需要將 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> 屬性設定為定義預存程序的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼。 參數需要\@前置詞，而且必須使用<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>物件個別建立，並加入至<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>物件的集合。  
+ 若要在 SMO 中建立 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 物件，需要將 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> 屬性設定為定義預存程序的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼。 參數需要 \@ 前置詞，而且必須使用物件個別建立， <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 並加入至 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 物件的集合 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 。  
   
 ## <a name="example"></a>範例  
  如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  

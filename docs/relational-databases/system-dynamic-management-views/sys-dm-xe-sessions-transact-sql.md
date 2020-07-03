@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 75579103721fe8c89d85a0c222a631a9d98ac833
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8100309dafa8004d156b74712e91b0bd340d160e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648053"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898538"
 ---
 # <a name="sysdm_xe_sessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回使用中擴充的事件工作階段的相關資訊。 這個工作階段是事件、動作和目標的集合。  
     

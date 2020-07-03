@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ca7bd036-d661-4c17-b00a-e1a975bd8932
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 20bda8c759d17443d56c2ce046f6c7d279e76f5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2a856e06f5deb0e013a680d4b614695e45f4c7f7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754121"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898733"
 ---
 # <a name="sysdm_os_memory_cache_counters-transact-sql"></a>sys.dm_os_memory_cache_counters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中傳回快取健全狀況的快照集。 **dm_os_memory_cache_counters**提供有關已配置的快取專案、其使用，以及快取專案的記憶體來源的執行時間資訊。  
   

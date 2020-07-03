@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f824085977135eba54bc04679e3cd8fd82d58644
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abf2ee225f23e055d8208a792aee3b006c21dce3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790503"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896447"
 ---
 # <a name="syscollector_execution_log-transact-sql"></a>syscollector_execution_log (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   根據收集組或封裝的執行記錄，提供相關資訊。   
   

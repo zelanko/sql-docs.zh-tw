@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e05ef7753ae6375382bfd2bd6e199b6cabffd63
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4946bff122f64da126291bb797effe60c361663f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647997"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898540"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc. fn_cdc_get_all_changes_ &lt; capture_instance &gt; （transact-sql）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對在指定之記錄序號 (LSN) 範圍內套用至來源資料表的每個變更，各傳回一個資料列。 如果來源資料列在間隔期間具有多個變更，就會在傳回的結果集中表示每個變更。 除了傳回變更資料以外，四個中繼資料資料行會提供讓您將變更套用至其他資料來源所需的資訊。 資料列篩選選項會管理結果集中傳回的中繼資料資料行以及資料列內容。 當您指定了 'all' 資料列篩選選項時，每個變更都剛好具有一個資料列來識別變更。 當您指定了 'all update old' 選項時，更新作業會表示成兩個資料列：其中一個資料列包含更新之前擷取資料行的值，而另一個資料列則包含更新之後擷取資料行的值。  
   

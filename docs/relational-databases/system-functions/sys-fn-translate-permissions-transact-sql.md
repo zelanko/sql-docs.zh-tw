@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3d7a464f3faba633dd09be12ef4c3d006ef19ef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aec909b59a6e174269a14a330ad839d3e3ff4faa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738587"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898258"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   將 SQL 追蹤所傳回的權限位元遮罩解譯為權限名稱表。  
   

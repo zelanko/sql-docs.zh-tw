@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e1abaab39d2ab7cc63e6089c0ae58777f4b84a35
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e810bf996f7dbaa8624c6a0e834011d759aa9348
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720230"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899379"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   刪除或重新指派屬於指定登入的作業。  
   

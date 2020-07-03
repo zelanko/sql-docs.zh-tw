@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 38697ada64127d3bb9f8e3fc5858cd69f1698f85
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 527cc2d7596a1bdd894ba71c1e3b1139150efc63
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764510"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896271"
 ---
 # <a name="syshttp_endpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對使用 HTTP 通訊協定的伺服器中所建立的每個端點，各包含一個資料列。  
   

@@ -21,15 +21,15 @@ ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: b721b35f68518ee0c2863544c42a8fa11d99f3a8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0ed0c0a3e0a7a8e25279090fb0a84ccbad9d9a2b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717599"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897752"
 ---
 # <a name="sysregistered_search_property_lists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對目前資料庫上的每個搜尋屬性清單，各包含一個資料列。  
   

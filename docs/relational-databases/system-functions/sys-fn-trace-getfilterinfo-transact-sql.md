@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 306357f87ffa30dbdd6fca302089cf0d8967242f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 79b86365703160ef6f15f8fd89805961997a61e4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754026"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898291"
 ---
 # <a name="sysfn_trace_getfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回指定追蹤所套用之篩選的相關資訊。  
   

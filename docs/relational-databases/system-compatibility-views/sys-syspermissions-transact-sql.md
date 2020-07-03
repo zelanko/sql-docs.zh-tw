@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ba9a9a88-55d2-41a7-b09b-342e8b9a54c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eff39686fc5bd67f8f45a9c04ad75b39aa3cc4eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f28ff4a642b1772d7aee921b6047e81a3b306a5b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764299"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897348"
 ---
 # <a name="syssyspermissions-transact-sql"></a>sys.syspermissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   包含授與或拒絕資料庫使用者、群組和角色之權限的相關資訊。  
   

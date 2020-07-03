@@ -15,15 +15,15 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c7a9824d68f2d1b912f19b43330eae1d3bc2c0a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74094390"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897786"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>使用 SQL Server Agent 排程自動管理工作
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   在 SMO 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 是由下列物件表示：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "74094390"
 ## <a name="examples"></a>範例  
  如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
-對於使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agent 的程式，您必須包含**using**語句以限定代理程式命名空間。 在應用程式中的任何宣告之前，于其他**using**語句後面插入語句，例如：
+對於使用 agent 的程式 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，您必須包含**using**語句以限定代理程式命名空間。 在應用程式中的任何宣告之前，于其他**using**語句後面插入語句，例如：
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -168,7 +168,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |實例 |ComparisionOp |CompValue**  
   
- 警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>類型需要使用[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]方括弧，因為**運算子**是關鍵字。  
+ 警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>類型需要使用方括弧，因為**運算子**是 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 關鍵字。  
   
 ```csharp  
 {  
@@ -201,7 +201,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |實例 |ComparisionOp |CompValue**  
   
- 警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>類型需要使用[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]方括弧，因為**運算子**是關鍵字。  
+ 警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>類型需要使用方括弧，因為**運算子**是 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 關鍵字。  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

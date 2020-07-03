@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a8268cd4796743afd0f71e59afc409a07c840d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee534061f95a9b33ff3febcea758326662599556
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85664802"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896471"
 ---
 # <a name="sysserver_event_notifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對每個伺服器層級的事件通知物件，各傳回一個資料列。  
   

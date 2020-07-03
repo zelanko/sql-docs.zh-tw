@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42dbd7a5bf6e1bc7b705bcf017987da959faa114
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 63b7029c69fff73615d34bd723b97290b2557afb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827522"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899202"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   將電子郵件訊息傳送給指定的收件者。 訊息可能包含查詢結果集、檔案附件，或兩者皆有。 當 mail 成功放在 Database Mail 佇列中時， **sp_send_dbmail**會傳回訊息的**mailitem_id** 。 這個預存程式是在**msdb**資料庫中。  
   

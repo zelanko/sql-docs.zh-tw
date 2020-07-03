@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d53f54e18c464a61d0a4b5b6cfb4cdb0cc866642
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b1aa34bd2ab2f4e299ae52974f032a94bf1fdf1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85664117"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895928"
 ---
 # <a name="syssystem_views-transact-sql"></a>sys.system_views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所提供的每份系統檢視，各包含一個資料列。 所有系統檢視都包含在名為**sys**或**INFORMATION_SCHEMA**的架構中。  
   

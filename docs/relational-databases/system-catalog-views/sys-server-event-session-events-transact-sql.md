@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08d902a7eb4d0db60d6fdf3289c972316f557205
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bcd8f24e3d594e7013900d31db2d459c9236d9d9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85664576"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896496"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對事件工作階段中的每個事件傳回資料列。  
   

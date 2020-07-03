@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 82d3464e3e5b75f350efa0478e9ad2a7a68a947b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 5a45acafea032b6a0815d975f91b64f5612b2e43
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811663"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899133"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   資料清理是分析資料來源中的資料品質、手動核准/拒絕系統的建議，藉以對資料進行變更的程序。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的資料清理包含電腦輔助的程序，以分析資料符合知識庫中知識的方式，同時也包含一個互動式程序，讓資料管理人檢閱並修改電腦輔助的程序結果，以確保資料清理完全符合其希望的執行方式。  
   

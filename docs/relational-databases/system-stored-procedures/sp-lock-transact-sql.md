@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0413917ead793ed0034ff04ea43394ec4a39a12
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5cb05c50ce37434161c04bf26083990b319fafc3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720261"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899394"
 ---
 # <a name="sp_lock-transact-sql"></a>sp_lock (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   報告鎖定的相關資訊。  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea779dfb66d9fce2053fcee0b6fd3eedbc26a4ef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3cd283f09263d4f36f0f4e2cfd4a18767dd614e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784847"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898362"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對指定的時間，從[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)系統資料表中的**start_lsn**資料行傳回記錄序號（LSN）值。 您可以使用此函式，有系統地將日期時間範圍對應至變更資料捕獲列舉函數 cdc 所需的 LSN 型範圍[fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)和[cdc。 fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>傳回該範圍內的資料變更。  
   

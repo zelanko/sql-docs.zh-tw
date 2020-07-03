@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc5f1972bd25be9b18341abf2c5fbc7d77ac2303
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e9e5f16f1d9482d24b9ac6f4712c9d5b1edb106
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718927"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896037"
 ---
 # <a name="service-broker-catalog-views-transact-sql"></a>Service Broker 目錄檢視 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此章節包含下列目錄檢視：  
   

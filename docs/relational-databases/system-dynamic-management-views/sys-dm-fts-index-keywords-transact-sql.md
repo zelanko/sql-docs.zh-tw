@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e29fcabeb2f99def9f2e06b1d0b157c8d148002a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b95ce96f126249da124ea5830e7cc898fa9f8b6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734538"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898849"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對指定的資料表傳回全文檢索索引之內容的相關資訊。  
   

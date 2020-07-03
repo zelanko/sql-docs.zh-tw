@@ -1,6 +1,6 @@
 ---
 title: 安裝 SQL Server 更新之後，升級 DQS 資料庫架構
-description: 瞭解如何在 SQL Server 已由修補程式、修正程式或累積更新更新之後，使用 Dqsinstaller.exe 升級 Data Quality Services （DQS）實例。
+description: 瞭解如何在 SQL Server 已由修補程式、修正程式或累積更新更新之後，使用 DQSInstaller.exe 升級 Data Quality Services （DQS）實例。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: db5009ef7f5c9ff2a57022d30b2eb9f009fb6ab8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2491a46bb4c0e07c61b5c827a7b8f666d09d94c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75558040"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897802"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>安裝 SQL Server 更新之後，升級 DQS 資料庫架構
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在之前設定的 DQS 執行個體上安裝 SQL Server 更新 (修補、Hotfix 或累計更新) 之後，您可能必須使用 **upgrade** 命令列參數執行 DQSInstaller.exe 檔案來升級 DQS 資料庫結構描述。 否則，當您嘗試使用 Data Quality Client 連接至資料品質伺服器時，您可能會收到以下錯誤：  
   
@@ -33,7 +33,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 > [!NOTE]  
 >  大部分的 SQL Server 更新都需要升級至 DQS 資料庫結構描述。 如需將需要升級至 DQS 資料庫結構描述之 SQL Server 更新的詳細資訊，請參閱 [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565)(升級 DQS：在 Data Quality Services 上安裝累計更新或 Hotfix 修補) 中步驟 1.A 的圖表。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
   
 -   您必須以 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 電腦上 Administrator 群組成員的身分登入。  
   

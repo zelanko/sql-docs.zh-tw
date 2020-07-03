@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85774dea163b6f07e9d3b9a5514db787d722874d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8c14d41dabfb8b587b3baaaaec9cb11ac3ac9d8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646890"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898179"
 ---
 # <a name="coresp_remove_collector_type-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   從管理資料倉儲資料庫的 core.supported_collector_types 檢視表中移除項目。 此程序必須在管理資料倉儲資料庫的內容中執行。  
   

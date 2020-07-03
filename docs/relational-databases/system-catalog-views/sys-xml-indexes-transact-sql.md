@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa1d994955ce382b3c327c603b155896635818ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d4d0b42472bdaf8d634dd75d9bb8ca8bcd5a1847
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754374"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896776"
 ---
 # <a name="sysxml_indexes-transact-sql"></a>sys.xml_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對 XML 索引，各傳回一個資料列。  
   

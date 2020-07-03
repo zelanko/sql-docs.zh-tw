@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 106c295d200ce823f80988be2276a927aba8126d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b246947ce4657dc97b4f9a3dc6356ef4a150da8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764461"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897734"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   依照定義某些其他參考物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式或陳述式所參考，針對受參考之實體的每個相依性，各包含一個資料列。  
   

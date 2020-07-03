@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ba2bfe0a9979d94df43b923b7eff2ed68750e19a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 92f0d05b8b7f6bc4e72c70c73d9b93f0e785206d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85809863"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897487"
 ---
 # <a name="monitor-dqs-activities"></a>監控 DQS 活動
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中集中監控下列活動：知識探索、定義域管理、比對原則、資料清理、資料比對和 SSIS 清理。  
   
@@ -135,10 +135,10 @@ ms.locfileid: "85809863"
   
 3.  此時，系統會提示您指定要儲存之 Excel 檔案的名稱和位置。 匯出的 Excel 檔案包含下列工作表：  
   
-    |工作表名稱|描述|  
+    |工作表名稱|說明|  
     |----------------|-----------------|  
     |活動|包含活動的相關資訊 (資料行)，如活動方格所示。|  
-    |處理序|包含活動中處理序的相關資訊 (資料行)，如 **[活動步驟]** 索引標籤所示。|  
+    |處理程序|包含活動中處理序的相關資訊 (資料行)，如 **[活動步驟]** 索引標籤所示。|  
     |分析工具 - 來源|若為 **[清理]** 子類型，就會包含有關活動的下列資訊：[記錄]、[正確記錄]、[更正的記錄] 和 [無效的記錄]。<br /><br /> 若為 **[知識探索]**、 **[定義域管理]**、 **[比對原則]** 和 **[比對]** 子類型，就會包含有關活動的下列資訊：[記錄]、[總計值]、[新值]、[唯一值] 和 [新的唯一值]。|  
     |分析工具 - 欄位|若為 **[清理]** 和 **[SSIS 清理]** 子類型，就會包含有關活動的下列資訊：[欄位]、[定義域]、[更正的值]、[建議的值]、[完整性] 和 [精確度]。<br /><br /> 若為 **[知識探索]**、 **[定義域管理]**、 **[比對原則]** 和 **[比對]** 子類型，就會包含有關活動的下列資訊：[欄位]、[定義域]、[新增]、[唯一]、[在定義域中有效] 和 [完整性]。|  
   

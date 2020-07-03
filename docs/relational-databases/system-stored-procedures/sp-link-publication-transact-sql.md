@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 976109aa0ef09575f818ff6daf82e742626dede7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c3c414507b0dfe58cc4b13bc18c992e3a46bea9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756642"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899412"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   設定在連接到發行者時，立即更新訂閱的同步處理觸發程序所用的組態和安全性資訊。 這個預存程序執行於訂閱資料庫的訂閱者端。  
   

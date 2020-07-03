@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c26cfb617809c3e7019e279a8da06a4008d08abb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fdceccb1d11ce8818e9f26e46adf6b698e493cd4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717412"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898149"
 ---
 # <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   關閉 FileTable 資料的非交易式檔案控制代碼。  
   

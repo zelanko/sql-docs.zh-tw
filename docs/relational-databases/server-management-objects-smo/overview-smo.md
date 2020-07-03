@@ -11,17 +11,17 @@ ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7705aa50b488971b1c5aaf6e043ccf2dfd9103f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3d7dd27e451f24c6c989eaf674c81519b1e6c7e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148650"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894998"
 ---
 # <a name="overview-smo"></a>概觀 (SMO)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件（SMO）是針對以程式設計方式管理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的物件。 您可以使用 SMO 來建立自訂的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理應用程式。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是一種用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能強大且廣泛的應用程式，但是可能有時候 SMO 應用程式還是會提供比較好的服務。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件（SMO）是針對以程式設計方式管理的物件 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以使用 SMO 來建立自訂的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理應用程式。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是一種用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能強大且廣泛的應用程式，但是可能有時候 SMO 應用程式還是會提供比較好的服務。  
   
  例如，可能必須簡化控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工作的使用者應用程式，才能符合新使用者的需求及降低訓練成本。 您可能必須建立自訂的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，或是建立一個應用程式來建立及監視索引的效率。 也可能會使用 SMO 應用程式，將協力廠商硬體或軟體緊密地併入資料庫管理應用程式中。  
   

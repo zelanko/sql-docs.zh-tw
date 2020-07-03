@@ -13,15 +13,15 @@ ms.assetid: c30ac3b9-8150-4264-ba4c-c549f44261ab
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17e7f0dd020004f0251fd470e42a591f926d7ce2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da8bd1b869a346b3f883f061c8e8610ee53dcd5a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74094648"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899040"
 ---
 # <a name="creating-altering-and-removing-defaults"></a>建立、改變和移除預設值
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 中，預設的條件約束是由 <xref:Microsoft.SqlServer.Management.Smo.Default> 物件表示。  
   

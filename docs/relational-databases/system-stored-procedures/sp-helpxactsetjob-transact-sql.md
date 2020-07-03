@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac90a8a3e892aef0bb5d45a6864fb2291f52d60f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9f5a32c9706947471908966be59378a0d34147e1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751730"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899432"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   顯示 Oracle 發行者的 Xactset 作業的相關資訊。 這個預存程序執行於任何資料庫中的散發者端。  
   

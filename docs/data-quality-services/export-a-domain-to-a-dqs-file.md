@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: dcaa3fd4a59793f8dfb086f7cd36d2564f939fd9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f9e672685a2135fd494da4adb8a1844a25243f6f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85810759"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895356"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>將定義域匯出成 .dqs 檔案
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中將定義域匯出至 .dqs 檔案。 您可以將定義域或整個知識庫匯出到資料檔。 如需匯出知識庫的資訊，請參閱[將知識庫匯出為 .dqs 檔案](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)。  
   

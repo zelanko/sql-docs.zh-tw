@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 348069dcab86747bccd179f85fd343e5c9d2c47f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662890"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898449"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回 FILESTREAM 二進位大型物件 (BLOB) 的路徑。 OpenSqlFilestream API 會使用這個路徑來傳回一個控制碼，應用程式可以使用 Win32 Api 來處理 BLOB 資料。 PathName 是唯讀的。  
   
@@ -47,7 +47,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *\@件*  
  定義路徑的伺服器元件如何格式化的整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 * \@ 選項*可以是下列其中一個值。 預設值是 0。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |0|傳回轉換成 BIOS 格式的伺服器名稱，例如：`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|在不轉換的情況下傳回伺服器名稱，例如：`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  當資料庫屬於 Always On 可用性群組時， *use_replica_computer_name*的值會對**PathName**函數的輸出產生下列影響：  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |未指定。|此函數會傳回路徑中的虛擬網路名稱 (VNN)。|  
 |0|此函數會傳回路徑中的虛擬網路名稱 (VNN)。|  

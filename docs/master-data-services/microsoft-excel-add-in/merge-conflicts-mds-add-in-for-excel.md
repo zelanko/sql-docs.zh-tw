@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: cf95978f-a2c5-4325-8606-dbd4e88741b8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1062c7269c5afc0d6aecb781e7254e87c61bd65d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc8b87c25e258784998708821a2f16ae8b04ecc3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728002"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897433"
 ---
 # <a name="merge-conflicts-mds-add-in-for-excel"></a>合併衝突 (適用於 Excel 的 MDS 增益集)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在適用於 Excel 的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 增益集中，如果資料已由另一位使用者在伺服器上變更的話，則該發行將會失敗並會出現衝突錯誤。 若要解決此錯誤，可以執行合併衝突，然後重新發佈所做的變更。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  

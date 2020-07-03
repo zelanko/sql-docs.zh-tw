@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 79045109eab32818e6cddd43bc9acf7ae35dfe6d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 77e1dc6a2e0039c8ff9a2f66c6b3ed45a2176a17
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812174"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898108"
 ---
 # <a name="managing-a-domain"></a>管理定義域
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用定義域。 定義域包含要分析之資料來源中特定欄位內之資料的語意表示法。 定義域是您為資料來源建立之知識庫的一部分，而且您藉由分析取樣資料來源或匯入資料所建立的知識會加入至知識庫中所定義的定義域。 之後會使用這些定義域中的知識，於資料品質專案中執行清理和比對。 定義域位於 Data Quality Services 中所有活動的核心。  
   

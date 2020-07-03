@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ede8e0515decf06304694fa3a907cc468b16de1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a2380091f44c4a78930cb3769e15b9cc9c176857
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734595"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898888"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   顯示與 FileTable 資料相關聯、目前開啟的非交易式檔案控制代碼。  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d0069d69b0d2aa289977bd1211233b470093a73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ffaa8c718d2836a9fe92fbc2f280ae15173a10cb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733535"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897741"
 ---
 # <a name="partition-function-catalog-views-transact-sql"></a>資料分割函數目錄檢視 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此章節包含下列目錄檢視。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8275c27eac96a5cb6d88e7bd5e9e50d9a878a6be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 868e203866890c1f13405ddc7ed3949487e821da
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718660"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899242"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   重新同步處理指定目標伺服器中的所有多伺服器作業。  
   

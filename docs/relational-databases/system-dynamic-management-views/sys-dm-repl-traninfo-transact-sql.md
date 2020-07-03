@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2def277c877311fc5bfaa77bbab5923563d39a75
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9602f889c7074bcb8b0f6493168226bc6786c5d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716646"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898663"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回每一項複寫交易或異動資料擷取交易的資訊。  
 

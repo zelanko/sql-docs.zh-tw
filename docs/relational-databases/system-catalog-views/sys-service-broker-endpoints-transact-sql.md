@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a59beeb51d59b00fbd902045f0f1aaebc9322a64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86a7fb5a83fe8e12f6721328e69c45e40e57eb46
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752907"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897905"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   這份目錄檢視會針對 Service Broker 端點，各包含一個資料列。 對於此視圖中的每個資料列，在包含 TCP 設定中繼資料的 [ **tcp_endpoints** ] 視圖中，都有一個具有相同**endpoint_id**的對應資料列。 TCP 是 Service Broker 唯一允許使用的通訊協定。  
   

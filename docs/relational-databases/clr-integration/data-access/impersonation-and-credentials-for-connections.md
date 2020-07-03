@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fef008f05ffa5f8ca201d05497cd8794ad6b79a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0561c224a8569c2db13ab71e18d24b4a53282656
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637347"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896351"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>連接的模擬和認證
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Common Language Runtime (CLR) 整合中，使用 Windows 驗證是很複雜的工作，但是要比使用 SQL Server 驗證來得安全。 當使用 Windows 驗證時，請牢記以下的考量事項。  
   
  根據預設，連接到 Windows 的 SQL Server 處理序需要 SQL Server Windows 服務帳戶的安全性內容。 但是，可將 CLR 函數對應到 Proxy 識別，好讓它的傳出連接具有與 Windows 服務帳戶不同的安全性內容。  

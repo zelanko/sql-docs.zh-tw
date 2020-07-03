@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 76fbc3e1-ad88-4a47-8bf1-471c3bee5ad8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 040c33a7c04aa7da231f952ebe7c32fbba7ee1a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a13b9642caa236e930dbf7861a0c6604760189d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648365"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898519"
 ---
 # <a name="sysdm_xe_session_targets-transact-sql"></a>sys.dm_xe_session_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   會傳回工作階段目標的相關資訊。  
   

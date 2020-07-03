@@ -1,6 +1,6 @@
 ---
-title: 使用 Dqsinstaller.exe 匯出和匯入 DQS 知識庫
-description: 瞭解如何使用 Dqsinstaller.exe 來匯出和匯入 SQL Server Data Quality Services （DQS）的 DQS 知識庫。
+title: 使用 DQSInstaller.exe 匯出和匯入 DQS 知識庫
+description: 瞭解如何使用 DQSInstaller.exe 匯出和匯入適用于 SQL Server Data Quality Services （DQS）的 DQS 知識庫。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ae87b9daebdef6b81c4d96abc253820cf7cb8228
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81308fb45447a87a349e0fbbd50c56f2f6237228
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75558139"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895188"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   若為 DQS 的現有安裝，您可以在 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中將所有知識庫一次匯出到 DQS 備份檔案 (.dqsb)，然後從命令提示字元執行 DQSInstaller.exe 檔案，即可使用此 .dqsb 檔案一次將所有知識庫匯入不同的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。 如需有關從命令提示字元執行 DQSInstaller.exe 的詳細資訊，請參閱＜ [從命令提示字元執行 DQSInstaller.exe](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) ＞中的＜ [執行 DQSInstaller.exe 完成 Data Quality Server 安裝](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)＞。  
   
@@ -59,7 +59,7 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
  如果 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中目前已經存在與您要匯入的知識庫同名的知識庫，則匯入的知識庫名稱將會附加底線 (_)，後面緊接著以 1 開頭的整數值。 例如，如果 "CompanyName" 網域是重複的，則匯入的網域名稱將會是 "CompanyName_1"。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行 Dqsinstaller.exe 完成 Data Quality Server 安裝](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [執行 DQSInstaller.exe 以完成 Data Quality Server 安裝](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [安裝 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [將知識庫匯出至 dqs 檔案](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
  [從 .dqs 檔案匯入知識庫](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  

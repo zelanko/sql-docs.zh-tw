@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9c788f20aa0b24d4058578119dc7b4bc139ded73
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 88deed9104d231b666a1ab3e6dfd72da94ad1465
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812569"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899123"
 ---
 # <a name="data-quality-client-application"></a>Data Quality Client 應用程式
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式可讓您使用獨立的工具執行資料品質作業。 此應用程式可讓您建立知識庫、建立並執行資料品質專案，以及執行管理工作。  
   

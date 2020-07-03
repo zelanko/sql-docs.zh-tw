@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 770954f8479a97c5dcf96714a44ac025ccc55e04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6907b5df12a655d6444981afa4a84a2753d22f53
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755601"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898394"
 ---
 # <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   根據指定的記錄序號 (LSN)，傳回序列中的下一個 LSN。  
   

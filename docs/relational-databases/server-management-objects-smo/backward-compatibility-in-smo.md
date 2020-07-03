@@ -11,15 +11,15 @@ ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 013dfc93c5e6acfa22d4283cbb0460a1c8f97c23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0854a081a5dc10c88f2e70e0208b2ea135e7e31f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148772"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897181"
 ---
 # <a name="backward-compatibility-in-smo"></a>SMO 中的回溯相容性
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   以舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 撰寫的 SMO 應用程式可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 SMO 重新編譯。  
   
@@ -59,6 +59,6 @@ Imports Microsoft.SqlServer.Management.Common
   
  如果您的程式碼直接使用了傳送物件，則必須連結到 Microsoft.SqlServer.Management.SmoExtended 命名空間。  
   
- 當您在移轉程式碼時，可能需要修改程式碼。 這是因為有多個 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 功能都已被 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的功能取代了。 如需已被取代之功能的詳細資訊，請參閱《線上[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]叢書》中[SQL Server 2016 的已淘汰資料庫引擎功能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)。  
+ 當您在移轉程式碼時，可能需要修改程式碼。 這是因為有多個 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 功能都已被 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的功能取代了。 如需已被取代之功能的詳細資訊，請參閱《線上叢書》中[SQL Server 2016 的已淘汰資料庫引擎功能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。  
   
   

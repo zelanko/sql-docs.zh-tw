@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 048b6420ecced28a796aa21bc3e10e2ed32c8c0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: daa8c79e9216785ef0e1433f501ae05ee2c22957
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733555"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897983"
 ---
 # <a name="object-catalog-views-transact-sql"></a>物件目錄檢視 (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 此章節包含下列目錄檢視的連結。
 

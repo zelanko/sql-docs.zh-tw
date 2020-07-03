@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 79e7c7f51b87cea5d35c90d93a4f237212c1c500
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3f289fa0d82c9174fc31d6e08888ab0da97912f0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627008"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899423"
 ---
 # <a name="sp_linkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回本機伺服器中所定義的連結伺服器清單。  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e53bd1b53dded0515696daa4c422161b07c5027c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c1c1efe2659ff0e127a1347e911c3f3da18908c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734364"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898424"
 ---
 # <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   從[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)系統資料表中的 start_lsn 資料行傳回最大記錄序號（LSN）。 您可以使用這個函數，針對任何擷取執行個體傳回異動資料擷取時間表的高端點。  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc4f4b7ea3cca4b0dd7a3f2bbe643786ae3324ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a52c25da243107de672d0d7cd136471ea632b0eb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786428"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897526"
 ---
 # <a name="sysservice_queues-transact-sql"></a>sys.service_queues (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   包含資料庫中每個屬於服務佇列之物件的資料列，並具有**sys.databases。類型**= SQ。  
   

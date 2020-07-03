@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 79b8bf25-6e4e-4a07-ae93-7a4e44f65171
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a32f7c6f61df3ccf6f23c7314b6b94bd00d9d788
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 65acbc32713b6aab432deac0941081e05836d677
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754386"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895891"
 ---
 # <a name="systype_assembly_usages-transact-sql"></a>sys.type_assembly_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對每個組件參考類型，各包含一個資料列。  
   

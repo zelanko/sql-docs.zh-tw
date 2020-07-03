@@ -15,17 +15,17 @@ ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdf4d998eb87cc213f7ce6b3068c4bc142790e5a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148710"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899067"
 ---
 # <a name="setting-properties---smo"></a>設定屬性 - SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  屬性是儲存有關物件之描述性資訊的值。 例如， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]設定選項會以<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>物件的屬性來表示。 您可以使用屬性集合來直接或間接地存取屬性。 直接存取屬性會使用下列語法：  
+  屬性是儲存有關物件之描述性資訊的值。 例如，設定 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 選項會以 <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> 物件的屬性來表示。 您可以使用屬性集合來直接或間接地存取屬性。 直接存取屬性會使用下列語法：  
   
  `objInstance.PropertyName`  
   
@@ -62,7 +62,7 @@ ms.locfileid: "70148710"
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>在 Visual Basic 中取得和設定屬性  
- 這個程式<xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A>代碼範例示範如何取得<xref:Microsoft.SqlServer.Management.Smo.Information>物件的屬性，以及如何將<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>屬性（property）的屬性（property）設定為<xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes>列舉類型的**ExecuteSql**成員。  
+ 這個程式碼範例示範如何取得 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> 物件的屬性，以及如何將屬性（property）的屬性（property） <xref:Microsoft.SqlServer.Management.Smo.Information> 設定 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 為列舉類型的**ExecuteSql**成員 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -75,7 +75,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>在 Visual C# 中取得和設定屬性  
- 這個程式<xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A>代碼範例示範如何取得<xref:Microsoft.SqlServer.Management.Smo.Information>物件的屬性，以及如何將<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>屬性（property）的屬性（property）設定為<xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes>列舉類型的**ExecuteSql**成員。  
+ 這個程式碼範例示範如何取得 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> 物件的屬性，以及如何將屬性（property）的屬性（property） <xref:Microsoft.SqlServer.Management.Smo.Information> 設定 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 為列舉類型的**ExecuteSql**成員 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 。  
   
 ```csharp  
 {   
@@ -154,7 +154,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>在 Visual Basic 中反覆運算物件的所有屬性  
- 這個程式碼範例會逐一**Properties**查看<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>物件的 Properties 集合，並將[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]它們顯示在輸出畫面上。  
+ 這個程式碼範例會逐一查看物件的**Properties**集合 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> ，並將它們顯示在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 輸出畫面上。  
   
  在此範例中已將 <xref:Microsoft.SqlServer.Management.Smo.Property> 物件放入方括號中，因為它也是 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 關鍵字。  
   
@@ -178,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>在 Visual C# 中反覆運算物件的所有屬性  
- 這個程式碼範例會逐一**Properties**查看<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>物件的 Properties 集合，並將[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]它們顯示在輸出畫面上。  
+ 這個程式碼範例會逐一查看物件的**Properties**集合 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> ，並將它們顯示在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 輸出畫面上。  
   
 ```csharp  
 {   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: facfcf92693f108bb04cbb864ac8364e2bef6721
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02c013b9635a441ade10b5784b2b2752d0ecad0c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790411"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898164"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>資料庫維護計畫預存程序 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援下列用來設定維護工作的系統預存程式。 這些預存程序要搭配資料庫維護計畫一起使用。 這項功能已被不使用這些預存程序的維護計畫所取代。 請使用這些程序來維護由舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級之安裝的資料庫維護計畫。  
   

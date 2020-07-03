@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3a9c125b718d3d48888499828ea84e9c5ab28d1e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9dced2e79df59117a0ae17e0cee2a1429ebd1d0c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758788"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899317"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   呼叫 OLE 物件的方法。  
   

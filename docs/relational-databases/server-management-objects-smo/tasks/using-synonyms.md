@@ -13,15 +13,15 @@ ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4da1cefbb07186134a1c6f14c335a2aacc507f6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c96656b905f0360c220b3f1c8fb7301d86308c6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148303"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896060"
 ---
 # <a name="using-synonyms"></a>使用同義字
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   同義字是結構描述範圍物件的替代名稱。 在 SMO 中，同義字是由 <xref:Microsoft.SqlServer.Management.Smo.Synonym> 物件表示。 <xref:Microsoft.SqlServer.Management.Smo.Synonym> 物件是 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件的子系。 這表示同義字只有在其定義所在的資料庫範圍內才有效。 不過，同義字可以參考另一個資料庫或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]遠端執行個體上的物件。  
   

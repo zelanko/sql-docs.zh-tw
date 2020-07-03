@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e22206711380f5b8b74d939b0cca361ec3fbaa91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c9bfff654bf29326e5bb5c781215b4da7a7e28d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85675603"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898625"
 ---
 # <a name="sysdm_xe_map_values-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回內部數值索引鍵與人們可讀取之文字的對應。  
  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: add3f81793b2dc21c08ca601bb1c48cc7d4588be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f000c8d2dc4f0f2adc95814ba9ef687602403dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783081"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898328"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys.databases fn_net_changes_ &lt; capture_instance &gt; （transact-sql）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Net changes**查詢函數的包裝函式。 sys.sp_cdc_generate_wrapper_function 系統預存程序會產生建立這些函數所需的指令碼。  
   
@@ -93,7 +93,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料行類型|描述|  
+|資料行名稱|資料行類型|說明|  
 |-----------------|-----------------|-----------------|  
 |\<columns from @column_list>|**差異**|呼叫以產生建立包裝函式的腳本時，在 sp_cdc_generate_wrapper_function 的**column_list**引數中識別的資料行。 如果*column_list*為 Null，所有追蹤的來源資料行都會出現在結果集中。|  
 |__CDC_OPERATION|**nvarchar(2)**|指示將資料列套用到目標環境時，需要哪一個作業的作業碼。 作業會根據下列呼叫中提供的引數*row_filter_option*值而有所不同：<br /><br /> *row_filter_option* = ' all '、' all with mask '<br /><br /> 'D' - 刪除作業<br /><br /> 'I' - 插入作業<br /><br /> 'UN' - 更新作業<br /><br /> *row_filter_option* = ' 全部使用 merge '<br /><br /> 'D' - 刪除作業<br /><br /> 'M' - 插入作業或更新作業|  

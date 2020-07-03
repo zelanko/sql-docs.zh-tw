@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b616e6186e9d5e19f353df1053d479e0d0afdd6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734786"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898889"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對計畫控制代碼所指定計畫的每個計畫屬性，各傳回一個資料列。 您可以使用這個資料表值函式取得特定計畫的詳細資料，例如快取索引鍵值或目前同時執行計畫數目。  
   

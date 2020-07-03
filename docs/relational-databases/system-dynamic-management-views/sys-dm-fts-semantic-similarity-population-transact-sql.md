@@ -18,15 +18,15 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: ea4f2fbd33bf3eb1e9e6a2e2b079ef78796f6f61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a148750db907ebf43d6976d4d574145516e13d65
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738643"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898827"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回一個資料列，其中包含每個有相關語意索引的資料表中每個相似度索引之文件相似度索引母體擴展的狀態資訊。  
   

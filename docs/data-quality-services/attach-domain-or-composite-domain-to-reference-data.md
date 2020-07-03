@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0287c29e66711724b725689d578a498f0537600a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6d45454357261a48d73fb9861149ef439082d9b4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812623"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897574"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>將定義域或複合定義域附加至參考資料-Data Quality Services （DQS）
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   本主題描述如何將資料品質知識庫中的定義域/複合定義域附加至 Azure Marketplace 中的參考資料服務，以針對高品質的參考資料建立知識。 每一項參考資料服務都包含結構描述 (資料行)。 將定義域或複合定義域附加至參考資料服務之後，您必須將附加的複合定義域內的附加定義域或個別定義域對應至參考資料服務結構描述中的適當資料行。 將複合定義域附加至參考資料服務可讓您只將一個定義域附加至參考資料服務，然後將複合定義域中的個別定義域對應至參考資料服務結構描述中的適當資料行。  
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9716985438a9e29c9ef8d72eb2ba3e77b8db42f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: adcf5709bc3bf086123324095a796e024a08911e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639999"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899280"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   當這個程序從點對點拓撲的節點執行時，會要求該拓撲中所有其他節點做出回應。 您可以執行這個程序和檢閱相對應的回應，以確保所有先前的命令已經全數傳遞給回應節點了。 這個預存程序執行於任何資料庫的要求節點。  
   

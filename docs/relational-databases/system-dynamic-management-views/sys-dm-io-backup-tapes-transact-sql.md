@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 745ad11ccb8b06471ac07477739580558475e363
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f20a55b0203486abd8fd67657ce91ccfc16ce74
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771586"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898814"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回磁帶裝置的清單和掛載要求的狀態，作為備份。   
  

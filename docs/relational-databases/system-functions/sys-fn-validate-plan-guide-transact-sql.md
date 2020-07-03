@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7e0d440a453b0481a4440ec432669d3981b9da8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ddc9e534b5f0e434dd9c0ca980da82eddb8006a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754004"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898276"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   確認指定之計畫指南的有效性。 當計畫指南套用到其查詢時，sys.fn_validate_plan_guide 函數會傳回所發生的第一個錯誤訊息。 當計畫指南有效時，會傳回空的資料列集。 當資料庫的實體設計變更後，計畫指南可能變成無效。 例如，如果計畫指南指定特定的索引，而且該索引接著遭到卸除，查詢將無法再使用該計畫指南。  
   

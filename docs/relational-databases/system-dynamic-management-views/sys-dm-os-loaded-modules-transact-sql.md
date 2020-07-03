@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30aa54e93b30d2067e2ab02ba8d264920724cead
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ecf9858f1cc37290cf9079470498d3ad1ecbdc84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754129"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898762"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對已載入至伺服器位址空間的每一個模組，各傳回一個資料列。  
   
