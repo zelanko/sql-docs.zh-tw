@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36d16c7a23f2c586378136b6dd045231941708e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6e3c700e28ff105c6e99ebde9e7dbe8c4a82109a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736766"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889835"
 ---
 # <a name="msmerge_dynamic_snapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_dynamic_snapshots**資料表會使用參數化資料列篩選器，針對合併式發行集所定義的每個分割區，追蹤已篩選資料快照集的位置。 這份資料表儲存在**發行**集資料庫中。  
   

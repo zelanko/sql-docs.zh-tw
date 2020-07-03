@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1585a22b52af00fa1f852d1be14acbf6216e5b22
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 424dda2a57b51f6486cabcadadce7342c0a0eb0d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762603"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890104"
 ---
 # <a name="mapping-system-tables-to-system-views-transact-sql"></a>將系統資料表對應至系統檢視 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   這個主題顯示系統資料表和函數與系統檢視和函數之間的對應。  
   

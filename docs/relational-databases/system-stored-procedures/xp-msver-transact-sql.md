@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 385bae0bd40fd392f038ef4dd85204c853a81773
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 995668cb4b36e7086c2777d9cb7cd663e7d33ef4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762628"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890756"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回有關的版本資訊 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **xp_msver**也會傳回伺服器實際組建編號的相關資訊，以及伺服器環境的相關資訊。 **Xp_msver**傳回的資訊可用於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句、批次、預存程式等中，以增強平臺獨立程式碼的邏輯。  
   
@@ -42,7 +42,7 @@ xp_msver [ optname ]
  *optname*  
  這是選項的名稱，它可以是下列值之一。  
   
-|選項/資料行名稱|描述|  
+|選項/資料行名稱|說明|  
 |-------------------------|-----------------|  
 |**ProductName**|產品名稱;例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**ProductVersion**|產品版本。|  

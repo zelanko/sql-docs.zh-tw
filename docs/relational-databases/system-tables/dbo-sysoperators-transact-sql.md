@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f56da445992067e31f2088dc3d35f109fb02c2f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b7581d1456524c8294e470a952fb55f6f052973b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750310"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890472"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 操作員，各包含一個資料列。  
   

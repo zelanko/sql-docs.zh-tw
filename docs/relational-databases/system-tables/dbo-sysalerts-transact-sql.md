@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6169691af84576e37a8f4b5a7cfc09757305c95b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6113a7d05c7128df4b7691bd7f72d09ba8f0548b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85675319"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890537"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對每個警示各包含一個資料列。 警示是事件的回應所傳送的訊息。 警示可以將訊息轉送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境之外，它可能是電子郵件訊息，也可能是呼叫器訊息。 另外，警示也可以產生工作。  此資料表會儲存在**msdb**資料庫中。
   

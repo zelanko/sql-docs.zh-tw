@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd52cabfd282c70a9c3cd2c1d1cc8bd52e02ff3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3004de66d8bf911056f62b0d4fbdfb55b969871
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725460"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890036"
 ---
 # <a name="msdbms_datatype_mapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdbms_datatype_mapping**資料表包含從源資料庫管理系統（DBMS）中的資料類型對應到目的地 DBMS 中的一或多個特定資料類型的允許資料類型對應。 此資料表會儲存在**msdb**資料庫中，並用於異質資料庫複寫。  
   

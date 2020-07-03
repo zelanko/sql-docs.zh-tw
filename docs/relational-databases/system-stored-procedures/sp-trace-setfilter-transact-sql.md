@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eeb6fd370bfd107864845439086138fff3d379c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36cb1003bcb0884bce069a7f41b3264d045e86e1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644851"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891456"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   將篩選套用在追蹤上。 **sp_trace_setfilter**只能在已停止的現有追蹤上執行（*狀態*為**0**）。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果在不存在的追蹤上執行這個預存程式，或其*狀態*不是**0**，則會傳回錯誤。  
   
@@ -78,7 +78,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>傳回碼值  
  下表描述在預存程序完成之後，使用者可能得到的代碼值。  
   
-|傳回碼|描述|  
+|傳回碼|說明|  
 |-----------------|-----------------|  
 |0|沒有錯誤。|  
 |1|未知的錯誤。|  

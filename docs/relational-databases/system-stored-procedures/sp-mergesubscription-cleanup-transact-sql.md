@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73af981371ecbadf92936016316222c061a14b8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: feb13050f5b508298ec45d5fde4ffde9aa510c9d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640068"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891597"
 ---
 # <a name="sp_mergesubscription_cleanup-transact-sql"></a>sp_mergesubscription_cleanup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在發行者端移除指定的合併發送訂閱之後，移除**sysmergesubscriptions**和**sysmergearticles**中的中繼資料，例如觸發程式和專案。 這個預存程序執行於訂閱資料庫的訂閱者端。  
   

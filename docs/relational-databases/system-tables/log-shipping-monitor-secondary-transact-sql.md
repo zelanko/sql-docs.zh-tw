@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd444e21de4cd1a2ac065e2d3b2fcc09d6c08170
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31ea0a1a0bd9c7895f1c705cfebd69cfa8ff4193
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755447"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890170"
 ---
 # <a name="log_shipping_monitor_secondary-transact-sql"></a>log_shipping_monitor_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在記錄傳送組態中，儲存每個次要資料庫各一項監視記錄。 此資料表會儲存在**msdb**資料庫中。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bd255e174a02463d1cdc05c047f97c1befba1ceb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bde828bdb5d99b132373b847daeb9f8126a85f7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762583"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890072"
 ---
 # <a name="msagent_profiles-transact-sql"></a>MSagent_profiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSagent_profiles**資料表會針對每個定義的複寫代理程式設定檔，各包含一個資料列。 此資料表會儲存在**msdb**資料庫中。  
   

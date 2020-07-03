@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26b26690d1120ce66dd116ed7908a68fe594e077
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 06335bd3ddc5e656d32cf481cfa181143a79cb31
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753938"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889985"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **Msdb.dbo.msdistpublishers**資料表會針對本機散發者所支援的每個遠端發行者，各包含一個資料列。 此資料表會儲存在**msdb**資料庫中。  
   
 |資料行名稱|資料類型|描述|  

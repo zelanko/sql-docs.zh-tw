@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a88683f29875047d412d7ae858dc9db47659a36f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c58db6883eb313b65580a1fe4f44b2c2e3b5a3b1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755483"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890550"
 ---
 # <a name="dbocdc_jobs-transact-sql"></a>dbo.cdc_jobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   儲存擷取和清除作業的異動資料擷取組態參數。 此資料表會儲存在**msdb**中。  
   

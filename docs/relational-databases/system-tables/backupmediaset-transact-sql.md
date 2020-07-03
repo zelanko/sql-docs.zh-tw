@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86f1b7fcc8e801f70bf070911feadb059108dff5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 43f54ff292e21e28ec32e8581633872ced2333d7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750359"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890658"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   每個備份組各含一個資料列。 此資料表會儲存在**msdb**資料庫中。  
  

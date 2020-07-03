@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58bc0af5be721d30211617a18095213e76991a24
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e3a7d488944905525e77d219c89916d4facdb27
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750148"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890137"
 ---
 # <a name="log_shipping_secondary-transact-sql"></a>log_shipping_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對每個次要識別碼各儲存一項記錄。 此資料表會儲存在**msdb**資料庫中。  
   

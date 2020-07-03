@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0881204a5b1d282ac295f2017981eb7bb46107be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d8e30d848b640db73f4402f8a887381de524e4bf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764197"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890148"
 ---
 # <a name="log_shipping_primary_databases-transact-sql"></a>log_shipping_primary_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   將主要資料庫的一項記錄儲存在記錄傳送組態中。 此資料表會儲存在**msdb**資料庫中。  
   

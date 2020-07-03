@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5f3950ac6597f0d46321d0790df3509fbb07a62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a4a6aa14106caf45aaac4e0432705d365022eec
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725477"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890046"
 ---
 # <a name="mscached_peer_lsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MScached_peer_lsns**資料表是用來追蹤交易記錄中的 LSN 值，用來判斷要在點對點複寫中傳回給指定訂閱者的命令。 這份資料表儲存在散發資料庫中。  
   

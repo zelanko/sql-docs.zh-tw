@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ac552c5fe8efe897ea9066819215c82a115d1d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62efb2fa9bf434af4cb9b237b133d3f705eaa7eb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725469"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890024"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdbms_datatype**表包含在異質資料庫複寫中，當做發行者或訂閱者使用之每個支援的資料庫管理系統（DBMS）的原生資料類型完整清單。 此資料表會儲存在**msdb**資料庫中。  
   

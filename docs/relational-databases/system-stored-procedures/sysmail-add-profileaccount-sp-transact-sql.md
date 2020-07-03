@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68d09a8149234651b4741caaeb8436f6b6cda6da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3de6a0b8ed5cbabd37cfa18f3b107c90121fe459
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786112"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891002"
 ---
 # <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   將 Database Mail 帳戶加入 Database Mail 設定檔中。 在建立資料庫帳戶後，使用[sysmail_add_account_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)來執行**sysmail_add_profileaccount_sp** ，並使用[Sysmail_add_profile_sp &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md)建立資料庫設定檔。  
   

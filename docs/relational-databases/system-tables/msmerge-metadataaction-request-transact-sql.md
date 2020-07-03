@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 747a8f7717ba9d0778c506166df583d98f99386d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aee900d9f34fb1e8f64db3687d6121a72a9e3b96
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736690"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889736"
 ---
 # <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_metadataaction_request**資料表會針對所需的每個補償動作，各儲存一個資料列。 使用 Web 同步處理時，如果發生錯誤，而且必須重試同步處理，則會在**MSmerge_metadataaction_request**中輸入專案。 在進行後續合併的上傳階段時，對於所有屬於正在同步處理之發行集的發行項要求，都是從這份資料表擷取及上傳。 成功完成同步處理之後，就會刪除**MSmerge_metadataaction_request**資料表中的對應資料列。 這份資料表儲存在發行集資料庫的發行者端，以及訂閱資料庫的訂閱者端。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 935de6182bb75ea2469da10b8d2ed4cc8d8ce73d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d5dcc3f2a76f069d90fd756410a8b478552c6f6b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764183"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890122"
 ---
 # <a name="log_shipping_secondary_databases-transact-sql"></a>log_shipping_secondary_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在記錄傳送組態中，儲存每個次要資料庫各一項記錄。 此資料表會儲存在**msdb**資料庫中。  
   

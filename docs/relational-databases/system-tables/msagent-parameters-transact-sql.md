@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 75bf9ad8b7c1ddaa4d7f34314678b601375c953f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9070fd9ee8b3e1bb9a32f5a28ccf189496e6b38b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762592"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890081"
 ---
 # <a name="msagent_parameters-transact-sql"></a>MSagent_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSagent_parameters**資料表包含與代理程式設定檔相關聯的參數。 這些參數名稱與該代理程式所支援的參數同名。 此資料表會儲存在**msdb**資料庫中。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e0c7be221847924f48523526793fcd3d4664477
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 71df50ce6f94602d06bc46229887983233641610
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784840"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889740"
 ---
 # <a name="msmerge_partition_groups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_partition_groups**資料表會針對給定資料庫中的每個預先計算分割區儲存一個資料列。 除了列出的資料行之外，還會加入一個資料行，代表參數化資料列篩選器所用的每個函數。 例如，如果篩選使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函數，則會將名為**HOST_NAME_FN**的資料行加入至資料表。 與這個發行者同步處理的每一組唯一函數值，都會各儲存一個資料列代表它。 只要有兩個或兩個以上訂閱者的這些函數完全同值，就會共用這份資料表中的相同資料列，因此都共用相同的資料分割識別碼。這份資料表儲存在發行集資料庫中。  
   

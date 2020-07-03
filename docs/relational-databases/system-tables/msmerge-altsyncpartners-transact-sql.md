@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: da51b0f8-5ad0-4aeb-96ed-2b3672a2a6e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5deea8cedba0f78577d58bf975b8b9646c42010f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d9fe5404014340326de8eb975edd09630c58d10d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736815"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889870"
 ---
 # <a name="msmerge_altsyncpartners-transact-sql"></a>MSmerge_altsyncpartners (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_altsyncpartners**資料表會追蹤發行者目前同步處理夥伴的關係。 這份資料表儲存在發行集和訂閱資料庫中。  
   

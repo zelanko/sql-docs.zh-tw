@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc41c237e81c943dacd5d0ecdfe4b9f7eec56d36
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1abbc89dcd085d65f2b44aab54d731f17184b9a7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764221"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890183"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   儲存記錄傳送作業的錯誤詳細資料。 此資料表會儲存在**msdb**資料庫中。  
   

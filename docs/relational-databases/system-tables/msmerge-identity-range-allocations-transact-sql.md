@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c2495cf2bc8941e2c619255f4328eba6be1942a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72eb58276b78faf3ea3257cf56585b69c93b6e1a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736727"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889778"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_identity_range_allocations**資料表是用來針對已發行的發行項，追蹤識別範圍指派的歷程記錄和發行者和訂閱者。 這份資料表儲存在散發資料庫中。  
   
