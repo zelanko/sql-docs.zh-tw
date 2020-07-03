@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c73cdf4cbc1c366f3266dd81883f428897ee928
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e726f3f08cab5dc8e1b24694158af214ca5905b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787061"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899763"
 ---
 # <a name="sysxml_schema_wildcards-transact-sql"></a>sys.xml_schema_wildcards (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對每個 XML 架構元件，各傳回一個資料列，其為屬性-萬用字元（ **V**）或元素**kind** -**萬用字元（** **W**），兩者**symbol_space**都 symbol_space **N**。  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 49264895f37b31d6899fa926912cc2531dde4f55
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c9b6b267fe4adcee5346659ede42319bee8dbafd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738731"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899997"
 ---
 # <a name="sysxml_schema_model_groups-transact-sql"></a>sys.xml_schema_model_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對每個 XML 架構元件，各傳回一個資料列，其為模型群組， **symbol_space**為**M**.。  
   

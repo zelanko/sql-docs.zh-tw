@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c46a7e30f6f5163fba7b630e365f90e521a96e0c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c6d6639f22963c1b058a1b9a20ed5758c00c417
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645309"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901324"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   產生建立動態更新預存程序的 CREATE PROCEDURE 陳述式。 自訂預存程序內的 UPDATE 陳述式是根據指示要變更的資料行之 MCALL 語法來動態建置的。 如果訂閱資料表的索引數目在成長，且所變更的資料行數目不多，請使用這個預存程序。 這個預存程序執行於發行集資料庫的發行者端。  
   

@@ -13,19 +13,19 @@ ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 53ab22f96020080e28a92975c4d78d6ca3215d57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60d0f5b55664312be1bdf6501cf54e78a826434b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095970"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900636"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>如何：在 Visual Studio .NET 中建立 Visual C# SMO 專案
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   本節描述如何建立簡單的 SMO 主控台應用程式。  
   
- 此範例會匯入命名空間，讓程式可以參考 SMO 類型。 **代理程式**命名空間的匯入是選擇性的。 請在撰寫使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的程式時使用該命名空間。 必須要有**通用**命名空間，才能建立與實例的安全連線[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **SqlClient**命名空間是用來處理 SQL 例外狀況錯誤。  
+ 此範例會匯入命名空間，讓程式可以參考 SMO 類型。 **代理程式**命名空間的匯入是選擇性的。 請在撰寫使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的程式時使用該命名空間。 必須要有**通用**命名空間，才能建立與實例的安全連線 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **SqlClient**命名空間是用來處理 SQL 例外狀況錯誤。  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>在 Visual Studio .NET 中建立 Visual C# SMO 專案  
   
@@ -33,7 +33,7 @@ ms.locfileid: "74095970"
   
 2. **在 [檔案**] 功能表上，依序按一下 [**新增**] 和 [**專案**]。  [新增專案]  對話方塊隨即出現。   
   
-3. 在 [ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **已安裝**] 窗格中，流覽至 [**範本**\\] [**Visual c #**\\**視窗**]，然後選取 [**主控台應用**  
+3. 在 [ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **已安裝**] 窗格中，流覽至 [**範本**] [ \\ **Visual c #** \\ **視窗**]，然後選取 [**主控台應用**  
   
 4. 選擇性在 [**名稱**] 文字方塊中，輸入新應用程式的名稱。  
 
