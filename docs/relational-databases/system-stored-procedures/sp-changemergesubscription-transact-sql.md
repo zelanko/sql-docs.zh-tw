@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e0d230046fa06ad220c24c0f33616be213b6563
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a51ae948e546d616e6fd17a5b37501f112907560
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771447"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871853"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   變更合併發送訂閱的所選屬性。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -52,7 +52,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'`這是指定之*屬性*的新值。 *value*是**Nvarchar （255）**，它可以是資料表中的其中一個值。  
   
-|屬性|值|描述|  
+|屬性|值|說明|  
 |--------------|-----------|-----------------|  
 |**description**||這個合併訂閱的描述。|  
 |**priority**||這是訂閱優先權。 在偵測到衝突時，預設解析程式會利用優先權挑選贏的一方。|  

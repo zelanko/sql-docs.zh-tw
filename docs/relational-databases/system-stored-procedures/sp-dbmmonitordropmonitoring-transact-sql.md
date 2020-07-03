@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b638aa75b2bddb207571d0545fe8c6462dd7c461
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0382c4aba6e71cace73ec74febae0fa654a09a30
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724595"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85866146"
 ---
 # <a name="sp_dbmmonitordropmonitoring-transact-sql"></a>sp_dbmmonitordropmonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   停止並刪除伺服器執行個體上所有資料庫的鏡像監視器作業。  
   

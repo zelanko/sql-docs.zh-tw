@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6accbb03bf4ed06f84f67263e89ab9c6bfa7654
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646052"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868954"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   從資料庫提取一個或多個資料列的緩衝區。 此緩衝區中的資料列群組稱為資料指標的*提取緩衝區*。 sp_cursorfetch 的叫用方式是在表格式資料流 (TDS) 封包中指定 ID = 7。  
   
@@ -46,7 +46,7 @@ sp_cursorfetch cursor
  *fetchtype*  
  指定要提取的資料指標緩衝區。 *fetchtype*是選擇性參數，它需要下列其中一個整數輸入值。  
   
-|值|名稱|描述|  
+|值|名稱|說明|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|提取*nrows*資料列的第一個緩衝區。 如果*nrows*等於0，資料指標就會放在結果集之前，而且不會傳回任何資料列。|  
 |0x0002|NEXT|提取*nrows*資料列的下一個緩衝區。|  
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  RPC 狀態參數會設定為下表所示的其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |0|已成功執行程序。|  
 |0x0001|程序失敗。|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  資料列當做一般結果集傳回，也就是資料行格式 (0x2a)、資料列 (0xd1)，後面接著完成 (0xfd)。 中繼資料 Token 的傳送格式與針對 sp_cursoropen 指定的格式相同，也就是：適用於 SQL Server 7.0 使用者的 0x81、0xa5 和 0xa4，依此類推。 資料列狀態指標會當做隱藏資料行傳送，類似於 BROWSE 模式，也就是在每一個資料列結尾，包含資料行名稱 rowstat 和資料類型 INT4。 這個 rowstat 資料行具有下表所列的其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

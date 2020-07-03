@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 620a174f50d133c4a1dd34ed54c74abb7ee06a71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30529fbb5d4b80b0835ddb502c9a2c964ca8776
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81012440"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870626"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   加入或卸除認證，其中包含開啟資料庫主要金鑰所需的密碼。  
   
@@ -47,10 +47,10 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  指定主要金鑰的密碼。 *password*為**Nvarchar**。  
   
  @action= N'add '  
- 指定要將指定資料庫的認證加入至認證存放區中。 認證會包含資料庫主要金鑰的密碼。 傳遞至@action的值是**Nvarchar**。  
+ 指定要將指定資料庫的認證加入至認證存放區中。 認證會包含資料庫主要金鑰的密碼。 傳遞至的值 @action 是**Nvarchar**。  
   
  @action= N'drop '  
- 指定要從認證存放區中卸除指定資料庫的認證。 傳遞至@action的值是**Nvarchar**。  
+ 指定要從認證存放區中卸除指定資料庫的認證。 傳遞至的值 @action 是**Nvarchar**。  
   
 ## <a name="remarks"></a>備註  
  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要利用資料庫主要金鑰解密或加密金鑰時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試利用執行個體的服務主要金鑰來解密資料庫主要金鑰。 如果解密失敗，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從認證存放區中搜尋主要金鑰認證，這些主要金鑰認證具有與它需要其主要金鑰之資料庫相同的家族 GUID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試利用每個相符的認證來將資料庫主要金鑰解密，直到解密成功或沒有其他認證為止。  
@@ -82,7 +82,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. 建立 AdventureWorks2012 主要金鑰的認證  
- 下列範例會建立 `AdventureWorks2012` 資料庫主要金鑰的認證，並將主要金鑰密碼儲存為認證中的秘密。 因為傳遞至`sp_control_dbmasterkey_password`的所有參數都必須是資料類型**Nvarchar**，所以會使用轉換運算子`N`來轉換文字字串。  
+ 下列範例會建立 `AdventureWorks2012` 資料庫主要金鑰的認證，並將主要金鑰密碼儲存為認證中的秘密。 因為傳遞至的所有參數都 `sp_control_dbmasterkey_password` 必須是資料類型**Nvarchar**，所以會使用轉換運算子來轉換文字字串 `N` 。  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   

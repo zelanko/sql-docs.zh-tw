@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1f07445d119174ca441e7ed13be1851a6e2f058
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b5ea4ccea0f314e17cfa5dca8a4f3db6d2c9c1a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771482"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872495"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   變更部分合併篩選屬性。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -55,7 +55,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  下表描述發行項的屬性及這些屬性的值。  
   
-|屬性|值|描述|  
+|屬性|值|說明|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|聯結篩選。<br /><br /> 支援 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者需要這個選項。|  
 ||**2**|邏輯記錄關聯性。|  

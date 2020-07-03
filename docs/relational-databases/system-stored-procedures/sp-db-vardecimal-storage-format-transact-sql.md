@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 431572ccdb71cbad37708932a3313a543026272c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6122a9b2720331b8211a06db051492946f4209b4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757964"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85867578"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回資料庫目前的 Vardecimal 儲存格式狀態，或是啟用 Vardecimal 儲存格式的資料庫。  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，一定會啟用使用者資料庫。 只有在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中才需要啟用 Vardecimal 儲存格式的資料庫。  
   
