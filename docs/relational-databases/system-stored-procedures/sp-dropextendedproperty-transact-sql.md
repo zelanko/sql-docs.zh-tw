@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9e1f59e28912a41bc9425c3cae0a01a3be91669
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 60f15f6917297a10c6fb3d988d5b497056c93aee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786912"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85859870"
 ---
 # <a name="sp_dropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   卸除現有的擴充屬性。  
   
