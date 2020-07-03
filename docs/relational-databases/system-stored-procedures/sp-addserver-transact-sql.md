@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73f9bb5e2201b9c8b7577c54228e038310e7a141
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d6040c3806723d07396fe7af3a0d50f49bb7e9a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716381"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876335"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定義  本機執行個體的名稱。 當主控的電腦重新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名時，請使用**sp_addserver**來通知實例的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 新電腦名稱稱。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 此程序必須在電腦上裝載的所有  執行個體上執行。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 無法變更  的執行個體名稱。 若要變更具名執行個體的執行個體名稱，請安裝具有所需名稱的新執行個體、從舊的執行個體卸離資料庫檔案、將資料庫附加到新的執行個體，和卸除舊的執行個體。 或者，您可以在用戶端電腦上建立用戶端別名名稱，將連接重新導向至不同的伺服器和執行個體名稱或 **伺服器：連接埠** 的組合，而不需要變更伺服器電腦上的執行個體名稱。
 

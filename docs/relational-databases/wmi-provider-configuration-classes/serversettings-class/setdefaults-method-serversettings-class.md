@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e507eede2ba7abb036eb33f74a0d1a1ab1ba2dce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c1f7670aa0e90f848c3f66e65df104181541dee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722776"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880730"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults 方法 (ServerSettings 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用覆寫現有資料的選項，設定實例的所有預設值。  
   
 ## <a name="syntax"></a>語法  
@@ -41,7 +41,7 @@ object.SetDefaults(OverwriteAll)
   
 #### <a name="parameters"></a>參數  
   
-|參數|描述|  
+|參數|說明|  
 |---------------|-----------------|  
 |*OverwriteAll*|布林值，指定是否要覆寫實例上現有的值 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ： **true**表示要覆寫現有的資料，如果不覆寫現有的資料，則為**false** 。|  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c78536fbf8e9bb00133d7724f218c60c3d005fb2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e6a2cc2c6dcb1eb1d9068a5107f504683eb516bf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826327"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879982"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   加入 SQL 代理程式服務所執行的新作業。  
   
@@ -78,7 +78,7 @@ sp_add_job [ @job_name = ] 'job_name'
 |**0**|永不|  
 |**1**|成功時|  
 |**2** (預設值)|失敗時|  
-|**3**|一律|  
+|**3**|永遠|  
   
 `[ @notify_level_email = ] email_level`值，指出在此作業完成時，何時傳送電子郵件。 *email_level*是**int**，預設值是**0**，表示 never。 *email_level*使用與*eventlog_level*相同的值。  
   

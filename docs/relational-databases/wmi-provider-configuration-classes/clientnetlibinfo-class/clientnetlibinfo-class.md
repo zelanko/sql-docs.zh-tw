@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c9d450f018e02392528fcb8164f247fa03a78a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ac5ac93d1dff470f15190f14232f651543c6d61e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731524"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881150"
 ---
 # <a name="clientnetlibinfo-class"></a>ClientNetLibInfo 類別
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [ClientNetLibInfo 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)代表用戶端網路程式庫的相關資訊。  
   
  用戶端網路程式庫檔案可讓用戶端實例透過網路與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用特定網路通訊協定的實例進行通訊。  

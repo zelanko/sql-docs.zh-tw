@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f07d1a1db062060c00f29d0454ac4a4902b76fda
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5273d7dd27753b62a22520f2d1aa1f9a28dc8b5a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722717"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880594"
 ---
 # <a name="state-property-sqlservice-class"></a>State 屬性 (SqlService 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   取得或設定服務的目前狀態。  
   
 ## <a name="syntax"></a>語法  

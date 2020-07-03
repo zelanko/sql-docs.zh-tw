@@ -14,15 +14,15 @@ ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22271c7c7fd5099ae9e65fecfedb820da00c6e30
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e306a3277a540f0d5da79e76aeefc2440fd81730
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911267"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880069"
 ---
 # <a name="getting-started-in-smo"></a>SMO 使用者入門
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
 本頁面提供的主題連結，可協助您開始使用 SQL Server 管理物件（SMO）。 列出的主題涵蓋 SMO 物件階層、以 SMO 撰寫程式、SMO 和不同的程式設計語言，以及特定的程式設計工作。  
  
@@ -32,7 +32,7 @@ ms.locfileid: "70911267"
 ## <a name="object-model"></a>物件模型  
 [物件模型](../../relational-databases/server-management-objects-smo/smo-object-model.md)描述 SMO 物件階層，以及物件彼此之間的關聯性。  
   
-## <a name="programming-languages"></a>程式語言  
+## <a name="programming-languages"></a>程式語言：  
 程式[設計語言](../../relational-databases/server-management-objects-smo/smo-programming-languages.md)描述程式設計環境，並包含在 c # 中開始撰寫 SMO 程式的詳細程式。  
   
 ## <a name="general-programming-in-smo"></a>SMO 中的一般程式設計  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 81d89dbeb1fdaeb4e71d77cc9ee4acaceedc9f99
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 235609e2018dfb9e8aac5f9eb017cb639d46de54
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751501"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880930"
 ---
 # <a name="issuedto-property-securitycertificate-class"></a>IssuedTo 屬性 (SecurityCertificate 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   取得安全性憑證發行目標的物件。  
   
 ## <a name="syntax"></a>語法  

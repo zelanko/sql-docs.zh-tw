@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6e02860ad06d73e188e552db107fcc0f1653f23b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3d13eb6e6d7dfc06fd710537e3b746837619ddc4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751534"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881076"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>SetDisable 方法 (ClientNetworkProtocol 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   停用[設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)所指定的用戶端網路通訊協定。  
   
 ## <a name="syntax"></a>語法  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 82b0bf1e251d1a2a8b900845b93001296f814e80
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8c9f554d57935921c068ad25cb51991c47cdbd2a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758650"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881476"
 ---
 # <a name="mstracer_history-transact-sql"></a>MStracer_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MStracer_history**表會維護在訂閱者端收到的所有追蹤 token 的記錄。 這份資料表儲存在散發資料庫中，並且由複寫用來監視效能之用。  
   
