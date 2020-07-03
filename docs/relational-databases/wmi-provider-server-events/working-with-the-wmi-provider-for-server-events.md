@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d03a5a5171175b18719a218315863d04a82f893a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a4ef3abd90b4e75ce584816846f30c5bc8553a4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633175"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888128"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>使用伺服器事件的 WMI 提供者
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題會提供您使用伺服器事件的 WMI 提供者進行程式設計前應該考慮的指導方針。  
   
 ## <a name="enabling-service-broker"></a>啟用 Service Broker  

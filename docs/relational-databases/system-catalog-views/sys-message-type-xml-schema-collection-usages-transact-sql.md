@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 544f61a1-c7b7-44b4-bf8d-980ba87d0665
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 253b26786ff05028471fe1ad514905d2225ccc90
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86e8ffb085c16a5d8445f4bbfec67b98af62d5ec
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760342"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883844"
 ---
 # <a name="sysmessage_type_xml_schema_collection_usages-transact-sql"></a>sys.message_type_xml_schema_collection_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   這份目錄檢視會針對由 XML 結構描述集合驗證的每個服務訊息類型，各傳回一個資料列。  
   

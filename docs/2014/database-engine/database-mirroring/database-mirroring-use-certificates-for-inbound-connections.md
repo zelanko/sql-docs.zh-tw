@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbd9c6fa86e3ef26f0779795ddeacda67976ec21
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: c05397dfbd1740293c4b154ace1ed5704cec11a9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84934219"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886004"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>允許資料庫鏡像端點使用傳入連接的憑證 (Transact-SQL)
   此主題描述設定伺服器執行個體，以使用憑證來驗證資料庫鏡像之傳入連接的步驟。 在設定傳入連接之前，您必須先在每一個伺服器執行個體上設定傳出連接。 如需詳細資訊，請參閱 [允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "84934219"
   
      下列範例在 HOST_A 之伺服器執行個體的 **master** 資料庫中，建立系統 HOST_B 的登入；在此範例中，登入名稱為 `HOST_B_login`。 以您自己的密碼取代範例密碼。  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE LOGIN HOST_B_login   
        WITH PASSWORD = '1Sample_Strong_Password!@#';  
@@ -56,8 +56,8 @@ ms.locfileid: "84934219"
   
      若要檢視此伺服器執行個體上的登入，您可以使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
-    ```  
-    SELECT * FROM sys.server_principals  
+    ```sql  
+    SELECT * FROM sys.server_principals;  
     ```  
   
      如需詳細資訊，請參閱 [sys.server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)。  
@@ -66,7 +66,7 @@ ms.locfileid: "84934219"
   
      下列範例為上一個步驟所建立的登入，建立使用者 `HOST_B_user`。  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE USER HOST_B_user FOR LOGIN HOST_B_login;  
     GO  
@@ -76,7 +76,7 @@ ms.locfileid: "84934219"
   
      若要檢視此伺服器執行個體上的使用者，您可以使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
-    ```  
+    ```sql  
     SELECT * FROM sys.sysusers;  
     ```  
   
@@ -92,7 +92,7 @@ ms.locfileid: "84934219"
   
      下列範例使 HOST_B 的憑證與它在 HOST_A 的使用者產生關聯。  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE CERTIFICATE HOST_B_cert  
        AUTHORIZATION HOST_B_user  
@@ -104,8 +104,8 @@ ms.locfileid: "84934219"
   
      若要檢視此伺服器執行個體上的憑證，請使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
-    ```  
-    SELECT * FROM sys.certificates  
+    ```sql  
+    SELECT * FROM sys.certificates;  
     ```  
   
      如需詳細資訊，請參閱 [sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)。  
@@ -114,7 +114,7 @@ ms.locfileid: "84934219"
   
      例如，若要在 HOST_A 上授與權限給 HOST_B 上的遠端伺服器執行個體來連接到其本機登入 (也就是連接到 `HOST_B_login`)，請使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
-    ```  
+    ```sql  
     USE master;  
     GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO [HOST_B_login];  
     GO  
@@ -132,13 +132,13 @@ ms.locfileid: "84934219"
 > [!NOTE]  
 >  本例使用包含 HOST_A 憑證的憑證檔案，此 HOST_A 憑證是由[允許資料庫鏡像端點使用傳出連接的憑證 &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md) 中的程式碼片段所建立。  
   
-```  
+```sql  
 USE master;  
 --On HOST_B, create a login for HOST_A.  
 CREATE LOGIN HOST_A_login WITH PASSWORD = 'AStrongPassword!@#';  
 GO  
 --Create a user, HOST_A_user, for that login.  
-CREATE USER HOST_A_user FOR LOGIN HOST_A_login  
+CREATE USER HOST_A_user FOR LOGIN HOST_A_login;  
 GO  
 --Obtain HOST_A certificate. (See the note   
 --   preceding this example.)  
@@ -148,7 +148,7 @@ CREATE CERTIFICATE HOST_A_cert
    FROM FILE = 'C:\HOST_A_cert.cer';  
 GO  
 --Grant CONNECT permission for the server instance on HOST_A.  
-GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO HOST_A_login  
+GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO HOST_A_login;  
 GO  
 ```  
   

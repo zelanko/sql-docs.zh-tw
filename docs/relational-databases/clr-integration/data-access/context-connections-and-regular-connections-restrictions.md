@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5491e736bfa075c4cc9f001bc2515184de865ee2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 17f95da5b152dd73939dcdf8552f72c20f199f20
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717901"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882194"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>內容連線和一般連線 - 限制
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主題討論 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 透過內容和一般連接在進程中執行之程式碼的相關限制。  
   
 ## <a name="restrictions-on-context-connections"></a>內容連接的限制  

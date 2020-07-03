@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5dc38fc39a0f4d876adc99a0aff87d2acaad1545
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 75521866bd7fb151921e972bf4ee1d49089dd5a6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789564"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885908"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>利用 Common Language Runtime (CLR) 整合建置資料庫物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   您可以搭配 .NET Framework Common Language Runtime (CLR) 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 整合來建立資料庫物件。 在中執行的 Managed [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 程式碼稱為「CLR 常式」。 這些常式包括：  
   
 -   純量值的使用者定義函數 (純量 UDF)  

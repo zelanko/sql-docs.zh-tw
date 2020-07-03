@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 87af29b64e7185148ead0f089d539bc0519911a5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: e83f8c2f75725c5de0dc7fa6e3e78666568fad8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84937769"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886012"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>卸離和附加 DQS 資料庫
   本主題描述如何卸離和附加 DQS 資料庫。  
@@ -24,7 +24,7 @@ ms.locfileid: "84937769"
 ###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> 限制事項  
  如需限制事項的清單，請參閱 [資料庫卸離與附加 &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)中卸離資料庫。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先決條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   請確定 DQS 中沒有任何執行中的活動或處理序。 這可以使用 **[活動監控]** 畫面加以確認。 如需有關在此畫面工作的詳細資訊，請參閱＜ [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)＞。  
   
@@ -82,14 +82,13 @@ ms.locfileid: "84937769"
   
 9. 在 [查詢編輯器] 視窗中，複製下列 SQL 陳述式：  
   
-    ```  
+    ```sql  
     ALTER DATABASE [DQS_MAIN] SET TRUSTWORTHY ON;  
     EXEC sp_configure 'clr enabled', 1;  
     RECONFIGURE WITH OVERRIDE  
     ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER  
     ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##]  
     ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##]  
-  
     ```  
   
 10. 按 F5 執行陳述式。 檢查 [結果] 窗格，確認陳述式是否皆已成功地執行。 您將會看到下列訊息： `Configuration option 'clr enabled' changed from 1 to 1. Run the RECONFIGURE statement to install.`  

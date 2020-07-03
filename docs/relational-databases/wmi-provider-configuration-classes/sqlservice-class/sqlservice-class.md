@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ea415866676f0eb4f04984ee0ee427d68854ea2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6f5d58acb2ceaf113da5701915e644d33fd5311b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784694"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888342"
 ---
 # <a name="sqlservice-class"></a>SqlService 類別
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [SqlService 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)代表服務的實例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  [SqlService 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)是用來以程式設計方式管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務。 使用[SqlService 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)物件，您可以執行下列工作：  

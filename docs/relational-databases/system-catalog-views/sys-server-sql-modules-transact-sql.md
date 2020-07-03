@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 9ef9a8b9-c470-4a61-b0c4-ee24ad871d63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f4e89842cfe911773fc56b3cf0b277962118729d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 23c8596a1dc2d4cfa75f01b123d1f11cffcfe546
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772960"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882943"
 ---
 # <a name="sysserver_sql_modules-transact-sql"></a>sys.server_sql_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   包含 TR 類型伺服器層級觸發程序的 SQL 模組集。 您可以將這個關聯性聯結到 sys.server_triggers。 Tuple (object_id) 是關聯性的索引鍵。  
   

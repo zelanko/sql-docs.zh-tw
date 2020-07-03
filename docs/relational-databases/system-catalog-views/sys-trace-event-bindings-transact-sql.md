@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d418d0b83951c0b9d91f858f54aab79f197be3d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10d27989dd5f6fe224d3fc8a70da27634b70ce32
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85663995"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883601"
 ---
 # <a name="systrace_event_bindings-transact-sql"></a>sys.trace_event_bindings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Trace_event_bindings**目錄檢視包含事件和資料行的所有可能使用組合的清單。 針對 [ **trace_event_id** ] 資料行中列出的每個事件，所有可用的資料行都會列在 [ **trace_column_id** ] 資料行中。 不是每次發生給定的事件，都會擴展所有可用的資料行。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 給定版本的這些值不會改變。  
   

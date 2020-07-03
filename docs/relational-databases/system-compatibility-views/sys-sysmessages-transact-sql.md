@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a70c96b28665141ada5138ac5dd99477d37de1ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 25d1e3624dcaacd78325ba359cfb559a24eff3f6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764339"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882048"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以傳回的每個系統錯誤或警告，各包含一個資料列。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在使用者畫面上顯示錯誤描述。  
   

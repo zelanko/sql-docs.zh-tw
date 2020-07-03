@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cdef2a7b49e4b71a20d37d04e338b36594ae5985
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a863d0c6130821c9a495b8e92332342e90005689
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724546"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888187"
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>範例：搭配 .NET Framework 使用 WMI 事件提供者
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   下列範例會以 C# 建立應用程式，這個應用程式會使用 WMI 事件提供者，針對在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設安裝執行個體上發生的所有資料定義語言 (DDL) 事件傳回事件資料。  
   
 ## <a name="example"></a>範例  

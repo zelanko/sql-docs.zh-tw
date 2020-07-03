@@ -13,16 +13,16 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42acad11884fa9edc779d6aa52a94ccf38ee5444
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 577b6e8dfcf74407f4c233f4330e9f653de7e4d1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095511"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882990"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>建立、改變和移除索引
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 階層中，索引是由 <xref:Microsoft.SqlServer.Management.Smo.Index> 物件表示。 索引資料行是由 <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> 屬性表示的 <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> 物件集合來表示。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74095511"
  如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>在 Visual Basic 中建立非叢集的複合索引  
- 這個程式碼範例示範如何建立複合的非叢集索引。 如果是複合索引，請在索引中加入一個以上的資料行。 針對非<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>叢集索引，將屬性設定為**False** 。  
+ 這個程式碼範例示範如何建立複合的非叢集索引。 如果是複合索引，請在索引中加入一個以上的資料行。 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>針對非叢集索引，將屬性設定為**False** 。  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -89,7 +89,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>在 Visual C# 中建立非叢集的複合索引  
- 這個程式碼範例示範如何建立複合的非叢集索引。 如果是複合索引，請在索引中加入一個以上的資料行。 針對非<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>叢集索引，將屬性設定為**False** 。  
+ 這個程式碼範例示範如何建立複合的非叢集索引。 如果是複合索引，請在索引中加入一個以上的資料行。 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>針對非叢集索引，將屬性設定為**False** 。  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -147,7 +147,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>在 PowerShell 中建立非叢集的複合索引  
- 這個程式碼範例示範如何建立複合的非叢集索引。 如果是複合索引，請在索引中加入一個以上的資料行。 針對非<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>叢集索引，將屬性設定為**False** 。  
+ 這個程式碼範例示範如何建立複合的非叢集索引。 如果是複合索引，請在索引中加入一個以上的資料行。 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>針對非叢集索引，將屬性設定為**False** 。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ff0439ff6b418006f3da5f0356169574509ebb7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 0e6ca6b5ed0eb94b7293dfd5aab6623ea2a61454
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84932829"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885991"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>在記憶體最佳化資料表中實作 LOB 資料行
   記憶體優化資料表沒有資料列或大型物件（LOB）儲存體（SQL Server 2016 和更新版本中已移除這項限制-請參閱支援的[記憶體內部 OLTP 資料類型](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)），且資料列大小限制為8060個位元組。 儲存大型二進位或字元字串值可透過下列兩種方式完成：  
@@ -25,7 +25,7 @@ ms.locfileid: "84932829"
   
  下列範例會將二進位 LOB 值分割成多個資料列，並將資料列插入記憶體最佳化資料表中：  
   
-<pre><code>tsql  
+```sql  
 create table BlobTable_inmem (  
    BlobId binary(16) not null,  
    SegmentationId int not null,  
@@ -75,7 +75,8 @@ where BlobId = @BlobId
 order by SegmentationId  
   
 select @Blob  
-go</code></pre>  
+go
+```
   
  您也可以定義 LOB 資料行的磁碟資料表。 記憶體最佳化資料表中的每一個資料列在磁碟資料表中都會有一個對應的資料列，且包含該資料列的所有 LOB 值。 在下列範例中，有關員工的資料會儲存到記憶體最佳化資料表中，而每位員工的相片則會儲存到磁碟資料表中。  
   

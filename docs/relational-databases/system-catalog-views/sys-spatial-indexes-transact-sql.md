@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 81c70f8084e047ee878d8f0e958189cdf1ff80d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7aa52b0f559ecae832d0236d534d9752b86a3d20
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771623"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883756"
 ---
 # <a name="sysspatial_indexes-transact-sql"></a>sys.spatial_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   表示空間索引的主要索引資訊。  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91deff0aa45038c22ece0f34b02314c2bf8e4d14
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3216f6719371b4e62e25a06a6341ad030620d20
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760329"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883803"
 ---
 # <a name="sysnumbered_procedure_parameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對編號程序的每個參數，各包含一個資料列。 當您建立編號的預存程序時，基本程序的編號為 1。 後續所有程序則為 2 號、3 號等，依此類推。 **numbered_procedure_parameters**包含所有後續程式的參數定義，編號為2（含）以上。 這份檢視不會顯示基本預存程序 (編號 = 1) 的參數。 基本預存程序類似於未編號的預存程序。 因此，其參數會以[sys.databases （transact-sql）](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)表示。  
   

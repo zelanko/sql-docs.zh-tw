@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ebbce0ef5bf49b1105a5ce7306011b4f7e512e7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d8ffe8d193732b7619051e096b668f2f9c5f2c8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733421"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882222"
 ---
 # <a name="systrace_categories-transact-sql"></a>sys.trace_categories (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   依類別目錄來分組類似的事件類別。 **Trace_categories**目錄檢視中的每個資料列都會識別在伺服器上唯一的類別。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 給定版本的這些類別目錄不會改變。  
   

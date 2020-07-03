@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e5dbafa-a634-4617-9622-510514fce0ce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6eae46716739d807e00deed3095c17bf5146e71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3e05ddbcfc27dfa65d3b8cf99c5a02a74e9f0f49
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759815"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888527"
 ---
 # <a name="removecertificate-method-sinstance-class"></a>RemoveCertificate 方法 (SInstance 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中移除目前的安全性憑證。  
   
 ## <a name="syntax"></a>語法  

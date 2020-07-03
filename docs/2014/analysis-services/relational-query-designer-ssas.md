@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 79765f589dcc649bdb2d12bd9dda0d4c955ae916
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84539640"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883927"
 ---
 # <a name="relational-query-designer-ssas"></a>關聯式查詢設計工具 (SSAS)
   關聯式查詢設計工具可協助您建立查詢，以指定要從 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 關係資料庫和中 [!INCLUDE[msCoName](../includes/msconame-md.md)] 取出的資料 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 。 您可以使用圖形化查詢設計工具來瀏覽中繼資料、以互動方式建立查詢以及檢視查詢的結果。  使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢，或是修改查詢。 您也可以從檔案或報表匯入現有的查詢。  
@@ -85,7 +85,7 @@ ms.locfileid: "84539640"
   
  下表列出彙總並提供彙總的簡要說明。  
   
-|Aggregate|Description|  
+|Aggregate|說明|  
 |---------------|-----------------|  
 |Avg|傳回群組中值的平均值。 實作 SQL AVG 彙總。|  
 |Count|傳回群組中的項目數。 實作 SQL COUNT 彙總。|  
@@ -174,7 +174,7 @@ ms.locfileid: "84539640"
 ### <a name="graphical-query-designer-toolbar"></a>圖形化查詢設計工具工具列  
  圖形化查詢設計工具工具列會提供下列按鈕來協助您指定或檢視查詢的結果。  
   
-|按鈕|Description|  
+|按鈕|說明|  
 |------------|-----------------|  
 |**[當成文字編輯]**|切換至以文字為基礎的查詢設計工具，以便檢視自動產生的查詢，或是修改查詢。|  
 |[匯入]****|從檔案或報表匯入現有的查詢。 支援 .sql 和 .rdl 檔案類型。|  
@@ -197,7 +197,7 @@ ms.locfileid: "84539640"
 ### <a name="text-based-query-designer-toolbar"></a>以文字為基礎的查詢設計工具工具列  
  以文字為基礎的查詢設計工具為所有的命令類型提供了單一工具列。 下表列出工具列上的每一個按鈕以及該按鈕的功能。  
   
-|按鈕|Description|  
+|按鈕|說明|  
 |------------|-----------------|  
 |**[當成文字編輯]**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 並非所有的資料來源類型都支援圖形化查詢設計工具。|  
 |[匯入]****|從檔案或報表匯入現有的查詢。 只支援 sql 和 rdl 檔案類型。|  
@@ -219,7 +219,7 @@ ms.locfileid: "84539640"
 #### <a name="example"></a>範例  
  下列查詢會從名稱為 `ContactType` 的資料表傳回名稱清單。  
   
-```  
+```sql  
 SELECT Name FROM ContactType  
 ```  
   
@@ -242,7 +242,7 @@ SELECT Name FROM ContactType
 #### <a name="example"></a>範例  
  下列查詢會呼叫名稱為 `uspGetWhereUsedProductID` 的預存程序。 如果預存程序擁有輸入參數，您必須在執行查詢時，提供參數值。  
   
-```  
+```sql  
 uspGetWhereUsedProductID  
 ```  
   

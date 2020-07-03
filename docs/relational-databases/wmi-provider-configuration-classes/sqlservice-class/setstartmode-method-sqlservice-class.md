@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e65c75be329d2f2c26ac97060333a05f198e0141
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 15cfa1eddcd9a32b51984d3833c288fc006d395b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727040"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888351"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode 方法 (SqlService 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   修改服務執行個體的啟動模式。  
   
 ## <a name="syntax"></a>語法  

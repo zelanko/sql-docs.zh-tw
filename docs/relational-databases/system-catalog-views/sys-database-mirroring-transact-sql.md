@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84fd6a1b23287b53115a21cd519244525d7939ab
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 188a4c98b8f179cafd184a2add60055d7b36e4b5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725794"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883614"
 ---
 # <a name="sysdatabase_mirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體中每個資料庫，各包含一個資料列。 如果資料庫不是 ONLINE，或尚未啟用資料庫鏡像，除了 database_id，所有資料行的值都是 NULL。  
   

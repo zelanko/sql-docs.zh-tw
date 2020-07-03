@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b4054be2d956bccecd1d64dc807671caf8f980f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 998f1079044f530a824600fede88c99ca91f793e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84937989"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886042"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>設定 DQS 記錄檔的進階設定
   本主題描述如何設定 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄檔的進階設定，例如設定記錄檔的輪替檔案大小限制、設定事件的時間戳記模式等等。  
@@ -38,8 +38,8 @@ ms.locfileid: "84937989"
 ##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a>設定資料品質伺服器記錄檔設定  
  在 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中， [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄設定會以 XML 格式存在 **[ServerLogging]** 資料列的 **[VALUE]** 資料行中。 您可以執行下列 SQL 查詢，以便檢視組態資訊：  
   
-```  
-select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
+```sql  
+select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'; 
 ```  
   
  若要變更 **** 記錄的組態設定，您必須在 **[ServerLogging]** 資料列的 [VALUE] [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 資料行中更新適當資訊。 在此範例中，我們將更新 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄設定，以便將輪替檔案大小限制設定為 25000 KB (預設值為 20000 KB)。  
@@ -50,7 +50,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  在 [查詢編輯器] 視窗中，複製下列 SQL 陳述式：  
   
-    ```  
+    ```sql  
     -- Begin the transaction.  
     BEGIN TRAN  
     GO  
@@ -96,14 +96,13 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 5.  若要將所做的變更套用至 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄組態，您必須執行下列 Transact-SQL 陳述式。 開啟新的 [查詢編輯器] 視窗，並且貼上下列 Transact-SQL 陳述式：  
   
-    ```  
+    ```sql  
     USE [DQS_MAIN]  
     GO  
     DECLARE @return_value int  
     EXEC @return_value = [internal_core].[RefreshLogSettings]  
     SELECT 'Return Value' = @return_value  
     GO  
-  
     ```  
   
 6.  按 F5 執行陳述式。 檢查 **[結果]** 窗格，確認陳述式是否皆已成功地執行。  

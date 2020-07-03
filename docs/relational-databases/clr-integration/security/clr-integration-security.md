@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c81f513b40945e3c535d16c822016f24a0cfaa62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86785198441bab1210f6b089293d4f174e8dd1b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723859"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885783"
 ---
 # <a name="clr-integration-security"></a>CLR 整合安全性
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 與 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 的整合安全性模型可管理及保護在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內執行之不同類型 CLR 及非 CLR 物件的存取權。 這些物件可由 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式或在伺服器中執行的其他 CLR 物件呼叫。 這些物件之間的呼叫稱為連結。 針對這些物件所執行的安全性檢查類型會因所涉及的連結類型而不同。  
   
  CLR 整合安全性模型具有下列目標：  

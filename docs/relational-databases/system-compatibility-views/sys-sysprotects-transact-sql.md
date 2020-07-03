@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 457eccb7cf032a8b4e0be3a112e15cfe492a32f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfda1be56b5fc373d0ae1b9e8d5141ac046b717e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790472"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884473"
 ---
 # <a name="syssysprotects-transact-sql"></a>sys.sysprotects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   包含利用 GRANT 和 DENY 陳述式，套用至資料庫中安全性帳戶之權限的相關資訊。  
   

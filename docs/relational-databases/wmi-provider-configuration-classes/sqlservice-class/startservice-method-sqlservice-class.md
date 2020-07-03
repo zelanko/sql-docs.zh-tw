@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b23785da37e2968385a7d6f4848b20e24edae69f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a6b3048ae439cdca6727f1547c2aa956bca325f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750047"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888316"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService 方法 (SqlService 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   嘗試將此服務置於它的啟動狀態。  
   
 ## <a name="syntax"></a>語法  

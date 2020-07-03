@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f0a2a3bb9e44bf669ddb41cabd20c0181a71447b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9eeb0516aab43760476f37406d6396a5bb9220d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753697"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888398"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties 屬性 (SqlService 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   取得物件參考的陣列，其中包含**SqlService**物件的 advanced 屬性。  
   
 ## <a name="syntax"></a>語法  

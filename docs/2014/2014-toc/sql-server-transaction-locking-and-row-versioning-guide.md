@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5b098d42c8e770496b67f365dd8ccd7bd8ad640
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3405cf5aaf6e25c8d2efc3c0e4753b52e63f2372
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528414"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882117"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server 交易鎖定與資料列版本設定指南
 
@@ -231,7 +231,7 @@ GO
   
      虛設項目讀取是指當您執行兩個完全相同的查詢，但第二個查詢所傳回的資料列集合不同時所發生的情況。 下列範例會顯示可能發生這種情況的作業方式。 假設下列兩筆交易都同時執行。 第一筆交易中的兩個 SELECT 陳述式可能會傳回不同的結果，因為第二筆交易中的 INSERT 陳述式變更了這兩筆交易所使用的資料。  
   
-    ```  
+    ```sql  
     --Transaction 1  
     BEGIN TRAN;  
     SELECT ID FROM dbo.employee  
@@ -240,10 +240,9 @@ GO
     SELECT ID FROM dbo.employee  
     WHERE ID > 5 and ID < 10;  
     COMMIT;  
-  
     ```  
   
-    ```  
+    ```sql  
     --Transaction 2  
     BEGIN TRAN;  
     INSERT INTO dbo.employee  
@@ -322,11 +321,11 @@ GO
   
 |隔離等級|中途讀取 (Dirty read)|非可重複讀取|虛設項目 (Phantom)|  
 |---------------------|----------------|------------------------|-------------|  
-|**讀取未認可**|是|是|Yes|  
-|**讀取認可**|否|是|Yes|  
+|**讀取未認可**|是|是|是|  
+|**讀取認可**|否|是|是|  
 |**可重複讀取**|否|否|是|  
-|**快照集**|否|否|否|  
-|**化**|否|否|否|  
+|**快照式**|否|否|否|  
+|**可序列化**|否|否|否|  
   
  如需詳細了解每個交易隔離等級所控制之特定類型的鎖定或資料列版本設定，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。  
   
@@ -371,7 +370,7 @@ GO
   
  下表顯示 [!INCLUDE[ssDE](../includes/ssde-md.md)] 可以鎖定的資源。  
   
-|資源|描述|  
+|資源|說明|  
 |--------------|-----------------|  
 |RID|資料列識別碼，用來鎖定堆積內單一資料列。|  
 |KEY|索引中的資料列鎖定，用來保護可序列化交易中的索引鍵範圍。|  
@@ -394,7 +393,7 @@ GO
   
  下表顯示 [!INCLUDE[ssDE](../includes/ssde-md.md)] 使用的資源鎖定模式。  
   
-|鎖定模式|Description|  
+|鎖定模式|說明|  
 |---------------|-----------------|  
 |共用 (S)|用於不變更或更新資料的讀取作業，例如 SELECT 陳述式。|  
 |更新 (U)|用於可更新的資源上。 防止當多個工作階段正在讀取、鎖定及後來可能更新資源時發生常見的死結。|  
@@ -434,7 +433,7 @@ GO
   
  意圖鎖定包括意圖共用 (IS)、意圖獨佔 (IX) 與共用意圖獨佔 (SIX)。  
   
-|鎖定模式|Description|  
+|鎖定模式|說明|  
 |---------------|-----------------|  
 |意圖共用 (IS)|保護在階層較低位置的某些 (但不是全部) 資源上要求的或取得的共用鎖定。|  
 |意圖獨佔 (IX)|保護在階層較低位置的某些 (但不是全部) 資源上要求的或取得的獨佔鎖定。 IX 是 IS 的超集，它也保護在較低層級資源要求的共用鎖定。|  
@@ -474,9 +473,9 @@ GO
   
 ||現有已授與的模式||||||  
 |------|---------------------------|------|------|------|------|------|  
-|**要求的模式**|**均**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**意圖共用 (IS)**|Yes|Yes|Yes|Yes|是|No|  
-|**共用 (S)**|Yes|Yes|是|否|否|否|  
+|**要求的模式**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
+|**意圖共用 (IS)**|是|是|是|是|是|否|  
+|**共用 (S)**|是|是|是|否|否|否|  
 |**更新 (U)**|是|是|否|否|否|否|  
 |**意圖獨佔 (IX)**|是|否|否|是|否|否|  
 |**與意圖獨佔共用 (SIX)**|是|否|否|否|否|否|  
@@ -507,7 +506,7 @@ GO
   
 -   模式代表所使用的合併鎖定模式。 索引鍵範圍鎖定模式由兩個部份組成。 第一個部份代表用來鎖定索引鍵範圍的鎖定類型 (Range*T*)，第二個部份代表用來鎖定特定索引鍵的鎖定類型 (*K*)。 這兩個部分會以連字號（-）連接，例如範圍*T* - *K*。  
   
-    |範圍|資料列|模式|Description|  
+    |範圍|資料列|[模式]|說明|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|共用範圍，共用資源鎖定；可序列化範圍掃描。|  
     |RangeS|U|RangeS-U|共用範圍，更新資源鎖定；可序列化更新掃描。|  
@@ -522,12 +521,12 @@ GO
 ||現有已授與的模式|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**要求的模式**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**共用 (S)**|Yes|是|否|是|Yes|是|否|  
-|**更新 (U)**|是|否|否|是|否|是|No|  
-|**獨占 (X)**|否|否|否|否|否|是|No|  
-|**RangeS-S**|Yes|是|否|是|是|否|否|  
+|**共用 (S)**|是|是|否|是|是|是|否|  
+|**更新 (U)**|是|否|否|是|否|是|否|  
+|**獨占 (X)**|否|否|否|否|否|是|否|  
+|**RangeS-S**|是|是|否|是|是|否|否|  
 |**RangeS-U**|是|否|否|是|否|否|否|  
-|**RangeI-N**|Yes|Yes|是|否|否|是|No|  
+|**RangeI-N**|是|是|是|否|否|是|否|  
 |**RangeX-X**|否|否|否|否|否|否|否|  
   
 #### <a name="conversion-locks"></a>轉換鎖定  
@@ -572,7 +571,7 @@ GO
 
  為了確保範圍掃描查詢是可序列化，相同的查詢每次在相同交易內執行時都必須傳回相同的結果。 其他的交易絕不能把新的資料列插入範圍掃描查詢內；否則這些動作將會變成虛設項目插入。 例如，以下的查詢使用上述的資料表與索引：  
   
-```  
+```sql  
 SELECT name  
     FROM mytable  
     WHERE name BETWEEN 'A' AND 'C';  
@@ -587,7 +586,7 @@ SELECT name
 
  如果交易內的查詢嘗試選取不存在的資料列，則在同一筆交易內稍後的某一點所提交的查詢必須傳回相同的結果。 其他的任何交易皆不得插入這個不存在的資料列。 例如，給定以下的查詢：  
   
-```  
+```sql 
 SELECT name  
     FROM mytable  
     WHERE name = 'Bill';  
@@ -599,7 +598,7 @@ SELECT name
 
  在交易內刪除某個值時，交易進行刪除動作期間不需鎖定該值所處之範圍。 鎖定欲刪除的索引鍵值直到交易結束，即足以維持可序列化能力。 例如，給定以下的 DELETE 陳述式：  
   
-```  
+```sql  
 DELETE mytable  
     WHERE name = 'Bob';  
 ```  
@@ -612,7 +611,7 @@ DELETE mytable
 
  在交易內插入某個值時，交易進行插入動作期間不需鎖定該值所處之範圍。 鎖定欲插入的索引鍵值直到交易結束，即足以維持可序列化能力。 例如，給定以下的 INSERT 陳述式：  
   
-```  
+```sql  
 INSERT mytable VALUES ('Dan');  
 ```  
   
@@ -745,7 +744,7 @@ INSERT mytable VALUES ('Dan');
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
 |輸出格式|輸出是擷取到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 錯誤記錄檔中。|聚焦於死結所涉及的節點。 每一個節點有一個專用區段，最後區段描述死結犧牲者。|以類似 XML 格式傳回不符合 XML 結構描述定義 (XSD) 結構描述的資訊。 此格式有三大區段。 第一個區段宣告死結犧牲者。 第二個區段描述死結所涉及的每一個處理序。 第三個區段描述與追蹤旗標 1204 中的節點同義的資源。|  
 |識別屬性|**SPID： \<x> ECID： \<x> 。** 識別平行處理序中的系統處理序識別碼執行緒。 專案 `SPID:<x> ECID:0` （其中 \<x> 由 SPID 值取代）代表主執行緒。 專案 `SPID:<x> ECID:<y>` （其中 \<x> 由 SPID 值取代且 \<y> 大於0）代表相同 SPID 的子執行緒。<br /><br /> **BatchID** (追蹤旗標 1222 的**sbid** )。 識別程式碼執行從中要求或保留鎖定的批次。 停用 Multiple Active Result Sets (MARS) 時，BatchID 值為 0。 啟用 MARS 時，作用中批次的值為 1 到 *n*。 如果工作階段中沒有作用中批次，BatchID 為 0。<br /><br /> **模式**。 指定執行緒所要求、授與或等待之特定資源的鎖定類型。 模式可為 IS (意圖共用)、S (共用)、U (更新)、IX (意圖獨佔)、SIX (共用意圖獨佔) 和 X (獨佔)。<br /><br /> **Line #** (追蹤旗標 1222 的**line** )。 列出發生死結時正在執行之目前陳述式批次中的行號。<br /><br /> **Input Buf** (追蹤旗標 1222 的**inputbuf** )。 列出目前批次中的所有陳述式。|**Node**。 代表死結鏈結中的項目號碼。<br /><br /> **清單**。 鎖定擁有者可以是這些清單的一部分：<br /><br /> **授與清單**。 列舉資源的目前擁有者。<br /><br /> **轉換清單**。 列舉嘗試將其鎖定轉換為更高層的目前擁有者。<br /><br /> **等待清單**。 列舉資源的目前最新鎖定要求。<br /><br /> **陳述式類型**。 描述執行緒有權限的 DML 陳述式的類型 (SELECT、INSERT、UPDATE 或 DELETE)。<br /><br /> **犧牲者資源擁有者**。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 選擇作為犧牲者來中斷死結循環的參與執行緒。 選擇的執行緒和所有現存的子執行緒會終止。<br /><br /> **下一分支**。 代表相同 SPID 中兩個以上涉及死結循環的子執行緒。|**deadlock victim**。 代表被選為死結犧牲者之工作的實體記憶位址 (請參閱 [sys.dm_os_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql))。 在未解決的死結案例中，它可能會是 0 (零)。 回復中的工作不可選為死結犧牲者。<br /><br /> **executionstack**。 代表發生死結時正在執行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼。<br /><br /> **優先順序**。 代表死結優先權。 在特定案例中， [!INCLUDE[ssDE](../includes/ssde-md.md)] 可能會選擇在短時間內變更死結優先權，以達到更佳的並行效果。<br /><br /> **logused**。 工作所使用的記錄檔空間。<br /><br /> **擁有者識別碼**。具有要求控制之交易的識別碼。<br /><br /> **狀態**。 工作的狀態。 它是下列其中一值：<br /><br /> >> **暫**止。 等待工作者執行緒。<br /><br /> >> 可**執行。** 可開始執行但等待配量。<br /><br /> >> **正在**執行。 目前在排程器上執行。<br /><br /> >> 已**暫停**。 執行已暫停。<br /><br /> >> **完成**。 工作已完成。<br /><br /> >> **spinloop**。 等待單一執行緒存取鎖變成可用。<br /><br /> **waitresource**。 工作所需的資源。<br /><br /> **waittime**。 等待資源的時間 (以毫秒為單位)。<br /><br /> **schedulerid**。 與這個工作相關聯的排程器。 請參閱 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql)。<br /><br /> **主機名稱**。 工作站的名稱。<br /><br /> **isolationlevel**。 目前交易隔離等級。<br /><br /> **Xactid**。 具有要求控制權之交易的識別碼。<br /><br /> **currentdb**。 資料庫的識別碼。<br /><br /> **lastbatchstarted**。 用戶端處理序上次啟動批次執行的時間。<br /><br /> **lastbatchcompleted**。 用戶端處理序上次完成批次執行的時間。<br /><br /> **clientoption1 和 clientoption2**。 此用戶端連接上的設定選項。 這是位元遮罩，其中包含通常由 SET 陳述式 (例如 SET NOCOUNT 和 SET XACTABORT) 所控制之選項的資訊。<br /><br /> **associatedObjectId**。 代表 HoBT (堆積或 B 型樹狀目錄) 識別碼。|  
-|資源屬性|**RID**。 識別在資料表內保留或要求鎖定的單一資料列。 RID 是以 RID: *db_id:file_id:page_no:row_no*表示。 例如： `RID: 6:1:20789:0` 。<br /><br /> **物件**。 識別保留或要求鎖定的資料表。 OBJECT 是以 OBJECT: *db_id:object_id*表示。 例如： `TAB: 6:2009058193` 。<br /><br /> 索引**鍵**。 識別在索引內保留或要求鎖定的索引鍵範圍。 KEY 是以 KEY: *db_id:hobt_id* (*index key hash value*) 表示。 例如： `KEY: 6:72057594057457664 (350007a4d329)` 。<br /><br /> **PAG**。 識別保留或要求鎖定的頁面資源。 PAG 是以 PAG: *db_id:file_id:page_no*表示。 例如： `PAG: 6:1:20789` 。<br /><br /> **EXT**。 識別範圍結構。 EXT 是以 EXT: *db_id:file_id:extent_no*表示。 例如： `EXT: 6:1:9` 。<br /><br /> **DB**。 識別資料庫鎖定。 **DB 是以下列其中一種方式表示：**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB]，識別備份資料庫使用的資料庫鎖定。<br /><br /> DB: *db_id*[BULK-OP-LOG]，識別該特定資料庫的備份記錄檔所使用的鎖定。<br /><br /> **應用程式**。 識別應用程式資源使用的鎖定。 APP 是以 APP: *lock_resource*表示。 例如： `APP: Formf370f478` 。<br /><br /> **中繼資料**。 代表死結所涉及的中繼資料資源。 因為 METADATA 有許多子資源，所以傳回的值視含有死結的子資源而定。 例如，中繼資料。USER_TYPE 傳回 `user_type_id =` \<*integer_value*> 。 如需有關 METADATA 資源和子資源的詳細資訊，請參閱 [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)。<br /><br /> **HOBT**。 代表死結所涉及的堆積或 B 型樹狀目錄。|None 與此追蹤旗標互斥。|None 與此追蹤旗標互斥。|  
+|資源屬性|**RID**。 識別在資料表內保留或要求鎖定的單一資料列。 RID 是以 RID: *db_id:file_id:page_no:row_no*表示。 例如 `RID: 6:1:20789:0`。<br /><br /> **物件**。 識別保留或要求鎖定的資料表。 OBJECT 是以 OBJECT: *db_id:object_id*表示。 例如 `TAB: 6:2009058193`。<br /><br /> 索引**鍵**。 識別在索引內保留或要求鎖定的索引鍵範圍。 KEY 是以 KEY: *db_id:hobt_id* (*index key hash value*) 表示。 例如 `KEY: 6:72057594057457664 (350007a4d329)`。<br /><br /> **PAG**。 識別保留或要求鎖定的頁面資源。 PAG 是以 PAG: *db_id:file_id:page_no*表示。 例如 `PAG: 6:1:20789`。<br /><br /> **EXT**。 識別範圍結構。 EXT 是以 EXT: *db_id:file_id:extent_no*表示。 例如 `EXT: 6:1:9`。<br /><br /> **DB**。 識別資料庫鎖定。 **DB 是以下列其中一種方式表示：**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB]，識別備份資料庫使用的資料庫鎖定。<br /><br /> DB: *db_id*[BULK-OP-LOG]，識別該特定資料庫的備份記錄檔所使用的鎖定。<br /><br /> **應用程式**。 識別應用程式資源使用的鎖定。 APP 是以 APP: *lock_resource*表示。 例如 `APP: Formf370f478`。<br /><br /> **中繼資料**。 代表死結所涉及的中繼資料資源。 因為 METADATA 有許多子資源，所以傳回的值視含有死結的子資源而定。 例如，中繼資料。USER_TYPE 傳回 `user_type_id =` \<*integer_value*> 。 如需有關 METADATA 資源和子資源的詳細資訊，請參閱 [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)。<br /><br /> **HOBT**。 代表死結所涉及的堆積或 B 型樹狀目錄。|None 與此追蹤旗標互斥。|None 與此追蹤旗標互斥。|  
   
 ###### <a name="trace-flag-1204-example"></a>追蹤旗標 1204 範例  
 
@@ -944,7 +943,7 @@ deadlock-list
 
  鎖定工作會存取數項共用資源，其中兩項資源會因鎖定資料分割而最佳化：  
   
--   **單一執行緒存取鎖**。 這個資源控制對鎖定資源 (例如資料列或資料表) 的存取。  
+-   **Spinlock**。 這個資源控制對鎖定資源 (例如資料列或資料表) 的存取。  
   
      若沒有鎖定資料分割，便會由單一執行緒存取鎖，管理所有鎖定要求的單一鎖定資源。 在經歷大量活動的系統上，因為有許多鎖定要求等候單一執行緒存取鎖變成可用狀態，所以會發生競爭問題。 在這種情況下，取得鎖定將會形成瓶頸，進而對效能產生負面的影響。  
   
@@ -976,7 +975,7 @@ deadlock-list
   
  下列 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式會建立稍後範例中將會使用的測試物件。  
   
-```  
+```sql  
 -- Create a test table.  
 CREATE TABLE TestTable  
     (col1        int);  
@@ -998,7 +997,7 @@ GO
   
  `SELECT` 陳述式會在交易之下執行。 因為有 `HOLDLOCK` 鎖定提示，所以這個陳述式將在資料表上取得及保留意圖共用 (IS) 鎖定 (在這個範例中，將忽略資料列和頁面鎖定)。 只有在指派給交易的資料分割上能取得 IS 鎖定。 在這個範例中，假設是在分割區 ID 7 上取得 IS 鎖定。  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1011,7 +1010,7 @@ BEGIN TRANSACTION
   
  啟動交易，在這個交易之下執行的 `SELECT` 陳述式將在資料表上取得及保留共用 (S) 鎖定。 所有資料分割上都能取得 S 鎖定，而這會造成多個資料表鎖定，每一個都是針對一個資料分割。 例如在 16 個 CPU 的系統上，將會橫跨鎖定資料分割識別碼 0-15 來發出 16 S 鎖定。 因為 S 鎖定與資料分割識別碼 7 上由工作階段 1 中之交易所持有的 IS 鎖定相容，所以交易之間不會發生封鎖現象。  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1022,7 +1021,7 @@ BEGIN TRANSACTION
   
  下列 `SELECT` 陳述式會在工作階段 1 中仍在使用中的交易下執行。 因為有獨佔 (X) 資料表鎖定提示，所以交易將會嘗試取得資料表上的 X 鎖定。 不過，由工作階段 2 中之交易所持有的 S 鎖定，將會封鎖資料分割識別碼 0 的 X 鎖定。  
   
-```  
+```sql  
 SELECT col1  
     FROM TestTable  
     WITH (TABLOCKX);  
@@ -1034,7 +1033,7 @@ SELECT col1
   
  `SELECT` 陳述式會在交易之下執行。 因為有 `HOLDLOCK` 鎖定提示，所以這個陳述式將在資料表上取得及保留意圖共用 (IS) 鎖定 (在這個範例中，將忽略資料列和頁面鎖定)。 只有在指派給交易的資料分割上能取得 IS 鎖定。 在這個範例中，假設是在資料分割識別碼 6 上取得 IS 鎖定。  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1049,7 +1048,7 @@ BEGIN TRANSACTION
   
  其他交易可以在 X 鎖定還沒到達的資料分割識別碼 7 到 15 上繼續取得鎖定。  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1314,7 +1313,7 @@ BEGIN TRANSACTION
   
  在工作階段 1 上：  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or the 2008 or 2008R2 version of the AdventureWorks database.  
 GO  
   
@@ -1337,7 +1336,7 @@ BEGIN TRANSACTION;
   
  在工作階段 2 上：  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1359,7 +1358,7 @@ BEGIN TRANSACTION;
   
  在工作階段 1 上：  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this shows  
     -- the employee having 48 vacation hours.  The  
     -- snapshot transaction is still reading data from  
@@ -1371,7 +1370,7 @@ BEGIN TRANSACTION;
   
  在工作階段 2 上：  
   
-```  
+```sql  
 -- Commit the transaction; this commits the data  
 -- modification.  
 COMMIT TRANSACTION;  
@@ -1380,7 +1379,7 @@ GO
   
  在工作階段 1 上：  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still   
     -- shows the employee having 48 vacation hours  
     -- even after the other transaction has committed  
@@ -1415,7 +1414,7 @@ GO
   
  在工作階段 1 上：  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or any earlier version of the AdventureWorks database.  
 GO  
   
@@ -1442,7 +1441,7 @@ BEGIN TRANSACTION;
   
  在工作階段 2 上：  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1465,7 +1464,7 @@ BEGIN TRANSACTION;
   
  在工作階段 1 上：  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still shows  
     -- the employee having 48 vacation hours.  The  
     -- read-committed transaction is still reading data   
@@ -1479,7 +1478,7 @@ BEGIN TRANSACTION;
   
  在工作階段 2 上：  
   
-```  
+```sql  
 -- Commit the transaction.  
 COMMIT TRANSACTION;  
 GO  
@@ -1488,7 +1487,7 @@ GO
   
  在工作階段 1 上：  
   
-```  
+```sql  
     -- Reissue the SELECT statement which now shows the   
     -- employee having 40 vacation hours.  Being   
     -- read-committed, this transaction is reading the   
@@ -1518,7 +1517,7 @@ GO
   
  下列 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式可啟用 READ_COMMITTED_SNAPSHOT：  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET READ_COMMITTED_SNAPSHOT ON;  
 ```  
@@ -1527,7 +1526,7 @@ ALTER DATABASE AdventureWorks2012
   
  下列 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式可啟用 ALLOW_SNAPSHOT_ISOLATION：  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
 ```  
@@ -1557,7 +1556,7 @@ ALTER DATABASE AdventureWorks2012
   
 -   透過將 `READ_COMMITTED_SNAPSHOT` 資料庫選項設為 `ON` ，進而使用資料列版本設定的讀取認可，如下列程式碼範例所示：  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET READ_COMMITTED_SNAPSHOT ON;  
     ```  
@@ -1566,14 +1565,14 @@ ALTER DATABASE AdventureWorks2012
   
 -   將 `ALLOW_SNAPSHOT_ISOLATION` 資料庫選項設定為 `ON` 來隔離快照集，如下列程式碼範例所示：  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET ALLOW_SNAPSHOT_ISOLATION ON;  
     ```  
   
      在快照隔離下執行的交易可以存取在資料庫中已針對快照啟用的資料表。 若要存取尚未針對快照啟用的資料表，您必須變更隔離等級。 例如，下列程式碼範例會顯示 `SELECT` 陳述式，該陳述式會在執行快照集交易的同時聯結兩個資料表。 其中一個資料表屬於未啟用快照隔離的資料庫。 當 `SELECT` 陳述式在快照隔離下執行時，將無法順利執行。  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1584,7 +1583,7 @@ ALTER DATABASE AdventureWorks2012
   
      下列程式碼範例所示的是經過修改的同一個 `SELECT` 陳述式，可將交易隔離等級變更為讀取認可。 由於此項變更，就可以順利執行 `SELECT` 陳述式。  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1618,7 +1617,7 @@ ALTER DATABASE AdventureWorks2012
   
      例如，資料庫管理員會執行下列 `ALTER INDEX` 陳述式。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER INDEX AK_Employee_LoginID  
@@ -1648,7 +1647,7 @@ ALTER DATABASE AdventureWorks2012
   
  若要判斷目前的 LOCK_TIMEOUT 設定，請執行 @ @LOCK_TIMEOUT function：  
   
-```  
+```sql  
 SELECT @@lock_timeout;  
 GO  
 ```  
@@ -1671,7 +1670,7 @@ GO
   
  下列範例會設定 `SERIALIZABLE` 隔離等級：  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1688,7 +1687,7 @@ GO
   
  若要判斷目前設定的交易隔離等級，可使用下例所示的 `DBCC USEROPTIONS` 陳述式。 結果集和您系統上的結果集可能不盡相同。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  
@@ -1736,7 +1735,7 @@ GO
   
  如下列範例所顯示，如果交易隔離等級設定為 `SERIALIZABLE`，並使用 `NOLOCK` 陳述式來指定資料表層級的鎖定提示 `SELECT` ，則就不採用通常用來維護序列化交易的索引鍵範圍鎖定。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1793,7 +1792,7 @@ GO
   
  下列範例顯示巢狀交易的使用意圖。 `TransProc` 程序會強制執行其交易，而不論執行此程序之處理序的交易模式為何。 如果是在交易使用中時呼叫 `TransProc` ，在 `TransProc` 中的巢狀交易大部份會被忽略，並且依照外部交易最後執行的動作，來認可或回復其中的 INSERT 陳述式。 如果執行 `TransProc` 的處理序沒有尚未處理的交易，在程序結尾的 COMMIT TRANSACTION 便會有效地認可 INSERT 陳述式。  
   
-```  
+```sql  
 SET QUOTED_IDENTIFIER OFF;  
 GO  
 SET NOCOUNT OFF;  

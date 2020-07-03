@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d4e0e057567d9d85a082c1e707db7ab4a6f4442
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 226530ebb5347ab2ace2804fc8e293d1c5899793
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784765"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888391"
 ---
 # <a name="processid-class-sqlservice-class"></a>ProcessId 類別 (SqlService 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   取得可唯一識別服務的系統處理序識別碼。  
   
 ## <a name="syntax"></a>語法  

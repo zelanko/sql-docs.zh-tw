@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 79e37c8e6c65f11abb03f68c3ac8c106d7d78857
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f8297053b429b1b8f8a28150d78dabd814a7b6d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754326"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887892"
 ---
 # <a name="sysxml_schema_elements-transact-sql"></a>sys.xml_schema_elements (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回每個 XML 架構元件的資料列，這是一種類型， **symbol_space**為**E**。  
   

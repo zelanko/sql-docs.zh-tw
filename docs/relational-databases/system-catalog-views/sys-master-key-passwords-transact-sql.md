@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d4bdd76786d4c70b0c27bf60c1a51f08828d1b2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a29e6db2af545f919ad176f3b7453e237b08888b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825083"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883815"
 ---
 # <a name="sysmaster_key_passwords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   針對使用**sp_control_dbmasterkey_password**預存程式加入的每個資料庫主要金鑰密碼，各傳回一個資料列。 保護主要金鑰所用的密碼，是儲存在認證存放區中。 認證名稱的格式如下： # #DBMKEY_<database_family_guid>_<random_password_guid # #。 密碼會儲存為認證秘密。 針對使用**sp_control_dbmasterkey_password**所新增的每個密碼， **sys. 認證**中有一個資料列。  
   

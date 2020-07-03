@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3bf50a8a44f70f39cbd09fc44637478c68a1eb9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 619b06f1279c36716538535050b4e2795724dad7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717191"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888290"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>SetNumValue 方法 (SqlServiceAdvancedProperty 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   設定屬性的數值。  
   
 ## <a name="syntax"></a>語法  
@@ -41,7 +41,7 @@ object.SetNumValue(NumValue)
   
 #### <a name="parameters"></a>參數  
   
-|參數|描述|  
+|參數|說明|  
 |---------------|-----------------|  
 |*Numvalue 個*|指定 advanced 屬性值的**uint32**值。|  
   

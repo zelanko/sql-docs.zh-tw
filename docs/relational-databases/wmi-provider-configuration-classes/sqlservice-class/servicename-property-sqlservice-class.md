@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8ac7387b-c3ae-4e45-b2cc-ebab3f83bfb2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 28809f8ceb0e6540c1eda8f63ef0fa08ca7a9761
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7a279d9447f31965935a4bb600f96b5982b1387f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784724"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888376"
 ---
 # <a name="servicename-property-sqlservice-class"></a>ServiceName 屬性 (SqlService 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   取得服務的名稱。  
   
 ## <a name="syntax"></a>語法  

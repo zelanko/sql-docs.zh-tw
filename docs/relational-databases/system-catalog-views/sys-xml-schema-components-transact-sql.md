@@ -19,15 +19,15 @@ ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 12e0064d70c535ff3a777bfef38e85e2f7c2a724
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d41e37c37b37d34fdbf82469b9a9b457d23b793c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754345"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887868"
 ---
 # <a name="sysxml_schema_components-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對 XML 結構描述的每個元件，各傳回一個資料列。 配對（**collection_id**、 **namespace_id**）是包含命名空間的複合外鍵。 若為已命名的元件， **symbol_space**、 **name**、 **scoping_xml_component_id**、 **is_qualified**、 **xml_namespace_id**、 **xml_collection_id**的值是唯一的。  
   

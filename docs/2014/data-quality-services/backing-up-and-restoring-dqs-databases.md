@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 327217aee7f3e7abf8e09de30542b488a2be5108
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: af6de293d3b5054e90f79a3f2f8f5cae4fbca04a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84938049"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886024"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>備份及還原 DQS 資料庫
   此主題描述如何備份及還原 DQS 資料庫。  
@@ -61,12 +61,11 @@ ms.locfileid: "84938049"
   
 11. 在 [查詢編輯器] 視窗中，複製下列 SQL 語句，並將取代為 *\<PASSWORD>* 您在 DQS 安裝期間為資料庫主要金鑰提供的密碼：  
   
-    ```  
+    ```sql  
     USE [DQS_MAIN]  
     GO  
     EXECUTE [internal_core].[RestoreDQDatabases] '<PASSWORD>'  
     GO  
-  
     ```  
   
 12. 按 F5 執行陳述式。 檢查 **[結果]** 窗格，確認陳述式是否皆已成功地執行。  
