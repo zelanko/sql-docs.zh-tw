@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 933774af820c80abb70c5fbdad0441053533b451
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddaed4baff5685f4ebf7bf4083c9264c895cdd32
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783711"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893210"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   設定遠端伺服器和連結伺服器的伺服器選項。  
   
@@ -46,7 +46,7 @@ sp_serveroption [@server = ] 'server'
   
 `[ @optname = ] 'option_name'`這是針對指定伺服器設定的選項。 *option_name*為**Varchar （** 35 **）**，沒有預設值。 *option_name*可以是下列任何一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**定序相容**|影響針對連結伺服器的分散式查詢執行。 如果此選項設定為**true**，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會假設連結伺服器中的所有字元都與本機伺服器相容，與字元集和定序順序（或排序次序）有關。 這會使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠將字元資料行的比較傳給提供者。 如果未設定這個選項， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律會在本機環境中評估字元資料行的比較。<br /><br /> 只有在確定對應於連結伺服器的資料來源與本機伺服器的字元集和排序順序相同時，才應該設定這個選項。|  
 |**定序名稱**|如果 [**使用遠端定序]** 為**true** ，而且資料來源不是資料來源，則指定遠端資料源所使用的定序名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 這個名稱必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所支援的定序之一。<br /><br /> 當存取不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但其定序卻符合某項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序的 OLE DB 資料來源時，請使用這個選項。<br /><br /> 連結伺服器必須支援供這部伺服器的所有資料行使用的單一定序。 如果連結伺服器支援單一資料來源內的多重定序，或無法確定連結伺服器的定序是否符合某項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序時，請勿設定這個選項。|  

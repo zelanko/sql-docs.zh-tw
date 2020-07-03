@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c748dd4980fb7b3b142893f5a04dd36f1676f8a6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c83d70ad2bb534d9d17104316aecd40a4b21fe05
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635012"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894689"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>查詢通知-sys. dm_qn_subscriptions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回有關伺服器之使用中查詢通知訂閱的資訊。 您可以使用這個檢視，檢查伺服器或指定資料庫中是否有使用中的訂閱，或檢查指定的伺服器主體。  
   

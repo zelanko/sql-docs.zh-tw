@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd934d69b8850a68ff4d007318ee93f4eede03cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b82886cf4be8714580159c35848788fd25e395ee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725571"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892933"
 ---
 # <a name="sp_syscollector_delete_execution_log_tree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對單一收集集合的回合，刪除所有記錄項目。 此外，它也會從該回合的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 資料表中刪除記錄項目。  
   

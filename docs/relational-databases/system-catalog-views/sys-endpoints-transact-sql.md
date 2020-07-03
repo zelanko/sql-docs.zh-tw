@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3c18d86fef5aad9c52ca03bb1a395a4ee8c236a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 297142bceb77c9f90f7496b00c0e9549a5f39a3e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648851"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893231"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對在系統建立的每個端點，各包含一個資料列。 SYSTEM 端點一定只有一個。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 387e4a0a30f5681391bb5891dc772f7c9f04790c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d1f047fed74a212358ef7c1af61034d021661ef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723081"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892588"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在追蹤中加入或移除事件或事件資料行。 **sp_trace_setevent**只能在已停止的現有追蹤上執行（*狀態*為**0**）。 如果在不存在的追蹤上執行這個預存程式，或其*狀態*不是**0**，則會傳回錯誤。  
   
@@ -51,7 +51,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  這份資料表會列出能夠在追蹤中新增或移除的事件。  
   
-|事件編號|事件名稱|描述|  
+|事件編號|事件名稱|說明|  
 |------------------|----------------|-----------------|  
 |0-9|Reserved|Reserved|  
 |10|RPC:Completed|發生在遠端程序呼叫 (RPC) 已完成之時。|  
@@ -326,7 +326,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>傳回碼值  
  下表描述在預存程序完成之後，使用者可能得到的代碼值。  
   
-|傳回碼|描述|  
+|傳回碼|說明|  
 |-----------------|-----------------|  
 |0|沒有錯誤。|  
 |1|未知的錯誤。|  

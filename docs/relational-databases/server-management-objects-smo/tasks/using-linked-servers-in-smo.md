@@ -13,19 +13,19 @@ ms.assetid: 0ea8837b-2596-4df1-b065-3bb717c9f22c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c55ef4914c02aca954a15930e754194e5b3419cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7c8ad7a4069ab35db2016a84279f80e707fad8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148385"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892379"
 ---
 # <a name="using-linked-servers-in-smo"></a>在 SMO 中使用連結的伺服器
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   連結的伺服器代表遠端伺服器上的 OLE DB 資料來源。 遠端 OLE DB 資料來源會使用 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 物件來連結到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體。  
   
- 您可以使用 OLE DB 提供者，將遠端資料庫伺服器[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]連結到目前的實例。 在 SMO 中，連結的伺服器會以 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 物件表示。 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer.LinkedServerLogins%2A> 屬性會參考 <xref:Microsoft.SqlServer.Management.Smo.LinkedServerLogin> 物件的集合。 這些物件會儲存與連結的伺服器建立連接所需的登入認證。  
+ 您可以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 OLE DB 提供者，將遠端資料庫伺服器連結到目前的實例。 在 SMO 中，連結的伺服器會以 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 物件表示。 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer.LinkedServerLogins%2A> 屬性會參考 <xref:Microsoft.SqlServer.Management.Smo.LinkedServerLogin> 物件的集合。 這些物件會儲存與連結的伺服器建立連接所需的登入認證。  
   
 ## <a name="ole-db-providers"></a>OLE-DB 提供者  
  在 SMO 中，已安裝的 OLE-DB 提供者是由 <xref:Microsoft.SqlServer.Management.Smo.OleDbProviderSettings> 物件的集合表示。  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 248c5bdbb1c6d8e5a9d3ead02aa0c4ad51ae2538
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd779e4d9ecff5346edf20f8dab0ed36e65bdff9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725810"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892208"
 ---
 # <a name="sysconversation_groups-transact-sql"></a>sys.conversation_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   這份目錄檢視會針對每一個交談群組，各包含一個資料列。  
   

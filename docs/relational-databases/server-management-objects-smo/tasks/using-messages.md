@@ -13,17 +13,17 @@ ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73dbbb93c226c145dc16f5148f903900b602760e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e62b90ee9d5d3eaa15747435395510629e2e5feb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911221"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892423"
 ---
 # <a name="using-messages"></a>使用訊息
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  在 SMO 中，系統訊息是由屬於<xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> **伺服器**物件的物件表示。 因為系統訊息無法修改，所以**SystemMessage**物件屬性是唯讀的。  
+  在 SMO 中，系統訊息是由 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> 屬於**伺服器**物件的物件表示。 因為系統訊息無法修改，所以**SystemMessage**物件屬性是唯讀的。  
   
  在 SMO 中，使用者定義的訊息是由 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 物件以程式設計的方式表示。 現有的使用者定義的訊息可以藉由反覆運算集合而找到。 您可以藉由具現化新的**UserDefinedMessage**物件並設定適當的屬性，來建立新的使用者自訂訊息。  
   

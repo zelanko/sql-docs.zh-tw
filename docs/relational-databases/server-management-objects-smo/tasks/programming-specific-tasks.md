@@ -19,19 +19,19 @@ ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ba3ec14f7d94b493b5cc93e3b6b46f0565e38ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d38096aacda2d50992c7ac3bc886a8740cb22f8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095204"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892000"
 ---
 # <a name="programming-specific-tasks"></a>程式設計特有的工作
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   使用 SMO 物件的程式設計特有工作包含只有具備特定功能之程式所需要的複雜主題，例如，備份、監視統計資料、複寫、管理執行個體物件，以及設定組態選項。  
   
-|主題|描述|  
+|主題|說明|  
 |-----------|-----------------|  
 |[在 SMO 中使用連結的伺服器](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|描述 SMO 如何使用 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 物件連結 OLE-DB 伺服器。|  
 |[在 SMO 中設定 SQL Server](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|描述如何在 SMO 中檢視與修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的組態設定。|  

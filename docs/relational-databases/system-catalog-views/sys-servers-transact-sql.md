@@ -20,15 +20,15 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 89e8424532f12a4111e5a535a8016f3a4fe5ac6a
-ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
+ms.openlocfilehash: c4ebbcdb8fa1f13d7c0d40c4ac66ac1d3453dffb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85196029"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894933"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   針對每個已註冊的連結或遠端伺服器，各包含一個資料列，以及一個**server_id** = 0 之本機伺服器的資料列。  
 
@@ -41,7 +41,7 @@ ms.locfileid: "85196029"
 |**data_source**|**nvarchar(4000)**|OLE DB 資料來源連接屬性。|  
 |**location**|**nvarchar(4000)**|OLE DB 位置連接屬性。 如果沒有，則為 NULL。|  
 |**provider_string**|**nvarchar(4000)**|OLE DB 提供者字串連接屬性。<br /><br /> 除非呼叫端具有許可權，否則為 Null `ALTER ANY LINKED SERVER` 。|  
-|**目錄**|**sysname**|OLE DB 目錄連接屬性。 如果沒有，則為 NULL。|  
+|**catalog**|**sysname**|OLE DB 目錄連接屬性。 如果沒有，則為 NULL。|  
 |**connect_timeout**|**int**|連接逾時 (以秒為單位)，如果沒有，則為 0。|  
 |**query_timeout**|**int**|查詢逾時 (以秒為單位)，如果沒有，則為 0。|  
 |**is_linked**|**bit**|0 = 是使用**sp_addserver**新增的舊樣式伺服器，其具有不同的 RPC 和分散式交易行為。<br /><br /> 1 = 標準連結伺服器。|  

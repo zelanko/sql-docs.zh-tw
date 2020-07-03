@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bcc9d30d457e9042f2a667a7a71f846f6e07eb63
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4baab44b81ff3e2a2b4a4c6a653527190140f24b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738758"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892181"
 ---
 # <a name="sysextended_procedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對屬於擴充預存程式的每個物件，各包含一個資料列，其中具有**sys.databases。 type** = X。因為擴充預存程式是安裝在**master**資料庫中，所以只會顯示在該資料庫內容中。 從任何其他資料庫內容中的**sys.databases extended_procedures**視圖進行選取，將會傳回空的結果集。  
 

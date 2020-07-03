@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e21038736343ecce98ded93d87f32d64b7ebe4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8327dc8beafb5d4e219cdaf25c44c75af3e85e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750401"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892606"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   建立追蹤定義。 新追蹤會處於已停止狀態。  
   
@@ -53,7 +53,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  下表列出選項、描述及其值。  
   
-|選項名稱|選項值|描述|  
+|選項名稱|選項值|說明|  
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|指定當到達*max_file_size*時，會關閉目前的追蹤檔案，並建立新的檔案。 所有新記錄都會寫入新檔案中。 新檔案與先前的檔案同名，但會附加一個整數來表示順序。 例如，如果原始追蹤檔的名稱是 filename.trc，下一個追蹤檔的名稱就是 filename_1.trc，再下一個追蹤檔的名稱就是 filename_2.trc，依此類推。<br /><br /> 在建立換用追蹤檔時，檔案名稱所附加的整數值也會循序增加。<br /><br /> 如果指定了這個選項，但未指定*max_file_size*的值，SQL Server 會使用*max_file_size*的預設值（5 MB）。|  
 |SHUTDOWN_ON_ERROR|**4**|指定追蹤因故無法寫入檔案時，SQL Server 便關機。 當執行安全性稽核追蹤時，這個選項非常有用。|  
@@ -91,7 +91,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="return-code-values"></a>傳回碼值  
  下表描述在預存程序完成之後，使用者可能得到的代碼值。  
   
-|傳回碼|描述|  
+|傳回碼|說明|  
 |-----------------|-----------------|  
 |0|沒有錯誤。|  
 |1|未知的錯誤。|  

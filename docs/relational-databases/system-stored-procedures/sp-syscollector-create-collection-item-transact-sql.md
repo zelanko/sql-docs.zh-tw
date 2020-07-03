@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5973cd5560f9c12bc38f58002cd6707fe71c714
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dc35ba06f17b3b067e3b7ba9059c27e1f6db2d18
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725609"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892971"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   建立使用者定義之收集組內的收集項。 收集項會定義要收集的資料以及資料收集的頻率。  
   

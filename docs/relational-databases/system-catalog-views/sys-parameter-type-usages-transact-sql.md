@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12d7ec54c16a2abdd6a99ccc9797cbb33f49b9dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5dbb261f10afb2fbf9e01f27dc82beccc4d3a145
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760298"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894344"
 ---
 # <a name="sysparameter_type_usages-transact-sql"></a>sys.parameter_type_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對每個使用者自訂類型參數，各傳回一個資料列。  
   

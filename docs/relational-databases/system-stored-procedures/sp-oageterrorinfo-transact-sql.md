@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a6f56713f2ac50a5e367f23a7987b62e2fb9a78b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d190bf442b7c6e629058f6679291ff75ca64e5ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719243"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893416"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   取得 OLE Automation 錯誤資訊。  
   
@@ -72,7 +72,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |資料行名稱|資料類型|描述|  
 |------------------|---------------|-----------------|  
 |**錯誤**|**binary （4）**|錯誤號碼的二進位表示法。|  
-|**Source**|**Nvarchar （nn）**|錯誤的來源。|  
+|**來源**|**Nvarchar （nn）**|錯誤的來源。|  
 |**描述**|**Nvarchar （nn）**|錯誤的描述。|  
 |**説明**|**Nvarchar （nn）**|來源的說明檔。|  
 |**HelpID**|**int**|說明來源檔案中的說明內容識別碼。|  

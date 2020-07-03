@@ -13,19 +13,19 @@ ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 252741c7997909b4f48fe5be0180277738ad5919
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911212"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894069"
 ---
 # <a name="using-user-defined-tables"></a>使用使用者定義的資料表
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   使用者定義的資料表表示表格式資訊。 當您將表格式資料傳遞到預存程序或使用者定義函數時，這些資料表會當做參數。 使用者定義的資料表不能用於表示資料庫資料表中的資料行。  
   
-  物件具有  屬性，這個屬性會參考  物件。 該<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>集合中的每個物件都有一個**Columns**屬性，它會<xref:Microsoft.SqlServer.Management.Smo.Column>參考列出使用者定義資料表中之資料行的物件集合。 請使用 Add 方法將資料行加入至使用者定義資料表。  
+  物件具有  屬性，這個屬性會參考  物件。 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>該集合中的每個物件都有一個**Columns**屬性，它會參考 <xref:Microsoft.SqlServer.Management.Smo.Column> 列出使用者定義資料表中之資料行的物件集合。 請使用 Add 方法將資料行加入至使用者定義資料表。  
   
  當您使用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 物件定義新的使用者定義資料表時，需要根據其中一個資料行提供資料行和主要金鑰。  
   
