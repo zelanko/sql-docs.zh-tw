@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8943c9e20e9c5add63cf9af21b3ac882696d01af
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98d25db72c7067147a34fa21b0bfa8da16ae1d3e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757831"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889446"
 ---
 # <a name="msreplication_options-transact-sql"></a>MSreplication_options (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSreplication_options**資料表會儲存複寫在內部使用的中繼資料。 此資料表會儲存在**master**資料庫中。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5bb33b8e15009758d3b4892bc3b963c843e7616f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7055dce60cc2eab862a14343bd1394ae13d1af7c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85638813"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888569"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>NumberOfFlags 屬性 (ServerSettings 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   取得與實例相關聯的一般旗標數目 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="syntax"></a>語法  

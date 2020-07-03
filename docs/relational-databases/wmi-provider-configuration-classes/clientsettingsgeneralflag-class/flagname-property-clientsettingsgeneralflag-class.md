@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 60c948cd-11c0-4ff7-a336-dd9ea7b2a3c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73334e515ec2d3da0073510bae03d79ecfd61209
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1993dc7f6b7a5918b2ec2d2853d6517160698ce7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757564"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888834"
 ---
 # <a name="flagname-property-clientsettingsgeneralflag-class"></a>FlagName 屬性 (ClientSettingsGeneralFlag 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   取得旗標的名稱。  
   
 ## <a name="syntax"></a>語法  

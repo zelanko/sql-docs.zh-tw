@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f35cd1b5dde45b8a3d47f4bd906c9445d388827d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ceded3d6a865a6a63dd042735147181cf69f42e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85625546"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888762"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>StartDate 屬性 (SecurityCertificate 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   取得安全性憑證開始生效的日期。  
   
 ## <a name="syntax"></a>語法  

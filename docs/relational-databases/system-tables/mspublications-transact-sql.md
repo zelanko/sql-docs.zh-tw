@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab6ea491a766bdb829a152ed02f92fcd2e71d39c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b26ba7da6099f402aa8902a6ce2dafda8a4d2d71
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725421"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889578"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSpublications**資料表會針對發行者所複寫的每個發行集，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   

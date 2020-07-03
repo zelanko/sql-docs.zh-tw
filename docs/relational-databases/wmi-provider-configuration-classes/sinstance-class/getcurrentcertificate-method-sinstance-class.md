@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9d2b72df-cb21-414a-abef-917f13d4de62
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8a1d51f7b130ef4d530433a6c3ff56ef05c3789
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5193a7a92df39b291ddbe69fec905cceb09f90a8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759841"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888546"
 ---
 # <a name="getcurrentcertificate-method-sinstance-class"></a>GetCurrentCertificate 方法 (SInstance 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   取得目前的安全性憑證。  
   
 ## <a name="syntax"></a>語法  
@@ -41,7 +41,7 @@ object.GetCurrentCertificate(SHA)
   
 #### <a name="parameters"></a>參數  
   
-|參數|描述|  
+|參數|說明|  
 |---------------|-----------------|  
 |*SHA*|在方法完成之後指定目前安全性憑證的字串物件值 (輸出參數)。|  
   

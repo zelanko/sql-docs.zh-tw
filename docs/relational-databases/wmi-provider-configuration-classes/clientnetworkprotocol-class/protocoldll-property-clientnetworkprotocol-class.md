@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9210b55a599d55759e5efcb7ca80a60385e9c69f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e93c5ed625cd5c81f9b3f7bea73c203ae590c7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751521"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888998"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL 屬性 (ClientNetworkProtocol 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   取得[設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)所指定的網路通訊協定所需的 .DLL 檔案名。  
   
 ## <a name="syntax"></a>語法  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58f7f1e887039a5b2ef497a52643a793985f090e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 240dca8f2f8eb330d22c16b928d27d4e19b237b2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758664"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889314"
 ---
 # <a name="mssync_states-transact-sql"></a>MSsync_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsync_states**資料表會追蹤哪個發行集仍在並行快照集模式中。 這份資料表儲存在散發資料庫中。  
   

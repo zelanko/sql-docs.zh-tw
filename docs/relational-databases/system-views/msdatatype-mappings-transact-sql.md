@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6e2abcb656e2f1235827bd0b348e0f288ae4c6ca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 16da7db2dcf42ebfa00d634814f27839a3988a71
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639368"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889192"
 ---
 # <a name="msdatatype_mappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdatatype_mappings**視圖會將 SQL Server 的資料類型對應至非 SQL Server 的資料庫管理系統（DBMS）所使用的資料類型。 此資料表會儲存在**msdb**資料庫中。  
   

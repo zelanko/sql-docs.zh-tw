@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ee9e290cd4a66c3ccda16ff8e701e24060f55c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b35f294cdde44bae349ed23021072f2e20d5d3e3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752707"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889646"
 ---
 # <a name="mspeer_request-transact-sql"></a>MSpeer_request (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   MSpeer_request 資料表用於點對點複寫，以便追蹤某個給定發行集的狀態要求。 這份資料表儲存在發行集資料庫中。  
   

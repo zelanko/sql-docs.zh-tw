@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94bd2c31e8caec8c33f9dd3eb7b3badfa235d60b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3176da347195e7410c5062a442c7f1d5b5881791
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752637"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889468"
 ---
 # <a name="msrepl_version-transact-sql"></a>MSrepl_version (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSrepl_version**資料表包含一個已安裝最新版本複寫的資料列。 這份資料表儲存在散發資料庫中。  
   

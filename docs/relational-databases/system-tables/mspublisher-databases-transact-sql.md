@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 59b0166e-a64c-46b8-befc-c222fa1ccce2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6db774a52344d3e0938a8caf7691fd0e1dbd2a84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc73f32e217d7f8b3a5d0b3a23113a8f99531d2b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751607"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889576"
 ---
 # <a name="mspublisher_databases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSpublisher_databases**資料表會針對本機散發者所服務的每個發行者/發行者資料庫配對，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   

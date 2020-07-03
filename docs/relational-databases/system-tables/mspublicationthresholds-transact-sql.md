@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b5ab784ea0c8cc34068773739c2a818a11aa5f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7b04ac935a66994fed18745b6fc6a5bd3c3ef46c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751608"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889593"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSpublicationthresholds**資料表是用來追蹤發行集的複寫效能計量，每個監視的臨界值都有一個資料列。 這份資料表儲存在散發資料庫中。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 603c0f28cdbb71ff5795d40e3b475391670f4082
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52981676cb367d2b8693443ef534652f371edc8e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633311"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889025"
 ---
 # <a name="protocoldisplayname-property-clientnetworkprotocol-class"></a>ProtocolDisplayName 屬性 (ClientNetworkProtocol 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   取得[設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)所指定之用戶端網路通訊協定的顯示名稱。  
   
 ## <a name="syntax"></a>語法  
