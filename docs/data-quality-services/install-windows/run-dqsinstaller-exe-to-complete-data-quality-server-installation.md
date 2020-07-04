@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 859751ebe806a662c4ec40d6812862d63a84a450
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7dab88e8e10bc854e3210d5898cbd965eb268e04
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887943"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942849"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>執行 DQSInstaller.exe 完成 Data Quality Server 安裝
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
   若要完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝，您必須在安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，執行 DQSInstaller.exe 檔案。 本主題描述如何從 **[開始]** 畫面、 **[開始]** 功能表、Windows [檔案總管] 或 [命令提示字元] 執行 DQSInstaller.exe。您可以任選一種方法執行 DQSInstaller.exe 檔案。  
   
