@@ -11,15 +11,14 @@ ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fd5b0eeb1190becf95a7119ed35a51d01a55c37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a952f0442f41ede8c2151a580fb4ad19b516d1cf
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755718"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009414"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何：將資料列插入 Geography 資料行 (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會使用 2 個不同的繫結 (SQLCCHAR 和 SQLCBINARY)，從 WellKnownBinary (WKB) 在具有地理資料行的資料表中插入兩個資料列， 然後再從該資料表選取一個資料列，並使用 ::STAsText() 加以顯示。WKB 是 0x01010000000700ECFAD03A4C4001008000B5DF07C0，而且該應用程式會列印至主控台：POINT(56.4595 -2.9842)。  
   

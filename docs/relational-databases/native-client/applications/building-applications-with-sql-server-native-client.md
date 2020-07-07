@@ -16,15 +16,14 @@ ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b93aa14d5ac16688cac8ef021023378a270a42f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: efb4fea164129627f846571a8a2913afc7097260
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85658050"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012928"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>使用 SQL Server Native Client 建立應用程式
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   當您開發使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 程式庫的應用程式時，會遇到一些問題。 本章節的主題將討論其中的許多問題，包括從 MDAC 升級到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 標頭檔和程式庫檔案)，以及可搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用的各種連接字串概觀。  
   

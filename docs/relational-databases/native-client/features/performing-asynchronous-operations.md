@@ -20,15 +20,14 @@ ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3ebafe9bb2b37923e5a2f30566aa80cd18e8f08
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a36969d12199a3851259e192508daf113963cb78
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773197"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009027"
 ---
 # <a name="performing-asynchronous-operations"></a>執行非同步作業
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允許應用程式執行非同步資料庫作業。 非同步處理可讓方法立即執行，而不會在呼叫的執行緒上封鎖。 這樣可允許多執行緒的許多功能與彈性，而不需要開發人員明確建立執行緒或處理同步。 當初始化資料庫連接或初始化執行命令的結果時，應用程式會要求非同步處理。  
   

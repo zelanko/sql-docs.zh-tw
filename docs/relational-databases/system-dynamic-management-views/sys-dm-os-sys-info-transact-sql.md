@@ -22,15 +22,14 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55e5892b9183ab2455cee7aa39a34de0d7bb28bf
-ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
-ms.translationtype: MT
+ms.openlocfilehash: 0394d8c13ec3aa9b458813556c80645841b5576b
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107039"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032512"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回有關電腦以及有關 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 可用和耗用資源的其他有用資訊。  
   

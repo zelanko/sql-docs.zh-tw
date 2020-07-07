@@ -9,15 +9,14 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 370316f6f2c77a270117aca3f59d42c11914175c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: aa65e16e3a0177bb2e054601bf02c398df74ca15
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894977"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012300"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共用管理物件 (SMO) 授權條款
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ## <a name="microsoft-software-license-terms"></a>MICROSOFT 軟體授權條款
 **MICROSOFT SQL SERVER 2017 共用管理物件**

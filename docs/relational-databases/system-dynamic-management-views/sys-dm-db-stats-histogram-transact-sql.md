@@ -20,15 +20,14 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9c203cef9234c070bcefcc82bea396734123d4f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 50b5ae0a00161b00c432f0ea88c1cd08c45b4219
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738706"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011881"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 傳回目前資料庫中指定之資料庫物件（資料表或索引視圖）的統計資料長條圖 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 類似於 `DBCC SHOW_STATISTICS WITH HISTOGRAM`。
 

@@ -18,15 +18,14 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: b959348aaf7ca293a9d475a8b4eb6cb5cfdee7aa
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
-ms.translationtype: MT
+ms.openlocfilehash: 334b4ee83df73284abe7d20cdff66675d42039d5
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834632"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032560"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH （Transact-sql）
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
   指定以遞迴或重複方式搜尋之圖形的搜尋條件。 在 SELECT 語句中，可以在與圖形節點和邊緣資料表相符的 SHORTEST_PATH 中使用。 
   
@@ -85,7 +84,7 @@ STRING_AGG 函式會採用運算式和分隔符號做為輸入，並傳回字串
 ### <a name="last_value"></a>LAST_VALUE
 若要從已進行路徑的最後一個節點來投影屬性，可以使用 LAST_VALUE 彙總函式。 提供邊緣資料表別名做為此函式的輸入是錯誤的，只可以使用節點資料表名稱或別名。
 
-**最後一個節點**：最後一個節點會參考出現在路徑中的最後一個節點，而不考慮 MATCH 述詞中箭號的方向。 例如：`MATCH(SHORTEST_PATH(n(-(e)->p)+) )`。 在這裡，路徑中的最後一個節點會是最後一次造訪的 P 節點。 
+**最後一個節點**：最後一個節點會參考出現在路徑中的最後一個節點，而不考慮 MATCH 述詞中箭號的方向。 例如： `MATCH(SHORTEST_PATH(n(-(e)->p)+) )` 。 在這裡，路徑中的最後一個節點會是最後一次造訪的 P 節點。 
 
 不過，最後一個節點是此模式輸出圖形路徑中的最後 n 個節點：`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 

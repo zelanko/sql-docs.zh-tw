@@ -11,15 +11,14 @@ ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 829b6dccd12edaa707a2aad2d0861c75e99c408e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 29c0306f433a8d6cca5a70ae0c6de6cf6555e31a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787588"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012069"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SNAC （或 SQL Server Native Client）是一種詞彙，可交換用來參考 ODBC 和 OLE DB 驅動程式以進行 SQL Server。
 

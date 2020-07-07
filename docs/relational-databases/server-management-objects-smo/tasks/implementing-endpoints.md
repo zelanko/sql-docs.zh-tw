@@ -13,15 +13,14 @@ ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29d666646da53f1eb943f4bd1ecb3dcb7ee83d33
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: ac9936e0bb42bc5c62e6f506aebdf50b9a210333
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894366"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008968"
 ---
 # <a name="implementing-endpoints"></a>實作端點
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   端點是可以透過原生方式接聽要求的服務。 SMO 藉由使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 物件來支援各種端點類型。 您可以藉由建立 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 物件的執行個體和設定其屬性，建立處理特定裝載類型的端點服務 (此類服務使用特定的通訊協定)。  
   
