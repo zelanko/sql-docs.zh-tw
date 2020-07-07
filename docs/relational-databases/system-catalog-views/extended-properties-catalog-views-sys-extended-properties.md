@@ -20,15 +20,14 @@ ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35d2682709e1f9d19fe51dfae331e0999c0e3570
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 5328e930d5200184c6db15dc6ac7083a61967464
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733566"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85977590"
 ---
 # <a name="extended-properties-catalog-views---sysextended_properties"></a>擴充屬性目錄 Views-sys. extended_properties
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   針對目前資料庫中每個擴充屬性，各傳回一個資料列。  
   

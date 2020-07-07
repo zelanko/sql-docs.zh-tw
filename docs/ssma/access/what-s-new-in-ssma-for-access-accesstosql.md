@@ -4,22 +4,27 @@ description: 瞭解每個版本的 SQL Server 移轉小幫手（SSMA） for Acce
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 7aa805b018517860e925ebf52048a20cc257a9af
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: e2c45c4aea17448af7ed496c1c56b8629c30e429
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779390"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85978840"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access 的新功能（AccessToSQL）
 
 本文列出每個版本中的存取變更 SQL Server 移轉小幫手（SSMA）。
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+SSMA for Access 的 v 8.11 版本包含下列變更：
+
+* 使用 MSAL.NET 程式庫進行互動式 Azure Active Directory 驗證
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 

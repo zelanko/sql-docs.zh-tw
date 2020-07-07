@@ -20,15 +20,14 @@ ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbba738f10f570af693cc126cb20f0f857e405aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 30c3ca8a7bb1c80aea923b228bee34024482f4a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718901"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85979137"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   針對資料庫中的每個憑證，各傳回一個資料列。  
   

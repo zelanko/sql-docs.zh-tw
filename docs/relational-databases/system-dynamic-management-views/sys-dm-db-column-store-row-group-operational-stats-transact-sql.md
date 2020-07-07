@@ -13,15 +13,14 @@ ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9430c5c42f9b871457fdaae1386e198a176a0bba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 7cd826eac32d08e4933c1883f6b4cab3706aad2d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754240"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85984990"
 ---
 # <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys.databases dm_db_column_store_row_group_operational_stats （Transact-sql）
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   針對資料行存放區索引中的壓縮資料列群組，傳回目前的資料列層級 i/o、鎖定和存取方法活動。 使用**dm_db_column_store_row_group_operational_stats sys.databases**來追蹤使用者查詢必須等候讀取或寫入到資料行存放區索引之壓縮資料列群組或資料分割的時間長度，並找出遇到重要 i/o 活動或作用點的資料列群組。  
   
