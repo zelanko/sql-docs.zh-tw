@@ -12,12 +12,11 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5fa2412e61e30852497ffa00493ea6dbe244989a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: d91fdabce5350614d504b7dfdf990e2dd54b8b48
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001119"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999127"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys.databases pdw_nodes_tables （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "68001119"
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|\<繼承的資料行>||如需此視圖所繼承之資料行的清單，請參閱[sys.databases](../system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。||  
+|\<inherited columns>||如需此視圖所繼承之資料行的清單，請參閱[sys.databases](../system-catalog-views/sys-objects-transact-sql.md)。||  
 |lob_data_space_id|**int**||一律是 0。|  
 |filestream_data_space_id|**int**|FILESTREAM 檔案群組或的資料空間識別碼[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|這個資料表所使用的最大資料行識別碼。||  
@@ -42,7 +41,7 @@ ms.locfileid: "68001119"
 |is_tracked_by_cdc|**bit**|1 = 資料表已啟用變更資料捕獲|一律為 0;沒有 CDC 支援。|  
 |lock_escalation|**tinyint**|資料表的 LOCK_ESCALATION 選項值： 2 = AUTO|一律為2。|  
 |lock_escalation_desc|**nvarchar(60)**|Lock_escalation 選項的文字描述。|一律ꞌ自動ꞌ。|  
-|pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]節點的唯一識別碼。|NOT NULL|  
+|pdw_node_id|**int**|節點的唯一識別碼 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|NOT NULL|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
