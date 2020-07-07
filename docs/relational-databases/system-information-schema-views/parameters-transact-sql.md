@@ -19,15 +19,14 @@ ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c758dcded1b449dda890e3ba96c26c87dda9622d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 3ba42e693487fdf2bc9c7cb9565ee2448d6b3f9b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784864"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000432"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   針對目前資料庫中目前的使用者所能存取之使用者自訂函數或預存程序的每個參數，各傳回一個資料列。 如果是函數，這份檢視也會傳回一個含有傳回值資訊的資料列。  
   
