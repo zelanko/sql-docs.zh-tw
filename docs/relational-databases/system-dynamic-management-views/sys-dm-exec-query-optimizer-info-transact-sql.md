@@ -20,15 +20,14 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d544d95cc2a0159a3502544489cf58514fe19fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 6febd2233e15794bd72874bd92aab6e31c0266f1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734769"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005219"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具作業的詳細統計資料。 您可以使用這個檢視來調整工作負載，找出查詢最佳化的問題或可供改善之處。 例如，您可以使用最佳化總數、經過時間值和最終成本值，比較目前工作負載的查詢最佳化以及調整過程中所觀察到的任何變化。 部分計數器只提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部診斷使用的相關資料。 這些計數器會標示「僅供內部使用」。  
   

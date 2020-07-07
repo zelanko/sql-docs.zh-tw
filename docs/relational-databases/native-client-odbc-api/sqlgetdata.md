@@ -14,15 +14,14 @@ ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b351ded757bc424b5ae37459ce14fd3f1bd45f73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 3c4f27218494c88cef3aedd51267ee693b2f4e65
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789180"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003473"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **SQLGetData**是用來在不系結資料行值的情況下，抓取結果集資料。 可以在相同資料行上連續呼叫**SQLGetData** ，以從具有**text**、 **Ntext**或**image**資料類型的資料行中取出大量資料。  
   

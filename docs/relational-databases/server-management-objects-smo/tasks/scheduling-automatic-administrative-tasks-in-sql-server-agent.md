@@ -15,15 +15,14 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c7a9824d68f2d1b912f19b43330eae1d3bc2c0a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 9b455db0d597e4b7affb6da98497ae3638b095e9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897786"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005975"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>使用 SQL Server Agent 排程自動管理工作
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   在 SMO 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 是由下列物件表示：  
   

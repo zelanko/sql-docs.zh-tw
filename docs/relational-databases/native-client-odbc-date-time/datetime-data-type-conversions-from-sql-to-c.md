@@ -13,15 +13,14 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 435ca8d8685f62e7a8f2fad172f66414edafb756
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 9266133a7594c2703e0c8671710034c5d85dc9ff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718983"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004367"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime 資料類型從 SQL 轉換成 C
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   下表將列出當您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/時間類型轉換成 C 類型時應該考量的問題。  
   
@@ -32,16 +31,16 @@ ms.locfileid: "85718983"
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
 |SQL_CHAR|2、3、4、5|2、3、6、7、8|2，3，9，10，11|2、3、6、7|2，3，9，10，11|1|1|1|  
 |SQL_WCHAR|2、3、4、5|2、3、6、7、8|2，3，9，10，11|2、3、6、7|2，3，9，10，11|1|1|1|  
-|SQL_TYPE_DATE|[確定]|12|13|12|13，23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|[確定]|10、23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7、8|[確定]|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18，22|7、8、20|20|7、20|[確定]|21|16|16|  
+|SQL_TYPE_DATE|確定|12|13|12|13，23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|確定|10、23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7、8|確定|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18，22|7、8、20|20|7、20|確定|21|16|16|  
   
 ## <a name="key-to-symbols"></a>符號的索引鍵  
   
 |符號|意義|  
 |------------|-------------|  
-|[確定]|沒有轉換問題。|  
+|確定|沒有轉換問題。|  
 |1|適用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的規則。|  
 |2|忽略開頭和尾端空白。|  
 |3|字串會剖析成日期、時間、時區或時區時差，而且小數秒數最多允許 9 位數。 如果剖析了時區時差，時間就會轉換成用戶端時區。 如果在此轉換期間發生錯誤，就會產生含有 SQLSTATE 22018 和訊息「日期時間欄位溢位」的診斷記錄。|  

@@ -16,15 +16,14 @@ ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a284851d59ce1a5a8f64faa02555303adcd66092
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 2680d1d65e051abfdcb22e239d9c97a9fc535745
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775934"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001397"
 ---
 # <a name="executing-statements-odbc"></a>執行陳述式 (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式提供各種方式來執行資料庫中的 SQL 語句 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ：  
   

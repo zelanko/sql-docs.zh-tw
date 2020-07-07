@@ -21,15 +21,14 @@ ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75546a921f9a8cf6c985696e87b97acb1e4a6983
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 7aee78c5b9f9b151710e3dc5feb662347b588f08
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734934"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007139"
 ---
 # <a name="allocating-a-connection-handle"></a>配置連接控制代碼
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在應用程式可以連接到資料來源或驅動程式之前，必須配置連接控制代碼。 這是藉由呼叫**SQLAllocHandle**並將*HandleType*參數設定為 SQL_HANDLE_DBC，並將*InputHandle*指向已初始化的環境控制碼來完成。  
   

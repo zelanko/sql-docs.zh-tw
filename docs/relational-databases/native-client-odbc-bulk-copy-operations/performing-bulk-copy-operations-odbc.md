@@ -18,15 +18,14 @@ ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53d25ed32ab657c1e73c3f38e19f4284c7d702d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 55736dd07331a12fe2ec2c5495e860e26ef908af
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734942"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007175"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>執行大量複製作業 (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC 標準不直接支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量複製作業。 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更新版本的值行個體時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量複製作業的 DB-Library 函數。 此驅動程式專屬的延伸模組提供一個簡單的升級路徑給使用大量複製函數的現有 DB-Library 應用程式。 特定的大量複製支援位於下列檔案中：  
   

@@ -11,15 +11,14 @@ ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3655c567081538c957af1b3d646e683867097dd2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 9866c13f2a7385c008cc8fd98455e371ebd6f250
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755681"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007903"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC 的使用說明主題
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] odbc 驅動程式，您必須能夠建立 odbc 資料來源，並確定伺服器具有正確的目錄預存程式版本。 若要撰寫使用 SQL Server 之 ODBC 應用程式的程式碼，您必須知道如何配置 ODBC 控制代碼、設定屬性、連接至 SQL Server 執行個體、執行查詢以及處理結果。  
   

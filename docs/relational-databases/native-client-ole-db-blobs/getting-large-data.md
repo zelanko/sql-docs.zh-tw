@@ -16,15 +16,14 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4927ffc7ded9a291e5910cd359cb59edea0bf3bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e9ba0351a3ea398661642a2e737a58fb7adecf8d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785568"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005845"
 ---
 # <a name="getting-large-data"></a>取得大型資料
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   一般而言，取用者應該隔離的程式碼會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 從處理不透過**ISequentialStream**介面指標參考之資料的其他程式碼，建立原生用戶端 OLE DB 提供者儲存物件。  
   

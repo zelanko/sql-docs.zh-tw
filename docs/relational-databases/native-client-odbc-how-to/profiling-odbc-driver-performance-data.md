@@ -13,15 +13,14 @@ ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b53f62ee3be58b3947f6e0253133379d23def057
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: eab6ed2d2f02526d8167275b24800c267001b194
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783293"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001123"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>分析 ODBC 驅動程式效能資料
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用選項，以記錄效能統計資料。 此範例會建立一個檔案：odbcperf.log。此範例會示範如何建立效能資料記錄檔，以及直接從 SQLPERF 資料結構顯示效能資料 (SQLPERF 結構定義於 Odbcss.h 中)。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
   

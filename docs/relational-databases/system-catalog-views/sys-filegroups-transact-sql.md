@@ -20,15 +20,14 @@ ms.assetid: 9e851f72-1f8e-4515-a25d-152ebc12ed56
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b676878f0e42e57d5a6081ce927ca9892e3e62c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 191def5ab0620c143739da388ba468efd308ce28
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754465"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005947"
 ---
 # <a name="sysfilegroups-transact-sql"></a>sys.filegroups (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   針對身為檔案群組的每個資料空間，各包含一個資料列。  
   

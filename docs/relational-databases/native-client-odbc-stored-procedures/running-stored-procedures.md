@@ -17,15 +17,14 @@ ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e97f6717e59ffd873fc8505e538855e36dc0df1a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 622b32871c7b21cc8e7c4ad1ee40323059a157a3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773488"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004624"
 ---
 # <a name="running-stored-procedures"></a>執行預存程序
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   預存程序是一種儲存在資料庫中的可執行物件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援：  
   

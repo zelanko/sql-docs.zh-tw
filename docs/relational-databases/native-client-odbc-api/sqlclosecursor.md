@@ -14,15 +14,14 @@ ms.assetid: e7134d65-5c1c-4ae2-b119-d9b4b9a42483
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dad8e1277a0161755f65bdafa1276ab401f9e3b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 13f863e23b50b1555b5a945111570bacf5486f6e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789396"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004387"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **SQLCloseCursor**會將[SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)取代為 SQL_CLOSE 的*選項*值。 在收到**SQLCloseCursor**時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會捨棄暫止的結果集資料列。 請注意， **SQLCloseCursor**不會改變語句的資料行和參數系結（如果有的話）。  
   

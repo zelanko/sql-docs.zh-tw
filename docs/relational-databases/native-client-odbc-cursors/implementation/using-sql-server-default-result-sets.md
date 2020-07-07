@@ -18,15 +18,14 @@ ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e410f33be5b11d96055a3aac8d86fb1ef1c73e5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ded0e559f7724450fc9787a57c32fd68cf42719b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774434"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000580"
 ---
 # <a name="using-sql-server-default-result-sets"></a>使用 QL Server 預設結果集
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   預設的 ODBC 資料指標屬性為：  
   

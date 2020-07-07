@@ -13,15 +13,14 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4f0ff3a5cc18845bc2fcc2bec682c6bd8e2db4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 9da410954f4fedce101ca95a9a3571898b4cd349
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724661"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002725"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys.databases internal_partitions （Transact-sql）
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   針對每個資料列集傳回一個資料列，以在磁片基礎的資料表上追蹤資料行存放區索引的內部資料。 這些資料列集屬於資料行存放區索引，並追蹤已刪除的資料列、資料列群組對應和差異存放區資料列群組。 它們會追蹤每個資料表分割區的資料;每個資料表都至少有一個資料分割。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每次重建資料行存放區索引時，重新建立資料列集。   
   

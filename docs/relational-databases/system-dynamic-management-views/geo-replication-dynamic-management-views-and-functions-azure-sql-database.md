@@ -16,15 +16,14 @@ ms.assetid: c98a06f6-c205-42f0-9f2a-4668c6103bc8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: efe34b11620c269606f90e34c3e797b2e856418f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: c2e02a142af9df577e29a11c4b914981cfe8f0ef
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787027"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002679"
 ---
 # <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>異地複寫動態管理的查看和功能（Azure SQL Database）
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   此章節包含下列目錄檢視，可顯示地理複寫的相關資訊。  
   

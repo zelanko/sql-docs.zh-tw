@@ -16,15 +16,14 @@ ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73cd53e5b9c83fe77027b8260d46bc5b989e91a6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 14c2a982d1d1744eb8ee0da40203b86d62bfaccd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775938"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001409"
 ---
 # <a name="direct-execution"></a>直接執行
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   直接執行是執行陳述式的一種最基本的方式。 應用程式會建立包含語句的字元字串 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ，並使用**SQLExecDirect**函數提交它以供執行。 當此陳述式到達伺服器時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將它編譯成執行計畫，然後立即執行此執行計畫。  
   

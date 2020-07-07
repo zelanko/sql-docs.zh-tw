@@ -13,15 +13,14 @@ ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7eee04fd4d3ad5b56f72c1bf13b5a2c27c7741ff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 6243fdefcd5e145abc86cc148d8362d616286a47
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894097"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001254"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>建立、改變和移除使用者定義函數
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>物件所提供的功能，可讓使用者以程式設計方式管理中的使用者定義函數 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 使用者定義函數支援輸入和輸出參數，也支援資料表資料行的直接參考。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 需要先在資料庫內註冊組件，然後才能在預存程序、使用者定義函數、觸發程序和使用者定義資料類型中使用組件。 SMO 以 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 物件支援此功能。  

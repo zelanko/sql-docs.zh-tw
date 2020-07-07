@@ -20,15 +20,14 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c57cc3e4be2683ec0dee5e9cc209718bf97b3859
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 53957ed65247124927e248c4e9aad104362ec84e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752862"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008559"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之下執行的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業系統執行緒的清單。  
   

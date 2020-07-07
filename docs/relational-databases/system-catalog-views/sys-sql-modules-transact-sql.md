@@ -20,15 +20,14 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd05afece6814beb84e3fa079b02f661f14990bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 35364b70b54c0837f5cdbcc3b747a6c066c7beb9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783950"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008355"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   針對屬於中 SQL 語言定義模組的每個物件，各傳回一個資料列，包括原生編譯的純量 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者定義函數。 類型 P、RF、V、TR、FN、IF、TF 和 R 的物件，各有一個相關聯的 SQL 模組。 獨立預設值，即類型 D 的物件，在這份檢視中也有 SQL 模組定義。 如需這些類型的說明，請參閱[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目錄檢視中的**類型**資料行。  
   

@@ -13,15 +13,14 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00f8e05a901c5c2729907ec64ae5cd14a8c23413
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 80757fcbaf0548b520f8357de4eb5cc23db86386
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725015"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005833"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>分析 ODBC 驅動程式效能資料 - 記錄長時間執行的查詢
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用選項，用以記錄長時間執行的查詢。 執行時，此範例會建立 Odbcqry.log，其中包含執行超過應用程式設定之間隔的查詢清單。 IA64 不支援此範例。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
   

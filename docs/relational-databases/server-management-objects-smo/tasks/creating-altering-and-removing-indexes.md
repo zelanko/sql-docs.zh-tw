@@ -13,16 +13,15 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 577b6e8dfcf74407f4c233f4330e9f653de7e4d1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: b2b269a2f23cc81478309d8ccfa7f89f6b60f742
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882990"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001318"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>建立、改變和移除索引
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 階層中，索引是由 <xref:Microsoft.SqlServer.Management.Smo.Index> 物件表示。 索引資料行是由 <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> 屬性表示的 <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> 物件集合來表示。  
   

@@ -14,15 +14,14 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59574cdd08b519704d94aa0303b30f2428036157
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: c6da1b1cb2188d96f6e9bf733d83ecb3e394a78d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884768"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005961"
 ---
 # <a name="scripting"></a>指令碼
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   SMO 中的腳本是由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 物件及其子物件或個別物件上的**腳本**方法所控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>物件會針對實例上物件的相依性關聯性控制對應 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   

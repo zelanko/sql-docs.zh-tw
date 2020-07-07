@@ -19,15 +19,14 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87b905aa178aec6aa10d4d7585384183bdb5d6c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e4d6914ce4b46a7fc787b496ebf6b23036b9c21c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783009"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002129"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption （Transact-sql）
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 更新目前資料庫中指定非架構系結預存程式、使用者定義函數、view、DML 觸發程式、資料庫層級 DDL 觸發程式或伺服器層級 DDL 觸發程式之參數的 Always Encrypted 中繼資料。 
 
@@ -48,7 +47,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `[ @name = ] 'module_name'`這是預存程式、使用者定義函數、view、DML 觸發程式、資料庫層級 DDL 觸發程式或伺服器層級 DDL 觸發程式的名稱。 *module_name*不可以是 common language RUNTIME （CLR）預存程式或 CLR 函數。 *module_name*不可以是架構系結。 *module_name*是 `nvarchar` ，沒有預設值。 *module_name*可以是多部分的識別碼，但只能參考目前資料庫中的物件。
 
-`[ @namespace = ] ' < class > '`這是指定之模組的類別。 當*module_name*是 DDL 觸發程式時， `<class>` 則為必要。 `<class>` 為 `nvarchar(20)`。 有效的輸入為 `DATABASE_DDL_TRIGGER` 和 `SERVER_DDL_TRIGGER` 。    
+`[ @namespace = ] ' < class > '`這是指定之模組的類別。 當*module_name*是 DDL 觸發程式時， `<class>` 則為必要。 `<class>` 是 `nvarchar(20)` \(英文\)。 有效的輸入為 `DATABASE_DDL_TRIGGER` 和 `SERVER_DDL_TRIGGER` 。    
 
 ## <a name="return-code-values"></a>傳回碼值  
 

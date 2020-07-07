@@ -14,15 +14,14 @@ ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e306a3277a540f0d5da79e76aeefc2440fd81730
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 14c874cace96bddb95fbc650e3d4193800b5b8d5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880069"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008610"
 ---
 # <a name="getting-started-in-smo"></a>SMO 使用者入門
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 本頁面提供的主題連結，可協助您開始使用 SQL Server 管理物件（SMO）。 列出的主題涵蓋 SMO 物件階層、以 SMO 撰寫程式、SMO 和不同的程式設計語言，以及特定的程式設計工作。  
  

@@ -20,15 +20,14 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3fbd009d47d7019994359c480c55c251950d0940
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: bfb93efd6495757e284fe5bb3df3cdb1b0c344e4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734848"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002732"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   針對每個表格式物件 (如資料表、檢視或資料表值函式) 索引或堆積，各包含一個資料列。  
   

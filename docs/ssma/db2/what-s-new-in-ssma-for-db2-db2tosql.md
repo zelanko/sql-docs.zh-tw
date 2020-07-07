@@ -4,22 +4,30 @@ description: 瞭解每個版本的 SQL Server 移轉小幫手（SSMA） for DB2 
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 18e7ba16dcbcc44155172f239accbfe26fe86fc2
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: c35b67bebc63c47750b856d5a2ec2d45666c90b8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779050"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003877"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 的新功能（DB2ToSQL）
 
 本文列出每個版本中 DB2 變更的 SQL Server 移轉小幫手（SSMA）。
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+SSMA for DB2 的 v 8.11 版本包含下列變更：
+
+* DB2 for i （7.1 版和更新版本）的支援
+* 和的轉譯 `SQLSTATE``SQLCODE`
+* 函式中有副作用之運算子的轉換錯誤訊息
+* 使用 MSAL.NET 程式庫進行互動式 Azure Active Directory 驗證
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 

@@ -23,15 +23,14 @@ ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f299d5535a6b07d04eab3d8e16ad8f4bbe99f058
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 7c24230b76a08f629f219d23f67771e91ff3486c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775896"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002891"
 ---
 # <a name="autotranslation-of-character-data"></a>字元資料的自動轉譯
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   字元資料（例如使用 SQL_C_CHAR 所宣告的 ANSI 字元變數，或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**CHAR**、 **Varchar**或**text**資料類型儲存在中的資料）只能代表有限的字元數。 每個字元使用一個位元組儲存的字元資料僅能代表 256 個字元。 儲存在 SQL_C_CHAR 變數中的值會使用用戶端電腦的 ANSI 字碼頁 (ACP) 解譯。 在伺服器上使用**char**、 **Varchar**或**text**資料類型所儲存的值，會使用伺服器的 ACP 進行評估。  
   

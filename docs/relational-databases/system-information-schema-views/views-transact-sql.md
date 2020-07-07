@@ -19,15 +19,14 @@ ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1a910110ac34ebcd52dacf2c4f549f76f44cb06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 9aca4edc4d2b30eba8fe37467698f80b0c4ab5f4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647265"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006194"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   針對目前資料庫中目前使用者所能存取的，傳回一個資料列。  
   

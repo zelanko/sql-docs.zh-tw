@@ -14,15 +14,14 @@ ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3a056a9e6b5f02cc7dc3eb76837731d5a312cba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e0871674e4c3af03f59ae0363480ce29879ece94
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789190"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003468"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式只會針對「執行資料列描述元」（IRD）公開驅動程式特定的描述項欄位。 在 IRD 內， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會透過驅動程式特有的資料行屬性來參考描述項欄位。 如需可用驅動程式專屬描述項欄位的完整清單的詳細資訊，請參閱[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)。  
   

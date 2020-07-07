@@ -14,15 +14,14 @@ ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 413e8f65cb135a46a7dd440b687beb448e15ede2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ff762ab39c2d915538dc58d2162175803895f877
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789336"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006610"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   針對執行的語句， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式不需要查詢伺服器來描述結果集中的資料行。 在此情況下， **SQLDescribeCol**不會造成伺服器往返。 如同[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)和[SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)，在已備妥但未執行的語句上呼叫**SQLDescribeCol**會產生伺服器往返。  
   

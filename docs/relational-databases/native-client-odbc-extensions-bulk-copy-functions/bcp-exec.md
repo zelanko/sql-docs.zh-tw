@@ -18,15 +18,14 @@ ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd9b2b63332b23034e46b071f76dc9129c3c6f9f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: fb159b403b132610894a92f0906ca5cc37b29cae
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774290"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000591"
 ---
 # <a name="bcp_exec"></a>bcp_exec
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在資料庫資料表和使用者檔案間執行資料的完整大量複製。  
   

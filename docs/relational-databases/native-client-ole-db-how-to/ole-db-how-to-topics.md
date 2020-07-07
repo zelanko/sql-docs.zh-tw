@@ -13,15 +13,14 @@ ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d309ed29361d12caf6b52f27806794d8cd3840df
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 539ad29e5dd3be3ebc5bce165e7480cd2217bf5a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775275"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006477"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 的使用說明主題
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，您必須瞭解如何建立與伺服器的連接、執行命令，以及處理結果。  
   

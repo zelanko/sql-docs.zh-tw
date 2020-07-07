@@ -14,15 +14,14 @@ ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01221bcb23dea7dc78777620fe580bcf0e1287c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a299aad83a8a5d4287f84772590b6b8321d555d0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725151"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004301"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>使用格式檔案進行大量複製 (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例顯示如何利用格式檔案使用 ODBC bcp_init 函數。  
   

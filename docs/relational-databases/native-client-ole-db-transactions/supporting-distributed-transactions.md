@@ -19,15 +19,14 @@ ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19378c7ead1ca34a6e3c2b42cb0b725560fabd8f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b4bd02bccb53448a4039f7f27caf820a931df335
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85658206"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005816"
 ---
 # <a name="supporting-distributed-transactions"></a>支援分散式交易
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者取用者可以使用**ITransactionJoin：： JoinTransaction**方法，參與由 Microsoft 分散式交易協調器（MS DTC）協調的分散式交易。  
   

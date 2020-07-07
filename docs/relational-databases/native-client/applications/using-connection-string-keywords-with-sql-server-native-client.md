@@ -18,15 +18,14 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5082230054064f41134f553660999314b5b51897
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
-ms.translationtype: MT
+ms.openlocfilehash: 438c3126277dfe61c7faef84f82b11dc16d7cfb2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834749"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001061"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>搭配 SQL Server Native Client 使用連接字串關鍵字
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client API 會使用連接字串來指定連接屬性。 連接字串是關鍵字和關聯值的清單，每一個關鍵字都會識別特定的連接屬性。  
 

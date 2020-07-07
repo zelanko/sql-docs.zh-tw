@@ -11,15 +11,14 @@ ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65caa65c9beb2f032c0aca52464047bfc4e6d9fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: aa1cc9d33d1835fa65a9724a06f05e80b845ebe9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773246"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005421"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>使用 ISequentialStream 從 FILESTREAM 資料行擷取資料 (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會範例如何在 ICommandText 介面中使用 ISequentialStream 介面來擷取 Filestream 資料行中的單一記錄。  
   

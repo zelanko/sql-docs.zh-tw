@@ -11,15 +11,14 @@ ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34d375b32a5a28d2e4c3fb7704b7dd74c890ba5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 08efcc441e0c06c05dcb49f2a5d18a3fc9e5d72d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85657176"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005726"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>SQL Server Native Client 的支援原則
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題討論如何搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用各種不同的資料存取元件。  
   

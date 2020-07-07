@@ -23,15 +23,14 @@ ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b287c045059629e491d456564dc30072821c830a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 53d67e4a6758ad4932c578e08afad0f58b1890d4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773262"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002354"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>使用 SQL Server Native Client 標頭檔與程式庫檔案
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 標頭檔與程式庫檔案會與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起安裝。 開發應用程式時，將開發所需的所有檔案複製並安裝到您的開發環境相當重要。 如需安裝和重新發佈 Native Client 的詳細資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請參閱[安裝 SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
   

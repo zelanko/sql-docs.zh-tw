@@ -13,15 +13,14 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a73fbe7709e30156f198205a21644153fad10240
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b96e7807fd29e417616f2aec406d6a07f37ccf6f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725182"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004348"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>舊版 SQL Server 的增強型日期/時間類型行為 (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題描述使用增強型日期和時間增強功能的用戶端應用程式與早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本進行通訊時，以及使用 Microsoft Data Access Components、Windows Data Access Components，或早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本的應用程式將命令傳送到支援增強型日期和時間功能的伺服器時的預期行為。  
   
@@ -36,19 +35,19 @@ ms.locfileid: "85725182"
   
 |SQL Server 2005 類型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 類型|ODBC 用戶端類型|結果轉換 (SQL 到 C)|參數轉換 (C 到 SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|Datetime|Date|SQL_C_TYPE_DATE|[確定]|確定（1）|  
+|Datetime|日期|SQL_C_TYPE_DATE|確定|確定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|時間欄位會設定為零。|OK (2)<br /><br /> 如果時間欄位不為零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(0)|SQL_C_TYPE_TIME|[確定]|確定（1）|  
+||Time(0)|SQL_C_TYPE_TIME|確定|確定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|日期欄位設定為目前的日期。|OK (2)<br /><br /> 忽略日期。 如果小數秒不是零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(7)|SQL_C_TIME|失敗-不正確時間常值。|確定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|失敗-不正確時間常值。|確定（1）|  
-||Datetime2 （3）|SQL_C_TYPE_TIMESTAMP|[確定]|確定（1）|  
-||Datetime2 （7）|SQL_C_TYPE_TIMESTAMP|[確定]|用戶端轉換會將值捨入為 1/300 秒。|  
-|Smalldatetime|Date|SQL_C_TYPE_DATE|[確定]|[確定]|  
+||Datetime2 （3）|SQL_C_TYPE_TIMESTAMP|確定|確定（1）|  
+||Datetime2 （7）|SQL_C_TYPE_TIMESTAMP|確定|用戶端轉換會將值捨入為 1/300 秒。|  
+|Smalldatetime|日期|SQL_C_TYPE_DATE|確定|確定|  
 |||SQL_C_TYPE_TIMESTAMP|時間欄位會設定為零。|OK (2)<br /><br /> 如果時間欄位不為零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(0)|SQL_C_TYPE_TIME|[確定]|[確定]|  
+||Time(0)|SQL_C_TYPE_TIME|確定|確定|  
 |||SQL_C_TYPE_TIMESTAMP|日期欄位設定為目前的日期。|OK (2)<br /><br /> 忽略日期。 如果小數秒不是零，就會失敗。<br /><br /> 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|[確定]|[確定]|  
+||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|確定|確定|  
 |||||
 
 ## <a name="key-to-symbols"></a>符號的索引鍵  

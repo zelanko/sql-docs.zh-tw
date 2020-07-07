@@ -18,15 +18,14 @@ ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1b2305336391a29de559fa01bd2d67c1a4621b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 32dea8c43c1ad1e10f245cd806edb783a3153dd3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775956"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001447"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>建構資料指標的 SQL 陳述式
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會使用伺服器資料指標來執行 ODBC 規格中所定義的資料指標功能。 ODBC 應用程式會使用[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)來設定不同的語句屬性，以控制資料指標的行為。 下面是這些屬性及其預設值。  
   
