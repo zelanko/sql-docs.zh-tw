@@ -13,15 +13,14 @@ ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 854bd2c4241ff3ac88af62eb891dc667553197c1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e65015b0adf3f2306b30c4d50a09bba5deb5c5f2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725071"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009447"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>執行查詢使用說明主題 (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在 ODBC 應用程式中執行 SQL 陳述式需要配置陳述式控制代碼、設定陳述式屬性，以及準備和執行 SQL 陳述式。  
   

@@ -19,19 +19,18 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19914bb99a2812035e6833b389a62e6ed3139463
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 87cbd2a6de772aa0886ee47d0c4d27fc734cbc3e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774258"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010086"
 ---
 # <a name="bcp_init"></a>bcp_init
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 初始化大量複製作業。  
 
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 RETCODE bcp_init (  

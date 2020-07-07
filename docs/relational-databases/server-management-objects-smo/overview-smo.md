@@ -11,15 +11,14 @@ ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3d7dd27e451f24c6c989eaf674c81519b1e6c7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 1ecc29d8e2fabe6c67db5e45833c45dd74d47bb3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894998"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012328"
 ---
 # <a name="overview-smo"></a>概觀 (SMO)
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件（SMO）是針對以程式設計方式管理的物件 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以使用 SMO 來建立自訂的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理應用程式。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是一種用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能強大且廣泛的應用程式，但是可能有時候 SMO 應用程式還是會提供比較好的服務。  
   

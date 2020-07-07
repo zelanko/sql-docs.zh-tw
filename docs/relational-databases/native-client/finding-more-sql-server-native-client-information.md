@@ -13,15 +13,14 @@ ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c821204ffb618b4f44cad67a83a1f6485bc40a73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 15ee24d21a770476d956b7265b3a204ad1c04717
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719610"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009802"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>尋找其他 SQL Server Native Client 資訊
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 以及其他類型之資料存取程式設計的詳細資訊，請參閱下列線上資源：  
   

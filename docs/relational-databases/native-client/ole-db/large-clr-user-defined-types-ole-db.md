@@ -13,15 +13,14 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2358894c1303856fc3e1b9db06bca1f7e9427509
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d67e41f3dfaed9ef59e586368d8b80dda2936669
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787695"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010504"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 使用者定義型別 (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中 OLE DB 的變更，以支援大型 Common Language Runtime (CLR) 使用者定義型別 (UDT)。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "85787695"
   
 |資料行類型|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
-|DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|*n*|NULL|NULL|Clear|DB_ALL_EXCEPT_LIKE|n|  
+|DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|*n*|NULL|NULL|清除|DB_ALL_EXCEPT_LIKE|n|  
 |DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|DBTYPE_UDT|~0|NULL|NULL|設定|DB_ALL_EXCEPT_LIKE|0|  
   
  下列資料行也會針對 UDT 而定義：  
@@ -92,7 +91,7 @@ ms.locfileid: "85787695"
   
 |參數類型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|*n*|~0|~0|Clear|  
+|DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|*n*|~0|~0|清除|  
 |DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|DBTYPE_UDT|~0|~0|~0|設定|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>COLUMNS 資料列集 (結構描述資料列集)  
@@ -100,7 +99,7 @@ ms.locfileid: "85787695"
   
 |資料行類型|DATA_TYPE|COLUMN_FLAGS、DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
-|DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|Clear|*n*|  
+|DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|清除|*n*|  
 |DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|DBTYPE_UDT|設定|0|  
   
  下列其他資料行也會針對 UDT 而定義：  
@@ -121,13 +120,13 @@ ms.locfileid: "85787695"
 |繫結資料類型|UDT 到伺服器|非 UDT 到伺服器|從伺服器中的 UDT|從伺服器中的非 UDT|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|支援 (5)|錯誤 (1)|支援 (5)|錯誤 (4)|  
-|DBTYPE_BYTES|支援 (5)|N/A|支援 (5)|N/A|  
-|DBTYPE_WSTR|支援 (2)、(5)|N/A|支援 (3)、(5)、(6)|N/A|  
-|DBTYPE_BSTR|支援 (2)、(5)|N/A|支援 (3)、(5)|N/A|  
-|DBTYPE_STR|支援 (2)、(5)|N/A|支援 (3)、(5)|N/A|  
-|DBTYPE_IUNKNOWN|支援 (6)|N/A|支援 (6)|N/A|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支援 (5)|N/A|支援 (3)、(5)|N/A|  
-|DBTYPE_VARIANT (VT_BSTR)|支援 (2)、(5)|N/A|N/A|N/A|  
+|DBTYPE_BYTES|支援 (5)|不適用|支援 (5)|不適用|  
+|DBTYPE_WSTR|支援 (2)、(5)|不適用|支援 (3)、(5)、(6)|不適用|  
+|DBTYPE_BSTR|支援 (2)、(5)|不適用|支援 (3)、(5)|不適用|  
+|DBTYPE_STR|支援 (2)、(5)|不適用|支援 (3)、(5)|不適用|  
+|DBTYPE_IUNKNOWN|支援 (6)|不適用|支援 (6)|不適用|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支援 (5)|不適用|支援 (3)、(5)|不適用|  
+|DBTYPE_VARIANT (VT_BSTR)|支援 (2)、(5)|不適用|N/A|N/A|  
   
 ### <a name="key-to-symbols"></a>符號的索引鍵  
   

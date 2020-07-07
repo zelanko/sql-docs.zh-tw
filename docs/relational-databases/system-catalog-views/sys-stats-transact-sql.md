@@ -20,15 +20,14 @@ ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb1d43e7cfd9892b7146ecbe551ecb7b42625981
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 19a338aa9f5d20dd9a6d089cdf4b56bcf1a4b541
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783943"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012914"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中資料表、索引和索引檢視表的每個統計資料物件，各包含一個資料列。 每個索引都會有一個具有相同名稱和識別碼（**index_id**stats_id）的對應統計資料列  =  ** **，但並非每個統計資料列都有對應的索引。  
   

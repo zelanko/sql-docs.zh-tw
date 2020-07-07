@@ -13,15 +13,14 @@ ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a983bb1d91d0474e25e620fef6aaf914d50a0197
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 60b97e8b52d985aeb9ba97f95e39c5e94d3188fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725051"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009454"
 ---
 # <a name="set-cursor-options-odbc"></a>設定資料指標選項 (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   若要設定資料指標選項，請呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)來設定或[SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) ，以取得控制資料指標行為的語句選項。  
   

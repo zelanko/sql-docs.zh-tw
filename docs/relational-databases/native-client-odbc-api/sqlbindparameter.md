@@ -14,15 +14,14 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc270cb83833e3fcfc54ef4721a62ccaf3980729
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 85f7de9aee1bfdb5f906f796fcd108621e62cd47
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789432"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012137"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   當用來提供 Native Client ODBC 驅動程式的資料時， **SQLBindParameter**可以消除資料轉換的負擔 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，進而大幅提升應用程式的用戶端和伺服器元件的效能。 其他優點包括插入或更新近似的數值資料類型時，降低有效位數的損失。  
   

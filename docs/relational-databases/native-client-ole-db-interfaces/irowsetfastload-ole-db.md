@@ -14,15 +14,14 @@ ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df9a4ca772571a5ea0022cf13a8f2062768184b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 66af5f470d5b2d32fbdae29d08b92bccb6e1b101
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785369"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011163"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **IRowsetFastLoad** 介面會公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以記憶體為基礎的大量複製作業支援。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者取用者會使用介面，快速地將資料加入現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。  
   

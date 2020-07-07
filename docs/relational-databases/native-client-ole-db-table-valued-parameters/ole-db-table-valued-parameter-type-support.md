@@ -13,15 +13,14 @@ ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e317f56fe461e7e7ba2b026751b2f599ef733598
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: df6f0f8b0b550d1dc128073707eb78d6de8fdd01
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719707"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86013025"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB 資料表值參數類型支援
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題描述資料表值參數的 OLE DB 類型支援。  
   

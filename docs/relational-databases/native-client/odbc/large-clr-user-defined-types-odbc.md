@@ -14,15 +14,14 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e07912f0f2f524759d866a5099345f1816913a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ec445a457f948c2fb75d26a6ad632633230f6fec
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787802"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009757"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 使用者定義型別 (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題討論 SQL Server Native Client 中 ODBC 的變更，以支援大型 Common Language Runtime (CLR) 使用者定義型別 (UDT)。  
   

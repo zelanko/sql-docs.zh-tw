@@ -17,15 +17,14 @@ ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bccb4ea8168a31cf84072911778ac417a3b6931e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 3209109fd1a54fcf85e9fbcb0898ef0c88a65d4d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758025"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011998"
 ---
 # <a name="query-store-stored-procedures-transact-sql"></a>查詢存放區預存程式（Transact-sql）
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   本節包含下列用來設定查詢存放區的預存程式。  
   

@@ -19,15 +19,14 @@ ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee461de8a6039716a287605de5268c127b76ec3e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 776d2483b31f8bcc5fb31e793667445d9173e7cf
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787611"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012103"
 ---
 # <a name="sql-server-native-client-programming"></a>SQL Server Native Client 程式設計
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是用於 OLE DB 和 ODBC 的獨立資料存取應用程式開發介面 (API) (在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中導入)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 將 SQL OLE DB 提供者和 SQL ODBC 驅動程式結合為單一的原生動態連結程式庫 (DLL)。 此介面也提供遠超過 Windows Data Access Components (Windows DAC，之前稱為 Microsoft Data Access Components，或稱 MDAC) 的新功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 可用於建立新的應用程式，或者加強需要利用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所推出之新功能 (例如，Multiple Active Result Set (MARS)、使用者定義資料類型 (UDT)、查詢通知、快照集隔離和 XML 資料類型支援) 的現有應用程式。  
   

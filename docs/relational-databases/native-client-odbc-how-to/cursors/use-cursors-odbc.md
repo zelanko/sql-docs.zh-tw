@@ -13,15 +13,14 @@ ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2a09e0476a4c929bdc7db6b1ed99258489a0538
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 4902d295e6ccaae83cdcd251616816f60d63d38e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783324"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009500"
 ---
 # <a name="use-cursors-odbc"></a>使用資料指標 (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ### <a name="to-use-cursors"></a>使用資料指標  

@@ -14,15 +14,14 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b539e532d6de43bf646652a1d4845eaf38d8bd2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 1815a76dcfde42e45cb3b2ca1ffe4186ff52a238
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789389"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012432"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   您可以使用**SQLColAttribute** ，針對已備妥或已執行的 ODBC 語句，抓取結果集資料行的屬性。 在備妥的語句上呼叫**SQLColAttribute**會導致往返 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會在語句執行過程中接收結果集資料行資料，因此在**SQLExecute**或**SQLExecDirect**完成後呼叫**SQLColAttribute** ，並不會牽涉到伺服器往返。  
   

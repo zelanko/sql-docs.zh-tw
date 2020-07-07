@@ -16,15 +16,14 @@ ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd07a563a80da555544100b7dca374daa4d494d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 1c1ae8326a6c49643fe7414d039e2af42a45efe9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783366"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010011"
 ---
 # <a name="sql-server-driver-extensions---bulk-copy-functions"></a>SQL Server 驅動程式延伸模組 - 大量複製函式
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   開放式資料庫連接 (Open Database Connectivity，ODBC) 是應用程式用來在 ODBC 資料來源中存取資料的 Microsoft Win32 應用程式開發介面。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式參考不會列出所有 ODBC 函數呼叫。 只會討論與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式搭配使用時，具有驅動程式特有參數或行為的函數。  
   

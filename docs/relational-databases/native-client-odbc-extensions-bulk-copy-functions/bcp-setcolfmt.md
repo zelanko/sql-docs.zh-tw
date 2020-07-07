@@ -18,15 +18,14 @@ ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f48f5cf3bfc75bb8aa52d981a42aa83b8007e09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 16b5cd47a776a426ce515946794f0385eb0222e0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783387"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010034"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **Bcp_setcolfmt**函式會取代[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 在指定資料行定序時，必須使用**bcp_setcolfmt**函數。 [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)可以用來指定一個以上的資料行格式。  
   

@@ -16,15 +16,14 @@ ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c633fc9dd15871f4f7c972763a88cd6ff4d048f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 3e94692f52c6507122df0e35a55f13555315021f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897139"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008925"
 ---
 # <a name="using-table-and-index-partitioning"></a>使用資料表和索引資料分割
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   資料可以使用 [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)提供的儲存演算法來儲存。 分割作業可讓大型資料表和索引更容易管理及擴充。  
   

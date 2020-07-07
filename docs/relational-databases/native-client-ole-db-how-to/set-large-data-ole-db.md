@@ -13,15 +13,14 @@ ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 356f8aa61926eee0b6faab9ba95dc53469b67917
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 6fc1d2797a44caaac9ec7b9a55c26bf7849aa106
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724880"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008690"
 ---
 # <a name="set-large-data-ole-db"></a>設定大型資料 (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會示範如何設定 BLOB 資料、建立資料表、加入範例記錄、在資料列集中提取該記錄，然後設定 BLOB 欄位的值。 IA64 不支援此範例。  
   

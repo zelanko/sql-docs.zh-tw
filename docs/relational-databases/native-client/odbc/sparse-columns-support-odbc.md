@@ -11,15 +11,14 @@ ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5724a0d0a083477c8f148fb80851ad8358dff2f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: cb4c4311c4109209301b196be0aba76b1689dc29
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787762"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009705"
 ---
 # <a name="sparse-columns-support-odbc"></a>疏鬆資料行支援 (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題將描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 對於疏鬆資料行的支援。 如需示範 ODBC 支援的稀疏資料行範例，請參閱[在具有稀疏資料行的資料表上呼叫 SQLColumns](../../../relational-databases/native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md)。 如需稀疏資料行的詳細資訊，請參閱[SQL Server Native Client 中的稀疏資料行支援](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
   

@@ -11,15 +11,14 @@ ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7da01bc6cdb0fa862c222ef14eb527eb0e5b4672
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 5beea9eaea1f38cafadf0ad4d7ecf2f516b3c22d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725026"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009429"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>取得相互 Kerberos 驗證
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例顯示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 取得 Kerberos 相互驗證。  
   

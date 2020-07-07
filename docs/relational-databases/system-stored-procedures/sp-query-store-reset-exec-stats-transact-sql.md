@@ -21,15 +21,14 @@ ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25ca6b874c41fb1bc6a63a8a81cc80d7fc613114
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 8d818d6ebf8c00d788f422c19b0bf32edaff0c24
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773827"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012626"
 ---
 # <a name="sp_query_store_reset_exec_stats-transact-sql"></a>sp_query_store_reset_exec_stats （Transact-sql）
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   從查詢存放區清除特定查詢計劃的執行時間統計資料。  
   

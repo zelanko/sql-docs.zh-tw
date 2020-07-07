@@ -14,15 +14,14 @@ ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8628fc41c474ca0c1dc4833af7bcd7c2c1cba408
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 6f609a066d06a82edfb8961222d94d0d92cf0915
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789156"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010105"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會針對**SQLGetDiagField**指定下列額外的診斷欄位。 這些欄位支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的豐富錯誤報告功能，並且可用於在連接的 ODBC 連接控制代碼和 ODBC 陳述式控制代碼上產生的所有診斷記錄。 欄位會定義在 sqlncli.h 中。  
   

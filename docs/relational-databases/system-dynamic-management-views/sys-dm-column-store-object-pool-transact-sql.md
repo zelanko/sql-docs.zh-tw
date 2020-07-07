@@ -13,15 +13,14 @@ ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09ffecddd08b6a94a22eb928c964d13b4208dc6b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 720eebdbc1898d0b3ce34fb9a2205c41d4898dd2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717487"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012905"
 ---
 # <a name="sysdm_column_store_object_pool-transact-sql"></a>sys.databases dm_column_store_object_pool （Transact-sql）
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
  針對資料行存放區索引物件，傳回不同類型的物件記憶體集區使用計數。  
   

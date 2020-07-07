@@ -24,15 +24,14 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d393936953ead282578f69e8ad1945914a252e66
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 3bc45e8c1de97b5da2d393ceb3ef3794baf56595
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719563"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009775"
 ---
 # <a name="creating-a-driver-application"></a>建立驅動程式應用程式
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC 架構包含四個執行下列函數的元件。  
   

@@ -20,15 +20,14 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e051d7351e5279bef3980d8fc8bfd77d20984eff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 87b2f2e94e137f6a710c19b6f461e4c0cfe12d30
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775252"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011973"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   針對資料庫中每個權限或資料行例外狀況權限，各傳回一個資料列。 針對資料行，與對應物件層級權限不同的每個權限，各有一個資料列。 如果資料行許可權與對應的物件使用權限相同，就不會有任何資料列，而且所套用的許可權會是物件。  
   

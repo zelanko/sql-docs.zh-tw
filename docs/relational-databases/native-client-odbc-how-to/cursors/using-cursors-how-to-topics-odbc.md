@@ -13,15 +13,14 @@ ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0a87ab71ef062ad78c4b466bd2e75a6a36d4fdf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d7d065eabd4256826235e9400c76d203ab8c0e5f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783305"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009485"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>使用資料指標使用說明主題 (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   若要使用資料指標，您必須先設定控制 ODBC 資料指標行為的連接和陳述式屬性。 資料指標可以讓應用程式在每次提取時擷取多個資料列，並在資料指標的目前位置執行 UPDATE、INSERT 或 DELETE 陳述式。  
   

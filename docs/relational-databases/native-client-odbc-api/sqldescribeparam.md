@@ -14,15 +14,14 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7612fc4da7cb12b4e38f20404cbf9481d610877c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ba04422ef9763202701dfa147ff5da4bfc214018
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789334"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011873"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   為了描述任何 SQL 語句的參數， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 會在備妥的 ODBC 語句控制碼上呼叫 SQLDescribeParam 時，建立並執行 SELECT 語句。 結果集的中繼資料則會決定已備妥之陳述式中的參數特性。 SQLDescribeParam 可能會傳回 SQLExecute 或 SQLExecDirect 可能傳回的任何錯誤碼。  
   

@@ -10,15 +10,14 @@ ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5ddc38c789041c55e34c83015d047d6c6c7eec9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ed08d716dda8007fbd6ae7d7d39d7e20e60950b9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719668"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009062"
 ---
 # <a name="date-and-time-improvements"></a>日期和時間改善
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 對 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中所加入日期和時間資料類型的支援。  
   
@@ -26,7 +25,7 @@ ms.locfileid: "85719668"
   
  如需示範這項功能之範例應用程式的詳細資訊，請參閱 [SQL Server 資料程式設計範例](https://msftdpprodsamples.codeplex.com/)。  
   
-## <a name="usage"></a>使用量  
+## <a name="usage"></a>使用方式  
  下列章節描述使用新日期和時間類型的各種方式。  
   
 ### <a name="use-date-as-a-distinct-data-type"></a>將 Date 當做不同的資料類型使用  

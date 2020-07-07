@@ -21,15 +21,14 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: aa14b65d527de3efa82f54212e6668e232197486
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
-ms.translationtype: MT
+ms.openlocfilehash: e4e107fea977e70d8b32e4b84c09bfb320cc8b47
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813898"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009954"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]    
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
 
   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器稽核建立的稽核檔案中傳回資訊。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
@@ -83,7 +82,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>傳回的資料表  
  下表描述這個函數可傳回的稽核檔案內容。  
   
-| 資料行名稱 | 類型 | 描述 |  
+| 資料行名稱 | 類型 | 說明 |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | 動作的識別碼。 不可為 Null。 |  
 | additional_information | **nvarchar(4000)** | 只套用到單一事件的唯一資訊會以 XML 形式傳回。 少量的可稽核動作有包含這類資訊。<br /><br /> 針對具有相關聯 TSQL 堆疊的動作，以 XML 格式顯示 TSQL 堆疊的單一層級。 此 XML 格式為：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 表示框架的目前巢狀層級。 模組名稱會以三部分格式表示 (database_name、schema_name 和 object_name)。  模組名稱將會被剖析，以轉義不正確 xml 字元 `'\<'` ，例如、 `'>'` 、 `'/'` 、 `'_x'` 。 它們會被轉義為 `_xHHHH\_` 。 HHHH 代表字元的四位數十六進位 UCS-2 碼。<br /><br /> 可為 Null。 當此事件未報告其他資訊時，則會傳回 NULL。 |

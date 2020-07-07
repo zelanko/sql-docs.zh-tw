@@ -10,15 +10,14 @@ ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924ded48601e114ee2a04baead304721903954d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 70b9f117e5db28d81f53ef5d0b547b23656310fd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787883"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009056"
 ---
 # <a name="metadata-discovery"></a>中繼資料探索
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   中的中繼資料探索改進 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生用戶端應用程式確保查詢執行所傳回的資料行或參數中繼資料，與您在執行查詢之前指定的元資料格式完全相同或相容。 如果查詢執行之後傳回的中繼資料與您在查詢執行之前指定的中繼資料格式不相容，您就會收到錯誤。  
   

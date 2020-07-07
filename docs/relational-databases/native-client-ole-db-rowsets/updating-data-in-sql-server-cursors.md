@@ -18,15 +18,14 @@ ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 947e8da980dbdb4199245d18e44ec9df36dbf13a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 5627da0643b35bac430e59d9cbc0685ac6f44e38
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773225"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86013085"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>更新 SQL Server 資料指標中的資料
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   透過資料指標提取和更新資料時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端 OLE DB 提供者消費者應用程式會受到適用于任何其他用戶端應用程式的相同考慮和條件約束所系結。  
   

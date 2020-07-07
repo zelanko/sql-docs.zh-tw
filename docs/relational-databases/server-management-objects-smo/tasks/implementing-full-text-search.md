@@ -13,15 +13,14 @@ ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03a04246f32dc867befa258ad07e0198213501e2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 5660303c542bc77691d0d0f370d8614450a983dc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885119"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008977"
 ---
 # <a name="implementing-full-text-search"></a>實作全文檢索搜尋
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   全文檢索搜尋可用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的每個執行個體，在 SMO 中是由 <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> 物件表示。 <xref:Microsoft.SqlServer.Management.Smo.FullTextService>物件位於**伺服器**物件之下。 可用於管理 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 全文檢索搜尋服務的組態選項。 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> 物件屬於 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件，且為 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 物件的集合 (這些物件表示針對資料庫所定義的全文檢索目錄)。 與一般索引不同的是，您只能為每個資料表定義一個全文檢索索引， 這是由 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 物件中的 <xref:Microsoft.SqlServer.Management.Smo.Table> 物件表示。  
   

@@ -14,15 +14,14 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c18c4106c5fab5f6f1c75276db8c211f9873c8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e10fa48bccc1c6c8c6ae3a25e10e805f514c0d2a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751833"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012370"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援混合式 (索引鍵集/動態) 資料指標模型。 如果設定的值不等於 0，使用 SQL_ATTR_KEYSET_SIZE 設定索引鍵值大小的嘗試將會失敗。  
   

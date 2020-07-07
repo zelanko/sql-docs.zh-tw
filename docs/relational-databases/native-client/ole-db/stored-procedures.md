@@ -16,15 +16,14 @@ ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ba52fb27ecd67e5d42d77fbdb4cc6c5b8ece025
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: dc05fc0c029c15af1e566459e5ac868ac21c0ba8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787632"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012005"
 ---
 # <a name="stored-procedures"></a>預存程序
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   預存程序 ([預存程序 &#40;資料庫引擎&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) 是儲存於資料庫中的可執行物件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援：  
   
