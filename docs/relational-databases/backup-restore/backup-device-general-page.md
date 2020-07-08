@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9dea8e2d54b83d34923b4f0c336838f60ab36cf2
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: e9a82b29583ef26ed1a748e1f6e58f415b8cab0e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220513"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695662"
 ---
 # <a name="backup-device-general-page"></a>備份裝置 (一般頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 **[一般]** 頁面，可指定或檢視邏輯備份裝置的一般屬性。  
   
  **若要使用 SQL Server Management Studio 檢視備份裝置的內容**  
