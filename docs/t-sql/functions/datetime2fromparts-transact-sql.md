@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DATETIME2FROMPARTS function
 ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 400de28e3191b953c1f44dfdf0777678f031e140
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d0ac01a61b82ff48c52709be22a97253435a2c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119129"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631906"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -61,7 +61,7 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 指定小數秒值的整數運算式。
   
 *有效位數*  
-整數運算式，指定 `DATETIME2FROMPARTS` 會傳回之 **datetime2** 值的精確度。
+整數運算式，指定 **會傳回之**datetime2`DATETIME2FROMPARTS` 值的精確度。
   
 ## <a name="return-types"></a>傳回類型
 **datetime2(** *precision* **)**

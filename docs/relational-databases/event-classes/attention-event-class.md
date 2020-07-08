@@ -12,15 +12,17 @@ ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa33ba9ef7b956e94a66137f6a3c342034542b9a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d7d4d938bb2f214b540c4795b4318693a1cfdb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903714"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635873"
 ---
 # <a name="attention-event-class"></a>Attention 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+
   **Attention** 事件類別指出發生了注意事項事件，例如取消、用戶端中斷要求或用戶端連線中斷。 取消作業也可視為實作資料存取驅動程式逾時的一部份。  
   
 ## <a name="attention-event-class-data-columns"></a>Attention 事件類別資料行  

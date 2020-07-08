@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: 497791ba9eb066621a468ec954a0d3bc27d2cfcb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f70d69e58d513abcba8f27bbda53ab09d5e00ab
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216618"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807661"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>使用 PowerShell Core 管理 Linux 上的 SQL Server
 
@@ -204,7 +204,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 
 ```powershell
 Get-Command -Module SqlServer -CommandType Cmdlet |
-SORT -Property Noun |
+Sort-Object -Property Noun |
 SELECT Name
 ```
 

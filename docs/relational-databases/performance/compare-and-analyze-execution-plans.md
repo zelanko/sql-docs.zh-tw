@@ -18,15 +18,15 @@ ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4b300d1fbc144f25b3f725f34e49d961953c434c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0689bf7815074048c810a47b5784b7bfa8831b8a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72289336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655759"
 ---
 # <a name="compare-and-analyze-execution-plans"></a>比較和分析執行計劃
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 本節會說明如何使用 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來比較和分析執行計劃。 從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4 開始提供此功能。  
   
 執行計畫會以圖形化的方式，顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具所選擇的資料擷取方法。 執行計畫會使用圖示來呈現 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中特定陳述式與查詢的執行成本，而不是使用 [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md) 或 [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md) 陳述式所產生的表格呈現方式。 這種圖形式的方法，對於了解查詢的效能特性非常有幫助。 

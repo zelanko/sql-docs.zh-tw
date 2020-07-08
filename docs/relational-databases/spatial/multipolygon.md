@@ -13,15 +13,15 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8522e65762e8c27ec65fb5fc4a56db0653b5f5c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b3f7ad93673d874c6627d495c23a89218fb7d08c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907012"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640376"
 ---
 # <a name="multipolygon"></a>MultiPolygon
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **MultiPolygon** 執行個體是零或多個 **Polygon** 執行個體的集合。  
   
 ## <a name="polygon-instances"></a>多邊形執行個體  

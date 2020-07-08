@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dee3b6791d9cceef22c6ee105632ad023daead02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aac655288c15e0edc906f90a82f34f8dd7151ec1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76124995"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654407"
 ---
 # <a name="device-not-ready-error"></a>裝置未就緒錯誤
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   這個規則會檢查系統事件記錄檔中是否有 EventId 15。 這個錯誤是因為 SCSI 主機配接器組態問題或是相關問題所造成。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建議  

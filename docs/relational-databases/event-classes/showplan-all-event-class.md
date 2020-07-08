@@ -12,15 +12,15 @@ ms.assetid: ee341319-c34a-43e3-ad33-6bfb1f85e314
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7576217c87fa43a1d10bf87f916d34dff7ff2716
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1951f39021c98c81f2007e6df4418e73c92e4319
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641978"
 ---
 # <a name="showplan-all-event-class"></a>Showplan All 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan All 事件類別。 包含的資訊是 Showplan XML Statistics Profile 或 Showplan XML 事件類別中可用資訊的子集。  
   
  Showplan All 事件類別會顯示完整的編譯時間資料，因此包含 Showplan All 的追蹤可能會產生明顯的效能負擔。 若要減少此問題，此事件類別請限用於追蹤對特定問題的短期監視。  

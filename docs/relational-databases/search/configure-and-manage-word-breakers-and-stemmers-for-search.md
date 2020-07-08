@@ -21,15 +21,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ae5dbc9652ed690edc6964db38cc8e0d5536625
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629525"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>設定及管理搜尋的文字分隔與詞幹分析器 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 斷詞工具及字幹分析器，會在所有全文檢索索引資料上執行語文分析。 語言分析會執行下列兩項作業：
 
 -   **尋找文字分界 (斷詞)** 。 「斷詞工具」  會根據語言的語彙規則，判斷文字分界存在的位置，藉以識別個別單字。 每個單字 (也稱為 *Token*) 都會使用壓縮表示來插入全文檢索索引中，以便減少其大小。

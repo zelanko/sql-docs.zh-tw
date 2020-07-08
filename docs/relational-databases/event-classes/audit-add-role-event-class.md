@@ -12,15 +12,15 @@ ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e90b642014b823750810ef6956cb1e849427b002
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6cccc2d27ad65278a0c229992c138e8321a626d1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903630"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630522"
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   將資料庫角色加入資料庫或從資料庫移除資料庫角色時，就會發生 **Audit Add Role** 事件類別。 此事件類別會由 **sp_addrole** 和 **sp_droprole** 預存程序所使用。  
   
  此事件類別可能會從未來版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中移除。 建議您改用 **Audit Database Principal Management** 事件類別。  

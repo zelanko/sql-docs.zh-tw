@@ -24,15 +24,15 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f6a012fc4aca38401a7476b759a9a13995dad87b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68107139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629778"
 ---
 # <a name="disable-indexes-and-constraints"></a>停用索引和條件約束
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用索引或條件約束。 停用索引會防止使用者存取索引，而停用叢集索引則會防止存取基礎資料表資料。 索引定義會保留在中繼資料內，而索引統計資料會保留在非叢集索引上。 停用檢視上的非叢集或叢集索引，實際上會刪除索引資料。 停用資料表上的叢集索引，則會防止存取資料；這些資料仍留在資料表中，但無法用於資料操作語言 (DML) 作業，除非卸除或重建索引。  
   

@@ -18,15 +18,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58e73100fce87fb6eda3827a41ae6c747eec4104
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68132281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629452"
 ---
 # <a name="limit-search-results-with-rank"></a>限制 RANK 的搜索結果
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 函數會傳回名為 RANK 的資料行，其中包含 0 到 1000 (順位值) 的序數值。 這些值的用途，在根據傳回資料列符合選取準則的程度予以分級。 等級值僅表示結果集中資料列相關性的相對順序，其值越低表示相關性越低。 實際的值並不重要，而且每次執行查詢後該值通常會不一樣。  
   
 > [!NOTE]  

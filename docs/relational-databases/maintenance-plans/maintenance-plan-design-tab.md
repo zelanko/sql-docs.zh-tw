@@ -14,15 +14,15 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1bffeed97e9c56420750ce022c4fa5ec0a56f574
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115736"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666977"
 ---
 # <a name="maintenance-plan-design-tab"></a>維護計畫 (設計索引標籤)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 [維護計畫 (設計索引標籤)]  可指定維護計畫及其子計畫的屬性。 將工作從工具箱拖曳至計畫設計師。 在工作群組按一下滑鼠右鍵，即可建立分支執行路徑。 維護計畫會儲存為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，然後由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行。  
   
 ## <a name="options"></a>選項。  

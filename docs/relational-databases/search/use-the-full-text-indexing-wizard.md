@@ -23,15 +23,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e82b1b58fb4ed880f288ae98148f6c16da1907fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2531d7f8034440b48a032ee1e9e74ae7fdb9df73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85628812"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文檢索索引精靈
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   SSMS 中的 [全文檢索索引精靈] 會提供一系列的逐步說明，以協助您建立全文檢索索引。  
   
 ## <a name="create-a--full-text-index"></a>建立全文檢索索引 

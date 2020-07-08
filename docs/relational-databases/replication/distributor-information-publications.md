@@ -17,15 +17,15 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653545"
 ---
 # <a name="distributor-information-publications"></a>散發者資訊，發行集
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[發行集]** 索引標籤可以提供在左窗格中所選取「散發者」之所有發行集的摘要資訊。  
   
 顯示的資訊會與受到「散發者」支援的發行集相關，當中包括了包含「發行者」之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料行。 否則，當您在複寫監視器的「發行者」檢視中檢視發行集時，所提供的發行集資訊會與此處的發行集資訊相同。 如需有關 **[發行集]** 索引標籤中之資料行的詳細資訊，請參閱＜ [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md)＞。  

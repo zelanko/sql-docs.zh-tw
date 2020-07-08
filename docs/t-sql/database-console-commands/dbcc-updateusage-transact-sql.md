@@ -33,15 +33,15 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fa1bd6767a81142e115e02d242a54b9715bf78f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643857"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 報告和更正目錄檢視中不準確的頁面和資料列計數。 這些不準確可能會使 sp_spaceused 系統預存程序傳回不正確的空間使用方式報表。
   
@@ -49,7 +49,7 @@ ms.locfileid: "68040459"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 DBCC UPDATEUSAGE   
 (   { database_name | database_id | 0 }   
     [ , { table_name | table_id | view_name | view_id }   
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. 更新 Employee 資料表的頁面及 (或) 資料列計數  
-下列範例會報告 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中 `Employee` 資料表的已更新頁面或資料列計數資訊。
+下列範例會報告 `Employee` 資料庫中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表的已更新頁面或資料列計數資訊。
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  

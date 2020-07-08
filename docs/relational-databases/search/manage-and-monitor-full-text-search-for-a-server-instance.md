@@ -14,15 +14,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e638dfe871d2ba4582228c097291d7f118fa47d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056177"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629453"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理及監視伺服器執行個體的全文檢索搜尋
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   伺服器執行個體的全文檢索管理包括：  
   
 -   系統管理工作，例如管理 FDHOST 啟動器服務 (MSSQLFDLauncher)、重新啟動篩選背景程式主機處理序 (如果您變更了服務帳戶認證的話)、設定整個伺服器的全文檢索屬性，以及備份全文檢索目錄。 舉例來說，您可以在伺服器層級中指定預設的全文檢索語言，以與整個伺服器執行個體的預設語言進行區隔。  

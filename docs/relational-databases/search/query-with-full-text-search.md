@@ -17,15 +17,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59e3c8713aac6648d7419e405d424b8b4080030a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68053568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629246"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 使用述詞 **CONTAINS** 和 **FREETEXT** 以及具有 **SELECT** 陳述式的資料列集值函式 **CONTAINSTABLE** 和 **FREETEXTTABLE**，以撰寫全文檢索查詢。 本文提供每個述詞和函式的範例，並協助您選擇最適合的來使用。
 
 -   若要比對單字和片語，請使用 **CONTAINS** 和 **CONTAINSTABLE**。
@@ -33,7 +33,7 @@ ms.locfileid: "68053568"
 
 ## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> 每個述詞和函式的範例
 
-下列範例使用 AdventureWorks 範例資料庫。 如需 AdventureWorks 的最終版本，請參閱 [SQL Server 2016 CTP3 的 AdventureWorks 資料庫與指令碼](https://www.microsoft.com/download/details.aspx?id=49502)。 若要執行範例查詢，您也必須設定全文檢索搜尋。 如需詳細資訊，請參閱[開始使用全文檢索搜尋](get-started-with-full-text-search.md)。 
+下列範例使用 AdventureWorks 範例資料庫。 如需 AdventureWorks 的最終版本，請參閱 [SQL Server 2016 CTP3 的 AdventureWorks 資料庫與指令碼](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。 若要執行範例查詢，您也必須設定全文檢索搜尋。 如需詳細資訊，請參閱[開始使用全文檢索搜尋](get-started-with-full-text-search.md)。 
 
 ### <a name="example---contains"></a>範例 - CONTAINS  
 下列範例會尋找所有價格是 `$80.99`，且含有 `"Mountain"` 這個單字的產品：
@@ -175,7 +175,7 @@ GO
 ## <a name="specific-types-of-searches"></a><a name="examples_specific"></a> 特定的搜尋類型
 
 ###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a> 搜尋特定單字或片語 (簡單詞彙)  
- 您可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 來搜尋資料表中的特定單字或片語。 例如，如果您要搜尋 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的 **ProductReview** 資料表，以尋找某產品具有 "learning curve" 片語的所有註解，可依照下列方式使用 CONTAINS 述詞：  
+ 您可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 來搜尋資料表中的特定單字或片語。 例如，如果您要搜尋 **資料庫中的**ProductReview[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表，以尋找某產品具有 "learning curve" 片語的所有註解，可依照下列方式使用 CONTAINS 述詞：  
   
 ```sql
 USE AdventureWorks2012  

@@ -20,15 +20,15 @@ ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a91dbe991241e9cf837fe325a76fd0e1ae3242d7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3c998b1efeb6fff7726161ffb02e240e8a8847f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640712"
 ---
 # <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider-sql-server"></a>使用 OPENROWSET 大量資料列集提供者大量匯入大型物件資料 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET Bulk 資料列集提供者可讓您將資料檔案當做大型物件資料大量匯入。  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e49ef1ad379f675ca457f8cd9c82a5e4ecc3fd04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 71f51e9076b4f5c4be8a0875df323deeaaf80068
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68107128"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629674"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   當您建立、重建或卸除索引時，磁碟空間是一個重要的考量。 不足的磁碟空間會降低效能，甚至導致索引作業失敗。 此主題提供了一般資訊，可協助您判斷索引資料定義語言 (DDL) 作業所需的磁碟空間數量。  
   

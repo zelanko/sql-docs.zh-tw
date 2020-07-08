@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc2c9a8ebd5d60dbd9c3ed302b76a3c248941439
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e25cbe03721070bddf4c079118a74ab9bceeeff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081635"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666222"
 ---
 # <a name="sql-server-express-localdb-reference"></a>SQL Server Express LocalDB 參考
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
   本節包含有關 SQL Server Express LocalDB 的資訊：  
   
 -   [SQL Server Express LocalDB 錯誤訊息參考](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)  

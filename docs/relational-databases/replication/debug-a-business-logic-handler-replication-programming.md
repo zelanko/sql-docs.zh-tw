@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b001e9e53c30ba57b2a56b0bd57571668ae2770c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 66e0df2599b8ada5f1c7dc3018e8021e2ee03df7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321775"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654047"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>偵錯商務邏輯處理常式 (複寫程式設計)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用商務邏輯處理常式，以便在同步處理合併訂閱期間叫用自訂商務邏輯。 如需詳細資訊，請參閱[在合併同步處理期間執行商務邏輯](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)。  
   
  合併式複寫重新調整器 (replrec.dll) 會呼叫包含此商務邏輯的 Managed 程式碼組件。 在大部分情況下，會在合併代理程式執行所在的電腦上執行 replrec.dll 和自訂商務邏輯 (如果是提取訂閱，會在訂閱者上；如果是發送訂閱，則會在散發者上)。 如果是 Web 同步處理的情況或 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者的情況，會在 Web 伺服器上執行此調整器和自訂商務邏輯。  

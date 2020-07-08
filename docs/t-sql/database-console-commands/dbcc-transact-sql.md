@@ -36,15 +36,15 @@ helpviewer_keywords:
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7f0d3d07f6f4a0ef3a35991c4805c478ed702bdf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37dfa0e39a2c0f42def2fcb4d0b9256a69a9f835
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85638329"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式設計語言提供可用來作為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫主控台命令的 DBCC 陳述式。
   

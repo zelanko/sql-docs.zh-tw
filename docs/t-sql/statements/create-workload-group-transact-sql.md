@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2020
+ms.date: 05/27/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -18,14 +18,13 @@ helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 6744a4590c0f1d893f79bbe93db189b96cb7b4c0
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: faabfedef33af907eb552c78f8a28ae56d32ad49
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606420"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353145"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -37,7 +36,7 @@ ms.locfileid: "83606420"
 
 |||||
 |---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 ||||
 
 &nbsp;
@@ -51,7 +50,7 @@ ms.locfileid: "83606420"
 
 ||||
 |---|---|---|
-|[SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />受控執行個體 \*_** &nbsp;|[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+|[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />受控執行個體 \*_** &nbsp;|[Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 ||||
 
 &nbsp;
@@ -78,9 +77,9 @@ ms.locfileid: "83606420"
 ```syntaxsql
 CREATE WORKLOAD GROUP group_name
  WITH
- (  [ MIN_PERCENTAGE_RESOURCE = value ]
-  [ [ , ] CAP_PERCENTAGE_RESOURCE = value ]
-  [ [ , ] REQUEST_MIN_RESOURCE_GRANT_PERCENT = value ]
+ (   MIN_PERCENTAGE_RESOURCE = value 
+   , CAP_PERCENTAGE_RESOURCE = value 
+   , REQUEST_MIN_RESOURCE_GRANT_PERCENT = value
   [ [ , ] REQUEST_MAX_RESOURCE_GRANT_PERCENT = value ]
   [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } ]
   [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )

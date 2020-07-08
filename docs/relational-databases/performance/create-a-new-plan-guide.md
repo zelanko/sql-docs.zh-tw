@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5f37f0189df126054626fdd4820368911b1fa5cc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8301bfe9073a31020fe4481edfff24d89b68994
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67946961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655639"
 ---
 # <a name="create-a-new-plan-guide"></a>建立新的計畫指南
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 計畫指南是將查詢提示或固定的查詢計畫附加至查詢，以影響查詢的最佳化。 在計劃指南中，指定您要最佳化的陳述式或包含您想要使用之查詢提示的 OPTION 子句， 或者是您想要用來將查詢進行最佳化的特定查詢計劃。 在執行查詢的時候，查詢最佳化工具會比對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與計畫指南，在執行階段將 OPTION 子句附加至查詢，或是使用特定的查詢計畫。  
 
 計劃指南會將固定查詢計劃及/或查詢提示套用至查詢。

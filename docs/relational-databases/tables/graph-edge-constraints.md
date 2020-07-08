@@ -16,16 +16,16 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: ea69255ecd92b8df7fbaa9199e948ae171bfaebb
-ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
+ms.openlocfilehash: ef0b7952cd589592f6ad6798e4d6f7720b368619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80625556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633424"
 ---
 # <a name="edge-constraints"></a>邊緣條件約束
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
 邊緣條件約束可以用來強制執行資料完整性以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 圖形資料庫邊緣資料表中的特定語意。
 

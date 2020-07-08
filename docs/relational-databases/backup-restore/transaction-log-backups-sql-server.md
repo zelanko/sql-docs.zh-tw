@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b4cbba5a13a41d9f24901d348566c4c09234060f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec8d0f5d72a6f195f489d67d6df32c2f33da7f12
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180420"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642880"
 ---
 # <a name="transaction-log-backups-sql-server"></a>交易記錄備份 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題只與使用完整或大量記錄復原模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。 本主題討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的交易記錄備份。  
   
  您至少要在建立任何記錄備份之前，必須建立一個完整備份。 之後，除非交易記錄已正在備份中，否則任何時候皆可以備份交易記錄。 

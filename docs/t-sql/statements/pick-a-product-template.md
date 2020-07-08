@@ -13,14 +13,13 @@ dev_langs:
 helpviewer_keywords: ''
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: cec8bc4c8f9d08ec03016f0373a22bbffa4411dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a341ebc8ba5b80b61cbc5c9337b4ea6ad41f34c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75870998"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011267"
 ---
 # <a name="title-transact-sql"></a>Title (Transact-SQL)
 

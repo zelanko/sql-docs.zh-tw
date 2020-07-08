@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2962d457ce079bd0ec2164f9fdd2a982b983f14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77179279"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85638137"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此資料類型會公開在資料庫中自動產生的唯一二進位數字。 **rowversion** 通常用來作為版本戳記資料表資料列的機制。 儲存體大小是 8 位元組。 **rowversion** 資料類型只是會遞增的數字，因此不會保留日期或時間。 若要記錄日期或時間，請使用 **datetime2** 資料類型。
   

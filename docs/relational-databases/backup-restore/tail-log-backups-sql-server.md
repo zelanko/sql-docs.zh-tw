@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: b719e284c56a1b2a83c4be2dd6db14fa431cc242
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fa48e2e96c5066ee2a2bd5d2757a3ae8f669225b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829778"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631368"
 ---
 # <a name="tail-log-backups-sql-server"></a>結尾記錄備份 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題僅與使用完整或大量記錄復原模式備份和還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。  
   
  「結尾記錄備份」  (tail-log backup) 可擷取任何尚未備份的記錄檔記錄 (「記錄結尾」  (tail of the log))，來防止工作遺失，並保持記錄鏈結完整。 將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫復原到最新時間點之前，必須備份其交易記錄的結尾。 結尾記錄備份會是資料庫之復原計畫中感興趣的最後一個備份。  

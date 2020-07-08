@@ -12,15 +12,15 @@ ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f37620479cd2960f6908430a12c6388dee4d8e64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8d3a11521b55663318db72663a58980ca07775b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116126"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641945"
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Missing Column Statistics 事件類別指出無法取得原本對最佳化工具非常有用的資料行統計資料。  
   
  透過監視 Missing Column Statistics 事件類別，您可以判斷查詢所使用的資料行是否遺漏統計資料。 這可能會造成最佳化工具選擇比所預期更沒有效率的查詢計畫。  

@@ -12,15 +12,15 @@ ms.assetid: 3e3de528-c3f8-413f-a6b9-d324ca95ad8e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19d1edcea01fa16111e3fcb284753dbffa96e80f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97f3909a80f6acf43c5b5540c8c828ced50a1056
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903491"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630541"
 ---
 # <a name="audit-database-management-event-class"></a>Audit Database Management 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   在建立、變更或卸除資料庫時，即會產生 **Audit Database Management** 事件類別。  
   
 ## <a name="audit-database-management-event-class-data-columns"></a>Audit Database Management 事件類別資料行  

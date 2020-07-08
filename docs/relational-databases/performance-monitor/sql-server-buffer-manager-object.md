@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f79d41e3fd247ca596a6257415d29f7ebcbe87b6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81f487db3622de86fdf041acab5acee93c68d1ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986938"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85656447"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server 的 Buffer Manager 物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **Buffer Manager** 物件提供了可監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用情形的計數器：  
   
 -   要儲存資料頁的記憶體。  
