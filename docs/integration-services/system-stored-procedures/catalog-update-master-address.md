@@ -10,26 +10,26 @@ ms.topic: language-reference
 author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d9373bcb994614a1726801c6cd8c85a9bc46bced
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: afcd5083c5b0132d2594c45690b10f2a69371e70
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68038570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673988"
 ---
 # <a name="catalogupdate_master_address-ssisdb-database"></a>catalog.update_master_address (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/applies-to-version/sqlserver2017.md)]
 
 更新 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out 主端點。
 
 ## <a name="syntax"></a>語法
 
 ```sql
-catalog.update_master_address [@MasterAddress = ] masterAddress
+catalog.update_master_address [ @MasterAddress = ] masterAddress
 ```
 
 ## <a name="arguments"></a>引數

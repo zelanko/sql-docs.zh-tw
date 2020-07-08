@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - MIN_ACTIVE_ROWVERSION function [Transact-SQL]
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8fcd041edda3e8575e3dfc05615d2e23f6da20fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7b0e3e12eee099191da6ea0db231c0f2f99f8c48
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68130266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681924"
 ---
 # <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回目前資料庫中，使用中的最低 **rowversion** 值。 如果 **rowversion** 值用在尚未認可的交易中，則該值為使用中。 如需詳細資訊，請參閱 [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)。  
   
@@ -52,7 +52,7 @@ MIN_ACTIVE_ROWVERSION
  MIN_ACTIVE_ROWVERSION 函數不會受到交易隔離等級中的變更影響。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用 `MIN_ACTIVE_ROWVERSION` 和 `@@DBTS` 來傳回 **rowversion**。 請注意，當資料庫中沒有任何使用中交易時，這些值就會不同。  
+ 下列範例會使用 **和** 來傳回 `MIN_ACTIVE_ROWVERSION`rowversion`@@DBTS`。 請注意，當資料庫中沒有任何使用中交易時，這些值就會不同。  
   
 ```  
 -- Create a table that has a ROWVERSION column in it.  

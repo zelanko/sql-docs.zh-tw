@@ -108,7 +108,7 @@ QUIT
 
 |||
 |---|---|
-| [Azure Data Studio](../azure-data-studio/index.md) | 跨平台 GUI 資料庫管理公用程式。 |
+| [Azure Data Studio](../azure-data-studio/index.yml) | 跨平台 GUI 資料庫管理公用程式。 |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | 跨平台 GUI 程式碼編輯器，可執行具有 mssql 延伸模組的 Transact-SQL 陳述式。 |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | 以 Cmdlet 為基礎的跨平台自動化和設定工具。 |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | 用於執行 Transact-SQL 命令的跨平台命令列介面。 |

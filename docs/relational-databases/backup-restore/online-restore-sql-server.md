@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d5d371a8d94b49a40fa105f06457519a03ed7ac5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6579e091911dc5e6a6c41bc27a567300f6fe2390
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670447"
 ---
 # <a name="online-restore-sql-server"></a>線上還原 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 才支援線上還原。 在此版本中，檔案、分頁或分次還原預設都是在線上進行。 本主題僅與包含多個檔案或檔案群組 (若是簡單復原模式，則只有唯讀檔案群組) 的資料庫有關。  
   
  在資料庫還在線上時還原資料，就稱之為 *「線上還原」* 。 即使有一或多個次要檔案群組離線，只要主要檔案群組還在線上，就將資料庫視為在線上。 當資料庫在線上時，您可以在任何復原模式下還原離線的檔案。 當資料庫在線上時，您也可以在完整復原模式下還原頁面。  

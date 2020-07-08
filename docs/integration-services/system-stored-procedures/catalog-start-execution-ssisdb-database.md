@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 341d48d35404cd8d18c3f1474693305b7fadb3cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e492091be9fc2f363b5f105893e888301b1e0e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296717"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674253"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   啟動在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的執行執行個體。  
   
 ## <a name="syntax"></a>語法  
   
 ```sql  
-catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry_count]  
+catalog.start_execution [ @execution_id = ] execution_id [, [ @retry_count = ] retry_count]  
 ```  
   
 ## <a name="arguments"></a>引數  

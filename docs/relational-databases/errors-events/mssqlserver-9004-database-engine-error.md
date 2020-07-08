@@ -11,21 +11,20 @@ helpviewer_keywords:
 ms.assetid: b528bb49-340c-4a81-9c8d-cefce6562f16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9593cfdc08161d3352c59332970aee668a89f4f0
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 1010c56f0279e45096d896582cc17f368a8cd7ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81727952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85636704"
 ---
 # <a name="mssqlserver_9004"></a>MSSQLSERVER_9004
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|9004|  
 |事件來源|MSSQLSERVER|  
@@ -51,7 +50,7 @@ ms.locfileid: "81727952"
   
 -   **從備份還原**：從已知的良好備份還原來從此問題中復原。 如果資料庫或記錄備份的記錄部分包含損毀內容，您可能會在 RESTORE 時遇到錯誤 9004。 在此情況下，備份中的交易記錄已損毀。
   
--   **重建記錄**：如果您無法從備份還原，則可能可以透過重建交易記錄來使資料庫上線。 您應該仔細了解重建交易記錄的後果。 這包括「可能會遺失您資料庫中的交易一致性」  。 如需如何重建交易記錄的詳細資訊，請參閱[以資料庫緊急模式解決錯誤](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md#resolving-errors-in-database-emergency-mode)。
+-   **重建記錄**：如果您無法從備份還原，則可能可以透過重建交易記錄來使資料庫上線。 您應該仔細了解重建交易記錄的後果。 這包括「可能會遺失您資料庫中的交易一致性」。 如需如何重建交易記錄的詳細資訊，請參閱[以資料庫緊急模式解決錯誤](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md#resolving-errors-in-database-emergency-mode)。
   
 -   **檢查記錄中的系統問題**：此外，請檢查系統事件記錄檔和錯誤記錄檔，以找出可能造成問題的系統內部問題。  
   

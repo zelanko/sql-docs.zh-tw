@@ -19,17 +19,17 @@ helpviewer_keywords:
 - '@@MAX_PRECISION function'
 - data types [SQL Server], precision
 ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 158ee073a0aed0d069f538732679aabcb1a19da0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c0119b35390958d29bf01442727d7e5513a34b3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681956"
 ---
 # <a name="x40x40max_precision-transact-sql"></a>&#x40;&#x40;MAX_PRECISION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回伺服器中目前設定的 **decimal** 與 **numeric** 資料類型所使用的有效位數層級。  
   

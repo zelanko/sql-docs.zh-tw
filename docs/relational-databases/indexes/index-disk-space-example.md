@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 099f8e4bfb71dbf3d9dda385d6981985197756e2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d85fecce4c5b97154312922ed96f988754f88e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816698"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668284"
 ---
 # <a name="index-disk-space-example"></a>索引磁碟空間範例
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   無論何時建立、重建或卸除索引，舊結構 (來源) 和新結構 (目標) 兩者在它們適當的檔案和檔案群組中都需要磁碟空間。 舊結構要到索引建立交易認可時才會取消配置。 此時也可能會需要額外暫存磁碟空間，以供排序作業。 如需詳細資訊，請參閱 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)。  
   
  在此範例中，會決定建立叢集索引的磁碟空間需求。  

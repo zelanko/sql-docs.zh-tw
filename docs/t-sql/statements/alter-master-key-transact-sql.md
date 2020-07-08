@@ -1,6 +1,6 @@
 ---
 title: ALTER MASTER KEY (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+ms.custom: fasttrack-edit
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
@@ -27,12 +27,12 @@ ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 595ee690e4b0fdeadd3fd4d9651a1d3b46c16597
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d5a7600f9657a11a25732aa9527bd6a775234eda
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81627708"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868417"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 
@@ -88,7 +88,9 @@ ALTER MASTER KEY <alter_option>
     <regenerate_option> | <encryption_option>
 
 <regenerate_option> ::=
-    [ FORCE ] REGENERATE WITH ENCRYPTION BY PASSWORD ='password'<encryption_option> ::=
+    [ FORCE ] REGENERATE WITH ENCRYPTION BY PASSWORD ='password'
+
+<encryption_option> ::=
     ADD ENCRYPTION BY SERVICE MASTER KEY
     |
     DROP ENCRYPTION BY SERVICE MASTER KEY

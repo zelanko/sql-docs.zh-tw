@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 57c9d78236141de8943a9f11c4e52074251023f2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 390e604c2b2583a6d1bc262ad116649d46b955ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636345"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682039"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   使用 TRIPLE DES 演算法搭配 128 金鑰位元長度，以複雜密碼加密資料。  
   
@@ -95,7 +95,7 @@ SET @PassphraseEnteredByUser
 -- In this case, the record is number 3681.  
 UPDATE Sales.CreditCard  
 SET CardNumber_EncryptedbyPassphrase = EncryptByPassPhrase(@PassphraseEnteredByUser  
-    , CardNumber, 1, CONVERT( varbinary, CreditCardID))  
+    , CardNumber, 1, CONVERT(varbinary, CreditCardID))  
 WHERE CreditCardID = '3681';  
 GO  
 ```  

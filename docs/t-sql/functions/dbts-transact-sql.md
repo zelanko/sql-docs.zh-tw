@@ -16,17 +16,17 @@ helpviewer_keywords:
 - '@@DBTS function'
 - timestamp data type
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 61743139f35ed3e8a5dd4bbac9bd1f4660cb2ec2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5493589b7a87af2ea856a63e81c3b366eb410d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136034"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682940"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此函式會傳回目前資料庫的目前 **timestamp** 資料類型值。 目前的資料庫將會有保證唯一的時間戳記值。
   
@@ -47,7 +47,7 @@ ms.locfileid: "68136034"
 變更交易隔離等級不會影響 @@DBTS 函式。
   
 ## <a name="examples"></a>範例  
-此範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫目前的 **timestamp**。
+此範例會傳回 **資料庫目前的**timestamp[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。
   
 ```sql
 USE AdventureWorks2012;  

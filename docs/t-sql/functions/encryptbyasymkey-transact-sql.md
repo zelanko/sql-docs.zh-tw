@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1de142260dc0724656ca4cfdf286370d16def4b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: de84d9fd01f49661dc099d166829d19e39559904
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71314596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682057"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此函式使用非對稱金鑰為資料加密。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71314596"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   
@@ -88,7 +88,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，憑證和非對稱金鑰都可作為 RSA 金鑰上的包裝函式。  
   
 ## <a name="examples"></a>範例  
-此範例會使用非對稱金鑰 `JanainaAsymKey02` 將儲存在 `@cleartext` 中的文字加密。 陳述式會將加密資料插入 `ProtectedData04` 資料表中。  
+此範例會使用非對稱金鑰 `@cleartext` 將儲存在 `JanainaAsymKey02` 中的文字加密。 陳述式會將加密資料插入 `ProtectedData04` 資料表中。  
   
 ```  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   
