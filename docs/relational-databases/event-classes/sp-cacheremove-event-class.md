@@ -12,15 +12,15 @@ ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92d7ba023176aabd08179638fbccfd37540d345f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb77b88d58807a1a1b2bafca59dee0a802b5c434
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68085347"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717709"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   SP:CacheRemove 事件類別指出已從計畫快取中移除預存程序。  
   
 ## <a name="spcacheremove-event-class-data-columns"></a>SP:CacheRemove 事件類別資料行  

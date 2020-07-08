@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80e34fe713d44993d3d0349485e9e05783980fa4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: efb3b0d7a6422575df0d13bd15dccdf75834707d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121996"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706273"
 ---
 # <a name="lt-not-less-than-transact-sql"></a>!&lt;(不小於) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   比較兩個運算式 (比較運算子)。 當您在比較非 Null 運算式時，如果左運算元的值不小於右運算元，則結果為 TRUE，否則結果就是 FALSE。 如果其中任一個運算元或兩者都是 NULL，請參閱 [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md) 主題。  
   

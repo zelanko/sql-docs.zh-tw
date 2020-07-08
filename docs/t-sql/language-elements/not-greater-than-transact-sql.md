@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ddc661b856767c140091e662118f3d5198318266
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b49133cc16466224b842232f860cb29118f197e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072449"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706290"
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt;(不大於) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   比較兩個運算式 (比較運算子)。 當您在比較非 Null 運算式時，如果左運算元的值不大於右運算元，則結果為 TRUE。 否則，結果為 FALSE。 與 = (等於) 比較運算子不同的是，兩個 NULL 值的 !> 比較結果，不受 ANSI_NULLS 設定的影響。  
   

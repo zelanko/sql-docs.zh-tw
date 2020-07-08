@@ -12,15 +12,15 @@ ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35af49d1c01908dbbea2778125636c1424819ebf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a1b786ed5682c2007f2e2633ca545c90d2604d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717720"
 ---
 # <a name="spcacheinsert-event-class"></a>SP:CacheInsert 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   SP:CacheInsert 事件類別指出已將預存程序插入至程序快取。  
   
 ## <a name="spcacheinsert-event-class-data-columns"></a>SP:CacheInsert 事件類別資料行  

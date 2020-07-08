@@ -13,16 +13,16 @@ ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bb09b6d532e6b7db7310e0d375609665d9c45db5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44ccd31700ab6bb3bf3500e93febc0209d9fa9ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716789"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>使用快照集初始化訂閱
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 本文描述初始化複寫發行集時所發生的處理。 初始快照集會套用至訂閱者。
 

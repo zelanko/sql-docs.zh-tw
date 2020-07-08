@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8fd770d8f1af098d4328df12a11cdcff609f2328
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f226dd4b96774de236a3938662be2bf506db8cad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71974396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706437"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標中，擷取特定資料列。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "71974396"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 FETCH   
           [ [ NEXT | PRIOR | FIRST | LAST   
                     | ABSOLUTE { n | @nvar }   
@@ -91,7 +91,7 @@ FETCH
   
 -   如果未指定 `DYNAMIC`、`FORWARD_ONLY` 或 `FAST_FORWARD`，且指定了 `KEYSET`、`STATIC` 或 `SCROLL` 其中之一，則所有 `FETCH` 都受支援。  
   
--   `DYNAMIC SCROLL` 資料指標支援除了 `ABSOLUTE` 外的所有 `FETCH` 選項。  
+-   `DYNAMIC SCROLL` 資料指標支援除了 `FETCH` 外的所有 `ABSOLUTE` 選項。  
   
  `@@FETCH_STATUS` 函數會報告最後一個 `FETCH` 陳述式的狀態。 相同的資訊記錄在 sp_describe_cursor 傳回之資料指標的 fetch_status 資料行中。 試圖在 `FETCH` 陳述式傳回的資料上執行任何作業之前，您應該先利用這個狀態資訊來判斷該資料是否有效。 如需詳細資訊，請參閱 [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)。  
   

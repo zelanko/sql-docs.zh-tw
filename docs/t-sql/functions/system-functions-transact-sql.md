@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9cd7618d-6bd5-4f26-9351-87219b44775f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f0ea71a48ffe6652edb9d2bf0265a906c1d15202
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 98ae9820b44cf3598d957ac01699e6722f781345
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714712"
 ---
 # <a name="system-functions-transact-sql"></a>系統函數 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   下列系統函數會執行作業，並傳回有關於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之值、物件及設定的資訊。  
   

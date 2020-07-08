@@ -16,15 +16,15 @@ ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d7dd25b2b1cd2aa0cc8560072702bc8188191d09
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5a1244ed340dcfd4794c14635d570530b88f5d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716725"
 ---
 # <a name="replication-over-the-internet"></a>透過網際網路的複寫
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   透過網際網路複寫資料，可讓遠端、離線使用者在需要時使用網際網路連線存取資料。 使用下列方式，透過網際網路複寫資料：  
   
 -   虛擬私人網路 (VPN)。 如需詳細資訊，請參閱[使用 VPN 透過網際網路發行資料](../../relational-databases/replication/publish-data-over-the-internet-using-vpn.md)。  

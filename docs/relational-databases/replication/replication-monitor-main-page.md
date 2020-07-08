@@ -13,15 +13,15 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e10255a62d5d0988ce838d968f7e40215d5dcffe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff52e42beb47e69e3dab9af73573b42029f29710
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287355"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716747"
 ---
 # <a name="replication-monitor-main-page"></a>複寫監視器，主要頁面
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   複寫監視器可讓您跨複寫拓撲，追蹤發行集和訂閱的狀態與效能。 下列主題提供詳細資訊：  
   
 -   如需複寫監視器概觀，請參閱[監視複寫](../../relational-databases/replication/monitor/monitoring-replication.md)。  

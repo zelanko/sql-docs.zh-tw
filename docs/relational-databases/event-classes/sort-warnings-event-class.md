@@ -12,15 +12,15 @@ ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98bf70f1bc26b4b3dd3182024aa62ed41dd3bbab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d139be67f2dceef498267376cf5cb74d8eabb164
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717755"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Sort Warnings 事件類別指出不適合在記憶體中的排序作業。 不包括關於索引建立的排序作業，只包括在查詢中 (例如在 SELECT 陳述式中所用的 ORDER BY 子句) 的排序作業。  
   
  如果關於排序作業的查詢產生 Sort Warnings 事件類別，而 EventSubClass 資料行值為 2，就會影響到查詢的效能，因為資料上的多個行程都要求將資料排序。 請進一步調查查詢以判定是否能刪除排序作業。  

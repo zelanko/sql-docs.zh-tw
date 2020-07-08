@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 345cb7d09b7b1356751eb8b8b69ecf737805f2c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fe2fe0e18d480ec6ff094b2436e6368a47744f49
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121654"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706108"
 ---
 # <a name="string-operators-transact-sql"></a>字串運算子 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供下列字串運算子。 字串串連運算子可將兩個以上的下列資料類型合併成一個運算式： 
 * 字元或二進位字串

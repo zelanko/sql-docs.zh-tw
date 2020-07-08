@@ -12,15 +12,15 @@ ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54214db537dc894ce3d31875b8b24635bae60912
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9cb676d77ba77bc3ea5b7d8d04de31e8204ba0c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089546"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716928"
 ---
 # <a name="eventlog-event-class"></a>EventLog 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   EventLog 事件類別指出已將事件記錄在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔中。  
   
 ## <a name="eventlog-event-class-data-columns"></a>EventLog 事件類別資料行  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 88386ec0aa476901708ccaed10b235bdab04fe1e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f267e998b0bd9693c821000cd51a044326e9161
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180799"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718008"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>將資料庫還原還原為標示的交易 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   當資料庫處於還原中狀態時，您可以利用 [還原交易記錄]  對話方塊，將資料庫還原成可用記錄備份中標示的交易。  
   
 > [!NOTE]  
@@ -49,7 +49,7 @@ ms.locfileid: "82180799"
   
     |頁首|值|  
     |------------|-----------|  
-    |\<空白>|顯示選取標示的核取方塊。|  
+    |\<blank>|顯示選取標示的核取方塊。|  
     |**交易標示**|在認可交易時，由使用者所指定之標示交易的名稱。|  
     |**日期**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中記錄的顯示，而非依照用戶端電腦的日期和時間。|  
     |**說明**|在認可交易時，由使用者所指定之標示交易的描述 (如果有的話)。|  

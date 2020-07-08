@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bf40ce38bf96ae4d31c9102290e74d5db2230240
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 326cce7eaa06eca6e981e72ea60d4f4144442942
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85708326"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   比較純量值與單一資料行集的值。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67927389"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )  
 ```  
@@ -65,7 +65,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  本文所使用的子查詢都是指 ALL。 ALL 也可以搭配 [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) 和 [SELECT](../../t-sql/queries/select-transact-sql.md) 使用。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立預存程序，以判斷 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中所指定 `SalesOrderID` 的所有組件，是否都可以在指定的天數內製造出來。 這個範例會使用子查詢，針對特定 `SalesOrderID` 的所有元件建立一份 `DaysToManufacture` 值數目清單，然後確認所有 `DaysToManufacture` 都在指定的天數範圍內。  
+ 下列範例會建立預存程序，以判斷 `SalesOrderID` 資料庫中所指定 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的所有組件，是否都可以在指定的天數內製造出來。 這個範例會使用子查詢，針對特定 `DaysToManufacture` 的所有元件建立一份 `SalesOrderID` 值數目清單，然後確認所有 `DaysToManufacture` 都在指定的天數範圍內。  
   
 ```  
 -- Uses AdventureWorks  

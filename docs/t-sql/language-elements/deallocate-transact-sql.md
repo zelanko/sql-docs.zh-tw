@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92153155be5761e804c6d62cece4d392b40a1412
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 049a3db0f57b4c2c0e8a3fba809241b352991a61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67894894"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706515"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   移除資料指標參考。 取消配置最後一個資料指標參考時，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會釋出組成資料指標的資料結構。  
   
@@ -37,13 +37,13 @@ ms.locfileid: "67894894"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }  
 ```  
   
 ## <a name="arguments"></a>引數  
  *cursor_name*  
- 這是已宣告的資料指標名稱。 如果全域和本機資料指標同時存在且名稱是 *cursor_name*，若指定了 `GLOBAL`，*cursor_name* 就是全域資料指標，如果未指定 `GLOBAL`，則為區域資料指標。  
+ 這是已宣告的資料指標名稱。 如果全域和本機資料指標同時存在且名稱是 *cursor_name*，若指定了 *，* cursor_name`GLOBAL` 就是全域資料指標，如果未指定 `GLOBAL`，則為區域資料指標。  
   
  @*cursor_variable_name*  
  這是**資料指標**變數的名稱。 @*cursor_variable_name* 的類型必須是 **cursor**。  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 01199ad96dfc5ef34188e95afc3cd3707eaf57fb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b46633e17ee508a9e38ef1cc57cb76004ecdcba1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706619"
 ---
 # <a name="commit-work-transact-sql"></a>COMMIT WORK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   標示交易結束。  
   

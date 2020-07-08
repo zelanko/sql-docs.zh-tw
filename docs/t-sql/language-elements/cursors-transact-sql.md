@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e24efe4204d9117af0d3743f91fe028b305a36d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25ed0a2ce97310389f53238e81f16ab8b1482b3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68138306"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706540"
 ---
 # <a name="cursors-transact-sql"></a>資料指標 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式雖然會產生完整的結果集，但有時最好是以一次一個資料列的方式來處理結果。 您可以在結果集上開啟一個資料指標，一次處理一個資料列結果集。 您可以將資料指標指派給 **cursor** 資料類型的變數或參數。  
   

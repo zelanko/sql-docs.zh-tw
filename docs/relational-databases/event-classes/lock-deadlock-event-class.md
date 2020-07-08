@@ -12,15 +12,15 @@ ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ba1146dfe62067ba6371eec6a2b621eb2897852
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2614d7805573b74485f3872dfa6d16a2ab961f74
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717788"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock 事件類別
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   當試圖取得鎖定，而這項嘗試是死結的一部份且已選定為死結的犧牲者，使得這項嘗試遭到取消，則會產生 Lock:Deadlock 事件類別。  
   
  使用 Lock:Deadlock 事件類別來監視何時發生死結以及涉及哪些物件。 您可以使用此資訊來判斷死結是否對應用程式效能造成重大影響。 然後，您可以檢查應用程式的程式碼來判斷能否做一些變更，使死結數量減到最少。  

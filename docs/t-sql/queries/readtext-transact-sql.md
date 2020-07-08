@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 75b459554382b3bc7f73d6b3554a5ba10bf5294a
-ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
+ms.openlocfilehash: 516c2c3efefd0c9a1384823b8eb1f6c04abd29c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82598734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705973"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 從 **text**、**ntext** 或 **image** 資料行中讀取 **text**、**ntext** 或 **image** 值。 從所指定位移開始讀取指定數目的位元組。  
   

@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46a6f7c08b540b6180326350a6e0aadb933a7ef5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 499b62d172ebcf2fef29c9f32a038921d2e2d30c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706182"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   在交易內設定儲存點。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68121805"
 
  ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }  
 [ ; ]  
@@ -49,7 +49,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>引數  
  *savepoint_name*  
- 這是指派給儲存點的名稱。 儲存點名稱必須符合識別碼的規則，但不能超出 32 個字元。 即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體不區分大小寫，*savepoint_name* 還是一律都會區分大小寫。  
+ 這是指派給儲存點的名稱。 儲存點名稱必須符合識別碼的規則，但不能超出 32 個字元。 即使  *執行個體不區分大小寫，* savepoint_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還是一律都會區分大小寫。  
   
  @*savepoint_variable*  
  這是包含有效儲存點名稱之使用者自訂變數的名稱。 這個變數必須用 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型來宣告。 您可以將超出 32 個字元傳給變數，但只會使用前 32 個字元。  

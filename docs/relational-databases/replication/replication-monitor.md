@@ -15,15 +15,15 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8993d0512f4809302b2d4ac8193971decc2e0566
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ecf9c330ef81a37a70237061f039db29b17576d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716731"
 ---
 # <a name="replication-monitor"></a>複寫監視器
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   文件集的這個章節包含複寫監視器的資訊。 監視器中所顯示頁面和對話方塊會視複寫類型和監視的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本而有所不同。  
   
 -   [複寫監視器，主要頁面](../../relational-databases/replication/replication-monitor-main-page.md)  

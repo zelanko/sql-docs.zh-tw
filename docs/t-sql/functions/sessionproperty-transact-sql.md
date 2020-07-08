@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1083504e4b3075a3e3ec8429c1ab0b5a664f2998
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68022188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714943"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回工作階段的 SET 選項設定。  
   
@@ -53,7 +53,7 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|控制是否將串連結果當作 Null 或空字串值來處理。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |NUMERIC_ROUNDABORT|指定在運算式中捨入造成失去有效位數時，所產生的錯誤訊息和警告。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |QUOTED_IDENTIFIER|指定是否遵照如何利用引號來分隔識別碼和常值字串的 ISO 規則。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|\<任何其他字串>|NULL = 輸入無效。|  
+|\<Any other string>|NULL = 輸入無效。|  
   
 ## <a name="return-types"></a>傳回型別  
  **sql_variant**  
