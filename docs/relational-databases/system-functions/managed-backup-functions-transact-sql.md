@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 1d513d9c-05af-446d-8eba-42f55efcc221
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1b9b16e426143e1eca7dc39d7d050988faa0222a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 2130d6c9f42590b730d17a5c64de3cf9ee013d9a
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140616"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053724"
 ---
 # <a name="managed-backup-functions-transact-sql"></a>Managed Backup 函數（Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的下列函式[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的下列函式 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
   
 ## <a name="in-this-section"></a>本節內容  
  [managed_backup.fn_backup_db_config &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql.md)  
@@ -43,6 +42,6 @@ ms.locfileid: "68140616"
  [managed_backup。 fn_backup_instance_config &#40;Transact-sql&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-instance-config-transact-sql.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 受管理的備份至 Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [SQL Server 受控備份到 Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

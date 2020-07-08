@@ -20,15 +20,14 @@ ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: 497e27859a299fbee1a9ab91ac3d0f7625d04afe
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046316"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091481"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   傳回所有可簽署物件的清單，並指出物件是否由指定的憑證或非對稱金鑰所簽署。 如果此物件是由指定的憑證或非對稱金鑰所簽署，它也會傳回此物件的簽章是否有效。  
   
@@ -45,7 +44,7 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>引數  
- {'\@*class*'}  
+ { '\@*類別*'}  
  識別所提供之指模的類型：  
   
 -   'certificate'  

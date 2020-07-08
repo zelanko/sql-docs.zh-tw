@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab377b42943c943f710d83661642423cfc070949
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 4edd3cfc40225b4b040c73fb0d3ba929d16debc5
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814507"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053584"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys.databases sp_rda_test_connection （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   測試從 SQL Server 到遠端 Azure 伺服器的連線，並報告可能導致資料移轉無法進行的問題。  
   
@@ -43,7 +42,7 @@ EXECUTE sys.sp_rda_test_connection
   
 ## <a name="arguments"></a>引數  
  @database_name= N '*db_name*'  
- 已啟用延展功能的 SQL Server 資料庫名稱。 此為選擇性參數。  
+ 已啟用延展功能的 SQL Server 資料庫名稱。 這是選擇性參數。  
   
  @server_address= N '*azure_server_fully_qualified_address*'  
  Azure 伺服器的完整位址。  
@@ -71,7 +70,7 @@ EXECUTE sys.sp_rda_test_connection
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |link_state|int|下列其中一個值，對應至**link_state_desc**的值。<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
-|link_state_desc| varchar(32)|下列其中一個值，對應至**link_state**前面的值。<br /><br /> -狀況良好<br />     SQL Server 和遠端 Azure 伺服器之間的狀況良好。<br />-ERROR_AZURE_FIREWALL<br />     Azure 防火牆會阻止 SQL Server 和遠端 Azure 伺服器之間的連結。<br />-ERROR_NO_CONNECTION<br />     SQL Server 無法建立與遠端 Azure 伺服器的連接。<br />-ERROR_AUTH_FAILURE<br />     驗證失敗，導致 SQL Server 和遠端 Azure 伺服器之間的連結無法使用。<br />-錯誤<br />     不是驗證問題、連線問題或防火牆問題的錯誤，導致 SQL Server 和遠端 Azure 伺服器之間的連結無法使用。|  
+|link_state_desc|varchar(32)|下列其中一個值，對應至**link_state**前面的值。<br /><br /> -狀況良好<br />     SQL Server 和遠端 Azure 伺服器之間的狀況良好。<br />-ERROR_AZURE_FIREWALL<br />     Azure 防火牆會阻止 SQL Server 和遠端 Azure 伺服器之間的連結。<br />-ERROR_NO_CONNECTION<br />     SQL Server 無法建立與遠端 Azure 伺服器的連接。<br />-ERROR_AUTH_FAILURE<br />     驗證失敗，導致 SQL Server 和遠端 Azure 伺服器之間的連結無法使用。<br />-錯誤<br />     不是驗證問題、連線問題或防火牆問題的錯誤，導致 SQL Server 和遠端 Azure 伺服器之間的連結無法使用。|  
 |error_number|int|錯誤的號碼。 如果沒有錯誤，此欄位會是 Null。|  
 |error_message|nvarchar(1024)|錯誤訊息。 如果沒有錯誤，此欄位會是 Null。|  
   
@@ -92,7 +91,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*\<連接相關的錯誤號碼>*|*\<連接相關的錯誤訊息>*|  
+|2|ERROR_NO_CONNECTION|*\<connection-related error number>*|*\<connection-related error message>*|  
   
 ### <a name="check-the-azure-firewall"></a>檢查 Azure 防火牆  
   
@@ -108,7 +107,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*\<防火牆相關的錯誤號碼>*|*\<防火牆相關的錯誤訊息>*|  
+|1|ERROR_AZURE_FIREWALL|*\<firewall-related error number>*|*\<firewall-related error message>*|  
   
 ### <a name="check-authentication-credentials"></a>檢查驗證認證  
   
@@ -124,7 +123,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|3|ERROR_AUTH_FAILURE|*\<與驗證相關的錯誤號碼>*|*\<與驗證相關的錯誤訊息>*|  
+|3|ERROR_AUTH_FAILURE|*\<authentication-related error number>*|*\<authentication-related error message>*|  
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>檢查遠端 Azure 伺服器的狀態  
   

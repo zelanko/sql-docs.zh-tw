@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8410cde58d5f6bcf6b2a48fcc7169210a41afe0a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: a528609b8ab33f913a45e9bd61a1409bc3927930
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814632"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053031"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys.databases sp_rda_reconcile_columns （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   將遠端 Azure 資料表中的資料行調節為已啟用延展功能的 SQL Server 資料表中的資料行。  
     

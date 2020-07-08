@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 40fb2b497f799bc03551ff113c3b779510d1dee1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: c8ce7b946005eca97d57ef709557ec9b4334339c
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827387"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053124"
 ---
 # <a name="syssp_rda_reconcile_batch-transact-sql"></a>sys.databases sp_rda_reconcile_batch （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   將儲存在已啟用延展功能之 SQL Server 資料表中的批次識別碼，與儲存在遠端 Azure 資料表中的批次識別碼協調。  
   

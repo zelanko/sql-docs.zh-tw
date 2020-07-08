@@ -11,12 +11,11 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
-ms.translationtype: MT
+ms.openlocfilehash: 16303c34d44a056f1f505a2d1876b2ee23df994c
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85063321"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091889"
 ---
 # <a name="full-text-search"></a>全文檢索搜尋
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的全文檢索搜尋可讓使用者和應用程式針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中以字元為主的資料，執行全文檢索查詢。 資料庫管理員必須先在資料表上建立全文檢索索引，才能在此資料表上執行全文檢索查詢。 全文檢索索引包括資料表中一或多個以字元為基礎的資料行。 這些資料行可以具有下列任何資料類型：`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml` 或 `varbinary(max)` 和 FILESTREAM。 每個全文檢索索引都會為資料表中的一個或多個資料行建立索引，而且每個資料行都可以使用特定的語言。
@@ -149,7 +148,7 @@ ms.locfileid: "85063321"
  [本主題內容](#top)
 
 ##  <a name="linguistic-components-and-language-support-in-full-text-search"></a><a name="components"></a>全文檢索搜尋中的語言元件和語言支援
- 全文檢索搜尋幾乎支援 50 種不同的語言，例如英文、西班牙文、中文、日文、阿拉伯文、孟加拉文和印度文。 如需支援之全文檢索語言的完整清單，請參閱 [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。 全文檢索索引所包含的每個資料行都與 Microsoft Windows 地區設定識別碼 (LCID) 相關聯，而這個識別碼就等於全文檢索搜尋所支援的語言。 例如，LCID 1033 等於美式英文，而 LCID 2057 等於英式英文。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 針對每個支援的全文檢索語言提供了一些語言元件，可支援索引和查詢使用該語言所儲存的全文檢索資料。
+ 全文檢索搜尋支援幾乎50種不同的語言，例如英文、西班牙文、中文、日文、阿拉伯文、孟加拉國文和印度文。 如需支援之全文檢索語言的完整清單，請參閱 [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。 全文檢索索引所包含的每個資料行都與 Microsoft Windows 地區設定識別碼 (LCID) 相關聯，而這個識別碼就等於全文檢索搜尋所支援的語言。 例如，LCID 1033 等於美式英文，而 LCID 2057 等於英式英文。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 針對每個支援的全文檢索語言提供了一些語言元件，可支援索引和查詢使用該語言所儲存的全文檢索資料。
 
  語言特有的元件包含下列：
 
@@ -234,5 +233,3 @@ ms.locfileid: "85063321"
 -   [全文檢索搜尋 DDL、函數、預存程序與檢視](../views/views.md)
 
  [本主題內容](#top)
-
-

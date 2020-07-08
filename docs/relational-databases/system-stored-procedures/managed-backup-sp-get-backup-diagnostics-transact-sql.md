@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d107b78c9b982285c19b678bebbc027facebe1e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 572cc4eb126114697d4fc4ecfeb9589458c46baa
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830392"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053492"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   傳回 Smart Admin 記錄的擴充事件。  
   
@@ -59,7 +58,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ||||  
 |-|-|-|  
-|資料行名稱|資料類型|說明|  
+|資料行名稱|資料類型|描述|  
 |event_type|NVARCHAR （512）|擴充事件類型。|  
 |事件|NVARCHAR （512）|事件記錄的摘要。|  
 |時間戳記|timestamp|顯示事件引發時間的事件時間戳記。|  

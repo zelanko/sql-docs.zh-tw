@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 1e383b01ce40dbb03f5134bf5374b9b39bc2a99e
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937067"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053484"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  針對本機實例上每個已啟用 Stretch 的資料表，各包含一個資料列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 批次是由其開始時間和結束時間所識別。  
+  針對本機實例上每個已啟用 Stretch 的資料表，各包含一個資料列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 批次是由其開始時間和結束時間所識別。  
   
  **dm_db_rda_migration_status**的範圍是目前的資料庫內容。 請確定您位於您想要查看其遷移狀態之 Stretch-enable 資料表的資料庫內容中。  
   
- 在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中， **sys. dm_db_rda_migration_status**的輸出限制為200個數據列。  
+ 在中 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ， **sys. dm_db_rda_migration_status**的輸出限制為200個數據列。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c6fcaa491f7d42e255ed329a8e16798437aa2c7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 5bcc9db1f2ff0b4395a68025e54b719dc25c31cd
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936797"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053454"
 ---
 # <a name="sysdm_exec_valid_use_hints-transact-sql"></a>sys.databases dm_exec_valid_use_hints （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 傳回[使用提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)支援的提示名稱。 它會針對每個資料列列出一個提示名稱。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "67936797"
 
 如需每個提示的說明，請參閱[查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)。
 
-在 SP1 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]中引進。
+在 SP1 中引進 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 。
   
 ## <a name="see-also"></a>另請參閱  
     

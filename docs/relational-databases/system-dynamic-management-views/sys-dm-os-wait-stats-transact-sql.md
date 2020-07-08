@@ -20,11 +20,11 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee313bdcda6b005a3f3a80725908244d3a496b67
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011605"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091540"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -87,7 +87,7 @@ GO
   
  下表列出工作會遇到的等候類型。  
 
-|類型 |描述| 
+|類型 |Description| 
 |-------------------------- |--------------------------| 
 |ABR |僅供參考之用。 不支援。 我們無法保證未來的相容性。| | 
 |AM_INDBUILD_ALLOCATION |僅供內部使用。 <br />**適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
@@ -166,8 +166,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |僅供內部使用。 <br /> **適用對象**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更新版本。| 
 |COUNTRECOVERYMGR |僅供內部使用。 <br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |CREATE_DATINISERVICE |僅供內部使用。 <br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
-|CXCONSUMER |當取用者執行緒等候生產者執行緒傳送資料列時，會發生平行查詢計劃。 這是平行查詢執行的正常部分。 <br /> **適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 開始， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET  |在同步處理查詢處理器交換反覆運算器，以及產生和取用資料列時，會發生平行查詢計劃。 如果等候時間過長，而且無法透過微調查詢 (例如加入索引) 來縮短，請考慮調整平行處理原則的成本臨界值，或降低平行處理原則的程度。<br /> **注意：** 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和開始， [!INCLUDE[ssSDS](../../includes/sssds-md.md)] CXPACKET 只是指同步處理查詢處理器交換反覆運算器，並為取用者執行緒產生資料列。 取用者執行緒會在 CXCONSUMER 等候類型中分開追蹤。| 
+|CXCONSUMER<a name="cxconsumer"></a>|當取用者執行緒（父系）等候生產者執行緒傳送資料列時，會發生平行查詢計劃。 CXCONSUMER 等候是由從其生產者執行緒中的資料列用盡的 Exchange 反覆運算器所造成。 這是平行查詢執行的正常部分。 <br /> **適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 開始， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET<a name="cxpacket"></a>|在同步處理查詢處理器交換反覆運算器，以及產生和取用資料列時，會發生平行查詢計劃。 如果等候過多，而且無法藉由微調查詢來減少（例如加入索引），請考慮調整平行處理原則的成本臨界值，或降低平行處理原則的最大程度（MaxDOP）。<br /> **注意：** 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和開始， [!INCLUDE[ssSDS](../../includes/sssds-md.md)] CXPACKET 只是指同步處理查詢處理器交換反覆運算器和產生資料列時。 如果取用者執行緒速度太慢，Exchange 反覆運算器緩衝區可能會變滿，並導致 CXPACKET 等待。 取用者執行緒會在 CXCONSUMER 等候類型中分開追蹤。| 
 |CXROWSET_SYNC |在平行範圍掃描期間發生。| 
 |DAC_INIT |當專用管理員連接正在初始化時發生。| 
 |DBCC_SCALE_OUT_EXPR_CACHE |僅供內部使用。 <br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 

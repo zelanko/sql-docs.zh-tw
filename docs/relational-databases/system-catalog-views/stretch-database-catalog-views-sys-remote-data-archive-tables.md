@@ -18,21 +18,20 @@ ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 65e42e6303b467abd38ddadb6be0c0d0fece46e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b91a01714f7c7784f5ec227362c66c9468f44df5
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018187"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053609"
 ---
 # <a name="stretch-database-catalog-views---sysremote_data_archive_tables"></a>Stretch Database 目錄 Views-sys. remote_data_archive_tables
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   針對每個遠端資料表，各包含一個資料列，其中儲存已啟用延展功能之本機資料表中的資料。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|已啟用 Stretch 之本機資料表的物件識別碼。|  
+|object_id|**int**|已啟用 Stretch 之本機資料表的物件識別碼。|  
 |**remote_database_id**|**int**|自動產生的遠端資料庫本機識別碼。|  
 |**remote_table_name**|**sysname**|遠端資料庫中對應至已啟用延展功能之本機資料表的資料表名稱。|  
 |**filter_predicate**|**nvarchar(max)**|篩選器述詞（如果有的話），用來識別要遷移之資料表中的資料列。 如果值為 Null，便代表整個資料表皆符合移轉資格。<br /><br /> 如需詳細資訊，請參閱[啟用資料表的 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)和[使用篩選器述詞選取要遷移的資料列](~/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。|  

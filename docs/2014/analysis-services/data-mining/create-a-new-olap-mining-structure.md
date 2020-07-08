@@ -13,12 +13,11 @@ helpviewer_keywords:
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 1e36f718ebef46a63b52f309ccd28eed15a8e2b4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
-ms.translationtype: MT
+ms.openlocfilehash: 195805ac2257df8a7f1951d761c83432ff7d0578
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84523784"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091592"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>建立新的 OLAP 採礦結構
   您可以使用中的資料採礦嚮導 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，建立使用多維度模型資料的採礦結構。 以 OLAP Cube 為基礎的採礦模型可以使用事實資料表、維度和量值群組中的資料行和值做為分析屬性。  
@@ -102,7 +101,7 @@ ms.locfileid: "84523784"
   
     -   **篩選運算式**：輸入要做為篩選條件的值或運算式，或者使用下拉式清單，從指定之階層層級的成員清單中選取一個值  
   
-         例如，如果您選取 [Geography] 作為維度並選取 [Region Country Name] 作為階層層級，則下拉式清單會包含可作為篩選條件的所有有效國家/地區。 您可以複選。 因此，採礦結構中的資料會限制為來自這些地域的 Cube 資料。  
+         例如，如果您選取 [Geography] 做為維度，並將 [Region Country Name] 做為階層層級，則下拉式清單會包含可做為篩選準則的所有有效國家/地區。 您可以複選。 因此，採礦結構中的資料會限制為來自這些地域的 Cube 資料。  
   
     -   **參數**：忽略此核取方塊。 此對話方塊支援多個 Cube 篩選案例，而此選項與建立採礦結構無關。  
   
@@ -130,5 +129,3 @@ ms.locfileid: "84523784"
   
 ## <a name="see-also"></a>另請參閱  
  [採礦結構工作和使用說明](mining-structure-tasks-and-how-tos.md)  
-  
-  

@@ -20,15 +20,14 @@ ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2baa122d56582cfdf0bef780434f9f5ba98711ca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 1c30a4bba2eed0e8709b7d99d745dd51607080b9
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825116"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091812"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   依照 master 資料庫的儲存情況，針對資料庫的每個檔案，各包含一個資料列。 這是單一全系統的檢視。  
   
@@ -40,9 +39,9 @@ ms.locfileid: "82825116"
 |類型|**tinyint**|檔案類型：<br /><br /> 0 = 資料列 <br /><br /> 1 = 記錄<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文檢索 (早於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的全文檢索目錄；已升級為 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本或是以此版本建立的全文檢索目錄將報告檔案類型 0)。|  
 |type_desc|**nvarchar(60)**|檔案類型的描述：<br /><br /> ROWS<br /><br /> 記錄<br /><br /> FILESTREAM<br /><br /> FULLTEXT (早於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的全文檢索目錄)。|  
 |data_space_id|**int**|這個檔案所屬的資料空間識別碼。 資料空間是一個檔案群組。<br /><br /> 0 = 記錄檔。|  
-|name|**sysname**|資料庫中之檔案的邏輯名稱。|  
+|NAME|**sysname**|資料庫中之檔案的邏輯名稱。|  
 |physical_name|**nvarchar(260)**|作業系統檔案名稱。|  
-|State|**tinyint**|檔案狀態：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
+|state|**tinyint**|檔案狀態：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|檔案狀態的描述：<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 如需詳細資訊，請參閱[檔案狀態](../../relational-databases/databases/file-states.md)。|  
 |大小|**int**|目前檔案大小 (以 8 KB 頁面為單位)。 如果是資料庫快照集，size 會反映快照集可以使用的最大檔案空間。<br /><br /> 注意： FILESTREAM 容器的此欄位會填入零。 查詢*sys.databases 的 database_files*目錄檢視，以取得實際的 FILESTREAM 容器大小。|  
 |max_size|**int**|最大檔案大小 (以 8 KB 頁面為單位)：<br /><br /> 0 = 不允許任何成長。<br /><br /> -1 = 檔案會成長到磁碟已滿。<br /><br /> 268435456 = 記錄檔可以成長到最大 2 TB 的大小。<br /><br /> 注意：使用無限制記錄檔大小進行升級的資料庫，會報告-1，表示記錄檔的大小上限。|  

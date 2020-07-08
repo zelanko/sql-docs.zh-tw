@@ -10,11 +10,11 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: e2c45c4aea17448af7ed496c1c56b8629c30e429
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7e898fa94dda37342765001ba87283b986ac9eb1
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85978840"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091762"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access 的新功能（AccessToSQL）
 
@@ -213,7 +213,7 @@ SSMA for Access 的2016年3月預覽版本將支援遷移至 SQL Server 2016。
 SSMA for Access 的2016年1月維護版本包含下列變更：
 
 * 已修正 GUID 欄位的預設無效函式（RFC 3894811）。
-* 已修正將記錄匯入至 SQL Database （Azure）（RFC 4919573）時停止回應的問題。
+* 已修正將記錄匯入 SQL Database （Azure）（RFC 4919573）時，系統停止回應的問題。
 * 已將 [查看記錄] 功能表項目新增至 SSMA （RFC 5706203）。
 * 已新增遙測。
 

@@ -20,19 +20,18 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155808"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053432"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   傳回擴充事件針對一段指定期間所報告，包含 0 個、一個或多個彙總錯誤計數資料列的資料表。  
   
- 函式可用來回報 [Smart Admin] 底下服務的健全狀況狀態。 目前[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]在智慧型系統管理傘下受到支援。 因此傳回的錯誤與[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]相關。  
+ 函式可用來回報 [Smart Admin] 底下服務的健全狀況狀態。 目前在 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 智慧型系統管理傘下受到支援。 因此傳回的錯誤與[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]相關。  
   
  
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

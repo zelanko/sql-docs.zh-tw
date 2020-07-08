@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 4147d01936fbdd3a14e479a7b560d5368a5110ec
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067786"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053704"
 ---
 # <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup. fn_backup_db_config （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   將 0、1 或更多資料列和[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態設定一起傳回。 針對指定的資料庫傳回 1 個資料列，或是傳回執行個體上以[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]設定之所有資料庫的資訊。  
   
@@ -68,7 +67,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
  需要具有**ALTER ANY CREDENTIAL**許可權之**db_backupoperator**資料庫角色中的成員資格。 使用者不應被拒絕**VIEW ANY DEFINITION**許可權。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回 ' [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] TestDB ' 的設定  
+ 下列範例會傳回 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ' TestDB ' 的設定  
   
  針對每個程式碼片段，請在語言屬性欄位中選取 'tsql'。  
   

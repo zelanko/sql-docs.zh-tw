@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 504085ff53415a7cf84bdb4aabf5eff567391a0c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: be9e80c522cc68cd4438e34d96564a7e49196152
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827395"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052988"
 ---
 # <a name="syssp_rda_reconcile_indexes-transact-sql"></a>sys.databases sp_rda_reconcile_indexes （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   將架構工作排入佇列，以協調遠端資料表上的索引。 在此工作順利完成之後，遠端資料表的索引會存在於本機已啟用 Stretch 的資料表上。  
   

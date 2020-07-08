@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa3b52dbc2f08e9cb504263afeb672956e4972d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: bc4a9d78289f6d3fdf3272c6581d9baab586122f
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826365"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052709"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   將 SQL Server 實例當做計算節點加入至 PolyBase 群組，以進行相應放大計算。  
   

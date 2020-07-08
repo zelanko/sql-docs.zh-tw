@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17b8ba389066d273b05d9aaa49e26b394f55a0ef
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 9f1266fb9967dc429160377bcc1b42d227be5222
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808297"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052899"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database 擴充預存程式（Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
  本節描述與 Stretch Database 相關的擴充預存程式。  
   

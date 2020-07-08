@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 04e152b8ae15e4e0a810fb5ed945b4c8c69afe5b
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77507529"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053453"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  設定的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]自動或自訂排程選項。  
+  設定的自動或自訂排程選項 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
     
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,19 +57,19 @@ EXEC managed_backup.sp_backup_config_schedule
  受管理備份作業的頻率類型，可以設定為「每日」或「每週」。  
   
  @days_of_week  
- 當設定為 [每週] 時@full_backup_freq_type ，備份的星期幾。 指定完整的字串名稱，例如「星期一」。  您也可以指定超過一天的名稱，並以分隔號分隔。 例如 N'Monday |星期三 |星期五 '。  
+ 當設定為 [每週] 時，備份的星期幾 @full_backup_freq_type 。 指定完整的字串名稱，例如「星期一」。  您也可以指定超過一天的名稱，並以分隔號分隔。 例如 N'Monday |星期三 |星期五 '。  
   
  @backup_begin_time  
- [備份] 視窗的開始時間。 備份不會在時間範圍外啟動，而是由@backup_begin_time和@backup_duration的組合所定義。  
+ [備份] 視窗的開始時間。 備份不會在時間範圍外啟動，而是由和的組合所定義 @backup_begin_time @backup_duration 。  
   
  @backup_duration  
- 備份時間範圍的持續時間。 請注意， @backup_begin_time並不保證備份會在和@backup_duration所定義的時間範圍內完成。 在此時間範圍內啟動但超過視窗持續時間的備份作業將不會取消。  
+ 備份時間範圍的持續時間。 請注意，並不保證備份會在和所定義的時間範圍內完成 @backup_begin_time @backup_duration 。 在此時間範圍內啟動但超過視窗持續時間的備份作業將不會取消。  
   
  @log_backup_freq  
- 這會決定交易記錄備份的頻率。 這些備份會定期執行，而不是依照針對資料庫備份所指定的排程進行。 @log_backup_freq可以是數分鐘或數小時`0:00` ，而且有效，表示沒有記錄備份。 停用記錄備份只適用于具有簡單復原模式的資料庫。  
+ 這會決定交易記錄備份的頻率。 這些備份會定期執行，而不是依照針對資料庫備份所指定的排程進行。 @log_backup_freq可以是數分鐘或數小時，而且 `0:00` 有效，表示沒有記錄備份。 停用記錄備份只適用于具有簡單復原模式的資料庫。  
   
 > [!NOTE]  
->  如果復原模式從 [簡單] 變更為 [完整]，您必須將 log_backup_freq `0:00`從重新設定為非零值。  
+>  如果復原模式從 [簡單] 變更為 [完整]，您必須將 log_backup_freq 從重新設定為 `0:00` 非零值。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

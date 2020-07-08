@@ -20,15 +20,14 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: a61484691e4e5a2ea5ca4c08b6382b501f1cc851
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824716"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091857"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   針對與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Common Language Runtime (CLR) 整合 (包括主控 CLR 的版本和狀態) 相關的每個屬性各傳回一個資料列。 裝載的 CLR 是藉由執行[CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)、 [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)或[DROP assembly](../../t-sql/statements/drop-assembly-transact-sql.md)語句來初始化，或是藉由執行任何 CLR 常式、類型或觸發程式來初始化。 [ **Dm_clr_properties** ] 視圖不會指定是否已在伺服器上啟用使用者 clr 程式碼的執行。 使用者 CLR 程式碼的執行會藉由使用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)預存程式來啟用，並將[CLR enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)選項設定為1。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "82824716"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|屬性的名稱。|  
-|**值**|**nvarchar(128)**|屬性的值。|  
+|**value**|**nvarchar(128)**|屬性的值。|  
   
 ## <a name="properties"></a>屬性  
  **Directory**屬性會指出 .NET Framework 安裝在伺服器上的目錄。 伺服器電腦上可能有多個 .NET Framework 安裝，而這個值可以指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在使用哪一個安裝。  

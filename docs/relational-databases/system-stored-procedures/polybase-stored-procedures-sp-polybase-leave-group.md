@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e9f5e12a56fe825909dd991c4b3253d3d90608c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 82bcad58a97fa41938f127c0a814c312c4e22ec9
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827822"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052708"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   從 PolyBase 群組中移除 SQL Server 實例，以進行相應放大計算。 
  
