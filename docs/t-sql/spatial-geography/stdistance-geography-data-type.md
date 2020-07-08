@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 45f0b6f9524c4877c669bfec8c5ab7bcfec198bb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c958f789e1c8eadc027c4144bae711b1288599c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74200501"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85703746"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回a **geography** 執行個體中的點與另一個 **geography** 執行個體中的點之間的最短距離。  
   

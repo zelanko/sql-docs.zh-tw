@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 81b74eec0ea22cd6c88cc896af6537fa893ed925
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3904de5f819db856ceaa7a3bf8b8e62882f5d92c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700333"
 ---
 # <a name="extended-methods-on-geometry-instances"></a>幾何例項上擴充的方法
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援「開放地理空間協會」(OGC) 幾何執行個體上的一些擴充方法。  
   

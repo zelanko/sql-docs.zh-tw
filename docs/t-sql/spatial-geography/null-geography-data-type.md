@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bb464b06-86e0-4b8b-ad78-04bd33b6069c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 775410c9a57d9bf030f34f84640522b766f0cf23
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90e574a27ea57c21478c7457b50c57ffe1a5862c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705895"
 ---
 # <a name="null-geography-data-type"></a>Null (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 唯讀屬性，這個屬性會提供 **geography** 型別的 Null 執行個體。
   

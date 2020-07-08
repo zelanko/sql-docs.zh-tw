@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 19aec9ae5a0253e74ff8816fadcfdbb7a2a74001
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eabf47faee7f6dbd0916680b378a653a1ae9c619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704382"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回從 **geography** 執行個體指定的曲線，可能是 **LineString**、**CircularString** 或 **CompoundCurve**。  
   

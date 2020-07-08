@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 559a358e0a95af870a716001abb3935523d86248
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a4cad5886b2bbf367ef9e3f0ebe97a370e4a5bd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705246"
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回 **geography** 執行個體的開放地理空間協會 (OGC) 已知的二進位 (WKB) 表示法。  
   

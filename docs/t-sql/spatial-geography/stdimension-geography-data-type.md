@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ac39de3b0fe0d85aa65ef59661a512988acd4a36
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a681baef72aaab151c3c65f2694778882bb56d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704198"
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回 **geography** 執行個體的最大維度。  
   

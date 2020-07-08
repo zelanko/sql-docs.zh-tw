@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 817a6325b956f5fc4214597b0b8bc46f6aff49f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: acbc28abde35089acbb76af886b1e9a8c27ed9a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705262"
 ---
 # <a name="starea-geography-data-type"></a>STArea (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 傳回 **geography** 執行個體的總介面區。 STArea () 的結果，是**地理**執行個體的空間參考識別碼所使用測量平方單位。 例如，如果執行個體的 SRID 是4326，則 STArea () 會以平方公尺傳回結果。  
   

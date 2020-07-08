@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ab4a3aee5c1828df80fc89f9fc5c230f41ead295
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4e563a8e5f6d668c6f99c1c2f0ae5afb2bd3cf6e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85701501"
 ---
 # <a name="stwithin-geography-data-type"></a>STWithin (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   如果 **geography** 執行個體在空間上位於另一個 **geography** 執行個體內，則會傳回 1，否則會傳回 0。  
   

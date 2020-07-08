@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c0982bb3ffaf6c21ee8bff0b7cffc0bc472fb1d9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 61b076459edf728475f5f8a15fed8ade5f3b47ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705956"
 ---
 # <a name="table-value-constructor-transact-sql"></a>資料表值建構函式 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定要建構到資料表中的一組資料列值運算式。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料表值建構函式允許在單一 DML 陳述式中指定多個資料列。 資料表值建構函式可以指定為 INSERT ... VALUES 陳述式的 VALUES 子句，或指定為 MERGE 陳述式之 USING 子句或 FROM 子句中的衍生資料表。
   

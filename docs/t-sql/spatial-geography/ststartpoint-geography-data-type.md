@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7df18a5f-b9ee-4e36-b765-a0790c1dee3d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f673860664d6be588479111803c200f2903db0ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 10b07ef284591290012a8209b143bd40d3b0d5ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120794"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85701741"
 ---
 # <a name="ststartpoint-geography-data-type"></a>STStartPoint (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回 **geography** 執行個體的起點。  
   

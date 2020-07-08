@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eeb7d806-3cbb-405d-8199-8b82282c53df
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2e13735c1782c4b2ced2751cbc59d53859516fcb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 002f4e9cda4e58a7d91d055bc20d68c262321e66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117386"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702785"
 ---
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 從開放地理空間協會 (OGC) 已知的二進位 (WKB) 表示法傳回 **geographyMultiPoint** 執行個體。
   

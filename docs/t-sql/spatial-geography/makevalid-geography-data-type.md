@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d913a0e7bbe29ab6f6f303519c73304238afd7df
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9a57da991a4dbea9f44e70d68c372601ecb85146
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705911"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   將無效的 **geography** 執行個體轉換成具有有效開放地理空間協會 (Open Geospatial Consortium，OGC) 類型的有效 **geography** 執行個體。  
   

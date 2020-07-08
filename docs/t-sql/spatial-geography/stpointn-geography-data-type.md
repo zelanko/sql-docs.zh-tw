@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 12ae393f99510df743b5a5ec0bf777f7b982d570
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75db9df496282ba6b1ef78012164e13682d5b11e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120815"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702290"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回 **geography** 執行個體中的指定點。  
   

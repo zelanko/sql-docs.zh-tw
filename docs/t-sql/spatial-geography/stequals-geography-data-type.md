@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: caa274b1571a9c0506acbe3f6d5d5d004588fede
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6aabb6a29b4d03d8fcec086e75bfd9788554f9cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042271"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85703681"
 ---
 # <a name="stequals-geography-data-type"></a>STEquals (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   如果 **geography** 執行個體表示設定為與另一個 **geography** 執行個體相同的點，就會傳回 1。 如果不是則傳回 0。  
   

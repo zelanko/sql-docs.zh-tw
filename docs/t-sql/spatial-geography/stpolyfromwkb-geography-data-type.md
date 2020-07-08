@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 68ce1a309d3b6abf77e2fe9d3f571f9c4f738cef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2a3191e96d70cff0be0dfa2b3f0944b449c995a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120804"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85701960"
 ---
 # <a name="stpolyfromwkb-geography-data-type"></a>STPolyFromWKB (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 從開放地理空間協會 (OGC) 已知的二進位 (WKB) 表示法傳回 **geographyPolygon** 執行個體。
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9050e529cd851d5b6785e3e167c1c081a2079dd5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 207341d09f153ed819d331960cf00dbb6c410bf3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704954"
 ---
 # <a name="stastext-geography-data-type"></a>STAsText (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回 **geography** 執行個體的開放地理空間協會 (OGC) 已知的文字 (WKT) 表示法。 此文字將不會包含此執行個體所夾帶的任何 Z (高度) 或 M (測量) 值。  
   

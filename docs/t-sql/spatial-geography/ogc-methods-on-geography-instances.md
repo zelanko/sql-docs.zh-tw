@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a9a7aea8309549f67e203ee2b6fc4141462995dc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ef4fb2ed952a1c991e0fc7d8ab614d80838ad86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705869"
 ---
 # <a name="ogc-methods-on-geography-instances"></a>地理位置例項上的 OGC 方法
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 **geography** 執行個體上的開放地理空間協會 (OGC) 方法。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4832f28fbd07d85c9afaaf7874a51655b6922dc3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 849fc974147d06e6b31713666498b0df00e7a279
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79090589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705481"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回具有兩點的 **LineString** 執行個體，代表兩個 **geography** 執行個體之間的最短距離。 所傳回 **LineString** 執行個體的長度是兩個 **geography** 執行個體之間的距離。  
   
