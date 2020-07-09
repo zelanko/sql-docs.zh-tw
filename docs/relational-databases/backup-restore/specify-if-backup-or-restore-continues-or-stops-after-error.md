@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0eb3b8554a0d24442d110032834006a0d8e0f7af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 003fbc933de445b6540c797d57b02dbad834e0bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759056"
 ---
 # <a name="specify-backup-or-restore-to-continue-or-stop-after-error"></a>指定在錯誤之後繼續還是停止備份或還原
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，指定在 [!INCLUDE[tsql](../../includes/tsql-md.md)]發生錯誤後，備份或還原作業應該繼續還是停止。  
   

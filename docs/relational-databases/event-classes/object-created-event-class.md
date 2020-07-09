@@ -12,15 +12,15 @@ ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 333e6ab1e529b130a81fd8b5622016cd4f9f9d10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc33fb281f0056925397d763f4e7b888a7293f50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115918"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756002"
 ---
 # <a name="objectcreated-event-class"></a>Object:Created 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Object:Created 事件類別指出已建立物件，例如，利用 CREATE INDEX、CREATE TABLE 或 CREATE DATABASE 陳述式建立的物件。  
   
  例如，您可利用此事件類別來判斷物件是否正由通常建立暫時性預存程序的 ODBC 應用程式建立。 您可藉由監視 LoginName 和 NTUserName 資料行，判斷正在建立、刪除或存取物件的使用者名稱。  

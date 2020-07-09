@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 46ed6c4f4d01b6c4ce1851c24a678617967560a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18c9c3f647bd2121ac7edf65011e0ac6a0038789
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950056"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762415"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 如果給定的 **geometry** 執行個體的起點和終點是相同的，就會傳回 1。 如果每一個包含的 **geometry** 執行個體都是封閉式，則會針對 **geometrycollection** 型別傳回 1。 如果此執行個體不是封閉式，就會傳回 0。
   

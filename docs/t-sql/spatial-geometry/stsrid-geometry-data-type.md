@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f1119c0c906e3a3825882e3fe1043e9bdaceb0f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e2611f5bfee1a74e961fee69af3dfb58d0530fcd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762171"
 ---
 # <a name="stsrid-geometry-data-type"></a>STSrid (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **STSrid** 是一個整數，其代表此例項的空間參考識別碼 (Spatial Reference Identifier，SRID)。  
   

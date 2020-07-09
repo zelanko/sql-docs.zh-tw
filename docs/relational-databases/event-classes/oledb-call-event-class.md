@@ -12,15 +12,15 @@ ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23ce9be8428799a963addda5510e3528f94fb86b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7a69d13beae131a6635c51c305c8d87c1c35127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753346"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **OLEDB Call** 事件類別會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 針對分散式查詢和遠端預存程序呼叫 OLE DB 提供者時發生。  
   
  將 **OLEDB Call** 事件類別納入追蹤，可僅針對不要求資料或不適用於 **QueryInterface** 方法的呼叫進行監視。 在 **OLEDB Call** 事件類別納入追蹤後，產生的負擔量將取決於追蹤期間 OLE DB 呼叫對於資料庫的發生頻率。 如果時常發生呼叫，追蹤就可能會嚴重地影響效能。  

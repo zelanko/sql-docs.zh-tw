@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: de184826e93903629679c273b226cb1e143f850e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c2d8650f5a0ab1f8fe30569f9f5a096cf006605
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762515"
 ---
 # <a name="stenvelope-geometry-data-type"></a>STEnvelope (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 傳回執行個體之對齊座標軸的最小週框。
   

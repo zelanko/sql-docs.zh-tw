@@ -14,15 +14,15 @@ ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 388a9d8e11cc738b13df752868568cd4cea556d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e4371ed373d7937f177dab5979c3e50fe1096c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68074158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757656"
 ---
 # <a name="ddl-event-groups"></a>DDL 事件群組
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   下表列出可用來執行 DDL 觸發程序或事件通知的 DDL 事件群組，以及它們所涵蓋的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 請注意這些事件群組的內含本質。 例如，指定 FOR DDL_TABLE_EVENTS (10018) 的 DDL 觸發程序或事件通知會涵蓋 CREATE TABLE、ALTER TABLE 和 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 指定 FOR DDL_TABLE_VIEW_EVENTS (10017) 的 DDL 觸發程序或事件通知會涵蓋 DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS 和 DDL_STATISTICS_EVENTS 類型底下的所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 > [!NOTE]  

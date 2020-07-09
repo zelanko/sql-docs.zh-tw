@@ -10,28 +10,28 @@ ms.topic: language-reference
 ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 77fea02dc933b63fff97b359673ab702e63f50ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e6ca772f59aea6646df88af9355e00d98224a7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749698"
 ---
 # <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄建立環境。  
   
 ## <a name="syntax"></a>語法  
   
 ```sql  
-catalog.create_environment [@folder_name =] folder_name  
-     , [@environment_name =] environment_name  
-  [  , [@environment_description =] environment_description ]  
+catalog.create_environment [ @folder_name = ] folder_name  
+     , [ @environment_name = ] environment_name  
+  [  , [ @environment_description = ] environment_description ]  
 ```  
   
 ## <a name="arguments"></a>引數  

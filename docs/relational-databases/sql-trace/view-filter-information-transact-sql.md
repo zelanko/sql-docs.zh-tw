@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b7e52c13-8c83-47c2-8cd0-af7a49eceb5c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4fa854d5ece9dc659e5a5d30ea051cf717f20d96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c247ba89eed67072c6db949c9e94500664e104a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126611"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750858"
 ---
 # <a name="view-filter-information-transact-sql"></a>檢視篩選資訊 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用內建函數來檢視追蹤篩選資訊。  
   
 ### <a name="to-view-filter-information"></a>若要檢視篩選資訊  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59b1a599a38e31abeee677059d5a99842e76d807
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 275e2c1b26608cbca2835dbe43efd72058fc998f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033224"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750963"
 ---
 # <a name="optimize-sql-trace"></a>最佳化 SQL 追蹤
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   因為執行 SQL 追蹤會使用系統資源來收集資料，所以會產生效能成本，但是有許多方式可以使成本降至最少。 若要使追蹤導致的效能成本降至最少，請試試下列方法：  
   
 -   考慮使用命令提示字元來執行追蹤。 使用圖形化使用者介面會妨礙效能。 如需詳細資訊，請參閱 [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。  

@@ -1,21 +1,20 @@
 ---
 title: SQL Server Agent 延伸模組
-titleSuffix: Azure Data Studio
 description: 安裝和使用適用於 Azure Data Studio 的 SQL Server Agent 延伸模組 (預覽)
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 05356cc815fdba22d55ee339d60994f2c9423373
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3cdbfc4adc32156f838ee3aeca726c2ebd92bd0c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959182"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758368"
 ---
 # <a name="sql-server-agent-extension-preview"></a>SQL Server Agent 延伸模組 (預覽)
 
@@ -34,8 +33,8 @@ SQL Server Agent 延伸模組 (預覽) 是用於管理 SQL Agent 作業和設定
    ![安裝代理程式](media/extensions/sql-server-agent-extension/install-sql-agent.png)
 
 1. 選取您想要的延伸模組並加以**安裝**。
-2. 選取 [重新載入]  ，啟用此延伸模組 (只有當您第一次安裝延伸模組時才需要)。
-1. 以滑鼠右鍵按一下您的伺服器或資料庫，然後選取 [管理]  ，巡覽至您的管理儀表板。
+2. 選取 [重新載入]，啟用此延伸模組 (只有當您第一次安裝延伸模組時才需要)。
+1. 以滑鼠右鍵按一下您的伺服器或資料庫，然後選取 [管理]，巡覽至您的管理儀表板。
 2. 已安裝的延伸模組會顯示為管理儀表板上的索引標籤：
 
    ![檢視代理程式](media/extensions/sql-server-agent-extension/view-sql-agent.png)

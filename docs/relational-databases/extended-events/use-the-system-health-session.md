@@ -16,16 +16,16 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffa5587415d9f4bc689a37a5ba49be87eaf14716
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d58b32c64ff8114b21f815617ce2daa8b54fc242
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756805"
 ---
 # <a name="use-the-system_health-session"></a>使用 system_health 工作階段
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 system_health 工作階段是預設隨附於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的擴充事件工作階段。 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 啟動時，這個工作階段就會自動啟動，並且在不造成任何明顯效能影響的情況下執行。 此工作階段會收集系統資料，讓您能夠用來協助疑難排解 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的效能問題。 
 

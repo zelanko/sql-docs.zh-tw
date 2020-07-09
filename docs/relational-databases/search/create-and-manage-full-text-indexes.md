@@ -13,15 +13,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a76112a515f33bc169883c60de68742239c8d4e1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 6d51f0b31729d6b061c7e8cfd82b5047796c6daa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81304412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758072"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 本主題描述如何建立、填入和管理 SQL Server 中的全文檢索索引。
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>先決條件 - 建立全文檢索目錄

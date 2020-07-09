@@ -12,15 +12,15 @@ ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45b71ca895141a2dbef4dd68b13bb505a7ae7c91
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa80485dc5efa2d03d24a1e119360281928d3c6d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755993"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Object:Deleted 事件類別指出物件已刪除，例如，被 DROP INDEX 和 DROP TABLE 陳述式所刪除。 此事件類別可以用來判斷物件是否已遭刪除，例如，由通常建立暫存預存程序的 ODBC 應用程式刪除。  
   
  除了監視 Objects 事件類別，您還可以監視 LoginName 和 NTUserName 預設資料行，以判斷建立、刪除或存取物件的使用者名稱。  

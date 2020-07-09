@@ -1,8 +1,7 @@
 ---
 title: 在 JSON 中包含 Null 值 - INCLUDE_NULL_VALUES 選項
-ms.date: 06/02/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +9,18 @@ helpviewer_keywords:
 ms.assetid: 06873768-3778-4ed8-a1db-61758726bda0
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cbb9f2dc30ab02f77fafadf39d8c1c6426de708
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6a7de04cf998910402f271426d5fe8020972a1e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755756"
 ---
 # <a name="include-null-values-in-json---include_null_values-option"></a>在 JSON 中包含 Null 值 - INCLUDE_NULL_VALUES 選項
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   若要在 **FOR JSON** 子句的 JSON 輸出中包含 Null 值，請指定 **INCLUDE_NULL_VALUES** 選項。  
   

@@ -12,15 +12,15 @@ ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7742b42395ced53ecbe479a463a41c640cf0d395
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ebb5aef29f6f3cf56ecdf36fcc4b59b33f113f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756020"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   收到磁帶掛載要求時，就會發生 Mount Tape 事件類別。 使用此事件類別來監視磁帶掛載要求，以及要求的成功或失敗。  
   
 ## <a name="mount-tape-event-class-data-columns"></a>Mount Tape 事件類別資料行  

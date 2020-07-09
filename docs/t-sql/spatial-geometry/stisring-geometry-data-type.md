@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a9aa9b1b8e97f78887710309019e80ff4276c732
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 17e505ebf3bab38b17d6b4ed554928f0f08cb50f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030880"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762411"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 如果 **geometry** 執行個體滿足下列需求，便傳回 1：
 -   它是 **LineString** 執行個體。  

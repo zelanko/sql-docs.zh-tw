@@ -12,15 +12,15 @@ ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6dff2998686c73693f73ecbcad0b9b7f360ca86
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef18eed87b0a01c16ad71285ff8adf1386383172
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940716"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753319"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Performance Statistics 事件類別可用來監視正在執行之查詢、預存程序和觸發程序的效能。 其六個事件子類別分別表示了系統中查詢、預存程序和觸發程序存留期間內的一項事件。 您可以使用這些事件子類別以及關聯 sys.dm_exec_query_stats、sys.dm_exec_procedure_stats 和 sys.dm_exec_trigger_stats 動態管理檢視的組合，重新組成任何給定查詢、預存程序或觸發程序的效能記錄。  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Performance Statistics 事件類別資料行  

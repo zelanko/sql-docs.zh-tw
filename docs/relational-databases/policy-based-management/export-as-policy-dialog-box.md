@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 14333d96ce4a1022979a2998cb808bfa16cd7a0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 40fe56e0cd726ca9dd3c129bd46dabd38c4aecfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749414"
 ---
 # <a name="export-as-policy-dialog-box"></a>匯出為原則對話方塊
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此對話方塊可將一組以原則為基礎之管理 Facet 的屬性儲存為原則。 原則可以儲存在 XML 檔案中，或是直接儲存到目前的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。  
   
 ## <a name="options"></a>選項。  

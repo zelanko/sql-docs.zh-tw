@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0539fc5af006a20cf554776c014da66c1120d129
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37c0eb073ee8284f349a4efb269491734bcf524e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749627"
 ---
 # <a name="catalogdelete_environment-ssisdb-database"></a>catalog.delete_environment (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的資料夾刪除環境。  
   
 ## <a name="syntax"></a>語法  
   
 ```sql  
-delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] environment_name  
+catalog.delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] environment_name  
 ```  
   
 ## <a name="arguments"></a>引數  

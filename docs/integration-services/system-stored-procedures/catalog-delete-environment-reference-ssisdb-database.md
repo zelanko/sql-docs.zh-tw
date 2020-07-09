@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: 1f68f157-c4e9-412c-92b3-53a2faaba29b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 69a0a462f4c265e6992f27286377f7bcaa3b2dad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6354ca6d5326e4b38e18f38be3b6e5095ad8d1b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749647"
 ---
 # <a name="catalogdelete_environment_reference-ssisdb-database"></a>catalog.delete_environment_reference (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的專案刪除環境參考。  
   
 ## <a name="syntax"></a>語法  
   
 ```sql  
-delete_environment_reference [ @reference_id = ] reference_id  
+catalog.delete_environment_reference [ @reference_id = ] reference_id  
 ```  
   
 ## <a name="arguments"></a>引數  

@@ -12,15 +12,15 @@ ms.assetid: 780fde57-3970-4063-a634-04879b6ef141
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbe6a9b21d843353fa53a27de5b4e5a662535591
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3aba9b23375757c5967179c27fe56dc78050d16c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756089"
 ---
 # <a name="audit-server-object-take-ownership-event-class"></a>Audit Server Object Take Ownership 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   當伺服器範圍內的物件擁有者變更時，會發生 **Audit Server Object Take Ownership** 事件類別。  
   
 ## <a name="audit-server-object-take-ownership-event-class-data-columns"></a>Audit Server Object Take Ownership 事件類別資料行  

@@ -13,15 +13,15 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54fe24ab5a9e07e5cc39e32462e5d412bb8f163b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d357ccd46daa402d43d66df76d4955f9dc6349d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907015"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751087"
 ---
 # <a name="multilinestring"></a>MultiLineString
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **MultiLineString** 是零或多個 **geometry** 或 **geographyLineString** 執行個體的集合。  
   
 ## <a name="multilinestring-instances"></a>MultiLineString 執行個體  

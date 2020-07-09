@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8e1600c9cf6ea4dbd540137ac53b9d34b65ea125
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e1d51f7e809145fe16b669a1311dec319366444
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759570"
 ---
 # <a name="hasm-geometry-datatype"></a>HasM (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   如果空間物件至少包含一個 M 值，則傳回 1 (true)，否則傳回 0 (false)。  
   

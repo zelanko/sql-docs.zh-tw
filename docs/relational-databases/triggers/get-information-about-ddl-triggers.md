@@ -14,15 +14,15 @@ ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42c4a2e8ccf9a3ac91aef0d38b64637cb37c95d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b7453a890fb3b905c025003114c287584fdb35c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68056087"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757573"
 ---
 # <a name="get-information-about-ddl-triggers"></a>取得 DDL 觸發程序的詳細資訊
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   本章節所列的目錄檢視可用來取得 DDL 觸發程序的相關資訊。  
   
  **取得 DDL 觸發程序引發所在之事件或事件群組的相關資訊**  

@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d977fe6650ea6d2f28b1762cfb44aaa89164d772
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bbed5b2a290c5820417086e1a6de7dd6b3116ec8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749401"
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>Facet 屬性對話方塊，相依條件頁面
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此對話方塊可顯示目前參考這個以原則為基礎之管理 Facet 的條件清單。  
   
 ## <a name="options"></a>選項。  

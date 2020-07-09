@@ -10,15 +10,15 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e97ae0420ea20346b7e70bcb46cb045dc3cbfdf1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 109fd3c3127a566e550ce0f740f67fbb0a8c7e45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216887"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749582"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>商務持續性與資料庫復原 - Linux 上的 SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[HA-Story](../includes/sql-server-ha-story.md)]

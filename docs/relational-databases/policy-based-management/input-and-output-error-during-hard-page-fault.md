@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8ed9b592923c421c229706d69abf3b5de2c98bd0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 829b773fd61d41689a63629f9b91f7b5d2ef4dea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760507"
 ---
 # <a name="input-and-output-error-during-hard-page-fault"></a>硬性分頁錯誤期間的輸入和輸出錯誤
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   這個規則會檢查系統事件記錄檔中是否有 EventId 51。 此錯誤是由硬分頁錯誤期間的錯誤所造成。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建議  

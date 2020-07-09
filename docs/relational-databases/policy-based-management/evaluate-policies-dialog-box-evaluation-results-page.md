@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 36ff10e317259547c03e6ee9e939229d68569b2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1b29ebcae533a093bd9a00b8f48320b7755d3ce1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558248"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760548"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>評估原則對話方塊，評估結果頁面
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此對話方塊可檢視原則評估結果，然後將以原則為基礎的管理原則套用到不符合原則的目標集。  
   
 ## <a name="options"></a>選項。  

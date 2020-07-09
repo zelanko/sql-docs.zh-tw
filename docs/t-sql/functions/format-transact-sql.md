@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - FORMAT function
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 1a897daa16dd371693a0c2cd8a4ad1bf5e686bc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 10136ba5d2b0d241de0960acb9df657dadfe9cc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752398"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -190,11 +190,11 @@ ORDER BY CurrencyRateID;
 ```
 CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format  
 -------------- ------------  --------------  --------------  ---------------  
-1              1.0002        1,00            1,0002          1,00 €  
-2              1.55          1,55            1,5500          1,55 €  
-3              1.9419        1,94            1,9419          1,94 €  
-4              1.4683        1,47            1,4683          1,47 €  
-5              8.2784        8,28            8,2784          8,28 €  
+1              1.0002        1,00            1,0002          1,00 &euro;  
+2              1.55          1,55            1,5500          1,55 &euro;  
+3              1.9419        1,94            1,9419          1,94 &euro;  
+4              1.4683        1,47            1,4683          1,47 &euro;  
+5              8.2784        8,28            8,2784          8,28 &euro;  
   
  (5 row(s) affected)  
 ```  
@@ -244,6 +244,6 @@ select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'HH:mm') -- returns 14:00
   
 ## <a name="see-also"></a>另請參閱
 
- [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
- [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+- [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+- [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

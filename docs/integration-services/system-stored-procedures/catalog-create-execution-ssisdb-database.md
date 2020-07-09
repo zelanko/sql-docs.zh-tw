@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8076434e550f27ac292eec1b7385fce93d60e3ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec8045ffb6e8b555f8b199170b171f8f01e25d4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749658"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中建立執行執行個體。  
   
@@ -31,14 +31,14 @@ ms.locfileid: "71295552"
 ## <a name="syntax"></a>語法  
   
 ```sql  
-catalog.create_execution [@folder_name = folder_name  
-     , [@project_name =] project_name  
-     , [@package_name =] package_name  
-  [  , [@reference_id =] reference_id ]  
-  [  , [@use32bitruntime =] use32bitruntime ] 
-  [  , [@runinscaleout =] runinscaleout ]
-  [  , [@useanyworker =] useanyworker ] 
-     , [@execution_id =] execution_id OUTPUT  
+catalog.create_execution [ @folder_name = ] folder_name  
+     , [ @project_name = ] project_name  
+     , [ @package_name = ] package_name  
+  [  , [ @reference_id = ] reference_id ]  
+  [  , [ @use32bitruntime = ] use32bitruntime ] 
+  [  , [ @runinscaleout = ] runinscaleout ]
+  [  , [ @useanyworker = ] useanyworker ] 
+     , [ @execution_id = ] execution_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>引數  

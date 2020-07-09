@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dcbd6ae1-5d63-485f-9d58-28bfd504524e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4583fd37837c9703325fd577b6bd984505fbd98e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44b62d04c52ddb707bfd094d3b29fbfe84cf5bb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68106106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762400"
 ---
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 如果 **geometry** 執行個體是空的，便傳回 1。 如果 **geometry** 執行個體不是空的，則傳回 0。
   

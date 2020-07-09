@@ -12,15 +12,15 @@ ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 156d1ab718e88afb7ddb66b4270884065b4e6574
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d25f529ddc0bb4e7bc3add5189a5ee9aadccad2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68064958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749559"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   SP:Recompile 事件類別表示有某個預存程序、觸發程序或使用者自訂函數已重新編譯。 這個事件類別報告的重新編譯會在陳述式層級發生。  
   
  若要追蹤陳述式層級的重新編譯，建議使用 SQL:StmtRecompile 事件類別。 SP:Recompile 事件類別已被取代。 如需詳細資訊，請參閱 [SQL:StmtRecompile 事件類別](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)。  

@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 466e29e7fe8935cc23c6d15d601e0b176b60d74a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc1b1a119fe1aef66165da05d9250a7c0f79b1e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749615"
 ---
 # <a name="catalogdelete_environment_variable-ssisdb-database"></a>catalog.delete_environment_variable (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的環境刪除環境變數。  
   
 ## <a name="syntax"></a>語法  
   
 ```sql  
-delete_environment_variable [ @folder_name = ] folder_name  
+catalog.delete_environment_variable [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @variable_name = ] variable_name  
 ```  

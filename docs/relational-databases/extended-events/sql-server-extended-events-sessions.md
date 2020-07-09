@@ -1,7 +1,7 @@
 ---
 title: SQL Server 擴充的事件工作階段
 description: SQL Server 擴充事件工作階段是在裝載擴充事件引擎的 SQL Server 處理序中建立。 了解工作階段狀態和工作階段內容。
-ms.date: 03/14/2017
+ms.date: 05/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cce8dfb0d96059f577adb4e86e6fc5556d9fd90c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fec4a507a8a40cb38bf9b5faf58545aa89a55167
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487666"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756843"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 擴充的事件工作階段
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充的事件工作階段會建立在主控擴充之事件引擎的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中。 下列是擴充的事件工作階段的各個層面，可讓您了解擴充的事件基礎結構的來龍去脈以及進行的一般處理：  
   
@@ -34,9 +34,9 @@ ms.locfileid: "79487666"
   
 ## <a name="session-states"></a>工作階段狀態  
  下圖顯示擴充事件工作階段的各個狀態。  
-  
- ![擴充事件工作階段狀態](../../relational-databases/extended-events/media/xesessionstate.gif "擴充事件工作階段狀態")  
-  
+
+![擴充事件工作階段狀態](../../relational-databases/extended-events/media/xesessionstate.png "擴充事件工作階段狀態")
+
  在上圖中，請注意在針對事件工作階段發出不同的 DDL 命令時，該工作階段狀態就會變更。 下表說明這些狀態變更所代表的意義。  
   
 |圖例標籤|DDL 陳述式|描述|  

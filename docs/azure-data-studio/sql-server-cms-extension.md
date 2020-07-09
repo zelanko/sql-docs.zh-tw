@@ -1,21 +1,20 @@
 ---
 title: SQL Server 中央管理伺服器延伸模組
-titleSuffix: Azure Data Studio
 description: 安裝和使用適用於 Azure Data Studio 的 SQL Server 中央管理伺服器延伸模組 (預覽)
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 6c323c2580e86e560aa1b0df5d131b260d0c1bb5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c866ee04194bcbb1d26598766483f03019ebb47
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758358"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>SQL Server 中央管理伺服器延伸模組 (預覽)
 

@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7e4811d4c79a167efbf7f5b40ecf6270caff38df
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 7b137b58daa6936328e5f8f37dc31277e0d5b6ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388316"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762552"
 ---
 # <a name="use-xml-data-in-applications"></a>在應用程式中使用 XML 資料
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   此主題描述在您的應用程式中使用 **xml** 資料類型時，可用的選項有哪些。 此主題包括有關下列項目的資訊：  
   
 -   使用 ADO 和 **Native Client 處理** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型資料行中的 XML  

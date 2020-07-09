@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2905877f907e932be058a07ba3a9fbbd892e7ae6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db045eeb48bc04abb415bb5ac14a7872fc805b09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754534"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>維護計畫 (報告與記錄頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 **[報表與記錄]** 對話方塊設定執行維護計畫時產生的報表和記錄。  
   
 ## <a name="options"></a>選項。  

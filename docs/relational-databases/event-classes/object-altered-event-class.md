@@ -12,15 +12,15 @@ ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8cdf780816d16450ce9487a80c282fa1a0820631
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9757556741c36f5644d3d58a44744270a02b9c82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756015"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Object:Altered 事件類別指出物件已遭到改變，例如被 ALTER INDEX、ALTER TABLE 或 ALTER DATABASE 陳述式改變。 這個事件類別可用來判別物件是否已被改變，例如被 ODBC 應用程式改變，此應用程式經常會建立暫存的預存程序。  
   
  Object:Altered 事件類別一定會產生兩個事件。 第一個事件指出 Begin 階段。 第二個事件指出 Rollback 或 Commit 階段。  

@@ -1,21 +1,20 @@
 ---
 title: SQL Server Profiler 延伸模組
-titleSuffix: Azure Data Studio
 description: 安裝和使用適用於 Azure Data Studio 的 SQL Server Profiler 延伸模組 (預覽)
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 4fcb16d2ec3c267dc2927f22a029709a434416c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f86257f7d024d36109901e09f11ab910525810e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75776509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758309"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler 延伸模組 (預覽)
 

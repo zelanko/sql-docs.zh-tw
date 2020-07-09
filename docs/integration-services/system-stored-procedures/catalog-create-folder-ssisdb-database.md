@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d2533c09f530b0fc3fcebdfbd4a50a460534a42f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95f74f595481d9cf373c51be18cccf404b824e49
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295521"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749655"
 ---
 # <a name="catalogcreate_folder-ssisdb-database"></a>catalog.create_folder (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中建立資料夾。  
   
 ## <a name="syntax"></a>語法  
   
 ```sql  
-catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUTPUT  
+catalog.create_folder [ @folder_name = ] folder_name, [ @folder_id = ] folder_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>引數  
