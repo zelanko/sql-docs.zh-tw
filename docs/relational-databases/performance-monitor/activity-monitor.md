@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 184ead5d82ddad99e3fae781cd41b46569c1dead
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 45d2e41fa88d0ea586832ab91a927832b82ab0fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787495"
 ---
 # <a name="activity-monitor"></a>活動監視器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 活動監視器顯示有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序以及這些處理序如何影響目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的詳細資訊。  
   
 活動監視器是一個索引標籤式文件視窗，其中包含下列可展開且可摺疊的窗格：[概觀]  、[處理序]  、[資源等候]  、[資料檔案 I/O]  和 [最近的費時查詢]  和 [使用中的費時查詢]  。 展開任何窗格時，活動監視器會查詢執行個體以便取得相關資訊。 摺疊某個窗格時，該窗格的所有查詢活動就會停止。 您可以同時展開一或多個窗格，以便檢視不同種類的執行個體活動。  

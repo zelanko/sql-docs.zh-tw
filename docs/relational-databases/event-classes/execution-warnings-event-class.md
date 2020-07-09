@@ -12,15 +12,15 @@ ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a3c813221b586a6378b9590704908cd8f7531b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a97c0e6527d7a598a0d0a026d2f058a6b7773d48
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789553"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Execution Warnings 事件類別指出在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式或預存程序期間發生的記憶體授與警告。 可監視此事件類別以判定繼續進行之前，查詢是否需等待可供使用的記憶體，或者取得記憶體的初始嘗試是否失敗。 有關查詢等候期間的資訊可協助發現系統中會影響效能的競爭問題。  
   
 ## <a name="execution-warnings-event-class-data-columns"></a>Execution Warnings 事件類別資料行  

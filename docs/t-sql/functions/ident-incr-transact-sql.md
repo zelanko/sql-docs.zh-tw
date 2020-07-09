@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 24c4b8af65830f8cc3a4a4bb2c4084ed4718515b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c57ca648d2298705cd73752f07418987e49761e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784562"
 ---
 # <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 傳回建立資料表或檢視的識別欄位時，所指定的遞增值。  
   

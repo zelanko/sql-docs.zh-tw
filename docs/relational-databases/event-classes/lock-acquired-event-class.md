@@ -12,15 +12,15 @@ ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bde8e1552b13f165d928f1e9275512e22426f9f4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91899bddfc872487d29866c3c854563f22353827
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780171"
 ---
 # <a name="lockacquired-event-class"></a>Lock:Acquired 事件類別
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lock:Acquired 事件類別指出已完成對資源 (例如資料頁) 取得鎖定。  
   
  Lock:Acquired 與 Lock:Released 事件類別可用來監視物件何時鎖定、採用的鎖定類型以及鎖定已保留多久的時間。 長期保留的鎖定可能會造成競爭問題，應該加以調查。 例如，某個應用程式可能取得資料表中資料列的鎖定，然後等候使用者輸入。 由於使用者可能要很長時間來輸入，因此鎖定可能會封鎖其他使用者。 在這個例子中，應重新設計應用程式，只在需要時才提出鎖定要求，而且取得鎖定後不需要使用者輸入。  

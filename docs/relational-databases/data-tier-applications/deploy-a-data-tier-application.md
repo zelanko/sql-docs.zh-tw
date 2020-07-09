@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e50e68eefd4b59aa617742baf8d3264aeed333e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74190121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781719"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署資料層應用程式
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   您可以使用精靈或 PowerShell 指令碼，將 DAC 封裝中的資料層應用程式 (DAC) 部署到現有的 Database Engine 或 Azure SQL Database 執行個體。 
   
  部署程序會將 DAC 定義儲存到 **msdb** 系統資料庫 ([!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中則是 **master**) 來註冊 DAC 執行個體並建立資料庫，然後使用 DAC 內定義的所有資料庫物件來擴展該資料庫。  

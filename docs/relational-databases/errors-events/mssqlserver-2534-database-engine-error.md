@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 121cf99d-0722-494c-be24-3369c1a0badc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 73aa376cc47b649b6c9cba336a61ab734a0ae3a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 40087b6b8925608f07921b8140cd305071917535
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68103659"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780329"
 ---
 # <a name="mssqlserver_2534"></a>MSSQLSERVER_2534
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|2534|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC_PAGE_ALLOCATED_TO_OTHER_OBJECT|  
-|訊息文字|資料表錯誤: 頁面 P_ID (其標頭顯示是配置給物件識別碼 O_ID)，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)，是由其他物件所配置。|  
+|訊息文字|資料表錯誤：其標題顯示配置給物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE) 的頁面 P_ID 是由其他物件所配置。|  
   
 ## <a name="explanation"></a>說明  
 頁面標頭包含配置單位識別碼 (*A_ID*)，但是該配置單位中並無配置此頁面的索引配置對應 (IAM) 頁面。 因此，頁面的標頭包含錯誤的配置單位識別碼，並且頁面上將會顯示相符的 MSSQLServer_2533 錯誤，而該錯誤會對應到此頁面實際配置的配置單位識別碼。  

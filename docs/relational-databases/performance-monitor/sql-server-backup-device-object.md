@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 93302a5b9645784b3b326229545f92de0dce56f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87cda19087f0e1ed742399032888a77f2a013dd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987209"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787348"
 ---
 # <a name="sql-server-backup-device-object"></a>SQL Server 的 Backup Device 物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Backup Device** 物件提供計數器來監視備份與還原作業所使用的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份裝置。 藉由監視備份裝置，即可決定產能，或每個裝置的備份與還原作業的進度與效能。 若要監視整個資料庫備份或還原作業的輸送量，請使用  Databases[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件的 **Backup/Restore Throughput/sec** 計數器。 如需詳細資訊，請參閱 [SQL Server, Databases Object](../../relational-databases/performance-monitor/sql-server-databases-object.md)。  
   

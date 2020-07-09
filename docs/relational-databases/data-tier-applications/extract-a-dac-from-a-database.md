@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4c45a6b720fde31618f384bcc2df2cceacc4102
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134787"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781681"
 ---
 # <a name="extract-a-dac-from-a-database"></a>從資料庫中擷取 DAC
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   您可以使用 [擷取資料層應用程式精靈]  或 Windows PowerShell 指令碼，從現有的 SQL Server 資料庫中擷取資料層應用程式 (DAC) 封裝。 此擷取程序會建立 DAC 封裝檔案，其中包含資料庫物件及其相關執行個體層級元素的定義。 例如，DAC 封裝檔案會包含資料庫資料表、預存程序、檢視表、使用者以及對應至資料庫使用者的登入。  
   
  

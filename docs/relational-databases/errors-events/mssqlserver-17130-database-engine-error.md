@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 7ce6afca-221d-402f-89df-da7e74a339a8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d9da9052aa4de65f93d1d2e166f1ef82df51ca62
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 19fdbd6e3c8870e57acb81b4d1b923516da2b5a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68076683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780861"
 ---
 # <a name="mssqlserver_17130"></a>MSSQLSERVER_17130
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|17130|  
 |事件來源|MSSQLSERVER|  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 47410378e63141a0fb2df6623e882083e15bbe47
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 15673e9ee67b4499a3c20729a73eb063610baedc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000091"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781746"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>二進位大型物件 (Blob) 資料 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供在資料庫中或遠端存放裝置上儲存檔案和文件的解決方案。  
   
 ## <a name="compare-options-for-storing-blobs-in-sql-server"></a>比較 SQL Server 中用於儲存 Blob 的選項

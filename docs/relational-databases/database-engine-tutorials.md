@@ -11,15 +11,15 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e78b5e1efbcc082c49cd80737b35d76cd1aeddb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8098ffe6b2b74f415595a4ff6ed91172085a009
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155494"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781614"
 ---
 # <a name="database-engine-tutorials"></a>Database Engine 教學課程
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 本節包含 [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)]的教學課程。  
   
 [教學課程：資料庫引擎使用者入門](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  

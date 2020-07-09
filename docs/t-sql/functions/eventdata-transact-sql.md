@@ -22,17 +22,17 @@ helpviewer_keywords:
 - status information [SQL Server], events
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 95996934e6d8334376533b4abf04e2cc7607fd78
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68094569"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784575"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此函數會傳回伺服器或資料庫事件的相關資訊。 當事件通知引發，且指定的 Service Broker 收到結果時，會呼叫 `EVENTDATA`。 DDL 或登入觸發程序也支援在內部使用 `EVENTDATA`。  
   
@@ -85,7 +85,7 @@ EVENTDATA 會傳回 **xml** 資料類型的值。 根據預設，所有事件的
 此範例會建立可防止建立新資料庫資料表的 DDL 觸發程序。 針對 `EVENTDATA` 所產生的 XML 資料使用 XQuery ，可擷取引發觸發程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 如需詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)。  
   
 > [!NOTE]  
->  當您使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [以方格顯示結果] 來查詢 `<TSQLCommand>` 元素時，命令文字中不會出現分行符號。 請改用 [Results to Text] (以文字顯示結果)  。  
+>  當您使用  **中的 [以方格顯示結果]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來查詢 `<TSQLCommand>` 元素時，命令文字中不會出現分行符號。 請改用 [Results to Text] (以文字顯示結果)  。  
   
 ```  
 USE AdventureWorks2012;  

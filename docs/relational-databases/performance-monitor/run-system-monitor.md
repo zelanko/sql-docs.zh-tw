@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 015570319e537199f13bd1d3783c508e22ab49ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: de2b4facacb6066763ff6673fd9dcb48ee81299d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987379"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787412"
 ---
 # <a name="run-system-monitor"></a>執行系統監視器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   「系統監視器」會使用遠端程序呼叫 (RPC) 從 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]收集資訊。 任何擁有 Microsoft Windows 權限可執行「系統監視器」的使用者都可以使用「系統監視器」來監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 > [!NOTE]  

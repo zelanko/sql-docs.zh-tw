@@ -15,15 +15,15 @@ ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83c53aa2e8c7700f5aa7b3c87dc0683f3c7ed447
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 29f7a3f1a7eeb34d7ce8ce3a5d886ea4137000d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72906311"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786456"
 ---
 # <a name="rename-indexes"></a>重新命名索引
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新命名索引。 重新命名索引將以您提供的新索引名稱來取代目前的名稱。 指定的名稱在資料表或檢視內必須是唯一的。 例如，兩個資料表可以同時擁有名稱為 **XPK_1**的索引，但同一個資料表不能具有兩個名稱為 **XPK_1**的索引。 您不能使用與現有停用之索引相同的名稱來建立索引。 重新命名索引並不會重建索引。  
   

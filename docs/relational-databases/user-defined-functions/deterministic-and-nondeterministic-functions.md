@@ -17,15 +17,15 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 445453f6be42c6015fc3b6728eb12ee9a78f0ef6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3240f9cd3e94418572482a5e73950e2b522ec663
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786882"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定性與非決定性函數
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   假設資料庫狀態相同，任何時候以特定的輸入值集來呼叫決定性函數時，一律會傳回相同的結果。 即使所存取的資料庫維持在相同的狀態，每次以特定的輸入值集來呼叫非決定性函數時，都會傳回不同的結果。 例如，在上述限定情況下，AVG 函數一律傳回相同的結果，而傳回目前日期時間值的 GETDATE 函數則一律傳回不同的結果。  
   
  無論是透過呼叫函數之計算資料行上的索引，還是透過參考函數的索引檢視，使用者自訂函數都有幾項屬性可決定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 為函數的結果編製索引的能力。 函數的決定性是這類屬性的一種。 例如，如果檢視參考任何不具決定性的函數，則無法在檢視上建立叢集索引。 如需函數屬性 (包括決定性) 的詳細資訊，請參閱 [使用者定義函數](../../relational-databases/user-defined-functions/user-defined-functions.md)。  

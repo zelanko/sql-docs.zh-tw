@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 7b15a5e6-fd41-47ce-ba87-54f72acea4bb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 210df5d533908e75e83b348ac6c9a84a22198f4b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 004cc1e60158b96813ade8c5fc0f5612293f38f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68131821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780878"
 ---
 # <a name="mssqlserver_17128"></a>MSSQLSERVER_17128
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|17128|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|INIT_NOBUFSPACE|  
-|訊息文字|initdata: 未提供記憶體給核心緩衝區。|  
+|訊息文字|initdata:未提供記憶體給核心緩衝區。|  
   
 ## <a name="explanation"></a>說明  
 緩衝集區的初始記憶體配置或保留已經失敗，而且 SQL Server 結束。  

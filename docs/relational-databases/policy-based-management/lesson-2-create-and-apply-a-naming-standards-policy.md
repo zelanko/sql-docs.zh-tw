@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86014f1a4c7ee4f9c002df67d2f739124dc70e2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558693"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785082"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>第 2 課：建立和套用命名標準原則
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 某些以原則為基礎的管理原則類型可以建立觸發程序，以便強制執行原則的未來合規性。 在這一課，您會建立針對資料表強制執行命名標準的原則。 然後，您會透過嘗試建立違反此原則的資料表，測試此原則。  
 
 

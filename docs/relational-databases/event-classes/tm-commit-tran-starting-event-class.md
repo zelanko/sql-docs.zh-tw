@@ -12,15 +12,15 @@ ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 715eb611d1228eb5ab08ead6fc84da076bd8bb30
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c77a9dd688178a858167b8810da328a53d7188b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125135"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790919"
 ---
 # <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   TM: Commit Tran Starting 事件類別指出正在啟動 COMMIT TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出在認可目前交易之後，是否會啟動新交易。  
   
 ## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM: Commit Tran Starting 事件類別資料行  

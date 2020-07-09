@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b7ec7d6142bae4a6a0ad21a7f68413b257764e06
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 595b14797becec29232c4e09ab3bbc6b702cb898
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787455"
 ---
 # <a name="monitor-memory-usage"></a>監視記憶體使用量
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   定期監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，以確認記憶體使用量是在正常範圍內。  
   
  若要監視低記憶體的狀況，請使用以下物件計數器：  

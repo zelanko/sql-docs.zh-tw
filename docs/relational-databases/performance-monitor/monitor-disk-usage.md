@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 60168c1622ebe7660bb10d421b9d35a6d41523f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1ee155b97823b419623d0296928db5334c71e7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787476"
 ---
 # <a name="monitor-disk-usage"></a>監視磁碟使用量
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 Microsoft Windows 作業系統輸入/輸出 (I/O) 呼叫，在您的磁碟上執行讀取和寫入作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會管理何時及如何執行磁碟 I/O，但是 Windows 作業系統會執行基礎 I/O 作業。 I/O 子系統包含了系統匯流排、磁碟控制卡、磁碟、磁帶機、光碟機和許多其他的 I/O 裝置。 磁碟 I/O 經常是造成系統瓶頸的原因。  
   
  監視磁碟活動涉及兩個重點：  

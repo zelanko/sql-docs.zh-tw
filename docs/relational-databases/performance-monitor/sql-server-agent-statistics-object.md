@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12bd415093b8ea35ee82d6d8be2d1591a4f4fbfd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff7d2c619a1dad619676092b8f2c937890d681f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787371"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server Agent、Statistics 物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQL Server Agent 的「 **統計資料** 」效能物件包含效能計數器，用來報告 SQL Server Agent 的詳細資訊。  
   
  下表列出 **SQLAgent:Statistics** 計數器。  

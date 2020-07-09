@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 252162be51d79224ac786ff44ae2620f4f189f81
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4635d22ed3349302344bfb6ea7e94c63790c324b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68046750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790788"
 ---
 # <a name="monitor-sql-server-components"></a>監視 SQL Server 元件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是在動態環境下提供服務，所以監視很重要。 應用程式中的資料會變更。 使用者需要的存取類型會變更。 使用者的連接方式會變更。 甚至存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的應用程式類型也可能變更，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動管理系統層級的資源，例如記憶體和磁碟空間，以便將系統層級的密集手動微調需求降到最低。 監視可讓管理員識別效能趨勢，以決定是否需要變更。  
   
 若要有效監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何元件：  

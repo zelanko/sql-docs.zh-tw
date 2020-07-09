@@ -16,15 +16,15 @@ ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: df4463bf1ebfcc981c2828966c58e7fd0193f19f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 992a95f793611094971e894c6a974b959bce8ca7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287965"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790802"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>不使用快照集初始化交易式訂閱
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   依預設，會使用快照集來初始化交易式發行集的訂閱，此快照集由「快照集代理程式」產生並由「散發者代理程式」套用。 在某些狀況下，例如那些牽涉到大型初始資料集的狀況，最好使用其他方法初始化訂閱。 其他初始化「訂閱者」的方法包括：  
   
 -   指定一個備份。 在「訂閱者」上還原備份，「散發代理程式」隨後會複製所有需要的複寫中繼資料與系統程序。 用備份進行初始化是將資料傳遞到「訂閱者」的最快方法且相當便利，因為如果最新的備份發生在為「使用備份進行初始化」啟用發行集之後，便可使用。  

@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: bad25b91-eaed-46c0-a5b7-71117a32304c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e1993d5ec94abc206cabd7c12841c3fdbe15a7cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f7ec380df88d036da24da9021b949ce75673e363
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67928086"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781588"
 ---
 # <a name="mssqlserver_-1"></a>MSSQLSERVER_-1
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |事件識別碼|-1|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱||  
-|訊息文字|建立伺服器的連接時發生錯誤。  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，可能因為在預設的設定下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許遠端連接而引起此失敗 (提供者: SQL 網路介面，錯誤: 28 - 伺服器不支援要求的通訊協定) (Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，錯誤: -1)|  
+|訊息文字|建立伺服器的連接時發生錯誤。  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，可能因為在預設的設定下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許遠端連接而引起此失敗 (提供者：SQL 網路介面，錯誤：28 - 伺服器不支援要求的通訊協定) (Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，錯誤：-1)|  
   
 ## <a name="explanation"></a>說明  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端無法連接到伺服器。 此錯誤可能是由下列其中一項原因所造成：  

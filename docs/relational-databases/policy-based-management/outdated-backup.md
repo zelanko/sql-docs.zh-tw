@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 307a4ad0-675a-4f97-9a3c-cedd61bdfae5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 929262bc559730b99407415a9b907091a479289f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 06828fc48cffdaba01befd0eb46051e3810883d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787297"
 ---
 # <a name="outdated-backup"></a>過期的備份
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   這個規則會檢查資料庫是否有最新備份。 排程定期備份對於保護資料庫避免因為許多不同失敗而造成資料遺失而言，是很重要的工作。 備份資料的適當頻率取決於資料庫的復原模式、有關可能資料遺失的商業需求及資料庫的更新頻率。 在經常更新的資料庫中，備份之間的工作損失風險會快速地增加。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建議  

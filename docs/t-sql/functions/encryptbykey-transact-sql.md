@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 486a4f9e3a74bdcea59a92919fce285395c75eba
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 918890142acb736976d642161e2e7cc1f54e3533
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784593"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   使用對稱金鑰加密資料。  
   
@@ -100,7 +100,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. 使用對稱金鑰加密字串  
  下列範例會在 `Employee` 資料表加入一個資料行，並將資料行 `NationalIDNumber` 中所儲存的社會保險號碼值加密。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -123,7 +123,7 @@ GO
   
 ### <a name="b-encrypting-a-record-together-with-an-authentication-value"></a>B. 加密記錄與驗證值  
   
-```  
+```sql 
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  

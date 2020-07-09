@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 54fdfe36da0d590fa2225ab7cc99af640727b000
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8560ed40c5a50ca16c6bad6b78d4a2eddcb0f0e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785087"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用原則式管理來監視和強制最佳做法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   原則式管理可讓您監視 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的最佳做法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供一組原則檔讓您當作最佳做法原則匯入，然後為包含執行個體、執行個體物件、資料庫或資料庫物件的目標集評估原則。 您可以手動評估原則、設定原則來根據排程評估目標集，或是設定原則來根據事件評估目標集。 如需原則式管理的詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Database Engine 的原則和規則  

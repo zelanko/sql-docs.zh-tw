@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 49c26ff7-18b8-4f07-a087-f45f63463b3b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8334c28865c01c63ae6bcb18c79d4fd88b715175
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e045218b5e632cc1d066dc4a866504157a65ecd2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68060603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781360"
 ---
 # <a name="mssqlserver_10539"></a>MSSQLSERVER_10539
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|10539|  
 |事件來源|MSSQLSERVER|  

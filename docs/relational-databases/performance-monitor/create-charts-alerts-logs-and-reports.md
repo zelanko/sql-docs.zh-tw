@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5e67b62ec00e2dd98ff4289c1f725892592340e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 006e3d0d5e92dea8146897d57da394b974782813
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787504"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>建立圖表、警示、記錄和報表
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   「系統監視器」可讓您建立圖表、警示、記錄和報表，以監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。  
   
 ## <a name="charts"></a>圖表  

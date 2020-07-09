@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: cc2fbdab-7b90-415f-a1f9-066824344283
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 061afedceeafdaf2660bf46180a80105d85e2a39
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd36f3bee3b11cecc8de10c7a9a6445f1d4ab5c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68060738"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781449"
 ---
 # <a name="mssqlserver_10533"></a>MSSQLSERVER_10533
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|10533|  
 |事件來源|MSSQLSERVER|  

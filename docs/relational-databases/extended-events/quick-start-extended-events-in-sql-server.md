@@ -11,16 +11,16 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4065dd97c2109a30c90f8de01c50c11894a91f68
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 7b32ac9e1d88953cd8c8fccf3e010d01d5a6bcc5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728426"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783503"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>快速入門：SQL Server 中的延伸事件
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 擴充事件是輕量的效能監視系統，可讓使用者收集用於監視及針對 SQL Server 中問題進行疑難排解所需要的資料。 請參閱[擴充事件概觀](extended-events.md)來深入了解擴充事件架構。  本文旨在協助剛接觸擴充事件，而且想要在幾分鐘內建立事件工作階段的 SQL 開發人員。 藉由使用擴充事件，您可以查看 SQL 系統及您的應用程式內部作業的詳細資訊。 當您建立擴充事件工作階段時，您會告訴系統：
 

@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 0f58338d-2ea0-48b8-8a20-c438b0940433
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d30ad7c3da88c39cb1e85e38c355ef66e822fcd0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cbd78c7d4c403618088a0093dac58d1921c1a2fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68002852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781109"
 ---
 # <a name="mssqlserver_125"></a>MSSQLSERVER_125
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|125|  
 |事件來源|MSSQLSERVER|  

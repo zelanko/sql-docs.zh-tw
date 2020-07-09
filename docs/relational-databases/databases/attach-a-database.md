@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3a0b99addafecb3567ed6e5bc351681e3318f67a
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 893de2f02f6f10d5c4132864903f6b55495fbfdf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138174"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789576"
 ---
 # <a name="attach-a-database"></a>附加資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中附加資料庫。 您可以使用此功能來複製、移動或升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "82138174"
      **[要附加的資料庫]**  
      顯示有關所選資料庫的資訊。  
   
-     \<無資料行標頭>  
+     \<no column header>  
      顯示指出附加作業之狀態的圖示。 可能的圖示將在以下的 **[狀態]** 描述中加以描述。  
   
      **MDF 檔案位置**  
@@ -104,7 +104,7 @@ ms.locfileid: "82138174"
      從 **[要附加的資料庫]** 方格中移除選取的檔案。  
   
      **"** *<database_name>* **" database details**  
-     顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下 [瀏覽]  按鈕 ( **...** )。  
+     顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下 [瀏覽] 按鈕 ( **...** )。  
   
     > [!NOTE]  
     > 如果檔案不存在， **[訊息]** 資料行就會顯示「找不到」。 如果找不到記錄檔，它就存在於其他目錄中，或是已遭刪除。 您必須更新 **[資料庫詳細資料]** 方格中的檔案路徑，以指向正確的位置，或是從方格中移除該記錄檔。 如果找不到 .ndf 資料檔，您就必須更新該檔案在方格中的路徑，以指向正確的位置。  
@@ -144,7 +144,7 @@ ms.locfileid: "82138174"
     > 或者，您可以使用 [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 或 [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) 預存程序。 但是，Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本將移除這些程序。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 我們建議您改用 `CREATE DATABASE ... FOR ATTACH` 。  
   
 ##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> 後續操作：升級 SQL Server 資料庫之後  
-當您使用附加方法升級資料庫之後，該資料庫會立即可用並自動升級。 如果資料庫具有全文檢索索引，升級程序就會根據 [全文檢索目錄升級選項]  伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入]  或 [重建]  ，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入]  時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。  
+當您使用附加方法升級資料庫之後，該資料庫會立即可用並自動升級。 如果資料庫具有全文檢索索引，升級程序就會根據 [全文檢索目錄升級選項] 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入] 或 [重建]，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。  
   
 如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]所支援的最低相容性層級)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   

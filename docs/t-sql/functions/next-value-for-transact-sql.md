@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 15a103de5e532c4bcd2c6b5409f34d98393e501f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e7d813bf74f1779a2f9c04a2f78988cbab121c61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822612"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784383"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   從指定的順序物件產生序號。  
   

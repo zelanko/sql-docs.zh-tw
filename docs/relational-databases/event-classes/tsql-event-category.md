@@ -14,15 +14,15 @@ ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af5cd09c9c00c0b250f1b51c72ce642be01dc9a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca72015d0d10ff33b250a96c539f36c85f1a5cef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67996073"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789534"
 ---
 # <a name="tsql-event-category"></a>TSQL 事件類別目錄
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **TSQL** 事件類別目錄包含一般 TSQL 事件。  
   
 ## <a name="in-this-section"></a>本節內容  

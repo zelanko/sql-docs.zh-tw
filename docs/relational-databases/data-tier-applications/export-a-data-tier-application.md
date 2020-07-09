@@ -23,15 +23,15 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61d240262d491976eaa9e591fa15e4ffd1f1258e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0505a5e6c715558b34d2f1a86e88a0b7b938e7d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72904173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781705"
 ---
 # <a name="export-a-data-tier-application"></a>匯出資料層應用程式
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   匯出已部署的資料層應用程式 (DAC) 或資料庫，會建立匯出檔，而此檔案包含資料庫中物件的定義以及資料表中所含的所有資料。 接著，匯出檔可以匯入 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的另一個執行個體或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 您可以合併匯出/匯入作業，以在執行個體之間移轉 DAC、建立封存或針對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署的資料庫建立內部部署複本。  
   
 ## <a name="before-you-begin"></a>開始之前  

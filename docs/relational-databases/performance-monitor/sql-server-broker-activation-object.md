@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: cd9b6880-c924-42c7-b333-09c303317c0b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 364fd8e037e2c09afa16294e75096993f861ca20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f2b877899a425397e7431d7b615c61356fb9d5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987157"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787339"
 ---
 # <a name="sql-server-broker-activation-object"></a>SQL Server 的 Broker Activation 物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **SQLServer:BrokerActivation** 效能物件包含效能計數器，可報告預存程序啟用的資訊。 下表列出這個物件包含的計數器。  
   
 |SQL Server Broker 啟用計數器|描述|  

@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db307d221b8c90f478c21ab1605362e7fdf2ffd6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0ad5eb99009a6f9f980edc062c10a5c98831984
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907714"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780233"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|701|  
 |事件來源|MSSQLSERVER|  
@@ -46,7 +46,7 @@ ms.locfileid: "72907714"
   
 1.  確認是否有其他應用程式或服務正在耗用此伺服器的記憶體。 重新設定比較不重要的應用程式或服務，以降低其記憶體耗用量。  
   
-2.  開始收集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Buffer Manager** 和 **SQL Server: Memory Manager** 的效能監視器計數器。  
+2.  開始收集以下內容的效能監視器計數：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **：緩衝區管理員**、**SQL Server：記憶體管理員**。  
   
 3.  檢查下列 SQL Server 記憶體組態參數：  
   

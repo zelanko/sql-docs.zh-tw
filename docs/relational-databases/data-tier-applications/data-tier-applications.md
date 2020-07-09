@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8d91ef65f8beb5194bbb8cbe3b1618d7666e106
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287582"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781732"
 ---
 # <a name="data-tier-applications"></a>資料層應用程式
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   資料層應用程式 (DAC) 是邏輯資料庫管理實體，會定義與使用者資料庫相關聯的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件，例如資料表、檢視表，以及包括登入的執行個體物件。 DAC 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫部署的自主單位，可讓資料層開發人員和資料庫管理員將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件包裝為可攜式成品，稱為 DAC 封裝，又稱為 DACPAC。  
   
  BACPAC 是相關的成品，會封裝資料庫結構描述，以及在資料庫中儲存的資料。  

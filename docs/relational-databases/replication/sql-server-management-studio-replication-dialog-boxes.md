@@ -12,15 +12,15 @@ ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0770615fa308085ca19996cffe0b32e709fb022e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 537040f98aeb99b580b0109e0e472571b05907ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783109"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>SQL Server Management Studio 複寫對話方塊
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   此節包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中可用之一些複寫對話方塊的相關資訊：  
   
 -   [快照集代理程式安全性](../../relational-databases/replication/snapshot-agent-security.md)  

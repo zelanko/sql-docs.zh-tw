@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - IIF function
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 09363732ab6c0be956c9c1a36ae06a7d251e8433
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4175c95cd73c444f7a1df5c2f11009bc6b854c33
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784460"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>邏輯函式 - IIF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中根據布林運算式評估為 true 或 false 而傳回兩值之一。  
   

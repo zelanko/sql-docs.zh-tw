@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b581fd45021820039b09edc69151ebea34a913e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e30483860b6bdd29f485d90ef1145150910e0e31
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780976"
 ---
 # <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|1505|  
 |事件來源|MSSQLSERVER|  
@@ -59,7 +59,7 @@ SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstN
   
 -   當您選擇唯一索引或條件約束的資料行時，請選取已定義為 NOT NULL 的資料行。 這樣做可以排除多個資料列的索引鍵值包含 NULL 而導致違反唯一性的可能。  
   
--   若重複值是因資料輸入錯誤所造成，請手動更正資料，然後再建立索引或約束條件。 如需在資料表中移除重複資料列的詳細資訊，請參閱知識庫文件 139444：[How to remove duplicate rows from a table in SQL Server](https://support.microsoft.com/kb/139444)(如何在 SQL Server 中移除資料表中的重複資料列)。  
+-   若重複值是因資料輸入錯誤所造成，請手動更正資料，然後再建立索引或約束條件。 如需有關移除資料表中重複資料列的資訊，請參閱知識庫文件 139444：[如何在 SQL Server 中移除資料表中的重複資料列](https://support.microsoft.com/kb/139444) \(英文\)。  
   
 ## <a name="see-also"></a>另請參閱  
 [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  

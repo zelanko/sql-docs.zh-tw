@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 296cdb3433ff0e40ea73987ef5a53b985a550f1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787402"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server 的 Access Methods 物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **的** Access Methods [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件會提供計數器，可監視資料庫內的邏輯資料如何存取。 您可以使用 **Buffer Manager** 計數器來監視實體存取磁碟內的資料庫頁面。 監視用來存取資料庫內儲存之資料的方法，可協助您判定增加或修改索引、新增或移動分割、新增檔案或檔案群組、重組索引或重新撰寫查詢，能否改善查詢效能。 **Access Methods** 計數器也可用來監視資料庫內的資料、索引和可用空間，藉以指出每個伺服器執行個體的資料量和片段。 索引片段過多會影響到效能。  
   
  如需有關資料量、片段與使用量的詳細資訊，請使用下列動態管理檢視：  

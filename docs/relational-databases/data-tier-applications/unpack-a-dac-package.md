@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5e2be902c241403ec044b3d348f90dc85327b8ad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3cecfc696bda97e046acd80eb3e285e8da2a04de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909529"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781645"
 ---
 # <a name="unpack-a-dac-package"></a>解除封裝 DAC 封裝
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   使用 [解除封裝資料層應用程式] 對話方塊可從資料層應用程式 (DAC) 封裝解壓縮指令碼和檔案。 這些指令碼和檔案會放置在某個資料夾中，使用此封裝來將 DAC 部署到實際執行系統之前便可以進行檢閱。 DAC 的內容也可以與解除封裝到另一個資料夾的另一個封裝內容相比較。  
   
 1.  **開始之前：** [安全性](#Security)  

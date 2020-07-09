@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_17204 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a810913a3e0a76d6a5b30a342f70441c7639bd7b
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 63f8e2729492d66eb498b0634e015a0a3d4638ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780793"
 ---
 # <a name="mssqlserver_17204"></a>MSSQLSERVER_17204
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |
+| :-------- | :---- |
 |產品名稱|SQL Server|  
 |事件識別碼|17204|  
 |事件來源|MSSQLSERVER|  

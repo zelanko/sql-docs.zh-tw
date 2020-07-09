@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a5a408ac1329c11054804902f3e751d6126afa4e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 425a2330f8ecb3f33380cf0500de32e82463634e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787398"
 ---
 # <a name="sql-server-agent-alerts-object"></a>SQL Server Agent、Alerts 物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQL Server Agent 的「 **警示** 」效能物件包含效能計數器，用來報告 SQL Server Agent 警示的詳細資訊。 下表列出這個物件包含的計數器。  
   
  下表包含 **SQLAgent:Alerts** 計數器。  

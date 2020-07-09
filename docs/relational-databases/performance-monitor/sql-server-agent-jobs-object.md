@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 63c2638f6b6f58d3c3cafd8e8dd601a5a467b210
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50bc6f07cce0dd1ab52c29ec075dd514808bc49b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787425"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 代理程式、作業物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQL Server Agent 的「 **作業** 」效能物件包含報告有關 SQL Server Agent 作業資訊的效能計數器。 下表列出這個物件包含的計數器。  
   
  下表包含 **SQLAgent:Jobs** 計數器。  

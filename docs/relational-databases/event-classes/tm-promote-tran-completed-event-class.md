@@ -12,15 +12,15 @@ ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0671936227892a6a1d01e1bb0a7b246996f836be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f93a7232f2537c9a37341315d095e472e0f4b0cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790906"
 ---
 # <a name="tm-promote-tran-completed-event-class"></a>TM: Promote Tran Completed 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   TM: Promote Tran Completed 事件類別指出 PROMOTE TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。  
   
 ## <a name="tm-promote-tran-completed-event-class-data-columns"></a>TM: Promote Tran Completed 事件類別資料行  

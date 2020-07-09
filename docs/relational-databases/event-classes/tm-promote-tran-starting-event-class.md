@@ -12,15 +12,15 @@ ms.assetid: 32da85bb-d980-4044-8572-31372867649b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4770898f39e7aff4cb424eafaae52b1678a2857a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2fd62597676c6b74778b5c6f917dfd05d6978f0d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125107"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790902"
 ---
 # <a name="tm-promote-tran-starting-event-class"></a>TM: Promote Tran Starting 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   TM: Promote Tran Starting 事件類別指出正在開始 PROMOTE TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。  
   
 ## <a name="tm-promote-tran-starting-event-class-data-columns"></a>TM: Promote Tran Starting 事件類別資料行  

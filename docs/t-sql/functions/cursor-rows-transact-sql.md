@@ -18,17 +18,17 @@ helpviewer_keywords:
 - last-opened cursor
 - asynchronous cursors [SQL Server]
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 45d35cae3106bbcc55ff44a66f0c66648f7952fa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 451050c2cb74431600913b250ffd1fb0974f1fb3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784600"
 ---
 # <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 這會傳回在連線所開啟的最後一個資料指標中，目前符合的資料列數。 若要提升效能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以非同步地擴展大型索引鍵集和靜態資料指標。 您可以呼叫 `@@CURSOR_ROWS` 來決定在呼叫 @@CURSOR_ROWS 時擷取資料指標適用的資料列數目。
   

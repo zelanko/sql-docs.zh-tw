@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1a518a81e9b5b063be4189b0c1e7f696bf544265
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e1bbd8bbac55c3cf9631f37702504b72bed3d473
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632036"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784509"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入是不是指定之伺服器角色的成員。  
   

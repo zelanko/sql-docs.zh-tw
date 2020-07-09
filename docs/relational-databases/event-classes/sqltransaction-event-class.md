@@ -12,15 +12,15 @@ ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bd97699f68e26ba32510749993a0cc1e224c507
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b39975d4eca135a80ffa05f4f2c0abfd6767d20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790956"
 ---
 # <a name="sqltransaction-event-class"></a>SQLTransaction 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   當交易開始和完成時 (尤其在測試應用程式、觸發程序或預存程序的時候)，可使用 SQLTransaction 事件類別來進行監視。  
   
 ## <a name="sqltransaction-event-class-data-columns"></a>SQLTransaction 事件類別資料行  

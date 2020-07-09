@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c5395329026d192fa3405561823b958da82a53c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e24d91db6845d862b88457d72f2f4bc04c9062d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180436"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786462"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   ![備份至 Azure Blob 儲存體的圖形](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "備份至 Azure Blob 儲存體的圖形")  
   
