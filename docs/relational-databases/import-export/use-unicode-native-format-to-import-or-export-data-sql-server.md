@@ -15,15 +15,15 @@ ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4b9aefe7e8350eef1990a6a37dbf0266cd11464
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7641e8f5468a6e915772edf10e97cd735c934f0d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980338"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010125"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>使用 Unicode 原生格式匯入或匯出資料 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 當必須從某個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝將資訊複製到其他安裝時，Unicode 原生格式很有用。 對非字元的資料使用原生格式可節省時間，消除在資料類型與字元格式之間，不必要的來回轉換。 對所有字元資料使用 Unicode 字元格式，可以防止在使用不同字碼頁的伺服器之間大量傳送資料期間，失去任何擴充字元。 任何大量匯入方法都可以讀取以 Unicode 原生格式表示的資料檔。  
   
  建議使用 Unicode 原生格式，在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間，使用包含擴充字元或 DBCS 字元的資料檔，大量傳送資料。 若是非字元資料，Unicode 原生格式會使用原生 (資料庫) 資料類型。 若是字元資料，如 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [text](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)及 [ntext](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)，Unicode 原生格式會使用 Unicode 字元資料格式。  

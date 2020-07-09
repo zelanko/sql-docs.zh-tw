@@ -18,15 +18,15 @@ ms.assetid: 40adfd08-a31c-49cb-a172-386bcaa6edee
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5ff96f07db7b368acc7ee36296516e047bc0475
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 167f17d793bcc8d65c1104b70a6188782543c544
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125996"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002537"
 ---
 # <a name="bit-transact-sql"></a>bit (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   一種整數資料類型，其值有 1、0 或 NULL 幾種。  
   

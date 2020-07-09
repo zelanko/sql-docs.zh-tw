@@ -11,16 +11,16 @@ ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01db1809ae4a16183673291c135e178dfac5cd7d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5fa4380b412e5f77ea8940395250975ed19d8200
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68139626"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002054"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>記憶體最佳化的系統版本設定時態表效能
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 本主題討論使用系統版本設定記憶體最佳化時態表時的一些特定效能考量。
 

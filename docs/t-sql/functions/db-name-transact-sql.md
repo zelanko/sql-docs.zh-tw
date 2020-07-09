@@ -22,15 +22,15 @@ ms.assetid: e21fb33a-a3ea-49b0-bb6b-8f789a675a0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5aa5e2a60189a82fb60cd416b7f87b35824e236f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91cdc1bc82a339b6554e40286cfe041338da4423
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118984"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007920"
 ---
 # <a name="db_name-transact-sql"></a>DB_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此函式會傳回指定資料庫的名稱。
   

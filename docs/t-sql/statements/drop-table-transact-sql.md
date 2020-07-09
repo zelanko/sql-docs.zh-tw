@@ -37,15 +37,15 @@ ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc10141cc2b6c069894868b2a153abc31c4c250c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86469f1f2b4a8e2d97b79315e2ceb5f4bf690cff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155833"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006295"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   移除一個或多個資料表定義及這些資料表的所有資料、索引、觸發程序、條件約束和權限規格。 對於參考卸除之資料表的任何檢視或預存程序，您必須使用 [DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) 或 [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md) 來明確卸除它們。 若要報告對資料表的相依性，請使用 [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)。  
   
@@ -53,14 +53,14 @@ ms.locfileid: "70155833"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP TABLE [ IF EXISTS ] { database_name.schema_name.table_name | schema_name.table_name | table_name } [ ,...n ]  
 [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -113,7 +113,7 @@ DROP TABLE ProductVendor1 ;
 ```  
   
 ### <a name="b-dropping-a-table-in-another-database"></a>B. 卸除另一個資料庫中的資料表  
- 下列範例會卸除 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的 `SalesPerson2` 資料表。 您可以從伺服器執行個體的任何資料庫中執行這個範例。  
+ 下列範例會卸除 `SalesPerson2` 資料庫中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表。 您可以從伺服器執行個體的任何資料庫中執行這個範例。  
   
 ```  
 DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  

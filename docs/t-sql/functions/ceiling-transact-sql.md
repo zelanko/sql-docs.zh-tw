@@ -17,18 +17,18 @@ helpviewer_keywords:
 - integers [SQL Server]
 - CEILING function [Transact-SQL]
 ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eddc3ca55ebd1eb0fcc87b1346946033e34a9d99
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61561d3ef5b0b2c27f2b2a01eee5a367e87fea8c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823288"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002223"
 ---
 # <a name="ceiling-transact-sql"></a>CEILING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此函式會傳回大於或等於所指定數值運算式的最小整數。
   

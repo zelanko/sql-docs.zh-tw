@@ -18,15 +18,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: db8b4d96fd8ac097f912f535087ca658ca48bcca
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 874326a9eb3673a0b091e06fe5e9ba3f04e1c3b2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980529"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003149"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>使用 bcp 指定檔案儲存類型 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   *檔案儲存類型* 描述資料如何儲存在資料檔中。 資料可以依其資料庫資料表類型 (原生格式)、依其字元表示 (字元格式)，或者依支援隱含轉換的任何資料類型匯出至資料檔；例如，將 **smallint** 複製為 **int**。使用者自訂資料類型會依其基底類型匯出。  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>檔案儲存類型的 bcp 提示  

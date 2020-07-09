@@ -17,18 +17,18 @@ helpviewer_keywords:
 - errors [SQL Server], Transact-SQL
 - error numbers [SQL Server]
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8834e05acdbb3a38fb8688e96c75935da6778563
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fe41d7e680b358f3a5c775b0e10181281409b39
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74762855"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010368"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回最後執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的錯誤號碼。  
   
@@ -71,7 +71,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. 利用 @@ERROR 有條件地結束程序  
- 下列範例會在預存程序中的 `DELETE` 陳述式之後，使用 `IF...ELSE` 陳述式來測試 `@@ERROR`。 `@@ERROR` 變數的值決定了傳給呼叫端程式來指出程序成功或失敗的傳回碼。  
+ 下列範例會在預存程序中的 `IF...ELSE` 陳述式之後，使用 `@@ERROR` 陳述式來測試 `DELETE`。 `@@ERROR` 變數的值決定了傳給呼叫端程式來指出程序成功或失敗的傳回碼。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -105,7 +105,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>C. 搭配 @@ROWCOUNT使用 @@ERROR  
+### <a name="c-using-error-with-rowcount"></a>C. 搭配 @@ERROR使用 @@ROWCOUNT  
  下列範例搭配 `@@ERROR` 使用 `@@ROWCOUNT` 來驗證 `UPDATE` 陳述式的作業。 `@@ERROR` 的值用來針對任何錯誤指示來進行檢查，而 `@@ROWCOUNT` 則用來確保更新已成功套用至資料表中的資料列。  
   
 ```sql  

@@ -16,18 +16,18 @@ helpviewer_keywords:
 - COT function
 - cotangent
 ms.assetid: c87a9dac-e398-4125-80c3-7df3c2ce6b63
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c98bfb05aad9e69fe3f3bfcb0be602d8cacd11a4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6388253bcdc7bacecdcb544885e4e22fecc48fc1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832139"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011526"
 ---
 # <a name="cot-transact-sql"></a>COT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 這是一種數學函數，會在指定的 **float** 運算式中，傳回指定角度 (以弧度為單位) 的三角餘切函數。
   
@@ -50,9 +50,9 @@ COT ( float_expression )
 這個範例會傳回指定角度的 `COT` 值。
   
 ```sql
-DECLARE @angle float;  
+DECLARE @angle FLOAT;  
 SET @angle = 124.1332;  
-SELECT 'The COT of the angle is: ' + CONVERT(varchar,COT(@angle));  
+SELECT 'The COT of the angle is: ' + CONVERT(VARCHAR, COT(@angle));  
 GO  
 ```  
   

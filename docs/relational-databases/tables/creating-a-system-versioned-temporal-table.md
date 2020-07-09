@@ -11,16 +11,16 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8797219e96083d65d2bad83c83c8aebba783b207
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 828919e706445e1ff2c100d19618888a9aca7d7f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81299051"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002109"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>建立系統建立版本的時態表
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 若要建立由系統設定版本的時態表，您可選擇三種方式，其依指定記錄資料表的方式而異︰
 
@@ -149,7 +149,7 @@ ALTER TABLE InsurancePolicy
         SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN
             CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()
       , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN
-            CONSTRAINT DF_SysEnd DEFAULT CONVERT(DATETIME2, '9999-12-31 23:59:59'),
+            CONSTRAINT DF_SysEnd DEFAULT CONVERT(DATETIME2, '9999-12-31 23:59:59.9999999'),
         PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);
 GO
 

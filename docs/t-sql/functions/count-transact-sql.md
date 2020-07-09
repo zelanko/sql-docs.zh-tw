@@ -20,18 +20,18 @@ helpviewer_keywords:
 - number of group items
 - COUNT function [Transact-SQL]
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e0c4ebccf102051d3144ca8a9955bfa0f1aef1ee
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026487"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011490"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此函數會傳回群組中找到的項目數。 `COUNT` 的運作方式類似 [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 函數。 這些函數唯一的差別就是其傳回值的資料類型。 `COUNT` 一律會傳回 **int** 資料類型值。 `COUNT_BIG` 一律會傳回 **bigint** 資料類型值。
   
@@ -39,7 +39,7 @@ ms.locfileid: "68026487"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 
 -- Aggregation Function Syntax  
 COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )  
@@ -76,7 +76,7 @@ COUNT(DISTINCT *expression*) 會針對群組中的每個資料列來評估 *expr
   
 若傳回的值超過 2^31-1，`COUNT` 會傳回錯誤。 這些情況下，請改用 `COUNT_BIG`。
   
-***未搭配*** OVER 和 ORDER BY 子句使用時，`COUNT` 是具決定性函數。 ***搭配*** OVER 和 ORDER BY 子句時，則不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
+`COUNT`未搭配 ***OVER 和 ORDER BY 子句使用時，*** 是具決定性函數。 ***搭配*** OVER 和 ORDER BY 子句時，則不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   
 ## <a name="examples"></a>範例  
   

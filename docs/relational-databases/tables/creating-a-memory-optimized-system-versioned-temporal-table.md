@@ -11,16 +11,16 @@ ms.assetid: 1c1fc682-bf5b-4096-a0ff-3235d71c205a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79831c782524a1a9b0b7acea55ccce437e5733fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3eabb6fd9e0089140d2670c708c2190de649eabb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123631"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002128"
 ---
 # <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>建立記憶體最佳化的系統版本設定時態表
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 類似於建立以磁碟為基礎的記錄資料表，您也可以用數種方式建立記憶體最佳化的時態表。
 

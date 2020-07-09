@@ -18,18 +18,18 @@ helpviewer_keywords:
 - code [SQL Server], ASCII
 - leftmost character of expression
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b982d357668703a54b06124a8bb3edf0c963463
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37c3298f693754943e355f91ee6e6b15bb6ab66a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74119184"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002282"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 傳回字元運算式最左側字元的 ASCII 字碼值。
   
@@ -37,7 +37,7 @@ ms.locfileid: "74119184"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 ASCII ( character_expression )  
 ```  
   
@@ -49,7 +49,7 @@ ASCII ( character_expression )
  **int**  
   
 ## <a name="remarks"></a>備註
-ASCII 代表「美國訊息交換標準代碼」(**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange)。 它是現代電腦的字元編碼標準。 如需 ASCII 字元清單，請參閱 [ASCII](https://www.wikipedia.org/wiki/ASCII) 的＜可列印字元＞(Printable characters) 一節。
+ASCII 代表「美國訊息交換標準代碼」(**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange)。 它是現代電腦的字元編碼標準。 如需 ASCII 字元清單，請參閱 [ASCII](https://www.wikipedia.org/wiki/ASCII) 的＜可列印字元＞  (Printable characters) 一節。
 
 ASCII 是一組 7 位元的字元集。 擴充 ASCII 或高 ASCII 是一組 8 位元的字元集，其不會由 `ASCII` 函式進行處理。 
 

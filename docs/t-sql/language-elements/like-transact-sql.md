@@ -31,15 +31,15 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fca606be32cc3b9e73defd52a30257ad09c0e099
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75884000"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007318"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   判斷特定字元字串是否符合指定的模式。 模式中可以包含一般字元及萬用字元。 在模式比對期間，一般字元必須與字元字串中所指定的字元完全相符。 不過，萬用字元可以符合任意字元字串片段。 使用萬用字元要比使用 = 與 != 字串比較運算子能讓 LIKE 運算子更有彈性。 如果有任何一個引數不是字元字串資料類型，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將它轉換成字元字串資料類型 (若可能的話)。  
   
@@ -47,13 +47,13 @@ ms.locfileid: "75884000"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 match_expression [ NOT ] LIKE pattern  
@@ -268,7 +268,7 @@ Gail                  Westover             305-555-0100
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. 使用 ESCAPE 子句  
- 下列範例會利用 `ESCAPE` 子句和逸出字元來尋找 `mytbl2` 資料表 `c1` 資料行中完全相符的 `10-15%` 字元字串。  
+ 下列範例會利用 `ESCAPE` 子句和逸出字元來尋找 `10-15%` 資料表 `c1` 資料行中完全相符的 `mytbl2` 字元字串。  
   
 ```sql
 USE tempdb;  
@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. 使用 LIKE 搭配 _ 萬用字元  
- 下列範例會在 `DimEmployee` 資料表中尋找區碼是以 `6` 開頭且以 `2` 結尾的所有電話號碼。 % 萬用字元會包含在搜尋模式的結尾，用來比對電話資料行值中的所有後續字元。  
+ 下列範例會在 `6` 資料表中尋找區碼是以 `2` 開頭且以 `DimEmployee` 結尾的所有電話號碼。 % 萬用字元會包含在搜尋模式的結尾，用來比對電話資料行值中的所有後續字元。  
   
 ```sql  
 -- Uses AdventureWorks  

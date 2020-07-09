@@ -17,15 +17,15 @@ ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eebab07a066192b473aaf0a303515aa894be2aec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b11a58d6b5b838fc5add9f8303be0758a6ce7c31
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136816"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000949"
 ---
 # <a name="ole-automation-result-sets"></a>OLE Automation 結果集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   如果 OLE Automation 屬性或方法以一維或二維陣列 (One or two Dimension Array) 的形式傳回資料，該陣列將以結果集 (Result Set) 形式傳給用戶端：  
   
 -   一維陣列會以單一資料列結果集的方式傳回給用戶端，這個資料列中有多個資料行，資料行數目等於陣列的元素數目。 例如，陣列 (10) 將傳回 10 個資料行的單一資料列。  

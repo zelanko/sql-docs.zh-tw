@@ -19,18 +19,18 @@ helpviewer_keywords:
 - CURRENT_USER
 - users [SQL Server], names
 ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6901afbb6d0faa26c4977c15a3836bdeab68bb4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a912321662150a17062db6921276b61c28fa1f8e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844618"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011467"
 ---
 # <a name="current_user-transact-sql"></a>CURRENT_USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此函式會傳回目前使用者的名稱。 此函式相當於 `USER_NAME()`。
   
@@ -61,7 +61,7 @@ GO
 ```  
   
 ### <a name="b-using-current_user-as-a-default-constraint"></a>B. 使用 CURRENT_USER 做為 DEFAULT 條件約束  
-此範例會建立一份資料表，利用 `CURRENT_USER` 作為銷售資料列之 `order_person` 資料行的 `DEFAULT` 條件約束。
+此範例會建立一份資料表，利用 `CURRENT_USER` 作為銷售資料列之 `DEFAULT` 資料行的 `order_person` 條件約束。
   
 ```sql
 USE AdventureWorks2012;  

@@ -34,15 +34,15 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0eca253ab85302555b84e35a3118b1e8a0873402
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981928"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007342"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 根據工作階段識別碼或工作單位 (UOW) 來結束使用者處理序。 如果指定的工作階段識別碼或 UOW 有許多工作要復原，KILL 陳述式可能需要花一些時間來完成。 特別是當牽涉到復原較長的交易時，處理序需要花較長時間來完成。  
   
@@ -78,7 +78,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 _UOW_  
-**適用於**：([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
 識別分散式交易的工作單位識別碼 (UOW)。 _UOW_ 是可以從 sys.dm_tran_locks 動態管理檢視的 request_owner_guid 資料行取得的 GUID。 您也可以從錯誤記錄檔或透過 MS DTC 監視器來取得 _UOW_。 如需有關監視分散式交易的詳細資訊，請參閱 MS DTC 文件集。  
   

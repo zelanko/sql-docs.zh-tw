@@ -18,15 +18,15 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 151254168260a2d7a5a48747daee4de662bdfb70
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d36cb40971fc371022eb71dc922eb22a198bab9e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980528"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001714"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定欄位與資料列結束字元 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   針對字元資料欄位，選擇性結束字元可讓您使用「欄位結束字元」  標示資料檔案中每個欄位的結尾，並使用「資料列結束字元」  標示每個資料列的結尾。 結束字元是指示程式從欄位或資料列結束與開始的交接處讀取資料檔的一種方法。  
   
 > [!IMPORTANT]

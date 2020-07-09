@@ -24,18 +24,18 @@ helpviewer_keywords:
 - line feed
 - printing ASCII values
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56ee58814308eae967d0b68774be9fe62c37d1e1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f0a56a5c8cc76ab2358d2a89d2b5290905092bf6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823301"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002205"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此函式會將 **int** ASCII 代碼轉換成字元值。
   

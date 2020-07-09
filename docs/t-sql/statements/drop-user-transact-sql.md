@@ -23,15 +23,15 @@ ms.assetid: d6e0e21a-7568-4321-b6d6-bcfba183a719
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99f4c5ac155f821dfaf69f335629730d99eb6933
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2db720e53ae623a63a70271ea6560146e5f6931
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072088"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011076"
 ---
 # <a name="drop-user-transact-sql"></a>DROP USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   從目前資料庫移除使用者。  
   

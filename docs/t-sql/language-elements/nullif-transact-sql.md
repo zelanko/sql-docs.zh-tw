@@ -21,15 +21,15 @@ ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28c331cd810e905a14fa17d6e212fee331da74f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 534c9fb569f8098ed4a9cf11bb3ac002f62c555d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844382"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012169"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   如果兩個指定的運算式相等，便傳回 Null 值。 例如，`SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` 會針對第一個資料行 (4 和 4) 傳回 NULL，因為這兩個輸入值一樣。 第二個資料行會傳回第一個值 (5)，因為這兩個輸入值不同。 
   
@@ -63,9 +63,9 @@ NULLIF ( expression , expression )
 ```sql  
 CREATE TABLE dbo.budgets  
 (  
-   dept            tinyint   IDENTITY,  
-   current_year      decimal   NULL,  
-   previous_year   decimal   NULL  
+   dept            TINYINT   IDENTITY,  
+   current_year    DECIMAL   NULL,  
+   previous_year   DECIMAL   NULL  
 );  
 INSERT budgets VALUES(100000, 150000);  
 INSERT budgets VALUES(NULL, 300000);  
@@ -96,7 +96,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, MakeFlag, FinishedGoodsFlag,   
-   NULLIF(MakeFlag,FinishedGoodsFlag)AS 'Null if Equal'  
+   NULLIF(MakeFlag,FinishedGoodsFlag) AS 'Null if Equal'  
 FROM Production.Product  
 WHERE ProductID < 10;  
 GO  
@@ -116,9 +116,9 @@ GO
   
 ```sql  
 CREATE TABLE budgets (  
-   dept           tinyint,  
-   current_year   decimal(10,2),  
-   previous_year  decimal(10,2)  
+   dept           TINYINT,  
+   current_year   DECIMAL(10,2),  
+   previous_year  DECIMAL(10,2)  
 );  
   
 INSERT INTO budgets VALUES(1, 100000, 150000);  

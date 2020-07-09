@@ -18,18 +18,18 @@ helpviewer_keywords:
 - tied rows [SQL Server]
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89cfdcb49734897dbc41552158c9faad850f331a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 569e02b434d3e2f8d919b30fb91dc922f0588a5c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68135917"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005936"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此函式會傳回結果集分割區內每個資料列的次序，次序值中沒有任何間距。 特定資料列的次序是一加上該特定資料列前面之相異次序值的數目。  
   
@@ -157,7 +157,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 |名字|姓氏|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
-|Michael|{1}Blythe{2}|1|1|1|1|4557045.0459|98027|  
+|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
 |Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
 |Jillian|Carson|3|1|1|1|3857163.6332|98027|  
 |Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
@@ -174,7 +174,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D：在分割區內排列資料列次序  
+### <a name="d-ranking-rows-within-a-partition"></a>D.排序分割區中的資料列  
 此範例會根據其總銷售額，排列每個銷售領域內的銷售代表。 `DENSE_RANK` 會依 `SalesTerritoryGroup` 分割資料列集，並依 `SalesAmountQuota` 排序結果集。  
   
 ```  
@@ -215,7 +215,7 @@ Tsoflias           1687000.0000  Pacific              1
  [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
  [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
  [次序函式 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
- [函數](../../t-sql/functions/functions.md)  
+ [函式](../../t-sql/functions/functions.md)  
   
   
 

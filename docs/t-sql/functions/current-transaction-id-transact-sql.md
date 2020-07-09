@@ -15,17 +15,17 @@ f1_keywords:
 helpviewer_keywords:
 - CURRENT_TRANSACTION_ID function
 ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: f6ebf56f10af9da27318beef036cbce510882579
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 640fd2b0f64d6125279ad8d9446225bb9d54d945
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823943"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011449"
 ---
 # <a name="current_transaction_id-transact-sql"></a>CURRENT_TRANSACTION_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 此函式會傳回目前工作階段中目前交易的交易識別碼。
   

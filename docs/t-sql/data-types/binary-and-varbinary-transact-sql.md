@@ -21,15 +21,15 @@ ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f844874da3ba4c7a644331f521293e1c0f94fed5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8013a0a8cefc9623500a65df5560333a63632af
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940245"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002544"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary 和 varbinary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 固定長度或可變長度的二進位資料類型。
   

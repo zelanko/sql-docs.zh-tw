@@ -11,16 +11,16 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a91cffde531d7d72564df6935a48aff91dae8187
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: 9113071199d8561f2f4521bd8563e7cab275fc34
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550215"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007534"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>資料行存放區索引 - 資料載入指導
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 這些選項和建議可透過使用標準 SQL 大量載入與緩慢插入方法，將資料載入資料行存放區索引。 將資料載入至資料行存放區索引是任何資料倉儲程序中不可或缺的一部分，因為它會將資料移至索引，以準備進行分析。
   

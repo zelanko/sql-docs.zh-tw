@@ -21,15 +21,15 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 741b25c1e4fcbc0f7e2bf8b637d58571b85a9872
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8928abaed7125e0cc27cfe7bd0a9069727f0f191
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636285"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007389"
 ---
 # <a name="expressions-transact-sql"></a>運算式 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   這是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 進行評估以取得單一資料值的符號和運算子組合。 簡單運算式可以是單一常數、變數、資料行或純量函數。 運算子可用來將兩個或更多簡單運算式聯結成複雜運算式。  
   

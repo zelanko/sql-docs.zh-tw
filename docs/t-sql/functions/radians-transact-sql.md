@@ -18,15 +18,15 @@ ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65c66c59874da54a824252fc487fb4b270fdf224
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 02a7590fa122dbfbd23c8a647ad800becfdc932c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823762"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003815"
 ---
 # <a name="radians-transact-sql"></a>RADIANS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   當輸入數值運算式時，傳回弧度 (以角度為單位)。  
   
@@ -68,34 +68,34 @@ GO
   
 ```  
 -- First value is -45.01.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = -45.01  
 SELECT 'The RADIANS of the angle is: ' +  
-   CONVERT(varchar, RADIANS(@angle))  
+   CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 -- Next value is -181.01.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = -181.01  
 SELECT 'The RADIANS of the angle is: ' +  
-   CONVERT(varchar, RADIANS(@angle))  
+   CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 -- Next value is 0.00.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = 0.00  
 SELECT 'The RADIANS of the angle is: ' +  
-   CONVERT(varchar, RADIANS(@angle))  
+   CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 -- Next value is 0.1472738.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = 0.1472738  
 SELECT 'The RADIANS of the angle is: ' +  
-    CONVERT(varchar, RADIANS(@angle))  
+    CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 -- Last value is 197.1099392.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = 197.1099392  
 SELECT 'The RADIANS of the angle is: ' +  
-   CONVERT(varchar, RADIANS(@angle))  
+   CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 ```  
   

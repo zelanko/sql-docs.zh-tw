@@ -17,18 +17,18 @@ helpviewer_keywords:
 - minimum values [SQL Server]
 - values [SQL Server], minimum
 ms.assetid: 56cf6ec5-34f5-47e3-a402-7129039d4429
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68f9d07a2129424a59890f50b884b4fe5f4f70e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eebd83f0f46545691b953eb92f84aa39efc5eab3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68130237"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005113"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回運算式中的最小值。 後面可接續 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
@@ -92,7 +92,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
- 下列範例會將 MIN、MAX、AVG 和 COUNT 函數搭配 OVER 子句一起使用，為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `HumanResources.Department` 資料表中的各部門提供彙總值。  
+ 下列範例會將 MIN、MAX、AVG 和 COUNT 函數搭配 OVER 子句一起使用，為 `HumanResources.Department` 資料庫之 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中的各部門提供彙總值。  
   
 ```  
 SELECT DISTINCT Name  

@@ -29,15 +29,15 @@ ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1385e35ec9cd4f02e66812783c2d24cdd414efe8
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3b733ebc285710deec8ab7b2161513f90c8a22d3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634055"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002467"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   移除先前授與或拒絕的權限。  
   

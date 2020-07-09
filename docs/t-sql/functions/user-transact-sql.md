@@ -23,15 +23,15 @@ ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21ae6663e264b84987b50ea48ffc91f06c9f2052
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b0e27b87af8d8a1409225c3c3b576012923a94c2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832070"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004064"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   當未指定預設值時，允許將目前使用者之資料庫使用者名稱的系統提供值插入資料表。  
   

@@ -32,16 +32,16 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03690af5e9ec4ce835372378ca3bdf13eff3073a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c7694d4675d37045b7b463e950d1811cec197ee4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152037"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011939"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>藉由重新組織或重建索引來解決索引片段
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 本文描述索引重組如何發生，並討論其對查詢效能的影響。 當判斷[索引中存在的片段數量](#detecting-the-amount-of-fragmentation)之後，您可在所選擇的工具中執行 Transact-SQL 命令或使用 SQL Server Management Studio，藉由[重新組織索引](#reorganize-an-index)或[重建索引](#rebuild-an-index)來重組索引。
 

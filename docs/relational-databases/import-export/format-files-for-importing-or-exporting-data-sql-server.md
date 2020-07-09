@@ -16,16 +16,16 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 683ed7310ac90e37c4bcce24080f879082c6c410
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f441380805e443cc13617a5477d3083ee1dc62d5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980440"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006251"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>格式化匯入和匯出資料的檔案 (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 當您將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，或從資料表大量匯出資料時，可以使用「格式檔案」  來儲存大量匯出或大量匯入資料所需的所有格式資訊。 這包含相對於該資料表之資料檔中各欄位的格式資訊。
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援兩種類型的格式檔案：XML 格式和非 XML 格式檔案。 非 XML 格式檔案和 XML 格式檔案都會將每個欄位的描述包含在資料檔中，而且 XML 格式檔案也包含對應資料表資料行的描述。 一般而言，XML 和非 XML 格式檔案可以互換使用， 但是，仍建議您在新的格式檔案中使用 XML 語法，因為 XML 比非 XML 格式檔案多了一些優點。 如需詳細資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)。

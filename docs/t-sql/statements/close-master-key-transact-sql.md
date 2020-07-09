@@ -22,15 +22,15 @@ ms.assetid: bb04ef7a-9f3a-437e-a6f9-ba0204082cb9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d78a3024214c960f36405c321ed75371ff9d3a27
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e11aa038e65daf562c79b691cd6e51b7043602b0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68141166"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010834"
 ---
 # <a name="close-master-key-transact-sql"></a>CLOSE MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   關閉目前資料庫的主要金鑰。  
   

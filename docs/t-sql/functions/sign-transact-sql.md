@@ -24,15 +24,15 @@ ms.assetid: c3a98b52-6fbe-4127-a5c9-8a4922e83e28
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec2e33afb82d3b3a733f98670c20de36681eabfa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8de8744ebde441e48585e8e754d995b1e9755313
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828586"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005059"
 ---
 # <a name="sign-transact-sql"></a>SIGN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回指定運算式的正 (+1)、零 (0) 或負 (-1) 號。  
   

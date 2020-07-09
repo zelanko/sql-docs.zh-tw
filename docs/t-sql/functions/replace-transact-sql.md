@@ -22,15 +22,15 @@ ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35ff62edf3d33ba291f7689c6850f525578087c0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ecafa13363b558ba9d613591ed5bf0d942be80c8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823717"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003746"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 將指定字串值的所有相符項目取代成另一個字串值。  
   

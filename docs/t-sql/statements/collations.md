@@ -19,16 +19,16 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1289f466a5a031b209c7d5a2f0829caf5c3e3057
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7a706193058256747ba1ec2fa71c7641cdecc4e8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631994"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011328"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 定義資料庫或資料表資料行的定序，或套用至字元字串運算式時的定序轉換作業。 定序名稱可以是 Windows 定序名稱或 SQL 定序名稱。 若在資料庫建立期間未指定，會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設定序指派給資料庫。 若未於資料表資料行建立期間指定，會將資料庫的預設定序指派給資料行。
 

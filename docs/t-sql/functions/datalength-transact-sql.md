@@ -20,17 +20,17 @@ helpviewer_keywords:
 - lengths [SQL Server], data
 ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
 author: pmasl
-ms.author: mikeray
+ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ed31eae6817216a694337ed5bc606dcba52fb89
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 656c66d088d468745666637d6412f93fc0da257b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844511"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011444"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此函式會傳回用來代表任何運算式的位元組數目。
 
@@ -50,7 +50,7 @@ DATALENGTH ( expression )
 任何資料類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>傳回類型
-如果 *expression* 具有 **nvarchar(max)** 、**varbinary(max)** 或 **varchar(max)** 資料類型，則為 **bigint**；否則為 **int**。
+如果 **expression** 具有 *nvarchar(max)* 、**varbinary(max)** 或 **varchar(max)** 資料類型，則為 **bigint**；否則為 **int**。
   
 ## <a name="remarks"></a>備註  
 對於可以儲存可變長度資料的資料類型，`DATALENGTH` 會非常有用：
@@ -70,7 +70,7 @@ DATALENGTH ( expression )
 > 使用 [LEN](../../t-sql/functions/len-transact-sql.md) 傳回編碼成所給定字串運算式的字元數目，使用 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 則傳回所給定字串運算式的大小 (以位元組為單位)。 取決於資料行中所使用的資料類型和編碼類型而，這些輸出可能會有所不同。 如需不同編碼類型之間儲存體差異的詳細資訊，請參閱[定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。
 
 ## <a name="examples"></a>範例  
-此範例會尋找 `Product` 資料表中 `Name` 資料行的長度：
+此範例會尋找 `Name` 資料表中 `Product` 資料行的長度：
   
 ```sql
 USE AdventureWorks2016  

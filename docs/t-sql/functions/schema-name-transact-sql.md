@@ -19,15 +19,15 @@ ms.assetid: 20071b77-2b6e-4ce7-a8e3-fa71480baf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e74bc65cde6d88b1329a4fea8c4ea650963c8816
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0b852897e21bdcaaf11ff61240ab84e692dfe326
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828584"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003658"
 ---
 # <a name="schema_name-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回與結構描述識別碼相關聯的結構描述名稱。  
   

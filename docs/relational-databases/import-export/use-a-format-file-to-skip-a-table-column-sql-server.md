@@ -2,7 +2,7 @@
 title: 使用格式檔案以略過資料表資料行 (SQL Server) | Microsoft 文件
 description: 本文說明當跳過的資料行資料不存在於來源資料檔案中時，如何使用格式檔案來跳過資料表資料行的匯入。
 ms.custom: ''
-ms.date: 02/15/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a568d1bfbfb461a8749699e0f7e175ed2c002f9e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5a83155dd566812248e37d509e34600a1beeb677
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980408"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007193"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式檔案以略過資料表資料行 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 本文說明當跳過的資料行資料不存在於來源資料檔案中時，如何使用格式檔案來跳過資料表資料行的匯入。 資料檔案可包含少於目的地資料表中資料行數量的欄位；也就是說，您可以跳過匯入資料行，但必須是目的資料表中，下列兩項條件中至少一項為 True 時：
 -   跳過的資料行可為 Null。
@@ -46,7 +46,7 @@ GO
   
 本文中的範例也會使用範例資料檔案 `myTestSkipCol2.dat`。 此資料檔案只包含兩個欄位，但目的地資料表包含三個資料行。
 
-```  
+```
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
@@ -221,9 +221,9 @@ GO
 
 若要透過使用 `OPENROWSET(BULK...)` 來使用 XML 格式檔案跳過資料表資料行，您必須在選取清單和目標資料表中提供明確的資料行清單，如下所示：  
   
-    ```sql
-    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
-    ```
+```sql
+INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
+```
 
 下列範例會使用 `OPENROWSET` 大量資料列集提供者和 `myTestSkipCol2.xml` 格式檔案。 此範例會將 `myTestSkipCol2.dat` 資料檔案大量匯入 `myTestSkipCol` 資料表。 此陳述式會依需要，在選取清單還有目標資料表中包含明確的資料行清單。  
   

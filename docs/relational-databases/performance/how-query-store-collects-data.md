@@ -13,15 +13,15 @@ ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 23b3d551d11ee09875f49be1bd553adcb9d9759c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71974365"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005997"
 ---
 # <a name="how-query-store-collects-data"></a>查詢存放區如何收集資料
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 SQL Server 查詢存放區可當作飛行資料記錄器來使用，不斷地收集與查詢和計劃相關的編譯和執行階段資訊。 查詢相關的資料會保存於內部資料表，並透過一組檢視呈現給使用者。
   

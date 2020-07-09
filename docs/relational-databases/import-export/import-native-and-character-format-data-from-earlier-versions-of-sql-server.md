@@ -17,15 +17,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 581888db5b930ce6f2b44a991e3ef1ef2f08525a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 68892ebd57fb83578eda6090e3baead0bb7b4ed0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980558"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007213"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>從舊版 SQL Server 匯入原生與字元格式資料
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您可以透過 **-V** 參數使用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]bcp [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、 **或** 匯入原生與字元格式資料。 **-V** 參數會讓 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用指定之舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的資料類型，而資料檔案格式將會與舊版中的資料檔案格式相同。  
   
  若要為資料檔案指定舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請使用 **-V** 參數搭配下列其中一個限定詞：  

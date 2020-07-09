@@ -21,15 +21,15 @@ ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09f32949faca6994d460284a56e2b08315f1b43b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28fea42084d31073cb2b5d9fa93e63b1505dd817
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072256"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007579"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (字串串連) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   這是字串運算式中的運算子，用來將兩個或更多字元或二進位字串、資料行，或字串和資料行名稱的組合，串連成單一運算式 (字串運算子)。  例如 `SELECT 'book'+'case';` 會傳回 `bookcase`。
   

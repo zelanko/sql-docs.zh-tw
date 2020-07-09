@@ -19,18 +19,18 @@ helpviewer_keywords:
 - TRY...CATCH [SQL Server]
 - CATCH block
 ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e38e57bf64d20dcc4e16a8d7b31c372d877c038f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35241a392ef91c13b48da1bcdfa66a707d4c7680
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67904389"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010385"
 ---
 # <a name="error_message-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此函式會傳回造成執行 TRY...CATCH 建構的 CATCH 區塊之錯誤的訊息文字。  
   
@@ -53,7 +53,7 @@ ERROR_MESSAGE ( )
 ## <a name="remarks"></a>備註  
 `ERROR_MESSAGE` 支援在 CATCH 區塊範圍內的任何位置呼叫。  
   
-不論執行多少次，或在 `CATCH` 區塊範圍內的哪個位置執行，`ERROR_MESSAGE` 都會傳回相關的錯誤訊息。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
+不論執行多少次，或在 `ERROR_MESSAGE` 區塊範圍內的哪個位置執行，`CATCH` 都會傳回相關的錯誤訊息。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
   
 在巢狀 `CATCH` 區塊中，`ERROR_MESSAGE` 會參考該 `CATCH` 區塊之 `CATCH` 區塊範圍特定的錯誤訊息。 例如，外部 TRY...CATCH 建構的 `CATCH` 區塊可能會有內部 `TRY...CATCH` 建構。 在該內部 `CATCH` 區塊內，`ERROR_MESSAGE` 會傳回叫用內部 `CATCH` 區塊之錯誤的訊息。 如果 `ERROR_MESSAGE` 是在外部 `CATCH` 區塊中執行，它會傳回叫用該外部 `CATCH` 區塊之錯誤的訊息。  
   

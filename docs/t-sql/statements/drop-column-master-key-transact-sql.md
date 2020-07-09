@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: f6267189a83816f1c77740e5df176cc2dda86428
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b86ea43311a5c7a68e3b03df09c8e63d13eb024
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594151"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003167"
 ---
 # <a name="drop-column-master-key-transact-sql"></a>DROP COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   從資料庫中卸除資料行主要金鑰。 這是中繼資料作業。  
   

@@ -24,15 +24,15 @@ ms.assetid: 7d5b923f-0c3e-4af9-b39b-132807a6d5b3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6223a09d8b5c04c425306246a5e61a5c408b2ad1
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8dafb369a94eda03a959c26b4dfe12df03c7e860
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633813"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005096"
 ---
 # <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回結構描述範圍物件的資料庫物件名稱。 如需結構描述範圍物件的清單，請參閱 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。  
   
@@ -95,7 +95,7 @@ GO
 ```  
 USE AdventureWorks2012;  
 GO  
-DECLARE @MyID int;  
+DECLARE @MyID INT;  
 SET @MyID = (SELECT OBJECT_ID('AdventureWorks2012.Production.Product',  
     'U'));  
 SELECT name, object_id, type_desc  
@@ -128,7 +128,7 @@ SELECT QUOTENAME(DB_NAME(database_id))
     + N'.'   
     + QUOTENAME(OBJECT_NAME(object_id, database_id))  
     , *   
-FROM sys.dm_db_index_operational_stats(null, null, null, null);  
+FROM sys.dm_db_index_operational_stats(NULL, NULL, NULL, NULL);  
 GO  
 ```  
   

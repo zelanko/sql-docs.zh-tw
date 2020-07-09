@@ -49,20 +49,20 @@ helpviewer_keywords:
 - functions, ODBC WEEK
 - HOUR ODBC function
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fd8173f0c29855fc4553dedcd9ac47ddc909f57
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ebe21e82e6065aa28e4967b7d2f4d13f0fafe9d6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76909828"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003821"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 純量函數 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用 [ODBC 純量函式](https://go.microsoft.com/fwlink/?LinkID=88579)。 這些陳述式會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行解譯。 它們可用於預存程序和使用者自訂函數中。 這些項目包括字串、數值、時間、日期、間隔和系統函數。  
+  您可以在 [ 陳述式中使用 ](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC 純量函式[!INCLUDE[tsql](../../includes/tsql-md.md)]。 這些陳述式會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行解譯。 它們可用於預存程序和使用者自訂函數中。 這些項目包括字串、數值、時間、日期、間隔和系統函數。  
   
 ## <a name="usage"></a>使用量  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
@@ -109,9 +109,9 @@ ms.locfileid: "76909828"
   
 ```  
 CREATE PROCEDURE dbo.ODBCprocedure  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
 AS  
 SELECT {fn OCTET_LENGTH( @string_exp )};  
 ```  
@@ -121,13 +121,13 @@ SELECT {fn OCTET_LENGTH( @string_exp )};
   
 ```  
 CREATE FUNCTION dbo.ODBCudf  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
-RETURNS int  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
+RETURNS INT  
 AS  
 BEGIN  
-DECLARE @len int  
+DECLARE @len INT  
 SET @len = (SELECT {fn OCTET_LENGTH( @string_exp )})  
 RETURN(@len)  
 END ;  
@@ -156,7 +156,7 @@ SELECT {fn CURRENT_DATE( )};
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns 10:27:11.973000  
   
-DECLARE @date_exp nvarchar(30) = '2007-04-21 01:01:01.1234567';  
+DECLARE @date_exp NVARCHAR(30) = '2007-04-21 01:01:01.1234567';  
 SELECT {fn DAYNAME( @date_exp )};  
 -- Returns Saturday  
 SELECT {fn DAYOFMONTH( @date_exp )};  
@@ -184,9 +184,9 @@ SELECT {fn WEEK( @date_exp )};
   
 ```  
 CREATE PROCEDURE dbo.ODBCprocedure  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
 AS  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 ```  
@@ -196,13 +196,13 @@ SELECT {fn BIT_LENGTH( @string_exp )};
   
 ```  
 CREATE FUNCTION dbo.ODBCudf  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
-RETURNS int  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
+RETURNS INT  
 AS  
 BEGIN  
-DECLARE @len int  
+DECLARE @len INT  
 SET @len = (SELECT {fn BIT_LENGTH( @string_exp )})  
 RETURN(@len)  
 END ;  
@@ -216,7 +216,7 @@ SELECT dbo.ODBCudf('Returns the length in bits.');
  下列 SELECT 陳述式會使用 ODBC 函數：  
   
 ```  
-DECLARE @string_exp nvarchar(4000) = 'Returns the length.';  
+DECLARE @string_exp NVARCHAR(4000) = 'Returns the length.';  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 -- Returns 304  
   
@@ -227,7 +227,7 @@ SELECT {fn CURRENT_DATE( )};
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns the time  
   
-DECLARE @date_exp nvarchar(30) = '2007-04-21 01:01:01.1234567';  
+DECLARE @date_exp NVARCHAR(30) = '2007-04-21 01:01:01.1234567';  
 SELECT {fn DAYNAME( @date_exp )};  
 -- Returns Saturday  
 SELECT {fn DAYOFMONTH( @date_exp )};  
@@ -250,4 +250,3 @@ SELECT {fn WEEK( @date_exp )};
   
 ## <a name="see-also"></a>另請參閱  
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
-  

@@ -21,15 +21,15 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82ee5bbda78f41796134a2d1ad3a639f76748bcd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 976fae5e1f906e80248ac11d1f89e889bcbb5e0e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287082"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000525"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 交易記錄架構與管理指南
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫都有交易記錄檔，這個記錄檔會記錄所有交易，以及個別交易在資料庫中所做的修改。 交易記錄是資料庫的重要元件，而且如果系統故障，就可能需要交易記錄讓資料庫返回一致的狀態。 本指南提供有關交易記錄實體及邏輯架構的資訊。 了解此架構可提升交易記錄管理的效能。  
 

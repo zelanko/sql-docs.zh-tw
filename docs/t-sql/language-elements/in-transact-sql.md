@@ -23,15 +23,15 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99d179218e52801da593eaba6ef9ff5c7dde5ee0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 728d11420c1a91e581fa153020174f2d4339311f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075065"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007354"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   判斷指定的值是否符合子查詢或清單中的任何值。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68075065"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 test_expression [ NOT ] IN   
     ( subquery | expression [ ,...n ]  
     )   
@@ -174,7 +174,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-in-and-not-in"></a>D. 使用 IN 和 NOT IN  
- 下列範例會在 `FactInternetSales` 資料表中尋找符合 `DimSalesReason` 資料表中 `SalesReasonKey` 值的所有項目。  
+ 下列範例會在 `FactInternetSales` 資料表中尋找符合 `SalesReasonKey` 資料表中 `DimSalesReason` 值的所有項目。  
   
 ```  
 -- Uses AdventureWorks  
@@ -184,7 +184,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- 下列範例會在 `FactInternetSalesReason` 資料表中尋找不符合 `DimSalesReason` 資料表中 `SalesReasonKey` 值的所有項目。  
+ 下列範例會在 `FactInternetSalesReason` 資料表中尋找不符合 `SalesReasonKey` 資料表中 `DimSalesReason` 值的所有項目。  
   
 ```  
 -- Uses AdventureWorks  

@@ -22,15 +22,15 @@ ms.assetid: 874aa29e-c8ad-41e4-a672-900fdc58f1f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8247260f7a0233e255375143c23d5bc1c9e22c28
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b406d794dff5f1bf4880ad67471a9610cb4f7616
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68070188"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003425"
 ---
 # <a name="drop-schema-transact-sql"></a>DROP SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   從資料庫中移除結構描述。  
   

@@ -24,16 +24,16 @@ ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64e05a3498a489cfa16d913b953b39c0d0ccb251
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beba354431da2b0f97c3965148cbf3d09f93d9f4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816840"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010768"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 在 master 資料庫中建立資料庫主要金鑰。
 
@@ -41,14 +41,14 @@ ms.locfileid: "71816840"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 [ ; ]
 ```
 
 ## <a name="arguments"></a>引數
 
-PASSWORD ='*password*' 是用來加密資料庫中主要金鑰的密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 中，*password* 為選擇性。
+PASSWORD ='*password*' 是用來加密資料庫中主要金鑰的密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 在 *和* 中，[!INCLUDE[ssSDS](../../includes/sssds-md.md)]password[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 為選擇性。
 
 ## <a name="remarks"></a>備註
 

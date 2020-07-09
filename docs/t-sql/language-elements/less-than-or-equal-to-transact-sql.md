@@ -23,15 +23,15 @@ ms.assetid: 1f05474c-0377-48cb-b567-9d85d0c40479
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5209f679888833a532849a694f0683c6d1283b13
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c50b74397779a144168e02d46dc3035f5165313
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68122242"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007328"
 ---
 # <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;= (小於或等於) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   比較兩個運算式 (比較運算子)。 當您在比較非 Null 運算式時，如果左運算元的值小於或等於右運算元，則結果為 TRUE，否則結果就是 FALSE。  
   

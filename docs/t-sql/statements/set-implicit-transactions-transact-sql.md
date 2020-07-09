@@ -24,15 +24,15 @@ ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cd7682ec9377fe0163add5986bd0cc406d325cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eba14b85c18ed8f64288839f5758ed4c4e456e08
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67928952"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004977"
 ---
 # <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   將連線的 BEGIN TRANSACTION 模式設定為 *implicit*。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67928952"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
@@ -54,6 +54,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |CREATE|Insert|TRUNCATE TABLE|  
 |刪除|OPEN|UPDATE|  
 |DROP|。|。|  
+||||
   
  當設定為 OFF，每個前面的 T-SQL 陳述式會受限於看不見的 BEGIN TRANSACTION 和看不見的 COMMIT TRANSACTION 陳述式。 當設定為 OFF 時，我們稱交易模式為「自動認可」  。 如果您的 T-SQL 程式碼可見地發出 BEGIN TRANSACTION，我們稱交易模式為「明確」  。  
   
@@ -73,7 +74,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
  若要檢視 IMPLICIT_TRANSACTIONS 的目前設定，請執行下列查詢。  
   
-```  
+```sql
 DECLARE @IMPLICIT_TRANSACTIONS VARCHAR(3) = 'OFF';  
 IF ( (2 & @@OPTIONS) = 2 ) SET @IMPLICIT_TRANSACTIONS = 'ON';  
 SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;  
@@ -149,9 +150,9 @@ INSERT INTO dbo.t1 VALUES (42);
 PRINT N'[D.03] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 go  
 COMMIT TRANSACTION;  
-PRINT N'[D.04] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
+PRINT N'[D.04] @@TranCount, after a COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 COMMIT TRANSACTION;  
-PRINT N'[D.05] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
+PRINT N'[D.05] @@TranCount, after another COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 go  
   
 -- Clean up.  

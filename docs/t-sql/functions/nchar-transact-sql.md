@@ -19,15 +19,15 @@ ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 961c596e3fe7887aa09a33bb9d999f8e5bbd73fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9e2994f4b141a9c162101e3bbfb2fe25f0710d89
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828687"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005086"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   依照 Unicode 標準所定義，傳回含指定之整數碼的 Unicode 字元。  
   
@@ -54,7 +54,7 @@ NCHAR ( integer_expression )
   
 ```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
-DECLARE @d nvarchar(10) = N'𣅿';
+DECLARE @d NVARCHAR(10) = N'𣅿';
 -- Old style method.  
 SELECT NCHAR(0xD84C) + NCHAR(0xDD7F);   
   
@@ -71,7 +71,7 @@ SELECT NCHAR(UNICODE(@d));
  下列範例會利用 `UNICODE` 和 `NCHAR` 函數來列印 `UNICODE` 字元字串第二個字元的 `NCHAR` 值和 `København` (Unicode 字元)，以及列印實際的第二個字元 `ø`。  
   
 ```sql  
-DECLARE @nstring nchar(8);  
+DECLARE @nstring NCHAR(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
    NCHAR(UNICODE(SUBSTRING(@nstring, 2, 1)));  
@@ -93,7 +93,7 @@ GO
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  
-DECLARE @position int, @nstring nchar(9);  
+DECLARE @position INT, @nstring NCHAR(9);  
 -- Initialize the current position variable to the first character in   
 -- the string.  
 SET @position = 1;  

@@ -22,15 +22,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9c4a92c1d98bfc7af773cac1be7aedb7113c5b28
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ca3b994cb831e78807b8aeb44c5fe6f8fc454f41
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980376"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001205"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>在大量匯入期間保留 Null 或預設值 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 根據預設，當資料匯入資料表時， [bcp](../../tools/bcp-utility.md) 命令和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式會查看資料表中的資料行是否已定義預設值。  例如，若資料檔中有一個 Null 值欄位，將會以載入該資料行的預設值來取代。  [bcp](../../tools/bcp-utility.md) 命令和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式都可讓您指定保留 Null 值。
 

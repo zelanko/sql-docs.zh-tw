@@ -17,18 +17,18 @@ helpviewer_keywords:
 - largest integers
 - FLOOR function [Transact-SQL]
 ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73ef61baf4433f851b4fff1b64016aae2274c0a4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fe97e52c540ba58252b4cdfaec66c2eae8bd35cf
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826934"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010771"
 ---
 # <a name="floor-transact-sql"></a>FLOOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回小於或等於指定數值運算式的最大整數。  
   

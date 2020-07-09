@@ -18,16 +18,16 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 746f0763ccc8878ea8f4673888c47983b15f28e5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d7c4eec871d08eebbc18da84dec95d148fe161f5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636237"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012811"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 定序名稱 (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，指定 COLLATE 子句中的 Windows 定序名稱。 Windows 定序名稱是由定序指示項和比較樣式組成。
 

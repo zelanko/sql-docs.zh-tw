@@ -16,15 +16,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9dc47ecc9056c2344b64feb4eb0f122e340927b5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3d87bce11cc657ef437a0f57ce07d0eda89bdeb3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980610"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007202"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>大量匯入資料時保留識別值 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以將包含識別值的資料檔案大量匯入 Microsoft SQL Server 的執行個體中。  根據預設，會忽略所匯入資料檔案中的識別欄位值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動指定唯一值。  唯一值的依據是資料表建立期間所指定的初始值及累加值。
 
 如果資料檔不包含資料表中識別碼資料行的值，請使用格式檔案指定在匯入資料時應略過資料表中的識別碼資料行。  如需其他資訊，請參閱 [使用格式檔案以略過資料表資料行 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md) 。

@@ -29,15 +29,15 @@ ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06f36ff1e8891ad3753f3899fd5696d5e6ea365a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a58f92ebb7e6c59d80277cc17457927cff01ff8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934446"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002949"
 ---
 # <a name="file-states"></a>檔案狀態
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，資料庫檔案的狀態是與資料庫的狀態分開維護。 檔案永遠處於特定狀態，例如 ONLINE 或 OFFLINE。 若要檢視檔案目前的狀態，請使用 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目錄檢視。 如果資料庫是離線的，就可以從 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 目錄檢視來檢視檔案的狀態。  
   
  檔案群組中的檔案狀態將決定整個檔案群組的可用性。 若要使某個檔案群組為可用的，則在檔案群組中的所有檔案必須都在線上。 若要檢視檔案群組目前的狀態，請使用 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) 目錄檢視。 如果檔案群組離線而您嘗試透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式存取檔案群組，就會發生錯誤。 當查詢最佳化工具建立 SELECT 陳述式的查詢計畫時，它可避免使用離線檔案群組中所存在的非叢集索引和叢集檢視，以利陳述式成功。 不過，如果離線檔案群組包含目標資料表的堆積或叢集索引，SELECT 陳述式將會失敗。 除此之外，在離線檔案群組中，以 INSERT、UPDATE 或 DELETE 陳述式修改含有索引的資料表將會失敗。  

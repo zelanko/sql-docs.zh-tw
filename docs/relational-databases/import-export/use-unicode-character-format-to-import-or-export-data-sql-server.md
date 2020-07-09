@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 5e01a35302991de18eb28b8cf458fe1990544eec
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4cada27e8e73013667c69c82c9306426eef685f3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980355"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010143"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字元格式匯入或匯出資料 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用含有擴充/DBCS 字元的資料檔在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間大量傳送資料時，建議使用 Unicode 字元格式。 Unicode 字元資料格式可允許從伺服器匯出資料時所使用的字碼頁，與執行作業之用戶端所使用的字碼頁不同。 在此情況下，使用 Unicode 字元格式具有下列優點：  
   
 * 如果來源資料和目的地資料都是 Unicode 資料類型，使用 Unicode 字元格式可保留所有的字元資料。  

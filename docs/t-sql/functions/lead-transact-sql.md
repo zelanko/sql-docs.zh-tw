@@ -16,15 +16,15 @@ helpviewer_keywords:
 - LEAD function
 - analytic functions, LEAD
 ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52fdd68f76bb2ea7c725af31bae65a21134fb0dc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0e936ceae720a9dc4f3306a067cdb3f6a38bf447
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822932"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008803"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -69,7 +69,7 @@ GO
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
     LEAD(SalesQuota, 1,0) OVER (ORDER BY YEAR(QuotaDate)) AS NextQuota  
 FROM Sales.SalesPersonQuotaHistory  
-WHERE BusinessEntityID = 275 and YEAR(QuotaDate) IN ('2005','2006');  
+WHERE BusinessEntityID = 275 AND YEAR(QuotaDate) IN ('2005','2006');  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -115,7 +115,7 @@ Northwest                280              1352577.1325          0.00
  下列範例將示範如何在 LEAD 函數語法中指定多種任意的運算式。  
   
 ```sql  
-CREATE TABLE T (a int, b int, c int);   
+CREATE TABLE T (a INT, b INT, c INT);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
   
@@ -147,7 +147,7 @@ b           c           i
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  
        LEAD(SalesAmountQuota,1,0) OVER (ORDER BY CalendarYear, CalendarQuarter) AS NextQuota,  
-   SalesAmountQuota - LEAD(Sale sAmountQuota,1,0) OVER (ORDER BY CalendarYear, CalendarQuarter) AS Diff  
+   SalesAmountQuota - LEAD(SalesAmountQuota,1,0) OVER (ORDER BY CalendarYear, CalendarQuarter) AS Diff  
 FROM dbo.FactSalesQuota  
 WHERE EmployeeKey = 272 AND CalendarYear IN (2001,2002)  
 ORDER BY CalendarYear, CalendarQuarter;  

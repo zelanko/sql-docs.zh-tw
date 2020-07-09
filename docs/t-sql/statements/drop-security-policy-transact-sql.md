@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 141e80768498e2cc6f0e9ea9b8e021be514d0434
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 43bd7d1083934876f8ddd6a2b00a53e30c476162
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635252"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003409"
 ---
 # <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   刪除安全性原則。  
   

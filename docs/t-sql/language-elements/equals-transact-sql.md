@@ -21,15 +21,15 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a08dbc63f765b436d9f6bb56be6456f197217db8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 641604c814ce6494834e6cc382bef590c534a2d0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075273"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004995"
 ---
 # <a name="-equals-transact-sql"></a>= (等於) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   比較 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 中兩個運算式是否相等 (比較運算子)。  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 8e480940623388e64c965d385c383d144d8738c3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 72b5760614c009836ada1922598e438095615935
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635382"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003172"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   從資料庫中卸除資料行加密金鑰。  
   

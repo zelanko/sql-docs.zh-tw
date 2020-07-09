@@ -23,15 +23,15 @@ ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee403317d9b10733126f462b47dc8d57d7f177d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ff2d2b251fb26a4cc612417c9d46ebaebb395c8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943039"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003988"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (位元 NOT) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在整數值上，執行位元邏輯 NOT 運算。  
   
@@ -69,11 +69,9 @@ ms.locfileid: "67943039"
  下列範例會使用 **int** 資料類型來建立資料表以儲存值，並將兩個值插入到單一資料列中。  
   
 ```  
-CREATE TABLE bitwise  
-(   
-a_int_value int NOT NULL,  
-b_int_value int NOT NULL  
-);  
+CREATE TABLE bitwise (  
+  a_int_value INT NOT NULL,  
+  b_int_value INT NOT NULL); 
 GO  
 INSERT bitwise VALUES (170, 75);  
 GO  

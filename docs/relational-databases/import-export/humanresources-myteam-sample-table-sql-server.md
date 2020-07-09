@@ -16,15 +16,15 @@ ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73ec7e3d639d49fd12a0c0b6708278702a423f0e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d68c1cab5ea8902a4858cc7aaad79d08aa458f01
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980446"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012442"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 範例資料表 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [匯入和匯出大量資料](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) 中有許多程式碼範例都需要一個特殊用途的測試資料表，此資料表名為 **myTeam**。 執行這些範例前，您必須先在 **資料庫的** HumanResources **結構描述中建立** myTeam [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表。  
   
 > [!NOTE]  

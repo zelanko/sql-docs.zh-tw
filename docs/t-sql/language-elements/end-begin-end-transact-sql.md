@@ -21,15 +21,15 @@ ms.assetid: 354c4935-1375-4141-8195-61326662f4d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e4ec4edf88e7a19bd17980b081730e2718423f9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2a29eade691530ad9b2bdcc7b007df5decbdaa84
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634926"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005012"
 ---
 # <a name="end-beginend-transact-sql"></a>END (BEGIN...END) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   含括將以群組方式來執行的序列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 BEGIN...END 區塊可以有巢狀結構。  
   

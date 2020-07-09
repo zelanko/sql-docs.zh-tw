@@ -22,18 +22,18 @@ helpviewer_keywords:
 - dates [SQL Server], MONTH
 - MONTH function [SQL Server]
 ms.assetid: 9dd8aff7-b0fc-45df-b316-ead14ee9b8b7
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c0e9bc462ea45ea918e6bff393f20ca16cc92ab
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05ab7281448d8e20d23bf31c3da2a9ff08a7cd41
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828725"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005107"
 ---
 # <a name="month-transact-sql"></a>MONTH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回代表指定 *date* 中月份的整數。  
   

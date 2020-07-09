@@ -17,15 +17,15 @@ ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0274f5235b51470d31a4904d5230c5b5ca14ecc5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d96dbfc519a831508b7e56fad1b6909a37f672d3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943062"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003999"
 ---
 # <a name="bitwise-operators-transact-sql"></a>位元運算子 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   位元運算子會在整數資料類型類別目錄之任何資料類型的兩個運算式之間，執行位元操作。  
   位元運算子可將兩個整數值轉換成二進位位元、在每個位元上執行 AND、OR 或 NOT 運算、產生結果。 然後將結果轉換成整數。  

@@ -24,15 +24,15 @@ ms.assetid: 8c925924-a466-4c8b-aeb2-7e0d341f32db
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4dde0368b8ba81807dc42775ab089f5f5c99768
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4c4c864ba43d695a88080a77887a015dde7903c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913895"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002441"
 ---
 # <a name="set-ansi_null_dflt_on-transact-sql"></a>SET ANSI_NULL_DFLT_ON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   當資料庫的 **ANSI Null 預設值**選項是 **false** 時，修改工作階段的行為來覆寫新資料行的預設 Null 屬性。 如需設定 **ANSI Null 預設值**這個值的詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "67913895"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
 
 SET ANSI_NULL_DFLT_ON {ON | OFF}
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET ANSI_NULL_DFLT_ON ON
@@ -55,7 +55,7 @@ SET ANSI_NULL_DFLT_ON ON
 ## <a name="remarks"></a>備註  
  這項設定只在 CREATE TABLE 和 ALTER TABLE 陳述式未指定新資料行的 Null 屬性時，才會影響新資料行的 Null 屬性設定。 當 SET ANSI_NULL_DFLT_ON 是 ON 時，如果未明確指定資料行的 Null 屬性狀態，ALTER TABLE 和 CREATE TABLE 陳述式所建立的新資料行會接受 Null 值。 SET ANSI_NULL_DFLT_ON 不會影響利用明確的 NULL 或 NOT NULL 來建立的資料行。  
   
- SET ANSI_NULL_DFLT_OFF 和 SET ANSI_NULL_DFLT_ON 不能同時設為 ON。 如果一個選項設為 ON，另一個選項便設為 OFF。 因此，您可以將 ANSI_NULL_DFLT_OFF 或 ANSI_NULL_DFLT_ON 設為 ON，也可以同時將它們設為 OFF。 如果任何一個選項是 ON，這項設定 (SET ANSI_NULL_DFLT_OFF 或 SET ANSI_NULL_DFLT_ON) 就會生效。 如果兩個選項都設為 OFF，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中之 **is_ansi_null_default_on** 資料行的值。  
+ SET ANSI_NULL_DFLT_OFF 和 SET ANSI_NULL_DFLT_ON 不能同時設為 ON。 如果一個選項設為 ON，另一個選項便設為 OFF。 因此，您可以將 ANSI_NULL_DFLT_OFF 或 ANSI_NULL_DFLT_ON 設為 ON，也可以同時將它們設為 OFF。 如果任何一個選項是 ON，這項設定 (SET ANSI_NULL_DFLT_OFF 或 SET ANSI_NULL_DFLT_ON) 就會生效。 如果兩個選項都設為 OFF，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 **sys.databases** 目錄檢視中之 [is_ansi_null_default_on](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行的值。  
   
  如果希望在資料庫中搭配不同 Null 屬性設定來使用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼作業比較可靠，最好是在 CREATE TABLE 和 ALTER TABLE 陳述式中指定 NULL 或 NOT NULL。  
   
@@ -80,7 +80,7 @@ SELECT @ANSI_NULL_DFLT_ON AS ANSI_NULL_DFLT_ON;
  需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會顯示含有兩種 **ANSI Null 預設值**資料庫選項設定之 `SET ANSI_NULL_DFLT_ON` 的效果。  
+ 下列範例會顯示含有兩種 `SET ANSI_NULL_DFLT_ON`ANSI Null 預設值**資料庫選項設定之**  的效果。  
   
 ```  
 USE AdventureWorks2012;  

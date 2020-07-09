@@ -16,15 +16,15 @@ helpviewer_keywords:
 - LAG function
 - analytic functions, LAG
 ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a7d166f49f44555cc28c3e186f46246618cb870
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ec75940d9227f45fd795eec0018721d9d63f7723
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833002"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008834"
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -70,7 +70,7 @@ GO
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
        LAG(SalesQuota, 1,0) OVER (ORDER BY YEAR(QuotaDate)) AS PreviousQuota  
 FROM Sales.SalesPersonQuotaHistory  
-WHERE BusinessEntityID = 275 and YEAR(QuotaDate) IN ('2005','2006');  
+WHERE BusinessEntityID = 275 AND YEAR(QuotaDate) IN ('2005','2006');  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -117,7 +117,7 @@ Northwest                280              1352577.1325          1573012.9383
  下列範例將示範如何在 LAG 函數語法中指定多種任意的運算式。  
   
 ```sql   
-CREATE TABLE T (a int, b int, c int);   
+CREATE TABLE T (a INT, b INT, c INT);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
   

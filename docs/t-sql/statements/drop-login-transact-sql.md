@@ -22,15 +22,15 @@ ms.assetid: acb5c3dc-7aa2-49f6-9330-573227ba9b1a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a26dbcc45f5c236b6cbe8998b2d12808711ff6ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 589b4e90a1518079618f97f31efb31e2a9a4abb3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68044125"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002475"
 ---
 # <a name="drop-login-transact-sql"></a>DROP LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入帳戶。  
   

@@ -19,18 +19,18 @@ helpviewer_keywords:
 - number of group items
 - COUNT_BIG function
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23a3dd70b96aef4c24f3aa405ce428db5c7b2321
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e21bcd83ec6f45aeb34bf4dc2dd82215cbb69123
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026514"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011502"
 ---
 # <a name="count_big-transact-sql"></a>COUNT_BIG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此函數會傳回群組中找到的項目數。 `COUNT_BIG` 的運作方式類似 [COUNT](../../t-sql/functions/count-transact-sql.md) 函數。 這些函數唯一的差別就是其傳回值的資料類型。 `COUNT_BIG` 一律會傳回 **bigint** 資料類型值。 `COUNT` 一律會傳回 **int** 資料類型值。
   
@@ -38,7 +38,7 @@ ms.locfileid: "68026514"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 
 -- Aggregation Function Syntax  
 COUNT_BIG ( { [ [ ALL | DISTINCT ] expression ] | * } )  
@@ -73,7 +73,7 @@ COUNT_BIG (ALL *expression*) 會針對群組中的每個資料列來評估 *expr
   
 COUNT_BIG (DISTINCT *expression*) 會針對群組中的每個資料列來評估 *expression*，且會傳回唯一且非 Null 值的數目。
   
-COUNT_BIG **不搭配** OVER 和 ORDER BY 子句使用時，是具決定性的函數。 COUNT_BIG **搭配** OVER 和 ORDER BY 子句使用時，不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
+COUNT_BIG **不搭配 ** OVER 和 ORDER BY 子句使用時，是具決定性的函數。 COUNT_BIG **搭配 ** OVER 和 ORDER BY 子句使用時，不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   
 ## <a name="examples"></a>範例  
 如需範例，請參閱 [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)。
