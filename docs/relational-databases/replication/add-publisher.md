@@ -15,15 +15,15 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d84df39c307177dc2e7fcbab9c9cdf177b580a73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd972c1825deb947537473096653fc33e07a92fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286889"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726089"
 ---
 # <a name="add-publisher"></a>加入發行者
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[加入發行者]** 對話方塊，可讓您將一或多個發行者加入至複寫監視器的左窗格。 加入發行者之後，選取左窗格中的發行者會在右窗格中顯示該發行者的資訊。  
   
 ## <a name="options"></a>選項。  

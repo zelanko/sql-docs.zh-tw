@@ -1,12 +1,14 @@
 ---
 title: 管理在另一部伺服器上提供資料庫時所需的中繼資料
-ms.custom: seo-dt-2019
-ms.date: 08/24/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
+ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
+author: stevestein
+ms.author: sstein
+ms.custom: seo-dt-2019
 helpviewer_keywords:
 - cross-database queries [SQL Server]
 - logins [SQL Server], recreating on another server instance
@@ -31,18 +33,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 - credentials [SQL Server], metadata
 - copying databases
-ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0d0a777b42bc601d2f656cfbf3c31d488a3732e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76929106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726455"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>管理在另一部伺服器上提供資料庫時所需的中繼資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本文與下列情況有關：  
   
 -   設定 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性群組的可用性複本。  

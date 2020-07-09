@@ -12,15 +12,15 @@ ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a9286bb00b068968de51a72aa2bdc409bffa2ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4bd86814ca01bd68b1fc9192d03455feeef2ad78
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897420"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726319"
 ---
 # <a name="audit-schema-object-access-event-class"></a>Audit Schema Object Access 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Schema Object Access** 事件類別會在使用到物件權限 (例如 SELECT) 時發生。  
   
 ## <a name="audit-schema-object-access-event-class-data-columns"></a>Audit Schema Object Access 事件類別資料行  

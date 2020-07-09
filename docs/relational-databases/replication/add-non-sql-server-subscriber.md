@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6b188b7ec3b108a32a52ce888d4dfb1b5a064804
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9503a9de44f26a4f005669b2bf6d27e761dab25a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929780"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726116"
 ---
 # <a name="add-non-sql-server-subscriber"></a>加入非 SQL Server 訂閱者
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   複寫可以支援為 Oracle 和 IBM DB2 訂閱者建立快照式和交易式發行集的發送訂閱。  
   
 ## <a name="options"></a>選項。  

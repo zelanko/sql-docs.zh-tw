@@ -12,15 +12,15 @@ ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bd355a313b3f25424c2c392d13a5d0cdb15287f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 64df0d85fb8e4bb9e3ea54c7d8613a1a39ac3406
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115836"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726243"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   對 OLE DB 提供者的呼叫若傳回錯誤，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中就會發生 OLEDB Errors 事件類別。 在追蹤中包含此事件類別，以檢視 OLE DB 提供者的失敗 HRESULT。  
   
  當追蹤中包含 OLEDB Errors 事件類別時，效能負擔需視追蹤期間資料庫發生 OLE DB 提供者錯誤的頻率決定。 如果經常發生這類錯誤，追蹤可能會嚴重妨礙效能。  

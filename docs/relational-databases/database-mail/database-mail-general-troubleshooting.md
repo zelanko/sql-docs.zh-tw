@@ -1,9 +1,7 @@
 ---
 title: 針對一般 Database Mail 進行疑難排解
-ms.custom: seo-dt-2019
-ms.date: 04/22/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
@@ -13,15 +11,16 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fb063b3af008ad7e734197a0d4360c9d83535cd3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 92496d6c02903ad6c7c14c5b2fd134797f608997
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74094552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726506"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Database Mail 疑難排解的一般步驟 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Database Mail 疑難排解牽涉到檢查下列 Database Mail 系統的一般區域。 這些程序雖然是以邏輯順序來呈現，但可以使用任何順序來評估。
 

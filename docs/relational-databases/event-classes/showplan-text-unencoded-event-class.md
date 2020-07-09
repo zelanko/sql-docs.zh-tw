@@ -12,15 +12,15 @@ ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f393ab9c995e800772561b093af5947526ee183f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95ed07b8bfc4f59e6c11cac11722a37aa5c565fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726163"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (未編碼) 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan Text (未編碼) 事件類別。 除了會將事件資訊格式設定為字串而非二進位資料外，此事件類別與 Showplan Text 事件類別相同。  
   
  包含的資訊是 Showplan All、Showplan XML 或 Showplan XML Statistics Profile 事件類別中可用資訊的子集。  

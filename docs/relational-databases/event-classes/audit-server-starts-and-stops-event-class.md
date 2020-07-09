@@ -12,15 +12,15 @@ ms.assetid: 8ddb55af-c77b-4d07-b803-a97320c0804e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65e2db8b5d77a1c91636578179d133a568a3c56e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86c34ce9def23cfaf09abb84ca9a1612728a7c9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723446"
 ---
 # <a name="audit-server-starts-and-stops-event-class"></a>Audit Server Starts and Stops 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
     服務狀態遭到修改時，會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)]Audit Server Starts and Stops[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件類別。  
   
 ## <a name="audit-server-starts-and-stops-event-class-data-columns"></a>Audit Server Starts and Stops 事件類別資料行  

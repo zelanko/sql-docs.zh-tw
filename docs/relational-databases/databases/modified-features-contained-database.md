@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3c85d6e423c63337be4d2eaf2f96c420a4f6ad33
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ac376cdb7fd57506470b03facdc16b415098b7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68067346"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726401"
 ---
 # <a name="modified-features-contained-database"></a>修改的功能 (自主資料庫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   下列功能已經修改成部分自主資料庫所支援的功能。 由於功能通常會進行修改，因此它們不會跨越資料庫界限。  
   
  如需相關資訊，請參閱 [自主資料庫](../../relational-databases/databases/contained-databases.md)。  

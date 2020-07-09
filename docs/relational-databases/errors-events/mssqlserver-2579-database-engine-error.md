@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a38a5470c51145141eda81d30eaadd8ff9f72e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fca72fb30353e97bc4fc2f38240c7245a3400314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68002023"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723826"
 ---
 # <a name="mssqlserver_2579"></a>MSSQLSERVER_2579
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|2579|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC_EXTENT_OUT_OF_RANGE|  
-|訊息文字|資料表錯誤: 物件識別碼 O_ID 中的範圍 P_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE) 超出這個資料庫的範圍。|  
+|訊息文字|資料表錯誤：物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE) 的範圍 P_ID 超出這個資料庫範圍。|  
   
 ## <a name="explanation"></a>說明  
 *P_ID* 是採用 *(filenum:pageinfile)* 格式的頁面識別碼。 此範圍的 *pageinfile* 大於資料庫檔案 *filenum)* 的實際大小。 該範圍標示為已配置於指定配置單位識別碼的 IAM 頁面中。  

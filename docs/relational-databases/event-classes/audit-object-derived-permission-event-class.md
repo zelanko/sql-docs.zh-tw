@@ -12,15 +12,15 @@ ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7207b300db3c5e9274e7c85011cf7520deb8132a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6bec9b17bd81481c68d5fdebac8f850ac8aedcf0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897405"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726334"
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Object Derived Permission** 事件類別會記錄何時對指定的物件發出 CREATE、ALTER 或 DROP 命令。 只有當物件沒有直接關聯的權限或擁有者時，才會發生此事件。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本可能會移除這個事件類別。 建議您改用 **Audit Schema Object Management** 事件類別。  

@@ -12,15 +12,15 @@ ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 480d2d238a82039fd04c1c960e74b0c9da57449e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 582efa7068b9e4ebadc4cdfd9f10ee93eb2774df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911097"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726195"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 編譯 SQL 陳述式時，就會發生 Showplan All for Query Compile 事件類別。 加入此事件類別，可識別 Showplan 運算子。 所包含的資訊，是 Showplan XML For Query Compile 事件類別中可用資訊的子集。  
   
  Showplan All for Query Compile 事件類別會顯示完整的編譯時間資料，因此含有 Showplan All for Query Compile 的追蹤可能會產生嚴重的效能負擔。 若要減少此問題，此事件類別請限用於追蹤對特定問題的短期監視。  

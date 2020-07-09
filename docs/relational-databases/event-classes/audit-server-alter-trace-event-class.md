@@ -12,15 +12,15 @@ ms.assetid: 967586bf-d5f1-466c-82ab-8c461bfb6222
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0494453c41ec36c674bb3058119dd160d1208f7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b29de1f27861d418c7ef8c909f9e29a7784b75a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726270"
 ---
 # <a name="audit-server-alter-trace-event-class"></a>Audit Server Alter Trace 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Server Alter Trace** 事件類別會針對所有檢查 ALTER TRACE 權限的陳述式而發生。 檢查 ALTER TRACE 的陳述式，包括用來建立或設定追蹤、或是為追蹤而設定篩選的陳述式。  
   
 ## <a name="audit-server-alter-trace-event-class-data-columns"></a>Audit Server Alter Trace 事件類別資料行  

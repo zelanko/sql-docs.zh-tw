@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: e2b0dfc7-0681-4e5d-8875-1d5f63534086
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 44ddcd07bfe284ea5200e585d49a0f17ba3b4839
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52fbf4e437ddfc1819b42231b198703cc91bcc0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68002017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723798"
 ---
 # <a name="mssqlserver_26014"></a>MSSQLSERVER_26014
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|26014|  
 |事件來源|MSSQLSERVER|  

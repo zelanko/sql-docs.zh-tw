@@ -12,15 +12,15 @@ ms.assetid: b6b20ae9-aebb-454a-b639-6b7bb2f9339b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24dbc405279229de14aa6e08cafc18dd0942ba3c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 169ac0c40eca0d4d436772e4281b210346b6288d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726210"
 ---
 # <a name="scanstopped-event-class"></a>Scan:Stopped 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   當資料表或索引掃描停止時，會發生 Scan:Stopped 事件類別。  
   
 ## <a name="scanstopped-event-class-data-columns"></a>Scan:Stopped 事件類別資料行  
