@@ -19,15 +19,15 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a053f49a6ab3b42e31c5b71c2d2d558ea3170440
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8a589358edabaf25e3dfcadf9395e7771a965c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79112333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733909"
 ---
 # <a name="cursors"></a>資料指標
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   關聯式資料庫中的作業會針對完整的資料列集運作。 例如，由 `SELECT` 陳述式所傳回的資料列集包括所有滿足陳述式 `WHERE` 子句之條件的資料列。 由陳述式傳回的完整資料列稱為結果集。 應用程式 (尤其是互動式線上應用程式) 不一定能夠以一個單位有效地運用整個結果集。 這些應用程式需要一個機制，一次運用一個資料列或小型資料列區塊。 資料指標就是一種結果集的擴充，提供此種機制。  
   
  資料指標擴充結果處理的方式是：  

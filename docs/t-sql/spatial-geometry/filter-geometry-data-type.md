@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 701110865f4cda286c647ef887dba2e29cc5fb42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef84f7d95644c552d90f137e9f6edab980acfba9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081160"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736031"
 ---
 # <a name="filter-geometry-data-type"></a>Filter (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 這個方法提供快速且僅限索引的交集方法，可判斷 **geometry** 執行個體是否與另一個 **geometry** 執行個體相交 (假設有提供索引)。
   

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f60a4be36c17150bf362e18562b2f6b3bdd96631
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 370e5525e25c01086510612730ba6123161853bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632614"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735871"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   將應用程式角色加入至目前資料庫中。  
   

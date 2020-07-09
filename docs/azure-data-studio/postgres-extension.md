@@ -1,21 +1,20 @@
 ---
 title: PostgreSQL 延伸模組 (預覽)
-titleSuffix: Azure Data Studio
 description: 適用於 Azure Data Studio 的 PostgreSQL 延伸模組 (預覽)
 ms.custom: seodec18
 ms.date: 03/19/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 2ecdd3cb918013a4ae26869679576bafd003756e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c5c12a45ee49456ff0b4742e258ee5ad2936600
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735291"
 ---
 # <a name="postgresql-extension-preview"></a>PostgreSQL 延伸模組 (預覽)
 

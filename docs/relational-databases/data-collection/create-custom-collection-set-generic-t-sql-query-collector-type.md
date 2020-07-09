@@ -1,7 +1,6 @@
 ---
 title: 建立自訂收集組 - 一般 T-SQL 查詢收集器類型
-ms.custom: seo-lt-2019
-ms.date: 03/07/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,15 +11,16 @@ helpviewer_keywords:
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b27dda40294185f923d74b61dfd1b10ce7301ba9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8ca7e286d5e6d754bfa13c1e10907b7c040b86a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733856"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>建立自訂收集組 - 一般 T-SQL 查詢收集器類型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   您可以使用資料收集器所提供的預存程序，建立包含使用一般 T-SQL 查詢收集器型別之收集項的自訂收集組。 完成這項工作需要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用查詢編輯器來進行以下程序：  
   
 -   設定上傳排程。  
@@ -38,10 +38,12 @@ ms.locfileid: "74055579"
   
 1.  使用 sp_syscollector_create_collection_set 預存程序來定義新的收集組。  
   
-    ```  
+    ```sql
     USE msdb;  
+    GO
     DECLARE @collection_set_id int;  
     DECLARE @collection_set_uid uniqueidentifier;  
+
     EXEC sp_syscollector_create_collection_set   
         @name=N'DMV Test 1',   
         @collection_mode=0,   
@@ -51,6 +53,7 @@ ms.locfileid: "74055579"
         @schedule_name=N'CollectorSchedule_Every_15min',   
         @collection_set_id=@collection_set_id OUTPUT,   
         @collection_set_uid=@collection_set_uid OUTPUT;  
+
     SELECT @collection_set_id, @collection_set_uid;  
     ```  
   
@@ -80,8 +83,11 @@ ms.locfileid: "74055579"
   
     ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
-    SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
-    WHERE name = N'Generic T-SQL Query Collector Type';  
+
+    SELECT @collector_type_uid = collector_type_uid
+      FROM [msdb].[dbo].[syscollector_collector_types]   
+      WHERE name = N'Generic T-SQL Query Collector Type';  
+
     DECLARE @collection_item_id int;  
     ```  
   
@@ -101,6 +107,7 @@ ms.locfileid: "74055579"
         @frequency=5,   
         @collection_set_id=@collection_set_id,   
         @collector_type_uid=@collector_type_uid;  
+
     SELECT @collection_item_id;  
     ```  
   
@@ -110,6 +117,7 @@ ms.locfileid: "74055579"
   
     ```sql  
     USE msdb;  
+    GO
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
     GO  
@@ -135,28 +143,32 @@ EXEC dbo.sp_syscollector_create_collection_set
     @schedule_name=N'CollectorSchedule_Every_15min',  
     @collection_set_id = @collection_set_id OUTPUT,  
     @collection_set_uid = @collection_set_uid OUTPUT;  
+
 SELECT @collection_set_id,@collection_set_uid;  
   
 DECLARE @collector_type_uid uniqueidentifier;  
-SELECT @collector_type_uid = collector_type_uid FROM syscollector_collector_types   
-WHERE name = N'Generic T-SQL Query Collector Type';  
+
+SELECT @collector_type_uid = collector_type_uid
+  FROM syscollector_collector_types   
+  WHERE name = N'Generic T-SQL Query Collector Type';  
   
 DECLARE @collection_item_id int;  
+
 EXEC sp_syscollector_create_collection_item  
-@name= N'Query Stats - Test 1',  
-@parameters=N'  
-<ns:TSQLQueryCollector xmlns:ns="DataCollectorType">  
-<Query>  
-  <Value>select * from sys.dm_exec_query_stats</Value>  
-  <OutputTable>dm_exec_query_stats</OutputTable>  
-</Query>  
- </ns:TSQLQueryCollector>',  
-    @collection_item_id = @collection_item_id OUTPUT,  
-    @frequency = 5, -- This parameter is ignored in cached mode  
-    @collection_set_id = @collection_set_id,  
-    @collector_type_uid = @collector_type_uid;  
+    @name= N'Query Stats - Test 1',  
+    @parameters=N'  
+    <ns:TSQLQueryCollector xmlns:ns="DataCollectorType">  
+    <Query>  
+      <Value>select * from sys.dm_exec_query_stats</Value>  
+      <OutputTable>dm_exec_query_stats</OutputTable>  
+    </Query>  
+     </ns:TSQLQueryCollector>',  
+        @collection_item_id = @collection_item_id OUTPUT,  
+        @frequency = 5, -- This parameter is ignored in cached mode  
+        @collection_set_id = @collection_set_id,  
+        @collector_type_uid = @collector_type_uid;  
+        
 SELECT @collection_item_id;  
-  
 GO  
 ```  
   

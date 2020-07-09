@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8aaae44a73bc7cd7ccf41bf1c33823664044a2e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2881ad1cc83e7916c325c0492c8243d09833c3b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086727"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734215"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext、text 和 image (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 用來儲存非 Unicode 字元和 Unicode 字元及二進位資料的固定和可變長度資料類型。 Unicode 資料使用 UNICODE UCS-2 字元集。
   

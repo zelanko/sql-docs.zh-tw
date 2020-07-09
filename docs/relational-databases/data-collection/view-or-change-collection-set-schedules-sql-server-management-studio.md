@@ -1,7 +1,6 @@
 ---
 title: 檢視或變更收集組排程
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -18,20 +17,21 @@ helpviewer_keywords:
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8e72be7c753db0871191e44bbc431d755ddfa193
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733815"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>檢視或變更收集組排程 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來檢視或變更收集組排程。  
   
  收集模式 (快取或非快取) 可決定您要如何對排程進行變更。 快取模式會使用個別的排程來進行收集和上傳。 非快取模式會使用相同的排程來進行收集和上傳。 每一個系統資料收集組的收集模式類型如下：  
   
--   [磁碟使用量]  會使用非快取收集模式。  
+-   [磁碟使用量] 會使用非快取收集模式。  
   
 -   **[查詢統計資料]** 會使用快取收集模式。  
   
@@ -41,17 +41,17 @@ ms.locfileid: "74055324"
   
 1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]** 和 **[系統資料收集組]** 。  
   
-2.  以滑鼠右鍵按一下收集組名稱，然後按一下 [屬性]  開啟 [[資料收集組屬性]](#CollectionSet) 對話方塊。  
+2.  以滑鼠右鍵按一下收集組名稱，然後按一下 [屬性] 開啟 [[資料收集組屬性]](#CollectionSet) 對話方塊。  
   
 ### <a name="to-change-the-schedules-for-a-cached-mode-collection-set"></a>若要變更快取模式收集組的排程  
   
 1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]** 和 **[系統資料收集組]** 。  
   
-2.  以滑鼠右鍵按一下使用快取模式的收集組，例如 [查詢統計資料]  ，然後按一下 [屬性]  開啟 [[資料收集組屬性]](#CollectionSet) 對話方塊。  
+2.  以滑鼠右鍵按一下使用快取模式的收集組，例如 [查詢統計資料]，然後按一下 [屬性] 開啟 [[資料收集組屬性]](#CollectionSet) 對話方塊。  
   
 3.  您可以在 **[一般]** 頁面上變更收集頻率。 若要這樣做，請遵循下列步驟：  
   
-    1.  在詳細資料窗格中，按兩下針對 [收集項目]  資料表中 [收集頻率 (秒)]  資料行顯示的數字。  
+    1.  在詳細資料窗格中，按兩下針對 [收集項目] 資料表中 [收集頻率 (秒)] 資料行顯示的數字。  
   
     2.  若要增加或減少收集頻率，請輸入較低或較高的數字，然後按下 ENTER 儲存新的值。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "74055324"
   
 1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]** 和 **[系統資料收集組]** 。  
   
-2.  以滑鼠右鍵按一下使用非快取模式的收集組 (例如 [磁碟使用量]  )，然後按一下 [屬性]  開啟 [[資料收集組屬性]](#CollectionSet) 對話方塊。  
+2.  以滑鼠右鍵按一下使用非快取模式的收集組 (例如 [磁碟使用量])，然後按一下 [屬性] 開啟 [[資料收集組屬性]](#CollectionSet) 對話方塊。  
   
      **[資料收集組屬性]** 對話方塊隨即顯示收集組屬性的分頁檢視。  
   
@@ -110,10 +110,11 @@ ms.locfileid: "74055324"
  **資料收集和上傳**  
  指定要如何收集資料並將其上傳到管理資料倉儲。 請挑選下列其中一個選項。  
   
-|||  
-|-|-|  
+| 選項 | 描述 |
+| :----- | :---------- |
 |**無快取 - 在相同排程時收集和上傳資料。**|當選取此選項時，請指定下列其中一項：<br /><br /> **排程**。 根據排程收集及上傳資料。 請按一下 **[挑選]** 從預先定義的排程清單中選取，或是按一下 **[新增]** 建立新的排程。<br /><br /> **視需要**。 視需要收集及上傳資料。|  
 |**快取 - 以一組收集頻率來收集和快取資料，並在個別排程時上傳快取的資料。**|以指定的收集頻率來收集和快取資料。 根據個別排程上傳收集的資料。|  
+|||
   
  **收集項**  
  顯示收集組中的收集項。 下列資訊是針對每一個收集項所提供：  
@@ -133,17 +134,18 @@ ms.locfileid: "74055324"
  **指定要將資料保留在管理資料倉儲中的天數。**  
  指定要將收集而來的資料保留多久。 請挑選下列其中一個選項。  
   
-|||  
-|-|-|  
+| 選項 | 描述 |
+| :----- | :---------- |
 |**資料保留期限**|預設會選取這個選項，而且預設的保留期限為 14 天。|  
 |**永久保留資料**|對於資料的保留時間長度沒有任何時間限制。|  
-  
+|||
+
  **上傳頁面**  
   
  使用這個頁面可針對此收集組所收集的資料來設定上傳排程。  
   
 > [!NOTE]  
->  只有當已針對 [資料收集和上傳]  設定 [已快取]  選項時，才會啟用這個索引標籤。  
+>  只有當已針對 [資料收集和上傳] 設定 [已快取] 選項時，才會啟用這個索引標籤。  
   
  **Server**  
  顯示將主控管理資料倉儲的伺服器名稱。 如需詳細資訊，請參閱[設定管理資料倉儲 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)。  

@@ -1,7 +1,6 @@
 ---
 title: 檢視收集組記錄 (SSMS)
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,15 +11,16 @@ helpviewer_keywords:
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f2b3ec4e0c7ec6a9335c9e37558123eca77995a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3b347a88187e7f7b961c8ad86b50b334e0837333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733830"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>檢視收集組記錄 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   您可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]檢視所有的收集組記錄或個別的收集組記錄。  
   
 ### <a name="to-view-collection-set-logs"></a>檢視收集組記錄  

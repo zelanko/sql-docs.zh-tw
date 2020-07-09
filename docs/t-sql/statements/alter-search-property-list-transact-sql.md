@@ -23,21 +23,21 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5397d5d20edb6f989714f8ffff4dcdd15c41e3c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735971"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   將指定的搜尋屬性加入至搜尋屬性清單，或從中卸除它。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 ALTER SEARCH PROPERTY LIST list_name  
 {  
    ADD 'property_name'  

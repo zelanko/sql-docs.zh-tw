@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8b7373754e9f2cd8323e5fdd421a556167380b73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf1eb5767f02e3b6d97ae0ff8392e13732fd46f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081148"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736054"
 ---
 # <a name="extended-static-geometry-methods"></a>擴充的靜態幾何方法
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援開放式地理空間協會 (Open Geospatial Consortium，OGC) 之靜態幾何方法的幾項擴充。  
   

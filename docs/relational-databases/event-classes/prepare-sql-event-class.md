@@ -12,15 +12,15 @@ ms.assetid: 4ff3aa04-0f1a-49e2-a43d-7251bab4a458
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9723919b4b95b4cf482fb1af9c393e5a791bb4f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 767c1a4d4848fbaf08b86b95eb0349e2d73caac2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68027158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733739"
 ---
 # <a name="prepare-sql-event-class"></a>Prepare SQL 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Prepare SQL 事件類別指出 SqlClient、ODBC、OLE DB 或 DB-Library 已準備一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (或多個陳述式) 以供使用。  
   
 ## <a name="prepare-sql-event-class-data-columns"></a>Prepare SQL 事件類別資料行  

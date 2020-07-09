@@ -13,15 +13,15 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1f36317fd3572b0fd3b8e7f45cecd735c26da8f5
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: ba15bf9e1438da580e3b3d413c378d426b9b24e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388079"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733943"
 ---
 # <a name="set-or-change-the-database-collation"></a>設定或變更資料庫定序
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定及變更資料庫定序。 如果沒有指定定序，會使用伺服器定序。  
   
 > [!IMPORTANT]

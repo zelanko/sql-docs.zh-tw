@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f48d933dec2dc87d0171641146f652a4e881045e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155063"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735684"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 子句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，您可以定義下列使用者自訂模組的執行內容：函數 (內嵌資料表值函式除外)、程序、佇列和觸發程序。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "70155063"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- SQL Server Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
 { EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   
@@ -58,7 +58,7 @@ Queues
 { EXEC | EXECUTE } AS { SELF | OWNER | 'user_name' }   
 ```  
   
-```  
+```syntaxsql
   
 -- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
@@ -101,7 +101,7 @@ DDL Triggers with Database Scope
  執行內容的使用者識別碼儲存在中繼資料中，可以在 **sys.sql_modules** 或 **sys.assembly_modules** 目錄檢視的 **execute_as_principal_id** 資料行中檢視。  
   
  **'** *login_name* **'**  
- 指定模組內的陳述式，在 *login_name* 所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入內容中執行。 會針對 *login_name* 來驗證模組內任何物件的權限。 *login_name* 只能針對具有伺服器範圍的 DDL 觸發程序或登入觸發程序來指定。  
+ 指定模組內的陳述式，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]login_name*所指定的* 登入內容中執行。 會針對 *login_name* 來驗證模組內任何物件的權限。 *login_name* 只能針對具有伺服器範圍的 DDL 觸發程序或登入觸發程序來指定。  
   
  *login_name* 不可以是群組、角色、憑證、金鑰或內建帳戶，例如 NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
   

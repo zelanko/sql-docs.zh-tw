@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f81ec185224818060faed79ecf18e08a1743ea7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1b2e6e607a49ea4888e6f5f5ec9ad5148e9f790b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733855"
 ---
 # <a name="data-collector-security"></a>資料收集器安全性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   資料收集器會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式所實作之以角色為基礎的安全性模型。 這個模型可讓資料庫管理員在只具有執行該工作所需權限的安全性內容中執行各種資料收集器工作。 這個方法也可用於牽涉到內部資料表的作業，這些資料表只能使用預存程序或檢視來存取。 系統不會授與任何權限給內部資料表。 不過，系統會針對用來存取資料表之預存程序或檢視表的使用者檢查權限。  
   
 > [!IMPORTANT]  

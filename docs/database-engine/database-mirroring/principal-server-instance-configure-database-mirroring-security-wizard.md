@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8d48c59b06202f898fdf61746aee9f62ca155da6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b6afefac893920b3a11dcb4cb763e8f6cae6f0a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255957"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735212"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>主體伺服器執行個體 (設定資料庫鏡像安全性精靈)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此頁面來指定有關主體資料庫之伺服器執行個體的資訊。 主體資料庫是開始鏡像工作階段的資料庫副本。 工作階段開始之後，主體資料庫是接受使用者變更的資料庫副本。 (發生容錯移轉時，主體與鏡像角色會交換，所以初始的主體資料庫可能不再是主體資料庫)。  
   
  **若要使用 SQL Server Management Studio 設定資料庫鏡像**  

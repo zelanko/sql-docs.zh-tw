@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 851b2aa7dfb7a3c492182840d7d57045a5a72e8a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6545a639b9bcdfafcc1bdfdd67930014beab00e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735134"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>設定登入帳戶 - 資料庫鏡像 AlwaysOn 可用性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   若要讓兩個伺服器執行個體連接到對方的 [資料庫鏡像端點](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) ，這兩個執行個體的登入帳戶都必須要有對方的存取權。 而且，這兩個登入帳戶都必須要有連接權限來連接到對方的資料庫鏡像端點。  
   

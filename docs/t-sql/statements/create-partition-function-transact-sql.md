@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 30e57f094256004d90d82df175fff9f9e2e17ddd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735788"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   在目前資料庫中建立一個函數，根據指定資料行的各個值，將資料表或索引的資料列對應到資料分割中。 使用 CREATE PARTITION FUNCTION 是建立資料分割資料表或索引的第一步。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，一個資料表或索引最多可以有 15,000 個資料分割。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67912609"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 CREATE PARTITION FUNCTION partition_function_name ( input_parameter_type )  
 AS RANGE [ LEFT | RIGHT ]   
 FOR VALUES ( [ boundary_value [ ,...n ] ] )   
@@ -73,7 +73,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  指定 *boundary_value* 所提供的數目值，但不可超過 14,999。 所建立的資料分割數目等於 *n* + 1。 這些值不必依照順序列出。 如果值沒有排序，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它們排序、建立函數，以及傳回未依序提供值的警告。 如果 *n* 包括任何重複的值，「資料庫引擎」會傳回錯誤。  
   
  **LEFT** | RIGHT  
- 指定當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是按遞增順序由左至右來排序間隔值時，*boundary_value* [ **,** _...n_ ] 屬於每個界限值間隔的哪一側 (左或右)。 若未指定，LEFT 便是預設值。  
+ 指定當  *是按遞增順序由左至右來排序間隔值時，* boundary_value **[** ,  ...n[!INCLUDE[ssDE](../../includes/ssde-md.md)] ] 屬於每個界限值間隔的哪一側 (左或右)。 若未指定，LEFT 便是預設值。  
   
 ## <a name="remarks"></a>備註  
  資料分割函數的範圍只限於建立它的資料庫。 在這個資料庫內，資料分割函數是在不同於其他函數的個別命名空間中。  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bd6c1ce26dc17f9dc82ebc6f9a5e3284ba29372a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 26ffe6c73d00056b9b15bd07f41349b367bef02d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735694"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 啟用 DML、DDL 或登入觸發程序。  
   

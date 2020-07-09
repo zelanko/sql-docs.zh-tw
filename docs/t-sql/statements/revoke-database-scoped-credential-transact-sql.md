@@ -19,15 +19,15 @@ ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e02c409cf6042811a204d803f629c27010c6562a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 67182129b86953c99d3228fb7df20b0987910a5d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634095"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735361"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE 資料庫範圍認證 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   撤銷資料庫範圍認證的權限。  
   

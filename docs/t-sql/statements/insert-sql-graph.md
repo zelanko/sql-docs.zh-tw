@@ -17,17 +17,17 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c9f43a8c3739652cabfbe4abe21fca7612e9d38
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735473"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-將一或多個資料列新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `node` 或 `edge` 資料表。 
+將一或多個資料列新增至 `node` 的 `edge` 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 
 
 > [!NOTE]   
 >  如需標準 Transact-SQL 陳述式，請參閱 [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。
@@ -37,7 +37,7 @@ ms.locfileid: "68071175"
 ## <a name="insert-into-node-table-syntax"></a>插入節點資料表語法 
 插入節點資料表的語法與一般資料表相同。 
 
-```sql
+```syntaxsql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  
@@ -123,7 +123,7 @@ INTO
 
 節點資料表的大量插入仍然與關聯式資料表相同。
 
-在大量插入邊緣資料表之前，必須先匯入節點資料表。 然後可以從節點資料表的 `$node_id` 資料行擷取 `$from_id` 和 `$to_id` 的值，然後插入為邊緣。 
+在大量插入邊緣資料表之前，必須先匯入節點資料表。 然後可以從節點資料表的 `$from_id` 資料行擷取 `$to_id` 和 `$node_id` 的值，然後插入為邊緣。 
 
   
 ### <a name="permissions"></a>權限  

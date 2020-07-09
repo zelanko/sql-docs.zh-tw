@@ -1,7 +1,7 @@
 ---
 title: Hadoop 連線管理員 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5149f7e470720a2efc99c522bd905a4a1a13f2c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cf042d2ab9c2d3e7c492fa008282cbcbe730f8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735112"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 連接管理員
 
@@ -83,7 +83,7 @@ ms.locfileid: "77903785"
 
     電腦必須設定為工作群組成員，因為 Kerberos 領域與 Windows 網域不同。 如下列範例中所示，設定 Kerberos 領域並新增 KDC 伺服器。 視需要使用您的領域來取代 `REALM.COM`。
 
-    ```    
+    ```console
     C:> Ksetup /setdomain REALM.COM`
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     ```
@@ -92,7 +92,7 @@ ms.locfileid: "77903785"
 
 2.  使用 **Ksetup** 命令來確認設定。 輸出看起來應如下列範例所示：
 
-    ```
+    ```console
     C:> Ksetup
     default realm = REALM.COM (external)
     REALM.com:
@@ -114,7 +114,7 @@ ms.locfileid: "77903785"
 
 1.  編輯 **krb5.conf** 檔案中的 KDC 設定。 參考下列設定範本，以允許 KDC 信任 Windows 網域。 根據預設，設定會位於 **/etc/krb5.conf**。
 
-    ```
+    ```console
     [logging]
     default = FILE:/var/log/krb5libs.log
     kdc = FILE:/var/log/krb5kdc.log
@@ -162,7 +162,7 @@ ms.locfileid: "77903785"
 
 1.  執行下列 **Ksetup** 命令來新增領域項目：
 
-    ```
+    ```console
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
@@ -201,10 +201,10 @@ ms.locfileid: "77903785"
 
 執行下列 **Ksetup** 命令來新增領域項目。
 
-    ```
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-    C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
-    ```
+```console
+C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
+C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
+```
 
 ## <a name="see-also"></a>另請參閱  
  [Hadoop Hive 工作](../../integration-services/control-flow/hadoop-hive-task.md)   

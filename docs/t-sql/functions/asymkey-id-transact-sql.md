@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b1dc7454ecd042f06654f8a269332f8ae7f305ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2693cdfe7ec99d37fbd59d4889cf5c2ad1228a0e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040256"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734224"
 ---
 # <a name="asymkey_id-transact-sql"></a>ASYMKEY_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 傳回非對稱金鑰的識別碼。
   

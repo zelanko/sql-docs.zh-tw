@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ebe6db6130b3d9f058c1c8c65572263348f3dd99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a9e988529cc5a59786504be8566e55a4449a5ee6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72689838"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732862"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>資料類型同義字 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括資料類型同義字，是為了與 ISO 相容。 下表列出同義字和它們所對應的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型。
   

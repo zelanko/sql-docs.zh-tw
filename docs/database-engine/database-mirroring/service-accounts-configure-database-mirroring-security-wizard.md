@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8c8a83b68febee5e00a80bd9977713a786b70f9a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 04f55c8081f6c2a6aa7cfcc1b1d9c1ac8d9d31fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735149"
 ---
 # <a name="configure-database-mirroring-security-wizard-service-accounts"></a>設定資料庫鏡像安全性精靈：服務帳戶
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在使用 Windows 驗證時，如果伺服器執行個體使用不同的帳戶，請指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的服務帳戶。 這些服務帳戶必須全都是網域帳戶 (在同一或受信任的網域中)。  
   
  如果所有伺服器執行個體都使用相同的網域帳戶，或是使用以憑證為基礎的驗證，則請將欄位保留空白。 只要按一下 **[完成]** ，精靈就會根據目前精靈的帳戶自動設定帳戶。  

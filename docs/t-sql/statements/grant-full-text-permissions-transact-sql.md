@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8f2191656ebe79061c8c82c04e719171932f98cb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 130476df4dd952a3c64be85392fd91a733dc734e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633703"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735571"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT 全文檢索權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   授與全文檢索目錄或全文檢索停用字詞表的權限。  
   

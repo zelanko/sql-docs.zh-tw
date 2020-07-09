@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1d2fc50b3c22e309194cfdbb880219f04dcc69d6
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a0fc0cc6305b0c5db4e68c0bb89e30261391ebb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81627411"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736020"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 藉由分割或合併資料分割函數的界限值來變更資料分割函數。 執行 ALTER PARTITION FUNCTION 陳述式，可將一個使用資料分割函數的資料表分割區或索引分割為兩個分割區。 此陳述式也可以將兩個分割區合併成一個分割區。  
   

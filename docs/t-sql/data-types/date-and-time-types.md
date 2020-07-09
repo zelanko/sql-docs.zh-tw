@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 100d5670-e2d8-425c-a927-2b4dfe453e28
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0c220523a431e8387601307709aa42bd9d4eeb02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9cd224234c992184bce0e29e036e2e44aa0b6b4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732831"
 ---
 # <a name="date-and-time-types"></a>日期和時間類型
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列日期與時間類型。
   

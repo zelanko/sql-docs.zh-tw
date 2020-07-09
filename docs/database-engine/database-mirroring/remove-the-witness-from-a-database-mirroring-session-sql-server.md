@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8d4ecd428d8d9d76ff4e9a543321d461b3983708
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 70930149f26088d6c95bad6205b4421850292602
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822528"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735196"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>從資料庫鏡像工作階段移除見證 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中移除資料庫鏡像工作階段內的見證。 在資料庫鏡像工作階段期間，資料庫擁有者隨時可以關閉資料庫鏡像工作階段的見證。  
   
  **本主題內容**  

@@ -12,15 +12,15 @@ ms.assetid: d43ed0ad-3dbd-42e0-9cef-8320b8d87497
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e309d3783dab58e42f0be76badfa293d7ce872f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 495eabc0129c8880bb0c4656b11784d9e106805e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940680"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733754"
 ---
 # <a name="preconnectstarting-event-class"></a>PreConnect:Starting 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   PreConnect:Starting 事件類別會指出 LOGON 觸發程序或資源管理員分類函數開始執行。  
   
 ## <a name="preconnectstarting-event-class-data-columns"></a>PreConnect:Starting 事件類別資料行  

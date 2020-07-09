@@ -12,15 +12,15 @@ ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb11261f8ff099874ebadbdaffb02b5c8706aa02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c65beb690edf055b1cf3730d08e8d3ecb02841c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940703"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733756"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Plan Guide Unsuccessful 事件類別
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Plan Guide Unsuccessful 事件類別會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法針對包含計畫指南的查詢或批次產生執行計畫。 而且，系統將不會使用此計畫指南來編譯計畫。 當下列條件成立時，就會引發此事件：  
   

@@ -12,15 +12,15 @@ ms.assetid: d3b1e47f-2ba2-49af-b404-1aa231d4e4a0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81ddfa089ca2dd994df3de0faa7ddf6d9a0997e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2b1620fc1f5ff1e0f6740dc98d56e0f7f0b6235a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913357"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733784"
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Audit Server Scope GDR 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   發出 GRANT、REVOKE 或 DENY 以取得伺服器範圍中的權限時 (例如建立登入) 時，會發生 **Audit Server Scope GDR** 事件類別。  
   
 ## <a name="audit-server-scope-gdr-event-class-data-columns"></a>Audit Server Scope GDR 事件類別資料行  

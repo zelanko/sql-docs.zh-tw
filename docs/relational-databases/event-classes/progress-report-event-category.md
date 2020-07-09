@@ -14,15 +14,15 @@ ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfe1638d6bb1bc1d56e7160ec51cd15138be1f30
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 393ca541b06fa44cc7cca6967db840c5be36d246
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733723"
 ---
 # <a name="progress-report-event-category"></a>Progress Report 事件類別目錄
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Progress Report** 事件類別目錄包含 **Progress Report: Online Index Operation** 事件類別。  
   
 |主題|描述|  

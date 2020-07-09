@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c25550ed5e985f643f81b0b41e749f007eef0df3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2dcc2f69223c4d4c3a700ade7d7b6da5417f3b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71682073"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732866"
 ---
 # <a name="cursor-transact-sql"></a>資料指標 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 參考資料指標的變數或預存程序 OUTPUT 參數的資料類型。
   
