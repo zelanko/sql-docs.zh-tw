@@ -16,12 +16,12 @@ ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4575c9cbc20faf6afa03201645b736a13325e66b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f543848759b737892998d913fa87ea6de7c6735
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140295"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858580"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>檢視資料表的相依性
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68140295"
   
 -   **使用下列項目來檢視資料表的相依性：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -49,15 +49,15 @@ ms.locfileid: "68140295"
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### <a name="to-view-the-dependencies-of-a-table"></a>若要檢視資料表的相依性  
+#### <a name="to-view-the-objects-on-which-a-table-depends"></a>若要檢視資料表所相依的物件  
   
 1.  在 **[物件總管]** 中，展開 **[資料庫]** 、展開其中一個資料庫，再展開 **[資料表]** 。  
   
-2.  以滑鼠右鍵按一下資料表，然後按一下 [檢視相依性]  。  
+2.  以滑鼠右鍵按一下資料表，然後按一下 [檢視相依性]。  
   
-3.  在 [物件相依性 **物件名稱**] _\<\>_ 對話方塊中，選取 [相依於 **物件名稱** 的物件] _\<\>_ 或 [**物件名稱** 所相依的物件] _\<\>_  。  
+3.  在 [物件相依性 \<物件名稱\>] 對話方塊中，選取 [相依於 \<物件名稱\> 的物件] 或 [\<物件名稱\> 所相依的物件]。  
   
-4.  選取 **[相依性]** 方格中的物件。 物件類型 (如「觸發程序」或「預存程序」) 會出現在 [類型]  方塊中。  
+4.  選取 **[相依性]** 方格中的物件。 物件類型 (如「觸發程序」或「預存程序」) 會出現在 [類型] 方塊中。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68140295"
   
     ```  
   
-#### <a name="to-view-the-objects-on-which-a-table-depends"></a>若要檢視資料表所相依的物件  
+#### <a name="to-view-the-dependencies-of-a-table"></a>若要檢視資料表的相依性  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   

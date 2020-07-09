@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3a0ebd9b51a28acf77020dccadd5fd509f20c488
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 0918928c8180bffc67476bbbe8f475f9f51a06a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728509"
 ---
 # <a name="backup-timeline"></a>備份時刻表
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 [備份時間表]  對話方塊，尋找及指定將資料庫還原至某個時間點的備份。 透過按一下 [還原資料庫] 窗格 ([一般] 頁面)  上的 [時間表]  上，即可存取 [備份時間表]  對話方塊。 這個對話方塊可讓您檢視資料庫上所執行之還原作業的時間軸。  
   
  Database Recovery Advisor 會確定只選取要還原到該時間點所需的備份。 這些選取的備份為您的還原作業構成了建議的還原計畫。 您應該只使用選取的備份。 如需資料庫復原建議程式的相關資訊，請參閱[還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  

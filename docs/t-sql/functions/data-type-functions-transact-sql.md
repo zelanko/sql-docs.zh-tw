@@ -10,26 +10,25 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 0a6e4985-9601-4877-942a-cf53f6932958
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 41737456f39c3940cf8199693abaeb5d05624246
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a85418df5f41d3d3b0796ffc626deb311e2f18ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823870"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732425"
 ---
 # <a name="data-type-functions-transact-sql"></a>資料類型函數 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 這些純量函式會傳回各種資料類型值的相關資訊。
   
 ## <a name="in-this-section"></a>本節內容
   
-|||  
-|-|-|  
-|[DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)|[IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)|  
-|[IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)|[IDENTITY &#40;函數&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)|  
-|[IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)|[SQL_VARIANT_PROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)|  
-  
-  
+- [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)
+- [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)
+- [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)
+- [IDENTITY &#40;函數&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)  
+- [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)
+- [SQL_VARIANT_PROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)

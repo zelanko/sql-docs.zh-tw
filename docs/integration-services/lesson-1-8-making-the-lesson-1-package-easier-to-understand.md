@@ -1,7 +1,7 @@
 ---
 title: 步驟 8：為第 1 課套件加上註解並設定格式 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/03/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a67d7593ca63a2271fc94fc7203e9bb55d6efcc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fffa5eed608e8cd3faeb13b084e15554e4a8092f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71680976"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729409"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>課程 1-8：為第 1 課套件加上註解並設定格式 
 
@@ -33,25 +33,25 @@ ms.locfileid: "71680976"
   
 ## <a name="format-the-layout-of-the-data-flow"></a>設定資料流程配置的格式  
   
-1.  如果第 1 課套件尚未開啟，請按兩下 [方案總管]  中的 [Lesson 1.dtsx]  。  
+1.  如果第 1 課套件尚未開啟，請按兩下 [方案總管] 中的 [Lesson 1.dtsx]。  
   
-2.  選取 [資料流程]  索引標籤。  
+2.  選取 [資料流程] 索引標籤。  
   
-3.  若要一次選取所有資料流程元件，請使用 [編輯]   > [全選]  。
+3.  若要一次選取所有資料流程元件，請使用 [編輯] > [全選]。
   
-4.  在 **[格式]** 功能表上，選取 [設定成相同大小]  ，然後選取 [兩者]  。  
+4.  在 **[格式]** 功能表上，選取 [設定成相同大小]，然後選取 [兩者]。  
   
-5.  選取資料流程物件之後，在 [格式]  功能表上，選取 [對齊]  ，然後選取 [置中]  。  
+5.  選取資料流程物件之後，在 [格式] 功能表上，選取 [對齊]，然後選取 [置中]。  
 
-6.  選取資料流程物件之後，在 [格式]  功能表上，指向 [垂直間距]  ，然後選取 [設成相等]  。  
+6.  選取資料流程物件之後，在 [格式] 功能表上，指向 [垂直間距]，然後選取 [設成相等]。  
   
 ## <a name="add-an-annotation-to-the-data-flow"></a>將註解新增至資料流程  
   
-1.  在資料流程設計介面背景中的任何位置按一下滑鼠右鍵，然後選取 [加入註解]  。  
+1.  在資料流程設計介面背景中的任何位置按一下滑鼠右鍵，然後選取 [加入註解]。  
   
 2.  在註解方塊中輸入或貼上下列文字。  
   
-        The data flow extracts data from a file, looks up values in the CurrencyKey column in the DimCurrency table and the DateKey column in the DimDate table, and writes the data to the NewFactCurrencyRate table.
+    資料流程會從檔案中擷取資料，在 DimCurrency 資料表的 CurrencyKey 資料行和 DimDate 資料表的 DateKey 資料行中查閱值，然後將資料寫入至 NewFactCurrencyRate 資料表中。
   
     若要讓註解方塊中的文字換行，請將游標放在您要開始新行的位置，然後按 **Enter** 鍵。  
   

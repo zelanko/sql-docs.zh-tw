@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e81c4101d03fd6f8426b1a15a29b206a0c2be7a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0cc70ffc8f2520c4d8c50eff24b451f5a53ffbfc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732739"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 此函式會以二進位格式傳回憑證的公開部分。 此函式會採用憑證識別碼作為引數，並傳回編碼憑證。 若要建立新的憑證，請將二進位結果傳遞給 **CREATE CERTIFICATE ...WITH BINARY**。
   

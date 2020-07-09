@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c10c5b34f7a3364113062821aba99e11536cc2ee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ac83db43e546af3641622d709e1d1a746d3b892
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948046"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730987"
 ---
 # <a name="xml-data-type-methods"></a>xml 資料類型方法
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   您可以使用 **xml** 資料類型方法來查詢儲存在 **xml** 類型之變數或資料行中的 XML 執行個體。 本節中的主題會描述如何使用 **xml** 資料類型方法。  
   

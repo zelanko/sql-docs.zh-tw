@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b03b93f91aa615d8366b9d022a9560480373a404
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727573"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 [複製資料庫精靈] 可讓您輕鬆地將資料庫和特定伺服器物件，從某個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  執行個體移動或複製到另一個執行個體，而不需要讓伺服器停機。 使用此精靈可以執行下列作業： 
   
 -   挑選來源和目的地伺服器。  

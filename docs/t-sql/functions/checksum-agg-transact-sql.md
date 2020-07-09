@@ -17,17 +17,17 @@ helpviewer_keywords:
 - CHECKSUM_AGG function
 - groups [SQL Server], checksum values
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6fa6d6c5736f57338474c17ac41eee55411c865b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0fd4b0459552330fcbc17b4e3409b1106abc8bd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68105009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732686"
 ---
 # <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此函式會傳回群組中值的總和檢查碼。 `CHECKSUM_AGG` 會忽略 Null 值。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可以跟在 `CHECKSUM_AGG` 後面。
   
@@ -62,7 +62,7 @@ DISTINCT
 `CHECKSUM_AGG` 的功能與其他彙總函式的功能類似。 如需詳細資訊，請參閱[彙總函式 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
-這些範例使用 `CHECKSUM_AGG` 來偵測 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `ProductInventory` 資料表之 `Quantity` 資料行的變更。
+這些範例使用 `CHECKSUM_AGG` 來偵測 `Quantity` 資料庫中 `ProductInventory` 資料表之 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料行的變更。
   
 ```sql
 --Get the checksum value before the column value is changed.  

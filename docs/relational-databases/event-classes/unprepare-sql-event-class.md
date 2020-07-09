@@ -12,15 +12,15 @@ ms.assetid: cfcbdd9d-d83b-46ae-9caa-d1833b5913f4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84721635c30048f4d2d1d963babda9bd7f4d9c3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eb4deb5d2f316ed0d52f62469cf06129c43bf09e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087656"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728324"
 ---
 # <a name="unprepare-sql-event-class"></a>Unprepare SQL 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Unprepare SQL 事件類別指出 SqlClient、ODBC、OLE DB 或 DB-Library 已取消準備 (已刪除) 一或多個備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 ## <a name="unprepare-sql-event-class-data-columns"></a>Unprepare SQL 事件類別資料行  

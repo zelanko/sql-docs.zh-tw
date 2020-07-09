@@ -15,16 +15,16 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3dbd6e4beee31e90d0354345bb25e4f0c32fc969
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdca475c71f2f1b81dac9b2a37850cea697a4414
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434045"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727336"
 ---
 # <a name="extended-events-overview"></a>擴充事件概觀
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]「擴充事件」架構可讓使用者收集進行疑難排解或識別效能問題所需的資料 (盡可能多或少)。 擴充事件是可設定的，而且它會非常妥善地調整。
 

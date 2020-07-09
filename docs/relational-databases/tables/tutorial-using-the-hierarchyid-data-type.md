@@ -14,15 +14,15 @@ ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae451d86f2490765f3871deca925f4b6348e2304
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6bda10e885959504bdac67902db2ae1726656b92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140420"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727143"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>教學課程：使用 hierarchyid 資料類型
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 本教學課程的主要對象是對 [!INCLUDE[tsql](../../includes/tsql-md.md)]有經驗，但未接觸過 **hierarchyid** 資料類型的使用者。  
   
 ## <a name="what-you-will-learn"></a>學習內容  

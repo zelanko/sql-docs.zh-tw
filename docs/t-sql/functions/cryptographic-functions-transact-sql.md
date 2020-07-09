@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3bc543e40f4f5189a1d813d21b66af6b26b51d52
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7793c6b9568b53bbbe52a439ee54e0786606b324
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732489"
 ---
 # <a name="cryptographic-functions-transact-sql"></a>密碼編譯函式 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 這些函數支援數字簽章、數字簽章驗證、加密和解密。
   

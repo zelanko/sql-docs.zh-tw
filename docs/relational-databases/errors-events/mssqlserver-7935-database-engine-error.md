@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 45ab21a3-024a-4523-9bd9-1175d01f9c8a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 818eb89fb0e8ae68486e7ecf9a16c7da99dfb2a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74945f8becd458df17ee4753d06288d43a158720
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987753"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726352"
 ---
 # <a name="mssqlserver_7935"></a>MSSQLSERVER_7935
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|7935|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_MISSING_COLUMN|  
-|訊息文字|資料表錯誤: 物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 的資料行已經有 Filestream 目錄識別碼 F_ID，但是該資料行不存在於分割區中。|  
+|訊息文字|資料表錯誤：物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 的資料行已經有 Filestream 目錄識別碼 F_ID，但是該資料行不存在於分割區中。|  
   
 ## <a name="explanation"></a>說明  
 在 DBCC CHECKDB 執行期間，系統已在指定的物件中找到資料行的 FILESTREAM 目錄。不過，在分割區的對應中繼資料中找不到該資料行。  

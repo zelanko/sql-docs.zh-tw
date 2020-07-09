@@ -5,20 +5,20 @@ author: yualan
 ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.custom: seo-lt-2019
 ms.date: 03/30/2020
-ms.openlocfilehash: 480b5df927adddd38b8f9f2ea13fa25c3f653606
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0376dd04bdd340fe7aa8281debbd49d0cbcb869f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178617"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729502"
 ---
 # <a name="notebooks-with-sql-server-in-azure-data-studio"></a>SQL Server 在 Azure Data Studio 中的 Notebook
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Jupyter Notebook 是開放原始碼的 Web 應用程式，可讓您建立及共用含有即時程式碼、方程式、視覺效果和敘述文字的文件。 使用方式包含資料清理和轉換、數字模擬、統計模型、資料視覺效果和機器學習。
 

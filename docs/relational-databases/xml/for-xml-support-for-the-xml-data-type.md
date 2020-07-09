@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 87c9ee4bff2206508cb3100604c84219b1cea1d5
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 230492cc44948b169d52a09ee628c424e9840e82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81387972"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729888"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 資料類型的 FOR XML 支援
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   如果 FOR XML 查詢在 SELECT 子句中指定 **xml** 類型的資料行，無論您是否指定 ELEMENTS 指示詞，資料行值都會對應為傳回的 XML 中之元素。 **xml** 類型資料行中的任何 XML 宣告都沒有序列化。  
   
  例如，下列查詢會從 `BusinessEntityID`XML `FirstName`類型的 `LastName` 資料行擷取客戶連絡資訊，例如 `AdditionalContactInfo` 、 **和** 資料行，以及電話號碼。  

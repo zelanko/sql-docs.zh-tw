@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1ef55fb04372451cb3481956c2d30e4626427c49
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: de86e2b2b2bb958fcd57999bf8f7984078c3a48a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731176"
 ---
 # <a name="extended-static-geography-methods"></a>擴充的靜態地理方法
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援開放式地理空間協會 (Open Geospatial Consortium，OGC) 之靜態地理方法的幾項擴充。  
   

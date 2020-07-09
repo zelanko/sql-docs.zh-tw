@@ -37,15 +37,15 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: cd1fc9d36200a571a3dfd0e5367d4e3e01278466
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2f1214064c11537f4752f9ec824123c3d601a1c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68262325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730742"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 使用 DBCC CLONEDATABASE 產生僅限結構描述的資料庫複本，以便調查與查詢最佳化工具相關的效能問題。
 
@@ -53,7 +53,7 @@ ms.locfileid: "68262325"
   
 ## <a name="syntax"></a>語法  
   
-```
+```syntaxsql
 DBCC CLONEDATABASE   
 (  
     source_database_name
@@ -158,7 +158,7 @@ DBCC CLONEDATABASE 使用來源資料庫的內部資料庫快照集，以取得�
 - PARTITION SCHEME
 - PROCEDURE   
 > [!NOTE]   
-> 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開始，所有版本都支援 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程序。 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 開始，支援 CLR 程序。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，支援原生編譯程序。  
+> 從 [!INCLUDE[tsql](../../includes/tsql-md.md)] SP2 開始，所有版本都支援 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 程序。 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 開始，支援 CLR 程序。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，支援原生編譯程序。  
 
 - QUERY STORE (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始)   
 > [!NOTE]   

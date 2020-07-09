@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c005ad315a3bcbeb1048d16cb10e30035512ac6c
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: fc19088f8ee34202b5157015ac9ef71a8d24922c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606630"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731070"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   將一個或多個節點 (由 *Expression1* 識別) 插入為其他節點 (由 *Expression2* 識別) 的子節點或同層級節點。  
   

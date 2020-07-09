@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3b8ca20f5304dae35a54357b79c763831ceb280
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731361"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   封鎖批次、預存程序或交易的執行，直到經過指定的時間或時間間隔，或直到指定的陳述式修改或傳回至少一個資料列為止。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68086108"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 WAITFOR   
 {  
@@ -58,13 +58,13 @@ WAITFOR
  這是在繼續執行批次、預存程序或交易之前，必須經過的指定時段，最多 24 小時。  
   
  '*time_to_pass*'  
- 這是要等待的時間週期。 您可以使用 **datetime** 資料格式來指定 *time_to_pass*，或將它指定成區域變數。 不能指定日期，因此不接受 **datetime** 值的日期部分。 *time_to_pass*會格式化為 hh:mm[[:ss].mss]。
+ 這是要等待的時間週期。 您可以使用 *datetime* 資料格式來指定 **time_to_pass**，或將它指定成區域變數。 不能指定日期，因此不接受 **datetime** 值的日期部分。 *time_to_pass*會格式化為 hh:mm[[:ss].mss]。
   
  TIME  
  此時執行批次、預存程序或交易時的指定時間。  
   
  '*time_to_execute*'  
- 這是 WAITFOR 陳述式完成的時間。 您可以使用 **datetime** 資料格式來指定 *time_to_execute*，也可以將它指定成區域變數。 不能指定日期，因此不接受 **datetime** 值的日期部分。 *time_to_execute* 會格式化為 hh:mm[[:ss].mss]，且可以選擇性地包含日期 1900-01-01。
+ 這是 WAITFOR 陳述式完成的時間。 您可以使用 *datetime* 資料格式來指定 **time_to_execute**，也可以將它指定成區域變數。 不能指定日期，因此不接受 **datetime** 值的日期部分。 *time_to_execute* 會格式化為 hh:mm[[:ss].mss]，且可以選擇性地包含日期 1900-01-01。
   
  *receive_statement*  
  這是有效的 RECEIVE 陳述式。  
